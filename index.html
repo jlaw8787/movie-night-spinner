@@ -1,0 +1,1564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<title>Movie Night Spinner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Archivo:wght@400;600;800&family=VT323&display=swap">
+<style>
+/* Layout: video shop after close. Wheel and LCD readout on the left, a cream VHS sleeve menu card on the right, stacked on phones. */
+:root{
+  --ink:#17141f;
+  --panel:#221d2d;
+  --cream:#f3e8cc;
+  --cream-ink:#2a2230;
+  --red:#e0452f;
+  --orange:#ef7f2a;
+  --gold:#f2b632;
+  --teal:#2fa89a;
+  --plum:#6b4c8a;
+  --muted:#a59cb5;
+  --line:rgba(243,232,204,.14);
+  --lcd:#0e1a14;
+  --lcd-text:#7cf0a8;
+  --f-display:"Bungee","Arial Black",Impact,sans-serif;
+  --f-body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-lcd:"VT323","Courier New",monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--ink);color:var(--cream)}
+body{font-family:var(--f-body);font-size:16px;line-height:1.5}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px;padding-block:20px 48px}
+.stripes{height:10px;display:flex}
+.stripes i{flex:1}
+.stripes i:nth-child(1){background:var(--red)}
+.stripes i:nth-child(2){background:var(--orange)}
+.stripes i:nth-child(3){background:var(--gold)}
+.stripes i:nth-child(4){background:var(--teal)}
+.stripes i:nth-child(5){background:var(--plum)}
+
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;padding-block:20px 24px}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(28px,6vw,52px);line-height:.95;margin:0;letter-spacing:.01em;text-wrap:balance}
+h1 span{color:var(--gold)}
+.sub{color:var(--muted);margin:8px 0 0;max-width:46ch}
+.filter{display:flex;flex-direction:column;gap:6px;min-width:0}
+.filter label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+select{font:inherit;font-weight:600;background:var(--panel);color:var(--cream);border:1px solid var(--line);border-radius:6px;padding:10px 12px;max-width:100%}
+select:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start}
+@media (max-width:860px){.stage{grid-template-columns:minmax(0,1fr)}}
+
+.deck{display:flex;flex-direction:column;align-items:center;gap:16px;min-width:0}
+.lcd{width:min(100%,520px);background:var(--lcd);border:3px solid #000;border-radius:8px;box-shadow:inset 0 0 0 2px #24382c;padding:8px 14px;font-family:var(--f-lcd);color:var(--lcd-text);display:flex;gap:12px;align-items:baseline;min-width:0}
+.lcd .ch{font-size:20px;opacity:.7;flex:none}
+.lcd .now{font-size:30px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1;text-shadow:0 0 6px rgba(124,240,168,.45)}
+.wheel-box{position:relative;width:min(100%,520px);aspect-ratio:1;max-width:100%}
+.wheel-box canvas{width:100%;height:100%;display:block}
+.pointer{position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:30px solid var(--cream);filter:drop-shadow(0 3px 0 rgba(0,0,0,.5));z-index:2}
+.hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:26%;aspect-ratio:1;border-radius:50%;border:5px solid var(--ink);background:var(--red);color:var(--cream);font-family:var(--f-display);font-size:clamp(16px,3.6vw,24px);cursor:pointer;box-shadow:0 0 0 3px var(--gold),0 6px 0 #000;transition:transform .12s}
+.hub:hover{transform:translate(-50%,-52%)}
+.hub:active{transform:translate(-50%,-48%)}
+.hub:disabled{background:var(--plum);cursor:wait}
+.count{font-size:13px;color:var(--muted);letter-spacing:.06em;font-variant-numeric:tabular-nums}
+
+.history{width:min(100%,520px);display:flex;flex-direction:column;gap:8px}
+.history h3{margin:0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:13px;background:var(--panel);color:var(--cream);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.chip:hover{border-color:var(--gold)}
+.chips .empty{color:var(--muted);font-size:13px}
+
+/* right column: printable menu preview */
+.side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.preview{position:relative;width:100%;overflow:hidden;border-radius:3px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.preview .mcard{position:absolute;left:0;top:0;transform-origin:0 0}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{font:inherit;font-weight:800;font-size:14px;letter-spacing:.04em;text-transform:uppercase;border:2px solid var(--cream);background:transparent;color:var(--cream);border-radius:4px;padding:10px 14px;cursor:pointer}
+.btn.primary{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn:hover{background:var(--red);border-color:var(--red);color:var(--cream)}
+.btn:disabled{opacity:.5;cursor:wait}
+.status{font-size:13px;color:var(--muted);min-height:1em}
+
+/* the menu itself: fixed A4 at 96dpi, styled per theme through variables */
+.mcard{width:794px;height:1123px;overflow:hidden;background-color:var(--mg);background-image:var(--mpat,none);background-size:var(--mpsz,auto);color:var(--mi);font-family:var(--mb);font-size:18px;line-height:1.4}
+.mc-strip{position:absolute;left:0;right:0;height:var(--sh,0px);background-image:var(--strip,none);background-size:var(--ssz,auto);background-repeat:repeat-x}
+.mc-strip.top{top:0}.mc-strip.bot{bottom:0}
+.mc-frame{position:absolute;left:34px;right:34px;top:calc(var(--sh,0px) + 26px);bottom:calc(var(--sh,0px) + 26px);border:var(--mf);background:var(--mfill,transparent);padding:10px}
+.mc-inner{height:100%;border:var(--mf2,0 solid transparent);padding:30px 44px 26px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+.mc-eye{font-family:var(--mb);font-weight:700;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:var(--ma)}
+.mc-title{font-family:var(--md);font-weight:var(--mdw,400);font-size:84px;line-height:1.02;margin:12px 0 4px;color:var(--mt,var(--mi));text-transform:var(--mtt,none);letter-spacing:var(--mls,0);max-width:100%;overflow-wrap:break-word}
+.mc-year{font-family:var(--mb);font-weight:700;font-size:17px;letter-spacing:.3em;color:var(--m2)}
+.mc-tag{font-family:var(--mb);font-style:italic;font-size:22px;margin:14px 0 0;max-width:30em}
+.mc-rule{width:120px;height:4px;background:var(--ma);margin:20px 0 16px;flex:none}
+.mc-intro{font-size:17px;max-width:36em;margin:0 0 6px;opacity:.88}
+.mc-courses{display:flex;flex-direction:column;gap:16px;width:100%;margin-top:12px;flex:1;justify-content:center}
+.mc-course h3{font-family:var(--md);font-weight:var(--mdw,400);font-size:30px;margin:0 0 6px;color:var(--ma);text-transform:var(--mtt,none);letter-spacing:var(--mls,0);line-height:1.1}
+.mc-item{margin:0 0 8px}
+.mc-item b{display:block;font-weight:700;font-size:21px;line-height:1.25}
+.mc-item span{display:block;font-size:16px;opacity:.82}
+.mc-foot{font-family:var(--mb);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--m2);margin-top:10px}
+.mc-stamp{position:absolute;right:18px;top:22px;transform:rotate(-12deg);border:4px solid var(--ma);color:var(--ma);font-family:var(--md);font-size:26px;padding:4px 14px;letter-spacing:.1em;opacity:.85}
+
+#printArea{display:none}
+@media print{
+  @page{size:A4;margin:0}
+  html,body{background:#fff}
+  :root{padding:0}
+  body>*:not(#printArea){display:none!important}
+  #printArea{display:block}
+  #printArea .mcard{transform:none!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;width:210mm;height:297mm}
+}
+.overlay{position:fixed;inset:0;background:rgba(10,8,14,.92);z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px}
+.overlay img{max-height:78vh;max-width:100%;box-shadow:0 10px 30px #000}
+.overlay p{margin:0;text-align:center;color:var(--cream);max-width:40ch}
+
+@media (prefers-reduced-motion:reduce){.hub{transition:none}}
+</style>
+
+<div id="printArea"></div>
+<div class="stripes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Movie Night <span>Spinner</span></h1>
+      <p class="sub">Spin for a film. Every pick gets its own printable menu, styled to match the film: two snacks, a main or two, something sweet and a drink.</p>
+    </div>
+    <div class="filter">
+      <label for="themeSel">Load the wheel with</label>
+      <select id="themeSel"></select>
+    </div>
+  </header>
+
+  <div class="stage">
+    <section class="deck" aria-label="Spin wheel">
+      <div class="lcd" aria-live="off"><span class="ch">CH 03</span><span class="now" id="now">Ready to spin</span></div>
+      <div class="wheel-box">
+        <div class="pointer" aria-hidden="true"></div>
+        <canvas id="wheel" aria-label="Movie wheel"></canvas>
+        <button class="hub" id="spin" type="button">Spin</button>
+      </div>
+      <div class="count" id="count"></div>
+      <div class="history">
+        <h3>Recent spins</h3>
+        <div class="chips" id="chips"><span class="empty">Nothing yet. Your picks land here.</span></div>
+      </div>
+    </section>
+
+    <section class="side" aria-live="polite" aria-label="Printable menu">
+      <div class="preview" id="preview"></div>
+      <div class="actions">
+        <button class="btn primary" id="pdf" type="button">Save PDF to print</button>
+        <button class="btn" id="print" type="button" hidden>Print</button>
+        <button class="btn" id="png" type="button">Save image</button>
+        <button class="btn" id="reroll" type="button">New menu</button>
+        <button class="btn" id="copy" type="button">Copy text</button>
+      </div>
+      <div class="status" id="status"></div>
+    </section>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const T = {
+redsauce:{name:"Little Italy Sunday Gravy",films:`The Godfather (1972)
+The Godfather Part II (1974)
+The Godfather Part III (1990)
+Goodfellas (1990)
+A Bronx Tale (1993)
+Once Upon a Time in America (1984)
+Carlito's Way (1993)
+Donnie Brasco (1997)
+Mean Streets (1973)
+Casino (1995)
+Scarface (1983)
+The Untouchables (1987)
+Prizzi's Honor (1985)
+Married to the Mob (1988)
+Analyze This (1999)
+Mickey Blue Eyes (1999)
+The Pope of Greenwich Village (1984)
+Johnny Dangerously (1984)
+Miller's Crossing (1990)
+Mobsters (1991)
+Bugsy (1991)
+Billy Bathgate (1991)
+State of Grace (1990)
+Get Shorty (1995)
+The Freshman (1990)
+Gloria (1980)
+Last Man Standing (1996)
+Road to Perdition (2002)
+The Departed (2006)
+Moonstruck (1987)
+Big Night (1996)
+Oscar (1991)
+My Blue Heaven (1990)
+Raging Bull (1980)
+Saturday Night Fever (1977)
+Staying Alive (1983)
+My Cousin Vinny (1992)
+Things to Do in Denver When You're Dead (1995)
+Kiss of Death (1995)
+Cop Land (1997)`,
+s:["Fried calamari ~ lemon and marinara","Arancini ~ molten mozzarella centres","Garlic knots ~ parsley butter","Antipasto board ~ salami, provolone, olives, roasted peppers","Fried zucchini flowers ~ ricotta stuffed","Bruschetta ~ tomato, basil, good olive oil"],
+m:["Sunday gravy ~ meatballs, sausage and braciole over rigatoni","Veal parmigiana ~ spaghetti on the side","Linguine vongole ~ clams, garlic, chilli, white wine","Chicken scarpariello ~ sausage, peppers, potatoes","Baked ziti ~ ricotta and a mozzarella crust"],
+w:["Cannoli ~ ricotta, choc chips, pistachio","Tiramisu ~ heavy on the espresso","Rainbow cookies ~ almond, jam, chocolate","Zeppole ~ cinnamon sugar"],
+d:["Negroni","Chianti in the straw bottle","Espresso with a shot of sambuca","Limonata ~ no booze"]},
+
+pizza:{name:"Brooklyn Slice Joint",films:`Teenage Mutant Ninja Turtles (1990)
+Teenage Mutant Ninja Turtles II: The Secret of the Ooze (1991)
+Teenage Mutant Ninja Turtles III (1993)
+TMNT (2007)
+Do the Right Thing (1989)
+Mystic Pizza (1988)
+Spider-Man 2 (2004)
+Summer of Sam (1999)
+Crooklyn (1994)
+Jungle Fever (1991)
+He Got Game (1998)
+Smoke (1995)
+Blue in the Face (1995)
+Fast Times at Ridgemont High (1982)
+Home Alone (1990)
+Mermaids (1990)
+Clerks (1994)
+Mallrats (1995)
+Dogma (1999)
+Chasing Amy (1997)`,
+s:["Garlic knots ~ parmesan and parsley","Mozzarella sticks ~ marinara dip","Buffalo wings ~ blue cheese and celery","Fried dough bites ~ honey and sea salt","Pepperoni pinwheels","Meatball sliders"],
+m:["New York pepperoni pie ~ big foldable slices","White pie ~ ricotta, garlic, mozzarella","Grandma square ~ thin crust, garlicky tomato","Sausage and pepper calzone","Chicken parm hero"],
+w:["Italian ice ~ lemon or cherry","Pizzelle with chocolate hazelnut spread","Ice cream sandwiches","Zeppole ~ powdered sugar"],
+d:["Root beer","Lager by the jug","Egg cream","Cherry cola"]},
+
+deli:{name:"Manhattan Deli Counter",films:`When Harry Met Sally... (1989)
+Annie Hall (1977)
+Manhattan (1979)
+Hannah and Her Sisters (1986)
+Broadway Danny Rose (1984)
+Crossing Delancey (1988)
+Radio Days (1987)
+Tootsie (1982)
+The Producers (1968)
+Big (1988)
+Ghostbusters (1984)
+Ghostbusters II (1989)
+Three Men and a Baby (1987)
+Quick Change (1990)
+The Out-of-Towners (1970)
+The Out-of-Towners (1999)
+Night Shift (1982)
+Baby Boom (1987)
+Moscow on the Hudson (1984)
+You've Got Mail (1998)
+Serendipity (2001)
+Legal Eagles (1986)
+Desperately Seeking Susan (1985)
+Fame (1980)
+Beaches (1988)
+The Fisher King (1991)
+Regarding Henry (1991)
+Big Daddy (1999)
+Ghost (1990)
+Kramer vs. Kramer (1979)
+The Odd Couple (1968)
+Sleepless in Seattle (1993)
+Bullets Over Broadway (1994)
+Mighty Aphrodite (1995)
+Uptown Girls (2003)
+Mo' Better Blues (1990)
+Hitch (2005)
+Kate & Leopold (2001)
+Maid in Manhattan (2002)
+Coyote Ugly (2000)`,
+s:["Pickle plate ~ half and full sours","Potato knish ~ hot mustard","Matzo ball soup cups","Latkes ~ apple sauce and sour cream","Bagel chips and schmear","Chopped liver on rye toasts"],
+m:["Pastrami on rye ~ stacked high, mustard only","Reuben ~ corned beef, sauerkraut, swiss","Bagel and lox platter ~ cream cheese, capers, red onion","Patty melt ~ rye, onions, swiss","Braised brisket ~ gravy and mash"],
+w:["New York cheesecake ~ cherry topping","Black and white cookies","Chocolate babka","Rugelach ~ apricot and walnut"],
+d:["Egg cream ~ chocolate syrup, milk, soda water","Celery soda","Bottomless deli coffee","Manhattan ~ rye, vermouth, a cherry"]},
+
+street:{name:"Bodega and Street Cart",films:`Serpico (1973)
+The French Connection (1971)
+French Connection II (1975)
+The Taking of Pelham One Two Three (1974)
+Dog Day Afternoon (1975)
+Taxi Driver (1976)
+Midnight Cowboy (1969)
+Death Wish (1974)
+Death Wish 3 (1985)
+The Exterminator (1980)
+Escape from New York (1981)
+The Warriors (1979)
+Fort Apache, the Bronx (1981)
+Prince of the City (1981)
+Wolfen (1981)
+C.H.U.D. (1984)
+Marathon Man (1976)
+Three Days of the Condor (1975)
+Sea of Love (1989)
+Night Falls on Manhattan (1996)
+Q & A (1990)
+King of New York (1990)
+Ghost Dog: The Way of the Samurai (1999)
+16 Blocks (2006)
+Money Train (1995)
+Die Hard with a Vengeance (1995)
+Léon: The Professional (1994)
+Ransom (1996)
+The Siege (1998)
+Premium Rush (2012)
+Inside Man (2006)
+After Hours (1985)
+The Equalizer (2014)
+Clockers (1995)
+Maniac Cop (1988)
+Frequency (2000)
+The Adjustment Bureau (2011)
+Non-Stop (2014)
+Changing Lanes (2002)
+25th Hour (2002)
+Panic in Needle Park (1971)
+Mean Machine (2001)
+Fresh (1994)`,
+s:["Hot pretzels ~ spicy brown mustard","Cart hot dogs ~ onions in red sauce","Honey roasted nuts in a paper cone","Chopped cheese bites","Cart knish","Salt and vinegar chips"],
+m:["Chopped cheese hero ~ beef, onions, melted cheese on a roll","Halal cart chicken over rice ~ white sauce, hot sauce","Bacon egg and cheese on a roll ~ salt, pepper, ketchup","Sausage and peppers hero","Gyro platter ~ lamb, rice, salad"],
+w:["Crumb cake","Soft serve ~ rainbow sprinkles","Italian ice","Black and white cookie"],
+d:["Tallboy in a paper bag","Bodega coffee, light and sweet","Cream soda","Big can of iced tea"]},
+
+cop:{name:"Stakeout Snacks",films:`Lethal Weapon (1987)
+Lethal Weapon 2 (1989)
+Lethal Weapon 3 (1992)
+Lethal Weapon 4 (1998)
+Beverly Hills Cop (1984)
+Beverly Hills Cop II (1987)
+Beverly Hills Cop III (1994)
+48 Hrs. (1982)
+Another 48 Hrs. (1990)
+Tango & Cash (1989)
+Running Scared (1986)
+Red Heat (1988)
+Turner & Hooch (1989)
+K-9 (1989)
+Stakeout (1987)
+Another Stakeout (1993)
+The Hard Way (1991)
+Kindergarten Cop (1990)
+Police Academy (1984)
+Police Academy 2: Their First Assignment (1985)
+Bad Boys (1995)
+Rush Hour (1998)
+Rush Hour 2 (2001)
+Point Break (1991)
+Speed (1994)
+Die Hard (1988)
+Die Hard 2 (1990)
+Last Action Hero (1993)
+Demolition Man (1993)
+The Naked Gun: From the Files of Police Squad! (1988)
+The Naked Gun 2½: The Smell of Fear (1991)
+Naked Gun 33⅓: The Final Insult (1994)
+Dragnet (1987)
+Loaded Weapon 1 (1993)
+Showtime (2002)
+Cop and a Half (1993)
+Shoot to Kill (1988)
+Cobra (1986)
+Hot Shots! (1991)
+Airplane! (1980)
+Con Air (1997)
+The Rock (1996)
+Face/Off (1997)
+Lock Up (1989)
+Cliffhanger (1993)
+Under Siege (1992)
+Passenger 57 (1992)`,
+s:["Glazed doughnuts by the dozen","Chilli cheese fries","Beef jerky","Onion rings","Popcorn chicken","Nachos ~ jalapeños, sour cream"],
+m:["Chilli dogs ~ onions, mustard","Double cheeseburger","Meatball sub","Fried chicken bucket","Steak sandwich ~ onions, beetroot, the lot"],
+w:["Jam doughnuts","Apple pie with ice cream","Bear claws","Cinnamon scrolls"],
+d:["Burnt station coffee","Bourbon on the rocks","Cola in a bucket-sized cup","Chocolate milk"]},
+
+soul:{name:"Harlem Soul Kitchen",films:`Coming to America (1988)
+Boomerang (1992)
+Harlem Nights (1989)
+New Jack City (1991)
+Juice (1992)
+Shaft (1971)
+Shaft (2000)
+Super Fly (1972)
+Cotton Comes to Harlem (1970)
+Beat Street (1984)
+Krush Groove (1985)
+Wild Style (1983)
+House Party (1990)
+House Party 2 (1991)
+Friday (1995)
+Next Friday (2000)
+Boyz n the Hood (1991)
+Above the Rim (1994)
+Sugar Hill (1994)
+Paid in Full (2002)
+Brown Sugar (2002)
+Malcolm X (1992)
+Hollywood Shuffle (1987)
+I'm Gonna Git You Sucka (1988)
+Uptown Saturday Night (1974)
+Let's Do It Again (1975)
+Car Wash (1976)
+The Wiz (1978)
+Sister Act (1992)
+Sister Act 2: Back in the Habit (1993)
+Soul Food (1997)
+Barbershop (2002)
+School Daze (1988)
+She's Gotta Have It (1986)
+The Five Heartbeats (1991)
+Stir Crazy (1980)
+Silver Streak (1976)
+The Toy (1982)
+Bustin' Loose (1981)
+The Best Man (1999)
+Love Jones (1997)
+Waiting to Exhale (1995)
+CB4 (1993)
+Who's the Man? (1993)
+Fear of a Black Hat (1993)
+The Nutty Professor (1996)
+Dr. Dolittle (1998)
+Life (1999)
+Bowfinger (1999)
+Trading Places (1983)`,
+s:["Hush puppies ~ honey butter","Fried green tomatoes ~ remoulade","Hot wings ~ vinegar hot sauce","Devilled eggs ~ smoked paprika","Skillet cornbread","Fried okra"],
+m:["Fried chicken and waffles ~ hot honey","Smothered pork chops ~ onion gravy and rice","Oxtail stew ~ butter beans","Shrimp and grits","Sticky BBQ ribs","Baked mac and cheese ~ crispy top"],
+w:["Peach cobbler","Sweet potato pie","Banana pudding ~ vanilla wafers","Red velvet cake"],
+d:["Sweet tea","Cognac and ginger ale","Hibiscus iced tea","Bourbon punch"]},
+
+xmas:{name:"Christmas in the City",films:`Home Alone 2: Lost in New York (1992)
+Elf (2003)
+Scrooged (1988)
+Gremlins (1984)
+Jingle All the Way (1996)
+Miracle on 34th Street (1947)
+Miracle on 34th Street (1994)
+The Santa Clause (1994)
+National Lampoon's Christmas Vacation (1989)
+A Christmas Story (1983)
+The Muppet Christmas Carol (1992)
+Ernest Saves Christmas (1988)
+Bad Santa (2003)
+Love Actually (2003)
+The Polar Express (2004)
+Fred Claus (2007)
+Batman Returns (1992)
+Edward Scissorhands (1990)
+The Nightmare Before Christmas (1993)
+Mixed Nuts (1994)
+The Family Man (2000)
+Prancer (1989)
+One Magic Christmas (1985)
+Surviving Christmas (2004)
+Four Christmases (2008)
+Christmas with the Kranks (2004)`,
+s:["Roasted chestnuts","Pigs in blankets","Prawn cocktail ~ Aussie Christmas rules","Cheese ball with crackers","Glazed ham sliders","Pull-apart Christmas tree bread"],
+m:["Glazed ham ~ cloves and pineapple","Roast turkey rolls ~ cranberry and stuffing","A whole cheese pizza to yourself","Roast pork ~ proper crackling","Cold seafood platter ~ prawns, oysters, bugs"],
+w:["Pavlova ~ mango, passionfruit, berries","Christmas pudding with custard","Gingerbread people","Peppermint bark"],
+d:["Eggnog","Hot chocolate with marshmallows","Mulled wine","Shandy ~ it's 34 degrees"]},
+
+aussie:{name:"Arvo in the Outback",films:`Crocodile Dundee (1986)
+Crocodile Dundee II (1988)
+Crocodile Dundee in Los Angeles (2001)
+Mad Max (1979)
+Mad Max 2 (1981)
+Mad Max Beyond Thunderdome (1985)
+Young Einstein (1988)
+Babe (1995)
+Muriel's Wedding (1994)
+The Castle (1997)
+Strictly Ballroom (1992)
+The Adventures of Priscilla, Queen of the Desert (1994)
+Malcolm (1986)
+The Man from Snowy River (1982)
+Quigley Down Under (1990)
+BMX Bandits (1983)
+Razorback (1984)
+Dead Calm (1989)
+Shine (1996)
+Death in Brunswick (1990)
+The Dish (2000)
+Kenny (2006)
+Gallipoli (1981)
+Puberty Blues (1981)
+Two Hands (1999)
+The Sum of Us (1994)
+Ned Kelly (2003)
+Happy Feet (2006)
+FernGully: The Last Rainforest (1992)
+Rabbit-Proof Fence (2002)
+Looking for Alibrandi (2000)
+The Wog Boy (2000)
+Crackerjack (2002)
+Walkabout (1971)
+Picnic at Hanging Rock (1975)
+Breaker Morant (1980)
+Phar Lap (1983)
+Babe: Pig in the City (1998)
+Australia (2008)
+Danny Deckchair (2003)
+Red Dog (2011)
+Paperback Hero (1999)
+The Man Who Sued God (2001)
+Bootmen (2000)`,
+s:["Sausage rolls ~ tomato sauce","Garlic prawns off the barbie","Party pies","Cheese and crackers ~ cabanossi on the side","Fairy bread","Chips with chicken salt"],
+m:["Snags in bread ~ fried onions, sauce","Pie floater ~ meat pie on mushy peas","Lamb chops off the barbie","Barra and chips","Chicken parmi ~ ham, napoli, cheese, chips and salad"],
+w:["Lamingtons","Pavlova","Anzac biscuits","Vanilla slice"],
+d:["Ice cold tinnies","Lemon squash","Iced coffee from the servo","Rum and cola"]},
+
+asian:{name:"Chinatown Late Night",films:`Big Trouble in Little China (1986)
+The Last Dragon (1985)
+Year of the Dragon (1985)
+Enter the Dragon (1973)
+Bloodsport (1988)
+Kickboxer (1989)
+The Karate Kid (1984)
+The Karate Kid Part II (1986)
+The Karate Kid Part III (1989)
+Rumble in the Bronx (1995)
+Shanghai Knights (2003)
+Showdown in Little Tokyo (1991)
+Black Rain (1989)
+Gung Ho (1986)
+Mr. Baseball (1992)
+The Joy Luck Club (1993)
+Crouching Tiger, Hidden Dragon (2000)
+Kung Fu Hustle (2004)
+Police Story (1985)
+Drunken Master II (1994)
+Hard Boiled (1992)
+The Killer (1989)
+The Golden Child (1986)
+Remo Williams: The Adventure Begins (1985)
+Kill Bill: Vol. 1 (2003)
+Kill Bill: Vol. 2 (2004)
+Lost in Translation (2003)
+Rising Sun (1993)
+Mortal Kombat (1995)
+Street Fighter (1994)
+Double Impact (1991)
+Best of the Best (1989)
+No Retreat, No Surrender (1985)
+Sidekicks (1992)
+3 Ninjas (1992)
+Surf Ninjas (1993)
+American Ninja (1985)
+My Neighbor Totoro (1988)
+Akira (1988)
+Spirited Away (2001)
+The Forbidden Kingdom (2008)
+Romeo Must Die (2000)
+Kiss of the Dragon (2001)
+Fearless (2006)
+Shaolin Soccer (2001)`,
+s:["Pork dumplings ~ chilli oil","Spring rolls ~ sweet chilli","Salt and pepper squid","Prawn crackers","Edamame ~ chilli salt","Char siu bao"],
+m:["Kung pao chicken","Beef and broccoli","Special fried rice","Sweet and sour pork","Ramen ~ chashu pork, soft egg","Dan dan noodles"],
+w:["Fortune cookies","Egg tarts","Mango pudding","Mochi ~ mixed flavours"],
+d:["Jasmine tea","Cold Chinese lager","Lychee martini","Plum wine"]},
+
+scifi:{name:"Mission Control Rations",films:`Men in Black (1997)
+Men in Black II (2002)
+Short Circuit (1986)
+Short Circuit 2 (1988)
+*batteries not included (1987)
+The Fifth Element (1997)
+I Am Legend (2007)
+Back to the Future (1985)
+Back to the Future Part II (1989)
+Back to the Future Part III (1990)
+E.T. the Extra-Terrestrial (1982)
+Gremlins 2: The New Batch (1990)
+The Terminator (1984)
+Terminator 2: Judgment Day (1991)
+Predator (1987)
+Predator 2 (1990)
+Aliens (1986)
+Alien (1979)
+RoboCop (1987)
+RoboCop 2 (1990)
+Total Recall (1990)
+Blade Runner (1982)
+Tron (1982)
+WarGames (1983)
+Explorers (1985)
+Flight of the Navigator (1986)
+The Last Starfighter (1984)
+Spaceballs (1987)
+Innerspace (1987)
+The Abyss (1989)
+Independence Day (1996)
+Armageddon (1998)
+Deep Impact (1998)
+Godzilla (1998)
+Cloverfield (2008)
+Contact (1997)
+Galaxy Quest (1999)
+Mars Attacks! (1996)
+Starship Troopers (1997)
+The Matrix (1999)
+Dark City (1998)
+12 Monkeys (1995)
+Stargate (1994)
+Coneheads (1993)
+Earth Girls Are Easy (1988)
+Howard the Duck (1986)
+Real Genius (1985)
+Hackers (1995)
+Johnny Mnemonic (1995)
+Strange Days (1995)
+Escape from L.A. (1996)
+The Running Man (1987)
+Mac and Me (1988)
+Critters (1986)
+Tremors (1990)
+Jurassic Park (1993)
+The Lost World: Jurassic Park (1997)
+Waterworld (1995)
+Lost in Space (1998)
+Honey, I Shrunk the Kids (1989)
+Bill & Ted's Excellent Adventure (1989)
+Bill & Ted's Bogus Journey (1991)
+Weird Science (1985)
+Close Encounters of the Third Kind (1977)
+Star Wars (1977)
+The Empire Strikes Back (1980)
+Return of the Jedi (1983)
+Star Trek IV: The Voyage Home (1986)
+Dune (1984)
+The Iron Giant (1999)
+Space Jam (1996)`,
+s:["Galaxy popcorn ~ coloured candy coating","Robot bolt pretzels","Meteor meatballs ~ smoky glaze","Laser chips ~ corn chips and green dip","Alien pod sliders","Moon rock cheese puffs"],
+m:["Planet pizza ~ pepperoni moons","Mothership chilli in bread bowls","Flying saucer burgers ~ toasted sealed buns","Rocket dogs ~ foot-long, cheese and onions"],
+w:["Freeze-dried astronaut ice cream","Galaxy cupcakes ~ swirled purple icing","Moon pies","Crater cookies ~ choc chip, extra chunky"],
+d:["Hyperdrive slushie ~ blue raspberry","Galaxy lemonade ~ butterfly pea tea, changes colour","Zero gravity float ~ cola and ice cream","Orange space drink ~ fresh OJ and soda"]},
+
+hero:{name:"Rooftop Patrol",films:`Spider-Man (2002)
+Spider-Man 3 (2007)
+Spider-Man: Into the Spider-Verse (2018)
+Spider-Man: Homecoming (2017)
+Daredevil (2003)
+Fantastic Four (2005)
+The Avengers (2012)
+Iron Man (2008)
+Captain America: The First Avenger (2011)
+Doctor Strange (2016)
+X-Men (2000)
+X2 (2003)
+Watchmen (2009)
+Kick-Ass (2010)
+Batman (1989)
+Batman Forever (1995)
+Batman Begins (2005)
+Superman (1978)
+Superman II (1980)
+The Crow (1994)
+The Shadow (1994)
+The Rocketeer (1991)
+Dick Tracy (1990)
+The Phantom (1996)
+Darkman (1990)
+The Mask (1994)
+Blade (1998)
+Hellboy (2004)
+Unbreakable (2000)
+Mystery Men (1999)
+Hancock (2008)
+The Incredibles (2004)
+The Toxic Avenger (1984)
+The Punisher (1989)
+The Punisher (2004)
+Flash Gordon (1980)
+Masters of the Universe (1987)
+Teen Titans? (0000)`.split("\n").filter(l=>!l.includes("?")).join("\n"),
+s:["Web nachos ~ queso drizzled in a web","Hero shields ~ mini pizzas","Power punch popcorn ~ salted caramel","Spider bites ~ cocktail meatballs","Lightning chips ~ zig-zag cut, chicken salt","Hot dog bites ~ mustard"],
+m:["Hero subs, a foot long ~ salami, ham, provolone","Smash burgers ~ double cheese","Rooftop BBQ skewers ~ chicken and capsicum","Shawarma wraps ~ garlic sauce, pickles"],
+w:["Shield cookies ~ red, white and blue icing","Power-up brownies","Ice cream sundae bar","Comic panel cupcakes"],
+d:["Red and blue slushie","Super soda float","Banana and peanut butter smoothie","Iced coffee, double shot"]},
+
+kids:{name:"Family Matinee",films:`An American Tail (1986)
+An American Tail: Fievel Goes West (1991)
+Oliver & Company (1988)
+The Rescuers (1977)
+The Rescuers Down Under (1990)
+The Secret Life of Pets (2016)
+The Muppets Take Manhattan (1984)
+The Great Muppet Caper (1981)
+The Muppet Movie (1979)
+Annie (1982)
+Newsies (1992)
+Stuart Little (1999)
+Madagascar (2005)
+Enchanted (2007)
+Fantastic Beasts and Where to Find Them (2016)
+The Sorcerer's Apprentice (2010)
+Night at the Museum (2006)
+Hook (1991)
+The Goonies (1985)
+Who Framed Roger Rabbit (1988)
+The Land Before Time (1988)
+All Dogs Go to Heaven (1989)
+The Little Mermaid (1989)
+Beauty and the Beast (1991)
+Aladdin (1992)
+The Lion King (1994)
+Toy Story (1995)
+Toy Story 2 (1999)
+A Bug's Life (1998)
+Monsters, Inc. (2001)
+Shrek (2001)
+Ice Age (2002)
+Finding Nemo (2003)
+Cars (2006)
+Ratatouille (2007)
+Beethoven (1992)
+Free Willy (1993)
+Jumanji (1995)
+Matilda (1996)
+Mrs. Doubtfire (1993)
+Casper (1995)
+The NeverEnding Story (1984)
+Labyrinth (1986)
+The Dark Crystal (1982)
+Willow (1988)
+The Princess Bride (1987)
+Harry and the Hendersons (1987)
+Uncle Buck (1989)
+Problem Child (1990)
+Cool Runnings (1993)
+The Mighty Ducks (1992)
+The Sandlot (1993)
+Rookie of the Year (1993)
+Little Giants (1994)
+Richie Rich (1994)
+Dennis the Menace (1993)
+Small Soldiers (1998)
+Mouse Hunt (1997)
+Flubber (1997)
+Inspector Gadget (1999)
+George of the Jungle (1997)
+Lilo & Stitch (2002)
+Hercules (1997)
+Mulan (1998)
+Tarzan (1999)
+The Emperor's New Groove (2000)
+Chicken Run (2000)
+Wallace & Gromit: The Curse of the Were-Rabbit (2005)
+Big (1988)`,
+s:["Buttered popcorn","Cheese and crackers","Fruit skewers","Mini sausage rolls","Pizza scrolls","Fairy bread"],
+m:["Chicken nuggets and chips","Mini cheeseburgers","Mac and cheese","Spaghetti and meatballs","Soft tacos ~ build your own"],
+w:["Ice cream sundaes","Chocolate crackles","Cupcakes with sprinkles","Rocky road"],
+d:["Chocolate milkshake","Pink lemonade","Fruit punch","Spider ~ lemonade and a scoop of ice cream"]},
+
+teen:{name:"Mall Food Court",films:`The Breakfast Club (1985)
+Ferris Bueller's Day Off (1986)
+Sixteen Candles (1984)
+Pretty in Pink (1986)
+Say Anything... (1989)
+Heathers (1988)
+Wayne's World (1992)
+Wayne's World 2 (1993)
+Clueless (1995)
+Can't Buy Me Love (1987)
+Better Off Dead (1985)
+Back to School (1986)
+Revenge of the Nerds (1984)
+Adventures in Babysitting (1987)
+Some Kind of Wonderful (1987)
+Lucas (1986)
+Footloose (1984)
+Dirty Dancing (1987)
+Flashdance (1983)
+Hairspray (1988)
+Risky Business (1983)
+Stand by Me (1986)
+Empire Records (1995)
+Reality Bites (1994)
+Dazed and Confused (1993)
+10 Things I Hate About You (1999)
+American Pie (1999)
+She's All That (1999)
+Mean Girls (2004)
+Napoleon Dynamite (2004)
+Superbad (2007)
+Encino Man (1992)
+Airheads (1994)
+PCU (1994)
+Teen Wolf (1985)
+Can't Hardly Wait (1998)
+Bring It On (2000)
+Election (1999)
+Hackers 2? (0000)
+Mannequin (1987)
+Valley Girl (1983)
+Just One of the Guys (1985)
+One Crazy Summer (1986)
+Ferris Bueller 2? (0000)`.split("\n").filter(l=>!l.includes("?")).join("\n"),
+s:["Pretzel bites ~ cheese sauce","Curly fries","Mozzarella sticks","Nachos ~ squirt cheese","Onion rings","Pizza rolls"],
+m:["Cheeseburger and fries","Corn dogs ~ mustard and ketchup","Food court teriyaki chicken ~ rice","Pepperoni pizza slices","Sub sandwich ~ the works"],
+w:["Cinnamon rolls ~ cream cheese icing","Hot fudge sundae","Funnel cake ~ powdered sugar","Giant choc chip cookie"],
+d:["Thick shake ~ chocolate or strawberry","Orange soda","Frozen slushie ~ mix the colours","Cherry cola"]},
+
+diner:{name:"Roadside Diner",films:`Planes, Trains and Automobiles (1987)
+National Lampoon's Vacation (1983)
+National Lampoon's European Vacation (1985)
+Vegas Vacation (1997)
+The Blues Brothers (1980)
+Blues Brothers 2000 (1998)
+The Cannonball Run (1981)
+Midnight Run (1988)
+Rain Man (1988)
+Thelma & Louise (1991)
+Dumb and Dumber (1994)
+Tommy Boy (1995)
+Black Sheep (1996)
+Pee-wee's Big Adventure (1985)
+The Great Outdoors (1988)
+Caddyshack (1980)
+Stripes (1981)
+Meatballs (1979)
+Animal House (1978)
+Groundhog Day (1993)
+What About Bob? (1991)
+Twins (1988)
+Major League (1989)
+Bull Durham (1988)
+Field of Dreams (1989)
+A League of Their Own (1992)
+Happy Gilmore (1996)
+Billy Madison (1995)
+The Waterboy (1998)
+Office Space (1999)
+The Big Lebowski (1998)
+Fargo (1996)
+Raising Arizona (1987)
+O Brother, Where Art Thou? (2000)
+Pulp Fiction (1994)
+Reservoir Dogs (1992)
+True Romance (1993)
+Grease (1978)
+Diner (1982)
+American Graffiti (1973)
+Fried Green Tomatoes (1991)
+Steel Magnolias (1989)
+Forrest Gump (1994)
+The Money Pit (1986)
+The 'Burbs (1989)
+Pretty Woman (1990)
+Liar Liar (1997)
+Spies Like Us (1985)
+Fletch (1985)
+Fletch Lives (1989)
+Armed and Dangerous (1986)
+Moving (1988)
+Funny Farm (1988)
+Throw Momma from the Train (1987)
+Big Fish (2003)
+Ruthless People (1986)
+Dave (1993)
+City Slickers (1991)
+Doc Hollywood (1991)
+Ghost Dad? (0000)
+Uncle Buck 2? (0000)
+Bad News Bears (1976)
+Little Miss Sunshine (2006)
+Sideways (2004)
+Clerks II (2006)
+Coupe de Ville (1990)`.split("\n").filter(l=>!l.includes("?")||l.includes("Bob?")||l.includes("Art Thou?")).join("\n"),
+s:["Onion rings","Disco fries ~ gravy and melted cheese","Fried pickle chips","Loaded potato skins","Buffalo wings","Coleslaw cups"],
+m:["Patty melt ~ rye, onions, swiss","Club sandwich ~ triple decker","Bacon cheeseburger","Chicken fried steak ~ cream gravy","All day breakfast ~ pancakes, eggs, bacon","Meatloaf with mash"],
+w:["Cherry pie","Apple pie with ice cream","Banana split","Lemon meringue pie"],
+d:["Bottomless diner coffee","Vanilla malted milkshake","Root beer float","Beer on tap"]},
+
+mex:{name:"Cantina Night",films:`Three Amigos! (1986)
+Desperado (1995)
+El Mariachi (1992)
+Once Upon a Time in Mexico (2003)
+From Dusk Till Dawn (1996)
+Romancing the Stone (1984)
+The Jewel of the Nile (1985)
+The Mexican (2001)
+Nacho Libre (2006)
+La Bamba (1987)
+Born in East L.A. (1987)
+Selena (1997)
+The Mask of Zorro (1998)
+The Legend of Zorro (2005)
+Tequila Sunrise (1988)
+Spy Kids (2001)
+Blood In Blood Out (1993)
+Mi Familia (1995)
+Stand and Deliver (1988)
+Y Tu Mamá También (2001)
+The Treasure of the Sierra Madre (1948)
+Frida (2002)
+Man on Fire (2004)
+Traffic (2000)`,
+s:["Corn chips and guacamole","Elote ~ corn, chilli, lime, cotija","Queso fundido ~ chorizo","Jalapeño poppers","Taquitos ~ sour cream","Tostadas with pico de gallo"],
+m:["Carnitas tacos ~ onion, coriander, lime","Chicken enchiladas ~ salsa verde","Beef burritos ~ rice, beans, cheese","Fish tacos ~ chipotle mayo","Birria tacos ~ consommé for dipping"],
+w:["Churros ~ chocolate sauce","Tres leches cake","Flan","Mexican hot chocolate brownies"],
+d:["Margaritas","Michelada","Horchata","Watermelon agua fresca"]},
+
+tiki:{name:"Beach House Luau",films:`Weekend at Bernie's (1989)
+Weekend at Bernie's II (1993)
+Splash (1984)
+Cocktail (1988)
+Jaws (1975)
+Jaws 2 (1978)
+Ace Ventura: Pet Detective (1994)
+Ace Ventura: When Nature Calls (1995)
+Overboard (1987)
+Club Paradise (1986)
+Back to the Beach (1987)
+North Shore (1987)
+Captain Ron (1992)
+Six Days, Seven Nights (1998)
+Blue Crush (2002)
+Cast Away (2000)
+Cocoon (1985)
+The Beach (2000)
+50 First Dates (2004)
+Forgetting Sarah Marshall (2008)
+Blue Hawaii 2? (0000)
+Waikiki Wedding? (0000)
+Summer Rental (1985)
+Hook? (0000)
+Encino? (0000)
+Endless Summer? (0000)
+The Endless Summer (1966)
+Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+Muppet Treasure Island (1996)
+Cutthroat Island (1995)
+Fool's Gold (2008)
+Into the Blue (2005)
+Swept Away (2002)
+Speed 2: Cruise Control (1997)
+Baywatch? (0000)`.split("\n").filter(l=>!l.includes("?")).join("\n"),
+s:["Coconut prawns ~ sweet chilli","Pineapple salsa and chips","Spam musubi","Poke cups ~ tuna, sesame, soy","Teriyaki chicken skewers","Grilled corn ~ lime butter"],
+m:["Hawaiian pizza ~ ham and pineapple, no apologies","Kalua pulled pork rolls","Fish tacos ~ mango salsa","Huli huli chicken","Surf and turf"],
+w:["Pineapple upside down cake","Coconut ice cream","Mango sorbet","Banana fritters"],
+d:["Mai tai","Piña colada","Blue lagoon","Passionfruit cooler ~ no booze"]},
+
+uptown:{name:"Uptown Steakhouse",films:`Wall Street (1987)
+Arthur (1981)
+Working Girl (1988)
+The Secret of My Success (1987)
+Brewster's Millions (1985)
+Big Business (1988)
+Scent of a Woman (1992)
+Sabrina (1995)
+The Thomas Crown Affair (1999)
+Ocean's Eleven (2001)
+Ocean's Twelve (2004)
+Dirty Rotten Scoundrels (1988)
+Indecent Proposal (1993)
+Boiler Room (2000)
+The Wolf of Wall Street (2013)
+The Devil Wears Prada (2006)
+Breakfast at Tiffany's (1961)
+Hudson Hawk (1991)
+Sneakers (1992)
+Entrapment (1999)
+The Italian Job (2003)
+Moonraker (1979)
+The Spy Who Loved Me (1977)
+For Your Eyes Only (1981)
+Octopussy (1983)
+A View to a Kill (1985)
+The Living Daylights (1987)
+Licence to Kill (1989)
+GoldenEye (1995)
+Tomorrow Never Dies (1997)
+The World Is Not Enough (1999)
+Casino Royale (2006)
+Ronin (1998)
+French Kiss (1995)
+The Bonfire of the Vanities (1990)
+Six Degrees of Separation (1993)
+The Age of Innocence (1993)
+Trading Places 2? (0000)
+Mr. & Mrs. Smith (2005)
+True Lies (1994)
+The Firm (1993)
+Jerry Maguire (1996)`.split("\n").filter(l=>!l.includes("?")).join("\n"),
+s:["Oysters ~ mignonette","Prawn cocktail ~ Marie Rose","Blini with smoked salmon","Devils on horseback","Beef carpaccio","Truffle fries"],
+m:["Rib eye ~ peppercorn sauce","Lobster thermidor","Steak Diane","Beef Wellington","Duck à l'orange"],
+w:["Chocolate soufflé","Crème brûlée","Baked Alaska","Cherries jubilee"],
+d:["Dry martini, shaken","Champagne","Old fashioned","Single malt, neat"]},
+
+horror:{name:"Midnight Monster Feast",films:`Beetlejuice (1988)
+The Lost Boys (1987)
+A Nightmare on Elm Street (1984)
+Halloween (1978)
+Friday the 13th (1980)
+Poltergeist (1982)
+The Monster Squad (1987)
+Fright Night (1985)
+An American Werewolf in London (1981)
+The Thing (1982)
+The Fly (1986)
+Hocus Pocus (1993)
+Scream (1996)
+Child's Play (1988)
+Arachnophobia (1990)
+Killer Klowns from Outer Space (1988)
+Evil Dead II (1987)
+Army of Darkness (1992)
+Shaun of the Dead (2004)
+Sleepy Hollow (1999)
+The Addams Family (1991)
+Addams Family Values (1993)
+Death Becomes Her (1992)
+The Witches (1990)
+Little Shop of Horrors (1986)
+The Frighteners (1996)
+Pet Sematary (1989)
+Candyman (1992)
+Misery (1990)
+The Shining (1980)
+Rosemary's Baby (1968)
+Ghost Story (1981)
+The Gate (1987)
+Gremlins 3? (0000)
+House (1985)
+Trick 'r Treat (2007)
+The Sixth Sense (1999)
+Ghostbusters (2016)
+Teen Witch (1989)
+The Craft (1996)
+Practical Magic (1998)
+Young Frankenstein (1974)
+The Rocky Horror Picture Show (1975)`.split("\n").filter(l=>!l.includes("?")).join("\n"),
+s:["Mummy dogs ~ pastry-wrapped franks","Spider devilled eggs ~ olive spiders","Graveyard dip ~ seven layers, crushed chip dirt","Eyeball meatballs ~ mozzarella and olive","Black BBQ bat wings","Pumpkin soup shooters"],
+m:["Pumpkin bowl chilli","Jack-o'-lantern stuffed capsicums","Graveyard shepherd's pie ~ cracker headstones","Coffin sandwiches ~ cut into coffin shapes"],
+w:["Dirt cups ~ chocolate pudding, gummy worms","Toffee apples","Pumpkin pie","Red velvet cupcakes"],
+d:["Witch's brew ~ lime sherbet punch","Blood orange spritz","Hot spiced cider","Black cherry soda"]},
+
+western:{name:"Chuckwagon BBQ",films:`Young Guns (1988)
+Young Guns II (1990)
+Tombstone (1993)
+Unforgiven (1992)
+Silverado (1985)
+Pale Rider (1985)
+Wild Wild West (1999)
+Maverick (1994)
+Dances with Wolves (1990)
+Wyatt Earp (1994)
+The Quick and the Dead (1995)
+Blazing Saddles (1974)
+Rustlers' Rhapsody (1985)
+Urban Cowboy (1980)
+Pure Country (1992)
+Smokey and the Bandit (1977)
+Smokey and the Bandit II (1980)
+Shanghai Noon (2000)
+The Outlaw Josey Wales (1976)
+Open Range (2003)
+3:10 to Yuma (2007)
+The Assassination of Jesse James by the Coward Robert Ford (2007)
+Brokeback Mountain (2005)
+Lonesome Jim? (0000)
+Every Which Way but Loose (1978)
+Any Which Way You Can (1980)
+Convoy (1978)
+Road House (1989)
+Cowboys & Aliens (2011)
+City Slickers II: The Legend of Curly's Gold (1994)
+The Cowboy Way (1994)
+Legends of the Fall (1994)
+Tin Cup (1996)
+Hidalgo (2004)
+An American Tail 3? (0000)`.split("\n").filter(l=>!l.includes("?")).join("\n"),
+s:["Cowboy caviar ~ black-eyed peas, corn, capsicum","Smoked sausage bites","Jalapeño cornbread","Campfire beans","Fried pickles","Beef jerky"],
+m:["Smoked brisket ~ white bread, pickles","Pulled pork rolls ~ slaw","Sticky BBQ ribs","Chuckwagon chilli","Chicken fried steak"],
+w:["Peach cobbler","Pecan pie","Campfire s'mores","Skillet cookie"],
+d:["Whiskey, neat","Sarsaparilla","Cold beer","Sweet tea"]},
+
+philly:{name:"Philly Fight Night",films:`Rocky (1976)
+Rocky II (1979)
+Rocky III (1982)
+Rocky IV (1985)
+Rocky V (1990)
+Rocky Balboa (2006)
+Creed (2015)
+Blow Out (1981)
+Witness (1985)
+Philadelphia (1993)
+Twelve Monkeys 2? (0000)
+The Philadelphia Story (1940)
+Silver Linings Playbook (2012)
+Invincible (2006)
+The Sixth Sense 2? (0000)
+Unbreakable 2? (0000)
+Raging Bull 2? (0000)
+The Fighter (2010)
+Million Dollar Baby (2004)
+Cinderella Man (2005)
+The Hurricane (1999)
+Ali (2001)
+Gladiator (1992)
+Diggstown (1992)
+The Great White Hype (1996)
+Kickboxer 2? (0000)`.split("\n").filter(l=>!l.includes("?")).join("\n"),
+s:["Soft pretzels ~ yellow mustard","Cheese fries ~ melted cheese sauce","Hoagie bites ~ salami, provolone","Buffalo wings","Tomato pie squares ~ served cold"],
+m:["Cheesesteak ~ fried onions, melted cheese","Roast pork roll ~ broccoli rabe and provolone","Italian hoagie ~ oil, oregano, hot peppers","Chicken cutlet sandwich"],
+w:["Water ice ~ cherry","Butterscotch cake squares","Boardwalk funnel cake","Cannoli"],
+d:["Lager","Protein shake ~ raw egg if you dare","Birch beer","Black coffee"]}
+};
+
+/* House specials for the big ones */
+const SIG = {
+"Ghostbusters (1984)":{s:["Slime dip ~ green spinach and artichoke dip, corn chips","Toasted marshmallow bites"],m:["Firehouse meatball sub ~ long enough for four","Crossing the streams spaghetti ~ two sauces poured side by side"],w:"Giant marshmallow s'mores",d:"Ectoplasm slushie ~ lime"},
+"Ghostbusters II (1989)":{s:["Pink slime dip ~ beetroot hummus","Bagel bites"],m:["Statue of Liberty hot dogs ~ green relish"],w:"Toaster pastries",d:"Pink lemonade with sherbet"},
+"Teenage Mutant Ninja Turtles (1990)":{s:["Sewer pizza rolls","Garlic knots"],m:["Four-pie pizza night ~ one each: pepperoni, mushroom, supreme, anything goes"],w:"Pizza cookie ~ choc candy toppings",d:"Green ooze float ~ lime soda and ice cream"},
+"Weekend at Bernie's (1989)":{s:["Hamptons prawn cocktail","Deck party sliders"],m:["Lobster rolls ~ buttered brioche","Beach house clambake ~ corn, potatoes, mussels"],w:"Key lime pie",d:"Frozen daiquiris"},
+"Die Hard (1988)":{s:["Office party canapés ~ smoked salmon blini","Sushi platter"],m:["Christmas party roast beef rolls"],w:"Christmas cookies from the 30th floor",d:"Bourbon on the rocks"},
+"Die Hard with a Vengeance (1995)":{s:["Cart hot pretzels","Salted peanuts"],m:["Bacon egg and cheese on a roll","Gyro platter"],w:"Crumb cake",d:"Bodega coffee"},
+"Crocodile Dundee (1986)":{s:["Pork crackling ~ the bush tucker you'll actually eat","Garlic prawn skewers"],m:["Barbecued barra ~ lemon myrtle butter","Steak sandwich ~ beetroot, egg, the lot"],w:"Lamingtons",d:"Ice cold tinnies"},
+"Coming to America (1988)":{s:["Golden fries","Rose petal sugar crisps"],m:["Big Mick burger ~ double patty, special sauce, sesame seed bun","Fried chicken bucket"],w:"Apple turnovers",d:"Vanilla thick shake"},
+"The Godfather (1972)":{s:["Antipasto ~ provolone, olives, salami","Orange wedges with prosciutto"],m:["Clemenza's Sunday sauce ~ garlic, tomatoes, sausage, meatballs, a splash of wine, a pinch of sugar","Veal scaloppine ~ lemon and capers"],w:"Leave the gun, take the cannoli",d:"Chianti"},
+"Goodfellas (1990)":{s:["Bruschetta ~ garlic sliced paper thin","Peppers and onions on toast"],m:["Prison-style gravy ~ veal, beef and pork meatballs","Lobster fra diavolo"],w:"Lemon ice",d:"Scotch and soda"},
+"Do the Right Thing (1989)":{s:["Garlic knots","Watermelon wedges ~ chilli salt"],m:["Pizzeria slices ~ pepperoni, extra cheese"],w:"Shaved ice ~ cherry syrup, hottest day of the year",d:"Ice cold lager"},
+"Home Alone (1990)":{s:["Cheese pizza bites","Popcorn"],m:["A whole cheese pizza, just for you","Mac and cheese ~ microwave style"],w:"Ice cream sundae ~ every topping",d:"Pepsi-style cola in a tall glass"},
+"Home Alone 2: Lost in New York (1992)":{s:["Hotel minibar snack mix","Prawn cocktail"],m:["Room service cheese pizza","Lobster mac and cheese"],w:"Room service sundae ~ the works",d:"Hot chocolate with whipped cream"},
+"Elf (2003)":{s:["Maple syrup popcorn","Candy cane pretzel rods"],m:["Spaghetti with maple syrup ~ topped with candy and marshmallows (dare)","Mail room hot dogs"],w:"Snowflake sugar cookies",d:"World's best cup of coffee ~ an ordinary diner brew"},
+"Big (1988)":{s:["Baby corn ~ eat it like a cob","Caviar on crackers ~ spit-take optional"],m:["Company party buffet ~ crab cakes, prawns, little sandwiches","Street cart hot dog"],w:"Giant choc chip cookie",d:"Root beer float"},
+"Splash (1984)":{s:["Oysters","Fish and chip cones"],m:["Whole lobster ~ drawn butter, shell optional"],w:"Ocean blue jelly cups",d:"Blue lagoon"},
+"Men in Black (1997)":{s:["Bug-eyed devilled eggs","Black bean dip"],m:["Black tie burgers ~ charcoal buns","Street cart hot dogs"],w:"Flash pops ~ cake pops",d:"Sugar water ~ very sweet lemonade"},
+"Short Circuit 2 (1988)":{s:["Input popcorn ~ need more input","Robot bolt pretzels"],m:["Toy shop pizza"],w:"Robot cookies",d:"Battery acid lemon slushie"},
+"Big Trouble in Little China (1986)":{s:["Pork and chive dumplings","Salt and pepper squid"],m:["Pork-chop express ribs ~ char siu glaze","Hand-pulled noodles ~ chilli oil"],w:"Fortune cookies",d:"Plum wine"},
+"The Last Dragon (1985)":{s:["Popcorn ~ eat it with chopsticks","Spring rolls"],m:["Harlem takeaway General Tso's chicken","Egg fried rice"],w:"Mango mochi",d:"Chrysanthemum iced tea"},
+"Taxi Driver (1976)":{s:["All-night diner fries","Salted crackers"],m:["Diner cheeseburger"],w:"Apple pie",d:"Black coffee"},
+"The Warriors (1979)":{s:["Coney Island fries","Boardwalk clam strips"],m:["Coney Island chilli dogs"],w:"Cotton candy",d:"Cream soda"},
+"Saturday Night Fever (1977)":{s:["Garlic knots","Meatball bites"],m:["Two slices stacked ~ fold it and strut"],w:"Disco ball cake pops",d:"7 and 7"},
+"Léon: The Professional (1994)":{s:["Baguette and butter","Olives"],m:["Croque monsieur"],w:"Dirt cup with a mint sprig plant",d:"Ice cold milk, lots of it"},
+"When Harry Met Sally... (1989)":{s:["Deli pickles","Potato knish"],m:["Pastrami on rye ~ have what she's having"],w:"Apple pie, heated, ice cream on the side",d:"Egg cream"},
+"Pulp Fiction (1994)":{s:["Royale with cheese sliders","Diner fries"],m:["Hawaiian burger ~ pineapple, teriyaki"],w:"Diner pancakes",d:"Five dollar milkshake ~ vanilla"},
+"The Big Lebowski (1998)":{s:["Bowling alley nachos","Pretzels"],m:["Bowling alley burgers"],w:"Milk and cookies",d:"White Russian"},
+"Back to the Future (1985)":{s:["Malt shop fries","Pickles"],m:["Malt shop cheeseburger"],w:"Clock tower cake",d:"Chocolate malt"},
+"Mad Max 2 (1981)":{s:["Wasteland jerky","Fire-roasted corn"],m:["Fuel-injected chilli"],w:"Dust-dry Anzac biscuits",d:"Black cola"},
+"The Castle (1997)":{s:["Cheese and kabana platter","Sausage rolls"],m:["Rissoles with mash and peas ~ what do you call this, love?"],w:"Lamingtons",d:"Cold tinnies"},
+"Rocky (1976)":{s:["Raw egg shooters ~ dare only","Soft pretzels"],m:["Cheesesteak ~ fried onions, melted cheese"],w:"Water ice",d:"Protein shake"},
+"Planes, Trains and Automobiles (1987)":{s:["Motel vending machine mix","Pretzels"],m:["Diner cheeseburger"],w:"Thanksgiving pumpkin pie",d:"Airport beer"},
+"Ferris Bueller's Day Off (1986)":{s:["Chicago hot dogs","Deep dish bites"],m:["Chicago deep dish pizza"],w:"Parade cupcakes",d:"Cherry red soda"},
+"The Breakfast Club (1985)":{s:["Sushi rolls","Bag of chips"],m:["Detention sandwich ~ a massive PB and J"],w:"Sherbet straws over cereal",d:"Milk"},
+"Spider-Man 2 (2004)":{s:["Pizza delivery garlic knots","Hot pretzels"],m:["Thirty-minute pepperoni pizza"],w:"Aunt's wheatcakes ~ pancakes with syrup",d:"Newsroom coffee"},
+"Ratatouille (2007)":{s:["Baguette and brie","Potato leek soup shots"],m:["Ratatouille ~ thin sliced, layered, baked"],w:"Crème brûlée",d:"Bordeaux"},
+"Jaws (1975)":{s:["Clam chowder cups","Fried clam strips"],m:["Fish and chips"],w:"Shark gummy jelly cups",d:"A bigger glass of beer"},
+"Money Train (1995)":{s:["Subway platform pretzels","Honey roasted nuts"],m:["Chopped cheese hero"],w:"Crumb cake",d:"Tallboy in a paper bag"},
+"Gremlins (1984)":{s:["Popcorn ~ no snacking after midnight","Pigs in blankets"],m:["Midnight cheeseburgers"],w:"Gingerbread people",d:"Hot chocolate"}
+};
+
+const PALETTE=["#e0452f","#ef7f2a","#f2b632","#2fa89a","#6b4c8a"];
+const parseItem=s=>{const [n,note]=s.split(" ~ ");return {n,note:note||""}};
+
+/* build film list */
+const FILMS=[];const seen=new Set();
+for(const [key,th] of Object.entries(T)){
+  th.films.split("\n").forEach(line=>{
+    const m=line.trim().match(/^(.*) \((\d{4})\)$/);
+    if(!m||m[2]==="0000")return;
+    const id=`${m[1]} (${m[2]})`;
+    if(seen.has(id))return;seen.add(id);
+    FILMS.push({title:m[1],year:m[2],id,theme:key});
+  });
+}
+
+const $=id=>document.getElementById(id);
+const sel=$("themeSel");
+sel.innerHTML=`<option value="all">Everything (${FILMS.length} films)</option>`+
+  Object.entries(T).map(([k,t])=>`<option value="${k}">${t.name} (${FILMS.filter(f=>f.theme===k).length})</option>`).join("");
+
+let list=[],rot=0,spinning=false,winner=-1,current=null,usedSig=false;
+const canvas=$("wheel"),ctx=canvas.getContext("2d");
+
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+function setList(){
+  const v=sel.value;
+  list=shuffle(v==="all"?FILMS:FILMS.filter(f=>f.theme===v));
+  rot=0;winner=-1;draw();
+  $("count").textContent=`${list.length} films on the wheel`;
+}
+
+function size(){
+  const r=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+  canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);draw();
+}
+
+function draw(){
+  const W=canvas.width;if(!W)return;
+  const c=W/2,R=c*0.94,n=list.length,a=Math.PI*2/n;
+  ctx.clearRect(0,0,W,W);
+  /* rim */
+  ctx.beginPath();ctx.arc(c,c,c*0.995,0,Math.PI*2);ctx.fillStyle="#0b0a10";ctx.fill();
+  for(let i=0;i<n;i++){
+    const s=rot+i*a-Math.PI/2;
+    ctx.beginPath();ctx.moveTo(c,c);ctx.arc(c,c,R,s,s+a+0.0015);ctx.closePath();
+    ctx.fillStyle=i===winner?"#f3e8cc":PALETTE[i%5];ctx.fill();
+  }
+  if(n<=60){
+    ctx.strokeStyle="rgba(23,20,31,.6)";ctx.lineWidth=Math.max(1,W/500);
+    for(let i=0;i<n;i++){const s=rot+i*a-Math.PI/2;ctx.beginPath();ctx.moveTo(c,c);ctx.lineTo(c+R*Math.cos(s),c+R*Math.sin(s));ctx.stroke()}
+  }
+  /* inner shade ring */
+  const g=ctx.createRadialGradient(c,c,R*0.25,c,c,R);
+  g.addColorStop(0,"rgba(23,20,31,.55)");g.addColorStop(.45,"rgba(23,20,31,0)");g.addColorStop(1,"rgba(23,20,31,.2)");
+  ctx.beginPath();ctx.arc(c,c,R,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();
+  /* marquee bulbs */
+  const bulbs=28,br=(c-R)*0.38;
+  for(let i=0;i<bulbs;i++){
+    const t=i/bulbs*Math.PI*2+rot*0.15;
+    ctx.beginPath();ctx.arc(c+(R+(c-R)*0.48)*Math.cos(t),c+(R+(c-R)*0.48)*Math.sin(t),br,0,Math.PI*2);
+    ctx.fillStyle=i%2?"#f2b632":"#f3e8cc";ctx.fill();
+  }
+}
+
+function indexAt(r){
+  const n=list.length,a=Math.PI*2/n;
+  const p=((-r)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);
+  return Math.floor(p/a)%n;
+}
+
+const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function spin(){
+  if(spinning||!list.length)return;
+  spinning=true;$("spin").disabled=true;winner=-1;
+  const n=list.length,a=Math.PI*2/n,t=Math.floor(Math.random()*n);
+  const target=-(t+0.5+(Math.random()-0.5)*0.6)*a;
+  const start=rot,turns=reduce?1:6+Math.floor(Math.random()*3);
+  const delta=((target-start)%(Math.PI*2)+Math.PI*2)%(Math.PI*2)+turns*Math.PI*2;
+  const dur=reduce?900:5200,t0=performance.now();
+  const ease=x=>1-Math.pow(1-x,4);
+  let last=-1;
+  function frame(now){
+    const p=Math.min(1,(now-t0)/dur);
+    rot=start+delta*ease(p);draw();
+    const i=indexAt(rot);
+    if(i!==last){$("now").textContent=list[i].title;last=i}
+    if(p<1)requestAnimationFrame(frame);
+    else{
+      rot=rot%(Math.PI*2);winner=indexAt(rot);draw();
+      spinning=false;$("spin").disabled=false;
+      const f=list[winner];
+      $("now").textContent=`${f.title} (${f.year})`;
+      show(f,true,"Tonight you're watching");addHistory(f);
+    }
+  }
+  requestAnimationFrame(frame);
+}
+
+function makeMenu(f,preferSig){
+  const sig=SIG[f.id];
+  if(sig&&preferSig){
+    return {sig:true,s:sig.s.map(parseItem),m:sig.m.map(parseItem),w:[parseItem(sig.w)],d:[parseItem(sig.d)]};
+  }
+  const th=T[f.theme];
+  return {sig:false,s:shuffle(th.s).slice(0,2).map(parseItem),m:shuffle(th.m).slice(0,Math.random()<.5?1:2).map(parseItem),w:[parseItem(shuffle(th.w)[0])],d:[parseItem(shuffle(th.d)[0])]};
+}
+
+/* ---------- menu design per theme ---------- */
+const svg=s=>`url("data:image/svg+xml,${encodeURIComponent(s)}")`;
+const checker=(a,b,z)=>svg(`<svg xmlns='http://www.w3.org/2000/svg' width='${z*2}' height='${z*2}'><rect width='${z*2}' height='${z*2}' fill='${a}'/><rect width='${z}' height='${z}' fill='${b}'/><rect x='${z}' y='${z}' width='${z}' height='${z}' fill='${b}'/></svg>`);
+const gingham=c=>svg(`<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><rect width='28' height='28' fill='#fff'/><rect width='14' height='28' fill='${c}' fill-opacity='.55'/><rect width='28' height='14' fill='${c}' fill-opacity='.55'/></svg>`);
+const stripes=(a,b,w)=>svg(`<svg xmlns='http://www.w3.org/2000/svg' width='${w*2}' height='40'><rect width='${w*2}' height='40' fill='${a}'/><rect width='${w}' height='40' fill='${b}'/></svg>`);
+const dots=(c,bg,z,r)=>svg(`<svg xmlns='http://www.w3.org/2000/svg' width='${z}' height='${z}'><rect width='${z}' height='${z}' fill='${bg}'/><circle cx='${z/2}' cy='${z/2}' r='${r}' fill='${c}'/></svg>`);
+const stars=(bg)=>{let s=`<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><rect width='220' height='220' fill='${bg}'/>`;const p=[[12,30,1.4],[60,10,1],[110,48,1.8],[170,22,1.1],[200,90,1.4],[30,120,1],[90,150,1.2],[140,110,1],[190,170,1.8],[50,200,1.3],[120,195,1],[15,70,.8],[160,60,.9],[100,90,.7]];p.forEach(([x,y,r])=>s+=`<circle cx='${x}' cy='${y}' r='${r}' fill='#ffffff' fill-opacity='.8'/>`);return svg(s+"</svg>")};
+const bunting=cols=>{let s=`<svg xmlns='http://www.w3.org/2000/svg' width='${cols.length*40}' height='36'>`;cols.forEach((c,i)=>s+=`<polygon points='${i*40+2},0 ${i*40+38},0 ${i*40+20},34' fill='${c}'/>`);return svg(s+"</svg>")};
+const snow=bg=>svg(`<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='120' height='120' fill='${bg}'/><circle cx='20' cy='24' r='2' fill='#fff' fill-opacity='.35'/><circle cx='80' cy='60' r='2.5' fill='#fff' fill-opacity='.3'/><circle cx='40' cy='96' r='1.6' fill='#fff' fill-opacity='.35'/><circle cx='104' cy='14' r='1.4' fill='#fff' fill-opacity='.3'/></svg>`);
+
+const STY={
+redsauce:{eye:"Tonight's feature",md:"Lobster",mb:"Lora",bw:"ital,wght@0,400;0,700;1,400",mg:"#fbf5e9",mi:"#2b1d16",ma:"#b3261e",m2:"#2f6b3a",mf:"3px solid #b3261e",sh:"30px",strip:gingham("#b3261e"),ssz:"28px 28px",
+ intro:"Long lunch rules apply. Everything is made for sharing, nobody leaves hungry and the sauce has been on since morning.",tags:["Pull up a chair. The gravy's been on since nine.","Family dinner. Attendance is not optional.","An offer you can't refuse: seconds."]},
+pizza:{eye:"Hot and fresh",md:"Bowlby One SC",mb:"Barlow Condensed",bw:"ital,wght@0,400;0,700;1,400",mg:"#ffffff",mi:"#1b1b1b",ma:"#d7261e",m2:"#1f7a3a",mf:"4px solid #1b1b1b",sh:"24px",strip:stripes("#ffffff","#d7261e",22),ssz:"44px 24px",
+ intro:"Slices are big, folding is mandatory and the last piece goes to whoever spun the wheel.",tags:["Hot, fresh and foldable.","Extra cheese. No arguments.","If it's not on a paper plate, is it even pizza night?"]},
+deli:{eye:"Now serving",md:"Abril Fatface",mb:"Libre Franklin",bw:"ital,wght@0,400;0,700;1,400",mg:"#efe3cf",mi:"#1d2a44",ma:"#a33a2b",m2:"#b07b1e",mf:"7px double #1d2a44",
+ intro:"Take a number. Sandwiches are stacked higher than they need to be and the pickles are free.",tags:["Order at the counter. Eat like you mean it.","Rye, mustard, no substitutions.","Cheesecake is not optional."]},
+street:{eye:"Open all night",md:"Bebas Neue",mb:"IBM Plex Mono",bw:"ital,wght@0,400;0,700;1,400",mg:"#f4f1e6",mi:"#111111",ma:"#111111",m2:"#9a7a00",mf:"5px solid #111111",sh:"30px",strip:checker("#111111","#f5c518",15),ssz:"30px 30px",mls:".02em",
+ intro:"No tables, no plates, no fuss. Cart food and bodega runs, eaten standing up.",tags:["Grab it, fold it, walk it.","Open all night. Cash only.","Mind the doors. Don't drop your hot dog."]},
+cop:{eye:"Evidence log",md:"Special Elite",mb:"Courier Prime",bw:"ital,wght@0,400;0,700;1,400",mg:"#e7d3a1",mi:"#2b2b2b",ma:"#b0201b",m2:"#555555",mf:"2px dashed #2b2b2b",stamp:"Case file",
+ intro:"Stakeout rations. Everything here survives a long night in a parked car and a short temper.",tags:["Two cops. One box of doughnuts.","Too old for this? Not for dessert.","Book 'em. Then feed 'em."]},
+soul:{eye:"Sunday supper",md:"Shrikhand",mb:"Lora",bw:"ital,wght@0,400;0,700;1,400",mg:"#f3d27a",mi:"#3b2412",ma:"#a8321f",m2:"#2e5a3a",mf:"4px solid #3b2412",
+ intro:"Sunday best cooking. Low and slow, plenty of butter, and a plate you'll still be thinking about tomorrow.",tags:["Come hungry. Leave happy.","You eat what's put in front of you.","Turn the music up and pass the cornbread."]},
+xmas:{eye:"Christmas special",md:"Mountains of Christmas",mdw:"700",mb:"Cormorant Garamond",bw:"ital,wght@0,400;0,700;1,400",mg:"#14402e",mpat:snow("#14402e"),mpsz:"120px 120px",mi:"#f6efdf",ma:"#e2b34a",m2:"#e8665e",mf:"7px double #e2b34a",
+ intro:"Lights on, air con on, everyone in their trackies. A proper Aussie Christmas spread for movie night.",tags:["The halls are decked. The ham is glazed.","Ho ho hold the remote.","Santa's watching. So are we."]},
+aussie:{eye:"Arvo tucker",md:"Holtwood One SC",mb:"Work Sans",bw:"ital,wght@0,400;0,700;1,400",mg:"#f2e3c6",mi:"#3a2416",ma:"#c25b28",m2:"#5d7d4e",mf:"4px solid #3a2416",sh:"18px",strip:dots("#c25b28","#f2e3c6",18,4),ssz:"18px 18px",
+ intro:"Grab a tinnie, throw another snag on, and nobody touches the last lamington.",tags:["Fair dinkum feed.","She'll be right. Bring a plate.","Tell 'em they're dreaming."]},
+asian:{eye:"Late night order",md:"Kaushan Script",mb:"Noto Sans",bw:"ital,wght@0,400;0,700;1,400",mg:"#b11d1d",mi:"#fff3d6",ma:"#f4c542",m2:"#ffd98a",mf:"3px solid #f4c542",mf2:"1px solid #f4c542",
+ intro:"Order too much, share everything, fight over the last dumpling. Chopsticks optional.",tags:["Hungry for adventure. Hungry for dumplings.","The night is young. The noodles are long.","Fortune favours the hungry."]},
+scifi:{eye:"Mission briefing",md:"Orbitron",mdw:"800",mb:"Share Tech Mono",bw:"",mg:"#0b1230",mpat:stars("#0b1230"),mpsz:"220px 220px",mi:"#dfe8ff",ma:"#33e1ed",m2:"#ff4fa3",mf:"2px solid #33e1ed",mfill:"rgba(11,18,48,.82)",mtt:"uppercase",
+ intro:"Rations for a long trip. Everything here is cleared for zero gravity and minimal crumbs.",tags:["In space, nobody can hear you crunch.","Fuel up. Launch in T minus one movie.","The future is delicious."]},
+hero:{eye:"Issue #1",md:"Bangers",mb:"Comic Neue",bw:"ital,wght@0,400;0,700;1,400",mg:"#ffd23f",mpat:dots("#f2a900","#ffd23f",14,3),mpsz:"14px 14px",mi:"#111111",ma:"#e2231a",m2:"#1d4fd8",mf:"6px solid #111111",mfill:"#fffbe8",mls:".03em",
+ intro:"Fuel for saving the city. Eat on the rooftop and keep one hand free for swinging.",tags:["With great snacks comes great responsibility.","Every hero needs a sidekick. This one's a sauce.","Saving the day takes carbs."]},
+kids:{eye:"Family matinee",md:"Fredoka",mdw:"700",mb:"Nunito",bw:"ital,wght@0,400;0,700;1,400",mg:"#e7f6ff",mi:"#23305a",ma:"#ff5a5f",m2:"#2a9d8f",mf:"6px dotted #ff5a5f",sh:"26px",strip:stripes("#ffb703","#8ecae6",26),ssz:"52px 26px",
+ intro:"Matinee rules: blankets on the floor, popcorn in your lap and no peeking at the ending.",tags:["Snacks for the whole family. Even the dog.","Lights down. Popcorn up.","Once upon a time, there was a sundae."]},
+teen:{eye:"Food court special",md:"Monoton",mb:"Kanit",bw:"ital,wght@0,400;0,700;1,400",mg:"#1b1036",mi:"#fdf2ff",ma:"#ff3cac",m2:"#2ce0d0",mf:"4px solid #2ce0d0",mf2:"2px solid #ff3cac",sh:"22px",strip:stripes("#ff3cac","#2ce0d0",22),ssz:"44px 22px",
+ intro:"Like hanging at the food court on a Saturday, minus the security guard telling you to move on.",tags:["Totally tubular eats.","Detention never tasted this good.","Skip class. Never skip snacks."]},
+diner:{eye:"Blue plate special",md:"Pacifico",mb:"Arvo",bw:"ital,wght@0,400;0,700;1,400",mg:"#c9ebe0",mi:"#1e2a2a",ma:"#d83a3a",m2:"#1e2a2a",mf:"4px solid #1e2a2a",mfill:"#f8fbf6",sh:"28px",strip:checker("#1e2a2a","#ffffff",14),ssz:"28px 28px",
+ intro:"Booth seating, bottomless coffee and someone who calls everyone love. Pie is mandatory.",tags:["Open 24 hours. Pie is always on.","Slide into a booth. Order the lot.","Coffee's hot. Road's long."]},
+mex:{eye:"Cantina menu",md:"Sancreek",mb:"Cabin",bw:"ital,wght@0,400;0,700;1,400",mg:"#fff6e5",mi:"#2a1a3a",ma:"#e83f7a",m2:"#1c9c8c",mf:"4px solid #2a1a3a",sh:"36px",strip:bunting(["#e83f7a","#ffc93c","#1c9c8c","#7b4bd1","#ff7a2f"]),ssz:"200px 36px",
+ intro:"Squeeze lime on everything. Salsa heat is optional. A second round of margaritas is not.",tags:["Tacos at dawn.","Bring an appetite. Bring a friend.","Hot salsa. Cool heads."]},
+tiki:{eye:"Luau menu",md:"Luckiest Guy",mb:"Quicksand",bw:"wght@400;700",mg:"#f4e3b5",mi:"#2f2414",ma:"#e06a2b",m2:"#1e8f86",mf:"4px solid #2f2414",sh:"26px",strip:stripes("#c9a25a","#a77b34",12),ssz:"24px 26px",
+ intro:"Shoes off, shirt loud, drink with an umbrella in it. Tropical tucker for a lazy night in.",tags:["Sun's down. Tiki's up.","Island time starts now.","Paradise, served on a skewer."]},
+uptown:{eye:"Dinner is served",md:"Cormorant Garamond",mdw:"700",mb:"Cormorant Garamond",bw:"ital,wght@0,400;0,700;1,400",mg:"#0e0e0e",mi:"#efe6cf",ma:"#c9a54b",m2:"#c9a54b",mf:"2px solid #c9a54b",mf2:"1px solid #c9a54b",mtt:"uppercase",mls:".08em",
+ intro:"Dress code: whatever you like, but sit up straight. Expense account dining with the lights down low.",tags:["Greed is good. So is the steak.","Shaken, never stirred. Like the guests.","Dinner for people who already have everything."]},
+horror:{eye:"Midnight feast",md:"Creepster",mb:"Crimson Text",bw:"ital,wght@0,400;0,700;1,400",mg:"#140d1c",mi:"#e9e3f2",ma:"#8bd14b",m2:"#f28c28",mf:"3px solid #8bd14b",
+ intro:"Lights off, doors locked, and nobody goes down to the basement for more chips. Eat at your own risk.",tags:["Don't fall asleep before dessert.","It came from the kitchen.","Some snacks never die."]},
+western:{eye:"Wanted: big appetites",md:"Rye",mb:"Old Standard TT",bw:"ital,wght@0,400;0,700;1,400",mg:"#ead8b1",mi:"#3a2717",ma:"#8a2e1d",m2:"#3a2717",mf:"7px double #3a2717",
+ intro:"Chuckwagon cooking. Smoke, fire and enough meat to feed the whole posse.",tags:["This kitchen ain't big enough for leftovers.","Ride in hungry. Ride out full.","Draw first. Eat faster."]},
+philly:{eye:"Fight night card",md:"Anton",mb:"Oswald",bw:"wght@400;700",mg:"#f3ead7",mi:"#151515",ma:"#c4161c",m2:"#151515",mf:"6px solid #151515",sh:"20px",strip:stripes("#c4161c","#151515",40),ssz:"80px 20px",mtt:"uppercase",mls:".02em",
+ intro:"Twelve rounds of eating. Train hard, then reward yourself with a cheesesteak the size of your forearm.",tags:["Go the distance. Then get dessert.","Eye on the prize. The prize is pie.","Every champ needs a cheesesteak."]}
+};
+
+/* original lines for the house specials */
+const FTAG={
+"Ghostbusters (1984)":"Slime included. Ghosts not.",
+"Ghostbusters II (1989)":"Bad vibes. Good dip.",
+"Teenage Mutant Ninja Turtles (1990)":"Four brothers. Four pizzas. Zero leftovers.",
+"Weekend at Bernie's (1989)":"The party never stops. Neither does Bernie.",
+"Die Hard (1988)":"Welcome to the party. Bring a plate.",
+"Die Hard with a Vengeance (1995)":"One very long day in New York. Snacks for the road.",
+"Crocodile Dundee (1986)":"That's not a snack. This is a snack.",
+"Coming to America (1988)":"A prince walks into a burger joint in Queens.",
+"The Godfather (1972)":"Family first. Cannoli second.",
+"Goodfellas (1990)":"The garlic has to be sliced just right.",
+"Do the Right Thing (1989)":"Hottest day of the year. Coldest drinks in the house.",
+"Home Alone (1990)":"One kid. One whole pizza. Zero adults.",
+"Home Alone 2: Lost in New York (1992)":"Room service. Charge it to Dad.",
+"Elf (2003)":"Four food groups. All of them sugar.",
+"Big (1988)":"Grown-up food for a kid at heart.",
+"Splash (1984)":"Fresh from the ocean. Mostly.",
+"Men in Black (1997)":"Protecting Earth from the worst snacks in the universe.",
+"Short Circuit 2 (1988)":"Number 5 is hungry.",
+"Big Trouble in Little China (1986)":"Something big is cooking in Chinatown.",
+"The Last Dragon (1985)":"Find the glow. Then find the dumplings.",
+"Taxi Driver (1976)":"Late shift. Black coffee. Long night.",
+"The Warriors (1979)":"Make it home to Coney before the dogs go cold.",
+"Saturday Night Fever (1977)":"Strut in. Fold your slice. Strut out.",
+"Léon: The Professional (1994)":"Quiet man. Loud appetite. Lots of milk.",
+"When Harry Met Sally... (1989)":"Order whatever she's having.",
+"Pulp Fiction (1994)":"Five dollar shakes. Worth every cent.",
+"The Big Lebowski (1998)":"The rug ties the room together. The Russian ties the night.",
+"Back to the Future (1985)":"Great Scott, that's a good burger.",
+"Mad Max 2 (1981)":"Fuel up. The road is long.",
+"The Castle (1997)":"It's not a meal. It's the vibe of the thing.",
+"Rocky (1976)":"Go the distance. Then go back for seconds.",
+"Planes, Trains and Automobiles (1987)":"Three days to get home. Snacks for every leg.",
+"Ferris Bueller's Day Off (1986)":"One day off. Make it delicious.",
+"The Breakfast Club (1985)":"Five strangers. One detention. Plenty of snacks.",
+"Spider-Man 2 (2004)":"Thirty minutes or it's free.",
+"Ratatouille (2007)":"Anyone can cook. Tonight, you do.",
+"Jaws (1975)":"You're going to need a bigger plate.",
+"Money Train (1995)":"Last train of the night. Snacks for the platform.",
+"Gremlins (1984)":"Never feed after midnight. Eat before."
+};
+
+const ESC=s=>String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+const loadedFonts=new Set();
+function ensureFonts(st){
+  const fams=[[st.md,st.mdw?`wght@${st.mdw}`:""],[st.mb,st.bw]];
+  const reqs=[];
+  fams.forEach(([f,w])=>{
+    const key=f+w;
+    if(!loadedFonts.has(key)){
+      loadedFonts.add(key);
+      const l=document.createElement("link");l.rel="stylesheet";
+      l.href=`https://fonts.googleapis.com/css2?family=${f.replace(/ /g,"+")}${w?":"+w:""}&display=swap`;
+      document.head.appendChild(l);
+      reqs.push(new Promise(r=>{l.onload=r;l.onerror=r}));
+    }
+  });
+  return Promise.all(reqs).then(()=>Promise.race([
+    Promise.all([document.fonts.load(`${st.mdw||400} 60px "${st.md}"`,"Aa"),document.fonts.load(`700 20px "${st.mb}"`,"Aa"),document.fonts.load(`400 20px "${st.mb}"`,"Aa")]),
+    new Promise(r=>setTimeout(r,3500))
+  ])).catch(()=>{});
+}
+
+function cardHTML(f,menu,tag){
+  const st=STY[f.theme];
+  const course=(label,items)=>`<div class="mc-course"><h3>${label}</h3>${items.map(it=>`<div class="mc-item"><b>${ESC(it.n)}</b>${it.note?`<span>${ESC(it.note)}</span>`:""}</div>`).join("")}</div>`;
+  return `<div class="mc-strip top"></div><div class="mc-frame"><div class="mc-inner">
+    ${st.stamp?`<div class="mc-stamp">${ESC(st.stamp)}</div>`:""}
+    <div class="mc-eye">${ESC(st.eye)}</div>
+    <div class="mc-title">${ESC(f.title)}</div>
+    <div class="mc-year">${f.year}</div>
+    <p class="mc-tag">${ESC(tag)}</p>
+    <div class="mc-rule"></div>
+    <p class="mc-intro">${ESC(st.intro)}</p>
+    <div class="mc-courses">
+      ${course("Snacks",menu.s)}
+      ${course(menu.m.length>1?"Mains":"Main",menu.m)}
+      ${course("Something sweet",menu.w)}
+      ${course("To drink",menu.d)}
+    </div>
+    <div class="mc-foot">${ESC(T[f.theme].name)}${menu.sig?" &nbsp;/&nbsp; House special":""}</div>
+  </div></div><div class="mc-strip bot"></div>`;
+}
+
+function styleCard(el,f){
+  const st=STY[f.theme];
+  const vars={"--mg":st.mg,"--mi":st.mi,"--ma":st.ma,"--m2":st.m2,"--mf":st.mf,"--mf2":st.mf2,"--mfill":st.mfill,
+    "--md":`"${st.md}",Georgia,serif`,"--mb":`"${st.mb}",Georgia,serif`,"--mdw":st.mdw,"--mtt":st.mtt,"--mls":st.mls,
+    "--mpat":st.mpat,"--mpsz":st.mpsz,"--sh":st.sh,"--strip":st.strip,"--ssz":st.ssz};
+  el.removeAttribute("style");
+  for(const [k,v] of Object.entries(vars))if(v)el.style.setProperty(k,v);
+}
+
+/* shrink the title and the whole menu until it fits the A4 page */
+function fit(el){
+  const title=el.querySelector(".mc-title"),inner=el.querySelector(".mc-inner");
+  let size=f=>{title.style.fontSize=f+"px"};
+  let fs=96;size(fs);
+  while(fs>40&&(title.scrollHeight>fs*1.05*2.15||title.scrollWidth>title.clientWidth+1)){fs-=4;size(fs)}
+  let scale=1;el.style.setProperty("--k","1");
+  const items=el.querySelectorAll(".mc-item b,.mc-item span,.mc-intro,.mc-tag,.mc-course h3");
+  items.forEach(n=>n.dataset.base=n.dataset.base||parseFloat(getComputedStyle(n).fontSize));
+  while(inner.scrollHeight>inner.clientHeight+1&&scale>0.7){
+    scale-=0.04;items.forEach(n=>n.style.fontSize=(n.dataset.base*scale)+"px");
+    if(fs>48){fs-=4;size(fs)}
+  }
+}
+
+const preview=$("preview");
+const card=document.createElement("div");card.className="mcard";preview.appendChild(card);
+function scalePreview(){const k=preview.clientWidth/794;card.style.transform=`scale(${k})`;preview.style.height=(1123*k)+"px"}
+window.addEventListener("resize",scalePreview);
+
+let renderId=0;
+async function show(f,preferSig){
+  const id=++renderId;
+  current=f;
+  const menu=makeMenu(f,preferSig);
+  const tag=(menu.sig&&FTAG[f.id])||shuffle(STY[f.theme].tags)[0];
+  current.menu=menu;current.tag=tag;
+  $("status").textContent="";
+  $("reroll").textContent=menu.sig?"Try a different menu":"New menu";
+  await ensureFonts(STY[f.theme]);
+  if(id!==renderId)return;
+  styleCard(card,f);
+  card.innerHTML=cardHTML(f,menu,tag);
+  scalePreview();
+  fit(card);
+}
+
+/* history */
+let hist=[];
+try{hist=JSON.parse(localStorage.getItem("mns-hist")||"[]")}catch(e){hist=[]}
+function renderHist(){
+  const box=$("chips");
+  const items=hist.map(id=>FILMS.find(f=>f.id===id)).filter(Boolean);
+  if(!items.length){box.innerHTML='<span class="empty">Nothing yet. Your picks land here.</span>';return}
+  box.innerHTML="";
+  items.forEach(f=>{const b=document.createElement("button");b.className="chip";b.type="button";b.textContent=f.title;b.addEventListener("click",()=>show(f,true));box.appendChild(b)});
+}
+function addHistory(f){
+  hist=[f.id,...hist.filter(x=>x!==f.id)].slice(0,8);
+  try{localStorage.setItem("mns-hist",JSON.stringify(hist))}catch(e){}
+  renderHist();
+}
+
+function menuText(){
+  if(!current)return"";
+  const m=current.menu,line=it=>`- ${it.n}${it.note?`, ${it.note}`:""}`;
+  return `${current.title} (${current.year})\n${current.tag}\n${T[current.theme].name}\n\nSnacks\n${m.s.map(line).join("\n")}\n\n${m.m.length>1?"Mains":"Main"}\n${m.m.map(line).join("\n")}\n\nSomething sweet\n${m.w.map(line).join("\n")}\n\nTo drink\n${m.d.map(line).join("\n")}`;
+}
+
+/* export: render a clean copy of the card at full size */
+async function renderCanvas(){
+  const stage=document.createElement("div");
+  stage.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px;";
+  const clone=card.cloneNode(true);clone.style.transform="none";
+  stage.appendChild(clone);document.body.appendChild(stage);
+  try{
+    await document.fonts.ready;
+    return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true});
+  }finally{stage.remove()}
+}
+const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+
+let downloads=null;
+const inClaude=!!(window.claude&&window.claude.use);
+if(inClaude){window.claude.use("downloads").then(d=>{downloads=d}).catch(()=>{})}
+else{$("print").hidden=false}
+function plainDownload(data,filename){
+  const url=URL.createObjectURL(data),a=document.createElement("a");
+  a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),4000);
+}
+
+function showOverlay(url){
+  const o=document.createElement("div");o.className="overlay";
+  o.innerHTML=`<img alt="Menu for ${ESC(current.title)}"><p>Saving straight to a file isn't available here. Long-press or right-click the menu to save it, then print it from your photos or files.</p><button class="btn primary" type="button">Close</button>`;
+  o.querySelector("img").src=url;
+  o.querySelector("button").addEventListener("click",()=>o.remove());
+  document.body.appendChild(o);
+}
+
+async function exportMenu(kind){
+  if(!current||typeof html2canvas==="undefined"){$("status").textContent="Still loading the export tools, try again in a second.";return}
+  const btns=[$("pdf"),$("png")];btns.forEach(b=>b.disabled=true);
+  $("status").textContent=kind==="pdf"?"Building your A4 PDF...":"Building your image...";
+  try{
+    const canvas=await renderCanvas();
+    const name=`${slug(current.title)}-${current.year}-menu`;
+    let data,filename;
+    if(kind==="pdf"){
+      const {jsPDF}=window.jspdf;
+      const pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});
+      pdf.addImage(canvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297);
+      data=pdf.output("blob");filename=name+".pdf";
+    }else{
+      data=await new Promise(r=>canvas.toBlob(r,"image/png"));filename=name+".png";
+    }
+    if(downloads){
+      try{await downloads.save({filename,data});$("status").textContent=`Saved ${filename}. Print it at A4, actual size.`}
+      catch(e){
+        if(e&&e.code==="declined")$("status").textContent="Save cancelled.";
+        else{showOverlay(canvas.toDataURL("image/png"));$("status").textContent=""}
+      }
+    }else if(!inClaude){plainDownload(data,filename);$("status").textContent=`Downloaded ${filename}. Print it at A4, actual size.`}
+    else{showOverlay(canvas.toDataURL("image/png"));$("status").textContent=""}
+  }catch(e){$("status").textContent="Couldn't build the file. Try again."}
+  finally{btns.forEach(b=>b.disabled=false)}
+}
+
+$("spin").addEventListener("click",spin);
+sel.addEventListener("change",setList);
+$("reroll").addEventListener("click",()=>{if(current)show(current,false)});
+$("pdf").addEventListener("click",()=>exportMenu("pdf"));
+$("png").addEventListener("click",()=>exportMenu("png"));
+$("print").addEventListener("click",()=>{
+  const pa=$("printArea");pa.innerHTML="";
+  const c=card.cloneNode(true);c.style.transform="none";pa.appendChild(c);
+  window.print();
+});
+$("copy").addEventListener("click",()=>{
+  const txt=menuText();
+  const done=()=>{$("status").textContent="Menu copied as text."};
+  const fail=()=>{
+    const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();
+    try{document.execCommand("copy");done()}catch(e){$("status").textContent="Copy is blocked here."}
+    ta.remove();
+  };
+  try{navigator.clipboard.writeText(txt).then(done,fail)}catch(e){fail()}
+});
+window.addEventListener("resize",size);
+
+setList();size();renderHist();scalePreview();
+show(FILMS.find(f=>f.id==="Ghostbusters (1984)"),true);
+</script>
+
+</body>
+</html>
