@@ -96,6 +96,7 @@ select:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-
 .mc-title{font-family:var(--md);font-weight:var(--mdw,400);font-size:84px;line-height:1.02;margin:12px 0 4px;color:var(--mt,var(--mi));text-transform:var(--mtt,none);letter-spacing:var(--mls,0);max-width:100%;overflow-wrap:break-word}
 .mc-year{font-family:var(--mb);font-weight:700;font-size:17px;letter-spacing:.3em;color:var(--m2)}
 .mc-tag{font-family:var(--mb);font-style:italic;font-size:22px;margin:14px 0 0;max-width:30em}
+.mc-desc{font-size:17px;max-width:34em;margin:8px 0 0;opacity:.9}
 .mc-rule{width:120px;height:4px;background:var(--ma);margin:20px 0 16px;flex:none}
 .mc-intro{font-size:17px;max-width:36em;margin:0 0 6px;opacity:.88}
 .mc-courses{display:flex;flex-direction:column;gap:16px;width:100%;margin-top:12px;flex:1;justify-content:center}
@@ -1040,7 +1041,19 @@ Teen Witch (1989)
 The Craft (1996)
 Practical Magic (1998)
 Young Frankenstein (1974)
-The Rocky Horror Picture Show (1975)`.split("\n").filter(l=>!l.includes("?")).join("\n"),
+The Rocky Horror Picture Show (1975)
+Psycho (1960)
+Night of the Living Dead (1968)
+Let the Right One In (2008)
+The Babadook (2014)
+It Follows (2014)
+The Witch (2015)
+Train to Busan (2016)
+Get Out (2017)
+Hereditary (2018)
+A Quiet Place (2018)
+Sinners (2025)
+Shutter Island (2010)`.split("\n").filter(l=>!l.includes("?")).join("\n"),
 s:["Mummy dogs ~ pastry-wrapped franks","Spider devilled eggs ~ olive spiders","Graveyard dip ~ seven layers, crushed chip dirt","Eyeball meatballs ~ mozzarella and olive","Black BBQ bat wings","Pumpkin soup shooters"],
 m:["Pumpkin bowl chilli","Jack-o'-lantern stuffed capsicums","Graveyard shepherd's pie ~ cracker headstones","Coffin sandwiches ~ cut into coffin shapes"],
 w:["Dirt cups ~ chocolate pudding, gummy worms","Toffee apples","Pumpkin pie","Red velvet cupcakes"],
@@ -1365,6 +1378,26 @@ const FTAG={
 "Gremlins (1984)":"Never feed after midnight. Eat before."
 };
 
+
+/* one-line plot descriptions printed under the tagline */
+const DESC={
+"Psycho (1960)":"A thief on the run checks into a remote motel run by a troubled young man.",
+"Rosemary's Baby (1968)":"A pregnant woman suspects her neighbours have sinister plans for her child.",
+"Night of the Living Dead (1968)":"Strangers barricade themselves in a farmhouse as the dead rise.",
+"Halloween (1978)":"An escaped killer returns to his hometown to stalk babysitters on Halloween night.",
+"Alien (1979)":"A spaceship crew is hunted by a deadly creature that boarded with them.",
+"The Thing (1982)":"Researchers in Antarctica face a shape-shifting alien that imitates its victims.",
+"Let the Right One In (2008)":"A bullied boy befriends a mysterious girl who turns out to be a vampire.",
+"The Babadook (2014)":"A grieving mother and her son are haunted by a sinister storybook creature.",
+"It Follows (2014)":"A relentless, shape-changing entity pursues its victim at a walking pace.",
+"The Witch (2015)":"A 1630s New England family unravels after their newborn vanishes.",
+"Train to Busan (2016)":"Passengers fight to survive a zombie outbreak on a high-speed train.",
+"Get Out (2017)":"A young Black man visits his girlfriend's family and uncovers a disturbing secret.",
+"Hereditary (2018)":"A family's secrets and grief spiral into terror after their matriarch dies.",
+"A Quiet Place (2018)":"A family lives in silence to evade blind creatures that hunt by sound.",
+"Sinners (2025)":"Twin brothers open a juke joint in 1930s Mississippi and face a dark presence.",
+"Shutter Island (2010)":"A US marshal hunts for a missing patient at an island hospital for the criminally insane, and starts doubting his own mind."
+};
 const ESC=s=>String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
 const loadedFonts=new Set();
 function ensureFonts(st){
@@ -1395,6 +1428,7 @@ function cardHTML(f,menu,tag){
     <div class="mc-title">${ESC(f.title)}</div>
     <div class="mc-year">${f.year}</div>
     <p class="mc-tag">${ESC(tag)}</p>
+    ${DESC[f.id]?`<p class="mc-desc">${ESC(DESC[f.id])}</p>`:""}
     <div class="mc-rule"></div>
     <p class="mc-intro">${ESC(st.intro)}</p>
     <div class="mc-courses">
@@ -1423,7 +1457,7 @@ function fit(el){
   let fs=96;size(fs);
   while(fs>40&&(title.scrollHeight>fs*1.05*2.15||title.scrollWidth>title.clientWidth+1)){fs-=4;size(fs)}
   let scale=1;el.style.setProperty("--k","1");
-  const items=el.querySelectorAll(".mc-item b,.mc-item span,.mc-intro,.mc-tag,.mc-course h3");
+  const items=el.querySelectorAll(".mc-item b,.mc-item span,.mc-intro,.mc-tag,.mc-desc,.mc-course h3");
   items.forEach(n=>n.dataset.base=n.dataset.base||parseFloat(getComputedStyle(n).fontSize));
   while(inner.scrollHeight>inner.clientHeight+1&&scale>0.7){
     scale-=0.04;items.forEach(n=>n.style.fontSize=(n.dataset.base*scale)+"px");
@@ -1472,7 +1506,7 @@ function addHistory(f){
 function menuText(){
   if(!current)return"";
   const m=current.menu,line=it=>`- ${it.n}${it.note?`, ${it.note}`:""}`;
-  return `${current.title} (${current.year})\n${current.tag}\n${T[current.theme].name}\n\nSnacks\n${m.s.map(line).join("\n")}\n\n${m.m.length>1?"Mains":"Main"}\n${m.m.map(line).join("\n")}\n\nSomething sweet\n${m.w.map(line).join("\n")}\n\nTo drink\n${m.d.map(line).join("\n")}`;
+  return `${current.title} (${current.year})\n${current.tag}\n${DESC[current.id]?DESC[current.id]+"\n":""}${T[current.theme].name}\n\nSnacks\n${m.s.map(line).join("\n")}\n\n${m.m.length>1?"Mains":"Main"}\n${m.m.map(line).join("\n")}\n\nSomething sweet\n${m.w.map(line).join("\n")}\n\nTo drink\n${m.d.map(line).join("\n")}`;
 }
 
 /* export: render a clean copy of the card at full size */
