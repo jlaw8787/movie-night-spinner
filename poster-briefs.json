@@ -344,7 +344,7 @@
     {
      "name": "Copacabana prawn cocktail",
      "scene": "front row table, walked in through the kitchen",
-     "method": "Poach peeled prawns 2 minutes in salted water with lemon and bay, ice bath. Marie Rose with whole-egg mayo, tomato sauce, Worcestershire, Tabasco and brandy. Iceberg, prawns, sauce, paprika, lemon wedge, in coupes.",
+     "method": "Poach peeled prawns 2 minutes in salted water with lemon and bay, ice bath. Marie Rose with whole-egg mayo, tomato sauce, Worcestershire, hot sauce and brandy. Iceberg, prawns, sauce, paprika, lemon wedge, in coupes.",
      "shop": [
       "green prawns",
       "iceberg lettuce",
@@ -822,7 +822,7 @@
    ],
    "lane": 2,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "Mean Streets (1973)",
@@ -945,14 +945,14 @@
     {
      "name": "Oysters Rockefeller",
      "scene": "the high roller table",
-     "method": "Blitz spinach, parsley, spring onion, butter, breadcrumbs and a splash of Pernod. Top shucked oysters, grill hot for 3 minutes until bubbling.",
+     "method": "Blitz spinach, parsley, spring onion, butter, breadcrumbs and a splash of aniseed liqueur. Top shucked oysters, grill hot for 3 minutes until bubbling.",
      "shop": [
       "oysters",
       "spinach",
       "parsley",
       "butter",
       "breadcrumbs",
-      "Pernod"
+      "aniseed liqueur"
      ]
     },
     {
@@ -1129,7 +1129,7 @@
    ],
    "lane": 5,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "The Untouchables (1987)",
@@ -1224,17 +1224,17 @@
     {
      "name": "Repeal Day old fashioned",
      "scene": "Ness finally has a drink",
-     "method": "Stir 60ml rye, 10ml sugar syrup and 2 dashes Angostura over ice for 30 seconds, strain over a big cube, orange twist.",
+     "method": "Stir 60ml rye, 10ml sugar syrup and 2 dashes aromatic bitters over ice for 30 seconds, strain over a big cube, orange twist.",
      "shop": [
       "rye whiskey",
-      "Angostura bitters",
+      "aromatic bitters bitters",
       "oranges"
      ]
     }
    ],
    "lane": 4,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "Prizzi's Honor (1985)",
@@ -1425,10 +1425,10 @@
     {
      "name": "Negroni",
      "scene": "to calm the nerves",
-     "method": "Equal parts gin, Campari and sweet vermouth stirred over ice, big cube, orange slice.",
+     "method": "Equal parts gin, bitter red aperitif and sweet vermouth stirred over ice, big cube, orange slice.",
      "shop": [
       "gin",
-      "Campari",
+      "bitter red aperitif",
       "sweet vermouth",
       "oranges"
      ]
@@ -1436,7 +1436,7 @@
    ],
    "lane": 4,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "Mickey Blue Eyes (1999)",
@@ -1834,7 +1834,7 @@
    ],
    "lane": 2,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "Get Shorty (1995)",
@@ -1925,12 +1925,12 @@
     {
      "name": "Bloody Mary",
      "scene": "the Hollywood morning",
-     "method": "45ml vodka, 120ml tomato juice, lemon, Worcestershire, Tabasco, celery salt and pepper, rolled between tins, celery stick.",
+     "method": "45ml vodka, 120ml tomato juice, lemon, Worcestershire, hot sauce, celery salt and pepper, rolled between tins, celery stick.",
      "shop": [
       "vodka",
       "tomato juice",
       "Worcestershire sauce",
-      "Tabasco",
+      "hot sauce",
       "celery"
      ]
     }
@@ -2037,7 +2037,7 @@
    ],
    "lane": 5,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "Moonstruck (1987)",
@@ -2428,7 +2428,7 @@
    ],
    "lane": 3,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "My Cousin Vinny (1992)",
@@ -2531,7 +2531,7 @@
    ],
    "lane": 3,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "Things to Do in Denver When You're Dead (1995)",
@@ -6876,11 +6876,11 @@
     {
      "name": "Manhattan cocktail",
      "scene": "obviously, it's in the name",
-     "method": "Stir 60ml rye, 30ml sweet vermouth and 2 dashes Angostura over ice for 30 seconds, strain into a chilled coupe, cherry.",
+     "method": "Stir 60ml rye, 30ml sweet vermouth and 2 dashes aromatic bitters over ice for 30 seconds, strain into a chilled coupe, cherry.",
      "shop": [
       "rye whiskey",
       "sweet vermouth",
-      "Angostura bitters",
+      "aromatic bitters bitters",
       "cocktail cherries"
      ]
     }
@@ -7382,10 +7382,10 @@
     {
      "name": "Old fashioned",
      "scene": "in Gekko's office, where greed is good",
-     "method": "Stir 60ml bourbon, 10ml sugar syrup and 2 dashes Angostura over ice, strain over a big cube, orange twist.",
+     "method": "Stir 60ml bourbon, 10ml sugar syrup and 2 dashes aromatic bitters over ice, strain over a big cube, orange twist.",
      "shop": [
       "bourbon",
-      "Angostura bitters",
+      "aromatic bitters bitters",
       "oranges"
      ]
     }
@@ -11667,7 +11667,7 @@
     {
      "name": "Vegas strip prawns",
      "scene": "the crash landing on the Strip",
-     "method": "Prawns poached and iced on shredded iceberg in martini glasses, spicy cocktail sauce of tomato sauce, horseradish, lemon and Tabasco.",
+     "method": "Prawns poached and iced on shredded iceberg in martini glasses, spicy cocktail sauce of tomato sauce, horseradish, lemon and hot sauce.",
      "shop": [
       "green prawns",
       "iceberg lettuce",
@@ -13038,7 +13038,7 @@
    ],
    "lane": 1,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "I Am Legend (2007)",
@@ -15761,7 +15761,7 @@
    ],
    "lane": 1,
    "poster_status": "pending",
-   "recipe_ready": false
+   "recipe_ready": true
   },
   {
    "id": "The Rocketeer (1991)",
