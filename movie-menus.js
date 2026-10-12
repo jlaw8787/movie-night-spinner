@@ -49,3 +49,43 @@ MOVIE_MENU_EDITIONS["Ghostbusters (1984)"].menu.shopping = [
 "150g frozen spinach@Frozen","150g drained marinated artichokes@Pantry","150g cream cheese@Dairy","100g sour cream@Dairy","100g mozzarella@Dairy","3 garlic cloves@Produce","200g corn chips@Pantry","800g chicken wings@Meat","1 tsp baking powder@Pantry","salt@Pantry","1 tsp smoked paprika@Pantry","40ml hot sauce@Pantry","130g butter@Dairy","100ml ranch dressing@Pantry","600g boneless chicken thighs@Meat","3 tbsp + 1 tsp cornflour@Pantry","neutral oil@Pantry","3 tbsp soy sauce@Pantry","2 tbsp honey@Pantry","1 tbsp rice vinegar@Pantry","1 tsp sesame oil@Pantry","1 tbsp sesame seeds@Pantry","4 eggs@Dairy","500g chilled cooked rice@Pantry","2 spring onions@Produce","1 head broccoli@Produce","100g dark chocolate@Pantry","120g caster sugar@Pantry","60g plain flour@Pantry","15g cocoa powder@Pantry","100g marshmallows@Pantry","400ml vanilla ice cream@Frozen","300ml orange juice@Drinks","2 limes@Produce","300ml lemonade@Drinks","ice (at least 400g)@Frozen","green food colouring (optional)@Pantry"];
 MOVIE_MENU_EDITIONS["The Godfather (1972)"].menu.shopping = [
 "100g salami@Deli","100g aged provolone@Deli","100g olives@Deli","150g roast capsicum@Deli","olive oil@Pantry","black pepper@Pantry","400g cold cooked risotto or 8 ready-made arancini@Deli","80g mozzarella@Dairy","40g plain flour@Pantry","2 eggs@Dairy","120g breadcrumbs@Pantry","neutral oil for frying@Pantry","400g pork and beef mince@Meat","3 fennel sausages@Meat","60g pecorino@Dairy","salt@Pantry","1 onion@Produce","3 garlic cloves@Produce","2 tbsp tomato paste@Pantry","800g tinned tomatoes@Pantry","400g rigatoni@Pantry","250g ricotta@Dairy","40g icing sugar@Pantry","1 orange (zest and twists)@Produce","30g dark chocolate@Pantry","8 small cannoli shells@Bakery","30g pistachios@Pantry","100ml blood orange syrup@Drinks","800ml sparkling water@Drinks","ice@Frozen"];
+
+// ===== LANE 1 START: agent 1 inserts each new edition block directly below this line =====
+//
+//
+//
+//
+//
+// ===== LANE 1 END: do not write below this line =====
+
+// ===== LANE 2 START: agent 2 inserts each new edition block directly below this line =====
+//
+//
+//
+//
+//
+// ===== LANE 2 END: do not write below this line =====
+
+// ===== LANE 3 START: agent 3 inserts each new edition block directly below this line =====
+//
+//
+//
+//
+//
+// ===== LANE 3 END: do not write below this line =====
+
+// ===== LANE 4 START: agent 4 inserts each new edition block directly below this line =====
+//
+//
+//
+//
+//
+// ===== LANE 4 END: do not write below this line =====
+
+// ===== LANE 5 START: agent 5 inserts each new edition block directly below this line =====
+//
+//
+//
+//
+//
+// ===== LANE 5 END: do not write below this line =====

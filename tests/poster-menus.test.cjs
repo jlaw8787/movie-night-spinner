@@ -13,7 +13,7 @@ const context=vm.createContext({JSON,console});
 vm.runInContext(editionsSource+'\n'+filmSource+'\n'+`const shuffle=a=>a.slice().reverse();const ESC=s=>String(s).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));\n`+menuCode+shopCode+cardCode,context);
 const run=s=>vm.runInContext(s,context);
 const ids=run('Object.keys(MOVIE_MENU_EDITIONS)');
-assert.equal(ids.length,3);
+assert.ok(ids.length>=3);
 for(const id of ids){
  context.testId=id;
  const edition=run('MOVIE_MENU_EDITIONS[testId]');
@@ -44,7 +44,7 @@ const normal=run('FILMS.find(f=>!MOVIE_MENU_EDITIONS[f.id])');context.normalId=n
 assert.ok(run('makeMenu(FILMS.find(f=>f.id===normalId),true).m.length>0'));
 const rollout=JSON.parse(fs.readFileSync(path.join(root,'menu-artwork-rollout.json'),'utf8'));
 assert.equal(rollout.films.length,708);
-assert.equal(rollout.films.filter(f=>f.status==='complete').length,3);
+assert.equal(rollout.films.filter(f=>f.status==='complete').length,ids.length);
 assert.equal(new Set(rollout.films.map(f=>f.id)).size,708);
 assert.ok(html.includes('img.decode()'));
 console.log('PASS: artwork/menu matching, portions, consolidated shopping, A4 assets, accessible text, curated-menu stability, legacy fallback and 708-film rollout.');
