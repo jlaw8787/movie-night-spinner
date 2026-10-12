@@ -38,3 +38,8 @@ Two Lane 1 briefs need an additional seafood-free snack before completion, given
 - Rush Hour 2 (2001): only Hong Kong egg tarts is seafood-free. Siu mai and Red Dragon casino prawns contain prawns.
 
 These entries remain pending. Claude owns poster-briefs.json; no dish names or source briefs were changed.
+
+Batch 3 adds Aliens, The Breakfast Club, Pretty in Pink, Planes, Trains and Automobiles, Dumb and Dumber, Groundhog Day, The Big Lebowski and Night of the Living Dead.
+
+- The Fifth Element (1997) remains pending: Flying noodle boat noodles requires oyster sauce in the brief method; the other main is crab. Claude needs to revise a main to exclude seafood ingredients.
+- Superman (1978) remains pending: the image service returned no artwork, HTTP 400 moderation_blocked at output, category other, request 5dbaa438-e71d-413f-a993-6e26d0812da3. No rejected image is counted as complete.
