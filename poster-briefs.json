@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 600,
- "ready_for_poster": 579,
+ "hand_written": 624,
+ "ready_for_poster": 603,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -61919,6 +61919,2492 @@
     }
    ],
    "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Beauty and the Beast (2017)",
+   "title": "Beauty and the Beast",
+   "year": "2017",
+   "theme": "fairytale",
+   "tagline": "Be our guest. Bring an appetite.",
+   "description": "A bookish young woman takes her father's place as the Beast's prisoner in his enchanted castle.",
+   "serve_cue": "Serve the mains when Lumière throws Belle a dinner show in the castle dining room.",
+   "snacks": [
+    {
+     "name": "Villeneuve market bread",
+     "scene": "the busy morning market in Belle's village",
+     "method": "Baguette slices toasted with olive oil, topped with brie and apple, or goat's cheese and honey, laid out on a wooden board.",
+     "shop": [
+      "baguette",
+      "brie",
+      "red apples",
+      "goat's cheese",
+      "honey",
+      "olive oil"
+     ]
+    },
+    {
+     "name": "Gaston's tavern devilled eggs",
+     "scene": "Gaston showing off at the village tavern",
+     "method": "Eggs boiled 10 minutes, yolks mashed with mayo, Dijon and chives, piped back in and dusted with paprika, a big platter of them.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "Dijon mustard",
+      "chives",
+      "smoked paprika"
+     ]
+    },
+    {
+     "name": "Mrs Potts's tea sandwiches",
+     "scene": "Mrs Potts and Chip serving tea",
+     "method": "Finger sandwiches of cucumber and cream cheese, and ham with mustard, crusts off, served on a tiered stand.",
+     "shop": [
+      "white bread",
+      "Lebanese cucumbers",
+      "cream cheese",
+      "leg ham",
+      "Dijon mustard",
+      "butter"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Enchanted castle dinner",
+     "scene": "the grand dinner show in the castle dining room",
+     "method": "Beef bourguignon of chuck, bacon, mushrooms and baby onions simmered 3 hours in red wine, with buttery mash and crusty bread.",
+     "shop": [
+      "beef chuck",
+      "bacon",
+      "mushrooms",
+      "pickling onions",
+      "red wine",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Maurice's travelling supper",
+     "scene": "Belle's father Maurice heading off to market",
+     "method": "Chicken thighs braised with white wine, leek and thyme until tender, served with crusty bread to mop up the sauce.",
+     "shop": [
+      "chicken thighs",
+      "white wine",
+      "leeks",
+      "thyme",
+      "thickened cream",
+      "crusty bread"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Enchanted rose tart",
+     "scene": "the enchanted rose under glass",
+     "method": "Sweet pastry blind baked, filled with vanilla custard, topped with thin apple slices fanned into a rose and glazed with apricot jam.",
+     "shop": [
+      "sweet shortcrust pastry",
+      "custard",
+      "red apples",
+      "apricot jam",
+      "lemons"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Ballroom golden punch",
+     "scene": "the golden ballroom dance",
+     "method": "Peach nectar and sparkling apple juice with orange slices, or sparkling wine for the grown-ups.",
+     "shop": [
+      "peach nectar",
+      "sparkling apple juice",
+      "oranges",
+      "sparkling wine"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Aladdin (2019)",
+   "title": "Aladdin",
+   "year": "2019",
+   "theme": "fairytale",
+   "tagline": "One jump ahead. One plate behind.",
+   "description": "A street thief in Agrabah finds a magic lamp and a genie, and tries to win the heart of Princess Jasmine.",
+   "serve_cue": "Serve the snacks when Aladdin runs through the Agrabah market with the bread.",
+   "snacks": [
+    {
+     "name": "Agrabah market flatbreads",
+     "scene": "Aladdin running through the market with stolen bread",
+     "method": "Flatbreads brushed with olive oil and za'atar, grilled until blistered, torn and served with hummus and labneh.",
+     "shop": [
+      "flatbread",
+      "za'atar",
+      "olive oil",
+      "hummus",
+      "labneh"
+     ]
+    },
+    {
+     "name": "Abu's date bites",
+     "scene": "Abu the monkey grabbing whatever he can",
+     "method": "Medjool dates stuffed with almond butter, dipped in dark chocolate and rolled in crushed pistachios.",
+     "shop": [
+      "medjool dates",
+      "almond butter",
+      "dark chocolate",
+      "pistachios"
+     ]
+    },
+    {
+     "name": "Cave of Wonders golden falafel",
+     "scene": "the golden Cave of Wonders",
+     "method": "Soaked chickpeas blitzed with onion, garlic, parsley, coriander and cumin, shaped and fried at 180C until golden, with tahini sauce.",
+     "shop": [
+      "dried chickpeas",
+      "brown onions",
+      "garlic",
+      "parsley",
+      "ground cumin",
+      "tahini"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Prince Ali's parade lamb",
+     "scene": "the big parade into the city",
+     "method": "Lamb shoulder rubbed with garlic, cumin, cinnamon and paprika, slow roasted at 150C for 5 hours, pulled over saffron rice with almonds and sultanas.",
+     "shop": [
+      "lamb shoulder",
+      "garlic",
+      "ground cumin",
+      "ground cinnamon",
+      "basmati rice",
+      "almonds"
+     ]
+    },
+    {
+     "name": "Palace chicken with apricots",
+     "scene": "the Sultan's palace",
+     "method": "Chicken thighs slow cooked with onion, dried apricots, ginger, saffron and honey until sticky, served with couscous.",
+     "shop": [
+      "chicken thighs",
+      "brown onions",
+      "dried apricots",
+      "ginger",
+      "saffron",
+      "couscous"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Magic carpet baklava",
+     "scene": "the magic carpet ride",
+     "method": "Filo layered with butter, pistachios, walnuts and cardamom, cut into diamonds, baked at 180C for 40 minutes and soaked in honey syrup.",
+     "shop": [
+      "filo pastry",
+      "butter",
+      "pistachios",
+      "walnuts",
+      "ground cardamom",
+      "honey"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Genie blue mint tea",
+     "scene": "the Genie in blue",
+     "method": "Green tea brewed with plenty of mint and sugar, served hot in small glasses or iced.",
+     "shop": [
+      "green tea",
+      "mint",
+      "caster sugar"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Lion King (2019)",
+   "title": "The Lion King",
+   "year": "2019",
+   "theme": "fairytale",
+   "tagline": "No worries. Plenty of snacks.",
+   "description": "A young lion prince runs from his kingdom after his father's death and has to come back to claim it.",
+   "serve_cue": "Serve the snacks when Timon and Pumbaa teach Simba to eat grubs.",
+   "snacks": [
+    {
+     "name": "Slimy yet satisfying grubs",
+     "scene": "Timon and Pumbaa showing Simba the grubs",
+     "method": "Rice noodles fried at 190C until they puff into crunchy grubs, tossed with chilli salt and lime, piled on a leaf.",
+     "shop": [
+      "rice vermicelli",
+      "vegetable oil",
+      "chilli flakes",
+      "sea salt flakes",
+      "limes"
+     ]
+    },
+    {
+     "name": "Rafiki's fruit platter",
+     "scene": "Rafiki and his gourds",
+     "method": "Rockmelon, papaya, mango and passionfruit cut into wedges, with lime and a sprinkle of chilli salt.",
+     "shop": [
+      "rockmelon",
+      "papaya",
+      "mangoes",
+      "passionfruit",
+      "limes"
+     ]
+    },
+    {
+     "name": "Pride Rock samosas",
+     "scene": "the view from Pride Rock",
+     "method": "Spiced beef mince with onion, peas and garam masala folded into pastry triangles, fried until crisp, with mint yoghurt.",
+     "shop": [
+      "beef mince",
+      "brown onions",
+      "frozen peas",
+      "garam masala",
+      "spring roll pastry",
+      "Greek yoghurt"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Pride Lands braai",
+     "scene": "the open savannah of the Pride Lands",
+     "method": "Beef rump steaks rubbed with paprika, coriander and garlic, grilled over coals, sliced with pap and a tomato and onion relish.",
+     "shop": [
+      "rump steak",
+      "smoked paprika",
+      "ground coriander",
+      "garlic",
+      "white maize meal",
+      "tomatoes"
+     ]
+    },
+    {
+     "name": "Jungle hideaway chicken",
+     "scene": "Simba growing up in the jungle with Timon and Pumbaa",
+     "method": "Chicken thighs marinated in peri peri of chilli, lemon, garlic and paprika, grilled until charred, with yellow rice.",
+     "shop": [
+      "chicken thighs",
+      "red chillies",
+      "lemons",
+      "garlic",
+      "smoked paprika",
+      "long grain rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Circle of life malva pudding",
+     "scene": "the circle of life",
+     "method": "South African malva pudding of apricot jam sponge baked at 180C for 40 minutes, soaked in a hot cream and butter sauce, with custard.",
+     "shop": [
+      "apricot jam",
+      "self-raising flour",
+      "eggs",
+      "butter",
+      "thickened cream",
+      "custard"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Watering hole rooibos",
+     "scene": "the watering hole on the savannah",
+     "method": "Rooibos tea brewed with honey and orange peel, chilled and poured over ice.",
+     "shop": [
+      "rooibos tea",
+      "honey",
+      "oranges",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Mary Poppins Returns (2018)",
+   "title": "Mary Poppins Returns",
+   "year": "2018",
+   "theme": "fairytale",
+   "tagline": "The cover is not the book. Neither is the menu.",
+   "description": "Mary Poppins comes back to Cherry Tree Lane to help the grown-up Banks children through hard times.",
+   "serve_cue": "Serve the snacks when Jack and the lamplighters light up the London streets.",
+   "snacks": [
+    {
+     "name": "Lamplighter sausage rolls",
+     "scene": "Jack and the lamplighters doing their rounds",
+     "method": "Pork mince with onion and sage rolled in puff pastry, egg washed and baked at 200C for 25 minutes, cut into bites with brown sauce.",
+     "shop": [
+      "pork mince",
+      "brown onions",
+      "sage",
+      "puff pastry",
+      "eggs",
+      "brown sauce"
+     ]
+    },
+    {
+     "name": "Topsy's upside-down shop toasts",
+     "scene": "Cousin Topsy's fix-it shop that turns upside down",
+     "method": "Upside-down toasts: bread pressed onto a pan of melted cheddar and fried until a lacy cheese crust forms, flipped and served.",
+     "shop": [
+      "white bread",
+      "cheddar",
+      "butter",
+      "chives"
+     ]
+    },
+    {
+     "name": "Bathtub ocean prawn cocktail",
+     "scene": "the bathtub that turns into an ocean",
+     "method": "Poached prawns on shredded lettuce in small glasses with a cocktail sauce of mayo, tomato sauce and lemon.",
+     "shop": [
+      "cooked prawns",
+      "iceberg lettuce",
+      "mayonnaise",
+      "tomato sauce",
+      "lemons"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Cherry Tree Lane pie",
+     "scene": "the Banks family home on Cherry Tree Lane",
+     "method": "Chicken, leek and ham in a creamy sauce under a puff pastry lid, baked at 200C for 25 minutes, with buttered peas.",
+     "shop": [
+      "chicken thighs",
+      "leeks",
+      "leg ham",
+      "thickened cream",
+      "puff pastry",
+      "frozen peas"
+     ]
+    },
+    {
+     "name": "Music hall bangers and mash",
+     "scene": "the music hall show inside the painted bowl",
+     "method": "Thick pork sausages browned slowly, served on buttery mash with an onion gravy cooked down for 20 minutes, and peas.",
+     "shop": [
+      "thick pork sausages",
+      "potatoes",
+      "butter",
+      "brown onions",
+      "beef stock",
+      "frozen peas"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Balloon lady jam tarts",
+     "scene": "the balloon lady in the park",
+     "method": "Shortcrust rounds filled with strawberry, apricot and blackcurrant jam, baked at 190C for 15 minutes.",
+     "shop": [
+      "shortcrust pastry",
+      "strawberry jam",
+      "apricot jam",
+      "blackcurrant jam",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Kite day lemonade",
+     "scene": "flying kites in the park",
+     "method": "Fresh lemonade with strawberries muddled in, poured over ice in tall glasses.",
+     "shop": [
+      "lemons",
+      "caster sugar",
+      "strawberries",
+      "soda water",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Parent Trap (1998)",
+   "title": "The Parent Trap",
+   "year": "1998",
+   "theme": "fairytale",
+   "tagline": "Twins swap. Dinner stays.",
+   "description": "Identical twins meet at summer camp and swap places to get their parents back together.",
+   "serve_cue": "Serve the snacks when Hallie and Annie share biscuits dipped in peanut butter.",
+   "snacks": [
+    {
+     "name": "Camp Walden peanut butter biscuits",
+     "scene": "the twins dipping chocolate biscuits in peanut butter",
+     "method": "Chocolate sandwich biscuits served with a bowl of smooth peanut butter for dipping, just like at camp.",
+     "shop": [
+      "chocolate cream biscuits",
+      "peanut butter",
+      "full cream milk"
+     ]
+    },
+    {
+     "name": "Napa vineyard cheese board",
+     "scene": "Nick's vineyard in Napa Valley",
+     "method": "Aged cheddar, brie and goat's cheese on a board with bunches of red grapes, fig jam, toasted walnuts and crackers.",
+     "shop": [
+      "aged cheddar",
+      "brie",
+      "goat's cheese",
+      "red grapes",
+      "fig jam",
+      "walnuts"
+     ]
+    },
+    {
+     "name": "London afternoon tea scones",
+     "scene": "Elizabeth's home in London",
+     "method": "Scones of self-raising flour, cream and lemonade, baked at 220C for 15 minutes, with jam and clotted cream.",
+     "shop": [
+      "self-raising flour",
+      "thickened cream",
+      "lemonade",
+      "strawberry jam",
+      "clotted cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Recreated first date dinner",
+     "scene": "the twins recreating their parents' first date dinner",
+     "method": "Beef eye fillet roasted to medium-rare with a red wine sauce, potato gratin and green beans, served by candlelight.",
+     "shop": [
+      "beef eye fillet",
+      "red wine",
+      "beef stock",
+      "potatoes",
+      "thickened cream",
+      "green beans"
+     ]
+    },
+    {
+     "name": "Camping trip sausages",
+     "scene": "the camping trip where Meredith gets pranked",
+     "method": "Thick sausages grilled over the barbecue, in soft rolls with fried onions and mustard, beans on the side.",
+     "shop": [
+      "thick beef sausages",
+      "hot dog buns",
+      "brown onions",
+      "yellow mustard",
+      "baked beans"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Summer camp s'mores",
+     "scene": "summer at Camp Walden",
+     "method": "Marshmallows toasted over a flame until golden, squashed with a square of dark chocolate between two plain sweet biscuits.",
+     "shop": [
+      "marshmallows",
+      "dark chocolate",
+      "plain sweet biscuits"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Martin's English tea",
+     "scene": "Martin the butler",
+     "method": "English breakfast tea brewed strong, served with milk and a plate of shortbread.",
+     "shop": [
+      "black tea",
+      "full cream milk",
+      "shortbread"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Freaky Friday (2003)",
+   "title": "Freaky Friday",
+   "year": "2003",
+   "theme": "fairytale",
+   "tagline": "Mind the fortune cookie.",
+   "description": "A mother and daughter swap bodies after a fortune cookie curse, the day before the mum's wedding.",
+   "serve_cue": "Serve dessert when the fortune cookies arrive at the Chinese restaurant.",
+   "snacks": [
+    {
+     "name": "Chinese restaurant spring rolls",
+     "scene": "the Chinese restaurant where the curse starts",
+     "method": "Pork, cabbage, carrot and vermicelli rolled in pastry, fried at 180C until crisp, with sweet chilli sauce.",
+     "shop": [
+      "pork mince",
+      "wombok",
+      "carrots",
+      "rice vermicelli",
+      "spring roll pastry",
+      "sweet chilli sauce"
+     ]
+    },
+    {
+     "name": "Band rehearsal nachos",
+     "scene": "Anna's band rehearsing in the garage",
+     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, with salsa and sour cream.",
+     "shop": [
+      "corn chips",
+      "black beans",
+      "cheddar",
+      "jalapeños",
+      "tomatoes",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Rehearsal dinner canapés",
+     "scene": "the wedding rehearsal dinner",
+     "method": "Blinis topped with crème fraîche, smoked salmon and chives, beside wedges of rockmelon wrapped in thin prosciutto, on silver trays.",
+     "shop": [
+      "blinis",
+      "smoked salmon",
+      "crème fraîche",
+      "prosciutto",
+      "rockmelon",
+      "chives"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Honey chicken",
+     "scene": "the Chinese restaurant dinner",
+     "method": "Chicken thigh pieces battered and fried crisp, tossed in a honey and soy glaze, with sesame and steamed rice.",
+     "shop": [
+      "chicken thighs",
+      "cornflour",
+      "honey",
+      "soy sauce",
+      "sesame seeds",
+      "jasmine rice"
+     ]
+    },
+    {
+     "name": "Wedding eve pasta",
+     "scene": "the chaos the night before the wedding",
+     "method": "Chicken strips seared, garlic and sun-dried tomatoes added with cream, spinach wilted through, tossed with penne and parmesan.",
+     "shop": [
+      "penne",
+      "chicken breasts",
+      "sun-dried tomatoes",
+      "baby spinach",
+      "thickened cream",
+      "parmesan"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Homemade fortune cookies",
+     "scene": "the fortune cookies that swap them",
+     "method": "Thin batter of egg white, sugar, flour and vanilla baked at 180C in small rounds for 6 minutes, folded around paper fortunes while hot.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "plain flour",
+      "butter",
+      "vanilla extract"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Jasmine tea",
+     "scene": "the restaurant's pot of tea",
+     "method": "Jasmine tea brewed in a pot, served in small cups.",
+     "shop": [
+      "jasmine tea"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Muppets (2011)",
+   "title": "The Muppets",
+   "year": "2011",
+   "theme": "kids",
+   "tagline": "Put on a show. Put on the kettle.",
+   "description": "Walter, Gary and Mary get the Muppets back together to save their old theatre from an oil baron.",
+   "serve_cue": "Serve the snacks when the telethon finally goes live.",
+   "snacks": [
+    {
+     "name": "Telethon snack table",
+     "scene": "the big telethon to save the Muppet Theater",
+     "method": "Popcorn, pretzels and cheese crackers in big bowls, refilled for the volunteers manning the phones.",
+     "shop": [
+      "popping corn",
+      "butter",
+      "pretzels",
+      "cheddar",
+      "plain flour"
+     ]
+    },
+    {
+     "name": "Swedish Chef meatballs",
+     "scene": "the Swedish Chef in the kitchen",
+     "method": "Pork and beef meatballs with onion and allspice, browned and simmered in a creamy gravy, served with lingonberry jam on toothpicks.",
+     "shop": [
+      "pork mince",
+      "beef mince",
+      "brown onions",
+      "allspice",
+      "thickened cream",
+      "lingonberry jam"
+     ]
+    },
+    {
+     "name": "Smalltown diner fries",
+     "scene": "Gary and Walter's home town of Smalltown",
+     "method": "Thick fries cooked twice until crisp, salted and served in paper cones with tomato sauce.",
+     "shop": [
+      "potatoes",
+      "vegetable oil",
+      "sea salt flakes",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Gary and Mary's anniversary dinner",
+     "scene": "Mary's anniversary dinner in Los Angeles",
+     "method": "Chicken breasts stuffed with spinach and ricotta, seared and roasted at 200C for 20 minutes, with a lemon butter sauce and rice pilaf.",
+     "shop": [
+      "chicken breasts",
+      "baby spinach",
+      "ricotta",
+      "lemons",
+      "butter",
+      "long grain rice"
+     ]
+    },
+    {
+     "name": "Miss Piggy's Paris dinner",
+     "scene": "Miss Piggy working at the fashion magazine in Paris",
+     "method": "Steak frites of sirloin seared and rested, with thin fries and a béarnaise of yolks, butter and tarragon. Not pork.",
+     "shop": [
+      "sirloin steak",
+      "potatoes",
+      "eggs",
+      "butter",
+      "tarragon",
+      "white wine vinegar"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Kermit green slice",
+     "scene": "Kermit the frog",
+     "method": "Biscuit base topped with a pale green peppermint icing and a dark chocolate top, chilled and cut into squares.",
+     "shop": [
+      "plain sweet biscuits",
+      "butter",
+      "icing sugar",
+      "peppermint essence",
+      "green food colouring",
+      "dark chocolate"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Rainbow punch",
+     "scene": "the Muppets back on stage",
+     "method": "Orange, pineapple and cranberry juice layered over ice and topped with lemonade.",
+     "shop": [
+      "orange juice",
+      "pineapple juice",
+      "cranberry juice",
+      "lemonade",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "A Bug's Life (1998)",
+   "title": "A Bug's Life",
+   "year": "1998",
+   "theme": "kids",
+   "tagline": "Gather the harvest. Keep some for yourself.",
+   "description": "An inventive ant hires a troupe of circus bugs he thinks are warriors to stand up to the grasshoppers.",
+   "serve_cue": "Serve the snacks when the ants pile up the harvest offering.",
+   "snacks": [
+    {
+     "name": "Harvest offering seed crackers",
+     "scene": "the seed and grain offering the ants gather",
+     "method": "Sunflower, pumpkin, linseed and sesame seeds mixed with chia and water, spread thin, baked at 160C for an hour, broken into shards.",
+     "shop": [
+      "sunflower seeds",
+      "pepitas",
+      "linseeds",
+      "sesame seeds",
+      "chia seeds",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Ant Island berry bites",
+     "scene": "the berries the ants carry across Ant Island",
+     "method": "Blueberries and raspberries threaded onto toothpicks with small cubes of feta and a mint leaf, laid out in neat marching lines on a platter.",
+     "shop": [
+      "blueberries",
+      "raspberries",
+      "feta",
+      "mint"
+     ]
+    },
+    {
+     "name": "Circus bug popcorn",
+     "scene": "P.T. Flea's flea circus",
+     "method": "Popcorn tossed with butter, brown sugar and a pinch of salt cooked to a caramel, served in striped cones.",
+     "shop": [
+      "popping corn",
+      "butter",
+      "brown sugar",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Bug City street noodles",
+     "scene": "the big city made of rubbish",
+     "method": "Egg noodles stir-fried with chicken, capsicum and broccoli in an oyster sauce, served in takeaway boxes.",
+     "shop": [
+      "egg noodles",
+      "chicken thighs",
+      "red capsicum",
+      "broccoli",
+      "oyster sauce"
+     ]
+    },
+    {
+     "name": "Colony corn chowder",
+     "scene": "the ant colony working together",
+     "method": "Corn, potato and bacon simmered in stock and milk with onion and thyme, finished with cream and chives.",
+     "shop": [
+      "corn kernels",
+      "potatoes",
+      "bacon",
+      "brown onions",
+      "thickened cream",
+      "chives"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Heimlich's butterfly cookies",
+     "scene": "Heimlich the caterpillar finally getting his wings",
+     "method": "Shortbread dough rolled out and cut into butterflies, baked at 160C for 15 minutes, iced in bright colours once cool.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "caster sugar",
+      "icing sugar",
+      "food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Dewdrop cooler",
+     "scene": "the giant dewdrops on the leaves",
+     "method": "Cucumber and mint blended with lime and sugar, strained and topped with soda water over ice.",
+     "shop": [
+      "Lebanese cucumbers",
+      "mint",
+      "limes",
+      "caster sugar",
+      "soda water",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Toy Story 4 (2019)",
+   "title": "Toy Story 4",
+   "year": "2019",
+   "theme": "kids",
+   "tagline": "Road trip. Carnival food.",
+   "description": "Woody goes after Forky, a spork turned toy, and finds Bo Peep at a travelling carnival.",
+   "serve_cue": "Serve the snacks when the toys sneak into the carnival.",
+   "snacks": [
+    {
+     "name": "Carnival corn dogs",
+     "scene": "the travelling carnival in town",
+     "method": "Cocktail franks dipped in a cornmeal batter, fried at 180C until golden, with mustard and tomato sauce.",
+     "shop": [
+      "cocktail franks",
+      "fine cornmeal",
+      "plain flour",
+      "buttermilk",
+      "yellow mustard",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Forky's spork salad cups",
+     "scene": "Forky, made from a spork at kindergarten",
+     "method": "Little cups of chopped salad of corn, tomato, cucumber and avocado with lime, each with a spork to eat it.",
+     "shop": [
+      "corn kernels",
+      "cherry tomatoes",
+      "Lebanese cucumbers",
+      "avocados",
+      "limes"
+     ]
+    },
+    {
+     "name": "Ducky and Bunny's prize popcorn",
+     "scene": "Ducky and Bunny stuck on the carnival prize wall",
+     "method": "Popcorn popped in oil, tossed with melted butter and coloured sprinkles, served in red and white striped bags.",
+     "shop": [
+      "popping corn",
+      "vegetable oil",
+      "butter",
+      "sprinkles",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "RV road trip burgers",
+     "scene": "the family's RV road trip",
+     "method": "Beef patties grilled with cheddar melted on, in toasted buns with lettuce, tomato and pickles, fries cooked twice on the side.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "iceberg lettuce",
+      "tomatoes",
+      "burger buns",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Antique shop dinner",
+     "scene": "the antique store where Gabby Gabby waits",
+     "method": "Chicken pot pie with leek and mushroom in a creamy sauce under a puff pastry lid, baked at 200C for 25 minutes.",
+     "shop": [
+      "chicken thighs",
+      "leeks",
+      "mushrooms",
+      "thickened cream",
+      "puff pastry",
+      "thyme"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Fairground funnel cake",
+     "scene": "the fairground at night",
+     "method": "Batter piped in swirls into hot oil, fried golden, dusted with icing sugar and served with strawberries.",
+     "shop": [
+      "plain flour",
+      "eggs",
+      "full cream milk",
+      "icing sugar",
+      "strawberries",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Carnival lemonade",
+     "scene": "the hot day at the carnival",
+     "method": "Fresh lemonade with strawberries, poured over ice in big cups.",
+     "shop": [
+      "lemons",
+      "caster sugar",
+      "strawberries",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Finding Dory (2016)",
+   "title": "Finding Dory",
+   "year": "2016",
+   "theme": "kids",
+   "tagline": "Just keep snacking.",
+   "description": "Dory sets off to find the family she lost as a child, with help from Marlin, Nemo and an octopus called Hank.",
+   "serve_cue": "Serve the snacks when Hank sneaks Dory through the Marine Life Institute.",
+   "snacks": [
+    {
+     "name": "Kelp forest seaweed crackers",
+     "scene": "the kelp forest off California",
+     "method": "Nori sheets brushed with sesame oil, sprinkled with sesame seeds and salt, toasted in a dry pan until crisp, cut into strips.",
+     "shop": [
+      "nori",
+      "sesame oil",
+      "sesame seeds",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Hank's seven-arm sliders",
+     "scene": "Hank the septopus",
+     "method": "Chicken patties with lettuce and mayo on small slider buns, seven of them in a ring.",
+     "shop": [
+      "chicken mince",
+      "breadcrumbs",
+      "iceberg lettuce",
+      "mayonnaise",
+      "slider buns"
+     ]
+    },
+    {
+     "name": "Shell trail crackers",
+     "scene": "the trail of shells that leads Dory home",
+     "method": "Cheddar cracker dough of cheese, butter and flour rolled thin, cut into shell shapes and baked at 180C for 12 minutes until golden.",
+     "shop": [
+      "cheddar",
+      "plain flour",
+      "butter",
+      "smoked paprika"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "California chicken bowls",
+     "scene": "the Marine Life Institute in California",
+     "method": "Chicken thighs grilled with lime and chilli, over rice with avocado, corn, black beans and salsa.",
+     "shop": [
+      "chicken thighs",
+      "limes",
+      "long grain rice",
+      "avocados",
+      "corn kernels",
+      "black beans"
+     ]
+    },
+    {
+     "name": "Ocean blue pasta",
+     "scene": "the open ocean",
+     "method": "Pasta tossed with pesto, peas, spinach and parmesan, a little seaweed sprinkled over. No fish, of course.",
+     "shop": [
+      "penne",
+      "basil pesto",
+      "frozen peas",
+      "baby spinach",
+      "parmesan",
+      "nori"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Dory blue jelly",
+     "scene": "Dory's bright blue",
+     "method": "Blue jelly set in glasses with whipped cream and a slice of orange on top for Nemo.",
+     "shop": [
+      "blue jelly crystals",
+      "thickened cream",
+      "oranges"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Ocean spider",
+     "scene": "the open ocean where Dory finds her parents",
+     "method": "Lemonade with blue colouring and a scoop of vanilla ice cream on top.",
+     "shop": [
+      "lemonade",
+      "blue food colouring",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Incredibles 2 (2018)",
+   "title": "The Incredibles 2",
+   "year": "2018",
+   "theme": "kids",
+   "tagline": "Cookie num num.",
+   "description": "Helen heads out on a hero mission while Bob stays home with the kids and a baby with too many powers.",
+   "serve_cue": "Serve dessert when Jack-Jack fights the raccoon for a cookie.",
+   "snacks": [
+    {
+     "name": "Jack-Jack's cookie num nums",
+     "scene": "Jack-Jack and the cookie that calms him down",
+     "method": "Chewy chocolate chip cookies baked at 180C for 10 minutes, still soft in the middle, piled on a plate.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "brown sugar",
+      "eggs",
+      "dark chocolate chips",
+      "vanilla extract"
+     ]
+    },
+    {
+     "name": "Happy Platter sliders",
+     "scene": "Violet's date at the Happy Platter",
+     "method": "Beef sliders with cheddar and pickles on soft buns, with a little bowl of fries.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "dill pickles",
+      "slider buns",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Screenslaver spiral pinwheels",
+     "scene": "the hypnotic Screenslaver screens",
+     "method": "Puff pastry spread with pesto and parmesan, rolled, sliced into spirals and baked at 200C for 15 minutes.",
+     "shop": [
+      "puff pastry",
+      "basil pesto",
+      "parmesan",
+      "eggs"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Bob's homework night dinner",
+     "scene": "Bob trying to help Dash with maths",
+     "method": "Spaghetti bolognese of beef, carrot, celery and tomato simmered an hour, with parmesan and garlic bread.",
+     "shop": [
+      "spaghetti",
+      "beef mince",
+      "carrots",
+      "celery",
+      "crushed tomatoes",
+      "parmesan"
+     ]
+    },
+    {
+     "name": "Edna's chic dinner",
+     "scene": "Edna looking after Jack-Jack overnight",
+     "method": "Salmon fillets roasted with lemon and dill, with crushed potatoes and asparagus, plated very neatly.",
+     "shop": [
+      "salmon fillet",
+      "lemons",
+      "dill",
+      "baby potatoes",
+      "asparagus",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Raccoon fight brownies",
+     "scene": "Jack-Jack battling the raccoon in the yard",
+     "method": "Fudgy chocolate brownies baked at 170C for 25 minutes, cut into squares with a glass of milk.",
+     "shop": [
+      "dark chocolate",
+      "butter",
+      "caster sugar",
+      "eggs",
+      "plain flour",
+      "full cream milk"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Super red soda",
+     "scene": "the family's red supersuits",
+     "method": "Raspberry cordial with soda water and fresh raspberries over ice.",
+     "shop": [
+      "raspberry cordial",
+      "soda water",
+      "raspberries",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Brave (2012)",
+   "title": "Brave",
+   "year": "2012",
+   "theme": "kids",
+   "tagline": "Change your fate. Not the cake.",
+   "description": "A Scottish princess's wish to change her fate turns her mother into a bear.",
+   "serve_cue": "Serve dessert when Merida feeds her mum the witch's cake.",
+   "snacks": [
+    {
+     "name": "Highland games sausage rolls",
+     "scene": "the clans gathering for the Highland games",
+     "method": "Pork mince with onion and sage rolled in puff pastry, egg washed and baked at 200C for 25 minutes, with brown sauce.",
+     "shop": [
+      "pork mince",
+      "brown onions",
+      "sage",
+      "puff pastry",
+      "eggs",
+      "brown sauce"
+     ]
+    },
+    {
+     "name": "Bear mum's salmon bites",
+     "scene": "Elinor as a bear learning to catch fish in the river",
+     "method": "Oatcakes spread with cream cheese, topped with folds of smoked salmon, dill and a squeeze of lemon, laid out on a slate.",
+     "shop": [
+      "smoked salmon",
+      "oatcakes",
+      "cream cheese",
+      "dill",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Triplets' stolen tarts",
+     "scene": "Merida's little brothers pinching the tarts",
+     "method": "Shortcrust rounds pressed into a patty tin, filled with raspberry jam, baked at 190C for 15 minutes and dusted with icing sugar.",
+     "shop": [
+      "shortcrust pastry",
+      "raspberry jam",
+      "icing sugar"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "DunBroch castle feast",
+     "scene": "the great hall feast at DunBroch",
+     "method": "Lamb shoulder braised 3 hours with onion, carrots, barley and stock, served with mashed neeps and tatties.",
+     "shop": [
+      "lamb shoulder",
+      "brown onions",
+      "carrots",
+      "pearl barley",
+      "swede",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Scotch broth",
+     "scene": "the misty Scottish highlands",
+     "method": "Lamb neck simmered with barley, leek, carrot and turnip for 2 hours, finished with parsley.",
+     "shop": [
+      "lamb neck",
+      "pearl barley",
+      "leeks",
+      "carrots",
+      "turnips",
+      "parsley"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "The witch's spell cake",
+     "scene": "the cake from the witch that changes Elinor",
+     "method": "A spiced honey cake with oats and berries, baked at 175C for 40 minutes, glazed with honey and topped with a raspberry.",
+     "shop": [
+      "self-raising flour",
+      "honey",
+      "rolled oats",
+      "eggs",
+      "butter",
+      "raspberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Highland cranachan shake",
+     "scene": "the Scottish highlands",
+     "method": "Raspberries blended with milk, honey and toasted oats, poured into tall glasses with cream on top.",
+     "shop": [
+      "raspberries",
+      "full cream milk",
+      "honey",
+      "rolled oats",
+      "thickened cream"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Monsters University (2013)",
+   "title": "Monsters University",
+   "year": "2013",
+   "theme": "kids",
+   "tagline": "Scare Games tonight. Snacks first.",
+   "description": "Mike and Sulley start out as rivals at university and end up in the Scare Games with a frat of misfits.",
+   "serve_cue": "Serve the snacks when the Oozma Kappas move into the Scare Games.",
+   "snacks": [
+    {
+     "name": "Frat house party wings",
+     "scene": "the party on Greek row",
+     "method": "Chicken wings baked at 220C for 45 minutes, tossed in a sticky honey barbecue glaze, with ranch dip.",
+     "shop": [
+      "chicken wings",
+      "barbecue sauce",
+      "honey",
+      "sour cream",
+      "mayonnaise",
+      "chives"
+     ]
+    },
+    {
+     "name": "Oozma Kappa house popcorn",
+     "scene": "the Oozma Kappa frat house in Squishy's mum's home",
+     "method": "Popcorn popped in oil, tossed with melted butter and purple and green sprinkles, a pinch of salt, served in big bowls.",
+     "shop": [
+      "popping corn",
+      "vegetable oil",
+      "butter",
+      "sprinkles",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Mike's one-eyed devilled eggs",
+     "scene": "Mike Wazowski, the one-eyed monster",
+     "method": "Eggs boiled 10 minutes, yolks mashed with mayo and mustard, piped back in, each topped with a black olive slice like an eye.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "Dijon mustard",
+      "black olives",
+      "smoked paprika"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Campus dining hall pizza",
+     "scene": "the dining hall at Monsters University",
+     "method": "Pizza dough topped with tomato, mozzarella, pepperoni and mushrooms, baked at 250C for 10 minutes, cut into squares.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni",
+      "mushrooms"
+     ]
+    },
+    {
+     "name": "Study night spaghetti",
+     "scene": "cramming for the scaring exam",
+     "method": "Spaghetti with beef meatballs simmered in tomato sauce, with garlic bread, a big pot for the study group.",
+     "shop": [
+      "spaghetti",
+      "beef mince",
+      "crushed tomatoes",
+      "garlic",
+      "baguette",
+      "parmesan"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sulley blue cupcakes",
+     "scene": "Sulley's blue fur with purple spots",
+     "method": "Vanilla cupcakes baked at 175C for 18 minutes, piped with shaggy blue buttercream and purple sprinkles.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "eggs",
+      "icing sugar",
+      "blue food colouring",
+      "sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Scream can soda",
+     "scene": "the scream canisters",
+     "method": "Lime cordial and lemonade over ice, served in small cans or tall glasses.",
+     "shop": [
+      "lime cordial",
+      "lemonade",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Cars (2006)",
+   "title": "Cars",
+   "year": "2006",
+   "theme": "kids",
+   "tagline": "Ka-chow. Pass the fries.",
+   "description": "A hotshot race car gets stuck in a forgotten Route 66 town on the way to a big race.",
+   "serve_cue": "Serve the mains when Lightning pulls into Flo's café in Radiator Springs.",
+   "snacks": [
+    {
+     "name": "Cozy Cone waffle cones",
+     "scene": "Sally's Cozy Cone Motel",
+     "method": "Small waffle cones filled with a cheesy corn and capsicum dip, baked at 180C for 8 minutes.",
+     "shop": [
+      "waffle cones",
+      "cream cheese",
+      "cheddar",
+      "corn kernels",
+      "red capsicum"
+     ]
+    },
+    {
+     "name": "Luigi's tyre onion rings",
+     "scene": "Luigi's tyre shop",
+     "method": "Thick onion rings in a lager batter, fried at 180C until crisp, stacked like tyres with aioli.",
+     "shop": [
+      "brown onions",
+      "plain flour",
+      "lager",
+      "vegetable oil",
+      "mayonnaise",
+      "garlic"
+     ]
+    },
+    {
+     "name": "Tractor tipping corn",
+     "scene": "Mater taking Lightning tractor tipping",
+     "method": "Corn cobs boiled 6 minutes, brushed with butter mixed with chilli and lime, and charred on a hot grill until blistered.",
+     "shop": [
+      "corn cobs",
+      "butter",
+      "chilli flakes",
+      "limes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Flo's café burgers",
+     "scene": "Flo's V8 Café on Route 66",
+     "method": "Beef patties grilled with cheddar melted on, stacked with bacon and fried onion on toasted buns, with crinkle fries cooked twice.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "bacon",
+      "brown onions",
+      "burger buns",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Route 66 chilli",
+     "scene": "the old Route 66 through the desert",
+     "method": "Beef chuck browned and simmered 3 hours with kidney beans, chilli, cumin and tomato until thick, served with cornbread.",
+     "shop": [
+      "beef chuck",
+      "kidney beans",
+      "chilli flakes",
+      "ground cumin",
+      "crushed tomatoes",
+      "fine cornmeal"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Piston Cup sundae",
+     "scene": "the Piston Cup tie-breaker race",
+     "method": "Vanilla ice cream in tall glasses with hot fudge of dark chocolate melted into cream, whipped cream and a cherry on top.",
+     "shop": [
+      "vanilla ice cream",
+      "dark chocolate",
+      "thickened cream",
+      "maraschino cherries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Flo's oil can float",
+     "scene": "the oil cans at Flo's",
+     "method": "Cola with a scoop of vanilla ice cream in tall glasses.",
+     "shop": [
+      "cola",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Cars 2 (2011)",
+   "title": "Cars 2",
+   "year": "2011",
+   "theme": "kids",
+   "tagline": "That's not pistachio.",
+   "description": "Lightning heads to the World Grand Prix while Mater gets mistaken for a secret agent.",
+   "serve_cue": "Serve dessert when Mater eats the wasabi in Tokyo thinking it's ice cream.",
+   "snacks": [
+    {
+     "name": "Tokyo party edamame",
+     "scene": "the glitzy welcome party in Tokyo",
+     "method": "Edamame boiled in salted water for 4 minutes, drained and tossed while hot with sesame oil, chilli flakes and flaky salt, piled into small bowls.",
+     "shop": [
+      "frozen edamame",
+      "sesame oil",
+      "chilli flakes",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Paris market crêpes",
+     "scene": "Mater and Lightning's race stop in Paris",
+     "method": "Thin crêpe batter rested an hour, cooked in a buttered pan, filled with ham and gruyère, folded into quarters and crisped again, cut into triangles.",
+     "shop": [
+      "plain flour",
+      "eggs",
+      "full cream milk",
+      "leg ham",
+      "gruyère",
+      "butter"
+     ]
+    },
+    {
+     "name": "London finish line chips",
+     "scene": "the final race through the streets of London",
+     "method": "Thick-cut chips cooked twice, at 140C then 190C until crisp, salted and served in paper cones with malt vinegar.",
+     "shop": [
+      "potatoes",
+      "vegetable oil",
+      "malt vinegar",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Porto Corsa prawn pasta",
+     "scene": "the race in the Italian seaside town of Porto Corsa",
+     "method": "Garlic and chilli softened in olive oil, prawns and cherry tomatoes added with a splash of white wine until the prawns turn pink, tossed through spaghetti with parsley.",
+     "shop": [
+      "spaghetti",
+      "green prawns",
+      "garlic",
+      "cherry tomatoes",
+      "white wine",
+      "parsley"
+     ]
+    },
+    {
+     "name": "Uncle Topolino's chicken",
+     "scene": "Luigi's Uncle Topolino in his little Italian village",
+     "method": "Chicken thighs browned and simmered 45 minutes with tomato, olives, capsicum and rosemary until the sauce is thick, served with crusty bread.",
+     "shop": [
+      "chicken thighs",
+      "crushed tomatoes",
+      "kalamata olives",
+      "red capsicum",
+      "rosemary",
+      "crusty bread"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Pistachio ice cream",
+     "scene": "the wasabi Mater thinks is pistachio ice cream",
+     "method": "Pistachio ice cream scooped into chilled bowls, scattered with crushed roasted pistachios and drizzled with honey. Wasabi optional.",
+     "shop": [
+      "pistachio ice cream",
+      "pistachios",
+      "honey"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Tokyo iced green tea",
+     "scene": "the World Grand Prix kicking off in Tokyo",
+     "method": "Green tea brewed gently, cooled, sweetened with honey and poured over ice with lemon.",
+     "shop": [
+      "green tea",
+      "honey",
+      "lemons",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Soul (2020)",
+   "title": "Soul",
+   "year": "2020",
+   "theme": "kids",
+   "tagline": "Pizza tastes better on Earth.",
+   "description": "A jazz teacher's soul gets separated from his body right before his big break.",
+   "serve_cue": "Serve the mains when 22 tastes New York pizza for the first time.",
+   "snacks": [
+    {
+     "name": "22's first lollipop",
+     "scene": "22 tasting a lollipop for the first time in Joe's body",
+     "method": "Sugar, glucose and water boiled to 150C, coloured and poured into rounds on baking paper with sticks pressed in, left to harden 20 minutes.",
+     "shop": [
+      "caster sugar",
+      "glucose syrup",
+      "food colouring",
+      "lollipop sticks"
+     ]
+    },
+    {
+     "name": "Barber shop bagel bites",
+     "scene": "22 chatting with Dez in the barber's chair",
+     "method": "Mini bagels split and toasted, spread with cream cheese, topped with smoked salmon, capers and thin red onion.",
+     "shop": [
+      "mini bagels",
+      "cream cheese",
+      "smoked salmon",
+      "capers",
+      "red onions"
+     ]
+    },
+    {
+     "name": "Half Note bar nibbles",
+     "scene": "the Half Note jazz club where Joe gets his chance",
+     "method": "Almonds and cashews roasted with smoked paprika and salt at 170C for 12 minutes, served warm beside a bowl of marinated olives.",
+     "shop": [
+      "almonds",
+      "cashews",
+      "smoked paprika",
+      "green olives",
+      "kalamata olives"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "New York pizza slice",
+     "scene": "22 tasting her first slice of New York pizza",
+     "method": "Pizza dough stretched thin, spread with tomato sauce and mozzarella, baked on a hot tray at 250C until blistered, dusted with oregano and folded to eat.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "dried oregano",
+      "parmesan"
+     ]
+    },
+    {
+     "name": "Libba's Sunday dinner",
+     "scene": "Joe's mum Libba and her tailor shop",
+     "method": "Chicken roasted with lemon and thyme at 200C for 75 minutes, served with baked macaroni cheese and garlicky sautéed silverbeet.",
+     "shop": [
+      "whole chicken",
+      "lemons",
+      "macaroni",
+      "cheddar",
+      "silverbeet",
+      "garlic"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Maple seed cookies",
+     "scene": "the maple seed that spins into Joe's hand",
+     "method": "Butter, brown sugar and maple syrup creamed with an egg, flour and chopped pecans folded in, baked at 180C for 12 minutes.",
+     "shop": [
+      "butter",
+      "brown sugar",
+      "maple syrup",
+      "plain flour",
+      "pecans",
+      "eggs"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Late set coffee",
+     "scene": "late nights at the jazz club",
+     "method": "Strong black coffee in small cups, or a decaf with hot milk for the late set.",
+     "shop": [
+      "ground coffee",
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Luca (2021)",
+   "title": "Luca",
+   "year": "2021",
+   "theme": "kids",
+   "tagline": "Silenzio, Bruno. Eat the pasta.",
+   "description": "Two sea monster boys hide in human form in an Italian seaside town for one summer.",
+   "serve_cue": "Serve the mains when the Portorosso Cup gets to the pasta-eating leg.",
+   "snacks": [
+    {
+     "name": "Portorosso gelato cups",
+     "scene": "Luca and Alberto trying gelato for the first time",
+     "method": "Vanilla ice cream and lemon sorbet scooped into small cups side by side, topped with crushed amaretti biscuits and a little lemon zest.",
+     "shop": [
+      "vanilla ice cream",
+      "lemon sorbet",
+      "amaretti biscuits",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Harbour zucchini fritters",
+     "scene": "Giulia's dad Massimo working the harbour",
+     "method": "Grated zucchini squeezed dry, mixed with ricotta, egg, parmesan and flour, fried in spoonfuls until golden, served with lemon wedges.",
+     "shop": [
+      "zucchini",
+      "ricotta",
+      "eggs",
+      "plain flour",
+      "parmesan",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Vespa dream focaccia",
+     "scene": "Luca and Alberto dreaming of a Vespa",
+     "method": "Focaccia dough proved twice, dimpled with olive oil, rosemary and sea salt, baked at 220C for 20 minutes until golden.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "olive oil",
+      "rosemary",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Trenette al pesto",
+     "scene": "the pasta-eating leg of the Portorosso Cup",
+     "method": "Linguine cooked with sliced potato and green beans in the same pot, drained and tossed with fresh pesto of basil, pine nuts, garlic and parmesan.",
+     "shop": [
+      "linguine",
+      "basil",
+      "pine nuts",
+      "parmesan",
+      "potatoes",
+      "green beans"
+     ]
+    },
+    {
+     "name": "Riviera fish stew",
+     "scene": "the little fishing town on the Italian Riviera",
+     "method": "Fish, prawns and mussels simmered in a tomato, garlic and white wine broth for 10 minutes until the shells open, with crusty bread.",
+     "shop": [
+      "white fish fillets",
+      "green prawns",
+      "mussels",
+      "crushed tomatoes",
+      "white wine",
+      "crusty bread"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Lemon ricotta cake",
+     "scene": "summer on the Italian coast",
+     "method": "Ricotta, lemon zest, eggs and sugar beaten smooth, self-raising flour folded in, baked at 170C for 45 minutes and dusted with icing sugar.",
+     "shop": [
+      "ricotta",
+      "lemons",
+      "eggs",
+      "caster sugar",
+      "self-raising flour",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Lemon soda",
+     "scene": "a hot Italian summer",
+     "method": "Fresh lemon juice and sugar syrup topped with soda water over ice and a strip of lemon peel.",
+     "shop": [
+      "lemons",
+      "caster sugar",
+      "soda water",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Turning Red (2022)",
+   "title": "Turning Red",
+   "year": "2022",
+   "theme": "kids",
+   "tagline": "Big feelings. Bigger dumplings.",
+   "description": "A thirteen-year-old in Toronto turns into a giant red panda whenever she gets too excited.",
+   "serve_cue": "Serve the mains when the Lee family sits down to dinner.",
+   "snacks": [
+    {
+     "name": "Mei's dad's dumplings",
+     "scene": "Mei's dad cooking in the family kitchen",
+     "method": "Pork and cabbage dumplings with ginger and spring onion, pan-fried until crisp underneath, then steamed with a splash of water, with black vinegar to dip.",
+     "shop": [
+      "pork mince",
+      "wombok",
+      "ginger",
+      "spring onions",
+      "dumpling wrappers",
+      "black vinegar"
+     ]
+    },
+    {
+     "name": "Concert night popcorn",
+     "scene": "Mei and her friends at the boy band concert",
+     "method": "Popcorn popped in oil, tossed with melted butter and pink sprinkles, a pinch of salt, poured into paper bags for the crowd.",
+     "shop": [
+      "popping corn",
+      "vegetable oil",
+      "butter",
+      "sprinkles",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Temple red bean buns",
+     "scene": "the family temple Mei helps look after",
+     "method": "Frozen bao buns filled with a spoon of sweet red bean paste, pinched closed and steamed 12 minutes until soft and puffy.",
+     "shop": [
+      "bao buns",
+      "red bean paste"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Lee family soy chicken",
+     "scene": "dinner at the Lee family table",
+     "method": "Chicken thighs braised in soy, ginger, star anise and a little sugar for 40 minutes until glossy, with steamed rice and garlic bok choy.",
+     "shop": [
+      "chicken thighs",
+      "soy sauce",
+      "ginger",
+      "star anise",
+      "jasmine rice",
+      "bok choy"
+     ]
+    },
+    {
+     "name": "Toronto beef and broccoli",
+     "scene": "Mei's city of Toronto in 2002",
+     "method": "Beef strips seared hot in a wok, broccoli and garlic tossed through, finished with oyster sauce and served over egg noodles.",
+     "shop": [
+      "egg noodles",
+      "beef rump",
+      "broccoli",
+      "oyster sauce",
+      "garlic"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Red panda mango pudding",
+     "scene": "Mei's big red panda",
+     "method": "Mango purée warmed with sugar and gelatine, stirred into evaporated milk, set in glasses for 4 hours, topped with fresh mango.",
+     "shop": [
+      "mangoes",
+      "evaporated milk",
+      "gelatine sheets",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bubble tea",
+     "scene": "Mei, Miriam, Priya and Abby hanging out",
+     "method": "Strong black tea with milk and brown sugar syrup, poured over cooked tapioca pearls and ice.",
+     "shop": [
+      "black tea",
+      "full cream milk",
+      "brown sugar",
+      "tapioca pearls",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Elemental (2023)",
+   "title": "Elemental",
+   "year": "2023",
+   "theme": "kids",
+   "tagline": "Fire meets water. Dinner meets you.",
+   "description": "A fiery young woman and a soft-hearted water guy fall for each other in Element City.",
+   "serve_cue": "Serve the snacks when Ember works the counter at her family's shop.",
+   "snacks": [
+    {
+     "name": "Fireplace shop hot nuts",
+     "scene": "the spicy snacks sold at the Fireplace shop",
+     "method": "Cashews and peanuts tossed with chilli flakes, smoked paprika and honey, roasted at 170C for 12 minutes until glossy and hot.",
+     "shop": [
+      "cashews",
+      "peanuts",
+      "chilli flakes",
+      "smoked paprika",
+      "honey"
+     ]
+    },
+    {
+     "name": "Firetown flatbreads",
+     "scene": "Firetown, where Ember grew up",
+     "method": "Flatbreads brushed with harissa stirred into olive oil, grilled until charred at the edges, torn and served with thick labneh.",
+     "shop": [
+      "flatbread",
+      "harissa",
+      "olive oil",
+      "labneh"
+     ]
+    },
+    {
+     "name": "Wade's cucumber bites",
+     "scene": "Wade, who cries at everything",
+     "method": "Thick cucumber rounds topped with feta whipped with Greek yoghurt and lemon, finished with dill and cracked pepper.",
+     "shop": [
+      "Lebanese cucumbers",
+      "feta",
+      "Greek yoghurt",
+      "dill",
+      "lemons"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Bernie's fiery lamb",
+     "scene": "Ember's dad Bernie and the shop he built",
+     "method": "Lamb shoulder browned, braised with harissa, tomato, chickpeas and cumin at 160C for 3 hours until it pulls apart, with warm flatbread.",
+     "shop": [
+      "lamb shoulder",
+      "harissa",
+      "crushed tomatoes",
+      "chickpeas",
+      "ground cumin",
+      "flatbread"
+     ]
+    },
+    {
+     "name": "Ripple family salmon",
+     "scene": "dinner with Wade's family in their high-rise",
+     "method": "Salmon gently poached in a light broth of ginger, soy and spring onion for 8 minutes, with steamed rice and bok choy.",
+     "shop": [
+      "salmon fillet",
+      "ginger",
+      "spring onions",
+      "soy sauce",
+      "jasmine rice",
+      "bok choy"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Vivisteria pavlova",
+     "scene": "the Vivisteria flower Ember always wanted to see",
+     "method": "Meringue baked at 120C for 90 minutes and cooled in the oven, topped with whipped cream, blueberries and edible purple flowers.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "thickened cream",
+      "blueberries",
+      "edible flowers"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Fire and water fizz",
+     "scene": "Ember and Wade side by side",
+     "method": "Blood orange juice and sparkling water poured together over ice so they swirl.",
+     "shop": [
+      "blood orange juice",
+      "sparkling water",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Onward (2020)",
+   "title": "Onward",
+   "year": "2020",
+   "theme": "kids",
+   "tagline": "One day with Dad. One big feast.",
+   "description": "Two elf brothers set out on a quest to bring back their late father for one day.",
+   "serve_cue": "Serve the mains when the brothers pull up at the Manticore's tavern.",
+   "snacks": [
+    {
+     "name": "Manticore's tavern sliders",
+     "scene": "the old tavern turned family restaurant",
+     "method": "Beef patties smashed thin on a hot grill, cheddar melted on, tucked into soft slider buns with pickles and served on a wooden board.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "dill pickles",
+      "slider buns"
+     ]
+    },
+    {
+     "name": "Quest map cheese board",
+     "scene": "Barley's fantasy quest card game",
+     "method": "Aged cheddar, brie, grapes and crackers laid out on a long board like a map, with quince paste marking the treasure.",
+     "shop": [
+      "aged cheddar",
+      "brie",
+      "red grapes",
+      "water crackers",
+      "quince paste"
+     ]
+    },
+    {
+     "name": "Guinevere road snacks",
+     "scene": "Barley's battered van, Guinevere",
+     "method": "Popcorn tossed with butter, mixed with pretzels and roasted almonds, scooped into paper bags for the road trip.",
+     "shop": [
+      "popping corn",
+      "butter",
+      "pretzels",
+      "almonds"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Questing chicken drumsticks",
+     "scene": "the brothers on the road together",
+     "method": "Chicken drumsticks glazed with honey, garlic and thyme, roasted at 200C for 40 minutes, with roast potatoes and carrots.",
+     "shop": [
+      "chicken drumsticks",
+      "honey",
+      "garlic",
+      "thyme",
+      "potatoes",
+      "carrots"
+     ]
+    },
+    {
+     "name": "New Mushroomton pie",
+     "scene": "the suburb of New Mushroomton",
+     "method": "Mixed mushrooms and leek cooked down in butter with thyme and cream, spooned into a dish, topped with puff pastry and baked at 200C for 25 minutes.",
+     "shop": [
+      "mixed mushrooms",
+      "leeks",
+      "thyme",
+      "butter",
+      "thickened cream",
+      "puff pastry"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Dad's day sundae",
+     "scene": "the one day the boys get with their dad",
+     "method": "Vanilla ice cream in tall glasses with hot chocolate sauce of melted dark chocolate and cream, whipped cream and sprinkles.",
+     "shop": [
+      "vanilla ice cream",
+      "dark chocolate",
+      "thickened cream",
+      "sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Quest potion punch",
+     "scene": "the magic staff and the visitation spell",
+     "method": "Apple juice and blackcurrant cordial topped with soda water over ice, purple like a potion.",
+     "shop": [
+      "apple juice",
+      "blackcurrant cordial",
+      "soda water",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Inside Out 2 (2024)",
+   "title": "Inside Out 2",
+   "year": "2024",
+   "theme": "kids",
+   "tagline": "New emotions. Same snack drawer.",
+   "description": "Riley heads to hockey camp as a teenager and a crowd of new emotions moves into headquarters.",
+   "serve_cue": "Serve the snacks when Riley arrives at hockey camp.",
+   "snacks": [
+    {
+     "name": "Hockey camp pretzels",
+     "scene": "Riley's weekend at hockey camp",
+     "method": "Soft pretzel bites boiled briefly in bicarb water, rock salt on top, baked at 220C for 12 minutes, with a warm cheddar sauce.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "bicarb soda",
+      "rock salt",
+      "cheddar",
+      "full cream milk"
+     ]
+    },
+    {
+     "name": "Anxiety's every-option platter",
+     "scene": "Anxiety planning for every possible thing that could go wrong",
+     "method": "A bit of everything on one big board: cheddar, crackers, grapes, roasted almonds, baby carrots and hummus, so nobody is caught short.",
+     "shop": [
+      "cheddar",
+      "water crackers",
+      "red grapes",
+      "almonds",
+      "baby carrots",
+      "hummus"
+     ]
+    },
+    {
+     "name": "Joy's sunshine popcorn",
+     "scene": "Joy trying to keep things bright",
+     "method": "Popcorn popped in oil, tossed with melted butter, a pinch of turmeric and salt so it glows yellow.",
+     "shop": [
+      "popping corn",
+      "vegetable oil",
+      "butter",
+      "ground turmeric",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Camp cafeteria pasta bake",
+     "scene": "lunch in the hockey camp cafeteria",
+     "method": "Penne mixed with chicken, broccoli and a creamy parmesan and garlic sauce, topped with cheese and baked at 200C for 20 minutes.",
+     "shop": [
+      "penne",
+      "chicken breasts",
+      "broccoli",
+      "thickened cream",
+      "parmesan",
+      "garlic"
+     ]
+    },
+    {
+     "name": "Family taco night",
+     "scene": "dinner at home with Riley's mum and dad",
+     "method": "Beef mince cooked with cumin, paprika and tomato, served in taco shells with lettuce, tomato, cheddar and sour cream.",
+     "shop": [
+      "beef mince",
+      "taco shells",
+      "iceberg lettuce",
+      "tomatoes",
+      "cheddar",
+      "sour cream"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Emotion jelly cups",
+     "scene": "all the emotions crowding headquarters",
+     "method": "Six jellies made one at a time and layered in clear cups, each set an hour before the next goes on: yellow, blue, red, green, purple, orange.",
+     "shop": [
+      "lemon jelly crystals",
+      "blue jelly crystals",
+      "raspberry jelly crystals",
+      "lime jelly crystals",
+      "grape jelly crystals",
+      "orange jelly crystals"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Calm down chamomile",
+     "scene": "Anxiety finally learning to settle",
+     "method": "Chamomile tea brewed with honey, cooled, mixed with apple juice and poured over ice.",
+     "shop": [
+      "chamomile tea",
+      "honey",
+      "apple juice",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Good Dinosaur (2015)",
+   "title": "The Good Dinosaur",
+   "year": "2015",
+   "theme": "kids",
+   "tagline": "Earn your mark. Then eat.",
+   "description": "A timid young dinosaur gets lost far from his family's farm and makes friends with a human boy.",
+   "serve_cue": "Serve the mains when Arlo helps fill the family silo with corn.",
+   "snacks": [
+    {
+     "name": "Silo corn fritters",
+     "scene": "Arlo's family filling the silo with corn",
+     "method": "Corn kernels mixed with flour, egg and spring onion, fried in spoonfuls until golden, served with a sour cream and chive dip.",
+     "shop": [
+      "corn kernels",
+      "plain flour",
+      "eggs",
+      "spring onions",
+      "sour cream",
+      "chives"
+     ]
+    },
+    {
+     "name": "Spot's foraged berries",
+     "scene": "Spot hunting through the bushes for food",
+     "method": "Blueberries, raspberries and blackberries tossed with a little honey and lime, spooned into small bowls with whipped cream.",
+     "shop": [
+      "blueberries",
+      "raspberries",
+      "blackberries",
+      "honey",
+      "limes",
+      "thickened cream"
+     ]
+    },
+    {
+     "name": "Starry night popcorn",
+     "scene": "Arlo and Spot camping under the stars",
+     "method": "Popcorn popped in a lidded pot, tossed with melted butter and salt, poured into one big bowl to share.",
+     "shop": [
+      "popping corn",
+      "vegetable oil",
+      "butter",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Rancher's beef ribs",
+     "scene": "Butch and the T-Rex ranchers driving their longhorns",
+     "method": "Beef short ribs rubbed with paprika, pepper and salt, cooked low at 140C for 5 hours, served with charred corn and coleslaw.",
+     "shop": [
+      "beef short ribs",
+      "smoked paprika",
+      "black peppercorns",
+      "corn cobs",
+      "cabbage"
+     ]
+    },
+    {
+     "name": "Farmhouse corn chowder",
+     "scene": "Arlo's family farm by the river",
+     "method": "Bacon, onion and potato softened, corn and stock added and simmered 20 minutes, finished with cream and chives.",
+     "shop": [
+      "corn kernels",
+      "potatoes",
+      "bacon",
+      "brown onions",
+      "thickened cream",
+      "chives"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Harvest cornbread",
+     "scene": "the family's corn harvest before winter",
+     "method": "Cornmeal, flour, buttermilk, egg and melted butter mixed briefly, baked in a hot cast iron pan at 220C for 20 minutes, served with honey butter.",
+     "shop": [
+      "fine cornmeal",
+      "plain flour",
+      "buttermilk",
+      "eggs",
+      "butter",
+      "honey"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "River water",
+     "scene": "the river that sweeps Arlo away from home",
+     "method": "Cold water with lemon and mint in a big jug over ice.",
+     "shop": [
+      "lemons",
+      "mint",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Harry Potter and the Order of the Phoenix (2007)",
+   "title": "Harry Potter and the Order of the Phoenix",
+   "year": "2007",
+   "theme": "wizard",
+   "tagline": "The Ministry lies. The snacks don't.",
+   "description": "Harry forms a secret group of students to fight back while the Ministry takes over Hogwarts.",
+   "serve_cue": "Serve the snacks when Dumbledore's Army meets in the Room of Requirement.",
+   "snacks": [
+    {
+     "name": "Hog's Head pub bites",
+     "scene": "the Hog's Head pub where Dumbledore's Army forms",
+     "method": "Sausage rolls of pork, onion and sage in puff pastry, baked at 200C for 25 minutes, with English mustard, like a dusty village pub.",
+     "shop": [
+      "pork mince",
+      "brown onions",
+      "sage",
+      "puff pastry",
+      "eggs",
+      "English mustard"
+     ]
+    },
+    {
+     "name": "Weasley fireworks popcorn",
+     "scene": "Fred and George's fireworks wrecking Umbridge's exam",
+     "method": "Popcorn popped in oil, tossed with melted butter and coloured sprinkles, with popping candy scattered over just before serving.",
+     "shop": [
+      "popping corn",
+      "vegetable oil",
+      "butter",
+      "sprinkles",
+      "popping candy"
+     ]
+    },
+    {
+     "name": "Umbridge's pink cupcakes",
+     "scene": "Umbridge's pink office full of kitten plates",
+     "method": "Vanilla cupcakes baked at 175C for 18 minutes, piped with very pink buttercream and topped with a little sugar flower.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "eggs",
+      "caster sugar",
+      "icing sugar",
+      "pink food colouring"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Grimmauld Place stew",
+     "scene": "Mrs Weasley feeding everyone at Grimmauld Place",
+     "method": "Beef chuck simmered 3 hours with onion, carrots and brown ale, topped with herb dumplings for the last 20 minutes, with crusty bread.",
+     "shop": [
+      "beef chuck",
+      "brown onions",
+      "carrots",
+      "brown ale",
+      "self-raising flour",
+      "butter"
+     ]
+    },
+    {
+     "name": "Great Hall roast",
+     "scene": "dinner under the floating candles in the Great Hall",
+     "method": "Chicken rubbed with butter and thyme, roasted at 200C for 75 minutes, with crispy roast potatoes, peas and gravy from the pan.",
+     "shop": [
+      "whole chicken",
+      "butter",
+      "thyme",
+      "potatoes",
+      "frozen peas",
+      "chicken stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Treacle tart",
+     "scene": "Harry's favourite pudding",
+     "method": "Shortcrust filled with warmed golden syrup, fresh breadcrumbs and lemon zest, baked at 180C for 30 minutes, served warm with cream.",
+     "shop": [
+      "shortcrust pastry",
+      "golden syrup",
+      "breadcrumbs",
+      "lemons",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Pumpkin juice",
+     "scene": "the jugs on every Hogwarts table",
+     "method": "Roasted pumpkin blended with apple juice, honey and cinnamon, strained and chilled.",
+     "shop": [
+      "butternut pumpkin",
+      "apple juice",
+      "honey",
+      "ground cinnamon",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Harry Potter and the Half-Blood Prince (2009)",
+   "title": "Harry Potter and the Half-Blood Prince",
+   "year": "2009",
+   "theme": "wizard",
+   "tagline": "Liquid luck. Solid dinner.",
+   "description": "Harry learns about Voldemort's past while Slughorn's secrets and teenage romances fill Hogwarts.",
+   "serve_cue": "Serve the snacks when Slughorn's Christmas party gets going.",
+   "snacks": [
+    {
+     "name": "Slug Club party canapés",
+     "scene": "Slughorn's Christmas party",
+     "method": "Blinis spread with crème fraîche, topped with smoked salmon and dill, served beside tiny mince pies baked at 190C for 15 minutes.",
+     "shop": [
+      "blinis",
+      "smoked salmon",
+      "crème fraîche",
+      "dill",
+      "shortcrust pastry",
+      "fruit mince"
+     ]
+    },
+    {
+     "name": "Romilda's chocolates",
+     "scene": "the spiked chocolates Ron eats",
+     "method": "Dark chocolate melted into hot cream, chilled until firm, rolled into truffles and coated in cocoa with a pink sugar heart on top.",
+     "shop": [
+      "dark chocolate",
+      "thickened cream",
+      "cocoa",
+      "sprinkles"
+     ]
+    },
+    {
+     "name": "Joke shop lolly bags",
+     "scene": "Fred and George's joke shop in Diagon Alley",
+     "method": "Colourful lollies, sour straps and jelly beans mixed and tipped into striped paper bags, one bag per person.",
+     "shop": [
+      "jelly beans",
+      "sour straps",
+      "gummy lollies"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Christmas at the Burrow",
+     "scene": "Christmas with the Weasleys at the Burrow",
+     "method": "Turkey breast rolled with sage and onion stuffing, roasted at 180C for 90 minutes, with roast potatoes and buttered brussels sprouts.",
+     "shop": [
+      "turkey breast",
+      "sage",
+      "brown onions",
+      "sourdough bread",
+      "potatoes",
+      "brussels sprouts"
+     ]
+    },
+    {
+     "name": "Hogwarts Express pasties",
+     "scene": "the trolley on the Hogwarts Express",
+     "method": "Shortcrust filled with diced beef skirt, potato, swede and onion with lots of pepper, crimped and baked at 180C for 50 minutes.",
+     "shop": [
+      "beef skirt steak",
+      "potatoes",
+      "swede",
+      "brown onions",
+      "shortcrust pastry",
+      "black peppercorns"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Liquid luck panna cotta",
+     "scene": "Harry's little bottle of liquid luck",
+     "method": "Cream warmed with honey and set with gelatine in small glasses, topped with a golden passionfruit jelly and chilled 4 hours.",
+     "shop": [
+      "thickened cream",
+      "honey",
+      "gelatine sheets",
+      "passionfruit",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Slughorn's mead",
+     "scene": "the mead Slughorn was saving as a gift",
+     "method": "Honey stirred into warm water with lemon and a cinnamon stick, cooled and topped with ginger beer over ice.",
+     "shop": [
+      "honey",
+      "lemons",
+      "cinnamon sticks",
+      "ginger beer",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 1,
    "poster_status": "pending"
   }
  ]
