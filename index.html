@@ -53,6 +53,25 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:50;
 input:focus-visible,summary:focus-visible{outline:3px solid var(--bulb);outline-offset:3px}
 @media(max-width:420px){.watch-tools{grid-template-columns:1fr}}
 
+/* Finished poster artwork is kept intact at A4 size; recipe text stays accessible. */
+.poster-edition{background:#f4eddf}
+.poster-edition .poster-art{width:794px;height:1123px;max-width:none;display:block;object-fit:contain}
+.edition-prep{background:#f6f0e4!important;color:#221e19!important;font-family:Arial,sans-serif!important}
+.edition-prep .mc-in{inset:36px;padding:0;overflow:hidden;background:transparent;color:#221e19;text-align:left;align-items:stretch}
+.edition-prep .mc-eye{color:var(--edition-accent);font-family:Arial,sans-serif;font-size:12px;letter-spacing:.16em}
+.edition-prep .pp-title{font-family:Georgia,serif;font-size:34px;line-height:1.1;color:#221e19;margin:7px 0 4px}
+.edition-prep .edition-servings{font-size:13px;margin:0 0 14px;color:#554b3f}
+.edition-prep .pp-cols{grid-template-columns:220px minmax(0,1fr);gap:24px;width:100%;text-align:left}
+.edition-prep .pp-cols h3{color:var(--edition-accent);font-family:Arial,sans-serif;font-size:17px;letter-spacing:0;text-transform:none;border-bottom:1px solid var(--edition-accent);padding-bottom:6px}
+.edition-prep .pp-aisle h4{color:#221e19;font-family:Arial,sans-serif;font-size:1em;margin-top:12px}
+.edition-prep .pp-aisle li{font-size:.9em;line-height:1.4}
+.edition-prep .pp-method li{margin-bottom:11px}
+.edition-prep .pp-method li b{color:#221e19;font-family:Arial,sans-serif;font-size:1em}
+.edition-prep .pp-method li span{font-size:.87em;line-height:1.45}
+.edition-prep .pp-method li em{font-size:.78em;color:#7b3c2c}
+.edition-prep .mc-cue{max-width:none;text-align:left;color:#221e19;border-color:var(--edition-accent);font-size:12px;margin-top:10px;padding:7px 0}
+.edition-prep .mc-cue b{font-family:Arial,sans-serif;color:var(--edition-accent)}
+
 /* marquee */
 .marquee{position:relative;margin:4px auto 26px;padding:30px clamp(16px,4vw,48px) 22px;border-radius:14px;text-align:center;
   background:radial-gradient(ellipse at 50% 0%,#a3263f,var(--velvet) 60%,#3a0813);
@@ -558,6 +577,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="movie-menus.js"></script>
 <script>
 const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "Brooklyn Slice Joint"}, "deli": {"name": "Manhattan Deli Counter"}, "street": {"name": "Bodega and Street Cart"}, "cop": {"name": "Stakeout Snacks"}, "soul": {"name": "Harlem Soul Kitchen"}, "xmas": {"name": "Christmas in the City"}, "aussie": {"name": "Arvo in the Outback"}, "asian": {"name": "Chinatown Late Night"}, "scifi": {"name": "Mission Control Rations"}, "hero": {"name": "Rooftop Patrol"}, "kids": {"name": "Family Matinee"}, "teen": {"name": "Mall Food Court"}, "diner": {"name": "Roadside Diner"}, "mex": {"name": "Cantina Night"}, "tiki": {"name": "Beach House Luau"}, "uptown": {"name": "Uptown Steakhouse"}, "horror": {"name": "Midnight Monster Feast"}, "western": {"name": "Chuckwagon BBQ"}, "philly": {"name": "Philly Fight Night"}, "galaxy": {"name": "Galactic Cantina"}, "wizard": {"name": "Great Hall Feast"}, "adventure": {"name": "Explorer's Field Rations"}, "fairytale": {"name": "Storybook Banquet"}, "romcom": {"name": "Rom-Com Date Night"}};
 /* every film has its own menu: T tagline, D description, P serve cue, S snacks, M mains, W sweet, K drink */
@@ -772,8 +792,11 @@ if(canTilt){
   theatre.addEventListener("pointerleave",()=>{easel.style.transform=""});
 }
 
+const movieEdition=f=>typeof MOVIE_MENU_EDITIONS!=="undefined"?MOVIE_MENU_EDITIONS[f.id]:null;
 const toItem=([n,note,how,shop])=>({n,note,how,shop});
 function makeMenu(f,first){
+  const edition=movieEdition(f);
+  if(edition)return JSON.parse(JSON.stringify(edition.menu));
   if(first)return {s:f.S.slice(0,2).map(toItem),m:f.M.map(toItem),w:f.W.map(toItem),d:f.K.map(toItem)};
   return {s:shuffle(f.S).slice(0,2).map(toItem),m:shuffle(f.M).slice(0,Math.random()<.5?1:2).map(toItem),w:f.W.map(toItem),d:f.K.map(toItem)};
 }
@@ -866,10 +889,11 @@ const shortHow=s=>{const i=s.indexOf(". ");return i>0&&i<s.length-1?s.slice(0,i+
 const AISLES=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Drinks","Bottle shop"];
 function shopGroups(menu){
   const groups={};
-  [...menu.s,...menu.m,...menu.w,...menu.d].forEach(it=>(it.shop||[]).forEach(x=>{
+  const shopping=menu.shopping||[...menu.s,...menu.m,...menu.w,...menu.d].flatMap(it=>it.shop||[]);
+  shopping.forEach(x=>{
     const [name,aisle]=x.split("@");const a=AISLES.includes((aisle||"").trim())?aisle.trim():"Pantry";
     (groups[a]=groups[a]||new Set()).add(name.trim());
-  }));
+  });
   return AISLES.filter(a=>groups[a]).map(a=>[a,[...groups[a]]]);
 }
 
@@ -1004,7 +1028,12 @@ function pal(f){const st=STY[f.theme];return{a:st.ma,b:st.m2,i:st.mi,g:st.mg,m:s
 
 const COURSE_LABEL={redsauce:["Antipasti","Secondi","Dolci","Da bere"],pizza:["Starters","Pies","Sweet","Pour"],deli:["Counter","Sandwich board","Bakery case","Fountain"],asian:["Small eats","Big plates","Sweet","Pot of tea"],street:["Off the cart","Heroes","Sweet","Cold one"],cop:["Exhibit A","Exhibit B","Evidence: sweet","Evidence: liquid"],hero:["Origin snacks","Main event","Sweet victory","Power-up"],western:["Grub","Chuckwagon","Sweet","Saloon"],philly:["Round one","Main event","Sweet","Corner"],soul:["Starters","Supper","Sweet","Drinks"],diner:["Starters","Blue plate specials","Pie case","Fountain"],teen:["Snacks","Food court","Sweet","Slurp"],aussie:["Nibbles","Off the barbie","Sweet","In the esky"],adventure:["Trail snacks","Camp supper","Sweet","Canteen"],wizard:["To begin","The feast","Pudding","Goblets"],galaxy:["Rations","Main course","Sweet","Cantina"],scifi:["Rations","Main course","Sweet","Fuel"],fairytale:["Once upon a snack","The royal feast","Happily ever after","Potions"],kids:["Snacks","Mains","Treat","Drinks"],uptown:["Hors d'oeuvres","Entrées","Dessert","Bar"],horror:["Appetisers","Main slaughter","Afterlife","Potion"],tiki:["Pupu platter","Luau","Sweet","Tiki bar"],mex:["Botanas","Platos","Postre","Bebidas"],xmas:["Nibbles","The feast","Pudding","Cheer"],romcom:["The meet-cute","The big date","Sweet nothings","A toast"]};
 
-function cardHTML(f,menu,tag){
+function cardHTML(f,menu,tag,usePoster=true){
+  const edition=movieEdition(f);
+  if(edition&&usePoster){
+    const sections=[["Snacks",menu.s],["Main",menu.m],["Dessert",menu.w],["Drink",menu.d]];
+    return `<img class="poster-art" src="${ESC(edition.poster)}" alt="${ESC(f.title)} (${ESC(f.year)}) movie-night menu"><div class="sr"><h2>${ESC(f.title)} movie-night menu</h2>${sections.map(([label,items])=>`<section><h3>${label}</h3>${items.map(it=>`<p><b>${ESC(it.n)}</b> ${ESC(it.note)}</p>`).join("")}</section>`).join("")}</div>`;
+  }
   const st=STY[f.theme],L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const lab=COURSE_LABEL[f.theme]||["Snacks","Mains","Something sweet","To drink"];
   const item=it=>`<div class="mc-item"><b>${ESC(it.n)}</b>${it.note?`<span class="mc-note">${ESC(it.note)}</span>`:""}${it.how?`<span class="mc-how">${ESC(shortHow(it.how))}</span>`:""}</div>`;
@@ -1030,10 +1059,12 @@ function cardHTML(f,menu,tag){
 }
 
 function prepHTML(f,menu){
+  const edition=movieEdition(f);
   const L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const shop=shopGroups(menu).map(([a,list])=>`<div class="pp-aisle"><h4>${a}</h4><ul>${list.map(x=>`<li><span class="pp-box"></span>${ESC(x)}</li>`).join("")}</ul></div>`).join("");
   const secs=[["Snack",menu.s],["Main",menu.m],["Sweet",menu.w],["Drink",menu.d]];
   const steps=secs.map(([l,items])=>items.map(it=>`<li><b>${ESC(it.n)}</b><em>${l}</em><span>${ESC(it.how||"")}</span></li>`).join("")).join("");
+  if(edition)return `<div class="mc-in pp"><div class="mc-eye">Prep sheet &amp; shopping list</div><div class="pp-title">${ESC(f.title)} (${ESC(f.year)})</div><p class="edition-servings">Serves ${edition.servings} · ${ESC(edition.tagline)}</p><div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div><div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition.cue)}</span></div></div>`;
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
@@ -1055,6 +1086,7 @@ function styleCard(el,f){
 
 /* shrink the title, art and type until the menu fits the A4 page */
 function fit(el){
+  if(el.classList.contains("poster-edition"))return;
   const title=el.querySelector(".mc-title"),inner=el.querySelector(".mc-in"),art=el.querySelector(".mc-art");
   const over=()=>inner.scrollHeight>inner.clientHeight+1;
   title.style.fontSize="";if(art){art.style.height="";art.style.width=""}
@@ -1101,13 +1133,26 @@ async function show(f,preferSig){
   current=f;
   updateWatchButton();
   const menu=makeMenu(f,preferSig);
-  current.menu=menu;current.tag=f.T;
+  const edition=movieEdition(f);
+  current.menu=menu;current.tag=edition?edition.tagline:f.T;
+  $("reroll").hidden=!!edition;
   $("status").textContent="";
   await ensureFonts(STY[f.theme]);
   if(id!==renderId)return;
   styleCard(card,f);card.style.transform="";
-  card.innerHTML=cardHTML(f,menu,f.T);
+  if(edition)card.className="mcard poster-edition";
+  card.innerHTML=cardHTML(f,menu,current.tag);
+  if(edition){
+    try{await card.querySelector(".poster-art").decode()}
+    catch(e){
+      if(id!==renderId)return;
+      styleCard(card,f);card.innerHTML=cardHTML(f,menu,current.tag,false);
+      $("status").textContent="The poster couldn't load. Your menu and prep sheet are still available.";
+    }
+    if(id!==renderId)return;
+  }
   styleCard(prep,f);
+  if(edition){prep.className="mcard edition-prep";prep.style.setProperty("--edition-accent",edition.colour)}
   prep.innerHTML=prepHTML(f,menu);
   scalePreview();
   const refit=()=>{if(id!==renderId)return;const a=card.hidden,b=prep.hidden;card.hidden=false;prep.hidden=false;fit(card);fitPrep(prep);card.hidden=a;prep.hidden=b};
@@ -1135,7 +1180,7 @@ function addHistory(f){
 function menuText(){
   if(!current)return"";
   const m=current.menu,line=it=>`- ${it.n}${it.note?`, ${it.note}`:""}${it.how?`\n  How: ${it.how}`:""}`;
-  return `${current.title} (${current.year})\n${current.tag}\n${current.D}\n\nSnacks\n${m.s.map(line).join("\n")}\n\n${m.m.length>1?"Mains":"Main"}\n${m.m.map(line).join("\n")}\n\nSomething sweet\n${m.w.map(line).join("\n")}\n\nTo drink\n${m.d.map(line).join("\n")}\n\nShowtime cue: ${current.P}\n\nSHOPPING LIST\n${shopGroups(m).map(([a,l])=>a+"\n"+l.map(x=>"[ ] "+x).join("\n")).join("\n\n")}`;
+  return `${current.title} (${current.year})\n${current.tag}\n${current.D}\n\nSnacks\n${m.s.map(line).join("\n")}\n\n${m.m.length>1?"Mains":"Main"}\n${m.m.map(line).join("\n")}\n\nSomething sweet\n${m.w.map(line).join("\n")}\n\nTo drink\n${m.d.map(line).join("\n")}\n\nShowtime cue: ${movieEdition(current)?.cue||current.P}\n\nSHOPPING LIST\n${shopGroups(m).map(([a,l])=>a+"\n"+l.map(x=>"[ ] "+x).join("\n")).join("\n\n")}`;
 }
 
 /* export: render a clean copy of the card at full size */
@@ -1146,6 +1191,7 @@ async function renderCanvas(src){
   stage.appendChild(clone);document.body.appendChild(stage);
   try{
     await document.fonts.ready;
+    await Promise.all(Array.from(clone.querySelectorAll("img")).map(img=>img.decode().catch(()=>{})));
     return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true});
   }finally{stage.remove()}
 }
@@ -1222,7 +1268,10 @@ window.addEventListener("resize",size);
 
 setList();size();renderHist();scalePreview();
 document.fonts.ready.then(draw);
-show(FILMS.find(f=>f.id==="Ghostbusters (1984)")||FILMS[0],true);
+const initialFilmId=new URLSearchParams(window.location.search).get("film");
+const initialFilm=FILMS.find(f=>f.id===initialFilmId)||FILMS.find(f=>f.id==="Ghostbusters (1984)")||FILMS[0];
+if(initialFilmId)$("now").textContent=`${initialFilm.title} (${initialFilm.year})`;
+show(initialFilm,true);
 </script>
 
 </body>
