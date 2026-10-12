@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 432,
- "ready_for_poster": 429,
+ "hand_written": 456,
+ "ready_for_poster": 453,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -44239,6 +44239,2522 @@
     }
    ],
    "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Desperado (1995)",
+   "title": "Desperado",
+   "year": "1995",
+   "theme": "mex",
+   "tagline": "Bring the guitar case. Leave the trouble.",
+   "description": "A mariachi with a guitar case full of weapons hunts the drug boss who ruined his life.",
+   "serve_cue": "Serve the snacks when the stranger walks into the bar to tell his story.",
+   "snacks": [
+    {
+     "name": "Cantina chicharrones",
+     "scene": "the rough little bar where the story starts",
+     "method": "Pork rind scored, salted and dried overnight, roasted at 240C until puffed and crackling, broken up and dusted with chilli and lime salt.",
+     "shop": [
+      "pork rind",
+      "sea salt flakes",
+      "chilli powder",
+      "limes"
+     ]
+    },
+    {
+     "name": "Bookshop cheese quesadillas",
+     "scene": "Carolina's quiet little bookshop",
+     "method": "Flour tortillas filled with Monterey Jack, cheddar and a few pickled jalapeños, folded, cooked in a dry pan until golden and melted, cut into wedges. Salsa.",
+     "shop": [
+      "flour tortillas",
+      "Monterey Jack",
+      "cheddar",
+      "pickled jalapeños",
+      "tomatoes",
+      "coriander"
+     ]
+    },
+    {
+     "name": "Mariachi guacamole",
+     "scene": "the guitar case and the songs",
+     "method": "Avocados smashed with lime, white onion, serrano chilli, coriander and salt, with warm tortilla chips.",
+     "shop": [
+      "avocados",
+      "limes",
+      "white onions",
+      "green chillies",
+      "coriander",
+      "corn chips"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Tacos al pastor",
+     "scene": "the dusty Mexican town at night",
+     "method": "Pork shoulder marinated overnight in dried chillies, achiote, pineapple and vinegar, roasted at 200C, sliced and crisped in a pan, in small corn tortillas with pineapple, onion and coriander.",
+     "shop": [
+      "pork shoulder",
+      "dried chillies",
+      "achiote paste",
+      "pineapple",
+      "corn tortillas",
+      "white onions"
+     ]
+    },
+    {
+     "name": "Chicken tinga tostadas",
+     "scene": "a home-cooked meal in Carolina's flat",
+     "method": "Chicken thighs poached, shredded and simmered in a sauce of tomato, onion and chipotle, piled on crisp tostadas with beans, crema and avocado.",
+     "shop": [
+      "chicken thighs",
+      "crushed tomatoes",
+      "brown onions",
+      "chipotle in adobo",
+      "corn tortillas",
+      "sour cream"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Tres leches cake",
+     "scene": "something sweet after the shootout",
+     "method": "Sponge baked at 175C for 25 minutes, pricked and soaked overnight in condensed, evaporated and full cream milk, topped with whipped cream and cinnamon.",
+     "shop": [
+      "eggs",
+      "self-raising flour",
+      "condensed milk",
+      "evaporated milk",
+      "full cream milk",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Mezcal and orange",
+     "scene": "the cantina's strongest pour",
+     "method": "30ml mezcal neat with orange wedges dusted in chilli salt, or a cold Mexican lager with lime.",
+     "shop": [
+      "mezcal",
+      "oranges",
+      "chilli powder",
+      "Mexican lager",
+      "limes"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Once Upon a Time in Mexico (2003)",
+   "title": "Once Upon a Time in Mexico",
+   "year": "2003",
+   "theme": "mex",
+   "tagline": "Puerco pibil. Every single time.",
+   "description": "A retired mariachi is pulled back in by a rogue CIA agent to stop a coup in Mexico.",
+   "serve_cue": "Serve the pibil when Agent Sands orders it, again.",
+   "snacks": [
+    {
+     "name": "Day of the Dead pan dulce",
+     "scene": "the Day of the Dead parade",
+     "method": "Soft sweet buns with a crackly sugar shell piped in a shell pattern, baked at 180C for 18 minutes.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "butter",
+      "eggs",
+      "caster sugar",
+      "cinnamon"
+     ]
+    },
+    {
+     "name": "Cantina chips and salsa roja",
+     "scene": "the cantinas Sands sits in",
+     "method": "Corn tortillas cut into wedges and fried crisp, with a salsa of charred tomato, dried chilli, garlic and onion blitzed rough.",
+     "shop": [
+      "corn tortillas",
+      "vegetable oil",
+      "tomatoes",
+      "dried chillies",
+      "garlic",
+      "white onions"
+     ]
+    },
+    {
+     "name": "Street corn",
+     "scene": "the plaza in town",
+     "method": "Corn grilled until charred, rolled in mayo and lime, covered in crumbled feta, chilli powder and coriander.",
+     "shop": [
+      "corn cobs",
+      "mayonnaise",
+      "limes",
+      "feta",
+      "chilli powder",
+      "coriander"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Puerco pibil",
+     "scene": "the dish Agent Sands orders everywhere he goes",
+     "method": "Pork shoulder marinated overnight in achiote, orange juice, lime, garlic, cumin and oregano, wrapped in banana leaves and foil, roasted at 160C for 4 hours, shredded. Pickled red onion and warm tortillas.",
+     "shop": [
+      "pork shoulder",
+      "achiote paste",
+      "oranges",
+      "limes",
+      "banana leaves",
+      "red onions"
+     ]
+    },
+    {
+     "name": "Chicken in red mole",
+     "scene": "the coup and the festival",
+     "method": "Chicken thighs simmered in a mole of dried chillies, tomato, almonds, sesame, cinnamon and a little dark chocolate, served with rice.",
+     "shop": [
+      "chicken thighs",
+      "dried chillies",
+      "crushed tomatoes",
+      "almonds",
+      "dark chocolate",
+      "long grain rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Mexican chocolate flan",
+     "scene": "a sweet ending",
+     "method": "Caramel poured into ramekins, custard of eggs, milk, cream, dark chocolate and cinnamon on top, baked in a water bath at 150C for 40 minutes, chilled and turned out.",
+     "shop": [
+      "caster sugar",
+      "eggs",
+      "full cream milk",
+      "thickened cream",
+      "dark chocolate",
+      "cinnamon"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Tequila and sangrita",
+     "scene": "the sharp drink with the pibil",
+     "method": "30ml blanco tequila beside a chaser of orange, lime and tomato juice with a pinch of chilli.",
+     "shop": [
+      "tequila",
+      "orange juice",
+      "limes",
+      "tomato juice",
+      "chilli powder"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Romancing the Stone (1984)",
+   "title": "Romancing the Stone",
+   "year": "1984",
+   "theme": "adventure",
+   "tagline": "From a New York flat to the Colombian jungle.",
+   "description": "A shy romance novelist heads to Colombia to rescue her sister and lands in a real adventure.",
+   "serve_cue": "Serve the snacks when Joan finishes her novel with a glass of wine at home.",
+   "snacks": [
+    {
+     "name": "Joan's finishing-the-book cheese plate",
+     "scene": "the night Joan finishes her novel at home with her cat",
+     "method": "Brie and aged cheddar out of the fridge an hour, with grapes, crackers and a drizzle of honey, set out with a glass of wine to celebrate.",
+     "shop": [
+      "brie",
+      "vintage cheddar",
+      "grapes",
+      "crackers",
+      "honey"
+     ]
+    },
+    {
+     "name": "Cartagena empanadas",
+     "scene": "the colourful port city",
+     "method": "Corn flour dough wrapped around spiced beef and potato, crimped, fried at 180C until crisp, with a green chilli and coriander sauce.",
+     "shop": [
+      "arepa flour",
+      "beef mince",
+      "potatoes",
+      "ground cumin",
+      "coriander",
+      "green chillies"
+     ]
+    },
+    {
+     "name": "Jungle fruit platter",
+     "scene": "the steamy Colombian jungle",
+     "method": "Mango, pineapple, papaya and passionfruit on ice with lime and a pinch of chilli salt.",
+     "shop": [
+      "mangoes",
+      "pineapple",
+      "papaya",
+      "passionfruit",
+      "limes",
+      "chilli flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Colombian sancocho",
+     "scene": "the village where Juan's fans live",
+     "method": "Chicken thighs simmered with corn, potato, cassava and plantain, onion, garlic and coriander for an hour until thick, served with rice and avocado.",
+     "shop": [
+      "chicken thighs",
+      "corn cobs",
+      "potatoes",
+      "cassava",
+      "green plantains",
+      "coriander"
+     ]
+    },
+    {
+     "name": "Campfire grilled fish",
+     "scene": "dinner in the jungle after the mudslide",
+     "method": "Whole snapper scored and rubbed with lime, garlic and chilli, grilled over hot coals for 8 minutes a side, with rice cooked in coconut milk.",
+     "shop": [
+      "whole snapper",
+      "limes",
+      "garlic",
+      "red chillies",
+      "jasmine rice",
+      "coconut milk"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Emerald jelly",
+     "scene": "the giant emerald everyone is chasing",
+     "method": "Fresh lime juice and sugar syrup set with gelatine in a faceted mould for 4 hours, turned out and served with chilled coconut cream and mint.",
+     "shop": [
+      "limes",
+      "caster sugar",
+      "gelatine leaves",
+      "coconut cream",
+      "mint"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Colombian coffee",
+     "scene": "coffee country in the Colombian highlands",
+     "method": "Strong drip coffee sweetened with raw sugar, or poured over ice with cold milk for the jungle heat.",
+     "shop": [
+      "ground coffee",
+      "raw sugar",
+      "full cream milk",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Mask of Zorro (1998)",
+   "title": "The Mask of Zorro",
+   "year": "1998",
+   "theme": "mex",
+   "tagline": "The mask passes on. So does the recipe.",
+   "description": "An ageing Zorro trains a young thief to take his place and avenge his family in old California.",
+   "serve_cue": "Serve the mains when Alejandro and Elena dance at the governor's party.",
+   "snacks": [
+    {
+     "name": "Hacienda party tapas",
+     "scene": "the governor's grand party",
+     "method": "Chorizo slices fried and finished in red wine until sticky, Manchego cut into triangles with quince paste, and olives warmed with orange peel.",
+     "shop": [
+      "chorizo",
+      "red wine",
+      "Manchego",
+      "quince paste",
+      "olives",
+      "oranges"
+     ]
+    },
+    {
+     "name": "Old California tamales",
+     "scene": "the Mexican families of old California",
+     "method": "Masa beaten with lard and stock, spread on soaked corn husks, filled with chicken in red chilli, folded and steamed 75 minutes.",
+     "shop": [
+      "masa harina",
+      "lard",
+      "chicken stock",
+      "corn husks",
+      "chicken thighs",
+      "dried chillies"
+     ]
+    },
+    {
+     "name": "Z-slash quesadillas",
+     "scene": "the Z he slashes into everything",
+     "method": "Flour tortillas filled with Monterey Jack and roasted green chilli, cooked in butter until golden and melted, a Z scored into the top before cutting into wedges.",
+     "shop": [
+      "flour tortillas",
+      "Monterey Jack",
+      "green chillies",
+      "butter"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Rancho carne asada",
+     "scene": "the cattle ranches of old California",
+     "method": "Skirt steak marinated 2 hours in lime, orange, garlic and cumin, grilled over very high heat, rested, sliced against the grain, with rice, black beans and fresh salsa.",
+     "shop": [
+      "skirt steak",
+      "limes",
+      "oranges",
+      "garlic",
+      "long grain rice",
+      "black beans"
+     ]
+    },
+    {
+     "name": "Governor's chicken",
+     "scene": "dinner at the governor's table",
+     "method": "Chicken thighs browned skin side down, garlic softened, white wine and tomato added with olives and capers, braised covered at 170C for 40 minutes until tender. Crusty bread.",
+     "shop": [
+      "chicken thighs",
+      "crushed tomatoes",
+      "olives",
+      "capers",
+      "garlic",
+      "white wine"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Churros with chocolate",
+     "scene": "a Spanish dessert for the hacienda",
+     "method": "Choux dough piped into 180C oil, fried golden, rolled in cinnamon sugar, with thick hot chocolate.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "eggs",
+      "cinnamon",
+      "caster sugar",
+      "dark chocolate"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Sangria",
+     "scene": "the dance at the governor's party",
+     "method": "Red wine, a splash of brandy, orange juice and sliced orange and apple in a big jug, chilled 2 hours, topped with soda water just before pouring.",
+     "shop": [
+      "red wine",
+      "brandy",
+      "oranges",
+      "apples",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Selena (1997)",
+   "title": "Selena",
+   "year": "1997",
+   "theme": "mex",
+   "tagline": "Tex-Mex for the queen of Tejano.",
+   "description": "The rise of a young Tejano singer from Texas family gigs to stadium stardom.",
+   "serve_cue": "Serve the mains when Selena takes the stage at the big stadium concert.",
+   "snacks": [
+    {
+     "name": "Family restaurant nachos",
+     "scene": "the little family restaurant where young Selena first sings",
+     "method": "Corn chips layered with refried beans, cheddar and jalapeño, baked at 200C for 8 minutes, topped with pico de gallo, guacamole and sour cream.",
+     "shop": [
+      "corn chips",
+      "black beans",
+      "cheddar",
+      "jalapeños",
+      "avocados",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Tour bus breakfast tacos",
+     "scene": "life on the road in the family tour bus",
+     "method": "Flour tortillas filled with scrambled eggs, crispy potato, chorizo and cheddar, with a red salsa.",
+     "shop": [
+      "flour tortillas",
+      "eggs",
+      "potatoes",
+      "chorizo",
+      "cheddar",
+      "tomatoes"
+     ]
+    },
+    {
+     "name": "Corpus Christi shrimp cocktail",
+     "scene": "the Gulf coast at Corpus Christi",
+     "method": "Mexican-style prawn cocktail: poached prawns with tomato juice, lime, avocado, onion, coriander and hot sauce in glasses, crackers on the side.",
+     "shop": [
+      "cooked prawns",
+      "tomato juice",
+      "limes",
+      "avocados",
+      "coriander",
+      "crackers"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Tex-Mex cheese enchiladas",
+     "scene": "Texas-style, smothered in chilli gravy",
+     "method": "Corn tortillas rolled around cheddar and onion, covered in a chilli gravy of flour, chilli powder, cumin and stock, more cheese on top, baked at 190C for 20 minutes.",
+     "shop": [
+      "corn tortillas",
+      "cheddar",
+      "brown onions",
+      "chilli powder",
+      "ground cumin",
+      "beef stock"
+     ]
+    },
+    {
+     "name": "Sizzling beef fajitas",
+     "scene": "a big Texas family dinner",
+     "method": "Skirt steak marinated in lime, garlic and cumin, seared hot with capsicum and onion, served sizzling with warm tortillas, guacamole and sour cream.",
+     "shop": [
+      "skirt steak",
+      "limes",
+      "garlic",
+      "red capsicum",
+      "brown onions",
+      "flour tortillas"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Tres leches cake",
+     "scene": "a family celebration after the show",
+     "method": "Sponge baked at 175C for 25 minutes, pricked all over and soaked overnight in condensed, evaporated and full cream milk, topped with whipped cream and sliced strawberries.",
+     "shop": [
+      "eggs",
+      "self-raising flour",
+      "condensed milk",
+      "evaporated milk",
+      "thickened cream",
+      "strawberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Agua fresca",
+     "scene": "a hot Texas afternoon",
+     "method": "Watermelon blended with lime, a little sugar and cold water, strained, served over ice with mint.",
+     "shop": [
+      "watermelon",
+      "limes",
+      "caster sugar",
+      "mint",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "La Bamba (1987)",
+   "title": "La Bamba",
+   "year": "1987",
+   "theme": "mex",
+   "tagline": "A teenage rock and roll star from the San Fernando Valley.",
+   "description": "The short, bright career of 1950s rock and roll star Ritchie Valens.",
+   "serve_cue": "Serve the mains when Ritchie plays the party at home.",
+   "snacks": [
+    {
+     "name": "Backyard party tamales",
+     "scene": "the family party in the backyard",
+     "method": "Masa beaten with lard and stock, spread on soaked corn husks, filled with pork in red chilli, folded and steamed 75 minutes.",
+     "shop": [
+      "masa harina",
+      "lard",
+      "chicken stock",
+      "corn husks",
+      "pork shoulder",
+      "dried chillies"
+     ]
+    },
+    {
+     "name": "Tijuana street tacos",
+     "scene": "the trip across the border with his brother",
+     "method": "Grilled skirt steak chopped fine, in small corn tortillas with onion, coriander, lime and a fiery salsa verde.",
+     "shop": [
+      "skirt steak",
+      "corn tortillas",
+      "white onions",
+      "coriander",
+      "limes",
+      "tomatillos"
+     ]
+    },
+    {
+     "name": "1950s soda fountain fries",
+     "scene": "a 1950s teenager in Los Angeles",
+     "method": "Thin fries soaked in cold water for an hour, dried, fried at 140C then again at 190C until crisp, salted and served in paper boats with tomato sauce.",
+     "shop": [
+      "potatoes",
+      "vegetable oil",
+      "fine salt",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Mum's pozole",
+     "scene": "his mother's cooking",
+     "method": "Pork shoulder simmered with hominy, garlic and a red chilli sauce for 3 hours, served with cabbage, radish, oregano and lime.",
+     "shop": [
+      "pork shoulder",
+      "hominy",
+      "dried chillies",
+      "garlic",
+      "cabbage",
+      "radishes"
+     ]
+    },
+    {
+     "name": "Diner burgers",
+     "scene": "a 1950s diner in the San Fernando Valley",
+     "method": "Chuck mince smashed thin on a smoking griddle, American cheese melted on, pickles, onion, mustard and tomato sauce on soft toasted buns.",
+     "shop": [
+      "beef chuck mince",
+      "American cheese",
+      "dill pickles",
+      "burger buns",
+      "brown onions",
+      "yellow mustard"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Arroz con leche",
+     "scene": "the rice pudding his mother makes",
+     "method": "Short grain rice simmered with a cinnamon stick and lemon peel in water, then milk added and stirred slowly for 30 minutes until creamy, finished with condensed milk and ground cinnamon.",
+     "shop": [
+      "short grain rice",
+      "full cream milk",
+      "cinnamon sticks",
+      "lemons",
+      "condensed milk"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Malted shakes",
+     "scene": "the soda fountain after school",
+     "method": "Vanilla ice cream, cold milk and malted milk powder blended until thick, poured into tall glasses with a straw.",
+     "shop": [
+      "vanilla ice cream",
+      "full cream milk",
+      "malted milk powder"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Boyz n the Hood (1991)",
+   "title": "Boyz n the Hood",
+   "year": "1991",
+   "theme": "soul",
+   "tagline": "Increase the peace. Fire up the grill.",
+   "description": "Three friends grow up in South Central Los Angeles, guided or lost depending on who's there for them.",
+   "serve_cue": "Serve the mains at the backyard welcome-home barbecue.",
+   "snacks": [
+    {
+     "name": "Backyard barbecue wings",
+     "scene": "the welcome-home party in the backyard",
+     "method": "Wings dried overnight, baked at 220C for 45 minutes, tossed in a sticky barbecue, honey and hot sauce glaze.",
+     "shop": [
+      "chicken wings",
+      "barbecue sauce",
+      "honey",
+      "hot sauce",
+      "garlic powder"
+     ]
+    },
+    {
+     "name": "Front porch devilled eggs",
+     "scene": "the neighbourhood porches",
+     "method": "Eggs boiled 10 minutes, yolks whipped with mayo, mustard, sweet relish and hot sauce, piped back, paprika on top.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "yellow mustard",
+      "sweet relish",
+      "hot sauce",
+      "smoked paprika"
+     ]
+    },
+    {
+     "name": "Corner store chips and dip",
+     "scene": "the corner store down the street",
+     "method": "Ridged potato chips with a dip of slow-cooked onions folded through sour cream and cream cheese with chives.",
+     "shop": [
+      "potato chips",
+      "brown onions",
+      "sour cream",
+      "cream cheese",
+      "chives"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Backyard barbecue ribs",
+     "scene": "the whole neighbourhood at the barbecue",
+     "method": "Pork ribs rubbed with paprika, brown sugar, garlic and cayenne, wrapped and baked at 150C for 2.5 hours, glazed with barbecue sauce over hot coals. Coleslaw.",
+     "shop": [
+      "pork ribs",
+      "smoked paprika",
+      "brown sugar",
+      "garlic powder",
+      "barbecue sauce",
+      "cabbage"
+     ]
+    },
+    {
+     "name": "Furious's Sunday chicken",
+     "scene": "a father teaching his son",
+     "method": "Chicken pieces brined in buttermilk, fried at 165C until 74C inside, with mac and cheese and collard greens braised with smoked ham hock.",
+     "shop": [
+      "chicken pieces",
+      "buttermilk",
+      "plain flour",
+      "macaroni",
+      "kale",
+      "smoked ham hock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sweet potato pie",
+     "scene": "a South LA family table",
+     "method": "Roasted sweet potato mashed with butter, brown sugar, eggs, evaporated milk and spices, baked in a blind-baked case at 170C for 50 minutes.",
+     "shop": [
+      "sweet potatoes",
+      "butter",
+      "brown sugar",
+      "eggs",
+      "evaporated milk",
+      "sweet shortcrust pastry"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Red cordial punch",
+     "scene": "the cooler at the barbecue",
+     "method": "Red fruit punch of cranberry juice, pineapple juice and lemonade, poured over ice from a big cooler.",
+     "shop": [
+      "cranberry juice",
+      "pineapple juice",
+      "lemonade",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Friday (1995)",
+   "title": "Friday",
+   "year": "1995",
+   "theme": "soul",
+   "tagline": "It's Friday. You ain't got no job. You got snacks.",
+   "description": "Two friends sit on a front porch in South Central LA through one very long Friday.",
+   "serve_cue": "Serve the snacks when Craig and Smokey settle in on the porch.",
+   "snacks": [
+    {
+     "name": "Porch day chips and salsa",
+     "scene": "a whole day sitting on the porch",
+     "method": "Corn chips with a fresh salsa of tomato, onion, jalapeño, coriander and lime, left 10 minutes to get juicy.",
+     "shop": [
+      "corn chips",
+      "tomatoes",
+      "white onions",
+      "jalapeños",
+      "coriander",
+      "limes"
+     ]
+    },
+    {
+     "name": "Corner store snack bowl",
+     "scene": "the run to the corner store",
+     "method": "Salted peanuts, pretzels, cheese puffs and chocolate peanuts tipped into a big bowl for the porch.",
+     "shop": [
+      "salted peanuts",
+      "pretzels",
+      "cheese puffs",
+      "chocolate peanuts"
+     ]
+    },
+    {
+     "name": "Fried bologna sliders",
+     "scene": "Craig's dad and his lunch",
+     "method": "Thick bologna slices scored around the edge so they stay flat, fried until crisp and curled, piled into soft rolls with American cheese and yellow mustard.",
+     "shop": [
+      "bologna",
+      "American cheese",
+      "slider buns",
+      "yellow mustard"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Friday night fried fish",
+     "scene": "a Friday night fish fry",
+     "method": "Whiting or flathead dredged in seasoned cornmeal, fried at 180C until crisp, with white bread, hot sauce, coleslaw and fries.",
+     "shop": [
+      "flathead fillets",
+      "fine cornmeal",
+      "hot sauce",
+      "white bread",
+      "cabbage",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Smothered chicken",
+     "scene": "Craig's mum's home cooking",
+     "method": "Chicken thighs seasoned, floured and browned in oil, a dark roux made in the same pan, onions and stock added, the chicken simmered 40 minutes in the gravy until tender, over white rice.",
+     "shop": [
+      "chicken thighs",
+      "plain flour",
+      "brown onions",
+      "chicken stock",
+      "long grain rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Banana pudding",
+     "scene": "a classic for the whole family",
+     "method": "Vanilla custard of milk, yolks, sugar and cornflour cooked until thick, layered warm with sliced bananas and vanilla wafers, chilled overnight, topped with whipped cream.",
+     "shop": [
+      "full cream milk",
+      "eggs",
+      "caster sugar",
+      "bananas",
+      "vanilla wafers",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Red drink",
+     "scene": "the cold drinks out on the porch",
+     "method": "Cranberry, pineapple and orange juice mixed with lemonade and poured over plenty of ice in big plastic cups.",
+     "shop": [
+      "cranberry juice",
+      "pineapple juice",
+      "lemonade",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "House Party (1990)",
+   "title": "House Party",
+   "year": "1990",
+   "theme": "soul",
+   "tagline": "Grounded. Going anyway.",
+   "description": "A high school kid sneaks out against his dad's orders to go to his best friend's house party.",
+   "serve_cue": "Serve the snacks when the dance-off starts at the party.",
+   "snacks": [
+    {
+     "name": "House party chicken wings",
+     "scene": "the snacks on the kitchen bench at Play's house",
+     "method": "Wings dried overnight, baked at 220C for 45 minutes until crisp, tossed in hot sauce melted with butter and honey.",
+     "shop": [
+      "chicken wings",
+      "hot sauce",
+      "butter",
+      "honey",
+      "celery",
+      "blue cheese"
+     ]
+    },
+    {
+     "name": "Dance-off popcorn",
+     "scene": "the dance battle in the living room",
+     "method": "Popcorn tossed in melted butter, smoked paprika and a little garlic salt, served in big paper bags.",
+     "shop": [
+      "popcorn kernels",
+      "butter",
+      "smoked paprika",
+      "garlic powder",
+      "fine salt"
+     ]
+    },
+    {
+     "name": "Party sub sandwich",
+     "scene": "the giant sub for the party",
+     "method": "A long Italian loaf filled with salami, ham, provolone, lettuce, tomato, onion and Italian dressing, cut into thick slices.",
+     "shop": [
+      "Italian bread",
+      "salami",
+      "leg ham",
+      "provolone",
+      "iceberg lettuce",
+      "tomatoes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Late night pizza",
+     "scene": "ordered when the party gets hungry",
+     "method": "Pizza dough stretched thin, sauce, mozzarella and pepperoni, baked on a hot steel at max heat for 7 minutes, cut into squares and left in the box on the bench.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni",
+      "dried oregano"
+     ]
+    },
+    {
+     "name": "Pop's dinner at home",
+     "scene": "Kid's dad waiting up at home",
+     "method": "Meatloaf glazed with tomato and brown sugar, baked at 180C for an hour, with mashed potato, green beans and gravy.",
+     "shop": [
+      "beef mince",
+      "breadcrumbs",
+      "eggs",
+      "tomato sauce",
+      "potatoes",
+      "green beans"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Party sheet cake",
+     "scene": "the party that runs all night",
+     "method": "Chocolate sheet cake baked at 175C for 30 minutes, covered in fudge frosting and sprinkles, cut into big squares.",
+     "shop": [
+      "self-raising flour",
+      "cocoa",
+      "butter",
+      "eggs",
+      "icing sugar",
+      "sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Party punch",
+     "scene": "the punch bowl in the kitchen",
+     "method": "Pineapple and orange juice topped with lemonade and lots of ice in a big bowl, sliced oranges floating.",
+     "shop": [
+      "pineapple juice",
+      "orange juice",
+      "lemonade",
+      "oranges",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Barbershop (2002)",
+   "title": "Barbershop",
+   "year": "2002",
+   "theme": "soul",
+   "tagline": "Everybody talks. Nobody touches Terri's apple juice.",
+   "description": "On a busy Saturday, a barbershop owner on Chicago's South Side has second thoughts about selling the shop.",
+   "serve_cue": "Serve the drinks when Terri finds out someone drank her apple juice.",
+   "snacks": [
+    {
+     "name": "Barbershop chips and hot sauce",
+     "scene": "the snacks on the counter between haircuts",
+     "method": "Thick kettle chips tossed with a few dashes of hot sauce, lime zest and salt, warmed at 160C for 3 minutes, with a bowl of salted peanuts alongside.",
+     "shop": [
+      "kettle chips",
+      "hot sauce",
+      "limes",
+      "salted peanuts"
+     ]
+    },
+    {
+     "name": "South Side hot links",
+     "scene": "Chicago's South Side",
+     "method": "Spicy smoked sausages grilled slowly over coals until blistered and hot through, sliced thick and served on toothpicks with yellow mustard and pickled jalapeños.",
+     "shop": [
+      "hot smoked sausages",
+      "yellow mustard",
+      "pickled jalapeños"
+     ]
+    },
+    {
+     "name": "Chicago-style hot dog bites",
+     "scene": "the city of Chicago",
+     "method": "Mini franks in poppy seed rolls with yellow mustard, chopped onion, sweet relish, tomato, a pickle spear and celery salt.",
+     "shop": [
+      "cocktail franks",
+      "mini bread rolls",
+      "yellow mustard",
+      "sweet relish",
+      "tomatoes",
+      "dill pickles"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Rib tips",
+     "scene": "a South Side Chicago favourite",
+     "method": "Pork rib tips rubbed with paprika, brown sugar and garlic, roasted at 150C for 2.5 hours, glazed with a tangy barbecue sauce, piled on white bread with fries.",
+     "shop": [
+      "pork ribs",
+      "smoked paprika",
+      "brown sugar",
+      "barbecue sauce",
+      "white bread",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Italian beef sandwiches",
+     "scene": "lunch delivered to the shop",
+     "method": "Beef topside roasted at 200C to rare, rested, sliced paper thin, dipped in beef stock simmered with garlic and oregano, piled into soft rolls with pickled giardiniera.",
+     "shop": [
+      "beef topside",
+      "beef stock",
+      "garlic",
+      "dried oregano",
+      "bread rolls",
+      "giardiniera"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sweet potato pie",
+     "scene": "a slice from the bakery down the road",
+     "method": "Roasted sweet potato mashed with butter, brown sugar, eggs, evaporated milk and spices, baked in a blind-baked case at 170C for 50 minutes.",
+     "shop": [
+      "sweet potatoes",
+      "butter",
+      "brown sugar",
+      "eggs",
+      "evaporated milk",
+      "sweet shortcrust pastry"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Terri's apple juice",
+     "scene": "labelled, and nobody touches it",
+     "method": "Cloudy apple juice ice cold in a bottle with a name written on it, or with soda water and lime for everyone else.",
+     "shop": [
+      "cloudy apple juice",
+      "soda water",
+      "limes"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Harlem Nights (1989)",
+   "title": "Harlem Nights",
+   "year": "1989",
+   "theme": "soul",
+   "tagline": "The best club in Harlem. The best table in the house.",
+   "description": "A nightclub owner and his adopted son outfox a crooked cop and a mob boss in 1930s Harlem.",
+   "serve_cue": "Serve the drinks when the craps tables open at Club Sugar Ray.",
+   "snacks": [
+    {
+     "name": "Supper club deviled eggs",
+     "scene": "the dining room at the club",
+     "method": "Eggs boiled 10 minutes, yolks whipped with mayo, Dijon and a dash of hot sauce, piped back, finished with paprika and chives on silver trays.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "Dijon mustard",
+      "hot sauce",
+      "smoked paprika",
+      "chives"
+     ]
+    },
+    {
+     "name": "Craps table cheese dice",
+     "scene": "the gambling room upstairs",
+     "method": "Cubes of sharp cheddar and Swiss with dots of black olive pressed in like dice, on toothpicks with crackers.",
+     "shop": [
+      "vintage cheddar",
+      "Swiss cheese",
+      "black olives",
+      "crackers"
+     ]
+    },
+    {
+     "name": "Harlem hush puppies",
+     "scene": "1930s Harlem soul food",
+     "method": "Cornmeal, flour, buttermilk, egg and grated onion mixed, spooned into 175C oil and fried golden. Honey butter.",
+     "shop": [
+      "fine cornmeal",
+      "plain flour",
+      "buttermilk",
+      "eggs",
+      "brown onions",
+      "honey"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Chicken and waffles",
+     "scene": "the late-night Harlem plate",
+     "method": "Buttermilk fried chicken fried at 165C until 74C inside, on crisp buttermilk waffles with maple syrup and hot sauce butter.",
+     "shop": [
+      "chicken thighs",
+      "buttermilk",
+      "plain flour",
+      "eggs",
+      "maple syrup",
+      "hot sauce"
+     ]
+    },
+    {
+     "name": "Smothered pork chops",
+     "scene": "the club kitchen",
+     "method": "Thick pork chops floured and browned, simmered 40 minutes in an onion gravy made from a dark roux and stock, served with rice and greens.",
+     "shop": [
+      "pork chops",
+      "plain flour",
+      "brown onions",
+      "chicken stock",
+      "long grain rice",
+      "kale"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Peach cobbler",
+     "scene": "the club's dessert menu",
+     "method": "Peaches with brown sugar, cinnamon and nutmeg, under buttery biscuit dough, baked at 190C for 40 minutes. Vanilla ice cream.",
+     "shop": [
+      "peaches",
+      "brown sugar",
+      "cinnamon",
+      "self-raising flour",
+      "butter",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Club champagne cocktail",
+     "scene": "opening night at the club",
+     "method": "A sugar cube soaked in bitters in a flute, topped with chilled sparkling wine and a twist of lemon.",
+     "shop": [
+      "sugar cubes",
+      "aromatic bitters",
+      "sparkling wine",
+      "lemons"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Boomerang (1992)",
+   "title": "Boomerang",
+   "year": "1992",
+   "theme": "soul",
+   "tagline": "What goes around comes around. So does dessert.",
+   "description": "A smooth ad executive meets his match when his new boss treats him the way he treats women.",
+   "serve_cue": "Serve the mains when Marcus and his friends sit down to Thanksgiving dinner.",
+   "snacks": [
+    {
+     "name": "Ad agency launch party canapés",
+     "scene": "the big product launch party",
+     "method": "Smoked salmon on blinis with crème fraîche, and mini crab cakes with lemon aioli, on silver trays.",
+     "shop": [
+      "blinis",
+      "smoked salmon",
+      "crème fraîche",
+      "crab meat",
+      "mayonnaise",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Manhattan cheese plate",
+     "scene": "Marcus's sleek New York apartment",
+     "method": "Brie, aged cheddar and blue with grapes, figs and crackers, set out on a black slate.",
+     "shop": [
+      "brie",
+      "vintage cheddar",
+      "blue cheese",
+      "grapes",
+      "figs",
+      "crackers"
+     ]
+    },
+    {
+     "name": "Bowling alley nachos",
+     "scene": "the friends bowling together",
+     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, salsa and sour cream.",
+     "shop": [
+      "corn chips",
+      "black beans",
+      "cheddar",
+      "jalapeños",
+      "tomatoes",
+      "sour cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Thanksgiving dinner",
+     "scene": "the friends' Thanksgiving at Marcus's place",
+     "method": "Turkey breast brined overnight, roasted at 170C to 70C, rested, with cornbread stuffing, candied yams, cranberry sauce and gravy.",
+     "shop": [
+      "turkey breast",
+      "fine cornmeal",
+      "sweet potatoes",
+      "brown sugar",
+      "cranberry sauce",
+      "chicken stock"
+     ]
+    },
+    {
+     "name": "Date night steak",
+     "scene": "Marcus at his smoothest",
+     "method": "Eye fillet seasoned and seared hard in butter, roasted at 200C to 54C, rested, the pan deglazed with red wine and stock for a glossy sauce, with a potato gratin and charred asparagus.",
+     "shop": [
+      "eye fillet",
+      "red wine",
+      "beef stock",
+      "potatoes",
+      "thickened cream",
+      "asparagus"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sweet potato pie",
+     "scene": "the dessert after Thanksgiving dinner",
+     "method": "Roasted sweet potato mashed with butter, brown sugar, eggs, evaporated milk, nutmeg and vanilla, baked in a blind-baked case at 170C for 50 minutes, whipped cream on top.",
+     "shop": [
+      "sweet potatoes",
+      "butter",
+      "brown sugar",
+      "eggs",
+      "evaporated milk",
+      "sweet shortcrust pastry"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Champagne",
+     "scene": "the launch party at the agency",
+     "method": "Champagne chilled in an ice bucket for 30 minutes, poured into tall flutes, a raspberry dropped into each.",
+     "shop": [
+      "champagne",
+      "raspberries",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Sister Act (1992)",
+   "title": "Sister Act",
+   "year": "1992",
+   "theme": "soul",
+   "tagline": "The convent choir just got soul. So did the kitchen.",
+   "description": "A Reno lounge singer hides from the mob in a San Francisco convent and turns the choir around.",
+   "serve_cue": "Serve the mains when Deloris sits down to her first plain convent dinner.",
+   "snacks": [
+    {
+     "name": "Reno lounge cocktail franks",
+     "scene": "the casino lounge where Deloris sings",
+     "method": "Cocktail franks simmered, glazed in a sticky sauce of barbecue sauce, brown sugar and a splash of bourbon, served on toothpicks.",
+     "shop": [
+      "cocktail franks",
+      "barbecue sauce",
+      "brown sugar",
+      "bourbon"
+     ]
+    },
+    {
+     "name": "Sourdough and chowder cups",
+     "scene": "San Francisco, the convent's home city",
+     "method": "Small cups of clam chowder with crumbled bacon and chives, sourdough toast fingers for dipping.",
+     "shop": [
+      "clams",
+      "bacon",
+      "potatoes",
+      "thickened cream",
+      "chives",
+      "sourdough"
+     ]
+    },
+    {
+     "name": "Choir practice cheese scones",
+     "scene": "the choir's tea break after rehearsal",
+     "method": "Scones with grated cheddar, chives and a pinch of cayenne, baked at 220C for 12 minutes, butter on the side.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "full cream milk",
+      "vintage cheddar",
+      "chives",
+      "cayenne pepper"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "The convent stew, spiced up",
+     "scene": "the bland convent dinner Deloris can't believe",
+     "method": "Beef chuck browned, onion, garlic, smoked paprika, thyme and a splash of hot sauce, stock and tomato, braised 3 hours with potatoes and carrots. Proper flavour this time.",
+     "shop": [
+      "beef chuck",
+      "brown onions",
+      "garlic",
+      "smoked paprika",
+      "hot sauce",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Late night bar burgers",
+     "scene": "the nuns sneaking into the bar across the road",
+     "method": "Thick chuck patties grilled to medium, cheddar, onion, lettuce and pickles on a toasted bun, fries alongside.",
+     "shop": [
+      "beef chuck mince",
+      "cheddar",
+      "brown onions",
+      "iceberg lettuce",
+      "burger buns",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Convent apple pie",
+     "scene": "the sisters' baking",
+     "method": "Granny Smiths with sugar and cinnamon in a double crust, baked at 190C for 50 minutes, rested an hour. Cream.",
+     "shop": [
+      "Granny Smith apples",
+      "caster sugar",
+      "cinnamon",
+      "sweet shortcrust pastry",
+      "eggs",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Convent cup of tea",
+     "scene": "the quiet kitchen after evening prayers",
+     "method": "English breakfast tea brewed in a big pot, milk and sugar, served in plain white cups.",
+     "shop": [
+      "English breakfast tea",
+      "full cream milk",
+      "caster sugar"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Car Wash (1976)",
+   "title": "Car Wash",
+   "year": "1976",
+   "theme": "soul",
+   "tagline": "Eight hours of suds. One long lunch break.",
+   "description": "A single day in the lives of the workers at a busy Los Angeles car wash.",
+   "serve_cue": "Serve the lunch when the crew takes a break between cars.",
+   "snacks": [
+    {
+     "name": "Lunch truck tacos",
+     "scene": "the food truck that pulls up at lunchtime",
+     "method": "Beef mince cooked with onion, garlic, cumin and chilli, in warm corn tortillas with lettuce, cheese and salsa.",
+     "shop": [
+      "beef mince",
+      "brown onions",
+      "ground cumin",
+      "corn tortillas",
+      "iceberg lettuce",
+      "cheddar"
+     ]
+    },
+    {
+     "name": "Sun-baked boiled peanuts",
+     "scene": "a hot LA summer day",
+     "method": "Raw peanuts boiled 2 hours in salted water with Cajun spice, soaked an hour, served warm in paper cups.",
+     "shop": [
+      "peanuts in the shell",
+      "fine salt",
+      "Cajun seasoning"
+     ]
+    },
+    {
+     "name": "Chilli cheese fries",
+     "scene": "the burger stand down the road",
+     "method": "Thick fries double fried, covered in a beef and bean chilli and melted cheddar, chopped onion on top.",
+     "shop": [
+      "potatoes",
+      "vegetable oil",
+      "beef mince",
+      "kidney beans",
+      "cheddar",
+      "brown onions"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Hot dogs with the works",
+     "scene": "lunch break at the car wash",
+     "method": "Franks griddled until blistered, in steamed buns, topped with a spoon of beef chilli simmered with cumin, yellow mustard, raw onion and sweet relish.",
+     "shop": [
+      "hot dog franks",
+      "hot dog buns",
+      "beef mince",
+      "yellow mustard",
+      "brown onions",
+      "sweet relish"
+     ]
+    },
+    {
+     "name": "Fried chicken plate",
+     "scene": "a soul food lunch on the break",
+     "method": "Chicken pieces brined overnight in buttermilk, dredged in seasoned flour, fried at 165C until 74C inside, with a creamy potato salad and crunchy coleslaw.",
+     "shop": [
+      "chicken pieces",
+      "buttermilk",
+      "plain flour",
+      "potatoes",
+      "cabbage",
+      "mayonnaise"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Fruit ice blocks",
+     "scene": "a scorching day on the job",
+     "method": "Fresh orange juice sweetened with a little sugar, poured into moulds over frozen berries, sticks pushed in after an hour, frozen solid for 6 hours.",
+     "shop": [
+      "orange juice",
+      "mixed berries",
+      "caster sugar",
+      "icy pole sticks"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Ice-cold soda",
+     "scene": "a quick drink between cars",
+     "method": "Cola poured over a glass packed with ice and a squeeze of lime, sipped in the shade.",
+     "shop": [
+      "cola",
+      "ice",
+      "limes"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Five Heartbeats (1991)",
+   "title": "The Five Heartbeats",
+   "year": "1991",
+   "theme": "soul",
+   "tagline": "Five voices. One Sunday dinner.",
+   "description": "The rise and fall of a 1960s vocal group, told through friendship, fame and family.",
+   "serve_cue": "Serve the mains when the group sits down to Sunday dinner with Duck's family.",
+   "snacks": [
+    {
+     "name": "Talent show party wings",
+     "scene": "the amateur night talent show where it starts",
+     "method": "Wings dried overnight, baked at 220C for 45 minutes, tossed in a honey and hot sauce glaze.",
+     "shop": [
+      "chicken wings",
+      "honey",
+      "hot sauce",
+      "butter",
+      "garlic powder"
+     ]
+    },
+    {
+     "name": "Tour bus snack bags",
+     "scene": "the long bus rides between shows",
+     "method": "Salted peanuts, pretzels and little pecan pralines (brown sugar, butter and cream boiled to soft ball, pecans stirred in, spooned onto paper) in brown paper bags.",
+     "shop": [
+      "salted peanuts",
+      "pretzels",
+      "pecans",
+      "brown sugar",
+      "butter",
+      "thickened cream"
+     ]
+    },
+    {
+     "name": "Deviled eggs",
+     "scene": "Sunday after church",
+     "method": "Eggs boiled 10 minutes, yolks whipped with mayo, mustard, sweet relish and a dash of hot sauce, piped back, paprika on top.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "yellow mustard",
+      "sweet relish",
+      "hot sauce",
+      "smoked paprika"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Sunday fried chicken",
+     "scene": "Duck's family Sunday dinner",
+     "method": "Chicken pieces brined overnight in buttermilk, dredged twice in seasoned flour, fried at 165C until 74C at the bone, with collard greens braised with smoked ham hock.",
+     "shop": [
+      "chicken pieces",
+      "buttermilk",
+      "plain flour",
+      "kale",
+      "smoked ham hock",
+      "smoked paprika"
+     ]
+    },
+    {
+     "name": "Baked macaroni and cheese",
+     "scene": "the dish on every family table",
+     "method": "Macaroni boiled 2 minutes short, mixed with sharp cheddar and a custard of eggs, evaporated milk and butter, more cheese on top, baked at 180C for 40 minutes.",
+     "shop": [
+      "macaroni",
+      "vintage cheddar",
+      "eggs",
+      "evaporated milk",
+      "butter",
+      "mustard powder"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Peach cobbler",
+     "scene": "Duck's mama's dessert after Sunday dinner",
+     "method": "Peaches with brown sugar, cinnamon and nutmeg under a buttery biscuit topping, baked at 190C for 40 minutes. Vanilla ice cream.",
+     "shop": [
+      "peaches",
+      "brown sugar",
+      "cinnamon",
+      "self-raising flour",
+      "butter",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Sweet tea",
+     "scene": "the big jug on the Sunday table",
+     "method": "Black tea brewed strong, sweetened while hot, cooled and poured over plenty of ice with lemon.",
+     "shop": [
+      "black tea",
+      "caster sugar",
+      "lemons",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Shaft (1971)",
+   "title": "Shaft",
+   "year": "1971",
+   "theme": "soul",
+   "tagline": "Harlem's coolest detective. Harlem's best plate.",
+   "description": "A private detective in Harlem is hired to find a gangster's kidnapped daughter.",
+   "serve_cue": "Serve the mains when Shaft walks into Harlem.",
+   "snacks": [
+    {
+     "name": "Times Square hot dogs",
+     "scene": "Shaft striding through Times Square",
+     "method": "Franks simmered 5 minutes, in steamed buns with spicy brown mustard and onions cooked down in tomato paste, cinnamon and a pinch of chilli, wrapped in paper.",
+     "shop": [
+      "hot dog franks",
+      "hot dog buns",
+      "American mustard",
+      "brown onions",
+      "tomato paste"
+     ]
+    },
+    {
+     "name": "Greenwich Village bar snacks",
+     "scene": "his flat in the Village and the bar down the street",
+     "method": "Mixed nuts tossed with butter, rosemary and salt, roasted at 170C for 12 minutes, with a bowl of olives warmed in olive oil with orange peel.",
+     "shop": [
+      "mixed nuts",
+      "rosemary",
+      "olives",
+      "sea salt flakes",
+      "butter",
+      "oranges"
+     ]
+    },
+    {
+     "name": "Harlem soul food bites",
+     "scene": "the streets of Harlem",
+     "method": "Green tomatoes sliced thick, dipped in buttermilk and seasoned cornmeal, fried until golden, with a remoulade of mayo, capers, mustard and hot sauce.",
+     "shop": [
+      "green tomatoes",
+      "fine cornmeal",
+      "buttermilk",
+      "mayonnaise",
+      "capers",
+      "hot sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Harlem smothered chicken",
+     "scene": "dinner uptown in Harlem",
+     "method": "Chicken thighs seasoned, floured and browned, a dark roux made in the same pan with onions and stock, the chicken simmered 40 minutes in the gravy, over rice with collard greens braised with garlic.",
+     "shop": [
+      "chicken thighs",
+      "plain flour",
+      "brown onions",
+      "chicken stock",
+      "long grain rice",
+      "kale"
+     ]
+    },
+    {
+     "name": "New York pastrami on rye",
+     "scene": "a quick lunch while he works the case",
+     "method": "Pastrami steamed 10 minutes until soft, piled high on rye bread spread with spicy brown mustard, a whole dill pickle and potato chips on the side.",
+     "shop": [
+      "pastrami",
+      "rye bread",
+      "American mustard",
+      "dill pickles",
+      "potato chips"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "New York cheesecake",
+     "scene": "a slice in the city",
+     "method": "Cream cheese, sugar, eggs and sour cream on a biscuit base, baked in a water bath at 150C for an hour, cooled in the oven, chilled overnight.",
+     "shop": [
+      "cream cheese",
+      "caster sugar",
+      "eggs",
+      "sour cream",
+      "digestive biscuits",
+      "butter"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Whisky sour",
+     "scene": "a drink in a Village bar",
+     "method": "45ml bourbon, 25ml lemon and 15ml sugar syrup shaken with ice, strained over fresh ice, a cherry on top.",
+     "shop": [
+      "bourbon",
+      "lemons",
+      "caster sugar",
+      "maraschino cherries",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Enter the Dragon (1973)",
+   "title": "Enter the Dragon",
+   "year": "1973",
+   "theme": "asian",
+   "tagline": "Don't think. Feel. Then eat.",
+   "description": "A martial artist goes undercover at a deadly tournament on a crime lord's private island.",
+   "serve_cue": "Serve the mains when Han's island banquet begins.",
+   "snacks": [
+    {
+     "name": "Hong Kong harbour dim sum",
+     "scene": "the junk boats sailing out of Hong Kong harbour",
+     "method": "Prawn and pork siu mai: mince, chopped prawn, ginger, shiitake and soy wrapped in open wonton skins, steamed 8 minutes. Chilli oil.",
+     "shop": [
+      "pork mince",
+      "green prawns",
+      "ginger",
+      "shiitake mushrooms",
+      "wonton wrappers",
+      "chilli oil"
+     ]
+    },
+    {
+     "name": "Tournament spring rolls",
+     "scene": "the fighters gathering on the island",
+     "method": "Cabbage, carrot, mushroom and glass noodles rolled tight in pastry, fried at 180C until golden, with sweet chilli sauce.",
+     "shop": [
+      "wombok",
+      "carrots",
+      "shiitake mushrooms",
+      "glass noodles",
+      "spring roll wrappers",
+      "sweet chilli sauce"
+     ]
+    },
+    {
+     "name": "Salt and pepper squid",
+     "scene": "Hong Kong street food",
+     "method": "Squid scored, dusted in rice flour and Sichuan salt and pepper, fried at 190C for 60 seconds, tossed with chilli and spring onion.",
+     "shop": [
+      "squid tubes",
+      "rice flour",
+      "Sichuan pepper",
+      "red chillies",
+      "spring onions",
+      "garlic"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Han's banquet roast duck",
+     "scene": "the lavish feast on Han's island",
+     "method": "Duck legs salted overnight, rubbed with five-spice, roasted at 180C for 90 minutes until crisp, with steamed pancakes, cucumber, spring onion and hoisin.",
+     "shop": [
+      "duck legs",
+      "five spice",
+      "Chinese pancakes",
+      "cucumber",
+      "spring onions",
+      "hoisin sauce"
+     ]
+    },
+    {
+     "name": "Char siu with fried rice",
+     "scene": "the island kitchens",
+     "method": "Pork neck marinated overnight in hoisin, soy, honey, five-spice and Shaoxing wine, roasted at 200C and glazed, sliced over egg fried rice.",
+     "shop": [
+      "pork neck",
+      "hoisin sauce",
+      "soy sauce",
+      "honey",
+      "Shaoxing wine",
+      "jasmine rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Mango pancakes",
+     "scene": "a Hong Kong dessert shop favourite",
+     "method": "Thin crêpes of flour, egg, milk and sugar cooked in a non-stick pan, cooled, wrapped around whipped cream and a thick slice of fresh mango, folded into neat parcels and chilled an hour.",
+     "shop": [
+      "plain flour",
+      "eggs",
+      "full cream milk",
+      "thickened cream",
+      "mangoes",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Chrysanthemum tea",
+     "scene": "the island's tea service",
+     "method": "Dried chrysanthemum flowers steeped in hot water with a little rock sugar, served warm or iced.",
+     "shop": [
+      "dried chrysanthemum",
+      "rock sugar",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Bloodsport (1988)",
+   "title": "Bloodsport",
+   "year": "1988",
+   "theme": "asian",
+   "tagline": "Full contact. Full plates.",
+   "description": "An American soldier goes absent without leave to fight in a secret, brutal martial arts tournament in Hong Kong.",
+   "serve_cue": "Serve the snacks when Ray and Frank arrive in Hong Kong.",
+   "snacks": [
+    {
+     "name": "Hong Kong egg waffles",
+     "scene": "the busy Hong Kong streets",
+     "method": "Batter of flour, eggs, sugar, evaporated milk and a little custard powder, cooked in an egg waffle pan until crisp outside, soft inside.",
+     "shop": [
+      "plain flour",
+      "eggs",
+      "caster sugar",
+      "evaporated milk",
+      "custard powder",
+      "baking powder"
+     ]
+    },
+    {
+     "name": "Curry fish balls",
+     "scene": "a Hong Kong street stall classic",
+     "method": "Fish balls simmered in a curry sauce of curry powder, garlic, coconut milk and a little sugar, served on skewers.",
+     "shop": [
+      "fish balls",
+      "curry powder",
+      "garlic",
+      "coconut milk",
+      "caster sugar"
+     ]
+    },
+    {
+     "name": "Arcade night pork buns",
+     "scene": "Ray's arcade game obsession",
+     "method": "Steamed buns filled with char siu pork chopped with oyster sauce, hoisin and sugar, steamed 12 minutes.",
+     "shop": [
+      "bao buns",
+      "char siu pork",
+      "oyster sauce",
+      "hoisin sauce",
+      "caster sugar"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Wonton noodle soup",
+     "scene": "a quick bowl in Kowloon",
+     "method": "Pork and prawn wontons boiled 3 minutes, in a clear chicken and ginger broth with egg noodles and choy sum.",
+     "shop": [
+      "pork mince",
+      "green prawns",
+      "wonton wrappers",
+      "chicken stock",
+      "fresh egg noodles",
+      "choy sum"
+     ]
+    },
+    {
+     "name": "Black pepper beef",
+     "scene": "the night before the final fight",
+     "method": "Rump steak strips marinated in soy and cornflour, stir-fried hard with onion, capsicum and garlic, finished with lots of cracked black pepper and oyster sauce, over steamed rice.",
+     "shop": [
+      "rump steak",
+      "brown onions",
+      "green capsicum",
+      "black peppercorns",
+      "oyster sauce",
+      "jasmine rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Egg tarts",
+     "scene": "a Hong Kong bakery window",
+     "method": "Puff pastry pressed into tart tins, filled with a custard of eggs, milk, evaporated milk and sugar strained until silky, baked at 200C for 15 minutes until just set and wobbly.",
+     "shop": [
+      "puff pastry",
+      "eggs",
+      "full cream milk",
+      "caster sugar",
+      "evaporated milk"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Hong Kong milk tea",
+     "scene": "the cha chaan teng café round the corner",
+     "method": "Strong black tea simmered 5 minutes, strained through a fine cloth, mixed with evaporated milk and sugar, served hot or over ice.",
+     "shop": [
+      "black tea",
+      "evaporated milk",
+      "caster sugar",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Rumble in the Bronx (1995)",
+   "title": "Rumble in the Bronx",
+   "year": "1995",
+   "theme": "asian",
+   "tagline": "New York welcome. Hong Kong kicks.",
+   "description": "A Hong Kong cop visiting his uncle in New York ends up protecting a supermarket from a street gang.",
+   "serve_cue": "Serve the mains at his uncle's wedding banquet.",
+   "snacks": [
+    {
+     "name": "Supermarket deli bites",
+     "scene": "the family supermarket everyone is fighting over",
+     "method": "Salami folded on a board with sharp cheddar, dill pickles cut into spears and crackers, the kind of spread you'd grab straight from the deli counter.",
+     "shop": [
+      "salami",
+      "dill pickles",
+      "vintage cheddar",
+      "crackers"
+     ]
+    },
+    {
+     "name": "Pork and chive dumplings",
+     "scene": "his uncle's Chinese family in New York",
+     "method": "Pork, garlic chives, ginger and sesame oil folded into wrappers, pan-fried until crisp underneath, then steamed. Black vinegar dip.",
+     "shop": [
+      "pork mince",
+      "garlic chives",
+      "ginger",
+      "sesame oil",
+      "dumpling wrappers",
+      "Chinkiang vinegar"
+     ]
+    },
+    {
+     "name": "New York pretzels",
+     "scene": "the streets of New York",
+     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes. Mustard.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "bicarb soda",
+      "rock salt",
+      "butter",
+      "yellow mustard"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Wedding banquet lobster noodles",
+     "scene": "his uncle's wedding banquet",
+     "method": "Lobster tails or king prawns stir-fried with ginger and spring onion in a light oyster sauce, served over soft egg noodles.",
+     "shop": [
+      "lobster tails",
+      "ginger",
+      "spring onions",
+      "oyster sauce",
+      "fresh egg noodles",
+      "Shaoxing wine"
+     ]
+    },
+    {
+     "name": "Sweet and sour pork",
+     "scene": "a Chinese-American restaurant favourite",
+     "method": "Pork shoulder pieces in a light batter, fried crisp, tossed in a sauce of pineapple, capsicum, vinegar, sugar and tomato sauce. Steamed rice.",
+     "shop": [
+      "pork shoulder",
+      "cornflour",
+      "pineapple",
+      "red capsicum",
+      "white vinegar",
+      "jasmine rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Almond jelly with fruit",
+     "scene": "a banquet dessert",
+     "method": "Milk set with gelatine and almond extract, cut into cubes, served with lychees and mandarin segments in syrup.",
+     "shop": [
+      "full cream milk",
+      "gelatine leaves",
+      "almond extract",
+      "lychees",
+      "mandarins",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Jasmine tea",
+     "scene": "the wedding banquet table",
+     "method": "Jasmine tea steeped 3 minutes in water just off the boil, poured into small cups and topped up all night.",
+     "shop": [
+      "jasmine tea"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Crouching Tiger, Hidden Dragon (2000)",
+   "title": "Crouching Tiger, Hidden Dragon",
+   "year": "2000",
+   "theme": "asian",
+   "tagline": "The sword is hidden. The dumplings are not.",
+   "description": "A legendary warrior's stolen sword draws a young noblewoman into a world of martial arts and secrets.",
+   "serve_cue": "Serve the tea when the fight breaks out in the teahouse.",
+   "snacks": [
+    {
+     "name": "Teahouse dumplings",
+     "scene": "the inn where Jen takes on every fighter",
+     "method": "Pork and cabbage dumplings with ginger and spring onion, steamed 8 minutes in bamboo baskets, with black vinegar and chilli oil.",
+     "shop": [
+      "pork mince",
+      "wombok",
+      "ginger",
+      "spring onions",
+      "dumpling wrappers",
+      "Chinkiang vinegar"
+     ]
+    },
+    {
+     "name": "Bamboo forest greens",
+     "scene": "the fight on top of the bamboo forest",
+     "method": "Bok choy and snow peas stir-fried fast in a smoking wok with garlic, a splash of oyster sauce and sesame oil, served in a bamboo steamer basket.",
+     "shop": [
+      "bok choy",
+      "snow peas",
+      "garlic",
+      "oyster sauce",
+      "sesame oil"
+     ]
+    },
+    {
+     "name": "Desert lamb skewers",
+     "scene": "the desert where Jen meets Lo",
+     "method": "Lamb shoulder cubes rubbed with cumin, chilli flakes and salt, threaded on skewers and grilled hot until charred.",
+     "shop": [
+      "lamb shoulder",
+      "cumin seeds",
+      "chilli flakes",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Peking-style duck",
+     "scene": "the governor's household in Beijing",
+     "method": "Duck legs salted overnight, roasted at 180C for 90 minutes until crisp, with pancakes, cucumber, spring onion and hoisin.",
+     "shop": [
+      "duck legs",
+      "Chinese pancakes",
+      "cucumber",
+      "spring onions",
+      "hoisin sauce",
+      "five spice"
+     ]
+    },
+    {
+     "name": "Steamed whole fish",
+     "scene": "a quiet meal at the security company",
+     "method": "Whole snapper scored, steamed over ginger and spring onion for 12 minutes, finished with smoking hot oil poured over fresh spring onion, soy sauce and coriander.",
+     "shop": [
+      "whole snapper",
+      "ginger",
+      "spring onions",
+      "soy sauce",
+      "coriander",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sesame balls",
+     "scene": "a sweet from the market stalls",
+     "method": "Glutinous rice flour mixed with sugar and hot water into a dough, wrapped around balls of red bean paste, rolled in sesame seeds, fried at 160C until puffed and golden.",
+     "shop": [
+      "glutinous rice flour",
+      "red bean paste",
+      "sesame seeds",
+      "caster sugar",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Green tea",
+     "scene": "the teahouse before the fight",
+     "method": "Green tea leaves steeped in water just off the boil, around 80C, for 2 minutes, poured into small cups and refilled through the meal.",
+     "shop": [
+      "green tea"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Shanghai Noon (2000)",
+   "title": "Shanghai Noon",
+   "year": "2000",
+   "theme": "western",
+   "tagline": "East meets Wild West. Both bring food.",
+   "description": "An imperial guard heads to 1880s Nevada to rescue a kidnapped princess, with a smooth-talking outlaw in tow.",
+   "serve_cue": "Serve the drinks when Chon and Roy hit the saloon in Carson City.",
+   "snacks": [
+    {
+     "name": "Imperial court dumplings",
+     "scene": "the Forbidden City where Chon starts out",
+     "method": "Pork and prawn dumplings with ginger and spring onion, pleated and steamed 8 minutes, with soy and black vinegar.",
+     "shop": [
+      "pork mince",
+      "green prawns",
+      "ginger",
+      "spring onions",
+      "dumpling wrappers",
+      "Chinkiang vinegar"
+     ]
+    },
+    {
+     "name": "Saloon jerky",
+     "scene": "the dusty saloons of Nevada",
+     "method": "Beef topside sliced thin, marinated in soy, ginger, black pepper and smoked paprika, dried at 70C for 4 hours. Half Shanghai, half Nevada.",
+     "shop": [
+      "beef topside",
+      "soy sauce",
+      "ginger",
+      "black peppercorns",
+      "smoked paprika"
+     ]
+    },
+    {
+     "name": "Wild West cornbread",
+     "scene": "the cowboy side of the partnership",
+     "method": "Cornmeal, flour, buttermilk, egg and melted butter mixed briefly, baked in a hot cast iron pan at 220C for 20 minutes, with honey butter.",
+     "shop": [
+      "fine cornmeal",
+      "plain flour",
+      "buttermilk",
+      "eggs",
+      "butter",
+      "honey"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Five-spice chuckwagon ribs",
+     "scene": "the trail across the desert",
+     "method": "Pork ribs rubbed with five-spice, brown sugar, garlic and salt, wrapped and baked at 150C for 2.5 hours, glazed with hoisin and honey under the grill.",
+     "shop": [
+      "pork ribs",
+      "five spice",
+      "brown sugar",
+      "garlic",
+      "hoisin sauce",
+      "honey"
+     ]
+    },
+    {
+     "name": "Campfire beans and steak",
+     "scene": "the outlaw's camp under the stars",
+     "method": "Rump steak seasoned and seared over hot coals, sliced, with beans simmered 2 hours with bacon, onion, molasses and mustard until thick and sticky.",
+     "shop": [
+      "rump steak",
+      "cannellini beans",
+      "bacon",
+      "brown onions",
+      "molasses",
+      "mustard powder"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Almond cookies and apple pie",
+     "scene": "a dessert from both sides of the world",
+     "method": "Chinese almond cookies of butter, sugar and almond meal baked at 170C for 14 minutes, served beside wedges of cinnamon apple pie baked at 190C for 50 minutes.",
+     "shop": [
+      "butter",
+      "almond meal",
+      "plain flour",
+      "caster sugar",
+      "apples",
+      "sweet shortcrust pastry"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Saloon whiskey",
+     "scene": "the bathtub drinking game at the saloon",
+     "method": "45ml rye whisky poured neat into small glasses, with a pot of jasmine tea for anyone sitting it out.",
+     "shop": [
+      "rye whisky",
+      "jasmine tea"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Young Guns (1988)",
+   "title": "Young Guns",
+   "year": "1988",
+   "theme": "western",
+   "tagline": "Six guns. One ranch table.",
+   "description": "A group of young ranch hands become outlaws after their mentor is murdered in New Mexico.",
+   "serve_cue": "Serve the mains when Tunstall's boys sit down at his ranch table.",
+   "snacks": [
+    {
+     "name": "Tunstall's English sandwiches",
+     "scene": "the English rancher who teaches the boys manners",
+     "method": "Cucumber and butter, and ham and mustard sandwiches, crusts off, cut into triangles, a proper English touch on a New Mexico ranch.",
+     "shop": [
+      "white bread",
+      "cucumber",
+      "butter",
+      "leg ham",
+      "English mustard"
+     ]
+    },
+    {
+     "name": "New Mexico green chilli queso",
+     "scene": "the New Mexico territory",
+     "method": "Roasted green chillies chopped into a hot cheese dip of cheddar melted into evaporated milk with garlic, with tortilla chips.",
+     "shop": [
+      "green chillies",
+      "cheddar",
+      "evaporated milk",
+      "garlic",
+      "corn chips"
+     ]
+    },
+    {
+     "name": "Regulators' jerky",
+     "scene": "riding out as the Regulators",
+     "method": "Beef topside sliced thin, marinated in Worcestershire, pepper and chilli, dried at 70C for 4 hours.",
+     "shop": [
+      "beef topside",
+      "Worcestershire sauce",
+      "black peppercorns",
+      "chilli flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Ranch house beef stew",
+     "scene": "supper at Tunstall's ranch",
+     "method": "Beef chuck browned in batches, onion, carrot and potato added with toasted dried red chillies and stock, braised covered at 160C for 3 hours until thick. Warm flour tortillas.",
+     "shop": [
+      "beef chuck",
+      "brown onions",
+      "carrots",
+      "potatoes",
+      "dried chillies",
+      "flour tortillas"
+     ]
+    },
+    {
+     "name": "Green chilli pork",
+     "scene": "the Lincoln County range war",
+     "method": "Pork shoulder in chunks browned, braised 2.5 hours with roasted green chillies, tomatillos, onion, garlic and cumin until it falls apart, served over rice.",
+     "shop": [
+      "pork shoulder",
+      "green chillies",
+      "tomatillos",
+      "brown onions",
+      "garlic",
+      "long grain rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Biscochitos",
+     "scene": "New Mexico's own cookie",
+     "method": "Butter and sugar creamed with aniseed, flour worked in, rolled and cut into stars, dipped in cinnamon sugar, baked at 175C for 10 minutes until pale gold.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "caster sugar",
+      "aniseed",
+      "cinnamon"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Rye whiskey",
+     "scene": "the saloon in Lincoln",
+     "method": "45ml rye whisky poured neat into small glasses, a jug of water on the table.",
+     "shop": [
+      "rye whisky"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Unforgiven (1992)",
+   "title": "Unforgiven",
+   "year": "1992",
+   "theme": "western",
+   "tagline": "One last job. One hot meal.",
+   "description": "A retired gunfighter turned pig farmer takes one last bounty in a Wyoming town run by a brutal sheriff.",
+   "serve_cue": "Serve the mains when the riders finally get in out of the rain.",
+   "snacks": [
+    {
+     "name": "Pig farm crackling",
+     "scene": "Munny's struggling pig farm in Kansas",
+     "method": "Pork rind scored, salted and dried overnight, roasted at 240C for 30 minutes until blistered and crackling, broken into pieces.",
+     "shop": [
+      "pork rind",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Trail cornbread",
+     "scene": "the long ride north to Wyoming",
+     "method": "Cornmeal, flour, buttermilk, egg and bacon fat mixed briefly, baked in a hot cast iron pan at 220C for 20 minutes.",
+     "shop": [
+      "fine cornmeal",
+      "plain flour",
+      "buttermilk",
+      "eggs",
+      "bacon",
+      "butter"
+     ]
+    },
+    {
+     "name": "Saloon pickled eggs",
+     "scene": "the saloon in Big Whiskey",
+     "method": "Eggs boiled 10 minutes, peeled, pickled 3 days in hot vinegar with beetroot, sugar, mustard seed and peppercorns.",
+     "shop": [
+      "eggs",
+      "white vinegar",
+      "tinned beetroot",
+      "caster sugar",
+      "mustard seeds",
+      "black peppercorns"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Rainy night beef and bean stew",
+     "scene": "sheltering from the rain on the trail",
+     "method": "Beef chuck browned, onion, garlic and dried chilli, tomato and beans, braised at 160C for 3 hours until thick.",
+     "shop": [
+      "beef chuck",
+      "brown onions",
+      "garlic",
+      "dried chillies",
+      "crushed tomatoes",
+      "kidney beans"
+     ]
+    },
+    {
+     "name": "Farmhouse pork chops",
+     "scene": "home on the farm with his children",
+     "method": "Pork chops seasoned and browned in a cast iron pan, apples and onions cooked in the same fat until soft and golden, with buttery mashed potato and wilted greens.",
+     "shop": [
+      "pork chops",
+      "apples",
+      "brown onions",
+      "potatoes",
+      "kale",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Dried apple pie",
+     "scene": "a frontier pie made from what's in the pantry",
+     "method": "Dried apples soaked and stewed with sugar and cinnamon, baked in a double crust at 190C for 45 minutes.",
+     "shop": [
+      "dried apples",
+      "brown sugar",
+      "cinnamon",
+      "sweet shortcrust pastry",
+      "eggs",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Trail coffee",
+     "scene": "boiled over the fire",
+     "method": "Coarse coffee boiled in a pot, settled with a splash of cold water, poured into tin mugs, black.",
+     "shop": [
+      "ground coffee"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "City Slickers (1991)",
+   "title": "City Slickers",
+   "year": "1991",
+   "theme": "western",
+   "tagline": "Find your one thing. Then find the chuckwagon.",
+   "description": "Three city friends in a midlife crisis sign up for a cattle drive holiday.",
+   "serve_cue": "Serve the mains when the friends take over the cooking on the trail.",
+   "snacks": [
+    {
+     "name": "Dude ranch welcome snacks",
+     "scene": "arriving at the dude ranch",
+     "method": "Strips of beef jerky, sharp cheddar cut into chunks, crackers and a big bowl of salted peanuts set out on the ranch house porch.",
+     "shop": [
+      "beef jerky",
+      "vintage cheddar",
+      "crackers",
+      "salted peanuts"
+     ]
+    },
+    {
+     "name": "Campfire cornbread",
+     "scene": "the first night out on the drive",
+     "method": "Cornmeal, flour, buttermilk, egg and melted butter, baked in a hot cast iron pan at 220C for 20 minutes, honey butter.",
+     "shop": [
+      "fine cornmeal",
+      "plain flour",
+      "buttermilk",
+      "eggs",
+      "butter",
+      "honey"
+     ]
+    },
+    {
+     "name": "New York bagel bites",
+     "scene": "the guys' life back in the city",
+     "method": "Mini bagels split and toasted, spread with cream cheese, topped with smoked salmon, capers, thin red onion and dill.",
+     "shop": [
+      "bagels",
+      "cream cheese",
+      "smoked salmon",
+      "capers",
+      "red onions",
+      "dill"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Chuckwagon chilli",
+     "scene": "the trail cook's pot",
+     "method": "Beef chuck diced and browned, braised with dried chillies, cumin, garlic, tomato and beans for 3 hours. Cornbread.",
+     "shop": [
+      "beef chuck",
+      "dried chillies",
+      "ground cumin",
+      "garlic",
+      "crushed tomatoes",
+      "kidney beans"
+     ]
+    },
+    {
+     "name": "Trail steak and beans",
+     "scene": "supper on the cattle drive",
+     "method": "Rib eye seasoned heavily and seared in cast iron over hot coals, rested, with beans simmered with bacon and molasses and potatoes fried in the steak pan with onion.",
+     "shop": [
+      "rib eye steak",
+      "cannellini beans",
+      "bacon",
+      "molasses",
+      "potatoes",
+      "brown onions"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Campfire s'mores",
+     "scene": "sitting under the stars with the herd",
+     "method": "Big marshmallows toasted on sticks over the fire until blistered, sandwiched with a square of milk chocolate between two digestive biscuits and pressed so it melts.",
+     "shop": [
+      "marshmallows",
+      "milk chocolate",
+      "digestive biscuits"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Cowboy coffee",
+     "scene": "first light on the trail",
+     "method": "Coarse ground coffee boiled in a pot for 4 minutes, a splash of cold water to settle the grounds, poured black into tin mugs.",
+     "shop": [
+      "ground coffee"
+     ]
+    }
+   ],
+   "lane": 2,
    "poster_status": "pending"
   }
  ]
