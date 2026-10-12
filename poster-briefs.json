@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 528,
- "ready_for_poster": 515,
+ "hand_written": 552,
+ "ready_for_poster": 539,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -54357,6 +54357,2535 @@
      "shop": [
       "ground coffee",
       "full cream milk"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Thor: The Dark World (2013)",
+   "title": "Thor: The Dark World",
+   "year": "2013",
+   "theme": "hero",
+   "tagline": "Hang your hammer on the hook. Dinner's up.",
+   "description": "Thor teams up with his brother Loki to stop the Dark Elves from plunging the universe into darkness.",
+   "serve_cue": "Serve the snacks when Thor hangs his hammer on the coat hook in Jane's flat.",
+   "snacks": [
+    {
+     "name": "London pub scotch eggs",
+     "scene": "Jane's flat in London",
+     "method": "Soft-boiled eggs wrapped in pork sausage meat with sage, crumbed and fried at 170C for 6 minutes, halved with English mustard.",
+     "shop": [
+      "eggs",
+      "pork sausage mince",
+      "sage",
+      "panko breadcrumbs",
+      "plain flour",
+      "English mustard"
+     ]
+    },
+    {
+     "name": "Greenwich tube stop chips",
+     "scene": "Thor catching the Underground to Greenwich",
+     "method": "Thick chips cooked twice, at 140C then 190C, served in paper with malt vinegar and plenty of salt.",
+     "shop": [
+      "potatoes",
+      "vegetable oil",
+      "malt vinegar",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Jane's date night bruschetta",
+     "scene": "Jane's awkward restaurant date before Thor turns up",
+     "method": "Ciabatta sliced, brushed with olive oil, toasted and rubbed with garlic, topped with chopped tomato, basil and torn buffalo mozzarella.",
+     "shop": [
+      "ciabatta",
+      "olive oil",
+      "garlic",
+      "tomatoes",
+      "basil",
+      "buffalo mozzarella"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Frigga's farewell feast",
+     "scene": "Frigga's funeral boats on the water in Asgard",
+     "method": "Lamb shoulder rubbed with garlic, rosemary and honey, slow roasted at 150C for 5 hours, pulled apart with roasted root vegetables.",
+     "shop": [
+      "lamb shoulder",
+      "garlic",
+      "rosemary",
+      "honey",
+      "carrots",
+      "parsnips"
+     ]
+    },
+    {
+     "name": "London pie and mash",
+     "scene": "Thor fighting through the streets of Greenwich",
+     "method": "Beef chuck and ale pie filling simmered 3 hours, under a puff pastry lid baked at 200C for 25 minutes, with mash and green peas.",
+     "shop": [
+      "beef chuck",
+      "brown ale",
+      "brown onions",
+      "puff pastry",
+      "potatoes",
+      "frozen peas"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Dark Elves blackberry tart",
+     "scene": "the Dark Elves from Svartalfheim",
+     "method": "Sweet pastry blind baked, filled with vanilla custard and topped with blackberries glazed in blackberry jam.",
+     "shop": [
+      "sweet shortcrust pastry",
+      "custard",
+      "blackberries",
+      "blackberry jam",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Aether red cocktail",
+     "scene": "the red Aether flowing into Jane",
+     "method": "Cranberry and blood orange juice topped with soda water and a twist of orange, over ice.",
+     "shop": [
+      "cranberry juice",
+      "blood oranges",
+      "soda water",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Thor: Love and Thunder (2022)",
+   "title": "Thor: Love and Thunder",
+   "year": "2022",
+   "theme": "hero",
+   "tagline": "Screaming goats. Quiet dinner.",
+   "description": "Thor teams up with Valkyrie, Korg and a newly powerful Jane to stop the god butcher Gorr.",
+   "serve_cue": "Serve the snacks when the giant screaming goats pull the longship into the sky.",
+   "snacks": [
+    {
+     "name": "New Asgard fish platter",
+     "scene": "the fishing village turned tourist town of New Asgard",
+     "method": "Smoked trout and pickled herring on rye crispbread with crème fraîche, dill and thinly sliced red onion.",
+     "shop": [
+      "smoked trout",
+      "pickled herring",
+      "rye crispbread",
+      "crème fraîche",
+      "dill",
+      "red onions"
+     ]
+    },
+    {
+     "name": "Omnipotence City golden bites",
+     "scene": "Zeus's golden city of the gods",
+     "method": "Feta and spinach filo triangles brushed with butter and honey, baked at 190C until golden, scattered with sesame.",
+     "shop": [
+      "filo pastry",
+      "feta",
+      "baby spinach",
+      "butter",
+      "honey",
+      "sesame seeds"
+     ]
+    },
+    {
+     "name": "Goat's cheese bites",
+     "scene": "Toothgnasher and Toothgrinder, the screaming goats",
+     "method": "Soft goat's cheese rolled into balls, coated in crushed pistachios and chives, served on crackers with a little fig jam on each.",
+     "shop": [
+      "goat's cheese",
+      "pistachios",
+      "chives",
+      "water crackers",
+      "fig jam"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Norwegian fish soup",
+     "scene": "life in New Asgard on the Norwegian coast",
+     "method": "Salmon, white fish and prawns simmered in a creamy broth with leek, carrot and dill, with crusty bread.",
+     "shop": [
+      "salmon fillet",
+      "white fish fillets",
+      "green prawns",
+      "leeks",
+      "thickened cream",
+      "dill"
+     ]
+    },
+    {
+     "name": "Valkyrie's king's feast",
+     "scene": "Valkyrie ruling as king of New Asgard",
+     "method": "Beef short ribs braised 4 hours in dark beer with onion and thyme until falling apart, over mashed potato.",
+     "shop": [
+      "beef short ribs",
+      "stout",
+      "brown onions",
+      "thyme",
+      "potatoes",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Rainbow thunder cake",
+     "scene": "the rainbow bridge and the thunder",
+     "method": "Six vanilla sponge layers tinted different colours, stacked with whipped cream and finished with a cloud of meringue.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "eggs",
+      "caster sugar",
+      "food colouring",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Korg's sparkling punch",
+     "scene": "Korg telling the story by the fire",
+     "method": "Pineapple and passionfruit juice topped with lemonade and plenty of ice in a big jug.",
+     "shop": [
+      "pineapple juice",
+      "passionfruit",
+      "lemonade",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Captain America: The Winter Soldier (2014)",
+   "title": "Captain America: The Winter Soldier",
+   "year": "2014",
+   "theme": "hero",
+   "tagline": "On your left. Pass the noodles.",
+   "description": "Steve Rogers uncovers a conspiracy inside S.H.I.E.L.D. and comes face to face with an old friend.",
+   "serve_cue": "Serve the mains when Steve adds another item to his catch-up list.",
+   "snacks": [
+    {
+     "name": "On your left pretzels",
+     "scene": "Steve lapping Sam on the morning run in Washington",
+     "method": "Soft pretzels boiled in bicarb water, rock salt on top, baked at 220C for 12 minutes, with honey mustard.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "bicarb soda",
+      "rock salt",
+      "honey",
+      "Dijon mustard"
+     ]
+    },
+    {
+     "name": "Smithsonian exhibit sliders",
+     "scene": "the Captain America exhibit at the Smithsonian",
+     "method": "Beef patties with cheddar and pickles on soft slider buns, a little star of red capsicum on top.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "dill pickles",
+      "slider buns",
+      "red capsicum"
+     ]
+    },
+    {
+     "name": "Safe house pancakes",
+     "scene": "Sam letting Steve and Natasha hide out at his house",
+     "method": "Small buttermilk pancakes stacked with butter and maple syrup, with crisp bacon on the side.",
+     "shop": [
+      "plain flour",
+      "buttermilk",
+      "eggs",
+      "butter",
+      "maple syrup",
+      "bacon"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Thai food from the list",
+     "scene": "Thai food written on Steve's list of things he missed",
+     "method": "Chicken thighs stir-fried with garlic, chilli, fish sauce and holy basil, served over jasmine rice with a fried egg.",
+     "shop": [
+      "chicken thighs",
+      "garlic",
+      "red chillies",
+      "fish sauce",
+      "Thai basil",
+      "jasmine rice"
+     ]
+    },
+    {
+     "name": "Helicarrier mess hall stew",
+     "scene": "the S.H.I.E.L.D. helicarriers",
+     "method": "Beef chuck simmered 3 hours with onion, carrots and potatoes in stock and red wine, served in bowls with bread.",
+     "shop": [
+      "beef chuck",
+      "brown onions",
+      "carrots",
+      "potatoes",
+      "red wine",
+      "crusty bread"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Shield pie",
+     "scene": "Cap's round shield",
+     "method": "Cherry and blueberry pie with a lattice top in red, white and blue, baked at 190C for 45 minutes.",
+     "shop": [
+      "frozen cherries",
+      "blueberries",
+      "caster sugar",
+      "cornflour",
+      "shortcrust pastry",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Winter Soldier iced coffee",
+     "scene": "the cold, silent Winter Soldier",
+     "method": "Cold brew coffee poured over ice with milk and a little vanilla syrup.",
+     "shop": [
+      "ground coffee",
+      "full cream milk",
+      "vanilla syrup",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Captain America: Civil War (2016)",
+   "title": "Captain America: Civil War",
+   "year": "2016",
+   "theme": "hero",
+   "tagline": "Pick a side. Pick a plate.",
+   "description": "A new set of rules for superheroes splits the Avengers into two camps.",
+   "serve_cue": "Serve dessert when Tony sits in Aunt May's kitchen with her walnut date loaf.",
+   "snacks": [
+    {
+     "name": "Lagos market suya",
+     "scene": "the opening chase through the market in Lagos",
+     "method": "Beef strips rubbed with ground peanuts, paprika, ginger and chilli, threaded onto skewers and grilled, with sliced onion and tomato.",
+     "shop": [
+      "beef rump",
+      "peanuts",
+      "smoked paprika",
+      "ground ginger",
+      "chilli flakes",
+      "red onions"
+     ]
+    },
+    {
+     "name": "Berlin airport currywurst",
+     "scene": "the big airport fight in Germany",
+     "method": "Bratwurst grilled until browned and sliced into rounds, smothered in a warm sauce of tomato, curry powder and smoked paprika, with a pile of hot fries.",
+     "shop": [
+      "bratwurst",
+      "tomato sauce",
+      "curry powder",
+      "smoked paprika",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Vienna cheese pastries",
+     "scene": "the signing in Vienna",
+     "method": "Puff pastry squares filled with sweet cream cheese and lemon zest, baked at 200C for 15 minutes, dusted with icing sugar.",
+     "shop": [
+      "puff pastry",
+      "cream cheese",
+      "lemons",
+      "caster sugar",
+      "eggs",
+      "icing sugar"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Siberian winter goulash",
+     "scene": "the final fight in Siberia",
+     "method": "Beef chuck browned with onions and lots of paprika, simmered 3 hours with tomato until thick, with buttered noodles and sour cream.",
+     "shop": [
+      "beef chuck",
+      "brown onions",
+      "sweet paprika",
+      "crushed tomatoes",
+      "egg noodles",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Queens apartment dinner",
+     "scene": "Tony visiting Peter at Aunt May's",
+     "method": "Spaghetti and meatballs in a slow tomato sauce, a proper family meal at the kitchen table.",
+     "shop": [
+      "spaghetti",
+      "beef mince",
+      "crushed tomatoes",
+      "garlic",
+      "basil",
+      "parmesan"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Aunt May's walnut date loaf",
+     "scene": "the walnut date loaf May serves Tony",
+     "method": "Dates soaked in hot water and bicarb, mixed with butter, brown sugar, egg, flour and walnuts, baked in a loaf tin at 175C for 50 minutes, sliced and buttered.",
+     "shop": [
+      "pitted dates",
+      "bicarb soda",
+      "butter",
+      "brown sugar",
+      "self-raising flour",
+      "walnuts"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Team split drinks",
+     "scene": "Team Cap against Team Iron Man",
+     "method": "A red drink of cranberry and soda against a blue one of lemonade and blue cordial, served side by side.",
+     "shop": [
+      "cranberry juice",
+      "soda water",
+      "lemonade",
+      "blue food colouring",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Avengers: Age of Ultron (2015)",
+   "title": "Avengers: Age of Ultron",
+   "year": "2015",
+   "theme": "hero",
+   "tagline": "Lift the hammer. Then lift a fork.",
+   "description": "Tony builds a peacekeeping AI that decides humanity is the problem.",
+   "serve_cue": "Serve the snacks when everyone takes a turn trying to lift Thor's hammer at the party.",
+   "snacks": [
+    {
+     "name": "Avengers Tower party canapés",
+     "scene": "the party at the tower where everyone tries to lift the hammer",
+     "method": "Smoked salmon on blinis with crème fraîche, and beef carpaccio on crostini with rocket and parmesan.",
+     "shop": [
+      "blinis",
+      "smoked salmon",
+      "crème fraîche",
+      "beef eye fillet",
+      "baguette",
+      "parmesan"
+     ]
+    },
+    {
+     "name": "Seoul street chicken",
+     "scene": "the chase through Seoul",
+     "method": "Chicken wings fried twice until crackly, tossed in a sticky sauce of gochujang, honey, garlic and soy, with sesame seeds.",
+     "shop": [
+      "chicken wings",
+      "gochujang",
+      "honey",
+      "garlic",
+      "soy sauce",
+      "sesame seeds"
+     ]
+    },
+    {
+     "name": "Sokovia pierogi",
+     "scene": "the small country of Sokovia",
+     "method": "Potato and cheese dumplings boiled, then fried in butter with onion until golden, served with sour cream.",
+     "shop": [
+      "dumpling wrappers",
+      "potatoes",
+      "cheddar",
+      "brown onions",
+      "butter",
+      "sour cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Barton farmhouse dinner",
+     "scene": "Clint's secret family farm where the team hides out",
+     "method": "Whole chickens roasted with lemon and thyme, with roast potatoes, carrots and a big bowl of gravy on the farmhouse table.",
+     "shop": [
+      "whole chicken",
+      "lemons",
+      "thyme",
+      "potatoes",
+      "carrots",
+      "chicken stock"
+     ]
+    },
+    {
+     "name": "Johannesburg braai",
+     "scene": "the fight in Johannesburg",
+     "method": "Boerewors-style beef sausages grilled over coals, with pap of maize meal and butter, and a tomato and onion relish.",
+     "shop": [
+      "thick beef sausages",
+      "white maize meal",
+      "butter",
+      "tomatoes",
+      "brown onions",
+      "chilli flakes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Floating city pavlova",
+     "scene": "the city of Sokovia lifted into the sky",
+     "method": "Meringue baked at 120C for 90 minutes, cooled in the oven, topped with cream and berries, served on a raised cake stand.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "thickened cream",
+      "strawberries",
+      "blueberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Asgardian mead",
+     "scene": "Thor's Asgardian liquor at the party",
+     "method": "Honey stirred into warm water with lemon and a cinnamon stick, chilled and topped with ginger beer.",
+     "shop": [
+      "honey",
+      "lemons",
+      "cinnamon sticks",
+      "ginger beer",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Avengers: Infinity War (2018)",
+   "title": "Avengers: Infinity War",
+   "year": "2018",
+   "theme": "hero",
+   "tagline": "Bring everyone. Bring everything.",
+   "description": "The Avengers and the Guardians try to stop Thanos from collecting all six Infinity Stones.",
+   "serve_cue": "Serve the mains when the Wakandan army lines up for the battle.",
+   "snacks": [
+    {
+     "name": "Wakanda battle suya",
+     "scene": "the battle on the plains of Wakanda",
+     "method": "Beef strips coated in ground peanuts, paprika, ginger and chilli, grilled on skewers, with sliced onion and tomato.",
+     "shop": [
+      "beef rump",
+      "peanuts",
+      "smoked paprika",
+      "ground ginger",
+      "chilli flakes",
+      "red onions"
+     ]
+    },
+    {
+     "name": "Sanctum cheese puffs",
+     "scene": "Bruce crashing through the roof of the Sanctum",
+     "method": "Choux pastry with gruyère piped into small balls, baked at 200C for 20 minutes until puffed and hollow.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "eggs",
+      "gruyère",
+      "black peppercorns"
+     ]
+    },
+    {
+     "name": "Queens school bus snacks",
+     "scene": "Peter on the school bus over Queens",
+     "method": "Apple slices, cheese cubes, crackers and pretzels in lunch boxes, ready to grab before the ship arrives.",
+     "shop": [
+      "red apples",
+      "cheddar",
+      "water crackers",
+      "pretzels"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Thanos's farm stew",
+     "scene": "Thanos resting on his farm at the very end",
+     "method": "A simple vegetable stew of pumpkin, chickpeas, tomato and spinach simmered with cumin, served with flatbread.",
+     "shop": [
+      "butternut pumpkin",
+      "chickpeas",
+      "crushed tomatoes",
+      "baby spinach",
+      "ground cumin",
+      "flatbread"
+     ]
+    },
+    {
+     "name": "Wakandan grilled chicken",
+     "scene": "Wakanda, where the heroes make their stand",
+     "method": "Chicken thighs marinated in ginger, garlic, chilli and lime, grilled over coals, served with jollof rice and plantain.",
+     "shop": [
+      "chicken thighs",
+      "ginger",
+      "garlic",
+      "limes",
+      "long grain rice",
+      "plantains"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Infinity Stone jelly cups",
+     "scene": "the six Infinity Stones",
+     "method": "Six small jellies in six colours, set in a row of shot glasses with a little cream on top.",
+     "shop": [
+      "raspberry jelly crystals",
+      "lime jelly crystals",
+      "blue jelly crystals",
+      "orange jelly crystals",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Vibranium punch",
+     "scene": "the vibranium of Wakanda",
+     "method": "Pineapple and passionfruit juice with a splash of grenadine and soda water over ice.",
+     "shop": [
+      "pineapple juice",
+      "passionfruit",
+      "grenadine",
+      "soda water",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Guardians of the Galaxy Vol. 2 (2017)",
+   "title": "Guardians of the Galaxy Vol. 2",
+   "year": "2017",
+   "theme": "hero",
+   "tagline": "I am Groot. I am hungry.",
+   "description": "The Guardians meet Peter Quill's long-lost father, who turns out to be a living planet.",
+   "serve_cue": "Serve the snacks when Baby Groot dances through the opening fight.",
+   "snacks": [
+    {
+     "name": "Baby Groot's twig fries",
+     "scene": "Baby Groot dancing while the others fight the monster",
+     "method": "Sweet potato cut into thin sticks, tossed in oil and paprika, baked at 220C for 25 minutes until crisp.",
+     "shop": [
+      "sweet potatoes",
+      "vegetable oil",
+      "smoked paprika",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Sovereign golden bites",
+     "scene": "the golden Sovereign people",
+     "method": "Saffron risotto cooked and chilled, rolled around cubes of mozzarella, crumbed in egg and panko, fried at 180C until golden.",
+     "shop": [
+      "arborio rice",
+      "saffron",
+      "mozzarella",
+      "parmesan",
+      "panko breadcrumbs",
+      "eggs"
+     ]
+    },
+    {
+     "name": "Contraxia snowy pub pies",
+     "scene": "the Ravagers' snowy hangout on Contraxia",
+     "method": "Mini beef and gravy pies in shortcrust bases with puff lids, baked at 200C for 20 minutes, with tomato sauce.",
+     "shop": [
+      "beef mince",
+      "brown onions",
+      "beef stock",
+      "shortcrust pastry",
+      "puff pastry",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Ego's planet garden feast",
+     "scene": "Ego's beautiful garden planet",
+     "method": "Chicken thighs roasted with lemon, garlic and herbs, over a big herby salad of farro, roasted vegetables and feta.",
+     "shop": [
+      "chicken thighs",
+      "lemons",
+      "garlic",
+      "farro",
+      "zucchini",
+      "feta"
+     ]
+    },
+    {
+     "name": "Yondu's Ravager stew",
+     "scene": "Yondu and his Ravager crew",
+     "method": "Beef chuck simmered 3 hours with dark beer, onion and smoked paprika until thick, served with crusty bread.",
+     "shop": [
+      "beef chuck",
+      "stout",
+      "brown onions",
+      "smoked paprika",
+      "carrots",
+      "crusty bread"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Ravager funeral fireworks",
+     "scene": "the Ravager ships lighting up the sky for Yondu",
+     "method": "Vanilla ice cream in bowls, topped with popping candy and sparklers, served with chocolate sauce.",
+     "shop": [
+      "vanilla ice cream",
+      "popping candy",
+      "dark chocolate",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Awesome Mix iced tea",
+     "scene": "Peter's music player and the Awesome Mix",
+     "method": "Black tea brewed strong, cooled and poured over ice with peach slices and mint.",
+     "shop": [
+      "black tea",
+      "peaches",
+      "mint",
+      "caster sugar",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Guardians of the Galaxy Vol. 3 (2023)",
+   "title": "Guardians of the Galaxy Vol. 3",
+   "year": "2023",
+   "theme": "hero",
+   "tagline": "One last ride. One last feast.",
+   "description": "The Guardians race to save Rocket's life and face the scientist who made him.",
+   "serve_cue": "Serve the mains when the Guardians land on Counter-Earth.",
+   "snacks": [
+    {
+     "name": "Knowhere market dumplings",
+     "scene": "the busy streets of Knowhere",
+     "method": "Pork and cabbage dumplings pan-fried until crisp underneath, steamed with a splash of water, chilli oil to dip.",
+     "shop": [
+      "pork mince",
+      "wombok",
+      "dumpling wrappers",
+      "ginger",
+      "chilli oil",
+      "soy sauce"
+     ]
+    },
+    {
+     "name": "Cosmo's dog biscuit cheese crackers",
+     "scene": "Cosmo the space dog",
+     "method": "Cheddar cracker dough cut into bone shapes, baked at 180C for 12 minutes until crisp.",
+     "shop": [
+      "cheddar",
+      "plain flour",
+      "butter",
+      "smoked paprika"
+     ]
+    },
+    {
+     "name": "Rocket's crunchy snacks",
+     "scene": "Rocket and his friends Lylla, Teefs and Floor",
+     "method": "Roasted chickpeas and peanuts tossed with smoked paprika and garlic, baked at 200C until crunchy.",
+     "shop": [
+      "chickpeas",
+      "peanuts",
+      "smoked paprika",
+      "garlic powder",
+      "olive oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Counter-Earth diner plate",
+     "scene": "the copy of Earth the High Evolutionary built",
+     "method": "Beef burgers with cheddar, lettuce and tomato on toasted buns, with fries and a pickle, an Earth diner meal done right.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "iceberg lettuce",
+      "tomatoes",
+      "burger buns",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Orgocorp roast",
+     "scene": "the flesh-walled Orgocorp building",
+     "method": "Pork belly slow roasted at 160C for 3 hours, crackling blasted crisp, sliced over mash with apple sauce.",
+     "shop": [
+      "pork belly",
+      "sea salt flakes",
+      "potatoes",
+      "green apples",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Captain Rocket's cake",
+     "scene": "Rocket taking over as captain of the Guardians",
+     "method": "Chocolate cake baked at 175C for 35 minutes, covered in fudge icing and sprinkles, a little candle on top.",
+     "shop": [
+      "self-raising flour",
+      "cocoa",
+      "butter",
+      "eggs",
+      "icing sugar",
+      "sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Kraglin's grog",
+     "scene": "Kraglin learning to use Yondu's arrow",
+     "method": "Ginger beer with lime and a splash of dark rum over ice.",
+     "shop": [
+      "ginger beer",
+      "limes",
+      "dark rum",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Doctor Strange (2016)",
+   "title": "Doctor Strange",
+   "year": "2016",
+   "theme": "hero",
+   "tagline": "Dormammu, I've come to bargain. For seconds.",
+   "description": "An arrogant surgeon loses the use of his hands and finds the mystic arts in Kathmandu.",
+   "serve_cue": "Serve the snacks when Strange first arrives at Kamar-Taj.",
+   "snacks": [
+    {
+     "name": "Kathmandu momos",
+     "scene": "the streets of Kathmandu",
+     "method": "Chicken and spring onion dumplings with ginger and cumin, steamed 10 minutes, with a spicy tomato and sesame achar.",
+     "shop": [
+      "chicken mince",
+      "spring onions",
+      "ginger",
+      "dumpling wrappers",
+      "tomatoes",
+      "sesame seeds"
+     ]
+    },
+    {
+     "name": "Mirror dimension pinwheels",
+     "scene": "the city folding over itself in the mirror dimension",
+     "method": "Puff pastry spread with pesto and parmesan, rolled, sliced into spirals and baked at 200C for 15 minutes.",
+     "shop": [
+      "puff pastry",
+      "basil pesto",
+      "parmesan",
+      "eggs"
+     ]
+    },
+    {
+     "name": "Wong's library sandwiches",
+     "scene": "Wong guarding the library at Kamar-Taj",
+     "method": "Little sandwiches of roast chicken, avocado and herbed mayo on soft bread, cut into fingers.",
+     "shop": [
+      "white bread",
+      "chicken breasts",
+      "avocados",
+      "mayonnaise",
+      "chives"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Kamar-Taj dal bhat",
+     "scene": "the training at Kamar-Taj",
+     "method": "Red lentils simmered with turmeric, garlic and ginger, finished with a tempering of cumin seeds and ghee, with basmati rice and a spinach curry.",
+     "shop": [
+      "red lentils",
+      "ground turmeric",
+      "garlic",
+      "ginger",
+      "ghee",
+      "basmati rice"
+     ]
+    },
+    {
+     "name": "Surgeon's dinner",
+     "scene": "Strange's fancy life in New York before the crash",
+     "method": "Rib eye seared and butter basted, rested and sliced with a red wine sauce, potato gratin and asparagus.",
+     "shop": [
+      "rib eye steak",
+      "butter",
+      "red wine",
+      "potatoes",
+      "thickened cream",
+      "asparagus"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Time loop cinnamon scrolls",
+     "scene": "the time loop Strange traps Dormammu in",
+     "method": "Yeasted dough rolled with butter, brown sugar and cinnamon, cut into spirals, baked at 190C for 22 minutes, glazed.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "butter",
+      "brown sugar",
+      "ground cinnamon",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Masala chai",
+     "scene": "the mornings in Kathmandu",
+     "method": "Black tea simmered with milk, ginger, cardamom and cinnamon, sweetened and strained into cups.",
+     "shop": [
+      "black tea",
+      "full cream milk",
+      "ginger",
+      "cardamom pods",
+      "cinnamon sticks",
+      "raw sugar"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Spider-Man: Homecoming (2017)",
+   "title": "Spider-Man: Homecoming",
+   "year": "2017",
+   "theme": "hero",
+   "tagline": "Number five. Smushed.",
+   "description": "Peter Parker balances high school in Queens with trying to prove himself as Spider-Man.",
+   "serve_cue": "Serve the mains when Peter orders his sandwich at Delmar's.",
+   "snacks": [
+    {
+     "name": "Decathlon team snacks",
+     "scene": "the academic decathlon trip to Washington",
+     "method": "Popcorn popped and tossed with butter and salt, mixed with pretzels and packed with apple slices into paper lunch bags for the bus ride.",
+     "shop": [
+      "popping corn",
+      "pretzels",
+      "red apples",
+      "butter"
+     ]
+    },
+    {
+     "name": "Liz's party nachos",
+     "scene": "the party at Liz's house",
+     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, with salsa and sour cream.",
+     "shop": [
+      "corn chips",
+      "black beans",
+      "cheddar",
+      "jalapeños",
+      "tomatoes",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Staten Island ferry fries",
+     "scene": "the ferry splitting in half",
+     "method": "Thick-cut fries cooked twice until crisp, salted and served in paper cones with tomato sauce.",
+     "shop": [
+      "potatoes",
+      "vegetable oil",
+      "sea salt flakes",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Delmar's number five",
+     "scene": "Peter's order at Delmar's deli, pressed flat",
+     "method": "Long rolls filled with salami, ham, provolone, pickles and mustard, pressed hard in a sandwich press until flat and crisp.",
+     "shop": [
+      "long bread rolls",
+      "salami",
+      "leg ham",
+      "provolone",
+      "dill pickles",
+      "yellow mustard"
+     ]
+    },
+    {
+     "name": "Aunt May's dinner",
+     "scene": "dinner at home with Aunt May",
+     "method": "Chicken thighs roasted with lemon and garlic, with roast potatoes and green beans at the kitchen table.",
+     "shop": [
+      "chicken thighs",
+      "lemons",
+      "garlic",
+      "potatoes",
+      "green beans"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Homecoming dance cupcakes",
+     "scene": "the homecoming dance with Liz",
+     "method": "Vanilla cupcakes baked at 175C for 18 minutes, cooled and piped with swirls of red and blue buttercream, with a little web drawn in white icing.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "eggs",
+      "caster sugar",
+      "icing sugar",
+      "food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Queens egg cream",
+     "scene": "the corner stores of Queens",
+     "method": "Chocolate syrup and cold milk stirred, then topped with soda water to a foamy head.",
+     "shop": [
+      "chocolate syrup",
+      "full cream milk",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Spider-Man: Far From Home (2019)",
+   "title": "Spider-Man: Far From Home",
+   "year": "2019",
+   "theme": "hero",
+   "tagline": "School trip to Europe. Bring an appetite.",
+   "description": "Peter's class trip to Europe is hijacked by Nick Fury and a new hero called Mysterio.",
+   "serve_cue": "Serve the snacks when the water monster rises out of the canals in Venice.",
+   "snacks": [
+    {
+     "name": "Venice cicchetti",
+     "scene": "the class trip to Venice",
+     "method": "Toasted baguette slices topped three ways: smoked cod whipped with olive oil and garlic, prosciutto with fresh fig, and marinated artichoke with parsley.",
+     "shop": [
+      "baguette",
+      "smoked cod",
+      "prosciutto",
+      "fresh figs",
+      "artichoke hearts",
+      "olive oil"
+     ]
+    },
+    {
+     "name": "Prague trdelník bites",
+     "scene": "the night at the festival in Prague",
+     "method": "Sweet yeast dough rolled thin, wrapped around foil-covered rolling pins, baked at 200C and rolled in cinnamon sugar and walnuts.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "butter",
+      "caster sugar",
+      "ground cinnamon",
+      "walnuts"
+     ]
+    },
+    {
+     "name": "Netherlands tulip field fries",
+     "scene": "Peter and Happy in the tulip fields in the Netherlands",
+     "method": "Thick fries cooked twice, at 140C then 190C until crisp, salted and served in paper cones with a big spoon of mayonnaise, the Dutch way.",
+     "shop": [
+      "potatoes",
+      "vegetable oil",
+      "mayonnaise",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Venice seafood pasta",
+     "scene": "the class in Venice before the water monster hits",
+     "method": "Garlic and chilli softened in olive oil, white wine added with prawns, mussels and clams, covered until the shells open, tossed through spaghetti with parsley.",
+     "shop": [
+      "spaghetti",
+      "green prawns",
+      "mussels",
+      "clams",
+      "garlic",
+      "white wine"
+     ]
+    },
+    {
+     "name": "London fish and chips",
+     "scene": "the final fight at Tower Bridge",
+     "method": "Flathead in a lager batter fried at 180C until crisp, with thick chips, mushy peas and tartare.",
+     "shop": [
+      "flathead fillets",
+      "plain flour",
+      "lager",
+      "potatoes",
+      "frozen peas",
+      "tartare sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Venetian tiramisu",
+     "scene": "the trip through Italy",
+     "method": "Savoiardi dipped in espresso, layered with mascarpone whipped with yolks, sugar and cream, set overnight, cocoa on top.",
+     "shop": [
+      "savoiardi biscuits",
+      "ground coffee",
+      "mascarpone",
+      "eggs",
+      "caster sugar",
+      "cocoa"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Black dahlia soda",
+     "scene": "the black dahlia Peter wants to give MJ",
+     "method": "Blackcurrant cordial topped with soda water over ice, with a few blackberries.",
+     "shop": [
+      "blackcurrant cordial",
+      "soda water",
+      "blackberries",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Spider-Man: No Way Home (2021)",
+   "title": "Spider-Man: No Way Home",
+   "year": "2021",
+   "theme": "hero",
+   "tagline": "Everyone forgets. Nobody forgets dinner.",
+   "description": "A spell to make the world forget Peter Parker goes wrong and brings villains from other worlds.",
+   "serve_cue": "Serve dessert when Peter walks into the coffee shop where MJ works.",
+   "snacks": [
+    {
+     "name": "F.E.A.S.T. shelter soup cups",
+     "scene": "Aunt May volunteering at F.E.A.S.T.",
+     "method": "Tomato and red lentil soup simmered with onion, garlic and cumin, blended smooth, served in mugs with grilled cheese fingers.",
+     "shop": [
+      "crushed tomatoes",
+      "red lentils",
+      "brown onions",
+      "garlic",
+      "ground cumin",
+      "cheddar"
+     ]
+    },
+    {
+     "name": "Sanctum spell nachos",
+     "scene": "Doctor Strange's spell going wrong",
+     "method": "Corn chips piled up with beans, cheddar and jalapeño, baked at 200C for 8 minutes, topped with salsa and guacamole.",
+     "shop": [
+      "corn chips",
+      "black beans",
+      "cheddar",
+      "jalapeños",
+      "avocados",
+      "tomatoes"
+     ]
+    },
+    {
+     "name": "Three Spider-Men sliders",
+     "scene": "three Spider-Men together on the rooftop",
+     "method": "Three sliders side by side: beef with cheddar, chicken with slaw, and pulled pork with pickles.",
+     "shop": [
+      "beef mince",
+      "chicken thighs",
+      "pork shoulder",
+      "cheddar",
+      "cabbage",
+      "slider buns"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Happy's apartment spaghetti",
+     "scene": "hiding out at Happy's flat",
+     "method": "Spaghetti and beef meatballs simmered in a slow tomato sauce, with garlic bread and parmesan.",
+     "shop": [
+      "spaghetti",
+      "beef mince",
+      "crushed tomatoes",
+      "garlic",
+      "baguette",
+      "parmesan"
+     ]
+    },
+    {
+     "name": "Statue of Liberty cookout",
+     "scene": "the final battle at the Statue of Liberty",
+     "method": "Hot dogs and burgers grilled for a crowd, with corn on the cob and coleslaw.",
+     "shop": [
+      "hot dog franks",
+      "beef mince",
+      "burger buns",
+      "hot dog buns",
+      "corn cobs",
+      "cabbage"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Coffee shop doughnuts",
+     "scene": "the coffee shop where MJ works at the end",
+     "method": "Yeasted dough proved, cut into rounds, fried at 175C until golden, filled with thick vanilla custard and rolled in caster sugar.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "butter",
+      "eggs",
+      "custard",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "MJ's coffee",
+     "scene": "Peter buying a coffee from MJ",
+     "method": "Flat whites made with strong espresso and silky steamed milk.",
+     "shop": [
+      "ground coffee",
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Black Panther: Wakanda Forever (2022)",
+   "title": "Black Panther: Wakanda Forever",
+   "year": "2022",
+   "theme": "hero",
+   "tagline": "Wakanda forever. Talokan too.",
+   "description": "After the loss of their king, Wakanda faces a powerful hidden undersea nation.",
+   "serve_cue": "Serve the snacks when Shuri first sees the underwater city of Talokan.",
+   "snacks": [
+    {
+     "name": "Talokan seafood tostadas",
+     "scene": "the hidden underwater kingdom of Talokan",
+     "method": "Diced prawns cured in lime juice for 20 minutes until opaque, tossed with red onion and coriander, piled onto small corn tostadas with smashed avocado.",
+     "shop": [
+      "corn tostadas",
+      "green prawns",
+      "limes",
+      "avocados",
+      "red onions",
+      "coriander"
+     ]
+    },
+    {
+     "name": "Wakandan plantain chips",
+     "scene": "the green hills of Wakanda",
+     "method": "Green plantains sliced thin, fried at 180C until crisp, salted and served with a chilli peanut dip.",
+     "shop": [
+      "plantains",
+      "vegetable oil",
+      "sea salt flakes",
+      "peanut butter",
+      "chilli flakes"
+     ]
+    },
+    {
+     "name": "Haiti accra fritters",
+     "scene": "Nakia's new life in Haiti",
+     "method": "Grated taro mixed with garlic, chilli and herbs, fried in spoonfuls until golden, with a spicy pickled slaw.",
+     "shop": [
+      "taro",
+      "garlic",
+      "red chillies",
+      "parsley",
+      "cabbage",
+      "white vinegar"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Mayan pibil pork",
+     "scene": "Namor's people and their Mayan roots",
+     "method": "Pork shoulder marinated in achiote, orange and lime, wrapped in banana leaves and slow cooked at 150C for 4 hours, with tortillas and pickled red onion.",
+     "shop": [
+      "pork shoulder",
+      "achiote paste",
+      "oranges",
+      "limes",
+      "banana leaves",
+      "corn tortillas"
+     ]
+    },
+    {
+     "name": "Queen Ramonda's jollof rice",
+     "scene": "Queen Ramonda leading Wakanda",
+     "method": "Rice cooked in a rich tomato, capsicum and chilli base with thyme and stock, served with grilled chicken thighs.",
+     "shop": [
+      "long grain rice",
+      "tomato paste",
+      "red capsicum",
+      "scotch bonnet chillies",
+      "chicken thighs",
+      "thyme"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Hibiscus panna cotta",
+     "scene": "the royal purple worn in mourning for the king",
+     "method": "Dried hibiscus steeped in warm cream and sugar for 15 minutes, strained, set with gelatine in glasses overnight, topped with diced fresh mango.",
+     "shop": [
+      "thickened cream",
+      "dried hibiscus flowers",
+      "gelatine sheets",
+      "caster sugar",
+      "mangoes"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Ocean blue cooler",
+     "scene": "the deep blue sea of Talokan",
+     "method": "Coconut water and pineapple juice with a little blue colouring, over ice with lime.",
+     "shop": [
+      "coconut water",
+      "pineapple juice",
+      "blue food colouring",
+      "limes",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Captain Marvel (2019)",
+   "title": "Captain Marvel",
+   "year": "2019",
+   "theme": "hero",
+   "tagline": "Higher. Further. Faster. Snack.",
+   "description": "A Kree warrior crashes into 1990s Earth and starts piecing together who she really is.",
+   "serve_cue": "Serve the snacks when Carol crashes through the roof of the video store.",
+   "snacks": [
+    {
+     "name": "Video store popcorn",
+     "scene": "Carol crashing through the roof of a video store in 1995",
+     "method": "Popcorn popped in a big lidded pot, tossed with plenty of melted butter and fine salt, poured into big tubs like the rental store counter.",
+     "shop": [
+      "popping corn",
+      "butter",
+      "sea salt flakes",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Goose's fish bites",
+     "scene": "Goose the cat, who is really a flerken",
+     "method": "Salmon cut into bite-sized pieces, dusted in flour, dipped in egg and panko, baked at 220C for 12 minutes until golden, with tartare sauce to dip.",
+     "shop": [
+      "salmon fillet",
+      "panko breadcrumbs",
+      "eggs",
+      "plain flour",
+      "tartare sauce"
+     ]
+    },
+    {
+     "name": "Louisiana crab cakes",
+     "scene": "Maria Rambeau's house in Louisiana",
+     "method": "Crab meat bound with mayo, mustard, spring onion and breadcrumbs, pan-fried until golden, with remoulade.",
+     "shop": [
+      "crab meat",
+      "mayonnaise",
+      "Dijon mustard",
+      "spring onions",
+      "breadcrumbs",
+      "lemons"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Maria's Louisiana gumbo",
+     "scene": "catching up with Maria and Monica at home",
+     "method": "Chicken and smoked sausage simmered in a dark roux with okra, capsicum, onion and celery, over rice.",
+     "shop": [
+      "chicken thighs",
+      "smoked sausage",
+      "plain flour",
+      "okra",
+      "green capsicum",
+      "long grain rice"
+     ]
+    },
+    {
+     "name": "Air Force base burgers",
+     "scene": "Carol and Maria flying together in the Air Force",
+     "method": "Beef patties seasoned and grilled to medium, cheddar melted on, stacked in toasted buns with lettuce, tomato and onion, fries on the side.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "iceberg lettuce",
+      "tomatoes",
+      "burger buns",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Photon blast pie",
+     "scene": "Carol's glowing photon blasts",
+     "method": "Sweet pastry blind baked, filled with a lemon curd of juice, zest, sugar, cornflour, yolks and butter, topped with meringue and browned at 200C for 6 minutes.",
+     "shop": [
+      "sweet shortcrust pastry",
+      "lemons",
+      "caster sugar",
+      "cornflour",
+      "eggs",
+      "butter"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Nineties pager punch",
+     "scene": "1995 and Fury's pager",
+     "method": "Orange and pineapple juice topped with lemonade, a few drops of blue colouring swirled in.",
+     "shop": [
+      "orange juice",
+      "pineapple juice",
+      "lemonade",
+      "blue food colouring",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Ant-Man and the Wasp (2018)",
+   "title": "Ant-Man and the Wasp",
+   "year": "2018",
+   "theme": "hero",
+   "tagline": "Shrink the snacks. Supersize the mains.",
+   "description": "Scott Lang, stuck on house arrest, teams up with Hope and Hank to rescue Janet from the quantum realm.",
+   "serve_cue": "Serve the snacks when Scott does magic tricks for Cassie under house arrest.",
+   "snacks": [
+    {
+     "name": "Shrunken sliders",
+     "scene": "the shrunken cars and buildings Hank carries like luggage",
+     "method": "Tiny beef patties pressed thin, seared on a hot pan with cheddar melted on top, tucked into mini slider buns with pickles and tomato sauce, held with toothpicks.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "dill pickles",
+      "slider buns",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Giant cookie",
+     "scene": "the giant-sized things Scott grows",
+     "method": "One huge chocolate chip cookie baked in a pan at 180C for 20 minutes, cut into wedges at the table.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "brown sugar",
+      "eggs",
+      "dark chocolate chips"
+     ]
+    },
+    {
+     "name": "San Francisco sourdough bites",
+     "scene": "the car chase down the steep streets of San Francisco",
+     "method": "Sourdough cubes tossed in melted garlic butter and toasted at 200C until crisp, served around a warm dip of chopped clams, cream cheese and parmesan baked until bubbling.",
+     "shop": [
+      "sourdough bread",
+      "butter",
+      "garlic",
+      "clams",
+      "cream cheese",
+      "parmesan"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Luis's truth serum tacos",
+     "scene": "Luis telling the whole story on truth serum",
+     "method": "Chicken thighs marinated in chipotle and lime, grilled, in warm tortillas with pineapple salsa and crema.",
+     "shop": [
+      "chicken thighs",
+      "chipotle in adobo",
+      "limes",
+      "corn tortillas",
+      "pineapple",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "House arrest pizza night",
+     "scene": "Scott stuck at home with his ankle monitor",
+     "method": "Pizza dough topped with tomato sauce, mozzarella, salami and mushroom, baked at 250C for 10 minutes.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "salami",
+      "mushrooms"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Quantum realm jelly",
+     "scene": "the strange colourful quantum realm Scott gets stuck in",
+     "method": "Four jellies made one at a time and poured in thin layers into clear glasses, each set for an hour before the next goes on, topped with whipped cream.",
+     "shop": [
+      "raspberry jelly crystals",
+      "lime jelly crystals",
+      "blue jelly crystals",
+      "orange jelly crystals",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Ant-sized soda",
+     "scene": "everything going tiny",
+     "method": "Lemonade and raspberry cordial in tiny glasses, with a scoop of vanilla ice cream in the big jug.",
+     "shop": [
+      "lemonade",
+      "raspberry cordial",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Black Widow (2021)",
+   "title": "Black Widow",
+   "year": "2021",
+   "theme": "hero",
+   "tagline": "Family dinner. Fake family. Real food.",
+   "description": "Natasha reunites with the fake family she grew up with to bring down the Red Room.",
+   "serve_cue": "Serve the mains when the whole fake family sits down to dinner at Melina's farm.",
+   "snacks": [
+    {
+     "name": "Budapest langos",
+     "scene": "Natasha and Yelena in Budapest",
+     "method": "Fried yeasted dough rounds brushed with garlic butter, spread with sour cream and topped with grated cheese.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "garlic",
+      "butter",
+      "sour cream",
+      "cheddar"
+     ]
+    },
+    {
+     "name": "Yelena's vest pocket snacks",
+     "scene": "Yelena's vest and all its pockets",
+     "method": "Almonds and cashews roasted at 180C for 10 minutes, cooled and mixed with chopped dried apricots and dark chocolate chips, portioned into little paper bags.",
+     "shop": [
+      "almonds",
+      "cashews",
+      "dried apricots",
+      "dark chocolate chips"
+     ]
+    },
+    {
+     "name": "Norway hideout fish",
+     "scene": "Natasha hiding out in a caravan in Norway",
+     "method": "Rye crispbread spread with crème fraîche, topped with folds of smoked salmon, thin slices of cucumber, dill and a squeeze of lemon.",
+     "shop": [
+      "smoked salmon",
+      "rye crispbread",
+      "crème fraîche",
+      "dill",
+      "Lebanese cucumbers",
+      "lemons"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Melina's farmhouse dinner",
+     "scene": "the awkward family dinner at Melina's farm",
+     "method": "Pork chops seared and roasted with apples and onions, with mashed potato and braised cabbage.",
+     "shop": [
+      "pork chops",
+      "green apples",
+      "brown onions",
+      "potatoes",
+      "cabbage",
+      "butter"
+     ]
+    },
+    {
+     "name": "Red Guardian's borscht",
+     "scene": "Alexei, the Red Guardian",
+     "method": "Beetroot, cabbage, carrot and potato simmered in beef stock with dill, served with sour cream and rye bread.",
+     "shop": [
+      "beetroot",
+      "cabbage",
+      "carrots",
+      "potatoes",
+      "beef stock",
+      "sour cream"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Ohio childhood cupcakes",
+     "scene": "the family's pretend life in suburban Ohio in 1995",
+     "method": "Vanilla butter cake batter spooned into patty pans, baked at 175C for 18 minutes, cooled and piped with pastel buttercream and sprinkles.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "eggs",
+      "caster sugar",
+      "icing sugar",
+      "sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Russian black tea",
+     "scene": "the Red Room and its Russian roots",
+     "method": "Strong black tea brewed with lemon and a spoon of jam stirred in, served in glasses.",
+     "shop": [
+      "black tea",
+      "lemons",
+      "strawberry jam"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Shang-Chi and the Legend of the Ten Rings (2021)",
+   "title": "Shang-Chi and the Legend of the Ten Rings",
+   "year": "2021",
+   "theme": "hero",
+   "tagline": "Breakfast with Katy's family. Then the dragon.",
+   "description": "A San Francisco valet is pulled back into the world of his father's secret organisation.",
+   "serve_cue": "Serve the mains when Shang-Chi and Katy have breakfast with her family.",
+   "snacks": [
+    {
+     "name": "Katy's family breakfast congee",
+     "scene": "breakfast at Katy's family's house",
+     "method": "Rice simmered slowly in chicken stock with ginger until creamy, topped with shredded chicken, spring onion, soy and fried shallots.",
+     "shop": [
+      "jasmine rice",
+      "chicken stock",
+      "ginger",
+      "chicken breasts",
+      "spring onions",
+      "fried shallots"
+     ]
+    },
+    {
+     "name": "San Francisco bus fight bao",
+     "scene": "the fight on the runaway bus in San Francisco",
+     "method": "Pork scotch fillet roasted with hoisin and honey until sticky, sliced and stuffed into steamed bao with cucumber and spring onion.",
+     "shop": [
+      "bao buns",
+      "pork scotch fillet",
+      "hoisin sauce",
+      "honey",
+      "Lebanese cucumbers",
+      "spring onions"
+     ]
+    },
+    {
+     "name": "Macau fight club dumplings",
+     "scene": "the fight club up the side of a Macau tower",
+     "method": "Pork and prawn filling with ginger folded into dumpling wrappers, steamed in bamboo baskets for 8 minutes, with chilli oil and black vinegar.",
+     "shop": [
+      "pork mince",
+      "green prawns",
+      "ginger",
+      "dumpling wrappers",
+      "chilli oil",
+      "black vinegar"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Ta Lo village dinner",
+     "scene": "the hidden village of Ta Lo",
+     "method": "Whole snapper steamed with ginger and spring onion, finished with hot oil and soy, with rice and stir-fried greens.",
+     "shop": [
+      "whole snapper",
+      "ginger",
+      "spring onions",
+      "soy sauce",
+      "jasmine rice",
+      "bok choy"
+     ]
+    },
+    {
+     "name": "Valet night noodles",
+     "scene": "Shang-Chi and Katy parking cars for a living",
+     "method": "Beef strips seared hot in a wok, broccoli and garlic tossed through, egg noodles and oyster sauce added and stir-fried until glossy, served in takeaway boxes.",
+     "shop": [
+      "egg noodles",
+      "beef rump",
+      "broccoli",
+      "oyster sauce",
+      "garlic"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Dragon scale mango pudding",
+     "scene": "the great protector dragon of Ta Lo",
+     "method": "Mango purée warmed with sugar and gelatine, stirred into evaporated milk, set in glasses for 4 hours, topped with thin mango slices laid like scales.",
+     "shop": [
+      "mangoes",
+      "evaporated milk",
+      "gelatine sheets",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bubble tea",
+     "scene": "Shang-Chi and Katy's laid-back life in San Francisco",
+     "method": "Black tea with milk and brown sugar syrup, poured over cooked tapioca pearls and ice.",
+     "shop": [
+      "black tea",
+      "full cream milk",
+      "brown sugar",
+      "tapioca pearls",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Eternals (2021)",
+   "title": "Eternals",
+   "year": "2021",
+   "theme": "hero",
+   "tagline": "Seven thousand years. Still time for dinner.",
+   "description": "Immortal beings who have lived on Earth for thousands of years reunite to stop an ancient threat.",
+   "serve_cue": "Serve the snacks when the Eternals track down Kingo on his film set.",
+   "snacks": [
+    {
+     "name": "Kingo's film set samosas",
+     "scene": "Kingo's career as a Bollywood star",
+     "method": "Potato, peas and garam masala folded in pastry triangles, fried until crisp, with a mint chutney.",
+     "shop": [
+      "spring roll pastry",
+      "potatoes",
+      "frozen peas",
+      "garam masala",
+      "mint",
+      "Greek yoghurt"
+     ]
+    },
+    {
+     "name": "Babylon flatbreads",
+     "scene": "the Eternals living in ancient Babylon",
+     "method": "Flatbreads brushed with olive oil, sprinkled with za'atar and grilled until blistered, torn and served with hummus scattered with pomegranate seeds.",
+     "shop": [
+      "flatbread",
+      "za'atar",
+      "olive oil",
+      "hummus",
+      "pomegranate"
+     ]
+    },
+    {
+     "name": "London museum tea sandwiches",
+     "scene": "Sersi working at the Natural History Museum in London",
+     "method": "White bread spread with cream cheese and thin cucumber, and with egg mayonnaise and cress, crusts cut off and sliced into neat fingers.",
+     "shop": [
+      "white bread",
+      "Lebanese cucumbers",
+      "cream cheese",
+      "eggs",
+      "mustard cress",
+      "mayonnaise"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Phastos's family dinner",
+     "scene": "Phastos at home with his husband and son in Chicago",
+     "method": "Beef topside roasted rare, sliced paper thin, dipped in beef stock simmered with garlic and oregano, piled into soft rolls with giardiniera.",
+     "shop": [
+      "beef topside",
+      "beef stock",
+      "garlic",
+      "dried oregano",
+      "bread rolls",
+      "giardiniera"
+     ]
+    },
+    {
+     "name": "Tenochtitlan feast",
+     "scene": "the Eternals in ancient Tenochtitlan",
+     "method": "Chicken thighs in a mole of dried chillies, chocolate, spices and nuts, simmered until rich, with rice and tortillas.",
+     "shop": [
+      "chicken thighs",
+      "dried chillies",
+      "dark chocolate",
+      "almonds",
+      "long grain rice",
+      "corn tortillas"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Celestial golden cake",
+     "scene": "the giant golden Celestials",
+     "method": "Orange and almond cake baked at 170C for 50 minutes, glazed with honey and gold sprinkles.",
+     "shop": [
+      "oranges",
+      "almond meal",
+      "eggs",
+      "caster sugar",
+      "honey",
+      "sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Ancient honey drink",
+     "scene": "thousands of years on Earth",
+     "method": "Honey and lemon stirred into warm water with ginger, chilled with ice and soda water.",
+     "shop": [
+      "honey",
+      "lemons",
+      "ginger",
+      "soda water",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Deadpool 2 (2018)",
+   "title": "Deadpool 2",
+   "year": "2018",
+   "theme": "hero",
+   "tagline": "Family-sized. Like the team.",
+   "description": "Deadpool forms a team to protect a young mutant from a time-travelling soldier named Cable.",
+   "serve_cue": "Serve the snacks when X-Force jumps out of the plane.",
+   "snacks": [
+    {
+     "name": "Chimichanga bites",
+     "scene": "Deadpool's favourite food",
+     "method": "Shredded beef braised with chipotle, rolled with cheddar in small flour tortillas, fried until crisp, with sour cream and salsa.",
+     "shop": [
+      "beef chuck",
+      "chipotle in adobo",
+      "cheddar",
+      "flour tortillas",
+      "sour cream",
+      "tomatoes"
+     ]
+    },
+    {
+     "name": "Dopinder's taxi samosas",
+     "scene": "Dopinder, the eager taxi driver",
+     "method": "Spiced potato and pea filling folded in pastry triangles, fried until golden, with tamarind chutney.",
+     "shop": [
+      "spring roll pastry",
+      "potatoes",
+      "frozen peas",
+      "garam masala",
+      "tamarind paste",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Skydive popcorn",
+     "scene": "the X-Force skydive that goes badly wrong",
+     "method": "Popcorn popped in oil, tossed with melted butter, chilli flakes, lime zest and salt until coated, poured into paper cones.",
+     "shop": [
+      "popping corn",
+      "butter",
+      "chilli flakes",
+      "limes",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Ice Box prison stew",
+     "scene": "the mutant prison called the Ice Box",
+     "method": "Beef chuck simmered 3 hours with onion, carrot and potato until thick, served in metal bowls with bread.",
+     "shop": [
+      "beef chuck",
+      "brown onions",
+      "carrots",
+      "potatoes",
+      "beef stock",
+      "crusty bread"
+     ]
+    },
+    {
+     "name": "Anniversary dinner",
+     "scene": "Wade and Vanessa's anniversary",
+     "method": "Steaks seared and butter basted, sliced with chips and a red wine sauce, candles on the table.",
+     "shop": [
+      "sirloin steak",
+      "butter",
+      "potatoes",
+      "red wine",
+      "beef stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Red suit raspberry cheesecake",
+     "scene": "Deadpool's red suit",
+     "method": "Cream cheese, sugar and eggs beaten smooth over a biscuit base, baked at 160C for 50 minutes, cooled in the oven, topped with a glossy raspberry coulis.",
+     "shop": [
+      "cream cheese",
+      "caster sugar",
+      "eggs",
+      "plain sweet biscuits",
+      "butter",
+      "raspberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Cable's cold brew",
+     "scene": "grumpy Cable from the future",
+     "method": "Strong cold brew coffee over ice, black, no fuss.",
+     "shop": [
+      "ground coffee",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Deadpool & Wolverine (2024)",
+   "title": "Deadpool & Wolverine",
+   "year": "2024",
+   "theme": "hero",
+   "tagline": "Two heroes. Twice the chimichangas.",
+   "description": "Deadpool drags a reluctant Wolverine into a mission to save his world.",
+   "serve_cue": "Serve the snacks when Deadpool finds Dogpool in the Void.",
+   "snacks": [
+    {
+     "name": "Double chimichangas",
+     "scene": "Deadpool's favourite food, made for two",
+     "method": "Pulled pork with chipotle and cheddar rolled in tortillas, fried at 180C until crisp, with guacamole and sour cream.",
+     "shop": [
+      "pork shoulder",
+      "chipotle in adobo",
+      "cheddar",
+      "flour tortillas",
+      "avocados",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Car yard hot dogs",
+     "scene": "Wade's job selling used cars",
+     "method": "Franks grilled and served in soft buns with mustard and fried onions, wrapped in paper.",
+     "shop": [
+      "hot dog franks",
+      "hot dog buns",
+      "yellow mustard",
+      "brown onions"
+     ]
+    },
+    {
+     "name": "Void wasteland chips",
+     "scene": "the dusty wasteland of the Void",
+     "method": "Potatoes sliced thin on a mandoline, fried at 170C until crisp, tossed straight away with smoked paprika, garlic powder and salt.",
+     "shop": [
+      "potatoes",
+      "vegetable oil",
+      "smoked paprika",
+      "garlic powder",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Wade's birthday party spread",
+     "scene": "Wade's birthday party with his friends",
+     "method": "Barbecue pork ribs slow cooked at 150C for 3 hours, glazed and charred, with corn and slaw.",
+     "shop": [
+      "pork ribs",
+      "barbecue sauce",
+      "brown sugar",
+      "smoked paprika",
+      "corn cobs",
+      "cabbage"
+     ]
+    },
+    {
+     "name": "Logan's beer and burger",
+     "scene": "Wolverine sulking with a drink",
+     "method": "Beef burgers with cheddar, bacon and onion rings on toasted buns, with a cold beer.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "bacon",
+      "brown onions",
+      "burger buns",
+      "lager"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Red and yellow sundae",
+     "scene": "Deadpool's red suit next to Wolverine's yellow one",
+     "method": "Vanilla ice cream in tall glasses, half spooned over with raspberry sauce and half with mango purée, whipped cream piled on top.",
+     "shop": [
+      "vanilla ice cream",
+      "raspberries",
+      "mangoes",
+      "thickened cream",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Wolverine's whisky",
+     "scene": "Logan and his whisky",
+     "method": "Whisky poured over one large ice cube, or ginger ale with lime for the non-drinkers.",
+     "shop": [
+      "whisky",
+      "ginger ale",
+      "limes",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "X-Men: Days of Future Past (2014)",
+   "title": "X-Men: Days of Future Past",
+   "year": "2014",
+   "theme": "hero",
+   "tagline": "Back to 1973. Back for seconds.",
+   "description": "Wolverine is sent back to 1973 to stop a choice that dooms mutants in the future.",
+   "serve_cue": "Serve the snacks when Quicksilver races around the Pentagon kitchen in slow motion.",
+   "snacks": [
+    {
+     "name": "Pentagon kitchen soup cups",
+     "scene": "Quicksilver's slow-motion run around the Pentagon kitchen",
+     "method": "Tomato soup simmered with onion and garlic, blended smooth and served in mugs with grilled cheese fingers.",
+     "shop": [
+      "crushed tomatoes",
+      "brown onions",
+      "garlic",
+      "white bread",
+      "cheddar",
+      "butter"
+     ]
+    },
+    {
+     "name": "Paris peace talks gougères",
+     "scene": "the peace talks in Paris",
+     "method": "Choux pastry with gruyère piped into small balls, baked at 200C for 20 minutes until puffed.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "eggs",
+      "gruyère",
+      "black peppercorns"
+     ]
+    },
+    {
+     "name": "Seventies cheese ball",
+     "scene": "the year 1973",
+     "method": "Cheddar, cream cheese and spring onion rolled into a ball, coated in chopped walnuts, with crackers.",
+     "shop": [
+      "cheddar",
+      "cream cheese",
+      "spring onions",
+      "walnuts",
+      "water crackers"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Xavier mansion dinner",
+     "scene": "the run-down Xavier mansion",
+     "method": "Beef bourguignon of chuck, bacon, mushrooms and red wine simmered 3 hours, with buttery mash.",
+     "shop": [
+      "beef chuck",
+      "bacon",
+      "mushrooms",
+      "red wine",
+      "potatoes",
+      "butter"
+     ]
+    },
+    {
+     "name": "Washington lawn cookout",
+     "scene": "the showdown on the White House lawn",
+     "method": "Burgers and hot dogs grilled for a crowd, served with a potato salad of boiled potatoes, mayo, mustard and spring onion.",
+     "shop": [
+      "beef mince",
+      "hot dog franks",
+      "burger buns",
+      "potatoes",
+      "mayonnaise",
+      "spring onions"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Fondue au chocolat",
+     "scene": "the 1970s, when fondue parties were everywhere",
+     "method": "Dark chocolate melted gently with cream in a fondue pot, kept warm at the table, with strawberries, marshmallows and sponge cubes on forks to dip.",
+     "shop": [
+      "dark chocolate",
+      "thickened cream",
+      "strawberries",
+      "marshmallows",
+      "sponge cake"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Mystique blue",
+     "scene": "Mystique's blue skin",
+     "method": "Lemonade with blue curaçao or blue cordial over crushed ice with lime.",
+     "shop": [
+      "lemonade",
+      "blue curaçao",
+      "limes",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "X-Men: First Class (2011)",
+   "title": "X-Men: First Class",
+   "year": "2011",
+   "theme": "hero",
+   "tagline": "Groovy mutation. Groovy dinner.",
+   "description": "A young Charles Xavier and Erik Lehnsherr form the first team of mutants during the Cuban Missile Crisis.",
+   "serve_cue": "Serve the snacks when Charles tries his lines on a girl in the Oxford pub.",
+   "snacks": [
+    {
+     "name": "Oxford pub ploughman's",
+     "scene": "Charles trying his lines in an Oxford pub",
+     "method": "A board of aged cheddar, sliced ham, pickled onions, tomato chutney, apple wedges and thick slices of crusty bread with butter.",
+     "shop": [
+      "aged cheddar",
+      "leg ham",
+      "pickled onions",
+      "tomato chutney",
+      "crusty bread",
+      "green apples"
+     ]
+    },
+    {
+     "name": "Argentine empanadas",
+     "scene": "Erik's visit to the bar in Argentina",
+     "method": "Beef mince with onion, cumin and olives folded into pastry rounds, baked at 200C for 20 minutes, with chimichurri.",
+     "shop": [
+      "beef mince",
+      "brown onions",
+      "ground cumin",
+      "green olives",
+      "shortcrust pastry",
+      "parsley"
+     ]
+    },
+    {
+     "name": "Cuban missile crisis croquetas",
+     "scene": "the standoff off the coast of Cuba",
+     "method": "A thick béchamel of butter, flour and milk cooked with chopped ham, chilled overnight, shaped into logs, crumbed and fried until golden.",
+     "shop": [
+      "leg ham",
+      "butter",
+      "plain flour",
+      "full cream milk",
+      "panko breadcrumbs",
+      "eggs"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Hellfire Club steak dinner",
+     "scene": "Sebastian Shaw's Hellfire Club in Las Vegas",
+     "method": "Rib eye seared hard and butter basted, rested 5 minutes, served with a cream and cracked peppercorn sauce and crispy roast potatoes.",
+     "shop": [
+      "rib eye steak",
+      "butter",
+      "black peppercorns",
+      "thickened cream",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Mansion training lunch",
+     "scene": "training the young mutants at the Xavier mansion",
+     "method": "Whole chicken roasted at 200C with lemon and thyme for 75 minutes, carved with a potato salad and buttered green beans for the team.",
+     "shop": [
+      "whole chicken",
+      "lemons",
+      "thyme",
+      "potatoes",
+      "green beans",
+      "mayonnaise"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Chess game chocolate squares",
+     "scene": "Charles and Erik playing chess",
+     "method": "Dark and white chocolate fudge set in a tray, cut into squares and arranged like a chess board.",
+     "shop": [
+      "dark chocolate",
+      "white chocolate",
+      "condensed milk",
+      "butter"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Sixties martini",
+     "scene": "the spy style of the early sixties",
+     "method": "Gin stirred with dry vermouth over ice, strained into chilled glasses with an olive.",
+     "shop": [
+      "gin",
+      "dry vermouth",
+      "green olives",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Venom (2018)",
+   "title": "Venom",
+   "year": "2018",
+   "theme": "hero",
+   "tagline": "We are Venom. We are hungry.",
+   "description": "A disgraced reporter bonds with an alien symbiote that has a big appetite.",
+   "serve_cue": "Serve the mains when Eddie climbs into the lobster tank at the restaurant.",
+   "snacks": [
+    {
+     "name": "Mrs Chen's corner store tots",
+     "scene": "Mrs Chen's convenience store",
+     "method": "Frozen potato gems baked at 220C for 20 minutes until crunchy, with a chilli and garlic mayo.",
+     "shop": [
+      "frozen potato gems",
+      "mayonnaise",
+      "sriracha",
+      "garlic"
+     ]
+    },
+    {
+     "name": "Symbiote black sesame chicken",
+     "scene": "the black goo of the symbiote",
+     "method": "Chicken pieces fried crisp, tossed in a sticky soy and honey glaze, coated in black sesame seeds.",
+     "shop": [
+      "chicken thighs",
+      "cornflour",
+      "soy sauce",
+      "honey",
+      "black sesame seeds"
+     ]
+    },
+    {
+     "name": "San Francisco sourdough bites",
+     "scene": "Eddie's reporting beat in San Francisco",
+     "method": "Sourdough cubes tossed in garlic butter and toasted until crisp, served with a warm dip of crab, cream cheese and parmesan baked until golden.",
+     "shop": [
+      "sourdough bread",
+      "butter",
+      "garlic",
+      "crab meat",
+      "cream cheese",
+      "parmesan"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Lobster tank lobster",
+     "scene": "Eddie jumping into the restaurant's lobster tank",
+     "method": "Lobster tails split, brushed with garlic and herb butter, grilled 6 minutes, with fries and lemon.",
+     "shop": [
+      "lobster tails",
+      "butter",
+      "garlic",
+      "parsley",
+      "potatoes",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Eddie's late-night burger",
+     "scene": "Eddie and Venom starving at all hours",
+     "method": "Beef patties grilled with cheddar melted on, stacked with crisp bacon and pickles in toasted buns, a pile of fries cooked twice until crunchy.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "bacon",
+      "dill pickles",
+      "burger buns",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Dark chocolate symbiote cake",
+     "scene": "the symbiote craving chocolate",
+     "method": "Flourless dark chocolate cake baked at 170C for 35 minutes, with a glossy black ganache.",
+     "shop": [
+      "dark chocolate",
+      "butter",
+      "eggs",
+      "caster sugar",
+      "cocoa",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Black cherry cola float",
+     "scene": "the black symbiote",
+     "method": "Cherry cola with a scoop of vanilla ice cream and a cherry on top.",
+     "shop": [
+      "cherry cola",
+      "vanilla ice cream",
+      "maraschino cherries"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Spider-Man 3 (2007)",
+   "title": "Spider-Man 3",
+   "year": "2007",
+   "theme": "hero",
+   "tagline": "Black suit. Same appetite.",
+   "description": "Peter's life falls apart as a black alien suit brings out his dark side and new villains appear.",
+   "serve_cue": "Serve dessert when Peter takes MJ to the fancy French restaurant to propose.",
+   "snacks": [
+    {
+     "name": "Harry and MJ's omelette bites",
+     "scene": "Harry and MJ making an omelette together",
+     "method": "Small omelettes of eggs, cheese and chives baked in muffin tins at 180C for 15 minutes.",
+     "shop": [
+      "eggs",
+      "cheddar",
+      "chives",
+      "full cream milk",
+      "butter"
+     ]
+    },
+    {
+     "name": "Sandman sand cookies",
+     "scene": "the Sandman rising out of the sand",
+     "method": "Butter browned until nutty, cooled and mixed with flour and brown sugar, rolled into logs, coated in raw sugar, sliced and baked at 170C for 15 minutes.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "brown sugar",
+      "raw sugar"
+     ]
+    },
+    {
+     "name": "Jazz club canapés",
+     "scene": "Peter's black suit dance at the jazz club",
+     "method": "Blinis topped with crème fraîche and smoked salmon, and fresh figs halved and topped with goat's cheese and honey, laid out on black trays.",
+     "shop": [
+      "blinis",
+      "smoked salmon",
+      "crème fraîche",
+      "fresh figs",
+      "goat's cheese",
+      "honey"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "French restaurant dinner",
+     "scene": "Peter planning to propose at the French restaurant",
+     "method": "Coq au vin of chicken, bacon, mushrooms and red wine simmered 90 minutes, with buttery mash.",
+     "shop": [
+      "chicken thighs",
+      "bacon",
+      "mushrooms",
+      "red wine",
+      "potatoes",
+      "butter"
+     ]
+    },
+    {
+     "name": "Aunt May's roast",
+     "scene": "Aunt May giving Peter advice at her kitchen table",
+     "method": "Whole chicken rubbed with butter, lemon and thyme, roasted at 200C for 75 minutes, with crispy roast potatoes and a gravy from the pan juices.",
+     "shop": [
+      "whole chicken",
+      "butter",
+      "lemons",
+      "thyme",
+      "potatoes",
+      "chicken stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Proposal crème brûlée",
+     "scene": "the ring at the French restaurant",
+     "method": "Vanilla custard baked at 150C for 35 minutes in a water bath, chilled, sugar torched on top.",
+     "shop": [
+      "thickened cream",
+      "eggs",
+      "caster sugar",
+      "vanilla bean"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Broadway sparkling",
+     "scene": "MJ's Broadway show",
+     "method": "Sparkling wine or sparkling apple juice with a raspberry in each glass.",
+     "shop": [
+      "sparkling wine",
+      "sparkling apple juice",
+      "raspberries"
      ]
     }
    ],
