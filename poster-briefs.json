@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 418,
- "ready_for_poster": 415,
+ "hand_written": 432,
+ "ready_for_poster": 429,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -42760,6 +42760,1485 @@
     }
    ],
    "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Encino Man (1992)",
+   "title": "Encino Man",
+   "year": "1992",
+   "theme": "teen",
+   "tagline": "Thawed out and ready to eat, buddy.",
+   "description": "Two high school losers dig up a frozen caveman in their backyard and pass him off as an exchange student.",
+   "serve_cue": "Serve the snacks when Link is thawed out in the garage.",
+   "snacks": [
+    {
+     "name": "Ice age block cheese",
+     "scene": "the caveman frozen in a block of ice",
+     "method": "A whole block of sharp cheddar set on crushed ice, cut into rough chunks at the table, with crackers and pickled onions.",
+     "shop": [
+      "vintage cheddar",
+      "crackers",
+      "pickled onions",
+      "ice"
+     ]
+    },
+    {
+     "name": "Caveman club drumsticks",
+     "scene": "Link eating with his hands",
+     "method": "Chicken drumsticks rubbed with smoked paprika, garlic and brown sugar, roasted at 220C for 40 minutes until sticky, eaten with your hands like a caveman.",
+     "shop": [
+      "chicken drumsticks",
+      "smoked paprika",
+      "garlic powder",
+      "brown sugar",
+      "barbecue sauce"
+     ]
+    },
+    {
+     "name": "Encino backyard nachos",
+     "scene": "the backyard where they dig the pool",
+     "method": "Corn chips layered with black beans and cheddar, baked at 200C for 8 minutes, topped with salsa, guacamole and sour cream.",
+     "shop": [
+      "corn chips",
+      "black beans",
+      "cheddar",
+      "tomatoes",
+      "avocados",
+      "sour cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Prom night burgers",
+     "scene": "the prom where Link steals the show",
+     "method": "Chuck patties smashed thin on a hot griddle, American cheese, pickles, onion and burger sauce on toasted buns, crinkle-cut fries.",
+     "shop": [
+      "beef chuck mince",
+      "American cheese",
+      "dill pickles",
+      "brown onions",
+      "burger buns",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Cave man rack of ribs",
+     "scene": "a big hunk of meat for a big appetite",
+     "method": "Pork ribs rubbed with salt, pepper and paprika, wrapped and baked at 150C for 2.5 hours, glazed with barbecue sauce under a hot grill, eaten off the bone.",
+     "shop": [
+      "pork ribs",
+      "smoked paprika",
+      "black peppercorns",
+      "barbecue sauce",
+      "brown sugar"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Frozen yoghurt bark",
+     "scene": "thawing out slowly",
+     "method": "Greek yoghurt mixed with honey and vanilla, spread thin on a tray, scattered with berries and crushed nuts, frozen 4 hours, broken into shards.",
+     "shop": [
+      "Greek yoghurt",
+      "honey",
+      "vanilla extract",
+      "mixed berries",
+      "pistachios"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "California smoothie",
+     "scene": "1990s Encino, totally",
+     "method": "Banana, mango, orange juice and ice blended thick, poured into tall cups with a straw.",
+     "shop": [
+      "bananas",
+      "mangoes",
+      "orange juice",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Jingle All the Way (1996)",
+   "title": "Jingle All the Way",
+   "year": "1996",
+   "theme": "xmas",
+   "tagline": "One toy left. One very long Christmas Eve.",
+   "description": "A workaholic dad races around the city on Christmas Eve to find the year's must-have action figure.",
+   "serve_cue": "Serve the snacks when Howard hits the toy store on Christmas Eve.",
+   "snacks": [
+    {
+     "name": "Mall food court pretzels",
+     "scene": "the packed shopping centre on Christmas Eve",
+     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, with a warm cheddar dip.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "bicarb soda",
+      "rock salt",
+      "cheddar",
+      "evaporated milk"
+     ]
+    },
+    {
+     "name": "Neighbour Ted's Christmas cookies",
+     "scene": "the too-perfect neighbour always popping over",
+     "method": "Butter sugar cookies cut into stars and trees, baked at 180C for 8 minutes, iced white and red with sprinkles.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "caster sugar",
+      "icing sugar",
+      "eggs",
+      "red food colouring"
+     ]
+    },
+    {
+     "name": "Parade float popcorn",
+     "scene": "the Christmas parade at the end",
+     "method": "Popcorn tossed in white chocolate with red and green sprinkles and a pinch of salt, spread on a tray to set.",
+     "shop": [
+      "popcorn kernels",
+      "white chocolate",
+      "sprinkles",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Minnesota Christmas Eve roast",
+     "scene": "the family Christmas in the Minnesota cold",
+     "method": "Turkey breast brined overnight, roasted at 170C to 70C, rested, with stuffing, mashed potato, cranberry sauce and gravy.",
+     "shop": [
+      "turkey breast",
+      "stuffing mix",
+      "potatoes",
+      "cranberry sauce",
+      "chicken stock",
+      "butter"
+     ]
+    },
+    {
+     "name": "Minnesota hotdish",
+     "scene": "a Minnesota family classic",
+     "method": "Beef mince and onion in a creamy mushroom sauce, topped with tater tots and cheddar, baked at 200C for 30 minutes until crisp.",
+     "shop": [
+      "beef mince",
+      "brown onions",
+      "mushrooms",
+      "thickened cream",
+      "frozen tater tots",
+      "cheddar"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Peppermint bark",
+     "scene": "Christmas sweets for the stocking",
+     "method": "Dark chocolate spread thin, set, covered with white chocolate and crushed candy canes, set again and broken into shards.",
+     "shop": [
+      "dark chocolate",
+      "white chocolate",
+      "candy canes",
+      "peppermint extract"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Eggnog",
+     "scene": "Christmas Eve at home, finally",
+     "method": "Yolks whisked with sugar, hot milk and cream poured in, cooked gently to 75C, chilled, finished with nutmeg and a splash of brandy for the adults.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "full cream milk",
+      "thickened cream",
+      "nutmeg",
+      "brandy"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Miracle on 34th Street (1947)",
+   "title": "Miracle on 34th Street",
+   "year": "1947",
+   "theme": "xmas",
+   "tagline": "Faith is believing. Dinner is eating.",
+   "description": "A kindly old man hired as a department store Santa insists he's the real thing, and ends up in court.",
+   "serve_cue": "Serve the mains when Kris shares Thanksgiving dinner with Doris and Susan.",
+   "snacks": [
+    {
+     "name": "Parade day hot pretzels",
+     "scene": "the big Thanksgiving parade through New York",
+     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, brushed with butter. Yellow mustard.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "bicarb soda",
+      "rock salt",
+      "butter",
+      "yellow mustard"
+     ]
+    },
+    {
+     "name": "Department store Santa cookies",
+     "scene": "the long line to sit on Santa's knee",
+     "method": "Butter shortbread cut into rounds, baked at 160C for 15 minutes, iced with a red Santa hat and white trim.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "icing sugar",
+      "caster sugar",
+      "red food colouring"
+     ]
+    },
+    {
+     "name": "1940s cheese and celery",
+     "scene": "a mid-century New York cocktail spread",
+     "method": "Celery sticks filled with cream cheese whipped with blue cheese and chives, and crackers with sharp cheddar.",
+     "shop": [
+      "celery",
+      "cream cheese",
+      "blue cheese",
+      "chives",
+      "crackers",
+      "vintage cheddar"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Thanksgiving dinner",
+     "scene": "the Thanksgiving Kris spends with Doris and Susan",
+     "method": "Turkey breast brined overnight, roasted at 170C to 70C, rested, with cornbread stuffing, cranberry sauce, mashed potato and gravy.",
+     "shop": [
+      "turkey breast",
+      "fine cornmeal",
+      "cranberry sauce",
+      "potatoes",
+      "chicken stock",
+      "butter"
+     ]
+    },
+    {
+     "name": "New York pot roast",
+     "scene": "a cold night in 1940s Manhattan",
+     "method": "Beef chuck seared, onion, carrot and celery, red wine and stock, braised at 160C for 3 hours, potatoes for the last hour.",
+     "shop": [
+      "beef chuck",
+      "brown onions",
+      "carrots",
+      "celery",
+      "red wine",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas pudding",
+     "scene": "Christmas in the house Susan wished for",
+     "method": "Dried fruit soaked overnight in brandy, mixed with butter, brown sugar, eggs, breadcrumbs, flour and spice, steamed 4 hours, flamed at the table. Custard.",
+     "shop": [
+      "mixed dried fruit",
+      "brandy",
+      "butter",
+      "brown sugar",
+      "eggs",
+      "custard"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Hot apple cider",
+     "scene": "a snowy New York Christmas",
+     "method": "Cloudy apple juice simmered with cinnamon, cloves and orange peel for 15 minutes, ladled hot into mugs.",
+     "shop": [
+      "cloudy apple juice",
+      "cinnamon sticks",
+      "cloves",
+      "oranges"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Polar Express (2004)",
+   "title": "The Polar Express",
+   "year": "2004",
+   "theme": "xmas",
+   "tagline": "All aboard. Hot chocolate is served.",
+   "description": "On Christmas Eve, a boy who's starting to doubt boards a magical train to the North Pole.",
+   "serve_cue": "Serve the hot chocolate when the waiters dance down the carriage.",
+   "snacks": [
+    {
+     "name": "Train carriage sandwiches",
+     "scene": "the long ride north through the night",
+     "method": "Little ham and cheese, and egg and lettuce sandwiches cut into triangles, wrapped in paper with a punched ticket on top.",
+     "shop": [
+      "white bread",
+      "leg ham",
+      "vintage cheddar",
+      "eggs",
+      "iceberg lettuce",
+      "mayonnaise"
+     ]
+    },
+    {
+     "name": "Golden ticket shortbread",
+     "scene": "the ticket the conductor punches",
+     "method": "Butter shortbread cut into ticket shapes, baked at 160C for 15 minutes, dusted with gold sugar, holes punched with a straw before baking.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "icing sugar",
+      "caster sugar",
+      "gold sprinkles"
+     ]
+    },
+    {
+     "name": "Snowy North Pole popcorn",
+     "scene": "the snow outside the window",
+     "method": "Popcorn tossed in melted white chocolate and a pinch of salt, scattered with white sprinkles, spread out to set like snow.",
+     "shop": [
+      "popcorn kernels",
+      "white chocolate",
+      "sprinkles",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "North Pole chicken pot pie",
+     "scene": "a warm supper on a cold night",
+     "method": "Chicken thighs, carrot, celery, onion and peas in a creamy thyme sauce, under puff pastry, egg washed, baked at 200C for 30 minutes.",
+     "shop": [
+      "chicken thighs",
+      "carrots",
+      "celery",
+      "frozen peas",
+      "thickened cream",
+      "puff pastry"
+     ]
+    },
+    {
+     "name": "Christmas Eve meatballs",
+     "scene": "Christmas Eve at home before the train arrives",
+     "method": "Beef and pork meatballs with breadcrumbs, parmesan and nutmeg, browned, simmered in a creamy gravy, with mash and cranberry sauce.",
+     "shop": [
+      "beef mince",
+      "pork mince",
+      "breadcrumbs",
+      "parmesan",
+      "thickened cream",
+      "cranberry sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sleigh bell sugar cookies",
+     "scene": "the first gift of Christmas, the silver bell",
+     "method": "Butter sugar cookies cut into bells, baked at 180C for 8 minutes, iced white with silver cachous and a red ribbon piped on.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "caster sugar",
+      "icing sugar",
+      "silver cachous",
+      "red food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "The hot chocolate",
+     "scene": "the waiters who dance it down the carriage",
+     "method": "Dark and milk chocolate melted into hot milk and cream, whisked until thick and frothy, poured from a height, whipped cream on top.",
+     "shop": [
+      "dark chocolate",
+      "milk chocolate",
+      "full cream milk",
+      "thickened cream"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "How the Grinch Stole Christmas (2000)",
+   "title": "How the Grinch Stole Christmas",
+   "year": "2000",
+   "theme": "xmas",
+   "tagline": "Roast beast. Who pudding. No stealing.",
+   "description": "A grumpy green hermit plans to steal Christmas from the cheerful town below his mountain.",
+   "serve_cue": "Serve the roast beast when the Whos sit down to their Christmas feast.",
+   "snacks": [
+    {
+     "name": "Whoville Christmas wreaths",
+     "scene": "the town covered in decorations",
+     "method": "Cornflakes stirred through melted marshmallow and butter tinted green, shaped into little wreaths, red lollies pressed on as berries.",
+     "shop": [
+      "corn flakes",
+      "marshmallows",
+      "butter",
+      "green food colouring",
+      "red lollies"
+     ]
+    },
+    {
+     "name": "Mount Crumpit cheese mountain",
+     "scene": "the mountain where the Grinch lives",
+     "method": "A tall pile of cheddar and gouda cubes, grapes and crackers stacked into a peak, a green herb dip at the base.",
+     "shop": [
+      "vintage cheddar",
+      "gouda",
+      "grapes",
+      "crackers",
+      "sour cream",
+      "parsley"
+     ]
+    },
+    {
+     "name": "Max's sausage rolls",
+     "scene": "the Grinch's loyal little dog",
+     "method": "Sausage mince with apple and sage rolled in puff pastry, egg washed, baked at 200C for 25 minutes. Tomato sauce.",
+     "shop": [
+      "pork sausage mince",
+      "apples",
+      "sage",
+      "puff pastry",
+      "eggs",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Roast beast",
+     "scene": "the Christmas feast he tries to steal",
+     "method": "Beef rib roast seasoned overnight, roasted at 220C for 20 minutes then 160C to 52C, rested, carved at the table with Yorkshire puddings, roast potatoes and gravy.",
+     "shop": [
+      "beef rib roast",
+      "plain flour",
+      "eggs",
+      "full cream milk",
+      "potatoes",
+      "beef stock"
+     ]
+    },
+    {
+     "name": "Who-hash",
+     "scene": "the Whos' festive breakfast hash",
+     "method": "Corned beef, potato and onion fried hard in butter until crisp, topped with fried eggs and chives.",
+     "shop": [
+      "corned beef",
+      "potatoes",
+      "brown onions",
+      "butter",
+      "eggs",
+      "chives"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Who pudding",
+     "scene": "the Christmas pudding on every Who table",
+     "method": "Bread and butter pudding made with fruit loaf, layered in a dish, soaked in a vanilla custard of eggs, milk and cream, baked at 170C for 40 minutes.",
+     "shop": [
+      "fruit loaf",
+      "butter",
+      "eggs",
+      "full cream milk",
+      "thickened cream",
+      "vanilla extract"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Grinch green punch",
+     "scene": "a heart that grows three sizes",
+     "method": "Lime sorbet scooped into a punch bowl, topped with lemonade and pineapple juice so it froths up green.",
+     "shop": [
+      "lime sorbet",
+      "lemonade",
+      "pineapple juice",
+      "limes"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Nightmare Before Christmas (1993)",
+   "title": "The Nightmare Before Christmas",
+   "year": "1993",
+   "theme": "xmas",
+   "tagline": "Halloween Town does Christmas. Badly. Deliciously.",
+   "description": "The Pumpkin King of Halloween Town discovers Christmas and decides to take it over.",
+   "serve_cue": "Serve the soup when Sally brings Dr Finkelstein his supper.",
+   "snacks": [
+    {
+     "name": "Pumpkin King pasties",
+     "scene": "Jack, the Pumpkin King",
+     "method": "Roast pumpkin mashed with feta, sage and nutmeg, wrapped in shortcrust half moons, a jack-o'-lantern face cut into each, baked at 200C for 20 minutes.",
+     "shop": [
+      "pumpkin",
+      "feta",
+      "sage",
+      "nutmeg",
+      "shortcrust pastry",
+      "eggs"
+     ]
+    },
+    {
+     "name": "Christmas Town candy canes",
+     "scene": "the bright Christmas Town Jack stumbles into",
+     "method": "Puff pastry twists brushed with butter, half rolled in red sugar and half in white, twisted into candy cane shapes, baked at 200C for 12 minutes.",
+     "shop": [
+      "puff pastry",
+      "butter",
+      "caster sugar",
+      "red food colouring",
+      "eggs"
+     ]
+    },
+    {
+     "name": "Zero's ghost dog meringues",
+     "scene": "Jack's little ghost dog with the glowing nose",
+     "method": "Meringue piped into ghostly teardrops, baked at 100C for 90 minutes, a dot of red icing for the glowing nose.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "cream of tartar",
+      "red food colouring"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Sally's soup",
+     "scene": "the soup Sally makes for the doctor, minus the sleeping potion",
+     "method": "Roast pumpkin and carrot soup with garlic and thyme, blended with stock and a little cream, swirled with sour cream in a spiderweb pattern.",
+     "shop": [
+      "pumpkin",
+      "carrots",
+      "garlic",
+      "thyme",
+      "chicken stock",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Halloween Town stew",
+     "scene": "the town square cauldron",
+     "method": "Beef shin browned, onion, carrot and garlic, red wine and stock, braised 3 hours until dark and thick, served in hollowed bread rolls.",
+     "shop": [
+      "beef shin",
+      "brown onions",
+      "carrots",
+      "garlic",
+      "red wine",
+      "bread rolls"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Oogie Boogie dirt cups",
+     "scene": "the bug-filled villain in his lair",
+     "method": "Chocolate mousse in cups topped with crushed chocolate biscuit soil and gummy worms crawling out.",
+     "shop": [
+      "dark chocolate",
+      "thickened cream",
+      "eggs",
+      "chocolate biscuits",
+      "gummy worms"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Witch's cauldron cider",
+     "scene": "Halloween night in town",
+     "method": "Cloudy apple juice simmered with cinnamon, star anise and cloves, served hot from a black pot.",
+     "shop": [
+      "cloudy apple juice",
+      "cinnamon sticks",
+      "star anise",
+      "cloves"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Bad Santa (2003)",
+   "title": "Bad Santa",
+   "year": "2003",
+   "theme": "xmas",
+   "tagline": "Ho ho no. Pass the sandwiches.",
+   "description": "A drunken safecracker works as a mall Santa every Christmas so he can rob the place.",
+   "serve_cue": "Serve the sandwiches when the kid makes Willie his lunch.",
+   "snacks": [
+    {
+     "name": "The kid's sandwiches",
+     "scene": "the lonely kid who makes Willie sandwiches",
+     "method": "Thick white bread with peanut butter and strawberry jam, and ham and cheese, cut into triangles and packed in a brown paper bag.",
+     "shop": [
+      "white bread",
+      "peanut butter",
+      "strawberry jam",
+      "leg ham",
+      "cheddar",
+      "butter"
+     ]
+    },
+    {
+     "name": "Advent calendar chocolates",
+     "scene": "the advent calendar the kid keeps",
+     "method": "Little dark and milk chocolate squares in a numbered tray, each with a toasted hazelnut or a pinch of sea salt.",
+     "shop": [
+      "dark chocolate",
+      "milk chocolate",
+      "hazelnuts",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Mall food court pretzels",
+     "scene": "the shopping mall in Phoenix",
+     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, with a cheese dip.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "bicarb soda",
+      "rock salt",
+      "cheddar",
+      "evaporated milk"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Arizona Christmas tamales",
+     "scene": "Christmas in Phoenix, tamales on every table",
+     "method": "Masa beaten with lard and stock, spread on soaked corn husks, filled with pork braised in red chilli, folded and steamed 75 minutes.",
+     "shop": [
+      "masa harina",
+      "lard",
+      "chicken stock",
+      "corn husks",
+      "pork shoulder",
+      "dried chillies"
+     ]
+    },
+    {
+     "name": "Diner Christmas plate",
+     "scene": "a sad Christmas at the diner",
+     "method": "Roast turkey breast, stuffing, mashed potato, gravy and cranberry sauce, a proper diner Christmas plate done right.",
+     "shop": [
+      "turkey breast",
+      "stuffing mix",
+      "potatoes",
+      "chicken stock",
+      "cranberry sauce",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas fruit cake slices",
+     "scene": "the mall Santa's grotto",
+     "method": "Rich fruit cake with brandy-soaked fruit, almonds and spice, baked low and slow at 150C for 2.5 hours, sliced thin.",
+     "shop": [
+      "mixed dried fruit",
+      "brandy",
+      "butter",
+      "brown sugar",
+      "eggs",
+      "almonds"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Willie's Christmas whisky",
+     "scene": "the flask Santa keeps under the suit",
+     "method": "45ml bourbon with a splash of ginger ale over ice, or ginger ale with lime for anyone driving the sleigh.",
+     "shop": [
+      "bourbon",
+      "ginger ale",
+      "limes",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Mamma Mia! (2008)",
+   "title": "Mamma Mia!",
+   "year": "2008",
+   "theme": "tiki",
+   "tagline": "Sun, sea and three possible dads. Pass the feta.",
+   "description": "On a Greek island, a bride-to-be invites three men who might be her father to her wedding.",
+   "serve_cue": "Serve the feast at Sophie's wedding party on the island.",
+   "snacks": [
+    {
+     "name": "Island taverna mezze",
+     "scene": "the little hotel on a Greek island",
+     "method": "Cucumber grated and squeezed dry, stirred into thick yoghurt with garlic, dill, lemon and olive oil, served with warm pita, marinated olives and taramasalata for dipping.",
+     "shop": [
+      "cucumber",
+      "Greek yoghurt",
+      "garlic",
+      "dill",
+      "olives",
+      "pita bread"
+     ]
+    },
+    {
+     "name": "Grilled haloumi with honey",
+     "scene": "the hen night on the terrace",
+     "method": "Haloumi sliced and griddled until golden, drizzled with honey and thyme, a squeeze of lemon.",
+     "shop": [
+      "haloumi",
+      "honey",
+      "thyme",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Spanakopita",
+     "scene": "the wedding morning in the villa",
+     "method": "Spinach, feta, dill and spring onion wrapped in buttered filo triangles, baked at 190C for 25 minutes.",
+     "shop": [
+      "spinach",
+      "feta",
+      "dill",
+      "spring onions",
+      "filo pastry",
+      "butter"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Wedding lamb kleftiko",
+     "scene": "the island wedding feast",
+     "method": "Lamb shoulder with garlic, oregano, lemon and potatoes, wrapped in baking paper and foil, roasted at 160C for 4 hours until it falls apart.",
+     "shop": [
+      "lamb shoulder",
+      "garlic",
+      "dried oregano",
+      "lemons",
+      "potatoes",
+      "extra virgin olive oil"
+     ]
+    },
+    {
+     "name": "Grilled octopus and Greek salad",
+     "scene": "lunch by the sea",
+     "method": "Octopus simmered until tender, then charred on a hot grill with olive oil and lemon, with a salad of tomato, cucumber, onion, olives and feta.",
+     "shop": [
+      "cooked octopus",
+      "lemons",
+      "tomatoes",
+      "cucumber",
+      "red onions",
+      "feta"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Loukoumades",
+     "scene": "the wedding sweets",
+     "method": "Yeasted batter spooned into hot oil, fried until puffed and golden, soaked in warm honey with cinnamon and walnuts.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "honey",
+      "cinnamon",
+      "walnuts",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Ouzo and lemonade",
+     "scene": "the dancing on the jetty",
+     "method": "30ml ouzo over ice topped with lemonade, or sparkling lemonade with mint for anyone not drinking.",
+     "shop": [
+      "ouzo",
+      "lemonade",
+      "mint",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Greatest Showman (2017)",
+   "title": "The Greatest Showman",
+   "year": "2017",
+   "theme": "uptown",
+   "tagline": "Roll up. Roll up. Dinner is served.",
+   "description": "A dreamer from nothing builds a dazzling circus show in 1800s New York.",
+   "serve_cue": "Serve the snacks when the ringmaster opens the show.",
+   "snacks": [
+    {
+     "name": "Circus roasted peanuts",
+     "scene": "the big top on opening night",
+     "method": "Peanuts in the shell roasted at 180C for 20 minutes, tossed hot with salt and a little smoked paprika, served in paper cones.",
+     "shop": [
+      "peanuts in the shell",
+      "sea salt flakes",
+      "smoked paprika"
+     ]
+    },
+    {
+     "name": "Big top caramel popcorn",
+     "scene": "the crowd pouring into the tent",
+     "method": "Popcorn tossed in a brown sugar and butter caramel with a pinch of bicarb and salt, baked at 120C for 45 minutes, stirred every 15.",
+     "shop": [
+      "popcorn kernels",
+      "brown sugar",
+      "butter",
+      "golden syrup",
+      "bicarb soda",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Toffee apples",
+     "scene": "the sideshow stalls",
+     "method": "Apples on sticks dipped in a red toffee of sugar, water and golden syrup boiled to 150C, set on oiled baking paper.",
+     "shop": [
+      "apples",
+      "caster sugar",
+      "golden syrup",
+      "red food colouring"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Opening night roast",
+     "scene": "the toast after the first sold-out show",
+     "method": "Beef sirloin roasted at 200C to 52C, rested, carved, with Yorkshire puddings, roast potatoes and a red wine gravy.",
+     "shop": [
+      "beef sirloin",
+      "plain flour",
+      "eggs",
+      "full cream milk",
+      "potatoes",
+      "red wine"
+     ]
+    },
+    {
+     "name": "Opera singer's supper",
+     "scene": "the famous singer's tour",
+     "method": "Chicken breasts pan-roasted in butter, a white wine and tarragon cream sauce, buttered new potatoes and green beans.",
+     "shop": [
+      "chicken breasts",
+      "butter",
+      "white wine",
+      "tarragon",
+      "new potatoes",
+      "green beans"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Ringmaster's red velvet cake",
+     "scene": "the red ringmaster's coat",
+     "method": "Red velvet layer cake baked at 175C, layered and covered in cream cheese frosting, gold sprinkles on top.",
+     "shop": [
+      "self-raising flour",
+      "buttermilk",
+      "cocoa",
+      "red food colouring",
+      "cream cheese",
+      "gold sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Champagne toast",
+     "scene": "the bar where the partnership is agreed",
+     "method": "Champagne poured into coupes, or sparkling apple juice for the younger crowd.",
+     "shop": [
+      "champagne",
+      "sparkling apple juice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "La La Land (2016)",
+   "title": "La La Land",
+   "year": "2016",
+   "theme": "uptown",
+   "tagline": "City of stars. City of tacos.",
+   "description": "A jazz pianist and an aspiring actress fall in love while chasing their dreams in Los Angeles.",
+   "serve_cue": "Serve the drinks when Sebastian takes Mia to the jazz club.",
+   "snacks": [
+    {
+     "name": "Studio lot café pastries",
+     "scene": "the coffee shop on the studio lot where Mia works",
+     "method": "Mini almond croissants: day-old croissants split, filled with almond cream, topped with flaked almonds, baked at 180C for 15 minutes, icing sugar dusted.",
+     "shop": [
+      "croissants",
+      "almond meal",
+      "butter",
+      "caster sugar",
+      "flaked almonds",
+      "icing sugar"
+     ]
+    },
+    {
+     "name": "Jazz club bar snacks",
+     "scene": "the jazz club by the beach where Seb takes Mia",
+     "method": "Olives warmed in olive oil with orange peel and fennel seed, almonds roasted at 170C with rosemary and salt, and parmesan crisps baked in little rounds at 190C for 6 minutes.",
+     "shop": [
+      "olives",
+      "oranges",
+      "fennel seeds",
+      "almonds",
+      "rosemary",
+      "parmesan"
+     ]
+    },
+    {
+     "name": "Pool party sliders",
+     "scene": "the Hollywood party by the pool",
+     "method": "Beef mince smashed thin on a hot griddle, cheddar melted on, onions cooked slowly until jammy and a few pickles, on soft slider rolls.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "brown onions",
+      "dill pickles",
+      "slider buns"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Hollywood tacos",
+     "scene": "the LA nights between auditions and gigs",
+     "method": "Flathead strips dipped in a light lager batter, fried at 180C until crisp, in warm corn tortillas with shredded cabbage, lime crema and a fresh pico de gallo.",
+     "shop": [
+      "flathead fillets",
+      "plain flour",
+      "lager",
+      "corn tortillas",
+      "cabbage",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Paris bistro chicken",
+     "scene": "the Paris dream near the end",
+     "method": "Chicken roasted at 220C with tarragon butter pushed under the skin, rested, carved, with silky pommes purée and a green salad with Dijon vinaigrette.",
+     "shop": [
+      "whole chicken",
+      "tarragon",
+      "butter",
+      "potatoes",
+      "salad leaves",
+      "Dijon mustard"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Observatory starry chocolate tart",
+     "scene": "the dance among the stars at the observatory",
+     "method": "Sweet pastry blind baked at 180C, filled with a dark chocolate ganache set for 3 hours, finished with flaky salt and a scatter of edible gold stars.",
+     "shop": [
+      "dark chocolate",
+      "thickened cream",
+      "sweet shortcrust pastry",
+      "edible gold leaf",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Jazz club old fashioned",
+     "scene": "Sebastian and his jazz",
+     "method": "60ml bourbon stirred with a sugar cube, 2 dashes of bitters and ice for 30 seconds, strained over a big cube, orange peel twisted over.",
+     "shop": [
+      "bourbon",
+      "sugar cubes",
+      "aromatic bitters",
+      "oranges",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Hairspray (2007)",
+   "title": "Hairspray",
+   "year": "2007",
+   "theme": "teen",
+   "tagline": "Big hair. Bigger appetite.",
+   "description": "A big-hearted teenager in 1962 Baltimore dances her way onto a TV show and fights to integrate it.",
+   "serve_cue": "Serve the snacks when the Corny Collins Show comes on the TV.",
+   "snacks": [
+    {
+     "name": "Baltimore crab cakes",
+     "scene": "a Baltimore classic",
+     "method": "Crab meat folded with a little mayo, egg, mustard, celery salt, paprika and breadcrumbs, shaped, chilled, pan-fried in butter until golden. Lemon and tartare.",
+     "shop": [
+      "crab meat",
+      "mayonnaise",
+      "eggs",
+      "Dijon mustard",
+      "breadcrumbs",
+      "lemons"
+     ]
+    },
+    {
+     "name": "TV dance party snacks",
+     "scene": "dancing in front of the TV after school",
+     "method": "Potato chips with a French onion dip of onions cooked slowly 40 minutes, folded through sour cream and cream cheese with chives.",
+     "shop": [
+      "potato chips",
+      "brown onions",
+      "butter",
+      "sour cream",
+      "cream cheese",
+      "chives"
+     ]
+    },
+    {
+     "name": "Record shop deviled eggs",
+     "scene": "Motormouth Maybelle's record shop party",
+     "method": "Eggs boiled 10 minutes, yolks whipped with mayo, mustard and a dash of hot sauce, piped back, smoked paprika and chives on top.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "yellow mustard",
+      "hot sauce",
+      "smoked paprika",
+      "chives"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Baltimore pit beef sandwiches",
+     "scene": "a Baltimore street food classic",
+     "method": "Beef topside rubbed with salt, pepper, garlic and paprika, grilled hot until charred outside and rare inside, sliced thin, piled on rolls with raw onion and horseradish sauce.",
+     "shop": [
+      "beef topside",
+      "black peppercorns",
+      "garlic powder",
+      "smoked paprika",
+      "bread rolls",
+      "horseradish"
+     ]
+    },
+    {
+     "name": "Edna's Sunday dinner",
+     "scene": "Edna feeding the family in their little rowhouse",
+     "method": "Fried chicken brined in buttermilk, dredged and fried at 165C until 74C inside, with mashed potato, gravy and buttered corn.",
+     "shop": [
+      "chicken pieces",
+      "buttermilk",
+      "plain flour",
+      "potatoes",
+      "corn cobs",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Beehive cupcakes",
+     "scene": "the towering 1960s hairdos",
+     "method": "Vanilla cupcakes baked at 175C for 18 minutes, topped with a tall swirl of buttercream piped into a beehive, pastel sprinkles.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "eggs",
+      "icing sugar",
+      "food colouring",
+      "sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Malted milkshakes",
+     "scene": "the 1960s soda fountain",
+     "method": "Vanilla ice cream, cold milk and malted milk powder blended until thick, poured into tall glasses with a cherry.",
+     "shop": [
+      "vanilla ice cream",
+      "full cream milk",
+      "malted milk powder",
+      "maraschino cherries"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Chicago (2002)",
+   "title": "Chicago",
+   "year": "2002",
+   "theme": "uptown",
+   "tagline": "All that jazz. All that food.",
+   "description": "Two murderesses in 1920s Chicago compete for fame with the help of a slick lawyer.",
+   "serve_cue": "Serve the drinks when Velma takes the stage at the nightclub.",
+   "snacks": [
+    {
+     "name": "Speakeasy cocktail franks",
+     "scene": "the jazz club where Velma performs",
+     "method": "Cocktail franks simmered 3 minutes, rolled in strips of puff pastry spread with a little Dijon, egg washed, sprinkled with sesame, baked at 200C for 15 minutes until golden.",
+     "shop": [
+      "cocktail franks",
+      "puff pastry",
+      "Dijon mustard",
+      "eggs",
+      "sesame seeds"
+     ]
+    },
+    {
+     "name": "Chicago-style hot dog bites",
+     "scene": "the city of Chicago",
+     "method": "Mini franks in poppy seed rolls with yellow mustard, chopped onion, sweet relish, tomato, pickle spear, pickled peppers and celery salt.",
+     "shop": [
+      "cocktail franks",
+      "mini bread rolls",
+      "yellow mustard",
+      "sweet relish",
+      "tomatoes",
+      "dill pickles"
+     ]
+    },
+    {
+     "name": "Jail cell cheese straws",
+     "scene": "Cook County jail and the matron's deals",
+     "method": "Puff pastry brushed with egg, covered in grated parmesan and paprika, cut into thin strips like cell bars, twisted, baked at 200C for 12 minutes.",
+     "shop": [
+      "puff pastry",
+      "eggs",
+      "parmesan",
+      "sweet paprika"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Italian beef sandwiches",
+     "scene": "a Chicago classic",
+     "method": "Beef topside roasted to rare, sliced paper thin, dipped in spiced beef jus with garlic and oregano, piled into rolls with pickled giardiniera.",
+     "shop": [
+      "beef topside",
+      "beef stock",
+      "garlic",
+      "dried oregano",
+      "bread rolls",
+      "giardiniera"
+     ]
+    },
+    {
+     "name": "Deep dish pizza",
+     "scene": "the Windy City",
+     "method": "Buttery dough pressed into a deep tin, mozzarella first, then Italian sausage, then chunky tomato sauce, parmesan on top, baked at 220C for 35 minutes.",
+     "shop": [
+      "pizza dough",
+      "butter",
+      "mozzarella",
+      "Italian sausages",
+      "crushed tomatoes",
+      "parmesan"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Champagne jelly",
+     "scene": "the razzle-dazzle of the courtroom show",
+     "method": "Gelatine bloomed and dissolved in warm sugar syrup, cold sparkling wine stirred in gently, poured into coupes with raspberries, set 4 hours so the bubbles stay trapped.",
+     "shop": [
+      "sparkling wine",
+      "gelatine leaves",
+      "caster sugar",
+      "raspberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bathtub gin fizz",
+     "scene": "gin from the Prohibition years",
+     "method": "45ml gin, 25ml lemon juice and 15ml sugar syrup shaken hard with ice, strained into a tall glass and topped with soda water.",
+     "shop": [
+      "gin",
+      "lemons",
+      "caster sugar",
+      "soda water",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Nacho Libre (2006)",
+   "title": "Nacho Libre",
+   "year": "2006",
+   "theme": "mex",
+   "tagline": "Get that corn out of my face. Eat this instead.",
+   "description": "A monastery cook in Mexico secretly moonlights as a luchador to buy better food for the orphans.",
+   "serve_cue": "Serve the mains when Nacho finally cooks the orphans a proper feast.",
+   "snacks": [
+    {
+     "name": "Esqueleto's corn chips",
+     "scene": "his tag-team partner snacking on the street",
+     "method": "Corn tortillas cut into wedges, fried at 180C until crisp, tossed in salt, lime and chilli, with a fresh tomato salsa.",
+     "shop": [
+      "corn tortillas",
+      "vegetable oil",
+      "limes",
+      "chilli powder",
+      "tomatoes",
+      "white onions"
+     ]
+    },
+    {
+     "name": "Wrestling night elote",
+     "scene": "the crowd at the lucha libre arena",
+     "method": "Corn grilled until charred, rolled in mayo and lime, covered in crumbled feta, chilli powder and coriander.",
+     "shop": [
+      "corn cobs",
+      "mayonnaise",
+      "limes",
+      "feta",
+      "chilli powder",
+      "coriander"
+     ]
+    },
+    {
+     "name": "Monastery bean tostadas",
+     "scene": "the plain food Nacho is stuck serving",
+     "method": "Crisp tostadas spread with refried black beans, topped with queso fresco, shredded lettuce, salsa and a little crema. Plain, but done properly.",
+     "shop": [
+      "corn tortillas",
+      "black beans",
+      "feta",
+      "iceberg lettuce",
+      "tomatoes",
+      "sour cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Nacho's chorizo feast",
+     "scene": "the proper feast he buys with his winnings",
+     "method": "Chorizo and potato cooked crisp in a hot pan with onion and chilli, in warm corn tortillas with avocado, pickled onion and coriander.",
+     "shop": [
+      "chorizo",
+      "potatoes",
+      "white onions",
+      "corn tortillas",
+      "avocados",
+      "coriander"
+     ]
+    },
+    {
+     "name": "Oaxaca chicken mole",
+     "scene": "the town in Oaxaca",
+     "method": "Chicken thighs simmered in a mole of dried chillies, tomato, garlic, cinnamon, almonds and dark chocolate blitzed smooth, served with rice and sesame.",
+     "shop": [
+      "chicken thighs",
+      "dried chillies",
+      "crushed tomatoes",
+      "almonds",
+      "dark chocolate",
+      "long grain rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Churros",
+     "scene": "the sweet treat for the orphans",
+     "method": "Choux dough piped into 180C oil, fried golden, rolled in cinnamon sugar, with warm chocolate sauce.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "eggs",
+      "cinnamon",
+      "caster sugar",
+      "dark chocolate"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Horchata",
+     "scene": "a sweet rice drink for the kids",
+     "method": "Rice and cinnamon soaked overnight in water, blitzed, strained, sweetened, mixed with milk and served over ice.",
+     "shop": [
+      "long grain rice",
+      "cinnamon sticks",
+      "caster sugar",
+      "full cream milk",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "El Mariachi (1992)",
+   "title": "El Mariachi",
+   "year": "1992",
+   "theme": "mex",
+   "tagline": "One guitar case. Wrong guitar case.",
+   "description": "A travelling musician is mistaken for a hitman in a Mexican border town.",
+   "serve_cue": "Serve the mains when the mariachi walks into the bar looking for work.",
+   "snacks": [
+    {
+     "name": "Border town street tacos",
+     "scene": "the dusty town near the border",
+     "method": "Pork shoulder marinated in chilli, orange and pineapple, roasted, sliced and crisped, in small corn tortillas with pineapple, onion and coriander.",
+     "shop": [
+      "pork shoulder",
+      "dried chillies",
+      "oranges",
+      "pineapple",
+      "corn tortillas",
+      "coriander"
+     ]
+    },
+    {
+     "name": "Bar snacks",
+     "scene": "the bar where he asks to play",
+     "method": "Spiced peanuts roasted with chilli, lime and salt, and chicharrones with hot sauce, in small bowls on the bar.",
+     "shop": [
+      "peanuts",
+      "chilli flakes",
+      "limes",
+      "pork rind",
+      "hot sauce",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Guacamole and chips",
+     "scene": "a plate on the bar",
+     "method": "Ripe avocados smashed roughly with lime juice, finely diced white onion, jalapeño and coriander, seasoned well with salt, with warm corn chips.",
+     "shop": [
+      "avocados",
+      "limes",
+      "white onions",
+      "jalapeños",
+      "coriander",
+      "corn chips"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Carne asada",
+     "scene": "a hot night in the border town",
+     "method": "Skirt steak marinated 2 hours in lime, garlic, cumin and orange, seared over very high heat, rested and sliced thin against the grain, with rice, black beans and charred spring onions.",
+     "shop": [
+      "skirt steak",
+      "limes",
+      "garlic",
+      "ground cumin",
+      "long grain rice",
+      "black beans"
+     ]
+    },
+    {
+     "name": "Chicken enchiladas",
+     "scene": "the hotel where he hides out",
+     "method": "Corn tortillas rolled around shredded chicken and cheese, covered in red chilli sauce and more cheese, baked at 190C for 20 minutes.",
+     "shop": [
+      "corn tortillas",
+      "chicken thighs",
+      "dried chillies",
+      "Monterey Jack",
+      "sour cream",
+      "white onions"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Flan",
+     "scene": "a Mexican dessert",
+     "method": "Caramel poured into a tin, custard of eggs, condensed and evaporated milk and vanilla on top, baked in a water bath at 160C for 50 minutes, chilled and turned out.",
+     "shop": [
+      "caster sugar",
+      "eggs",
+      "condensed milk",
+      "evaporated milk",
+      "vanilla extract"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Cold cerveza",
+     "scene": "the bar where nobody wants a mariachi",
+     "method": "Mexican lager straight from a tub of ice, a wedge of lime pushed into the neck and a pinch of salt on the rim.",
+     "shop": [
+      "Mexican lager",
+      "limes",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "lane": 5,
    "poster_status": "pending"
   }
  ]
