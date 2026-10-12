@@ -25,6 +25,16 @@ Every film in `poster-briefs.json` has a `lane` from 1 to 5. Run up to five agen
 - In `menu-artwork-rollout.json`, change only that film's own `status`, `poster` and `art_direction`. Don't touch the top-level `completed` number. Claude keeps that in step.
 - Images go in `assets/menu-posters/` with a unique filename per film, so they never clash.
 
+## Fast path: recipes Claude has already written
+
+Claude is pre-writing the four-person recipes into `poster-recipes.json`, so most films now only need artwork. In `poster-briefs.json`, a film with `"recipe_ready": true` has one. For those films:
+
+1. Skip choosing dishes and writing recipes. Copy `films["Title (Year)"].menu` from `poster-recipes.json` exactly as it is (s, m, w, d and shopping) into the edition's `menu`. Don't change it.
+2. Make the poster from those five dishes. Use each dish's `n` as the name and its `note` as the description, word for word.
+3. Add `poster`, `colour`, `servings: 4`, `tagline` (brief) and `cue` (brief's serve_cue), then mark the film complete as usual.
+
+Work through your lane in file order as before. If you reach a film without `recipe_ready`, do it the full way below. Never edit `poster-recipes.json`. It's rebuilt on every Claude push.
+
 ## Each run: one batch of 10 films from your lane
 
 1. Run `git pull` first, every time.
