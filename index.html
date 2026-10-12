@@ -35,6 +35,24 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:50;
 @keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-4%)}60%{transform:translate(-4%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
 .wrap{max-width:1180px;margin:0 auto;padding:18px 16px 56px}
 
+/* watched checklist */
+.watch-panel{width:min(100%,540px);border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.18);padding:16px}
+.watch-panel summary{cursor:pointer;font-weight:800;color:var(--bulb);min-height:32px}
+.watch-panel p{font-size:13px;color:var(--muted);margin:10px 0}
+.watch-tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;margin:12px 0}
+.watch-tools input,.watch-tools select{min-width:0;width:100%;font:inherit;font-size:16px;color:var(--screen);background:#220c14;border:1px solid var(--line);border-radius:6px;padding:10px}
+.watch-option,.watch-row{display:flex;gap:10px;align-items:center}
+.watch-option{font-size:14px;cursor:pointer}
+.watch-option input,.watch-row input{width:20px;height:20px;flex:none;accent-color:var(--brass)}
+.watch-list{max-height:360px;overflow-y:auto;overscroll-behavior:contain;margin-top:12px}
+.watch-row{padding:10px 4px;min-height:44px;border-top:1px solid var(--line);cursor:pointer}
+.watch-row span{min-width:0;overflow-wrap:anywhere}.watch-row small{color:var(--muted)}
+.watch-row.is-watched span{color:var(--muted)}
+.watch-save:empty{display:none}
+#watchCurrent[aria-pressed="true"]{background:var(--brass);color:#2a0a10}
+input:focus-visible,summary:focus-visible{outline:3px solid var(--bulb);outline-offset:3px}
+@media(max-width:420px){.watch-tools{grid-template-columns:1fr}}
+
 /* marquee */
 .marquee{position:relative;margin:4px auto 26px;padding:30px clamp(16px,4vw,48px) 22px;border-radius:14px;text-align:center;
   background:radial-gradient(ellipse at 50% 0%,#a3263f,var(--velvet) 60%,#3a0813);
@@ -496,6 +514,18 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
         <button class="toggle" id="sound" type="button" aria-pressed="false">Sound off</button>
       </div>
       <div class="count" id="count"></div>
+      <details class="watch-panel" id="watchPanel">
+        <summary id="watchSummary">My movie checklist</summary>
+        <p>Tick films you've watched. You can untick them any time. Saved in this browser only.</p>
+        <label class="watch-option"><input type="checkbox" id="skipWatched" checked> Skip watched films when spinning</label>
+        <div class="watch-tools">
+          <input type="search" id="watchSearch" placeholder="Search movies" aria-label="Search movies">
+          <select id="watchFilter" aria-label="Show movies"><option value="all">All movies</option><option value="unwatched">Unwatched</option><option value="watched">Watched</option></select>
+        </div>
+        <p id="watchResults" aria-live="polite"></p>
+        <div class="watch-list" id="watchList"></div>
+        <p class="watch-save" id="watchSave" role="status"></p>
+      </details>
       <div class="history">
         <h2>Recent spins</h2>
         <div class="chips" id="chips"><span class="empty">Nothing yet. Your picks land here.</span></div>
@@ -514,6 +544,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
         <div class="easel" id="easel"><div class="preview" id="preview"></div><div class="glare" aria-hidden="true"></div></div>
       </div>
       <div class="actions">
+        <button class="btn" id="watchCurrent" type="button" aria-pressed="false" disabled>Mark as watched</button>
         <button class="btn primary" id="pdf" type="button">Save PDF (menu + prep)</button>
         <button class="btn" id="print" type="button" hidden>Print</button>
         <button class="btn" id="png" type="button">Save image</button>
@@ -557,13 +588,75 @@ const WEDGE_INK=["#fff1dc","#2a0a10","#e9f3f2","#2a0a10","#f6e8ff","#fff1dc"];
 let list=[],wedges=[],rot=0,spinning=false,winner=-1,current=null,phase=0,kick=0;
 const canvas=$("wheel"),ctx=canvas.getContext("2d");
 
-function setList(){
-  const v=sel.value;
-  list=shuffle(v==="all"?FILMS:FILMS.filter(f=>f.theme===v));
-  wedges=Array.from({length:N},(_,i)=>list[i%list.length]);
-  rot=0;winner=-1;draw();
-  $("count").textContent=`${list.length} films in tonight's programme`;
+/* Watched status uses the existing title/year IDs, independently of recent spins. */
+let watched=new Set(),skipWatched=true;
+try{
+  const saved=JSON.parse(localStorage.getItem("mns-watched")||"[]");
+  if(Array.isArray(saved))watched=new Set(saved.filter(id=>FILMS.some(f=>f.id===id)));
+  skipWatched=localStorage.getItem("mns-skip-watched")!=="0";
+}catch(e){$("watchSave").textContent="Saved ticks couldn't be loaded. Changes may only last for this visit."}
+$("skipWatched").checked=skipWatched;
+function saveWatched(){
+  try{
+    localStorage.setItem("mns-watched",JSON.stringify([...watched]));
+    localStorage.setItem("mns-skip-watched",skipWatched?"1":"0");
+    $("watchSave").textContent="";
+  }catch(e){$("watchSave").textContent="This browser couldn't save your ticks. They'll last for this visit only."}
 }
+function programmeFilms(){return sel.value==="all"?FILMS:FILMS.filter(f=>f.theme===sel.value)}
+function updateWatchButton(){
+  const b=$("watchCurrent"),done=current&&watched.has(current.id);
+  b.disabled=!current||spinning;b.textContent=done?"Watched · undo":"Mark as watched";
+  b.setAttribute("aria-pressed",done?"true":"false");
+  b.setAttribute("aria-label",current?`${done?"Mark as unwatched":"Mark as watched"}: ${current.title} (${current.year})`:"Mark as watched");
+}
+function renderWatchList(){
+  const q=$("watchSearch").value.trim().toLocaleLowerCase(),filter=$("watchFilter").value;
+  const films=programmeFilms().filter(f=>(f.title+" "+f.year).toLocaleLowerCase().includes(q))
+    .filter(f=>filter==="all"||(filter==="watched"?watched.has(f.id):!watched.has(f.id)))
+    .slice().sort((a,b)=>a.title.localeCompare(b.title)||a.year.localeCompare(b.year));
+  $("watchSummary").textContent=`My movie checklist · ${watched.size} / ${FILMS.length} watched`;
+  $("watchResults").textContent=`${films.length} ${films.length===1?"film":"films"} shown in this programme`;
+  const box=$("watchList");box.replaceChildren();
+  if(!films.length){const p=document.createElement("p");p.textContent="No films match. Try another search, filter or programme.";box.appendChild(p)}
+  films.forEach(f=>{
+    const row=document.createElement("label");row.className="watch-row"+(watched.has(f.id)?" is-watched":"");
+    const input=document.createElement("input");input.type="checkbox";input.checked=watched.has(f.id);input.disabled=spinning;
+    input.setAttribute("aria-label",`Watched: ${f.title} (${f.year})`);
+    const title=document.createElement("span");title.textContent=f.title+" ";
+    const year=document.createElement("small");year.textContent=`(${f.year})`;title.appendChild(year);
+    input.addEventListener("change",()=>setWatched(f,input.checked));row.append(input,title);box.appendChild(row);
+  });
+}
+function setWatched(f,done){
+  if(spinning)return;
+  const restoreFocus=$("watchPanel").contains(document.activeElement);
+  if(done)watched.add(f.id);else watched.delete(f.id);
+  saveWatched();setList();updateWatchButton();
+  // Keep keyboard focus on the same checkbox if it remains in the filtered list.
+  if(restoreFocus){
+    const label=`Watched: ${f.title} (${f.year})`;
+    const input=Array.from($("watchList").querySelectorAll("input")).find(el=>el.getAttribute("aria-label")===label);
+    if(input)input.focus();else $("watchFilter").focus();
+  }
+}
+function setList(){
+  if(spinning)return;
+  const films=programmeFilms();
+  list=shuffle(films.filter(f=>!skipWatched||!watched.has(f.id)));
+  wedges=list.length?Array.from({length:N},(_,i)=>list[i%list.length]):[];
+  rot=0;winner=-1;
+  ctx.clearRect(0,0,canvas.width,canvas.height);draw();
+  $("spin").disabled=!list.length;
+  $("count").textContent=list.length?`${list.length} films in tonight's programme${skipWatched?" · unwatched only":""}`:
+    "You've watched every film in this programme. Choose another programme, untick a film or turn off ‘Skip watched’.";
+  renderWatchList();
+}
+$("watchSearch").addEventListener("input",renderWatchList);
+$("watchFilter").addEventListener("change",renderWatchList);
+$("skipWatched").addEventListener("change",()=>{if(spinning)return;skipWatched=$("skipWatched").checked;saveWatched();setList()});
+$("watchCurrent").addEventListener("click",()=>{if(current)setWatched(current,!watched.has(current.id))});
+
 function size(){
   const r=canvas.getBoundingClientRect(),dpr=Math.min(2,window.devicePixelRatio||1);
   canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);draw();
@@ -631,7 +724,7 @@ function setPointer(){pointer.style.transform=`rotate(${-kick*26}deg)`}
 
 function spin(){
   if(spinning||!list.length)return;
-  spinning=true;$("spin").disabled=true;winner=-1;document.body.classList.add("spinning");document.body.classList.remove("winner");
+  spinning=true;sel.disabled=true;$("skipWatched").disabled=true;updateWatchButton();renderWatchList();$("spin").disabled=true;winner=-1;document.body.classList.add("spinning");document.body.classList.remove("winner");
   if(soundOn&&ac()&&audio.state==="suspended")audio.resume();
   /* refresh the wedges on the far side so every spin shows new titles, and plant the winner there */
   const far=[];for(let i=0;i<N;i++){const ang=((rot+(i+.5)*A)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);if(ang>Math.PI*.6&&ang<Math.PI*1.4)far.push(i)}
@@ -653,7 +746,7 @@ function spin(){
     if(p<1)requestAnimationFrame(frame);
     else{
       rot=((rot%(Math.PI*2))+Math.PI*2)%(Math.PI*2);winner=indexAt(rot);kick=0;setPointer();draw();
-      spinning=false;$("spin").disabled=false;document.body.classList.remove("spinning");
+      spinning=false;sel.disabled=false;$("skipWatched").disabled=false;renderWatchList();$("spin").disabled=false;document.body.classList.remove("spinning");
       const win=wedges[winner];
       $("now").textContent=`${win.title} (${win.year})`;
       document.body.classList.add("winner");setTimeout(()=>document.body.classList.remove("winner"),1500);
@@ -1006,6 +1099,7 @@ let renderId=0;
 async function show(f,preferSig){
   const id=++renderId;
   current=f;
+  updateWatchButton();
   const menu=makeMenu(f,preferSig);
   current.menu=menu;current.tag=f.T;
   $("status").textContent="";
