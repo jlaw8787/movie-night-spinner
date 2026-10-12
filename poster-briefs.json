@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 696,
- "ready_for_poster": 667,
+ "hand_written": 708,
+ "ready_for_poster": 679,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -71856,6 +71856,1243 @@
     }
    ],
    "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Silver Linings Playbook (2012)",
+   "title": "Silver Linings Playbook",
+   "year": "2012",
+   "theme": "romcom",
+   "tagline": "Crabby snacks and homemades.",
+   "description": "A man fresh out of a psychiatric hospital forms an unlikely bond with a young widow who needs a dance partner.",
+   "serve_cue": "Serve the snacks when Pat Sr lays out his crabby snacks and homemades for the game.",
+   "snacks": [
+    {
+     "name": "Crabby snacks",
+     "scene": "Pat Sr's crabby snacks for the Eagles game",
+     "method": "Crab meat mixed with cream cheese, mayo, lemon and spring onion, spread on small toasts and grilled until golden at the edges.",
+     "shop": [
+      "crab meat",
+      "cream cheese",
+      "mayonnaise",
+      "lemons",
+      "spring onions",
+      "baguette"
+     ]
+    },
+    {
+     "name": "Homemades",
+     "scene": "the homemade snacks Pat Sr swears bring the Eagles luck",
+     "method": "Mini meatballs of beef and pork with parmesan, baked at 200C for 15 minutes, tossed in a sticky tomato glaze, served on toothpicks.",
+     "shop": [
+      "beef mince",
+      "pork mince",
+      "parmesan",
+      "breadcrumbs",
+      "tomato sauce",
+      "brown sugar"
+     ]
+    },
+    {
+     "name": "Game day soft pretzels",
+     "scene": "the Eagles game on the TV in Philadelphia",
+     "method": "Pretzels shaped into knots, boiled briefly in bicarb water, rock salt on top, baked at 220C for 12 minutes, with yellow mustard.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "bicarb soda",
+      "rock salt",
+      "butter",
+      "yellow mustard"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Philly cheesesteaks",
+     "scene": "the Solitano family in Philadelphia",
+     "method": "Rib eye frozen 30 minutes, shaved thin, seared on a hot plate with onions, provolone melted over, piled into long rolls.",
+     "shop": [
+      "rib eye steak",
+      "brown onions",
+      "provolone",
+      "long bread rolls",
+      "vegetable oil",
+      "green capsicum"
+     ]
+    },
+    {
+     "name": "Dolores's Sunday gravy",
+     "scene": "Pat's mum Dolores cooking for the family",
+     "method": "Pork shoulder, Italian sausages and meatballs browned and simmered 3 hours in tomato sauce with garlic and basil, over rigatoni.",
+     "shop": [
+      "pork shoulder",
+      "Italian sausages",
+      "beef mince",
+      "crushed tomatoes",
+      "garlic",
+      "rigatoni"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Diner date raisin bran muffins",
+     "scene": "Pat and Tiffany's awkward date at the diner",
+     "method": "Bran muffins with raisins, buttermilk and brown sugar, baked at 190C for 20 minutes, served warm with butter.",
+     "shop": [
+      "wheat bran",
+      "raisins",
+      "buttermilk",
+      "brown sugar",
+      "self-raising flour",
+      "butter"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Game day beer",
+     "scene": "watching the Eagles with Pat Sr",
+     "method": "Cold lager in pint glasses, or ginger beer for the non-drinkers.",
+     "shop": [
+      "lager",
+      "ginger beer"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Big Sick (2017)",
+   "title": "The Big Sick",
+   "year": "2017",
+   "theme": "romcom",
+   "tagline": "Family dinner. Surprise guest.",
+   "description": "A Pakistani-American comic falls for a grad student who falls seriously ill, and gets to know her parents at the hospital.",
+   "serve_cue": "Serve the mains when Kumail's mum sits him down to family dinner with yet another surprise guest.",
+   "snacks": [
+    {
+     "name": "Comedy club bar snacks",
+     "scene": "Kumail's stand-up gigs at the comedy club",
+     "method": "Salted peanuts and roasted chickpeas tossed with chilli and cumin, served in little bowls on the bar.",
+     "shop": [
+      "peanuts",
+      "chickpeas",
+      "chilli flakes",
+      "ground cumin",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Family dinner samosas",
+     "scene": "dinner at Kumail's parents' house",
+     "method": "Spiced potato, peas and onion folded into pastry triangles, fried at 180C until crisp, with mint and coriander chutney.",
+     "shop": [
+      "spring roll pastry",
+      "potatoes",
+      "frozen peas",
+      "garam masala",
+      "mint",
+      "coriander"
+     ]
+    },
+    {
+     "name": "Hospital vending machine mix",
+     "scene": "the long nights in the hospital waiting room",
+     "method": "Roasted almonds and pretzels mixed with dark chocolate chips, tipped into paper bags like a vending machine run.",
+     "shop": [
+      "almonds",
+      "pretzels",
+      "dark chocolate chips"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Kumail's mum's chicken biryani",
+     "scene": "the family dinners Kumail's mum keeps setting up",
+     "method": "Chicken thighs marinated in yoghurt and spices, layered with par-cooked basmati, fried onions and saffron milk, sealed and baked at 170C for 45 minutes.",
+     "shop": [
+      "chicken thighs",
+      "Greek yoghurt",
+      "garam masala",
+      "basmati rice",
+      "brown onions",
+      "saffron"
+     ]
+    },
+    {
+     "name": "Chicago deep dish",
+     "scene": "Kumail and Emily's Chicago",
+     "method": "Deep pan pizza dough pressed into a tin, layered with mozzarella, Italian sausage and chunky tomato sauce, baked at 220C for 30 minutes.",
+     "shop": [
+      "pizza dough",
+      "mozzarella",
+      "Italian sausages",
+      "crushed tomatoes",
+      "dried oregano"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Kheer",
+     "scene": "the family table",
+     "method": "Rice simmered slowly in milk with cardamom and sugar until creamy, served warm or chilled with pistachios.",
+     "shop": [
+      "basmati rice",
+      "full cream milk",
+      "caster sugar",
+      "ground cardamom",
+      "pistachios"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Chai",
+     "scene": "Kumail's family home",
+     "method": "Black tea simmered with milk, ginger, cardamom and cinnamon, sweetened and strained into cups.",
+     "shop": [
+      "black tea",
+      "full cream milk",
+      "ginger",
+      "cardamom pods",
+      "cinnamon sticks",
+      "raw sugar"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Palm Springs (2020)",
+   "title": "Palm Springs",
+   "year": "2020",
+   "theme": "romcom",
+   "tagline": "Same wedding. Same day. Different snacks.",
+   "description": "Two strangers get stuck reliving the same wedding day in Palm Springs over and over.",
+   "serve_cue": "Serve the snacks when Nyles floats in the pool on his pizza float.",
+   "snacks": [
+    {
+     "name": "Pool float pizza bites",
+     "scene": "Nyles floating in the pool on a pizza float, forever",
+     "method": "Pizza dough rolled thin, cut into rounds, topped with tomato sauce, mozzarella and pepperoni, baked at 220C for 10 minutes.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni",
+      "dried oregano"
+     ]
+    },
+    {
+     "name": "Desert wedding canapés",
+     "scene": "the wedding reception in the desert",
+     "method": "Blinis topped with crème fraîche, smoked salmon and chives, beside wedges of rockmelon wrapped in prosciutto.",
+     "shop": [
+      "blinis",
+      "smoked salmon",
+      "crème fraîche",
+      "chives",
+      "prosciutto",
+      "rockmelon"
+     ]
+    },
+    {
+     "name": "Bar dance nachos",
+     "scene": "Nyles and Sarah's dance at the desert bar",
+     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, with salsa and guacamole.",
+     "shop": [
+      "corn chips",
+      "black beans",
+      "cheddar",
+      "jalapeños",
+      "avocados",
+      "tomatoes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Groundhog day fish tacos",
+     "scene": "another sunny day in Palm Springs",
+     "method": "White fish dusted in chilli and cumin, pan-fried, in warm tortillas with slaw, lime crema and pickled onion.",
+     "shop": [
+      "white fish fillets",
+      "corn tortillas",
+      "cabbage",
+      "sour cream",
+      "limes",
+      "red onions"
+     ]
+    },
+    {
+     "name": "Wedding reception chicken",
+     "scene": "the wedding dinner they eat every day",
+     "method": "Chicken breasts stuffed with spinach and ricotta, roasted at 200C for 20 minutes, with a lemon butter sauce and potatoes.",
+     "shop": [
+      "chicken breasts",
+      "baby spinach",
+      "ricotta",
+      "lemons",
+      "butter",
+      "baby potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Wedding cake again",
+     "scene": "the same wedding cake, every day",
+     "method": "Lemon sponge baked in two tins at 175C for 30 minutes, filled with lemon curd and cream, iced white.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "eggs",
+      "caster sugar",
+      "lemon curd",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Poolside beer",
+     "scene": "Nyles's beer by the pool",
+     "method": "Cold lager straight from the esky, or lemonade with lime over ice.",
+     "shop": [
+      "lager",
+      "lemonade",
+      "limes",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Set It Up (2018)",
+   "title": "Set It Up",
+   "year": "2018",
+   "theme": "romcom",
+   "tagline": "Order the pizza. Set up the bosses.",
+   "description": "Two overworked assistants plot to set up their demanding bosses so they can finally get some free time.",
+   "serve_cue": "Serve the mains when Harper and Charlie share a late-night pizza in the empty office.",
+   "snacks": [
+    {
+     "name": "Late-night office pizza",
+     "scene": "Harper and Charlie sharing pizza in the empty office",
+     "method": "Pizza dough stretched thin, topped with tomato sauce, mozzarella and pepperoni, baked at 250C for 10 minutes, eaten straight from the box.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni",
+      "dried oregano"
+     ]
+    },
+    {
+     "name": "Baseball game hot dogs",
+     "scene": "the baseball game where they stage the kiss cam",
+     "method": "Franks grilled until split, in soft buns with mustard and fried onions, wrapped in paper.",
+     "shop": [
+      "hot dog franks",
+      "hot dog buns",
+      "yellow mustard",
+      "brown onions"
+     ]
+    },
+    {
+     "name": "Office desk snack bowls",
+     "scene": "the assistants never getting a lunch break",
+     "method": "Almonds roasted at 180C for 10 minutes, mixed with pretzels and dried apricots, tipped into bowls to graze on at the desk.",
+     "shop": [
+      "almonds",
+      "pretzels",
+      "dried apricots"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Bosses' fancy dinner",
+     "scene": "the fancy dinner the assistants set up for their bosses",
+     "method": "Sirloin steaks seared and rested, sliced with a cream and peppercorn sauce, crispy roast potatoes and buttered asparagus.",
+     "shop": [
+      "sirloin steak",
+      "black peppercorns",
+      "thickened cream",
+      "potatoes",
+      "asparagus",
+      "butter"
+     ]
+    },
+    {
+     "name": "New York takeaway noodles",
+     "scene": "long nights working in New York",
+     "method": "Egg noodles stir-fried with chicken, broccoli and capsicum in a sticky soy and honey sauce, served in takeaway boxes.",
+     "shop": [
+      "egg noodles",
+      "chicken thighs",
+      "broccoli",
+      "red capsicum",
+      "soy sauce",
+      "honey"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Office party cupcakes",
+     "scene": "the office parties the assistants have to organise",
+     "method": "Vanilla cupcakes baked at 175C for 18 minutes, cooled and piped with vanilla buttercream and sprinkles.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "eggs",
+      "caster sugar",
+      "icing sugar",
+      "sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Assistant's coffee",
+     "scene": "fetching coffee for the bosses",
+     "method": "Strong espresso with steamed milk, served in takeaway cups.",
+     "shop": [
+      "ground coffee",
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "To All the Boys I've Loved Before (2018)",
+   "title": "To All the Boys I've Loved Before",
+   "year": "2018",
+   "theme": "romcom",
+   "tagline": "The letters are out. The snacks are in.",
+   "description": "A teenager's secret love letters are mailed out, and she starts a fake relationship to cover it up.",
+   "serve_cue": "Serve the snacks when Peter brings Lara Jean a Korean yoghurt drink.",
+   "snacks": [
+    {
+     "name": "Korean yoghurt drink cups",
+     "scene": "Peter learning Lara Jean's favourite Korean yoghurt drink",
+     "method": "Plain yoghurt blended with milk, honey and a little lemon until drinkable, chilled and poured into small bottles.",
+     "shop": [
+      "Greek yoghurt",
+      "full cream milk",
+      "honey",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Ski trip hot chocolate bites",
+     "scene": "the school ski trip",
+     "method": "Marshmallows dipped in melted dark chocolate, rolled in crushed peppermint lollies and set on baking paper.",
+     "shop": [
+      "marshmallows",
+      "dark chocolate",
+      "peppermint lollies"
+     ]
+    },
+    {
+     "name": "Kitty's popcorn",
+     "scene": "Lara Jean's little sister Kitty",
+     "method": "Popcorn popped in oil, tossed with butter and a pinch of salt, served in big bowls for movie night.",
+     "shop": [
+      "popping corn",
+      "vegetable oil",
+      "butter",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Dad's Korean dinner",
+     "scene": "Lara Jean's dad cooking Korean food for the girls",
+     "method": "Beef rump sliced thin and marinated in soy, pear, garlic and sesame, seared hot, served with rice and quick cucumber kimchi.",
+     "shop": [
+      "beef rump",
+      "soy sauce",
+      "pears",
+      "garlic",
+      "sesame oil",
+      "jasmine rice"
+     ]
+    },
+    {
+     "name": "Diner date burgers",
+     "scene": "Lara Jean and Peter's fake dates",
+     "method": "Beef patties grilled with cheddar melted on, in toasted buns with lettuce, tomato and pickles, with fries.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "iceberg lettuce",
+      "tomatoes",
+      "burger buns",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Lara Jean's baking",
+     "scene": "Lara Jean baking at home",
+     "method": "Chocolate chip cookies baked at 180C for 10 minutes until soft in the middle, piled on a plate.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "brown sugar",
+      "eggs",
+      "dark chocolate chips",
+      "vanilla extract"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Pink lemonade",
+     "scene": "the pink of the hatbox full of letters",
+     "method": "Fresh lemonade with crushed raspberries, poured over ice.",
+     "shop": [
+      "lemons",
+      "caster sugar",
+      "raspberries",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Always Be My Maybe (2019)",
+   "title": "Always Be My Maybe",
+   "year": "2019",
+   "theme": "romcom",
+   "tagline": "Kimchi stew. Tiny fancy dinners.",
+   "description": "A celebrity chef reconnects with her childhood best friend when she comes home to San Francisco.",
+   "serve_cue": "Serve the mains when Sasha cooks the kimchi stew Marcus's mum taught her.",
+   "snacks": [
+    {
+     "name": "Childhood friend bibimbap cups",
+     "scene": "Sasha growing up eating at Marcus's house",
+     "method": "Rice topped with sautéed spinach, carrot and beef mince cooked in soy and garlic, a fried egg and gochujang.",
+     "shop": [
+      "jasmine rice",
+      "baby spinach",
+      "carrots",
+      "beef mince",
+      "eggs",
+      "gochujang"
+     ]
+    },
+    {
+     "name": "Hello Peril band wings",
+     "scene": "Marcus's band, Hello Peril, playing gigs around town",
+     "method": "Chicken wings fried twice until crackly, tossed in a sticky glaze of gochujang, honey and garlic, scattered with sesame.",
+     "shop": [
+      "chicken wings",
+      "gochujang",
+      "honey",
+      "garlic",
+      "sesame seeds"
+     ]
+    },
+    {
+     "name": "Fancy restaurant tiny bites",
+     "scene": "the ridiculous fancy dinner with the tiny plates",
+     "method": "Thick cucumber rounds hollowed into little cups, filled with crème fraîche and smoked salmon, finished with chives, absurdly small.",
+     "shop": [
+      "Lebanese cucumbers",
+      "smoked salmon",
+      "crème fraîche",
+      "chives"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Kimchi jjigae",
+     "scene": "the kimchi stew Marcus's mum taught Sasha to make",
+     "method": "Pork belly and kimchi simmered with gochugaru, garlic and stock, tofu and spring onion added at the end, served with rice.",
+     "shop": [
+      "pork belly",
+      "kimchi",
+      "gochugaru",
+      "garlic",
+      "firm tofu",
+      "spring onions"
+     ]
+    },
+    {
+     "name": "Sasha's restaurant dish",
+     "scene": "Sasha's fusion restaurant",
+     "method": "Salmon fillets glazed with miso and honey, roasted at 200C for 12 minutes, with sushi rice and pickled vegetables.",
+     "shop": [
+      "salmon fillet",
+      "white miso",
+      "honey",
+      "sushi rice",
+      "carrots",
+      "rice vinegar"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sweet red bean pancakes",
+     "scene": "the sweet snacks of Sasha's childhood",
+     "method": "Small pancakes of flour, egg and milk cooked in butter, filled with sweet red bean paste, folded and pan-fried until golden.",
+     "shop": [
+      "plain flour",
+      "eggs",
+      "full cream milk",
+      "red bean paste",
+      "butter"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Roasted barley tea",
+     "scene": "Marcus's family kitchen",
+     "method": "Roasted barley tea steeped in hot water for 10 minutes, served hot in small cups or chilled and poured over ice.",
+     "shop": [
+      "barley tea",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Anyone But You (2023)",
+   "title": "Anyone But You",
+   "year": "2023",
+   "theme": "romcom",
+   "tagline": "Sydney wedding. Harbour prawns.",
+   "description": "Two people who can't stand each other pretend to be a couple at a destination wedding in Sydney.",
+   "serve_cue": "Serve the snacks when the wedding party heads out on the harbour.",
+   "snacks": [
+    {
+     "name": "Harbour prawns",
+     "scene": "the wedding party out on Sydney Harbour",
+     "method": "Cooked king prawns piled on ice with lemon wedges and a seafood sauce of mayo, tomato sauce and a dash of hot sauce.",
+     "shop": [
+      "cooked prawns",
+      "lemons",
+      "mayonnaise",
+      "tomato sauce",
+      "hot sauce",
+      "ice"
+     ]
+    },
+    {
+     "name": "Sydney meat pies",
+     "scene": "the wedding party taking in Sydney",
+     "method": "Mini beef pies of mince and gravy in shortcrust with puff lids, baked at 200C for 20 minutes, with tomato sauce.",
+     "shop": [
+      "beef mince",
+      "brown onions",
+      "beef stock",
+      "shortcrust pastry",
+      "puff pastry",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Opera House oysters",
+     "scene": "the view of the Opera House",
+     "method": "Oysters on crushed ice with a dressing of eschalot, red wine vinegar and cracked pepper, and lemon wedges.",
+     "shop": [
+      "oysters",
+      "eschalots",
+      "red wine vinegar",
+      "black peppercorns",
+      "lemons"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Wedding barbecue",
+     "scene": "the backyard wedding barbecue",
+     "method": "Lamb cutlets grilled with rosemary and garlic, with a potato salad and a big green salad.",
+     "shop": [
+      "lamb cutlets",
+      "rosemary",
+      "garlic",
+      "potatoes",
+      "mayonnaise",
+      "mixed salad leaves"
+     ]
+    },
+    {
+     "name": "Harbour barramundi",
+     "scene": "the destination wedding by the water",
+     "method": "Barramundi fillets pan-fried skin side down until crisp, with lemon butter and capers, and crushed potatoes.",
+     "shop": [
+      "barramundi fillets",
+      "butter",
+      "lemons",
+      "capers",
+      "baby potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Pavlova",
+     "scene": "an Aussie wedding",
+     "method": "Meringue baked at 120C for 90 minutes and cooled in the oven, topped with whipped cream, passionfruit, kiwifruit and strawberries.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "thickened cream",
+      "passionfruit",
+      "kiwifruit",
+      "strawberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Sydney sparkling",
+     "scene": "toasting the bride and groom",
+     "method": "Sparkling wine or sparkling apple juice with a strawberry in each glass.",
+     "shop": [
+      "sparkling wine",
+      "sparkling apple juice",
+      "strawberries"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Ticket to Paradise (2022)",
+   "title": "Ticket to Paradise",
+   "year": "2022",
+   "theme": "romcom",
+   "tagline": "Stop the wedding. Eat first.",
+   "description": "A divorced couple team up to stop their daughter from marrying a man she just met in Bali.",
+   "serve_cue": "Serve the mains when both families sit down together in Bali.",
+   "snacks": [
+    {
+     "name": "Bali chicken satay",
+     "scene": "the island of Bali",
+     "method": "Chicken thighs marinated in turmeric, lemongrass and coconut milk, grilled on skewers until charred, with a lime and peanut sauce.",
+     "shop": [
+      "chicken thighs",
+      "ground turmeric",
+      "lemongrass",
+      "coconut milk",
+      "peanut butter",
+      "limes"
+     ]
+    },
+    {
+     "name": "Seaweed farm crisps",
+     "scene": "Gede's family seaweed farm",
+     "method": "Nori sheets brushed with sesame oil, sprinkled with sesame seeds and salt, toasted in a dry pan until crisp and cut into strips.",
+     "shop": [
+      "nori",
+      "sesame oil",
+      "sesame seeds",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Beer pong prawn crackers",
+     "scene": "David and Georgia's beer pong comeback",
+     "method": "Prawn crackers fried in hot oil for a few seconds until they puff, drained and served with sweet chilli sauce.",
+     "shop": [
+      "prawn crackers",
+      "vegetable oil",
+      "sweet chilli sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Nasi goreng",
+     "scene": "dinner with Gede's family",
+     "method": "Day-old rice fried hot with chicken, garlic, chilli and kecap manis until smoky, topped with a fried egg and cucumber.",
+     "shop": [
+      "jasmine rice",
+      "chicken thighs",
+      "garlic",
+      "red chillies",
+      "kecap manis",
+      "eggs"
+     ]
+    },
+    {
+     "name": "Balinese grilled fish",
+     "scene": "the beach where Lily falls for Gede",
+     "method": "Snapper fillets rubbed with turmeric, chilli, garlic and lime, wrapped in banana leaves and grilled 10 minutes, with steamed rice.",
+     "shop": [
+      "snapper fillets",
+      "ground turmeric",
+      "red chillies",
+      "limes",
+      "banana leaves",
+      "jasmine rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Black rice pudding",
+     "scene": "dessert at the Balinese wedding",
+     "method": "Black sticky rice soaked overnight, simmered with water and palm sugar until thick, topped with salted coconut cream.",
+     "shop": [
+      "black rice",
+      "coconut milk",
+      "palm sugar",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bali sunset cooler",
+     "scene": "sunsets over the beach in Bali",
+     "method": "Coconut water and pineapple juice with lime and mint over ice.",
+     "shop": [
+      "coconut water",
+      "pineapple juice",
+      "limes",
+      "mint",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Leap Year (2010)",
+   "title": "Leap Year",
+   "year": "2010",
+   "theme": "romcom",
+   "tagline": "Propose on the twenty-ninth. Eat stew on the thirtieth.",
+   "description": "A woman travels to Ireland to propose to her boyfriend on Leap Day and ends up crossing the country with a grumpy innkeeper.",
+   "serve_cue": "Serve the mains when Declan serves dinner at his pub in Dingle.",
+   "snacks": [
+    {
+     "name": "Dingle pub soda bread",
+     "scene": "Declan's run-down pub in Dingle",
+     "method": "Soda bread of flour, buttermilk, bicarb and salt, baked at 200C for 35 minutes until it sounds hollow, served warm with salted butter.",
+     "shop": [
+      "plain flour",
+      "buttermilk",
+      "bicarb soda",
+      "sea salt flakes",
+      "butter"
+     ]
+    },
+    {
+     "name": "Irish smoked salmon",
+     "scene": "the rugged west coast of Ireland",
+     "method": "Brown bread spread thickly with butter, topped with smoked salmon, capers, black pepper and a squeeze of lemon.",
+     "shop": [
+      "brown bread",
+      "butter",
+      "smoked salmon",
+      "capers",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Country road potato cakes",
+     "scene": "the long trip across the Irish countryside",
+     "method": "Leftover mash mixed with flour and spring onion, shaped into cakes and fried in butter until golden.",
+     "shop": [
+      "potatoes",
+      "plain flour",
+      "spring onions",
+      "butter",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Irish lamb stew",
+     "scene": "dinner at the pub in Dingle",
+     "method": "Lamb neck simmered 2 hours with potatoes, carrots, onion and thyme until the potatoes break down and thicken the stew.",
+     "shop": [
+      "lamb neck",
+      "potatoes",
+      "carrots",
+      "brown onions",
+      "thyme",
+      "chicken stock"
+     ]
+    },
+    {
+     "name": "Dublin beef and stout pie",
+     "scene": "the final stop in Dublin",
+     "method": "Beef chuck simmered 3 hours in stout with onion, under a puff pastry lid baked at 200C for 25 minutes.",
+     "shop": [
+      "beef chuck",
+      "stout",
+      "brown onions",
+      "puff pastry",
+      "carrots",
+      "thyme"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Apple crumble",
+     "scene": "the cosy B and B on the way",
+     "method": "Apples cooked with butter and cinnamon under an oat crumble, baked at 180C for 35 minutes, with custard.",
+     "shop": [
+      "green apples",
+      "butter",
+      "ground cinnamon",
+      "rolled oats",
+      "brown sugar",
+      "custard"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Irish coffee",
+     "scene": "warming up in the pub",
+     "method": "Hot strong coffee with brown sugar and a splash of whiskey, topped with lightly whipped cream.",
+     "shop": [
+      "ground coffee",
+      "brown sugar",
+      "whiskey",
+      "thickened cream"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending"
+  },
+  {
+   "id": "Bull Durham (1988)",
+   "title": "Bull Durham",
+   "year": "1988",
+   "theme": "romcom",
+   "tagline": "Ballpark franks. Minor league dreams.",
+   "description": "A veteran catcher is brought in to train a wild young pitcher, and they both catch the eye of the same woman.",
+   "serve_cue": "Serve the snacks when the Durham Bulls take the field.",
+   "snacks": [
+    {
+     "name": "Ballpark franks",
+     "scene": "the Durham Bulls' old ballpark",
+     "method": "Franks grilled until split, tucked into soft buns with yellow mustard and pickle relish, wrapped in paper like at the stand.",
+     "shop": [
+      "hot dog franks",
+      "hot dog buns",
+      "yellow mustard",
+      "pickle relish"
+     ]
+    },
+    {
+     "name": "Dugout peanuts",
+     "scene": "Crash and Nuke killing time in the dugout",
+     "method": "Peanuts in their shells tossed with salted water, roasted at 180C for 20 minutes, cooled and tipped into paper bags.",
+     "shop": [
+      "peanuts in shell",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Grandstand nachos",
+     "scene": "the crowd in the grandstand",
+     "method": "Corn chips under a warm cheese sauce of cheddar melted into milk with a little cornflour, topped with sliced jalapeños.",
+     "shop": [
+      "corn chips",
+      "cheddar",
+      "full cream milk",
+      "cornflour",
+      "jalapeños"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Annie's kitchen fried chicken",
+     "scene": "Annie Savoy's kitchen",
+     "method": "Chicken drumsticks soaked in buttermilk, dredged in seasoned flour, fried at 170C until crisp, with mash and gravy.",
+     "shop": [
+      "chicken drumsticks",
+      "buttermilk",
+      "plain flour",
+      "smoked paprika",
+      "potatoes",
+      "chicken stock"
+     ]
+    },
+    {
+     "name": "Carolina pulled pork",
+     "scene": "the small-town North Carolina ballpark",
+     "method": "Pork shoulder slow cooked at 150C for 5 hours, pulled and tossed with a tangy vinegar and brown sugar sauce, piled into buns with slaw.",
+     "shop": [
+      "pork shoulder",
+      "apple cider vinegar",
+      "brown sugar",
+      "chilli flakes",
+      "burger buns",
+      "cabbage"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Southern peach cobbler",
+     "scene": "a hot Carolina summer",
+     "method": "Peaches tossed with sugar under a buttery cobbler topping, baked at 180C for 40 minutes, served warm with vanilla ice cream.",
+     "shop": [
+      "peaches",
+      "caster sugar",
+      "self-raising flour",
+      "butter",
+      "full cream milk",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Ballpark beer",
+     "scene": "a warm night at the game",
+     "method": "Cold lager in plastic cups, or lemonade with lime over ice for the non-drinkers.",
+     "shop": [
+      "lager",
+      "lemonade",
+      "limes",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending"
+  },
+  {
+   "id": "As Good as It Gets (1997)",
+   "title": "As Good as It Gets",
+   "year": "1997",
+   "theme": "romcom",
+   "tagline": "Same table. Same waitress. Bring your own cutlery.",
+   "description": "A rude, obsessive author falls for the only waitress who'll put up with him.",
+   "serve_cue": "Serve the mains when Melvin and Carol sit down to dinner in Baltimore.",
+   "snacks": [
+    {
+     "name": "Verdell's bacon",
+     "scene": "Melvin feeding bacon to Verdell the dog",
+     "method": "Thick bacon rashers baked on a rack at 200C for 15 minutes until crisp, cut into pieces and served warm with maple syrup for dipping.",
+     "shop": [
+      "bacon",
+      "maple syrup"
+     ]
+    },
+    {
+     "name": "Café breakfast bites",
+     "scene": "Melvin's usual breakfast at the café where Carol works",
+     "method": "Mini toasts topped with soft scrambled egg and crispy bacon pieces, laid out on a plate.",
+     "shop": [
+      "white bread",
+      "eggs",
+      "bacon",
+      "butter",
+      "chives"
+     ]
+    },
+    {
+     "name": "Road trip snacks",
+     "scene": "the road trip to Baltimore with Simon",
+     "method": "Almonds roasted at 180C for 10 minutes, cooled and mixed with pretzels and chopped dried apricots, scooped into paper bags for the car.",
+     "shop": [
+      "almonds",
+      "pretzels",
+      "dried apricots"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Baltimore crab cakes",
+     "scene": "Melvin and Carol's dinner in Baltimore",
+     "method": "Crab meat bound with mayo, mustard, spring onion and breadcrumbs, shaped into cakes and pan-fried until golden, with lemon and a green salad.",
+     "shop": [
+      "crab meat",
+      "mayonnaise",
+      "Dijon mustard",
+      "breadcrumbs",
+      "spring onions",
+      "mixed salad leaves"
+     ]
+    },
+    {
+     "name": "Café meatloaf",
+     "scene": "the New York café where Carol waits tables",
+     "method": "Beef meatloaf with onion and breadcrumbs, glazed with tomato sauce and brown sugar, baked at 180C for an hour, with mash and peas.",
+     "shop": [
+      "beef mince",
+      "brown onions",
+      "breadcrumbs",
+      "tomato sauce",
+      "potatoes",
+      "frozen peas"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Café apple pie",
+     "scene": "the café where Melvin eats every day",
+     "method": "Apples cooked with butter, sugar and cinnamon, baked in shortcrust with a lattice top at 190C for 45 minutes, with ice cream.",
+     "shop": [
+      "green apples",
+      "butter",
+      "brown sugar",
+      "ground cinnamon",
+      "shortcrust pastry",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bottomless café coffee",
+     "scene": "Carol topping up Melvin's coffee",
+     "method": "Strong drip coffee in thick mugs, refilled without asking, milk and sugar on the side.",
+     "shop": [
+      "ground coffee",
+      "full cream milk",
+      "raw sugar"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending"
+  },
+  {
+   "id": "The Princess Diaries (2001)",
+   "title": "The Princess Diaries",
+   "year": "2001",
+   "theme": "romcom",
+   "tagline": "Genovian pears. Palate cleansers. Corn dogs.",
+   "description": "A shy San Francisco teenager finds out she's the heir to the throne of the small country of Genovia.",
+   "serve_cue": "Serve dessert when the sorbet arrives at the state dinner.",
+   "snacks": [
+    {
+     "name": "Grandma's first corn dog",
+     "scene": "Queen Clarisse trying a corn dog",
+     "method": "Cocktail franks dipped in a cornmeal batter, fried at 180C until golden, served with mustard and tomato sauce.",
+     "shop": [
+      "cocktail franks",
+      "fine cornmeal",
+      "plain flour",
+      "buttermilk",
+      "yellow mustard",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Genovian pear crostini",
+     "scene": "Genovia and its famous pears",
+     "method": "Baguette slices toasted, topped with blue cheese, thin slices of pear and a drizzle of honey.",
+     "shop": [
+      "baguette",
+      "blue cheese",
+      "pears",
+      "honey",
+      "walnuts"
+     ]
+    },
+    {
+     "name": "San Francisco sourdough bites",
+     "scene": "Mia's home in an old San Francisco firehouse",
+     "method": "Sourdough cubes tossed in garlic butter and toasted until crisp, served with a warm dip of chopped clams, cream cheese and parmesan.",
+     "shop": [
+      "sourdough bread",
+      "butter",
+      "garlic",
+      "clams",
+      "cream cheese",
+      "parmesan"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "State dinner chicken",
+     "scene": "the state dinner where Mia learns about palate cleansers",
+     "method": "Chicken breasts stuffed with spinach and ricotta, roasted at 200C for 20 minutes, with a lemon butter sauce and potato gratin.",
+     "shop": [
+      "chicken breasts",
+      "baby spinach",
+      "ricotta",
+      "lemons",
+      "butter",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Beach party fish tacos",
+     "scene": "the school beach party",
+     "method": "White fish dusted in chilli and cumin, pan-fried, in tortillas with slaw, lime crema and salsa.",
+     "shop": [
+      "white fish fillets",
+      "corn tortillas",
+      "cabbage",
+      "sour cream",
+      "limes",
+      "ground cumin"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Palate cleanser sorbet",
+     "scene": "the sorbet Mia eats before she knows it's a palate cleanser",
+     "method": "Lemon sorbet scooped into small chilled glasses with a few poached pear slices and mint.",
+     "shop": [
+      "lemon sorbet",
+      "pears",
+      "caster sugar",
+      "mint"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Genovian pear fizz",
+     "scene": "the pears of Genovia",
+     "method": "Pear juice topped with sparkling water and a squeeze of lemon, over ice.",
+     "shop": [
+      "pear juice",
+      "sparkling water",
+      "lemons",
+      "ice"
+     ]
+    }
+   ],
+   "lane": 2,
    "poster_status": "pending"
   }
  ]
