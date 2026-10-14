@@ -16,6 +16,20 @@ Run `node scripts/poster-status.cjs` for the checked queue and counts. Generated
 
 ## Recovery audit, 15 October 2026
 
+### Single coordinator handoff
+
+Josh has moved all five poster lanes into one new coordinating chat after the recovery audit. This coordinator may work across all lanes, preserving each film's assigned lane block. Old lane chats should remain idle. This handoff records ownership; it cannot stop or restart other chat sessions.
+
+Start every session with a pull and `node scripts/poster-status.cjs --json`. Continue from checked repository state, not old chat completion claims. Keep ten-film batches within each lane where possible, retain blocked titles explicitly, and publish only complete reviewed posters. Do not regenerate checked complete films.
+
+Lane 1 remains blocked for Die Hard, Rush Hour 2 and The Fifth Element because the current canonical menus contain seafood. Preserve the source recipes and leave these films pending. The next available Lane 1 film is Superman (1978).
+
+First coordinator batch reviewed ten pending Lane 1 titles. Five new posters have matching canonical recipes: The Thing, A Nightmare on Elm Street, Shaun of the Dead, Young Frankenstein and Mad Max 2. All are A4 portrait JPEGs below 1 MB. Their dish names and descriptions were visually checked against the recipe export. The built-in image generator produced the cinematic artwork and exact menu lettering; conversion to JPEG only changed delivery format and compression.
+
+Superman again returned `moderation_blocked` at the output stage, category `other`, request `d90c6a97-580e-469d-a4f3-68a19ee2b583`. No image was delivered or marked complete. Beetlejuice also remains pending because its canonical menu contains prawns and lobster. These five blocked entries remain explicitly pending; they are not counted as complete.
+
+After this batch, checked edition totals are 114 complete and 594 pending. Lane completion counts are 31, 20, 20, 12 and 31 respectively. Next coordinator batch: Lane 2's next ten checked pending films, starting with Lethal Weapon 3 (1992). Retain Lane 1 blockers for separate resolution without repeatedly generating rejected or seafood-incompatible menus.
+
 Repository head `42b208a` contains 109 complete editions with 109 JPEGs. Both existing tests pass. There are 599 films remaining.
 
 | Lane | Complete | Remaining |
