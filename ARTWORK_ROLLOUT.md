@@ -12,7 +12,27 @@ Each film gets an individually art-directed A4 menu poster. Use the approved War
 | Ghostbusters (1984) | Film identity, Ecto-1, green-lit Manhattan firehouse, red and ivory typography | Complete |
 | The Godfather (1972) | Vito and wedding imagery, iconic title and puppet motif, dignified Italian menu | Complete |
 
-705 of 708 films remain pending. `menu-artwork-rollout.json` is the full queue. All generated artwork is original film-inspired artwork, not official licensed poster art.
+Run `node scripts/poster-status.cjs` for the checked queue and counts. Generated brief statuses and the top-level rollout total can lag published editions. All generated artwork is original film-inspired artwork, not official licensed poster art.
+
+## Recovery audit, 15 October 2026
+
+Repository head `42b208a` contains 109 complete editions with 109 JPEGs. Both existing tests pass. There are 599 films remaining.
+
+| Lane | Complete | Remaining |
+|---|---:|---:|
+| 1 | 26 | 113 |
+| 2 | 20 | 113 |
+| 3 | 20 | 116 |
+| 4 | 12 | 150 |
+| 5 | 31 | 107 |
+
+Forty completed films still have stale brief statuses. The status script excludes checked complete editions from the generation queue without editing Claude's generated briefs or top-level completed total.
+
+Five shopping-only differences have been restored to the canonical recipe exports: Hitch, Oliver & Company, Bugsy, Men in Black and Stakeout. Their dish names, descriptions, methods and artwork are unchanged.
+
+Four existing editions differ more substantially from newer recipe exports: Elf, Midnight Cowboy, Dog Day Afternoon and The Out-of-Towners. Review their existing images before changing any dish names or descriptions. They remain visible in the audit's recipe difference report, and are excluded from automatic regeneration because they already have published editions and images. This audit checks data and assets, not their visual spelling or artistic quality.
+
+These fixes make the repository resumable. They do not restart other chat sessions or recover unpublished images from those sessions. Follow the recovery and remote-verification steps in `POSTER_WORKFLOW.md` when each lane resumes.
 
 ## Per-film completion
 

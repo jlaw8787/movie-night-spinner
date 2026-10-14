@@ -38,7 +38,7 @@ Work through your lane in file order as before. If you reach a film without `rec
 ## Each run: one batch of 10 films from your lane
 
 1. Run `git pull` first, every time.
-2. Open `poster-briefs.json`. Take the next 10 films in your lane where `poster_status` is not `complete`, in file order.
+2. Run `node scripts/poster-status.cjs --lane N` (replace N with your lane). Take its next batch, in brief file order. This read-only audit checks the edition, rollout entry and actual JPEG together. `poster_status` in `poster-briefs.json` and the top-level rollout `completed` total are generated snapshots and can lag published work. Never regenerate a checked complete edition just because those snapshots are stale. Stop to repair any audit errors before adding editions. Never edit the generated snapshots to fix the queue.
 3. For each film:
    1. **Pick the poster menu from the brief.** Choose 2 of the snacks, 1 of the mains, the dessert and the drink. Use the dish names exactly as written in the brief. Pick the dishes that best match the artwork and make the best meal together.
    2. **Write the poster description** for each dish: 6 to 14 words describing the food itself (not the scene), taken from the brief's method.
@@ -59,6 +59,16 @@ Work through your lane in file order as before. If you reach a film without `rec
    7. **Mark the film `complete`** in `menu-artwork-rollout.json` with its poster path and art direction.
 4. Run `node tests/poster-menus.test.cjs` and `node tests/watched-state.test.cjs`. Both must pass.
 5. Commit with your lane and the film names in the message, for example `Lane 3: Heat, Jaws, Up`. Then run `git pull --rebase` and `git push`. If the rebase conflicts, keep both sides (every change is additive) and run the tests again before pushing.
+
+## Recovery and reliable publishing
+
+- On resuming any lane, pull and run the status command above before generating images. Completed work in the repository takes precedence over an old chat status. `node scripts/poster-status.cjs --json` gives the complete recovery report for all five lanes.
+- Establish an available publishing route before starting a batch. A connected GitHub app does not provide credentials to command-line Git. If command-line push has no credentials, use the connected app's Git data tools, within the same authorised lane scope. Do not repeatedly retry an unauthenticated push or ask for another approval when the user has already authorised publishing.
+- For app publishing, upload each JPEG as a base64 blob and save the returned blob SHA with the film ID and path. Create a tree based on the latest main tree containing every batch JPEG, the lane's edition changes and only its rollout fields. Create one commit on the latest main head, then fast-forward main. Do not force-push. If main moves, read the new head, retain the other lanes' changes, rerun both tests, and rebuild the tree and commit on that head. Never replace a shared file with a stale copy.
+- Do not publish an edition or mark it complete until all of its image blobs are available. A successful blob upload alone is not a published poster. Keep an explicit per-film record of generated, visually checked, uploaded and published states. If interrupted, recover available assets before regenerating them.
+- After publishing, fetch main and verify that the remote commit includes all poster paths, edition blocks and matching rollout entries for the batch. Run the status audit and both tests against that remote commit. Report the commit SHA and the number of films verified. If publication is incomplete, state exactly what remains.
+- Automatic review rejections and image-service failures must be reported with their actual reason. Do not call a rejection a false positive without evidence, promise a background retry, or finish a turn with only 'publishing now'. A finished chat turn is not evidence of an active background worker.
+- Existing artwork may predate a newer recipe export. If dish names or descriptions differ, review the actual poster before changing them. Never silently replace poster text in the edition. Shopping-only differences can be restored to the canonical export without changing printed artwork.
 
 ## Rules for every poster and recipe
 
