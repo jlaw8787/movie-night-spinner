@@ -18,6 +18,8 @@ Run `node scripts/poster-status.cjs` for the checked queue and counts. Generated
 
 ### Single coordinator handoff
 
+**Current instruction, 15 October 2026:** Josh explicitly authorised keeping seafood in Claude's menus. All seafood holds described below are historical and superseded. Process those films normally with exact canonical recipes. Image-service rejections remain separate technical blockers.
+
 Josh has moved all five poster lanes into one new coordinating chat after the recovery audit. This coordinator may work across all lanes, preserving each film's assigned lane block. Old lane chats should remain idle. This handoff records ownership; it cannot stop or restart other chat sessions.
 
 Start every session with a pull and `node scripts/poster-status.cjs --json`. Continue from checked repository state, not old chat completion claims. Keep ten-film batches within each lane where possible, retain blocked titles explicitly, and publish only complete reviewed posters. Do not regenerate checked complete films.
@@ -77,3 +79,11 @@ Batch 3 adds Aliens, The Breakfast Club, Pretty in Pink, Planes, Trains and Auto
 
 - The Fifth Element (1997) remains pending: Flying noodle boat noodles requires oyster sauce in the brief method; the other main is crab. Claude needs to revise a main to exclude seafood ingredients.
 - Superman (1978) remains pending: the image service returned no artwork, HTTP 400 moderation_blocked at output, category other, request 5dbaa438-e71d-413f-a993-6e26d0812da3. No rejected image is counted as complete.
+
+### Coordinator Lane 2 batch, 15 October 2026
+
+All ten pending titles in the batch have reviewed A4 posters and exact canonical menu copies: Lethal Weapon 3, Con Air, Under Siege, Dragnet, Back to the Future Part III, E.T. the Extra-Terrestrial, Predator, Alien, Blade Runner and Spaceballs. All JPEGs are below 1 MB. Dish names and descriptions were visually reviewed against the export; the Part III shop sign was corrected and missing footer lines on Lethal Weapon 3 and Dragnet were added through image editing. The built-in image generator produced the artwork and lettering; JPEG conversion changed format and compression only.
+
+Josh clarified during the batch that seafood should remain exactly as Claude wrote it. Con Air, Under Siege and Alien were returned to this batch and completed with their source recipes unchanged. Earlier seafood holds in every lane are superseded, including Die Hard, Rush Hour 2, The Fifth Element and Beetlejuice.
+
+After this batch, checked totals are 124 complete and 584 pending. Lane completion counts are 31, 30, 20, 12 and 31. Next coordinator batch: Lane 1's earliest pending films, now including the previously held seafood menus. Superman's image-service rejection remains a technical blocker. Always run the audit after pulling before selecting the batch.

@@ -27,6 +27,8 @@ Every film in `poster-briefs.json` has a `lane` from 1 to 5. Run up to five agen
 
 ## Fast path: recipes Claude has already written
 
+Project clarification from Josh, 15 October 2026: keep Claude's canonical menus exactly as written, including seafood. Seafood ingredients are not a reason to skip a film, rewrite its recipe or hold its poster. This supersedes the earlier household-seafood holds recorded in the rollout history.
+
 Claude is pre-writing the four-person recipes into `poster-recipes.json`, so most films now only need artwork. In `poster-briefs.json`, a film with `"recipe_ready": true` has one. For those films:
 
 1. Skip choosing dishes and writing recipes. Copy `films["Title (Year)"].menu` from `poster-recipes.json` exactly as it is (s, m, w, d and shopping) into the edition's `menu`. Don't change it.
