@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 708,
- "ready_for_poster": 584,
+ "hand_written": 709,
+ "ready_for_poster": 585,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -954,18 +954,6 @@
       "breadcrumbs",
       "aniseed liqueur"
      ]
-    },
-    {
-     "name": "Card table chips and onion dip",
-     "scene": "the Tangiers poker room",
-     "method": "Caramelise 2 onions slowly for 40 minutes, cool, mix into sour cream and cream cheese with garlic powder and chives. Thick-cut chips.",
-     "shop": [
-      "brown onions",
-      "sour cream",
-      "cream cheese",
-      "chives",
-      "thick-cut potato chips"
-     ]
     }
    ],
    "mains": [
@@ -1154,27 +1142,26 @@
      ]
     },
     {
-     "name": "Prohibition pretzels",
-     "scene": "with beer mustard",
-     "method": "Soft pretzel dough shaped, dipped 30 seconds in a baking soda bath, coarse salt, baked at 220C for 12 minutes. Mustard whisked with a splash of lager and honey.",
+     "name": "Lexington Hotel antipasto",
+     "scene": "Capone's banquet table, before the bat comes out",
+     "method": "Platter of folded salami, mortadella and prosciutto with marinated artichokes, roast peppers, bocconcini and good bread, laid out banquet style down the middle of the table.",
      "shop": [
-      "bread flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "wholegrain mustard",
-      "lager"
+      "salami",
+      "mortadella",
+      "prosciutto",
+      "marinated artichokes",
+      "bocconcini",
+      "Italian bread"
      ]
     },
     {
-     "name": "Union Station sliders",
-     "scene": "the staircase showdown with the pram",
-     "method": "Beef sliders smashed thin on a hot griddle, cheddar melted on top, caramelised onion, on soft buns held with toothpicks.",
+     "name": "Giardiniera crostini",
+     "scene": "Chicago's own pickled peppers piled on toast",
+     "method": "Chop hot giardiniera (pickled peppers, celery, carrot and cauliflower in oil) finely, pile onto toasted baguette rounds over a smear of ricotta.",
      "shop": [
-      "beef mince",
-      "slider buns",
-      "cheddar",
-      "brown onions"
+      "hot giardiniera",
+      "baguette",
+      "ricotta"
      ]
     }
    ],
@@ -1769,14 +1756,16 @@
      ]
     },
     {
-     "name": "Desert devilled eggs",
-     "scene": "for the empty building site where it all started",
-     "method": "Boil eggs 10 minutes, whip yolks with mayo, Dijon, cayenne and a little pickle juice, pipe back in, paprika.",
+     "name": "Brown Derby Cobb salad cups",
+     "scene": "the 1940s Hollywood crowd Ben ran with",
+     "method": "Little gem lettuce cups filled with chopped chicken, crisp bacon, avocado, egg, tomato and blue cheese, a spoon of red wine vinaigrette over the top.",
      "shop": [
+      "little gem lettuce",
+      "chicken breast",
+      "bacon",
+      "avocados",
       "eggs",
-      "mayonnaise",
-      "Dijon mustard",
-      "smoked paprika"
+      "blue cheese"
      ]
     }
    ],
@@ -1870,13 +1859,14 @@
      ]
     },
     {
-     "name": "Diner fries",
-     "scene": "Chili's favourite booth",
-     "method": "Hand-cut chips blanched at 140C until soft, rested 20 minutes, fried at 185C until crisp and salted straight away.",
+     "name": "Cuban pastelitos",
+     "scene": "Chili's Miami, before he heads out to LA",
+     "method": "Puff pastry squares filled with guava paste and cream cheese, brushed with egg, baked at 200C for 18 minutes and dusted with sugar while hot.",
      "shop": [
-      "potatoes",
-      "vegetable oil",
-      "fine salt"
+      "puff pastry",
+      "guava paste",
+      "cream cheese",
+      "eggs"
      ]
     }
    ],
@@ -2250,13 +2240,16 @@
    "serve_cue": "Serve the steak when Jake starts complaining his steak is overcooked.",
    "snacks": [
     {
-     "name": "Bronx diner fries",
-     "scene": "Jake's neighbourhood in the Bronx",
-     "method": "Hand-cut chips blanched at 140C until soft, rested 20 minutes, fried at 185C until crisp, salted straight away.",
+     "name": "Bronx arancini",
+     "scene": "rice balls from Jake's Italian neighbourhood",
+     "method": "Leftover risotto rolled around a cube of mozzarella, crumbed, fried at 180C until golden, served with warm marinara for dipping.",
      "shop": [
-      "potatoes",
-      "vegetable oil",
-      "fine salt"
+      "arborio rice",
+      "mozzarella",
+      "parmesan",
+      "breadcrumbs",
+      "passata",
+      "eggs"
      ]
     },
     {
@@ -2349,18 +2342,6 @@
       "pizza dough",
       "butter",
       "garlic",
-      "parmesan"
-     ]
-    },
-    {
-     "name": "Paint shop meatball bites",
-     "scene": "Tony's lunch break",
-     "method": "Small pork and beef meatballs baked at 220C for 12 minutes, simmered in marinara, toothpicks and parmesan.",
-     "shop": [
-      "pork and beef mince",
-      "breadcrumbs",
-      "eggs",
-      "passata",
       "parmesan"
      ]
     },
@@ -2543,17 +2524,6 @@
    "serve_cue": "Pour boat drinks every time someone says \"boat drinks\".",
    "snacks": [
     {
-     "name": "Denver diner onion rings",
-     "scene": "the crew's hangout",
-     "method": "Thick onion rings soaked in buttermilk, dipped in a beer batter, fried at 185C until puffed.",
-     "shop": [
-      "brown onions",
-      "buttermilk",
-      "plain flour",
-      "lager"
-     ]
-    },
-    {
      "name": "Afterlife Advice deviled eggs",
      "scene": "Jimmy's video business for the dying",
      "method": "Boil eggs 10 minutes, whip yolks with mayo, Dijon and pickle juice, pipe back in, paprika and chives.",
@@ -2566,14 +2536,15 @@
      ]
     },
     {
-     "name": "Fries with gravy",
-     "scene": "late night in Denver",
-     "method": "Double-fried chips with hot brown gravy: roux of butter and flour cooked brown, beef stock whisked in, simmered and seasoned.",
+     "name": "Green chile queso",
+     "scene": "Colorado green chile, with chips for dunking",
+     "method": "Roasted green chiles chopped and stirred into melted white cheese with milk and garlic, served hot with corn chips for dunking.",
      "shop": [
-      "potatoes",
-      "beef stock",
-      "plain flour",
-      "butter"
+      "roasted green chiles",
+      "white American cheese",
+      "milk",
+      "garlic",
+      "corn chips"
      ]
     }
    ],
@@ -2655,12 +2626,15 @@
      ]
     },
     {
-     "name": "Southie bar fries",
-     "scene": "Costello's local in South Boston",
-     "method": "Hand-cut chips blanched at 140C until soft, rested, fried at 185C until crisp, malt vinegar and salt, in paper cones.",
+     "name": "Irish soda bread and butter",
+     "scene": "Costello's South Boston Irish crowd",
+     "method": "Wholemeal flour, bicarb, salt and buttermilk mixed into a soft round, cut with a deep cross, baked at 220C for 35 minutes, thick slices with salted butter.",
      "shop": [
-      "potatoes",
-      "malt vinegar"
+      "wholemeal flour",
+      "plain flour",
+      "bicarbonate of soda",
+      "buttermilk",
+      "butter"
      ]
     },
     {
@@ -3212,12 +3186,13 @@
    ],
    "drink": [
     {
-     "name": "Green ooze float",
-     "scene": "lime soda and vanilla ice cream",
-     "method": "Lime soda poured over vanilla ice cream in a tall glass.",
+     "name": "Egg cream",
+     "scene": "New York's soda-fountain classic, no egg and no cream",
+     "method": "Chocolate syrup in the bottom of a tall glass, a splash of cold milk, then soda water poured hard so it foams up white over the top.",
      "shop": [
-      "lime soda",
-      "vanilla ice cream"
+      "chocolate syrup",
+      "milk",
+      "soda water"
      ]
     }
    ],
@@ -3339,15 +3314,15 @@
      ]
     },
     {
-     "name": "Doc Ock's tentacle pretzels",
-     "scene": "four arms, hot mustard",
-     "method": "Pretzel dough rolled into long tentacle ropes, baking soda bath, coarse salt, baked at 220C.",
+     "name": "Potato knishes",
+     "scene": "from the cart on Peter's walk to class",
+     "method": "Mashed potato with fried onion and pepper wrapped in thin dough, brushed with egg, baked at 200C for 25 minutes until golden, mustard on the side.",
      "shop": [
-      "bread flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "hot mustard"
+      "potatoes",
+      "onions",
+      "puff pastry",
+      "eggs",
+      "yellow mustard"
      ]
     },
     {
@@ -3426,15 +3401,14 @@
    "serve_cue": "Serve the snacks at the wrestling match where Peter wins his first prize money.",
    "snacks": [
     {
-     "name": "Web nachos",
-     "scene": "queso drizzled like a web",
-     "method": "Corn chips topped with black beans and jalapeño, drizzle hot queso (cheddar melted with evaporated milk) in a spiderweb pattern.",
+     "name": "Bodega egg and cheese rolls",
+     "scene": "Queens mornings before school",
+     "method": "Soft rolls with fried eggs, melted American cheese and a shake of salt, pepper and hot sauce, wrapped in foil the way the corner bodega does it.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "evaporated milk",
-      "jalapeños"
+      "soft rolls",
+      "eggs",
+      "American cheese",
+      "hot sauce"
      ]
     },
     {
@@ -3501,13 +3475,14 @@
    ],
    "drink": [
     {
-     "name": "Red and blue slushie",
-     "scene": "the suit colours",
-     "method": "Layer raspberry and blue raspberry slush in a cup.",
+     "name": "Cherry lime rickey",
+     "scene": "a Queens soda-fountain classic",
+     "method": "Lime juice and cherry syrup over ice, topped with soda water and a cherry.",
      "shop": [
-      "raspberry cordial",
-      "blue cordial",
-      "ice"
+      "limes",
+      "cherry syrup",
+      "soda water",
+      "maraschino cherries"
      ]
     }
    ],
@@ -3549,13 +3524,16 @@
      ]
     },
     {
-     "name": "Limo pizza bites",
-     "scene": "ordered from the back seat",
-     "method": "Halve English muffins, toast lightly, top with pizza sauce and mozzarella, grill until bubbling and spotted.",
+     "name": "Plaza room service club sandwiches",
+     "scene": "charged straight to Dad's credit card",
+     "method": "Triple-decker toast with sliced chicken, bacon, lettuce, tomato and mayo, cut into quarters and pinned with toothpicks, served under a silver cloche if you have one.",
      "shop": [
-      "English muffins",
-      "pizza sauce",
-      "mozzarella"
+      "white bread",
+      "chicken breast",
+      "bacon",
+      "iceberg lettuce",
+      "tomatoes",
+      "mayonnaise"
      ]
     }
    ],
@@ -3601,14 +3579,14 @@
    ],
    "drink": [
     {
-     "name": "Hot chocolate with whipped cream",
-     "scene": "Duncan's toy shop warm-up",
-     "method": "Dark chocolate melted into hot milk, whipped cream and marshmallows.",
+     "name": "Hot apple cider",
+     "scene": "winter in Central Park with the pigeon lady",
+     "method": "Cloudy apple juice warmed slowly with cinnamon sticks, cloves, orange peel and a little brown sugar, served steaming in mugs.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "thickened cream",
-      "marshmallows"
+      "cloudy apple juice",
+      "cinnamon sticks",
+      "cloves",
+      "oranges"
      ]
     }
    ],
@@ -3741,18 +3719,6 @@
       "dill pickles",
       "hot English mustard"
      ]
-    },
-    {
-     "name": "Cart hot dogs",
-     "scene": "eaten in the cab between fares",
-     "method": "Simmer franks in water with a slice of onion until plump. Steamed buns, yellow mustard and red onion sauce: onion softened with tomato paste, vinegar and chilli.",
-     "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "brown onions",
-      "tomato paste"
-     ]
     }
    ],
    "mains": [
@@ -3841,15 +3807,15 @@
      ]
     },
     {
-     "name": "Subway platform pretzels",
-     "scene": "eaten between stops on the long ride home",
-     "method": "Pretzel dough (flour, yeast, water, malt), rolled and shaped, 30 seconds in a simmering baking soda bath, coarse salt, baked at 220C for 12 minutes.",
+     "name": "Hot potato knishes",
+     "scene": "the cheapest hot dinner on the long ride home",
+     "method": "Mashed potato and caramelised onion wrapped in pastry, baked at 200C until golden and crisp, eaten hot with deli mustard.",
      "shop": [
-      "bread flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "yellow mustard"
+      "potatoes",
+      "onions",
+      "puff pastry",
+      "eggs",
+      "deli mustard"
      ]
     }
    ],
@@ -3868,15 +3834,16 @@
      ]
     },
     {
-     "name": "Baseball Furies sliders",
-     "scene": "big bats, painted faces optional",
-     "method": "Smashed beef sliders with cheddar melted under a lid, soft buns brushed with butter, pickles and burger sauce.",
+     "name": "Late-night chopped steak heroes",
+     "scene": "the hero shop at the end of the line",
+     "method": "Thinly sliced steak chopped on a hot griddle with onions, melted cheese folded through, stuffed into long hero rolls with lettuce, tomato and mayo.",
      "shop": [
-      "beef mince",
-      "slider buns",
-      "cheddar",
-      "dill pickles",
-      "mayonnaise"
+      "scotch fillet",
+      "onions",
+      "American cheese",
+      "long rolls",
+      "iceberg lettuce",
+      "tomatoes"
      ]
     }
    ],
@@ -3895,11 +3862,13 @@
    ],
    "drink": [
     {
-     "name": "Cream soda float",
-     "scene": "Warriors, come out to drink",
-     "method": "Cream soda poured slowly over a scoop of vanilla ice cream in a tall glass so it foams up.",
+     "name": "Chocolate malted",
+     "scene": "the soda fountain by the Coney Island station",
+     "method": "Chocolate syrup and malted milk powder whisked into cold milk with a scoop of vanilla ice cream, blended until thick.",
      "shop": [
-      "cream soda",
+      "milk",
+      "malted milk powder",
+      "chocolate syrup",
       "vanilla ice cream"
      ]
     }
@@ -3938,18 +3907,6 @@
       "cinnamon",
       "caster sugar",
       "ground coffee"
-     ]
-    },
-    {
-     "name": "Cart hot dogs",
-     "scene": "Ratso's dinner on the street",
-     "method": "Franks simmered with onion, in steamed buns with mustard and sauerkraut warmed with caraway seeds.",
-     "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "sauerkraut",
-      "caraway seeds",
-      "yellow mustard"
      ]
     }
    ],
@@ -4031,15 +3988,16 @@
      ]
     },
     {
-     "name": "Bank vault pretzels and cheese",
-     "scene": "the hostages' snacks behind the counter",
-     "method": "Hard pretzels with a pub cheese dip: sharp cheddar blitzed with cream cheese, beer, mustard and garlic.",
+     "name": "Deli hero wedges",
+     "scene": "sent in to feed the hostages behind the counter",
+     "method": "Long hero rolls stacked with ham, salami, provolone, shredded lettuce, tomato and oil and vinegar, cut into wedges for passing around.",
      "shop": [
-      "pretzels",
-      "sharp cheddar",
-      "cream cheese",
-      "lager",
-      "Dijon mustard"
+      "long rolls",
+      "ham",
+      "salami",
+      "provolone",
+      "iceberg lettuce",
+      "tomatoes"
      ]
     },
     {
@@ -4138,14 +4096,14 @@
      ]
     },
     {
-     "name": "Hot pretzels",
-     "scene": "walking the beat in uniform",
-     "method": "Soft pretzels from the bakery, brushed with butter, coarse salt, baked at 200C for 5 minutes, yellow mustard.",
+     "name": "Deli pastrami on rye",
+     "scene": "the free lunch Frank insists on paying for",
+     "method": "Hot pastrami sliced thin, piled high on rye with deli mustard, a pickle on the side.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
+      "pastrami",
+      "rye bread",
+      "deli mustard",
+      "dill pickles"
      ]
     }
    ],
@@ -4314,15 +4272,15 @@
    "serve_cue": "Serve the snacks when Garber hears the sneeze.",
    "snacks": [
     {
-     "name": "Platform pretzels",
-     "scene": "the 6 train",
-     "method": "Pretzel dough shaped, 30 seconds in a simmering baking soda bath, coarse salt, baked at 220C for 12 minutes, mustard.",
+     "name": "Cheese danish",
+     "scene": "breakfast in the transit dispatch room",
+     "method": "Puff pastry squares with a sweetened cream cheese centre, folded corners, baked at 200C for 16 minutes and drizzled with thin icing.",
      "shop": [
-      "bread flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "yellow mustard"
+      "puff pastry",
+      "cream cheese",
+      "caster sugar",
+      "lemons",
+      "icing sugar"
      ]
     },
     {
@@ -4458,16 +4416,16 @@
      ]
     },
     {
-     "name": "Liberty Island burgers",
-     "scene": "the police HQ off the island",
-     "method": "Two thin patties smashed on a smoking flat-top, American cheese on top, grilled onion, pickles and mustard on a toasted bun.",
+     "name": "Scavenger's hobo stew",
+     "scene": "whatever the Duke's crew could find on the island",
+     "method": "Smoky sausage, potato, carrot, cabbage and beans simmered together in a big pot with stock and paprika until thick, scooped into tin mugs.",
      "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
-      "brown onions",
-      "dill pickles",
-      "yellow mustard"
+      "smoked sausages",
+      "potatoes",
+      "carrots",
+      "cabbage",
+      "cannellini beans",
+      "chicken stock"
      ]
     }
    ],
@@ -4529,17 +4487,6 @@
       "black vinegar",
       "chilli oil",
       "soy sauce"
-     ]
-    },
-    {
-     "name": "Subway pretzels",
-     "scene": "the train scene",
-     "method": "Soft pretzels brushed with melted butter, sprinkled with coarse salt, warmed at 200C for 5 minutes, yellow mustard on the side.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
      ]
     }
    ],
@@ -4715,25 +4662,28 @@
      ]
     },
     {
-     "name": "Central Park pretzels",
-     "scene": "the phone box riddle in the park",
-     "method": "Soft pretzels brushed with melted butter, coarse salt sprinkled on, warmed at 200C for 5 minutes, yellow mustard.",
+     "name": "Harlem chicken and waffles",
+     "scene": "McClane's sandwich-board stroll through Harlem",
+     "method": "Buttermilk-soaked chicken thigh pieces dredged in seasoned flour, fried at 175C until crisp, served on hot waffles with butter and honey spiked with hot sauce.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
+      "chicken thighs",
+      "buttermilk",
+      "plain flour",
+      "waffle mix",
+      "honey",
+      "hot sauce"
      ]
     },
     {
-     "name": "Wall Street hot dogs",
-     "scene": "the Federal Reserve heist",
-     "method": "Franks simmered with a slice of onion until plump, in steamed buns with yellow mustard and onion sauce cooked down with tomato paste.",
+     "name": "Bodega beef patties",
+     "scene": "grabbed on the run between riddles",
+     "method": "Pastry turnovers filled with curried beef mince, turmeric pastry, baked at 200C for 25 minutes until golden.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "brown onions"
+      "beef mince",
+      "onions",
+      "curry powder",
+      "shortcrust pastry",
+      "ground turmeric"
      ]
     }
    ],
@@ -4926,14 +4876,16 @@
      ]
     },
     {
-     "name": "Barricade pretzels",
-     "scene": "the cops waiting on the line outside",
-     "method": "Soft pretzels brushed with butter, sprinkled with coarse salt, warmed at 200C for 5 minutes, mustard.",
+     "name": "Halal cart chicken and rice",
+     "scene": "lunch for the cops on the barricade",
+     "method": "Chicken thighs marinated in yoghurt, cumin and coriander, griddled and chopped over yellow rice, white sauce and hot red sauce on top.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
+      "chicken thighs",
+      "Greek yoghurt",
+      "ground cumin",
+      "basmati rice",
+      "ground turmeric",
+      "hot sauce"
      ]
     }
    ],
@@ -4966,16 +4918,16 @@
    ],
    "dessert": [
     {
-     "name": "Black and white cookies",
-     "scene": "the bank's double dealings",
-     "method": "Soft vanilla cookies baked at 180C for 12 minutes, flat side iced half vanilla fondant, half chocolate.",
+     "name": "Rainbow cookies",
+     "scene": "from the Italian bakery round the corner",
+     "method": "Three almond sponge layers coloured green, white and red, sandwiched with apricot jam and topped with dark chocolate, chilled and cut into small squares.",
      "shop": [
-      "plain flour",
+      "almond meal",
       "butter",
       "eggs",
-      "sour cream",
-      "icing sugar",
-      "cocoa"
+      "apricot jam",
+      "dark chocolate",
+      "food colouring"
      ]
     }
    ],
@@ -5003,14 +4955,16 @@
    "serve_cue": "Pour drinks when the money train pulls into the station.",
    "snacks": [
     {
-     "name": "Token booth pretzels",
-     "scene": "the subway station where they work",
-     "method": "Pretzel dough shaped, 30 seconds in a baking soda bath, coarse salt, baked at 220C for 12 minutes.",
+     "name": "Bodega empanadas",
+     "scene": "grabbed on the subway station shift",
+     "method": "Small pastry half-moons filled with spiced beef and olives, crimped and baked at 200C for 20 minutes.",
      "shop": [
-      "bread flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt"
+      "beef mince",
+      "onions",
+      "green olives",
+      "ground cumin",
+      "shortcrust pastry",
+      "eggs"
      ]
     },
     {
@@ -5114,16 +5068,6 @@
      ]
     },
     {
-     "name": "Terminal Bar fries",
-     "scene": "the bar Paul keeps ending up at",
-     "method": "Thin fries blanched at 140C, fried at 185C, tossed with salt and a pinch of garlic powder.",
-     "shop": [
-      "potatoes",
-      "garlic powder",
-      "vegetable oil"
-     ]
-    },
-    {
      "name": "Soft serve cones",
      "scene": "the angry mob in the ice cream truck",
      "method": "Vanilla ice cream softened slightly and piped into cones with a star nozzle, dipped in chocolate magic shell.",
@@ -5221,17 +5165,6 @@
       "honey",
       "five spice"
      ]
-    },
-    {
-     "name": "Cart pretzels",
-     "scene": "eaten one-handed on the bike",
-     "method": "Soft pretzels warmed at 200C, brushed with butter and coarse salt, yellow mustard in a squeeze bottle.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
-     ]
     }
    ],
    "mains": [
@@ -5310,17 +5243,6 @@
       "salted cashews",
       "pork crackling",
       "pickled onions"
-     ]
-    },
-    {
-     "name": "Bus pretzels",
-     "scene": "the hijacked bus",
-     "method": "Hard pretzels with a hot cheese dip of cheddar melted into evaporated milk with mustard and cayenne.",
-     "shop": [
-      "pretzels",
-      "cheddar",
-      "evaporated milk",
-      "Dijon mustard"
      ]
     },
     {
@@ -5421,17 +5343,6 @@
       "peanuts in the shell",
       "fine salt"
      ]
-    },
-    {
-     "name": "Queens corner pretzels",
-     "scene": "the old neighbourhood in Queens",
-     "method": "Soft pretzels brushed with butter, sprinkled with coarse salt, warmed at 200C for 5 minutes, yellow mustard.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
-     ]
     }
    ],
    "mains": [
@@ -5499,14 +5410,15 @@
    "serve_cue": "Serve the snacks when David meets Elise on the bus.",
    "snacks": [
     {
-     "name": "Bus ride pretzels",
-     "scene": "the bus where they meet again",
-     "method": "Soft pretzels brushed with butter and everything bagel seasoning, warmed at 200C for 5 minutes, cream cheese to dip.",
+     "name": "Hot honey-roasted nuts",
+     "scene": "from the cart beside the bus stop",
+     "method": "Mixed nuts tossed with honey, butter, sugar and a pinch of cinnamon, roasted at 170C until glossy, poured into paper cones.",
      "shop": [
-      "soft pretzels",
+      "mixed nuts",
+      "honey",
       "butter",
-      "everything bagel seasoning",
-      "cream cheese"
+      "brown sugar",
+      "ground cinnamon"
      ]
     },
     {
@@ -5696,16 +5608,13 @@
    "serve_cue": "Serve the soup when the Reverend's soup kitchen opens.",
    "snacks": [
     {
-     "name": "Sewer slime dip",
-     "scene": "green and glowing",
-     "method": "Guacamole with avocado, lime, coriander, jalapeño and a handful of blitzed spinach for colour, corn chips.",
+     "name": "Soup kitchen bread rolls",
+     "scene": "the Reverend's shelter on the Bowery",
+     "method": "Soft white bread rolls warmed in the oven and served with butter, ready for dunking into the stew.",
      "shop": [
-      "avocados",
-      "limes",
-      "coriander",
-      "jalapeños",
-      "spinach",
-      "corn chips"
+      "white bread rolls",
+      "butter",
+      "sea salt flakes"
      ]
     },
     {
@@ -5720,14 +5629,13 @@
      ]
     },
     {
-     "name": "SoHo loft pretzels",
-     "scene": "the photographer's studio downtown",
-     "method": "Soft pretzels brushed with butter, coarse salt and everything seasoning, warmed at 200C for 5 minutes, mustard.",
+     "name": "Lower East Side pickles",
+     "scene": "sour from the barrel, downtown",
+     "method": "Sour and half-sour dill pickles from the deli barrel, sliced into spears, with pickled green tomatoes and mustard.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
+      "dill pickles",
+      "pickled green tomatoes",
+      "deli mustard"
      ]
     }
    ],
@@ -5743,18 +5651,6 @@
       "potatoes",
       "beef stock",
       "Italian bread"
-     ]
-    },
-    {
-     "name": "Diner hot dogs",
-     "scene": "the opening scene on the street",
-     "method": "Franks simmered then griddled until blistered, in steamed buns with sauerkraut, mustard and slow-cooked onions.",
-     "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "sauerkraut",
-      "yellow mustard",
-      "brown onions"
      ]
     }
    ],
@@ -5818,17 +5714,6 @@
       "salmon roe",
       "chives"
      ]
-    },
-    {
-     "name": "Zoltar's fortune cookies",
-     "scene": "make a wish",
-     "method": "Thin batter of egg white, sugar, flour and vanilla spread into circles, baked at 180C for 6 minutes, folded around a wish written on paper while hot.",
-     "shop": [
-      "eggs",
-      "caster sugar",
-      "plain flour",
-      "vanilla extract"
-     ]
     }
    ],
    "mains": [
@@ -5874,12 +5759,13 @@
    ],
    "drink": [
     {
-     "name": "Root beer float",
-     "scene": "served in a fancy glass",
-     "method": "Root beer poured slowly over two scoops of vanilla ice cream in a tall glass.",
+     "name": "Chocolate egg cream",
+     "scene": "a New York fountain drink for a kid in a grown-up's body",
+     "method": "Chocolate syrup, cold milk and soda water stirred hard in a tall glass until it foams up.",
      "shop": [
-      "root beer",
-      "vanilla ice cream"
+      "chocolate syrup",
+      "milk",
+      "soda water"
      ]
     }
    ],
@@ -6103,14 +5989,14 @@
    "serve_cue": "Serve the mains when Tess crashes the Trask wedding to talk business.",
    "snacks": [
     {
-     "name": "Staten Island Ferry pretzels",
-     "scene": "Tess's commute every morning",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C for 5 minutes, mustard.",
+     "name": "Buttered roll and coffee",
+     "scene": "Tess's breakfast on the ferry every morning",
+     "method": "Crusty rolls split and spread thick with butter, toasted flat on a hot pan, with a paper cup of milky coffee.",
      "shop": [
-      "soft pretzels",
+      "crusty rolls",
       "butter",
-      "rock salt",
-      "yellow mustard"
+      "ground coffee",
+      "milk"
      ]
     },
     {
@@ -6422,14 +6308,16 @@
      ]
     },
     {
-     "name": "Bodega pretzels",
-     "scene": "every wrong turn in the city",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C for 5 minutes, mustard on the side.",
+     "name": "Jamaican beef patties",
+     "scene": "every wrong turn through Brooklyn",
+     "method": "Flaky golden pastry turnovers filled with spiced beef, thyme and scotch bonnet, baked at 200C for 25 minutes.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
+      "beef mince",
+      "onions",
+      "curry powder",
+      "thyme",
+      "shortcrust pastry",
+      "scotch bonnet chillies"
      ]
     }
    ],
@@ -6815,17 +6703,6 @@
       "red onion",
       "dill"
      ]
-    },
-    {
-     "name": "Planetarium popcorn",
-     "scene": "Isaac and Mary hiding from the storm at the planetarium",
-     "method": "Pop kernels in coconut oil, toss with melted butter, flaky salt and a little smoked paprika so it looks like dark sky with stars.",
-     "shop": [
-      "popcorn kernels",
-      "coconut oil",
-      "butter",
-      "smoked paprika"
-     ]
     }
    ],
    "mains": [
@@ -6859,16 +6736,16 @@
    ],
    "dessert": [
     {
-     "name": "Black and white cookies",
-     "scene": "the film's black and white, in cookie form",
-     "method": "Soft vanilla cookies (butter, sugar, egg, sour cream, flour) baked at 180C for 12 minutes, flat side iced half vanilla fondant, half chocolate.",
+     "name": "New York cheesecake",
+     "scene": "a classic for the city Isaac can't stop loving",
+     "method": "Biscuit crumb base, dense cream cheese filling with lemon and vanilla, baked low and slow at 150C, cooled in the oven, chilled overnight.",
      "shop": [
-      "plain flour",
+      "cream cheese",
+      "plain biscuits",
       "butter",
       "eggs",
       "sour cream",
-      "icing sugar",
-      "cocoa"
+      "lemons"
      ]
     }
    ],
@@ -6974,14 +6851,13 @@
    ],
    "drink": [
     {
-     "name": "Iced tea",
-     "scene": "Dorothy's southern accent",
-     "method": "Black tea steeped strong, sweetened while hot, chilled, over ice with lemon and mint.",
+     "name": "Russian caravan tea",
+     "scene": "lunch at the Russian Tea Room with George",
+     "method": "Smoky black tea brewed strong, served in glasses with lemon slices and a spoon of jam on the side, the Russian way.",
      "shop": [
-      "black tea bags",
-      "caster sugar",
+      "black tea",
       "lemons",
-      "mint"
+      "cherry jam"
      ]
     }
    ],
@@ -7212,14 +7088,16 @@
      ]
     },
     {
-     "name": "Subway pretzels",
-     "scene": "the angry subway ghost who teaches Sam to move things",
-     "method": "Soft pretzels brushed with butter, sprinkled with coarse salt, warmed at 200C for 5 minutes, yellow mustard.",
+     "name": "Hush puppies",
+     "scene": "Oda Mae's storefront in Brooklyn",
+     "method": "Cornmeal batter with spring onion and a little sugar, dropped in spoonfuls into oil at 180C until golden, honey butter for dipping.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
+      "cornmeal",
+      "plain flour",
+      "buttermilk",
+      "eggs",
+      "spring onions",
+      "honey"
      ]
     },
     {
@@ -7427,13 +7305,16 @@
      ]
     },
     {
-     "name": "Queens diner fries",
-     "scene": "Linda's world across the river in Queens",
-     "method": "Hand-cut chips blanched at 140C until soft, rested 20 minutes, fried at 185C until crisp, salt and white vinegar.",
+     "name": "Spanakopita",
+     "scene": "the Greek diner in Linda's corner of Queens",
+     "method": "Spinach and feta with dill and spring onion wrapped in buttered filo triangles, baked at 190C until crisp and golden.",
      "shop": [
-      "potatoes",
-      "vegetable oil",
-      "white vinegar"
+      "spinach",
+      "feta",
+      "filo pastry",
+      "dill",
+      "butter",
+      "eggs"
      ]
     }
    ],
@@ -7510,15 +7391,15 @@
      ]
     },
     {
-     "name": "Barbershop wings",
-     "scene": "the old timers at the barbershop arguing over boxing",
-     "method": "Chicken wings dry-rubbed with paprika, garlic and brown sugar, baked at 220C for 40 minutes, tossed in hot sauce and butter.",
+     "name": "Beef patties from the corner shop",
+     "scene": "the shop next door to the barbershop in Queens",
+     "method": "Golden pastry turnovers filled with spiced beef mince, curry powder and thyme, baked until flaky.",
      "shop": [
-      "chicken wings",
-      "smoked paprika",
-      "brown sugar",
-      "hot sauce",
-      "butter"
+      "beef mince",
+      "onions",
+      "curry powder",
+      "thyme",
+      "shortcrust pastry"
      ]
     },
     {
@@ -7600,14 +7481,16 @@
    "serve_cue": "Serve the drinks when Edgar starts demanding sugar water.",
    "snacks": [
     {
-     "name": "Bug-eyed devilled eggs",
-     "scene": "Edgar's farmhouse, before the bug moves in",
-     "method": "Yolks whipped with mayo, Dijon and cayenne, piped back, an olive slice eye on each.",
+     "name": "Farmhouse cornbread",
+     "scene": "Edgar's place upstate, before the bug arrives",
+     "method": "Cornmeal, flour, buttermilk and melted butter baked in a hot cast-iron pan at 210C for 20 minutes, cut in wedges with honey butter.",
      "shop": [
+      "cornmeal",
+      "plain flour",
+      "buttermilk",
+      "butter",
       "eggs",
-      "mayonnaise",
-      "Dijon mustard",
-      "black olives"
+      "honey"
      ]
     },
     {
@@ -7638,15 +7521,15 @@
    ],
    "mains": [
     {
-     "name": "Black suit burgers",
-     "scene": "charcoal buns for the agents in black",
-     "method": "Hand-formed chuck patties griddled to medium, cheddar melted under a lid, pickles and burger sauce on charcoal or black sesame buns.",
+     "name": "Deli pastrami sandwiches",
+     "scene": "the lunch K never gets to finish",
+     "method": "Warm pastrami piled on rye with Swiss cheese and deli mustard, toasted in a pan until the cheese melts, pickles on the side.",
      "shop": [
-      "beef mince",
-      "charcoal burger buns",
-      "cheddar",
-      "dill pickles",
-      "mayonnaise"
+      "pastrami",
+      "rye bread",
+      "Swiss cheese",
+      "deli mustard",
+      "dill pickles"
      ]
     },
     {
@@ -7746,14 +7629,16 @@
      ]
     },
     {
-     "name": "Post office hot dogs",
-     "scene": "K's job sorting mail before he came back",
-     "method": "Franks simmered with onion, then griddled until blistered, in steamed buns with mustard and sweet relish.",
+     "name": "Ben's Famous calzones",
+     "scene": "the other thing on the menu at Ben's",
+     "method": "Pizza dough folded over ricotta, mozzarella, ham and basil, crimped shut, baked at 230C for 15 minutes, marinara for dipping.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "sweet relish"
+      "pizza dough",
+      "ricotta",
+      "mozzarella",
+      "ham",
+      "basil",
+      "passata"
      ]
     }
    ],
@@ -7821,15 +7706,15 @@
      ]
     },
     {
-     "name": "Six Demon Bag wings",
-     "scene": "six spices, Egg Shen's bag of tricks",
-     "method": "Wings marinated in soy, Shaoxing, star anise, cinnamon, Sichuan pepper, clove, fennel and ginger, baked at 220C for 40 minutes, glazed with honey in the last 5.",
+     "name": "Wang's restaurant spring rolls",
+     "scene": "the Chinatown kitchen where it all starts",
+     "method": "Pork, cabbage and mushroom rolled in spring roll wrappers, fried at 180C until crisp, sweet chilli and soy for dipping.",
      "shop": [
-      "chicken wings",
-      "star anise",
-      "Sichuan pepper",
-      "five spice",
-      "honey",
+      "pork mince",
+      "cabbage",
+      "shiitake mushrooms",
+      "spring roll wrappers",
+      "sweet chilli sauce",
       "soy sauce"
      ]
     }
@@ -8302,7 +8187,7 @@
    "title": "Annie",
    "year": "1982",
    "theme": "kids",
-   "tagline": "The sun'll come out. So will dessert.",
+   "tagline": "From the orphanage to the mansion, with dessert.",
    "description": "An orphan is invited to spend a week with billionaire Oliver Warbucks.",
    "serve_cue": "Serve the snacks when Annie arrives at the Warbucks mansion.",
    "snacks": [
@@ -8387,13 +8272,13 @@
    ],
    "drink": [
     {
-     "name": "Pink lemonade",
-     "scene": "by the mansion pool",
-     "method": "Lemon juice, sugar syrup and water with a splash of raspberry cordial, over ice.",
+     "name": "Ginger beer",
+     "scene": "the mansion staff's party drinks in 1933",
+     "method": "Ginger beer poured over ice with a squeeze of lime and a sprig of mint.",
      "shop": [
-      "lemons",
-      "caster sugar",
-      "raspberry cordial"
+      "ginger beer",
+      "limes",
+      "mint"
      ]
     }
    ],
@@ -8484,11 +8369,11 @@
    ],
    "drink": [
     {
-     "name": "Root beer",
-     "scene": "the strike rally on the streets",
-     "method": "Root beer over plenty of ice in tin mugs, a scoop of vanilla ice cream for the strike leaders.",
+     "name": "Sarsaparilla",
+     "scene": "a penny drink at the 1899 strike rally",
+     "method": "Sarsaparilla soda poured over ice in tall glasses, a scoop of vanilla ice cream for anyone who wants one.",
      "shop": [
-      "root beer",
+      "sarsaparilla soda",
       "vanilla ice cream"
      ]
     }
@@ -8532,14 +8417,13 @@
      ]
     },
     {
-     "name": "New York pretzels",
-     "scene": "the streets of the new world",
-     "method": "Soft pretzels brushed with melted butter, coarse salt scattered on, warmed at 200C for 5 minutes, mustard alongside.",
+     "name": "Black bread and butter",
+     "scene": "the Mousekewitz family's taste of the old country",
+     "method": "Dense dark rye bread sliced thick and spread with salted butter, a sprinkle of flaky salt and dill.",
      "shop": [
-      "soft pretzels",
+      "dark rye bread",
       "butter",
-      "rock salt",
-      "yellow mustard"
+      "dill"
      ]
     }
    ],
@@ -8587,13 +8471,13 @@
    ],
    "drink": [
     {
-     "name": "Hot cocoa",
-     "scene": "a cold New York night",
-     "method": "Cocoa and sugar whisked into hot milk with a pinch of salt.",
+     "name": "Russian tea in a glass",
+     "scene": "Papa's samovar on a cold New York night",
+     "method": "Black tea brewed strong and poured into glasses with lemon slices and a spoonful of jam to sweeten.",
      "shop": [
-      "cocoa",
-      "full cream milk",
-      "caster sugar"
+      "black tea",
+      "lemons",
+      "raspberry jam"
      ]
     }
    ],
@@ -8631,14 +8515,12 @@
      ]
     },
     {
-     "name": "Fifth Avenue pretzels",
-     "scene": "the city streets on Fifth Avenue",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C for 5 minutes, mustard alongside.",
+     "name": "Roasted chestnuts",
+     "scene": "the walk back to Jenny's Fifth Avenue townhouse",
+     "method": "Chestnuts scored with a cross, roasted at 220C for 25 minutes, wrapped in a tea towel to steam, peeled warm with a little salt.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
+      "chestnuts",
+      "sea salt flakes"
      ]
     }
    ],
@@ -8729,17 +8611,6 @@
       "honey",
       "sourdough",
       "radishes"
-     ]
-    },
-    {
-     "name": "Brooklyn Bridge pretzels",
-     "scene": "the bridge going up in his own time",
-     "method": "Soft pretzels brushed with butter, coarse salt, warmed at 200C for 5 minutes, served with a sharp grain mustard.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "wholegrain mustard"
      ]
     }
    ],
@@ -8923,15 +8794,16 @@
      ]
     },
     {
-     "name": "Christmas shopping pretzels",
-     "scene": "Manhattan at Christmas",
-     "method": "Soft pretzels brushed with butter, coarse salt and cinnamon sugar on half, warmed at 200C.",
+     "name": "Gingerbread squares",
+     "scene": "Christmas shopping in Manhattan",
+     "method": "Molasses gingerbread spiced with ginger, cinnamon and cloves, baked in a tray at 170C, cut into squares with a lemon glaze.",
      "shop": [
-      "soft pretzels",
+      "plain flour",
+      "golden syrup",
+      "ground ginger",
+      "ground cinnamon",
       "butter",
-      "rock salt",
-      "cinnamon",
-      "caster sugar"
+      "brown sugar"
      ]
     },
     {
@@ -8988,13 +8860,14 @@
    ],
    "drink": [
     {
-     "name": "Hot chocolate",
-     "scene": "or frozen, for the brave",
-     "method": "Dark chocolate melted into hot milk with a pinch of salt, whisked until frothy, marshmallows on top.",
+     "name": "Mulled cranberry punch",
+     "scene": "the Waldorf elevators on a winter night",
+     "method": "Cranberry juice warmed with orange slices, cinnamon and cloves, served hot in mugs.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "marshmallows"
+      "cranberry juice",
+      "oranges",
+      "cinnamon sticks",
+      "cloves"
      ]
     }
    ],
@@ -9115,15 +8988,15 @@
    "serve_cue": "Serve dinner while Holly's plane circles overhead, running out of fuel.",
    "snacks": [
     {
-     "name": "Dulles airport pretzels",
-     "scene": "waiting at arrivals for Holly",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C, beer cheese dip of cheddar, cream cheese and lager.",
+     "name": "Virginia ham biscuits",
+     "scene": "the snack bar at Dulles on Christmas Eve",
+     "method": "Buttermilk biscuits split warm and filled with thin slices of salty ham and a smear of mustard butter.",
      "shop": [
-      "soft pretzels",
+      "plain flour",
+      "buttermilk",
       "butter",
-      "cheddar",
-      "cream cheese",
-      "lager"
+      "leg ham",
+      "Dijon mustard"
      ]
     },
     {
@@ -9155,16 +9028,16 @@
    ],
    "mains": [
     {
-     "name": "Airport bar burger",
-     "scene": "eaten standing up between fights",
-     "method": "Two thin patties smashed on a smoking griddle, salted, flipped at 90 seconds, American cheese, onion and pickles on a toasted bun with mustard.",
+     "name": "Pulled pork rolls",
+     "scene": "Virginia barbecue, eaten standing up between fights",
+     "method": "Pork shoulder rubbed with paprika and brown sugar, slow cooked until it pulls apart, tossed in vinegar sauce, piled into soft rolls with slaw.",
      "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
-      "onions",
-      "dill pickles",
-      "yellow mustard"
+      "pork shoulder",
+      "sweet paprika",
+      "brown sugar",
+      "apple cider vinegar",
+      "soft rolls",
+      "cabbage"
      ]
     },
     {
@@ -9327,17 +9200,6 @@
       "russet potatoes",
       "vegetable oil",
       "fine salt"
-     ]
-    },
-    {
-     "name": "Toilet bomb devilled eggs",
-     "scene": "don't move, Roger",
-     "method": "Yolks whipped with mayo, Dijon and pickle juice, piped back, paprika. Serve them while sitting down.",
-     "shop": [
-      "eggs",
-      "mayonnaise",
-      "Dijon mustard",
-      "smoked paprika"
      ]
     },
     {
@@ -9722,16 +9584,15 @@
    "serve_cue": "Serve dessert when Axel bluffs his way into the Playboy Mansion party.",
    "snacks": [
     {
-     "name": "Shooting range nachos",
-     "scene": "the gun club where the bad guys practise",
-     "method": "Corn chips layered with black beans, cheddar and jalapeños, baked at 200C for 8 minutes, then pico de gallo, sour cream and guacamole.",
+     "name": "Rodeo Drive mini quiches",
+     "scene": "Axel crashing the Beverly Hills party circuit",
+     "method": "Mini shortcrust cases filled with egg, cream, gruyère and bacon, baked at 180C for 15 minutes until just set.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "tomatoes",
-      "avocados"
+      "shortcrust pastry",
+      "eggs",
+      "thickened cream",
+      "gruyère",
+      "bacon"
      ]
     },
     {
@@ -9748,15 +9609,15 @@
      ]
     },
     {
-     "name": "Detroit coney sliders",
-     "scene": "a taste of home in Beverly Hills",
-     "method": "Cocktail franks in mini buns topped with a loose beef chilli (fine mince simmered with onion, chilli powder and cumin), yellow mustard and raw onion.",
+     "name": "Pierogi",
+     "scene": "a taste of Detroit's Hamtramck, a long way from Beverly Hills",
+     "method": "Potato and cheese dumplings boiled then pan-fried in butter with onions, sour cream on the side.",
      "shop": [
-      "cocktail franks",
-      "mini hot dog buns",
-      "beef mince",
-      "chilli powder",
-      "yellow mustard"
+      "frozen pierogi",
+      "onions",
+      "butter",
+      "sour cream",
+      "dill"
      ]
     }
    ],
@@ -9839,15 +9700,15 @@
      ]
     },
     {
-     "name": "Queue pretzels",
+     "name": "Theme park churros",
      "scene": "waiting in line for the Spider",
-     "method": "Soft pretzels warmed at 200C, brushed with butter and rolled in cinnamon sugar, cream cheese icing to dip.",
+     "method": "Choux dough piped in long ridged lengths into oil at 180C, fried until crisp and golden, then rolled in cinnamon sugar while hot.",
      "shop": [
-      "soft pretzels",
+      "plain flour",
       "butter",
-      "cinnamon",
+      "eggs",
       "caster sugar",
-      "cream cheese"
+      "ground cinnamon"
      ]
     },
     {
@@ -9877,15 +9738,15 @@
      ]
     },
     {
-     "name": "Detroit burger",
-     "scene": "Axel's home town, a long way from the theme park",
-     "method": "Two thin patties smashed on a smoking griddle, American cheese on top, grilled onion and pickles on a toasted bun.",
+     "name": "Detroit-style square pizza",
+     "scene": "Axel's home town, crispy cheese edges and all",
+     "method": "Pizza dough pressed into an oiled rectangular tin, cheese right to the edges, sauce striped on top, baked at 250C until the edges go crisp and lacy.",
      "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
-      "brown onions",
-      "dill pickles"
+      "pizza dough",
+      "mozzarella",
+      "cheddar",
+      "passata",
+      "pepperoni"
      ]
     }
    ],
@@ -10038,17 +9899,6 @@
      ]
     },
     {
-     "name": "Release day pretzels",
-     "scene": "Reggie's out again, for a while",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C for 5 minutes, yellow mustard on the side.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
-     ]
-    },
-    {
      "name": "Glovebox jerky",
      "scene": "the snacks in Jack's beat-up car",
      "method": "Thin-sliced beef marinated in soy, Worcestershire, brown sugar and pepper overnight, dried at 70C for 4 hours.",
@@ -10135,15 +9985,16 @@
      ]
     },
     {
-     "name": "Gun range nachos",
-     "scene": "Cash's style, loud and messy",
-     "method": "Corn chips layered with refried beans, cheddar and jalapeños, baked at 200C for 8 minutes, sour cream and salsa on top.",
+     "name": "LA street tacos",
+     "scene": "the chase across East LA",
+     "method": "Marinated beef grilled hot and chopped small, in warm corn tortillas with onion, coriander, salsa verde and lime.",
      "shop": [
-      "corn chips",
-      "refried beans",
-      "cheddar",
-      "jalapeños",
-      "sour cream"
+      "skirt steak",
+      "corn tortillas",
+      "onions",
+      "coriander",
+      "salsa verde",
+      "limes"
      ]
     },
     {
@@ -10172,16 +10023,16 @@
      ]
     },
     {
-     "name": "Cash's cowboy burger",
-     "scene": "the rough one with the cowboy boots",
-     "method": "Beef patty griddled with cheddar, crisp bacon, beer-battered onion rings and barbecue sauce on a toasted bun.",
+     "name": "Prison mess hall meatloaf",
+     "scene": "the slop they break out to get away from",
+     "method": "Beef and pork meatloaf glazed with tomato sauce, baked at 180C for an hour, thick slices with mashed potato and peas.",
      "shop": [
       "beef mince",
-      "bacon",
-      "cheddar",
-      "onions",
-      "barbecue sauce",
-      "burger buns"
+      "pork mince",
+      "breadcrumbs",
+      "tomato sauce",
+      "potatoes",
+      "frozen peas"
      ]
     }
    ],
@@ -10329,15 +10180,12 @@
    "serve_cue": "Serve the mains when Hooch wrecks the car.",
    "snacks": [
     {
-     "name": "Hooch's drool dip",
-     "scene": "French onion dip, messy",
-     "method": "Caramelise 2 onions for 40 minutes, cool, stir into sour cream and cream cheese with garlic and chives. Ridged chips.",
+     "name": "Monterey Jack cheese crisps",
+     "scene": "Cypress Beach on the California coast",
+     "method": "Grated Monterey Jack baked in small piles at 200C for 7 minutes until lacy and golden, cooled into crisps, with salsa.",
      "shop": [
-      "brown onions",
-      "sour cream",
-      "cream cheese",
-      "chives",
-      "ridged potato chips"
+      "Monterey Jack",
+      "salsa"
      ]
     },
     {
@@ -10406,13 +10254,11 @@
    ],
    "drink": [
     {
-     "name": "Iced tea",
-     "scene": "Turner's tidy kitchen",
-     "method": "Black tea steeped strong, chilled, lemon and mint over ice.",
+     "name": "Fresh orange juice",
+     "scene": "Turner's neat-freak breakfast, before Hooch moves in",
+     "method": "Oranges squeezed fresh into a jug, served cold over ice in tidy glasses.",
      "shop": [
-      "black tea bags",
-      "lemons",
-      "mint"
+      "oranges"
      ]
     }
    ],
@@ -10648,17 +10494,6 @@
      ]
     },
     {
-     "name": "Cadet canteen fries",
-     "scene": "off duty in the canteen",
-     "method": "Thick-cut chips blanched at 140C, fried at 185C, salted, with a cup of gravy for dipping.",
-     "shop": [
-      "potatoes",
-      "beef stock",
-      "plain flour",
-      "butter"
-     ]
-    },
-    {
      "name": "Blue Oyster bar oysters",
      "scene": "the bar the cadets accidentally wander into",
      "method": "Oysters on ice with a shallot mignonette and lemon, or grilled with garlic butter for the nervous.",
@@ -10683,19 +10518,6 @@
       "eggs",
       "tomato sauce",
       "potatoes"
-     ]
-    },
-    {
-     "name": "Hightower's hearty burger",
-     "scene": "a big man's burger",
-     "method": "Two thick patties, cheddar, bacon, a fried egg and lettuce on a big toasted bun.",
-     "shop": [
-      "beef mince",
-      "cheddar",
-      "bacon",
-      "eggs",
-      "iceberg lettuce",
-      "burger buns"
      ]
     }
    ],
@@ -11072,19 +10894,6 @@
       "red chillies",
       "limes"
      ]
-    },
-    {
-     "name": "Surf shack nachos",
-     "scene": "Tyler's beach shack",
-     "method": "Corn chips layered with black beans, cheddar and jalapeños, baked at 200C for 8 minutes, then pico de gallo and guacamole.",
-     "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "avocados",
-      "tomatoes"
-     ]
     }
    ],
    "mains": [
@@ -11190,18 +10999,6 @@
    ],
    "mains": [
     {
-     "name": "Freeway burgers",
-     "scene": "eaten fast, you can't slow down",
-     "method": "Two thin patties smashed on a smoking griddle, American cheese, onion, pickle and burger sauce, wrapped tight in paper so you can eat one-handed.",
-     "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
-      "dill pickles",
-      "mayonnaise"
-     ]
-    },
-    {
      "name": "LA street tacos",
      "scene": "the streets of LA at full speed",
      "method": "Carne asada: skirt steak marinated in lime, orange, garlic and cumin, grilled hot, chopped, in doubled corn tortillas with onion, coriander and salsa verde.",
@@ -11274,14 +11071,15 @@
      ]
     },
     {
-     "name": "Pandora Theatre hot dogs",
-     "scene": "Nick the projectionist's cinema",
-     "method": "Franks simmered then griddled until blistered, in steamed buns with mustard and ketchup, wrapped in foil like the candy bar does it.",
+     "name": "Times Square knishes",
+     "scene": "Danny's New York, outside the Pandora",
+     "method": "Mashed potato and onion wrapped in pastry, baked until golden and served hot with yellow mustard.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "tomato sauce"
+      "potatoes",
+      "onions",
+      "puff pastry",
+      "eggs",
+      "yellow mustard"
      ]
     }
    ],
@@ -11471,18 +11269,6 @@
       "hot dog buns",
       "yellow mustard",
       "sweet relish"
-     ]
-    },
-    {
-     "name": "Seventh inning pretzels",
-     "scene": "the seventh inning stretch, sung badly",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C, cheese sauce (cheddar melted into evaporated milk) to dip.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "cheddar",
-      "evaporated milk"
      ]
     }
    ],
@@ -12005,16 +11791,16 @@
    ],
    "dessert": [
     {
-     "name": "Hot chocolate brownies",
-     "scene": "warmth for the cold up top",
-     "method": "Fudgy brownies (melted chocolate and butter, sugar, eggs, flour, cocoa) baked at 175C for 25 minutes, served warm with hot chocolate sauce poured over at the table.",
+     "name": "Apple strudel",
+     "scene": "the mountain lodge after the rescue",
+     "method": "Thin pastry rolled around apples, raisins, cinnamon and buttery breadcrumbs, baked at 190C until golden, icing sugar and cream.",
      "shop": [
-      "dark chocolate",
-      "butter",
-      "eggs",
-      "caster sugar",
-      "plain flour",
-      "thickened cream"
+      "filo pastry",
+      "green apples",
+      "raisins",
+      "ground cinnamon",
+      "breadcrumbs",
+      "butter"
      ]
     }
    ],
@@ -12365,17 +12151,6 @@
       "capsicums",
       "celery",
       "limes"
-     ]
-    },
-    {
-     "name": "El train pretzels",
-     "scene": "the car chase on the train tracks",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C for 5 minutes, yellow mustard on the side.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
      ]
     }
    ],
@@ -12869,14 +12644,14 @@
      ]
     },
     {
-     "name": "Nut and bolt pretzels",
-     "scene": "knotted like robot parts",
-     "method": "Pretzel dough rolled into thin ropes and tied into hex-nut knots, 30 seconds in a baking soda bath, coarse salt, baked at 220C for 12 minutes.",
+     "name": "Hazelnut brittle",
+     "scene": "the Oregon coast where Stephanie lives",
+     "method": "Sugar cooked to amber, butter and toasted hazelnuts stirred through, poured thin on a tray, cooled and snapped into shards.",
      "shop": [
-      "bread flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt"
+      "hazelnuts",
+      "caster sugar",
+      "butter",
+      "sea salt flakes"
      ]
     }
    ],
@@ -12909,15 +12684,16 @@
    ],
    "dessert": [
     {
-     "name": "Grasshopper chocolate mint slice",
-     "scene": "Number 5 learns what disassemble means",
-     "method": "Chocolate biscuit base, a peppermint cream layer (icing sugar, butter, peppermint essence, green colouring), set dark chocolate on top, cut into squares.",
+     "name": "Blackberry cobbler",
+     "scene": "summer on the Astoria coast",
+     "method": "Blackberries tossed with sugar and lemon under a buttery biscuit topping, baked at 190C for 35 minutes, vanilla ice cream.",
      "shop": [
-      "chocolate biscuits",
+      "blackberries",
+      "caster sugar",
+      "lemons",
+      "self-raising flour",
       "butter",
-      "icing sugar",
-      "peppermint essence",
-      "dark chocolate"
+      "vanilla ice cream"
      ]
     }
    ],
@@ -13049,17 +12825,6 @@
    "description": "A scientist and his German shepherd may be the last people left in New York.",
    "serve_cue": "Serve the snacks when Robert and Sam go hunting deer in Times Square.",
    "snacks": [
-    {
-     "name": "Times Square popcorn",
-     "scene": "eaten alone in an empty city",
-     "method": "Popcorn popped in coconut oil, butter and salt, served in a big bowl for one.",
-     "shop": [
-      "popcorn kernels",
-      "coconut oil",
-      "butter",
-      "fine salt"
-     ]
-    },
     {
      "name": "Central Park corn chips",
      "scene": "from the corn he grows in the park",
@@ -13245,18 +13010,6 @@
    "description": "A reprogrammed Terminator protects young John Connor from the liquid metal T-1000.",
    "serve_cue": "Serve the mains when the Terminator walks into the biker bar to borrow some clothes.",
    "snacks": [
-    {
-     "name": "Galleria food court pretzels",
-     "scene": "the mall chase",
-     "method": "Soft pretzels brushed with butter and cinnamon sugar, warmed at 200C, cream cheese icing dip.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "cinnamon",
-      "caster sugar",
-      "cream cheese"
-     ]
-    },
     {
      "name": "Enrique's camp tortillas",
      "scene": "Sarah's old friend in the desert",
@@ -13471,17 +13224,6 @@
       "sesame seeds",
       "sea salt flakes",
       "extra virgin olive oil"
-     ]
-    },
-    {
-     "name": "Hudson's mess hall fries",
-     "scene": "game over, man, pass the sauce",
-     "method": "Thick-cut chips blanched at 140C, fried at 185C, tossed in chicken salt, gravy on the side.",
-     "shop": [
-      "potatoes",
-      "chicken salt",
-      "beef stock",
-      "plain flour"
      ]
     }
    ],
@@ -13792,15 +13534,16 @@
    ],
    "mains": [
     {
-     "name": "Johnny Cab burgers",
-     "scene": "eat them in the back seat",
-     "method": "Two thin patties smashed on a hot griddle, American cheese, onion and pickles on a toasted bun, wrapped tight in paper.",
+     "name": "Venusville red beans and rice",
+     "scene": "the cheap eats in the Mars mining quarter",
+     "method": "Red kidney beans simmered with smoked sausage, onion, celery, capsicum and Cajun spice until creamy, over white rice.",
      "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
+      "red kidney beans",
+      "smoked sausages",
       "onions",
-      "dill pickles"
+      "celery",
+      "green capsicum",
+      "long grain rice"
      ]
     },
     {
@@ -14006,14 +13749,15 @@
      ]
     },
     {
-     "name": "Spaceball burger",
-     "scene": "the bun wears a helmet",
-     "method": "Beef burger with cheese on a black sesame bun, a small onion ring on top for the helmet.",
+     "name": "Moon diner hash and eggs",
+     "scene": "the roadside diner on the moon, with an unexpected guest",
+     "method": "Diced potatoes fried crisp with onion and corned beef, two fried eggs on top, hot sauce on the side.",
      "shop": [
-      "beef mince",
-      "black sesame buns",
-      "cheddar",
-      "onions"
+      "potatoes",
+      "corned beef",
+      "onions",
+      "eggs",
+      "hot sauce"
      ]
     }
    ],
@@ -14101,19 +13845,6 @@
       "potatoes",
       "Dijon mustard"
      ]
-    },
-    {
-     "name": "Area 51 canteen burgers",
-     "scene": "for the alien autopsy team",
-     "method": "Thick chuck patties griddled to medium, cheddar, lettuce, tomato, pickles and onion on toasted buns.",
-     "shop": [
-      "beef chuck mince",
-      "cheddar",
-      "iceberg lettuce",
-      "tomatoes",
-      "dill pickles",
-      "burger buns"
-     ]
     }
    ],
    "dessert": [
@@ -14174,17 +13905,6 @@
       "soy sauce",
       "black peppercorns",
       "brown sugar"
-     ]
-    },
-    {
-     "name": "Drill bit pretzels",
-     "scene": "the drilling team",
-     "method": "Pretzel dough rolled into long twisted spirals like drill bits, baking soda bath, coarse salt, baked at 220C.",
-     "shop": [
-      "bread flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt"
      ]
     }
    ],
@@ -14303,15 +14023,16 @@
      ]
     },
     {
-     "name": "Convention burgers",
-     "scene": "signing autographs all day",
-     "method": "Two thin patties smashed on a smoking griddle, American cheese, pickles and burger sauce (mayo, relish, mustard) on toasted buns.",
+     "name": "Hotel club sandwiches",
+     "scene": "Jason's morning after the convention",
+     "method": "Toasted triple-deckers with turkey, bacon, lettuce, tomato and mayo, cut into quarters and pinned with toothpicks, chips on the side.",
      "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
-      "dill pickles",
-      "mayonnaise"
+      "white bread",
+      "sliced turkey",
+      "bacon",
+      "iceberg lettuce",
+      "tomatoes",
+      "potato chips"
      ]
     }
    ],
@@ -14405,14 +14126,15 @@
      ]
     },
     {
-     "name": "Agent Smith's burgers",
-     "scene": "endlessly copied, all identical",
-     "method": "Identical sliders made in a ring mould, each with the same slice of cheese and pickle.",
+     "name": "Tasty Wheat porridge",
+     "scene": "the ship's breakfast that Mouse swears tastes like the real thing",
+     "method": "Rolled oats cooked slowly in milk with a pinch of salt, topped with brown sugar, banana and cream, served in plain bowls.",
      "shop": [
-      "beef mince",
-      "slider buns",
-      "American cheese",
-      "dill pickles"
+      "rolled oats",
+      "milk",
+      "brown sugar",
+      "bananas",
+      "thickened cream"
      ]
     }
    ],
@@ -14673,18 +14395,6 @@
       "Worcestershire sauce",
       "brown sugar"
      ]
-    },
-    {
-     "name": "Graboid sausage rolls",
-     "scene": "long, pale and hungry",
-     "method": "Sausage mince with onion and thyme rolled in puff pastry into long logs, egg washed, baked at 200C for 25 minutes, cut long.",
-     "shop": [
-      "pork sausage mince",
-      "onions",
-      "thyme",
-      "puff pastry",
-      "eggs"
-     ]
     }
    ],
    "mains": [
@@ -14813,15 +14523,13 @@
    ],
    "dessert": [
     {
-     "name": "Tent-sized cookie",
-     "scene": "big enough to camp under",
-     "method": "Choc chip cookie dough pressed into a pizza tray, baked at 180C for 18 minutes.",
+     "name": "Backyard s'mores",
+     "scene": "camping out in the grass jungle",
+     "method": "Toast marshmallows over a flame and squash them with squares of milk chocolate between two plain biscuits.",
      "shop": [
-      "butter",
-      "brown sugar",
-      "plain flour",
-      "choc chips",
-      "eggs"
+      "marshmallows",
+      "milk chocolate",
+      "plain biscuits"
      ]
     }
    ],
@@ -14862,13 +14570,15 @@
      ]
     },
     {
-     "name": "Phone booth pretzels",
-     "scene": "the phone booth time machine",
-     "method": "Pretzel rods dipped two-thirds in melted dark chocolate, rolled in crushed pretzels and sprinkles, set on baking paper.",
+     "name": "Olives and feta",
+     "scene": "So-crates, a snack from ancient Greece",
+     "method": "Feta cubes and mixed olives marinated in olive oil with lemon zest, oregano and chilli, with crusty bread.",
      "shop": [
-      "pretzel rods",
-      "dark chocolate",
-      "sprinkles"
+      "feta",
+      "mixed olives",
+      "lemons",
+      "dried oregano",
+      "crusty bread"
      ]
     },
     {
@@ -14970,19 +14680,6 @@
       "caster sugar",
       "lemon curd"
      ]
-    },
-    {
-     "name": "Devils Tower dip",
-     "scene": "shaped like the mountain",
-     "method": "Seven-layer dip built tall in a glass: refried beans, guacamole, sour cream, salsa, cheese, olives and spring onion. Corn chips.",
-     "shop": [
-      "refried beans",
-      "avocados",
-      "sour cream",
-      "tomatoes",
-      "cheddar",
-      "corn chips"
-     ]
     }
    ],
    "mains": [
@@ -15060,19 +14757,6 @@
       "mixed nuts",
       "butter",
       "smoked paprika"
-     ]
-    },
-    {
-     "name": "Ronto wrap bites",
-     "scene": "pork sausage and roast pork in pita, Batuu street food",
-     "method": "Halved mini pita filled with sliced grilled pork sausage, roast pork, a peppery cabbage slaw and a spoon of peppercorn sauce.",
-     "shop": [
-      "mini pita",
-      "pork sausages",
-      "roast pork",
-      "cabbage",
-      "black peppercorns",
-      "mayonnaise"
      ]
     },
     {
@@ -15370,15 +15054,16 @@
    "serve_cue": "Serve the mains when Hogarth hides the giant in Dean's junkyard.",
    "snacks": [
     {
-     "name": "Scrap metal pretzels",
-     "scene": "bent like the junk the giant eats",
-     "method": "Pretzel dough twisted into bolts and bent shapes, baked in a soda bath style, brushed with butter and coarse salt.",
+     "name": "Mini whoopie pies",
+     "scene": "a small-town Maine treat from 1957",
+     "method": "Two small cocoa cakes sandwiched with marshmallow cream filling, baked at 180C for 10 minutes.",
      "shop": [
-      "bread flour",
-      "dried yeast",
-      "bicarb soda",
+      "plain flour",
+      "cocoa powder",
+      "buttermilk",
       "butter",
-      "rock salt"
+      "marshmallow fluff",
+      "eggs"
      ]
     },
     {
@@ -15417,18 +15102,6 @@
       "eggs",
       "tomato sauce",
       "potatoes"
-     ]
-    },
-    {
-     "name": "Junkyard burgers",
-     "scene": "for the giant's friends at Dean's yard",
-     "method": "Thick chuck patties griddled to medium, cheddar melted under a lid, onion and pickles on toasted buns, wrapped in foil to keep warm.",
-     "shop": [
-      "beef mince",
-      "cheddar",
-      "onions",
-      "dill pickles",
-      "burger buns"
      ]
     }
    ],
@@ -15521,16 +15194,16 @@
      ]
     },
     {
-     "name": "Axis Chemicals hot dogs",
-     "scene": "acid green relish, from the plant where it all started",
-     "method": "Franks griddled, in steamed buns with yellow mustard and a bright green relish (cucumber, green capsicum and onion pickled with sugar, vinegar and turmeric, a drop of green).",
+     "name": "Gotham deli Reuben sandwiches",
+     "scene": "the old-world delis of Gotham's back streets",
+     "method": "Corned beef, sauerkraut and Swiss cheese on rye with Russian dressing, toasted in butter until it melts.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "cucumber",
-      "green capsicum",
-      "white vinegar",
-      "yellow mustard"
+      "corned beef",
+      "sauerkraut",
+      "Swiss cheese",
+      "rye bread",
+      "mayonnaise",
+      "tomato sauce"
      ]
     }
    ],
@@ -15796,14 +15469,15 @@
      ]
     },
     {
-     "name": "Airfield pretzels",
-     "scene": "the hangar at the airfield",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C for 5 minutes, yellow mustard on the side.",
+     "name": "Hangar egg salad sandwiches",
+     "scene": "lunch pails at the 1938 airfield",
+     "method": "Chopped boiled eggs with mayonnaise, chives and mustard on soft white bread, crusts on, wrapped in wax paper.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
+      "eggs",
+      "mayonnaise",
+      "chives",
+      "Dijon mustard",
+      "white bread"
      ]
     }
    ],
@@ -16196,17 +15870,6 @@
       "yellow food colouring",
       "raspberry jam"
      ]
-    },
-    {
-     "name": "Owlship popcorn",
-     "scene": "Archie, Nite Owl's ship",
-     "method": "Popcorn tossed in brown butter, honey and a pinch of salt, baked at 150C for 10 minutes until crisp.",
-     "shop": [
-      "popcorn kernels",
-      "butter",
-      "honey",
-      "sea salt flakes"
-     ]
     }
    ],
    "mains": [
@@ -16287,14 +15950,14 @@
      ]
     },
     {
-     "name": "Stakeout diner fries",
-     "scene": "Big Daddy's stakeout across the street",
-     "method": "Hand-cut chips blanched at 140C, fried at 185C until crisp, salted, with a cup of brown gravy (butter and flour roux, beef stock).",
+     "name": "Bodega egg and cheese rolls",
+     "scene": "Dave's walk to school through Manhattan",
+     "method": "Soft rolls with fried eggs and melted American cheese, salt, pepper and hot sauce, wrapped in foil.",
      "shop": [
-      "potatoes",
-      "beef stock",
-      "plain flour",
-      "butter"
+      "soft rolls",
+      "eggs",
+      "American cheese",
+      "hot sauce"
      ]
     },
     {
@@ -16312,15 +15975,15 @@
    ],
    "mains": [
     {
-     "name": "Comic shop hot dogs",
-     "scene": "the gang's hangout at Atomic Comics",
-     "method": "Franks simmered then griddled until blistered, in steamed buns with yellow mustard, sweet relish and chopped onion.",
+     "name": "Pizza by the slice",
+     "scene": "the gang's hangout after school",
+     "method": "Big thin-crust New York slices with tomato sauce and mozzarella, folded in half to eat, garlic powder and chilli flakes on the side.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "sweet relish",
-      "onions"
+      "pizza dough",
+      "passata",
+      "mozzarella",
+      "parmesan",
+      "chilli flakes"
      ]
     },
     {
@@ -16490,16 +16153,16 @@
      ]
     },
     {
-     "name": "Helicarrier pretzels",
-     "scene": "the flying base",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C, beer cheese dip (sharp cheddar melted with lager, cream cheese and mustard).",
+     "name": "Hummus and flatbread",
+     "scene": "after the battle, round the corner from the shawarma place",
+     "method": "Chickpeas blitzed smooth with tahini, garlic, lemon and ice water, swirled with olive oil and paprika, warm flatbread for scooping.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "cheddar",
-      "lager",
-      "cream cheese"
+      "chickpeas",
+      "tahini",
+      "garlic",
+      "lemons",
+      "flatbread",
+      "sweet paprika"
      ]
     },
     {
@@ -16527,18 +16190,6 @@
       "ground cumin",
       "flatbread",
       "pickled turnips"
-     ]
-    },
-    {
-     "name": "Hulk smash burgers",
-     "scene": "smash them flat",
-     "method": "Beef balls smashed thin on a smoking griddle, two per burger, American cheese, onion and pickles.",
-     "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
-      "onions",
-      "dill pickles"
      ]
     }
    ],
@@ -16605,18 +16256,6 @@
       "butter",
       "garlic",
       "hummus"
-     ]
-    },
-    {
-     "name": "Arc reactor nachos",
-     "scene": "glowing blue corn chips",
-     "method": "Blue corn tortilla chips with black beans, cheddar and jalapeño baked, sour cream and salsa.",
-     "shop": [
-      "blue corn tortillas",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "sour cream"
      ]
     }
    ],
@@ -16710,16 +16349,16 @@
      ]
     },
     {
-     "name": "Graffiti nachos",
-     "scene": "Miles' art on the walls",
-     "method": "Corn chips with black beans and cheddar baked at 200C for 8 minutes, then splashes of lime crema, pickled red onion and coriander like spray paint.",
+     "name": "Chopped cheese rolls",
+     "scene": "Miles's corner of Brooklyn",
+     "method": "Beef mince chopped on the griddle with onions and melted American cheese, stuffed into hero rolls with lettuce, tomato, ketchup and mayo.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "red onion",
-      "coriander",
-      "sour cream"
+      "beef mince",
+      "onions",
+      "American cheese",
+      "hero rolls",
+      "iceberg lettuce",
+      "tomatoes"
      ]
     }
    ],
@@ -16767,13 +16406,15 @@
    ],
    "drink": [
     {
-     "name": "Iced tea",
-     "scene": "the drink at Miles' new school",
-     "method": "Black tea steeped strong, sweetened while hot, chilled, over ice with lemon.",
+     "name": "Coconut milk coquito",
+     "scene": "Miles's mum's Christmas, minus the rum",
+     "method": "Coconut milk, condensed milk and evaporated milk blended with cinnamon, nutmeg and vanilla, served ice cold in small glasses.",
      "shop": [
-      "black tea bags",
-      "lemons",
-      "caster sugar"
+      "coconut milk",
+      "sweetened condensed milk",
+      "evaporated milk",
+      "ground cinnamon",
+      "ground nutmeg"
      ]
     }
    ],
@@ -16960,15 +16601,16 @@
    ],
    "dessert": [
     {
-     "name": "Parade cupcakes",
-     "scene": "for Danke Schoen on the parade float",
-     "method": "Vanilla cupcakes with tall swirls of buttercream in bright float colours, topped with sprinkles and a tiny paper flag.",
+     "name": "Chez Quis profiteroles",
+     "scene": "lunch booked under the name Abe Froman",
+     "method": "Choux pastry piped into small puffs, baked at 200C until hollow, filled with vanilla cream and topped with warm chocolate sauce.",
      "shop": [
+      "plain flour",
       "butter",
       "eggs",
-      "self-raising flour",
-      "icing sugar",
-      "sprinkles"
+      "thickened cream",
+      "dark chocolate",
+      "vanilla extract"
      ]
     }
    ],
@@ -17180,13 +16822,15 @@
    ],
    "drink": [
     {
-     "name": "Pink lemonade",
-     "scene": "Andie's colour, every time",
-     "method": "Fresh lemon juice, sugar syrup and cold water with a splash of raspberry purée, over ice.",
+     "name": "Prom punch",
+     "scene": "the prom Andie walks into on her own",
+     "method": "Cranberry and pineapple juice with lemonade and orange slices in a big glass bowl, frozen raspberries floating on top.",
      "shop": [
-      "lemons",
-      "caster sugar",
-      "raspberries"
+      "cranberry juice",
+      "pineapple juice",
+      "lemonade",
+      "oranges",
+      "frozen raspberries"
      ]
     }
    ],
@@ -17507,19 +17151,6 @@
      ]
     },
     {
-     "name": "Liger nuggets",
-     "scene": "bred for its skills in magic",
-     "method": "Chicken breast cut into nuggets, brined in buttermilk, coated in seasoned flour and crushed corn flakes, fried at 175C for 4 minutes. Honey mustard.",
-     "shop": [
-      "chicken breasts",
-      "buttermilk",
-      "corn flakes",
-      "plain flour",
-      "honey",
-      "Dijon mustard"
-     ]
-    },
-    {
      "name": "Idaho potato skins",
      "scene": "it's Idaho, everything is potatoes",
      "method": "Bake small potatoes, halve and scoop, brush with butter, crisp at 220C, fill with cheddar and bacon, bake again, sour cream and chives.",
@@ -17745,15 +17376,14 @@
      ]
     },
     {
-     "name": "Castle Rock diner burger",
-     "scene": "back in town after two days",
-     "method": "Thick chuck patty seasoned at the last moment, griddled to medium, cheddar melted under a lid, onion and pickles on a toasted bun.",
+     "name": "Campfire hamburger patties",
+     "scene": "the ground beef Gordie buys at the general store",
+     "method": "Beef mince seasoned with salt and pepper, shaped into thick patties, cooked over coals or a hot pan, eaten in bread with fried onions.",
      "shop": [
-      "beef chuck mince",
-      "cheddar",
+      "beef mince",
       "onions",
-      "dill pickles",
-      "burger buns"
+      "white bread",
+      "tomato sauce"
      ]
     }
    ],
@@ -18033,7 +17663,7 @@
    "mains": [
     {
      "name": "Frosty Palace burger",
-     "scene": "where Frenchy hears she's a beauty school dropout",
+     "scene": "the hangout where Frenchy dreams of beauty school",
      "method": "Thin smashed patties, American cheese, onion, pickles, mustard and ketchup on a soft toasted bun, 1950s style.",
      "shop": [
       "beef mince",
@@ -18060,7 +17690,7 @@
    "dessert": [
     {
      "name": "Frosty Palace sundae",
-     "scene": "the beauty school dropout scene",
+     "scene": "the dream sequence at the Frosty Palace",
      "method": "Vanilla ice cream, strawberry sauce, hot fudge, whipped cream and a cherry in a tall sundae glass.",
      "shop": [
       "vanilla ice cream",
@@ -18073,13 +17703,14 @@
    ],
    "drink": [
     {
-     "name": "Pink Ladies lemonade",
-     "scene": "the Pink Ladies' colour",
-     "method": "Fresh lemonade with a splash of raspberry purée, over ice.",
+     "name": "Cherry cola float",
+     "scene": "the Frosty Palace fountain, 1958",
+     "method": "Cherry syrup and cola poured over a scoop of vanilla ice cream in a tall glass, a cherry on top.",
      "shop": [
-      "lemons",
-      "caster sugar",
-      "raspberries"
+      "cola",
+      "cherry syrup",
+      "vanilla ice cream",
+      "maraschino cherries"
      ]
     }
    ],
@@ -18119,14 +17750,15 @@
      ]
     },
     {
-     "name": "Wichita airport pretzels",
-     "scene": "the flight that lands in Kansas",
-     "method": "Soft pretzels brushed with butter and coarse salt, warmed at 200C for 5 minutes, yellow mustard on the side.",
+     "name": "Truck stop beef jerky",
+     "scene": "the long haul across the Midwest",
+     "method": "Thin strips of beef marinated in soy, Worcestershire, brown sugar and pepper overnight, dried at 70C for 4 hours.",
      "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
+      "beef topside",
+      "soy sauce",
+      "Worcestershire sauce",
+      "brown sugar",
+      "black pepper"
      ]
     }
    ],
@@ -18240,18 +17872,6 @@
       "brown sugar",
       "smoked paprika"
      ]
-    },
-    {
-     "name": "Walley World hot dogs",
-     "scene": "the park was closed, so make your own",
-     "method": "Franks simmered and griddled, in steamed buns with mustard, relish and onions fried slowly until soft and brown.",
-     "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "sweet relish",
-      "brown onions"
-     ]
     }
    ],
    "dessert": [
@@ -18313,17 +17933,6 @@
       "peanuts in the shell",
       "fine salt",
       "cayenne pepper"
-     ]
-    },
-    {
-     "name": "Ray's Music Exchange pretzels",
-     "scene": "Ray sells them the keyboard",
-     "method": "Soft pretzels brushed with melted butter and coarse salt, warmed at 200C for 5 minutes, yellow mustard on the side.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
      ]
     }
    ],
@@ -18604,15 +18213,14 @@
      ]
     },
     {
-     "name": "Brake pad nachos",
-     "scene": "guaranteed for life",
-     "method": "Corn chips layered with beans, cheddar and jalapeño, baked hot, sour cream and salsa on top.",
+     "name": "Buckeyes",
+     "scene": "chocolate and peanut butter, Ohio's own sweet",
+     "method": "Peanut butter, butter and icing sugar rolled into balls, chilled, dipped in dark chocolate leaving a round of peanut butter showing.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "sour cream"
+      "peanut butter",
+      "butter",
+      "icing sugar",
+      "dark chocolate"
      ]
     },
     {
@@ -18630,16 +18238,16 @@
    ],
    "mains": [
     {
-     "name": "Diner wings and fries",
-     "scene": "worth begging the waitress for",
-     "method": "A big plate of crisp baked wings tossed in hot sauce and butter, double-fried chips, blue cheese dip and celery sticks.",
+     "name": "Cincinnati chilli spaghetti",
+     "scene": "the sales trip through Ohio",
+     "method": "Beef simmered loose with tomato, cinnamon, cumin, allspice and a square of dark chocolate for 90 minutes, ladled over spaghetti and buried in finely grated cheddar.",
      "shop": [
-      "chicken wings",
-      "hot sauce",
-      "potatoes",
-      "blue cheese",
-      "celery",
-      "butter"
+      "beef mince",
+      "onions",
+      "crushed tomatoes",
+      "ground cinnamon",
+      "dark chocolate",
+      "spaghetti"
      ]
     },
     {
@@ -19119,17 +18727,6 @@
      ]
     },
     {
-     "name": "Cabin one pretzels",
-     "scene": "the key to cabin one",
-     "method": "Soft pretzels brushed with melted butter and coarse salt, warmed at 200C for 5 minutes, mustard on the side.",
-     "shop": [
-      "soft pretzels",
-      "butter",
-      "rock salt",
-      "yellow mustard"
-     ]
-    },
-    {
      "name": "Mother's pickled onions",
      "scene": "from the house on the hill",
      "method": "Small onions peeled, brined overnight, packed in hot spiced vinegar with sugar and peppercorns, pickled a week.",
@@ -19372,28 +18969,24 @@
    ],
    "dessert": [
     {
-     "name": "Black and white cookies",
-     "scene": "the grainy 1968 film stock",
-     "method": "Soft vanilla cookies baked at 180C for 12 minutes, iced half vanilla fondant, half chocolate.",
+     "name": "Canned peaches",
+     "scene": "what Ben finds in the farmhouse pantry",
+     "method": "Tinned peach halves chilled and served in their syrup with a spoon of cream or vanilla ice cream.",
      "shop": [
-      "plain flour",
-      "butter",
-      "eggs",
-      "sour cream",
-      "icing sugar",
-      "cocoa"
+      "tinned peaches",
+      "thickened cream"
      ]
     }
    ],
    "drink": [
     {
-     "name": "Farmhouse lemonade",
-     "scene": "from the farmhouse kitchen",
-     "method": "Lemon juice, sugar syrup and cold water in a big jug, sliced lemon and mint.",
+     "name": "Percolator coffee",
+     "scene": "the long night boarded up in the farmhouse",
+     "method": "Strong black coffee brewed in a stovetop pot and kept hot all night, sugar and milk on the side.",
      "shop": [
-      "lemons",
-      "caster sugar",
-      "mint"
+      "ground coffee",
+      "milk",
+      "sugar"
      ]
     }
    ],
@@ -19526,13 +19119,12 @@
      ]
     },
     {
-     "name": "Whiteout popcorn",
-     "scene": "the storm outside",
-     "method": "White chocolate popcorn: popcorn tossed in melted white chocolate and a pinch of flaky salt, spread to set.",
+     "name": "Hot buttered toast",
+     "scene": "Nauls's kitchen, on roller skates",
+     "method": "Thick white toast spread right to the edges with salted butter while hot, cut into soldiers.",
      "shop": [
-      "popcorn kernels",
-      "white chocolate",
-      "sea salt flakes"
+      "thick white bread",
+      "butter"
      ]
     },
     {
@@ -19563,15 +19155,16 @@
      ]
     },
     {
-     "name": "Kennel-free hot dogs",
-     "scene": "nothing from the dog kennel, promise",
-     "method": "Franks simmered 5 minutes then griddled until blistered, sauerkraut warmed with caraway, onions cooked slowly in butter until soft and brown, all in steamed buns with yellow mustard.",
+     "name": "Outpost camp stew",
+     "scene": "Nauls's kitchen at Outpost 31",
+     "method": "Beef chuck, potato, carrot and onion simmered for two hours in stock with tomato paste and thyme until thick.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "sauerkraut",
-      "onions"
+      "beef chuck",
+      "potatoes",
+      "carrots",
+      "onions",
+      "beef stock",
+      "tomato paste"
      ]
     }
    ],
@@ -19792,12 +19385,13 @@
    ],
    "drink": [
     {
-     "name": "Hot chocolate",
-     "scene": "Amelia needs sleep",
-     "method": "Dark chocolate melted into hot milk, pinch of salt.",
+     "name": "Warm milk with honey",
+     "scene": "Amelia, desperate for one night's sleep",
+     "method": "Milk warmed gently with a spoon of honey and a pinch of cinnamon, served in mugs before bed.",
      "shop": [
-      "dark chocolate",
-      "full cream milk"
+      "milk",
+      "honey",
+      "ground cinnamon"
      ]
     }
    ],
@@ -19868,16 +19462,16 @@
      ]
     },
     {
-     "name": "Late night diner burger",
-     "scene": "the group's endless drives around the suburbs",
-     "method": "Chuck mince rolled into loose balls, smashed hard on a smoking griddle, flipped once, American cheese on, stacked double on a toasted bun with pickles, onion and a mustard mayo.",
+     "name": "Late-night Greek diner gyros",
+     "scene": "driving the Detroit suburbs all night",
+     "method": "Pork marinated with garlic, oregano and lemon, griddled and sliced, wrapped in warm pita with tzatziki, tomato, onion and chips.",
      "shop": [
-      "beef chuck mince",
-      "American cheese",
-      "dill pickles",
-      "brown onions",
-      "burger buns",
-      "mayonnaise"
+      "pork shoulder steaks",
+      "garlic",
+      "dried oregano",
+      "pita bread",
+      "Greek yoghurt",
+      "tomatoes"
      ]
     }
    ],
@@ -20158,18 +19752,6 @@
       "cucumber",
       "goat's cheese"
      ]
-    },
-    {
-     "name": "Silent auction devilled eggs",
-     "scene": "the bingo cards come out in silence",
-     "method": "Eggs boiled 10 minutes, yolks whipped with mayo, Dijon, a dash of vinegar and smoked paprika, piped into whites and finished with chives.",
-     "shop": [
-      "eggs",
-      "mayonnaise",
-      "Dijon mustard",
-      "smoked paprika",
-      "chives"
-     ]
     }
    ],
    "mains": [
@@ -20216,14 +19798,13 @@
    ],
    "drink": [
     {
-     "name": "Porch iced tea",
-     "scene": "a jug on the Armitages' porch",
-     "method": "Black tea brewed strong, sweetened while hot, cooled, poured over ice with lemon and fresh mint.",
+     "name": "Missy's tea",
+     "scene": "stirred slowly with a silver spoon",
+     "method": "Black tea brewed in a china pot, poured into teacups with milk and sugar, stirred slowly with a silver spoon.",
      "shop": [
       "black tea",
-      "caster sugar",
-      "lemons",
-      "mint"
+      "milk",
+      "sugar"
      ]
     }
    ],
@@ -20586,7 +20167,7 @@
     {
      "name": "Boston baked beans on toast",
      "scene": "1950s Boston pantry food",
-     "method": "Navy beans soaked overnight, baked 4 hours at 150C with salt pork, molasses, mustard powder and onion, spooned onto buttered toast.",
+     "method": "Navy beans slow cooked with molasses, mustard, onion and bacon at 150C for three hours, piled onto hot buttered toast.",
      "shop": [
       "dried navy beans",
       "speck",
@@ -20794,18 +20375,6 @@
       "dark chocolate",
       "sea salt flakes"
      ]
-    },
-    {
-     "name": "Striped jumper cookies",
-     "scene": "Freddy's red and green jumper",
-     "method": "Vanilla shortbread dough split, half tinted red and half green, layered, chilled, sliced and baked at 160C for 15 minutes so every biscuit is striped.",
-     "shop": [
-      "butter",
-      "plain flour",
-      "icing sugar",
-      "red food colouring",
-      "green food colouring"
-     ]
     }
    ],
    "mains": [
@@ -20823,16 +20392,16 @@
      ]
     },
     {
-     "name": "Springwood diner burger",
-     "scene": "small town, normal as anything",
-     "method": "Chuck mince smashed thin on a hot griddle, cheddar melted on, onion, pickles, lettuce and tomato on a toasted bun, fries alongside.",
+     "name": "Cafeteria sloppy joes",
+     "scene": "Nancy dozes off in English class",
+     "method": "Beef mince cooked down with onion, tomato sauce, mustard and brown sugar until thick, spooned into soft buns.",
      "shop": [
-      "beef chuck mince",
-      "cheddar",
-      "brown onions",
-      "dill pickles",
-      "burger buns",
-      "potatoes"
+      "beef mince",
+      "onions",
+      "tomato sauce",
+      "yellow mustard",
+      "brown sugar",
+      "burger buns"
      ]
     }
    ],
@@ -21304,16 +20873,16 @@
      ]
     },
     {
-     "name": "Spellbook cheese board",
-     "scene": "the book with the eye on the cover",
-     "method": "Brie, aged cheddar and blue on a board with lavash, fig jam, grapes and a stuffed olive placed right in the middle as the eye.",
+     "name": "Apple cider doughnuts",
+     "scene": "autumn in Salem",
+     "method": "Cake doughnuts made with reduced apple cider and spice, fried at 175C and tossed in cinnamon sugar while warm.",
      "shop": [
-      "brie",
-      "vintage cheddar",
-      "blue cheese",
-      "lavash bread",
-      "fig jam",
-      "stuffed olives"
+      "apple cider",
+      "plain flour",
+      "buttermilk",
+      "eggs",
+      "ground cinnamon",
+      "caster sugar"
      ]
     }
    ],
@@ -22118,17 +21687,6 @@
      ]
     },
     {
-     "name": "Lab bolt sausage bites",
-     "scene": "the monster's neck bolts",
-     "method": "Cocktail frankfurts wrapped in puff pastry with a little mustard, egg washed, baked at 200C for 15 minutes until golden.",
-     "shop": [
-      "cocktail franks",
-      "puff pastry",
-      "Dijon mustard",
-      "eggs"
-     ]
-    },
-    {
      "name": "Abby Normal brain dip",
      "scene": "the brain Igor brought back",
      "method": "Beetroot hummus: roasted beetroot blended with chickpeas, tahini, lemon and garlic, swirled in a bowl, served with crackers.",
@@ -22172,8 +21730,8 @@
    ],
    "dessert": [
     {
-     "name": "Puttin' on the Ritz cupcakes",
-     "scene": "the top hat and tails number",
+     "name": "Top hat cupcakes",
+     "scene": "the monster's song-and-dance number",
      "method": "Chocolate cupcakes baked at 175C for 18 minutes, a tall swirl of chocolate buttercream and a white chocolate disc as a hat brim.",
      "shop": [
       "self-raising flour",
@@ -22223,13 +21781,14 @@
      ]
     },
     {
-     "name": "Time warp pretzels",
-     "scene": "it's just a jump to the left",
-     "method": "Pretzel rods dipped two-thirds of the way in melted white chocolate, tapped to drain, rolled in red and gold sprinkles and left on baking paper to set for 20 minutes.",
+     "name": "Party cocktail franks",
+     "scene": "Frank's convention of Transylvanians",
+     "method": "Cocktail frankfurts simmered in a sticky glaze of tomato sauce, brown sugar and mustard, served on toothpicks.",
      "shop": [
-      "pretzel rods",
-      "white chocolate",
-      "sprinkles"
+      "cocktail frankfurts",
+      "tomato sauce",
+      "brown sugar",
+      "yellow mustard"
      ]
     },
     {
@@ -22535,19 +22094,6 @@
       "vegetable oil",
       "chicken salt",
       "gravy powder"
-     ]
-    },
-    {
-     "name": "Main Force Patrol sausage rolls",
-     "scene": "for the Halls of Justice",
-     "method": "Beef and pork mince with onion and herbs rolled in puff pastry, egg washed, sesame seeds on top, baked at 200C for 25 minutes. Tomato sauce.",
-     "shop": [
-      "beef mince",
-      "pork sausage mince",
-      "brown onions",
-      "puff pastry",
-      "eggs",
-      "sesame seeds"
      ]
     },
     {
@@ -24131,16 +23677,15 @@
      ]
     },
     {
-     "name": "Sleigh ride sausage rolls",
-     "scene": "Scott's first night on the rooftops",
-     "method": "Sausage mince with grated onion, thyme and an egg rolled in puff pastry, egg washed, cut into bite sizes, baked at 200C for 25 minutes. Tomato sauce.",
+     "name": "Burnt turkey sliders",
+     "scene": "Scott sets the turkey on fire, so you don't have to",
+     "method": "Turkey mince patties with sage and onion, griddled and served in slider buns with cranberry sauce and a bit of char on purpose.",
      "shop": [
-      "pork sausage mince",
-      "brown onions",
-      "thyme",
-      "puff pastry",
-      "eggs",
-      "tomato sauce"
+      "turkey mince",
+      "onions",
+      "sage",
+      "slider buns",
+      "cranberry sauce"
      ]
     }
    ],
@@ -24808,8 +24353,8 @@
    ],
    "dessert": [
     {
-     "name": "Under the sea jelly cups",
-     "scene": "Sebastian's big number under the sea",
+     "name": "Sea-glass jelly cups",
+     "scene": "Sebastian's big number on the sea floor",
      "method": "Blue jelly set in clear glasses with gummy fish suspended halfway, topped with whipped cream and crushed shortbread for sand, a white chocolate shell on the side.",
      "shop": [
       "blue jelly crystals",
@@ -24822,8 +24367,8 @@
    ],
    "drink": [
     {
-     "name": "Kiss the girl punch",
-     "scene": "the lagoon scene",
+     "name": "Lagoon punch",
+     "scene": "the boat ride across the lagoon",
      "method": "Pineapple juice, coconut water and lemonade with a splash of blue curaçao syrup, over ice.",
      "shop": [
       "pineapple juice",
@@ -25144,7 +24689,7 @@
    ],
    "drink": [
     {
-     "name": "Hakuna matata punch",
+     "name": "Pride Rock punch",
      "scene": "no worries, just punch",
      "method": "Mango, passionfruit and pineapple juice with lemonade and lime, poured over crushed ice.",
      "shop": [
@@ -25399,19 +24944,6 @@
       "ice",
       "lemons",
       "caster sugar"
-     ]
-    },
-    {
-     "name": "Boo's monster cookies",
-     "scene": "the little girl in the monster costume",
-     "method": "Oat cookies with bright candy-coated chocolate buttons and choc chips, baked at 180C for 11 minutes.",
-     "shop": [
-      "rolled oats",
-      "butter",
-      "brown sugar",
-      "plain flour",
-      "chocolate buttons",
-      "choc chips"
      ]
     }
    ],
@@ -26438,19 +25970,6 @@
       "butter",
       "English breakfast tea",
       "full cream milk"
-     ]
-    },
-    {
-     "name": "Goblin City cheese board",
-     "scene": "the goblin market",
-     "method": "Rough wedges of aged cheddar, smoked cheese and blue on a board with dark rye bread, pickled walnuts and grapes.",
-     "shop": [
-      "vintage cheddar",
-      "smoked cheese",
-      "blue cheese",
-      "rye bread",
-      "pickled walnuts",
-      "grapes"
      ]
     },
     {
@@ -28759,16 +28278,16 @@
      ]
     },
     {
-     "name": "News team buffalo wings",
-     "scene": "the Channel 4 news team's lunch",
-     "method": "Wings dried overnight, baked at 220C for 45 minutes until crisp, tossed in hot sauce with melted butter, blue cheese dip and celery.",
+     "name": "Carne asada fries",
+     "scene": "the pride of San Diego, Ron's town",
+     "method": "Thin steak marinated in lime, garlic and cumin, grilled and chopped over crisp fries with melted cheese, guacamole and sour cream.",
      "shop": [
-      "chicken wings",
-      "hot sauce",
-      "butter",
-      "blue cheese",
+      "skirt steak",
+      "frozen fries",
+      "Monterey Jack",
+      "avocados",
       "sour cream",
-      "celery"
+      "limes"
      ]
     },
     {
@@ -30452,16 +29971,14 @@
    "serve_cue": "Serve the mains when the T. rex skeleton wants to play fetch.",
    "snacks": [
     {
-     "name": "New York street pretzels",
-     "scene": "outside the museum in Manhattan",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, sprinkled with rock salt, baked at 220C for 12 minutes. Yellow mustard.",
+     "name": "Roman legion olives and bread",
+     "scene": "Octavius and his tiny Roman army",
+     "method": "Marinated olives warmed with lemon peel and oregano, served with crusty bread torn for dipping in good olive oil and balsamic.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "yellow mustard",
-      "butter"
+      "mixed olives",
+      "crusty bread",
+      "extra virgin olive oil",
+      "balsamic vinegar"
      ]
     },
     {
@@ -30750,15 +30267,14 @@
    ],
    "drink": [
     {
-     "name": "Jungle punch",
-     "scene": "the drums from the game",
-     "method": "Pineapple, mango and orange juice with lime, topped with ginger beer over ice.",
+     "name": "Hot apple cider",
+     "scene": "a New Hampshire autumn in Brantford",
+     "method": "Cloudy apple juice simmered with cinnamon, cloves and orange peel, served warm in mugs.",
      "shop": [
-      "pineapple juice",
-      "mango nectar",
-      "orange juice",
-      "limes",
-      "ginger beer"
+      "cloudy apple juice",
+      "cinnamon sticks",
+      "cloves",
+      "oranges"
      ]
     }
    ],
@@ -32238,14 +31754,13 @@
    ],
    "drink": [
     {
-     "name": "Southern lemonade",
+     "name": "Sweet tea",
      "scene": "Edward's stories told on the porch in Alabama",
-     "method": "Fresh lemon juice and sugar syrup in a big jug, topped with cold water, a handful of bruised mint and plenty of ice, stirred until frosty.",
+     "method": "Black tea brewed strong, sweetened while hot, cooled and poured over plenty of ice with lemon.",
      "shop": [
-      "lemons",
-      "caster sugar",
-      "mint",
-      "ice"
+      "black tea",
+      "sugar",
+      "lemons"
      ]
     }
    ],
@@ -32272,16 +31787,15 @@
      ]
     },
     {
-     "name": "Red Circle club bites",
-     "scene": "the nightclub with the bathhouse underneath",
-     "method": "Pork belly cubes roasted at 150C for 2 hours, crisped at 230C, tossed in a glaze of soy, honey, chilli and black vinegar, sesame on top.",
+     "name": "Continental hotel bar olives",
+     "scene": "drinks at the bar where no business gets done",
+     "method": "Green olives warmed in olive oil with orange peel, rosemary and garlic, served with salted almonds.",
      "shop": [
-      "pork belly",
-      "soy sauce",
-      "honey",
-      "chilli flakes",
-      "Chinkiang vinegar",
-      "sesame seeds"
+      "green olives",
+      "oranges",
+      "rosemary",
+      "garlic",
+      "almonds"
      ]
     },
     {
@@ -33214,16 +32728,16 @@
    "serve_cue": "Serve the snacks when the money swap happens at the shopping mall.",
    "snacks": [
     {
-     "name": "Mall food court pretzels",
-     "scene": "the switch in the shopping mall",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, brushed with butter. Cheese sauce and mustard.",
+     "name": "Food court chicken skewers",
+     "scene": "the switch at the Del Amo mall",
+     "method": "Chicken thighs in a sweet soy and ginger glaze, threaded on skewers, grilled and brushed until sticky, with steamed rice.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "cheddar"
+      "chicken thighs",
+      "soy sauce",
+      "ginger",
+      "honey",
+      "bamboo skewers",
+      "jasmine rice"
      ]
     },
     {
@@ -33550,18 +33064,6 @@
       "vegetable oil",
       "truffle salt",
       "parmesan"
-     ]
-    },
-    {
-     "name": "Planning session sliders",
-     "scene": "the crew going over the plan in the hotel suite",
-     "method": "Beef mince smashed thin on a hot griddle, cheddar melted on, onions cooked slowly until jammy and a few pickles, on soft slider buns.",
-     "shop": [
-      "beef mince",
-      "cheddar",
-      "brown onions",
-      "dill pickles",
-      "slider buns"
      ]
     }
    ],
@@ -34344,7 +33846,7 @@
     {
      "name": "Eton mess",
      "scene": "a very English pudding for a very English spy",
-     "method": "Meringue baked at 100C for 90 minutes, broken into chunks, folded through whipped cream with strawberries macerated in sugar and a little lemon.",
+     "method": "Crushed meringue, softly whipped cream and quartered strawberries folded together in glasses, with a drizzle of strawberry purée sweetened with a little sugar.",
      "shop": [
       "eggs",
       "caster sugar",
@@ -35549,16 +35051,15 @@
    "serve_cue": "Serve the mains when Malcolm sits down at the anniversary dinner.",
    "snacks": [
     {
-     "name": "Philadelphia soft pretzels",
-     "scene": "a Philly winter",
-     "method": "Pretzel dough proved, shaped into figure eights, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, brushed with butter. Yellow mustard.",
+     "name": "Roast pork and provolone sliders",
+     "scene": "a Philadelphia winter",
+     "method": "Slow-roasted pork shoulder sliced thin with garlicky broccoli rabe and sharp provolone on small soft rolls.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "yellow mustard"
+      "pork shoulder",
+      "broccolini",
+      "sharp provolone",
+      "slider buns",
+      "garlic"
      ]
     },
     {
@@ -35625,13 +35126,13 @@
    ],
    "drink": [
     {
-     "name": "Cold breath hot chocolate",
-     "scene": "you can see your breath when they're around",
-     "method": "Dark chocolate melted into hot milk, whisked frothy, marshmallows on top.",
+     "name": "Hot tea with lemon",
+     "scene": "Cole's mum keeping the house warm",
+     "method": "Black tea with a slice of lemon and a spoon of honey, served hot in mugs.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "marshmallows"
+      "black tea",
+      "lemons",
+      "honey"
      ]
     }
    ],
@@ -35990,15 +35491,13 @@
      ]
     },
     {
-     "name": "Tricycle wheel pizza rolls",
-     "scene": "the puppet on the little tricycle",
-     "method": "Pizza dough rolled with tomato, mozzarella and salami, sliced into wheels, baked at 210C for 15 minutes until golden.",
+     "name": "Night shift coffee and doughnuts",
+     "scene": "Detective Tapp's stakeout across the street",
+     "method": "Filter coffee and a box of glazed ring doughnuts, warmed for 10 seconds so the glaze softens.",
      "shop": [
-      "pizza dough",
-      "crushed tomatoes",
-      "mozzarella",
-      "salami",
-      "dried oregano"
+      "ground coffee",
+      "glazed doughnuts",
+      "milk"
      ]
     }
    ],
@@ -36420,16 +35919,15 @@
      ]
     },
     {
-     "name": "Cloud bun sliders",
-     "scene": "the cloud that never moves",
-     "method": "Soft steamed bao buns filled with pulled chicken in a smoky barbecue sauce, pickled red onion and coriander.",
+     "name": "Chuckwagon beans",
+     "scene": "Jupiter's Claim, the western theme park out in the desert",
+     "method": "Pinto beans simmered with bacon, onion, chilli and molasses in a cast-iron pot until thick and smoky.",
      "shop": [
-      "bao buns",
-      "chicken thighs",
-      "barbecue sauce",
-      "red onions",
-      "coriander",
-      "white vinegar"
+      "pinto beans",
+      "bacon",
+      "onions",
+      "chipotle in adobo",
+      "molasses"
      ]
     }
    ],
@@ -37380,16 +36878,15 @@
      ]
     },
     {
-     "name": "Detroit Coney bites",
-     "scene": "the Detroit setting",
-     "method": "Cocktail franks griddled, tucked into mini rolls, topped with a loose beef chilli of mince, cumin, paprika and stock, mustard and raw onion.",
+     "name": "Welcome basket cheese and crackers",
+     "scene": "the double-booked rental on Barbary Street",
+     "method": "A plate of cheddar, brie and crackers with grapes and quince paste, the kind left out on arrival.",
      "shop": [
-      "cocktail franks",
-      "mini bread rolls",
-      "beef mince",
-      "ground cumin",
-      "yellow mustard",
-      "brown onions"
+      "cheddar",
+      "brie",
+      "crackers",
+      "grapes",
+      "quince paste"
      ]
     }
    ],
@@ -37592,16 +37089,15 @@
      ]
     },
     {
-     "name": "New York pretzels",
-     "scene": "Manhattan street food",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes. Spicy brown mustard.",
+     "name": "Clamp Centre deli sandwiches",
+     "scene": "the lobby deli in the smart building",
+     "method": "Pastrami, Swiss and coleslaw on rye, cut into quarters and piled high on a deli platter.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "American mustard"
+      "pastrami",
+      "Swiss cheese",
+      "rye bread",
+      "coleslaw",
+      "deli mustard"
      ]
     }
    ],
@@ -39061,19 +38557,6 @@
    "serve_cue": "Serve the steak when Alex starts seeing his friends as steaks.",
    "snacks": [
     {
-     "name": "Central Park Zoo pretzels",
-     "scene": "the zoo in New York",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, brushed with butter. Mustard.",
-     "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "yellow mustard"
-     ]
-    },
-    {
      "name": "Penguins' sushi rolls",
      "scene": "the penguins heading for Antarctica",
      "method": "Sushi rice seasoned with vinegar and sugar, spread on nori, filled with salmon and avocado, rolled tight with a mat, sliced with a wet knife, soy and pickled ginger alongside.",
@@ -39189,19 +38672,6 @@
       "thickened cream",
       "hazelnuts",
       "pretzel rods"
-     ]
-    },
-    {
-     "name": "Glacier ice cave dip",
-     "scene": "the ice cave they slide through",
-     "method": "Tzatziki of grated cucumber squeezed dry, Greek yoghurt, garlic, dill and lemon, served cold with pita chips.",
-     "shop": [
-      "cucumber",
-      "Greek yoghurt",
-      "garlic",
-      "dill",
-      "lemons",
-      "pita bread"
      ]
     }
    ],
@@ -40097,14 +39567,15 @@
    ],
    "drink": [
     {
-     "name": "Hot chocolate",
-     "scene": "warming up after the Dementors",
-     "method": "Dark chocolate melted into hot milk with a pinch of salt and a spoon of brown sugar, topped with whipped cream.",
+     "name": "Pumpkin juice",
+     "scene": "breakfast in the Great Hall",
+     "method": "Pumpkin, apple juice and a little honey blended smooth with cinnamon and ginger, strained and served cold.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "brown sugar",
-      "thickened cream"
+      "butternut pumpkin",
+      "apple juice",
+      "honey",
+      "ground cinnamon",
+      "ground ginger"
      ]
     }
    ],
@@ -41610,19 +41081,6 @@
    "serve_cue": "Serve the snacks when Luis starts one of his very long stories.",
    "snacks": [
     {
-     "name": "Shrunken sliders",
-     "scene": "everything gets tiny when the suit switches on",
-     "method": "Mini beef patties smashed on a hot griddle, cheddar melted on, pickles and sauce on the smallest slider buns you can find, held with toothpicks.",
-     "shop": [
-      "beef mince",
-      "cheddar",
-      "dill pickles",
-      "slider buns",
-      "tomato sauce",
-      "yellow mustard"
-     ]
-    },
-    {
      "name": "Luis's long story nachos",
      "scene": "Luis telling a story that goes on and on",
      "method": "Corn chips layered with black beans, cheddar and jalapeño, baked at 200C for 8 minutes, topped with pico de gallo, guacamole and sour cream. Big enough to last the whole story.",
@@ -41799,14 +41257,12 @@
    ],
    "drink": [
     {
-     "name": "Iced tea",
-     "scene": "a hot humid night in Vietnam",
-     "method": "Black tea brewed strong, sweetened while hot, cooled and poured over plenty of ice with lemon wedges.",
+     "name": "Vietnamese iced coffee",
+     "scene": "a hot, humid night in Saigon",
+     "method": "Strong dark coffee dripped over sweetened condensed milk, stirred and poured over ice.",
      "shop": [
-      "black tea",
-      "caster sugar",
-      "lemons",
-      "ice"
+      "ground coffee",
+      "sweetened condensed milk"
      ]
     }
    ],
@@ -43294,16 +42750,16 @@
    "serve_cue": "Serve the snacks when Howard hits the toy store on Christmas Eve.",
    "snacks": [
     {
-     "name": "Mall food court pretzels",
-     "scene": "the packed shopping centre on Christmas Eve",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, with a warm cheddar dip.",
+     "name": "Gingerbread men",
+     "scene": "the frantic Christmas Eve hunt across Minneapolis",
+     "method": "Gingerbread dough rolled thin, cut into little men, baked at 180C for 9 minutes, piped with white icing buttons.",
      "shop": [
       "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "cheddar",
-      "evaporated milk"
+      "golden syrup",
+      "ground ginger",
+      "butter",
+      "brown sugar",
+      "icing sugar"
      ]
     },
     {
@@ -43401,16 +42857,12 @@
    "serve_cue": "Serve the mains when Kris shares Thanksgiving dinner with Doris and Susan.",
    "snacks": [
     {
-     "name": "Parade day hot pretzels",
-     "scene": "the big Thanksgiving parade through New York",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, brushed with butter. Yellow mustard.",
+     "name": "Roasted chestnuts",
+     "scene": "warming up along the 1947 Thanksgiving parade route",
+     "method": "Chestnuts scored with a cross, roasted at 220C for 25 minutes, wrapped in a tea towel and peeled warm.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "yellow mustard"
+      "chestnuts",
+      "sea salt flakes"
      ]
     },
     {
@@ -43638,19 +43090,6 @@
       "sour cream",
       "parsley"
      ]
-    },
-    {
-     "name": "Max's sausage rolls",
-     "scene": "the Grinch's loyal little dog",
-     "method": "Sausage mince with apple and sage rolled in puff pastry, egg washed, baked at 200C for 25 minutes. Tomato sauce.",
-     "shop": [
-      "pork sausage mince",
-      "apples",
-      "sage",
-      "puff pastry",
-      "eggs",
-      "tomato sauce"
-     ]
     }
    ],
    "mains": [
@@ -43852,16 +43291,14 @@
      ]
     },
     {
-     "name": "Mall food court pretzels",
-     "scene": "the shopping mall in Phoenix",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, with a cheese dip.",
+     "name": "Thurman's sandwiches",
+     "scene": "the ones the kid makes for Willie",
+     "method": "White bread sandwiches with peanut butter, sliced deli meat and cheese, cut into triangles and wrapped in cling film.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "cheddar",
-      "evaporated milk"
+      "white bread",
+      "peanut butter",
+      "ham",
+      "Swiss cheese"
      ]
     }
    ],
@@ -44428,7 +43865,7 @@
    "dessert": [
     {
      "name": "Champagne jelly",
-     "scene": "the razzle-dazzle of the courtroom show",
+     "scene": "the showbiz sparkle of the courtroom",
      "method": "Gelatine bloomed and dissolved in warm sugar syrup, cold sparkling wine stirred in gently, poured into coupes with raspberries, set 4 hours so the bubbles stay trapped.",
      "shop": [
       "sparkling wine",
@@ -45671,16 +45108,15 @@
      ]
     },
     {
-     "name": "Chicago-style hot dog bites",
-     "scene": "the city of Chicago",
-     "method": "Mini franks in poppy seed rolls with yellow mustard, chopped onion, sweet relish, tomato, a pickle spear and celery salt.",
+     "name": "Chicago tamales",
+     "scene": "the tamale man doing the rounds of the South Side",
+     "method": "Corn masa wrapped around spiced beef, steamed in husks for an hour, served with hot sauce.",
      "shop": [
-      "cocktail franks",
-      "mini bread rolls",
-      "yellow mustard",
-      "sweet relish",
-      "tomatoes",
-      "dill pickles"
+      "masa harina",
+      "beef mince",
+      "corn husks",
+      "chilli powder",
+      "hot sauce"
      ]
     }
    ],
@@ -46631,16 +46067,12 @@
      ]
     },
     {
-     "name": "New York pretzels",
-     "scene": "the streets of New York",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes. Mustard.",
+     "name": "Char siu buns",
+     "scene": "Uncle Bill's family in New York",
+     "method": "Soft steamed buns filled with sticky honey and hoisin barbecue pork, steamed for 12 minutes until puffed, with extra hoisin on the side.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "yellow mustard"
+      "frozen char siu buns",
+      "hoisin sauce"
      ]
     }
    ],
@@ -47330,15 +46762,14 @@
    "serve_cue": "Serve the mains when Rocky finally catches the chicken.",
    "snacks": [
     {
-     "name": "Philly cheesesteak bites",
-     "scene": "home in Philadelphia",
-     "method": "Rib eye frozen 30 minutes, shaved thin, seared on a hot plate with onions, provolone melted over, piled into mini rolls.",
+     "name": "Pork roll sandwiches",
+     "scene": "Rocky's shift at the meat packing plant",
+     "method": "Thick slices of pork roll fried until the edges curl, stacked on soft rolls with fried egg and cheese.",
      "shop": [
-      "rib eye steak",
-      "brown onions",
-      "provolone",
-      "mini bread rolls",
-      "vegetable oil"
+      "pork roll",
+      "eggs",
+      "American cheese",
+      "soft rolls"
      ]
     },
     {
@@ -47464,16 +46895,16 @@
      ]
     },
     {
-     "name": "Rough gym pretzels",
-     "scene": "the old-school gym in LA",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes. Mustard.",
+     "name": "LA street tacos",
+     "scene": "the old Los Angeles gym where Apollo started out",
+     "method": "Chopped grilled chicken thighs marinated in chilli and lime on small corn tortillas with onion, coriander and salsa roja.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "yellow mustard"
+      "chicken thighs",
+      "corn tortillas",
+      "onions",
+      "coriander",
+      "salsa",
+      "limes"
      ]
     }
    ],
@@ -47560,16 +46991,16 @@
      ]
     },
     {
-     "name": "Philly street pretzels",
+     "name": "Philly hoagie bites",
      "scene": "training runs through Philadelphia",
-     "method": "Pretzel dough shaped into figure eights, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, with yellow mustard.",
+     "method": "Long rolls layered with ham, salami, provolone, lettuce, tomato and onion, dressed with oil and oregano, cut into bites.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "yellow mustard"
+      "long rolls",
+      "ham",
+      "salami",
+      "provolone",
+      "iceberg lettuce",
+      "tomatoes"
      ]
     },
     {
@@ -47664,19 +47095,6 @@
       "garlic",
       "horseradish",
       "sea salt flakes"
-     ]
-    },
-    {
-     "name": "Gym corner pretzels",
-     "scene": "the run-down boxing gym",
-     "method": "Pretzel dough proved, shaped, dipped in hot bicarb water, rock salt on top, baked at 220C for 12 minutes, with mustard.",
-     "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "yellow mustard"
      ]
     },
     {
@@ -48339,16 +47757,16 @@
      ]
     },
     {
-     "name": "Kickboxing training burger",
-     "scene": "Lloyd's plan to be a kickboxer",
-     "method": "Chuck patties grilled to medium, cheddar, lettuce, tomato and pickles on a toasted bun, sweet potato fries.",
+     "name": "Seattle teriyaki chicken",
+     "scene": "a rainy Seattle weeknight",
+     "method": "Chicken thighs grilled in a sticky soy, ginger and garlic glaze, sliced over steamed rice with salad.",
      "shop": [
-      "beef chuck mince",
-      "cheddar",
-      "iceberg lettuce",
-      "tomatoes",
-      "burger buns",
-      "sweet potatoes"
+      "chicken thighs",
+      "soy sauce",
+      "ginger",
+      "garlic",
+      "jasmine rice",
+      "cabbage"
      ]
     }
    ],
@@ -48836,19 +48254,6 @@
       "dumpling wrappers",
       "sour cream",
       "dill"
-     ]
-    },
-    {
-     "name": "Orbit onion rings",
-     "scene": "orbiting the Earth on the spacewalk",
-     "method": "Onion rings dipped in a lager batter, fried at 180C until crisp and golden, salted and served with an aioli of garlic, lemon and mayo.",
-     "shop": [
-      "brown onions",
-      "plain flour",
-      "lager",
-      "vegetable oil",
-      "garlic",
-      "mayonnaise"
      ]
     }
    ],
@@ -50299,8 +49704,8 @@
    ],
    "drink": [
     {
-     "name": "Pocketful of sunshine lemonade",
-     "scene": "the song Olive cannot get out of her head all weekend",
+     "name": "Sunshine lemonade",
+     "scene": "the song Olive can't get out of her head all weekend",
      "method": "Fresh lemon juice, sugar syrup and cold water with sliced lemons and mint in a big jug over ice.",
      "shop": [
       "lemons",
@@ -50712,16 +50117,12 @@
    ],
    "dessert": [
     {
-     "name": "Black and white cookies",
-     "scene": "the black and white film",
-     "method": "Soft vanilla cake cookies baked at 180C for 12 minutes, iced half in vanilla glaze and half in chocolate glaze.",
+     "name": "Quick Stop snack cakes",
+     "scene": "the shelves Dante never stops restocking",
+     "method": "Store-bought cream-filled snack cakes and chocolate cupcakes, chilled and stacked on a plate like the shop shelf.",
      "shop": [
-      "self-raising flour",
-      "butter",
-      "caster sugar",
-      "buttermilk",
-      "icing sugar",
-      "cocoa"
+      "cream-filled snack cakes",
+      "chocolate cupcakes"
      ]
     }
    ],
@@ -51397,28 +50798,27 @@
      ]
     },
     {
-     "name": "Ice rink pretzels",
-     "scene": "the cold rink in Minneapolis",
-     "method": "Soft pretzels shaped, boiled briefly in bicarb water, rock salt on top, baked at 220C for 12 minutes, with cheese sauce.",
+     "name": "Wild rice soup cups",
+     "scene": "a cold Minneapolis winter",
+     "method": "Wild rice simmered with chicken, carrot, celery and onion in a creamy stock, ladled into small cups.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "cheddar",
-      "full cream milk"
+      "wild rice",
+      "chicken thighs",
+      "carrots",
+      "celery",
+      "thickened cream",
+      "chicken stock"
      ]
     },
     {
-     "name": "Hockey puck sliders",
-     "scene": "the kids learning to hit the puck",
-     "method": "Small round beef patties with cheddar and pickles on black sesame slider buns, looking just like pucks.",
+     "name": "Juicy Lucy sliders",
+     "scene": "Minneapolis's cheese-stuffed burger",
+     "method": "Two thin beef patties sealed around a slice of cheese, griddled so the cheese melts inside, in slider buns with pickles.",
      "shop": [
       "beef mince",
-      "cheddar",
-      "dill pickles",
+      "American cheese",
       "slider buns",
-      "black sesame seeds"
+      "dill pickles"
      ]
     }
    ],
@@ -53703,14 +53103,13 @@
    ],
    "drink": [
     {
-     "name": "Desert lemonade",
-     "scene": "crossing the desert to the oasis",
-     "method": "Fresh lemons blended with mint, sugar and ice until slushy, poured into tall glasses.",
+     "name": "Hibiscus karkadé",
+     "scene": "crossing the desert to the oasis, Egyptian style",
+     "method": "Dried hibiscus flowers steeped in hot water with sugar, chilled and poured over ice.",
      "shop": [
-      "lemons",
-      "mint",
-      "caster sugar",
-      "ice"
+      "dried hibiscus",
+      "sugar",
+      "limes"
      ]
     }
    ],
@@ -54771,15 +54170,12 @@
    ],
    "drink": [
     {
-     "name": "Bottling plant soda",
-     "scene": "the soda factory where Bruce works",
-     "method": "Passionfruit pulp and lime juice topped with soda water and a little sugar syrup over ice.",
+     "name": "Guaraná soda",
+     "scene": "the Brazilian bottling plant where Bruce works",
+     "method": "Guaraná soda poured ice cold over lime wedges.",
      "shop": [
-      "passionfruit",
-      "limes",
-      "soda water",
-      "caster sugar",
-      "ice"
+      "guaraná soda",
+      "limes"
      ]
     }
    ],
@@ -55115,16 +54511,15 @@
    "serve_cue": "Serve the mains when Steve adds another item to his catch-up list.",
    "snacks": [
     {
-     "name": "On your left pretzels",
-     "scene": "Steve lapping Sam on the morning run in Washington",
-     "method": "Soft pretzels boiled in bicarb water, rock salt on top, baked at 220C for 12 minutes, with honey mustard.",
+     "name": "Washington half-smokes",
+     "scene": "a DC classic after the morning run",
+     "method": "Smoked half-pork, half-beef sausages split and grilled, in buns with chilli, mustard and chopped onion.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "honey",
-      "Dijon mustard"
+      "smoked sausages",
+      "hot dog buns",
+      "beef mince",
+      "yellow mustard",
+      "onions"
      ]
     },
     {
@@ -55888,17 +55283,6 @@
       "tomatoes",
       "sour cream"
      ]
-    },
-    {
-     "name": "Staten Island ferry fries",
-     "scene": "the ferry splitting in half",
-     "method": "Thick-cut fries cooked twice until crisp, salted and served in paper cones with tomato sauce.",
-     "shop": [
-      "potatoes",
-      "vegetable oil",
-      "sea salt flakes",
-      "tomato sauce"
-     ]
     }
    ],
    "mains": [
@@ -56051,14 +55435,12 @@
    ],
    "drink": [
     {
-     "name": "Black dahlia soda",
-     "scene": "the black dahlia Peter wants to give MJ",
-     "method": "Blackcurrant cordial topped with soda water over ice, with a few blackberries.",
+     "name": "Blood orange soda",
+     "scene": "the school trip through Venice",
+     "method": "Blood orange juice and soda water over ice with a slice of orange.",
      "shop": [
-      "blackcurrant cordial",
-      "soda water",
-      "blackberries",
-      "ice"
+      "blood oranges",
+      "soda water"
      ]
     }
    ],
@@ -56340,19 +55722,6 @@
       "green capsicum",
       "long grain rice"
      ]
-    },
-    {
-     "name": "Air Force base burgers",
-     "scene": "Carol and Maria flying together in the Air Force",
-     "method": "Beef patties seasoned and grilled to medium, cheddar melted on, stacked in toasted buns with lettuce, tomato and onion, fries on the side.",
-     "shop": [
-      "beef mince",
-      "cheddar",
-      "iceberg lettuce",
-      "tomatoes",
-      "burger buns",
-      "potatoes"
-     ]
     }
    ],
    "dessert": [
@@ -56422,16 +55791,15 @@
      ]
     },
     {
-     "name": "San Francisco sourdough bites",
-     "scene": "the car chase down the steep streets of San Francisco",
-     "method": "Sourdough cubes tossed in melted garlic butter and toasted at 200C until crisp, served around a warm dip of chopped clams, cream cheese and parmesan baked until bubbling.",
+     "name": "Chinatown egg tarts",
+     "scene": "the car chase down the steep San Francisco streets",
+     "method": "Flaky pastry cases filled with sweet egg custard, baked at 220C until just set and caramelised on top.",
      "shop": [
-      "sourdough bread",
-      "butter",
-      "garlic",
-      "clams",
-      "cream cheese",
-      "parmesan"
+      "puff pastry",
+      "eggs",
+      "milk",
+      "caster sugar",
+      "thickened cream"
      ]
     }
    ],
@@ -57267,19 +56635,6 @@
       "honey",
       "black sesame seeds"
      ]
-    },
-    {
-     "name": "San Francisco sourdough bites",
-     "scene": "Eddie's reporting beat in San Francisco",
-     "method": "Sourdough cubes tossed in garlic butter and toasted until crisp, served with a warm dip of crab, cream cheese and parmesan baked until golden.",
-     "shop": [
-      "sourdough bread",
-      "butter",
-      "garlic",
-      "crab meat",
-      "cream cheese",
-      "parmesan"
-     ]
     }
    ],
    "mains": [
@@ -57462,19 +56817,6 @@
       "cheddar",
       "spring onions",
       "leg ham",
-      "full cream milk"
-     ]
-    },
-    {
-     "name": "Skate park pretzels",
-     "scene": "Peter skating through the city",
-     "method": "Soft pretzel bites boiled briefly in bicarb water, sprinkled with rock salt and baked at 220C for 12 minutes, with a warm cheddar cheese sauce.",
-     "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "cheddar",
       "full cream milk"
      ]
     },
@@ -59072,15 +58414,13 @@
      ]
     },
     {
-     "name": "April's news van pretzels",
-     "scene": "April O'Neil chasing the story",
-     "method": "Soft pretzels boiled in bicarb water, rock salt on top, baked at 220C for 12 minutes, with mustard.",
+     "name": "Chinatown dumplings",
+     "scene": "the turtles sneaking takeaway home through the sewers",
+     "method": "Pork and chive dumplings steamed or pan-fried until crisp underneath, with soy and black vinegar.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "yellow mustard"
+      "frozen pork dumplings",
+      "soy sauce",
+      "black vinegar"
      ]
     }
    ],
@@ -59368,15 +58708,15 @@
      ]
     },
     {
-     "name": "Philly cheesesteak bites",
-     "scene": "David's home town of Philadelphia",
-     "method": "Rib eye frozen 30 minutes, shaved thin, seared on a hot plate with onions, provolone melted over, piled onto toasted mini rolls.",
+     "name": "Scrapple bites",
+     "scene": "a Philadelphia breakfast before the stadium shift",
+     "method": "Pork and cornmeal loaf sliced and fried until crisp, with apple butter and fried eggs.",
      "shop": [
-      "rib eye steak",
-      "brown onions",
-      "provolone",
-      "slider buns",
-      "vegetable oil"
+      "pork mince",
+      "cornmeal",
+      "sage",
+      "eggs",
+      "apple sauce"
      ]
     },
     {
@@ -60049,7 +59389,7 @@
    "dessert": [
     {
      "name": "Pink elephant marshmallow slice",
-     "scene": "the pink elephants on parade",
+     "scene": "the pink elephants in Dumbo's dream",
      "method": "Biscuit base topped with a fluffy pink marshmallow of gelatine, sugar and vanilla whipped until thick, set overnight and dusted with coconut.",
      "shop": [
       "plain sweet biscuits",
@@ -61346,15 +60686,12 @@
    ],
    "drink": [
     {
-     "name": "Evening star lemonade",
-     "scene": "Ray the firefly and his evening star",
-     "method": "Fresh lemonade with a splash of peach nectar and mint, poured over ice.",
+     "name": "Café au lait",
+     "scene": "a New Orleans morning, beignets on the side",
+     "method": "Strong chicory coffee mixed half and half with hot steamed milk.",
      "shop": [
-      "lemons",
-      "caster sugar",
-      "peach nectar",
-      "mint",
-      "ice"
+      "ground coffee",
+      "milk"
      ]
     }
    ],
@@ -63020,13 +62357,14 @@
    ],
    "dessert": [
     {
-     "name": "Summer camp s'mores",
-     "scene": "summer at Camp Walden",
-     "method": "Marshmallows toasted over a flame until golden, squashed with a square of dark chocolate between two plain sweet biscuits.",
+     "name": "Eton mess",
+     "scene": "the London twin's pudding, strawberries and cream",
+     "method": "Crushed meringue, softly whipped cream and quartered strawberries folded together in glasses, with a drizzle of strawberry purée sweetened with a little sugar.",
      "shop": [
-      "marshmallows",
-      "dark chocolate",
-      "plain sweet biscuits"
+      "meringue nests",
+      "thickened cream",
+      "strawberries",
+      "caster sugar"
      ]
     }
    ],
@@ -65691,18 +65029,6 @@
       "lemonade",
       "strawberry jam"
      ]
-    },
-    {
-     "name": "Snowy lamp-post pretzels",
-     "scene": "the lamp-post in the snowy wood",
-     "method": "Soft pretzel sticks boiled in bicarb water, brushed with butter and rock salt, baked at 220C for 12 minutes.",
-     "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter"
-     ]
     }
    ],
    "mains": [
@@ -66480,16 +65806,15 @@
    ],
    "dessert": [
     {
-     "name": "Black and white cookies",
+     "name": "Black sesame cookies",
      "scene": "the Void and the light at the end",
-     "method": "Soft vanilla cookies baked at 180C for 12 minutes, iced half in vanilla glaze and half in chocolate glaze.",
+     "method": "Butter cookies made with ground black sesame, baked at 170C for 12 minutes, half dipped in white chocolate.",
      "shop": [
-      "self-raising flour",
       "butter",
+      "plain flour",
+      "black sesame seeds",
       "caster sugar",
-      "buttermilk",
-      "icing sugar",
-      "cocoa"
+      "white chocolate"
      ]
     }
    ],
@@ -67182,16 +66507,15 @@
      ]
     },
     {
-     "name": "Boston church pretzels",
-     "scene": "Nightcrawler hiding out in an old Boston church",
-     "method": "Pretzel dough shaped into knots, boiled briefly in bicarb water, sprinkled with rock salt and baked at 220C for 12 minutes, with mustard.",
+     "name": "Boston baked beans on toast",
+     "scene": "Nightcrawler's hideout in an old Boston church",
+     "method": "Navy beans slow cooked with molasses, mustard, onion and bacon at 150C for three hours, piled onto hot buttered toast.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
-      "butter",
-      "yellow mustard"
+      "navy beans",
+      "molasses",
+      "bacon",
+      "yellow mustard",
+      "white bread"
      ]
     }
    ],
@@ -68871,8 +68195,8 @@
    ],
    "dessert": [
     {
-     "name": "Under the sea jelly",
-     "scene": "the coral reef under the sea",
+     "name": "Coral reef jelly",
+     "scene": "the reef where Ariel keeps her treasures",
      "method": "Blue jelly set in clear glasses with fruit fish shapes inside, topped with whipped cream foam.",
      "shop": [
       "blue jelly crystals",
@@ -69448,16 +68772,14 @@
      ]
     },
     {
-     "name": "Ray's occult shop pretzels",
-     "scene": "Ray's dusty occult bookshop",
-     "method": "Soft pretzels boiled briefly in bicarb water, rock salt on top, baked at 220C for 12 minutes, with mustard.",
+     "name": "Bookshop shortbread",
+     "scene": "Ray's dusty occult shop",
+     "method": "Butter, sugar and flour shortbread pressed into a round, scored and baked at 160C until pale golden.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
       "butter",
-      "yellow mustard"
+      "plain flour",
+      "caster sugar",
+      "rice flour"
      ]
     },
     {
@@ -69826,14 +69148,13 @@
    ],
    "drink": [
     {
-     "name": "Underground station lemonade",
-     "scene": "the Pevensies waiting at the London Underground station",
-     "method": "Fresh lemon juice and sugar syrup topped with soda water, poured over ice.",
+     "name": "Station cup of tea",
+     "scene": "the Pevensies waiting on the Underground platform",
+     "method": "Strong black tea in mugs with milk and two sugars, the way a station tea stand makes it.",
      "shop": [
-      "lemons",
-      "caster sugar",
-      "soda water",
-      "ice"
+      "black tea",
+      "milk",
+      "sugar"
      ]
     }
    ],
@@ -71231,16 +70552,14 @@
      ]
     },
     {
-     "name": "Ballpark pretzels",
-     "scene": "the baseball game in Chicago",
-     "method": "Soft pretzels boiled in bicarb water, rock salt on top, baked at 220C for 12 minutes, with mustard.",
+     "name": "Chicago-mix popcorn",
+     "scene": "caramel and cheese together, the city's own",
+     "method": "Fresh popcorn split in two: half tossed in bubbling caramel and baked crisp, half tossed in butter and cheddar powder, then mixed together in one big bowl.",
      "shop": [
-      "plain flour",
-      "dried yeast",
-      "bicarb soda",
-      "rock salt",
+      "popping corn",
+      "brown sugar",
       "butter",
-      "yellow mustard"
+      "cheddar powder"
      ]
     },
     {
@@ -73802,6 +73121,109 @@
    "lane": 2,
    "poster_status": "pending",
    "recipe_ready": true
+  },
+  {
+   "id": "A Goofy Movie (1995)",
+   "title": "A Goofy Movie",
+   "year": "1995",
+   "theme": "kids",
+   "tagline": "Road trip. Fishing rods. Snacks for the whole drive.",
+   "description": "Goofy drags his teenage son Max on a cross-country fishing trip just as Max is trying to impress Roxanne.",
+   "serve_cue": "Serve the mains when Goofy and Max finally make camp by Lake Destiny.",
+   "snacks": [
+    {
+     "name": "Perfect Cast fish fingers",
+     "scene": "the father and son fishing move, Lake Destiny in Idaho",
+     "method": "White fish strips dipped in flour, egg and panko, fried at 180C for 3 minutes until golden, with lemon wedges and a quick tartare of mayo, pickles and capers.",
+     "shop": [
+      "white fish fillets",
+      "panko breadcrumbs",
+      "eggs",
+      "mayonnaise",
+      "dill pickles",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Idaho potato wedges",
+     "scene": "Lake Destiny is in Idaho, so potatoes it is",
+     "method": "Russet potatoes cut into thick wedges, tossed with oil, paprika and garlic salt, roasted at 220C for 35 minutes until crisp, sour cream and chives for dipping.",
+     "shop": [
+      "russet potatoes",
+      "sweet paprika",
+      "garlic salt",
+      "sour cream",
+      "chives"
+     ]
+    },
+    {
+     "name": "Road map trail mix",
+     "scene": "the map Max quietly redraws to head for LA",
+     "method": "Roasted peanuts, pretzel pieces, raisins, chocolate buttons and dried apple tipped into a big bowl and portioned into paper bags for the car.",
+     "shop": [
+      "roasted peanuts",
+      "raisins",
+      "chocolate buttons",
+      "dried apple",
+      "mini pretzels"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Pete's RV barbecue sausages",
+     "scene": "Pete and PJ's campsite, with the giant RV",
+     "method": "Thick beef sausages grilled over coals until charred, in soft rolls with fried onions, mustard and tomato sauce, corn on the cob on the side.",
+     "shop": [
+      "beef sausages",
+      "long rolls",
+      "onions",
+      "yellow mustard",
+      "tomato sauce",
+      "corn cobs"
+     ]
+    },
+    {
+     "name": "Campfire beef and bean stew",
+     "scene": "the night the camp gets a visit from Bigfoot",
+     "method": "Diced beef browned in a big pot with onion and smoked paprika, simmered with kidney beans, tomato and stock for two hours, served with crusty bread.",
+     "shop": [
+      "beef chuck",
+      "onions",
+      "smoked paprika",
+      "red kidney beans",
+      "crushed tomatoes",
+      "crusty bread"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Bigfoot campsite s'mores",
+     "scene": "Bigfoot helps himself to everything at the campsite",
+     "method": "Toast marshmallows over a flame until golden and squash them between plain biscuits with a square of milk chocolate so it melts.",
+     "shop": [
+      "marshmallows",
+      "plain biscuits",
+      "milk chocolate"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Concert night cherry slushie",
+     "scene": "Max and Roxanne at the big concert in LA",
+     "method": "Cherry cordial blended with lots of ice and a squeeze of lime until slushy, served in tall cups with a straw.",
+     "shop": [
+      "cherry cordial",
+      "ice",
+      "limes"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": false
   }
  ]
 }

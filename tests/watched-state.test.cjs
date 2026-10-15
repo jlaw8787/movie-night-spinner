@@ -36,7 +36,7 @@ function boot(values={},blocked=false) {
 }
 let app=boot();
 const count=app.run('FILMS.length');
-assert.equal(count,708);
+assert.equal(count,709);
 assert.equal(app.run('list.length'),count);
 app.run('current=FILMS[0];setWatched(current,true)');
 assert.equal(app.run('watched.size'),1);
