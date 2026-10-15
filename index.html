@@ -147,6 +147,68 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:50;
 /* Christmas aisle */
 .aisle.festive .aisle-sign{background:#c8102e;color:#fff;box-shadow:0 4px 0 #7a0a1c}
 .aisle.festive .aisle-spin{color:#ff9aa8;border-color:#ff9aa8}
+/* classification stickers */
+.rate{position:absolute;z-index:3;right:-5px;bottom:12px;min-width:24px;height:24px;padding:0 4px;border-radius:12px;display:grid;place-items:center;font:700 9.5px/1 var(--f-body);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.5);border:2px solid #fff;box-sizing:border-box}
+.rate.G,.ratebig.G{background:#1e9b3c}.rate.PG,.ratebig.PG{background:#f2c200;color:#1b1a18}.rate.M,.rate.PG-13,.ratebig.M,.ratebig.PG-13{background:#1f5fbf}.rate.MA15\+,.rate.R,.ratebig.MA15\+,.ratebig.R{background:#d2232a}.rate.R18\+,.ratebig.R18\+{background:#111}
+.case .ratebig{display:inline-grid;place-items:center;min-width:34px;height:22px;padding:0 6px;border-radius:11px;font:700 11px var(--f-body);color:#fff;vertical-align:1px;margin-left:4px;box-sizing:border-box}
+.case .ratebig.PG{color:#1b1a18}
+/* kids mode */
+.kids-on .shop-sign::after{content:"Kids mode";display:inline-block;margin-left:10px;vertical-align:middle;font:400 12px/1 var(--f-board);background:#7ee08a;color:#0d2a12;padding:6px 9px;border-radius:999px;transform:rotate(3deg);text-shadow:none}
+.toggle[aria-pressed="true"].kids{background:#7ee08a;border-color:#7ee08a;color:#0d2a12}
+/* member card extras */
+.member-out{grid-column:1/-1;margin:8px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.member-out li{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;background:rgba(0,0,0,.22);border-radius:8px;padding:6px 6px 6px 10px}
+.member-out button,.member-sync button{position:relative;z-index:1;font:400 12px var(--f-board);letter-spacing:.03em;border-radius:999px;padding:6px 10px;cursor:pointer;border:2px solid var(--shop-sign);background:transparent;color:var(--shop-sign)}
+.member-out button{background:var(--shop-sign);color:#14204f}
+.member-sync{grid-column:1/-1;margin:10px 0 0;display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;font-size:12.5px;color:#c9d3ff}
+.member-sync p{margin:0;flex-basis:100%}
+/* stars */
+.stars{display:flex;gap:4px;margin:0 0 14px}
+.stars button{font:400 26px/1 var(--f-body);background:none;border:0;padding:2px;cursor:pointer;color:#cfc8b6}
+.stars button.on{color:#f2a900}
+.stars-k{font:400 13px var(--f-board);letter-spacing:.06em;color:#1d3aa8;margin:0 0 2px}
+/* return chute */
+.chute{width:min(350px,100%);background:#f6f1e6;color:#1b1a18;border-radius:10px;padding:18px;text-align:center;box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.chute h3{font:400 24px/1 var(--f-board);color:#14204f;margin:0 0 4px}
+.chute>p{margin:0 0 12px;font-size:14px;color:#5b564c}
+.chute .drop{position:relative;height:190px;margin:0 auto 10px;width:200px;overflow:hidden}
+.chute .drop img{position:absolute;left:50%;top:0;width:96px;margin-left:-48px;border-radius:3px;box-shadow:0 6px 14px rgba(0,0,0,.35);transition:transform .7s cubic-bezier(.5,0,.8,.3),opacity .7s}
+.chute .slot{position:absolute;left:0;right:0;bottom:0;height:52px;border-radius:8px;background:linear-gradient(#2b2f3a,#13151b);box-shadow:inset 0 2px 0 rgba(255,255,255,.12);display:grid;place-items:center;font:400 13px var(--f-board);letter-spacing:.12em;color:var(--shop-sign);z-index:2}
+.chute .slot::before{content:"";position:absolute;left:24px;right:24px;top:10px;height:8px;border-radius:4px;background:#000}
+.chute .slot span{margin-top:14px}
+.chute.dropped .drop img{transform:translateY(150px) scaleY(.25);opacity:0}
+.chute .stars{justify-content:center}
+.chute .stars-k{text-align:center}
+.chute .acts{display:flex;gap:8px}
+.chute .acts button{flex:1;font:400 15px var(--f-board);border-radius:8px;padding:11px;cursor:pointer;border:2px solid #14204f;background:#fff;color:#14204f}
+.chute .acts .go{background:#14204f;color:#ffd23f}
+/* double feature */
+.df{color-scheme:light;max-width:600px;margin:0 auto;background:#f6f0e4;color:#221e19;border-radius:12px;padding:18px 18px 22px;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.df h3{font:400 26px/1.05 var(--f-board);color:var(--velvet);margin:0 0 12px;text-align:center}
+.df-pair{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:start;margin-bottom:10px}
+.df-pair figure{margin:0;text-align:center}
+.df-pair img{width:100%;max-width:150px;border-radius:4px;box-shadow:0 8px 16px rgba(0,0,0,.3)}
+.df-pair figcaption{font-size:13.5px;line-height:1.3;margin-top:6px}
+.df-pair figcaption b{display:block;font:400 12px var(--f-board);letter-spacing:.05em;color:var(--velvet-2)}
+.df-amp{align-self:center;font:400 30px var(--f-board);color:var(--velvet)}
+.df h4{font:400 14px var(--f-board);letter-spacing:.05em;color:var(--velvet-2);margin:12px 0 4px}
+.df ul{margin:0;padding-left:18px;font-size:14.5px}
+.df li small{color:#6b5f52}
+.df .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.df .acts button{font:600 14px var(--f-body);padding:9px 14px;border-radius:999px;border:1px solid #c9bda9;background:#fff;color:#221e19;cursor:pointer}
+.df .acts .go{background:var(--brass);border-color:var(--brass);color:var(--night)}
+.df .msg{font-size:13px;color:#5b4f44;margin:8px 0 0}
+/* sync forms */
+.syncbox{width:min(340px,100%);background:#fbfaf3;color:#222;border-radius:10px;padding:18px;box-shadow:0 30px 70px rgba(0,0,0,.6);box-sizing:border-box}
+.syncbox h3{font:400 22px/1.1 var(--f-board);color:#14204f;margin:0 0 6px}
+.syncbox p{font-size:14px;margin:0 0 12px;color:#4a463d}
+.syncbox label{display:block;font:600 13px var(--f-body);margin:0 0 4px;color:#14204f}
+.syncbox input{font:600 22px/1 "Courier New",monospace;letter-spacing:.2em;width:100%;box-sizing:border-box;padding:10px;border:2px solid #14204f;border-radius:8px;margin:0 0 12px;background:#fff;color:#14204f}
+.syncbox .err{color:#b3261e;font-weight:600;min-height:1.2em}
+.syncbox .acts{display:flex;gap:8px}
+.syncbox .acts button{flex:1;font:400 15px var(--f-board);border-radius:8px;padding:11px;cursor:pointer;border:2px solid #14204f;background:#fff;color:#14204f}
+.syncbox .acts .go{background:#14204f;color:#ffd23f}
+@media (prefers-reduced-motion:reduce){.chute .drop img{transition:none}}
 @media (prefers-reduced-motion:reduce){.case-art.track::after,.case-art.track img{animation:none}}
 @media (max-width:620px){.case-l{max-width:280px;width:100%;margin:0 auto}.case-l .case-art{max-width:200px;margin:0 auto}}
 .tape.picked .box{transform:translateY(-8px) scale(1.06);box-shadow:0 0 0 3px var(--shop-sign),0 14px 24px rgba(0,0,0,.6)}
@@ -724,6 +786,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
         <input type="search" id="shopSearch" placeholder="Ask the counter for a title" aria-label="Search titles">
         <select id="shopDecade" aria-label="Decade"><option value="">Any decade</option></select>
         <label><input type="checkbox" id="shopUnwatched"> Not seen yet</label>
+        <label><input type="checkbox" id="shopKids"> Kids mode</label>
       </div>
     </div>
     <div class="member" id="memberCard"></div>
@@ -748,6 +811,8 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
           <select id="themeSel"></select>
         </div>
         <button class="toggle" id="sound" type="button" aria-pressed="false">Sound off</button>
+        <button class="toggle kids" id="kidsBtn" type="button" aria-pressed="false">Kids mode off</button>
+        <button class="toggle df-btn" id="dfBtn" type="button">Double feature</button>
       </div>
       <div class="count" id="count"></div>
       <details class="watch-panel" id="watchPanel">
@@ -798,6 +863,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="tmdb-posters.js"></script>
 <script src="trailers.js"></script>
+<script src="ratings.js"></script>
 <script src="movie-menus.js"></script>
 <script>
 const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "Brooklyn Slice Joint"}, "deli": {"name": "Manhattan Deli Counter"}, "street": {"name": "Bodega and Street Cart"}, "cop": {"name": "Stakeout Snacks"}, "soul": {"name": "Harlem Soul Kitchen"}, "xmas": {"name": "Christmas in the City"}, "aussie": {"name": "Arvo in the Outback"}, "asian": {"name": "Chinatown Late Night"}, "scifi": {"name": "Mission Control Rations"}, "hero": {"name": "Rooftop Patrol"}, "kids": {"name": "Family Matinee"}, "teen": {"name": "Mall Food Court"}, "diner": {"name": "Roadside Diner"}, "mex": {"name": "Cantina Night"}, "tiki": {"name": "Beach House Luau"}, "uptown": {"name": "Uptown Steakhouse"}, "horror": {"name": "Midnight Monster Feast"}, "western": {"name": "Chuckwagon BBQ"}, "philly": {"name": "Philly Fight Night"}, "galaxy": {"name": "Galactic Cantina"}, "wizard": {"name": "Great Hall Feast"}, "adventure": {"name": "Explorer's Field Rations"}, "fairytale": {"name": "Storybook Banquet"}, "romcom": {"name": "Rom-Com Date Night"}};
@@ -842,8 +908,13 @@ function saveWatched(){
     localStorage.setItem("mns-watched",JSON.stringify([...watched]));
     localStorage.setItem("mns-skip-watched",skipWatched?"1":"0");
     $("watchSave").textContent="";
+    if(typeof queueSync==="function")queueSync();
   }catch(e){$("watchSave").textContent="This browser couldn't save your ticks. They'll last for this visit only."}
 }
+let kidsMode=false;
+try{kidsMode=localStorage.getItem("mns-kids")==="1"}catch(e){}
+const ratingOf=f=>(typeof RATINGS!=="undefined"&&RATINGS[f.id])||"";
+const isKidSafe=f=>{const r=ratingOf(f);return r?(r==="G"||r==="PG"):(f.theme==="kids"||f.theme==="fairytale")};
 function programmeFilms(){return sel.value==="all"?FILMS:FILMS.filter(f=>f.theme===sel.value)}
 function updateWatchButton(){
   const b=$("watchCurrent"),done=current&&watched.has(current.id);
@@ -885,12 +956,12 @@ function setWatched(f,done){
 function setList(){
   if(spinning)return;
   const films=programmeFilms();
-  list=shuffle(films.filter(f=>!skipWatched||!watched.has(f.id)));
+  list=shuffle(films.filter(f=>(!skipWatched||!watched.has(f.id))&&(!kidsMode||isKidSafe(f))));
   wedges=list.length?Array.from({length:N},(_,i)=>list[i%list.length]):[];
   rot=0;winner=-1;
   ctx.clearRect(0,0,canvas.width,canvas.height);draw();
   $("spin").disabled=!list.length;
-  $("count").textContent=list.length?`${list.length} films in tonight's programme${skipWatched?" · unwatched only":""}`:
+  $("count").textContent=list.length?`${list.length} films in tonight's programme${skipWatched?" · unwatched only":""}${kidsMode?" · kids mode":""}`:
     "You've watched every film in this programme. Choose another programme, untick a film or turn off ‘Skip watched’.";
   renderWatchList();
 }
@@ -1447,7 +1518,7 @@ function renderHist(){
 function addHistory(f){
   hist=[f.id,...hist.filter(x=>x!==f.id)].slice(0,8);
   try{localStorage.setItem("mns-hist",JSON.stringify(hist))}catch(e){}
-  renderHist();
+  renderHist();queueSync();
 }
 
 
@@ -1455,7 +1526,7 @@ function addHistory(f){
 const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 let week=null;
 try{week=JSON.parse(localStorage.getItem("mns-week")||"null")}catch(e){week=null}
-const saveWeek=()=>{try{week?localStorage.setItem("mns-week",JSON.stringify(week)):localStorage.removeItem("mns-week")}catch(e){}};
+const saveWeek=()=>{try{week?localStorage.setItem("mns-week",JSON.stringify(week)):localStorage.removeItem("mns-week")}catch(e){}if(typeof queueSync==="function")queueSync()};
 function cookDate(){const now=new Date();now.setHours(0,0,0,0);const d=new Date(now);d.setDate(now.getDate()+((week.day-now.getDay()+7)%7));return [d,Math.round((d-now)/864e5)]}
 function renderWeek(){
   const box=$("weekPanel");const f=week&&FILMS.find(x=>x.id===week.id);
@@ -1463,20 +1534,21 @@ function renderWeek(){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const [d,n]=cookDate();
   const when=n===0?"<b>Tonight</b>":n===1?"<b>Tomorrow</b>":`<b>${n} days to go</b>`;
   box.hidden=false;
-  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})}, ${when}</p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
+  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})}, ${when}</p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
   $("weekDay").addEventListener("change",e=>{week.day=+e.target.value;saveWeek();renderWeek()});
-  $("weekShop").addEventListener("click",()=>openTrolley(f));
+  $("weekShop").addEventListener("click",async()=>{const g=week.double&&FILMS.find(x=>x.id===week.double);if(g){const dm=await doubleMenu(f,g);openTrolley(f,dm,`${f.title} + ${g.title}`)}else openTrolley(f)});
   $("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
   $("weekClear").addEventListener("click",()=>{week=null;saveWeek();renderWeek();$("status").textContent="This week's film cleared."});
 }
 function setWeek(f){week={id:f.id,day:week&&week.day!=null?week.day:6,ticks:{}};saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
 function listText(f,groups){return `${f.title} (${f.year}) shopping list, serves 4\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
-async function openTrolley(f){
+async function openTrolley(f,menuOverride,label){
   await ensureExact(f);
-  const mm=makeMenu(f,true);mm.counter=counterShop(f.id);const groups=shopGroups(mm);const all=groups.flatMap(([,l])=>l);
+  const mm=makeMenu(f,true);mm.counter=counterShop(f.id);
+  const groups=shopGroups(menuOverride||mm);const all=groups.flatMap(([,l])=>l);
   const o=document.createElement("div");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Shopping list for ${f.title}`);
   const ticks=()=>week&&week.id===f.id?week.ticks:{};
-  o.innerHTML=`<div class="trolley-in"><h3>${ESC(f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(x)}"${ticks()[x]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
+  o.innerHTML=`<div class="trolley-in"><h3>${ESC(label||f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(x)}"${ticks()[x]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
   const prog=()=>{const n=Object.values(ticks()).filter(Boolean).length;o.querySelector("#tProg").textContent=`${n} of ${all.length} in the trolley. Serves 4.`;o.querySelector("#tBar").style.width=(100*n/all.length)+"%"};
   o.addEventListener("change",e=>{const k=e.target.dataset.k;if(!k||!week||week.id!==f.id)return;week.ticks[k]=e.target.checked;saveWeek();prog()});
   const close=()=>{o.remove();document.removeEventListener("keydown",esc)};const esc=e=>{if(e.key==="Escape")close()};
@@ -1522,7 +1594,7 @@ const priceTag=f=>isNew(f)?"Overnight $6":"Weekly $3";
 let member=null;
 try{member=JSON.parse(localStorage.getItem("mns-member")||"null")}catch(e){member=null}
 if(!member||!member.no)member={no:String(100000+Math.floor(Math.random()*900000)),since:Date.now(),name:"",rentals:0,aisles:{},out:[]};
-const saveMember=()=>{try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}};
+const saveMember=()=>{try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}queueSync()};
 saveMember();
 let counter={};
 try{counter=JSON.parse(localStorage.getItem("mns-counter")||"{}")}catch(e){counter={}}
@@ -1536,10 +1608,13 @@ function renderMember(){
   const box=$("memberCard");if(!box)return;
   const since=new Date(member.since).toLocaleString("en-AU",{month:"short",year:"numeric"});
   const fav=Object.entries(member.aisles||{}).sort((a,b)=>b[1]-a[1])[0];
+  const outList=(member.out||[]).filter(r=>!watched.has(r.id)).map(r=>({r,f:FILMS.find(x=>x.id===r.id)})).filter(x=>x.f);
   const late=lateFees();const owe=late.reduce((n,x)=>n+Math.min(x.days,10),0);
   const fee=late.length?`Late fees: $${owe}.00 on ${late.slice(0,2).map(x=>x.f.title).join(" and ")}${late.length>2?` and ${late.length-2} more`:""}. Mark it seen to clear the slate.`:"Late fees: none. Good member.";
-  box.innerHTML=`<div class="member-logo" aria-hidden="true">SV</div><p class="member-k">Spinner Video member</p><input id="memberName" type="text" maxlength="28" autocomplete="off" aria-label="Name on your member card" placeholder="Tap to write your name" value="${ESC(member.name||"")}"><p class="member-meta"><span>No. ${member.no.slice(0,3)} ${member.no.slice(3)}</span><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>`;
-  $("memberName").addEventListener("change",e=>{member.name=e.target.value.trim();saveMember()});
+  box.innerHTML=`<div class="member-logo" aria-hidden="true">SV</div><p class="member-k">Spinner Video member</p><input id="memberName" type="text" maxlength="28" autocomplete="off" aria-label="Name on your member card" placeholder="Tap to write your name" value="${ESC(member.name||"")}"><p class="member-meta"><span>No. ${member.no.slice(0,3)} ${member.no.slice(3)}</span><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><span>${ESC(f.title)}, due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}</span><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}</div>`;
+  $("memberName").addEventListener("change",e=>{member.name=e.target.value.trim();saveMember();renderShop()});
+  box.querySelectorAll("[data-ret]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.ret);if(f)openChute(f)}));
+  box.querySelectorAll("[data-sync]").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.sync;if(k==="out"){delete member.pin;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}renderMember()}else openSyncForm(k)}));
 }
 function dueBack(f){
   const d=new Date();
@@ -1569,24 +1644,182 @@ function openSlip(f,go){
   });
   document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".go").focus();
 }
+/* classification sticker */
+const rateCls=r=>r.replace(/\s/g,"");
+/* stars and the return chute */
+if(!member.stars)member.stars={};
+function starsHTML(f){const n=member.stars[f.id]||0;return `<p class="stars-k">Your stars</p><div class="stars" role="group" aria-label="Your stars for ${ESC(f.title)}">${[1,2,3,4,5].map(i=>`<button type="button" data-star="${i}" class="${i<=n?"on":""}" aria-label="${i} star${i>1?"s":""}" aria-pressed="${i===n}">★</button>`).join("")}</div>`}
+function wireStars(root,f,onSet){root.querySelectorAll("[data-star]").forEach(b=>b.addEventListener("click",()=>{const n=+b.dataset.star;member.stars[f.id]=member.stars[f.id]===n?0:n;if(!member.stars[f.id])delete member.stars[f.id];saveMember();root.querySelectorAll("[data-star]").forEach(x=>{x.classList.toggle("on",+x.dataset.star<=(member.stars[f.id]||0));x.setAttribute("aria-pressed",+x.dataset.star===(member.stars[f.id]||0))});buzz(10);onSet&&onSet()}))}
+function openChute(f,after){
+  const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
+  const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Return ${f.title}`);
+  o.innerHTML=`<div class="chute"><h3>Return chute</h3><p>${ESC(f.title)}. How was it?</p><div class="drop">${p?`<img alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}<div class="slot"><span>Returns</span></div></div>${starsHTML(f)}<div class="acts"><button type="button" data-a="back">Not yet</button><button type="button" class="go" data-a="drop">Drop it in</button></div></div>`;
+  const last=document.activeElement;
+  const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus&&last.focus()};
+  const esc=e=>{if(e.key==="Escape")close()};
+  wireStars(o,f);
+  o.addEventListener("click",e=>{
+    if(e.target===o)return close();const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
+    if(a==="back")return close();
+    if(a==="drop"){
+      o.querySelector(".chute").classList.add("dropped");buzz([15,60,25]);
+      member.out=(member.out||[]).filter(r=>r.id!==f.id);
+      if(!watched.has(f.id)){watched.add(f.id);saveWatched();if(!spinning){setList();updateWatchButton()}}
+      saveMember();
+      setTimeout(()=>{close();renderShop();after&&after()},reduce?0:800);
+    }
+  });
+  document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".go").focus();
+}
+function topShelf(list){return list.filter(f=>(member.stars[f.id]||0)>=4).sort((a,b)=>(member.stars[b.id]-member.stars[a.id])||a.title.localeCompare(b.title))}
+
+/* kids mode, shared by the wheel and the shop */
+function setKidsUI(){const b=$("kidsBtn");b.setAttribute("aria-pressed",kidsMode);b.textContent=kidsMode?"Kids mode on":"Kids mode off";$("shopKids").checked=kidsMode;document.body.classList.toggle("kids-on",kidsMode)}
+function setKids(v){
+  kidsMode=v;try{localStorage.setItem("mns-kids",v?"1":"0")}catch(e){}
+  setKidsUI();
+  if(!spinning)setList();
+  if(!$("viewShop").hidden)renderShop();
+  queueSync();
+}
+$("kidsBtn").addEventListener("click",()=>setKids(!kidsMode));
+$("shopKids").addEventListener("change",e=>setKids(e.target.checked));
+
+/* double feature */
+function itemShop(menu,it){
+  if(Array.isArray(it.shop))return it.shop;
+  const how=((it.how||"")+" "+(it.n||"")).toLowerCase();
+  return (menu.shopping||[]).filter(x=>{const words=x.split("@")[0].toLowerCase().replace(/[0-9.,/()]+(g|kg|ml|l|cm)?\b/g," ").split(/\s+/).filter(w=>w.length>=4);return words.some(w=>how.includes(w.replace(/s$/,"")))});
+}
+async function doubleMenu(a,b){
+  await ensureExact(a);await ensureExact(b);
+  const A=makeMenu(a,true),B=makeMenu(b,true);
+  const pickIt=(menu,it,film)=>Object.assign({},it,{film:film.title,shop:itemShop(menu,it)});
+  const m={s:[pickIt(A,A.s[0],a),pickIt(B,B.s[0],b)],m:[pickIt(A,A.m[0],a)],w:[pickIt(B,B.w[0],b)],d:[A.d[0]&&pickIt(A,A.d[0],a),B.d[0]&&pickIt(B,B.d[0],b)].filter(Boolean)};
+  m.counter=[...new Set([...counterShop(a.id),...counterShop(b.id)])];
+  return m;
+}
+function pairFor(a,pool){
+  const others=pool.filter(f=>f.id!==a.id);
+  const sameTheme=others.filter(f=>f.theme===a.theme);
+  const sameAisle=others.filter(f=>SHOP_AISLE_OF[f.theme]&&SHOP_AISLE_OF[f.theme]===SHOP_AISLE_OF[a.theme]);
+  const near=x=>x.filter(f=>Math.abs(+f.year-+a.year)<=12);
+  const c=[near(sameTheme),sameTheme,near(sameAisle),sameAisle,others].find(x=>x.length);
+  return c?c[Math.floor(Math.random()*c.length)]:null;
+}
+async function openDouble(){
+  const pool=list.length>1?list:FILMS.filter(f=>!kidsMode||isKidSafe(f));
+  const a=pool[Math.floor(Math.random()*pool.length)],b=pairFor(a,pool);if(!b)return;
+  const m=await doubleMenu(a,b);
+  const img=f=>{const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];return p?`<img alt="${ESC(f.title)} poster" src="https://image.tmdb.org/t/p/w342${ESC(p)}">`:""};
+  const li=it=>`<li>${ESC(it.n)} <small>(${ESC(it.film)})</small></li>`;
+  const o=document.createElement("div");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","Double feature");
+  o.innerHTML=`<div class="df"><h3>Tonight's double feature</h3><div class="df-pair"><figure>${img(a)}<figcaption><b>First up</b>${ESC(a.title)} (${a.year})</figcaption></figure><span class="df-amp" aria-hidden="true">+</span><figure>${img(b)}<figcaption><b>Then</b>${ESC(b.title)} (${b.year})</figcaption></figure></div><p class="msg">One menu for both films, serves 4. A snack and a drink from each, the main from the first film and dessert at intermission.</p><h4>Snacks</h4><ul>${m.s.map(li).join("")}</ul><h4>Main</h4><ul>${m.m.map(li).join("")}</ul><h4>Intermission dessert</h4><ul>${m.w.map(li).join("")}</ul><h4>To drink</h4><ul>${m.d.map(li).join("")}</ul><div class="acts"><button class="go" type="button" data-a="lock">Lock in for the week</button><button type="button" data-a="shop">Shopping list</button><button type="button" data-a="again">Spin again</button><button type="button" data-a="first">Open first film</button><button type="button" data-a="done">Done</button></div><p class="msg" role="status" id="dfMsg"></p></div>`;
+  const close=()=>{o.remove();document.removeEventListener("keydown",esc)};const esc=e=>{if(e.key==="Escape")close()};
+  o.addEventListener("click",e=>{
+    if(e.target===o)return close();const k=e.target.dataset&&e.target.dataset.a;if(!k)return;
+    if(k==="done")close();
+    if(k==="again"){close();openDouble()}
+    if(k==="first"){close();setView("wheel");replay(a);addHistory(a);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
+    if(k==="shop")openTrolley(a,m,`${a.title} + ${b.title}`);
+    if(k==="lock"){week={id:a.id,double:b.id,day:week&&week.day!=null?week.day:6,ticks:{}};saveWeek();renderWeek();o.querySelector("#dfMsg").textContent="Locked in. It's on your This week panel with one shopping list for both."}
+  });
+  document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".go").focus();buzz([20,40,20]);
+}
+$("dfBtn").addEventListener("click",openDouble);
+
+/* sync: member number + PIN, stored in Supabase through an edge function (no keys in this page) */
+const SYNC_URL="https://skxiumrqinvpauwkljwn.supabase.co/functions/v1/mns-sync";
+var syncTimer=null,syncState="";
+async function syncCall(body){
+  const r=await fetch(SYNC_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+  if(!r.ok)throw new Error("sync");return r.json();
+}
+function syncPayload(){
+  const {pin,...m}=member;
+  return {v:1,member:m,watched:[...watched],skip:skipWatched,hist,week,counter,kids:kidsMode};
+}
+function applyRemote(d){
+  if(!d||!d.member)return;
+  const pin=member.pin,mine=member;
+  member=Object.assign({},d.member,{pin,no:d.member.no||mine.no});
+  member.rentals=Math.max(d.member.rentals||0,mine.rentals||0);
+  member.stars=Object.assign({},mine.stars||{},d.member.stars||{});
+  member.aisles=d.member.aisles||mine.aisles||{};
+  const outIds=new Set();member.out=[...(d.member.out||[]),...(mine.out||[])].filter(r=>!outIds.has(r.id)&&outIds.add(r.id)).slice(0,6);
+  if(!member.name&&mine.name)member.name=mine.name;
+  (d.watched||[]).forEach(id=>{if(FILMS.some(f=>f.id===id))watched.add(id)});
+  hist=[...new Set([...(d.hist||[]),...hist])].slice(0,8);
+  if(d.week)week=d.week;
+  counter=Object.assign({},counter,d.counter||{});
+  if(typeof d.kids==="boolean")kidsMode=d.kids;
+  try{localStorage.setItem("mns-member",JSON.stringify(member));localStorage.setItem("mns-watched",JSON.stringify([...watched]));localStorage.setItem("mns-hist",JSON.stringify(hist));localStorage.setItem("mns-counter",JSON.stringify(counter));if(week)localStorage.setItem("mns-week",JSON.stringify(week));localStorage.setItem("mns-kids",kidsMode?"1":"0")}catch(e){}
+  renderHist();renderWeek();setKidsUI();if(!spinning){setList();updateWatchButton()}if(!$("viewShop").hidden)renderShop();
+}
+function queueSync(){
+  if(!member||!member.pin)return;
+  clearTimeout(syncTimer);syncTimer=setTimeout(pushSync,1500);
+}
+async function pushSync(){
+  if(!member.pin)return;
+  try{const r=await syncCall({action:"save",no:member.no,pin:member.pin,data:syncPayload()});syncState=r.status==="ok"?"saved":r.status}catch(e){syncState="offline"}
+  const el=document.getElementById("syncNote");if(el)el.textContent=syncNote();
+}
+function syncNote(){return syncState==="offline"?"Couldn't reach the card system. Your changes are saved on this device and will go up next time.":syncState==="badpin"||syncState==="locked"?"Your PIN didn't match. Sign out and sign in again to keep syncing.":`Synced. Use No. ${member.no.slice(0,3)} ${member.no.slice(3)} and your PIN on any other device.`}
+function openSyncForm(mode){
+  const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
+  const join=mode==="join";
+  o.setAttribute("aria-label",join?"Put your card online":"Use your card from another device");
+  o.innerHTML=`<form class="syncbox"><h3>${join?"Put my card online":"Use my card here"}</h3><p>${join?`Pick a 4-digit PIN. Then on any other device, enter No. ${member.no.slice(0,3)} ${member.no.slice(3)} and this PIN to bring your card, ticks and rentals across.`:"Enter the member number from your card on the other device, and your PIN. Anything on this device gets merged in."}</p>${join?"":`<label for="sNo">Member number</label><input id="sNo" inputmode="numeric" autocomplete="off" maxlength="7" required>`}<label for="sPin">PIN</label><input id="sPin" type="password" inputmode="numeric" autocomplete="off" maxlength="4" required><p class="err" id="sErr" role="alert"></p><div class="acts"><button type="button" data-a="back">Cancel</button><button type="submit" class="go">${join?"Save my card":"Sign in"}</button></div></form>`;
+  const close=()=>{o.remove();document.removeEventListener("keydown",esc)};const esc=e=>{if(e.key==="Escape")close()};
+  o.addEventListener("click",e=>{if(e.target===o||(e.target.dataset&&e.target.dataset.a==="back"))close()});
+  o.querySelector("form").addEventListener("submit",async e=>{
+    e.preventDefault();const err=o.querySelector("#sErr");err.textContent="";
+    const pin=o.querySelector("#sPin").value.trim();if(!/^\d{4}$/.test(pin)){err.textContent="The PIN needs to be 4 numbers.";return}
+    const btn=o.querySelector(".go");btn.disabled=true;
+    try{
+      if(join){
+        const r=await syncCall({action:"load",no:member.no,pin});
+        if(r.status==="badpin"||r.status==="locked"){err.textContent="That member number already has a different PIN. Use the other button to sign in.";btn.disabled=false;return}
+        member.pin=pin;if(r.status==="ok")applyRemote(r.data);
+        saveMember();await pushSync();
+      }else{
+        const no=o.querySelector("#sNo").value.replace(/\D/g,"");if(no.length!==6){err.textContent="Member numbers are 6 numbers long.";btn.disabled=false;return}
+        const r=await syncCall({action:"load",no,pin});
+        if(r.status==="new"){err.textContent="No card with that number. Check the number on your other device.";btn.disabled=false;return}
+        if(r.status==="locked"){err.textContent="Too many wrong PINs. This card is locked.";btn.disabled=false;return}
+        if(r.status!=="ok"){err.textContent="That PIN doesn't match.";btn.disabled=false;return}
+        member.no=no;member.pin=pin;applyRemote(r.data);saveMember();await pushSync();
+      }
+      close();renderMember();buzz(30);
+    }catch(x){err.textContent="Couldn't reach the card system. Check your connection and try again.";btn.disabled=false}
+  });
+  document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector("input").focus();
+}
+async function pullSync(){
+  if(!member.pin)return;
+  try{const r=await syncCall({action:"load",no:member.no,pin:member.pin});if(r.status==="ok"){applyRemote(r.data);syncState="saved";pushSync()}else syncState=r.status}catch(e){syncState="offline"}
+  renderMember();
+}
 let shopBuilt=false;
 function tapeHTML(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
   const st=watched.has(f.id)?'<span class="sticker back">Seen it</span>':isNew(f)?'<span class="sticker new">New</span>':isPick(f)?'<span class="sticker pick">Staff pick</span>':"";
   const out=isOut(f);
-  return `<button class="tape${isClam(f)?" clam":""}${out?" out":""}" type="button" data-id="${ESC(f.id)}" style="transform:rotate(${(hashN(f.id)%5-2)*.35}deg)">${out?"":st}<span class="box">${p?`<img loading="lazy" decoding="async" alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}${out?'<span class="out-card">All copies out<small>Check back Friday</small></span>':`<span class="price">${priceTag(f)}</span>`}</span><span class="tape-t">${ESC(f.title)}</span><span class="tape-y">${f.year}</span></button>`;
+  return `<button class="tape${isClam(f)?" clam":""}${out?" out":""}" type="button" data-id="${ESC(f.id)}" style="transform:rotate(${(hashN(f.id)%5-2)*.35}deg)">${out?"":st}<span class="box">${p?`<img loading="lazy" decoding="async" alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}${out?'<span class="out-card">All copies out<small>Check back Friday</small></span>':`<span class="price">${priceTag(f)}</span>`}${ratingOf(f)?`<span class="rate ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</span><span class="tape-t">${ESC(f.title)}</span><span class="tape-y">${f.year}</span></button>`;
 }
 function renderShop(){
   const q=$("shopSearch").value.trim().toLowerCase(),dec=$("shopDecade").value,unseen=$("shopUnwatched").checked;
-  const ok=f=>(!q||f.title.toLowerCase().includes(q))&&(!dec||f.year.slice(0,3)===dec)&&(!unseen||!watched.has(f.id));
+  const ok=f=>(!q||f.title.toLowerCase().includes(q))&&(!dec||f.year.slice(0,3)===dec)&&(!unseen||!watched.has(f.id))&&(!kidsMode||isKidSafe(f));
   const list=FILMS.filter(ok);
   const rows=[];
   const fresh=list.filter(isNew).sort((a,b)=>b.year-a.year||a.title.localeCompare(b.title));
   const rented=hist.map(id=>list.find(f=>f.id===id)).filter(Boolean);
-  const spooky=!q?halloweenRows(list):[],season=isSpookySeason();
+  const spooky=!q?halloweenRows(list).filter(r=>!(kidsMode&&r[0]==="Halloween: late show")):[],season=isSpookySeason();
   if(season)rows.push(...spooky);
   if(!q&&isXmasSeason()){const r=list.filter(f=>f.theme==="xmas").sort((a,b)=>a.title.localeCompare(b.title));if(r.length)rows.push(["Christmas",r,"Pop the tree lights on and pick one.","festive"])}
   if(rented.length&&!q)rows.push(["Your rentals",rented]);
+  const top=!q?topShelf(list):[];if(top.length)rows.push([member.name?`${member.name}'s shelf`:"Your top shelf",top,"Everything you gave 4 or 5 stars."]);
   if(fresh.length&&!q)rows.push(["New releases",fresh]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
   if(q)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
@@ -1605,12 +1838,14 @@ async function openCase(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const m=makeMenu(f,true);
   const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
   const seen=watched.has(f.id);
-  o.innerHTML=`<div class="case"><button class="x" type="button" aria-label="Put it back">×</button><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p><h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="rent" type="button">Rent it</button><button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
+  o.innerHTML=`<div class="case"><button class="x" type="button" aria-label="Put it back">×</button><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}${ratingOf(f)?` <span class="ratebig ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p>${seen?starsHTML(f):""}<h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="rent" type="button">Rent it</button>${(member.out||[]).some(r=>r.id===f.id)&&!seen?'<button class="ret" type="button">Return it</button>':""}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
   const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus()};
   const esc=e=>{if(e.key==="Escape")close()};const last=document.activeElement;
   o.addEventListener("click",e=>{if(e.target===o)close()});
   o.querySelector(".x").addEventListener("click",close);
   o.querySelector(".rent").addEventListener("click",()=>{close();openSlip(f,()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})})});
+  if(seen)wireStars(o,f,()=>renderShop());
+  const rb=o.querySelector(".ret");if(rb)rb.addEventListener("click",()=>{close();openChute(f)});
   const tv=o.querySelector(".tv-play");
   if(tv)tv.addEventListener("click",()=>{const k=tv.dataset.k;tv.parentElement.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(k)}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="${ESC(f.title)} trailer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`});
   o.querySelector(".seen").addEventListener("click",()=>{setWatched(f,!watched.has(f.id));close();renderShop()});
@@ -1742,6 +1977,7 @@ window.addEventListener("resize",size);
 
 setList();size();renderHist();scalePreview();renderWeek();
 if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+setKidsUI();if(kidsMode)setList();pullSync();
 try{if(location.hash==="#shop"||localStorage.getItem("mns-view")==="shop")setView("shop")}catch(e){}
 document.fonts.ready.then(draw);
 const initialFilmId=new URLSearchParams(window.location.search).get("film");
