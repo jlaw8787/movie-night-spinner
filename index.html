@@ -78,6 +78,11 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:50;
 .aisle-top .aisle-sign{margin:0}
 .aisle-spin{font:400 13px var(--f-board);letter-spacing:.04em;color:var(--shop-sign);background:transparent;border:2px solid var(--shop-sign);border-radius:999px;padding:5px 12px;cursor:pointer}
 .aisle-spin:hover{background:rgba(255,210,63,.12)}
+.aisle.spooky .aisle-sign{font-size:16px;background:#ff7a1a;color:#2a0b3d;box-shadow:0 4px 0 #a8440a}
+.aisle.spooky .aisle-spin{color:#ff7a1a;border-color:#ff7a1a}
+.aisle.spooky .aisle-spin:hover{background:rgba(255,122,26,.12)}
+.aisle.spooky .shelf{border-bottom-color:#2a0b3d}
+.aisle-note{flex-basis:100%;margin:0;font-size:12.5px;color:var(--muted)}
 .tape.picked .box{transform:translateY(-8px) scale(1.06);box-shadow:0 0 0 3px var(--shop-sign),0 14px 24px rgba(0,0,0,.6)}
 .counter{position:fixed;inset:0;z-index:60;background:rgba(5,6,14,.82);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow:auto}
 .case{width:min(760px,100%);background:#f6f1e6;color:#1b1a18;border-radius:8px;display:grid;grid-template-columns:240px 1fr;gap:20px;padding:18px;box-shadow:0 30px 70px rgba(0,0,0,.6);position:relative}
@@ -1427,6 +1432,18 @@ const TMDB_IMG_SHOP="https://image.tmdb.org/t/p/";
 const buzz=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
 const hashN=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
 const isPick=f=>hashN(f.id)%9===0,isNew=f=>+f.year>=2020;
+const HALLOWEEN_SOFT=new Set(["Hocus Pocus","The Addams Family","Addams Family Values","Beetlejuice","Casper","Ghostbusters","Ghostbusters II","Ghostbusters: Afterlife","Ghostbusters: Frozen Empire","The Nightmare Before Christmas","Gremlins","Gremlins 2: The New Batch","The Witches","Little Shop of Horrors","Young Frankenstein","Practical Magic","Monsters, Inc.","Monsters University","Labyrinth","Tremors","The Mummy","The Mummy Returns","Shaun of the Dead","What We Do in the Shadows","The Rocky Horror Picture Show","The Lost Boys","Fright Night","Night at the Museum"]);
+const HALLOWEEN_DARK_EXTRA=new Set(["Alien","Aliens","Jaws","Wolf Creek","Psycho","The Silence of the Lambs"]);
+const isSpookySeason=()=>{const d=new Date();return d.getMonth()===9||(d.getMonth()===10&&d.getDate()===1)};
+function halloweenRows(list){
+  const az=(a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,""));
+  const soft=list.filter(f=>HALLOWEEN_SOFT.has(f.title)).sort(az);
+  const dark=list.filter(f=>!HALLOWEEN_SOFT.has(f.title)&&(f.theme==="horror"||HALLOWEEN_DARK_EXTRA.has(f.title))).sort(az);
+  const r=[];
+  if(soft.length)r.push(["Halloween: all ages",soft,"Spooky fun for the whole house. Fine with the kids up.","spooky"]);
+  if(dark.length)r.push(["Halloween: late show",dark,"Proper scares. Wait till the kids are in bed.","spooky"]);
+  return r;
+}
 let shopBuilt=false;
 function tapeHTML(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
@@ -1440,13 +1457,16 @@ function renderShop(){
   const rows=[];
   const fresh=list.filter(isNew).sort((a,b)=>b.year-a.year||a.title.localeCompare(b.title));
   const rented=hist.map(id=>list.find(f=>f.id===id)).filter(Boolean);
+  const spooky=!q?halloweenRows(list):[],season=isSpookySeason();
+  if(season)rows.push(...spooky);
   if(rented.length&&!q)rows.push(["Your rentals",rented]);
   if(fresh.length&&!q)rows.push(["New releases",fresh]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
   if(q)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
   else SHOP_AISLES.forEach(([n,ts])=>{const r=list.filter(f=>ts.includes(f.theme)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
+  if(!season)rows.push(...spooky);
   $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
-  $("shopAisles").innerHTML=rows.length?rows.map(([n,r])=>`<section class="aisle"><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}</div><div class="shelf">${r.map(tapeHTML).join("")}</div></section>`).join(""):`<p class="shelf-empty">Nothing on the shelves matches that. Try another title or clear the filters.</p>`;
+  $("shopAisles").innerHTML=rows.length?rows.map(([n,r,note,cls])=>`<section class="aisle${cls?" "+cls:""}"><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div><div class="shelf">${r.map(tapeHTML).join("")}</div></section>`).join(""):`<p class="shelf-empty">Nothing on the shelves matches that. Try another title or clear the filters.</p>`;
 }
 async function openCase(f){
   await ensureExact(f);
