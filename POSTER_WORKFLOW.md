@@ -80,3 +80,7 @@ Work through your lane in file order as before. If you reach a film without `rec
 - **Taglines:** use the brief's tagline. A short, famous line from the film is fine in the footer.
 - A film is complete only when the poster text, the edition in `movie-menus.js` and the recipes all match.
 - **Never touch a film that isn't in `poster-briefs.json`.** Claude is still writing those menus. They get added to the briefs as each one is finished.
+
+## Real posters (TMDB)
+
+Films without a finished poster edition now show their official poster on a lobby-card menu. The poster loads live from TMDB's image servers; only the poster paths live in `tmdb-posters.js`. No API key is stored in the repo. To add new films, run `TMDB_KEY=... python3 scripts/tmdb-match.py films.json matches.json` and add the new paths to `tmdb-posters.js`. Finished poster editions still take priority. TMDB's free terms cover personal, non-commercial use only.

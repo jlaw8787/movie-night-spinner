@@ -214,6 +214,32 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .mc-cue b{font-family:var(--md);font-weight:var(--mdw,400);color:var(--hd);margin-right:8px;text-transform:var(--mtt,none)}
 .mc-foot{flex:none;margin-top:8px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.62}
 
+/* ---------- lobby card: the real cinema poster, framed, with the themed menu under it ---------- */
+.L-lobby{background:#0f0d0c;color:#f6efe2}
+.L-lobby .lb-bg{position:absolute;z-index:0;left:-40px;top:-90px;width:874px;height:1311px;max-width:none}
+.L-lobby .lb-shade{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at 30% 22%,rgba(12,10,9,.5),rgba(12,10,9,.86) 70%),linear-gradient(rgba(12,10,9,.2),rgba(12,10,9,.75))}
+.L-lobby .mc-in{inset:0;padding:42px 44px 30px;align-items:stretch;text-align:left;color:#f6efe2;background:none}
+.L-lobby .lb-head{display:grid;grid-template-columns:300px 1fr;column-gap:32px;align-items:center;flex:none}
+.L-lobby .lb-frame{width:300px;height:450px;padding:7px;background:#14110f;box-shadow:inset 0 0 0 1px rgba(233,196,106,.55),0 0 0 1px rgba(0,0,0,.8),0 24px 44px rgba(0,0,0,.65),0 0 60px rgba(233,196,106,.12)}
+.L-lobby .lb-poster{display:block;width:100%;height:100%;object-fit:cover}
+.L-lobby .lb-info{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.L-lobby .mc-eye{color:#e9c46a;font-size:14px;letter-spacing:.24em;padding-bottom:10px;border-bottom:1px solid rgba(233,196,106,.5)}
+.L-lobby .mc-title{color:#fbf6ec;font-size:60px;line-height:1;margin:16px 0 8px;text-wrap:balance;text-shadow:0 3px 14px rgba(0,0,0,.6)}
+.L-lobby .mc-year{color:#e9c46a;font-size:15px}
+.L-lobby .mc-tag{font-size:21px;margin:16px 0 0;color:#fbf6ec}
+.L-lobby .mc-desc{font-size:15px;margin:10px 0 0;opacity:.8}
+.L-lobby .lb-menu{flex:1 1 auto;min-height:0;overflow:hidden;margin-top:28px;background:var(--fibre),var(--mg);color:var(--mi);border-radius:3px;padding:20px 34px 18px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 18px 40px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.06)}
+.L-lobby .lb-menu-h{font-family:var(--md);font-weight:var(--mdw,400);text-transform:var(--mtt,none);letter-spacing:var(--mls,0);color:var(--ma);font-size:34px;line-height:1;margin:0}
+.L-lobby .mc-orn{color:var(--ma);margin:8px 0 2px}
+.L-lobby .mc-course h3{color:var(--ma)}
+.L-lobby .mc-cue{border-color:var(--ma);color:var(--mi)}
+.L-lobby .mc-cue b{color:var(--ma)}
+.L-lobby .mc-foot{color:var(--mi)}
+.L-lobby .lb-credit{position:absolute;z-index:5;right:46px;bottom:9px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,239,226,.55)}
+.credit{max-width:1200px;margin:18px auto 28px;padding:0 16px;font-size:12px;opacity:.6;text-align:center}
+.credit a{color:inherit}
+
 /* prep sheet */
 .pp{align-items:stretch;text-align:left}
 .pp .mc-eye{text-align:center}
@@ -574,9 +600,11 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
     </section>
   </div>
 </div>
+<p class="credit">Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="tmdb-posters.js"></script>
 <script src="movie-menus.js"></script>
 <script>
 const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "Brooklyn Slice Joint"}, "deli": {"name": "Manhattan Deli Counter"}, "street": {"name": "Bodega and Street Cart"}, "cop": {"name": "Stakeout Snacks"}, "soul": {"name": "Harlem Soul Kitchen"}, "xmas": {"name": "Christmas in the City"}, "aussie": {"name": "Arvo in the Outback"}, "asian": {"name": "Chinatown Late Night"}, "scifi": {"name": "Mission Control Rations"}, "hero": {"name": "Rooftop Patrol"}, "kids": {"name": "Family Matinee"}, "teen": {"name": "Mall Food Court"}, "diner": {"name": "Roadside Diner"}, "mex": {"name": "Cantina Night"}, "tiki": {"name": "Beach House Luau"}, "uptown": {"name": "Uptown Steakhouse"}, "horror": {"name": "Midnight Monster Feast"}, "western": {"name": "Chuckwagon BBQ"}, "philly": {"name": "Philly Fight Night"}, "galaxy": {"name": "Galactic Cantina"}, "wizard": {"name": "Great Hall Feast"}, "adventure": {"name": "Explorer's Field Rations"}, "fairytale": {"name": "Storybook Banquet"}, "romcom": {"name": "Rom-Com Date Night"}};
@@ -1028,12 +1056,45 @@ function pal(f){const st=STY[f.theme];return{a:st.ma,b:st.m2,i:st.mi,g:st.mg,m:s
 
 const COURSE_LABEL={redsauce:["Antipasti","Secondi","Dolci","Da bere"],pizza:["Starters","Pies","Sweet","Pour"],deli:["Counter","Sandwich board","Bakery case","Fountain"],asian:["Small eats","Big plates","Sweet","Pot of tea"],street:["Off the cart","Heroes","Sweet","Cold one"],cop:["Exhibit A","Exhibit B","Evidence: sweet","Evidence: liquid"],hero:["Origin snacks","Main event","Sweet victory","Power-up"],western:["Grub","Chuckwagon","Sweet","Saloon"],philly:["Round one","Main event","Sweet","Corner"],soul:["Starters","Supper","Sweet","Drinks"],diner:["Starters","Blue plate specials","Pie case","Fountain"],teen:["Snacks","Food court","Sweet","Slurp"],aussie:["Nibbles","Off the barbie","Sweet","In the esky"],adventure:["Trail snacks","Camp supper","Sweet","Canteen"],wizard:["To begin","The feast","Pudding","Goblets"],galaxy:["Rations","Main course","Sweet","Cantina"],scifi:["Rations","Main course","Sweet","Fuel"],fairytale:["Once upon a snack","The royal feast","Happily ever after","Potions"],kids:["Snacks","Mains","Treat","Drinks"],uptown:["Hors d'oeuvres","Entrées","Dessert","Bar"],horror:["Appetisers","Main slaughter","Afterlife","Potion"],tiki:["Pupu platter","Luau","Sweet","Tiki bar"],mex:["Botanas","Platos","Postre","Bebidas"],xmas:["Nibbles","The feast","Pudding","Cheer"],romcom:["The meet-cute","The big date","Sweet nothings","A toast"]};
 
+const TMDB_IMG="https://image.tmdb.org/t/p/";
+function lobbyPoster(f){return typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id]||null}
+function lobbyHTML(f,menu,tag,path){
+  const lab=COURSE_LABEL[f.theme]||["Snacks","Mains","Something sweet","To drink"];
+  const item=it=>`<div class="mc-item"><b>${ESC(it.n)}</b>${it.note?`<span class="mc-note">${ESC(it.note)}</span>`:""}${it.how?`<span class="mc-how">${ESC(shortHow(it.how))}</span>`:""}</div>`;
+  const course=(cls,label,items)=>`<div class="mc-course ${cls}"><h3><span>${label}</span></h3>${items.map(item).join("")}</div>`;
+  return `<img class="lb-bg" crossorigin="anonymous" alt="" src="${TMDB_IMG}w92${ESC(path)}"><div class="lb-shade"></div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
+  <div class="mc-in">
+    <header class="lb-head">
+      <div class="lb-frame"><img class="lb-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(path)}" alt="${ESC(f.title)} (${ESC(f.year)}) film poster"></div>
+      <div class="lb-info">
+        <div class="mc-eye">Now showing</div>
+        <div class="mc-title"><span>${ESC(f.title)}</span></div>
+        <div class="mc-year">${f.year}</div>
+        <p class="mc-tag">${ESC(tag)}</p>
+        <p class="mc-desc">${ESC(f.D)}</p>
+      </div>
+    </header>
+    <section class="lb-menu">
+      <h2 class="lb-menu-h">Movie night menu</h2>
+      <div class="mc-orn">${ORN[f.theme]||"• • •"}</div>
+      <section class="mc-courses">
+        ${course("c-s",lab[0],menu.s)}${course("c-m",lab[1],menu.m)}${course("c-w",lab[2],menu.w)}${course("c-d",lab[3],menu.d)}
+      </section>
+      <div class="mc-cue"><b>Showtime cue</b><span>${ESC(f.P)}</span></div>
+      <div class="mc-foot">${ESC(T[f.theme].name)} &nbsp;/&nbsp; full methods and shopping list on the prep sheet</div>
+    </section>
+  </div>
+  <div class="lb-credit">Poster: TMDB</div>`;
+}
+
 function cardHTML(f,menu,tag,usePoster=true){
   const edition=movieEdition(f);
   if(edition&&usePoster){
     const sections=[["Snacks",menu.s],["Main",menu.m],["Dessert",menu.w],["Drink",menu.d]];
     return `<img class="poster-art" src="${ESC(edition.poster)}" alt="${ESC(f.title)} (${ESC(f.year)}) movie-night menu"><div class="sr"><h2>${ESC(f.title)} movie-night menu</h2>${sections.map(([label,items])=>`<section><h3>${label}</h3>${items.map(it=>`<p><b>${ESC(it.n)}</b> ${ESC(it.note)}</p>`).join("")}</section>`).join("")}</div>`;
   }
+  const lp=usePoster&&lobbyPoster(f);
+  if(lp)return lobbyHTML(f,menu,tag,lp);
   const st=STY[f.theme],L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const lab=COURSE_LABEL[f.theme]||["Snacks","Mains","Something sweet","To drink"];
   const item=it=>`<div class="mc-item"><b>${ESC(it.n)}</b>${it.note?`<span class="mc-note">${ESC(it.note)}</span>`:""}${it.how?`<span class="mc-how">${ESC(shortHow(it.how))}</span>`:""}</div>`;
@@ -1088,14 +1149,16 @@ function styleCard(el,f){
 function fit(el){
   if(el.classList.contains("poster-edition"))return;
   const title=el.querySelector(".mc-title"),inner=el.querySelector(".mc-in"),art=el.querySelector(".mc-art");
-  const over=()=>inner.scrollHeight>inner.clientHeight+1;
+  const panel=el.querySelector(".lb-menu");
+  const over=()=>inner.scrollHeight>inner.clientHeight+1||(panel&&panel.scrollHeight>panel.clientHeight+1);
   title.style.fontSize="";if(art){art.style.height="";art.style.width=""}
   el.querySelectorAll("[data-base]").forEach(n=>n.style.fontSize="");
   el.querySelectorAll(".mc-desc,.mc-how").forEach(n=>n.style.display="");
   let fs=parseFloat(getComputedStyle(title).fontSize)||80;
   const setT=v=>{fs=v;title.style.fontSize=v+"px"};
   const lh=()=>parseFloat(getComputedStyle(title).lineHeight)||fs*1.05;
-  while(fs>34&&(title.scrollHeight>lh()*2.3||title.scrollWidth>title.clientWidth+2))setT(fs-3);
+  const maxL=el.classList.contains("L-lobby")?3.2:2.3;
+  while(fs>34&&(title.scrollHeight>lh()*maxL||title.scrollWidth>title.clientWidth+2))setT(fs-3);
   const fsFit=fs,artH=art?art.offsetHeight:0;
   const nodes=[...el.querySelectorAll(".mc-item b,.mc-note,.mc-how,.mc-cue,.mc-tag,.mc-desc,.mc-course h3,.mc-eye,.mc-orn")];
   nodes.forEach(n=>n.dataset.base=n.dataset.base||parseFloat(getComputedStyle(n).fontSize));
@@ -1140,10 +1203,12 @@ async function show(f,preferSig){
   await ensureFonts(STY[f.theme]);
   if(id!==renderId)return;
   styleCard(card,f);card.style.transform="";
+  const lobby=!edition&&lobbyPoster(f);
   if(edition)card.className="mcard poster-edition";
+  else if(lobby)card.className="mcard L-lobby";
   card.innerHTML=cardHTML(f,menu,current.tag);
-  if(edition){
-    try{await card.querySelector(".poster-art").decode()}
+  if(edition||lobby){
+    try{await card.querySelector(edition?".poster-art":".lb-poster").decode()}
     catch(e){
       if(id!==renderId)return;
       styleCard(card,f);card.innerHTML=cardHTML(f,menu,current.tag,false);
