@@ -1273,11 +1273,20 @@ function plainDownload(data,filename){
   a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
   setTimeout(()=>URL.revokeObjectURL(url),4000);
 }
-function showOverlay(url){
+function shareable(data,filename){
+  try{return matchMedia("(pointer:coarse)").matches&&!!navigator.canShare&&navigator.canShare({files:[new File([data],filename,{type:"image/jpeg"})]})}catch(e){return false}
+}
+function showOverlay(url,file){
   const o=document.createElement("div");o.className="overlay";
-  o.innerHTML=`<img alt="Menu for ${ESC(current.title)}"><p>Saving straight to a file isn't available here. Long-press or right-click the menu to save it, then print it from your photos or files.</p><button class="btn primary" type="button">Close</button>`;
+  o.innerHTML=file
+    ?`<img alt="Menu for ${ESC(current.title)}"><p>Your menu is ready.</p><button class="btn primary" type="button" data-share>Save to Photos</button><button class="btn" type="button" data-close>Close</button>`
+    :`<img alt="Menu for ${ESC(current.title)}"><p>Saving straight to a file isn't available here. Long-press or right-click the menu to save it, then print it from your photos or files.</p><button class="btn primary" type="button" data-close>Close</button>`;
   o.querySelector("img").src=url;
-  o.querySelector("button").addEventListener("click",()=>o.remove());
+  o.querySelector("[data-close]").addEventListener("click",()=>o.remove());
+  if(file)o.querySelector("[data-share]").addEventListener("click",async()=>{
+    try{await navigator.share({files:[file],title:`${current.title} menu`});o.remove();$("status").textContent="Saved. Check your Photos."}
+    catch(e){if(!(e&&e.name==="AbortError"))o.querySelector("p").textContent="Long-press the menu and choose Save to Photos."}
+  });
   document.body.appendChild(o);
 }
 async function exportMenu(kind){
@@ -1296,7 +1305,16 @@ async function exportMenu(kind){
       pdf.addPage();pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297);
       data=pdf.output("blob");filename=name+".pdf";
     }else{
-      data=await new Promise(r=>canvas.toBlob(r,"image/png"));filename=name+".png";
+      data=await new Promise(r=>canvas.toBlob(r,"image/jpeg",0.92));filename=name+".jpg";
+    }
+    /* phones: open the share sheet so it's one tap to Photos, Canva or Instagram */
+    if(kind==="png"&&!downloads&&shareable(data,filename)){
+      const file=new File([data],filename,{type:"image/jpeg"});
+      try{await navigator.share({files:[file],title:`${current.title} menu`});$("status").textContent="Saved. Check your Photos.";return}
+      catch(e){
+        if(e&&e.name==="AbortError"){$("status").textContent="Save cancelled.";return}
+        showOverlay(URL.createObjectURL(data),file);$("status").textContent="";return
+      }
     }
     if(downloads){
       try{await downloads.save({filename,data});$("status").textContent=`Saved ${filename}. Print it at A4, actual size.`}
