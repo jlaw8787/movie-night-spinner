@@ -931,15 +931,17 @@
    "serve_cue": "Bring out the muffins and count the blueberries before anyone takes one.",
    "snacks": [
     {
-     "name": "Tangiers prawn cocktail",
-     "scene": "the casino buffet's showpiece",
-     "method": "Poach prawns in court bouillon, chill on ice. Marie Rose with mayo, tomato sauce, horseradish and lemon. Serve hanging off glasses of shredded iceberg.",
+     "name": "Clams casino",
+     "scene": "Ace runs the Tangiers, so it had to be",
+     "method": "Baked clams topped with bacon, capsicum, garlic butter and crumbs until crisp and bubbling. Steam 1kg clams until they open and remove the top shells.",
      "shop": [
-      "green prawns",
-      "iceberg lettuce",
-      "mayonnaise",
-      "horseradish",
-      "lemons"
+      "clams",
+      "butter",
+      "garlic cloves",
+      "red capsicum",
+      "parsley",
+      "breadcrumbs",
+      "bacon"
      ]
     },
     {
@@ -1129,16 +1131,18 @@
    "serve_cue": "Pour Ness his drink at the very end, when he's finally earned one.",
    "snacks": [
     {
-     "name": "Chicago hot dogs",
-     "scene": "the full garden: pickle, tomato, onion, sport peppers",
-     "method": "All-beef franks simmered then griddled, in steamed poppy seed buns with yellow mustard, neon relish, diced onion, tomato wedges, a pickle spear, sport peppers and celery salt. No sauce.",
+     "name": "Capone's arancini",
+     "scene": "the Lexington Hotel kitchen",
+     "method": "Crisp fried risotto balls with a melting mozzarella middle, served with warm tomato sauce. Cook 300g arborio rice in 1L stock to a firm risotto, stir in 50g parmesan and cool completely.",
      "shop": [
-      "all-beef franks",
-      "poppy seed hot dog buns",
-      "yellow mustard",
-      "sweet relish",
-      "pickled chillies",
-      "celery salt"
+      "arborio rice",
+      "chicken stock",
+      "parmesan",
+      "mozzarella",
+      "eggs",
+      "breadcrumbs",
+      "passata",
+      "vegetable oil"
      ]
     },
     {
@@ -1194,16 +1198,18 @@
    ],
    "dessert": [
     {
-     "name": "Bourbon pecan pie",
-     "scene": "the bourbon is legal again",
-     "method": "Blind-bake sweet shortcrust. Whisk 3 eggs, 200ml golden syrup, 100g brown sugar, 60g melted butter and 30ml bourbon, fold in 200g pecans, bake at 170C for 45 minutes until just set.",
+     "name": "Ricotta zeppole",
+     "scene": "the Italian bakeries of 1930s Chicago",
+     "method": "Little fried ricotta doughnuts tossed in icing sugar, light and soft in the middle. Mix 250g ricotta, 2 eggs, 2 tbsp sugar, 1 tsp vanilla and the zest of 1 lemon, then fold in 150g self-raising flour.",
      "shop": [
-      "sweet shortcrust pastry",
-      "pecans",
-      "golden syrup",
-      "brown sugar",
+      "ricotta",
       "eggs",
-      "bourbon"
+      "caster sugar",
+      "vanilla extract",
+      "lemon",
+      "self-raising flour",
+      "vegetable oil",
+      "icing sugar"
      ]
     }
    ],
@@ -1813,11 +1819,13 @@
    ],
    "drink": [
     {
-     "name": "Champagne",
-     "scene": "toast the desert",
-     "method": "Brut champagne chilled to 7C and poured into coupes.",
+     "name": "Virginia Hill's gin rickey",
+     "scene": "1940s Hollywood, the Flamingo being built",
+     "method": "Gin, fresh lime and soda water over ice, crisp and sharp, the cocktail of the era.",
      "shop": [
-      "champagne"
+      "gin",
+      "limes",
+      "soda water"
      ]
     }
    ],
@@ -1835,14 +1843,17 @@
    "serve_cue": "Serve the mains when Chili starts pitching his movie idea.",
    "snacks": [
     {
-     "name": "Miami prawn cocktail",
-     "scene": "where Chili starts out",
-     "method": "Poach prawns 2 minutes, ice bath. Cocktail sauce of tomato sauce, lime, chilli and horseradish. Serve on sliced avocado with lime wedges.",
+     "name": "Miami Cuban croquetas",
+     "scene": "Chili Palmer starts out in Miami",
+     "method": "Crisp crumbed ham croquettes with a creamy centre, a Little Havana bakery classic. Melt 60g butter, cook 80g flour for 1 minute and whisk in 500ml milk until very thick.",
      "shop": [
-      "green prawns",
-      "limes",
-      "avocados",
-      "tomato sauce"
+      "butter",
+      "plain flour",
+      "full cream milk",
+      "leg ham",
+      "eggs",
+      "breadcrumbs",
+      "vegetable oil"
      ]
     },
     {
@@ -1963,15 +1974,17 @@
      ]
     },
     {
-     "name": "Garlic knots",
-     "scene": "film school snacks between lectures",
-     "method": "Strips of pizza dough tied in knots, proved 30 minutes, baked at 230C for 12 minutes, tossed hot in garlic butter, parsley and parmesan.",
+     "name": "Little Italy fried calamari",
+     "scene": "Carmine's Little Italy neighbourhood",
+     "method": "Tender squid rings in a light crisp coating, with lemon and marinara. Slice 500g squid tubes into rings, soak in 200ml milk for 20 minutes and toss in 120g flour mixed with 2 tbsp semolina and salt.",
      "shop": [
-      "pizza dough",
-      "butter",
-      "garlic",
-      "parsley",
-      "parmesan"
+      "squid tubes",
+      "full cream milk",
+      "plain flour",
+      "semolina",
+      "lemons",
+      "marinara sauce",
+      "vegetable oil"
      ]
     }
    ],
@@ -2113,11 +2126,14 @@
    ],
    "drink": [
     {
-     "name": "Champagne",
-     "scene": "toast the moon, la bella luna",
-     "method": "Brut champagne chilled to 7C in coupes, the way the family toasts at the end.",
+     "name": "Brooklyn amaretto sours",
+     "scene": "Loretta's family, bottle of wine and a full moon",
+     "method": "Amaretto shaken with lemon and egg white until frothy, poured over ice with a cherry.",
      "shop": [
-      "champagne"
+      "amaretto",
+      "lemons",
+      "eggs",
+      "maraschino cherries"
      ]
     }
    ],
@@ -2335,14 +2351,14 @@
    "serve_cue": "Serve the slices during the opening walk down 86th Street.",
    "snacks": [
     {
-     "name": "Bay Ridge garlic knots",
-     "scene": "eaten on the walk down 86th Street",
-     "method": "Pizza dough knots proved 30 minutes, baked at 230C, tossed in garlic butter and parmesan straight from the oven.",
+     "name": "Bay Ridge sausage and peppers",
+     "scene": "the paint store crew's Saturday",
+     "method": "Grilled Italian sausage with sweet capsicum and onion, cut into bites and served on sticks.",
      "shop": [
-      "pizza dough",
-      "butter",
-      "garlic",
-      "parmesan"
+      "Italian sausages",
+      "red capsicums",
+      "onions",
+      "red wine vinegar"
      ]
     },
     {
@@ -2486,15 +2502,17 @@
    ],
    "dessert": [
     {
-     "name": "Pecan pie",
-     "scene": "Wazoo, Alabama dessert",
-     "method": "Blind-baked shortcrust filled with eggs, golden syrup, brown sugar, melted butter and pecans, baked at 170C for 45 minutes.",
+     "name": "Mona Lisa's blackberry cobbler",
+     "scene": "Wazoo, Alabama, ticking clock and all",
+     "method": "Juicy blackberries baked under a soft biscuit topping, served warm with cream. Toss 750g blackberries with 100g sugar and 1 tbsp cornflour in a dish.",
      "shop": [
-      "sweet shortcrust pastry",
-      "pecans",
-      "golden syrup",
-      "brown sugar",
-      "eggs"
+      "frozen blackberries",
+      "caster sugar",
+      "cornflour",
+      "butter",
+      "self-raising flour",
+      "full cream milk",
+      "thickened cream"
      ]
     }
    ],
@@ -2576,14 +2594,16 @@
    ],
    "dessert": [
     {
-     "name": "Apple pie",
-     "scene": "the waitress's pick",
-     "method": "Shortcrust filled with Granny Smiths, sugar, cinnamon and a little flour, lattice top, 190C for 50 minutes.",
+     "name": "Mile-high sopapillas",
+     "scene": "Colorado dessert for Jimmy's last good night",
+     "method": "Puffed little fried pastry pillows, split open and drizzled with honey and a pinch of cinnamon, the Denver diner way.",
      "shop": [
-      "sweet shortcrust pastry",
-      "Granny Smith apples",
-      "cinnamon",
-      "caster sugar"
+      "plain flour",
+      "baking powder",
+      "butter",
+      "vegetable oil",
+      "honey",
+      "ground cinnamon"
      ]
     }
    ],
@@ -2741,29 +2761,32 @@
      ]
     },
     {
-     "name": "Devilled eggs",
-     "scene": "Rooney's wake spread",
-     "method": "Boil eggs 10 minutes, whip yolks with mayo, mustard and cayenne, pipe back in, paprika.",
+     "name": "Wake table soda bread",
+     "scene": "the Rooney wake, 1931",
+     "method": "Warm Irish soda bread with a craggy crust, torn and served with salted butter and sharp cheddar.",
      "shop": [
-      "eggs",
-      "mayonnaise",
-      "Dijon mustard",
-      "smoked paprika"
+      "plain flour",
+      "bicarbonate of soda",
+      "buttermilk",
+      "salted butter",
+      "vintage cheddar"
      ]
     }
    ],
    "mains": [
     {
-     "name": "Wake pot roast",
-     "scene": "the wake, piano and all",
-     "method": "Brown beef chuck, braise at 160C for 3 hours with onion, carrot, celery, stock and a splash of whiskey. Potatoes in for the last hour.",
+     "name": "Corned beef and cabbage",
+     "scene": "the Irish wake supper",
+     "method": "Slow-simmered corned beef sliced thick with buttery cabbage, carrots and potatoes and hot mustard. Simmer a 1.5kg corned silverside with an onion, 2 bay leaves and 6 peppercorns for 2.5 hours.",
      "shop": [
-      "beef chuck roast",
-      "brown onions",
-      "carrots",
+      "corned silverside",
+      "onion",
+      "bay leaves",
       "potatoes",
-      "beef stock",
-      "Irish whiskey"
+      "carrots",
+      "cabbage",
+      "butter",
+      "hot English mustard"
      ]
     },
     {
@@ -3186,12 +3209,12 @@
    ],
    "drink": [
     {
-     "name": "Egg cream",
-     "scene": "New York's soda-fountain classic, no egg and no cream",
-     "method": "Chocolate syrup in the bottom of a tall glass, a splash of cold milk, then soda water poured hard so it foams up white over the top.",
+     "name": "Turtle green apple soda",
+     "scene": "the sewer lair fridge",
+     "method": "Fresh green apple juice and lime topped with soda, bright green and sharp. Blend 3 green apples with the juice of 2 limes and 200ml water and strain.",
      "shop": [
-      "chocolate syrup",
-      "milk",
+      "green apples",
+      "limes",
       "soda water"
      ]
     }
@@ -3222,14 +3245,14 @@
      ]
     },
     {
-     "name": "Tokka and Rahzar garlic knots",
-     "scene": "big and mean, like the two mutants",
-     "method": "Oversized knots of pizza dough proved 30 minutes, baked at 230C for 15 minutes, brushed with garlic butter and parmesan.",
+     "name": "Sewer lair pizza bagels",
+     "scene": "the turtles never stop at one pizza",
+     "method": "Split mini bagels topped with pizza sauce, mozzarella and pepperoni, grilled until bubbling. Split 12 mini bagels and spread each half with pizza sauce.",
      "shop": [
-      "pizza dough",
-      "butter",
-      "garlic",
-      "parmesan"
+      "mini bagels",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni"
      ]
     },
     {
@@ -4332,15 +4355,17 @@
    ],
    "dessert": [
     {
-     "name": "Crumb cake",
-     "scene": "the precinct favourite",
-     "method": "Butter cake topped with a thick cinnamon crumble of flour, brown sugar and butter, baked at 180C for 40 minutes.",
+     "name": "Transit authority rugelach",
+     "scene": "the control room, 1974 New York",
+     "method": "Crescent-rolled cream cheese pastries filled with apricot jam, walnuts and cinnamon. Rub 225g butter and 225g cream cheese into 280g flour and chill 1 hour.",
      "shop": [
       "butter",
+      "cream cheese",
       "plain flour",
-      "brown sugar",
-      "cinnamon",
-      "eggs"
+      "apricot jam",
+      "walnuts",
+      "caster sugar",
+      "ground cinnamon"
      ]
     }
    ],
@@ -4446,11 +4471,13 @@
    ],
    "drink": [
     {
-     "name": "Black coffee",
-     "scene": "Hauk's command post",
-     "method": "Drip coffee, black, poured into a steel mug.",
+     "name": "Brain's bathtub moonshine sour",
+     "scene": "Brain makes everything himself",
+     "method": "Clear corn whiskey shaken with lemon and sugar and served over ice in jam jars.",
      "shop": [
-      "ground coffee"
+      "white whiskey",
+      "lemons",
+      "caster sugar"
      ]
     }
    ],
@@ -5021,15 +5048,14 @@
    ],
    "dessert": [
     {
-     "name": "Crumb cake",
-     "scene": "the transit police locker room",
-     "method": "Butter cake topped with a thick cinnamon crumble of flour, brown sugar and butter, baked at 180C for 40 minutes.",
+     "name": "Guava pastelitos",
+     "scene": "a Puerto Rican bakery by the station",
+     "method": "Flaky puff pastry squares filled with guava paste and cream cheese, glazed with syrup. Cut 2 sheets puff pastry into 8 squares each.",
      "shop": [
-      "butter",
-      "plain flour",
-      "brown sugar",
-      "cinnamon",
-      "eggs"
+      "puff pastry",
+      "guava paste",
+      "cream cheese",
+      "caster sugar"
      ]
     }
    ],
@@ -5657,16 +5683,17 @@
    ],
    "dessert": [
     {
-     "name": "Sewer mud cake",
-     "scene": "dark and dense, like what's down there",
-     "method": "Dense mud cake (melted chocolate and butter, sugar, eggs, flour, cocoa) baked at 160C for 70 minutes, ganache poured over and dragged with a fork.",
+     "name": "Greenwich Village cider doughnuts",
+     "scene": "the Village above the sewers",
+     "method": "Soft apple cider cake doughnuts tossed in cinnamon sugar. Reduce 500ml apple juice to 125ml.",
      "shop": [
-      "dark chocolate",
+      "apple juice",
       "butter",
-      "eggs",
+      "egg",
       "caster sugar",
-      "cocoa",
-      "thickened cream"
+      "self-raising flour",
+      "ground cinnamon",
+      "vegetable oil"
      ]
     }
    ],
@@ -5887,16 +5914,18 @@
    "serve_cue": "Serve dessert when the guys sing the baby to sleep.",
    "snacks": [
     {
-     "name": "Bachelor pad cheese board",
-     "scene": "the loft before the baby arrives",
-     "method": "Aged cheddar, brie and blue at room temperature for an hour, crackers, grapes and fig paste.",
+     "name": "Bachelor pad prawn toast",
+     "scene": "the loft before the baby turns up",
+     "method": "Golden fried sesame prawn toasts cut into triangles, with sweet chilli sauce. Blitz 300g peeled green prawns with 1 egg white, 1 tsp ginger, 1 spring onion and a pinch of salt.",
      "shop": [
-      "aged cheddar",
-      "brie",
-      "blue cheese",
-      "crackers",
-      "grapes",
-      "fig paste"
+      "green prawns",
+      "egg",
+      "ginger",
+      "spring onion",
+      "white bread",
+      "sesame seeds",
+      "sweet chilli sauce",
+      "vegetable oil"
      ]
     },
     {
@@ -6013,16 +6042,19 @@
      ]
     },
     {
-     "name": "Boardroom cheese plate",
-     "scene": "the Trask meeting",
-     "method": "Aged cheddar, brie and a blue at room temperature with crackers, quince paste and grapes.",
+     "name": "Wall Street crab cakes",
+     "scene": "the big pitch in the boardroom",
+     "method": "Golden crab cakes bound with a little mayo and breadcrumb, with lemon and a quick tartare.",
      "shop": [
-      "aged cheddar",
-      "brie",
-      "blue cheese",
-      "crackers",
-      "quince paste",
-      "grapes"
+      "crab meat",
+      "mayonnaise",
+      "egg",
+      "Dijon mustard",
+      "parsley",
+      "breadcrumbs",
+      "butter",
+      "lemon",
+      "tartare sauce"
      ]
     }
    ],
@@ -6069,11 +6101,14 @@
    ],
    "drink": [
     {
-     "name": "Champagne",
-     "scene": "Tess earns it",
-     "method": "Brut champagne chilled to 7C and poured into flutes.",
+     "name": "Tess's Manhattan cocktail",
+     "scene": "the ferry in from Staten Island",
+     "method": "Bourbon stirred with sweet vermouth and bitters, served up with a cherry. Stir 60ml bourbon, 30ml sweet vermouth and 2 dashes bitters with ice for 30 seconds.",
      "shop": [
-      "champagne"
+      "bourbon",
+      "sweet vermouth",
+      "aromatic bitters",
+      "maraschino cherries"
      ]
     }
    ],
@@ -6603,15 +6638,15 @@
      ]
     },
     {
-     "name": "Wisconsin cheese plate",
-     "scene": "dinner with Annie's very polite family",
-     "method": "Aged cheddar, colby and squeaky cheese curds at room temperature, with crackers, apple slices and a pot of grainy mustard.",
+     "name": "Alvy's potato knishes",
+     "scene": "Alvy's Brooklyn childhood",
+     "method": "Flaky pastry rounds filled with mashed potato and fried onion, baked golden. Mash 800g boiled potatoes with 2 onions fried slowly in 40g butter, salt and pepper.",
      "shop": [
-      "aged cheddar",
-      "colby cheese",
-      "cheese curds",
-      "crackers",
-      "apples"
+      "potatoes",
+      "onions",
+      "butter",
+      "puff pastry",
+      "egg"
      ]
     }
    ],
@@ -7191,14 +7226,13 @@
      ]
     },
     {
-     "name": "Prawn cocktail",
-     "scene": "for the Teldar Paper shareholders",
-     "method": "Prawns poached 2 minutes and iced, on shredded iceberg with Marie Rose sauce, paprika and lemon.",
+     "name": "Gekko's oysters on ice",
+     "scene": "lunch is for wimps",
+     "method": "Freshly shucked oysters on crushed ice with lemon and a sharp red wine and shallot dressing.",
      "shop": [
-      "green prawns",
-      "iceberg lettuce",
-      "mayonnaise",
-      "tomato sauce",
+      "oysters",
+      "red wine vinegar",
+      "shallot",
       "lemons"
      ]
     },
@@ -7645,14 +7679,14 @@
    ],
    "dessert": [
     {
-     "name": "Neuralyser cake pops",
-     "scene": "look at the light",
-     "method": "Crumble butter cake with cream cheese icing, roll into balls, chill, dip in white chocolate and brush with silver lustre.",
+     "name": "Worm guys' coffee break doughnuts",
+     "scene": "the worms live on coffee and doughnuts",
+     "method": "Glazed coffee doughnuts with a sticky espresso icing. Mix 200g icing sugar with 3 tbsp strong espresso and 10g melted butter until smooth.",
      "shop": [
-      "butter cake",
-      "cream cheese",
-      "white chocolate",
-      "silver lustre dust"
+      "plain doughnuts",
+      "icing sugar",
+      "espresso coffee",
+      "butter"
      ]
     }
    ],
@@ -8393,16 +8427,17 @@
    "serve_cue": "Serve the cheese when Fievel arrives in New York.",
    "snacks": [
     {
-     "name": "Mouse-sized cheese plate",
-     "scene": "Fievel's dream of streets full of cheese",
-     "method": "Swiss, cheddar and gouda cut into small wedges with holes poked in the Swiss, crackers, grapes and apple fans, all at room temperature for an hour first.",
+     "name": "Fievel's potato latkes",
+     "scene": "Hanukkah in the old country",
+     "method": "Crisp grated potato and onion pancakes with sour cream and apple sauce. Grate 6 medium potatoes (about 800g) and 1 onion and squeeze out the liquid.",
      "shop": [
-      "Swiss cheese",
-      "cheddar",
-      "gouda",
-      "crackers",
-      "grapes",
-      "apples"
+      "potatoes",
+      "onion",
+      "eggs",
+      "plain flour",
+      "sour cream",
+      "apple sauce",
+      "vegetable oil"
      ]
     },
     {
@@ -8658,11 +8693,17 @@
    ],
    "drink": [
     {
-     "name": "Champagne",
-     "scene": "the ball where he proposes, in a manner of speaking",
-     "method": "Brut champagne chilled to 7C, poured into coupes like it's 1876.",
+     "name": "Leopold's claret cup",
+     "scene": "an 1876 duke's party punch",
+     "method": "Red wine with brandy, orange and soda water over ice, the way a Victorian party served it.",
      "shop": [
-      "champagne"
+      "red wine",
+      "brandy",
+      "orange liqueur",
+      "caster sugar",
+      "orange",
+      "cucumber",
+      "soda water"
      ]
     }
    ],
@@ -8746,15 +8787,13 @@
    ],
    "dessert": [
     {
-     "name": "Chocolate lava cake",
-     "scene": "the comeback after the swollen face",
-     "method": "Melt 125g dark chocolate with 125g butter, whisk 2 eggs and 2 yolks with 60g sugar, combine, fold in 30g flour, bake in buttered moulds at 200C for 10 minutes. Turn out.",
+     "name": "Sara's chocolate-dipped strawberries",
+     "scene": "Sara's first date with Hitch",
+     "method": "Fat strawberries dipped in dark chocolate and drizzled with white chocolate. Melt 200g dark chocolate.",
      "shop": [
       "dark chocolate",
-      "butter",
-      "eggs",
-      "caster sugar",
-      "plain flour"
+      "strawberries",
+      "white chocolate"
      ]
     }
    ],
@@ -9117,14 +9156,17 @@
      ]
     },
     {
-     "name": "Christmas tree lot hot dogs",
-     "scene": "the opening bust at the tree lot",
-     "method": "Franks griddled, in steamed buns with mustard and fried onions, wrapped in foil to keep warm.",
+     "name": "Christmas party crab dip",
+     "scene": "Murtaugh house at Christmas",
+     "method": "Warm crab and cream cheese dip with a cheddar crust, scooped up with crackers. Mix 250g cream cheese, 150g sour cream, 2 tsp Worcestershire and a squeeze of lemon.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "brown onions"
+      "cream cheese",
+      "sour cream",
+      "Worcestershire sauce",
+      "lemon",
+      "crab meat",
+      "cheddar",
+      "water crackers"
      ]
     }
    ],
@@ -9938,15 +9980,14 @@
    ],
    "dessert": [
     {
-     "name": "Pecan pie",
-     "scene": "Reggie's treat for surviving again",
-     "method": "Blind-baked shortcrust with eggs, golden syrup, brown sugar, butter and pecans, baked at 170C for 45 minutes.",
+     "name": "Chinatown egg tarts",
+     "scene": "San Francisco after the case",
+     "method": "Flaky little tarts filled with a wobbly, just-set sweet egg custard. Cut 2 sheets puff pastry into 12 rounds and press into a muffin tin.",
      "shop": [
-      "sweet shortcrust pastry",
-      "pecans",
-      "golden syrup",
-      "brown sugar",
-      "eggs"
+      "puff pastry",
+      "eggs",
+      "caster sugar",
+      "evaporated milk"
      ]
     }
    ],
@@ -10086,16 +10127,15 @@
      ]
     },
     {
-     "name": "Chicago hot dogs",
-     "scene": "the full garden, Ridzik's town",
-     "method": "All-beef franks, poppy seed buns, mustard, relish, onion, tomato, pickle spear, sport peppers, celery salt.",
+     "name": "Danko's Georgian cheese bread",
+     "scene": "a taste of home for a Moscow cop",
+     "method": "Boat-shaped khachapuri filled with molten cheese, a runny egg and butter stirred through at the table.",
      "shop": [
-      "all-beef franks",
-      "poppy seed hot dog buns",
-      "yellow mustard",
-      "sweet relish",
-      "tomatoes",
-      "celery salt"
+      "pizza dough",
+      "mozzarella",
+      "feta",
+      "eggs",
+      "butter"
      ]
     },
     {
@@ -10872,16 +10912,19 @@
    "serve_cue": "Serve the meatball subs when Johnny Utah orders two.",
    "snacks": [
     {
-     "name": "Ex-Presidents cheese plate",
-     "scene": "Reagan, Nixon, Carter and Johnson masks optional",
-     "method": "Four American cheeses (sharp cheddar, Monterey Jack, colby, smoked provolone) cut into wedges, crackers and apple.",
+     "name": "Bodhi's surf shack fish tacos",
+     "scene": "after a dawn surf with Bodhi",
+     "method": "Crispy battered fish in small tortillas with slaw, lime and chipotle mayo. Cut 500g white fish into strips, dip in a batter of 120g flour and 180ml cold beer and fry at 180C until golden.",
      "shop": [
-      "sharp cheddar",
-      "Monterey Jack",
-      "colby cheese",
-      "smoked provolone",
-      "crackers",
-      "apples"
+      "white fish fillets",
+      "plain flour",
+      "lager",
+      "small flour tortillas",
+      "cabbage",
+      "limes",
+      "mayonnaise",
+      "chipotle in adobo",
+      "vegetable oil"
      ]
     },
     {
@@ -11707,11 +11750,14 @@
    ],
    "drink": [
     {
-     "name": "Champagne",
-     "scene": "Castor's celebration in someone else's face",
-     "method": "Brut champagne chilled to 7C and poured into flutes.",
+     "name": "Peach Bellini",
+     "scene": "Castor could eat a peach for hours",
+     "method": "White peach purée topped with chilled prosecco in tall flutes. Sparkling peach juice for the kids.",
      "shop": [
-      "champagne"
+      "peaches",
+      "caster sugar",
+      "lemon",
+      "prosecco"
      ]
     }
    ],
@@ -11729,14 +11775,15 @@
    "serve_cue": "Serve the mains when the money cases fall from the plane.",
    "snacks": [
     {
-     "name": "Mountain trail mix",
-     "scene": "the rescue kit in the pack",
-     "method": "Mixed nuts, dried apricots, dark chocolate chunks and pepitas tossed with a little sea salt.",
+     "name": "Rocky Mountain smoked trout pâté",
+     "scene": "the ranger hut, waiting out the storm",
+     "method": "Smoked trout whipped with cream cheese, lemon and dill, spread thick on rye crackers. Flake 250g smoked trout, removing any bones.",
      "shop": [
-      "mixed nuts",
-      "dried apricots",
-      "dark chocolate",
-      "pepitas"
+      "smoked trout",
+      "cream cheese",
+      "lemon",
+      "dill",
+      "rye crackers"
      ]
     },
     {
@@ -11806,12 +11853,15 @@
    ],
    "drink": [
     {
-     "name": "Summit hot chocolate",
-     "scene": "after the climb down",
-     "method": "Dark chocolate melted into hot milk, whisked frothy, a pinch of salt.",
+     "name": "Ranger station hot buttered rum",
+     "scene": "thawing out after the rescue",
+     "method": "Dark rum stirred into hot water with spiced butter and brown sugar, for the grown-ups.",
      "shop": [
-      "dark chocolate",
-      "full cream milk"
+      "butter",
+      "brown sugar",
+      "ground cinnamon",
+      "ground nutmeg",
+      "dark rum"
      ]
     }
    ],
@@ -12078,29 +12128,35 @@
      ]
     },
     {
-     "name": "Mom's pot roast",
-     "scene": "the dinner with Connie and Friday's grandmother",
-     "method": "Beef chuck browned and braised at 160C for 3 hours with onion, carrot and stock, potatoes for the last hour.",
+     "name": "Streebek's LA carnitas tacos",
+     "scene": "Pep Streebek's side of LA",
+     "method": "Slow-braised pork shoulder crisped in the pan, in warm tortillas with onion, coriander and lime.",
      "shop": [
-      "beef chuck roast",
-      "brown onions",
-      "carrots",
-      "potatoes",
-      "beef stock"
+      "pork shoulder",
+      "ground cumin",
+      "oregano",
+      "orange",
+      "garlic cloves",
+      "corn tortillas",
+      "onion",
+      "coriander",
+      "limes"
      ]
     }
    ],
    "dessert": [
     {
-     "name": "Apple pie",
-     "scene": "baked strictly by the book",
-     "method": "Granny Smith apples with sugar, cinnamon and a little flour in a double crust, egg wash, baked at 190C for 50 minutes.",
+     "name": "By-the-book vanilla slice",
+     "scene": "Friday likes everything done properly",
+     "method": "Thick vanilla custard set between two sheets of puff pastry, topped with plain white icing and cut into neat squares.",
      "shop": [
-      "sweet shortcrust pastry",
-      "Granny Smith apples",
-      "cinnamon",
+      "puff pastry",
+      "full cream milk",
+      "eggs",
       "caster sugar",
-      "eggs"
+      "cornflour",
+      "vanilla extract",
+      "icing sugar"
      ]
     }
    ],
@@ -12876,16 +12932,16 @@
    ],
    "dessert": [
     {
-     "name": "Peach cobbler",
-     "scene": "from the last tins in the pantry",
-     "method": "Drained tinned peaches with brown sugar and cinnamon under a buttermilk biscuit topping, baked at 190C for 35 minutes.",
+     "name": "Neville's shelter pantry rice pudding",
+     "scene": "rationed sweets in a locked-down house",
+     "method": "Creamy baked rice pudding with nutmeg, made from what keeps in the pantry. Stir 100g short grain rice, 60g sugar and 1L milk in a buttered dish with a strip of lemon peel.",
      "shop": [
-      "tinned peaches",
-      "brown sugar",
-      "cinnamon",
-      "self-raising flour",
+      "short grain rice",
+      "caster sugar",
+      "full cream milk",
       "butter",
-      "buttermilk"
+      "lemon",
+      "nutmeg"
      ]
     }
    ],
@@ -12989,12 +13045,13 @@
    ],
    "drink": [
     {
-     "name": "Diner coffee",
-     "scene": "refills on the house, whatever happens",
-     "method": "Drip coffee in diner mugs, milk and sugar on the table.",
+     "name": "Tech Noir rum and cola",
+     "scene": "the club where Sarah hides",
+     "method": "Dark rum and cola over ice with a squeeze of lime, a proper eighties club drink.",
      "shop": [
-      "ground coffee",
-      "full cream milk"
+      "dark rum",
+      "cola",
+      "limes"
      ]
     }
    ],
@@ -13067,15 +13124,18 @@
    ],
    "dessert": [
     {
-     "name": "Liquid metal panna cotta",
-     "scene": "silver, it reforms if you poke it",
-     "method": "Vanilla panna cotta (cream, milk, sugar, gelatine) set in moulds, turned out and brushed with edible silver lustre.",
+     "name": "Enrique's camp churros",
+     "scene": "the desert hideout in Mexico",
+     "method": "Ridged fried churros rolled in cinnamon sugar with warm chocolate sauce. Boil 250ml water with 30g butter and a pinch of salt, beat in 150g flour and cool, then beat in 1 egg.",
      "shop": [
+      "butter",
+      "plain flour",
+      "egg",
+      "caster sugar",
+      "ground cinnamon",
+      "dark chocolate",
       "thickened cream",
-      "full cream milk",
-      "gelatine leaves",
-      "vanilla bean",
-      "silver lustre dust"
+      "vegetable oil"
      ]
     }
    ],
@@ -13565,15 +13625,17 @@
    ],
    "dessert": [
     {
-     "name": "Red velvet Mars cake",
-     "scene": "air included, no extra charge",
-     "method": "Red velvet cake (buttermilk, cocoa, vinegar, red colouring) baked at 170C for 30 minutes, cream cheese frosting, dusted with red sanding sugar.",
+     "name": "Red planet raspberry pavlova",
+     "scene": "Quaid's holiday on Mars",
+     "method": "Crisp meringue piled with cream, raspberries and a red berry sauce. Whisk 4 egg whites to stiff peaks, add 220g sugar until glossy, fold in 1 tsp cornflour and 1 tsp vinegar.",
      "shop": [
-      "buttermilk",
-      "cocoa",
-      "red food colouring",
-      "cream cheese",
-      "self-raising flour"
+      "eggs",
+      "caster sugar",
+      "cornflour",
+      "white vinegar",
+      "thickened cream",
+      "raspberries",
+      "raspberry jam"
      ]
     }
    ],
@@ -14810,16 +14872,15 @@
    ],
    "dessert": [
     {
-     "name": "Death Star cake",
-     "scene": "grey icing, small exhaust port",
-     "method": "Chocolate cake baked in a dome, covered in grey buttercream (a touch of black colouring), a trench piped round the middle and a crater pressed in near the top.",
+     "name": "Aunt Beru's blue milk pudding",
+     "scene": "breakfast at the Lars homestead",
+     "method": "Soft vanilla blancmange tinted pale blue, like the milk Luke drinks at home. Whisk 60g cornflour into 100ml of 800ml milk.",
      "shop": [
-      "butter",
-      "eggs",
-      "self-raising flour",
-      "cocoa",
-      "icing sugar",
-      "black food colouring"
+      "full cream milk",
+      "cornflour",
+      "caster sugar",
+      "vanilla extract",
+      "blue food colouring"
      ]
     }
    ],
@@ -14929,14 +14990,14 @@
    ],
    "drink": [
     {
-     "name": "Rebel base hot chocolate",
-     "scene": "the freezing hangar on Hoth",
-     "method": "Dark chocolate melted into hot milk with a pinch of salt and cinnamon, whisked frothy, marshmallows.",
+     "name": "Cloud City peach fizz",
+     "scene": "Bespin's sunset-orange sky",
+     "method": "Peach nectar and orange juice topped with sparkling water, the colour of the clouds over Cloud City.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "cinnamon",
-      "marshmallows"
+      "peach nectar",
+      "orange juice",
+      "sparkling water",
+      "peach"
      ]
     }
    ],
@@ -15022,16 +15083,17 @@
    ],
    "dessert": [
     {
-     "name": "Endor forest cake",
-     "scene": "moss green, like the forest floor",
-     "method": "Pistachio and olive oil cake (ground pistachios, olive oil, eggs, sugar, flour) baked at 170C for 40 minutes, topped with crumbled green matcha sponge for moss and berries.",
+     "name": "Ewok forest berry crumble",
+     "scene": "the Ewok village celebration",
+     "method": "Mixed forest berries under a crunchy oat and hazelnut crumble, served warm. Toss 750g frozen mixed berries with 80g sugar in a dish.",
      "shop": [
-      "pistachios",
-      "extra virgin olive oil",
-      "eggs",
+      "frozen mixed berries",
       "caster sugar",
-      "self-raising flour",
-      "matcha powder"
+      "butter",
+      "plain flour",
+      "rolled oats",
+      "hazelnuts",
+      "brown sugar"
      ]
     }
    ],
@@ -15115,15 +15177,15 @@
    ],
    "dessert": [
     {
-     "name": "Diner apple pie",
-     "scene": "from Annie's shift at the diner",
-     "method": "Double-crust apple pie with Granny Smiths, sugar and cinnamon, egg washed, baked at 190C for 50 minutes, vanilla ice cream.",
+     "name": "Dean's scrap metal brittle",
+     "scene": "the Giant would eat the tray too",
+     "method": "Shards of golden peanut brittle broken into jagged pieces like scrap from Dean's yard. Heat 300g sugar, 120ml liquid glucose and 80ml water to 150C.",
      "shop": [
-      "sweet shortcrust pastry",
-      "Granny Smith apples",
-      "cinnamon",
-      "vanilla ice cream",
-      "eggs"
+      "caster sugar",
+      "liquid glucose",
+      "roasted peanuts",
+      "butter",
+      "bicarbonate of soda"
      ]
     }
    ],
@@ -15723,15 +15785,16 @@
    ],
    "dessert": [
     {
-     "name": "Key lime pie",
-     "scene": "green, of course",
-     "method": "Biscuit crust, condensed milk, yolk and lime filling baked at 160C for 15 minutes, chilled, whipped cream.",
+     "name": "Coco Bongo bananas Foster",
+     "scene": "smokin' at the Coco Bongo",
+     "method": "Bananas flambéed in butter, brown sugar and rum, spooned hot over vanilla ice cream. Melt 60g butter with 100g brown sugar and 1 tsp cinnamon.",
      "shop": [
-      "condensed milk",
-      "eggs",
-      "limes",
-      "digestive biscuits",
-      "thickened cream"
+      "butter",
+      "brown sugar",
+      "ground cinnamon",
+      "bananas",
+      "dark rum",
+      "vanilla ice cream"
      ]
     }
    ],
@@ -15969,15 +16032,13 @@
      ]
     },
     {
-     "name": "Purple and yellow corn chips",
-     "scene": "Hit-Girl's purple and yellow",
-     "method": "Blue corn and yellow corn tortillas cut into wedges, fried at 180C, salted, with a fresh tomato, onion and lime salsa.",
+     "name": "D'Amico's prosciutto melon bites",
+     "scene": "Frank D'Amico's penthouse",
+     "method": "Sweet rockmelon wrapped in prosciutto with basil and cracked pepper. Cut half a rockmelon into 20 cubes.",
      "shop": [
-      "blue corn tortillas",
-      "corn tortillas",
-      "tomatoes",
-      "limes",
-      "onions"
+      "rockmelon",
+      "prosciutto",
+      "basil"
      ]
     }
    ],
@@ -16023,13 +16084,13 @@
    ],
    "drink": [
     {
-     "name": "Green and yellow hot chocolate",
-     "scene": "Kick-Ass's suit colours",
-     "method": "Dark chocolate melted into hot milk, marshmallows on top.",
+     "name": "Hit-Girl's purple grape soda",
+     "scene": "small, purple and dangerous",
+     "method": "Grape juice and soda water over ice with frozen grapes as ice cubes, deep purple.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "marshmallows"
+      "seedless red grapes",
+      "grape juice",
+      "soda water"
      ]
     }
    ],
@@ -17976,15 +18037,14 @@
    ],
    "dessert": [
     {
-     "name": "Sister Mary's apple pie",
-     "scene": "the orphanage they're saving",
-     "method": "Granny Smiths with sugar, cinnamon and a little flour in a double crust, egg washed, baked at 190C for 50 minutes. Cream on the side.",
+     "name": "The Penguin's ruler-straight shortbread",
+     "scene": "Sister Mary Stigmata keeps a ruler handy",
+     "method": "Plain Scottish shortbread cut into dead-straight fingers, pricked in neat rows and dusted with sugar.",
      "shop": [
-      "sweet shortcrust pastry",
-      "Granny Smith apples",
-      "cinnamon",
-      "eggs",
-      "thickened cream"
+      "butter",
+      "caster sugar",
+      "plain flour",
+      "rice flour"
      ]
     }
    ],
@@ -18763,16 +18823,20 @@
      ]
     },
     {
-     "name": "Fairvale hardware store stew",
-     "scene": "Sam's shop in Fairvale, Sam's stew",
-     "method": "Beef chuck browned in batches, onion and carrot softened, stock and thyme, braised at 160C for 2.5 hours, potatoes for the last hour. Crusty bread.",
+     "name": "Fairvale chicken and dumplings",
+     "scene": "Sam's home town",
+     "method": "Chicken simmered in a creamy broth with vegetables and fluffy herb dumplings. Simmer 1kg chicken thighs with carrots, celery, onion and 1.5L stock for 30 minutes, shred the meat and add 100ml cream.",
      "shop": [
-      "beef chuck",
-      "brown onions",
+      "chicken thighs",
       "carrots",
-      "potatoes",
-      "beef stock",
-      "Italian bread"
+      "celery sticks",
+      "onion",
+      "chicken stock",
+      "thickened cream",
+      "self-raising flour",
+      "butter",
+      "parsley",
+      "full cream milk"
      ]
     }
    ],
@@ -19382,16 +19446,16 @@
    ],
    "dessert": [
     {
-     "name": "Black forest cake",
-     "scene": "dark and layered",
-     "method": "Chocolate sponge layers soaked in kirsch syrup, whipped cream and morello cherries, shaved dark chocolate.",
+     "name": "Samuel's birthday jelly slice",
+     "scene": "Samuel's party at his cousin's",
+     "method": "An Aussie classic: biscuit base, condensed milk lemon filling and raspberry jelly on top. Press 250g crushed biscuits and 125g melted butter into a tin.",
      "shop": [
-      "dark chocolate",
-      "eggs",
-      "self-raising flour",
-      "thickened cream",
-      "morello cherries",
-      "kirsch"
+      "plain sweet biscuits",
+      "butter",
+      "powdered gelatine",
+      "sweetened condensed milk",
+      "lemons",
+      "raspberry jelly crystals"
      ]
     }
    ],
@@ -19860,14 +19924,16 @@
      ]
     },
     {
-     "name": "Treehouse trail mix",
-     "scene": "the treehouse out the back",
-     "method": "Pumpkin seeds, sunflower seeds, dried cherries and dark chocolate chunks tossed with a little salt. Nut-free for Charlie.",
+     "name": "Charlie's nut-free seed crackers",
+     "scene": "nothing with nuts in this house",
+     "method": "Crisp baked crackers made from sunflower, pumpkin and sesame seeds, with a beetroot dip. Mix 80g each of sunflower, pumpkin and sesame seeds with 2 tbsp chia, 250ml water and salt and stand 15 minutes.",
      "shop": [
-      "pumpkin seeds",
       "sunflower seeds",
-      "dried cherries",
-      "dark chocolate"
+      "pumpkin seeds",
+      "sesame seeds",
+      "chia seeds",
+      "cooked beetroot",
+      "Greek yoghurt"
      ]
     }
    ],
@@ -20127,14 +20193,11 @@
    ],
    "drink": [
     {
-     "name": "Sweet tea",
-     "scene": "poured over ice behind the bar",
-     "method": "Black tea steeped strong in boiling water with a pinch of bicarb, sweetened while hot, cooled and poured over plenty of ice with lemon.",
+     "name": "Juke joint Irish stout",
+     "scene": "the twins bought the beer from an Irishman",
+     "method": "Dark Irish stout poured in two stages for a thick creamy head. Tilt each glass and pour the stout three-quarters full, let it settle for a minute, then top up slowly for a tight head.",
      "shop": [
-      "black tea",
-      "caster sugar",
-      "lemons",
-      "ice"
+      "cans stout"
      ]
     }
    ],
@@ -20532,13 +20595,12 @@
    ],
    "drink": [
     {
-     "name": "Backyard lemonade",
-     "scene": "the pool they're digging out the back",
-     "method": "Lemon juice, sugar syrup and cold water in a big jug, sliced lemon and plenty of ice.",
+     "name": "Cuesta Verde orange spider",
+     "scene": "a hot afternoon in the new estate",
+     "method": "Orange soda poured over vanilla ice cream so it fizzes up creamy and orange. Put 2 scoops vanilla ice cream in each of 4 glasses and pour over 300ml cold orange soda slowly so it foams.",
      "shop": [
-      "lemons",
-      "caster sugar",
-      "ice"
+      "vanilla ice cream",
+      "orange soda"
      ]
     }
    ],
@@ -20617,16 +20679,13 @@
    ],
    "dessert": [
     {
-     "name": "Apple pie",
-     "scene": "for Jerry's apples",
-     "method": "Granny Smiths sliced with sugar, cinnamon and a little flour in a double crust, egg washed, baked at 190C for 50 minutes. Vanilla ice cream.",
+     "name": "Blood orange posset",
+     "scene": "blood red, but Jerry won't touch it",
+     "method": "Silky set cream sharpened with blood orange juice, served cold in little glasses with a sliver of candied peel.",
      "shop": [
-      "Granny Smith apples",
+      "thickened cream",
       "caster sugar",
-      "cinnamon",
-      "sweet shortcrust pastry",
-      "eggs",
-      "vanilla ice cream"
+      "blood oranges"
      ]
     }
    ],
@@ -20719,16 +20778,15 @@
    ],
    "dessert": [
     {
-     "name": "Sticky toffee pudding",
-     "scene": "something warm for a cold night",
-     "method": "Chopped dates soaked in boiling water with bicarb, beaten into a butter sponge, baked at 180C for 30 minutes, drowned in toffee sauce.",
+     "name": "Piccadilly jam roly-poly",
+     "scene": "London, before the full moon",
+     "method": "Suet pastry rolled with raspberry jam and baked, served hot with custard. Mix 250g self-raising flour, 125g shredded suet or cold grated butter, 30g sugar and 150ml water into a dough.",
      "shop": [
-      "dates",
-      "bicarb soda",
-      "butter",
-      "brown sugar",
       "self-raising flour",
-      "thickened cream"
+      "butter",
+      "caster sugar",
+      "raspberry jam",
+      "vanilla custard"
      ]
     }
    ],
@@ -20825,14 +20883,15 @@
    ],
    "dessert": [
     {
-     "name": "Caramel crème brûlée",
-     "scene": "burnt sugar, the sweetest thing on the menu",
-     "method": "Cream warmed with vanilla, whisked into yolks and sugar, baked in a water bath at 150C for 35 minutes, chilled, sugar torched to a crack.",
+     "name": "Brundle's caramel baked pears",
+     "scene": "Seth starts craving sugar",
+     "method": "Pears baked in butter, brown sugar and vanilla until soft and sticky, with cream. Halve 4 pears and core.",
      "shop": [
-      "thickened cream",
-      "eggs",
-      "caster sugar",
-      "vanilla bean"
+      "pears",
+      "butter",
+      "brown sugar",
+      "vanilla bean",
+      "thickened cream"
      ]
     }
    ],
@@ -21273,14 +21332,19 @@
    "serve_cue": "Serve the mains at the camp Thanksgiving play.",
    "snacks": [
     {
-     "name": "Camp Chippewa trail mix",
-     "scene": "the very cheerful summer camp",
-     "method": "Peanuts, raisins, choc chips and pretzels tossed in a big bowl, scooped into paper cups.",
+     "name": "Camp Chippewa sloppy joe sliders",
+     "scene": "camp dinner before the Thanksgiving play",
+     "method": "Saucy beef sloppy joe mince piled into soft slider buns with pickles. Brown 500g beef mince with 1 onion and 1 green capsicum.",
      "shop": [
-      "peanuts",
-      "raisins",
-      "choc chips",
-      "pretzels"
+      "beef mince",
+      "onion",
+      "green capsicum",
+      "tomato sauce",
+      "Worcestershire sauce",
+      "brown sugar",
+      "American mustard",
+      "slider buns",
+      "dill pickles"
      ]
     },
     {
@@ -21387,16 +21451,16 @@
      ]
     },
     {
-     "name": "Mouse cheese board",
-     "scene": "for anyone who ends up a little smaller",
-     "method": "Wedges of aged cheddar, Swiss with holes and a soft blue on a board with crackers, grapes and quince paste. Cut the wedges into neat triangles.",
+     "name": "Seaside hotel crab sandwiches",
+     "scene": "the Cornish hotel where the convention meets",
+     "method": "Soft white sandwiches of fresh crab with lemon mayonnaise and cucumber, crusts off. Mix 250g crab meat with 3 tbsp mayonnaise, lemon zest and pepper.",
      "shop": [
-      "vintage cheddar",
-      "Swiss cheese",
-      "blue cheese",
-      "crackers",
-      "grapes",
-      "quince paste"
+      "crab meat",
+      "mayonnaise",
+      "lemon",
+      "white bread",
+      "butter",
+      "cucumber"
      ]
     },
     {
@@ -21610,30 +21674,30 @@
      ]
     },
     {
-     "name": "Room 237 devilled eggs",
-     "scene": "the room nobody should go into",
-     "method": "Eggs boiled 10 minutes, yolks whipped with mayo and Dijon, piped into whites, finished with smoked paprika and a sprinkle of chives.",
+     "name": "Gold Room spiced nuts",
+     "scene": "Lloyd's bar, the Gold Room",
+     "method": "Warm mixed nuts roasted with butter, brown sugar, rosemary and a pinch of cayenne. Toss 400g mixed unsalted nuts with 30g melted butter, 2 tbsp brown sugar, 1 tbsp chopped rosemary, 1 tsp salt flakes and a pinch of cayenne.",
      "shop": [
-      "eggs",
-      "mayonnaise",
-      "Dijon mustard",
-      "smoked paprika",
-      "chives"
+      "mixed unsalted nuts",
+      "butter",
+      "brown sugar",
+      "rosemary",
+      "cayenne pepper"
      ]
     }
    ],
    "mains": [
     {
-     "name": "Overlook pot roast",
-     "scene": "snowed in for the winter with a full kitchen",
-     "method": "Beef chuck seared hard, onion, carrot and celery, red wine and stock, braised covered at 160C for 3 hours, potatoes for the last hour.",
+     "name": "Hallorann's roast leg of lamb",
+     "scene": "the walk-in freezer tour, Dick knows every shelf",
+     "method": "Leg of lamb studded with garlic and rosemary, roasted pink with potatoes and gravy. Stud a 2kg leg of lamb with 4 sliced garlic cloves and rosemary sprigs, rub with oil, salt and pepper.",
      "shop": [
-      "beef chuck",
-      "brown onions",
-      "carrots",
-      "celery",
-      "red wine",
-      "potatoes"
+      "lamb leg",
+      "garlic",
+      "rosemary",
+      "potatoes",
+      "plain flour",
+      "beef stock"
      ]
     },
     {
@@ -22406,16 +22470,15 @@
      ]
     },
     {
-     "name": "Bubbles cheese board",
-     "scene": "something to eat with the very first fizzy beer",
-     "method": "Tasmanian vintage cheddar, a ripe brie and a soft blue at room temperature for an hour, with crisp apple slices, walnuts toasted at 170C for 8 minutes, leatherwood honey and crackers.",
+     "name": "Beer-battered Tassie chips",
+     "scene": "Albert's Tasmanian home, beer with bubbles",
+     "method": "Thick-cut potato chips dipped in beer batter and fried golden, with chicken salt. Cut 1kg potatoes into thick chips and par-boil 5 minutes.",
      "shop": [
-      "vintage cheddar",
-      "brie",
-      "blue cheese",
-      "apples",
-      "walnuts",
-      "leatherwood honey"
+      "potatoes",
+      "plain flour",
+      "lager",
+      "chicken salt",
+      "vegetable oil"
      ]
     },
     {
@@ -22848,15 +22911,14 @@
      ]
     },
     {
-     "name": "Kings Canyon trail mix",
-     "scene": "the climb to the top of Kings Canyon",
-     "method": "Macadamias, dried mango, coconut chips and dark chocolate chunks tossed with a little sea salt.",
+     "name": "Alice Springs damper",
+     "scene": "campfire in the Red Centre",
+     "method": "Warm bush damper torn open with butter and golden syrup. Rub 60g butter into 450g self-raising flour and 1 tsp salt, add 300ml milk and mix to a soft dough.",
      "shop": [
-      "macadamias",
-      "dried mango",
-      "coconut chips",
-      "dark chocolate",
-      "sea salt flakes"
+      "butter",
+      "self-raising flour",
+      "full cream milk",
+      "golden syrup"
      ]
     }
    ],
@@ -23879,16 +23941,14 @@
    "serve_cue": "Serve the mains when Scrooge sends for the prize turkey.",
    "snacks": [
     {
-     "name": "Fozziwig's party sausage rolls",
-     "scene": "the Christmas party at the old rubber chicken factory",
-     "method": "Sausage mince with grated apple, sage and onion rolled in puff pastry, egg washed, scored, baked at 200C for 25 minutes until deep golden. Hot mustard alongside.",
+     "name": "Fozziwig's cheese and pickle sandwiches",
+     "scene": "Fozziwig's party, rubber chicken optional",
+     "method": "Thick white bread with sharp cheddar and sweet brown pickle, cut into little party triangles.",
      "shop": [
-      "pork sausage mince",
-      "apples",
-      "sage",
-      "brown onions",
-      "puff pastry",
-      "English mustard"
+      "white bread",
+      "butter",
+      "brown pickle",
+      "aged cheddar"
      ]
     },
     {
@@ -24732,16 +24792,15 @@
    "serve_cue": "Serve the pizza when Woody and Buzz end up at the pizza place.",
    "snacks": [
     {
-     "name": "Andy's birthday party sausage rolls",
-     "scene": "the birthday party the toys spy on",
-     "method": "Sausage mince with grated carrot and onion rolled in puff pastry, egg washed, cut small, baked at 200C for 25 minutes. Tomato sauce.",
+     "name": "Mr Potato Head loaded potato bites",
+     "scene": "Andy's birthday, the new toy panic",
+     "method": "Crispy baby potatoes smashed and loaded with sour cream, bacon, cheese and chives. Boil 1kg baby potatoes until tender, smash flat on an oiled tray and roast at 220C for 25 minutes.",
      "shop": [
-      "pork sausage mince",
-      "carrots",
-      "brown onions",
-      "puff pastry",
-      "eggs",
-      "tomato sauce"
+      "baby potatoes",
+      "cheddar",
+      "bacon",
+      "sour cream",
+      "chives"
      ]
     },
     {
@@ -24996,15 +25055,15 @@
    ],
    "dessert": [
     {
-     "name": "Sulley's blue velvet cake",
-     "scene": "big, blue and fuzzy",
-     "method": "Vanilla cake tinted blue, frosted with blue buttercream piped in fuzzy strands with a grass tip, purple spots on top.",
+     "name": "Boo's door jam drops",
+     "scene": "all those doors on the scare floor",
+     "method": "Buttery thumbprint biscuits each holding a little pool of raspberry jam. Beat 125g butter and 80g sugar, add 1 egg yolk and 180g plain flour.",
      "shop": [
-      "self-raising flour",
       "butter",
-      "eggs",
-      "icing sugar",
-      "blue food colouring"
+      "caster sugar",
+      "egg",
+      "plain flour",
+      "raspberry jam"
      ]
     }
    ],
@@ -25648,14 +25707,12 @@
    ],
    "drink": [
     {
-     "name": "Ghostly hot chocolate",
-     "scene": "a cold night in Maine",
-     "method": "White chocolate melted into hot milk with vanilla, whisked frothy, mini marshmallows on top.",
+     "name": "Whipstaff cream soda floats",
+     "scene": "a friendly ghost of a drink",
+     "method": "Cold cream soda poured over vanilla ice cream so it fizzes up white and ghostly.",
      "shop": [
-      "white chocolate",
-      "full cream milk",
-      "vanilla extract",
-      "marshmallows"
+      "vanilla ice cream",
+      "cream soda"
      ]
     }
    ],
@@ -26779,16 +26836,16 @@
    ],
    "dessert": [
     {
-     "name": "Grandma's apple pie",
-     "scene": "Grandma's kitchen, back where it belongs",
-     "method": "Granny Smiths sliced and tossed with sugar, cinnamon and a little flour, packed into a double crust, egg washed, baked at 190C for 50 minutes and rested an hour. Vanilla ice cream.",
+     "name": "Happy place lemon bars",
+     "scene": "go to your happy place",
+     "method": "Buttery shortbread base under a sharp lemon custard, baked until just set and showered with icing sugar.",
      "shop": [
-      "Granny Smith apples",
-      "caster sugar",
-      "cinnamon",
-      "sweet shortcrust pastry",
+      "plain flour",
+      "icing sugar",
+      "butter",
       "eggs",
-      "vanilla ice cream"
+      "caster sugar",
+      "lemons"
      ]
     }
    ],
@@ -27508,16 +27565,18 @@
    ],
    "dessert": [
     {
-     "name": "Tres leches cake",
-     "scene": "a Mexican dessert at the villa",
-     "method": "Sponge baked at 175C for 25 minutes, pricked all over and soaked overnight in condensed, evaporated and full cream milk, topped with whipped cream and cinnamon.",
+     "name": "Pai Mei's almond cookies",
+     "scene": "training with Pai Mei",
+     "method": "Crumbly Chinese almond cookies with an almond pressed into each. Beat 150g butter with 120g sugar and 1 egg, add 1 tsp almond extract, then 220g flour, 50g almond meal and 1 tsp baking powder.",
      "shop": [
+      "butter",
+      "caster sugar",
       "eggs",
-      "self-raising flour",
-      "condensed milk",
-      "evaporated milk",
-      "full cream milk",
-      "thickened cream"
+      "almond extract",
+      "plain flour",
+      "almond meal",
+      "baking powder",
+      "almonds"
      ]
     }
    ],
@@ -28249,16 +28308,15 @@
    ],
    "dessert": [
     {
-     "name": "Christmas night honey cake",
-     "scene": "the fight is on Christmas Day",
-     "method": "Medovik: honey sponge layers rolled thin and baked at 180C for 6 minutes each, stacked with sour cream and condensed milk frosting, crumbs on the outside, rested overnight.",
+     "name": "Siberian snowball tea cakes",
+     "scene": "training in the Siberian snow",
+     "method": "Buttery walnut shortbread balls rolled twice in icing sugar like snowballs. Beat 225g butter with 60g icing sugar and vanilla, then mix in 280g plain flour and 100g finely chopped walnuts.",
      "shop": [
-      "honey",
-      "eggs",
+      "butter",
+      "icing sugar",
+      "vanilla extract",
       "plain flour",
-      "bicarb soda",
-      "sour cream",
-      "condensed milk"
+      "walnuts"
      ]
     }
    ],
@@ -29144,16 +29202,16 @@
      ]
     },
     {
-     "name": "Engagement party cheese board",
-     "scene": "the toasts at Lillian's engagement party",
-     "method": "Brie, aged cheddar and a soft blue out of the fridge an hour before, with grapes, crackers, a drizzle of honey and walnuts toasted at 170C for 8 minutes.",
+     "name": "Milwaukee cheese curds",
+     "scene": "Annie's Wisconsin home town",
+     "method": "Fried battered cheese curds, crunchy outside and squeaky inside, with ranch dressing. Cut 400g firm cheddar or haloumi into 2cm cubes.",
      "shop": [
-      "brie",
-      "vintage cheddar",
-      "blue cheese",
-      "grapes",
-      "crackers",
-      "walnuts"
+      "haloumi",
+      "plain flour",
+      "egg",
+      "lager",
+      "ranch dressing",
+      "vegetable oil"
      ]
     },
     {
@@ -29215,12 +29273,14 @@
    ],
    "drink": [
     {
-     "name": "Champagne",
-     "scene": "the bridal party toasts",
-     "method": "Champagne chilled in an ice bucket, poured into flutes with a raspberry dropped in each one.",
+     "name": "Bridal party rosé spritz",
+     "scene": "Lillian's engagement, everyone dressed up",
+     "method": "Rosé wine, soda and a splash of grapefruit over lots of ice with strawberries. Fill 4 large wine glasses with ice and sliced strawberries.",
      "shop": [
-      "champagne",
-      "raspberries"
+      "rosé",
+      "pink grapefruit juice",
+      "soda water",
+      "strawberries"
      ]
     }
    ],
@@ -29861,15 +29921,12 @@
    ],
    "drink": [
     {
-     "name": "Party punch",
-     "scene": "the punch bowl at Jules's party",
-     "method": "Pineapple and orange juice topped with lemonade, sliced oranges and lots of ice in a big bowl, no extras from the laundry.",
+     "name": "McLovin's cherry cola",
+     "scene": "the most famous fake ID going",
+     "method": "Cola over ice with a good splash of cherry syrup and a cherry on top.",
      "shop": [
-      "pineapple juice",
-      "orange juice",
-      "lemonade",
-      "oranges",
-      "ice"
+      "cola",
+      "maraschino cherries"
      ]
     }
    ],
@@ -29968,15 +30025,13 @@
    ],
    "drink": [
     {
-     "name": "Party punch",
-     "scene": "the house party",
-     "method": "Pineapple and orange juice topped with lemonade and lots of ice, sliced oranges, in a big bowl with a ladle.",
+     "name": "Jenko's chocolate milk",
+     "scene": "back in high school, but popular this time",
+     "method": "Ice-cold chocolate milk shaken with a little malt powder, served in tall glasses. Shake 1L cold milk with 6 tbsp chocolate drinking powder and 2 tbsp malted milk powder in a jar until frothy.",
      "shop": [
-      "pineapple juice",
-      "orange juice",
-      "lemonade",
-      "oranges",
-      "ice"
+      "full cream milk",
+      "drinking chocolate",
+      "malted milk powder"
      ]
     }
    ],
@@ -30122,16 +30177,16 @@
      ]
     },
     {
-     "name": "Jaguar's eye green dip",
-     "scene": "the green jewel they have to return to the statue",
-     "method": "Ripe avocados roughly smashed with lime juice, finely chopped coriander, jalapeño and red onion, seasoned well with salt, a whole green olive sat in the middle like the jewel. Plantain chips.",
+     "name": "Bravestone's mango salsa",
+     "scene": "Dr Smolder Bravestone in the jungle",
+     "method": "Fresh mango, red onion, chilli and coriander with lime, scooped up with corn chips. Dice 2 mangoes and mix with half a diced red onion, 1 chopped chilli, a handful of coriander and the juice of 2 limes.",
      "shop": [
-      "avocados",
-      "limes",
+      "mangoes",
+      "red onion",
+      "red chilli",
       "coriander",
-      "jalapeños",
-      "red onions",
-      "plantain chips"
+      "limes",
+      "corn chips"
      ]
     }
    ],
@@ -30219,16 +30274,17 @@
      ]
     },
     {
-     "name": "Stampede trail mix",
-     "scene": "the stampede through the living room",
-     "method": "Roasted peanuts, cashews, banana chips, dried mango and dark chocolate chunks tossed with a little sea salt in a big wooden bowl.",
+     "name": "Stampede nachos",
+     "scene": "everything comes charging through the house",
+     "method": "Corn chips piled with spiced beans, melted cheese, salsa, sour cream and jalapeños. Spread 300g corn chips on a tray, spoon over 400g refried beans warmed with 1 tsp cumin and cover with 200g grated cheese.",
      "shop": [
-      "peanuts",
-      "cashews",
-      "banana chips",
-      "dried mango",
-      "dark chocolate",
-      "sea salt flakes"
+      "corn chips",
+      "refried beans",
+      "ground cumin",
+      "tasty cheese",
+      "tomato salsa",
+      "sour cream",
+      "pickled jalapeños"
      ]
     },
     {
@@ -30275,16 +30331,14 @@
    ],
    "dessert": [
     {
-     "name": "Maple pecan pie",
-     "scene": "a New Hampshire autumn",
-     "method": "Toasted pecans mixed with maple syrup, brown sugar, butter and eggs, poured into a blind-baked case, baked at 170C for 45 minutes until just set. Cream.",
+     "name": "New Hampshire maple fudge",
+     "scene": "Brantford, New Hampshire in the fall",
+     "method": "Soft creamy fudge made with real maple syrup, cut into little squares. Boil 250ml maple syrup, 200g brown sugar, 150ml cream and 40g butter to 115C, stirring gently.",
      "shop": [
-      "pecans",
       "maple syrup",
       "brown sugar",
-      "butter",
-      "eggs",
-      "sweet shortcrust pastry"
+      "thickened cream",
+      "butter"
      ]
     }
    ],
@@ -31777,13 +31831,13 @@
    ],
    "drink": [
     {
-     "name": "Sweet tea",
-     "scene": "Edward's stories told on the porch in Alabama",
-     "method": "Black tea brewed strong, sweetened while hot, cooled and poured over plenty of ice with lemon.",
+     "name": "Calloway Circus cherry soda",
+     "scene": "Edward works three years for the circus",
+     "method": "Cherry syrup and soda water over ice with a squeeze of lime and a cherry on top.",
      "shop": [
-      "black tea",
-      "sugar",
-      "lemons"
+      "maraschino cherries",
+      "lime",
+      "soda water"
      ]
     }
    ],
@@ -32603,16 +32657,16 @@
    ],
    "dessert": [
     {
-     "name": "Tip jar apple pie",
-     "scene": "Mr Pink won't tip, you should",
-     "method": "Granny Smiths sliced with sugar, cinnamon and a little flour in a double crust, egg washed, baked at 190C for 50 minutes, rested an hour. Cream.",
+     "name": "Diner lemon meringue pie",
+     "scene": "Uncle Bob's after the tip argument",
+     "method": "Short pastry case with tangy lemon filling under a tall, toasted meringue, cut in big diner wedges.",
      "shop": [
-      "Granny Smith apples",
-      "caster sugar",
-      "cinnamon",
       "sweet shortcrust pastry",
+      "caster sugar",
+      "cornflour",
+      "lemons",
       "eggs",
-      "thickened cream"
+      "butter"
      ]
     }
    ],
@@ -32818,16 +32872,17 @@
    ],
    "dessert": [
     {
-     "name": "Sweet potato pie",
-     "scene": "soul food dessert",
-     "method": "Roasted sweet potato mashed with butter, brown sugar, eggs, evaporated milk and spices, baked in a blind-baked case at 170C for 50 minutes.",
+     "name": "Max Cherry's banana bread",
+     "scene": "the bail bondsman's quiet office",
+     "method": "Moist banana bread with walnuts, toasted and buttered in thick slices. Mash 3 ripe bananas with 120g melted butter, 150g brown sugar, 2 eggs and vanilla.",
      "shop": [
-      "sweet potatoes",
+      "bananas",
       "butter",
       "brown sugar",
       "eggs",
-      "evaporated milk",
-      "sweet shortcrust pastry"
+      "vanilla extract",
+      "self-raising flour",
+      "walnuts"
      ]
     }
    ],
@@ -32922,16 +32977,16 @@
    ],
    "dessert": [
     {
-     "name": "Sticky toffee pudding",
-     "scene": "a proper pub pudding",
-     "method": "Dates soaked with bicarb, beaten into a butter sponge, baked at 180C for 30 minutes, drowned in toffee sauce.",
+     "name": "Bullet Tooth Tony's banoffee pie",
+     "scene": "a London caff classic",
+     "method": "Biscuit base, thick caramel and sliced bananas under a mountain of cream and grated chocolate.",
      "shop": [
-      "dates",
-      "bicarb soda",
+      "plain sweet biscuits",
       "butter",
-      "brown sugar",
-      "self-raising flour",
-      "thickened cream"
+      "tinned caramel",
+      "bananas",
+      "thickened cream",
+      "dark chocolate"
      ]
     }
    ],
@@ -32984,16 +33039,12 @@
      ]
     },
     {
-     "name": "Antique shotgun sausage rolls",
-     "scene": "the two antique shotguns",
-     "method": "Sausage mince with grated apple, sage and onion rolled in puff pastry, egg washed, baked at 200C for 25 minutes.",
+     "name": "Hatchet Harry's pork scratchings",
+     "scene": "East End pub snacks",
+     "method": "Crackling pork rind strips, salted and roasted until they puff and crunch. Score 500g pork rind into strips, rub well with salt and dry in the fridge overnight.",
      "shop": [
-      "pork sausage mince",
-      "apples",
-      "sage",
-      "brown onions",
-      "puff pastry",
-      "eggs"
+      "pork rind",
+      "sea salt flakes"
      ]
     }
    ],
@@ -33225,16 +33276,17 @@
    ],
    "dessert": [
     {
-     "name": "Jewelled egg panna cotta",
-     "scene": "the jewelled egg everyone is chasing",
-     "method": "Vanilla panna cotta set in egg-shaped moulds, topped with a glossy berry jelly and edible gold leaf.",
+     "name": "Lake Como tiramisu",
+     "scene": "the villa at Lake Como",
+     "method": "Coffee-soaked sponge fingers layered with mascarpone cream and finished with cocoa. Whisk 3 egg yolks with 80g sugar until pale, fold in 500g mascarpone and 200ml whipped cream.",
      "shop": [
-      "thickened cream",
+      "eggs",
       "caster sugar",
-      "gelatine leaves",
-      "vanilla bean",
-      "mixed berries",
-      "edible gold leaf"
+      "mascarpone",
+      "thickened cream",
+      "sponge finger biscuits",
+      "espresso coffee",
+      "cocoa"
      ]
     }
    ],
@@ -33371,15 +33423,18 @@
    "serve_cue": "Serve the drinks when Goldfinger offers Bond a mint julep at his Kentucky stud farm.",
    "snacks": [
     {
-     "name": "Gold leaf devilled eggs",
-     "scene": "a villain who covers everything in gold",
-     "method": "Eggs boiled 10 minutes, yolks whipped with mayo, Dijon and a pinch of curry powder until silky, piped back into the whites, each finished with a fleck of edible gold leaf.",
+     "name": "Fort Knox cornbread bars",
+     "scene": "Kentucky gold, cut into bullion bars",
+     "method": "Golden buttermilk cornbread baked in a tray and cut into gold bar shapes, with honey butter.",
      "shop": [
+      "cornmeal",
+      "plain flour",
+      "baking powder",
+      "caster sugar",
       "eggs",
-      "mayonnaise",
-      "Dijon mustard",
-      "curry powder",
-      "edible gold leaf"
+      "buttermilk",
+      "butter",
+      "honey"
      ]
     },
     {
@@ -33396,16 +33451,16 @@
      ]
     },
     {
-     "name": "Miami Beach prawn cocktail",
-     "scene": "the Miami Beach hotel where Bond first sees him playing cards",
-     "method": "Prawns poached 2 minutes and iced, piled over shredded iceberg in coupes with a sauce of tomato sauce, horseradish, lemon and a dash of brandy.",
+     "name": "Fontainebleau crab salad cups",
+     "scene": "the Miami Beach hotel pool where it starts",
+     "method": "Chilled crab, celery and lemon mayonnaise spooned into little lettuce cups. Mix 300g crab meat with 3 tbsp mayonnaise, a finely diced celery stick, chopped chives, lemon zest and juice and a pinch of paprika.",
      "shop": [
-      "green prawns",
-      "iceberg lettuce",
-      "tomato sauce",
-      "horseradish",
-      "lemons",
-      "brandy"
+      "crab meat",
+      "mayonnaise",
+      "celery stick",
+      "chives",
+      "lemon",
+      "baby cos lettuce"
      ]
     }
    ],
@@ -33546,16 +33601,18 @@
    ],
    "dessert": [
     {
-     "name": "Russian honey cake",
-     "scene": "the long Russian winter",
-     "method": "Thin honey sponge layers baked at 180C for 6 minutes each, stacked with sour cream and condensed milk frosting, crumbs on the outside, rested overnight.",
+     "name": "St Petersburg syrniki",
+     "scene": "Bond's St Petersburg mission",
+     "method": "Little golden Russian cottage cheese pancakes with sour cream and berry jam. Mix 500g cottage cheese, 2 eggs, 3 tbsp sugar, 1 tsp vanilla and 80g flour.",
      "shop": [
-      "honey",
+      "cottage cheese",
       "eggs",
+      "caster sugar",
+      "vanilla extract",
       "plain flour",
-      "bicarb soda",
+      "butter",
       "sour cream",
-      "condensed milk"
+      "berry jam"
      ]
     }
    ],
@@ -33906,16 +33963,17 @@
    "serve_cue": "Serve the mains when Ethan meets Kittridge at the restaurant with the giant fish tanks.",
    "snacks": [
     {
-     "name": "Prague embassy party canapés",
-     "scene": "the embassy party in Prague where it all goes wrong",
-     "method": "Rye bread rounds with smoked trout and horseradish cream, mini potato pancakes with sour cream and chives, laid on silver trays.",
+     "name": "Prague café chlebíčky",
+     "scene": "Ethan's Prague, before it all goes wrong",
+     "method": "Little Czech open sandwiches with ham, egg, potato salad and pickles on baguette slices. Slice a baguette into 16 pieces and spread with butter.",
      "shop": [
-      "rye bread",
-      "hot-smoked trout",
-      "horseradish",
-      "sour cream",
-      "potatoes",
-      "chives"
+      "baguette",
+      "butter",
+      "potato salad",
+      "leg ham",
+      "eggs",
+      "gherkins",
+      "parsley"
      ]
     },
     {
@@ -34142,16 +34200,15 @@
      ]
     },
     {
-     "name": "Piano bar prawn cocktail",
-     "scene": "Rooster at the piano, just like his dad",
-     "method": "Cooked prawns hung over glasses of crisp lettuce and tangy cocktail sauce, a proper bar classic.",
+     "name": "Hard Deck loaded fries",
+     "scene": "Penny's bar, push-ups if you're wrong",
+     "method": "Crisp fries loaded with bacon, melted cheese, sour cream and chives. Bake 1kg frozen fries at 220C until crisp.",
      "shop": [
-      "cooked prawns",
-      "whole egg mayonnaise",
-      "tomato sauce",
-      "Worcestershire sauce",
-      "lemon",
-      "iceberg lettuce"
+      "frozen chips",
+      "bacon",
+      "cheddar",
+      "sour cream",
+      "chives"
      ]
     }
    ],
@@ -34185,16 +34242,13 @@
    ],
    "dessert": [
     {
-     "name": "Mach 10 key lime pie",
-     "scene": "pushing the limit",
-     "method": "Biscuit base, condensed milk and lime custard baked at 160C for 15 minutes, chilled overnight, whipped cream on top.",
+     "name": "Beach football s'mores",
+     "scene": "the Dagger squad's beach game",
+     "method": "Toasted marshmallows and chocolate squashed between crisp biscuits by the fire. Toast 16 marshmallows over a fire or under the grill until golden.",
      "shop": [
-      "digestive biscuits",
-      "butter",
-      "condensed milk",
-      "eggs",
-      "limes",
-      "thickened cream"
+      "marshmallows",
+      "milk chocolate",
+      "plain sweet biscuits"
      ]
     }
    ],
@@ -35240,16 +35294,16 @@
    ],
    "dessert": [
     {
-     "name": "Farmhouse apple pie",
-     "scene": "the farmhouse kitchen in Bucks County",
-     "method": "Granny Smiths sliced and tossed with sugar, cinnamon and a little flour, in a double crust, egg washed, baked at 190C for 50 minutes, rested an hour. Vanilla ice cream.",
+     "name": "Swing away strawberry shortcake",
+     "scene": "Merrill's swing, Bucks County farm",
+     "method": "Split buttermilk biscuits piled with sugared strawberries and soft whipped cream. Rub 100g cold butter into 300g self-raising flour and 2 tbsp sugar, add 200ml buttermilk and pat 2cm thick.",
      "shop": [
-      "Granny Smith apples",
+      "butter",
+      "self-raising flour",
       "caster sugar",
-      "cinnamon",
-      "sweet shortcrust pastry",
-      "eggs",
-      "vanilla ice cream"
+      "buttermilk",
+      "strawberries",
+      "thickened cream"
      ]
     }
    ],
@@ -35360,12 +35414,14 @@
    ],
    "drink": [
     {
-     "name": "Seattle coffee",
-     "scene": "a grey, rainy city that runs on coffee",
-     "method": "Strong pour-over coffee, a splash of hot milk, in big mugs.",
+     "name": "Shelter Mountain hot toddy",
+     "scene": "cabin 12 at the Shelter Mountain Inn",
+     "method": "Whisky, honey, lemon and hot water with a cinnamon stick, for a wet Seattle night.",
      "shop": [
-      "ground coffee",
-      "full cream milk"
+      "honey",
+      "lemon",
+      "whisky",
+      "cinnamon sticks"
      ]
     }
    ],
@@ -35786,13 +35842,14 @@
    ],
    "drink": [
     {
-     "name": "Night light hot chocolate",
-     "scene": "leave the light on tonight",
-     "method": "Dark chocolate melted into hot milk with a little cinnamon, whisked frothy, poured into mugs.",
+     "name": "Further blackberry fizz",
+     "scene": "something dark in the other room",
+     "method": "Muddled blackberries and lemon topped with soda, dark purple and fizzing over ice. Muddle 250g blackberries with 4 tbsp sugar and the juice of 2 lemons, then strain into a jug.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "cinnamon"
+      "blackberries",
+      "caster sugar",
+      "lemons",
+      "soda water"
      ]
     }
    ],
@@ -35999,15 +36056,14 @@
    ],
    "drink": [
     {
-     "name": "Desert iced tea",
-     "scene": "a hot day in the valley",
-     "method": "Black tea brewed strong, sweetened, cooled and poured over ice with lemon and a splash of peach nectar.",
+     "name": "Jupe's watermelon agua fresca",
+     "scene": "Jupiter's Claim, hot and dusty",
+     "method": "Blended watermelon and lime, strained and served over ice, sweet and very cold. Blend 1kg watermelon flesh with the juice of 2 limes and 2 tbsp sugar.",
      "shop": [
-      "black tea",
+      "watermelon",
+      "limes",
       "caster sugar",
-      "lemons",
-      "peach nectar",
-      "ice"
+      "mint"
      ]
     }
    ],
@@ -36616,16 +36672,18 @@
      ]
     },
     {
-     "name": "Maine pot roast",
-     "scene": "a cold night in a new house",
-     "method": "Beef chuck seared hard, onion, carrot and celery softened, stock and thyme, braised covered at 160C for 3 hours, potatoes added for the last hour.",
+     "name": "Ludlow bean supper",
+     "scene": "a Maine Saturday night supper",
+     "method": "Molasses baked beans with ham hock, served with steamed brown bread and coleslaw. Soak 500g navy beans overnight.",
      "shop": [
-      "beef chuck",
-      "brown onions",
-      "carrots",
-      "celery",
-      "beef stock",
-      "potatoes"
+      "navy beans",
+      "ham hock",
+      "onion",
+      "molasses",
+      "brown sugar",
+      "English mustard",
+      "wholemeal bread",
+      "coleslaw mix"
      ]
     }
    ],
@@ -36668,16 +36726,14 @@
    "serve_cue": "Serve the snacks when the camera is set up on the tripod for the first night.",
    "snacks": [
     {
-     "name": "Night vision green dip",
-     "scene": "the grainy green footage from the bedroom camera",
-     "method": "Peas, avocado, mint, lemon and a little feta blitzed into a bright green dip, served with pita chips.",
+     "name": "3am toasted cheese sandwiches",
+     "scene": "up again watching the camera footage",
+     "method": "Golden toasted cheese sandwiches with a little Dijon, cut into soldiers. Butter the outsides of 8 slices of bread.",
      "shop": [
-      "frozen peas",
-      "avocados",
-      "mint",
-      "lemons",
-      "feta",
-      "pita bread"
+      "white bread",
+      "butter",
+      "cheddar",
+      "Dijon mustard"
      ]
     },
     {
@@ -36796,16 +36852,18 @@
      ]
     },
     {
-     "name": "Clinic waiting room trail mix",
-     "scene": "the hospital psych ward where she works",
-     "method": "Roasted almonds, cashews, dried cranberries and dark chocolate chunks tossed with a little sea salt and cinnamon, served in paper cups.",
+     "name": "Rose's late-shift popcorn chicken",
+     "scene": "the hospital night shift",
+     "method": "Crunchy bite-size buttermilk fried chicken pieces with a honey mustard dip. Soak 600g diced chicken thigh in 250ml buttermilk for 1 hour.",
      "shop": [
-      "almonds",
-      "cashews",
-      "dried cranberries",
-      "dark chocolate",
-      "sea salt flakes",
-      "cinnamon"
+      "chicken thighs",
+      "buttermilk",
+      "plain flour",
+      "smoked paprika",
+      "garlic powder",
+      "honey",
+      "Dijon mustard",
+      "vegetable oil"
      ]
     }
    ],
@@ -37060,15 +37118,13 @@
    ],
    "drink": [
     {
-     "name": "Iced tea",
-     "scene": "a 1969 Californian summer",
-     "method": "Black tea brewed strong, sweetened, cooled and poured over ice with lemon and mint.",
+     "name": "1969 grasshopper shakes",
+     "scene": "a late-sixties cocktail party",
+     "method": "Mint chocolate ice cream blended with milk into pale green shakes, a crème de menthe nip for adults.",
      "shop": [
-      "black tea",
-      "caster sugar",
-      "lemons",
-      "mint",
-      "ice"
+      "mint choc chip ice cream",
+      "full cream milk",
+      "crème de menthe"
      ]
     }
    ],
@@ -37154,16 +37210,18 @@
    ],
    "dessert": [
     {
-     "name": "New York cheesecake",
-     "scene": "the city that never sleeps",
-     "method": "Cream cheese, sugar, eggs and sour cream on a biscuit base, baked in a water bath at 150C for an hour, cooled in the oven, chilled overnight.",
+     "name": "Clamp tower rainbow cookies",
+     "scene": "the Clamp Centre in Manhattan",
+     "method": "New York Italian bakery layers of almond sponge in three colours with jam and a chocolate top.",
      "shop": [
-      "cream cheese",
+      "almond meal",
+      "butter",
       "caster sugar",
       "eggs",
-      "sour cream",
-      "digestive biscuits",
-      "butter"
+      "plain flour",
+      "food colouring",
+      "apricot jam",
+      "dark chocolate"
      ]
     }
    ],
@@ -37204,16 +37262,16 @@
      ]
     },
     {
-     "name": "Roller diner onion rings",
-     "scene": "the roller-skate diner where Trevor works",
-     "method": "Brown onions sliced thick, soaked in buttermilk, dipped in a beer batter, fried at 185C until puffed and golden, salted. Ranch dip.",
+     "name": "Summerville fried okra",
+     "scene": "small-town Oklahoma diner",
+     "method": "Okra cut into rounds, tossed in cornmeal and fried crisp, with hot sauce. Slice 500g okra into 1cm rounds, toss in 150ml buttermilk, then in 150g cornmeal mixed with 50g flour, salt and pepper.",
      "shop": [
-      "brown onions",
+      "okra",
       "buttermilk",
+      "cornmeal",
       "plain flour",
-      "lager",
-      "sour cream",
-      "dill"
+      "hot sauce",
+      "vegetable oil"
      ]
     },
     {
@@ -37591,13 +37649,14 @@
    ],
    "drink": [
     {
-     "name": "Hockey rink hot chocolate",
-     "scene": "Riley's hockey games back in Minnesota",
-     "method": "Dark chocolate melted into hot milk, whisked until frothy, poured into mugs and topped with a handful of marshmallows.",
+     "name": "Bing Bong's fairy floss milkshake",
+     "scene": "Riley's imaginary friend is made of it",
+     "method": "Thick vanilla milkshake blended with strawberry and topped with a puff of pink fairy floss.",
      "shop": [
-      "dark chocolate",
+      "vanilla ice cream",
       "full cream milk",
-      "marshmallows"
+      "strawberries",
+      "fairy floss"
      ]
     }
    ],
@@ -38819,16 +38878,14 @@
      ]
     },
     {
-     "name": "Far Far Away fish and chips",
-     "scene": "the kingdom that looks a lot like Hollywood",
-     "method": "Flathead dusted in flour, dipped in a batter of flour and ice-cold lager, fried at 180C for 4 minutes until crisp, with double-cooked chips, lemon and tartare.",
+     "name": "Far Far Away royal roast pork",
+     "scene": "the awkward dinner with Fiona's parents",
+     "method": "Roast pork shoulder with crackling, apple sauce and roast potatoes. Score a 2kg pork shoulder, rub with salt and roast at 230C for 30 minutes, then 170C for 2 hours.",
      "shop": [
-      "flathead fillets",
-      "plain flour",
-      "lager",
+      "pork shoulder",
+      "sea salt flakes",
       "potatoes",
-      "tartare sauce",
-      "lemons"
+      "apple sauce"
      ]
     }
    ],
@@ -39575,16 +39632,14 @@
    ],
    "dessert": [
     {
-     "name": "Sticky toffee pudding",
-     "scene": "a cold walk back from the village",
-     "method": "Dates soaked in boiling water with bicarb, beaten into a brown sugar sponge, baked at 180C for 30 minutes, drowned in toffee sauce with cream.",
+     "name": "Honeydukes fudge",
+     "scene": "Hogsmeade, the sweet shop",
+     "method": "Creamy vanilla fudge cut into thick squares, wrapped in paper like the shop sells it.",
      "shop": [
-      "dates",
-      "bicarb soda",
-      "butter",
+      "sweetened condensed milk",
+      "full cream milk",
       "brown sugar",
-      "self-raising flour",
-      "thickened cream"
+      "butter"
      ]
     }
    ],
@@ -39896,16 +39951,14 @@
    ],
    "dessert": [
     {
-     "name": "Honey cake",
-     "scene": "the mead hall in Rohan",
-     "method": "Honey, butter and brown sugar melted, eggs and flour beaten in, baked at 160C for 45 minutes, brushed with warm honey.",
+     "name": "Elvish lembas shortbread",
+     "scene": "one small bite is enough to fill a grown man",
+     "method": "Rich shortbread squares wrapped in a leaf, the closest thing to Elvish waybread. Beat 250g butter with 100g sugar and 2 tbsp honey, then mix in 350g plain flour and a pinch of salt.",
      "shop": [
-      "honey",
       "butter",
-      "brown sugar",
-      "eggs",
-      "self-raising flour",
-      "flaked almonds"
+      "caster sugar",
+      "honey",
+      "plain flour"
      ]
     }
    ],
@@ -40109,16 +40162,14 @@
    ],
    "dessert": [
     {
-     "name": "Rum cake",
-     "scene": "a pirate's dessert, heavy on the rum",
-     "method": "Butter cake with a little brown sugar baked in a ring tin at 170C for 45 minutes, pricked all over while hot and soaked with a syrup of dark rum, butter and brown sugar, rested overnight.",
+     "name": "Port Royal pineapple tarts",
+     "scene": "the governor's town before the attack",
+     "method": "Buttery little shortcrust tarts filled with cooked pineapple jam. Cook 1 grated pineapple with 150g sugar and a cinnamon stick for 40 minutes until thick.",
      "shop": [
-      "butter",
-      "eggs",
-      "self-raising flour",
-      "dark rum",
-      "brown sugar",
-      "caster sugar"
+      "pineapple",
+      "caster sugar",
+      "cinnamon stick",
+      "sweet shortcrust pastry"
      ]
     }
    ],
@@ -40219,16 +40270,16 @@
    ],
    "dessert": [
     {
-     "name": "Two-faced chocolate tart",
-     "scene": "Harvey's coin, one side clean, one side scarred",
-     "method": "Dark chocolate ganache tart on a biscuit base, half dusted with icing sugar and half with cocoa, cut down the middle.",
+     "name": "Penthouse fundraiser lemon tart",
+     "scene": "Bruce's fundraiser for Harvey Dent",
+     "method": "Crisp pastry with a smooth, sharp lemon cream, finished with icing sugar. Blind bake a 23cm sweet shortcrust case at 180C for 20 minutes.",
      "shop": [
-      "dark chocolate",
+      "sweet shortcrust pastry",
+      "eggs",
+      "caster sugar",
+      "lemons",
       "thickened cream",
-      "digestive biscuits",
-      "butter",
-      "icing sugar",
-      "cocoa"
+      "icing sugar"
      ]
     }
    ],
@@ -40339,13 +40390,14 @@
    ],
    "drink": [
     {
-     "name": "Alfred's tea",
-     "scene": "Alfred always has the tea ready",
-     "method": "English breakfast tea brewed 4 minutes in a warmed silver pot, milk and sugar on the tray, poured into fine china cups.",
+     "name": "Wayne Manor elderflower cordial",
+     "scene": "the old manor's garden",
+     "method": "Elderflower cordial with sparkling water, lemon and cucumber over ice. Fill 4 glasses with ice and cucumber ribbons.",
      "shop": [
-      "English breakfast tea",
-      "full cream milk",
-      "caster sugar"
+      "elderflower cordial",
+      "sparkling water",
+      "lemon",
+      "cucumber"
      ]
     }
    ],
@@ -40643,16 +40695,17 @@
    ],
    "dessert": [
     {
-     "name": "Hulk smash cake",
-     "scene": "the big green friend from work",
-     "method": "Pandan or pistachio sponge tinted green, layered with cream and smashed honeycomb, covered in green buttercream.",
+     "name": "Korg's Kiwi afghan biscuits",
+     "scene": "Korg is a proper Kiwi",
+     "method": "Crunchy chocolate cornflake biscuits topped with chocolate icing and a walnut. Beat 200g butter with 100g sugar, add 180g flour, 2 tbsp cocoa and 50g cornflakes.",
      "shop": [
-      "self-raising flour",
-      "eggs",
-      "pistachios",
-      "thickened cream",
+      "butter",
+      "caster sugar",
+      "plain flour",
+      "cocoa",
+      "cornflakes",
       "icing sugar",
-      "green food colouring"
+      "walnuts"
      ]
     }
    ],
@@ -40826,15 +40879,17 @@
    ],
    "mains": [
     {
-     "name": "Munson family dinner",
-     "scene": "the family who take them in for one good night",
-     "method": "Chicken pieces roasted with garlic and thyme, mashed potato, buttered corn and green beans, gravy, all passed around a farmhouse table.",
+     "name": "Munson farm pork chops",
+     "scene": "the one good dinner the Munsons share",
+     "method": "Pan-fried pork chops with apple and onion gravy, mashed potato and green beans. Season 4 pork chops and pan-fry 4 minutes a side.",
      "shop": [
-      "chicken pieces",
-      "garlic",
-      "thyme",
+      "pork chops",
+      "onion",
+      "green apple",
+      "chicken stock",
+      "Dijon mustard",
       "potatoes",
-      "corn cobs",
+      "butter",
       "green beans"
      ]
     },
@@ -42074,16 +42129,15 @@
      ]
     },
     {
-     "name": "Dampier prawn cocktail",
-     "scene": "the coast at Dampier",
-     "method": "King prawns peeled, piled on iceberg with a Marie Rose sauce of mayo, tomato sauce and lemon.",
+     "name": "Dampier barbecued squid",
+     "scene": "Pilbara coast, barbie down by the water",
+     "method": "Tender squid scored and charred on a hot barbecue with chilli, garlic and lime. Score 600g cleaned squid tubes and cut into pieces.",
      "shop": [
-      "cooked king prawns",
-      "iceberg lettuce",
-      "mayonnaise",
-      "tomato sauce",
-      "lemons",
-      "Worcestershire sauce"
+      "squid tubes",
+      "garlic cloves",
+      "red chilli",
+      "limes",
+      "coriander"
      ]
     }
    ],
@@ -42326,16 +42380,18 @@
    ],
    "dessert": [
     {
-     "name": "Peach cobbler",
-     "scene": "the deep South",
-     "method": "Sliced peaches with brown sugar and cinnamon, buttery biscuit topping, baked at 190C for 40 minutes. Cream.",
+     "name": "Candyland white cake",
+     "scene": "Stephen serves it at the big dinner",
+     "method": "Light white butter cake with fluffy vanilla frosting, served in tall slices. Beat 170g butter with 300g sugar, add 4 egg whites and vanilla, then fold in 300g plain flour, 3 tsp baking powder and 250ml milk.",
      "shop": [
-      "peaches",
-      "brown sugar",
-      "cinnamon",
-      "self-raising flour",
       "butter",
-      "thickened cream"
+      "caster sugar",
+      "eggs",
+      "vanilla extract",
+      "plain flour",
+      "baking powder",
+      "full cream milk",
+      "icing sugar"
      ]
     }
    ],
@@ -42426,16 +42482,19 @@
    ],
    "dessert": [
     {
-     "name": "Arkansas apple pie",
-     "scene": "a slice back in Arkansas",
-     "method": "Apples sliced and tossed with sugar, cinnamon and a little flour, in a double crust, egg washed, baked at 190C for 50 minutes and rested. Pouring cream.",
+     "name": "Mattie's hard-bargain molasses cookies",
+     "scene": "Mattie haggles Stonehill down to the cent",
+     "method": "Soft, chewy molasses spice cookies rolled in sugar, the kind you'd carry in a saddlebag.",
      "shop": [
-      "apples",
-      "caster sugar",
-      "cinnamon",
-      "sweet shortcrust pastry",
-      "eggs",
-      "thickened cream"
+      "butter",
+      "brown sugar",
+      "egg",
+      "molasses",
+      "plain flour",
+      "bicarbonate of soda",
+      "ground ginger",
+      "ground cinnamon",
+      "caster sugar"
      ]
     }
    ],
@@ -44361,15 +44420,13 @@
    "serve_cue": "Serve the snacks when Joan finishes her novel with a glass of wine at home.",
    "snacks": [
     {
-     "name": "Joan's finishing-the-book cheese plate",
-     "scene": "the night Joan finishes her novel at home with her cat",
-     "method": "Brie and aged cheddar out of the fridge an hour, with grapes, crackers and a drizzle of honey, set out with a glass of wine to celebrate.",
+     "name": "Colombian arepas con queso",
+     "scene": "Cartagena street food",
+     "method": "Griddled corn cakes split and stuffed with melting white cheese and butter. Mix 300g pre-cooked white cornmeal with 500ml warm water and salt into a soft dough.",
      "shop": [
-      "brie",
-      "vintage cheddar",
-      "grapes",
-      "crackers",
-      "honey"
+      "pre-cooked white cornmeal",
+      "butter",
+      "mozzarella"
      ]
     },
     {
@@ -45279,16 +45336,17 @@
    ],
    "dessert": [
     {
-     "name": "Peach cobbler",
-     "scene": "the club's dessert menu",
-     "method": "Peaches with brown sugar, cinnamon and nutmeg, under buttery biscuit dough, baked at 190C for 40 minutes. Vanilla ice cream.",
+     "name": "Club Sugar Ray lemon chess pie",
+     "scene": "1938 Harlem supper club",
+     "method": "Short pastry with a buttery lemon custard that bakes a crackly top, served in thin slices.",
      "shop": [
-      "peaches",
-      "brown sugar",
-      "cinnamon",
-      "self-raising flour",
+      "sweet shortcrust pastry",
+      "eggs",
+      "caster sugar",
       "butter",
-      "vanilla ice cream"
+      "cornmeal",
+      "lemons",
+      "milk"
      ]
     }
    ],
@@ -45319,29 +45377,27 @@
    "serve_cue": "Serve the mains when Marcus and his friends sit down to Thanksgiving dinner.",
    "snacks": [
     {
-     "name": "Ad agency launch party canapés",
-     "scene": "the big product launch party",
-     "method": "Smoked salmon on blinis with crème fraîche, and mini crab cakes with lemon aioli, on silver trays.",
+     "name": "Strangé's cocktail meatballs",
+     "scene": "a perfume launch only Strangé could throw",
+     "method": "Little glazed meatballs on sticks in a sticky sweet chilli and grape jelly sauce. Mix 500g pork and beef mince with 1 egg, 40g breadcrumbs and salt, roll into 30 balls and bake at 200C for 15 minutes.",
      "shop": [
-      "blinis",
-      "smoked salmon",
-      "crème fraîche",
-      "crab meat",
-      "mayonnaise",
-      "lemons"
+      "pork and beef mince",
+      "egg",
+      "breadcrumbs",
+      "sweet chilli sauce",
+      "grape jelly"
      ]
     },
     {
-     "name": "Manhattan cheese plate",
-     "scene": "Marcus's sleek New York apartment",
-     "method": "Brie, aged cheddar and blue with grapes, figs and crackers, set out on a black slate.",
+     "name": "Marcus's smoked salmon pinwheels",
+     "scene": "the ad exec's power snack",
+     "method": "Soft tortillas spread with dill cream cheese, rolled with smoked salmon and cut into neat pinwheels.",
      "shop": [
-      "brie",
-      "vintage cheddar",
-      "blue cheese",
-      "grapes",
-      "figs",
-      "crackers"
+      "cream cheese",
+      "dill",
+      "lemon",
+      "large flour tortillas",
+      "smoked salmon"
      ]
     },
     {
@@ -45403,13 +45459,14 @@
    ],
    "drink": [
     {
-     "name": "Champagne",
-     "scene": "the launch party at the agency",
-     "method": "Champagne chilled in an ice bucket for 30 minutes, poured into tall flutes, a raspberry dropped into each.",
+     "name": "Strangé's French 75",
+     "scene": "the perfume launch party",
+     "method": "Gin, lemon and sugar topped with cold sparkling wine in a flute, with a lemon twist.",
      "shop": [
-      "champagne",
-      "raspberries",
-      "ice"
+      "gin",
+      "lemons",
+      "caster sugar",
+      "sparkling wine"
      ]
     }
    ],
@@ -45495,16 +45552,19 @@
    ],
    "dessert": [
     {
-     "name": "Convent apple pie",
-     "scene": "the sisters' baking",
-     "method": "Granny Smiths with sugar and cinnamon in a double crust, baked at 190C for 50 minutes, rested an hour. Cream.",
+     "name": "Convent bread and butter pudding",
+     "scene": "the sisters never waste a loaf",
+     "method": "Buttered bread layered with sultanas in a baked vanilla custard, crisp on top and soft underneath.",
      "shop": [
-      "Granny Smith apples",
-      "caster sugar",
-      "cinnamon",
-      "sweet shortcrust pastry",
+      "white bread",
+      "butter",
+      "sultanas",
       "eggs",
-      "thickened cream"
+      "full cream milk",
+      "thickened cream",
+      "caster sugar",
+      "vanilla extract",
+      "ground nutmeg"
      ]
     }
    ],
@@ -45705,29 +45765,29 @@
    ],
    "dessert": [
     {
-     "name": "Peach cobbler",
-     "scene": "Duck's mama's dessert after Sunday dinner",
-     "method": "Peaches with brown sugar, cinnamon and nutmeg under a buttery biscuit topping, baked at 190C for 40 minutes. Vanilla ice cream.",
+     "name": "Heartbeats lemon pound cake",
+     "scene": "Sunday dinner after the show",
+     "method": "Dense buttery lemon pound cake with a sharp lemon glaze soaked into the top. Beat 250g butter and 250g sugar until pale, add 4 eggs and the zest of 2 lemons, then fold in 250g plain flour and 1 tsp baking powder.",
      "shop": [
-      "peaches",
-      "brown sugar",
-      "cinnamon",
-      "self-raising flour",
       "butter",
-      "vanilla ice cream"
+      "caster sugar",
+      "eggs",
+      "lemons",
+      "plain flour",
+      "baking powder",
+      "icing sugar"
      ]
     }
    ],
    "drink": [
     {
-     "name": "Sweet tea",
-     "scene": "the big jug on the Sunday table",
-     "method": "Black tea brewed strong, sweetened while hot, cooled and poured over plenty of ice with lemon.",
+     "name": "Backstage cherry limeade",
+     "scene": "between sets at the club",
+     "method": "Fresh lime juice and cherry syrup topped with lemonade over crushed ice with a cherry.",
      "shop": [
-      "black tea",
-      "caster sugar",
-      "lemons",
-      "ice"
+      "limes",
+      "maraschino cherries",
+      "lemonade"
      ]
     }
    ],
@@ -46337,16 +46397,15 @@
    ],
    "dessert": [
     {
-     "name": "Almond cookies and apple pie",
-     "scene": "a dessert from both sides of the world",
-     "method": "Chinese almond cookies of butter, sugar and almond meal baked at 170C for 14 minutes, served beside wedges of cinnamon apple pie baked at 190C for 50 minutes.",
+     "name": "Imperial almond jelly with lychees",
+     "scene": "the princess's taste of home",
+     "method": "Cool almond milk jelly cut into diamonds and served in a bowl with lychees and their syrup.",
      "shop": [
-      "butter",
-      "almond meal",
-      "plain flour",
+      "powdered gelatine",
+      "full cream milk",
       "caster sugar",
-      "apples",
-      "sweet shortcrust pastry"
+      "almond extract",
+      "tinned lychees"
      ]
     }
    ],
@@ -46541,16 +46600,20 @@
    ],
    "dessert": [
     {
-     "name": "Dried apple pie",
-     "scene": "a frontier pie made from what's in the pantry",
-     "method": "Dried apples soaked and stewed with sugar and cinnamon, baked in a double crust at 190C for 45 minutes.",
+     "name": "Big Whiskey bread pudding with whiskey sauce",
+     "scene": "the Greeley's saloon, Big Whiskey, Wyoming",
+     "method": "Day-old bread baked in spiced custard with raisins, under a warm whiskey butter sauce. Tear 400g day-old bread into a dish with 80g raisins.",
      "shop": [
-      "dried apples",
-      "brown sugar",
-      "cinnamon",
-      "sweet shortcrust pastry",
+      "day-old white bread",
+      "raisins",
       "eggs",
-      "thickened cream"
+      "full cream milk",
+      "brown sugar",
+      "ground cinnamon",
+      "butter",
+      "caster sugar",
+      "thickened cream",
+      "whiskey"
      ]
     }
    ],
@@ -46692,15 +46755,14 @@
      ]
     },
     {
-     "name": "Roadhouse beer-battered onion rings",
-     "scene": "the bar food behind the chicken wire stage",
-     "method": "Thick onion rings soaked in buttermilk, dipped in a lager batter, fried at 185C until puffed and golden, salted.",
+     "name": "Double Deuce jalapeño poppers",
+     "scene": "the Double Deuce, be nice",
+     "method": "Jalapeños stuffed with cream cheese and cheddar, wrapped in bacon and baked until crisp. Halve 12 jalapeños lengthways and seed.",
      "shop": [
-      "brown onions",
-      "buttermilk",
-      "plain flour",
-      "lager",
-      "fine salt"
+      "jalapeños",
+      "cream cheese",
+      "cheddar",
+      "bacon"
      ]
     },
     {
@@ -46747,16 +46809,16 @@
    ],
    "dessert": [
     {
-     "name": "Pecan pie",
-     "scene": "a Southern slice for the road",
-     "method": "Pecans toasted, mixed with brown sugar, golden syrup, melted butter, eggs and vanilla, poured into a blind-baked case, baked at 170C for 50 minutes until just set. Cream.",
+     "name": "Missouri gooey butter cake",
+     "scene": "Jasper, Missouri, the Double Deuce's town",
+     "method": "A St Louis classic: cake base under a rich, gooey butter and cream cheese layer, dusted with icing sugar.",
      "shop": [
-      "pecans",
-      "brown sugar",
-      "golden syrup",
-      "butter",
+      "butter cake mix",
       "eggs",
-      "sweet shortcrust pastry"
+      "butter",
+      "cream cheese",
+      "vanilla extract",
+      "icing sugar"
      ]
     }
    ],
@@ -46893,16 +46955,15 @@
    "serve_cue": "Serve the mains when Rocky and Apollo start training at the LA gym.",
    "snacks": [
     {
-     "name": "Mansion party canapés",
-     "scene": "Rocky living large in his Philly mansion",
-     "method": "Smoked salmon on blinis with crème fraîche and dill, and devilled eggs with paprika, on silver trays.",
+     "name": "Italian Stallion bruschetta",
+     "scene": "Rocky made it big, but he's still from Philly",
+     "method": "Grilled bread rubbed with garlic and piled with fresh tomato, basil and olive oil. Slice a ciabatta, brush with oil and grill until charred.",
      "shop": [
-      "blinis",
-      "smoked salmon",
-      "crème fraîche",
-      "dill",
-      "eggs",
-      "mayonnaise"
+      "ciabatta loaf",
+      "garlic bulb",
+      "tomatoes",
+      "basil",
+      "extra virgin olive oil"
      ]
     },
     {
@@ -47356,16 +47417,16 @@
      ]
     },
     {
-     "name": "Fight night fish and chips",
-     "scene": "the Irish pub after the fight",
-     "method": "Cod fillets dusted in flour, dipped in a batter of flour and ice-cold lager, fried at 180C for 4 minutes until crisp, with thick chips, coleslaw and tartare.",
+     "name": "Alice Ward's baked ziti",
+     "scene": "Lowell, the whole family at the table",
+     "method": "Ziti baked in tomato and sausage sauce with ricotta and a mozzarella crust. Brown 400g Italian sausage meat, add 700g passata and simmer 15 minutes.",
      "shop": [
-      "cod fillets",
-      "plain flour",
-      "lager",
-      "potatoes",
-      "cabbage",
-      "tartare sauce"
+      "Italian sausages",
+      "passata",
+      "penne",
+      "ricotta",
+      "mozzarella",
+      "parmesan"
      ]
     }
    ],
@@ -47490,15 +47551,13 @@
    ],
    "drink": [
     {
-     "name": "Party punch",
-     "scene": "the punch bowl at Wyatt's house party",
-     "method": "Pineapple and orange juice topped with lemonade, sliced oranges and lots of ice in a big bowl with a ladle.",
+     "name": "Blues bar bourbon and cola",
+     "scene": "Lisa takes the boys to the blues bar",
+     "method": "Bourbon and cola over ice with a lemon wedge. Cola alone for anyone under age.",
      "shop": [
-      "pineapple juice",
-      "orange juice",
-      "lemonade",
-      "oranges",
-      "ice"
+      "bourbon",
+      "cola",
+      "lemon"
      ]
     }
    ],
@@ -47598,13 +47657,12 @@
    ],
    "drink": [
     {
-     "name": "Ski lodge hot chocolate",
-     "scene": "warming up after the K-12",
-     "method": "Dark chocolate melted into hot milk, whisked frothy, poured into mugs and topped with whipped cream.",
+     "name": "Monique's citron pressé",
+     "scene": "the French exchange student does it properly",
+     "method": "Fresh lemon juice with sugar syrup on the side and cold water to mix your own, the French way.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "thickened cream"
+      "lemons",
+      "caster sugar"
      ]
     }
    ],
@@ -47833,16 +47891,15 @@
    "serve_cue": "Serve the drinks when J.D. and Veronica stop at the convenience store for slushies.",
    "snacks": [
     {
-     "name": "Croquet party canapés",
-     "scene": "the Heathers' croquet game on the lawn",
-     "method": "Cucumber rounds with whipped cream cheese and dill, and smoked salmon on rye, served on silver trays at the garden party.",
+     "name": "JD's convenience store corn nuts",
+     "scene": "JD's slushie and snack run",
+     "method": "Crunchy roasted corn kernels tossed in butter, chilli and lime salt. Soak 300g dried corn kernels overnight, drain and dry well.",
      "shop": [
-      "cucumber",
-      "cream cheese",
-      "dill",
-      "smoked salmon",
-      "rye bread",
-      "lemons"
+      "corn kernels",
+      "butter",
+      "chilli powder",
+      "lime",
+      "vegetable oil"
      ]
     },
     {
@@ -48112,14 +48169,18 @@
    ],
    "dessert": [
     {
-     "name": "Miller's planet blue jelly",
-     "scene": "the water planet with the giant waves",
-     "method": "Blue jelly set in tall glasses at an angle, topped with whipped vanilla cream piled high like a wave, finished with crushed shortbread.",
+     "name": "Cooper farm buttermilk pie",
+     "scene": "the corn farm before Cooper leaves",
+     "method": "Sweet, custardy buttermilk pie with nutmeg, the simplest farmhouse dessert there is. Whisk 3 eggs, 250g sugar, 60g melted butter, 2 tbsp flour, 250ml buttermilk, vanilla and nutmeg.",
      "shop": [
-      "blue jelly crystals",
-      "thickened cream",
-      "vanilla bean paste",
-      "shortbread"
+      "sweet shortcrust pastry",
+      "eggs",
+      "caster sugar",
+      "butter",
+      "plain flour",
+      "buttermilk",
+      "vanilla extract",
+      "nutmeg"
      ]
     }
    ],
@@ -48323,15 +48384,12 @@
    ],
    "drink": [
     {
-     "name": "Houston iced tea",
-     "scene": "mission control in Houston",
-     "method": "Black tea brewed strong, sweetened while hot, cooled and poured over ice with lemon slices and mint in tall glasses.",
+     "name": "Mission control orange fizz",
+     "scene": "Houston, do you copy",
+     "method": "Freshly squeezed orange juice topped with sparkling water, served very cold. Squeeze 8 oranges into a jug and chill.",
      "shop": [
-      "black tea",
-      "caster sugar",
-      "lemons",
-      "mint",
-      "ice"
+      "oranges",
+      "sparkling water"
      ]
     }
    ],
@@ -48829,16 +48887,17 @@
      ]
     },
     {
-     "name": "Paris victory steak frites",
-     "scene": "the final run to the Louvre in Paris",
-     "method": "Sirloin steaks seared in a hot pan, rested, sliced over thin fries with a béarnaise of egg yolk, butter, tarragon and white wine vinegar.",
+     "name": "Normandy chicken with cider and cream",
+     "scene": "the beach landing, again and again",
+     "method": "Chicken thighs browned and braised in apple cider with mushrooms and cream. Brown 1kg chicken thighs, then soften 2 shallots and 200g mushrooms.",
      "shop": [
-      "sirloin steak",
-      "potatoes",
-      "eggs",
-      "butter",
-      "tarragon",
-      "white wine vinegar"
+      "chicken thighs",
+      "shallots",
+      "mushrooms",
+      "apple cider",
+      "thickened cream",
+      "parsley",
+      "baguette"
      ]
     }
    ],
@@ -49005,16 +49064,17 @@
      ]
     },
     {
-     "name": "Village pub sausage rolls",
-     "scene": "Amanda and Graham at the local pub",
-     "method": "Pork mince with onion and sage rolled in puff pastry, egg washed and baked at 200C for 25 minutes, cut into bites with English mustard.",
+     "name": "Rosehill Cottage Welsh rarebit",
+     "scene": "Iris's cottage in Surrey",
+     "method": "Toast topped with a cheddar, mustard and ale sauce, grilled until bubbling and brown. Melt 20g butter, stir in 1 tbsp flour and 80ml ale, then add 200g grated cheddar, 1 tsp mustard and a dash of Worcestershire until thick.",
      "shop": [
-      "pork mince",
-      "brown onions",
-      "sage",
-      "puff pastry",
-      "eggs",
-      "English mustard"
+      "butter",
+      "plain flour",
+      "ale",
+      "vintage cheddar",
+      "English mustard",
+      "Worcestershire sauce",
+      "sourdough"
      ]
     },
     {
@@ -49189,14 +49249,13 @@
    ],
    "drink": [
     {
-     "name": "Frozen island hot chocolate",
-     "scene": "the freezing winter in Smeerensburg",
-     "method": "Dark chocolate melted into hot milk with a pinch of cinnamon, whisked frothy and topped with marshmallows.",
+     "name": "Márgu's lingonberry cordial",
+     "scene": "the Sámi girl who wins everyone over",
+     "method": "Tart red lingonberry cordial warmed with a cinnamon stick, or poured cold over ice. Simmer 300g frozen lingonberries or cranberries with 150g sugar and 500ml water for 10 minutes, mash and strain.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "ground cinnamon",
-      "marshmallows"
+      "frozen cranberries",
+      "caster sugar",
+      "cinnamon stick"
      ]
     }
    ],
@@ -49685,16 +49744,20 @@
    ],
    "mains": [
     {
-     "name": "Penderghast family dinner",
-     "scene": "Olive's easy-going parents at the dinner table",
-     "method": "Roast chicken thighs with lemon, garlic and rosemary, served with roasted sweet potato, a crisp green salad and plenty of family chat.",
+     "name": "Penderghast takeaway pad thai",
+     "scene": "Olive's parents, endlessly calm",
+     "method": "Rice noodles fried with egg, tofu, tamarind and fish sauce, topped with peanuts and lime.",
      "shop": [
-      "chicken thighs",
-      "lemons",
-      "garlic",
-      "rosemary",
-      "sweet potatoes",
-      "mixed salad leaves"
+      "flat rice noodles",
+      "firm tofu",
+      "garlic cloves",
+      "eggs",
+      "tamarind paste",
+      "fish sauce",
+      "brown sugar",
+      "bean sprouts",
+      "roasted peanuts",
+      "lime"
      ]
     },
     {
@@ -50033,16 +50096,14 @@
    ],
    "dessert": [
     {
-     "name": "Prom night punch cake",
-     "scene": "the prom at the grain mill",
-     "method": "Vanilla sponge baked at 175C for 30 minutes, soaked with pineapple juice, topped with whipped cream and pineapple, sliced into squares.",
+     "name": "Church social caramel popcorn balls",
+     "scene": "Bomont's Sunday social",
+     "method": "Popcorn bound in sticky caramel and shaped into balls, wrapped in paper. Pop 100g popcorn kernels.",
      "shop": [
-      "self-raising flour",
-      "butter",
-      "eggs",
-      "caster sugar",
-      "pineapple juice",
-      "thickened cream"
+      "popcorn kernels",
+      "brown sugar",
+      "golden syrup",
+      "butter"
      ]
     }
    ],
@@ -50427,16 +50488,17 @@
    ],
    "mains": [
     {
-     "name": "Foster family dinner",
-     "scene": "Jesse settling in with Glen and Annie",
-     "method": "Chicken thighs roasted at 200C with lemon, garlic and potatoes, with buttered peas and a pan gravy.",
+     "name": "Glen's Dungeness crab pasta",
+     "scene": "Pacific Northwest, out by the water",
+     "method": "Linguine tossed with crab, garlic, chilli, lemon and parsley in olive oil. Cook 400g linguine.",
      "shop": [
-      "chicken thighs",
-      "lemons",
-      "garlic",
-      "potatoes",
-      "frozen peas",
-      "chicken stock"
+      "linguine",
+      "garlic cloves",
+      "red chilli",
+      "extra virgin olive oil",
+      "crab meat",
+      "lemon",
+      "parsley"
      ]
     },
     {
@@ -50661,16 +50723,16 @@
    ],
    "dessert": [
     {
-     "name": "Snowy mountain apple crumble",
-     "scene": "the climb through the snowy mountains",
-     "method": "Apples cooked with butter, sugar and cinnamon under an oat crumble, baked at 180C for 35 minutes, with custard.",
+     "name": "Nockmaar castle blackberry tart",
+     "scene": "Queen Bavmorda's castle at Nockmaar",
+     "method": "Short pastry filled with blackberries set in almond cream and baked until bubbling. Line a 23cm tin with sweet shortcrust and chill.",
      "shop": [
-      "green apples",
+      "sweet shortcrust pastry",
       "butter",
-      "brown sugar",
-      "ground cinnamon",
-      "rolled oats",
-      "custard"
+      "caster sugar",
+      "eggs",
+      "almond meal",
+      "frozen blackberries"
      ]
     }
    ],
@@ -50949,16 +51011,19 @@
    ],
    "mains": [
     {
-     "name": "Ohio pot roast",
-     "scene": "the family home in small-town Ohio",
-     "method": "Beef chuck browned and braised at 160C for 3 hours with onion, carrot, celery and stock, potatoes added for the last hour.",
+     "name": "Urbania Cincinnati chilli spaghetti",
+     "scene": "Ohio small-town game night",
+     "method": "Cincinnati-style spiced beef chilli over spaghetti, piled with cheddar and onion. Brown 600g beef mince with an onion, add 2 tsp cumin, 1 tsp cinnamon, 1 tbsp chilli powder, 2 tbsp cocoa and 400g tomatoes and simmer 40 minutes.",
      "shop": [
-      "beef chuck",
-      "brown onions",
-      "carrots",
-      "celery",
-      "beef stock",
-      "potatoes"
+      "beef mince",
+      "onions",
+      "ground cumin",
+      "ground cinnamon",
+      "chilli powder",
+      "cocoa",
+      "diced tomatoes",
+      "spaghetti",
+      "cheddar"
      ]
     },
     {
@@ -51460,16 +51525,14 @@
      ]
     },
     {
-     "name": "Brain the dog's sausage rolls",
-     "scene": "Penny's smart dog Brain",
-     "method": "Pork mince with onion and sage rolled in puff pastry, egg washed and baked at 200C for 25 minutes, cut into bites.",
+     "name": "Go-go gadget pizza pinwheels",
+     "scene": "Gadget's arms do the rolling",
+     "method": "Puff pastry rolled with tomato, ham and melted cheese and sliced into swirls. Spread 2 sheets puff pastry with 4 tbsp tomato paste, scatter with 150g chopped ham and 150g grated mozzarella and roll up.",
      "shop": [
-      "pork mince",
-      "brown onions",
-      "sage",
       "puff pastry",
-      "eggs",
-      "tomato sauce"
+      "tomato paste",
+      "leg ham",
+      "mozzarella"
      ]
     }
    ],
@@ -52021,16 +52084,17 @@
      ]
     },
     {
-     "name": "Owen and Beru's homestead stew",
-     "scene": "the Lars homestead on Tatooine at the end",
-     "method": "Lamb shoulder braised 3 hours with cumin, coriander, tomato and chickpeas, served with couscous and flatbread.",
+     "name": "Coruscant opera house roast duck",
+     "scene": "Palpatine's box at the opera",
+     "method": "Crisp roast duck with an orange and star anise glaze, sliced over rice. Prick a 2kg duck all over, rub with salt and five-spice and roast at 180C for 1 hour 45 minutes.",
      "shop": [
-      "lamb shoulder",
-      "ground cumin",
-      "ground coriander",
-      "crushed tomatoes",
-      "chickpeas",
-      "couscous"
+      "duck",
+      "five-spice powder",
+      "oranges",
+      "honey",
+      "soy sauce",
+      "star anise",
+      "jasmine rice"
      ]
     }
    ],
@@ -52117,16 +52181,19 @@
    ],
    "mains": [
     {
-     "name": "Eadu rainy night stew",
-     "scene": "the stormy night on Eadu",
-     "method": "Beef chuck browned and simmered 3 hours in stout with onions, carrots and thyme, ladled over buttery mash.",
+     "name": "Jedha spiced lamb pilaf",
+     "scene": "the holy city of Jedha",
+     "method": "Rice cooked with spiced lamb, carrots, raisins and almonds, piled on a platter. Brown 600g diced lamb, add an onion, 2 carrots in strips, 1 tsp cumin and 1 tsp cinnamon.",
      "shop": [
-      "beef chuck",
-      "stout",
-      "brown onions",
+      "diced lamb",
+      "onion",
       "carrots",
-      "thyme",
-      "potatoes"
+      "ground cumin",
+      "ground cinnamon",
+      "basmati rice",
+      "chicken stock",
+      "raisins",
+      "flaked almonds"
      ]
     },
     {
@@ -52223,16 +52290,17 @@
    ],
    "mains": [
     {
-     "name": "Vandor train heist stew",
-     "scene": "the snowy train heist on Vandor",
-     "method": "Beef chuck braised 3 hours with onion, paprika, carrots and potatoes until thick, served in bowls with crusty bread.",
+     "name": "Vandor lodge roast pork knuckle",
+     "scene": "the snowy mountain train job",
+     "method": "Crackling pork knuckles roasted slowly with caraway, served with sauerkraut and mustard. Simmer 2 pork knuckles with an onion, bay and caraway for 1.5 hours.",
      "shop": [
-      "beef chuck",
-      "brown onions",
-      "sweet paprika",
-      "carrots",
-      "potatoes",
-      "crusty bread"
+      "pork knuckles",
+      "onion",
+      "bay leaves",
+      "caraway seeds",
+      "sauerkraut",
+      "wholegrain mustard",
+      "potatoes"
      ]
     },
     {
@@ -52251,14 +52319,14 @@
    ],
    "dessert": [
     {
-     "name": "Kessel Run blue jelly",
-     "scene": "the blue glow of hyperspace on the Kessel Run",
-     "method": "Blue jelly set in glasses with lemonade fizz, topped with whipped cream and crushed meringue.",
+     "name": "Coaxium crackle bark",
+     "scene": "the fuel they're stealing is unstable",
+     "method": "Dark chocolate bark scattered with popping candy, freeze-dried raspberries and sea salt. Melt 300g dark chocolate and spread thin on a lined tray.",
      "shop": [
-      "blue jelly crystals",
-      "lemonade",
-      "thickened cream",
-      "meringue nests"
+      "dark chocolate",
+      "popping candy",
+      "freeze-dried raspberries",
+      "sea salt flakes"
      ]
     }
    ],
@@ -52892,16 +52960,14 @@
    ],
    "dessert": [
     {
-     "name": "Archimedes honey cake",
-     "scene": "the ancient Greek inventor Archimedes",
-     "method": "Walnut and honey cake baked at 175C for 40 minutes, soaked in a hot honey and orange syrup, served with Greek yoghurt.",
+     "name": "Syracuse almond granita",
+     "scene": "Sicily, where Archimedes is buried",
+     "method": "Icy Sicilian almond milk granita, scraped into glasses and eaten with brioche. Blend 200g ground almonds with 800ml water and 150g sugar, stand 30 minutes and strain well.",
      "shop": [
-      "walnuts",
-      "self-raising flour",
-      "honey",
-      "oranges",
-      "eggs",
-      "Greek yoghurt"
+      "ground almonds",
+      "caster sugar",
+      "almond extract",
+      "brioche buns"
      ]
     }
    ],
@@ -53318,16 +53384,13 @@
    ],
    "dessert": [
     {
-     "name": "Volcano lava cakes",
-     "scene": "lava pouring down the island",
-     "method": "Dark chocolate fondants baked at 200C for 10 minutes so the middle stays molten, served with raspberry coulis.",
+     "name": "Owen's campfire banana boats",
+     "scene": "Owen's cabin before the island trip",
+     "method": "Bananas split in their skins, stuffed with chocolate and marshmallow and baked in foil. Slit 4 bananas along one side, open slightly and stuff with 100g chopped chocolate and 50g mini marshmallows.",
      "shop": [
-      "dark chocolate",
-      "butter",
-      "eggs",
-      "caster sugar",
-      "plain flour",
-      "raspberries"
+      "bananas",
+      "milk chocolate",
+      "mini marshmallows"
      ]
     }
    ],
@@ -53382,15 +53445,14 @@
      ]
     },
     {
-     "name": "Eric's survival trail mix",
-     "scene": "Eric surviving alone on the island for weeks",
-     "method": "Almonds and cashews roasted at 180C for 10 minutes, cooled and mixed with dried mango, banana chips and dark chocolate chips, scooped into little paper bags for the hike.",
+     "name": "Isla Sorna tostones",
+     "scene": "Costa Rican fried plantain",
+     "method": "Green plantains fried, smashed flat and fried again until crisp, with garlic lime salt. Peel 3 green plantains and cut into 3cm pieces.",
      "shop": [
-      "almonds",
-      "cashews",
-      "dried mango",
-      "banana chips",
-      "dark chocolate chips"
+      "green plantains",
+      "garlic cloves",
+      "lime",
+      "vegetable oil"
      ]
     }
    ],
@@ -53544,16 +53606,15 @@
    ],
    "drink": [
     {
-     "name": "Jack's rum punch",
-     "scene": "Jack and his love of rum",
-     "method": "Dark rum shaken with pineapple, orange and lime juice and a dash of grenadine, poured over ice.",
+     "name": "Tia Dalma's sorrel brew",
+     "scene": "the swamp shack up the river",
+     "method": "Deep red Caribbean hibiscus drink brewed with ginger, cloves and orange peel, served over ice.",
      "shop": [
-      "dark rum",
-      "pineapple juice",
-      "orange juice",
-      "limes",
-      "grenadine",
-      "ice"
+      "hibiscus flowers",
+      "ginger",
+      "cloves",
+      "orange",
+      "caster sugar"
      ]
     }
    ],
@@ -53610,16 +53671,19 @@
    ],
    "mains": [
     {
-     "name": "Shipwreck Cove pirate stew",
-     "scene": "the pirate lords meeting in Shipwreck Cove",
-     "method": "Beef chuck braised 3 hours with dark rum, molasses, onion and allspice, served with buttered bread.",
+     "name": "Singapore chilli crab",
+     "scene": "Sao Feng's Singapore",
+     "method": "Crab cooked in a sticky sweet chilli tomato sauce with egg ribbons, eaten with bread to mop up.",
      "shop": [
-      "beef chuck",
-      "dark rum",
-      "molasses",
-      "brown onions",
-      "allspice",
-      "crusty bread"
+      "blue swimmer crabs",
+      "garlic cloves",
+      "ginger",
+      "red chillies",
+      "tomato sauce",
+      "sweet chilli sauce",
+      "soy sauce",
+      "eggs",
+      "baguette"
      ]
     },
     {
@@ -53653,16 +53717,15 @@
    ],
    "drink": [
     {
-     "name": "Captain's rum punch",
-     "scene": "raising a glass to the Brethren",
-     "method": "Dark rum, lime juice, sugar syrup and a dash of bitters over ice, topped with grated nutmeg.",
+     "name": "Sao Feng's Singapore sling",
+     "scene": "the Singapore bathhouse meeting",
+     "method": "Gin, cherry liqueur, pineapple and lime with a dash of grenadine, tall and pink. Shake 30ml gin, 15ml cherry liqueur, 90ml pineapple juice, 15ml lime juice and a dash of grenadine with ice.",
      "shop": [
-      "dark rum",
+      "gin",
+      "cherry liqueur",
+      "pineapple juice",
       "limes",
-      "caster sugar",
-      "aromatic bitters",
-      "nutmeg",
-      "ice"
+      "grenadine syrup"
      ]
     }
    ],
@@ -53747,16 +53810,12 @@
    ],
    "dessert": [
     {
-     "name": "Benjamin Franklin apple pie",
-     "scene": "Ben Franklin and his clever spectacles",
-     "method": "Apples cooked with butter, sugar and cinnamon, baked in shortcrust with a lattice top at 190C for 45 minutes.",
+     "name": "Philly lemon water ice",
+     "scene": "Philadelphia street treat while the clues come together",
+     "method": "Smooth, icy lemon water ice scraped into cups, the Philadelphia corner-stand favourite. Boil 750ml water with 250g sugar until dissolved and cool.",
      "shop": [
-      "green apples",
-      "butter",
-      "brown sugar",
-      "ground cinnamon",
-      "shortcrust pastry",
-      "vanilla ice cream"
+      "caster sugar",
+      "lemons"
      ]
     }
    ],
@@ -54081,14 +54140,13 @@
    ],
    "drink": [
     {
-     "name": "Extremis hot chocolate",
-     "scene": "the glowing orange Extremis soldiers",
-     "method": "Dark chocolate melted into hot milk with a pinch of chilli and orange zest, whisked frothy.",
+     "name": "Rose Hill malted milkshakes",
+     "scene": "Harley's Tennessee town, snowed in at Christmas",
+     "method": "Old-fashioned chocolate malted milkshakes, thick enough to stand a straw in. Blend 1L chocolate ice cream with 500ml cold milk and 6 tbsp malted milk powder until thick and smooth.",
      "shop": [
-      "dark chocolate",
+      "chocolate ice cream",
       "full cream milk",
-      "chilli flakes",
-      "oranges"
+      "malted milk powder"
      ]
     }
    ],
@@ -54173,16 +54231,14 @@
    ],
    "dessert": [
     {
-     "name": "Green apple crumble",
-     "scene": "Bruce turning green",
-     "method": "Green apples cooked with butter, sugar and lime under an oat crumble, baked at 180C for 35 minutes, with custard.",
+     "name": "Rocinha brigadeiros",
+     "scene": "Bruce Banner hiding out in Brazil",
+     "method": "Brazilian chocolate fudge balls rolled in chocolate sprinkles. Cook 395g condensed milk, 2 tbsp cocoa and 20g butter, stirring, for 10 minutes until it pulls from the pan.",
      "shop": [
-      "green apples",
+      "sweetened condensed milk",
+      "cocoa",
       "butter",
-      "brown sugar",
-      "limes",
-      "rolled oats",
-      "custard"
+      "chocolate sprinkles"
      ]
     }
    ],
@@ -54277,16 +54333,16 @@
    ],
    "dessert": [
     {
-     "name": "Bifrost rainbow cake",
-     "scene": "the rainbow bridge to Asgard",
-     "method": "Vanilla sponge baked in six thin layers, each tinted a different colour, stacked with whipped cream.",
+     "name": "Puente Antiguo diner pancake stack",
+     "scene": "Thor's first breakfast on Earth",
+     "method": "A tall stack of fluffy buttermilk pancakes with butter and maple syrup. Whisk 300g self-raising flour, 2 tbsp sugar, 2 eggs and 400ml buttermilk into a thick batter.",
      "shop": [
       "self-raising flour",
-      "butter",
-      "eggs",
       "caster sugar",
-      "food colouring",
-      "thickened cream"
+      "eggs",
+      "buttermilk",
+      "butter",
+      "maple syrup"
      ]
     }
    ],
@@ -54489,16 +54545,17 @@
    ],
    "dessert": [
     {
-     "name": "Rainbow thunder cake",
-     "scene": "the rainbow bridge and the thunder",
-     "method": "Six vanilla sponge layers tinted different colours, stacked with whipped cream and finished with a cloud of meringue.",
+     "name": "Omnipotence City baklava",
+     "scene": "Zeus's golden hall",
+     "method": "Layers of buttered filo and nuts soaked in honey syrup, cut into diamonds. Layer 375g filo brushed with 200g melted butter with 300g chopped walnuts and pistachios mixed with cinnamon.",
      "shop": [
-      "self-raising flour",
+      "filo pastry",
       "butter",
-      "eggs",
-      "caster sugar",
-      "food colouring",
-      "thickened cream"
+      "walnuts",
+      "pistachios",
+      "ground cinnamon",
+      "honey",
+      "lemon"
      ]
     }
    ],
@@ -54541,15 +54598,15 @@
      ]
     },
     {
-     "name": "1940s devilled eggs",
-     "scene": "the Captain America exhibit at the Smithsonian",
-     "method": "Halved boiled eggs filled with mustard mayonnaise yolks and dusted with paprika, wartime party food straight from Steve's era.",
+     "name": "Brooklyn bagel bites",
+     "scene": "Steve's still a Brooklyn kid",
+     "method": "Mini bagels toasted and topped with cream cheese, smoked salmon, red onion and capers. Split and toast 12 mini bagels.",
      "shop": [
-      "eggs",
-      "whole egg mayonnaise",
-      "Dijon mustard",
-      "sweet paprika",
-      "chives"
+      "mini bagels",
+      "cream cheese",
+      "smoked salmon",
+      "red onion",
+      "capers"
      ]
     },
     {
@@ -54611,14 +54668,13 @@
    ],
    "drink": [
     {
-     "name": "Winter Soldier iced coffee",
-     "scene": "the cold, silent Winter Soldier",
-     "method": "Cold brew coffee poured over ice with milk and a little vanilla syrup.",
+     "name": "Smithsonian cherry phosphate",
+     "scene": "Steve visits his own museum exhibit",
+     "method": "An old soda fountain drink: cherry syrup, a splash of lemon and fizzing soda water.",
      "shop": [
-      "ground coffee",
-      "full cream milk",
-      "vanilla syrup",
-      "ice"
+      "maraschino cherries",
+      "lemon",
+      "soda water"
      ]
     }
    ],
@@ -54934,15 +54990,13 @@
    ],
    "drink": [
     {
-     "name": "Vibranium punch",
-     "scene": "the vibranium of Wakanda",
-     "method": "Pineapple and passionfruit juice with a splash of grenadine and soda water over ice.",
+     "name": "Wakanda ginger pineapple juice",
+     "scene": "the battle in Wakanda",
+     "method": "Fresh pineapple blended with ginger and lime, strained and served very cold. Blend 1 peeled pineapple with a knob of ginger, the juice of 2 limes and 500ml cold water.",
      "shop": [
-      "pineapple juice",
-      "passionfruit",
-      "grenadine",
-      "soda water",
-      "ice"
+      "pineapple",
+      "ginger",
+      "limes"
      ]
     }
    ],
@@ -55040,15 +55094,13 @@
    ],
    "drink": [
     {
-     "name": "Awesome Mix iced tea",
-     "scene": "Peter's music player and the Awesome Mix",
-     "method": "Black tea brewed strong, cooled and poured over ice with peach slices and mint.",
+     "name": "Ego's garden nectar",
+     "scene": "Ego's planet looks like a giant garden",
+     "method": "Pear and passionfruit nectar with mint over crushed ice, sweet and floral. Mix 800ml pear nectar with the pulp of 4 passionfruit.",
      "shop": [
-      "black tea",
-      "peaches",
-      "mint",
-      "caster sugar",
-      "ice"
+      "pear nectar",
+      "passionfruit",
+      "mint"
      ]
     }
    ],
@@ -55347,13 +55399,14 @@
    ],
    "drink": [
     {
-     "name": "Queens egg cream",
-     "scene": "the corner stores of Queens",
-     "method": "Chocolate syrup and cold milk stirred, then topped with soda water to a foamy head.",
+     "name": "Decathlon team bubble tea",
+     "scene": "study session snacks with Ned and MJ",
+     "method": "Sweet milk tea over chewy tapioca pearls and ice, with fat straws. Cook 150g tapioca pearls as the pack says and soak in 3 tbsp brown sugar syrup.",
      "shop": [
-      "chocolate syrup",
-      "full cream milk",
-      "soda water"
+      "tapioca pearls",
+      "brown sugar",
+      "black tea bags",
+      "full cream milk"
      ]
     }
    ],
@@ -55491,15 +55544,19 @@
      ]
     },
     {
-     "name": "Sanctum spell garlic knots",
-     "scene": "Doctor Strange's spell going wrong",
-     "method": "Strips of pizza dough tied into knots, baked soft and tossed in garlic butter with parsley and parmesan.",
+     "name": "Ned's lola's lumpia",
+     "scene": "Ned's grandmother's cooking",
+     "method": "Crisp Filipino spring rolls filled with pork, carrot and garlic, with sweet chilli. Mix 400g pork mince with 1 grated carrot, 1 onion, 2 garlic cloves, 1 egg and 1 tbsp soy.",
      "shop": [
-      "pizza dough",
-      "butter",
+      "pork mince",
+      "carrot",
+      "onion",
       "garlic cloves",
-      "parsley",
-      "parmesan"
+      "egg",
+      "soy sauce",
+      "spring roll wrappers",
+      "sweet chilli sauce",
+      "vegetable oil"
      ]
     },
     {
@@ -55652,15 +55709,15 @@
    ],
    "dessert": [
     {
-     "name": "Hibiscus panna cotta",
-     "scene": "the royal purple worn in mourning for the king",
-     "method": "Dried hibiscus steeped in warm cream and sugar for 15 minutes, strained, set with gelatine in glasses overnight, topped with diced fresh mango.",
+     "name": "Talokan coconut flan",
+     "scene": "the underwater kingdom's sweet",
+     "method": "Silky baked coconut custard under a dark caramel, turned out and sliced. Melt 150g sugar to a deep caramel and pour into a 20cm dish.",
      "shop": [
-      "thickened cream",
-      "dried hibiscus flowers",
-      "gelatine sheets",
       "caster sugar",
-      "mangoes"
+      "coconut milk",
+      "sweetened condensed milk",
+      "eggs",
+      "vanilla extract"
      ]
     }
    ],
@@ -55865,13 +55922,12 @@
    ],
    "drink": [
     {
-     "name": "House arrest iced tea",
-     "scene": "Scott's last days of house arrest",
-     "method": "Strong black tea sweetened with honey, chilled and poured over ice with lemon slices.",
+     "name": "House arrest root beer floats",
+     "scene": "Scott's two years stuck at home",
+     "method": "Frosty mugs of root beer over vanilla ice cream, a proper house-arrest treat. Freeze 4 mugs for an hour.",
      "shop": [
-      "black tea bags",
-      "honey",
-      "lemons"
+      "vanilla ice cream",
+      "root beer"
      ]
     }
    ],
@@ -56170,16 +56226,13 @@
    ],
    "dessert": [
     {
-     "name": "Celestial golden cake",
-     "scene": "the giant golden Celestials",
-     "method": "Orange and almond cake baked at 170C for 50 minutes, glazed with honey and gold sprinkles.",
+     "name": "Babylon date and sesame halva",
+     "scene": "the Eternals' days in ancient Babylon",
+     "method": "Crumbly sesame halva swirled with chopped dates, cut into small squares. Heat 200g honey to 120C and quickly stir into 300g tahini with a pinch of salt.",
      "shop": [
-      "oranges",
-      "almond meal",
-      "eggs",
-      "caster sugar",
       "honey",
-      "sprinkles"
+      "tahini",
+      "medjool dates"
      ]
     }
    ],
@@ -56329,14 +56382,18 @@
      ]
     },
     {
-     "name": "Car yard hot dogs",
-     "scene": "Wade's job selling used cars",
-     "method": "Franks grilled and served in soft buns with mustard and fried onions, wrapped in paper.",
+     "name": "Chimichanga bites",
+     "scene": "Deadpool's favourite thing in any universe",
+     "method": "Mini fried burritos filled with spiced beef, beans and cheese, with sour cream and salsa.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "brown onions"
+      "beef mince",
+      "taco seasoning",
+      "refried beans",
+      "small flour tortillas",
+      "tasty cheese",
+      "sour cream",
+      "tomato salsa",
+      "vegetable oil"
      ]
     },
     {
@@ -56689,16 +56746,15 @@
    ],
    "dessert": [
     {
-     "name": "Dark chocolate symbiote cake",
-     "scene": "the symbiote craving chocolate",
-     "method": "Flourless dark chocolate cake baked at 170C for 35 minutes, with a glossy black ganache.",
+     "name": "Mrs Chen's mango pudding",
+     "scene": "the corner store downstairs",
+     "method": "Silky Hong Kong mango pudding with evaporated milk poured over. Dissolve 3 tsp gelatine in 100ml hot water.",
      "shop": [
-      "dark chocolate",
-      "butter",
-      "eggs",
+      "powdered gelatine",
+      "mangoes",
       "caster sugar",
-      "cocoa",
-      "thickened cream"
+      "thickened cream",
+      "evaporated milk"
      ]
     }
    ],
@@ -56843,31 +56899,29 @@
      ]
     },
     {
-     "name": "Oscorp lab green dip",
-     "scene": "the Oscorp labs where Dr Connors works",
-     "method": "Edamame, avocado, lime and mint blitzed bright green, served with cucumber sticks and pita crisps.",
+     "name": "Midtown Science pizza rolls",
+     "scene": "after-school snacks for a science kid",
+     "method": "Golden puff pastry rolls filled with pepperoni, tomato and melted mozzarella. Spread 2 sheets puff pastry with 4 tbsp pizza sauce, add 100g sliced pepperoni and 150g grated mozzarella and roll up tightly.",
      "shop": [
-      "frozen edamame",
-      "avocados",
-      "limes",
-      "mint",
-      "Lebanese cucumbers",
-      "pita bread"
+      "puff pastry",
+      "pizza sauce",
+      "pepperoni",
+      "mozzarella"
      ]
     }
    ],
    "mains": [
     {
-     "name": "Stacy family dinner",
-     "scene": "the dinner at Gwen's apartment where Peter argues with her dad",
-     "method": "Chicken breasts crumbed in parmesan and panko, pan-fried golden, with buttered green beans and roast potatoes, served family style for the whole table.",
+     "name": "Captain Stacy's brisket",
+     "scene": "the dinner where Peter meets Gwen's dad",
+     "method": "Slow-braised beef brisket in onions and red wine, sliced and served with roast carrots. Brown a 1.5kg brisket, then soften 3 sliced onions.",
      "shop": [
-      "chicken breasts",
-      "panko breadcrumbs",
-      "parmesan",
-      "eggs",
-      "green beans",
-      "potatoes"
+      "beef brisket",
+      "onions",
+      "red wine",
+      "beef stock",
+      "tomato paste",
+      "carrots"
      ]
     },
     {
@@ -56886,16 +56940,17 @@
    ],
    "dessert": [
     {
-     "name": "Lizard lime pie",
-     "scene": "Dr Connors turning into the Lizard",
-     "method": "Biscuit base pressed into a tin, filled with condensed milk whisked with lime juice, zest and yolks, baked at 160C for 15 minutes, chilled and topped with cream.",
+     "name": "Gwen's black and white cookies",
+     "scene": "New York bakery classic",
+     "method": "Big soft vanilla cookies iced half with white icing and half with chocolate. Beat 120g butter with 150g sugar, add 2 eggs, 150ml milk and vanilla, then 300g self-raising flour.",
      "shop": [
-      "plain sweet biscuits",
       "butter",
-      "condensed milk",
-      "limes",
+      "caster sugar",
       "eggs",
-      "thickened cream"
+      "full cream milk",
+      "self-raising flour",
+      "icing sugar",
+      "cocoa"
      ]
     }
    ],
@@ -57006,14 +57061,15 @@
    ],
    "drink": [
     {
-     "name": "Fantastic blue lemonade",
-     "scene": "the blue Fantastic Four suits",
-     "method": "Lemonade with a few drops of blue colouring and fresh lemon over crushed ice.",
+     "name": "Baxter Building blueberry smoothie",
+     "scene": "breakfast at the Baxter Building lab",
+     "method": "Thick blueberry, banana and yoghurt smoothie, deep purple-blue. Blend 300g frozen blueberries, 2 bananas, 300g Greek yoghurt, 400ml milk and 2 tbsp honey until smooth.",
      "shop": [
-      "lemonade",
-      "blue food colouring",
-      "lemons",
-      "ice"
+      "frozen blueberries",
+      "bananas",
+      "Greek yoghurt",
+      "full cream milk",
+      "honey"
      ]
     }
    ],
@@ -57178,16 +57234,17 @@
    ],
    "mains": [
     {
-     "name": "Prison pit stew",
-     "scene": "the pit prison Bruce has to climb out of",
-     "method": "Lamb shoulder braised with cumin, tomato and chickpeas for 3 hours until it falls apart, served with flatbread.",
+     "name": "Blake's Gotham meatball hero",
+     "scene": "John Blake, Gotham cop",
+     "method": "Meatballs simmered in tomato sauce in a long roll under melted provolone. Mix 500g beef mince, 1 egg, 40g breadcrumbs and 30g parmesan and roll 16 meatballs.",
      "shop": [
-      "lamb shoulder",
-      "ground cumin",
-      "crushed tomatoes",
-      "chickpeas",
-      "brown onions",
-      "flatbread"
+      "beef mince",
+      "egg",
+      "breadcrumbs",
+      "parmesan",
+      "passata",
+      "long rolls",
+      "provolone"
      ]
     },
     {
@@ -57418,16 +57475,16 @@
    ],
    "dessert": [
     {
-     "name": "Golden lasso honey cake",
-     "scene": "Diana's golden lasso",
-     "method": "Honey and walnut cake baked at 175C for 40 minutes, soaked in a hot honey and orange syrup, with Greek yoghurt.",
+     "name": "1984 food court cinnamon rolls",
+     "scene": "Diana's mall in DC",
+     "method": "Big soft cinnamon scrolls dripping with cream cheese icing, straight from the food court. Roll 500g sweet bread dough into a rectangle, spread with 80g soft butter mixed with 100g brown sugar and 2 tsp cinnamon, roll up and cut 8 scrolls.",
      "shop": [
-      "walnuts",
-      "self-raising flour",
-      "honey",
-      "oranges",
-      "eggs",
-      "Greek yoghurt"
+      "pizza dough",
+      "butter",
+      "brown sugar",
+      "ground cinnamon",
+      "cream cheese",
+      "icing sugar"
      ]
     }
    ],
@@ -57580,16 +57637,14 @@
      ]
     },
     {
-     "name": "Lightning bolt corn chips",
-     "scene": "Billy calling down the lightning",
-     "method": "Corn tortillas cut into lightning bolt shapes, fried until crisp, salted and served with a warm cheese dip.",
+     "name": "Freddy's sidekick tater tots",
+     "scene": "Freddy's the brains of the operation",
+     "method": "Crisp potato gems baked hot and tossed with garlic salt and parmesan, with tomato sauce.",
      "shop": [
-      "corn tortillas",
-      "vegetable oil",
-      "sea salt flakes",
-      "cheddar",
-      "full cream milk",
-      "jalapeños"
+      "frozen potato gems",
+      "garlic salt",
+      "parmesan",
+      "tomato sauce"
      ]
     },
     {
@@ -57608,16 +57663,19 @@
    ],
    "mains": [
     {
-     "name": "Foster family dinner",
-     "scene": "dinner around the busy Vasquez family table",
-     "method": "Spaghetti and meatballs in a slow tomato sauce, a big pot in the middle with garlic bread and parmesan.",
+     "name": "Rosa's arroz con pollo",
+     "scene": "Rosa and Victor's big table",
+     "method": "Saffron yellow rice baked with chicken, capsicum, peas and olives in one big pot. Brown 1kg chicken thighs, then soften 1 onion and 1 red capsicum.",
      "shop": [
-      "spaghetti",
-      "beef mince",
-      "crushed tomatoes",
-      "garlic",
-      "baguette",
-      "parmesan"
+      "chicken thighs",
+      "onion",
+      "red capsicum",
+      "long grain rice",
+      "saffron",
+      "smoked paprika",
+      "chicken stock",
+      "frozen peas",
+      "green olives"
      ]
     },
     {
@@ -57648,14 +57706,17 @@
    ],
    "drink": [
     {
-     "name": "Christmas hot chocolate",
-     "scene": "Christmas in Philadelphia",
-     "method": "Dark chocolate melted into hot milk, whisked frothy, topped with whipped cream and a candy cane.",
+     "name": "Foster family eggnog",
+     "scene": "the Vasquez house at Christmas",
+     "method": "Rich spiced eggnog with fresh nutmeg on top, with brandy on the side for the grown-ups.",
      "shop": [
-      "dark chocolate",
+      "eggs",
+      "caster sugar",
       "full cream milk",
       "thickened cream",
-      "candy canes"
+      "cinnamon stick",
+      "nutmeg",
+      "brandy"
      ]
     }
    ],
@@ -57739,16 +57800,14 @@
    ],
    "dessert": [
     {
-     "name": "Stairway red velvet cake",
-     "scene": "the long stairway where Arthur dances",
-     "method": "Red velvet layers with cream cheese frosting, baked at 175C for 30 minutes, stacked and sliced.",
+     "name": "Arthur's candy apples",
+     "scene": "Gotham's clown agency",
+     "method": "Shiny red toffee apples on sticks, crackling hard. Push sticks into 6 apples. Heat 400g sugar, 125ml water and 1 tbsp vinegar to 150C with red food colouring.",
      "shop": [
-      "plain flour",
-      "cocoa",
-      "buttermilk",
-      "red food colouring",
-      "cream cheese",
-      "icing sugar"
+      "red apples",
+      "caster sugar",
+      "white vinegar",
+      "red food colouring"
      ]
     }
    ],
@@ -57861,12 +57920,13 @@
    ],
    "drink": [
     {
-     "name": "Alfred's tea",
-     "scene": "Alfred's care for Bruce",
-     "method": "Strong English breakfast tea with milk in fine cups, or iced on a warm night.",
+     "name": "Iceberg Lounge espresso martini",
+     "scene": "the Penguin's club",
+     "method": "Vodka, coffee liqueur and fresh espresso shaken hard for a frothy top. Iced coffee for those not drinking.",
      "shop": [
-      "black tea",
-      "full cream milk"
+      "vodka",
+      "coffee liqueur",
+      "espresso coffee"
      ]
     }
    ],
@@ -58013,16 +58073,14 @@
      ]
     },
     {
-     "name": "Riddler green dip",
-     "scene": "the Riddler's green suit covered in question marks",
-     "method": "Baby spinach wilted and squeezed dry, stirred through cream cheese, sour cream, parmesan and garlic, baked at 190C for 20 minutes until bubbling, with corn chips.",
+     "name": "Riddler question mark pretzels",
+     "scene": "E. Nygma's calling card",
+     "method": "Soft pretzels twisted into question marks, salted and served with mustard. Roll 500g pizza dough into 8 ropes and shape each into a question mark with a dot.",
      "shop": [
-      "baby spinach",
-      "cream cheese",
-      "sour cream",
-      "parmesan",
-      "garlic",
-      "corn chips"
+      "pizza dough",
+      "bicarbonate of soda",
+      "sea salt flakes",
+      "American mustard"
      ]
     }
    ],
@@ -58595,12 +58653,11 @@
    ],
    "drink": [
     {
-     "name": "Green tea",
-     "scene": "tea in old Japan",
-     "method": "Green tea brewed gently, served in small cups, or iced with honey.",
+     "name": "Feudal Japan barley tea",
+     "scene": "the turtles travel back in time",
+     "method": "Toasty cold Japanese barley tea, brewed and chilled, the drink of a Japanese summer. Steep 4 barley tea bags in 1.5L cold water in the fridge for 3 hours, or brew in hot water and chill.",
      "shop": [
-      "green tea",
-      "honey"
+      "barley tea bags"
      ]
     }
    ],
@@ -58682,14 +58739,17 @@
    ],
    "dessert": [
     {
-     "name": "Black crow chocolate tart",
-     "scene": "the crow that guides Eric",
-     "method": "Dark chocolate ganache tart in a cocoa pastry shell, set overnight, finished with sea salt.",
+     "name": "Devil's Night blackberry crumble",
+     "scene": "rainy Detroit, Devil's Night",
+     "method": "Dark blackberries baked under an oat crumble, served hot with ice cream. Toss 750g blackberries with 80g sugar in a dish.",
      "shop": [
-      "dark chocolate",
-      "thickened cream",
-      "sweet shortcrust pastry",
-      "sea salt flakes"
+      "frozen blackberries",
+      "caster sugar",
+      "butter",
+      "plain flour",
+      "rolled oats",
+      "brown sugar",
+      "vanilla ice cream"
      ]
     }
    ],
@@ -58744,16 +58804,13 @@
      ]
     },
     {
-     "name": "Comic gallery cheese board",
-     "scene": "Elijah's comic book art gallery",
-     "method": "Aged cheddar, brie and blue cheese with crackers, grapes and walnuts, laid out like a gallery opening.",
+     "name": "Limited Edition purple potato chips",
+     "scene": "Elijah's gallery, everything purple",
+     "method": "Homemade purple sweet potato chips, fried thin and crisp and dusted with salt. Slice 2 purple sweet potatoes paper thin on a mandoline and soak in cold water 20 minutes.",
      "shop": [
-      "aged cheddar",
-      "brie",
-      "blue cheese",
-      "water crackers",
-      "green grapes",
-      "walnuts"
+      "purple sweet potatoes",
+      "vegetable oil",
+      "sea salt flakes"
      ]
     }
    ],
@@ -59282,16 +59339,19 @@
    ],
    "mains": [
     {
-     "name": "Sorcerer's apprentice stew",
-     "scene": "Mickey and the brooms carrying water",
-     "method": "Beef chuck simmered 3 hours with red wine, onion, carrots and thyme in a big pot, served with crusty bread.",
+     "name": "Pastoral Olympus moussaka",
+     "scene": "the Greek gods' afternoon on Olympus",
+     "method": "Layers of fried eggplant and spiced lamb sauce under a thick golden béchamel. Slice 2 eggplants and fry or grill until golden.",
      "shop": [
-      "beef chuck",
-      "red wine",
-      "brown onions",
-      "carrots",
-      "thyme",
-      "crusty bread"
+      "eggplants",
+      "lamb mince",
+      "onion",
+      "ground cinnamon",
+      "diced tomatoes",
+      "butter",
+      "plain flour",
+      "full cream milk",
+      "egg"
      ]
     },
     {
@@ -60602,13 +60662,12 @@
    ],
    "drink": [
     {
-     "name": "Paris hot chocolate",
-     "scene": "a cold night in Paris",
-     "method": "Dark chocolate melted into hot milk, whisked thick and served in small cups.",
+     "name": "Court of Miracles grenadine soda",
+     "scene": "a red syrup drink from the Paris streets",
+     "method": "French-style sirop à l'eau: grenadine poured into iced soda water so it settles red at the bottom.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "caster sugar"
+      "grenadine syrup",
+      "soda water"
      ]
     }
    ],
@@ -60759,16 +60818,12 @@
      ]
     },
     {
-     "name": "Pascal's green dip",
-     "scene": "Pascal the chameleon changing colour",
-     "method": "Avocado, thawed peas, lime juice and mint blitzed bright green with salt, served with cucumber sticks and crackers.",
+     "name": "Maximus's apple crisps",
+     "scene": "the palace horse who loves apples",
+     "method": "Thin apple slices baked low and slow until crisp, dusted with cinnamon. Slice 4 apples paper thin with a mandoline.",
      "shop": [
-      "avocados",
-      "frozen peas",
-      "limes",
-      "mint",
-      "Lebanese cucumbers",
-      "water crackers"
+      "red apples",
+      "ground cinnamon"
      ]
     }
    ],
@@ -60817,13 +60872,14 @@
    ],
    "drink": [
     {
-     "name": "Frying pan hot chocolate",
-     "scene": "Rapunzel's trusty frying pan",
-     "method": "Dark chocolate melted into hot milk with a pinch of cinnamon, whisked frothy, served in mugs.",
+     "name": "Corona lavender cooler",
+     "scene": "the kingdom's lantern night",
+     "method": "Lavender syrup, lemon and soda over ice, pale purple like Rapunzel's dress. Simmer 150g sugar, 150ml water and 1 tbsp dried culinary lavender for 5 minutes, cool and strain.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "ground cinnamon"
+      "caster sugar",
+      "culinary lavender",
+      "lemons",
+      "soda water"
      ]
     }
    ],
@@ -61133,14 +61189,12 @@
    ],
    "drink": [
     {
-     "name": "Dragon gem iced tea",
-     "scene": "the dragon gem",
-     "method": "Thai iced tea of strong black tea with sugar, poured over ice and topped with condensed milk.",
+     "name": "Talon market sugarcane juice",
+     "scene": "the night market in Talon",
+     "method": "Fresh sugarcane juice over ice with calamansi or lime, sold at every Southeast Asian market.",
      "shop": [
-      "black tea",
-      "caster sugar",
-      "condensed milk",
-      "ice"
+      "sugarcane juice",
+      "limes"
      ]
     }
    ],
@@ -61370,14 +61424,15 @@
    "serve_cue": "Serve the snacks when Mittens teaches Bolt to beg at the RV park.",
    "snacks": [
     {
-     "name": "RV park begging hot dogs",
-     "scene": "Mittens teaching Bolt to beg for food",
-     "method": "Franks grilled until split, in soft buns with mustard and fried onions, wrapped in paper.",
+     "name": "Mittens' tuna melt bites",
+     "scene": "the cat who taught Bolt to beg",
+     "method": "Little toasted tuna and cheese melts on English muffins, cut into quarters. Mix 2 drained 185g tins of tuna with 3 tbsp mayonnaise, a diced celery stick and pepper.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "brown onions"
+      "tinned tuna",
+      "mayonnaise",
+      "celery stick",
+      "English muffins",
+      "cheddar"
      ]
     },
     {
@@ -61499,16 +61554,16 @@
      ]
     },
     {
-     "name": "Chimney sweep sausage rolls",
-     "scene": "Bert and the chimney sweeps dancing on the rooftops",
-     "method": "Pork mince with onion and sage rolled in puff pastry, egg washed and baked at 200C for 25 minutes, with brown sauce.",
+     "name": "Mrs Brill's Cornish pasties",
+     "scene": "the Banks family cook",
+     "method": "Short pastry half-moons filled with beef, potato, swede and onion, crimped and baked golden. Mix 400g diced chuck steak with 250g diced potato, 150g swede, 1 onion and plenty of pepper.",
      "shop": [
-      "pork mince",
-      "brown onions",
-      "sage",
-      "puff pastry",
-      "eggs",
-      "brown sauce"
+      "chuck steak",
+      "potatoes",
+      "swede",
+      "onion",
+      "shortcrust pastry",
+      "egg"
      ]
     }
    ],
@@ -62212,16 +62267,14 @@
    "serve_cue": "Serve the snacks when Jack and the lamplighters light up the London streets.",
    "snacks": [
     {
-     "name": "Lamplighter sausage rolls",
-     "scene": "Jack and the lamplighters doing their rounds",
-     "method": "Pork mince with onion and sage rolled in puff pastry, egg washed and baked at 200C for 25 minutes, cut into bites with brown sauce.",
+     "name": "Jack's lamplighter crumpets",
+     "scene": "Jack's rounds at dawn",
+     "method": "Hot toasted crumpets with butter melting into the holes, and honey or golden syrup. Toast 8 crumpets until crisp on the edges.",
      "shop": [
-      "pork mince",
-      "brown onions",
-      "sage",
-      "puff pastry",
-      "eggs",
-      "brown sauce"
+      "crumpets",
+      "butter",
+      "honey",
+      "golden syrup"
      ]
     },
     {
@@ -63048,16 +63101,17 @@
    "serve_cue": "Serve dessert when Merida feeds her mum the witch's cake.",
    "snacks": [
     {
-     "name": "Highland games sausage rolls",
-     "scene": "the clans gathering for the Highland games",
-     "method": "Pork mince with onion and sage rolled in puff pastry, egg washed and baked at 200C for 25 minutes, with brown sauce.",
+     "name": "Clan DunBroch Scotch eggs",
+     "scene": "Highland games day",
+     "method": "Soft-boiled eggs wrapped in herby sausage meat, crumbed and fried until golden. Boil 6 eggs for 6 minutes, cool and peel.",
      "shop": [
-      "pork mince",
-      "brown onions",
-      "sage",
-      "puff pastry",
       "eggs",
-      "brown sauce"
+      "sausage meat",
+      "sage",
+      "plain flour",
+      "breadcrumbs",
+      "vegetable oil",
+      "wholegrain mustard"
      ]
     },
     {
@@ -63179,15 +63233,17 @@
      ]
     },
     {
-     "name": "Mike's one-eyed devilled eggs",
-     "scene": "Mike Wazowski, the one-eyed monster",
-     "method": "Eggs boiled 10 minutes, yolks mashed with mayo and mustard, piped back in, each topped with a black olive slice like an eye.",
+     "name": "Scare Games cheese fries",
+     "scene": "Oozma Kappa's study night",
+     "method": "Crisp oven fries under melted cheese sauce, spring onion and a few pickled jalapeños. Bake 1kg frozen chips at 220C until crisp.",
      "shop": [
-      "eggs",
-      "mayonnaise",
-      "Dijon mustard",
-      "black olives",
-      "smoked paprika"
+      "frozen chips",
+      "butter",
+      "plain flour",
+      "full cream milk",
+      "cheddar",
+      "spring onions",
+      "pickled jalapeños"
      ]
     }
    ],
@@ -63274,16 +63330,13 @@
      ]
     },
     {
-     "name": "Luigi's tyre onion rings",
-     "scene": "Luigi's tyre shop",
-     "method": "Thick onion rings in a lager batter, fried at 180C until crisp, stacked like tyres with aioli.",
+     "name": "Sally's Cozy Cone curly fries",
+     "scene": "the motel built from traffic cones",
+     "method": "Seasoned curly fries baked crisp and served in paper cones with aioli. Bake 1kg frozen curly fries at 220C for 20 minutes until crisp.",
      "shop": [
-      "brown onions",
-      "plain flour",
-      "lager",
-      "vegetable oil",
-      "mayonnaise",
-      "garlic"
+      "frozen curly fries",
+      "smoked paprika",
+      "garlic aioli"
      ]
     },
     {
@@ -63441,14 +63494,15 @@
    ],
    "drink": [
     {
-     "name": "Tokyo iced green tea",
-     "scene": "the World Grand Prix kicking off in Tokyo",
-     "method": "Green tea brewed gently, cooled, sweetened with honey and poured over ice with lemon.",
+     "name": "Porto Corsa limoncello spritz",
+     "scene": "the Italian Riviera race",
+     "method": "Limoncello, prosecco and soda over ice with lemon and mint. Lemon soda for kids. Fill 4 wine glasses with ice.",
      "shop": [
-      "green tea",
-      "honey",
-      "lemons",
-      "ice"
+      "limoncello",
+      "prosecco",
+      "soda water",
+      "lemon",
+      "mint"
      ]
     }
    ],
@@ -63881,26 +63935,28 @@
    "serve_cue": "Serve the mains when the brothers pull up at the Manticore's tavern.",
    "snacks": [
     {
-     "name": "Manticore's tavern onion rings",
-     "scene": "the old tavern turned family restaurant",
-     "method": "Thick brown onion rings dipped in a light soda water batter and fried until golden and crisp, tavern style.",
+     "name": "Manticore's tavern mozzarella sticks",
+     "scene": "the Manticore's family restaurant",
+     "method": "Crumbed mozzarella sticks fried until melting, with warm marinara for dunking. Cut 400g firm mozzarella into 16 sticks.",
      "shop": [
-      "brown onions",
-      "self-raising flour",
-      "soda water",
+      "mozzarella",
+      "plain flour",
+      "eggs",
+      "breadcrumbs",
+      "marinara sauce",
       "vegetable oil"
      ]
     },
     {
-     "name": "Quest map cheese board",
-     "scene": "Barley's fantasy quest card game",
-     "method": "Aged cheddar, brie, grapes and crackers laid out on a long board like a map, with quince paste marking the treasure.",
+     "name": "Burger Shire sliders",
+     "scene": "the fast food stop on the quest",
+     "method": "Little beef sliders with cheese, pickles and sauce on soft mini buns. Shape 500g beef mince into 12 small patties, season and cook on a hot pan for 2 minutes a side, adding a slice of cheese at the end.",
      "shop": [
-      "aged cheddar",
-      "brie",
-      "red grapes",
-      "water crackers",
-      "quince paste"
+      "beef mince",
+      "cheddar",
+      "slider buns",
+      "dill pickles",
+      "tomato sauce"
      ]
     },
     {
@@ -64051,16 +64107,16 @@
    ],
    "dessert": [
     {
-     "name": "Emotion jelly cups",
-     "scene": "all the emotions crowding headquarters",
-     "method": "Six jellies made one at a time and layered in clear cups, each set an hour before the next goes on: yellow, blue, red, green, purple, orange.",
+     "name": "Hockey camp brownies",
+     "scene": "Riley's weekend at hockey camp",
+     "method": "Fudgy chocolate brownies with a crackly top, cut into big squares. Melt 200g dark chocolate with 180g butter.",
      "shop": [
-      "lemon jelly crystals",
-      "blue jelly crystals",
-      "raspberry jelly crystals",
-      "lime jelly crystals",
-      "grape jelly crystals",
-      "orange jelly crystals"
+      "dark chocolate",
+      "butter",
+      "caster sugar",
+      "eggs",
+      "plain flour",
+      "cocoa"
      ]
     }
    ],
@@ -64236,16 +64292,18 @@
    ],
    "mains": [
     {
-     "name": "Grimmauld Place stew",
-     "scene": "Mrs Weasley feeding everyone at Grimmauld Place",
-     "method": "Beef chuck simmered 3 hours with onion, carrots and brown ale, topped with herb dumplings for the last 20 minutes, with crusty bread.",
+     "name": "Grimmauld Place steak and kidney pie",
+     "scene": "the Order meets at Number Twelve",
+     "method": "Rich steak and kidney in gravy under a golden puff pastry lid. Brown 800g diced chuck and 200g lamb kidney, add an onion, 2 tbsp flour, 500ml beef stock and Worcestershire and simmer 2 hours.",
      "shop": [
-      "beef chuck",
-      "brown onions",
-      "carrots",
-      "brown ale",
-      "self-raising flour",
-      "butter"
+      "chuck steak",
+      "lamb kidneys",
+      "onion",
+      "plain flour",
+      "beef stock",
+      "Worcestershire sauce",
+      "puff pastry",
+      "egg"
      ]
     },
     {
@@ -64368,15 +64426,16 @@
    ],
    "dessert": [
     {
-     "name": "Liquid luck panna cotta",
-     "scene": "Harry's little bottle of liquid luck",
-     "method": "Cream warmed with honey and set with gelatine in small glasses, topped with a golden passionfruit jelly and chilled 4 hours.",
+     "name": "Hogwarts treacle tart",
+     "scene": "Harry's favourite pudding",
+     "method": "Short pastry filled with golden syrup, lemon and breadcrumbs, baked until set and sticky. Blind bake a 23cm shortcrust case at 180C for 15 minutes.",
      "shop": [
-      "thickened cream",
-      "honey",
-      "gelatine sheets",
-      "passionfruit",
-      "caster sugar"
+      "sweet shortcrust pastry",
+      "golden syrup",
+      "lemon",
+      "white bread",
+      "egg",
+      "thickened cream"
      ]
     }
    ],
@@ -64447,16 +64506,16 @@
    ],
    "mains": [
     {
-     "name": "Tent in the woods stew",
-     "scene": "months of camping on the run in Hermione's tent",
-     "method": "Chicken thighs, potatoes, carrots and mushrooms simmered in stock with thyme for an hour, the kind of one-pot meal you make on the run, served with crusty bread.",
+     "name": "Hermione's campfire trout",
+     "scene": "living rough in the tent",
+     "method": "Whole trout cooked over the fire with lemon and herbs, with buttered potatoes. Stuff 4 cleaned trout with lemon slices, dill and butter, season and wrap in oiled foil.",
      "shop": [
-      "chicken thighs",
+      "trout",
+      "lemons",
+      "dill",
+      "butter",
       "potatoes",
-      "carrots",
-      "mushrooms",
-      "chicken stock",
-      "crusty bread"
+      "parsley"
      ]
     },
     {
@@ -64971,16 +65030,15 @@
    ],
    "mains": [
     {
-     "name": "Survivors' stew",
-     "scene": "feeding the refugees from Lake-town",
-     "method": "Beef chuck, barley, carrots and potatoes simmered 3 hours until thick, served in bowls with bread.",
+     "name": "Erebor roast beef and Yorkshire puddings",
+     "scene": "the dwarves take back their halls",
+     "method": "Roast beef sliced pink with puffed Yorkshire puddings and gravy. Roast a 1.5kg beef sirloin at 220C for 20 minutes, then 180C for 40 minutes and rest.",
      "shop": [
-      "beef chuck",
-      "pearl barley",
-      "carrots",
-      "potatoes",
-      "beef stock",
-      "crusty bread"
+      "beef sirloin",
+      "plain flour",
+      "eggs",
+      "full cream milk",
+      "beef stock"
      ]
     },
     {
@@ -65622,14 +65680,16 @@
    ],
    "dessert": [
     {
-     "name": "Dark Hold chocolate tart",
-     "scene": "the Darkhold book of spells",
-     "method": "Dark chocolate ganache tart in a cocoa pastry shell, set overnight, finished with sea salt.",
+     "name": "Kamar-Taj sel roti",
+     "scene": "Nepali sweet rice rings from Kamar-Taj",
+     "method": "Crisp Nepali sweet rice flour rings scented with cardamom, fried golden. Mix 300g rice flour, 100g sugar, 50g melted butter, 1 tsp ground cardamom and 250ml milk into a thick batter and rest 1 hour.",
      "shop": [
-      "dark chocolate",
-      "thickened cream",
-      "sweet shortcrust pastry",
-      "sea salt flakes"
+      "rice flour",
+      "caster sugar",
+      "butter",
+      "ground cardamom",
+      "full cream milk",
+      "vegetable oil"
      ]
     }
    ],
@@ -65746,13 +65806,13 @@
    ],
    "drink": [
     {
-     "name": "USO show egg cream",
-     "scene": "Steve touring the USO shows",
-     "method": "Chocolate syrup and cold milk stirred, topped with soda water to a foamy head.",
+     "name": "Brooklyn malted milk",
+     "scene": "Steve's old Brooklyn soda fountain",
+     "method": "Cold vanilla malted milk shaken frothy and served in tall glasses. Blend 1L cold milk with 4 scoops vanilla ice cream and 5 tbsp malted milk powder until frothy.",
      "shop": [
-      "chocolate syrup",
       "full cream milk",
-      "soda water"
+      "vanilla ice cream",
+      "malted milk powder"
      ]
     }
    ],
@@ -65955,14 +66015,14 @@
    ],
    "drink": [
     {
-     "name": "Louisiana sweet tea",
-     "scene": "Sam's family back home in Louisiana",
-     "method": "Strong black tea sweetened while hot, chilled and poured over ice with lemon and mint.",
+     "name": "Ponchatoula strawberry fizz",
+     "scene": "Sam's Louisiana strawberries",
+     "method": "Blitzed fresh strawberries and lemon topped with soda water over ice. Blitz 250g strawberries with 3 tbsp sugar and the juice of 1 lemon and strain.",
      "shop": [
-      "black tea bags",
+      "strawberries",
       "caster sugar",
       "lemon",
-      "mint"
+      "soda water"
      ]
     }
    ],
@@ -66019,16 +66079,17 @@
    ],
    "mains": [
     {
-     "name": "Martha's farmhouse pot roast",
-     "scene": "Martha Kent's kitchen",
-     "method": "Beef chuck braised at 160C for 3 hours with onion, carrot and potatoes, gravy from the pot.",
+     "name": "Metropolis gala beef Wellington",
+     "scene": "Lex's library gala",
+     "method": "Beef fillet wrapped in mushroom duxelles and puff pastry, baked golden and sliced thick. Sear a 1kg beef fillet all over and brush with mustard.",
      "shop": [
-      "beef chuck",
-      "brown onions",
-      "carrots",
-      "potatoes",
-      "beef stock",
-      "thyme"
+      "beef eye fillet",
+      "Dijon mustard",
+      "mushrooms",
+      "garlic cloves",
+      "prosciutto",
+      "puff pastry",
+      "egg"
      ]
     },
     {
@@ -66047,29 +66108,27 @@
    ],
    "dessert": [
     {
-     "name": "Peach cobbler",
-     "scene": "the jar of peach tea",
-     "method": "Peaches baked under a buttery cobbler topping at 180C for 40 minutes, with ice cream.",
+     "name": "Wayne gala chocolate soufflé",
+     "scene": "Gotham's money, Metropolis's party",
+     "method": "Hot dark chocolate soufflés risen high, served straight from the oven with cold cream. Butter and sugar 4 ramekins.",
      "shop": [
-      "peaches",
+      "dark chocolate",
+      "eggs",
       "caster sugar",
-      "self-raising flour",
       "butter",
-      "full cream milk",
-      "vanilla ice cream"
+      "thickened cream"
      ]
     }
    ],
    "drink": [
     {
-     "name": "Peach iced tea",
-     "scene": "the jar of peach tea Lex leaves at the hearing",
-     "method": "Black tea brewed and cooled, mixed with peach nectar and lemon, poured over ice.",
+     "name": "Lake house ginger beer",
+     "scene": "Bruce's glass house by the lake",
+     "method": "Spicy ginger beer over ice with lime and a few slices of fresh ginger. Fill 4 glasses with ice, add a few thin slices of fresh ginger and the juice of half a lime to each and top with 250ml cold ginger beer.",
      "shop": [
-      "black tea",
-      "peach nectar",
-      "lemons",
-      "ice"
+      "ginger beer",
+      "limes",
+      "ginger"
      ]
     }
    ],
@@ -66272,16 +66331,15 @@
    ],
    "drink": [
     {
-     "name": "Island rum punch",
-     "scene": "the hot nights on Corto Maltese",
-     "method": "Dark rum shaken with pineapple, orange and lime juice, poured over ice with a dash of grenadine.",
+     "name": "Corto Maltese mango batida",
+     "scene": "the island the squad lands on",
+     "method": "Blended mango, coconut milk and lime over ice, with cachaça or white rum for adults.",
      "shop": [
-      "dark rum",
-      "pineapple juice",
-      "orange juice",
+      "mangoes",
+      "coconut milk",
       "limes",
-      "grenadine",
-      "ice"
+      "caster sugar",
+      "white rum"
      ]
     }
    ],
@@ -66443,16 +66501,19 @@
    ],
    "mains": [
     {
-     "name": "Reyes family dinner",
-     "scene": "the loud Reyes family at the dinner table",
-     "method": "Chicken thighs braised with tomato, chipotle and onion, shredded into tortillas with rice and beans.",
+     "name": "Nana's pozole rojo",
+     "scene": "the Reyes family table",
+     "method": "Red chilli pork and hominy soup topped with cabbage, radish, oregano and lime. Simmer 1kg pork shoulder pieces in 2L water with onion and garlic for 2 hours.",
      "shop": [
-      "chicken thighs",
-      "crushed tomatoes",
-      "chipotle in adobo",
-      "brown onions",
-      "corn tortillas",
-      "long grain rice"
+      "pork shoulder",
+      "onion",
+      "garlic",
+      "guajillo chillies",
+      "tinned hominy",
+      "cabbage",
+      "radishes",
+      "oregano",
+      "limes"
      ]
     },
     {
@@ -66592,14 +66653,13 @@
    ],
    "drink": [
     {
-     "name": "X-Jet iced tea",
-     "scene": "the team flying out on the X-Jet",
-     "method": "Black tea brewed strong, sweetened while hot, cooled and poured over ice with lemon.",
+     "name": "Xavier's mansion apple spritzer",
+     "scene": "the school in Westchester",
+     "method": "Cloudy apple juice with soda water and thin apple slices, served cold. Fill 4 glasses with ice and thin apple slices.",
      "shop": [
-      "black tea",
-      "caster sugar",
-      "lemons",
-      "ice"
+      "cloudy apple juice",
+      "soda water",
+      "green apple"
      ]
     }
    ],
@@ -66916,16 +66976,15 @@
    "serve_cue": "Serve the mains when Megamind, disguised as Bernard, takes Roxanne out to dinner.",
    "snacks": [
     {
-     "name": "Evil lair blue corn chips",
-     "scene": "Megamind's big blue head and his evil lair",
-     "method": "Blue corn tortillas cut into wedges, fried at 180C until crisp, salted and served with a smoky chipotle salsa.",
+     "name": "Metro City quesadilla wedges",
+     "scene": "Metro City's best villain gets hungry too",
+     "method": "Crisp tortillas filled with cheese, chicken and capsicum, cut into wedges with salsa. Fill 4 tortillas with 200g grated cheese, 200g shredded cooked chicken and a diced capsicum, fold and cook in a dry pan for 3 minutes a side.",
      "shop": [
-      "blue corn tortillas",
-      "vegetable oil",
-      "sea salt flakes",
-      "chipotle in adobo",
-      "tomatoes",
-      "limes"
+      "large flour tortillas",
+      "tasty cheese",
+      "cooked chicken",
+      "red capsicum",
+      "tomato salsa"
      ]
     },
     {
@@ -66998,14 +67057,12 @@
    ],
    "drink": [
     {
-     "name": "Brainbot blue lemonade",
-     "scene": "the little brainbots buzzing around the lair",
-     "method": "Lemonade with a few drops of blue colouring and fresh lime, poured over crushed ice.",
+     "name": "Evil lair cola floats",
+     "scene": "villainy needs a sugar hit",
+     "method": "Cola poured over vanilla ice cream so it foams up brown and bubbly. Put 2 scoops vanilla ice cream in each of 4 tall glasses and slowly pour over 300ml cold cola.",
      "shop": [
-      "lemonade",
-      "blue food colouring",
-      "limes",
-      "ice"
+      "vanilla ice cream",
+      "cola"
      ]
     }
    ],
@@ -67158,16 +67215,18 @@
    ],
    "mains": [
     {
-     "name": "London fish and chips",
-     "scene": "the minions in 1968 London",
-     "method": "Flathead in a lager batter fried at 180C until crisp, with thick chips, mushy peas and tartare.",
+     "name": "Queen's coronation chicken",
+     "scene": "swinging London, 1968",
+     "method": "Cold chicken in a curried mayonnaise with apricot and sultanas, served on rice or soft rolls.",
      "shop": [
-      "flathead fillets",
-      "plain flour",
-      "lager",
-      "potatoes",
-      "frozen peas",
-      "tartare sauce"
+      "chicken breast",
+      "mayonnaise",
+      "Greek yoghurt",
+      "curry powder",
+      "apricot jam",
+      "sultanas",
+      "long grain rice",
+      "salad leaves"
      ]
     },
     {
@@ -67894,16 +67953,15 @@
      ]
     },
     {
-     "name": "Northern lights stew",
-     "scene": "the lights dancing across the northern sky",
-     "method": "Beef chuck braised with juniper, red wine, carrots and parsnips for 3 hours until it falls apart, served with crusty bread.",
+     "name": "Kenai's venison steaks with berry sauce",
+     "scene": "the hunt before Kenai becomes a bear",
+     "method": "Pan-seared venison steaks with a quick blueberry and red wine sauce. Sear 4 venison steaks in a hot pan for 3 minutes a side and rest.",
      "shop": [
-      "beef chuck",
-      "juniper berries",
+      "venison steaks",
       "red wine",
-      "carrots",
-      "parsnips",
-      "crusty bread"
+      "blueberries",
+      "brown sugar",
+      "potatoes"
      ]
     }
    ],
@@ -68409,16 +68467,20 @@
    ],
    "mains": [
     {
-     "name": "Blackbeard's ship stew",
-     "scene": "Blackbeard's ship, Queen Anne's Revenge",
-     "method": "Beef chuck browned and simmered 3 hours with dark rum, onion, carrots and allspice until thick, served with crusty bread.",
+     "name": "Queen Anne's Revenge paella",
+     "scene": "the Spanish are racing for the fountain too",
+     "method": "Saffron rice with chicken, chorizo, prawns and mussels, cooked in one wide pan. Brown 400g chicken thighs and 1 sliced chorizo, add an onion and capsicum, then 300g paella rice, saffron, paprika and 900ml stock.",
      "shop": [
-      "beef chuck",
-      "dark rum",
-      "brown onions",
-      "allspice",
-      "carrots",
-      "crusty bread"
+      "chicken thighs",
+      "chorizo",
+      "onion",
+      "red capsicum",
+      "paella rice",
+      "saffron",
+      "smoked paprika",
+      "chicken stock",
+      "green prawns",
+      "mussels"
      ]
     },
     {
@@ -68541,14 +68603,17 @@
    ],
    "dessert": [
     {
-     "name": "Trident chocolate tart",
-     "scene": "the Trident of Poseidon",
-     "method": "Dark chocolate melted into hot cream, poured into a baked sweet pastry shell, set overnight and finished with sea salt flakes.",
+     "name": "Saint Martin guava duff",
+     "scene": "Caribbean island pudding",
+     "method": "Soft rolled sponge filled with guava, steamed and served with a buttery rum sauce. Make a soft dough of 250g self-raising flour, 60g butter, 60g sugar and 150ml milk.",
      "shop": [
-      "dark chocolate",
-      "thickened cream",
-      "sweet shortcrust pastry",
-      "sea salt flakes"
+      "self-raising flour",
+      "butter",
+      "caster sugar",
+      "full cream milk",
+      "guava paste",
+      "icing sugar",
+      "dark rum"
      ]
     }
    ],
@@ -68658,14 +68723,14 @@
    ],
    "drink": [
     {
-     "name": "Blue and Beta lemonade",
-     "scene": "Blue and her baby Beta",
-     "method": "Lemonade with a few drops of blue colouring and lime over ice.",
+     "name": "Malta almond ruġġata",
+     "scene": "the Malta dinosaur market chase",
+     "method": "Chilled Maltese almond milk drink scented with vanilla and a hint of clove. Blend 200g almonds soaked overnight with 1L water, strain through a cloth and sweeten with 3 tbsp sugar, vanilla and a pinch of ground cloves.",
      "shop": [
-      "lemonade",
-      "blue food colouring",
-      "limes",
-      "ice"
+      "almonds",
+      "caster sugar",
+      "vanilla extract",
+      "ground cloves"
      ]
     }
    ],
@@ -68812,15 +68877,15 @@
      ]
     },
     {
-     "name": "Slimer's green dip",
-     "scene": "Slimer still haunting the firehouse",
-     "method": "Avocado, thawed peas, lime juice and mint blitzed bright green with salt, served with corn chips for scooping.",
+     "name": "Phoebe's chess club pigs in blankets",
+     "scene": "the youngest Ghostbuster's brainy snacks",
+     "method": "Little cocktail sausages wrapped in puff pastry and baked golden, with tomato sauce. Cut 2 sheets puff pastry into strips and wrap around 24 cocktail sausages.",
      "shop": [
-      "avocados",
-      "frozen peas",
-      "limes",
-      "mint",
-      "corn chips"
+      "puff pastry",
+      "cocktail sausages",
+      "egg",
+      "sesame seeds",
+      "tomato sauce"
      ]
     }
    ],
@@ -68866,14 +68931,13 @@
    ],
    "drink": [
     {
-     "name": "Frozen Empire hot chocolate",
-     "scene": "the city frozen solid",
-     "method": "Dark chocolate melted into hot milk, topped with whipped cream and mini marshmallows.",
+     "name": "Ectoplasm lime fizz",
+     "scene": "slimed, but in a glass",
+     "method": "Bright green lime cordial and soda over crushed ice with a scoop of lime sorbet slowly melting in.",
      "shop": [
-      "dark chocolate",
-      "full cream milk",
-      "thickened cream",
-      "marshmallows"
+      "lime cordial",
+      "soda water",
+      "lime sorbet"
      ]
     }
    ],
@@ -68927,16 +68991,19 @@
    ],
    "mains": [
     {
-     "name": "Paris bistro steak frites",
-     "scene": "the streets of Paris",
-     "method": "Sirloin steak seared and rested, with thin fries and a béarnaise of yolks, butter and tarragon.",
+     "name": "Paris bistro coq au vin",
+     "scene": "Paris in 1927, the night of the rally",
+     "method": "Chicken braised in red wine with bacon, mushrooms and little onions, served with mash. Brown 1.2kg chicken pieces and 150g bacon lardons.",
      "shop": [
-      "sirloin steak",
+      "chicken pieces",
+      "bacon lardons",
+      "pickling onions",
+      "mushrooms",
+      "red wine",
+      "chicken stock",
+      "thyme",
       "potatoes",
-      "eggs",
-      "butter",
-      "tarragon",
-      "white wine vinegar"
+      "butter"
      ]
     },
     {
@@ -69424,16 +69491,16 @@
      ]
     },
     {
-     "name": "Bumblebee yellow corn chips",
-     "scene": "Bumblebee, the yellow car",
-     "method": "Corn tortillas cut into wedges, fried at 180C until crisp, salted and served with a warm cheese and jalapeño dip.",
+     "name": "Mission City chicken nachos",
+     "scene": "the big fight downtown",
+     "method": "Corn chips loaded with shredded chicken, cheese, black beans and salsa, baked until melted. Spread 300g corn chips on a tray.",
      "shop": [
-      "corn tortillas",
-      "vegetable oil",
-      "cheddar",
-      "cream cheese",
-      "jalapeños",
-      "sea salt flakes"
+      "corn chips",
+      "cooked chicken",
+      "black beans",
+      "tasty cheese",
+      "tomato salsa",
+      "sour cream"
      ]
     },
     {
@@ -69495,14 +69562,14 @@
    ],
    "drink": [
     {
-     "name": "Energon blue lemonade",
-     "scene": "the glowing blue Energon",
-     "method": "Lemonade with a few drops of blue colouring and lime, poured over crushed ice.",
+     "name": "Motor oil chocolate shakes",
+     "scene": "Bumblebee runs on something",
+     "method": "Thick dark chocolate milkshakes, black and glossy like a fresh oil change. Blend 1L chocolate ice cream, 400ml milk and 3 tbsp cocoa until thick.",
      "shop": [
-      "lemonade",
-      "blue food colouring",
-      "limes",
-      "ice"
+      "chocolate ice cream",
+      "full cream milk",
+      "cocoa",
+      "chocolate topping"
      ]
     }
    ],
@@ -69584,13 +69651,15 @@
    ],
    "dessert": [
     {
-     "name": "Glowing blue jelly",
-     "scene": "the blue light of the programs",
-     "method": "Blue jelly made with lemonade, set in tall glasses for 3 hours, topped with whipped cream.",
+     "name": "End of Line Club neon cookies",
+     "scene": "Castor's club at the end of the line",
+     "method": "Crisp butter cookies iced in bright neon colours with sharp straight lines like the Grid.",
      "shop": [
-      "blue jelly crystals",
-      "lemonade",
-      "thickened cream"
+      "butter",
+      "icing sugar",
+      "egg",
+      "plain flour",
+      "neon food colouring"
      ]
     }
    ],
@@ -70358,27 +70427,32 @@
    "serve_cue": "Serve the mains when Ben takes Andie home to meet his family on Staten Island.",
    "snacks": [
     {
-     "name": "Knicks game hot dogs",
-     "scene": "Ben taking Andie to the basketball",
-     "method": "Franks grilled until split, in soft buns with mustard and fried onions, wrapped in paper.",
+     "name": "Composure office crostini",
+     "scene": "Andie's magazine deadline snacks",
+     "method": "Toasted baguette slices with whipped ricotta, roasted cherry tomatoes and a drizzle of honey. Slice a baguette, brush with oil and toast at 200C for 8 minutes.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "yellow mustard",
-      "brown onions"
+      "baguette",
+      "cherry tomatoes",
+      "ricotta",
+      "lemon",
+      "basil",
+      "honey"
      ]
     },
     {
-     "name": "Love fern green dip",
-     "scene": "the love fern Andie gives Ben",
-     "method": "Avocado, thawed peas, lime juice and mint blitzed bright green with salt, served with cucumber sticks and crackers.",
+     "name": "Staten Island arancini",
+     "scene": "Ben's family's kitchen",
+     "method": "Fried risotto balls with peas and ham, served with a little bowl of marinara. Make a firm risotto with 300g arborio rice and 1L stock, stir through 100g peas, 100g diced ham and 50g parmesan, then cool.",
      "shop": [
-      "avocados",
+      "arborio rice",
+      "chicken stock",
       "frozen peas",
-      "limes",
-      "mint",
-      "Lebanese cucumbers",
-      "water crackers"
+      "leg ham",
+      "parmesan",
+      "eggs",
+      "breadcrumbs",
+      "marinara sauce",
+      "vegetable oil"
      ]
     },
     {
@@ -72407,14 +72481,13 @@
    ],
    "drink": [
     {
-     "name": "Pink lemonade",
-     "scene": "the pink of the hatbox full of letters",
-     "method": "Fresh lemonade with crushed raspberries, poured over ice.",
+     "name": "Kitty's strawberry milk",
+     "scene": "Korean-style strawberry milk",
+     "method": "Mashed fresh strawberries and syrup at the bottom of the glass, topped with cold milk.",
      "shop": [
-      "lemons",
+      "strawberries",
       "caster sugar",
-      "raspberries",
-      "ice"
+      "full cream milk"
      ]
     }
    ],
@@ -72914,16 +72987,17 @@
    ],
    "dessert": [
     {
-     "name": "Southern peach cobbler",
-     "scene": "a hot Carolina summer",
-     "method": "Peaches tossed with sugar under a buttery cobbler topping, baked at 180C for 40 minutes, served warm with vanilla ice cream.",
+     "name": "Carolina banana pudding",
+     "scene": "Annie's church of baseball",
+     "method": "Layers of vanilla custard, sliced banana and biscuits under whipped cream, chilled overnight. Cook 750ml milk, 120g sugar, 50g cornflour and 4 egg yolks until thick, add vanilla and cool.",
      "shop": [
-      "peaches",
-      "caster sugar",
-      "self-raising flour",
-      "butter",
       "full cream milk",
-      "vanilla ice cream"
+      "caster sugar",
+      "cornflour",
+      "eggs",
+      "vanilla wafer biscuits",
+      "bananas",
+      "thickened cream"
      ]
     }
    ],
@@ -73015,16 +73089,18 @@
    ],
    "dessert": [
     {
-     "name": "Café apple pie",
-     "scene": "the café where Melvin eats every day",
-     "method": "Apples cooked with butter, sugar and cinnamon, baked in shortcrust with a lattice top at 190C for 45 minutes, with ice cream.",
+     "name": "Café banana cream pie",
+     "scene": "Carol's café, Melvin's usual table",
+     "method": "A crumb crust filled with vanilla custard and sliced banana, finished with a deep layer of whipped cream.",
      "shop": [
-      "green apples",
+      "plain sweet biscuits",
       "butter",
-      "brown sugar",
-      "ground cinnamon",
-      "shortcrust pastry",
-      "vanilla ice cream"
+      "full cream milk",
+      "eggs",
+      "caster sugar",
+      "cornflour",
+      "bananas",
+      "thickened cream"
      ]
     }
    ],
@@ -74797,15 +74873,13 @@
    "serve_cue": "Serve the cake when Kathy pops out of it at the party.",
    "snacks": [
     {
-     "name": "Premiere party prawn cocktail",
+     "name": "Monumental Pictures devils on horseback",
      "scene": "the 1927 premiere party",
-     "method": "Prawns poached and chilled, hung on glasses of shredded lettuce with a sharp tomato and horseradish sauce.",
+     "method": "Pitted prunes stuffed with almonds and wrapped in bacon, baked crisp and served on sticks.",
      "shop": [
-      "green prawns",
-      "iceberg lettuce",
-      "tomato sauce",
-      "horseradish",
-      "lemons"
+      "pitted prunes",
+      "almonds",
+      "bacon"
      ]
     },
     {
@@ -75413,15 +75487,14 @@
      ]
     },
     {
-     "name": "Birthday party devilled eggs",
-     "scene": "Harlan's 85th, before it all goes wrong",
-     "method": "Eggs boiled, yolks whipped with mayo, Dijon and a dash of hot sauce, piped back in and dusted with smoked paprika.",
+     "name": "Thrombey mansion gougères",
+     "scene": "Harlan's 85th, served on silver",
+     "method": "Little French cheese puffs made from choux pastry and gruyère, light, hollow and salty. Bring 250ml water and 100g butter to the boil, beat in 150g flour until it pulls away, then cool 5 minutes.",
      "shop": [
+      "butter",
+      "plain flour",
       "eggs",
-      "mayonnaise",
-      "Dijon mustard",
-      "hot sauce",
-      "smoked paprika"
+      "gruyère"
      ]
     },
     {
@@ -76795,11 +76868,14 @@
    ],
    "drink": [
     {
-     "name": "Jasmine tea",
-     "scene": "a calm pot before training",
-     "method": "Jasmine green tea brewed for 3 minutes in a pot and poured into small cups.",
+     "name": "Gongmen City plum juice",
+     "scene": "the city Shen took over",
+     "method": "Chilled Chinese sour plum drink with hawthorn and osmanthus, sweet, sour and smoky. Simmer 6 dried smoked plums, a few dried hawthorn slices and 1 tsp dried osmanthus in 1.5L water for 40 minutes.",
      "shop": [
-      "jasmine tea"
+      "smoked plums",
+      "hawthorn slices",
+      "osmanthus",
+      "rock sugar"
      ]
     }
    ],
@@ -76895,13 +76971,14 @@
    ],
    "drink": [
     {
-     "name": "Icy blue lemonade",
-     "scene": "the blue of the Antarctic ice",
-     "method": "Lemonade poured over crushed ice with a splash of blue sports cordial and a lemon slice.",
+     "name": "Gloria's strawberry krill shakes",
+     "scene": "penguins live on krill, and krill is pink",
+     "method": "Pink strawberry and vanilla milkshakes with a swirl of whipped cream. Blend 1L vanilla ice cream, 250g strawberries and 400ml milk until thick and pink.",
      "shop": [
-      "lemonade",
-      "blue cordial",
-      "lemons"
+      "vanilla ice cream",
+      "strawberries",
+      "full cream milk",
+      "whipped cream"
      ]
     }
    ],
@@ -77411,13 +77488,13 @@
    ],
    "drink": [
     {
-     "name": "Arizona sweet tea",
-     "scene": "a hot day in the desert",
-     "method": "Black tea brewed strong, sweetened and poured over ice with lemon.",
+     "name": "Rod's prickly pear cooler",
+     "scene": "Rod Tidwell's Arizona",
+     "method": "Bright pink prickly pear syrup with lime and soda over ice. Fill 4 glasses with ice.",
      "shop": [
-      "black tea",
-      "sugar",
-      "lemons"
+      "prickly pear syrup",
+      "limes",
+      "soda water"
      ]
     }
    ],
