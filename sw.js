@@ -1,7 +1,7 @@
 /* Movie Night Spinner offline worker.
    Page and scripts: network first, so updates show straight away, with the cached copy when offline.
-   Recipes, posters, fonts and libraries: cached on first use and served from the cache after that. */
-const VERSION = 'mns-v5';
+   Recipe files: network first too, so menu changes always arrive. Fonts and libraries: cached on first use. */
+const VERSION = 'mns-v6';
 const SHELL = ['./', 'index.html', 'movie-menus.js', 'tmdb-posters.js', 'trailers.js', 'ratings.js', 'manifest.webmanifest',
   'assets/app/icon-192.png', 'assets/app/icon-512.png', 'assets/tmdb/tmdb-logo.svg'];
 self.addEventListener('install', e => {
@@ -30,7 +30,7 @@ self.addEventListener('fetch', e => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   const same = url.origin === self.location.origin;
-  if (same && (req.mode === 'navigate' || /\.(html|js|webmanifest)$/.test(url.pathname) || url.pathname.endsWith('/'))) return e.respondWith(networkFirst(req));
+  if (same && (req.mode === 'navigate' || /\.(html|js|json|webmanifest)$/.test(url.pathname) || url.pathname.endsWith('/'))) return e.respondWith(networkFirst(req));
   /* posters are left to the browser: routing them through here broke saving the menu as an image */
   if (same || /fonts\.(googleapis|gstatic)\.com|cdnjs\.cloudflare\.com/.test(url.host)) return e.respondWith(cacheFirst(req));
 });
