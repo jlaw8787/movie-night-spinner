@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#5a0f1f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Movie Night">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/app/icon-192.png">
+<link rel="apple-touch-icon" href="assets/app/apple-touch-icon.png">
 <style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
 </head>
 <body>
@@ -67,6 +74,11 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:50;
 .sticker.back{background:#7ee08a;color:#0d2a12}
 .sticker.pick{background:var(--shop-sign);color:#14204f}
 .shelf-empty{color:var(--muted);font-style:italic;padding:10px 4px}
+.aisle-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 10px}
+.aisle-top .aisle-sign{margin:0}
+.aisle-spin{font:400 13px var(--f-board);letter-spacing:.04em;color:var(--shop-sign);background:transparent;border:2px solid var(--shop-sign);border-radius:999px;padding:5px 12px;cursor:pointer}
+.aisle-spin:hover{background:rgba(255,210,63,.12)}
+.tape.picked .box{transform:translateY(-8px) scale(1.06);box-shadow:0 0 0 3px var(--shop-sign),0 14px 24px rgba(0,0,0,.6)}
 .counter{position:fixed;inset:0;z-index:60;background:rgba(5,6,14,.82);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow:auto}
 .case{width:min(760px,100%);background:#f6f1e6;color:#1b1a18;border-radius:8px;display:grid;grid-template-columns:240px 1fr;gap:20px;padding:18px;box-shadow:0 30px 70px rgba(0,0,0,.6);position:relative}
 .case img{width:100%;border-radius:4px;box-shadow:0 8px 18px rgba(0,0,0,.35);display:block}
@@ -82,6 +94,36 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:50;
 .case .x{position:absolute;top:8px;right:10px;border:0;background:none;font:400 26px/1 var(--f-body);color:#5b564c;cursor:pointer;padding:6px}
 @media (max-width:620px){.case{grid-template-columns:1fr}.case img{max-width:200px;margin:0 auto}}
 @media (prefers-reduced-motion:reduce){.box{transition:none}.tape:hover .box{transform:none}}
+
+
+/* this week's film: a ticket stub pinned under the marquee */
+.week{display:grid;grid-template-columns:64px minmax(0,1fr);gap:4px 14px;align-items:center;margin:0 auto 16px;max-width:900px;padding:12px 14px;border-radius:10px;
+  background:linear-gradient(90deg,rgba(217,164,65,.16),rgba(217,164,65,.05));border:2px dashed rgba(217,164,65,.55)}
+.week img{grid-row:1/span 3;width:64px;height:96px;object-fit:cover;border-radius:4px;box-shadow:0 6px 12px rgba(0,0,0,.4);background:#222}
+.week-k{font:400 12px var(--f-board);letter-spacing:.1em;color:var(--brass);margin:0}
+.week-t{font:400 clamp(18px,4vw,24px)/1.1 var(--f-board);margin:0;color:var(--screen);min-width:0;overflow-wrap:anywhere}
+.week-when{margin:0;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.week-when b{color:var(--bulb)}
+.week-when select{font:inherit;font-size:13px;padding:3px 6px;border-radius:6px;background:#1a0b10;color:var(--screen);border:1px solid var(--line)}
+.week-acts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.week-acts button,.trolley button{font:600 14px var(--f-body);padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--screen);cursor:pointer}
+.week-acts .go,.trolley .go{background:var(--brass);border-color:var(--brass);color:var(--night)}
+.week-acts button:focus-visible,.trolley :focus-visible{outline:3px solid var(--bulb);outline-offset:2px}
+.trolley{position:fixed;inset:0;z-index:60;background:rgba(10,4,6,.9);overflow:auto;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.trolley-in{color-scheme:light;max-width:560px;margin:0 auto;background:#f6f0e4;color:#221e19;border-radius:12px;padding:18px 18px 22px;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.trolley h3{font:400 24px/1.1 var(--f-board);margin:0;color:var(--velvet)}
+.trolley .tp{margin:4px 0 12px;font-size:14px;color:#5b4f44}
+.trolley .bar{height:8px;border-radius:99px;background:#e6dccb;overflow:hidden;margin:0 0 14px}
+.trolley .bar i{display:block;height:100%;background:var(--velvet-2);transition:width .2s}
+.trolley h4{font:800 12px var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--velvet-2);margin:14px 0 4px}
+.trolley ul{list-style:none;margin:0;padding:0}
+.trolley li label{display:flex;gap:12px;align-items:flex-start;padding:9px 2px;border-bottom:1px solid #e6dccb;font-size:16px;cursor:pointer}
+.trolley li input{width:22px;height:22px;flex:none;margin:0;accent-color:var(--velvet-2)}
+.trolley li input:checked+span{text-decoration:line-through;color:#9a8d7e}
+.trolley .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.trolley .acts button{border-color:#cdbfa9;background:#fff;color:#221e19}
+.trolley .acts .go{background:var(--velvet);border-color:var(--velvet);color:#fff}
+.trolley .msg{min-height:1.4em;margin:10px 0 0;font-size:14px;color:#5b4f44}
 
 /* watched checklist */
 .watch-panel{width:min(100%,540px);border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.18);padding:16px}
@@ -129,6 +171,21 @@ h1{margin:0;font-family:var(--f-marquee);font-weight:400;font-size:clamp(30px,7.
 /* stage */
 .stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);gap:clamp(24px,4vw,48px);align-items:start}
 @media (max-width:900px){.stage{grid-template-columns:minmax(0,1fr)}}
+/* phones: a slim marquee so the wheel and Spin button sit in the first screen */
+@media (max-width:640px){
+  .wrap{padding-top:10px}
+  .marquee{margin:0 auto 10px;padding:18px 14px 14px;border-radius:12px}
+  .bulbs{height:10px}.bulbs.top{top:4px}.bulbs.bot{bottom:4px}
+  .bulbs i{background-size:20px 10px}.bulbs i+i{background-position:10px 50%}
+  .marquee h1{font-size:clamp(24px,8.4vw,34px);line-height:1}
+  .marquee h1 br{display:none}
+  .letterboard{margin-top:10px;padding:6px 12px;gap:10px}
+  .lb-label{font-size:9px}
+  .lb-title{font-size:17px}
+  .sub{display:none}
+  .views{margin:8px 0 12px}
+  .views button{font-size:13px;padding:8px 14px}
+}
 .deck{display:flex;flex-direction:column;align-items:center;gap:18px;min-width:0}
 .wheel-wrap{position:relative;width:min(100%,540px);perspective:1400px;padding-top:18px}
 .wheel-box{position:relative;width:100%;aspect-ratio:1;transform:rotateX(12deg);transform-origin:50% 60%}
@@ -587,6 +644,8 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
     <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Video shop</button>
   </nav>
 
+  <section class="week" id="weekPanel" aria-label="This week's film" hidden></section>
+
   <section class="shop" id="viewShop" aria-label="Video shop" hidden>
     <div class="shop-head">
       <h2 class="shop-sign">Spinner Video<small>Every film on the wheel, face-out on the shelves. Tap a tape to read the back.</small></h2>
@@ -649,6 +708,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
         <div class="easel" id="easel"><div class="preview" id="preview"></div><div class="glare" aria-hidden="true"></div></div>
       </div>
       <div class="actions">
+        <button class="btn" id="weekSet" type="button" disabled>Lock in for this week</button>
         <button class="btn" id="watchCurrent" type="button" aria-pressed="false" disabled>Mark as watched</button>
         <button class="btn primary" id="pdf" type="button">Save PDF (menu + prep)</button>
         <button class="btn" id="print" type="button" hidden>Print</button>
@@ -665,7 +725,6 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="tmdb-posters.js"></script>
-<script src="recipe-menus.js"></script>
 <script src="movie-menus.js"></script>
 <script>
 const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "Brooklyn Slice Joint"}, "deli": {"name": "Manhattan Deli Counter"}, "street": {"name": "Bodega and Street Cart"}, "cop": {"name": "Stakeout Snacks"}, "soul": {"name": "Harlem Soul Kitchen"}, "xmas": {"name": "Christmas in the City"}, "aussie": {"name": "Arvo in the Outback"}, "asian": {"name": "Chinatown Late Night"}, "scifi": {"name": "Mission Control Rations"}, "hero": {"name": "Rooftop Patrol"}, "kids": {"name": "Family Matinee"}, "teen": {"name": "Mall Food Court"}, "diner": {"name": "Roadside Diner"}, "mex": {"name": "Cantina Night"}, "tiki": {"name": "Beach House Luau"}, "uptown": {"name": "Uptown Steakhouse"}, "horror": {"name": "Midnight Monster Feast"}, "western": {"name": "Chuckwagon BBQ"}, "philly": {"name": "Philly Fight Night"}, "galaxy": {"name": "Galactic Cantina"}, "wizard": {"name": "Great Hall Feast"}, "adventure": {"name": "Explorer's Field Rations"}, "fairytale": {"name": "Storybook Banquet"}, "romcom": {"name": "Rom-Com Date Night"}};
@@ -716,6 +775,7 @@ function programmeFilms(){return sel.value==="all"?FILMS:FILMS.filter(f=>f.theme
 function updateWatchButton(){
   const b=$("watchCurrent"),done=current&&watched.has(current.id);
   b.disabled=!current||spinning;b.textContent=done?"Watched · undo":"Mark as watched";
+  const ws=$("weekSet");if(ws){ws.disabled=!current||spinning;ws.textContent=current&&typeof week!=="undefined"&&week&&week.id===current.id?"Locked in for this week":"Lock in for this week"}
   b.setAttribute("aria-pressed",done?"true":"false");
   b.setAttribute("aria-label",current?`${done?"Mark as unwatched":"Mark as watched"}: ${current.title} (${current.year})`:"Mark as watched");
 }
@@ -860,7 +920,7 @@ function spin(){
       $("now").textContent=`${win.title} (${win.year})`;
       document.body.classList.add("winner");setTimeout(()=>document.body.classList.remove("winner"),1500);
       fanfare();
-      show(win,true).then(openCurtains);addHistory(win);
+      buzz([30,50,90]);show(win,true).then(openCurtains);addHistory(win);
       if(window.innerWidth<900)theatre.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
     }
   }
@@ -882,7 +942,14 @@ if(canTilt){
 }
 
 const movieEdition=f=>typeof MOVIE_MENU_EDITIONS!=="undefined"?MOVIE_MENU_EDITIONS[f.id]:null;
-const movieRecipe=f=>typeof RECIPE_MENUS!=="undefined"?RECIPE_MENUS[f.id]:null;
+const RECIPE_MENUS={};
+const movieRecipe=f=>RECIPE_MENUS[f.id]||null;
+/* exact 4-person recipes load one film at a time, so the first open stays light */
+const recipeFile=f=>"data/recipes/"+f.id.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+".json";
+async function ensureExact(f){
+  if(movieEdition(f)||f.id in RECIPE_MENUS)return;
+  try{const r=await fetch(recipeFile(f));if(r.ok)RECIPE_MENUS[f.id]=await r.json();else if(r.status===404)RECIPE_MENUS[f.id]=null}catch(e){}
+}
 const exactMenu=f=>{const e=movieEdition(f);return e?e.menu:movieRecipe(f)};
 const toItem=([n,note,how,shop])=>({n,note,how,shop});
 function makeMenu(f,first){
@@ -1259,6 +1326,8 @@ async function show(f,preferSig){
   const id=++renderId;
   current=f;
   updateWatchButton();
+  await ensureExact(f);
+  if(id!==renderId)return;
   const menu=makeMenu(f,preferSig);
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
@@ -1306,10 +1375,54 @@ function addHistory(f){
   renderHist();
 }
 
+
+/* this week's film: lock a pick, count down to cook night, tick off the shopping */
+const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+let week=null;
+try{week=JSON.parse(localStorage.getItem("mns-week")||"null")}catch(e){week=null}
+const saveWeek=()=>{try{week?localStorage.setItem("mns-week",JSON.stringify(week)):localStorage.removeItem("mns-week")}catch(e){}};
+function cookDate(){const now=new Date();now.setHours(0,0,0,0);const d=new Date(now);d.setDate(now.getDate()+((week.day-now.getDay()+7)%7));return [d,Math.round((d-now)/864e5)]}
+function renderWeek(){
+  const box=$("weekPanel");const f=week&&FILMS.find(x=>x.id===week.id);
+  if(!f){box.hidden=true;box.innerHTML="";return}
+  const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const [d,n]=cookDate();
+  const when=n===0?"<b>Tonight</b>":n===1?"<b>Tomorrow</b>":`<b>${n} days to go</b>`;
+  box.hidden=false;
+  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})}, ${when}</p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
+  $("weekDay").addEventListener("change",e=>{week.day=+e.target.value;saveWeek();renderWeek()});
+  $("weekShop").addEventListener("click",()=>openTrolley(f));
+  $("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
+  $("weekClear").addEventListener("click",()=>{week=null;saveWeek();renderWeek();$("status").textContent="This week's film cleared."});
+}
+function setWeek(f){week={id:f.id,day:week&&week.day!=null?week.day:6,ticks:{}};saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
+function listText(f,groups){return `${f.title} (${f.year}) shopping list, serves 4\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
+async function openTrolley(f){
+  await ensureExact(f);
+  const groups=shopGroups(makeMenu(f,true));const all=groups.flatMap(([,l])=>l);
+  const o=document.createElement("div");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Shopping list for ${f.title}`);
+  const ticks=()=>week&&week.id===f.id?week.ticks:{};
+  o.innerHTML=`<div class="trolley-in"><h3>${ESC(f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(x)}"${ticks()[x]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
+  const prog=()=>{const n=Object.values(ticks()).filter(Boolean).length;o.querySelector("#tProg").textContent=`${n} of ${all.length} in the trolley. Serves 4.`;o.querySelector("#tBar").style.width=(100*n/all.length)+"%"};
+  o.addEventListener("change",e=>{const k=e.target.dataset.k;if(!k||!week||week.id!==f.id)return;week.ticks[k]=e.target.checked;saveWeek();prog()});
+  const close=()=>{o.remove();document.removeEventListener("keydown",esc)};const esc=e=>{if(e.key==="Escape")close()};
+  o.addEventListener("click",async e=>{
+    if(e.target===o)return close();const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
+    if(a==="done")close();
+    if(a==="reset"){if(week&&week.id===f.id){week.ticks={};saveWeek()}o.querySelectorAll("input").forEach(i=>i.checked=false);prog()}
+    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[x])]).filter(([,l])=>l.length);const text=listText(f,left.length?left:groups);
+      try{if(navigator.share){await navigator.share({title:`${f.title} shopping list`,text});o.querySelector("#tMsg").textContent="Sent."}else{await navigator.clipboard.writeText(text);o.querySelector("#tMsg").textContent="Copied. Paste it into Notes or Reminders."}}
+      catch(err){if(!(err&&err.name==="AbortError"))o.querySelector("#tMsg").textContent="Couldn't share from here. Use Copy text under the menu instead."}}
+  });
+  if(!(week&&week.id===f.id))o.querySelector(".tp").insertAdjacentHTML("afterend",'<p class="tp">Lock this film in for the week to save your ticks.</p>');
+  document.addEventListener("keydown",esc);document.body.appendChild(o);prog();o.querySelector("input,button").focus();
+}
+$("weekSet").addEventListener("click",()=>{if(current)setWeek(current)});
+
 /* video shop: browse every film like a rental store */
 const SHOP_AISLES=[["Action and cops",["cop","street","philly"]],["Superheroes",["hero"]],["Sci-fi",["scifi","galaxy"]],["Horror",["horror"]],["Family",["kids","fairytale"]],["Fantasy and adventure",["wizard","adventure"]],["Comedy and teen",["teen","diner"]],["Romance",["romcom"]],["Crime and mob",["redsauce","deli","pizza"]],["Drama",["uptown","soul"]],["Westerns",["western"]],["Around the world",["aussie","asian","mex","tiki"]],["Holiday",["xmas"]]];
 const SHOP_AISLE_OF={};SHOP_AISLES.forEach(([n,ts])=>ts.forEach(t=>SHOP_AISLE_OF[t]=n));
 const TMDB_IMG_SHOP="https://image.tmdb.org/t/p/";
+const buzz=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
 const hashN=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
 const isPick=f=>hashN(f.id)%9===0,isNew=f=>+f.year>=2020;
 let shopBuilt=false;
@@ -1324,14 +1437,17 @@ function renderShop(){
   const list=FILMS.filter(ok);
   const rows=[];
   const fresh=list.filter(isNew).sort((a,b)=>b.year-a.year||a.title.localeCompare(b.title));
+  const rented=hist.map(id=>list.find(f=>f.id===id)).filter(Boolean);
+  if(rented.length&&!q)rows.push(["Your rentals",rented]);
   if(fresh.length&&!q)rows.push(["New releases",fresh]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
   if(q)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
   else SHOP_AISLES.forEach(([n,ts])=>{const r=list.filter(f=>ts.includes(f.theme)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
   $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
-  $("shopAisles").innerHTML=rows.length?rows.map(([n,r])=>`<section class="aisle"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3><div class="shelf">${r.map(tapeHTML).join("")}</div></section>`).join(""):`<p class="shelf-empty">Nothing on the shelves matches that. Try another title or clear the filters.</p>`;
+  $("shopAisles").innerHTML=rows.length?rows.map(([n,r])=>`<section class="aisle"><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}</div><div class="shelf">${r.map(tapeHTML).join("")}</div></section>`).join(""):`<p class="shelf-empty">Nothing on the shelves matches that. Try another title or clear the filters.</p>`;
 }
-function openCase(f){
+async function openCase(f){
+  await ensureExact(f);
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const m=makeMenu(f,true);
   const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
   const seen=watched.has(f.id);
@@ -1354,7 +1470,12 @@ function setView(v){
 $("viewWheelBtn").addEventListener("click",()=>setView("wheel"));
 $("viewShopBtn").addEventListener("click",()=>setView("shop"));
 ["shopSearch","shopDecade","shopUnwatched"].forEach(id=>$(id).addEventListener(id==="shopSearch"?"input":"change",renderShop));
-$("shopAisles").addEventListener("click",e=>{const t=e.target.closest(".tape");if(t){const f=FILMS.find(x=>x.id===t.dataset.id);if(f)openCase(f)}});
+$("shopAisles").addEventListener("click",e=>{
+  const sp=e.target.closest(".aisle-spin");
+  if(sp){const tapes=[...sp.closest(".aisle").querySelectorAll(".tape")];const pick=tapes[Math.floor(Math.random()*tapes.length)];
+    buzz([20,40,20]);tapes.forEach(t=>t.classList.remove("picked"));pick.classList.add("picked");pick.scrollIntoView({behavior:reduce?"auto":"smooth",inline:"center",block:"nearest"});
+    setTimeout(()=>{pick.classList.remove("picked");const f=FILMS.find(x=>x.id===pick.dataset.id);if(f)openCase(f)},reduce?0:700);return}
+  const t=e.target.closest(".tape");if(t){const f=FILMS.find(x=>x.id===t.dataset.id);if(f)openCase(f)}});
 
 function menuText(){
   if(!current)return"";
@@ -1463,7 +1584,8 @@ $("copy").addEventListener("click",()=>{
 });
 window.addEventListener("resize",size);
 
-setList();size();renderHist();scalePreview();
+setList();size();renderHist();scalePreview();renderWeek();
+if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 try{if(location.hash==="#shop"||localStorage.getItem("mns-view")==="shop")setView("shop")}catch(e){}
 document.fonts.ready.then(draw);
 const initialFilmId=new URLSearchParams(window.location.search).get("film");

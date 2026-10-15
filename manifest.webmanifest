@@ -1,0 +1,14 @@
+{
+  "name": "Movie Night Spinner",
+  "short_name": "Movie Night",
+  "description": "Spin for a film and get a themed menu, prep sheet and shopping list for four.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d0508",
+  "theme_color": "#5a0f1f",
+  "icons": [
+    {"src": "assets/app/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "assets/app/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
