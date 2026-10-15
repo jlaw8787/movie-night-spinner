@@ -27227,16 +27227,18 @@
    ],
    "mains": [
     {
-     "name": "Teriyaki chicken",
-     "scene": "dinner at Mr Miyagi's place",
-     "method": "Chicken thighs marinated an hour in soy, mirin, sake and sugar, grilled skin side down until charred, the marinade reduced in a pan to a glaze and brushed over. Steamed rice and bok choy.",
+     "name": "Country club spaghetti",
+     "scene": "the plate of spaghetti Daniel ends up wearing",
+     "method": "Big plate of spaghetti in a rich tomato and beef sauce with parmesan. Best eaten, not worn.",
      "shop": [
-      "chicken thighs",
-      "soy sauce",
-      "mirin",
-      "sake",
-      "jasmine rice",
-      "bok choy"
+      "beef mince",
+      "onion",
+      "garlic cloves",
+      "passata",
+      "oregano",
+      "spaghetti",
+      "parmesan",
+      "basil"
      ]
     },
     {
@@ -43479,14 +43481,15 @@
      ]
     },
     {
-     "name": "Spanakopita",
-     "scene": "the wedding morning in the villa",
-     "method": "Spinach, feta, dill and spring onion wrapped in buttered filo triangles, baked at 190C for 25 minutes.",
+     "name": "Rosie's cookbook spanakopita",
+     "scene": "Rosie has just written a cookbook",
+     "method": "Spinach, feta and dill wrapped in crisp buttered filo, the kind of recipe Rosie would sign for a villager.",
      "shop": [
       "spinach",
       "feta",
-      "dill",
+      "egg",
       "spring onions",
+      "dill",
       "filo pastry",
       "butter"
      ]
@@ -43537,14 +43540,13 @@
    ],
    "drink": [
     {
-     "name": "Ouzo and lemonade",
-     "scene": "the dancing on the jetty",
-     "method": "30ml ouzo over ice topped with lemonade, or sparkling lemonade with mint for anyone not drinking.",
+     "name": "Pepper's Villa Donna ouzo",
+     "scene": "Pepper tending bar at the Villa Donna",
+     "method": "Ouzo poured over ice so it turns cloudy, topped with lemonade, the way it goes out over the Villa Donna bar. Minty lemonade for the kids.",
      "shop": [
       "ouzo",
       "lemonade",
-      "mint",
-      "ice"
+      "mint"
      ]
     }
    ],
@@ -44164,14 +44166,13 @@
    ],
    "dessert": [
     {
-     "name": "Flan",
-     "scene": "a Mexican dessert",
-     "method": "Caramel poured into a tin, custard of eggs, condensed and evaporated milk and vanilla on top, baked in a water bath at 160C for 50 minutes, chilled and turned out.",
+     "name": "Free coconut cocadas",
+     "scene": "the coconut that, as he tells it, was free",
+     "method": "Chewy golden Mexican coconut sweets baked from fresh coconut, sugar and condensed milk, a nod to the coconut he got for nothing.",
      "shop": [
-      "caster sugar",
+      "desiccated coconut",
+      "sweetened condensed milk",
       "eggs",
-      "condensed milk",
-      "evaporated milk",
       "vanilla extract"
      ]
     }
@@ -75572,14 +75573,19 @@
      ]
     },
     {
-     "name": "Grilled halloumi with honey",
-     "scene": "lunch by the infinity pool",
-     "method": "Thick slices of halloumi grilled until golden, drizzled with honey, chilli flakes and fresh oregano.",
+     "name": "Small-batch celebrity hot sauce wings",
+     "scene": "Blanc stages the big reveal with a bottle of it",
+     "method": "Crisp baked chicken wings tossed in a sticky homemade chilli hot sauce, with celery and a cooling blue cheese dip.",
      "shop": [
-      "halloumi",
+      "chicken wings",
+      "baking powder",
+      "red chillies",
+      "garlic cloves",
+      "white vinegar",
       "honey",
-      "chilli flakes",
-      "oregano"
+      "celery",
+      "blue cheese",
+      "sour cream"
      ]
     },
     {
@@ -75625,27 +75631,29 @@
    ],
    "dessert": [
     {
-     "name": "Baklava",
-     "scene": "something sweet after the big reveal",
-     "method": "Layers of buttered filo with walnuts and cinnamon, baked crisp and soaked in honey syrup.",
+     "name": "Duke's pineapple upside-down cake",
+     "scene": "the pineapple juice slipped into Duke's drink",
+     "method": "Buttery cake baked on a layer of caramel and pineapple rings, turned out warm. Check nobody at the table is allergic before serving.",
      "shop": [
-      "filo pastry",
-      "walnuts",
-      "ground cinnamon",
       "butter",
-      "honey"
+      "brown sugar",
+      "tinned pineapple rings",
+      "caster sugar",
+      "eggs",
+      "self-raising flour"
      ]
     }
    ],
    "drink": [
     {
-     "name": "Iced frappé",
-     "scene": "the Greek island coffee",
-     "method": "Instant coffee shaken hard with sugar and a little water until foamy, poured over ice and topped with milk.",
+     "name": "Poolside spiked kombucha",
+     "scene": "the welcome drinks by Miles's pool",
+     "method": "Chilled ginger kombucha over ice with lime and mint, with a shot of vodka for anyone who wants it spiked like the guests got.",
      "shop": [
-      "instant coffee",
-      "sugar",
-      "milk"
+      "ginger kombucha",
+      "limes",
+      "mint",
+      "vodka"
      ]
     }
    ],
@@ -76594,15 +76602,21 @@
      ]
     },
     {
-     "name": "Korean fried chicken wings",
-     "scene": "the backstage feed",
-     "method": "Chicken wings coated in potato starch, double fried until crackling, then glazed in a sticky gochujang, garlic and honey sauce.",
+     "name": "Saja Boys' sugar-dusted hot dogs",
+     "scene": "the street food stall in the city square",
+     "method": "Korean hot dogs on a stick: sausage wrapped in mozzarella and a thick batter, fried crisp, rolled in sugar and finished with ketchup and mustard.",
      "shop": [
-      "chicken wings",
-      "potato starch",
-      "gochujang",
-      "garlic",
-      "honey"
+      "frankfurts",
+      "mozzarella",
+      "self-raising flour",
+      "egg",
+      "caster sugar",
+      "full cream milk",
+      "panko breadcrumbs",
+      "tomato sauce",
+      "American mustard",
+      "vegetable oil",
+      "bamboo skewers"
      ]
     }
    ],
@@ -76621,16 +76635,15 @@
      ]
     },
     {
-     "name": "Bibimbap",
-     "scene": "a rice bowl for the whole group",
-     "method": "Rice topped with seasoned beef, spinach, carrot, bean sprouts and a fried egg, gochujang on the side.",
+     "name": "Comfort night seolleongtang",
+     "scene": "the three of them sharing a comfort meal",
+     "method": "Milky ox bone soup simmered for hours, seasoned at the table with salt and spring onion, with rice and a spread of banchan like cubed radish kimchi.",
      "shop": [
-      "sushi rice",
-      "beef mince",
-      "spinach",
-      "carrots",
-      "bean sprouts",
-      "gochujang"
+      "beef soup bones",
+      "beef brisket",
+      "short grain rice",
+      "spring onions",
+      "radish kimchi"
      ]
     }
    ],
@@ -76650,13 +76663,13 @@
    ],
    "drink": [
     {
-     "name": "Banana milk",
-     "scene": "the convenience store classic",
-     "method": "Ripe banana blended with cold milk and a little honey until smooth.",
+     "name": "Healer Han's vocal tonic",
+     "scene": "the grape juice pouches relabelled as medicine for Rumi's voice",
+     "method": "Cold grape juice poured into little pouches or small bottles and labelled as a vocal tonic, exactly the trick the healer pulls in the film.",
      "shop": [
-      "bananas",
-      "milk",
-      "honey"
+      "grape juice",
+      "lemon",
+      "soda water"
      ]
     }
    ],

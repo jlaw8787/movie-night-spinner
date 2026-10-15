@@ -24415,17 +24415,18 @@
     ],
     "m": [
      {
-      "n": "Teriyaki chicken",
-      "note": "Charred teriyaki chicken with rice and bok choy",
-      "how": "Marinate 1kg chicken thighs for an hour in 60ml soy, 60ml mirin, 2 tbsp sake and 2 tbsp sugar. Grill skin side down until charred and cooked. Reduce the marinade to a glaze and brush over. Serve with 300g jasmine rice and bok choy.",
+      "n": "Country club spaghetti",
+      "note": "Spaghetti in rich tomato beef sauce, eaten rather than worn",
+      "how": "Brown 500g beef mince with 1 onion and 2 garlic cloves, add 700g passata and 1 tsp oregano and simmer 30 minutes. Cook 400g spaghetti, toss with the sauce and serve with 50g grated parmesan and basil.",
       "shop": [
-       "1kg chicken thighs@Meat",
-       "60ml soy sauce@Pantry",
-       "60ml mirin@Pantry",
-       "60ml sake@Bottle shop",
-       "1 bag caster sugar@Pantry",
-       "300g jasmine rice@Pantry",
-       "1 bunch bok choy@Produce"
+       "500g beef mince@Meat",
+       "1 onion@Produce",
+       "2 garlic cloves@Produce",
+       "700g passata@Pantry",
+       "1 jar dried oregano@Pantry",
+       "400g spaghetti@Pantry",
+       "50g parmesan@Dairy",
+       "1 bunch basil@Produce"
       ]
      }
     ],
@@ -24460,14 +24461,15 @@
      "1 bottle rice vinegar@Pantry",
      "1 jar sesame seeds@Pantry",
      "2 bunches broccolini@Produce",
-     "2 garlic cloves@Produce",
+     "4 garlic cloves@Produce",
      "1 bottle oyster sauce@Pantry",
-     "1kg chicken thighs@Meat",
-     "60ml soy sauce@Pantry",
-     "60ml mirin@Pantry",
-     "60ml sake@Bottle shop",
-     "300g jasmine rice@Pantry",
-     "1 bunch bok choy@Produce",
+     "500g beef mince@Meat",
+     "1 onion@Produce",
+     "700g passata@Pantry",
+     "1 jar dried oregano@Pantry",
+     "400g spaghetti@Pantry",
+     "50g parmesan@Dairy",
+     "1 bunch basil@Produce",
      "200g glutinous rice flour@Pantry",
      "60g caster sugar@Pantry",
      "1 tin red bean paste@Pantry",
@@ -44155,15 +44157,14 @@
     ],
     "w": [
      {
-      "n": "Flan",
-      "note": "Silky baked caramel custard, chilled and turned out onto a plate",
-      "how": "Melt 150g sugar to an amber caramel and pour into a round tin. Whisk 5 eggs with a can of condensed milk, a can of evaporated milk and vanilla, then pour over. Bake in a water bath at 160C for 50 minutes, chill overnight and turn out.",
+      "n": "Free coconut cocadas",
+      "note": "Chewy golden coconut sweets baked with condensed milk",
+      "how": "Mix 250g desiccated coconut, 395g condensed milk, 2 egg yolks and 1 tsp vanilla. Spoon 20 small mounds onto a lined tray and bake at 170C for 18 minutes until golden on the edges. Cool on the tray until firm.",
       "shop": [
-       "1 bag caster sugar@Pantry",
-       "5 eggs@Dairy",
-       "1 can condensed milk@Pantry",
-       "1 can evaporated milk@Pantry",
-       "1 bottle vanilla extract@Pantry"
+       "250g desiccated coconut@Pantry",
+       "395g sweetened condensed milk@Pantry",
+       "2 eggs@Dairy",
+       "1 tsp vanilla extract@Pantry"
       ]
      }
     ],
@@ -44196,11 +44197,10 @@
      "1 jar ground cumin@Pantry",
      "1 bag long grain rice@Pantry",
      "1 can black beans@Pantry",
-     "1 bag caster sugar@Pantry",
-     "5 eggs@Dairy",
-     "1 can condensed milk@Pantry",
-     "1 can evaporated milk@Pantry",
-     "1 bottle vanilla extract@Pantry",
+     "250g desiccated coconut@Pantry",
+     "395g sweetened condensed milk@Pantry",
+     "2 eggs@Dairy",
+     "1 tsp vanilla extract@Pantry",
      "6 bottles Mexican lager@Bottle shop",
      "1 jar sea salt flakes@Pantry"
     ]
@@ -49015,16 +49015,17 @@
       ]
      },
      {
-      "n": "Spanakopita",
-      "note": "Spinach, feta and dill filo triangles baked golden and flaky",
-      "how": "Wilt 500g spinach, squeeze dry and chop. Mix with 200g crumbled feta, chopped dill and sliced spring onion. Cut buttered filo into strips, spoon filling at one end and fold into triangles. Brush with butter and bake at 190C for 25 minutes.",
+      "n": "Rosie's cookbook spanakopita",
+      "note": "Spinach, feta and dill filo triangles from Rosie's cookbook",
+      "how": "Wilt 500g spinach and squeeze dry. Mix with 250g crumbled feta, 1 egg, 3 spring onions and dill. Brush 10 sheets of filo with 100g melted butter, cut into strips, fold the filling into triangles and bake at 190C for 25 minutes.",
       "shop": [
        "500g spinach@Produce",
-       "200g feta@Dairy",
+       "250g feta@Deli",
+       "1 egg@Dairy",
+       "3 spring onions@Produce",
        "1 bunch dill@Produce",
-       "1 bunch spring onions@Produce",
-       "1 packet filo pastry@Frozen",
-       "250g butter@Dairy"
+       "10 sheets filo pastry@Frozen",
+       "100g butter@Dairy"
       ]
      }
     ],
@@ -49060,14 +49061,13 @@
     ],
     "d": [
      {
-      "n": "Ouzo and lemonade",
-      "note": "Ouzo over ice topped with lemonade, or minty lemonade",
-      "how": "Fill glasses with ice. Pour 30ml ouzo into each and top with cold lemonade, watching it turn cloudy. For anyone not drinking, pour sparkling lemonade with a few torn mint leaves instead. Serve on the terrace at sunset if you can.",
+      "n": "Pepper's Villa Donna ouzo",
+      "note": "Ouzo over ice turned cloudy and topped with lemonade",
+      "how": "Fill 4 glasses with ice. Pour 30ml ouzo into each and watch it turn cloudy, then top with 200ml cold lemonade and a mint sprig. Make the kids' glasses with lemonade and mint only.",
       "shop": [
-       "1 bottle ouzo@Bottle shop",
-       "2L lemonade@Drinks",
-       "1 bunch mint@Produce",
-       "1 bag ice@Frozen"
+       "120ml ouzo@Bottle shop",
+       "1L lemonade@Drinks",
+       "1 bunch mint@Produce"
       ]
      }
     ],
@@ -49077,11 +49077,12 @@
      "1 bunch thyme@Produce",
      "1 lemon@Produce",
      "500g spinach@Produce",
-     "200g feta@Dairy",
+     "250g feta@Deli",
+     "1 egg@Dairy",
+     "3 spring onions@Produce",
      "1 bunch dill@Produce",
-     "1 bunch spring onions@Produce",
-     "1 packet filo pastry@Frozen",
-     "250g butter@Dairy",
+     "10 sheets filo pastry@Frozen",
+     "100g butter@Dairy",
      "2kg lamb shoulder@Meat",
      "1 head garlic@Produce",
      "1 jar dried oregano@Pantry",
@@ -49093,10 +49094,9 @@
      "1 jar cinnamon@Pantry",
      "100g walnuts@Pantry",
      "1 bottle vegetable oil@Pantry",
-     "1 bottle ouzo@Bottle shop",
-     "2L lemonade@Drinks",
-     "1 bunch mint@Produce",
-     "1 bag ice@Frozen"
+     "120ml ouzo@Bottle shop",
+     "1L lemonade@Drinks",
+     "1 bunch mint@Produce"
     ]
    }
   },
@@ -71112,14 +71112,19 @@
       ]
      },
      {
-      "n": "Grilled halloumi with honey",
-      "note": "Golden grilled halloumi with honey, chilli and oregano.",
-      "how": "Slice 2 blocks halloumi (500g) into thick slices and dry well. Grill or fry in a hot dry pan for 2 minutes a side until golden. Drizzle with 2 tbsp honey, scatter with chilli flakes and fresh oregano leaves and serve straight away.",
+      "n": "Small-batch celebrity hot sauce wings",
+      "note": "Crisp wings tossed in homemade chilli hot sauce with blue cheese dip",
+      "how": "Toss 1.2kg chicken wings with 2 tsp baking powder and salt and bake at 220C for 45 minutes, turning once. Blitz 6 red chillies with 3 garlic cloves, 80ml vinegar and 2 tbsp honey, simmer 5 minutes and toss through the wings. Serve with celery and 150g blue cheese stirred into 150g sour cream.",
       "shop": [
-       "500g halloumi@Dairy",
+       "1.2kg chicken wings@Meat",
+       "2 tsp baking powder@Pantry",
+       "6 red chillies@Produce",
+       "3 garlic cloves@Produce",
+       "80ml white vinegar@Pantry",
        "2 tbsp honey@Pantry",
-       "1/2 tsp chilli flakes@Pantry",
-       "1 bunch oregano@Produce"
+       "1 bunch celery@Produce",
+       "150g blue cheese@Deli",
+       "150g sour cream@Dairy"
       ]
      }
     ],
@@ -71143,28 +71148,29 @@
     ],
     "w": [
      {
-      "n": "Baklava",
-      "note": "Crisp walnut and cinnamon filo layers soaked in honey syrup.",
-      "how": "Mix 300g chopped walnuts with 1 tsp cinnamon. Layer 12 sheets filo in a 20x30cm tin, brushing each with 150g melted butter in total, scattering walnuts every third sheet. Cut into diamonds and bake at 170C for 45 minutes. Pour over hot syrup of 200g honey, 100g sugar and 125ml water.",
+      "n": "Duke's pineapple upside-down cake",
+      "note": "Buttery cake baked over caramel and pineapple rings, turned out warm",
+      "how": "Melt 60g butter with 100g brown sugar in a 23cm tin and lay over 8 pineapple rings from a 440g tin. Beat 125g butter and 125g sugar, add 2 eggs, then fold in 175g self-raising flour and 80ml pineapple juice. Spread over and bake at 180C for 40 minutes, then turn out while warm.",
       "shop": [
-       "300g walnuts@Pantry",
-       "1 tsp ground cinnamon@Pantry",
-       "12 sheets filo pastry@Frozen",
-       "150g butter@Dairy",
-       "200g honey@Pantry",
-       "100g caster sugar@Pantry"
+       "185g butter@Dairy",
+       "100g brown sugar@Pantry",
+       "440g tinned pineapple rings@Pantry",
+       "125g caster sugar@Pantry",
+       "2 eggs@Dairy",
+       "175g self-raising flour@Pantry"
       ]
      }
     ],
     "d": [
      {
-      "n": "Iced frappé",
-      "note": "Foamy Greek iced coffee topped with milk.",
-      "how": "For each glass, shake 2 tsp instant coffee, 2 tsp sugar and 60ml cold water hard in a jar for 30 seconds until thick foam forms. Pour over ice and top with 80ml cold milk. Serve with a straw.",
+      "n": "Poolside spiked kombucha",
+      "note": "Chilled ginger kombucha over ice, spiked with vodka if you like",
+      "how": "Fill 4 tall glasses with ice, mint leaves and a squeeze of lime. Pour 250ml cold ginger kombucha into each and add 30ml vodka to the glasses of anyone who wants it spiked. Stir once and serve straight away.",
       "shop": [
-       "8 tsp instant coffee@Pantry",
-       "8 tsp sugar@Pantry",
-       "320ml milk@Dairy"
+       "1L ginger kombucha@Drinks",
+       "2 limes@Produce",
+       "1 bunch mint@Produce",
+       "120ml vodka@Bottle shop"
       ]
      }
     ],
@@ -71178,22 +71184,29 @@
      "150g kalamata olives@Deli",
      "250g cherry tomatoes@Produce",
      "8 pita breads@Bakery",
-     "500g halloumi@Dairy",
-     "1/2 tsp chilli flakes@Pantry",
-     "1 bunch oregano@Produce",
+     "1.2kg chicken wings@Meat",
+     "2 tsp baking powder@Pantry",
+     "6 red chillies@Produce",
+     "3 garlic cloves@Produce",
+     "80ml white vinegar@Pantry",
+     "2 tbsp honey@Pantry",
+     "1 bunch celery@Produce",
+     "150g blue cheese@Deli",
+     "150g sour cream@Dairy",
      "800g lamb leg@Meat",
      "2 tsp dried oregano@Pantry",
      "2 tomatoes@Produce",
      "1 red onion@Produce",
-     "300g walnuts@Pantry",
-     "1 tsp ground cinnamon@Pantry",
-     "12 sheets filo pastry@Frozen",
-     "150g butter@Dairy",
-     "230g honey@Pantry",
-     "100g caster sugar@Pantry",
-     "8 tsp instant coffee@Pantry",
-     "8 tsp sugar@Pantry",
-     "320ml milk@Dairy"
+     "185g butter@Dairy",
+     "100g brown sugar@Pantry",
+     "440g tinned pineapple rings@Pantry",
+     "125g caster sugar@Pantry",
+     "2 eggs@Dairy",
+     "175g self-raising flour@Pantry",
+     "1L ginger kombucha@Drinks",
+     "2 limes@Produce",
+     "1 bunch mint@Produce",
+     "120ml vodka@Bottle shop"
     ]
    }
   },
@@ -72096,17 +72109,21 @@
       ]
      },
      {
-      "n": "Korean fried chicken wings",
-      "note": "Double-fried wings in sticky gochujang glaze.",
-      "how": "Toss 1kg chicken wings in 60g potato starch. Fry at 160C for 8 minutes, rest, then at 190C for 3 minutes until crackling. Simmer 3 tbsp gochujang, 3 tbsp honey, 2 garlic cloves and 1 tbsp soy until glossy and toss the wings through.",
+      "n": "Saja Boys' sugar-dusted hot dogs",
+      "note": "Battered sausage and mozzarella sticks, fried and rolled in sugar",
+      "how": "Thread 8 frankfurts onto skewers with a stick of mozzarella above each. Whisk 250g self-raising flour, 1 egg, 2 tbsp sugar and 250ml milk into a thick batter, pour into a tall glass, dip each skewer and roll in 100g panko. Fry at 170C for 4 minutes, roll in sugar and drizzle with ketchup and mustard.",
       "shop": [
-       "1kg chicken wings@Meat",
-       "60g potato starch@Pantry",
-       "3 tbsp gochujang@Pantry",
-       "3 tbsp honey@Pantry",
-       "1 garlic bulb@Produce",
-       "1 tbsp soy sauce@Pantry",
-       "2L vegetable oil@Pantry"
+       "8 frankfurts@Deli",
+       "200g mozzarella@Dairy",
+       "250g self-raising flour@Pantry",
+       "1 egg@Dairy",
+       "1 bag caster sugar@Pantry",
+       "250ml full cream milk@Dairy",
+       "100g panko breadcrumbs@Pantry",
+       "1 bottle tomato sauce@Pantry",
+       "1 bottle American mustard@Pantry",
+       "1L vegetable oil@Pantry",
+       "8 bamboo skewers@Pantry"
       ]
      }
     ],
@@ -72144,13 +72161,13 @@
     ],
     "d": [
      {
-      "n": "Banana milk",
-      "note": "Sweet banana milk, Korean convenience store style.",
-      "how": "Blend 2 ripe bananas with 1L cold milk and 2 tbsp honey until smooth. Strain for a silky drink and pour into 4 glasses over ice.",
+      "n": "Healer Han's vocal tonic",
+      "note": "Grape juice poured into little bottles labelled vocal tonic",
+      "how": "Chill 1.2L grape juice. Pour into 4 small bottles or pouches, write a label for each that says vocal tonic, and serve very cold. Add a squeeze of lemon and a splash of soda water to each if you want it fizzy.",
       "shop": [
-       "2 bananas@Produce",
-       "1L milk@Dairy",
-       "2 tbsp honey@Pantry"
+       "1.2L grape juice@Drinks",
+       "1 lemon@Produce",
+       "400ml soda water@Drinks"
       ]
      }
     ],
@@ -72162,14 +72179,19 @@
      "2 carrots@Produce",
      "200g spinach@Produce",
      "100g pickled radish@Pantry",
-     "1kg chicken wings@Meat",
-     "60g potato starch@Pantry",
-     "3 tbsp gochujang@Pantry",
-     "5 tbsp honey@Pantry",
-     "1 garlic bulb@Produce",
-     "3 tbsp soy sauce@Pantry",
-     "2L vegetable oil@Pantry",
+     "8 frankfurts@Deli",
+     "200g mozzarella@Dairy",
+     "250g self-raising flour@Pantry",
+     "1 egg@Dairy",
+     "1 bag caster sugar@Pantry",
+     "250ml full cream milk@Dairy",
+     "100g panko breadcrumbs@Pantry",
+     "1 bottle tomato sauce@Pantry",
+     "1 bottle American mustard@Pantry",
+     "1L vegetable oil@Pantry",
+     "8 bamboo skewers@Pantry",
      "2 tbsp gochugaru@Pantry",
+     "2 tbsp soy sauce@Pantry",
      "4 packets ramen noodles@Pantry",
      "200g kimchi@Deli",
      "3 spring onions@Produce",
@@ -72177,11 +72199,13 @@
      "300g plain flour@Pantry",
      "7g dried yeast@Pantry",
      "1 tbsp caster sugar@Pantry",
-     "1.22L milk@Dairy",
+     "220ml milk@Dairy",
      "80g brown sugar@Pantry",
      "1 tsp ground cinnamon@Pantry",
      "40g walnuts@Pantry",
-     "2 bananas@Produce"
+     "1.2L grape juice@Drinks",
+     "1 lemon@Produce",
+     "400ml soda water@Drinks"
     ]
    }
   },
