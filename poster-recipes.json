@@ -6368,16 +6368,16 @@
     ],
     "m": [
      {
-      "n": "All-night diner cheeseburger",
-      "note": "Double smashed patties, American cheese, iceberg, onion and pickle",
-      "how": "Roll 800g beef mince into 8 balls. Smash thin on a smoking flat-top, salt, flip at 90 seconds and add a slice of American cheese. Stack two per toasted bun with shredded iceberg, diced onion and pickles.",
+      "n": "3am open roast beef sandwich",
+      "note": "Roast beef and gravy on toast with mash and peas.",
+      "how": "Warm 500g sliced rare roast beef in 400ml hot beef gravy for 2 minutes. Toast 4 thick slices of white bread, lay on plates, pile on the beef and pour over more gravy. Serve with mash made from 800g potatoes and 40g butter, and buttered peas.",
       "shop": [
-       "800g beef mince@Meat",
-       "4 burger buns@Bakery",
-       "8 slices American cheese@Dairy",
-       "0.5 iceberg lettuce@Produce",
-       "1 brown onion@Produce",
-       "1 jar dill pickles@Pantry"
+       "500g rare roast beef@Deli",
+       "400ml beef gravy@Pantry",
+       "1 loaf thick white bread@Bakery",
+       "800g potatoes@Produce",
+       "40g butter@Dairy",
+       "500g frozen peas@Frozen"
       ]
      }
     ],
@@ -6416,18 +6416,18 @@
      "250g sharp cheddar@Deli",
      "1 jar dill pickles@Pantry",
      "1 jar English mustard@Pantry",
-     "800g beef mince@Meat",
-     "4 burger buns@Bakery",
-     "8 slices American cheese@Dairy",
-     "0.5 iceberg lettuce@Produce",
-     "1 brown onion@Produce",
+     "500g rare roast beef@Deli",
+     "400ml beef gravy@Pantry",
+     "1 loaf thick white bread@Bakery",
+     "800g potatoes@Produce",
+     "90g butter@Dairy",
+     "500g frozen peas@Frozen",
      "8 slices white bread@Bakery",
      "2 tins sliced peaches@Pantry",
      "60ml brandy@Bottle shop",
      "2 tbsp brown sugar@Pantry",
      "4 eggs@Dairy",
      "500ml full cream milk@Dairy",
-     "50g butter@Dairy",
      "1 bottle vanilla extract@Pantry",
      "120g ground coffee@Pantry"
     ]
@@ -10275,18 +10275,15 @@
    "menu": {
     "s": [
      {
-      "n": "Biker bar nachos",
-      "note": "Baked corn chips with beans, cheddar and jalapeños, salsa on top",
-      "how": "Layer a 300g bag of corn chips in a tray with a drained tin of black beans, 200g grated cheddar and sliced jalapeños. Bake at 200C for 8 minutes. Top with sour cream and 2 diced tomatoes tossed with onion, lime and salt.",
+      "n": "Biker bar pickled eggs",
+      "note": "Pink beetroot-pickled eggs from the bar jar.",
+      "how": "Boil 8 eggs for 10 minutes, cool and peel. Heat 375ml white vinegar with 125ml water, 2 tbsp sugar, 1 tsp salt, 1 tsp mustard seeds and 1 sliced beetroot. Pour over the eggs in a jar and chill at least overnight before serving.",
       "shop": [
-       "300g corn chips@Pantry",
-       "1 tin black beans@Pantry",
-       "200g cheddar@Dairy",
-       "1 jar jalapeños@Pantry",
-       "200g sour cream@Dairy",
-       "2 tomatoes@Produce",
-       "1 onion@Produce",
-       "1 lime@Produce"
+       "8 eggs@Dairy",
+       "375ml white vinegar@Pantry",
+       "2 tbsp caster sugar@Pantry",
+       "1 tsp mustard seeds@Pantry",
+       "1 beetroot@Produce"
       ]
      },
      {
@@ -10345,14 +10342,11 @@
      }
     ],
     "shopping": [
-     "300g corn chips@Pantry",
-     "1 tin black beans@Pantry",
-     "200g cheddar@Dairy",
-     "1 jar jalapeños@Pantry",
-     "200g sour cream@Dairy",
-     "2 tomatoes@Produce",
-     "1 onion@Produce",
-     "1 lime@Produce",
+     "11 eggs@Dairy",
+     "375ml white vinegar@Pantry",
+     "2 tbsp caster sugar@Pantry",
+     "1 tsp mustard seeds@Pantry",
+     "1 beetroot@Produce",
      "500g beef topside@Meat",
      "60ml soy sauce@Pantry",
      "1 bottle Worcestershire sauce@Pantry",
@@ -10366,7 +10360,6 @@
      "1 bunch thyme@Produce",
      "4 sourdough rounds@Bakery",
      "2 sheets sweet shortcrust pastry@Frozen",
-     "3 eggs@Dairy",
      "250ml golden syrup@Pantry",
      "100g brown sugar@Pantry",
      "60g butter@Dairy",
@@ -13069,18 +13062,19 @@
    "menu": {
     "s": [
      {
-      "n": "Average Joe's gym nachos",
-      "note": "Loaded nachos with beans, cheese, guacamole and sour cream",
-      "how": "Layer a 300g bag of corn chips with a drained tin of black beans, 200g cheddar and jalapeños. Bake at 200C for 8 minutes. Mash 2 avocados with lime and salt. Top with a jar of salsa, the guacamole and 150g sour cream.",
+      "n": "Five Ds dip platter",
+      "note": "Veggie sticks with hummus, tzatziki and sweet chilli dip.",
+      "how": "Cut 2 carrots, 2 celery sticks, 1 cucumber and 1 red capsicum into sticks. Serve with 200g hummus, 200g tzatziki and a quick dip of 200ml sour cream stirred with 1 tbsp sweet chilli sauce, plus crackers for anyone who skips the vegetables.",
       "shop": [
-       "300g corn chips@Pantry",
-       "1 tin black beans@Pantry",
-       "200g cheddar@Dairy",
-       "1 jar jalapeños@Pantry",
-       "2 avocados@Produce",
-       "1 lime@Produce",
-       "1 jar salsa@Pantry",
-       "150g sour cream@Dairy"
+       "2 carrots@Produce",
+       "2 celery sticks@Produce",
+       "1 continental cucumber@Produce",
+       "1 red capsicum@Produce",
+       "200g hummus@Deli",
+       "200g tzatziki@Deli",
+       "200ml sour cream@Dairy",
+       "1 tbsp sweet chilli sauce@Pantry",
+       "1 box water crackers@Pantry"
       ]
      },
      {
@@ -13099,19 +13093,15 @@
     ],
     "m": [
      {
-      "n": "Vegas tournament burgers",
-      "note": "Cheeseburgers with bacon and the works, plus fries",
-      "how": "Shape 800g chuck mince into 4 patties and grill to medium. Fry 8 rashers of bacon. Build on toasted buns with cheddar, bacon, iceberg, tomato and pickles. Fry 1kg potatoes cut into fries, twice, and salt.",
+      "n": "Vegas steak and eggs",
+      "note": "Seared steak, a runny egg, hash browns and tomato.",
+      "how": "Season 4 scotch fillet steaks and sear in a hot pan for 3 to 4 minutes a side, then rest. Bake 8 frozen hash browns until crisp and grill 4 halved tomatoes. Fry 4 eggs sunny side up in 20g butter and serve one on top of each steak.",
       "shop": [
-       "800g beef chuck mince@Meat",
-       "8 rashers bacon@Meat",
-       "4 slices cheddar@Dairy",
-       "4 burger buns@Bakery",
-       "0.5 iceberg lettuce@Produce",
-       "1 tomato@Produce",
-       "1 jar dill pickles@Pantry",
-       "1kg potatoes@Produce",
-       "2L vegetable oil@Pantry"
+       "4 scotch fillet steaks@Meat",
+       "8 frozen hash browns@Frozen",
+       "4 tomatoes@Produce",
+       "4 eggs@Dairy",
+       "20g butter@Dairy"
       ]
      }
     ],
@@ -13147,32 +13137,27 @@
      }
     ],
     "shopping": [
-     "300g corn chips@Pantry",
-     "1 tin black beans@Pantry",
-     "200g cheddar@Dairy",
-     "1 jar jalapeños@Pantry",
-     "2 avocados@Produce",
-     "1 lime@Produce",
-     "1 jar salsa@Pantry",
-     "150g sour cream@Dairy",
+     "2 carrots@Produce",
+     "2 celery sticks@Produce",
+     "1 continental cucumber@Produce",
+     "1 red capsicum@Produce",
+     "200g hummus@Deli",
+     "200g tzatziki@Deli",
+     "200ml sour cream@Dairy",
+     "1 tbsp sweet chilli sauce@Pantry",
+     "1 box water crackers@Pantry",
      "250g beef mince@Meat",
      "250g pork mince@Meat",
      "40g parmesan@Deli",
      "1 bunch parsley@Produce",
      "1 garlic clove@Produce",
      "1 tin crushed tomatoes@Pantry",
-     "800g beef chuck mince@Meat",
-     "8 rashers bacon@Meat",
-     "4 slices cheddar@Dairy",
-     "4 burger buns@Bakery",
-     "0.5 iceberg lettuce@Produce",
-     "1 tomato@Produce",
-     "1 jar dill pickles@Pantry",
-     "1kg potatoes@Produce",
-     "2L vegetable oil@Pantry",
+     "4 scotch fillet steaks@Meat",
+     "8 frozen hash browns@Frozen",
+     "4 tomatoes@Produce",
+     "8 eggs@Dairy",
+     "300g butter@Dairy",
      "200g dark chocolate@Pantry",
-     "280g butter@Dairy",
-     "4 eggs@Dairy",
      "200g caster sugar@Pantry",
      "150g self-raising flour@Pantry",
      "300g icing sugar@Pantry",
@@ -13307,18 +13292,17 @@
       ]
      },
      {
-      "n": "Stephanie's food truck nachos",
-      "note": "Food truck nachos with salsa, sour cream and guacamole",
-      "how": "Layer a 300g bag of corn chips with a drained tin of black beans, 200g cheddar and jalapeños. Bake at 200C for 8 minutes. Mash 2 avocados with lime and salt and spoon on with sour cream and a jar of salsa.",
+      "n": "Stephanie's food truck egg rolls",
+      "note": "Crisp pork and cabbage egg rolls.",
+      "how": "Fry 300g pork mince with 2 cups shredded cabbage, 1 grated carrot, 2 sliced spring onions and 2 tbsp soy sauce until dry. Roll a spoonful in each of 12 spring roll wrappers, sealing with water, and fry in 5cm hot oil for 3 to 4 minutes until golden.",
       "shop": [
-       "300g corn chips@Pantry",
-       "1 tin black beans@Pantry",
-       "200g cheddar@Dairy",
-       "1 jar jalapeños@Pantry",
-       "2 avocados@Produce",
-       "1 lime@Produce",
-       "150g sour cream@Dairy",
-       "1 jar salsa@Pantry"
+       "300g pork mince@Meat",
+       "1/4 cabbage@Produce",
+       "1 carrot@Produce",
+       "2 spring onions@Produce",
+       "2 tbsp soy sauce@Pantry",
+       "12 spring roll wrappers@Frozen",
+       "1L vegetable oil@Pantry"
       ]
      }
     ],
@@ -13372,14 +13356,13 @@
      "120g butter@Dairy",
      "40g parmesan@Deli",
      "1 jar black pepper@Pantry",
-     "300g corn chips@Pantry",
-     "1 tin black beans@Pantry",
-     "200g cheddar@Dairy",
-     "1 jar jalapeños@Pantry",
-     "2 avocados@Produce",
-     "1 lime@Produce",
-     "150g sour cream@Dairy",
-     "1 jar salsa@Pantry",
+     "300g pork mince@Meat",
+     "1/4 cabbage@Produce",
+     "1 carrot@Produce",
+     "2 spring onions@Produce",
+     "2 tbsp soy sauce@Pantry",
+     "12 spring roll wrappers@Frozen",
+     "1L vegetable oil@Pantry",
      "800g beef mince@Meat",
      "1 onion@Produce",
      "8 slices American cheese@Dairy",
@@ -13403,16 +13386,17 @@
    "menu": {
     "s": [
      {
-      "n": "Corral bar nachos",
-      "note": "Baked nachos with beans, cheddar, jalapeño and sour cream.",
-      "how": "Layer 230g corn chips with 1 can drained black beans, 200g grated cheddar and 2 sliced jalapeños in a baking dish, twice over. Bake at 200C for 8 minutes until melted. Top with 150g sour cream and fresh salsa made from 2 diced tomatoes, onion and coriander.",
+      "n": "Border run beef empanadas",
+      "note": "Spiced beef, egg and olive pastry half moons.",
+      "how": "Fry 400g beef mince with 1 diced onion, 1 tsp cumin and 1 tsp paprika, then stir in 2 chopped boiled eggs and 50g chopped olives. Cut 3 sheets shortcrust pastry into 12 rounds, fill, fold, crimp, brush with beaten egg and bake at 200C for 20 minutes.",
       "shop": [
-       "230g corn chips@Pantry",
-       "400g black beans@Pantry",
-       "200g cheddar@Dairy",
-       "2 jalapeños@Produce",
-       "150g sour cream@Dairy",
-       "2 tomatoes@Produce"
+       "400g beef mince@Meat",
+       "1 onion@Produce",
+       "1 tsp ground cumin@Pantry",
+       "1 tsp sweet paprika@Pantry",
+       "3 eggs@Dairy",
+       "50g pitted green olives@Deli",
+       "3 sheets shortcrust pastry@Frozen"
       ]
      },
      {
@@ -13473,14 +13457,17 @@
      }
     ],
     "shopping": [
-     "230g corn chips@Pantry",
-     "400g black beans@Pantry",
-     "350g cheddar@Dairy",
-     "2 jalapeños@Produce",
-     "150g sour cream@Dairy",
-     "4 tomatoes@Produce",
+     "400g beef mince@Meat",
+     "2 onion@Produce",
+     "1 tsp ground cumin@Pantry",
+     "1 tsp sweet paprika@Pantry",
+     "3 eggs@Dairy",
+     "50g pitted green olives@Deli",
+     "3 sheets shortcrust pastry@Frozen",
      "8 flour tortillas@Bakery",
      "1 tin refried beans@Pantry",
+     "150g cheddar@Dairy",
+     "2 tomatoes@Produce",
      "1 jalapeño@Produce",
      "800g skirt steak@Meat",
      "2 limes@Produce",
@@ -13489,7 +13476,6 @@
      "3 dried chillies@Pantry",
      "1 tomato@Produce",
      "16 corn tortillas@Bakery",
-     "1 onion@Produce",
      "1 bunch coriander@Produce",
      "3 gelatine leaves@Pantry",
      "400ml thickened cream@Dairy",
@@ -15900,19 +15886,19 @@
     ],
     "m": [
      {
-      "n": "San Dimas mall burgers",
-      "note": "Smashed double cheeseburgers with burger sauce and chips",
-      "how": "Mix 100g mayo, 2 tbsp relish and 1 tsp mustard for sauce. Smash 8 thin patties from 800g mince on a smoking griddle, add American cheese and stack two per toasted bun with pickles and sauce. Fry 1kg potato chips twice.",
+      "n": "Napoleon's chicken Marengo",
+      "note": "Chicken braised with tomato, mushrooms and white wine.",
+      "how": "Brown 1kg chicken thigh fillets in 2 tbsp olive oil and set aside. Soften 1 diced onion and 3 crushed garlic cloves, add 200g sliced mushrooms, 125ml white wine and a 400g can diced tomatoes. Return the chicken, simmer covered for 30 minutes, scatter with parsley and serve with crusty bread.",
       "shop": [
-       "1 jar mayonnaise@Pantry",
-       "1 jar sweet relish@Pantry",
-       "1 bottle yellow mustard@Pantry",
-       "800g beef mince@Meat",
-       "8 slices American cheese@Dairy",
-       "4 burger buns@Bakery",
-       "1 jar dill pickles@Pantry",
-       "1kg potatoes@Produce",
-       "2L vegetable oil@Pantry"
+       "1kg chicken thigh fillets@Meat",
+       "2 tbsp olive oil@Pantry",
+       "1 onion@Produce",
+       "3 garlic cloves@Produce",
+       "200g button mushrooms@Produce",
+       "125ml white wine@Bottle shop",
+       "400g can diced tomatoes@Pantry",
+       "1 bunch parsley@Produce",
+       "1 baguette@Bakery"
       ]
      }
     ],
@@ -15936,19 +15922,20 @@
     ],
     "d": [
      {
-      "n": "Excellent cola float",
-      "note": "Cola poured slowly over vanilla ice cream",
-      "how": "Put two scoops of vanilla ice cream in each of four tall glasses. Pour a 375ml can of cola slowly down the side of each so it foams up without spilling. Serve with long spoons and straws.",
+      "n": "Time booth grape cooler",
+      "note": "Chilled grape juice topped with soda water and lime.",
+      "how": "Fill 4 tall glasses with ice. Pour 150ml chilled grape juice into each, top with 100ml soda water and squeeze in a wedge of lime. Stir once and serve with a lime wheel on the rim.",
       "shop": [
-       "4 375ml cans cola@Drinks",
-       "500ml vanilla ice cream@Frozen"
+       "600ml grape juice@Drinks",
+       "400ml soda water@Drinks",
+       "2 limes@Produce"
       ]
      }
     ],
     "shopping": [
      "200g feta@Deli",
      "200g mixed olives@Deli",
-     "80ml olive oil@Pantry",
+     "110ml olive oil@Pantry",
      "1 lemon@Produce",
      "1 tsp dried oregano@Pantry",
      "1 crusty loaf@Bakery",
@@ -15957,17 +15944,16 @@
      "4 turkey drumsticks@Meat",
      "1 jar honey@Pantry",
      "1 jar wholegrain mustard@Pantry",
-     "1 jar mayonnaise@Pantry",
-     "1 jar sweet relish@Pantry",
-     "1 bottle yellow mustard@Pantry",
-     "800g beef mince@Meat",
-     "8 slices American cheese@Dairy",
-     "4 burger buns@Bakery",
-     "1 jar dill pickles@Pantry",
-     "1kg potatoes@Produce",
-     "2L vegetable oil@Pantry",
+     "1kg chicken thigh fillets@Meat",
+     "1 onion@Produce",
+     "3 garlic cloves@Produce",
+     "200g button mushrooms@Produce",
+     "125ml white wine@Bottle shop",
+     "400g can diced tomatoes@Pantry",
+     "1 bunch parsley@Produce",
+     "1 baguette@Bakery",
      "4 bananas@Produce",
-     "1L vanilla ice cream@Frozen",
+     "500ml vanilla ice cream@Frozen",
      "500ml chocolate ice cream@Frozen",
      "500ml strawberry ice cream@Frozen",
      "300ml thickened cream@Dairy",
@@ -15975,7 +15961,9 @@
      "1 jar sprinkles@Pantry",
      "50g mixed nuts@Pantry",
      "1 jar maraschino cherries@Pantry",
-     "4 375ml cans cola@Drinks"
+     "600ml grape juice@Drinks",
+     "400ml soda water@Drinks",
+     "2 limes@Produce"
     ]
    }
   },
@@ -17292,12 +17280,13 @@
     ],
     "d": [
      {
-      "n": "Cherry red soda",
-      "note": "Lemonade with cherry syrup and maraschino cherries",
-      "how": "Fill four tall glasses with ice. Add 2 tbsp syrup from a jar of maraschino cherries and a few cherries to each. Top with cold lemonade, about 250ml per glass, and stir until it turns cherry red.",
+      "n": "Abe Froman's sparkling lemonade",
+      "note": "Fresh lemon and sparkling water in wine glasses.",
+      "how": "Stir 125ml fresh lemon juice with 100g caster sugar until dissolved. Pour into a jug with 1L chilled sparkling mineral water and plenty of ice. Serve in wine glasses with a thin lemon slice, fancy restaurant style.",
       "shop": [
-       "1 jar maraschino cherries@Pantry",
-       "1L lemonade@Drinks"
+       "4 lemons@Produce",
+       "100g caster sugar@Pantry",
+       "1L sparkling mineral water@Drinks"
       ]
      }
     ],
@@ -17322,8 +17311,9 @@
      "380ml thickened cream@Dairy",
      "1 tsp vanilla extract@Pantry",
      "100g dark chocolate@Pantry",
-     "1 jar maraschino cherries@Pantry",
-     "1L lemonade@Drinks"
+     "4 lemons@Produce",
+     "100g caster sugar@Pantry",
+     "1L sparkling mineral water@Drinks"
     ]
    }
   },
@@ -17332,15 +17322,15 @@
    "menu": {
     "s": [
      {
-      "n": "Spider-Ham's ham sliders",
-      "note": "Baked ham and Swiss sliders with honey mustard",
-      "how": "Split 12 slider buns and spread with 2 tbsp honey mixed with 2 tbsp Dijon. Fill with 250g sliced ham and 150g Swiss cheese. Pack into a tray, cover with foil and bake at 180C for 15 minutes until melted.",
+      "n": "Spider-Ham's ham and pineapple pinwheels",
+      "note": "Ham, pineapple and cheese pastry spirals.",
+      "how": "Lay 2 sheets puff pastry flat and spread each with 1 tbsp tomato paste. Scatter with 150g chopped ham, 100g drained crushed pineapple and 120g grated mozzarella. Roll up tightly, slice into 2cm pinwheels and bake at 200C for 18 minutes.",
       "shop": [
-       "12 slider buns@Bakery",
-       "1 jar honey@Pantry",
-       "1 jar Dijon mustard@Pantry",
-       "250g leg ham@Deli",
-       "150g Swiss cheese@Deli"
+       "2 sheets puff pastry@Frozen",
+       "2 tbsp tomato paste@Pantry",
+       "150g leg ham@Deli",
+       "225g can crushed pineapple@Pantry",
+       "120g mozzarella@Dairy"
       ]
      },
      {
@@ -17408,11 +17398,11 @@
      }
     ],
     "shopping": [
-     "12 slider buns@Bakery",
-     "1 jar honey@Pantry",
-     "1 jar Dijon mustard@Pantry",
-     "250g leg ham@Deli",
-     "150g Swiss cheese@Deli",
+     "2 sheets puff pastry@Frozen",
+     "2 tbsp tomato paste@Pantry",
+     "150g leg ham@Deli",
+     "225g can crushed pineapple@Pantry",
+     "120g mozzarella@Dairy",
      "1.3kg beef mince@Meat",
      "2 onion@Produce",
      "16 slices American cheese@Dairy",
@@ -19704,17 +19694,16 @@
       ]
      },
      {
-      "n": "Rooster's piano bar sliders",
-      "note": "Pulled pork sliders with barbecue sauce and slaw",
-      "how": "Rub 1kg pork shoulder with 1 tbsp smoked paprika and 2 tbsp brown sugar, cover and roast at 150C for 5 hours. Shred with 150ml barbecue sauce. Shred a quarter cabbage with a little mayo. Pile into 12 slider buns with slaw.",
+      "n": "Piano bar prawn cocktail",
+      "note": "Prawns over iceberg with tangy cocktail sauce.",
+      "how": "Peel 500g cooked prawns, leaving the tails on. Mix 125ml whole egg mayonnaise with 3 tbsp tomato sauce, 1 tsp Worcestershire sauce, a squeeze of lemon and a dash of hot sauce. Spoon into 4 glasses over shredded iceberg lettuce and hang the prawns on the rims.",
       "shop": [
-       "1kg pork shoulder@Meat",
-       "1 jar smoked paprika@Pantry",
-       "1 bag brown sugar@Pantry",
-       "150ml barbecue sauce@Pantry",
-       "0.25 cabbage@Produce",
-       "1 jar mayonnaise@Pantry",
-       "12 slider buns@Bakery"
+       "500g cooked prawns@Seafood",
+       "125ml whole egg mayonnaise@Pantry",
+       "3 tbsp tomato sauce@Pantry",
+       "1 tsp Worcestershire sauce@Pantry",
+       "1 lemon@Produce",
+       "1/2 iceberg lettuce@Produce"
       ]
      }
     ],
@@ -19774,13 +19763,12 @@
      "1 onion@Produce",
      "1 bunch coriander@Produce",
      "150g sour cream@Dairy",
-     "1kg pork shoulder@Meat",
-     "1 jar smoked paprika@Pantry",
-     "1 bag brown sugar@Pantry",
-     "150ml barbecue sauce@Pantry",
-     "0.25 cabbage@Produce",
-     "1 jar mayonnaise@Pantry",
-     "12 slider buns@Bakery",
+     "500g cooked prawns@Seafood",
+     "125ml whole egg mayonnaise@Pantry",
+     "3 tbsp tomato sauce@Pantry",
+     "1 tsp Worcestershire sauce@Pantry",
+     "1 lemon@Produce",
+     "1/2 iceberg lettuce@Produce",
      "1kg green prawns@Seafood",
      "160g butter@Dairy",
      "3 garlic cloves@Produce",
@@ -20031,15 +20019,16 @@
     ],
     "m": [
      {
-      "n": "Emporium burgers",
-      "note": "Smashed double cheeseburgers wrapped in paper",
-      "how": "Smash 8 thin patties from 800g beef mince on a smoking griddle, salt and flip at 90 seconds, adding American cheese. Stack two per toasted bun with sliced onion and pickles. Wrap each in paper and rest a minute.",
+      "n": "Emporium chicken fried steak",
+      "note": "Crumbed Texas steaks under peppery white gravy.",
+      "how": "Pound 4 thin beef minute steaks. Dip in seasoned flour, then 2 beaten eggs, then flour again. Shallow fry in 1cm oil for 3 minutes a side. For the gravy, cook 2 tbsp flour in 2 tbsp of the oil, whisk in 500ml milk, simmer until thick and season with lots of black pepper.",
       "shop": [
-       "800g beef mince@Meat",
-       "8 slices American cheese@Dairy",
-       "4 burger buns@Bakery",
-       "1 onion@Produce",
-       "1 jar dill pickles@Pantry"
+       "4 beef minute steaks@Meat",
+       "1 cup plain flour@Pantry",
+       "2 eggs@Dairy",
+       "500ml vegetable oil@Pantry",
+       "500ml full cream milk@Dairy",
+       "1 tbsp cracked black pepper@Pantry"
       ]
      }
     ],
@@ -20074,11 +20063,12 @@
      "1 jar honey@Pantry",
      "20 pretzel rods@Pantry",
      "150g milk chocolate@Pantry",
-     "800g beef mince@Meat",
-     "8 slices American cheese@Dairy",
-     "4 burger buns@Bakery",
-     "1 onion@Produce",
-     "1 jar dill pickles@Pantry",
+     "4 beef minute steaks@Meat",
+     "1 cup plain flour@Pantry",
+     "2 eggs@Dairy",
+     "500ml vegetable oil@Pantry",
+     "500ml full cream milk@Dairy",
+     "1 tbsp cracked black pepper@Pantry",
      "1 box black tea bags@Drinks",
      "100g caster sugar@Pantry",
      "1 lemon@Produce",
@@ -21588,12 +21578,14 @@
     ],
     "d": [
      {
-      "n": "Food court cola",
-      "note": "Cola over lots of ice in big paper cups",
-      "how": "Fill four big paper cups with ice. Pour a 375ml can of cola into each and add a straw. Drink it slowly while doing absolutely nothing useful.",
+      "n": "Mall strawberry frosty",
+      "note": "Frothy strawberry, milk and vanilla ice shake.",
+      "how": "Blend 250g hulled strawberries with 500ml milk, 2 tbsp sugar, 1 tsp vanilla and 2 cups ice until frothy and thick. Pour into 4 tall glasses straight away.",
       "shop": [
-       "4 375ml cans cola@Drinks",
-       "1 bag ice@Frozen"
+       "250g strawberries@Produce",
+       "500ml milk@Dairy",
+       "2 tbsp caster sugar@Pantry",
+       "1 tsp vanilla extract@Pantry"
       ]
      }
     ],
@@ -21621,8 +21613,10 @@
      "250g plain flour@Pantry",
      "1 box bicarb soda@Pantry",
      "200g choc chips@Pantry",
-     "4 375ml cans cola@Drinks",
-     "1 bag ice@Frozen"
+     "250g strawberries@Produce",
+     "500ml milk@Dairy",
+     "2 tbsp caster sugar@Pantry",
+     "1 tsp vanilla extract@Pantry"
     ]
    }
   },
@@ -21890,13 +21884,15 @@
     ],
     "d": [
      {
-      "n": "Space ranger slushie",
-      "note": "Bright blue raspberry lemonade slushie, blitzed thick with ice",
-      "how": "Blitz 150ml blue raspberry cordial with 500ml lemonade and 4 cups of ice until slushy. Pour into four cups with spoon straws and drink it to infinity and beyond.",
+      "n": "Pizza Planet alien punch",
+      "note": "Green pineapple punch with grape aliens on sticks.",
+      "how": "Mix 1L pineapple juice with 500ml lemonade, the juice of 2 limes and a few drops of green food colouring in a jug. Add ice and a handful of green grapes on sticks as aliens, and pour into cups.",
       "shop": [
-       "1 bottle blue raspberry cordial@Drinks",
+       "1L pineapple juice@Drinks",
        "500ml lemonade@Drinks",
-       "1 bag ice@Frozen"
+       "2 limes@Produce",
+       "1 pack green food colouring@Pantry",
+       "250g green grapes@Produce"
       ]
      }
     ],
@@ -21926,9 +21922,11 @@
      "200ml full cream milk@Dairy",
      "350g icing sugar@Pantry",
      "100g fondant@Pantry",
-     "1 bottle blue raspberry cordial@Drinks",
+     "1L pineapple juice@Drinks",
      "500ml lemonade@Drinks",
-     "1 bag ice@Frozen"
+     "2 limes@Produce",
+     "1 pack green food colouring@Pantry",
+     "250g green grapes@Produce"
     ]
    }
   },
@@ -22158,19 +22156,18 @@
     ],
     "m": [
      {
-      "n": "Woodsboro burgers",
-      "note": "Cheeseburgers with the works and fries alongside",
-      "how": "Shape 800g chuck mince into 4 patties and grill to medium, melting cheddar on top under a lid. Build on toasted buns with iceberg, tomato, onion and burger sauce. Fry 1kg potatoes cut into fries, twice.",
+      "n": "Stu's party lasagne",
+      "note": "Beef ragu and ricotta lasagne under melted mozzarella.",
+      "how": "Brown 600g beef mince with 1 onion and 2 garlic cloves, add 700g tomato passata and simmer for 20 minutes. Layer in a dish with 250g lasagne sheets, 500g ricotta mixed with 1 egg, and the sauce, finishing with 200g grated mozzarella. Bake at 180C for 45 minutes.",
       "shop": [
-       "800g beef chuck mince@Meat",
-       "4 slices cheddar@Dairy",
-       "4 burger buns@Bakery",
-       "0.5 iceberg lettuce@Produce",
-       "2 tomatoes@Produce",
+       "600g beef mince@Meat",
        "1 onion@Produce",
-       "1 jar mayonnaise@Pantry",
-       "1kg potatoes@Produce",
-       "2L vegetable oil@Pantry"
+       "2 garlic cloves@Produce",
+       "700g tomato passata@Pantry",
+       "250g lasagne sheets@Pantry",
+       "500g ricotta@Deli",
+       "1 egg@Dairy",
+       "200g mozzarella@Dairy"
       ]
      }
     ],
@@ -22205,20 +22202,20 @@
      "120g popcorn kernels@Pantry",
      "175g butter@Dairy",
      "1 box fine salt@Pantry",
-     "6 tomatoes@Produce",
+     "4 tomatoes@Produce",
      "1 red onion@Produce",
      "1 jalapeño@Produce",
      "1 bunch coriander@Produce",
      "1 lime@Produce",
      "300g corn chips@Pantry",
-     "800g beef chuck mince@Meat",
-     "4 slices cheddar@Dairy",
-     "4 burger buns@Bakery",
-     "0.5 iceberg lettuce@Produce",
+     "600g beef mince@Meat",
      "1 onion@Produce",
-     "1 jar mayonnaise@Pantry",
-     "1kg potatoes@Produce",
-     "2L vegetable oil@Pantry",
+     "2 garlic cloves@Produce",
+     "700g tomato passata@Pantry",
+     "250g lasagne sheets@Pantry",
+     "500g ricotta@Deli",
+     "1 egg@Dairy",
+     "200g mozzarella@Dairy",
      "100g caster sugar@Pantry",
      "2 eggs@Dairy",
      "250g plain flour@Pantry",
@@ -22806,14 +22803,14 @@
     ],
     "d": [
      {
-      "n": "Frozen berry slushie",
-      "note": "Thick frozen berry and lemonade slushie",
-      "how": "Blend 300g frozen mixed berries with 500ml lemonade, the juice of a lemon and a cup of ice until thick and slushy. Pour into four glasses and serve with spoons.",
+      "n": "Scrat's nutty caramel milkshake",
+      "note": "Thick caramel and peanut butter milkshake.",
+      "how": "Blend 600ml cold milk with 4 scoops vanilla ice cream, 3 tbsp caramel sauce and 2 tbsp smooth peanut butter until thick. Pour into 4 glasses and drizzle a little extra caramel on top.",
       "shop": [
-       "300g mixed berries@Frozen",
-       "500ml lemonade@Drinks",
-       "1 lemon@Produce",
-       "1 bag ice@Frozen"
+       "600ml milk@Dairy",
+       "1L vanilla ice cream@Frozen",
+       "3 tbsp caramel sauce@Pantry",
+       "2 tbsp smooth peanut butter@Pantry"
       ]
      }
     ],
@@ -22839,10 +22836,10 @@
      "200g self-raising flour@Pantry",
      "200g marshmallows@Pantry",
      "100g desiccated coconut@Pantry",
-     "300g mixed berries@Frozen",
-     "500ml lemonade@Drinks",
-     "1 lemon@Produce",
-     "1 bag ice@Frozen"
+     "600ml milk@Dairy",
+     "1L vanilla ice cream@Frozen",
+     "3 tbsp caramel sauce@Pantry",
+     "2 tbsp smooth peanut butter@Pantry"
     ]
    }
   },
@@ -25470,16 +25467,17 @@
     ],
     "m": [
      {
-      "n": "Late night smash burgers",
-      "note": "Double smashed cheeseburgers with pickles and mustard",
-      "how": "Roll 800g beef mince into 8 balls and smash thin on a smoking griddle. Flip after 90 seconds, add American cheese and stack two per soft bun with pickles, onion and mustard.",
+      "n": "Night shift breakfast burritos",
+      "note": "Egg, bacon, potato and cheddar burritos, toasted.",
+      "how": "Scramble 8 eggs in 20g butter. Fry 200g diced bacon and 2 diced potatoes until crisp. Warm 4 large tortillas, fill with the eggs, bacon, potato, 100g grated cheddar and a spoon of salsa, then roll tightly and toast seam-side down in a dry pan.",
       "shop": [
-       "800g beef mince@Meat",
-       "8 slices American cheese@Dairy",
-       "1 jar dill pickles@Pantry",
-       "1 brown onion@Produce",
-       "1 bottle yellow mustard@Pantry",
-       "4 burger buns@Bakery"
+       "8 eggs@Dairy",
+       "20g butter@Dairy",
+       "200g bacon@Meat",
+       "2 potatoes@Produce",
+       "4 large flour tortillas@Bakery",
+       "100g cheddar@Dairy",
+       "1 jar tomato salsa@Pantry"
       ]
      }
     ],
@@ -25514,7 +25512,7 @@
     ],
     "shopping": [
      "2 brown onions@Produce",
-     "180g butter@Dairy",
+     "200g butter@Dairy",
      "200g sour cream@Dairy",
      "100g cream cheese@Dairy",
      "1 bunch chives@Produce",
@@ -25524,14 +25522,13 @@
      "50ml full cream milk@Dairy",
      "1 bottle vanilla extract@Pantry",
      "1 jar cinnamon@Pantry",
-     "800g beef mince@Meat",
-     "8 slices American cheese@Dairy",
-     "1 jar dill pickles@Pantry",
-     "1 brown onion@Produce",
-     "1 bottle yellow mustard@Pantry",
-     "4 burger buns@Bakery",
+     "11 eggs@Dairy",
+     "200g bacon@Meat",
+     "2 potatoes@Produce",
+     "4 large flour tortillas@Bakery",
+     "100g cheddar@Dairy",
+     "1 jar tomato salsa@Pantry",
      "200g dark chocolate@Pantry",
-     "3 eggs@Dairy",
      "250g caster sugar@Pantry",
      "80g plain flour@Pantry",
      "30g cocoa@Pantry",
@@ -28360,19 +28357,19 @@
     ],
     "m": [
      {
-      "n": "Dorry's Tavern burgers",
-      "note": "Thick tavern cheeseburgers with the works and a pile of fries",
-      "how": "Shape 800g chuck mince into 4 thick patties, season and grill to medium. Melt cheddar on top under a lid. Build on toasted buns with onion, lettuce, tomato and pickles. Fry 1kg potatoes into fries, twice.",
+      "n": "Dorry's Tavern shepherd's pie",
+      "note": "Lamb mince and carrot under golden buttery mash.",
+      "how": "Brown 800g lamb mince with 1 diced onion and 2 diced carrots. Add 2 tbsp tomato paste, 1 tbsp Worcestershire sauce and 250ml beef stock and simmer for 20 minutes. Top with mash made from 1kg potatoes, 50g butter and 100ml milk, then bake at 200C for 25 minutes.",
       "shop": [
-       "800g beef chuck mince@Meat",
-       "4 slices cheddar@Dairy",
-       "1 brown onion@Produce",
-       "0.5 iceberg lettuce@Produce",
-       "1 tomato@Produce",
-       "1 jar dill pickles@Pantry",
-       "4 burger buns@Bakery",
+       "800g lamb mince@Meat",
+       "1 onion@Produce",
+       "2 carrots@Produce",
+       "2 tbsp tomato paste@Pantry",
+       "1 tbsp Worcestershire sauce@Pantry",
+       "250ml beef stock@Pantry",
        "1kg potatoes@Produce",
-       "2L vegetable oil@Pantry"
+       "50g butter@Dairy",
+       "100ml milk@Dairy"
       ]
      }
     ],
@@ -28410,22 +28407,22 @@
      "550g plain flour@Pantry",
      "1 jar smoked paprika@Pantry",
      "1 jar garlic powder@Pantry",
-     "4L vegetable oil@Pantry",
-     "250g butter@Dairy",
+     "2L vegetable oil@Pantry",
+     "300g butter@Dairy",
      "100g brown sugar@Pantry",
      "100g golden syrup@Pantry",
      "1 jar ground ginger@Pantry",
      "1 jar cinnamon@Pantry",
      "1 box bicarb soda@Pantry",
      "200g icing sugar@Pantry",
-     "800g beef chuck mince@Meat",
-     "4 slices cheddar@Dairy",
-     "1 brown onion@Produce",
-     "0.5 iceberg lettuce@Produce",
-     "1 tomato@Produce",
-     "1 jar dill pickles@Pantry",
-     "4 burger buns@Bakery",
+     "800g lamb mince@Meat",
+     "1 onion@Produce",
+     "2 carrots@Produce",
+     "2 tbsp tomato paste@Pantry",
+     "1 tbsp Worcestershire sauce@Pantry",
+     "250ml beef stock@Pantry",
      "1kg potatoes@Produce",
+     "100ml milk@Dairy",
      "300g caster sugar@Pantry",
      "4 eggs@Dairy",
      "200g self-raising flour@Pantry",
@@ -29948,19 +29945,18 @@
     ],
     "m": [
      {
-      "n": "Sydney harbour chicken burgers",
-      "note": "Charred lemon chicken burgers with avocado and beetroot",
-      "how": "Marinate 4 chicken thighs for an hour in lemon juice, 2 crushed garlic cloves and oregano. Grill until charred and cooked through. Build on toasted buns with sliced avocado, beetroot, lettuce and a good spoon of aioli.",
+      "n": "Sydney pub chicken schnitzel",
+      "note": "Golden crumbed chicken schnitzel with chips and salad.",
+      "how": "Halve 2 large chicken breasts into 4 thin fillets. Dip in flour, 2 beaten eggs and 2 cups panko crumbs. Shallow fry in oil for 4 minutes a side until golden. Serve with lemon wedges, oven-baked chips and a green salad.",
       "shop": [
-       "4 chicken thighs@Meat",
+       "2 large chicken breasts@Meat",
+       "1/2 cup plain flour@Pantry",
+       "2 eggs@Dairy",
+       "2 cups panko breadcrumbs@Pantry",
+       "250ml vegetable oil@Pantry",
        "1 lemon@Produce",
-       "2 garlic cloves@Produce",
-       "1 jar dried oregano@Pantry",
-       "4 burger buns@Bakery",
-       "1 avocado@Produce",
-       "1 tin beetroot@Pantry",
-       "0.25 iceberg lettuce@Produce",
-       "1 jar aioli@Pantry"
+       "1kg frozen chips@Frozen",
+       "1 bag mixed salad leaves@Produce"
       ]
      }
     ],
@@ -30002,14 +29998,13 @@
      "8 slices white bread@Bakery",
      "60g butter@Dairy",
      "1 jar hundreds and thousands@Pantry",
-     "4 chicken thighs@Meat",
-     "2 garlic cloves@Produce",
-     "1 jar dried oregano@Pantry",
-     "4 burger buns@Bakery",
-     "1 avocado@Produce",
-     "1 tin beetroot@Pantry",
-     "0.25 iceberg lettuce@Produce",
-     "1 jar aioli@Pantry",
+     "2 large chicken breasts@Meat",
+     "1/2 cup plain flour@Pantry",
+     "2 eggs@Dairy",
+     "2 cups panko breadcrumbs@Pantry",
+     "250ml vegetable oil@Pantry",
+     "1kg frozen chips@Frozen",
+     "1 bag mixed salad leaves@Produce",
      "6 oranges@Produce",
      "1 jar honey@Pantry",
      "200g vanilla yoghurt@Dairy",
@@ -32303,17 +32298,15 @@
    "menu": {
     "s": [
      {
-      "n": "Times Square hot dogs",
-      "note": "Cart franks with brown mustard and spiced onion sauce",
-      "how": "Soften 2 sliced onions, add 2 tbsp tomato paste, a pinch of cinnamon and chilli and a splash of water and cook down. Simmer 8 franks for 5 minutes. Put in steamed buns with spicy mustard and the onions and wrap in paper.",
+      "n": "Times Square knishes",
+      "note": "Potato and onion pastry parcels, New York style.",
+      "how": "Mash 750g boiled potatoes with 1 onion fried soft in 30g butter, salt and pepper. Cut 2 sheets puff pastry into 12 squares, put a spoon of filling on each, fold into parcels, brush with beaten egg and bake at 200C for 20 minutes.",
       "shop": [
-       "2 brown onions@Produce",
-       "1 tube tomato paste@Pantry",
-       "1 jar cinnamon@Pantry",
-       "1 jar chilli flakes@Pantry",
-       "8 hot dog franks@Meat",
-       "8 hot dog buns@Bakery",
-       "1 bottle American mustard@Pantry"
+       "750g potatoes@Produce",
+       "1 onion@Produce",
+       "30g butter@Dairy",
+       "2 sheets puff pastry@Frozen",
+       "1 egg@Dairy"
       ]
      },
      {
@@ -32377,21 +32370,19 @@
      }
     ],
     "shopping": [
-     "4 brown onions@Produce",
-     "1 tube tomato paste@Pantry",
-     "1 jar cinnamon@Pantry",
-     "1 jar chilli flakes@Pantry",
-     "8 hot dog franks@Meat",
-     "8 hot dog buns@Bakery",
-     "1 bottle American mustard@Pantry",
+     "750g potatoes@Produce",
+     "1 onion@Produce",
+     "200g butter@Dairy",
+     "2 sheets puff pastry@Frozen",
+     "1 egg@Dairy",
      "300g mixed nuts@Pantry",
-     "170g butter@Dairy",
      "1 bunch rosemary@Produce",
      "1 box sea salt flakes@Pantry",
      "250g olives@Deli",
      "1 orange@Produce",
      "1kg chicken thighs@Meat",
      "1 bag plain flour@Pantry",
+     "2 brown onions@Produce",
      "500ml chicken stock@Pantry",
      "300g long grain rice@Pantry",
      "1 bunch kale@Produce",
@@ -33899,35 +33890,30 @@
       ]
      },
      {
-      "n": "Party nachos",
-      "note": "Baked party nachos with guacamole and sour cream",
-      "how": "Layer a 300g bag of corn chips with a drained tin of black beans, 200g cheddar and jalapeños. Bake at 200C for 8 minutes. Mash 2 avocados with lime and salt and spoon on with 150g sour cream.",
+      "n": "Party potato skins",
+      "note": "Crisp potato skins with bacon, cheddar and sour cream.",
+      "how": "Bake 6 medium potatoes at 200C for 50 minutes. Halve, scoop out most of the flesh and brush the skins with 30g melted butter. Fill with 150g fried diced bacon and 150g grated cheddar, bake 10 minutes more, then top with sour cream and chives.",
       "shop": [
-       "300g corn chips@Pantry",
-       "1 tin black beans@Pantry",
-       "200g cheddar@Dairy",
-       "1 jar jalapeños@Pantry",
-       "2 avocados@Produce",
-       "1 lime@Produce",
-       "150g sour cream@Dairy"
+       "6 medium potatoes@Produce",
+       "30g butter@Dairy",
+       "150g bacon@Meat",
+       "150g cheddar@Dairy",
+       "200ml sour cream@Dairy",
+       "1 bunch chives@Produce"
       ]
      }
     ],
     "m": [
      {
-      "n": "Lawn mowing money burger",
-      "note": "Smashed cheeseburgers with mustard mayo and crinkle fries",
-      "how": "Smash 8 thin patties from 800g beef mince on a smoking griddle and add American cheese. Mix 100g mayo with 1 tbsp mustard. Stack two per toasted bun with pickles, onion and the sauce. Fry 1kg crinkle-cut potatoes twice.",
+      "n": "Tucson red chilli enchiladas",
+      "note": "Chicken and cheese enchiladas baked in red chilli sauce.",
+      "how": "Simmer 400g shredded cooked chicken in 500ml red enchilada sauce for 5 minutes. Fill 8 warmed corn tortillas with the chicken and 150g grated cheddar, roll and lay in a baking dish. Pour over 250ml more sauce, top with 100g cheddar and bake at 190C for 20 minutes. Scatter with coriander.",
       "shop": [
-       "800g beef mince@Meat",
-       "8 slices American cheese@Dairy",
-       "100g mayonnaise@Pantry",
-       "1 bottle yellow mustard@Pantry",
-       "4 burger buns@Bakery",
-       "1 jar dill pickles@Pantry",
-       "1 brown onion@Produce",
-       "1kg potatoes@Produce",
-       "2L vegetable oil@Pantry"
+       "400g cooked chicken@Deli",
+       "750ml red enchilada sauce@Pantry",
+       "8 corn tortillas@Bakery",
+       "250g cheddar@Dairy",
+       "1 bunch coriander@Produce"
       ]
      }
     ],
@@ -33967,21 +33953,16 @@
      "1 onion@Produce",
      "1 bottle yellow mustard@Pantry",
      "1 jar jalapeño salsa@Pantry",
-     "300g corn chips@Pantry",
-     "1 tin black beans@Pantry",
-     "200g cheddar@Dairy",
-     "1 jar jalapeños@Pantry",
-     "2 avocados@Produce",
-     "1 lime@Produce",
-     "150g sour cream@Dairy",
-     "800g beef mince@Meat",
-     "8 slices American cheese@Dairy",
-     "100g mayonnaise@Pantry",
-     "4 burger buns@Bakery",
-     "1 jar dill pickles@Pantry",
-     "1 brown onion@Produce",
-     "1kg potatoes@Produce",
-     "2L vegetable oil@Pantry",
+     "6 medium potatoes@Produce",
+     "30g butter@Dairy",
+     "150g bacon@Meat",
+     "400g cheddar@Dairy",
+     "200ml sour cream@Dairy",
+     "1 bunch chives@Produce",
+     "400g cooked chicken@Deli",
+     "750ml red enchilada sauce@Pantry",
+     "8 corn tortillas@Bakery",
+     "1 bunch coriander@Produce",
      "100g dark chocolate@Pantry",
      "300ml thickened cream@Dairy",
      "1L vanilla ice cream@Frozen",
@@ -34229,20 +34210,15 @@
       ]
      },
      {
-      "n": "Bike cop corn dogs",
-      "note": "Golden corn dogs with mustard and tomato sauce",
-      "how": "Whisk 150g cornmeal, 100g flour, 2 tbsp sugar, 2 tsp baking powder, 1 egg and 250ml buttermilk. Pat 8 franks dry and push onto sticks. Dip and fry at 180C for 4 minutes. Serve with mustard and tomato sauce.",
+      "n": "Undercover cheese quesadillas",
+      "note": "Crisp cheese and jalapeño quesadillas with salsa.",
+      "how": "Lay 4 large tortillas flat and cover half of each with 200g grated cheddar, sliced spring onion and a few pickled jalapeños. Fold over and cook in a dry pan for 2 to 3 minutes a side until crisp and melted. Cut into wedges and serve with salsa.",
       "shop": [
-       "150g fine cornmeal@Pantry",
-       "100g plain flour@Pantry",
-       "1 bag caster sugar@Pantry",
-       "1 tin baking powder@Pantry",
-       "1 egg@Dairy",
-       "250ml buttermilk@Dairy",
-       "8 hot dog franks@Meat",
-       "1 bottle yellow mustard@Pantry",
-       "1 bottle tomato sauce@Pantry",
-       "1L vegetable oil@Pantry"
+       "4 large flour tortillas@Bakery",
+       "200g cheddar@Dairy",
+       "2 spring onions@Produce",
+       "1 jar pickled jalapeños@Pantry",
+       "1 jar tomato salsa@Pantry"
       ]
      }
     ],
@@ -34300,15 +34276,11 @@
      "1 jar dried oregano@Pantry",
      "250g mozzarella@Dairy",
      "100g pepperoni@Deli",
-     "150g fine cornmeal@Pantry",
-     "100g plain flour@Pantry",
-     "1 tin baking powder@Pantry",
-     "1 egg@Dairy",
-     "250ml buttermilk@Dairy",
-     "8 hot dog franks@Meat",
-     "1 bottle yellow mustard@Pantry",
-     "1 bottle tomato sauce@Pantry",
-     "1L vegetable oil@Pantry",
+     "4 large flour tortillas@Bakery",
+     "200g cheddar@Dairy",
+     "2 spring onions@Produce",
+     "1 jar pickled jalapeños@Pantry",
+     "1 jar tomato salsa@Pantry",
      "1kg potatoes@Produce",
      "450ml thickened cream@Dairy",
      "1 garlic clove@Produce",
@@ -36517,17 +36489,18 @@
       ]
      },
      {
-      "n": "Smeerensburg feud sliders",
-      "note": "Two rival sliders, beef cheddar and pork apple sage",
-      "how": "Make 6 beef sliders from 300g mince with cheddar and pickles, and 6 pork sliders from 300g mince with grated apple and sage. Serve side by side in 12 slider buns so both families get their own.",
+      "n": "Feuding family meatballs",
+      "note": "Little Nordic meatballs with allspice and cranberry sauce.",
+      "how": "Mix 500g pork and beef mince with 1/2 cup breadcrumbs soaked in 60ml milk, 1 egg, 1 grated onion, 1/4 tsp ground allspice and salt. Roll into 24 small balls and brown in 20g butter for 10 minutes. Serve on toothpicks with cranberry sauce.",
       "shop": [
-       "300g beef mince@Meat",
-       "300g pork mince@Meat",
-       "6 slices cheddar@Dairy",
-       "1 jar dill pickles@Pantry",
-       "1 green apple@Produce",
-       "1 bunch sage@Produce",
-       "12 slider buns@Bakery"
+       "500g pork and beef mince@Meat",
+       "1/2 cup breadcrumbs@Pantry",
+       "60ml milk@Dairy",
+       "1 egg@Dairy",
+       "1 onion@Produce",
+       "1/4 tsp ground allspice@Pantry",
+       "20g butter@Dairy",
+       "1 jar cranberry sauce@Pantry"
       ]
      }
     ],
@@ -36584,20 +36557,20 @@
      "1 lemon@Produce",
      "12 rye crispbreads@Pantry",
      "1 jar pickled onions@Pantry",
-     "300g beef mince@Meat",
-     "300g pork mince@Meat",
-     "6 slices cheddar@Dairy",
-     "1 jar dill pickles@Pantry",
-     "1 green apple@Produce",
-     "1 bunch sage@Produce",
-     "12 slider buns@Bakery",
+     "500g pork and beef mince@Meat",
+     "1/2 cup breadcrumbs@Pantry",
+     "60ml milk@Dairy",
+     "1 egg@Dairy",
+     "1 onion@Produce",
+     "1/4 tsp ground allspice@Pantry",
+     "205g butter@Dairy",
+     "1 jar cranberry sauce@Pantry",
      "1.2kg beef chuck@Meat",
      "2 brown onions@Produce",
      "3 carrots@Produce",
      "1 jar juniper berries@Pantry",
      "375ml stout@Bottle shop",
      "1kg potatoes@Produce",
-     "185g butter@Dairy",
      "100g brown sugar@Pantry",
      "100g golden syrup@Pantry",
      "300g plain flour@Pantry",
@@ -36641,18 +36614,17 @@
     ],
     "m": [
      {
-      "n": "Prom night burgers",
-      "note": "Smashed double cheeseburgers with crinkle fries",
-      "how": "Smash 8 thin patties from 800g chuck mince on a hot griddle and add American cheese. Stack two per toasted bun with pickles, onion and burger sauce. Fry 1kg crinkle-cut potatoes twice.",
+      "n": "Pool party teriyaki chicken",
+      "note": "Teriyaki chicken skewers with rice and sesame seeds.",
+      "how": "Toss 1kg diced chicken thigh in 125ml teriyaki sauce with 1 tbsp grated ginger and 2 crushed garlic cloves and marinate for 30 minutes. Thread onto 12 skewers and grill for 10 to 12 minutes, turning and basting. Serve with steamed rice and sesame seeds.",
       "shop": [
-       "800g beef chuck mince@Meat",
-       "8 slices American cheese@Dairy",
-       "1 jar dill pickles@Pantry",
-       "1 brown onion@Produce",
-       "4 burger buns@Bakery",
-       "1 jar mayonnaise@Pantry",
-       "1kg potatoes@Produce",
-       "2L vegetable oil@Pantry"
+       "1kg chicken thigh fillets@Meat",
+       "125ml teriyaki sauce@Pantry",
+       "1 knob ginger@Produce",
+       "2 garlic cloves@Produce",
+       "12 bamboo skewers@Pantry",
+       "2 cups jasmine rice@Pantry",
+       "1 tbsp sesame seeds@Pantry"
       ]
      }
     ],
@@ -36693,14 +36665,13 @@
      "1 jar garlic powder@Pantry",
      "1 bag brown sugar@Pantry",
      "100ml barbecue sauce@Pantry",
-     "800g beef chuck mince@Meat",
-     "8 slices American cheese@Dairy",
-     "1 jar dill pickles@Pantry",
-     "1 brown onion@Produce",
-     "4 burger buns@Bakery",
-     "1 jar mayonnaise@Pantry",
-     "1kg potatoes@Produce",
-     "2L vegetable oil@Pantry",
+     "1kg chicken thigh fillets@Meat",
+     "125ml teriyaki sauce@Pantry",
+     "1 knob ginger@Produce",
+     "2 garlic cloves@Produce",
+     "12 bamboo skewers@Pantry",
+     "2 cups jasmine rice@Pantry",
+     "1 tbsp sesame seeds@Pantry",
      "500g Greek yoghurt@Dairy",
      "1 jar honey@Pantry",
      "1 bottle vanilla extract@Pantry",
@@ -37046,17 +37017,14 @@
       ]
      },
      {
-      "n": "Band camp sliders",
-      "note": "Smashed cheddar sliders with pickles and mustard mayo",
-      "how": "Smash 12 small patties from 500g beef mince on a hot grill and melt cheddar on each. Mix 100g mayo with 1 tbsp mustard. Build in 12 slider buns with pickles, sliced onion and the mustard mayo.",
+      "n": "Band camp grilled corn",
+      "note": "Charred corn wheels with smoky paprika butter and lime.",
+      "how": "Cut 4 corn cobs into thirds and boil for 4 minutes. Drain, then char on a hot grill pan for 6 to 8 minutes, turning. Melt 60g butter with 1 tsp smoked paprika and a pinch of salt, brush over the corn and squeeze over 1 lime to serve.",
       "shop": [
-       "500g beef mince@Meat",
-       "12 slices cheddar@Dairy",
-       "100g mayonnaise@Pantry",
-       "1 bottle yellow mustard@Pantry",
-       "12 slider buns@Bakery",
-       "1 jar dill pickles@Pantry",
-       "1 brown onion@Produce"
+       "4 corn cobs@Produce",
+       "60g butter@Dairy",
+       "1 tsp smoked paprika@Pantry",
+       "1 lime@Produce"
       ]
      }
     ],
@@ -37111,17 +37079,13 @@
     "shopping": [
      "1kg chicken wings@Meat",
      "80ml hot sauce@Pantry",
-     "110g butter@Dairy",
+     "170g butter@Dairy",
      "80g blue cheese@Deli",
      "150g sour cream@Dairy",
      "3 celery sticks@Produce",
-     "500g beef mince@Meat",
-     "12 slices cheddar@Dairy",
-     "100g mayonnaise@Pantry",
-     "1 bottle yellow mustard@Pantry",
-     "12 slider buns@Bakery",
-     "1 jar dill pickles@Pantry",
-     "1 brown onion@Produce",
+     "4 corn cobs@Produce",
+     "1 tsp smoked paprika@Pantry",
+     "1 lime@Produce",
      "2 chicken breasts@Meat",
      "1 bag plain flour@Pantry",
      "2 eggs@Dairy",
@@ -37211,13 +37175,13 @@
     ],
     "d": [
      {
-      "n": "Ice-cold soda",
-      "note": "Cola over ice with lime, sipped in the shade",
-      "how": "Fill four glasses with ice and a squeeze of lime. Pour a 375ml can of cola over each and drink it in the shade between cars.",
+      "n": "Lunch truck watermelon agua fresca",
+      "note": "Fresh watermelon and lime cooler over ice.",
+      "how": "Blend 1kg seedless watermelon flesh with 500ml cold water, the juice of 2 limes and 2 tbsp sugar until smooth. Strain into a jug, chill and pour over ice with lime wedges.",
       "shop": [
-       "4 375ml cans cola@Drinks",
-       "1 bag ice@Frozen",
-       "2 limes@Produce"
+       "1kg seedless watermelon@Produce",
+       "2 limes@Produce",
+       "2 tbsp caster sugar@Pantry"
       ]
      }
     ],
@@ -37243,9 +37207,9 @@
      "150g mixed berries@Frozen",
      "1 bag caster sugar@Pantry",
      "1 packet icy pole sticks@Pantry",
-     "4 375ml cans cola@Drinks",
-     "1 bag ice@Frozen",
-     "2 limes@Produce"
+     "1kg seedless watermelon@Produce",
+     "2 limes@Produce",
+     "2 tbsp caster sugar@Pantry"
     ]
    }
   },
@@ -38099,16 +38063,15 @@
    "menu": {
     "s": [
      {
-      "n": "Flying V nachos",
-      "note": "Nachos arranged in a V formation on the tray",
-      "how": "Arrange a 300g bag of corn chips in a V on a tray. Layer with a drained tin of black beans, 200g cheddar and jalapeños. Bake at 200C for 8 minutes. Top with diced tomato and 150g sour cream. Quack, quack, quack.",
+      "n": "Minnesota fried cheese bites",
+      "note": "Golden battered cheese bites with ranch dip.",
+      "how": "Cut 400g firm mozzarella into 2cm cubes. Whisk 1 cup self-raising flour with 250ml cold milk and a pinch of salt. Dip the cubes in the batter and fry in 5cm hot oil for 1 to 2 minutes until golden. Serve with ranch dressing.",
       "shop": [
-       "300g corn chips@Pantry",
-       "1 tin black beans@Pantry",
-       "200g cheddar@Dairy",
-       "1 jar jalapeños@Pantry",
-       "2 tomatoes@Produce",
-       "150g sour cream@Dairy"
+       "400g firm mozzarella@Deli",
+       "1 cup self-raising flour@Pantry",
+       "250ml milk@Dairy",
+       "1L vegetable oil@Pantry",
+       "200ml ranch dressing@Pantry"
       ]
      },
      {
@@ -38167,12 +38130,11 @@
      }
     ],
     "shopping": [
-     "300g corn chips@Pantry",
-     "1 tin black beans@Pantry",
-     "200g cheddar@Dairy",
-     "1 jar jalapeños@Pantry",
-     "2 tomatoes@Produce",
-     "150g sour cream@Dairy",
+     "400g firm mozzarella@Deli",
+     "1 cup self-raising flour@Pantry",
+     "250ml milk@Dairy",
+     "1L vegetable oil@Pantry",
+     "200ml ranch dressing@Pantry",
      "1.3kg beef mince@Meat",
      "4 slices American cheese@Dairy",
      "8 slider buns@Bakery",
@@ -41223,17 +41185,15 @@
       ]
      },
      {
-      "n": "Sanctum spell nachos",
-      "note": "Piled-high baked nachos with salsa and guacamole",
-      "how": "Pile a 300g bag of corn chips with a drained tin of black beans, 200g grated cheddar and sliced jalapeños. Bake at 200C for 8 minutes. Mash 2 avocados with lime and top with diced tomato and the guacamole.",
+      "n": "Sanctum spell garlic knots",
+      "note": "Soft dough knots in garlic butter and parmesan.",
+      "how": "Cut 500g pizza dough into 16 strips, tie each into a loose knot and place on a lined tray. Bake at 220C for 12 minutes. Toss straight away in 50g butter melted with 3 crushed garlic cloves, chopped parsley and 30g grated parmesan.",
       "shop": [
-       "300g corn chips@Pantry",
-       "1 tin black beans@Pantry",
-       "200g cheddar@Dairy",
-       "1 jar jalapeños@Pantry",
-       "2 avocados@Produce",
-       "1 lime@Produce",
-       "2 tomatoes@Produce"
+       "500g pizza dough@Bakery",
+       "50g butter@Dairy",
+       "3 garlic cloves@Produce",
+       "1 bunch parsley@Produce",
+       "30g parmesan@Deli"
       ]
      }
     ],
@@ -41284,23 +41244,19 @@
     ],
     "shopping": [
      "1 brown onion@Produce",
-     "6 garlic cloves@Produce",
+     "9 garlic cloves@Produce",
      "1 jar ground cumin@Pantry",
      "4 tins crushed tomatoes@Pantry",
      "150g red lentils@Pantry",
      "4 slices white bread@Bakery",
-     "300g cheddar@Dairy",
-     "150g butter@Dairy",
-     "300g corn chips@Pantry",
-     "1 tin black beans@Pantry",
-     "1 jar jalapeños@Pantry",
-     "2 avocados@Produce",
-     "1 lime@Produce",
-     "2 tomatoes@Produce",
+     "100g cheddar@Dairy",
+     "200g butter@Dairy",
+     "500g pizza dough@Bakery",
+     "1 bunch parsley@Produce",
+     "110g parmesan@Deli",
      "600g beef mince@Meat",
      "50g breadcrumbs@Pantry",
      "2 egg@Dairy",
-     "80g parmesan@Deli",
      "500g spaghetti@Pantry",
      "1 baguette@Bakery",
      "350g plain flour@Pantry",
@@ -42717,17 +42673,15 @@
       ]
      },
      {
-      "n": "Luis's long story nachos",
-      "note": "Loaded nachos big enough to last the whole story",
-      "how": "Layer a 300g bag of corn chips with a drained tin of black beans, 200g cheddar and jalapeños and bake at 200C for 8 minutes. Top with diced tomato, mashed avocado with lime and 150g sour cream.",
+      "n": "Luis's long story taquitos",
+      "note": "Crisp rolled chicken and cheese taquitos.",
+      "how": "Mix 300g shredded cooked chicken with 100g grated cheddar and 2 tbsp salsa. Roll a spoonful tightly in each of 12 warmed small corn tortillas, brush with oil and bake seam-side down at 220C for 15 minutes until crisp. Serve with sour cream.",
       "shop": [
-       "300g corn chips@Pantry",
-       "1 tin black beans@Pantry",
-       "200g cheddar@Dairy",
-       "1 jar jalapeños@Pantry",
-       "2 tomatoes@Produce",
-       "2 avocados@Produce",
-       "1 lime@Produce",
+       "300g cooked chicken@Deli",
+       "100g cheddar@Dairy",
+       "1 jar tomato salsa@Pantry",
+       "12 small corn tortillas@Bakery",
+       "2 tbsp vegetable oil@Pantry",
        "150g sour cream@Dairy"
       ]
      }
@@ -42783,17 +42737,16 @@
      "1 tbsp sesame seeds@Pantry",
      "150g feta@Deli",
      "100g Greek yoghurt@Dairy",
-     "300g corn chips@Pantry",
-     "2 tins black beans@Pantry",
-     "300g cheddar@Dairy",
-     "1 jar jalapeños@Pantry",
-     "2 tomatoes@Produce",
-     "2 avocados@Produce",
-     "1 lime@Produce",
+     "300g cooked chicken@Deli",
+     "200g cheddar@Dairy",
+     "1 jar tomato salsa@Pantry",
+     "12 small corn tortillas@Bakery",
+     "2 tbsp vegetable oil@Pantry",
      "300g sour cream@Dairy",
      "600g chicken thighs@Meat",
      "200g long grain rice@Pantry",
      "4 flour tortillas@Bakery",
+     "1 tin black beans@Pantry",
      "1 jar salsa@Pantry",
      "100g dark chocolate@Pantry",
      "300ml thickened cream@Dairy",
@@ -43730,15 +43683,14 @@
    "menu": {
     "s": [
      {
-      "n": "Speakeasy cocktail franks",
-      "note": "Cocktail franks in mustard puff pastry with sesame on top",
-      "how": "Simmer 24 cocktail franks for 3 minutes and drain. Spread 2 sheets of puff pastry with a little Dijon, cut into strips and roll one around each frank. Brush with beaten egg, sprinkle with sesame seeds and bake at 200C for 15 minutes until golden.",
+      "n": "Onyx Club devils on horseback",
+      "note": "Bacon-wrapped prunes stuffed with blue cheese.",
+      "how": "Stuff 24 pitted prunes with a small piece of blue cheese, 100g in total. Wrap each in half a rasher of streaky bacon, using 12 rashers, and secure with a toothpick. Bake at 200C for 15 minutes until the bacon is crisp.",
       "shop": [
-       "24 cocktail franks@Deli",
-       "2 sheets puff pastry@Frozen",
-       "1 jar Dijon mustard@Pantry",
-       "1 egg@Dairy",
-       "1 jar sesame seeds@Pantry"
+       "24 pitted prunes@Pantry",
+       "100g blue cheese@Deli",
+       "12 rashers streaky bacon@Meat",
+       "1 pack toothpicks@Pantry"
       ]
      },
      {
@@ -43796,11 +43748,12 @@
      }
     ],
     "shopping": [
-     "24 cocktail franks@Deli",
-     "3 sheets puff pastry@Frozen",
-     "1 jar Dijon mustard@Pantry",
-     "2 egg@Dairy",
-     "1 jar sesame seeds@Pantry",
+     "24 pitted prunes@Pantry",
+     "100g blue cheese@Deli",
+     "12 rashers streaky bacon@Meat",
+     "1 pack toothpicks@Pantry",
+     "1 sheet puff pastry@Frozen",
+     "1 egg@Dairy",
      "200g parmesan@Dairy",
      "1 jar sweet paprika@Pantry",
      "500g pizza dough@Deli",
@@ -44421,15 +44374,14 @@
       ]
      },
      {
-      "n": "Football field sliders",
-      "note": "Cheeseburger sliders with pickles and mustard and a toothpick flag",
-      "how": "Shape 500g beef mince into 8 small patties and season. Fry for 2 minutes a side, adding a slice of cheddar to each at the end. Fill 8 slider buns with the patties, pickles and mustard, then stick a little paper flag on a toothpick into each.",
+      "n": "Ohio buckeye bites",
+      "note": "Peanut butter balls half-dipped in dark chocolate.",
+      "how": "Beat 250g smooth peanut butter with 60g soft butter and 2 cups icing sugar until it holds together. Roll into 24 balls and chill for 30 minutes. Dip each in 200g melted dark chocolate, leaving a round of peanut butter showing on top, then chill until set.",
       "shop": [
-       "500g beef mince@Meat",
-       "8 slices cheddar@Dairy",
-       "1 jar dill pickles@Pantry",
-       "1 jar yellow mustard@Pantry",
-       "8 slider buns@Bakery"
+       "250g smooth peanut butter@Pantry",
+       "60g butter@Dairy",
+       "2 cups icing sugar@Pantry",
+       "200g dark chocolate@Pantry"
       ]
      }
     ],
@@ -44483,11 +44435,10 @@
      "200ml sour cream@Dairy",
      "1 jar mayonnaise@Pantry",
      "1 bunch celery@Produce",
-     "500g beef mince@Meat",
-     "8 slices cheddar@Dairy",
-     "1 jar dill pickles@Pantry",
-     "1 jar yellow mustard@Pantry",
-     "8 slider buns@Bakery",
+     "250g smooth peanut butter@Pantry",
+     "185g butter@Dairy",
+     "2 cups icing sugar@Pantry",
+     "200g dark chocolate@Pantry",
      "1.5kg beef chuck@Meat",
      "1 brown onion@Produce",
      "3 carrots@Produce",
@@ -44495,7 +44446,6 @@
      "800g potatoes@Produce",
      "250g plain flour@Pantry",
      "1 box cocoa@Pantry",
-     "125g butter@Dairy",
      "150g brown sugar@Pantry",
      "1 egg@Dairy",
      "1 bag icing sugar@Pantry",
@@ -45204,16 +45154,16 @@
    "menu": {
     "s": [
      {
-      "n": "House party nachos",
-      "note": "Loaded nachos with beans, cheddar, jalapeno, guacamole and sour cream",
-      "how": "Layer 2 bags of corn chips on a tray with a can of drained black beans, grated cheddar and sliced jalapenos. Bake at 200C for 8 minutes until the cheese melts. Top with mashed avocado, salsa and spoons of sour cream and serve on the tray.",
+      "n": "House party cob loaf",
+      "note": "Hot cheese, bacon and onion dip baked in a cob loaf.",
+      "how": "Hollow out 1 cob loaf, keeping the lid. Mix 250g cream cheese, 300ml sour cream, 150g diced fried bacon, 150g grated cheddar and 1 packet French onion soup mix. Fill the loaf, wrap in foil and bake at 180C for 40 minutes. Tear the hollowed bread into chunks for dipping.",
       "shop": [
-       "2 bags corn chips@Pantry",
-       "1 can black beans@Pantry",
-       "250g cheddar@Dairy",
-       "1 jar jalapenos@Pantry",
-       "2 avocados@Produce",
-       "300ml sour cream@Dairy"
+       "1 cob loaf@Bakery",
+       "250g cream cheese@Dairy",
+       "300ml sour cream@Dairy",
+       "150g bacon@Meat",
+       "150g cheddar@Dairy",
+       "1 packet French onion soup mix@Pantry"
       ]
      },
      {
@@ -45274,12 +45224,12 @@
      }
     ],
     "shopping": [
-     "2 bags corn chips@Pantry",
-     "1 can black beans@Pantry",
-     "250g cheddar@Dairy",
-     "1 jar jalapenos@Pantry",
-     "2 avocados@Produce",
+     "1 cob loaf@Bakery",
+     "250g cream cheese@Dairy",
      "500ml sour cream@Dairy",
+     "150g bacon@Meat",
+     "150g cheddar@Dairy",
+     "1 packet French onion soup mix@Pantry",
      "1kg chicken wings@Meat",
      "1 bottle hot sauce@Pantry",
      "500g butter@Dairy",
@@ -47714,16 +47664,17 @@
    "menu": {
     "s": [
      {
-      "n": "Bogey's party nachos",
-      "note": "Loaded nachos with beans, cheese, jalapeno, guacamole and sour cream",
-      "how": "Layer corn chips on a tray with a drained can of black beans, grated cheddar and sliced jalapenos. Bake at 200C for 8 minutes until the cheese melts. Top with fresh salsa, smashed avocado and spoons of sour cream and serve on the tray.",
+      "n": "Bogey's party spinach dip",
+      "note": "Hot spinach and artichoke dip with toasted baguette.",
+      "how": "Mix 250g softened cream cheese with 100g sour cream, 250g thawed spinach squeezed dry, 1 jar drained chopped artichoke hearts, 1 crushed garlic clove and 100g grated mozzarella. Bake at 190C for 20 minutes until bubbling and serve with toasted baguette slices.",
       "shop": [
-       "2 bags corn chips@Pantry",
-       "1 can black beans@Pantry",
-       "250g cheddar@Dairy",
-       "1 jar jalapenos@Pantry",
-       "2 avocados@Produce",
-       "300ml sour cream@Dairy"
+       "250g cream cheese@Dairy",
+       "100g sour cream@Dairy",
+       "250g frozen spinach@Frozen",
+       "1 jar artichoke hearts@Pantry",
+       "1 garlic clove@Produce",
+       "100g mozzarella@Dairy",
+       "1 baguette@Bakery"
       ]
      },
      {
@@ -47784,12 +47735,13 @@
      }
     ],
     "shopping": [
-     "2 bags corn chips@Pantry",
-     "1 can black beans@Pantry",
-     "250g cheddar@Dairy",
-     "1 jar jalapenos@Pantry",
-     "2 avocados@Produce",
-     "300ml sour cream@Dairy",
+     "250g cream cheese@Dairy",
+     "100g sour cream@Dairy",
+     "250g frozen spinach@Frozen",
+     "1 jar artichoke hearts@Pantry",
+     "1 garlic clove@Produce",
+     "100g mozzarella@Dairy",
+     "1 baguette@Bakery",
      "1 loaf white bread@Bakery",
      "200g leg ham@Deli",
      "200g gruyere@Deli",
@@ -48007,14 +47959,15 @@
    "menu": {
     "s": [
      {
-      "n": "Reno lounge cocktail franks",
-      "note": "Sticky bourbon barbecue cocktail franks served on toothpicks",
-      "how": "Simmer 24 cocktail franks for 3 minutes and drain. Warm 125ml barbecue sauce with 2 tbsp brown sugar and a splash of bourbon until bubbling and sticky. Toss the franks through the glaze, spear each with a toothpick and serve warm like a Reno lounge.",
+      "n": "Reno lounge stuffed mushrooms",
+      "note": "Mushroom caps stuffed with bacon, garlic and parmesan.",
+      "how": "Remove the stems from 20 button mushrooms and chop the stems. Fry with 2 rashers diced bacon and 1 crushed garlic clove, then mix with 1/2 cup breadcrumbs and 50g grated parmesan. Fill the caps and bake at 200C for 15 minutes.",
       "shop": [
-       "24 cocktail franks@Deli",
-       "1 bottle barbecue sauce@Pantry",
-       "100g brown sugar@Pantry",
-       "1 bottle bourbon@Bottle shop"
+       "20 button mushrooms@Produce",
+       "2 rashers bacon@Meat",
+       "1 garlic clove@Produce",
+       "1/2 cup breadcrumbs@Pantry",
+       "50g parmesan@Dairy"
       ]
      },
      {
@@ -48074,10 +48027,11 @@
      }
     ],
     "shopping": [
-     "24 cocktail franks@Deli",
-     "1 bottle barbecue sauce@Pantry",
-     "100g brown sugar@Pantry",
-     "1 bottle bourbon@Bottle shop",
+     "20 button mushrooms@Produce",
+     "2 rashers bacon@Meat",
+     "1 garlic clove@Produce",
+     "1/2 cup breadcrumbs@Pantry",
+     "50g parmesan@Dairy",
      "450g self-raising flour@Pantry",
      "250g butter@Dairy",
      "1.3L full cream milk@Dairy",
@@ -48215,16 +48169,14 @@
       ]
      },
      {
-      "n": "Amusement park corn dogs",
-      "note": "Golden cornmeal-battered mini franks with mustard for dipping",
-      "how": "Whisk 100g cornmeal, 100g flour, a teaspoon of baking powder and 250ml buttermilk to a thick batter. Pat 24 cocktail franks dry, push a skewer into each, dip in batter and fry at 180C for 3 minutes until golden. Serve with mustard and tomato sauce.",
+      "n": "Glen and Annie's grilled cheese soldiers",
+      "note": "Toasted cheese sandwiches cut into dipping fingers.",
+      "how": "Butter 8 slices of bread on the outside and sandwich with 8 slices cheddar. Cook in a pan over medium heat for 3 minutes a side until golden and melted. Cut each sandwich into 4 fingers and serve warm with tomato sauce for dipping.",
       "shop": [
-       "24 cocktail franks@Deli",
-       "500g fine cornmeal@Pantry",
-       "100g plain flour@Pantry",
-       "250ml buttermilk@Dairy",
-       "1 jar yellow mustard@Pantry",
-       "1 bottle vegetable oil@Pantry"
+       "8 slices white bread@Bakery",
+       "40g butter@Dairy",
+       "8 slices cheddar@Dairy",
+       "1 bottle tomato sauce@Pantry"
       ]
      }
     ],
@@ -48273,12 +48225,10 @@
      "1 jar honey@Pantry",
      "1 knob ginger@Produce",
      "2 limes@Produce",
-     "24 cocktail franks@Deli",
-     "500g fine cornmeal@Pantry",
-     "100g plain flour@Pantry",
-     "250ml buttermilk@Dairy",
-     "1 jar yellow mustard@Pantry",
-     "1 bottle vegetable oil@Pantry",
+     "8 slices white bread@Bakery",
+     "40g butter@Dairy",
+     "8 slices cheddar@Dairy",
+     "1 bottle tomato sauce@Pantry",
      "1kg chicken thighs@Meat",
      "2 lemons@Produce",
      "1 head garlic@Produce",
@@ -48905,16 +48855,16 @@
       ]
      },
      {
-      "n": "Liz's party nachos",
-      "note": "Party nachos with beans, cheddar, jalapeño, salsa and sour cream.",
-      "how": "Layer 230g corn chips with 1 can drained black beans, 200g grated cheddar and 2 sliced jalapeños, twice over. Bake at 200C for 8 minutes. Top with 2 diced tomatoes, 150g sour cream and coriander, and serve straight from the dish.",
+      "n": "Liz's party buffalo cauliflower",
+      "note": "Spicy baked cauliflower bites with blue cheese dip.",
+      "how": "Cut 1 cauliflower into florets. Toss in a batter of 3/4 cup flour, 180ml water and 1 tsp garlic powder and bake at 220C for 20 minutes. Toss in 80ml hot sauce mixed with 30g melted butter, bake 10 minutes more and serve with blue cheese dressing.",
       "shop": [
-       "230g corn chips@Pantry",
-       "400g black beans@Pantry",
-       "200g cheddar@Dairy",
-       "2 jalapeños@Produce",
-       "2 tomatoes@Produce",
-       "150g sour cream@Dairy"
+       "1 cauliflower@Produce",
+       "3/4 cup plain flour@Pantry",
+       "1 tsp garlic powder@Pantry",
+       "80ml hot sauce@Pantry",
+       "30g butter@Dairy",
+       "200ml blue cheese dressing@Pantry"
       ]
      }
     ],
@@ -48964,13 +48914,12 @@
      "100g popping corn@Pantry",
      "1 bag pretzels@Pantry",
      "4 red apples@Produce",
-     "500g butter@Dairy",
-     "230g corn chips@Pantry",
-     "400g black beans@Pantry",
-     "200g cheddar@Dairy",
-     "2 jalapeños@Produce",
-     "2 tomatoes@Produce",
-     "150g sour cream@Dairy",
+     "530g butter@Dairy",
+     "1 cauliflower@Produce",
+     "3/4 cup plain flour@Pantry",
+     "1 tsp garlic powder@Pantry",
+     "80ml hot sauce@Pantry",
+     "200ml blue cheese dressing@Pantry",
      "4 long bread rolls@Bakery",
      "150g salami@Deli",
      "150g leg ham@Deli",
@@ -49893,15 +49842,15 @@
    "menu": {
     "s": [
      {
-      "n": "Shrunken sliders",
-      "note": "Tiny thin cheeseburgers in mini buns held with toothpicks",
-      "how": "Roll 400g beef mince into 12 small balls and press very thin. Sear on a hot pan for a minute a side, melting a little cheddar on each. Tuck into 12 split slider buns with a pickle slice and tomato sauce, then pin with a toothpick.",
+      "n": "Shrinking lab mini quiches",
+      "note": "Bite-size ham and cheese quiches in puff pastry cases.",
+      "how": "Cut 2 sheets puff pastry into 12 rounds and press into a greased mini muffin tray. Whisk 4 eggs with 150ml cream, then stir through 100g diced ham and 80g grated cheddar. Fill the cases and bake at 190C for 18 minutes until puffed and set.",
       "shop": [
-       "400g beef mince@Meat",
-       "6 slices cheddar@Dairy",
-       "1 jar dill pickles@Pantry",
-       "12 slider buns@Bakery",
-       "1 bottle tomato sauce@Pantry"
+       "2 sheets puff pastry@Frozen",
+       "4 eggs@Dairy",
+       "150ml thickened cream@Dairy",
+       "100g leg ham@Deli",
+       "80g cheddar@Dairy"
       ]
      },
      {
@@ -49948,22 +49897,22 @@
     ],
     "d": [
      {
-      "n": "Ant-sized soda",
-      "note": "Raspberry lemonade in tiny glasses, with a big ice cream jug",
-      "how": "Pour a splash of raspberry cordial into tiny glasses and top with lemonade. For the grown-size version, fill a big jug with lemonade and cordial and float scoops of vanilla ice cream on top. Serve both side by side for the size gag.",
+      "n": "House arrest iced tea",
+      "note": "Cold black tea with lemon and a little honey.",
+      "how": "Steep 4 black tea bags in 1L just-boiled water for 5 minutes. Remove the bags, stir in 3 tbsp honey and chill. Pour over ice in 4 tall glasses with lemon slices and top up with cold water to taste.",
       "shop": [
-       "2L lemonade@Drinks",
-       "1 bottle raspberry cordial@Drinks",
-       "1L vanilla ice cream@Frozen"
+       "4 black tea bags@Pantry",
+       "3 tbsp honey@Pantry",
+       "2 lemons@Produce"
       ]
      }
     ],
     "shopping": [
-     "400g beef mince@Meat",
-     "6 slices cheddar@Dairy",
-     "1 jar dill pickles@Pantry",
-     "12 slider buns@Bakery",
-     "1 bottle tomato sauce@Pantry",
+     "2 sheets puff pastry@Frozen",
+     "4 eggs@Dairy",
+     "450ml thickened cream@Dairy",
+     "100g leg ham@Deli",
+     "80g cheddar@Dairy",
      "200g plain flour@Pantry",
      "125g butter@Dairy",
      "150g brown sugar@Pantry",
@@ -49979,10 +49928,9 @@
      "1 packet lime jelly crystals@Pantry",
      "1 packet blue jelly crystals@Pantry",
      "1 packet orange jelly crystals@Pantry",
-     "300ml thickened cream@Dairy",
-     "2L lemonade@Drinks",
-     "1 bottle raspberry cordial@Drinks",
-     "1L vanilla ice cream@Frozen"
+     "4 black tea bags@Pantry",
+     "3 tbsp honey@Pantry",
+     "2 lemons@Produce"
     ]
    }
   },
@@ -50366,14 +50314,14 @@
     ],
     "d": [
      {
-      "n": "Green and pink fizz",
-      "note": "Lime soda and raspberry soda served side by side",
-      "how": "Fill pairs of glasses with ice. Add a splash of lime cordial to one and raspberry cordial to the other. Top both with cold soda water and serve them side by side, one green and one pink, the way two unlikely friends should be.",
+      "n": "Ozdust Ballroom pink lemonade",
+      "note": "Fresh lemonade made pink with cranberry and raspberries.",
+      "how": "Mix the juice of 6 lemons with 150g sugar until dissolved, then add 1L cold water and 100ml cranberry juice to turn it pink. Pour over ice in 4 glasses and float a few raspberries on top.",
       "shop": [
-       "1 bottle lime cordial@Drinks",
-       "1 bottle raspberry cordial@Drinks",
-       "1L soda water@Drinks",
-       "1 bag ice@Frozen"
+       "6 lemons@Produce",
+       "150g caster sugar@Pantry",
+       "100ml cranberry juice@Drinks",
+       "125g raspberries@Produce"
       ]
      }
     ],
@@ -50385,9 +50333,8 @@
      "2 Lebanese cucumbers@Produce",
      "1 box water crackers@Pantry",
      "7 eggs@Dairy",
-     "1 bag caster sugar@Pantry",
      "1 bottle pink food colouring@Pantry",
-     "250g raspberries@Produce",
+     "375g raspberries@Produce",
      "300g arborio rice@Pantry",
      "1.25L chicken stock@Pantry",
      "100g baby spinach@Produce",
@@ -50396,10 +50343,9 @@
      "250g self-raising flour@Pantry",
      "1 bag icing sugar@Pantry",
      "1 bottle food colouring@Pantry",
-     "1 bottle lime cordial@Drinks",
-     "1 bottle raspberry cordial@Drinks",
-     "1L soda water@Drinks",
-     "1 bag ice@Frozen"
+     "6 lemons@Produce",
+     "150g caster sugar@Pantry",
+     "100ml cranberry juice@Drinks"
     ]
    }
   },
@@ -50871,14 +50817,13 @@
     ],
     "d": [
      {
-      "n": "Quantum fizz",
-      "note": "Blackcurrant cordial and lemonade with lime over ice",
-      "how": "Fill glasses with ice. Add a good splash of blackcurrant cordial to each and top up with cold lemonade. Squeeze in a wedge of lime and stir once so it swirls deep purple. Serve straight away while it fizzes like a subatomic world.",
+      "n": "Colour-changing quantum lemonade",
+      "note": "Blue flower tea swirling purple through lemonade.",
+      "how": "Steep 2 tbsp dried butterfly pea flowers in 500ml boiling water for 5 minutes, strain and chill until deep blue. Fill 4 glasses with ice and 150ml lemonade each, then pour the blue tea over and watch it swirl purple. Add a squeeze of lemon.",
       "shop": [
-       "1 bottle blackcurrant cordial@Drinks",
-       "2L lemonade@Drinks",
-       "2 limes@Produce",
-       "1 bag ice@Frozen"
+       "2 tbsp dried butterfly pea flowers@Pantry",
+       "600ml lemonade@Drinks",
+       "1 lemon@Produce"
       ]
      }
     ],
@@ -50906,10 +50851,9 @@
      "1 bag caster sugar@Pantry",
      "1 bag icing sugar@Pantry",
      "1 bottle red food colouring@Pantry",
-     "1 bottle blackcurrant cordial@Drinks",
-     "2L lemonade@Drinks",
-     "2 limes@Produce",
-     "1 bag ice@Frozen"
+     "2 tbsp dried butterfly pea flowers@Pantry",
+     "600ml lemonade@Drinks",
+     "1 lemon@Produce"
     ]
    }
   },
@@ -51705,15 +51649,15 @@
    "menu": {
     "s": [
      {
-      "n": "Stark Expo sliders",
-      "note": "Cheeseburger sliders with tomato relish on a sleek black board",
-      "how": "Shape 500g beef mince into 8 small patties and season. Fry for 2 minutes a side, adding a slice of cheddar to each at the end. Fill 8 slider buns with the patties, a pickle slice and a spoon of tomato relish, and line them up on a black board.",
+      "n": "Tony's strawberry peace offering",
+      "note": "Sugared strawberries with whipped cream for dipping.",
+      "how": "Hull and halve 2 punnets strawberries and toss with 1 tbsp caster sugar and a squeeze of lemon. Whip 300ml thickened cream with 1 tbsp icing sugar to soft peaks and serve in a bowl beside the berries for dipping.",
       "shop": [
-       "500g beef mince@Meat",
-       "8 slices cheddar@Dairy",
-       "1 jar dill pickles@Pantry",
-       "1 jar tomato relish@Pantry",
-       "8 slider buns@Bakery"
+       "2 punnets strawberries@Produce",
+       "1 tbsp caster sugar@Pantry",
+       "1 lemon@Produce",
+       "300ml thickened cream@Dairy",
+       "1 tbsp icing sugar@Pantry"
       ]
      },
      {
@@ -51774,11 +51718,12 @@
      }
     ],
     "shopping": [
-     "750g beef mince@Meat",
-     "8 slices cheddar@Dairy",
-     "1 jar dill pickles@Pantry",
-     "1 jar tomato relish@Pantry",
-     "8 slider buns@Bakery",
+     "2 punnets strawberries@Produce",
+     "1 tbsp caster sugar@Pantry",
+     "1 lemon@Produce",
+     "300ml thickened cream@Dairy",
+     "1 tbsp icing sugar@Pantry",
+     "250g beef mince@Meat",
      "250g pork mince@Meat",
      "1 packet dumpling wrappers@Deli",
      "150g butter@Dairy",
@@ -51862,14 +51807,14 @@
     ],
     "d": [
      {
-      "n": "Shield red cherry soda",
-      "note": "Cherry juice and soda with fresh lime over ice",
-      "how": "Fill tall glasses with ice. Pour in cherry juice to halfway, then top with cold soda water. Squeeze in a wedge of lime and stir once. It comes out deep red, the colour of a well-used shield.",
+      "n": "Louisiana sweet tea",
+      "note": "Cold sweet black tea with lemon and mint.",
+      "how": "Steep 6 black tea bags in 1L just-boiled water for 5 minutes with a pinch of bicarb soda. Stir in 150g sugar until dissolved, add 1L cold water and chill. Serve over ice with lemon wheels and mint.",
       "shop": [
-       "1L cherry juice@Drinks",
-       "1L soda water@Drinks",
-       "2 limes@Produce",
-       "1 bag ice@Frozen"
+       "6 black tea bags@Pantry",
+       "150g caster sugar@Pantry",
+       "1 lemon@Produce",
+       "1 bunch mint@Produce"
       ]
      }
     ],
@@ -51890,13 +51835,12 @@
      "1 green capsicum@Produce",
      "1 bag long grain rice@Pantry",
      "4 eggs@Dairy",
-     "1 bag caster sugar@Pantry",
      "300ml thickened cream@Dairy",
      "1 packet edible rose petals@Produce",
-     "1L cherry juice@Drinks",
-     "1L soda water@Drinks",
-     "2 limes@Produce",
-     "1 bag ice@Frozen"
+     "6 black tea bags@Pantry",
+     "150g caster sugar@Pantry",
+     "1 lemon@Produce",
+     "1 bunch mint@Produce"
     ]
    }
   },
@@ -53742,12 +53686,16 @@
     ],
     "d": [
      {
-      "n": "Space-age soda float",
-      "note": "Creaming soda floats with vanilla ice cream and straws",
-      "how": "Pour cold creaming soda into tall glasses, leaving room at the top. Gently add a scoop of vanilla ice cream to each so it floats and foams up. Serve straight away with a long spoon and a straw, the way they did it in the space age.",
+      "n": "Space race orange cream shake",
+      "note": "Orange and vanilla ice cream shake with cream.",
+      "how": "Blend 400ml orange juice with 4 scoops vanilla ice cream, 200ml milk and 1 tsp vanilla until thick and creamy. Pour into 4 tall glasses and top with a little whipped cream and an orange slice.",
       "shop": [
-       "2L creaming soda@Drinks",
-       "1L vanilla ice cream@Frozen"
+       "400ml orange juice@Drinks",
+       "1L vanilla ice cream@Frozen",
+       "200ml milk@Dairy",
+       "1 tsp vanilla extract@Pantry",
+       "1 can whipped cream@Dairy",
+       "1 orange@Produce"
       ]
      }
     ],
@@ -53773,8 +53721,12 @@
      "250g strawberries@Produce",
      "300g green grapes@Produce",
      "300ml thickened cream@Dairy",
-     "2L creaming soda@Drinks",
-     "1L vanilla ice cream@Frozen"
+     "400ml orange juice@Drinks",
+     "1L vanilla ice cream@Frozen",
+     "200ml milk@Dairy",
+     "1 tsp vanilla extract@Pantry",
+     "1 can whipped cream@Dairy",
+     "1 orange@Produce"
     ]
    }
   },
@@ -53991,16 +53943,15 @@
       ]
      },
      {
-      "n": "Volcano nachos",
-      "note": "A mountain of nachos with hot red salsa poured down like lava",
-      "how": "Pile corn chips into a mountain on a tray, layering with black beans and grated cheddar. Bake at 200C for 8 minutes. Blitz tomatoes with red chillies and salt for a hot salsa and pour it down the sides like lava. Top with sour cream.",
+      "n": "Dino egg scotch eggs",
+      "note": "Crumbed scotch eggs halved like hatching eggs.",
+      "how": "Boil 6 eggs for 6 minutes, cool and peel. Wrap each in about 80g sausage meat, 500g in total, roll in flour, 1 beaten egg and breadcrumbs. Deep fry at 170C for 6 minutes, or bake at 200C for 25 minutes, then halve to serve.",
       "shop": [
-       "2 bags corn chips@Pantry",
-       "1 can black beans@Pantry",
-       "250g cheddar@Dairy",
-       "4 tomatoes@Produce",
-       "2 red chillies@Produce",
-       "300ml sour cream@Dairy"
+       "7 eggs@Dairy",
+       "500g sausage meat@Meat",
+       "1/2 cup plain flour@Pantry",
+       "1 cup breadcrumbs@Pantry",
+       "1L vegetable oil@Pantry"
       ]
      }
     ],
@@ -54052,19 +54003,19 @@
      "2 brown onions@Produce",
      "100g brown sugar@Pantry",
      "1 jar wholegrain mustard@Pantry",
-     "2 bags corn chips@Pantry",
-     "2 cans black beans@Pantry",
-     "250g cheddar@Dairy",
-     "4 tomatoes@Produce",
-     "4 red chillies@Produce",
-     "300ml sour cream@Dairy",
+     "13 eggs@Dairy",
+     "500g sausage meat@Meat",
+     "1/2 cup plain flour@Pantry",
+     "1 cup breadcrumbs@Pantry",
+     "1L vegetable oil@Pantry",
      "1kg chicken thighs@Meat",
      "5 limes@Produce",
      "1 head garlic@Produce",
+     "2 red chillies@Produce",
      "1 bag long grain rice@Pantry",
+     "1 can black beans@Pantry",
      "150g dark chocolate@Pantry",
      "150g butter@Dairy",
-     "6 eggs@Dairy",
      "1 bag caster sugar@Pantry",
      "50g plain flour@Pantry",
      "250g raspberries@Produce",
@@ -56185,15 +56136,15 @@
       ]
      },
      {
-      "n": "LA freeway sliders",
-      "note": "Thin smashed cheeseburger sliders stacked on a tray",
-      "how": "Roll 500g beef mince into 8 balls and smash thin on a very hot grill. Season, flip after a minute and add cheddar. Tuck into slider buns with a pickle slice and tomato sauce and stack them on a tray like freeway traffic.",
+      "n": "All Heart bruschetta",
+      "note": "Garlic toasts piled with tomato, basil and olive oil.",
+      "how": "Slice 1 baguette and toast the slices. Dice 4 ripe tomatoes and mix with 1 crushed garlic clove, a handful of torn basil, 2 tbsp olive oil and salt. Rub the toasts with a cut garlic clove and pile the tomato on just before serving.",
       "shop": [
-       "500g beef mince@Meat",
-       "8 slices cheddar@Dairy",
-       "1 jar dill pickles@Pantry",
-       "8 slider buns@Bakery",
-       "1 bottle tomato sauce@Pantry"
+       "1 baguette@Bakery",
+       "4 ripe tomatoes@Produce",
+       "2 garlic cloves@Produce",
+       "1 bunch basil@Produce",
+       "2 tbsp olive oil@Pantry"
       ]
      }
     ],
@@ -56245,11 +56196,11 @@
      "2 red chillies@Produce",
      "3 limes@Produce",
      "210g butter@Dairy",
-     "500g beef mince@Meat",
-     "8 slices cheddar@Dairy",
-     "1 jar dill pickles@Pantry",
-     "8 slider buns@Bakery",
-     "1 bottle tomato sauce@Pantry",
+     "1 baguette@Bakery",
+     "4 ripe tomatoes@Produce",
+     "2 garlic cloves@Produce",
+     "1 bunch basil@Produce",
+     "2 tbsp olive oil@Pantry",
      "4 sirloin steaks@Meat",
      "1 jar black peppercorns@Pantry",
      "300ml thickened cream@Dairy",
@@ -56786,16 +56737,14 @@
       ]
      },
      {
-      "n": "Bar dance nachos",
-      "note": "Loaded nachos with beans, cheese, salsa and guacamole",
-      "how": "Layer corn chips on a tray with black beans, grated cheddar and sliced jalapenos. Bake at 200C for 8 minutes until melted. Top with diced tomato salsa and smashed avocado and serve straight away, before the next dance.",
+      "n": "Desert bar jalapeño poppers",
+      "note": "Bacon-wrapped jalapeños stuffed with cream cheese.",
+      "how": "Halve 12 large jalapeños lengthways and scrape out the seeds. Mix 200g cream cheese with 80g grated cheddar and fill each half. Wrap with half a rasher of streaky bacon and bake at 200C for 20 minutes until the bacon is crisp.",
       "shop": [
-       "2 bags corn chips@Pantry",
-       "1 can black beans@Pantry",
-       "250g cheddar@Dairy",
-       "1 jar jalapenos@Pantry",
-       "2 avocados@Produce",
-       "3 tomatoes@Produce"
+       "12 large jalapeño chillies@Produce",
+       "200g cream cheese@Dairy",
+       "80g cheddar@Dairy",
+       "12 rashers streaky bacon@Meat"
       ]
      }
     ],
@@ -56848,12 +56797,10 @@
      "250g mozzarella@Dairy",
      "150g pepperoni@Deli",
      "1 jar dried oregano@Pantry",
-     "2 bags corn chips@Pantry",
-     "1 can black beans@Pantry",
-     "250g cheddar@Dairy",
-     "1 jar jalapenos@Pantry",
-     "2 avocados@Produce",
-     "3 tomatoes@Produce",
+     "12 large jalapeño chillies@Produce",
+     "200g cream cheese@Dairy",
+     "80g cheddar@Dairy",
+     "12 rashers streaky bacon@Meat",
      "600g white fish fillets@Seafood",
      "1 packet corn tortillas@Bakery",
      "1 small cabbage@Produce",
@@ -56933,15 +56880,17 @@
     ],
     "d": [
      {
-      "n": "Multiverse colour fizz",
-      "note": "Layered grenadine, orange and blue lemonade over ice",
-      "how": "Fill tall glasses with ice. Pour a splash of grenadine into the bottom. Slowly pour orange juice over the back of a spoon to make a second layer, then top with lemonade tinted blue. Three universes in one glass, stirred only at the end.",
+      "n": "Kamar-Taj masala chai",
+      "note": "Spiced milky tea with cardamom, cinnamon and ginger.",
+      "how": "Simmer 500ml water with 4 crushed cardamom pods, 1 cinnamon stick, 4 slices ginger and 4 cloves for 5 minutes. Add 4 black tea bags and 500ml milk, bring just to the boil, sweeten with 3 tbsp sugar and strain into cups.",
       "shop": [
-       "1 bottle grenadine@Drinks",
-       "1L orange juice@Drinks",
-       "2L lemonade@Drinks",
-       "1 bottle blue food colouring@Pantry",
-       "1 bag ice@Frozen"
+       "4 cardamom pods@Pantry",
+       "1 cinnamon stick@Pantry",
+       "1 knob ginger@Produce",
+       "4 whole cloves@Pantry",
+       "4 black tea bags@Pantry",
+       "500ml milk@Dairy",
+       "3 tbsp caster sugar@Pantry"
       ]
      }
     ],
@@ -56954,7 +56903,7 @@
      "1 jar pizza sauce@Pantry",
      "400g chicken mince@Meat",
      "1 bunch spring onions@Produce",
-     "1 knob ginger@Produce",
+     "2 knob ginger@Produce",
      "1 packet dumpling wrappers@Deli",
      "3 tomatoes@Produce",
      "1 jar chilli flakes@Pantry",
@@ -56968,11 +56917,12 @@
      "300ml thickened cream@Dairy",
      "2 sheets sweet shortcrust pastry@Frozen",
      "1 jar sea salt flakes@Pantry",
-     "1 bottle grenadine@Drinks",
-     "1L orange juice@Drinks",
-     "2L lemonade@Drinks",
-     "1 bottle blue food colouring@Pantry",
-     "1 bag ice@Frozen"
+     "4 cardamom pods@Pantry",
+     "1 cinnamon stick@Pantry",
+     "4 whole cloves@Pantry",
+     "4 black tea bags@Pantry",
+     "500ml milk@Dairy",
+     "3 tbsp caster sugar@Pantry"
     ]
    }
   },
@@ -57308,15 +57258,17 @@
       ]
      },
      {
-      "n": "Grandstand nachos",
-      "note": "Corn chips under warm cheddar sauce with sliced jalapenos",
-      "how": "Warm 250ml milk in a pan and whisk in a spoon of cornflour mixed with a little cold milk. Stir in 200g grated cheddar until smooth and glossy. Pour over a big pile of corn chips and scatter with sliced jalapenos. Eat it in the grandstand.",
+      "n": "Carolina hushpuppies",
+      "note": "Golden cornmeal and onion fritters, Southern style.",
+      "how": "Whisk 1 cup fine cornmeal, 1/2 cup self-raising flour, 1 tbsp sugar and 1 grated onion with 1 egg and 180ml buttermilk. Drop teaspoons into 5cm hot oil and fry for 3 minutes until golden. Drain and serve with butter or hot sauce.",
       "shop": [
-       "1 bag corn chips@Pantry",
-       "200g cheddar@Dairy",
-       "250ml full cream milk@Dairy",
-       "1 box cornflour@Pantry",
-       "1 jar jalapenos@Pantry"
+       "1 cup fine cornmeal@Pantry",
+       "1/2 cup self-raising flour@Pantry",
+       "1 tbsp caster sugar@Pantry",
+       "1 onion@Produce",
+       "1 egg@Dairy",
+       "180ml buttermilk@Dairy",
+       "1L vegetable oil@Pantry"
       ]
      }
     ],
@@ -57368,11 +57320,13 @@
      "8 hot dog buns@Bakery",
      "1 jar yellow mustard@Pantry",
      "1 jar pickle relish@Pantry",
-     "1 bag corn chips@Pantry",
-     "200g cheddar@Dairy",
-     "400ml full cream milk@Dairy",
-     "1 box cornflour@Pantry",
-     "1 jar jalapenos@Pantry",
+     "1 cup fine cornmeal@Pantry",
+     "1/2 cup self-raising flour@Pantry",
+     "1 tbsp caster sugar@Pantry",
+     "1 onion@Produce",
+     "1 egg@Dairy",
+     "180ml buttermilk@Dairy",
+     "1L vegetable oil@Pantry",
      "2kg pork shoulder@Meat",
      "1 bottle apple cider vinegar@Pantry",
      "100g brown sugar@Pantry",
@@ -57383,6 +57337,7 @@
      "1 bag caster sugar@Pantry",
      "250g self-raising flour@Pantry",
      "80g butter@Dairy",
+     "150ml full cream milk@Dairy",
      "1L vanilla ice cream@Frozen",
      "6 bottles lager@Bottle shop",
      "2L lemonade@Drinks",
@@ -57656,13 +57611,12 @@
     ],
     "d": [
      {
-      "n": "Toy box soda",
-      "note": "Raspberry lemonade with vanilla ice cream and striped straws",
-      "how": "Pour a splash of raspberry cordial into tall glasses and top with cold lemonade. Gently add a scoop of vanilla ice cream so it floats and foams. Add a striped straw to each and serve before the toys come to life.",
+      "n": "Commando Elite canteen cordial",
+      "note": "Ice-cold lime cordial served in tin cups.",
+      "how": "Mix 200ml lime cordial with 1L chilled water in a jug and add plenty of ice and sliced lime. Pour into 4 metal camping mugs or tin cups, army canteen style, and serve cold.",
       "shop": [
-       "2L lemonade@Drinks",
-       "1 bottle raspberry cordial@Drinks",
-       "1L vanilla ice cream@Frozen"
+       "200ml lime cordial@Drinks",
+       "2 limes@Produce"
       ]
      }
     ],
@@ -57687,9 +57641,8 @@
      "1 bottle peppermint essence@Pantry",
      "1 bottle green food colouring@Pantry",
      "200g dark chocolate@Pantry",
-     "2L lemonade@Drinks",
-     "1 bottle raspberry cordial@Drinks",
-     "1L vanilla ice cream@Frozen"
+     "200ml lime cordial@Drinks",
+     "2 limes@Produce"
     ]
    }
   },
@@ -58330,14 +58283,14 @@
     ],
     "d": [
      {
-      "n": "Clown nose cherry soda",
-      "note": "Cherry soda with a maraschino cherry in every glass",
-      "how": "Fill tall glasses with ice. Pour in cherry juice to halfway and top with cold soda water. Drop a maraschino cherry into each glass so it sits at the bottom like a little red nose. Stir once and serve.",
+      "n": "Gotham late show Manhattan",
+      "note": "Bourbon, sweet vermouth and bitters with a cherry.",
+      "how": "Stir 240ml bourbon, 120ml sweet vermouth and 8 dashes aromatic bitters with plenty of ice for 30 seconds. Strain into 4 chilled glasses and garnish each with a cocktail cherry.",
       "shop": [
-       "1L cherry juice@Drinks",
-       "1L soda water@Drinks",
-       "1 jar maraschino cherries@Pantry",
-       "1 bag ice@Frozen"
+       "240ml bourbon@Bottle shop",
+       "120ml sweet vermouth@Bottle shop",
+       "1 bottle aromatic bitters@Bottle shop",
+       "1 jar cocktail cherries@Pantry"
       ]
      }
     ],
@@ -58363,10 +58316,10 @@
      "1 bottle red food colouring@Pantry",
      "500g cream cheese@Dairy",
      "1 bag icing sugar@Pantry",
-     "1L cherry juice@Drinks",
-     "1L soda water@Drinks",
-     "1 jar maraschino cherries@Pantry",
-     "1 bag ice@Frozen"
+     "240ml bourbon@Bottle shop",
+     "120ml sweet vermouth@Bottle shop",
+     "1 bottle aromatic bitters@Bottle shop",
+     "1 jar cocktail cherries@Pantry"
     ]
    }
   },
@@ -58878,16 +58831,17 @@
       ]
      },
      {
-      "n": "Band rehearsal nachos",
-      "note": "Loaded nachos with beans, cheese, salsa and sour cream",
-      "how": "Layer corn chips on a tray with black beans, grated cheddar and sliced jalapenos. Bake at 200C for 8 minutes until melted. Top with diced tomato salsa and spoons of sour cream. Serve on the tray at band practice.",
+      "n": "Garage rehearsal popcorn chicken",
+      "note": "Crunchy bite-size chicken with honey mustard.",
+      "how": "Cut 600g chicken thigh into bite-size pieces. Dip in 2 beaten eggs, then in 1 cup flour mixed with 1 cup panko, 1 tsp paprika and salt. Shallow fry in batches for 4 minutes until golden, drain and serve with honey mustard.",
       "shop": [
-       "2 bags corn chips@Pantry",
-       "1 can black beans@Pantry",
-       "250g cheddar@Dairy",
-       "1 jar jalapenos@Pantry",
-       "3 tomatoes@Produce",
-       "300ml sour cream@Dairy"
+       "600g chicken thigh fillets@Meat",
+       "2 eggs@Dairy",
+       "1 cup plain flour@Pantry",
+       "1 cup panko breadcrumbs@Pantry",
+       "1 tsp sweet paprika@Pantry",
+       "500ml vegetable oil@Pantry",
+       "3 tbsp honey mustard@Pantry"
       ]
      }
     ],
@@ -58937,19 +58891,19 @@
      "50g rice vermicelli@Pantry",
      "1 packet spring roll pastry@Frozen",
      "1 bottle sweet chilli sauce@Pantry",
-     "2 bags corn chips@Pantry",
-     "1 can black beans@Pantry",
-     "250g cheddar@Dairy",
-     "1 jar jalapenos@Pantry",
-     "3 tomatoes@Produce",
-     "300ml sour cream@Dairy",
+     "600g chicken thigh fillets@Meat",
+     "4 eggs@Dairy",
+     "1 cup plain flour@Pantry",
+     "1 cup panko breadcrumbs@Pantry",
+     "1 tsp sweet paprika@Pantry",
+     "500ml vegetable oil@Pantry",
+     "3 tbsp honey mustard@Pantry",
      "800g chicken thighs@Meat",
      "1 box cornflour@Pantry",
      "1 jar honey@Pantry",
      "1 bottle soy sauce@Pantry",
      "1 jar sesame seeds@Pantry",
      "1 bag jasmine rice@Pantry",
-     "2 eggs@Dairy",
      "1 bag caster sugar@Pantry",
      "60g plain flour@Pantry",
      "30g butter@Dairy",
@@ -59058,16 +59012,14 @@
    "menu": {
     "s": [
      {
-      "n": "Sewer lair nachos",
-      "note": "Loaded nachos with beans, cheese, salsa and guacamole",
-      "how": "Layer corn chips on a tray with black beans, grated cheddar and sliced jalapenos. Bake at 200C for 8 minutes until melted. Top with diced tomato salsa and smashed avocado. Serve straight from the tray in the sewer lair.",
+      "n": "Sewer lair pepperoni rolls",
+      "note": "Pepperoni and mozzarella pizza scrolls, baked golden.",
+      "how": "Roll 500g pizza dough into a rectangle, spread with 125ml pizza sauce and scatter with 150g mozzarella and 80g sliced pepperoni. Roll up from the long side, cut into 12 rolls, sit in a lined tin and bake at 200C for 20 minutes.",
       "shop": [
-       "2 bags corn chips@Pantry",
-       "1 can black beans@Pantry",
-       "250g cheddar@Dairy",
-       "1 jar jalapenos@Pantry",
-       "2 avocados@Produce",
-       "3 tomatoes@Produce"
+       "500g pizza dough@Deli",
+       "125ml pizza sauce@Pantry",
+       "150g mozzarella@Dairy",
+       "80g pepperoni@Deli"
       ]
      },
      {
@@ -59127,20 +59079,16 @@
      }
     ],
     "shopping": [
-     "2 bags corn chips@Pantry",
-     "1 can black beans@Pantry",
-     "250g cheddar@Dairy",
-     "1 jar jalapenos@Pantry",
-     "5 avocados@Produce",
-     "3 tomatoes@Produce",
+     "1kg pizza dough@Deli",
+     "125ml pizza sauce@Pantry",
+     "400g mozzarella@Dairy",
+     "230g pepperoni@Deli",
+     "3 avocados@Produce",
      "2 limes@Produce",
      "1 bunch coriander@Produce",
      "1 green chilli@Produce",
      "1 cob loaf@Bakery",
-     "500g pizza dough@Deli",
-     "1 jar pizza sauce@Pantry",
-     "250g mozzarella@Dairy",
-     "150g pepperoni@Deli",
+     "1 bag corn chips@Pantry",
      "1 jar dried oregano@Pantry",
      "200g self-raising flour@Pantry",
      "250g butter@Dairy",
@@ -59289,16 +59237,14 @@
     ],
     "m": [
      {
-      "n": "RV road trip burgers",
-      "note": "Cheeseburgers with all the trimmings and twice-cooked fries",
-      "how": "Cut 1kg potatoes into fries and fry twice until crisp. Shape 600g beef mince into 4 patties and grill, melting cheddar on top. Build in toasted buns with lettuce, tomato and pickles. Serve with the fries straight out of the RV kitchen.",
+      "n": "Duke Caboom's poutine",
+      "note": "Chips, chicken and melty cheese under hot gravy.",
+      "how": "Bake 1kg frozen thick-cut chips at 220C for 25 minutes until crisp. Heat 500ml beef gravy until bubbling. Pile the chips into 4 bowls with 400g shredded barbecue chicken, scatter over 200g torn fresh mozzarella and pour the hot gravy over so the cheese goes melty.",
       "shop": [
-       "600g beef mince@Meat",
-       "4 slices cheddar@Dairy",
-       "1 iceberg lettuce@Produce",
-       "2 tomatoes@Produce",
-       "4 burger buns@Bakery",
-       "1kg potatoes@Produce"
+       "1kg frozen thick-cut chips@Frozen",
+       "500ml beef gravy@Pantry",
+       "400g barbecue chicken@Deli",
+       "200g fresh mozzarella@Deli"
       ]
      }
     ],
@@ -59342,12 +59288,10 @@
      "1 Lebanese cucumber@Produce",
      "2 avocados@Produce",
      "2 limes@Produce",
-     "600g beef mince@Meat",
-     "4 slices cheddar@Dairy",
-     "1 iceberg lettuce@Produce",
-     "2 tomatoes@Produce",
-     "4 burger buns@Bakery",
-     "1kg potatoes@Produce",
+     "1kg frozen thick-cut chips@Frozen",
+     "500ml beef gravy@Pantry",
+     "400g barbecue chicken@Deli",
+     "200g fresh mozzarella@Deli",
      "2 eggs@Dairy",
      "250ml full cream milk@Dairy",
      "1 bag icing sugar@Pantry",
@@ -59564,15 +59508,15 @@
       ]
      },
      {
-      "n": "Smithsonian exhibit sliders",
-      "note": "Cheeseburger sliders with a little capsicum star on top",
-      "how": "Shape 500g beef mince into 8 small patties and fry for 2 minutes a side, adding cheddar at the end. Fill slider buns with the patties and a pickle. Cut little stars from red capsicum with a small cutter and pin one on top of each with a toothpick.",
+      "n": "1940s devilled eggs",
+      "note": "Classic devilled eggs with mustard mayo and paprika.",
+      "how": "Boil 8 eggs for 10 minutes, cool in iced water and peel. Halve and mash the yolks with 3 tbsp mayonnaise, 1 tsp Dijon mustard, salt and pepper. Pipe back into the whites and dust with paprika and chopped chives.",
       "shop": [
-       "500g beef mince@Meat",
-       "8 slices cheddar@Dairy",
-       "1 jar dill pickles@Pantry",
-       "8 slider buns@Bakery",
-       "1 red capsicum@Produce"
+       "8 eggs@Dairy",
+       "3 tbsp whole egg mayonnaise@Pantry",
+       "1 tsp Dijon mustard@Pantry",
+       "1 tsp sweet paprika@Pantry",
+       "1 bunch chives@Produce"
       ]
      }
     ],
@@ -59622,15 +59566,16 @@
     "shopping": [
      "4 smoked sausages@Meat",
      "4 hot dog buns@Bakery",
-     "800g beef mince@Meat",
+     "300g beef mince@Meat",
      "2 onions@Produce",
      "2 tsp chilli powder@Pantry",
      "200g crushed tomatoes@Pantry",
      "4 tbsp yellow mustard@Pantry",
-     "8 slices cheddar@Dairy",
-     "1 jar dill pickles@Pantry",
-     "8 slider buns@Bakery",
-     "1 red capsicum@Produce",
+     "8 eggs@Dairy",
+     "3 tbsp whole egg mayonnaise@Pantry",
+     "1 tsp Dijon mustard@Pantry",
+     "1 tsp sweet paprika@Pantry",
+     "1 bunch chives@Produce",
      "600g chicken thighs@Meat",
      "1 head garlic@Produce",
      "3 red chillies@Produce",
@@ -60066,16 +60011,14 @@
       ]
      },
      {
-      "n": "Uncle Rudy's nachos",
-      "note": "Loaded nachos with beans, cheese, salsa and sour cream",
-      "how": "Layer corn chips on a tray with black beans, grated cheddar and sliced jalapenos. Bake at 200C for 8 minutes until melted. Top with diced tomato salsa and spoons of sour cream and serve from the tray.",
+      "n": "Uncle Rudy's chicharrones",
+      "note": "Crackling pork belly bites with lime and hot sauce.",
+      "how": "Score the skin of 1kg pork belly, rub with 2 tsp salt and dry uncovered in the fridge overnight. Roast at 240C for 30 minutes, then 180C for 45 minutes until puffed and crackling. Cut into bites and serve with lime wedges and hot sauce.",
       "shop": [
-       "2 bags corn chips@Pantry",
-       "1 can black beans@Pantry",
-       "250g cheddar@Dairy",
-       "1 jar jalapenos@Pantry",
-       "3 tomatoes@Produce",
-       "300ml sour cream@Dairy"
+       "1kg pork belly@Meat",
+       "2 tsp sea salt@Pantry",
+       "2 limes@Produce",
+       "1 bottle hot sauce@Pantry"
       ]
      }
     ],
@@ -60126,15 +60069,12 @@
     "shopping": [
      "4 corn cobs@Produce",
      "1 jar mayonnaise@Pantry",
-     "2 limes@Produce",
+     "4 limes@Produce",
      "100g feta@Dairy",
      "1 jar chilli flakes@Pantry",
-     "2 bags corn chips@Pantry",
-     "1 can black beans@Pantry",
-     "250g cheddar@Dairy",
-     "1 jar jalapenos@Pantry",
-     "3 tomatoes@Produce",
-     "300ml sour cream@Dairy",
+     "1kg pork belly@Meat",
+     "2 tsp sea salt@Pantry",
+     "1 bottle hot sauce@Pantry",
      "800g chicken thighs@Meat",
      "1 can crushed tomatoes@Pantry",
      "1 can chipotle in adobo@Pantry",
@@ -60276,16 +60216,17 @@
     ],
     "m": [
      {
-      "n": "Ralph's brick-sized burgers",
-      "note": "Huge bacon cheeseburgers with chunky potato wedges",
-      "how": "Cut 1kg potatoes into chunky wedges and roast at 220C for 40 minutes. Shape 800g beef mince into 4 big thick patties and grill, melting cheddar on top. Fry bacon until crisp. Stack it all with pickles in toasted buns.",
+      "n": "Ralph's wrecking ball meatballs",
+      "note": "Giant beef meatballs in tomato sauce over spaghetti.",
+      "how": "Mix 600g beef mince with 1/2 cup breadcrumbs, 1 egg, 50g grated parmesan and 2 crushed garlic cloves. Roll into 8 big wrecking ball meatballs, brown all over, then simmer in 700g passata for 25 minutes. Serve over 400g cooked spaghetti.",
       "shop": [
-       "800g beef mince@Meat",
-       "4 slices cheddar@Dairy",
-       "150g bacon@Meat",
-       "1 jar dill pickles@Pantry",
-       "4 burger buns@Bakery",
-       "1kg potatoes@Produce"
+       "600g beef mince@Meat",
+       "1/2 cup breadcrumbs@Pantry",
+       "1 egg@Dairy",
+       "50g parmesan@Dairy",
+       "2 garlic cloves@Produce",
+       "700g tomato passata@Pantry",
+       "400g spaghetti@Pantry"
       ]
      }
     ],
@@ -60324,12 +60265,13 @@
      "1 bag pretzel rods@Pantry",
      "200g white chocolate@Pantry",
      "1 jar sprinkles@Pantry",
-     "800g beef mince@Meat",
-     "4 slices cheddar@Dairy",
-     "150g bacon@Meat",
-     "1 jar dill pickles@Pantry",
-     "4 burger buns@Bakery",
-     "1kg potatoes@Produce",
+     "600g beef mince@Meat",
+     "1/2 cup breadcrumbs@Pantry",
+     "1 egg@Dairy",
+     "50g parmesan@Dairy",
+     "2 garlic cloves@Produce",
+     "700g tomato passata@Pantry",
+     "400g spaghetti@Pantry",
      "6 green apples@Produce",
      "50g butter@Dairy",
      "100g brown sugar@Pantry",
@@ -60401,12 +60343,14 @@
     ],
     "d": [
      {
-      "n": "Blood orange soda",
-      "note": "Fresh blood orange juice topped with soda.",
-      "how": "Squeeze 6 blood oranges. Fill 4 glasses with ice, pour 70ml juice into each and top with 150ml soda water. Garnish with a blood orange slice.",
+      "n": "Venice peach bellini mocktail",
+      "note": "Peach purée topped with sparkling apple juice.",
+      "how": "Blend 4 ripe peaches, peeled and stoned, with 1 tbsp sugar and a squeeze of lemon until smooth. Spoon 3 tbsp purée into each of 4 glasses and slowly top with 150ml chilled sparkling apple juice, stirring gently.",
       "shop": [
-       "7 blood oranges@Produce",
-       "600ml soda water@Drinks"
+       "4 ripe peaches@Produce",
+       "1 tbsp caster sugar@Pantry",
+       "1 lemon@Produce",
+       "600ml sparkling apple juice@Drinks"
       ]
      }
     ],
@@ -60433,8 +60377,10 @@
      "3 eggs@Dairy",
      "1 bag caster sugar@Pantry",
      "1 box cocoa@Pantry",
-     "7 blood oranges@Produce",
-     "600ml soda water@Drinks"
+     "4 ripe peaches@Produce",
+     "1 tbsp caster sugar@Pantry",
+     "1 lemon@Produce",
+     "600ml sparkling apple juice@Drinks"
     ]
    }
   },
@@ -60543,15 +60489,17 @@
    "menu": {
     "s": [
      {
-      "n": "Backyard barbecue sliders",
-      "note": "Smashed cheeseburger sliders with pickles and tomato sauce",
-      "how": "Roll 500g beef mince into 8 balls and smash thin on a very hot grill. Season, flip after a minute and melt cheddar on top. Tuck into slider buns with a pickle slice and a squeeze of tomato sauce and pile onto a tray.",
+      "n": "Mikaela's loaded potato wedges",
+      "note": "Paprika wedges with cheddar, bacon and sour cream.",
+      "how": "Cut 1kg potatoes into wedges, toss with 2 tbsp oil and 1 tsp paprika and roast at 220C for 35 minutes. Top with 120g grated cheddar and 100g crisp bacon, bake 5 minutes more, then add sour cream and sliced spring onion.",
       "shop": [
-       "500g beef mince@Meat",
-       "8 slices cheddar@Dairy",
-       "1 jar dill pickles@Pantry",
-       "8 slider buns@Bakery",
-       "1 bottle tomato sauce@Pantry"
+       "1kg potatoes@Produce",
+       "2 tbsp olive oil@Pantry",
+       "1 tsp sweet paprika@Pantry",
+       "120g cheddar@Dairy",
+       "100g bacon@Meat",
+       "200ml sour cream@Dairy",
+       "2 spring onions@Produce"
       ]
      },
      {
@@ -60612,14 +60560,15 @@
      }
     ],
     "shopping": [
-     "500g beef mince@Meat",
-     "8 slices cheddar@Dairy",
-     "1 jar dill pickles@Pantry",
-     "8 slider buns@Bakery",
-     "1 bottle tomato sauce@Pantry",
+     "1kg potatoes@Produce",
+     "2 tbsp olive oil@Pantry",
+     "1 tsp sweet paprika@Pantry",
+     "270g cheddar@Dairy",
+     "100g bacon@Meat",
+     "200ml sour cream@Dairy",
+     "2 spring onions@Produce",
      "2 packets corn tortillas@Bakery",
      "1 bottle vegetable oil@Pantry",
-     "150g cheddar@Dairy",
      "125g cream cheese@Dairy",
      "1 jar jalapenos@Pantry",
      "1 jar sea salt flakes@Pantry",
@@ -60773,16 +60722,19 @@
     ],
     "m": [
      {
-      "n": "Logan's beer and burger",
-      "note": "Bacon cheeseburgers with onion rings and a cold beer",
-      "how": "Slice 2 onions into rings, dip in a flour and beer batter and fry until crisp. Shape 600g beef mince into 4 patties and grill, melting cheddar on top. Fry bacon until crisp. Build in toasted buns with an onion ring on top and serve with cold lager.",
+      "n": "Void campfire chilli",
+      "note": "Beef and bean chilli with cheddar and corn chips.",
+      "how": "Brown 800g beef mince with 1 diced onion and 3 crushed garlic cloves. Add 2 tbsp chilli powder, 1 tsp ground cumin, a 400g can crushed tomatoes and a 400g can drained kidney beans. Simmer for 40 minutes, then serve with grated cheddar and corn chips.",
       "shop": [
-       "600g beef mince@Meat",
-       "4 slices cheddar@Dairy",
-       "150g bacon@Meat",
-       "2 brown onions@Produce",
-       "4 burger buns@Bakery",
-       "6 bottles lager@Bottle shop"
+       "800g beef mince@Meat",
+       "1 onion@Produce",
+       "3 garlic cloves@Produce",
+       "2 tbsp chilli powder@Pantry",
+       "1 tsp ground cumin@Pantry",
+       "400g can crushed tomatoes@Pantry",
+       "400g can kidney beans@Pantry",
+       "150g cheddar@Dairy",
+       "1 bag corn chips@Pantry"
       ]
      }
     ],
@@ -60817,17 +60769,21 @@
      "8 hot dog franks@Deli",
      "8 hot dog buns@Bakery",
      "1 jar yellow mustard@Pantry",
-     "4 brown onions@Produce",
+     "2 brown onions@Produce",
      "800g potatoes@Produce",
      "1 bottle vegetable oil@Pantry",
      "1 jar smoked paprika@Pantry",
      "1 jar garlic powder@Pantry",
      "1 jar sea salt flakes@Pantry",
-     "600g beef mince@Meat",
-     "4 slices cheddar@Dairy",
-     "150g bacon@Meat",
-     "4 burger buns@Bakery",
-     "6 bottles lager@Bottle shop",
+     "800g beef mince@Meat",
+     "1 onion@Produce",
+     "3 garlic cloves@Produce",
+     "2 tbsp chilli powder@Pantry",
+     "1 tsp ground cumin@Pantry",
+     "400g can crushed tomatoes@Pantry",
+     "400g can kidney beans@Pantry",
+     "150g cheddar@Dairy",
+     "1 bag corn chips@Pantry",
      "1L vanilla ice cream@Frozen",
      "200g raspberries@Produce",
      "1 mango@Produce",
@@ -60996,14 +60952,11 @@
     ],
     "d": [
      {
-      "n": "Neon orange fizz",
-      "note": "Orange juice and soda over ice with an orange slice",
-      "how": "Fill tall glasses with ice. Pour in orange juice to halfway and top with cold soda water. Add a thin slice of orange to the rim of each glass. Bright orange, like the program on the other side of the grid.",
+      "n": "Flynn's zen green tea",
+      "note": "Gently steeped green tea in small cups.",
+      "how": "Warm a teapot with hot water, then add 4 green tea bags. Pour over 1L water heated to just below boiling, about 80C, and steep for 2 to 3 minutes. Pour into small cups and serve plain.",
       "shop": [
-       "1L orange juice@Drinks",
-       "1L soda water@Drinks",
-       "2 oranges@Produce",
-       "1 bag ice@Frozen"
+       "4 green tea bags@Pantry"
       ]
      }
     ],
@@ -61026,10 +60979,7 @@
      "2 packets blue jelly crystals@Pantry",
      "1 bottle lemonade@Drinks",
      "300ml thickened cream@Dairy",
-     "1L orange juice@Drinks",
-     "1L soda water@Drinks",
-     "2 oranges@Produce",
-     "1 bag ice@Frozen"
+     "4 green tea bags@Pantry"
     ]
    }
   },
@@ -61189,13 +61139,13 @@
     ],
     "d": [
      {
-      "n": "Black cherry cola float",
-      "note": "Cherry cola with vanilla ice cream and a cherry",
-      "how": "Pour cold cherry cola into tall glasses, leaving room at the top. Gently add a scoop of vanilla ice cream so it foams up, then drop a maraschino cherry on top. Serve with a long spoon and a straw.",
+      "n": "Mrs Chen's iced milk tea",
+      "note": "Sweet black tea with condensed milk over ice.",
+      "how": "Steep 4 black tea bags in 500ml boiling water for 5 minutes, remove, stir in 4 tbsp sweetened condensed milk and chill. Pour over ice in 4 glasses and top each with a splash of cold milk.",
       "shop": [
-       "2L cherry cola@Drinks",
-       "1L vanilla ice cream@Frozen",
-       "1 jar maraschino cherries@Pantry"
+       "4 black tea bags@Pantry",
+       "4 tbsp sweetened condensed milk@Pantry",
+       "200ml milk@Dairy"
       ]
      }
     ],
@@ -61220,9 +61170,9 @@
      "1 bag caster sugar@Pantry",
      "1 box cocoa@Pantry",
      "300ml thickened cream@Dairy",
-     "2L cherry cola@Drinks",
-     "1L vanilla ice cream@Frozen",
-     "1 jar maraschino cherries@Pantry"
+     "4 black tea bags@Pantry",
+     "4 tbsp sweetened condensed milk@Pantry",
+     "200ml milk@Dairy"
     ]
    }
   },
@@ -61433,15 +61383,16 @@
       ]
      },
      {
-      "n": "Hank's seven-arm sliders",
-      "note": "Seven chicken sliders arranged in a ring like an octopus",
-      "how": "Mix 500g chicken mince with breadcrumbs and salt and shape into 7 small patties. Pan-fry until golden and cooked through. Fill 7 slider buns with lettuce, mayonnaise and a patty. Arrange in a ring on a plate, seven arms and no more.",
+      "n": "Hank's camouflage fruit platter",
+      "note": "Bright fruit in colour patches with yoghurt for dipping.",
+      "how": "Arrange 2 cups watermelon cubes, 1 punnet hulled strawberries, 2 sliced kiwi fruit, 1 punnet blueberries and 500g green grapes in colour blocks on a big platter so the fruit 'hides' in patches. Serve with 200g vanilla yoghurt in a bowl for dipping.",
       "shop": [
-       "500g chicken mince@Meat",
-       "1 bag breadcrumbs@Pantry",
-       "1 iceberg lettuce@Produce",
-       "1 jar mayonnaise@Pantry",
-       "7 slider buns@Bakery"
+       "1/4 watermelon@Produce",
+       "1 punnet strawberries@Produce",
+       "2 kiwi fruit@Produce",
+       "1 punnet blueberries@Produce",
+       "500g green grapes@Produce",
+       "200g vanilla yoghurt@Dairy"
       ]
      }
     ],
@@ -61489,11 +61440,12 @@
      "1 bottle sesame oil@Pantry",
      "1 jar sesame seeds@Pantry",
      "1 jar sea salt flakes@Pantry",
-     "500g chicken mince@Meat",
-     "1 bag breadcrumbs@Pantry",
-     "1 iceberg lettuce@Produce",
-     "1 jar mayonnaise@Pantry",
-     "7 slider buns@Bakery",
+     "1/4 watermelon@Produce",
+     "1 punnet strawberries@Produce",
+     "2 kiwi fruit@Produce",
+     "1 punnet blueberries@Produce",
+     "500g green grapes@Produce",
+     "200g vanilla yoghurt@Dairy",
      "800g chicken thighs@Meat",
      "3 limes@Produce",
      "1 bag long grain rice@Pantry",
@@ -62249,13 +62201,16 @@
     ],
     "d": [
      {
-      "n": "Scream can soda",
-      "note": "Lime lemonade over ice in small cans or tall glasses",
-      "how": "Fill glasses or small clean cans with ice. Add a splash of lime cordial and top up with cold lemonade. Stir once and serve. Screams not required, but the scarers will tell you otherwise.",
+      "n": "Mike's green apple cooler",
+      "note": "Green apple, lime and mint cooler.",
+      "how": "Pour 750ml cloudy apple juice and 400ml soda water into a jug with the juice of 1 lime and a handful of mint. Stir in a few drops of green food colouring and pour over ice, with a thin round of green apple floating on top.",
       "shop": [
-       "1 bottle lime cordial@Drinks",
-       "2L lemonade@Drinks",
-       "1 bag ice@Frozen"
+       "750ml cloudy apple juice@Drinks",
+       "400ml soda water@Drinks",
+       "1 lime@Produce",
+       "1 bunch mint@Produce",
+       "1 green apple@Produce",
+       "1 pack green food colouring@Pantry"
       ]
      }
     ],
@@ -62281,9 +62236,12 @@
      "1 bag icing sugar@Pantry",
      "1 bottle blue food colouring@Pantry",
      "1 jar sprinkles@Pantry",
-     "1 bottle lime cordial@Drinks",
-     "2L lemonade@Drinks",
-     "1 bag ice@Frozen"
+     "750ml cloudy apple juice@Drinks",
+     "400ml soda water@Drinks",
+     "1 lime@Produce",
+     "1 bunch mint@Produce",
+     "1 green apple@Produce",
+     "1 pack green food colouring@Pantry"
     ]
    }
   },
@@ -63415,13 +63373,15 @@
     ],
     "d": [
      {
-      "n": "Fire and water fizz",
-      "note": "Blood orange and sparkling water swirled over ice",
-      "how": "Fill tall glasses with ice. Pour blood orange juice and sparkling water in at the same time from two jugs so they swirl together in the glass. Serve before they settle, like two elements that should not mix but do.",
+      "n": "Firetown hot spiced apple",
+      "note": "Hot apple juice spiced with cinnamon and orange.",
+      "how": "Heat 1L apple juice with 2 cinnamon sticks, 4 cloves, 3 strips orange peel and 2 slices ginger until steaming, then keep warm for 10 minutes. Strain into mugs and serve with a cinnamon stick in each.",
       "shop": [
-       "1L blood orange juice@Drinks",
-       "1L sparkling water@Drinks",
-       "1 bag ice@Frozen"
+       "1L apple juice@Drinks",
+       "2 cinnamon sticks@Pantry",
+       "4 whole cloves@Pantry",
+       "1 orange@Produce",
+       "1 knob ginger@Produce"
       ]
      }
     ],
@@ -63447,9 +63407,11 @@
      "300ml thickened cream@Dairy",
      "250g blueberries@Produce",
      "1 packet edible flowers@Produce",
-     "1L blood orange juice@Drinks",
-     "1L sparkling water@Drinks",
-     "1 bag ice@Frozen"
+     "1L apple juice@Drinks",
+     "2 cinnamon sticks@Pantry",
+     "4 whole cloves@Pantry",
+     "1 orange@Produce",
+     "1 knob ginger@Produce"
     ]
    }
   },
@@ -63754,14 +63716,14 @@
    "menu": {
     "s": [
      {
-      "n": "Manticore's tavern sliders",
-      "note": "Smashed cheeseburger sliders on a wooden board",
-      "how": "Roll 500g beef mince into 8 balls and smash thin on a very hot grill. Season, flip after a minute and add cheddar. Tuck into slider buns with a pickle and lay them out on a wooden board like a family restaurant that used to be a tavern.",
+      "n": "Manticore's tavern onion rings",
+      "note": "Thick, crisp battered onion rings with salt.",
+      "how": "Slice 2 large brown onions into thick rings. Whisk 1 cup self-raising flour with 250ml cold soda water and a pinch of salt. Dip the rings in flour, then batter, and fry in 5cm hot oil for 2 to 3 minutes until golden. Drain and salt well.",
       "shop": [
-       "500g beef mince@Meat",
-       "8 slices cheddar@Dairy",
-       "1 jar dill pickles@Pantry",
-       "8 slider buns@Bakery"
+       "2 large brown onions@Produce",
+       "1 cup self-raising flour@Pantry",
+       "250ml soda water@Drinks",
+       "1L vegetable oil@Pantry"
       ]
      },
      {
@@ -63819,10 +63781,10 @@
      }
     ],
     "shopping": [
-     "500g beef mince@Meat",
-     "8 slices cheddar@Dairy",
-     "1 jar dill pickles@Pantry",
-     "8 slider buns@Bakery",
+     "2 large brown onions@Produce",
+     "1 cup self-raising flour@Pantry",
+     "1.25L soda water@Drinks",
+     "1L vegetable oil@Pantry",
      "200g aged cheddar@Dairy",
      "200g brie@Dairy",
      "500g red grapes@Produce",
@@ -63840,7 +63802,6 @@
      "1 jar sprinkles@Pantry",
      "1L apple juice@Drinks",
      "1 bottle blackcurrant cordial@Drinks",
-     "1L soda water@Drinks",
      "1 bag ice@Frozen"
     ]
    }
@@ -64995,13 +64956,14 @@
     ],
     "d": [
      {
-      "n": "Grandpa's backwards soda",
-      "note": "Ice cream first, then orange juice and lemonade on top",
-      "how": "Put a scoop of vanilla ice cream into each tall glass first. Pour in a little orange juice, then top slowly with lemonade so it fizzes up. A spider served the wrong way round, just like Grandpa wears his clothes.",
+      "n": "Bowler Hat Guy's grape smoothie",
+      "note": "Thick purple grape and banana smoothie.",
+      "how": "Freeze 500g red grapes overnight. Blend with 1 banana, 250ml grape juice and 200g vanilla yoghurt until smooth and thick. Pour into 4 glasses and serve straight away with straws.",
       "shop": [
-       "1L orange juice@Drinks",
-       "2L lemonade@Drinks",
-       "1L vanilla ice cream@Frozen"
+       "500g red grapes@Produce",
+       "1 banana@Produce",
+       "250ml grape juice@Drinks",
+       "200g vanilla yoghurt@Dairy"
       ]
      }
     ],
@@ -65026,9 +64988,10 @@
      "1 bag caster sugar@Pantry",
      "1 bag icing sugar@Pantry",
      "1 bottle food colouring@Pantry",
-     "1L orange juice@Drinks",
-     "2L lemonade@Drinks",
-     "1L vanilla ice cream@Frozen"
+     "500g red grapes@Produce",
+     "1 banana@Produce",
+     "250ml grape juice@Drinks",
+     "200g vanilla yoghurt@Dairy"
     ]
    }
   },
@@ -67155,14 +67118,13 @@
     ],
     "d": [
      {
-      "n": "Super red soda",
-      "note": "Bright red raspberry soda with fresh raspberries over ice",
-      "how": "Fill glasses with ice and a few raspberries. Add a good splash of raspberry cordial and top with cold soda water. Stir until it turns bright red like a super suit. No capes.",
+      "n": "Elastigirl's raspberry lemonade",
+      "note": "Fresh lemonade made red with raspberry syrup.",
+      "how": "Simmer 150g raspberries with 100g sugar and 100ml water for 5 minutes, then strain to make a syrup. Mix with the juice of 4 lemons and 1L cold water in a jug, add ice and the rest of the raspberries, and stir well.",
       "shop": [
-       "1 bottle raspberry cordial@Drinks",
-       "1L soda water@Drinks",
-       "125g raspberries@Produce",
-       "1 bag ice@Frozen"
+       "250g frozen raspberries@Frozen",
+       "100g caster sugar@Pantry",
+       "4 lemons@Produce"
       ]
      }
     ],
@@ -67182,13 +67144,11 @@
      "1 bunch celery@Produce",
      "2 cans crushed tomatoes@Pantry",
      "200g dark chocolate@Pantry",
-     "1 bag caster sugar@Pantry",
      "3 eggs@Dairy",
      "1L full cream milk@Dairy",
-     "1 bottle raspberry cordial@Drinks",
-     "1L soda water@Drinks",
-     "125g raspberries@Produce",
-     "1 bag ice@Frozen"
+     "250g frozen raspberries@Frozen",
+     "100g caster sugar@Pantry",
+     "4 lemons@Produce"
     ]
    }
   },
@@ -69067,16 +69027,14 @@
       ]
      },
      {
-      "n": "Comic con nacho cheese dip",
-      "note": "Smooth hot cheddar dip with a kick, corn chips alongside.",
-      "how": "Toss 250g grated cheddar with 1 tbsp cornflour. Warm 375ml evaporated milk until steaming, then stir in the cheese a handful at a time over low heat until smooth. Season with 1/2 tsp chilli powder and 1 tbsp mustard, keep warm and serve with 230g corn chips.",
+      "n": "Comic strip pizza bagels",
+      "note": "Bagel halves grilled with pizza sauce and pepperoni.",
+      "how": "Split 4 bagels and toast lightly. Spread each half with 1 tbsp pizza sauce, top with 150g grated mozzarella and 60g sliced pepperoni, and grill for 4 minutes until bubbling. Cut into halves to share.",
       "shop": [
-       "250g cheddar@Dairy",
-       "1 tbsp cornflour@Pantry",
-       "375ml evaporated milk@Pantry",
-       "1/2 tsp chilli powder@Pantry",
-       "1 tbsp yellow mustard@Pantry",
-       "230g corn chips@Pantry"
+       "4 plain bagels@Bakery",
+       "125ml pizza sauce@Pantry",
+       "150g mozzarella@Dairy",
+       "60g pepperoni@Deli"
       ]
      }
     ],
@@ -69126,17 +69084,15 @@
      "30g butter@Dairy",
      "2 tbsp plain flour@Pantry",
      "400ml beef stock@Pantry",
-     "150g mozzarella@Dairy",
-     "250g cheddar@Dairy",
-     "1 tbsp cornflour@Pantry",
-     "375ml evaporated milk@Pantry",
-     "1/2 tsp chilli powder@Pantry",
-     "5 tbsp yellow mustard@Pantry",
-     "230g corn chips@Pantry",
+     "300g mozzarella@Dairy",
+     "4 plain bagels@Bakery",
+     "125ml pizza sauce@Pantry",
+     "60g pepperoni@Deli",
      "2 green capsicums@Produce",
      "2 onions@Produce",
      "8 hot dog franks@Meat",
      "4 pizza bread rounds@Bakery",
+     "4 tbsp yellow mustard@Pantry",
      "150g arborio rice@Pantry",
      "1L milk@Dairy",
      "80g caster sugar@Pantry",
@@ -69602,13 +69558,15 @@
     ],
     "d": [
      {
-      "n": "Lemon soda",
-      "note": "Homemade cloudy lemon soda over ice.",
-      "how": "Simmer 100g caster sugar with 100ml water and the zest of 2 lemons until dissolved, cool and add the juice of 4 lemons. Pour 50ml into each of 4 glasses with ice and top with 200ml soda water.",
+      "n": "Party lemon, lime and bitters",
+      "note": "Pink lemon, lime and bitters over ice.",
+      "how": "Fill 4 glasses with ice. Add 30ml lime cordial and 4 dashes aromatic bitters to each, top with 200ml lemonade and stir until it turns pink. Garnish with lemon and lime wedges.",
       "shop": [
-       "100g caster sugar@Pantry",
-       "4 lemons@Produce",
-       "800ml soda water@Drinks"
+       "120ml lime cordial@Drinks",
+       "1 bottle aromatic bitters@Bottle shop",
+       "800ml lemonade@Drinks",
+       "1 lemon@Produce",
+       "1 lime@Produce"
       ]
      }
     ],
@@ -69617,7 +69575,7 @@
      "185ml tomato sauce@Pantry",
      "1 packet French onion soup mix@Pantry",
      "300ml thickened cream@Dairy",
-     "1 lemon@Produce",
+     "2 lemon@Produce",
      "200g potato chips@Pantry",
      "600g beef mince@Meat",
      "4 slices tasty cheese@Dairy",
@@ -69626,14 +69584,16 @@
      "2 tomatoes@Produce",
      "4 slices tinned beetroot@Pantry",
      "200g butter@Dairy",
-     "175g caster sugar@Pantry",
+     "75g caster sugar@Pantry",
      "175g plain flour@Pantry",
      "35g cocoa powder@Pantry",
      "50g cornflakes@Pantry",
      "150g icing sugar@Pantry",
      "16 walnut halves@Pantry",
-     "4 lemons@Produce",
-     "800ml soda water@Drinks"
+     "120ml lime cordial@Drinks",
+     "1 bottle aromatic bitters@Bottle shop",
+     "800ml lemonade@Drinks",
+     "1 lime@Produce"
     ]
    }
   },
@@ -69697,13 +69657,13 @@
     ],
     "d": [
      {
-      "n": "Raspberry fizz",
-      "note": "Raspberry cordial and soda with frozen raspberries.",
-      "how": "Fill 4 tall glasses with ice. Pour 40ml raspberry cordial into each and top with 200ml soda water. Drop a few frozen raspberries into every glass and stir once before serving.",
+      "n": "Dairy lime milkshake",
+      "note": "A thick green lime milkshake, dairy style.",
+      "how": "Blend 600ml cold milk with 4 scoops vanilla ice cream and 4 tbsp lime cordial until frothy. Pour into 4 tall glasses and serve straight away with straws.",
       "shop": [
-       "160ml raspberry cordial@Drinks",
-       "800ml soda water@Drinks",
-       "100g frozen raspberries@Frozen"
+       "600ml full cream milk@Dairy",
+       "1L vanilla ice cream@Frozen",
+       "4 tbsp lime cordial@Drinks"
       ]
      }
     ],
@@ -69726,10 +69686,9 @@
      "1 cabbage@Produce",
      "115g caster sugar@Pantry",
      "1 tsp bicarbonate of soda@Pantry",
-     "1L vanilla ice cream@Frozen",
-     "160ml raspberry cordial@Drinks",
-     "800ml soda water@Drinks",
-     "100g frozen raspberries@Frozen"
+     "2L vanilla ice cream@Frozen",
+     "600ml full cream milk@Dairy",
+     "4 tbsp lime cordial@Drinks"
     ]
    }
   },

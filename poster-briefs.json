@@ -3723,15 +3723,16 @@
    ],
    "mains": [
     {
-     "name": "All-night diner cheeseburger",
+     "name": "3am open roast beef sandwich",
      "scene": "the cabbies' table at 3am",
-     "method": "Two thin smashed patties on a smoking flat-top, salted, flipped at 90 seconds, American cheese on top. Toasted bun, shredded iceberg, onion and pickle.",
+     "method": "Rare roast beef warmed in gravy and piled on toast, with mash and buttered peas, New York diner style.",
      "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
-      "iceberg lettuce",
-      "dill pickles"
+      "rare roast beef",
+      "beef gravy",
+      "thick white bread",
+      "potatoes",
+      "butter",
+      "frozen peas"
      ]
     },
     {
@@ -9886,16 +9887,15 @@
    "serve_cue": "Serve dinner when the prison bus crashes.",
    "snacks": [
     {
-     "name": "Biker bar nachos",
+     "name": "Biker bar pickled eggs",
      "scene": "the biker bar shootout",
-     "method": "Corn chips layered with black beans, cheddar and jalapeños, baked at 200C for 8 minutes, finished with sour cream and fresh tomato salsa.",
+     "method": "Boiled eggs pickled pink in spiced vinegar with beetroot, straight from the jar on the bar.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "sour cream",
-      "tomatoes"
+      "eggs",
+      "white vinegar",
+      "caster sugar",
+      "mustard seeds",
+      "beetroot"
      ]
     },
     {
@@ -12631,16 +12631,17 @@
      ]
     },
     {
-     "name": "Stephanie's food truck nachos",
+     "name": "Stephanie's food truck egg rolls",
      "scene": "the van Number 5 hides in",
-     "method": "Corn chips layered with black beans, cheddar and jalapeños, baked at 200C for 8 minutes, sour cream, salsa and guacamole on top.",
+     "method": "Crisp fried rolls filled with pork, cabbage, carrot and soy, straight out of a food truck window.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "sour cream",
-      "avocados"
+      "pork mince",
+      "cabbage",
+      "carrot",
+      "spring onions",
+      "soy sauce",
+      "spring roll wrappers",
+      "vegetable oil"
      ]
     },
     {
@@ -13023,15 +13024,17 @@
      ]
     },
     {
-     "name": "Corral bar nachos",
-     "scene": "the biker bar where he borrows clothes",
-     "method": "Corn chips layered with black beans, cheddar and jalapeños, baked at 200C for 8 minutes, sour cream and fresh salsa on top.",
+     "name": "Border run beef empanadas",
+     "scene": "the drive south to Enrique's camp",
+     "method": "Golden shortcrust half moons filled with cumin-spiced beef, chopped boiled egg and green olives, baked until crisp.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "sour cream"
+      "beef mince",
+      "onion",
+      "ground cumin",
+      "sweet paprika",
+      "eggs",
+      "pitted green olives",
+      "shortcrust pastry"
      ]
     }
    ],
@@ -14595,15 +14598,19 @@
    ],
    "mains": [
     {
-     "name": "San Dimas mall burgers",
-     "scene": "Freud and Billy the Kid on a day out",
-     "method": "Two thin patties smashed on a smoking griddle, American cheese, pickles and burger sauce on toasted buns, double-fried chips on the side.",
+     "name": "Napoleon's chicken Marengo",
+     "scene": "Napoleon loose in San Dimas",
+     "method": "Chicken braised with tomato, mushrooms, garlic and white wine, the dish named for one of Napoleon's battles, with crusty bread.",
      "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
-      "dill pickles",
-      "potatoes"
+      "chicken thigh fillets",
+      "olive oil",
+      "onion",
+      "garlic cloves",
+      "button mushrooms",
+      "white wine",
+      "diced tomatoes",
+      "parsley",
+      "baguette"
      ]
     },
     {
@@ -14637,12 +14644,13 @@
    ],
    "drink": [
     {
-     "name": "Excellent cola float",
-     "scene": "most excellent, dude",
-     "method": "Cola poured slowly over vanilla ice cream in tall glasses so it foams up, long spoon.",
+     "name": "Time booth grape cooler",
+     "scene": "the phone booth that travels through time",
+     "method": "Grape juice topped with soda water and lime over ice.",
      "shop": [
-      "cola",
-      "vanilla ice cream"
+      "grape juice",
+      "soda water",
+      "limes"
      ]
     }
    ],
@@ -16337,15 +16345,15 @@
      ]
     },
     {
-     "name": "Spider-Ham's ham sliders",
+     "name": "Spider-Ham's ham and pineapple pinwheels",
      "scene": "a pig who is also Spider-Man",
-     "method": "Leg ham and Swiss in slider buns with honey mustard, baked at 180C until melted.",
+     "method": "Puff pastry spread with tomato, rolled up with ham, pineapple and mozzarella, then sliced into spirals and baked golden.",
      "shop": [
+      "puff pastry",
+      "tomato paste",
       "leg ham",
-      "Swiss cheese",
-      "slider buns",
-      "honey",
-      "Dijon mustard"
+      "crushed pineapple",
+      "mozzarella"
      ]
     },
     {
@@ -16616,12 +16624,13 @@
    ],
    "drink": [
     {
-     "name": "Cherry red soda",
-     "scene": "for the red Ferrari that doesn't make it",
-     "method": "Lemonade with a splash of cherry syrup and a few maraschino cherries, over ice in a tall glass.",
+     "name": "Abe Froman's sparkling lemonade",
+     "scene": "lunch at Chez Quis as the Sausage King of Chicago",
+     "method": "Fresh lemon and sugar topped with sparkling mineral water, served in wine glasses like a fancy lunch.",
      "shop": [
-      "lemonade",
-      "maraschino cherries"
+      "lemons",
+      "caster sugar",
+      "sparkling mineral water"
      ]
     }
    ],
@@ -17092,15 +17101,16 @@
      ]
     },
     {
-     "name": "Emporium burgers",
+     "name": "Emporium chicken fried steak",
      "scene": "the pool hall hangout",
-     "method": "Two thin patties smashed on a smoking griddle, American cheese, onion and pickles on toasted buns, wrapped in paper.",
+     "method": "Thin beef steaks dipped in seasoned flour and egg, shallow fried Texas style and smothered in peppery cream gravy.",
      "shop": [
-      "beef mince",
-      "burger buns",
-      "American cheese",
-      "onions",
-      "dill pickles"
+      "beef minute steaks",
+      "plain flour",
+      "eggs",
+      "vegetable oil",
+      "full cream milk",
+      "cracked black pepper"
      ]
     }
    ],
@@ -17605,12 +17615,14 @@
    ],
    "drink": [
     {
-     "name": "Food court cola",
+     "name": "Mall strawberry frosty",
      "scene": "the mall food court, all summer",
-     "method": "Cola over lots of ice in big paper cups.",
+     "method": "Strawberries blended with milk, vanilla and ice into a frothy food court shake.",
      "shop": [
-      "cola",
-      "ice"
+      "strawberries",
+      "milk",
+      "caster sugar",
+      "vanilla extract"
      ]
     }
    ],
@@ -21002,16 +21014,18 @@
      ]
     },
     {
-     "name": "Woodsboro burgers",
-     "scene": "small town California",
-     "method": "Thick chuck patties grilled to medium, cheddar melted under a lid, lettuce, tomato, onion and burger sauce on a toasted bun, fries alongside.",
+     "name": "Stu's party lasagne",
+     "scene": "the party at Stu's house on the night it all goes wrong",
+     "method": "Big tray of pasta layered with slow beef ragu and ricotta, topped with mozzarella and baked until bubbling.",
      "shop": [
-      "beef chuck mince",
-      "cheddar",
-      "iceberg lettuce",
-      "tomatoes",
-      "burger buns",
-      "potatoes"
+      "beef mince",
+      "onion",
+      "garlic cloves",
+      "tomato passata",
+      "lasagne sheets",
+      "ricotta",
+      "egg",
+      "mozzarella"
      ]
     }
    ],
@@ -23482,16 +23496,19 @@
    ],
    "mains": [
     {
-     "name": "Dorry's Tavern burgers",
+     "name": "Dorry's Tavern shepherd's pie",
      "scene": "the bar the gremlins take over",
-     "method": "Chuck mince seasoned at the last minute, formed into thick patties, grilled hot to medium, cheddar melted under a lid, with onion, lettuce, tomato and pickles on a toasted bun. Fries alongside.",
+     "method": "Lamb mince simmered with carrot and gravy under a thick buttery mash, baked until golden on top.",
      "shop": [
-      "beef chuck mince",
-      "cheddar",
-      "brown onions",
-      "iceberg lettuce",
-      "burger buns",
-      "potatoes"
+      "lamb mince",
+      "onion",
+      "carrots",
+      "tomato paste",
+      "Worcestershire sauce",
+      "beef stock",
+      "potatoes",
+      "butter",
+      "milk"
      ]
     },
     {
@@ -24797,13 +24814,15 @@
    ],
    "drink": [
     {
-     "name": "Space ranger slushie",
-     "scene": "to infinity and beyond",
-     "method": "Blue raspberry cordial blended with ice and lemonade into a slush.",
+     "name": "Pizza Planet alien punch",
+     "scene": "the little green aliens in the claw machine",
+     "method": "Pineapple juice and lemonade tinted green, with grapes on sticks for little aliens.",
      "shop": [
-      "blue raspberry cordial",
+      "pineapple juice",
       "lemonade",
-      "ice"
+      "limes",
+      "green food colouring",
+      "green grapes"
      ]
     }
    ],
@@ -25162,16 +25181,18 @@
    ],
    "mains": [
     {
-     "name": "Sydney harbour chicken burgers",
+     "name": "Sydney pub chicken schnitzel",
      "scene": "a Sydney lunch, no fish allowed",
-     "method": "Chicken thighs marinated in lemon, garlic and oregano, grilled until charred, in toasted buns with avocado, beetroot, lettuce and aioli.",
+     "method": "Thin chicken fillets crumbed in panko and fried golden, with lemon, chips and salad, pub style.",
      "shop": [
-      "chicken thighs",
-      "lemons",
-      "garlic",
-      "avocados",
-      "tinned beetroot",
-      "burger buns"
+      "chicken breasts",
+      "plain flour",
+      "eggs",
+      "panko breadcrumbs",
+      "vegetable oil",
+      "lemon",
+      "frozen chips",
+      "mixed salad leaves"
      ]
     },
     {
@@ -29429,16 +29450,19 @@
    "serve_cue": "Serve the mains when the team heads to the tournament in Las Vegas.",
    "snacks": [
     {
-     "name": "Average Joe's gym nachos",
-     "scene": "the gym nobody can afford to save",
-     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, topped with salsa, guacamole and sour cream.",
+     "name": "Five Ds dip platter",
+     "scene": "dodge, duck, dip, dive and dodge",
+     "method": "Crunchy carrot, celery, cucumber and capsicum sticks with hummus, tzatziki and sweet chilli sour cream to dip into.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "avocados",
-      "sour cream"
+      "carrots",
+      "celery sticks",
+      "continental cucumber",
+      "red capsicum",
+      "hummus",
+      "tzatziki",
+      "sour cream",
+      "sweet chilli sauce",
+      "water crackers"
      ]
     },
     {
@@ -29469,16 +29493,15 @@
    ],
    "mains": [
     {
-     "name": "Vegas tournament burgers",
+     "name": "Vegas steak and eggs",
      "scene": "the final in Las Vegas",
-     "method": "Thick chuck patties grilled to medium, cheddar, bacon, lettuce, tomato and pickles on toasted buns. Fries.",
+     "method": "Seared scotch fillet with a sunny side up egg, hash browns and grilled tomato, casino breakfast at any hour.",
      "shop": [
-      "beef chuck mince",
-      "cheddar",
-      "bacon",
-      "iceberg lettuce",
-      "burger buns",
-      "potatoes"
+      "scotch fillet steaks",
+      "frozen hash browns",
+      "tomatoes",
+      "eggs",
+      "butter"
      ]
     },
     {
@@ -29807,16 +29830,17 @@
      ]
     },
     {
-     "name": "Late night smash burgers",
-     "scene": "the long way home after the party",
-     "method": "Beef mince rolled into balls, smashed thin on a smoking griddle, American cheese melted on, two patties stacked with pickles, onion and mustard in a soft bun.",
+     "name": "Night shift breakfast burritos",
+     "scene": "Officers Slater and Michaels taking McLovin for a ride",
+     "method": "Big tortillas filled with scrambled egg, crisp bacon, potato and cheddar, rolled and toasted in the pan.",
      "shop": [
-      "beef mince",
-      "American cheese",
-      "dill pickles",
-      "brown onions",
-      "yellow mustard",
-      "burger buns"
+      "eggs",
+      "butter",
+      "bacon",
+      "potatoes",
+      "flour tortillas",
+      "cheddar",
+      "tomato salsa"
      ]
     }
    ],
@@ -29875,16 +29899,15 @@
      ]
     },
     {
-     "name": "Bike cop corn dogs",
-     "scene": "the park patrol on bicycles at the start",
-     "method": "Franks on sticks dipped in a batter of cornmeal, flour, sugar, egg and buttermilk, fried at 180C for 4 minutes until deep golden. Mustard and tomato sauce.",
+     "name": "Undercover cheese quesadillas",
+     "scene": "Schmidt and Jenko back in high school undercover",
+     "method": "Crisp folded tortillas filled with melted cheddar, spring onion and jalapeño, cut into wedges with salsa.",
      "shop": [
-      "hot dog franks",
-      "fine cornmeal",
-      "plain flour",
-      "buttermilk",
-      "eggs",
-      "yellow mustard"
+      "flour tortillas",
+      "cheddar",
+      "spring onions",
+      "pickled jalapeños",
+      "tomato salsa"
      ]
     },
     {
@@ -34119,16 +34142,16 @@
      ]
     },
     {
-     "name": "Rooster's piano bar sliders",
+     "name": "Piano bar prawn cocktail",
      "scene": "Rooster at the piano, just like his dad",
-     "method": "Pulled pork sliders: shoulder rubbed and roasted at 150C for 5 hours, shredded with barbecue sauce, on slider buns with slaw.",
+     "method": "Cooked prawns hung over glasses of crisp lettuce and tangy cocktail sauce, a proper bar classic.",
      "shop": [
-      "pork shoulder",
-      "smoked paprika",
-      "brown sugar",
-      "barbecue sauce",
-      "slider buns",
-      "cabbage"
+      "cooked prawns",
+      "whole egg mayonnaise",
+      "tomato sauce",
+      "Worcestershire sauce",
+      "lemon",
+      "iceberg lettuce"
      ]
     }
    ],
@@ -38719,14 +38742,14 @@
    ],
    "drink": [
     {
-     "name": "Frozen berry slushie",
-     "scene": "a world frozen solid",
-     "method": "Frozen mixed berries blended with lemonade, a squeeze of lemon and a cup of ice until thick and slushy.",
+     "name": "Scrat's nutty caramel milkshake",
+     "scene": "the one acorn Scrat never lets go of",
+     "method": "Vanilla ice cream blended with milk, caramel and peanut butter into a thick nutty shake.",
      "shop": [
-      "mixed berries",
-      "lemonade",
-      "lemons",
-      "ice"
+      "milk",
+      "vanilla ice cream",
+      "caramel sauce",
+      "smooth peanut butter"
      ]
     }
    ],
@@ -41081,15 +41104,15 @@
    "serve_cue": "Serve the snacks when Luis starts one of his very long stories.",
    "snacks": [
     {
-     "name": "Luis's long story nachos",
+     "name": "Luis's long story taquitos",
      "scene": "Luis telling a story that goes on and on",
-     "method": "Corn chips layered with black beans, cheddar and jalapeño, baked at 200C for 8 minutes, topped with pico de gallo, guacamole and sour cream. Big enough to last the whole story.",
+     "method": "Corn tortillas rolled tight around chicken and cheese, baked until crisp and served with sour cream.",
      "shop": [
-      "corn chips",
-      "black beans",
+      "cooked chicken",
       "cheddar",
-      "jalapeños",
-      "avocados",
+      "tomato salsa",
+      "corn tortillas",
+      "vegetable oil",
       "sour cream"
      ]
     },
@@ -42684,16 +42707,17 @@
    ],
    "mains": [
     {
-     "name": "Prom night burgers",
-     "scene": "the prom where Link steals the show",
-     "method": "Chuck patties smashed thin on a hot griddle, American cheese, pickles, onion and burger sauce on toasted buns, crinkle-cut fries.",
+     "name": "Pool party teriyaki chicken",
+     "scene": "the backyard pool where they dig him up",
+     "method": "Chicken thigh skewers marinated in teriyaki, ginger and garlic, grilled and served with rice and sesame.",
      "shop": [
-      "beef chuck mince",
-      "American cheese",
-      "dill pickles",
-      "brown onions",
-      "burger buns",
-      "potatoes"
+      "chicken thigh fillets",
+      "teriyaki sauce",
+      "ginger",
+      "garlic cloves",
+      "bamboo skewers",
+      "jasmine rice",
+      "sesame seeds"
      ]
     },
     {
@@ -43798,15 +43822,14 @@
    "serve_cue": "Serve the drinks when Velma takes the stage at the nightclub.",
    "snacks": [
     {
-     "name": "Speakeasy cocktail franks",
+     "name": "Onyx Club devils on horseback",
      "scene": "the jazz club where Velma performs",
-     "method": "Cocktail franks simmered 3 minutes, rolled in strips of puff pastry spread with a little Dijon, egg washed, sprinkled with sesame, baked at 200C for 15 minutes until golden.",
+     "method": "Prunes stuffed with blue cheese, wrapped in streaky bacon and baked crisp, a Jazz Age party classic.",
      "shop": [
-      "cocktail franks",
-      "puff pastry",
-      "Dijon mustard",
-      "eggs",
-      "sesame seeds"
+      "pitted prunes",
+      "blue cheese",
+      "streaky bacon",
+      "toothpicks"
      ]
     },
     {
@@ -45404,14 +45427,15 @@
    "serve_cue": "Serve the mains when Deloris sits down to her first plain convent dinner.",
    "snacks": [
     {
-     "name": "Reno lounge cocktail franks",
+     "name": "Reno lounge stuffed mushrooms",
      "scene": "the casino lounge where Deloris sings",
-     "method": "Cocktail franks simmered, glazed in a sticky sauce of barbecue sauce, brown sugar and a splash of bourbon, served on toothpicks.",
+     "method": "Button mushroom caps filled with fried bacon, garlic, breadcrumbs and parmesan, then baked until golden on top.",
      "shop": [
-      "cocktail franks",
-      "barbecue sauce",
-      "brown sugar",
-      "bourbon"
+      "button mushrooms",
+      "bacon",
+      "garlic clove",
+      "breadcrumbs",
+      "parmesan"
      ]
     },
     {
@@ -45589,13 +45613,13 @@
    ],
    "drink": [
     {
-     "name": "Ice-cold soda",
+     "name": "Lunch truck watermelon agua fresca",
      "scene": "a quick drink between cars",
-     "method": "Cola poured over a glass packed with ice and a squeeze of lime, sipped in the shade.",
+     "method": "Fresh watermelon blended with cold water and lime, strained and poured over ice.",
      "shop": [
-      "cola",
-      "ice",
-      "limes"
+      "seedless watermelon",
+      "limes",
+      "caster sugar"
      ]
     }
    ],
@@ -45721,15 +45745,15 @@
    "serve_cue": "Serve the mains when Shaft walks into Harlem.",
    "snacks": [
     {
-     "name": "Times Square hot dogs",
+     "name": "Times Square knishes",
      "scene": "Shaft striding through Times Square",
-     "method": "Franks simmered 5 minutes, in steamed buns with spicy brown mustard and onions cooked down in tomato paste, cinnamon and a pinch of chilli, wrapped in paper.",
+     "method": "Puff pastry parcels filled with mashed potato and soft fried onion, a New York street corner favourite.",
      "shop": [
-      "hot dog franks",
-      "hot dog buns",
-      "American mustard",
-      "brown onions",
-      "tomato paste"
+      "potatoes",
+      "onion",
+      "butter",
+      "puff pastry",
+      "egg"
      ]
     },
     {
@@ -47385,16 +47409,16 @@
    "serve_cue": "Serve the snacks when the house party kicks off at Wyatt's place.",
    "snacks": [
     {
-     "name": "House party nachos",
+     "name": "House party cob loaf",
      "scene": "the party while Wyatt's parents are away",
-     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, topped with salsa, guacamole and sour cream.",
+     "method": "A hollowed cob loaf filled with hot cheese, bacon and onion dip, with the torn bread for dunking.",
      "shop": [
-      "corn chips",
-      "black beans",
+      "cob loaf",
+      "cream cheese",
+      "sour cream",
+      "bacon",
       "cheddar",
-      "jalapeños",
-      "avocados",
-      "sour cream"
+      "French onion soup mix"
      ]
     },
     {
@@ -47623,16 +47647,16 @@
      ]
     },
     {
-     "name": "Party nachos",
+     "name": "Party potato skins",
      "scene": "the popular kids' parties",
-     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, guacamole and sour cream.",
+     "method": "Baked potato halves scooped out, filled with bacon and cheddar, baked crisp and topped with sour cream and chives.",
      "shop": [
-      "corn chips",
-      "black beans",
+      "potatoes",
+      "butter",
+      "bacon",
       "cheddar",
-      "jalapeños",
-      "avocados",
-      "sour cream"
+      "sour cream",
+      "chives"
      ]
     }
    ],
@@ -47651,16 +47675,15 @@
      ]
     },
     {
-     "name": "Lawn mowing money burger",
-     "scene": "the lawn mowing money he hands over to Cindy",
-     "method": "Chuck mince smashed thin on a smoking griddle, American cheese melted on, pickles, onion and a mustard mayo on soft toasted buns, crinkle fries alongside.",
+     "name": "Tucson red chilli enchiladas",
+     "scene": "home turf in Tucson, Arizona",
+     "method": "Corn tortillas rolled around chicken and cheddar, baked in red chilli sauce under more melted cheese.",
      "shop": [
-      "beef mince",
-      "American cheese",
-      "dill pickles",
-      "burger buns",
-      "brown onions",
-      "potatoes"
+      "cooked chicken",
+      "red enchilada sauce",
+      "corn tortillas",
+      "cheddar",
+      "coriander"
      ]
     }
    ],
@@ -49093,16 +49116,18 @@
      ]
     },
     {
-     "name": "Smeerensburg feud sliders",
+     "name": "Feuding family meatballs",
      "scene": "the Krums and the Ellingboes at each other's throats",
-     "method": "Two kinds of slider side by side: beef with cheddar and pickles, and pork with apple and sage, so both families get their own.",
+     "method": "Little Nordic pork and beef meatballs with a hint of allspice, browned in butter and served with cranberry.",
      "shop": [
-      "beef mince",
-      "pork mince",
-      "cheddar",
-      "green apples",
-      "sage",
-      "slider buns"
+      "pork and beef mince",
+      "breadcrumbs",
+      "milk",
+      "egg",
+      "onion",
+      "ground allspice",
+      "butter",
+      "cranberry sauce"
      ]
     },
     {
@@ -49403,16 +49428,17 @@
    "serve_cue": "Serve the snacks when Patrick starts singing to Kat across the football bleachers.",
    "snacks": [
     {
-     "name": "Bogey's party nachos",
+     "name": "Bogey's party spinach dip",
      "scene": "the big house party where Kat dances on the table",
-     "method": "Corn chips layered with black beans, cheddar and jalapeño, baked at 200C for 8 minutes, topped with fresh salsa, guacamole and sour cream.",
+     "method": "Hot baked dip of cream cheese, spinach, artichoke and mozzarella with toasted baguette for scooping.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "avocados",
-      "sour cream"
+      "cream cheese",
+      "sour cream",
+      "frozen spinach",
+      "artichoke hearts",
+      "garlic clove",
+      "mozzarella",
+      "baguette"
      ]
     },
     {
@@ -49536,16 +49562,14 @@
      ]
     },
     {
-     "name": "Band camp sliders",
+     "name": "Band camp grilled corn",
      "scene": "Michelle and all her band camp stories",
-     "method": "Beef patties smashed thin on a hot grill, cheddar melted on, pickles and onion on soft slider buns with mustard mayo.",
+     "method": "Corn cobs boiled, then charred on a hot grill and brushed with smoky paprika butter and fresh lime.",
      "shop": [
-      "beef mince",
-      "cheddar",
-      "dill pickles",
-      "brown onions",
-      "slider buns",
-      "mayonnaise"
+      "corn cobs",
+      "butter",
+      "smoked paprika",
+      "lime"
      ]
     }
    ],
@@ -50390,16 +50414,14 @@
      ]
     },
     {
-     "name": "Amusement park corn dogs",
-     "scene": "the adventure park where Willy is kept",
-     "method": "Cocktail franks dipped in a cornmeal batter, fried at 180C until golden, with mustard and tomato sauce.",
+     "name": "Glen and Annie's grilled cheese soldiers",
+     "scene": "Jesse's new foster family",
+     "method": "Buttery toasted cheddar sandwiches fried golden in the pan and cut into fingers for dipping in tomato sauce.",
      "shop": [
-      "cocktail franks",
-      "fine cornmeal",
-      "plain flour",
-      "buttermilk",
-      "yellow mustard",
-      "vegetable oil"
+      "white bread",
+      "butter",
+      "cheddar",
+      "tomato sauce"
      ]
     }
    ],
@@ -50785,16 +50807,15 @@
    "serve_cue": "Serve the snacks when the Ducks pull off the Flying V for the first time.",
    "snacks": [
     {
-     "name": "Flying V nachos",
-     "scene": "the Flying V formation",
-     "method": "Corn chips arranged in a V on a tray, layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, salsa and sour cream on top.",
+     "name": "Minnesota fried cheese bites",
+     "scene": "Minnesota's favourite fried snack",
+     "method": "Cubes of firm mozzarella dipped in light batter and fried golden, with ranch for dipping.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "tomatoes",
-      "sour cream"
+      "firm mozzarella",
+      "self-raising flour",
+      "milk",
+      "vegetable oil",
+      "ranch dressing"
      ]
     },
     {
@@ -50915,15 +50936,14 @@
      ]
     },
     {
-     "name": "Football field sliders",
-     "scene": "the small-town football field",
-     "method": "Beef patties with cheddar, pickles and mustard on soft slider buns, a toothpick flag in each.",
+     "name": "Ohio buckeye bites",
+     "scene": "small-town Ohio football country",
+     "method": "Peanut butter balls dipped in dark chocolate with a round left showing on top, Ohio's famous treat.",
      "shop": [
-      "beef mince",
-      "cheddar",
-      "dill pickles",
-      "yellow mustard",
-      "slider buns"
+      "smooth peanut butter",
+      "butter",
+      "icing sugar",
+      "dark chocolate"
      ]
     }
    ],
@@ -51711,13 +51731,12 @@
    ],
    "drink": [
     {
-     "name": "Toy box soda",
-     "scene": "the toys unpacked from their boxes",
-     "method": "Lemonade with raspberry cordial and a scoop of vanilla ice cream, in tall glasses with striped straws.",
+     "name": "Commando Elite canteen cordial",
+     "scene": "Chip Hazard's troops on manoeuvres",
+     "method": "Ice-cold lime cordial with sliced lime, served in tin cups like an army canteen.",
      "shop": [
-      "lemonade",
-      "raspberry cordial",
-      "vanilla ice cream"
+      "lime cordial",
+      "limes"
      ]
     }
    ],
@@ -53257,16 +53276,15 @@
      ]
     },
     {
-     "name": "Volcano nachos",
-     "scene": "the erupting volcano on Isla Nublar",
-     "method": "Corn chips piled into a mountain, layered with beans and cheddar, baked at 200C for 8 minutes, a hot red salsa poured down the sides like lava.",
+     "name": "Dino egg scotch eggs",
+     "scene": "the secret cloning lab under Lockwood Manor",
+     "method": "Soft-boiled eggs wrapped in sausage meat, crumbed and cooked golden, then halved like cracked dinosaur eggs.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "tomatoes",
-      "red chillies",
-      "sour cream"
+      "eggs",
+      "sausage meat",
+      "plain flour",
+      "breadcrumbs",
+      "vegetable oil"
      ]
     }
    ],
@@ -53876,15 +53894,15 @@
    "serve_cue": "Serve dessert when Tony sits in the giant doughnut sign and Fury turns up.",
    "snacks": [
     {
-     "name": "Stark Expo sliders",
-     "scene": "the Stark Expo in Queens",
-     "method": "Beef patties with cheddar, pickles and tomato relish on soft slider buns, served on a sleek black board.",
+     "name": "Tony's strawberry peace offering",
+     "scene": "the strawberries Tony brings Pepper, the one thing she's allergic to",
+     "method": "Sugared strawberries with softly whipped cream for dipping, a better peace offering than Tony managed.",
      "shop": [
-      "beef mince",
-      "cheddar",
-      "dill pickles",
-      "tomato relish",
-      "slider buns"
+      "strawberries",
+      "caster sugar",
+      "lemon",
+      "thickened cream",
+      "icing sugar"
      ]
     },
     {
@@ -54523,15 +54541,15 @@
      ]
     },
     {
-     "name": "Smithsonian exhibit sliders",
+     "name": "1940s devilled eggs",
      "scene": "the Captain America exhibit at the Smithsonian",
-     "method": "Beef patties with cheddar and pickles on soft slider buns, a little star of red capsicum on top.",
+     "method": "Halved boiled eggs filled with mustard mayonnaise yolks and dusted with paprika, wartime party food straight from Steve's era.",
      "shop": [
-      "beef mince",
-      "cheddar",
-      "dill pickles",
-      "slider buns",
-      "red capsicum"
+      "eggs",
+      "whole egg mayonnaise",
+      "Dijon mustard",
+      "sweet paprika",
+      "chives"
      ]
     },
     {
@@ -55272,16 +55290,16 @@
      ]
     },
     {
-     "name": "Liz's party nachos",
+     "name": "Liz's party buffalo cauliflower",
      "scene": "the party at Liz's house",
-     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, with salsa and sour cream.",
+     "method": "Cauliflower florets baked in light batter, tossed in buttery hot sauce and served with blue cheese dip.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "tomatoes",
-      "sour cream"
+      "cauliflower",
+      "plain flour",
+      "garlic powder",
+      "hot sauce",
+      "butter",
+      "blue cheese dressing"
      ]
     }
    ],
@@ -55435,12 +55453,14 @@
    ],
    "drink": [
     {
-     "name": "Blood orange soda",
+     "name": "Venice peach bellini mocktail",
      "scene": "the school trip through Venice",
-     "method": "Blood orange juice and soda water over ice with a slice of orange.",
+     "method": "Fresh peach purée topped with sparkling apple juice, the alcohol-free take on Venice's own drink.",
      "shop": [
-      "blood oranges",
-      "soda water"
+      "ripe peaches",
+      "caster sugar",
+      "lemon",
+      "sparkling apple juice"
      ]
     }
    ],
@@ -55471,16 +55491,15 @@
      ]
     },
     {
-     "name": "Sanctum spell nachos",
+     "name": "Sanctum spell garlic knots",
      "scene": "Doctor Strange's spell going wrong",
-     "method": "Corn chips piled up with beans, cheddar and jalapeño, baked at 200C for 8 minutes, topped with salsa and guacamole.",
+     "method": "Strips of pizza dough tied into knots, baked soft and tossed in garlic butter with parsley and parmesan.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "avocados",
-      "tomatoes"
+      "pizza dough",
+      "butter",
+      "garlic cloves",
+      "parsley",
+      "parmesan"
      ]
     },
     {
@@ -55767,15 +55786,15 @@
    "serve_cue": "Serve the snacks when Scott does magic tricks for Cassie under house arrest.",
    "snacks": [
     {
-     "name": "Shrunken sliders",
-     "scene": "the shrunken cars and buildings Hank carries like luggage",
-     "method": "Tiny beef patties pressed thin, seared on a hot pan with cheddar melted on top, tucked into mini slider buns with pickles and tomato sauce, held with toothpicks.",
+     "name": "Shrinking lab mini quiches",
+     "scene": "the whole lab shrunk down and carried like luggage",
+     "method": "Little puff pastry quiches of egg, ham and cheddar, baked in a mini muffin tray until puffed and golden.",
      "shop": [
-      "beef mince",
-      "cheddar",
-      "dill pickles",
-      "slider buns",
-      "tomato sauce"
+      "puff pastry",
+      "eggs",
+      "thickened cream",
+      "leg ham",
+      "cheddar"
      ]
     },
     {
@@ -55846,13 +55865,13 @@
    ],
    "drink": [
     {
-     "name": "Ant-sized soda",
-     "scene": "everything going tiny",
-     "method": "Lemonade and raspberry cordial in tiny glasses, with a scoop of vanilla ice cream in the big jug.",
+     "name": "House arrest iced tea",
+     "scene": "Scott's last days of house arrest",
+     "method": "Strong black tea sweetened with honey, chilled and poured over ice with lemon slices.",
      "shop": [
-      "lemonade",
-      "raspberry cordial",
-      "vanilla ice cream"
+      "black tea bags",
+      "honey",
+      "lemons"
      ]
     }
    ],
@@ -56348,16 +56367,19 @@
      ]
     },
     {
-     "name": "Logan's beer and burger",
-     "scene": "Wolverine sulking with a drink",
-     "method": "Beef burgers with cheddar, bacon and onion rings on toasted buns, with a cold beer.",
+     "name": "Void campfire chilli",
+     "scene": "the resistance hideout out in the Void",
+     "method": "Beef and kidney bean chilli simmered with cumin and tomato, served with cheddar and corn chips.",
      "shop": [
       "beef mince",
+      "onion",
+      "garlic cloves",
+      "chilli powder",
+      "ground cumin",
+      "crushed tomatoes",
+      "kidney beans",
       "cheddar",
-      "bacon",
-      "brown onions",
-      "burger buns",
-      "lager"
+      "corn chips"
      ]
     }
    ],
@@ -56682,13 +56704,13 @@
    ],
    "drink": [
     {
-     "name": "Black cherry cola float",
-     "scene": "the black symbiote",
-     "method": "Cherry cola with a scoop of vanilla ice cream and a cherry on top.",
+     "name": "Mrs Chen's iced milk tea",
+     "scene": "Mrs Chen's corner store",
+     "method": "Strong black tea sweetened with condensed milk, chilled and poured over ice with a splash of milk.",
      "shop": [
-      "cherry cola",
-      "vanilla ice cream",
-      "maraschino cherries"
+      "black tea bags",
+      "sweetened condensed milk",
+      "milk"
      ]
     }
    ],
@@ -57089,12 +57111,16 @@
    ],
    "drink": [
     {
-     "name": "Space-age soda float",
+     "name": "Space race orange cream shake",
      "scene": "the Fantasticar flying over the city",
-     "method": "Creaming soda with a scoop of vanilla ice cream, in tall glasses with straws.",
+     "method": "Orange juice blended with vanilla ice cream and milk, topped with cream, retro diner style.",
      "shop": [
-      "creaming soda",
-      "vanilla ice cream"
+      "orange juice",
+      "vanilla ice cream",
+      "milk",
+      "vanilla extract",
+      "whipped cream",
+      "orange"
      ]
     }
    ],
@@ -57728,14 +57754,14 @@
    ],
    "drink": [
     {
-     "name": "Clown nose cherry soda",
-     "scene": "Arthur's red clown nose",
-     "method": "Cherry juice and soda water over ice with a maraschino cherry dropped in each glass.",
+     "name": "Gotham late show Manhattan",
+     "scene": "Murray Franklin's late night show",
+     "method": "Bourbon stirred with sweet vermouth and bitters, strained cold with a cherry.",
      "shop": [
-      "cherry juice",
-      "soda water",
-      "maraschino cherries",
-      "ice"
+      "bourbon",
+      "sweet vermouth",
+      "aromatic bitters",
+      "cocktail cherries"
      ]
     }
    ],
@@ -58388,16 +58414,14 @@
    "serve_cue": "Serve the mains when the turtles head up to the rooftops with pizza.",
    "snacks": [
     {
-     "name": "Sewer lair nachos",
+     "name": "Sewer lair pepperoni rolls",
      "scene": "the turtles' home in the sewers",
-     "method": "Corn chips layered with black beans, cheddar and jalapeño, baked at 200C for 8 minutes, with salsa and guacamole.",
+     "method": "Pizza dough rolled up with sauce, mozzarella and pepperoni, sliced into scrolls and baked golden.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "avocados",
-      "tomatoes"
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni"
      ]
     },
     {
@@ -58812,15 +58836,15 @@
      ]
     },
     {
-     "name": "LA freeway sliders",
-     "scene": "Hancock leaving a trail of wreckage across LA",
-     "method": "Beef patties smashed thin on a hot grill, cheddar melted on, tucked into slider buns with pickles and tomato sauce, stacked on a tray.",
+     "name": "All Heart bruschetta",
+     "scene": "Ray's All Heart pitch to the big companies",
+     "method": "Toasted baguette rubbed with garlic and piled with chopped ripe tomato, basil and good olive oil.",
      "shop": [
-      "beef mince",
-      "cheddar",
-      "dill pickles",
-      "slider buns",
-      "tomato sauce"
+      "baguette",
+      "ripe tomatoes",
+      "garlic cloves",
+      "basil",
+      "olive oil"
      ]
     },
     {
@@ -61292,16 +61316,17 @@
      ]
     },
     {
-     "name": "Ralph's brick-sized burgers",
+     "name": "Ralph's wrecking ball meatballs",
      "scene": "Ralph smashing the bricks of the apartment building",
-     "method": "Big beef patties grilled with cheddar melted on, stacked with bacon and pickles in toasted buns, with chunky potato wedges roasted at 220C.",
+     "method": "Eight huge beef and parmesan meatballs browned and simmered in tomato sauce, then served over a pile of spaghetti.",
      "shop": [
       "beef mince",
-      "cheddar",
-      "bacon",
-      "dill pickles",
-      "burger buns",
-      "potatoes"
+      "breadcrumbs",
+      "egg",
+      "parmesan",
+      "garlic cloves",
+      "tomato passata",
+      "spaghetti"
      ]
     }
    ],
@@ -62407,16 +62432,17 @@
      ]
     },
     {
-     "name": "Band rehearsal nachos",
+     "name": "Garage rehearsal popcorn chicken",
      "scene": "Anna's band rehearsing in the garage",
-     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, with salsa and sour cream.",
+     "method": "Bite-size chicken thigh in crunchy paprika panko crumbs, shallow fried golden and served with honey mustard for dipping.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "tomatoes",
-      "sour cream"
+      "chicken thigh fillets",
+      "eggs",
+      "plain flour",
+      "panko breadcrumbs",
+      "sweet paprika",
+      "vegetable oil",
+      "honey mustard"
      ]
     },
     {
@@ -62750,16 +62776,14 @@
    ],
    "mains": [
     {
-     "name": "RV road trip burgers",
-     "scene": "the family's RV road trip",
-     "method": "Beef patties grilled with cheddar melted on, in toasted buns with lettuce, tomato and pickles, fries cooked twice on the side.",
+     "name": "Duke Caboom's poutine",
+     "scene": "Canada's greatest stuntman",
+     "method": "Thick-cut chips piled with shredded chicken and melty cheese, drowned in hot gravy, Canadian style.",
      "shop": [
-      "beef mince",
-      "cheddar",
-      "iceberg lettuce",
-      "tomatoes",
-      "burger buns",
-      "potatoes"
+      "frozen thick-cut chips",
+      "beef gravy",
+      "barbecue chicken",
+      "fresh mozzarella"
      ]
     },
     {
@@ -62829,15 +62853,16 @@
      ]
     },
     {
-     "name": "Hank's seven-arm sliders",
-     "scene": "Hank the septopus",
-     "method": "Chicken patties with lettuce and mayo on small slider buns, seven of them in a ring.",
+     "name": "Hank's camouflage fruit platter",
+     "scene": "Hank the septopus blending in",
+     "method": "Colourful fruit laid out in patches so it hides in plain sight, like Hank, with vanilla yoghurt for dipping.",
      "shop": [
-      "chicken mince",
-      "breadcrumbs",
-      "iceberg lettuce",
-      "mayonnaise",
-      "slider buns"
+      "watermelon",
+      "strawberries",
+      "kiwi fruit",
+      "blueberries",
+      "green grapes",
+      "vanilla yoghurt"
      ]
     },
     {
@@ -62999,14 +63024,13 @@
    ],
    "drink": [
     {
-     "name": "Super red soda",
-     "scene": "the family's red supersuits",
-     "method": "Raspberry cordial with soda water and fresh raspberries over ice.",
+     "name": "Elastigirl's raspberry lemonade",
+     "scene": "Helen out saving the city",
+     "method": "Fresh lemonade turned red with a quick raspberry syrup and served over ice.",
      "shop": [
-      "raspberry cordial",
-      "soda water",
-      "raspberries",
-      "ice"
+      "frozen raspberries",
+      "caster sugar",
+      "lemons"
      ]
     }
    ],
@@ -63211,13 +63235,16 @@
    ],
    "drink": [
     {
-     "name": "Scream can soda",
-     "scene": "the scream canisters",
-     "method": "Lime cordial and lemonade over ice, served in small cans or tall glasses.",
+     "name": "Mike's green apple cooler",
+     "scene": "Mike Wazowski, one big green eye",
+     "method": "Cloudy apple juice with soda water, lime and mint, tinted green with an apple round floating on top.",
      "shop": [
-      "lime cordial",
-      "lemonade",
-      "ice"
+      "cloudy apple juice",
+      "soda water",
+      "lime",
+      "mint",
+      "green apple",
+      "green food colouring"
      ]
     }
    ],
@@ -63828,13 +63855,15 @@
    ],
    "drink": [
     {
-     "name": "Fire and water fizz",
-     "scene": "Ember and Wade side by side",
-     "method": "Blood orange juice and sparkling water poured together over ice so they swirl.",
+     "name": "Firetown hot spiced apple",
+     "scene": "Bernie's shop in Firetown",
+     "method": "Apple juice warmed with cinnamon, cloves, orange peel and ginger, served steaming in mugs.",
      "shop": [
-      "blood orange juice",
-      "sparkling water",
-      "ice"
+      "apple juice",
+      "cinnamon sticks",
+      "whole cloves",
+      "orange",
+      "ginger"
      ]
     }
    ],
@@ -63852,14 +63881,14 @@
    "serve_cue": "Serve the mains when the brothers pull up at the Manticore's tavern.",
    "snacks": [
     {
-     "name": "Manticore's tavern sliders",
+     "name": "Manticore's tavern onion rings",
      "scene": "the old tavern turned family restaurant",
-     "method": "Beef patties smashed thin on a hot grill, cheddar melted on, tucked into soft slider buns with pickles and served on a wooden board.",
+     "method": "Thick brown onion rings dipped in a light soda water batter and fried until golden and crisp, tavern style.",
      "shop": [
-      "beef mince",
-      "cheddar",
-      "dill pickles",
-      "slider buns"
+      "brown onions",
+      "self-raising flour",
+      "soda water",
+      "vegetable oil"
      ]
     },
     {
@@ -65183,14 +65212,14 @@
    ],
    "drink": [
     {
-     "name": "Green and pink fizz",
-     "scene": "Elphaba and Galinda",
-     "method": "Lime cordial and soda in one glass, raspberry cordial and soda in another, served side by side.",
+     "name": "Ozdust Ballroom pink lemonade",
+     "scene": "the dance at the Ozdust Ballroom",
+     "method": "Fresh lemonade turned pink with a splash of cranberry and topped with raspberries.",
      "shop": [
-      "lime cordial",
-      "raspberry cordial",
-      "soda water",
-      "ice"
+      "lemons",
+      "caster sugar",
+      "cranberry juice",
+      "raspberries"
      ]
     }
    ],
@@ -65393,14 +65422,13 @@
    ],
    "drink": [
     {
-     "name": "Quantum fizz",
+     "name": "Colour-changing quantum lemonade",
      "scene": "the swirling quantum realm",
-     "method": "Blackcurrant cordial and lemonade with a squeeze of lime over ice.",
+     "method": "Blue butterfly pea tea poured over lemonade so it swirls purple in the glass.",
      "shop": [
-      "blackcurrant cordial",
+      "dried butterfly pea flowers",
       "lemonade",
-      "limes",
-      "ice"
+      "lemon"
      ]
     }
    ],
@@ -65607,15 +65635,17 @@
    ],
    "drink": [
     {
-     "name": "Multiverse colour fizz",
-     "scene": "the colourful universe made of paint",
-     "method": "Layers of grenadine, orange juice and blue lemonade poured slowly over ice.",
+     "name": "Kamar-Taj masala chai",
+     "scene": "tea at Kamar-Taj before training",
+     "method": "Black tea simmered with milk, cardamom, cinnamon, ginger and cloves, sweetened and strained.",
      "shop": [
-      "grenadine",
-      "orange juice",
-      "lemonade",
-      "blue food colouring",
-      "ice"
+      "cardamom pods",
+      "cinnamon stick",
+      "ginger",
+      "whole cloves",
+      "black tea bags",
+      "milk",
+      "caster sugar"
      ]
     }
    ],
@@ -65925,14 +65955,14 @@
    ],
    "drink": [
     {
-     "name": "Shield red cherry soda",
-     "scene": "the red and white shield",
-     "method": "Cherry juice and soda water with fresh lime over ice.",
+     "name": "Louisiana sweet tea",
+     "scene": "Sam's family back home in Louisiana",
+     "method": "Strong black tea sweetened while hot, chilled and poured over ice with lemon and mint.",
      "shop": [
-      "cherry juice",
-      "soda water",
-      "limes",
-      "ice"
+      "black tea bags",
+      "caster sugar",
+      "lemon",
+      "mint"
      ]
     }
    ],
@@ -66400,16 +66430,14 @@
      ]
     },
     {
-     "name": "Uncle Rudy's nachos",
+     "name": "Uncle Rudy's chicharrones",
      "scene": "Uncle Rudy and his homemade gadgets",
-     "method": "Corn chips layered with black beans, cheddar and jalapeño, baked at 200C for 8 minutes, topped with salsa and sour cream.",
+     "method": "Pork belly roasted until the skin puffs into crackling, cut into bites with lime and hot sauce.",
      "shop": [
-      "corn chips",
-      "black beans",
-      "cheddar",
-      "jalapeños",
-      "tomatoes",
-      "sour cream"
+      "pork belly",
+      "sea salt",
+      "limes",
+      "hot sauce"
      ]
     }
    ],
@@ -67999,13 +68027,14 @@
    ],
    "drink": [
     {
-     "name": "Grandpa's backwards soda",
-     "scene": "the Robinsons' mad family",
-     "method": "Orange juice and lemonade topped with a scoop of vanilla ice cream, a spider served the wrong way round, ice cream first.",
+     "name": "Bowler Hat Guy's grape smoothie",
+     "scene": "the villain who never thought it through",
+     "method": "Frozen red grapes blended with banana, grape juice and vanilla yoghurt until thick and purple.",
      "shop": [
-      "orange juice",
-      "lemonade",
-      "vanilla ice cream"
+      "red grapes",
+      "banana",
+      "grape juice",
+      "vanilla yoghurt"
      ]
     }
    ],
@@ -69381,15 +69410,17 @@
    "serve_cue": "Serve the snacks when the Autobots try to hide in Sam's backyard.",
    "snacks": [
     {
-     "name": "Backyard barbecue sliders",
-     "scene": "the Autobots tiptoeing around the Witwicky backyard",
-     "method": "Beef patties smashed thin on a hot grill, cheddar melted on, tucked into soft slider buns with pickles and tomato sauce.",
+     "name": "Mikaela's loaded potato wedges",
+     "scene": "Mikaela, the girl who knows engines",
+     "method": "Roasted paprika potato wedges topped with melted cheddar, crisp bacon, sour cream and spring onion.",
      "shop": [
-      "beef mince",
+      "potatoes",
+      "olive oil",
+      "sweet paprika",
       "cheddar",
-      "dill pickles",
-      "slider buns",
-      "tomato sauce"
+      "bacon",
+      "sour cream",
+      "spring onions"
      ]
     },
     {
@@ -69565,14 +69596,11 @@
    ],
    "drink": [
     {
-     "name": "Neon orange fizz",
-     "scene": "Clu's orange-lit army",
-     "method": "Orange juice and soda water over ice with a slice of orange.",
+     "name": "Flynn's zen green tea",
+     "scene": "Kevin Flynn meditating in his hideout on the Grid",
+     "method": "Green tea steeped gently in a warmed pot and poured into small cups, calm as Flynn.",
      "shop": [
-      "orange juice",
-      "soda water",
-      "oranges",
-      "ice"
+      "green tea bags"
      ]
     }
    ],
@@ -72120,16 +72148,14 @@
      ]
     },
     {
-     "name": "Bar dance nachos",
+     "name": "Desert bar jalapeño poppers",
      "scene": "Nyles and Sarah's dance at the desert bar",
-     "method": "Corn chips layered with beans, cheddar and jalapeño, baked at 200C for 8 minutes, with salsa and guacamole.",
+     "method": "Halved jalapeños filled with cream cheese and cheddar, wrapped in bacon and baked until crisp.",
      "shop": [
-      "corn chips",
-      "black beans",
+      "jalapeño chillies",
+      "cream cheese",
       "cheddar",
-      "jalapeños",
-      "avocados",
-      "tomatoes"
+      "streaky bacon"
      ]
     }
    ],
@@ -72844,15 +72870,17 @@
      ]
     },
     {
-     "name": "Grandstand nachos",
+     "name": "Carolina hushpuppies",
      "scene": "the crowd in the grandstand",
-     "method": "Corn chips under a warm cheese sauce of cheddar melted into milk with a little cornflour, topped with sliced jalapeños.",
+     "method": "Little cornmeal and onion fritters fried golden, the Southern side for every ballgame and fish fry.",
      "shop": [
-      "corn chips",
-      "cheddar",
-      "full cream milk",
-      "cornflour",
-      "jalapeños"
+      "fine cornmeal",
+      "self-raising flour",
+      "caster sugar",
+      "onion",
+      "egg",
+      "buttermilk",
+      "vegetable oil"
      ]
     }
    ],
@@ -73258,15 +73286,14 @@
      ]
     },
     {
-     "name": "Comic con nacho cheese dip",
-     "scene": "the convention floor in New York",
-     "method": "Cheddar melted into evaporated milk with a little cornflour, chilli and mustard, kept warm and served with corn chips for dunking.",
+     "name": "Comic strip pizza bagels",
+     "scene": "Bluntman and Chronic on the convention floor",
+     "method": "Toasted bagel halves spread with pizza sauce, topped with mozzarella and pepperoni and grilled until bubbling and golden.",
      "shop": [
-      "cheddar",
-      "evaporated milk",
-      "cornflour",
-      "corn chips",
-      "chilli powder"
+      "plain bagels",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni"
      ]
     }
    ],
@@ -73828,13 +73855,15 @@
    ],
    "drink": [
     {
-     "name": "Lemon soda",
-     "scene": "the fizzy drink at the party",
-     "method": "Cloudy lemon soda poured over ice with lemon slices, or homemade with lemon syrup and soda water.",
+     "name": "Party lemon, lime and bitters",
+     "scene": "the dress-up party where Lily meets Jarrod",
+     "method": "Lime cordial and a few dashes of bitters topped with lemonade until it turns pink.",
      "shop": [
-      "lemons",
-      "caster sugar",
-      "soda water"
+      "lime cordial",
+      "aromatic bitters",
+      "lemonade",
+      "lemon",
+      "lime"
      ]
     }
    ],
@@ -73929,13 +73958,13 @@
    ],
    "drink": [
     {
-     "name": "Raspberry fizz",
-     "scene": "the dairy fridge on a hot day",
-     "method": "Raspberry cordial topped with soda water over ice, a few frozen raspberries floating on top.",
+     "name": "Dairy lime milkshake",
+     "scene": "the dairy on a hot day",
+     "method": "A thick lime milkshake, the way the corner dairy makes them.",
      "shop": [
-      "raspberry cordial",
-      "soda water",
-      "frozen raspberries"
+      "full cream milk",
+      "vanilla ice cream",
+      "lime cordial"
      ]
     }
    ],
