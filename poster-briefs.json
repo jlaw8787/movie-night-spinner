@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 730,
- "ready_for_poster": 606,
+ "hand_written": 743,
+ "ready_for_poster": 619,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -75358,6 +75358,1323 @@
     }
    ],
    "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Knives Out (2019)",
+   "title": "Knives Out",
+   "year": "2019",
+   "theme": "uptown",
+   "tagline": "Donut holes, birthday cake and one very nice sweater.",
+   "description": "A detective investigates the death of a crime novelist after his 85th birthday party, with the whole family as suspects.",
+   "serve_cue": "Serve the donut holes when Blanc starts on his donut theory.",
+   "snacks": [
+    {
+     "name": "Donut holes",
+     "scene": "Benoit Blanc's theory of the donut hole",
+     "method": "Small balls of yeasted dough fried at 175C until puffed and golden, rolled in cinnamon sugar while hot.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "milk",
+      "eggs",
+      "caster sugar",
+      "ground cinnamon"
+     ]
+    },
+    {
+     "name": "Birthday party devilled eggs",
+     "scene": "Harlan's 85th, before it all goes wrong",
+     "method": "Eggs boiled, yolks whipped with mayo, Dijon and a dash of hot sauce, piped back in and dusted with smoked paprika.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "Dijon mustard",
+      "hot sauce",
+      "smoked paprika"
+     ]
+    },
+    {
+     "name": "New England clam chowder cups",
+     "scene": "the Thrombey estate in Massachusetts",
+     "method": "Clams, potato, bacon and onion simmered in creamy broth, served in small cups with oyster crackers.",
+     "shop": [
+      "tinned clams",
+      "potatoes",
+      "bacon",
+      "onions",
+      "thickened cream",
+      "crackers"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Harlan's birthday roast beef",
+     "scene": "the family dinner at the mansion",
+     "method": "Beef rib roast seasoned with garlic and thyme, roasted pink and carved at the table with horseradish cream and roast potatoes.",
+     "shop": [
+      "beef rib roast",
+      "garlic",
+      "thyme",
+      "horseradish cream",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Lobster rolls",
+     "scene": "a New England summer classic",
+     "method": "Cooked lobster meat tossed with mayo, lemon and chives, piled generously into buttered, toasted split-top rolls.",
+     "shop": [
+      "cooked lobster meat",
+      "mayonnaise",
+      "lemons",
+      "chives",
+      "hot dog buns",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Harlan's 85th birthday cake",
+     "scene": "the party cake nobody finishes",
+     "method": "Rich chocolate layer cake covered in dark chocolate fudge frosting, with candles lit for an 85th birthday.",
+     "shop": [
+      "self-raising flour",
+      "cocoa powder",
+      "butter",
+      "eggs",
+      "dark chocolate",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Coffee in the right mug",
+     "scene": "my house, my rules, my coffee",
+     "method": "Strong drip coffee poured into big mugs, cream and sugar on the side, careful whose mug you take.",
+     "shop": [
+      "ground coffee",
+      "thickened cream",
+      "sugar"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Glass Onion: A Knives Out Mystery (2022)",
+   "title": "Glass Onion: A Knives Out Mystery",
+   "year": "2022",
+   "theme": "tiki",
+   "tagline": "A murder mystery weekend, Greek island catering.",
+   "description": "Detective Benoit Blanc joins a tech billionaire's murder mystery weekend on a private Greek island.",
+   "serve_cue": "Serve the mezze when the guests arrive by boat.",
+   "snacks": [
+    {
+     "name": "Greek island mezze",
+     "scene": "the welcome spread on Miles Bron's island",
+     "method": "Hummus, tzatziki and taramasalata with olives, cucumber, tomatoes and warm pita, laid out on a big board.",
+     "shop": [
+      "chickpeas",
+      "Greek yoghurt",
+      "cucumber",
+      "kalamata olives",
+      "tomatoes",
+      "pita bread"
+     ]
+    },
+    {
+     "name": "Grilled halloumi with honey",
+     "scene": "lunch by the infinity pool",
+     "method": "Thick slices of halloumi grilled until golden, drizzled with honey, chilli flakes and fresh oregano.",
+     "shop": [
+      "halloumi",
+      "honey",
+      "chilli flakes",
+      "oregano"
+     ]
+    },
+    {
+     "name": "Puzzle box olives",
+     "scene": "the invitation that has to be solved",
+     "method": "Mixed olives marinated with orange zest, sliced garlic, fennel seeds and olive oil, then served warm in small bowls.",
+     "shop": [
+      "mixed olives",
+      "oranges",
+      "garlic",
+      "fennel seeds",
+      "extra virgin olive oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Lamb souvlaki",
+     "scene": "dinner on the terrace",
+     "method": "Lamb marinated in lemon, garlic and oregano, skewered and grilled, in warm pita with tzatziki, tomato and onion.",
+     "shop": [
+      "lamb leg",
+      "lemons",
+      "garlic",
+      "dried oregano",
+      "pita bread",
+      "Greek yoghurt"
+     ]
+    },
+    {
+     "name": "Grilled octopus with potatoes",
+     "scene": "a Greek seaside lunch",
+     "method": "Octopus braised until tender, charred on a hot grill and served with lemony potatoes, capers and red onion.",
+     "shop": [
+      "octopus",
+      "potatoes",
+      "lemons",
+      "capers",
+      "red onion",
+      "extra virgin olive oil"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Baklava",
+     "scene": "something sweet after the big reveal",
+     "method": "Layers of buttered filo with walnuts and cinnamon, baked crisp and soaked in honey syrup.",
+     "shop": [
+      "filo pastry",
+      "walnuts",
+      "ground cinnamon",
+      "butter",
+      "honey"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Iced frappé",
+     "scene": "the Greek island coffee",
+     "method": "Instant coffee shaken hard with sugar and a little water until foamy, poured over ice and topped with milk.",
+     "shop": [
+      "instant coffee",
+      "sugar",
+      "milk"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Everything Everywhere All at Once (2022)",
+   "title": "Everything Everywhere All at Once",
+   "year": "2022",
+   "theme": "asian",
+   "tagline": "Everything, everywhere, including the bagel.",
+   "description": "A laundromat owner drowning in tax paperwork finds she can jump between universes to save the multiverse.",
+   "serve_cue": "Serve the bagel bites when the everything bagel shows up.",
+   "snacks": [
+    {
+     "name": "Everything bagel bites",
+     "scene": "the everything bagel, but delicious",
+     "method": "Mini bagels halved and toasted, spread with scallion cream cheese and showered in everything seasoning.",
+     "shop": [
+      "mini bagels",
+      "cream cheese",
+      "spring onions",
+      "everything bagel seasoning"
+     ]
+    },
+    {
+     "name": "Hot dog finger franks",
+     "scene": "the universe where everyone has hot dog fingers",
+     "method": "Cocktail franks wrapped in strips of puff pastry, egg washed and baked until golden, with mustard.",
+     "shop": [
+      "cocktail frankfurts",
+      "puff pastry",
+      "eggs",
+      "yellow mustard"
+     ]
+    },
+    {
+     "name": "Chinese New Year dumplings",
+     "scene": "the party at the laundromat",
+     "method": "Pork and cabbage dumplings pleated by hand, pan-fried until crisp underneath, with black vinegar and chilli oil.",
+     "shop": [
+      "pork mince",
+      "cabbage",
+      "dumpling wrappers",
+      "black vinegar",
+      "chilli oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Raccacoonie hibachi stir-fry",
+     "scene": "the hibachi chef universe",
+     "method": "Beef, prawns and vegetables seared on a smoking hot plate with garlic butter and soy, with fried rice.",
+     "shop": [
+      "beef sirloin",
+      "green prawns",
+      "zucchini",
+      "onions",
+      "soy sauce",
+      "long grain rice"
+     ]
+    },
+    {
+     "name": "Longevity noodles",
+     "scene": "the New Year party Evelyn is trying to throw",
+     "method": "Long egg noodles stir-fried with chicken, shiitake, bok choy and oyster sauce, kept whole and never cut for luck.",
+     "shop": [
+      "egg noodles",
+      "chicken thighs",
+      "shiitake mushrooms",
+      "bok choy",
+      "oyster sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sesame balls",
+     "scene": "a New Year treat",
+     "method": "Glutinous rice dough filled with red bean paste, rolled in sesame seeds and fried until puffed and golden.",
+     "shop": [
+      "glutinous rice flour",
+      "red bean paste",
+      "sesame seeds",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bubble tea",
+     "scene": "the drink Joy would order",
+     "method": "Black tea with milk and brown sugar syrup over chewy tapioca pearls and ice.",
+     "shop": [
+      "black tea",
+      "milk",
+      "tapioca pearls",
+      "brown sugar"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Barbie (2023)",
+   "title": "Barbie",
+   "year": "2023",
+   "theme": "romcom",
+   "tagline": "Every night is girls' night.",
+   "description": "Barbie's perfect life in Barbieland starts to crack, sending her and Ken into the real world.",
+   "serve_cue": "Serve the waffles when Barbie's perfect morning starts to go wrong.",
+   "snacks": [
+    {
+     "name": "Dreamhouse pinwheel sandwiches",
+     "scene": "the Dreamhouse kitchen",
+     "method": "Soft white bread rolled flat, spread with strawberry cream cheese and rolled up, sliced into pink pinwheels.",
+     "shop": [
+      "white bread",
+      "cream cheese",
+      "strawberries"
+     ]
+    },
+    {
+     "name": "Beach day fruit skewers",
+     "scene": "the beach where Ken's job is just beach",
+     "method": "Watermelon, strawberries, pineapple and kiwi fruit threaded onto skewers, chilled and served with a honey yoghurt dip.",
+     "shop": [
+      "watermelon",
+      "strawberries",
+      "pineapple",
+      "kiwi fruit",
+      "Greek yoghurt"
+     ]
+    },
+    {
+     "name": "Girls' night pink devilled eggs",
+     "scene": "the big girls' night party",
+     "method": "Eggs boiled, whites tinted pink in beetroot juice, yolks whipped with mayo and mustard and piped back in.",
+     "shop": [
+      "eggs",
+      "beetroot",
+      "mayonnaise",
+      "Dijon mustard"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Pink beetroot pasta",
+     "scene": "a pink dinner for Barbieland",
+     "method": "Pasta tossed in a sauce of roasted beetroot blended with ricotta, garlic and parmesan, topped with goat's cheese.",
+     "shop": [
+      "penne",
+      "beetroot",
+      "ricotta",
+      "garlic",
+      "parmesan",
+      "goat's cheese"
+     ]
+    },
+    {
+     "name": "Mojo Dojo barbecue ribs",
+     "scene": "Ken's Mojo Dojo Casa House",
+     "method": "Pork ribs rubbed with paprika and brown sugar, slow baked and glazed with barbecue sauce until sticky.",
+     "shop": [
+      "pork ribs",
+      "smoked paprika",
+      "brown sugar",
+      "barbecue sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Pink strawberry waffles",
+     "scene": "Barbie's perfect breakfast, made real",
+     "method": "Fluffy golden waffles piled with fresh strawberries, whipped cream and a bright pink strawberry sauce poured over the top.",
+     "shop": [
+      "waffle mix",
+      "strawberries",
+      "thickened cream",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Strawberry milk",
+     "scene": "pink, cold and actually in the cup",
+     "method": "Strawberries blended with cold milk and a little honey until pink and frothy.",
+     "shop": [
+      "strawberries",
+      "milk",
+      "honey"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Oppenheimer (2023)",
+   "title": "Oppenheimer",
+   "year": "2023",
+   "theme": "western",
+   "tagline": "Trinity site, green chile on the stove.",
+   "description": "The story of J. Robert Oppenheimer and the race to build the atomic bomb at Los Alamos.",
+   "serve_cue": "Serve the stew when the team settles in at Los Alamos.",
+   "snacks": [
+    {
+     "name": "Blue corn chips with red chile salsa",
+     "scene": "the New Mexico mesa",
+     "method": "Blue corn chips with a smoky salsa of dried red chillies, tomato, garlic and lime.",
+     "shop": [
+      "blue corn chips",
+      "dried red chillies",
+      "tomatoes",
+      "garlic",
+      "limes"
+     ]
+    },
+    {
+     "name": "Mess hall egg salad sandwiches",
+     "scene": "lunch at the Los Alamos lab",
+     "method": "Chopped boiled egg with mayo, mustard and diced celery on soft white bread, cut into neat triangles.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "Dijon mustard",
+      "celery",
+      "white bread"
+     ]
+    },
+    {
+     "name": "Princeton cheese board",
+     "scene": "the Princeton years",
+     "method": "Aged cheddar, blue cheese and brie on a board with sliced apples, toasted walnuts and plain crackers.",
+     "shop": [
+      "vintage cheddar",
+      "blue cheese",
+      "brie",
+      "apples",
+      "walnuts",
+      "crackers"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Green chile stew",
+     "scene": "a New Mexico pot on the stove",
+     "method": "Pork, potatoes and roasted green chillies simmered with onion, garlic and stock until thick, with warm tortillas.",
+     "shop": [
+      "pork shoulder",
+      "potatoes",
+      "green chillies",
+      "onions",
+      "garlic",
+      "flour tortillas"
+     ]
+    },
+    {
+     "name": "Pork posole",
+     "scene": "a New Mexico feast",
+     "method": "Pork shoulder simmered with hominy and red chilli until tender, topped with cabbage, radish, lime and oregano.",
+     "shop": [
+      "pork shoulder",
+      "tinned hominy",
+      "dried red chillies",
+      "cabbage",
+      "radishes",
+      "limes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sopaipillas with honey",
+     "scene": "a New Mexico sweet",
+     "method": "Small squares of rolled dough fried until they puff up hollow, then torn open at the table and filled with honey.",
+     "shop": [
+      "plain flour",
+      "baking powder",
+      "butter",
+      "honey"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Very dry martini",
+     "scene": "the martinis he was known for",
+     "method": "Gin stirred with a splash of vermouth over ice, glass rim touched with lime and honey. Iced lime soda for anyone off the gin.",
+     "shop": [
+      "gin",
+      "dry vermouth",
+      "limes",
+      "honey"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Dune: Part Two (2024)",
+   "title": "Dune: Part Two",
+   "year": "2024",
+   "theme": "galaxy",
+   "tagline": "Spice in every dish. Water, carefully.",
+   "description": "Paul Atreides unites with the Fremen of Arrakis to take revenge on those who destroyed his family.",
+   "serve_cue": "Serve the mains when Paul rides his first sandworm.",
+   "snacks": [
+    {
+     "name": "Spice-roasted chickpeas",
+     "scene": "the spice melange of Arrakis",
+     "method": "Chickpeas tossed with oil, cumin, smoked paprika, cinnamon and salt, roasted at 200C until crunchy.",
+     "shop": [
+      "chickpeas",
+      "ground cumin",
+      "smoked paprika",
+      "ground cinnamon"
+     ]
+    },
+    {
+     "name": "Sietch flatbread with date butter",
+     "scene": "bread in the deep desert sietch",
+     "method": "Flatbread charred in a dry pan, spread with butter blended with dates and a pinch of cardamom.",
+     "shop": [
+      "flatbread",
+      "butter",
+      "medjool dates",
+      "ground cardamom"
+     ]
+    },
+    {
+     "name": "Stuffed desert dates",
+     "scene": "a sweet bite for the long walk",
+     "method": "Medjool dates split and stuffed with a toasted almond and a little goat's cheese, then drizzled with warm honey.",
+     "shop": [
+      "medjool dates",
+      "almonds",
+      "goat's cheese",
+      "honey"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Spice-rubbed lamb with saffron rice",
+     "scene": "the feast in the sietch",
+     "method": "Lamb shoulder rubbed with cumin, coriander, cinnamon and chilli, slow roasted, with golden saffron rice.",
+     "shop": [
+      "lamb shoulder",
+      "ground cumin",
+      "ground coriander",
+      "ground cinnamon",
+      "basmati rice",
+      "saffron"
+     ]
+    },
+    {
+     "name": "Fremen lentil stew",
+     "scene": "making every drop of water count",
+     "method": "Red lentils simmered thick with onion, garlic, tomato and warm spices, finished with lemon and herbs.",
+     "shop": [
+      "red lentils",
+      "onions",
+      "garlic",
+      "crushed tomatoes",
+      "lemons",
+      "coriander"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Melange spice cake",
+     "scene": "spice must flow, even into dessert",
+     "method": "Cardamom, cinnamon and ginger cake baked with honey until dark and moist, glazed while warm and cut into thick slices.",
+     "shop": [
+      "self-raising flour",
+      "ground cardamom",
+      "ground cinnamon",
+      "ground ginger",
+      "honey",
+      "butter"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Spice coffee",
+     "scene": "the Fremen's spice coffee",
+     "method": "Strong coffee brewed with cardamom and a pinch of cinnamon, sweetened and served in small cups.",
+     "shop": [
+      "ground coffee",
+      "ground cardamom",
+      "ground cinnamon",
+      "sugar"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Furiosa: A Mad Max Saga (2024)",
+   "title": "Furiosa: A Mad Max Saga",
+   "year": "2024",
+   "theme": "aussie",
+   "tagline": "The Green Place grows peaches. The Wasteland grills.",
+   "description": "Young Furiosa is taken from the Green Place and has to fight her way back across the Wasteland.",
+   "serve_cue": "Serve the peaches when Furiosa plants the seed.",
+   "snacks": [
+    {
+     "name": "Green Place garden plate",
+     "scene": "the green place Furiosa grew up in",
+     "method": "Radishes, baby carrots, cucumber and snow peas from the garden with whipped feta and herbs.",
+     "shop": [
+      "radishes",
+      "baby carrots",
+      "cucumber",
+      "snow peas",
+      "feta"
+     ]
+    },
+    {
+     "name": "Bullet Farm smoked sausage bites",
+     "scene": "the Bullet Farm, all smoke and noise",
+     "method": "Smoked sausages sliced and charred in a hot pan, tossed with barbecue sauce and served on toothpicks.",
+     "shop": [
+      "smoked sausages",
+      "barbecue sauce"
+     ]
+    },
+    {
+     "name": "Wasteland flatbread",
+     "scene": "bread cooked on hot steel in the Wasteland",
+     "method": "Simple yoghurt flatbreads cooked on a smoking hot pan until blistered, brushed with garlic butter.",
+     "shop": [
+      "self-raising flour",
+      "Greek yoghurt",
+      "butter",
+      "garlic"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "War Rig barbecue lamb",
+     "scene": "the long haul across the Wasteland",
+     "method": "Lamb chops marinated in rosemary, garlic and lemon, grilled hot on the barbecue with charred corn.",
+     "shop": [
+      "lamb chops",
+      "rosemary",
+      "garlic",
+      "lemons",
+      "corn cobs"
+     ]
+    },
+    {
+     "name": "Gastown blackened chicken",
+     "scene": "Gastown, where everything is black with fuel",
+     "method": "Chicken thighs rubbed with a dark spice mix of paprika, garlic and pepper, seared until blackened, with slaw.",
+     "shop": [
+      "chicken thighs",
+      "smoked paprika",
+      "garlic powder",
+      "black pepper",
+      "cabbage"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Grilled Green Place peaches",
+     "scene": "the peach seed Furiosa carries all the way",
+     "method": "Peaches halved and grilled cut side down until caramelised, drizzled with honey and thyme and served with vanilla ice cream.",
+     "shop": [
+      "peaches",
+      "honey",
+      "thyme",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Citadel milk shakes",
+     "scene": "the Citadel's precious milk",
+     "method": "Cold milk blended with vanilla ice cream and a little honey until thick.",
+     "shop": [
+      "milk",
+      "vanilla ice cream",
+      "honey"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Fall Guy (2024)",
+   "title": "The Fall Guy",
+   "year": "2024",
+   "theme": "aussie",
+   "tagline": "Stunts all day, prawns by the harbour.",
+   "description": "A battered stuntman is pulled back onto a film set in Sydney to find the movie's missing star.",
+   "serve_cue": "Serve the prawns when Colt lands the record-breaking cannon roll.",
+   "snacks": [
+    {
+     "name": "Harbour prawns with lemon",
+     "scene": "a Sydney Harbour afternoon",
+     "method": "Cooked king prawns on ice with lemon wedges, bread and butter and a quick cocktail sauce.",
+     "shop": [
+      "cooked king prawns",
+      "lemons",
+      "white bread",
+      "butter",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Catering truck sausage sizzle",
+     "scene": "the crew catering on set",
+     "method": "Beef sausages grilled and wrapped in white bread with fried onions and tomato sauce, Aussie style.",
+     "shop": [
+      "beef sausages",
+      "white bread",
+      "onions",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Stunt crew meat pies",
+     "scene": "a pie between takes",
+     "method": "Party-size beef and gravy pies in shortcrust with puff lids, baked until golden and served with plenty of tomato sauce.",
+     "shop": [
+      "beef mince",
+      "onions",
+      "beef stock",
+      "shortcrust pastry",
+      "puff pastry"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Bondi fish and chips",
+     "scene": "dinner on the beach",
+     "method": "Flathead fillets in a crisp beer batter fried golden with thick-cut chips, lemon wedges and homemade tartare sauce.",
+     "shop": [
+      "flathead fillets",
+      "plain flour",
+      "lager",
+      "potatoes",
+      "lemons",
+      "mayonnaise"
+     ]
+    },
+    {
+     "name": "Film set lasagne",
+     "scene": "the catering trays on a long shoot",
+     "method": "Beef ragù layered with pasta sheets and béchamel, topped with mozzarella and baked until bubbling.",
+     "shop": [
+      "beef mince",
+      "passata",
+      "lasagne sheets",
+      "milk",
+      "mozzarella",
+      "plain flour"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Pavlova",
+     "scene": "an Aussie classic on the wrap party table",
+     "method": "Crisp meringue shell with a soft marshmallow middle, cooled in the oven and topped with whipped cream, passionfruit and berries.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "cornflour",
+      "thickened cream",
+      "passionfruit",
+      "strawberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Sydney iced coffee",
+     "scene": "an Aussie iced coffee for the crew",
+     "method": "Cold coffee and milk poured over ice with a scoop of vanilla ice cream and whipped cream on top.",
+     "shop": [
+      "ground coffee",
+      "milk",
+      "vanilla ice cream",
+      "thickened cream"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Paddington in Peru (2024)",
+   "title": "Paddington in Peru",
+   "year": "2024",
+   "theme": "fairytale",
+   "tagline": "Marmalade for the jungle.",
+   "description": "Paddington and the Browns head to Peru to find Aunt Lucy, who has gone missing from the Home for Retired Bears.",
+   "serve_cue": "Serve the marmalade sandwiches when Paddington pulls one from under his hat.",
+   "snacks": [
+    {
+     "name": "Marmalade sandwiches",
+     "scene": "the one Paddington keeps under his hat",
+     "method": "Soft white bread spread with butter and thick-cut orange marmalade, crusts on, cut into squares.",
+     "shop": [
+      "white bread",
+      "butter",
+      "orange marmalade"
+     ]
+    },
+    {
+     "name": "Causa bites",
+     "scene": "a Peruvian potato starter",
+     "method": "Mashed yellow potato seasoned with lime and chilli paste, layered with chicken and avocado, cut into squares.",
+     "shop": [
+      "potatoes",
+      "limes",
+      "ají amarillo paste",
+      "chicken breast",
+      "avocados",
+      "mayonnaise"
+     ]
+    },
+    {
+     "name": "Choclo with cheese",
+     "scene": "Peruvian corn on the cob",
+     "method": "Big-kernel corn on the cob boiled and served with slices of fresh white cheese and a little chilli sauce.",
+     "shop": [
+      "corn cobs",
+      "queso fresco",
+      "ají amarillo paste"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Lomo saltado",
+     "scene": "a Lima favourite",
+     "method": "Beef strips stir-fried with onion, tomato, soy and vinegar, tossed through chips, served with rice.",
+     "shop": [
+      "beef rump",
+      "red onion",
+      "tomatoes",
+      "soy sauce",
+      "frozen fries",
+      "long grain rice"
+     ]
+    },
+    {
+     "name": "Ají de gallina",
+     "scene": "creamy Peruvian chicken",
+     "method": "Shredded chicken in a creamy yellow chilli and walnut sauce thickened with bread, served over rice with egg and olives.",
+     "shop": [
+      "chicken breast",
+      "ají amarillo paste",
+      "walnuts",
+      "evaporated milk",
+      "white bread",
+      "long grain rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Alfajores",
+     "scene": "Peruvian biscuits for Aunt Lucy",
+     "method": "Soft, crumbly cornflour biscuits sandwiched with thick dulce de leche, then rolled around the edges in desiccated coconut.",
+     "shop": [
+      "cornflour",
+      "plain flour",
+      "butter",
+      "dulce de leche",
+      "desiccated coconut"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Chicha morada",
+     "scene": "Peru's purple corn drink",
+     "method": "Purple corn simmered with pineapple, cinnamon and cloves, strained, sweetened and served cold with lime.",
+     "shop": [
+      "dried purple corn",
+      "pineapple",
+      "cinnamon sticks",
+      "cloves",
+      "limes"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Wallace & Gromit: Vengeance Most Fowl (2024)",
+   "title": "Wallace & Gromit: Vengeance Most Fowl",
+   "year": "2024",
+   "theme": "kids",
+   "tagline": "Cheese, crackers and one very suspicious penguin.",
+   "description": "Wallace's helpful robot gnome goes rogue, and Gromit suspects an old feathered enemy is behind it.",
+   "serve_cue": "Serve the cheese when Wallace calls for crackers.",
+   "snacks": [
+    {
+     "name": "Wallace's cheese and crackers",
+     "scene": "Wallace and his favourite crumbly cheese",
+     "method": "Crumbly Yorkshire cheese with cream crackers, chutney and apple slices, the way Wallace likes it.",
+     "shop": [
+      "crumbly white cheese",
+      "crackers",
+      "tomato chutney",
+      "apples"
+     ]
+    },
+    {
+     "name": "Breakfast machine toast",
+     "scene": "the contraption that makes breakfast",
+     "method": "Thick white toast buttered and spread with jam, cut into triangles and stacked in a rack.",
+     "shop": [
+      "white bread",
+      "butter",
+      "strawberry jam"
+     ]
+    },
+    {
+     "name": "Allotment radishes with butter",
+     "scene": "straight from Gromit's prize garden",
+     "method": "Fresh radishes with soft salted butter and flaky salt for dipping, straight from the garden.",
+     "shop": [
+      "radishes",
+      "butter",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Bangers and mash",
+     "scene": "a Northern English dinner at 62 West Wallaby Street",
+     "method": "Pork sausages browned slowly in the pan, served on creamy buttered mash with a rich onion gravy poured over.",
+     "shop": [
+      "pork sausages",
+      "potatoes",
+      "butter",
+      "onions",
+      "beef stock"
+     ]
+    },
+    {
+     "name": "Cheese and onion pasties",
+     "scene": "a pie for the garden shed",
+     "method": "Shortcrust pastry filled with grated cheddar, diced potato and onion, crimped along the edge and baked until golden.",
+     "shop": [
+      "shortcrust pastry",
+      "cheddar",
+      "potatoes",
+      "onions",
+      "eggs"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Jam roly-poly with custard",
+     "scene": "a proper English pudding",
+     "method": "Soft suet-style pastry spread with strawberry jam, rolled up, baked until golden and served in slices with hot custard.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "strawberry jam",
+      "milk",
+      "custard powder"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "A proper cup of tea",
+     "scene": "Gromit's knitting break",
+     "method": "Strong black tea brewed in a pot, served with milk and sugar in big mugs.",
+     "shop": [
+      "black tea",
+      "milk",
+      "sugar"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "A Minecraft Movie (2025)",
+   "title": "A Minecraft Movie",
+   "year": "2025",
+   "theme": "kids",
+   "tagline": "Baked potatoes, mushroom stew and a chicken jockey.",
+   "description": "Four misfits are pulled through a portal into the blocky Overworld and need Steve's help to get home.",
+   "serve_cue": "Serve the drumsticks when the chicken jockey shows up.",
+   "snacks": [
+    {
+     "name": "Baked potatoes with butter",
+     "scene": "the Overworld's favourite food",
+     "method": "Potatoes baked at 200C until the skins crisp, split open with butter, salt and chives.",
+     "shop": [
+      "potatoes",
+      "butter",
+      "chives"
+     ]
+    },
+    {
+     "name": "Block melon slices",
+     "scene": "melon, block by block",
+     "method": "Watermelon and rockmelon cut into neat even cubes and stacked into little blocks on a board, served very cold.",
+     "shop": [
+      "watermelon",
+      "rockmelon"
+     ]
+    },
+    {
+     "name": "Pixel chocolate cookies",
+     "scene": "the Overworld's crafted cookies",
+     "method": "Choc chip cookie dough pressed into a tray, baked until just golden and cut into neat square blocks while warm.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "brown sugar",
+      "eggs",
+      "chocolate chips"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Chicken jockey drumsticks",
+     "scene": "the chicken jockey, a moment everyone remembers",
+     "method": "Chicken drumsticks glazed with honey, chilli flakes and smoked paprika, roasted at 200C until sticky and charred at the edges.",
+     "shop": [
+      "chicken drumsticks",
+      "honey",
+      "chilli flakes",
+      "smoked paprika"
+     ]
+    },
+    {
+     "name": "Mushroom stew",
+     "scene": "crafted from red and brown mushrooms",
+     "method": "Mixed mushrooms simmered with onion, garlic, thyme, stock and cream until thick, with crusty bread.",
+     "shop": [
+      "mixed mushrooms",
+      "onions",
+      "garlic",
+      "thyme",
+      "thickened cream",
+      "crusty bread"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Pumpkin pie",
+     "scene": "a pie crafted from pumpkin",
+     "method": "Spiced pumpkin custard in a shortcrust case, baked until just set and served with whipped cream.",
+     "shop": [
+      "butternut pumpkin",
+      "sweetened condensed milk",
+      "eggs",
+      "ground cinnamon",
+      "shortcrust pastry",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bucket of cold milk",
+     "scene": "milk straight from the bucket",
+     "method": "Cold milk poured into big mugs, with a jug of chocolate syrup on the side for stirring in.",
+     "shop": [
+      "milk",
+      "chocolate syrup"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "KPop Demon Hunters (2025)",
+   "title": "KPop Demon Hunters",
+   "year": "2025",
+   "theme": "asian",
+   "tagline": "Concert night, then ramyeon.",
+   "description": "A K-pop girl group who secretly hunt demons face a rival boy band with a dark secret.",
+   "serve_cue": "Serve the ramyeon when the girls finally get their noodle break.",
+   "snacks": [
+    {
+     "name": "Kimbap",
+     "scene": "the snack for a busy schedule",
+     "method": "Rice, egg, carrot, spinach, pickled radish and ham rolled in seaweed and sliced into rounds.",
+     "shop": [
+      "sushi rice",
+      "nori sheets",
+      "eggs",
+      "carrots",
+      "spinach",
+      "pickled radish"
+     ]
+    },
+    {
+     "name": "Tteokbokki",
+     "scene": "Seoul street food after the show",
+     "method": "Chewy rice cakes simmered in a sweet and spicy gochujang sauce with fish cake and spring onion.",
+     "shop": [
+      "rice cakes",
+      "gochujang",
+      "fish cakes",
+      "spring onions",
+      "caster sugar"
+     ]
+    },
+    {
+     "name": "Korean fried chicken wings",
+     "scene": "the backstage feed",
+     "method": "Chicken wings coated in potato starch, double fried until crackling, then glazed in a sticky gochujang, garlic and honey sauce.",
+     "shop": [
+      "chicken wings",
+      "potato starch",
+      "gochujang",
+      "garlic",
+      "honey"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Ramyeon with egg",
+     "scene": "the noodle break the girls live for",
+     "method": "Spicy instant-style noodles upgraded with a soft egg, spring onion, kimchi and a slice of cheese.",
+     "shop": [
+      "ramen noodles",
+      "gochugaru",
+      "eggs",
+      "spring onions",
+      "kimchi",
+      "American cheese"
+     ]
+    },
+    {
+     "name": "Bibimbap",
+     "scene": "a rice bowl for the whole group",
+     "method": "Rice topped with seasoned beef, spinach, carrot, bean sprouts and a fried egg, gochujang on the side.",
+     "shop": [
+      "sushi rice",
+      "beef mince",
+      "spinach",
+      "carrots",
+      "bean sprouts",
+      "gochujang"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Hotteok",
+     "scene": "Korean sweet pancakes",
+     "method": "Yeasted dough filled with brown sugar, cinnamon and nuts, pan-fried until crisp and molten inside.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "brown sugar",
+      "ground cinnamon",
+      "walnuts"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Banana milk",
+     "scene": "the convenience store classic",
+     "method": "Ripe banana blended with cold milk and a little honey until smooth.",
+     "shop": [
+      "bananas",
+      "milk",
+      "honey"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "How to Train Your Dragon (2010)",
+   "title": "How to Train Your Dragon",
+   "year": "2010",
+   "theme": "adventure",
+   "tagline": "Fish for the dragon, stew for the Vikings.",
+   "description": "A young Viking who can't fight befriends the dragon he was meant to kill.",
+   "serve_cue": "Serve the fish bites when Hiccup offers Toothless a fish.",
+   "snacks": [
+    {
+     "name": "Toothless's fish bites",
+     "scene": "the fish Hiccup offers Toothless",
+     "method": "White fish strips crumbed in panko and fried golden, with lemon and a herby yoghurt dip.",
+     "shop": [
+      "white fish fillets",
+      "panko breadcrumbs",
+      "eggs",
+      "lemons",
+      "Greek yoghurt"
+     ]
+    },
+    {
+     "name": "Berk bread with butter",
+     "scene": "the Great Hall table",
+     "method": "Crusty seeded bread warmed through in the oven and torn at the table, with salted butter and honey for spreading.",
+     "shop": [
+      "seeded loaf",
+      "butter",
+      "honey"
+     ]
+    },
+    {
+     "name": "Gobber's smoked sausages",
+     "scene": "the forge where Hiccup works for Gobber",
+     "method": "Thick smoked sausages charred over the fire until the skins split, cut into chunks and served with grainy mustard for dipping.",
+     "shop": [
+      "smoked sausages",
+      "wholegrain mustard"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Viking lamb stew",
+     "scene": "dinner in the Great Hall",
+     "method": "Lamb shoulder stewed slowly with carrots, parsnips, pearl barley, thyme and stock for two hours until thick and tender.",
+     "shop": [
+      "lamb shoulder",
+      "carrots",
+      "parsnips",
+      "pearl barley",
+      "thyme",
+      "beef stock"
+     ]
+    },
+    {
+     "name": "Great Hall roast chicken legs",
+     "scene": "a Viking feast",
+     "method": "Chicken marylands rubbed with garlic and rosemary, roasted at 200C and basted with honey until golden, sticky and falling off the bone.",
+     "shop": [
+      "chicken marylands",
+      "honey",
+      "garlic",
+      "rosemary"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Honey cakes",
+     "scene": "a sweet for the dragon riders",
+     "method": "Small honey and spice cakes baked in a muffin tin and glazed with warm honey.",
+     "shop": [
+      "self-raising flour",
+      "honey",
+      "butter",
+      "eggs",
+      "ground cinnamon"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Berry juice",
+     "scene": "something for a cold day on Berk",
+     "method": "Mixed berries blended with apple juice and strained, served chilled.",
+     "shop": [
+      "frozen mixed berries",
+      "apple juice"
+     ]
+    }
+   ],
+   "lane": 4,
    "poster_status": "pending",
    "recipe_ready": true
   }
