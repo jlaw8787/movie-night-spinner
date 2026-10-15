@@ -1,5 +1,8 @@
 # Poster workflow: ChatGPT and Claude working together
 
+> **Poster lanes closed, 15 October 2026.** Every film now shows its official poster from TMDB in the lobby-card menu, with an exact 4-person menu from `recipe-menus.js` or `movie-menus.js`. Do not make new poster art or run the lanes below. The 124 finished poster JPEGs in `assets/menu-posters/` are kept only as a fallback if TMDB can't load. The rest of this file is kept for history.
+
+
 Two assistants work in this repo at the same time. Stay in your own lane so neither overwrites the other.
 
 ## Who does what

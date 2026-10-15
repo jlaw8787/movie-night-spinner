@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+console.log('Poster lanes closed 15 October 2026. Every film now uses its TMDB poster in the lobby-card menu. Nothing below needs doing; it is kept as a record.\n');
 // Read-only recovery audit. Never trust generated brief status as the queue.
 const fs = require('node:fs');
 const path = require('node:path');

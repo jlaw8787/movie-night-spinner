@@ -104,21 +104,6 @@ input:focus-visible,summary:focus-visible{outline:3px solid var(--bulb);outline-
 /* Finished poster artwork is kept intact at A4 size; recipe text stays accessible. */
 .poster-edition{background:#f4eddf}
 .poster-edition .poster-art{width:794px;height:1123px;max-width:none;display:block;object-fit:contain}
-.edition-prep{background:#f6f0e4!important;color:#221e19!important;font-family:Arial,sans-serif!important}
-.edition-prep .mc-in{inset:36px;padding:0;overflow:hidden;background:transparent;color:#221e19;text-align:left;align-items:stretch}
-.edition-prep .mc-eye{color:var(--edition-accent);font-family:Arial,sans-serif;font-size:12px;letter-spacing:.16em}
-.edition-prep .pp-title{font-family:Georgia,serif;font-size:34px;line-height:1.1;color:#221e19;margin:7px 0 4px}
-.edition-prep .edition-servings{font-size:13px;margin:0 0 14px;color:#554b3f}
-.edition-prep .pp-cols{grid-template-columns:220px minmax(0,1fr);gap:24px;width:100%;text-align:left}
-.edition-prep .pp-cols h3{color:var(--edition-accent);font-family:Arial,sans-serif;font-size:17px;letter-spacing:0;text-transform:none;border-bottom:1px solid var(--edition-accent);padding-bottom:6px}
-.edition-prep .pp-aisle h4{color:#221e19;font-family:Arial,sans-serif;font-size:1em;margin-top:12px}
-.edition-prep .pp-aisle li{font-size:.9em;line-height:1.4}
-.edition-prep .pp-method li{margin-bottom:11px}
-.edition-prep .pp-method li b{color:#221e19;font-family:Arial,sans-serif;font-size:1em}
-.edition-prep .pp-method li span{font-size:.87em;line-height:1.45}
-.edition-prep .pp-method li em{font-size:.78em;color:#7b3c2c}
-.edition-prep .mc-cue{max-width:none;text-align:left;color:#221e19;border-color:var(--edition-accent);font-size:12px;margin-top:10px;padding:7px 0}
-.edition-prep .mc-cue b{font-family:Arial,sans-serif;color:var(--edition-accent)}
 
 /* marquee */
 .marquee{position:relative;margin:4px auto 26px;padding:30px clamp(16px,4vw,48px) 22px;border-radius:14px;text-align:center;
@@ -287,11 +272,13 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .L-lobby .lb-credit{position:absolute;z-index:5;right:46px;bottom:9px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(246,239,226,.55)}
 .credit{max-width:1200px;margin:18px auto 28px;padding:0 16px;font-size:12px;opacity:.6;text-align:center}
 .credit a{color:inherit}
+.credit .tmdb-logo{display:inline-block;vertical-align:middle;margin-right:8px}.credit .tmdb-logo img{display:block;height:16px;width:auto}
 
 /* prep sheet */
 .pp{align-items:stretch;text-align:left}
 .pp .mc-eye{text-align:center}
 .pp-title{font-family:var(--md);font-weight:var(--mdw,400);font-size:44px;line-height:1.05;text-align:center;margin:6px 0 14px;color:var(--tc,var(--ink));text-transform:var(--mtt,none);letter-spacing:var(--mls,0)}
+.pp-serves{text-align:center;margin:-8px 0 12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
 .pp-cols{display:grid;grid-template-columns:1fr 1.45fr;gap:28px;flex:1 0 auto;align-content:start;font-size:16px;line-height:1.35}
 .pp-cols h3{font-family:var(--md);font-weight:var(--mdw,400);font-size:1.55em;line-height:1.1;color:var(--hd);margin:0 0 .45em;text-transform:var(--mtt,none)}
 .pp-aisle{margin-bottom:.7em}
@@ -576,6 +563,13 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .L-loveletter .d-wax{left:50%;bottom:calc(var(--sb) - 40px);width:84px;height:84px;margin-left:-42px;border-radius:50%;background:radial-gradient(circle at 36% 30%,#d4475f,#8c1b33 55%,#5c0e20);box-shadow:0 0 0 4px rgba(140,27,51,.8),0 8px 14px rgba(0,0,0,.35)}
 .L-loveletter .d-wax::after{content:"\2665";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:38px;color:#f5b3c0;line-height:1}
 .L-loveletter .d-ps{left:calc(var(--sx) + 24px);bottom:calc(var(--sb) - 36px);font:26px/1 var(--xf);color:var(--hd);transform:rotate(-3deg)}
+
+/* one prep sheet layout for every film: the film's colours and type, none of the menu's borders, so exact recipes stay readable */
+.mcard.pp-sheet .mc-bg,.mcard.pp-sheet .mc-fg{display:none}
+.mcard.pp-sheet .mc-in.pp{left:34px;right:34px;top:30px;bottom:26px;padding:0;background:transparent;box-shadow:none;border:0;border-radius:0;transform:none}
+.mcard.pp-sheet .pp-title{font-size:38px;margin:4px 0 10px}
+.mcard.pp-sheet .pp-cols{grid-template-columns:minmax(0,1fr) minmax(0,1.75fr);gap:24px}
+.mcard.pp-sheet .pp-method li{margin-bottom:.5em}
 </style>
 
 <div id="printArea"></div>
@@ -666,11 +660,12 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
     </section>
   </div>
 </div>
-<p class="credit">Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+<p class="credit"><a class="tmdb-logo" href="https://www.themoviedb.org/" rel="noopener" target="_blank"><img src="assets/tmdb/tmdb-logo.svg" alt="TMDB" width="120" height="16"></a> Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="tmdb-posters.js"></script>
+<script src="recipe-menus.js"></script>
 <script src="movie-menus.js"></script>
 <script>
 const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "Brooklyn Slice Joint"}, "deli": {"name": "Manhattan Deli Counter"}, "street": {"name": "Bodega and Street Cart"}, "cop": {"name": "Stakeout Snacks"}, "soul": {"name": "Harlem Soul Kitchen"}, "xmas": {"name": "Christmas in the City"}, "aussie": {"name": "Arvo in the Outback"}, "asian": {"name": "Chinatown Late Night"}, "scifi": {"name": "Mission Control Rations"}, "hero": {"name": "Rooftop Patrol"}, "kids": {"name": "Family Matinee"}, "teen": {"name": "Mall Food Court"}, "diner": {"name": "Roadside Diner"}, "mex": {"name": "Cantina Night"}, "tiki": {"name": "Beach House Luau"}, "uptown": {"name": "Uptown Steakhouse"}, "horror": {"name": "Midnight Monster Feast"}, "western": {"name": "Chuckwagon BBQ"}, "philly": {"name": "Philly Fight Night"}, "galaxy": {"name": "Galactic Cantina"}, "wizard": {"name": "Great Hall Feast"}, "adventure": {"name": "Explorer's Field Rations"}, "fairytale": {"name": "Storybook Banquet"}, "romcom": {"name": "Rom-Com Date Night"}};
@@ -887,10 +882,12 @@ if(canTilt){
 }
 
 const movieEdition=f=>typeof MOVIE_MENU_EDITIONS!=="undefined"?MOVIE_MENU_EDITIONS[f.id]:null;
+const movieRecipe=f=>typeof RECIPE_MENUS!=="undefined"?RECIPE_MENUS[f.id]:null;
+const exactMenu=f=>{const e=movieEdition(f);return e?e.menu:movieRecipe(f)};
 const toItem=([n,note,how,shop])=>({n,note,how,shop});
 function makeMenu(f,first){
-  const edition=movieEdition(f);
-  if(edition)return JSON.parse(JSON.stringify(edition.menu));
+  const exact=exactMenu(f);
+  if(exact)return JSON.parse(JSON.stringify(exact));
   if(first)return {s:f.S.slice(0,2).map(toItem),m:f.M.map(toItem),w:f.W.map(toItem),d:f.K.map(toItem)};
   return {s:shuffle(f.S).slice(0,2).map(toItem),m:shuffle(f.M).slice(0,Math.random()<.5?1:2).map(toItem),w:f.W.map(toItem),d:f.K.map(toItem)};
 }
@@ -1192,13 +1189,13 @@ function prepHTML(f,menu){
   const shop=shopGroups(menu).map(([a,list])=>`<div class="pp-aisle"><h4>${a}</h4><ul>${list.map(x=>`<li><span class="pp-box"></span>${ESC(x)}</li>`).join("")}</ul></div>`).join("");
   const secs=[["Snack",menu.s],["Main",menu.m],["Sweet",menu.w],["Drink",menu.d]];
   const steps=secs.map(([l,items])=>items.map(it=>`<li><b>${ESC(it.n)}</b><em>${l}</em><span>${ESC(it.how||"")}</span></li>`).join("")).join("");
-  if(edition)return `<div class="mc-in pp"><div class="mc-eye">Prep sheet &amp; shopping list</div><div class="pp-title">${ESC(f.title)} (${ESC(f.year)})</div><p class="edition-servings">Serves ${edition.servings} · ${ESC(edition.tagline)}</p><div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div><div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition.cue)}</span></div></div>`;
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
     <div class="pp-title">${ESC(f.title)}</div>
+    ${menu.shopping?`<p class="pp-serves">Serves ${edition?edition.servings:4} &nbsp;/&nbsp; exact quantities</p>`:""}
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
-    <div class="mc-cue"><b>Showtime cue</b><span>${ESC(f.P)}</span></div>
+    <div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition&&edition.cue||f.P)}</span></div>
   </div>`;
 }
 
@@ -1265,7 +1262,7 @@ async function show(f,preferSig){
   const menu=makeMenu(f,preferSig);
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
-  $("reroll").hidden=!!edition;
+  $("reroll").hidden=!!exactMenu(f);
   $("status").textContent="";
   await ensureFonts(STY[f.theme]);
   if(id!==renderId)return;
@@ -1284,8 +1281,7 @@ async function show(f,preferSig){
     styleCard(card,f);card.style.transform="";card.innerHTML=cardHTML(f,menu,current.tag,false);
     $("status").textContent="The poster couldn't load. Your menu and prep sheet are still available.";
   }
-  styleCard(prep,f);
-  if(edition){prep.className="mcard edition-prep";prep.style.setProperty("--edition-accent",edition.colour)}
+  styleCard(prep,f);prep.classList.add("pp-sheet");
   prep.innerHTML=prepHTML(f,menu);
   scalePreview();
   const refit=()=>{if(id!==renderId)return;const a=card.hidden,b=prep.hidden;card.hidden=false;prep.hidden=false;fit(card);fitPrep(prep);card.hidden=a;prep.hidden=b};

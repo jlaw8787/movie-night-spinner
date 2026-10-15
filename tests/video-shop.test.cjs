@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const root=path.join(__dirname,'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const ctx=vm.createContext({});
+vm.runInContext(html.match(/const FILMS=.*?;\n/)[0]+html.match(/const SHOP_AISLES=.*?;\n/)[0]+'this.F=FILMS;this.A=SHOP_AISLES;',ctx);
+const themes=new Set(ctx.F.map(f=>f.theme));
+const mapped=ctx.A.flatMap(([,ts])=>ts);
+for(const t of themes)assert.ok(mapped.includes(t),`theme ${t} has no aisle in the video shop`);
+assert.equal(new Set(mapped).size,mapped.length,'a theme sits in two aisles');
+for(const id of ['viewShop','viewShopBtn','viewWheelBtn','shopSearch','shopDecade','shopUnwatched','shopAisles'])assert.ok(html.includes(`id="${id}"`),`missing #${id}`);
+for(const fn of ['function renderShop(','function openCase(','function setView('])assert.ok(html.includes(fn),`missing ${fn}`);
+assert.ok(html.includes('class="rent"'),'back of the box needs a Rent it button');
+console.log(`PASS: video shop shelves all ${ctx.F.length} films across ${ctx.A.length} aisles, with search, decade, unseen filter and rent.`);
