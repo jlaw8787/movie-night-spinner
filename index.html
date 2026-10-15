@@ -83,6 +83,72 @@ body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:50;
 .aisle.spooky .aisle-spin:hover{background:rgba(255,122,26,.12)}
 .aisle.spooky .shelf{border-bottom-color:#2a0b3d}
 .aisle-note{flex-basis:100%;margin:0;font-size:12.5px;color:var(--muted)}
+
+/* VHS wear: scuffed corners, faded price sticker */
+.box::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:4px;background:radial-gradient(circle at 0 0,rgba(255,255,255,.32),transparent 9px),radial-gradient(circle at 100% 100%,rgba(255,255,255,.22),transparent 11px),radial-gradient(circle at 100% 0,rgba(255,255,255,.12),transparent 7px),repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.03) 3px 4px)}
+.box img{filter:saturate(.88) contrast(.97)}
+.price{position:absolute;z-index:3;left:-5px;bottom:16px;background:#fff1b8;color:#b3261e;font:400 9px/1 var(--f-board);letter-spacing:.02em;padding:3px 5px 2px;border-radius:2px;transform:rotate(-5deg);box-shadow:0 1px 2px rgba(0,0,0,.45);opacity:.9}
+/* kids clamshells */
+.tape.clam .box{background:linear-gradient(90deg,#d9d9d2,#fbfbf7 14%,#f1f1ec 86%,#d4d4cc);padding:8px 8px 8px 13px;border-radius:10px;box-shadow:0 8px 14px rgba(0,0,0,.5),inset 3px 0 0 #c6c6be,inset 0 0 0 1px rgba(0,0,0,.08)}
+.tape.clam .box::after{inset:8px 8px 8px 13px}
+.tape.clam .box::before{border-radius:10px}
+.tape.clam .box img{border-radius:4px}
+/* all copies out */
+.tape.out .box img{filter:grayscale(1) brightness(.4)}
+.out-card{position:absolute;z-index:3;left:10px;right:10px;top:50%;transform:translateY(-50%) rotate(-4deg);background:#fff;color:#b3261e;font:400 13px/1.1 var(--f-board);text-align:center;padding:9px 4px 8px;border-radius:3px;box-shadow:0 3px 8px rgba(0,0,0,.55)}
+.out-card small{display:block;margin-top:4px;font:600 10.5px/1.2 var(--f-body);color:#3b3832}
+.case .outnote{font:400 16px/1.3 var(--f-marker);color:#b3261e;margin:0 0 12px}
+/* membership card */
+.member{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;align-items:center;margin:16px 0 4px;max-width:440px;background:linear-gradient(135deg,#2547c9,#14204f 62%);border:2px solid var(--shop-sign);border-radius:14px;padding:12px 16px 12px 12px;color:var(--screen);box-shadow:0 8px 16px rgba(0,0,0,.45);position:relative;overflow:hidden}
+.member::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.18),transparent 38%);pointer-events:none}
+.member-logo{grid-row:1/4;width:58px;height:58px;border-radius:10px;background:var(--shop-sign);color:#14204f;display:grid;place-items:center;font:400 22px/1 var(--f-board);transform:rotate(-4deg);box-shadow:0 3px 0 #b58f12}
+.member-k{font:400 12px var(--f-board);letter-spacing:.06em;color:var(--shop-sign);margin:0}
+.member input{font:400 19px var(--f-marker);color:#fff;background:transparent;border:0;border-bottom:1px dashed rgba(255,255,255,.35);padding:2px 0;width:100%;min-width:0}
+.member input::placeholder{color:rgba(255,255,255,.5)}
+.member-meta{margin:2px 0 0;font-size:12.5px;color:#c9d3ff;display:flex;flex-wrap:wrap;gap:2px 12px}
+.member-fee{grid-column:1/-1;margin:8px 0 0;font-size:13px;color:#fff}
+.member-fee.owing{color:#ffb4a8}
+/* due back slip */
+.slip{width:min(350px,100%);background:#fbfaf3;color:#222;font:500 14px/1.45 "Courier New",Courier,monospace;padding:22px 20px 18px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.6);border-radius:2px;background-image:repeating-linear-gradient(0deg,transparent 0 27px,rgba(0,0,0,.025) 27px 28px)}
+.slip h3{font:400 24px/1 var(--f-board);color:#14204f;text-align:center;margin:0 0 4px}
+.slip .c{text-align:center;margin:0}
+.slip hr{border:0;border-top:2px dashed #b9b4a6;margin:12px 0}
+.slip dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:0}
+.slip dt{color:#6b665a}
+.slip dd{margin:0;font-weight:700}
+.slip .stamp{display:table;margin:14px auto 2px;transform:rotate(-7deg);border:3px solid #c0392b;color:#c0392b;font:400 14px/1.15 var(--f-board);padding:6px 8px;border-radius:6px;opacity:.82;text-align:center;background:rgba(251,250,243,.6)}
+.slip h4{font:400 14px var(--f-board);color:#1d3aa8;margin:0 0 8px;letter-spacing:.03em}
+.slip .lollies{display:flex;flex-wrap:wrap;gap:8px}
+.slip .lollies label{display:flex;align-items:center;gap:6px;border:2px solid #14204f;border-radius:999px;padding:6px 12px;cursor:pointer;font:600 13.5px var(--f-body);color:#14204f;background:#fff}
+.slip .lollies label:has(input:checked){background:#ffd23f;border-color:#ffd23f}
+.slip .lollies input{accent-color:#14204f;margin:0}
+.slip .small{font-size:12px;color:#6b665a;margin:8px 0 0}
+.slip .acts{display:flex;gap:8px;margin-top:14px}
+.slip .acts button{flex:1;font:400 15px var(--f-board);letter-spacing:.03em;border-radius:8px;padding:11px 12px;cursor:pointer;border:2px solid #14204f;background:#fff;color:#14204f}
+.slip .acts .go{background:#14204f;color:#ffd23f}
+/* shop telly for trailers */
+.case-l{min-width:0}
+.case-art{position:relative;overflow:hidden;border-radius:4px}
+.case-art::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;background:repeating-linear-gradient(0deg,transparent 0 9px,rgba(255,255,255,.45) 9px 11px,transparent 11px 34px);mix-blend-mode:screen}
+.case-art.track::after{animation:track .95s steps(10) forwards}
+.case-art.track img{animation:jit .95s steps(8)}
+@keyframes track{0%{opacity:1;background-position:0 0}80%{opacity:.7}100%{opacity:0;background-position:0 -170px}}
+@keyframes jit{0%{transform:translateX(-4px)}25%{transform:translateX(3px)}50%{transform:translateX(-2px) skewX(1deg)}75%{transform:translateX(1px)}100%{transform:none}}
+.tv{margin:14px 0 0;background:linear-gradient(180deg,#5b4331,#3b2a1e);border-radius:16px;padding:10px 10px 8px;box-shadow:0 8px 16px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.15)}
+.tv-screen{aspect-ratio:16/10;background:radial-gradient(ellipse at center,#26323a,#0a0d10 75%);border-radius:18px/24px;overflow:hidden;position:relative;display:grid;place-items:center;box-shadow:inset 0 0 22px rgba(0,0,0,.95)}
+.tv-screen::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);border-radius:inherit}
+.tv-screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.tv-play{position:relative;z-index:1;font:400 14px var(--f-board);letter-spacing:.04em;color:#14204f;background:#ffd23f;border:0;border-radius:999px;padding:9px 16px;cursor:pointer;box-shadow:0 3px 0 #b58f12}
+.tv-none{color:#9fb0bb;font-size:13px;text-align:center;padding:0 12px}
+.tv-base{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:7px}
+.tv-knobs{display:flex;gap:6px}
+.tv-knobs i{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#d8d2c4,#7c7466);box-shadow:0 1px 1px rgba(0,0,0,.5)}
+.tv-base a{font-size:12px;color:#f3e3c9}
+/* Christmas aisle */
+.aisle.festive .aisle-sign{background:#c8102e;color:#fff;box-shadow:0 4px 0 #7a0a1c}
+.aisle.festive .aisle-spin{color:#ff9aa8;border-color:#ff9aa8}
+@media (prefers-reduced-motion:reduce){.case-art.track::after,.case-art.track img{animation:none}}
+@media (max-width:620px){.case-l{max-width:280px;width:100%;margin:0 auto}.case-l .case-art{max-width:200px;margin:0 auto}}
 .tape.picked .box{transform:translateY(-8px) scale(1.06);box-shadow:0 0 0 3px var(--shop-sign),0 14px 24px rgba(0,0,0,.6)}
 .counter{position:fixed;inset:0;z-index:60;background:rgba(5,6,14,.82);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow:auto}
 .case{width:min(760px,100%);background:#f6f1e6;color:#1b1a18;border-radius:8px;display:grid;grid-template-columns:240px 1fr;gap:20px;padding:18px;box-shadow:0 30px 70px rgba(0,0,0,.6);position:relative}
@@ -660,6 +726,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
         <label><input type="checkbox" id="shopUnwatched"> Not seen yet</label>
       </div>
     </div>
+    <div class="member" id="memberCard"></div>
     <p class="shop-count" id="shopCount" aria-live="polite"></p>
     <div id="shopAisles"></div>
   </section>
@@ -730,6 +797,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="tmdb-posters.js"></script>
+<script src="trailers.js"></script>
 <script src="movie-menus.js"></script>
 <script>
 const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "Brooklyn Slice Joint"}, "deli": {"name": "Manhattan Deli Counter"}, "street": {"name": "Bodega and Street Cart"}, "cop": {"name": "Stakeout Snacks"}, "soul": {"name": "Harlem Soul Kitchen"}, "xmas": {"name": "Christmas in the City"}, "aussie": {"name": "Arvo in the Outback"}, "asian": {"name": "Chinatown Late Night"}, "scifi": {"name": "Mission Control Rations"}, "hero": {"name": "Rooftop Patrol"}, "kids": {"name": "Family Matinee"}, "teen": {"name": "Mall Food Court"}, "diner": {"name": "Roadside Diner"}, "mex": {"name": "Cantina Night"}, "tiki": {"name": "Beach House Luau"}, "uptown": {"name": "Uptown Steakhouse"}, "horror": {"name": "Midnight Monster Feast"}, "western": {"name": "Chuckwagon BBQ"}, "philly": {"name": "Philly Fight Night"}, "galaxy": {"name": "Galactic Cantina"}, "wizard": {"name": "Great Hall Feast"}, "adventure": {"name": "Explorer's Field Rations"}, "fairytale": {"name": "Storybook Banquet"}, "romcom": {"name": "Rom-Com Date Night"}};
@@ -1054,7 +1122,7 @@ function cardBlurb(f,it){for(const k of ["S","M","W","K"])for(const d of f[k]||[
 const AISLES=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Drinks","Bottle shop"];
 function shopGroups(menu){
   const groups={};
-  const shopping=menu.shopping||[...menu.s,...menu.m,...menu.w,...menu.d].flatMap(it=>it.shop||[]);
+  const shopping=[...(menu.shopping||[...menu.s,...menu.m,...menu.w,...menu.d].flatMap(it=>it.shop||[])),...(menu.counter||[])];
   shopping.forEach(x=>{
     const [name,aisle]=x.split("@");const a=AISLES.includes((aisle||"").trim())?aisle.trim():"Pantry";
     (groups[a]=groups[a]||new Set()).add(name.trim());
@@ -1335,7 +1403,7 @@ async function show(f,preferSig){
   updateWatchButton();
   await ensureExact(f);
   if(id!==renderId)return;
-  const menu=makeMenu(f,preferSig);
+  const menu=makeMenu(f,preferSig);menu.counter=counterShop(f.id);
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
   $("reroll").hidden=!!exactMenu(f);
@@ -1405,7 +1473,7 @@ function setWeek(f){week={id:f.id,day:week&&week.day!=null?week.day:6,ticks:{}};
 function listText(f,groups){return `${f.title} (${f.year}) shopping list, serves 4\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
 async function openTrolley(f){
   await ensureExact(f);
-  const groups=shopGroups(makeMenu(f,true));const all=groups.flatMap(([,l])=>l);
+  const mm=makeMenu(f,true);mm.counter=counterShop(f.id);const groups=shopGroups(mm);const all=groups.flatMap(([,l])=>l);
   const o=document.createElement("div");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Shopping list for ${f.title}`);
   const ticks=()=>week&&week.id===f.id?week.ticks:{};
   o.innerHTML=`<div class="trolley-in"><h3>${ESC(f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(x)}"${ticks()[x]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
@@ -1444,11 +1512,69 @@ function halloweenRows(list){
   if(dark.length)r.push(["Halloween: late show",dark,"Proper scares. Wait till the kids are in bed.","spooky"]);
   return r;
 }
+const isXmasSeason=()=>{const d=new Date();return d.getMonth()===11&&d.getDate()<=26};
+const todayKey=()=>{const d=new Date();return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`};
+let outDay="",outSet=new Set();
+const isOut=f=>{const k=todayKey();if(k!==outDay){outDay=k;outSet=new Set(FILMS.filter(x=>isNew(x)&&!watched.has(x.id)).sort((a,b)=>hashN(a.id+k)-hashN(b.id+k)).slice(0,3).map(x=>x.id))}return outSet.has(f.id)};
+const isClam=f=>f.theme==="kids"||f.theme==="fairytale";
+const priceTag=f=>isNew(f)?"Overnight $6":"Weekly $3";
+/* membership card, rentals and late fees live on this phone only */
+let member=null;
+try{member=JSON.parse(localStorage.getItem("mns-member")||"null")}catch(e){member=null}
+if(!member||!member.no)member={no:String(100000+Math.floor(Math.random()*900000)),since:Date.now(),name:"",rentals:0,aisles:{},out:[]};
+const saveMember=()=>{try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}};
+saveMember();
+let counter={};
+try{counter=JSON.parse(localStorage.getItem("mns-counter")||"{}")}catch(e){counter={}}
+const COUNTER={choc:["Choc tops","4 choc top ice creams@Frozen"],pop:["Popcorn","100g popping corn@Pantry"],lolly:["Mixed lollies","1 large bag mixed lollies@Pantry"]};
+const counterShop=id=>(counter[id]||[]).filter(k=>COUNTER[k]).map(k=>COUNTER[k][1]);
+function lateFees(){
+  const now=Date.now();
+  return (member.out||[]).filter(r=>!watched.has(r.id)&&r.due<now).map(r=>({f:FILMS.find(x=>x.id===r.id),days:Math.ceil((now-r.due)/864e5)})).filter(x=>x.f);
+}
+function renderMember(){
+  const box=$("memberCard");if(!box)return;
+  const since=new Date(member.since).toLocaleString("en-AU",{month:"short",year:"numeric"});
+  const fav=Object.entries(member.aisles||{}).sort((a,b)=>b[1]-a[1])[0];
+  const late=lateFees();const owe=late.reduce((n,x)=>n+Math.min(x.days,10),0);
+  const fee=late.length?`Late fees: $${owe}.00 on ${late.slice(0,2).map(x=>x.f.title).join(" and ")}${late.length>2?` and ${late.length-2} more`:""}. Mark it seen to clear the slate.`:"Late fees: none. Good member.";
+  box.innerHTML=`<div class="member-logo" aria-hidden="true">SV</div><p class="member-k">Spinner Video member</p><input id="memberName" type="text" maxlength="28" autocomplete="off" aria-label="Name on your member card" placeholder="Tap to write your name" value="${ESC(member.name||"")}"><p class="member-meta"><span>No. ${member.no.slice(0,3)} ${member.no.slice(3)}</span><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>`;
+  $("memberName").addEventListener("change",e=>{member.name=e.target.value.trim();saveMember()});
+}
+function dueBack(f){
+  const d=new Date();
+  if(isNew(f)){d.setDate(d.getDate()+1)}else{d.setDate(d.getDate()+7)}
+  d.setHours(19,0,0,0);return d;
+}
+function openSlip(f,go){
+  const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
+  const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
+  const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
+  o.innerHTML=`<div class="slip"><h3>Spinner Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?"New release, overnight":"Weekly"} ${isNew(f)?"$6.00":"$3.00"}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd></dl><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
+  const last=document.activeElement;
+  const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus&&last.focus()};
+  const esc=e=>{if(e.key==="Escape")close()};
+  o.addEventListener("click",e=>{
+    if(e.target===o)return close();
+    const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
+    if(a==="back")return close();
+    counter[f.id]=[...o.querySelectorAll(".lollies input:checked")].map(i=>i.value);
+    if(!counter[f.id].length)delete counter[f.id];
+    try{localStorage.setItem("mns-counter",JSON.stringify(counter))}catch(err){}
+    member.rentals=(member.rentals||0)+1;
+    const aisle=SHOP_AISLE_OF[f.theme];if(aisle)member.aisles[aisle]=(member.aisles[aisle]||0)+1;
+    member.out=[{id:f.id,due:due.getTime()},...(member.out||[]).filter(r=>r.id!==f.id)].slice(0,6);
+    saveMember();renderMember();buzz(30);
+    o.remove();document.removeEventListener("keydown",esc);go();
+  });
+  document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".go").focus();
+}
 let shopBuilt=false;
 function tapeHTML(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
   const st=watched.has(f.id)?'<span class="sticker back">Seen it</span>':isNew(f)?'<span class="sticker new">New</span>':isPick(f)?'<span class="sticker pick">Staff pick</span>':"";
-  return `<button class="tape" type="button" data-id="${ESC(f.id)}">${st}<span class="box">${p?`<img loading="lazy" decoding="async" alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}</span><span class="tape-t">${ESC(f.title)}</span><span class="tape-y">${f.year}</span></button>`;
+  const out=isOut(f);
+  return `<button class="tape${isClam(f)?" clam":""}${out?" out":""}" type="button" data-id="${ESC(f.id)}" style="transform:rotate(${(hashN(f.id)%5-2)*.35}deg)">${out?"":st}<span class="box">${p?`<img loading="lazy" decoding="async" alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}${out?'<span class="out-card">All copies out<small>Check back Friday</small></span>':`<span class="price">${priceTag(f)}</span>`}</span><span class="tape-t">${ESC(f.title)}</span><span class="tape-y">${f.year}</span></button>`;
 }
 function renderShop(){
   const q=$("shopSearch").value.trim().toLowerCase(),dec=$("shopDecade").value,unseen=$("shopUnwatched").checked;
@@ -1459,26 +1585,34 @@ function renderShop(){
   const rented=hist.map(id=>list.find(f=>f.id===id)).filter(Boolean);
   const spooky=!q?halloweenRows(list):[],season=isSpookySeason();
   if(season)rows.push(...spooky);
+  if(!q&&isXmasSeason()){const r=list.filter(f=>f.theme==="xmas").sort((a,b)=>a.title.localeCompare(b.title));if(r.length)rows.push(["Christmas",r,"Pop the tree lights on and pick one.","festive"])}
   if(rented.length&&!q)rows.push(["Your rentals",rented]);
   if(fresh.length&&!q)rows.push(["New releases",fresh]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
   if(q)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
-  else SHOP_AISLES.forEach(([n,ts])=>{const r=list.filter(f=>ts.includes(f.theme)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
+  else SHOP_AISLES.forEach(([n,ts])=>{if(n==="Holiday"&&isXmasSeason())return;const r=list.filter(f=>ts.includes(f.theme)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
   if(!season)rows.push(...spooky);
+  renderMember();
   $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
   $("shopAisles").innerHTML=rows.length?rows.map(([n,r,note,cls])=>`<section class="aisle${cls?" "+cls:""}"><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div><div class="shelf">${r.map(tapeHTML).join("")}</div></section>`).join(""):`<p class="shelf-empty">Nothing on the shelves matches that. Try another title or clear the filters.</p>`;
+}
+function tvHTML(f){
+  const k=typeof TRAILERS!=="undefined"&&TRAILERS[f.id];
+  return `<div class="tv"><div class="tv-screen">${k?`<button class="tv-play" type="button" data-k="${ESC(k)}">Play trailer</button>`:`<p class="tv-none">No trailer in the machine for this one.</p>`}</div><div class="tv-base"><span class="tv-knobs" aria-hidden="true"><i></i><i></i></span>${k?`<a href="https://www.youtube.com/watch?v=${encodeURIComponent(k)}" target="_blank" rel="noopener">Open on YouTube</a>`:""}</div></div>`;
 }
 async function openCase(f){
   await ensureExact(f);
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const m=makeMenu(f,true);
   const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
   const seen=watched.has(f.id);
-  o.innerHTML=`<div class="case"><button class="x" type="button" aria-label="Put it back">×</button>${p?`<img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}">`:"<div></div>"}<div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}</p><p class="syn">${ESC(f.D)}</p><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p><h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="rent" type="button">Rent it</button><button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
+  o.innerHTML=`<div class="case"><button class="x" type="button" aria-label="Put it back">×</button><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p><h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="rent" type="button">Rent it</button><button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
   const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus()};
   const esc=e=>{if(e.key==="Escape")close()};const last=document.activeElement;
   o.addEventListener("click",e=>{if(e.target===o)close()});
   o.querySelector(".x").addEventListener("click",close);
-  o.querySelector(".rent").addEventListener("click",()=>{close();setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
+  o.querySelector(".rent").addEventListener("click",()=>{close();openSlip(f,()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})})});
+  const tv=o.querySelector(".tv-play");
+  if(tv)tv.addEventListener("click",()=>{const k=tv.dataset.k;tv.parentElement.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(k)}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="${ESC(f.title)} trailer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`});
   o.querySelector(".seen").addEventListener("click",()=>{setWatched(f,!watched.has(f.id));close();renderShop()});
   document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".rent").focus();
 }

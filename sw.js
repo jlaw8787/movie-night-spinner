@@ -1,8 +1,8 @@
 /* Movie Night Spinner offline worker.
    Page and scripts: network first, so updates show straight away, with the cached copy when offline.
    Recipes, posters, fonts and libraries: cached on first use and served from the cache after that. */
-const VERSION = 'mns-v1';
-const SHELL = ['./', 'index.html', 'movie-menus.js', 'tmdb-posters.js', 'manifest.webmanifest',
+const VERSION = 'mns-v2';
+const SHELL = ['./', 'index.html', 'movie-menus.js', 'tmdb-posters.js', 'trailers.js', 'manifest.webmanifest',
   'assets/app/icon-192.png', 'assets/app/icon-512.png', 'assets/tmdb/tmdb-logo.svg'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
