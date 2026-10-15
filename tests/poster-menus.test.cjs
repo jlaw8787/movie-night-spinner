@@ -43,8 +43,8 @@ assert.ok(run('shopGroups(MOVIE_MENU_EDITIONS["The Warriors (1979)"].menu).flatM
 const normal=run('FILMS.find(f=>!MOVIE_MENU_EDITIONS[f.id])');context.normalId=normal.id;
 assert.ok(run('makeMenu(FILMS.find(f=>f.id===normalId),true).m.length>0'));
 const rollout=JSON.parse(fs.readFileSync(path.join(root,'menu-artwork-rollout.json'),'utf8'));
-assert.equal(rollout.films.length,709);
+assert.equal(rollout.films.length,run('FILMS.length'));
 assert.equal(rollout.films.filter(f=>f.status==='complete').length,ids.length);
-assert.equal(new Set(rollout.films.map(f=>f.id)).size,709);
+assert.equal(new Set(rollout.films.map(f=>f.id)).size,rollout.films.length);
 assert.ok(html.includes('img.decode()'));
-console.log('PASS: artwork/menu matching, portions, consolidated shopping, A4 assets, accessible text, curated-menu stability, legacy fallback and 709-film rollout.');
+console.log('PASS: artwork/menu matching, portions, consolidated shopping, A4 assets, accessible text, curated-menu stability, legacy fallback and full-library rollout.');
