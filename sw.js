@@ -1,7 +1,7 @@
 /* Movie Night Spinner offline worker.
    Page and scripts: network first, so updates show straight away, with the cached copy when offline.
    Recipes, posters, fonts and libraries: cached on first use and served from the cache after that. */
-const VERSION = 'mns-v3';
+const VERSION = 'mns-v4';
 const SHELL = ['./', 'index.html', 'movie-menus.js', 'tmdb-posters.js', 'trailers.js', 'ratings.js', 'manifest.webmanifest',
   'assets/app/icon-192.png', 'assets/app/icon-512.png', 'assets/tmdb/tmdb-logo.svg'];
 self.addEventListener('install', e => {
@@ -18,9 +18,11 @@ const networkFirst = async req => {
 const cacheFirst = async req => {
   const cache = await caches.open(VERSION);
   const hit = await cache.match(req);
-  if (hit) return hit;
+  /* a copy saved without permission headers can't be used to build a saved image, so skip it */
+  if (hit && !(req.mode === 'cors' && hit.type === 'opaque')) return hit;
   const res = await fetch(req);
-  if (res.ok || res.type === 'opaque') cache.put(req, res.clone());
+  if (res.ok && res.type !== 'opaque') cache.put(req, res.clone());
+  else if (res.type === 'opaque' && !hit) cache.put(req, res.clone());
   return res;
 };
 self.addEventListener('fetch', e => {

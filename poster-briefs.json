@@ -44955,93 +44955,77 @@
    "serve_cue": "Serve the snacks when Craig and Smokey settle in on the porch.",
    "snacks": [
     {
-     "name": "Porch day chips and salsa",
-     "scene": "a whole day sitting on the porch",
-     "method": "Corn chips with a fresh salsa of tomato, onion, jalapeño, coriander and lime, left 10 minutes to get juicy.",
+     "name": "Peanut butter AND jelly",
+     "scene": "Smokey: never two things that match, so this time they do",
+     "method": "Thick white bread with smooth peanut butter and strawberry jam, crusts off and cut into little triangles for the porch.",
      "shop": [
-      "corn chips",
-      "tomatoes",
-      "white onions",
-      "jalapeños",
-      "coriander",
-      "limes"
+      "white bread",
+      "peanut butter",
+      "strawberry jam"
      ]
     },
     {
-     "name": "Corner store snack bowl",
-     "scene": "the run to the corner store",
-     "method": "Salted peanuts, pretzels, cheese puffs and chocolate peanuts tipped into a big bowl for the porch.",
+     "name": "Ham AND burger sliders",
+     "scene": "ham, no burger, fixed",
+     "method": "Little beef sliders topped with a slice of grilled ham and melted cheese on soft buns, so the ham finally gets its burger.",
      "shop": [
-      "salted peanuts",
-      "pretzels",
-      "cheese puffs",
-      "chocolate peanuts"
-     ]
-    },
-    {
-     "name": "Fried bologna sliders",
-     "scene": "Craig's dad and his lunch",
-     "method": "Thick bologna slices scored around the edge so they stay flat, fried until crisp and curled, piled into soft rolls with American cheese and yellow mustard.",
-     "shop": [
-      "bologna",
-      "American cheese",
+      "beef mince",
+      "leg ham",
+      "cheddar slices",
       "slider buns",
-      "yellow mustard"
+      "dill pickles"
+     ]
+    },
+    {
+     "name": "Counter pineapple spears",
+     "scene": "the pineapple on the kitchen counter",
+     "method": "Fresh pineapple cut into long spears, charred on a hot grill pan and dusted with chilli, lime and salt.",
+     "shop": [
+      "pineapple",
+      "limes",
+      "chilli powder"
      ]
     }
    ],
    "mains": [
     {
-     "name": "Friday night fried fish",
-     "scene": "a Friday night fish fry",
-     "method": "Whiting or flathead dredged in seasoned cornmeal, fried at 180C until crisp, with white bread, hot sauce, coleslaw and fries.",
+     "name": "Porch day barbecue plate",
+     "scene": "a long hot day on the block",
+     "method": "Sticky barbecue chicken drumsticks off the grill with buttered corn on the cob and potato salad, eaten on the steps.",
      "shop": [
-      "flathead fillets",
-      "fine cornmeal",
-      "hot sauce",
-      "white bread",
-      "cabbage",
-      "potatoes"
-     ]
-    },
-    {
-     "name": "Smothered chicken",
-     "scene": "Craig's mum's home cooking",
-     "method": "Chicken thighs seasoned, floured and browned in oil, a dark roux made in the same pan, onions and stock added, the chicken simmered 40 minutes in the gravy until tender, over white rice.",
-     "shop": [
-      "chicken thighs",
-      "plain flour",
-      "brown onions",
-      "chicken stock",
-      "long grain rice"
+      "chicken drumsticks",
+      "barbecue sauce",
+      "corn cobs",
+      "potato salad",
+      "butter"
      ]
     }
    ],
    "dessert": [
     {
-     "name": "Banana pudding",
-     "scene": "a classic for the whole family",
-     "method": "Vanilla custard of milk, yolks, sugar and cornflour cooked until thick, layered warm with sliced bananas and vanilla wafers, chilled overnight, topped with whipped cream.",
+     "name": "Big Worm's ice cream truck cones",
+     "scene": "Big Worm's ice cream truck rolling down the street",
+     "method": "Vanilla ice cream cones dipped in chocolate that sets hard and rolled in crushed cornflakes and sprinkles, like the truck sells.",
      "shop": [
-      "full cream milk",
-      "eggs",
-      "caster sugar",
-      "bananas",
-      "vanilla wafers",
-      "thickened cream"
+      "vanilla ice cream",
+      "ice cream cones",
+      "dark chocolate",
+      "coconut oil",
+      "cornflakes",
+      "sprinkles"
      ]
     }
    ],
    "drink": [
     {
-     "name": "Red drink",
-     "scene": "the cold drinks out on the porch",
-     "method": "Cranberry, pineapple and orange juice mixed with lemonade and poured over plenty of ice in big plastic cups.",
+     "name": "Red drink, with sugar this time",
+     "scene": "Craig's kitchen has the drink but no sugar",
+     "method": "Homemade red fruit drink of strawberry, cherry and lemon, sweetened properly and poured over plenty of ice in big plastic cups.",
      "shop": [
-      "cranberry juice",
-      "pineapple juice",
-      "lemonade",
-      "ice"
+      "strawberries",
+      "cherry juice",
+      "lemons",
+      "caster sugar"
      ]
     }
    ],
