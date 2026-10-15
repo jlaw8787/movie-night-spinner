@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 743,
- "ready_for_poster": 619,
+ "hand_written": 750,
+ "ready_for_poster": 626,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -76675,6 +76675,724 @@
     }
    ],
    "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Kung Fu Panda 2 (2011)",
+   "title": "Kung Fu Panda 2",
+   "year": "2011",
+   "theme": "asian",
+   "tagline": "Inner peace, then noodles.",
+   "description": "Po faces a peacock warlord with a deadly new weapon and finally learns where he came from.",
+   "serve_cue": "Serve the buns when Po tries to fit them all in his mouth.",
+   "snacks": [
+    {
+     "name": "Radish crate pickles",
+     "scene": "the radish crate baby Po was found in",
+     "method": "Daikon and carrot cut into batons, pickled quickly in rice vinegar, sugar and salt, served cold and crunchy.",
+     "shop": [
+      "daikon",
+      "carrots",
+      "rice vinegar",
+      "caster sugar"
+     ]
+    },
+    {
+     "name": "Bean bun warrior buns",
+     "scene": "the bean bun challenge, how many fit at once",
+     "method": "Soft steamed buns filled with sweet red bean paste, steamed for 12 minutes until puffy and pillowy.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "caster sugar",
+      "red bean paste",
+      "milk"
+     ]
+    },
+    {
+     "name": "Gongmen prawn crackers",
+     "scene": "the fireworks over Gongmen City",
+     "method": "Prawn crackers puffed in hot oil in seconds and tossed with chilli salt and a little five spice.",
+     "shop": [
+      "prawn crackers",
+      "vegetable oil",
+      "chilli flakes",
+      "five spice"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Mr Ping's noodles",
+     "scene": "the noodle shop where Po grew up",
+     "method": "Fresh egg noodles in a rich chicken broth with bok choy, spring onion, shiitake and a soft egg on top.",
+     "shop": [
+      "egg noodles",
+      "chicken stock",
+      "bok choy",
+      "shiitake mushrooms",
+      "spring onions",
+      "eggs"
+     ]
+    },
+    {
+     "name": "Firecracker chicken",
+     "scene": "Lord Shen and his fireworks",
+     "method": "Chicken thighs stir-fried with dried chillies, Sichuan pepper, garlic and peanuts in a sweet soy glaze.",
+     "shop": [
+      "chicken thighs",
+      "dried red chillies",
+      "Sichuan pepper",
+      "garlic",
+      "peanuts",
+      "soy sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Peach buns",
+     "scene": "for the peaches of the Valley of Peace",
+     "method": "Steamed buns shaped like peaches and tinted pink at the tip, filled with sweet lotus or red bean paste.",
+     "shop": [
+      "plain flour",
+      "dried yeast",
+      "caster sugar",
+      "red bean paste",
+      "red food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Jasmine tea",
+     "scene": "a calm pot before training",
+     "method": "Jasmine green tea brewed for 3 minutes in a pot and poured into small cups.",
+     "shop": [
+      "jasmine tea"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Happy Feet (2006)",
+   "title": "Happy Feet",
+   "year": "2006",
+   "theme": "kids",
+   "tagline": "Fish for the colony, dancing shoes optional.",
+   "description": "An emperor penguin who can't sing but can tap dance sets out to find out why the fish are disappearing.",
+   "serve_cue": "Serve the fish when Mumble brings food back for the whole colony.",
+   "snacks": [
+    {
+     "name": "Sardines on toast",
+     "scene": "the fish the whole colony depends on",
+     "method": "Tinned sardines mashed with lemon and pepper, spread on buttered toast and grilled for a minute until hot.",
+     "shop": [
+      "tinned sardines",
+      "white bread",
+      "butter",
+      "lemons"
+     ]
+    },
+    {
+     "name": "Iceberg wedges",
+     "scene": "the ice shelves of Antarctica",
+     "method": "Iceberg lettuce cut into wedges with creamy blue cheese dressing, crispy bacon and chopped tomato.",
+     "shop": [
+      "iceberg lettuce",
+      "blue cheese",
+      "sour cream",
+      "bacon",
+      "tomatoes"
+     ]
+    },
+    {
+     "name": "Snowball cheese puffs",
+     "scene": "a snowstorm in the Antarctic",
+     "method": "Choux pastry beaten with cheddar, piped into small balls and baked until puffed, dusted white with parmesan.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "eggs",
+      "cheddar",
+      "parmesan"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Mumble's fish pie",
+     "scene": "the fish Mumble brings back to the colony",
+     "method": "White fish and prawns in a parsley white sauce, topped with buttery mash and baked until golden.",
+     "shop": [
+      "white fish fillets",
+      "green prawns",
+      "milk",
+      "parsley",
+      "potatoes",
+      "butter"
+     ]
+    },
+    {
+     "name": "Research station chilli",
+     "scene": "the humans' base on the ice",
+     "method": "Beef mince and beans simmered with onion, cumin, chilli and tomato for an hour, with rice and sour cream.",
+     "shop": [
+      "beef mince",
+      "red kidney beans",
+      "onions",
+      "ground cumin",
+      "crushed tomatoes",
+      "long grain rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Coconut ice",
+     "scene": "snow-white and pink, like the Antarctic sky",
+     "method": "Desiccated coconut mixed with condensed milk and icing sugar, half tinted pink, pressed in layers and set.",
+     "shop": [
+      "desiccated coconut",
+      "sweetened condensed milk",
+      "icing sugar",
+      "red food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Icy blue lemonade",
+     "scene": "the blue of the Antarctic ice",
+     "method": "Lemonade poured over crushed ice with a splash of blue sports cordial and a lemon slice.",
+     "shop": [
+      "lemonade",
+      "blue cordial",
+      "lemons"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Top End Wedding (2019)",
+   "title": "Top End Wedding",
+   "year": "2019",
+   "theme": "romcom",
+   "tagline": "Ten days to find Mum and get married.",
+   "description": "A Darwin lawyer and her fiancé have ten days to find her missing mum before their wedding.",
+   "serve_cue": "Serve the pavlova when the wedding finally happens on the Tiwi Islands.",
+   "snacks": [
+    {
+     "name": "Mindil Beach laksa cups",
+     "scene": "the Mindil Beach sunset markets in Darwin",
+     "method": "Coconut curry laksa broth with chicken, rice noodles, tofu puffs and bean sprouts, served in small cups.",
+     "shop": [
+      "laksa paste",
+      "coconut milk",
+      "chicken thighs",
+      "rice noodles",
+      "tofu puffs",
+      "bean sprouts"
+     ]
+    },
+    {
+     "name": "Mango salsa and chips",
+     "scene": "Top End mango season",
+     "method": "Diced ripe mango with red onion, fresh chilli, coriander and lime, scooped up with salted corn chips by the pool.",
+     "shop": [
+      "mangoes",
+      "red onion",
+      "red chillies",
+      "coriander",
+      "limes",
+      "corn chips"
+     ]
+    },
+    {
+     "name": "Damper with golden syrup",
+     "scene": "a bush cook-up on the road trip",
+     "method": "Self-raising flour, butter and milk mixed into a round, baked until golden, with butter and golden syrup.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "milk",
+      "golden syrup"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Barbecued barramundi",
+     "scene": "the Top End's favourite fish",
+     "method": "Barramundi fillets grilled skin down until crisp, with lime, chilli and a green mango salad.",
+     "shop": [
+      "barramundi fillets",
+      "limes",
+      "red chillies",
+      "mangoes",
+      "mint",
+      "fish sauce"
+     ]
+    },
+    {
+     "name": "Wedding feast roast lamb",
+     "scene": "the wedding on the islands",
+     "method": "Lamb leg studded with garlic and rosemary, roasted with potatoes and pumpkin, carved for the whole family.",
+     "shop": [
+      "lamb leg",
+      "garlic",
+      "rosemary",
+      "potatoes",
+      "butternut pumpkin"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Mango pavlova",
+     "scene": "the wedding dessert in mango season",
+     "method": "Crisp pavlova with a soft marshmallow middle, piled with whipped cream, sliced fresh mango and passionfruit pulp.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "cornflour",
+      "thickened cream",
+      "mangoes",
+      "passionfruit"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Lime and soda",
+     "scene": "a hot Darwin afternoon",
+     "method": "Lime cordial and fresh lime juice topped with soda water over plenty of ice.",
+     "shop": [
+      "lime cordial",
+      "limes",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Ladies in Black (2018)",
+   "title": "Ladies in Black",
+   "year": "2018",
+   "theme": "aussie",
+   "tagline": "Sydney, 1959. Continental food comes to the party.",
+   "description": "A bookish teenager takes a summer job at a Sydney department store and is taken under the wing of its European staff.",
+   "serve_cue": "Serve the mains when Magda welcomes everyone to her New Year's Eve party.",
+   "snacks": [
+    {
+     "name": "Magda's continental platter",
+     "scene": "Magda's New Year's Eve party",
+     "method": "Salami, Hungarian sausage, pickled cucumbers, rye bread and soft cheese, the European spread that wowed 1959 Sydney.",
+     "shop": [
+      "salami",
+      "kabana",
+      "dill pickles",
+      "rye bread",
+      "cream cheese"
+     ]
+    },
+    {
+     "name": "Tearoom egg sandwiches",
+     "scene": "the department store tearoom",
+     "method": "Soft white bread with egg, mayo and cress, crusts off, cut into neat fingers for the ladies' tea.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "cress",
+      "white bread"
+     ]
+    },
+    {
+     "name": "Liptauer on rye",
+     "scene": "a Hungarian spread from Rudi's side of the table",
+     "method": "Soft cheese beaten with butter, paprika, capers, onion and caraway, spread thick on dark rye.",
+     "shop": [
+      "cream cheese",
+      "butter",
+      "sweet paprika",
+      "capers",
+      "caraway seeds",
+      "rye bread"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Rudi's chicken paprikash",
+     "scene": "the Hungarian cooking Fay falls for",
+     "method": "Chicken thighs braised with onion, sweet paprika and capsicum, finished with sour cream, over buttered noodles.",
+     "shop": [
+      "chicken thighs",
+      "onions",
+      "sweet paprika",
+      "red capsicum",
+      "sour cream",
+      "egg noodles"
+     ]
+    },
+    {
+     "name": "Stuffed capsicums",
+     "scene": "a continental dinner in 1959",
+     "method": "Red capsicums filled with beef, rice, onion and paprika, then baked in a rich tomato sauce until tender.",
+     "shop": [
+      "red capsicum",
+      "beef mince",
+      "long grain rice",
+      "sweet paprika",
+      "passata"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Poppy seed cake",
+     "scene": "a European cake for an Aussie summer",
+     "method": "Lemon and poppy seed butter cake baked in a loaf tin and glazed with lemon icing.",
+     "shop": [
+      "self-raising flour",
+      "poppy seeds",
+      "butter",
+      "eggs",
+      "lemons",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Tearoom pot of tea",
+     "scene": "afternoon tea at Goodes",
+     "method": "Black tea brewed in a pot, poured into china cups with milk and sugar.",
+     "shop": [
+      "black tea",
+      "milk",
+      "sugar"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Gladiator II (2024)",
+   "title": "Gladiator II",
+   "year": "2024",
+   "theme": "uptown",
+   "tagline": "Bread, circuses and a proper Roman feast.",
+   "description": "Years after Maximus, Lucius is captured in North Africa and forced to fight in the Colosseum.",
+   "serve_cue": "Serve the mains when the emperors throw their banquet.",
+   "snacks": [
+    {
+     "name": "Numidian dates and almonds",
+     "scene": "Lucius's home in North Africa",
+     "method": "Medjool dates and toasted almonds with a drizzle of honey and a pinch of sea salt.",
+     "shop": [
+      "medjool dates",
+      "almonds",
+      "honey",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Macrinus's olives and cheese",
+     "scene": "the dealer who buys gladiators",
+     "method": "Marinated olives, aged sheep's cheese and fresh figs laid out with crusty bread and a dish of olive oil.",
+     "shop": [
+      "mixed olives",
+      "pecorino",
+      "figs",
+      "crusty bread",
+      "extra virgin olive oil"
+     ]
+    },
+    {
+     "name": "Roman flatbread",
+     "scene": "bread for the crowd",
+     "method": "Simple flatbreads brushed with olive oil, rosemary and salt, cooked in a hot pan until blistered.",
+     "shop": [
+      "plain flour",
+      "extra virgin olive oil",
+      "rosemary",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Emperors' honey roast chicken",
+     "scene": "the emperors' banquet",
+     "method": "Whole chicken roasted with honey, garlic, thyme and lemon until sticky and golden, with roast vegetables.",
+     "shop": [
+      "whole chicken",
+      "honey",
+      "garlic",
+      "thyme",
+      "lemons",
+      "carrots"
+     ]
+    },
+    {
+     "name": "North African lamb and chickpea stew",
+     "scene": "the fight in Numidia",
+     "method": "Lamb shoulder stewed slowly with chickpeas, tomato, cumin, cinnamon and dried apricots, served over fluffy couscous.",
+     "shop": [
+      "lamb shoulder",
+      "chickpeas",
+      "crushed tomatoes",
+      "ground cumin",
+      "dried apricots",
+      "couscous"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Roman honey cheesecake",
+     "scene": "an ancient Roman sweet",
+     "method": "Ricotta mixed with honey, egg and lemon zest, baked until set and drizzled with more honey.",
+     "shop": [
+      "ricotta",
+      "honey",
+      "eggs",
+      "lemons"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Spiced grape juice",
+     "scene": "the wine at the banquet, alcohol-free",
+     "method": "Red grape juice warmed with cinnamon, cloves and orange peel, served warm or chilled.",
+     "shop": [
+      "red grape juice",
+      "cinnamon sticks",
+      "cloves",
+      "oranges"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Wicked: For Good (2025)",
+   "title": "Wicked: For Good",
+   "year": "2025",
+   "theme": "wizard",
+   "tagline": "Pink and green, for good.",
+   "description": "Elphaba and Glinda face the fallout of their choices as the Emerald City turns against the Wicked Witch.",
+   "serve_cue": "Serve the banquet when the Emerald City celebrates Glinda's engagement.",
+   "snacks": [
+    {
+     "name": "Emerald City pistachio bites",
+     "scene": "the Emerald City, green from top to bottom",
+     "method": "Pistachios blitzed with butter, sugar and flour into crumbly shortbread rounds, tinted green and dusted with sugar.",
+     "shop": [
+      "pistachios",
+      "butter",
+      "plain flour",
+      "icing sugar"
+     ]
+    },
+    {
+     "name": "Glinda's bubble cream puffs",
+     "scene": "Glinda arriving by bubble",
+     "method": "Light choux puffs baked until hollow, filled with pink strawberry cream and dusted with icing sugar like bubbles.",
+     "shop": [
+      "plain flour",
+      "butter",
+      "eggs",
+      "thickened cream",
+      "strawberries",
+      "icing sugar"
+     ]
+    },
+    {
+     "name": "Munchkinland cheese tarts",
+     "scene": "the Munchkinland celebrations",
+     "method": "Small shortcrust cases filled with a gruyère, chive and cream custard, baked until puffed and golden on top.",
+     "shop": [
+      "shortcrust pastry",
+      "eggs",
+      "thickened cream",
+      "gruyère",
+      "chives"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Engagement banquet roast chicken",
+     "scene": "Glinda and Fiyero's engagement",
+     "method": "Whole chicken roasted with butter, lemon and tarragon under the skin, with green beans, peas and creamy potatoes.",
+     "shop": [
+      "whole chicken",
+      "butter",
+      "lemons",
+      "tarragon",
+      "green beans",
+      "potatoes"
+     ]
+    },
+    {
+     "name": "Winkie Country spiced lamb",
+     "scene": "Kiamo Ko, the castle out in the west",
+     "method": "Lamb shoulder rubbed with smoked paprika and cumin, slow roasted until it pulls apart, with minted herbed couscous.",
+     "shop": [
+      "lamb shoulder",
+      "smoked paprika",
+      "ground cumin",
+      "couscous",
+      "mint"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Ruby slipper raspberry tarts",
+     "scene": "the shoes everyone is after",
+     "method": "Sweet pastry tarts filled with cold vanilla custard and topped with raspberries glazed bright ruby red.",
+     "shop": [
+      "sweet shortcrust pastry",
+      "custard powder",
+      "milk",
+      "raspberries",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Emerald mint fizz",
+     "scene": "an Emerald City toast",
+     "method": "Fresh mint and lime muddled with sugar, topped with soda water over ice.",
+     "shop": [
+      "mint",
+      "limes",
+      "caster sugar",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Jerry Maguire (1996)",
+   "title": "Jerry Maguire",
+   "year": "1996",
+   "theme": "romcom",
+   "tagline": "Help me help you to seconds.",
+   "description": "A sports agent loses everything after writing a mission statement and starts again with one client and one loyal colleague.",
+   "serve_cue": "Serve the mains when Rod finally gets his big night on Monday Night Football.",
+   "snacks": [
+    {
+     "name": "Divorced women's group dip and crackers",
+     "scene": "Laurel's living room support group",
+     "method": "French onion dip made with sour cream and caramelised onion, served with crackers and celery.",
+     "shop": [
+      "sour cream",
+      "onions",
+      "crackers",
+      "celery"
+     ]
+    },
+    {
+     "name": "Arizona street corn",
+     "scene": "Rod's home games in Arizona",
+     "method": "Grilled corn cobs brushed with mayo, rolled in crumbly cheese and chilli, with a squeeze of lime.",
+     "shop": [
+      "corn cobs",
+      "mayonnaise",
+      "feta",
+      "chilli powder",
+      "limes"
+     ]
+    },
+    {
+     "name": "Game day pigs in blankets",
+     "scene": "Monday Night Football on the couch",
+     "method": "Cocktail franks wrapped in puff pastry, egg washed and baked golden, with mustard and tomato sauce.",
+     "shop": [
+      "cocktail frankfurts",
+      "puff pastry",
+      "eggs",
+      "yellow mustard"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Rod's carne asada",
+     "scene": "the Tidwell family dinner",
+     "method": "Skirt steak marinated in lime, garlic and orange, grilled hot and sliced, with tortillas, salsa and beans.",
+     "shop": [
+      "skirt steak",
+      "limes",
+      "oranges",
+      "garlic",
+      "flour tortillas",
+      "salsa"
+     ]
+    },
+    {
+     "name": "Chicken enchiladas",
+     "scene": "a family dinner at Dorothy's",
+     "method": "Chicken rolled in tortillas, covered in red enchilada sauce and cheese and baked until bubbling.",
+     "shop": [
+      "chicken breast",
+      "flour tortillas",
+      "enchilada sauce",
+      "cheddar",
+      "sour cream"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Wedding cupcakes",
+     "scene": "Jerry and Dorothy's quick wedding",
+     "method": "Light vanilla cupcakes topped with swirls of white buttercream and a sugared flower, stacked up like a small wedding cake.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "eggs",
+      "caster sugar",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Arizona sweet tea",
+     "scene": "a hot day in the desert",
+     "method": "Black tea brewed strong, sweetened and poured over ice with lemon.",
+     "shop": [
+      "black tea",
+      "sugar",
+      "lemons"
+     ]
+    }
+   ],
+   "lane": 5,
    "poster_status": "pending",
    "recipe_ready": true
   }
