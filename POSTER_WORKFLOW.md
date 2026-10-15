@@ -83,4 +83,4 @@ Work through your lane in file order as before. If you reach a film without `rec
 
 ## Real posters (TMDB)
 
-Films without a finished poster edition now show their official poster on a lobby-card menu. The poster loads live from TMDB's image servers; only the poster paths live in `tmdb-posters.js`. No API key is stored in the repo. To add new films, run `TMDB_KEY=... python3 scripts/tmdb-match.py films.json matches.json` and add the new paths to `tmdb-posters.js`. Finished poster editions still take priority. TMDB's free terms cover personal, non-commercial use only.
+Every film now shows its official poster on a lobby-card menu. Finished poster editions keep their curated menu, tagline and cue; their JPEG art is only the fallback if TMDB can't load. The poster loads live from TMDB's image servers; only the poster paths live in `tmdb-posters.js`. No API key is stored in the repo. To add new films, run `TMDB_KEY=... python3 scripts/tmdb-match.py films.json matches.json` and add the new paths to `tmdb-posters.js`. TMDB's free terms cover personal, non-commercial use only.

@@ -1080,21 +1080,22 @@ function lobbyHTML(f,menu,tag,path){
       <section class="mc-courses">
         ${course("c-s",lab[0],menu.s)}${course("c-m",lab[1],menu.m)}${course("c-w",lab[2],menu.w)}${course("c-d",lab[3],menu.d)}
       </section>
-      <div class="mc-cue"><b>Showtime cue</b><span>${ESC(f.P)}</span></div>
+      <div class="mc-cue"><b>Showtime cue</b><span>${ESC((movieEdition(f)||{}).cue||f.P)}</span></div>
       <div class="mc-foot">${ESC(T[f.theme].name)} &nbsp;/&nbsp; full methods and shopping list on the prep sheet</div>
     </section>
   </div>
   <div class="lb-credit">Poster: TMDB</div>`;
 }
 
+/* mode: true = real poster lobby card, falling back to the edition art; "edition" = edition art only; false = themed card */
 function cardHTML(f,menu,tag,usePoster=true){
   const edition=movieEdition(f);
+  const lp=usePoster===true&&lobbyPoster(f);
+  if(lp)return lobbyHTML(f,menu,tag,lp);
   if(edition&&usePoster){
     const sections=[["Snacks",menu.s],["Main",menu.m],["Dessert",menu.w],["Drink",menu.d]];
     return `<img class="poster-art" src="${ESC(edition.poster)}" alt="${ESC(f.title)} (${ESC(f.year)}) movie-night menu"><div class="sr"><h2>${ESC(f.title)} movie-night menu</h2>${sections.map(([label,items])=>`<section><h3>${label}</h3>${items.map(it=>`<p><b>${ESC(it.n)}</b> ${ESC(it.note)}</p>`).join("")}</section>`).join("")}</div>`;
   }
-  const lp=usePoster&&lobbyPoster(f);
-  if(lp)return lobbyHTML(f,menu,tag,lp);
   const st=STY[f.theme],L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const lab=COURSE_LABEL[f.theme]||["Snacks","Mains","Something sweet","To drink"];
   const item=it=>`<div class="mc-item"><b>${ESC(it.n)}</b>${it.note?`<span class="mc-note">${ESC(it.note)}</span>`:""}${it.how?`<span class="mc-how">${ESC(shortHow(it.how))}</span>`:""}</div>`;
@@ -1203,18 +1204,19 @@ async function show(f,preferSig){
   await ensureFonts(STY[f.theme]);
   if(id!==renderId)return;
   styleCard(card,f);card.style.transform="";
-  const lobby=!edition&&lobbyPoster(f);
-  if(edition)card.className="mcard poster-edition";
-  else if(lobby)card.className="mcard L-lobby";
-  card.innerHTML=cardHTML(f,menu,current.tag);
-  if(edition||lobby){
-    try{await card.querySelector(edition?".poster-art":".lb-poster").decode()}
-    catch(e){
-      if(id!==renderId)return;
-      styleCard(card,f);card.innerHTML=cardHTML(f,menu,current.tag,false);
-      $("status").textContent="The poster couldn't load. Your menu and prep sheet are still available.";
-    }
-    if(id!==renderId)return;
+  const lobby=lobbyPoster(f);
+  const tryArt=async(mode,cls,sel)=>{
+    styleCard(card,f);card.style.transform="";card.className=cls;card.innerHTML=cardHTML(f,menu,current.tag,mode);
+    try{await card.querySelector(sel).decode();return true}catch(e){return false}
+  };
+  let ok=true;
+  if(lobby)ok=await tryArt(true,"mcard L-lobby",".lb-poster");
+  if(id!==renderId)return;
+  if(edition&&(!lobby||!ok)){ok=await tryArt("edition","mcard poster-edition",".poster-art");if(id!==renderId)return}
+  if(!lobby&&!edition)card.innerHTML=cardHTML(f,menu,current.tag,false);
+  else if(!ok){
+    styleCard(card,f);card.style.transform="";card.innerHTML=cardHTML(f,menu,current.tag,false);
+    $("status").textContent="The poster couldn't load. Your menu and prep sheet are still available.";
   }
   styleCard(prep,f);
   if(edition){prep.className="mcard edition-prep";prep.style.setProperty("--edition-accent",edition.colour)}

@@ -8,7 +8,7 @@ const editionsSource=fs.readFileSync(path.join(root,'movie-menus.js'),'utf8');
 const filmSource=html.match(/const FILMS=.*?;\n/)[0];
 const menuCode=html.slice(html.indexOf('const movieEdition='),html.indexOf('const svg=s=>'));
 const shopCode=html.slice(html.indexOf('const AISLES='),html.indexOf('/* ================= MENU DESIGN'));
-const cardCode=html.slice(html.indexOf('function cardHTML('),html.indexOf('function prepHTML('));
+const cardCode=html.slice(html.indexOf('const TMDB_IMG='),html.indexOf('function prepHTML(')); // TMDB_POSTERS not loaded here, so editions fall back to their art
 const context=vm.createContext({JSON,console});
 vm.runInContext(editionsSource+'\n'+filmSource+'\n'+`const shuffle=a=>a.slice().reverse();const ESC=s=>String(s).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));\n`+menuCode+shopCode+cardCode,context);
 const run=s=>vm.runInContext(s,context);
