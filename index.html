@@ -1170,6 +1170,24 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 .cb-hero{overflow:visible}
 .shop.crave{overflow-x:clip}
 @media (pointer:coarse){body::before{animation:none;inset:0}}
+
+/* ---------- video shop counter controls: 90s rental store, not web form ---------- */
+#viewShop .shop-tools{gap:10px}
+#viewShop .shop-tools input[type=search]{font:600 16px var(--f-body);color:#14204f;background:#fbf7ea;border:3px solid #14204f;border-radius:6px;padding:10px 12px 10px 38px;
+  box-shadow:0 0 0 2px #ffd23f,0 4px 0 2px #b58f12;
+  background-image:radial-gradient(circle at 16px 50%,transparent 6px,#14204f 6.5px 8.5px,transparent 9px),linear-gradient(45deg,transparent 46%,#14204f 46% 58%,transparent 58%);
+  background-size:auto,10px 10px;background-position:0 0,22px calc(50% + 7px);background-repeat:no-repeat}
+#viewShop .shop-tools input[type=search]::placeholder{color:#5a6390;font-style:italic}
+#viewShop .shop-tools select{appearance:none;-webkit-appearance:none;font:400 13px var(--f-board);letter-spacing:.04em;color:#14204f;background:#ffd23f;border:0;border-radius:6px;padding:11px 34px 10px 12px;
+  box-shadow:0 4px 0 #b58f12;
+  background-image:linear-gradient(45deg,transparent 50%,#14204f 50%),linear-gradient(-45deg,transparent 50%,#14204f 50%);background-size:6px 6px;background-position:calc(100% - 18px) 52%,calc(100% - 12px) 52%;background-repeat:no-repeat}
+#viewShop .shop-tools select option{background:#fbf7ea;color:#14204f;font-family:var(--f-body)}
+#viewShop .shop-tools label{font:400 13px var(--f-board);letter-spacing:.04em;color:#fbf7ea;gap:8px;cursor:pointer;padding:6px 10px 6px 6px;border-radius:999px;background:rgba(11,18,54,.6)}
+#viewShop .shop-tools input[type=checkbox]{appearance:none;-webkit-appearance:none;width:24px;height:24px;margin:0;border-radius:50%;background:#fbf7ea;border:2px solid #14204f;box-shadow:0 0 0 2px #ffd23f;display:grid;place-items:center;cursor:pointer;flex:none}
+#viewShop .shop-tools input[type=checkbox]:checked{background:#ff3d6e;box-shadow:0 0 0 2px #ffd23f,0 0 10px rgba(255,61,110,.6)}
+#viewShop .shop-tools input[type=checkbox]:checked::after{content:"";width:9px;height:5px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+#viewShop .shop-tools input:focus-visible,#viewShop .shop-tools select:focus-visible{outline:3px solid #ff3d6e;outline-offset:3px}
+#viewShop .shop-count{font:400 12px var(--f-board);letter-spacing:.06em;color:#ffd23f}
 </style>
 
 <div id="printArea"></div>
