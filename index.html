@@ -1188,6 +1188,51 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 #viewShop .shop-tools input[type=checkbox]:checked::after{content:"";width:9px;height:5px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
 #viewShop .shop-tools input:focus-visible,#viewShop .shop-tools select:focus-visible{outline:3px solid #ff3d6e;outline-offset:3px}
 #viewShop .shop-count{font:400 12px var(--f-board);letter-spacing:.06em;color:#ffd23f}
+
+/* ---------- Spinner Video: shopfront, price board, neon weeklies, the wall, staff picks, late show ---------- */
+.sv-front{position:relative;overflow:hidden;border-radius:12px;margin:-18px -16px 14px;aspect-ratio:2/1;container-type:inline-size;background:#0b0f2a}
+.sv-front img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sv-front.noimg{display:none}
+.sv-sign{position:absolute;left:30%;right:30%;top:7%;height:12%;display:grid;place-items:center}
+.sv-sign span{font:400 4.6cqw/1 var(--f-board);letter-spacing:.06em;color:#ffd23f;text-shadow:0 0 1cqw rgba(255,210,63,.6),.25cqw .25cqw 0 #14204f}
+.sv-open{position:absolute;right:8%;top:42%;font:400 3cqw/1 var(--f-board);color:#ff5a8a;text-shadow:0 0 .6cqw #ff2f6e,0 0 2cqw #ff2f6e;animation:neonBuzz 6s infinite}
+@keyframes neonBuzz{0%,92%,100%{opacity:1}93%{opacity:.3}94%{opacity:1}96%{opacity:.5}}
+.shop.lightson{animation:tubes .9s steps(1) 1}
+@keyframes tubes{0%{filter:brightness(.35)}15%{filter:brightness(1)}25%{filter:brightness(.5)}35%,100%{filter:brightness(1)}}
+@media (prefers-reduced-motion:reduce){.sv-open,.shop.lightson{animation:none}}
+.sv-board{display:grid;gap:4px;margin:4px 0 12px;padding:12px 14px;border-radius:8px;background:#0b0f2a;box-shadow:inset 0 0 0 2px #ffd23f,inset 0 0 30px rgba(0,0,0,.6)}
+.svb-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:1px dashed rgba(255,210,63,.25);padding:5px 0}
+.svb-row b{font:400 15px var(--f-board);letter-spacing:.05em;color:#ffd23f}
+.svb-row span{font:500 14px var(--f-body);color:#e8e6ff;text-align:right}
+.svb-row.hot b,.svb-row.hot span{color:#ff5a8a;text-shadow:0 0 8px rgba(255,90,138,.7)}
+.svb-row.dim{opacity:.55;text-decoration:line-through}
+.svb-fri{margin-top:8px;font:400 13px var(--f-board);letter-spacing:.04em;color:#14204f;background:#ffd23f;border:0;border-radius:6px;padding:11px 12px;box-shadow:0 4px 0 #b58f12;cursor:pointer}
+.neon{position:absolute;z-index:3;left:-6px;bottom:14px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;align-content:center;background:var(--nc);color:#14204f;
+  font:400 8.5px/1 var(--f-board);letter-spacing:.03em;text-align:center;transform:rotate(-12deg);box-shadow:0 2px 3px rgba(0,0,0,.45)}
+.neon b{display:block;font:400 14px/1 var(--f-board);margin-top:1px}
+.neon.peel{clip-path:polygon(0 0,100% 0,100% 62%,62% 100%,0 100%)}
+.neon.peel::after{content:"";position:absolute;right:0;bottom:0;width:38%;height:38%;background:linear-gradient(135deg,rgba(255,255,255,.9),#d9d4c4);clip-path:polygon(0 0,100% 0,0 100%);transform:translate(0,0)}
+.tape.faded .box img{filter:sepia(.28) saturate(.72) brightness(1.06) contrast(.92)}
+.talker{display:block;margin-top:6px;background:#fffbe6;color:#1a1a2e;border-radius:2px;padding:5px 7px 6px;font:400 12.5px/1.2 "Permanent Marker",cursive;transform:rotate(-1.5deg);box-shadow:0 2px 4px rgba(0,0,0,.35)}
+.talker b{display:block;font:400 10.5px var(--f-board);letter-spacing:.04em;color:#c8102e;margin-bottom:2px}
+.aisle.wall .box{box-shadow:7px -4px 0 -1px #20253f,7px -4px 0 0 rgba(255,255,255,.12),14px -8px 0 -2px #181c33,14px -8px 0 -1px rgba(255,255,255,.08),0 8px 14px rgba(0,0,0,.5)}
+.aisle.wall .shelf{gap:28px;padding-top:12px}
+.aisle.wall .aisle-sign{background:#ff3d6e;color:#fff;box-shadow:0 4px 0 #a3163f}
+.aisle .aisle-sign{position:relative;margin-top:16px}
+.aisle .aisle-sign::before,.aisle .aisle-sign::after{content:"";position:absolute;top:-16px;width:2px;height:16px;background:repeating-linear-gradient(#9aa0b8 0 3px,transparent 3px 5px)}
+.aisle .aisle-sign::before{left:14px}.aisle .aisle-sign::after{right:14px}
+.aisle.lateshow .aisle-sign{background:#5a0a14;color:#ffe3a1;box-shadow:0 4px 0 #2a0408}
+.ls-curtain{display:block;width:100%;height:150px;border:0;border-radius:6px;cursor:pointer;position:relative;
+  background:url("assets/hero/curtain.jpg") center 30%/cover,#5a0a14;box-shadow:inset 0 0 40px rgba(0,0,0,.6)}
+.ls-curtain span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:400 14px var(--f-board);letter-spacing:.06em;color:#ffe3a1;background:rgba(20,4,8,.7);padding:9px 14px;border-radius:999px;white-space:nowrap}
+.aisle.lateshow.open .ls-curtain{display:none}
+.aisle.lateshow:not(.open) .shelf{display:none}
+.slip-late{margin:8px 0 0;font-size:12.5px;color:#555;text-align:center}
+.hirecase{margin:12px auto 0;width:150px;height:84px;border-radius:6px;position:relative;background:linear-gradient(#2f5fd1,#1d3aa8);box-shadow:inset 0 0 0 3px #16308a,inset 0 0 0 6px #2f5fd1,0 6px 12px rgba(0,0,0,.3);display:grid;place-items:center;animation:caseIn .6s ease-out}
+.hc-tag{position:absolute;left:50%;top:50%;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:#ffd23f;color:#14204f;font:400 9px/1.1 var(--f-board);display:grid;place-items:center;text-align:center}
+.hc-k{position:absolute;left:-70px;right:-70px;bottom:-22px;white-space:nowrap;text-align:center;font-size:11px;color:#555}
+.slip .hirecase{margin-bottom:24px}
+@keyframes caseIn{from{transform:translateY(-14px) rotate(-6deg);opacity:0}to{transform:none;opacity:1}}
 </style>
 
 <div id="printArea"></div>
@@ -1224,6 +1269,8 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
         <label><input type="checkbox" id="shopKids"> Kids mode</label>
       </div>
     </div>
+    <div class="sv-front" id="svFront"><img src="assets/hero/shopfront.jpg" alt="" loading="lazy" onerror="this.closest('.sv-front').classList.add('noimg')"><div class="sv-sign"><span>Spinner Video</span></div><span class="sv-open" aria-hidden="true">OPEN</span></div>
+    <div class="sv-board" id="svBoard"></div>
     <div class="cal" id="shopCal" aria-label="Holiday calendar"></div>
     <div class="member" id="memberCard"></div>
     <p class="shop-count" id="shopCount" aria-live="polite"></p>
@@ -1368,6 +1415,7 @@ const sfx={
   clunk(){if(!soundOn||!ac())return;const t=audio.currentTime;nburst(t,.03,"highpass",2500,.7,.35);thump(t+.02,110,.5,.18);nburst(t+.12,.04,"bandpass",1400,3,.25);thump(t+.16,70,.35,.14);nburst(t+.3,.7,"bandpass",420,1.2,.05,.7)},
   print(){if(!soundOn||!ac())return;const t=audio.currentTime;for(let i=0;i<14;i++)nburst(t+i*.045,.02,"bandpass",3200,4,.16);nburst(t+.7,.18,"highpass",1800,.5,.18,.2)},
   pop(){if(!soundOn||!ac())return;const t=audio.currentTime;for(let i=0;i<7;i++){const d=Math.random()*1.1;nburst(t+d,.025,"bandpass",900+Math.random()*1400,1.5,.3+Math.random()*.25)}},
+  chime(){if(!soundOn||!ac())return;const t=audio.currentTime;[[1318.5,0],[987.8,.32]].forEach(([f,d])=>{const o=audio.createOscillator(),g=audio.createGain();o.type="sine";o.frequency.value=f;g.gain.setValueAtTime(.0001,t+d);g.gain.exponentialRampToValueAtTime(.12,t+d+.01);g.gain.exponentialRampToValueAtTime(.0001,t+d+1.4);o.connect(g).connect(audio.destination);o.start(t+d);o.stop(t+d+1.5)})},
   swish(){if(!soundOn||!ac())return;const a=audio,t=a.currentTime,s=a.createBufferSource();s.buffer=noiseBuf();const f=a.createBiquadFilter();f.type="lowpass";f.frequency.setValueAtTime(300,t);f.frequency.exponentialRampToValueAtTime(2200,t+.5);f.frequency.exponentialRampToValueAtTime(400,t+1.1);const g=a.createGain();g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.12,t+.35);g.gain.exponentialRampToValueAtTime(.0001,t+1.15);s.connect(f).connect(g).connect(a.destination);s.start(t,0,1.2)}
 };
 /* phones only allow sound after a tap: wake the audio on the first touch */
@@ -2121,7 +2169,13 @@ const todayKey=()=>{const d=new Date();return `${d.getFullYear()}-${d.getMonth()
 let outDay="",outSet=new Set();
 const isOut=f=>{const k=todayKey();if(k!==outDay){outDay=k;outSet=new Set(FILMS.filter(x=>isNew(x)&&!watched.has(x.id)).sort((a,b)=>hashN(a.id+k)-hashN(b.id+k)).slice(0,3).map(x=>x.id))}return outSet.has(f.id)};
 const isClam=f=>f.theme==="kids"||f.theme==="fairytale";
-const priceTag=f=>isNew(f)?"Overnight $6":"Weekly $3";
+const isTuesday=()=>new Date().getDay()===2;
+const priceOf=f=>isNew(f)?(isTuesday()?2:7):2;
+const priceTag=f=>isNew(f)?(isTuesday()?"Tuesday $2":"Overnight $7"):"Weekly $2";
+const STAFF=["Kate","Sam","Dave","Michelle","Andrew","Lisa","Ben","Nicole"];
+const TALK={"Action and cops":["Turn it up.","Still holds up.","Proper Friday night film."],"Superheroes":["Stay for the end credits.","Better than you remember.","Big screen energy."],"Sci-fi":["Watch it twice.","Still holds up.","Lights down for this one."],"Horror":["Lights off. Doors locked.","Not one for the kids.","Watch it with company."],"Family":["One for the whole house.","Kids will want it again.","Grown-ups will love it too."],"Fantasy and adventure":["Settle in for this one.","Pure Saturday afternoon.","Still holds up."],"Comedy and teen":["Quote it all week.","Better with a crowd.","Still makes me laugh."],"Romance":["Have the tissues handy.","Date night sorted.","Better than you remember."],"Crime and mob":["Don't skip the ending.","Clear your evening.","A proper classic."],"Drama":["Worth the slow start.","Have the tissues handy.","Stays with you."],"Westerns":["Saddle up.","A proper classic.","Watch it on the big telly."],"Around the world":["Something different tonight.","Worth the subtitles.","A hidden gem."],"Holiday":["Put the tree lights on.","Every year without fail.","One for the whole house."]};
+const talkFor=f=>{const h=hashN(f.id+"t"),a=SHOP_AISLE_OF[f.theme]||"Drama",L=(a==="Horror"&&isKidSafe(f))?["Spooky, not scary.","Fine with the kids up.","A Halloween regular."]:(TALK[a]||TALK.Drama);return [STAFF[h%STAFF.length],L[(h>>>3)%L.length]]};
+const weeklyCol=f=>["#ff3d9a","#7ee08a","#ff9f1c","#ffe14d","#4dd8ff"][hashN(f.id+"w")%5];
 /* membership card, rentals and late fees live on this phone only */
 let member=null;
 try{member=JSON.parse(localStorage.getItem("mns-member")||"null")}catch(e){member=null}
@@ -2157,7 +2211,7 @@ function openSlip(f,go){setTimeout(()=>sfx.print(),350);
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
   const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
-  o.innerHTML=`<div class="slip"><h3>Spinner Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?"New release, overnight":"Weekly"} ${isNew(f)?"$6.00":"$3.00"}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd></dl><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
+  o.innerHTML=`<div class="slip"><h3>Spinner Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, overnight"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl><div class="hirecase" aria-hidden="true"><span class="hc-tag">SV<br>${String(hashN(f.id)%9000+1000)}</span><span class="hc-k">Box swapped for a hire case</span></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
   const last=document.activeElement;
   const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus&&last.focus()};
   const esc=e=>{if(e.key==="Escape")close()};
@@ -2240,9 +2294,10 @@ function pairFor(a,pool){
   const c=[near(sameTheme),sameTheme,near(sameAisle),sameAisle,others].find(x=>x.length);
   return c?c[Math.floor(Math.random()*c.length)]:null;
 }
-async function openDouble(){
+async function openDouble(pa,pb){
+  if(pa&&!pa.id)pa=null;
   const pool=list.length>1?list:FILMS.filter(f=>!kidsMode||isKidSafe(f));
-  const a=pool[Math.floor(Math.random()*pool.length)],b=pairFor(a,pool);if(!b)return;
+  const a=pa||pool[Math.floor(Math.random()*pool.length)],b=pb||pairFor(a,pool);if(!b)return;
   const m=await doubleMenu(a,b);
   const img=f=>{const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];return p?`<img alt="${ESC(f.title)} poster" src="https://image.tmdb.org/t/p/w342${ESC(p)}">`:""};
   const li=it=>`<li>${ESC(it.n)} <small>(${ESC(it.film)})</small></li>`;
@@ -2339,7 +2394,13 @@ function tapeHTML(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
   const st=watched.has(f.id)?'<span class="sticker back">Seen it</span>':isNew(f)?'<span class="sticker new">New</span>':isPick(f)?'<span class="sticker pick">Staff pick</span>':"";
   const out=isOut(f);
-  return `<button class="tape${isClam(f)?" clam":""}${out?" out":""}" type="button" data-id="${ESC(f.id)}" style="transform:rotate(${(hashN(f.id)%5-2)*.35}deg)">${out?"":st}<span class="box">${p?`<img loading="lazy" decoding="async" alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}${out?'<span class="out-card">All copies out<small>Check back Friday</small></span>':`<span class="price">${priceTag(f)}</span>`}${ratingOf(f)?`<span class="rate ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</span><span class="tape-t">${ESC(f.title)}</span><span class="tape-y">${f.year}</span></button>`;
+  const tk=isPick(f)&&!out?talkFor(f):null;
+  return `<button class="tape${isClam(f)?" clam":""}${out?" out":""}${+f.year<1995?" faded":""}" type="button" data-id="${ESC(f.id)}" style="transform:rotate(${(hashN(f.id)%5-2)*.35}deg)">${out?"":st}<span class="box">${p?`<img loading="lazy" decoding="async" alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}${out?'<span class="out-card">All copies out<small>Wait by the returns chute</small></span>':isNew(f)?`<span class="price">${priceTag(f)}</span>`:`<span class="neon${hashN(f.id)%3===0?" peel":""}" style="--nc:${weeklyCol(f)}">Weekly<b>$2</b></span>`}${ratingOf(f)?`<span class="rate ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</span><span class="tape-t">${ESC(f.title)}</span><span class="tape-y">${f.year}</span>${tk?`<span class="talker"><b>${tk[0]}'s pick</b>${tk[1]}</span>`:""}</button>`;
+}
+function renderBoard(){
+  const t=isTuesday();
+  $("svBoard").innerHTML=`<div class="svb-row${t?" dim":""}"><b>New releases</b><span>$7 overnight</span></div><div class="svb-row"><b>Weeklies</b><span>$2 for 7 nights</span></div><div class="svb-row${t?" hot":""}"><b>$2 Tuesday</b><span>${t?"On tonight":"Every new release, every Tuesday"}</span></div><button type="button" class="svb-fri" id="svFri">Friday night: one for the kids, one for later</button>`;
+  $("svFri").addEventListener("click",()=>{const kids=FILMS.filter(f=>isKidSafe(f)&&onSvc(f,svc)),late=FILMS.filter(f=>!isKidSafe(f)&&onSvc(f,svc));if(!kids.length||!late.length)return;openDouble(pick(kids),pick(late))});
 }
 function renderCal(cal){
   const on=cal.filter(c=>c.on),up=cal.filter(c=>!c.on&&c.next).sort((a,b)=>a.day-b.day).slice(0,4);
@@ -2355,17 +2416,18 @@ function renderShop(){
   const rented=hist.map(id=>list.find(f=>f.id===id)).filter(Boolean);
   const cal=seasonState(),later=[];
   if(!q)cal.filter(c=>c.on).forEach(c=>rows.push(...seasonRows(c.s,list)));
-  renderCal(cal);
+  renderCal(cal);renderBoard();
   if(rented.length&&!q)rows.push(["Your rentals",rented]);
   const top=!q?topShelf(list):[];if(top.length)rows.push([member.name?`${member.name}'s shelf`:"Your top shelf",top,"Everything you gave 4 or 5 stars."]);
-  if(fresh.length&&!q)rows.push(["New releases",fresh]);
+  if(fresh.length&&!q)rows.push(["New release wall",fresh,isTuesday()?"$2 Tuesday is on. Every new release is $2 tonight.":"Overnight $7. Back by 7pm tomorrow.","wall"]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
   if(q)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
   else SHOP_AISLES.forEach(([n,ts])=>{if(n==="Holiday")return;const r=list.filter(f=>ts.includes(f.theme)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
+  if(!q&&!kidsMode){const ls=list.filter(f=>f.theme==="horror"||/^(MA15\+|R18\+|R)$/.test(ratingOf(f)||"")).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(ls.length)rows.push(["Late Show",ls,"Out the back, behind the curtain. Grown-ups only.","lateshow"])}
   if(!q)cal.filter(c=>!c.on&&c.next).sort((a,b)=>a.next-b.next).forEach(c=>later.push(...seasonRows(c.s,list,c.next)));
   renderMember();
   $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
-  const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div><div class="shelf">${r.map(tapeHTML).join("")}</div></section>`;
+  const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div>${/lateshow/.test(cls||"")?`<button class="ls-curtain" type="button" aria-expanded="false"><span>Pull back the curtain</span></button>`:""}<div class="shelf">${(/lateshow/.test(cls||"")?[]:r).map(tapeHTML).join("")}</div></section>`;
   $("shopAisles").innerHTML=rows.length?rows.map(aisle).join("")+(later.length?`<div class="aisles-later"><h3>Holiday shelves</h3><p>Each one moves to the front of the shop when its day comes round.</p>${later.map(aisle).join("")}</div>`:""):`<p class="shelf-empty">Nothing on the shelves matches that. Try another title or clear the filters.</p>`;
 }
 function tvHTML(f){
@@ -2496,6 +2558,7 @@ function setView(v){
   if(crave)renderCrave();
   document.body.classList.toggle("in-shop",shop);
   try{localStorage.setItem("mns-view",v)}catch(e){}
+  if(shop&&!window.__inShop){sfx.chime();const sh=$("viewShop");sh.classList.remove("lightson");void sh.offsetWidth;sh.classList.add("lightson")}window.__inShop=shop;
   if(shop){if(!shopBuilt){const ds=[...new Set(FILMS.map(f=>f.year.slice(0,3)))].sort();$("shopDecade").innerHTML='<option value="">Any decade</option>'+ds.map(d=>`<option value="${d}">${d}0s</option>`).join("");shopBuilt=true}renderShop()}
   else if(!crave)scalePreview();
 }
@@ -2505,6 +2568,8 @@ $("viewCraveBtn").addEventListener("click",()=>setView("crave"));
 ["shopSearch","shopDecade","shopUnwatched"].forEach(id=>$(id).addEventListener(id==="shopSearch"?"input":"change",renderShop));
 $("shopCal").addEventListener("click",e=>{const b=e.target.closest("[data-season]");if(!b)return;const el=document.getElementById("season-"+b.dataset.season);if(el)el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});else{$("shopSearch").value="";renderShop();const el2=document.getElementById("season-"+b.dataset.season);if(el2)el2.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}});
 $("shopAisles").addEventListener("click",e=>{
+  const lc=e.target.closest(".ls-curtain");
+  if(lc){const sec=lc.closest(".aisle");const n="Late Show";const ls=FILMS.filter(f=>(f.theme==="horror"||/^(MA15\+|R18\+|R)$/.test(ratingOf(f)||""))&&onSvc(f,svc)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));sec.querySelector(".shelf").innerHTML=ls.map(tapeHTML).join("");sec.classList.add("open");lc.setAttribute("aria-expanded","true");sfx.swish();return}
   const sp=e.target.closest(".aisle-spin");
   if(sp){const tapes=[...sp.closest(".aisle").querySelectorAll(".tape")];const pick=tapes[Math.floor(Math.random()*tapes.length)];
     buzz([20,40,20]);tapes.forEach(t=>t.classList.remove("picked"));pick.classList.add("picked");pick.scrollIntoView({behavior:reduce?"auto":"smooth",inline:"center",block:"nearest"});
