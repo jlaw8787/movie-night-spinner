@@ -1224,15 +1224,54 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 .aisle.lateshow .aisle-sign{background:#5a0a14;color:#ffe3a1;box-shadow:0 4px 0 #2a0408}
 .ls-curtain{display:block;width:100%;height:150px;border:0;border-radius:6px;cursor:pointer;position:relative;
   background:url("assets/hero/curtain.jpg") center 30%/cover,#5a0a14;box-shadow:inset 0 0 40px rgba(0,0,0,.6)}
-.ls-curtain span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:400 14px var(--f-board);letter-spacing:.06em;color:#ffe3a1;background:rgba(20,4,8,.7);padding:9px 14px;border-radius:999px;white-space:nowrap}
+.ls-curtain .ls-tap-old{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:400 14px var(--f-board);letter-spacing:.06em;color:#ffe3a1;background:rgba(20,4,8,.7);padding:9px 14px;border-radius:999px;white-space:nowrap}
 .aisle.lateshow.open .ls-curtain{display:none}
 .aisle.lateshow:not(.open) .shelf{display:none}
 .slip-late{margin:8px 0 0;font-size:12.5px;color:#555;text-align:center}
 .hirecase{margin:12px auto 0;width:150px;height:84px;border-radius:6px;position:relative;background:linear-gradient(#2f5fd1,#1d3aa8);box-shadow:inset 0 0 0 3px #16308a,inset 0 0 0 6px #2f5fd1,0 6px 12px rgba(0,0,0,.3);display:grid;place-items:center;animation:caseIn .6s ease-out}
 .hc-tag{position:absolute;left:50%;top:50%;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:#ffd23f;color:#14204f;font:400 9px/1.1 var(--f-board);display:grid;place-items:center;text-align:center}
-.hc-k{position:absolute;left:-70px;right:-70px;bottom:-22px;white-space:nowrap;text-align:center;font-size:11px;color:#555}
-.slip .hirecase{margin-bottom:24px}
+
+
 @keyframes caseIn{from{transform:translateY(-14px) rotate(-6deg);opacity:0}to{transform:none;opacity:1}}
+
+/* ---------- store photos with the words painted into their blank signs ---------- */
+.sv-front{aspect-ratio:1774/887;background:#0b0f2a}
+.sv-front img{object-fit:fill}
+.fit{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;text-align:center;line-height:1;white-space:nowrap}
+.fit-t{display:inline-block;white-space:nowrap;max-width:none}
+.sv-sign .fit-t{font-family:var(--f-board);letter-spacing:.06em;color:#b3172f;text-shadow:0 1px 0 rgba(255,255,255,.25);opacity:.88;mix-blend-mode:multiply;filter:url(#none)}
+.sv-sign small{display:block;margin-top:.25em;font-family:"Oswald",sans-serif;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#1d3aa8;opacity:.8;mix-blend-mode:multiply}
+.sv-aisles{position:relative;overflow:hidden;border-radius:10px;aspect-ratio:1774/887;margin:0 0 14px;box-shadow:0 10px 24px rgba(0,0,0,.45)}
+.sv-aisles img{position:absolute;inset:0;width:100%;height:100%}
+.sv-hang{border:0;padding:0 2%;background:transparent;cursor:pointer;border-radius:2px}
+.sv-hang .fit-t{font-family:var(--f-board);letter-spacing:.05em;color:#1d3aa8;opacity:.9;mix-blend-mode:multiply}
+.sv-hang:hover,.sv-hang:focus-visible{background:rgba(255,210,63,.25);outline:2px solid #ffd23f;outline-offset:1px}
+.sv-aisles-k{position:absolute;left:0;right:0;bottom:0;margin:0;padding:18px 10px 8px;text-align:center;font:400 12px var(--f-board);letter-spacing:.06em;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.ls-curtain{height:auto!important;background:none!important;box-shadow:none!important;position:relative;max-width:340px;margin:0 auto;padding:0;display:block;aspect-ratio:1086/1448;border-radius:8px;overflow:hidden}
+.ls-curtain img{position:absolute;inset:0;width:100%;height:100%}
+.ls-sign .fit-t{font-family:var(--f-board);letter-spacing:.08em;color:#2a0a0e;opacity:.85;mix-blend-mode:multiply}
+.ls-tap{position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);font:400 13px var(--f-board);letter-spacing:.06em;color:#ffe3a1;background:rgba(20,4,8,.72);padding:9px 14px;border-radius:999px;white-space:nowrap}
+.ls-curtain > span:not(.ls-sign):not(.ls-tap){display:none}
+.hirecase{width:190px;height:auto;aspect-ratio:948/1659;background:none!important;box-shadow:none!important;margin:12px auto 0;position:relative}
+.hirecase img{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+.hc-label .fit-t{font:600 10px "Courier New",monospace;color:#1a1a1a}
+.hc-label small{font-family:"Courier New",monospace;color:#c8102e;font-weight:700}
+.slip .hc-k{margin:6px 0 4px;text-align:center;font-size:11.5px;color:#555}
+.slip .hirecase{margin-bottom:0}
+.counter{background:linear-gradient(rgba(8,10,30,.72),rgba(8,10,30,.86)),url("assets/hero/counter.jpg") center/cover #0b0f2a}
+.sv-front{margin:-18px -16px 14px;border-radius:14px 14px 0 0}
+
+.fit.tiny .fit-t{visibility:hidden}
+.sv-jump{display:none;gap:6px;flex-wrap:wrap;margin:-6px 0 14px}
+.sv-hang-chip{font:400 12px var(--f-board);letter-spacing:.04em;color:#14204f;background:#fbf7ea;border:2px solid #1d3aa8;border-radius:4px;padding:7px 10px;cursor:pointer}
+@media (max-width:700px){.sv-jump{display:flex}.sv-aisles-k{display:none}}
+.tape-t{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;max-height:none}
+.hc-label .fit-t{white-space:normal;line-height:1.05;max-width:100%}
+
+.ls-curtain .ls-sign{position:absolute;transform:none;background:none;padding:0;border-radius:0;color:inherit;font:inherit;letter-spacing:0}
+.ls-curtain .ls-sign .fit-t{position:static;transform:none;background:none;padding:0;border-radius:0;font-family:var(--f-board);letter-spacing:.08em;color:#2a0a0e;white-space:nowrap}
+.hc-label .fit-t{white-space:nowrap;width:auto;font-weight:700;color:#c8102e}
+.sv-sign .fit-t{opacity:.92}
 </style>
 
 <div id="printArea"></div>
@@ -1259,6 +1298,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
   <section class="week" id="weekPanel" aria-label="This week's film" hidden></section>
 
   <section class="shop" id="viewShop" aria-label="Video shop" hidden>
+    <div class="sv-front" id="svFront"><img src="assets/hero/shopfront.jpg" srcset="assets/hero/shopfront-1000.jpg 1000w, assets/hero/shopfront.jpg 1774w" sizes="(max-width:640px) 820px, 1240px" alt="Spinner Video shopfront at night" loading="lazy"><div class="sv-sign fit" style="left:6.20%;top:5.86%;width:87.09%;height:11.72%"><span class="fit-t">Spinner Video</span><small>Open 7 days till late</small></div></div>
     <div class="shop-head">
       <h2 class="shop-sign">Spinner Video<small>Every film on the wheel, face-out on the shelves. Tap a tape to read the back.</small></h2>
       <div class="shop-tools">
@@ -1269,8 +1309,9 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
         <label><input type="checkbox" id="shopKids"> Kids mode</label>
       </div>
     </div>
-    <div class="sv-front" id="svFront"><img src="assets/hero/shopfront.jpg" alt="" loading="lazy" onerror="this.closest('.sv-front').classList.add('noimg')"><div class="sv-sign"><span>Spinner Video</span></div><span class="sv-open" aria-hidden="true">OPEN</span></div>
+    
     <div class="sv-board" id="svBoard"></div>
+    <div class="sv-aisles"><img src="assets/hero/aisles.jpg" srcset="assets/hero/aisles-1000.jpg 1000w, assets/hero/aisles.jpg 1774w" sizes="(max-width:640px) 820px, 1240px" alt="Inside the shop" loading="lazy"><button type="button" class="sv-hang fit" data-go="wall" style="left:9.13%;top:4.51%;width:15.67%;height:9.70%"><span class="fit-t">New releases</span></button><button type="button" class="sv-hang fit" data-go="Comedy and teen" style="left:40.70%;top:10.60%;width:19.05%;height:8.12%"><span class="fit-t">Comedy</span></button><button type="button" class="sv-hang fit" data-go="Family" style="left:64.04%;top:19.50%;width:9.13%;height:5.07%"><span class="fit-t">Family</span></button><button type="button" class="sv-hang fit" data-go="Horror" style="left:39.52%;top:22.44%;width:6.54%;height:3.49%"><span class="fit-t">Horror</span></button><button type="button" class="sv-hang fit" data-go="Sci-fi" style="left:50.68%;top:24.46%;width:5.86%;height:3.04%"><span class="fit-t">Sci-fi</span></button><button type="button" class="sv-hang fit" data-go="Drama" style="left:79.03%;top:25.48%;width:5.36%;height:3.04%"><span class="fit-t">Drama</span></button><p class="sv-aisles-k">Tap a sign to walk to that aisle</p></div><div class="sv-jump" aria-label="Walk to an aisle"><button type="button" class="sv-hang-chip" data-go="wall">New releases</button><button type="button" class="sv-hang-chip" data-go="Comedy and teen">Comedy</button><button type="button" class="sv-hang-chip" data-go="Family">Family</button><button type="button" class="sv-hang-chip" data-go="Horror">Horror</button><button type="button" class="sv-hang-chip" data-go="Sci-fi">Sci-fi</button><button type="button" class="sv-hang-chip" data-go="Drama">Drama</button></div>
     <div class="cal" id="shopCal" aria-label="Holiday calendar"></div>
     <div class="member" id="memberCard"></div>
     <p class="shop-count" id="shopCount" aria-live="polite"></p>
@@ -2211,7 +2252,7 @@ function openSlip(f,go){setTimeout(()=>sfx.print(),350);
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
   const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
-  o.innerHTML=`<div class="slip"><h3>Spinner Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, overnight"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl><div class="hirecase" aria-hidden="true"><span class="hc-tag">SV<br>${String(hashN(f.id)%9000+1000)}</span><span class="hc-k">Box swapped for a hire case</span></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
+  o.innerHTML=`<div class="slip"><h3>Spinner Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, overnight"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl><div class="hirecase" aria-hidden="true"><img src="assets/hero/hirecase.webp" alt=""><span class="hc-label fit" style="left:57.17%;top:9.83%;width:31.86%;height:8.38%"><span class="fit-t">SV ${String(hashN(f.id)%9000+1000)}</span><small>Spinner Video</small></span></div><p class="hc-k">Box swapped for a hire case</p><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
   const last=document.activeElement;
   const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus&&last.focus()};
   const esc=e=>{if(e.key==="Escape")close()};
@@ -2427,7 +2468,7 @@ function renderShop(){
   if(!q)cal.filter(c=>!c.on&&c.next).sort((a,b)=>a.next-b.next).forEach(c=>later.push(...seasonRows(c.s,list,c.next)));
   renderMember();
   $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
-  const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div>${/lateshow/.test(cls||"")?`<button class="ls-curtain" type="button" aria-expanded="false"><span>Pull back the curtain</span></button>`:""}<div class="shelf">${(/lateshow/.test(cls||"")?[]:r).map(tapeHTML).join("")}</div></section>`;
+  const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div>${/lateshow/.test(cls||"")?`<button class="ls-curtain" type="button" aria-expanded="false" aria-label="Pull back the curtain"><img src="assets/hero/latedoor.jpg" alt="" loading="lazy"><span class="ls-sign fit" style="left:34.81%;top:3.31%;width:31.12%;height:5.52%"><span class="fit-t">Late Show</span></span><span class="ls-tap">Pull back the curtain</span></button>`:""}<div class="shelf">${(/lateshow/.test(cls||"")?[]:r).map(tapeHTML).join("")}</div></section>`;
   $("shopAisles").innerHTML=rows.length?rows.map(aisle).join("")+(later.length?`<div class="aisles-later"><h3>Holiday shelves</h3><p>Each one moves to the front of the shop when its day comes round.</p>${later.map(aisle).join("")}</div>`:""):`<p class="shelf-empty">Nothing on the shelves matches that. Try another title or clear the filters.</p>`;
 }
 function tvHTML(f){
@@ -2512,6 +2553,20 @@ function showWelcome(){
  window.addEventListener("scroll",upd,{passive:true});
  $("spinbarBtn").addEventListener("click",()=>{$("spin").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{if(!spinning)$("spin").click()},reduce?50:650)});
  window.__spinbarUpd=upd;}
+/* every sign overlay: shrink the words until they sit inside the painted panel */
+function fitSigns(root){(root||document).querySelectorAll(".fit").forEach(box=>{const t=box.querySelector(".fit-t");if(!t)return;const bw=box.clientWidth,bh=box.clientHeight;if(!bw||!bh)return;const small=box.querySelector("small");
+  const wrap=getComputedStyle(t).whiteSpace!=="nowrap";
+  const fits=fs=>{t.style.fontSize=fs+"px";if(small)small.style.fontSize=Math.max(6,fs*.36)+"px";const r=t.getBoundingClientRect();const sh=small&&small.style.display!=="none"?small.getBoundingClientRect().height:0;return r.width<=bw*.9&&(r.height+sh)<=bh*.92&&(!wrap||t.scrollHeight<=bh*.92)};
+  if(small)small.style.display="";
+  let lo=3,hi=Math.max(8,bh*(small?.66:.8));
+  if(fits(hi))lo=hi;else for(let i=0;i<16;i++){const mid=(lo+hi)/2;if(fits(mid))lo=mid;else hi=mid}
+  fits(lo);
+  if(small&&lo*.36<6.5){small.style.display="none";let l2=lo,h2=bh*.8;for(let i=0;i<12;i++){const m=(l2+h2)/2;if(fits(m))l2=m;else h2=m}fits(l2);lo=l2}
+  box.classList.toggle("tiny",lo<7.5)})}
+if(typeof document!=="undefined"&&document.fonts){document.fonts.ready.then(()=>{try{fitSigns()}catch(e){}});document.fonts.addEventListener&&document.fonts.addEventListener("loadingdone",()=>{try{fitSigns()}catch(e){}});Promise.all(["400 20px Bungee","700 20px Oswald","600 20px Oswald"].map(f=>document.fonts.load(f))).then(()=>{try{fitSigns()}catch(e){}}).catch(()=>{})}
+if(typeof ResizeObserver!=="undefined"&&typeof document!=="undefined"&&document.body){const ro=new ResizeObserver(es=>es.forEach(e=>{if(e.target.classList.contains("fit"))fitSigns(e.target.parentElement)}));const watch=()=>document.querySelectorAll(".fit:not([data-ro])").forEach(b=>{b.dataset.ro=1;ro.observe(b)});watch();if(typeof MutationObserver!=="undefined")new MutationObserver(watch).observe(document.body,{childList:true,subtree:true})}
+if(typeof document!=="undefined"&&document.addEventListener)document.addEventListener("load",e=>{if(e.target&&e.target.tagName==="IMG"&&e.target.parentElement&&e.target.parentElement.querySelector(".fit"))fitSigns(e.target.parentElement)},true);
+if(typeof window!=="undefined"&&window.addEventListener&&typeof document!=="undefined"&&document.body){window.addEventListener("resize",()=>fitSigns());if(typeof MutationObserver!=="undefined")new MutationObserver(()=>{clearTimeout(window.__fs);window.__fs=setTimeout(()=>fitSigns(),60)}).observe(document.body,{childList:true,subtree:true})}
 /* palace marquee: shrink long titles to fit the sign, light boxes show tonight's poster and recent spins */
 let _hang=false;
 function fitMarquee(){if(_hang)return;const t=$("now");const txt=t.textContent;const n=txt.length;t.style.fontSize=`min(3.3cqw,${(64/Math.max(n,8)).toFixed(2)}cqw)`;
@@ -2567,6 +2622,7 @@ $("viewShopBtn").addEventListener("click",()=>setView("shop"));
 $("viewCraveBtn").addEventListener("click",()=>setView("crave"));
 ["shopSearch","shopDecade","shopUnwatched"].forEach(id=>$(id).addEventListener(id==="shopSearch"?"input":"change",renderShop));
 $("shopCal").addEventListener("click",e=>{const b=e.target.closest("[data-season]");if(!b)return;const el=document.getElementById("season-"+b.dataset.season);if(el)el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});else{$("shopSearch").value="";renderShop();const el2=document.getElementById("season-"+b.dataset.season);if(el2)el2.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}});
+if(typeof document!=="undefined"&&document.addEventListener)document.addEventListener("click",e=>{const h=e.target.closest(".sv-hang,.sv-hang-chip");if(!h)return;const g=h.dataset.go;const secs=[...document.querySelectorAll("#shopAisles .aisle")];const t=secs.find(x=>g==="wall"?x.classList.contains("wall"):(x.querySelector(".aisle-sign")||{}).firstChild&&x.querySelector(".aisle-sign").firstChild.textContent===g);if(t){t.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});sfx.chime&&tick()}});
 $("shopAisles").addEventListener("click",e=>{
   const lc=e.target.closest(".ls-curtain");
   if(lc){const sec=lc.closest(".aisle");const n="Late Show";const ls=FILMS.filter(f=>(f.theme==="horror"||/^(MA15\+|R18\+|R)$/.test(ratingOf(f)||""))&&onSvc(f,svc)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));sec.querySelector(".shelf").innerHTML=ls.map(tapeHTML).join("");sec.classList.add("open");lc.setAttribute("aria-expanded","true");sfx.swish();return}
