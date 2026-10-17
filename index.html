@@ -16,7 +16,7 @@
 <title>Movie Night Spinner</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Archivo:wght@400;600;800&family=Permanent+Marker&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500;700&family=Limelight&family=Jost:wght@400;500;600&family=Archivo:wght@400;600;800&family=Permanent+Marker&display=swap">
 <style>
 /* The house: a picture palace at night. Marquee up top, the wheel lit like a game show on the left, the menu revealed behind velvet curtains on the right. */
 :root{
@@ -31,8 +31,8 @@
   --line:rgba(246,239,224,.14);
   --f-marquee:"Bungee Shade","Bungee",Impact,sans-serif;
   --f-board:"Bungee",Impact,sans-serif;
-  --f-body:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
-  --f-disp:"Fraunces",Georgia,serif;
+  --f-body:"Jost","Futura","Century Gothic","Helvetica Neue",Arial,sans-serif;
+  --f-disp:"Limelight",Georgia,serif;
   --ink:#0c0a09;--raise:#16120f;--raise-2:#211b17;--hair:rgba(255,240,222,.09);--text:#f4ede3;--soft:#a89d90;--acc:#e8b04a;--acc-ink:#1d1404;
   color-scheme:dark;
 }
@@ -999,6 +999,35 @@ body.winner .bulbs-glow i{animation:bulbFlash .3s steps(2) 6;animation-delay:0s}
 .theatre.closed .tease{transition-delay:.7s}
 .theatre.closed .easel{opacity:1;filter:none}
 @media (prefers-reduced-motion:reduce){.theatre .curtain{transition:none}}
+
+/* ---------- type: Futura-style Jost for the house, Limelight deco for the big moments ---------- */
+body{font-family:var(--f-body);font-weight:400;letter-spacing:.005em}
+.field label,.history h2,.where-k,.now-line span,.week-k{font:500 11.5px/1.2 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:#c9a565}
+select{font:500 16px var(--f-body);letter-spacing:.01em}
+.toggle{font:500 14.5px var(--f-body);letter-spacing:.02em}
+.btn{font:500 15px var(--f-body);letter-spacing:.02em}
+.btn.primary{font-weight:600}
+.tab,.views button{font:500 15px var(--f-body);letter-spacing:.03em}
+.count{font:400 14px var(--f-body);color:var(--soft)}
+.watch-panel summary{font:500 16px var(--f-body);letter-spacing:.01em}
+.chips .empty,.status{font-family:var(--f-body)}
+.ticket{font:500 14px var(--f-body)}
+.ticket small{font:500 10.5px var(--f-body);letter-spacing:.14em;text-transform:uppercase}
+.hub{font:400 clamp(20px,5.2cqw,32px)/1 var(--f-disp);letter-spacing:.02em;color:#3a0d12}
+.theatre .tease{font:400 clamp(24px,3.2vw,34px)/1.2 var(--f-disp);letter-spacing:.02em}
+.where-row span.nm{font:400 15px var(--f-body)}
+.crave .shop-sign{font:400 clamp(30px,4vw,44px)/1.05 var(--f-disp);letter-spacing:.01em;color:#f3dfb4}
+.crave .shop-sign small{font:400 15px/1.45 var(--f-body)}
+.crave-chips button{font:500 14.5px var(--f-body);letter-spacing:.02em}
+.crave .aisle-spin{font:600 14.5px var(--f-body)}
+.crave .tape-t{font:500 15px/1.25 var(--f-body)}
+.crave-dish{font:400 13px/1.35 var(--f-body)}
+.welcome h2{font:400 30px/1.1 var(--f-disp);color:#f3dfb4;letter-spacing:.01em}
+.welcome-in{background:#1e0a0e;border-color:rgba(226,176,79,.35)}
+.welcome li,.welcome li b{font-family:var(--f-body)}
+.welcome li b{font-weight:600}
+.welcome li::before{font:400 16px var(--f-disp)}
+.credit{font:400 13px/1.5 var(--f-body)}
 </style>
 
 <div id="printArea"></div>
@@ -1265,7 +1294,7 @@ function draw(){
   }
   /* labels along each wedge */
   const fs=Math.max(9,R*0.052);
-  ctx.font=`600 ${fs}px "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif`;ctx.textAlign="right";ctx.textBaseline="middle";
+  ctx.font=`500 ${fs*1.06}px Jost, Futura, "Helvetica Neue", Arial, sans-serif`;ctx.textAlign="right";ctx.textBaseline="middle";
   for(let i=0;i<N;i++){
     const f=wedges[i];if(!f)continue;
     ctx.save();ctx.translate(c,c);ctx.rotate(rot+(i+.5)*A-Math.PI/2);
