@@ -1990,6 +1990,13 @@ function menuText(){
 }
 
 /* export: render a clean copy of the card at full size */
+let _noise=null;
+function noiseTile(){
+  if(_noise)return _noise;
+  const c=document.createElement("canvas");c.width=c.height=180;const x=c.getContext("2d"),d=x.createImageData(180,180);
+  for(let i=0;i<d.data.length;i+=4){const v=Math.random()*255|0;d.data[i]=d.data[i+1]=d.data[i+2]=v;d.data[i+3]=Math.random()*26|0}
+  x.putImageData(d,0,0);return _noise=c.toDataURL("image/png");
+}
 async function renderCanvas(src){
   const stage=document.createElement("div");
   stage.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px;";
@@ -2008,6 +2015,15 @@ async function renderCanvas(src){
       await img.decode().catch(()=>{});
     }));
     setTimeout(()=>temp.forEach(u=>URL.revokeObjectURL(u)),30000);
+    /* iPhone Safari won't let a canvas be saved once an SVG texture has been drawn on it (SecurityError).
+       Swap every SVG texture for a plain noise tile and hide inline SVG art, in the export copy only. */
+    const nz=noiseTile(),svgRx=/url\("data:image\/svg\+xml(?:[^"\\]|\\.)*"\)/g;
+    [clone,...clone.querySelectorAll("*")].forEach(el=>{
+      const bg=getComputedStyle(el).backgroundImage;
+      if(bg&&bg.includes("data:image/svg"))el.style.backgroundImage=bg.replace(svgRx,`url("${nz}")`);
+      if(el.tagName==="IMG"&&/^data:image\/svg/.test(el.getAttribute("src")||""))el.style.visibility="hidden";
+      if(el.tagName&&el.tagName.toLowerCase()==="svg")el.style.visibility="hidden";
+    });
     return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true});
   }finally{stage.remove()}
 }
