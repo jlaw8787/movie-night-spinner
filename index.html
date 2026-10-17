@@ -957,6 +957,33 @@ body.winner .palace-glow{animation:palacePulse .22s steps(2) 8}
 .top .brand{display:none}
 .top{justify-content:center}
 @media (max-width:640px){.palace-stage{width:900px}.top{padding-top:8px}}
+
+/* ---------- palace wheel: real brass rim and pointer, bulbs chase in CSS, damask walls ---------- */
+body{background:linear-gradient(rgba(14,5,7,.66),rgba(14,5,7,.8)),url("assets/hero/wall.jpg") 0 0/360px 360px,#160609}
+.ambient{display:none}
+:root{--ink:#120608;--raise:rgba(28,9,12,.82);--raise-2:rgba(48,16,20,.9);--hair:rgba(232,190,110,.16);--acc:#e2b04f;--acc-ink:#24110a}
+.top{background:linear-gradient(rgba(18,6,8,.94),rgba(18,6,8,.8))}
+.palace::after{background:linear-gradient(transparent,#160609)}
+.wheel-wrap{width:min(100%,560px);padding-top:6%}
+.wheel-box{container-type:inline-size;overflow:visible}
+.wheel-box canvas{border-radius:0}
+.wheel-box .gloss{inset:10.5%;background:radial-gradient(ellipse 60% 40% at 35% 25%,rgba(255,255,255,.14),transparent 70%),radial-gradient(circle,transparent 72%,rgba(0,0,0,.35) 100%)}
+.rim{position:absolute;left:-4.05%;top:-4.05%;width:108.1%;height:108.1%;max-width:none;pointer-events:none;filter:drop-shadow(0 18px 30px rgba(0,0,0,.6))}
+.bulbs-glow{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen}
+.bulbs-glow i{position:absolute;left:50%;top:50%;width:7cqw;height:7cqw;margin:-3.5cqw 0 0 -3.5cqw;border-radius:50%;background:radial-gradient(circle,rgba(255,236,170,.95) 0,rgba(255,200,100,.55) 25%,rgba(255,170,60,0) 70%);opacity:.0;transform:rotate(var(--a)) translateY(-44.3cqw);animation:bulbChase 1.6s linear infinite;animation-delay:var(--d)}
+@keyframes bulbChase{0%,100%{opacity:.05}12%{opacity:.95}30%{opacity:.05}}
+body.spinning .bulbs-glow i{animation-duration:.45s}
+body.winner .bulbs-glow i{animation:bulbFlash .3s steps(2) 6;animation-delay:0s}
+@keyframes bulbFlash{0%{opacity:1}50%{opacity:.05}}
+@media (prefers-reduced-motion:reduce){.bulbs-glow i{animation:none;opacity:.35}}
+.wheel-wrap{container-type:inline-size}
+.wheel-box{z-index:1}
+.pointer{left:50%;top:-4.3cqw;width:16cqw;height:24cqw;margin-left:-8cqw;z-index:5;transform-origin:50% 10%;filter:drop-shadow(0 .8cqw 1.2cqw rgba(0,0,0,.65))}
+.pointer img{width:100%;height:100%;object-fit:contain;display:block}
+.hub{width:22%;font:600 clamp(18px,4.4cqw,28px)/1 var(--f-disp);color:#2a1206;background:radial-gradient(circle at 38% 30%,#fff1c4,#e2b04f 42%,#9a6a22 88%);
+  box-shadow:0 0 0 .9cqw #2a0b10,0 0 0 1.6cqw #c9962c,0 1.6cqw 0 .6cqw #160609,0 3cqw 5cqw rgba(0,0,0,.6),inset 0 -1cqw 1.6cqw rgba(110,60,10,.5)}
+.hub:hover{transform:translate(-50%,-52%)}
+.hub:active{transform:translate(-50%,-47%)}
 </style>
 
 <div id="printArea"></div>
@@ -1011,10 +1038,12 @@ body.winner .palace-glow{animation:palacePulse .22s steps(2) 8}
   <div class="stage" id="viewWheel">
     <section class="deck" aria-label="Spin wheel">
       <div class="wheel-wrap">
-        <div class="pointer" id="pointer" aria-hidden="true"><svg viewBox="0 0 30 40"><path d="M3 4 Q15 -1 27 4 L15 38 Z" fill="#e8b04a" stroke="#0c0a09" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+        <div class="pointer" id="pointer" aria-hidden="true"><img src="assets/hero/pointer.webp" alt=""></div>
         <div class="wheel-box">
           <canvas id="wheel" role="img" aria-label="Movie wheel"></canvas>
           <div class="gloss" aria-hidden="true"></div>
+          <img class="rim" src="assets/hero/rim.webp" alt="" aria-hidden="true">
+          <div class="bulbs-glow" id="bulbGlow" aria-hidden="true"></div>
           <button class="hub" id="spin" type="button">Spin</button>
         </div>
         <div class="floor" aria-hidden="true"></div>
@@ -1202,12 +1231,11 @@ function fitText(t,max){
 }
 function draw(){
   const W=canvas.width;if(!W||!wedges.length)return;
-  const c=W/2,Ro=c*0.995,Rr=c*0.9,R=c*0.86;
+  const c=W/2,Ro=c*0.8,Rr=c*0.795,R=c*0.79;
   ctx.clearRect(0,0,W,W);
   /* rim: a slim dark bezel with a fine brass line */
   let g;
   ctx.beginPath();ctx.arc(c,c,Ro,0,Math.PI*2);ctx.fillStyle="#1b1613";ctx.fill();
-  ctx.beginPath();ctx.arc(c,c,(Ro+Rr)/2,0,Math.PI*2);ctx.strokeStyle="rgba(232,176,74,.55)";ctx.lineWidth=Math.max(1,W/500);ctx.stroke();
   ctx.beginPath();ctx.arc(c,c,Rr,0,Math.PI*2);ctx.fillStyle="#0c0a09";ctx.fill();
   /* wedges */
   for(let i=0;i<N;i++){
@@ -2167,6 +2195,7 @@ function showWelcome(){
   document.body.appendChild(o);o.querySelector("button").focus();
 }
 
+{const g=document.getElementById("bulbGlow");if(g){let h="";for(let i=0;i<32;i++)h+=`<i style="--a:${i*11.25}deg;--d:${-(i%8)*0.2}s"></i>`;g.innerHTML=h}}
 /* palace marquee: shrink long titles to fit the sign, light boxes show tonight's poster and recent spins */
 function fitMarquee(){const t=$("now");const n=t.textContent.length;t.style.fontSize=`min(3.3cqw,${(78/Math.max(n,8)).toFixed(2)}cqw)`}
 if(typeof MutationObserver!=="undefined")new MutationObserver(fitMarquee).observe($("now"),{childList:true,characterData:true,subtree:true});try{fitMarquee()}catch(e){}
