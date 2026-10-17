@@ -1997,7 +1997,17 @@ async function renderCanvas(src){
   stage.appendChild(clone);document.body.appendChild(stage);
   try{
     await document.fonts.ready;
-    await Promise.all(Array.from(clone.querySelectorAll("img")).map(img=>img.decode().catch(()=>{})));
+    /* Safari can mark a cached poster as off-limits to the canvas, which kills the export.
+       Pull each outside image fresh as a local copy first so the canvas can always read it. */
+    const temp=[];
+    await Promise.all(Array.from(clone.querySelectorAll("img")).map(async img=>{
+      const src=img.currentSrc||img.src;
+      if(/^https?:/.test(src)&&!src.startsWith(location.origin)){
+        try{const r=await fetch(src,{mode:"cors",cache:"no-store"});if(r.ok){const u=URL.createObjectURL(await r.blob());temp.push(u);img.removeAttribute("crossorigin");img.src=u}}catch(e){}
+      }
+      await img.decode().catch(()=>{});
+    }));
+    setTimeout(()=>temp.forEach(u=>URL.revokeObjectURL(u)),30000);
     return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true});
   }finally{stage.remove()}
 }
@@ -2045,12 +2055,13 @@ async function exportMenu(kind){
       data=pdf.output("blob");filename=name+".pdf";
     }else{
       data=await new Promise(r=>canvas.toBlob(r,"image/jpeg",0.92));filename=name+".jpg";
+      if(!data)data=await (await fetch(canvas.toDataURL("image/jpeg",0.92))).blob();
     }
     /* phones: building the image takes a few seconds, which uses up the tap that iPhones need
        before they'll open the share sheet. So show the finished image with its own Save button. */
     if(kind==="png"&&!downloads&&matchMedia("(pointer:coarse)").matches){
       const file=new File([data],filename,{type:"image/jpeg"});
-      showOverlay(URL.createObjectURL(data),shareable(data,filename)?file:null);$("status").textContent="";return
+      showOverlay(canvas.toDataURL("image/jpeg",0.9),shareable(data,filename)?file:null);$("status").textContent="";return
     }
     if(downloads){
       try{await downloads.save({filename,data});$("status").textContent=`Saved ${filename}. Print it at A4, actual size.`}
@@ -2060,7 +2071,7 @@ async function exportMenu(kind){
       }
     }else if(!inClaude){plainDownload(data,filename);$("status").textContent=`Downloaded ${filename}. Print it at A4, actual size.`}
     else{showOverlay(canvas.toDataURL("image/png"));$("status").textContent=""}
-  }catch(e){console.error(e);$("status").textContent="Couldn't build the image. Close and reopen the app, then try again."}
+  }catch(e){console.error(e);$("status").textContent=`Couldn't build the image (${(e&&(e.name||e.message))||"unknown error"}). Close and reopen the app, then try again.`}
   finally{btns.forEach(b=>b.disabled=false)}
 }
 
