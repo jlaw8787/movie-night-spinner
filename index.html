@@ -895,7 +895,7 @@ select:hover{border-color:rgba(255,240,222,.2)}
 .where-k{font:600 12px var(--f-body);letter-spacing:.06em;color:var(--soft)}
 .where{background:var(--raise);border:1px solid var(--hair);border-radius:14px;padding:6px 14px 12px}
 .where:empty{display:none}
-.case .where{background:none;border:0;padding:0}
+.case .where{background:none;border:0;padding:0;box-shadow:none}
 .case .where-k{font:400 13px var(--f-board);letter-spacing:.06em;color:#1d3aa8}
 .week{background:var(--raise);border:1px solid var(--hair);border-radius:14px;max-width:none}
 .week-k{font:600 12px var(--f-body);letter-spacing:.06em;color:var(--acc)}
@@ -1028,6 +1028,127 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
 .welcome li b{font-weight:600}
 .welcome li::before{font:400 16px var(--f-disp)}
 .credit{font:400 13px/1.5 var(--f-body)}
+
+/* ---------- fixes: actions, more menu, spin bar, lazy card, chips ---------- */
+.actions{align-items:stretch}
+.more{position:relative}
+.more summary{list-style:none;cursor:pointer;height:100%;display:flex;align-items:center}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"";width:7px;height:7px;margin-left:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.more[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+.more[open]{flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px}
+.more[open] summary{height:auto}
+.more-menu{display:contents}
+@media (pointer:coarse){#print{display:none!important}}
+.spinbar{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,rgba(14,5,7,.95) 35%);display:flex;justify-content:center;pointer-events:none}
+.spinbar button{pointer-events:auto;font:400 20px var(--f-disp);letter-spacing:.03em;color:#2a1206;background:radial-gradient(circle at 40% 30%,#fff1c4,#e2b04f 50%,#a8762a);border:0;border-radius:999px;padding:13px 34px;box-shadow:0 0 0 2px #2a0b10,0 0 0 4px #c9962c,0 10px 24px rgba(0,0,0,.6),0 0 30px rgba(255,200,110,.35);cursor:pointer}
+.mcard.is-lazy .mc-courses{grid-template-columns:1fr;gap:34px;justify-items:center;text-align:center;align-content:center}
+.mcard.is-lazy .mc-item b{font-size:30px}
+.mcard.is-lazy .mc-note{font-size:19px}
+.mcard.is-lazy .mc-how{font-size:17px;max-width:520px;margin:4px auto 0}
+.mcard.is-lazy .mc-course h3{font-size:34px}
+@media (max-width:620px){.crave-chips{grid-auto-columns:max-content}}
+#kidsBtn[aria-pressed="true"],#lazyBtn[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:var(--acc-ink)}
+
+/* ---------- candy bar: 90s multiplex foyer, lit menu board, loud carpet ---------- */
+.shop.crave{--carpet:#0b0d2e;background:
+  radial-gradient(circle at 12% 18%,#19c7ba 0 3px,transparent 4px) 0 0/90px 90px,
+  radial-gradient(circle at 64% 38%,#ff3d9a 0 3.5px,transparent 4.5px) 0 0/120px 120px,
+  radial-gradient(circle at 34% 76%,#ffd23f 0 3px,transparent 4px) 0 0/100px 100px,
+  radial-gradient(circle at 82% 82%,#8c5cff 0 4px,transparent 5px) 0 0/140px 140px,
+  radial-gradient(ellipse 9px 2.5px at 50% 20%,#ffd23f 0 98%,transparent) 0 0/110px 110px,
+  radial-gradient(ellipse 2.5px 9px at 22% 60%,#19c7ba 0 98%,transparent) 0 0/130px 130px,
+  var(--carpet);border-radius:16px;padding:14px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.cb-hero{position:relative;border-radius:14px;padding:12px;background:linear-gradient(#b3172f,#7a0f20);box-shadow:0 0 0 3px #e2b04f,0 0 0 6px #2a0710,0 20px 40px rgba(0,0,0,.6),0 0 60px rgba(255,80,80,.25)}
+.cb-board{border-radius:8px;padding:16px 14px 14px;background:radial-gradient(ellipse at 50% 0%,#ffffff,#f3f0e6 60%,#e2ddcc);box-shadow:inset 0 0 0 2px #2a0710,inset 0 0 40px rgba(255,255,255,.8),0 0 30px rgba(255,250,230,.5)}
+.cb-title{margin:0;text-align:center;font:400 clamp(34px,6vw,54px)/1 var(--f-board);letter-spacing:.04em;color:#c8102e;text-shadow:2px 2px 0 #ffd23f}
+.cb-sub{margin:6px 0 12px;text-align:center;font:500 14.5px/1.35 var(--f-body);color:#3a2a20}
+.crave .crave-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:2px 18px;margin:0}
+.crave .crave-chips button{display:flex;justify-content:space-between;align-items:baseline;gap:10px;background:transparent;border:0;border-bottom:1px dashed rgba(42,7,16,.25);border-radius:0;padding:7px 2px;color:#1a0a0c;font:700 15px/1.1 "Oswald",var(--f-body);letter-spacing:.06em;text-transform:uppercase;text-align:left;cursor:pointer}
+.crave .crave-chips button b{font:500 13px "Oswald",sans-serif;color:#c8102e;letter-spacing:.04em}
+.crave .crave-chips button b::after{content:" films";font-size:10px;letter-spacing:.08em;color:#8a6a50}
+.crave .crave-chips button:hover span{color:#c8102e}
+.crave .crave-chips button[aria-pressed="true"]{background:#c8102e;color:#fff;border-radius:4px;padding-left:8px;padding-right:8px}
+.crave .crave-chips button[aria-pressed="true"] b,.crave .crave-chips button[aria-pressed="true"] b::after{color:#ffd23f}
+@media (max-width:620px){.crave .crave-chips{grid-auto-flow:row;grid-template-rows:none;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:visible;gap:0 12px;padding:0}.crave .crave-chips button{font-size:13px;letter-spacing:.03em;min-width:0}.crave .crave-chips button span{min-width:0;overflow-wrap:anywhere}.crave .crave-chips button b::after{content:""}}
+.cb-search{margin:14px 0 4px}
+.cb-search input[type=search]{background:rgba(11,13,46,.85)!important;border:1px solid rgba(255,255,255,.18)!important}
+.crave .crave-bar{background:rgba(11,13,46,.82);border-radius:10px;padding:8px 10px;margin:10px 0 14px}
+.crave .crave-bar .shop-count{color:#f3f0e6;font-weight:500}
+.crave .aisle-spin{background:#ffd23f;border-color:#ffd23f;color:#1a0a0c}
+.crave .crave-empty{background:rgba(11,13,46,.82);border-radius:10px;padding:12px;color:#d9d4f0}
+.crave-hit{background:rgba(11,13,46,.82);border-radius:12px;padding:8px}
+.crave .tape-y{color:#a9a6c9}
+.crave-dish{color:#ffd23f}
+
+/* ---------- in-world controls: ticket stub buttons, velvet and brass dropdowns, rental card checklist ---------- */
+.stage .btn,.stage .toggle,.week-acts button{position:relative;border:0;border-radius:6px;color:#f6e7c8;
+  background:linear-gradient(#5a1420,#3a0b13);box-shadow:inset 0 0 0 1px rgba(226,176,79,.55),inset 0 0 0 4px #3a0b13,inset 0 0 0 5px rgba(226,176,79,.22),0 3px 8px rgba(0,0,0,.4);
+  -webkit-mask:radial-gradient(circle 6px at 0 50%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 50%,#0000 97%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 6px at 0 50%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 50%,#0000 97%,#000) right/51% 100% no-repeat;
+  padding:11px 20px}
+.stage .btn:hover,.stage .toggle:hover{background:linear-gradient(#6e1a28,#46101a);color:#fff3d6}
+.stage .btn.primary,.week-acts .go,#kidsBtn[aria-pressed="true"],#lazyBtn[aria-pressed="true"],#watchCurrent[aria-pressed="true"],.stage .toggle[aria-pressed="true"]{color:#2a1206;
+  background:linear-gradient(#f7dc97,#e2b04f 45%,#b98a2e);box-shadow:inset 0 0 0 1px #7a5418,inset 0 0 0 4px rgba(255,240,200,.35),0 3px 10px rgba(0,0,0,.45)}
+.stage .btn:focus-visible,.stage .toggle:focus-visible,.stage summary:focus-visible{outline:2px solid #ffe3a1;outline-offset:3px}
+.stage select{appearance:none;-webkit-appearance:none;color:#f6e7c8;border:0;border-radius:8px;padding:12px 40px 12px 14px;
+  background:linear-gradient(45deg,transparent 50%,#e2b04f 50%) calc(100% - 20px) 52%/6px 6px no-repeat,linear-gradient(-45deg,transparent 50%,#e2b04f 50%) calc(100% - 14px) 52%/6px 6px no-repeat,linear-gradient(#3e0d16,#2a0710);
+  box-shadow:inset 0 0 0 1px rgba(226,176,79,.55),inset 0 2px 6px rgba(0,0,0,.5)}
+.stage select option{background:#2a0710;color:#f6e7c8}
+.watch-panel{background:linear-gradient(#3a0b13,#2a0710);box-shadow:inset 0 0 0 1px rgba(226,176,79,.45);border:0}
+.watch-panel summary{color:#f3dfb4}
+.watch-list{background:#f6efe1;border-radius:6px;padding:4px 12px;margin-top:12px;
+  background-image:linear-gradient(90deg,transparent 30px,rgba(200,16,46,.35) 30px 31px,transparent 31px)}
+.watch-row{border-top:1px solid rgba(29,58,168,.18);color:#2a1a10}
+.watch-row:first-child{border-top:0}
+.watch-row small{color:#7a6a58}
+.watch-row.is-watched span{color:#a0927e;text-decoration:line-through;text-decoration-color:rgba(200,16,46,.6)}
+.watch-row input,.watch-option input{accent-color:#c8102e}
+.watch-tools input,.watch-tools select{background:#2a0710;color:#f6e7c8;box-shadow:inset 0 0 0 1px rgba(226,176,79,.45);border:0}
+.watch-panel p,.watch-option{color:#d9c6a8}
+.ticket{background:#f3e3b8;color:#3a0a14;border:0;border-radius:4px;
+  -webkit-mask:radial-gradient(circle 5px at 0 50%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 5px at 100% 50%,#0000 97%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 5px at 0 50%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 5px at 100% 50%,#0000 97%,#000) right/51% 100% no-repeat;padding:8px 16px}
+.ticket small{color:#c8102e}
+.ticket:hover{background:#ffe9b0;border:0}
+.where{background:linear-gradient(#3a0b13,#2a0710);border:0;box-shadow:inset 0 0 0 1px rgba(226,176,79,.4)}
+.tabs{background:linear-gradient(#3a0b13,#2a0710);border:0;box-shadow:inset 0 0 0 1px rgba(226,176,79,.4)}
+.tab.on{background:linear-gradient(#f7dc97,#e2b04f);color:#2a1206}
+.views{background:linear-gradient(#3a0b13,#2a0710);border:0;box-shadow:inset 0 0 0 1px rgba(226,176,79,.4)}
+.views button[aria-selected="true"]{background:linear-gradient(#f7dc97,#e2b04f);color:#2a1206;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.views button{color:#e8d5b0}
+
+/* film leader countdown and VHS tracking */
+.theatre .tease.leader{opacity:1!important;transition:none}
+.ld{display:grid;place-items:center;width:min(46%,220px);aspect-ratio:1;border-radius:50%;border:3px solid rgba(255,227,161,.85);position:relative;
+  background:conic-gradient(rgba(255,227,161,.28) 0 var(--sweep,0deg),transparent var(--sweep,0deg));animation:ldSweep .42s linear}
+.ld::before,.ld::after{content:"";position:absolute;background:rgba(255,227,161,.6)}
+.ld::before{left:50%;top:-12%;bottom:-12%;width:2px;margin-left:-1px}.ld::after{top:50%;left:-12%;right:-12%;height:2px;margin-top:-1px}
+.ld b{font:400 clamp(60px,10vw,96px)/1 var(--f-disp);color:#ffe3a1;text-shadow:0 2px 14px rgba(0,0,0,.8)}
+@property --sweep{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes ldSweep{from{--sweep:0deg}to{--sweep:360deg}}
+.tv-screen.tracking{position:relative;overflow:hidden}
+.tv-screen.tracking::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:repeating-linear-gradient(transparent 0 3px,rgba(255,255,255,.08) 3px 4px),linear-gradient(transparent 40%,rgba(255,255,255,.55) 46%,rgba(255,255,255,.1) 50%,transparent 56%);
+  background-size:100% 100%,100% 300%;animation:track .6s steps(8) 1}
+@keyframes track{from{background-position:0 0,0 0;filter:contrast(1.4)}to{background-position:0 0,0 -200%}}
+@media (max-width:900px){body{padding-bottom:84px}}
+
+/* candy bar photo, real carpet and the popcorn box */
+.shop.crave{background:url("assets/hero/carpet.jpg") 0 0/300px 300px,#0b0d2e!important}
+.cb-photo{position:relative;overflow:hidden;border-radius:12px;margin:-14px -14px 16px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.cb-stage{position:relative;width:max(100%,780px);aspect-ratio:2/1;left:50%;transform:translateX(-50%);container-type:inline-size}
+.cb-img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.cb-panel{position:absolute;left:10.3%;width:79.4%;top:7.6%;height:22.8%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4cqw;text-align:center}
+.cb-photo .cb-title{margin:0;font:400 6.2cqw/1 var(--f-board);letter-spacing:.05em;color:#c8102e;text-shadow:.25cqw .25cqw 0 #ffd23f}
+.cb-photo .cb-sub{margin:0;font:600 1.9cqw/1.2 "Oswald",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2a1a10}
+.cb-k{margin:0 0 10px;text-align:center;font:600 12px/1.3 "Oswald",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8a6a50}
+.cb-hero{position:relative}
+.cb-pop{position:absolute;right:-34px;bottom:-30px;width:120px;transform:rotate(8deg);filter:drop-shadow(0 10px 14px rgba(0,0,0,.55));pointer-events:none;transition:transform .2s}
+.cb-pop.bounce{animation:popBounce .5s ease}
+@keyframes popBounce{0%{transform:rotate(8deg) translateY(0)}35%{transform:rotate(2deg) translateY(-14px) scale(1.06)}100%{transform:rotate(8deg) translateY(0)}}
+@media (max-width:620px){.cb-pop{width:74px;bottom:-30px;right:-8px}.cb-photo{margin:-14px -14px 14px}}
+@media (prefers-reduced-motion:reduce){.cb-pop.bounce{animation:none}}
 </style>
 
 <div id="printArea"></div>
@@ -1045,11 +1166,12 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
     <nav class="views" role="tablist" aria-label="View">
       <button type="button" role="tab" id="viewWheelBtn" aria-selected="true" aria-controls="viewWheel">Spin</button>
       <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Video shop</button>
-      <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Craving</button>
+      <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Candy bar</button>
     </nav>
   </header>
   <div class="ambient" id="ambient" aria-hidden="true"></div>
 
+  <div class="spinbar" id="spinbar" hidden><button type="button" id="spinbarBtn">Spin the wheel</button></div>
   <section class="week" id="weekPanel" aria-label="This week's film" hidden></section>
 
   <section class="shop" id="viewShop" aria-label="Video shop" hidden>
@@ -1069,13 +1191,20 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
     <div id="shopAisles"></div>
   </section>
 
-  <section class="shop crave" id="viewCrave" aria-label="Craving" hidden>
-    <div class="shop-head">
-      <h2 class="shop-sign">What are you eating?<small>Pick the food you're craving and we'll find the films that serve it.</small></h2>
-      <div class="shop-tools"><input type="search" id="craveSearch" placeholder="Or type any food, like lasagne" aria-label="Type a food"></div>
+  <section class="shop crave" id="viewCrave" aria-label="Candy bar" hidden>
+    <div class="cb-photo"><div class="cb-stage">
+      <img class="cb-img" src="assets/hero/candybar.jpg" srcset="assets/hero/candybar-1000.jpg 1000w, assets/hero/candybar.jpg 1774w" sizes="(max-width:640px) 820px, 1240px" alt="" loading="lazy">
+      <div class="cb-panel"><h2 class="cb-title">Candy Bar</h2><p class="cb-sub">What are you hungry for?</p></div>
+    </div></div>
+    <div class="cb-hero" id="cbHero">
+      <div class="cb-board">
+        <p class="cb-k">Tap a treat and we'll find the films that serve it</p>
+        <div class="crave-chips" id="craveChips" role="group" aria-label="Foods"></div>
+      </div>
+      <img class="cb-pop" id="cbPop" src="assets/hero/popcorn.webp" alt="" aria-hidden="true">
     </div>
-    <div class="crave-chips" id="craveChips" role="group" aria-label="Foods"></div>
-    <div class="crave-bar"><p class="shop-count" id="craveCount" aria-live="polite"></p><button class="aisle-spin" id="craveSpin" type="button" hidden>Spin these</button></div>
+    <div class="shop-tools cb-search"><input type="search" id="craveSearch" placeholder="Not on the board? Type any food, like lasagne" aria-label="Type a food"></div>
+    <div class="crave-bar"><p class="shop-count" id="craveCount" aria-live="polite"></p><button class="aisle-spin" id="craveSpin" type="button" hidden>Spin a combo</button></div>
     <div class="crave-grid" id="craveGrid"></div>
   </section>
 
@@ -1119,7 +1248,7 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
         <p class="watch-save" id="watchSave" role="status"></p>
       </details>
       <div class="history">
-        <h2>Recent spins</h2>
+        <h2>Your ticket stubs</h2>
         <div class="chips" id="chips"><span class="empty">Nothing yet. Your picks land here.</span></div>
       </div>
     </section>
@@ -1136,14 +1265,19 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
         <div class="easel" id="easel"><div class="preview" id="preview"></div><div class="glare" aria-hidden="true"></div></div>
       </div>
       <div class="actions">
+        <button class="btn primary" id="pdf" type="button">Save PDF (menu + prep)</button>
         <button class="btn" id="weekSet" type="button" disabled>Lock in for this week</button>
         <button class="btn" id="watchCurrent" type="button" aria-pressed="false" disabled>Mark as watched</button>
-        <button class="btn primary" id="pdf" type="button">Save PDF (menu + prep)</button>
-        <button class="btn" id="print" type="button" hidden>Print</button>
-        <button class="btn" id="png" type="button">Save image</button>
-        <button class="btn" id="reroll" type="button">Shuffle the menu</button>
         <button class="btn" id="lazyBtn" type="button" aria-pressed="false">Lazy night: off</button>
-        <button class="btn" id="copy" type="button">Copy text</button>
+        <details class="more">
+          <summary class="btn">More</summary>
+          <div class="more-menu">
+            <button class="btn" id="png" type="button">Save image</button>
+            <button class="btn" id="copy" type="button">Copy text</button>
+            <button class="btn" id="reroll" type="button">Shuffle the menu</button>
+            <button class="btn" id="print" type="button" hidden>Print</button>
+          </div>
+        </details>
       </div>
       <div class="status" id="status" aria-live="polite"></div>
       <div class="where" id="whereWheel"></div>
@@ -1174,11 +1308,31 @@ const pick=a=>a[Math.floor(Math.random()*a.length)];
 
 /* ---------- sound: a tick per wedge and a little fanfare, off by default ---------- */
 let audio=null,soundOn=false;
-try{soundOn=localStorage.getItem("mns-sound")==="1"}catch(e){}
+soundOn=true;try{soundOn=localStorage.getItem("mns-sound")!=="0"}catch(e){}
 function setSoundLabel(){const b=$("sound");b.setAttribute("aria-pressed",soundOn);b.textContent=soundOn?"Sound on":"Sound off"}
 function ac(){if(!audio){const C=window.AudioContext||window.webkitAudioContext;if(C)audio=new C()}return audio}
-function tick(){if(!soundOn||!ac())return;const t=audio.currentTime,o=audio.createOscillator(),g=audio.createGain();o.type="square";o.frequency.value=1500;g.gain.setValueAtTime(.06,t);g.gain.exponentialRampToValueAtTime(.0001,t+.03);o.connect(g).connect(audio.destination);o.start(t);o.stop(t+.035)}
+function tick(){if(!soundOn||!ac())return;const t=audio.currentTime;const src=audio.createBufferSource();src.buffer=noiseBuf();const f=audio.createBiquadFilter();f.type="bandpass";f.frequency.value=2400;f.Q.value=2.5;const g=audio.createGain();g.gain.setValueAtTime(.32,t);g.gain.exponentialRampToValueAtTime(.0001,t+.035);src.connect(f).connect(g).connect(audio.destination);src.start(t,Math.random()*1.5,.05)}
 function fanfare(){if(!soundOn||!ac())return;const t=audio.currentTime;[523.25,659.25,783.99,1046.5].forEach((f,i)=>{const o=audio.createOscillator(),g=audio.createGain();o.type="triangle";o.frequency.value=f;g.gain.setValueAtTime(0,t+i*.09);g.gain.linearRampToValueAtTime(.12,t+i*.09+.02);g.gain.exponentialRampToValueAtTime(.0001,t+i*.09+.9);o.connect(g).connect(audio.destination);o.start(t+i*.09);o.stop(t+i*.09+1)})}
+
+/* nostalgia sounds, all made on the fly: projector whirr, VHS clunk, ticket printer, popcorn, curtain swish */
+let _nb=null;function noiseBuf(){if(_nb)return _nb;const a=ac(),n=a.sampleRate*2,b=a.createBuffer(1,n,a.sampleRate),d=b.getChannelData(0);for(let i=0;i<n;i++)d[i]=Math.random()*2-1;return _nb=b}
+function nburst(t,dur,type,freq,q,vol,dec){const a=audio,s=a.createBufferSource();s.buffer=noiseBuf();const f=a.createBiquadFilter();f.type=type;f.frequency.value=freq;f.Q.value=q;const g=a.createGain();g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.0001,t+(dec||dur));s.connect(f).connect(g).connect(a.destination);s.start(t,Math.random()*1.5,dur+.05);return s}
+function thump(t,freq,vol,dec){const o=audio.createOscillator(),g=audio.createGain();o.type="sine";o.frequency.setValueAtTime(freq,t);o.frequency.exponentialRampToValueAtTime(freq*.5,t+dec);g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.0001,t+dec);o.connect(g).connect(audio.destination);o.start(t);o.stop(t+dec+.02)}
+const sfx={
+  _whirr:null,
+  whirrStart(){if(!soundOn||!ac()||this._whirr)return;const a=audio,t=a.currentTime,s=a.createBufferSource();s.buffer=noiseBuf();s.loop=true;const f=a.createBiquadFilter();f.type="bandpass";f.frequency.value=900;f.Q.value=.8;
+    const flick=a.createGain();flick.gain.value=.5;const lfo=a.createOscillator();lfo.frequency.value=24;const lg=a.createGain();lg.gain.value=.35;lfo.connect(lg).connect(flick.gain);
+    const g=a.createGain();g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.11,t+.4);
+    const hum=a.createOscillator();hum.type="sawtooth";hum.frequency.value=50;const hg=a.createGain();hg.gain.value=.018;const hf=a.createBiquadFilter();hf.type="lowpass";hf.frequency.value=220;hum.connect(hf).connect(hg).connect(g);
+    s.connect(f).connect(flick).connect(g).connect(a.destination);s.start(t);lfo.start(t);hum.start(t);this._whirr={s,lfo,hum,g}},
+  whirrStop(){const w=this._whirr;if(!w)return;this._whirr=null;const t=audio.currentTime;w.g.gain.cancelScheduledValues(t);w.g.gain.setValueAtTime(w.g.gain.value,t);w.g.gain.exponentialRampToValueAtTime(.0001,t+.6);[w.s,w.lfo,w.hum].forEach(n=>n.stop(t+.65))},
+  clunk(){if(!soundOn||!ac())return;const t=audio.currentTime;nburst(t,.03,"highpass",2500,.7,.35);thump(t+.02,110,.5,.18);nburst(t+.12,.04,"bandpass",1400,3,.25);thump(t+.16,70,.35,.14);nburst(t+.3,.7,"bandpass",420,1.2,.05,.7)},
+  print(){if(!soundOn||!ac())return;const t=audio.currentTime;for(let i=0;i<14;i++)nburst(t+i*.045,.02,"bandpass",3200,4,.16);nburst(t+.7,.18,"highpass",1800,.5,.18,.2)},
+  pop(){if(!soundOn||!ac())return;const t=audio.currentTime;for(let i=0;i<7;i++){const d=Math.random()*1.1;nburst(t+d,.025,"bandpass",900+Math.random()*1400,1.5,.3+Math.random()*.25)}},
+  swish(){if(!soundOn||!ac())return;const a=audio,t=a.currentTime,s=a.createBufferSource();s.buffer=noiseBuf();const f=a.createBiquadFilter();f.type="lowpass";f.frequency.setValueAtTime(300,t);f.frequency.exponentialRampToValueAtTime(2200,t+.5);f.frequency.exponentialRampToValueAtTime(400,t+1.1);const g=a.createGain();g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.12,t+.35);g.gain.exponentialRampToValueAtTime(.0001,t+1.15);s.connect(f).connect(g).connect(a.destination);s.start(t,0,1.2)}
+};
+/* phones only allow sound after a tap: wake the audio on the first touch */
+if(typeof addEventListener!=="undefined")addEventListener("pointerdown",function wake(){if(soundOn&&ac()&&audio.state==="suspended")audio.resume();removeEventListener("pointerdown",wake)},{once:true});
 $("sound").addEventListener("click",()=>{soundOn=!soundOn;try{localStorage.setItem("mns-sound",soundOn?"1":"0")}catch(e){}setSoundLabel();if(soundOn&&ac()&&audio.state==="suspended")audio.resume();tick()});
 setSoundLabel();
 
@@ -1328,7 +1482,7 @@ function spin(){
   const far=[];for(let i=0;i<N;i++){const ang=((rot+(i+.5)*A)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);if(ang>Math.PI*.6&&ang<Math.PI*1.4)far.push(i)}
   const pool=shuffle(list);far.forEach((i,k)=>{wedges[i]=pool[k%pool.length]});
   const w=pick(far),f=list.length>far.length?pick(list):wedges[w];wedges[w]=f;
-  closeCurtains();
+  closeCurtains();sfx.whirrStart();
   const target=-(w+0.5+(Math.random()-0.5)*0.55)*A;
   const turns=reduce?1:5+Math.floor(Math.random()*3);
   const start=rot,delta=((target-start)%(Math.PI*2)+Math.PI*2)%(Math.PI*2)+turns*Math.PI*2;
@@ -1346,10 +1500,10 @@ function spin(){
       rot=((rot%(Math.PI*2))+Math.PI*2)%(Math.PI*2);winner=indexAt(rot);kick=0;setPointer();draw();
       spinning=false;sel.disabled=false;$("skipWatched").disabled=false;renderWatchList();$("spin").disabled=false;document.body.classList.remove("spinning");
       const win=wedges[winner];
-      $("now").textContent=`${win.title} (${win.year})`;
+      $("now").textContent=win.title;
       document.body.classList.add("winner");setTimeout(()=>document.body.classList.remove("winner"),1500);
-      fanfare();
-      buzz([30,50,90]);show(win,true).then(openCurtains);addHistory(win);
+      sfx.whirrStop();fanfare();
+      buzz([30,50,90]);show(win,true).then(()=>leader(openCurtains));addHistory(win);
       if(window.innerWidth<900)theatre.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
     }
   }
@@ -1359,7 +1513,12 @@ function spin(){
 /* ---------- curtains and the easel tilt ---------- */
 const theatre=$("theatre"),easel=$("easel");
 function closeCurtains(){theatre.classList.add("closed");$("tease").textContent=pick(["Setting the table","Warming the plates","Popping the corn","Chilling the glasses","Lighting the candles"])}
-function openCurtains(){setTimeout(()=>theatre.classList.remove("closed"),reduce?0:250)}
+/* the old film-leader countdown on the curtain before it opens */
+function leader(done){
+  const t=$("tease");if(reduce||!theatre.classList.contains("closed")){done();return}
+  t.classList.add("leader");let n=3;const step=()=>{if(n===0){t.classList.remove("leader");done();return}t.innerHTML=`<span class="ld"><b>${n}</b></span>`;tick();n--;setTimeout(step,420)};step();
+}
+function openCurtains(){setTimeout(()=>{if(theatre.classList.contains("closed"))sfx.swish();theatre.classList.remove("closed")},reduce?0:250)}
 const canTilt=!reduce&&window.matchMedia("(hover:hover) and (pointer:fine)").matches;
 if(canTilt){
   theatre.addEventListener("pointermove",e=>{
@@ -1784,6 +1943,7 @@ async function show(f,preferSig){
     styleCard(card,f);card.style.transform="";card.innerHTML=cardHTML(f,menu,current.tag,false);
     $("status").textContent="The poster couldn't load. Your menu and prep sheet are still available.";
   }
+  card.classList.toggle("is-lazy",!!menu.lazy);
   styleCard(prep,f);prep.classList.add("pp-sheet");
   prep.innerHTML=prepHTML(f,menu);
   scalePreview();
@@ -1791,7 +1951,7 @@ async function show(f,preferSig){
   refit();
   await document.fonts.ready;refit();
 }
-function replay(f){closeCurtains();setTimeout(()=>show(f,true).then(openCurtains),reduce?0:900);$("now").textContent=`${f.title} (${f.year})`}
+function replay(f){closeCurtains();setTimeout(()=>show(f,true).then(openCurtains),reduce?0:900);$("now").textContent=f.title}
 
 /* history */
 let hist=[];
@@ -1950,7 +2110,7 @@ function dueBack(f){
   if(isNew(f)){d.setDate(d.getDate()+1)}else{d.setDate(d.getDate()+7)}
   d.setHours(19,0,0,0);return d;
 }
-function openSlip(f,go){
+function openSlip(f,go){setTimeout(()=>sfx.print(),350);
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
   const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
@@ -2179,11 +2339,11 @@ async function openCase(f){
   const esc=e=>{if(e.key==="Escape")close()};const last=document.activeElement;
   o.addEventListener("click",e=>{if(e.target===o)close()});
   o.querySelector(".x").addEventListener("click",close);
-  o.querySelector(".rent").addEventListener("click",()=>{close();openSlip(f,()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})})});
+  o.querySelector(".rent").addEventListener("click",()=>{close();sfx.clunk();openSlip(f,()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})})});
   if(seen)wireStars(o,f,()=>renderShop());
   const rb=o.querySelector(".ret");if(rb)rb.addEventListener("click",()=>{close();openChute(f)});
   const tv=o.querySelector(".tv-play");
-  if(tv)tv.addEventListener("click",()=>{const k=tv.dataset.k;tv.parentElement.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(k)}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="${ESC(f.title)} trailer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`});
+  if(tv)tv.addEventListener("click",()=>{const k=tv.dataset.k;const scr=tv.parentElement;scr.classList.add("tracking");sfx.clunk();setTimeout(()=>{scr.classList.remove("tracking");scr.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(k)}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="${ESC(f.title)} trailer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`},reduce?0:600)});
   o.querySelector(".seen").addEventListener("click",()=>{setWatched(f,!watched.has(f.id));close();renderShop()});
   document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".rent").focus();
 }
@@ -2240,8 +2400,15 @@ function showWelcome(){
 }
 
 {const g=document.getElementById("bulbGlow");if(g){let h="";for(let i=0;i<32;i++)h+=`<i style="--a:${i*11.25}deg;--d:${-(i%8)*0.2}s"></i>`;g.innerHTML=h}}
+/* phones: a Spin button pinned to the bottom until the wheel is on screen */
+{const bar=$("spinbar"),hub=$("spin");let hubSeen=false;
+ const upd=()=>{bar.hidden=hubSeen||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
+ if("IntersectionObserver" in window)new IntersectionObserver(es=>{hubSeen=es[0].isIntersecting;upd()},{threshold:.4}).observe(hub);
+ window.addEventListener("scroll",upd,{passive:true});
+ $("spinbarBtn").addEventListener("click",()=>{$("spin").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{if(!spinning)$("spin").click()},reduce?50:650)});
+ window.__spinbarUpd=upd;}
 /* palace marquee: shrink long titles to fit the sign, light boxes show tonight's poster and recent spins */
-function fitMarquee(){const t=$("now");const n=t.textContent.length;t.style.fontSize=`min(3.3cqw,${(78/Math.max(n,8)).toFixed(2)}cqw)`}
+function fitMarquee(){const t=$("now");const n=t.textContent.length;t.style.fontSize=`min(3.3cqw,${(64/Math.max(n,8)).toFixed(2)}cqw)`}
 if(typeof MutationObserver!=="undefined")new MutationObserver(fitMarquee).observe($("now"),{childList:true,characterData:true,subtree:true});try{fitMarquee()}catch(e){}
 function lightboxes(){
   const P=typeof TMDB_POSTERS!=="undefined"?TMDB_POSTERS:{};
@@ -2251,27 +2418,29 @@ function lightboxes(){
 }
 
 /* craving: start from the food, find the film */
-const CRAVES=[["Wings",/\bwings?\b/i],["Pizza",/pizza|calzone|stromboli/i],["Burgers",/burger|slider/i],["Tacos and Mexican",/taco|burrito|nacho|quesadilla|enchilada|fajita|tamale|churro/i],["Hot dogs and sausages",/hot ?dog|frankfurt|\bfranks?\b|bratwurst|sausage|snag/i],["Fried chicken",/fried chicken|chicken tender|nugget|popcorn chicken|schnitzel/i],["BBQ and ribs",/bbq|barbecue|brisket|\bribs?\b|pulled pork|smoked/i],["Steak",/steak|rib roast|scotch fillet|sirloin|t-bone/i],["Roasts",/\broast\b|roast (beef|chicken|lamb|turkey|pork|beast)|turkey|ham\b/i],["Pasta",/pasta|spaghetti|lasagn|linguine|penne|macaroni|mac and cheese|ravioli|gnocchi|fettuccine|carbonara|rigatoni|meatball/i],["Noodles",/noodle|ramen|pho\b|lo mein|pad thai|udon|chow mein|pancit|laksa/i],["Dumplings",/dumpling|gyoza|wonton|bao|potsticker|mandu|momo/i],["Sushi",/sushi|sashimi|maki|onigiri/i],["Curry",/curry|tikka|masala|korma|vindaloo|dal\b|dhal/i],["Seafood",/prawn|shrimp|\bfish|crab|lobster|oyster|calamari|squid|clam|mussel|salmon|tuna|pippi|scallop|chowder/i],["Fish and chips",/fish and chips|fish & chips|battered fish/i],["Pies",/\bpies?\b|pasty|pasties|pot pie/i],["Sandwiches",/sandwich|sub\b|hoagie|cheesesteak|po' ?boy|toastie|club\b|reuben|banh mi/i],["Breakfast",/pancake|waffle|bacon and egg|eggs benedict|french toast|breakfast|omelette|hash brown|fry-up|scrambled/i],["Fries and chips",/\bfries\b|\bchips\b|wedges|tater/i],["Cheese",/cheese board|cheese platter|fondue|mac and cheese|grilled cheese|toasted cheese|raclette/i],["Ice cream",/ice cream|sundae|gelato|milkshake|banana split|float/i],["Chocolate",/chocolate|brownie|fudge|cocoa/i],["Cake",/\bcake|cupcake|cheesecake|gateau|torte/i],["Donuts",/donut|doughnut|beignet|churro|zeppole/i],["Cookies",/cookie|biscuit|shortbread|snickerdoodle/i],["Popcorn",/popcorn/i]];
+const CRAVES=[["Wings",/\bwings?\b/i],["Pizza",/pizza|calzone|stromboli/i],["Burgers",/burger|slider/i],["Tacos",/taco|burrito|nacho|quesadilla|enchilada|fajita|tamale|churro/i],["Hot dogs",/hot ?dog|frankfurt|\bfranks?\b|bratwurst|sausage|snag/i],["Fried chicken",/fried chicken|chicken tender|nugget|popcorn chicken|schnitzel/i],["BBQ",/bbq|barbecue|brisket|\bribs?\b|pulled pork|smoked/i],["Steak",/steak|rib roast|scotch fillet|sirloin|t-bone/i],["Roasts",/\broast\b|roast (beef|chicken|lamb|turkey|pork|beast)|turkey|ham\b/i],["Pasta",/pasta|spaghetti|lasagn|linguine|penne|macaroni|mac and cheese|ravioli|gnocchi|fettuccine|carbonara|rigatoni|meatball/i],["Noodles",/noodle|ramen|pho\b|lo mein|pad thai|udon|chow mein|pancit|laksa/i],["Dumplings",/dumpling|gyoza|wonton|bao|potsticker|mandu|momo/i],["Sushi",/sushi|sashimi|maki|onigiri/i],["Curry",/curry|tikka|masala|korma|vindaloo|dal\b|dhal/i],["Seafood",/prawn|shrimp|\bfish|crab|lobster|oyster|calamari|squid|clam|mussel|salmon|tuna|pippi|scallop|chowder/i],["Fish and chips",/fish and chips|fish & chips|battered fish/i],["Pies",/\bpies?\b|pasty|pasties|pot pie/i],["Sandwiches",/sandwich|sub\b|hoagie|cheesesteak|po' ?boy|toastie|club\b|reuben|banh mi/i],["Breakfast",/pancake|waffle|bacon and egg|eggs benedict|french toast|breakfast|omelette|hash brown|fry-up|scrambled/i],["Fries",/\bfries\b|\bchips\b|wedges|tater/i],["Cheese",/cheese board|cheese platter|fondue|mac and cheese|grilled cheese|toasted cheese|raclette/i],["Ice cream",/ice cream|sundae|gelato|milkshake|banana split|float/i],["Chocolate",/chocolate|brownie|fudge|cocoa/i],["Cake",/\bcake|cupcake|cheesecake|gateau|torte/i],["Donuts",/donut|doughnut|beignet|churro|zeppole/i],["Cookies",/cookie|biscuit|shortbread|snickerdoodle/i],["Popcorn",/popcorn/i]];
 let craveSel=null,craveHits=[];
 const craveRx=q=>{const w=q.trim().toLowerCase().replace(/[^a-z0-9 '&-]/g,"");if(!w)return null;const stem=w.replace(/(es|s)$/,"");return new RegExp(stem.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"i")};
 function renderCrave(){
-  $("craveChips").innerHTML=CRAVES.map(([n])=>`<button type="button" aria-pressed="${craveSel===n}" data-crave="${ESC(n)}">${ESC(n)}</button>`).join("");
+  if(!window.__craveN){window.__craveN={};CRAVES.forEach(([n,rx])=>{window.__craveN[n]=FILMS.filter(f=>["S","M","W","K"].some(k=>(f[k]||[]).some(it=>rx.test(it[0])||rx.test(it[1]||"")))).length})}
+  $("craveChips").innerHTML=CRAVES.map(([n])=>`<button type="button" aria-pressed="${craveSel===n}" data-crave="${ESC(n)}"><span>${ESC(n)}</span><b>${window.__craveN[n]}</b></button>`).join("");
   const typed=$("craveSearch").value;let rx=null,label="";
   if(typed.trim()){rx=craveRx(typed);label=typed.trim()}else if(craveSel){rx=CRAVES.find(c=>c[0]===craveSel)[1];label=craveSel.toLowerCase()}
-  if(!rx){craveHits=[];$("craveCount").textContent="";$("craveSpin").hidden=true;$("craveGrid").innerHTML='<p class="crave-empty">Tap a food above to see which films serve it.</p>';return}
+  if(!rx){craveHits=[];$("craveCount").textContent="";$("craveSpin").hidden=true;$("craveGrid").innerHTML='<p class="crave-empty">Tap something on the board to see which films serve it.</p>';return}
   craveHits=[];
-  for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;if(!onSvc(f,svc))continue;const d=[];for(const k of["S","M","W","K"])for(const it of f[k]||[])if(rx.test(it[0])||rx.test(it[2]||""))d.push(it[0]);if(d.length)craveHits.push([f,d])}
+  for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;if(!onSvc(f,svc))continue;const d=[];for(const k of["S","M","W","K"])for(const it of f[k]||[])if(rx.test(it[0])||rx.test(it[1]||""))d.push(it[0]);if(d.length)craveHits.push([f,d])}
   craveHits.sort((a,b)=>b[1].length-a[1].length||a[0].title.localeCompare(b[0].title));
-  $("craveCount").textContent=craveHits.length?`${craveHits.length} film${craveHits.length>1?"s":""} with ${label} on the menu`:"";
+  $("craveCount").textContent=craveHits.length?`Combo deal: ${label} with your pick of ${craveHits.length} film${craveHits.length>1?"s":""}`:"";
   $("craveSpin").hidden=craveHits.length<2;
   $("craveGrid").innerHTML=craveHits.length?craveHits.map(([f,d])=>`<div class="crave-hit">${tapeHTML(f)}<span class="crave-dish">${ESC(d.slice(0,2).join(", "))}</span></div>`).join(""):`<p class="crave-empty">No menus with ${ESC(label)} yet. Try another food.</p>`;
 }
+document.querySelectorAll(".more-menu .btn").forEach(b=>b.addEventListener("click",()=>setTimeout(()=>b.closest("details").open=false,150)));
 $("svcSel").addEventListener("change",e=>setSvc(e.target.value));
 $("shopSvc").addEventListener("change",e=>setSvc(e.target.value));
 $("lazyBtn").addEventListener("click",()=>{lazy=!lazy;try{localStorage.setItem("mns-lazy",lazy?"1":"0")}catch(e){};setLazyUI();if(current)show(current,true)});
 $("howBtn").addEventListener("click",showWelcome);
 fillSvcSelects();setLazyUI();
-$("craveChips").addEventListener("click",e=>{const b=e.target.closest("[data-crave]");if(!b)return;craveSel=craveSel===b.dataset.crave?null:b.dataset.crave;$("craveSearch").value="";renderCrave()});
+$("craveChips").addEventListener("click",e=>{const b=e.target.closest("[data-crave]");if(!b)return;craveSel=craveSel===b.dataset.crave?null:b.dataset.crave;if(craveSel){sfx.pop();const pc=$("cbPop");pc.classList.remove("bounce");void pc.offsetWidth;pc.classList.add("bounce")}$("craveSearch").value="";renderCrave()});
 $("craveSearch").addEventListener("input",()=>{if($("craveSearch").value.trim())craveSel=null;renderCrave()});
 $("craveGrid").addEventListener("click",e=>{const t=e.target.closest(".tape");if(t){const f=FILMS.find(x=>x.id===t.dataset.id);if(f)openCase(f)}});
 $("craveSpin").addEventListener("click",()=>{const tapes=[...$("craveGrid").querySelectorAll(".tape")];if(!tapes.length)return;const p=tapes[Math.floor(Math.random()*tapes.length)];buzz([20,40,20]);tapes.forEach(t=>t.classList.remove("picked"));p.classList.add("picked");p.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{p.classList.remove("picked");const f=FILMS.find(x=>x.id===p.dataset.id);if(f)openCase(f)},reduce?0:700)});
@@ -2435,9 +2604,10 @@ try{if(!localStorage.getItem("mns-welcome"))setTimeout(showWelcome,400)}catch(e)
 try{const v=localStorage.getItem("mns-view");if(location.hash==="#shop"||v==="shop")setView("shop");else if(location.hash==="#crave"||v==="crave")setView("crave")}catch(e){}
 document.fonts.ready.then(draw);
 const initialFilmId=new URLSearchParams(window.location.search).get("film");
-const initialFilm=FILMS.find(f=>f.id===initialFilmId)||FILMS.find(f=>f.id==="Ghostbusters (1984)")||FILMS[0];
-if(initialFilmId)$("now").textContent=`${initialFilm.title} (${initialFilm.year})`;
-show(initialFilm,true);
+const startId=initialFilmId||(week&&week.id)||hist[0];
+const initialFilm=FILMS.find(f=>f.id===startId)||FILMS.find(f=>f.id==="Ghostbusters (1984)")||FILMS[0];
+if(FILMS.some(f=>f.id===startId)){$("now").textContent=initialFilm.title;show(initialFilm,true)}
+else{show(initialFilm,true).then(()=>{$("whereWheel").innerHTML=""});theatre.classList.add("closed");$("tease").textContent="Spin the wheel to raise the curtain"}
 </script>
 
 </body>
