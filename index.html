@@ -1164,6 +1164,12 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 .chips .ticket{background:url("assets/hero/paper.jpg") 0 0/240px 240px,#f3e3b8;background-blend-mode:multiply}
 .chips .ticket:nth-child(odd){transform:rotate(-1.5deg)}.chips .ticket:nth-child(even){transform:rotate(1.2deg)}
 .cb-board{background:url("assets/hero/paper.jpg") 0 0/300px 300px,radial-gradient(ellipse at 50% 0%,#fffdf5,#f1ead6 60%,#e0d6bc);background-blend-mode:multiply}
+
+/* from the 500-visitor test: stop the popcorn box pushing the page sideways, and keep the grain still on phones to save battery */
+.shop.crave,.cb-hero{overflow:clip}
+.cb-hero{overflow:visible}
+.shop.crave{overflow-x:clip}
+@media (pointer:coarse){body::before{animation:none;inset:0}}
 </style>
 
 <div id="printArea"></div>
