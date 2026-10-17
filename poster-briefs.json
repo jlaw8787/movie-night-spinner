@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 750,
- "ready_for_poster": 626,
+ "hand_written": 801,
+ "ready_for_poster": 677,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -77492,6 +77492,3977 @@
     }
    ],
    "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Anchorman 2: The Legend Continues (2013)",
+   "title": "Anchorman 2: The Legend Continues",
+   "year": "2013",
+   "theme": "uptown",
+   "tagline": "Yes, the news is now open 24 hours. So is the kitchen.",
+   "description": "Ron Burgundy and his old news team land jobs at the first 24-hour news channel in New York.",
+   "serve_cue": "Serve the snacks when the news team gets back together.",
+   "snacks": [
+    {
+     "name": "Chicken of the Cave wings",
+     "scene": "Champ's fried chicken shop, which is not really chicken",
+     "method": "Sticky fried chicken wings tossed in a sweet and spicy glaze, which Champ swears are chicken this time.",
+     "shop": [
+      "chicken wings",
+      "plain flour",
+      "smoked paprika",
+      "garlic powder",
+      "honey",
+      "sriracha",
+      "soy sauce",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Doby's lighthouse fish bites",
+     "scene": "Ron's lighthouse and his pet shark Doby",
+     "method": "Crumbed white fish bites fried golden, with lemon and a quick tartare, from Ron's lighthouse days.",
+     "shop": [
+      "white fish fillets",
+      "plain flour",
+      "eggs",
+      "panko breadcrumbs",
+      "lemon",
+      "tartare sauce",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "GNN late shift steak",
+     "scene": "the 24-hour news desk in New York",
+     "method": "New York strip steaks seared hard in a cast-iron pan with garlic butter, sliced and served with fries and creamed spinach.",
+     "shop": [
+      "sirloin steaks",
+      "butter",
+      "garlic cloves",
+      "frozen chips",
+      "spinach",
+      "thickened cream"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Linda's chocolate fondue",
+     "scene": "Ron and Linda back together",
+     "method": "Dark chocolate melted with cream for dipping strawberries, marshmallows and chunks of sponge, very seventies, very Ron.",
+     "shop": [
+      "dark chocolate",
+      "thickened cream",
+      "strawberries",
+      "marshmallows",
+      "sponge cake"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Scotch on the rocks",
+     "scene": "Ron's drink of choice, still",
+     "method": "Good blended Scotch poured over a big block of ice in a heavy glass.",
+     "shop": [
+      "Scotch whisky",
+      "cola"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Blades of Glory (2007)",
+   "title": "Blades of Glory",
+   "year": "2007",
+   "theme": "diner",
+   "tagline": "Two men, one pair of skates, plenty of snacks.",
+   "description": "Two rival figure skaters banned from singles competition team up as the first all-male pairs team.",
+   "serve_cue": "Serve the snacks when Chazz and Jimmy first take the ice together.",
+   "snacks": [
+    {
+     "name": "Rinkside soft pretzels",
+     "scene": "the ice rink snack bar",
+     "method": "Warm soft pretzels brushed with butter and coarse salt, with mustard and a cheese dip for the stands.",
+     "shop": [
+      "pizza dough",
+      "bicarbonate of soda",
+      "sea salt flakes",
+      "butter",
+      "American mustard",
+      "cheese sauce"
+     ]
+    },
+    {
+     "name": "Fire and Ice prawns",
+     "scene": "the Fire and Ice routine",
+     "method": "Chilli garlic prawns, hot off the grill, served on a bed of crushed ice with lime for the cold side.",
+     "shop": [
+      "green prawns",
+      "extra virgin olive oil",
+      "garlic cloves",
+      "red chilli",
+      "limes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Championship chicken parmigiana",
+     "scene": "the big night at the championships",
+     "method": "Crumbed chicken breast topped with tomato sauce, ham and melted cheese, with chips and salad, a proper competition dinner.",
+     "shop": [
+      "chicken breasts",
+      "plain flour",
+      "eggs",
+      "breadcrumbs",
+      "passata",
+      "leg ham",
+      "mozzarella",
+      "frozen chips",
+      "salad leaves"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Iron Lotus snowballs",
+     "scene": "the Iron Lotus, the move nobody survives",
+     "method": "Coconut-coated vanilla ice cream balls rolled through white chocolate, frozen hard and served like little snowballs.",
+     "shop": [
+      "vanilla ice cream",
+      "white chocolate",
+      "coconut oil",
+      "desiccated coconut"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Rinkside hot chocolate",
+     "scene": "thawing out after practice",
+     "method": "Thick hot chocolate made with real chocolate and milk, topped with whipped cream for the stands.",
+     "shop": [
+      "full cream milk",
+      "dark chocolate",
+      "caster sugar",
+      "whipped cream"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Semi-Pro (2008)",
+   "title": "Semi-Pro",
+   "year": "2008",
+   "theme": "diner",
+   "tagline": "Everybody love everybody. Everybody eat everything.",
+   "description": "Jackie Moon owns, coaches and plays for the Flint Tropics, a 1976 basketball team fighting to survive the merger.",
+   "serve_cue": "Serve the snacks at the Tropics' tip-off.",
+   "snacks": [
+    {
+     "name": "Flint coney dogs",
+     "scene": "Flint, Michigan, home of the Tropics",
+     "method": "Hot dogs in soft buns topped with a dry, finely ground spiced beef coney sauce, mustard and diced onion, the Flint way.",
+     "shop": [
+      "beef mince",
+      "chilli powder",
+      "ground cumin",
+      "smoked paprika",
+      "frankfurts",
+      "hot dog buns",
+      "American mustard",
+      "onion"
+     ]
+    },
+    {
+     "name": "Tropics arena popcorn",
+     "scene": "the Tropics' home court",
+     "method": "Buttery popcorn with a sprinkle of salt and a dusting of grated parmesan, poured into big striped boxes for the stands.",
+     "shop": [
+      "popcorn kernels",
+      "vegetable oil",
+      "butter",
+      "parmesan"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Jackie Moon's barbecue",
+     "scene": "the owner, coach and power forward",
+     "method": "Sticky barbecue pork ribs basted until glossy, with buttered corn and coleslaw, a big seventies cookout plate.",
+     "shop": [
+      "pork ribs",
+      "smoked paprika",
+      "barbecue sauce",
+      "corn cobs",
+      "butter",
+      "coleslaw mix",
+      "mayonnaise"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Seventies orange creamsicle cake",
+     "scene": "the Tropics' orange uniforms",
+     "method": "Light orange sponge layered with vanilla cream, the colour of a Tropics jersey. Beat 200g butter and 200g sugar, add 4 eggs and the zest of 2 oranges, then fold in 200g self-raising flour and 60ml orange juice.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "oranges",
+      "self-raising flour",
+      "thickened cream",
+      "vanilla extract"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Courtside lager",
+     "scene": "the stands in Flint",
+     "method": "Ice-cold American-style lager served in plastic cups, with lemonade for the kids.",
+     "shop": [
+      "lager",
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Other Guys (2010)",
+   "title": "The Other Guys",
+   "year": "2010",
+   "theme": "cop",
+   "tagline": "The desk cops get the case. And the takeaway.",
+   "description": "Two mismatched New York desk detectives finally get a real case and try to prove they are more than paperwork.",
+   "serve_cue": "Serve the snacks when Allen and Terry leave the desk for the street.",
+   "snacks": [
+    {
+     "name": "Desk duty bagel bites",
+     "scene": "the paperwork side of the precinct",
+     "method": "Mini bagels with cream cheese, smoked salmon and capers, the kind of thing you eat over a stack of forms.",
+     "shop": [
+      "mini bagels",
+      "cream cheese",
+      "smoked salmon",
+      "red onion",
+      "capers"
+     ]
+    },
+    {
+     "name": "Peacock pakoras",
+     "scene": "Terry wants to be a peacock, so let him fly",
+     "method": "Crisp spiced onion and spinach fritters in a chickpea batter, with mint yoghurt, as colourful as a peacock.",
+     "shop": [
+      "chickpea flour",
+      "ground cumin",
+      "chilli powder",
+      "onions",
+      "spinach",
+      "Greek yoghurt",
+      "mint",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Precinct Chinese takeaway",
+     "scene": "late nights on the case in New York",
+     "method": "Sweet and sour pork with fried rice in takeaway boxes, eaten off the desk between leads.",
+     "shop": [
+      "pork scotch fillet",
+      "cornflour",
+      "red capsicum",
+      "onion",
+      "pineapple juice",
+      "tomato sauce",
+      "white vinegar",
+      "caster sugar",
+      "long grain rice",
+      "eggs",
+      "frozen peas",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Bike messenger brownies",
+     "scene": "Allen's fancy desk drawer stash",
+     "method": "Dense fudgy brownies cut into neat squares, the stash a by-the-book accountant cop keeps in his drawer.",
+     "shop": [
+      "dark chocolate",
+      "butter",
+      "caster sugar",
+      "eggs",
+      "plain flour",
+      "cocoa"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bar after shift beers",
+     "scene": "the cop bar the precinct drinks at",
+     "method": "Cold lager in schooners with a bowl of peanuts on the side, after another long shift.",
+     "shop": [
+      "lager",
+      "salted peanuts"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Kicking & Screaming (2005)",
+   "title": "Kicking & Screaming",
+   "year": "2005",
+   "theme": "diner",
+   "tagline": "Coffee for the coach. Orange slices for the team.",
+   "description": "A mild vitamin salesman coaches his son's under-10 soccer team and gets badly hooked on coffee along the way.",
+   "serve_cue": "Serve the coffee when Phil takes his first sip and the season turns.",
+   "snacks": [
+    {
+     "name": "Halftime orange slices",
+     "scene": "the team's halftime oranges",
+     "method": "Cold navel oranges cut into wedges, exactly what every kids' team eats at halftime. Cut 6 navel oranges into wedges, keeping the skin on.",
+     "shop": [
+      "navel oranges",
+      "ice"
+     ]
+    },
+    {
+     "name": "Vitamin store trail mix",
+     "scene": "Phil's vitamin shop",
+     "method": "Nuts, seeds and dried fruit tossed with a little dark chocolate, the healthy snack Phil would sell you.",
+     "shop": [
+      "mixed nuts",
+      "pumpkin seeds",
+      "dried cranberries",
+      "dried apricots",
+      "dark chocolate"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Team barbecue sausage sizzle",
+     "scene": "the end of season team barbecue",
+     "method": "Grilled beef sausages in bread with fried onions and sauce, the end-of-season team feed. Grill 12 beef sausages until browned and cooked through.",
+     "shop": [
+      "beef sausages",
+      "onions",
+      "butter",
+      "white bread",
+      "tomato sauce",
+      "American mustard"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Coffee shop biscotti",
+     "scene": "the coffee shop where it all starts",
+     "method": "Crunchy almond biscotti twice-baked for dunking, the perfect thing to have with far too much coffee.",
+     "shop": [
+      "plain flour",
+      "caster sugar",
+      "baking powder",
+      "eggs",
+      "almonds"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Phil's one too many coffees",
+     "scene": "Phil discovers coffee and never looks back",
+     "method": "Strong plunger coffee with plenty of milk and sugar, the cup that turns a mild dad into a madman.",
+     "shop": [
+      "ground coffee",
+      "full cream milk",
+      "caster sugar"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "A Night at the Roxbury (1998)",
+   "title": "A Night at the Roxbury",
+   "year": "1998",
+   "theme": "uptown",
+   "tagline": "Head bobbing optional. Snacks mandatory.",
+   "description": "Two brothers who work in their dad's fake plant shop try every night to get into the hottest club in LA.",
+   "serve_cue": "Serve the snacks when the Butabi brothers finally make it past the door.",
+   "snacks": [
+    {
+     "name": "Roxbury club sliders",
+     "scene": "the velvet rope finally opens",
+     "method": "Little beef sliders with cheese and pickles on soft buns, the kind of thing you eat standing up in a club.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "slider buns",
+      "dill pickles",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Fake plant shop crudités",
+     "scene": "their dad's fake plant shop",
+     "method": "A real garden of crisp raw vegetables standing up in a jar, with a green herb dip, nothing fake about it.",
+     "shop": [
+      "carrots",
+      "celery sticks",
+      "cucumber",
+      "red capsicum",
+      "sour cream",
+      "parsley",
+      "chives",
+      "lemon"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Sunset Strip chicken tacos",
+     "scene": "a night out on Sunset",
+     "method": "Chipotle chicken tacos with avocado and lime in soft tortillas, LA late-night food. Toss 800g chicken thigh with 2 tbsp chipotle in adobo, garlic and lime, grill and slice.",
+     "shop": [
+      "chicken thighs",
+      "chipotle in adobo",
+      "garlic cloves",
+      "limes",
+      "small flour tortillas",
+      "avocados",
+      "iceberg lettuce",
+      "coriander"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Neon pink cheesecake cups",
+     "scene": "the neon of the dance floor",
+     "method": "No-bake strawberry cheesecake in little cups, bright pink with a biscuit base. Crush 150g biscuits with 60g melted butter into 6 glasses.",
+     "shop": [
+      "plain sweet biscuits",
+      "butter",
+      "cream cheese",
+      "icing sugar",
+      "strawberries",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Club cosmopolitan",
+     "scene": "the drinks inside the Roxbury",
+     "method": "Vodka, orange liqueur, cranberry and lime shaken and served up, pink and very nineties. Cranberry soda for the kids.",
+     "shop": [
+      "vodka",
+      "orange liqueur",
+      "cranberry juice",
+      "limes"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Stranger than Fiction (2006)",
+   "title": "Stranger than Fiction",
+   "year": "2006",
+   "theme": "romcom",
+   "tagline": "Little did he know, there would be cookies.",
+   "description": "A tax auditor starts hearing a voice narrating his life and learns he is about to die.",
+   "serve_cue": "Serve the sweets when Ana brings Harold the cookies.",
+   "snacks": [
+    {
+     "name": "Wristwatch-timed toasties",
+     "scene": "Harold's life run to the second",
+     "method": "Ham and cheese toasties cooked for exactly three minutes a side and cut into precise triangles.",
+     "shop": [
+      "white bread",
+      "butter",
+      "leg ham",
+      "cheddar"
+     ]
+    },
+    {
+     "name": "Ana's bakery flour cookies",
+     "scene": "Ana Pascal's bakery",
+     "method": "Soft butter cookies made from Ana's mixed bag of flours, warm from the oven. Beat 125g butter with 100g brown sugar and 50g caster sugar, add 1 egg and vanilla, then 200g plain flour and 1 tsp baking powder.",
+     "shop": [
+      "butter",
+      "brown sugar",
+      "caster sugar",
+      "egg",
+      "vanilla extract",
+      "plain flour",
+      "baking powder"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Harold's tax audit pot pie",
+     "scene": "a night in after another audit",
+     "method": "Chicken and leek pot pie under puff pastry, the kind of dinner a careful man counts the bites of.",
+     "shop": [
+      "chicken thighs",
+      "leeks",
+      "butter",
+      "plain flour",
+      "chicken stock",
+      "thickened cream",
+      "puff pastry",
+      "egg"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Milk and cookies",
+     "scene": "the plate of cookies Ana gives Harold",
+     "method": "A plate of warm chocolate chip cookies and a glass of cold milk, the scene that turns it all around.",
+     "shop": [
+      "butter",
+      "brown sugar",
+      "egg",
+      "plain flour",
+      "bicarbonate of soda",
+      "chocolate chips",
+      "full cream milk"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Cold glass of milk",
+     "scene": "a glass of milk with the cookies",
+     "method": "Tall glasses of ice-cold full cream milk to go with the cookies, nothing more.",
+     "shop": [
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Eurovision Song Contest: The Story of Fire Saga (2020)",
+   "title": "Eurovision Song Contest: The Story of Fire Saga",
+   "year": "2020",
+   "theme": "diner",
+   "tagline": "Play the hit song. Then dinner.",
+   "description": "Two small-town Icelandic musicians get the chance of a lifetime to represent their country at Eurovision.",
+   "serve_cue": "Serve the snacks when Fire Saga takes the stage in Edinburgh.",
+   "snacks": [
+    {
+     "name": "Húsavík hot dogs",
+     "scene": "home in Húsavík, Iceland",
+     "method": "Icelandic-style hot dogs with crispy fried onions, raw onion, sweet mustard and remoulade in soft buns.",
+     "shop": [
+      "frankfurts",
+      "hot dog buns",
+      "onion",
+      "crispy fried onions",
+      "sweet mustard",
+      "tartare sauce"
+     ]
+    },
+    {
+     "name": "Lars's dad's smoked trout",
+     "scene": "Erick the fisherman, Lars's dad",
+     "method": "Smoked trout on rye crispbread with crème fraîche, dill and pickled cucumber, a fishing village plate.",
+     "shop": [
+      "rye crispbreads",
+      "crème fraîche",
+      "smoked trout",
+      "pickled cucumbers",
+      "dill"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Icelandic lamb and potatoes",
+     "scene": "a family dinner in Húsavík",
+     "method": "Slow-roasted lamb shoulder with caramelised potatoes, peas and gravy, an Icelandic Sunday plate. Rub a 2kg lamb shoulder with salt, pepper and thyme and roast at 160C for 3 hours.",
+     "shop": [
+      "lamb shoulder",
+      "thyme",
+      "baby potatoes",
+      "caster sugar",
+      "butter",
+      "frozen peas"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Skyr with berries",
+     "scene": "an Icelandic breakfast staple",
+     "method": "Thick Icelandic-style yoghurt with honey and a pile of fresh berries, light enough after the lamb.",
+     "shop": [
+      "Greek yoghurt",
+      "mixed berries",
+      "honey"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Edinburgh after-party fizz",
+     "scene": "the song-along party in Edinburgh",
+     "method": "Sparkling wine topped up with elderflower and soda, for when everyone joins in the sing-along.",
+     "shop": [
+      "elderflower cordial",
+      "sparkling wine",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Daddy's Home (2015)",
+   "title": "Daddy's Home",
+   "year": "2015",
+   "theme": "kids",
+   "tagline": "Two dads. One barbecue.",
+   "description": "A mild radio exec tries to win over his stepkids when their cool, motorbike-riding real dad comes home.",
+   "serve_cue": "Serve the mains when Brad and Dusty go head to head.",
+   "snacks": [
+    {
+     "name": "Stepdad's veggie platter",
+     "scene": "Brad doing everything by the parenting book",
+     "method": "A neat platter of carrot, cucumber and capsicum sticks with hummus, the responsible stepdad snack.",
+     "shop": [
+      "carrots",
+      "cucumber",
+      "red capsicum",
+      "hummus"
+     ]
+    },
+    {
+     "name": "Dusty's cool dad nachos",
+     "scene": "Dusty showing up the stepdad",
+     "method": "Loaded corn chips with beef, cheese, salsa and sour cream, the cool dad's party move.",
+     "shop": [
+      "beef mince",
+      "taco seasoning",
+      "corn chips",
+      "tasty cheese",
+      "tomato salsa",
+      "sour cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Backyard dad-off burgers",
+     "scene": "the two dads at the grill",
+     "method": "Big beef burgers with cheese, lettuce, tomato and onion, built in a backyard showdown. Shape 800g beef mince into 4 patties.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "burger buns",
+      "iceberg lettuce",
+      "tomatoes",
+      "red onion",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Daddy-daughter dance cupcakes",
+     "scene": "the father-daughter dance",
+     "method": "Vanilla cupcakes with pink buttercream and sprinkles, for the night of the dance. Beat 125g butter and 150g sugar, add 2 eggs, then 200g self-raising flour and 120ml milk.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "self-raising flour",
+      "full cream milk",
+      "icing sugar",
+      "food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Smooth jazz lemonade",
+     "scene": "Brad's smooth jazz radio station",
+     "method": "Homemade lemonade with mint over ice, as smooth as the station Brad runs.",
+     "shop": [
+      "caster sugar",
+      "lemons",
+      "mint"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Get Hard (2015)",
+   "title": "Get Hard",
+   "year": "2015",
+   "theme": "diner",
+   "tagline": "Prison training starts at dinner.",
+   "description": "A millionaire facing prison hires the man who washes his car to toughen him up before he goes inside.",
+   "serve_cue": "Serve the mains when Darnell starts the training.",
+   "snacks": [
+    {
+     "name": "Car wash corner store wings",
+     "scene": "Darnell's car wash business",
+     "method": "Crispy hot wings from the corner, tossed in a buttery hot sauce with ranch on the side.",
+     "shop": [
+      "chicken wings",
+      "baking powder",
+      "hot sauce",
+      "butter",
+      "ranch dressing"
+     ]
+    },
+    {
+     "name": "Mansion canapés",
+     "scene": "James King's Bel Air mansion",
+     "method": "Tiny smoked salmon blinis with crème fraîche and chives, the millionaire's party snack. Top 16 small blinis with 150g crème fraîche, 150g smoked salmon and snipped chives.",
+     "shop": [
+      "blinis",
+      "crème fraîche",
+      "smoked salmon",
+      "chives"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Darnell's family barbecue chicken",
+     "scene": "dinner at Darnell's house",
+     "method": "Barbecue chicken thighs with mac and cheese and greens, the family dinner James gets invited to.",
+     "shop": [
+      "chicken thighs",
+      "barbecue sauce",
+      "macaroni",
+      "butter",
+      "plain flour",
+      "full cream milk",
+      "cheddar",
+      "silverbeet"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Prison yard pudding cups",
+     "scene": "getting ready for prison canteen food",
+     "method": "Chocolate pudding cups topped with crushed biscuits, the canteen dessert, done better. Whisk 600ml milk, 80g sugar, 30g cocoa and 3 tbsp cornflour over heat until thick.",
+     "shop": [
+      "full cream milk",
+      "caster sugar",
+      "cocoa",
+      "cornflour",
+      "chocolate biscuits"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Fresh green juice",
+     "scene": "James King's millionaire mornings",
+     "method": "Green apple, cucumber, celery and ginger juice, the rich man's morning drink.",
+     "shop": [
+      "green apples",
+      "cucumber",
+      "celery sticks",
+      "ginger"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Friendship (2025)",
+   "title": "Friendship",
+   "year": "2025",
+   "theme": "diner",
+   "tagline": "New mates, same snacks.",
+   "description": "A lonely suburban dad becomes obsessed with his cool new neighbour after one great night out.",
+   "serve_cue": "Serve the snacks when Craig and Austin first hang out.",
+   "snacks": [
+    {
+     "name": "Neighbour's backyard snack board",
+     "scene": "the first night hanging out with Austin",
+     "method": "Cheese, salami, crackers, olives and pickles on a board, a dad trying a bit too hard to be the cool neighbour.",
+     "shop": [
+      "cheddar",
+      "brie",
+      "salami",
+      "crackers",
+      "olives",
+      "dill pickles"
+     ]
+    },
+    {
+     "name": "Back at Austin's chips and dip",
+     "scene": "hanging out back at Austin's place",
+     "method": "Thick-cut potato chips with a French onion dip made from scratch, for the garage. Slowly cook 2 sliced onions in 30g butter for 25 minutes until deep golden, cool and chop.",
+     "shop": [
+      "onions",
+      "butter",
+      "sour cream",
+      "potato chips"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Suburban dad steak night",
+     "scene": "the attempt at a proper dinner party",
+     "method": "Grilled rump steak with roast potatoes and a green salad, the dinner Craig plans to win Austin back.",
+     "shop": [
+      "rump steaks",
+      "potatoes",
+      "vegetable oil",
+      "salad leaves",
+      "lemon"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Weatherman's cloud meringues",
+     "scene": "Austin the TV weatherman",
+     "method": "Big soft-centred meringues like puffy clouds, with cream and berries. Whisk 4 egg whites to stiff peaks, add 220g sugar until glossy and spoon 8 clouds onto a tray.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "thickened cream",
+      "mixed berries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Craft beer for new mates",
+     "scene": "trying to keep up with the cool neighbour",
+     "method": "A cold pale ale in the backyard, the drink of a new friendship.",
+     "shop": [
+      "pale ale",
+      "lemon squash"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "BASEketball (1998)",
+   "title": "BASEketball",
+   "year": "1998",
+   "theme": "teen",
+   "tagline": "Psych! Dinner's ready.",
+   "description": "Two slackers invent a backyard game that becomes a pro league, then fight to keep it pure.",
+   "serve_cue": "Serve the snacks when the Milwaukee Beers take the court.",
+   "snacks": [
+    {
+     "name": "Milwaukee cheese curds",
+     "scene": "the Milwaukee Beers' home town",
+     "method": "Fried battered cheese curds, crunchy outside and soft inside, with ranch for dipping. Cut 400g haloumi into 2cm cubes.",
+     "shop": [
+      "haloumi",
+      "plain flour",
+      "egg",
+      "lager",
+      "ranch dressing",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Psych-out pretzel bites",
+     "scene": "the psych-out at the free throw",
+     "method": "Soft pretzel bites with beer cheese sauce, the stadium snack for a Beers game. Cut 500g pizza dough into bites, dip in water simmering with 3 tbsp bicarb soda for 15 seconds, salt and bake at 220C for 10 minutes.",
+     "shop": [
+      "pizza dough",
+      "bicarbonate of soda",
+      "sea salt flakes",
+      "cheddar",
+      "lager",
+      "cornflour"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Beer-braised bratwurst",
+     "scene": "the Milwaukee Beers",
+     "method": "Bratwurst simmered in beer and onions, then grilled and served in rolls with mustard and sauerkraut.",
+     "shop": [
+      "bratwurst",
+      "onions",
+      "lager",
+      "long rolls",
+      "sauerkraut",
+      "wholegrain mustard"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Backyard driveway sundaes",
+     "scene": "the game started in the driveway",
+     "method": "Vanilla ice cream with chocolate sauce, nuts and a cherry, the post-game treat. Scoop 1L vanilla ice cream into 4 bowls.",
+     "shop": [
+      "vanilla ice cream",
+      "chocolate topping",
+      "roasted peanuts",
+      "maraschino cherries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Milwaukee lager",
+     "scene": "the team named after beer",
+     "method": "Ice-cold lager in plastic cups for the stands, and lemonade for the kids.",
+     "shop": [
+      "lager",
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Super Troopers (2001)",
+   "title": "Super Troopers",
+   "year": "2001",
+   "theme": "cop",
+   "tagline": "Meow. Pass the syrup.",
+   "description": "Five prank-loving Vermont state troopers try to save their station from budget cuts and the local police.",
+   "serve_cue": "Serve the sweets when the maple syrup chugging starts.",
+   "snacks": [
+    {
+     "name": "Vermont cheddar and apple",
+     "scene": "the troopers' Vermont patch",
+     "method": "Sharp aged cheddar with crisp apple slices and crackers, Vermont on a plate. Slice 300g aged cheddar and 3 crisp apples.",
+     "shop": [
+      "vintage cheddar",
+      "green apples",
+      "crackers"
+     ]
+    },
+    {
+     "name": "Highway patrol fries",
+     "scene": "Farva's order at the restaurant",
+     "method": "Thick fries with salt and a big cup of cola on the side, the order Farva gets so worked up about.",
+     "shop": [
+      "frozen chips",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Station house burgers",
+     "scene": "the roadside burger joint",
+     "method": "Big beef burgers with cheddar and bacon, the roadside stop on a long shift. Shape 800g beef mince into 4 patties and grill 4 minutes a side, adding cheddar at the end.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "bacon",
+      "burger buns",
+      "iceberg lettuce",
+      "tomatoes",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Maple syrup pancakes",
+     "scene": "the maple syrup chugging contest",
+     "method": "Fluffy pancakes drowned in proper maple syrup, but for pouring, not chugging. Whisk 300g self-raising flour, 2 tbsp sugar, 2 eggs and 400ml milk into a batter.",
+     "shop": [
+      "self-raising flour",
+      "caster sugar",
+      "eggs",
+      "full cream milk",
+      "butter",
+      "maple syrup"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Litre of cola",
+     "scene": "Farva's litre of cola",
+     "method": "Big cold glasses of cola over ice, poured by the litre.",
+     "shop": [
+      "cola"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Beerfest (2006)",
+   "title": "Beerfest",
+   "year": "2006",
+   "theme": "diner",
+   "tagline": "Prost to dinner.",
+   "description": "Two American brothers discover a secret beer games tournament at Oktoberfest and train a team to win it.",
+   "serve_cue": "Serve the mains when the team enters the Beerfest tent.",
+   "snacks": [
+    {
+     "name": "Oktoberfest pretzels",
+     "scene": "the Munich beer hall",
+     "method": "Big soft pretzels with coarse salt, butter and sharp mustard, the beer hall classic. Roll 500g pizza dough into 4 long ropes and twist into pretzels.",
+     "shop": [
+      "pizza dough",
+      "bicarbonate of soda",
+      "sea salt flakes",
+      "butter",
+      "hot English mustard"
+     ]
+    },
+    {
+     "name": "Obatzda cheese spread",
+     "scene": "a Bavarian beer garden",
+     "method": "Soft cheese whipped with butter, paprika and onion, spread on rye bread, a Bavarian beer snack.",
+     "shop": [
+      "brie",
+      "butter",
+      "sweet paprika",
+      "onion",
+      "rye bread",
+      "radishes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Great Gam Gam's schnitzel",
+     "scene": "the family recipe from the old country",
+     "method": "Pork schnitzel crumbed and fried golden with potato salad and a lemon wedge. Pound 4 pork steaks thin.",
+     "shop": [
+      "pork steaks",
+      "plain flour",
+      "eggs",
+      "breadcrumbs",
+      "butter",
+      "potato salad",
+      "lemon"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Apple strudel",
+     "scene": "a German family dessert",
+     "method": "Flaky pastry rolled around spiced apple and sultanas, dusted with icing sugar and served with cream.",
+     "shop": [
+      "green apples",
+      "caster sugar",
+      "ground cinnamon",
+      "sultanas",
+      "puff pastry",
+      "egg",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "German lager by the stein",
+     "scene": "the beer games themselves",
+     "method": "Cold German lager poured into big steins, with apple juice spritzer for anyone not drinking.",
+     "shop": [
+      "German lager",
+      "apple juice",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Hot Rod (2007)",
+   "title": "Hot Rod",
+   "year": "2007",
+   "theme": "teen",
+   "tagline": "Cool beans.",
+   "description": "An amateur stuntman tries to jump fifteen buses to raise money for his stepdad's heart operation.",
+   "serve_cue": "Serve the snacks when Rod lines up the big jump.",
+   "snacks": [
+    {
+     "name": "Cool beans dip",
+     "scene": "cool beans, Rod's catchphrase",
+     "method": "Warm refried beans topped with melted cheese, salsa and sour cream, served with corn chips. Cool beans.",
+     "shop": [
+      "refried beans",
+      "tasty cheese",
+      "tomato salsa",
+      "sour cream",
+      "corn chips"
+     ]
+    },
+    {
+     "name": "Stunt crew hot dogs",
+     "scene": "Rod's stunt crew on the ramp",
+     "method": "Grilled hot dogs with mustard and onion, eaten between stunts at the quarry. Grill 8 frankfurts and put in 8 hot dog buns with mustard, tomato sauce and diced onion.",
+     "shop": [
+      "frankfurts",
+      "hot dog buns",
+      "American mustard",
+      "tomato sauce",
+      "onion"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Pool party burgers",
+     "scene": "the public pool party",
+     "method": "Classic beef burgers with cheese and pickles, for a summer pool party. Shape 800g beef mince into 4 patties and grill 4 minutes a side with cheese.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "burger buns",
+      "dill pickles",
+      "onion",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Fifteen bus jump cookies",
+     "scene": "the fifteen bus jump",
+     "method": "Chewy choc chip cookies lined up in a long row, fifteen of them, ready for the jump.",
+     "shop": [
+      "butter",
+      "brown sugar",
+      "egg",
+      "plain flour",
+      "bicarbonate of soda",
+      "chocolate chips"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Whiskey-free whiskey",
+     "scene": "Rod's dad was a stuntman, or so he thinks",
+     "method": "Iced tea with honey and lemon in a tumbler, looking tough but going down easy.",
+     "shop": [
+      "black tea bags",
+      "honey",
+      "lemon"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Walk Hard: The Dewey Cox Story (2007)",
+   "title": "Walk Hard: The Dewey Cox Story",
+   "year": "2007",
+   "theme": "diner",
+   "tagline": "Walk hard. Eat big.",
+   "description": "A rock star's whole wild life story, from a farm in Alabama to the top of the charts and back.",
+   "serve_cue": "Serve the mains when Dewey makes it big.",
+   "snacks": [
+    {
+     "name": "Alabama boiled peanuts",
+     "scene": "the farm in Springberry, Alabama",
+     "method": "Soft salty boiled peanuts in the shell, a Southern porch snack. Simmer 500g raw peanuts in the shell in 3L water with 80g salt for 3 hours until soft.",
+     "shop": [
+      "raw peanuts",
+      "salt"
+     ]
+    },
+    {
+     "name": "Fifties diner cheese fries",
+     "scene": "Dewey's first gigs in the fifties",
+     "method": "Crisp shoestring fries smothered in melted cheddar sauce and spring onion, a diner basket from Dewey's early days on the road.",
+     "shop": [
+      "frozen shoestring fries",
+      "butter",
+      "plain flour",
+      "full cream milk",
+      "cheddar",
+      "spring onions"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Southern fried chicken",
+     "scene": "home cooking from Alabama",
+     "method": "Buttermilk fried chicken with mashed potatoes and gravy, Southern Sunday cooking. Soak 1.2kg chicken pieces in 300ml buttermilk overnight.",
+     "shop": [
+      "chicken pieces",
+      "buttermilk",
+      "plain flour",
+      "smoked paprika",
+      "potatoes",
+      "butter",
+      "gravy powder",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sweet potato pie",
+     "scene": "Mama Cox's kitchen",
+     "method": "Spiced sweet potato custard in a short pastry case, a Southern family dessert. Mash 500g cooked sweet potato with 150g brown sugar, 2 eggs, 200ml evaporated milk, cinnamon and nutmeg.",
+     "shop": [
+      "sweet potato",
+      "brown sugar",
+      "eggs",
+      "evaporated milk",
+      "ground cinnamon",
+      "sweet shortcrust pastry"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Sweet tea",
+     "scene": "a Southern porch drink",
+     "method": "Strong black tea sweetened while hot and poured over lots of ice with lemon.",
+     "shop": [
+      "black tea bags",
+      "caster sugar",
+      "lemon"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Wet Hot American Summer (2001)",
+   "title": "Wet Hot American Summer",
+   "year": "2001",
+   "theme": "teen",
+   "tagline": "Last day of camp. First night of snacks.",
+   "description": "The counsellors at a 1981 summer camp try to sort out their love lives on the last day before everyone goes home.",
+   "serve_cue": "Serve the snacks when the last day at Camp Firewood begins.",
+   "snacks": [
+    {
+     "name": "Gene's can of mixed vegetables",
+     "scene": "Gene the cook talks to a can of vegetables",
+     "method": "Roasted mixed vegetables tossed with herbs, a better use for the vegetables Gene keeps talking to.",
+     "shop": [
+      "zucchini",
+      "red capsicum",
+      "carrots",
+      "red onion",
+      "vegetable oil",
+      "dried mixed herbs"
+     ]
+    },
+    {
+     "name": "Camp Firewood campfire s'mores",
+     "scene": "the camp campfire",
+     "method": "Toasted marshmallows and chocolate squashed between biscuits around the fire. Toast 16 marshmallows until golden.",
+     "shop": [
+      "marshmallows",
+      "milk chocolate",
+      "plain sweet biscuits"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Mess hall sloppy joes",
+     "scene": "the Camp Firewood mess hall",
+     "method": "Saucy beef mince in soft buns, camp cafeteria food from the summer of 1981. Brown 500g beef mince with 1 onion and 1 capsicum, add 200ml tomato sauce, 2 tbsp Worcestershire and 1 tbsp brown sugar and simmer 15 minutes.",
+     "shop": [
+      "beef mince",
+      "onion",
+      "green capsicum",
+      "tomato sauce",
+      "Worcestershire sauce",
+      "brown sugar",
+      "burger buns"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Last day bug juice ice blocks",
+     "scene": "the last day of camp",
+     "method": "Frozen fruit punch ice blocks, the camp drink frozen solid for a hot summer day.",
+     "shop": [
+      "tropical juice",
+      "lemonade"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bug juice",
+     "scene": "the classic camp fruit drink",
+     "method": "Red fruit cordial mixed with water and plenty of ice, the classic camp drink.",
+     "shop": [
+      "red cordial"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Role Models (2008)",
+   "title": "Role Models",
+   "year": "2008",
+   "theme": "teen",
+   "tagline": "Mentoring starts with snacks.",
+   "description": "Two energy drink salesmen get sentenced to community service mentoring a medieval role-playing teen and a foul-mouthed kid.",
+   "serve_cue": "Serve the snacks when the battle at LAIRE begins.",
+   "snacks": [
+    {
+     "name": "LAIRE battle drumsticks",
+     "scene": "the medieval battle game in the park",
+     "method": "Roast chicken drumsticks to eat with your hands, like a medieval feast. Rub 12 chicken drumsticks with oil, salt, garlic and rosemary and roast at 200C for 40 minutes until golden.",
+     "shop": [
+      "chicken drumsticks",
+      "vegetable oil",
+      "garlic powder",
+      "rosemary"
+     ]
+    },
+    {
+     "name": "Sturdy Wings snack pack",
+     "scene": "the mentoring programme",
+     "method": "Mixed popcorn, pretzels and lollies in paper bags, the snack pack for a mentoring day.",
+     "shop": [
+      "popcorn kernels",
+      "butter",
+      "pretzels",
+      "mixed lollies"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Burger night with Ronnie",
+     "scene": "Ronnie's burger outing",
+     "method": "Cheeseburgers with fries, the outing that finally wins Ronnie over. Shape 800g beef mince into 4 patties, grill and top with cheese.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "burger buns",
+      "dill pickles",
+      "frozen chips"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Medieval honey cakes",
+     "scene": "the kingdom of LAIRE",
+     "method": "Little honey and spice cakes fit for a king of the realm. Melt 125g butter with 150g honey, mix in 2 eggs, 200g self-raising flour and 1 tsp mixed spice.",
+     "shop": [
+      "butter",
+      "honey",
+      "eggs",
+      "self-raising flour",
+      "mixed spice"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Minotaur energy lemonade",
+     "scene": "the Minotaur energy drink they sell",
+     "method": "Fizzy citrus lemonade with ginger, the closest thing to a Minotaur without the crash.",
+     "shop": [
+      "lemons",
+      "limes",
+      "caster sugar",
+      "ginger",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "I Love You, Man (2009)",
+   "title": "I Love You, Man",
+   "year": "2009",
+   "theme": "romcom",
+   "tagline": "Slappin' da snacks.",
+   "description": "A friendless groom-to-be goes on a series of man-dates to find a best man and meets the one guy who gets him.",
+   "serve_cue": "Serve the snacks when Peter and Sydney head to the gig.",
+   "snacks": [
+    {
+     "name": "Venice Beach fish tacos",
+     "scene": "Sydney's place on Venice Beach",
+     "method": "Crispy battered fish in small tortillas with slaw, lime and chipotle mayo. Cut 500g white fish into strips, dip in a batter of 120g flour and 180ml cold beer and fry at 180C.",
+     "shop": [
+      "white fish fillets",
+      "plain flour",
+      "lager",
+      "small flour tortillas",
+      "cabbage",
+      "limes",
+      "mayonnaise",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Man cave nachos",
+     "scene": "Sydney's man cave",
+     "method": "Corn chips with cheese, beans and jalapeños, the man cave staple. Spread 300g corn chips on a tray, top with a tin of black beans and 200g grated cheese and bake at 200C for 10 minutes.",
+     "shop": [
+      "corn chips",
+      "black beans",
+      "tasty cheese",
+      "pickled jalapeños",
+      "tomato salsa"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Open house sandwiches",
+     "scene": "Peter's open house as a realtor",
+     "method": "A platter of gourmet sandwiches for an open home: roast beef with horseradish and chicken with avocado.",
+     "shop": [
+      "sourdough",
+      "horseradish cream",
+      "roast beef",
+      "rocket",
+      "cooked chicken",
+      "avocados",
+      "mayonnaise"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Wedding cupcakes",
+     "scene": "Peter and Zooey's wedding",
+     "method": "Vanilla cupcakes with white buttercream for the big day. Beat 125g butter and 150g sugar, add 2 eggs, 200g self-raising flour and 120ml milk.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "self-raising flour",
+      "full cream milk",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Gig night beers",
+     "scene": "the rock gig Peter and Sydney go to",
+     "method": "Cold lager at the gig, with ginger beer for the drivers.",
+     "shop": [
+      "lager",
+      "ginger beer"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Pineapple Express (2008)",
+   "title": "Pineapple Express",
+   "year": "2008",
+   "theme": "diner",
+   "tagline": "Pineapple, everything.",
+   "description": "A process server and his dealer go on the run after witnessing a murder, armed with nothing but a rare strain called Pineapple Express.",
+   "serve_cue": "Serve the snacks when Dale and Saul hit the road.",
+   "snacks": [
+    {
+     "name": "Pineapple chilli salsa",
+     "scene": "the pineapple in the name",
+     "method": "Fresh pineapple, red onion, chilli and coriander with lime, scooped up with corn chips. Dice half a pineapple and mix with half a red onion, 1 chopped chilli, coriander and the juice of 2 limes.",
+     "shop": [
+      "pineapple",
+      "red onion",
+      "red chilli",
+      "coriander",
+      "limes",
+      "corn chips"
+     ]
+    },
+    {
+     "name": "Saul's apartment snack pile",
+     "scene": "the couch at Saul's apartment",
+     "method": "Cheese puffs, pretzels and chocolate peanuts tipped into a big bowl, a couch snack pile.",
+     "shop": [
+      "cheese puffs",
+      "pretzels",
+      "chocolate peanuts"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Pineapple teriyaki chicken",
+     "scene": "the getaway with a pineapple theme",
+     "method": "Grilled teriyaki chicken with charred pineapple and rice. Marinate 1kg chicken thighs in 100ml teriyaki sauce for 30 minutes and grill.",
+     "shop": [
+      "chicken thighs",
+      "teriyaki sauce",
+      "pineapple",
+      "jasmine rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Pineapple upside-down cake",
+     "scene": "the pineapple in the name",
+     "method": "Buttery cake baked over caramel and pineapple rings, turned out warm. Melt 60g butter with 100g brown sugar in a 23cm tin and lay over 8 pineapple rings.",
+     "shop": [
+      "butter",
+      "brown sugar",
+      "tinned pineapple rings",
+      "caster sugar",
+      "eggs",
+      "self-raising flour"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Pineapple crush",
+     "scene": "the pineapple in the name",
+     "method": "Pineapple juice with lime and soda over crushed ice.",
+     "shop": [
+      "pineapple juice",
+      "limes",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Knocked Up (2007)",
+   "title": "Knocked Up",
+   "year": "2007",
+   "theme": "romcom",
+   "tagline": "One night out. Nine months of snacks.",
+   "description": "A slacker and a rising TV journalist find out a one-night stand has left them expecting a baby.",
+   "serve_cue": "Serve the snacks when Ben and Alison find out.",
+   "snacks": [
+    {
+     "name": "Housemates' couch nachos",
+     "scene": "Ben's house full of slacker mates",
+     "method": "Corn chips with melted cheese, beans and salsa, eaten off the couch. Spread 300g corn chips on a tray, add a tin of refried beans and 200g grated cheese and bake at 200C for 10 minutes.",
+     "shop": [
+      "corn chips",
+      "refried beans",
+      "tasty cheese",
+      "tomato salsa"
+     ]
+    },
+    {
+     "name": "Craving pickles and ice cream",
+     "scene": "the pregnancy cravings",
+     "method": "A cheeky plate of crisp dill pickles beside a scoop of vanilla ice cream, the classic craving combo.",
+     "shop": [
+      "dill pickles",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "LA Thai takeaway",
+     "scene": "dinner on the run in LA",
+     "method": "Green chicken curry with jasmine rice, a takeaway night in. Fry 3 tbsp green curry paste, add 400ml coconut milk and 800g sliced chicken thigh and simmer 15 minutes.",
+     "shop": [
+      "green curry paste",
+      "coconut milk",
+      "chicken thighs",
+      "red capsicum",
+      "green beans",
+      "Thai basil",
+      "jasmine rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Baby shower cupcakes",
+     "scene": "the baby shower",
+     "method": "Vanilla cupcakes with pastel buttercream for a baby shower. Beat 125g butter and 150g sugar, add 2 eggs, 200g self-raising flour and 120ml milk.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "self-raising flour",
+      "full cream milk",
+      "icing sugar",
+      "food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Mocktail for the mum-to-be",
+     "scene": "no drinks for nine months",
+     "method": "Sparkling grape juice with lime and mint, a mocktail for the mum-to-be.",
+     "shop": [
+      "grape juice",
+      "limes",
+      "soda water",
+      "mint"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The 40-Year-Old Virgin (2005)",
+   "title": "The 40-Year-Old Virgin",
+   "year": "2005",
+   "theme": "romcom",
+   "tagline": "Breakfast routine, sorted.",
+   "description": "A shy electronics store worker is pushed by his workmates into finally getting out there at 40.",
+   "serve_cue": "Serve the snacks when Andy makes his famous egg salad sandwich.",
+   "snacks": [
+    {
+     "name": "Andy's egg salad sandwiches",
+     "scene": "Andy's careful egg salad sandwich routine",
+     "method": "Creamy egg salad on soft white bread, made carefully, exactly the way Andy does it every day.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "American mustard",
+      "white bread"
+     ]
+    },
+    {
+     "name": "Smart Tech poker night snacks",
+     "scene": "poker night with the guys",
+     "method": "Chips, salsa and peanuts on the poker table. Tip 200g corn chips into a bowl with 1 jar salsa beside it and a bowl of 200g salted peanuts.",
+     "shop": [
+      "corn chips",
+      "tomato salsa",
+      "salted peanuts"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Trish's family dinner",
+     "scene": "dinner at Trish's with the kids",
+     "method": "Roast chicken with vegetables, the family dinner at Trish's. Rub a 1.8kg chicken with butter, salt and lemon and roast at 200C for 1 hour 15 minutes.",
+     "shop": [
+      "chicken",
+      "butter",
+      "lemon",
+      "potatoes",
+      "carrots"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Speed dating chocolate truffles",
+     "scene": "the speed dating night",
+     "method": "Rich chocolate truffles rolled in cocoa, a little date-night sweet. Melt 200g dark chocolate into 120ml hot cream and chill until firm.",
+     "shop": [
+      "dark chocolate",
+      "thickened cream",
+      "cocoa"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Andy's glass of milk",
+     "scene": "Andy's careful routine",
+     "method": "Ice-cold milk in a tall glass, to go with the egg salad.",
+     "shop": [
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Hot Tub Time Machine (2010)",
+   "title": "Hot Tub Time Machine",
+   "year": "2010",
+   "theme": "teen",
+   "tagline": "Back to 1986, snacks included.",
+   "description": "Four friends get sent back to a 1986 ski weekend by a hot tub and try not to change the future.",
+   "serve_cue": "Serve the drinks when the hot tub sends them back to 1986.",
+   "snacks": [
+    {
+     "name": "Kodiak Valley ski lodge fondue",
+     "scene": "the ski lodge in 1986",
+     "method": "Swiss cheese fondue with bread cubes, perfect after a day on the slopes. Rub a pot with garlic, heat 300ml white wine, then stir in 400g grated gruyère and emmental tossed in 1 tbsp cornflour until smooth.",
+     "shop": [
+      "garlic bulb",
+      "white wine",
+      "gruyère",
+      "cornflour",
+      "baguette"
+     ]
+    },
+    {
+     "name": "Eighties party pizza rolls",
+     "scene": "the 1986 party",
+     "method": "Little rolls of pizza dough filled with pepperoni and cheese, baked golden. Roll 500g pizza dough flat, spread with pizza sauce and top with 100g pepperoni and 150g mozzarella.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "pepperoni",
+      "mozzarella"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Ski lodge chilli",
+     "scene": "warming up at the lodge",
+     "method": "Beef and bean chilli with sour cream and cheese, warming food for the snow. Brown 800g beef mince with an onion and 2 tbsp chilli powder.",
+     "shop": [
+      "beef mince",
+      "onion",
+      "chilli powder",
+      "diced tomatoes",
+      "tinned kidney beans",
+      "sour cream",
+      "tasty cheese"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Snowcapped brownies",
+     "scene": "the ski slopes",
+     "method": "Fudgy brownies dusted with icing sugar like fresh snow. Melt 200g dark chocolate with 180g butter, whisk in 300g sugar and 3 eggs, fold in 100g flour and 30g cocoa.",
+     "shop": [
+      "dark chocolate",
+      "butter",
+      "caster sugar",
+      "eggs",
+      "plain flour",
+      "cocoa",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Russian energy drink, toned down",
+     "scene": "the Russian energy drink spilled on the controls",
+     "method": "A sharp citrus and ginger fizz, the closest thing to the energy drink that started it all.",
+     "shop": [
+      "lemons",
+      "oranges",
+      "caster sugar",
+      "ginger",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Harold & Kumar Go to White Castle (2004)",
+   "title": "Harold & Kumar Go to White Castle",
+   "year": "2004",
+   "theme": "teen",
+   "tagline": "One craving. One very long night.",
+   "description": "Two room-mates set out for late-night sliders and end up on an all-night odyssey across New Jersey.",
+   "serve_cue": "Serve the sliders when Harold and Kumar finally reach the counter.",
+   "snacks": [
+    {
+     "name": "New Jersey diner fries",
+     "scene": "the long drive across New Jersey",
+     "method": "Crinkle-cut fries with salt and a side of gravy for dipping, road trip food. Bake 1kg frozen crinkle-cut chips at 220C for 25 minutes.",
+     "shop": [
+      "frozen crinkle-cut chips",
+      "gravy powder"
+     ]
+    },
+    {
+     "name": "Freakshow pickle spears",
+     "scene": "the strangest stop of the night",
+     "method": "Crisp dill pickle spears fried in a light batter with ranch, a weird detour that works.",
+     "shop": [
+      "dill pickles",
+      "plain flour",
+      "lager",
+      "ranch dressing",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Late-night steamed onion sliders",
+     "scene": "the little square burgers they crave all night",
+     "method": "Tiny beef patties steamed on a bed of diced onion, then stacked with cheese and pickles in soft square buns.",
+     "shop": [
+      "beef mince",
+      "onions",
+      "cheddar",
+      "slider buns",
+      "dill pickles"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Midnight milkshakes",
+     "scene": "the end of the quest",
+     "method": "Thick vanilla milkshakes, the only thing to finish a night like that. Blend 1L vanilla ice cream with 500ml cold milk until thick.",
+     "shop": [
+      "vanilla ice cream",
+      "full cream milk"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Road trip cola",
+     "scene": "the drive through the night",
+     "method": "Cold cola over ice with a wedge of lime.",
+     "shop": [
+      "cola",
+      "lime"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Dude, Where's My Car? (2000)",
+   "title": "Dude, Where's My Car?",
+   "year": "2000",
+   "theme": "teen",
+   "tagline": "And then? And then dinner.",
+   "description": "Two stoners wake up with no memory of the night before and no idea where they parked the car.",
+   "serve_cue": "Serve the mains at the Chinese drive-thru scene. And then?",
+   "snacks": [
+    {
+     "name": "Sweet and dude spring rolls",
+     "scene": "the matching tattoos",
+     "method": "Crisp vegetable spring rolls with sweet chilli sauce, one for each half of the tattoo.",
+     "shop": [
+      "frozen spring rolls",
+      "sweet chilli sauce",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Space cadet popcorn",
+     "scene": "the alien cult and the space cadets",
+     "method": "Rainbow-coloured sweet popcorn, very out of this world. Pop 100g popcorn kernels. Melt 100g white chocolate, split into bowls with a drop of colouring each and drizzle over the popcorn.",
+     "shop": [
+      "popcorn kernels",
+      "white chocolate",
+      "food colouring"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "And then Chinese drive-thru",
+     "scene": "the drive-thru that keeps saying and then",
+     "method": "A Chinese takeaway spread: lemon chicken, beef and broccoli and fried rice. And then? And then that's it.",
+     "shop": [
+      "chicken breast",
+      "cornflour",
+      "lemon sauce",
+      "rump steak",
+      "broccoli",
+      "oyster sauce",
+      "garlic cloves",
+      "jasmine rice",
+      "eggs",
+      "frozen peas",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Fortune cookies",
+     "scene": "the Chinese drive-thru",
+     "method": "Crisp homemade fortune cookies folded around little paper messages. Whisk 2 egg whites, 80g sugar, 50g melted butter, 60g flour and vanilla.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "butter",
+      "plain flour",
+      "vanilla extract"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Drive-thru soft drink",
+     "scene": "the order at the speaker",
+     "method": "Big cups of cold lemonade over ice. Fill 4 large cups with ice and pour in cold lemonade.",
+     "shop": [
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Kingpin (1996)",
+   "title": "Kingpin",
+   "year": "1996",
+   "theme": "diner",
+   "tagline": "Don't get Munsoned. Get fed.",
+   "description": "A washed-up one-handed bowler takes a talented Amish man on the road to win a million-dollar tournament in Reno.",
+   "serve_cue": "Serve the mains when Roy and Ishmael hit the road to Reno.",
+   "snacks": [
+    {
+     "name": "Bowling alley chilli fries",
+     "scene": "the bowling alleys on the road",
+     "method": "Crisp fries smothered in beef chilli and melted cheese, bowling alley snack bar food. Bake 1kg frozen chips.",
+     "shop": [
+      "frozen chips",
+      "beef mince",
+      "chilli powder",
+      "diced tomatoes",
+      "tasty cheese"
+     ]
+    },
+    {
+     "name": "Amish farm bread and butter",
+     "scene": "Ishmael's family farm",
+     "method": "Thick slices of fresh white bread with farm butter and apple butter. Slice a fresh white loaf thickly.",
+     "shop": [
+      "white bread",
+      "butter",
+      "apple sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Amish chicken and noodles",
+     "scene": "dinner at the Amish farm",
+     "method": "Chicken simmered with thick egg noodles in rich broth, served over mashed potato the Amish way.",
+     "shop": [
+      "chicken thighs",
+      "chicken stock",
+      "egg noodles",
+      "potatoes",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Shoofly pie",
+     "scene": "Pennsylvania Amish country",
+     "method": "A sticky molasses pie with a crumb top, the classic Amish dessert. Rub 150g flour, 100g brown sugar and 60g butter into crumbs.",
+     "shop": [
+      "plain flour",
+      "brown sugar",
+      "butter",
+      "molasses",
+      "egg",
+      "bicarbonate of soda",
+      "shortcrust pastry"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Fresh farm milk",
+     "scene": "the farm Ishmael comes from",
+     "method": "Ice-cold full cream milk, straight from the farm.",
+     "shop": [
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Black Sheep (1996)",
+   "title": "Black Sheep",
+   "year": "1996",
+   "theme": "diner",
+   "tagline": "Rock slide! Then dinner.",
+   "description": "A clumsy younger brother keeps wrecking his older brother's campaign for governor of Washington.",
+   "serve_cue": "Serve the snacks when the campaign hits the road.",
+   "snacks": [
+    {
+     "name": "Campaign rally pigs in blankets",
+     "scene": "the campaign rallies",
+     "method": "Cocktail franks wrapped in puff pastry, the snack at every rally. Cut 2 sheets puff pastry into strips and wrap 24 cocktail franks.",
+     "shop": [
+      "puff pastry",
+      "cocktail frankfurts",
+      "egg",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Washington apple slices",
+     "scene": "the campaign in Washington State",
+     "method": "Crisp red apple slices with peanut butter for dipping. Slice 4 red apples and serve with 200g peanut butter for dipping.",
+     "shop": [
+      "red apples",
+      "peanut butter"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Cabin campfire salmon",
+     "scene": "hiding out at the cabin",
+     "method": "Salmon fillets baked with lemon and dill, cabin food. Lay 4 salmon fillets on foil with lemon slices, dill and butter, wrap and bake at 200C for 15 minutes.",
+     "shop": [
+      "salmon fillets",
+      "lemon",
+      "dill",
+      "butter",
+      "baby potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Campaign trail apple crumble",
+     "scene": "small-town campaign stops",
+     "method": "Warm apple crumble with cream, a small-town fundraiser dessert. Toss 5 sliced apples with 60g sugar and cinnamon.",
+     "shop": [
+      "green apples",
+      "caster sugar",
+      "ground cinnamon",
+      "butter",
+      "plain flour",
+      "rolled oats",
+      "brown sugar",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Seattle coffee",
+     "scene": "the Pacific Northwest",
+     "method": "Strong brewed coffee with milk, to get through the campaign.",
+     "shop": [
+      "ground coffee",
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Billy Madison (1995)",
+   "title": "Billy Madison",
+   "year": "1995",
+   "theme": "teen",
+   "tagline": "Back to school, back to lunch.",
+   "description": "A rich man-child has to repeat grades one to twelve in six months to inherit his father's hotel empire.",
+   "serve_cue": "Serve the snacks when Billy starts first grade.",
+   "snacks": [
+    {
+     "name": "Grade one lunch box",
+     "scene": "Billy's first day back at school",
+     "method": "Little sandwiches, fruit cups and cheese sticks packed like a school lunch box. Make 4 ham and cheese sandwiches and cut into quarters.",
+     "shop": [
+      "white bread",
+      "leg ham",
+      "cheddar",
+      "cheese sticks",
+      "red apple",
+      "fruit cups"
+     ]
+    },
+    {
+     "name": "Madison hotel room service",
+     "scene": "his father's hotel empire",
+     "method": "Mini club sandwiches on toothpicks, the room service Billy grew up on. Toast 9 slices of bread and layer with 150g chicken, 4 rashers crisp bacon, lettuce, tomato and mayo.",
+     "shop": [
+      "white bread",
+      "cooked chicken",
+      "bacon",
+      "iceberg lettuce",
+      "tomatoes",
+      "mayonnaise"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Pool party hot dogs",
+     "scene": "the pool party Billy throws",
+     "method": "Grilled hot dogs with all the toppings, the backyard pool party at the Madison mansion.",
+     "shop": [
+      "frankfurts",
+      "hot dog buns",
+      "American mustard",
+      "tomato sauce",
+      "onion",
+      "relish"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Chocolate pudding cups",
+     "scene": "a school cafeteria classic",
+     "method": "Smooth chocolate pudding in little cups with whipped cream on top. Whisk 600ml milk, 80g sugar, 30g cocoa and 3 tbsp cornflour over heat until thick.",
+     "shop": [
+      "full cream milk",
+      "caster sugar",
+      "cocoa",
+      "cornflour",
+      "whipped cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Chocolate milk",
+     "scene": "the school lunch drink",
+     "method": "Cold chocolate milk shaken up in a jar.",
+     "shop": [
+      "full cream milk",
+      "drinking chocolate"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Waterboy (1998)",
+   "title": "The Waterboy",
+   "year": "1998",
+   "theme": "diner",
+   "tagline": "High quality H2O. Then gumbo.",
+   "description": "A sheltered Louisiana waterboy discovers he can tackle like nobody else and becomes a college football star.",
+   "serve_cue": "Serve the drinks when Bobby hands out the water.",
+   "snacks": [
+    {
+     "name": "Bayou hush puppies",
+     "scene": "the Louisiana bayou",
+     "method": "Golden cornmeal hush puppies with spring onion, fried crisp. Mix 200g cornmeal, 100g flour, 2 tsp baking powder, 1 egg, 250ml buttermilk and 2 spring onions.",
+     "shop": [
+      "cornmeal",
+      "plain flour",
+      "baking powder",
+      "egg",
+      "buttermilk",
+      "spring onions",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Tailgate Cajun prawns",
+     "scene": "game day in Louisiana",
+     "method": "Prawns tossed in Cajun spice and butter, cooked hot and fast. Toss 600g peeled prawns with 2 tsp Cajun spice and cook in 50g butter with 2 garlic cloves for 3 minutes.",
+     "shop": [
+      "green prawns",
+      "Cajun seasoning",
+      "butter",
+      "garlic cloves",
+      "lemon"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Mama Boucher's gumbo",
+     "scene": "Mama's bayou kitchen",
+     "method": "Dark roux gumbo with chicken, smoked sausage and okra over rice, Louisiana home cooking. Cook 80g flour in 80ml oil to a dark roux.",
+     "shop": [
+      "plain flour",
+      "vegetable oil",
+      "onion",
+      "celery sticks",
+      "green capsicum",
+      "chicken thighs",
+      "smoked sausage",
+      "chicken stock",
+      "Cajun seasoning",
+      "okra",
+      "long grain rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Bourbon Bowl pecan pralines",
+     "scene": "the Bourbon Bowl game",
+     "method": "Creamy Louisiana pecan pralines, set on baking paper. Boil 200g brown sugar, 100g caster sugar, 120ml cream and 40g butter to 115C.",
+     "shop": [
+      "brown sugar",
+      "caster sugar",
+      "thickened cream",
+      "butter",
+      "pecans",
+      "vanilla extract"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "High quality H2O",
+     "scene": "Bobby's water, the best there is",
+     "method": "Ice-cold spring water with lemon and cucumber, the high quality stuff.",
+     "shop": [
+      "lemon",
+      "cucumber"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Grandma's Boy (2006)",
+   "title": "Grandma's Boy",
+   "year": "2006",
+   "theme": "teen",
+   "tagline": "Move in with Grandma. Eat like it.",
+   "description": "A video game tester gets evicted and moves in with his grandma and her two housemates.",
+   "serve_cue": "Serve the snacks when Alex moves in with Grandma.",
+   "snacks": [
+    {
+     "name": "Grandma's house cheese and crackers",
+     "scene": "living at Grandma's",
+     "method": "Cheese, crackers and pickled onions on a plate, the snack plate at Grandma's. Arrange 250g cheddar, 200g crackers and a jar of pickled onions on a plate.",
+     "shop": [
+      "cheddar",
+      "crackers",
+      "pickled onions"
+     ]
+    },
+    {
+     "name": "Game tester pizza rolls",
+     "scene": "long days testing video games",
+     "method": "Pizza rolls with pepperoni and cheese for the office couch. Roll 500g pizza dough, spread with sauce, top with 100g pepperoni and 150g mozzarella, roll up, slice and bake at 200C for 18 minutes.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "pepperoni",
+      "mozzarella"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Grandma's meatloaf",
+     "scene": "Grandma's home cooking",
+     "method": "Glazed beef meatloaf with mashed potatoes and peas, Grandma's Sunday dinner. Mix 800g beef mince, 1 onion, 1 egg and 60g breadcrumbs, shape a loaf, glaze with 100ml tomato sauce and bake at 180C for 1 hour.",
+     "shop": [
+      "beef mince",
+      "onion",
+      "egg",
+      "breadcrumbs",
+      "tomato sauce",
+      "potatoes",
+      "frozen peas"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Grandma's tea cakes",
+     "scene": "Grandma and her housemates",
+     "method": "Little cinnamon tea cakes, the kind Grandma has with her afternoon tea. Beat 100g butter and 120g sugar, add 2 eggs, then 200g self-raising flour and 120ml milk.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "self-raising flour",
+      "full cream milk",
+      "ground cinnamon"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Grandma's pot of tea",
+     "scene": "afternoon tea with Grandma",
+     "method": "A proper pot of black tea with milk and sugar.",
+     "shop": [
+      "black tea",
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Austin Powers: International Man of Mystery (1997)",
+   "title": "Austin Powers: International Man of Mystery",
+   "year": "1997",
+   "theme": "uptown",
+   "tagline": "Groovy, baby. Dinner's served.",
+   "description": "A swinging sixties secret agent is thawed out in 1997 to stop his old enemy Dr. Evil.",
+   "serve_cue": "Serve the snacks when Austin is unfrozen in the nineties.",
+   "snacks": [
+    {
+     "name": "Swinging sixties devilled eggs",
+     "scene": "Austin's swinging London",
+     "method": "Classic devilled eggs dusted with paprika, a sixties cocktail party must. Boil 8 eggs for 10 minutes, halve and mash the yolks with 4 tbsp mayonnaise and 1 tsp mustard.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "American mustard",
+      "sweet paprika"
+     ]
+    },
+    {
+     "name": "Cheese and pineapple hedgehog",
+     "scene": "a sixties cocktail party",
+     "method": "Cheese and pineapple cubes on toothpicks stuck into half a rockmelon, very sixties. Cube 250g cheddar and half a pineapple and thread onto toothpicks.",
+     "shop": [
+      "cheddar",
+      "pineapple",
+      "rockmelon"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Dr. Evil's one million dollar steak",
+     "scene": "Dr. Evil's one million dollar demand",
+     "method": "Steak Diane with a creamy mushroom and brandy sauce, the sixties fancy dinner. Sear 4 thin sirloin steaks for 2 minutes a side and rest.",
+     "shop": [
+      "sirloin steaks",
+      "mushrooms",
+      "shallot",
+      "brandy",
+      "Worcestershire sauce",
+      "Dijon mustard",
+      "thickened cream",
+      "frozen chips"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Union Jack trifle",
+     "scene": "Austin's Union Jack style",
+     "method": "Layers of jam sponge, custard, red berries and cream, as British as Austin. Layer 1 sponge cake spread with jam, 500ml custard, 250g raspberries and blueberries and 300ml whipped cream in a glass bowl.",
+     "shop": [
+      "sponge cake",
+      "raspberry jam",
+      "vanilla custard",
+      "mixed berries",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Sixties gin martini",
+     "scene": "the swinging sixties bar",
+     "method": "Gin stirred with dry vermouth and served up with an olive. Lemonade for the kids.",
+     "shop": [
+      "gin",
+      "dry vermouth",
+      "green olives"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Ace Ventura: When Nature Calls (1995)",
+   "title": "Ace Ventura: When Nature Calls",
+   "year": "1995",
+   "theme": "adventure",
+   "tagline": "Alrighty then. Dinner.",
+   "description": "Ace Ventura travels to Africa to find a sacred white bat and stop a war between two tribes.",
+   "serve_cue": "Serve the mains when Ace lands in Africa.",
+   "snacks": [
+    {
+     "name": "Safari camp samosas",
+     "scene": "the safari lodge",
+     "method": "Crisp pastry triangles filled with spiced potato and peas, a safari camp snack. Mix 400g mashed potato with 100g peas, 2 tsp curry powder and coriander.",
+     "shop": [
+      "potatoes",
+      "frozen peas",
+      "curry powder",
+      "coriander",
+      "spring roll wrappers",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Monastery rice crackers",
+     "scene": "the monastery where it begins",
+     "method": "Toasted rice crackers with sesame and honey, the quiet start to the film. Spread 200g rice crackers on a tray, brush with honey, sprinkle with sesame and bake at 180C for 5 minutes.",
+     "shop": [
+      "rice crackers",
+      "honey",
+      "sesame seeds"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Nairobi grilled chicken",
+     "scene": "the African trip",
+     "method": "Grilled chicken thighs in a chilli lemon marinade, with flatbread and a tomato and onion salad.",
+     "shop": [
+      "chicken thighs",
+      "lemons",
+      "garlic cloves",
+      "red chilli",
+      "flatbreads",
+      "tomatoes",
+      "red onion",
+      "coriander"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Coconut mandazi",
+     "scene": "East African sweet doughnuts",
+     "method": "Little coconut and cardamom doughnuts dusted with sugar. Mix 300g self-raising flour, 60g sugar, 1 tsp cardamom and 250ml coconut milk into a dough.",
+     "shop": [
+      "self-raising flour",
+      "caster sugar",
+      "ground cardamom",
+      "coconut milk",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Safari passionfruit cooler",
+     "scene": "a hot day on safari",
+     "method": "Passionfruit pulp with lime and soda over ice.",
+     "shop": [
+      "passionfruit",
+      "limes",
+      "caster sugar",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Wayne's World 2 (1993)",
+   "title": "Wayne's World 2",
+   "year": "1993",
+   "theme": "teen",
+   "tagline": "Party time. Excellent. Again.",
+   "description": "Wayne and Garth try to put on a giant rock festival in Aurora after a vision tells them to.",
+   "serve_cue": "Serve the snacks when Waynestock kicks off.",
+   "snacks": [
+    {
+     "name": "Stan Mikita's doughnuts",
+     "scene": "the doughnut shop hang-out",
+     "method": "Warm homemade cinnamon sugar doughnut holes, a tribute to the doughnut shop Wayne and Garth always end up at.",
+     "shop": [
+      "self-raising flour",
+      "caster sugar",
+      "egg",
+      "full cream milk",
+      "butter",
+      "ground cinnamon",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Waynestock festival corn",
+     "scene": "the Waynestock music festival",
+     "method": "Grilled corn cobs with butter, chilli and salt, festival food. Grill 4 corn cobs until charred, brush with 40g melted butter and sprinkle with chilli and salt.",
+     "shop": [
+      "corn cobs",
+      "butter",
+      "chilli powder"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Aurora basement pizza",
+     "scene": "the basement in Aurora, Illinois",
+     "method": "A big pepperoni pizza, the basement studio dinner. Stretch 500g pizza dough onto a tray, spread with pizza sauce and top with 200g mozzarella and 100g pepperoni.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Festival ice cream sandwiches",
+     "scene": "backstage at Waynestock",
+     "method": "Vanilla ice cream sandwiched between soft chocolate cookies. Sandwich 1L vanilla ice cream between 16 soft chocolate cookies and freeze 30 minutes.",
+     "shop": [
+      "vanilla ice cream",
+      "chocolate cookies"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Rock festival lemonade",
+     "scene": "a hot festival day",
+     "method": "Cold lemonade in big plastic cups. Pour cold lemonade over ice in 4 big cups.",
+     "shop": [
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Major League (1989)",
+   "title": "Major League",
+   "year": "1989",
+   "theme": "diner",
+   "tagline": "Juuust a bit outside the menu.",
+   "description": "A ragtag Cleveland baseball team sets out to win the pennant after the owner tries to tank the season.",
+   "serve_cue": "Serve the drink for Jobu when Cerrano steps up to bat.",
+   "snacks": [
+    {
+     "name": "Cleveland pierogi",
+     "scene": "Cleveland, home of the team",
+     "method": "Potato and cheese pierogi pan-fried in butter with onions and sour cream. Boil 20 frozen pierogi, drain and pan-fry in 40g butter with 2 sliced onions until golden.",
+     "shop": [
+      "frozen pierogi",
+      "butter",
+      "onions",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Ballpark honey roasted peanuts",
+     "scene": "the bleachers at the ballpark",
+     "method": "Warm peanuts roasted with honey, butter and salt, the bleacher snack at every Indians game.",
+     "shop": [
+      "raw peanuts",
+      "honey",
+      "butter",
+      "salt"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Cleveland ballpark dogs",
+     "scene": "game day at the stadium",
+     "method": "Hot dogs with spicy brown mustard, the Cleveland ballpark way. Grill 8 frankfurts and serve in 8 buns with spicy brown mustard and diced onion.",
+     "shop": [
+      "frankfurts",
+      "hot dog buns",
+      "wholegrain mustard",
+      "onion"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Wild Thing cherry pie",
+     "scene": "Ricky Vaughn, the Wild Thing",
+     "method": "A cherry pie with a lattice top and vanilla ice cream. Toss 800g pitted cherries with 120g sugar and 2 tbsp cornflour.",
+     "shop": [
+      "frozen pitted cherries",
+      "caster sugar",
+      "cornflour",
+      "shortcrust pastry",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "A shot of rum for Jobu",
+     "scene": "Jobu needs a little rum",
+     "method": "A small shot of dark rum, poured for Jobu first. Cola for the kids.",
+     "shop": [
+      "dark rum",
+      "cola"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Popstar: Never Stop Never Stopping (2016)",
+   "title": "Popstar: Never Stop Never Stopping",
+   "year": "2016",
+   "theme": "teen",
+   "tagline": "Never stop never snacking.",
+   "description": "A huge pop star's second album flops, and a camera crew films every moment of the fall.",
+   "serve_cue": "Serve the snacks when Conner's tour kicks off.",
+   "snacks": [
+    {
+     "name": "Backstage rider fruit platter",
+     "scene": "the tour rider",
+     "method": "A big platter of cut tropical fruit, the kind every pop star demands backstage. Cut 1 pineapple, 2 mangoes, 1 rockmelon and 250g strawberries and arrange on a platter.",
+     "shop": [
+      "pineapple",
+      "mangoes",
+      "rockmelon",
+      "strawberries"
+     ]
+    },
+    {
+     "name": "Tour bus party sliders",
+     "scene": "life on the tour bus",
+     "method": "Chicken sliders with slaw and pickles for the tour bus. Crumb 600g chicken strips and fry until golden.",
+     "shop": [
+      "chicken breast",
+      "breadcrumbs",
+      "eggs",
+      "slider buns",
+      "coleslaw mix",
+      "dill pickles",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Style Boyz reunion tacos",
+     "scene": "getting the Style Boyz back together",
+     "method": "Fish tacos with mango salsa, a laid-back LA reunion dinner. Grill 600g white fish with chilli and lime and flake.",
+     "shop": [
+      "white fish fillets",
+      "red chilli",
+      "limes",
+      "small flour tortillas",
+      "mango",
+      "red onion",
+      "coriander"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Platinum record cookies",
+     "scene": "the platinum album",
+     "method": "Round sugar cookies iced silver and grey like a platinum record. Beat 200g butter and 100g icing sugar, add 1 egg yolk and 300g flour.",
+     "shop": [
+      "butter",
+      "icing sugar",
+      "egg",
+      "plain flour",
+      "food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Pop star sparkling water",
+     "scene": "a pop star's demands",
+     "method": "Sparkling water with cucumber, mint and lime, very rider.",
+     "shop": [
+      "sparkling water",
+      "cucumber",
+      "mint",
+      "lime"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "MacGruber (2010)",
+   "title": "MacGruber",
+   "year": "2010",
+   "theme": "cop",
+   "tagline": "Ninety seconds to dinner.",
+   "description": "A former special ops hero comes out of retirement to stop his nemesis from stealing a nuclear warhead.",
+   "serve_cue": "Serve the snacks when MacGruber puts the team together.",
+   "snacks": [
+    {
+     "name": "Mission briefing snack board",
+     "scene": "assembling the team",
+     "method": "Jerky, nuts and cheese on a board, rations for the mission. Arrange 150g beef jerky, 200g mixed nuts and 200g cheddar on a board.",
+     "shop": [
+      "beef jerky",
+      "mixed nuts",
+      "cheddar"
+     ]
+    },
+    {
+     "name": "Celery sticks and dip",
+     "scene": "MacGruber's emergency celery",
+     "method": "Crisp celery sticks with a blue cheese dip, clean and crunchy. Cut 1 bunch celery into sticks.",
+     "shop": [
+      "celery",
+      "blue cheese",
+      "sour cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Eighties action hero steak",
+     "scene": "an old-school action hero",
+     "method": "Grilled rib eye with onion rings, an eighties action hero dinner. Season 4 rib eye steaks and grill 4 minutes a side.",
+     "shop": [
+      "rib eye steaks",
+      "frozen onion rings"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Ticking clock chocolate pots",
+     "scene": "the ninety second countdown",
+     "method": "Rich chocolate pots that set fast in the fridge. Melt 200g dark chocolate into 300ml hot cream with 2 tbsp sugar.",
+     "shop": [
+      "dark chocolate",
+      "thickened cream",
+      "caster sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Mission beer",
+     "scene": "after the mission",
+     "method": "Cold lager straight from the bottle. Chill 8 bottles of lager and serve.",
+     "shop": [
+      "lager",
+      "ginger beer"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Spy (2015)",
+   "title": "Spy",
+   "year": "2015",
+   "theme": "cop",
+   "tagline": "Undercover, overfed.",
+   "description": "A desk-bound CIA analyst goes undercover across Europe to stop an arms deal.",
+   "serve_cue": "Serve the snacks when Susan goes into the field.",
+   "snacks": [
+    {
+     "name": "Paris café croque monsieur",
+     "scene": "Paris, the first stop",
+     "method": "Ham and gruyère toasties with béchamel, grilled until bubbling. Make a béchamel from 20g butter, 1 tbsp flour and 200ml milk.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "full cream milk",
+      "white bread",
+      "leg ham",
+      "gruyère"
+     ]
+    },
+    {
+     "name": "Budapest lángos",
+     "scene": "the Budapest leg of the mission",
+     "method": "Fried flatbread with garlic, sour cream and cheese, Hungarian street food. Divide 500g pizza dough into 4 and stretch thin.",
+     "shop": [
+      "pizza dough",
+      "garlic cloves",
+      "sour cream",
+      "tasty cheese",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Rome cacio e pepe",
+     "scene": "the Rome undercover stop",
+     "method": "Spaghetti in a glossy pecorino and black pepper sauce. Cook 400g spaghetti. Toast 2 tsp cracked pepper, add a ladle of pasta water and the pasta, then toss with 120g grated pecorino until glossy.",
+     "shop": [
+      "spaghetti",
+      "black pepper",
+      "pecorino"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "CIA basement cake",
+     "scene": "the CIA basement office",
+     "method": "A chocolate sheet cake for the office, cut into squares. Mix 300g self-raising flour, 300g sugar, 60g cocoa, 2 eggs, 250ml milk and 125g melted butter.",
+     "shop": [
+      "self-raising flour",
+      "caster sugar",
+      "cocoa",
+      "eggs",
+      "full cream milk",
+      "butter",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Spritz in Rome",
+     "scene": "the Rome casino",
+     "method": "Aperitivo spritz with orange, or orange soda for the kids.",
+     "shop": [
+      "aperitivo",
+      "prosecco",
+      "soda water",
+      "orange"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Heat (2013)",
+   "title": "The Heat",
+   "year": "2013",
+   "theme": "cop",
+   "tagline": "Boston's finest. Boston's food.",
+   "description": "An uptight FBI agent and a foul-mouthed Boston detective team up to take down a drug lord.",
+   "serve_cue": "Serve the mains at the Mullins family dinner.",
+   "snacks": [
+    {
+     "name": "Boston clam chowder cups",
+     "scene": "Boston, Mullins's home turf",
+     "method": "Creamy New England clam chowder in little cups. Fry 3 rashers bacon and 1 onion, add 300g diced potatoes and 500ml fish stock and simmer.",
+     "shop": [
+      "bacon",
+      "onion",
+      "potatoes",
+      "fish stock",
+      "tinned clams",
+      "thickened cream"
+     ]
+    },
+    {
+     "name": "Southie bar wings",
+     "scene": "a Boston bar",
+     "method": "Hot wings with ranch, the bar snack after the case. Bake 1.2kg wings tossed in baking powder and salt at 220C for 45 minutes.",
+     "shop": [
+      "chicken wings",
+      "baking powder",
+      "hot sauce",
+      "butter",
+      "ranch dressing"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Mullins family roast",
+     "scene": "the loud Mullins family dinner",
+     "method": "Roast beef with roast potatoes and gravy, a big Boston family dinner. Roast a 1.5kg beef topside at 200C for 1 hour.",
+     "shop": [
+      "beef topside",
+      "potatoes",
+      "beef stock",
+      "plain flour"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Boston cream pie",
+     "scene": "a Boston classic for a Boston film",
+     "method": "Sponge filled with vanilla custard and topped with chocolate glaze. Bake a 20cm sponge and split.",
+     "shop": [
+      "sponge cake",
+      "vanilla custard",
+      "dark chocolate",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Boston pint",
+     "scene": "a Boston bar",
+     "method": "A cold pint of lager. Cranberry juice for the kids.",
+     "shop": [
+      "lager",
+      "cranberry juice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Horrible Bosses (2011)",
+   "title": "Horrible Bosses",
+   "year": "2011",
+   "theme": "diner",
+   "tagline": "Three bad bosses. One good dinner.",
+   "description": "Three friends with unbearable bosses come up with a very bad plan to get rid of them.",
+   "serve_cue": "Serve the snacks when the three friends start plotting at the bar.",
+   "snacks": [
+    {
+     "name": "Bar plotting nachos",
+     "scene": "plotting at the bar",
+     "method": "Loaded nachos with beef, cheese and sour cream, the bar snack for bad plans. Brown 400g beef mince with taco seasoning.",
+     "shop": [
+      "beef mince",
+      "taco seasoning",
+      "corn chips",
+      "tasty cheese",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Break room jam doughnuts",
+     "scene": "the terrible office break room",
+     "method": "Soft jam-filled doughnuts rolled in sugar, the one good thing in a horrible office. Warm 8 jam doughnuts in a low oven for 3 minutes and roll in 100g caster sugar.",
+     "shop": [
+      "jam doughnuts",
+      "caster sugar",
+      "raspberry jam"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "After work burgers",
+     "scene": "after another horrible day",
+     "method": "Bacon cheeseburgers with fries, an after work feed. Grill 4 beef patties with cheese and serve in buns with bacon, lettuce and sauce, plus 1kg oven fries.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "bacon",
+      "burger buns",
+      "iceberg lettuce",
+      "frozen chips"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Boss's desk chocolate",
+     "scene": "the boss's private stash",
+     "method": "Dark chocolate squares with sea salt. Break 200g dark chocolate into squares and sprinkle with sea salt flakes.",
+     "shop": [
+      "dark chocolate",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "After work beer",
+     "scene": "the bar after work",
+     "method": "Cold lager in schooners. Pour 8 cold bottles of lager into schooners.",
+     "shop": [
+      "lager"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "22 Jump Street (2014)",
+   "title": "22 Jump Street",
+   "year": "2014",
+   "theme": "cop",
+   "tagline": "Do the same thing as last time. Snacks included.",
+   "description": "Schmidt and Jenko go undercover at college to find who is supplying a new drug.",
+   "serve_cue": "Serve the crab when the crab people gag kicks in.",
+   "snacks": [
+    {
+     "name": "Crab people crab cakes",
+     "scene": "crab people, crab people",
+     "method": "Golden crab cakes with lemon and tartare, a tribute to the crab people. Mix 400g crab meat, 3 tbsp mayonnaise, 1 egg and 60g breadcrumbs.",
+     "shop": [
+      "crab meat",
+      "mayonnaise",
+      "egg",
+      "breadcrumbs",
+      "lemon",
+      "tartare sauce"
+     ]
+    },
+    {
+     "name": "Frat party wings",
+     "scene": "the football team's frat parties",
+     "method": "Sticky barbecue wings for the frat house. Bake 1.2kg wings at 220C for 45 minutes and toss in 200ml barbecue sauce.",
+     "shop": [
+      "chicken wings",
+      "barbecue sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Spring break fish tacos",
+     "scene": "spring break in Mexico",
+     "method": "Grilled fish tacos with lime and salsa, spring break food. Grill 600g white fish with chilli and lime, flake into 12 tortillas with cabbage, salsa and lime.",
+     "shop": [
+      "white fish fillets",
+      "red chilli",
+      "limes",
+      "small flour tortillas",
+      "cabbage",
+      "tomato salsa"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "College dining hall cookies",
+     "scene": "the college dining hall",
+     "method": "Giant chocolate chip cookies. Beat 125g butter and 150g brown sugar, add 1 egg, 200g flour and 150g chocolate chips.",
+     "shop": [
+      "butter",
+      "brown sugar",
+      "egg",
+      "plain flour",
+      "chocolate chips"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Spring break margarita",
+     "scene": "spring break in Mexico",
+     "method": "Tequila, lime and triple sec over ice. Limeade for the kids.",
+     "shop": [
+      "tequila",
+      "triple sec",
+      "limes"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Neighbors (2014)",
+   "title": "Neighbors",
+   "year": "2014",
+   "theme": "teen",
+   "tagline": "The frat's next door. So are the snacks.",
+   "description": "A young couple with a baby go to war with the fraternity that moves in next door.",
+   "serve_cue": "Serve the snacks when the frat throws its first party.",
+   "snacks": [
+    {
+     "name": "Frat party sausage rolls",
+     "scene": "the parties next door",
+     "method": "Sausage rolls with tomato sauce for the party. Mix 500g sausage mince with 1 grated onion, roll in 2 sheets puff pastry, slice and bake at 200C for 25 minutes.",
+     "shop": [
+      "sausage mince",
+      "onion",
+      "puff pastry",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Parents' night in cheese board",
+     "scene": "Mac and Kelly at home with the baby",
+     "method": "Cheese, crackers and grapes, a quiet night in for new parents. Arrange 150g brie, 150g cheddar, 200g crackers and a bunch of grapes on a board.",
+     "shop": [
+      "brie",
+      "cheddar",
+      "crackers",
+      "grapes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Backyard barbecue",
+     "scene": "the backyard next to the frat",
+     "method": "Grilled sausages and steaks with salad, a peace offering barbecue. Grill 8 sausages and 4 steaks.",
+     "shop": [
+      "beef sausages",
+      "rump steaks",
+      "salad leaves",
+      "bread rolls"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Party sheet cake",
+     "scene": "the frat party",
+     "method": "Vanilla sheet cake with sprinkles. Bake a vanilla sheet cake from 300g self-raising flour, 250g sugar, 3 eggs, 200ml milk and 150g butter at 175C for 35 minutes.",
+     "shop": [
+      "self-raising flour",
+      "caster sugar",
+      "eggs",
+      "full cream milk",
+      "butter",
+      "icing sugar",
+      "sprinkles"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Party punch",
+     "scene": "the frat party",
+     "method": "Fruit punch with lemonade and orange slices. Mix 1L tropical juice with 1L lemonade and orange slices over ice.",
+     "shop": [
+      "tropical juice",
+      "lemonade",
+      "orange"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "This Is the End (2013)",
+   "title": "This Is the End",
+   "year": "2013",
+   "theme": "horror",
+   "tagline": "The end of the world. The last of the snacks.",
+   "description": "A group of actors are trapped in a Hollywood house party when the apocalypse hits.",
+   "serve_cue": "Serve the sweets when they fight over the last chocolate bar.",
+   "snacks": [
+    {
+     "name": "Franco's party canapés",
+     "scene": "James Franco's housewarming",
+     "method": "Bruschetta with tomato and basil, the fancy party food before it all goes wrong. Toast slices of baguette, rub with garlic and top with 4 diced tomatoes, basil and olive oil.",
+     "shop": [
+      "baguette",
+      "garlic bulb",
+      "tomatoes",
+      "basil",
+      "extra virgin olive oil"
+     ]
+    },
+    {
+     "name": "Rationed pantry snacks",
+     "scene": "rationing the supplies",
+     "method": "Tinned and packet snacks shared out carefully: crackers, cheese and pretzels. Portion 200g crackers, 150g cheddar and 150g pretzels into equal piles for everyone.",
+     "shop": [
+      "crackers",
+      "cheddar",
+      "pretzels"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "End of days pasta",
+     "scene": "cooking whatever is left",
+     "method": "Spaghetti with tinned tomatoes, garlic and chilli, apocalypse pantry cooking. Fry 3 garlic cloves and chilli in oil, add 800g tinned tomatoes and simmer 20 minutes.",
+     "shop": [
+      "garlic cloves",
+      "red chilli",
+      "diced tomatoes",
+      "spaghetti",
+      "parmesan"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "The last chocolate caramel bar",
+     "scene": "the fight over the last chocolate bar",
+     "method": "Homemade chocolate nougat and caramel bars, enough so nobody has to fight. Melt 200g marshmallows with 40g butter, press into a tin, top with 380g tinned caramel and chill.",
+     "shop": [
+      "marshmallows",
+      "butter",
+      "tinned caramel",
+      "milk chocolate"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Rationed water",
+     "scene": "rationing the water",
+     "method": "Cold water in a jug with lemon, every drop shared.",
+     "shop": [
+      "lemon"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Idiocracy (2006)",
+   "title": "Idiocracy",
+   "year": "2006",
+   "theme": "scifi",
+   "tagline": "It's got electrolytes.",
+   "description": "An average army librarian wakes up 500 years in the future to find he is now the smartest man alive.",
+   "serve_cue": "Serve the drink when the electrolytes come up.",
+   "snacks": [
+    {
+     "name": "Giant warehouse snack pack",
+     "scene": "the giant warehouse store",
+     "method": "Mixed corn chips, pretzels and cheese puffs in a huge bowl. Tip 200g corn chips, 150g pretzels and 150g cheese puffs into a huge bowl.",
+     "shop": [
+      "corn chips",
+      "pretzels",
+      "cheese puffs"
+     ]
+    },
+    {
+     "name": "Future fries",
+     "scene": "fast food in the future",
+     "method": "Seasoned fries with chicken salt. Bake 1kg frozen chips at 220C for 25 minutes and toss with chicken salt.",
+     "shop": [
+      "frozen chips",
+      "chicken salt"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Plants-crave-water salad bowl",
+     "scene": "Joe teaching them to water the crops",
+     "method": "A big fresh salad bowl with grilled chicken, because plants actually need water. Grill 600g chicken breast and slice.",
+     "shop": [
+      "chicken breast",
+      "salad leaves",
+      "tomatoes",
+      "cucumber",
+      "avocado",
+      "lemon"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Future cupcakes",
+     "scene": "500 years in the future",
+     "method": "Blue-iced vanilla cupcakes. Bake 12 vanilla cupcakes and ice with buttercream tinted blue. Serve it at the halfway point of the film.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "self-raising flour",
+      "full cream milk",
+      "icing sugar",
+      "food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Electrolyte cooler",
+     "scene": "it's got what plants crave",
+     "method": "A homemade electrolyte drink: orange, lemon, a pinch of salt and honey, served very cold.",
+     "shop": [
+      "oranges",
+      "lemons",
+      "honey"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Mr. Deeds (2002)",
+   "title": "Mr. Deeds",
+   "year": "2002",
+   "theme": "pizza",
+   "tagline": "Mandrake Falls' finest pizza.",
+   "description": "A small-town pizzeria owner inherits a fortune and moves to New York, where he stays exactly himself.",
+   "serve_cue": "Serve the pizza when Deeds is back at his shop in Mandrake Falls.",
+   "snacks": [
+    {
+     "name": "Mandrake Falls garlic knots",
+     "scene": "Deeds's pizza shop",
+     "method": "Garlic knots brushed with butter and parmesan. Cut 500g pizza dough into 12 strips, tie into knots and bake at 220C for 12 minutes.",
+     "shop": [
+      "pizza dough",
+      "butter",
+      "garlic cloves",
+      "parmesan"
+     ]
+    },
+    {
+     "name": "Greeting card poem bites",
+     "scene": "Deeds writes greeting card poems",
+     "method": "Little cheese and tomato pinwheels, sweet and simple like Deeds's poems. Spread 2 sheets puff pastry with tomato paste and cheese, roll, slice and bake at 200C for 18 minutes.",
+     "shop": [
+      "puff pastry",
+      "tomato paste",
+      "tasty cheese"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Deeds's pizzeria pizza",
+     "scene": "his small-town pizzeria",
+     "method": "A classic pepperoni and mushroom pizza, made by the man himself. Stretch 500g pizza dough, spread with sauce and top with 200g mozzarella, 100g pepperoni and 100g mushrooms.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni",
+      "mushrooms"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "New York cheesecake",
+     "scene": "his time in New York",
+     "method": "Baked New York cheesecake with a biscuit base. Press 200g crushed biscuits and 80g butter into a tin.",
+     "shop": [
+      "plain sweet biscuits",
+      "butter",
+      "cream cheese",
+      "caster sugar",
+      "eggs"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Small-town cola",
+     "scene": "the Mandrake Falls diner",
+     "method": "Cold cola with ice. Pour cold cola over ice in 4 glasses.",
+     "shop": [
+      "cola"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Uncle Buck (1989)",
+   "title": "Uncle Buck",
+   "year": "1989",
+   "theme": "kids",
+   "tagline": "Pancakes the size of a hubcap.",
+   "description": "A lovable slob uncle looks after his brother's three kids for the week.",
+   "serve_cue": "Serve the sweets when Buck flips the giant pancake.",
+   "snacks": [
+    {
+     "name": "Buck's birthday party popcorn",
+     "scene": "Miles's birthday party",
+     "method": "Buttery popcorn for the birthday party. Pop 120g popcorn kernels and toss with 50g butter and salt.",
+     "shop": [
+      "popcorn kernels",
+      "butter"
+     ]
+    },
+    {
+     "name": "Bowling alley fries",
+     "scene": "Buck's night out",
+     "method": "Crisp fries with gravy. Bake 1kg frozen chips and serve with 300ml gravy made from powder.",
+     "shop": [
+      "frozen chips",
+      "gravy powder"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Buck's breakfast for dinner",
+     "scene": "Buck cooking for the kids",
+     "method": "Bacon, eggs and sausages on toast, Buck's kind of cooking. Fry 8 rashers bacon and 8 sausages, then 4 eggs.",
+     "shop": [
+      "bacon",
+      "beef sausages",
+      "eggs",
+      "white bread",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Uncle Buck's giant pancake",
+     "scene": "the hubcap-sized pancake",
+     "method": "One enormous pancake cooked in the biggest pan you own, with butter and syrup. Whisk 300g self-raising flour, 2 eggs and 400ml milk.",
+     "shop": [
+      "self-raising flour",
+      "eggs",
+      "full cream milk",
+      "butter",
+      "maple syrup"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Big glass of milk",
+     "scene": "Buck's breakfast table",
+     "method": "Cold milk to wash down the pancake. Pour 1L cold full cream milk into 4 glasses.",
+     "shop": [
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Great Outdoors (1988)",
+   "title": "The Great Outdoors",
+   "year": "1988",
+   "theme": "adventure",
+   "tagline": "The 96 ounce challenge.",
+   "description": "A family's quiet lake holiday is wrecked when the rich, loud brother-in-law and his family turn up.",
+   "serve_cue": "Serve the main when Roman takes on the Old 96er.",
+   "snacks": [
+    {
+     "name": "Lakeside fish bites",
+     "scene": "fishing on the lake",
+     "method": "Crumbed fish bites with lemon, from a day on the lake. Cut 500g white fish into bites, crumb and fry at 180C for 3 minutes.",
+     "shop": [
+      "white fish fillets",
+      "eggs",
+      "panko breadcrumbs",
+      "lemon",
+      "tartare sauce",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Cabin campfire s'mores",
+     "scene": "the lake cabin campfire",
+     "method": "Toasted marshmallows and chocolate squashed between biscuits around the fire, a lake cabin must. Toast 16 marshmallows on skewers until golden.",
+     "shop": [
+      "marshmallows",
+      "milk chocolate",
+      "plain sweet biscuits"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "The Old 96er",
+     "scene": "the 96 ounce steak challenge",
+     "method": "A huge rump steak with all the trimmings: potatoes, salad and bread. Share it, don't attempt it alone.",
+     "shop": [
+      "rump steak",
+      "potatoes",
+      "salad leaves",
+      "crusty bread"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Lake cabin blueberry pie",
+     "scene": "the lake holiday",
+     "method": "Blueberry pie with ice cream. Toss 800g blueberries with 120g sugar and cornflour, fill a pastry case, top and bake at 190C for 45 minutes.",
+     "shop": [
+      "frozen blueberries",
+      "caster sugar",
+      "cornflour",
+      "shortcrust pastry",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Lake cabin beer",
+     "scene": "the lake cabin",
+     "method": "Cold beer on the dock. Lemonade for the kids.",
+     "shop": [
+      "lager",
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Stripes (1981)",
+   "title": "Stripes",
+   "year": "1981",
+   "theme": "cop",
+   "tagline": "That's the fact, dinner.",
+   "description": "A cab driver who has lost everything joins the army with his best mate.",
+   "serve_cue": "Serve the mains when the platoon finally comes together.",
+   "snacks": [
+    {
+     "name": "Basic training mess crackers",
+     "scene": "the start of basic training",
+     "method": "Army crackers with cheese spread. Serve 200g crackers with 200g cheese spread. Serve straight away on a big platter in the middle of the table.",
+     "shop": [
+      "crackers",
+      "cheese spread"
+     ]
+    },
+    {
+     "name": "Barracks hot dog bites",
+     "scene": "downtime in the barracks",
+     "method": "Cocktail franks with mustard and sauce on toothpicks, barracks snack food done properly. Simmer 24 cocktail franks in water for 5 minutes and drain.",
+     "shop": [
+      "cocktail frankfurts",
+      "American mustard",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Army mess hall meatloaf",
+     "scene": "the mess hall",
+     "method": "Meatloaf with mash and gravy, mess hall style. Mix 800g beef mince, onion, egg and breadcrumbs, bake at 180C for 1 hour and serve with mash and gravy.",
+     "shop": [
+      "beef mince",
+      "onion",
+      "egg",
+      "breadcrumbs",
+      "potatoes",
+      "gravy powder"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Graduation chocolate cake",
+     "scene": "graduation from basic training",
+     "method": "Chocolate cake with chocolate icing. Bake a chocolate cake from 300g self-raising flour, 300g sugar, 60g cocoa, 2 eggs, 250ml milk and 125g butter at 175C for 40 minutes.",
+     "shop": [
+      "self-raising flour",
+      "caster sugar",
+      "cocoa",
+      "eggs",
+      "full cream milk",
+      "butter",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Army canteen coffee",
+     "scene": "the army canteen",
+     "method": "Strong black coffee. Brew 60g ground coffee in 1L water and serve black.",
+     "shop": [
+      "ground coffee"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Fletch (1985)",
+   "title": "Fletch",
+   "year": "1985",
+   "theme": "cop",
+   "tagline": "Put it on the Underhills' tab.",
+   "description": "An undercover reporter investigating drug dealing gets a very strange offer from a millionaire.",
+   "serve_cue": "Serve the mains when Fletch orders at the club on the Underhills' tab.",
+   "snacks": [
+    {
+     "name": "Club bloody mary prawns",
+     "scene": "the country club order",
+     "method": "Prawns with a spicy bloody mary cocktail sauce. Mix 150ml tomato juice reduced to thick with horseradish, Worcestershire, celery salt and lemon.",
+     "shop": [
+      "cooked prawns",
+      "tomato juice",
+      "horseradish cream",
+      "Worcestershire sauce",
+      "lemon"
+     ]
+    },
+    {
+     "name": "Beach front fish bites",
+     "scene": "the LA beach Fletch goes undercover on",
+     "method": "Crumbed fish bites with lemon and tartare, beach kiosk food from Fletch's undercover days. Cut 500g white fish into bites, roll in flour, egg and 100g panko and fry at 180C for 3 minutes.",
+     "shop": [
+      "white fish fillets",
+      "plain flour",
+      "eggs",
+      "panko breadcrumbs",
+      "lemon",
+      "tartare sauce",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Steak sandwich and a steak sandwich",
+     "scene": "the order on the Underhills' tab",
+     "method": "Two steak sandwiches each, with fried onions and mustard, ordered on someone else's tab. Pan-fry 4 thin rump steaks for 2 minutes a side.",
+     "shop": [
+      "rump steaks",
+      "onions",
+      "sourdough",
+      "Dijon mustard",
+      "iceberg lettuce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Country club sundaes",
+     "scene": "the country club",
+     "method": "Vanilla sundaes with hot fudge. Scoop 1L vanilla ice cream and pour over hot fudge sauce.",
+     "shop": [
+      "vanilla ice cream",
+      "chocolate topping"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Bloody Mary",
+     "scene": "the drink on the Underhills' tab",
+     "method": "Vodka, tomato juice, lemon, Worcestershire and celery salt with a celery stick.",
+     "shop": [
+      "vodka",
+      "tomato juice",
+      "lemon",
+      "celery"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Meet the Fockers (2004)",
+   "title": "Meet the Fockers",
+   "year": "2004",
+   "theme": "romcom",
+   "tagline": "Welcome to the family. Dinner's on.",
+   "description": "The Byrnes family travel to Florida to meet the Focker parents before the wedding.",
+   "serve_cue": "Serve the mains when the two families sit down together.",
+   "snacks": [
+    {
+     "name": "Miami Cuban croquetas",
+     "scene": "the Fockers' Florida home",
+     "method": "Crumbed ham croquettes with a creamy centre. Make a thick béchamel with 60g butter, 80g flour and 500ml milk, stir in 200g ham and chill.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "full cream milk",
+      "leg ham",
+      "eggs",
+      "breadcrumbs",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Bernie's fondue",
+     "scene": "Bernie's big welcome",
+     "method": "Cheese fondue with bread, the Focker welcome. Heat 300ml white wine, stir in 400g gruyère tossed in cornflour until smooth.",
+     "shop": [
+      "white wine",
+      "gruyère",
+      "cornflour",
+      "baguette"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Focker family dinner",
+     "scene": "the two families at the table",
+     "method": "Mojo roast pork with black beans and rice, a Florida family feast. Marinate 1.5kg pork shoulder in orange, lime, garlic and cumin and roast at 160C for 3 hours.",
+     "shop": [
+      "pork shoulder",
+      "oranges",
+      "limes",
+      "garlic bulb",
+      "ground cumin",
+      "black beans",
+      "long grain rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Key lime pie",
+     "scene": "the Fockers' Florida home",
+     "method": "Tangy key lime pie with a biscuit base and cream. Press 200g crushed biscuits and 80g butter into a dish.",
+     "shop": [
+      "plain sweet biscuits",
+      "butter",
+      "sweetened condensed milk",
+      "eggs",
+      "limes",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Mojito",
+     "scene": "Miami nights with Bernie",
+     "method": "White rum, lime, mint and soda. Virgin for the kids.",
+     "shop": [
+      "white rum",
+      "limes",
+      "mint",
+      "soda water"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Strange Brew (1983)",
+   "title": "Strange Brew",
+   "year": "1983",
+   "theme": "diner",
+   "tagline": "Take off, eh. Then dinner.",
+   "description": "Two hosers try to get free beer and stumble onto a plot at the Elsinore brewery.",
+   "serve_cue": "Serve the beer when Bob and Doug try to get their free case.",
+   "snacks": [
+    {
+     "name": "Back bacon on a bun",
+     "scene": "Canadian back bacon",
+     "method": "Thick-cut back bacon on soft buns with mustard. Fry 8 thick slices of back bacon until golden and serve in 8 soft buns with mustard.",
+     "shop": [
+      "back bacon",
+      "soft buns",
+      "American mustard"
+     ]
+    },
+    {
+     "name": "Doughnut shop honey crullers",
+     "scene": "the doughnut shop Bob and Doug love",
+     "method": "Light twisted crullers glazed with honey, a Canadian doughnut shop favourite. Bring 250ml water and 100g butter to the boil, beat in 150g flour, cool and beat in 3 eggs.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "eggs",
+      "icing sugar",
+      "honey",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Hoser poutine",
+     "scene": "Bob and Doug's Canada",
+     "method": "Fries with cheese curds and hot gravy. Bake 1kg frozen chips, top with 250g cubed haloumi or curds and pour over 400ml hot gravy.",
+     "shop": [
+      "frozen chips",
+      "haloumi",
+      "gravy powder"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Maple butter tarts",
+     "scene": "Bob and Doug's Canada",
+     "method": "Gooey maple and brown sugar tarts. Mix 100g brown sugar, 80ml maple syrup, 60g butter and 1 egg.",
+     "shop": [
+      "brown sugar",
+      "maple syrup",
+      "butter",
+      "egg",
+      "shortcrust pastry"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Elsinore beer",
+     "scene": "the Elsinore brewery",
+     "method": "Cold Canadian lager by the stubby. Chill 8 stubbies of lager and serve.",
+     "shop": [
+      "lager",
+      "ginger ale"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Dirty Work (1998)",
+   "title": "Dirty Work",
+   "year": "1998",
+   "theme": "diner",
+   "tagline": "Revenge served hot.",
+   "description": "Two lifelong mates start a revenge-for-hire business to raise money for a heart operation.",
+   "serve_cue": "Serve the mains when Mitch and Sam open Dirty Work for business.",
+   "snacks": [
+    {
+     "name": "Revenge-for-hire wings",
+     "scene": "the first paying revenge job",
+     "method": "Hot chicken wings tossed in a buttery hot sauce with blue cheese dip, payback with a kick. Bake the wings until crisp first.",
+     "shop": [
+      "chicken wings",
+      "baking powder",
+      "hot sauce",
+      "butter",
+      "blue cheese",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Mitch's job-a-week snack box",
+     "scene": "Mitch losing one job after another",
+     "method": "A mixed box of pretzels, peanuts and cheese crackers, the kind of snacks you grab on the way out of yet another job.",
+     "shop": [
+      "pretzels",
+      "salted peanuts",
+      "cheese crackers"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Pops's diner patty melt",
+     "scene": "Pops, Sam's dad, who needs the operation",
+     "method": "A patty melt on rye with Swiss cheese and fried onions, old-school diner food Pops would order.",
+     "shop": [
+      "onions",
+      "butter",
+      "beef mince",
+      "rye bread",
+      "Swiss cheese"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Hole in one sundaes",
+     "scene": "a good day for a change",
+     "method": "Vanilla ice cream with hot fudge, peanuts and a cherry, the kind of treat you have when the plan finally works.",
+     "shop": [
+      "vanilla ice cream",
+      "chocolate topping",
+      "roasted peanuts",
+      "maraschino cherries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Cold one with Pops",
+     "scene": "a beer with Sam's dad",
+     "method": "Ice-cold lager in the bottle, the kind Pops would crack open. Lemonade for the kids.",
+     "shop": [
+      "lager",
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 2,
    "poster_status": "pending",
    "recipe_ready": true
   }
