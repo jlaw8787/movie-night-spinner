@@ -1149,6 +1149,21 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
 @keyframes popBounce{0%{transform:rotate(8deg) translateY(0)}35%{transform:rotate(2deg) translateY(-14px) scale(1.06)}100%{transform:rotate(8deg) translateY(0)}}
 @media (max-width:620px){.cb-pop{width:74px;bottom:-30px;right:-8px}.cb-photo{margin:-14px -14px 14px}}
 @media (prefers-reduced-motion:reduce){.cb-pop.bounce{animation:none}}
+
+/* ---------- a bit of wear: film grain, hand-hung marquee letters, a folded menu, scuffed stubs ---------- */
+html{--grainTile:none}
+body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none;background-image:var(--grainTile);background-size:180px 180px;opacity:.55;mix-blend-mode:overlay;animation:grainMove 1s steps(5) infinite}
+@keyframes grainMove{0%{transform:translate(0,0)}25%{transform:translate(-2%,1%)}50%{transform:translate(1%,-2%)}75%{transform:translate(-1%,2%)}100%{transform:translate(2%,-1%)}}
+@media (prefers-reduced-motion:reduce){body::before{animation:none}}
+.mq-t i{font-style:normal;display:inline-block;transform:rotate(var(--r,0deg)) translateY(var(--y,0))}
+.preview::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:linear-gradient(180deg,transparent calc(50% - 1px),rgba(255,255,255,.10) calc(50% - 1px),rgba(0,0,0,.16) 50%,transparent calc(50% + 2px)),
+  linear-gradient(90deg,transparent calc(50% - 1px),rgba(255,255,255,.06) calc(50% - 1px),rgba(0,0,0,.09) 50%,transparent calc(50% + 2px)),
+  radial-gradient(ellipse 120% 90% at 50% 50%,transparent 70%,rgba(60,30,10,.28) 100%),
+  radial-gradient(circle at 86% 9%,transparent 22px,rgba(120,70,20,.10) 23px 26px,transparent 27px)}
+.chips .ticket{background:url("assets/hero/paper.jpg") 0 0/240px 240px,#f3e3b8;background-blend-mode:multiply}
+.chips .ticket:nth-child(odd){transform:rotate(-1.5deg)}.chips .ticket:nth-child(even){transform:rotate(1.2deg)}
+.cb-board{background:url("assets/hero/paper.jpg") 0 0/300px 300px,radial-gradient(ellipse at 50% 0%,#fffdf5,#f1ead6 60%,#e0d6bc);background-blend-mode:multiply}
 </style>
 
 <div id="printArea"></div>
@@ -1427,6 +1442,7 @@ function fitText(t,max){
   let s=t;while(s.length>3&&ctx.measureText(s+"...").width>max)s=s.slice(0,-1);
   return s.trim()+"...";
 }
+const wheelTex=typeof Image!=="undefined"?new Image():{complete:false};if(wheelTex.src!==undefined||typeof Image!=="undefined"){wheelTex.src="assets/hero/paper.jpg";wheelTex.onload=()=>{try{draw()}catch(e){}}}
 function draw(){
   const W=canvas.width;if(!W||!wedges.length)return;
   const c=W/2,Ro=c*0.8,Rr=c*0.795,R=c*0.79;
@@ -1456,6 +1472,9 @@ function draw(){
     ctx.fillText(fitText(f.title,R*0.6),R*0.94,0);
     ctx.restore();
   }
+  /* printed-card texture and a little wear over the slices */
+  if(wheelTex.complete&&wheelTex.naturalWidth){ctx.save();ctx.beginPath();ctx.arc(c,c,R,0,Math.PI*2);ctx.clip();ctx.globalCompositeOperation="multiply";ctx.globalAlpha=.7;
+    const pat=ctx.createPattern(wheelTex,"repeat");ctx.fillStyle=pat;ctx.fillRect(0,0,W,W);ctx.restore()}
   /* inner ring and shade */
   g=ctx.createRadialGradient(c,c,R*.22,c,c,R);
   g.addColorStop(0,"rgba(0,0,0,.5)");g.addColorStop(.4,"rgba(0,0,0,0)");g.addColorStop(.92,"rgba(0,0,0,0)");g.addColorStop(1,"rgba(0,0,0,.35)");
@@ -2408,7 +2427,10 @@ function showWelcome(){
  $("spinbarBtn").addEventListener("click",()=>{$("spin").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{if(!spinning)$("spin").click()},reduce?50:650)});
  window.__spinbarUpd=upd;}
 /* palace marquee: shrink long titles to fit the sign, light boxes show tonight's poster and recent spins */
-function fitMarquee(){const t=$("now");const n=t.textContent.length;t.style.fontSize=`min(3.3cqw,${(64/Math.max(n,8)).toFixed(2)}cqw)`}
+let _hang=false;
+function fitMarquee(){if(_hang)return;const t=$("now");const txt=t.textContent;const n=txt.length;t.style.fontSize=`min(3.3cqw,${(64/Math.max(n,8)).toFixed(2)}cqw)`;
+  if(!t.querySelector("i")){_hang=true;t.innerHTML=[...txt].map((ch,i)=>ch===" "?" ":`<i style="--r:${((Math.sin(i*12.9898+n)*43758.5453)%1*2.4).toFixed(2)}deg;--y:${((Math.sin(i*78.233+n)*12345.678)%1*0.05).toFixed(3)}em">${ch==="&"?"&amp;":ch==="<"?"&lt;":ch===">"?"&gt;":ch}</i>`).join("");_hang=false}}
+
 if(typeof MutationObserver!=="undefined")new MutationObserver(fitMarquee).observe($("now"),{childList:true,characterData:true,subtree:true});try{fitMarquee()}catch(e){}
 function lightboxes(){
   const P=typeof TMDB_POSTERS!=="undefined"?TMDB_POSTERS:{};
@@ -2598,6 +2620,7 @@ $("copy").addEventListener("click",()=>{
 window.addEventListener("resize",size);
 
 setList();size();renderHist();scalePreview();renderWeek();
+try{document.documentElement.style.setProperty("--grainTile",`url("${noiseTile()}")`)}catch(e){}
 if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 setKidsUI();if(kidsMode)setList();pullSync();
 try{if(!localStorage.getItem("mns-welcome"))setTimeout(showWelcome,400)}catch(e){}
