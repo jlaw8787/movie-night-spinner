@@ -1,7 +1,7 @@
 {
  "about": "Hand-written menus by Claude. Source of truth for dish names, scenes and methods. Regenerated on every Claude push; do not edit by hand.",
- "hand_written": 801,
- "ready_for_poster": 677,
+ "hand_written": 850,
+ "ready_for_poster": 726,
  "films": [
   {
    "id": "The Godfather (1972)",
@@ -81463,6 +81463,3734 @@
     }
    ],
    "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Screwed (2000)",
+   "title": "Screwed",
+   "year": "2000",
+   "theme": "diner",
+   "tagline": "Kidnap the dog. Keep the cookies.",
+   "description": "A fed-up chauffeur and his best mate kidnap his stingy cookie-baron boss's dog, and it goes wrong fast.",
+   "serve_cue": "Serve the cookies when Willard and Rusty hatch the plan.",
+   "snacks": [
+    {
+     "name": "Chauffeur's glovebox snacks",
+     "scene": "Willard driving Miss Crock around",
+     "method": "Salted nuts, beef jerky and mints tipped into bowls, the snacks a chauffeur lives on between pick-ups.",
+     "shop": [
+      "salted mixed nuts",
+      "beef jerky",
+      "mints"
+     ]
+    },
+    {
+     "name": "Rusty's diner fries",
+     "scene": "Rusty, the best mate with the bad ideas",
+     "method": "Crisp fries with chicken salt and gravy for dipping, a cheap diner basket for two blokes making a terrible plan.",
+     "shop": [
+      "frozen chips",
+      "chicken salt",
+      "gravy powder"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Ransom night pizza",
+     "scene": "waiting by the phone for the ransom call",
+     "method": "A big pepperoni pizza eaten straight from the box while the kidnapping plan falls apart around them.",
+     "shop": [
+      "pizza dough",
+      "pizza sauce",
+      "mozzarella",
+      "pepperoni"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Miss Crock's cookies",
+     "scene": "the cookie fortune Miss Crock sits on",
+     "method": "Big homemade chocolate chip cookies, the kind that built the Crock family fortune and made her so mean about sharing.",
+     "shop": [
+      "butter",
+      "brown sugar",
+      "egg",
+      "self-raising flour",
+      "chocolate chips"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Cold glass of milk",
+     "scene": "milk with the Crock cookies",
+     "method": "Ice-cold milk in tall glasses for dunking the cookies.",
+     "shop": [
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "White Christmas (1954)",
+   "title": "White Christmas",
+   "year": "1954",
+   "theme": "xmas",
+   "tagline": "Dreaming of a white Christmas dinner.",
+   "description": "Two army mates turned song-and-dance stars put on a show to save their old general's struggling Vermont inn.",
+   "serve_cue": "Serve the snacks when the show at the Columbia Inn begins.",
+   "snacks": [
+    {
+     "name": "Midnight buttermilk and liverwurst",
+     "scene": "Bob and Betty's midnight snack in the inn kitchen",
+     "method": "Liverwurst and cheese sandwiches on white bread with cold buttermilk, the midnight snack at the inn when nobody can sleep.",
+     "shop": [
+      "white bread",
+      "butter",
+      "liverwurst",
+      "cheddar",
+      "buttermilk"
+     ]
+    },
+    {
+     "name": "Columbia Inn cheese puffs",
+     "scene": "the general's Vermont inn",
+     "method": "Warm cheddar choux puffs straight from the oven, the kind of welcome snack a country lodge puts out for guests.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "eggs",
+      "vintage cheddar"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Vermont inn roast turkey",
+     "scene": "Christmas Eve at the inn",
+     "method": "Roast turkey breast with sage stuffing, cranberry sauce and crisp roast potatoes, a proper country inn Christmas dinner.",
+     "shop": [
+      "turkey breast",
+      "butter",
+      "breadcrumbs",
+      "onion",
+      "sage",
+      "cranberry sauce",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Snowy coconut cake",
+     "scene": "the snow that finally falls on the inn",
+     "method": "White coconut layer cake covered in cream cheese icing and coconut like fresh snow on Christmas Eve.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "self-raising flour",
+      "desiccated coconut",
+      "coconut milk",
+      "cream cheese",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Eggnog by the fire",
+     "scene": "the fireplace at the inn",
+     "method": "Spiced eggnog with nutmeg, with brandy on the side for the adults.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "full cream milk",
+      "thickened cream",
+      "cinnamon stick",
+      "nutmeg",
+      "brandy"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Holiday Inn (1942)",
+   "title": "Holiday Inn",
+   "year": "1942",
+   "theme": "xmas",
+   "tagline": "Open only on holidays. Dinner every one of them.",
+   "description": "A singer opens a country inn that only does business on holidays, and his old partner wants his girl.",
+   "serve_cue": "Serve the main when the inn opens for Thanksgiving and the turkey shows up.",
+   "snacks": [
+    {
+     "name": "Valentine's heart toasts",
+     "scene": "the inn's Valentine's Day show",
+     "method": "Heart-shaped cheese and tomato toasts grilled until bubbling, for the inn's Valentine's night on the calendar.",
+     "shop": [
+      "white bread",
+      "tomatoes",
+      "tasty cheese"
+     ]
+    },
+    {
+     "name": "Fourth of July corn",
+     "scene": "the inn's Independence Day show",
+     "method": "Grilled corn cobs brushed with butter and smoked paprika, for the firecracker Fourth of July night at the inn.",
+     "shop": [
+      "corn cobs",
+      "butter",
+      "smoked paprika"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Thanksgiving turkey dinner",
+     "scene": "the Thanksgiving show and the hopping turkey calendar",
+     "method": "Roast turkey with buttery mashed potatoes, gravy and green beans, the dinner the inn opens its doors for each Thanksgiving.",
+     "shop": [
+      "turkey breast",
+      "potatoes",
+      "butter",
+      "gravy powder",
+      "green beans"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas plum pudding",
+     "scene": "Christmas Eve at the inn",
+     "method": "Steamed Christmas pudding with warm brandy custard poured over, the inn's Christmas dessert by the fire.",
+     "shop": [
+      "Christmas pudding",
+      "vanilla custard",
+      "brandy"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Hot apple cider",
+     "scene": "a snowy winter night at the inn",
+     "method": "Warm spiced apple juice with cinnamon, cloves and orange peel.",
+     "shop": [
+      "apple juice",
+      "cinnamon sticks",
+      "cloves",
+      "orange"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Santa Clause 2 (2002)",
+   "title": "The Santa Clause 2",
+   "year": "2002",
+   "theme": "xmas",
+   "tagline": "Santa needs a Mrs. And a menu.",
+   "description": "Scott Calvin has to find a Mrs. Claus before Christmas Eve or stop being Santa for good.",
+   "serve_cue": "Serve the cocoa when Scott takes Carol on their first date.",
+   "snacks": [
+    {
+     "name": "North Pole elf cookies",
+     "scene": "the elves' workshop at the North Pole",
+     "method": "Iced Christmas sugar cookies cut into stars and trees, the kind the elves keep piled up all over the workshop.",
+     "shop": [
+      "butter",
+      "icing sugar",
+      "egg",
+      "plain flour",
+      "food colouring"
+     ]
+    },
+    {
+     "name": "Faculty party cheese ball",
+     "scene": "the school staff Christmas party",
+     "method": "A herby cheese ball rolled in walnuts and parsley with crackers, for the staff party Scott turns magical.",
+     "shop": [
+      "cream cheese",
+      "cheddar",
+      "chives",
+      "walnuts",
+      "parsley",
+      "crackers"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Mrs. Claus roast chicken",
+     "scene": "Scott and Carol's date night",
+     "method": "Golden roast chicken with herbs, potatoes and carrots, a warm Christmas dinner fit for the future Mrs. Claus.",
+     "shop": [
+      "chicken",
+      "butter",
+      "thyme",
+      "potatoes",
+      "carrots"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Candy cane brownies",
+     "scene": "Toy Santa running the North Pole",
+     "method": "Fudgy chocolate brownies topped with crushed candy canes, sweet enough for a sugar-crazed toy Santa.",
+     "shop": [
+      "dark chocolate",
+      "butter",
+      "caster sugar",
+      "eggs",
+      "plain flour",
+      "cocoa",
+      "candy canes"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Elf-made cocoa",
+     "scene": "the elves' famous North Pole cocoa",
+     "method": "Rich hot chocolate with whipped cream and a candy cane to stir.",
+     "shop": [
+      "full cream milk",
+      "dark chocolate",
+      "caster sugar",
+      "whipped cream",
+      "candy canes"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Fred Claus (2007)",
+   "title": "Fred Claus",
+   "year": "2007",
+   "theme": "xmas",
+   "tagline": "Santa's brother brings the snacks.",
+   "description": "Santa's troublemaking older brother has to help out at the North Pole in the busy week before Christmas.",
+   "serve_cue": "Serve the snacks when Fred arrives at the North Pole.",
+   "snacks": [
+    {
+     "name": "Chicago hot dogs",
+     "scene": "Fred's hustle on the Chicago streets",
+     "method": "Chicago-style hot dogs piled with mustard, relish, onion, tomato and a pickle spear, straight from Fred's home town.",
+     "shop": [
+      "frankfurts",
+      "hot dog buns",
+      "American mustard",
+      "relish",
+      "onion",
+      "tomatoes",
+      "dill pickles"
+     ]
+    },
+    {
+     "name": "Elf workshop gingerbread",
+     "scene": "the elves' workshop in the busy week",
+     "method": "Little gingerbread men with white icing, the kind the elves churn out while Fred upsets the whole workshop.",
+     "shop": [
+      "butter",
+      "golden syrup",
+      "brown sugar",
+      "self-raising flour",
+      "ground ginger",
+      "icing sugar"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Claus family Christmas ham",
+     "scene": "the Claus family together at Christmas",
+     "method": "Glazed ham with honey and mustard, the centrepiece for a family that finally sits down together.",
+     "shop": [
+      "half leg ham",
+      "honey",
+      "Dijon mustard",
+      "brown sugar"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Cookies for Santa",
+     "scene": "the cookies that keep Nick so round",
+     "method": "Choc chip cookies with cold milk, the treat that keeps Santa well fed all year round.",
+     "shop": [
+      "butter",
+      "brown sugar",
+      "egg",
+      "plain flour",
+      "chocolate chips",
+      "full cream milk"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "North Pole hot chocolate",
+     "scene": "a freezing night at the North Pole",
+     "method": "Hot chocolate with a handful of marshmallows on top.",
+     "shop": [
+      "full cream milk",
+      "milk chocolate",
+      "marshmallows"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Christmas with the Kranks (2004)",
+   "title": "Christmas with the Kranks",
+   "year": "2004",
+   "theme": "xmas",
+   "tagline": "Skipping Christmas? Not with this ham.",
+   "description": "A couple try to skip Christmas for a cruise until their daughter says she is coming home after all.",
+   "serve_cue": "Serve the main when Nora finally gets her hands on the last ham.",
+   "snacks": [
+    {
+     "name": "Frosty cheese snowman",
+     "scene": "the Frosty the whole street wants on their roof",
+     "method": "A cheese ball shaped like a snowman, rolled in white cheese with olive buttons and a carrot nose.",
+     "shop": [
+      "cream cheese",
+      "mozzarella",
+      "black olives",
+      "carrot",
+      "crackers"
+     ]
+    },
+    {
+     "name": "Cruise ship prawns",
+     "scene": "the Caribbean cruise they almost take",
+     "method": "Cold prawns on ice with cocktail sauce, the cruise ship buffet starter Luther was saving up for.",
+     "shop": [
+      "cooked prawns",
+      "mayonnaise",
+      "tomato sauce",
+      "lemon"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "The last honey glazed ham",
+     "scene": "Nora's race for the last ham in town",
+     "method": "A smoked ham with a sticky honey glaze, the one Nora fights another shopper for on Christmas Eve.",
+     "shop": [
+      "smoked ham",
+      "honey",
+      "brown sugar",
+      "Dijon mustard"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas Eve trifle",
+     "scene": "the last-minute Christmas Eve party",
+     "method": "Sponge, raspberry jelly, custard and cream layered in a big glass bowl for a party thrown together in hours.",
+     "shop": [
+      "sponge cake",
+      "raspberry jelly crystals",
+      "vanilla custard",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Hemlock Street punch",
+     "scene": "the whole street pitching in for the party",
+     "method": "Cranberry and orange punch topped up with lemonade over ice.",
+     "shop": [
+      "cranberry juice",
+      "orange juice",
+      "lemonade",
+      "orange"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Night Before (2015)",
+   "title": "The Night Before",
+   "year": "2015",
+   "theme": "xmas",
+   "tagline": "Christmas Eve, one last time.",
+   "description": "Three lifelong friends spend one last wild Christmas Eve in New York hunting for a legendary party.",
+   "serve_cue": "Serve the snacks when they head out into New York on Christmas Eve.",
+   "snacks": [
+    {
+     "name": "Bodega bagel bites",
+     "scene": "Christmas Eve on the streets of New York",
+     "method": "Mini bagels with cream cheese, smoked salmon and capers, a New York corner shop snack for a long night out.",
+     "shop": [
+      "mini bagels",
+      "cream cheese",
+      "smoked salmon",
+      "capers",
+      "red onion"
+     ]
+    },
+    {
+     "name": "Big night out wings",
+     "scene": "the hunt for the Nutcracka Ball",
+     "method": "Hot buffalo wings with ranch for dipping, fuel for a night that gets stranger by the hour.",
+     "shop": [
+      "chicken wings",
+      "hot sauce",
+      "butter",
+      "ranch dressing",
+      "celery"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Nutcracka Ball party plate",
+     "scene": "the legendary Nutcracka Ball",
+     "method": "Little beef sliders and mac and cheese cups, the kind of party food you would hope to find at the most famous party in town.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "slider buns",
+      "dill pickles",
+      "macaroni",
+      "tasty cheese",
+      "full cream milk"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas gingerbread cake",
+     "scene": "the end of the night with the three friends",
+     "method": "Soft sticky gingerbread cake with lemon icing, something sweet for when the night finally winds down.",
+     "shop": [
+      "butter",
+      "golden syrup",
+      "brown sugar",
+      "self-raising flour",
+      "ground ginger",
+      "egg",
+      "full cream milk",
+      "icing sugar",
+      "lemon"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Christmas Eve mulled wine",
+     "scene": "a cold New York Christmas Eve",
+     "method": "Warm red wine with orange and spices, sparkling apple juice for anyone not drinking.",
+     "shop": [
+      "red wine",
+      "orange",
+      "cinnamon sticks",
+      "cloves",
+      "caster sugar",
+      "sparkling apple juice"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Office Christmas Party (2016)",
+   "title": "Office Christmas Party",
+   "year": "2016",
+   "theme": "xmas",
+   "tagline": "The party that saves the branch.",
+   "description": "A branch manager throws an epic office Christmas party to save his staff from being sacked.",
+   "serve_cue": "Serve the snacks when the party gets out of hand.",
+   "snacks": [
+    {
+     "name": "Office party sausage rolls",
+     "scene": "the office party catering table",
+     "method": "Golden sausage rolls with tomato sauce, the first thing to disappear off any office party table.",
+     "shop": [
+      "sausage mince",
+      "onion",
+      "puff pastry",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Secret Santa cheese platter",
+     "scene": "the office Secret Santa",
+     "method": "Brie, cheddar, crackers and grapes on a big board, the classy part of the night before things get messy.",
+     "shop": [
+      "brie",
+      "cheddar",
+      "crackers",
+      "grapes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Office party sliders",
+     "scene": "the catering at the out-of-control party",
+     "method": "Little beef sliders with cheese and pickles, the kind of party food you can eat with one hand.",
+     "shop": [
+      "beef mince",
+      "Swiss cheese",
+      "slider buns",
+      "dill pickles"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Red and green cupcakes",
+     "scene": "the office party dessert table",
+     "method": "Vanilla cupcakes with red and green buttercream, the Christmas colours the office goes all in on.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "self-raising flour",
+      "full cream milk",
+      "icing sugar",
+      "food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Office eggnog",
+     "scene": "the office eggnog bowl",
+     "method": "Chilled eggnog with nutmeg, rum on the side for the adults.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "full cream milk",
+      "nutmeg",
+      "dark rum"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Grinch (2018)",
+   "title": "The Grinch",
+   "year": "2018",
+   "theme": "xmas",
+   "tagline": "Roast beast for everyone.",
+   "description": "The Grinch plans to steal Christmas from Whoville after the town decides to make it three times bigger.",
+   "serve_cue": "Serve the main when the Grinch sits down at the Whos' table.",
+   "snacks": [
+    {
+     "name": "Grinch green dip",
+     "scene": "the Grinch himself, green and grumpy",
+     "method": "Bright green spinach and herb dip with crackers, as green as the Grinch and much friendlier.",
+     "shop": [
+      "frozen spinach",
+      "cream cheese",
+      "parsley",
+      "lemon",
+      "crackers"
+     ]
+    },
+    {
+     "name": "Mount Crumpit cheese toasts",
+     "scene": "the Grinch's cave on Mount Crumpit",
+     "method": "Cheese and spring onion toasts grilled until bubbling, a grumpy snack for a grumpy cave up the mountain.",
+     "shop": [
+      "white bread",
+      "tasty cheese",
+      "spring onions"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Roast beast",
+     "scene": "the Whos' Christmas feast",
+     "method": "Slow-roasted beef with crisp roast potatoes, carved at the table like the Whos' famous roast beast.",
+     "shop": [
+      "beef topside",
+      "potatoes",
+      "beef stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Who pudding",
+     "scene": "the Whos' Christmas pudding",
+     "method": "Christmas pudding with warm custard, the Who pudding the whole town sits down to. Heat an 800g Christmas pudding as the pack says.",
+     "shop": [
+      "Christmas pudding",
+      "vanilla custard"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Max's morning coffee",
+     "scene": "Max brewing the Grinch's coffee every morning",
+     "method": "Strong coffee with frothy milk, hot chocolate for the kids.",
+     "shop": [
+      "ground coffee",
+      "full cream milk",
+      "drinking chocolate"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "A Christmas Carol (2009)",
+   "title": "A Christmas Carol",
+   "year": "2009",
+   "theme": "xmas",
+   "tagline": "Bah humbug. Pass the goose.",
+   "description": "Ebenezer Scrooge is visited by three ghosts on Christmas Eve in this motion-capture take on the Dickens story.",
+   "serve_cue": "Serve the main when Scrooge sends the prize turkey to the Cratchits.",
+   "snacks": [
+    {
+     "name": "Fezziwig's ball sausage rolls",
+     "scene": "Old Fezziwig's Christmas ball",
+     "method": "Little sausage rolls for the Christmas ball, the happiest party young Scrooge ever went to.",
+     "shop": [
+      "sausage mince",
+      "onion",
+      "puff pastry"
+     ]
+    },
+    {
+     "name": "Victorian roast chestnuts",
+     "scene": "the snowy streets of Victorian London",
+     "method": "Roasted chestnuts with sea salt, the street snack sold on every London corner at Christmas.",
+     "shop": [
+      "chestnuts",
+      "sea salt flakes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Christmas prize turkey",
+     "scene": "the prize turkey Scrooge sends to the Cratchits",
+     "method": "Roast turkey with sage stuffing and apple sauce, the huge bird a changed Scrooge buys for Bob's family.",
+     "shop": [
+      "turkey breast",
+      "breadcrumbs",
+      "onion",
+      "sage",
+      "butter",
+      "apple sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Flaming Christmas pudding",
+     "scene": "the Cratchits' Christmas pudding",
+     "method": "Christmas pudding with warm brandy poured over and lit at the table, then custard on top.",
+     "shop": [
+      "Christmas pudding",
+      "brandy",
+      "vanilla custard"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Smoking bishop",
+     "scene": "Scrooge promising Bob a bowl of smoking bishop",
+     "method": "Warm spiced port punch with oranges. Warm spiced juice for the kids.",
+     "shop": [
+      "port",
+      "oranges",
+      "cloves",
+      "caster sugar",
+      "apple juice"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Krampus (2015)",
+   "title": "Krampus",
+   "year": "2015",
+   "theme": "xmas",
+   "tagline": "Gingerbread with teeth.",
+   "description": "A family Christmas goes so badly that a young boy's lost spirit summons the dark shadow of St. Nicholas.",
+   "serve_cue": "Serve the gingerbread when the gingerbread men come to life.",
+   "snacks": [
+    {
+     "name": "Snowed-in pantry board",
+     "scene": "the family snowed in with the power out",
+     "method": "Crackers, cheddar and pickles pulled from the pantry, all you can manage when the power is out and the snow is up to the windows.",
+     "shop": [
+      "crackers",
+      "cheddar",
+      "dill pickles"
+     ]
+    },
+    {
+     "name": "Family Christmas onion dip",
+     "scene": "the relatives who cannot get along",
+     "method": "Homemade French onion dip with chips, a peace offering for a family dinner already going wrong.",
+     "shop": [
+      "sour cream",
+      "onions",
+      "butter",
+      "potato chips"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Christmas Eve lasagne",
+     "scene": "the tense family dinner before the storm",
+     "method": "Beef lasagne with a bubbling cheesy top, comfort food for the night before everything goes wrong.",
+     "shop": [
+      "beef mince",
+      "passata",
+      "lasagne sheets",
+      "butter",
+      "plain flour",
+      "full cream milk",
+      "mozzarella"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Gingerbread men with teeth",
+     "scene": "Krampus's evil gingerbread men",
+     "method": "Gingerbread men iced with jagged grinning teeth, much friendlier to eat than to meet in the attic.",
+     "shop": [
+      "butter",
+      "golden syrup",
+      "brown sugar",
+      "plain flour",
+      "ground ginger",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Hot spiced cider",
+     "scene": "a freezing night snowed in",
+     "method": "Warm spiced apple juice with cinnamon and cloves.",
+     "shop": [
+      "apple juice",
+      "cinnamon sticks",
+      "cloves"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Violent Night (2022)",
+   "title": "Violent Night",
+   "year": "2022",
+   "theme": "xmas",
+   "tagline": "Santa's had a few. Dinner's still on.",
+   "description": "A worn-out Santa has to save a rich family when mercenaries take over their mansion on Christmas Eve.",
+   "serve_cue": "Serve the drinks when Santa stops at the pub.",
+   "snacks": [
+    {
+     "name": "Mansion canapés",
+     "scene": "the Lightstone family mansion",
+     "method": "Smoked salmon blinis with crème fraîche and chives, the fancy Christmas Eve canapés of a very rich family.",
+     "shop": [
+      "blinis",
+      "crème fraîche",
+      "smoked salmon",
+      "chives"
+     ]
+    },
+    {
+     "name": "Cookies for Santa",
+     "scene": "the cookies Santa eats at every house",
+     "method": "Buttery Christmas shortbread fingers, the kind of cookie plate Santa works through all night. Beat 250g butter and 110g sugar until pale, then mix in 360g plain flour.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "plain flour"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Christmas Eve rib roast",
+     "scene": "the Lightstones' Christmas Eve dinner",
+     "method": "Beef rib roast with crisp roast potatoes and gravy, the rich family's Christmas Eve dinner before it all kicks off.",
+     "shop": [
+      "beef rib roast",
+      "potatoes",
+      "beef stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas berry trifle",
+     "scene": "the mansion's dessert table",
+     "method": "Sponge, custard, mixed berries and whipped cream layered in a glass bowl. Tear a sponge cake into a glass bowl and scatter with 250g mixed berries.",
+     "shop": [
+      "sponge cake",
+      "vanilla custard",
+      "mixed berries",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Santa's pint",
+     "scene": "Santa drinking at the pub on Christmas Eve",
+     "method": "A cold pint of dark ale. Lemonade for the kids.",
+     "shop": [
+      "dark ale",
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Noelle (2019)",
+   "title": "Noelle",
+   "year": "2019",
+   "theme": "xmas",
+   "tagline": "Santa's daughter takes the sleigh.",
+   "description": "Santa's daughter heads to Phoenix to find her brother, who has run off before Christmas.",
+   "serve_cue": "Serve the snacks when Noelle lands in Phoenix.",
+   "snacks": [
+    {
+     "name": "Phoenix chicken tacos",
+     "scene": "Christmas in sunny Phoenix",
+     "method": "Spiced chicken tacos with salsa, lettuce and lime, a desert Christmas a long way from the snow.",
+     "shop": [
+      "chicken thighs",
+      "taco seasoning",
+      "small flour tortillas",
+      "tomato salsa",
+      "iceberg lettuce",
+      "limes"
+     ]
+    },
+    {
+     "name": "Candy cane bark",
+     "scene": "the North Pole, home of the candy canes",
+     "method": "White chocolate bark scattered with crushed candy canes, snapped into shards like North Pole ice.",
+     "shop": [
+      "white chocolate",
+      "candy canes"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Kringle family roast",
+     "scene": "the Kringle family Christmas",
+     "method": "Golden roast chicken with potatoes and carrots, a family Christmas dinner once Nick is home.",
+     "shop": [
+      "chicken",
+      "potatoes",
+      "carrots",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Elves' sugar cookies",
+     "scene": "the elves at the North Pole",
+     "method": "Iced sugar cookies in Christmas shapes, made by the tray-load at the North Pole. Beat 200g butter and 100g icing sugar, add 1 egg yolk and 300g flour and chill.",
+     "shop": [
+      "butter",
+      "icing sugar",
+      "egg",
+      "plain flour"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "North Pole hot cocoa",
+     "scene": "Christmas at the North Pole",
+     "method": "Hot chocolate topped with whipped cream. Heat 1L milk until steaming and whisk in 150g chopped milk chocolate until smooth.",
+     "shop": [
+      "full cream milk",
+      "milk chocolate",
+      "whipped cream"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Last Christmas (2019)",
+   "title": "Last Christmas",
+   "year": "2019",
+   "theme": "xmas",
+   "tagline": "One more Christmas in London.",
+   "description": "A struggling London actress working as an elf in a year-round Christmas shop meets someone who changes everything.",
+   "serve_cue": "Serve the sweets when Kate clocks on at the Christmas shop.",
+   "snacks": [
+    {
+     "name": "Covent Garden sausages",
+     "scene": "Christmas around Covent Garden",
+     "method": "Grilled sausages in soft rolls with fried onions and mustard, a London Christmas market favourite.",
+     "shop": [
+      "beef sausages",
+      "bread rolls",
+      "onions",
+      "English mustard"
+     ]
+    },
+    {
+     "name": "London mince pies",
+     "scene": "a London Christmas",
+     "method": "Warm little mince pies dusted with icing sugar, with a dollop of cream on the side.",
+     "shop": [
+      "mince pies",
+      "icing sugar",
+      "thickened cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Kate's family stuffed capsicums",
+     "scene": "Kate's family from the former Yugoslavia",
+     "method": "Capsicums stuffed with beef and rice and baked in tomato sauce, Eastern European home cooking at the family table.",
+     "shop": [
+      "beef mince",
+      "long grain rice",
+      "onion",
+      "red capsicums",
+      "passata",
+      "sweet paprika"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas shop gingerbread",
+     "scene": "the year-round Christmas shop",
+     "method": "Gingerbread biscuits with white icing, the kind of thing sold all year in Santa's shop.",
+     "shop": [
+      "butter",
+      "golden syrup",
+      "brown sugar",
+      "plain flour",
+      "ground ginger",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "London mulled wine",
+     "scene": "a London winter night",
+     "method": "Warm spiced red wine with orange, spiced apple juice for anyone not drinking.",
+     "shop": [
+      "red wine",
+      "orange",
+      "cinnamon sticks",
+      "caster sugar",
+      "apple juice"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Holdovers (2023)",
+   "title": "The Holdovers",
+   "year": "2023",
+   "theme": "xmas",
+   "tagline": "Stuck at school for Christmas.",
+   "description": "A grumpy teacher, a grieving cook and a troubled student are stuck at a New England boarding school over Christmas 1970.",
+   "serve_cue": "Serve dessert when Mr Hunham orders the cherries jubilee.",
+   "snacks": [
+    {
+     "name": "School kitchen grilled cheese",
+     "scene": "Mary's school kitchen",
+     "method": "Toasted cheese sandwiches cut in half, simple school kitchen food for the boys left behind.",
+     "shop": [
+      "white bread",
+      "cheddar",
+      "butter"
+     ]
+    },
+    {
+     "name": "New England clam chowder",
+     "scene": "New England in the dead of winter",
+     "method": "Creamy clam chowder in cups with bacon and potato, the warming soup of a snowed-in New England town.",
+     "shop": [
+      "bacon",
+      "onion",
+      "potatoes",
+      "fish stock",
+      "tinned clams",
+      "thickened cream"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Holdovers Christmas dinner",
+     "scene": "the makeshift Christmas for the three left behind",
+     "method": "Roast chicken with herb stuffing and roast potatoes, a small Christmas dinner for three unlikely friends.",
+     "shop": [
+      "chicken",
+      "breadcrumbs",
+      "onion",
+      "sage",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Cherries jubilee",
+     "scene": "Mr Hunham's flaming cherries jubilee at the restaurant",
+     "method": "Warm cherries in a brandy sauce set alight at the table and spooned over vanilla ice cream, minus the restaurant fire.",
+     "shop": [
+      "frozen pitted cherries",
+      "caster sugar",
+      "brandy",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Mr Hunham's bourbon",
+     "scene": "the bottle in Mr Hunham's desk",
+     "method": "Bourbon over ice. Ginger ale for anyone not drinking.",
+     "shop": [
+      "bourbon",
+      "ginger ale"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Red One (2024)",
+   "title": "Red One",
+   "year": "2024",
+   "theme": "xmas",
+   "tagline": "Find Santa. Then dinner.",
+   "description": "After Santa is kidnapped, the head of North Pole security teams up with a hacker to get him back.",
+   "serve_cue": "Serve the snacks when the search for Santa begins.",
+   "snacks": [
+    {
+     "name": "Command centre potato skins",
+     "scene": "the North Pole security command centre",
+     "method": "Crispy potato skins with cheese, bacon and sour cream, something to snack on during a long night of searching for Santa.",
+     "shop": [
+      "potatoes",
+      "tasty cheese",
+      "bacon",
+      "sour cream"
+     ]
+    },
+    {
+     "name": "Elf trail mix",
+     "scene": "the elves at the North Pole",
+     "method": "Mixed nuts, chocolate buttons and dried cranberries tossed together, a sweet and salty mix for the whole crew.",
+     "shop": [
+      "mixed nuts",
+      "chocolate buttons",
+      "dried cranberries"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Santa's training steak",
+     "scene": "Santa keeping fit for the big night",
+     "method": "Grilled rump steak with sweet potato and green beans, a strong dinner for a very fit Santa.",
+     "shop": [
+      "rump steaks",
+      "sweet potatoes",
+      "green beans"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas Eve cookies",
+     "scene": "Christmas Eve back on track",
+     "method": "Red and green iced Christmas cookies, a sweet ending once Santa is safely home. Beat 200g butter and 100g icing sugar, add 1 egg yolk and 300g flour and chill.",
+     "shop": [
+      "butter",
+      "icing sugar",
+      "egg",
+      "plain flour",
+      "food colouring"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "North Pole cocoa",
+     "scene": "a cold night at the North Pole",
+     "method": "Hot chocolate topped with whipped cream. Heat 1L milk until steaming and whisk in 150g chopped milk chocolate until smooth.",
+     "shop": [
+      "full cream milk",
+      "milk chocolate",
+      "whipped cream"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Christmas Chronicles (2018)",
+   "title": "The Christmas Chronicles",
+   "year": "2018",
+   "theme": "xmas",
+   "tagline": "Catch Santa. Save Christmas.",
+   "description": "Two kids trying to catch Santa on camera crash his sleigh and have to help him save Christmas.",
+   "serve_cue": "Serve the cookies when the kids set up the camera to catch Santa.",
+   "snacks": [
+    {
+     "name": "Stakeout cookies",
+     "scene": "Kate's plan to catch Santa on camera",
+     "method": "Choc chip cookies left out on a plate as bait, the best way to lure Santa into the shot.",
+     "shop": [
+      "butter",
+      "brown sugar",
+      "egg",
+      "plain flour",
+      "chocolate chips"
+     ]
+    },
+    {
+     "name": "Chicago diner fries",
+     "scene": "Santa's night in Chicago",
+     "method": "Crisp fries with gravy for dipping, a quick bite on a busy night in Chicago.",
+     "shop": [
+      "frozen chips",
+      "gravy powder"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Christmas Eve meatloaf",
+     "scene": "a family missing their dad at Christmas",
+     "method": "Glazed meatloaf with mashed potatoes and gravy, warm family food for a hard Christmas. Mix 800g beef mince with a diced onion, 1 egg and 60g breadcrumbs.",
+     "shop": [
+      "beef mince",
+      "onion",
+      "egg",
+      "breadcrumbs",
+      "potatoes",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Sleigh ride sugar cookies",
+     "scene": "the sleigh ride with Santa",
+     "method": "Iced sugar cookies cut into stars and reindeer for the wild ride across the sky.",
+     "shop": [
+      "butter",
+      "icing sugar",
+      "egg",
+      "plain flour"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Santa's hot chocolate",
+     "scene": "Christmas Eve on the sleigh",
+     "method": "Hot chocolate with marshmallows on top. Heat 1L milk until steaming and whisk in 150g chopped milk chocolate.",
+     "shop": [
+      "full cream milk",
+      "milk chocolate",
+      "marshmallows"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Jack Frost (1998)",
+   "title": "Jack Frost",
+   "year": "1998",
+   "theme": "xmas",
+   "tagline": "Dad's back. He's a snowman.",
+   "description": "A dad who missed too much of his son's life comes back as a snowman for one last Christmas.",
+   "serve_cue": "Serve the snacks when the snowman comes to life.",
+   "snacks": [
+    {
+     "name": "Snow day toasties",
+     "scene": "snow days in the Colorado mountains",
+     "method": "Ham and cheese toasties cut into triangles, the lunch for a snow day stuck inside.",
+     "shop": [
+      "white bread",
+      "leg ham",
+      "tasty cheese",
+      "butter"
+     ]
+    },
+    {
+     "name": "Hockey game hot dogs",
+     "scene": "Charlie's hockey game",
+     "method": "Hot dogs with mustard and sauce, the rink-side snack at Charlie's big hockey game. Simmer 8 frankfurts for 5 minutes and tuck into 8 soft buns.",
+     "shop": [
+      "frankfurts",
+      "hot dog buns",
+      "American mustard",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Family Christmas roast",
+     "scene": "the family Christmas Jack keeps missing",
+     "method": "Roast beef with roast potatoes and gravy, the family dinner Jack finally gets to share.",
+     "shop": [
+      "beef topside",
+      "potatoes",
+      "beef stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Snowman cupcakes",
+     "scene": "Jack the snowman dad",
+     "method": "Vanilla cupcakes iced white and rolled in coconut like little snowmen. Beat 125g butter and 150g sugar, add 2 eggs, 200g self-raising flour and 120ml milk.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "self-raising flour",
+      "full cream milk",
+      "icing sugar",
+      "desiccated coconut"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Snowy night cocoa",
+     "scene": "a snowy night in the mountains",
+     "method": "Hot chocolate made with real chocolate. Heat 1L milk until steaming and whisk in 150g chopped milk chocolate until smooth.",
+     "shop": [
+      "full cream milk",
+      "milk chocolate"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Deck the Halls (2006)",
+   "title": "Deck the Halls",
+   "year": "2006",
+   "theme": "xmas",
+   "tagline": "Lights out. Snacks on.",
+   "description": "Two neighbours go to war over a house full of Christmas lights bright enough to be seen from space.",
+   "serve_cue": "Serve the snacks when the lights go on.",
+   "snacks": [
+    {
+     "name": "Christmas lights cheese board",
+     "scene": "Buddy's light display",
+     "method": "Cheddar, crackers and red and green grapes on a board, as colourful as the house next door.",
+     "shop": [
+      "cheddar",
+      "crackers",
+      "grapes"
+     ]
+    },
+    {
+     "name": "Neighbourhood party meatballs",
+     "scene": "the street Christmas party",
+     "method": "Little glazed cocktail meatballs on toothpicks, the classic street party snack. Mix 500g beef mince with 1 egg and 40g breadcrumbs and roll into small balls.",
+     "shop": [
+      "beef mince",
+      "egg",
+      "breadcrumbs",
+      "sweet chilli sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Christmas roast turkey",
+     "scene": "the two families at Christmas",
+     "method": "Roast turkey breast with sage stuffing and cranberry sauce, Christmas dinner once the feud is over.",
+     "shop": [
+      "turkey breast",
+      "breadcrumbs",
+      "onion",
+      "sage",
+      "butter",
+      "cranberry sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas trifle",
+     "scene": "the family Christmas dessert",
+     "method": "Sponge, jelly, custard and cream in a big bowl, the dessert at every family Christmas.",
+     "shop": [
+      "sponge cake",
+      "raspberry jelly crystals",
+      "vanilla custard",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Neighbourly eggnog",
+     "scene": "making up with the neighbours",
+     "method": "Chilled eggnog with nutmeg on top. Whisk 4 egg yolks with 100g sugar.",
+     "shop": [
+      "eggs",
+      "caster sugar",
+      "full cream milk",
+      "nutmeg"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Nativity! (2009)",
+   "title": "Nativity!",
+   "year": "2009",
+   "theme": "xmas",
+   "tagline": "The school nativity, Hollywood style.",
+   "description": "A primary school teacher accidentally promises that Hollywood is coming to see his school's nativity play.",
+   "serve_cue": "Serve the sweets when the nativity play starts.",
+   "snacks": [
+    {
+     "name": "Staffroom mince pies",
+     "scene": "the school staffroom at Christmas",
+     "method": "Warm mince pies with a spoon of cream, the staffroom treat every English school has in December.",
+     "shop": [
+      "mince pies",
+      "thickened cream"
+     ]
+    },
+    {
+     "name": "Christmas fair sausage rolls",
+     "scene": "the school Christmas fair",
+     "method": "Golden sausage rolls, the bake sale favourite at every school Christmas fair. Mix 500g sausage mince with 1 grated onion and roll in 2 sheets puff pastry.",
+     "shop": [
+      "sausage mince",
+      "puff pastry",
+      "onion"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Coventry Christmas dinner",
+     "scene": "Christmas in Coventry",
+     "method": "Roast chicken with stuffing, roast potatoes and Brussels sprouts, an English Christmas dinner. Fill a whole chicken with stuffing from 150g breadcrumbs and herbs and roast at 200C for 1 hour 15 minutes with 800g potatoes.",
+     "shop": [
+      "chicken",
+      "potatoes",
+      "Brussels sprouts",
+      "breadcrumbs"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Coventry Christmas pudding",
+     "scene": "an English Christmas in Coventry",
+     "method": "Christmas pudding with warm custard poured over, the dessert after every school nativity. Heat an 800g Christmas pudding as the pack says.",
+     "shop": [
+      "Christmas pudding",
+      "vanilla custard"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Warm blackcurrant",
+     "scene": "a cold school day in December",
+     "method": "Warm blackcurrant cordial in mugs, a cosy drink for kids.",
+     "shop": [
+      "blackcurrant cordial"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Miracle on 34th Street (1994)",
+   "title": "Miracle on 34th Street",
+   "year": "1994",
+   "theme": "xmas",
+   "tagline": "Believe in Santa. Believe in dinner.",
+   "description": "A department store Santa claims he is the real thing, and a court case decides it.",
+   "serve_cue": "Serve the snacks after the Thanksgiving parade.",
+   "snacks": [
+    {
+     "name": "Parade morning cinnamon donuts",
+     "scene": "the Thanksgiving Day parade",
+     "method": "Warm cinnamon sugar donuts, a sweet street snack for a cold parade morning in New York.",
+     "shop": [
+      "pizza dough",
+      "caster sugar",
+      "ground cinnamon",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Department store cookies",
+     "scene": "Kriss Kringle's department store",
+     "method": "Iced Christmas cookies, the treats handed out in the line to see Santa. Beat 200g butter and 100g icing sugar, add 1 egg yolk and 300g flour and chill.",
+     "shop": [
+      "butter",
+      "icing sugar",
+      "egg",
+      "plain flour"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Thanksgiving roast turkey",
+     "scene": "Thanksgiving dinner with Kriss",
+     "method": "Roast turkey with mashed potatoes and gravy, the Thanksgiving dinner after the parade. Roast a 1.5kg turkey breast at 180C for 1 hour 20 minutes.",
+     "shop": [
+      "turkey breast",
+      "potatoes",
+      "butter",
+      "gravy powder"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Pumpkin pie",
+     "scene": "Thanksgiving in New York",
+     "method": "Spiced pumpkin pie with whipped cream. Steam and mash 500g pumpkin. Beat with 150g brown sugar, 2 eggs, 200ml evaporated milk and cinnamon.",
+     "shop": [
+      "pumpkin",
+      "brown sugar",
+      "eggs",
+      "evaporated milk",
+      "shortcrust pastry",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Hot apple cider",
+     "scene": "a cold New York night",
+     "method": "Warm spiced apple juice with cinnamon. Heat 1.2L apple juice with 2 cinnamon sticks for 15 minutes without boiling.",
+     "shop": [
+      "apple juice",
+      "cinnamon sticks"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Hop (2011)",
+   "title": "Hop",
+   "year": "2011",
+   "theme": "kids",
+   "tagline": "The Easter Bunny's son wants to drum.",
+   "description": "The Easter Bunny's son runs away to Hollywood to be a drummer instead of taking over the family business.",
+   "serve_cue": "Serve the sweets when the Easter Island candy factory comes into view.",
+   "snacks": [
+    {
+     "name": "Jellybean rocky road",
+     "scene": "E.B. and his jellybeans",
+     "method": "Chocolate rocky road loaded with jellybeans and marshmallows, sweet enough for the Easter Bunny's son.",
+     "shop": [
+      "milk chocolate",
+      "marshmallows",
+      "jellybeans",
+      "salted peanuts"
+     ]
+    },
+    {
+     "name": "Bunny carrot sticks",
+     "scene": "E.B. the Easter Bunny's son",
+     "method": "Crunchy carrot sticks with hummus, the snack every bunny would pick. Peel 4 carrots and cut into sticks.",
+     "shop": [
+      "carrots",
+      "hummus"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Hollywood hot dogs",
+     "scene": "E.B.'s adventure in Hollywood",
+     "method": "Hot dogs with sauce and mustard, a quick Hollywood bite on the way to the big audition.",
+     "shop": [
+      "frankfurts",
+      "hot dog buns",
+      "tomato sauce",
+      "American mustard"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Chocolate Easter nests",
+     "scene": "the candy factory on Easter Island",
+     "method": "Chocolate cornflake nests filled with mini chocolate eggs. Melt 200g milk chocolate and stir in 80g cornflakes.",
+     "shop": [
+      "milk chocolate",
+      "cornflakes",
+      "mini chocolate eggs"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Carrot and orange juice",
+     "scene": "the bunny's favourite",
+     "method": "Fresh carrot and orange juice over ice. Juice 6 carrots and 4 oranges, or blitz and strain.",
+     "shop": [
+      "carrots",
+      "oranges"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Peter Rabbit (2018)",
+   "title": "Peter Rabbit",
+   "year": "2018",
+   "theme": "kids",
+   "tagline": "Raid the garden.",
+   "description": "Peter Rabbit and his family battle the new Mr. McGregor for the vegetable garden and a neighbour's affection.",
+   "serve_cue": "Serve the snacks when Peter raids the garden.",
+   "snacks": [
+    {
+     "name": "McGregor's garden radishes",
+     "scene": "Mr. McGregor's vegetable garden",
+     "method": "Crisp radishes with soft butter and sea salt, straight from the garden Peter keeps raiding.",
+     "shop": [
+      "radishes",
+      "butter",
+      "sea salt flakes"
+     ]
+    },
+    {
+     "name": "Garden raid crudités",
+     "scene": "Peter and his sisters raiding the garden",
+     "method": "Carrot sticks, snow peas and lettuce cups with a yoghurt dip, everything the rabbits pinch.",
+     "shop": [
+      "carrots",
+      "snow peas",
+      "baby cos lettuce",
+      "Greek yoghurt"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Lake District vegetable pie",
+     "scene": "the Lake District countryside",
+     "method": "Vegetables in a cheese sauce under puff pastry, a country pie made from the garden.",
+     "shop": [
+      "carrots",
+      "leeks",
+      "peas",
+      "cheddar",
+      "puff pastry",
+      "full cream milk"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Blackberry crumble",
+     "scene": "the blackberry attack on Thomas McGregor",
+     "method": "Warm blackberry crumble with cream, the berries Peter famously used as a weapon. Tip 750g blackberries into a dish with 2 tbsp sugar.",
+     "shop": [
+      "frozen blackberries",
+      "butter",
+      "plain flour",
+      "brown sugar",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Chamomile tea",
+     "scene": "Mrs Rabbit's chamomile tea",
+     "method": "Chamomile tea with honey, cold apple juice for kids.",
+     "shop": [
+      "chamomile tea bags",
+      "honey",
+      "apple juice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Big Daddy (1999)",
+   "title": "Big Daddy",
+   "year": "1999",
+   "theme": "diner",
+   "tagline": "Adopt a kid. Feed him whatever he wants.",
+   "description": "A lazy New Yorker adopts a five-year-old to win back his girlfriend and makes up the parenting rules as he goes.",
+   "serve_cue": "Serve the wings when Sonny takes Julian out to the sports bar.",
+   "snacks": [
+    {
+     "name": "Sports bar wings",
+     "scene": "Sonny taking Julian to his favourite sports bar",
+     "method": "Sticky barbecue chicken wings with ranch, the kind of meal Sonny thinks is perfectly fine for a five-year-old.",
+     "shop": [
+      "chicken wings",
+      "barbecue sauce",
+      "ranch dressing",
+      "celery"
+     ]
+    },
+    {
+     "name": "Central Park bagels",
+     "scene": "the afternoons in Central Park",
+     "method": "Toasted bagels with cream cheese, a quick New York bite between tossing sticks and making a mess.",
+     "shop": [
+      "bagels",
+      "cream cheese"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Sonny's anything-goes burgers",
+     "scene": "Sonny letting Julian make all the rules",
+     "method": "Big cheeseburgers with whatever toppings each person picks, because in Sonny's house the kid decides.",
+     "shop": [
+      "beef mince",
+      "cheddar",
+      "burger buns",
+      "iceberg lettuce",
+      "tomatoes",
+      "dill pickles",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Ice cream sundaes",
+     "scene": "the most fun dad in New York",
+     "method": "Vanilla ice cream sundaes with chocolate sauce, sprinkles and a cherry, a dessert with no bedtime attached.",
+     "shop": [
+      "vanilla ice cream",
+      "chocolate sauce",
+      "sprinkles",
+      "glacé cherries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Chocolate milk",
+     "scene": "Julian's drink of choice",
+     "method": "Cold chocolate milk in tall glasses with straws.",
+     "shop": [
+      "full cream milk",
+      "drinking chocolate"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Valentine's Day (2010)",
+   "title": "Valentine's Day",
+   "year": "2010",
+   "theme": "romcom",
+   "tagline": "Love is in the air. So is dinner.",
+   "description": "One busy Valentine's Day in Los Angeles follows a florist and a big tangle of couples falling in and out of love.",
+   "serve_cue": "Serve dessert when Reed's flower shop closes for the night.",
+   "snacks": [
+    {
+     "name": "Strawberries dipped in chocolate",
+     "scene": "a Los Angeles Valentine's Day",
+     "method": "Fresh strawberries dipped in dark chocolate and left to set, the classic Valentine's treat. Melt 150g dark chocolate in short bursts in the microwave.",
+     "shop": [
+      "strawberries",
+      "dark chocolate"
+     ]
+    },
+    {
+     "name": "Florist's heart toasts",
+     "scene": "Reed's flower shop on the busiest day of the year",
+     "method": "Heart-shaped toasts topped with goat's cheese, honey and thyme, pretty enough for a flower shop counter.",
+     "shop": [
+      "sourdough",
+      "goat's cheese",
+      "honey",
+      "thyme"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Valentine's steak dinner",
+     "scene": "the couples' big dinner dates",
+     "method": "Pan-seared steak with garlic butter, crispy potatoes and greens, a proper Valentine's dinner at home.",
+     "shop": [
+      "scotch fillet steaks",
+      "baby potatoes",
+      "butter",
+      "garlic cloves",
+      "rocket"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Red velvet cupcakes",
+     "scene": "Valentine's Day in red",
+     "method": "Red velvet cupcakes with cream cheese icing, as red as the day itself. Mix 200g self-raising flour, 2 tbsp cocoa, 150g sugar, 2 eggs, 125ml buttermilk, 100ml oil and red colouring.",
+     "shop": [
+      "self-raising flour",
+      "cocoa",
+      "caster sugar",
+      "eggs",
+      "buttermilk",
+      "vegetable oil",
+      "food colouring",
+      "cream cheese",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Pink bubbles",
+     "scene": "a Valentine's toast",
+     "method": "Sparkling rosé, pink lemonade for anyone not drinking.",
+     "shop": [
+      "sparkling rosé",
+      "pink lemonade",
+      "raspberries"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Mother's Day (2016)",
+   "title": "Mother's Day",
+   "year": "2016",
+   "theme": "romcom",
+   "tagline": "For every kind of mum.",
+   "description": "A handful of Atlanta families, each with its own mum drama, collide in the days before Mother's Day.",
+   "serve_cue": "Serve breakfast in bed food when Mother's Day finally arrives.",
+   "snacks": [
+    {
+     "name": "Breakfast in bed pastries",
+     "scene": "the classic Mother's Day breakfast in bed",
+     "method": "Warm croissants with jam and butter on a tray, the breakfast in bed every mum is meant to get.",
+     "shop": [
+      "croissants",
+      "butter",
+      "strawberry jam"
+     ]
+    },
+    {
+     "name": "Atlanta pimento cheese",
+     "scene": "Mother's Day in Atlanta",
+     "method": "Southern pimento cheese with crackers and celery, a proper Georgia party snack. Mix 200g grated sharp cheddar with 100g mayonnaise, 80g chopped roasted capsicum and a pinch of cayenne.",
+     "shop": [
+      "vintage cheddar",
+      "mayonnaise",
+      "roasted capsicum",
+      "crackers",
+      "celery"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Mother's Day brunch frittata",
+     "scene": "the big family Mother's Day lunch",
+     "method": "A thick baked frittata with ham, spinach and cheese, easy enough for the kids to make for mum.",
+     "shop": [
+      "eggs",
+      "full cream milk",
+      "leg ham",
+      "baby spinach",
+      "tasty cheese",
+      "mixed salad leaves"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Strawberry shortcake",
+     "scene": "a sweet thank you to mum",
+     "method": "Fluffy shortcake biscuits split and filled with strawberries and cream. Rub 80g butter into 250g self-raising flour and 2 tbsp sugar, add 150ml milk and pat out.",
+     "shop": [
+      "butter",
+      "self-raising flour",
+      "caster sugar",
+      "full cream milk",
+      "thickened cream",
+      "strawberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Mum's mimosa",
+     "scene": "a Mother's Day brunch toast",
+     "method": "Sparkling wine with orange juice, plain orange juice for the kids.",
+     "shop": [
+      "sparkling wine",
+      "orange juice"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "New Year's Eve (2011)",
+   "title": "New Year's Eve",
+   "year": "2011",
+   "theme": "romcom",
+   "tagline": "Ten, nine, eight, dinner.",
+   "description": "A mess of New Yorkers chase love and second chances in the hours before the ball drops in Times Square.",
+   "serve_cue": "Serve the drinks as the ball drops at midnight.",
+   "snacks": [
+    {
+     "name": "Laura's party canapés",
+     "scene": "Laura the chef catering the big New Year's party",
+     "method": "Smoked salmon blinis and prawn cups, the kind of fancy bites a chef sends out at a big New York party.",
+     "shop": [
+      "blinis",
+      "crème fraîche",
+      "smoked salmon",
+      "cooked prawns",
+      "baby cos lettuce",
+      "mayonnaise",
+      "lemon"
+     ]
+    },
+    {
+     "name": "Times Square chicken skewers",
+     "scene": "the street carts around Times Square",
+     "method": "Spiced chicken skewers with white sauce, the street cart snack while waiting hours for the ball to drop.",
+     "shop": [
+      "chicken thighs",
+      "ground cumin",
+      "sweet paprika",
+      "Greek yoghurt",
+      "garlic clove",
+      "lemon"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "New Year's Eve dinner",
+     "scene": "a big New York night out",
+     "method": "Garlic butter prawn linguine with parsley and lemon, an elegant dinner before midnight. Cook 400g linguine.",
+     "shop": [
+      "linguine",
+      "green prawns",
+      "butter",
+      "garlic cloves",
+      "lemon",
+      "parsley"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Midnight chocolate fondue",
+     "scene": "the countdown to midnight",
+     "method": "Warm chocolate fondue with strawberries and marshmallows, something to share as the year ends. Heat 200ml cream until steaming and pour over 200g chopped dark chocolate.",
+     "shop": [
+      "thickened cream",
+      "dark chocolate",
+      "strawberries",
+      "bananas",
+      "marshmallows"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Midnight bubbles",
+     "scene": "the ball drop at midnight",
+     "method": "Chilled champagne at midnight, sparkling grape juice for everyone else.",
+     "shop": [
+      "sparkling wine",
+      "sparkling grape juice"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Time Bandits (1981)",
+   "title": "Time Bandits",
+   "year": "1981",
+   "theme": "fairytale",
+   "tagline": "Steal through time. Stop for dinner.",
+   "description": "A boy joins a gang of time-travelling thieves on a wild run through history with a stolen map of holes in time.",
+   "serve_cue": "Serve the main when the boys reach Agamemnon's feast.",
+   "snacks": [
+    {
+     "name": "Agamemnon's feast platter",
+     "scene": "King Agamemnon's feast in ancient Greece",
+     "method": "Olives, feta, cucumber and warm pita, a Greek feast platter fit for a king who adopts you on the spot.",
+     "shop": [
+      "kalamata olives",
+      "feta",
+      "continental cucumber",
+      "cherry tomatoes",
+      "pita breads",
+      "dried oregano"
+     ]
+    },
+    {
+     "name": "Sherwood Forest picnic",
+     "scene": "Robin Hood and his merry men",
+     "method": "Crusty bread, cheese and apples, a forest picnic with Robin Hood before the gang loses all the loot.",
+     "shop": [
+      "crusty loaf",
+      "vintage cheddar",
+      "red apples",
+      "sweet pickle"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Ogre's kitchen stew",
+     "scene": "the ogre and his wife cooking dinner on their ship",
+     "method": "A big pot of beef and vegetable stew, the friendly version of what the ogre had planned for the bandits.",
+     "shop": [
+      "chuck steak",
+      "onion",
+      "carrots",
+      "potatoes",
+      "beef stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Napoleon's little cakes",
+     "scene": "Napoleon and his love of little things",
+     "method": "Small custard tarts dusted with cinnamon, little cakes for a general obsessed with small things.",
+     "shop": [
+      "puff pastry",
+      "vanilla custard",
+      "eggs",
+      "ground cinnamon"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Titanic ginger ale",
+     "scene": "the boys' stop aboard the Titanic",
+     "method": "Ginger ale over ice with lemon. Fill 4 glasses with ice and pour over 1.25L ginger ale.",
+     "shop": [
+      "ginger ale",
+      "lemon"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "About Time (2013)",
+   "title": "About Time",
+   "year": "2013",
+   "theme": "romcom",
+   "tagline": "Go back. Stay for dinner.",
+   "description": "A young man finds out the men in his family can travel back in time and uses it to find love and make the most of life.",
+   "serve_cue": "Serve the main when Tim and Mary meet at the dinner in the dark.",
+   "snacks": [
+    {
+     "name": "Cornish beach sandwiches",
+     "scene": "the family's tea on the beach in Cornwall",
+     "method": "Egg and cress sandwiches cut into fingers, the kind packed for a windy afternoon on a Cornish beach.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "cress",
+      "white bread",
+      "butter"
+     ]
+    },
+    {
+     "name": "Cornish pasties",
+     "scene": "the family home in Cornwall",
+     "method": "Little beef and vegetable pasties with flaky pastry, the classic Cornish snack. Mix 300g beef mince with finely diced potato, swede and onion.",
+     "shop": [
+      "beef mince",
+      "potato",
+      "swede",
+      "onion",
+      "shortcrust pastry"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Dinner in the dark",
+     "scene": "Tim and Mary meeting at the pitch-black restaurant",
+     "method": "Slow-cooked lamb shanks with mash, the kind of dish you could eat with your eyes shut.",
+     "shop": [
+      "lamb shanks",
+      "onion",
+      "carrots",
+      "diced tomatoes",
+      "beef stock",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Wedding day Eton mess",
+     "scene": "Tim and Mary's wedding in the rain",
+     "method": "Meringue, strawberries and cream crushed together, an easy English dessert for a soggy wedding day.",
+     "shop": [
+      "thickened cream",
+      "meringue nests",
+      "strawberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Dad's cup of tea",
+     "scene": "Tim's dad and their ping pong games",
+     "method": "Proper English breakfast tea with milk. Brew 4 tea bags in a warmed pot of boiling water for 4 minutes.",
+     "shop": [
+      "English breakfast tea bags",
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Muppet Treasure Island (1996)",
+   "title": "Muppet Treasure Island",
+   "year": "1996",
+   "theme": "adventure",
+   "tagline": "Shiver me timbers. Pass the stew.",
+   "description": "Young Jim Hawkins and his Muppet friends sail off with a treasure map and a ship's cook named Long John Silver.",
+   "serve_cue": "Serve the main when Long John Silver cooks in the ship's galley.",
+   "snacks": [
+    {
+     "name": "Admiral Benbow Inn sausages",
+     "scene": "the Admiral Benbow Inn where Jim works",
+     "method": "Little sausages glazed in honey and mustard, the kind of pub grub served at a seaside inn.",
+     "shop": [
+      "cocktail sausages",
+      "honey",
+      "wholegrain mustard"
+     ]
+    },
+    {
+     "name": "Ship's biscuits and cheese",
+     "scene": "rations aboard the Hispaniola",
+     "method": "Hard crackers with cheese and pickled onions, sea rations for the long voyage. Arrange 200g water crackers, 200g cheddar and a bowl of pickled onions on a board.",
+     "shop": [
+      "water crackers",
+      "cheddar",
+      "pickled onions"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Long John Silver's galley stew",
+     "scene": "Long John Silver, the ship's cook",
+     "method": "A hearty fish and potato stew from the galley, the one thing Silver is honestly good at.",
+     "shop": [
+      "onion",
+      "celery stalks",
+      "butter",
+      "potatoes",
+      "fish stock",
+      "white fish fillets",
+      "thickened cream"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Treasure chest brownies",
+     "scene": "the treasure on the island",
+     "method": "Chocolate brownies piled with gold-wrapped chocolate coins, a chest of buried treasure. Bake brownies from 200g dark chocolate, 180g butter, 300g sugar, 3 eggs and 100g flour at 170C for 28 minutes.",
+     "shop": [
+      "dark chocolate",
+      "butter",
+      "caster sugar",
+      "eggs",
+      "plain flour",
+      "chocolate coins"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Pirate's grog",
+     "scene": "Captain Smollett's crew",
+     "method": "Ginger beer with lime, rum on the side for the adults.",
+     "shop": [
+      "ginger beer",
+      "limes",
+      "dark rum"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Blind Side (2009)",
+   "title": "The Blind Side",
+   "year": "2009",
+   "theme": "soul",
+   "tagline": "Everyone at the table.",
+   "description": "A Memphis family takes in a homeless teenager who goes on to become a star football player.",
+   "serve_cue": "Serve the main when Leigh Anne switches off the football and gets everyone to the table.",
+   "snacks": [
+    {
+     "name": "Memphis barbecue wings",
+     "scene": "Memphis, home of the barbecue",
+     "method": "Dry-rubbed barbecue wings with a tangy sauce, a taste of Memphis on game day. Toss 1.2kg wings in 2 tbsp smoked paprika, brown sugar and salt.",
+     "shop": [
+      "chicken wings",
+      "smoked paprika",
+      "brown sugar",
+      "barbecue sauce"
+     ]
+    },
+    {
+     "name": "Game day deviled eggs",
+     "scene": "game day with the Tuohys",
+     "method": "Southern deviled eggs dusted with paprika, a classic on every Southern table. Boil 8 eggs for 10 minutes, cool and halve.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "American mustard",
+      "smoked paprika"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Tuohy Thanksgiving dinner",
+     "scene": "the Thanksgiving when the family eats at the table",
+     "method": "Roast turkey with cornbread stuffing, mash and green beans, the family dinner that brings Michael to the table.",
+     "shop": [
+      "turkey breast",
+      "cornbread loaf",
+      "onion",
+      "celery stalks",
+      "potatoes",
+      "green beans"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Pecan pie",
+     "scene": "a Southern Thanksgiving",
+     "method": "Sticky pecan pie with vanilla ice cream. Whisk 3 eggs, 150g brown sugar, 150ml golden syrup and 50g melted butter.",
+     "shop": [
+      "eggs",
+      "brown sugar",
+      "golden syrup",
+      "butter",
+      "pecans",
+      "shortcrust pastry",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Southern sweet tea",
+     "scene": "a Memphis afternoon",
+     "method": "Sweet iced tea with lemon and mint. Steep 6 tea bags in 1L boiling water with 120g sugar.",
+     "shop": [
+      "black tea bags",
+      "caster sugar",
+      "lemon",
+      "mint"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Farewell (2019)",
+   "title": "The Farewell",
+   "year": "2019",
+   "theme": "asian",
+   "tagline": "A family secret and a wedding banquet.",
+   "description": "A Chinese-American woman travels to China, where her family has organised a fake wedding to say goodbye to their grandmother.",
+   "serve_cue": "Serve the main at the wedding banquet.",
+   "snacks": [
+    {
+     "name": "Family dumplings",
+     "scene": "the family gathered around Nai Nai's table",
+     "method": "Pork and cabbage dumplings with black vinegar, the kind of thing a big family makes together.",
+     "shop": [
+      "pork mince",
+      "wombok",
+      "ginger",
+      "soy sauce",
+      "sesame oil",
+      "gow gee wrappers",
+      "black vinegar"
+     ]
+    },
+    {
+     "name": "Smashed cucumber salad",
+     "scene": "the family meals in Changchun",
+     "method": "Smashed cucumbers with garlic, vinegar and chilli oil, a cold side on every family table.",
+     "shop": [
+      "continental cucumbers",
+      "garlic cloves",
+      "rice vinegar",
+      "soy sauce",
+      "chilli oil"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Wedding banquet sweet and sour pork",
+     "scene": "the cousin's wedding banquet for Nai Nai",
+     "method": "Crispy sweet and sour pork with capsicum and pineapple, a banquet favourite. Coat 600g diced pork in cornflour and fry until crisp.",
+     "shop": [
+      "pork scotch fillet",
+      "cornflour",
+      "red capsicum",
+      "pineapple pieces",
+      "sweet and sour sauce",
+      "jasmine rice",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Banquet sesame balls",
+     "scene": "the sweet course at the banquet",
+     "method": "Crisp sesame balls filled with sweet red bean paste. Mix 250g glutinous rice flour with 60g sugar and 200ml hot water into a dough.",
+     "shop": [
+      "glutinous rice flour",
+      "caster sugar",
+      "red bean paste",
+      "sesame seeds",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Jasmine tea",
+     "scene": "Nai Nai's tea",
+     "method": "Hot jasmine tea in small cups. Steep 4 jasmine tea bags in 1L water just off the boil for 3 minutes.",
+     "shop": [
+      "jasmine tea bags"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Easter Sunday (2022)",
+   "title": "Easter Sunday",
+   "year": "2022",
+   "theme": "asian",
+   "tagline": "Easter with the whole Filipino family.",
+   "description": "A struggling comedian heads home for a chaotic Filipino-American family Easter with his mum and aunties.",
+   "serve_cue": "Serve the main when the whole family sits down for Easter lunch.",
+   "snacks": [
+    {
+     "name": "Lumpia",
+     "scene": "the family Easter party",
+     "method": "Crisp Filipino spring rolls filled with pork and vegetables, with sweet chilli for dipping. Mix 500g pork mince with grated carrot, onion, garlic and soy.",
+     "shop": [
+      "pork mince",
+      "carrots",
+      "onion",
+      "garlic cloves",
+      "soy sauce",
+      "spring roll wrappers",
+      "sweet chilli sauce",
+      "vegetable oil"
+     ]
+    },
+    {
+     "name": "Pancit",
+     "scene": "the aunties' Easter table",
+     "method": "Stir-fried noodles with chicken and vegetables, the noodle dish at every Filipino party. Soak 250g rice vermicelli.",
+     "shop": [
+      "rice vermicelli",
+      "chicken thighs",
+      "garlic cloves",
+      "carrot",
+      "cabbage",
+      "soy sauce",
+      "chicken stock",
+      "lemon"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Chicken adobo",
+     "scene": "Joe's mum's Easter lunch",
+     "method": "Chicken braised in vinegar, soy, garlic and bay leaves, served with plenty of rice. Brown 1kg chicken thighs.",
+     "shop": [
+      "chicken thighs",
+      "white vinegar",
+      "soy sauce",
+      "garlic cloves",
+      "bay leaves",
+      "jasmine rice"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Leche flan",
+     "scene": "dessert at the family party",
+     "method": "Silky caramel custard flan, the Filipino party dessert. Melt 150g sugar to a caramel and pour into a dish.",
+     "shop": [
+      "caster sugar",
+      "eggs",
+      "condensed milk",
+      "evaporated milk"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Lime and lemon cooler",
+     "scene": "a Filipino family party",
+     "method": "Lime and lemon juice with sparkling water over ice.",
+     "shop": [
+      "limes",
+      "lemons",
+      "caster sugar",
+      "sparkling water"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Family Stone (2005)",
+   "title": "The Family Stone",
+   "year": "2005",
+   "theme": "xmas",
+   "tagline": "Meet the family. Drop the strata.",
+   "description": "A tightly wound woman meets her boyfriend's free-spirited family over a very awkward Christmas.",
+   "serve_cue": "Serve breakfast when Meredith's strata hits the floor.",
+   "snacks": [
+    {
+     "name": "Christmas Eve cheese board",
+     "scene": "the Stone family Christmas Eve",
+     "method": "Cheese, crackers and fruit set out by the fire, the Stone family's relaxed Christmas spread.",
+     "shop": [
+      "brie",
+      "cheddar",
+      "crackers",
+      "grapes",
+      "dried apricots"
+     ]
+    },
+    {
+     "name": "Stone family dinner bread",
+     "scene": "the dinner table argument",
+     "method": "Warm garlic bread, something to pass around a table where everyone talks over each other.",
+     "shop": [
+      "baguette",
+      "butter",
+      "garlic cloves",
+      "parsley"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Meredith's strata",
+     "scene": "Meredith's Christmas morning strata that ends up on the floor",
+     "method": "A baked egg, bread and cheese strata with ham, the one Meredith brought and nobody wanted.",
+     "shop": [
+      "white bread",
+      "leg ham",
+      "gruyère",
+      "eggs",
+      "full cream milk"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Christmas morning cinnamon scrolls",
+     "scene": "Christmas morning at the Stone house",
+     "method": "Warm cinnamon scrolls with cream cheese icing. Roll 500g pizza dough flat, spread with 60g butter, 80g brown sugar and cinnamon.",
+     "shop": [
+      "pizza dough",
+      "butter",
+      "brown sugar",
+      "ground cinnamon",
+      "cream cheese",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Christmas morning coffee",
+     "scene": "the Stones' Christmas morning",
+     "method": "Coffee with cream, hot chocolate for the kids.",
+     "shop": [
+      "ground coffee",
+      "pouring cream",
+      "drinking chocolate"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Last Holiday (2006)",
+   "title": "Last Holiday",
+   "year": "2006",
+   "theme": "uptown",
+   "tagline": "Order everything on the menu.",
+   "description": "A shy shop assistant told she has weeks to live blows her savings on a luxury holiday in a grand European hotel.",
+   "serve_cue": "Serve the main when Georgia orders everything Chef Didier makes.",
+   "snacks": [
+    {
+     "name": "Georgia's home cooking",
+     "scene": "Georgia cooking gourmet dishes alone in her kitchen",
+     "method": "Little crab cakes with lemon mayonnaise, the kind of fancy dish Georgia made at home and gave away.",
+     "shop": [
+      "crab meat",
+      "breadcrumbs",
+      "egg",
+      "spring onions",
+      "lemon",
+      "butter",
+      "mayonnaise"
+     ]
+    },
+    {
+     "name": "Grand hotel canapés",
+     "scene": "the Grandhotel Pupp in the Czech mountains",
+     "method": "Mushroom and gruyère tarts, the kind of canapé served in a grand old European hotel.",
+     "shop": [
+      "mushrooms",
+      "garlic cloves",
+      "thyme",
+      "puff pastry",
+      "gruyère"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Chef Didier's duck",
+     "scene": "Chef Didier's dishes at the hotel",
+     "method": "Pan-roasted duck breast with orange sauce and potatoes, the kind of dish Georgia orders without looking at the price.",
+     "shop": [
+      "duck breasts",
+      "orange juice",
+      "honey",
+      "chicken stock",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Hotel dessert trolley",
+     "scene": "ordering every dessert at the hotel",
+     "method": "Chocolate mousse in little glasses with berries, one of everything from the dessert trolley. Melt 200g dark chocolate and cool.",
+     "shop": [
+      "dark chocolate",
+      "thickened cream",
+      "eggs",
+      "raspberries"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Grand hotel champagne",
+     "scene": "living it up at the grand hotel",
+     "method": "Chilled champagne, sparkling apple for anyone not drinking.",
+     "shop": [
+      "sparkling wine",
+      "sparkling apple juice"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Storm Boy (1976)",
+   "title": "Storm Boy",
+   "year": "1976",
+   "theme": "aussie",
+   "tagline": "A boy, a pelican and the Coorong.",
+   "description": "A boy living with his reclusive dad on the wild South Australian coast raises an orphaned pelican called Mr Percival.",
+   "serve_cue": "Serve the fish when Hideaway Tom brings in the catch.",
+   "snacks": [
+    {
+     "name": "Fingerbone Bill's damper",
+     "scene": "Fingerbone Bill teaching Mike about the land",
+     "method": "Bush damper baked in the coals, with butter and golden syrup. Rub 60g butter into 450g self-raising flour, add 300ml milk and shape a round.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "full cream milk",
+      "golden syrup"
+     ]
+    },
+    {
+     "name": "Coorong cockles",
+     "scene": "the beaches of the Coorong",
+     "method": "Pippis cooked with garlic, chilli and parsley, the shellfish dug from the Coorong sands. Soak 1kg pippis in salted water for an hour.",
+     "shop": [
+      "pippis",
+      "garlic cloves",
+      "red chilli",
+      "white wine",
+      "parsley"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Hideaway Tom's catch",
+     "scene": "Hideaway Tom fishing the Coorong",
+     "method": "Pan-fried fish with chips and lemon, the catch of the day from the shack on the dunes.",
+     "shop": [
+      "frozen chips",
+      "white fish fillets",
+      "plain flour",
+      "butter",
+      "lemon",
+      "tartare sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Golden syrup dumplings",
+     "scene": "a cold night in the beach shack",
+     "method": "Soft dumplings simmered in a golden syrup sauce, a shack-friendly pudding. Rub 50g butter into 200g self-raising flour, add 1 egg and a little milk.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "egg",
+      "golden syrup",
+      "brown sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Shack billy tea",
+     "scene": "the campfire at the beach shack",
+     "method": "Strong black tea with milk and sugar. Boil 1.2L water, add 6 tea bags and let it stew for 5 minutes.",
+     "shop": [
+      "black tea bags",
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Water Diviner (2014)",
+   "title": "The Water Diviner",
+   "year": "2014",
+   "theme": "aussie",
+   "tagline": "A father goes to Gallipoli.",
+   "description": "After the war, an Australian farmer travels to Turkey to find the sons he lost at Gallipoli.",
+   "serve_cue": "Serve the main when Joshua arrives at Ayshe's hotel in Istanbul.",
+   "snacks": [
+    {
+     "name": "Istanbul meze",
+     "scene": "Ayshe's hotel in Istanbul",
+     "method": "Hummus, olives, feta and warm flatbread, a meze welcome for a guest a long way from home.",
+     "shop": [
+      "hummus",
+      "olives",
+      "feta",
+      "flatbreads"
+     ]
+    },
+    {
+     "name": "Anzac biscuits",
+     "scene": "the soldiers remembered at Gallipoli",
+     "method": "Golden oat and golden syrup biscuits, the biscuit made to remember the Anzacs. Mix 100g oats, 150g flour, 80g coconut and 120g brown sugar.",
+     "shop": [
+      "rolled oats",
+      "plain flour",
+      "desiccated coconut",
+      "brown sugar",
+      "butter",
+      "golden syrup",
+      "bicarbonate of soda"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Turkish lamb kofte",
+     "scene": "dinner at the hotel in Istanbul",
+     "method": "Spiced lamb kofte with yoghurt, tomato salad and flatbread. Mix 600g lamb mince with grated onion, cumin, paprika and parsley and shape onto skewers.",
+     "shop": [
+      "lamb mince",
+      "onion",
+      "ground cumin",
+      "sweet paprika",
+      "parsley",
+      "Greek yoghurt",
+      "tomatoes",
+      "flatbreads"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Baklava",
+     "scene": "the sweets of Istanbul",
+     "method": "Flaky nut baklava soaked in honey syrup. Layer 12 sheets filo brushed with 150g melted butter and 250g chopped walnuts and pistachios.",
+     "shop": [
+      "filo pastry",
+      "butter",
+      "mixed walnuts and pistachios",
+      "honey",
+      "caster sugar",
+      "lemon"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Turkish coffee and apple tea",
+     "scene": "the cafés of Istanbul",
+     "method": "Strong coffee and sweet apple tea in small glasses.",
+     "shop": [
+      "ground coffee",
+      "apple tea bags"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Peter Rabbit 2: The Runaway (2021)",
+   "title": "Peter Rabbit 2: The Runaway",
+   "year": "2021",
+   "theme": "kids",
+   "tagline": "The big city fruit heist.",
+   "description": "Peter runs away to the big city and falls in with a gang of animals planning a heist at the farmers market.",
+   "serve_cue": "Serve the snacks when the farmers market heist begins.",
+   "snacks": [
+    {
+     "name": "Farmers market fruit platter",
+     "scene": "the farmers market the gang plans to rob",
+     "method": "A big platter of strawberries, apples, melon and grapes, the stalls the gang has its eye on.",
+     "shop": [
+      "strawberries",
+      "apples",
+      "rockmelon",
+      "grapes",
+      "lemon"
+     ]
+    },
+    {
+     "name": "Dried fruit heist mix",
+     "scene": "Barnabas's dried fruit heist at the market",
+     "method": "Dried fruit and nuts mixed in a big bowl, the loot Barnabas sends the gang after.",
+     "shop": [
+      "dried fruit mix",
+      "mixed nuts",
+      "dried apricots"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Gloucester chicken pie",
+     "scene": "the trip to the city of Gloucester",
+     "method": "Chicken, leek and carrot pie under golden puff pastry, a proper English city lunch. Brown 800g diced chicken thighs, add 1 sliced leek and 2 diced carrots, then 300ml stock thickened with 2 tbsp flour.",
+     "shop": [
+      "chicken thighs",
+      "carrots",
+      "leek",
+      "chicken stock",
+      "plain flour",
+      "puff pastry"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Carrot cake",
+     "scene": "the rabbits' favourite vegetable",
+     "method": "Moist carrot cake with cream cheese icing, the only cake a rabbit would bake. Mix 200g self-raising flour, 150g brown sugar, cinnamon, 2 eggs, 150ml oil and 3 grated carrots.",
+     "shop": [
+      "carrots",
+      "self-raising flour",
+      "brown sugar",
+      "eggs",
+      "vegetable oil",
+      "cream cheese",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Orchard apple juice",
+     "scene": "the orchards around the farm",
+     "method": "Cold apple juice over ice with a slice of apple.",
+     "shop": [
+      "apple juice",
+      "apple"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Rise of the Guardians (2012)",
+   "title": "Rise of the Guardians",
+   "year": "2012",
+   "theme": "kids",
+   "tagline": "The Guardians are coming to dinner.",
+   "description": "Jack Frost joins Santa, the Easter Bunny, the Tooth Fairy and the Sandman to stop the Bogeyman.",
+   "serve_cue": "Serve the sweets when the Easter Bunny's egg hunt begins.",
+   "snacks": [
+    {
+     "name": "North's workshop gingerbread",
+     "scene": "North's workshop full of yetis and elves",
+     "method": "Spiced gingerbread cookies with white icing, the cookies the elves keep nibbling in North's workshop.",
+     "shop": [
+      "butter",
+      "golden syrup",
+      "brown sugar",
+      "plain flour",
+      "ground ginger",
+      "icing sugar"
+     ]
+    },
+    {
+     "name": "Sandman's golden honeycomb",
+     "scene": "the Sandman's golden dream sand",
+     "method": "Crunchy golden honeycomb broken into chunks, as golden and glittery as the Sandman's dreams. Heat 200g sugar and 5 tbsp golden syrup until amber.",
+     "shop": [
+      "caster sugar",
+      "golden syrup",
+      "bicarbonate of soda"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Guardians' feast",
+     "scene": "the Guardians together at the North Pole",
+     "method": "Golden roast chicken with potatoes and carrots, a big dinner for a team of legends.",
+     "shop": [
+      "chicken",
+      "potatoes",
+      "carrots",
+      "butter"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Bunnymund's egg hunt",
+     "scene": "Bunnymund's Easter egg hunt",
+     "method": "Toasted hot cross buns with butter and a bowl of chocolate eggs to hunt for.",
+     "shop": [
+      "hot cross buns",
+      "chocolate eggs",
+      "butter"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Jack Frost's ice cooler",
+     "scene": "Jack Frost and his icy staff",
+     "method": "Blue lemonade over crushed ice. Mix 120ml blue cordial with 1L cold lemonade and pour over crushed ice in 4 glasses.",
+     "shop": [
+      "blue cordial",
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 5,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Easter Parade (1948)",
+   "title": "Easter Parade",
+   "year": "1948",
+   "theme": "romcom",
+   "tagline": "Easter on Fifth Avenue.",
+   "description": "A Broadway dancer bets he can turn an unknown chorus girl into a star by the next Easter Parade.",
+   "serve_cue": "Serve the sweets when the Easter Parade fills Fifth Avenue.",
+   "snacks": [
+    {
+     "name": "Fifth Avenue tea sandwiches",
+     "scene": "the Easter Parade on Fifth Avenue",
+     "method": "Egg and cress sandwiches cut into fingers, neat enough for an Easter bonnet crowd. Boil 6 eggs for 9 minutes, cool, peel and mash with 4 tbsp mayonnaise.",
+     "shop": [
+      "eggs",
+      "mayonnaise",
+      "cress",
+      "white bread"
+     ]
+    },
+    {
+     "name": "Broadway cheese puffs",
+     "scene": "backstage on Broadway",
+     "method": "Warm gruyère choux puffs, a smart little snack for opening night. Boil 250ml water with 100g butter, beat in 150g flour and cool.",
+     "shop": [
+      "butter",
+      "plain flour",
+      "eggs",
+      "gruyère"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Easter roast lamb",
+     "scene": "Easter Sunday lunch",
+     "method": "Roast leg of lamb with garlic and rosemary, roast potatoes and mint sauce. Stud a 2kg lamb leg with garlic slivers and rosemary.",
+     "shop": [
+      "lamb leg",
+      "garlic bulb",
+      "rosemary",
+      "mint sauce",
+      "potatoes"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Hot cross buns",
+     "scene": "breakfast on Easter morning",
+     "method": "Toasted hot cross buns with plenty of butter. Split 6 hot cross buns and toast until golden.",
+     "shop": [
+      "hot cross buns",
+      "butter"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Easter bonnet punch",
+     "scene": "the Easter bonnets on parade",
+     "method": "Pink cranberry punch with lemonade. Mix 1L cranberry juice and 1L lemonade in a jug with ice and sliced strawberries.",
+     "shop": [
+      "cranberry juice",
+      "lemonade",
+      "strawberries"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "The Lighthorsemen (1987)",
+   "title": "The Lighthorsemen",
+   "year": "1987",
+   "theme": "aussie",
+   "tagline": "Beersheba, 1917.",
+   "description": "Young Australian light horsemen ride into the famous charge at Beersheba during the First World War.",
+   "serve_cue": "Serve the billy tea when the horses line up for the charge.",
+   "snacks": [
+    {
+     "name": "Anzac biscuits",
+     "scene": "the biscuits sent to the troops",
+     "method": "Golden oat and golden syrup biscuits, the biscuit made to remember the Anzacs. Mix 100g oats, 150g flour, 80g coconut and 120g brown sugar.",
+     "shop": [
+      "rolled oats",
+      "plain flour",
+      "desiccated coconut",
+      "brown sugar",
+      "butter",
+      "golden syrup",
+      "bicarbonate of soda"
+     ]
+    },
+    {
+     "name": "Desert camp damper",
+     "scene": "the light horse camp in the desert",
+     "method": "Camp damper with butter and golden syrup, cooked the way the troopers did it. Rub 60g butter into 450g self-raising flour, add 300ml milk and shape a round.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "full cream milk",
+      "golden syrup"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Light horse camp stew",
+     "scene": "the camp before the charge",
+     "method": "Slow-cooked beef and vegetable stew, the kind cooked in a big pot at camp. Brown 1kg diced chuck.",
+     "shop": [
+      "chuck steak",
+      "carrots",
+      "potatoes",
+      "onion",
+      "beef stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Golden syrup dumplings",
+     "scene": "comfort food at camp",
+     "method": "Soft dumplings simmered in a golden syrup sauce. Rub 50g butter into 200g self-raising flour, add 1 egg and a little milk.",
+     "shop": [
+      "self-raising flour",
+      "butter",
+      "egg",
+      "golden syrup",
+      "brown sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Trooper's billy tea",
+     "scene": "the billy on the campfire before Beersheba",
+     "method": "Strong black tea brewed in a billy with milk and sugar.",
+     "shop": [
+      "black tea bags",
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Beneath Hill 60 (2010)",
+   "title": "Beneath Hill 60",
+   "year": "2010",
+   "theme": "aussie",
+   "tagline": "The tunnellers under the line.",
+   "description": "A Queensland mining engineer leads Australian tunnellers digging under enemy lines on the Western Front.",
+   "serve_cue": "Serve the main when the tunnellers come up for air.",
+   "snacks": [
+    {
+     "name": "Tunnellers' Anzac biscuits",
+     "scene": "the tunnellers' rations",
+     "method": "Golden oat and golden syrup biscuits, the biscuits that came in parcels from home. Mix 100g oats, 150g flour, 80g coconut and 120g brown sugar.",
+     "shop": [
+      "rolled oats",
+      "plain flour",
+      "desiccated coconut",
+      "brown sugar",
+      "butter",
+      "golden syrup",
+      "bicarbonate of soda"
+     ]
+    },
+    {
+     "name": "Charters Towers sandwiches",
+     "scene": "home in Charters Towers, Queensland",
+     "method": "Corned beef and sweet pickle sandwiches, a Queensland lunch from home. Spread 8 slices of buttered bread with sweet pickle.",
+     "shop": [
+      "corned beef",
+      "sweet pickle",
+      "white bread",
+      "butter"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Trench corned beef hash",
+     "scene": "rations at the front",
+     "method": "Crisp corned beef and potato hash topped with fried eggs. Boil 800g diced potatoes for 8 minutes and drain.",
+     "shop": [
+      "potatoes",
+      "onion",
+      "corned beef",
+      "eggs"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Fruit cake from home",
+     "scene": "the parcels sent from home",
+     "method": "Thick slices of rich fruit cake with butter. Cut an 800g fruit cake into thick slices and serve with soft butter, the way it arrived in parcels for the troops.",
+     "shop": [
+      "fruit cake",
+      "butter"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Dugout tea",
+     "scene": "tea in the dugout",
+     "method": "Strong black tea with condensed milk. Brew 6 tea bags in 1.2L boiling water for 5 minutes.",
+     "shop": [
+      "black tea bags",
+      "condensed milk"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Danger Close: The Battle of Long Tan (2019)",
+   "title": "Danger Close: The Battle of Long Tan",
+   "year": "2019",
+   "theme": "aussie",
+   "tagline": "Long Tan, 1966.",
+   "description": "A company of Australian and New Zealand soldiers fight outnumbered in a rubber plantation in Vietnam.",
+   "serve_cue": "Serve the main after the concert at Nui Dat.",
+   "snacks": [
+    {
+     "name": "Nui Dat base snacks",
+     "scene": "the base at Nui Dat",
+     "method": "Salted peanuts and crackers with cheese, the snacks around the base before the concert. Tip 200g salted peanuts into a bowl and arrange 200g crackers with 150g sliced cheddar on a board.",
+     "shop": [
+      "salted peanuts",
+      "crackers",
+      "cheddar"
+     ]
+    },
+    {
+     "name": "Vietnamese rice paper rolls",
+     "scene": "the soldiers posted in Vietnam",
+     "method": "Fresh rice paper rolls with prawns, noodles and mint, with a dipping sauce. Soak 100g vermicelli.",
+     "shop": [
+      "rice paper sheets",
+      "cooked prawns",
+      "rice vermicelli",
+      "mint",
+      "baby cos lettuce",
+      "hoisin sauce"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Field ration stew",
+     "scene": "rations out in the field",
+     "method": "Beef and bean stew with tomatoes, hearty field food. Brown 800g diced chuck with a chopped onion.",
+     "shop": [
+      "chuck steak",
+      "tinned kidney beans",
+      "diced tomatoes",
+      "onion",
+      "beef stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Ration pack chocolate",
+     "scene": "the chocolate in the ration packs",
+     "method": "Dark chocolate squares with fresh orange segments. Break 200g dark chocolate into squares and serve with 3 peeled oranges cut into segments.",
+     "shop": [
+      "dark chocolate",
+      "oranges"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Cold beer at base",
+     "scene": "back at base after the battle",
+     "method": "Cold lager, lemonade for anyone not drinking. Chill 8 cans lager and serve in cold glasses.",
+     "shop": [
+      "lager",
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Field of Dreams (1989)",
+   "title": "Field of Dreams",
+   "year": "1989",
+   "theme": "diner",
+   "tagline": "If you build it, they will eat.",
+   "description": "An Iowa farmer builds a baseball diamond in his cornfield after hearing a voice.",
+   "serve_cue": "Serve the main when Ray plays catch with his dad.",
+   "snacks": [
+    {
+     "name": "Iowa corn on the cob",
+     "scene": "the Iowa cornfield around the diamond",
+     "method": "Sweet corn boiled and rolled in butter and salt, straight from the field Ray ploughs under.",
+     "shop": [
+      "corn cobs",
+      "butter"
+     ]
+    },
+    {
+     "name": "Cornfield ballgame snacks",
+     "scene": "the ballgame in the cornfield",
+     "method": "Roasted peanuts in the shell and salted sunflower seeds, the classic snacks for watching baseball.",
+     "shop": [
+      "roasted peanuts in the shell",
+      "salted sunflower seeds"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Iowa farmhouse fried chicken",
+     "scene": "dinner in the Kinsellas' farmhouse",
+     "method": "Buttermilk fried chicken with mashed potatoes, a Midwest farmhouse dinner. Soak 1.2kg chicken pieces in 300ml buttermilk for an hour.",
+     "shop": [
+      "chicken pieces",
+      "buttermilk",
+      "plain flour",
+      "potatoes",
+      "vegetable oil"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Iowa apple pie",
+     "scene": "a summer evening in Iowa",
+     "method": "Apple pie with vanilla ice cream. Slice 5 green apples, toss with 100g sugar and cinnamon.",
+     "shop": [
+      "green apples",
+      "caster sugar",
+      "shortcrust pastry",
+      "vanilla ice cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Farmhouse lemonade",
+     "scene": "a summer evening on the farm",
+     "method": "Homemade lemonade over ice. Stir the juice of 6 lemons with 150g sugar until dissolved.",
+     "shop": [
+      "lemons",
+      "caster sugar"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Father of the Bride (1991)",
+   "title": "Father of the Bride",
+   "year": "1991",
+   "theme": "romcom",
+   "tagline": "Eight franks, twelve buns.",
+   "description": "A dad struggles to let go as his daughter plans her wedding with an over-the-top planner.",
+   "serve_cue": "Serve the hot dogs when George loses it over the buns.",
+   "snacks": [
+    {
+     "name": "Supermarket hot dogs",
+     "scene": "George's supermarket meltdown over the hot dog buns",
+     "method": "Hot dogs where the franks and the buns finally match, eight of each. Simmer 8 frankfurts for 5 minutes and tuck into 8 buns.",
+     "shop": [
+      "frankfurts",
+      "hot dog buns",
+      "American mustard",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Engagement canapés",
+     "scene": "meeting the MacKenzies, the in-laws",
+     "method": "Smoked salmon blinis with crème fraîche, a fancy bite for meeting the rich in-laws. Warm 16 blinis.",
+     "shop": [
+      "blinis",
+      "crème fraîche",
+      "smoked salmon",
+      "chives"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Wedding reception chicken",
+     "scene": "the wedding reception at home",
+     "method": "Roast chicken with potatoes and green beans, the reception dinner that cost a fortune. Roast a whole chicken at 200C for 1 hour 15 minutes with 800g potatoes.",
+     "shop": [
+      "chicken",
+      "potatoes",
+      "green beans"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Wedding cake",
+     "scene": "Annie's wedding cake",
+     "method": "Vanilla butter cake with white icing. Beat 200g butter and 200g sugar, add 4 eggs and 250g self-raising flour.",
+     "shop": [
+      "butter",
+      "caster sugar",
+      "eggs",
+      "self-raising flour",
+      "icing sugar"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Late-night milk",
+     "scene": "George and Annie's night-time basketball",
+     "method": "Cold milk in tall glasses. Chill 1L milk and pour into 4 tall glasses.",
+     "shop": [
+      "full cream milk"
+     ]
+    }
+   ],
+   "lane": 4,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Remember the Titans (2000)",
+   "title": "Remember the Titans",
+   "year": "2000",
+   "theme": "diner",
+   "tagline": "Strong side. Left side. Dinner side.",
+   "description": "A newly integrated high school football team in 1971 Virginia comes together under a new coach.",
+   "serve_cue": "Serve the main after the big game.",
+   "snacks": [
+    {
+     "name": "Training camp sandwiches",
+     "scene": "training camp at Gettysburg",
+     "method": "Ham and cheese sandwiches for the long days at football camp. Butter 8 slices of bread and fill with 150g ham and 4 slices of cheddar.",
+     "shop": [
+      "white bread",
+      "leg ham",
+      "cheddar",
+      "butter"
+     ]
+    },
+    {
+     "name": "Game day hot dogs",
+     "scene": "Friday night football in Alexandria",
+     "method": "Hot dogs with mustard and relish, the food stand at the Titans' home games. Simmer 8 frankfurts for 5 minutes and tuck into 8 buns.",
+     "shop": [
+      "frankfurts",
+      "hot dog buns",
+      "American mustard",
+      "relish"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Virginia fried chicken",
+     "scene": "a Virginia family dinner",
+     "method": "Southern fried chicken with mashed potatoes and gravy. Dredge 1.2kg chicken pieces in 200g seasoned flour and fry at 170C for 14 minutes.",
+     "shop": [
+      "chicken pieces",
+      "plain flour",
+      "potatoes",
+      "vegetable oil",
+      "gravy powder"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Peach cobbler",
+     "scene": "a Virginia summer",
+     "method": "Warm peach cobbler with cream. Tip 800g drained peaches into a dish. Rub 80g butter into 200g self-raising flour and 100g sugar, add milk, spoon over and bake at 190C for 30 minutes.",
+     "shop": [
+      "tinned peaches",
+      "self-raising flour",
+      "butter",
+      "caster sugar",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Sweet tea",
+     "scene": "a hot Southern afternoon",
+     "method": "Sweet iced tea with lemon. Steep 6 tea bags in 1L boiling water with 120g sugar.",
+     "shop": [
+      "black tea bags",
+      "caster sugar",
+      "lemon"
+     ]
+    }
+   ],
+   "lane": 1,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Rudy (1993)",
+   "title": "Rudy",
+   "year": "1993",
+   "theme": "diner",
+   "tagline": "Never give up. Never skip dessert.",
+   "description": "A working-class kid from a steel town chases his dream of playing football for Notre Dame.",
+   "serve_cue": "Serve the main when Rudy finally runs onto the field.",
+   "snacks": [
+    {
+     "name": "Steel mill lunch pail sandwiches",
+     "scene": "the steel mill in Joliet",
+     "method": "Meatloaf sandwiches with tomato sauce, packed in a lunch pail for a shift at the mill.",
+     "shop": [
+      "beef mince",
+      "egg",
+      "breadcrumbs",
+      "white bread",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Notre Dame tailgate sausages",
+     "scene": "game day tailgating at Notre Dame",
+     "method": "Grilled bratwurst in rolls with fried onions and mustard, a tailgate classic on a cold autumn Saturday.",
+     "shop": [
+      "bratwurst",
+      "bread rolls",
+      "onions",
+      "American mustard"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Ruettiger family pot roast",
+     "scene": "the Ruettiger family table",
+     "method": "Slow pot roast with carrots and potatoes, a big working family's Sunday dinner. Brown a 1.5kg chuck roast, add 750ml stock and braise covered at 160C for 3 hours.",
+     "shop": [
+      "chuck roast",
+      "carrots",
+      "potatoes",
+      "beef stock"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Apple crumble",
+     "scene": "an Indiana autumn",
+     "method": "Warm apple crumble with cream. Slice 5 green apples into a dish. Rub 100g butter into 120g flour and 100g brown sugar, scatter on top and bake at 180C for 35 minutes.",
+     "shop": [
+      "green apples",
+      "butter",
+      "plain flour",
+      "brown sugar",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Ruettiger kitchen milk",
+     "scene": "the family kitchen in Joliet",
+     "method": "Cold milk in tall glasses with a plate of biscuits.",
+     "shop": [
+      "full cream milk",
+      "plain biscuits"
+     ]
+    }
+   ],
+   "lane": 3,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Phar Lap (1983)",
+   "title": "Phar Lap",
+   "year": "1983",
+   "theme": "aussie",
+   "tagline": "The race that stops a nation.",
+   "description": "The story of the champion racehorse who won the hearts of Depression-era Australia.",
+   "serve_cue": "Serve the snacks when the Melbourne Cup starts.",
+   "snacks": [
+    {
+     "name": "Flemington party pies",
+     "scene": "Cup day at Flemington",
+     "method": "Hot party pies with tomato sauce, the Cup day snack. Bake 12 frozen party pies at 200C for 20 minutes.",
+     "shop": [
+      "party pies",
+      "tomato sauce"
+     ]
+    },
+    {
+     "name": "Tommy's apples and cheese",
+     "scene": "Tommy Woodcock, Phar Lap's strapper",
+     "method": "Apple slices with cheddar, a treat for the horse and the man who loved him.",
+     "shop": [
+      "red apples",
+      "cheddar"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Cup day sandwiches",
+     "scene": "the Melbourne Cup picnic",
+     "method": "Chicken, lettuce and mayonnaise sandwiches, a classic Cup day picnic. Mix 300g shredded cooked chicken with 4 tbsp mayonnaise.",
+     "shop": [
+      "cooked chicken",
+      "iceberg lettuce",
+      "mayonnaise",
+      "white bread"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Lamingtons",
+     "scene": "an Australian classic",
+     "method": "Sponge squares dipped in chocolate and rolled in coconut. Cut a sponge cake into squares.",
+     "shop": [
+      "sponge cake",
+      "icing sugar",
+      "cocoa",
+      "desiccated coconut"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "Cup day bubbles",
+     "scene": "the Melbourne Cup sweep",
+     "method": "Sparkling wine, lemonade for the kids. Chill 750ml sparkling wine and 1.25L lemonade.",
+     "shop": [
+      "sparkling wine",
+      "lemonade"
+     ]
+    }
+   ],
+   "lane": 2,
+   "poster_status": "pending",
+   "recipe_ready": true
+  },
+  {
+   "id": "Seabiscuit (2003)",
+   "title": "Seabiscuit",
+   "year": "2003",
+   "theme": "diner",
+   "tagline": "The little horse that could.",
+   "description": "An undersized racehorse and a team of broken men become a symbol of hope during the Depression.",
+   "serve_cue": "Serve the snacks before the big match race against War Admiral.",
+   "snacks": [
+    {
+     "name": "Racetrack snacks",
+     "scene": "a day at the racetrack",
+     "method": "Roasted peanuts in the shell and crackers with cheese, a racetrack crowd snack. Tip 500g roasted peanuts in the shell into a bowl with a second bowl for shells.",
+     "shop": [
+      "roasted peanuts in the shell",
+      "crackers",
+      "cheddar"
+     ]
+    },
+    {
+     "name": "Seabiscuit's apples and carrots",
+     "scene": "Seabiscuit's favourite treats",
+     "method": "Apple and carrot sticks with peanut butter, the treats a racehorse would choose. Slice 3 apples and cut 3 carrots into sticks.",
+     "shop": [
+      "red apples",
+      "carrots",
+      "peanut butter"
+     ]
+    }
+   ],
+   "mains": [
+    {
+     "name": "Depression-era meatloaf",
+     "scene": "making do in the Depression",
+     "method": "Glazed meatloaf with mash, a meal that stretches a little further. Mix 800g beef mince with a diced onion, 1 egg and breadcrumbs.",
+     "shop": [
+      "beef mince",
+      "onion",
+      "egg",
+      "breadcrumbs",
+      "potatoes",
+      "tomato sauce"
+     ]
+    }
+   ],
+   "dessert": [
+    {
+     "name": "Stable apple pie",
+     "scene": "the stables at Santa Anita",
+     "method": "Apple pie with cream. Slice 5 green apples and toss with sugar and cinnamon. Fill a pastry case, top with pastry and bake at 190C for 45 minutes.",
+     "shop": [
+      "green apples",
+      "caster sugar",
+      "shortcrust pastry",
+      "thickened cream"
+     ]
+    }
+   ],
+   "drink": [
+    {
+     "name": "California iced tea",
+     "scene": "a California racing day",
+     "method": "Iced tea with lemon. Steep 4 tea bags in 1L boiling water, chill and serve over ice with lemon slices.",
+     "shop": [
+      "black tea bags",
+      "lemon"
+     ]
+    }
+   ],
+   "lane": 1,
    "poster_status": "pending",
    "recipe_ready": true
   }
