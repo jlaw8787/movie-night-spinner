@@ -16,7 +16,7 @@
 <title>Movie Night Spinner</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Archivo:wght@400;600;800&family=Permanent+Marker&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Archivo:wght@400;600;800&family=Permanent+Marker&display=swap">
 <style>
 /* The house: a picture palace at night. Marquee up top, the wheel lit like a game show on the left, the menu revealed behind velvet curtains on the right. */
 :root{
@@ -927,12 +927,50 @@ select:hover{border-color:rgba(255,240,222,.2)}
 .crave-empty{grid-column:1/-1;font-style:normal}
 .top{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:max(20px,calc(50vw - 600px));padding-right:max(20px,calc(50vw - 600px))}
 @media (max-width:640px){.top{padding-left:14px;padding-right:14px}}
+
+/* ---------- Hollywood palace hero: the real artwork, live text in the blank signs ---------- */
+.palace{position:relative;overflow:hidden;margin:0 calc(50% - 50vw);background:#0b0a1c}
+.palace-stage{position:relative;width:max(100%,860px);max-width:1774px;aspect-ratio:2/1;left:50%;transform:translateX(-50%);container-type:inline-size}
+.palace-img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.palace::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(transparent,var(--ink));pointer-events:none}
+.blade{position:absolute;left:48.25%;width:3.38%;top:9.2%;height:35.4%;margin:0;display:flex;flex-direction:column;justify-content:space-evenly;align-items:center;
+  font:700 1.58cqw/1 "Oswald",Impact,sans-serif;color:#b3172f;text-shadow:0 0 .3cqw rgba(255,90,90,.45)}
+.blade span{display:contents}
+.blade span+span::before{content:"";display:block;width:.35cqw;height:.35cqw;border-radius:50%;background:#d9a441;box-shadow:0 0 .4cqw #ffd27a}
+.blade i{font-style:normal;display:block}
+.mq{position:absolute;left:28.75%;width:42.1%;top:55.4%;height:9.6%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25cqw;padding:0 1.2cqw;box-sizing:border-box;
+  background:repeating-linear-gradient(transparent 0 calc(25% - 1px),rgba(60,30,10,.07) calc(25% - 1px) 25%)}
+.mq-k{font:500 .95cqw/1 "Oswald",sans-serif;letter-spacing:.32em;color:#7a5a2a;text-transform:uppercase}
+.mq-t{font:700 3.3cqw/1 "Oswald",Impact,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#1a0a0c;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.lbox{position:absolute;object-fit:cover;border-radius:1px;box-shadow:0 0 1cqw rgba(255,220,150,.5)}
+.lb1{left:19.73%;width:3.38%;top:75.5%;height:8.4%}
+.lb2{left:28.64%;width:2.03%;top:77%;height:8%}
+.lb3{left:69.05%;width:1.92%;top:77.1%;height:7.7%}
+.lb4{left:76.55%;width:3.27%;top:75.65%;height:7.7%}
+.palace-glow{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;opacity:.0;
+  background:radial-gradient(ellipse 26% 9% at 50% 61%,rgba(255,200,110,.55),transparent 70%),radial-gradient(ellipse 4% 24% at 50% 26%,rgba(255,200,110,.45),transparent 70%);transition:opacity .3s}
+body.spinning .palace-glow{animation:palacePulse .32s steps(2) infinite}
+body.winner .palace-glow{animation:palacePulse .22s steps(2) 8}
+@keyframes palacePulse{0%{opacity:.15}50%{opacity:.7}}
+@media (prefers-reduced-motion:reduce){body.spinning .palace-glow,body.winner .palace-glow{animation:none}}
+.top{margin-top:0}
+.top .brand{display:none}
+.top{justify-content:center}
+@media (max-width:640px){.palace-stage{width:900px}.top{padding-top:8px}}
 </style>
 
 <div id="printArea"></div>
 <div class="wrap">
+  <header class="palace" aria-label="Movie Night">
+    <div class="palace-stage">
+      <img class="palace-img" src="assets/hero/palace.jpg" srcset="assets/hero/palace-1000.jpg 1000w, assets/hero/palace.jpg 1774w" sizes="(max-width:640px) 900px, 1240px" alt="" fetchpriority="high">
+      <h1 class="blade" aria-label="Movie Night"><span aria-hidden="true"><i>M</i><i>O</i><i>V</i><i>I</i><i>E</i></span><span aria-hidden="true"><i>N</i><i>I</i><i>G</i><i>H</i><i>T</i></span></h1>
+      <div class="mq"><span class="mq-k">Now showing</span><span class="mq-t" id="now">Spin the wheel</span></div>
+      <img class="lbox lb1" alt="" hidden><img class="lbox lb2" alt="" hidden><img class="lbox lb3" alt="" hidden><img class="lbox lb4" alt="" hidden>
+      <div class="palace-glow" aria-hidden="true"></div>
+    </div>
+  </header>
   <header class="top">
-    <div class="brand"><span class="brand-mark">Movie Night</span><span class="brand-sub">Spinner</span></div>
     <nav class="views" role="tablist" aria-label="View">
       <button type="button" role="tab" id="viewWheelBtn" aria-selected="true" aria-controls="viewWheel">Spin</button>
       <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Video shop</button>
@@ -972,7 +1010,6 @@ select:hover{border-color:rgba(255,240,222,.2)}
 
   <div class="stage" id="viewWheel">
     <section class="deck" aria-label="Spin wheel">
-      <p class="now-line"><span>Now showing</span><b id="now">Spin the wheel</b></p>
       <div class="wheel-wrap">
         <div class="pointer" id="pointer" aria-hidden="true"><svg viewBox="0 0 30 40"><path d="M3 4 Q15 -1 27 4 L15 38 Z" fill="#e8b04a" stroke="#0c0a09" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
         <div class="wheel-box">
@@ -1652,6 +1689,7 @@ async function show(f,preferSig){
   if(id!==renderId)return;
   let menu=makeMenu(f,preferSig);if(lazy)menu=lazyMenu(menu);menu.counter=counterShop(f.id);
   $("whereWheel").innerHTML=whereHTML(f);
+  try{lightboxes()}catch(e){}
   {const amb=$("ambient"),pp=lobbyPoster(f);amb.classList.remove("on");if(pp)setTimeout(()=>{if(id!==renderId)return;amb.style.backgroundImage=`url("${TMDB_IMG}w342${pp}")`;amb.classList.add("on")},reduce?0:400)}
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
@@ -2127,6 +2165,16 @@ function showWelcome(){
   o.addEventListener("click",e=>{if(e.target===o)close()});
   document.addEventListener("keydown",function k(e){if(e.key==="Escape"){close();document.removeEventListener("keydown",k)}});
   document.body.appendChild(o);o.querySelector("button").focus();
+}
+
+/* palace marquee: shrink long titles to fit the sign, light boxes show tonight's poster and recent spins */
+function fitMarquee(){const t=$("now");const n=t.textContent.length;t.style.fontSize=`min(3.3cqw,${(78/Math.max(n,8)).toFixed(2)}cqw)`}
+if(typeof MutationObserver!=="undefined")new MutationObserver(fitMarquee).observe($("now"),{childList:true,characterData:true,subtree:true});try{fitMarquee()}catch(e){}
+function lightboxes(){
+  const P=typeof TMDB_POSTERS!=="undefined"?TMDB_POSTERS:{};
+  const ids=[current&&current.id,...hist.filter(id=>!current||id!==current.id)].filter(Boolean);
+  const pick=[ids[0],ids[1],ids[2],ids[0]];
+  document.querySelectorAll(".lbox").forEach((im,i)=>{const p=pick[i]&&P[pick[i]];if(p){im.src="https://image.tmdb.org/t/p/w154"+p;im.hidden=false}else im.hidden=true});
 }
 
 /* craving: start from the food, find the film */
