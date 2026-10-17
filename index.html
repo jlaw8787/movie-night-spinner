@@ -498,7 +498,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 
 /* ---------- lobby card: the real cinema poster, framed, with the themed menu under it ---------- */
 .L-lobby{background:#0f0d0c;color:#f6efe2}
-.L-lobby .lb-bg{position:absolute;z-index:0;left:-40px;top:-90px;width:874px;height:1311px;max-width:none}
+.L-lobby .lb-bg{position:absolute;z-index:0;left:-40px;top:-90px;width:874px;height:1311px;max-width:none;object-fit:cover;filter:blur(14px) saturate(1.15)}
 .L-lobby .lb-shade{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at 30% 22%,rgba(12,10,9,.5),rgba(12,10,9,.86) 70%),linear-gradient(rgba(12,10,9,.2),rgba(12,10,9,.75))}
 .L-lobby .mc-in{inset:0;padding:42px 44px 30px;align-items:stretch;text-align:left;color:#f6efe2;background:none}
 .L-lobby .lb-head{display:grid;grid-template-columns:300px 1fr;column-gap:32px;align-items:center;flex:none}
@@ -510,7 +510,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .L-lobby .mc-year{color:#e9c46a;font-size:15px}
 .L-lobby .mc-tag{font-size:21px;margin:16px 0 0;color:#fbf6ec}
 .L-lobby .mc-desc{font-size:15px;margin:10px 0 0;opacity:.8}
-.L-lobby .lb-menu{flex:1 1 auto;min-height:0;overflow:hidden;margin-top:28px;background:var(--fibre),var(--mg);color:var(--mi);border-radius:3px;padding:20px 34px 18px;
+.L-lobby .lb-menu{flex:1 1 auto;min-height:0;overflow:hidden;margin-top:28px;background:url("assets/hero/paper.jpg") 0 0/380px 380px,var(--mg);background-blend-mode:multiply;color:var(--mi);border-radius:3px;padding:20px 34px 18px;
   display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 18px 40px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.06)}
 .L-lobby .lb-menu-h{font-family:var(--md);font-weight:var(--mdw,400);text-transform:var(--mtt,none);letter-spacing:var(--mls,0);color:var(--ma);font-size:34px;line-height:1;margin:0}
 .L-lobby .mc-orn{color:var(--ma);margin:8px 0 2px}
@@ -984,6 +984,21 @@ body.winner .bulbs-glow i{animation:bulbFlash .3s steps(2) 6;animation-delay:0s}
   box-shadow:0 0 0 .9cqw #2a0b10,0 0 0 1.6cqw #c9962c,0 1.6cqw 0 .6cqw #160609,0 3cqw 5cqw rgba(0,0,0,.6),inset 0 -1cqw 1.6cqw rgba(110,60,10,.5)}
 .hub:hover{transform:translate(-50%,-52%)}
 .hub:active{transform:translate(-50%,-47%)}
+
+/* ---------- velvet curtain reveal with the real drape ---------- */
+.theatre{overflow:hidden;border-radius:8px}
+.theatre .curtain{display:block;position:absolute;top:0;bottom:0;width:51%;z-index:5;
+  background:url("assets/hero/curtain.jpg") 0 100%/196% 100% no-repeat,#5a0a14;box-shadow:none;
+  transition:transform 1.15s cubic-bezier(.65,0,.25,1)}
+.theatre .curtain.l{left:0;background-position:0 100%;transform:translateX(-102%) scaleX(.55);transform-origin:0 50%;box-shadow:inset -18px 0 24px rgba(0,0,0,.45)}
+.theatre .curtain.r{right:0;background-position:100% 100%;transform:translateX(102%) scaleX(.55);transform-origin:100% 50%;box-shadow:inset 18px 0 24px rgba(0,0,0,.45)}
+.theatre.closed .curtain{transform:translateX(0) scaleX(1)}
+.theatre .valance{display:block;height:14px;z-index:6;background:linear-gradient(#e7c069,#9c6c25);box-shadow:0 4px 10px rgba(0,0,0,.5)}
+.theatre .valance::after{display:none}
+.theatre .tease{z-index:7;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;font:600 clamp(22px,3vw,30px)/1.2 var(--f-disp);color:#ffe3a1;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+.theatre.closed .tease{transition-delay:.7s}
+.theatre.closed .easel{opacity:1;filter:none}
+@media (prefers-reduced-motion:reduce){.theatre .curtain{transition:none}}
 </style>
 
 <div id="printArea"></div>
@@ -1579,7 +1594,7 @@ function lobbyHTML(f,menu,tag,path){
   const lab=COURSE_LABEL[f.theme]||["Snacks","Mains","Something sweet","To drink"];
   const item=it=>`<div class="mc-item"><b>${ESC(it.n)}</b>${it.note?`<span class="mc-note">${ESC(it.note)}</span>`:""}${cardBlurb(f,it)?`<span class="mc-how">${ESC(cardBlurb(f,it))}</span>`:""}</div>`;
   const course=(cls,label,items)=>items.length?`<div class="mc-course ${cls}"><h3><span>${label}</span></h3>${items.map(item).join("")}</div>`:"";
-  return `<img class="lb-bg" crossorigin="anonymous" alt="" src="${TMDB_IMG}w92${ESC(path)}"><div class="lb-shade"></div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
+  return `<img class="lb-bg" crossorigin="anonymous" alt="" src="${TMDB_IMG}w342${ESC(path)}"><div class="lb-shade"></div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in">
     <header class="lb-head">
       <div class="lb-frame"><img class="lb-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(path)}" alt="${ESC(f.title)} (${ESC(f.year)}) film poster"></div>
@@ -2288,7 +2303,8 @@ async function renderCanvas(src){
        Swap every SVG texture for a plain noise tile and hide inline SVG art, in the export copy only. */
     const nz=noiseTile(),svgRx=/url\("data:image\/svg\+xml(?:[^"\\]|\\.)*"\)/g;
     [clone,...clone.querySelectorAll("*")].forEach(el=>{
-      const bg=getComputedStyle(el).backgroundImage;
+      const cs=getComputedStyle(el),bg=cs.backgroundImage;
+      if(cs.backgroundBlendMode&&cs.backgroundBlendMode.includes("multiply")){el.style.backgroundImage="none";return}
       if(bg&&bg.includes("data:image/svg"))el.style.backgroundImage=bg.replace(svgRx,`url("${nz}")`);
       if(el.tagName==="IMG"&&/^data:image\/svg/.test(el.getAttribute("src")||""))el.style.visibility="hidden";
       if(el.tagName&&el.tagName.toLowerCase()==="svg")el.style.visibility="hidden";
