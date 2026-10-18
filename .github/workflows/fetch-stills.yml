@@ -1,0 +1,28 @@
+name: Fetch film stills
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/stills-wanted.txt', 'scripts/fetch_stills.py']
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  stills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: List stills from TMDB
+        env:
+          TMDB_KEY: ${{ secrets.TMDB_KEY }}
+        run: python3 scripts/fetch_stills.py
+      - name: Commit if changed
+        run: |
+          git add data/film-stills.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git config user.name "movie-night-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "Film stills list from TMDB"
+          git push
