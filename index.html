@@ -2098,17 +2098,73 @@ function fitPrep(el){
    A film listed in FMT_FILMS gets its own landscape A4 menu (trifold or bifold look),
    plus a phone view with big type. Every other film keeps the lobby card until its format is signed off. */
 const FMT_FONTS={
-  market:"family=Anton&family=Mr+Dafoe&family=Permanent+Marker&family=Caveat+Brush&family=Barlow:wght@500;600"
+  market:"family=Anton&family=Mr+Dafoe&family=Permanent+Marker&family=Caveat+Brush&family=Barlow:wght@500;600",
+  takeaway:"family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,600..900,100,0;1,9..144,600..900,100,0&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Serif+TC:wght@900",
+  diner:"family=Yellowtail&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400&family=Kalam:wght@400",
+  casefile:"family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@700;900&family=Big+Shoulders+Stencil+Display:wght@800"
 };
-const FMT_FAMS={market:["Anton","Mr Dafoe","Permanent Marker","Caveat Brush","Barlow"]};
+const FMT_FAMS={market:["Anton","Mr Dafoe","Permanent Marker","Caveat Brush","Barlow"],takeaway:["Fraunces","Libre Caslon Text","Noto Serif TC"],diner:["Yellowtail","Alfa Slab One","Arvo","Kalam"],casefile:["Special Elite","Courier Prime","Big Shoulders Display","Big Shoulders Stencil Display"]};
 
 /* phone palette per format */
 const FMT_PHONE={
+  takeaway:{top:"#a51c24",topInk:"#f2d58a",paper:"#f6eedb",ink:"#2a1610",soft:"#5a4436",accent:"#a51c24",tab:"#f2d58a",
+    disp:"'Fraunces',serif",name:"'Fraunces',serif",body:"'Libre Caslon Text',serif",price:"'Fraunces',serif",title:"'Fraunces',serif",note:"'Libre Caslon Text',serif"},
+  diner:{top:"#1f3a7a",topInk:"#f2b632",paper:"#fbf5e6",ink:"#241a14",soft:"#5b4a3c",accent:"#c41e2a",tab:"#f2b632",
+    disp:"'Alfa Slab One',serif",name:"'Arvo',serif",body:"'Arvo',serif",price:"'Alfa Slab One',serif",title:"'Yellowtail',cursive",note:"'Arvo',serif"},
+  casefile:{top:"#2a2018",topInk:"#d9b77a",paper:"#f6f1e3",ink:"#1c1a17",soft:"#4a4438",accent:"#9e1b1b",tab:"#d9b77a",
+    disp:"'Big Shoulders Display',sans-serif",name:"'Courier Prime',monospace",body:"'Courier Prime',monospace",price:"'Big Shoulders Display',sans-serif",title:"'Special Elite',monospace",note:"'Courier Prime',monospace",upper:true},
   market:{top:"#c8202a",topInk:"#ffd03a",paper:"#f1e6cf",ink:"#151515",soft:"#3d3a35",accent:"#1e3c8c",tab:"#ffd03a",
     disp:"'Anton',sans-serif",name:"'Anton',sans-serif",body:"'Barlow',sans-serif",price:"'Anton',sans-serif",title:"'Mr Dafoe',cursive",note:"'Caveat Brush',cursive",upper:true}
 };
 
 const FMT_FILMS={
+  "Big Trouble in Little China (1986)":{fmt:"takeaway",brand:"Chinatown takeaway",
+    title:["Big Trouble","in Little China"],signs:["唐人街","大酒樓"],tag:"Something big is cooking in Chinatown",
+    colA:[
+      {h:"Entrées",zh:"點心",items:[
+        {k:"Pork and chive dumplings",n:"Pork & chive dumplings",code:"A1",zh:"韭菜豬肉餃",extra:"steamed or pan fried, 8 pcs",note:"Wang's family restaurant, before everything goes sideways",p:"5.80"},
+        {k:"Salt and pepper squid",n:"Salt & pepper squid",code:"A2",zh:"椒鹽鮮魷",extra:"with lemon",note:"Late night in Chinatown",p:"8.50",hot:1}]},
+      {h:"Noodles & Mains",zh:"麵食小菜",items:[
+        {k:"Wang Chi's dan dan noodles",n:"Wang Chi's dan dan",code:"M1",zh:"擔擔麵",extra:"Sichuan style",note:"Crisp pork, Sichuan pepper, chilli oil",p:"7.90",hot:2},
+        {k:"Pork-Chop Express ribs",code:"M2",zh:"叉燒排骨",extra:"honey char siu",note:"Straight off Jack's truck. Sticky fingers guaranteed",p:"12.80",special:"Chef's Special"}]}],
+    colB:[
+      {h:"Dessert & Drinks",zh:"甜品飲品",items:[
+        {k:"Fortune cookies",code:"D1",zh:"幸運餅",extra:"one each",note:"Jack would ignore his anyway",p:"1.00"},
+        {k:"Plum wine",n:"Egg Shen's plum wine",code:"D2",zh:"梅酒",extra:"by the glass",note:"The bottle for the trip below",p:"3.50"}]}],
+    banquet:{name:"Banquet A",price:"$16.50",lines:["Pork & chive dumplings","Salt & pepper squid","Pork-Chop Express ribs","Fortune cookies / Plum wine"]},
+    hours:["Open 7 nights &nbsp;·&nbsp; 5pm till late","Licensed &amp; B.Y.O. &nbsp;·&nbsp; Dine in or take away"]},
+  "My Cousin Vinny (1992)":{fmt:"diner",brand:"Wazoo Diner",
+    title:["My Cousin","Vinny"],place:"Wazoo, Alabama",name:"Wazoo Diner",tag:"Two yutes walk into a diner",est:"Est. 1952 · Off Route 31 · Ample parking",
+    colA:[
+      {h:"From the Griddle",items:[
+        {k:"Five-minute grits",d:"butter & sharp cheddar",note:"The grits cross-examination. Nobody cooks them that fast",p:"1.25"},
+        {k:"Fried green tomatoes",d:"cornmeal crust, remoulade",note:"Alabama's finest",p:"2.95"}]},
+      {h:"Blue Plate Special",items:[
+        {k:"Sac-O-Suds chicken fried steak",n:"Chicken fried steak",d:"cream gravy, mashed potatoes",note:"Sac-O-Suds, the corner store where the whole mess started",p:"5.95",special:"Today's special"}],
+       extra:`<div style="border:2px dashed #1f3a7a;padding:7px 12px 8px"><div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-family:'Alfa Slab One',serif;font-size:15px;color:#1f3a7a">Make it a Meat &amp; Three</span><span style="font-family:'Alfa Slab One',serif;font-size:15px;color:#c41e2a">+1.00</span></div><div style="font-family:'Arvo',serif;font-size:13px;line-height:1.4;color:#5b4a3c;margin-top:2px">Pick three: collard greens, mac &amp; cheese, fried okra, black-eyed peas</div></div>`},
+      {h:"Soda Fountain",items:[
+        {k:"Sweet tea",d:"by the pitcher, lemon on the side",note:"So sweet your teeth hurt",p:"0.75"}]}],
+    colB:[
+      {h:"From the Pie Case",items:[
+        {k:"Mona Lisa's blackberry cobbler",n:"Blackberry cobbler",d:"warm, with pouring cream",note:"Mona Lisa's pick. Wazoo, Alabama, ticking clock and all",p:"1.95"}]}],
+    supper:{name:"Family Supper",price:"$19.95",lines:["Grits / Fried green tomatoes","Chicken fried steak & gravy","Cobbler / A pitcher of sweet tea"]},
+    glossary:{h:"Southern for beginners",rows:[["Grits","Ground hominy corn. Twenty minutes, minimum."],["Yute","Brooklyn for youth. Ask the judge"],["Sweet tea","Sugared while hot. Never served unsweet."],["Biscuit","A soft scone. Comes with gravy."]]},
+    foot:["Breakfast served all day","Bottomless coffee 50¢"],
+    hours:["Open 5am till 2pm &nbsp;·&nbsp; Closed Sundays","Truckers welcome &nbsp;·&nbsp; Air conditioned"]},
+  "The Untouchables (1987)":{fmt:"casefile",brand:"Bureau of Prohibition",
+    bureau:"BUREAU OF PROHIBITION",city:"CHICAGO, ILL.",caseNo:"1930-CHI-0417",received:"OCT 17 1930",office:"CHICAGO FIELD OFFICE",
+    timeline:[["1920","The country goes dry."],["1929","Ness picks his team."],["1931","Capone goes down."],["1933","Repeal day. Cheers."]],
+    colA:[
+      {h:"Seized from the kitchen",items:[
+        {k:"Capone's arancini",code:"A.",note:"Recovered from the Lexington Hotel kitchen",p:"10¢"},
+        {k:"Lexington Hotel antipasto",n:"Lexington antipasto",code:"B.",note:"Capone's banquet, before the bat comes out",p:"25¢"},
+        {k:"Italian beef",code:"C.",note:"Shaved, dipped and hot. Chicago style",p:"15¢",special:"MAIN CHARGE"},
+        {k:"Ricotta zeppole",code:"D.",note:"From the Italian bakeries of 1930s Chicago",p:"5¢"}]}],
+    colB:[
+      {h:"Seized from the cellar",items:[
+        {k:"Bootleg lager",code:"E.",note:"Capone's beer. Every bar had to stock it",p:"10¢",how:"Chill 8 bottles of crisp lager for at least 3 hours. Pour into heavy glass steins straight down the middle so each gets a proper head.",shop:["8 bottles lager@Bottle shop"]},
+        {k:"Canadian rye",code:"F.",note:"Crates seized at the border raid",p:"35¢",how:"Pour 30ml Canadian rye whisky per person over one large ice cube in a short glass, then add a small splash of cold water to open it up.",shop:["700ml Canadian rye whisky@Bottle shop","1 bag large ice cubes@Frozen"]},
+        {k:"Repeal Day old fashioned",code:"G.",note:"Ness finally has a drink",p:"25¢"}]}]},
   "Friday (1995)":{fmt:"market",
     sign:["Off Normandie","126th St. Market","Open 7 days"],
     sub:"Porch menu &nbsp;·&nbsp; Serves four &nbsp;·&nbsp; Summer 1995",
@@ -2136,7 +2192,7 @@ function fmtMenu(f,spec){
   for(const k of ["S","M","W","K"])for(const it of f[k]||[])pool[it[0]]=toItem(it);
   if(exact)for(const k of ["s","m","w","d"])for(const it of exact[k]||[])pool[it.n]=it;
   const groups=[...spec.colA,...spec.colB];
-  const all=groups.flatMap(g=>g.items.map(x=>{const b=pool[x.k]||{n:x.k,note:x.note,how:"",shop:[]};return Object.assign({},b,{label:x.n||x.k,desc:x.d||"",film:x.note,price:x.p,special:x.special})}));
+  const all=groups.flatMap(g=>g.items.map(x=>{const b=pool[x.k]||{n:x.k,note:x.note,how:x.how||"",shop:x.shop||[]};return Object.assign({},b,{label:x.n||x.k,desc:x.d||"",film:x.note,price:x.p,special:x.special})}));
   const byCourse={s:[],m:[],w:[],d:[]};
   for(const it of all){const c=(f.S||[]).some(d=>d[0]===it.n)?"s":(f.M||[]).some(d=>d[0]===it.n)?"m":(f.W||[]).some(d=>d[0]===it.n)?"w":"d";byCourse[c].push(it)}
   return Object.assign(byCourse,{all,groups,fmt:true});
@@ -2194,7 +2250,7 @@ function fmtMarket(f,spec,menu,poster){
 }
 
 const fmtCue=f=>(movieEdition(f)||{}).cue||f.P;
-const FMT_RENDER={market:fmtMarket};
+const FMT_RENDER={market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a)};
 function fmtHTML(f,spec,menu){return FMT_RENDER[spec.fmt](f,spec,menu,lobbyPoster(f))}
 
 /* phone view: same menu, big type, one section at a time, tap a dish for the method */
@@ -2227,6 +2283,128 @@ function fmtFontsReady(spec){
     return new Promise(r=>{l.onload=r;l.onerror=r;setTimeout(r,3500)}).then(()=>Promise.race([Promise.all(FMT_FAMS[spec.fmt].map(n=>document.fonts.load(`20px "${n}"`,"Aa"))),new Promise(r=>setTimeout(r,3500))])).catch(()=>{});
   }
   return Promise.resolve();
+}
+
+/* ---------- shared bits for the folded menus ---------- */
+/* repeating border patterns are drawn on a canvas so saved images keep them (SVG textures get blanked on iPhone) */
+const FMT_TILES={
+  fret:(x,S,c)=>{x.strokeStyle=c.fg;x.lineWidth=S*.092;x.lineCap="square";x.beginPath();const p=[[2,22],[2,2],[22,2],[22,17],[7,17],[7,7],[17,7],[17,12],[12,12]].map(([a,b])=>[a*S/24,b*S/24]);x.moveTo(...p[0]);p.slice(1).forEach(q=>x.lineTo(...q));x.stroke()},
+  gingham:(x,S,c)=>{x.fillStyle="#fff";x.fillRect(0,0,S,S);x.globalAlpha=.55;x.fillStyle=c.fg;x.fillRect(0,0,S/2,S);x.fillRect(0,0,S,S/2);x.globalAlpha=1}
+};
+function fmtTilesPNG(root){
+  if(typeof document==="undefined"||!document.createElement)return;
+  root.querySelectorAll("[data-tile]").forEach(el=>{
+    try{const [kind,bg,fg,size]=el.dataset.tile.split("|"),S=+size*3,c=document.createElement("canvas");c.width=c.height=S;const x=c.getContext("2d");
+      x.fillStyle=bg;x.fillRect(0,0,S,S);FMT_TILES[kind](x,S,{fg});
+      el.style.backgroundImage=`url("${c.toDataURL("image/png")}")`;el.style.backgroundSize=`${size}px ${size}px`}catch(e){}
+  });
+}
+/* a ring of pattern strips inside a panel: top, bottom, left, right */
+function fmtRing(kind,bg,fg,size,inset,w){
+  const st=`position:absolute;background:${fg}`;
+  return [`left:${inset}px;right:${inset}px;top:${inset}px;height:${w}px`,`left:${inset}px;right:${inset}px;bottom:${inset}px;height:${w}px`,`left:${inset}px;top:${inset}px;bottom:${inset}px;width:${w}px`,`right:${inset}px;top:${inset}px;bottom:${inset}px;width:${w}px`]
+    .map(p=>`<i aria-hidden="true" data-tile="${kind}|${bg}|${fg}|${size}" style="${st};${p};background-repeat:repeat"></i>`).join("");
+}
+const fmtFold=`<i class="fx-fold" style="left:33.33%"></i><i class="fx-fold" style="left:66.66%"></i>`;
+const fmtBack=poster=>`<div class="fx-back" aria-hidden="true">${poster?`<img crossorigin="anonymous" alt="" src="${TMDB_IMG}w342${ESC(poster)}">`:""}</div>`;
+const fmtPosterImg=(f,poster,w,h,extra="")=>poster?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w500${ESC(poster)}" alt="${ESC(f.title)} (${ESC(f.year)}) film poster" style="display:block;width:${w}px;height:${h}px;object-fit:cover;${extra}">`:`<div style="width:${w}px;height:${h}px;background:#333"></div>`;
+const FX_SP=`<div class="fx-sp" aria-hidden="true" style="flex:1 1 0;min-height:12px"></div>`;
+const fmtPanel=(bg,pad)=>`min-height:0;overflow:hidden;position:relative;background:linear-gradient(90deg,rgba(0,0,0,0) 92%,rgba(0,0,0,.09)),${bg};padding:${pad};display:flex;flex-direction:column;border-right:1px solid rgba(0,0,0,.12)`;
+
+/* ---------- Chinese takeaway trifold (Big Trouble in Little China) ---------- */
+const ZODIAC=[["鼠","Rat"],["牛","Ox"],["虎","Tiger"],["兔","Rabbit"],["龍","Dragon"],["蛇","Snake"],["馬","Horse"],["羊","Goat"],["猴","Monkey"],["雞","Rooster"],["狗","Dog"],["豬","Pig"]];
+function fmtTakeaway(f,spec,menu,poster){
+  const RED="#a51c24",GOLD="#d8b257",PG="#f2d58a",INK="#2a1610",NOTE="#5a4436",CREAM="#f6eedb";
+  const DISP="font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100,'WONK' 0",ZH="font-family:'Noto Serif TC',serif;font-weight:900",BODY="font-family:'Libre Caslon Text',serif";
+  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const header=(en,zh)=>`<div style="display:flex;align-items:center;justify-content:center;gap:12px;background:${RED};color:${PG};padding:6px 10px 7px;box-shadow:0 0 0 2px ${CREAM},0 0 0 4px ${GOLD}"><span style="${DISP};font-weight:900;font-size:21px;white-space:nowrap">${ESC(en)}</span><span lang="zh-Hant" style="${ZH};font-size:17px;color:#fff;letter-spacing:.08em;white-space:nowrap">${zh}</span></div>`;
+  const dish=x=>{const it=pick(x.k),ch=x.hot?`<span style="color:#c8102e;font-size:12px;letter-spacing:1px">${"&#9679;".repeat(x.hot)}</span>`:"";
+    const inner=`<div style="display:flex;align-items:baseline;gap:7px"><span style="${DISP};font-weight:900;color:${RED};font-size:15px;width:26px;flex:none">${x.code}</span><span style="${DISP};font-weight:800;font-size:17.5px;line-height:1.1;letter-spacing:-.01em;white-space:nowrap">${ESC(it.label||x.n||x.k)}</span>${ch}<span style="flex:1;border-bottom:2px dotted rgba(42,22,16,.45);transform:translateY(-4px);min-width:8px"></span><span style="${DISP};font-weight:800;font-size:16.5px">${ESC(x.p)}</span></div>
+      <div style="padding-left:33px;display:flex;align-items:baseline;gap:8px;margin-top:4px"><span lang="zh-Hant" style="${ZH};font-size:15px;color:${RED};letter-spacing:.06em">${x.zh}</span><span style="${BODY};font-size:12.5px;color:${NOTE}">${ESC(x.extra||"")}</span></div>
+      <div style="${BODY};font-style:italic;font-size:14px;line-height:1.35;padding-left:33px;color:${NOTE};margin-top:3px">${ESC(x.note)}</div>`;
+    return x.special?`<div style="position:relative;border:2px solid ${GOLD};background:#fbf3df;margin:0 -10px;padding:12px 10px 10px">${inner}<span style="position:absolute;right:10px;top:-11px;background:${RED};color:${PG};${DISP};font-weight:900;font-size:12px;letter-spacing:.08em;padding:2px 9px 3px">${ESC(x.special)}</span></div>`:`<div>${inner}</div>`};
+  const sect=g=>`<div style="display:flex;flex-direction:column;gap:${g.items.some(i=>i.special)?15:13}px">${header(g.h,g.zh)}${g.items.map(dish).join("")}</div>`;
+  const bottom=`border-top:2px solid ${RED};border-bottom:2px solid ${RED};padding:6px 0;height:46px;box-sizing:border-box;display:flex;align-items:center`;
+  const fortune=`<div style="position:relative;align-self:stretch;margin:0 6px;transform:rotate(-1.5deg);background:#fff;border:1px solid #d6cdb8;padding:10px 16px 11px;box-shadow:0 5px 10px rgba(0,0,0,.18);text-align:center"><div style="${DISP};font-weight:900;font-size:13px;color:${RED}">Your fortune tonight</div><div style="${BODY};font-style:italic;font-size:14.5px;line-height:1.35;margin-top:3px">${ESC(fmtCue(f))}</div></div>`;
+  const b=spec.banquet;
+  const banquet=`<div style="border:2px solid ${RED};outline:1px solid ${RED};outline-offset:3px;padding:12px 14px;text-align:center;margin:0 4px"><div style="display:flex;justify-content:center;align-items:baseline;gap:10px"><span style="${DISP};font-weight:900;font-size:24px;color:${RED}">${ESC(b.name)}</span><span lang="zh-Hant" style="${ZH};font-size:18px;color:${RED}">酒席</span></div><div style="${BODY};font-size:12.5px;color:${NOTE};margin-top:2px">Minimum four people &nbsp;·&nbsp; <span style="${DISP};font-weight:900;font-size:16px;color:${INK}">${ESC(b.price)}</span> a head</div><div style="width:60px;height:1px;background:${RED};margin:8px auto 6px"></div><div style="${DISP};font-weight:600;font-size:15.5px;line-height:1.5">${b.lines.map(ESC).join("<br>").replace(/ \/ /g," &nbsp;·&nbsp; ")}</div></div>`;
+  const yr=+f.year,hot=((yr-4)%12+12)%12,start=yr-hot-12;
+  const zod=`<div><div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px"><span style="${DISP};font-weight:900;font-size:17px;color:${RED};white-space:nowrap">What year were you born?</span><span lang="zh-Hant" style="${ZH};font-size:15px;color:${RED}">生肖</span></div><div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px">${ZODIAC.map(([c,n],i)=>{const on=i===hot,y1=String(start+i).slice(2),y2=String(start+12+i).slice(2);return `<div style="background:${on?RED:"transparent"};text-align:center;padding:4px 0 3px;border:1px solid rgba(165,28,36,.35)"><div lang="zh-Hant" style="${ZH};font-size:19px;line-height:1.1;color:${on?PG:RED}">${c}</div><div style="${DISP};font-weight:800;font-size:11.5px;color:${on?"#fff":INK}">${n}</div><div style="${BODY};font-size:10.5px;color:${on?"#fff":INK}">${y1} · ${y2}</div></div>`}).join("")}</div></div>`;
+  const P=fmtPanel(CREAM,"22px 22px 18px");
+  const p1=`<div class="fx-panel" style="${P}">${spec.colA.map(sect).join(FX_SP)}${FX_SP}${fortune}${FX_SP}<div style="${bottom};justify-content:space-between;${BODY};font-size:12.5px;color:${NOTE}"><span><span style="color:#c8102e">&#9679;</span> mild &nbsp; <span style="color:#c8102e">&#9679;&#9679;</span> hot</span><span>No MSG on request</span><span>Serves four</span></div></div>`;
+  const p2=`<div class="fx-panel" style="${P}">${spec.colB.map(sect).join(FX_SP)}${FX_SP}${banquet}${FX_SP}${zod}${FX_SP}<div style="${bottom};justify-content:center;text-align:center;${DISP};font-weight:700;font-size:13.5px;line-height:1.45">${spec.hours[0]}<br>${spec.hours[1]}</div></div>`;
+  const vert=t=>`<div lang="zh-Hant" style="${ZH};font-size:22px;line-height:1.15;writing-mode:vertical-rl;letter-spacing:.15em;color:${PG}">${t}</div>`;
+  const p3=`<div style="position:relative;background:${RED};padding:16px;display:flex">${fmtRing("fret",RED,GOLD,24,0,18)}
+    <div style="position:relative;flex:1;margin:8px;border:2px solid ${GOLD};display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:14px 12px 12px;text-align:center;color:${PG}">
+      <div style="display:flex;align-items:center;gap:14px"><span style="height:2px;width:46px;background:${GOLD}"></span><div style="width:58px;height:58px;border-radius:50%;background:${PG};display:grid;place-items:center;box-shadow:0 0 0 3px ${RED},0 0 0 5px ${PG}"><span lang="zh-Hant" style="${ZH};font-size:31px;color:${RED};line-height:1">福</span></div><span style="height:2px;width:46px;background:${GOLD}"></span></div>
+      <div><h2 style="margin:0;${DISP};font-weight:900;font-size:46px;line-height:.92;color:${PG};text-shadow:2px 2px 0 #6e1016">${ESC(spec.title[0])}</h2>${spec.title[1]?`<div style="${DISP};font-weight:700;font-style:italic;font-size:21px;color:#fff;margin-top:3px">${ESC(spec.title[1])}</div>`:""}</div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:16px"><div style="display:flex;align-items:center;gap:9px">${vert(spec.signs[0])}<div style="padding:5px;background:${PG};box-shadow:0 8px 18px rgba(0,0,0,.45)">${fmtPosterImg(f,poster,218,327)}</div>${vert(spec.signs[1])}</div><div style="${BODY};font-style:italic;font-size:16px;color:#fff">${ESC(spec.tag)}</div></div>
+      <div style="width:100%;border-top:1px solid ${GOLD};padding-top:7px"><div style="${DISP};font-weight:900;font-size:19px">Phone orders welcome</div><div style="${BODY};font-size:12.5px;color:#fff;margin-top:2px">Est. ${ESC(f.year)} &nbsp;·&nbsp; Air conditioned &nbsp;·&nbsp; Ample parking</div></div>
+    </div></div>`;
+  return `${fmtBack(poster)}<div class="fx-sheet" style="color:${INK}">${p1}${p2}${p3}${fmtFold}</div>`;
+}
+
+/* ---------- Southern diner trifold (My Cousin Vinny) ---------- */
+function fmtDiner(f,spec,menu,poster){
+  const RED="#c41e2a",NAVY="#1f3a7a",CREAM="#fbf5e6",INK="#241a14",NOTE="#5b4a3c",MUSTARD="#f2b632";
+  const SCRIPT="font-family:'Yellowtail',cursive;font-weight:400",SLAB="font-family:'Alfa Slab One',serif;font-weight:400",BODY="font-family:'Arvo',serif",HAND="font-family:'Kalam',cursive";
+  const pick=k=>menu.all.find(x=>x.n===k)||{};let no=0;
+  const header=t=>`<div style="display:flex;align-items:baseline;justify-content:center;gap:10px;background:${NAVY};color:#fff;padding:7px 10px 6px;box-shadow:0 0 0 2px ${CREAM},0 0 0 4px ${RED}"><span style="${SLAB};font-size:20px;letter-spacing:.03em;white-space:nowrap">${ESC(t)}</span></div>`;
+  const dish=x=>{const it=pick(x.k);no++;
+    const inner=`<div style="display:flex;align-items:center;gap:9px"><span style="flex:none;width:25px;height:25px;border-radius:50%;background:${RED};color:#fff;display:grid;place-items:center;${SLAB};font-size:13px">${no}</span><span style="${BODY};font-weight:700;font-size:17.5px;line-height:1.1;white-space:nowrap;letter-spacing:-.01em">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dotted rgba(36,26,20,.45);transform:translateY(4px);min-width:8px"></span><span style="${SLAB};font-size:17px;color:${RED}">${ESC(x.p)}</span></div>
+      <div style="padding-left:34px;${BODY};font-size:13px;color:${NAVY};margin-top:4px;font-weight:700">${ESC(x.d)}</div>
+      <div style="padding-left:34px;${BODY};font-style:italic;font-size:14px;line-height:1.35;color:${NOTE};margin-top:2px">${ESC(x.note)}</div>`;
+    return x.special?`<div style="position:relative;margin:0 -10px;padding:13px 10px 10px;background:#fff;border:2px solid ${RED}">${inner}<span style="position:absolute;right:10px;top:-13px;background:${MUSTARD};color:${INK};${SLAB};font-size:12px;letter-spacing:.04em;padding:3px 9px;transform:rotate(2deg)">${ESC(x.special)}</span></div>`:`<div>${inner}</div>`};
+  const sect=g=>`<div style="display:flex;flex-direction:column;gap:${g.extra?16:14}px">${header(g.h)}${g.items.map(dish).join("")}${g.extra||""}</div>`;
+  const bottom=`border-top:3px double ${RED};border-bottom:3px double ${RED};padding:6px 0;height:48px;box-sizing:border-box;display:flex;align-items:center`;
+  const P=fmtPanel(CREAM,"22px 22px 18px");
+  const s=spec.supper;
+  const supper=`<div style="background:${RED};color:#fff;padding:12px 14px;text-align:center;box-shadow:inset 0 0 0 3px ${RED},inset 0 0 0 5px #fff"><div style="${SCRIPT};font-size:30px;line-height:1;color:${MUSTARD}">${ESC(s.name)}</div><div style="${BODY};font-size:12.5px;margin-top:2px">Feeds four &nbsp;·&nbsp; <span style="${SLAB};font-size:16px">${ESC(s.price)}</span> the table</div><div style="width:60px;height:1px;background:#fff;margin:8px auto 6px;opacity:.7"></div><div style="${BODY};font-weight:700;font-size:14.5px;line-height:1.5">${s.lines.map(ESC).join("<br>").replace(/ \/ /g," &nbsp;·&nbsp; ")}</div></div>`;
+  const gl=spec.glossary;
+  const gloss=`<div style="border:3px double ${NAVY};background:#fff;padding:9px 12px 10px"><div style="${SLAB};font-size:16px;color:${RED};text-align:center;margin-bottom:6px">${ESC(gl.h)}</div><div style="display:flex;flex-direction:column;gap:4px">${gl.rows.map(([t,d])=>`<div style="display:flex;gap:8px;align-items:baseline"><span style="${SLAB};font-size:13.5px;color:${NAVY};width:72px;flex:none;white-space:nowrap">${ESC(t)}</span><span style="${BODY};font-size:12.5px;line-height:1.35;color:${NOTE}">${ESC(d)}</span></div>`).join("")}</div></div>`;
+  const check=`<div style="position:relative;align-self:center;transform:rotate(-2deg);width:272px;background:#eef3e2;border:1px solid #b9c7a3;box-shadow:0 5px 10px rgba(0,0,0,.18);padding:8px 14px 10px"><div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #3f6b3a;padding-bottom:3px"><span style="${SLAB};font-size:13px;color:#3f6b3a;letter-spacing:.06em">Guest Check</span><span style="${BODY};font-size:11px;color:#3f6b3a">Table 4 &nbsp; Guests 4 &nbsp; No. ${ESC(f.year)}</span></div><div style="${HAND};font-size:17px;line-height:26px;color:#1d3aa8;background:repeating-linear-gradient(transparent 0 25px,rgba(63,107,58,.35) 25px 26px);margin-top:3px">${ESC(fmtCue(f))}</div></div>`;
+  const p1=`<div class="fx-panel" style="${P}">${spec.colA.map(sect).join(FX_SP)}${FX_SP}<div style="${bottom};justify-content:space-between;${BODY};font-size:12.5px;color:${NOTE}"><span>${ESC(spec.foot[0])}</span><span>${ESC(spec.foot[1])}</span></div></div>`;
+  const p2=`<div class="fx-panel" style="${P}">${spec.colB.map(sect).join(FX_SP)}${FX_SP}${supper}${FX_SP}${gloss}${FX_SP}${check}${FX_SP}<div style="${bottom};justify-content:center;text-align:center;${SLAB};font-size:13px;line-height:1.45;color:${INK};letter-spacing:.02em">${spec.hours[0]}<br>${spec.hours[1]}</div></div>`;
+  const t=spec.title;
+  const p3=`<div style="position:relative;background:#fff;padding:16px;display:flex">${fmtRing("gingham","#fff",RED,12,0,16)}
+    <div style="position:relative;flex:1;margin:6px;background:${CREAM};border:3px solid ${RED};outline:2px solid ${NAVY};outline-offset:-8px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:20px 14px 16px;text-align:center">
+      <div><div style="${SLAB};font-size:12px;letter-spacing:.08em;color:${NAVY}">${ESC(spec.place)}</div><div style="${SCRIPT};font-size:30px;color:${RED};line-height:1.1">${ESC(spec.name)}</div></div>
+      <h2 style="margin:0;${SCRIPT};line-height:.9;color:${RED};text-shadow:3px 3px 0 ${NAVY}"><span style="display:block;font-size:44px">${ESC(t[0])}</span><span style="display:block;font-size:76px">${ESC(t[1])}</span></h2>
+      <div style="position:relative;background:#fff;padding:7px;box-shadow:0 8px 18px rgba(0,0,0,.3);transform:rotate(-1.5deg)">${fmtPosterImg(f,poster,212,318)}<span style="position:absolute;left:-22px;bottom:-16px;width:66px;height:66px;border-radius:50%;background:${MUSTARD};color:${INK};display:grid;place-items:center;${SLAB};font-size:12px;line-height:1.05;transform:rotate(12deg);box-shadow:0 3px 6px rgba(0,0,0,.25)">Home<br>cooking<br>${ESC(f.year)}</span></div>
+      <div style="${BODY};font-style:italic;font-size:16px;color:${INK}">${ESC(spec.tag)}</div>
+      <div style="width:100%;border-top:2px solid ${RED};padding-top:8px"><div style="${SLAB};font-size:17px;color:${NAVY}">Call ahead for pickup</div><div style="${BODY};font-size:12.5px;color:${NOTE};margin-top:2px">${ESC(spec.est)}</div></div>
+    </div></div>`;
+  return `${fmtBack(poster)}<div class="fx-sheet" style="color:${INK}">${p1}${p2}${p3}<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(118deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.16) 38%,rgba(255,255,255,0) 46%)"></div>${fmtFold}</div>`;
+}
+
+/* ---------- Prohibition case file bifold (The Untouchables) ---------- */
+function fmtCase(f,spec,menu,poster){
+  const MANILA="#d9b77a",PAPER="#f6f1e3",INK="#1c1a17",RED="#9e1b1b",NOTE="#4a4438";
+  const TYPE="font-family:'Special Elite',monospace;font-weight:400",MONO="font-family:'Courier Prime',monospace",SHOUL="font-family:'Big Shoulders Display',sans-serif",STEN="font-family:'Big Shoulders Stencil Display',sans-serif;font-weight:800";
+  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const head=t=>`<div style="display:flex;align-items:center;gap:10px"><span style="${SHOUL};font-weight:900;font-size:21px;letter-spacing:.06em;color:${INK};white-space:nowrap;text-transform:uppercase">${ESC(t)}</span><span style="flex:1;height:0;border-top:2px solid ${INK};border-bottom:1px solid ${INK};padding-top:2px"></span></div>`;
+  const item=x=>{const it=pick(x.k);
+    const inner=`<div style="display:flex;align-items:baseline;gap:9px"><span style="${TYPE};font-size:15px;color:${RED};width:24px;flex:none">${x.code}</span><span style="${MONO};font-weight:700;font-size:17px;white-space:nowrap">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dotted rgba(28,26,23,.45);transform:translateY(-4px);min-width:8px"></span><span style="${SHOUL};font-weight:900;font-size:19px">${ESC(x.p)}</span></div><div style="${MONO};font-style:italic;font-size:14px;line-height:1.35;color:${NOTE};padding-left:33px;margin-top:2px">${ESC(x.note)}</div>`;
+    return x.special?`<div style="position:relative;margin:0 -10px;padding:12px 10px 9px;border:2px solid ${RED};background:rgba(158,27,27,.05)">${inner}<span style="position:absolute;right:10px;top:-12px;background:${PAPER};color:${RED};border:2px solid ${RED};${STEN};font-size:13px;letter-spacing:.12em;padding:1px 8px">${ESC(x.special)}</span></div>`:`<div>${inner}</div>`};
+  const sect=g=>`<div style="display:flex;flex-direction:column;gap:13px">${head(g.h)}${g.items.map(item).join("")}</div>`;
+  const tl=spec.timeline;
+  const timeline=`<div style="display:flex;flex-direction:column;gap:9px"><div style="${SHOUL};font-weight:900;font-size:17px;letter-spacing:.08em;color:${INK}">CASE TIMELINE</div>${tl.map(([y,d])=>`<div style="display:flex;gap:10px;align-items:baseline;border-left:3px solid ${RED};padding-left:9px"><span style="${TYPE};font-size:17px;color:${RED}">${ESC(y)}</span><span style="${MONO};font-size:13.5px;line-height:1.3">${ESC(d)}</span></div>`).join("")}</div>`;
+  const cue=fmtCue(f).toUpperCase().replace(/[.,]$/,"");
+  const left=`<div class="fx-panel" style="position:relative;min-height:0;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,0) 90%,rgba(0,0,0,.14)),${MANILA};padding:26px 26px 24px 30px;display:flex;flex-direction:column">
+    <div style="background:${PAPER};border:1px solid #b9a77f;padding:12px 16px;box-shadow:0 2px 4px rgba(0,0,0,.15)"><div style="display:flex;justify-content:space-between;${SHOUL};font-weight:700;font-size:13px;letter-spacing:.14em;color:${NOTE}"><span>${ESC(spec.bureau)}</span><span>${ESC(spec.city)}</span></div><h2 style="margin:6px 0 4px;${TYPE};font-size:${f.title.length>18?34:46}px;line-height:1;color:${INK}">${ESC(f.title)}</h2><div style="display:flex;justify-content:space-between;${TYPE};font-size:15px;color:${INK}"><span>CASE NO. ${ESC(spec.caseNo)}</span><span>RE: DINNER FOR FOUR</span></div></div>
+    ${FX_SP}
+    <div style="display:flex;gap:20px;align-items:flex-start"><div style="position:relative;flex:none;background:#fff;padding:8px 8px 30px;box-shadow:0 6px 14px rgba(0,0,0,.3);transform:rotate(-2deg)">${fmtPosterImg(f,poster,232,348,"filter:sepia(.25) contrast(1.05)")}<span style="position:absolute;left:0;right:0;bottom:7px;text-align:center;${TYPE};font-size:14px">EXHIBIT PHOTO, ${ESC(f.year)}</span><span aria-hidden="true" style="position:absolute;left:30px;top:-22px;width:16px;height:52px;border:3px solid #8d9196;border-radius:9px;border-bottom-color:transparent"></span><div aria-hidden="true" style="position:absolute;right:-10px;bottom:50px;transform:rotate(-14deg);border:4px solid rgba(158,27,27,.8);color:rgba(158,27,27,.85);padding:1px 10px;${STEN};font-size:28px;letter-spacing:.1em">EVIDENCE</div></div>
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:22px;padding-top:6px">${timeline}<div style="align-self:flex-start;margin-left:14px;transform:rotate(-4deg);border:2px solid rgba(29,58,168,.75);padding:5px 12px 6px;text-align:center;color:rgba(29,58,168,.8)"><div style="${SHOUL};font-weight:900;font-size:15px;letter-spacing:.18em">RECEIVED</div><div style="${TYPE};font-size:17px;border-top:1px solid rgba(29,58,168,.6);border-bottom:1px solid rgba(29,58,168,.6);margin:3px 0;padding:1px 0">${ESC(spec.received)}</div><div style="${SHOUL};font-weight:700;font-size:11px;letter-spacing:.14em">${ESC(spec.office)}</div></div></div></div>
+    ${FX_SP}
+    <div style="position:relative;background:#f3e7c0;border:1px solid #c9b47c;padding:10px 14px 12px;box-shadow:0 4px 8px rgba(0,0,0,.18);transform:rotate(.8deg)"><div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid ${INK};padding-bottom:3px;margin-bottom:7px"><span style="${SHOUL};font-weight:900;font-size:20px;letter-spacing:.2em">TELEGRAM</span><span style="${MONO};font-size:12px">SHOWTIME CUE &nbsp;·&nbsp; URGENT</span></div><div style="${MONO};font-weight:700;font-size:14px;line-height:1.7"><span style="background:#fff;padding:2px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone">${ESC(cue)} STOP</span></div></div>
+  </div>`;
+  const right=`<div style="position:relative;background:${MANILA};padding:18px 22px 18px 18px;display:flex"><div class="fx-panel" style="position:relative;flex:1;min-height:0;overflow:hidden;background:repeating-linear-gradient(transparent 0 31px,rgba(70,90,130,.12) 31px 32px),${PAPER};padding:20px 28px 16px 40px;box-shadow:0 6px 16px rgba(0,0,0,.3);display:flex;flex-direction:column;transform:rotate(.6deg)">
+    <div aria-hidden="true" style="position:absolute;left:24px;top:0;bottom:0;width:2px;background:rgba(200,40,40,.35)"></div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px double ${INK};padding-bottom:6px"><div><div style="${SHOUL};font-weight:700;font-size:13px;letter-spacing:.16em;color:${NOTE}">FORM P-17 &nbsp;·&nbsp; SEIZED GOODS</div><div style="${TYPE};font-size:30px;line-height:1.05">Evidence Log</div></div><div style="${TYPE};font-size:14px;text-align:right;line-height:1.4">Serves four<br>Street value per item</div></div>
+    ${FX_SP}${spec.colA.map(sect).join(FX_SP)}${FX_SP}${spec.colB.map(sect).join(FX_SP)}${FX_SP}
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:3px double ${INK};padding-top:8px;${MONO};font-size:13.5px;color:${NOTE}"><span>Agent on duty: ____________</span><span style="${STEN};font-size:20px;letter-spacing:.1em;color:${INK}">CASE CLOSED</span></div>
+  </div></div>`;
+  return `${fmtBack(poster)}<div class="fx-sheet" style="grid-template-columns:repeat(2,minmax(0,1fr));color:${INK};border-radius:4px;overflow:hidden">${left}${right}<i class="fx-fold" style="left:50%;width:3px"></i></div>`;
 }
 
 document.documentElement.style.setProperty("--grain",`url("${GRAIN}")`);
@@ -2277,7 +2455,7 @@ async function show(f,preferSig){
   if(spec){
     await fmtFontsReady(spec);if(id!==renderId)return;
     menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;$("reroll").hidden=true;
-    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=fmtHTML(f,spec,menu);fmtStarsPNG(card);
+    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=fmtHTML(f,spec,menu);fmtStarsPNG(card);fmtTilesPNG(card);
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
     styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);
