@@ -669,7 +669,7 @@ async function show(f,preferSig){
   {const amb=$("ambient"),pp=lobbyPoster(f);amb.classList.remove("on");if(pp)setTimeout(()=>{if(id!==renderId)return;amb.style.backgroundImage=`url("${TMDB_IMG}w342${pp}")`;amb.classList.add("on")},reduce?0:400)}
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
-  $("reroll").hidden=!!exactMenu(f);
+  $("reroll").hidden=!!exactMenu(f);{const sp=fmtSpec(f);$("foldPdf").hidden=!(sp&&fmtCanFold(sp))}
   $("status").textContent="";
   await ensureFonts(STY[f.theme]);
   if(id!==renderId)return;
@@ -1452,6 +1452,27 @@ sel.addEventListener("change",setList);
 $("reroll").addEventListener("click",()=>{if(current)show(current,false)});
 $("pdf").addEventListener("click",()=>exportMenu("pdf"));
 $("png").addEventListener("click",()=>exportMenu("png"));
+/* trifolds: a two-sided PDF that prints and folds into a real takeaway menu */
+async function exportFold(){
+  const f=current,spec=f&&fmtSpec(f);if(!spec||!fmtCanFold(spec))return;
+  const btn=$("foldPdf");btn.disabled=true;$("status").textContent="Building your fold-at-home PDF...";
+  try{
+    if(!await loadExportTools(true)){$("status").textContent="Couldn't load the export tools. Check your connection and try again.";return}
+    const pages=fmtFoldPages(f,spec,current.menu);
+    const page=async html=>{const el=document.createElement("div");styleCard(el,f);el.className="mcard fmt fmt-"+spec.fmt;el.style.transform="none";el.innerHTML=html;fmtTilesPNG(el);return renderCanvas(el,true)};
+    const out=await page(pages.outside),ins=await page(pages.inside),pp=await renderCanvas(prep);
+    const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:"mm",format:"a4",orientation:"landscape"});
+    pdf.addImage(out.toDataURL("image/jpeg",0.92),"JPEG",0,0,297,210);
+    pdf.addPage("a4","landscape");pdf.addImage(ins.toDataURL("image/jpeg",0.92),"JPEG",0,0,297,210);
+    pdf.addPage("a4","portrait");pdf.addImage(pp.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297);
+    const data=pdf.output("blob"),filename=`${slug(f.title)}-${f.year}-fold-at-home.pdf`;
+    const tip="Print pages 1 and 2 double-sided, flip on the short edge, actual size. Fold the left panel in first, then the cover over it.";
+    if(downloads){try{await downloads.save({filename,data});$("status").textContent=`Saved ${filename}. ${tip}`}catch(e){$("status").textContent=e&&e.code==="declined"?"Save cancelled.":"Couldn't save the PDF."}}
+    else{plainDownload(data,filename);$("status").textContent=`Downloaded ${filename}. ${tip}`}
+  }catch(e){console.error(e);$("status").textContent="Couldn't build the fold-at-home PDF. Try again."}
+  finally{btn.disabled=false}
+}
+$("foldPdf").addEventListener("click",exportFold);
 $("print").addEventListener("click",()=>{
   const pa=$("printArea");pa.innerHTML="";
   const c=card.cloneNode(true);c.style.transform="none";c.hidden=false;pa.appendChild(c);

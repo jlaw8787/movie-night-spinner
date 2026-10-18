@@ -44,7 +44,7 @@ const FMT_PHONE={
 };
 
 const FMT_FILMS={
-  "Home Alone (1990)":{fmt:"nero",order:[0,2,1],brand:"Little Nero's",over:"Hot to your door",slogan:"No fiddlin' around!",
+  "Home Alone (1990)":{fmt:"nero",order:[0,2,1],still:["/gqi0faVa8GvgcG991QL2ZrL3ECw.jpg","Kevin's dinner at the big table, all by himself"],brand:"Little Nero's",over:"Hot to your door",slogan:"No fiddlin' around!",
     tag:"Keep the change.<br>Pass the pizza.",caption:"Tonight's movie",
     sizes:[["Small","7.50"],["Medium","9.50"],["Large","11.80"]],sizesNote:"Extra cheese 1.00 · Plain cheese always on",stamp:["Delivered hot","Knock at the front door.<br>Wait for the dog door."],
     foot:["Winnetka and the North Shore","Open Christmas week","Call ahead"],
@@ -66,7 +66,7 @@ const FMT_FILMS={
         {k:"Kevin's sundae bar",n:"The giant sundae",c:"w",d:"Two ice creams, hot fudge, the lot",note:"Built in front of a gangster film",p:"2.95",
          how:"Set out 1L vanilla and 1L chocolate ice cream to soften for 10 minutes. Melt 150g chopped dark chocolate with 150ml thickened cream over low heat for hot fudge. Whip another 150ml thickened cream to soft peaks. Put 100g mini marshmallows, 80g chopped roasted peanuts, 4 tbsp sprinkles and 4 maraschino cherries in small bowls. Everyone builds their own in a big bowl.",
          shop:["1L vanilla ice cream@Frozen","1L chocolate ice cream@Frozen","150g dark chocolate@Pantry","300ml thickened cream@Dairy","100g mini marshmallows@Pantry","80g roasted peanuts@Pantry","4 tbsp sprinkles@Pantry","4 maraschino cherries@Pantry"]}]}]},
-  "Back to the Future (1985)":{fmt:"lous",place:"Lou's Cafe",sub:"Courthouse Square<br>Hill Valley &nbsp;·&nbsp; 1955",
+  "Back to the Future (1985)":{fmt:"lous",still:["/uhWens64CKeMkIfkhXGkXrMGOo3.jpg","Marty and George, at Lou's"],place:"Lou's Cafe",sub:"Courthouse Square<br>Hill Valley &nbsp;·&nbsp; 1955",
     tag:"Great Scott.<br>That's a good burger.",check:"Table 4",boardTop:"TODAY  ·  SATURDAY NOVEMBER 5 1955",boardFoot:"ENCHANTMENT UNDER THE SEA DANCE  ·  NOV 12",ticket:["Enchantment Under the Sea","School dance tonight.<br>Back by 10:04."],
     strip:["No tabs","Tab? Can't give you a tab unless you order something."],
     flyerStill:"/19SqaRZi24WJjCAvXGoMju6ZoXz.jpg",flyerCrop:"8% 14%",flyer:["Save the<br>clock tower","Struck by lightning<br>10:04 PM, Saturday<br>November 12, 1955","Hill Valley Preservation Society"],
@@ -90,7 +90,7 @@ const FMT_FILMS={
         {k:"Uncle Joey's welcome home cake",n:"Joey's cake",note:"He didn't make parole. Eat it anyway",p:"15¢",c:"w",
          how:"Heat the oven to 180C and line a 20 x 30cm tin. Beat 200g soft butter with 200g caster sugar until pale, then beat in 4 eggs one at a time and 2 tsp vanilla. Fold in 250g self-raising flour, then 125ml milk. Bake 30 to 35 minutes and cool completely. Beat 150g soft butter with 300g icing sugar and 2 tbsp milk, spread over the top and pipe WELCOME HOME JOEY in blue icing.",
          shop:["350g butter@Dairy","200g caster sugar@Pantry","4 eggs@Dairy","2 tsp vanilla extract@Pantry","250g self-raising flour@Pantry","150ml milk@Dairy","300g icing sugar@Pantry","1 tube blue writing icing@Pantry"]}]}]},
-  "Goodfellas (1990)":{fmt:"pad",brand:"Sunday, May 11th, 1980",padHead:"Dinner for Michael and the kids",padSide:"Sun 11th",
+  "Goodfellas (1990)":{fmt:"pad",still:["/x1Ohy5LGhy67rRjbXUM1DNDAICA.jpg","Jimmy. The diner. Last time"],brand:"Sunday, May 11th, 1980",padHead:"Dinner for Michael and the kids",padSide:"Sun 11th",
     titleCard:"SUNDAY, MAY 11TH, 1980<br>6:55 A.M.",tag:"As far back as I can remember,<br>I always wanted seconds.",cueLead:"Showtime:",heli:"Still up there?",padLines:[{k:"Razor-thin garlic bruschetta"},{k:"Prison gravy with three-meat meatballs"},{task:"Tell Michael. Keep stirring the sauce",p:"9:00"},{k:"Bamboo Lounge salami and provolone"},{k:"Johnny Dio's pan steaks"},{k:"Red wine, opened early"}],
     after:{n:"Egg noodles and ketchup",note:"Witness protection. Never again."},
     card:["From the prison kitchen","Paulie does the garlic with a razor, so thin it melts in the pan.<br>Vinnie does the sauce. Too many onions.<br>Johnny Dio does the meat."],
@@ -182,7 +182,12 @@ const FMT_FILMS={
         {k:"Fortune cookies",code:"D1",zh:"幸運餅",extra:"one each",note:"Jack would ignore his anyway",p:"1.00"},
         {k:"Plum wine",n:"Egg Shen's plum wine",code:"D2",zh:"梅酒",extra:"by the glass",note:"The bottle for the trip below",p:"3.50"}]}],
     banquet:{name:"Banquet A",price:"$16.50",lines:["Pork & chive dumplings","Salt & pepper squid","Pork-Chop Express ribs","Fortune cookies / Plum wine"]},
-    hours:["Open 7 nights &nbsp;·&nbsp; 5pm till late","Licensed &amp; B.Y.O. &nbsp;·&nbsp; Dine in or take away"]},
+    hours:["Open 7 nights &nbsp;·&nbsp; 5pm till late","Licensed &amp; B.Y.O. &nbsp;·&nbsp; Dine in or take away"],
+    fold:{name:"Chinatown Takeaway",line:"Family recipes, late into the night",flapLine:"Find your year, then turn the page",
+      address:"Grant Avenue, near Washington Street<br>Chinatown, San Francisco",
+      notes:["Every dish is cooked to order and packed hot for the trip home.","Ask about the plum wine. Egg Shen swears by it before a long night."],
+      stills:[["/7LK2053iOtiat3MeWM3S4MZ2mXK.jpg","Jack, Gracie, Miao Yin and Wang"],["/gPpcZPLMQ1ygk0PwIygO9qsjx0M.jpg","Jack and the crew, heading under Chinatown"],["/f1MCWiYy7QbQY5r0LSREGW1nINN.jpg","Thunder, one of the Three Storms"],["/giERHPpe9vINE6VMDoSh3BHGk4O.jpg","Lo Pan's hall, under the city"]],
+      map:{roads:[{v:1,at:30,n:"Grant Ave",w:12,label:74},{v:1,at:70,n:"Stockton St",label:70},{at:34,n:"Washington St",label:58},{at:72,n:"Jackson St",label:40}],spots:[{x:84,y:16,n:"Gate"}],us:{x:30,y:34,n:"We're here"}}}},
   "My Cousin Vinny (1992)":{fmt:"diner",brand:"Wazoo Diner",
     title:["My Cousin","Vinny"],place:"Wazoo, Alabama",name:"Wazoo Diner",tag:"Two yutes walk into a diner",est:"Est. 1952 · Off Route 31 · Ample parking",
     colA:[
@@ -200,7 +205,12 @@ const FMT_FILMS={
     supper:{name:"Family Supper",price:"$19.95",lines:["Grits / Fried green tomatoes","Chicken fried steak & gravy","Cobbler / A pitcher of sweet tea"]},
     glossary:{h:"Southern for beginners",rows:[["Grits","Ground hominy corn. Twenty minutes, minimum."],["Yute","Brooklyn for youth. Ask the judge"],["Sweet tea","Sugared while hot. Never served unsweet."],["Biscuit","A soft scone. Comes with gravy."]]},
     foot:["Breakfast served all day","Bottomless coffee 50¢"],
-    hours:["Open 5am till 2pm &nbsp;·&nbsp; Closed Sundays","Truckers welcome &nbsp;·&nbsp; Air conditioned"]},
+    hours:["Open 5am till 2pm &nbsp;·&nbsp; Closed Sundays","Truckers welcome &nbsp;·&nbsp; Air conditioned"],
+    fold:{line:"Home cooking since 1952",flapHead:"Welcome, y'all",flapLine:"New in town? Start here",
+      address:"Off Route 31<br>Wazoo, Beechum County, Alabama",
+      notes:["Pies baked every morning. When they're gone, they're gone."],
+      stills:[["/q8VYbgpxoAhUqUX8gK5EEGFg5nU.jpg","Vinny and Mona Lisa, breakfast in Wazoo"],["/zUoIx6XGzebunhKyNa7g5FUcRxV.jpg","The two yutes at the defence table"],["/rhkBvpVTMI3uej6zQqVHwYhhwzS.jpg","Mona Lisa takes the stand"],["/wVPRJjW3WRDGMVsJHB93P2ZRxH9.jpg","Mona Lisa, camera at the ready"]],
+      map:{roads:[{v:1,at:24,n:"Route 31",w:16,label:16},{at:58,n:"Main Street",label:46},{v:1,at:76,n:"Mill Road",label:20}],spots:[{x:60,y:28,n:"Courthouse"},{x:56,y:84,n:"Sac-O-Suds"}],us:{x:24,y:58,n:"Wazoo Diner"}}}},
   "The Untouchables (1987)":{fmt:"casefile",brand:"Bureau of Prohibition",
     bureau:"BUREAU OF PROHIBITION",city:"CHICAGO, ILL.",caseNo:"1930-CHI-0417",received:"OCT 17 1930",office:"CHICAGO FIELD OFFICE",
     timeline:[["1920","The country goes dry."],["1929","Ness picks his team."],["1931","Capone goes down."],["1933","Repeal day. Cheers."]],
@@ -410,6 +420,7 @@ function fmtTakeaway(f,spec,menu,poster){
       <div style="display:flex;flex-direction:column;align-items:center;gap:16px"><div style="display:flex;align-items:center;gap:9px">${vert(spec.signs[0])}<div style="padding:5px;background:${PG};box-shadow:0 8px 18px rgba(0,0,0,.45)">${fmtPosterImg(f,poster,218,327)}</div>${vert(spec.signs[1])}</div><div style="${BODY};font-style:italic;font-size:16px;color:#fff">${ESC(spec.tag)}</div></div>
       <div style="width:100%;border-top:1px solid ${GOLD};padding-top:7px"><div style="${DISP};font-weight:900;font-size:19px">Phone orders welcome</div><div style="${BODY};font-size:12.5px;color:#fff;margin-top:2px">Est. ${ESC(f.year)} &nbsp;·&nbsp; Air conditioned &nbsp;·&nbsp; Ample parking</div></div>
     </div></div>`;
+  if(arguments[4]==="parts")return {sect,fortune,banquet,zod,P,bottom,p3,INK,RED,GOLD,PG,NOTE,CREAM,DISP,BODY,ZH,legend:`<div style="${bottom};justify-content:space-between;${BODY};font-size:12.5px;color:${NOTE}"><span><span style="color:#c8102e">&#9679;</span> mild &nbsp; <span style="color:#c8102e">&#9679;&#9679;</span> hot</span><span>No MSG on request</span><span>Serves four</span></div>`,hours:`<div style="${bottom};justify-content:center;text-align:center;${DISP};font-weight:700;font-size:13.5px;line-height:1.45">${spec.hours[0]}<br>${spec.hours[1]}</div>`};
   return `${fmtBack(poster)}<div class="fx-sheet" style="color:${INK}">${p1}${p2}${p3}${fmtFold}</div>`;
 }
 
@@ -443,6 +454,9 @@ function fmtDiner(f,spec,menu,poster){
       <div style="${BODY};font-style:italic;font-size:16px;color:${INK}">${ESC(spec.tag)}</div>
       <div style="width:100%;border-top:2px solid ${RED};padding-top:8px"><div style="${SLAB};font-size:17px;color:${NAVY}">Call ahead for pickup</div><div style="${BODY};font-size:12.5px;color:${NOTE};margin-top:2px">${ESC(spec.est)}</div></div>
     </div></div>`;
+  if(arguments[4]==="parts")return {reset:()=>{no=0},sect,supper,gloss,check,P,bottom,p3,INK,RED,NAVY,CREAM,NOTE,MUSTARD,SCRIPT,SLAB,BODY,
+    foot:`<div style="${bottom};justify-content:space-between;${BODY};font-size:12.5px;color:${NOTE}"><span>${ESC(spec.foot[0])}</span><span>${ESC(spec.foot[1])}</span></div>`,
+    hours:`<div style="${bottom};justify-content:center;text-align:center;${SLAB};font-size:13px;line-height:1.45;color:${INK};letter-spacing:.02em">${spec.hours[0]}<br>${spec.hours[1]}</div>`};
   return `${fmtBack(poster)}<div class="fx-sheet" style="color:${INK}">${p1}${p2}${p3}<div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(118deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.16) 38%,rgba(255,255,255,0) 46%)"></div>${fmtFold}</div>`;
 }
 
@@ -624,7 +638,7 @@ function fmtNero(f,spec,menu,poster){
   const cue=`<div style="border:2px solid ${RED};padding:8px 12px 9px;background:#fff"><div style="${SLAB};font-size:13px;letter-spacing:.16em;color:${RED};text-transform:uppercase">Showtime cue</div><div style="${BODY};font-weight:700;font-size:16.5px;line-height:1.3;color:${INK};margin-top:2px">${ESC(fmtCue(f))}</div></div>`;
   const sizes=spec.sizes?`<div style="display:grid;grid-template-columns:repeat(${spec.sizes.length},1fr);border:2px solid ${RED};text-align:center">${spec.sizes.map(([a,b],i)=>`<div style="padding:6px 4px 7px;${i?`border-left:2px solid ${RED}`:""}"><div style="${SLAB};font-size:13px;letter-spacing:.12em;color:${RED};text-transform:uppercase">${ESC(a)}</div><div style="${SLAB};font-size:21px;color:${GRN};margin-top:2px">${ESC(b)}</div></div>`).join("")}<div style="grid-column:1/-1;border-top:2px solid ${RED};${BODY};font-weight:700;font-size:14px;line-height:1.3;color:${INK};padding:5px 6px 6px">${ESC(spec.sizesNote)}</div></div>`:"";
   const colA=`<div class="fx-panel" style="min-height:0;display:flex;flex-direction:column;justify-content:space-between;gap:16px">${grp(spec.colA[0])}${sizes}${spec.colA.slice(1).map(grp).join("")}</div>`;
-  const colB=`<div class="fx-panel" style="min-height:0;display:flex;flex-direction:column;justify-content:space-between;gap:16px">${spec.colB.map(grp).join("")}${stamp}${cue}</div>`;
+  const colB=`<div class="fx-panel" style="min-height:0;display:flex;flex-direction:column;justify-content:space-between;gap:16px">${spec.colB.map(grp).join("")}${spec.still?fmtStill(spec.still[0],spec.still[1],150,"#fff",NOTE,BODY,"transform:rotate(1deg);box-shadow:none"):stamp}${cue}</div>`;
   const lid=`<div style="position:relative;flex:1;min-width:0;display:flex;flex-direction:column">
     <div style="text-align:center">
       <div style="${BODY};font-weight:800;font-size:13px;letter-spacing:.34em;margin-right:-.34em;color:${GRN};text-transform:uppercase">${ESC(spec.over)}</div>
@@ -666,7 +680,7 @@ function fmtLous(f,spec,menu,poster){
   const cells=[];spec.colA.forEach((g,i)=>{cells.push(grp(g));cells.push(spec.colB[i]?grp(spec.colB[i]):"<div></div>")});
   const board=`<div style="position:relative;flex:1;min-height:0;padding:9px;background:${CHROME};border-radius:5px;box-shadow:0 10px 20px rgba(0,0,0,.4)">
     <div data-tile="felt|#1b1b1d|#262629|10" style="height:100%;box-sizing:border-box;background:repeating-linear-gradient(0deg,#1b1b1d 0 7px,#262629 7px 10px);padding:14px 30px 14px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto auto;align-content:space-evenly;gap:0 48px;box-shadow:inset 0 0 18px rgba(0,0,0,.8)">${boardLine(spec.boardTop,"#ffd75e")}${cells.join("")}${boardLine(spec.boardFoot,"#f6f4ec")}</div></div>`;
-  const sign=`<div style="display:flex;align-items:center;justify-content:space-between;gap:18px"><div style="${NEON};font-size:80px;line-height:1.05;white-space:nowrap;color:#ffe6e2;text-shadow:0 0 3px ${RED},0 0 10px ${RED},0 0 22px ${RED},0 0 34px rgba(196,38,46,.6);transform:rotate(-2deg);padding-left:6px">${ESC(spec.place)}</div><div style="${PEN};font-size:27px;line-height:1.05;color:${INK};transform:rotate(-2deg);text-align:center">${spec.tag}</div><div style="flex:none;text-align:right;white-space:nowrap;${BOARD};font-weight:500;font-size:15px;letter-spacing:.16em;line-height:1.5;text-transform:uppercase;color:${INK}">${spec.sub}</div></div>`;
+  const sign=`<div style="display:flex;align-items:center;justify-content:space-between;gap:18px"><div style="${NEON};font-size:76px;line-height:1.05;white-space:nowrap;color:#ffe6e2;text-shadow:0 0 3px ${RED},0 0 10px ${RED},0 0 22px ${RED},0 0 34px rgba(196,38,46,.6);transform:rotate(-2deg);padding-left:6px">${ESC(spec.place)}</div>${spec.still?`<div style="flex:none;width:200px;background:#fff;padding:6px 6px 24px;box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(2deg);position:relative"><img crossorigin="anonymous" src="${TMDB_IMG}w500${ESC(spec.still[0])}" alt="${ESC(spec.still[1])}, still from the film" style="display:block;width:100%;height:104px;object-fit:cover"><span style="position:absolute;left:0;right:0;bottom:5px;text-align:center;${PEN};font-size:16px;line-height:1;white-space:nowrap;color:${INK}">${ESC(spec.still[1])}</span></div>`:`<div style="${PEN};font-size:27px;line-height:1.05;color:${INK};transform:rotate(-2deg);text-align:center">${spec.tag}</div>`}<div style="flex:none;text-align:right;white-space:nowrap;${BOARD};font-weight:500;font-size:15px;letter-spacing:.16em;line-height:1.5;text-transform:uppercase;color:${INK}">${spec.sub}</div></div>`;
   const strip=`<div style="display:flex;align-items:center;gap:14px;background:${RED};color:#fff;padding:8px 16px;border-radius:3px;box-shadow:0 3px 0 #8e1a20"><span style="${BOARD};font-weight:700;font-size:15px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap">${ESC(spec.strip[0])}</span><span style="${BODY};font-size:16px;line-height:1.25">${ESC(spec.strip[1])}</span></div>`;
   /* the flyer's photo: the courthouse from the film, run through a photocopier when the menu loads */
   const tower=spec.flyerStill?`<img class="fx-photocopy" crossorigin="anonymous" data-src="${TMDB_IMG}w780${ESC(spec.flyerStill)}" alt="Hill Valley courthouse and clock tower, still from the film" style="display:block;width:100%;height:132px;object-fit:cover;object-position:${spec.flyerCrop||"center"};margin:7px 0 6px;border:1.5px solid ${INK};box-sizing:border-box;background:#ddd">`:`<img src="assets/menu-art/clock-tower.png" alt="" aria-hidden="true" style="display:block;width:100%;height:auto;margin:7px 0 6px;border:1.5px solid ${INK};box-sizing:border-box">`;
@@ -711,6 +725,7 @@ function fmtPad(f,spec,menu,poster){
       <div style="position:relative;display:grid;grid-template-columns:96px minmax(0,1fr);align-items:end;height:${L}px"><span></span><div style="display:flex;justify-content:space-between;align-items:baseline;padding-left:14px"><span style="${HAND};font-size:31px;line-height:${L}px;color:${INK};text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px">${ESC(spec.padHead)}</span><span style="${HAND};font-size:25px;color:${RED}">${ESC(spec.padSide)}</span></div></div>
       <div style="position:relative;display:flex;flex-direction:column">${lines.map(row).join("")}${spec.after?row({n:spec.after.n,note:spec.after.note,p:"Never",strike:true}):""}</div>
       ${heli}
+      ${spec.still?`<div style="position:absolute;right:16px;bottom:${L*2+22}px;width:178px;background:#fff;padding:6px 6px 22px;box-shadow:0 6px 12px rgba(0,0,0,.3);transform:rotate(3deg)"><span aria-hidden="true" style="position:absolute;left:50%;top:-10px;width:70px;height:20px;margin-left:-35px;background:rgba(255,248,225,.78);transform:rotate(-4deg);box-shadow:0 0 0 .5px rgba(120,90,40,.25)"></span><img crossorigin="anonymous" src="${TMDB_IMG}w500${ESC(spec.still[0])}" alt="${ESC(spec.still[1])}, still from the film" style="display:block;width:100%;height:104px;object-fit:cover"><span style="position:absolute;left:0;right:0;bottom:3px;text-align:center;${HAND};font-size:16px;line-height:1;color:${INK}">${ESC(spec.still[1])}</span></div>`:""}
       <div style="flex:1"></div>
       <div style="position:relative;display:grid;grid-template-columns:96px minmax(0,1fr);padding-bottom:${Math.round(L*.35)}px"><span></span><div style="${HAND};font-size:26px;line-height:${L}px;color:${RED};padding-left:14px">${ESC(spec.cueLead)} ${ESC(fmtCue(f))}</div></div>
     </div></div>`;
@@ -723,4 +738,52 @@ function fmtPad(f,spec,menu,poster){
     <div style="align-self:center;position:relative;background:#fff;padding:7px;box-shadow:0 8px 16px rgba(0,0,0,.5);transform:rotate(-1.5deg)">${fmtPosterImg(f,poster,224,336)}</div>
     ${card}</div>`;
   return `${fmtBack(poster)}<div class="fx-wall" data-tile="oilcloth|#7c1e1e|#f1e6d0|36" style="position:relative;height:100%;box-sizing:border-box;background:repeating-linear-gradient(90deg,rgba(241,230,208,.5) 0 18px,transparent 18px 36px),repeating-linear-gradient(0deg,rgba(241,230,208,.5) 0 18px,transparent 18px 36px),#7c1e1e;box-shadow:0 26px 60px rgba(0,0,0,.7),inset 0 0 80px rgba(0,0,0,.35);display:flex;gap:28px;padding:22px 28px 22px 24px">${left}${pad}</div>`;
+}
+
+/* ---------- fold at home: the trifolds as two pages, outside then inside, for double-sided printing ----------
+   Outside, left to right: the flap that folds in, the back, the cover. Inside: three menu panels. */
+const FMT_FOLDS={takeaway:1,diner:1};
+const fmtCanFold=spec=>!!(spec&&FMT_FOLDS[spec.fmt]);
+/* a little street map for the back panel, from plain boxes so saved images keep it */
+function fmtMap(m,ink,road,bg,accent,DISP,BODY){
+  const W=300,H=212;
+  const roads=m.roads.map(r=>r.v?`<i style="position:absolute;left:${r.at}%;top:0;bottom:0;width:${r.w||10}px;margin-left:-${(r.w||10)/2}px;background:${road}"></i><span style="position:absolute;left:${r.at}%;top:${r.label||8}%;transform:translateX(-50%) rotate(-90deg);transform-origin:50% 50%;${BODY};font-size:10px;letter-spacing:.06em;color:${ink};white-space:nowrap;text-transform:uppercase">${ESC(r.n)}</span>`
+    :`<i style="position:absolute;top:${r.at}%;left:0;right:0;height:${r.w||10}px;margin-top:-${(r.w||10)/2}px;background:${road}"></i><span style="position:absolute;top:${r.at}%;left:${r.label||4}%;transform:translateY(-50%);${BODY};font-size:10px;letter-spacing:.06em;color:${ink};white-space:nowrap;text-transform:uppercase">${ESC(r.n)}</span>`).join("");
+  const spots=(m.spots||[]).map(p=>`<span style="position:absolute;left:${p.x}%;top:${p.y}%;transform:translate(-50%,-50%);${BODY};font-size:10.5px;font-style:italic;color:${ink};white-space:nowrap;background:${bg};padding:0 3px">${ESC(p.n)}</span>`).join("");
+  return `<div style="position:relative;width:${W}px;height:${H}px;align-self:center;background:${bg};border:2px solid ${ink};overflow:hidden">${roads}${spots}
+    <span style="position:absolute;left:${m.us.x}%;top:${m.us.y}%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:${accent};box-shadow:0 0 0 3px ${bg},0 0 0 5px ${accent}"></span>
+    <span style="position:absolute;left:${m.us.x}%;top:${m.us.y}%;transform:translate(-50%,15px);${DISP};font-size:13px;color:${accent};white-space:nowrap;background:${bg};padding:0 4px">${ESC(m.us.n)}</span>
+    <span style="position:absolute;right:6px;bottom:4px;${BODY};font-size:10px;color:${ink}">N &#8593;</span></div>`;
+}
+/* a film still printed on the menu, framed like the photos on a takeaway menu */
+const fmtStill=(path,cap,h,frame,ink,font,extra="")=>path?`<figure style="margin:0;${extra}"><div style="background:${frame};padding:5px;box-shadow:0 3px 8px rgba(0,0,0,.25)"><img crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(path)}" alt="${ESC(cap)}, still from the film" style="display:block;width:100%;height:${h}px;object-fit:cover"></div>${cap?`<figcaption style="${font};font-size:12.5px;font-style:italic;line-height:1.3;color:${ink};text-align:center;margin-top:5px">${ESC(cap)}</figcaption>`:""}</figure>`:"";
+function fmtFoldPages(f,spec,menu){
+  const poster=lobbyPoster(f),T=FMT_RENDER[spec.fmt](f,spec,menu,poster,"parts"),fo=spec.fold;
+  const sheet=(a,b,c)=>`${fmtBack(poster)}<div class="fx-sheet" style="color:${T.INK}">${a}${b}${c}${fmtFold}</div>`;
+  const panel=inner=>`<div class="fx-panel" style="${T.P}">${inner}</div>`;
+  const SP=FX_SP;
+  if(spec.fmt==="takeaway"){
+    const {DISP,BODY,ZH,RED,NOTE,INK,PG}=T,st=fo.stills,ph=(i,h)=>fmtStill(st[i][0],st[i][1],h,"#fff",NOTE,BODY);
+    const back=panel(`<div style="text-align:center"><div lang="zh-Hant" style="${ZH};font-size:30px;color:${RED};letter-spacing:.2em;margin-right:-.2em">${spec.signs.join("")}</div><div style="${DISP};font-weight:900;font-size:26px;line-height:1.1;margin-top:4px">${ESC(fo.name)}</div><div style="${BODY};font-style:italic;font-size:14px;color:${NOTE};margin-top:3px">${ESC(fo.line)}</div></div>${SP}
+      <div style="${DISP};font-weight:900;font-size:16px;color:${RED};text-align:center;margin-bottom:8px">Find us</div>${fmtMap(fo.map,INK,"rgba(165,28,36,.18)","#fbf3df",RED,`font-family:'Fraunces',serif;font-weight:900`,BODY)}
+      <div style="${BODY};font-size:14px;line-height:1.5;text-align:center;margin-top:10px">${fo.address}</div>${SP}
+      <div style="background:${RED};color:${PG};text-align:center;padding:10px 12px 11px"><div style="${DISP};font-weight:900;font-size:22px">Phone orders welcome</div><div style="${BODY};font-size:13px;color:#fff;margin-top:3px">Ready in 20 minutes &nbsp;·&nbsp; Serves four</div></div>${SP}${T.hours}`);
+    const flap=panel(`<div style="text-align:center"><div style="${DISP};font-weight:900;font-size:24px;color:${RED}">Open the menu</div><div style="${BODY};font-style:italic;font-size:14px;color:${NOTE};margin-top:3px">${ESC(fo.flapLine)}</div></div>${SP}${ph(3,150)}${SP}${T.zod}${SP}${T.fortune}${SP}${T.legend}`);
+    const inside=[panel(`${T.sect(spec.colA[0])}${SP}${ph(0,214)}${SP}<div style="${BODY};font-style:italic;font-size:14.5px;line-height:1.45;color:${NOTE};text-align:center;border-top:1px solid rgba(165,28,36,.35);border-bottom:1px solid rgba(165,28,36,.35);padding:9px 6px">${ESC(fo.notes[0])}</div>${SP}<div style="${T.bottom};justify-content:center;${DISP};font-weight:700;font-size:13.5px">Dine in or take away &nbsp;·&nbsp; Chopsticks on request</div>`),
+      panel(`${T.sect(spec.colA[1])}${SP}${ph(1,176)}${SP}${T.banquet}${SP}<div style="${T.bottom};justify-content:center;${DISP};font-weight:700;font-size:13.5px">Banquets for four or more &nbsp;·&nbsp; Ask at the counter</div>`),
+      panel(`${spec.colB.map(T.sect).join(SP)}${SP}${ph(2,236)}${SP}<div style="${BODY};font-style:italic;font-size:14.5px;line-height:1.45;color:${NOTE};text-align:center;border-top:1px solid rgba(165,28,36,.35);border-bottom:1px solid rgba(165,28,36,.35);padding:9px 6px">${ESC(fo.notes[1])}</div>${SP}<div style="${T.bottom};justify-content:center;${DISP};font-weight:700;font-size:13.5px">Thank you &nbsp;·&nbsp; 多謝</div>`)];
+    return {outside:sheet(flap,back,T.p3),inside:sheet(...inside)};
+  }
+  const {SCRIPT,SLAB,BODY,RED,NAVY,NOTE,INK,MUSTARD}=T;
+  const back=panel(`<div style="text-align:center"><div style="${SLAB};font-size:12px;letter-spacing:.08em;color:${NAVY}">${ESC(spec.place)}</div><div style="${SCRIPT};font-size:40px;line-height:1.1;color:${RED}">${ESC(spec.name)}</div><div style="${BODY};font-style:italic;font-size:14px;color:${NOTE}">${ESC(fo.line)}</div></div>${SP}
+    <div style="${SLAB};font-size:16px;color:${NAVY};text-align:center;margin-bottom:8px">Find us</div>${fmtMap(fo.map,INK,"rgba(31,58,122,.16)","#fff",RED,SLAB,BODY)}
+    <div style="${BODY};font-size:14px;line-height:1.5;text-align:center;margin-top:10px">${fo.address}</div>${SP}
+    <div style="background:${NAVY};color:#fff;text-align:center;padding:10px 12px 11px;box-shadow:inset 0 0 0 3px ${NAVY},inset 0 0 0 5px #fff"><div style="${SLAB};font-size:20px;color:${MUSTARD}">Call ahead for pickup</div><div style="${BODY};font-size:13px;margin-top:3px">Ready in 20 minutes &nbsp;·&nbsp; Feeds four</div></div>${SP}${T.hours}`);
+  const st=fo.stills,ph=(i,h)=>fmtStill(st[i][0],st[i][1],h,"#fff",NOTE,BODY,"transform:rotate("+(i%2?1.2:-1.2)+"deg)");
+  const flap=panel(`<div style="text-align:center"><div style="${SCRIPT};font-size:34px;line-height:1;color:${RED}">${ESC(fo.flapHead)}</div><div style="${BODY};font-style:italic;font-size:14px;color:${NOTE};margin-top:4px">${ESC(fo.flapLine)}</div></div>${SP}${ph(3,150)}${SP}${T.gloss}${SP}${T.check}`);
+  T.reset();
+  const inside=[panel(`${T.sect(spec.colA[0])}${SP}${ph(0,160)}${SP}${T.foot}`),
+    panel(`${spec.colA.slice(1).map(T.sect).join(SP)}${SP}${ph(1,130)}${SP}${T.supper}`),
+    panel(`${spec.colB.map(T.sect).join(SP)}${SP}${ph(2,170)}${SP}<div style="${BODY};font-style:italic;font-size:15px;line-height:1.45;color:${NOTE};text-align:center;border-top:3px double ${RED};border-bottom:3px double ${RED};padding:12px 8px">${ESC(fo.notes[0])}</div>${SP}<div style="${T.bottom};justify-content:center;${SLAB};font-size:13px;color:${INK}">Pie by the slice, or the whole pie to go</div>`)];
+  return {outside:sheet(flap,back,T.p3),inside:sheet(...inside)};
 }
