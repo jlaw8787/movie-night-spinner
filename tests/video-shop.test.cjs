@@ -3,7 +3,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
 const root=path.join(__dirname,'..');
-const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const {html}=require('./page.cjs');
 const ctx=vm.createContext({});
 vm.runInContext(html.match(/const FILMS=.*?;\n/)[0]+html.match(/const SHOP_AISLES=.*?;\n/)[0]+'this.F=FILMS;this.A=SHOP_AISLES;',ctx);
 const themes=new Set(ctx.F.map(f=>f.theme));

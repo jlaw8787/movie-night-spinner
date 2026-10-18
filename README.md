@@ -12,7 +12,28 @@ Ticks and the skip preference are stored in localStorage in the same browser. Th
 
 ## Run
 
-Serve the repository as a static website, or deploy the root of the `main` branch with GitHub Pages. No build step is required. To apply the watched update manually, replace the root `index.html` with the updated file.
+Serve the repository as a static website, or deploy the root of the `main` branch with GitHub Pages.
+
+## Build
+
+The page is split so phones only download what they need:
+
+- `index.html` holds the markup and styles, `app.js` the app, `formats.js` the era menus.
+- `films.js` is a light index of all 850 films (title, year, theme).
+- Each film's full menu, methods and shopping live in `data/film/<slug>.json`, fetched when the film is opened.
+- Dish names and notes for the seasonal shelves and the Candy bar load after the page settles.
+
+Edit `data/films.json`, `movie-menus.js` or `data/recipes/`, then run:
+
+```sh
+node scripts/build-data.cjs
+```
+
+That rebuilds `films.js` and `data/film/`, and stamps each script with a version so phones pick up changes straight away.
+
+## Film stills
+
+`scripts/stills-wanted.txt` lists films whose era menu uses a frame from the film. Add a line and push: the Fetch film stills action uses the `TMDB_KEY` secret to write `data/film-stills.json` (image paths only).
 
 ## Verify
 

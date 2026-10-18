@@ -3,15 +3,16 @@ const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
 const root=path.join(__dirname,'..');
-const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const {html}=require('./page.cjs');
 const editionsSource=fs.readFileSync(path.join(root,'movie-menus.js'),'utf8');
 const filmSource=html.match(/const FILMS=.*?;\n/)[0];
-const menuCode=html.slice(html.indexOf('const movieEdition='),html.indexOf('const svg=s=>'));
+const menuCode=html.slice(html.indexOf('/* each film\'s full menu'),html.indexOf('const svg=s=>'));
 const shopCode=html.slice(html.indexOf('const AISLES='),html.indexOf('/* ================= MENU DESIGN'));
 const cardCode=html.slice(html.indexOf('const TMDB_IMG='),html.indexOf('function prepHTML(')); // TMDB_POSTERS not loaded here, so editions fall back to their art
 const context=vm.createContext({JSON,console});
 vm.runInContext(editionsSource+'\n'+filmSource+'\n'+`const shuffle=a=>a.slice().reverse();const ESC=s=>String(s).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));\n`+menuCode+shopCode+cardCode,context);
 const run=s=>vm.runInContext(s,context);
+run('Object.assign(EDITIONS,MOVIE_MENU_EDITIONS)');
 const ids=run('Object.keys(MOVIE_MENU_EDITIONS)');
 assert.ok(ids.length>=3);
 for(const id of ids){
@@ -47,4 +48,6 @@ assert.equal(rollout.films.length,run('FILMS.length'));
 assert.equal(rollout.films.filter(f=>f.status==='complete').length,ids.length);
 assert.equal(new Set(rollout.films.map(f=>f.id)).size,rollout.films.length);
 assert.ok(html.includes('img.decode()'));
+// every film opens from its own small file, with its finished menu or exact recipe inside
+for(const f of run('FILMS.map(f=>f.id)')){const d=JSON.parse(fs.readFileSync(path.join(root,'data/film',f.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.json'),'utf8'));assert.ok(d.T&&d.D&&(d.edition||d.recipe),f);assert.equal(!!d.edition,ids.includes(f),f)}
 console.log('PASS: artwork/menu matching, portions, consolidated shopping, A4 assets, accessible text, curated-menu stability, legacy fallback and full-library rollout.');

@@ -17,11 +17,16 @@ jobs:
         env:
           TMDB_KEY: ${{ secrets.TMDB_KEY }}
         run: python3 scripts/refresh_providers.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Re-stamp the page so phones pick up the new list
+        run: node scripts/build-data.cjs
       - name: Commit if changed
         run: |
           if git diff --quiet providers.js; then echo "No changes"; exit 0; fi
           git config user.name "movie-night-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add providers.js
+          git add providers.js index.html sw.js
           git commit -m "Monthly where-to-watch refresh"
           git push

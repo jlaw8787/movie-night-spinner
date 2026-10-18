@@ -2,7 +2,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-const source = fs.readFileSync(require('node:path').join(__dirname, '../index.html'), 'utf8');
+const source = require('./page.cjs').html;
 const filmSource = source.match(/const FILMS=.*?;\n/)[0];
 const watchedSource = source.slice(source.indexOf('/* Watched status'), source.indexOf('function size(){'));
 class Element {
