@@ -871,7 +871,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .fp-name{font:700 21px/1.15 var(--fp-name)}
 .fp-name.up{text-transform:uppercase}
 .fp-dots{flex:1;min-width:10px;border-bottom:2px dotted rgba(0,0,0,.35);transform:translateY(-4px)}
-.fp-price{font:400 19px var(--fp-price);color:var(--fp-acc)}
+.fp-price{font:400 19px var(--fp-price);color:var(--fp-acc);white-space:nowrap}
 .fp-desc{display:block;margin-top:6px;font-size:15px;font-weight:600;color:var(--fp-top)}
 .fp-film{display:block;margin-top:4px;font:400 19px/1.3 var(--fp-note);color:var(--fp-soft)}
 .fp-how{display:block;margin-top:6px;font-size:16px;line-height:1.55;color:var(--fp-ink)}
@@ -2101,9 +2101,10 @@ const FMT_FONTS={
   market:"family=Anton&family=Mr+Dafoe&family=Permanent+Marker&family=Caveat+Brush&family=Barlow:wght@500;600",
   takeaway:"family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,600..900,100,0;1,9..144,600..900,100,0&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Serif+TC:wght@900",
   diner:"family=Yellowtail&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400&family=Kalam:wght@400",
+  noodle:"family=LXGW+WenKai+TC:wght@400;700&family=Marcellus+SC&family=Alegreya:ital,wght@0,400;0,700;1,400",
   casefile:"family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@700;900&family=Big+Shoulders+Stencil+Display:wght@800"
 };
-const FMT_FAMS={market:["Anton","Mr Dafoe","Permanent Marker","Caveat Brush","Barlow"],takeaway:["Fraunces","Libre Caslon Text","Noto Serif TC"],diner:["Yellowtail","Alfa Slab One","Arvo","Kalam"],casefile:["Special Elite","Courier Prime","Big Shoulders Display","Big Shoulders Stencil Display"]};
+const FMT_FAMS={market:["Anton","Mr Dafoe","Permanent Marker","Caveat Brush","Barlow"],takeaway:["Fraunces","Libre Caslon Text","Noto Serif TC"],diner:["Yellowtail","Alfa Slab One","Arvo","Kalam"],noodle:["LXGW WenKai TC","Marcellus SC","Alegreya"],casefile:["Special Elite","Courier Prime","Big Shoulders Display","Big Shoulders Stencil Display"]};
 
 /* phone palette per format */
 const FMT_PHONE={
@@ -2113,11 +2114,25 @@ const FMT_PHONE={
     disp:"'Alfa Slab One',serif",name:"'Arvo',serif",body:"'Arvo',serif",price:"'Alfa Slab One',serif",title:"'Yellowtail',cursive",note:"'Arvo',serif"},
   casefile:{top:"#2a2018",topInk:"#d9b77a",paper:"#f6f1e3",ink:"#1c1a17",soft:"#4a4438",accent:"#9e1b1b",tab:"#d9b77a",
     disp:"'Big Shoulders Display',sans-serif",name:"'Courier Prime',monospace",body:"'Courier Prime',monospace",price:"'Big Shoulders Display',sans-serif",title:"'Special Elite',monospace",note:"'Courier Prime',monospace",upper:true},
+  noodle:{top:"#3b2416",topInk:"#e8c46a",paper:"#f4ecd8",ink:"#2a1a10",soft:"#5c4632",accent:"#a8322a",tab:"#e8c46a",
+    disp:"'Marcellus SC',serif",name:"'Alegreya',serif",body:"'Alegreya',serif",price:"'Marcellus SC',serif",title:"'Marcellus SC',serif",note:"'Alegreya',serif"},
   market:{top:"#c8202a",topInk:"#ffd03a",paper:"#f1e6cf",ink:"#151515",soft:"#3d3a35",accent:"#1e3c8c",tab:"#ffd03a",
     disp:"'Anton',sans-serif",name:"'Anton',sans-serif",body:"'Barlow',sans-serif",price:"'Anton',sans-serif",title:"'Mr Dafoe',cursive",note:"'Caveat Brush',cursive",upper:true}
 };
 
 const FMT_FILMS={
+  "Kung Fu Panda (2008)":{fmt:"noodle",brand:"Mr Ping's Noodle Shop",sign:"Mr Ping's Noodle Shop",signZh:"平記麵館",
+    tag:"There is no secret ingredient.<br>Except dumplings.",motto:"沒有秘方",quote:["We are noodle folk. Broth runs deep through our veins.","Mr Ping"],sheetH:"Today's menu in plain words",sheetSide:"Serves four · priced in coins",
+    colA:[{h:"Small plates",items:[
+        {k:"Training bowl dumplings",zh:"練功餃子",coinZh:"三文",p:"3 coins",note:"Shifu makes Po fight for the last one"},
+        {k:"Oogway's peaches",zh:"仙桃",coinZh:"二文",p:"2 coins",note:"From the tree where Oogway sits"},
+        {k:"Bean bun stack",zh:"豆沙包",coinZh:"四文",p:"4 coins",note:"Stacked high, worth the climb"}]},
+      {h:"Noodles & wok",items:[
+        {k:"Secret ingredient soup",zh:"秘方湯麵",coinZh:"五文",p:"5 coins",note:"Mr Ping's famous noodle soup"},
+        {k:"Valley of Peace stir-fry",zh:"和平谷小炒",coinZh:"六文",p:"6 coins",note:"The busy village below the Jade Palace"}]}],
+    colB:[{h:"Sweet & tea",items:[
+        {k:"Almond cookies",zh:"杏仁餅",coinZh:"二文",p:"2 coins",note:"The Furious Five's training snack"},
+        {k:"Jasmine tea",zh:"茉莉花茶",coinZh:"一文",p:"1 coin",note:"A quiet moment in the Jade Palace"}]}]},
   "Big Trouble in Little China (1986)":{fmt:"takeaway",brand:"Chinatown takeaway",
     title:["Big Trouble","in Little China"],signs:["唐人街","大酒樓"],tag:"Something big is cooking in Chinatown",
     colA:[
@@ -2250,7 +2265,7 @@ function fmtMarket(f,spec,menu,poster){
 }
 
 const fmtCue=f=>(movieEdition(f)||{}).cue||f.P;
-const FMT_RENDER={market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a)};
+const FMT_RENDER={market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a),noodle:(...a)=>fmtNoodle(...a)};
 function fmtHTML(f,spec,menu){return FMT_RENDER[spec.fmt](f,spec,menu,lobbyPoster(f))}
 
 /* phone view: same menu, big type, one section at a time, tap a dish for the method */
@@ -2289,6 +2304,7 @@ function fmtFontsReady(spec){
 /* repeating border patterns are drawn on a canvas so saved images keep them (SVG textures get blanked on iPhone) */
 const FMT_TILES={
   fret:(x,S,c)=>{x.strokeStyle=c.fg;x.lineWidth=S*.092;x.lineCap="square";x.beginPath();const p=[[2,22],[2,2],[22,2],[22,17],[7,17],[7,7],[17,7],[17,12],[12,12]].map(([a,b])=>[a*S/24,b*S/24]);x.moveTo(...p[0]);p.slice(1).forEach(q=>x.lineTo(...q));x.stroke()},
+  planks:(x,S,c)=>{const g=x.createLinearGradient(0,0,S,0);g.addColorStop(0,"#5a3420");g.addColorStop(.5,"#6e4126");g.addColorStop(1,"#5c3521");x.fillStyle=g;x.fillRect(0,0,S,S);x.fillStyle="rgba(0,0,0,.35)";x.fillRect(0,0,S*.03,S);x.strokeStyle="rgba(255,215,160,.07)";x.lineWidth=S*.012;for(let i=1;i<7;i++){x.beginPath();x.moveTo(S*i/7.3,0);x.bezierCurveTo(S*i/7.3+S*.02,S*.3,S*i/7.3-S*.02,S*.7,S*i/7.3+S*.01,S);x.stroke()}},
   gingham:(x,S,c)=>{x.fillStyle="#fff";x.fillRect(0,0,S,S);x.globalAlpha=.55;x.fillStyle=c.fg;x.fillRect(0,0,S/2,S);x.fillRect(0,0,S,S/2);x.globalAlpha=1}
 };
 function fmtTilesPNG(root){
@@ -2405,6 +2421,40 @@ function fmtCase(f,spec,menu,poster){
     <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:3px double ${INK};padding-top:8px;${MONO};font-size:13.5px;color:${NOTE}"><span>Agent on duty: ____________</span><span style="${STEN};font-size:20px;letter-spacing:.1em;color:${INK}">CASE CLOSED</span></div>
   </div></div>`;
   return `${fmtBack(poster)}<div class="fx-sheet" style="grid-template-columns:repeat(2,minmax(0,1fr));color:${INK};border-radius:4px;overflow:hidden">${left}${right}<i class="fx-fold" style="left:50%;width:3px"></i></div>`;
+}
+
+/* ---------- old China noodle shop wall, hanging dish tablets (Kung Fu Panda) ---------- */
+function fmtNoodle(f,spec,menu,poster){
+  const INK="#2a1a10",RED="#a8322a",GOLD="#e8c46a",RICE="#f4ecd8",NOTE="#5c4632";
+  const ZH="font-family:'LXGW WenKai TC',serif",SC="font-family:'Marcellus SC',serif",BODY="font-family:'Alegreya',serif";
+  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const items=[...spec.colA,...spec.colB].flatMap(g=>g.items);
+  const WOOD="background:repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0 2px,transparent 2px 74px),repeating-linear-gradient(90deg,rgba(255,220,170,.04) 0 9px,rgba(0,0,0,.04) 9px 17px),linear-gradient(#6e4126,#5a3420)";
+  const tablet=(x,i)=>`<div style="position:relative;display:flex;flex-direction:column;align-items:center">
+    <span aria-hidden="true" style="width:2px;height:18px;background:#2b1a10"></span>
+    <div style="width:82px;height:280px;box-sizing:border-box;background:linear-gradient(90deg,#c99a5e,#e3c08b 30%,#e8c895 60%,#c4925a);border:3px solid #7a4a26;border-radius:3px;box-shadow:0 6px 10px rgba(0,0,0,.35);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:12px 0 10px">
+      <div lang="zh-Hant" style="${ZH};font-weight:700;font-size:28px;line-height:1.08;color:${INK};writing-mode:vertical-rl;letter-spacing:.08em">${x.zh}</div>
+      <div lang="zh-Hant" style="${ZH};font-weight:700;background:${RED};color:#fbe9d0;font-size:15px;line-height:1;padding:5px 4px;writing-mode:vertical-rl;border-radius:2px">${x.coinZh}</div>
+    </div>
+    <span style="${SC};font-size:13px;color:${GOLD};margin-top:5px">${i+1}</span></div>`;
+  const line=(x,i)=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:8px"><span style="${SC};font-size:14px;color:${RED};width:18px;flex:none">${i+1}</span><span style="${BODY};font-weight:700;font-size:17.5px;line-height:1.15;white-space:nowrap">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dotted rgba(42,26,16,.4);transform:translateY(-4px);min-width:8px"></span><span style="${SC};font-size:15px;color:${RED};white-space:nowrap">${ESC(x.p)}</span></div><div style="${BODY};font-style:italic;font-size:14.5px;line-height:1.3;color:${NOTE};padding-left:26px;margin-top:1px">${ESC(x.note)}</div></div>`};
+  const half=Math.ceil(items.length/2);
+  const scroll=`<div style="position:relative;flex:none;width:286px;display:flex;flex-direction:column;align-items:center">
+    <div aria-hidden="true" style="width:120px;height:26px;border-left:2px solid #2b1a10;border-right:2px solid #2b1a10;transform:perspective(60px) rotateX(40deg);transform-origin:bottom;border-top:2px solid #2b1a10;border-radius:4px 4px 0 0"></div>
+    <div aria-hidden="true" style="width:270px;height:14px;border-radius:7px;background:linear-gradient(#5a311b,#2e180c);box-shadow:0 3px 5px rgba(0,0,0,.4)"></div>
+    <div style="width:244px;flex:1;min-height:0;background:#cdbf98;border-left:10px solid #7c2a1e;border-right:10px solid #7c2a1e;box-sizing:content-box;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:16px 0 14px;box-shadow:0 8px 16px rgba(0,0,0,.35)">
+      ${fmtPosterImg(f,poster,214,321,"box-shadow:0 0 0 3px #f1e6cc")}
+      <div style="text-align:center"><div lang="zh-Hant" style="${ZH};font-weight:700;font-size:44px;line-height:1.05;letter-spacing:.1em;color:${INK}">${spec.motto}</div><div style="${BODY};font-style:italic;font-size:16px;line-height:1.3;color:${INK};margin-top:8px;padding:0 14px">${spec.tag}</div></div>
+      <div lang="zh-Hant" style="width:40px;height:40px;background:${RED};color:#fbe9d0;display:grid;place-items:center;${ZH};font-weight:700;font-size:15px;line-height:1;border-radius:3px">龍<br>俠</div>
+    </div>
+    <div aria-hidden="true" style="width:282px;height:18px;border-radius:9px;background:linear-gradient(#5a311b,#2e180c);box-shadow:0 4px 6px rgba(0,0,0,.45)"></div></div>`;
+  const sign=`<div style="align-self:center;background:linear-gradient(#1e1410,#120b08);border:4px solid #8a5a2c;outline:2px solid #2b1a10;padding:6px 30px 7px;box-shadow:0 8px 14px rgba(0,0,0,.45);text-align:center"><div lang="zh-Hant" style="${ZH};font-weight:700;font-size:40px;line-height:1;letter-spacing:.3em;margin-right:-.3em;color:${GOLD};text-shadow:0 1px 0 #7a5a20">${spec.signZh}</div><div style="${SC};font-size:15px;letter-spacing:.2em;color:#f1e6cc;margin-top:4px">${ESC(spec.sign)}</div></div>`;
+  const rail=`<div style="position:relative;margin-top:4px"><div aria-hidden="true" style="height:12px;border-radius:6px;background:linear-gradient(#3a2112,#1f110a);box-shadow:0 3px 5px rgba(0,0,0,.4)"></div><div style="display:flex;justify-content:space-between;padding:0 6px">${items.map(tablet).join("")}</div></div>`;
+  const sheet=`<div style="position:relative;flex:1;min-height:0;background:${RICE};padding:14px 20px 0;box-shadow:0 6px 14px rgba(0,0,0,.35);display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid ${INK};padding-bottom:4px"><span style="${SC};font-size:19px;letter-spacing:.06em;color:${INK}">${ESC(spec.sheetH)}</span><span style="${BODY};font-size:13.5px;color:${NOTE}">${ESC(spec.sheetSide)}</span></div>
+    <div style="flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 26px;padding:10px 0 8px"><div class="fx-panel" style="display:flex;flex-direction:column;justify-content:space-between;min-height:0">${items.slice(0,half).map((x,i)=>line(x,i)).join("")}</div><div class="fx-panel" style="display:flex;flex-direction:column;justify-content:space-between;min-height:0">${items.slice(half).map((x,i)=>line(x,i+half)).join("")}${spec.quote?`<div style="padding-left:26px;border-left:3px solid ${RED};margin-left:2px"><div style="${BODY};font-style:italic;font-size:15.5px;line-height:1.3;color:${INK}">${ESC(spec.quote[0])}</div><div style="${SC};font-size:12.5px;letter-spacing:.08em;color:${RED};margin-top:2px">${ESC(spec.quote[1])}</div></div>`:""}</div></div>
+    <div style="margin:0 -20px;background:${RED};color:#fbe9d0;padding:8px 20px 9px;display:flex;gap:12px;align-items:baseline"><span style="${SC};font-size:14px;letter-spacing:.12em;color:${GOLD};white-space:nowrap">Showtime cue</span><span style="${BODY};font-size:16px;line-height:1.3">${ESC(fmtCue(f))}</span></div></div>`;
+  return `${fmtBack(poster)}<div class="fx-wall" data-tile="planks|#5a3420|#000|74" style="position:relative;height:100%;box-sizing:border-box;${WOOD};display:flex;gap:24px;padding:16px 22px 20px 18px;box-shadow:0 26px 60px rgba(0,0,0,.7);color:${INK}">${scroll}<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:12px">${sign}${rail}${sheet}</div></div>`;
 }
 
 document.documentElement.style.setProperty("--grain",`url("${GRAIN}")`);
