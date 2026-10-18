@@ -10,12 +10,16 @@ const FMT_FONTS={
   lanes:"family=Righteous&family=Reenie+Beanie&family=Barlow+Condensed:wght@500;700&family=Barlow:ital,wght@0,500;0,600;1,500",
   slims:"family=Sacramento&family=Archivo+Black&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400",
   noodle:"family=LXGW+WenKai+TC:wght@400;700&family=Marcellus+SC&family=Alegreya:ital,wght@0,400;0,700;1,400",
+  carte:"family=Pinyon+Script&family=Cormorant+SC:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500",
+  feast:"family=Italianno&family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400",
+  truck:"family=Fredericka+the+Great&family=Amatic+SC:wght@700&family=Patrick+Hand&family=Bungee",
+  check:"family=Archivo+Narrow:wght@400;700&family=Homemade+Apple&family=Libre+Franklin:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display",
   nero:"family=Shrikhand&family=Bevan&family=Libre+Franklin:ital,wght@0,400;0,700;0,800;1,400&family=Permanent+Marker&family=Courier+Prime:wght@400;700",
   lous:"family=Damion&family=Oswald:wght@400;500;700&family=Cutive+Mono&family=Covered+By+Your+Grace&family=Archivo:wght@400;700",
   pad:"family=Covered+By+Your+Grace&family=Rock+Salt&family=Courier+Prime:wght@400;700&family=Bodoni+Moda:wght@500;700",
   casefile:"family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@700;900&family=Big+Shoulders+Stencil+Display:wght@800"
 };
-const FMT_FAMS={nero:["Shrikhand","Bevan","Libre Franklin","Permanent Marker","Courier Prime"],lous:["Damion","Oswald","Cutive Mono","Covered By Your Grace","Archivo"],pad:["Covered By Your Grace","Courier Prime"],market:["Anton","Mr Dafoe","Permanent Marker","Caveat Brush","Barlow"],takeaway:["Fraunces","Libre Caslon Text","Noto Serif TC"],diner:["Yellowtail","Alfa Slab One","Arvo","Kalam"],workorder:["Oswald","Archivo Narrow","Caveat"],lanes:["Righteous","Reenie Beanie","Barlow Condensed","Barlow"],slims:["Sacramento","Archivo Black","Josefin Sans"],noodle:["LXGW WenKai TC","Marcellus SC","Alegreya"],casefile:["Special Elite","Courier Prime","Big Shoulders Display","Big Shoulders Stencil Display"]};
+const FMT_FAMS={carte:["Pinyon Script","Cormorant SC","Cormorant Garamond"],feast:["Italianno","Bodoni Moda","Libre Baskerville"],truck:["Fredericka the Great","Amatic SC","Patrick Hand","Bungee"],check:["Archivo Narrow","Homemade Apple","Libre Franklin","DM Serif Display"],nero:["Shrikhand","Bevan","Libre Franklin","Permanent Marker","Courier Prime"],lous:["Damion","Oswald","Cutive Mono","Covered By Your Grace","Archivo"],pad:["Covered By Your Grace","Courier Prime"],market:["Anton","Mr Dafoe","Permanent Marker","Caveat Brush","Barlow"],takeaway:["Fraunces","Libre Caslon Text","Noto Serif TC"],diner:["Yellowtail","Alfa Slab One","Arvo","Kalam"],workorder:["Oswald","Archivo Narrow","Caveat"],lanes:["Righteous","Reenie Beanie","Barlow Condensed","Barlow"],slims:["Sacramento","Archivo Black","Josefin Sans"],noodle:["LXGW WenKai TC","Marcellus SC","Alegreya"],casefile:["Special Elite","Courier Prime","Big Shoulders Display","Big Shoulders Stencil Display"]};
 
 /* phone palette per format */
 const FMT_PHONE={
@@ -33,6 +37,14 @@ const FMT_PHONE={
     disp:"'Archivo Black',sans-serif",name:"'Josefin Sans',sans-serif",body:"'Josefin Sans',sans-serif",price:"'Archivo Black',sans-serif",title:"'Sacramento',cursive",note:"'Josefin Sans',sans-serif",upper:true},
   noodle:{top:"#3b2416",topInk:"#e8c46a",paper:"#f4ecd8",ink:"#2a1a10",soft:"#5c4632",accent:"#a8322a",tab:"#e8c46a",
     disp:"'Marcellus SC',serif",name:"'Alegreya',serif",body:"'Alegreya',serif",price:"'Marcellus SC',serif",title:"'Marcellus SC',serif",note:"'Alegreya',serif"},
+  carte:{top:"#3e0f16",topInk:"#f1dfb8",paper:"#fbf6ea",ink:"#2b1d16",soft:"#5e4a3a",accent:"#6d1a24",tab:"#f1dfb8",
+    disp:"'Cormorant SC',serif",name:"'Cormorant SC',serif",body:"'Cormorant Garamond',serif",price:"'Cormorant SC',serif",title:"'Pinyon Script',cursive",note:"'Cormorant Garamond',serif"},
+  feast:{top:"#1d2d20",topInk:"#f7f0de",paper:"#f7f0de",ink:"#2a1f18",soft:"#5d4c3e",accent:"#9a2b22",tab:"#f7f0de",
+    disp:"'Bodoni Moda',serif",name:"'Bodoni Moda',serif",body:"'Libre Baskerville',serif",price:"'Bodoni Moda',serif",title:"'Italianno',cursive",note:"'Libre Baskerville',serif"},
+  truck:{top:"#1f2523",topInk:"#ffd24a",paper:"#fff4d6",ink:"#1f2523",soft:"#4a3f2c",accent:"#f07a2a",tab:"#ffd24a",
+    disp:"'Amatic SC',sans-serif",name:"'Fredericka the Great',serif",body:"'Patrick Hand',cursive",price:"'Fredericka the Great',serif",title:"'Bungee',sans-serif",note:"'Patrick Hand',cursive"},
+  check:{top:"#2f6b45",topInk:"#f2f6ea",paper:"#f2f6ea",ink:"#1f2a22",soft:"#4a5a4e",accent:"#1d2e8f",tab:"#f2f6ea",
+    disp:"'Archivo Narrow',sans-serif",name:"'Libre Franklin',sans-serif",body:"'Libre Franklin',sans-serif",price:"'Archivo Narrow',sans-serif",title:"'DM Serif Display',serif",note:"'Libre Franklin',sans-serif"},
   nero:{top:"#c8242b",topInk:"#fbf3e2",paper:"#f3e2c4",ink:"#2a1a10",soft:"#5a3d22",accent:"#1f6b3a",tab:"#fbf3e2",
     disp:"'Bevan',serif",name:"'Bevan',serif",body:"'Libre Franklin',sans-serif",price:"'Bevan',serif",title:"'Shrikhand',cursive",note:"'Libre Franklin',sans-serif"},
   lous:{top:"#1d1d1f",topInk:"#ffd75e",paper:"#f3ead2",ink:"#1c1c1c",soft:"#4a463d",accent:"#c4262e",tab:"#4fb3a9",
@@ -44,6 +56,80 @@ const FMT_PHONE={
 };
 
 const FMT_FILMS={
+  "Ratatouille (2007)":{fmt:"carte",over:"Restaurant · Paris",brand:"Gusteau's",motto:"Anyone can cook",
+    foot:"Service from seven. The kitchen welcomes anyone, of any size.",
+    ego:["Table pour un","Anton Ego","Orders the '47 Bordeaux,<br>and some perspective"],
+    stills:[["/hAj5B7NNjd05081eZhqKujmpVdx.jpg","The soup Remy saved"],["/pFIQZaWSyn4YAdE9jGriCTnTDZB.jpg","The ratatouille, for Ego"],["/lxpv2ikF3Cdml90d1JI7hJzh6rK.jpg","Colette: listen to the crust"]],
+    groups:[
+      {h:"Pour commencer",en:"To start",items:[
+        {k:"Gusteau's soup",fr:"Le potage du soir",n:"The soup",note:"The one Linguini spilled into and Remy fixed",p:"€12"},
+        {k:"Remy's lightning mushroom and cheese",fr:"Champignon et fromage",n:"Mushroom and cheese",note:"Toasted on the chimney, with a bolt of lightning",p:"€9"},
+        {k:"Paris market baguette",fr:"La baguette",n:"Bread, with a proper crust",note:"Listen for the crackle",p:"€4",
+         how:"Warm 2 good baguettes in a 200C oven for 6 minutes until the crust crackles when you squeeze it. Tear, do not slice, and serve with 100g salted butter at room temperature.",
+         shop:["2 baguettes@Bakery","100g salted butter@Dairy"]}]},
+      {h:"Les plats",en:"Mains",items:[
+        {k:"Ratatouille",fr:"Ratatouille",n:"Ratatouille, layered fine",note:"The dish that takes Ego straight back to his mum's kitchen",p:"€28"},
+        {k:"Sweetbreads à la Gusteau",fr:"Ris de veau à la Gusteau",n:"Sweetbreads à la Gusteau",note:"The old recipe Linguini was told to cook. Remy rewrote it",p:"€32",c:"m",
+         how:"Soak 600g veal sweetbreads in cold water for 2 hours, then simmer in salted water for 4 minutes and plunge into iced water. Peel off the membrane and press under a weighted tray for an hour. Slice into 2cm pieces, dust with flour and pan-fry in 30g butter for 3 minutes a side until golden. Deglaze with 80ml white wine and 100ml veal or chicken stock, reduce, then swirl in 20g cold butter. Serve with the sauce spooned over.",
+         shop:["600g veal sweetbreads@Meat","50g butter@Dairy","2 tbsp plain flour@Pantry","80ml white wine@Bottle shop","100ml chicken stock@Pantry"]}]},
+      {h:"La cave",en:"The cellar",items:[
+        {k:"Ego's red wine",fr:"Bordeaux, 1947",n:"A good Bordeaux",note:"Ego's order. Any good Bordeaux will do at home",p:"Ask the sommelier"}]}]},
+  "Big Night (1996)":{fmt:"feast",over:"Cucina Italiana · Jersey Shore",brand:"Paradise",sub:"Primo in the kitchen. Secondo out front.",
+    foot:"No side of spaghetti with the risotto. Sometimes the spaghetti likes to be alone.",
+    note:["The big night","For the night Louis Prima was meant to come. Course after course, till nobody can move."],
+    stills:[["/dohqxi6QW7SSmzEaK8Wv9dMhxcP.jpg","The customer who wanted spaghetti too"],["/dtUVvnbYSusSaI6xwPrkPK2xLeB.jpg","The long table, the big night"]],
+    groups:[
+      {h:"Primi",en:"First courses",items:[
+        {k:"Seafood risotto",it:"Risotto di mare",n:"Seafood risotto",note:"The one the customer wanted spaghetti with",p:"2.50",c:"s",
+         how:"Warm 1.2L fish stock. Soften 1 diced onion and 2 garlic cloves in 3 tbsp olive oil, add 350g carnaroli rice and toast 2 minutes, then 125ml white wine. Add the stock a ladle at a time, stirring, for 16 minutes. Stir in 300g peeled green prawns, 200g squid rings and 500g cleaned mussels, cover for 4 minutes until the mussels open. Finish with 30g butter, parsley and lemon. No cheese.",
+         shop:["1.2L fish stock@Pantry","1 onion@Produce","2 garlic cloves@Produce","350g carnaroli rice@Pantry","125ml white wine@Bottle shop","300g green prawns@Seafood","200g squid rings@Seafood","500g mussels@Seafood","30g butter@Dairy","1 bunch parsley@Produce","1 lemon@Produce"]},
+        {k:"Risotto three ways",it:"Risotto tricolore",n:"Risotto in three colours",note:"Green, white and red, side by side, at the feast",p:"3.00",
+         how:"Make one risotto base: soften 1 onion in 40g butter, toast 400g arborio rice, add 125ml white wine, then 1.4L hot chicken stock a ladle at a time for 17 minutes. Split into three pans. Green: stir in 100g blitzed spinach and basil. White: stir in 60g parmesan and 30g butter. Red: stir in 4 tbsp tomato passata and a pinch of saffron soaked in hot water. Spoon the three side by side on each plate.",
+         shop:["1 onion@Produce","70g butter@Dairy","400g arborio rice@Pantry","125ml white wine@Bottle shop","1.4L chicken stock@Pantry","100g baby spinach@Produce","1 bunch basil@Produce","60g parmesan@Dairy","4 tbsp tomato passata@Pantry","1 pinch saffron@Pantry"]}]},
+      {h:"Secondi",en:"Main courses",items:[
+        {k:"Timpano",it:"Il timpano",n:"Timpano",note:"The pasta drum. The room goes quiet when it's cut",p:"5.00"},
+        {k:"Roast suckling pig",it:"Maialino arrosto",n:"Roast pork, whole-pig style",note:"Carried in on a board at the feast",p:"4.50",
+         how:"Score the skin of a 1.5kg boned pork belly, rub with 2 tsp salt, 1 tbsp fennel seeds, 4 crushed garlic cloves and rosemary on the flesh side, roll and tie. Dry uncovered in the fridge overnight. Roast at 240C for 30 minutes, then 160C for 2 hours until tender and crackling. Rest 15 minutes and carve thick.",
+         shop:["1.5kg boned pork belly@Meat","1 tbsp fennel seeds@Pantry","4 garlic cloves@Produce","1 bunch rosemary@Produce"]}]},
+      {h:"All'alba",en:"At dawn",items:[
+        {k:"Secondo's omelette",it:"La frittata",n:"Secondo's omelette",note:"The morning after. Cooked in silence, split three ways",p:"",c:"m",
+         how:"Beat 8 eggs with a pinch of salt. Heat 2 tbsp olive oil in a non-stick pan over medium heat, pour in the eggs and stir gently until just set underneath and soft on top, about 3 minutes. Fold, slide onto a plate and cut into four. Serve with torn bread.",
+         shop:["8 eggs@Dairy","2 tbsp olive oil@Pantry","1 loaf crusty bread@Bakery"]}]}]},
+  "Chef (2014)":{fmt:"truck",brand:"El Jefe",sub:"Cubanos",boardHead:"Today on the truck",boardSide:"Miami to LA",
+    route:["The road home","Miami, then New Orleans, then Austin, then LA. Percy posts every stop."],
+    stills:[["/fQQmnrIPimZ8ZcVL6M0YUDdJhI6.jpg","Chalking up the board"],["/lDBNicr668AbJ9q0FBJa8AREFOj.jpg","The window, open for business"],["/7Un2nV752i6AKxmtH0wSgiuANLE.jpg","Carl teaching Percy the line"]],
+    groups:[
+      {h:"The truck",items:[
+        {k:"El Jefe Cubano",n:"El Jefe Cubano",note:"Roast pork, ham, swiss, pickles, mustard. Pressed hot",p:"$7"}]},
+      {h:"For Percy",items:[
+        {k:"The grilled cheese for Percy",n:"Grilled cheese",note:"Made for his son. Not to be served burnt. Ever",p:"$5"}]},
+      {h:"On the road",items:[
+        {k:"New Orleans beignets",n:"Beignets",note:"The New Orleans stop. Icing sugar everywhere",p:"$4",
+         how:"Mix 7g dried yeast, 1 tbsp sugar and 180ml warm milk, stand 10 minutes. Beat in 1 egg, 30g melted butter, 350g plain flour and a pinch of salt to a soft dough, knead 3 minutes, cover and rise 1 hour. Roll 5mm thick, cut into 6cm squares and fry at 175C for 1 minute a side until puffed and golden. Drain and bury in 100g icing sugar.",
+         shop:["7g dried yeast@Pantry","1 tbsp caster sugar@Pantry","180ml full cream milk@Dairy","1 egg@Dairy","30g butter@Dairy","350g plain flour@Pantry","100g icing sugar@Pantry","1L vegetable oil@Pantry"]},
+        {k:"Aglio e olio",n:"Aglio e olio",note:"What he cooks for Molly at midnight",p:"$9",
+         how:"Cook 500g spaghetti in well-salted water until just shy of al dente, keeping 1 cup of the water. Meanwhile warm 100ml olive oil with 8 thinly sliced garlic cloves and 1 tsp chilli flakes over low heat until the garlic is pale gold. Toss the pasta through with a splash of pasta water until glossy. Finish with a bunch of chopped parsley, lemon juice and parmesan.",
+         shop:["500g spaghetti@Pantry","100ml extra virgin olive oil@Pantry","8 garlic cloves@Produce","1 tsp chilli flakes@Pantry","1 bunch parsley@Produce","1 lemon@Produce","40g parmesan@Dairy"]}]},
+      {h:"Off the menu",items:[
+        {k:"Chocolate lava cake",n:"Chocolate lava cake",note:"The one the critic hated. Done right this time",p:"$6"}]}]},
+  "When Harry Met Sally... (1989)":{fmt:"check",place:"A diner on the way to New York",tag:"I'll have what she's having.",
+    fields:[["Table","4"],["Guests","2"],["Server","Joan"],["No.","1977"]],total:"$11.40",thanks:"Thank you, call again",
+    trip:["Chicago to New York, 1977","Chicago","New York","18 hours, one argument","They share the drive. They don't share the grapes."],
+    stills:[["/nVnheU1iPMVJJZgW9I8P9tCNhco.jpg","The diner. Sally orders"],["/cAZADMfPpRuCZYkTO06IDdrEE2t.jpg","The deli. She has what she's having"],["/tc8FdNY1R0Ob1oOyhI3XZbuV14m.jpg","New Year's Eve, at the party"]],
+    groups:[
+      {h:"On the road",items:[
+        {k:"Road trip grapes",n:"Grapes, for the car",note:"Harry spits the seeds out the window",p:"0.75",q:"1"}]},
+      {h:"The diner",items:[
+        {k:"Sally's chef salad",n:"Chef salad",mods:["oil & vinegar on the side"],note:"Exactly as she orders it",p:"3.25",q:"2",
+         how:"Wash and tear 2 cos lettuces. Arrange with 200g sliced leg ham, 200g sliced turkey, 150g swiss cheese strips, 4 halved hard-boiled eggs, 2 sliced tomatoes and half a sliced cucumber. Serve 60ml olive oil and 30ml red wine vinegar in two little jugs on the side.",
+         shop:["2 cos lettuces@Produce","200g sliced leg ham@Deli","200g sliced turkey@Deli","150g swiss cheese@Dairy","4 eggs@Dairy","2 tomatoes@Produce","1 cucumber@Produce","60ml olive oil@Pantry","30ml red wine vinegar@Pantry"]},
+        {k:"Apple pie à la mode, her way",n:"Apple pie à la mode",mods:["pie heated · ice cream on the side","strawberry if you have it","if not, real cream only"],note:"On the side. All of it",p:"2.40",q:"2"}]},
+      {h:"The deli",items:[
+        {k:"Pastrami on rye",n:"Deli sandwiches",note:"Lunch on Houston Street. The famous scene",p:"4.50",q:"2"}]},
+      {h:"New Year's",items:[
+        {k:"New Year's Eve champagne",n:"Champagne at midnight",note:"He runs across town to say it before the clock strikes",p:"",c:"d",q:"1",
+         how:"Chill 1 bottle of champagne or sparkling wine for at least 3 hours. Open it just before midnight and pour into four flutes.",
+         shop:["1 bottle champagne or sparkling wine@Bottle shop"]}]}]},
   "Home Alone (1990)":{fmt:"nero",order:[0,2,1],still:["/gqi0faVa8GvgcG991QL2ZrL3ECw.jpg","Kevin's dinner at the big table, all by himself"],brand:"Little Nero's",over:"Hot to your door",slogan:"No fiddlin' around!",
     tag:"Keep the change.<br>Pass the pizza.",caption:"Tonight's movie",
     sizes:[["Small","7.50"],["Medium","9.50"],["Large","11.80"]],sizesNote:"Extra cheese 1.00 · Plain cheese always on",stamp:["Delivered hot","Knock at the front door.<br>Wait for the dog door."],
@@ -310,7 +396,7 @@ function fmtMarket(f,spec,menu,poster){
 }
 
 const fmtCue=f=>(movieEdition(f)||{}).cue||f.P;
-const FMT_RENDER={market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a),noodle:(...a)=>fmtNoodle(...a),slims:(...a)=>fmtSlims(...a),lanes:(...a)=>fmtLanes(...a),workorder:(...a)=>fmtWorkOrder(...a),nero:(...a)=>fmtNero(...a),lous:(...a)=>fmtLous(...a),pad:(...a)=>fmtPad(...a)};
+const FMT_RENDER={market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a),noodle:(...a)=>fmtNoodle(...a),slims:(...a)=>fmtSlims(...a),lanes:(...a)=>fmtLanes(...a),workorder:(...a)=>fmtWorkOrder(...a),nero:(...a)=>fmtNero(...a),carte:(...a)=>fmtCarte(...a),feast:(...a)=>fmtFeast(...a),truck:(...a)=>fmtTruck(...a),check:(...a)=>fmtCheck(...a),lous:(...a)=>fmtLous(...a),pad:(...a)=>fmtPad(...a)};
 function fmtHTML(f,spec,menu){return FMT_RENDER[spec.fmt](f,spec,menu,lobbyPoster(f))}
 
 /* phone view: same menu, big type, one section at a time, tap a dish for the method */
@@ -319,7 +405,7 @@ function fmtPhoneHTML(f,spec,menu){
   const groups=menu.groups;
   return `<div class="fp fp-${spec.fmt}" style="--fp-top:${P.top};--fp-top-ink:${P.topInk};--fp-paper:${P.paper};--fp-ink:${P.ink};--fp-soft:${P.soft};--fp-acc:${P.accent};--fp-tab:${P.tab};--fp-disp:${P.disp};--fp-name:${P.name};--fp-body:${P.body};--fp-price:${P.price};--fp-title:${P.title};--fp-note:${P.note||P.body}">
     <header class="fp-head">${poster?`<img class="fp-poster" crossorigin="anonymous" src="${TMDB_IMG}w185${ESC(poster)}" alt="">`:""}<div><div class="fp-brand">${ESC(spec.sign?spec.sign[1]:spec.brand||"")}</div><h2 class="fp-title">${ESC(f.title)}</h2><p class="fp-tag">${spec.tag||ESC(f.T)}</p><p class="fp-hint">Serves four. Tap a dish for the method.</p></div></header>
-    <div class="fp-tabs" role="tablist" aria-label="Menu sections">${groups.map((g,i)=>`<button type="button" role="tab" class="fp-tab" aria-selected="${i===0}" data-g="${i}">${ESC(g.h.replace(/^(Off|From) the /,""))}</button>`).join("")}</div>
+    <div class="fp-tabs" role="tablist" aria-label="Menu sections">${groups.map((g,i)=>`<button type="button" role="tab" class="fp-tab" aria-selected="${i===0}" data-g="${i}">${ESC(g.tab||g.h.replace(/^(Off|From) the (?=\S+\s\S)/,""))}</button>`).join("")}</div>
     <div class="fp-body">${groups.map((g,i)=>`<section class="fp-sec" data-g="${i}" ${i?"hidden":""}><h3 class="fp-h">${ESC(g.h)}</h3>${g.items.map(x=>{const it=menu.all.find(y=>y.label===(x.n||x.k))||{};return `<button type="button" class="fp-dish" aria-expanded="false"><span class="fp-row"><span class="fp-name${P.upper?" up":""}">${ESC(it.label)}</span><span class="fp-dots"></span><span class="fp-price">${ESC(x.burst?x.burst[0]:(it.price||""))}</span></span>${it.desc?`<span class="fp-desc">${ESC(it.desc)}</span>`:""}<span class="fp-film">${ESC(it.film||"")}</span><span class="fp-how" hidden>${ESC(it.how||"")}</span><span class="fp-more">How to make it</span></button>`}).join("")}</section>`).join("")}</div>
     <div class="fp-cue"><b>Showtime cue</b><span>${ESC(fmtCue(f))}</span></div>
     <button type="button" class="fp-flip">See the printed menu</button>
@@ -354,6 +440,7 @@ const FMT_TILES={
   rug:(x,S,c)=>{x.fillStyle=c.fg;x.beginPath();x.moveTo(S/2,S*.08);x.lineTo(S*.92,S/2);x.lineTo(S/2,S*.92);x.lineTo(S*.08,S/2);x.closePath();x.fill();x.fillStyle="#e8d7b0";x.beginPath();x.moveTo(S/2,S*.3);x.lineTo(S*.7,S/2);x.lineTo(S/2,S*.7);x.lineTo(S*.3,S/2);x.closePath();x.fill();x.fillStyle="#9b2a22";x.fillRect(S*.45,S*.45,S*.1,S*.1)},
   checker:(x,S,c)=>{x.fillStyle=c.fg;x.fillRect(0,0,S/2,S/2);x.fillRect(S/2,S/2,S/2,S/2)},
   kraft:(x,S,c)=>{x.fillStyle=c.fg;x.fillRect(S*.433,0,S*.067,S);x.fillStyle="rgba(255,240,210,.08)";x.fillRect(0,0,S*.2,S)},
+  boards:(x,S,c)=>{x.fillStyle=c.fg;x.fillRect(0,0,S,S*.1);x.fillStyle="rgba(255,220,170,.06)";for(let i=1;i<6;i++){x.fillRect(0,S*(.1+i*.15),S,S*.012)}},
   ruled:(x,S,c)=>{x.clearRect(0,0,S,S);x.fillStyle=c.fg;x.fillRect(0,S-S*.05,S,S*.05)},
   felt:(x,S,c)=>{x.fillStyle=c.fg;x.fillRect(0,S*.7,S,S*.3)},
   oilcloth:(x,S,c)=>{x.fillStyle="rgba(241,230,208,.5)";x.fillRect(0,0,S/2,S);x.fillRect(0,0,S,S/2)},
@@ -786,4 +873,106 @@ function fmtFoldPages(f,spec,menu){
     panel(`${spec.colA.slice(1).map(T.sect).join(SP)}${SP}${ph(1,130)}${SP}${T.supper}`),
     panel(`${spec.colB.map(T.sect).join(SP)}${SP}${ph(2,170)}${SP}<div style="${BODY};font-style:italic;font-size:15px;line-height:1.45;color:${NOTE};text-align:center;border-top:3px double ${RED};border-bottom:3px double ${RED};padding:12px 8px">${ESC(fo.notes[0])}</div>${SP}<div style="${T.bottom};justify-content:center;${SLAB};font-size:13px;color:${INK}">Pie by the slice, or the whole pie to go</div>`)];
   return {outside:sheet(flap,back,T.p3),inside:sheet(...inside)};
+}
+
+/* ---------- Gusteau's, Paris: the evening menu card on a linen tablecloth (Ratatouille) ---------- */
+function fmtCarte(f,spec,menu,poster){
+  const INK="#2b1d16",GOLD="#b08d4a",WINE="#6d1a24",CARD="#fbf6ea",NOTE="#5e4a3a";
+  const SCRIPT="font-family:'Pinyon Script',cursive;font-weight:400",SC="font-family:'Cormorant SC',serif",BODY="font-family:'Cormorant Garamond',serif";
+  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const orn=`<div aria-hidden="true" style="display:flex;align-items:center;justify-content:center;gap:10px;color:${GOLD}"><span style="width:60px;height:1px;background:${GOLD}"></span><span style="font-size:13px">&#10022;</span><span style="width:60px;height:1px;background:${GOLD}"></span></div>`;
+  const dish=x=>{const it=pick(x.k);return `<div style="text-align:center"><div style="${SC};font-weight:600;font-size:21px;line-height:1.1;letter-spacing:.03em;color:${INK}">${ESC(x.fr||it.label||x.k)}</div><div style="${BODY};font-style:italic;font-size:16px;line-height:1.25;color:${NOTE};margin-top:2px">${ESC(it.label||x.n||x.k)}${x.p?` &nbsp;·&nbsp; <span style="font-style:normal;color:${WINE}">${ESC(x.p)}</span>`:""}</div><div style="${BODY};font-size:15.5px;line-height:1.3;color:${NOTE};margin-top:2px">${ESC(x.note)}</div></div>`};
+  const sect=g=>`<div style="display:flex;flex-direction:column;gap:14px"><div style="text-align:center"><div style="${SCRIPT};font-size:34px;line-height:1;color:${WINE}">${ESC(g.h)}</div><div style="${SC};font-size:12.5px;letter-spacing:.24em;color:${GOLD};margin-top:2px">${ESC(g.en)}</div></div>${g.items.map(dish).join("")}</div>`;
+  const card=`<div class="fx-panel" style="position:relative;flex:1;min-width:0;min-height:0;background:${CARD};padding:24px 30px 18px;box-shadow:0 12px 26px rgba(0,0,0,.45);display:flex;flex-direction:column;justify-content:space-between">
+    <i aria-hidden="true" style="position:absolute;inset:10px;border:2px solid ${GOLD};pointer-events:none"></i><i aria-hidden="true" style="position:absolute;inset:16px;border:1px solid ${GOLD};pointer-events:none"></i>
+    <div style="text-align:center;position:relative"><div style="${SC};font-size:13px;letter-spacing:.34em;color:${GOLD}">${ESC(spec.over)}</div><div style="${SCRIPT};font-size:70px;line-height:1.1;color:${INK}">${ESC(spec.brand)}</div><div style="${SC};font-size:15px;letter-spacing:.2em;color:${WINE}">${ESC(spec.motto)}</div></div>
+    ${orn}<div style="flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 30px;padding:6px 0"><div style="display:flex;flex-direction:column;justify-content:space-evenly;gap:12px">${sect(spec.groups[0])}</div><div style="display:flex;flex-direction:column;justify-content:space-evenly;gap:12px">${spec.groups.slice(1).map(sect).join(orn)}</div></div>${orn}
+    <div style="text-align:center;${BODY};font-style:italic;font-size:14.5px;color:${NOTE};position:relative">${ESC(spec.foot)}</div></div>`;
+  const ph=(i,h,r)=>fmtStill(spec.stills[i][0],spec.stills[i][1],h,"#fff","#efe6d2",BODY+";font-size:14px",`transform:rotate(${r}deg)`);
+  const left=`<div style="flex:none;width:210px;display:flex;flex-direction:column;justify-content:space-between;gap:14px">
+    <div style="align-self:center;background:#fff;padding:6px;box-shadow:0 8px 16px rgba(0,0,0,.45);transform:rotate(-2deg)">${fmtPosterImg(f,poster,184,276)}</div>${ph(0,150,1.5)}</div>`;
+  const ego=`<div style="background:${CARD};padding:14px 16px 13px;box-shadow:0 8px 16px rgba(0,0,0,.4);transform:rotate(1.5deg);color:${INK};position:relative">
+    <i aria-hidden="true" style="position:absolute;inset:6px;border:1px solid ${GOLD}"></i>
+    <div style="position:relative;text-align:center"><div style="${SC};font-size:12px;letter-spacing:.26em;color:${GOLD}">${ESC(spec.ego[0])}</div><div style="${SCRIPT};font-size:34px;line-height:1.15;color:${WINE}">${ESC(spec.ego[1])}</div><div style="${BODY};font-size:15.5px;line-height:1.35;margin-top:2px">${spec.ego[2]}</div>
+    <div style="width:50px;height:1px;background:${GOLD};margin:9px auto 7px"></div><div style="${SC};font-size:12px;letter-spacing:.2em;color:${WINE}">Showtime cue</div><div style="${BODY};font-style:italic;font-size:16px;line-height:1.3;margin-top:2px">${ESC(fmtCue(f))}</div></div></div>`;
+  const right=`<div style="flex:none;width:210px;display:flex;flex-direction:column;justify-content:space-between;gap:14px">${ph(1,130,-1.5)}${ego}${ph(2,110,1)}</div>`;
+  return `${fmtBack(poster)}<div class="fx-wall" style="position:relative;height:100%;box-sizing:border-box;background:radial-gradient(ellipse at 50% 40%,#7a2430,#3e0f16 75%);box-shadow:0 26px 60px rgba(0,0,0,.7);display:flex;gap:24px;padding:20px 22px">${left}${card}${right}</div>`;
+}
+
+/* ---------- the Paradise, Jersey Shore 1950s: the menu card and Primo's feast card (Big Night) ---------- */
+function fmtFeast(f,spec,menu,poster){
+  const INK="#2a1f18",RED="#9a2b22",GRN="#2f5d3a",CARD="#f7f0de",NOTE="#5d4c3e",GOLD="#b8954f";
+  const SCRIPT="font-family:'Italianno',cursive;font-weight:400",DISP="font-family:'Bodoni Moda',serif",BODY="font-family:'Libre Baskerville',serif";
+  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const dish=x=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:8px"><span style="${DISP};font-weight:700;font-size:20px;line-height:1.15;color:${INK};white-space:nowrap">${ESC(x.it||it.label||x.k)}</span><span style="flex:1;border-bottom:1px dotted rgba(42,31,24,.5);min-width:10px;transform:translateY(-4px)"></span><span style="${DISP};font-weight:700;font-size:18px;color:${RED}">${ESC(x.p)}</span></div><div style="${BODY};font-style:italic;font-size:14px;line-height:1.35;color:${NOTE};margin-top:2px">${ESC(it.label||x.n||x.k)}. ${ESC(x.note)}</div></div>`};
+  const sect=g=>`<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;gap:12px"><span style="${SCRIPT};font-size:42px;line-height:.9;color:${RED};white-space:nowrap">${ESC(g.h)}</span><span style="flex:1;height:1px;background:${GOLD}"></span><span style="${DISP};font-size:12px;letter-spacing:.2em;color:${GRN};text-transform:uppercase;white-space:nowrap">${ESC(g.en)}</span></div>${g.items.map(dish).join("")}</div>`;
+  const flag=`<div aria-hidden="true" style="display:flex;height:6px"><i style="flex:1;background:${GRN}"></i><i style="flex:1;background:#fff"></i><i style="flex:1;background:${RED}"></i></div>`;
+  const card=`<div class="fx-panel" style="position:relative;flex:1;min-width:0;min-height:0;background:${CARD};padding:0 30px 14px;box-shadow:0 12px 26px rgba(0,0,0,.45);display:flex;flex-direction:column;justify-content:space-between">
+    <div style="margin:0 -30px">${flag}</div>
+    <div style="text-align:center;padding-top:10px"><div style="${DISP};font-size:13px;letter-spacing:.34em;color:${GRN};text-transform:uppercase">${ESC(spec.over)}</div><div style="${SCRIPT};font-size:84px;line-height:.95;color:${RED}">${ESC(spec.brand)}</div><div style="${DISP};font-style:italic;font-size:16px;color:${NOTE}">${ESC(spec.sub)}</div></div>
+    ${spec.groups.map(sect).join("")}
+    <div style="text-align:center;${BODY};font-style:italic;font-size:13.5px;color:${NOTE};border-top:1px solid ${GOLD};padding-top:8px">${ESC(spec.foot)}</div></div>`;
+  const ph=(i,h,r)=>fmtStill(spec.stills[i][0],spec.stills[i][1],h,"#fff","#f0e6cf",BODY+";font-size:13px",`transform:rotate(${r}deg)`);
+  const note=`<div style="background:#fffdf6;padding:14px 16px 14px;box-shadow:0 8px 16px rgba(0,0,0,.4);transform:rotate(-1.5deg);color:${INK};background-image:repeating-linear-gradient(transparent 0 25px,rgba(47,93,58,.18) 25px 26px)">
+    <div style="${SCRIPT};font-size:34px;line-height:1;color:${RED}">${ESC(spec.note[0])}</div><div style="${BODY};font-style:italic;font-size:14.5px;line-height:26px;margin-top:4px">${ESC(spec.note[1])}</div>
+    <div style="${DISP};font-size:12px;letter-spacing:.2em;color:${GRN};text-transform:uppercase;margin-top:6px">Showtime cue</div><div style="${BODY};font-size:14.5px;line-height:1.35;margin-top:2px">${ESC(fmtCue(f))}</div></div>`;
+  const left=`<div style="flex:none;width:236px;display:flex;flex-direction:column;justify-content:space-between;gap:14px"><div style="align-self:center;background:#fff;padding:6px;box-shadow:0 8px 16px rgba(0,0,0,.45);transform:rotate(-2deg)">${fmtPosterImg(f,poster,196,294)}</div>${ph(0,140,1.5)}</div>`;
+  const right=`<div style="flex:none;width:236px;display:flex;flex-direction:column;justify-content:space-between;gap:14px">${ph(1,150,-1)}${note}</div>`;
+  return `${fmtBack(poster)}<div class="fx-wall" style="position:relative;height:100%;box-sizing:border-box;background:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 2px,transparent 2px 22px),radial-gradient(ellipse at 50% 30%,#3d5a3f,#1d2d20 80%);box-shadow:0 26px 60px rgba(0,0,0,.7);display:flex;gap:24px;padding:20px 22px">${left}${card}${right}</div>`;
+}
+
+/* ---------- El Jefe, the food truck: chalkboard menu on the painted truck side (Chef) ---------- */
+function fmtTruck(f,spec,menu,poster){
+  const CHALK="#f3f1ea",YEL="#ffd24a",ORA="#f07a2a",TEAL="#2fb6a8",PINK="#ff8fb1",BOARD="#1f2523";
+  const DISP="font-family:'Fredericka the Great',serif;font-weight:400",HEAD="font-family:'Amatic SC',sans-serif;font-weight:700",HAND="font-family:'Patrick Hand',cursive;font-weight:400",TRUCK="font-family:'Bungee',sans-serif;font-weight:400";
+  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const cols=[YEL,TEAL,PINK,ORA];
+  const dish=(x,c)=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:10px"><span style="${DISP};font-size:25px;line-height:1.05;color:${CHALK};white-space:nowrap">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dashed rgba(243,241,234,.35);min-width:10px;transform:translateY(-6px)"></span><span style="${DISP};font-size:25px;color:${c}">${ESC(x.p)}</span></div><div style="${HAND};font-size:19px;line-height:1.2;color:rgba(243,241,234,.86);margin-top:2px">${ESC(x.note)}</div></div>`};
+  const sect=(g,i)=>`<div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:0 16px;align-items:start"><div style="${HEAD};font-size:32px;line-height:1.1;letter-spacing:.04em;color:${cols[i%4]};border-bottom:2px solid ${cols[i%4]};padding-bottom:2px">${ESC(g.h)}</div><div style="display:flex;flex-direction:column;gap:10px">${g.items.map(x=>dish(x,cols[i%4])).join("")}</div></div>`;
+  const half=Math.ceil(spec.groups.length/2);
+  const col=gs=>`<div class="fx-panel" style="min-height:0;display:flex;flex-direction:column;justify-content:space-between;gap:16px">${gs.join("")}</div>`;
+  const secs=spec.groups.map(sect);
+  const board=`<div style="position:relative;flex:1;min-width:0;min-height:0;padding:12px;background:linear-gradient(135deg,#8a6a45,#6b4f33);border-radius:6px;box-shadow:0 10px 22px rgba(0,0,0,.45)">
+    <div style="position:relative;height:100%;box-sizing:border-box;background:radial-gradient(ellipse at 30% 20%,#2c3431,${BOARD} 70%);padding:16px 24px 12px;display:flex;flex-direction:column;gap:12px;box-shadow:inset 0 0 30px rgba(0,0,0,.6)">
+      <i aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 80%,rgba(255,255,255,.06),transparent 50%),radial-gradient(ellipse at 20% 60%,rgba(255,255,255,.05),transparent 40%);pointer-events:none"></i>
+      <div style="position:relative;display:flex;justify-content:space-between;align-items:baseline"><span style="${DISP};font-size:38px;line-height:1;color:${CHALK};white-space:nowrap">${ESC(spec.boardHead)}</span><span style="${HAND};font-size:20px;color:${YEL}">${ESC(spec.boardSide)}</span></div>
+      <div class="fx-panel" style="position:relative;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-evenly;gap:8px">${secs.join("")}</div>
+      <div style="position:relative;border-top:2px dashed rgba(243,241,234,.35);padding-top:7px;${HAND};font-size:19px;line-height:1.25;color:${CHALK}"><span style="color:${YEL}">Showtime cue:</span> ${ESC(fmtCue(f))}</div></div></div>`;
+  const ph=(i,h,r)=>fmtStill(spec.stills[i][0],spec.stills[i][1],h,"#fff","#3b2a12","font-family:'Patrick Hand',cursive;font-size:16px",`transform:rotate(${r}deg)`);
+  const route=`<div style="background:#fff;border:3px solid ${BOARD};padding:9px 12px 10px;transform:rotate(-1.5deg);box-shadow:0 6px 12px rgba(0,0,0,.3)"><div style="${TRUCK};font-size:13px;letter-spacing:.06em;color:${ORA}">${ESC(spec.route[0])}</div><div style="${HAND};font-size:19px;line-height:1.3;color:${BOARD};margin-top:3px">${spec.route[1]}</div></div>`;
+  const left=`<div style="flex:none;width:226px;display:flex;flex-direction:column;justify-content:space-between;gap:12px">
+    <div style="text-align:center"><div style="${TRUCK};font-size:46px;line-height:1;color:#fff;text-shadow:3px 3px 0 ${ORA},6px 6px 0 rgba(0,0,0,.25)">${ESC(spec.brand)}</div><div style="${TRUCK};font-size:15px;letter-spacing:.2em;color:#0f5c55;margin-top:4px">${ESC(spec.sub)}</div></div>
+    <div style="align-self:center;background:#fff;padding:6px;box-shadow:0 8px 16px rgba(0,0,0,.35);transform:rotate(-2deg)">${fmtPosterImg(f,poster,170,255)}</div>${route}</div>`;
+  const right=`<div style="flex:none;width:226px;display:flex;flex-direction:column;justify-content:space-between;gap:12px">${ph(0,128,1.5)}${ph(1,128,-1.5)}${ph(2,128,1)}</div>`;
+  return `${fmtBack(poster)}<div class="fx-wall" style="position:relative;height:100%;box-sizing:border-box;background:linear-gradient(160deg,${YEL} 0 38%,${ORA} 38% 41%,#ffe9a8 41% 100%);box-shadow:0 26px 60px rgba(0,0,0,.7);border-radius:10px;display:flex;gap:22px;padding:20px 22px">
+    <i aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:14px;background:${TEAL};border-radius:0 0 10px 10px"></i>${left}${board}${right}</div>`;
+}
+
+/* ---------- Sally's order, on the side: a diner guest check and the trip that started it (When Harry Met Sally) ---------- */
+function fmtCheck(f,spec,menu,poster){
+  const GRN="#2f6b45",PAD="#f2f6ea",INK="#1d2e8f",DARK="#1f2a22",RED="#b8262b",LINE="rgba(47,107,69,.28)";
+  const PRINT="font-family:'Archivo Narrow',sans-serif",HAND="font-family:'Homemade Apple',cursive;font-weight:400",BODY="font-family:'Libre Franklin',sans-serif",DISP="font-family:'DM Serif Display',serif;font-weight:400";
+  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const L=50;
+  const row=x=>{const it=pick(x.k);const mods=(x.mods||[]).map(m=>`<div style="${HAND};font-size:16px;line-height:${L/2}px;color:${INK};padding-left:18px">${ESC(m)}</div>`).join("");
+    return `<div style="display:grid;grid-template-columns:44px minmax(0,1fr) 74px;border-bottom:1px solid ${LINE}"><span style="${HAND};font-size:17px;line-height:${L}px;color:${INK};text-align:center">${ESC(x.q||"4")}</span><div><div style="${HAND};font-size:20px;line-height:${L}px;color:${INK};white-space:nowrap">${ESC(it.label||x.n||x.k)}</div>${mods}<div style="${BODY};font-size:13.5px;line-height:1.3;color:#5a6a5e;padding:0 0 6px 2px;font-style:italic">${ESC(x.note)}</div></div><span style="${HAND};font-size:17px;line-height:${L}px;color:${INK};text-align:right;padding-right:10px">${ESC(x.p)}</span></div>`};
+  const items=spec.groups.flatMap(g=>g.items);
+  const check=`<div class="fx-panel" style="position:relative;flex:1;min-width:0;min-height:0;background:${PAD};box-shadow:0 12px 26px rgba(0,0,0,.4);transform:rotate(-.6deg);display:flex;flex-direction:column;color:${DARK}">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:14px 18px 8px;border-bottom:3px solid ${GRN}"><div><div style="${PRINT};font-weight:700;font-size:28px;line-height:1;letter-spacing:.02em;color:${GRN}">Guest Check</div><div style="${PRINT};font-size:13px;letter-spacing:.12em;color:${GRN};text-transform:uppercase;margin-top:3px">${ESC(spec.place)}</div></div>
+      <div style="display:grid;grid-template-columns:repeat(4,auto);gap:0 12px;${PRINT};font-size:11px;letter-spacing:.1em;color:${GRN};text-transform:uppercase;text-align:center">${spec.fields.map(([a,b])=>`<div style="border:1px solid ${GRN};padding:2px 8px"><div>${ESC(a)}</div><div style="${HAND};font-size:14px;letter-spacing:0;color:${INK};text-transform:none;line-height:1.6">${ESC(b)}</div></div>`).join("")}</div></div>
+    <div style="display:grid;grid-template-columns:44px minmax(0,1fr) 74px;background:${GRN};color:#fff;${PRINT};font-weight:700;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase"><span style="padding:3px 0;text-align:center">Qty</span><span style="padding:3px 2px">Item</span><span style="padding:3px 10px 3px 0;text-align:right">Amount</span></div>
+    <div style="padding:0 0">${items.map(row).join("")}</div>
+    ${FX_SP}
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:18px;padding:8px 18px 14px;border-top:3px solid ${GRN}"><div style="flex:1"><div style="${PRINT};font-weight:700;font-size:11.5px;letter-spacing:.14em;color:${RED};text-transform:uppercase">Showtime cue</div><div style="${HAND};font-size:15px;line-height:1.5;color:${INK}">${ESC(fmtCue(f))}</div></div><div style="flex:none;text-align:right"><div style="${PRINT};font-size:11.5px;letter-spacing:.14em;color:${GRN};text-transform:uppercase">Total</div><div style="${HAND};font-size:22px;color:${INK}">${ESC(spec.total)}</div></div></div>
+    <div style="${PRINT};font-size:11px;letter-spacing:.2em;text-align:center;color:${GRN};text-transform:uppercase;padding:0 0 8px">${ESC(spec.thanks)}</div></div>`;
+  const ph=(i,h,r)=>fmtStill(spec.stills[i][0],spec.stills[i][1],h,"#fff","#efe2c6",BODY+";font-size:12.5px",`transform:rotate(${r}deg)`);
+  const trip=`<div style="background:#fbf3df;border:1px solid #d9c9a4;padding:10px 12px 12px;box-shadow:0 6px 12px rgba(0,0,0,.3);transform:rotate(1.5deg);color:${DARK}">
+    <div style="${PRINT};font-weight:700;font-size:12px;letter-spacing:.16em;color:${RED};text-transform:uppercase">${ESC(spec.trip[0])}</div>
+    <div style="position:relative;height:58px;margin:8px 4px 4px"><i style="position:absolute;left:8px;right:8px;top:24px;border-top:3px dashed ${RED}"></i><span style="position:absolute;left:0;top:16px;width:18px;height:18px;border-radius:50%;background:${DARK}"></span><span style="position:absolute;right:0;top:16px;width:18px;height:18px;border-radius:50%;background:${DARK}"></span><span style="position:absolute;left:0;top:38px;${PRINT};font-weight:700;font-size:13px">${ESC(spec.trip[1])}</span><span style="position:absolute;right:0;top:38px;${PRINT};font-weight:700;font-size:13px">${ESC(spec.trip[2])}</span><span style="position:absolute;left:50%;top:0;transform:translateX(-50%);${BODY};font-style:italic;font-size:12.5px;white-space:nowrap">${ESC(spec.trip[3])}</span></div>
+    <div style="${BODY};font-size:13px;line-height:1.35">${ESC(spec.trip[4])}</div></div>`;
+  const left=`<div style="flex:none;width:236px;display:flex;flex-direction:column;justify-content:space-between;gap:14px">
+    <div style="text-align:center"><div style="${DISP};font-size:30px;line-height:1.05;color:#fff7e6">${ESC(f.title.replace(/\.\.\.$/,"..."))}</div><div style="${BODY};font-style:italic;font-size:14px;color:#e9dcc0;margin-top:3px">${ESC(spec.tag)}</div></div>
+    <div style="align-self:center;background:#fff;padding:6px;box-shadow:0 8px 16px rgba(0,0,0,.45);transform:rotate(-2deg)">${fmtPosterImg(f,poster,180,270)}</div>${trip}</div>`;
+  const right=`<div style="flex:none;width:236px;display:flex;flex-direction:column;justify-content:space-between;gap:12px">${ph(0,138,1.5)}${ph(1,124,-1.5)}${ph(2,124,1)}</div>`;
+  return `${fmtBack(poster)}<div class="fx-wall" data-tile="boards|#8a5a34|#6e4628|30" style="position:relative;height:100%;box-sizing:border-box;background:repeating-linear-gradient(0deg,#6e4628 0 3px,#8a5a34 3px 30px);box-shadow:0 26px 60px rgba(0,0,0,.7);display:flex;gap:24px;padding:20px 22px">${left}${check}${right}</div>`;
 }
