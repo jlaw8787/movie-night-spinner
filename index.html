@@ -433,6 +433,8 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .easel{position:relative;transform-style:preserve-3d;transition:transform .25s ease-out;will-change:transform}
 .preview{position:relative;width:100%;overflow:hidden;border-radius:2px;box-shadow:0 28px 50px -10px rgba(0,0,0,.8),0 0 0 1px rgba(0,0,0,.4)}
 .preview .mcard{position:absolute;left:0;top:0;transform-origin:0 0}
+.fmt-phone{position:relative;z-index:2}
+.fmt-back{align-self:flex-start}
 .glare{position:absolute;inset:0;pointer-events:none;z-index:2;border-radius:2px;opacity:0;transition:opacity .3s;
   background:radial-gradient(circle at var(--gx,30%) var(--gy,20%),rgba(255,255,255,.22),rgba(255,255,255,0) 45%)}
 .theatre:hover .glare{opacity:1}
@@ -453,6 +455,8 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
   #printArea{display:block}
   #printArea .mcard{transform:none!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   #printArea .mcard+.mcard{break-before:page;page-break-before:always}
+  #printArea .mcard.fmt{page:land}
+  @page land{size:A4 landscape;margin:0}
 }
 .overlay{position:fixed;inset:0;background:rgba(10,4,6,.94);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px}
 .overlay img{max-height:78vh;max-width:100%;box-shadow:0 10px 30px #000}
@@ -819,6 +823,49 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .mcard.pp-sheet .pp-title{font-size:38px;margin:4px 0 10px}
 .mcard.pp-sheet .pp-cols{grid-template-columns:minmax(0,1fr) minmax(0,1.75fr);gap:24px}
 .mcard.pp-sheet .pp-method li{margin-bottom:.5em}
+
+/* ===== era formats: landscape A4 spread ===== */
+.mcard.fmt{width:1123px;height:794px;background:#0b1530;padding:26px;box-sizing:border-box;font-size:16px;line-height:1.3}
+.mcard.fmt .fx-back{position:absolute;inset:0;overflow:hidden}
+.mcard.fmt .fx-back img{position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(4px) brightness(.45)}
+.mcard.fmt .fx-sheet{position:relative;height:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));box-shadow:0 26px 60px rgba(0,0,0,.7)}
+.mcard.fmt .fx-fold{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:linear-gradient(90deg,rgba(0,0,0,.2),rgba(255,255,255,.35))}
+.mcard.fmt h2{font-weight:400}
+/* printing at home: no dark poster border, just the menu */
+@media print{.mcard.fmt{background:#fff!important;padding:0!important}.mcard.fmt .fx-back{display:none}.mcard.fmt .fx-sheet,.mcard.fmt .fx-wall{box-shadow:none!important}}
+.mcard.fmt.for-print{background:#fff;padding:0}.mcard.fmt.for-print .fx-back{display:none}.mcard.fmt.for-print .fx-sheet,.mcard.fmt.for-print .fx-wall{box-shadow:none!important}
+
+/* ===== era formats: phone view ===== */
+.fp{background:var(--fp-top);color:var(--fp-ink);border-radius:10px;overflow:hidden;font-family:var(--fp-body);box-shadow:0 20px 40px -12px rgba(0,0,0,.7)}
+.fp-head{display:flex;gap:14px;align-items:center;padding:16px 16px 14px;color:var(--fp-top-ink)}
+.fp-poster{flex:none;width:78px;height:117px;object-fit:cover;border:3px solid var(--fp-top-ink);box-shadow:0 6px 12px rgba(0,0,0,.35)}
+.fp-brand{font-family:var(--fp-disp);font-size:13px;letter-spacing:.06em;color:#fff}
+.fp-title{margin:2px 0 0;font-family:var(--fp-title);font-weight:400;font-size:38px;line-height:.95;color:#fff;text-shadow:3px 3px 0 var(--fp-acc)}
+.fp-tag{margin:6px 0 0;font-size:15px;line-height:1.35;color:#fff;font-style:italic}
+.fp-hint{margin:6px 0 0;font-size:13px;color:var(--fp-top-ink)}
+.fp-tabs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px;padding:0 12px 12px}
+.fp-tab{min-height:44px;font:400 13px var(--fp-disp);letter-spacing:.02em;color:var(--fp-tab);background:transparent;border:2px solid var(--fp-tab);border-radius:6px;cursor:pointer;padding:0 4px}
+.fp-tab[aria-selected="true"]{background:var(--fp-tab);color:var(--fp-top)}
+.fp-tab:focus-visible,.fp-dish:focus-visible,.fp-flip:focus-visible{outline:3px solid var(--fp-acc);outline-offset:2px}
+.fp-body{background:var(--fp-paper);padding:18px 14px 6px;border-radius:14px 14px 0 0}
+.fp-sec{display:flex;flex-direction:column;gap:12px}
+.fp-h{margin:0 0 2px;text-align:center;font:400 20px var(--fp-disp);color:var(--fp-top-ink);background:var(--fp-top);padding:8px 10px;box-shadow:0 0 0 2px var(--fp-paper),0 0 0 4px var(--fp-acc)}
+.fp-dish{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:#fff;border:2px solid rgba(0,0,0,.12);border-radius:8px;padding:14px 14px 12px;cursor:pointer}
+.fp-dish[aria-expanded="true"]{border-color:var(--fp-acc)}
+.fp-row{display:flex;align-items:baseline;gap:8px}
+.fp-name{font:700 21px/1.15 var(--fp-name)}
+.fp-name.up{text-transform:uppercase}
+.fp-dots{flex:1;min-width:10px;border-bottom:2px dotted rgba(0,0,0,.35);transform:translateY(-4px)}
+.fp-price{font:400 19px var(--fp-price);color:var(--fp-acc)}
+.fp-desc{display:block;margin-top:6px;font-size:15px;font-weight:600;color:var(--fp-top)}
+.fp-film{display:block;margin-top:4px;font:400 19px/1.3 var(--fp-note);color:var(--fp-soft)}
+.fp-how{display:block;margin-top:6px;font-size:16px;line-height:1.55;color:var(--fp-ink)}
+.fp-how[hidden],.fp-film[hidden]{display:none}
+.fp-more{display:block;margin-top:8px;font:400 12px var(--fp-disp);color:var(--fp-acc)}
+.fp-cue{background:var(--fp-paper);padding:12px 14px 16px;display:flex;flex-direction:column;gap:4px}
+.fp-cue b{font:400 12px var(--fp-disp);color:var(--fp-acc);letter-spacing:.06em}
+.fp-cue span{font-size:16px;line-height:1.4}
+.fp-flip{display:block;width:100%;min-height:48px;border:0;background:var(--fp-top);color:var(--fp-top-ink);font:400 14px var(--fp-disp);cursor:pointer}
 
 /* ---------- 2026 shell: quiet dark chrome, the film's poster tints the room ---------- */
 body{color:var(--text)}
@@ -1390,6 +1437,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
         <div class="curtain l" aria-hidden="true"></div><div class="curtain r" aria-hidden="true"></div>
         <div class="tease" aria-hidden="true" id="tease">Setting the table</div>
         <div class="easel" id="easel"><div class="preview" id="preview"></div><div class="glare" aria-hidden="true"></div></div>
+        <div class="fmt-phone" id="fmtPhone" hidden></div>
       </div>
       <div class="actions">
         <button class="btn primary" id="pdf" type="button">Save PDF (menu + prep)</button>
@@ -1406,6 +1454,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
           </div>
         </details>
       </div>
+      <button class="btn fmt-back" id="fmtBack" type="button" hidden>Back to the phone menu</button>
       <div class="status" id="status" aria-live="polite"></div>
       <div class="where" id="whereWheel"></div>
     </section>
@@ -2030,18 +2079,165 @@ function fitPrep(el){
   let fs=16;cols.style.fontSize=fs+"px";
   while(inner.scrollHeight>inner.clientHeight+1&&fs>9.5){fs-=0.5;cols.style.fontSize=fs+"px"}
 }
+/* ================= ERA FORMATS: printed menus from the film's own world =================
+   A film listed in FMT_FILMS gets its own landscape A4 menu (trifold or bifold look),
+   plus a phone view with big type. Every other film keeps the lobby card until its format is signed off. */
+const FMT_FONTS={
+  market:"family=Anton&family=Mr+Dafoe&family=Permanent+Marker&family=Caveat+Brush&family=Barlow:wght@500;600"
+};
+const FMT_FAMS={market:["Anton","Mr Dafoe","Permanent Marker","Caveat Brush","Barlow"]};
+
+/* phone palette per format */
+const FMT_PHONE={
+  market:{top:"#c8202a",topInk:"#ffd03a",paper:"#f1e6cf",ink:"#151515",soft:"#3d3a35",accent:"#1e3c8c",tab:"#ffd03a",
+    disp:"'Anton',sans-serif",name:"'Anton',sans-serif",body:"'Barlow',sans-serif",price:"'Anton',sans-serif",title:"'Mr Dafoe',cursive",note:"'Caveat Brush',cursive",upper:true}
+};
+
+const FMT_FILMS={
+  "Friday (1995)":{fmt:"market",
+    sign:["Off Normandie","126th St. Market","Open 7 days"],
+    sub:"Porch menu &nbsp;·&nbsp; Serves four &nbsp;·&nbsp; Summer 1995",
+    tag:"It's Friday. You ain't got no job,<br>and you ain't got nothing to do.<br>So you getting fed.",
+    services:"Ice &nbsp;·&nbsp; Snacks &nbsp;·&nbsp; Money orders &nbsp;·&nbsp; Lotto",
+    window:["No credit.","Pay what you owe."],
+    colA:[
+      {h:"Sandwiches",c:"blue",items:[
+        {k:"Peanut butter AND jelly",note:"Never two things that match. Now they do.",p:"1.50"},
+        {k:"Ham AND burger sliders",note:"Ham, no burger. Fixed.",p:"2.99"}]},
+      {h:"Off the Grill",c:"red",items:[
+        {k:"Porch day barbecue plate",n:"Porch day BBQ plate",note:"Drumsticks, corn, potato salad. Eat it on the steps.",p:"4.99",burst:["$4.99","Big plate","#b6ff3b",-10]},
+        {k:"Counter pineapple spears",n:"Pineapple spears",note:"Off the kitchen counter, grill-charred.",p:"1.00"}]}],
+    colB:[
+      {h:"From the Truck",c:"blue",items:[
+        {k:"Big Worm's ice cream truck cones",n:"Big Worm's cones",note:"Dipped, crunchy, rolling down the street.",p:"1.25"}]},
+      {h:"Cold Drinks",c:"red",items:[
+        {k:"Red drink, with sugar this time",n:"Red drink",note:"With sugar this time. Big cups, lots of ice.",p:"0.75",burst:["75¢","With sugar!","#ff6ec7",9]}]}]}
+};
+const fmtSpec=f=>FMT_FILMS[f.id]||null;
+
+/* the dishes, in menu order, with the 4-person method and shopping from the recipe file when there is one */
+function fmtMenu(f,spec){
+  const exact=exactMenu(f),pool={};
+  for(const k of ["S","M","W","K"])for(const it of f[k]||[])pool[it[0]]=toItem(it);
+  if(exact)for(const k of ["s","m","w","d"])for(const it of exact[k]||[])pool[it.n]=it;
+  const groups=[...spec.colA,...spec.colB];
+  const all=groups.flatMap(g=>g.items.map(x=>{const b=pool[x.k]||{n:x.k,note:x.note,how:"",shop:[]};return Object.assign({},b,{label:x.n||x.k,desc:x.d||"",film:x.note,price:x.p,special:x.special})}));
+  const byCourse={s:[],m:[],w:[],d:[]};
+  for(const it of all){const c=(f.S||[]).some(d=>d[0]===it.n)?"s":(f.M||[]).some(d=>d[0]===it.n)?"m":(f.W||[]).some(d=>d[0]===it.n)?"w":"d";byCourse[c].push(it)}
+  return Object.assign(byCourse,{all,groups,fmt:true});
+}
+
+/* ---------- the painted wall of a 90s South Central corner market (Friday) ---------- */
+function fmtStar(text,sub,bg,rot,w){
+  const n=14,pts=[];for(let i=0;i<n*2;i++){const r=i%2?39:50,a=Math.PI*i/n-Math.PI/2;pts.push(`${(50+r*Math.cos(a)).toFixed(1)}% ${(50+r*Math.sin(a)).toFixed(1)}%`)}
+  return `<div style="position:relative;width:${w}px;height:${w}px;transform:rotate(${rot}deg);filter:drop-shadow(2px 4px 3px rgba(0,0,0,.3))"><div class="fx-star-bg" data-bg="${bg}" style="position:absolute;inset:0;background:${bg};clip-path:polygon(${pts.join(",")})"></div><div style="position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-family:'Permanent Marker',cursive;color:#151515;line-height:1"><div><div style="font-size:${Math.round(w*.24)}px">${ESC(text)}</div><div style="font-size:${Math.round(w*.105)}px;margin-top:3px;text-transform:uppercase">${ESC(sub)}</div></div></div><span style="position:absolute;left:50%;top:-6px;width:42px;height:14px;margin-left:-21px;background:rgba(255,255,255,.55);transform:rotate(-6deg)"></span></div>`;
+}
+/* the export tool can't draw clip-path shapes, so each star is swapped for a drawn picture of itself */
+function fmtStarsPNG(root){
+  if(typeof document==="undefined"||!document.createElement)return;
+  root.querySelectorAll(".fx-star-bg").forEach(el=>{
+    try{const S=240,c=document.createElement("canvas");c.width=c.height=S;const x=c.getContext("2d");x.fillStyle=el.dataset.bg;x.beginPath();
+      for(let i=0;i<28;i++){const r=(i%2?.39:.5)*S,a=Math.PI*i/14-Math.PI/2;x.lineTo(S/2+r*Math.cos(a),S/2+r*Math.sin(a))}
+      x.closePath();x.fill();el.style.clipPath="none";el.style.background=`url("${c.toDataURL("image/png")}") center/100% 100% no-repeat`}catch(e){}
+  });
+}
+function fmtMarket(f,spec,menu,poster){
+  const RED="#c8202a",BLUE="#1e3c8c",YEL="#ffd03a",INK="#151515",SHADOW="#8b8478";
+  const PAINT="font-family:'Anton',sans-serif;font-weight:400",SCRIPT="font-family:'Mr Dafoe',cursive;font-weight:400",MARK="font-family:'Permanent Marker',cursive;font-weight:400",HAND="font-family:'Caveat Brush',cursive;font-weight:400";
+  const STUCCO="background-color:#f1e6cf;background-image:radial-gradient(rgba(120,100,70,.10) 1px,transparent 1.6px),radial-gradient(rgba(255,255,255,.5) 1px,transparent 1.8px),radial-gradient(ellipse at 20% 30%,rgba(160,130,90,.10),transparent 60%),radial-gradient(ellipse at 80% 80%,rgba(160,130,90,.12),transparent 55%);background-size:7px 7px,11px 11px,100% 100%,100% 100%;background-position:0 0,3px 5px,0 0,0 0";
+  const col=c=>c==="red"?RED:BLUE;
+  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const head=(t,c)=>`<div style="${PAINT};font-size:30px;line-height:1;letter-spacing:.03em;color:${c};text-shadow:3px 3px 0 ${SHADOW};transform:rotate(-1deg);white-space:nowrap;text-transform:uppercase">${ESC(t)}</div>`;
+  const name=t=>`<span style="${PAINT};font-size:25px;line-height:1.05;color:${INK};letter-spacing:.02em;text-transform:uppercase;white-space:nowrap">${ESC(t)}</span><span style="flex:1;border-bottom:3px dotted rgba(21,21,21,.45);transform:translateY(-6px);min-width:10px"></span>`;
+  const note=t=>`<div style="${HAND};font-size:20px;line-height:1.15;color:#3d3a35;margin-top:2px">${ESC(t)}</div>`;
+  const item=x=>{const it=pick(x.k),lab=it.label||x.n||x.k;
+    if(x.burst)return `<div style="position:relative;padding-right:96px"><div style="display:flex;align-items:baseline;gap:10px">${name(lab)}</div>${note(x.note)}<div style="position:absolute;right:-8px;top:-12px">${fmtStar(x.burst[0],x.burst[1],x.burst[2],x.burst[3],98)}</div></div>`;
+    return `<div><div style="display:flex;align-items:baseline;gap:10px">${name(lab)}<span style="${PAINT};font-size:27px;color:${RED};text-shadow:2px 2px 0 ${SHADOW}">${ESC(x.p)}</span></div>${note(x.note)}</div>`};
+  const SP=`<div class="fx-sp" aria-hidden="true" style="flex:1 1 0;min-height:6px"></div>`;
+  const sect=g=>`<div style="display:flex;flex-direction:column;gap:12px">${head(g.h,col(g.c))}${g.items.map(item).join("")}</div>`;
+  const tape=(pos,t,r)=>`<span aria-hidden="true" style="position:absolute;${pos};top:${t}px;width:54px;height:16px;background:rgba(255,250,235,.7);box-shadow:0 1px 2px rgba(0,0,0,.15);transform:rotate(${r}deg)"></span>`;
+  const notice=`<div style="position:relative;background:#fffef8;padding:12px 18px;transform:rotate(1.2deg);box-shadow:0 4px 8px rgba(0,0,0,.2);border:1px solid #e3ddcc">${tape("left:14px",-8,-8)}${tape("right:14px",-8,7)}<div style="${MARK};font-size:18px;color:${RED}">Showtime cue</div><div style="${MARK};font-size:20px;line-height:1.25;color:${INK};margin-top:4px">${ESC(fmtCue(f))}</div></div>`;
+  const services=`<div style="${PAINT};font-size:17px;letter-spacing:.05em;color:${BLUE};text-shadow:2px 2px 0 ${SHADOW};white-space:nowrap;border-top:3px solid ${BLUE};padding-top:8px;text-transform:uppercase">${spec.services}</div>`;
+  const colA=`<div class="fx-panel" style="min-height:0;display:flex;flex-direction:column">${[...spec.colA.map(sect),services].join(SP)}</div>`;
+  const colB=`<div class="fx-panel" style="min-height:0;display:flex;flex-direction:column">${[...spec.colB.map(sect),notice].join(SP)}</div>`;
+  const win=`<div style="position:relative;flex:none;width:330px;align-self:stretch;padding:14px;background:#2b2b2b;box-shadow:inset 0 0 0 3px #111,0 10px 18px rgba(0,0,0,.3)">
+    <div style="position:relative;height:100%;overflow:hidden;background:linear-gradient(160deg,#20304f,#0e1628);display:grid;place-items:center">
+      <div style="position:relative;width:262px;height:393px;background:#fff;padding:6px;box-shadow:0 6px 14px rgba(0,0,0,.45);transform:rotate(-1.5deg)">${poster?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w500${ESC(poster)}" alt="${ESC(f.title)} (${ESC(f.year)}) film poster" style="display:block;width:100%;height:100%;object-fit:cover">`:""}${tape("left:-14px",-6,-35)}${tape("right:-14px",-6,35)}${tape("left:-14px",386,35)}${tape("right:-14px",386,-35)}</div>
+      <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.2) 0 12%,rgba(255,255,255,0) 24%,rgba(255,255,255,0) 62%,rgba(255,255,255,.1) 70%,rgba(255,255,255,0) 78%);pointer-events:none"></div></div>
+    <div style="position:absolute;left:18px;top:26px;z-index:3;padding:6px 12px 7px;border:3px solid #ff5a6a;border-radius:22px;background:rgba(20,0,10,.75);box-shadow:0 0 10px #ff2d55,inset 0 0 8px #ff2d55"><span style="${PAINT};font-size:26px;letter-spacing:.12em;color:#ffe1e6;text-shadow:0 0 4px #ff2d55,0 0 10px #ff2d55,0 0 18px #ff2d55">OPEN</span></div>
+    <div style="position:absolute;right:18px;bottom:22px;background:#fffef8;padding:9px 14px 10px;transform:rotate(-4deg);box-shadow:0 4px 8px rgba(0,0,0,.25);border:1px solid #e3ddcc;z-index:3">${tape("left:50%;margin-left:-27px",-9,3)}<div style="${MARK};font-size:21px;line-height:1.05;color:${INK};text-transform:uppercase">${ESC(spec.window[0])}</div><div style="${MARK};font-size:15px;color:${RED}">${ESC(spec.window[1])}</div></div></div>`;
+  const s=spec.sign;
+  const sign=`<div style="position:relative;background:${RED};padding:8px 20px 9px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 5px 0 rgba(0,0,0,.18)"><span style="${PAINT};font-size:16px;letter-spacing:.08em;color:#fff;text-transform:uppercase">${ESC(s[0])}</span><span style="${PAINT};font-size:40px;letter-spacing:.06em;color:${YEL};text-shadow:3px 3px 0 #6e0f14;text-transform:uppercase">${ESC(s[1])}</span><span style="${PAINT};font-size:16px;letter-spacing:.08em;color:#fff;text-transform:uppercase">${ESC(s[2])}</span></div>`;
+  const title=`<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px"><div><h2 style="margin:0;${SCRIPT};font-size:${f.title.length>10?72:104}px;line-height:.8;color:${BLUE};text-shadow:4px 4px 0 ${SHADOW};transform:rotate(-3deg);transform-origin:left bottom">${ESC(f.title)}</h2><div style="${PAINT};font-size:19px;letter-spacing:.08em;color:${INK};margin-top:18px;text-transform:uppercase">${spec.sub}</div></div><div style="${HAND};font-size:20px;line-height:1.12;color:${RED};text-align:right;transform:rotate(2deg);padding-bottom:6px;white-space:nowrap">${spec.tag}</div></div>`;
+  return `<div class="fx-back" aria-hidden="true">${poster?`<img crossorigin="anonymous" alt="" src="${TMDB_IMG}w342${ESC(poster)}">`:""}</div>
+  <div class="fx-wall" style="position:relative;height:100%;box-sizing:border-box;${STUCCO};display:flex;flex-direction:column;box-shadow:0 26px 60px rgba(0,0,0,.7);color:${INK}">${sign}
+    <div style="flex:1;min-height:0;display:flex;gap:26px;padding:22px 26px 22px 22px">${win}
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:18px">${title}<div style="flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);gap:22px">${colA}${colB}</div></div></div>
+    <div aria-hidden="true" style="height:16px;background:linear-gradient(#9a9284,#7d766a);box-shadow:inset 0 3px 0 rgba(255,255,255,.25)"></div></div>`;
+}
+
+const fmtCue=f=>(movieEdition(f)||{}).cue||f.P;
+const FMT_RENDER={market:fmtMarket};
+function fmtHTML(f,spec,menu){return FMT_RENDER[spec.fmt](f,spec,menu,lobbyPoster(f))}
+
+/* phone view: same menu, big type, one section at a time, tap a dish for the method */
+function fmtPhoneHTML(f,spec,menu){
+  const P=FMT_PHONE[spec.fmt],poster=lobbyPoster(f);
+  const groups=menu.groups;
+  return `<div class="fp" style="--fp-top:${P.top};--fp-top-ink:${P.topInk};--fp-paper:${P.paper};--fp-ink:${P.ink};--fp-soft:${P.soft};--fp-acc:${P.accent};--fp-tab:${P.tab};--fp-disp:${P.disp};--fp-name:${P.name};--fp-body:${P.body};--fp-price:${P.price};--fp-title:${P.title};--fp-note:${P.note||P.body}">
+    <header class="fp-head">${poster?`<img class="fp-poster" crossorigin="anonymous" src="${TMDB_IMG}w185${ESC(poster)}" alt="">`:""}<div><div class="fp-brand">${ESC(spec.sign?spec.sign[1]:spec.brand||"")}</div><h2 class="fp-title">${ESC(f.title)}</h2><p class="fp-tag">${spec.tag||ESC(f.T)}</p><p class="fp-hint">Serves four. Tap a dish for the method.</p></div></header>
+    <div class="fp-tabs" role="tablist" aria-label="Menu sections">${groups.map((g,i)=>`<button type="button" role="tab" class="fp-tab" aria-selected="${i===0}" data-g="${i}">${ESC(g.h.replace(/^(Off|From) the /,""))}</button>`).join("")}</div>
+    <div class="fp-body">${groups.map((g,i)=>`<section class="fp-sec" data-g="${i}" ${i?"hidden":""}><h3 class="fp-h">${ESC(g.h)}</h3>${g.items.map(x=>{const it=menu.all.find(y=>y.label===(x.n||x.k))||{};return `<button type="button" class="fp-dish" aria-expanded="false"><span class="fp-row"><span class="fp-name${P.upper?" up":""}">${ESC(it.label)}</span><span class="fp-dots"></span><span class="fp-price">${ESC(x.burst?x.burst[0]:(it.price||""))}</span></span>${it.desc?`<span class="fp-desc">${ESC(it.desc)}</span>`:""}<span class="fp-film">${ESC(it.film||"")}</span><span class="fp-how" hidden>${ESC(it.how||"")}</span><span class="fp-more">How to make it</span></button>`}).join("")}</section>`).join("")}</div>
+    <div class="fp-cue"><b>Showtime cue</b><span>${ESC(fmtCue(f))}</span></div>
+    <button type="button" class="fp-flip">See the printed menu</button>
+  </div>`;
+}
+function fmtPhoneWire(root){
+  root.querySelectorAll(".fp-tab").forEach(t=>t.addEventListener("click",()=>{
+    root.querySelectorAll(".fp-tab").forEach(x=>x.setAttribute("aria-selected",x===t));
+    root.querySelectorAll(".fp-sec").forEach(s=>s.hidden=s.dataset.g!==t.dataset.g);
+  }));
+  root.querySelectorAll(".fp-dish").forEach(b=>b.addEventListener("click",()=>{
+    const open=b.getAttribute("aria-expanded")!=="true";b.setAttribute("aria-expanded",open);
+    b.querySelector(".fp-how").hidden=!open;b.querySelector(".fp-film").hidden=open;
+    b.querySelector(".fp-more").textContent=open?"Back to the menu":"How to make it";
+  }));
+}
+function fmtFontsReady(spec){
+  const id="fmtfont-"+spec.fmt;
+  if(typeof document!=="undefined"&&document.head&&!document.getElementById(id)){
+    const l=document.createElement("link");l.id=id;l.rel="stylesheet";l.href=`https://fonts.googleapis.com/css2?${FMT_FONTS[spec.fmt]}&display=swap`;document.head.appendChild(l);
+    return new Promise(r=>{l.onload=r;l.onerror=r;setTimeout(r,3500)}).then(()=>Promise.race([Promise.all(FMT_FAMS[spec.fmt].map(n=>document.fonts.load(`20px "${n}"`,"Aa"))),new Promise(r=>setTimeout(r,3500))])).catch(()=>{});
+  }
+  return Promise.resolve();
+}
 
 document.documentElement.style.setProperty("--grain",`url("${GRAIN}")`);
 
 const preview=$("preview");
 const card=document.createElement("div");card.className="mcard";preview.appendChild(card);
 const prep=document.createElement("div");prep.className="mcard";prep.hidden=true;preview.appendChild(prep);
-function scalePreview(){const k=preview.clientWidth/794;card.style.transform=`scale(${k})`;prep.style.transform=`scale(${k})`;preview.style.height=(1123*k)+"px"}
+function scalePreview(){const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),kc=pw/(land?1123:794),kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform=`scale(${kp})`;preview.style.height=(tab==="prep"?1123*kp:(land?794:1123)*kc)+"px"}
 let tab="menu";
-function setTab(t){tab=t;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current)fitPrep(prep)}
+function setTab(t){tab=t;if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current)fitPrep(prep);scalePreview();applyPhone()}
 $("tabMenu").addEventListener("click",()=>setTab("menu"));
 $("tabPrep").addEventListener("click",()=>setTab("prep"));
-window.addEventListener("resize",scalePreview);
+window.addEventListener("resize",()=>{scalePreview();applyPhone()});
+/* era formats: phones get the big-type menu, the printed spread is one tap away */
+const fmtPhone=$("fmtPhone");let phoneOn=true;
+const narrow=()=>matchMedia("(max-width:700px)").matches;
+function applyPhone(){
+  const has=!!fmtPhone.innerHTML,on=has&&narrow()&&phoneOn&&tab==="menu";
+  fmtPhone.hidden=!on;$("easel").hidden=on;$("fmtBack").hidden=!(has&&narrow()&&!phoneOn&&tab==="menu");
+  if(!on)scalePreview();
+}
+function phoneView(f,spec,menu){
+  if(!f){fmtPhone.innerHTML="";applyPhone();return}
+  fmtPhone.innerHTML=fmtPhoneHTML(f,spec,menu);fmtPhoneWire(fmtPhone);
+  fmtPhone.querySelector(".fp-flip").addEventListener("click",()=>{phoneOn=false;applyPhone();$("easel").scrollIntoView({block:"nearest"})});
+  applyPhone();
+}
+$("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
 
 let renderId=0;
 async function show(f,preferSig){
@@ -2060,6 +2256,20 @@ async function show(f,preferSig){
   $("status").textContent="";
   await ensureFonts(STY[f.theme]);
   if(id!==renderId)return;
+  const spec=fmtSpec(f);
+  if(spec){
+    await fmtFontsReady(spec);if(id!==renderId)return;
+    menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;$("reroll").hidden=true;
+    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=fmtHTML(f,spec,menu);fmtStarsPNG(card);
+    try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
+    if(id!==renderId)return;
+    styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);
+    phoneView(f,spec,menu);scalePreview();
+    const refitP=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
+    refitP();await document.fonts.ready;refitP();
+    return;
+  }
+  phoneView(null);
   styleCard(card,f);card.style.transform="";
   const lobby=lobbyPoster(f);
   const tryArt=async(mode,cls,sel)=>{
@@ -2646,10 +2856,10 @@ function noiseTile(){
   for(let i=0;i<d.data.length;i+=4){const v=Math.random()*255|0;d.data[i]=d.data[i+1]=d.data[i+2]=v;d.data[i+3]=Math.random()*26|0}
   x.putImageData(d,0,0);return _noise=c.toDataURL("image/png");
 }
-async function renderCanvas(src){
-  const stage=document.createElement("div");
-  stage.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px;";
-  const clone=src.cloneNode(true);clone.style.transform="none";clone.hidden=false;
+async function renderCanvas(src,forPrint){
+  const stage=document.createElement("div"),land=src.classList.contains("fmt");
+  stage.style.cssText=`position:fixed;left:-20000px;top:0;width:${land?1123:794}px;height:${land?794:1123}px;`;
+  const clone=src.cloneNode(true);clone.style.transform="none";clone.hidden=false;if(forPrint&&land)clone.classList.add("for-print");
   stage.appendChild(clone);document.body.appendChild(stage);
   try{
     await document.fonts.ready;
@@ -2709,15 +2919,16 @@ async function exportMenu(kind){
   const btns=[$("pdf"),$("png")];btns.forEach(b=>b.disabled=true);
   $("status").textContent=kind==="pdf"?"Building your A4 PDF...":"Building your image...";
   try{
-    const canvas=await renderCanvas(kind==="pdf"||tab==="menu"?card:prep);
+    const canvas=await renderCanvas(kind==="pdf"||tab==="menu"?card:prep,kind==="pdf");
+    const land=(kind==="pdf"||tab==="menu")&&card.classList.contains("fmt");
     const name=`${slug(current.title)}-${current.year}-${kind==="png"&&tab==="prep"?"prep-sheet":"menu"}`;
     let data,filename;
     if(kind==="pdf"){
       const {jsPDF}=window.jspdf;
-      const pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});
-      pdf.addImage(canvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297);
+      const pdf=new jsPDF({unit:"mm",format:"a4",orientation:land?"landscape":"portrait"});
+      pdf.addImage(canvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,land?297:210,land?210:297);
       const prepCanvas=await renderCanvas(prep);
-      pdf.addPage();pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297);
+      pdf.addPage("a4","portrait");pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297);
       data=pdf.output("blob");filename=name+".pdf";
     }else{
       data=await new Promise(r=>canvas.toBlob(r,"image/jpeg",0.92));filename=name+".jpg";
