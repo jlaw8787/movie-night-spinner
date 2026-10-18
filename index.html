@@ -1318,6 +1318,11 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 .hirecase img{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
 .hc-label .fit-t{font:600 10px "Courier New",monospace;color:#1a1a1a}
 .hc-label small{font-family:"Courier New",monospace;color:#c8102e;font-weight:700}
+.slip .peek{display:block;margin:8px auto 0;font:400 14px var(--f-board);letter-spacing:.03em;color:#14204f;background:#ffd23f;border:2px solid #14204f;border-radius:8px;padding:9px 14px;cursor:pointer;min-height:44px}
+.slip .peekbox{margin-top:10px;border:2px dashed #b9b4a6;padding:10px 12px;background:#fff}
+.slip .peekbox ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.slip .peekbox li b{display:block;font-family:var(--f-body);font-size:15px;color:#14204f}
+.slip .peekbox li span{font-size:12.5px;color:#555}
 .slip .hc-k{margin:6px 0 4px;text-align:center;font-size:11.5px;color:#555}
 .slip .hirecase{margin-bottom:0}
 .counter{background:linear-gradient(rgba(8,10,30,.72),rgba(8,10,30,.86)),url("assets/hero/counter.jpg") center/cover #0b0f2a}
@@ -2864,7 +2869,7 @@ function openSlip(f,go){setTimeout(()=>sfx.print(),350);
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
   const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
-  o.innerHTML=`<div class="slip"><h3>Spinner Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, overnight"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl><div class="hirecase" aria-hidden="true"><img src="assets/hero/hirecase.webp" alt=""><span class="hc-label fit" style="left:57.17%;top:9.83%;width:31.86%;height:8.38%"><span class="fit-t">SV ${String(hashN(f.id)%9000+1000)}</span><small>Spinner Video</small></span></div><p class="hc-k">Box swapped for a hire case</p><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
+  o.innerHTML=`<div class="slip"><h3>Spinner Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, overnight"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl><div class="hirecase" aria-hidden="true"><img src="assets/hero/hirecase.webp" alt=""><span class="hc-label fit" style="left:57.17%;top:9.83%;width:31.86%;height:8.38%"><span class="fit-t">SV ${String(hashN(f.id)%9000+1000)}</span><small>Spinner Video</small></span></div><p class="hc-k">Box swapped for a hire case</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
   const last=document.activeElement;
   const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus&&last.focus()};
   const esc=e=>{if(e.key==="Escape")close()};
@@ -2872,6 +2877,11 @@ function openSlip(f,go){setTimeout(()=>sfx.print(),350);
     if(e.target===o)return close();
     const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
     if(a==="back")return close();
+    if(a==="peek"){const box=o.querySelector(".peekbox"),btn=e.target,open=box.hidden;
+      if(open&&!box.innerHTML){const sp=typeof fmtSpec==="function"&&fmtSpec(f);const m=sp?fmtMenu(f,sp):makeMenu(f,true);
+        const list=sp?m.all:[...m.s,...m.m,...m.w,...m.d];
+        box.innerHTML=`<h4>Tonight's menu</h4><ol>${list.map(it=>`<li><b>${ESC(it.label||it.n)}</b><span>${ESC(it.film||it.note||"")}</span></li>`).join("")}</ol><p class="small">Serves four. Full menu, method and shopping list once you roll the film.</p>`}
+      box.hidden=!open;btn.setAttribute("aria-expanded",open);btn.textContent=open?"Hide the menu":"Preview the menu";return}
     counter[f.id]=[...o.querySelectorAll(".lollies input:checked")].map(i=>i.value);
     if(!counter[f.id].length)delete counter[f.id];
     try{localStorage.setItem("mns-counter",JSON.stringify(counter))}catch(err){}
