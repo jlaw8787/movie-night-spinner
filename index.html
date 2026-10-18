@@ -2101,11 +2101,12 @@ const FMT_FONTS={
   market:"family=Anton&family=Mr+Dafoe&family=Permanent+Marker&family=Caveat+Brush&family=Barlow:wght@500;600",
   takeaway:"family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,600..900,100,0;1,9..144,600..900,100,0&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Serif+TC:wght@900",
   diner:"family=Yellowtail&family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400&family=Kalam:wght@400",
+  lanes:"family=Righteous&family=Reenie+Beanie&family=Barlow+Condensed:wght@500;700&family=Barlow:ital,wght@0,500;0,600;1,500",
   slims:"family=Sacramento&family=Archivo+Black&family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400",
   noodle:"family=LXGW+WenKai+TC:wght@400;700&family=Marcellus+SC&family=Alegreya:ital,wght@0,400;0,700;1,400",
   casefile:"family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Big+Shoulders+Display:wght@700;900&family=Big+Shoulders+Stencil+Display:wght@800"
 };
-const FMT_FAMS={market:["Anton","Mr Dafoe","Permanent Marker","Caveat Brush","Barlow"],takeaway:["Fraunces","Libre Caslon Text","Noto Serif TC"],diner:["Yellowtail","Alfa Slab One","Arvo","Kalam"],slims:["Sacramento","Archivo Black","Josefin Sans"],noodle:["LXGW WenKai TC","Marcellus SC","Alegreya"],casefile:["Special Elite","Courier Prime","Big Shoulders Display","Big Shoulders Stencil Display"]};
+const FMT_FAMS={market:["Anton","Mr Dafoe","Permanent Marker","Caveat Brush","Barlow"],takeaway:["Fraunces","Libre Caslon Text","Noto Serif TC"],diner:["Yellowtail","Alfa Slab One","Arvo","Kalam"],lanes:["Righteous","Reenie Beanie","Barlow Condensed","Barlow"],slims:["Sacramento","Archivo Black","Josefin Sans"],noodle:["LXGW WenKai TC","Marcellus SC","Alegreya"],casefile:["Special Elite","Courier Prime","Big Shoulders Display","Big Shoulders Stencil Display"]};
 
 /* phone palette per format */
 const FMT_PHONE={
@@ -2115,6 +2116,8 @@ const FMT_PHONE={
     disp:"'Alfa Slab One',serif",name:"'Arvo',serif",body:"'Arvo',serif",price:"'Alfa Slab One',serif",title:"'Yellowtail',cursive",note:"'Arvo',serif"},
   casefile:{top:"#2a2018",topInk:"#d9b77a",paper:"#f6f1e3",ink:"#1c1a17",soft:"#4a4438",accent:"#9e1b1b",tab:"#d9b77a",
     disp:"'Big Shoulders Display',sans-serif",name:"'Courier Prime',monospace",body:"'Courier Prime',monospace",price:"'Big Shoulders Display',sans-serif",title:"'Special Elite',monospace",note:"'Courier Prime',monospace",upper:true},
+  lanes:{top:"#1c2240",topInk:"#f08a3c",paper:"#f4f7ee",ink:"#1d2a22",soft:"#4f5c52",accent:"#2f7a52",tab:"#f08a3c",
+    disp:"'Righteous',sans-serif",name:"'Barlow Condensed',sans-serif",body:"'Barlow',sans-serif",price:"'Barlow Condensed',sans-serif",title:"'Righteous',sans-serif",note:"'Barlow',sans-serif",upper:true},
   slims:{top:"#151515",topInk:"#ff4f86",paper:"#fff4dc",ink:"#151515",soft:"#4d4a45",accent:"#e8336d",tab:"#ff4f86",
     disp:"'Archivo Black',sans-serif",name:"'Josefin Sans',sans-serif",body:"'Josefin Sans',sans-serif",price:"'Archivo Black',sans-serif",title:"'Sacramento',cursive",note:"'Josefin Sans',sans-serif",upper:true},
   noodle:{top:"#3b2416",topInk:"#e8c46a",paper:"#f4ecd8",ink:"#2a1a10",soft:"#5c4632",accent:"#a8322a",tab:"#e8c46a",
@@ -2124,6 +2127,20 @@ const FMT_PHONE={
 };
 
 const FMT_FILMS={
+  "The Big Lebowski (1998)":{fmt:"lanes",brand:"Hollywood Star Lanes",place:"Hollywood Star Lanes",address:"5227 Santa Monica Blvd · 32 lanes",
+    team:"Dude, Walter, Donny",night:"League night",tag:"The Dude abides.<br>So does the White Russian.",
+    rules:"This is bowling.<br>There are rules.<br>Shoes required",rugLine:"It really tied the room together",
+    groups:[
+      {h:"Snack bar",items:[
+        {k:"Bowling alley nachos",n:"Alley nachos",note:"League night with Walter and Donny",p:"2.95"},
+        {k:"Rug crackers",note:"It really tied the room together",p:"1.95"},
+        {k:"Half and half dip",note:"The Dude buys it in his dressing gown",p:"2.50"}]},
+      {h:"Grill",items:[
+        {k:"Bowling alley burgers",n:"Alley burgers",note:"Walter, Donny and the Dude between frames",p:"3.95",mark:1},
+        {k:"Drive-thru burger in the car",n:"Drive-thru burger",note:"Eaten in the Dude's beat-up car",p:"2.49"}]},
+      {h:"Lounge",items:[
+        {k:"Milk and cookies",note:"For the half and half",p:"1.50"},
+        {k:"White Russian",note:"The Dude's drink, every scene",p:"3.50"}]}]},
   "Pulp Fiction (1994)":{fmt:"slims",brand:"Jack Rabbit Slim's",place:"Jack Rabbit Slim's",
     sub:"Hollywood &nbsp;·&nbsp; Car booths &nbsp;·&nbsp; Twist contest tonight",
     under:"Now playing<br>in every car booth",tag:"Five dollar shakes. Worth every cent.",
@@ -2227,7 +2244,7 @@ function fmtMenu(f,spec){
   const exact=exactMenu(f),pool={};
   for(const k of ["S","M","W","K"])for(const it of f[k]||[])pool[it[0]]=toItem(it);
   if(exact)for(const k of ["s","m","w","d"])for(const it of exact[k]||[])pool[it.n]=it;
-  const groups=[...spec.colA,...spec.colB];
+  const groups=spec.groups||[...spec.colA,...spec.colB];
   const all=groups.flatMap(g=>g.items.map(x=>{const b=pool[x.k]||{n:x.k,note:x.note,how:x.how||"",shop:x.shop||[]};return Object.assign({},b,{label:x.n||x.k,desc:x.d||"",film:x.note,price:x.p,special:x.special})}));
   const byCourse={s:[],m:[],w:[],d:[]};
   for(const it of all){const c=(f.S||[]).some(d=>d[0]===it.n)?"s":(f.M||[]).some(d=>d[0]===it.n)?"m":(f.W||[]).some(d=>d[0]===it.n)?"w":"d";byCourse[c].push(it)}
@@ -2286,7 +2303,7 @@ function fmtMarket(f,spec,menu,poster){
 }
 
 const fmtCue=f=>(movieEdition(f)||{}).cue||f.P;
-const FMT_RENDER={market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a),noodle:(...a)=>fmtNoodle(...a),slims:(...a)=>fmtSlims(...a)};
+const FMT_RENDER={market:fmtMarket,takeaway:(...a)=>fmtTakeaway(...a),diner:(...a)=>fmtDiner(...a),casefile:(...a)=>fmtCase(...a),noodle:(...a)=>fmtNoodle(...a),slims:(...a)=>fmtSlims(...a),lanes:(...a)=>fmtLanes(...a)};
 function fmtHTML(f,spec,menu){return FMT_RENDER[spec.fmt](f,spec,menu,lobbyPoster(f))}
 
 /* phone view: same menu, big type, one section at a time, tap a dish for the method */
@@ -2326,6 +2343,7 @@ function fmtFontsReady(spec){
 const FMT_TILES={
   fret:(x,S,c)=>{x.strokeStyle=c.fg;x.lineWidth=S*.092;x.lineCap="square";x.beginPath();const p=[[2,22],[2,2],[22,2],[22,17],[7,17],[7,7],[17,7],[17,12],[12,12]].map(([a,b])=>[a*S/24,b*S/24]);x.moveTo(...p[0]);p.slice(1).forEach(q=>x.lineTo(...q));x.stroke()},
   planks:(x,S,c)=>{const g=x.createLinearGradient(0,0,S,0);g.addColorStop(0,"#5a3420");g.addColorStop(.5,"#6e4126");g.addColorStop(1,"#5c3521");x.fillStyle=g;x.fillRect(0,0,S,S);x.fillStyle="rgba(0,0,0,.35)";x.fillRect(0,0,S*.03,S);x.strokeStyle="rgba(255,215,160,.07)";x.lineWidth=S*.012;for(let i=1;i<7;i++){x.beginPath();x.moveTo(S*i/7.3,0);x.bezierCurveTo(S*i/7.3+S*.02,S*.3,S*i/7.3-S*.02,S*.7,S*i/7.3+S*.01,S);x.stroke()}},
+  rug:(x,S,c)=>{x.fillStyle=c.fg;x.beginPath();x.moveTo(S/2,S*.08);x.lineTo(S*.92,S/2);x.lineTo(S/2,S*.92);x.lineTo(S*.08,S/2);x.closePath();x.fill();x.fillStyle="#e8d7b0";x.beginPath();x.moveTo(S/2,S*.3);x.lineTo(S*.7,S/2);x.lineTo(S/2,S*.7);x.lineTo(S*.3,S/2);x.closePath();x.fill();x.fillStyle="#9b2a22";x.fillRect(S*.45,S*.45,S*.1,S*.1)},
   checker:(x,S,c)=>{x.fillStyle=c.fg;x.fillRect(0,0,S/2,S/2);x.fillRect(S/2,S/2,S/2,S/2)},
   gingham:(x,S,c)=>{x.fillStyle="#fff";x.fillRect(0,0,S,S);x.globalAlpha=.55;x.fillStyle=c.fg;x.fillRect(0,0,S/2,S);x.fillRect(0,0,S,S/2);x.globalAlpha=1}
 };
@@ -2509,6 +2527,38 @@ function fmtSlims(f,spec,menu,poster){
     <div aria-hidden="true" data-tile="checker|${INK}|#fff|20" style="flex:none;height:20px;background:repeating-linear-gradient(90deg,${INK} 0 10px,#fff 10px 20px)"></div>
     <div style="flex:1;min-height:0;display:flex;gap:26px;padding:18px 26px 16px 22px">${posterCol}<div style="flex:1;min-width:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px">${colA}${colB}</div></div>
     <div aria-hidden="true" data-tile="checker|${INK}|#fff|20" style="flex:none;height:20px;background:repeating-linear-gradient(90deg,${INK} 0 10px,#fff 10px 20px)"></div></div>`;
+}
+
+/* ---------- league night score sheet at Hollywood Star Lanes (The Big Lebowski) ---------- */
+function fmtLanes(f,spec,menu,poster){
+  const NAVY="#1c2240",ORANGE="#e8692c",GREEN="#2f7a52",SHEET="#f4f7ee",INK="#1d2a22",NOTE="#4f5c52",PENCIL="#4a4f57";
+  const GOOG="font-family:'Righteous',sans-serif;font-weight:400",COND="font-family:'Barlow Condensed',sans-serif",BODY="font-family:'Barlow',sans-serif",PEN="font-family:'Reenie Beanie',cursive;font-weight:400";
+  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const frames=`<div aria-hidden="true" style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(10,1fr)">${Array.from({length:10},()=>`<span style="border-left:1px solid rgba(47,122,82,.28);position:relative"><i style="position:absolute;right:0;top:0;width:34%;height:42%;border-left:1px solid rgba(47,122,82,.28);border-bottom:1px solid rgba(47,122,82,.28)"></i></span>`).join("")}</div>`;
+  const GRID="grid-template-columns:210px minmax(0,1fr) 92px";
+  const band=t=>`<div style="display:grid;${GRID};background:${GREEN};color:#fff;${COND};font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase"><span style="padding:2px 10px">${ESC(t)}</span><span></span><span></span></div>`;
+  const row=x=>{const it=pick(x.k);return `<div style="display:grid;${GRID};min-height:52px;border-bottom:1px solid rgba(47,122,82,.45)">
+    <div style="padding:4px 10px;border-right:2px solid rgba(47,122,82,.55);display:flex;flex-direction:column;justify-content:center"><span style="${COND};font-weight:700;font-size:19px;line-height:1.05;text-transform:uppercase;letter-spacing:.02em">${ESC(it.label||x.n||x.k)}</span></div>
+    <div style="position:relative;display:flex;align-items:center;padding:4px 12px">${frames}<span style="position:relative;${BODY};font-style:italic;font-weight:500;font-size:15.5px;line-height:1.25;color:${NOTE};background:linear-gradient(transparent 0 0);">${ESC(x.note)}</span>${x.mark?`<span style="position:absolute;right:8px;top:50%;margin-top:-16px;display:flex;align-items:center;gap:8px;${PEN};color:${PENCIL};transform:rotate(-6deg)"><span style="font-size:22px">Mark it</span><span style="position:relative;font-size:30px;line-height:1;padding:0 6px">0<span style="position:absolute;inset:-3px -3px;border:2px solid ${PENCIL};border-radius:50%"></span></span></span>`:""}</div>
+    <div style="border-left:2px solid rgba(47,122,82,.55);display:grid;place-items:center"><span style="${PEN};font-size:34px;line-height:1;color:${PENCIL}">${ESC(x.p)}</span></div></div>`};
+  const sheetRows=spec.groups.map(g=>band(g.h)+g.items.map(row).join("")).join("");
+  const sheet=`<div class="fx-panel" style="position:relative;flex:1;min-width:0;min-height:0;background:${SHEET};box-shadow:0 10px 22px rgba(0,0,0,.45);transform:rotate(-.6deg);display:flex;flex-direction:column;padding:16px 18px 14px;color:${INK}">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid ${GREEN};padding-bottom:6px"><div><div style="${GOOG};font-size:30px;line-height:1;color:${GREEN}">${ESC(spec.place)}</div><div style="${COND};font-weight:500;font-size:14px;letter-spacing:.1em;color:${NOTE};text-transform:uppercase;margin-top:3px">${ESC(spec.address)}</div></div><div style="text-align:right;${COND};font-weight:700;font-size:16px;letter-spacing:.12em;color:${GREEN};text-transform:uppercase;line-height:1.3">League night<br>Score sheet</div></div>
+    <div style="display:flex;gap:22px;${COND};font-weight:500;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:${NOTE};padding:7px 2px 8px"><span>Team: <b style="${PEN};font-size:24px;letter-spacing:0;text-transform:none;color:${PENCIL}">${ESC(spec.team)}</b></span><span>Serves: <b style="${PEN};font-size:24px;letter-spacing:0;color:${PENCIL}">4</b></span><span>Night: <b style="${PEN};font-size:24px;letter-spacing:0;text-transform:none;color:${PENCIL}">${ESC(spec.night)}</b></span></div>
+    <div style="display:grid;${GRID};${COND};font-weight:700;font-size:12px;letter-spacing:.12em;color:${GREEN};text-transform:uppercase;border-top:2px solid ${GREEN};border-bottom:2px solid ${GREEN}"><span style="padding:3px 10px">Bowler</span><span style="display:grid;grid-template-columns:repeat(10,1fr);text-align:center">${Array.from({length:10},(_,i)=>`<span style="padding:3px 0;border-left:1px solid rgba(47,122,82,.3)">${i+1}</span>`).join("")}</span><span style="padding:3px 0;text-align:center;border-left:2px solid rgba(47,122,82,.55)">Total</span></div>
+    <div style="display:flex;flex-direction:column">${sheetRows}</div>
+    ${FX_SP}
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:18px"><div style="${PEN};font-size:26px;line-height:1.05;color:${PENCIL};transform:rotate(-1.5deg);max-width:470px">Showtime: ${ESC(fmtCue(f))}</div><div style="flex:none;border:2px solid ${GREEN};padding:6px 10px;${COND};font-size:14px;line-height:1.35;color:${INK};text-transform:uppercase;letter-spacing:.06em"><b style="color:${GREEN}">House rules</b><br>${spec.rules}</div></div></div>`;
+  const sign=`<div style="position:relative;width:250px;height:178px;display:grid;place-items:center">
+    <div style="position:absolute;left:50%;top:50%;margin:-89px 0 0 -89px">${fmtStar("","",ORANGE,8,178)}</div>
+    <div style="position:relative;text-align:center;transform:rotate(-6deg)"><div style="${GOOG};font-size:19px;color:#fff;letter-spacing:.06em;text-shadow:2px 2px 0 ${NAVY}">HOLLYWOOD</div><div style="${GOOG};font-size:34px;line-height:.95;color:#fff7e0;text-shadow:3px 3px 0 ${NAVY}">Star Lanes</div><div style="${COND};font-weight:700;font-size:13px;letter-spacing:.18em;color:${NAVY};margin-top:2px">BOWL &nbsp;·&nbsp; LOUNGE</div></div></div>`;
+  const right=`<div style="flex:none;width:268px;display:flex;flex-direction:column;align-items:center;gap:12px">${sign}
+    <div style="background:#0d0f1c;padding:8px;box-shadow:0 8px 18px rgba(0,0,0,.5);border:2px solid ${ORANGE}">${fmtPosterImg(f,poster,226,339)}</div>
+    <div style="${GOOG};font-size:22px;color:#fff7e0;text-align:center;line-height:1.15">${spec.tag}</div></div>`;
+  return `${fmtBack(poster)}<div class="fx-wall" style="position:relative;height:100%;box-sizing:border-box;background:radial-gradient(circle at 20% 15%,rgba(232,105,44,.18),transparent 40%),radial-gradient(circle at 85% 80%,rgba(31,181,172,.15),transparent 45%),${NAVY};box-shadow:0 26px 60px rgba(0,0,0,.7);display:flex;flex-direction:column;color:${INK}">
+    <div style="flex:1;min-height:0;display:flex;gap:26px;padding:20px 24px 14px 22px">${sheet}${right}</div>
+    <div aria-hidden="true" data-tile="rug|#9b2a22|#20305a|28" style="flex:none;height:28px;background:repeating-linear-gradient(45deg,#9b2a22 0 10px,#20305a 10px 20px);border-top:4px solid #e8d7b0;border-bottom:4px solid #e8d7b0"></div>
+    <div style="flex:none;background:#e8d7b0;${COND};font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;text-align:center;color:#6b2a1f;padding:3px 0 4px">${ESC(spec.rugLine)}</div></div>`;
 }
 
 document.documentElement.style.setProperty("--grain",`url("${GRAIN}")`);
