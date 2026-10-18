@@ -737,17 +737,49 @@ const saveWeek=()=>{try{week?localStorage.setItem("mns-week",JSON.stringify(week
 function cookDate(){const now=new Date();now.setHours(0,0,0,0);const d=new Date(now);d.setDate(now.getDate()+((week.day-now.getDay()+7)%7));return [d,Math.round((d-now)/864e5)]}
 function renderWeek(){
   const box=$("weekPanel");const f=week&&FILMS.find(x=>x.id===week.id);
-  if(!f){box.hidden=true;box.innerHTML="";return}
+  if(!f){box.hidden=true;box.innerHTML="";renderMotw();return}
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const [d,n]=cookDate();
   const when=n===0?"<b>Tonight</b>":n===1?"<b>Tomorrow</b>":`<b>${n} days to go</b>`;
   box.hidden=false;
-  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})}, ${when}</p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
+  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})}, ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${SHOWTIMES.map(t=>`<option value="${t}"${t===(week.time||"19:00")?" selected":""}>${clock(t)}</option>`).join("")}</select></p><p class="week-count" id="weekCount" aria-live="polite"></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
   $("weekDay").addEventListener("change",e=>{week.day=+e.target.value;saveWeek();renderWeek()});
+  $("weekTime").addEventListener("change",e=>{week.time=e.target.value;saveWeek();tickShowtime()});
+  tickShowtime();renderMotw();
   $("weekShop").addEventListener("click",async()=>{const g=week.double&&FILMS.find(x=>x.id===week.double);if(g){const dm=await doubleMenu(f,g);openTrolley(f,dm,`${f.title} + ${g.title}`)}else openTrolley(f)});
   $("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
   $("weekClear").addEventListener("click",()=>{week=null;saveWeek();renderWeek();$("status").textContent="This week's film cleared."});
 }
-function setWeek(f){week={id:f.id,day:week&&week.day!=null?week.day:6,ticks:{}};saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
+/* showtime countdown: how long until the film starts, and when to get the mains on */
+const SHOWTIMES=["17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00"];
+const clock=t=>{const [h,m]=t.split(":").map(Number);return `${h%12||12}${m?":"+String(m).padStart(2,"0"):""}${h<12?"am":"pm"}`};
+let _showT=null;
+function tickShowtime(){
+  clearTimeout(_showT);const el=$("weekCount");if(!el||!week)return;
+  const [d]=cookDate(),[h,m]=(week.time||"19:00").split(":").map(Number);const at=new Date(d);at.setHours(h,m,0,0);
+  const prepMins=90,cookAt=new Date(at-prepMins*6e4),now=new Date(),ms=at-now;
+  const span=x=>{const mins=Math.max(0,Math.round(x/6e4)),dd=Math.floor(mins/1440),hh=Math.floor(mins%1440/60),mm=mins%60;return dd?`${dd} day${dd>1?"s":""}${hh?` ${hh}h`:""}`:hh?`${hh}h ${mm}m`:`${mm} min`};
+  if(ms<=-3*36e5)el.innerHTML=`That's a wrap. <span>Lock in next week's film when you're ready.</span>`;
+  else if(ms<=0)el.innerHTML=`Showtime. <span>Lights down, plates up.</span>`;
+  else if(now>=cookAt)el.innerHTML=`Showtime in ${span(ms)}. <span>Get cooking now.</span>`;
+  else el.innerHTML=`Showtime in ${span(ms)}. <span>Start cooking at ${clock(String(cookAt.getHours()).padStart(2,"0")+":"+String(cookAt.getMinutes()).padStart(2,"0"))}.</span>`;
+  _showT=setTimeout(tickShowtime,30000);
+}
+/* menu of the week: the printed era menus take turns, a new one every Monday */
+function weekNo(d){const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));const day=t.getUTCDay()||7;t.setUTCDate(t.getUTCDate()+4-day);const y=new Date(Date.UTC(t.getUTCFullYear(),0,1));return Math.ceil(((t-y)/864e5+1)/7)+t.getUTCFullYear()*53}
+const MOTW_KIND={workorder:"A firehouse work order",lanes:"A league night score sheet",market:"The corner market wall",takeaway:"A Chinatown takeaway trifold",diner:"The Wazoo Diner trifold",casefile:"A Prohibition case file",noodle:"Mr Ping's noodle shop wall",slims:"The Jack Rabbit Slim's menu",nero:"A Little Nero's pizza box",lous:"The Lou's Cafe letter board",pad:"Henry's notepad, May 1980"};
+function renderMotw(){
+  const box=$("motw");if(!box||typeof FMT_FILMS==="undefined")return;
+  const ids=Object.keys(FMT_FILMS).filter(id=>FILMS.some(f=>f.id===id)&&(!kidsMode||isKidSafe(FILMS.find(f=>f.id===id)))).sort();
+  if(!ids.length){box.hidden=true;return}
+  const f=FILMS.find(x=>x.id===ids[weekNo(new Date())%ids.length]);
+  if(week&&week.id===f.id){box.hidden=true;return}
+  const sp=FMT_FILMS[f.id],p=lobbyPoster(f);
+  box.hidden=false;
+  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:"<span></span>"}<p class="week-k">Menu of the week</p><p class="week-t">${ESC(f.title)} (${f.year})<small>${ESC(MOTW_KIND[sp.fmt]||"A printed menu from the film")}</small></p><div class="week-acts"><button class="go" type="button" id="motwOpen">Open the menu</button><button type="button" id="motwLock">Lock it in</button></div>`;
+  $("motwOpen").addEventListener("click",()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
+  $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f)});
+}
+function setWeek(f){week={id:f.id,day:week&&week.day!=null?week.day:6,time:week&&week.time||"19:00",ticks:{}};saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
 function listText(f,groups){return `${f.title} (${f.year}) shopping list, serves 4\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
 async function openTrolley(f,menuOverride,label){
   await ensureExact(f);
@@ -958,7 +990,7 @@ function openChute(f,after){
 function topShelf(list){return list.filter(f=>(member.stars[f.id]||0)>=4).sort((a,b)=>(member.stars[b.id]-member.stars[a.id])||a.title.localeCompare(b.title))}
 
 /* kids mode, shared by the wheel and the shop */
-function setKidsUI(){const b=$("kidsBtn");b.setAttribute("aria-pressed",kidsMode);b.textContent=kidsMode?"Kids mode on":"Kids mode off";$("shopKids").checked=kidsMode;document.body.classList.toggle("kids-on",kidsMode)}
+function setKidsUI(){try{renderMotw()}catch(e){};const b=$("kidsBtn");b.setAttribute("aria-pressed",kidsMode);b.textContent=kidsMode?"Kids mode on":"Kids mode off";$("shopKids").checked=kidsMode;document.body.classList.toggle("kids-on",kidsMode)}
 function setKids(v){
   kidsMode=v;try{localStorage.setItem("mns-kids",v?"1":"0")}catch(e){}
   setKidsUI();
@@ -1473,6 +1505,14 @@ async function exportFold(){
   finally{btn.disabled=false}
 }
 $("foldPdf").addEventListener("click",exportFold);
+/* share a menu as a link: opens straight to this film's menu */
+$("shareLink").addEventListener("click",async()=>{
+  if(!current)return;const url=location.origin+location.pathname+"?film="+encodeURIComponent(current.id);
+  const title=`${current.title} movie night menu`,text=`${current.title} (${current.year}): ${current.tag||"movie night menu"}`;
+  try{if(navigator.share){await navigator.share({title,text,url});$("status").textContent="Menu link sent."}
+    else{await navigator.clipboard.writeText(url);$("status").textContent="Link copied. Anyone who opens it lands on this menu."}}
+  catch(e){if(!(e&&e.name==="AbortError")){try{await navigator.clipboard.writeText(url);$("status").textContent="Link copied."}catch(err){$("status").textContent=url}}}
+});
 $("print").addEventListener("click",()=>{
   const pa=$("printArea");pa.innerHTML="";
   const c=card.cloneNode(true);c.style.transform="none";c.hidden=false;pa.appendChild(c);
@@ -1491,7 +1531,7 @@ $("copy").addEventListener("click",()=>{
 });
 window.addEventListener("resize",size);
 
-setList();size();renderHist();scalePreview();renderWeek();
+setList();size();renderHist();scalePreview();renderWeek();renderMotw();
 try{document.documentElement.style.setProperty("--grainTile",`url("${noiseTile()}")`)}catch(e){}
 if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 setKidsUI();if(kidsMode)setList();pullSync();

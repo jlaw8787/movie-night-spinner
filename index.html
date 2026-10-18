@@ -1390,6 +1390,13 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 /* prep sheets print on the layout's own paper, so dark themes with a paper panel stay readable */
 .mcard.pp-sheet{background-image:linear-gradient(var(--paper,transparent),var(--paper,transparent))!important}
 .mcard.pp-sheet.T-asian{--paper:#fbf1dc;--ink:#2a1610;--hd:#a51c24;--sub:#7a3a1a;color:#2a1610}
+
+/* menu of the week: one of the printed era menus, a new one each week */
+.motw{border-color:rgba(232,176,74,.45);background:linear-gradient(100deg,rgba(232,176,74,.12),transparent 55%),var(--raise)}
+.motw .week-t small{display:block;font:500 14px/1.3 var(--f-body);color:var(--soft);margin-top:3px}
+.week-time{font:inherit;color:var(--screen);background:var(--raise-2);border:1px solid var(--hair);border-radius:8px;padding:3px 6px}
+.week-count{grid-column:2/-1;margin:2px 0 0;font:600 14.5px/1.35 var(--f-body);color:var(--acc)}
+.week-count span{color:var(--soft);font-weight:500}
 </style>
 
 <div id="printArea"></div>
@@ -1414,6 +1421,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 
   <div class="spinbar" id="spinbar" hidden><button type="button" id="spinbarBtn">Spin the wheel</button></div>
   <section class="week" id="weekPanel" aria-label="This week's film" hidden></section>
+  <section class="week motw" id="motw" aria-label="Menu of the week" hidden></section>
 
   <section class="shop" id="viewShop" aria-label="Video shop" hidden>
     <div class="sv-front" id="svFront"><img src="assets/hero/shopfront-1000.webp" srcset="assets/hero/shopfront-1000.webp 1000w, assets/hero/shopfront-1400.webp 1400w, assets/hero/shopfront.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Spinner Video shopfront at night" loading="lazy"><div class="sv-sign fit" style="left:6.20%;top:5.86%;width:87.09%;height:11.72%"><span class="fit-t">Spinner Video</span><small>Open 7 days till late</small></div></div>
@@ -1520,6 +1528,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
           <div class="more-menu">
             <button class="btn" id="png" type="button">Save image</button>
             <button class="btn" id="foldPdf" type="button" hidden>Print to fold (2 sides)</button>
+            <button class="btn" id="shareLink" type="button">Share this menu</button>
             <button class="btn" id="copy" type="button">Copy text</button>
             <button class="btn" id="reroll" type="button">Shuffle the menu</button>
             <button class="btn" id="print" type="button" hidden>Print</button>
@@ -1539,7 +1548,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=e86181bb" defer></script>
 <script src="formats.js?v=4c133330" defer></script>
-<script src="app.js?v=3bed5c16" defer></script>
+<script src="app.js?v=2a242fc7" defer></script>
 
 </body>
 </html>
