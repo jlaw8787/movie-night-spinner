@@ -18,9 +18,9 @@ out = json.load(open(out_path)) if out_path.exists() else {}
 for fid in want:
     tid = ids.get(fid)
     if not tid: print('no TMDB id for', fid); continue
-    d = get(f'movie/{tid}/images?include_image_language=null,en')
+    d = get(f'movie/{tid}/images?include_image_language=null,en,xx')
     if not d: print('failed', fid); continue
     bd = sorted(d.get('backdrops', []), key=lambda b: (b.get('iso_639_1') is not None, -b.get('vote_count', 0), -b.get('vote_average', 0)))
-    out[fid] = [[b['file_path'], b['width'], b['height'], b.get('iso_639_1')] for b in bd[:40]]
+    out[fid] = [[b['file_path'], b['width'], b['height'], b.get('iso_639_1')] for b in bd[:200]]
     print(fid, len(out[fid]))
 json.dump(out, open(out_path, 'w'), indent=0, ensure_ascii=False)
