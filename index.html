@@ -834,8 +834,8 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .mcard.fmt .fx-fold{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:linear-gradient(90deg,rgba(0,0,0,.2),rgba(255,255,255,.35))}
 .mcard.fmt h2{font-weight:400}
 /* printing at home: no dark poster border, just the menu */
-@media print{.mcard.fmt{background:#fff!important;padding:0!important}.mcard.fmt .fx-back{display:none}.mcard.fmt .fx-sheet,.mcard.fmt .fx-wall{box-shadow:none!important}}
-.mcard.fmt.for-print{background:#fff;padding:0}.mcard.fmt.for-print .fx-back{display:none}.mcard.fmt.for-print .fx-sheet,.mcard.fmt.for-print .fx-wall{box-shadow:none!important}
+@media print{.mcard.fmt{background:#fff!important;padding:26px!important}.mcard.fmt .fx-back{display:none}.mcard.fmt .fx-sheet,.mcard.fmt .fx-wall{box-shadow:none!important}}
+.mcard.fmt.for-print{background:#fff;padding:26px}.mcard.fmt.for-print .fx-back{display:none}.mcard.fmt.for-print .fx-sheet,.mcard.fmt.for-print .fx-wall{box-shadow:none!important}
 
 /* ===== era formats: phone view ===== */
 .fp{background:var(--fp-top);color:var(--fp-ink);border-radius:10px;overflow:hidden;font-family:var(--fp-body);box-shadow:0 20px 40px -12px rgba(0,0,0,.7)}
@@ -1564,7 +1564,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 <script src="ratings.js?v=750f6b42" defer></script>
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=e86181bb" defer></script>
-<script src="formats.js?v=f078e5f6" defer></script>
+<script src="formats.js?v=3b97cba7" defer></script>
 <script src="app.js?v=2a242fc7" defer></script>
 
 </body>

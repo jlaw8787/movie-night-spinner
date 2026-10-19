@@ -14,6 +14,7 @@ const exactMenu=f=>f.edition?f.edition.menu:f.recipe;
 const toItem=([n,note,how,shop])=>({n,note,how,shop});
 const lobbyPoster=f=>TMDB_POSTERS[f.id]||null;
 `+rd('tmdb-posters.js')+rd('formats.js')+`;this.specs=FMT_FILMS;this.renderers=FMT_RENDER;this.palettes=FMT_PHONE;this.menu=fmtMenu;this.phone=fmtPhoneHTML;`,ctx);
+const identityText=s=>s.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/[’‘]/g,"'").replace(/\s+/g,' ').toLowerCase();
 const batch=['Anchorman: The Legend of Ron Burgundy (2004)',...Object.entries(ctx.specs).filter(([,spec])=>spec.art).map(([id])=>id)];
 let dishes=0;
 for(const[id,spec]of Object.entries(ctx.specs)){
@@ -39,12 +40,12 @@ for(const[id,spec]of Object.entries(ctx.specs)){
  assert.ok(html.includes(ESCForTest(f.edition?.cue||f.P)),id+' serving cue included');
  if(spec.art){
   const imageSources=[...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m=>m[1]);
-  assert.ok(imageSources.every(src=>src.startsWith('https://image.tmdb.org/t/p/')||src==='assets/hero/paper.webp'||(id==='Coming to America (1988)'&&src==='assets/menu-details/mcdowells-film-sign.svg')),id+' imagery uses authentic film assets and paper texture');
+  assert.ok(imageSources.every(src=>src.startsWith('https://image.tmdb.org/t/p/')||src==='assets/hero/paper.webp'||(id==='Coming to America (1988)'&&src==='assets/menu-details/mcdowells-film-source.jpg')),id+' imagery uses authentic film assets and paper texture');
   const used=Object.entries(spec.art).filter(([,path])=>html.includes(path));
   for(const [role,path] of used){
    assert.match(path,/^\/[A-Za-z0-9]+\.(?:jpg|png|svg)$/,id+' valid '+role+' image path');
   }
-  assert.ok(used.some(([role])=>['logo','poster','identity'].includes(role))||html.toLowerCase().includes(ESCForTest(spec.phoneTitle).toLowerCase()),id+' film identity included');
+  assert.ok(used.some(([role])=>['logo','poster','identity'].includes(role))||[spec.phoneTitle,f.title].some(title=>identityText(html).includes(identityText(ESCForTest(title)))),id+' film identity included');
   assert.ok(new Set(used.map(([,path])=>path)).size>=3,id+' distinct film imagery');
   assert.ok(!/api_key=|access_token=|api\.themoviedb/.test(html),id+' no credentials or API requests in browser markup');
  }

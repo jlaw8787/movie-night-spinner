@@ -2,8 +2,8 @@
 
 ## McDowell’s film sign
 
-`mcdowells-film-sign.svg` displays an unaltered rectangular crop of the photographed roadside sign from Coming to America (1988). The embedded source frame is reproduced by CinemaBlend: https://www.cinemablend.com/news/2491714/5-things-that-dont-make-sense-about-coming-to-america
+`mcdowells-film-source.jpg` is the unaltered source image, reproduced by CinemaBlend from Coming to America (1988): https://www.cinemablend.com/news/2491714/5-things-that-dont-make-sense-about-coming-to-america
 
 Source image: https://cdn.mos.cms.futurecdn.net/VNsP2pRDqg63UYx676qXoK.jpg
 
-The SVG only sets a crop viewport. The sign has not been traced, redrawn or generated.
+`fmtMcdowellsMark` uses an HTML overflow viewport to show only the roadside sign, at x638 y16, width155 height198 in the original1200×600 image. The photographed sign is not traced, redrawn, generated or raster-edited. A direct JPEG and CSS crop also retain the sign in the canvas/PDF export.
