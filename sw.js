@@ -3,7 +3,7 @@
    Scripts carry a ?v= stamp that changes whenever they change, so a saved copy is always safe to use.
    Film files: the saved copy straight away, refreshed in the background.
    Photos, fonts and libraries: saved on first use. */
-const VERSION = 'mns-2a8a0676';
+const VERSION = 'mns-3107271b';
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'assets/app/icon-192.png', 'assets/app/icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));

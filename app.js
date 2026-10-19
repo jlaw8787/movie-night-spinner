@@ -238,6 +238,40 @@ if(canTilt){
   theatre.addEventListener("pointerleave",()=>{easel.style.transform=""});
 }
 
+/* Native modal dialogs contain keyboard focus and isolate the background, including nested dialogs. */
+const modalStack=[];
+const modalState=new WeakMap();
+function finishModal(o){
+  const state=modalState.get(o);if(!state)return;
+  const wasTop=modalStack[modalStack.length-1]===o;
+  modalState.delete(o);const i=modalStack.indexOf(o);if(i!==-1)modalStack.splice(i,1);
+  o.remove();if(state.onClose)state.onClose();
+  if(!wasTop)return;
+  const parent=modalStack[modalStack.length-1];
+  const target=state.trigger;
+  if(target&&target.isConnected&&typeof target.focus==="function"&&(!parent||parent.contains(target)))target.focus({preventScroll:true});
+  else if(parent){const next=parent.querySelector("button:not(:disabled),input:not(:disabled),a[href],[tabindex='0']");if(next)next.focus({preventScroll:true})}
+}
+function dismissModal(o){if(o.open)o.close();finishModal(o)}
+function mountModal(o,initial,trigger,onClose){
+  modalState.set(o,{trigger,onClose});modalStack.push(o);
+  /* Neutralise native dialog sizing; existing overlay classes keep their padding and visual treatment. */
+  Object.assign(o.style,{margin:"0",border:"0",maxWidth:"none",maxHeight:"none",width:"100%",height:"100%",boxSizing:"border-box",color:"inherit"});
+  o.addEventListener("cancel",e=>{e.preventDefault();dismissModal(o)});
+  o.addEventListener("close",()=>finishModal(o));
+  o.tabIndex=-1;
+  o.addEventListener("keydown",e=>{
+    if(e.key!=="Tab"||modalStack[modalStack.length-1]!==o)return;
+    const items=[...o.querySelectorAll('a[href],button,input:not([type="hidden"]),select,textarea,iframe,[tabindex]')].filter(el=>el.tabIndex>=0&&!el.matches(":disabled")&&!el.closest("[hidden],[inert]")&&el.getClientRects().length);
+    const index=items.indexOf(document.activeElement);
+    if(!items.length){e.preventDefault();o.focus()}
+    else if(e.shiftKey&&index<=0){e.preventDefault();items[items.length-1].focus()}
+    else if(!e.shiftKey&&(index===items.length-1||index<0)){e.preventDefault();items[0].focus()}
+  });
+  document.body.appendChild(o);o.showModal();
+  const first=o.querySelector(initial);if(first)first.focus({preventScroll:true});
+}
+
 /* each film's full menu (tagline, blurb, methods, shopping, and its finished poster menu or exact recipe)
    lives in its own small file and is fetched the first time the film is opened */
 const EDITIONS={},RECIPE_MENUS={};
@@ -731,37 +765,72 @@ function addHistory(f){
 
 /* this week's film: lock a pick, count down to cook night, tick off the shopping */
 const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+/* A plan owns a local calendar date. Only an explicit new plan/day choice moves it. */
+const weekDateKey=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+function parseWeekDate(key){
+  if(typeof key!=="string"||!/^\d{4}-\d{2}-\d{2}$/.test(key))return null;
+  const [y,m,d]=key.split("-").map(Number),at=new Date(y,m-1,d,12,0,0,0);
+  return weekDateKey(at)===key?at:null;
+}
+const weekDay=day=>[5,6,0,"5","6","0"].includes(day)?Number(day):6;
+const weekTime=time=>/^(?:17|18|19|20):(?:00|30)$|^21:00$/.test(time)?time:"19:00";
+function nextWeekDate(day,time="19:00",now=new Date()){
+  const d=new Date(now.getFullYear(),now.getMonth(),now.getDate(),12);
+  d.setDate(d.getDate()+((weekDay(day)-d.getDay()+7)%7));
+  const [h,m]=weekTime(time).split(":").map(Number),show=new Date(d);show.setHours(h,m,0,0);
+  if(show<now)d.setDate(d.getDate()+7);
+  return weekDateKey(d);
+}
+function normaliseWeek(value,now=new Date()){
+  if(!value||typeof value!=="object"||Array.isArray(value)||typeof value.id!=="string")return null;
+  const day=weekDay(value.day),time=weekTime(value.time),saved=parseWeekDate(value.date);
+  const date=saved&&[5,6,0].includes(saved.getDay())?value.date:nextWeekDate(day,time,now);
+  const ticks=value.ticks&&typeof value.ticks==="object"&&!Array.isArray(value.ticks)?value.ticks:{};
+  return Object.assign({},value,{day:parseWeekDate(date).getDay(),time,date,ticks});
+}
+function newWeekPlan(id,double){
+  const value={id,day:weekDay(week&&week.day!=null?week.day:6),time:weekTime(week&&week.time),ticks:{}};
+  if(double)value.double=double;
+  return normaliseWeek(value);
+}
 let week=null;
-try{week=JSON.parse(localStorage.getItem("mns-week")||"null")}catch(e){week=null}
+try{
+  const saved=JSON.parse(localStorage.getItem("mns-week")||"null");week=normaliseWeek(saved);
+  if(week&&JSON.stringify(saved)!==JSON.stringify(week))try{localStorage.setItem("mns-week",JSON.stringify(week))}catch(e){}
+}catch(e){week=null}
 const saveWeek=()=>{try{week?localStorage.setItem("mns-week",JSON.stringify(week)):localStorage.removeItem("mns-week")}catch(e){}if(typeof queueSync==="function")queueSync()};
-function cookDate(){const now=new Date();now.setHours(0,0,0,0);const d=new Date(now);d.setDate(now.getDate()+((week.day-now.getDay()+7)%7));return [d,Math.round((d-now)/864e5)]}
+function cookDate(now=new Date()){
+  const d=parseWeekDate(week.date);
+  /* UTC is used only to count calendar labels, never to parse a local date. */
+  const days=(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())-Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()))/864e5;
+  return [d,days];
+}
 function renderWeek(){
   const box=$("weekPanel");const f=week&&FILMS.find(x=>x.id===week.id);
   if(!f){box.hidden=true;box.innerHTML="";renderMotw();return}
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const [d,n]=cookDate();
-  const when=n===0?"<b>Tonight</b>":n===1?"<b>Tomorrow</b>":`<b>${n} days to go</b>`;
+  const when=n===0?"<b>Tonight</b>":n===1?"<b>Tomorrow</b>":n<0?`<b>${-n} day${n===-1?"":"s"} ago</b>`:`<b>${n} days to go</b>`;
   box.hidden=false;
   box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})}, ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${SHOWTIMES.map(t=>`<option value="${t}"${t===(week.time||"19:00")?" selected":""}>${clock(t)}</option>`).join("")}</select></p><p class="week-count" id="weekCount" aria-live="polite"></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
-  $("weekDay").addEventListener("change",e=>{week.day=+e.target.value;saveWeek();renderWeek()});
+  $("weekDay").addEventListener("change",e=>{week.day=weekDay(e.target.value);week.date=nextWeekDate(week.day,week.time);saveWeek();renderWeek()});
   $("weekTime").addEventListener("change",e=>{week.time=e.target.value;saveWeek();tickShowtime()});
   tickShowtime();renderMotw();
   $("weekShop").addEventListener("click",async()=>{const g=week.double&&FILMS.find(x=>x.id===week.double);if(g){const dm=await doubleMenu(f,g);openTrolley(f,dm,`${f.title} + ${g.title}`)}else openTrolley(f)});
   $("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
   $("weekClear").addEventListener("click",()=>{week=null;saveWeek();renderWeek();$("status").textContent="This week's film cleared."});
 }
-/* showtime countdown: how long until the film starts, and when to get the mains on */
+/* Countdown to the scheduled showtime. Cooking times belong to the individual recipes. */
 const SHOWTIMES=["17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00"];
 const clock=t=>{const [h,m]=t.split(":").map(Number);return `${h%12||12}${m?":"+String(m).padStart(2,"0"):""}${h<12?"am":"pm"}`};
 let _showT=null;
 function tickShowtime(){
   clearTimeout(_showT);const el=$("weekCount");if(!el||!week)return;
   const [d]=cookDate(),[h,m]=(week.time||"19:00").split(":").map(Number);const at=new Date(d);at.setHours(h,m,0,0);
-  const prepMins=90,cookAt=new Date(at-prepMins*6e4),now=new Date(),ms=at-now;
-  const span=x=>{const mins=Math.max(0,Math.round(x/6e4)),dd=Math.floor(mins/1440),hh=Math.floor(mins%1440/60),mm=mins%60;return dd?`${dd} day${dd>1?"s":""}${hh?` ${hh}h`:""}`:hh?`${hh}h ${mm}m`:`${mm} min`};
-  if(ms<=-3*36e5)el.innerHTML=`That's a wrap. <span>Lock in next week's film when you're ready.</span>`;
-  else if(ms<=0)el.innerHTML=`Showtime. <span>Lights down, plates up.</span>`;
-  else if(now>=cookAt)el.innerHTML=`Showtime in ${span(ms)}. <span>Get cooking now.</span>`;
-  else el.innerHTML=`Showtime in ${span(ms)}. <span>Start cooking at ${clock(String(cookAt.getHours()).padStart(2,"0")+":"+String(cookAt.getMinutes()).padStart(2,"0"))}.</span>`;
+  const now=new Date(),ms=at-now;
+  const span=x=>{const mins=Math.max(0,Math.ceil(x/6e4)),dd=Math.floor(mins/1440),hh=Math.floor(mins%1440/60),mm=mins%60;return dd?`${dd} day${dd>1?"s":""}${hh?` ${hh}h`:""}`:hh?`${hh}h ${mm}m`:`${mm} min`};
+  if(ms<0)el.innerHTML=`Scheduled showtime has passed. <span>Open your menu or lock in a new movie night.</span>`;
+  else if(ms===0)el.innerHTML=`Showtime. <span>Lights down, press play when you're ready.</span>`;
+  else el.innerHTML=`Showtime in ${span(ms)}. <span>Check each recipe for cooking times and make-ahead steps.</span>`;
   _showT=setTimeout(tickShowtime,30000);
 }
 /* menu of the week: the printed era menus take turns, a new one every Monday */
@@ -779,28 +848,32 @@ function renderMotw(){
   $("motwOpen").addEventListener("click",()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
   $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f)});
 }
-function setWeek(f){week={id:f.id,day:week&&week.day!=null?week.day:6,time:week&&week.time||"19:00",ticks:{}};saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
+function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
 function listText(f,groups){return `${f.title} (${f.year}) shopping list, serves 4\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
+const trolleySessionTicks=new Map();
 async function openTrolley(f,menuOverride,label){
+  const modalTrigger=document.activeElement;
   await ensureExact(f);
   const mm=makeMenu(f,true);mm.counter=counterShop(f.id);
   const groups=shopGroups(menuOverride||mm);const all=groups.flatMap(([,l])=>l);
-  const o=document.createElement("div");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Shopping list for ${f.title}`);
-  const ticks=()=>week&&week.id===f.id?week.ticks:{};
+  const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Shopping list for ${f.title}`);
+  const sessionKey=JSON.stringify([f.id,label||""]);
+  if(!trolleySessionTicks.has(sessionKey))trolleySessionTicks.set(sessionKey,Object.create(null));
+  const ticks=()=>week&&week.id===f.id?(week.ticks||(week.ticks={})):trolleySessionTicks.get(sessionKey);
   o.innerHTML=`<div class="trolley-in"><h3>${ESC(label||f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(x)}"${ticks()[x]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
-  const prog=()=>{const n=Object.values(ticks()).filter(Boolean).length;o.querySelector("#tProg").textContent=`${n} of ${all.length} in the trolley. Serves 4.`;o.querySelector("#tBar").style.width=(100*n/all.length)+"%"};
-  o.addEventListener("change",e=>{const k=e.target.dataset.k;if(!k||!week||week.id!==f.id)return;week.ticks[k]=e.target.checked;saveWeek();prog()});
-  const close=()=>{o.remove();document.removeEventListener("keydown",esc)};const esc=e=>{if(e.key==="Escape")close()};
+  const prog=()=>{const n=all.filter(x=>ticks()[x]).length;o.querySelector("#tProg").textContent=`${n} of ${all.length} in the trolley. Serves 4.`;o.querySelector("#tBar").style.width=(all.length?100*n/all.length:0)+"%"};
+  o.addEventListener("change",e=>{const k=e.target.dataset.k;if(!k)return;ticks()[k]=e.target.checked;if(week&&week.id===f.id)saveWeek();o.querySelector("#tMsg").textContent="";prog()});
+  const close=()=>dismissModal(o);
   o.addEventListener("click",async e=>{
     if(e.target===o)return close();const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
     if(a==="done")close();
-    if(a==="reset"){if(week&&week.id===f.id){week.ticks={};saveWeek()}o.querySelectorAll("input").forEach(i=>i.checked=false);prog()}
-    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[x])]).filter(([,l])=>l.length);const text=listText(f,left.length?left:groups);
+    if(a==="reset"){const checked=ticks();all.forEach(k=>delete checked[k]);if(week&&week.id===f.id)saveWeek();o.querySelectorAll("input").forEach(i=>i.checked=false);o.querySelector("#tMsg").textContent="";prog()}
+    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[x])]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left);
       try{if(navigator.share){await navigator.share({title:`${f.title} shopping list`,text});o.querySelector("#tMsg").textContent="Sent."}else{await navigator.clipboard.writeText(text);o.querySelector("#tMsg").textContent="Copied. Paste it into Notes or Reminders."}}
       catch(err){if(!(err&&err.name==="AbortError"))o.querySelector("#tMsg").textContent="Couldn't share from here. Use Copy text under the menu instead."}}
   });
   if(!(week&&week.id===f.id))o.querySelector(".tp").insertAdjacentHTML("afterend",'<p class="tp">Lock this film in for the week to save your ticks.</p>');
-  document.addEventListener("keydown",esc);document.body.appendChild(o);prog();o.querySelector("input,button").focus();
+  mountModal(o,"input,button",modalTrigger);prog();
 }
 $("weekSet").addEventListener("click",()=>{if(current)setWeek(current)});
 
@@ -932,14 +1005,13 @@ function hireCaseHTML(f){
     <span class="hc-rewind">Be kind, rewind</span>
   </div>`;
 }
-function openSlip(f,go){setTimeout(()=>sfx.print(),350);
+function openSlip(f,go){
+  const modalTrigger=document.activeElement;setTimeout(()=>sfx.print(),350);
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
-  const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
+  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
   o.innerHTML=`<div class="slip"><h3>Spinner Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, overnight"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. The cover's been in that sleeve since the shop opened.</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
-  const last=document.activeElement;
-  const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus&&last.focus()};
-  const esc=e=>{if(e.key==="Escape")close()};
+  const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{
     if(e.target===o)return close();
     const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
@@ -956,9 +1028,9 @@ function openSlip(f,go){setTimeout(()=>sfx.print(),350);
     const aisle=SHOP_AISLE_OF[f.theme];if(aisle)member.aisles[aisle]=(member.aisles[aisle]||0)+1;
     member.out=[{id:f.id,due:due.getTime()},...(member.out||[]).filter(r=>r.id!==f.id)].slice(0,6);
     saveMember();renderMember();buzz(30);
-    o.remove();document.removeEventListener("keydown",esc);go();
+    close();go();
   });
-  document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".go").focus();
+  mountModal(o,".go",modalTrigger);
 }
 /* classification sticker */
 const rateCls=r=>r.replace(/\s/g,"");
@@ -967,12 +1039,11 @@ if(!member.stars)member.stars={};
 function starsHTML(f){const n=member.stars[f.id]||0;return `<p class="stars-k">Your stars</p><div class="stars" role="group" aria-label="Your stars for ${ESC(f.title)}">${[1,2,3,4,5].map(i=>`<button type="button" data-star="${i}" class="${i<=n?"on":""}" aria-label="${i} star${i>1?"s":""}" aria-pressed="${i===n}">★</button>`).join("")}</div>`}
 function wireStars(root,f,onSet){root.querySelectorAll("[data-star]").forEach(b=>b.addEventListener("click",()=>{const n=+b.dataset.star;member.stars[f.id]=member.stars[f.id]===n?0:n;if(!member.stars[f.id])delete member.stars[f.id];saveMember();root.querySelectorAll("[data-star]").forEach(x=>{x.classList.toggle("on",+x.dataset.star<=(member.stars[f.id]||0));x.setAttribute("aria-pressed",+x.dataset.star===(member.stars[f.id]||0))});buzz(10);onSet&&onSet()}))}
 function openChute(f,after){
+  const modalTrigger=document.activeElement;
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
-  const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Return ${f.title}`);
+  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Return ${f.title}`);
   o.innerHTML=`<div class="chute"><h3>Return chute</h3><p>${ESC(f.title)}. How was it?</p><div class="drop">${p?`<img alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}<div class="slot"><span>Returns</span></div></div>${starsHTML(f)}<div class="acts"><button type="button" data-a="back">Not yet</button><button type="button" class="go" data-a="drop">Drop it in</button></div></div>`;
-  const last=document.activeElement;
-  const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus&&last.focus()};
-  const esc=e=>{if(e.key==="Escape")close()};
+  const close=()=>dismissModal(o);
   wireStars(o,f);
   o.addEventListener("click",e=>{
     if(e.target===o)return close();const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
@@ -985,7 +1056,7 @@ function openChute(f,after){
       setTimeout(()=>{close();renderShop();after&&after()},reduce?0:800);
     }
   });
-  document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".go").focus();
+  mountModal(o,".go",modalTrigger);
 }
 function topShelf(list){return list.filter(f=>(member.stars[f.id]||0)>=4).sort((a,b)=>(member.stars[b.id]-member.stars[a.id])||a.title.localeCompare(b.title))}
 
@@ -1025,24 +1096,25 @@ function pairFor(a,pool){
   return c?c[Math.floor(Math.random()*c.length)]:null;
 }
 async function openDouble(pa,pb){
+  const modalTrigger=document.activeElement;
   if(pa&&!pa.id)pa=null;
   const pool=list.length>1?list:FILMS.filter(f=>!kidsMode||isKidSafe(f));
   const a=pa||pool[Math.floor(Math.random()*pool.length)],b=pb||pairFor(a,pool);if(!b)return;
   const m=await doubleMenu(a,b);
   const img=f=>{const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];return p?`<img alt="${ESC(f.title)} poster" src="https://image.tmdb.org/t/p/w342${ESC(p)}">`:""};
   const li=it=>`<li>${ESC(it.n)} <small>(${ESC(it.film)})</small></li>`;
-  const o=document.createElement("div");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","Double feature");
+  const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","Double feature");
   o.innerHTML=`<div class="df"><h3>Tonight's double feature</h3><div class="df-pair"><figure>${img(a)}<figcaption><b>First up</b>${ESC(a.title)} (${a.year})</figcaption></figure><span class="df-amp" aria-hidden="true">+</span><figure>${img(b)}<figcaption><b>Then</b>${ESC(b.title)} (${b.year})</figcaption></figure></div><p class="msg">One menu for both films, serves 4. A snack and a drink from each, the main from the first film and dessert at intermission.</p><h4>Snacks</h4><ul>${m.s.map(li).join("")}</ul><h4>Main</h4><ul>${m.m.map(li).join("")}</ul><h4>Intermission dessert</h4><ul>${m.w.map(li).join("")}</ul><h4>To drink</h4><ul>${m.d.map(li).join("")}</ul><div class="acts"><button class="go" type="button" data-a="lock">Lock in for the week</button><button type="button" data-a="shop">Shopping list</button><button type="button" data-a="again">Spin again</button><button type="button" data-a="first">Open first film</button><button type="button" data-a="done">Done</button></div><p class="msg" role="status" id="dfMsg"></p></div>`;
-  const close=()=>{o.remove();document.removeEventListener("keydown",esc)};const esc=e=>{if(e.key==="Escape")close()};
+  const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{
     if(e.target===o)return close();const k=e.target.dataset&&e.target.dataset.a;if(!k)return;
     if(k==="done")close();
     if(k==="again"){close();openDouble()}
     if(k==="first"){close();setView("wheel");replay(a);addHistory(a);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
     if(k==="shop")openTrolley(a,m,`${a.title} + ${b.title}`);
-    if(k==="lock"){week={id:a.id,double:b.id,day:week&&week.day!=null?week.day:6,ticks:{}};saveWeek();renderWeek();o.querySelector("#dfMsg").textContent="Locked in. It's on your This week panel with one shopping list for both."}
+    if(k==="lock"){week=newWeekPlan(a.id,b.id);saveWeek();renderWeek();o.querySelector("#dfMsg").textContent="Locked in. It's on your This week panel with one shopping list for both."}
   });
-  document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".go").focus();buzz([20,40,20]);
+  mountModal(o,".go",modalTrigger);buzz([20,40,20]);
 }
 $("dfBtn").addEventListener("click",openDouble);
 
@@ -1068,10 +1140,20 @@ function applyRemote(d){
   if(!member.name&&mine.name)member.name=mine.name;
   (d.watched||[]).forEach(id=>{if(FILMS.some(f=>f.id===id))watched.add(id)});
   hist=[...new Set([...(d.hist||[]),...hist])].slice(0,8);
-  if(d.week)week=d.week;
+  if(Object.prototype.hasOwnProperty.call(d,"week")){
+    if(d.week===null)week=null;
+    else{
+      const incoming=normaliseWeek(d.week);
+      /* Repeated pulls from an older client must not re-date an already migrated plan. */
+      if(incoming){
+        if(!parseWeekDate(d.week.date)&&week&&incoming.id===week.id&&incoming.double===week.double&&incoming.day===week.day)incoming.date=week.date;
+        week=incoming;
+      }
+    }
+  }
   counter=Object.assign({},counter,d.counter||{});
   if(typeof d.kids==="boolean")kidsMode=d.kids;
-  try{localStorage.setItem("mns-member",JSON.stringify(member));localStorage.setItem("mns-watched",JSON.stringify([...watched]));localStorage.setItem("mns-hist",JSON.stringify(hist));localStorage.setItem("mns-counter",JSON.stringify(counter));if(week)localStorage.setItem("mns-week",JSON.stringify(week));localStorage.setItem("mns-kids",kidsMode?"1":"0")}catch(e){}
+  try{localStorage.setItem("mns-member",JSON.stringify(member));localStorage.setItem("mns-watched",JSON.stringify([...watched]));localStorage.setItem("mns-hist",JSON.stringify(hist));localStorage.setItem("mns-counter",JSON.stringify(counter));if(week)localStorage.setItem("mns-week",JSON.stringify(week));else localStorage.removeItem("mns-week");localStorage.setItem("mns-kids",kidsMode?"1":"0")}catch(e){}
   renderHist();renderWeek();setKidsUI();if(!spinning){setList();updateWatchButton()}if(!$("viewShop").hidden)renderShop();
 }
 function queueSync(){
@@ -1085,11 +1167,12 @@ async function pushSync(){
 }
 function syncNote(){return syncState==="offline"?"Couldn't reach the card system. Your changes are saved on this device and will go up next time.":syncState==="badpin"||syncState==="locked"?"Your PIN didn't match. Sign out and sign in again to keep syncing.":`Synced. Use No. ${member.no.slice(0,3)} ${member.no.slice(3)} and your PIN on any other device.`}
 function openSyncForm(mode){
-  const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
+  const modalTrigger=document.activeElement;
+  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");
   const join=mode==="join";
   o.setAttribute("aria-label",join?"Put your card online":"Use your card from another device");
   o.innerHTML=`<form class="syncbox"><h3>${join?"Put my card online":"Use my card here"}</h3><p>${join?`Pick a 4-digit PIN. Then on any other device, enter No. ${member.no.slice(0,3)} ${member.no.slice(3)} and this PIN to bring your card, ticks and rentals across.`:"Enter the member number from your card on the other device, and your PIN. Anything on this device gets merged in."}</p>${join?"":`<label for="sNo">Member number</label><input id="sNo" inputmode="numeric" autocomplete="off" maxlength="7" required>`}<label for="sPin">PIN</label><input id="sPin" type="password" inputmode="numeric" autocomplete="off" maxlength="4" required><p class="err" id="sErr" role="alert"></p><div class="acts"><button type="button" data-a="back">Cancel</button><button type="submit" class="go">${join?"Save my card":"Sign in"}</button></div></form>`;
-  const close=()=>{o.remove();document.removeEventListener("keydown",esc)};const esc=e=>{if(e.key==="Escape")close()};
+  const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{if(e.target===o||(e.target.dataset&&e.target.dataset.a==="back"))close()});
   o.querySelector("form").addEventListener("submit",async e=>{
     e.preventDefault();const err=o.querySelector("#sErr");err.textContent="";
@@ -1112,7 +1195,7 @@ function openSyncForm(mode){
       close();renderMember();buzz(30);
     }catch(x){err.textContent="Couldn't reach the card system. Check your connection and try again.";btn.disabled=false}
   });
-  document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector("input").focus();
+  mountModal(o,"input",modalTrigger);
 }
 async function pullSync(){
   if(!member.pin)return;
@@ -1179,13 +1262,13 @@ function tvHTML(f){
   return `<div class="tv"><div class="tv-screen">${k?`<button class="tv-play" type="button" data-k="${ESC(k)}">Play trailer</button>`:`<p class="tv-none">No trailer in the machine for this one.</p>`}</div><div class="tv-base"><span class="tv-knobs" aria-hidden="true"><i></i><i></i></span>${k?`<a href="https://www.youtube.com/watch?v=${encodeURIComponent(k)}" target="_blank" rel="noopener">Open on YouTube</a>`:""}</div></div>`;
 }
 async function openCase(f){
+  const modalTrigger=document.activeElement;
   await Promise.all([ensureExact(f),typeof TRAILERS==="undefined"?loadScript(TRAILERS_JS).catch(()=>{}):0]);
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const m=makeMenu(f,true);
-  const o=document.createElement("div");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
+  const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
   const seen=watched.has(f.id);
   o.innerHTML=`<div class="case"><button class="x" type="button" aria-label="Put it back">×</button><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}${ratingOf(f)?` <span class="ratebig ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><div class="where">${whereHTML(f)}</div><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p>${seen?starsHTML(f):""}<h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="rent" type="button">Rent it</button>${(member.out||[]).some(r=>r.id===f.id)&&!seen?'<button class="ret" type="button">Return it</button>':""}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
-  const close=()=>{o.remove();document.removeEventListener("keydown",esc);last&&last.focus()};
-  const esc=e=>{if(e.key==="Escape")close()};const last=document.activeElement;
+  const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{if(e.target===o)close()});
   o.querySelector(".x").addEventListener("click",close);
   o.querySelector(".rent").addEventListener("click",()=>{close();sfx.clunk();openSlip(f,()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})})});
@@ -1194,7 +1277,7 @@ async function openCase(f){
   const tv=o.querySelector(".tv-play");
   if(tv)tv.addEventListener("click",()=>{const k=tv.dataset.k;const scr=tv.parentElement;scr.classList.add("tracking");sfx.clunk();setTimeout(()=>{scr.classList.remove("tracking");scr.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(k)}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="${ESC(f.title)} trailer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`},reduce?0:600)});
   o.querySelector(".seen").addEventListener("click",()=>{setWatched(f,!watched.has(f.id));close();renderShop()});
-  document.addEventListener("keydown",esc);document.body.appendChild(o);o.querySelector(".rent").focus();
+  mountModal(o,".rent",modalTrigger);
 }
 
 /* where to watch in Australia (TMDB, data by JustWatch) */
@@ -1235,17 +1318,17 @@ function setLazyUI(){const b=$("lazyBtn");b.setAttribute("aria-pressed",lazy);b.
 
 /* first visit: a quick how-it-works */
 function showWelcome(){
-  const o=document.createElement("div");o.className="welcome";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","How it works");
+  const modalTrigger=document.activeElement;
+  const o=document.createElement("dialog");o.className="welcome";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","How it works");
   o.innerHTML=`<div class="welcome-in"><h2>Movie night, sorted</h2><p class="lead">Pick a film and dinner comes with it.</p><ol>
   <li><span><b>Pick a film</b>Spin the wheel, browse the video shop, or start from what you're craving.</span></li>
   <li><span><b>Get the menu</b>Every film has its own menu built from the movie, with recipes and a shopping list for four.</span></li>
   <li><span><b>Cook, then press play</b>Lock it in for the week, tick off the shopping, and check where it's streaming.</span></li>
   </ol><button class="btn primary" type="button">Let's go</button></div>`;
-  const close=()=>{o.remove();try{localStorage.setItem("mns-welcome","1")}catch(e){}};
+  const close=()=>dismissModal(o);
   o.querySelector("button").addEventListener("click",close);
   o.addEventListener("click",e=>{if(e.target===o)close()});
-  document.addEventListener("keydown",function k(e){if(e.key==="Escape"){close();document.removeEventListener("keydown",k)}});
-  document.body.appendChild(o);o.querySelector("button").focus();
+  mountModal(o,"button",modalTrigger,()=>{try{localStorage.setItem("mns-welcome","1")}catch(e){}});
 }
 
 {const g=document.getElementById("bulbGlow");if(g){let h="";for(let i=0;i<32;i++)h+=`<i style="--a:${i*11.25}deg;--d:${-(i%8)*0.2}s"></i>`;g.innerHTML=h}}
@@ -1428,17 +1511,19 @@ function shareable(data,filename){
   try{return matchMedia("(pointer:coarse)").matches&&!!navigator.canShare&&navigator.canShare({files:[new File([data],filename,{type:"image/jpeg"})]})}catch(e){return false}
 }
 function showOverlay(url,file){
-  const o=document.createElement("div");o.className="overlay";
+  const modalTrigger=document.activeElement;
+  const o=document.createElement("dialog");o.className="overlay";o.setAttribute("aria-label","Save your menu");
+  const close=()=>dismissModal(o);
   o.innerHTML=file
     ?`<img alt="Menu for ${ESC(current.title)}"><p>Your menu is ready.</p><button class="btn primary" type="button" data-share>Save to Photos</button><button class="btn" type="button" data-close>Close</button>`
     :`<img alt="Menu for ${ESC(current.title)}"><p>Press and hold the menu, then choose Save to Photos.</p><button class="btn primary" type="button" data-close>Close</button>`;
   o.querySelector("img").src=url;
-  o.querySelector("[data-close]").addEventListener("click",()=>o.remove());
+  o.querySelector("[data-close]").addEventListener("click",close);
   if(file)o.querySelector("[data-share]").addEventListener("click",async()=>{
-    try{await navigator.share({files:[file],title:`${current.title} menu`});o.remove();$("status").textContent="Saved. Check your Photos."}
+    try{await navigator.share({files:[file],title:`${current.title} menu`});close();$("status").textContent="Saved. Check your Photos."}
     catch(e){if(!(e&&e.name==="AbortError"))o.querySelector("p").textContent="Long-press the menu and choose Save to Photos."}
   });
-  document.body.appendChild(o);
+  mountModal(o,"button",modalTrigger);
 }
 async function exportMenu(kind){
   if(!current)return;
