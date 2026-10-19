@@ -1150,7 +1150,7 @@ function fmtConey(f,spec,menu,poster){
 }
 
 function fmtMcdowellsMark(style=""){
-  return `<svg class="mcdowells-golden-m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 100" role="img" aria-label="McDowell’s golden M" style="${style}"><path fill="#efbd24" d="M9 81V42C9-3 53-3 55 42C57-3 101-3 101 42V81H89V42C89 13 66 13 65 43V81H45V43C44 13 21 13 21 42V81Z"/><rect x="0" y="80" width="110" height="20" fill="#397b28"/><text x="55" y="94" text-anchor="middle" fill="#fff7da" font-family="Libre Franklin, sans-serif" font-size="9" font-weight="600">McDowell’s</text></svg>`;
+  return `<svg class="mcdowells-golden-m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 100" role="img" aria-label="McDowell’s golden M" style="${style}"><path fill="#efbd24" d="M8 82C-2 35 7 8 25 8C42 8 51 28 55 52C59 28 68 8 85 8C103 8 112 35 102 82H96C102 41 96 20 85 20C71 20 62 48 59 82H51C48 48 39 20 25 20C14 20 8 41 14 82Z"/><rect x="0" y="80" width="110" height="20" fill="#397b28"/><text x="55" y="94" text-anchor="middle" fill="#fff7da" font-family="Libre Franklin, sans-serif" font-size="9" font-weight="600">McDowell’s</text></svg>`;
 }
 
 function fmtMcdowells(f,spec,menu,poster){
