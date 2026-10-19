@@ -9,6 +9,12 @@ For the custom HTML/CSS menus in `formats.js`, use authentic film imagery wherev
 
 Apply this where required by each menu, rather than adding a logo to every design. Keep layouts individual to the film and check the result in both the phone view and printable menu. Preserve canonical recipes, methods and shopping lists.
 
+### Continuing the custom-menu queue
+
+Run `node scripts/menu-status.cjs` for the checked total and next pending titles, or add `--json` for the full queue. A film with a working custom format in `FMT_FILMS` is counted separately from the older lobby-card and JPEG poster fallback. Every film already has a fallback menu; pending here means its individual film-world design is still needed.
+
+Josh authorised continuing through the full queue and publishing reviewed batches. Use separate agents for separate film drafts, then one shared integration and visual review. Keep one focused concept per film, share source retrieval, and avoid repeated generation or cosmetic variants. Render every new design, check film-image identities, course spacing and source crops, run phone tab/method checks in a real browser where available, and retain exact recipe methods and shopping. Do not claim an objective 9.5 grade from automated tests alone.
+
 The older poster-lane instructions below remain historical.
 
 
