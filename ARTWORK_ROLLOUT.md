@@ -15,6 +15,8 @@ Run `node scripts/menu-status.cjs` for the checked total and next pending titles
 
 Josh authorised continuing through the full queue and publishing reviewed batches. Use separate agents for separate film drafts, then one shared integration and visual review. Keep one focused concept per film, share source retrieval, and avoid repeated generation or cosmetic variants. Render every new design, check film-image identities, course spacing and source crops, run phone tab/method checks in a real browser where available, and retain exact recipe methods and shopping. Do not claim an objective 9.5 grade from automated tests alone.
 
+The current seven-slot session supports five film designers, one independent reviewer and one integration/publishing owner. Keep each batch to five films and clear its review queue before assigning another batch. The independent checkpoint includes added film-detail claims in phone notes, recognisable subjects in image crops, all five dishes and the complete serving cue. The release checkpoint includes recipe-link tests, real-browser phone interactions and print-image checks, followed by verification that the live files match the reviewed release.
+
 The older poster-lane instructions below remain historical.
 
 
