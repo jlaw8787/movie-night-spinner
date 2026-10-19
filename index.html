@@ -857,6 +857,23 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .fp.fp-market .fp-body{border-radius:0}
 .fp.fp-market .fp-h{background:transparent;box-shadow:none;color:var(--fp-acc);font-size:30px;text-shadow:3px 3px 0 #8b8478;text-align:left;padding:0 2px;text-transform:uppercase}
 .fp.fp-market .fp-price{color:var(--fp-top)}
+/* Channel 4 canteen: keep the film title readable on narrow phones. */
+.fp.fp-newsroom .fp-head{border-top:6px solid #d5a244;border-bottom:4px solid #b87443}
+.fp.fp-newsroom .fp-title{font-size:clamp(22px,6vw,30px);line-height:1.1;text-shadow:none}
+.fp.fp-newsroom .fp-brand{font-family:'Courier Prime',monospace;font-size:11px;line-height:1.4;text-transform:uppercase;letter-spacing:.08em;color:#e8ccaa}
+.fp.fp-newsroom .fp-tab{font-family:'Courier Prime',monospace;font-size:12px;border-radius:0}
+.fp.fp-newsroom .fp-h{font-family:'Courier Prime',monospace;font-size:17px;line-height:1.3;letter-spacing:.03em}
+.fp.fp-newsroom .fp-film{font-size:15px;line-height:1.45}
+.fp.fp-newsroom .fp-cue b{font-family:'Courier Prime',monospace}
+/* Film-world editions: legible mastheads on narrow phones. */
+.fp.fp-jurassic .fp-head{border-top:7px solid #d9a742;border-bottom:4px solid #ac3329}
+.fp.fp-jurassic .fp-title,.fp.fp-coney .fp-title{font-size:clamp(22px,6vw,30px);line-height:1.12;text-shadow:none}
+.fp.fp-jurassic .fp-film,.fp.fp-nakatomi .fp-film{font-size:15px;line-height:1.45}
+.fp.fp-nakatomi .fp-head{border-top:4px solid #b6beb7;border-bottom:3px solid #a43730}
+.fp.fp-nakatomi .fp-title{font-weight:600;text-shadow:none}
+.fp.fp-nakatomi .fp-name{font-size:25px;font-weight:600}
+.fp.fp-coney .fp-head{border-top:7px solid #e5b74b;border-bottom:5px solid #ad3929}
+.fp.fp-coney .fp-brand{text-transform:uppercase;letter-spacing:.08em}
 .fp-title{margin:2px 0 0;font-family:var(--fp-title);font-weight:400;font-size:38px;line-height:.95;color:#fff;text-shadow:3px 3px 0 var(--fp-acc)}
 .fp-tag{margin:6px 0 0;font-size:15px;line-height:1.35;color:#fff;font-style:italic}
 .fp-hint{margin:6px 0 0;font-size:13px;color:var(--fp-top-ink)}
@@ -1547,7 +1564,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 <script src="ratings.js?v=750f6b42" defer></script>
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=e86181bb" defer></script>
-<script src="formats.js?v=400a4b15" defer></script>
+<script src="formats.js?v=664f9de8" defer></script>
 <script src="app.js?v=2a242fc7" defer></script>
 
 </body>
