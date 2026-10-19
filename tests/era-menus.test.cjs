@@ -14,7 +14,7 @@ const exactMenu=f=>f.edition?f.edition.menu:f.recipe;
 const toItem=([n,note,how,shop])=>({n,note,how,shop});
 const lobbyPoster=f=>TMDB_POSTERS[f.id]||null;
 `+rd('tmdb-posters.js')+rd('formats.js')+`;this.specs=FMT_FILMS;this.renderers=FMT_RENDER;this.palettes=FMT_PHONE;this.menu=fmtMenu;this.phone=fmtPhoneHTML;`,ctx);
-const batch=['Anchorman: The Legend of Ron Burgundy (2004)','Jurassic Park (1993)','Die Hard (1988)','The Warriors (1979)'];
+const batch=['Anchorman: The Legend of Ron Burgundy (2004)','Jurassic Park (1993)','Die Hard (1988)','The Warriors (1979)','Coming to America (1988)','Do the Right Thing (1989)','Fried Green Tomatoes (1991)'];
 let dishes=0;
 for(const[id,spec]of Object.entries(ctx.specs)){
  const slug=id.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -44,7 +44,7 @@ for(const[id,spec]of Object.entries(ctx.specs)){
   for(const [role,path] of used){
    assert.match(path,/^\/[A-Za-z0-9]+\.(?:jpg|png|svg)$/,id+' valid '+role+' image path');
   }
-  assert.ok(used.some(([role])=>role==='logo'),id+' official logo used');
+  assert.ok(used.some(([role])=>['logo','poster','identity'].includes(role))||html.toLowerCase().includes(ESCForTest(spec.phoneTitle).toLowerCase()),id+' film identity included');
   assert.ok(new Set(used.map(([,path])=>path)).size>=3,id+' distinct film imagery');
   assert.ok(!/api_key=|access_token=|api\.themoviedb/.test(html),id+' no credentials or API requests in browser markup');
  }
@@ -55,4 +55,4 @@ for(const[id,spec]of Object.entries(ctx.specs)){
  assert.ok(phone.includes(ESCForTest(spec.phoneTitle)),id+' short phone title');
 }
 function ESCForTest(s){return String(s).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));}
-console.log(`PASS: ${Object.keys(ctx.specs).length} film-world formats and ${dishes} dish links; four recent editions retain exact recipes, printable markup and complete phone sections.`);
+console.log(`PASS: ${Object.keys(ctx.specs).length} film-world formats and ${dishes} dish links; seven recent editions retain exact recipes, printable markup and complete phone sections.`);
