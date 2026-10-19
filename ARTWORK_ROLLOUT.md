@@ -3,6 +3,15 @@
 > **Poster lanes closed, 15 October 2026.** Every film now shows its official poster from TMDB in the lobby-card menu, with an exact 4-person menu from `recipe-menus.js` or `movie-menus.js`. Do not make new poster art or run the lanes below. The 124 finished poster JPEGs in `assets/menu-posters/` are kept only as a fallback if TMDB can't load. The rest of this file is kept for history.
 
 
+## Current film-world menu asset standard, 19 October 2026
+
+For the custom HTML/CSS menus in `formats.js`, use authentic film imagery wherever a recognisable sign, logo, prop or setting needs to match the movie. Prefer official TMDB assets or an actual film frame over a hand-drawn approximation or generated imitation. Crop and align the source image with the layout; preserve its recognisable shapes, lettering and proportions. Record the source for any locally stored detail image.
+
+Apply this where required by each menu, rather than adding a logo to every design. Keep layouts individual to the film and check the result in both the phone view and printable menu. Preserve canonical recipes, methods and shopping lists.
+
+The older poster-lane instructions below remain historical.
+
+
 ## Standard
 
 Each film gets an individually art-directed A4 menu poster. Use the approved Warriors print as the quality benchmark: cinematic artwork, recognisable film typography, clear food hierarchy and legible descriptions. A category recolour or clip-art substitute is not a completed film.
