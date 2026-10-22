@@ -10,6 +10,7 @@
      data/dish-names.json   every film's dish names, for the seasonal shelves and the Candy bar, fetched once the page settles
      data/dish-notes.json   dish notes for the Candy bar search, fetched when the Candy bar opens */
 const fs = require('fs'), path = require('path'), vm = require('vm'), crypto = require('crypto');
+require('./build-formats.cjs');
 const root = path.join(__dirname, '..');
 const rd = p => fs.readFileSync(path.join(root, p), 'utf8');
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -56,7 +57,7 @@ let html = rd('index.html');
 html = html.replace(/(src|href)="([\w.-]+\.(?:js|css))(\?v=[\w_]+)?"/g, (m, a, f) => fs.existsSync(path.join(root, f)) ? `${a}="${f}?v=${hash(f)}"` : m);
 fs.writeFileSync(path.join(root, 'index.html'), html);
 let sw = rd('sw.js');
-const ver = crypto.createHash('sha1').update(html + rd('app.js') + rd('formats.js') + rd('films.js')).digest('hex').slice(0, 8);
+const ver = crypto.createHash('sha1').update(html + rd('app.js') + rd('formats-core.js') + rd('films.js')).digest('hex').slice(0, 8);
 sw = sw.replace(/const VERSION = '[^']*'/, `const VERSION = 'mns-${ver}'`);
 fs.writeFileSync(path.join(root, 'sw.js'), sw);
 console.log(`films ${lite.length}, editions ${lite.filter(f => f.e).length}, missing recipes ${missing}`);

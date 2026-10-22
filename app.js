@@ -695,7 +695,7 @@ async function show(f,preferSig){
   const id=++renderId;
   current=f;
   updateWatchButton();
-  await ensureExact(f);
+  await Promise.all([ensureExact(f),fmtLoad(f)]);
   if(id!==renderId)return;
   let menu=makeMenu(f,preferSig);if(lazy)menu=lazyMenu(menu);menu.counter=counterShop(f.id);
   $("whereWheel").innerHTML=whereHTML(f);
@@ -837,12 +837,12 @@ function tickShowtime(){
 function weekNo(d){const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));const day=t.getUTCDay()||7;t.setUTCDate(t.getUTCDate()+4-day);const y=new Date(Date.UTC(t.getUTCFullYear(),0,1));return Math.ceil(((t-y)/864e5+1)/7)+t.getUTCFullYear()*53}
 const MOTW_KIND={workorder:"A firehouse work order",lanes:"A league night score sheet",market:"The corner market wall",takeaway:"A Chinatown takeaway trifold",diner:"The Wazoo Diner trifold",casefile:"A Prohibition case file",noodle:"Mr Ping's noodle shop wall",slims:"The Jack Rabbit Slim's menu",nero:"A Little Nero's pizza box",lous:"The Lou's Cafe letter board",pad:"Henry's notepad, May 1980"};
 function renderMotw(){
-  const box=$("motw");if(!box||typeof FMT_FILMS==="undefined")return;
-  const ids=Object.keys(FMT_FILMS).filter(id=>FILMS.some(f=>f.id===id)&&(!kidsMode||isKidSafe(FILMS.find(f=>f.id===id)))).sort();
+  const box=$("motw");if(!box||typeof FMT_INDEX==="undefined")return;
+  const ids=Object.keys(FMT_INDEX).filter(id=>FILMS.some(f=>f.id===id)&&(!kidsMode||isKidSafe(FILMS.find(f=>f.id===id)))).sort();
   if(!ids.length){box.hidden=true;return}
   const f=FILMS.find(x=>x.id===ids[weekNo(new Date())%ids.length]);
   if(week&&week.id===f.id){box.hidden=true;return}
-  const sp=FMT_FILMS[f.id],p=lobbyPoster(f);
+  const sp={fmt:FMT_INDEX[f.id]},p=lobbyPoster(f);
   box.hidden=false;
   box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:"<span></span>"}<p class="week-k">Menu of the week</p><p class="week-t">${ESC(f.title)} (${f.year})<small>${ESC(MOTW_KIND[sp.fmt]||"A printed menu from the film")}</small></p><div class="week-acts"><button class="go" type="button" id="motwOpen">Open the menu</button><button type="button" id="motwLock">Lock it in</button></div>`;
   $("motwOpen").addEventListener("click",()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
@@ -1017,6 +1017,7 @@ function openSlip(f,go){
     const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
     if(a==="back")return close();
     if(a==="peek"){const box=o.querySelector(".peekbox"),btn=e.target,open=box.hidden;
+      if(open&&!box.innerHTML&&typeof fmtLoad==="function"&&FMT_INDEX[f.id]&&!fmtSpec(f)){btn.disabled=true;fmtLoad(f).then(()=>{btn.disabled=false;btn.click()});return}
       if(open&&!box.innerHTML){const sp=typeof fmtSpec==="function"&&fmtSpec(f);const m=sp?fmtMenu(f,sp):makeMenu(f,true);
         const list=sp?m.all:[...m.s,...m.m,...m.w,...m.d];
         box.innerHTML=`<h4>Tonight's menu</h4><ol>${list.map(it=>`<li><b>${ESC(it.label||it.n)}</b><span>${ESC(it.film||it.note||"")}</span></li>`).join("")}</ol><p class="small">Serves four. Full menu, method and shopping list once you roll the film.</p>`}

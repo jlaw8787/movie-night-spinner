@@ -18,7 +18,8 @@ Serve the repository as a static website, or deploy the root of the `main` branc
 
 The page is split so phones only download what they need:
 
-- `index.html` holds the markup and styles, `app.js` the app, `formats.js` the era menus.
+- `index.html` holds the markup and styles, `app.js` the app.
+- `formats.js` is the source for the era menus. The build splits it into `formats-core.js` (shared, loaded up front) and `formats/<menu>.js` (one per film, fetched only when that film opens). Edit `formats.js`, never the generated files.
 - `films.js` is a light index of all 850 films (title, year, theme).
 - Each film's full menu, methods and shopping live in `data/film/<slug>.json`, fetched when the film is opened.
 - Dish names and notes for the seasonal shelves and the Candy bar load after the page settles.
