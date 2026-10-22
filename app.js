@@ -390,7 +390,11 @@ function ensureFonts(st){
 const ORN={redsauce:"❧ ❦ ☙",pizza:"● ● ●",deli:"✶ ✶ ✶",street:"▰▱▰▱▰",cop:"✕ CASE CLOSED ✕",soul:"✿ ✿ ✿",xmas:"❄ ✦ ❄",aussie:"✺ ✺ ✺",asian:"❀ ❀ ❀",scifi:"◇ ◆ ◇",hero:"★ POW ★",kids:"✩ ✩ ✩",teen:"▲ ● ■",diner:"◆ ◆ ◆",mex:"✹ ✹ ✹",tiki:"✾ ✾ ✾",uptown:"◈ ◈ ◈",horror:"☾ ✝ ☽",western:"✯ ✯ ✯",philly:"■ ROUND ONE ■",galaxy:"✦ · ✧ · ✦",wizard:"⚘ ✧ ⚘",adventure:"⟡ X MARKS THE SPOT ⟡",fairytale:"♛ ✧ ♛",romcom:"♡ ♡ ♡"};
 const shortHow=s=>{const i=s.indexOf(". ");return i>0&&i<s.length-1?s.slice(0,i+1):s};
 /* the menu card shows the dish's short description, not the first step of the 4-person method */
-function cardBlurb(f,it){for(const k of ["S","M","W","K"])for(const d of f[k]||[])if(d[0]===it.n&&d[2])return shortHow(d[2]);return it.how?shortHow(it.how):""}
+function cardBlurb(f,it){
+  /* the small line under a dish: its menu line, or the film moment when the menu line is already showing as the note */
+  const same=(a,b)=>(a||"").replace(/[^a-z0-9]/gi,"").toLowerCase()===(b||"").replace(/[^a-z0-9]/gi,"").toLowerCase();
+  for(const k of ["S","M","W","K"])for(const d of f[k]||[])if(d[0]===it.n&&d[2]){const b=shortHow(d[2]);if(!same(b,it.note))return b;return d[1]&&!same(d[1],it.note)?d[1].charAt(0).toUpperCase()+d[1].slice(1)+(/[.!?]$/.test(d[1])?"":"."):""}
+  const b=it.how?shortHow(it.how):"";return same(b,it.note)?"":b}
 const AISLES=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Drinks","Bottle shop"];
 function shopGroups(menu){
   const groups={};
