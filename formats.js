@@ -1414,7 +1414,9 @@ function fmtConey(f,spec,menu,poster){
 }
 
 function fmtMcdowellsMark(style=""){
-  return `<span class="mcdowells-film-sign" role="img" aria-label="The actual McDowell’s golden arcs sign from Coming to America" style="display:inline-block;position:relative;overflow:hidden;${style}"><img crossorigin="anonymous" src="assets/menu-details/mcdowells-film-source.jpg" alt="" aria-hidden="true" style="position:absolute;max-width:none;width:774.19355%;height:303.0303%;left:-411.6129%;top:-8.08081%;display:block"></span>`;
+  const w=+((style.match(/width:(\d+)px/)||[])[1]||60);
+  /* a plain lettered badge in the restaurant's colours; the real sign appears in the film still beside it */
+  return `<span class="mcdowells-film-sign" role="img" aria-label="McDowell's" style="display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:.08em;box-sizing:border-box;background:#a72525;border:3px solid #edbd47;border-radius:8px;box-shadow:inset 0 0 0 2px #a72525,inset 0 0 0 4px #edbd47;color:#edbd47;font-family:'Bevan',serif;line-height:.95;text-align:center;font-size:${Math.round(w*.3)}px;${style}"><span style="font-size:1.5em">Mc</span><span style="font-size:.62em;letter-spacing:.04em;color:#f7efd9">Dowell's</span></span>`;
 }
 
 function fmtMcdowells(f,spec,menu,poster){
