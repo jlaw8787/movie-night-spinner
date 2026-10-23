@@ -1,6 +1,8 @@
+/* Spinner Video: one ordered stylesheet. Base -> 1996 theme -> mobile -> mobile theme. */
 /* Spinner Video retail refresh. Scoped to Video Shop; other views stay untouched. */
 #viewShop{--sv-blue:#173d98;--sv-yellow:#f4cc37;--sv-paper:#f3f0e6;--sv-ink:#172542;background:var(--sv-paper);color:var(--sv-ink);border-radius:4px;padding:0 0 22px;overflow:hidden}
-#viewShop .sv-front,#viewShop .sv-aisles{display:none}
+/* Shopfront restored by 1996 theme; aisle image replaced by real browsable shelves. */
+#viewShop .sv-aisles{display:none}
 #viewShop .sv-entry{background:var(--sv-blue);color:#fff;border-bottom:7px solid var(--sv-yellow);padding:clamp(22px,4vw,50px) clamp(18px,4vw,48px);display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,.75fr);gap:24px;align-items:center}
 #viewShop .sv-entry-kicker{font:700 12px/1.3 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--sv-yellow);margin:0 0 8px}
 #viewShop .sv-entry h2{font:800 clamp(32px,5vw,58px)/1.04 Arial,Helvetica,sans-serif;letter-spacing:-.045em;color:white;text-transform:none;margin:0 0 12px}
@@ -57,6 +59,44 @@
 @media(prefers-reduced-motion:reduce){#viewShop .shop.lightson,#viewShop .tape .box{animation:none;transition:none}}
 
 
+
+/* SPINNER VIDEO / 1996 suburban rental shop / v3 */
+#viewShop{--sv-blue:#07357b;--sv-yellow:#ffd22e;--sv-paper:#e8e5dc;--sv-ink:#15243a;background:#d9d5c9;border:4px solid #173c7c;box-shadow:inset 0 0 0 2px #f1e8c9}
+#viewShop .sv-entry{position:relative;min-height:255px;align-content:center;grid-template-columns:minmax(0,1fr) minmax(150px,.6fr);background:linear-gradient(110deg,#052558 0%,#093b8c 72%,#154a9b 100%);border-bottom:8px solid #f5c927;padding:32px clamp(18px,4vw,42px);overflow:hidden}
+#viewShop .sv-entry:before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.025) 3px 4px)}
+#viewShop .sv-entry:after{content:"VIDEO RENTALS • NEW RELEASES • WEEKLIES";position:absolute;right:0;bottom:0;background:#dc2f36;color:white;font:800 10px Arial,sans-serif;letter-spacing:.08em;padding:5px 16px}
+#viewShop .sv-entry-kicker{color:#ffe174;letter-spacing:.13em;font-size:11px}
+#viewShop .sv-entry h2{font-family:Arial Black,Arial,Helvetica,sans-serif;font-weight:900;font-stretch:condensed;font-size:clamp(38px,6vw,74px);line-height:.92;letter-spacing:-.065em;color:#ffda33;text-shadow:3px 3px 0 #10204a;margin:6px 0 17px}
+#viewShop .sv-entry h2 span{display:block;color:#fff}
+#viewShop .sv-entry p{max-width:380px}
+#viewShop .sv-entry-actions button{background:#ffd22e;border:2px solid #ffd22e;color:#102958;font-weight:900;letter-spacing:.01em;box-shadow:3px 3px 0 #061e4c}
+#viewShop .sv-entry-actions button.secondary{color:#fff;background:#113d84;border-color:#a9bde1}
+#viewShop .sv-entry-panel{background:#f5d048;border:3px solid #fff2b0;box-shadow:5px 5px 0 #08285d;transform:rotate(1deg);color:#072858}
+#viewShop .sv-entry-panel strong,#viewShop .sv-entry-panel p{color:#092d68}
+#viewShop .sv-entry-panel .sv-panel-rule{background:#e33437}
+#viewShop .sv-front{display:block;position:relative;max-height:240px;overflow:hidden;border-bottom:6px solid #b42d35}
+#viewShop .sv-front img{display:block;width:100%;height:240px;object-fit:cover;object-position:center 50%;filter:saturate(.78) contrast(1.02)}
+#viewShop .sv-front .sv-sign{display:none}
+#viewShop .shop-head{background:#e8e5dc;border-bottom:2px solid #b8b3a6}
+#viewShop .shop-sign{font-weight:900;color:#07357b;letter-spacing:-.035em}
+#viewShop .shop-tools input[type=search],#viewShop .shop-tools select{border:2px solid #9b9a95;background:#faf9f3}
+#viewShop .sv-section-label{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 20px 8px;padding:8px 12px;background:#07357b;color:#ffda33;border-left:6px solid #db3339;box-shadow:3px 3px 0 #aca89e}
+#viewShop .sv-section-label b{font:900 17px Arial,Helvetica,sans-serif;letter-spacing:.025em}
+#viewShop .sv-section-label span{font:600 11px Arial,Helvetica,sans-serif;color:#fff}
+#viewShop .sv-counter-label{background:#be3038}
+#viewShop #shopCal{background:#f9f1d5;border:2px solid #c8b98b;box-shadow:3px 3px 0 #b7b0a0}
+#viewShop #shopCal .cal-k{color:#123d7f;font-weight:900}
+#viewShop .sv-board{background:#f9f7ef;border:2px solid #9b9b91;box-shadow:3px 3px 0 #b4afa4}
+#viewShop .sv-jump{background:#d1cec3;border-block:2px solid #b6b1a3;padding:12px 16px}
+#viewShop .sv-hang-chip{background:#f8f5e9;border:2px solid #07357b;color:#07357b;font-weight:800}
+#viewShop #shopAisles{background:repeating-linear-gradient(0deg,#ddd9cc 0px,#ddd9cc 40px,#d6d2c5 40px,#d6d2c5 41px)}
+#viewShop .aisle .aisle-sign{color:#07357b;font-weight:900}
+#viewShop .aisle-top{border-bottom:5px solid #f2c527}
+#viewShop .shelf{background:linear-gradient(to bottom,transparent calc(100% - 17px),#665743 calc(100% - 17px),#8b7655 calc(100% - 9px),#4c4032 calc(100% - 9px))!important;border-bottom:2px solid #423b30}
+#viewShop .tape .box,#viewShop .aisle.wall .box{background:#222;box-shadow:3px 3px 0 #777061;border:3px solid #232323}
+#viewShop .tape .box img{object-fit:cover}
+#viewShop .tape-t{font-weight:800}
+
 /* Mobile-first video store: practical 1990s rental shop, no generated decoration. */
 @media(max-width:700px){
   #viewShop{width:100%;max-width:100%;min-width:0;margin:0;padding:0 0 calc(28px + env(safe-area-inset-bottom,0px));border-radius:0;overflow:clip}
@@ -111,42 +151,7 @@
 }
 
 
-/* SPINNER VIDEO / 1996 suburban rental shop / v3 */
-#viewShop{--sv-blue:#07357b;--sv-yellow:#ffd22e;--sv-paper:#e8e5dc;--sv-ink:#15243a;background:#d9d5c9;border:4px solid #173c7c;box-shadow:inset 0 0 0 2px #f1e8c9}
-#viewShop .sv-entry{position:relative;min-height:255px;align-content:center;grid-template-columns:minmax(0,1fr) minmax(150px,.6fr);background:linear-gradient(110deg,#052558 0%,#093b8c 72%,#154a9b 100%);border-bottom:8px solid #f5c927;padding:32px clamp(18px,4vw,42px);overflow:hidden}
-#viewShop .sv-entry:before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.025) 3px 4px)}
-#viewShop .sv-entry:after{content:"VIDEO RENTALS • NEW RELEASES • WEEKLIES";position:absolute;right:0;bottom:0;background:#dc2f36;color:white;font:800 10px Arial,sans-serif;letter-spacing:.08em;padding:5px 16px}
-#viewShop .sv-entry-kicker{color:#ffe174;letter-spacing:.13em;font-size:11px}
-#viewShop .sv-entry h2{font-family:Arial Black,Arial,Helvetica,sans-serif;font-weight:900;font-stretch:condensed;font-size:clamp(38px,6vw,74px);line-height:.92;letter-spacing:-.065em;color:#ffda33;text-shadow:3px 3px 0 #10204a;margin:6px 0 17px}
-#viewShop .sv-entry h2 span{display:block;color:#fff}
-#viewShop .sv-entry p{max-width:380px}
-#viewShop .sv-entry-actions button{background:#ffd22e;border:2px solid #ffd22e;color:#102958;font-weight:900;letter-spacing:.01em;box-shadow:3px 3px 0 #061e4c}
-#viewShop .sv-entry-actions button.secondary{color:#fff;background:#113d84;border-color:#a9bde1}
-#viewShop .sv-entry-panel{background:#f5d048;border:3px solid #fff2b0;box-shadow:5px 5px 0 #08285d;transform:rotate(1deg);color:#072858}
-#viewShop .sv-entry-panel strong,#viewShop .sv-entry-panel p{color:#092d68}
-#viewShop .sv-entry-panel .sv-panel-rule{background:#e33437}
-#viewShop .sv-front{display:block;position:relative;max-height:240px;overflow:hidden;border-bottom:6px solid #b42d35}
-#viewShop .sv-front img{display:block;width:100%;height:240px;object-fit:cover;object-position:center 50%;filter:saturate(.78) contrast(1.02)}
-#viewShop .sv-front .sv-sign{display:none}
-#viewShop .shop-head{background:#e8e5dc;border-bottom:2px solid #b8b3a6}
-#viewShop .shop-sign{font-weight:900;color:#07357b;letter-spacing:-.035em}
-#viewShop .shop-tools input[type=search],#viewShop .shop-tools select{border:2px solid #9b9a95;background:#faf9f3}
-#viewShop .sv-section-label{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 20px 8px;padding:8px 12px;background:#07357b;color:#ffda33;border-left:6px solid #db3339;box-shadow:3px 3px 0 #aca89e}
-#viewShop .sv-section-label b{font:900 17px Arial,Helvetica,sans-serif;letter-spacing:.025em}
-#viewShop .sv-section-label span{font:600 11px Arial,Helvetica,sans-serif;color:#fff}
-#viewShop .sv-counter-label{background:#be3038}
-#viewShop #shopCal{background:#f9f1d5;border:2px solid #c8b98b;box-shadow:3px 3px 0 #b7b0a0}
-#viewShop #shopCal .cal-k{color:#123d7f;font-weight:900}
-#viewShop .sv-board{background:#f9f7ef;border:2px solid #9b9b91;box-shadow:3px 3px 0 #b4afa4}
-#viewShop .sv-jump{background:#d1cec3;border-block:2px solid #b6b1a3;padding:12px 16px}
-#viewShop .sv-hang-chip{background:#f8f5e9;border:2px solid #07357b;color:#07357b;font-weight:800}
-#viewShop #shopAisles{background:repeating-linear-gradient(0deg,#ddd9cc 0px,#ddd9cc 40px,#d6d2c5 40px,#d6d2c5 41px)}
-#viewShop .aisle .aisle-sign{color:#07357b;font-weight:900}
-#viewShop .aisle-top{border-bottom:5px solid #f2c527}
-#viewShop .shelf{background:linear-gradient(to bottom,transparent calc(100% - 17px),#665743 calc(100% - 17px),#8b7655 calc(100% - 9px),#4c4032 calc(100% - 9px))!important;border-bottom:2px solid #423b30}
-#viewShop .tape .box,#viewShop .aisle.wall .box{background:#222;box-shadow:3px 3px 0 #777061;border:3px solid #232323}
-#viewShop .tape .box img{object-fit:cover}
-#viewShop .tape-t{font-weight:800}
+
 @media(max-width:700px){
   #viewShop{border:0;box-shadow:none;background:#dedacf}
   #viewShop .sv-entry{min-height:0;padding:19px 16px 23px;border-bottom:6px solid #f5c927}
@@ -174,3 +179,9 @@
   #viewShop #shopAisles .tape{flex-basis:132px}
   #viewShop #shopAisles .tape .box{border:3px solid #232323}
 }
+
+/* Stable shopfront: prevent old absolute-photo and negative-margin rules leaking through. */
+#viewShop .sv-front{margin:0;border-radius:0;aspect-ratio:auto;height:220px;max-height:none;container-type:normal}
+#viewShop .sv-front img{position:static;inset:auto;width:100%;height:100%;object-fit:cover;object-position:center 48%}
+#viewShop .sv-entry-actions .sv-hang-chip{min-width:0;white-space:normal}
+@media(max-width:700px){#viewShop .sv-front{height:145px;max-height:145px;margin:0;border-radius:0}#viewShop .sv-front img{height:145px}#viewShop .sv-entry{min-height:0}#viewShop .sv-entry-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#viewShop .sv-entry-actions .sv-hang-chip{width:100%;font-size:12px;min-height:48px}}
