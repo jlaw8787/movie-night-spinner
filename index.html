@@ -1441,25 +1441,9 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
   <section class="week motw" id="motw" aria-label="Menu of the week" hidden></section>
 
   <section class="shop" id="viewShop" aria-label="Video shop" hidden>
-    <div class="sv-entry">
-      <div>
-        <p class="sv-entry-kicker">EST. 1996 · YOUR LOCAL VIDEO STORE</p>
-        <h2>SPINNER <span>VIDEO</span></h2>
-        <p>Friday night starts here. Pick a movie. Grab a tape. Sort dinner.</p>
-        <div class="sv-entry-actions">
-          <button type="button" class="sv-hang-chip" data-go="wall">ENTER THE STORE →</button>
-          <button type="button" class="sv-hang-chip secondary" data-go="Staff picks">STAFF PICKS</button>
-        </div>
-      </div>
-      <div class="sv-entry-panel" aria-label="Store information">
-        <strong>GOOD MOVIES. GOOD FOOD. GREAT NIGHTS.</strong>
-        <span class="sv-panel-rule" aria-hidden="true"></span>
-        <p>Real movie covers. Every film on the wheel. Your next movie night starts on the shelf.</p>
-      </div>
-    </div>
     <div class="sv-front" id="svFront"><img src="assets/hero/shopfront-1000.webp" srcset="assets/hero/shopfront-1000.webp 1000w, assets/hero/shopfront-1400.webp 1400w, assets/hero/shopfront.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Spinner Video shopfront at night" loading="lazy"><div class="sv-sign fit" style="left:6.20%;top:5.86%;width:87.09%;height:11.72%"><span class="fit-t">Spinner Video</span><small>Open 7 days till late</small></div></div>
     <div class="shop-head">
-      <h2 class="shop-sign">BROWSE THE AISLES<small>Pick a tape. Turn it over. Find your movie-night menu.</small></h2>
+      <h2 class="shop-sign">Spinner Video<small>Every film on the wheel, face-out on the shelves. Tap a tape to read the back.</small></h2>
       <div class="shop-tools">
         <input type="search" id="shopSearch" placeholder="Ask the counter for a title" aria-label="Search titles">
         <select id="shopDecade" aria-label="Decade"><option value="">Any decade</option></select>
@@ -1469,9 +1453,9 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
       </div>
     </div>
     
-    <div class="sv-section-label"><b>SEASONAL SPECIALS</b><span>Featured collections, all year round</span></div><div class="cal" id="shopCal" aria-label="Holiday calendar"></div>
-    <div class="sv-section-label sv-counter-label"><b>THE RENTAL COUNTER</b><span>Tonight’s specials</span></div><div class="sv-board" id="svBoard"></div>
+    <div class="sv-board" id="svBoard"></div>
     <div class="sv-aisles"><img src="assets/hero/aisles-1000.webp" srcset="assets/hero/aisles-1000.webp 1000w, assets/hero/aisles-1400.webp 1400w, assets/hero/aisles.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Inside the shop" loading="lazy"><button type="button" class="sv-hang fit" data-go="wall" style="left:9.13%;top:4.51%;width:15.67%;height:9.70%"><span class="fit-t">New releases</span></button><button type="button" class="sv-hang fit" data-go="Comedy and teen" style="left:40.70%;top:10.60%;width:19.05%;height:8.12%"><span class="fit-t">Comedy</span></button><button type="button" class="sv-hang fit" data-go="Family" style="left:64.04%;top:19.50%;width:9.13%;height:5.07%"><span class="fit-t">Family</span></button><button type="button" class="sv-hang fit" data-go="Horror" style="left:39.52%;top:22.44%;width:6.54%;height:3.49%"><span class="fit-t">Horror</span></button><button type="button" class="sv-hang fit" data-go="Sci-fi" style="left:50.68%;top:24.46%;width:5.86%;height:3.04%"><span class="fit-t">Sci-fi</span></button><button type="button" class="sv-hang fit" data-go="Drama" style="left:79.03%;top:25.48%;width:5.36%;height:3.04%"><span class="fit-t">Drama</span></button><p class="sv-aisles-k">Tap a sign to walk to that aisle</p></div><div class="sv-jump" aria-label="Walk to an aisle"><button type="button" class="sv-hang-chip" data-go="wall">New releases</button><button type="button" class="sv-hang-chip" data-go="Comedy and teen">Comedy</button><button type="button" class="sv-hang-chip" data-go="Family">Family</button><button type="button" class="sv-hang-chip" data-go="Horror">Horror</button><button type="button" class="sv-hang-chip" data-go="Sci-fi">Sci-fi</button><button type="button" class="sv-hang-chip" data-go="Drama">Drama</button></div>
+    <div class="cal" id="shopCal" aria-label="Holiday calendar"></div>
     <div class="member" id="memberCard"></div>
     <p class="shop-count" id="shopCount" aria-live="polite"></p>
     <div id="shopAisles"></div>
@@ -1576,7 +1560,6 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 </div>
 <p class="credit"><a class="tmdb-logo" href="https://www.themoviedb.org/" rel="noopener" target="_blank"><img src="assets/tmdb/tmdb-logo.svg" alt="TMDB" width="120" height="16"></a> Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB. Where to watch data by <a href="https://www.justwatch.com/au" rel="noopener" target="_blank">JustWatch</a>. <button class="howlink" id="howBtn" type="button">How it works</button></p>
 
-<link rel="stylesheet" href="video-store-refresh.css?v=4">
 <script src="tmdb-posters.js?v=07c53d1c" defer></script>
 <script src="ratings.js?v=750f6b42" defer></script>
 <script src="providers.js?v=1403fceb" defer></script>
