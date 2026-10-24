@@ -1,0 +1,25 @@
+name: Candy Bar mobile smoke test
+on:
+  push:
+    paths:
+      - 'candy-bar-preview/**'
+      - 'movie-menus.js'
+      - '.github/workflows/candy-bar-mobile.yml'
+  workflow_dispatch:
+jobs:
+  mobile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - run: python3 -m http.server 8765 > /tmp/candy-server.log 2>&1 &
+      - run: node candy-bar-preview/mobile-smoke.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: candy-bar-mobile-screenshot
+          path: candy-bar-mobile.png
