@@ -27,3 +27,13 @@ Create `rework/<fmt>.labels.json` to change what prints for a dish without touch
 For each fmt in your list: improve the renderer in `rework/<fmt>.js` and/or add `rework/<fmt>.labels.json` until you'd honestly grade it 9.5. Change only those files. No builds, no git, don't edit formats.js.
 
 Finish with one line per menu: fmt, what you changed, honest grade.
+
+## Round 2 rules from the owner (25 Oct 2026). These override anything above.
+1. **The menu is an object that exists inside that film's universe.** Ask: what printed thing would a character in this film actually pick up? Jurassic Park is a fold-out visitor centre guide with a park map. A Chinese takeaway in the film is a takeaway menu. A deli is an order pad or wall board. A hotel is a room service card. A precinct is a report form. Use folds only if that object folds. No shared template look: if two menus feel like the same layout with different colours, one of them is wrong.
+2. Reference: `shots/jurassic.jpg` (renderer `jurassic.js`) is the bar. Look at it before you start.
+3. **SVG does not render in the saved image.** Build maps, stamps, badges and shapes from positioned divs (border-radius, borders, rotate transforms). Also avoid clip-path, CSS filters on text, vertical text, background-clip:text, mix-blend-mode, repeating gradients and inset box-shadow.
+4. Fill the page. No big empty patches, no text jammed against an edge. Text must sit at least 10px inside its card. Check the jpg, not just the SPILL line: overflow:hidden can hide clipped text from the checker.
+5. Minimum sizes still apply (names 17px, desc and notes 13px, small print 10px, credit 9px). Photos under about 40% of the page.
+6. Only use film details you are certain are in the film. If unsure, leave it out. No real brands or real restaurants. No song lyrics. Seafood dishes stay seafood. No em or en dashes. Plain Australian English, no AI words.
+7. Family films are alcohol-free on the page (names, notes, props): suite, ooze, lair, roadtrip, tonys, gimbels, toystore, moodslime, maytable, pizzatime, maitland, jurassic.
+8. The printed name must still describe the same food or drink as the recipe (labels only change the printed text).
