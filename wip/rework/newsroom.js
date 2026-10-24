@@ -1,0 +1,32 @@
+function fmtNewsroom(f,spec,menu,poster){
+  const B="#652838",P="#f4ead3",W="#fbf5e6",I="#392c26",G="#d5a244",M="#6b584b",L="#cdb894";
+  const HEAD="font-family:'Bevan',serif;font-weight:400",BODY="font-family:'Libre Franklin',sans-serif",TYPE="font-family:'Courier Prime',monospace";
+  const lab=(t,c=B,e='')=>`<div style="${TYPE};font-size:11.5px;line-height:1.3;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${c};${e}">${ESC(t)}</div>`;
+  const rows=[];let n=0;
+  spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+  const pg=['A1','A2','B1','C1','D1'],slug=['CHEESE','FRIES','LEAD','KICKER','TOAST'],talent=['Baxter','Champ','Ron','Veronica','Brick'],tm=['0:45','1:10','2:30','0:40','0:20'];
+  const nm=s=>ESC(s).replace('SCOTCH',`<span style="color:${G};background:${B};padding:0 3px">SCOTCH</span>`);
+  const row=(r,i)=>`<div style="flex:1;display:grid;grid-template-columns:44px 1fr 92px 52px;column-gap:12px;align-items:center;border-top:1px solid ${L};padding:5px 0">
+    <div style="${TYPE};font-size:16px;font-weight:700;color:${B}">${pg[i]}</div>
+    <div><div style="display:flex;align-items:baseline;gap:9px">${lab(slug[i],M)}<span style="${BODY};font-size:21px;line-height:1.1;font-weight:700;color:${I}">${nm(r.it.label||'')}</span></div>
+      ${r.it.desc?`<div style="${BODY};font-size:13.5px;line-height:1.42;color:${I};margin-top:2px">${ESC(r.it.desc)}${/[.!?]$/.test(r.it.desc)?'':'.'}</div>`:''}
+      ${r.it.film?`<div style="${TYPE};font-size:13px;line-height:1.3;color:${B};margin-top:1px">${ESC(r.it.film)}</div>`:''}</div>
+    <div style="${TYPE};font-size:14px;font-weight:700;color:${I}">${talent[i]}</div>
+    <div style="${TYPE};font-size:14px;font-weight:700;color:${M};text-align:right">${tm[i]}</div></div>`;
+  const sheet=`<section style="position:absolute;left:330px;top:24px;width:717px;height:694px;box-sizing:border-box;background:${W};box-shadow:0 10px 24px rgba(0,0,0,.35);padding:16px 24px 10px;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid ${B};padding-bottom:9px">
+      <div>${lab('KVWN Channel 4 / San Diego / Show rundown')}<div style="${HEAD};font-size:40px;line-height:1.02;color:${B};margin-top:4px">The six o'clock supper</div><div style="${BODY};font-size:15px;color:${M};margin-top:3px">${ESC(spec.brand||'')}. ${ESC(spec.tag||'')}</div></div>
+      <div style="border:2px solid ${B};padding:5px 10px;text-align:center;transform:rotate(3deg)">${lab('On air')}<div style="${HEAD};font-size:24px;color:${B};line-height:1.05">6:00</div>${lab('Live',M)}</div></div>
+    <div style="display:grid;grid-template-columns:44px 1fr 92px 52px;column-gap:12px;padding:6px 0 3px">${lab('Pg',M)}${lab('Slug / item',M)}${lab('Talent',M)}${lab('Time',M,'text-align:right')}</div>
+    <div style="flex:1;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+    <div style="border-top:3px solid ${B};padding-top:7px;display:flex;justify-content:space-between;gap:16px">
+      ${lab('Prompter note: Ron reads anything you put up there.',M)}${lab('Fantana: 60% of the time',M,'white-space:nowrap')}</div></section>`;
+  const side=`<section style="position:absolute;left:0;top:0;width:306px;height:742px;background:${B};box-sizing:border-box;padding:24px 24px 22px;display:flex;flex-direction:column;justify-content:space-between">
+    <div style="display:flex;gap:14px;align-items:center"><div style="width:84px;text-align:center"><div style="background:${P};${HEAD};font-size:58px;line-height:1.1;color:${B}">4</div><div style="background:${G};${BODY};font-size:13px;font-weight:700;letter-spacing:.2em;color:${B};padding:2px 0">NEWS</div></div>
+      <div>${lab('KVWN',P)}<div style="${BODY};font-size:24px;line-height:1.05;font-weight:700;color:${P};margin-top:2px">SAN<br>DIEGO</div></div></div>
+    <div><div style="${HEAD};font-size:30px;line-height:1;color:${P}">ANCHORMAN</div>${lab('The Legend of Ron Burgundy / '+f.year,G,'margin-top:5px')}</div>
+    <div style="border:4px solid ${P};box-shadow:0 6px 14px rgba(0,0,0,.35)">${fmtPosterImg(f,poster,250,350)}</div>
+    <div style="border-top:2px solid ${G};padding-top:8px">${lab('Roll cue',G)}<div style="${BODY};font-size:14.5px;line-height:1.45;color:${P};margin-top:3px">${ESC(fmtCue(f))}</div></div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end"><div style="${HEAD};font-size:22px;line-height:1.1;color:${P}">Stay classy,<br>San Diego.</div>${lab('Poster: TMDB','#d9b9a8')}</div></section>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:#e9dcc0;box-shadow:0 18px 40px #0008">${side}${sheet}</div>`;
+}

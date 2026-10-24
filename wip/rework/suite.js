@@ -1,0 +1,37 @@
+function fmtSuite(f,spec,menu,poster){
+ const G='#1f4535',P='#fbf6ea',I='#24332a',M='#6d6556',GOLD='#b8995a',LINE='#d6c6a6',R='#a3262a';
+ const H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif";
+ const at=(x,y,w,s='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${s}`;
+ const a=spec.art||{},all=menu.all;
+ const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+ const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
+ const amt=['48.50','96.00','212.50','485.00','39.93'];
+ const lab=(t,c=GOLD)=>`<div style="${B};font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:${c}">${t}</div>`;
+ const row=(it,i)=>`<div style="padding:${i?9:0}px 0 9px;border-bottom:1px solid ${LINE}">
+   <div style="display:flex;gap:10px;align-items:baseline"><span style="${H};font-size:${i===2?29:25}px;line-height:1.05;font-weight:600;color:${I}">${ESC(it.label)}</span>${lab(ESC(tabs[i]||''))}<span style="flex:1;border-bottom:1px dotted ${LINE};align-self:center"></span><span style="${B};font-size:16px;font-weight:600;color:${I}">${amt[i]}</span></div>
+   <div style="${B};font-size:14px;line-height:1.38;color:${I};margin-top:2px">${ESC(it.desc)}</div>${it.film?`<div style="${H};font-size:16px;line-height:1.25;font-style:italic;color:${M};margin-top:1px">${ESC(it.film)}</div>`:''}</div>`;
+ const bill=`<section aria-label="Hotel guest folio menu" style="${at(392,22,655,`height:698px;background:${P};box-shadow:0 8px 22px rgba(0,0,0,.55)`)}">
+   <div aria-hidden="true" style="position:absolute;inset:10px;border:1px solid ${GOLD}"></div>
+   <header style="${at(34,26,587,'display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid '+I+';padding-bottom:10px')}">
+     <div>${lab('Central Park South / Christmas 1992')}<div style="${H};font-size:40px;line-height:1;font-weight:600;color:${I};margin-top:4px">Guest Folio</div></div>
+     <div style="text-align:right">${lab('Room')}<div style="${H};font-size:40px;line-height:1;font-weight:600;color:${R}">411</div></div></header>
+   <div style="${at(34,104,587,`display:flex;justify-content:space-between;${B};font-size:13px;color:${I}`)}"><span><b>Guest:</b> Mr. P. McCallister (card)</span><span><b>Checked in by:</b> Kevin</span><span><b>Concierge:</b> Hector</span></div>
+   <div style="${at(34,132,587)}">${all.map(row).join('')}
+     <div style="display:flex;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px solid ${LINE}"><span style="${H};font-size:19px;font-style:italic;color:${M}">Limousine, white, with a cheese pizza in the back</span><span style="flex:1;border-bottom:1px dotted ${LINE};align-self:center"></span><span style="${B};font-size:16px;font-weight:600;color:${I}">85.50</span></div></div>
+   <div style="${at(34,630,587,'display:flex;justify-content:space-between;align-items:flex-end')}">
+     <div style="max-width:330px">${lab('Showtime cue')}<div style="${B};font-size:13px;line-height:1.35;color:${I};margin-top:3px">${ESC(fmtCue(f))}</div></div>
+     <div style="text-align:right">${lab('Room service total',M)}<div style="${H};font-size:36px;line-height:1;font-weight:600;color:${R}">$967.43</div></div></div>
+ </section>`;
+ const left=`<div style="${at(24,22,344,'height:698px;display:flex;flex-direction:column')}">
+   <div style="${H};font-size:40px;line-height:1;font-weight:600;color:${P}">Home Alone 2</div>
+   <div style="${H};font-size:21px;font-style:italic;color:${LINE};margin-top:4px">${ESC(spec.tag||'')}</div>
+   <figure style="margin:16px 0 0;border:1px solid ${GOLD};padding:5px">${img('kevin','Kevin McCallister in New York',332,200,'center 30%')}</figure>
+   <figure style="margin:14px 0 0;border:1px solid ${GOLD};padding:5px">${img('service','Room service arrives at Kevin’s suite',332,240)}</figure>
+   <div style="margin-top:auto;background:#f3e3c4;padding:12px 16px;transform:rotate(-1.5deg);box-shadow:0 4px 10px rgba(0,0,0,.4);border-left:6px solid ${R}">
+     ${lab('Gift tag / from Mr. Duncan’s Toy Chest',R)}
+     <div style="${H};font-size:20px;line-height:1.2;font-weight:600;color:${I};margin-top:3px">One turtle dove for you. Give the other to someone special.</div></div>
+   <div style="${B};font-size:9px;letter-spacing:.08em;color:${LINE};margin-top:10px">FILM IMAGERY: TMDB</div>
+ </div>`;
+ return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${G};box-shadow:0 15px 34px rgba(0,0,0,.42)">
+  <div aria-hidden="true" style="position:absolute;inset:8px;border:1px solid rgba(184,153,90,.5)"></div>${left}${bill}</div>`;
+}

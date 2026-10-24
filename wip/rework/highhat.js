@@ -1,0 +1,38 @@
+function fmtHighhat(f,spec,menu,poster){
+  const D='#1d2929',P='#e7dec5',W='#efe8d2',G='#b49a63',A='#607367',S='#6e705b',I='#1d2929',R='#8a3a2c',L='#cbbf9f',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{};
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const lab=(s,c=A,e='')=>`<div style="${B};font-size:11px;line-height:1.3;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:${c};${e}">${ESC(s)}</div>`;
+  const rows=[];let n=0;
+  spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+  const pr=['35','25','85','30','on Leo'];
+  const row=(r,i)=>`<div style="flex:1;display:flex;flex-direction:column;justify-content:center;border-top:1px solid ${L};padding:6px 0">
+    <div style="display:flex;align-items:baseline;gap:10px"><span style="${H};font-size:25px;line-height:1.05;font-weight:600;color:${I}">${ESC(r.it.label||'')}</span>${lab(r.g.tab||'',A,'white-space:nowrap')}<span style="flex:1"></span><span style="${T};font-size:15px;font-weight:700;color:${R};white-space:nowrap">${pr[i]==='on Leo'?'On Leo':pr[i]+'¢'}</span></div>
+    ${r.it.desc?`<div style="${B};font-size:13.5px;line-height:1.45;color:${I};margin-top:2px">${ESC(r.it.desc)}</div>`:''}
+    ${r.it.film?`<div style="${H};font-style:italic;font-size:16.5px;line-height:1.25;color:${S};margin-top:1px">${ESC(r.it.film)}</div>`:''}</div>`;
+  const corner=(p)=>`<span aria-hidden="true" style="position:absolute;${p};width:12px;height:12px;border:2px solid ${G}"></span>`;
+  const card=`<section style="position:absolute;left:24px;top:24px;width:610px;height:694px;box-sizing:border-box;background:${W};padding:12px;box-shadow:0 12px 26px rgba(0,0,0,.5)">
+   <div style="position:relative;height:100%;box-sizing:border-box;border:1px solid ${G};box-shadow:inset 0 0 0 4px ${W},inset 0 0 0 6px ${D};padding:18px 30px 12px;display:flex;flex-direction:column">
+    ${corner('left:5px;top:5px')}${corner('right:5px;top:5px')}${corner('left:5px;bottom:5px')}${corner('right:5px;bottom:5px')}
+    <div style="text-align:center;padding-bottom:8px;border-bottom:1px solid ${G}">
+      ${lab('Members only / Ring twice / 1929',A)}
+      <div style="${H};font-size:48px;line-height:1;font-weight:600;color:${I};margin-top:4px">${ESC(spec.brand||'')}</div>
+      <div style="${H};font-style:italic;font-size:20px;color:${R};margin-top:3px">${ESC(spec.tag||'')}</div></div>
+    <div style="flex:1;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+    <div style="border-top:1px solid ${G};padding-top:7px;display:flex;justify-content:space-between;${T};font-size:11px;font-weight:700;color:${S}"><span>ETHICS NOT INCLUDED.</span><span>ON THE GRAMOPHONE: DANNY BOY</span></div></div></section>`;
+  const ticket=`<div style="position:relative;display:flex;background:#c9a24f;color:${D};box-shadow:0 5px 12px rgba(0,0,0,.4);transform:rotate(-2deg)">
+    <div style="padding:9px 14px;border-right:2px dashed ${D};text-align:center;width:112px;white-space:nowrap"><div style="${T};font-size:11px;font-weight:700">HAT</div><div style="${H};font-size:34px;font-weight:600;line-height:1">No. 29</div></div>
+    <div style="padding:9px 14px;flex:1">${lab('Hat check',D)}<div style="${H};font-size:19px;font-style:italic;font-weight:600;line-height:1.2;margin-top:3px">If the wind takes it, let it go. Never chase a hat.</div></div></div>`;
+  const side=`<section style="position:absolute;left:658px;top:24px;width:389px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+    <div><div style="${H};font-size:46px;line-height:.95;font-weight:600;color:${P}">Miller's Crossing</div>${lab("Tom Reagan / Leo's town / "+f.year,G,'margin-top:6px')}</div>
+    <figure style="margin:0;border:5px solid ${P}">${img('identity',"Miller's Crossing title artwork",379,190)}</figure>
+    <div style="display:flex;justify-content:space-between">
+      <figure style="margin:0;border:4px solid ${P}">${img('room',"Leo and Tom in Leo's office",178,104)}</figure>
+      <figure style="margin:0;border:4px solid ${P}">${img('hat','The hat in the woods at Miller’s Crossing',178,104)}</figure></div>
+    ${ticket}
+    <div style="border-top:1px solid #4e5d58;padding-top:8px">${lab('Serving cue',G)}<div style="${B};font-size:15px;line-height:1.45;color:${P};margin-top:3px">${ESC(fmtCue(f))}</div><div style="${B};font-size:10px;letter-spacing:.14em;color:#8e978e;margin-top:5px">FILM IMAGERY: TMDB</div></div></section>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${D};box-shadow:0 18px 40px #0008">${card}${side}</div>`;
+}
+
+
+/* A pale opening-night invitation, with Hollywood finery and the film's real desert dream. */

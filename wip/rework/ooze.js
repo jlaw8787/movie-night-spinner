@@ -1,0 +1,44 @@
+function fmtOoze(f,spec,menu,poster){
+  const KR='#c99a62',WH='#fbfaf3',IN='#1b1d17',GN='#4f9a2a',OZ='#8be04e',RD='#c3311f',SO='#4f4c43',V="font-family:'Bevan',serif",C="font-family:'Barlow Condensed',sans-serif";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c,e='')=>`<div style="${C};font-size:14px;font-weight:700;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;color:${c||SO};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const pr=['4.00','19.91','12.00','2.50','0.99'],qt=['1','4','2','4','5'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:34px 1fr 64px;column-gap:10px;padding:11px 0 11px;border-bottom:2px dashed #c9c6b6">
+    <div style="${C};font-size:22px;font-weight:700;color:${GN};line-height:1;padding-top:2px">${qt[i]||1}x</div>
+    <div><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><h3 style="${C};font-size:25px;line-height:1;font-weight:700;margin:0;color:${IN};text-transform:uppercase">${ESC(it.label)}</h3>${lab(ESC(gs[i]?gs[i].tab:''),GN,'white-space:nowrap')}</div>${it.desc?`<p style="${C};font-size:16px;font-weight:500;line-height:1.25;margin:3px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${C};font-size:15px;font-weight:600;line-height:1.25;margin:2px 0 0;color:${RD}">${ESC(it.film||'')}</p></div>
+    <div style="${C};font-size:22px;font-weight:700;color:${IN};text-align:right;line-height:1;padding-top:2px">${pr[i]||''}</div></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:linear-gradient(135deg,#d3a76d,${KR} 50%,#b98a52);overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,#0000 0 6px,#00000008 6px 7px)"></div>
+  <div aria-hidden="true" style="position:absolute;left:640px;top:250px;width:520px;height:520px;border-radius:50%;border:16px solid #3f7d2233;box-sizing:border-box"></div>
+  <div style="position:absolute;left:28px;top:16px;width:590px;height:710px;background:${WH};box-shadow:0 10px 22px #0006;transform:rotate(-.7deg);box-sizing:border-box;padding:14px 22px 10px;display:flex;flex-direction:column">
+    <div aria-hidden="true" style="position:absolute;left:230px;top:-12px;width:130px;height:28px;background:#e9e3c8d0;transform:rotate(2deg)"></div>
+    <div style="text-align:center;border-bottom:3px solid ${IN};padding-bottom:8px">
+      ${lab('Delivery ticket / Order #1991',RD)}
+      <div style="${V};font-size:40px;line-height:1;color:${GN};margin-top:4px">SECOND HELPINGS</div>
+      <div style="${C};font-size:17px;font-weight:600;color:${IN};margin-top:4px">Four brothers, one rat, one very big order.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;${C};font-size:15px;font-weight:600;line-height:1.35;color:${IN};padding:6px 0;border-bottom:1px solid ${IN}"><span>DELIVER TO: The old subway station</span><span style="text-align:right">DRIVER: Keno</span><span>ORDER FOR: 4 brothers + 1 rat</span><span style="text-align:right">TIME: 30 min or less</span></div>
+    ${xs.map(row).join('')}
+    ${FX_SP}
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:3px solid ${IN};padding-top:6px"><span style="${C};font-size:20px;font-weight:700;color:${IN}">TOTAL</span><span style="${C};font-size:15px;font-weight:600;color:${SO}">No anchovies. Ever.</span><span style="${V};font-size:22px;color:${IN}">$39.40</span></div>
+    <div style="display:flex;gap:10px;align-items:baseline;margin-top:6px">${lab('Showtime cue',RD,'white-space:nowrap')}<span style="${C};font-size:16px;font-weight:500;line-height:1.25;color:${IN}">${ESC(fmtCue(f))}</span></div>
+  </div>
+  <header style="position:absolute;left:650px;top:22px;width:396px">
+    ${lab('New York City / 1991','#2c4a17')}
+    <h1 style="${V};font-size:40px;line-height:1;margin:6px 0 0;color:#1b2a12;text-shadow:none">Teenage Mutant Ninja Turtles II</h1>
+    <div style="${C};font-size:22px;font-weight:700;color:#f6f0dc;background:${GN};display:inline-block;padding:2px 10px;margin-top:6px;letter-spacing:.04em">THE SECRET OF THE OOZE</div>
+  </header>
+  <figure style="position:absolute;left:650px;top:186px;width:396px;margin:0;background:${WH};padding:7px 7px 8px;box-sizing:border-box;box-shadow:0 10px 22px #0006;transform:rotate(1deg)">${img('lair','The Turtles at home in their new lair',382,204)}<figcaption style="${C};font-size:16px;font-weight:600;line-height:1.25;color:${IN};margin-top:6px">New lair, same order. Leave it at the grate.</figcaption></figure>
+  <div style="position:absolute;left:650px;top:462px;width:396px;display:flex;gap:16px;align-items:flex-start">
+    <div style="flex:none;background:${WH};padding:6px;box-shadow:0 10px 22px #0006;transform:rotate(-1.5deg)">${fmtPosterImg(f,poster,140,210)}</div>
+    <div style="flex:1;background:#f3d531;border:4px solid ${IN};padding:10px 12px;box-shadow:0 8px 16px #0006;transform:rotate(1.2deg)">
+      <div style="display:flex;gap:8px;align-items:center"><div style="width:30px;height:30px;border-radius:50%;background:${OZ};border:3px solid ${IN};box-sizing:border-box"></div>${lab('T.C.R.I. / Mutagen',IN)}</div>
+      <div style="${V};font-size:23px;line-height:1.05;color:${IN};margin-top:8px">LAST CANISTER</div>
+      <div style="${C};font-size:16px;font-weight:600;line-height:1.25;color:${IN};margin-top:6px">Handle with care. Do not feed to wolves or snapping turtles.</div>
+      <div style="${C};font-size:13px;font-weight:700;letter-spacing:.08em;color:${IN};margin-top:8px;border-top:2px solid ${IN};padding-top:5px">LEO / RAPH / DONNIE / MIKEY</div>
+    </div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:5px;${C};font-size:10px;font-weight:600;color:#4a3a22">${ESC(f.title.toUpperCase())} (${f.year}) / FILM IMAGERY: TMDB</div>
+  </div>`;
+}

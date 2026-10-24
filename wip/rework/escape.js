@@ -1,0 +1,33 @@
+function fmtEscape(f,spec,menu,poster){
+ const K='#182b2b',P='#e8dfbf',W='#efe6c8',R='#873b2d',Y='#d6ba72',I='#26352e',S='#646b59',L='#b9ae8a';
+ const H="font-family:'Barlow Condensed',sans-serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+ const art=spec.art||{};
+ const img=(k,alt,w,h,pos='center')=>art[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(art[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+ const lab=(s,c=S,e='')=>`<div style="${T};font-size:11px;font-weight:700;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;color:${c};${e}">${ESC(s)}</div>`;
+ const rows=[];let n=0;
+ spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+ const loc=["Cabbie's cab","Anywhere still standing","The Duke's crew","The escape pod","Brain's place, the Library"];
+ const row=(r,i)=>`<div style="flex:1;display:grid;grid-template-columns:50px 1fr 128px;column-gap:14px;align-items:center;border-top:1px solid ${L};padding:7px 0">
+   <div style="${H};font-size:30px;font-weight:700;line-height:1;color:${R};text-align:center">0${i+1}</div>
+   <div><div style="display:flex;align-items:baseline;gap:9px"><span style="${H};font-size:24px;line-height:1.02;font-weight:700;color:${I};text-transform:uppercase;letter-spacing:.01em">${ESC(r.it.label||'')}</span>${lab(r.g.tab||'',R)}</div>
+   ${r.it.desc?`<div style="${B};font-size:13.5px;line-height:1.45;color:${I};margin-top:2px">${ESC(r.it.desc)}</div>`:''}
+   ${r.it.film?`<div style="${T};font-size:13px;line-height:1.3;color:${S};margin-top:2px">${ESC(r.it.film)}</div>`:''}</div>
+   <div style="border-left:1px dashed ${L};padding-left:12px;align-self:stretch;display:flex;flex-direction:column;justify-content:center">${lab('Last seen',S)}<div style="${T};font-size:13px;font-weight:700;line-height:1.3;color:${I};margin-top:2px">${ESC(loc[i]||'')}</div></div></div>`;
+ const file=`<section style="position:absolute;left:362px;top:24px;width:685px;height:694px;box-sizing:border-box;background:${W};border:2px solid ${I};box-shadow:0 8px 18px #0006;display:flex;flex-direction:column">
+   <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid ${I};padding:10px 18px">
+     <div>${lab('U.S. Police Force / Liberty Island security control',R)}<div style="${H};font-size:38px;line-height:1;font-weight:700;color:${I};margin-top:4px;letter-spacing:.01em;white-space:nowrap">RATION REQUISITION</div><div style="${B};font-size:15px;font-weight:600;color:${S};margin-top:3px">${ESC(spec.brand||'')}. Island supplies, signed out to one man.</div></div>
+     <div style="border:3px solid ${R};color:${R};padding:3px 10px;${H};font-size:22px;font-weight:700;letter-spacing:.08em;transform:rotate(-5deg)">CLASSIFIED</div></div>
+   <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;border-bottom:2px solid ${I}">
+     ${[['Operative','S. Plissken'],['Insertion','Glider, WTC roof'],['Objective','The President']].map((x,i)=>`<div style="padding:6px 14px;${i?'border-left:1px solid '+L:''}">${lab(x[0])}<div style="${T};font-size:15px;font-weight:700;color:${I};margin-top:2px;white-space:nowrap">${x[1]}</div></div>`).join('')}</div>
+   <div style="padding:0 18px;flex:1;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+   <div style="border-top:2px solid ${I};padding:7px 18px;display:flex;justify-content:space-between;${T};font-size:11px;font-weight:700;color:${S}"><span>AVOID THE 69TH STREET BRIDGE. IT'S MINED.</span><span>FILM STILLS: TMDB</span></div></section>`;
+ const left=`<section style="position:absolute;left:24px;top:24px;width:316px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+   <div><div style="${H};font-size:56px;line-height:.92;font-weight:700;color:${P};letter-spacing:.01em">ESCAPE<br><span style="font-size:37px">FROM NEW YORK</span></div><div style="${B};font-size:15px;color:${Y};margin-top:8px">${ESC(spec.tag||'')}</div></div>
+   <figure style="margin:0;position:relative;border:2px solid ${Y}">${img('snake','Snake Plissken behind the wheel',312,186)}<figcaption style="position:absolute;left:8px;bottom:8px;background:${K};color:${P};padding:3px 8px;${T};font-size:12px;font-weight:700">CALL HIM SNAKE.</figcaption></figure>
+   <div style="display:flex;justify-content:space-between">
+     <figure style="margin:0;position:relative;border:2px solid ${Y}">${img('duke','The Duke of New York with his crew',148,96)}<figcaption style="position:absolute;left:5px;bottom:5px;background:${K};color:${P};padding:2px 6px;${T};font-size:11px;font-weight:700">A NUMBER ONE</figcaption></figure>
+     <figure style="margin:0;position:relative;border:2px solid ${Y}">${img('brain','Brain and Maggie in their refuge',148,96)}<figcaption style="position:absolute;left:5px;bottom:5px;background:${K};color:${P};padding:2px 6px;${T};font-size:11px;font-weight:700">BRAIN &amp; MAGGIE</figcaption></figure></div>
+   <div style="background:#0e1a1a;border:2px solid ${R};padding:9px 14px;text-align:center">${lab('Time left on the clock',Y)}<div style="${T};font-size:40px;font-weight:700;line-height:1.05;color:#e0533a;letter-spacing:.06em">22:59:59</div></div>
+   <div style="border-top:2px solid ${Y};padding-top:9px">${lab('Serving cue',Y)}<div style="${B};font-size:15px;line-height:1.45;color:${P};margin-top:4px">${ESC(fmtCue(f))}</div></div></section>`;
+ return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${K};${B};box-shadow:0 15px 28px rgba(0,0,0,.4)">${left}${file}</div>`;
+}

@@ -1,0 +1,35 @@
+function fmtSals(f,spec,menu,poster){
+  const RED='#a92b20',WALL='#b74425',CREAM='#f7e8ba',W='#fdf6e2',Y='#efbe50',INK='#2c1c16',MUTED='#75543b',L='#e2cf9e';
+  const HEAD="font-family:'Bevan',serif;font-weight:400",BODY="font-family:'Libre Franklin',sans-serif",COND="font-family:'Barlow Condensed',sans-serif";
+  const a=spec.art||{};
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const lab=(s,c=RED,e='')=>`<div style="${COND};font-size:13px;line-height:1.2;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:${c};${e}">${ESC(s)}</div>`;
+  const rows=[];let n=0;
+  spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+  const pr=['$1.50','$1.25','$1.50','75¢','$1.75'];
+  const row=(r,i)=>`<div style="flex:1;display:flex;flex-direction:column;justify-content:center;border-top:2px dotted ${L};padding:5px 0">
+    <div style="display:flex;align-items:baseline;gap:10px"><span style="${COND};font-size:27px;line-height:1.05;font-weight:700;color:${INK};text-transform:uppercase">${ESC(r.it.label||'')}</span>${lab(r.g.tab||'',MUTED)}<span style="flex:1"></span><span style="${HEAD};font-size:20px;color:${RED}">${pr[i]}</span></div>
+    ${r.it.desc?`<div style="${BODY};font-size:13.5px;line-height:1.42;color:${INK};margin-top:2px">${ESC(r.it.desc)}</div>`:''}
+    ${r.it.film?`<div style="${BODY};font-style:italic;font-size:13px;line-height:1.35;color:${MUTED};margin-top:1px">${ESC(r.it.film)}</div>`:''}</div>`;
+  const menuCard=`<section style="position:absolute;left:24px;top:24px;width:612px;height:694px;box-sizing:border-box;background:${W};border:6px solid ${RED};box-shadow:0 12px 28px rgba(0,0,0,.45);display:flex;flex-direction:column">
+    <div style="background:${RED};color:${CREAM};padding:10px 22px 12px;text-align:center">
+      ${lab('Stuyvesant Ave / Bed-Stuy, Brooklyn / Free delivery',Y)}
+      <div style="${HEAD};font-size:42px;line-height:1.05;margin-top:4px">SAL'S FAMOUS PIZZERIA</div>
+      <div style="${COND};font-size:19px;font-weight:600;color:${CREAM};margin-top:2px">${ESC(spec.tag||'')}</div></div>
+    <div style="padding:2px 22px 0;flex:1;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+    <div style="border-top:3px solid ${RED};margin:0 22px;padding:7px 0 9px;display:flex;justify-content:space-between;${COND};font-size:14px;font-weight:700;letter-spacing:.08em;color:${INK}"><span>EXTRA CHEESE: $2. DON'T ASK TWICE.</span><span>DELIVERED BY MOOKIE</span></div></section>`;
+  const fame=['DiMaggio','Sinatra','Pacino','Loren','De Niro','Como'];
+  const side=`<section style="position:absolute;left:660px;top:24px;width:387px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end"><div style="${HEAD};font-size:30px;line-height:1.05;color:${CREAM}">DO THE<br>RIGHT THING</div><div style="text-align:right">${lab('Brooklyn, '+f.year,Y)}<div style="${COND};font-size:16px;font-weight:600;color:${CREAM};margin-top:2px">Hottest day of the summer</div></div></div>
+    <figure style="margin:0;border:5px solid ${CREAM}">${img('identity','Do the Right Thing artwork',377,186)}</figure>
+    <div style="display:flex;justify-content:space-between">
+      <figure style="margin:0;border:4px solid ${CREAM}">${img('counter',"Behind the counter at Sal's",182,104)}</figure>
+      <figure style="margin:0;border:4px solid ${CREAM}">${img('street','The block on the hottest day',182,104)}</figure></div>
+    <div style="background:${INK};padding:9px 12px 10px;border:3px solid ${Y}">${lab('Wall of Fame',Y)}
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:6px">${fame.map(x=>`<div style="border:3px solid ${Y};background:${CREAM};padding:4px 2px;text-align:center;${COND};font-size:15px;font-weight:700;color:${INK}">${x}</div>`).join('')}</div>
+      <div style="${COND};font-size:14px;font-weight:600;color:${CREAM};margin-top:6px">Buggin' Out wants to know where the brothers are.</div></div>
+    <div style="border-top:1px solid #d77a5c;padding-top:8px">${lab('Serving cue',Y)}<div style="${BODY};font-size:14.5px;line-height:1.45;color:${CREAM};margin-top:3px">${ESC(fmtCue(f))}</div><div style="${COND};font-size:12px;letter-spacing:.12em;color:#f0c6a8;margin-top:4px">WE LOVE RADIO 108 FM / FILM IMAGERY: TMDB</div></div></section>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${WALL};box-shadow:0 18px 40px #0008">${menuCard}${side}</div>`;
+}
+
+/* A railway-town luncheon board: fixed picture windows, café green and warm cream. */

@@ -1,0 +1,41 @@
+function fmtAnnieTable(f,spec,menu,poster){
+  const PA='#eef2e4',GR='#2f6a4c',GL='#b9cfb9',IN='#2b2a26',SO='#5b5a50',RD='#a8452e',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c=GR,e='')=>`<div style="${T};font-size:11px;font-weight:700;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;color:${c};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const box=(k,v)=>`<div style="border-right:1px solid ${GR};padding:5px 8px 6px">${lab(k)}<div style="${H};font-size:20px;font-style:italic;font-weight:600;line-height:1.1;color:${IN};margin-top:2px">${v}</div></div>`;
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:38px 1fr 92px;border-bottom:1px solid ${GL}">
+    <div style="border-right:1px solid ${GL};${T};font-size:17px;font-weight:700;color:${IN};text-align:center;padding-top:15px">1</div>
+    <div style="padding:13px 14px 13px"><h3 style="${H};font-size:24px;line-height:1.02;font-weight:600;margin:0;color:${IN}">${ESC(it.label)}</h3>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.4;margin:4px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${T};font-size:13px;line-height:1.35;margin:3px 0 0;color:${RD}">${ESC(it.film||'')}</p></div>
+    <div style="border-left:1px solid ${GL};padding:16px 8px 0;text-align:right">${lab(ESC(it.price||(gs[i]?gs[i].tab:'')),SO)}</div></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:#c9b48f;overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,#0000 0 3px,#ffffff0d 3px 4px),radial-gradient(ellipse at 30% 40%,#ffffff22,#0000 60%)"></div>
+  <div style="position:absolute;left:26px;top:18px;width:596px;height:706px;background:${PA};box-shadow:0 10px 24px #0006;transform:rotate(-.5deg);box-sizing:border-box;padding:16px 22px 14px;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid ${GR};padding-bottom:6px">
+      <div style="${H};font-size:36px;font-weight:600;letter-spacing:.08em;color:${GR};line-height:1">GUEST CHECK</div>
+      <div style="text-align:right">${lab('Lunch counter / New York')}<div style="${T};font-size:16px;font-weight:700;color:${RD};margin-top:2px">No. 1977</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:.8fr 1.3fr 1.3fr 1fr;border:1px solid ${GR};border-top:0">${box('Table','Four')}${box('Guests','Alvy, Annie')}${box('Check to','Alvy, sadly')}<div style="padding:5px 8px 6px">${lab('Note')}<div style="${H};font-size:20px;font-style:italic;font-weight:600;line-height:1.1;color:${RD};margin-top:2px">La-di-da</div></div></div>
+    <div style="display:grid;grid-template-columns:38px 1fr 92px;border-bottom:1.5px solid ${GR};padding:7px 0 5px;margin-top:8px">${lab('Qty','','text-align:center')}${lab('Item','','padding-left:14px')}${lab('Course','','text-align:right;padding-right:8px')}</div>
+    ${xs.map(row).join('')}
+    ${FX_SP}
+    <div style="display:flex;gap:12px;align-items:baseline;border-top:2px solid ${GR};padding-top:8px">${lab('Showtime cue',RD,'white-space:nowrap')}<span style="${B};font-size:13px;line-height:1.35;color:${IN}">${ESC(fmtCue(f))}</span></div>
+    <div style="display:flex;justify-content:space-between;margin-top:6px">${lab('Please do not sneeze near the table',SO)}${lab('Thank you. La-di-da.',SO)}</div>
+  </div>
+  <header style="position:absolute;left:652px;top:26px;width:392px">
+    ${lab('New York / Los Angeles / 1977','#4a3a24')}
+    <h1 style="${H};font-size:74px;line-height:.9;font-weight:600;letter-spacing:-.03em;margin:8px 0 0;color:#2b2218;text-shadow:none">Annie Hall</h1>
+    <div style="${H};font-size:25px;font-style:italic;font-weight:600;line-height:1.1;color:#7d2f1c;margin-top:6px">${ESC(spec.tag||'')}</div>
+  </header>
+  <figure style="position:absolute;left:652px;top:178px;width:392px;margin:0;background:#fbf7ee;padding:8px 8px 10px;box-sizing:border-box;box-shadow:0 8px 18px #0005;transform:rotate(.8deg)">${img('cinema','Annie and Alvy waiting outside the cinema showing Face to Face',376,224)}<figcaption style="${B};font-size:13px;line-height:1.35;color:${IN};margin-top:8px">The line for <i>Face to Face</i>. Two minutes in and Alvy won’t go in.</figcaption></figure>
+  <div style="position:absolute;left:652px;top:484px;width:392px;display:flex;gap:18px;align-items:stretch">
+    <div style="flex:none;background:#fbf7ee;padding:6px;box-shadow:0 8px 18px #0006;transform:rotate(-1.5deg)">${fmtPosterImg(f,poster,138,207)}</div>
+    <div style="flex:1;background:#f0d9a8;border:2px dashed #7d2f1c;padding:14px 14px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 6px 14px #0004;transform:rotate(1deg)">
+      ${lab('Admit two','#7d2f1c')}
+      <div style="${H};font-size:26px;line-height:1;font-weight:600;color:#2b2218;margin-top:6px">The Sorrow and the Pity</div>
+      <p style="${B};font-size:13px;line-height:1.4;color:#3d3326;margin:8px 0 0">Alvy’s idea of a date night. Four hours on the occupation of France. Bring snacks.</p>
+    </div>
+  </div>
+  <div style="position:absolute;right:24px;bottom:5px;${T};font-size:9px;color:#4a3a24">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

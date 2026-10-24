@@ -1,0 +1,38 @@
+function fmtCorleone(f,spec,menu,poster){
+  const K='#181511',P='#f0e7d0',W='#f5eedb',I='#302d25',M='#6a6050',R='#733b32',O='#5b6630',L='#cdbf9e';
+  const H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{};
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const lab=(s,c=R,e='')=>`<div style="${B};font-size:10.5px;line-height:1.3;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:${c};${e}">${ESC(s)}</div>`;
+  const rows=[];let n=0;
+  spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+  const qty=['1 tray','2 doz.','1 pot','1 box','4'],pr=['$1.20','90¢','$2.50','75¢','40¢'];
+  const row=(r,i)=>`<div style="flex:1;display:grid;grid-template-columns:70px 1fr 64px;column-gap:14px;align-items:center;border-top:1px solid ${L};padding:5px 0">
+    <div style="${T};font-size:14px;font-weight:700;color:${I}">${qty[i]}</div>
+    <div><div style="display:flex;align-items:baseline;gap:9px"><span style="${H};font-size:25px;line-height:1.05;font-weight:600;color:${I}">${ESC(r.it.label||'')}</span>${lab(r.g.tab||'',O)}</div>
+    ${r.it.desc?`<div style="${B};font-size:13.5px;line-height:1.42;color:${I};margin-top:2px">${ESC(r.it.desc)}</div>`:''}
+    ${r.it.film?`<div style="${H};font-style:italic;font-size:16.5px;line-height:1.25;color:${M};margin-top:1px">${ESC(r.it.film)}${i===3?' Leave the gun.':''}</div>`:''}</div>
+    <div style="${T};font-size:16px;font-weight:700;color:${R};text-align:right">${pr[i]}</div></div>`;
+  const sheet=`<section style="position:absolute;left:24px;top:24px;width:640px;height:694px;box-sizing:border-box;background:${W};box-shadow:0 12px 28px rgba(0,0,0,.6);padding:18px 26px 12px;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px double ${I};padding-bottom:9px">
+      <div>${lab('Importers / Little Italy / New York',O)}
+        <div style="${H};font-size:44px;line-height:1;font-weight:600;color:${I};margin-top:3px">Genco Pura <span style="font-style:italic;font-weight:500;color:${O}">Olive Oil Co.</span></div>
+        <div style="${B};font-size:13px;color:${M};margin-top:3px">V. Corleone, President. Order for the family table.</div></div>
+      <div style="text-align:right;border:2px solid ${R};padding:5px 10px;transform:rotate(3deg)">${lab('Invoice',R)}<div style="${T};font-size:20px;font-weight:700;color:${R}">No. 1945</div></div></div>
+    <div style="display:grid;grid-template-columns:1.3fr 1fr;border-bottom:1px solid ${I};padding:6px 0">
+      <div>${lab('Deliver to',M)}<div style="${T};font-size:14px;font-weight:700;color:${I};margin-top:1px">THE COMPOUND, LONG BEACH, L.I.</div></div>
+      <div>${lab('Occasion',M)}<div style="${T};font-size:14px;font-weight:700;color:${I};margin-top:1px">CONNIE'S WEDDING, 1945</div></div></div>
+    <div style="display:grid;grid-template-columns:70px 1fr 64px;column-gap:14px;padding:6px 0 3px">${lab('Qty',M)}${lab('Goods',M)}${lab('Price',M,'text-align:right')}</div>
+    <div style="flex:1;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+    <div style="border-top:3px double ${I};padding-top:7px;display:flex;justify-content:space-between;align-items:baseline">
+      <span style="${T};font-size:12px;font-weight:700;color:${M}">TERMS: AN OFFER YOU CAN'T REFUSE.</span><span style="${T};font-size:12px;font-weight:700;color:${M}">CARRIER: NOT LUCA BRASI.</span></div></section>`;
+  const side=`<section style="position:absolute;left:688px;top:24px;width:359px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+    <div><div style="${H};font-size:44px;line-height:.95;font-weight:600;color:${P}">The Godfather</div><div style="${H};font-style:italic;font-size:19px;color:#b8a583;margin-top:4px">${ESC(spec.tag||'')}</div></div>
+    <figure style="margin:0;border:5px solid ${P}">${img('identity','The Godfather title artwork',349,196)}</figure>
+    <div style="display:flex;justify-content:space-between">
+      <figure style="margin:0;border:4px solid ${P}">${img('wedding',"Connie's wedding on the Corleone lawn",167,102)}</figure>
+      <figure style="margin:0;border:4px solid ${P}">${img('office',"Don Corleone in his office",167,102)}</figure></div>
+    <div style="background:#e9dfc2;color:${I};padding:9px 14px 10px;box-shadow:0 5px 12px rgba(0,0,0,.4);transform:rotate(-1deg)">${lab("Clemenza's note",R)}<div style="${H};font-size:19px;font-style:italic;font-weight:500;line-height:1.25;margin-top:3px">Start with a little oil. Garlic, tomatoes, a splash of wine, a pinch of sugar. Feeds twenty men.</div></div>
+    <div style="border-top:1px solid #4a4237;padding-top:8px">${lab('Serving cue','#b8a583')}<div style="${B};font-size:15px;line-height:1.45;color:${P};margin-top:3px">${ESC(fmtCue(f))}</div><div style="${B};font-size:10px;letter-spacing:.14em;color:#8f8676;margin-top:5px">FILM IMAGERY: TMDB</div></div></section>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${K};box-shadow:0 18px 40px #0008">${sheet}${side}</div>`;
+}

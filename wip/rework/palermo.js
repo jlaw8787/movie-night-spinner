@@ -1,0 +1,44 @@
+function fmtPalermo(f,spec,menu,poster){
+  const PA='#f5eedd',IN='#231a14',SO='#5f5244',RD='#8a1c1c',GD='#b08a3e',D="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const nh=t=>ESC(String(t||'').normalize('NFC')).replace(/[âêîôûàèìòùëïüç]/gi,m=>`<span style="font-family:'Times New Roman',Times,serif;font-weight:400">${m}</span>`);
+  const lab=(s,c,e='')=>`<div style="${B};font-size:11px;font-weight:600;line-height:1.3;letter-spacing:.18em;text-transform:uppercase;color:${c||SO};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const parts=['Preludio','Siciliana','Scena prima','Intermezzo','Finale'];
+  const row=(it,i)=>`<div style="text-align:center;padding:7px 0 6px;${i?'border-top:1px solid #d9caa8':''}">
+    ${lab(parts[i]+' / '+ESC(gs[i]?gs[i].tab:''),GD)}
+    <h3 style="${D};font-size:25px;line-height:1.02;font-weight:600;margin:2px 0 0;color:${IN}">${nh(it.label)}</h3>
+    ${it.desc?`<p style="${B};font-size:13.5px;line-height:1.38;margin:3px auto 0;max-width:470px;color:${IN}">${ESC(it.desc)}</p>`:''}
+    <p style="${D};font-size:16px;font-style:italic;line-height:1.25;margin:2px 0 0;color:${RD}">${nh(it.film)}</p></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:radial-gradient(ellipse at 70% 20%,#6d1418,#3a0b0d 60%,#1c0506);overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,#00000022 0 18px,#ffffff06 18px 36px)"></div>
+  <div style="position:absolute;left:24px;top:18px;width:620px;height:706px;background:${PA};box-shadow:0 12px 28px #000c;box-sizing:border-box;padding:10px">
+   <div style="height:100%;border:2px solid ${GD};box-sizing:border-box;padding:16px 30px 12px;display:flex;flex-direction:column">
+    <div style="text-align:center;border-bottom:1px solid ${GD};padding-bottom:9px">
+      ${lab('Teatro Massimo / Palermo / Stagione 1979',RD)}
+      <div style="${D};font-size:42px;font-weight:600;line-height:1;color:${IN};margin-top:5px">Cavalleria Rusticana</div>
+      <div style="${D};font-size:18px;font-style:italic;color:${SO};margin-top:3px">Debut of Anthony Corleone as Turiddu. Supper served in the boxes.</div>
+    </div>
+    ${xs.map(row).join('')}
+    ${FX_SP}
+    <div style="border-top:1px solid ${GD};padding-top:7px;text-align:center;${B};font-size:13px;line-height:1.35;color:${IN}"><span style="font-weight:600;letter-spacing:.18em;font-size:11px;color:${RD}">SHOWTIME CUE</span>&nbsp;&nbsp;${ESC(fmtCue(f))}</div>
+   </div>
+  </div>
+  <header style="position:absolute;left:676px;top:22px;width:372px">
+    ${lab('Sicily / 1990','#e7c98a')}
+    <h1 style="${D};font-size:50px;line-height:.95;font-weight:600;letter-spacing:-.01em;margin:6px 0 0;color:#f5eedd;text-shadow:none">The Godfather Part III</h1>
+    <div style="${D};font-size:21px;font-style:italic;color:#e7c98a;margin-top:6px">${ESC(spec.tag||'')}</div>
+  </header>
+  <figure style="position:absolute;left:676px;top:186px;width:372px;margin:0;background:${PA};padding:7px 7px 8px;box-sizing:border-box;box-shadow:0 10px 22px #000c;transform:rotate(-.8deg)">${img('opera','The Corleones in their box at the opera',358,200)}<figcaption style="${D};font-size:17px;font-style:italic;line-height:1.25;color:${IN};margin-top:6px">The family box, opening night. Eyes on the stage.</figcaption></figure>
+  <div style="position:absolute;left:676px;top:476px;width:372px;display:flex;gap:16px;align-items:flex-start">
+    <div style="flex:none;background:${PA};padding:6px;box-shadow:0 10px 22px #000c;transform:rotate(1.3deg)">${fmtPosterImg(f,poster,138,207)}</div>
+    <div style="flex:1;margin-top:6px;background:${PA};border:2px solid ${GD};box-shadow:0 8px 16px #000a;transform:rotate(-1.4deg);padding:10px 12px;text-align:center">
+      ${lab('Biglietto / Palco',RD)}
+      <div style="${D};font-size:46px;font-weight:600;line-height:1;color:${IN};margin-top:4px">No. 7</div>
+      <div style="${B};font-size:13px;line-height:1.35;color:${IN};margin-top:4px">Guest: Don Altobello.</div>
+      <div style="${D};font-size:16px;font-style:italic;line-height:1.25;color:${RD};margin-top:6px;border-top:1px dashed ${GD};padding-top:6px">Cannoli courtesy of Connie. Do not share.</div>
+    </div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:5px;${T};font-size:9px;color:#d9b4a6">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

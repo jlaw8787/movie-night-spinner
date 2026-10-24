@@ -1,0 +1,40 @@
+function fmtCollection(f,spec,menu,poster){
+  const PA='#f6f1e6',IN='#1f1b18',SO='#5e564d',RD='#8c1d2a',GD='#a7854a',D="font-family:'Cormorant Garamond',serif",V="font-family:'Bevan',serif",B="font-family:'Libre Franklin',sans-serif";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c,e='')=>`<div style="${B};font-size:11px;font-weight:700;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;color:${c||SO};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const est=['$40 to $60','$20 to $30','Ask Frank','One wedding','Two glasses, small'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:62px 1fr;column-gap:16px;padding:14px 0 13px;border-top:1px solid #d8cdb8">
+    <div style="text-align:center"><div style="${B};font-size:10px;font-weight:700;letter-spacing:.14em;color:${SO}">LOT</div><div style="${V};font-size:28px;line-height:1;color:${RD}">${i+1}</div></div>
+    <div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><h3 style="${D};font-size:26px;line-height:1.02;font-weight:600;margin:0;color:${IN}">${ESC(it.label)}</h3>${lab(ESC(gs[i]?gs[i].tab:''),GD,'white-space:nowrap')}</div>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.4;margin:4px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<div style="display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-top:3px"><span style="${D};font-size:16px;font-style:italic;line-height:1.25;color:${SO}">Provenance: ${ESC(it.film||'')}</span><span style="${B};font-size:12px;font-weight:600;color:${RD};white-space:nowrap">Est. ${est[i]||''}</span></div></div></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:linear-gradient(160deg,#4a1820,#2a0f14);overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,#ffffff05 0 2px,#0000 2px 9px)"></div>
+  <div style="position:absolute;left:24px;top:18px;width:650px;height:706px;background:${PA};box-shadow:0 12px 26px #000b;box-sizing:border-box;padding:18px 30px 14px;display:flex;flex-direction:column">
+    <div style="text-align:center;padding-bottom:10px;border-bottom:2px solid ${IN}">
+      ${lab('Evening sale / New York / Catalogue no. 1999',RD)}
+      <div style="${D};font-size:40px;font-weight:600;line-height:1;color:${IN};margin-top:6px">The Family Collection</div>
+      <div style="${D};font-size:18px;font-style:italic;color:${SO};margin-top:4px">Five lots for supper. Auctioneer: Mr M. Felgate. Viewing by appointment with Mr Vitale.</div>
+    </div>
+    ${xs.map(row).join('')}
+    ${FX_SP}
+    <div style="display:flex;gap:12px;align-items:baseline;border-top:2px solid ${IN};padding-top:8px">${lab('Showtime cue',RD,'white-space:nowrap')}<span style="${B};font-size:13px;line-height:1.35;color:${IN}">${ESC(fmtCue(f))}</span></div>
+    <div style="${B};font-size:10px;color:${SO};margin-top:5px">Conditions of sale: all bids final. Paintings by Johnny Graziosi will be sold, at any price. Fuhgeddaboudit.</div>
+  </div>
+  <header style="position:absolute;left:702px;top:22px;width:346px">
+    ${lab('Little Italy / 1999','#e2c58f')}
+    <h1 style="${V};font-size:44px;line-height:1;margin:8px 0 0;color:#f6f1e6;text-shadow:none">Mickey Blue Eyes</h1>
+    <div style="${D};font-size:21px;font-style:italic;line-height:1.2;color:#e8d6c2;margin-top:6px">${ESC(spec.tag||'')}</div>
+  </header>
+  <figure style="position:absolute;left:702px;top:180px;width:346px;margin:0;background:${PA};padding:7px 7px 8px;box-sizing:border-box;box-shadow:0 10px 22px #000b;transform:rotate(-1deg)">${img('lesson','Michael gets a lesson in sounding like a mobster',332,186)}<figcaption style="${D};font-size:17px;font-style:italic;line-height:1.25;color:${IN};margin-top:6px">Lesson one: say it like you’re from Kansas City.</figcaption></figure>
+  <div style="position:absolute;left:702px;top:444px;width:346px;display:flex;gap:18px;align-items:flex-start">
+    <div style="flex:none;background:${PA};padding:6px;box-shadow:0 10px 22px #000b;transform:rotate(1.4deg)">${fmtPosterImg(f,poster,138,207)}</div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;padding-top:6px">
+      <div style="width:150px;height:150px;border-radius:50%;background:${PA};border:6px solid ${GD};box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 8px 16px #000a">
+        ${lab('Bidder',RD)}<div style="${V};font-size:46px;line-height:1;color:${IN};margin-top:4px">17</div>${lab('Mickey B.E.',SO,'margin-top:4px')}
+      </div>
+      <div style="width:22px;height:70px;background:linear-gradient(90deg,#6d4a26,#9a6e3c,#6d4a26);margin-top:-2px;border-radius:0 0 6px 6px"></div>
+    </div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:5px;${B};font-size:9px;color:#c9a9a9">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

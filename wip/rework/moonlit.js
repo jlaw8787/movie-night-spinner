@@ -1,0 +1,35 @@
+function fmtMoonstruck(f,spec,menu,poster){
+  const P='#f7f0de',N='#14283a',I='#2a2a24',R='#9a3a2c',M='#6a6352',L='#cdbf9c',GD='#c9a85a';
+  const H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const at=(x,y,w,s='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${s}`;
+  const a=spec.art||{},all=menu.all;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
+  const qty=['2 loaves','4 eggs','4 plates','1 doz','4 glasses'];
+  const row=(it,i)=>`<div style="padding:${i?8:0}px 0 8px;${i<all.length-1?`border-bottom:1px dashed ${L}`:''}">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="${B};font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:${R}">${ESC(tabs[i]||'')}</span><span style="${T};font-size:12px;font-weight:700;color:${M}">QTY ${qty[i]}</span></div>
+    <div style="${H};font-size:${i===2?31:27}px;line-height:1.02;font-weight:600;color:${I}">${ESC(it.label)}</div>
+    <div style="${B};font-size:14px;line-height:1.38;color:${I};margin-top:2px">${ESC(it.desc)}</div>
+    ${it.film?`<div style="${H};font-size:16px;line-height:1.25;font-style:italic;color:${M};margin-top:1px">${ESC(it.film)}</div>`:''}</div>`;
+  const slip=`<section aria-label="Bakery order slip menu" style="${at(24,22,640,`height:698px;background:${P};box-shadow:0 8px 22px rgba(0,0,0,.6)`)}">
+    <header style="${at(32,22,576,`text-align:center;border-bottom:2px solid ${I};padding-bottom:10px`)}">
+      <div style="${T};font-size:11px;font-weight:700;letter-spacing:.12em;color:${R}">BAKERY ORDER / BROOKLYN HEIGHTS / 1987</div>
+      <div style="${H};font-size:42px;line-height:1;font-weight:600;color:${I};margin-top:4px">Ronny’s bread &amp; supper</div>
+      <div style="${T};font-size:12px;color:${M};margin-top:5px">ORDERED BY: Loretta Castorini &nbsp;/&nbsp; DELIVER TO: the Castorini kitchen</div></header>
+    <div style="${at(32,128,576)}">${all.map(row).join('')}</div>
+    <footer style="${at(32,656,576,`border-top:2px solid ${I};padding-top:10px;display:flex;justify-content:space-between;align-items:center;${T};font-size:11px;color:${M}`)}"><span>ORDER No. 37 &nbsp;/&nbsp; MIND THE BREAD SLICER</span></footer>
+    <div aria-hidden="true" style="${at(410,636,170,`border:3px solid ${R};color:${R};text-align:center;transform:rotate(-6deg);padding:2px 0;background:rgba(247,240,222,.85)`)}"><div style="${H};font-size:28px;font-weight:600;font-style:italic;line-height:1">Snap out of it!</div></div>
+  </section>`;
+  const right=`<div style="${at(690,22,357,'height:698px;display:flex;flex-direction:column')}">
+    <figure style="margin:0;background:#fff;padding:6px 6px 0;box-shadow:0 5px 14px rgba(0,0,0,.55);transform:rotate(1deg)">${img('kitchen','Loretta and Ronny in the bakery kitchen',345,196)}<figcaption style="${H};font-size:16px;font-style:italic;color:${I};padding:5px 2px 6px">Rose’s kitchen. Eggs in the hole.</figcaption></figure>
+    <figure style="margin:14px 0 0;background:#fff;padding:6px 6px 0;box-shadow:0 5px 14px rgba(0,0,0,.55);transform:rotate(-1deg)">${img('opera','Loretta and Ronny at the opera',345,186)}<figcaption style="${H};font-size:16px;font-style:italic;color:${I};padding:5px 2px 6px">La Bohème. She cried.</figcaption></figure>
+    <div style="margin-top:auto;display:flex;background:${P};box-shadow:0 5px 14px rgba(0,0,0,.55);transform:rotate(1deg)">
+      <div style="flex:1;padding:10px 14px;border-right:2px dashed ${L}"><div style="${B};font-size:10.5px;font-weight:700;letter-spacing:.14em;color:${R}">SERVING CUE / ADMIT TWO</div>
+        <div style="${H};font-size:19px;line-height:1.2;font-weight:600;color:${I};margin-top:3px">${ESC(fmtCue(f))}</div></div>
+      <div style="width:70px;padding:10px 6px;text-align:center"><div style="${T};font-size:10.5px;color:${M}">ROW</div><div style="${H};font-size:26px;font-weight:600;line-height:1;color:${I}">G</div><div style="${T};font-size:10.5px;color:${M};margin-top:4px">SEATS</div><div style="${T};font-size:12px;font-weight:700;color:${I}">2</div></div></div>
+    <div style="${B};font-size:9px;letter-spacing:.1em;color:#8fa0b0;margin-top:10px;text-align:right">${ESC(f.title.toUpperCase())} (${f.year}) / FILM IMAGERY: TMDB</div>
+  </div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${N};overflow:hidden;box-shadow:0 16px 40px #0007">
+    <div aria-hidden="true" style="position:absolute;left:712px;top:510px;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#fff6dc,#e9d9a8 60%,#cdb77c);opacity:.95"></div>
+    ${slip}${right}<div style="${at(810,522,230)};${H};font-size:28px;font-style:italic;font-weight:500;color:#f3e7c4;line-height:1.1">La bella luna.<div style="${T};font-size:11px;font-style:normal;color:#a9b8c6;margin-top:4px">CUE THE BIG MOON OVER BROOKLYN</div></div></div>`;
+}

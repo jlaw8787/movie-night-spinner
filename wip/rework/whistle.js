@@ -1,0 +1,33 @@
+function fmtWhistle(f,spec,menu,poster){
+  const W='#3c4a32',P='#f6eedb',G='#2f5a3a',R='#a33a2a',I='#2a2620',M='#665e50',L='#d9cba8',S="font-family:'Bevan',serif",B="font-family:'Libre Franklin',sans-serif";
+  const at=(x,y,w,e='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${e}`;
+  const a=spec.art||{},all=menu.all;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
+  const price=['10¢','15¢','25¢','10¢','5¢'];
+  const row=(it,i)=>`<div style="padding:${i?12:0}px 0 12px;${i<all.length-1?`border-bottom:1px dotted ${M}`:''}">
+    <div style="display:flex;align-items:baseline;gap:10px"><span style="${S};font-size:${i===2?27:23}px;line-height:1.1;color:${I}">${ESC(it.label)}</span><span style="flex:1;border-bottom:2px dotted ${L};align-self:center"></span><span style="${S};font-size:21px;color:${R}">${price[i]}</span></div>
+    <div style="${B};font-size:14px;line-height:1.4;color:${I};margin-top:3px"><b style="font-size:10.5px;letter-spacing:.14em;color:${G};text-transform:uppercase">${ESC(tabs[i]||'')}</b> &nbsp;${ESC(it.desc)}</div>
+    ${it.film?`<div style="${B};font-size:13px;line-height:1.35;font-style:italic;color:${M};margin-top:2px">${ESC(it.film)}</div>`:''}</div>`;
+  const card=`<section aria-label="Cafe menu card" style="${at(24,22,650,`height:698px;background:${P};box-shadow:0 8px 20px rgba(0,0,0,.5)`)}">
+    <div aria-hidden="true" style="position:absolute;inset:10px;border:3px double ${G}"></div>
+    <header style="${at(34,28,582,'text-align:center')}">
+      <div style="${B};font-size:11px;font-weight:700;letter-spacing:.22em;color:${G}">WHISTLE STOP, ALABAMA / BY THE RAILROAD DEPOT / EST. 1929</div>
+      <div style="${S};font-size:44px;line-height:1.05;color:${R};margin-top:6px">Whistle Stop Café</div>
+      <div style="${B};font-size:13px;font-style:italic;color:${M};margin-top:4px">Idgie Threadgoode &amp; Ruth Jamison, proprietors. Big George on the grill.</div>
+      <div style="height:3px;background:${G};margin-top:10px"></div></header>
+    <div style="${at(34,148,582)}">${all.map(row).join('')}</div>
+    <footer style="${at(34,640,582,`border-top:3px solid ${G};padding-top:8px;display:flex;justify-content:space-between;${B};font-size:11px;font-weight:700;letter-spacing:.08em;color:${G}`)}"><span>THE SECRET’S IN THE SAUCE</span><span>NO ONE TURNED AWAY HUNGRY</span></footer>
+  </section>`;
+  const right=`<div style="${at(698,22,349,'height:698px;display:flex;flex-direction:column')}">
+    <figure style="margin:0;background:#fff;padding:6px 6px 0;box-shadow:0 5px 14px rgba(0,0,0,.5);transform:rotate(1deg)">${img('storefront','The Whistle Stop Café storefront',337,214)}<figcaption style="${B};font-size:12px;font-style:italic;color:${I};padding:6px 2px 7px">The café, by the tracks.</figcaption></figure>
+    <figure style="margin:14px 0 0;background:#fff;padding:6px 6px 0;box-shadow:0 5px 14px rgba(0,0,0,.5);transform:rotate(-1deg)">${img('tomatoes','Green tomato slices frying in a skillet',337,214)}<figcaption style="${B};font-size:12px;font-style:italic;color:${I};padding:6px 2px 7px">Fried green, in cornmeal, in the iron pan.</figcaption></figure>
+    <div style="margin-top:auto;background:${P};box-shadow:0 5px 14px rgba(0,0,0,.5);padding:12px 16px;border-top:6px solid ${R}">
+      <div style="${B};font-size:10.5px;font-weight:700;letter-spacing:.16em;color:${G}">TRAIN TIMES / WHISTLE STOP DEPOT</div>
+      <div style="display:flex;justify-content:space-between;${S};font-size:16px;color:${I};margin-top:5px"><span>Southbound 4:10</span><span>Northbound 6:45</span></div>
+      <div style="${B};font-size:13px;line-height:1.38;color:${I};margin-top:7px"><b style="color:${R}">CUE</b> ${ESC(fmtCue(f))}</div>
+      <div style="${S};font-size:20px;color:${R};margin-top:6px">TOWANDA!</div></div>
+    <div style="${B};font-size:9px;letter-spacing:.1em;color:#c8cdb9;margin-top:10px;text-align:right">FILM IMAGERY: TMDB</div>
+  </div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${W};overflow:hidden;box-shadow:0 16px 40px #0006">${card}${right}</div>`;
+}

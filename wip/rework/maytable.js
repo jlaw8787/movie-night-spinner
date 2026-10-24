@@ -1,0 +1,31 @@
+function fmtMayTable(f,spec,menu,poster){
+  const P='#efe8d8',I='#1d2430',R='#a23f37',M='#5c5a52',D='#172c47',L='#b9b09c',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{};
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const lab=(s,c=R,e='')=>`<div style="${B};font-size:11px;line-height:1.3;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:${c};${e}">${ESC(s)}</div>`;
+  const cred=s=>`<div style="${T};font-size:11px;line-height:1.3;color:${M};margin-top:4px;text-align:right">${ESC(s)}</div>`;
+  const it=menu.all,gs=spec.groups,tab=[];gs.forEach(g=>g.items.forEach(()=>tab.push(g)));
+  const kick=['Ringside, before school','From the Osborn end of the table',(tab[2]||{}).h||'',(tab[3]||{}).h||'','Bugle newsroom special'];
+  const dish=(i,big)=>{const x=it[i]||{};return `<article>${lab(kick[i]||'')}<h3 style="${H};font-size:${big?30:23}px;line-height:1.02;font-weight:600;color:${I};margin:4px 0 0">${ESC(x.label||'')}</h3>${x.desc?`<p style="${B};font-size:${big?15:13.5}px;line-height:1.45;color:${I};margin:5px 0 0">${ESC(x.desc)}</p>`:''}${x.film?`<p style="${H};font-style:italic;font-size:${big?18:16}px;line-height:1.25;color:${M};margin:3px 0 0">${ESC(x.film)}</p>`:''}</article>`;};
+  const mast=`<header style="position:absolute;left:24px;top:20px;width:1023px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;${T};font-size:11px;font-weight:700;color:${M};letter-spacing:.06em"><span>THANKSGIVING EDITION</span><span>NEW YORK'S FINEST DAILY NEWSPAPER</span><span>FIFTY CENTS</span></div>
+    <div style="${H};font-size:64px;line-height:.95;font-weight:600;letter-spacing:.02em;color:${I};text-align:center;margin-top:2px">DAILY BUGLE</div>
+    <div style="border-top:3px solid ${I};border-bottom:1px solid ${I};margin-top:6px;padding:4px 0;display:flex;justify-content:space-between;${B};font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:${I}"><span>Food &amp; family / Section F</span><span>Queens, ${ESC(f.year)}</span><span>Editor in chief: J. Jonah Jameson</span></div></header>`;
+  const left=`<section style="position:absolute;left:24px;top:148px;width:300px;height:570px;display:flex;flex-direction:column;justify-content:space-between">
+    <div style="${H};font-size:25px;line-height:1.02;font-weight:600;color:${I}">WALL-CRAWLER SEEN OVER QUEENS. THREAT OR MENACE?</div>
+    <figure style="margin:0">${img('identity','Spider-Man crawling down a Manhattan tower',300,150)}${cred('Photo: Peter Parker')}</figure>
+    <div style="border:2px solid ${I};padding:9px 12px 10px">${lab('Classified',I)}<div style="${H};font-size:22px;line-height:1.05;font-weight:600;color:${R};margin-top:3px">WIN $3,000</div><div style="${B};font-size:13px;line-height:1.4;color:${I};margin-top:3px">Last three minutes in the ring with Bone Saw. Masked entrants welcome.</div></div>
+    <figure style="margin:0">${img('mayben','Aunt May and Uncle Ben at home in Queens',300,132,'center 35%')}<div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px"><span style="${H};font-style:italic;font-size:17px;color:${R}">With great power... pass the gravy.</span><span style="${T};font-size:11px;color:${M}">May &amp; Ben</span></div></figure></section>`;
+  const right=`<section style="position:absolute;left:346px;top:148px;width:701px;height:570px;border-left:1px solid ${I};padding-left:20px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between">
+    <div>${lab(spec.brand||'')}<div style="${H};font-size:36px;line-height:1;font-weight:600;color:${I};margin-top:2px;white-space:nowrap">Thanksgiving at 20 Ingram Street</div><div style="${H};font-style:italic;font-size:20px;color:${M};margin-top:2px">${ESC(spec.tag||'')}</div></div>
+    <div style="display:grid;grid-template-columns:270px 1fr;column-gap:20px;align-items:start;border-top:1px solid ${L};padding-top:12px">
+      <figure style="margin:0">${img('thanksgiving','Peter at the Thanksgiving table with Norman Osborn',270,146)}${cred('Forest Hills. Photo: staff')}</figure>${dish(2,true)}</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:18px;border-top:1px solid ${L};padding-top:10px">
+      <div style="display:flex;flex-direction:column;gap:8px">${dish(0)}${dish(1)}</div>
+      <div style="display:flex;flex-direction:column;gap:8px;border-left:1px solid ${L};padding-left:16px">${dish(3)}${dish(4)}</div></div>
+    <div style="background:${D};color:${P};padding:8px 14px;display:flex;gap:14px;align-items:baseline">${lab('Wrestling cue','#e8c17c','white-space:nowrap')}<span style="${B};font-size:14px;line-height:1.35">${ESC(fmtCue(f))}</span><span style="margin-left:auto;${T};font-size:10px;white-space:nowrap;color:#c9c2b0">IMAGERY: TMDB</span></div></section>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${P};box-shadow:0 18px 40px #0008"><div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(110deg,#fff5,transparent 50%,#b8a88022)"></div>${mast}${left}${right}</div>`;
+}
+
+
+/* A suite-supper folio: real 1992 limousine, hotel staff and Christmas-suite photography. */

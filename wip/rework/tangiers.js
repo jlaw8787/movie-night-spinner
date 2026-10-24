@@ -1,0 +1,34 @@
+function fmtTangiers(f,spec,menu,poster){
+  const K='#1a1012',P='#fbf5e8',R='#9e1f2c',GD='#c49a45',I='#231c1c',M='#6a5e58',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const at=(x,y,w,e='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${e}`;
+  const a=spec.art||{},all=menu.all;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
+  const val=['25','25','100','10','5'];
+  const chip=(v,c,s=46)=>`<div style="width:${s}px;height:${s}px;border-radius:50%;background:${c};border:4px dashed #fff;box-sizing:border-box;flex:none;position:relative"><div style="position:absolute;inset:6px;border-radius:50%;background:${P};text-align:center;${B};font-size:${s>50?16:12}px;font-weight:700;line-height:${s-20}px;color:${c}">${v}</div></div>`;
+  const cc=['#2f6b3a','#2f6b3a',I,'#2a4f8f',R];
+  const row=(it,i)=>`<div style="display:flex;gap:16px;padding:${i?9:0}px 0 9px;${i<all.length-1?'border-bottom:1px solid #e1d3b5':''}">
+    ${chip(val[i],cc[i])}
+    <div style="flex:1;min-width:0"><div style="display:flex;justify-content:space-between;align-items:baseline"><span style="${B};font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:${R}">${ESC(tabs[i]||'')}</span><span style="${T};font-size:11px;color:${M}">COMP VALUE $${val[i]}</span></div>
+    <div style="${H};font-size:${i===2?30:26}px;line-height:1.03;font-weight:600;color:${I}">${ESC(it.label)}</div>
+    <div style="${B};font-size:14px;line-height:1.38;color:${I};margin-top:2px">${ESC(it.desc)}</div>
+    ${it.film?`<div style="${H};font-size:16px;line-height:1.25;font-style:italic;color:${M};margin-top:1px">${ESC(it.film)}</div>`:''}</div></div>`;
+  const card=`<section aria-label="Casino comp card menu" style="${at(24,22,652,`height:698px;background:${P};box-shadow:0 8px 22px rgba(0,0,0,.7);border-top:10px solid ${R}`)}">
+    <header style="${at(32,18,588,`border-bottom:2px solid ${GD};padding-bottom:9px;display:flex;justify-content:space-between;align-items:flex-end`)}">
+      <div><div style="${B};font-size:10.5px;font-weight:700;letter-spacing:.2em;color:${GD}">TANGIERS HOTEL &amp; CASINO / LAS VEGAS / 1973</div><div style="${H};font-size:42px;line-height:1;font-weight:600;color:${I};margin-top:4px;white-space:nowrap">On the house</div></div>
+      <div style="${T};font-size:11px;line-height:1.45;text-align:right;color:${M}">COMP NO. 0773<br>AUTHORIZED: S. ROTHSTEIN<br>GUEST: HIGH ROLLER</div></header>
+    <div style="${at(32,112,588)}">${all.map(row).join('')}</div>
+    <footer style="${at(32,636,588,`border-top:2px solid ${GD};padding-top:8px;display:flex;justify-content:space-between;${T};font-size:11px;color:${M}`)}"><span>NOT VALID IN THE COUNT ROOM</span><span>NO CHEATERS. NO EXCEPTIONS.</span></footer>
+  </section>`;
+  const right=`<div style="${at(700,22,347,'height:698px;display:flex;flex-direction:column')}">
+    <figure style="margin:0;border:2px solid ${GD};padding:4px">${img('sign','The Tangiers sign lit up at night',335,214)}</figure>
+    <figure style="margin:12px 0 0;border:2px solid ${GD};padding:4px">${img('ace','Ace Rothstein at the Tangiers',335,214,'center 30%')}</figure>
+    <div style="margin-top:14px;flex:1;background:#fff;padding:12px 16px;box-sizing:border-box;box-shadow:0 5px 14px rgba(0,0,0,.5);transform:rotate(-1deg);display:flex;flex-direction:column">
+      <div style="${T};font-size:11px;font-weight:700;color:${R}">MEMO TO KITCHEN / FROM: ACE</div>
+      <div style="${H};font-size:22px;line-height:1.15;font-weight:600;color:${I};margin-top:4px">${ESC(spec.tag||'')} I don't care how long it takes.</div>
+      <div style="${B};font-size:13px;line-height:1.35;color:${I};margin-top:auto"><b style="color:${R}">CUE</b> ${ESC(fmtCue(f))}</div></div>
+    <div style="${B};font-size:9px;letter-spacing:.1em;color:#8c7c74;margin-top:10px;text-align:right">FILM IMAGERY: TMDB</div>
+  </div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${K};overflow:hidden;box-shadow:0 16px 40px #0007">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 75% 20%,rgba(196,154,69,.22),transparent 60%)"></div>${card}${right}</div>`;
+}

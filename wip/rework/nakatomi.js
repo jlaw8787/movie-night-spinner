@@ -1,0 +1,47 @@
+function fmtNakatomi(f,spec,menu,poster){
+  const PA='#f6f4ee',IN='#1d1f24',SO='#5a5d64',RD='#b3262b',GN='#2f6b48',GD='#b8964a',D="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const nh=t=>ESC(String(t||'').normalize('NFC')).replace(/[âêîôûàèìòùëïüç]/gi,m=>`<span style="font-family:'Times New Roman',Times,serif;font-weight:400">${m}</span>`);
+  const lab=(s,c,e='')=>`<div style="${T};font-size:12px;font-weight:700;line-height:1.3;letter-spacing:.06em;text-transform:uppercase;color:${c||SO};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const tm=['7:30 PM','7:30 PM','8:15 PM','9:00 PM','All night'],st=['Floor 30','Limo','Floor 30','Car park','Limo bar'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:86px 1fr 90px;column-gap:12px;padding:10px 0 8px;border-bottom:1px solid #d3d0c4">
+    <div><div style="${T};font-size:14px;font-weight:700;color:${RD}">${tm[i]||''}</div><div style="${T};font-size:12px;color:${SO};margin-top:3px">${st[i]||''}</div></div>
+    <div><h3 style="${D};font-size:25px;line-height:1.02;font-weight:600;margin:0;color:${IN}">${nh(it.label)}</h3>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.38;margin:3px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${B};font-size:13px;font-style:italic;line-height:1.32;margin:3px 0 0;color:${GN}">${ESC(it.film||'')}</p></div>
+    <div style="text-align:right">${lab(ESC(gs[i]?gs[i].tab:''),RD)}<div style="${T};font-size:12px;color:${SO};margin-top:4px">Qty ${i===2?'30':i===4?'1 btl':'2 trays'}</div></div></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:linear-gradient(180deg,#0e1726,#1c2b3f 60%,#2d2433);overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;inset:0;background-image:linear-gradient(90deg,#f3c96b14 2px,#0000 2px),linear-gradient(180deg,#f3c96b10 2px,#0000 2px);background-size:30px 22px"></div>
+  <header style="position:absolute;left:24px;top:22px;width:360px">
+    ${lab('Century City, Los Angeles / 1988','#f0cf7a')}
+    <h1 style="${D};font-size:72px;line-height:.86;font-weight:600;letter-spacing:-.02em;margin:6px 0 0;color:#f6f4ee;text-shadow:none">Die Hard</h1>
+    <div style="${D};font-size:21px;font-style:italic;color:#d6dbe4;margin-top:6px">${ESC(spec.tag||'')} Thirty floors up.</div>
+  </header>
+  <figure style="position:absolute;left:24px;top:170px;width:360px;margin:0;background:${PA};padding:7px 7px 8px;box-sizing:border-box;box-shadow:0 10px 22px #000c;transform:rotate(-1deg)">${img('hero','Nakatomi Plaza rising over Century City',346,200)}<figcaption style="${B};font-size:13px;line-height:1.35;color:${IN};margin-top:7px">Century City. Nakatomi Plaza, lit up for Christmas.</figcaption></figure>
+  <div style="position:absolute;left:24px;top:446px;width:360px;display:flex;gap:16px;align-items:flex-start">
+    <div style="flex:none;background:${PA};padding:6px;box-shadow:0 10px 22px #000c;transform:rotate(1.3deg)">${fmtPosterImg(f,poster,138,207)}</div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:12px;margin-top:6px">
+      <div style="background:#f3e17a;padding:10px 11px;box-shadow:0 6px 14px #0009;transform:rotate(-2deg)">
+        ${lab('Note for Al',IN)}
+        <div style="${D};font-size:22px;font-weight:600;line-height:1.05;color:${IN};margin-top:4px">Welcome to the party, pal.</div>
+      </div>
+      <div style="border:2px solid ${GD};padding:8px 10px">
+        ${lab('The vault',GD)}
+        <div style="${T};font-size:13px;line-height:1.4;color:#f6f4ee;margin-top:3px">7 locks.<br>$640M in bonds.<br>Not catered.</div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;left:412px;top:18px;width:636px;height:706px;background:${PA};box-shadow:0 12px 28px #000c;box-sizing:border-box;padding:14px 22px 10px;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid ${IN};padding-bottom:6px">
+      <div>${lab('Nakatomi Plaza / Banquet event order',RD)}<div style="${D};font-size:38px;font-weight:600;line-height:1;color:${IN};margin-top:4px">Christmas Eve Reception</div></div>
+      <div style="${T};font-size:13px;line-height:1.45;color:${IN};text-align:right">BEO No. 1224<br>Floor 30</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;${T};font-size:13px;line-height:1.45;color:${IN};padding:6px 0;border-bottom:1px solid ${IN}"><span>HOST: J. Takagi</span><span style="text-align:right">CONTACT: H. Gennero</span><span>DRIVER: Argyle</span><span style="text-align:right">GUESTS: staff + 1 cop from NY</span></div>
+    <div style="display:grid;grid-template-columns:86px 1fr 90px;column-gap:12px;padding:6px 0 4px;border-bottom:2px solid ${IN}">${lab('Time')}${lab('Menu item')}${lab('Course','','text-align:right')}</div>
+    ${xs.map(row).join('')}
+    ${FX_SP}
+    <div style="display:flex;gap:12px;align-items:baseline">${lab('Showtime cue',RD,'white-space:nowrap')}<span style="${B};font-size:13px;line-height:1.35;color:${IN}">${ESC(fmtCue(f))}</span></div>
+    <div style="${T};font-size:10px;color:${SO};margin-top:5px">Dress: festive. Shoes optional. Guests who fly in may make fists with their toes on the carpet.</div>
+  </div>
+  <div style="position:absolute;left:24px;bottom:5px;${T};font-size:9px;color:#9aa6b8">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

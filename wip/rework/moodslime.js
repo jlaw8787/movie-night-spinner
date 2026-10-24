@@ -1,0 +1,33 @@
+function fmtMoodslime(f,spec,menu,poster){
+  const K='#231a24',P='#f7f3ea',I='#221d22',M='#615a5f',PK='#e0428a',PL='#f6c7dc',GR='#5f8f3e',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const at=(x,y,w,e='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${e}`;
+  const a=spec.art||{},all=menu.all;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
+  const ids=['A','B','C','D','E'],react=['+ POSITIVE','+ DANCES','- CARPATHIAN','+ WOBBLES','+ PINK'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:46px 1fr;column-gap:14px;padding:${i?9:0}px 0 9px;${i<all.length-1?'border-bottom:1px dashed #c9bfc4':''}">
+    <div style="width:42px;height:42px;border-radius:50%;background:${i===2?'#cfd6c4':PL};border:2px solid ${i===2?GR:PK};text-align:center;${T};font-size:21px;font-weight:700;line-height:40px;color:${i===2?GR:PK}">${ids[i]}</div>
+    <div><div style="display:flex;justify-content:space-between;${T};font-size:10.5px;font-weight:700;letter-spacing:.08em;color:${M}"><span>SAMPLE ${ids[i]} / ${ESC((tabs[i]||'').toUpperCase())}</span><span>REACTION: <span style="color:${i===2?GR:PK};font-size:12px">${react[i]}</span></span></div>
+      <div style="${H};font-size:${i===2?30:26}px;line-height:1.03;font-weight:600;color:${I};margin-top:1px">${ESC(it.label)}</div>
+      <div style="${B};font-size:14px;line-height:1.38;color:${I};margin-top:2px">${ESC(it.desc)}</div>
+      ${it.film?`<div style="${T};font-size:13px;line-height:1.3;color:${M};margin-top:2px">${ESC(it.film)}</div>`:''}</div></div>`;
+  const sheet=`<section aria-label="Slime lab report menu" style="${at(24,22,650,`height:698px;background:${P};box-shadow:0 8px 22px rgba(0,0,0,.6)`)}">
+    <div aria-hidden="true" style="${at(255,-6,140,'height:26px;background:linear-gradient(#c4c4c4,#7d7d7d);border-radius:4px;box-shadow:0 2px 3px rgba(0,0,0,.4)')}"></div>
+    <header style="${at(32,30,586,`border-bottom:3px solid ${I};padding-bottom:9px;display:flex;justify-content:space-between;align-items:flex-end`)}">
+      <div><div style="${T};font-size:11px;font-weight:700;letter-spacing:.1em;color:${PK}">FIREHOUSE LAB / NORTH MOORE ST / 1989</div><div style="${H};font-size:42px;line-height:1;font-weight:600;color:${I};margin-top:3px">Mood slime supper</div></div>
+      <div style="${T};font-size:11px;line-height:1.45;text-align:right;color:${M}">TESTED BY: Dr. Spengler<br>DRAWN: 1st Ave &amp; 77th<br>WHO YOU GONNA CALL? 555-2368</div></header>
+    <div style="${at(32,126,586)}">${all.map(row).join('')}</div>
+    <footer style="${at(32,636,586,`border-top:3px solid ${I};padding-top:8px;display:flex;gap:12px;align-items:baseline`)}"><span style="${T};font-size:11px;font-weight:700;color:${PK};white-space:nowrap">SERVING CUE</span><span style="${B};font-size:13px;line-height:1.35;color:${I}">${ESC(fmtCue(f))}</span></footer>
+  </section>`;
+  const right=`<div style="${at(700,22,347,'height:698px;display:flex;flex-direction:column')}">
+    <figure style="margin:0;background:#1a131a;border:8px solid #9c7a3c;box-shadow:0 6px 16px rgba(0,0,0,.6)">${img('vigo','Ray examining Vigo’s portrait in the museum',331,214,'center 25%')}</figure>
+    <div style="${T};font-size:11px;line-height:1.4;color:${PL};margin-top:8px">VIGO WANTS A BABY BY NEW YEAR. NO.</div>
+    <figure style="margin:14px 0 0;background:${P};padding:6px 6px 0;box-shadow:0 5px 14px rgba(0,0,0,.6);transform:rotate(1.2deg)">${img('toaster','The Ghostbusters around the mood slime and toaster experiment',335,286)}<figcaption style="${T};font-size:11px;color:${I};padding:6px 2px 7px">Sample B meets the toaster. It dances.</figcaption></figure>
+    <div style="margin-top:auto;background:${PK};padding:12px 16px;box-shadow:0 5px 14px rgba(0,0,0,.5);transform:rotate(-1deg)">
+      <div style="${H};font-size:26px;line-height:1.05;font-weight:600;color:#fff">${ESC(spec.tag||'')}</div>
+      <div style="${T};font-size:11px;color:#ffe6f1;margin-top:5px">KEEP SLIME POSITIVE. SING TO IT IF NEEDED.</div></div>
+    <div style="${T};font-size:9px;letter-spacing:.06em;color:#9b8f99;margin-top:10px;text-align:right">${ESC(f.title.toUpperCase())} (${f.year}) / FILM IMAGERY: TMDB</div>
+  </div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${K};overflow:hidden;box-shadow:0 16px 40px #0007">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 85% 100%,rgba(224,66,138,.28),transparent 60%)"></div>${sheet}${right}</div>`;
+}

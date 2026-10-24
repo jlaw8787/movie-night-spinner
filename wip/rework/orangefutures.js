@@ -1,0 +1,33 @@
+function fmtOrangeFutures(f,spec,menu,poster){
+  const D='#193d30',P='#f3ead3',O='#c9731f',K='#1b2420',M='#56604f',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const at=(x,y,w,e='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${e}`;
+  const a=spec.art||{},all=menu.all;
+  const img=(k,alt,w,h)=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:center">`:'';
+  const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
+  const acts=['BUY','SELL','BUY','BUY','BUY'];
+  const rows=all.map((it,i)=>`<div style="display:flex;gap:14px;align-items:flex-start;padding:${i?9:0}px 0 9px;${i<all.length-1?'border-bottom:1px solid #c9bd9b':''}">
+    <div style="width:78px;flex:none;padding-top:5px"><div style="${T};font-size:11px;font-weight:700;letter-spacing:.06em;color:${O};text-transform:uppercase">${ESC(tabs[i]||'')}</div><div style="${T};font-size:11px;color:${M};margin-top:3px">ORDER 0${i+1}</div></div>
+    <div style="flex:1;min-width:0"><div style="${H};font-size:${i===2?29:25}px;line-height:1.05;font-weight:600;color:${K}">${ESC(it.label)}</div><div style="${B};font-size:14px;line-height:1.4;color:${K};margin-top:4px">${ESC(it.desc)}</div>${it.film?`<div style="${T};font-size:13px;line-height:1.35;color:${M};margin-top:3px">${ESC(it.film)}</div>`:''}</div>
+    <div style="width:64px;flex:none;padding-top:6px;text-align:center"><span style="display:inline-block;${T};font-size:15px;font-weight:700;letter-spacing:.08em;color:${acts[i]==='SELL'?'#a2361f':D};border:2px solid currentColor;padding:3px 7px;transform:rotate(-4deg)">${acts[i]||'BUY'}</span></div>
+  </div>`).join('');
+  const tick=['FCOJ JAN 142.00 UP 4.00','PORK BELLIES 64.10','GOLD 412.50','WHEAT 3.61','FCOJ MAR 29.00 LIMIT DOWN'].map(s=>`<span>${s}</span>`).join('');
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${D};box-shadow:0 16px 40px #0006;overflow:hidden">
+  <section aria-label="Duke and Duke market order sheet" style="${at(22,22,1027,`height:698px;background:${P};box-shadow:0 6px 18px rgba(0,0,0,.45)`)}">
+    <header style="${at(30,20,967,'height:76px;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px double '+K+';padding-bottom:10px;box-sizing:border-box')}">
+      <div><div style="${T};font-size:11px;font-weight:700;letter-spacing:.12em;color:${O}">DUKE &amp; DUKE / COMMODITY BROKERS / PHILADELPHIA</div><div style="${H};font-size:44px;line-height:1;font-weight:600;color:${K};margin-top:4px">Trading Places supper</div></div>
+      <div style="text-align:right"><div style="${H};font-size:22px;font-style:italic;color:${K}">${ESC(spec.tag||'')}</div><div style="${T};font-size:11px;letter-spacing:.06em;color:${M};margin-top:4px">FLOOR ORDER / NEW YEAR'S EVE / WORLD TRADE CENTER</div></div>
+    </header>
+    <div aria-hidden="false" style="${at(30,106,967,`height:30px;background:${K};overflow:hidden;white-space:nowrap;display:flex;justify-content:space-between;${T};font-size:14px;font-weight:700;line-height:30px;color:#f0a64a;padding:0 16px;box-sizing:border-box`)}">${tick}</div>
+    <div style="${at(30,150,612)}">${rows}</div>
+    <div style="${at(666,150,331)}">
+      <figure style="margin:0">${img('market','The frozen orange juice trading floor climax',331,200)}<figcaption style="${T};font-size:11px;line-height:1.3;color:${M};margin-top:6px">The orange juice pit, World Trade Center.</figcaption></figure>
+      <figure style="margin:16px 0 0">${img('club','Billy Ray with the Duke brothers at the Heritage Club',331,200)}<figcaption style="${T};font-size:11px;line-height:1.3;color:${M};margin-top:6px">The Heritage Club. The one dollar bet.</figcaption></figure>
+    </div>
+    <footer style="${at(30,628,967,'height:54px;border-top:3px double '+K+';padding-top:10px;box-sizing:border-box;display:flex;align-items:center;gap:22px')}">
+      <div style="${H};font-size:24px;font-style:italic;font-weight:600;color:${K};white-space:nowrap">Looking good, Billy Ray! Feeling good, Louis!</div>
+      <div style="${B};font-size:13px;line-height:1.35;color:${K}"><b style="${T};font-size:11px;color:${O};letter-spacing:.06em">CUE</b> ${ESC(fmtCue(f))}</div>
+      <div style="${T};font-size:9px;color:${M};margin-left:auto;white-space:nowrap">FILM IMAGERY: TMDB</div>
+    </footer>
+  </section>
+  </div>`;
+}

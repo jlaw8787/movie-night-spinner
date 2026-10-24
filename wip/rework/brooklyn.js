@@ -1,0 +1,38 @@
+function fmtBrooklyn(f,spec,menu,poster){
+ const N='#4a2921',P='#f0e1c6',SL='#e6ead8',I='#3d3127',R='#9c4530',M='#786453',Y='#f1dab0',G='#55704f',RULE='#b9c2a8';
+ const D="font-family:'Bevan',serif;font-weight:400",B="font-family:'Barlow Condensed',sans-serif";
+ const a=spec.art||{};
+ const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+ const lab=(t,c=G,e='')=>`<div style="${B};font-size:12px;line-height:1.25;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:${c};${e}">${ESC(t)}</div>`;
+ const rows=[];let n=0;
+ spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+ const amt=[['1','75'],['2','50'],['8','00'],['','25'],['1','20']];
+ const row=(r,i)=>`<div style="flex:1;display:grid;grid-template-columns:1fr 70px 38px;align-items:center;border-top:1px solid ${RULE}">
+   <div style="padding:4px 14px 4px 0"><div style="display:flex;align-items:baseline;gap:9px"><span style="${B};font-size:24px;line-height:1.05;font-weight:700;color:${I}">${ESC(r.it.label||'')}</span>${lab(r.g.tab||'',R)}</div>
+   ${r.it.desc?`<div style="${B};font-size:17px;line-height:1.2;font-weight:500;color:${I};margin-top:1px">${ESC(r.it.desc)}</div>`:''}
+   ${r.it.film?`<div style="${B};font-size:15px;line-height:1.2;font-style:italic;color:${M};margin-top:1px">${ESC(r.it.film)}</div>`:''}</div>
+   <div style="${D};font-size:20px;color:${I};text-align:right;padding-right:6px;border-left:1px solid ${G};align-self:stretch;display:flex;align-items:center;justify-content:flex-end">${amt[i][0]}</div>
+   <div style="${D};font-size:20px;color:${I};text-align:center;border-left:1px dotted ${G};align-self:stretch;display:flex;align-items:center;justify-content:center">${amt[i][1]}</div></div>`;
+ const slip=`<section style="position:absolute;left:418px;top:24px;width:629px;height:694px;box-sizing:border-box;background:${SL};padding:8px;box-shadow:0 8px 20px rgba(0,0,0,.45)">
+  <div style="height:100%;box-sizing:border-box;border:2px solid ${G};outline:1px solid ${G};outline-offset:-6px;padding:12px 18px 8px;display:flex;flex-direction:column">
+   <div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px double ${G};padding-bottom:9px">
+     <div>${lab('Brooklyn savings / Teller’s copy')}<div style="${D};font-size:29px;line-height:1.05;color:${G};margin-top:3px;letter-spacing:-.02em">WITHDRAWAL TICKET</div><div style="${B};font-size:18px;font-weight:600;color:${M};margin-top:2px">${ESC(spec.brand||'')}</div></div>
+     <div style="text-align:right">${lab('Date')}<div style="${B};font-size:22px;font-weight:700;color:${I}">AUG 22, 1972</div>${lab('Temp. outside',G,'margin-top:4px')}<div style="${B};font-size:20px;font-weight:700;color:${R}">TOO HOT</div></div></div>
+   <div style="display:grid;grid-template-columns:1.2fr 1fr;border-bottom:2px solid ${G}">
+     <div style="padding:5px 0">${lab('Account holder')}<div style="${B};font-size:20px;font-weight:700;color:${I}">SONNY WORTZIK</div></div>
+     <div style="padding:5px 12px;border-left:1px solid ${RULE}">${lab('Transfer to')}<div style="${B};font-size:20px;font-weight:700;color:${I}">SAL: “WYOMING”</div></div></div>
+   <div style="display:grid;grid-template-columns:1fr 70px 38px;padding:5px 0 3px">${lab('Items withdrawn')}${lab('$',G,'text-align:right;padding-right:6px')}${lab('¢',G,'text-align:center')}</div>
+   <div style="flex:1;min-height:0;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+   <div style="display:flex;justify-content:space-between;align-items:center;border-top:3px double ${G};padding-top:7px">
+     <div style="${B};font-size:13px;font-weight:700;letter-spacing:.1em;color:${M}">CASH ON HAND IN THE VAULT: $1,100.00</div>
+     <div style="border:3px solid ${R};color:${R};padding:2px 10px;${D};font-size:17px;transform:rotate(-4deg)">ATTICA!</div></div></div></section>`;
+ const left=`<section style="position:absolute;left:24px;top:24px;width:370px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+   <div><div style="${D};font-size:40px;line-height:1;letter-spacing:-.03em;color:${Y}">DOG DAY AFTERNOON</div><div style="${B};font-size:21px;font-weight:600;color:#dfbea0;margin-top:6px">${ESC(spec.tag||'')} Brooklyn, ${ESC(f.year)}.</div></div>
+   <figure style="margin:0;border:5px solid ${P}">${img('street','Sonny outside the Brooklyn bank with the street crowd',360,214)}</figure>
+   <div style="display:flex;justify-content:space-between">
+     <figure style="margin:0;border:5px solid ${P}">${img('bank','Sonny with the people inside the bank',170,104)}</figure>
+     <figure style="margin:0;border:5px solid ${P}">${img('summer','New York summer heat',170,104)}</figure></div>
+   <div style="background:${P};padding:10px 14px 11px;border-left:6px solid ${R}">${lab('Serving cue',R)}<div style="${B};font-size:18px;line-height:1.25;font-weight:600;color:${I};margin-top:3px">${ESC(fmtCue(f))}</div></div>
+   <div style="${B};font-size:12px;letter-spacing:.12em;color:#d1aa8e">FILM IMAGERY: TMDB</div></section>`;
+ return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${N};box-shadow:0 18px 38px rgba(0,0,0,.5)">${left}${slip}</div>`;
+}

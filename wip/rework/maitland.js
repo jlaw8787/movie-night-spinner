@@ -1,0 +1,45 @@
+function fmtMaitland(f,spec,menu,poster){
+  const PA='#efeadb',IN='#1b1a17',SO='#57534a',GN='#4f7d3a',PU='#5b3a78',OR='#d3692a',D="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c,e='')=>`<div style="${T};font-size:12px;font-weight:700;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;color:${c||SO};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const sec=['§ 1.1','§ 1.2','§ 2','§ 3','§ 4'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:58px 1fr;column-gap:12px;padding:12px 0 11px;border-top:1px solid #cfc6ad">
+    <div style="${D};font-size:22px;font-weight:600;color:${PU};line-height:1;padding-top:3px">${sec[i]||''}</div>
+    <div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><h3 style="${D};font-size:25px;line-height:1.02;font-weight:600;margin:0;color:${IN}">${ESC(it.label)}</h3>${lab(ESC(gs[i]?gs[i].tab:''),GN,'white-space:nowrap')}</div>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.38;margin:3px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${T};font-size:13px;line-height:1.32;margin:3px 0 0;color:${PU}">${ESC(it.film||'')}</p></div></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:#2b2433;overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,#6a8f4a55,#0000 50%),radial-gradient(ellipse at 20% 100%,#5b3a7877,#0000 55%)"></div>
+  <div style="position:absolute;left:22px;top:16px;width:652px;height:710px;background:#141414;box-shadow:0 12px 28px #000c;padding:12px;box-sizing:border-box"><i aria-hidden="true" style="position:absolute;left:12px;right:12px;top:0;height:12px;background-image:linear-gradient(90deg,#141414 50%,#f3f0e6 50%);background-size:26px 100%"></i><i aria-hidden="true" style="position:absolute;left:12px;right:12px;bottom:0;height:12px;background-image:linear-gradient(90deg,#141414 50%,#f3f0e6 50%);background-size:26px 100%"></i>
+   <div style="height:100%;background:${PA};box-sizing:border-box;padding:14px 26px 10px;display:flex;flex-direction:column">
+    <div style="text-align:center;border-bottom:2px solid ${IN};padding-bottom:8px">
+      ${lab('Handbook for the Recently Deceased / Chapter 9',GN)}
+      <div style="${D};font-size:36px;font-weight:600;line-height:1;color:${IN};margin-top:5px">On Hosting a Dinner Party</div>
+      <div style="${D};font-size:17px;font-style:italic;color:${SO};margin-top:3px">For the living who moved into your house. Read it. Do not say his name.</div>
+    </div>
+    ${xs.map(row).join('')}
+    ${FX_SP}
+    <div style="display:flex;gap:12px;align-items:baseline;border-top:2px solid ${IN};padding-top:7px">${lab('Showtime cue',OR,'white-space:nowrap')}<span style="${B};font-size:13px;line-height:1.35;color:${IN}">${ESC(fmtCue(f))}</span></div>
+    <div style="${T};font-size:10px;color:${SO};margin-top:4px">Live people ignore the strange and unusual. Stay clear of the sandworms.</div>
+   </div>
+  </div>
+  <header style="position:absolute;left:702px;top:22px;width:346px">
+    ${lab('Winter River / 1988','#b9d79c')}
+    <h1 style="${D};font-size:64px;line-height:.9;font-weight:600;letter-spacing:-.02em;margin:6px 0 0;color:#efeadb;text-shadow:none">Beetlejuice</h1>
+    <div style="${D};font-size:21px;font-style:italic;color:#d4c3e6;margin-top:6px">${ESC(spec.tag||'')}</div>
+  </header>
+  <figure style="position:absolute;left:702px;top:150px;width:346px;margin:0;background:#f3f0e6;padding:7px 7px 8px;box-sizing:border-box;box-shadow:0 10px 22px #000c;transform:rotate(-1deg)">${img('dinner','The Deetz dinner party, mid song',332,196)}<figcaption style="${D};font-size:17px;font-style:italic;line-height:1.25;color:${IN};margin-top:6px">The Deetz dinner party, moments before the guests start singing.</figcaption></figure>
+  <div style="position:absolute;left:702px;top:448px;width:346px;display:flex;gap:16px;align-items:flex-start">
+    <div style="flex:none;background:#f3f0e6;padding:6px;box-shadow:0 10px 22px #000c;transform:rotate(1.4deg)">${fmtPosterImg(f,poster,138,207)}</div>
+    <div style="flex:1;margin-top:6px;display:flex;flex-direction:column;gap:12px">
+      <div style="background:#f3e9a6;border:2px dashed ${IN};padding:9px 10px;text-align:center;box-shadow:0 6px 14px #0009;transform:rotate(-2deg)">
+        ${lab('Afterlife waiting room',IN)}
+        <div style="${D};font-size:20px;font-weight:600;color:${IN};margin-top:4px">Take a number</div>
+        <div style="${T};font-size:30px;font-weight:700;color:${OR};line-height:1.1">9,000,001</div>
+        <div style="${B};font-size:12px;color:${SO};margin-top:2px">Caseworker: Juno</div>
+      </div>
+      <div style="${B};font-size:13px;line-height:1.35;color:#e7def0">Shrimp cocktail is served. Keep your hands clear of it.</div>
+    </div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:5px;${T};font-size:9px;color:#b8afc4">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

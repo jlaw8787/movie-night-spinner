@@ -1,0 +1,47 @@
+function fmtBoatdrinks(f,spec,menu,poster){
+  const PA='#f4f0e6',IN='#1c1a24',SO='#56525e',TL='#16807c',PK='#d9466f',YE='#f3c544',C="font-family:'Barlow Condensed',sans-serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c,e='')=>`<div style="${C};font-size:14px;font-weight:700;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;color:${c||SO};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const pk=['Session 1','Session 2','Session 3','Session 4','Last word'],pr=['$19.95','$19.95','$52.80','$9.95','Free'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:96px 1fr 92px;column-gap:14px;padding:15px 0 14px;border-bottom:1px solid #d6d0c2">
+    <div><div style="${C};font-size:14px;font-weight:700;letter-spacing:.06em;color:#fff;background:${i%2?PK:TL};display:inline-block;padding:2px 7px;text-transform:uppercase">${pk[i]||''}</div><div style="${T};font-size:12px;color:${SO};margin-top:6px">TAPE ${String(i+1).padStart(2,'0')}</div></div>
+    <div><h3 style="${C};font-size:25px;line-height:1;font-weight:700;margin:0;color:${IN};text-transform:uppercase">${ESC(it.label)}</h3>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.38;margin:4px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${T};font-size:13px;line-height:1.32;margin:3px 0 0;color:${TL}">${ESC(it.film||'')}</p></div>
+    <div style="text-align:right"><div style="${C};font-size:22px;font-weight:700;color:${IN};line-height:1">${pr[i]||''}</div>${lab(ESC(gs[i]?gs[i].tab:''),PK,'margin-top:5px')}</div></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:linear-gradient(160deg,#0f3b44,#122a3a 55%,#2a1730);overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,#ffffff06 0 1px,#0000 1px 4px)"></div>
+  <div style="position:absolute;left:24px;top:18px;width:640px;height:706px;background:${PA};box-shadow:0 12px 26px #000b;box-sizing:border-box;display:flex;flex-direction:column">
+    <div style="flex:none;height:12px;background:linear-gradient(90deg,${TL} 0 33%,${YE} 33% 66%,${PK} 66%)"></div>
+    <div style="padding:12px 24px 0;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid ${IN};margin:0 0 0;padding-bottom:8px">
+      <div>${lab('Afterlife Advice / Price list',PK)}<div style="${C};font-size:44px;font-weight:700;line-height:.9;color:${IN};margin-top:3px">LEAVE THEM A GOOD SUPPER</div></div>
+    </div>
+    <div style="padding:0 24px;display:flex;flex-direction:column;flex:1">
+      <div style="${B};font-size:14px;line-height:1.4;color:${IN};padding:8px 0;border-bottom:1px solid ${IN}">Look into the camera, say what you never said. Then eat. Jimmy films every session.</div>
+      ${xs.map(row).join('')}
+      ${FX_SP}
+      <div style="display:flex;gap:12px;align-items:baseline">${lab('Showtime cue',PK,'white-space:nowrap')}<span style="${B};font-size:13px;line-height:1.35;color:${IN}">${ESC(fmtCue(f))}</span></div>
+      <div style="${T};font-size:10px;color:${SO};padding:6px 0 10px">Mile-high pricing. Tapes held for loved ones. No buckwheats on the premises.</div>
+    </div>
+  </div>
+  <header style="position:absolute;left:690px;top:20px;width:358px">
+    ${lab('Denver / 1995','#8fdcd6')}
+    <h1 style="${C};font-size:40px;line-height:.92;font-weight:700;text-transform:uppercase;margin:6px 0 0;color:#f4f0e6;text-shadow:none">Things to Do in Denver When You’re Dead</h1>
+  </header>
+  <figure style="position:absolute;left:690px;top:176px;width:358px;margin:0;background:${PA};padding:7px 7px 8px;box-sizing:border-box;box-shadow:0 10px 22px #000b;transform:rotate(-1deg)">${img('diner','Jimmy and his old crew in the diner booth',344,196)}<figcaption style="${B};font-size:13px;line-height:1.35;color:${IN};margin-top:7px">Jimmy the Saint at the diner. One last job, one bad idea.</figcaption></figure>
+  <div style="position:absolute;left:690px;top:446px;width:358px;display:flex;gap:16px;align-items:flex-start">
+    <div style="flex:none;background:${PA};padding:6px;box-shadow:0 10px 22px #000b;transform:rotate(1.3deg)">${fmtPosterImg(f,poster,150,225)}</div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:12px">
+      <div style="background:${YE};padding:10px 12px;box-shadow:0 6px 14px #0008;transform:rotate(-1.5deg)">
+        ${lab('The toast',IN)}
+        <div style="${C};font-size:31px;font-weight:700;line-height:.9;color:${IN};margin-top:4px;white-space:nowrap">BOAT DRINKS.</div>
+        <div style="${B};font-size:13px;line-height:1.35;color:${IN};margin-top:5px">Umbrella mandatory.</div>
+      </div>
+      <div style="border:2px solid #8fdcd6;padding:9px 11px">
+        ${lab('The crew','#8fdcd6')}
+        <div style="${T};font-size:13px;line-height:1.5;color:#f4f0e6;margin-top:4px">Jimmy the Saint<br>Critical Bill<br>Pieces / Franchise<br>Easy Wind</div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:5px;${T};font-size:9px;color:#8fb3b6">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

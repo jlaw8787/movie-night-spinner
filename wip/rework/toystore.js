@@ -1,0 +1,43 @@
+function fmtToyStore(f,spec,menu,poster){
+  const CR='#f3e6c4',IN='#2a1630',RD='#9c1f2e',GD='#b7862d',PU='#3b1740',SO='#5a4436',C="font-family:'Barlow Condensed',sans-serif",B="font-family:'Libre Franklin',sans-serif";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c,e='')=>`<div style="${C};font-size:13px;font-weight:700;line-height:1.2;letter-spacing:.14em;text-transform:uppercase;color:${c||RD};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const price=['25¢','25¢','25¢','25¢','25¢'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:44px 1fr 96px;column-gap:14px;align-items:start;padding:12px 0 12px;${i?'border-top:1px dashed '+GD:''}">
+    <div style="width:40px;height:40px;border-radius:50%;border:2px solid ${RD};display:grid;place-items:center;${C};font-size:20px;font-weight:700;color:${RD};line-height:1">${i+1}</div>
+    <div><h3 style="${C};font-size:25px;line-height:1;font-weight:700;margin:2px 0 0;color:${IN};text-transform:uppercase;letter-spacing:.01em">${ESC(it.label)}</h3>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.4;margin:4px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${B};font-size:13px;line-height:1.35;font-style:italic;margin:3px 0 0;color:${RD}">${ESC(it.film||'')}</p></div>
+    <div style="text-align:right"><div style="${C};font-size:24px;font-weight:700;color:${IN};line-height:1">${price[i]||''}</div>${lab(ESC(gs[i]?gs[i].tab:''),GD,'margin-top:4px')}</div></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:radial-gradient(ellipse at 70% 30%,#5a2160,${PU} 55%,#1d0a22);overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:repeating-radial-gradient(circle at 70% 30%,#0000 0 30px,#ffffff05 30px 32px)"></div>
+  <div style="position:absolute;left:24px;top:18px;width:612px;height:706px;background:${CR};box-shadow:0 12px 28px #000a;transform:rotate(-.6deg);box-sizing:border-box;padding:12px">
+   <div style="height:100%;border:3px double ${RD};box-sizing:border-box;padding:14px 22px 12px;display:flex;flex-direction:column">
+    <div style="text-align:center;border-bottom:2px solid ${RD};padding-bottom:8px">
+      ${lab('★ The great Zoltar speaks ★')}
+      <div style="${C};font-size:48px;font-weight:700;line-height:.9;letter-spacing:.04em;color:${IN};margin-top:4px">YOUR WISH IS GRANTED</div>
+      <div style="${B};font-size:14px;font-style:italic;color:${SO};margin-top:5px">${ESC(spec.tag||'')} Keep this card. It is your fortune.</div>
+    </div>
+    ${xs.map(row).join('')}
+    ${FX_SP}
+    <div style="border-top:2px solid ${RD};padding-top:8px;display:flex;justify-content:space-between">${lab('Showtime cue',RD)}${lab('Every item 25¢. One wish each.',GD)}</div><div style="${B};font-size:13px;line-height:1.35;color:${IN};margin-top:3px">${ESC(fmtCue(f))}</div>
+   </div>
+  </div>
+  <header style="position:absolute;left:668px;top:22px;width:378px">
+    ${lab('MacMillan Toy Co. / New York / 1988',GD)}
+    <h1 style="${C};font-size:118px;line-height:.8;font-weight:700;letter-spacing:-.01em;margin:6px 0 0;color:#f6e7c3;text-shadow:none">BIG</h1>
+    <div style="${C};font-size:22px;font-weight:600;line-height:1.1;color:#f0c86a;margin-top:6px;text-transform:uppercase;letter-spacing:.06em">${ESC(spec.brand||'')}</div>
+  </header>
+  <figure style="position:absolute;left:668px;top:206px;width:378px;margin:0;background:#f8f1de;padding:8px 8px 10px;box-sizing:border-box;box-shadow:0 10px 22px #000a;transform:rotate(1deg)">${img('piano','Josh and MacMillan play the giant floor piano',362,210)}<figcaption style="${B};font-size:13px;line-height:1.35;color:${IN};margin-top:8px"><b>Heart and Soul</b>, then Chopsticks. Played with your feet.</figcaption></figure>
+  <div style="position:absolute;left:668px;top:484px;width:378px;display:flex;gap:16px;align-items:stretch">
+    <div style="flex:none;background:#f8f1de;padding:6px;box-shadow:0 10px 22px #000a;transform:rotate(-1.4deg)">${fmtPosterImg(f,poster,140,210)}</div>
+    <div style="flex:1;border:2px solid ${GD};background:#2a0f2f;padding:14px 14px 12px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      ${lab('Fortune machine','#f0c86a')}
+      <div style="width:64px;height:10px;border-radius:5px;background:#120614;box-shadow:inset 0 2px 3px #000;margin:14px 0 6px"></div>
+      <div style="${C};font-size:15px;font-weight:700;letter-spacing:.12em;color:#f6e7c3">INSERT 25¢</div>
+      <p style="${B};font-size:13px;line-height:1.42;color:#e7d6e8;margin:10px 0 0">Make one wish. Then read the card. Check the plug before you leave.</p>
+      <div style="margin-top:auto;${C};font-size:12px;font-weight:600;letter-spacing:.1em;color:#c9a0c8">SEA POINT PARK / NJ</div>
+    </div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:5px;${B};font-size:9px;color:#b99cba">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

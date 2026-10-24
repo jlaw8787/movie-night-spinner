@@ -1,0 +1,42 @@
+function fmtTonys(f,spec,menu,poster){
+  const PA='#fbf5e6',IN='#2a1d16',SO='#665548',RD='#b5252b',GN='#2f6b3a',GD='#b89140',D="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c,e='')=>`<div style="${B};font-size:11px;font-weight:700;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;color:${c||SO};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const pr=['15¢','25¢','On the house','10¢','5¢'];
+  const row=(it,i)=>`<div style="padding:6px 0 6px;${i?'border-top:1px dotted '+GD:''}">
+    <div style="display:flex;align-items:baseline;gap:10px"><h3 style="${D};font-size:27px;line-height:1.02;font-weight:600;margin:0;color:${IN};white-space:nowrap">${ESC(it.label)}</h3><span style="flex:1;border-bottom:2px dotted #cdb88d;transform:translateY(-6px)"></span><span style="${D};font-size:22px;font-weight:600;font-style:italic;color:${RD};white-space:nowrap">${pr[i]||''}</span></div>
+    <div style="display:flex;justify-content:space-between;gap:14px;align-items:baseline">${it.desc?`<p style="${B};font-size:13.5px;line-height:1.38;margin:3px 0 0;color:${IN}">${ESC(it.desc)}</p>`:'<span></span>'}${lab(ESC(gs[i]?gs[i].tab:''),GN,'white-space:nowrap')}</div>
+    <p style="${D};font-size:17px;font-style:italic;line-height:1.2;margin:2px 0 0;color:${SO}">${ESC(it.film||'')}</p></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background-color:#fbf5e6;background-image:linear-gradient(90deg,#c7262c99 50%,#0000 50%),linear-gradient(180deg,#c7262c99 50%,#0000 50%);background-size:44px 44px;overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div style="position:absolute;left:30px;top:20px;width:632px;height:702px;background:${PA};border-radius:6px;box-shadow:0 10px 26px #0006;box-sizing:border-box;padding:12px">
+   <div style="height:100%;border:2px solid ${RD};border-radius:4px;box-sizing:border-box;padding:14px 28px 10px;display:flex;flex-direction:column">
+    <div style="text-align:center;border-bottom:2px solid ${RD};padding-bottom:8px">
+      ${lab('Ristorante italiano / Round the back, by the bins',GN)}
+      <div style="${D};font-size:52px;font-weight:600;font-style:italic;line-height:.95;color:${RD};margin-top:0">Tony’s</div>
+      <div style="${D};font-size:18px;font-style:italic;color:${SO};margin-top:2px">${ESC(spec.tag||'')} Joe on the mandolin, Tony on the accordion.</div>
+    </div>
+    ${xs.map(row).join('')}
+    ${FX_SP}
+    <div style="border-top:2px solid ${RD};padding-top:7px;text-align:center;${B};font-size:13px;line-height:1.35;color:${IN}"><span style="font-weight:700;letter-spacing:.16em;font-size:11px;color:${RD}">SHOWTIME CUE</span>&nbsp;&nbsp;${ESC(fmtCue(f))}</div>
+   </div>
+  </div>
+  <div style="position:absolute;left:690px;top:20px;width:358px;background:${PA};box-sizing:border-box;padding:14px 16px 12px;box-shadow:0 8px 20px #0005;border-radius:4px">
+    ${lab('Bella notte / 1955',RD)}
+    <h1 style="${D};font-size:46px;line-height:.95;font-weight:600;margin:4px 0 0;color:${IN};text-shadow:none">Lady and the Tramp</h1>
+  </div>
+  <figure style="position:absolute;left:690px;top:158px;width:358px;margin:0;background:#fff;padding:7px 7px 8px;box-sizing:border-box;box-shadow:0 10px 22px #0006;transform:rotate(1deg)">${img('dinner','Lady and Tramp share spaghetti behind Tony’s',344,196)}<figcaption style="${D};font-size:17px;font-style:italic;line-height:1.25;color:${IN};margin-top:6px">One strand, one kiss, the last meatball nudged over.</figcaption></figure>
+  <div style="position:absolute;left:690px;top:452px;width:358px;display:flex;gap:16px;align-items:flex-start">
+    <div style="flex:none;background:#fff;padding:6px;box-shadow:0 10px 22px #0006;transform:rotate(-1.4deg)">${fmtPosterImg(f,poster,138,207)}</div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:6px">
+      <div style="width:128px;height:128px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f6e3a3,${GD} 70%,#8a6a28);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 6px 14px #0007;border:3px solid #7a5a1e">
+        <div style="width:12px;height:12px;border-radius:50%;background:#fbf5e6;border:2px solid #7a5a1e;margin-bottom:6px"></div>
+        <div style="${D};font-size:30px;font-weight:600;font-style:italic;color:${IN};line-height:1">Lady</div>
+        <div style="${B};font-size:10px;font-weight:700;letter-spacing:.12em;color:${IN};margin-top:4px">LICENCE / 1955</div>
+      </div>
+      <div style="background:${PA};padding:8px 10px;box-shadow:0 6px 14px #0005;${D};font-size:17px;font-style:italic;line-height:1.2;color:${IN};text-align:center">Snob Hill guests welcome. Collars optional.</div>
+    </div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:5px;${B};font-size:9px;color:${IN};background:${PA};padding:1px 4px">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

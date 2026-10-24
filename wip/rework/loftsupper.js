@@ -1,0 +1,31 @@
+function fmtLoftSupper(f,spec,menu,poster){
+  const P='#f4eee2',W='#fffdf6',I='#203c50',A='#88606a',S='#52606a',L='#c9cfd2',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{};
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const lab=(s,c=A,e='')=>`<div style="${T};font-size:11px;line-height:1.3;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:${c};${e}">${ESC(s)}</div>`;
+  const tape=(x,r)=>`<span aria-hidden="true" style="position:absolute;left:${x};top:-11px;width:70px;height:22px;margin-left:-35px;background:#fffbe9cc;box-shadow:0 1px 2px #0002;transform:rotate(${r}deg)"></span>`;
+  const rows=[];let n=0;
+  spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+  const time=['6:00 pm','6:30 pm','8:00 pm','10:00 pm','2:00 am'],who=['Jack, back from Turkey','Michael','Peter','Short straw','All three'];
+  const row=(r,i)=>`<div style="flex:1;display:grid;grid-template-columns:96px 1fr 118px;column-gap:16px;align-items:center;border-top:1px solid ${L};padding:8px 0">
+    <div><div style="${T};font-size:17px;font-weight:700;color:${I}">${time[i]||''}</div>${lab(r.g.tab||'',A,'margin-top:3px')}</div>
+    <div><div style="${H};font-size:25px;line-height:1.05;font-weight:600;color:${I}">${ESC(r.it.label||'')}</div>
+    ${r.it.desc?`<div style="${B};font-size:13.5px;line-height:1.45;color:${S};margin-top:4px">${ESC(r.it.desc)}</div>`:''}
+    ${r.it.film?`<div style="${T};font-size:13px;line-height:1.3;color:${A};margin-top:3px">${ESC(r.it.film)}</div>`:''}</div>
+    <div style="text-align:center;border:2px solid ${I};padding:6px 4px;transform:rotate(${i%2?2:-2}deg)"><div style="${T};font-size:11px;font-weight:700;color:${S};letter-spacing:.06em">ON DUTY</div><div style="${H};font-size:19px;line-height:1.05;font-weight:600;color:${I};margin-top:2px">${who[i]||''}</div></div></div>`;
+  const sheet=`<section style="position:absolute;left:24px;top:24px;width:650px;height:694px;box-sizing:border-box;background:${W};box-shadow:0 6px 16px #28374833;padding:22px 26px 14px;display:flex;flex-direction:column;transform:rotate(-.4deg)">
+    ${tape('18%',-5)}${tape('82%',4)}
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid ${I};padding-bottom:10px">
+      <div>${lab('The loft / Feeding and supper schedule')}<div style="${H};font-size:46px;line-height:1;font-weight:600;color:${I};margin-top:4px">Mary's schedule</div></div>
+      <div style="text-align:right;max-width:220px"><div style="${H};font-size:20px;line-height:1.15;font-weight:500;font-style:italic;color:${A}">${ESC(spec.brand||'')}.</div><div style="${B};font-size:13px;color:${S};margin-top:3px">Posted on the fridge. No excuses.</div></div></div>
+    <div style="display:grid;grid-template-columns:96px 1fr 118px;column-gap:16px;padding:9px 0 5px">${lab('Time',S)}${lab('What she gets, what we get',S)}${lab('Who',S,'text-align:center')}</div>
+    ${rows.map(row).join('')}
+    <div style="border-top:3px solid ${I};padding-top:8px;display:flex;justify-content:space-between;${T};font-size:11px;font-weight:700;color:${S};letter-spacing:.05em"><span>PACKAGE AT THE DOOR? CHECK WHAT'S IN IT FIRST.</span><span>FILM IMAGERY: TMDB</span></div></section>`;
+  const photo=(k,alt,w,h,rot,pos,cap)=>`<figure style="position:relative;margin:0;background:#fff;padding:7px 7px ${cap?'8px':'7px'};box-shadow:0 5px 12px #28374835;transform:rotate(${rot}deg)">${img(k,alt,w,h,pos)}${cap?`<figcaption style="${T};font-size:13px;color:${I};margin-top:6px;text-align:center">${ESC(cap)}</figcaption>`:''}</figure>`;
+  const side=`<section style="position:absolute;left:700px;top:24px;width:347px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+    <div><div style="${H};font-size:40px;line-height:.95;font-weight:600;color:${I}">Three Men <span style="font-style:italic;font-weight:500;font-size:30px">and a</span> <span style="color:${A}">Baby</span></div><div style="${B};font-size:14px;line-height:1.4;color:${S};margin-top:6px">${ESC(spec.tag||'')}</div></div>
+    ${photo('kitchen','Peter and Michael learning to feed Mary in the loft kitchen',333,262,.8,'center','Feeding time, round one.')}
+    <div style="display:flex;justify-content:space-between">${photo('dads','Jack, Michael and Peter sharing the care of Mary',148,136,-2,'center','')}${photo('cradle','The three bachelors beside Mary’s cradle',148,136,2,'center 55%','')}</div>
+    <div style="background:${I};color:${P};padding:12px 16px 13px">${lab('Lullaby cue',P)}<div style="${H};font-size:21px;line-height:1.2;font-weight:500;margin-top:5px">${ESC(fmtCue(f))}</div></div></section>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${P};box-shadow:0 15px 40px #0005;overflow:hidden"><div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(110deg,#fff6,transparent 58%,#cbbfa11a)"></div>${sheet}${side}</div>`;
+}

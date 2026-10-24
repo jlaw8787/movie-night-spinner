@@ -1,0 +1,38 @@
+function fmtLateNightCall(f,spec,menu,poster){
+  const PA='#f4efe2',IN='#1d2c44',BL='#2f5d8c',RD='#b23a48',SO='#5d6878',RU='#c9d6e3',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c=BL,e='')=>`<div style="${T};font-size:11px;font-weight:700;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;color:${c};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const calls=[['11:52 PM','Line 2','Seattle, WA'],['11:58 PM','Line 3','Seattle, WA'],['12:06 AM','Line 4','Baltimore, MD'],['12:14 AM','Line 1','New York, NY'],['12:21 AM','Line 4','Still on hold']];
+  const row=(it,i)=>{const c=calls[i]||calls[0];return `<div style="display:grid;grid-template-columns:96px 1fr 128px;column-gap:16px;padding:11px 0 10px;border-bottom:1px solid ${RU}">
+    <div>${lab(c[0],RD)}<div style="${T};font-size:11px;line-height:1.4;color:${SO};margin-top:3px;text-transform:uppercase;letter-spacing:.06em">${c[1]}</div></div>
+    <div><h3 style="${H};font-size:25px;line-height:1.02;font-weight:600;margin:0;color:${IN}">${ESC(it.label)}</h3>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.42;margin:4px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${T};font-size:13px;line-height:1.35;margin:3px 0 0;color:${BL}">&gt; ${ESC(it.film||'')}</p></div>
+    <div style="text-align:right">${lab(ESC(gs[i]?gs[i].tab||gs[i].h:''),SO)}<div style="${T};font-size:11px;line-height:1.4;color:${SO};margin-top:3px;text-transform:uppercase;letter-spacing:.06em">${c[2]}</div></div></div>`};
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:#1a2a40;overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div style="position:absolute;left:22px;top:20px;width:690px;height:702px;background:${PA};box-shadow:0 10px 26px #0007;box-sizing:border-box;padding:0 30px 0 34px;display:flex;flex-direction:column">
+        <div aria-hidden="true" style="position:absolute;left:24px;top:0;bottom:0;width:1px;background:#e3a7ae"></div>
+    <header style="padding:20px 0 12px;border-bottom:3px double ${IN}">
+      <div style="display:flex;justify-content:space-between;align-items:baseline">${lab('Late-night call-in / Producer’s log')}${lab('Christmas Eve / Dec 24',RD)}</div>
+      <h1 style="${H};font-size:52px;line-height:.95;font-weight:600;letter-spacing:-.02em;margin:8px 0 0;color:${IN};text-shadow:none">Sleepless in Seattle</h1>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:6px"><span style="${H};font-size:22px;font-style:italic;font-weight:500;color:${BL}">${ESC(spec.tag||'')}</span><span style="${T};font-size:12px;color:${SO}">Host: Dr. Marcia Fieldstone</span></div>
+    </header>
+    <div style="display:grid;grid-template-columns:96px 1fr 128px;column-gap:16px;padding:8px 0 6px;border-bottom:1.5px solid ${IN}">${lab('Time',SO)}${lab('On the air tonight',SO)}${lab('Course / from',SO,'text-align:right')}</div>
+    ${xs.map(row).join('')}
+    ${FX_SP}
+    <footer style="display:flex;gap:12px;align-items:baseline;padding:0 0 16px">${lab('Showtime cue',RD,'white-space:nowrap')}<span style="${B};font-size:13px;line-height:1.35;color:${IN}">${ESC(fmtCue(f))}</span></footer>
+  </div>
+  <div style="position:absolute;left:740px;top:34px;width:310px">
+    <figure style="margin:0;background:#fbf8f0;padding:9px 9px 34px;box-shadow:0 10px 22px #0008;transform:rotate(1.6deg);position:relative">${img('meeting','Sam and Annie meet on the Empire State Building observation deck',292,212)}<figcaption style="${H};font-size:19px;font-style:italic;font-weight:600;color:${IN};position:absolute;left:12px;bottom:6px">Top of the Empire State, Feb 14</figcaption><i aria-hidden="true" style="position:absolute;left:50%;top:-10px;width:80px;height:22px;margin-left:-40px;background:#e8e0c8cc;transform:rotate(-3deg)"></i></figure>
+  </div>
+  <div style="position:absolute;left:744px;top:326px;width:306px;display:flex;gap:16px;align-items:flex-start">
+    <div style="flex:none;background:#fbf8f0;padding:6px;box-shadow:0 8px 18px #0008;transform:rotate(-2deg)">${fmtPosterImg(f,poster,128,192)}</div>
+    <div style="padding-top:8px">${lab('Hold line 4','#e6a5ad')}<div style="${H};font-size:30px;line-height:1;font-weight:600;color:#f4efe2;margin-top:8px">Jonah’s on the phone again.</div><p style="${B};font-size:13px;line-height:1.45;color:#c9d6e3;margin:10px 0 0">Eight years old, calling a national radio show to find his dad a wife.</p></div>
+  </div>
+  <div style="position:absolute;left:740px;top:566px;width:310px;background:#f6e27a;padding:16px 18px 14px;box-sizing:border-box;box-shadow:0 8px 18px #0007;transform:rotate(-1deg)">
+    <div style="${T};font-size:12px;font-weight:700;letter-spacing:.08em;color:#7a2a33">PHONE MESSAGE / FOR SAM</div>
+    <div style="${H};font-size:24px;line-height:1.05;font-weight:600;color:${IN};margin-top:6px">Empire State Building. Valentine’s Day. Meet me at the top.</div>
+    <div style="${T};font-size:11px;color:${SO};margin-top:8px;text-align:right">Annie / Baltimore</div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:6px;${T};font-size:9px;color:#8ea0b5">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

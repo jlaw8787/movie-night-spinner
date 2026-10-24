@@ -1,0 +1,47 @@
+function fmtRooftop(f,spec,menu,poster){
+  const PA='#efe8d6',IN='#22201c',SO='#5d574c',RD='#8e2b21',D="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c,e='')=>`<div style="${B};font-size:11px;font-weight:600;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;color:${c||SO};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const nums=['I','II','III','IV','V'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:44px 1fr;column-gap:12px;padding:12px 0 12px;${i?'border-top:1px solid #cfc5ad':''}">
+    <div style="${D};font-size:26px;font-weight:600;color:${RD};line-height:1;text-align:right;padding-top:2px">${nums[i]||i+1}</div>
+    <div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><h3 style="${D};font-size:26px;line-height:1.02;font-weight:600;margin:0;color:${IN}">${ESC(it.label)}</h3>${lab(ESC(gs[i]?gs[i].tab:''),RD,'white-space:nowrap')}</div>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.42;margin:4px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${D};font-size:16px;line-height:1.25;font-style:italic;margin:3px 0 0;color:${SO}">${ESC(it.film||'')}</p></div></div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:linear-gradient(180deg,#141a1f,#1f2a2c 60%,#2a2a24);overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:60px;background:repeating-linear-gradient(90deg,#11161a 0 40px,#161d22 40px 44px)"></div>
+  <div style="position:absolute;left:22px;top:18px;width:1027px;height:700px;background:${PA};box-shadow:0 14px 30px #000b;display:grid;grid-template-columns:1fr 1fr">
+    <div aria-hidden="true" style="position:absolute;left:50%;top:0;bottom:0;width:40px;margin-left:-20px;background:linear-gradient(90deg,#0000,#0000001f 45%,#00000038 50%,#0000001f 55%,#0000)"></div>
+    <section style="position:relative;padding:22px 34px 18px 32px;display:flex;flex-direction:column;border-right:1px solid #d4c9b0">
+      <div style="display:flex;justify-content:space-between">${lab('The Way of the Samurai')}${lab('The rooftop / 1999')}</div>
+      <div style="display:flex;gap:20px;align-items:flex-end;margin-top:14px">
+        <div style="flex:1"><h1 style="${D};font-size:74px;line-height:.84;font-weight:600;letter-spacing:-.03em;margin:0;color:${IN};text-shadow:none">Ghost<br>Dog</h1><div style="${D};font-size:22px;font-style:italic;color:${RD};margin-top:10px">${ESC(spec.tag||'')}</div></div>
+        <div style="flex:none;padding:5px;background:#fff;box-shadow:0 4px 10px #0003;transform:rotate(2deg)">${fmtPosterImg(f,poster,112,168)}</div>
+      </div>
+      <figure style="margin:18px 0 0">${img('roof','Ghost Dog on his rooftop beside the pigeon coop',447,232)}<figcaption style="${D};font-size:17px;font-style:italic;line-height:1.3;color:${SO};margin-top:8px">The rooftop coop. Every message arrives by pigeon.</figcaption></figure>
+      ${FX_SP}
+      <div style="display:flex;gap:16px;align-items:stretch">
+        <div style="flex:1;border:1px solid ${IN};padding:10px 12px;background:#f7f2e4">
+          ${lab('Retainer',RD)}
+          <div style="${D};font-size:21px;line-height:1.15;font-weight:600;color:${IN};margin-top:4px">Paid once a year, first day of autumn.</div>
+        </div>
+        <div style="flex:1;border:1px solid ${IN};padding:10px 12px;background:#f7f2e4">
+          ${lab('Lending shelf',RD)}
+          <div style="${D};font-size:21px;line-height:1.15;font-weight:600;color:${IN};margin-top:4px">Rashomon, for Pearline. Return it.</div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:12px">${lab('Showtime cue',RD)}<span style="${D};font-size:15px;color:${SO}">16</span></div>
+      <div style="${B};font-size:13px;line-height:1.38;color:${IN};margin-top:4px">${ESC(fmtCue(f))}</div>
+    </section>
+    <section style="position:relative;padding:22px 34px 18px 34px;display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between">${lab('Hagakure / The supper')}${lab('Silent. Loyal. Hungry.')}</div>
+      <div style="${D};font-size:20px;font-style:italic;line-height:1.3;color:${IN};margin:14px 0 6px;padding-bottom:12px;border-bottom:2px solid ${IN}">A quiet supper from the roof to the street, in five chapters.</div>
+      ${xs.map(row).join('')}
+      ${FX_SP}<div style="display:flex;gap:14px;align-items:baseline;border:1px dashed ${SO};padding:8px 12px;margin-bottom:12px">${lab('Pigeon post',RD,'white-space:nowrap')}<span style="${D};font-size:18px;font-style:italic;color:${IN}">To Louie. Supper is on the roof.</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid #cfc5ad;padding-top:8px">
+        <span style="${D};font-size:15px;font-style:italic;color:${SO}">He never drives the same car twice.</span><span style="${D};font-size:15px;color:${SO}">17</span>
+      </div>
+    </section>
+  </div>
+  <div style="position:absolute;right:24px;bottom:5px;${B};font-size:9px;color:#8c948c">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

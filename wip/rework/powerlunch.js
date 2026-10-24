@@ -1,0 +1,34 @@
+function fmtPowerLunch(f,spec,menu,poster){
+  const P='#fdf8ef',I='#2e2230',D='#472d45',A='#81445d',S='#5f525a',K='#f4c6c9',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const at=(x,y,w,e='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${e}`;
+  const a=spec.art||{},all=menu.all;
+  const img=(k,alt,w,h,fit='cover')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:${fit};object-position:center;background:#fff">`:'';
+  const heads=spec.groups.flatMap(g=>g.items.map((x,j)=>j?'':g.tab+' / '+g.h));
+  const row=(it,i)=>`<div style="display:flex;gap:16px;padding:${i?10:0}px 0 10px;${i<all.length-1?'border-bottom:1px dotted #b7a6ad':''}">
+    <div style="${T};font-size:19px;font-weight:700;color:${A};width:26px;flex:none;padding-top:3px">${i+1}.</div>
+    <div style="flex:1;min-width:0">${heads[i]?'':''}<div style="${heads[i]?'':'display:none;'}${T};font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:${A}">${ESC(heads[i]||'')}</div>
+    <div style="${H};font-size:${i===2?28:24}px;line-height:1.05;font-weight:600;color:${I};margin-top:2px">${ESC(it.label)}</div>
+    <div style="${B};font-size:14px;line-height:1.4;color:${I};margin-top:3px">${ESC(it.desc)}</div>
+    ${it.film?`<div style="${T};font-size:13px;line-height:1.35;color:${S};margin-top:2px">${ESC(it.film)}</div>`:''}</div></div>`;
+  const memo=`<section aria-label="Inter-office memo menu" style="${at(28,20,640,`height:702px;background:${P};box-shadow:3px 7px 18px rgba(0,0,0,.45);padding:18px 34px 0;box-sizing:border-box`)}">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid ${D};padding-bottom:9px">
+      <div><div style="${H};font-size:19px;font-style:italic;color:${S}">From the desk of</div><div style="${H};font-size:36px;line-height:1;font-weight:600;color:${D}">Katharine Parker</div></div>
+      <div style="${T};font-size:10.5px;line-height:1.45;color:${S};text-align:right;letter-spacing:.04em">MERGERS &amp; ACQUISITIONS<br>INTER-OFFICE / CONFIDENTIAL</div></div>
+    <div style="${T};font-size:14px;line-height:1.55;color:${I};margin-top:10px;display:grid;grid-template-columns:62px 1fr 62px 1fr;row-gap:1px">
+      <b>TO:</b><span>Jack Trainer</span><b>FROM:</b><span>Tess McGill</span><b>RE:</b><span style="grid-column:span 3">Trask Industries. Supper for four. Radio idea to follow.</span><b>CC:</b><span style="grid-column:span 3">Bobby Stein, radio. Not Katharine (skiing).</span></div>
+    <div style="border-top:1px solid #d5c5c9;margin-top:9px;padding-top:12px">${all.map(row).join('')}</div>
+  </section>`;
+  const right=`<div style="${at(696,20,347,'height:702px;display:flex;flex-direction:column')}">
+    <figure style="margin:0;background:#fff;padding:6px;box-shadow:0 5px 12px rgba(0,0,0,.35)">${img('identity','Working Girl title artwork with Tess, Jack and Katharine against Manhattan',335,186,'contain')}</figure>
+    <figure style="margin:16px 0 0;background:#fff;padding:6px 6px 0;box-shadow:0 5px 12px rgba(0,0,0,.35);transform:rotate(-1deg)">${img('ferry','Tess on the Staten Island ferry with the Manhattan skyline behind her',335,176)}<figcaption style="${T};font-size:11px;color:${I};padding:7px 2px 8px">The Staten Island ferry, into Manhattan.</figcaption></figure>
+    <div style="margin-top:18px;flex:1;background:${K};padding:14px 18px;box-sizing:border-box;box-shadow:0 4px 10px rgba(0,0,0,.35);transform:rotate(1.2deg);display:flex;flex-direction:column">
+      <div style="${H};font-size:27px;font-weight:600;font-style:italic;color:#9b2a3c;line-height:1;border-bottom:1px solid #c98b93;padding-bottom:7px">While You Were Out</div>
+      <div style="${T};font-size:12px;line-height:1.5;color:${I};margin-top:8px"><b>FOR:</b> Tess &nbsp; <b>CALLED:</b> Cyn, Staten Island</div>
+      <div style="${T};font-size:12px;line-height:1.5;color:${I};margin-top:4px;display:flex;gap:14px"><span><span style="display:inline-block;width:11px;height:11px;border:1.5px solid ${I};vertical-align:-1px;margin-right:5px;"></span>Telephoned</span><span><span style="display:inline-block;width:11px;height:11px;border:1.5px solid ${I};vertical-align:-1px;margin-right:5px;background:${I}"></span>Please call</span><span><span style="display:inline-block;width:11px;height:11px;border:1.5px solid ${I};vertical-align:-1px;margin-right:5px;background:${I}"></span>Urgent</span></div><div style="${H};font-size:22px;line-height:1.2;font-weight:600;color:${I};margin-top:6px">${ESC(fmtCue(f))}</div>
+      <div style="${T};font-size:13px;line-height:1.4;color:#9b2a3c;margin-top:10px;border-top:1px dashed #c98b93;padding-top:8px">ALSO: Mick called. Do not call back.</div>
+      <div style="${B};font-size:13px;line-height:1.4;color:${S};margin-top:auto">${ESC(spec.tag||'')}</div>
+    </div>
+    <div style="${T};font-size:9px;letter-spacing:.06em;color:#d8bfcb;margin-top:10px;text-align:right">FILM IMAGERY: TMDB</div>
+  </div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${D};color:${I};overflow:hidden;box-shadow:0 18px 42px #0006">${memo}${right}</div>`;
+}

@@ -1,0 +1,34 @@
+function fmtSerpico(f,spec,menu,poster){
+  const W='#2c3a2f',P='#eef2e3',G='#2f6b4a',L='#a9c6ad',I='#1d2620',M='#56605a',R='#b23524',S="font-family:'Alfa Slab One',serif",H="font-family:'Barlow Condensed',sans-serif",B="font-family:'Libre Franklin',sans-serif";
+  const at=(x,y,w,e='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${e}`;
+  const a=spec.art||{},all=menu.all;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
+  const prices=['.95','1.65','1.85','.40','.15'],qty=['2','2','4','6','4'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:44px 1fr 74px;border-bottom:1px solid ${L}">
+    <div style="border-right:1px solid ${L};${H};font-size:24px;font-weight:700;color:${G};text-align:center;padding-top:8px">${qty[i]}</div>
+    <div style="padding:12px 14px 13px"><div style="display:flex;gap:10px;align-items:baseline"><span style="${H};font-size:${i===2?28:25}px;line-height:1.02;font-weight:700;text-transform:uppercase;color:${I}">${ESC(it.label)}</span><span style="${B};font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:${G}">${ESC(tabs[i]||'')}</span></div>
+      <div style="${B};font-size:14px;line-height:1.38;color:${I};margin-top:2px">${ESC(it.desc)}</div>${it.film?`<div style="${B};font-size:13px;line-height:1.35;font-style:italic;color:${M};margin-top:1px">${ESC(it.film)}</div>`:''}</div>
+    <div style="border-left:1px solid ${L};${H};font-size:24px;font-weight:600;color:${I};text-align:right;padding:8px 10px 0 0">${prices[i]}</div></div>`;
+  const check=`<section aria-label="Deli guest check menu" style="${at(24,20,640,`height:702px;background:${P};box-shadow:0 7px 20px rgba(0,0,0,.55)`)}">
+    <header style="${at(0,0,640,`height:92px;background:${G};color:${P}`)}">
+      <div style="${at(26,14,400)}"><div style="${B};font-size:11px;font-weight:700;letter-spacing:.16em;color:${L}">GREENWICH VILLAGE DELI / NEW YORK CITY</div><div style="${S};font-size:40px;line-height:1.1;margin-top:3px">Guest Check</div></div>
+      <div style="${at(470,14,144,'text-align:right')}"><div style="${B};font-size:11px;font-weight:700;letter-spacing:.12em;color:${L}">CHECK NO.</div><div style="${S};font-size:30px;line-height:1.1;color:#f1c96b">1971</div></div></header>
+    <div style="${at(0,92,640,`display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:2px solid ${G};${B};font-size:12px;color:${I}`)}">
+      <div style="padding:7px 14px;border-right:1px solid ${L}"><b style="color:${G}">TABLE</b> Frank + Alfie</div><div style="padding:7px 14px;border-right:1px solid ${L}"><b style="color:${G}">SERVER</b> Counterman</div><div style="padding:7px 14px"><b style="color:${G}">GUESTS</b> 4, no badges</div></div>
+    <div style="${at(0,124,640,`display:grid;grid-template-columns:44px 1fr 74px;border-bottom:1px solid ${L};${B};font-size:10px;font-weight:700;letter-spacing:.12em;color:${G}`)}"><span style="text-align:center;padding:4px 0">QTY</span><span style="padding:4px 14px">ITEM</span><span style="text-align:right;padding:4px 10px">AMOUNT</span></div>
+    <div style="${at(0,145,640)}">${all.map(row).join('')}</div>
+    <div style="${at(0,612,640,`border-top:2px solid ${G};display:flex;align-items:center;justify-content:space-between;padding:10px 14px 0 14px;box-sizing:border-box`)}">
+      <div style="max-width:300px"><div style="${B};font-size:10px;font-weight:700;letter-spacing:.12em;color:${G}">SHOWTIME CUE</div><div style="${B};font-size:13px;line-height:1.35;color:${I};margin-top:2px">${ESC(fmtCue(f))}</div></div>
+      <div style="text-align:right"><div style="${B};font-size:10px;font-weight:700;letter-spacing:.12em;color:${G}">TOTAL</div><div style="${H};font-size:30px;font-weight:700;color:${I};line-height:1">$15.60</div></div></div>
+    <div aria-hidden="true" style="${at(352,618,150,`border:4px solid ${R};color:${R};text-align:center;transform:rotate(-12deg);opacity:.9;padding:2px 0`)}"><div style="${S};font-size:34px;line-height:1.05;letter-spacing:.06em">PAID</div><div style="${B};font-size:10px;font-weight:700;letter-spacing:.1em">IN FULL. EVERY TIME.</div></div>
+  </section>`;
+  const right=`<div style="${at(690,20,357,'height:702px;display:flex;flex-direction:column')}">
+    <div style="${S};font-size:46px;line-height:1;color:${P}">Serpico</div>
+    <div style="${H};font-size:22px;font-weight:600;color:${L};margin-top:4px">${ESC(spec.tag||'')}</div>
+    <figure style="margin:14px 0 0;background:${P};padding:6px 6px 0;box-shadow:0 5px 14px rgba(0,0,0,.5);transform:rotate(1deg)">${img('counter','Frank Serpico at the deli counter',345,250)}<figcaption style="${B};font-size:12px;color:${I};padding:6px 2px 7px">In uniform. Not a payoff in sight.</figcaption></figure>
+    <figure style="margin:14px 0 0;background:${P};padding:6px 6px 0;box-shadow:0 5px 14px rgba(0,0,0,.5);transform:rotate(-1deg)">${img('village','Frank Serpico in Greenwich Village',345,250)}<figcaption style="${B};font-size:12px;color:${I};padding:6px 2px 7px">Greenwich Village, early seventies.</figcaption></figure>
+    <div style="margin-top:auto;${B};font-size:9px;letter-spacing:.08em;color:${L};text-align:right">FILM IMAGERY: TMDB</div>
+  </div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${W};overflow:hidden;box-shadow:0 16px 40px #0006">${check}${right}</div>`;
+}

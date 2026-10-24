@@ -1,0 +1,35 @@
+function fmtPlazaNight(f,spec,menu,poster){
+  const N='#14171c',P='#f7f1e4',Gd='#b08d4a',I='#1b1d22',M='#5e5d58',R='#8c2d2a',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const at=(x,y,w,e='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${e}`;
+  const a=spec.art||{},all=menu.all;
+  const img=(k,alt,w,h,fit='cover',pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:${fit};object-position:${pos}">`:'';
+  const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
+  const price=['19','21','90','12','90'];
+  const box=on=>`<span style="display:inline-block;width:15px;height:15px;border:1.5px solid ${I};position:relative;flex:none;margin-top:6px">${on?`<span style="position:absolute;left:0;top:0;width:15px;height:15px;text-align:center;${T};font-size:15px;font-weight:700;color:${R};line-height:14px">X</span>`:''}</span>`;
+  const qty=['4','4','1 per man','4','2 bottles'];
+  const row=(it,i)=>`<div style="display:flex;gap:14px;padding:${i?11:0}px 0 11px;${i<all.length-1?'border-bottom:1px solid #d9cfb9':''}">
+    ${box(1)}
+    <div style="flex:1;min-width:0"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px"><div style="${H};font-size:${i===2?28:25}px;line-height:1.05;font-weight:600;color:${I}">${ESC(it.label)}</div><div style="${H};font-size:22px;font-weight:600;color:${Gd};white-space:nowrap">${price[i]}</div></div>
+    <div style="${B};font-size:14px;line-height:1.4;color:${I};margin-top:2px">${ESC(it.desc)}</div>
+    <div style="display:flex;justify-content:space-between;gap:12px;margin-top:2px"><span style="${B};font-size:13px;font-style:italic;color:${M}">${ESC(it.film||'')}</span><span style="${T};font-size:12px;color:${R};white-space:nowrap">${ESC(tabs[i]||'').toUpperCase()} / QTY ${qty[i]}</span></div></div></div>`;
+  const card=`<section aria-label="Hotel room service card menu" style="${at(24,22,650,`height:698px;background:${P};box-shadow:0 8px 22px rgba(0,0,0,.7);border:1px solid ${Gd}`)}">
+    <div aria-hidden="true" style="position:absolute;inset:9px;border:1px solid ${Gd}"></div>
+    <header style="${at(36,26,578,'text-align:center')}"><div style="${T};font-size:11px;font-weight:700;letter-spacing:.2em;color:${Gd}">FIFTH AVENUE AT CENTRAL PARK SOUTH</div>
+      <div style="${H};font-size:46px;line-height:1;font-weight:600;color:${I};margin-top:4px">In-Suite Dining</div>
+      <div style="${H};font-size:19px;font-style:italic;color:${M};margin-top:3px">${ESC(spec.tag||'')}</div></header>
+    <div style="${at(36,132,578,`border-top:1px solid ${Gd};border-bottom:1px solid ${Gd};padding:7px 0;display:flex;justify-content:space-between;${T};font-size:13px;color:${I}`)}"><span><b>GUEST:</b> Mr. F. White</span><span><b>FROM:</b> upstate, tonight</span><span><b>COVERS:</b> the whole crew</span></div>
+    <div style="${at(36,176,578)}">${all.map(row).join('')}</div>
+    <footer style="${at(36,640,578,`border-top:1px solid ${Gd};padding-top:8px;display:flex;justify-content:space-between;align-items:baseline;${T};font-size:11px;color:${M}`)}"><span>HANG ON THE DOOR BY 3 A.M. / CHARGE TO SUITE</span><span>GRATUITY: JIMMY JUMP</span></footer>
+  </section>`;
+  const right=`<div style="${at(700,22,347,'height:698px;display:flex;flex-direction:column')}">
+    <figure style="margin:0;border:1px solid ${Gd};padding:5px;background:#0d0f12">${img('identity','King of New York title artwork with Frank White','335','200','cover','center 30%')}</figure>
+    <figure style="margin:14px 0 0;border:1px solid ${Gd};padding:5px;background:#0d0f12">${img('suite','Frank White and his crew in the Plaza suite','335','214')}<figcaption style="${T};font-size:11px;color:#cfc4ab;padding:7px 2px 2px">The suite. First night out.</figcaption></figure>
+    <div style="margin-top:14px;flex:1;border:1px solid ${Gd};padding:14px 18px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+      <div style="${T};font-size:11px;font-weight:700;letter-spacing:.12em;color:${Gd}">SERVICE CUE</div>
+      <div style="${H};font-size:23px;line-height:1.2;font-weight:600;color:${P};margin-top:5px">${ESC(fmtCue(f))}</div>
+      <div style="${B};font-size:13px;line-height:1.4;color:#bdb4a0;margin-top:8px">Do not disturb. Business in progress.</div>
+      <div style="${T};font-size:9px;letter-spacing:.06em;color:#8f8878;margin-top:10px">FILM IMAGERY: TMDB</div></div>
+  </div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${N};overflow:hidden;box-shadow:0 16px 40px #0007">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 0%,rgba(176,141,74,.18),transparent 60%)"></div>${card}${right}</div>`;
+}

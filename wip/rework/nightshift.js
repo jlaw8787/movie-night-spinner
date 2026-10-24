@@ -1,0 +1,43 @@
+function fmtNightshift(f,spec,menu,poster){
+  const PA='#eef0e2',IN='#1e1e1c',SO='#55584c',RD='#b3261e',GR='#9fae8c',YE='#f2c230',C="font-family:'Barlow Condensed',sans-serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c,e='')=>`<div style="${C};font-size:13px;font-weight:700;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;color:${c||SO};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const trips=[['11:40P','','Times Sq','$2.10'],['12:55A','','Cafeteria','$1.95'],['3:00A','','Uptown','$4.40'],['4:10A','','E. 13th St','$12.50'],['5:30A','','Garage','$0.00']];
+  const row=(it,i)=>{const t=trips[i]||trips[0];return `<div style="display:grid;grid-template-columns:30px 104px 1fr 78px;border-bottom:1px solid ${GR}">
+    <div style="border-right:1px solid ${GR};${T};font-size:15px;font-weight:700;color:${SO};text-align:center;padding-top:11px">${i+1}</div>
+    <div style="border-right:1px solid ${GR};padding:10px 8px 0"><div style="${T};font-size:14px;font-weight:700;color:${RD}">${t[0]}</div><div style="${T};font-size:12px;line-height:1.35;color:${SO};margin-top:4px;white-space:nowrap;letter-spacing:-.05em">to ${t[2]}</div></div>
+    <div style="padding:8px 12px 8px"><div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><h3 style="${C};font-size:24px;line-height:1;font-weight:700;margin:0;color:${IN};text-transform:uppercase">${ESC(it.label)}</h3>${lab(ESC(gs[i]?gs[i].tab:''),RD,'white-space:nowrap')}</div>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.38;margin:4px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${B};font-size:13px;line-height:1.35;font-style:italic;margin:3px 0 0;color:${SO}">${ESC(it.film||'')}</p></div>
+    <div style="border-left:1px solid ${GR};${T};font-size:16px;font-weight:700;color:${IN};text-align:right;padding:11px 8px 0">${t[3]}</div></div>`};
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:#141414;overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 85% 15%,#b3261e55,#0000 45%),radial-gradient(ellipse at 70% 90%,#2a4f6e66,#0000 50%)"></div>
+    <div style="position:absolute;left:24px;top:18px;width:640px;height:706px;background:${PA};box-shadow:0 10px 24px #000c;box-sizing:border-box;padding:14px 20px 12px;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid ${IN};padding-bottom:6px">
+      <div>${lab('Driver’s daily trip record / Night shift',RD)}<div style="${C};font-size:46px;font-weight:700;line-height:.9;color:${IN};margin-top:3px">TRIP SHEET</div></div>
+      <div style="${T};font-size:13px;line-height:1.45;color:${IN};text-align:right">DATE: May 10<br>SHIFT: 6P to 6A</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;${T};font-size:13px;color:${IN};padding:6px 0;border-bottom:1px solid ${IN}"><span>DRIVER: Bickle, T.</span><span>ANY TIME</span><span style="text-align:right">ANYWHERE</span></div>
+    <div style="display:grid;grid-template-columns:30px 104px 1fr 78px;border-bottom:2px solid ${IN};padding:6px 0 4px">${lab('#','','text-align:center')}${lab('Time / route','','padding-left:8px')}${lab('Order','','padding-left:12px')}${lab('Fare','','text-align:right;padding-right:8px')}</div>
+    ${xs.map(row).join('')}
+    <div style="display:grid;grid-template-columns:30px 104px 1fr 78px;border-bottom:2px solid ${IN};padding:9px 0 8px;align-items:baseline"><div></div><div style="padding-left:8px">${lab('Shift total',RD)}</div><div style="padding-left:12px;${T};font-size:13px;color:${SO}">REMARKS: Can't sleep nights.</div><div style="${T};font-size:16px;font-weight:700;color:${IN};text-align:right;padding-right:8px">$20.95</div></div>
+    ${FX_SP}
+    <div style="display:flex;gap:12px;align-items:baseline">${lab('Showtime cue',RD,'white-space:nowrap')}<span style="${B};font-size:13px;line-height:1.35;color:${IN}">${ESC(fmtCue(f))}</span></div>
+  </div>
+  <header style="position:absolute;left:692px;top:26px;width:356px">
+    ${lab('New York / 1976','#f2c230')}
+    <h1 style="${C};font-size:84px;line-height:.82;font-weight:700;text-transform:uppercase;margin:6px 0 0;color:#f3efe2;text-shadow:none">Taxi<br>Driver</h1>
+    <div style="${B};font-size:15px;font-style:italic;line-height:1.35;color:#d8d2c2;margin-top:8px">${ESC(spec.tag||'')}</div>
+  </header>
+  <figure style="position:absolute;left:692px;top:236px;width:356px;margin:0;background:#f3efe2;padding:7px 7px 9px;box-sizing:border-box;box-shadow:0 10px 22px #000c;transform:rotate(-1deg)">${img('cab','Travis Bickle in his cab at night',342,186)}<figcaption style="${B};font-size:13px;line-height:1.35;color:${IN};margin-top:7px">Nights only. Any borough. He doesn’t sleep anyway.</figcaption></figure>
+  <div style="position:absolute;left:692px;top:494px;width:356px;display:flex;gap:16px;align-items:flex-start">
+    <div style="flex:none;background:#f3efe2;padding:6px;box-shadow:0 10px 22px #000c;transform:rotate(1.4deg)">${fmtPosterImg(f,poster,132,198)}</div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:12px;padding-top:4px">
+      <div style="width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#fff,#f1ece0 70%,#d8d0bd);border:5px solid #1f3d78;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 6px 14px #000c">
+        <div style="${C};font-size:15px;font-weight:700;letter-spacing:.08em;color:${RD}">WE ARE</div><div style="${C};font-size:24px;font-weight:700;line-height:.95;color:#1f3d78">THE PEOPLE</div><div style="${C};font-size:13px;font-weight:700;letter-spacing:.12em;color:${IN};margin-top:4px">PALANTINE</div>
+      </div>
+      <div style="${B};font-size:13px;line-height:1.35;color:#d8d2c2;text-align:center">Badge from the campaign office. Ask for Betsy.</div>
+    </div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:5px;${T};font-size:9px;color:#8f8f88">FILM IMAGERY: TMDB</div>
+  </div>`;
+}

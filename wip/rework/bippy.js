@@ -1,0 +1,33 @@
+function fmtBippy(f,spec,menu,poster){
+  const W='#2d201a',P='#edddb8',R='#452527',G='#a88c51',M='#c7b798',CB='#2c3a33',CH='#efe8d6',CY='#e8d27a',CP='#e3a3a0',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{};
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const lab=(s,c=CY,e='')=>`<div style="${B};font-size:11px;line-height:1.3;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:${c};${e}">${ESC(s)}</div>`;
+  const rows=[];let n=0;
+  spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+  const pr=['.35','.25','1.25','.40','.30'];
+  const row=(r,i)=>`<div style="flex:1;display:flex;flex-direction:column;justify-content:center;border-top:1px dashed #6b7a72;padding:5px 0">
+    <div style="display:flex;align-items:baseline;gap:10px"><span style="${H};font-size:27px;line-height:1.05;font-weight:600;color:${CH}">${ESC(r.it.label||'')}</span>${lab(r.g.tab||'',CP)}<span style="flex:1"></span><span style="${H};font-size:26px;font-weight:600;color:${CY}">${pr[i]}</span></div>
+    ${r.it.desc?`<div style="${B};font-size:14px;line-height:1.45;color:#ddd6c4;margin-top:2px">${ESC(r.it.desc)}</div>`:''}
+    ${r.it.film?`<div style="${H};font-style:italic;font-size:17px;line-height:1.25;color:#b9c4bb;margin-top:1px">${ESC(r.it.film)}</div>`:''}</div>`;
+  const board=`<section style="position:absolute;left:24px;top:24px;width:624px;height:694px;box-sizing:border-box;background:#6b4a33;padding:13px;box-shadow:0 12px 28px rgba(0,0,0,.55)">
+   <div style="height:100%;box-sizing:border-box;background:linear-gradient(160deg,#3a4a41,${CB} 60%);padding:16px 26px 12px;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid ${CH};padding-bottom:8px">
+      <div>${lab('Belmont Ave / The Bronx / 1960')}<div style="${H};font-size:52px;line-height:1;font-weight:600;font-style:italic;color:${CH};margin-top:2px">Chez Bippy</div></div>
+      <div style="text-align:right;${H};font-style:italic;font-size:20px;line-height:1.2;color:${CP}">${ESC(spec.brand||'')}.<br><span style="color:${CH}">Today's board.</span></div></div>
+    <div style="flex:1;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+    <div style="border-top:2px solid ${CH};padding-top:7px;display:flex;justify-content:space-between;${T};font-size:12px;font-weight:700;color:${CY}"><span>EDDIE MUSH DOES NOT TOUCH THE DICE.</span><span>NO TAB FOR C.</span></div></div></section>`;
+  const side=`<section style="position:absolute;left:672px;top:24px;width:375px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+    <div><div style="${H};font-size:44px;line-height:.95;font-weight:600;color:${P}">A Bronx Tale</div><div style="${H};font-style:italic;font-size:19px;color:${M};margin-top:4px">${ESC(spec.tag||'')}</div></div>
+    <figure style="margin:0;border:5px solid ${P}">${img('identity','A Bronx Tale artwork',365,190)}</figure>
+    <div style="display:flex;justify-content:space-between">
+      <figure style="margin:0;border:4px solid ${P}">${img('bar','Sonny and his crew at the bar',176,104)}</figure>
+      <figure style="margin:0;border:4px solid ${P}">${img('bus','Lorenzo behind the wheel of his bus',176,104)}</figure></div>
+    <div style="background:${P};color:${R};padding:9px 14px 10px;transform:rotate(1deg);box-shadow:0 5px 12px rgba(0,0,0,.4)">${lab("Sonny's rules",'#8a3a2c')}
+      <div style="${B};font-size:14px;line-height:1.45;margin-top:3px">1. Lock the car door. See if she reaches over.<br>2. Nobody cares. Live your life.<br>3. Better feared than loved.</div></div>
+    <div style="border-top:1px solid #5a463a;padding-top:8px">${lab('Serving cue',G)}<div style="${B};font-size:15px;line-height:1.45;color:${P};margin-top:3px">${ESC(fmtCue(f))}</div><div style="${B};font-size:10px;letter-spacing:.14em;color:#9b8c76;margin-top:5px">FILM IMAGERY: TMDB</div></div></section>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${W};box-shadow:0 18px 40px #0008">${board}${side}</div>`;
+}
+
+
+/* A Tangiers supper-club card: dark lacquer, warm metal print and the real casino beyond. */

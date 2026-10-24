@@ -1,0 +1,33 @@
+function fmtLeftys(f,spec,menu,poster){
+  const W='#2a2420',P='#eef0de',G='#5b7a52',L='#b9c9a8',I='#211e1b',M='#5a5850',R='#a5302a',H="font-family:'Barlow Condensed',sans-serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const at=(x,y,w,e='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${e}`;
+  const a=spec.art||{},all=menu.all;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
+  const dates=['3/14','3/14','4/02','4/02','4/09'],amt=['6.50','4.00','12.00','3.50','5.00'],paid=['UNPAID','UNPAID','DONNIE','UNPAID','NEVER'];
+  const row=(it,i)=>`<div style="display:grid;grid-template-columns:1fr 96px;border-bottom:1px solid ${L}">
+    <div style="padding:8px 14px 8px;border-right:1px solid ${L}"><div style="${T};font-size:10.5px;font-weight:700;letter-spacing:.08em;color:${G}">${ESC((tabs[i]||'').toUpperCase())}</div>
+      <div style="${H};font-size:${i===2?30:26}px;line-height:1.02;font-weight:700;text-transform:uppercase;color:${I}">${ESC(it.label)}</div>
+      <div style="${B};font-size:14px;line-height:1.38;color:${I};margin-top:2px">${ESC(it.desc)}</div>
+      ${it.film?`<div style="${B};font-size:13px;line-height:1.3;font-style:italic;color:${M};margin-top:2px">${ESC(it.film)}</div>`:''}</div>
+    <div style="padding:9px 12px 0;text-align:right"><div style="${H};font-size:24px;font-weight:700;line-height:1;color:${I}">${amt[i]}</div><div style="${T};font-size:11px;color:${M};margin-top:4px">${dates[i]}</div><div style="${T};font-size:12px;font-weight:700;margin-top:2px;color:${paid[i]==='DONNIE'?G:R}">${paid[i]}</div></div></div>`;
+  const ledger=`<section aria-label="Social club tab ledger menu" style="${at(388,22,659,`height:698px;background:${P};box-shadow:0 8px 20px rgba(0,0,0,.6)`)}">
+    <header style="${at(24,20,611,'display:flex;justify-content:space-between;align-items:flex-end')}"><div><div style="${T};font-size:11px;font-weight:700;letter-spacing:.1em;color:${G}">SOCIAL CLUB / MEMBERS ONLY / NEW YORK, 1978</div><div style="${H};font-size:40px;line-height:1;font-weight:700;color:${I};text-transform:uppercase;margin-top:3px">The tab behind the bar</div></div>
+      <div style="text-align:right;border:2px solid ${I};padding:4px 10px"><div style="${T};font-size:10px;font-weight:700;color:${M}">ACCOUNT</div><div style="${H};font-size:26px;font-weight:700;line-height:1;color:${I}">LEFTY</div></div></header>
+    <div style="${at(24,88,611,`border:2px solid ${G}`)}">
+      <div style="display:grid;grid-template-columns:1fr 96px;background:${G};color:#fff;${T};font-size:11px;font-weight:700;letter-spacing:.1em"><span style="padding:5px 14px">ITEM</span><span style="padding:5px 12px;text-align:right">AMOUNT</span></div>
+      ${all.map(row).join('')}
+      <div style="display:grid;grid-template-columns:1fr 96px;background:#e2e6cc"><span style="${T};font-size:12px;font-weight:700;color:${I};padding:8px 14px">BALANCE OWING. ASK SONNY.</span><span style="${H};font-size:24px;font-weight:700;color:${R};padding:4px 12px;text-align:right">$31.00</span></div></div>
+  </section>`;
+  const left=`<div style="${at(24,22,340,'height:698px;display:flex;flex-direction:column')}">
+    <div style="${H};font-size:44px;line-height:.95;font-weight:700;color:#f2ecd9;text-transform:uppercase">Donnie Brasco</div>
+    <div style="${H};font-size:24px;font-weight:600;color:${L};margin-top:4px">${ESC(spec.tag||'')}</div>
+    <figure style="margin:14px 0 0;background:#fff;padding:6px 6px 0;box-shadow:0 5px 14px rgba(0,0,0,.6);transform:rotate(-1deg)">${img('club','Lefty and Donnie at the social club',328,196)}<figcaption style="${T};font-size:11px;color:${I};padding:6px 2px 7px">The club. Nobody pays at the bar.</figcaption></figure>
+    <figure style="margin:14px 0 0;background:#fff;padding:6px 6px 0;box-shadow:0 5px 14px rgba(0,0,0,.6);transform:rotate(1deg)">${img('florida','The crew on the Florida trip',328,170)}<figcaption style="${T};font-size:11px;color:${I};padding:6px 2px 7px">The Florida trip. Lefty gets a tan.</figcaption></figure>
+    <div style="margin-top:auto;display:flex;align-items:center;gap:12px">
+      <div style="width:22px;height:22px;border-radius:50%;border:3px solid #c9b77d;flex:none"></div>
+      <div style="flex:1;background:#f5e9c6;padding:9px 14px;transform:rotate(-1deg);box-shadow:0 4px 10px rgba(0,0,0,.5)"><div style="${T};font-size:10.5px;font-weight:700;color:${M}">JEWELLER'S TAG / APPRAISED BY D. BRASCO</div><div style="${H};font-size:24px;font-weight:700;color:${R};line-height:1.1">FUGAZI. It's a fake.</div><div style="${B};font-size:13px;color:${I};margin-top:2px"><b>CUE</b> ${ESC(fmtCue(f))}</div></div></div>
+    <div style="${T};font-size:9px;color:#9a907d;margin-top:8px">FILM IMAGERY: TMDB</div>
+  </div>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${W};overflow:hidden;box-shadow:0 16px 40px #0007">${left}${ledger}</div>`;
+}

@@ -1,0 +1,38 @@
+function fmtDinnerEventually(f,spec,menu,poster){
+  const P='#f4ead5',W='#fffaf0',I='#173e49',A='#a7442d',S='#655f51',Y='#efbf53',L='#d8ccb3',H="font-family:'Cormorant Garamond',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{};
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const lab=(s,c=A,e='')=>`<div style="${B};font-size:11px;line-height:1.3;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:${c};${e}">${ESC(s)}</div>`;
+  const rows=[];let n=0;
+  spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+  const qty=['2','1 bag','2','2 slices','2, dry'];
+  const row=(r,i)=>`<div style="flex:1;display:grid;grid-template-columns:34px 1fr 74px;column-gap:14px;align-items:center;border-top:1px solid ${L};padding:7px 0">
+    <div style="width:26px;height:26px;border:2px solid ${I};position:relative;background:#fff"><span style="position:absolute;left:3px;top:-9px;${T};font-size:30px;font-weight:700;line-height:1;color:${A};transform:rotate(-8deg)">X</span></div>
+    <div><div style="display:flex;align-items:baseline;gap:10px"><span style="${H};font-size:24px;line-height:1.05;font-weight:600;color:${I}">${ESC(r.it.label||'')}</span>${lab(r.g.tab||'',S,'white-space:nowrap')}</div>
+    ${r.it.desc?`<div style="${B};font-size:13.5px;line-height:1.45;color:${I};margin-top:3px">${ESC(r.it.desc)}</div>`:''}
+    ${r.it.film?`<div style="${T};font-size:13px;line-height:1.3;color:${A};margin-top:2px">${ESC(r.it.film)}</div>`:''}</div>
+    <div style="text-align:center;border-bottom:1px solid ${I};padding-bottom:2px"><div style="${T};font-size:10px;font-weight:700;color:${S}">QTY</div><div style="${T};font-size:15px;font-weight:700;color:${I}">${qty[i]||'2'}</div></div></div>`;
+  const card=`<section style="position:absolute;left:24px;top:24px;width:640px;height:694px;box-sizing:border-box;background:${W};border:1px solid ${L};box-shadow:0 8px 18px #173e4933;display:flex;flex-direction:column">
+    <div style="background:${I};color:${P};padding:14px 22px 14px 96px;position:relative">
+      <span aria-hidden="true" style="position:absolute;left:22px;top:50%;width:54px;height:54px;margin-top:-27px;border-radius:50%;background:${P};border:3px solid #0d2a32"></span>
+      ${lab('Room service / Breakfast door card',Y)}
+      <div style="${B};font-size:34px;line-height:1.05;font-weight:700;letter-spacing:-.01em;margin-top:4px">${ESC(spec.brand||'Breakfast. At last.')}</div>
+      <div style="${H};font-size:19px;font-style:italic;line-height:1.2;color:#f4ead5cc;margin-top:3px">Check what you want. Hang outside your door. Pray.</div></div>
+    <div style="display:grid;grid-template-columns:1.25fr 1.3fr .9fr;border-bottom:2px solid ${I}">
+      <div style="padding:8px 22px">${lab('Guest',S)}<div style="${T};font-size:15px;font-weight:700;color:${I};margin-top:2px">MR. &amp; MRS. KELLERMAN</div></div>
+      <div style="padding:8px 14px;border-left:1px solid ${L}">${lab('Spelled',S)}<div style="${T};font-size:15px;font-weight:700;color:${I};margin-top:2px;white-space:nowrap">K-E-L-L-E-R-M-A-N</div></div>
+      <div style="padding:8px 14px;border-left:1px solid ${L}">${lab('Arrived',S)}<div style="${T};font-size:15px;font-weight:700;color:${I};margin-top:2px">EVENTUALLY</div></div></div>
+    <div style="padding:2px 22px 0;flex:1;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+    <div style="border-top:2px solid ${I};padding:8px 22px;display:flex;justify-content:space-between;${T};font-size:11px;font-weight:700;color:${S}"><span>ALLOW 30 MINUTES. OR ALL NIGHT.</span><span>FILM IMAGERY: TMDB</span></div></section>`;
+  const photo=(k,alt,w,h,pos,cap)=>`<figure style="margin:0;background:#fff;padding:6px;box-shadow:0 4px 10px #173e4933">${img(k,alt,w,h,pos)}${cap?`<figcaption style="${T};font-size:13px;color:${I};margin-top:6px">${ESC(cap)}</figcaption>`:''}</figure>`;
+  const names=['The airline','The railroad','The hotel desk','The man in the park','Everybody, frankly'];
+  const side=`<section style="position:absolute;left:688px;top:24px;width:359px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+    <div><div style="${B};font-size:30px;line-height:1.02;font-weight:700;color:${I};letter-spacing:-.015em">The Out-of-Towners</div><div style="${H};font-size:20px;font-style:italic;color:${A};margin-top:3px">${ESC(spec.tag||'')}</div></div>
+    ${photo('park','George and Gwen spending the night in Central Park',347,196,'center','A night in Central Park.')}
+    <div style="display:flex;justify-content:space-between">${photo('flight','The diverted flight',162,96,'center','')}${photo('counter','Another counter, another no',162,96,'center','')}</div>
+    <div style="background:#fffbe6;border-top:22px solid ${Y};padding:10px 16px 12px;box-shadow:0 4px 10px #173e4926;transform:rotate(.6deg)">
+      ${lab("George's list. I'm getting names.",A)}
+      <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:12px;margin-top:5px">${names.map(x=>`<div style="${T};font-size:13px;line-height:1.45;color:${I}">${ESC(x)}</div>`).join('')}</div></div>
+    <div style="background:${A};color:${P};padding:11px 16px 12px">${lab('Showtime cue',P)}<div style="${H};font-size:22px;line-height:1.15;font-weight:600;margin-top:4px">${ESC(fmtCue(f))}</div></div></section>`;
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${P};box-shadow:0 15px 40px #0005;overflow:hidden">${card}${side}</div>`;
+}

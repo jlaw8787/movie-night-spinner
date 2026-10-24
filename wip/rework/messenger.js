@@ -1,0 +1,34 @@
+function fmtMessenger(f,spec,menu,poster){
+ const N='#28322d',P='#f0ebd9',W='#fbf8ec',Y='#e1e472',M='#616b5a',A='#675f26',R='#b8432c',L='#c5c6b1';
+ const D="font-family:'Alfa Slab One',serif;font-weight:400",B="font-family:'Barlow Condensed',sans-serif";
+ const a=spec.art||{};
+ const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+ const lab=(t,col=A,e='')=>`<div style="${B};font-size:12px;line-height:1.2;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:${col};${e}">${ESC(t)}</div>`;
+ const rows=[];let n=0;
+ spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+ const drop=['Broadway & 116th','Chinatown','Midtown, curbside','Back at dispatch','Wherever Vanessa is'],job=['0412','0413','0414','0415','0416'],eta=['4:21','5:02','5:40','6:15','6:59'];
+ const row=(r,i)=>`<div style="flex:1;display:grid;grid-template-columns:64px 1fr 104px;column-gap:14px;align-items:center;border-top:1px solid ${L};padding:7px 0">
+   <div style="text-align:center"><div style="${B};font-size:11px;font-weight:700;letter-spacing:.1em;color:${M}">JOB</div><div style="${D};font-size:19px;line-height:1.1;color:${N}">${job[i]}</div></div>
+   <div><div style="display:flex;align-items:baseline;gap:9px;flex-wrap:wrap"><span style="${B};font-size:25px;line-height:1.05;font-weight:700;color:${N}">${ESC(r.it.label||'')}</span>${lab(r.g.tab||'',A)}</div>
+   ${r.it.desc?`<div style="${B};font-size:17px;line-height:1.25;font-weight:500;color:${N};margin-top:2px">${ESC(r.it.desc)}</div>`:''}
+   ${r.it.film?`<div style="${B};font-size:15px;line-height:1.25;font-style:italic;color:${M};margin-top:1px">Drop: ${ESC(drop[i]||'')}. ${ESC(r.it.film.charAt(0).toUpperCase()+r.it.film.slice(1).replace(/\.$/,''))}.</div>`:''}</div>
+   <div style="text-align:right"><div style="${B};font-size:11px;font-weight:700;letter-spacing:.1em;color:${M}">SIGNED OUT</div><div style="${D};font-size:20px;color:${R}">${eta[i]} PM</div></div></div>`;
+ const form=`<section style="position:absolute;left:452px;top:24px;width:595px;height:694px;box-sizing:border-box;background:${W};border:2px solid ${N};box-shadow:6px 7px 0 ${Y};display:flex;flex-direction:column">
+   <div style="display:flex;justify-content:space-between;align-items:stretch;border-bottom:2px solid ${N}">
+     <div style="padding:10px 16px">${lab('Dispatch manifest / same-day rush',A)}<div style="${D};font-size:30px;line-height:1.05;color:${N};margin-top:4px">Between drops</div><div style="${B};font-size:17px;font-weight:600;color:${M};margin-top:2px">Messenger supper. Sign every drop.</div></div>
+     <div style="background:${N};color:${Y};padding:10px 16px;text-align:center;display:flex;flex-direction:column;justify-content:center">${lab('Must arrive by',Y)}<div style="${D};font-size:34px;line-height:1;margin-top:4px">7:00</div><div style="${B};font-size:15px;font-weight:700;letter-spacing:.1em">PM SHARP</div></div></div>
+   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:2px solid ${N}">
+     <div style="padding:7px 16px">${lab('Rider',M)}<div style="${B};font-size:18px;font-weight:700;color:${N}">WILEE</div></div>
+     <div style="padding:7px 14px;border-left:1px solid ${L}">${lab('Bike',M)}<div style="${B};font-size:18px;font-weight:700;color:${N}">FIXED GEAR, NO BRAKES</div></div>
+     <div style="padding:7px 14px;border-left:1px solid ${L}">${lab('Pickup',M)}<div style="${B};font-size:18px;font-weight:700;color:${N}">COLUMBIA, NIMA</div></div></div>
+   <div style="padding:0 16px;flex:1;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+   <div style="border-top:2px solid ${N};padding:7px 16px;display:flex;justify-content:space-between;${B};font-size:12px;font-weight:700;letter-spacing:.1em;color:${M}"><span>IF A DETECTIVE NAMED MONDAY ASKS: NO ENVELOPE</span><span>FILM IMAGERY: TMDB</span></div></section>`;
+ const left=`<section style="position:absolute;left:24px;top:24px;width:404px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+   <div style="background:${Y};padding:14px 18px 14px;border:2px solid ${N}">${lab('Manhattan / '+f.year,N)}<div style="${D};font-size:46px;line-height:1;letter-spacing:-.02em;color:${N};margin-top:6px">PREMIUM RUSH</div><div style="${B};font-size:21px;font-weight:600;color:${N};margin-top:4px">${ESC(spec.tag||'')}</div></div>
+   <figure style="margin:0;position:relative;border:2px solid ${N}">${img('wilee','Wilee riding his bike through Manhattan traffic',400,238,'50% 15%')}<figcaption style="position:absolute;left:10px;bottom:10px;background:${N};color:${P};padding:4px 9px;${B};font-size:13px;font-weight:600;letter-spacing:.08em">WILEE / OUT ON THE STREET</figcaption></figure>
+   <div style="display:flex;justify-content:space-between">
+     <figure style="margin:0;position:relative;border:2px solid ${N}">${img('nima','Nima, whose envelope starts the run',192,112,'50% 10%')}<figcaption style="position:absolute;left:6px;bottom:6px;background:${N};color:${P};padding:3px 7px;${B};font-size:12px;font-weight:600;letter-spacing:.08em">NIMA / PICKUP</figcaption></figure>
+     <figure style="margin:0;position:relative;border:2px solid ${N}">${img('vanessa','Vanessa riding through traffic',192,112,'50% 10%')}<figcaption style="position:absolute;left:6px;bottom:6px;background:${N};color:${P};padding:3px 7px;${B};font-size:12px;font-weight:600;letter-spacing:.08em">VANESSA</figcaption></figure></div>
+   <div style="background:${N};color:${P};padding:11px 16px 12px">${lab('Serving cue',Y)}<div style="${B};font-size:19px;line-height:1.3;font-weight:500;margin-top:4px">${ESC(fmtCue(f))}</div></div></section>`;
+ return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${P};box-shadow:0 18px 38px rgba(0,0,0,.4)">${left}${form}</div>`;
+}

@@ -1,0 +1,32 @@
+function fmtParaiso(f,spec,menu,poster){
+ const N='#301c2c',P='#e9d2b7',W='#f1e0c8',STUB='#d9ac9d',I='#3c2633',R='#93485d',M='#76544e',G='#c79b72',PK='#ff6fa8';
+ const D="font-family:'Bevan',serif;font-weight:400",B="font-family:'Barlow Condensed',sans-serif";
+ const a=spec.art||{};
+ const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+ const lab=(t,c=R,e='')=>`<div style="${B};font-size:13px;line-height:1.2;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:${c};${e}">${ESC(t)}</div>`;
+ const rows=[];let n=0;
+ spec.groups.forEach(g=>g.items.forEach(()=>{rows.push({g,it:menu.all[n++]||{}});}));
+ const pr=['3.50','2.75','9.75','2.50','1.75'];
+ const row=(r,i)=>`<div style="flex:1;display:flex;flex-direction:column;justify-content:center;border-top:1px solid #d3b99c;padding:5px 0">
+   <div style="display:flex;align-items:baseline;gap:10px"><span style="${B};font-size:27px;line-height:1.05;font-weight:700;color:${I}">${ESC(r.it.label||'')}</span>${lab(r.g.tab||'',R)}<span style="flex:1;border-bottom:2px dotted #d3b99c;transform:translateY(-5px)"></span><span style="${D};font-size:19px;color:${R}">${pr[i]}</span></div>
+   ${r.it.desc?`<div style="${B};font-size:17.5px;line-height:1.2;font-weight:500;color:${I};margin-top:1px">${ESC(r.it.desc)}</div>`:''}
+   ${r.it.film?`<div style="${B};font-size:15.5px;line-height:1.2;font-style:italic;color:${M};margin-top:1px">${ESC(r.it.film)}</div>`:''}</div>`;
+ const card=`<section style="position:absolute;left:24px;top:24px;width:612px;height:694px;box-sizing:border-box;background:${W};border:3px solid ${PK};box-shadow:0 12px 28px rgba(0,0,0,.55);display:flex;flex-direction:column">
+   <div style="background:#1f1019;padding:14px 26px 14px;border-bottom:3px solid ${PK};display:flex;justify-content:space-between;align-items:flex-end">
+     <div>${lab('Supper club / Disco / Upstairs',STUB)}<div style="${D};font-size:50px;line-height:1;color:${PK};margin-top:4px;letter-spacing:-.01em">EL PARAÍSO</div></div>
+     <div style="text-align:right;${B};font-size:15px;font-weight:600;line-height:1.3;color:${P}">Under new management:<br><span style="${D};font-size:17px;color:${STUB}">C. Brigante</span></div></div>
+   <div style="padding:10px 26px 0;${B};font-size:20px;font-weight:600;color:${M}">${ESC(spec.tag||'')}</div>
+   <div style="padding:4px 26px 0;flex:1;display:flex;flex-direction:column">${rows.map(row).join('')}</div>
+   <div style="border-top:3px double ${R};margin:0 26px;padding:7px 0 10px;display:flex;justify-content:space-between;${B};font-size:13px;font-weight:700;letter-spacing:.1em;color:${M}"><span>NO WIRES ON THE DANCE FLOOR, LALIN</span><span>BENNY FROM THE BRONX: NOT ON THE LIST</span></div></section>`;
+ const side=`<section style="position:absolute;left:660px;top:24px;width:387px;height:694px;display:flex;flex-direction:column;justify-content:space-between">
+   <div style="display:flex;justify-content:space-between;align-items:flex-end"><div style="${D};font-size:36px;line-height:1;color:${P}">CARLITO'S<br>WAY</div>${lab('New York, 1975',G,'text-align:right')}</div>
+   <figure style="margin:0;border:4px solid ${P}">${img('carlito','Carlito in the club booth',379,188,'center 30%')}</figure>
+   <div style="display:flex;justify-content:space-between;align-items:stretch">
+     <figure style="margin:0;border:4px solid ${P}">${img('club','Kleinfeld and Carlito at El Paraíso',184,110)}</figure>
+     <figure style="margin:0;border:4px solid ${STUB};position:relative">${img('paradise','The Escape to Paradise poster',184,110)}<figcaption style="position:absolute;left:4px;bottom:4px;background:${N};color:${STUB};padding:2px 6px;${B};font-size:12px;font-weight:700;letter-spacing:.1em">ESCAPE TO PARADISE</figcaption></figure></div>
+   <div style="display:flex;background:${STUB};color:${I};box-shadow:0 5px 12px rgba(0,0,0,.4);transform:rotate(-1.5deg)">
+     <div style="padding:8px 12px;border-right:2px dashed ${I};text-align:center;width:96px;display:flex;flex-direction:column;justify-content:center">${lab('Admit',I)}<div style="${D};font-size:28px;line-height:1">2</div></div>
+     <div style="padding:8px 14px;flex:1">${lab('Grand Central / One way / Coach',R)}<div style="${D};font-size:21px;line-height:1.1;margin-top:3px">To Miami. Then the islands.</div><div style="${B};font-size:15px;font-weight:600;margin-top:2px">Savings for the rental car business: $75,000</div></div></div>
+   <div style="border-top:1px solid #5a3b4e;padding-top:8px">${lab('Serving cue',G)}<div style="${B};font-size:18px;line-height:1.25;font-weight:500;color:${P};margin-top:3px">${ESC(fmtCue(f))}</div><div style="${B};font-size:11px;letter-spacing:.14em;color:#a98d92;margin-top:5px">FILM IMAGERY: TMDB</div></div></section>`;
+ return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;overflow:hidden;background:${N};box-shadow:0 18px 38px rgba(0,0,0,.5)">${card}${side}</div>`;
+}

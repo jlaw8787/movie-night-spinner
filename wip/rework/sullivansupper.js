@@ -1,0 +1,42 @@
+function fmtSullivanSupper(f,spec,menu,poster){
+  const CR='#f2ead6',IN='#1c2333',RD='#b8321f',BL='#204a7a',GN='#2f7d5b',SO='#5a5a52',C="font-family:'Barlow Condensed',sans-serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
+  const a=spec.art||{},xs=menu.all,gs=spec.groups.flatMap(g=>g.items.map(()=>g));
+  const lab=(s,c,e='')=>`<div style="${C};font-size:13px;font-weight:700;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;color:${c||BL};${e}">${s}</div>`;
+  const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w780${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
+  const log=[['10.11.69','5/9','Firehouse'],['10.16.69','5/9','Shea'],['10.11.69','5/8','Kitchen'],['10.11.99','5/7','Julia’s'],['10.12.99','5/9','Back porch']];
+  const row=(it,i)=>{const l=log[i]||log[0];return `<div style="display:grid;grid-template-columns:80px 1fr 82px;column-gap:14px;padding:15px 0 14px;border-bottom:1px solid #c9bea3">
+    <div><div style="${T};font-size:13px;font-weight:700;color:${RD}">${l[0]}</div><div style="${T};font-size:12px;color:${SO};margin-top:3px">RST ${l[1]}</div></div>
+    <div><h3 style="${C};font-size:25px;line-height:1;font-weight:700;margin:0;color:${IN};text-transform:uppercase;letter-spacing:.01em">${ESC(it.label)}</h3>${it.desc?`<p style="${B};font-size:13.5px;line-height:1.38;margin:4px 0 0;color:${IN}">${ESC(it.desc)}</p>`:''}<p style="${T};font-size:13px;line-height:1.32;margin:3px 0 0;color:${BL}">${ESC(it.film||'')}</p></div>
+    <div style="text-align:right">${lab(ESC(gs[i]?gs[i].tab:''),GN)}<div style="${T};font-size:12px;line-height:1.3;color:${SO};margin-top:4px;white-space:nowrap">${l[2]}</div></div></div>`};
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:linear-gradient(160deg,#0b1424 0%,#13283a 40%,#1b3d3a 62%,#2a1d40 100%);overflow:hidden;box-shadow:0 16px 40px #0006">
+  <div aria-hidden="true" style="position:absolute;left:560px;top:-120px;width:700px;height:420px;border-radius:50%;background:radial-gradient(ellipse,#3fd19a40,#0000 65%);transform:rotate(-14deg)"></div>
+  <div aria-hidden="true" style="position:absolute;left:720px;top:-60px;width:500px;height:300px;border-radius:50%;background:radial-gradient(ellipse,#a46cd833,#0000 65%);transform:rotate(-24deg)"></div>
+  <div style="position:absolute;left:24px;top:18px;width:636px;height:706px;background:${CR};box-shadow:0 12px 28px #000a;box-sizing:border-box;padding:14px 22px 12px;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid ${IN};padding-bottom:8px">
+      <div>${lab('Confirming our two-way contact',RD)}<div style="${C};font-size:48px;font-weight:700;line-height:.86;color:${IN};margin-top:4px">QSL / QUEENS NY</div></div>
+      <div style="text-align:right;border:2px solid ${RD};padding:5px 9px;transform:rotate(3deg)"><div style="${C};font-size:22px;font-weight:700;color:${RD};line-height:1">1969 ⇄ 1999</div><div style="${T};font-size:11px;color:${RD};margin-top:2px">SAME RIG. SAME FREQ.</div></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;${T};font-size:13px;color:${IN};padding:7px 0;border-bottom:1px solid ${IN}"><span>TO: Little Chief</span><span>FROM: Frank, Engine Co.</span><span>WX: Aurora borealis</span></div>
+    <div style="display:grid;grid-template-columns:80px 1fr 82px;column-gap:14px;padding:6px 0 4px;border-bottom:2px solid ${IN}">${lab('Date')}${lab('Traffic / supper')}${lab('QTH','','text-align:right')}</div>
+    ${xs.map(row).join('')}
+    ${FX_SP}<div style="display:flex;justify-content:space-between;align-items:baseline;${T};font-size:13px;color:${IN};padding-bottom:9px;border-bottom:1px dashed ${SO};margin-bottom:9px"><span>73s, Chief. Same time tomorrow.</span><span style="color:${RD};font-weight:700">PSE QSL TNX</span></div>
+    <div style="display:flex;gap:12px;align-items:baseline">${lab('Showtime cue',RD,'white-space:nowrap')}<span style="${B};font-size:13px;line-height:1.35;color:${IN}">${ESC(fmtCue(f))}</span></div>
+  </div>
+  <header style="position:absolute;left:688px;top:22px;width:360px">
+    ${lab('The Sullivans / Queens / 2000','#8fe0bd')}
+    <h1 style="${C};font-size:76px;line-height:.86;font-weight:700;letter-spacing:.01em;margin:6px 0 0;color:#f2ead6;text-transform:uppercase;text-shadow:none">Frequency</h1>
+    <div style="${B};font-size:15px;line-height:1.35;color:#cfe3dc;margin-top:6px">${ESC(spec.tag||'')}</div>
+  </header>
+  <figure style="position:absolute;left:688px;top:158px;width:360px;margin:0;background:#f6f1e4;padding:8px 8px 10px;box-sizing:border-box;box-shadow:0 10px 22px #000a;transform:rotate(-1deg)">${img('frank','Frank Sullivan at the ham radio in 1969',344,200)}<figcaption style="${B};font-size:13px;line-height:1.35;color:${IN};margin-top:8px">The aurora is up. The old radio crackles. A voice from 1999 answers.</figcaption></figure>
+  <div style="position:absolute;left:688px;top:450px;width:360px;display:flex;gap:16px;align-items:stretch">
+    <div style="flex:none;background:#f6f1e4;padding:6px;box-shadow:0 10px 22px #000a;transform:rotate(1.4deg)">${fmtPosterImg(f,poster,138,207)}</div>
+    <div style="flex:1;background:#f2ead6;padding:12px 12px 10px;box-shadow:0 8px 18px #0008;display:flex;flex-direction:column;border-top:6px solid ${BL}">
+      ${lab('Admit one / Game 5',RD)}
+      <div style="${C};font-size:28px;line-height:.95;font-weight:700;color:${IN};margin-top:6px">WORLD SERIES 1969</div>
+      <p style="${B};font-size:13px;line-height:1.4;color:${IN};margin:8px 0 0">Oct 16. The Miracle Mets close it out at Shea. John called it thirty years early.</p>
+      <div style="margin-top:auto;${T};font-size:12px;color:${SO};border-top:1px dashed ${SO};padding-top:6px">SEC 69 / ROW 99</div>
+    </div>
+  </div>
+  <div style="position:absolute;right:22px;bottom:5px;${T};font-size:9px;color:#9fb6b0">FILM IMAGERY: TMDB</div>
+  </div>`;
+}
