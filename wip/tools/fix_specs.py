@@ -1,6 +1,6 @@
 """After apply.py: repoint format spec k refs to renamed dishes and refresh their d/note text. Args: patch jsonl files."""
 import json,re,sys
-REPO='/home/claude/movie-night-spinner'
+REPO='/home/claude/polish'
 films=json.load(open(f'{REPO}/data/films.json'))
 pool={f"{f['title']} ({f['year']})":{d[0] for k in 'SMWK' for d in f.get(k,[])} for f in films}
 ren={};new={}

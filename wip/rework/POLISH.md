@@ -14,7 +14,7 @@ Create `rework/<fmt>.labels.json` to change what prints for a dish without touch
 ```
 {"Die Hard (1988)": {"Bourbon on the rocks": {"n": "Argyle's limo bar old fashioned", "d": "Bourbon, brown sugar & orange bitters, one big cube.", "note": "Argyle shows off the limo bar."}}}
 ```
-- The key inside the film is the dish's current `k` (look at the film's spec in `/home/claude/movie-night-spinner/formats.js`, search for the film id). Don't change `k`.
+- The key inside the film is the dish's current `k` (look at the film's spec in `/home/claude/polish/formats.js`, search for the film id). Don't change `k`.
 - `n` is the printed name, `d` the printed description, `note` the printed film note. All optional.
 - The printed name must still describe the same food and drink (the recipe and shopping list don't change). Keep `d` true to the dish.
 - Names under about 40 characters, `d` under about 80 characters, notes under about 50.

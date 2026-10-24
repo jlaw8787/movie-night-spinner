@@ -44,7 +44,7 @@ For each batch file you are given, write one JSON Lines file next to it named `o
 When you finish, run this check and fix anything it reports:
 
 ```
-python3 /tmp/claude-0/-home-claude/255d9f36-a28f-53a9-8508-211dbc596b89/scratchpad/dishwork/check.py out_XX.jsonl
+python3 /tmp/claude-0/-home-claude/6d06a22c-2024-50a8-a2d1-a12880d59711/scratchpad/dishwork/check.py out_XX.jsonl
 ```
 
 Finish with a short summary: films reviewed, dishes changed, and three before and after examples.

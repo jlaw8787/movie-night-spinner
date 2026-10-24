@@ -1,35 +1,40 @@
 function fmtJurassic(f,spec,menu,poster){
-  const J='#1d2b1f',P='#f4eedd',Y='#f2b632',R='#c2321f',I='#1f2320',M='#5c6157',G='#3d6b3a',S="font-family:'Bevan',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
-  const at=(x,y,w,e='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${e}`;
+  const D='#16241a',P='#f3ecd6',P2='#ebe2c6',Y='#f2b632',R='#c2321f',I='#1d211c',M='#585d52',G='#2f5e33',S="font-family:'Bevan',serif",B="font-family:'Libre Franklin',sans-serif",T="font-family:'Courier Prime',monospace";
   const a=spec.art||{},all=menu.all;
   const img=(k,alt,w,h,pos='center')=>a[k]?`<img class="fx-poster" crossorigin="anonymous" src="${TMDB_IMG}w1280${ESC(a[k])}" alt="${ESC(alt)}" style="display:block;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos}">`:'';
   const tabs=spec.groups.flatMap(g=>g.items.map(()=>g.tab));
-  const stops=['STOP 01 / HATCHERY LAB','STOP 02 / VISITOR CENTRE KITCHEN','STOP 03 / THE DINING ROOM','STOP 04 / VISITOR CENTRE, POWER OFF','STOP 05 / TOUR CAR, T. REX PADDOCK'];
-  const flags=['EMBRYO COUNT CHECKED','MIND THE STAINLESS','LUNCH SERVED, OPINIONS TOO','FREEZERS: OFFLINE','KEEP ABSOLUTELY STILL'];
-  const row=(it,i)=>`<div style="padding:${i?7:0}px 0 7px;${i<all.length-1?'border-bottom:2px solid #ddd3b8':''}">
-    <div><div style="display:flex;justify-content:space-between;${T};font-size:11px;font-weight:700;letter-spacing:.06em"><span style="color:${G}">${stops[i]} / ${ESC((tabs[i]||'').toUpperCase())}</span><span style="color:${R}">${flags[i]||''}</span></div>
-      <div style="${S};font-size:${i===2?23:21}px;line-height:1.12;color:${I};margin-top:3px">${ESC(it.label)}</div>
-      <div style="${B};font-size:14px;line-height:1.38;color:${I};margin-top:3px">${ESC(it.desc)}</div>
-      ${it.film?`<div style="${B};font-size:13px;line-height:1.3;font-style:italic;color:${M};margin-top:2px">${ESC(it.film)}</div>`:''}</div></div>`;
-  const sheet=`<section aria-label="Park tour itinerary menu" style="${at(24,22,660,`height:698px;background:${P};box-shadow:0 8px 22px rgba(0,0,0,.6)`)}">
-    <div style="${at(0,0,660,`height:72px;background:${R};display:flex;align-items:center;justify-content:space-between;padding:0 30px;box-sizing:border-box`)}">
-      <div><div style="${S};font-size:34px;line-height:1;color:#fff">DANGER</div><div style="${B};font-size:13px;font-weight:700;letter-spacing:.2em;color:#ffe0d8;margin-top:4px">10,000 VOLTS / LUNCH IN PROGRESS</div></div>
-      <div style="width:50px;height:50px;border-radius:50%;background:${Y};border:4px solid ${I};box-sizing:border-box;text-align:center;${S};font-size:28px;line-height:42px;color:${I}">!</div></div>
-    <header style="${at(30,86,600,`border-bottom:3px solid ${I};padding-bottom:9px;display:flex;justify-content:space-between;align-items:flex-end`)}">
-      <div><div style="${T};font-size:11px;font-weight:700;letter-spacing:.1em;color:${G}">ISLA NUBLAR / VISITOR CENTRE / PREVIEW TOUR, 1993</div><div style="${S};font-size:30px;line-height:1.1;color:${I};margin-top:4px">Park tour lunch</div></div>
-      <div style="${T};font-size:11px;line-height:1.45;color:${M};text-align:right">COST: SPARED NO EXPENSE<br>GUESTS: Grant, Sattler, Malcolm,<br>Gennaro, Lex &amp; Tim</div></header>
-    <div style="${at(30,162,600)}">${all.map(row).join('')}</div>
-    <footer style="${at(30,656,600,`border-top:3px solid ${I};padding-top:8px;display:flex;justify-content:space-between;${T};font-size:11px;color:${M}`)}"><span>CONTAINS LYSINE. ASK YOUR GUIDE.</span><span>IT'S A UNIX SYSTEM. WE KNOW THIS.</span></footer>
-  </section>`;
-  const right=`<div style="${at(708,22,339,'height:698px;display:flex;flex-direction:column')}">
-    <figure style="margin:0;border:4px solid ${Y};background:${Y}">${img('hero','Jurassic Park film still',331,224)}</figure>
-    <figure style="margin:14px 0 0;border:4px solid ${Y};background:${Y}">${img('scene','Jurassic Park film scene',331,270)}</figure>
-    <div style="margin-top:auto;background:${Y};padding:12px 16px;box-shadow:0 5px 14px rgba(0,0,0,.5)">
-      <div style="${T};font-size:11px;font-weight:700;color:${I}">CONTROL ROOM NOTE / ARNOLD</div>
-      <div style="${S};font-size:22px;line-height:1.15;color:${I};margin-top:4px">Hold onto your butts.<br>Sundae's back online.</div>
-      <div style="${B};font-size:13px;line-height:1.38;color:${I};margin-top:6px"><b>CUE</b> ${ESC(fmtCue(f))}</div></div>
-    <div style="${T};font-size:9px;letter-spacing:.06em;color:#9fb09a;margin-top:10px;text-align:right">${ESC(f.title.toUpperCase())} (${f.year}) / FILM IMAGERY: TMDB</div>
-  </div>`;
-  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${J};overflow:hidden;box-shadow:0 16px 40px #0007">
-    <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(ellipse at 90% 100%,rgba(61,107,58,.5),transparent 60%)"></div>${sheet}${right}</div>`;
+  const stops=['HATCHERY','KITCHEN','DINING ROOM','VISITOR CENTRE','T. REX PADDOCK'];
+  const pin=(n,c)=>`<span style="display:inline-block;width:26px;height:26px;border-radius:50%;background:${c||R};color:#fff;${S};font-size:14px;line-height:26px;text-align:center;flex:none">${n}</span>`;
+  const dish=(it,i)=>`<div style="padding:10px 0 11px;border-top:2px dashed #cbbf9c">
+      <div style="display:flex;align-items:center;gap:8px">${pin(i+1)}<span style="${T};font-size:11px;font-weight:700;letter-spacing:.08em;color:${G}">STOP ${i+1} / ${stops[i]||''} / ${ESC((tabs[i]||'').toUpperCase())}</span></div>
+      <div style="${S};font-size:19px;line-height:1.16;color:${I};margin-top:6px">${ESC(it.label)}</div>
+      ${it.desc?`<div style="${B};font-size:13.5px;line-height:1.38;color:${I};margin-top:4px">${ESC(it.desc)}</div>`:''}
+      ${it.film?`<div style="${B};font-size:13px;line-height:1.3;font-style:italic;color:${M};margin-top:3px">${ESC(it.film)}</div>`:''}</div>`;
+  const W=339,H=698,X0=26,Y0=22;
+  const panel=(i,inner,bg)=>`<section style="position:absolute;left:${X0+i*W}px;top:${Y0}px;width:${W}px;height:${H}px;background:${bg||P};box-sizing:border-box;padding:20px 22px;overflow:hidden;display:flex;flex-direction:column">${inner}</section>`;
+  const map=`<div aria-label="Park map with the five tour stops" style="position:relative;width:295px;height:184px;background:#9cc3c4;overflow:hidden"><div style="position:absolute;left:14px;top:12px;width:268px;height:158px;background:#6f9a5a;border:3px solid #45693a;border-radius:46% 54% 42% 58% / 52% 44% 56% 48%;box-sizing:border-box"></div><div style="position:absolute;left:52px;top:40px;width:56px;height:44px;background:#587f47;border-radius:50%"></div><div style="position:absolute;left:176px;top:110px;width:62px;height:46px;background:#587f47;border-radius:50%"></div><div style="position:absolute;left:196px;top:30px;width:58px;height:50px;border:3px dashed ${Y};box-sizing:border-box"></div><div style="position:absolute;left:58px;top:138px;width:59px;height:0;border-top:3px dashed #f3ecd6;transform:rotate(-35.3deg);transform-origin:0 0"></div><div style="position:absolute;left:106px;top:104px;width:45px;height:0;border-top:3px dashed #f3ecd6;transform:rotate(-12.8deg);transform-origin:0 0"></div><div style="position:absolute;left:150px;top:94px;width:86px;height:0;border-top:3px dashed #f3ecd6;transform:rotate(-24.8deg);transform-origin:0 0"></div><div style="position:absolute;left:150px;top:94px;width:77px;height:0;border-top:3px dashed #f3ecd6;transform:rotate(36.6deg);transform-origin:0 0"></div><div style="position:absolute;left:46px;top:126px;width:24px;height:24px;border-radius:50%;background:${R};border:2px solid #fff;box-sizing:border-box;color:#fff;${S};font-size:12px;line-height:20px;text-align:center">1</div><div style="position:absolute;left:94px;top:92px;width:24px;height:24px;border-radius:50%;background:${R};border:2px solid #fff;box-sizing:border-box;color:#fff;${S};font-size:12px;line-height:20px;text-align:center">2</div><div style="position:absolute;left:138px;top:82px;width:24px;height:24px;border-radius:50%;background:${R};border:2px solid #fff;box-sizing:border-box;color:#fff;${S};font-size:12px;line-height:20px;text-align:center">3</div><div style="position:absolute;left:200px;top:128px;width:24px;height:24px;border-radius:50%;background:${R};border:2px solid #fff;box-sizing:border-box;color:#fff;${S};font-size:12px;line-height:20px;text-align:center">4</div><div style="position:absolute;left:216px;top:46px;width:24px;height:24px;border-radius:50%;background:${R};border:2px solid #fff;box-sizing:border-box;color:#fff;${S};font-size:12px;line-height:20px;text-align:center">5</div><div style="position:absolute;left:100px;top:20px;${T};font-size:10px;font-weight:700;color:${I};white-space:nowrap">T. REX PADDOCK</div><div style="position:absolute;left:24px;top:152px;${T};font-size:10px;font-weight:700;color:${I};white-space:nowrap">HATCHERY</div><div style="position:absolute;left:96px;top:124px;${T};font-size:10px;font-weight:700;color:${I};white-space:nowrap">VISITOR CENTRE</div><div style="position:absolute;left:8px;top:170px;${T};font-size:10px;font-weight:700;color:#1f4b52;white-space:nowrap">ISLA NUBLAR / TOUR ROUTE</div></div>`;
+  const cover=`<div style="${T};font-size:11px;font-weight:700;letter-spacing:.14em;color:${Y}">OFFICIAL GUEST GUIDE / PREVIEW TOUR</div>
+    <div style="${S};font-size:33px;line-height:1.05;color:#fff;margin-top:8px">Visitor Centre<br>Dining Guide</div>
+    <div style="${B};font-size:14px;font-weight:600;color:#e9e1c6;margin-top:6px">${ESC(spec.tag||'Spared no expense.')}</div>
+    <figure style="margin:14px 0 0;border:4px solid ${Y}">${img('hero','Jurassic Park film still',291,236)}</figure>
+    <div style="margin-top:14px;background:${P};padding:12px 14px">
+      <div style="${T};font-size:11px;font-weight:700;letter-spacing:.06em;color:${R}">A WORD FROM YOUR HOST</div>
+      <div style="${B};font-size:13.5px;line-height:1.4;color:${I};margin-top:5px">Five stops, one lunch, no expense spared. Tour cars run on the track, so stay seated and keep your hands in.</div>
+      <div style="${S};font-size:15px;color:${G};margin-top:6px">John Hammond</div></div>
+    <div style="margin-top:auto;border:2px solid ${Y};padding:10px 12px">
+      <div style="${T};font-size:11px;font-weight:700;color:${Y}">CONTROL ROOM / RAY ARNOLD</div>
+      <div style="${S};font-size:17px;line-height:1.2;color:#fff;margin-top:4px">Dessert goes out when the power comes back. Hold onto your butts.</div></div>`;
+  const inner1=`<div style="display:flex;justify-content:space-between;align-items:baseline"><div style="${S};font-size:22px;color:${I}">Tour menu</div><div style="${T};font-size:11px;font-weight:700;color:${R}">STOPS 1 TO 3</div></div>
+    <div style="${B};font-size:13px;color:${M};margin:2px 0 6px">Follow the numbers on the park map.</div>
+    ${all.slice(0,3).map((it,i)=>dish(it,i)).join('')}<div style="margin-top:10px;background:#fff;border:2px solid ${I};padding:8px 12px;display:flex;gap:12px;align-items:center"><div style="flex:none;width:44px;height:44px;border-radius:50%;background:${Y};border:3px solid ${I};box-sizing:border-box;${S};font-size:11px;line-height:38px;text-align:center;color:${I}">DNA</div><div style="${B};font-size:13px;line-height:1.38;color:${I}"><b>Mr. DNA's kitchen tip:</b> where the recipe has gaps, we fill them. Not with frog.</div></div>
+    <div style="${T};font-size:11px;line-height:1.45;color:${M};margin-top:auto;border-top:2px solid ${I};padding-top:9px">PARK RULES: Objects in mirror are closer than they appear. Lost? Say the magic word.</div>`;
+  const inner2=`${all.slice(3).map((it,i)=>dish(it,i+3)).join('')}
+    <div style="border-top:2px dashed #cbbf9c;padding-top:10px">
+      <div style="${T};font-size:11px;font-weight:700;letter-spacing:.08em;color:${G};margin-bottom:6px">PARK MAP</div>${map}</div>
+    <div style="${B};font-size:13px;line-height:1.35;color:${I};margin-top:7px"><b style="color:${R}">CUE</b> ${ESC(fmtCue(f))}</div><div style="margin-top:auto;border:2px dashed ${R};padding:9px 12px;display:flex;justify-content:space-between;align-items:center"><div><div style="${T};font-size:11px;font-weight:700;color:${R}">TOUR CAR TICKET / ADMIT 4</div><div style="${B};font-size:13px;color:${I};margin-top:2px">Night-vision goggles go back to the driver.</div></div><div style="${S};font-size:20px;color:${R};white-space:nowrap;margin-left:10px">No. 05</div></div>`;
+  const folds=[1,2].map(i=>`<div aria-hidden="true" style="position:absolute;left:${X0+i*W-6}px;top:${Y0}px;width:12px;height:${H}px;background:linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,.13) 50%,rgba(255,255,255,.18) 52%,rgba(0,0,0,0))"></div>`).join('');
+  return `<div class="fx-wall" style="position:relative;width:1071px;height:742px;background:${D};overflow:hidden;box-shadow:0 16px 40px #0007">
+    <div aria-hidden="true" style="position:absolute;left:${X0}px;top:${Y0}px;width:${W*3}px;height:${H}px;box-shadow:0 10px 26px rgba(0,0,0,.6)"></div>
+    ${panel(0,cover,'#20402a')}${panel(1,inner1)}${panel(2,inner2,P2)}${folds}
+    <div style="position:absolute;right:26px;bottom:6px;${T};font-size:9px;letter-spacing:.06em;color:#9fb09a">${ESC(f.title.toUpperCase())} (${f.year}) / FILM IMAGERY: TMDB</div></div>`;
 }

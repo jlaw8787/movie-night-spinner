@@ -15,7 +15,7 @@ while((n=w.nextNode())){const t=n.textContent.trim();if(t.length<2)continue;cons
 return {bad:bad.slice(0,4),n:bad.length}}"""
 async def main():
   async with async_playwright() as p:
-    b=await p.chromium.launch();ctx=await b.new_context(viewport={'width':1400,'height':1000})
+    b=await p.chromium.launch(proxy={'server':__import__('os').environ.get('HTTPS_PROXY',''),'bypass':'localhost,127.0.0.1'});ctx=await b.new_context(viewport={'width':1400,'height':1000})
     for f in films:
       pg=await ctx.new_page();await pg.goto(f'http://localhost:{port}/?film='+quote(f));await pg.wait_for_timeout(9000)
       r=await pg.evaluate(M);print('!!' if r.get('n') else 'ok',f,json.dumps(r,ensure_ascii=False));await pg.close()

@@ -1,6 +1,6 @@
 """Apply rework/<fmt>.labels.json overrides into formats.js specs. Usage: apply_labels.py fmt1 fmt2 ..."""
 import json,re,os,sys
-R=os.path.dirname(os.path.abspath(__file__));REPO='/home/claude/movie-night-spinner'
+R=os.path.dirname(os.path.abspath(__file__));REPO='/home/claude/polish'
 BAN=['—','–','elevate','indulge','iconic','nod to','homage','perfect for']
 src=open(REPO+'/formats.js').read().split('\n');idx={}
 for i,l in enumerate(src):

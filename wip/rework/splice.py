@@ -1,6 +1,6 @@
 """Splice rework/<fmt>.js renderer functions into formats.js by function name. Usage: splice.py fmt1 fmt2 ..."""
 import json,sys,re,os,subprocess
-R=os.path.dirname(os.path.abspath(__file__));REPO='/home/claude/movie-night-spinner'
+R=os.path.dirname(os.path.abspath(__file__));REPO='/home/claude/polish'
 L={x['fmt']:x for x in json.load(open(R+'/list.json'))}
 src=open(REPO+'/formats.js').read()
 def span(s,name):

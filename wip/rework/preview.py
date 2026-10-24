@@ -6,7 +6,7 @@ rework/shots/<fmt>_phone.png, and prints readability numbers."""
 import asyncio, json, os, sys, subprocess, base64
 from urllib.parse import quote
 R = os.path.dirname(os.path.abspath(__file__))
-REPO = '/tmp/claude-0/-home-claude/255d9f36-a28f-53a9-8508-211dbc596b89/scratchpad/prevwt'
+REPO = '/tmp/claude-0/-home-claude/6d06a22c-2024-50a8-a2d1-a12880d59711/scratchpad/prevwt'
 fmt = sys.argv[1]
 src = open(os.path.join(R, fmt + '.js')).read().rstrip() + '\n'
 chunk_path = os.path.join(REPO, 'formats', fmt + '.js')
@@ -41,7 +41,7 @@ METRICS = """()=>{const c=document.querySelector('#preview .mcard');if(!c||!c.cl
  return {smallestText:sizes.slice(0,4),SPILL:spill.slice(0,6)}}"""
 async def main():
     async with async_playwright() as p:
-        b = await p.chromium.launch()
+        b = await p.chromium.launch(proxy={'server':__import__('os').environ.get('HTTPS_PROXY',''),'bypass':'localhost,127.0.0.1'})
         for fid in films:
             pg = await (await b.new_context(viewport={'width': 1400, 'height': 1000})).new_page()
             errs = []

@@ -1,7 +1,7 @@
 """Turn out_egg_*.jsonl (name/note/desc only) into full dish patches (adds how4/shop4 from current repo data) for dishwork/apply.py.
 Usage: python3 egg_to_patch.py out_egg_*.jsonl > patch_eggs.jsonl"""
 import json,re,os,sys,subprocess
-REPO='/home/claude/movie-night-spinner'
+REPO='/home/claude/polish'
 slug=lambda s: re.sub(r'^-|-$','',re.sub(r'[^a-z0-9]+','-',s.lower()))
 films={f"{f['title']} ({f['year']})":f for f in json.load(open(f'{REPO}/data/films.json'))}
 ed=json.loads(subprocess.check_output(['node','-e','const fs=require("fs"),vm=require("vm");const c={};vm.createContext(c);vm.runInContext(fs.readFileSync(process.argv[1],"utf8")+";this.E=MOVIE_MENU_EDITIONS",c);process.stdout.write(JSON.stringify(c.E))',f'{REPO}/movie-menus.js']))

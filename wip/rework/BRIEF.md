@@ -34,7 +34,7 @@ For each menu in your list, rewrite the renderer function in `rework/<fmt>.js` s
 After every change, run:
 
 ```
-cd /tmp/claude-0/-home-claude/255d9f36-a28f-53a9-8508-211dbc596b89/scratchpad/rework && python3 preview.py <fmt>
+cd /home/claude/polish/wip/rework && python3 preview.py <fmt>
 ```
 
 It prints the smallest text sizes and any clipped text. It saves `shots/<fmt>.jpg` (the exact saved-image export) and `shots/<fmt>_phone.png`. **Open the jpg with the Read tool and look at it every time.** Iterate until you'd honestly grade it 9.5: readable at print size, film-specific, balanced and with no glitches.

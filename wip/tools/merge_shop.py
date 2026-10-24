@@ -1,6 +1,6 @@
 """Rebuild 'shopping' for touched recipes/editions with quantities added up (same rule as shopGroups)."""
 import json,glob,re,os,subprocess
-REPO='/home/claude/movie-night-spinner'
+REPO='/home/claude/polish'
 AIS=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Drinks","Bottle shop"]
 UNIT={'g':('g',1),'kg':('g',1000),'ml':('ml',1),'l':('ml',1000),'L':('ml',1000)}
 slug=lambda s: re.sub(r'^-|-$','',re.sub(r'[^a-z0-9]+','-',s.lower()))

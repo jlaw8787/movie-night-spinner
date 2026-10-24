@@ -2,7 +2,7 @@
 Updates data/films.json, data/recipes/<slug>.json, movie-menus.js editions and k: references in formats.js.
 Usage: python3 apply.py [--dry] out_01.jsonl ..."""
 import json, os, re, sys, subprocess
-REPO = '/home/claude/movie-night-spinner'
+REPO = '/home/claude/polish'
 W = os.path.dirname(os.path.abspath(__file__))
 dry = '--dry' in sys.argv
 files = [a for a in sys.argv[1:] if not a.startswith('--')]
