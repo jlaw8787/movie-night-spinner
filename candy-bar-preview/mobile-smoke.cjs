@@ -1,0 +1,27 @@
+const { chromium, devices } = require('playwright');
+(async()=>{
+ const browser=await chromium.launch({headless:true});
+ const page=await browser.newPage({...devices['iPhone 13'],browserName:undefined});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:8765/candy-bar-preview/',{waitUntil:'domcontentloaded'});
+ await page.locator('[data-add="0"]').click();
+ await page.locator('[data-page="ticket"]').click();
+ if(!await page.locator('#ticketRows').innerText().then(t=>t.includes("Party Mix")))throw Error('Add to ticket failed');
+ await page.locator('#addCustom').click();
+ await page.locator('#customInput').fill('Ice');
+ await page.locator('#addCustom').click();
+ if(!await page.locator('#ticketRows').innerText().then(t=>t.includes('Ice')))throw Error('Custom grocery failed');
+ await page.locator('#checkout').click();
+ if(!await page.locator('#receipt').innerText().then(t=>t.includes('Party Mix')))throw Error('Receipt failed');
+ await page.locator('[data-page="shopping"]').click();
+ if(!await page.locator('#listRows').innerText().then(t=>t.includes('Party Mix')))throw Error('Shopping failed');
+ await page.locator('[data-page="retro"]').click();
+ if(!await page.locator('#retroGrid').innerText().then(t=>t.includes('Burger Man')))throw Error('Retro shelf failed');
+ await page.locator('[data-page="menu"]').click();
+ if(await page.locator('#movieSelect option').count()<2)throw Error('Movie menus not loaded');
+ await page.screenshot({path:'candy-bar-mobile.png',fullPage:true});
+ if(errors.length)throw Error('JS errors: '+errors.join(' | '));
+ const imgs=await page.locator('img').evaluateAll(nodes=>nodes.map(i=>({src:i.src,ok:i.complete&&i.naturalWidth>0})));
+ console.log(JSON.stringify({status:'PASS',images:imgs},null,2));
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});
