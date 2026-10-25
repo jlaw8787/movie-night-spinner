@@ -1,0 +1,4 @@
+# Once Upon a Time in America menu, image credits
+- street-rivington.jpg (signature): "Sunday morning at Orchard and Rivington, [New York City]", Bain News Service, c.1915 (No. 1086-15). Library of Congress, George Grantham Bain Collection, https://www.loc.gov/pictures/item/2003665479/ , file https://tile.loc.gov/storage-services/master/pnp/cph/3b10000/3b19000/3b19700/3b19794u.tif . Rights: "No known restrictions on publication" (public domain). Cropped inside the mount, shop sign lettering (a shoe company, a dentist and smaller signs) blurred so no business name reads, toned sepia.
+- locker-541.jpg: TMDB still /2jNsww4YUQQBpPW4HKxPNu0wTar.jpg (Once Upon a Time in America, 1984), listed in data/film-stills.json. Brightened, cropped to the locker and key.
+- paper-grain.png: shared house grain from jurassic/src/assets. wear-paper.png painted in build.py.

@@ -1,0 +1,18 @@
+{
+ "fmt": "tangiers",
+ "fn": "fmtTangiers",
+ "faces": ["front.html"],
+ "names": ["Front"],
+ "mm": [356, 216],
+ "fonts": "family=Gravitas+One&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Herr+Von+Muellerhoff",
+ "fams": ["Gravitas One", "Libre Franklin", "Herr Von Muellerhoff"],
+ "phone": {
+  "disp": "'Gravitas One',serif",
+  "title": "'Gravitas One',serif",
+  "name": "'Libre Franklin',sans-serif",
+  "body": "'Libre Franklin',sans-serif",
+  "price": "'Libre Franklin',sans-serif",
+  "note": "'Libre Franklin',sans-serif"
+ },
+ "build": "python3 build.py && python3 shot.py"
+}

@@ -28,7 +28,7 @@ def fit(im, w, h, box=None, pos=(0.5, 0.5)):
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
 GC_W, GC_H = 470, 284
-gc = Image.open(S('loc-70682u.tif')).convert('L')
+gc = Image.open(S('loc-70682.jpg')).convert('L')
 gc = fit(gc, GC_W, GC_H, (330, 360, 2846, 1995), (0.5, 0.35))
 gc = ImageEnhance.Contrast(ImageEnhance.Brightness(gc).enhance(1.05)).enhance(1.08)
 # warm sepia so it sits on the oxblood cover without going muddy
@@ -38,7 +38,7 @@ Image.merge('RGB', [gc.point(lambda v: min(255, int(v * 1.0 + 8))), gc.point(lam
 CL_W, CL_H = 470, 264
 fit(Image.open(S('jSXPooWByKBdFMXNNl5XplGgeL0.jpg')).convert('RGB'), CL_W, CL_H).save(A('club-table.jpg'), quality=90)
 
-PO_W, PO_H = 470, 236
+PO_W, PO_H = 470, 192
 po = Image.open(S('8ESoIezvK2ZlUMH0woyv7NKgHd9.jpg')).convert('RGB')
 fit(po, PO_W, PO_H, (0, 330, 3840, 2160), (0.5, 0.55)).save(A('paradise-poster.jpg'), quality=90)
 
@@ -126,7 +126,7 @@ def postcard(o, x, y, rot=3):
              f'<div style="font-family: {BODY}; font-weight: 600; font-size: 14px; letter-spacing: 0.3em; color: {OX}; text-align: center; line-height: 1.2">POST CARD</div>'
              f'<div style="position: absolute; left: 118px; top: 32px; width: 1px; height: 124px; background: {MUTE}"></div>'
              f'<div style="position: absolute; left: 10px; top: 32px; width: 100px; font-family: {BODY}; font-style: italic; font-size: 14px; line-height: 1.3; color: {INK}">'
-             f'<span style="font-family: {DISP}; font-style: normal; font-size: 21px; color: {SUN}">Escape to Paradise</span><br>Car rental going for seventy-five. Sun every day.</div>'
+             f'<span style="font-family: {DISP}; font-style: normal; font-size: 21px; color: {SUN}">Escape to Paradise</span><br>Car rental going for seventy-five. Sun every day. Come soon.</div>'
              f'<div style="position: absolute; left: 180px; top: 30px; width: 44px; height: 50px; background: {SUN}; box-sizing: border-box; border: 2px dotted {CARD}; text-align: center">'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 18px; color: {CARD}; line-height: 1; margin-top: 6px">8c</div>'
              f'<div style="font-family: {BODY}; font-weight: 600; font-size: 14px; color: {CARD}; line-height: 1.1; letter-spacing: -0.02em">BAH.</div></div>'
@@ -142,17 +142,17 @@ def outside():
              f'<div style="font-family: {DISP}; font-size: 60px; line-height: 1.05; color: {PEACH}; margin-top: 0">One stop to Paradise</div></div>')
     o.append(frame('grand-central-1959.jpg', 'Morning sun pouring in long beams through the high arched windows of the Grand Central concourse, travellers crossing the floor below',
                    LX, 142, GC_W, GC_H))
-    o.append(f'<div style="position: absolute; left: {LX}px; top: 446px; width: 300px; font-family: {BODY}; font-style: italic; '
-             f'font-size: 18px; line-height: 1.3; color: {SUN2}">Grand Central, mornings. Catch the uptown train and step off in paradise.</div>')
-    ticket(o, 290, 388)
-    o.append(f'<div style="position: absolute; left: {LX}px; top: 520px; width: 216px">'
-             f'{kicker("From the house")}'
+    o.append(f'<div style="position: absolute; left: {LX}px; top: 446px; width: 214px; font-family: {BODY}; font-style: italic; '
+             f'font-size: 18px; line-height: 1.3; color: {SUN2}">Grand Central, mornings. Every train out goes somewhere warmer.</div>')
+    ticket(o, 262, 392)
+    o.append(f'<div style="position: absolute; left: {LX}px; top: 528px; width: 222px">'
+             f'{kicker("Welcome")}'
              f'<div style="font-family: {BODY}; font-size: 19px; line-height: 1.38; color: {PEACH}; margin-top: 6px">'
-             'I&rsquo;m here till I put away seventy-five grand. Then I&rsquo;m gone. Till then, eat good, tip the band.</div>'
+             'I&rsquo;m out of the life. Seventy-five grand put away, then the islands. Till then, eat good.</div>'
              f'<div style="font-family: {DISP}; font-size: 46px; line-height: 1; color: {SUN}; margin-top: 4px">Carlito</div></div>')
-    postcard(o, 286, 538)
-    o.append(f'<div style="position: absolute; left: {LX}px; top: 734px; width: {CW}px; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {SUN2}">'
-             'Prices subject to change. Form No. 30-5. El Paraiso, uptown, New York. 1975.</div>')
+    postcard(o, 286, 552)
+    o.append(f'<div style="position: absolute; left: {LX}px; top: 732px; width: {CW}px; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {SUN2}">'
+             'Prices subject to change. Form No. 30-5. New York, 1975.</div>')
 
     # front cover: the club
     o.append(f'<div style="position: absolute; left: {RX}px; top: 50px; width: {CW}px; text-align: center">'
@@ -162,44 +162,46 @@ def outside():
     o.append(frame('club-table.jpg', 'Carlito in a dark suit at a ringside table with Gail and Dave Kleinfeld, champagne glasses on the cloth',
                    RX, 236, CL_W, CL_H))
     o.append(f'<div style="position: absolute; left: {RX}px; top: 516px; width: {CW}px; text-align: center; font-family: {BODY}; font-style: italic; '
-             f'font-size: 18px; line-height: 1.3; color: {SUN2}">Ringside, Saturday. The counsellor is buying. Supposedly.</div>')
-    o.append(f'<div style="position: absolute; left: {RX + 20}px; top: 562px; width: {CW - 40}px; box-sizing: border-box; border: 2px solid {SUN}; '
+             f'font-size: 18px; line-height: 1.3; color: {SUN2}">Ringside, Saturday. Some old flames are worth the wait.</div>')
+    o.append(f'<div style="position: absolute; left: {RX + 20}px; top: 560px; width: {CW - 40}px; box-sizing: border-box; border: 2px solid {SUN}; '
              f'padding: 10px 16px 12px; text-align: center; background: {OX2}">'
              f'{kicker("House rule", size=18)}'
-             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 30px; line-height: 1.15; color: {PEACH}; margin-top: 2px; letter-spacing: 0.02em">NO TABS. NOT FOR NOBODY.</div>'
-             f'<div style="font-family: {BODY}; font-size: 19px; line-height: 1.3; color: {PEACH}; margin-top: 4px">Yes, Dave, that means you. We have your number, counsellor.</div></div>')
+             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 27px; line-height: 1.15; color: {PEACH}; margin-top: 2px; letter-spacing: 0.01em; white-space: nowrap">NO TABS. NOT FOR NOBODY.</div>'
+             f'<div style="font-family: {BODY}; font-size: 19px; line-height: 1.3; color: {PEACH}; margin-top: 4px">Yes, Dave, that means you, counsellor.</div></div>')
     o.append(f'<div style="position: absolute; left: {RX}px; top: 718px; width: {CW}px; text-align: center">'
-             f'{kicker("Under new management &nbsp;&middot;&nbsp; Menu inside", color=SUN, size=18)}</div>')
+             f'{kicker("Under new management", color=SUN, size=18)}</div>')
     return page(''.join(o), 'outside', OX, 'paper-grain-light.png', 0.16)
 
 # ---------------- INSIDE: kitchen (left) and the Paradise Bar (right) ----------------
 def inside():
     o = [stripes(0, 0, W), stripes(0, H - 26, W, flip=True)]
     left = (head('Something crisp', 'From El Barrio')
-            + item('Bacalaitos', '1.25', 'Lacy salt cod fritters, fried with garlic and fresh coriander.', 8)
+            + item('Bacalaitos', '1.25', 'Lacy salt cod fritters with garlic and fresh coriander.', 8)
             + item('Tostones', '1.00', 'Green plantain fried twice, smashed flat, spooned with garlic and lime mojo.')
             + item('Empanadillas', '1.50', 'Half moon pastries of beef picadillo, olives and raisins.')
             + '<div style="height: 18px"></div>'
             + head('Supper is served', 'The Puerto Rican Table')
             + item('Pernil', '7.50', 'Garlic and oregano pork shoulder, roasted five hours to crackling. Rice with pigeon peas.', 8)
             + item('Arroz con pollo', '4.75', 'Chicken and yellow rice, sofrito, olives, sweet peppers.')
-            + item('Bistec encebollado', '5.95', 'Thin sirloin smothered in vinegar onions, white rice, red beans.'))
+            + item('Bistec encebollado', '5.95', 'Thin sirloin under vinegar onions, white rice, red beans.')
+            + f'<div style="margin-top: 10px; border-top: 1px solid {SUN}; padding-top: 6px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.35; color: {MUTE}">'
+            'Live band nightly. At the door: Pachanga. Gentlemen from the Bronx, wait at the bar.</div>')
     o.append(f'<div style="position: absolute; left: {LX}px; top: 44px; width: {CW}px">{left}</div>')
 
     o.append(frame('paradise-poster.jpg', 'Travel poster photo: a huge setting sun behind palm fronds, a dancer silhouetted with arms wide on a glittering red sea',
                    RX, 44, PO_W, PO_H, color=OX, bg=OX))
     o.append(f'<div style="position: absolute; left: {RX + 22}px; top: 60px; font-family: {DISP}; font-size: 50px; line-height: 1; color: {CARD}; '
              f'text-shadow: 2px 2px 0 {OX}">Escape to Paradise</div>')
-    o.append(f'<div style="position: absolute; left: {RX}px; top: 296px; width: {CW}px; text-align: center; font-family: {BODY}; font-style: italic; '
-             f'font-size: 18px; line-height: 1.3; color: {MUTE}">The poster over the bar. Every night ends at sunset in here.</div>')
+    o.append(f'<div style="position: absolute; left: {RX}px; top: 252px; width: {CW}px; text-align: center; font-family: {BODY}; font-style: italic; '
+             f'font-size: 18px; line-height: 1.3; color: {MUTE}">The poster over the bar. The boss looks at it every night.</div>')
     right = (head('At the bar', 'The Paradise Bar')
              + item('Paradise punch', '2.75', 'Dark rum, pineapple, fresh lime and spiced syrup, long over ice, nutmeg grated on top.', 8)
-             + item('Pi&ntilde;a colada', '2.25', 'Light rum, cream of coconut, pineapple, blended with ice.')
-             + '<div style="height: 14px"></div>'
+             + item('Pi&ntilde;a colada', '2.25', 'Rum, cream of coconut, pineapple, crushed ice.', 10)
+             + '<div style="height: 10px"></div>'
              + head('One last temptation', 'Dulces')
-             + item('Paradise flan', '1.75', 'Coconut caramel custard, baked slow in a water bath, turned out cold.', 8)
-             + item('Tembleque', '1.25', 'Coconut milk pudding, cinnamon on top.'))
-    o.append(f'<div style="position: absolute; left: {RX}px; top: 336px; width: {CW}px">{right}</div>')
+             + item('Paradise flan', '1.75', 'Coconut caramel custard, baked slow, turned out cold.', 8)
+             + item('Tembleque', '1.25', 'Coconut milk pudding, cinnamon on top.', 10))
+    o.append(f'<div style="position: absolute; left: {RX}px; top: 288px; width: {CW}px">{right}</div>')
     return page(''.join(o), 'inside', PEACH, 'paper-grain.png', 0.22)
 
 FACES = {'outside': outside(), 'inside': inside()}

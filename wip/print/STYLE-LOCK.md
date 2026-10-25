@@ -37,13 +37,13 @@ A real menu, printed by a food venue in the film's world, in that year and place
 ## Real images first (owner, Oct 25 night: "use real images where possible, don't settle")
 22. Prefer real photographs and period images over painted ones. Sources, in order: TMDB stills of the film; public domain or free-licence photos from the Library of Congress (loc.gov, tile.loc.gov), NYPL Digital Collections public domain items (images.nypl.org) and Wikimedia Commons (upload.wikimedia.org, public domain, CC0 or CC BY only; never CC BY-SA, NC or ND). Search for real period photos of the venue's street, building, vehicles and food from the film's year and city. Use only images whose page states public domain or a free licence; record the source URL and licence in your folder's CREDITS.md. No visible real brand names or logos in any photo. Paint art only where no usable real image exists, and then at the skill level of the Jurassic map.
 
-## Movie fun (owner, Oct 25 night: "some menus really miss the movie fun")
-23. Every menu must carry the film's personality and fun, not just tasteful period design. A fan should grin at it. Do this with:
-   - the film's spirit in the venue choice and voice (a comedy menu is funny, an action menu has swagger, a kids' film is playful and bright);
-   - 2 or 3 big, obvious film gags a fan spots in seconds (a famous object, a running joke, a signature visual motif drawn large), on top of the small winks;
-   - playful copy: dish notes and house rules written in the film's tone (short paraphrased winks, never song lyrics, never long quotes);
-   - props that are fun to find, not only paperwork.
-   Classy period design stays, but it must never feel like a polite generic restaurant with the film's name on it.
+## Movie pull (owner, Oct 26, replaces the earlier "movie fun" rule)
+23. Every menu must draw you into its film: a strong tie to the film's world and the RIGHT EMOTION for that film. It does not always have to be funny.
+   - Match the film's feeling: comedies are funny, crime dramas carry weight and menace, romances are warm, thrillers are tense, family films are playful, epics feel grand, sad films can be tender.
+   - 2 or 3 big, unmistakable film moments or motifs a fan recognises in seconds (an object, a place, a scene, a visual motif), on top of the small winks.
+   - Copy written in the film's own tone and voice (short paraphrased winks, never song lyrics, never long quotes).
+   - Props and pictures chosen to pull you into the world, not just paperwork.
+   It must never feel like a polite generic restaurant with the film's name on it.
 
 ## Film variables (the only things that change per film)
 Venue and its name, palette, display face, logo or sign, hero picture, section names, dishes and wording, character note, Easter eggs, prop accent, format.

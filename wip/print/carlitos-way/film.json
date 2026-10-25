@@ -1,0 +1,18 @@
+{
+ "fmt": "paraiso",
+ "fn": "fmtParaiso",
+ "faces": ["outside.html", "inside.html"],
+ "names": ["Outside", "Inside"],
+ "mm": [297, 210],
+ "fonts": "family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Yesteryear",
+ "fams": ["Yesteryear", "Jost"],
+ "phone": {
+  "disp": "'Yesteryear',cursive",
+  "title": "'Yesteryear',cursive",
+  "name": "'Jost',sans-serif",
+  "body": "'Jost',sans-serif",
+  "price": "'Jost',sans-serif",
+  "note": "'Jost',sans-serif"
+ },
+ "build": "python3 build.py && python3 shot.py"
+}

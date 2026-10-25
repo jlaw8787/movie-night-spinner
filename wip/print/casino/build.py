@@ -1,0 +1,285 @@
+"""Tangiers coffee shop, Las Vegas Strip, 1973. One landscape face, 1344x816, printed like a keno blank:
+canary keno stock, Tangiers red and felt green inks, every dish has a keno spot number (two already marked
+by a keno writer's brush). Signature: the Tangiers sign on the Strip (TMDB) plus a 1972 DOCUMERICA photo
+of a Las Vegas casino sign (NARA, public domain). Props: a $25 Tangiers chip, a comp card signed by Ace.
+Big gags: ten blueberries in every muffin (counted), the eye in the sky, Ace's rules.
+Writes assets and front.body.html, front.html."""
+import os, random, math
+from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageEnhance
+Image.MAX_IMAGE_PIXELS = None
+D = os.path.dirname(os.path.abspath(__file__))
+A = lambda f: os.path.join(D, 'assets', f)
+S = lambda f: os.path.join(D, 'src', f)
+W, H = 1344, 816
+PAPER, RED, GREEN, INK, MUTE, CARD = '#f4e9b3', '#b3221b', '#163a30', '#201c14', '#5b4d2b', '#fffbea'
+FONTS = ('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,800;1,400'
+         '&family=Herr+Von+Muellerhoff&display=swap')
+DISP = "'Gravitas One', serif"; BODY = "'Libre Franklin', sans-serif"; SCRIPT = "'Herr Von Muellerhoff', cursive"
+
+# ---------------- photos ----------------
+def fit(im, w, h, box=None):
+    if box: im = im.crop(box)
+    sw, sh = im.size; r = w / h
+    cw, ch = (int(sh * r), sh) if sw / sh > r else (sw, int(sw / r))
+    x, y = (sw - cw) // 2, (sh - ch) // 2
+    return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
+
+ST_W, ST_H = 420, 272
+st = Image.open(S('nWPFpOSQT5Bi7U2UrDHylaieIJA.jpg')).convert('RGB')
+st = ImageEnhance.Brightness(st).enhance(1.12)
+fit(st, ST_W, ST_H, (880, 78, 1900, 739)).save(A('strip-sign.jpg'), quality=90)
+
+NA_W, NA_H = 236, 168
+na = Image.open(S('nara-549015.tif')).convert('RGB')
+na = ImageEnhance.Contrast(ImageEnhance.Brightness(na).enhance(1.18)).enhance(1.08)
+r_, g_, b_ = na.split()
+na = Image.merge('RGB', (r_, g_.point(lambda v: min(255, int(v * 1.03))), b_.point(lambda v: min(255, int(v * 1.1) + 4))))
+fit(na, NA_W, NA_H, (60, 300, 2900, 1950)).save(A('neon-1972.jpg'), quality=90)
+
+def wear():
+    rnd = random.Random(73)
+    m = Image.new('L', (W, H), 0); md = ImageDraw.Draw(m)
+    for i in range(36):
+        md.rectangle([i, i, W - 1 - i, H - 1 - i], outline=max(0, int(70 - i * 2)))
+    m = m.filter(ImageFilter.GaussianBlur(16))
+    mot = Image.new('L', (W // 24, H // 24), 0)
+    for x in range(mot.width):
+        for y in range(mot.height):
+            mot.putpixel((x, y), rnd.randint(0, 14))
+    mot = mot.resize((W, H), Image.BICUBIC).filter(ImageFilter.GaussianBlur(30))
+    lay = Image.new('RGBA', (W, H), (120, 80, 30, 0)); lay.putalpha(ImageChops.add(m, mot).point(lambda v: int(v * 0.45)))
+    lay.save(A('wear-front.png'))
+wear()
+
+# ---------------- painted bits (PIL, 4x then down) ----------------
+def blueberry(seed, px=34):
+    rnd = random.Random(seed); s = px * 4
+    im = Image.new('RGBA', (s, s), (0, 0, 0, 0))
+    body = Image.new('L', (s, s), 0); bd = ImageDraw.Draw(body)
+    sq = rnd.uniform(0.92, 1.0)
+    bd.ellipse([s * 0.06, s * 0.06 + s * (1 - sq) / 2, s * 0.94, s * 0.94 - s * (1 - sq) / 2], fill=255)
+    col = Image.new('RGBA', (s, s))
+    cd = ImageDraw.Draw(col)
+    for i in range(60, 0, -1):          # radial shading, light from upper left
+        t = i / 60
+        c = (int(28 + 70 * (1 - t) ** 2), int(36 + 64 * (1 - t) ** 2), int(82 + 90 * (1 - t) ** 2), 255)
+        cx, cy = s * 0.40, s * 0.38
+        rr = s * 0.62 * t
+        cd.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], fill=c)
+    bloom = Image.new('L', (s, s), 0); bl = ImageDraw.Draw(bloom)
+    for _ in range(260):
+        x, y = rnd.uniform(0, s), rnd.uniform(0, s); r = rnd.uniform(1, 3)
+        bl.ellipse([x - r, y - r, x + r, y + r], fill=rnd.randint(30, 80))
+    bloom = bloom.filter(ImageFilter.GaussianBlur(2))
+    col = Image.composite(Image.new('RGBA', (s, s), (150, 160, 200, 255)), col, bloom)
+    cd = ImageDraw.Draw(col)
+    cx, cy = s * 0.5 + rnd.uniform(-4, 4), s * 0.30
+    for k in range(5):                   # the crown on top
+        a = k * 2 * math.pi / 5 + rnd.uniform(0, .5)
+        cd.polygon([(cx, cy), (cx + math.cos(a - .35) * s * .06, cy + math.sin(a - .35) * s * .045),
+                    (cx + math.cos(a) * s * .13, cy + math.sin(a) * s * .095),
+                    (cx + math.cos(a + .35) * s * .06, cy + math.sin(a + .35) * s * .045)], fill=(18, 20, 40, 255))
+    cd.ellipse([cx - s * .03, cy - s * .022, cx + s * .03, cy + s * .022], fill=(70, 50, 60, 255))
+    hl = Image.new('L', (s, s), 0); ImageDraw.Draw(hl).ellipse([s * .22, s * .48, s * .34, s * .62], fill=120)
+    col = Image.composite(Image.new('RGBA', (s, s), (220, 228, 255, 255)), col, hl.filter(ImageFilter.GaussianBlur(5)))
+    im.paste(col, (0, 0), body)
+    sh = Image.new('RGBA', (s, s), (0, 0, 0, 0)); ImageDraw.Draw(sh).ellipse([s * .14, s * .80, s * .9, s * .97], fill=(60, 40, 10, 70))
+    sh = sh.filter(ImageFilter.GaussianBlur(5)); sh.alpha_composite(im)
+    return sh.resize((px * 2, px * 2), Image.LANCZOS)
+
+for i in range(10):
+    blueberry(10 + i).save(A(f'berry-{i}.png'))
+
+def brush_x(name, seed, size=40):
+    """A keno writer's brush mark, dark ink, slightly dry."""
+    rnd = random.Random(seed); s = size * 4
+    im = Image.new('RGBA', (s, s), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    for (x0, y0, x1, y1) in ((.16, .14, .86, .88), (.84, .12, .14, .86)):
+        steps = 40
+        for k in range(steps):
+            t = k / steps
+            x = (x0 + (x1 - x0) * t) * s + rnd.uniform(-1.5, 1.5); y = (y0 + (y1 - y0) * t) * s + rnd.uniform(-1.5, 1.5)
+            w = s * (0.075 - 0.03 * abs(t - .35))
+            d.ellipse([x - w, y - w, x + w, y + w], fill=(24, 22, 26, rnd.randint(205, 245)))
+    im = im.filter(ImageFilter.GaussianBlur(1.2))
+    im.resize((size * 2, size * 2), Image.LANCZOS).save(A(name))
+brush_x('mark-a.png', 5); brush_x('mark-b.png', 9)
+
+def eye(px=104):
+    """Engraved eye in Tangiers red: hatched lids, ruled iris, solid pupil, rays."""
+    s = px * 4; im = Image.new('RGBA', (s, s), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    redc = (179, 34, 27, 255); cx, cy = s / 2, s / 2
+    for k in range(24):                  # rays
+        a = k * 2 * math.pi / 24
+        r0, r1 = s * .40, s * (.47 if k % 2 else .495)
+        d.line([(cx + math.cos(a) * r0, cy + math.sin(a) * r0), (cx + math.cos(a) * r1, cy + math.sin(a) * r1)], fill=redc, width=7)
+    mask = Image.new('L', (s, s), 0); md = ImageDraw.Draw(mask)
+    ew, eh = s * .70, s * .40
+    pts = []
+    for k in range(61):
+        t = k / 60; x = cx - ew / 2 + ew * t; y = cy - eh / 2 * math.sin(math.pi * t); pts.append((x, y))
+    for k in range(61):
+        t = 1 - k / 60; x = cx - ew / 2 + ew * t; y = cy + eh / 2 * math.sin(math.pi * t); pts.append((x, y))
+    md.polygon(pts, fill=255)
+    hatch = Image.new('RGBA', (s, s), (0, 0, 0, 0)); hd = ImageDraw.Draw(hatch)
+    for y in range(0, s, 9):
+        hd.line([(0, y), (s, y)], fill=(179, 34, 27, 150), width=2)
+    white = Image.new('RGBA', (s, s), (0, 0, 0, 0)); white.paste(hatch, (0, 0), mask)
+    im.alpha_composite(white)
+    d = ImageDraw.Draw(im)
+    d.line(pts[:61], fill=redc, width=11); d.line(pts[61:], fill=redc, width=8)
+    ir = s * .155
+    d.ellipse([cx - ir, cy - ir, cx + ir, cy + ir], fill=(244, 233, 179, 255), outline=redc, width=9)
+    for k in range(48):
+        a = k * 2 * math.pi / 48
+        d.line([(cx + math.cos(a) * ir * .45, cy + math.sin(a) * ir * .45), (cx + math.cos(a) * ir * .95, cy + math.sin(a) * ir * .95)], fill=redc, width=4)
+    pr = s * .07; d.ellipse([cx - pr, cy - pr, cx + pr, cy + pr], fill=(32, 26, 20, 255))
+    d.ellipse([cx - pr * .2 - 14, cy - pr * .55 - 14, cx - pr * .2 + 10, cy - pr * .55 + 10], fill=(244, 233, 179, 255))
+    for k in range(9):                   # lashes
+        t = .12 + k * .095; x = cx - ew / 2 + ew * t; y = cy - eh / 2 * math.sin(math.pi * t)
+        a = -math.pi / 2 + (t - .5) * 1.6
+        d.line([(x, y), (x + math.cos(a) * s * .05, y + math.sin(a) * s * .05)], fill=redc, width=8)
+    im.resize((px * 2, px * 2), Image.LANCZOS).save(A('eye.png'))
+eye()
+
+# ---------------- type pieces ----------------
+def at(x, y, w, extra=''):
+    return f'position: absolute; left: {x}px; top: {y}px; width: {w}px;{extra}'
+
+def kicker(t, color=RED, size=18, extra=''):
+    return (f'<div style="font-family: {BODY}; font-weight: 800; font-size: {size}px; letter-spacing: 0.24em; color: {color}; '
+            f'text-transform: uppercase; line-height: 1.2;{extra}">{t}</div>')
+
+def section(title, mark):
+    """Keno-ticket section head: Gravitas title in red, right-hand 'MARK ANY n' tab in green, double rule."""
+    return (f'<div style="position: relative; height: 56px; margin-top: 10px">'
+            f'<div style="position: absolute; left: 0; top: 0; font-family: {DISP}; font-size: 34px; line-height: 40px; color: {RED}; white-space: nowrap">{title}</div>'
+            f'<div style="position: absolute; left: 0; right: 0; top: 44px; border-top: 3px solid {GREEN}; border-bottom: 1px solid {GREEN}; height: 2px"></div>'
+            f'<div style="position: absolute; right: 0; top: 33px; z-index: 2; background: {GREEN}; color: {PAPER}; font-family: {BODY}; font-weight: 800; '
+            f'font-size: 14px; letter-spacing: 0.16em; padding: 5px 8px 4px; line-height: 1">{mark}</div>' + '</div>')
+
+def item(spot, name, price, desc, gap=14, mark=None):
+    m = (f'<img src="assets/{mark}" alt="" aria-hidden="true" style="position: absolute; left: -4px; top: -6px; width: 44px; height: 44px">' if mark else '')
+    return (f'<div style="position: relative; margin-top: {gap}px; padding-left: 52px">'
+            f'<div style="position: absolute; left: 0; top: 0; width: 36px; height: 32px; border: 2px solid {RED}; box-sizing: border-box; '
+            f'text-align: center; font-family: {BODY}; font-weight: 700; font-size: 17px; line-height: 28px; color: {RED}">{spot}{m}</div>'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-family: {BODY}; font-weight: 800; '
+            f'font-size: 26px; line-height: 1.12; color: {INK}; text-transform: uppercase; letter-spacing: 0.01em">'
+            f'<span>{name}</span><span style="color: {RED}; white-space: nowrap">{price}</span></div>'
+            f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: {INK}; margin-top: 3px">{desc}</div></div>')
+
+def frame(img, alt, x, y, w, h, col=RED):
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; border: 3px solid {col}; padding: 4px; background: {CARD}; '
+            f'box-shadow: 0 2px 5px rgba(60,40,10,0.25)">'
+            f'<img src="assets/{img}" alt="{alt}" style="display: block; width: {w}px; height: {h}px"></div>')
+
+# ---------------- props ----------------
+def chip(x, y, rot=14):
+    """A $25 Tangiers chip: felt green clay, six paper edge inserts, paper inlay with a red ring."""
+    d = 120
+    spots = ''.join(
+        f'<div style="position: absolute; left: {d // 2 - 9}px; top: 0; width: 18px; height: {d}px; transform: rotate({a}deg)">'
+        f'<div style="width: 18px; height: 12px; background: {CARD}"></div>'
+        f'<div style="position: absolute; left: 0; bottom: 0; width: 18px; height: 12px; background: {CARD}"></div></div>'
+        for a in (0, 60, 120))
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {d}px; height: {d}px; transform: rotate({rot}deg)">'
+            f'<div style="position: absolute; left: 0; top: 0; width: {d}px; height: {d}px; border-radius: 50%; background: #1f6b4a; '
+            f'box-shadow: 0 4px 9px rgba(30,20,0,0.45); overflow: hidden">{spots}</div>'
+            f'<div style="position: absolute; left: 7px; top: 7px; width: {d - 14}px; height: {d - 14}px; border-radius: 50%; box-sizing: border-box; border: 2px dashed rgba(255,251,234,0.55)"></div>'
+            f'<div style="position: absolute; left: 20px; top: 20px; width: {d - 40}px; height: {d - 40}px; border-radius: 50%; background: {CARD}; '
+            f'box-sizing: border-box; border: 3px solid {RED}; text-align: center">'
+            f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1; color: #1f6b4a; margin-top: 14px">$25</div>'
+            f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.06em; line-height: 1.1; color: {RED}; margin-top: 4px">TANGIERS</div>'
+            f'</div></div>')
+
+def comp_card(x, y, rot=-4):
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 172px; height: 178px; transform: rotate({rot}deg); background: {CARD}; '
+            f'box-shadow: 0 4px 10px rgba(40,25,0,0.35); box-sizing: border-box; border: 2px solid {GREEN}; padding: 10px 12px">'
+            f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.18em; color: {GREEN}; line-height: 1.1">TANGIERS</div>'
+            f'<div style="font-family: {DISP}; font-size: 22px; line-height: 1.05; color: {RED}; margin-top: 4px">COMP</div>'
+            f'<div style="font-family: {BODY}; font-size: 15px; line-height: 1.25; color: {INK}; margin-top: 4px">Coffee shop, one guest, anything on the card.</div>'
+            f'<div style="font-family: {SCRIPT}; font-size: 33px; line-height: 0.95; color: #1d2a6b; margin-top: 2px; white-space: nowrap">Sam Rothstein</div>'
+            f'<div style="border-top: 1px solid {MUTE}; font-family: {BODY}; font-size: 14px; color: {MUTE}; line-height: 1.2; padding-top: 3px">No. 0010 &middot; Approved</div></div>')
+
+# ---------------- the face ----------------
+o = []
+# column 1: sign, Strip photo, 1972 neon, comp card, chip
+o.append(f'<div style="{at(40, 40, 420)}">{kicker("Open all night")}'
+         f'<div style="font-family: {DISP}; font-size: 60px; line-height: 1; color: {RED}; margin-top: 8px; letter-spacing: 0.01em; white-space: nowrap">TANGIERS</div>'
+         f'<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px">'
+         f'<span style="font-family: {DISP}; font-size: 24px; line-height: 1; color: {GREEN}; letter-spacing: 0.02em; white-space: nowrap">COFFEE SHOP</span>'
+         f'<span style="font-family: {BODY}; font-weight: 700; font-size: 16px; letter-spacing: 0.16em; color: {MUTE}; white-space: nowrap">FORM K-73</span></div></div>')
+o.append(frame('strip-sign.jpg', 'The Tangiers tower sign lit up over the Strip at night, a red neon dome below it and traffic passing', 40, 196, 420 - 14, 258))
+o.append(f'<div style="{at(40, 474, 300)}font-family: {BODY}; font-style: italic; font-size: 17px; line-height: 1.3; color: {MUTE}">Under the camel, the brightest corner on the Strip.</div>')
+o.append(chip(352, 418))
+o.append(frame('neon-1972.jpg', 'A Las Vegas casino sign in thousands of orange bulbs spelling CASINO, 1972', 40, 548, NA_W - 14, NA_H - 14))
+o.append(f'<div style="{at(40, 718, 236)}font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.25; color: {MUTE}">Fremont Street, last year. We do it brighter.</div>')
+o.append(comp_card(290, 546))
+
+# column 2: oyster bar, around the clock, eye in the sky
+c2 = (section('OYSTER BAR', 'MARK ANY 2')
+      + item(3, 'Clams casino', '2.25', 'Garlic butter, red pepper, crumbs and crisp bacon.')
+      + item(21, 'Oysters Rockefeller', '2.95', 'On rock salt, spinach and scallion butter, a dash of anise.')
+      + section('ALL NIGHT', 'MARK ANY 3')
+      + item(73, 'Tangiers rib eye', '7.73', 'Basted in thyme and garlic butter, creamed spinach.')
+      + item(24, 'Steak and eggs', '2.49', 'Two eggs any style, hash browns.')
+      + item(7, 'Short stack', '.95', 'Whipped butter, warm syrup.'))
+o.append(f'<div style="{at(490, 26, 400)}">{c2}</div>')
+o.append(f'<div style="{at(490, 634, 400, f"height: 90px; box-sizing: border-box; border: 3px solid {RED}; outline: 1px solid {RED}; outline-offset: 3px; background: {CARD}")}">'
+         f'<img src="assets/eye.png" alt="An engraved eye with rays" style="position: absolute; left: 4px; top: -8px; width: 104px; height: 104px">'
+         f'<div style="position: absolute; left: 112px; top: 10px; width: 276px">'
+         f'<div style="font-family: {DISP}; font-size: 22px; line-height: 1.05; color: {RED}">WE SEE ALL.</div>'
+         f'<div style="font-family: {BODY}; font-weight: 700; font-size: 18px; line-height: 1.25; color: {INK}; margin-top: 4px">The eye in the sky never blinks. Every table, every muffin.</div></div></div>')
+
+# column 3: the muffin, at the table, Ace's rules
+berries = ''.join(
+    f'<div style="width: 34px; text-align: center"><img src="assets/berry-{i}.png" alt="" aria-hidden="true" style="display: block; width: 34px; height: 34px">'
+    f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1.2; color: {RED}">{i + 1}</div></div>' for i in range(10))
+muffin = (f'<div style="position: relative; box-sizing: border-box; background: {CARD}; border: 3px solid {GREEN}; padding: 12px 14px 12px">'
+          f'{kicker("From our baker", GREEN, 16)}'
+          f'<div style="position: relative; margin-top: 8px; padding-left: 52px">'
+          f'<div style="position: absolute; left: 0; top: 0; width: 36px; height: 32px; border: 2px solid {RED}; box-sizing: border-box; text-align: center; '
+          f'font-family: {BODY}; font-weight: 700; font-size: 17px; line-height: 28px; color: {RED}">10'
+          f'<img src="assets/mark-a.png" alt="" aria-hidden="true" style="position: absolute; left: -2px; top: -4px; width: 40px; height: 40px; opacity: 0.8"></div>'
+          f'<div style="display: flex; justify-content: space-between; align-items: baseline; font-family: {BODY}; font-weight: 800; font-size: 26px; line-height: 1.12; color: {INK}; text-transform: uppercase">'
+          f'<span>Blueberry muffin</span><span style="color: {RED}">.50</span></div>'
+          '</div>'
+          f'<div style="display: flex; justify-content: space-between; margin-top: 10px">{berries}</div>'
+          f'<div style="font-family: {BODY}; font-weight: 700; font-size: 17px; line-height: 1.25; color: {GREEN}; margin-top: 6px; text-align: center">'
+          f'Buttermilk batter, ten berries in every one. Count them. We did.</div></div>')
+c3 = (muffin
+      + section('TO DRINK', 'MARK ANY 2')
+      + item(25, 'Dry martini', '1.25', 'Gin, dry vermouth, a green olive.', gap=12)
+      + item(1, 'Hot coffee', '.25', 'Refills on the house.', gap=12, mark='mark-b.png'))
+c3_rules = True
+rules = ['Same number of blueberries in every muffin. No exceptions.',
+         'Three jackpots in twenty minutes? Somebody gets fired.',
+         'Comps are signed by me. Nobody else.',
+         'Cheats leave by the back door.']
+rl = ''.join(f'<div style="display: flex; gap: 10px; margin-top: 7px"><span style="font-family: {DISP}; font-size: 18px; color: {RED}; line-height: 1.3">{n}.</span>'
+             f'<span style="font-family: {BODY}; font-size: 18px; line-height: 1.3; color: {PAPER}">{t}</span></div>' for n, t in enumerate(rules, 1))
+o.append(f'<div style="{at(920, 40, 384)}">{c3}<div style="margin-top: 16px; box-sizing: border-box; background: {GREEN}; padding: 12px 16px 14px">'
+         f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
+         f'<span style="font-family: {DISP}; font-size: 28px; line-height: 1; color: {PAPER}">ACE&rsquo;S RULES</span>'
+         f'<span style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #e9b949">S.R.</span></div>{rl}</div></div>')
+
+# fine print, column 2 foot
+o.append(f'<div style="{at(490, 734, 400)}font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {MUTE}">'
+         f'Prices subject to change. Tangiers Hotel, Las Vegas. Philip Green, Chairman. &copy; 1973</div>')
+
+def page(inner):
+    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}">'
+            f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.22">'
+            f'<img src="assets/wear-front.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
+            f'<div style="position: absolute; left: 14px; top: 14px; width: {W - 28}px; height: {H - 28}px; box-sizing: border-box; border: 3px solid {RED}"></div>'
+            f'<div style="position: absolute; left: 20px; top: 20px; width: {W - 40}px; height: {H - 40}px; box-sizing: border-box; border: 1px solid {RED}"></div>'
+            f'<div style="position: absolute; left: 475px; top: 40px; width: 0; height: 736px; border-left: 1px dashed {RED}"></div>'
+            f'<div style="position: absolute; left: 905px; top: 40px; width: 0; height: 736px; border-left: 1px dashed {RED}"></div>'
+            + inner + '</div>')
+
+body = page(''.join(o))
+open(os.path.join(D, 'front.body.html'), 'w').write(body)
+open(os.path.join(D, 'front.html'), 'w').write(
+    f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Tangiers coffee shop menu</title>'
+    f'<link rel="stylesheet" href="{FONTS}"><style>body{{margin:0}}</style></head><body>{body}</body></html>')
+print('built')

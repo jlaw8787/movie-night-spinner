@@ -1,0 +1,4 @@
+# The Godfather menu (Louis', the Bronx, 1946), image credits
+- market-1940.jpg (front, signature): "Italian pushcart market, Arthur & Crescent Avenues, Bronx", 1940, New York World-Telegram & Sun staff photograph, Library of Congress LC-DIG-ppmsca-12707. Rights: "No known copyright restriction." https://www.loc.gov/pictures/item/2006686011/ , master https://tile.loc.gov/storage-services/master/pnp/ppmsca/12700/12707u.tif . Cropped below the beer billboard; a bakery shop sign, a vertical shop sign and a truck panel blurred so no business name reads. Sepia duotone.
+- fruit-stand.jpg (back): TMDB still /c4y3FQ0cCVuhJCvJrV9a8KeBuvq.jpg (The Godfather, 1972), listed in data/film-stills.json. Cropped to the fruit stand and spilled oranges (no people, disc watermark cropped out), brightened.
+- paper-grain.png: shared house grain from jurassic/src/assets. wear-paper-*.png, cannoli-box.png, almonds.png painted in build.py.

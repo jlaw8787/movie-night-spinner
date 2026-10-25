@@ -1,0 +1,18 @@
+{
+ "fmt": "bippy",
+ "fn": "fmtBippy",
+ "faces": ["front.html", "back.html"],
+ "names": ["Front", "Back"],
+ "mm": [159, 318],
+ "fonts": "family=Damion&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,500",
+ "fams": ["Damion", "Barlow Condensed"],
+ "phone": {
+  "disp": "'Damion',cursive",
+  "title": "'Damion',cursive",
+  "name": "'Barlow Condensed',sans-serif",
+  "body": "'Barlow Condensed',sans-serif",
+  "price": "'Barlow Condensed',sans-serif",
+  "note": "'Barlow Condensed',sans-serif"
+ },
+ "build": "python3 build.py && python3 shot.py"
+}
