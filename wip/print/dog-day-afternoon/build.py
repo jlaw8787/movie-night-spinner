@@ -36,28 +36,20 @@ def paper(face):
             f'<img src="assets/paper-wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; pointer-events: none; display: block">')
 
 
-def section(title, sub, cols=None):
-    """Section head: a red ink tab with extra condensed caps, a fine rule, and the price column heads."""
-    ch = ''
-    if cols:
-        ch = ''.join(f'<div style="width: 58px; text-align: right; font-family: {CD}; font-weight: 800; font-size: 14px; letter-spacing: 0.08em; color: {RED}; text-transform: uppercase">{c}</div>' for c in cols)
-    return (f'<div style="display: flex; align-items: flex-end; border-bottom: 3px solid {INK}; padding-bottom: 6px; margin-bottom: 4px">'
-            f'<div style="background: {RED}; color: {PAPER}; font-family: {XC}; font-weight: 900; font-size: 30px; line-height: 1; letter-spacing: 0.04em; padding: 5px 10px 3px; text-transform: uppercase">{title}</div>'
-            f'<div style="flex: 1; padding: 0 0 2px 10px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 15px; line-height: 1.1; color: {SOFT}">{sub}</div>'
-            f'{ch}</div>')
+def section(title, kicker):
+    """Jurassic system: spaced-caps kicker in the accent, then a dark label bar with paper-coloured caps."""
+    return (f'<div style="font-family: {CD}; font-weight: 800; font-size: 18px; line-height: 1; letter-spacing: 0.16em; color: {RED}; text-transform: uppercase">{kicker}</div>'
+            f'<div style="display: inline-block; margin-top: 7px; background: {INK}; color: {PAPER}; font-family: {XC}; font-weight: 900; font-size: 44px; line-height: 1; letter-spacing: 0.02em; padding: 6px 14px 3px; text-transform: uppercase">{title}</div>'
+            f'<div style="height: 2px; background: {INK}; margin: 8px 0 2px"></div>')
 
 
-def dish(name, desc, prices, note=None, star=False):
-    if isinstance(prices, str):
-        prices = [prices]
-    pr = ''.join(f'<div style="width: 58px; text-align: right; font-family: {CD}; font-weight: 800; font-size: 22px; line-height: 1; color: {INK}">{p}</div>' for p in prices)
-    nm_color = RED if star else INK
-    nt = (f'<div style="margin-top: 3px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 15px; line-height: 1.25; color: {RED}">{note}</div>' if note else '')
-    ds = (f'<div style="margin-top: 3px; font-family: {BODY}; font-size: 16px; line-height: 1.32; color: {SOFT}; text-wrap: pretty">{desc}</div>' if desc else '')
-    return (f'<div style="padding: 9px 0 9px; border-bottom: 1px solid rgba(38,28,24,0.22)">'
-            f'<div style="display: flex; align-items: baseline">'
-            f'<div style="flex: 1; font-family: {CD}; font-weight: 800; font-size: 23px; line-height: 1.05; color: {nm_color}">{name}</div>{pr}</div>'
-            f'{ds}{nt}</div>')
+def dish(name, desc, price, star=False):
+    ds = (f'<div style="margin-top: 3px; font-family: {BODY}; font-size: 20px; line-height: 1.28; color: {SOFT}; text-wrap: pretty">{desc}</div>' if desc else '')
+    return (f'<div style="padding: 10px 0 8px">'
+            f'<div style="display: flex; align-items: baseline; gap: 12px">'
+            f'<div style="flex: 1; font-family: {CD}; font-weight: 800; font-size: 28px; line-height: 1.02; color: {RED if star else INK}">{name}</div>'
+            f'<div style="font-family: {CD}; font-weight: 800; font-size: 28px; line-height: 1; color: {INK}">{price}</div></div>'
+            f'{ds}</div>')
 
 
 def page(face, inner):

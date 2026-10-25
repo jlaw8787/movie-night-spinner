@@ -253,8 +253,6 @@ def wear(name, seed):
 if __name__ == '__main__':
     os.makedirs(A, exist_ok=True)
     cover_keys()
-    strip_keys()
-    clip()
     wear('front', 11)
     wear('back', 12)
     print('painted')

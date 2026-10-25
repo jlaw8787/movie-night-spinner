@@ -11,73 +11,15 @@ A = os.path.join(D, 'assets'); F = os.path.join(D, 'fonts')
 BROWN = (46, 31, 24); ORANGE = (201, 83, 29)
 random.seed(123)
 
-# ---------- 1. halftone photo ----------
-STILL = os.path.join(D, 'assets', 'src-still.jpg')
+# ---------- 1. the photo: clean crop of the TMDB still, shadows lifted a touch for print ----------
+STILL = os.path.join(A, 'src-still.jpg')
 if not os.path.exists(STILL):
     subprocess.run(['curl', '-s', '-o', STILL, 'https://image.tmdb.org/t/p/original/syWyIUCzKB0xYiDpKlYbgV7ctGi.jpg'], check=True)
-BW, BH = 1440, 520                      # 2x of a 720 x 260 box
 src = Image.open(STILL).convert('RGB')
 sw, sh = src.size
-ch = int(sw * BH / BW); top = 170
-src = src.crop((0, top, sw, top + ch)).resize((BW, BH), Image.LANCZOS)
-
-
-def lum(im):
-    g = im.convert('L')
-    # the still is dark: lift the shadows so the platform, columns and roof read in print
-    lut = [int(255 * ((i / 255) ** 0.38)) for i in range(256)]
-    g = g.point(lut)
-    g = g.point(lambda v: max(0, min(255, int((v - 40) * 1.32))))
-    return g
-
-
-def screen(gray, cell, angle, gain=1.0, floor=0.0):
-    """Classic AM halftone: dark = big dots. Returns an L coverage mask."""
-    W0, H0 = gray.size
-    P = 80                                          # pad with edge pixels so the screen runs to the edges
-    padded = Image.new('L', (W0 + 2 * P, H0 + 2 * P))
-    padded.paste(gray.resize((W0 + 2 * P, H0 + 2 * P)), (0, 0)); padded.paste(gray, (P, P))
-    gray = padded; W, H = gray.size
-    rot = gray.rotate(angle, resample=Image.BICUBIC, expand=True, fillcolor=255)
-    rw, rh = rot.size
-    S = 4                                           # supersample for smooth dots
-    out = Image.new('L', (rw * S, rh * S), 0)
-    dr = ImageDraw.Draw(out)
-    px = rot.load()
-    for y in range(0, rh, cell):
-        for x in range(0, rw, cell):
-            cx, cy = min(rw - 1, x + cell // 2), min(rh - 1, y + cell // 2)
-            dark = (255 - px[cx, cy]) / 255 * gain
-            if dark <= floor:
-                continue
-            r = cell * 0.62 * math.sqrt(min(1.0, dark))
-            dr.ellipse(((x + cell / 2 - r) * S, (y + cell / 2 - r) * S, (x + cell / 2 + r) * S, (y + cell / 2 + r) * S), fill=255)
-    out = out.resize((rw, rh), Image.LANCZOS)
-    out = out.rotate(-angle, resample=Image.BICUBIC, expand=False)
-    ox, oy = (rw - W) // 2 + P, (rh - H) // 2 + P
-    return out.crop((ox, oy, ox + W0, oy + H0))
-
-
-g = lum(src)
-k = screen(g, 6, 45, gain=0.9)
-# second ink: the red headlights and the glow, pulled from the red channel's lead over green
-r, gg, b = src.split()
-red = ImageChops.subtract(r, gg).point(lambda v: min(255, v * 3))
-red = red.filter(ImageFilter.GaussianBlur(3))
-o = screen(Image.eval(red, lambda v: 255 - v), 6, 15, gain=1.0, floor=0.06)
-
-
-def ink(mask, col, alpha=1.0):
-    lay = Image.new('RGBA', mask.size, col + (0,))
-    lay.putalpha(mask.point(lambda v: int(v * alpha)))
-    return lay
-
-
-ph = Image.new('RGBA', (BW, BH), (0, 0, 0, 0))
-ph.alpha_composite(ink(o, ORANGE, 0.95), (2, 1))   # slight misregister of the second plate
-ph.alpha_composite(ink(k, BROWN, 0.86))
-# soft letterpress edge: ink a touch lighter toward the right, like a real press sheet
-ph.save(os.path.join(A, 'photo-halftone.png'))
+ph = src.crop((0, 120, sw, 120 + int(sw * 330 / 720)))
+ph = ph.point([int(255 * ((i % 256) / 255) ** 0.8) for i in range(768)])
+ph.resize((1440, 660), Image.LANCZOS).save(os.path.join(A, 'still-platform.jpg'), quality=90)
 
 # ---------- 2. guest check with clip and stamp ----------
 SW, SH = 520, 700                      # check paper at 2x (260 x 350 css)
@@ -218,14 +160,4 @@ can = can.rotate(3.2, resample=Image.BICUBIC, expand=False)
 can.save(os.path.join(A, 'guest-check.png'))
 print('guest check', can.size)
 
-# ---------- 3. paper wear for the card ----------
-PW, PH = 816, 1056
-small = Image.effect_noise((34, 44), 40).resize((PW, PH), Image.BICUBIC)   # big gentle mottling
-edge = Image.new('L', (PW, PH), 0)
-ed = ImageDraw.Draw(edge)
-ed.rectangle((0, 0, PW - 1, PH - 1), outline=255, width=22)
-edge = edge.filter(ImageFilter.GaussianBlur(26))
-m = ImageChops.add(edge.point(lambda v: int(v * .55)), small.point(lambda v: max(0, int((v - 110) * .35))))
-wl = Image.new('RGBA', (PW, PH), (150, 112, 60, 0)); wl.putalpha(m.point(lambda v: min(90, v)))
-wl.save(os.path.join(A, 'paper-wear.png'))
 print('done')

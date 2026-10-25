@@ -125,7 +125,7 @@ x = 4
 while x < W: rect(di, x, 101.5, x + 4, 105, 0.45); x += 9                 # dentils
 line(di, 0, 106, W, 106, 0.9)
 board = region(box=(10, 108, W - 10, 132))
-hatch(ink, board, 0, 1.05, 0.62); hatch(ink, board, 90, 2.4, 0.3)
+hatch(ink, board, 0, 1.0, 0.85); hatch(ink, board, 90, 2.4, 0.3)
 rect(di, 10, 108, W - 10, 132, 1.1)
 f_sign = font('Antonio.ttf', 20.5, 700)
 tm = text_mask('GARFEIN’S  DELICATESSEN  &  APPETIZING', f_sign, W / 2, 120.6, stroke=1.0)
@@ -187,7 +187,7 @@ for x1, y1, x2, y2 in (LW, RW):
     rect(di, x1 - 5, y1 - 6, x2 + 5, y2 + 4, 1.2)
     rect(di, x1 - 2, y1 - 3, x2 + 2, y2 + 1, 0.6)
     glass = region(box=(x1, y1, x2, y2))
-    hatch(ink, glass, 62, 2.5, 0.48); hatch(ink, glass, -28, 3.3, 0.4)
+    hatch(ink, glass, 62, 1.7, 0.62); hatch(ink, glass, -28, 2.3, 0.5)
     hatch(ink, region(box=(x1, y1, x2, y1 + 12)), 0, 1.3, 0.5)              # awning shadow on the glass
     line(di, x1, y2 - 22, x2, y2 - 22, 0.8)                                 # counter line inside
     hatch(ink, region(box=(x1, y2 - 22, x2, y2)), 90, 1.6, 0.42)
@@ -204,7 +204,8 @@ for x1, y1, x2, y2 in (LW, RW):
         clear(ink, sal.filter(ImageFilter.MaxFilter(5)))
         e = ImageChops.subtract(sal.filter(ImageFilter.MaxFilter(5)), sal)
         ink.paste(ImageChops.lighter(ink, e), (0, 0))
-        hatch(ink, ImageChops.multiply(sal, region(box=(sx + wd * 0.08, y1, sx + wd, y2))), 90, 1.1, 0.4)
+        red.paste(ImageChops.lighter(red, ImageChops.multiply(sal, Image.new('L', (CW, CH), 120))), (0, 0))
+        hatch(ink, ImageChops.multiply(sal, region(box=(sx + wd * 0.08, y1, sx + wd, y2))), 90, 1.1, 0.5)
         for tt in (0.3, 0.55, 0.8):                                         # string ties
             line(di, sx - wd / 2, y1 + 9 + ln * tt, sx + wd / 2, y1 + 9 + ln * tt + 0.8, 0.45, 0)
         x += 15 if (k % 4) != 3 else 22
@@ -270,8 +271,8 @@ hd.rectangle([P(hx - 2, 249), P(hx + 2, 256)], fill=255)
 big = hm.filter(ImageFilter.MaxFilter(5))
 clear(ink, big)
 ink.paste(ImageChops.lighter(ink, ImageChops.subtract(big, hm)), (0, 0))
-hatch(ink, ImageChops.multiply(hm, region(box=(hx + 1, 240, hx + 14, 300))), 90, 1.1, 0.45)
-red.paste(ImageChops.lighter(red, ImageChops.multiply(hm, Image.new('L', (CW, CH), 150))), (0, 0))
+hatch(ink, ImageChops.multiply(hm, region(box=(hx + 1, 240, hx + 14, 300))), 90, 1.2, 0.6)
+red.paste(ImageChops.lighter(red, ImageChops.multiply(hm, Image.new('L', (CW, CH), 235))), (0, 0))
 
 # ---------------- compose two inks, red out of register ----------------
 def plate(cov, rgb, dx=0, dy=0, op=1.0):
