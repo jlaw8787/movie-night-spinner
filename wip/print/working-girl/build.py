@@ -48,7 +48,7 @@ def page(inner, n):
 def matchbook(o, x, y):
     o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 104px; height: 150px; background: {DARK}; '
              f'box-shadow: 0 2px 6px rgba(40,20,20,0.35); transform: rotate(-6deg); overflow: hidden">'
-             f'<div style="position: absolute; left: 0; top: 14px; width: 104px; text-align: center; font-family: {DISP}; font-size: 16px; line-height: 1.05; color: {ORANGE}; letter-spacing: 0.04em">WHITEHALL</div>'
+             f'<div style="position: absolute; left: 0; top: 14px; width: 104px; text-align: center; font-family: {DISP}; font-size: 14px; line-height: 1.05; color: {ORANGE}; letter-spacing: 0.02em">WHITEHALL</div>'
              f'<div style="position: absolute; left: 0; top: 38px; width: 104px; text-align: center; font-family: {DISP}; font-size: 28px; line-height: 1.05; color: {PAPER}">Grill</div>'
              f'<div style="position: absolute; left: 14px; top: 76px; width: 76px; height: 1px; background: {ORANGE}"></div>'
              f'<div style="position: absolute; left: 0; top: 82px; width: 104px; text-align: center; font-family: {BODY}; font-weight: 600; font-size: 14px; line-height: 1.2; color: {PAPER}">Steaks, chops<br>and the boat</div>'
@@ -85,7 +85,7 @@ def front():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 50px; width: {CW}px; display: flex; justify-content: space-between">'
              f'{kicker("At the South Ferry, New York")}{kicker("Est. 1931", DARK)}</div>')
-    o.append(f'<div style="position: absolute; left: {L - 3}px; top: 76px; width: {CW + 6}px; font-family: {DISP}; font-size: 70px; line-height: 1; '
+    o.append(f'<div style="position: absolute; left: {L - 3}px; top: 76px; width: {CW + 6}px; font-family: {DISP}; font-size: 67px; line-height: 1; '
              f'color: {DARK}; letter-spacing: 0.01em; white-space: nowrap">WHITEHALL GRILL</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 160px; width: {CW}px; display: flex; justify-content: space-between; align-items: baseline">'
              f'<span style="font-family: {BODY}; font-style: italic; font-size: 21px; color: {INK}">Luncheon, dinner and the long bar</span>'
@@ -104,7 +104,7 @@ def front():
              + item('Filet of sole', '14.25', 'Broiled with lemon butter and paprika. Rice pilaf, green beans almondine.', 14)
              + item('Chopped steak', '9.75', 'Ten ounces of ground sirloin under fried onions, with steak fries.', 14)
              + '</div>')
-    matchbook(o, L - 10, 236)
+    matchbook(o, L - 4, 236)
     guest_check(o, L + CW - 214, 290)
     return page(''.join(o), 'front')
 
@@ -134,19 +134,19 @@ def back():
              + item('House wine', '3.50', 'Chablis, rosé or burgundy by the glass.')
              + f'<div style="margin-top: 22px; outline: 2px solid {ORANGE}; outline-offset: 4px">'
              f'<img src="assets/still-private-room.jpg" alt="Two diners at the long table in the private room" style="display: block; width: {COLW}px; height: 172px"></div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.35; color: {MUTE}; margin-top: 12px">Our private room upstairs seats twelve. Deals get done.</div>')
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.35; color: {MUTE}; margin-top: 12px">The private room upstairs. Deal lunches for twelve, 19.88 a head.</div>')
     o.append(col(L, left)); o.append(col(X2, right))
     # character note band, full width, with the reserved card on the right
-    o.append(f'<div style="position: absolute; left: {L}px; top: 816px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 836px; width: 470px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 832px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 848px; width: 500px">'
              + kicker('A word from a regular') +
-             f'<div style="font-family: {BODY}; font-size: 19px; line-height: 1.4; color: {INK}; margin-top: 10px">I read the Post, the Journal and the society pages on the boat. You never know where the next big idea comes from.</div>'
+             f'<div style="font-family: {BODY}; font-size: 19px; line-height: 1.4; color: {INK}; margin-top: 10px">I read the Post, the Journal and the society pages on the boat. Big ideas turn up anywhere.</div>'
              f'<div style="font-family: {SIGN}; font-size: 44px; line-height: 1; color: {DARK}; margin-top: 0">Tess McGill</div></div>')
-    reserved(o, L + CW - 204, 846)
-    o.append(f'<div style="position: absolute; left: {L}px; top: 972px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
-             f'<div style="position: absolute; left: {L}px; top: 978px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MUTE}">'
-             f'<span>Whitehall St., N.Y. 10004. (212) 555-1988.<br>Private room luncheon, 19.88 per person.</span>'
-             f'<span style="text-align: right">Prices subject to change.<br>Form PM-88. Printed in U.S.A.</span></div>')
+    reserved(o, L + CW - 204, 852)
+    o.append(f'<div style="position: absolute; left: {L}px; top: 980px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 988px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MUTE}">'
+             f'<span>Whitehall St., N.Y. 10004. (212) 555-1988.</span>'
+             f'<span style="text-align: right">Prices subject to change. Form PM-88.</span></div>')
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}

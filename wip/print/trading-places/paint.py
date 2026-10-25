@@ -29,7 +29,7 @@ bright(src.crop((0, top, cw, top + ch)).resize((hw, hh), Image.LANCZOS), 1.14, 1
 
 # portrait: 200 x 270 CSS px, from the gilt frame on the wall
 pw, ph = 186 * S, 250 * S
-box = (1004, 146, 1004 + 262, 150 + int(282 * ph / pw))
+box = (992, 146, 992 + 252, 150 + int(282 * ph / pw))
 bright(src.crop(box).resize((pw, ph), Image.LANCZOS), 1.22, 1.04, 1.0).save(
     os.path.join(A, 'still-portrait.jpg'), quality=90)
 

@@ -28,7 +28,7 @@ SLIP = '#f6f2e6'
 # (spec key or None if added, printed name, price, printed description, note for the phone view)
 BEGIN = [
     ('Pemrose boardroom canapés', 'Smoked salmon blini', '19.87',
-     'Warm buckwheat pancakes, crème fraîche, dill and cracked pepper. By the dozen.',
+     'Warm buckwheat pancakes, crème fraîche, dill and cracked pepper.',
      'Boardroom trays, order a day ahead.'),
     ('Kansas corn fritters', 'Kansas corn fritters', '3.25',
      'Kernels and scallions in a light egg batter, fried by the spoonful. Sour cream to dip.',
@@ -37,15 +37,15 @@ BEGIN = [
 ]
 CART = [
     ('Mailroom sandwich bites', 'Mail run sandwich', '2.75',
-     'Ham, cheddar and pickle on buttered white bread, crusts off, in wax paper.',
+     'Ham, cheddar and pickle on buttered white bread, crusts off.',
      'Comes down on the mail cart at 11.'),
 ]
 MAIN = [
     ('Executive rib eye', 'Executive rib eye', '16.50',
      'Seared in a hot iron pan, basted with butter, garlic and thyme, sliced.',
      'Charged to your department.'),
-    ('Kansas farm fried chicken', 'Buttermilk fried chicken', '8.75',
-     'Soaked overnight, floured and fried crisp. Mashed potatoes, pan gravy.',
+    ('Kansas farm fried chicken', 'Fried chicken', '8.75',
+     'Soaked in buttermilk overnight, floured and fried crisp. Mashed potatoes, pan gravy.',
      'Like Mom makes back home.'),
 ]
 FINISH = [
@@ -70,13 +70,13 @@ def kicker(t, col=RED, align='left', size=18):
 
 def bar(t):
     """Charcoal band across the column with a burgundy tab on the left."""
-    return f'''<div style="position: relative; height: 52px; background: {INK}">
-      <div style="position: absolute; left: 0; top: 0; width: 12px; height: 52px; background: {RED}"></div>
-      <div style="position: absolute; left: 24px; top: 0; white-space: nowrap; font-family: {DISP}; font-size: 40px; line-height: 54px; letter-spacing: 0; color: {PAPER}">{t}</div></div>'''
+    return f'''<div style="position: relative; height: 50px; background: {INK}">
+      <div style="position: absolute; left: 0; top: 0; width: 12px; height: 50px; background: {RED}"></div>
+      <div style="position: absolute; left: 24px; top: 0; white-space: nowrap; font-family: {DISP}; font-size: 40px; line-height: 52px; letter-spacing: 0; color: {PAPER}">{t}</div></div>'''
 
 
 def item(name, price, desc, first=False):
-    return f'''<div style="margin-top: {0 if first else 16}px">
+    return f'''<div style="margin-top: {0 if first else 14}px">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
         <span style="font-family: {CAPS}; font-weight: 800; font-size: 26px; line-height: 1.1; letter-spacing: -0.01em; color: {INK}">{name}</span>
         <span style="font-family: {CAPS}; font-weight: 800; font-size: 26px; line-height: 1.1; color: {RED}">{price}</span></div>
@@ -84,7 +84,7 @@ def item(name, price, desc, first=False):
 
 
 def group(title, items, top=0):
-    rule = f'<div style="height: 1px; background: {INK}; opacity: 0.5; margin: 0 0 20px"></div>' if top else ''
+    rule = f'<div style="height: 1px; background: {INK}; opacity: 0.5; margin: 0 0 16px"></div>' if top else ''
     return (f'<div style="margin-top: {top}px">{rule}{bar(title)}<div style="margin-top: 14px">'
             + ''.join(item(n, p, d, i == 0) for i, (_, n, p, d, _) in enumerate(items)) + '</div></div>')
 
@@ -118,8 +118,8 @@ masthead = f'''<div style="display: flex; justify-content: space-between; align-
   <div style="margin-top: 3px; height: 1px; background: {RED}"></div>'''
 
 note = f'''{kicker('FROM THE PRESIDENT')}
-  <p style="margin: 12px 0 0; font-family: {BODY}; font-size: 20px; line-height: 1.45; color: {INK}">Lean times call for clear heads and a proper lunch. Charges now go to your department, so order as if it were your own money.</p>
-  <div style="margin-top: 2px; font-family: {SIGN}; font-size: 58px; line-height: 1.0; color: #23305a">Howard Prescott</div>
+  <p style="margin: 12px 0 0; font-family: {BODY}; font-size: 20px; line-height: 1.45; color: {INK}; text-wrap: pretty">Lean times call for clear heads and a proper lunch. Charges now go to your department, so spend it as if it were your own.</p>
+  <div style="margin-top: 2px; font-family: {SIGN}; font-size: 54px; line-height: 0.95; color: #23305a">Howard Prescott</div>
   <div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {SOFT}">President and Chief Executive Officer</div>'''
 
 front_inner = f'''
@@ -129,7 +129,7 @@ front_inner = f'''
   <div style="position: absolute; left: 64px; top: 320px; width: 688px; height: 395px; border: 2px solid {RED}; box-sizing: border-box; background: #fbfaf6; padding: 5px">
     <img src="assets/still-view.jpg" alt="" style="display: block; width: 674px; height: 381px"></div>
   {ab(64, 723, 688, f'<div style="text-align: right; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 22px; color: {SOFT}">Window tables upstairs, by request. Empty offices need a work order.</div>')}
-  {ab(64, 772, 410, note)}
+  {ab(64, 760, 410, note)}
   {ab(64, 988, 688, f'''<div style="display: flex; justify-content: space-between; font-family: {BODY}; font-size: 16px; line-height: 20px; color: {SOFT}">
     <span>Food Services, ext. 4110. Form EDR-87.</span><span>Prices subject to change. 1987.</span></div>''')}
 '''
@@ -154,27 +154,25 @@ routing = f'''<div style="position: absolute; left: 488px; top: 778px; width: 26
   </div>'''
 
 # ---------------------------------------------------------------- back: the menu
-L, C, G = 64, 336, 16
+L, C, G = 64, 330, 28
 back_inner = f'''
   {ab(L, 60, 440, kicker('CHARGED TO YOUR DEPT.'))}
   {ab(L, 88, 440, f'<div style="white-space: nowrap; font-family: {DISP}; font-size: 70px; line-height: 76px; color: {INK}">THE MENU</div>')}
   {ab(L, 176, 380, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 24px; color: {INK}">Jackets and ties, please. Elevators are not changing rooms.</div>')}
-  <div style="position: absolute; left: 492px; top: 44px; width: 260px; height: 196px; border: 2px solid {RED}; box-sizing: border-box; background: #fbfaf6; padding: 5px">
-    <img src="assets/still-hall.jpg" alt="" style="display: block; width: 246px; height: 182px"></div>
-  {ab(400, 246, 352, f'<div style="text-align: right; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 20px; color: {SOFT}">The executive floor. Mr. Whitfield, settling in.</div>')}
-  {ab(L, 284, C, group('TO BEGIN', BEGIN) + group('TO FINISH', FINISH, 18))}
-  {ab(L + C + G, 284, C, group('ENTRÉES', MAIN) + group('MAIL CART', CART, 18) + group('AFTER 5:30', BAR, 18))}
+  <div style="position: absolute; left: 504px; top: 40px; width: 248px; height: 182px; border: 2px solid {RED}; box-sizing: border-box; background: #fbfaf6; padding: 5px">
+    <img src="assets/still-hall.jpg" alt="" style="display: block; width: 234px; height: 168px"></div>
+  {ab(400, 228, 352, f'<div style="text-align: right; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 20px; color: {SOFT}">The executive floor. Mr. Whitfield, settling in.</div>')}
+  {ab(L, 266, C, group('TO BEGIN', BEGIN) + group('MAIL CART', CART, 16))}
+  {ab(L + C + G, 266, C, group('ENTRÉES', MAIN) + group('TO FINISH', FINISH, 16) + group('AFTER 5:30', BAR, 16))}
   {ab(L, 988, 688, f'''<div style="display: flex; justify-content: space-between; font-family: {BODY}; font-size: 16px; line-height: 20px; color: {SOFT}">
-    <span>Tables of four, call ext. 4110 by 11 AM.</span><span>Coffee by the pot. Prices subject to change. 1987.</span></div>''')}
+    <span></span><span>Ext. 4110. Prices subject to change. 1987.</span></div>''')}
 '''
-charge = f'''<div style="position: absolute; left: 72px; top: 820px; width: 318px; height: 136px; transform: rotate(-2.5deg);
+charge = f'''<div style="position: absolute; left: 70px; top: 892px; width: 300px; height: 96px; transform: rotate(-2.5deg);
     background: {SLIP}; box-shadow: 1px 2px 5px rgba(40,30,25,0.28); box-sizing: border-box; padding: 11px 16px">
-    <div style="display: flex; justify-content: space-between; white-space: nowrap; font-family: {CAPS}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; line-height: 17px; color: {RED}"><span>DINING ROOM CHARGE</span><span>No. 1987</span></div>
+    <div style="display: flex; justify-content: space-between; gap: 10px; white-space: nowrap; font-family: {CAPS}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; line-height: 17px; color: {RED}"><span>DINING ROOM CHARGE</span><span>No. 1987</span></div>
     <div style="margin-top: 5px; height: 1px; background: {INK}"></div>
-    <div style="margin-top: 8px; font-family: {BODY}; font-size: 17px; line-height: 24px; color: {INK}">Name: <b>C. Whitfield</b><br>Dept.: <b>Executive, see H.P.</b><br>Covers: <b>2</b> &nbsp; Table: <b>window</b></div>
-  </div>
-  <div style="position: absolute; left: 262px; top: 870px; width: 112px; height: 46px; transform: rotate(-9deg); border: 3px solid {RED}; box-sizing: border-box; opacity: 0.82;
-    text-align: center; font-family: {DISP}; font-size: 22px; line-height: 40px; letter-spacing: 0.12em; color: {RED}">PAID</div>'''
+    <div style="margin-top: 6px; font-family: {BODY}; font-size: 17px; line-height: 23px; color: {INK}">Name: <b>C. Whitfield</b><br>Dept.: <b>Executive, see H.P.</b></div>
+  </div>'''
 
 FRONT = face('front', front_inner, routing)
 BACK = face('back', back_inner, charge)

@@ -1,4 +1,5 @@
 STYLE LOCK signed off by owner (Oct 25). Rollout uses wip/print/ROLLOUT.md for every film. 10 builds at a time, one cheap review per batch, one fix round max.
+VARIETY RULES 18 to 21 in STYLE-LOCK (owner, Oct 25 night): format by venue, one signature piece per film, prop quota, no shared skeleton. I assign format, signature piece and props per film in each prompt. Batch 2 being reworked to these.
 APPROVAL GATE (owner, Oct 25 19:23): send a proof sheet as each few menus land, and a full batch proof before anything goes live. Nothing goes live without owner approval.
 Live in locked style: serpico, big, pelham, dog-day-afternoon (main 3d1b69b).
 Batch 1 LIVE (main 07f9d5b).

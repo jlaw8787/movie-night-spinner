@@ -14,11 +14,11 @@ def lift(im):
 
 
 hero = Image.open(os.path.join(S, 'hero.jpg')).convert('RGB')
-hero = hero.crop((0, 8, 1280, 8 + 597)).resize((1372, 640), Image.LANCZOS)
+hero = hero.crop((0, 20, 1280, 20 + 540)).resize((1336, 564), Image.LANCZOS)
 lift(hero).save(os.path.join(A, 'still-battery.jpg'), quality=90)
 
 close = Image.open(os.path.join(S, 'close.jpg')).convert('RGB')
-close = close.crop((540, 0, 1340, 1000)).resize((560, 700), Image.LANCZOS)
+close = close.crop((540, 0, 1340, 1000)).resize((444, 556), Image.LANCZOS)
 lift(close).save(os.path.join(A, 'still-pitcher.jpg'), quality=90)
 
 # paper wear: warm edge vignette plus low-frequency mottling, transparent centre

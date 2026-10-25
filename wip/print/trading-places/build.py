@@ -84,12 +84,12 @@ def front():
     o.append(f'<div style="position: absolute; left: {L}px; top: 612px; width: {CW}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-style: italic; font-size: 17px; color: {MUTE}">'
              f'<span>The front hall. Every guest is signed in by a member.</span><span>Jackets in the Dining Room</span></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 650px; width: {CW}px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 644px; width: {CW}px">'
              + band('The Opening Bell', CW, 38)
-             + item('Devils on horseback', '4.50', 'Prunes stuffed with a whole almond, rolled in Lancaster bacon and baked crisp.', 16)
-             + item('Snapper soup', '3.25', 'Philadelphia&rsquo;s own, dark and peppery, with sherry poured at the table.', 16)
-             + item('Shrimp cocktail', '7.50', 'Six jumbo Gulf shrimp chilled on cracked ice, sharp red sauce and lemon.', 16)
-             + item('Caesar salad', '3.75', 'Romaine, coddled egg, anchovy and Parmesan, dressed at your table.', 16)
+             + item('Devils on horseback', '4.50', 'Prunes stuffed with a whole almond, rolled in Lancaster bacon and baked crisp.', 11)
+             + item('Snapper soup', '3.25', 'Philadelphia&rsquo;s own, dark and peppery, with sherry poured at the table.', 11)
+             + item('Shrimp cocktail', '7.50', 'Six jumbo Gulf shrimp chilled on cracked ice, sharp red sauce and lemon.', 11)
+             + item('Caesar salad', '3.75', 'Romaine, coddled egg, anchovy and Parmesan, dressed at your table.', 11)
              + '</div>')
     reserved(o, L + 14, 492)
     return page(''.join(o), 'front')
@@ -152,15 +152,14 @@ def back():
             + item('Rice pudding', '2.75', 'Baked slow with vanilla bean, nutmeg on top.', 14))
     right = (band('Members&rsquo; Bar', COLW, 30)
              + item('Mimosa', '3.75', 'Fresh-squeezed juice and chilled champagne, half and half.', 14)
-             + item('Frozen screwdriver', '3.25', 'Vodka and orange juice, whirled with ice.', 14,
-                    'Fresh juice only, never concentrate.'))
+             + item('Frozen screwdriver', '3.25', 'Vodka and orange juice whirled with ice. Fresh juice, never concentrate.', 14))
     o.append(f'<div style="position: absolute; left: {L}px; top: 594px; width: {COLW}px">{left}</div>')
     o.append(f'<div style="position: absolute; left: {X2}px; top: 594px; width: {COLW}px">{right}</div>')
     # House Committee note, left column under the sweets
-    o.append(f'<div style="position: absolute; left: {L}px; top: 866px; width: {COLW}px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 858px; width: {COLW}px">'
              + kicker('The House Committee', ORANGE)
              + f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.35; color: {DARK}; margin-top: 8px">Members may wager on any subject they please, provided it is entered in the Book.</div>'
-             f'<div style="font-family: {SIG}; font-size: 42px; line-height: 1; color: {DARK}; margin-top: 0">Randolph Duke</div></div>')
+             f'<div style="font-family: {SIG}; font-size: 42px; line-height: 1; color: {DARK}; margin-top: 8px">Randolph Duke</div></div>')
     wager(o, X2 + 16, 862)
     chit(o, L + CW - 206, 424)
     o.append(f'<div style="position: absolute; left: {L}px; top: 996px; width: {CW}px; display: flex; justify-content: space-between; '

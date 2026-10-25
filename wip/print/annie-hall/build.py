@@ -18,7 +18,7 @@ HAND = "font-family: 'Covered By Your Grace', cursive"
 # spec key -> printed name, description, price, phone note
 SPEC = {
   "Pastrami on white with mayo": ("Pastrami on white", "Steamed until glossy, piled high on soft white bread with mayonnaise, iceberg and tomato.", "3.25",
-                                  "Yes, we make it. Max the counterman winces."),
+                                  "Yes, we make it. Max winces."),
   "Alvy's potato knishes": ("Potato knish", "Flaky pastry around Idahos mashed with slow fried onion, egg washed and baked golden.", ".75",
                             "Same recipe we baked under the coaster."),
   "Lobster bites": ("Lobster canapés", "Sweet meat folded with mayonnaise, lemon, celery and chives on toasted, buttered brioche. By the dozen.", "8.50",
@@ -29,7 +29,7 @@ SPEC = {
                                      "Big in Los Angeles, we hear."),
 }
 ADD = {
-  'corned': ("Hot corned beef on rye", "Garlic cured brisket carved thin, with brown mustard.", "3.15"),
+  'corned': ("Corned beef on rye", "Garlic cured brisket carved thin, with brown mustard.", "3.15"),
   'soup': ("Matzo ball soup", "Clear golden chicken broth, carrot and dill, one big light dumpling.", "1.25"),
   'bw': ("Black and white", "Soft cake cookie, iced half vanilla, half chocolate.", ".40"),
   'egg': ("Egg cream", "Chocolate syrup and cold milk, hit hard with seltzer.", ".60"),
@@ -40,7 +40,7 @@ ADD = {
 def item(n, d, p, note=None, top=20, ring=False):
     nt = (f'<div style="{SANS}; font-style: italic; font-weight: 600; font-size: 18px; line-height: 1.3; color: {ACC}; margin-top: 5px">{note}</div>'
           if note else '')
-    rg = ('<img src="assets/pen-ring.png" alt="" aria-hidden="true" style="position: absolute; right: -14px; top: -8px; width: 100px; height: 54px; display: block">'
+    rg = ('<img src="assets/pen-ring.png" alt="" aria-hidden="true" style="position: absolute; right: -22px; top: -8px; width: 100px; height: 54px; display: block">'
           if ring else '')
     return f'''<div style="margin-top: {top}px">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
@@ -96,7 +96,7 @@ front = face(f'''
 <div style="position: absolute; left: {L}px; top: 50px; width: {CW}px">
   <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('Across from Lincoln Center')}{kicker('Open 7 A.M. to 1 A.M.', 'color: ' + MUTE + '; letter-spacing: 0.14em')}</div>
   <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 4px">
-    <div style="{DISP}; font-size: 104px; line-height: 1.02; color: {ACC}; white-space: nowrap">Mandel’s</div>
+    <div style="{DISP}; font-size: 96px; line-height: 1.08; color: {ACC}; white-space: nowrap">Mandel’s</div>
     <div style="text-align: right; padding-bottom: 14px">
       <div style="{DISP}; font-size: 28px; line-height: 1.1; text-transform: uppercase; white-space: nowrap">Delicatessen</div>
       <div style="{DISP}; font-size: 28px; line-height: 1.1; text-transform: uppercase; white-space: nowrap">&amp; Restaurant</div></div></div>
@@ -129,7 +129,7 @@ guest = f'''<div style="position: absolute; left: 40px; top: 26px; width: 236px;
 
 back = face(f'''
 <div style="position: absolute; left: {L}px; top: 50px; width: {CW}px">
-  <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('Mandel’s, Broadway at 63rd')}{kicker('Please pay the cashier', 'color: ' + MUTE + '; letter-spacing: 0.14em')}</div>
+  <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('Mandel’s, Broadway at 63rd')}{kicker('Pay the cashier', 'color: ' + MUTE + '; letter-spacing: 0.14em')}</div>
   <div style="display: flex; justify-content: space-between; align-items: flex-end">
     <div style="{DISP}; font-size: 64px; line-height: 1.1; white-space: nowrap">Take It Home</div>
     <img src="assets/stamp-prices.png" alt="Rubber stamp: effective May 1, 1977" style="display: block; width: 170px; height: 75px; transform: rotate(-6deg); margin-bottom: 6px"></div>
@@ -148,7 +148,7 @@ back = face(f'''
       <div style="position: relative; height: 200px">{guest}</div>
       </div></div>
 </div>
-<div style="position: absolute; left: {L}px; top: 990px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 8px; display: flex; justify-content: space-between; {SANS}; font-weight: 600; font-size: 15px; color: {MUTE}">
+<div style="position: absolute; left: {L}px; top: 982px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 8px; display: flex; justify-content: space-between; {SANS}; font-weight: 600; font-size: 15px; color: {MUTE}">
   <span>Prices subject to change. No sneezing near the bake case.</span><span>Form 15, 1977</span></div>''')
 
 for name, body in (('front', front), ('back', back)):

@@ -21,18 +21,18 @@ SPEC = {
                                   "Six triangles to the order."),
   "Bagel chips and schmear": ("Chips & Schmear", "Day-old bagel rounds sliced thin, oiled and baked crisp. Cream cheese beaten with chives and lemon zest.", "2.25",
                               "Yesterday's bagels, nothing wasted."),
-  "Peter's loft steak sandwich": ("Steak Sandwich", "Sirloin seared hard and sliced thin, onions cooked slow in butter, horseradish mayo, Swiss melted over, toasted sourdough.", "6.95",
+  "Peter's loft steak sandwich": ("Steak Sandwich", "Sirloin seared hard, sliced thin, butter onions, horseradish mayo and Swiss on sourdough.", "6.95",
                                   "The architect upstairs orders it every time."),
-  "Baby Mary's bedtime vanilla custard": ("Vanilla Bean Custard", "Hot milk whisked into yolks and sugar, stirred low until thick. Warm or chilled.", "1.95",
+  "Baby Mary's bedtime vanilla custard": ("Vanilla Bean Custard", "Yolks, sugar and hot milk, stirred low until thick. Warm or chilled.", "1.95",
                                           "Soft enough for the smallest regular."),
-  "Night-feed bourbon milk punch": ("Shaken Vanilla Milk", "Cold whole milk, vanilla, honey and syrup, shaken frothy on ice. Nutmeg.", "1.87",
+  "Night-feed bourbon milk punch": ("Shaken Vanilla Milk", "Whole milk, vanilla and honey, shaken frothy on ice. Nutmeg.", "1.87",
                                     "For whoever is up at 2 A.M."),
 }
 ADD = {
   'rings': ("Onion Rings", "Thick cut, buttermilk battered, fried crisp. A basket for the table.", "1.95"),
-  'club': ("Turkey Club", "Fresh roasted breast, bacon, lettuce and tomato, three decks of toast, cut in four.", "4.95"),
+  'club': ("Turkey Club", "Roast breast, bacon, lettuce, tomato, three decks of toast.", "4.95"),
   'deluxe': ("Burger Deluxe", "Half pound on a toasted bun, melted American, lettuce, tomato, pickle and fries.", "4.50"),
-  'soup': ("Chicken Soup", "A whole bird simmered with carrot, celery and dill, noodles in the bowl.", "1.75"),
+  'soup': ("Chicken Soup", "Whole bird, carrot, celery and dill. Egg noodles.", "1.75"),
   'cheesecake': ("Cheesecake", "Baked dense on a graham crust, sour cream on top. A tall slice.", "2.50"),
   'coffee': ("Coffee", "Fresh pot every hour, all night. Regular, light or black.", ".65"),
 }
@@ -120,7 +120,7 @@ rows = ''.join(f'''<div style="display: flex; border-bottom: 1px solid #b9c9a8; 
   <div style="flex: 1; {HAND}; font-size: 21px; color: #2b3a78; white-space: nowrap">{t}</div>
   <div style="width: 50px; text-align: right; {HAND}; font-size: 21px; color: #2b3a78; border-left: 1px solid #b9c9a8; padding-right: 2px">{a}</div></div>'''
                for q, t, a in check_lines)
-check = f'''<div style="position: absolute; left: 40px; top: 248px; width: 262px; transform: rotate(-3deg)">
+check = f'''<div style="position: absolute; left: 40px; top: 268px; width: 262px; transform: rotate(-3deg)">
   <div style="position: absolute; left: 5px; top: 6px; width: 262px; height: 100%; background: rgba(60,50,30,0.16)"></div>
   <div style="position: relative; background: #fbfaf0; border: 1px solid #c9d3b8; padding: 9px 12px 10px">
     <div style="display: flex; justify-content: space-between; align-items: baseline; {SANS}; font-weight: 800; color: #3f6b46">
@@ -130,7 +130,7 @@ check = f'''<div style="position: absolute; left: 40px; top: 248px; width: 262px
     {rows}
     <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 2px">
       <span style="{SANS}; font-weight: 600; font-size: 14px; color: #3f6b46">TOTAL</span><span style="{HAND}; font-weight: 700; font-size: 22px; color: #2b3a78">27.93</span></div>
-    <div style="position: absolute; left: 96px; top: 96px; border: 3px solid {ROSE}; color: {ROSE}; {DISP}; font-size: 28px; padding: 1px 12px; transform: rotate(-14deg); opacity: 0.82; letter-spacing: 0.08em">PAID</div>
+    <div style="position: absolute; left: 74px; top: 178px; border: 3px solid {ROSE}; color: {ROSE}; {DISP}; font-size: 22px; padding: 0 10px; transform: rotate(-12deg); opacity: 0.82; letter-spacing: 0.08em">PAID</div>
   </div></div>'''
 
 back = face(f'''

@@ -28,6 +28,12 @@ A real menu, printed by a food venue in the film's world, in that year and place
 16. Props and Easter eggs: 2 to 3 small props per menu (guest check, stamp, coupon, business card, matchbook, ticket, note) and 6 or more film winks across copy, prices, names and fine print. Props never cover dish text.
 17. Every film uses its own display face. Check the other film.json files in wip/print and do not reuse a display face already taken.
 
+## Variety rules (owner approved, Oct 25 evening; overrides rule 10 and the two-face default)
+18. FORMAT FOLLOWS THE VENUE. Use the format assigned in your prompt. Formats: landscape placemat (one face, 1344x960), takeaway trifold (two landscape faces, 1344x816, three panels each, fold lines), folded card (two landscape faces 1123x794 outside/inside spread), tall room service folder (two faces 672x1344), single heavy card (one or two faces, 816x1056), slim table card (two faces 408x1056), window or wall card (one face 1056x1344), scorecard fold (two landscape faces 1344x960). Lay out for that format; do not shrink the old two-column letter layout into it.
+19. ONE SIGNATURE PIECE per film, like Jurassic's island map: a large, specific, skilled piece only this film could have (a painted map, plan, scene, chart or object). It is assigned in your prompt.
+20. PROP QUOTA: guest checks and PAID stamps are now used up. Do not use either unless your prompt allows it. Use the film-specific props in your prompt.
+21. LAYOUT: no shared skeleton. Do not default to header, framed still, label bars, two columns. Let the format and signature piece set the layout.
+
 ## Film variables (the only things that change per film)
 Venue and its name, palette, display face, logo or sign, hero picture, section names, dishes and wording, character note, Easter eggs, prop accent, format.
 

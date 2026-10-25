@@ -47,19 +47,19 @@ L, CW = 56, 704
 
 def check(o, gx, gy):
     """Guest check prop: the opening night's table, stamped PAID."""
-    lines = [('Davis, party of 4', None), ('3 Manhattan', '7.50'), ('1 ginger ale', '.75'), ('1 crostini', '2.75'), ('', None), ('Total', '11.00')]
+    lines = [('Davis, party of 4', None), ('3 Manhattan', '7.50'), ('1 ginger ale', '.75'), ('1 crostini', '2.75'), ('', None), ('', None), ('Total', '11.00')]
     rows = ''
     for i, (t, p) in enumerate(lines):
         rows += (f'<div style="position: absolute; left: 0; top: {56 + i * 27}px; width: 220px; height: 27px; border-bottom: 1px solid #b3bfd9"></div>'
                  f'<div style="position: absolute; left: 12px; top: {59 + i * 27}px; width: 196px; display: flex; justify-content: space-between; '
                  f'font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.2; color: #1d2c5e"><span>{t}</span><span>{p or ""}</span></div>')
-    o.append(f'<div style="position: absolute; left: {gx}px; top: {gy}px; width: 220px; height: 231px; background: #fcfcfa; '
+    o.append(f'<div style="position: absolute; left: {gx}px; top: {gy}px; width: 220px; height: 258px; background: #fcfcfa; '
              f'box-shadow: 0 2px 7px rgba(20,20,30,0.30); transform: rotate(-3deg)">'
              f'<div style="position: absolute; left: 0; top: 0; width: 220px; height: 44px; border-bottom: 2px solid {DARK}; display: flex; '
              f'justify-content: space-between; align-items: center; padding: 3px 12px 0; box-sizing: border-box; font-family: {SANS}; font-weight: 700; '
              f'font-size: 15px; letter-spacing: 0.14em; color: {DARK}"><span>EDIE&rsquo;S</span><span style="color: {BLUE}">TABLE 4</span></div>'
              + rows +
-             f'<div style="position: absolute; left: 26px; top: 158px; border: 3px solid {BLUE}; border-radius: 4px; padding: 5px 10px 1px; '
+             f'<div style="position: absolute; left: 30px; top: 170px; border: 3px solid {BLUE}; border-radius: 4px; padding: 5px 10px 1px; '
              f'font-family: {SANS}; font-weight: 700; font-size: 30px; line-height: 1; letter-spacing: 0.12em; color: {BLUE}; opacity: 0.8; transform: rotate(-9deg)">PAID</div>'
              '</div>')
 
@@ -100,7 +100,7 @@ def front():
              + item('Crostini misti', '2.75', 'Little rounds of French bread, toasted. Ricotta with lemon peel and honey, or mushrooms, garlic and thyme under Parmesan.', '', 14)
              + item('Shrimp cocktail', '4.95', 'Jumbo shrimp, poached and well chilled, with a sharp horseradish sauce and lemon.', '', 14)
              + '</div>')
-    check(o, L - 10, 368)
+    check(o, L - 10, 318)
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
@@ -110,7 +110,7 @@ X2 = L + LW + GAP
 def back():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 46px; width: {CW}px; display: flex; justify-content: space-between">'
-             f'{kicker("Kitchen open late")}{kicker("Chapters two to four", DARK)}</div>')
+             f'{kicker("Upper East Side, New York")}{kicker("Chapters two to four", DARK)}</div>')
     o.append(f'<div style="position: absolute; left: {L - 2}px; top: 64px; font-family: {DISP}; font-size: 76px; line-height: 1.05; color: {DARK}; -webkit-text-stroke: 1.1px {DARK}">Edie&rsquo;s</div>')
     o.append(f'<div style="position: absolute; left: {L + 300}px; top: 92px; width: {CW - 300}px; text-align: right; font-family: {BODY}; font-style: italic; '
              f'font-size: 21px; line-height: 1.35; color: {MUTE}">Brunch on Sundays from eleven.<br>Supper every night, late.</div>')
@@ -130,7 +130,7 @@ def back():
             + it('Veal piccata', '9.50', 'Thin scallops saut&eacute;ed in butter with lemon, capers and dry vermouth.'))
     right = (f'<div style="border: 2px solid {BLUE}; padding: 4px; background: #fcfcfa">'
              f'<img src="assets/still-table.jpg" alt="Friends talking over wine at the back table" style="display: block; width: {RW - 12}px; height: {round((RW - 12) * 169 / 300)}px"></div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {MUTE}; margin-top: 6px">The back table, everyone talking at once.</div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {MUTE}; margin-top: 6px">The back table, any night.</div>'
              + '<div style="height: 18px"></div>' + kicker('Chapter four') + '<div style="height: 10px"></div>' + band('Desserts', 38)
              + it('NY cheesecake', '2.50', 'Lemon and vanilla on a buttery crumb crust. Baked slow, chilled overnight.',
                   note='Worth living for, the regulars say.')
@@ -142,7 +142,7 @@ def back():
              f'<div style="font-family: {SCRIPT}; font-size: 40px; line-height: 1.1; color: {BLUE}; margin-top: 2px">Isaac Davis</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 190px; width: {LW}px">{left}</div>')
     o.append(f'<div style="position: absolute; left: {X2}px; top: 190px; width: {RW}px">{right}</div>')
-    matchbook(o, X2 + RW - 64, 226)
+    matchbook(o, X2 + RW - 108, 236)
     o.append(f'<div style="position: absolute; left: {L}px; top: 962px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
              f'<div style="position: absolute; left: {L}px; top: 970px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; line-height: 1.3; color: {MUTE}">'
              f'<span>Second Ave. at 88th St., N.Y. 10028. Book parties in the back room.<br>Tap water on request. It runs clear. Nothing here is overrated.</span>'

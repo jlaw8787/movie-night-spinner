@@ -17,11 +17,11 @@ HAND = "font-family: 'Homemade Apple', cursive"
 
 # spec key -> printed name, description, price, phone note
 SPEC = {
-    "Prawn cocktail for the whole hotel": ("Jumbo Shrimp Cocktail",
+    "Prawn cocktail for the whole hotel": ("Shrimp Cocktail",
         "Six, poached and chilled, on shredded iceberg with rosy tomato mayonnaise, lemon and paprika.", "6.50",
         "Passed through the box seats all night."),
-    "Caviar blini": ("Blini with Red Caviar",
-        "Warm buckwheat pancakes with cr&#232;me fra&#238;che, salmon roe and chives.", "9.00",
+    "Caviar blini": ("Red Caviar Blini",
+        "Warm buckwheat pancakes, cr&#232;me fra&#238;che, salmon roe, chives.", "9.00",
         "Made to order. Allow twenty minutes."),
     "Surf and turf": ("Surf and Turf",
         "An eight ounce filet mignon seared to order and a lobster tail broiled in garlic butter. B&#233;arnaise.", "30.00",
@@ -38,11 +38,11 @@ ADD = {
     'icecream': ("Ice Cream Cup", "Vanilla malted, frozen hard, eaten with a flat wooden spoon.", "1.00"),
     'peanuts': ("Roasted Peanuts", "Hot in the shell from the vendor&#8217;s cart. Toss the shells.", ".75"),
     'beer': ("Draft Beer", "Ice cold, poured to the line in a tall paper cup.", "1.75"),
-    'lemonade': ("Fresh Lemonade", "Squeezed at the stand, plenty of ice.", ".90"),
+    'lemonade': ("Fresh Lemonade", "Squeezed at the stand, over ice.", ".90"),
 }
 
 
-def item(n, d, p, top=18):
+def item(n, d, p, top=14):
     return (f'<div style="margin-top: {top}px">'
             f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">'
             f'<div style="{BOD}; font-weight: 700; font-size: 27px; line-height: 1.1; color: {GREEN}">{n}</div>'
@@ -50,12 +50,12 @@ def item(n, d, p, top=18):
             f'<div style="{SANS}; font-size: 20px; line-height: 1.36; margin-top: 4px; color: {MUTE}; text-wrap: pretty">{d}</div></div>')
 
 
-def S(k, top=18):
+def S(k, top=14):
     n, d, p, _ = SPEC[k]
     return item(n, d, p, top)
 
 
-def A(k, top=18):
+def A(k, top=14):
     return item(*ADD[k], top=top)
 
 
@@ -101,7 +101,7 @@ def ticket():
 
 
 def button():
-    return (f'<div style="position: absolute; left: 632px; top: 470px; width: 132px; height: 132px; border-radius: 50%; transform: rotate(8deg); '
+    return (f'<div style="position: absolute; left: 636px; top: 404px; width: 132px; height: 132px; border-radius: 50%; transform: rotate(8deg); '
             f'background: radial-gradient(circle at 38% 30%, #ffffff 0%, #f6f1e6 55%, #dcd4c2 100%); border: 9px solid {RED}; box-sizing: border-box; '
             f'box-shadow: 0 4px 9px rgba(30,20,10,0.4); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center">'
             f'<div style="{SANS}; font-weight: 800; font-size: 14px; letter-spacing: 0.3em; color: {RED}; margin-left: 0.3em">VOTE</div>'
@@ -112,16 +112,16 @@ def button():
 def front():
     head = (f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
             f'{kicker("Hackensack, New Jersey")}{kicker("Exhibition Night", GREEN)}</div>'
-            f'<div style="{BOD}; font-weight: 900; font-size: 66px; line-height: 1; letter-spacing: -0.01em; margin-top: 10px; white-space: nowrap">HACKENSACK BULLS</div>'
+            f'<div style="{BOD}; font-weight: 900; font-size: 58px; line-height: 1; letter-spacing: -0.01em; margin-top: 10px; white-space: nowrap">HACKENSACK BULLS</div>'
             f'<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px">'
-            f'<div style="{SANS}; font-weight: 800; font-size: 22px; letter-spacing: 0.24em; color: {GREEN}">BALLPARK BILL OF FARE</div>'
+            f'<div style="{SANS}; font-weight: 800; font-size: 20px; letter-spacing: 0.16em; color: {GREEN}; white-space: nowrap">BALLPARK BILL OF FARE</div>'
             f'<div style="{SANS}; font-style: italic; font-size: 18px; color: {MUTE}">Served in the stands, all nine innings</div></div>'
             f'<div style="height: 4px; background: {RED}; margin-top: 12px"></div>')
     hero = (f'<div style="margin-top: 18px; border: 3px solid {RED}; padding: 7px; background: {CARD}">'
-            f'<img src="assets/still-battery.jpg" alt="Monty Brewster and Spike Nolan in Bulls uniforms at home plate, the crowd behind them" style="display: block; width: 668px; height: 312px"></div>'
+            f'<img src="assets/still-battery.jpg" alt="Monty Brewster and Spike Nolan in Bulls uniforms at home plate, the crowd behind them" style="display: block; width: 668px; height: 282px"></div>'
             f'<div style="display: flex; justify-content: space-between; margin-top: 7px; {SANS}; font-size: 16px; color: {MUTE}">'
-            f'<div style="font-style: italic">Our battery, Brewster and Nolan, at home plate.</div><div>Gates open at six</div></div>')
-    cols = (f'<div style="display: flex; justify-content: space-between; margin-top: 26px">'
+            f'<div style="font-style: italic">Our battery, Brewster and Nolan, at home plate.</div></div>')
+    cols = (f'<div style="display: flex; justify-content: space-between; margin-top: 22px">'
             f'<div style="width: 324px">{pennant("BOX SEATS", "Passed in the stands")}'
             f'{S("Prawn cocktail for the whole hotel", 14)}{S("Caviar blini")}</div>'
             f'<div style="width: 324px">{pennant("HOME PLATE", "Hot off the grill")}'
@@ -131,7 +131,7 @@ def front():
 
 
 def stamp():
-    return (f'<div style="position: absolute; left: 286px; top: 548px; transform: rotate(-9deg); border: 3px solid {RED}; padding: 5px 12px 4px; opacity: 0.85; text-align: center">'
+    return (f'<div style="position: absolute; left: 250px; top: 436px; transform: rotate(-5deg); border: 3px solid {RED}; padding: 5px 12px 4px; opacity: 0.85; text-align: center">'
             f'<div style="{SANS}; font-weight: 800; font-size: 24px; letter-spacing: 0.12em; color: {RED}; line-height: 1">PAID IN FULL</div>'
             f'<div style="{SANS}; font-weight: 600; font-size: 14px; letter-spacing: 0.2em; color: {RED}; margin-top: 3px; border-top: 1.5px solid {RED}; padding-top: 3px">ACCOUNT M.B.</div></div>')
 
@@ -141,17 +141,17 @@ def back():
     head = (kicker("A word from tonight&#8217;s host") +
             f'<div style="{BOD}; font-weight: 900; font-size: 64px; line-height: 1; letter-spacing: -0.01em; margin-top: 10px">IT&#8217;S ALL ON MONTY.</div>'
             f'<div style="height: 4px; background: {RED}; margin-top: 14px; width: 688px"></div>')
-    note = (f'<div style="display: flex; justify-content: space-between; margin-top: 22px">'
+    note = (f'<div style="display: flex; justify-content: space-between; margin-top: 18px">'
             f'<div style="width: 392px">'
-            f'<div style="{SANS}; font-size: 21px; line-height: 1.5; color: {GREEN}">Tonight the Bulls take on New York, and every frank, every shrimp and every glass of champagne in this park is on me.</div>'
+            f'<div style="{SANS}; font-size: 21px; line-height: 1.5; color: {GREEN}">Tonight the Bulls take on New York, and every frank, shrimp and glass of champagne in this park is on me.</div>'
             f'<div style="{SANS}; font-size: 21px; line-height: 1.5; color: {GREEN}; margin-top: 12px">Order the most expensive thing on the card. Then order it again.</div>'
             f'<div style="{HAND}; font-size: 30px; line-height: 1; color: #1d2f6b; margin-top: 26px; transform: rotate(-3deg); transform-origin: left">Monty Brewster</div>'
-            f'<div style="{SANS}; font-size: 16px; color: {MUTE}; margin-top: 20px">Starting pitcher, Hackensack Bulls</div></div>'
-            f'<div style="width: 262px">'
+            f'<div style="{SANS}; font-size: 16px; color: {MUTE}; margin-top: 14px">Starting pitcher, Hackensack Bulls</div></div>'
+            f'<div style="width: 242px">'
             f'<div style="border: 3px solid {RED}; padding: 7px; background: {CARD}">'
-            f'<img src="assets/still-pitcher.jpg" alt="Monty Brewster in his pinstriped Bulls uniform and cap" style="display: block; width: 242px; height: 302px"></div>'
+            f'<img src="assets/still-pitcher.jpg" alt="Monty Brewster in his pinstriped Bulls uniform and cap" style="display: block; width: 222px; height: 278px"></div>'
             f'<div style="{SANS}; font-style: italic; font-size: 16px; color: {MUTE}; margin-top: 7px">Tonight&#8217;s starter, warming up.</div></div></div>')
-    cols = (f'<div style="display: flex; justify-content: space-between; margin-top: 30px">'
+    cols = (f'<div style="display: flex; justify-content: space-between; margin-top: 8px">'
             f'<div style="width: 324px">{pennant("SWEETS", "Seventh inning stretch")}'
             f'{S("Rare stamp shortbread", 14)}{A("icecream")}{A("peanuts")}</div>'
             f'<div style="width: 324px">{pennant("THE BAR", "Poured at the stand")}'
