@@ -52,14 +52,14 @@ st = ImageOps.colorize(st, black='#120a06', white='#f6deae', mid='#8c5f2e')
 fade(fit(st, W, PH), bottom=230, sides=0).save(A('market-1940.jpg'), quality=90)
 
 # Back: TMDB fruit stand still, the spilled oranges. Wide crop above the car, lifted and warmed.
-fr = Image.open(S('c4y3FQ0cCVuhJCvJrV9a8KeBuvq.jpg')).convert('RGB').crop((1300, 0, 3300, 1090))
+fr = Image.open(S('3zqI9q4JjTV0ZnX6SZQVYDLINNc.jpg')).convert('RGB').crop((0, 40, 1841, 942))
 a = np.asarray(fr).astype(float) / 255
-a = a ** 0.55
-a[..., 0] *= 1.08; a[..., 1] *= 0.98; a[..., 2] *= 0.86
+a = a ** 0.97
+a[..., 0] *= 1.02; a[..., 2] *= 0.97
 fr = Image.fromarray((a.clip(0, 1) * 255).astype('uint8'))
-fr = ImageEnhance.Contrast(fr).enhance(1.15); fr = ImageEnhance.Color(fr).enhance(1.12)
+fr = ImageEnhance.Contrast(fr).enhance(1.04)
 FW, FH = W - 2 * M - 8, 360
-fit(fr, FW, FH).save(A('fruit-stand.jpg'), quality=90)
+fit(fr, FW, FH).save(A('garden.jpg'), quality=90)
 
 # ---------------- light: a warm pool from above, deep shadow at the corners ----------------
 def light(name, cx, cy, rx, ry, seed):
@@ -325,13 +325,13 @@ def front():
 def back():
     o = []
     # the fruit stand, large, with the engraved oranges laid over its corner
-    o.append(f'<div style="position: absolute; left: {M}px; top: {M}px; width: {FW + 8}px; height: {FH + 8}px; background: {AMBER}"></div>')
-    o.append(f'<img src="assets/fruit-stand.jpg" alt="The fruit stand with oranges on the street" '
-             f'style="position: absolute; left: {M + 4}px; top: {M + 4}px; width: {FW}px; height: {FH}px">')
-    o.append(f'<img src="assets/engraved-oranges.png" alt="Engraved oranges" style="position: absolute; left: 486px; top: 290px; width: 300px; height: 210px">')
+    o.append(f'<div style="position: absolute; left: {M}px; top: {M}px; width: {FW + 8}px; height: {FH + 8}px; background: #c9a24a"></div>')
+    o.append(f'<img src="assets/garden.jpg" alt="Oranges and red wine at a garden table" '
+             f'style="position: absolute; left: {M + 3}px; top: {M + 3}px; width: {FW + 2}px; height: {FH + 2}px">')
+    o.append(f'<img src="assets/engraved-oranges.png" alt="Engraved oranges" style="position: absolute; left: 616px; top: 414px; width: 160px; height: 112px">')
     o.append(at(M, M + FH + 22, 440, f'<div style="font-family: {DISP}; font-size: 34px; line-height: 36px; color: {CREAM}">An orange on every table</div>'
                 f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MID}; margin-top: 4px">'
-                'Bought each morning at the fruit stand<br>by the olive oil company.</div>'))
+                'Sunday in the garden: fruit, red wine, family.</div>'))
     TOP = 524
     # dolci and the cannoli box
     o.append(at(M, TOP, 366, head('From Nazorine\'s', 'Take the cannoli', 0, 38)

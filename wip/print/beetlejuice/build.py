@@ -66,10 +66,10 @@ def kicker(t, color, size=18, extra=''):
             f'text-transform: uppercase; line-height: 1.15;{extra}">{t}</div>')
 
 def course(t, ang, color=PURPLE):
-    return (f'<div style="margin-top: 14px; display: inline-block; background: {color}; padding: 3px 14px 1px; transform: rotate({ang}deg); '
+    return (f'<div style="margin-top: 6px; display: inline-block; background: {color}; padding: 3px 14px 1px; transform: rotate({ang}deg); '
             f'box-shadow: 3px 3px 0 {INK}">{crooked(t, 32, BONE, len(t))}</div>')
 
-def item(name, desc, note='', gap=6):
+def item(name, desc, note='', gap=4):
     n = (f'<div style="font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 18px; line-height: 1.25; color: {PURPLE}; margin-top: 2px">{note}</div>'
          if note else '')
     return (f'<div style="margin-top: {gap}px"><div style="font-family: {BODY}; font-weight: 700; font-size: 27px; line-height: 1.05; color: {INK}">{name}</div>'
@@ -155,29 +155,31 @@ def back():
              f'<div style="display: inline-block; transform: rotate(-2deg)">{crooked("THE MENU", 104, INK, 21)}</div></div>')
 
     menu = (course('TO BEGIN', -2)
-            + item('Shrimp cocktail', 'Chilled shrimp, shredded iceberg, lemony cocktail sauce with horseradish and heat.',
+            + item('Shrimp cocktail', 'Chilled shrimp, iceberg, lemony horseradish sauce.',
                    'Served lively. Keep your face clear of the bowl.')
-            + item('Model town cheeses', 'Cheddar, gouda and pepper jack houses, cherry tomato and cornichon trees.', '', 8)
+            + item('Otho&rsquo;s spiral breadsticks', 'Black and white sesame twists, baked crisp.', '', 8)
+            + item('Model town cheeses', 'Cheese houses, cherry tomato and cornichon trees.', '', 8)
             + course('THE MAIN EVENT', 1.5)
-            + item('Grilled lobster tails', 'Garlic, lemon and parsley butter, shoestring fries, a green salad.')
+            + item('Grilled lobster tails', 'Garlic and parsley butter, shoestring fries, salad.')
             + course('AFTERWARDS', -1.5)
-            + item('Black and white cake', 'Vanilla and chocolate sponge in stripes, white chocolate ganache, dark chocolate lines.')
+            + item('Black and white cake', 'Vanilla and chocolate sponge, white ganache.')
+            + item('Delia&rsquo;s meringue sculpture', 'Meringue spires, whipped cream, blackberry swirl.', 'Please do touch this one.', 8)
             + course('TO DRINK', 2)
-            + item('Banana daiquiri', 'Ripe banana, fresh lime and sugar syrup blended with ice. Made without rum.',
+            + item('Banana daiquiri', 'Banana, lime, sugar syrup and ice. No rum.',
                    'May cause sudden dancing. Resist.')
             + item('Sparkling lemonade', 'Pressed lemons, cane sugar, soda water.', '', 8))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 168px; width: 452px">{menu}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 160px; width: 452px">{menu}</div>')
 
     tilt_photo(o, 'assets/still-shrimp.jpg', 'A dinner guest screams as the shrimp in her cocktail bowl reach up for her face', 528, 196, 228, 186, 3,
                cap='The shrimp cocktail. It grabs back.')
     tilt_photo(o, 'assets/still-handbook.jpg', 'A book on a table: Handbook for the Recently Deceased', 532, 460, 220, 146, -3,
                cap='Found in the attic. Reads like stereo instructions.')
     ad_card(o, 526, 714, 2.5)
-    o.append(f'<div style="position: absolute; left: 50px; top: 922px; width: 716px; height: 52px; background: {INK}; transform: rotate(-1deg); '
+    o.append(f'<div style="position: absolute; left: 50px; top: 936px; width: 716px; height: 52px; background: {INK}; transform: rotate(-1deg); '
              f'display: flex; align-items: center; justify-content: center; gap: 14px">'
              f'{kicker("House rule", SLIME, 18)}'
              f'{crooked("Do not say the host’s name three times.", 34, BONE, 5)}</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 986px; width: {W - 2 * L}px; text-align: center; font-family: {BODY}; font-size: 16px; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 996px; width: {W - 2 * L}px; text-align: center; font-family: {BODY}; font-size: 16px; '
              f'line-height: 1.2; color: #4a4450">Menu by Delia. Table by Otho. Winter River, Connecticut, 1988.</div>')
     return page(''.join(o), 'back', PAPER)
 
