@@ -1,6 +1,5 @@
 """Assets for the Heritage Club bill of fare (Trading Places, 1983). US Letter, painted at 2x.
-  still-hall.jpg     : TMDB still of the club's front hall, cropped wide for the front hero
-  still-portrait.jpg : the founder's portrait from the same still, for the back
+  still-hall.jpg     : TMDB still of the club's front hall, cropped wide for the back
   wear-front/back    : soft aged vignette toward the edges, low-detail mottling, no marks over text
 """
 import os
@@ -21,17 +20,11 @@ def bright(im, b=1.10, c=1.06, s=1.04):
     return ImageEnhance.Color(im).enhance(s)
 
 
-# hero: 692 x 330 CSS px
-hw, hh = 692 * S, 330 * S
-cw = 3012; ch = int(cw * hh / hw); top = 20
+# back still: 690 x 214 CSS px
+hw, hh = 690 * S, 214 * S
+cw = 3012; ch = int(cw * hh / hw); top = 250
 bright(src.crop((0, top, cw, top + ch)).resize((hw, hh), Image.LANCZOS), 1.14, 1.05).save(
     os.path.join(A, 'still-hall.jpg'), quality=90)
-
-# portrait: 200 x 270 CSS px, from the gilt frame on the wall
-pw, ph = 186 * S, 250 * S
-box = (992, 146, 992 + 252, 150 + int(282 * ph / pw))
-bright(src.crop(box).resize((pw, ph), Image.LANCZOS), 1.22, 1.04, 1.0).save(
-    os.path.join(A, 'still-portrait.jpg'), quality=90)
 
 
 def noise(h, w, base, seed, octaves=3):

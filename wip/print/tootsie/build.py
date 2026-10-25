@@ -1,12 +1,13 @@
 """The Tea Room, West 57th Street, New York, 1982. The room where Dorothy Michaels lunches with her agent.
-Two-sided dinner card (US Letter) on rose stock, deep teal and banquette red, built on the house style lock.
-Front: sign, the samovar room still, zakuski. Back: kitchen, sweets, samovar, second still, guest book note.
-Writes assets (still crops, paper wear), front/back.body.html and full pages front.html / back.html."""
+Tall room service style folder, two faces 672x1344 (7 x 14 in), rose stock, deep teal and banquette red.
+Front: sign, the engraved samovar and tea glass running the height of the face, zakuski, guest book, Reserved card.
+Back: kitchen, sweets, samovar drinks, the lunch still with the coat check ticket, fine print.
+Run paint.py first (assets/samovar.png). Writes still crop, paper wear, front/back.body.html and front.html / back.html."""
 import os, random
 from PIL import Image, ImageDraw, ImageFilter, ImageChops
 D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
-W, H = 816, 1056
+W, H = 672, 1344
 PAPER, DARK, RED, MUTE, CARD = '#f4e2dc', '#173f3c', '#b31f2c', '#4f6360', '#fdf6f1'
 FONTS = ('https://fonts.googleapis.com/css2?family=Pacifico&family=Oswald:wght@500;600;700'
          '&family=Lora:ital,wght@0,400;0,600;1,400&display=swap')
@@ -16,10 +17,7 @@ SCRIPT = "'Pacifico', cursive"; DISP = "'Oswald', sans-serif"; BODY = "'Lora', s
 def crop(src, dst, w, h, fy=0.5, fx=0.5):
     im = Image.open(A(src)).convert('RGB'); sw, sh = im.size
     r = w / h
-    if sw / sh > r:
-        cw, ch = int(sh * r), sh
-    else:
-        cw, ch = sw, int(sw / r)
+    cw, ch = (int(sh * r), sh) if sw / sh > r else (sw, int(sw / r))
     x = int((sw - cw) * fx); y = int((sh - ch) * fy)
     im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS).save(A(dst), quality=90)
 
@@ -37,24 +35,24 @@ def wear(name, seed):
     lay = Image.new('RGBA', (W, H), (120, 60, 50, 0)); lay.putalpha(ImageChops.add(m, mot).point(lambda v: int(v * 0.5)))
     lay.save(A(f'wear-{name}.png'))
 
-crop('still-samovar.jpg', 'hero-samovar.jpg', 704, 372, fy=0.35)
-crop('still-lunch.jpg', 'spot-lunch.jpg', 318, 168, fy=0.3, fx=0.55)
+crop('still-lunch.jpg', 'spot-lunch.jpg', 236, 200, fy=0.3, fx=0.62)
 wear('front', 7); wear('back', 40)
 
 # ---------------- type pieces ----------------
 def kicker(t, color=RED, extra=''):
-    return (f'<div style="font-family: {DISP}; font-weight: 600; font-size: 18px; letter-spacing: 0.26em; color: {color}; '
+    return (f'<div style="font-family: {DISP}; font-weight: 600; font-size: 18px; letter-spacing: 0.24em; color: {color}; '
             f'text-transform: uppercase; line-height: 1;{extra}">{t}</div>')
 
-def bar(t, size=40):
-    """Section title: a teal ribbon with rounded ends, the name in the room's script."""
-    return (f'<div style="display: inline-block; background: {DARK}; color: {PAPER}; border-radius: 40px; font-family: {SCRIPT}; '
-            f'font-size: {size}px; line-height: 1.35; padding: 0 {26 if size > 36 else 20}px 6px; box-shadow: 0 0 0 2px {PAPER}, 0 0 0 3px {RED}">{t}</div>')
+def head(t, size=42):
+    """Section title: the room's script in red, then a teal and red double rule running out to the margin."""
+    return (f'<div style="display: flex; align-items: center; gap: 14px">'
+            f'<div style="font-family: {SCRIPT}; font-size: {size}px; line-height: 1.5; color: {RED}; white-space: nowrap">{t}</div>'
+            f'<div style="flex: 1; height: 9px; border-top: 3px solid {DARK}; border-bottom: 1px solid {RED}; margin-top: 8px"></div></div>')
 
-def item(name, price, desc, gap=18):
+def item(name, price, desc, gap=16, size=27):
     return (f'<div style="margin-top: {gap}px">'
-            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-family: {DISP}; font-weight: 600; '
-            f'font-size: 28px; line-height: 1.15; color: {DARK}; text-transform: uppercase; letter-spacing: 0.02em">'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; font-family: {DISP}; font-weight: 600; '
+            f'font-size: {size}px; line-height: 1.15; color: {DARK}; text-transform: uppercase; letter-spacing: 0.02em">'
             f'<span>{name}</span><span style="color: {RED}">{price}</span></div>'
             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.38; color: {DARK}; margin-top: 3px">{desc}</div></div>')
 
@@ -67,16 +65,16 @@ def page(inner, name):
             f'<img src="assets/wear-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
             '</div>')
 
-L, CW = 56, 704
+L, CW = 56, 560
 
 # ---------------- props ----------------
 def reserved(o, x, y):
-    """Table card for Mr. Fields, tucked over the corner of the picture."""
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 214px; height: 118px; background: {CARD}; '
-             f'box-shadow: 0 2px 7px rgba(40,20,20,0.32); transform: rotate(-5deg); text-align: center">'
-             f'<div style="position: absolute; left: 7px; top: 7px; width: 200px; height: 104px; box-sizing: border-box; border: 1.5px solid {RED}"></div>'
-             f'<div style="margin-top: 16px; font-family: {DISP}; font-weight: 700; font-size: 22px; letter-spacing: 0.22em; color: {RED}; line-height: 1">RESERVED</div>'
-             f'<div style="margin-top: 4px; font-family: {SCRIPT}; font-size: 26px; line-height: 1.3; color: {DARK}">Mr. Fields</div>'
+    """Table card for Mr. Fields."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 230px; height: 124px; background: {CARD}; '
+             f'box-shadow: 0 2px 7px rgba(40,20,20,0.32); transform: rotate(-4deg); text-align: center">'
+             f'<div style="position: absolute; left: 7px; top: 7px; width: 216px; height: 110px; box-sizing: border-box; border: 1.5px solid {RED}"></div>'
+             f'<div style="margin-top: 18px; font-family: {DISP}; font-weight: 700; font-size: 22px; letter-spacing: 0.22em; color: {RED}; line-height: 1">RESERVED</div>'
+             f'<div style="margin-top: 4px; font-family: {SCRIPT}; font-size: 27px; line-height: 1.3; color: {DARK}">Mr. Fields</div>'
              f'<div style="font-family: {DISP}; font-weight: 500; font-size: 15px; letter-spacing: 0.12em; color: {DARK}; line-height: 1">ONE O&rsquo;CLOCK, FOR TWO</div>'
              '</div>')
 
@@ -92,67 +90,63 @@ def coat_check(o, x, y):
              '</div>')
 
 # ---------------- FRONT ----------------
+RX, RW = 336, 280   # right column beside the samovar
+
 def front():
     o = []
-    o.append(f'<div style="position: absolute; left: {L}px; top: 54px; width: {CW}px; display: flex; justify-content: space-between">'
-             f'{kicker("West 57th Street, New York", DARK)}{kicker("Christmas all year round")}</div>')
-    o.append(f'<div style="position: absolute; left: {L - 4}px; top: 62px; font-family: {SCRIPT}; font-size: 80px; line-height: 1.45; color: {RED}">The Tea Room</div>')
-    o.append(f'<div style="position: absolute; left: {L + 524}px; top: 104px; width: {CW - 524}px; text-align: right; font-family: {DISP}; font-weight: 700; '
-             f'font-size: 26px; line-height: 1.1; color: {DARK}; text-transform: uppercase; letter-spacing: 0.03em">Lunch<br>Dinner<br>Late supper</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 200px; width: {CW}px; height: 3px; background: {DARK}"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 220px; width: {CW}px; height: 372px; outline: 2px solid {RED}; outline-offset: 5px">'
-             f'<img src="assets/hero-samovar.jpg" alt="Lunch in the front room, red banquettes and the brass samovar" '
-             f'style="display: block; width: {CW}px; height: 372px"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 606px; width: {CW}px; display: flex; justify-content: space-between; '
-             f'font-family: {BODY}; font-style: italic; font-size: 16px; color: {MUTE}">'
-             f'<span>The front room. Agents lunch here, and so do their clients.</span><span>Table four</span></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 640px; width: {CW}px">'
-             f'<div style="display: flex; align-items: center; justify-content: space-between">{bar("Zakuski")}{kicker("To begin, at the table", RED)}</div>'
-             + item('Finger sandwiches', '5.50', 'Egg salad with watercress, and cucumber with cream cheese, on soft white bread. Crusts off, cut in triangles.', 10)
-             + item('Red pepper dip', '4.25', 'Charred under the broiler, peeled, whipped smooth with feta, yogurt, garlic, hot chili flakes and olive oil. Sesame crackers.', 12)
-             + item('Blini with red caviar', '9.50', 'Hot buckwheat pancakes, salmon roe, sour cream and melted butter.', 12)
-             + '</div>')
-    reserved(o, L + CW - 222, 474)
+    o.append(f'<div style="position: absolute; left: {L}px; top: 54px; width: {CW}px; text-align: center">{kicker("West 57th Street, New York", DARK)}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 66px; width: {CW}px; text-align: center; font-family: {SCRIPT}; font-size: 76px; line-height: 1.45; color: {RED}">The Tea Room</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 184px; width: {CW}px; text-align: center">{kicker("Christmas all year round")}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 214px; width: {CW}px; height: 9px; border-top: 3px solid {DARK}; border-bottom: 1px solid {RED}"></div>')
+    o.append(f'<img src="assets/samovar.png" alt="Engraving of a copper samovar with its teapot on the crown, and a glass of tea in a pierced holder" '
+             f'style="position: absolute; left: 34px; top: 244px; width: 284px; height: 1041px; display: block">')
+    col = (kicker('To begin, at the table')
+           + f'<div style="margin-top: 6px">{head("Zakuski", 44)}</div>'
+           + item('Finger sandwiches', '5.50', 'Egg salad with watercress, and cucumber with cream cheese, on soft white bread. Crusts off, cut in triangles.', 6, 26)
+           + item('Red pepper dip', '4.25', 'Charred under the broiler, peeled, whipped smooth with feta, yogurt, garlic, hot chili flakes and olive oil. Sesame crackers.', 16, 26)
+           + item('Blini, red caviar', '9.50', 'Hot buckwheat pancakes, salmon roe, sour cream and melted butter.', 16, 26)
+           + f'<div style="margin-top: 26px; background: {CARD}; border: 1.5px solid {DARK}; padding: 14px 16px 6px">'
+           + kicker('Our guest book') +
+           f'<div style="font-family: {BODY}; font-style: italic; font-size: 19px; line-height: 1.42; color: {DARK}; margin-top: 8px">'
+           'The tea is strong, the room is warm, and nobody here calls me Tootsie.</div>'
+           f'<div style="font-family: {SCRIPT}; font-size: 27px; line-height: 1.5; color: {RED}; text-align: right">Dorothy Michaels</div></div>'
+           f'<div style="margin-top: 22px; font-family: {DISP}; font-weight: 600; font-size: 22px; line-height: 1.25; letter-spacing: 0.06em; color: {DARK}; text-transform: uppercase">'
+           f'Lunch from noon<br>Dinner from five<br><span style="color: {RED}">Supper until one</span></div>')
+    o.append(f'<div style="position: absolute; left: {RX}px; top: 250px; width: {RW}px">{col}</div>')
+    reserved(o, RX + 26, 1172)
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
-COLW, GAP = 330, 44
-X2 = L + COLW + GAP
-
 def back():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 54px">{kicker("Dinner from five, supper until one", DARK)}</div>')
-    o.append(f'<div style="position: absolute; left: {L - 2}px; top: 60px; font-family: {SCRIPT}; font-size: 60px; line-height: 1.45; color: {RED}">The Menu</div>')
-    o.append(f'<div style="position: absolute; left: {L + 380}px; top: 82px; width: {CW - 380}px; text-align: right; font-family: {DISP}; font-weight: 700; '
-             f'font-size: 28px; line-height: 1.04; color: {DARK}; text-transform: uppercase; letter-spacing: 0.03em">The Tea Room<br>New York</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 160px; width: {CW}px; height: 3px; background: {DARK}"></div>')
-    col = lambda x, inner: f'<div style="position: absolute; left: {x}px; top: 178px; width: {COLW}px">{inner}</div>'
-    left = (bar('From the kitchen', 32)
-            + item('Roast chicken', '19.82', 'Butter, grated lemon peel and thyme under the skin. Carved, with potatoes browned in the drippings.', 12)
-            + item('Chicken Kiev', '16.75', 'Rolled around herb butter, breaded and fried golden.', 14)
-            + item('Beef Stroganoff', '17.50', 'Tenderloin strips, mushrooms and sour cream over buttered noodles.', 14)
-            + f'<div style="height: 1px; background: {DARK}; opacity: 0.45; margin: 20px 0 18px"></div>'
-            + bar('Sweets', 32)
-            + item('Shortcake', '4.50', 'Cream biscuits baked this morning, split, with sugared strawberries and soft whipped cream.', 12)
-            + item('Blintzes', '5.25', 'Thin crepes around sweet farmer cheese, browned in butter, with sour cream.', 14))
-    right = (bar('From the samovar', 32)
-             + item('Russian tea', '2.40', 'Strong and black, poured into glasses. Lemon and cherry preserves on the side, to stir in.', 12)
-             + item('Iced vodka', '3.75', 'Poured from a frosted carafe.', 14)
-             + item('Coffee', '1.50', 'With cream, refilled all day.', 14)
-             + f'<div style="margin-top: 20px; border: 2px solid {RED}; padding: 4px; background: {CARD}">'
-             f'<img src="assets/spot-lunch.jpg" alt="A regular and her agent at the front banquette" style="display: block; width: 318px; height: 168px"></div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.35; color: {MUTE}; margin-top: 6px">Business lunch at the front banquette.</div>'
-             f'<div style="margin-top: 14px; background: {CARD}; border: 1.5px solid {DARK}; padding: 12px 16px 6px">'
-             + kicker('From our guest book') +
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.42; color: {DARK}; margin-top: 8px">'
-             'The tea is strong, the room is warm, and nobody here calls me Tootsie.</div>'
-             f'<div style="font-family: {SCRIPT}; font-size: 28px; line-height: 1.5; color: {RED}; text-align: right">Dorothy Michaels</div></div>')
-    o.append(col(L, left)); o.append(col(X2, right))
-    coat_check(o, L + CW - 92, 530)
-    o.append(f'<div style="position: absolute; left: {L}px; top: 960px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
-             f'<div style="position: absolute; left: {L}px; top: 968px; width: {CW}px; font-family: {BODY}; font-size: 15px; line-height: 1.45; color: {MUTE}">'
-             f'<div style="display: flex; justify-content: space-between"><span>West 57th St., New York, N.Y. 10019. PLaza 7-1982.</span><span>Prices subject to change.</span></div>'
-             f'<div style="display: flex; justify-content: space-between"><span>Sandwich trays sent up to the television studios.</span><span>Form 4-82</span></div></div>')
+    o.append(f'<div style="position: absolute; left: {L - 2}px; top: 62px; font-family: {SCRIPT}; font-size: 60px; line-height: 1.45; color: {RED}">The Menu</div>')
+    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 92px; width: {CW - 300}px; text-align: right; font-family: {DISP}; font-weight: 700; '
+             f'font-size: 26px; line-height: 1.06; color: {DARK}; text-transform: uppercase; letter-spacing: 0.03em">The Tea Room<br>New York</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 164px; width: {CW}px; height: 9px; border-top: 3px solid {DARK}; border-bottom: 1px solid {RED}"></div>')
+    top = (head('From the kitchen')
+           + item('Roast chicken', '19.82', 'Butter, grated lemon peel and thyme under the skin. Carved, with potatoes browned in the drippings.', 4)
+           + item('Chicken Kiev', '16.75', 'Rolled around herb butter, breaded and fried golden. Careful with the first cut.')
+           + item('Beef Stroganoff', '17.50', 'Tenderloin strips, mushrooms and sour cream over buttered noodles.')
+           + f'<div style="margin-top: 18px">{head("Sweets")}</div>'
+           + item('Strawberry shortcake', '4.50', 'Cream biscuits baked this morning, split and filled with sugared berries and soft whipped cream.', 4)
+           + item('Blintzes', '5.25', 'Thin crepes around sweet farmer cheese, browned in butter, with sour cream.'))
+    o.append(f'<div style="position: absolute; left: {L}px; top: 180px; width: {CW}px">{top}</div>')
+    SY = 846
+    samovar = (head('From the samovar', 38)
+               + item('Russian tea', '2.40', 'Strong and black, poured into glasses. Lemon and cherry preserves on the side, to stir in.', 4)
+               + item('Iced vodka', '3.75', 'Poured from a frosted carafe.')
+               + item('Coffee', '1.50', 'With cream, refilled all day.'))
+    o.append(f'<div style="position: absolute; left: {L}px; top: {SY}px; width: 300px">{samovar}</div>')
+    o.append(f'<div style="position: absolute; left: {L + 324}px; top: {SY + 22}px; width: 236px; border: 2px solid {RED}; padding: 4px; background: {CARD}; box-sizing: content-box; margin-left: -6px">'
+             f'<img src="assets/spot-lunch.jpg" alt="A regular and her agent at the front banquette" style="display: block; width: 236px; height: 200px"></div>')
+    o.append(f'<div style="position: absolute; left: {L + 318}px; top: {SY + 240}px; width: 248px; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.35; color: {MUTE}">'
+             'Agents lunch here, and so do their clients.</div>')
+    coat_check(o, L + 464, SY - 4)
+    o.append(f'<div style="position: absolute; left: {L}px; top: 1232px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 1240px; width: {CW}px; font-family: {BODY}; font-size: 15px; line-height: 1.45; color: {MUTE}">'
+             f'<div style="display: flex; justify-content: space-between"><span>West 57th St., N.Y. 10019. PLaza 7-1982.</span><span>Form 4-82</span></div>'
+             f'<div style="display: flex; justify-content: space-between"><span>Sandwich trays sent up to the TV studios.</span><span>Prices subject to change.</span></div></div>')
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}
