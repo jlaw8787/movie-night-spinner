@@ -199,14 +199,13 @@ def roof(x, y, bw, bh, c=(186, 140, 78), ridge=(140, 98, 50)):
 vc = LAYOUT['visitor_centre']
 roof(vc[0] - 26, vc[1] + 4, 36, 26)                       # kitchen wing
 roof(vc[0] + 2, vc[1], 40, 34)                            # dining hall
+dr.rectangle([P((272, 374)), P((292, 386))], fill=(242, 178, 27, 255), outline=(40, 34, 26, 255), width=int(1.2 * S))
 cx, cy = vc[0] + 34, vc[1] - 2                            # rotunda
 dr.ellipse([P((cx - 15, cy - 13)), P((cx + 17, cy + 19))], fill=(20, 30, 18, 110))
 dr.ellipse([P((cx - 16, cy - 16)), P((cx + 16, cy + 16))], fill=(196, 150, 86, 255), outline=(40, 34, 26, 255), width=int(1.4 * S))
 for a in range(0, 360, 30):
     dr.line([P((cx, cy)), P((cx + 15 * math.cos(math.radians(a)), cy + 15 * math.sin(math.radians(a))))], fill=(140, 98, 50, 170), width=int(0.8 * S))
 dr.ellipse([P((cx - 4, cy - 4)), P((cx + 4, cy + 4))], fill=(230, 214, 170, 255))
-gr = LAYOUT['garage']; roof(gr[0], gr[1], 30, 18, (176, 178, 170), (130, 132, 126))
-ms = LAYOUT['shed']; roof(ms[0], ms[1], 22, 16, (150, 150, 140), (110, 110, 104))
 hp = LAYOUT['helipad']
 dr.ellipse([P((hp[0] - 15, hp[1] - 15)), P((hp[0] + 15, hp[1] + 15))], fill=(70, 74, 72, 255), outline=(240, 240, 232, 255), width=int(1.6 * S))
 for seg in (((hp[0] - 6, hp[1] - 8), (hp[0] - 6, hp[1] + 8)), ((hp[0] + 6, hp[1] - 8), (hp[0] + 6, hp[1] + 8)), ((hp[0] - 6, hp[1]), (hp[0] + 6, hp[1]))):
