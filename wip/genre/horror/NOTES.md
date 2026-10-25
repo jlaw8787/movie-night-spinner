@@ -20,17 +20,14 @@ Palette: storm black #0d1014, neon red #c42f27 / #ff4b3e (the sign glow), bone p
 - Prices come from a hash of the dish name, and the cents are always the film's year (6.84 for 1984).
 - Props: an "Order up when" slip carrying the showtime cue (f.P), and the night cook's note with her signature.
 
-## Robustness
-- Title: titleSize() estimates the size for 2 to 60 characters (3 lines on the poster layout, 2 on the still layout). horrorFit() then steps it down until it fits its box.
-- Menu: horrorFit(root) works through 10 levels. It shrinks padding first, then type down to dish 26 / note 20, then drops the cook's note. Below that are emergency levels for 13 to 16 items, which go under the rule 4 sizes (minimum 15px). The last level hides the notes. Run it after fonts and images load.
-- Missing stills: falls back to the poster layout. Missing poster: the frame stays empty and dark (not tested).
-- Checked with the kit overflow logic. All 7 proofs pass: no spill, minimum 14px.
-
-## Proofs
-C.H.U.D. (still), An American Werewolf in London (long title), Night of the Living Dead (no recipe file, so the films.json menu is used), IT (2 characters), The Silence of the Lambs, Halloween, plus a stress card (60 character title, 16 items). Only 2 of the 57 horror films have stills, so most will use the poster layout.
+## Robustness (fix round, Oct 26)
+- Stills: pickStills() keeps stills 1280 wide or more, puts no-language ones first, and keeps TMDB's order. The front hero is still 0 at 728x396, about a third of the face. The band card uses still 1, the filler uses still 2. The poster layout remains only as a fallback.
+- Short backs: horrorFit reserves a full-width still band above the props (360 down to 200px) at the largest type that fits. If no band fits, the still goes under whichever column ends higher, provided it gets 200px or more. Night of the Living Dead (6 items) gets none.
+- Long menus: type never goes below dish 26 / note 20. Sections split into 2-item chunks ("continued" header) and flow onto as many "The menu, continued" faces as needed. The stress card uses 2 of these.
+- Title: titleSize() estimate, then horrorFit steps it down.
+- Integration: load the fonts explicitly (document.fonts.load) before horrorFit, or it measures with fallback metrics. Set HORROR_ASSETS for paper-grain.png.
+- Spill check (kit overflow logic): all 7 proofs pass, minimum 14px.
 
 ## Known weak spots
-- On five-item menus the back has about 300px of empty column above the props. The roomier first fit level did not close the gap.
-- Images are TMDB only. The Wikimedia search was rate limited, so there is no public domain storm photo.
-- The template uses stills[0] blind, which could be a title card.
-- Integration needs the Google Fonts link and HORROR_ASSETS pointing at paper-grain.png.
+- Still picking is blind, so a still can be dark or off-tone. Night of the Living Dead's band still is a murky close-up.
+- The stress card's continued faces have no stills, because its synthetic id has no stills.

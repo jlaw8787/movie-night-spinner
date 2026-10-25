@@ -36,7 +36,7 @@ function pickStills(st){
   return pool.filter(x=>x[3]==null).concat(pool.filter(x=>x[3]!=null)).slice(0,6)}
 const fillArt=(src,cap,n)=>src?`<div data-h="fill" style="display:none;position:absolute;left:44px;right:44px;padding:8px 8px 0;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.25);box-sizing:border-box">
     <div data-h="fillimg" style="outline:2px solid ${C.red};outline-offset:-2px;height:200px;overflow:hidden"><img alt="" crossorigin="anonymous" src="${IMG}w1280${src}" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-    <div style="display:flex;justify-content:space-between;font:italic 400 17px/40px ${SERIF};color:${C.ink};padding:0 4px"><span>${cap}</span><span style="font:700 14px/40px ${SANS};letter-spacing:.14em;color:${C.mute};font-style:normal">STILL: TMDB</span></div></div>`:"";
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;font:italic 400 17px/1.25 ${SERIF};color:${C.ink};padding:9px 4px 10px"><span>${cap}</span><span style="white-space:nowrap;font:700 14px/1 ${SANS};letter-spacing:.14em;color:${C.mute};font-style:normal">STILL: TMDB</span></div></div>`:"";
 
 function face(bg,inner,n){
   return `<div class="fx-face" data-face="${n}" data-horror="face" style="${n===3?"display:none;":""}position:relative;width:816px;height:1056px;overflow:hidden;background:${bg};box-sizing:border-box;flex:none">${inner}
@@ -163,7 +163,13 @@ function horrorFit(rootEl){
     const fill2=bk.querySelector('[data-h="fill"]');let L,placed=false;
     if(fill2)outer:for(L of LEVELS){apply(L);for(let fh=360;fh>=200;fh-=40){m.style.bottom=(232+fh)+"px";
       if(fits(m)){fill2.style.display="block";fill2.style.top=(1056-232-fh+16)+"px";fill2.querySelector('[data-h="fillimg"]').style.height=(fh-16-18-48)+"px";placed=true;break outer}}}
-    if(!placed){m.style.bottom="232px";for(L of LEVELS){apply(L);if(fits(m))break}}
+    if(!placed){m.style.bottom="232px";for(L of LEVELS){apply(L);if(fits(m))break}
+      /* no room for a full band: put the still under whichever column ends higher */
+      if(fill2&&fits(m)){const fr2=bk.getBoundingClientRect(),mid=m.getBoundingClientRect().left+m.clientWidth/2,cb=[228,228];
+        m.querySelectorAll('[data-h="item"],[data-h="sec"]').forEach(e=>{for(const r of e.getClientRects())cb[r.left<mid?0:1]=Math.max(cb[r.left<mid?0:1],r.bottom-fr2.top)});
+        const c=cb[0]<=cb[1]?0:1,top=cb[c]+22,h=1056-232-30-top;
+        if(h>=200){Object.assign(fill2.style,{display:"block",top:top+"px",left:c?"428px":"44px",right:c?"44px":"428px"});
+          fill2.querySelector('[data-h="fillimg"]').style.height=(h-74)+"px";placed=true}}}
     /* still too long at dish 26 / note 20: never shrink further. Split sections into 2 item chunks
        (header repeated as "continued") and flow the last chunks onto as many continued faces as needed */
     const faces=placed?[]:[bk];

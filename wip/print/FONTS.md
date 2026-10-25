@@ -77,3 +77,4 @@ die-hard: Michroma
 anchorman: Rammetto One
 genre-kids: Fredoka
 genre-horror: League Gothic
+genre-hero: Oswald
