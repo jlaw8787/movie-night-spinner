@@ -81,10 +81,10 @@ PH = 500   # visible height of the painting
 inner = f'''
 <div style="position: absolute; left: 0; top: 0; width: {W}px; height: {PH}px; overflow: hidden; background: {NAVY}">
   <img src="assets/firehouse-dusk.jpg" alt="Painting of the Queens firehouse at dusk, northern lights over the block and a ham radio aerial on the roof" style="display: block; width: {W}px; height: 560px"></div>
-<div style="position: absolute; left: {L}px; top: 54px; width: 560px">
+<div style="position: absolute; left: {L}px; top: 42px; width: 560px">
   <div style="{COND}; font-weight: 600; font-size: 19px; letter-spacing: 0.22em; text-transform: uppercase; color: {PEACH}">The firehouse invites the whole block</div>
-  <div style="{SLAB}; font-size: 80px; line-height: 0.98; text-transform: uppercase; color: {PAPER}; margin-top: 10px; white-space: nowrap">World Series</div>
-  <div style="{SLAB}; font-size: 80px; line-height: 0.98; text-transform: uppercase; color: {PEACH}; white-space: nowrap">Supper</div></div>
+  <div style="{SLAB}; font-size: 76px; line-height: 0.98; text-transform: uppercase; color: {PAPER}; margin-top: 10px; white-space: nowrap">World Series</div>
+  <div style="{SLAB}; font-size: 76px; line-height: 0.98; text-transform: uppercase; color: {PEACH}; white-space: nowrap">Supper</div></div>
 <div style="position: absolute; left: 0; top: {PH}px; width: {W}px; height: 6px; background: {ORANGE}"></div>
 <div style="position: absolute; left: 0; top: {PH + 6}px; width: {W}px; height: 54px; background: {NAVY}"></div>
 <div style="position: absolute; left: {L}px; top: {PH + 6}px; width: {CW}px; height: 54px; display: flex; justify-content: space-between; align-items: center; {COND}; font-weight: 500; font-size: 20px; letter-spacing: 0.14em; text-transform: uppercase; color: {PAPER}">
