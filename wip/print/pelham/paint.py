@@ -117,7 +117,8 @@ def wear():
         out[..., 3] = out[..., 3] + a * (1 - out[..., 3])
     # simpler premultiplied-style stack
     rgb = np.zeros((H, W, 3), np.float32); al = np.zeros((H, W), np.float32)
-    for col, a in (((247, 245, 240), a_pale), ((150, 136, 108), a_edge), ((122, 82, 42), stain), ((96, 70, 170), sm)):
+    haze = field(41, 300, 140) * .05 + np.exp(-(((xx - 300) / 500) ** 2 + ((yy - 900) / 700) ** 2)) * .03
+    for col, a in (((150, 120, 210), haze), ((247, 245, 240), a_pale), ((150, 136, 108), a_edge), ((122, 82, 42), stain), ((96, 70, 170), sm)):
         a = np.clip(a, 0, 1)
         rgb = rgb * (1 - a[..., None]) + np.array(col, np.float32) * a[..., None]
         al = al + a * (1 - al)
@@ -133,3 +134,50 @@ def wear():
 
 
 hero(); wear(); print('painted')
+
+
+def title():
+    """LUNCH RUN as hand-drawn outline block letters with diagonal hatching, the way people lettered
+    a ditto master with a ballpoint and a ruler. Painted at 2x for a 470 x 100 px slot."""
+    from PIL import ImageFont
+    w, h = 940, 200
+    S = 3                                    # work large, then shrink
+    f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 178 * S)
+    m = Image.new('L', (w * S * 2, h * S * 2), 0)
+    d = ImageDraw.Draw(m)
+    d.text((10 * S, 10 * S), 'LUNCH RUN', font=f, fill=255)
+    bb = m.getbbox()
+    m = m.crop(bb).resize((w * S - 30 * S, h * S - 30 * S), Image.LANCZOS)
+    base = Image.new('L', (w * S, h * S), 0); base.paste(m, (15 * S, 15 * S)); m = base
+    # hand wobble: displace with a smooth noise field
+    a = np.asarray(m).astype(np.float32)
+    H2, W2 = a.shape
+    dx = (field(31, 60 * S, 30 * S, W2, H2) - .5) * 14 * S
+    dy = (field(32, 60 * S, 30 * S, W2, H2) - .5) * 14 * S
+    yy, xx = np.mgrid[0:H2, 0:W2]
+    sx = np.clip((xx + dx).astype(int), 0, W2 - 1); sy = np.clip((yy + dy).astype(int), 0, H2 - 1)
+    a = a[sy, sx]
+    solid = Image.fromarray(a.astype(np.uint8)).point(lambda v: 255 if v > 127 else 0)
+    inner = solid.filter(ImageFilter.MinFilter(2 * (3 * S) + 1))
+    outline = np.asarray(solid).astype(np.float32) - np.asarray(inner).astype(np.float32)
+    # diagonal hatching inside, slightly irregular spacing and weight
+    rng = np.random.default_rng(4)
+    hatch = Image.new('L', solid.size, 0); hd = ImageDraw.Draw(hatch)
+    x = -H2
+    while x < W2:
+        hd.line((x, H2, x + H2, 0), fill=255, width=int(2 * S + rng.integers(0, S + 1)))
+        x += int(10 * S + rng.integers(-S, S + 1))
+    inner2 = np.asarray(inner.filter(ImageFilter.MinFilter(2 * S + 1))).astype(np.float32) / 255
+    hat = np.asarray(hatch).astype(np.float32) / 255 * inner2
+    ink = np.clip(outline / 255 + hat * .9, 0, 1)
+    im = Image.fromarray((ink * 255).astype(np.uint8)).resize((w, h), Image.LANCZOS).filter(ImageFilter.GaussianBlur(.9))
+    halo = np.asarray(im.filter(ImageFilter.GaussianBlur(4))).astype(np.float32) / 255
+    al = np.asarray(im).astype(np.float32) / 255
+    al = np.clip(np.clip(al * 1.35, 0, 1) * (0.62 + 0.38 * field(33, 26, 8, w, h)) + halo * .14, 0, 1)
+    out = np.zeros((h, w, 4), np.uint8)
+    out[..., 0], out[..., 1], out[..., 2] = (75, 54, 160)
+    out[..., 3] = (al * 255).astype(np.uint8)
+    Image.fromarray(out, 'RGBA').save(os.path.join(A, 'title-lunch-run.png'))
+
+
+title(); print('title')

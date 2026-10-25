@@ -45,7 +45,28 @@ class Art:
         return v * SS
 
     def pts(self, pts):
-        return [(x * SS, y * SS) for x, y in pts]
+        """Scale to the drawing size, adding a hand-cut wobble that depends only on position,
+        so a fill and its outline wobble together."""
+        if len(pts) < 3:
+            return [(x * SS, y * SS) for x, y in pts]
+        out = []
+        n = len(pts)
+        closed = pts[0] == pts[-1]
+        for i in range(n - 1 if closed else n):
+            x0, y0 = pts[i]; x1, y1 = pts[(i + 1) % n]
+            seg = math.hypot(x1 - x0, y1 - y0)
+            k = max(1, int(seg / 5))
+            for j in range(k):
+                t = j / k
+                x, y = x0 + (x1 - x0) * t, y0 + (y1 - y0) * t
+                q = x * 0.7 + y * 1.3
+                dx = 0.32 * math.sin(q * 0.061 + 1.1) + 0.22 * math.sin(q * 0.137 + 2.3) + 0.12 * math.sin(q * 0.291)
+                q = x * 1.2 + y * 0.8
+                dy = 0.32 * math.sin(q * 0.053 + 0.4) + 0.22 * math.sin(q * 0.149 + 1.9) + 0.12 * math.sin(q * 0.311 + 3)
+                out.append(((x + dx) * SS, (y + dy) * SS))
+        if closed:
+            out.append(out[0])
+        return out
 
     def save(self, name, kcell=5.2, gcell=5.6):
         kd = np.asarray(self.k, np.float32) / 255
@@ -251,46 +272,80 @@ def dirtcup():
 
 # ---------------- baguette, part sliced into a party tray ----------------
 def baguette():
-    a = Art(560, 170)
+    a = Art(600, 200)
     s = SS
-    kd = ImageDraw.Draw(a.kl); gd = ImageDraw.Draw(a.gl)
-    # tray
-    tray = [(10, 120), (550, 120), (534, 158), (26, 158)]
-    m = Image.new('L', (a.W, a.H), 0); ImageDraw.Draw(m).polygon(a.pts(tray), fill=255)
-    a.g = masked(a.g, m, 60)
-    kd.line(a.pts(tray + [tray[0]]), fill=255, width=int(2.4 * s))
-    # whole loaf on the left, rising off the tray
-    loaf = Image.new('L', (a.W, a.H), 0)
-    ImageDraw.Draw(loaf).rounded_rectangle((20 * s, 64 * s, 250 * s, 118 * s), radius=26 * s, fill=255)
-    a.k = masked(a.k, loaf, 30)
-    a.k = Image.composite(shade(Image.new('L', loaf.size, 0), (0, 64 * s, a.W, 118 * s), 0.1, 0.55), a.k, loaf)
-    kd.rounded_rectangle((20 * s, 64 * s, 250 * s, 118 * s), radius=26 * s, outline=255, width=int(2.4 * s))
-    pd = ImageDraw.Draw(a.p)
-    for i in range(5):                       # scoring slashes, opened up to the crumb
-        x = 48 + i * 42
-        sl = [(x, 74), (x + 30, 66), (x + 34, 72), (x + 6, 82)]
+
+    def clear(poly_pts):
+        m = Image.new('L', (a.W, a.H), 0); ImageDraw.Draw(m).polygon(poly_pts, fill=255)
+        z = Image.new('L', (a.W, a.H), 0)
+        for name in ('k', 'g', 'kl', 'gl', 'p'):
+            setattr(a, name, Image.composite(z, getattr(a, name), m))
+        return m
+
+    # tray, seen from the front at a low angle
+    tray = [(8, 150), (592, 150), (572, 194), (28, 194)]
+    m = clear(a.pts(tray)); a.g = masked(a.g, m, 70)
+    ImageDraw.Draw(a.kl).line(a.pts(tray + [tray[0]]), fill=255, width=int(2.4 * s))
+    ImageDraw.Draw(a.kl).line(a.pts([(22, 162), (578, 162)]), fill=255, width=int(1.2 * s))
+
+    # the uncut end of the loaf, left, lying along the tray
+    loaf = []
+    for i in range(61):
+        t = i / 60
+        loaf.append((24 + 210 * t, 150 - 42 * max(0.0, 1 - abs(2 * t - 1) ** 5) ** 0.5))
+    m = clear(a.pts(loaf))
+    a.k = Image.composite(shade(Image.new('L', m.size, 0), (0, 100 * s, a.W, 150 * s), 0.22, 0.62), a.k, m)
+    kd = ImageDraw.Draw(a.kl); pd = ImageDraw.Draw(a.p)
+    for i in range(5):                                  # opened scores, crumb showing
+        x = 46 + i * 38
+        sl = [(x, 116), (x + 28, 108), (x + 32, 113), (x + 5, 122)]
         pd.polygon(a.pts(sl), fill=255)
-        kd.line(a.pts(sl + [sl[0]]), fill=255, width=int(1.6 * s))
-    # cut pieces: crust ring, butter line, ham folds (green), crumb
+        kd.line(a.pts(sl + [sl[0]]), fill=255, width=int(1.4 * s))
+    kd.line(a.pts(loaf[:61]), fill=255, width=int(2.4 * s))
+    kd.line(a.pts([(24, 150), (234, 150)]), fill=255, width=int(2 * s))
+
+    # cut pieces, side on: crust dome, crumb, ham folded through, crumb, flat base
+    def piece(x, y, w=50, h=50):
+        top = h * 0.30
+        dome = [(x + w * i / 20, y + top - top * math.sin(math.pi * i / 20) ** 0.8) for i in range(21)]
+        sil = dome + [(x + w, y + h), (x, y + h)]
+        mm = clear(a.pts(sil))
+        a.k = masked(a.k, mm, 14)                          # pale crumb
+        crust = Image.new('L', (a.W, a.H), 0)
+        inner = [(px, py + 5) for px, py in reversed(dome)]
+        ImageDraw.Draw(crust).polygon(a.pts(dome + inner), fill=255)
+        a.k = masked(a.k, Image.composite(crust, Image.new('L', crust.size, 0), mm), 150)
+        ham = [(x + w * i / 8, y + h * 0.52 + 2.0 * math.sin(i * 0.9 + x)) for i in range(9)] + \
+              [(x + w * (8 - i) / 8, y + h * 0.70 + 1.8 * math.sin(i * 1.1 + x)) for i in range(9)]
+        ImageDraw.Draw(a.gl).polygon(a.pts(ham), fill=255)
+        kd2 = ImageDraw.Draw(a.kl)
+        kd2.line(a.pts([(x + 2, y + h * 0.53), (x + w - 2, y + h * 0.53)]), fill=255, width=int(1.0 * s))   # butter line
+        for cx in (x + w * 0.3, x + w * 0.68):                                                             # cornichon coins
+            kd2.ellipse(a.pts([(cx - 4, y + h * 0.57), (cx + 4, y + h * 0.66)]), outline=255, width=int(1 * s))
+        kd2.line(a.pts(sil + [sil[0]]), fill=255, width=int(2.2 * s))
+
     for i in range(6):
-        x = 270 + i * 46
-        y = 74 + (i % 2) * 4
-        piece = (x, y, x + 40, y + 44)
-        pm = Image.new('L', (a.W, a.H), 0); ImageDraw.Draw(pm).ellipse(a.pts([piece[:2], piece[2:]]), fill=255)
-        a.k = masked(a.k, pm, 18)
-        kd.ellipse(a.pts([piece[:2], piece[2:]]), outline=255, width=int(3 * s))
-        # filling across the middle
-        hm = [(x + 3, y + 19), (x + 37, y + 19), (x + 37, y + 27), (x + 3, y + 27)]
-        gd.polygon(a.pts(hm), fill=255)
-        for k in range(3):
-            gd.ellipse(a.pts([(x + 4 + k * 11, y + 14), (x + 16 + k * 11, y + 22)]), fill=255)
-        kd.line(a.pts([(x + 4, y + 18), (x + 36, y + 18)]), fill=255, width=int(1.2 * s))
-    # cornichon pile at the front right
-    for (cx, cy) in ((520, 104), (506, 110), (530, 112)):
-        pc = leaf(cx - 14, cy, 28, 7, math.radians(-8))
-        gd.polygon(a.pts(pc), fill=255)
-        kd.line(a.pts(pc + [pc[0]]), fill=255, width=int(1.4 * s))
+        piece(250 + i * 46, 100, 48, 42)
+    for i in range(6):
+        piece(270 + i * 46, 110, 48, 42)
+
+    # cornichons and a little pot of mustard at the right end
+    gd = ImageDraw.Draw(a.gl); kd = ImageDraw.Draw(a.kl)
+    pot = [(546, 116), (584, 116), (580, 152), (550, 152)]
+    m = clear(a.pts(pot)); a.k = masked(a.k, m, 46)
+    kd.line(a.pts(pot + [pot[0]]), fill=255, width=int(2 * s))
+    rimm = clear(a.pts([(546 + 19 + 19 * math.cos(t * math.pi / 10), 116 + 5 * math.sin(t * math.pi / 10)) for t in range(21)]))
+    a.k = masked(a.k, rimm, 200)
+    kd = ImageDraw.Draw(a.kl)
+    kd.line(a.pts(pot + [pot[0]]), fill=255, width=int(2 * s))
+    for (cx, cy, dg) in ((470, 176, -6), (500, 180, 6), (528, 176, -3)):
+        pc = leaf(cx - 16, cy, 32, 8, math.radians(dg))
+        m = clear(a.pts(pc))
+        ImageDraw.Draw(a.gl).polygon(a.pts(pc), fill=255)
+        ImageDraw.Draw(a.kl).line(a.pts(pc + [pc[0]]), fill=255, width=int(1.4 * s))
     a.save('baguette.png')
+    im = Image.open(os.path.join(A, 'baguette.png'))
+    im.crop((0, 180, im.width, im.height)).save(os.path.join(A, 'baguette.png'))
 
 
 # ---------------- plate of spaghetti for Tony's ad ----------------
@@ -358,7 +413,7 @@ def wear(name, seed, edge_w, tone):
     y, x = np.mgrid[0:H, 0:W].astype(np.float32)
     d = np.minimum.reduce([x, y, W - 1 - x, H - 1 - y])
     e = np.clip(1 - d / (edge_w * S2), 0, 1) ** 2.0
-    alpha = e * (0.45 + 0.55 * mot) * 0.60 + (mot - 0.5).clip(0) * 0.10
+    alpha = e * (0.45 + 0.55 * mot) * 0.42 + (mot - 0.5).clip(0) * 0.08
     # a soft thumb-rub where the flyer was held, lower right
     cx, cy = W * 0.9, H * 0.95
     rub = np.exp(-(((x - cx) / (W * 0.16)) ** 2 + ((y - cy) / (H * 0.08)) ** 2))
@@ -372,6 +427,6 @@ def wear(name, seed, edge_w, tone):
 if __name__ == '__main__':
     os.makedirs(A, exist_ok=True)
     carton(); plant(); shake(); dirtcup(); baguette(); spaghetti(); burst()
-    wear('wear-front.png', 94, 90, (176, 146, 86))
-    wear('wear-back.png', 12, 90, (176, 146, 86))
+    wear('wear-front.png', 94, 64, (176, 146, 86))
+    wear('wear-back.png', 12, 64, (176, 146, 86))
     print('painted')

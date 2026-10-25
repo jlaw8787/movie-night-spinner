@@ -86,9 +86,7 @@ m = np.asarray(mask) > 127
 # the containment wall sits across the water on the far shores: dilate the island about 900 m
 px_per_km = sc / 111.0 * G
 wall_r = int(0.95 * px_per_km)
-yy, xx = np.mgrid[-wall_r:wall_r + 1, -wall_r:wall_r + 1]
-disk = (xx * xx + yy * yy) <= wall_r * wall_r
-grown = ndimage.binary_dilation(m, structure=disk)
+grown = ndimage.distance_transform_edt(~m) <= wall_r
 edge_island = m & ~ndimage.binary_erosion(m, iterations=G * 2)
 edge_wall = grown & ~ndimage.binary_erosion(grown, iterations=G * 2)
 
@@ -165,13 +163,13 @@ def soft_noise(w, h, scale, seed):
 
 def wear(name, seed, ring=None):
     W, H = FW * S, FH * S
-    a = np.zeros((H, W), float)
-    col = np.zeros((H, W, 3), float)
+    a = np.zeros((H, W), np.float32)
+    col = np.zeros((H, W, 3), np.float32)
     col[...] = (150, 132, 96)
     n = soft_noise(W, H, 160, seed)
     a += np.clip(n - 0.45, 0, 1) * 30          # big gentle mottling
     # edge wear: handled pages darken a little at the corners and edges
-    yy, xx = np.mgrid[0:H, 0:W]
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
     ex = np.minimum(xx, W - 1 - xx) / W
     ey = np.minimum(yy, H - 1 - yy) / H
     e = np.clip(1 - np.minimum(ex * 9, 1), 0, 1) ** 2 + np.clip(1 - np.minimum(ey * 11, 1), 0, 1) ** 2
@@ -195,6 +193,16 @@ def wear(name, seed, ring=None):
     Image.fromarray(out.astype(np.uint8), 'RGBA').save(os.path.join(A, name))
 
 
-wear('wear-p1.png', 11, ring=(760, 980, 54))
+wear('wear-p1.png', 11, ring=(770, 990, 54))
+
+# broken ink for the rubber stamp: paper-colored voids laid over the red, soft edged
+W, H = 240 * S, 90 * S
+n = soft_noise(W, H, 14, 77)
+n2 = soft_noise(W, H, 5, 78)
+v = np.clip((n * 0.7 + n2 * 0.5 - 0.62) * 5, 0, 1)
+st = np.zeros((H, W, 4), np.uint8)
+st[..., 0], st[..., 1], st[..., 2] = 246, 244, 236
+st[..., 3] = (v * 235).astype(np.uint8)
+Image.fromarray(st, 'RGBA').filter(ImageFilter.GaussianBlur(0.8)).save(os.path.join(A, 'stamp-wear.png'))
 wear('wear-p2.png', 23)
 print('painted', layout)

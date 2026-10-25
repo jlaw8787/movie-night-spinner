@@ -127,8 +127,8 @@ ht = Image.new('RGBA', (PW, PH), (24, 24, 22, 0)); ht.putalpha(dots.point(lambda
 ht.save(os.path.join(A, 'host-halftone.png'))
 
 # ---------------- cover wear (on green stock) ----------------
-em = edge_mask(W, H, 22 * S, 1.6)
-a = ImageChops.multiply(em, mottle(W, H, 50, 90, 255, 7)).point(lambda v: int(v * 0.42))
+em = edge_mask(W, H, 12 * S, 1.8)
+a = ImageChops.multiply(em, mottle(W, H, 50, 90, 255, 7)).point(lambda v: int(v * 0.30))
 # spine crease along the left fold, a soft light line where the ink cracked
 sp = Image.new('L', (W, H), 0); sd = ImageDraw.Draw(sp)
 sd.rectangle((0, 0, 7 * S, H), fill=150)

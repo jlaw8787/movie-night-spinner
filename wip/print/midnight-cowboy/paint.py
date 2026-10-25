@@ -38,44 +38,43 @@ org = Image.new('L', (W, H), 0)      # orange coverage (0 to 255)
 t, l, o = ImageDraw.Draw(tone), ImageDraw.Draw(line), ImageDraw.Draw(org)
 def P(*xy): return [v * S for v in xy]
 
-HZ = 128          # horizon
-SHORE = 150       # far shore line
+HZ = 100          # horizon
+SHORE = 140       # far shore line
 ROAD = 214
 # sky: orange tint screen fading to paper at the horizon, plus a thin black screen high up
 for y in range(0, HZ):
     k = y / HZ
-    o.line(P(0, y, AW, y), fill=int(120 * (1 - k) ** 1.4 + 22), width=S)
-    t.line(P(0, y, AW, y), fill=int(28 * (1 - k)), width=S)
+    o.line(P(0, y, AW, y), fill=int(80 * (1 - k) ** 1.3 + 14), width=S)
 # clouds: knocked out of both plates, edged with line
-for cx, cy, rx, ry in ((70, 40, 44, 13), (108, 32, 30, 14), (200, 64, 36, 9), (226, 58, 24, 9)):
+for cx, cy, rx, ry in ((70, 34, 44, 11), (106, 27, 28, 12), (204, 54, 36, 8), (228, 49, 22, 8)):
     for d_ in (o, t):
         d_.ellipse(P(cx - rx, cy - ry, cx + rx, cy + ry), fill=0)
 # Miami Beach hotel row across the water, period slab blocks
 x = 4
 random.seed(11)
 while x < AW - 4:
-    w_ = random.choice((14, 18, 22, 26, 30))
-    h_ = random.choice((12, 18, 24, 30, 38))
-    if 96 < x < 170: h_ = min(h_, 14)
-    t.rectangle(P(x, HZ - h_, x + w_, HZ + 2), fill=118)
+    w_ = random.choice((12, 16, 20, 24))
+    h_ = random.choice((6, 10, 14, 18, 24))
+    if 90 < x < 180: h_ = min(h_, 8)
+    t.rectangle(P(x, HZ - h_, x + w_, HZ + 2), fill=72)
     for yy in range(HZ - h_ + 3, HZ, 4):
-        t.line(P(x + 2, yy, x + w_ - 2, yy), fill=40, width=S)
+        t.line(P(x + 2, yy, x + w_ - 2, yy), fill=150, width=S)
     l.line(P(x, HZ - h_, x + w_, HZ - h_), fill=255, width=S)
     x += w_ + random.choice((0, 2, 4))
 # bay: mid tone with white line-cut streaks
-t.rectangle(P(0, HZ + 2, AW, SHORE + 2), fill=110)
+t.rectangle(P(0, HZ + 2, AW, SHORE + 2), fill=125)
 o.rectangle(P(0, HZ + 2, AW, SHORE + 2), fill=40)
 for i, y in enumerate(range(HZ + 6, SHORE, 5)):
     for x0 in range(-20 + (i % 2) * 17, AW, 34):
-        t.line(P(x0, y, x0 + 18 - (i % 3) * 3, y), fill=0, width=int(1.4 * S))
+        t.line(P(x0, y, x0 + 18 - (i % 3) * 3, y), fill=0, width=int(2.2 * S))
 # causeway shoulder and sand
-t.rectangle(P(0, SHORE + 2, AW, ROAD), fill=34)
-o.rectangle(P(0, SHORE + 2, AW, ROAD), fill=70)
+t.rectangle(P(0, SHORE + 2, AW, ROAD), fill=0)
+o.rectangle(P(0, SHORE + 2, AW, ROAD), fill=95)
 for y in range(SHORE + 8, ROAD, 6):
     for x0 in range((y * 7) % 23, AW, 23):
         l.point([(x0 * S + dx, y * S + dy) for dx in range(4) for dy in range(4)], fill=200)
 # road
-t.rectangle(P(0, ROAD, AW, AH), fill=150)
+t.rectangle(P(0, ROAD, AW, AH), fill=96)
 l.rectangle(P(0, ROAD, AW, ROAD + 1.5), fill=255)
 for x0 in range(-6, AW, 34):
     t.rectangle(P(x0, 262, x0 + 18, 265), fill=0)
@@ -115,7 +114,8 @@ palm(250, ROAD - 2, 120, -12, 0.8)
 
 # the coach: a 1960s flat-roof stainless intercity coach, nose to the right
 bx0, bx1, by0, by1 = 14, 252, 150, 240
-# body tone: light at the roof, shaded under the belt
+# body tone: light at the roof, shaded under the belt; the coach sits in front of the palm
+l.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=0)
 t.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=20)
 for y in range(by0 + 46, by1):
     t.line(P(bx0 + 2, y, bx1 - 2, y), fill=int(30 + (y - by0 - 46) * 1.6), width=S)
@@ -185,10 +185,10 @@ def screen(plate, cell, angle, w, h):
     ink[a > 0.93] = 1.0
     return ink
 
-tb = screen(tone, 2.6 * S, 45, W, H)
+tb = screen(tone, 3 * S, 45, W, H)
 lb = np.asarray(line, dtype=np.float32) / 255.0
 blk = np.maximum(tb, lb)
-ob = screen(org, 2.6 * S, 15, W, H)
+ob = screen(org, 3 * S, 75, W, H)
 ob = np.maximum(ob, (np.asarray(org, dtype=np.float32) > 250).astype(np.float32))
 # misregister the orange plate by 3 css px right, 2 up (scaled at 4x)
 ob = np.roll(np.roll(ob, 3 * S // 2, axis=1), -S, axis=0)
@@ -200,9 +200,6 @@ img = np.ones((H, W, 3), dtype=np.float32) * paper
 img *= (1 - ob[..., None] * 0.92) + ob[..., None] * 0.92 * (ink_o / paper)
 img *= (1 - blk[..., None] * 0.94) + blk[..., None] * 0.94 * ink_k
 art = Image.fromarray(np.clip(img * 255, 0, 255).astype(np.uint8)).resize((AW * 2, AH * 2), Image.LANCZOS)
-# soft ink unevenness, large and gentle
-mott = Image.effect_noise((AW // 8, AH // 8), 40).resize((AW * 2, AH * 2), Image.BICUBIC).filter(ImageFilter.GaussianBlur(16))
-art = Image.composite(art, Image.blend(art, Image.new('RGB', art.size, PAPER), 0.16), mott.point(lambda v: 255 if v > 118 else int(v * 1.6)))
 art.save(os.path.join(A, 'coach-art.png'))
 
 # ---------------- pencil ring ----------------

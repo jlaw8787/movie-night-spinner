@@ -134,7 +134,7 @@ def vignette(wc, hc):
     # sky, darker toward the top like a cut sky
     arr = np.zeros((h, w), np.float32)
     yy = np.arange(h)[:, None] / h
-    arr += np.clip(0.42 - yy * 0.75, 0, 0.42)
+    arr += np.clip(0.34 - yy * 0.9, 0, 0.34)
     tone = Image.fromarray(arr, 'F'); T = ImageDraw.Draw(tone)
     # trees left and right, dark soft masses
     tr = np.zeros((h, w), np.float32)
@@ -146,24 +146,27 @@ def vignette(wc, hc):
     arr = np.maximum(np.asarray(tone), tr)
     tone = Image.fromarray(arr.astype(np.float32), 'F'); T = ImageDraw.Draw(tone)
     # dome and drum
-    T.rectangle(u(cx - 22, 20, cx + 22, 34), fill=0.3)
-    T.pieslice(u(cx - 22, 2, cx + 22, 40), 180, 360, fill=0.22)
+    T.rectangle(u(cx - 22, 20, cx + 22, 34), fill=0.16)
+    T.pieslice(u(cx - 22, 2, cx + 22, 40), 180, 360, fill=0.12)
+    T.pieslice(u(cx + 2, 2, cx + 22, 40), 270, 360, fill=0.4)
     T.rectangle(u(cx - 3, -1, cx + 3, 4), fill=0.5)
     L.arc(u(cx - 22, 2, cx + 22, 40), 180, 360, fill=255, width=S)
     for k in range(-3, 4):
         T.line(u(cx + k * 6, 21, cx + k * 6, 34), fill=0.65, width=S)
     # main block behind the portico
-    T.rectangle(u(cx - 62, 34, cx + 62, 100), fill=0.24)
+    T.rectangle(u(cx - 62, 34, cx + 62, 100), fill=0.1)
+    for cy_ in range(38, 100, 5):
+        T.line(u(cx - 62, cy_, cx + 62, cy_), fill=0.45, width=max(1, S // 3))
     L.rectangle(u(cx - 62, 34, cx + 62, 100), outline=255, width=S)
     # side windows
     for wx in (cx - 54, cx - 44, cx + 38, cx + 48):
         T.rectangle(u(wx, 52, wx + 6, 76), fill=0.8)
     # pediment
-    T.polygon(u(cx - 42, 44, cx, 28, cx + 42, 44), fill=0.36)
-    T.polygon(u(cx - 34, 42, cx, 32, cx + 34, 42), fill=0.5)
+    T.polygon(u(cx - 42, 44, cx, 28, cx + 42, 44), fill=0.2)
+    T.polygon(u(cx - 34, 42, cx, 32, cx + 34, 42), fill=0.42)
     L.line(u(cx - 44, 44, cx, 27, cx + 44, 44), fill=255, width=S)
     # entablature
-    T.rectangle(u(cx - 44, 44, cx + 44, 52), fill=0.18)
+    T.rectangle(u(cx - 44, 44, cx + 44, 52), fill=0.08)
     T.rectangle(u(cx - 44, 51, cx + 44, 53), fill=0.85)
     # dark portico behind the columns
     T.rectangle(u(cx - 40, 53, cx + 40, 90), fill=0.86)
@@ -192,7 +195,7 @@ def vignette(wc, hc):
         T.rectangle(u(cx - inset, yy0, cx + inset, yy0 + 4), fill=0.18 + 0.12 * (i % 2))
         L.line(u(cx - inset, yy0 + 4, cx + inset, yy0 + 4), fill=255, width=max(1, S // 2))
     # pavement
-    T.rectangle(u(0, 102, wc, hc), fill=0.2)
+    T.rectangle(u(0, 102, wc, hc), fill=0.3)
     tone_a = np.asarray(tone, float)
     ink = engrave(tone_a, np.asarray(ori, float) / 255.0, pitch=2.6 * S / 2, outline=np.asarray(ol, float) / 255.0)
     # oval vignette: lines thin out toward the oval edge
@@ -220,7 +223,7 @@ def frame(wc, hc, seed):
     band = np.zeros_like(m)
     for k, ph in enumerate((0, 2.1, 4.2)):
         curve = 0.5 + 0.45 * np.sin(s / 9.0 + ph)
-        band = np.maximum(band, np.clip(1 - np.abs(t - curve) * (o1 - o0) / 1.1, 0, 1))
+        band = np.maximum(band, np.clip(1 - np.abs(t - curve) * (o1 - o0) / 1.6, 0, 1))
     band = np.maximum(band, np.clip(1 - np.abs(d - o0) / 1.0, 0, 1))
     band = np.maximum(band, np.clip(1 - np.abs(d - o1) / 1.0, 0, 1))
     m = np.where((d >= o0 - 1) & (d <= o1 + 1), band, 0)
@@ -233,7 +236,7 @@ def frame(wc, hc, seed):
     return out
 
 
-vignette(150, 104).save(os.path.join(A, 'bank-vignette.png'), optimize=True)
+vignette(160, 108).save(os.path.join(A, 'bank-vignette.png'), optimize=True)
 frame(528, 816, 31).save(os.path.join(A, 'frame-front.png'), optimize=True)
 frame(528, 816, 32).save(os.path.join(A, 'frame-back.png'), optimize=True)
 print('art painted')

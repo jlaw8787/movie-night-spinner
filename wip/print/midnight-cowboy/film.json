@@ -1,0 +1,30 @@
+{
+ "fmt": "southbound",
+ "fn": "fmtSouthbound",
+ "faces": [
+  "outside.html",
+  "inside.html"
+ ],
+ "names": [
+  "Outside",
+  "Inside"
+ ],
+ "mm": [
+  279.4,
+  215.9
+ ],
+ "fonts": "family=Archivo:ital,wght@0,400;0,600;0,800;0,900;1,400&family=Archivo+Narrow:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Yellowtail",
+ "fams": [
+  "Archivo",
+  "Archivo Narrow",
+  "Yellowtail"
+ ],
+ "phone": {
+  "disp": "'Yellowtail',cursive",
+  "title": "'Archivo',sans-serif",
+  "name": "'Archivo',sans-serif",
+  "body": "'Archivo',sans-serif",
+  "price": "'Archivo Narrow',sans-serif",
+  "note": "'Archivo Narrow',sans-serif"
+ }
+}

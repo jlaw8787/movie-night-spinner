@@ -1,0 +1,30 @@
+{
+ "fmt": "brooklyn",
+ "fn": "fmtBrooklyn",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Reverse"
+ ],
+ "mm": [
+  139.7,
+  215.9
+ ],
+ "fonts": "family=Cinzel:wght@600;700&family=Cutive+Mono&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400",
+ "fams": [
+  "Cinzel",
+  "Cutive Mono",
+  "Libre Franklin"
+ ],
+ "phone": {
+  "disp": "'Cinzel',serif",
+  "title": "'Cinzel',serif",
+  "name": "'Cutive Mono',monospace",
+  "body": "'Cutive Mono',monospace",
+  "price": "'Cutive Mono',monospace",
+  "note": "'Libre Franklin',sans-serif"
+ }
+}
