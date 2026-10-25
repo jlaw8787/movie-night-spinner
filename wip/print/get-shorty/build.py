@@ -92,7 +92,7 @@ def valet(o, x, y):
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; color: {MUTE}; line-height: 1; margin-top: 5px">No. 0300 &middot; Space 5</div>'
              f'<div style="border-top: 1.5px dashed #9c947c; margin: 8px 0 7px"></div>'
              f'<div style="font-family: {BODY}; font-size: 15px; color: {INK}; line-height: 1.3; text-align: left">Asked for: <b>sedan</b><br>Got: <b>minivan</b></div>'
-             f'<div style="font-family: {HAND}; font-size: 25px; color: #22379a; line-height: 0.95; margin-top: 6px">&ldquo;The Cadillac<br>of minivans.&rdquo;</div></div>')
+             f'<div style="font-family: {HAND}; font-size: 25px; color: #22379a; line-height: 0.95; margin-top: 6px">&ldquo;The limousine<br>of minivans.&rdquo;</div></div>')
 
 def napkin(o, x, y):
     """Square cocktail napkin, embossed border, with Chili's pitch in ballpoint."""
@@ -177,13 +177,13 @@ def back():
     o.append(f'<div style="position: absolute; left: 296px; top: 882px; width: 192px; font-family: {BODY}; font-style: italic; font-size: 16px; '
              f'line-height: 1.3; color: {MUTE}">Left on table 5 after lunch. We kept them.</div>')
 
-    o.append(f'<div style="position: absolute; left: {L}px; top: 950px; width: {CW}px">{scene("Roll credits", "THE ENDING")}'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 942px; width: {CW}px">{scene("Roll credits", "THE ENDING")}'
              + item('B-movie popcorn sundae', '5.00', 'Vanilla ice cream, hot fudge, caramel corn, salted peanuts.', 'Half a million cheaper than a script.', 14)
              + item('Cuban coffee', '2.00', 'Short, sweet and strong, the Miami way.', '', 14)
              + '</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 1236px; width: {CW}px; font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {MUTE}">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 1252px; width: {CW}px; font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {MUTE}">'
              'Prices subject to change. Ransom notes pay best. '
-             'Mr. Weir sits in booth 1; nobody mentions his height. Form GL-300. Beverly Hills, Calif. 1995.</div>')
+             'Mr. Weir sits in booth 1; never mention his height. Form GL-300. 1995.</div>')
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}

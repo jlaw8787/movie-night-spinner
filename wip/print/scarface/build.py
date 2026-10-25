@@ -37,10 +37,10 @@ st = ImageEnhance.Brightness(ImageEnhance.Contrast(st).enhance(1.04)).enhance(1.
 cover(st, HERO_W, HERO_H, 0.42, 0.3).save(A('floor-still.jpg'), quality=90)
 
 # back: Art Deco hotel on Ocean Drive, HABS FL-322-K. Crop keeps the tower and leaves the name sign out.
-PH = 400
-hotel = Image.open(S('century-master.jpg')).crop((1150, 230, 3850, 1980))
-hotel = ImageEnhance.Contrast(hotel).enhance(1.08)
-duotone(cover(hotel, W, PH, 0.5, 0.35), '#1a0714', '#ffe3ef').save(A('ocean-drive.jpg'), quality=90)
+PH = 380
+hotel = Image.open(S('century-master.jpg')).crop((560, 120, 4440, 1990))
+hotel = ImageEnhance.Contrast(hotel).enhance(1.15)
+duotone(cover(hotel, W, PH, 0.5, 0.12), '#2a0a1e', '#ffd6ea').save(A('ocean-drive.jpg'), quality=90)
 
 # flamingo tile: the two flamingos from the Victor Hotel lobby mural (HABS FL-322-Z), glazed pink
 fl = Image.open(S('mural-master.jpg')).crop((2480, 1660, 3780, 2560))
@@ -101,7 +101,7 @@ def item(name, price, desc, gap=18):
             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: {MUTE}; margin-top: 4px">{desc}</div></div>')
 
 def sub(t):
-    return (f'<div style="margin-top: 22px; display: flex; align-items: center; gap: 12px">'
+    return (f'<div style="margin-top: 16px; display: flex; align-items: center; gap: 12px">'
             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 18px; letter-spacing: 0.26em; color: {PINK}; white-space: nowrap">{t}</div>'
             f'<div style="flex: 1; height: 1px; background: {PINK}; opacity: 0.6"></div></div>')
 
@@ -116,14 +116,14 @@ def page(inner, name):
 # ---------------- props ----------------
 def vip_card(o, x, y):
     """The Babylon Club VIP card: black and gold plastic, embossed member line."""
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 262px; height: 160px; box-sizing: border-box; '
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 290px; height: 172px; box-sizing: border-box; '
              f'background: #17121a; border: 2px solid {GOLD}; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.75); '
              f'transform: rotate(-7deg); padding: 14px 16px 0 18px">'
              f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 15px; letter-spacing: 0.22em; color: {GOLD}">BABYLON CLUB</div>'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; color: {GOLD}">No. 1983</div></div>'
              + neon('V.I.P.', 46, PINK, ' margin-top: 10px;') +
-             f'<div style="margin-top: 8px; font-family: {SCRIPT}; font-size: 30px; line-height: 1; color: #f4dfa8">Mr. Antonio Montana</div>'
+             f'<div style="margin-top: 8px; font-family: {SCRIPT}; font-size: 30px; line-height: 1; color: #f4dfa8; white-space: nowrap">Mr. Antonio Montana</div>'
              f'<div style="margin-top: 4px; font-family: {BODY}; font-size: 14px; letter-spacing: 0.08em; color: {MUTE}">ONE BOOTH, NO WAITING</div></div>')
 
 def blimp_ticket(o, x, y):
@@ -132,7 +132,7 @@ def blimp_ticket(o, x, y):
              f'box-shadow: 0 5px 14px rgba(0,0,0,0.7); transform: rotate(5deg); display: flex">'
              f'<div style="width: 214px; padding: 10px 0 0 12px; box-sizing: border-box">'
              f'<img src="assets/blimp.jpg" alt="An airship against a blue sky, its sign reading The World Is Yours" style="width: 190px; height: 90px; display: block; object-fit: cover">'
-             f'<div style="margin-top: 7px; font-family: {BODY}; font-weight: 700; font-size: 15px; letter-spacing: 0.12em; color: #23162a; line-height: 1.1">SUNSET AIRSHIP RIDE</div>'
+             f'<div style="margin-top: 7px; font-family: {BODY}; font-weight: 700; font-size: 15px; letter-spacing: 0.12em; color: #23162a; line-height: 1.1">SUNSET AIRSHIP</div>'
              f'<div style="margin-top: 4px; font-family: {BODY}; font-size: 14px; color: #5b4a52; line-height: 1.1">Over the bay. Admit one.</div></div>'
              f'<div style="width: 0; border-left: 2px dashed #c4ac94; margin: 8px 0"></div>'
              f'<div style="flex: 1; text-align: center; padding-top: 22px">'
@@ -146,7 +146,7 @@ def flamingo_tile(o, x, y):
              f'border-radius: 6px; box-shadow: 0 6px 16px rgba(0,0,0,0.6); transform: rotate(-6deg); padding: 12px; box-sizing: border-box">'
              f'<img src="assets/flamingo-tile.jpg" alt="Two painted flamingos wading in a lagoon" style="width: 172px; height: 120px; display: block; border-radius: 3px">'
              f'<div style="margin-top: 6px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.18em; color: #8c1f55; line-height: 1">MIAMI BEACH</div>'
-             f'<div style="position: absolute; left: 18px; top: 16px; width: 70px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.35)"></div></div>')
+             '</div>')
 
 
 # ---------------- FRONT ----------------
@@ -171,12 +171,12 @@ def front():
              f'style="position: absolute; left: {HX}px; top: {HY}px; width: {HERO_W}px; height: {HERO_H}px; display: block">')
     o.append(f'<div style="position: absolute; left: {HX}px; top: {HY + HERO_H + 16}px; width: 300px; font-family: {BODY}; font-style: italic; '
              f'font-size: 20px; line-height: 1.3; color: {CREAM}">Saturday on the floor.<br>Showtime at 11 and 1.</div>')
-    vip_card(o, 368, 676)
+    vip_card(o, 344, 672)
 
     # the bar
     BY = 868
     bar = (deco_title('THE BAR')
-           + item('Babylon Club mojito', '4.50', 'White rum, fresh lime and mint over crushed ice, topped with soda.', 14)
+           + item('Babylon Club mojito', '4.50', 'White rum, lime and mint over crushed ice, soda on top.', 14)
            + item('Cuba libre', '4.00', 'Gold rum and cola over ice, a hard squeeze of lime.')
            + item('Piña colada', '4.75', 'Rum, coconut cream and pineapple, blended frosty.')
            + item('Champagne, by the bottle', '83.00', 'French, on ice at your booth. Two glasses or twelve.')
@@ -193,36 +193,37 @@ def back():
     o.append(f'<div style="position: absolute; left: 0; top: {PH}px; width: {W}px; height: 4px; background: {GOLD}"></div>')
     o.append(f'<div style="position: absolute; left: 40px; top: 40px; background: {BLACK}; padding: 7px 12px; font-family: {BODY}; font-style: italic; '
              f'font-size: 18px; line-height: 1.2; color: {CREAM}">Ocean Drive. Ten minutes from our door.</div>')
-    flamingo_tile(o, 452, PH - 168)
-    blimp_ticket(o, 26, PH - 150)
+    flamingo_tile(o, 452, PH - 160)
+    blimp_ticket(o, 26, PH - 156)
 
     # the big line
-    o.append(f'<div style="position: absolute; left: 0; top: {PH + 30}px; width: {W}px; display: flex; justify-content: center">{neon("THE WORLD IS YOURS", 54)}</div>')
+    o.append(f'<div style="position: absolute; left: 0; top: {PH + 26}px; width: {W}px; display: flex; justify-content: center">{neon("THE WORLD IS YOURS", 54)}</div>')
 
     kitchen = (deco_title('THE KITCHEN')
                + sub('TO START')
-               + item('Freedom Town croquetas', '3.50', 'Serrano ham in a thick nutmeg béchamel, crumbed and fried golden. Lime.', 10)
+               + item('Freedom Town croquetas', '3.50', 'Serrano ham béchamel, crumbed and fried golden. Lime.', 10)
                + item('Tostones', '2.75', 'Green plantain fried twice, smashed flat, garlic and lime mojo.', 14)
-               + item('Medianoche sliders', '4.95', 'Sweet egg rolls, ham, roast pork, Swiss, pickle and mustard, pressed crisp.', 14)
+               + item('Medianoche sliders', '4.95', 'Ham, roast pork, Swiss and pickle on sweet rolls, pressed.', 14)
                + sub('SUPPER')
-               + item('Ropa vieja', '12.50', 'Shredded flank steak stewed with peppers, tomato and olives. Rice and black beans.', 10)
-               + item('Babylon surf and turf', '19.83', 'Filet mignon seared medium rare, jumbo shrimp in garlic butter, béarnaise.', 14)
+               + item('Ropa vieja', '12.50', 'Flank steak shredded into peppers, tomato, olives. Black beans.', 10)
+               + item('Babylon surf and turf', '19.83', 'Filet mignon, garlic butter jumbo shrimp, béarnaise sauce.', 14)
                + sub('SWEET')
-               + item('World Is Yours pastelitos', '3.95', 'Puff pastry filled with guava paste and cream cheese, baked under a sugar crust.', 10))
-    o.append(f'<div style="position: absolute; left: 40px; top: {PH + 112}px; width: {W - 80}px">{kitchen}</div>')
+               + item('World Is Yours pastelitos', '3.95', 'Puff pastry, guava paste and cream cheese, sugar crust.', 10))
+    o.append(f'<div style="position: absolute; left: 40px; top: {PH + 100}px; width: {W - 80}px">{kitchen}</div>')
 
     # Frank's line, house rules, fine print
-    FY = H - 40 - 150
+    FY = H - 40 - 176
     o.append(f'<div style="position: absolute; left: 40px; top: {FY}px; width: {W - 80}px; height: 1px; background: {GOLD}; opacity: 0.6"></div>')
-    o.append(f'<div style="position: absolute; left: 40px; top: {FY + 14}px; width: 300px">'
-             + kicker('Overheard at table one', PINK, 16) +
+    o.append(f'<div style="position: absolute; left: 40px; top: {FY + 14}px; width: 310px">'
+             + kicker('Overheard, table one', PINK, 16) +
              f'<div style="margin-top: 8px; font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 1.3; color: {CREAM}">'
              '“Lesson number one, kid. Never underestimate the pastelitos.”</div>'
              f'<div style="font-family: {SCRIPT}; font-size: 34px; line-height: 1.1; color: {GOLD}; text-align: right; padding-right: 10px">Frank L.</div></div>')
-    o.append(f'<div style="position: absolute; left: 372px; top: {FY + 14}px; width: 260px; font-family: {BODY}; font-size: 16px; line-height: 1.38; color: {MUTE}">'
+    o.append(f'<div style="position: absolute; left: 384px; top: {FY + 14}px; width: 248px; font-family: {BODY}; font-size: 16px; line-height: 1.38; color: {MUTE}">'
              + kicker('House rules', PINK, 16) +
-             f'<div style="margin-top: 8px">Nobody here is your baby.<br>Every dog has his day. Ladies, it is Tuesday.<br>'
-             f'Prices subject to change. Form BC-83. Babylon Club, Miami Beach, 1983.</div></div>')
+             f'<div style="margin-top: 8px">Nobody here is your baby.<br>Every dog has his day.<br>Ladies night is Tuesday.<br>Showtime at 11 and 1.</div></div>')
+    o.append(f'<div style="position: absolute; left: 40px; top: {H - 62}px; width: {W - 80}px; text-align: center; font-family: {BODY}; font-size: 16px; color: {MUTE}">'
+             'Prices subject to change. Form BC-83. Babylon Club, Miami Beach, 1983.</div>')
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}

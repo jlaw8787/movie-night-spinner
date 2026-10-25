@@ -127,11 +127,19 @@ def front():
              f'font-style: italic; font-size: 18px; line-height: 1.25; color: {MUTE}">Our host, in session. He is fine. He is totally fine.</div>')
 
     pillow_tag(o, 240, 256)
-    bar = (f'<div style="text-align: center">{kicker("Seven o&rsquo;clock")}</div>'
-           f'<div style="font-family: {DISP}; font-size: 28px; line-height: 1.1; color: {INK}; text-align: center; margin-top: 4px; white-space: nowrap">COCKTAIL HOUR</div>'
-           + item('Calming Negroni', '8.50', 'Gin, bitter red aperitif, sweet vermouth, stirred, on ice, orange slice.', 10, 26, 20)
-           + item('Jelly&rsquo;s rye', '6.00', 'On the rocks. He pours, he doesn&rsquo;t talk.', 12, 26, 20))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 630px; width: {CW}px">{bar}</div>')
+    lt = '#e8d6a4'
+    def pitem(name, price, desc, gap):
+        return (f'<div style="margin-top: {gap}px"><div style="display: flex; justify-content: space-between; align-items: baseline; font-family: {BODY}; '
+                f'font-weight: 700; font-size: 26px; line-height: 1.05; color: {PAPER}"><span>{name}</span><span>{price}</span></div>'
+                f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.2; color: {PAPER}; margin-top: 2px">{desc}</div></div>')
+    o.append(f'<div style="position: absolute; left: 24px; top: 612px; width: 360px; height: 252px; background: {INK}; box-sizing: border-box; '
+             f'border: 3px double {GOLD}; padding: 12px 16px 0">'
+             f'<div style="font-family: {DISP}; font-size: 26px; line-height: 1; color: {PAPER}; white-space: nowrap; text-align: center">COCKTAIL HOUR</div>'
+             + pitem('Calming Negroni', '8.50', 'Gin, red bitter, sweet vermouth, orange.', 10)
+             + pitem('Antipasto platter', '12.00', 'Salami, provolone, roast peppers, olives.', 10)
+             + f'<div style="margin-top: 10px; border-top: 1px solid {GOLD}; padding-top: 7px; font-family: {BODY}; font-size: 17px; line-height: 1.3; color: {lt}; text-align: center">'
+               'Jelly&rsquo;s rye 6 &middot; House red 7 &middot; Prosecco 8<br>'
+               '<i>Jelly is at the bar. Don&rsquo;t ask him anything.</i></div></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 866px; width: 160px; font-family: {BODY}; font-style: italic; font-size: 17px; '
              f'line-height: 1.25; color: {INK}">Menu arranged by the consigliere. No guns at the table, please.</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 968px; font-family: {SCRIPT}; font-size: 34px; line-height: 1; color: {INK}">Ben Sobel</div>')
@@ -149,22 +157,23 @@ def back():
     o.append(f'<div style="position: absolute; left: {L}px; top: 156px; width: {CW}px; height: 3px; background: {INK}"></div>')
 
     s1 = (session('ONE', 'START TALKING')
-          + item('Fried calamari', '11.50', 'Buttermilk-soaked squid in semolina, fried crisp, salt and lemon.', 8,
+          + item('Fried calamari', '11.50', 'Semolina-crusted squid, fried crisp, lemon.', 8,
                  note='As at the Miami wedding. Interrupted.')
-          + item('Mozzarella in carrozza', '9.00', 'Crustless sandwiches, crumbed and fried until the cheese runs.', 12,
+          + item('Mozzarella in carrozza', '9.00', 'Crumbed, fried, the cheese running.', 12,
                  note='Comfort food. Admit you need it.'))
 
     s2 = (session('TWO', 'COMFORT COURSE')
-          + item('Veal parmigiana', '19.99', 'Crumbed cutlet, marinara, melted mozzarella and parmesan, spaghetti alongside.', 8,
+          + item('Rigatoni, Sunday gravy', '14.00', 'Tomato slow-cooked with pork, basil, pecorino.', 8)
+          + item('Veal parmigiana', '19.99', 'Crumbed cutlet, marinara, mozzarella, parmesan, spaghetti.', 12,
                  note='Like his mother made. We won&rsquo;t go there.'))
 
     s3 = (session('THREE', 'CLOSURE')
           + item('Cannoli', '7.00', 'Sweet ricotta, orange zest, chocolate-dipped ends.', 8)
-          + item('Espresso', '2.50', 'Sambuca on the side, 4.00.', 10))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 174px; width: {CW}px">{s1}<div style="height: 14px"></div>{s2}'
-             f'<div style="height: 14px"></div><div id="s3" style="width: 176px">{s3}</div></div>')
+          + item('Espresso', '2.50', 'With sambuca, 4.00.', 10))
+    o.append(f'<div style="position: absolute; left: {L}px; top: 174px; width: {CW}px">{s1}<div style="height: 10px"></div>{s2}'
+             f'<div style="height: 10px"></div><div id="s3" style="width: 176px">{s3}</div></div>')
 
-    o.append(f'<div style="position: absolute; left: 240px; top: 672px; width: 124px; height: 124px; border-radius: 50%; background: {INK}; '
+    o.append(f'<div style="position: absolute; left: 240px; top: 706px; width: 124px; height: 124px; border-radius: 50%; background: {INK}; '
              f'border: 3px solid {GOLD}; box-shadow: 0 0 0 3px {PAPER}, 0 0 0 5px {INK}; transform: rotate(-9deg); text-align: center; box-sizing: border-box; padding-top: 20px">'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.14em; color: #e8d6a4; line-height: 1">CANNOLI</div>'
              f'<div style="font-family: {DISP}; font-size: 24px; line-height: 1.02; color: {PAPER}; margin-top: 6px">YOU&rsquo;RE<br>GOOD.</div>'

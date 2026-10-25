@@ -31,10 +31,10 @@ def soften(im, boxes, r=12):
     return Image.composite(blur, im, m)
 
 HERO_W, HERO_H = 424, 392
-street = Image.open(S('commons-mulberry.jpg')).convert('RGB')
-street = soften(street, [(2270, 1160, 2400, 1300), (870, 1080, 975, 1135), (0, 1000, 420, 1340)])
-street = ImageEnhance.Brightness(street).enhance(1.05)
-fit(street, HERO_W, HERO_H, (430, 0, 3840, 2720), cx=0.42).save(A('mulberry-street.jpg'), quality=90)
+street = Image.open(S('loc-4a27270.jpg')).convert('L')
+street = soften(street, [(950, 205, 1000, 240), (830, 235, 870, 262)], r=8)
+street = ImageEnhance.Contrast(ImageEnhance.Brightness(street).enhance(1.06)).enhance(1.05)
+fit(street, HERO_W, HERO_H, (240, 52, 998, 716), cx=0.0).convert('RGB').save(A('mulberry-street.jpg'), quality=90)
 
 LES_W, LES_H = 252, 176
 lesson = Image.open(S('5FNiyS5m6JXXmPEFG7YWAqcTrFz.jpg')).convert('RGB')
@@ -156,8 +156,8 @@ def front():
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 21px; color: {NAVY}; white-space: nowrap">Little Italy, New York</div>'
              f'<div style="flex: 1; height: 6px; border-top: 3px solid {BLUE}; border-bottom: 1px solid {BLUE}"></div></div>')
     o.append(framed('mulberry-street.jpg', HERO_W - 6, HERO_H - 6,
-                    'Mulberry Street around 1900, pushcarts of fruit and greens, families crowding the street under fire escapes', L, 288,
-                    'Our block, around 1900. Some of these people are still at table four.'))
+                    'Mulberry Street around 1900, a long row of pushcarts piled with fruit and greens under the fire escapes', L, 288,
+                    'Our block on market day, around 1900. Same tomatoes, same family.'))
     # guest of honor band (big gag: the name)
     o.append(f'<div style="position: absolute; left: {L}px; top: 760px; width: {CW + 6}px; height: 194px; background: {NAVY}; box-sizing: border-box; padding: 20px 22px 0">'
              f'{kicker("Tonight&rsquo;s guest of honor", color="#9cc3f0", size=17)}'

@@ -1,0 +1,118 @@
+{"search":{
+    "field": null, 
+    "hits": 1, 
+    "sort_order": null, 
+    "do_facets": true, 
+    "focus_item": null, 
+    "query": "roman catholic church brooklyn", 
+    "type": "search", 
+    "sort_by": null
+},
+"focus":null,
+"views":{
+    "current": "list", 
+    "grid": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&c=80&st=grid", 
+    "list": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&c=80", 
+    "gallery": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&c=80&st=gallery", 
+    "slideshow": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&c=80&st=slideshow"
+},
+"facets":[
+    {
+        "type": "displayed", 
+        "filters": [
+            {
+                "count": 1, 
+                "on": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&fa=displayed%3Aanywhere&c=80&sp=1&fo=json", 
+                "selected": false, 
+                "off": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&c=80&sp=1&fo=json", 
+                "title": "Larger image available anywhere"
+            }, 
+            {
+                "count": 0, 
+                "on": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&fa=displayed%3Alc_only&c=80&sp=1&fo=json", 
+                "selected": false, 
+                "off": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&c=80&sp=1&fo=json", 
+                "title": "Larger image available only at the Library of Congress"
+            }, 
+            {
+                "count": 0, 
+                "on": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&fa=displayed%3Anot_digitized&c=80&sp=1&fo=json", 
+                "selected": false, 
+                "off": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&c=80&sp=1&fo=json", 
+                "title": "Not Digitized"
+            }, 
+            {
+                "count": 0, 
+                "on": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&fa=displayed%3Asurveys_only&c=80&sp=1&fo=json", 
+                "selected": false, 
+                "off": "https://www.loc.gov/pictures/search/?q=roman+catholic+church+brooklyn&c=80&sp=1&fo=json", 
+                "title": "Surveys only"
+            }
+        ], 
+        "title": "displayed"
+    }
+],
+"links":{
+    "json": "https://www.loc.gov/pictures/search/?q=roman%20catholic%20church%20brooklyn&c=80&fo=json", 
+    "html": "https://www.loc.gov/pictures/search/?q=roman%20catholic%20church%20brooklyn&c=80", 
+    "rss": "https://www.loc.gov/pictures/search/?q=roman%20catholic%20church%20brooklyn&c=80&fo=rss"
+},
+"suggestions":{
+    "possible": []
+},
+"pages":{
+    "current": 1, 
+    "next": null, 
+    "perpage": 80, 
+    "last": null, 
+    "page_list": [
+        {
+            "url": null, 
+            "number": 1
+        }
+    ], 
+    "previous": null, 
+    "total": 1, 
+    "results": "1 - 1", 
+    "first": null
+},
+"collection":null,
+"results":[
+    {
+        "source_created": "2020-07-08T00:00:00Z", 
+        "index": 1, 
+        "medium": "1 photograph : color.", 
+        "reproduction_number": "LC-DIG-vrg-13093 (digital file from original)", 
+        "links": {
+            "item": "https://www.loc.gov/pictures/item/2020705699/", 
+            "resource": "https://www.loc.gov/pictures/item/2020705699/resource/"
+        }, 
+        "title": "Santa Barbara Roman Catholic Church, Central Ave. at Bleecker St., built in 1910, Brooklyn, 2002", 
+        "image": {
+            "alt": "digitized item thumbnail", 
+            "full": "https://tile.loc.gov/storage-services/service/pnp/vrg/13000/13093r.jpg", 
+            "square": "https://tile.loc.gov/storage-services/service/pnp/vrg/13000/13093_75x75px.jpg", 
+            "thumb": "https://tile.loc.gov/storage-services/service/pnp/vrg/13000/13093_150px.jpg"
+        }, 
+        "created": "2026-01-13T05:38:27Z", 
+        "modified": "2026-01-13T05:38:29Z", 
+        "collection": [
+            "diof", 
+            "pp", 
+            "vrg"
+        ], 
+        "creator": "Vergara, Camilo J.", 
+        "call_number": "LC-DIG-vrg- 13093 (ONLINE) [P&P]", 
+        "medium_brief": "1 photograph :", 
+        "source_modified": "2026-01-09T15:03:25Z", 
+        "pk": "2020705699", 
+        "created_published_date": "2002.", 
+        "subjects": [
+            "United States--New York (State)--New York--Brooklyn.", 
+            "Brooklyn", 
+            "churches", 
+            "Landmarks", 
+            "Photographs--Color--2000-2010."
+        ]
+    }
+]}

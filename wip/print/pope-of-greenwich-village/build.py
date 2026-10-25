@@ -126,7 +126,7 @@ def front():
             ('8:00', 'Diane', '2', '4', 'Charlie&#39;s guest. Best candle.'),
             ('8:15', 'Det. Ritter', '1', 'Bar', 'Not eating. Just collecting.'),
             ('8:45', 'Paulie', '1', 'Back', 'Staff. Stop seating him.'),
-            ('10:30', 'Bed-Stuy party', '3', '12', 'Paulie&#39;s friends. Cash up front.')]
+            ('9:30', 'Mrs. Ritter', '1', '7', 'The detective&#39;s mother. Be kind.')]
     cols = 'display: grid; grid-template-columns: 62px 196px 40px 52px 1fr; column-gap: 10px; align-items: baseline'
     body = ''
     for t, n, p, tb, note in rows:
