@@ -137,13 +137,13 @@ def plate(text, x, y, size=17, rot=0):
     # street name on a cream plate so it reads over the route
     label(text, x, y, size, rot)
 
-label('BROADWAY', X0 - 30, Y0 + 3.5 * BY + 4, 18, 90)
-label('CANAL ST', (xs[6] + xs[7]) / 2, EAST_Y + 30, 18)
+label('BROADWAY', X0 - 36, Y0 + 3.5 * BY + 4, 28, 90)
+label('CANAL ST', (xs[6] + xs[7]) / 2 + 6, EAST_Y + 36, 28)
 cxl, cyl = (xs[6] + xs[8]) / 2 + 30, ys[2 + 6] + BY / 2
 d.rectangle(k(cxl - 110, cyl - 20, cxl + 110, cyl + 20), fill=CREAM, outline=NAVY, width=2 * K)
 label('CHINATOWN', cxl + 4, cyl, 26, 0, NAVY, 'BSD-800.ttf', 9)
-label('WALKER ST', (xs[8] + xs[9]) / 2, ys[2 + 4], 14, 0)
-label('SQUARE', (xs[3] + xs[4]) / 2, ys[7] + 14, 14, 0)
+label('WALKER ST', (xs[8] + xs[9]) / 2, ys[2 + 4], 24, 0)
+label('SQUARE', (xs[3] + xs[4]) / 2, ys[7] + 16, 24, 0)
 
 # shop marker at block 8, the corner
 cx, cy = X0, EAST_Y
@@ -153,16 +153,16 @@ d.ellipse(k(cx - 6, cy - 6, cx + 6, cy + 6), fill=YEL)
 # callout
 bx0, by0 = 22, EAST_Y + 46
 d.line(k(cx - 8, cy + 22, bx0 + 70, by0), fill=NAVY, width=2 * K)
-d.rectangle(k(bx0, by0, bx0 + 236, by0 + 62), fill=NAVY)
-label('DOCKET, WE ARE HERE', bx0 + 118, by0 + 21, 21, 0, CREAM)
-label('HALFWAY, BLOCK 8', bx0 + 118, by0 + 46, 16, 0, YEL)
+d.rectangle(k(bx0, by0, bx0 + 300, by0 + 80), fill=NAVY)
+label('DOCKET, WE ARE HERE', bx0 + 150, by0 + 27, 29, 0, CREAM)
+label('HALFWAY, BLOCK 8', bx0 + 150, by0 + 60, 24, 0, YEL)
 
 # bus stop sign on the east leg, block 11
 bx, by = X0 + 10.5 * BX - 0 , EAST_Y - 40
 bx = (xs[4] + xs[5]) / 2
 d.line(k(bx, by + 8, bx, EAST_Y - 14), fill=NAVY, width=3 * K)
 d.rounded_rectangle(k(bx - 28, by - 22, bx + 28, by + 10), radius=5 * K, fill=CREAM, outline=NAVY, width=2 * K)
-label('BUS', bx, by - 6, 18, 0)
+label('BUS', bx, by - 6, 22, 0)
 
 # ---- vignette: precinct (top left) ----
 px, py = 34, 18
@@ -187,7 +187,7 @@ for s in (-1, 1):
     d.line(k(lx, py + 100, lx, py + ph), fill=NAVY, width=3 * K)
     d.ellipse(k(lx - 9, py + 88, lx + 9, py + 106), fill=YEL, outline=NAVY, width=2 * K)
 d.rectangle(k(px - 10, py + ph, px + pw + 10, py + ph + 6), fill=NAVY)
-label('THE PRECINCT', px + pw / 2 + 74, py + ph + 22, 19, 0)
+label('THE PRECINCT', px + pw / 2 + 92, py + ph + 26, 28, 0)
 
 # ---- vignette: courthouse (bottom right) ----
 cx0, cy0, cw = 528, EAST_Y + 52, 300
@@ -197,7 +197,7 @@ d.line([tuple(k(cx0 - 6, top)), tuple(k(cx0 + cw / 2, cy0)), tuple(k(cx0 + cw + 
 hatch(None, H45f, poly=[(cx0 + 30, top - 6), (cx0 + cw / 2, cy0 + 12), (cx0 + cw - 30, top - 6)])
 d = ImageDraw.Draw(img)
 d.rectangle(k(cx0 - 10, top, cx0 + cw + 10, top + 14), fill=NAVY)
-label('COURTHOUSE', cx0 + cw / 2, top - 14, 15, 0)
+
 colh = 116
 for c in range(8):
     x = cx0 + 8 + c * (cw - 16) / 7.0
@@ -219,7 +219,7 @@ for s in range(6):
 # route arrow into the steps
 d.line(k(END_X, EAST_Y, END_X, EAST_Y + 6), fill=NAVY, width=K)
 d.polygon([tuple(k(END_X - 14, EAST_Y + 14)), tuple(k(END_X + 14, EAST_Y + 14)), tuple(k(END_X, EAST_Y + 34))], fill=NAVY)
-label('THE COURTS', cx0 + cw / 2, sy + 60, 24, 0)
+label('THE COURTS', cx0 + cw / 2, sy + 62, 32, 0)
 
 # ---- compass ----
 nx, ny = 800, 100
@@ -230,7 +230,7 @@ label('N', nx, ny - 48, 18, 0)
 # scale
 d.rectangle(k(620, 64, 620 + BX, 72), outline=NAVY, width=K * 2, fill=CREAM)
 d.rectangle(k(620, 64, 620 + BX / 2, 72), fill=NAVY)
-label('ONE BLOCK', 620 + BX / 2, 90, 14, 0)
+label('ONE BLOCK', 620 + BX / 2, 94, 24, 0)
 
 # border
 d.rectangle(k(3, 3, W - 4, H - 4), outline=NAVY, width=4 * K)
@@ -249,7 +249,7 @@ w = Image.new('L', (BW // 8, BH // 8), 0)
 wd = ImageDraw.Draw(w)
 for i in range(40):
     a = int(i * 3.2)
-    wd.rectangle((i, i, BW // 8 - 1 - i, BH // 8 - 1 - i), outline=max(0, 130 - a))
+    wd.rectangle((i, i, BW // 8 - 1 - i, BH // 8 - 1 - i), outline=max(0, 64 - a))
 w = w.resize((BW, BH), Image.BICUBIC).filter(ImageFilter.GaussianBlur(40))
 rgba = Image.new('RGBA', (BW, BH), (8, 14, 28, 0)); rgba.putalpha(w)
 rgba.save(os.path.join(A, 'wear-board.png'))

@@ -1,0 +1,30 @@
+{
+ "fmt": "cityrun",
+ "fn": "fmtCityrun",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Lunch menu",
+  "Parents news"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Arimo:ital,wght@0,400;0,700;1,400&family=Tinos:ital,wght@0,400;0,700;1,400&family=Reenie+Beanie",
+ "fams": [
+  "Tinos",
+  "Arimo",
+  "Reenie Beanie"
+ ],
+ "phone": {
+  "disp": "'Tinos',serif",
+  "title": "'Tinos',serif",
+  "name": "'Tinos',serif",
+  "body": "'Tinos',serif",
+  "price": "'Arimo',sans-serif",
+  "note": "'Arimo',sans-serif"
+ }
+}

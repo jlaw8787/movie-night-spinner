@@ -1,8 +1,8 @@
 """Moonlight Coffee Shop & Deli menu, Three Men and a Baby (1987).
 Single heavy card, one face, US Letter: the all-night delivery menu from the coffee shop on the ground floor
-of the loft building. Signature piece: the building front at night with the bassinet on the doorstep (paint.py).
+of the loft building. Hero: a real photo of a SoHo cast-iron loft front, toned night blue (photo.py, HABS NY-5459).
 Props: grocery delivery coupon and a "Shh, baby sleeping" door sign.
-Writes menu.html, film.json and loftsupper.labels.json. Run paint.py first."""
+Writes menu.html, film.json and loftsupper.labels.json. Run photo.py first."""
 import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
@@ -69,7 +69,7 @@ def kicker(t, extra=''):
 
 PH = 322  # painting height on the card
 painting = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height: {PH}px; overflow: hidden; background: {NIGHT}">
-  <img src="assets/loft-night.png" alt="The loft building at night: the coffee shop lit under a striped awning, a bassinet with a note on the top step under the door lamp" style="position: absolute; left: 0; top: -40px; width: {W}px; height: 420px; display: block"></div>
+  <img src="assets/loft-photo.jpg" alt="Photograph of a SoHo cast-iron loft building, arched windows stacked floor on floor under a deep cornice, toned night blue" style="position: absolute; left: 0; top: 0; width: {W}px; height: {PH}px; display: block"></div>
 <div style="position: absolute; left: 0; top: {PH}px; width: {W}px; height: 6px; background: {ROSE}"></div>
 <div style="position: absolute; left: 0; top: {PH + 6}px; width: {W}px; height: 4px; background: {SKY}"></div>
 <div style="position: absolute; left: 44px; top: 40px; width: 300px">

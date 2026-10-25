@@ -1,0 +1,30 @@
+{
+ "fmt": "escape",
+ "fn": "fmtEscape",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  254.0,
+  177.8
+ ],
+ "fonts": "family=Black+Ops+One&family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nothing+You+Could+Do",
+ "fams": [
+  "Black Ops One",
+  "Barlow Semi Condensed",
+  "Nothing You Could Do"
+ ],
+ "phone": {
+  "disp": "'Black Ops One',sans-serif",
+  "title": "'Black Ops One',sans-serif",
+  "name": "'Barlow Semi Condensed',sans-serif",
+  "body": "'Barlow Semi Condensed',sans-serif",
+  "price": "'Barlow Semi Condensed',sans-serif",
+  "note": "'Barlow Semi Condensed',sans-serif"
+ }
+}

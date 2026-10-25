@@ -15,8 +15,8 @@ im.save(os.path.join(A, 'mulberry.jpg'), quality=90)
 
 # Back still: the glass of milk on the checked cloth (TMDB).
 st = Image.open(os.path.join(DL, 'milk.jpg')).convert('RGB')
-sw, sh = st.size; ch = round(sw * 236 / 448)
-st = st.crop((0, sh - ch, sw, sh)).resize((896, 472), Image.LANCZOS)
+sw, sh = st.size; ch = round(sw * 210 / 448)
+st = st.crop((0, sh - ch, sw, sh)).resize((896, 420), Image.LANCZOS)
 st = ImageEnhance.Brightness(st).enhance(1.16); st = ImageEnhance.Contrast(st).enhance(1.04)
 st.save(os.path.join(A, 'milk.jpg'), quality=90)
 

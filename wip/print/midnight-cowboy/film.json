@@ -1,0 +1,30 @@
+{
+ "fmt": "southbound",
+ "fn": "fmtSouthbound",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  127.0,
+  177.8
+ ],
+ "fonts": "family=Fascinate&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Gochi+Hand",
+ "fams": [
+  "Fascinate",
+  "Libre Franklin",
+  "Gochi Hand"
+ ],
+ "phone": {
+  "disp": "'Fascinate',serif",
+  "title": "'Fascinate',serif",
+  "name": "'Libre Franklin',sans-serif",
+  "body": "'Libre Franklin',sans-serif",
+  "price": "'Libre Franklin',sans-serif",
+  "note": "'Libre Franklin',sans-serif"
+ }
+}

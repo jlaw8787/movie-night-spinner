@@ -1,0 +1,30 @@
+{
+ "fmt": "leon",
+ "fn": "fmtLeon",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  139.7,
+  355.6
+ ],
+ "fonts": "family=Cormorant+SC:wght@500;700&family=Spectral:ital,wght@0,400;0,600;1,400&family=Allura",
+ "fams": [
+  "Cormorant SC",
+  "Spectral",
+  "Allura"
+ ],
+ "phone": {
+  "disp": "'Cormorant SC',serif",
+  "title": "'Cormorant SC',serif",
+  "name": "'Cormorant SC',serif",
+  "body": "'Spectral',serif",
+  "price": "'Spectral',serif",
+  "note": "'Spectral',serif"
+ }
+}

@@ -2,29 +2,27 @@
  "fmt": "cityrun",
  "fn": "fmtCityrun",
  "faces": [
-  "front.html",
-  "back.html"
+  "placemat.html"
  ],
  "names": [
-  "Lunch menu",
-  "Parents news"
+  "Kids' placemat"
  ],
  "mm": [
-  215.9,
-  279.4
+  355.6,
+  254
  ],
- "fonts": "family=Arimo:ital,wght@0,400;0,700;1,400&family=Tinos:ital,wght@0,400;0,700;1,400&family=Reenie+Beanie",
+ "fonts": "family=Titan+One&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;0,900;1,400&family=Reenie+Beanie",
  "fams": [
-  "Tinos",
-  "Arimo",
+  "Titan One",
+  "Nunito Sans",
   "Reenie Beanie"
  ],
  "phone": {
-  "disp": "'Tinos',serif",
-  "title": "'Tinos',serif",
-  "name": "'Tinos',serif",
-  "body": "'Tinos',serif",
-  "price": "'Arimo',sans-serif",
-  "note": "'Arimo',sans-serif"
+  "disp": "'Titan One',sans-serif",
+  "title": "'Titan One',sans-serif",
+  "name": "'Nunito Sans',sans-serif",
+  "body": "'Nunito Sans',sans-serif",
+  "price": "'Nunito Sans',sans-serif",
+  "note": "'Nunito Sans',sans-serif"
  }
 }

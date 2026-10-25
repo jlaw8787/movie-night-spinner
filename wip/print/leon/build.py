@@ -16,8 +16,8 @@ def kicker(t, color=RED, extra=''):
     return (f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; letter-spacing: 0.22em; color: {color}; '
             f'text-transform: uppercase; line-height: 1;{extra}">{t}</div>')
 
-def section(k, t):
-    return (f'<div style="margin-top: 26px">{kicker(k)}'
+def section(k, t, mt=26):
+    return (f'<div style="margin-top: {mt}px">{kicker(k)}'
             f'<div style="display: flex; align-items: center; gap: 14px; margin-top: 8px">'
             f'<img src="assets/gingham-square.png" alt="" aria-hidden="true" style="display: block; width: 26px; height: 26px">'
             f'<div style="font-family: {DISP}; font-weight: 700; font-size: 46px; line-height: 0.9; color: {CREAM}; letter-spacing: 0.02em">{t}</div></div>'
@@ -46,17 +46,17 @@ def card(x, y):
             f'<div style="position: absolute; left: 0; top: 12px; width: 212px; text-align: center; font-family: {DISP}; font-weight: 700; font-size: 34px; line-height: 1; color: #a83524">Tony&rsquo;s</div>'
             f'<div style="position: absolute; left: 0; top: 48px; width: 212px; text-align: center; font-family: {BODY}; font-size: 14px; line-height: 1.3; color: #2b1e17">'
             f'Tony, proprietor<br>Mulberry St., New York<br>(212) 555-0194</div>'
-            f'<div style="position: absolute; left: 118px; top: 84px; font-family: {SCRIPT}; font-size: 30px; line-height: 1; color: #2c3a78; transform: rotate(-8deg)">Thurs. T.</div>'
+            f'<div style="position: absolute; left: 130px; top: 98px; font-family: {SCRIPT}; font-size: 26px; line-height: 1; color: #2c3a78; transform: rotate(-8deg)">Thurs. T.</div>'
             '</div>')
 
 def coupon(x, y):
     """Prop: a cut-out milk coupon."""
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 184px; height: 118px; background: #f6efe0; '
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 200px; height: 118px; background: #f6efe0; '
             f'box-shadow: 0 3px 8px rgba(0,0,0,0.45); transform: rotate(-4deg); padding: 6px; box-sizing: border-box">'
             f'<div style="border: 2px dashed #a83524; height: 102px; box-sizing: border-box; text-align: center; padding-top: 7px">'
             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 14px; letter-spacing: 0.2em; color: #a83524; line-height: 1">COUPON</div>'
             f'<div style="font-family: {DISP}; font-weight: 700; font-size: 25px; line-height: 0.95; color: #2b1e17; margin-top: 5px">Free Glass<br>of Cold Milk</div>'
-            f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.2; color: #2b1e17; margin-top: 4px">with dinner. Limit two quarts.</div>'
+            f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.2; color: #2b1e17; margin-top: 4px">Limit two quarts.</div>'
             '</div></div>')
 
 def photo(src, alt, x, y, w, h):
@@ -71,11 +71,11 @@ def caption(t, y):
 def front():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 50px; width: {CW}px">{kicker("Mulberry Street, Little Italy")}</div>')
-    o.append(f'<div style="position: absolute; left: {L - 4}px; top: 70px; font-family: {DISP}; font-weight: 700; font-size: 116px; line-height: 1; color: {CREAM}; letter-spacing: 0.01em">TONY&rsquo;S</div>')
+    o.append(f'<div style="position: absolute; left: {L - 1}px; top: 70px; font-family: {DISP}; font-weight: 700; font-size: 116px; line-height: 1; color: {CREAM}; letter-spacing: 0.01em">TONY&rsquo;S</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 186px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 21px; line-height: 1.2; color: {SOFT}">Ristorante. Lunch and dinner, every day.</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 224px; width: {CW}px; height: 2px; background: {RED}"></div>')
     o.append(photo('assets/mulberry.jpg', 'Mulberry Street around 1900, crowded with pushcarts, awnings and families', L, 246, CW, 488))
-    o.append(card(292, 232))
+    o.append(card(268, 236))
     o.append(caption('Our block of Mulberry Street, 1900. Still feeding it.', 746))
     col = section('Dalla cucina', 'Pasta')
     col += item('Spaghetti Tony', '8.95', 'San Marzano tomatoes crushed by hand, garlic cooked slow, basil and a knob of butter. Parmigiano on the side.', 'Ask for Tony.')
@@ -85,26 +85,26 @@ def front():
     o.append(f'<div style="position: absolute; left: {L}px; top: 1196px; width: {CW}px; height: 1px; background: {RED}; opacity: 0.7"></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 1208px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 1.36; color: {CREAM}">'
              'My regulars sit in the back, drink their milk and say nothing. Quiet people, I trust. Mangia.</div>')
-    o.append(f'<div style="position: absolute; left: {L + 290}px; top: 1250px; font-family: {SCRIPT}; font-size: 48px; line-height: 1; color: {CREAM}">Tony</div>')
+    o.append(f'<div style="position: absolute; left: {L + 330}px; top: 1246px; font-family: {SCRIPT}; font-size: 48px; line-height: 1; color: {CREAM}">Tony</div>')
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
 def back():
     o = []
-    o.append(photo('assets/milk.jpg', 'A tall glass of milk between two hands on a red checked tablecloth', L, 52, CW, 236))
-    o.append(coupon(316, 34))
-    o.append(caption('The back table. Cold milk, checked cloth, no questions.', 300))
+    o.append(photo('assets/milk.jpg', 'A tall glass of milk between two hands on a red checked tablecloth', L, 52, CW, 210))
+    o.append(coupon(282, 30))
+    o.append(caption('The back table. Cold milk, checked cloth, no questions.', 274))
     col = section('Per cominciare', 'Antipasti')
     col += item('The French Loaf', '6.50', 'Crusty bread spread thick with sweet butter, thin boiled ham and little sour pickles, cut in twelve.')
-    col += item('Olive Calde', '4.25', 'Mixed and warmed in oil with orange peel, thyme and garlic. Cornichons and pickled onions alongside.')
-    col += section('Dal banco', 'Dolci')
-    col += item('The Window Pot', '4.50', 'Dark chocolate mousse under crushed cookie soil in a little clay pot, fresh mint growing out the top.', 'Likes the sun.')
+    col += item('Olive Calde', '4.25', 'Warmed in oil with orange peel, thyme and garlic, with cornichons and pickled onions.')
+    col += section('Dal banco', 'Dolci', 20)
+    col += item('The Window Pot', '4.50', 'Chocolate mousse and cookie soil in a clay pot, a mint sprig growing out the top.', 'Likes the sun.')
     col += item('Cannoli', '3.25', 'Crisp shells filled to order with sweet ricotta and chocolate chips.')
-    col += section('Da bere', 'Bevande')
-    col += item('Vanilla Malted', '3.75', 'Whole milk blended thick with ice cream, malt and honey, in a frosted glass.', gap=12)
+    col += section('Da bere', 'Bevande', 20)
+    col += item('Vanilla Malted', '3.75', 'Milk, ice cream, malt and honey, frosted glass.', gap=12)
     col += item('Cold Milk', '1.25', 'Whole, poured tall. A quart to go, 1.94.', gap=12)
     col += item('Champagne', '6.50', 'By the glass, well chilled.', 'Over eighteen only.', gap=12)
-    o.append(f'<div style="position: absolute; left: {L}px; top: 322px; width: {CW}px">{col}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 290px; width: {CW}px">{col}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 1250px; width: {CW}px; text-align: center; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {SOFT}">'
              'Prices subject to change. Thursday nights, a little Beethoven.<br>Mulberry St., New York, N.Y. 10013. Form 194. 1994.</div>')
     return page(''.join(o), 'back')
