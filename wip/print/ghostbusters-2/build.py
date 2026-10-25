@@ -30,12 +30,12 @@ lib = lib.filter(ImageFilter.UnsharpMask(radius=2, percent=90, threshold=2))
 lib = ImageOps.colorize(lib, black='#1c1420', white='#f7f1e6', mid='#857a78')   # warm silver print, no muddy tint
 lib = ImageEnhance.Brightness(lib).enhance(1.05)
 LIB_W, LIB_H = 480, 280
-fit(lib, LIB_W, LIB_H, (40, 40, 820, 700)).save(A('liberty-1892.jpg'), quality=90)
+fit(lib, LIB_W, LIB_H, (25, 48, 815, 509)).save(A('liberty-1892.jpg'), quality=90)
 
 vigo = Image.open(S('o-bXcD5ZrA5noh509iLurKoytFwOB.jpg')).convert('RGB')
 vigo = ImageEnhance.Brightness(ImageEnhance.Contrast(vigo).enhance(1.05)).enhance(1.12)
-VIG_W, VIG_H = CW - 8, 184
-fit(vigo, VIG_W, VIG_H, (0, 40, 1421, 800)).save(A('still-vigo.jpg'), quality=90)
+VIG_W, VIG_H = CW - 8, 166
+fit(vigo, VIG_W, VIG_H, (0, 0, 1421, 640)).save(A('still-vigo.jpg'), quality=90)
 
 def wear(name, seed):
     rnd = random.Random(seed)
@@ -90,7 +90,7 @@ def at(x, y, html, w=CW, extra=''):
 def plate(t, w):
     """Museum label plate laid along the foot of a picture."""
     return (f'<div style="position: absolute; left: 0; bottom: 0; width: {w}px; box-sizing: border-box; background: rgba(43,23,51,0.86); '
-            f'padding: 6px 12px 7px; font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {PAPER}">{t}</div>')
+            f'padding: 6px 16px 7px; font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {PAPER}">{t}</div>')
 
 # ---------------- props ----------------
 def admission_button(x, y, d=92):
@@ -104,21 +104,20 @@ def admission_button(x, y, d=92):
             f'<div style="margin-top: 4px; font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.12em; line-height: 1; color: {INK}">ADMIT ONE</div>'
             '</div></div>')
 
-def slime_sticker(x, y, d=118):
-    """Round kitchen sticker: a pink drip with the red circle and bar through it."""
-    ring = d - 52
-    drip = (f'<div style="position: absolute; left: {(d - 34) // 2}px; top: 30px; width: 34px; height: 30px; border-radius: 50% 50% 46% 46%; background: {PINK}"></div>'
-            f'<div style="position: absolute; left: {(d - 34) // 2 + 6}px; top: 52px; width: 9px; height: 16px; border-radius: 0 0 6px 6px; background: {PINK}"></div>'
-            f'<div style="position: absolute; left: {(d - 34) // 2 + 20}px; top: 54px; width: 8px; height: 10px; border-radius: 0 0 5px 5px; background: {PINK}"></div>')
-    no = (f'<div style="position: absolute; left: {(d - ring) // 2}px; top: 18px; width: {ring}px; height: {ring}px; border-radius: 50%; border: 6px solid #d1202f; box-sizing: border-box"></div>'
-          f'<div style="position: absolute; left: {(d - ring) // 2 + 2}px; top: {18 + ring // 2 - 3}px; width: {ring - 4}px; height: 6px; background: #d1202f; transform: rotate(-45deg)"></div>')
+def slime_sticker(x, y, d=132):
+    """Round kitchen sticker: a pink drip with the red circle and bar through it, words above and below."""
+    ring = 56; rx = (d - ring) // 2; ry = 36
+    cx = d // 2
+    drip = (f'<div style="position: absolute; left: {cx - 15}px; top: {ry + 12}px; width: 30px; height: 24px; border-radius: 50% 50% 46% 46%; background: {PINK}"></div>'
+            f'<div style="position: absolute; left: {cx - 10}px; top: {ry + 30}px; width: 8px; height: 13px; border-radius: 0 0 5px 5px; background: {PINK}"></div>'
+            f'<div style="position: absolute; left: {cx + 3}px; top: {ry + 31}px; width: 7px; height: 9px; border-radius: 0 0 4px 4px; background: {PINK}"></div>')
+    no = (f'<div style="position: absolute; left: {rx}px; top: {ry}px; width: {ring}px; height: {ring}px; border-radius: 50%; border: 6px solid #d1202f; box-sizing: border-box"></div>'
+          f'<div style="position: absolute; left: {rx + 3}px; top: {ry + ring // 2 - 3}px; width: {ring - 6}px; height: 6px; background: #d1202f; transform: rotate(-45deg)"></div>')
+    word = lambda t, top, wt: (f'<div style="position: absolute; left: 0; top: {top}px; width: {d - 6}px; text-align: center; font-family: {BODY}; font-weight: {wt}; '
+                               f'font-size: 14px; letter-spacing: 0.04em; line-height: 1; color: {INK}">{t}</div>')
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {d}px; height: {d}px; border-radius: 50%; background: #ffffff; '
             f'box-shadow: 0 2px 6px rgba(30,10,30,0.35); transform: rotate(-10deg); border: 3px solid {INK}; box-sizing: border-box">'
-            + drip + no +
-            f'<div style="position: absolute; left: 0; top: {d - 34}px; width: {d - 6}px; text-align: center; font-family: {BODY}; font-weight: 800; font-size: 14px; '
-            f'letter-spacing: 0.06em; line-height: 1; color: {INK}">SLIME-FREE</div>'
-            f'<div style="position: absolute; left: 0; top: {d - 20}px; width: {d - 6}px; text-align: center; font-family: {BODY}; font-weight: 600; font-size: 14px; '
-            f'letter-spacing: 0.14em; line-height: 1; color: {INK}">KITCHEN</div></div>')
+            + word('SLIME-FREE', 16, 800) + drip + no + word('KITCHEN', ry + ring + 8, 800) + '</div>')
 
 def janosz_note(x, y, w=232):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; box-sizing: border-box; background: {CARD}; '
@@ -140,15 +139,15 @@ def front():
              f'<div style="position: absolute; left: 0; bottom: -4px; width: {LIB_W}px; height: 4px; background: {PINK}"></div></div>')
     o.append(at(M, 322, kicker('Manhattan Museum of Art')))
     o.append(at(M - 2, 346, f'<div style="font-family: {DISP}; font-size: 56px; line-height: 1; color: {INK}; white-space: nowrap">ROTUNDA CAFE</div>', CW + 4))
-    o.append(at(M, 410, f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; letter-spacing: 0.04em; line-height: 1.2; color: {MUTE}">'
-                'Lunch, tea and early supper. Tuesday to Sunday.</div>'))
+    o.append(at(M, 410, f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; letter-spacing: 0; line-height: 1.2; color: {MUTE}; white-space: nowrap">'
+                'Lunch, tea and early supper, Tuesday to Sunday.</div>'))
     menu = (band('SMALL PLATES')
             + item('Pink beet and feta dip', '3.75', 'Roast beets whipped with yogurt, garlic, lemon and dill. Warm flatbread wedges.', 10)
             + item('Toasted crumpets', '2.25', 'Whipped honey butter and a pinch of salt.')
             + item('Mini bagel pizzas', '3.50', 'Hot salami, mozzarella and chili honey.')
             + item('Fifth Avenue frank', '2.55', 'Mustard, green relish, onion, sauerkraut.'))
     o.append(at(M, 444, menu))
-    o.append(admission_button(W - 132, 168))
+    o.append(admission_button(W - 136, 34))
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
@@ -160,17 +159,17 @@ def back():
                 f'style="display: block; width: {VIG_W}px; height: {VIG_H}px">'
                 + plate('<b style="letter-spacing: 0.12em">UPSTAIRS IN RESTORATION.</b> Prince Vigo of Carpathia, 16th century, being cleaned.', VIG_W) +
                 '</div></div>'))
-    o.append(janosz_note(M, 244, 300))
-    o.append(slime_sticker(W - 40 - 116, 240, 116))
+    o.append(janosz_note(M, 226, 300))
+    o.append(slime_sticker(W - 36 - 132, 214, 132))
     menu = (band('SUPPER')
-            + item('Carpathian goulash', '6.10', 'Beef chuck braised slowly with sweet paprika, onions, caraway and tomato. Egg noodles, sour cream.', 10)
+            + item('Carpathian goulash', '6.10', 'Slow paprika beef with onions, caraway and tomato. Egg noodles, sour cream.', 10)
             + f'<div style="margin-top: 14px">{band("SWEETS AND DRINKS")}</div>'
-            + item('Pink lemonade gelatin', '1.89', 'Set in a ring with raspberries. Wobbles when the band plays.', 10)
+            + item('Pink lemonade gelatin', '1.89', 'Raspberries set inside, and it wobbles when the band plays.', 10)
             + item('Pink lemonade cooler', '1.50', 'Poured over raspberry sorbet so it foams up.')
             + item('Hot cocoa, coffee or tea', '.95'))
-    o.append(at(M, 376, menu))
-    o.append(at(M, 740, f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.3; color: {MUTE}">'
-                'Strollers please park at the coat check. Prices subject to change.<br>Form MMA-1231. Manhattan Museum of Art, New York, 1989.</div>'))
+    o.append(at(M, 350, menu))
+    o.append(at(M, 740, f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.3; color: {MUTE}; white-space: nowrap">'
+                'Prices subject to change. Strollers park at coat check.<br>Form MMA-1231. Manhattan Museum of Art, New York, 1989.</div>'))
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}

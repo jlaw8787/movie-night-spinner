@@ -1,0 +1,29 @@
+{
+ "fmt": "pizzatime",
+ "fn": "fmtPizzaTime",
+ "faces": [
+  "flyer.html"
+ ],
+ "names": [
+  "Flyer"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Lilita+One&family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@600;700&family=Reenie+Beanie",
+ "fams": [
+  "Lilita One",
+  "Barlow",
+  "Barlow Condensed",
+  "Reenie Beanie"
+ ],
+ "phone": {
+  "disp": "'Lilita One',sans-serif",
+  "title": "'Lilita One',sans-serif",
+  "name": "'Lilita One',sans-serif",
+  "body": "'Barlow',sans-serif",
+  "price": "'Lilita One',sans-serif",
+  "note": "'Barlow',sans-serif"
+ }
+}
