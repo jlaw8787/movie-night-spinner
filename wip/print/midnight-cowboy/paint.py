@@ -44,7 +44,8 @@ ROAD = 214
 # sky: orange tint screen fading to paper at the horizon, plus a thin black screen high up
 for y in range(0, HZ):
     k = y / HZ
-    o.line(P(0, y, AW, y), fill=int(80 * (1 - k) ** 1.3 + 14), width=S)
+    o.line(P(0, y, AW, y), fill=int(96 * (1 - k) ** 1.2 + 16), width=S)
+    t.line(P(0, y, AW, y), fill=int(70 * (1 - k) ** 1.8), width=S)
 # clouds: knocked out of both plates, edged with line
 for cx, cy, rx, ry in ((70, 34, 44, 11), (106, 27, 28, 12), (204, 54, 36, 8), (228, 49, 22, 8)):
     for d_ in (o, t):
@@ -74,7 +75,8 @@ for y in range(SHORE + 8, ROAD, 6):
     for x0 in range((y * 7) % 23, AW, 23):
         l.point([(x0 * S + dx, y * S + dy) for dx in range(4) for dy in range(4)], fill=200)
 # road
-t.rectangle(P(0, ROAD, AW, AH), fill=96)
+for y in range(ROAD, AH):
+    t.line(P(0, y, AW, y), fill=int(70 + 90 * ((y - ROAD) / (AH - ROAD)) ** 1.2), width=S)
 l.rectangle(P(0, ROAD, AW, ROAD + 1.5), fill=255)
 for x0 in range(-6, AW, 34):
     t.rectangle(P(x0, 262, x0 + 18, 265), fill=0)
@@ -118,7 +120,9 @@ bx0, bx1, by0, by1 = 14, 252, 150, 240
 l.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=0)
 t.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=20)
 for y in range(by0 + 46, by1):
-    t.line(P(bx0 + 2, y, bx1 - 2, y), fill=int(30 + (y - by0 - 46) * 1.6), width=S)
+    t.line(P(bx0 + 2, y, bx1 - 2, y), fill=int(24 + ((y - by0 - 46) / (by1 - by0 - 46)) ** 1.4 * 120), width=S)
+for y in range(by0 + 2, by0 + 10):
+    t.line(P(bx0 + 4, y, bx1 - 4, y), fill=int(50 - (y - by0) * 5), width=S)
 o.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=0)
 l.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, outline=255, width=int(1.6 * S))
 # roof marker lamps and roof rib
@@ -188,9 +192,19 @@ def screen(plate, cell, angle, w, h):
 tb = screen(tone, 3 * S, 45, W, H)
 lb = np.asarray(line, dtype=np.float32) / 255.0
 blk = np.maximum(tb, lb)
+# ink spread: dots and lines swell and round off where the press ran heavy, unevenly across the sheet
+rng = np.random.default_rng(4)
+gain = np.asarray(Image.fromarray((rng.random((H // 64 + 1, W // 64 + 1)) * 255).astype(np.uint8)).resize((W, H), Image.BICUBIC), dtype=np.float32) / 255.0
+def spread(cov, rad, base):
+    b = np.asarray(Image.fromarray((cov * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(rad)), dtype=np.float32) / 255.0
+    thr = base - 0.14 * gain
+    out = np.clip((b - thr) / 0.10 + 0.5, 0, 1)
+    return np.asarray(Image.fromarray((out * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.0)), dtype=np.float32) / 255.0
+blk = spread(blk, 2.2, 0.42)
 ob = screen(org, 3 * S, 75, W, H)
 ob = np.maximum(ob, (np.asarray(org, dtype=np.float32) > 250).astype(np.float32))
 # misregister the orange plate by 3 css px right, 2 up (scaled at 4x)
+ob = spread(ob, 2.0, 0.45)
 ob = np.roll(np.roll(ob, 3 * S // 2, axis=1), -S, axis=0)
 
 paper = np.array(PAPER, dtype=np.float32) / 255
