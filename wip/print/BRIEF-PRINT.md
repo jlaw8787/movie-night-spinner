@@ -28,3 +28,15 @@ Work only in /home/claude/polish/wip/print/<slug>/ (create it). Do not touch for
 
 ## Self-check before you finish
 Render, open every PNG with Read, and look closely: collisions, clipped text, one-word last lines, uneven gaps, anything near a fold or edge, anything that looks like a template. Then fix and look again. Run a dash check over the text.
+
+## Kit rules (added after the first four went live)
+- References: also look at /home/claude/polish/wip/print/chud/, youve-got-mail/, moonstruck/ (notice.png, front.png, back.png). Each is a different object. Yours must not look like any of them.
+- Print files: web plus home PDF only. You do NOT need the 3mm bleed printer PDF or font instancing. One trim PDF made with Chromium is enough.
+- Fonts: Google Fonts only, loaded with one css2 link. Note the exact css2 query in film.json.
+- Every printed dish that comes from the film's recipe must match that recipe (same main ingredients and method). Change wording, not food. Added items (drinks, sides, kids' plates) are fine and need no recipe. Check the recipe in formats.js (the spec's d) and data/films.json or data/recipes/<slug>.json.
+- Texture overlays (grain, wear, stains) must be soft and low-detail: big gentle mottling and edge wear, not pixel noise. A shared fine paper grain already exists, use it by placing <img src="assets/paper-grain.png"> where assets/paper-grain.png is a copy of /home/claude/polish/wip/print/jurassic/src/assets/paper-grain.png. Name texture files with grain, wear, stain or paper in the name.
+- Each face must be one root div with inline width and height in px (for example 816x1056 for US Letter, 1123x794 for A4 landscape, 528x816 for half letter). All faces the same size. Portrait faces show side by side on the site, landscape faces stack.
+- Build mode: your build.py must write one full HTML file per face (for example front.html, back.html) with image paths relative to your folder.
+- Also write film.json in your folder: {"fmt":"<fmt>","fn":"<renderer function name>","faces":["front.html",...],"names":["Front",...],"mm":[W,H],"fonts":"family=...","fams":["Font A","Font B"],"phone":{"disp":"'Font A',serif","title":"'Font A',serif","name":"'Font B',serif","body":"'Font B',serif","price":"'Font B',serif","note":"'Font B',serif"}} using the fmt and function name you are given.
+- Write <fmt>.labels.json in your folder: {"<Film id>": {"<spec item k>": {"n": "printed name", "d": "printed description", "note": "short in-world line"}, ...}} for every spec dish, so the phone view matches the print.
+- Do not edit formats.js or anything outside your folder. I integrate onto the site.
