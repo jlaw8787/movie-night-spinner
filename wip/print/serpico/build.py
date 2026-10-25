@@ -6,7 +6,7 @@ Writes front.body.html / back.body.html and full pages front.html / back.html.""
 import os
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
-PAPER, DARK, RED, MUTE = '#f3ead6', '#211d1b', '#b5262b', '#5d544c'
+PAPER, DARK, RED, MUTE = '#e5ead3', '#1d2b22', '#b5262b', '#4c5a4c'
 FONTS = ('https://fonts.googleapis.com/css2?family=Antonio:wght@600;700'
          '&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&family=Yellowtail&display=swap')
 DISP = "'Antonio', sans-serif"; BODY = "'Libre Baskerville', serif"
@@ -16,8 +16,8 @@ def kicker(t, color=RED, extra=''):
     return f'<div style="font-family: {DISP}; font-weight: 700; font-size: 19px; letter-spacing: 0.24em; color: {color}; text-transform: uppercase; line-height: 1;{extra}">{t}</div>'
 
 def bar(t, size=42):
-    return (f'<div style="display: inline-block; background: {DARK}; color: {PAPER}; font-family: {DISP}; font-weight: 700; '
-            f'font-size: {size}px; line-height: 1; letter-spacing: 0.02em; padding: 8px 16px 9px; text-transform: uppercase">{t}</div>')
+    return (f'<div style="display: inline-block; border-top: 5px solid {RED}; border-bottom: 2px solid {RED}; color: {DARK}; font-family: {DISP}; font-weight: 700; '
+            f'font-size: {size}px; line-height: 1; letter-spacing: 0.02em; padding: 7px 2px 8px; text-transform: uppercase">{t}</div>')
 
 def item(name, price, desc, gap=18):
     return (f'<div style="margin-top: {gap}px">'
@@ -45,7 +45,7 @@ def check(o, gx, gy):
         rows += (f'<div style="position: absolute; left: 0; top: {58 + i * 27}px; width: 214px; height: 27px; border-bottom: 1px solid #9fbfa6"></div>'
                  f'<div style="position: absolute; left: 12px; top: {60 + i * 27}px; width: 194px; display: flex; justify-content: space-between; '
                  f'font-family: {HAND}; font-size: 20px; line-height: 1.2; color: #23336f"><span>{t}</span><span>{p or ""}</span></div>')
-    o.append(f'<div style="position: absolute; left: {gx}px; top: {gy}px; width: 214px; height: 206px; background: #e4eedf; '
+    o.append(f'<div style="position: absolute; left: {gx}px; top: {gy}px; width: 214px; height: 206px; background: #fbfaf4; '
              f'box-shadow: 0 2px 6px rgba(40,30,20,0.28); transform: rotate(4deg)">'
              f'<div style="position: absolute; left: 0; top: 0; width: 214px; height: 46px; border-bottom: 2px solid #3f7d57; display: flex; '
              f'justify-content: space-between; align-items: center; padding: 0 12px; box-sizing: border-box; font-family: {DISP}; font-weight: 700; '
@@ -72,15 +72,15 @@ def front():
              f'font-family: {BODY}; font-style: italic; font-size: 16px; color: {MUTE}">'
              f'<span>Our store on West 10th, a few doors from the Sixth Precinct.</span></div>')
     # the steam table
-    o.append(f'<div style="position: absolute; left: {L}px; top: 584px; width: {CW}px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 560px; width: {CW}px">'
              f'<div style="display: flex; align-items: flex-end; justify-content: space-between">{bar("Hot from the steam table")}'
-             f'{kicker("On rye or a roll", RED, " margin-bottom: 6px")}</div>'
+             f'<img src="assets/spot-sandwich.png" alt="Pastrami on rye with a pickle" style="display: block; width: 220px; height: 92px; margin-bottom: -6px"></div>'
              + item('Hot pastrami on rye', '1.35', 'Steamed soft, hand sliced, piled high, with mustard and a pickle.')
              + item('The Village hero', '1.73', 'Steamed pastrami, Swiss, slaw and Russian dressing on a long roll.')
              + item('Hot corned beef on rye', '1.35', 'Brisket cured in our own brine, carved to order, with mustard.')
              + item('Roast beef on a kaiser', '1.25', 'Rare top round, sliced thin while you wait. Ask for it lean.')
              + '</div>')
-    check(o, L + CW - 210, 372)
+    check(o, L + CW - 210, 318)
     o.append(f'<div style="position: absolute; left: {L}px; top: 986px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
              f'<div style="position: absolute; left: {L}px; top: 994px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
              f'<span>Any sandwich as a platter, with slaw, potato salad and pickle, 60&cent; more.</span><span>Over, please</span></div>')
@@ -112,10 +112,11 @@ def back():
              + item('Coffee or tea', '.10', 'Hot all day. Tea comes in a glass.'))
     o.append(col(L, left)); o.append(col(X2, right))
     # the owner's note
-    o.append(f'<div style="position: absolute; left: {X2}px; top: 690px; width: {COLW}px; height: 1px; background: {DARK}; opacity: 0.45"></div>')
-    o.append(f'<div style="position: absolute; left: {X2}px; top: 708px; width: {COLW}px">{kicker("From the counter")}'
+    o.append(f'<div style="position: absolute; left: {X2}px; top: 676px; width: {COLW}px; height: 1px; background: {DARK}; opacity: 0.45"></div>')
+    o.append(f'<div style="position: absolute; left: {X2}px; top: 690px; width: {COLW}px">{kicker("From the counter")}'
              f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.5; color: {DARK}; margin-top: 10px">Everybody pays at the register, the boys from the Sixth too. Saturday afternoons, the opera on the radio. Dogs wait outside, even the sheepdog.</div>'
              f'<div style="font-family: {SCRIPT}; font-size: 36px; line-height: 1.2; color: {RED}; margin-top: 4px">Morris Garfein</div></div>')
+    o.append(f'<img src="assets/spot-fountain.png" alt="Egg cream, black and white cookie and a cup of coffee" style="position: absolute; left: {X2}px; top: 870px; width: 330px; height: 112px; display: block">')
     # footer
     o.append(f'<div style="position: absolute; left: {L}px; top: 986px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
              f'<div style="position: absolute; left: {L}px; top: 994px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'

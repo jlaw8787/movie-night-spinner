@@ -22,6 +22,12 @@ A real menu, printed by a food venue in the film's world, in that year and place
 12. Signature art on BOTH faces, at Jurassic level: the front carries the hero (logo or sign plus one strong still or painted illustration); the back carries a second piece (a painted spot illustration, a small map, a framed still, or a bold decorative panel). No face is type only.
 13. Art quality bar: if it could pass as clip art, redo it once as a cleaner engraving, painted scene or a TMDB still instead.
 
+## Owner tweaks after pilot round 2 (locked)
+14. Bigger, better art: the hero picture fills about a third of the front, with real detail (Jurassic's gate photo and island map are the bar). Small spot art is not enough on its own.
+15. Film stills: use at least one real TMDB still on every menu, cleanly cropped in a thin accent frame with a short in-world caption (a venue can show a photo of its street, sign, room or a famous moment that happened there). Bright, well exposed, no muddy tints.
+16. Props and Easter eggs: 2 to 3 small props per menu (guest check, stamp, coupon, business card, matchbook, ticket, note) and 6 or more film winks across copy, prices, names and fine print. Props never cover dish text.
+17. Every film uses its own display face. Check the other film.json files in wip/print and do not reuse a display face already taken.
+
 ## Film variables (the only things that change per film)
 Venue and its name, palette, display face, logo or sign, hero picture, section names, dishes and wording, character note, Easter eggs, prop accent, format.
 
