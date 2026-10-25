@@ -1,0 +1,402 @@
+{
+ "Airplane! (1980)": {
+  "venue": "Trans American Galley",
+  "sign": "Trans American, Flight 209 Galley",
+  "note": {"text": "Yes, the fish was the problem. Everyone who ate it got sick. And don't call me Shirley.", "by": "Dr. Rumack"},
+  "winks": ["Fish or chicken, and why you chose wrong", "Otto the inflatable autopilot", "Striker's drinking problem, every glass", "Los Angeles to Chicago, no landing gear"],
+  "prop": {"kind": "ticket", "title": "Flight 209", "lines": ["Los Angeles to Chicago", "Meal: fish or chicken"]},
+  "number": "209"
+ },
+ "Grease (1978)": {
+  "venue": "Frosty Palace",
+  "sign": "Frosty Palace, Rydell's Hangout",
+  "note": {"text": "Meet me at the Frosty Palace after the dance. Bring the girls, Sandy.", "by": "Danny Zuko"},
+  "winks": ["Pink Ladies jackets", "T-Birds leather jackets", "Kenickie's car, built into a hot rod", "Rydell High's big dance contest", "The drag race at the river"],
+  "prop": {"kind": "card", "title": "Pink Ladies", "lines": ["Rydell High", "Members only"]},
+  "number": ""
+ },
+ "Planes, Trains and Automobiles (1987)": {
+  "venue": "Braidwood Inn",
+  "sign": "Braidwood Inn, Rooms Available",
+  "note": {"text": "My wife likes me, my customers like me. I like me. That is enough for one man.", "by": "Del Griffith"},
+  "winks": ["Del's shower curtain rings", "Two men in one bed, wrong pillows", "A burned-out rental car", "Thanksgiving, New York to Chicago"],
+  "prop": {"kind": "ticket", "title": "Thanksgiving Trip", "lines": ["New York to Chicago", "Delays expected"]},
+  "number": ""
+ },
+ "National Lampoon's Vacation (1983)": {
+  "venue": "Walley World Snack Bar",
+  "sign": "Walley World, Family Fun Park",
+  "note": {"text": "We are going to have fun on this trip if I have to make every one of you do it.", "by": "Clark Griswold"},
+  "winks": ["The Wagon Queen Family Truckster", "Aunt Edna strapped to the roof", "Dinky the dog", "Walley World closed, moose out front", "Cousin Eddie's place"],
+  "prop": {"kind": "ticket", "title": "Walley World", "lines": ["Admit one Griswold", "Park closed"]},
+  "number": ""
+ },
+ "The Blues Brothers (1980)": {
+  "venue": "Soul Food Cafe",
+  "sign": "Soul Food Cafe, Chicago",
+  "note": {"text": "It's 106 miles to Chicago, full tank of gas, half a pack of smokes. It's dark, and we're wearing sunglasses.", "by": "Elwood Blues"},
+  "winks": ["The Bluesmobile", "A mission from God", "Dry white toast and chicken orders", "Getting the band back together", "The Palace Hotel Ballroom gig"],
+  "prop": {"kind": "ticket", "title": "Band Gig", "lines": ["Palace Hotel Ballroom", "Sunglasses required"]},
+  "number": "106"
+ },
+ "Rain Man (1988)": {
+  "venue": "Wallbrook Cafeteria",
+  "sign": "Wallbrook, Meals on Schedule",
+  "note": {"text": "I am an excellent driver. Maple syrup comes before the pancakes. That is the rule.", "by": "Raymond Babbitt"},
+  "winks": ["246 toothpicks on the floor", "Maple syrup before the pancakes", "Counting cards in Las Vegas", "Who's on first, the routine", "Wallbrook, the institution"],
+  "prop": {"kind": "slip", "title": "Toothpick Count", "lines": ["246 on the floor", "Counted in a glance"]},
+  "number": "246"
+ },
+ "Dumb and Dumber (1994)": {
+  "venue": "Mutt Cutts",
+  "sign": "Mutt Cutts, Grooming on Wheels",
+  "note": {"text": "You're telling me there's a chance, Mary? Then we're going to Aspen!", "by": "Lloyd Christmas"},
+  "winks": ["The Mutt Cutts van", "Mary Swanson's lost suitcase", "The road trip to Aspen", "The briefcase full of cash", "Petey the parakeet"],
+  "prop": {"kind": "slip", "title": "Mary's Case", "lines": ["Return to Mary Swanson", "Aspen, Colorado"]},
+  "number": ""
+ },
+ "Tommy Boy (1995)": {
+  "venue": "Callahan Auto Parts",
+  "sign": "Callahan Auto, Sandusky Ohio",
+  "note": {"text": "I can take a look at a nice steak, but I'd rather take a bite. Same with my guarantee.", "by": "Tommy Callahan"},
+  "winks": ["Callahan Auto Parts, Sandusky", "Brake pads and the sales trip", "Richard Hayden riding shotgun", "The deer in the back seat", "Zalinsky Auto Parts, the rival"],
+  "prop": {"kind": "card", "title": "Callahan Auto", "lines": ["Brake pads, built right", "Sandusky, Ohio"]},
+  "number": ""
+ },
+ "Groundhog Day (1993)": {
+  "venue": "Tip Top Cafe",
+  "sign": "Tip Top Cafe, Punxsutawney",
+  "note": {"text": "What if there is no tomorrow? There wasn't one today. Pass the coffee, Rita.", "by": "Phil Connors"},
+  "winks": ["The alarm clock at six", "Ned Ryerson, bing", "The puddle on the corner", "Punxsutawney Phil in the dark", "Ice sculpture at the party"],
+  "prop": {"kind": "slip", "title": "Wake Up Call", "lines": ["6:00 AM, Punxsutawney", "Same as yesterday"]},
+  "number": "600"
+ },
+ "Fargo (1996)": {
+  "venue": "Blue Ox Bar",
+  "sign": "Blue Ox Bar, Fargo",
+  "note": {"text": "There's more to life than a little money, you know. Don't you know that?", "by": "Marge Gunderson"},
+  "winks": ["The wood chipper", "Brainerd, where the case lands", "Marge, expecting, still on the job", "Carl and Gaear at the Blue Ox", "Mike Yanagita's old friend story"],
+  "prop": {"kind": "slip", "title": "Police Report", "lines": ["Brainerd, Minnesota", "Three bodies on the road"]},
+  "number": ""
+ },
+ "Caddyshack (1980)": {
+  "venue": "Bushwood Country Club",
+  "sign": "Bushwood, Members Only",
+  "note": {"text": "I've got a gopher problem and a stick of dynamite. One of them is leaving.", "by": "Carl Spackler"},
+  "winks": ["The gopher under the fairway", "The candy bar in the pool", "Judge Smails and his yacht club talk", "Al Czervik's loud entrance", "Danny Noonan and the caddy shack"],
+  "prop": {"kind": "badge", "title": "Bushwood Member", "lines": ["Judge Smails approved", "Caddies enter at rear"]},
+  "number": ""
+ },
+ "Animal House (1978)": {
+  "venue": "Delta Tau Chi House",
+  "sign": "Delta House, Faber College",
+  "note": {"text": "Nothing is over until we say it is. Now grab a toga and follow me.", "by": "John Bluto Blutarsky"},
+  "winks": ["The cafeteria food fight", "The toga party", "Dean Wormer's probation notice", "Otis Day and the Knights", "Faber College, Knowledge Is Good"],
+  "prop": {"kind": "slip", "title": "Probation Notice", "lines": ["Delta Tau Chi", "Signed, Dean Wormer"]},
+  "number": "1962"
+ },
+ "Happy Gilmore (1996)": {
+  "venue": "Tour Championship Grill",
+  "sign": "Tour Championship Clubhouse",
+  "note": {"text": "Take the shot, tap it in, and watch out for the gator. Chubbs knows.", "by": "Happy Gilmore"},
+  "winks": ["Happy's hockey-style slap shot", "Chubbs and his missing hand", "The alligator on the course", "Shooter McGavin's gold jacket", "The fight on the green with Bob Barker"],
+  "prop": {"kind": "badge", "title": "Tour Qualifier", "lines": ["Happy Gilmore", "Slap shot approved"]},
+  "number": ""
+ },
+ "Office Space (1999)": {
+  "venue": "Chotchkie's",
+  "sign": "Chotchkie's, Flair Required",
+  "note": {"text": "I wear the minimum flair. If you want more, you'll have to ask me to.", "by": "Joanna"},
+  "winks": ["Pieces of flair on the suspenders", "Milton and the red stapler", "TPS reports and the new cover sheet", "The printer beaten in the field", "Initech and Lumbergh's coffee mug"],
+  "prop": {"kind": "badge", "title": "Flair Check", "lines": ["Express yourself", "Chotchkie's staff"]},
+  "number": ""
+ },
+ "Forrest Gump (1994)": {
+  "venue": "Bus Stop Bench",
+  "sign": "Savannah Bus Stop, Take a Seat",
+  "note": {"text": "Mama always said life was like a box of chocolates. You never know which one you'll get.", "by": "Forrest Gump"},
+  "winks": ["A box of chocolates on the bench", "Jenny, the shrimp boat", "Lieutenant Dan in the crow's nest", "Running across the country", "Bubba and his shrimp talk"],
+  "prop": {"kind": "ticket", "title": "Bus Ticket", "lines": ["Greenbow, Alabama", "Seat: any bench"]},
+  "number": ""
+ },
+ "Step Brothers (2008)": {
+  "venue": "Catalina Wine Mixer",
+  "sign": "Catalina Wine Mixer, Tonight",
+  "note": {"text": "We are best friends now, right? Let's start a company. And get the bunk beds.", "by": "Brennan Huff"},
+  "winks": ["Bunk beds in the spare room", "Prestige Worldwide", "The Catalina Wine Mixer", "Dale and Brennan on the drum set", "Derek, the golden brother"],
+  "prop": {"kind": "card", "title": "Prestige Worldwide", "lines": ["Dale Doback, Brennan Huff", "Est. at the mixer"]},
+  "number": ""
+ },
+ "Talladega Nights: The Ballad of Ricky Bobby (2006)": {
+  "venue": "Talladega Pit Row",
+  "sign": "Shake and Bake Pit Row",
+  "note": {"text": "My dad always said if you ain't first, you're last. I'm still working on it.", "by": "Ricky Bobby"},
+  "winks": ["Shake and Bake with Cal Naughton Jr.", "Grace at the table to Baby Jesus", "Jean Girard, the French driver", "A cougar loose in the car", "Number 26 on the hood"],
+  "prop": {"kind": "badge", "title": "Pit Pass", "lines": ["Ricky Bobby, driver", "Talladega Speedway"]},
+  "number": "26"
+ },
+ "Meet the Parents (2000)": {
+  "venue": "Byrnes House Table",
+  "sign": "Byrnes Family Dinner, 7 PM",
+  "note": {"text": "I've got my eye on you, Focker. Sit down, eat, and stay in the circle.", "by": "Jack Byrnes"},
+  "winks": ["The Circle of Trust", "Mr. Jinx the cat", "The lie detector test", "The urn on the mantle", "Greg Focker, the name"],
+  "prop": {"kind": "card", "title": "Circle of Trust", "lines": ["Byrnes family only", "Focker pending"]},
+  "number": ""
+ },
+ "Old School (2003)": {
+  "venue": "Mitch's Place",
+  "sign": "Mitch's Place, Everybody In",
+  "note": {"text": "We're going streaking through the quad. Frank is ready. Beanie is nervous.", "by": "Frank Ricard"},
+  "winks": ["Streaking through the quad", "Frank the Tank", "Dean Pritchard's grudge", "Mitch's house turned into a frat", "Beanie and the wedding"],
+  "prop": {"kind": "slip", "title": "Pledge Slip", "lines": ["Mitch's Place", "Dean Pritchard not invited"]},
+  "number": ""
+ },
+ "Dodgeball: A True Underdog Story (2004)": {
+  "venue": "Average Joe's Gym",
+  "sign": "Average Joe's, Nobody Special",
+  "note": {"text": "If you can dodge a wrench, you can dodge a ball. That's all there is to it.", "by": "Patches O'Houlihan"},
+  "winks": ["Dodging wrenches in training", "Globo Gym across the street", "White Goodman and his big ego", "Steve the Pirate", "The finals in Las Vegas"],
+  "prop": {"kind": "ticket", "title": "Vegas Finals", "lines": ["Average Joe's vs Globo Gym", "Bring a wrench"]},
+  "number": ""
+ },
+ "Waitress (2007)": {
+  "venue": "Joe's Pie Diner",
+  "sign": "Joe's Pie Diner, Pies Daily",
+  "note": {"text": "I make pies when I'm feeling things. This one is for the day I stop being scared.", "by": "Jenna Hunterson"},
+  "winks": ["Pies named for how Jenna feels", "I Don't Want Earl's Baby Pie", "Dawn and Becky on the shift", "Dr. Pomatter in the waiting room", "Old Joe in the corner booth"],
+  "prop": {"kind": "slip", "title": "Pie of the Day", "lines": ["I Don't Want Earl's Baby Pie", "Slice $4.50"]},
+  "number": ""
+ },
+ "Big Fish (2003)": {
+  "venue": "Spectre Town",
+  "sign": "Spectre, Please Stay a While",
+  "note": {"text": "A man tells his stories so many times that he becomes the stories. Sit, Will, listen.", "by": "Edward Bloom"},
+  "winks": ["Spectre, where nobody wears shoes", "Karl the giant", "The witch's eye in the swamp", "A field of daffodils for Sandra", "The big fish that nobody catches"],
+  "prop": {"kind": "ticket", "title": "Welcome to Spectre", "lines": ["Shoes optional", "Stay as long as you like"]},
+  "number": ""
+ },
+ "Reservoir Dogs (1992)": {
+  "venue": "Warehouse Meetup",
+  "sign": "Colors Only, No Names",
+  "note": {"text": "I don't tip, and I'll tell you why. It's a matter of principle.", "by": "Mr. Pink"},
+  "winks": ["Black suits and skinny ties", "Mr. Pink, Mr. White, Mr. Orange", "Joe Cabot handing out the colors", "The breakfast table argument about tipping", "The warehouse after the job"],
+  "prop": {"kind": "tag", "title": "Mr. Pink", "lines": ["Colors, not names", "Do not tip"]},
+  "number": ""
+ },
+ "Top Gun (1986)": {
+  "venue": "Top Gun Hangar Bar",
+  "sign": "Call Signs Only",
+  "note": {"text": "I feel the need for speed. Strap in, Goose, we're going up.", "by": "Maverick"},
+  "winks": ["Call signs: Maverick, Goose, Iceman", "The beach volleyball game", "Maverick's motorcycle", "The MiG encounter over the ocean", "Charlie, the instructor"],
+  "prop": {"kind": "badge", "title": "Top Gun Pilot", "lines": ["Call sign: Maverick", "Wingman: Goose"]},
+  "number": ""
+ },
+ "Top Gun: Maverick (2022)": {
+  "venue": "The Hard Deck",
+  "sign": "The Hard Deck, Penny's Place",
+  "note": {"text": "The Hard Deck is on me tonight. Try not to break anything, Pete.", "by": "Penny Benjamin"},
+  "winks": ["The Hard Deck bar", "Rooster, Goose's son", "Hangman and his attitude", "The football game on the beach", "The Darkstar test jet at Mach 10"],
+  "prop": {"kind": "tag", "title": "Hard Deck", "lines": ["Do not go below it", "Call sign: Maverick"]},
+  "number": "10"
+ },
+ "Chasing Amy (1997)": {
+  "venue": "Bluntman Studio",
+  "sign": "Bluntman and Chronic, Issue One",
+  "note": {"text": "I'm not great with words, Alyssa, but I'm trying to say it right this time.", "by": "Holden McNeil"},
+  "winks": ["Bluntman and Chronic comic", "Banky Edwards at the drawing board", "Hooper X at the comic convention", "Silent Bob's speech", "Alyssa Jones, the artist"],
+  "prop": {"kind": "ticket", "title": "Comic Con Pass", "lines": ["Bluntman and Chronic panel", "Holden and Banky"]},
+  "number": ""
+ },
+ "Dogma (1999)": {
+  "venue": "Catholicism WOW Banquet",
+  "sign": "Catholicism WOW! Reception",
+  "note": {"text": "I'm the voice of God, which is a job, not a title. Sit down and listen.", "by": "Metatron"},
+  "winks": ["Buddy Christ statue", "Bartleby and Loki, fallen angels", "Cardinal Glick's Catholicism WOW! campaign", "Metatron, the voice of God", "Jay and Silent Bob on the road"],
+  "prop": {"kind": "card", "title": "Buddy Christ", "lines": ["Thumbs up, forever", "Catholicism WOW!"]},
+  "number": ""
+ },
+ "Clerks II (2006)": {
+  "venue": "Mooby's",
+  "sign": "Mooby's, Home of the Golden Calf",
+  "note": {"text": "Pull up a chair. We can argue about movies on the clock, it's a slow day.", "by": "Randal Graves"},
+  "winks": ["Mooby's, the fast food chain", "The Lord of the Rings versus Star Wars fight", "Jay and Silent Bob outside the door", "Elias, the new hire", "Becky behind the counter"],
+  "prop": {"kind": "badge", "title": "Mooby's Staff", "lines": ["Dante Hicks", "Shift: 12 hours"]},
+  "number": ""
+ },
+ "Clerks III (2022)": {
+  "venue": "Quick Stop Groceries",
+  "sign": "Quick Stop Groceries, Open",
+  "note": {"text": "I wasn't even supposed to be here today. Randal's making a movie about it.", "by": "Dante Hicks"},
+  "winks": ["Quick Stop Groceries again", "RST Video next door", "Randal's heart attack", "Randal's movie about the Quick Stop", "Jay and Silent Bob on the sidewalk"],
+  "prop": {"kind": "receipt", "title": "Quick Stop", "lines": ["Cashier: Dante", "Thanks for stopping in"]},
+  "number": ""
+ },
+ "Blades of Glory (2007)": {
+  "venue": "Iron Lotus Rink",
+  "sign": "Iron Lotus, Pairs Final",
+  "note": {"text": "Two men on one ice rink, hand in hand. We are a first, and we are fabulous.", "by": "Chazz Michael Michaels"},
+  "winks": ["The Iron Lotus move", "Chazz Michael Michaels in sequins", "Jimmy MacElroy, the clean skater", "The Van Waldenberg siblings", "Pairs skating's first all-male team"],
+  "prop": {"kind": "ticket", "title": "Pairs Final", "lines": ["Center ice", "Iron Lotus attempt"]},
+  "number": ""
+ },
+ "Semi-Pro (2008)": {
+  "venue": "Flint Tropics Arena",
+  "sign": "Flint Tropics, Home of Moon",
+  "note": {"text": "Everybody love everybody, y'all. Even the other team. Especially at halftime.", "by": "Jackie Moon"},
+  "winks": ["The Flint Tropics", "Jackie Moon, owner and player", "Ed Monix, the new guy", "Coffee Black on the court", "Bear wrestling at the game"],
+  "prop": {"kind": "ticket", "title": "Tropics Home Game", "lines": ["Flint, Michigan", "Free bear wrestling"]},
+  "number": ""
+ },
+ "Kicking & Screaming (2005)": {
+  "venue": "Gladiators Snack Stand",
+  "sign": "Gladiators Sideline Snacks",
+  "note": {"text": "Everybody wants to win. Even the kids. Especially me. Hand over the orange slices.", "by": "Phil Weston"},
+  "winks": ["The Gladiators soccer team", "Phil's dad, Buck, and the Tigers", "Orange slices at halftime", "Phil's coffee habit", "Buck's win-first coaching"],
+  "prop": {"kind": "badge", "title": "Gladiators Coach", "lines": ["Phil Weston", "Snacks: orange slices"]},
+  "number": ""
+ },
+ "Eurovision Song Contest: The Story of Fire Saga (2020)": {
+  "venue": "Husavik Harbor Pub",
+  "sign": "Husavik Harbor Pub, Iceland",
+  "note": {"text": "Leave a little milk out for the elves, Lars. They are listening.", "by": "Sigrit Ericksdottir"},
+  "winks": ["Fire Saga, the duo from Husavik", "Milk left out for the elves", "Alexander Lemtov, the Russian star", "The hamster wheel stage prop", "The boat on the harbor"],
+  "prop": {"kind": "ticket", "title": "Eurovision Final", "lines": ["Fire Saga, Iceland", "Edinburgh"]},
+  "number": ""
+ },
+ "Get Hard (2015)": {
+  "venue": "Darnell's Car Wash",
+  "sign": "Darnell's Car Wash, Open Daily",
+  "note": {"text": "I never did time. But for thirty days, I'm going to teach you like I did.", "by": "Darnell Lewis"},
+  "winks": ["Darnell's car wash", "James King's big mansion", "The thirty days to get ready", "Prison training in the backyard", "Alissa, the fiancee"],
+  "prop": {"kind": "receipt", "title": "Prison Prep", "lines": ["30 days to go", "Fee: paid in full"]},
+  "number": "30"
+ },
+ "Friendship (2025)": {
+  "venue": "Suburban Cul-de-sac",
+  "sign": "Welcome, Neighbor",
+  "note": {"text": "Can we hang out again soon? I cleared my whole schedule for it.", "by": "Craig Waterman"},
+  "winks": ["Craig and Austin next door", "A misplaced delivery starts it", "Punk rock as the bond", "Antiquities as the other bond"],
+  "prop": {"kind": "slip", "title": "Missed Delivery", "lines": ["Left at wrong house", "Please collect next door"]},
+  "number": ""
+ },
+ "Beerfest (2006)": {
+  "venue": "Wolfhouse Beer Tent",
+  "sign": "Beerfest, Munich",
+  "note": {"text": "We came to Munich for the family honor and the beer. Fill the boot.", "by": "Jan Wolfhouse"},
+  "winks": ["Das Boot, the glass", "Todd and Jan Wolfhouse", "The secret Beerfest games", "The beer pong style rivalry", "Munich, Germany"],
+  "prop": {"kind": "ticket", "title": "Beerfest Entry", "lines": ["Munich, Germany", "Bring a team"]},
+  "number": ""
+ },
+ "Walk Hard: The Dewey Cox Story (2007)": {
+  "venue": "Cox Family Lounge",
+  "sign": "Dewey Cox, Live Tonight",
+  "note": {"text": "Dad always said the wrong brother died. I'm still proving him wrong on stage.", "by": "Dewey Cox"},
+  "winks": ["The machete accident", "Darlene Madison on tour", "Sam McPherson on drums", "A new era every few years", "The oversized stage guitar"],
+  "prop": {"kind": "ticket", "title": "Dewey Cox Live", "lines": ["Admit one", "Tour: every decade"]},
+  "number": ""
+ },
+ "Pineapple Express (2008)": {
+  "venue": "Saul's Place",
+  "sign": "Saul's Place, Come On In",
+  "note": {"text": "It's called Pineapple Express, Dale. Nobody else has it. Try some, man.", "by": "Saul Silver"},
+  "winks": ["The Pineapple Express strain", "Dale Denton, process server", "Saul Silver's apartment", "Red, the dealer", "The chase through the woods"],
+  "prop": {"kind": "slip", "title": "Served", "lines": ["Dale Denton", "Delivered in person"]},
+  "number": ""
+ },
+ "Kingpin (1996)": {
+  "venue": "Ishmael's Barn",
+  "sign": "Ishmael's Barn Supper",
+  "note": {"text": "I lost my hand in a ball return. I got a rubber one. Let's go bowl.", "by": "Roy Munson"},
+  "winks": ["Roy's rubber hand", "Big Ern McCracken in the Reno finals", "Ishmael, the Amish bowler", "Claudia on the road trip", "The bowling tournament in Reno"],
+  "prop": {"kind": "ticket", "title": "Reno Tournament", "lines": ["Prize: big money", "Roy and Ishmael"]},
+  "number": ""
+ },
+ "Black Sheep (1996)": {
+  "venue": "Donnelly Campaign Bus",
+  "sign": "Donnelly for Governor",
+  "note": {"text": "Keep Mike out of trouble until the election. That's all I need, Steve.", "by": "Al Donnelly"},
+  "winks": ["Al Donnelly for governor", "Mike Donnelly, the brother", "Steve Dodds, the babysitter", "A campaign gone sideways"],
+  "prop": {"kind": "badge", "title": "Campaign Staff", "lines": ["Donnelly for Governor", "Handler: Steve Dodds"]},
+  "number": ""
+ },
+ "The Waterboy (1998)": {
+  "venue": "Boucher Swamp Shack",
+  "sign": "Mama Boucher's, Bayou Louisiana",
+  "note": {"text": "Football is the devil, Bobby. Come home and eat before it gets cold.", "by": "Mama Boucher"},
+  "winks": ["Bobby Boucher, the waterboy", "Mud Dogs of South Central Louisiana State", "Coach Klein's second chance", "Mama's swamp cooking", "Bobby's big tackle"],
+  "prop": {"kind": "badge", "title": "Mud Dogs Water", "lines": ["Bobby Boucher", "Bayou approved"]},
+  "number": ""
+ },
+ "Major League (1989)": {
+  "venue": "Jobu's Corner",
+  "sign": "Jobu's Corner, Offerings Welcome",
+  "note": {"text": "Just a bit outside. A bit outside again. Welcome to the ballgame, folks.", "by": "Harry Doyle"},
+  "winks": ["Jobu, the voodoo idol in the locker", "Rick Vaughn and his thick glasses", "Willie Mays Hayes running the bases", "Pedro Cerrano and the bat", "Harry Doyle in the broadcast booth"],
+  "prop": {"kind": "ticket", "title": "Opening Day", "lines": ["Cleveland ballpark", "Bring an offering for Jobu"]},
+  "number": ""
+ },
+ "Horrible Bosses (2011)": {
+  "venue": "Murder Consultant Bar",
+  "sign": "Bar, Back Booth Only",
+  "note": {"text": "We could just kill them. Hear me out. That's the whole plan, Dale.", "by": "Nick Hendricks"},
+  "winks": ["Dave Harken, the boss who holds the promotion", "Dr. Julia Harris, the dentist", "Bobby Pellitt, the new owner", "Nick, Dale and Kurt in the car", "The murder consultant"],
+  "prop": {"kind": "card", "title": "Murder Consultant", "lines": ["Consultation only", "No refunds"]},
+  "number": ""
+ },
+ "Strange Brew (1983)": {
+  "venue": "Elsinore Brewery",
+  "sign": "Elsinore Brewery, Est. Long Ago",
+  "note": {"text": "Take off, eh? We're just here for the free beer and the back bacon.", "by": "Doug McKenzie"},
+  "winks": ["Bob and Doug in their toques", "Back bacon and donuts", "The Elsinore Brewery", "The Great White North", "The free beer for work"],
+  "prop": {"kind": "slip", "title": "Free Beer Pass", "lines": ["Elsinore Brewery", "Valid for Bob and Doug"]},
+  "number": ""
+ },
+ "Dirty Work (1998)": {
+  "venue": "Revenge Office",
+  "sign": "Mitch and Sam, Payback Inc.",
+  "note": {"text": "A little payback, a lot of fun. That's our business, and business is booming.", "by": "Mitch Weaver"},
+  "winks": ["Mitch and Sam's revenge-for-hire business", "Sam's dad needing a new heart", "Payback jobs for hire", "Chris Farley, a quick cameo"],
+  "prop": {"kind": "card", "title": "Payback Inc.", "lines": ["Mitch and Sam", "Revenge, delivered"]},
+  "number": ""
+ },
+ "Screwed (2000)": {
+  "venue": "Chicken Hole",
+  "sign": "Rusty's Chicken Hole",
+  "note": {"text": "I've driven her around my whole life, and what did I get? Cheap cuff links and a pie.", "by": "Willard Fillmore"},
+  "winks": ["Muffin, Mrs. Crock's prized dog", "Rusty's lamp whenever he gets nervous", "Cheap cuff links and a pie", "The failed ransom handoff in the park", "Pittsburgh, the setting"],
+  "prop": {"kind": "slip", "title": "Ransom Note", "lines": ["Hastily written", "Bring the briefcase"]},
+  "number": ""
+ },
+ "Big Daddy (1999)": {
+  "venue": "Sonny's Apartment",
+  "sign": "Sonny Koufax, Do Not Disturb",
+  "note": {"text": "I'm a kid's dad now, and I'm making this up as I go. Pass the cereal.", "by": "Sonny Koufax"},
+  "winks": ["Julian, the five-year-old", "Sonny's tollbooth job", "Sonny's law degree, unused", "Teaching Julian the rules of the street"],
+  "prop": {"kind": "slip", "title": "Adoption Papers", "lines": ["Julian and Sonny", "Signed in a hurry"]},
+  "number": ""
+ },
+ "Field of Dreams (1989)": {
+  "venue": "Kinsella Farm Table",
+  "sign": "If You Build It",
+  "note": {"text": "Hey Dad, you want to have a catch? I've been waiting a long time to ask.", "by": "Ray Kinsella"},
+  "winks": ["The baseball field in the corn", "Shoeless Joe Jackson stepping out", "Terrance Mann along for the ride", "Moonlight Graham and the one at bat", "The Black Sox, 1919"],
+  "prop": {"kind": "ticket", "title": "Baseball Field", "lines": ["Iowa cornfield", "Admission: a catch"]},
+  "number": "1919"
+ },
+ "Remember the Titans (2000)": {
+  "venue": "Titans Camp Cafeteria",
+  "sign": "Titans Training Camp",
+  "note": {"text": "We play as one team here, Gerry. Left side, strong side. Every play.", "by": "Coach Boone"},
+  "winks": ["The early morning run to Gettysburg", "Left side, strong side", "Coach Boone and Coach Yoast", "Gerry Bertier and Julius Campbell", "Alexandria in 1971"],
+  "prop": {"kind": "badge", "title": "Titans Player", "lines": ["Alexandria, Virginia", "Team before self"]},
+  "number": "1971"
+ },
+ "Rudy (1993)": {
+  "venue": "Joliet Mill Break Room",
+  "sign": "Joliet Mill, Break at Noon",
+  "note": {"text": "I've wanted this my whole life, Fortune. One game on that field is enough.", "by": "Rudy Ruettiger"},
+  "winks": ["Rudy's dream of the school jersey", "Fortune, the groundskeeper", "The stadium crowd chanting his name", "Number 45 on the jersey", "The Joliet mill where he worked"],
+  "prop": {"kind": "ticket", "title": "Final Game", "lines": ["One chance on the field", "Jersey number 45"]},
+  "number": "45"
+ }
+}
