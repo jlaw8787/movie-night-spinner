@@ -25,3 +25,13 @@ secret-of-my-success: Archivo Black
 working-girl: Prata
 three-men-and-a-baby: Righteous
 frequency: Alfa Slab One
+16-blocks: Big Shoulders Display
+premium-rush: Teko
+leon: Cormorant SC
+die-hard-with-a-vengeance: Titan One
+ghost-dog: Sniglet
+king-of-new-york: Italiana
+escape-from-new-york: Black Ops One
+the-french-connection: Gilda Display
+midnight-cowboy: Fascinate
+taxi-driver: Bowlby One SC

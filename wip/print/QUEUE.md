@@ -1,9 +1,5 @@
-STYLE LOCK signed off by owner (Oct 25). Rollout uses wip/print/ROLLOUT.md for every film. 10 builds at a time, one cheap review per batch, one fix round max.
-VARIETY RULES 18 to 21 in STYLE-LOCK (owner, Oct 25 night): format by venue, one signature piece per film, prop quota, no shared skeleton. I assign format, signature piece and props per film in each prompt. Batch 2 being reworked to these.
-APPROVAL GATE (owner, Oct 25 19:23): send a proof sheet as each few menus land, and a full batch proof before anything goes live. Nothing goes live without owner approval.
-Live in locked style: serpico, big, pelham, dog-day-afternoon (main 3d1b69b).
-Batch 1 LIVE (main 07f9d5b).
-Batch 2 building (fonts pre-assigned in FONTS.md): chud, tootsie, manhattan, annie-hall, trading-places, brewsters-millions, secret-of-my-success, working-girl, three-men-and-a-baby, frequency.
-Batch 3: 16-blocks, premium-rush, leon, die-hard-with-a-vengeance, ghost-dog, king-of-new-york, escape-from-new-york, the-french-connection, midnight-cowboy, + first new film.
-Then the remaining 41 era films in batches of 10 (wip/rework/list.json order).
-Notes: Splash keeps vodka Blue Lagoon. Moonstruck avoid real parish names. Secret of My Success blini topping creme fraiche.
+STYLE LOCK + variety rules 18-21 + real images rule 22. Assign format, signature, display face and props centrally per batch (BATCHn.md). Approval gate: early proof, full proof, owner sign-off before go-live.
+Live in locked style: pilots 4, batch 1 (07f9d5b), batch 2 (cf4a838).
+Building: batch 3 (BATCH3.md, 10 films incl. Taxi Driver). Real-photo swaps for working-girl, frequency, three-men-and-a-baby (go live after owner sees them).
+Then: remaining 40 era films in batches of 10 from wip/rework/list.json, each with a BATCHn.md.
+Notes: Splash keeps vodka Blue Lagoon. Moonstruck avoid real parish names.
