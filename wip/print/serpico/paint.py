@@ -223,7 +223,7 @@ for x1, y1, x2, y2 in (LW, RW):
         k += 1
 
 # window lettering: left, the name in red script with a paper keyline; right, reversed gothic
-f_scr = font('Yellowtail.ttf', 46)
+f_scr = font('GrandHotel.ttf', 50)
 km = text_mask('Garfein’s', f_scr, (LW[0] + LW[2]) / 2, 228, stroke=2.2)
 clear(ink, km)
 nm = text_mask('Garfein’s', f_scr, (LW[0] + LW[2]) / 2, 228)
@@ -284,6 +284,82 @@ clear(ink, big)
 ink.paste(ImageChops.lighter(ink, ImageChops.subtract(big, hm)), (0, 0))
 hatch(ink, ImageChops.multiply(hm, region(box=(hx + 1, 240, hx + 14, 300))), 90, 1.2, 0.6)
 red.paste(ImageChops.lighter(red, ImageChops.multiply(hm, Image.new('L', (CW, CH), 235))), (0, 0))
+
+
+# sheepdog waiting outside, tied to the hydrant: shaggy pen strokes, grey coat, dark rump
+def fur(cx, cy, rx, ry, n, dark=False):
+    for _ in range(n):
+        a = random.uniform(0, 2 * math.pi); r = random.uniform(0.2, 1.0)
+        x0 = cx + math.cos(a) * rx * r; y0 = cy + math.sin(a) * ry * r
+        ln = random.uniform(2.5, 5.5)
+        line(di, x0, y0, x0 + random.uniform(-0.8, 0.8), y0 + ln, 0.42 if not dark else 0.6, 0.35, seg=2)
+dogm = shape_dog = Image.new('L', (CW, CH), 0)
+dd = ImageDraw.Draw(dogm)
+dd.ellipse([P(232, 266), P(282, 292)], fill=255)        # body
+dd.ellipse([P(270, 256), P(294, 280)], fill=255)        # head
+dd.rectangle([P(238, 284), P(246, 296)], fill=255); dd.rectangle([P(268, 284), P(276, 296)], fill=255)
+clear(ink, dogm.filter(ImageFilter.MaxFilter(5)))
+edge = ImageChops.subtract(dogm.filter(ImageFilter.MaxFilter(3)), dogm)
+ink.paste(ImageChops.lighter(ink, edge.point(lambda v: v // 2)), (0, 0))
+fur(257, 279, 24, 12, 170)
+fur(240, 278, 9, 9, 70, dark=True)                     # darker rump
+fur(282, 268, 11, 10, 70)
+hatch(ink, ImageChops.multiply(dogm, region(box=(228, 286, 290, 298))), 0, 1.2, 0.45)
+di.ellipse([P(288.5, 268), P(292, 271)], fill=255)    # nose
+line(di, 278, 263, 281, 262, 0.5, 0); line(di, 284, 263, 287, 262, 0.5, 0)   # fringe over the eyes
+pts = [(283, 276), (288, 281), (294, 284), (299, 282)]  # leash to the hydrant
+di.line([P(*q) for q in pts], fill=255, width=int(0.7 * K), joint='curve')
+
+# ---------------- taller sheet: one more storey, a cornice and a painted wall sign ----------------
+TOPX = 74
+ink0, red0 = ink, red
+H = 300 + TOPX; CH = H * K
+ink = Image.new('L', (CW, CH), 0); red = Image.new('L', (CW, CH), 0)
+ink.paste(ink0, (0, TOPX * K)); red.paste(red0, (0, TOPX * K))
+di, dr = ImageDraw.Draw(ink), ImageDraw.Draw(red)
+lay = Image.new('L', (CW, CH), 0); ld = ImageDraw.Draw(lay)
+y, row = TOPX + 2 - 4.4 * 17, 1
+while y < TOPX + 2:
+    if y > 20:
+        line(ld, 0, y, W, y, 0.42, 0.1, seg=20)
+        off = 6 if row % 2 else 0
+        x = off
+        while x < W:
+            if random.random() < 0.7: line(ld, x, y, x, y + 4.2, 0.38, 0.05)
+            x += 12
+    y += 4.4; row += 1
+ink.paste(ImageChops.lighter(ink, ImageChops.multiply(lay, region(box=(0, 20, W, TOPX + 2)))), (0, 0))
+# cornice with brackets
+line(di, 0, 6, W, 6, 1.4); line(di, 0, 9, W, 9, 0.6)
+hatch(ink, region(box=(0, 9, W, 16)), 0, 1.1, 0.55)
+line(di, 0, 16, W, 16, 0.9); line(di, 0, 20, W, 20, 0.8)
+for bx in range(18, W, 58):
+    clear(ink, region(box=(bx, 16, bx + 9, 30))); rect(di, bx, 16, bx + 9, 30, 0.7)
+    hatch(ink, region(box=(bx + 5, 17, bx + 9, 29)), 90, 1.0, 0.4)
+x = 2
+while x < W: line(di, x, 0, x, 6, 0.35, 0); x += 3          # sky edge of the parapet, ruled
+# upper windows, same bays as below
+for x1, x2 in ((58, 136), (568, 646)):
+    y1, y2 = 34, 70
+    clear(ink, region(box=(x1 - 6, y1 - 4, x2 + 6, y2 + 5)))
+    rect(di, x1 - 5, y2, x2 + 5, y2 + 5, 0.9); rect(di, x1, y1, x2, y2, 1.0)
+    pane = region(box=(x1 + 3, y1 + 3, x2 - 3, y2 - 3))
+    hatch(ink, pane, 50, 1.9, 0.5); hatch(ink, pane, -40, 2.6, 0.45)
+    clear(ink, region(box=(x1, (y1 + y2) / 2, x2, (y1 + y2) / 2 + 3))); rect(di, x1, (y1 + y2) / 2, x2, (y1 + y2) / 2 + 3, 0.6)
+    clear(ink, region(box=((x1 + x2) / 2 - 1.2, y1, (x1 + x2) / 2 + 1.2, y2)))
+# painted wall sign between the windows, faded red on the brick
+sg = (176, 30, 528, 72)
+clear(ink, region(box=sg))
+wm = text_mask('HOT PASTRAMI  ·  CORNED BEEF', font('Antonio.ttf', 26, 700), (sg[0] + sg[2]) / 2, 44)
+wm2 = text_mask('SANDWICHES TO TAKE HOME  ·  SINCE 1938', font('Antonio.ttf', 12, 600), (sg[0] + sg[2]) / 2, 64)
+paint_ = ImageChops.lighter(wm, wm2)
+lay = Image.new('L', (CW, CH), 0); ld = ImageDraw.Draw(lay)
+y = 30
+while y < 72: line(ld, 176, y, 528, y, 0.42, 0.1, seg=20); y += 4.4
+ink.paste(ImageChops.lighter(ink, ImageChops.multiply(lay, region(box=sg)).point(lambda v: v // 2)), (0, 0))
+red.paste(ImageChops.lighter(red, paint_.point(lambda v: int(v * 0.72))), (0, 0))
+clear(ink, paint_)
+for x in (182, 522): line(di, x, 30, x, 72, 0.35, 0.2)
 
 # ---------------- compose two inks, red out of register ----------------
 def plate(cov, rgb, dx=0, dy=0, op=1.0):
@@ -404,14 +480,21 @@ for x in (50, 64, 78): line(di, x, 48, x - (x - 64) * 0.2, 102, 0.5, 0.05)  # fl
 clear(ink, shape(lambda d: d.polygon([P(83, 44), P(86, 44), P(79, 100), P(76, 100)], fill=255)))   # highlight
 straw = shape(lambda d: d.polygon([P(70, 22), P(74, 22), P(96, -2), P(92, -2)], fill=255))
 fill(red, straw, 235); outline(straw, 3)
-# black and white cookie, in perspective
-ck = shape(lambda d: d.ellipse([P(122, 62), P(226, 96)], fill=255))
-edge = shape(lambda d: d.ellipse([P(122, 68), P(226, 102)], fill=255))
-outline(ImageChops.lighter(ck, edge), 5); hatch(ink, ImageChops.subtract(edge, ck), 80, 1.4, 0.45)
-outline(ck, 5)
-half = ImageChops.multiply(ck, region(poly=[(160, 50), (330, 50), (330, 110), (188, 110)]))
-hatch(ink, half, 45, 1.0, 0.62); hatch(ink, half, -45, 1.6, 0.45)
-line(di, 160, 62, 188, 96, 0.9, 0.3)
+# black and white cookie: a round cake cookie, domed, icing split straight down the middle
+ck = shape(lambda d: d.ellipse([P(128, 50), P(222, 98)], fill=255))
+side = shape(lambda d: d.ellipse([P(128, 56), P(222, 104)], fill=255))
+clear(ink, ImageChops.lighter(ck, side).filter(ImageFilter.MaxFilter(5)))
+outline(ImageChops.lighter(ck, side), 5)
+hatch(ink, ImageChops.subtract(side, ck), 80, 1.2, 0.45)                 # baked edge
+ice = shape(lambda d: d.ellipse([P(133, 53), P(217, 95)], fill=255))
+outline(ice, 3)
+choc = ImageChops.multiply(ice, region(box=(175, 40, 240, 110)))
+hatch(ink, choc, 0, 0.85, 0.65); hatch(ink, choc, 90, 1.6, 0.4)
+clear(ink, shape(lambda d: d.arc([P(184, 58), P(212, 88)], 290, 350, fill=255, width=int(1.6 * K))))   # gloss
+line(di, 175, 53.5, 175, 94.5, 0.9, 0.25)
+for _ in range(30):                                                     # crumb stipple on the cake rim
+    t = random.uniform(0, math.pi); cx = 175 + 46 * math.cos(t); cy = 76 + 25 * math.sin(t) + 1.5
+    di.ellipse([P(cx - 0.4, cy - 0.4), P(cx + 0.4, cy + 0.4)], fill=255)
 # coffee cup on a saucer, steam
 sc = shape(lambda d: d.ellipse([P(244, 92), P(322, 106)], fill=255)); clear(ink, sc); outline(sc, 5)
 cup = shape(lambda d: (d.rectangle([P(256, 62), P(306, 84)], fill=255), d.ellipse([P(256, 76), P(306, 98)], fill=255)))

@@ -61,15 +61,13 @@ def page(face, inner):
 # ---------------------------------------------------------------- front
 def front():
     top = (
-        f'<img src="assets/engraved-sun.png" alt="" style="position: absolute; left: 556px; top: 26px; width: 230px; height: 230px; display: block">'
-        f'<div style="position: absolute; left: 556px; top: 252px; width: 230px; text-align: center; color: {INK}">'
-        f'<div style="font-family: {DISP}; font-size: 26px; line-height: 1; color: {RED}">Air conditioned</div>'
-        f'<div style="margin-top: 4px; font-family: {CD}; font-weight: 800; font-size: 16px; line-height: 1.1; letter-spacing: 0.12em; text-transform: uppercase">Eat in, cool off</div></div>'
+        f'<img src="assets/engraved-sun.png" alt="" style="position: absolute; left: 512px; top: 8px; width: 300px; height: 300px; display: block">'
         f'<div style="position: absolute; left: {L}px; top: 48px; font-family: {CD}; font-weight: 800; font-size: 18px; letter-spacing: 0.18em; color: {RED}; text-transform: uppercase">Pizza &nbsp;·&nbsp; Heroes &nbsp;·&nbsp; Italian ices</div>'
         f'<div style="position: absolute; left: {L}px; top: 92px; font-family: {XC}; font-weight: 900; font-size: 40px; line-height: 1; letter-spacing: 0.32em; color: {INK}">PIZZERIA</div>'
         f'<div style="position: absolute; left: {L - 4}px; top: 126px; font-family: {DISP}; font-size: 100px; line-height: 1.1; color: {RED}">Canicola</div>'
-        f'<div style="position: absolute; left: {L}px; top: 266px; width: 470px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 20px; line-height: 1.3; color: {SOFT}">'
+        f'<div style="position: absolute; left: {L}px; top: 244px; width: 470px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 20px; line-height: 1.3; color: {SOFT}">'
         f'On the avenue, two doors from the barber shop.</div>'
+        f'<div style="position: absolute; left: {L}px; top: 276px; font-family: {DISP}; font-size: 22px; line-height: 1; color: {RED}">Air conditioned. Eat in, cool off.</div>'
         f'<div style="position: absolute; left: 0; top: 314px; width: {FW}px; height: 48px; background: {RED}"></div>'
         f'<div style="position: absolute; left: {L}px; top: 314px; width: {CW}px; height: 48px; display: flex; align-items: center; justify-content: space-between; '
         f'font-family: {CD}; font-weight: 800; font-size: 20px; letter-spacing: 0.1em; color: {PAPER}; text-transform: uppercase">'
@@ -94,20 +92,21 @@ def front():
             f'<div style="position: absolute; left: {L + 368}px; top: 392px; width: {CW - 368}px">{heroes}</div>')
     coupon = (
         f'<div style="position: absolute; left: {L}px; top: 864px; width: {CW}px; height: 118px; display: flex; gap: 32px">'
-        f'<div style="position: relative; width: 400px; box-sizing: border-box; border: 2.5px dashed {INK}; padding: 10px 18px 8px; background: rgba(255,250,240,0.45)">'
+        f'<div style="position: relative; width: 352px; height: 118px; box-sizing: border-box; border: 2.5px dashed {INK}; padding: 10px 18px 8px; background: rgba(255,250,240,0.45)">'
         f'<div style="position: absolute; right: 12px; top: -10px; background: {PAPER}; padding: 0 6px; font-family: {CD}; font-weight: 800; font-size: 14px; line-height: 1; letter-spacing: 0.14em; color: {RED}">CLIP AND SAVE</div>'
         f'<div style="font-family: {XC}; font-weight: 900; font-size: 40px; line-height: 0.95; color: {RED}">FREE LEMON ICE</div>'
         f'<div style="margin-top: 5px; font-family: {BODY}; font-weight: 600; font-size: 20px; line-height: 1.25; color: {INK}">With every large pie.</div>'
-        f'<div style="margin-top: 3px; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.2; color: {SOFT}">Good through Labor Day, Sept. 4, 1972.</div></div>'
-        f'<div style="flex: 1; padding-top: 6px">'
-        f'<div style="font-family: {CD}; font-weight: 800; font-size: 28px; line-height: 1.02; color: {INK}">Bank and office lunches</div>'
-        f'<div style="margin-top: 5px; font-family: {BODY}; font-size: 20px; line-height: 1.28; color: {SOFT}">Call by eleven, the whole staff eats at noon.</div></div>'
+        f'<div style="margin-top: 3px; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.2; color: {SOFT}">Good through Labor Day 1972.</div></div>'
         f'</div>'
     )
     foot = (f'<div style="position: absolute; left: {L}px; top: 996px; width: {CW}px; display: flex; justify-content: space-between; '
             f'font-family: {BODY}; font-size: 16px; color: {SOFT}">'
             f'<span>Prices subject to change. Brooklyn, N.Y.</span><span style="font-family: {CD}; font-weight: 800; color: {RED}; letter-spacing: 0.14em">PLEASE TURN OVER</span></div>')
-    return page('front', top + cols + coupon + foot)
+    still = (f'<div style="position: absolute; left: {L + 368}px; top: 762px; width: {CW - 368}px">'
+             f'<div style="border: 3px solid {RED}; padding: 5px; background: {PAPER}">'
+             f'<img src="assets/still-avenue.jpg" alt="" style="display: block; width: 100%; height: auto"></div>'
+             f'<div style="margin-top: 7px; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.25; color: {SOFT}">Around the corner, the picture house.</div></div>')
+    return page('front', top + cols + coupon + still + foot)
 
 
 def ticket():
@@ -119,14 +118,15 @@ def ticket():
             ('', 'Pies, plain + pepperoni')]
     body = ''.join(f'<div style="{line}"><div style="{lab}">{a}</div><div style="{hand}">{b}</div></div>' for a, b in rows)
     return (
-        f'<div style="position: absolute; left: 500px; top: 776px; width: 262px; height: 222px; transform: rotate(2deg); transform-origin: 50% 0">'
-        f'<div style="position: absolute; left: 0; top: 0; width: 262px; height: 222px; background: {GREEN}; box-shadow: 0 2px 5px rgba(38,28,24,0.22)"></div>'
+        f'<div style="position: absolute; left: 500px; top: 752px; width: 262px; height: 250px; transform: rotate(2deg); transform-origin: 50% 0">'
+        f'<div style="position: absolute; left: 0; top: 0; width: 262px; height: 250px; background: {GREEN}; box-shadow: 0 2px 5px rgba(38,28,24,0.22)"></div>'
         f'<div style="position: absolute; left: 14px; top: 12px; width: 234px">'
         f'<div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid {GREEN_INK}; padding-bottom: 4px">'
         f'<span style="font-family: {CD}; font-weight: 800; font-size: 16px; letter-spacing: 0.1em; color: {GREEN_INK}">GUEST CHECK</span>'
         f'<span style="font-family: {CD}; font-weight: 800; font-size: 16px; color: {RED}">No. 0822</span></div>'
         f'{body}'
-        f'<div style="margin-top: 8px; display: flex; align-items: baseline; gap: 8px"><span style="{lab}; width: auto">OK</span>'
+        f'<div style="margin-top: 6px; font-family: {HAND}; font-size: 20px; line-height: 1; color: {RED}; transform: rotate(-3deg)">Kid says he\'s a star!</div>'
+        f'<div style="margin-top: 4px; display: flex; align-items: baseline; gap: 8px"><span style="{lab}; width: auto">OK</span>'
         f'<span style="font-family: {SCRIPT}; font-size: 30px; line-height: 1; color: {PENCIL}">Sgt. Moretti</span></div>'
         f'</div>'
         f'<div style="position: absolute; left: 150px; top: -18px; width: 20px; height: 56px; border: 3px solid #8b8f96; border-radius: 10px; box-sizing: border-box"></div>'
@@ -166,7 +166,7 @@ def back():
     deliver = (
         f'<div style="position: absolute; left: {L}px; top: 800px; width: 410px; box-sizing: border-box; border-top: 3px solid {INK}; padding-top: 12px">'
         f'<div style="font-family: {CD}; font-weight: 800; font-size: 18px; letter-spacing: 0.16em; color: {RED}">FREE DELIVERY ON THE BLOCK</div>'
-        f'<div style="margin-top: 7px; font-family: {BODY}; font-size: 20px; line-height: 1.3; color: {SOFT}">The avenue and the side streets, 11 A.M. to midnight. Our boys ride bicycles. We don\'t take the car.</div>'
+        f'<div style="margin-top: 7px; font-family: {BODY}; font-size: 20px; line-height: 1.3; color: {SOFT}">Bank and office lunches by noon. Our boys ride bicycles. We don\'t take the car.</div>'
         f'<div style="margin-top: 6px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 20px; line-height: 1.25; color: {RED}">Sorry, no delivery to Wyoming.</div></div>'
     )
     foot = (f'<div style="position: absolute; left: {L}px; top: 996px; width: 420px; font-family: {BODY}; font-size: 16px; color: {SOFT}">'
