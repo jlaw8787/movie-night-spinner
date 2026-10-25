@@ -1,6 +1,6 @@
 """Paints the art for Sal's wall menu (1056x1344 css px, painted at 2x).
 - band.jpg: the film's own red brick wall (TMDB still), cropped above the corner men, shaded for the sign.
-- hero.jpg: Sal's dining room first thing in the morning (TMDB still), lifted and warmed, cooler logo blurred.
+- hero.jpg: Sal, Mookie and the regulars on the block in daylight (TMDB still), one shorts logo softened.
 - triangles.png: the zigzag triangle band from the film's title art, in heat colours.
 - wall.png: the signature. Sal's dark wood panelling with the Wall of Fame, a row of empty frames, no faces.
 - board.png: the hot yellow menu board stock, soft mottle.
@@ -28,16 +28,14 @@ shade = 0.62 + 0.38 * np.clip((xx - 0.05) / 0.75, 0, 1)
 a = a * shade
 Image.fromarray(a.clip(0, 255).astype('uint8')).save(A('band.jpg'), quality=90)
 
-# ---------- hero: Sal's in the morning ----------
-h = Image.open(S('3leftVRvO17DjEkUnY0Xadfsztg.jpg')).convert('RGB')
-h = h.crop((0, 100, 1260, 100 + 453))  # stops short of the cooler
-a = np.asarray(h).astype(float) / 255
-a = a ** 0.72
-a[..., 0] *= 1.04; a[..., 2] *= 0.94
-h = Image.fromarray((a.clip(0, 1) * 255).astype('uint8'))
-h = ImageEnhance.Contrast(h).enhance(1.08)
-h = ImageEnhance.Color(h).enhance(1.12)
-fit(h, 952, 342).save(A('hero.jpg'), quality=90)
+# ---------- hero: Sal and the regulars on the block, bright daylight ----------
+h = Image.open(S('oYOZay9hyW3uI5paKWLIYkWZlzv.jpg')).convert('RGB')
+reg = (1690, 850, 1820, 915)  # sportswear logo on a pair of shorts
+h.paste(h.crop(reg).filter(ImageFilter.GaussianBlur(8)), reg[:2])
+h = h.crop((0, 10, 2560, 10 + 920))
+h = ImageEnhance.Contrast(h).enhance(1.05)
+h = ImageEnhance.Color(h).enhance(1.06)
+fit(h, 952, 342).save(A('hero.jpg'), quality=92)
 
 # ---------- triangles: zigzag band from the title art ----------
 TW, TH = W * K, 16 * K

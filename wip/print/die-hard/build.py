@@ -1,15 +1,13 @@
 """Nakatomi Plaza Christmas party, 30th floor, Christmas Eve 1988. Tall corporate party folder, two faces 672x1344.
-Front: the painted leasing-brochure cutaway of the tower at night (paint.py), the building directory as
+Front: the tower at sunset (TMDB still) run tall, the building directory as
 letter-board strips keyed to the floors, Holly Gennero's party name badge, a guest relations tip.
-Back: the evening's menu on light corporate stock, the tower at sunset (TMDB still), Argyle's limo card,
+Back: the menu, the air duct still (TMDB), Argyle's limo card,
 Mr. Takagi's welcome. Writes the still crop, wear, front/back .body.html and .html."""
 import os, random, subprocess, sys
 from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageEnhance
 D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
-if not os.path.exists(A('tower-cutaway.png')):
-    subprocess.run([sys.executable, os.path.join(D, 'paint.py')], check=True)
 W, H = 672, 1344
 CHAR, NIGHT, GOLD, RED, PAPER, INK, SOFT = '#25262b', '#16171b', '#c9a14a', '#c4262e', '#e7e2d8', '#1e1f23', '#5a5852'
 FONTS = ('https://fonts.googleapis.com/css2?family=Michroma'
@@ -18,17 +16,22 @@ FONTS = ('https://fonts.googleapis.com/css2?family=Michroma'
 DISP = "'Michroma', sans-serif"; BODY = "'IBM Plex Sans', sans-serif"; SCRIPT = "'Herr Von Muellerhoff', cursive"
 L = 40
 
-# ---------------- floors (must match paint.py) ----------------
-GY, X0, X1 = 1080, 330, 620
-HT = {n: (40 if n == 30 else 19.5) for n in range(1, 36)}
-def fy(n): return GY - sum(HT[k] for k in range(1, n + 1))
+# ---------------- front photo and its floors ----------------
+PX, PY, PW, PH = 252, 290, 380, 830            # tall photo box on the front
+CROP = (2262, 150, 2871, 1480)                   # the tower from the sunset still, above the traffic
+k = PH / 1330
+ROOF, GY = PY + (232 - 150) * k, PY + (1300 - 150) * k         # roof line and street level in the photo
+X0, X1 = PX + (2360 - CROP[0]) * PW / 609, PX + (2772 - CROP[0]) * PW / 609
+def fy(n): return GY - n * (GY - ROOF) / 35   # top of floor n
 
 # ---------------- still and wear ----------------
 st = Image.open(S('mYOlKvVGfhql8j9dI2ycL5yiiwS.jpg')).convert('RGB')
-st = ImageEnhance.Brightness(st).enhance(1.08)
+st = ImageEnhance.Brightness(st).enhance(1.06)
+st.crop(CROP).resize((PW * 2, PH * 2), Image.LANCZOS).filter(ImageFilter.UnsharpMask(3, 60, 2)).save(A('still-tower.jpg'), quality=90)
 SW, SH = 592, 160
-box = (1000, 260, 3740, 150 + int(2740 * SH / SW))   # tower, palms and avenue trees, clear of the cars
-st.crop(box).resize((SW * 2, SH * 2), Image.LANCZOS).save(A('still-tower.jpg'), quality=90)
+vt = Image.open(S('uNfsaypC3jeSkNhN2ulMEE5926.jpg')).convert('RGB')
+vt = ImageEnhance.Brightness(vt).enhance(1.15)
+vt.crop((0, 300, 2240, 300 + int(2240 * SH / SW))).resize((SW * 2, SH * 2), Image.LANCZOS).save(A('still-vent.jpg'), quality=90)
 
 def wear(name, seed, col=(80, 66, 44), k=0.5):
     rnd = random.Random(seed)
@@ -92,30 +95,35 @@ def badge(o, x, y, ang):
 
 def front():
     o = []
-    o.append(f'<img src="assets/tower-cutaway.png" alt="Painted cutaway of Nakatomi Plaza at night: a glass tower over a garage with a limousine, dark office floors, '
-             f'the elevator core, a red air duct, the gold-lit thirtieth floor party with its Christmas tree, three bare floors under construction and a helipad on the roof" '
-             f'style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">')
+    o.append(f'<div style="position: absolute; left: {PX - 2}px; top: {PY - 2}px; width: {PW}px; height: {PH}px; border: 2px solid {GOLD}">'
+             f'<img src="assets/still-tower.jpg" alt="Nakatomi Plaza at sunset, a gold-banded tower rising over palms and trees" '
+             f'style="display: block; width: {PW}px; height: {PH}px"></div>')
+    # the party floor, outlined in gold on the photo
+    o.append(f'<div style="position: absolute; left: {X0 - 6:.0f}px; top: {fy(30) - 2:.0f}px; width: {X1 - X0 + 12:.0f}px; height: {fy(29) - fy(30) + 4:.0f}px; '
+             f'border: 2px solid {GOLD}; box-sizing: border-box; box-shadow: 0 0 10px rgba(255,200,90,0.9)"></div>')
+    o.append(f'<div style="position: absolute; left: {PX}px; top: {PY + PH + 6}px; width: {PW}px; text-align: right; font-family: {BODY}; font-style: italic; '
+             f'font-size: 16px; line-height: 1.2; color: #b9b4a8">Our new home on the Avenue. 35 floors.</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 40px; width: {W - 2 * L}px">{kicker("Nakatomi Trading Corporation", GOLD)}</div>')
     o.append(f'<div style="position: absolute; left: {L - 3}px; top: 70px">{disp("CHRISTMAS", 58, "#f4f0e6")}{disp("PARTY", 58, GOLD, " margin-top: 2px")}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 212px; width: 400px; font-family: {BODY}; font-size: 20px; line-height: 1.35; color: #e4ded1">'
              f'Christmas Eve, Saturday, December 24.<br>Thirtieth floor, from seven o&rsquo;clock.</div>')
     # directory strips keyed to the floors
-    o.append(f'<div style="position: absolute; left: {L - 8}px; top: 276px; width: 262px">{kicker("Building directory", GOLD, 16)}</div>')
+    o.append(f'<div style="position: absolute; left: {L - 8}px; top: 276px; width: 262px">{kicker("Directory", GOLD, 16)}</div>')
     rows = [
-        (fy(35) - 58, 'ROOF', 'Helipad. Staff only.', fy(35) - 18, False),
-        (fy(34) - 2, '32 TO 34', 'Under construction. Hard hats.', fy(33) + 8, False),
-        (fy(30) - 4, '30 / RECEPTION', 'The party. Tree, bar, buffet.', fy(30) + 22, True),
-        (fy(24) - 28, 'AIR HANDLING', 'Plant room on 24. Ducts up.', fy(24) + 10, False),
-        (fy(20) - 10, 'ELEVATORS', 'Express, lobby to 35.', fy(20) + 10, False),
-        (fy(14) - 6, '2 TO 29', 'Nakatomi offices. Closed tonight.', fy(14) + 14, False),
+        (300, 'ROOF', 'Helipad. Staff only.', ROOF + 2),
+        (362, '32 TO 34', 'Under construction. Hard hats.', fy(33) + 4),
+        (fy(30) - 10, '30 / RECEPTION', 'The party. Tree, bar, buffet.', fy(30) + 8.5),
+        (fy(24) - 10, 'AIR HANDLING', 'Plant room on 24. Ducts up.', fy(24) + 8),
+        (fy(19) - 10, 'ELEVATORS', 'Express, lobby to 35.', fy(19) + 8),
+        (fy(13) - 10, '2 TO 29', 'Nakatomi offices. Closed tonight.', fy(13) + 8),
     ]
-    for y, lab, line, ly, hot in rows:
+    for y, lab, line, ly in rows:
+        hot = lab.startswith('30')
         strip(o, y, lab, line, hot)
-        leader(o, L - 8 + 262, ly, {'ELEVATORS': 495, 'ROOF': 414}.get(lab, X0 + 4), RED if hot else GOLD)
-    badge(o, 50, 884, -4)
-    strip(o, GY - 22, 'LOBBY / P1', 'Sign in at the desk. Limos on P1.', False, 262)
-    leader(o, L - 8 + 262, GY - 10, X0 + 4)
-    leader(o, L - 8 + 262, GY + 20, 392)
+        leader(o, L - 8 + 262, ly, X0 + 10, RED if hot else GOLD)
+    badge(o, 44, 900, -4)
+    strip(o, 1062, 'LOBBY / P1', 'Sign in at the desk. Limos on P1.', False, 262)
+    leader(o, L - 8 + 262, 1080, X0 + 30)
     # guest relations tip and footer
     o.append(f'<div style="position: absolute; left: {L}px; top: 1166px; width: {W - 2 * L}px; border-top: 1.5px solid {GOLD}; padding-top: 12px">'
              f'{kicker("Flew in tonight? A tip from the man in 4B", GOLD, 16)}'
@@ -155,11 +163,11 @@ def back():
     o.append(f'<div style="position: absolute; left: {L}px; top: 38px; width: {W - 2 * L}px">{kicker("Thirtieth floor, Christmas Eve", RED)}</div>')
     o.append(f'<div style="position: absolute; left: {L - 2}px; top: 64px">{disp("THIS EVENING", 46, INK)}</div>')
     o.append(f'<div style="position: absolute; left: {L - 4}px; top: 132px; width: {SW}px; height: {SH}px; border: 4px solid {GOLD}; background: {GOLD}">'
-             f'<img src="assets/still-tower.jpg" alt="Nakatomi Plaza at sunset, a tall gold-banded tower rising over palms and avenue trees" '
+             f'<img src="assets/still-vent.jpg" alt="A man in a white undershirt crawls through a steel air duct by the light of a lighter" '
              f'style="display: block; width: {SW}px; height: {SH}px"></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 302px; width: {W - 2 * L}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-size: 16px; line-height: 1.2; color: {SOFT}">'
-             f'<span style="font-style: italic">Our new home, from the Avenue. Done in time for Christmas.</span><span style="font-weight: 600; color: {RED}">35 FLOORS</span></div>')
+             f'<span style="font-style: italic">Air handling, thirtieth floor. Guests, please keep out of the ducts.</span><span style="font-weight: 600; color: {RED}">FLOOR 30</span></div>')
     menu = (section('PASSED', '7')
             + item('Smoked Salmon Blini', '7:00', 'Warm blini, cr&egrave;me fra&icirc;che, salmon roe and dill.')
             + item('Rosemary Roasted Nuts', '7:00', 'Cashews and almonds, brown sugar butter, cayenne.', 'Same recipe as the back of the limo.')

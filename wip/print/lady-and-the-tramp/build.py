@@ -2,7 +2,7 @@
 Single heavy card, two faces 816x1056 (US Letter) with a red and white checked tablecloth border.
 Front is the night: deep alley blue, candle amber light, the TMDB spaghetti still large.
 Back is the day: cream stock, a real 1905 tree-lined avenue (Library of Congress, no known restrictions).
-Props: a brass dog licence tag, a "back door, by the barrels" reservation card for two.
+Props: a printed paper dog licence slip, a "back door, by the barrels" reservation card for two.
 Writes painted assets, front/back .body.html and .html."""
 import os, random, math
 import numpy as np
@@ -108,13 +108,6 @@ def light_front():
     k = np.zeros((H, W, 4)); k[..., 0], k[..., 1], k[..., 2] = 6, 9, 22
     k[..., 3] = (np.clip(1 - (edge - B) / 120, 0, 1) ** 2) * 150
     im = Image.alpha_composite(Image.fromarray(lay.astype('uint8'), 'RGBA'), Image.fromarray(k.clip(0, 255).astype('uint8'), 'RGBA'))
-    # a few faint stars over the alley roofline, painted as soft dots
-    dr = ImageDraw.Draw(im); rnd = random.Random(4)
-    for _ in range(26):
-        x, y = rnd.randint(60, W - 60), rnd.randint(52, 200)
-        if 150 < x < 670 and 70 < y < 200: continue
-        r = rnd.choice([0.8, 1, 1.2])
-        dr.ellipse([x - r, y - r, x + r, y + r], fill=(255, 236, 190, rnd.randint(90, 170)))
     im.save(A('light-front.png'))
 
 
@@ -166,7 +159,7 @@ def licence_tag():
     im.save(A('licence-tag.png'))
 
 
-border('front', AMBER); border('back', RED); strip(); light_front(); wear_back(); licence_tag()
+border('front', AMBER); border('back', RED); strip(); light_front(); wear_back()
 
 
 # ---------------- type pieces ----------------
@@ -218,9 +211,10 @@ def front():
     TOP = 644
     left = (head('Joe\'s kitchen', 'To Begin', AMBER, CREAM)
             + item('Garlic bread', '.10', 'Italian loaf, parsley butter, parmesan, baked crisp at the edges.', CREAM, DIM)
-            + item('Antipasto for two', '.40', 'Salami, provolone, olives, artichoke hearts, roasted red peppers, torn bread.', CREAM, DIM))
+            + item('Antipasto for two', '.40', 'Salami, provolone, olives, artichoke hearts, roasted red peppers, torn bread.', CREAM, DIM)
+            + item('Breadsticks', '.05', 'Long and salted, in a crock on every table.', CREAM, DIM))
     o.append(at(56, TOP, 330, left))
-    o.append(f'<div style="position: absolute; left: 408px; top: {TOP + 6}px; width: 1px; height: 300px; background: {AMBER}; opacity: 0.35"></div>')
+    o.append(f'<div style="position: absolute; left: 408px; top: {TOP + 6}px; width: 1px; height: 336px; background: {AMBER}; opacity: 0.35"></div>')
     right = (head('Every night', 'Specialty', AMBER, CREAM)
              + item('Spaghetti &amp; meatballs', '.35', 'Beef and pork meatballs, slow tomato and basil. Save the last meatball for your sweetheart.',
                     CANDLE, DIM, 14, 'For two, on one plate, .55', AMBER, 29))
@@ -250,13 +244,15 @@ def back():
              f'style="position: absolute; left: {X}px; top: {Y}px; width: {PW}px; height: {PH}px">')
     o.append(at(X, Y + PH + 10, 520, f'<div style="font-family: {BODY}; font-style: italic; font-size: 19px; line-height: 1.25; color: #4a4f66">'
                 'The fine houses up the hill. Every one has a dog that knows our back door.</div>'))
-    # prop: dog licence tag, hanging off the photo corner
-    o.append(f'<div style="position: absolute; left: 622px; top: {Y - 38}px; width: 150px; height: 176px; transform: rotate(8deg)">'
-             f'<img src="assets/licence-tag.png" alt="" style="position: absolute; left: 0; top: 0; width: 150px; height: 176px">'
-             f'<div style="position: absolute; left: 0; top: 74px; width: 150px; text-align: center; color: #4a2f0c">'
-             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.14em; line-height: 16px">DOG LICENSE</div>'
-             f'<div style="font-family: {DISP}; font-weight: 700; font-size: 30px; line-height: 34px">1910</div>'
-             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 15px; letter-spacing: 0.08em; line-height: 16px">No. 55</div></div></div>')
+    # prop: the dog licence, a plain printed paper slip pinned over the photo corner (typographic, no drawing)
+    o.append(f'<div style="position: absolute; left: 584px; top: {Y - 30}px; width: 180px; height: 128px; background: #fbf5e6; '
+             f'transform: rotate(6deg); box-shadow: 0 4px 10px rgba(40,20,10,0.4)">'
+             f'<div style="position: absolute; left: 6px; top: 6px; width: 168px; height: 116px; border: 3px double {RED}; box-sizing: border-box"></div>'
+             f'<div style="position: absolute; left: 0; top: 14px; width: 180px; text-align: center; color: {INK}">'
+             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.18em; line-height: 16px; color: {RED}">DOG LICENSE</div>'
+             f'<div style="font-family: {DISP}; font-weight: 700; font-size: 38px; line-height: 42px">1910</div>'
+             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 16px; letter-spacing: 0.1em; line-height: 18px">No. 55</div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 14px; line-height: 18px; margin-top: 2px">Wear on the collar at all times</div></div></div>')
     TOP = 444
     left = (head('From Joe\'s stove', 'Supper', RED, INK, 340)
             + item('Minestrone', '.15', 'Beans, greens, little pasta, tomato broth.', INK, '#3c4260', 12)

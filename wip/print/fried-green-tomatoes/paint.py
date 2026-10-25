@@ -1,5 +1,4 @@
-"""Paints the small props for the Whistle Stop Cafe card: the bee tree honey jar, the chalk hobo mark,
-plus soft paper wear for both faces. Photo crops are made in build.py."""
+"""Paints soft paper wear for both faces of the Whistle Stop Cafe card (honey_jar and chalk_mark are retired under rule 25 and not called). Photo crops are made in build.py."""
 import os, random, math
 from PIL import Image, ImageDraw, ImageFilter, ImageChops
 D = os.path.dirname(os.path.abspath(__file__))
@@ -113,5 +112,4 @@ def chalk_mark():
 if __name__ == '__main__':
     os.makedirs(os.path.join(D, 'assets'), exist_ok=True)
     wear('front', 1931); wear('back', 1991)
-    honey_jar(); chalk_mark()
     print('painted')

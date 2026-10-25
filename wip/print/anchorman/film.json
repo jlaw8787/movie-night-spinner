@@ -25,7 +25,14 @@
   "name": "'Archivo',sans-serif",
   "body": "'Archivo',sans-serif",
   "price": "'Archivo',sans-serif",
-  "note": "'Archivo',sans-serif"
+  "note": "'Archivo',sans-serif",
+  "top": "#7a1e2c",
+  "topInk": "#f6ecd2",
+  "paper": "#f3e3b0",
+  "ink": "#2a1a14",
+  "soft": "#5e5038",
+  "accent": "#7a1e2c",
+  "tab": "#d8a032"
  },
- "build": "python3 paint.py && python3 build.py && python3 shot.py"
+ "build": "python3 build.py && python3 shot.py"
 }

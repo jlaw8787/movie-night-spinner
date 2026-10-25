@@ -1,19 +1,16 @@
 """KVWN Channel 4 News Team Night, the station party, San Diego, 1975.
 News rundown sheet, two faces 816x1056 (US Letter).
-Front: a frame from the film. The painted 70s Channel 4 set (paint.py): burgundy valance with harvest gold and
-avocado stripes, circle-4 wallpaper, five world clocks, the big monitor showing the TMDB news team still with a
-lower third, the walnut anchor desk with the title on its burgundy panel. Props: a torn teleprompter roll
+Front: a frame from the film. The real TMDB still of Ron at the Channel 4 news desk under the world clocks, large,
+with a world clock city strip in type, the TMDB news team still beside the title. Props: a torn teleprompter roll
 ("stay classy"), a memo from the desk of Ron Burgundy, a jazz flute ticket.
 Back: the six o'clock rundown on canary copy paper. Blocks, page numbers, talent, cost. Milk is killed.
-Baxter's snapshot is clipped on, his dog license sits at the foot.
+Baxter's snapshot is pinned on, his paper dog license tucked under it.
 Writes photo crops, wear, front/back .body.html and .html."""
 import os, random, subprocess, sys
 from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageEnhance
 D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
-if not os.path.exists(A('channel4-set.jpg')):
-    subprocess.run([sys.executable, os.path.join(D, 'paint.py')], check=True)
 W, H = 816, 1056
 BURG, BURG_D, GOLD, AVO, AVO_D, PAPER, CANARY, INK, NAVY = ('#7a1e2c', '#4e1019', '#d8a032', '#6f7a2b', '#4f5820',
                                                            '#f6ecd2', '#f3e3b0', '#2a1a14', '#24304a')
@@ -31,7 +28,9 @@ def fit(im, w, h, box=None):
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
 team = ImageEnhance.Brightness(Image.open(S('5iHPV6M6aPKxXv3w8LTxsD6Zeot.jpg')).convert('RGB')).enhance(1.04)
-fit(team, 592, 333).save(A('still-news-team.jpg'), quality=90)
+fit(team, 352, 198).save(A('still-news-team.jpg'), quality=90)
+desk = ImageEnhance.Brightness(Image.open(S('bbMrxMEiA7StAMcNUZ4jsKRjPgN.jpg')).convert('RGB')).enhance(1.05)
+fit(desk, 728, 410).save(A('still-news-desk.jpg'), quality=90)
 bax = ImageEnhance.Brightness(Image.open(S('lRDH73FEzOtWY2WyHVP3pEg0aPt.jpg')).convert('RGB')).enhance(1.08)
 fit(bax, 196, 140, (1180, 120, 2700, 1400)).save(A('still-baxter.jpg'), quality=90)
 
@@ -47,6 +46,7 @@ def wear(name, seed, col=(90, 70, 30)):
     lay = Image.new('RGBA', (W, H), col + (0,)); lay.putalpha(ImageChops.add(m, mot).point(lambda v: int(v * 0.5)))
     lay.save(A(f'wear-{name}.png'))
 wear('back', 1975)
+wear('front', 4, (20, 4, 8))
 
 # ---------------- pieces ----------------
 def kicker(t, color, size=18, extra=''):
@@ -57,8 +57,7 @@ def absdiv(x, y, w, inner, extra=''):
     return f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px;{extra}">{inner}</div>'
 
 def page(inner, name, bg):
-    over = ('' if name == 'front' else
-            f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.22">'
+    over = (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: {0.12 if name == "front" else 0.22}">'
             f'<img src="assets/wear-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">')
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {bg}">'
             + inner + over + '</div>')
@@ -66,33 +65,40 @@ def page(inner, name, bg):
 # ---------------- FRONT ----------------
 def front():
     o = []
-    o.append(f'<img src="assets/channel4-set.jpg" alt="Painting of a 1970s TV news set: pale blue Channel 4 wallpaper, five brass world clocks, a big walnut monitor and a walnut anchor desk with a burgundy front panel" '
-             f'style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">')
+    # top rule stripes in the station colours
+    o.append(f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 12px; background: {GOLD}"></div>'
+             f'<div style="position: absolute; left: 0; top: 14px; width: {W}px; height: 6px; background: {AVO}"></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 44px; width: {W - 2 * L}px; display: flex; justify-content: space-between">'
              f'{kicker("KVWN-TV Channel 4", GOLD, 18, " white-space: nowrap")}{kicker("San Diego, Friday night", PAPER, 18, " white-space: nowrap")}</div>')
-    # clock name plates
-    for i, c in enumerate(['San Diego', 'New York', 'London', 'Tokyo', 'Moscow']):
-        o.append(absdiv(136 + 136 * i - 54, 209, 108, kicker(c, PAPER, 14, ' letter-spacing: 0.12em; text-align: center'), ''))
-    # the monitor: news team still with a lower third
-    o.append(f'<div style="position: absolute; left: 112px; top: 262px; width: 592px; height: 333px; overflow: hidden; border-radius: 12px">'
-             f'<img src="assets/still-news-team.jpg" alt="The Channel 4 News Team posed in front of the station wallpaper: Champ in a cowboy hat, Veronica, Ron in his burgundy suit, Brian and Brick" '
-             f'style="display: block; width: 592px; height: 333px">'
-             f'<div style="position: absolute; left: 0; top: 262px; height: 50px; background: {BURG}; border-top: 3px solid {GOLD}; border-bottom: 3px solid {GOLD}; padding: 0 22px 0 18px; '
+    # world clock cities as a type strip
+    cities = [('San Diego', '6:00'), ('New York', '9:00'), ('London', '2:00'), ('Tokyo', '11:00'), ('Saigon', '10:00')]
+    o.append(f'<div style="position: absolute; left: 0; top: 76px; width: {W}px; height: 32px; background: {BURG_D}; display: flex; align-items: center; justify-content: center; gap: 14px">'
+             + ''.join(f'<div style="font-family: {BODY}; font-weight: 800; font-size: 15px; letter-spacing: 0.1em; color: {PAPER}; white-space: nowrap">{c.upper()} '
+                       f'<span style="color: {GOLD}">{t}</span></div>' for c, t in cities) + '</div>')
+    # hero: the real Channel 4 news desk
+    o.append(f'<div style="position: absolute; left: {L - 6}px; top: 120px; width: 728px; height: 410px; border: 4px solid {GOLD}; box-shadow: 0 8px 20px rgba(0,0,0,0.5)">'
+             f'<img src="assets/still-news-desk.jpg" alt="Ron Burgundy at the Channel 4 anchor desk under the row of world clocks, the station logo on the screen behind him" '
+             f'style="display: block; width: 728px; height: 410px">'
+             f'<div style="position: absolute; left: 0; top: 336px; height: 52px; background: {BURG}; border-top: 3px solid {GOLD}; border-bottom: 3px solid {GOLD}; padding: 0 22px 0 18px; '
              f'display: flex; flex-direction: column; justify-content: center">'
-             f'{kicker("The Channel 4 News Team", GOLD, 15, " letter-spacing: 0.16em")}'
-             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; line-height: 1.1; color: {PAPER}; margin-top: 2px">Number one in San Diego. Again.</div></div></div>')
-    # torn teleprompter roll lying on the desk
-    o.append(f'<div style="position: absolute; left: 120px; top: 604px; width: 576px; height: 50px; background: #fbf8ee; transform: rotate(-1.4deg); '
+             f'{kicker("Ron Burgundy", GOLD, 15, " letter-spacing: 0.16em")}'
+             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; line-height: 1.1; color: {PAPER}; margin-top: 2px">Channel 4 News, weeknights at six.</div></div></div>')
+    # torn teleprompter roll
+    o.append(f'<div style="position: absolute; left: 120px; top: 528px; width: 576px; height: 50px; background: #fbf8ee; transform: rotate(-1.4deg); '
              f'box-shadow: 0 5px 10px rgba(30,12,8,0.45); display: flex; align-items: center; justify-content: center; gap: 14px; padding-left: 8px; box-sizing: border-box; '
              f'border-left: 3px dotted #b8b2a0; border-right: 3px dotted #b8b2a0">'
              f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: {BURG}; line-height: 1; border: 2px solid {BURG}; padding: 3px 5px 2px; white-space: nowrap">PROMPT 4</div>'
              f'<div style="font-family: {BODY}; font-weight: 800; font-size: 25px; letter-spacing: 0.03em; color: #111; line-height: 1; white-space: nowrap">YOU STAY CLASSY, SAN DIEGO.</div></div>')
-    # title on the desk panel
-    o.append(absdiv(66, 696, 684, kicker("Station party and supper", GOLD, 18, ' text-align: center')))
-    o.append(absdiv(66, 728, 684, f'<div style="font-family: {DISP}; font-size: 52px; line-height: 1; color: {PAPER}; text-align: center; white-space: nowrap; '
-                                  f'text-shadow: 3px 3px 0 {BURG_D}">NEWS TEAM NIGHT</div>'))
-    o.append(absdiv(66, 798, 684, f'<div style="font-family: {BODY}; font-weight: 500; font-size: 21px; line-height: 1.2; color: {PAPER}; text-align: center">'
-                                  f'Supper, drinks and the whole Channel 4 family. The rundown is inside.</div>'))
+    # the team still, left; title, right
+    o.append(f'<div style="position: absolute; left: {L}px; top: 606px; width: 352px; background: {PAPER}; padding: 7px 7px 5px; box-sizing: content-box; transform: rotate(-1.5deg); '
+             f'box-shadow: 0 6px 14px rgba(0,0,0,0.5); margin-left: -7px">'
+             f'<img src="assets/still-news-team.jpg" alt="The Channel 4 News Team posed in front of the station wallpaper: Champ in a cowboy hat, Veronica, Ron in his burgundy suit, Brian and Brick" '
+             f'style="display: block; width: 352px; height: 198px">'
+             f'<div style="font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 16px; line-height: 1.2; color: {INK}; text-align: center; padding-top: 5px">The News Team. Number one in San Diego.</div></div>')
+    o.append(absdiv(424, 612, 348, kicker("Station party and supper", GOLD, 16, ' letter-spacing: 0.16em')
+                    + f'<div style="font-family: {DISP}; font-size: 50px; line-height: 1.02; color: {PAPER}; margin-top: 8px; text-shadow: 3px 3px 0 {BURG_D}">NEWS<br>TEAM<br>NIGHT</div>'
+                    + f'<div style="height: 4px; width: 120px; background: {GOLD}; margin-top: 12px"></div>'
+                    + f'<div style="font-family: {BODY}; font-weight: 500; font-size: 20px; line-height: 1.25; color: {PAPER}; margin-top: 10px">Supper, drinks and the whole Channel 4 family. The rundown is inside.</div>'))
     # memo from the desk of Ron Burgundy
     o.append(f'<div style="position: absolute; left: 40px; top: 874px; width: 452px; height: 138px; box-sizing: border-box; padding: 11px 18px 0 22px; background: {PAPER}; '
              f'transform: rotate(-1.2deg); box-shadow: 0 6px 14px rgba(0,0,0,0.5); border-top: 6px solid {BURG}">'
@@ -100,13 +106,13 @@ def front():
              f'<div style="font-family: {BODY}; font-size: 19px; line-height: 1.26; color: {INK}; margin-top: 5px">Tonight we eat like kings and drink like gentlemen. '
              f'I don&rsquo;t want to brag, but I am kind of a big deal.</div>'
              f'<div style="position: absolute; right: 18px; bottom: 4px; font-family: {SCRIPT}; font-size: 36px; line-height: 1; color: {BURG}; transform: rotate(-4deg)">Ron Burgundy</div></div>')
-    # jazz flute ticket
-    perf = ''.join(f'<div style="position: absolute; left: 52px; top: {6 + i * 13}px; width: 4px; height: 6px; background: {BURG_D}"></div>' for i in range(9))
-    o.append(f'<div style="position: absolute; left: 524px; top: 880px; width: 240px; height: 122px; background: {GOLD}; transform: rotate(2.5deg); '
-             f'box-shadow: 0 6px 14px rgba(0,0,0,0.5); overflow: hidden">{perf}'
-             f'<div style="position: absolute; left: 0; top: 0; width: 52px; height: 122px; display: flex; align-items: center; justify-content: center">'
-             f'<div style="font-family: {DISP}; font-size: 17px; color: {BURG}; line-height: 1; transform: rotate(-90deg); white-space: nowrap">No. 0004</div></div>'
-             f'<div style="position: absolute; left: 64px; top: 10px; width: 168px; text-align: center">'
+    # jazz flute ticket, plain type on card
+    o.append(f'<div style="position: absolute; left: 524px; top: 880px; width: 240px; height: 122px; background: #f2d27e; transform: rotate(2.5deg); '
+             f'box-shadow: 0 6px 14px rgba(0,0,0,0.5); display: flex">'
+             f'<div style="width: 58px; border-right: 2px dashed {BURG_D}; display: flex; flex-direction: column; align-items: center; justify-content: center">'
+             f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; color: {BURG_D}; line-height: 1">No.</div>'
+             f'<div style="font-family: {BODY}; font-weight: 800; font-size: 17px; color: {BURG}; line-height: 1.1">0004</div></div>'
+             f'<div style="flex: 1; text-align: center; padding-top: 10px">'
              f'{kicker("Admit one", BURG_D, 14)}'
              f'<div style="font-family: {DISP}; font-size: 26px; line-height: 1.02; color: {BURG}; margin-top: 3px">JAZZ<br>FLUTE</div>'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 15px; line-height: 1.2; color: {INK}; margin-top: 3px">Ron Burgundy, late set.<br>He will play on.</div></div></div>')
@@ -145,18 +151,16 @@ def back():
         f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {AVO_D}; text-transform: uppercase; line-height: 1.1">{k}</div>'
         f'<div style="font-family: {BODY}; font-weight: 700; font-size: 18px; color: {INK}; line-height: 1.15; white-space: nowrap">{v}</div></div>'
         for i, (k, v) in enumerate(cells)) + '</div>'))
-    # Baxter snapshot, clipped to the sheet, his dog license tucked under the clip
+    # Baxter snapshot pinned to the sheet, his paper dog license tucked under it
     o.append(f'<div style="position: absolute; left: 584px; top: 40px; width: 176px; background: #fbf8ee; padding: 7px; transform: rotate(2.5deg); '
              f'box-shadow: 0 4px 10px rgba(40,20,10,0.4)">'
              f'<img src="assets/still-baxter.jpg" alt="Ron holds Baxter, his small shaggy dog, outside the station" style="display: block; width: 176px; height: 126px"></div>'
-             f'<div style="position: absolute; left: 664px; top: 28px; width: 16px; height: 42px; border: 3px solid #8b8f96; border-radius: 8px; transform: rotate(2.5deg)"></div>')
-    o.append(f'<div style="position: absolute; left: 524px; top: 126px; width: 226px; height: 78px; box-sizing: border-box; background: {AVO}; border: 3px solid {GOLD}; '
-             f'border-radius: 9px; transform: rotate(-3deg); box-shadow: 0 4px 10px rgba(40,20,10,0.45); padding: 5px 10px 0 50px">'
-             f'<div style="position: absolute; left: 9px; top: 20px; width: 32px; height: 32px; border-radius: 50%; background: {GOLD}; display: flex; align-items: center; justify-content: center; '
-             f'font-family: {DISP}; font-size: 17px; color: {AVO_D}">4</div>'
-             f'{kicker("Dog license No. 4", GOLD, 14, " letter-spacing: 0.12em; white-space: nowrap")}'
-             f'<div style="font-family: {DISP}; font-size: 20px; line-height: 1.15; color: {PAPER}">BAXTER</div>'
-             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 14px; line-height: 1.2; color: {PAPER}; white-space: nowrap">Speaks Spanish. Good boy.</div></div>')
+             '')
+    o.append(f'<div style="position: absolute; left: 524px; top: 112px; width: 226px; height: 92px; box-sizing: border-box; background: #fbf6e6; border: 1px solid #b9ab88; '
+             f'transform: rotate(-3deg); box-shadow: 0 4px 10px rgba(40,20,10,0.45); padding: 6px 12px 0 14px">'
+             f'{kicker("Dog license No. 4", BURG, 14, " letter-spacing: 0.12em; white-space: nowrap")}'
+             f'<div style="font-family: {DISP}; font-size: 20px; line-height: 1.15; color: {INK}">BAXTER</div>'
+             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 14px; line-height: 1.2; color: {INK}">Owner R. Burgundy. Speaks Spanish.</div></div>')
     head = (f'<div style="display: flex; background: {INK}; height: 28px; align-items: center; padding: 0 0">'
             + ''.join(f'<div style="width: {w}px; font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.18em; color: {GOLD}; '
                       f'{"text-align: right; padding-right: 2px; box-sizing: border-box" if i == 3 else ("padding-left: 6px; box-sizing: border-box" if i == 0 else "")}">{t}</div>'

@@ -1,16 +1,16 @@
 """Vianne's chocolaterie, Lansquenet-sous-Tannes, Lent 1959.
 The lid card of a gift box: single heavy card, two faces 816x1056 (US Letter).
-Front: cocoa lid with a chilli red satin ribbon and bow, gilt title, the painted Easter shop window (signature, paint.py),
+Front: cocoa lid with a chilli red satin ribbon and bow, gilt title, a large TMDB still of the shop interior (Armande at the counter, the painted plate),
 the Comte's Lent notice pinned on, and Vianne's welcome with her signature.
 Back: gold-cream card with the counter menu under ribbon bands, the TMDB still of the sign going up,
-Vianne's painted plate ("what do you see?"), and a river mooring card for the boats.
+a typographic "what do you see?" card for the spinning plate, and a river mooring card for the boats.
 Writes photo crops, front/back .body.html and .html."""
 import os, subprocess, sys
 from PIL import Image, ImageEnhance
 D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
-if not os.path.exists(A('window.jpg')):
+if not os.path.exists(A('bow.png')):
     subprocess.run([sys.executable, os.path.join(D, 'paint.py')], check=True)
 W, H = 816, 1056
 COCOA, COCOA2, CHILLI, GOLD, GOLDL, CREAM, PAPER = '#2a140d', '#3b1d12', '#a8261c', '#c99a45', '#e4c27a', '#f3e6cc', '#efdfbd'
@@ -29,8 +29,9 @@ def fit(im, w, h, box=None):
 SIGN_W, SIGN_H = 240, 282
 sg = ImageEnhance.Brightness(Image.open(S('lRfRTvt4o5nibxkUCZBl84OLGJl.jpg')).convert('RGB')).enhance(1.06)
 fit(sg, SIGN_W, SIGN_H, (600, 0, 1560, 1080)).save(A('still-sign.jpg'), quality=90)
-WIN_W, WIN_H = 556, 601
-Image.open(A('window.jpg')).resize((WIN_W * 2, WIN_H * 2), Image.LANCZOS).save(A('window-crop.jpg'), quality=92)
+WIN_W, WIN_H = 590, 556
+si = ImageEnhance.Brightness(Image.open(S('uJ9eK355y9SpNoTr800a0jcPMsF.jpg')).convert('RGB')).enhance(1.22)
+fit(ImageEnhance.Contrast(si).enhance(1.05), WIN_W, WIN_H, (300, 0, 2900, 2160)).save(A('still-shop.jpg'), quality=90)
 
 # ---------------- pieces ----------------
 def kicker(t, color, size=18, extra=''):
@@ -88,7 +89,7 @@ def mooring_card(o, x, y, ang):
              f'box-shadow: 0 5px 12px rgba(40,16,6,0.4); box-sizing: border-box; padding: 12px 14px; text-align: center; border-top: 8px solid #3c6a78; overflow: hidden">'
              f'{kicker("River landing", "#3c6a78", 14)}'
              f'<div style="font-family: {DISP}; font-size: 26px; line-height: 1.05; color: {COCOA}; margin-top: 3px">Boats welcome</div>'
-             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.22; color: {COCOA}; margin-top: 4px">Moor below the old mill.<br>Repairs done. Ask for Roux.</div>{waves}</div>')
+             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.22; color: {COCOA}; margin-top: 4px">Moor below the old mill.<br>Repairs done. Ask for Roux.</div></div>')
 
 # ---------------- FRONT ----------------
 def front():
@@ -106,13 +107,12 @@ def front():
     # signature: the Easter window
     wx = cx0 + (cw - WIN_W) // 2 - 6
     o.append(f'<div style="position: absolute; left: {wx}px; top: 206px; padding: 6px; background: {GOLD}; box-shadow: 0 10px 28px rgba(0,0,0,0.6)">'
-             f'<div style="border: 2px solid {COCOA}"><img src="assets/window-crop.jpg" alt="Painting of the chocolaterie window at dusk: a great chocolate Easter egg tied with a red bow on a gilt stand, '
-             f'tiered stands of truffles either side, nests of foil eggs and rows of pralines on red velvet, jars and ribboned boxes on the shelves behind" '
+             f'<div style="border: 2px solid {COCOA}"><img src="assets/still-shop.jpg" alt="Inside the chocolaterie: Armande sits at the marble counter with a cup of chocolate, shelves of glass jars behind her and the painted plate on the counter" '
              f'style="display: block; width: {WIN_W}px; height: {WIN_H}px"></div></div>')
-    o.append(f'<div style="position: absolute; left: {cx0}px; top: 832px; width: {cw}px; text-align: center; font-family: {BODY}; font-style: italic; font-weight: 600; '
-             f'font-size: 20px; line-height: 1.2; color: {GOLDL}">The Easter window. Admire it from the street, Monsieur le Comte.</div>')
-    lent_notice(o, 140, 870, -3)
-    o.append(f'<div style="position: absolute; left: 428px; top: 876px; width: 330px; text-align: center; font-family: {BODY}; font-weight: 600; font-size: 20px; line-height: 1.25; color: {CREAM}">'
+    o.append(f'<div style="position: absolute; left: {cx0}px; top: 786px; width: {cw}px; text-align: center; font-family: {BODY}; font-style: italic; font-weight: 600; '
+             f'font-size: 20px; line-height: 1.2; color: {GOLDL}">Armande, our first regular. Lent has not slowed her down, Monsieur le Comte.</div>')
+    lent_notice(o, 140, 846, -3)
+    o.append(f'<div style="position: absolute; left: 428px; top: 852px; width: 330px; text-align: center; font-family: {BODY}; font-weight: 600; font-size: 20px; line-height: 1.25; color: {CREAM}">'
              f'Come in out of the north wind. Say nothing, and I will guess your favorite. Open every day, Lent included.'
              f'<div style="font-family: {SCRIPT}; font-size: 40px; line-height: 1; color: {GOLDL}; margin-top: 4px">Vianne</div></div>')
     return page(''.join(o), 'front', f'radial-gradient(ellipse at 55% 40%, {COCOA2} 0%, {COCOA} 70%)')
@@ -140,10 +140,13 @@ def back():
     RX = 538
     frame_photo(o, 'assets/still-sign.jpg', 'Vianne hangs the red and gold chocolaterie sign on its iron bracket against the stone wall', RX, 60, SIGN_W, SIGN_H,
                 'Up went our sign, the day the north wind blew us in.', 1.5)
-    o.append(f'<img src="assets/plate.png" alt="Vianne&rsquo;s earthenware plate painted with red and gold steps, spirals and a sun around a cacao pod" '
-             f'style="position: absolute; left: {RX + 10}px; top: 446px; width: 220px; height: 220px; display: block">')
-    o.append(f'<div style="position: absolute; left: {RX - 2}px; top: 668px; width: 236px; text-align: center; font-family: {BODY}; font-style: italic; font-weight: 600; '
-             f'font-size: 20px; line-height: 1.2; color: {CHILLI}">Give the plate a spin.<br>Tell me what you see.</div>')
+    o.append(f'<div style="position: absolute; left: {RX + 4}px; top: 440px; width: 226px; background: {CREAM}; transform: rotate(2deg); '
+             f'box-shadow: 0 5px 12px rgba(40,16,6,0.35); box-sizing: border-box; padding: 14px 16px 16px; text-align: center; border: 1px solid {GOLD}; outline: 4px solid {CREAM}">'
+             f'<div style="border: 1px solid {CHILLI}; padding: 12px 8px 14px">'
+             f'{kicker("Vianne asks", CHILLI, 15)}'
+             f'<div style="font-family: {DISP}; font-size: 38px; line-height: 1.02; color: {COCOA}; margin-top: 6px">What do you see?</div>'
+             f'<div style="width: 50px; height: 2px; background: {GOLD}; margin: 9px auto 9px"></div>'
+             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 19px; line-height: 1.22; color: {COCOA}">Spin the painted plate and tell her. She will find the chocolate to match.</div></div></div>')
     mooring_card(o, RX + 6, 744, -3)
     o.append(f'<div style="position: absolute; left: {RX - 2}px; top: 916px; width: 236px; text-align: center; font-family: {BODY}; font-weight: 600; font-size: 16px; '
              f'line-height: 1.28; color: #5a3f2e">Prices in francs, subject to change with the wind. Wrapped by Josephine. Place de l&rsquo;&Eacute;glise. Tel. 20.00. Lent, 1959.</div>')

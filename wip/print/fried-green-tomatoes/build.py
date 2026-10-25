@@ -9,7 +9,7 @@ from PIL import Image, ImageEnhance, ImageOps
 D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
-if not os.path.exists(A('honey-jar.png')):
+if not os.path.exists(A('wear-back.png')):
     subprocess.run([sys.executable, os.path.join(D, 'paint.py')], check=True)
 W, H = 600, 1200
 INK, GREEN, GOLD, RED, PAPER, CREAM, MUTE = '#24331a', '#3f5a24', '#d29a2e', '#a5452f', '#f2e6c6', '#f8f0da', '#5b5440'
@@ -37,6 +37,9 @@ sign = ImageEnhance.Brightness(Image.open(S('hgbRDIwSiQ7reWwzFtWFy0v02xo.jpg')).
 fit(sign, 176, 210, (792, 40, 1660, 1070)).save(A('still-sign.jpg'), quality=90)
 bee = ImageEnhance.Brightness(Image.open(S('7W4L1KqiPMFJGOEk8SWZTIX9NPA.jpg')).convert('RGB')).enhance(1.08)
 fit(bee, 176, 150, (420, 120, 1700, 1040)).save(A('still-bees.jpg'), quality=90)
+comb = ImageOps.autocontrast(Image.open(S('loc-honey-frame-1939.jpg')).convert('L'), cutoff=0.5)
+comb = ImageOps.colorize(comb, black=(42, 30, 12), white=(252, 238, 200), mid=(170, 122, 52))
+fit(comb, 124, 140, (250, 420, 600, 935)).save(A('honeycomb-1939.jpg'), quality=90)
 
 # ---------------- type pieces ----------------
 def kicker(t, color, size=18, extra=''):
@@ -87,20 +90,19 @@ def schedule(o, x, y, ang):
              f'No. 9 slows at the bend. Railroad Bill seen on the line again.</div></div>')
 
 def hobo_card(o, x, y, ang):
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 236px; height: 180px; background: #2b3424; border: 3px solid #5d4a2c; '
-             f'box-sizing: border-box; transform: rotate({ang}deg); box-shadow: 2px 4px 10px rgba(40,30,10,0.4); overflow: hidden">'
-             f'<img src="assets/chalk-cat.png" alt="A chalk hobo mark of a sitting cat, meaning a kind lady lives here" style="position: absolute; left: -6px; top: 22px; width: 120px; height: 90px">'
-             f'<div style="position: absolute; left: 0; top: 8px; width: 230px; text-align: center">{kicker("By the back step", GOLD, 15)}</div>'
-             f'<div style="position: absolute; left: 106px; top: 36px; width: 118px; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.22; color: #ece4cc">'
-             f'The cat chalked on our gate means a kind lady lives here.</div>'
-             f'<div style="position: absolute; left: 12px; top: 114px; width: 206px; font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.22; color: #ece4cc">'
-             f'Plates at the back door, free. Smokey, yours is kept warm.</div></div>')
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 230px; background: {CREAM}; border: 2px solid {GREEN}; padding: 8px 10px 9px; '
+             f'box-sizing: border-box; transform: rotate({ang}deg); box-shadow: 2px 4px 10px rgba(40,30,10,0.35); text-align: center">'
+             f'{kicker("By the back step", RED, 15)}'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.2; color: {INK}; margin-top: 5px">A cat chalked on the gate means a kind lady lives here.</div>'
+             f'<div style="font-family: {DISP}; font-size: 18px; line-height: 1.1; color: {GREEN}; margin-top: 6px">FREE PLATES<br>AT THE BACK DOOR</div>'
+             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.2; color: {INK}; margin-top: 4px">Smokey, yours is warm.</div></div>')
 
-def jar_label(o, x, y, ang):
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 140px; height: 177px; transform: rotate({ang}deg)">'
-             f'<img src="assets/honey-jar.png" alt="A pint jar of honey with comb, a gingham cloth tied over the lid" style="display: block; width: 140px; height: 177px">'
-             f'<div style="position: absolute; left: 31px; top: 103px; width: 78px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1; color: {INK}">BEE TREE</div>'
-             f'<div style="position: absolute; left: 31px; top: 119px; width: 78px; text-align: center; font-family: {DISP}; font-size: 16px; line-height: 1; color: {RED}">HONEY</div></div>')
+def honey_tag(o, x, y, ang):
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 118px; background: {CREAM}; border: 2px solid {RED}; padding: 5px 4px 4px; '
+             f'box-sizing: border-box; transform: rotate({ang}deg); box-shadow: 2px 3px 8px rgba(40,30,10,0.35); text-align: center">'
+             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.12em; line-height: 1; color: {INK}">BEE TREE</div>'
+             f'<div style="font-family: {DISP}; font-size: 20px; line-height: 1.05; color: {RED}">HONEY</div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 14px; line-height: 1.1; color: {INK}">pint jar 15&cent;</div></div>')
 
 # ---------------- FRONT ----------------
 def front():
@@ -134,6 +136,9 @@ def front():
              f'<div style="margin-top: 5px">Ruth says I have to write something nice here. Coffee&rsquo;s hot and Sipsey cooks. Short this week? Pay us next week.</div>'
              f'<div style="font-family: {SCRIPT}; font-size: 22px; line-height: 1.6; color: {GREEN}; margin-top: 2px">Idgie</div></div>')
     schedule(o, 318, 924, 2)
+    o.append(f'<div style="position: absolute; left: {L + 4}px; top: 1084px; width: 262px">'
+             f'<div style="width: 240px; height: 2px; background: {GOLD}; margin-bottom: 8px"></div>'
+             f'<div style="font-family: {DISP}; font-size: 20px; line-height: 1.1; color: {RED}">OPEN 6 A.M. TILL<br>THE LAST TRAIN</div></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 1150px; width: {CW}px; text-align: center; font-family: {BODY}; font-size: 16px; line-height: 1.2; color: {MUTE}">'
              f'Prices subject to change. P.O. Box 91, Whistle Stop, Ala. Summer, 1932.</div>')
     return page(''.join(o), 'front', PAPER)
@@ -157,12 +162,13 @@ def back():
              + item('Butter Beans', '10&cent;', 'Simmered with salt pork, a wedge of skillet cornbread.')
              + '</div>')
     framed(o, 'assets/still-bees.jpg', 'Idgie fills a jar with honey from the bee tree while the bees settle on her arms', 404, 366, 152, 132, 3, pad=5)
-    jar_label(o, 430, 480, -5)
+    framed(o, 'assets/honeycomb-1939.jpg', 'Old photograph of a beekeeper holding up a wooden frame of honeycomb thick with bees', 408, 522, 124, 140, -3, pad=5)
+    honey_tag(o, 446, 610, 5)
     o.append(f'<div style="position: absolute; left: 70px; top: 676px; width: {W - 140}px">{board("BARBECUE", W - 140, 34)}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 732px; width: 290px">'
              + item('Big George&rsquo;s Barbecue Plate', '25&cent;', 'Pork shoulder roasted slow and pulled, tomato and cider vinegar sauce, slaw, white bread.',
                     'The secret&rsquo;s in the sauce.', gap=0) + '</div>')
-    hobo_card(o, 334, 736, 2)
+    hobo_card(o, 336, 734, 2)
     o.append(f'<div style="position: absolute; left: {L}px; top: 930px; width: 220px">{board("PIE", 180, 30)}'
              + item('Pecan Pie', '10&cent;', 'Toasted pecans in brown sugar and cane syrup custard, flaky crust.', gap=8) + '</div>')
     o.append(f'<div style="position: absolute; left: 282px; top: 930px; width: 278px">{board("TO DRINK", 234, 30)}'

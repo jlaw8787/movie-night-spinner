@@ -1,6 +1,5 @@
-"""Paints the Chocolat art in PIL plus numpy (all painted here, no outside images):
-assets/window.jpg   the chocolaterie's Easter shop window, seen from the street at dusk (signature piece)
-assets/plate.png    Vianne's painted earthenware plate, the one she spins ("what do you see?")
+"""Paints the Chocolat art in PIL plus numpy. Under STYLE-LOCK rule 25 only the ribbon, bow and wear are used;
+the painted window and plate are retired (old outputs kept in _old/) and their calls are switched off below.
 assets/bow.png      satin chilli red gift-box bow; assets/ribbon-v.png the ribbon band under it
 assets/wear-*.png   soft edge wear for both faces"""
 import os, math, random
@@ -473,10 +472,10 @@ def wear(name, seed, col, strength):
 
 
 if __name__ == '__main__':
-    window()
+    # window()  retired under rule 25
     bow_sprite(220).save(A('bow.png'))
     ribbon()
-    plate()
+    # plate()  retired under rule 25
     wear('front', 2000, (10, 4, 2), 0.7)
     wear('back', 1959, (96, 60, 30), 0.5)
     print('painted')
