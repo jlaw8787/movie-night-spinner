@@ -4,7 +4,7 @@ Format: slim table card, two faces 408 x 1056 px (4.25 x 11 in at 96 dpi).
 Venue: the executive dining room upstairs at Pemrose, the floor Brantley talks his way onto as Carlton Whitfield.
 Palette from the film's 1987 corporate world: dove grey stock, charcoal, boardroom burgundy.
 Signature piece (paint.py): a tall engraved view of the Manhattan skyline through a Pemrose tower window,
-running the height of the front, with the venue lettered on the transom glass. Prop: the routing slip.
+running the height of the front, with the venue lettered on the transom glass. Prop: the routing slip. Back: one framed TMDB still.
 """
 import os, json
 
@@ -34,24 +34,24 @@ BEGIN = [
     ('Kansas corn fritters', 'Kansas corn fritters', '3.25',
      'Kernels and scallions in egg batter, fried crisp. Sour cream.',
      'A taste of home, straight off the farm.'),
-    (None, 'Shrimp cocktail', '7.50', 'Five jumbo shrimp on cracked ice, horseradish red sauce.', None),
+    (None, 'Shrimp cocktail', '7.50', 'Jumbo shrimp on ice, red sauce.', None),
 ]
 MAIN = [
     ('Executive rib eye', 'Executive rib eye', '16.50',
-     'Seared in an iron pan, basted with butter, garlic and thyme.',
+     'Iron pan, butter, garlic and thyme.',
      'Charged to your department.'),
     ('Kansas farm fried chicken', 'Fried chicken', '8.75',
      'Buttermilk soaked, fried crisp. Mashed potatoes, gravy.',
      'Like Mom makes back home.'),
     ('Mailroom sandwich bites', 'Mail run sandwich', '2.75',
-     'Ham, cheddar and pickle on buttered white, crusts off.',
+     'Ham, cheddar, pickle on white.',
      'Comes up on the mail cart at 11.'),
 ]
 FINISH = [
     ('Kansas apple pie', 'Apple pie à la mode', '3.50',
-     'Double crust, cinnamon apples, vanilla ice cream.',
+     'Cinnamon apples, ice cream.',
      'To finish, with coffee by the pot.'),
-    ('Martini', 'Gin martini', '4.75', 'Bar from 5:30. Stirred with dry vermouth, twist.',
+    ('Martini', 'Gin martini', '4.75', 'Dry vermouth, lemon twist.',
      'Bar from 5:30 PM for those working late.'),
 ]
 ALL = BEGIN + MAIN + FINISH
@@ -66,16 +66,16 @@ def kicker(t, col=RED, align='left', size=18, sp='0.2em'):
 
 
 def head(t):
-    return f'''<div style="font-family: {DISP}; font-size: 40px; line-height: 42px; color: {INK}; white-space: nowrap">{t}</div>
+    return f'''<div style="font-family: {DISP}; font-size: 40px; line-height: 40px; color: {INK}; white-space: nowrap">{t}</div>
       <div style="margin-top: 4px; height: 2px; background: {RED}"></div>'''
 
 
 def item(name, price, desc, first=False):
-    return f'''<div style="margin-top: {10 if first else 8}px">
+    return f'''<div style="margin-top: {8 if first else 6}px">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; white-space: nowrap">
         <span style="font-family: {CAPS}; font-weight: 800; font-size: 26px; line-height: 29px; letter-spacing: -0.01em; color: {INK}">{name}</span>
         <span style="font-family: {CAPS}; font-weight: 800; font-size: 26px; line-height: 29px; color: {RED}">{price}</span></div>
-      <div style="margin-top: 3px; font-family: {BODY}; font-size: 20px; line-height: 25px; color: {INK}; text-wrap: pretty">{desc}</div></div>'''
+      <div style="margin-top: 3px; font-family: {BODY}; font-size: 20px; line-height: 24px; color: {INK}">{desc}</div></div>'''
 
 
 def group(title, items, top=0):
@@ -142,8 +142,10 @@ frame = (ab(18, 18, 6, '', f'height: {H - 36}px; background: {RED}') + ab(W - 24
          + ab(18, 18, W - 36, '', f'height: 6px; background: {RED}') + ab(18, H - 24, W - 36, '', f'height: 6px; background: {RED}'))
 back_inner = f'''
   {frame}
-  {ab(40, 42, 328, kicker('CHARGED TO YOUR DEPT.', RED, 'center', 18, '0.2em'))}
-  {ab(40, 76, 328, group('TO BEGIN', BEGIN) + group('ENTRÉES', MAIN, 16) + group('TO FINISH', FINISH, 16))}
+  <div style="position: absolute; left: 40px; top: 40px; width: 328px; height: 160px; border: 1px solid {RED}; box-sizing: border-box; background: #fbfaf6; padding: 4px">
+    <img src="assets/still-door.jpg" alt="" style="display: block; width: 318px; height: 150px"></div>
+  {ab(40, 204, 328, f'<div style="text-align: right; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 20px; color: {SOFT}">Mr. Whitfield, new on the executive floor.</div>')}
+  {ab(40, 232, 328, group('TO BEGIN', BEGIN) + group('ENTRÉES', MAIN, 12) + group('TO FINISH', FINISH, 12))}
   {ab(40, 994, 328, f'<div style="text-align: center; font-family: {BODY}; font-size: 16px; line-height: 20px; color: {SOFT}">Form EDR-87. Prices subject to change.</div>')}
 '''
 
