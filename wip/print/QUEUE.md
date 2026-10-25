@@ -1,4 +1,5 @@
 STYLE LOCK signed off by owner (Oct 25). Rollout uses wip/print/ROLLOUT.md for every film. 10 builds at a time, one cheap review per batch, one fix round max.
+APPROVAL GATE (owner, Oct 25 19:23): send a proof sheet as each few menus land, and a full batch proof before anything goes live. Nothing goes live without owner approval.
 Live in locked style: serpico, big, pelham, dog-day-afternoon (main 3d1b69b).
 Batch 1 building: out-of-towners, splash, money-train, quick-change, sleepless-in-seattle, moonstruck, adjustment-bureau, inside-man, after-hours, youve-got-mail.
 Batch 2: chud, tootsie, manhattan, annie-hall, trading-places, brewsters-millions, secret-of-my-success, working-girl, three-men-and-a-baby, frequency.
