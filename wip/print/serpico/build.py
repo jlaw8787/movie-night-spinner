@@ -37,33 +37,52 @@ def page(inner):
 
 L, CW = 56, 704
 
+def check(o, gx, gy):
+    """Guest check prop: Frank's lunch, stamped PAID."""
+    lines = [('Paco', None), ('1 pastrami rye', '1.35'), ('1 coffee', '.15'), ('', None), ('Total', '1.50')]
+    rows = ''
+    for i, (t, p) in enumerate(lines):
+        rows += (f'<div style="position: absolute; left: 0; top: {58 + i * 27}px; width: 214px; height: 27px; border-bottom: 1px solid #9fbfa6"></div>'
+                 f'<div style="position: absolute; left: 12px; top: {60 + i * 27}px; width: 194px; display: flex; justify-content: space-between; '
+                 f'font-family: {HAND}; font-size: 20px; line-height: 1.2; color: #23336f"><span>{t}</span><span>{p or ""}</span></div>')
+    o.append(f'<div style="position: absolute; left: {gx}px; top: {gy}px; width: 214px; height: 206px; background: #e4eedf; '
+             f'box-shadow: 0 2px 6px rgba(40,30,20,0.28); transform: rotate(4deg)">'
+             f'<div style="position: absolute; left: 0; top: 0; width: 214px; height: 46px; border-bottom: 2px solid #3f7d57; display: flex; '
+             f'justify-content: space-between; align-items: center; padding: 0 12px; box-sizing: border-box; font-family: {DISP}; font-weight: 700; '
+             f'font-size: 17px; letter-spacing: 0.12em; color: #3f7d57"><span>GUEST CHECK</span><span style="color: {RED}">No. 0619</span></div>'
+             + rows +
+             f'<div style="position: absolute; left: 96px; top: 104px; border: 3px solid {RED}; border-radius: 4px; padding: 2px 10px 3px; '
+             f'font-family: {DISP}; font-weight: 700; font-size: 34px; line-height: 1; letter-spacing: 0.1em; color: {RED}; opacity: 0.82; transform: rotate(-14deg)">PAID</div>'
+             '</div>')
+
 # ---------------- FRONT ----------------
 def front():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 50px; width: {CW}px; display: flex; justify-content: space-between">'
              f'{kicker("Greenwich Village, New York")}{kicker("Since 1938", DARK)}</div>')
-    o.append(f'<div style="position: absolute; left: {L - 4}px; top: 70px; font-family: {SCRIPT}; font-size: 104px; line-height: 1.15; color: {RED}">Garfein&rsquo;s</div>')
-    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 104px; width: {CW - 300}px; text-align: right; font-family: {DISP}; font-weight: 700; '
-             f'font-size: 60px; line-height: 0.96; color: {DARK}; text-transform: uppercase; letter-spacing: 0.005em">Delicatessen<br>&amp; Appetizing</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 236px; width: {CW}px; height: 3px; background: {RED}"></div>')
+    o.append(f'<div style="position: absolute; left: {L - 4}px; top: 66px; font-family: {SCRIPT}; font-size: 96px; line-height: 1.15; color: {RED}">Garfein&rsquo;s</div>')
+    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 92px; width: {CW - 300}px; text-align: right; font-family: {DISP}; font-weight: 700; '
+             f'font-size: 58px; line-height: 0.96; color: {DARK}; text-transform: uppercase; letter-spacing: 0.005em">Delicatessen<br>&amp; Appetizing</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 216px; width: {CW}px; height: 3px; background: {RED}"></div>')
     # hero: the painted storefront in a thin red frame
-    o.append(f'<div style="position: absolute; left: {L}px; top: 256px; width: {CW}px; height: 300px; outline: 2px solid {RED}; outline-offset: 5px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 234px; width: {CW}px; height: 300px; outline: 2px solid {RED}; outline-offset: 5px">'
              f'<img src="assets/storefront.png" alt="Line drawing of the Garfein\'s storefront, red striped awning, salamis in the window" '
              f'style="display: block; width: {CW}px; height: 300px"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 572px; width: {CW}px; display: flex; justify-content: space-between; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 548px; width: {CW}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-style: italic; font-size: 16px; color: {MUTE}">'
-             f'<span>Our store on West 10th Street, a few doors from the Sixth Precinct.</span><span>Open 7 to midnight</span></div>')
+             f'<span>Our store on West 10th, a few doors from the Sixth Precinct.</span></div>')
     # the steam table
-    o.append(f'<div style="position: absolute; left: {L}px; top: 614px; width: {CW}px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 584px; width: {CW}px">'
              f'<div style="display: flex; align-items: flex-end; justify-content: space-between">{bar("Hot from the steam table")}'
              f'{kicker("On rye or a roll", RED, " margin-bottom: 6px")}</div>'
-             + item('Hot pastrami on rye', '1.35', 'Steamed soft, sliced by hand and piled high. Brown mustard and a dill pickle.')
-             + item('The Village hero', '1.73', 'Steamed pastrami, Swiss cheese, cole slaw and Russian dressing with horseradish, all on a long Italian roll.')
-             + item('Hot corned beef on rye', '1.35', 'Brisket cured in our own brine, carved to order, with mustard and a sour pickle.')
+             + item('Hot pastrami on rye', '1.35', 'Steamed soft, hand sliced, piled high, with mustard and a pickle.')
+             + item('The Village hero', '1.73', 'Steamed pastrami, Swiss, slaw and Russian dressing on a long roll.')
+             + item('Hot corned beef on rye', '1.35', 'Brisket cured in our own brine, carved to order, with mustard.')
              + item('Roast beef on a kaiser', '1.25', 'Rare top round, sliced thin while you wait. Ask for it lean.')
              + '</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 990px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
-             f'<div style="position: absolute; left: {L}px; top: 998px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
+    check(o, L + CW - 210, 372)
+    o.append(f'<div style="position: absolute; left: {L}px; top: 986px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 994px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
              f'<span>Any sandwich as a platter, with slaw, potato salad and pickle, 60&cent; more.</span><span>Over, please</span></div>')
     return page(''.join(o)).replace('PAGE', 'front')
 
@@ -84,7 +103,7 @@ def back():
             + item('Potato knish', '.35', 'Baked golden, split and spread with brown mustard.')
             + f'<div style="height: 1px; background: {DARK}; opacity: 0.45; margin: 26px 0 24px"></div>'
             + bar('From our bakery', 40)
-            + item('Black and white', '.25', 'Soft sour cream cake cookie, the flat side iced half vanilla, half chocolate.')
+            + item('Black and white', '.25', 'Soft sour cream cake cookie, iced half vanilla, half chocolate.')
             + item('Cheesecake', '.45', 'Rich and dense, a thick slice baked here every morning.'))
     right = (bar('Fountain', 40)
              + item('Iced coffee float', '.45', 'Dark roast steeped overnight in the icebox, vanilla syrup, milk and a scoop of vanilla ice cream.')
@@ -97,28 +116,10 @@ def back():
     o.append(f'<div style="position: absolute; left: {X2}px; top: 708px; width: {COLW}px">{kicker("From the counter")}'
              f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.5; color: {DARK}; margin-top: 10px">Everybody pays at the register, the boys from the Sixth too. Saturday afternoons, the opera on the radio. Dogs wait outside, even the sheepdog.</div>'
              f'<div style="font-family: {SCRIPT}; font-size: 36px; line-height: 1.2; color: {RED}; margin-top: 4px">Morris Garfein</div></div>')
-    # guest check prop, lower left, clear of all dish text
-    gx, gy = L + 6, 768
-    lines = [('Paco', None), ('1 pastrami rye', '1.35'), ('1 coffee', '.15'), ('', None), ('Total', '1.50')]
-    rows = ''
-    for i, (t, p) in enumerate(lines):
-        rows += (f'<div style="position: absolute; left: 0; top: {58 + i * 27}px; width: 214px; height: 27px; border-bottom: 1px solid #9fbfa6"></div>'
-                 f'<div style="position: absolute; left: 12px; top: {60 + i * 27}px; width: 194px; display: flex; justify-content: space-between; '
-                 f'font-family: {HAND}; font-size: 20px; line-height: 1.2; color: #23336f"><span>{t}</span><span>{p or ""}</span></div>')
-    o.append(f'<div style="position: absolute; left: {gx}px; top: {gy}px; width: 214px; height: 206px; background: #e4eedf; '
-             f'box-shadow: 0 2px 6px rgba(40,30,20,0.28); transform: rotate(-3deg)">'
-             f'<div style="position: absolute; left: 0; top: 0; width: 214px; height: 46px; border-bottom: 2px solid #3f7d57; display: flex; '
-             f'justify-content: space-between; align-items: center; padding: 0 12px; box-sizing: border-box; font-family: {DISP}; font-weight: 700; '
-             f'font-size: 17px; letter-spacing: 0.12em; color: #3f7d57"><span>GUEST CHECK</span><span style="color: {RED}">No. 0619</span></div>'
-             + rows +
-             f'<div style="position: absolute; left: 96px; top: 104px; border: 3px solid {RED}; border-radius: 4px; padding: 2px 10px 3px; '
-             f'font-family: {DISP}; font-weight: 700; font-size: 34px; line-height: 1; letter-spacing: 0.1em; color: {RED}; opacity: 0.82; transform: rotate(-14deg)">PAID</div>'
-             '</div>')
-    o.append(f'<div style="position: absolute; left: {L + 236}px; top: 838px; width: 96px; font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.4; color: {MUTE}">Pay the register on your way out.</div>')
     # footer
-    o.append(f'<div style="position: absolute; left: {L}px; top: 990px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
-             f'<div style="position: absolute; left: {L}px; top: 998px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
-             f'<span>West 10th Street, New York 10014. WAtkins 4-1967. We deliver. No charge accounts.</span><span>Prices subject to change</span></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 986px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 994px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
+             f'<span>West 10th St., N.Y. 10014. WAtkins 4-1967. Open 7 to midnight.</span><span>Prices subject to change.</span></div>')
     return page(''.join(o)).replace('PAGE', 'back')
 
 FACES = {'front': front(), 'back': back()}

@@ -21,7 +21,7 @@ SPEC = {
                     "Correll takes two, with coffee black."),
   "Transit office jam doughnuts": ("Jelly Doughnut", "Jam filled, rolled in sugar while still warm.", ".20",
                                    "A dozen for the Command Center floor."),
-  "Transit authority rugelach": ("Rugelach", "Cream cheese dough rolled up with apricot jam, walnuts, cinnamon sugar.", "6 for .90",
+  "Transit authority rugelach": ("Rugelach", "Cream cheese dough, apricot jam, walnuts and cinnamon sugar.", "6 for .90",
                                  "Something sweet for later."),
   "Transit authority hero": ("Turkey & Swiss Hero", "Sliced breast, shredded iceberg, tomato and mayonnaise on a long roll, wrapped tight.", "1.23",
                              "Lt. Garber's usual. 1.23 even."),
@@ -82,10 +82,10 @@ L, CW = 56, 704
 
 front = face(f'''
 <div style="position: absolute; left: {L}px; top: 54px; width: {CW}px">
-  {kicker('Across from Transit Headquarters')}
+  <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('Across from Transit Headquarters', 'white-space: nowrap; letter-spacing: 0.16em')}{kicker('6 A.M. to 9 P.M.', 'white-space: nowrap; letter-spacing: 0.16em; color: ' + MUTE)}</div>
   <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 8px">
     <div style="{SANS}; font-weight: 900; font-size: 70px; line-height: 0.92; letter-spacing: -0.02em; text-transform: uppercase; white-space: nowrap">The Motorman<br><span style="color: {ORANGE}">Coffee Shop</span></div>
-    <div style="{SANS}; font-weight: 600; font-size: 17px; line-height: 1.45; text-align: right; color: {MUTE}; padding-bottom: 4px">Open 6 A.M. to 9 P.M.<br>Monday to Saturday<br>A million cups poured</div></div>
+</div>
   <div style="height: 4px; background: {INK}; margin-top: 16px"></div>
   <div style="margin-top: 16px; border: 3px solid {ORANGE}; padding: 6px; background: #fbf5e8">
     <img src="assets/still-platform.jpg" alt="A Lexington Avenue local pulling into a station" style="display: block; width: {CW - 18}px; height: {268}px"></div>
@@ -93,12 +93,12 @@ front = face(f'''
   <div style="display: flex; gap: 28px; margin-top: 18px; align-items: flex-start">
     <div style="flex: 1">
       {kicker('A word from a regular')}
-      <div style="{SERIF}; font-size: 21px; line-height: 1.38; margin-top: 8px">Best hero in the building, up to the Command Center inside the hour. Tell them Garber sent you.</div></div>
+      <div style="{SERIF}; font-size: 21px; line-height: 1.38; margin-top: 8px">Best hero in the building, and it reaches the Command Center inside the hour. Tell them Garber sent you.</div></div>
     <div style="flex: none; width: 220px; padding-top: 34px">
       <div style="{HAND}; font-size: 40px; line-height: 1; color: #24305e; transform: rotate(-4deg)">Z. Garber</div>
       <div style="{SANS}; font-weight: 600; font-size: 15px; color: {MUTE}; margin-top: 8px">Lieutenant, Transit Police</div></div></div>
   <div style="margin-top: 20px">{bar('The Bakery Case', 'ALL DAY')}</div>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px">
+  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px">
     <div>{S('Cheese danish', 14)}{S('Transit authority rugelach')}</div>
     <div>{S('Transit office jam doughnuts', 14)}{A('coffee')}</div></div>
 </div>''')
@@ -108,11 +108,11 @@ back = face(f'''
   <div style="display: flex; justify-content: space-between; align-items: baseline">
     {kicker('The Motorman Coffee Shop')}{kicker('Lunch from 11 A.M.', 'color: ' + MUTE)}</div>
   <div style="margin-top: 12px">{bar('The Lunch Counter')}</div>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px">
+  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px">
     <div>{S('Transit authority hero', 14)}{A('soup')}</div>
     <div>{A('pastrami', 14)}{A('grilled')}</div></div>
   <div style="height: 1px; background: {INK}; margin-top: 20px"></div>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; margin-top: 20px">
+  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px; margin-top: 20px">
     <div>
       {bar('The Fountain')}
       {A('egg', 14)}{A('malted')}
@@ -124,7 +124,7 @@ back = face(f'''
       <div style="{SERIF}; font-size: 20px; line-height: 1.38; margin-top: 8px">Call KLondike 5-0123. Command Center orders up inside the hour.</div>
       <img src="assets/guest-check.png" alt="A pencilled guest check for the Command Center lunch run, marked paid" style="position: absolute; left: 6px; top: 104px; width: 330px; height: 420px; display: block"></div></div>
 </div>
-<div style="position: absolute; left: {L}px; top: 966px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 10px; display: flex; justify-content: space-between; {SANS}; font-weight: 600; font-size: 15px; color: {MUTE}">
+<div style="position: absolute; left: {L}px; top: 978px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 10px; display: flex; justify-content: space-between; {SANS}; font-weight: 600; font-size: 15px; color: {MUTE}">
   <span>Prices subject to change. Minimum at tables, lunch hours, .75</span><span>Form 123, 1974</span></div>''')
 
 for name, body in (('front', front), ('back', back)):
