@@ -1,0 +1,29 @@
+{
+ "fmt": "plazanight",
+ "fn": "fmtPlazaNight",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Cover",
+  "Dinner page"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Jost:wght@400;500;600;700&family=Libre+Bodoni:ital,wght@0,400;0,600;1,400;1,600",
+ "fams": [
+  "Jost",
+  "Libre Bodoni"
+ ],
+ "phone": {
+  "disp": "'Jost',sans-serif",
+  "title": "'Jost',sans-serif",
+  "name": "'Jost',sans-serif",
+  "body": "'Libre Bodoni',serif",
+  "price": "'Jost',sans-serif",
+  "note": "'Libre Bodoni',serif"
+ }
+}
