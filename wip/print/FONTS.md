@@ -45,3 +45,13 @@ the-departed: Alegreya SC
 things-to-do-in-denver: Kavoon
 saturday-night-fever: Audiowide
 raging-bull: Fjalla One
+the-freshman: Della Respira
+get-shorty: Syncopate
+bugsy: Federo
+millers-crossing: Holtwood One SC
+pope-of-greenwich-village: Prociono
+mickey-blue-eyes: Playball
+analyze-this: Chango
+prizzis-honor: Pirata One
+scarface: Tilt Neon
+mean-streets: Rakkas
