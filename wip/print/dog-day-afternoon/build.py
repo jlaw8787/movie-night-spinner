@@ -14,13 +14,13 @@ PAPER = '#e4ecdf'
 GREEN = '#1f563e'
 GREEN_SOFT = '#3d6b55'
 RED = '#b1362b'
-TYPE = '#1d1c20'
+TYPE = '#141317'
 STAMP = '#5a3f8e'
-FONTS = 'family=Cinzel:wght@600;700&family=Cutive+Mono&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400'
+FONTS = 'family=Courier+Prime&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=Old+Standard+TT:wght@700'
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-ENGR = "'Cinzel', 'Times New Roman', serif"
+ENGR = "'Old Standard TT', 'Times New Roman', serif"
 SANS = "'Libre Franklin', Arial, sans-serif"
-MONO = "'Cutive Mono', 'Courier New', monospace"
+MONO = "'Courier Prime', 'Courier New', monospace"
 L, CW = 46, 436          # content left edge and width, everything 46px or more inside the trim
 DOL, CEN = 44, 34        # amount columns
 
@@ -38,8 +38,8 @@ def typed(text, size=16, weight_jitter=True):
     for word in text.split(' '):
         chars = []
         for ch in word:
-            op = 0.78 + 0.22 * _rng.random() if weight_jitter else 1
-            dy = round(_rng.uniform(-0.45, 0.45), 2)
+            op = 0.86 + 0.14 * _rng.random() if weight_jitter else 1
+            dy = round(_rng.uniform(-0.35, 0.35), 2)
             chars.append(f'<span style="position: relative; top: {dy}px; opacity: {op:.2f}">{esc(ch)}</span>')
         out.append('<span style="white-space: nowrap">' + ''.join(chars) + '</span>')
     return ' '.join(out)
@@ -69,9 +69,9 @@ def head_row(txt, num=None):
 def item_row(num, name, desc, note, d, c, per=None):
     p = (f'<div style="font-family: {MONO}; font-size: 12px; line-height: 1; color: {TYPE}; margin-top: 4px; text-align: right; padding-right: 4px; white-space: nowrap">{typed(per, 12)}</div>'
          if per else '')
-    nt = (f'<div style="margin-top: 4px; font-family: {MONO}; font-size: 14px; line-height: 1.25; letter-spacing: -0.03em; color: #3a3940">{typed("(" + note + ")", 14)}</div>'
+    nt = (f'<div style="margin-top: 4px; font-family: {MONO}; font-size: 14px; line-height: 1.25; color: #3a3940">{typed("(" + note + ")", 14)}</div>'
           if note else '')
-    ds = (f'<div style="margin-top: 4px; font-family: {MONO}; font-size: 16px; line-height: 1.27; letter-spacing: -0.045em; color: {TYPE}">{typed(desc)}</div>'
+    ds = (f'<div style="margin-top: 4px; font-family: {MONO}; font-size: 16px; line-height: 1.27; color: {TYPE}">{typed(desc)}</div>'
           if desc else '')
     return (f'<div style="display: flex; border-bottom: 1px solid {GREEN_SOFT}">'
             f'<div style="flex: none; width: 22px; padding: 10px 0 0 7px; box-sizing: border-box; font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1; color: {GREEN}">{num}</div>'
@@ -138,10 +138,10 @@ def root(inner, face):
 
 DISH = {
     "Attica chips and onion dip": ("Attica chips and dip", "Ridged and salty, with onions cooked slow till deep brown in sour cream, cream cheese and chives.", "One big bowl for the counter"),
-    "Deli hero wedges": ("Deli heroes, cut six ways", "Ham, salami, provolone, iceberg and tomato on long rolls, oil, red wine vinegar, oregano. Pressed.", "1.40 each. Two will feed everybody"),
-    "Hostage pizza": ("Pepperoni pies, large", "Thin crust, crushed tomato and oregano, low-moisture mozzarella, baked fast in a very hot oven.", "3.10 a pie. Pay the kid at the door"),
-    "Italian ice": ("Lemon ice", "Fresh juice and zest, sugar and water, frozen and scraped fluffy.", "A cup each. Not for Mr. Mulvaney"),
-    "Heatwave lager with lime and chilli salt": ("Cold beer with lime", "Lager over ice and a squeeze of fresh juice, chili salt on the rim.", "By the bottle. For after closing"),
+    "Deli hero wedges": ("Deli heroes, cut six ways", "Ham, salami, provolone, iceberg and tomato on long rolls, oil, red wine vinegar, oregano. Pressed.", "Two, 1.40 each. Plenty for everybody"),
+    "Hostage pizza": ("Pepperoni pies, large", "Thin crust, crushed tomato and oregano, plenty of mozzarella, baked fast in a very hot oven.", "Two, 3.10 a pie. Pay the kid at the door"),
+    "Italian ice": ("Lemon ice", "Fresh juice and zest, sugar and water, frozen and scraped fluffy.", "A dozen cups. Not for Mr. Mulvaney"),
+    "Heatwave lager with lime and chilli salt": ("Cold beer with lime", "Lager over ice with a fresh squeeze, the glass dipped in salt and chili powder.", "Six bottles. For after closing"),
 }
 
 # ---------------- FRONT ----------------
@@ -149,7 +149,7 @@ front = f'''
 <img src="assets/bank-vignette.png" alt="" style="position: absolute; left: {L - 4}px; top: 44px; width: 160px; height: 108px; display: block">
 <div style="position: absolute; right: {FW - L - CW}px; top: 44px; font-family: {MONO}; font-size: 16px; line-height: 1; color: {RED}; letter-spacing: 0.04em; transform: translate(1px, -1px)">No.&nbsp;08221</div>
 <div style="position: absolute; left: 214px; top: 62px; width: 268px">
-  <div style="font-family: {ENGR}; font-weight: 700; font-size: 21px; line-height: 1.02; letter-spacing: 0.035em; color: {GREEN}; white-space: nowrap">THE BOROUGH<br>SAVINGS BANK</div>
+  <div style="font-family: {ENGR}; font-weight: 700; font-size: 21px; line-height: 1.02; letter-spacing: 0.035em; color: {GREEN}; white-space: nowrap">HARBOR HILL<br>SAVINGS BANK</div>
   <div style="margin-top: 6px; font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.2em; color: {GREEN}">BROOKLYN, NEW YORK</div>
   <div style="margin-top: 9px; border-top: 2px solid {GREEN}; border-bottom: 0.8px solid {GREEN}; height: 2px"></div>
   <div style="margin-top: 8px; font-family: {SANS}; font-weight: 800; font-size: 25px; line-height: 1; letter-spacing: 0.06em; color: {GREEN}; white-space: nowrap">SAVINGS DEPOSIT</div>
@@ -170,11 +170,11 @@ front = f'''
   {ledger_head("CURRENCY, COIN AND ITEMS, LIST SINGLY")}
 
   {item_row(1, *DISH["Attica chips and onion dip"], "1", "29")}
-  {item_row(2, *DISH["Deli hero wedges"], "1", "40")}
+  {item_row(2, *DISH["Deli hero wedges"], "2", "80")}
 
-  {item_row(3, *DISH["Hostage pizza"], "3", "10")}
-  {total_row("Total from other side")}
-  {total_row("Total", None, True)}
+  {item_row(3, *DISH["Hostage pizza"], "6", "20")}
+  {total_row("Total from other side", ("7", "85"))}
+  {total_row("Total", ("18", "14"), True)}
 </div>
 <div style="position: absolute; left: {L}px; top: 754px; width: {CW}px; display: flex; justify-content: space-between; font-family: {SANS}; font-size: 12px; line-height: 1; color: {GREEN}; white-space: nowrap">
   <span style="font-style: italic">Deposits insured up to $20,000.</span><span>Form S-822 (7/72)</span>
@@ -193,7 +193,7 @@ notes = [
 ]
 note_html = ''.join(
     f'<div style="display: flex; gap: 8px; margin-top: 4px"><div style="flex: none; width: 22px; font-family: {MONO}; font-size: 16px; line-height: 1.27; color: {TYPE}">{i}.</div>'
-    f'<div style="flex: 1; font-family: {MONO}; font-size: 16px; line-height: 1.27; letter-spacing: -0.045em; color: {TYPE}">{typed(n)}</div></div>'
+    f'<div style="flex: 1; font-family: {MONO}; font-size: 16px; line-height: 1.27; color: {TYPE}">{typed(n)}</div></div>'
     for i, n in enumerate(notes, 1))
 
 BANK = [("Proof", "S."), ("Entered", ""), ("Checked", "")]
@@ -204,7 +204,7 @@ bank_html = ''.join(
 back = f'''
 <div style="position: absolute; left: {L}px; top: 46px; width: {CW}px; display: flex; justify-content: space-between; align-items: flex-end">
   <div>
-    <div style="font-family: {ENGR}; font-weight: 700; font-size: 17px; line-height: 1; letter-spacing: 0.05em; color: {GREEN}">THE BOROUGH SAVINGS BANK</div>
+    <div style="font-family: {ENGR}; font-weight: 700; font-size: 17px; line-height: 1; letter-spacing: 0.05em; color: {GREEN}">HARBOR HILL SAVINGS BANK</div>
     <div style="margin-top: 6px; font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.16em; color: {GREEN}">SAVINGS DEPOSIT, REVERSE</div>
   </div>
   <div style="font-family: {MONO}; font-size: 16px; line-height: 1; color: {RED}; letter-spacing: 0.05em">No. 08221</div>
@@ -216,17 +216,16 @@ back = f'''
 <div style="border: 1.5px solid {GREEN}; border-bottom: 0; box-sizing: border-box">
   {ledger_head("ADDITIONAL ITEMS")}
 
-  {item_row(4, *DISH["Italian ice"], "", "20")}
-  {item_row(5, *DISH["Heatwave lager with lime and chilli salt"], "", "45")}
-  {item_row(6, "Sodas, by the case", "Orange, cream or cola, and a diet one for Mr. Mulvaney.", None, "", "20")}
+  {item_row(4, *DISH["Italian ice"], "2", "40")}
+  {item_row(5, *DISH["Heatwave lager with lime and chilli salt"], "2", "70")}
+  {item_row(6, "Sodas, one case", "Twenty-four bottles, orange, cream and cola, with a diet one for Mr. Mulvaney.", None, "2", "75")}
 
-  {item_row(7, "Aspirin, one bottle", None, "Sonny asked for this too", "", "69")}
-  {total_row("Total, carry to other side")}
+  {total_row("Total, carry to other side", ("7", "85"), True)}
 </div>
 <div style="margin-top: 16px">
   <div style="font-family: {MONO}; font-size: 15px; line-height: 1; color: {TYPE}; letter-spacing: 0.04em"><span style="border-bottom: 1.5px solid {TYPE}; padding-bottom: 2px">{typed("FOR THE DELIVERY", 15)}</span></div>
   {note_html}
-  <div style="margin-top: 8px; display: flex; justify-content: space-between; font-family: {MONO}; font-size: 16px; line-height: 1.27; letter-spacing: -0.045em; color: {TYPE}"><span>{typed("P.S. Get well, Howard.")}</span><span>{typed("S., head teller")}</span></div>
+  <div style="margin-top: 8px; display: flex; justify-content: space-between; font-family: {MONO}; font-size: 16px; line-height: 1.27; color: {TYPE}"><span>{typed("P.S. Get well, Howard.")}</span><span>{typed("S., head teller")}</span></div>
   <div style="margin-top: 9px; border: 1.5px solid {GREEN}; display: flex; height: 30px; box-sizing: border-box">
     <div style="flex: none; background: {GREEN}; color: {PAPER}; font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1.05; letter-spacing: 0.1em; padding: 0 8px; display: flex; align-items: center">BANK USE ONLY</div>
     {bank_html}
@@ -244,9 +243,9 @@ for face, inner in (('front', front), ('back', back)):
         f'<style>body{{margin:0}}</style></head><body>{body}</body></html>')
 
 film = {"fmt": "brooklyn", "fn": "fmtBrooklyn", "faces": ["front.html", "back.html"], "names": ["Front", "Reverse"],
-        "mm": [139.7, 215.9], "fonts": FONTS, "fams": ["Cinzel", "Cutive Mono", "Libre Franklin"],
-        "phone": {"disp": "'Cinzel',serif", "title": "'Cinzel',serif", "name": "'Cutive Mono',monospace",
-                  "body": "'Cutive Mono',monospace", "price": "'Cutive Mono',monospace", "note": "'Libre Franklin',sans-serif"}}
+        "mm": [139.7, 215.9], "fonts": FONTS, "fams": ["Old Standard TT", "Courier Prime", "Libre Franklin"],
+        "phone": {"disp": "'Old Standard TT',serif", "title": "'Old Standard TT',serif", "name": "'Courier Prime',monospace",
+                  "body": "'Courier Prime',monospace", "price": "'Courier Prime',monospace", "note": "'Libre Franklin',sans-serif"}}
 open(os.path.join(D, 'film.json'), 'w').write(json.dumps(film, indent=1))
 
 labels = {"Dog Day Afternoon (1975)": {k: {"n": n, "d": d, "note": t + "."} for k, (n, d, t) in DISH.items()}}

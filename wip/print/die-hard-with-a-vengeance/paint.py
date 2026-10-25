@@ -14,6 +14,7 @@ A = os.path.join(D, 'assets')
 INK = (24, 26, 24)
 FW, FH = 816, 1056
 S = 6  # work scale relative to page px; saved at 2x
+WEIGHT = 1.45  # 1990s school clip art: heavy marker line, solid black fills
 
 
 class Pen:
@@ -41,7 +42,7 @@ class Pen:
             pr = 0.55 + 0.45 * np.sin(np.pi * np.clip(ts * 1.15 - 0.07, 0, 1)) ** 0.5
         pr *= 1 + 0.12 * np.interp(np.linspace(0, 5, n), np.arange(6), self.r.normal(0, 1, 6))
         for i in range(n):
-            rr = wd * pr[i] * S / 2
+            rr = wd * WEIGHT * pr[i] * S / 2
             cx, cy = x[i] * S, y[i] * S
             self.d.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), fill=255)
 
@@ -52,7 +53,9 @@ class Pen:
         self.line(pts, wd, wob, taper=(a1 - a0) < 350)
 
     def hatch(self, poly_fn, ang=45, gap=4.0, wd=1.0):
-        """parallel pen hatching clipped to a filled mask drawn by poly_fn(draw, scale)"""
+        """shadow areas: solid black fill, as the clip-art books printed them"""
+        poly_fn(self.d, S)
+        return
         m = Image.new('L', self.im.size, 0)
         poly_fn(ImageDraw.Draw(m), S)
         h = Image.new('L', self.im.size, 0)
@@ -351,6 +354,85 @@ def lunchline(w=232, h=150):
     p.save('lunchline.png', 29)
 
 
+def skillet(w=150, h=92):
+    """black iron pan with a fried egg and two strips of bacon, steam rising"""
+    p = Pen(w, h, 31)
+    p.blot(lambda d, s, f=255: d.rounded_rectangle((96 * s, 52 * s, 146 * s, 62 * s), radius=5 * s, fill=f))   # handle
+    p.blot(ell(58, 60, 54, 26))                                    # pan, solid
+    p.erase(ell(58, 57, 46, 20))                                   # cooking surface
+    p.ellipse(58, 57, 46, 20, 1.6, wob=0.3)
+    # egg white, wavy edge, and yolk
+    pts = [(30 + 18 * math.cos(t) * (1 + 0.12 * math.sin(5 * t)), 57 + 11 * math.sin(t) * (1 + 0.12 * math.cos(4 * t))) for t in np.linspace(0, 2 * math.pi, 40)]
+    p.line(pts, 1.8, 0.2, taper=False)
+    p.blot(ell(30, 56, 7, 6)); p.erase(ell(28, 54, 2, 1.6))
+    # bacon: wavy strips with solid stripes
+    for off in (0, 9):
+        top = [(54 + k * 4, 49 + off + 3 * math.sin(k * 1.2)) for k in range(10)]
+        bot = [(x, y + 6) for x, y in top]
+        p.line(top, 1.8, 0.2, taper=False); p.line(bot, 1.8, 0.2, taper=False)
+        p.line([(x, y + 3) for x, y in top][1:-1], 2.2, 0.1, taper=False)
+    # steam
+    for x in (40, 62, 84):
+        p.line([(x, 30), (x - 4, 22), (x + 2, 14), (x - 2, 6)], 2.0, 0.2)
+    p.save('skillet.png', 31)
+
+
+def tray(w=232, h=150):
+    """cafeteria tray from above: milk carton, apple, sandwich half, fruit cup, spoon"""
+    p = Pen(w, h, 37)
+    p.blot(lambda d, s, f=255: d.rounded_rectangle((14 * s, 30 * s, 228 * s, 146 * s), radius=14 * s, fill=f))  # shadow
+    p.erase(lambda d, s, f=0: d.rounded_rectangle((6 * s, 22 * s, 220 * s, 138 * s), radius=14 * s, fill=f))
+    p.line([(20, 22), (206, 22)], 2.4, 0.3, taper=False)
+    p.line([(20, 138), (206, 138)], 2.4, 0.3, taper=False)
+    p.ellipse(20, 36, 14, 14, 2.4, 180, 270, wob=0.2); p.ellipse(206, 36, 14, 14, 2.4, 270, 360, wob=0.2)
+    p.ellipse(20, 124, 14, 14, 2.4, 90, 180, wob=0.2); p.ellipse(206, 124, 14, 14, 2.4, 0, 90, wob=0.2)
+    p.line([(6, 36), (6, 124)], 2.4, 0.3, taper=False); p.line([(220, 36), (220, 124)], 2.4, 0.3, taper=False)
+    p.line([(112, 30), (112, 130)], 1.8, 0.3); p.line([(118, 80), (212, 80)], 1.8, 0.3)
+    # sandwich half: triangle with crust and a solid filling edge
+    p.line([(22, 120), (98, 120), (22, 44), (22, 120)], 2.4, 0.3, taper=False)
+    p.line([(30, 112), (82, 112), (30, 60), (30, 112)], 1.4, 0.3, taper=False)
+    p.blot(poly([(22, 120), (98, 120), (96, 126), (22, 126)]))
+    # apple, solid with a white shine and a leaf
+    p.blot(ell(146, 52, 15, 15)); p.blot(ell(160, 52, 15, 15))
+    p.erase(ell(143, 46, 3, 6))
+    p.line([(153, 38), (156, 28)], 2.2); p.blot(lambda d, s, f=255: d.chord((156 * s, 24 * s, 178 * s, 36 * s), 180, 360, fill=f))
+    # half pint of milk, front face open, side solid
+    p.line([(184, 36), (204, 36), (204, 70), (184, 70), (184, 36)], 2.0, 0.2, taper=False)
+    p.blot(poly([(204, 36), (212, 31), (212, 64), (204, 70)]))
+    p.line([(184, 36), (194, 28), (204, 36)], 1.8, 0.2)
+    p.line([(187, 50), (201, 50)], 1.2, 0.1, taper=False); p.line([(187, 58), (201, 58)], 1.2, 0.1, taper=False)
+    # fruit cup with a spoon
+    p.ellipse(150, 108, 22, 16, 2.4); p.ellipse(150, 108, 16, 11, 1.4)
+    for cx, cy in ((144, 104), (154, 110), (148, 113), (158, 103)):
+        p.blot(ell(cx, cy, 2.6, 2.2))
+    p.line([(180, 96), (210, 126)], 2.6); p.blot(ell(178, 94, 5, 3.4))
+    p.save('tray.png', 37)
+
+
+def beachball(w=150, h=104):
+    """beach ball with solid panels next to a pail and shovel, for the summer box"""
+    p = Pen(w, h, 41)
+    cx, cy, r = 48, 54, 38
+    for k in range(6):
+        if k % 2 == 0:
+            a0, a1 = math.radians(k * 60 - 90), math.radians(k * 60 - 30)
+            pts = [(cx, cy)] + [(cx + r * math.cos(t), cy + r * 0.98 * math.sin(t)) for t in np.linspace(a0, a1, 12)]
+            p.blot(poly(pts))
+    p.ellipse(cx, cy, r, r, 2.6, wob=0.2)
+    p.blot(ell(cx, cy, 6, 6)); p.erase(ell(cx, cy, 2.4, 2.4))
+    p.erase(lambda d, s, f=0: d.ellipse(((cx - 26) * s, (cy - 30) * s, (cx - 14) * s, (cy - 14) * s), fill=f))
+    p.line([(10, 98), (140, 98)], 1.6, 0.4)
+    # pail
+    p.line([(98, 52), (102, 96), (134, 96), (138, 52)], 2.4, 0.3)
+    p.ellipse(118, 52, 20, 5, 2.2, wob=0.2)
+    p.blot(poly([(99, 66), (137, 66), (136, 76), (100, 76)]))
+    p.ellipse(118, 52, 22, 22, 1.8, 200, 340, wob=0.2)
+    # shovel leaning in
+    p.line([(128, 50), (146, 14)], 2.4)
+    p.blot(poly([(143, 6), (150, 10), (148, 22), (140, 18)]))
+    p.save('beachball.png', 41)
+
+
 def sun(w=120, h=120):
     p = Pen(w, h, 17)
     p.ellipse(60, 60, 26, 26, 2.8)
@@ -454,7 +536,7 @@ def wear(face, seed, edge):
 
 
 if __name__ == '__main__':
-    carton(); roll(); lunchline(); elephant(); jug(); chickwaffle(); crumb(); sun(); scissors()
+    carton(); skillet(); tray(); beachball(); elephant(); jug(); chickwaffle(); crumb(); scissors()
     wear('front', 7, 'left')
     wear('back', 11, 'right')
     print('painted')

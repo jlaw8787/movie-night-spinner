@@ -69,13 +69,12 @@ GY0, GY1 = 40, 84
 globe = [(CX - profile(y), y) for y in np.linspace(GY0, GY1, 40)] + [(CX + profile(y), y) for y in np.linspace(GY1, GY0, 40)]
 gm = mpoly(globe)
 # glass: fine vertical lines, dark on the shadow side, a clear highlight stripe at left
-tone = hgrad(CX - 27, CX + 27, 0.10, 0.62)
+tone = hgrad(CX - 27, CX + 27, 0.06, 0.52)
 hl = (xx > (CX - 15) * S) & (xx < (CX - 10) * S)
 tone = np.where(hl, 0.0, tone)
 put(hatch(gm, tone, 90, 1.25), gm)
 # flame inside: kept clear, outlined
-flame = [(CX, 56)] + [(CX + 4.2 * math.sin(t) * (1 - t / math.pi * 0.2), 64 - 8 * math.cos(t)) for t in np.linspace(0.3, math.pi, 10)] + \
-        [(CX - 4.2 * math.sin(t), 64 - 8 * math.cos(t)) for t in np.linspace(math.pi, 0.3, 10)]
+flame = [(CX + 4.0 * math.sin(t) * math.sin(t / 2), 61.5 - 6.5 * math.cos(t)) for t in np.linspace(0, 2 * math.pi, 40)]
 fm = mpoly(flame)
 put(np.zeros_like(ink), fm)
 stroke(flame + [flame[0]], 0.55)
@@ -125,12 +124,6 @@ stroke([(CX - 24, GY0 - 2), (CX - 20, GY0 - 2)], 1.6); stroke([(CX + 20, GY0 - 2
 grip = [(CX - 9, 2.5), (CX + 9, 2.5), (CX + 9, 7.5), (CX - 9, 7.5)]
 put(hatch(mpoly(grip), hgrad(CX - 9, CX + 9, 0.2, 0.9), 0, 1.0), mpoly(grip))
 stroke(grip + [grip[0]], 0.8)
-# small cast shadow under the base, engraved
-for k in range(4):
-    y = GY1 + 28 + k * 1.5
-    w = 30 - k * 5
-    stroke([(CX - w + 6, y), (CX + w + 6, y)], 0.45)
-
 # merge and squash like the train cut
 art = np.maximum(ink.astype(np.float32), np.asarray(lines, np.float32) / 255)
 img = Image.fromarray((art * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.9))

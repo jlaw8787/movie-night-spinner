@@ -33,16 +33,16 @@ SPEC = {
       "Chicken thighs browned hard, then set on long-grain rice cooked slow with onion, green pepper, garlic, cilantro, achiote, green olives and capers.",
       "$4.95", "Big enough for two brothers.", "Big enough for two brothers."),
   "Money Train payday michelada": ("Payday cerveza",
-      "Cold lager over ice with fresh lime, tomato juice, hot sauce and a dash of Worcestershire, in a glass rimmed with chili salt, slipped into a paper sack.",
+      "Cold lager over ice with fresh lime, tomato juice, hot sauce and a dash of Worcestershire, chili salt on the rim. Out the door it goes in a paper sack.",
       "$2.75", "Friday is payday. Cash only.", "Friday is payday. Cash only."),
 }
 ADDED = {
   'mallorca': ("Mallorca", "Soft, sweet spiral bun, split, pressed on the grill with butter and buried in powdered sugar.", "75¢", "Ask for it with ham and cheese."),
-  'pan': ("Pan de agua", "Crusty white loaf, soft inside, baked twice a day. Every lunch plate comes with it, buttered.", "$1.25", "A loaf for a token."),
+  'pan': ("Pan de agua", "Crusty white loaf, soft inside, baked twice a day. Comes buttered with every lunch plate.", "$1.25", "A loaf for a token."),
   'tostones': ("Tostones", "Green plantain fried, smashed flat and fried again till crisp, with garlic mojo for dipping.", "$1.50", None),
   'malta': ("Malta", "Dark, sweet barley soda, ice cold in the bottle. No alcohol.", "$1", None),
   'cafe': ("Café con leche", "Dark roast brewed strong and poured into steamed milk, sugared the way you take it.", "65¢", None),
-  'negro': ("Café negro", "Small cup, black and strong, the way the night shift drinks it.", "50¢", None),
+  'negro': ("Café negro", "Small, black and strong. The night shift special.", "50¢", None),
 }
 
 
@@ -103,7 +103,7 @@ front = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; heigh
   <aside style="position: absolute; left: 574px; top: 216px; width: 194px; text-align: center">
     <img src="assets/token-ink.png" alt="" style="display: block; width: 112px; height: 112px; margin: 0 auto">
     <div style="{O}; font-weight: 700; font-size: 19px; letter-spacing: .1em; margin-top: 6px; line-height: 1.1">SE ACEPTAN FICHAS</div>
-    <div style="{B}; font-size: 16px; line-height: 1.3; margin-top: 4px">One token, $1.25, buys a caf&eacute; con leche and a pastelito.</div>
+    <div style="{B}; font-size: 16px; line-height: 1.3; margin-top: 4px">One token, $1.25, buys you a caf&eacute; con leche and a pastelito.</div>
     <div style="{B}; font-style: italic; font-weight: 700; font-size: 16px; line-height: 1.3; margin-top: 4px">Here, tokens skip the money train.</div>
   </aside>
 
@@ -134,20 +134,20 @@ front = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; heigh
 RB = 736          # glued seam sits at x 766, keep the type left of it
 FOLD = 904        # bottom folded up from here
 back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; color: {INK}; {SPREAD}">
-  <header style="position: absolute; left: {L}px; top: 50px; width: {RB - L}px; display: flex; justify-content: space-between; align-items: flex-end">
+  <header style="position: absolute; left: {L}px; top: 58px; width: {RB - L}px; display: flex; justify-content: space-between; align-items: flex-end">
     <span style="{C}; font-size: 52px; line-height: 1">El &Uacute;ltimo Tren</span>
     <span style="{O}; font-weight: 700; font-size: 15px; letter-spacing: .2em; text-align: right; line-height: 1.35">LUNCH COUNTER<br>Y CAFETER&Iacute;A</span></header>
-  {rules(L, 118, RB - L)}
-  {bar(L, 134, RB - L, ['ALMUERZO 11 A 3', 'CAF&Eacute; TODO EL D&Iacute;A', 'CENA HASTA TARDE'])}
+  {rules(L, 124, RB - L)}
+  {bar(L, 140, RB - L, ['ALMUERZO 11 A 3', 'CAF&Eacute; TODO EL D&Iacute;A', 'CENA HASTA TARDE'])}
 
-  <section style="position: absolute; left: {L}px; top: 194px; width: 354px">
+  <section style="position: absolute; left: {L}px; top: 198px; width: 354px">
     {head('Almuerzo', 'Hot plate')}
     {item(SPEC['Arroz con pollo'], True, nsz=28)}
     {item(ADDED['pan'], gap=14, nsz=24, psz=22)}
     {item(ADDED['tostones'], gap=14, nsz=24, psz=22)}
   </section>
 
-  <section style="position: absolute; left: 432px; top: 194px; width: {RB - 432}px">
+  <section style="position: absolute; left: 432px; top: 198px; width: {RB - 432}px">
     {head('Bebidas', 'Clocking off')}
     {item(SPEC['Money Train payday michelada'], True, nsz=23)}
     {item(ADDED['malta'], nsz=23, gap=12)}
@@ -155,16 +155,16 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
     {item(ADDED['negro'], nsz=23, gap=12)}
   </section>
 
-  <div style="position: absolute; left: {L}px; top: 664px; width: 354px; box-sizing: border-box; background: {INK}; color: {KRAFT}; text-shadow: none; padding: 14px 18px 15px">
+  <div style="position: absolute; left: {L}px; top: 624px; width: 354px; box-sizing: border-box; background: {INK}; color: {KRAFT}; text-shadow: none; padding: 14px 18px 15px">
     <div style="{O}; font-weight: 700; font-size: 23px; line-height: 1.1; letter-spacing: .05em">ON THE MIDNIGHT TOUR?</div>
-    <div style="{B}; font-size: 16px; line-height: 1.36; margin-top: 6px">Token clerks, motormen, conductors and transit cops working nights: coffee is on the house after twelve. Show your pass.</div>
+    <div style="{B}; font-size: 16px; line-height: 1.36; margin-top: 6px">Token clerks, motormen, conductors and transit cops on nights: after twelve the coffee is on the house. Show your pass.</div>
     <div style="{B}; font-style: italic; font-weight: 700; font-size: 16px; line-height: 1.3; margin-top: 7px">Decoys too. We never saw you.</div>
   </div>
 
-  <img src="assets/counter-ink.png" alt="" style="position: absolute; left: 434px; top: 664px; width: 302px; height: 216px; display: block">
+  <img src="assets/counter-ink.png" alt="" style="position: absolute; left: 440px; top: 670px; width: 290px; height: 207px; display: block">
 
-  <section style="position: absolute; left: {L}px; top: 832px; width: 354px">
-    <div style="{B}; font-size: 16px; line-height: 1.36"><span style="{O}; font-weight: 700; font-size: 17px; letter-spacing: .12em">PEDIDOS.</span> Pastelitos, mallorcas, token cookies and pan de agua by the dozen for the station house, the depot or the block party. Call a day ahead.</div>
+  <section style="position: absolute; left: {L}px; top: 812px; width: 354px">
+    <div style="{B}; font-size: 16px; line-height: 1.36"><span style="{O}; font-weight: 700; font-size: 17px; letter-spacing: .12em">PEDIDOS.</span> Pastelitos, mallorcas and token cookies by the dozen for the station house or the depot. Call a day ahead.</div>
   </section>
 
   <img src="assets/recycle-ink.png" alt="" style="position: absolute; left: 132px; top: 926px; width: 62px; height: 62px; display: block">

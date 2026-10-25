@@ -60,17 +60,17 @@ ht = Image.new('RGBA', (PW, PH), (24, 24, 22, 0)); ht.putalpha(dots.point(lambda
 ht.save(os.path.join(A, 'host-halftone.png'))
 
 # ---------------- cover wear (on green stock) ----------------
-em = edge_mask(W, H, 12 * S, 1.8)
-a = ImageChops.multiply(em, mottle(W, H, 50, 90, 255, 7)).point(lambda v: int(v * 0.30))
-# spine crease along the left fold, a soft light line where the ink cracked
-sp = Image.new('L', (W, H), 0); sd = ImageDraw.Draw(sp)
-sd.rectangle((0, 0, 7 * S, H), fill=150)
-sp = sp.filter(ImageFilter.GaussianBlur(4 * S))
-sp = ImageChops.multiply(sp, mottle(W, H, 30, 120, 255, 9))
-a = ImageChops.lighter(a, sp)
-a = ImageChops.lighter(a, mottle(W, H, 160, 0, 12, 11))
+# A thin, broken rub along the trimmed edges where the stock has scuffed pale, a worn corner at the
+# lower right where the journal was held, and a faint glass ring. No spine effects: the stitched
+# edge is simply the trimmed edge of the cover.
+em = edge_mask(W, H, 5 * S, 1.3)
+a = ImageChops.multiply(em, mottle(W, H, 22, 40, 255, 7)).point(lambda v: int(v * 0.55))
+cor = Image.new('L', (W, H), 0)
+ImageDraw.Draw(cor).ellipse((W - 46 * S, H - 46 * S, W + 30 * S, H + 30 * S), fill=110)
+cor = ImageChops.multiply(cor.filter(ImageFilter.GaussianBlur(10 * S)), mottle(W, H, 14, 60, 255, 8))
+a = ImageChops.lighter(a, cor)
+a = ImageChops.lighter(a, mottle(W, H, 160, 0, 10, 11))
 front = Image.new('RGBA', (W, H), (214, 222, 205, 0)); front.putalpha(a)
-# faint glass ring, darker where the wet base sat, low on the cover and mostly off the type
 ring = Image.new('L', (W, H), 0); rg = ImageDraw.Draw(ring)
 cx, cy, r = W * 0.86, H * 0.955, 58 * S
 rg.ellipse((cx - r, cy - r, cx + r, cy + r), outline=255, width=6 * S)
@@ -79,31 +79,57 @@ ring = ring.filter(ImageFilter.GaussianBlur(3.2 * S))
 ring = ImageChops.multiply(ring, mottle(W, H, 18, 60, 255, 31)).point(lambda v: int(v * 0.32))
 rl = Image.new('RGBA', (W, H), (8, 22, 16, 0)); rl.putalpha(ring)
 front = Image.alpha_composite(front, rl)
-# two staple ends showing on the spine
-st = Image.new('RGBA', (W, H), (0, 0, 0, 0)); sdd = ImageDraw.Draw(st)
-for yy in (FH * 0.25, FH * 0.75):
-    y0 = int(yy * S)
-    sdd.rectangle((1 * S, y0 - 22 * S, 4 * S, y0 + 22 * S), fill=(178, 182, 178, 235))
-    sdd.rectangle((1 * S, y0 - 22 * S, 2 * S, y0 + 22 * S), fill=(220, 224, 220, 235))
-front = Image.alpha_composite(front, st)
 front.save(os.path.join(A, 'wear-front.png'))
 
 # ---------------- inside page wear (white offset) ----------------
-em2 = edge_mask(W, H, 64 * S, 1.9)
-a2 = ImageChops.multiply(em2, mottle(W, H, 70, 60, 255, 21)).point(lambda v: int(v * 0.30))
-a2 = ImageChops.lighter(a2, mottle(W, H, 120, 0, 16, 23))
+# gentle yellowing in from the trimmed edges and a soft thumb mark at the lower right
+em2 = edge_mask(W, H, 34 * S, 1.6)
+a2 = ImageChops.multiply(em2, mottle(W, H, 60, 70, 255, 21)).point(lambda v: int(v * 0.26))
+a2 = ImageChops.lighter(a2, mottle(W, H, 120, 0, 14, 23))
+th = Image.new('L', (W, H), 0)
+ImageDraw.Draw(th).ellipse((W - 70 * S, H - 64 * S, W + 10 * S, H + 10 * S), fill=40)
+a2 = ImageChops.lighter(a2, th.filter(ImageFilter.GaussianBlur(14 * S)))
 back = Image.new('RGBA', (W, H), (160, 128, 70, 0)); back.putalpha(a2)
-# gutter shadow at the left where the page curves into the staples
-gs = Image.new('L', (W, H), 0); gd = ImageDraw.Draw(gs)
-for x in range(0, 30 * S):
-    gd.line((x, 0, x, H), fill=int(70 * (1 - x / (30 * S)) ** 2))
-gs = gs.filter(ImageFilter.GaussianBlur(2 * S))
-gl = Image.new('RGBA', (W, H), (60, 58, 50, 0)); gl.putalpha(gs)
-back = Image.alpha_composite(back, gl)
-st2 = Image.new('RGBA', (W, H), (0, 0, 0, 0)); s2 = ImageDraw.Draw(st2)
-for yy in (FH * 0.25, FH * 0.75):
-    y0 = int(yy * S)
-    s2.rectangle((2 * S, y0 - 22 * S, 4 * S, y0 + 22 * S), fill=(150, 152, 150, 210))
-back = Image.alpha_composite(back, st2)
 back.save(os.path.join(A, 'wear-back.png'))
-print('painted', ht.size)
+
+# ---------------- pledge thermometer, a printed line cut ----------------
+# Black plate: the glass tube and bulb in pen line with ruled shading, the scale ruled underneath.
+# Green plate: the column and the bulb, ruled, printed a hair out of register.
+TW, TH = 460, 120                       # 2x of 230 x 60
+blk = Image.new('L', (TW, TH), 0); bd = ImageDraw.Draw(blk)
+grn = Image.new('L', (TW, TH), 0); gd2 = ImageDraw.Draw(grn)
+bx, by, br = 40, 46, 30                 # bulb
+t0, t1, ty0, ty1 = 64, 446, 34, 58      # tube
+# tube outline, double ruled
+bd.rounded_rectangle((bx, ty0, t1, ty1), radius=12, outline=255, width=3)
+bd.ellipse((bx - br, by - br, bx + br, by + br), outline=255, width=3)
+bd.ellipse((bx - br + 3, by - br + 3, bx + br - 3, by + br - 3), fill=0)   # clear the tube line inside the bulb
+bd.rectangle((bx + br - 4, ty0 + 3, bx + br + 2, ty1 - 3), fill=0)         # open the neck
+# glass shine: two fine ruled highlights along the empty part of the tube
+fill_x = t0 + round((t1 - 14 - t0) * 0.70)
+for yy in (ty0 + 7, ty0 + 10):
+    bd.line((fill_x + 10, yy, t1 - 16, yy), fill=255, width=1)
+# column and bulb in green, ruled with horizontal lines like an engraving
+gd2.ellipse((bx - br + 6, by - br + 6, bx + br - 6, by + br - 6), fill=255)
+gd2.rectangle((t0 - 6, ty0 + 7, fill_x, ty1 - 7), fill=255)
+rule = Image.new('L', (TW, TH), 0); rd2 = ImageDraw.Draw(rule)
+for yy in range(0, TH, 4):
+    rd2.line((0, yy, TW, yy), fill=255, width=3)
+grn = ImageChops.multiply(grn, rule)
+gd2 = ImageDraw.Draw(grn)
+gd2.arc((bx - 16, by - 18, bx + 8, by + 6), 200, 290, fill=0, width=4)   # highlight on the bulb
+gd2.line((fill_x, ty0 + 7, fill_x, ty1 - 7), fill=255, width=3)
+# scale: a tick for every million, long ticks at 4, 8, 12 and 16
+for i in range(17):
+    x = t0 + 10 + round((t1 - 24 - t0) * i / 16)
+    ln = 16 if i % 4 == 0 else 8
+    bd.line((x, ty1 + 6, x, ty1 + 6 + ln), fill=255, width=3 if i % 4 == 0 else 2)
+bd.line((t0 + 10, ty1 + 6, t1 - 14, ty1 + 6), fill=255, width=2)
+INKC, GRC = (28, 29, 26), (31, 90, 67)
+th_img = Image.new('RGBA', (TW, TH), GRC + (0,))
+g2 = Image.new('L', (TW, TH), 0); g2.paste(grn, (3, 2))
+th_img.putalpha(g2.filter(ImageFilter.GaussianBlur(0.5)))
+bl = Image.new('RGBA', (TW, TH), INKC + (0,)); bl.putalpha(blk.filter(ImageFilter.GaussianBlur(0.5)))
+th_img = Image.alpha_composite(th_img, bl)
+th_img.save(os.path.join(A, 'thermometer.png'))
+print('painted', ht.size, 'thermometer long ticks at display x', [(t0 + 10 + round((t1 - 24 - t0) * i / 16)) / 2 for i in (0, 4, 8, 12, 16)])

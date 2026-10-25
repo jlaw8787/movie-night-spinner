@@ -27,10 +27,12 @@ def dither(grey):
 SS = 4  # supersample for drawing, then down to 2x page pixels and error-diffused like a fax
 
 def fax(im, w, h):
-    """greyscale drawing -> 1-bit Floyd-Steinberg at final pixel size, as ink on clear."""
-    g = im.resize((w, h), Image.LANCZOS).convert('1')
-    on = 255 - np.asarray(g.convert('L'))
-    out = Image.new('RGBA', (w, h), INK + (0,))
+    """greyscale drawing -> black ink on clear, still continuous tone. These go on the clean
+    sheet as the shop printed it; fax.py dithers the whole transmitted page once, the way
+    the sending machine did, so the art and the type break up together."""
+    g = im.resize((w, h), Image.LANCZOS)
+    on = 255 - np.asarray(g, dtype=np.uint8)
+    out = Image.new('RGBA', (w, h), (0, 0, 0, 0))
     out.putalpha(Image.fromarray(on.astype(np.uint8)))
     return out
 
@@ -138,7 +140,7 @@ def cake(w=224, h=210):
     return fax(im, w, h)
 
 def sandwich(w=320, h=150):
-    """chopped cheese hero, side on, with a frilled pick, the way office clip art drew a sub."""
+    """chopped beef and cheese hero, side on, with a frilled pick, the way office clip art drew a sub."""
     S = SS * 2  # design units 160 x 75
     im = Image.new('L', (w * SS, h * SS), 255)
     d = ImageDraw.Draw(im)
@@ -181,105 +183,7 @@ def sandwich(w=320, h=150):
         d.line(u(80, 3, 80 + 5 * math.cos(a2), 3 + 4 * math.sin(a2)), fill=0, width=2 * S)
     return fax(im, w, h)
 
-def route_map(W=704, H=232):
-    """One long avenue with sixteen numbered blocks, precinct at the left end, courts at the right.
-    Labels are added in HTML. Block k sits between x0 + k*bw and x0 + (k+1)*bw. Painted at 2x."""
-    S = SS * 2
-    im = Image.new('L', (W * S, H * S), 255)
-    d = ImageDraw.Draw(im)
-    u = lambda *v: [x * S for x in v]
-    x0, x1 = 96, W - 96
-    bw = (x1 - x0) / 16
-    ave_y0, ave_y1 = 104, 132
-    rnd = random.Random(2006)
-    for k in range(16):
-        bx0 = x0 + k * bw + 5
-        bx1 = x0 + (k + 1) * bw - 5
-        for (y0, y1, top) in ((52, ave_y0 - 8, True), (ave_y1 + 8, 184, False)):
-            d.rectangle(u(bx0, y0, bx1, y1), fill=205, outline=0, width=2 * S)
-            # tiny window rows, the way clip-art city maps did it
-            for wy in range(int(y0) + 6, int(y1) - 4, 7):
-                for wx in (bx0 + 5, bx0 + 12):
-                    if wx + 4 < bx1 - 2:
-                        d.rectangle(u(wx, wy, wx + 4, wy + 3), fill=rnd.choice((90, 110, 250)))
-    # avenue
-    d.rectangle(u(x0, ave_y0, x1, ave_y1), fill=255)
-    d.line(u(x0, ave_y0, x1, ave_y0), fill=0, width=3 * S)
-    d.line(u(x0, ave_y1, x1, ave_y1), fill=0, width=3 * S)
-    x = x0
-    while x < x1:
-        d.line(u(x, 118, min(x + 12, x1), 118), fill=0, width=2 * S)
-        x += 22
-    # precinct: dark brick block, window grid, two lamps by the door
-    d.rectangle(u(8, 40, x0 - 12, 196), fill=70, outline=0, width=3 * S)
-    for wy in range(52, 160, 16):
-        for wx in (16, 34, 52, 70):
-            if wx + 8 <= x0 - 18:
-                d.rectangle(u(wx, wy, wx + 8, wy + 10), fill=215, outline=0, width=1 * S)
-    d.rectangle(u(34, 168, 58, 196), fill=20)
-    for lx in (26, 66):
-        d.ellipse(u(lx - 4, 166, lx + 4, 174), fill=235, outline=0, width=1 * S)
-    # courts: pediment, columns, steps
-    cx0, cx1 = x1 + 12, W - 8
-    d.rectangle(u(cx0, 70, cx1, 196), fill=230, outline=0, width=3 * S)
-    d.polygon(u(cx0 - 4, 70, (cx0 + cx1) / 2, 40, cx1 + 4, 70), fill=80, outline=0)
-    d.rectangle(u(cx0 - 4, 66, cx1 + 4, 76), fill=40)
-    n = 5
-    for i in range(n):
-        cx = cx0 + 10 + i * (cx1 - cx0 - 20) / (n - 1)
-        grad_fill(im, lambda m, cx=cx: m.rectangle(u(cx - 4, 78, cx + 4, 160), fill=255), int((cx - 4) * S), int((cx + 4) * S), [(0, 200), (0.4, 250), (1, 90)])
-        d.rectangle(u(cx - 4, 78, cx + 4, 160), outline=0, width=1 * S)
-    for i in range(4):
-        y = 162 + i * 8
-        d.rectangle(u(cx0 - 1 - i, y, cx1 + 1 + i, y + 6), fill=150 - i * 25, outline=0, width=1 * S)
-    return fax(im, W * 2, H * 2), dict(x0=x0, x1=x1, bw=bw)
-
-def route_pen(W=704, H=232):
-    """Red felt-tip line drawn on the received fax by a squad member: precinct door to the court steps,
-    along the top lane, a little wobbly, two strokes with a lift in the middle, arrowhead at the end."""
-    S = 4
-    big = Image.new('L', (W * S, H * S), 0)
-    d = ImageDraw.Draw(big)
-    rnd = np.random.RandomState(8)
-    def stroke(xa, xb, ya, yb, seed, wid=3.4):
-        r = np.random.RandomState(seed)
-        n = int((xb - xa) / 2)
-        xs = np.linspace(xa, xb, n)
-        wob = np.cumsum(r.randn(n)) * 0.18
-        wob -= np.linspace(wob[0], wob[-1], n)
-        ys = np.linspace(ya, yb, n) + wob + 1.3 * np.sin(xs / 37.0 + seed)
-        for i in range(n):
-            # felt tip: a touch heavier where it starts, pressure eases off along the run
-            ww = wid * (1.25 if i < 6 else 1.0) * (0.92 + 0.08 * math.sin(i / 9.0))
-            d.ellipse([(xs[i] - ww / 2) * S, (ys[i] - ww / 2) * S, (xs[i] + ww / 2) * S, (ys[i] + ww / 2) * S], fill=235)
-        return xs, ys
-    # out of the precinct door, up into the avenue
-    pts = [(46, 182), (50, 176), (58, 170), (70, 158), (80, 140), (88, 120), (96, 112)]
-    for (xa, ya), (xb, yb) in zip(pts, pts[1:]):
-        for t in np.linspace(0, 1, 14):
-            x = xa + (xb - xa) * t; y = ya + (yb - ya) * t
-            d.ellipse([(x - 1.8) * S, (y - 1.8) * S, (x + 1.8) * S, (y + 1.8) * S], fill=235)
-    stroke(96, 362, 112, 110, 3)
-    stroke(357, 612, 111, 113, 5)
-    # into the court steps with an arrowhead
-    for t in np.linspace(0, 1, 30):
-        x = 612 + 18 * t; y = 113 + 46 * t * t
-        d.ellipse([(x - 1.8) * S, (y - 1.8) * S, (x + 1.8) * S, (y + 1.8) * S], fill=235)
-    ex, ey = 630, 159
-    for (ax, ay) in ((ex - 11, ey - 4), (ex + 3, ey - 12)):
-        for t in np.linspace(0, 1, 12):
-            x = ex + (ax - ex) * t; y = ey + (ay - ey) * t
-            d.ellipse([(x - 1.7) * S, (y - 1.7) * S, (x + 1.7) * S, (y + 1.7) * S], fill=235)
-    # tick marks at the two ends of the lift, where the pen overlapped
-    a = big.resize((W * 2, H * 2), Image.LANCZOS).filter(ImageFilter.GaussianBlur(0.6))
-    arr = np.asarray(a, dtype=float)
-    # felt tip ink is uneven: soft mottle, slightly darker edges where the ink pools
-    mott = 0.82 + 0.18 * soft_noise(W * 2, H * 2, 24, 31)
-    edge = np.asarray(a.filter(ImageFilter.FIND_EDGES), dtype=float)
-    alpha = np.clip(arr * mott + edge * 0.25, 0, 230)
-    out = Image.new('RGBA', (W * 2, H * 2), (184, 36, 28, 0))
-    out.putalpha(Image.fromarray(alpha.astype(np.uint8)))
-    return out
+#@@MAP@@
 
 def soft_noise(W, H, scale, seed):
     rng = np.random.RandomState(seed)
@@ -327,14 +231,4 @@ def wear(face, W=816 * 2, H=1056 * 2, ring=None):
         out = Image.alpha_composite(out, stain)
     return out
 
-if __name__ == '__main__':
-    mug().save(os.path.join(A, 'mug.png'))
-    cake().save(os.path.join(A, 'cake.png'))
-    sandwich().save(os.path.join(A, 'hero.png'))
-    m, info = route_map()
-    m.save(os.path.join(A, 'route-map.png'))
-    print('map', info)
-    route_pen().save(os.path.join(A, 'route-pen.png'))
-    wear('p1').save(os.path.join(A, 'wear-p1.png'))
-    wear('p2', ring=(1330, 1880, 120)).save(os.path.join(A, 'wear-p2.png'))
-    print('painted')
+#@@MAIN@@

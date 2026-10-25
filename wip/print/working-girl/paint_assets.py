@@ -119,8 +119,8 @@ def pencil(points_list, size, width=4, seed=1):
     for pts in points_list:
         for k in range(3):
             j = [(x + random.uniform(-1.1, 1.1), y + random.uniform(-1.1, 1.1)) for x, y in pts]
-            d.line(j, fill=(74, 76, 84, 70), width=width, joint='curve')
-    return im.filter(ImageFilter.GaussianBlur(0.7))
+            d.line(j, fill=(70, 72, 80, 105), width=width, joint='curve')
+    return im.filter(ImageFilter.GaussianBlur(0.5))
 
 
 def pencil_ring(w, h, seed=4):

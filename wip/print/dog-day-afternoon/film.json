@@ -13,18 +13,18 @@
   139.7,
   215.9
  ],
- "fonts": "family=Cinzel:wght@600;700&family=Cutive+Mono&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400",
+ "fonts": "family=Courier+Prime&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=Old+Standard+TT:wght@700",
  "fams": [
-  "Cinzel",
-  "Cutive Mono",
+  "Old Standard TT",
+  "Courier Prime",
   "Libre Franklin"
  ],
  "phone": {
-  "disp": "'Cinzel',serif",
-  "title": "'Cinzel',serif",
-  "name": "'Cutive Mono',monospace",
-  "body": "'Cutive Mono',monospace",
-  "price": "'Cutive Mono',monospace",
+  "disp": "'Old Standard TT',serif",
+  "title": "'Old Standard TT',serif",
+  "name": "'Courier Prime',monospace",
+  "body": "'Courier Prime',monospace",
+  "price": "'Courier Prime',monospace",
   "note": "'Libre Franklin',sans-serif"
  }
 }

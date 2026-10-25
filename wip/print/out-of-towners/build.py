@@ -20,8 +20,8 @@ LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&
 GOTH = "'Pathway Gothic One', 'Arial Narrow', sans-serif"
 BOD = "'Libre Bodoni', 'Bodoni 72', Georgia, serif"
 # letterpress: ink spreads a hair past the letter edge
-SQ = 'text-shadow: 0 0 0.6px rgba(31,26,23,0.55)'
-SQR = 'text-shadow: 0 0 0.6px rgba(179,57,43,0.55)'
+SQ = 'text-shadow: 0 0 0.75px rgba(31,26,23,0.62), 0.35px 0.25px 0 rgba(31,26,23,0.24)'
+SQR = 'text-shadow: 0 0 0.75px rgba(179,57,43,0.6), 0.35px 0.25px 0 rgba(179,57,43,0.22)'
 X0, CWID = 52, 664      # text block
 COL, GUT = 316, 32
 
@@ -73,7 +73,8 @@ def combo(no, text, price, top=10, pencil=0):
 
 def overlays(face):
     gw = round(FH * 2246 / 1588)
-    return (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: {(FW - gw) // 2}px; top: 0; width: {gw}px; height: {FH}px; opacity: 0.7; pointer-events: none; display: block">'
+    return (f'<img src="assets/wear-ink-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; pointer-events: none; display: block">'
+            f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: {(FW - gw) // 2}px; top: 0; width: {gw}px; height: {FH}px; opacity: 0.7; pointer-events: none; display: block">'
             f'<img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; pointer-events: none; display: block">')
 
 
@@ -242,6 +243,7 @@ check = f'''
 
 back = f'''
 {masthead("Lounge Car", "CLUB AND GRILL SERVICE<br>BAR OPEN FROM BOSTON<br>TO STAMFORD")}
+<img src="assets/lantern.png" alt="" style="position: absolute; left: 432px; top: 42px; width: 84px; height: 108.5px; display: block">
 <div style="position: absolute; left: {X0}px; top: 164px; width: {COL}px">{back_left}</div>
 <div style="position: absolute; left: {X0 + COL + GUT}px; top: 164px; width: {COL}px">{back_right}</div>
 <div style="position: absolute; left: {X0 + COL + GUT // 2}px; top: 170px; width: 0.75px; height: 392px; background: {INK}; opacity: 0.6"></div>

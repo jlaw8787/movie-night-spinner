@@ -138,7 +138,8 @@ def back():
     cake = item('Our wedding cake', 'Vanilla butter sponge baked in our kitchen, split and layered with raspberry jam, frosted in Swiss meringue buttercream and cut tall. Tiered to your count.', '1.25', 'a slice', mt=12)
     vienna = item('The Viennese table', 'Cannoli, napoleons, rum cake, cheesecake and fresh fruit, with espresso and anisette. Wheeled out at midnight.', '6.95', 'pp', mt=13)
     left = (f'<div style="position: absolute; left: 48px; top: 530px; width: 346px">'
-            f'{head("From Our Bakery", "THE SWEET END OF THE NIGHT", size=30)}{cake}{vienna}</div>')
+            f'{head("From Our Bakery", "THE SWEET END OF THE NIGHT", size=30)}{cake}{vienna}</div>'
+            f'<div style="position: absolute; left: 300px; top: 778px; font-family: {HAND}; font-weight: 600; font-size: 26px; color: {LEAD}; transform: rotate(-6deg)">yes!!</div>')
     man = item('Manhattan', 'Bourbon stirred cold with sweet vermouth and a dash of bitters, served up with a cherry.', '3.25', mt=12)
     bars = ''.join(leader(n, p, mt=(10 if i == 0 else 4)) for i, (n, p) in enumerate(BAR))
     right = (f'<div style="position: absolute; left: 422px; top: 530px; width: 346px">'

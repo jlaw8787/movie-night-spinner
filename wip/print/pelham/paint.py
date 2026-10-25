@@ -94,10 +94,14 @@ def wear():
     # a crease in the master prints as a pale streak running across the sheet
     cy0 = 1180 + (xx - W / 2) * .06
     crease = np.exp(-((yy - cy0) / 9) ** 2) * .42 * (0.5 + 0.5 * field(21, 90, 20))
-    a_pale = np.clip(a_pale + crease, 0, .8)
+    # the right side of the sheet came off the drum short of fluid: it fades
+    fade = np.clip((xx / W - .5) / .5, 0, 1) ** 1.4 * .30 * (0.7 + 0.3 * field(25, 200, 60))
+    a_pale = np.clip(a_pale + crease + fade, 0, .8)
     # purple thumb smudge where the operator pulled the sheet off the drum
     sx, sy = 1560, 1500
     sm = np.exp(-(((xx - sx) / 34) ** 2 + ((yy - sy) / 52) ** 2)) * .16 * (0.6 + 0.4 * field(23, 20, 6))
+    # a wet drag: the copy slid on the tray and pulled a faint purple smear sideways
+    sm += np.exp(-(((xx - 330) / 260) ** 2 + ((yy - 1640) / 16) ** 2)) * .07 * (0.5 + 0.5 * field(27, 30, 8))
     # edge wear: darker, slightly yellowed border fading in
     e = np.minimum(np.minimum(xx, W - xx), np.minimum(yy, H - yy))
     a_edge = np.clip(1 - e / 70, 0, 1) ** 2 * .22 * (0.6 + 0.4 * field(5, 120, 30))
