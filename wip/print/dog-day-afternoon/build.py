@@ -10,19 +10,20 @@ import os, json
 D = os.path.dirname(os.path.abspath(__file__))
 
 FW, FH = 816, 1056
-PAPER = '#f7f0e3'
-INK = '#261c18'
-SOFT = '#4a3d36'
-RED = '#c3341f'
+PAPER = '#f1d5c2'
+INK = '#2c1a12'
+SOFT = '#553628'
+RED = '#b2301e'
 ORANGE = '#e2741f'
 GOLD = '#f4b43a'
 GREEN = '#d9e6cf'
 GREEN_INK = '#2f6a45'
 PENCIL = '#2b2d3a'
-FONTS = ('family=Yellowtail&family=Sofia+Sans+Extra+Condensed:wght@800;900'
+FONTS = ('family=Shrikhand&family=Yellowtail&family=Sofia+Sans+Extra+Condensed:wght@800;900'
          '&family=Sofia+Sans+Condensed:wght@700;800&family=Sofia+Sans:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Gochi+Hand')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
 SCRIPT = "'Yellowtail', cursive"
+DISP = "'Shrikhand', serif"
 XC = "'Sofia Sans Extra Condensed', 'Arial Narrow', sans-serif"
 CD = "'Sofia Sans Condensed', 'Arial Narrow', sans-serif"
 BODY = "'Sofia Sans', Arial, sans-serif"
@@ -39,8 +40,8 @@ def paper(face):
 def section(title, kicker):
     """Jurassic system: spaced-caps kicker in the accent, then a dark label bar with paper-coloured caps."""
     return (f'<div style="font-family: {CD}; font-weight: 800; font-size: 18px; line-height: 1; letter-spacing: 0.16em; color: {RED}; text-transform: uppercase">{kicker}</div>'
-            f'<div style="display: inline-block; margin-top: 7px; background: {INK}; color: {PAPER}; font-family: {XC}; font-weight: 900; font-size: 44px; line-height: 1; letter-spacing: 0.02em; padding: 6px 14px 3px; text-transform: uppercase">{title}</div>'
-            f'<div style="height: 2px; background: {INK}; margin: 8px 0 2px"></div>')
+            f'<div style="display: inline-block; margin-top: 8px; border: 3px solid {RED}; outline: 1.5px solid {RED}; outline-offset: 3px; color: {RED}; font-family: {DISP}; font-size: 40px; line-height: 1; padding: 6px 16px 8px">{title}</div>'
+            f'<div style="height: 2px; background: {INK}; margin: 12px 0 2px"></div>')
 
 
 def dish(name, desc, price, star=False):
@@ -60,19 +61,19 @@ def page(face, inner):
 # ---------------------------------------------------------------- front
 def front():
     top = (
-        f'<img src="assets/sun-badge.png" alt="" style="position: absolute; left: 552px; top: 30px; width: 256px; height: 256px; display: block">'
-        f'<div style="position: absolute; left: 590px; top: 116px; width: 180px; text-align: center; color: {INK}">'
-        f'<div style="font-family: {XC}; font-weight: 900; font-size: 34px; line-height: 0.9; letter-spacing: 0.02em">AIR<br>CONDITIONED</div>'
-        f'<div style="margin-top: 6px; font-family: {CD}; font-weight: 800; font-size: 16px; line-height: 1.1; letter-spacing: 0.08em; text-transform: uppercase">Eat in, cool off</div></div>'
+        f'<img src="assets/engraved-sun.png" alt="" style="position: absolute; left: 556px; top: 26px; width: 230px; height: 230px; display: block">'
+        f'<div style="position: absolute; left: 556px; top: 252px; width: 230px; text-align: center; color: {INK}">'
+        f'<div style="font-family: {DISP}; font-size: 26px; line-height: 1; color: {RED}">Air conditioned</div>'
+        f'<div style="margin-top: 4px; font-family: {CD}; font-weight: 800; font-size: 16px; line-height: 1.1; letter-spacing: 0.12em; text-transform: uppercase">Eat in, cool off</div></div>'
         f'<div style="position: absolute; left: {L}px; top: 48px; font-family: {CD}; font-weight: 800; font-size: 18px; letter-spacing: 0.18em; color: {RED}; text-transform: uppercase">Pizza &nbsp;·&nbsp; Heroes &nbsp;·&nbsp; Italian ices</div>'
-        f'<div style="position: absolute; left: {L - 2}px; top: 70px; font-family: {SCRIPT}; font-size: 64px; line-height: 1; color: {RED}">Pizzeria</div>'
-        f'<div style="position: absolute; left: {L - 6}px; top: 128px; font-family: {XC}; font-weight: 900; font-size: 150px; line-height: 0.86; letter-spacing: 0.005em; color: {INK}">CANICOLA</div>'
+        f'<div style="position: absolute; left: {L}px; top: 92px; font-family: {XC}; font-weight: 900; font-size: 40px; line-height: 1; letter-spacing: 0.32em; color: {INK}">PIZZERIA</div>'
+        f'<div style="position: absolute; left: {L - 4}px; top: 126px; font-family: {DISP}; font-size: 100px; line-height: 1.1; color: {RED}">Canicola</div>'
         f'<div style="position: absolute; left: {L}px; top: 266px; width: 470px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 20px; line-height: 1.3; color: {SOFT}">'
         f'On the avenue, two doors from the barber shop.</div>'
-        f'<div style="position: absolute; left: 0; top: 314px; width: {FW}px; height: 48px; background: {INK}"></div>'
+        f'<div style="position: absolute; left: 0; top: 314px; width: {FW}px; height: 48px; background: {RED}"></div>'
         f'<div style="position: absolute; left: {L}px; top: 314px; width: {CW}px; height: 48px; display: flex; align-items: center; justify-content: space-between; '
         f'font-family: {CD}; font-weight: 800; font-size: 20px; letter-spacing: 0.1em; color: {PAPER}; text-transform: uppercase">'
-        f'<span>We deliver</span><span style="color: {GOLD}">Call 555-0822</span><span>Open 11 A.M. to midnight</span></div>'
+        f'<span>We deliver</span><span>Call 555-0822</span><span>Open 11 A.M. to midnight</span></div>'
     )
     pies = (
         section('Pizza pies', 'Baked on the stone') +
@@ -93,7 +94,7 @@ def front():
             f'<div style="position: absolute; left: {L + 368}px; top: 392px; width: {CW - 368}px">{heroes}</div>')
     coupon = (
         f'<div style="position: absolute; left: {L}px; top: 852px; width: {CW}px; height: 128px; display: flex; gap: 32px">'
-        f'<div style="position: relative; width: 400px; box-sizing: border-box; border: 2.5px dashed {INK}; padding: 14px 18px 10px; background: rgba(244,180,58,0.22)">'
+        f'<div style="position: relative; width: 400px; box-sizing: border-box; border: 2.5px dashed {INK}; padding: 14px 18px 10px; background: rgba(255,250,240,0.45)">'
         f'<div style="position: absolute; right: 12px; top: -10px; background: {PAPER}; padding: 0 6px; font-family: {CD}; font-weight: 800; font-size: 14px; line-height: 1; letter-spacing: 0.14em; color: {RED}">CLIP AND SAVE</div>'
         f'<div style="font-family: {XC}; font-weight: 900; font-size: 40px; line-height: 0.95; color: {RED}">FREE LEMON ICE</div>'
         f'<div style="margin-top: 5px; font-family: {BODY}; font-weight: 600; font-size: 20px; line-height: 1.25; color: {INK}">With every large pie.</div>'
@@ -115,11 +116,11 @@ def ticket():
     lab = f'font-family: {CD}; font-weight: 800; font-size: 14px; letter-spacing: 0.06em; color: {GREEN_INK}; width: 44px; flex: none; padding-bottom: 4px'
     hand = f'font-family: {HAND}; font-size: 20px; line-height: 1; color: {PENCIL}; padding-bottom: 2px; white-space: nowrap'
     rows = [('DATE', 'Tues. 8/22/72'), ('TO', 'The bank, across the st.'), ('', 'Front door only!'),
-            ('', 'Pies, plain + pepperoni'), ('', 'Sodas, cold')]
+            ('', 'Pies, plain + pepperoni')]
     body = ''.join(f'<div style="{line}"><div style="{lab}">{a}</div><div style="{hand}">{b}</div></div>' for a, b in rows)
     return (
-        f'<div style="position: absolute; left: 500px; top: 700px; width: 262px; height: 252px; transform: rotate(2deg); transform-origin: 50% 0">'
-        f'<div style="position: absolute; left: 0; top: 0; width: 262px; height: 252px; background: {GREEN}; box-shadow: 0 2px 5px rgba(38,28,24,0.22)"></div>'
+        f'<div style="position: absolute; left: 500px; top: 770px; width: 262px; height: 222px; transform: rotate(2deg); transform-origin: 50% 0">'
+        f'<div style="position: absolute; left: 0; top: 0; width: 262px; height: 222px; background: {GREEN}; box-shadow: 0 2px 5px rgba(38,28,24,0.22)"></div>'
         f'<div style="position: absolute; left: 14px; top: 12px; width: 234px">'
         f'<div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid {GREEN_INK}; padding-bottom: 4px">'
         f'<span style="font-family: {CD}; font-weight: 800; font-size: 16px; letter-spacing: 0.1em; color: {GREEN_INK}">GUEST CHECK</span>'
@@ -137,8 +138,8 @@ def back():
     head = (
         f'<div style="position: absolute; left: {L}px; top: 44px; width: {CW}px; display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 3px solid {INK}; padding-bottom: 10px">'
         f'<div style="display: flex; align-items: baseline; gap: 10px">'
-        f'<span style="font-family: {SCRIPT}; font-size: 44px; line-height: 1; color: {RED}">Pizzeria</span>'
-        f'<span style="font-family: {XC}; font-weight: 900; font-size: 68px; line-height: 0.85; color: {INK}">CANICOLA</span></div>'
+        f'<span style="font-family: {XC}; font-weight: 900; font-size: 30px; line-height: 1; letter-spacing: 0.28em; color: {INK}">PIZZERIA</span>'
+        f'<span style="font-family: {DISP}; font-size: 60px; line-height: 1; color: {RED}">Canicola</span></div>'
         f'<div style="text-align: right">'
         f'<div style="font-family: {CD}; font-weight: 800; font-size: 18px; letter-spacing: 0.14em; color: {RED}">WE DELIVER, CALL</div>'
         f'<div style="font-family: {XC}; font-weight: 900; font-size: 48px; line-height: 0.9; color: {INK}">555-0822</div></div></div>'
@@ -170,7 +171,8 @@ def back():
     )
     foot = (f'<div style="position: absolute; left: {L}px; top: 996px; width: 420px; font-family: {BODY}; font-size: 16px; color: {SOFT}">'
             f'Prices subject to change. Form 1100, 6/72.</div>')
-    return page('back', head + cols + deliver + foot + ticket())
+    pie = f'<img src="assets/engraved-pie.png" alt="" style="position: absolute; left: 532px; top: 560px; width: 236px; height: 236px; display: block">'
+    return page('back', head + cols + pie + deliver + foot + ticket())
 
 
 def wrap(body, title):
@@ -193,8 +195,8 @@ FILM = {
     'faces': ['front.html', 'back.html'], 'names': ['Front', 'Back'],
     'mm': [215.9, 279.4],
     'fonts': FONTS,
-    'fams': ['Sofia Sans Extra Condensed', 'Sofia Sans Condensed', 'Sofia Sans', 'Yellowtail', 'Gochi Hand'],
-    'phone': {'disp': "'Sofia Sans Extra Condensed',sans-serif", 'title': "'Yellowtail',cursive",
+    'fams': ['Shrikhand', 'Sofia Sans Extra Condensed', 'Sofia Sans Condensed', 'Sofia Sans', 'Yellowtail', 'Gochi Hand'],
+    'phone': {'disp': "'Shrikhand',serif", 'title': "'Shrikhand',serif",
               'name': "'Sofia Sans Condensed',sans-serif", 'body': "'Sofia Sans',sans-serif",
               'price': "'Sofia Sans Condensed',sans-serif", 'note': "'Sofia Sans',sans-serif"},
 }

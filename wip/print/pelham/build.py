@@ -6,10 +6,10 @@ import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
-INK, ORANGE, PAPER, MUTE = '#1d1b18', '#cf5a1f', '#f3ead6', '#4e463c'
+INK, ORANGE, PAPER, MUTE = '#16302a', '#c4361f', '#e7ece2', '#45554d'
 FONTS = ('family=Inter+Tight:wght@600;800;900'
          '&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400'
-         '&family=Shadows+Into+Light')
+         '&family=Shadows+Into+Light&family=Shrikhand')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=block">'
 SANS = "font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif"
 SERIF = "font-family: 'Source Serif 4', Georgia, serif"
@@ -58,8 +58,8 @@ def A(k, top=22):
 
 
 def bar(t, sub=None):
-    s = f'<span style="{SANS}; font-weight: 600; font-size: 18px; letter-spacing: 0.12em; color: #e9d9bd; margin-left: 14px; white-space: nowrap">{sub}</span>' if sub else ''
-    return (f'<div style="display: inline-block; background: {INK}; color: {PAPER}; padding: 6px 16px 7px; {SANS}; font-weight: 900; '
+    s = f'<span style="{SANS}; font-weight: 600; font-size: 18px; letter-spacing: 0.12em; color: #f2b13a; margin-left: 14px; white-space: nowrap">{sub}</span>' if sub else ''
+    return (f'<div style="display: inline-block; background: {INK}; color: {PAPER}; padding: 7px 26px 8px; border-radius: 30px; {SANS}; font-weight: 900; '
             f'font-size: 40px; line-height: 1; letter-spacing: 0.01em; text-transform: uppercase; white-space: nowrap">{t}{s}</div>')
 
 
@@ -69,9 +69,9 @@ def kicker(t, extra=''):
 
 def face(inner):
     livery = (f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 14px; background: {ORANGE}"></div>'
-              f'<div style="position: absolute; left: 0; top: 14px; width: {W}px; height: 7px; background: {INK}"></div>')
+              f'<div style="position: absolute; left: 0; top: 14px; width: {W}px; height: 7px; background: #f2b13a"></div>')
     fade = (f'<div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; '
-            'background: radial-gradient(ellipse 78% 72% at 50% 48%, rgba(246,238,218,0.10) 0%, rgba(246,238,218,0.14) 55%, rgba(196,160,104,0.30) 100%)"></div>')
+            'background: radial-gradient(ellipse 78% 72% at 50% 48%, rgba(240,244,236,0.10) 0%, rgba(240,244,236,0.12) 55%, rgba(120,140,120,0.26) 100%)"></div>')
     grain = (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; '
              f'height: {H}px; pointer-events: none; display: block; opacity: 0.85">')
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}">'
@@ -84,7 +84,8 @@ front = face(f'''
 <div style="position: absolute; left: {L}px; top: 54px; width: {CW}px">
   <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('Across from Transit Headquarters', 'white-space: nowrap; letter-spacing: 0.16em')}{kicker('6 A.M. to 9 P.M.', 'white-space: nowrap; letter-spacing: 0.16em; color: ' + MUTE)}</div>
   <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 8px">
-    <div style="{SANS}; font-weight: 900; font-size: 70px; line-height: 0.92; letter-spacing: -0.02em; text-transform: uppercase; white-space: nowrap">The Motorman<br><span style="color: {ORANGE}">Coffee Shop</span></div>
+    <div style="white-space: nowrap"><div style="font-family: 'Shrikhand', serif; font-size: 92px; line-height: 1.02; color: {ORANGE}; transform: rotate(-3deg); transform-origin: 0 50%">Motorman</div>
+      <div style="{SANS}; font-weight: 900; font-size: 44px; line-height: 1; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 4px">Coffee Shop</div></div>
 </div>
   <div style="height: 4px; background: {INK}; margin-top: 16px"></div>
   <div style="margin-top: 16px; border: 3px solid {ORANGE}; padding: 6px; background: #fbf5e8">
@@ -121,8 +122,9 @@ back = face(f'''
       {S('Mr Green\'s honey lemon whisky toddy', 14, note=True)}</div>
     <div style="position: relative">
       {kicker('We deliver, all floors')}
-      <div style="{SERIF}; font-size: 20px; line-height: 1.38; margin-top: 8px">Call KLondike 5-0123. Command Center orders up inside the hour.</div>
-      <img src="assets/guest-check.png" alt="A pencilled guest check for the Command Center lunch run, marked paid" style="position: absolute; left: 6px; top: 104px; width: 330px; height: 420px; display: block"></div></div>
+      <div style="margin-top: 10px; border: 3px solid {ORANGE}; padding: 4px; background: #f6f8f2"><img src="assets/still-board.jpg" alt="The Command Center board, 23rd and 28th Street" style="display: block; width: 318px; height: 140px"></div>
+      <div style="{SERIF}; font-size: 18px; line-height: 1.32; margin-top: 8px">Call KLondike 5-0123. Command Center orders up inside the hour.</div>
+      <img src="assets/guest-check.png" alt="A pencilled guest check for the Command Center lunch run, marked paid" style="position: absolute; left: 56px; top: 252px; width: 228px; height: 290px; display: block"></div></div>
 </div>
 <div style="position: absolute; left: {L}px; top: 978px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 10px; display: flex; justify-content: space-between; {SANS}; font-weight: 600; font-size: 15px; color: {MUTE}">
   <span>Prices subject to change. Minimum at tables, lunch hours, .75</span><span>Form 123, 1974</span></div>''')
@@ -133,8 +135,8 @@ for name, body in (('front', front), ('back', back)):
         f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Motorman Coffee Shop</title>{LINK}<style>body{{margin:0}}</style></head><body>{body}</body></html>')
 
 json.dump({"fmt": "shift", "fn": "fmtShift", "faces": ["front.html", "back.html"], "names": ["Front", "Back"],
-           "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Inter Tight", "Source Serif 4", "Shadows Into Light"],
-           "phone": {"disp": "'Inter Tight',sans-serif", "title": "'Inter Tight',sans-serif", "name": "'Inter Tight',sans-serif",
+           "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Shrikhand", "Inter Tight", "Source Serif 4", "Shadows Into Light"],
+           "phone": {"disp": "'Shrikhand',serif", "title": "'Inter Tight',sans-serif", "name": "'Inter Tight',sans-serif",
                      "body": "'Source Serif 4',serif", "price": "'Inter Tight',sans-serif", "note": "'Source Serif 4',serif"}},
           open(os.path.join(D, 'film.json'), 'w'), indent=1)
 json.dump({"The Taking of Pelham One Two Three (1974)": {k: {"n": v[0], "d": v[1], "note": v[3]} for k, v in SPEC.items()}},

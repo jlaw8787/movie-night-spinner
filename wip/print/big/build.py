@@ -14,7 +14,7 @@ FILM = 'Big (1988)'
 
 FONTS = ('family=Limelight&family=Josefin+Sans:wght@600;700'
          '&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,400'
-         '&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Allura')
+         '&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Allura&family=Abril+Fatface')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
 LOGO = "'Limelight', serif"
 CAPS = "'Josefin Sans', sans-serif"
@@ -22,10 +22,12 @@ DISP = "'Playfair Display', serif"
 BODY = "'Libre Baskerville', serif"
 SIGN = "'Allura', cursive"
 
-PAPER = '#f5f0e4'
-INK = '#1c1816'
+PAPER = '#dde8f0'
+INK = '#1b2a4a'
 RED = '#c4202c'
-SOFT = '#5a4f47'
+SOFT = '#465673'
+CARD = '#fbfaf5'
+HEAD = "'Abril Fatface', serif"
 
 # (spec key or None if added, printed name, printed description, note for the phone view)
 TRAYS = [
@@ -58,18 +60,18 @@ def kicker(t, col=RED, align='left'):
 
 
 def bar(t):
-    return f'<div style="display: inline-block; background: {INK}; padding: 6px 16px 4px; font-family: {DISP}; font-weight: 900; font-size: 40px; line-height: 46px; color: {PAPER}">{t}</div>'
+    return f'<div style="display: inline-block; background: {RED}; border-bottom: 4px solid {INK}; padding: 5px 18px 3px; font-family: {HEAD}; font-weight: 400; font-size: 40px; line-height: 48px; letter-spacing: 0.02em; color: {CARD}">{t}</div>'
 
 
 def item(name, desc, first=False):
-    return f'''<div style="margin-top: {0 if first else 18}px">
+    return f'''<div style="margin-top: {0 if first else 14}px">
       <div style="font-family: {DISP}; font-weight: 800; font-size: 27px; line-height: 1.12; color: {INK}">{name}</div>
       <div style="margin-top: 5px; font-family: {BODY}; font-size: 20px; line-height: 1.4; color: {INK}; text-wrap: pretty">{desc}</div></div>'''
 
 
 def group(title, items, top=0):
-    rule = f'<div style="height: 1px; background: {INK}; opacity: 0.55; margin: 0 0 22px"></div>' if top else ''
-    return (f'<div style="margin-top: {top}px">{rule}{bar(title)}<div style="margin-top: 16px">'
+    rule = f'<div style="height: 1px; background: {INK}; opacity: 0.55; margin: 0 0 18px"></div>' if top else ''
+    return (f'<div style="margin-top: {top}px">{rule}{bar(title)}<div style="margin-top: 14px">'
             + ''.join(item(n, d, i == 0) for i, (_, n, d, _) in enumerate(items)) + '</div></div>')
 
 
@@ -118,7 +120,7 @@ evening = f'''{kicker('THIS EVENING')}''' + ''.join(f'''<div style="margin-top: 
 front_inner = f'''
   {ab(60, 58, W - 120, f'<div style="text-align: center; font-family: {LOGO}; font-size: 64px; line-height: 70px; color: {RED}">MacMillan</div>')}
   {ab(60, 130, W - 120, kicker('TOY COMPANY &nbsp;&#9670;&nbsp; NEW YORK, N.Y.', INK, 'center'))}
-  {ab(60, 182, W - 120, f'<div style="text-align: center; font-family: {DISP}; font-weight: 900; font-size: 62px; line-height: 66px; letter-spacing: -0.005em; color: {INK}">THE COMPANY PARTY</div>')}
+  {ab(60, 182, W - 120, f'<div style="text-align: center; font-family: {HEAD}; font-weight: 400; font-size: 62px; line-height: 66px; letter-spacing: -0.005em; color: {INK}">THE COMPANY PARTY</div>')}
   {ab(60, 254, W - 120, kicker('SUPPER, SWEETS AND THE SODA FOUNTAIN', RED, 'center'))}
   <div style="position: absolute; left: 64px; top: 298px; width: 688px; height: 316px; border: 2px solid {RED}; box-sizing: border-box; overflow: hidden">
     <img src="assets/cover-keys.png" alt="" style="position: absolute; left: -26px; top: -10px; width: 736px; height: 330px; display: block"></div>
@@ -138,21 +140,22 @@ zoltar = f'''<div style="position: absolute; left: 272px; top: 918px; width: 196
 L, C, G = 64, 330, 28
 back_inner = f'''
   {ab(L, 58, 688, kicker('COMPLIMENTS OF THE COMPANY'))}
-  {ab(L, 86, 688, f'<div style="font-family: {DISP}; font-weight: 900; font-size: 68px; line-height: 74px; color: {INK}">THE MENU</div>')}
+  {ab(L, 86, 688, f'<div style="font-family: {HEAD}; font-weight: 400; font-size: 70px; line-height: 74px; color: {INK}">THE MENU</div>')}
   {ab(L, 182, 688, '', f'height: 2px; background: {INK}')}
-  {ab(L, 206, C, group('TRAYS', TRAYS) + group('THE CART', CART, 24))}
-  {ab(L + C + G, 206, C, group('SWEETS', SWEETS) + group('FOUNTAIN', FOUNTAIN, 24))}
+  {ab(L, 206, C, group('TRAYS', TRAYS) + group('THE CART', CART, 20))}
+  {ab(L + C + G, 206, C, group('SWEETS', SWEETS) + group('FOUNTAIN', FOUNTAIN, 20))}
   {ab(L, 974, 400, f"""<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 21px; color: {INK}">Please, no toy pitches at the table.</div>
     <div style="font-family: {BODY}; font-size: 16px; line-height: 21px; color: {SOFT}">MacMillan Toy Company, New York, 1988.</div>""")}
 '''
-card = f'''<div style="position: absolute; left: 506px; top: 44px; width: 240px; height: 128px; transform: rotate(3deg);
-    background: #fbf9f3; box-shadow: 1px 2px 5px rgba(50,40,30,0.26); box-sizing: border-box; padding: 12px 18px">
-    <div style="font-family: {LOGO}; font-size: 20px; line-height: 22px; color: {RED}">MacMillan</div>
-    <div style="margin-top: 14px; font-family: {DISP}; font-weight: 800; font-size: 22px; line-height: 24px; color: {INK}">Josh Baskin</div>
-    <div style="margin-top: 4px; font-family: {CAPS}; font-weight: 600; font-size: 14px; line-height: 17px; color: {INK}">Vice President,<br>Product Development</div></div>'''
-
+card = f'''<div style="position: absolute; left: 520px; top: 926px; width: 232px; height: 96px; transform: rotate(-3deg);
+    background: {CARD}; box-shadow: 1px 2px 5px rgba(27,42,74,0.28); box-sizing: border-box; padding: 10px 16px">
+    <div style="font-family: {LOGO}; font-size: 17px; line-height: 20px; color: {RED}">MacMillan</div>
+    <div style="margin-top: 6px; font-family: {DISP}; font-weight: 800; font-size: 20px; line-height: 23px; color: {INK}">Josh Baskin</div>
+    <div style="margin-top: 2px; font-family: {CAPS}; font-weight: 600; font-size: 14px; line-height: 17px; color: {INK}">Vice President, Product Dev.</div></div>'''
+cookie_art = f'''<img src="assets/cookie.png" alt="" style="position: absolute; left: 588px; top: 34px; width: 150px; height: 150px; display: block">
+  <div style="position: absolute; left: 440px; top: 150px; width: 146px; text-align: right; font-family: {BODY}; font-style: italic; font-size: 14px; line-height: 17px; color: {SOFT}">The giant cookie, cut at 9:30</div>'''
 FRONT = face('front', front_inner, zoltar)
-BACK = face('back', back_inner, card)
+BACK = face('back', back_inner + cookie_art, card)
 
 for name, body, title in (('front', FRONT, 'MacMillan party menu, front'), ('back', BACK, 'MacMillan party menu, back')):
     open(os.path.join(D, name + '.body.html'), 'w').write(body)
@@ -163,8 +166,8 @@ for name, body, title in (('front', FRONT, 'MacMillan party menu, front'), ('bac
 json.dump({
     'fmt': 'toystore', 'fn': 'fmtToyStore', 'faces': ['front.html', 'back.html'], 'names': ['Front', 'Back'],
     'mm': [215.9, 279.4], 'fonts': FONTS,
-    'fams': ['Limelight', 'Josefin Sans', 'Playfair Display', 'Libre Baskerville', 'Allura'],
-    'phone': {'disp': "'Limelight',serif", 'title': "'Playfair Display',serif", 'name': "'Playfair Display',serif",
+    'fams': ['Abril Fatface', 'Limelight', 'Josefin Sans', 'Playfair Display', 'Libre Baskerville', 'Allura'],
+    'phone': {'disp': "'Limelight',serif", 'title': "'Abril Fatface',serif", 'name': "'Playfair Display',serif",
               'body': "'Libre Baskerville',serif", 'price': "'Playfair Display',serif", 'note': "'Libre Baskerville',serif"},
 }, open(os.path.join(D, 'film.json'), 'w'), indent=1, ensure_ascii=False)
 

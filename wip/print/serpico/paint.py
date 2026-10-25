@@ -10,7 +10,7 @@ random.seed(1967)
 
 W, H, K = 704, 300, 4
 CW, CH = W * K, H * K
-BLACK = (31, 28, 27); RED = (184, 38, 43)
+BLACK = (29, 43, 34); RED = (184, 38, 43)
 
 ink = Image.new('L', (CW, CH), 0)      # black plate coverage
 red = Image.new('L', (CW, CH), 0)      # red plate coverage
@@ -191,24 +191,35 @@ for x1, y1, x2, y2 in (LW, RW):
     hatch(ink, region(box=(x1, y1, x2, y1 + 12)), 0, 1.3, 0.5)              # awning shadow on the glass
     line(di, x1, y2 - 22, x2, y2 - 22, 0.8)                                 # counter line inside
     hatch(ink, region(box=(x1, y2 - 22, x2, y2)), 90, 1.6, 0.42)
-    # rail and hanging salamis
+    # rail and hanging salamis: tapered, string-tied, red with fat flecks, shaded on one side
     line(di, x1 + 4, y1 + 5, x2 - 4, y1 + 5, 1.0)
-    x = x1 + 10
+    x = x1 + 12
     k = 0
-    while x < x2 - 10:
-        ln = 26 + (k * 7) % 13; wd = 6.4 + (k % 3) * 0.9
-        sx = x + random.uniform(-1, 1)
-        line(di, sx, y1 + 5, sx, y1 + 9, 0.5)
-        sal = Image.new('L', (CW, CH), 0); sd = ImageDraw.Draw(sal)
-        sd.rounded_rectangle([P(sx - wd / 2, y1 + 9), P(sx + wd / 2, y1 + 9 + ln)], radius=int(wd / 2 * K), fill=255)
-        clear(ink, sal.filter(ImageFilter.MaxFilter(5)))
+    while x < x2 - 12:
+        ln = 27 + (k * 7) % 12; wd = 7.0 + (k % 3) * 1.1
+        sx = x + random.uniform(-0.8, 0.8); top = y1 + 10
+        tilt = random.uniform(-0.05, 0.05)
+        line(di, sx - 1.6, y1 + 5, sx, top, 0.45, 0); line(di, sx + 1.6, y1 + 5, sx, top, 0.45, 0)
+        pts_l, pts_r = [], []
+        for i in range(25):
+            t = i / 24
+            hw = wd / 2 * (math.sin(math.pi * min(1, 0.12 + t * 0.9)) ** 0.45) * (0.78 + 0.22 * t)
+            cx = sx + tilt * ln * t
+            pts_l.append((cx - hw, top + ln * t)); pts_r.append((cx + hw, top + ln * t))
+        poly = pts_l + pts_r[::-1]
+        sal = Image.new('L', (CW, CH), 0); ImageDraw.Draw(sal).polygon([P(px, py) for px, py in poly], fill=255)
+        clear(ink, sal.filter(ImageFilter.MaxFilter(7)))
+        red.paste(ImageChops.lighter(red, ImageChops.multiply(sal, Image.new('L', (CW, CH), 215))), (0, 0))
         e = ImageChops.subtract(sal.filter(ImageFilter.MaxFilter(5)), sal)
         ink.paste(ImageChops.lighter(ink, e), (0, 0))
-        red.paste(ImageChops.lighter(red, ImageChops.multiply(sal, Image.new('L', (CW, CH), 120))), (0, 0))
-        hatch(ink, ImageChops.multiply(sal, region(box=(sx + wd * 0.08, y1, sx + wd, y2))), 90, 1.1, 0.5)
-        for tt in (0.3, 0.55, 0.8):                                         # string ties
-            line(di, sx - wd / 2, y1 + 9 + ln * tt, sx + wd / 2, y1 + 9 + ln * tt + 0.8, 0.45, 0)
-        x += 15 if (k % 4) != 3 else 22
+        hatch(ink, ImageChops.multiply(sal, region(box=(sx + wd * 0.12, y1, sx + wd, y2))), 75, 1.2, 0.45)
+        fd = ImageDraw.Draw(red)
+        for _ in range(int(ln * 0.6)):                                      # fat flecks
+            fx = sx + random.uniform(-wd * 0.3, wd * 0.2); fy = top + random.uniform(ln * 0.12, ln * 0.92)
+            r = random.uniform(0.35, 0.6)
+            fd.ellipse([P(fx - r, fy - r), P(fx + r, fy + r)], fill=0)
+        line(di, sx - wd * 0.45, top + 2.2, sx + wd * 0.45, top + 2.2, 0.6, 0)  # tie at the neck
+        x += 16 if (k % 4) != 3 else 23
         k += 1
 
 # window lettering: left, the name in red script with a paper keyline; right, reversed gothic
@@ -305,7 +316,108 @@ def wear(name, seed):
             mot.putpixel((x, y), rnd.randint(0, 22))
     mot = mot.resize((PW, PH), Image.BICUBIC).filter(ImageFilter.GaussianBlur(26))
     a = ImageChops.add(m, mot)
-    lay = Image.new('RGBA', (PW, PH), (120, 88, 40, 0)); lay.putalpha(a.point(lambda v: int(v * 0.55)))
+    lay = Image.new('RGBA', (PW, PH), (88, 96, 48, 0)); lay.putalpha(a.point(lambda v: int(v * 0.55)))
     lay.save(os.path.join(D, 'assets', f'wear-{name}.png'))
+
+# ---------------- spot art: same two plates, own canvases ----------------
+def canvas(w, h):
+    global W, H, CW, CH, ink, red, di, dr
+    W, H, CW, CH = w, h, w * K, h * K
+    ink = Image.new('L', (CW, CH), 0); red = Image.new('L', (CW, CH), 0)
+    di, dr = ImageDraw.Draw(ink), ImageDraw.Draw(red)
+
+def save(name):
+    o = Image.new('RGBA', (CW, CH), (0, 0, 0, 0))
+    o = Image.alpha_composite(o, plate(red, RED, 0.7, 0.5, 0.92))
+    o = Image.alpha_composite(o, plate(ink, BLACK, 0, 0, 0.94))
+    o.resize((W * 2, H * 2), Image.LANCZOS).save(os.path.join(D, 'assets', name))
+
+def shape(fn):
+    m = Image.new('L', (CW, CH), 0); fn(ImageDraw.Draw(m)); return m
+
+def outline(m, n=5):
+    ink.paste(ImageChops.lighter(ink, ImageChops.subtract(m.filter(ImageFilter.MaxFilter(n)), m)), (0, 0))
+
+def fill(target, m, v):
+    target.paste(ImageChops.lighter(target, ImageChops.multiply(m, Image.new('L', (CW, CH), v))), (0, 0))
+
+# pastrami on rye with a pickle, on a plate
+canvas(220, 92)
+plate_m = shape(lambda d: d.ellipse([P(8, 62), P(212, 90)], fill=255))
+outline(plate_m); line(di, 26, 76, 194, 76, 0.4, 0.2)
+hatch(ink, ImageChops.multiply(plate_m, region(box=(0, 80, 220, 92))), 0, 1.4, 0.4)
+def slice_(y, tilt):
+    m = shape(lambda d: d.rounded_rectangle([P(22, y), P(160, y + 12)], radius=5 * K, fill=255))
+    m = m.rotate(tilt, center=P(91, y + 6), resample=Image.BICUBIC)
+    clear(ink, m.filter(ImageFilter.MaxFilter(5))); clear(red, m.filter(ImageFilter.MaxFilter(5)))
+    outline(m, 7)
+    inner = shape(lambda d: d.rounded_rectangle([P(25, y + 2.6), P(157, y + 9.4)], radius=3 * K, fill=255)).rotate(tilt, center=P(91, y + 6), resample=Image.BICUBIC)
+    outline(inner, 3)
+    hatch(ink, ImageChops.subtract(m, inner), 90, 1.3, 0.4)
+    for _ in range(26):                                               # caraway
+        cx, cy = random.uniform(32, 150), y + random.uniform(4, 8)
+        di.ellipse([P(cx - 0.7, cy - 0.35), P(cx + 0.7, cy + 0.35)], fill=255)
+slice_(60, 0)
+# pastrami pile: wavy layers overhanging the bread
+for i, yy in enumerate((54, 47, 40, 33, 27)):
+    pts = [(14 + j * 4, yy + 3.2 * math.sin(j * 0.9 + i)) for j in range(38)]
+    m = shape(lambda d: d.polygon([P(px, py) for px, py in pts] + [P(px, py + 9) for px, py in pts[::-1]], fill=255))
+    clear(ink, m); fill(red, m, 225)
+    line(di, *pts[0], *pts[0], 0.1)
+    di.line([P(px, py) for px, py in pts], fill=255, width=int(0.9 * K))
+    for px, py in pts[::2]:                                           # peppered edge
+        if random.random() < 0.7: di.ellipse([P(px - 0.6, py - 0.6), P(px + 0.6, py + 0.6)], fill=255)
+hatch(ink, region(box=(128, 26, 170, 64)), 70, 1.6, 0.4)
+slice_(14, -2)
+# half-sour pickle
+pk = shape(lambda d: d.ellipse([P(166, 54), P(208, 72)], fill=255)).rotate(-12, center=P(187, 63), resample=Image.BICUBIC)
+clear(ink, pk.filter(ImageFilter.MaxFilter(5))); clear(red, pk.filter(ImageFilter.MaxFilter(5)))
+outline(pk, 5); hatch(ink, pk, 20, 1.5, 0.45); hatch(ink, ImageChops.multiply(pk, region(box=(166, 64, 210, 74))), -40, 1.4, 0.4)
+for _ in range(14):
+    cx, cy = random.uniform(172, 202), random.uniform(57, 69)
+    if pk.getpixel(P(cx, cy)): clear(ink, shape(lambda d: d.ellipse([P(cx - 1, cy - 1), P(cx + 1, cy + 1)], fill=255)))
+save('spot-sandwich.png')
+
+# the fountain: egg cream, a black and white, a cup of coffee
+canvas(330, 112)
+line(di, 4, 106, 326, 106, 1.0); hatch(ink, region(box=(4, 106, 326, 110)), 0, 1.0, 0.45)
+# egg cream glass, flared
+g = [(36, 18), (92, 18), (80, 104), (48, 104)]
+gm = shape(lambda d: d.polygon([P(*q) for q in g], fill=255)); outline(gm, 5)
+choc = ImageChops.multiply(gm, region(box=(0, 44, 330, 104)))
+hatch(ink, choc, 0, 1.0, 0.6); hatch(ink, choc, 90, 2.2, 0.4)
+line(di, 37.5, 44, 90.5, 44, 0.9)
+for _ in range(40):                                                     # foam head
+    cx, cy, r = random.uniform(40, 88), random.uniform(20, 42), random.uniform(0.8, 2.2)
+    di.ellipse([P(cx - r, cy - r), P(cx + r, cy + r)], outline=255, width=int(0.35 * K))
+foam = shape(lambda d: d.ellipse([P(34, 10), P(94, 26)], fill=255)); outline(foam, 5)
+for x in (50, 64, 78): line(di, x, 48, x - (x - 64) * 0.2, 102, 0.5, 0.05)  # fluting, over the chocolate
+clear(ink, shape(lambda d: d.polygon([P(83, 44), P(86, 44), P(79, 100), P(76, 100)], fill=255)))   # highlight
+straw = shape(lambda d: d.polygon([P(70, 22), P(74, 22), P(96, -2), P(92, -2)], fill=255))
+fill(red, straw, 235); outline(straw, 3)
+# black and white cookie, in perspective
+ck = shape(lambda d: d.ellipse([P(122, 62), P(226, 96)], fill=255))
+edge = shape(lambda d: d.ellipse([P(122, 68), P(226, 102)], fill=255))
+outline(ImageChops.lighter(ck, edge), 5); hatch(ink, ImageChops.subtract(edge, ck), 80, 1.4, 0.45)
+outline(ck, 5)
+half = ImageChops.multiply(ck, region(poly=[(160, 50), (330, 50), (330, 110), (188, 110)]))
+hatch(ink, half, 45, 1.0, 0.62); hatch(ink, half, -45, 1.6, 0.45)
+line(di, 160, 62, 188, 96, 0.9, 0.3)
+# coffee cup on a saucer, steam
+sc = shape(lambda d: d.ellipse([P(244, 92), P(322, 106)], fill=255)); clear(ink, sc); outline(sc, 5)
+cup = shape(lambda d: (d.rectangle([P(256, 62), P(306, 84)], fill=255), d.ellipse([P(256, 76), P(306, 98)], fill=255)))
+clear(ink, cup.filter(ImageFilter.MaxFilter(5))); outline(cup, 5)
+hatch(ink, ImageChops.multiply(cup, region(box=(286, 60, 310, 100))), 90, 1.2, 0.45)
+rim = shape(lambda d: d.ellipse([P(256, 56), P(306, 68)], fill=255)); clear(ink, rim); outline(rim, 5)
+hatch(ink, shape(lambda d: d.ellipse([P(259, 58), P(303, 66)], fill=255)), 0, 0.9, 0.6)
+hd = shape(lambda d: d.ellipse([P(300, 68), P(320, 86)], fill=255)); hdi = shape(lambda d: d.ellipse([P(304, 72), P(315, 82)], fill=255))
+ring = ImageChops.subtract(hd, hdi); ring = ImageChops.subtract(ring, cup)
+fill(ink, ring, 0); outline(ring, 3)
+band = ImageChops.multiply(cup, region(box=(0, 70, 330, 73))); fill(red, band, 230)
+for sx0 in (272, 284, 296):
+    pts = [(sx0 + 3 * math.sin(t * 0.5), 50 - t * 1.6) for t in range(0, 22)]
+    di.line([P(px, py) for px, py in pts], fill=255, width=int(0.6 * K), joint='curve')
+save('spot-fountain.png')
+
 wear('front', 3); wear('back', 7)
 print('painted')

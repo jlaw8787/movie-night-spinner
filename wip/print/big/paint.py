@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageChops
 D = os.path.dirname(os.path.abspath(__file__))
 A = os.path.join(D, 'assets')
 S = 3
-BLACK = (28, 24, 22)
+BLACK = (27, 42, 74)        # navy plate
 RED = (196, 32, 44)
 W, H = 816, 1056
 
@@ -250,9 +250,79 @@ def wear(name, seed):
     out.save(os.path.join(A, f'wear-{name}.png'))
 
 
+# ------------------------------------------------------------ the giant cookie, engraved spot art for the back
+def cookie():
+    w = h = 300 * S
+    rnd = random.Random(21)
+    cx = cy = w / 2
+    R = w * 0.46
+    pts = []
+    for k in range(180):
+        a = 2 * math.pi * k / 180
+        rr = R * (1 + 0.018 * math.sin(a * 7) + 0.012 * math.sin(a * 13 + 1))
+        pts.append((cx + rr * math.cos(a), cy + rr * math.sin(a)))
+    body = plate(w, h)
+    ImageDraw.Draw(body).polygon(pts, fill=255)
+    tan = plate(w, h)
+    tan.paste(body)
+    blk = plate(w, h)
+    db = ImageDraw.Draw(blk)
+    db.line(pts + [pts[0]], fill=255, width=int(1.6 * S))
+    # stipple: denser toward the rim and lower right, like an engraved shaded disc
+    for _ in range(9000):
+        a = rnd.random() * 2 * math.pi
+        rr = R * math.sqrt(rnd.random())
+        x, y = cx + rr * math.cos(a), cy + rr * math.sin(a)
+        p = 0.08 + 0.75 * (rr / R) ** 3 + 0.25 * max(0, ((x - cx) + (y - cy)) / (2 * R))
+        if rnd.random() < p:
+            r0 = rnd.uniform(0.5, 1.1) * S
+            db.ellipse([x - r0, y - r0, x + r0, y + r0], fill=255)
+    # chocolate chips, kept off the icing band
+    band0, band1 = cy - R * 0.20, cy + R * 0.20
+    for _ in range(26):
+        for _t in range(40):
+            a = rnd.random() * 2 * math.pi
+            rr = R * 0.82 * math.sqrt(rnd.random())
+            x, y = cx + rr * math.cos(a), cy + rr * math.sin(a)
+            if not (band0 - 22 * S < y < band1 + 22 * S):
+                break
+        s0 = rnd.uniform(8, 13) * S
+        poly = [(x + s0 * (0.7 + 0.4 * rnd.random()) * math.cos(t), y + s0 * (0.7 + 0.4 * rnd.random()) * math.sin(t))
+                for t in [i * 2 * math.pi / 7 for i in range(7)]]
+        db.polygon(poly, fill=255)
+        db.line([(x - s0 * 0.35, y - s0 * 0.25), (x + s0 * 0.05, y - s0 * 0.45)], fill=0, width=max(1, int(0.8 * S)))
+    # piped icing keyboard across the middle: knock out to paper, then draw keys
+    icing = plate(w, h)
+    x0, x1 = cx - R * 0.86, cx + R * 0.86
+    ImageDraw.Draw(icing).rounded_rectangle([x0, band0, x1, band1], radius=10 * S, fill=255)
+    icing = ImageChops.multiply(icing, body)
+    tan = ImageChops.subtract(tan, icing)
+    blk = ImageChops.subtract(blk, icing)
+    db = ImageDraw.Draw(blk)
+    db.rounded_rectangle([x0, band0, x1, band1], radius=10 * S, outline=255, width=int(1.4 * S))
+    n = 12
+    kw = (x1 - x0) / n
+    for i in range(1, n):
+        db.line([(x0 + i * kw, band0), (x0 + i * kw, band1)], fill=255, width=int(1.1 * S))
+    for i in range(1, n):
+        if (i - 1) % 7 in (0, 1, 3, 4, 5):
+            db.rectangle([x0 + i * kw - kw * 0.28, band0, x0 + i * kw + kw * 0.28, band0 + (band1 - band0) * 0.6], fill=255)
+    tan = rough(tan, 0.18, 22)
+    blk = rough(blk, 0.06, 23)
+    white = icing.point(lambda v: int(v * 0.9))
+    art = ink([(tan, (201, 150, 86), (0, 0)), (white, (252, 250, 244), (0, 0)), (blk, BLACK, (0, 0))], w, h)
+    # soft plate shadow so it sits on the card
+    sh = Image.new('RGBA', (w, h), (27, 42, 74, 0))
+    sh.putalpha(body.point(lambda v: int(v * 0.22)))
+    sh = ImageChops.offset(sh, int(3 * S), int(4 * S)).filter(ImageFilter.GaussianBlur(4 * S))
+    out = Image.alpha_composite(sh, art)
+    out.resize((300, 300), Image.LANCZOS).save(os.path.join(A, 'cookie.png'))
+
+
 if __name__ == '__main__':
     os.makedirs(A, exist_ok=True)
     cover_keys()
+    cookie()
     wear('front', 11)
     wear('back', 12)
     print('painted')
