@@ -16,12 +16,12 @@ async def main():
         b = await p.chromium.launch(proxy={'server': os.environ['HTTPS_PROXY'], 'bypass': 'localhost,127.0.0.1'})
         pg = await (await b.new_context(viewport={'width': 816, 'height': 1056}, device_scale_factor=2)).new_page()
         bodies = []
-        for n in ('front', 'back'):
+        for n in ('menu',):
             await pg.goto('file://' + D + '/' + n + '.html'); await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(800)
             await pg.screenshot(path=os.path.join(D, n + '.png'))
             print(n, await pg.evaluate(CHECK))
             bodies.append(await pg.evaluate('document.body.innerHTML'))
-        head = open(os.path.join(D, 'front.html')).read().split('<head>')[1].split('</head>')[0]
+        head = open(os.path.join(D, 'menu.html')).read().split('<head>')[1].split('</head>')[0]
         html = ('<!doctype html><html><head>' + head + '<style>@page{size:8.5in 11in;margin:0}.pg{width:816px;height:1056px;overflow:hidden;break-after:page}</style></head><body>'
                 + ''.join('<div class="pg">' + x + '</div>' for x in bodies) + '</body></html>')
         open(os.path.join(D, 'trim.html'), 'w').write(html)

@@ -29,10 +29,10 @@ SLIP = '#f6f2e6'
 # (spec key or None if added, printed name, price, printed description, note for the phone view)
 BEGIN = [
     ('Pemrose boardroom canapés', 'Salmon blini', '19.87',
-     'Smoked salmon, crème fraîche and dill on warm buckwheat pancakes.',
+     'Smoked salmon and crème fraîche on warm buckwheat, dill.',
      'Boardroom trays, order a day ahead.'),
     ('Kansas corn fritters', 'Kansas corn fritters', '3.25',
-     'Kernels and scallions in egg batter, spoon-fried. Sour cream to dip.',
+     'Kernels and scallions in egg batter, fried crisp. Sour cream.',
      'A taste of home, straight off the farm.'),
     (None, 'Shrimp cocktail', '7.50', 'Five jumbo shrimp on cracked ice, horseradish red sauce.', None),
 ]
@@ -41,7 +41,7 @@ MAIN = [
      'Seared in an iron pan, basted with butter, garlic and thyme.',
      'Charged to your department.'),
     ('Kansas farm fried chicken', 'Fried chicken', '8.75',
-     'Buttermilk soaked, floured and fried crisp. Mashed potatoes, gravy.',
+     'Buttermilk soaked, fried crisp. Mashed potatoes, gravy.',
      'Like Mom makes back home.'),
     ('Mailroom sandwich bites', 'Mail run sandwich', '2.75',
      'Ham, cheddar and pickle on buttered white, crusts off.',
@@ -51,7 +51,7 @@ FINISH = [
     ('Kansas apple pie', 'Apple pie à la mode', '3.50',
      'Double crust, cinnamon apples, vanilla ice cream.',
      'To finish, with coffee by the pot.'),
-    ('Martini', 'Gin martini', '4.75', 'Bar from 5:30. Dry vermouth, stirred, frozen glass, twist.',
+    ('Martini', 'Gin martini', '4.75', 'Bar from 5:30. Stirred with dry vermouth, twist.',
      'Bar from 5:30 PM for those working late.'),
 ]
 ALL = BEGIN + MAIN + FINISH
@@ -110,7 +110,7 @@ note = f'''<div style="position: absolute; left: 40px; top: 776px; width: 328px;
     border: 1px solid {RED}; box-shadow: 1px 2px 5px rgba(40,30,25,0.25); padding: 14px 18px">
     {kicker('FROM THE PRESIDENT', RED, 'left', 18, '0.2em')}
     <p style="margin: 8px 0 0; font-family: {BODY}; font-size: 20px; line-height: 26px; color: {INK}; text-wrap: pretty">Lean times call for a proper lunch. Charges go to your department. Elevators are not changing rooms.</p>
-    <div style="margin-top: 0; font-family: {SIGN}; font-size: 48px; line-height: 46px; color: #23305a">Howard Prescott</div>
+    <div style="margin-top: 6px; font-family: {SIGN}; font-size: 48px; line-height: 46px; color: #23305a">Howard Prescott</div>
     <div style="font-family: {BODY}; font-size: 16px; line-height: 20px; color: {SOFT}">President and Chief Executive Officer</div></div>'''
 
 

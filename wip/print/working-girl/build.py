@@ -83,7 +83,7 @@ def outside():
     o.append(f'<div style="position: absolute; left: {M}px; top: 690px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.45"></div>')
     o.append(box(M, 702, CW, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {MUTE}">'
                  'Whitehall St., N.Y. 10004. (212) 555-1988.<br>Prices subject to change. Form PM-88. Printed in U.S.A.</div>'))
-    o.append(reserved(M + CW - 170, 548))
+    o.append(reserved(M + CW - 170, 506))
     # cover: wordmark over the painted harbor
     o.append(f'<img src="assets/ferry-cover.png" alt="Painting of an orange ferry crossing the bay toward the downtown towers on a hazy morning" '
              f'style="position: absolute; left: {P + 1}px; top: 250px; width: {W - P - 1}px; height: 544px; display: block">')

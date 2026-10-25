@@ -69,9 +69,9 @@ def kicker(t, color=GREEN, extra=''):
 # ---------- map overlays (css px inside the 572x896 map window) ----------
 MX, MY, MW, MH = 386, 32, 572, 896
 VS = {'Greene': 34, 'Mercer': 148, 'Broadway': 268, 'Crosby': 392, 'Lafayette': 510}
-HS = {'Houston St.': 150, 'Prince St.': 322, 'Spring St.': 490, 'Broome St.': 656, 'Grand St.': 822}
+HS = {'Houston St.': 150, 'Prince St.': 322, 'Spring St.': 490, 'Broome St.': 656}
 TAG = f"position: absolute; {SANS}; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: {INK}; background: rgba(10,30,34,0.86); padding: 2px 7px; white-space: nowrap"
-ew_x = {'Houston St.': 330, 'Prince St.': 190, 'Spring St.': 190, 'Broome St.': 420, 'Grand St.': 420}
+ew_x = {'Houston St.': 362, 'Prince St.': 190, 'Spring St.': 190, 'Broome St.': 420, 'Grand St.': 284}
 labels = ''.join(f'<div style="{TAG}; left: {ew_x[n]}px; top: {y - 11}px">{n}</div>' for n, y in HS.items())
 labels += ''.join(f'<div style="{TAG}; left: {x}px; top: 238px; transform: translateX(-50%)">{n}</div>' for n, x in VS.items())
 
@@ -86,17 +86,17 @@ mapbox = f'''
 <div style="position: absolute; left: {MX}px; top: {MY}px; width: {MW}px; height: {MH}px; overflow: hidden">
   <img src="assets/soho-map.png" alt="Painted night map of SoHo, Houston to Grand, Greene to Lafayette, with manholes and the tunnels underneath" style="position: absolute; left: 0; top: 0; width: {MW}px; height: {MH}px; display: block">
   {labels}
-  <div style="position: absolute; left: 14px; top: 14px; width: 300px; background: rgba(10,30,34,0.9); border-left: 6px solid {ORANGE}; padding: 12px 16px 13px">
+  <div style="position: absolute; left: 14px; top: 14px; width: 290px; background: rgba(10,30,34,0.9); border-left: 6px solid {ORANGE}; padding: 12px 16px 13px">
     {kicker('How to find us', GREEN, 'font-size: 16px')}
-    <div style="{DISP}; font-size: 40px; line-height: 0.95; color: {INK}; margin-top: 4px">SoHo, above and below</div>
+    <div style="{DISP}; font-size: 36px; line-height: 0.95; color: {INK}; margin-top: 4px">SoHo, above and below</div>
     <div style="{SERIF}; font-size: 16px; line-height: 1.3; color: #d9d6c6; margin-top: 6px">Every block from Houston to Grand, and what runs under the street.</div></div>
   <div style="position: absolute; left: 400px; top: 500px; display: flex; align-items: center">
     <div style="width: 26px; height: 3px; background: {ORANGE}; margin-left: -24px"></div>
     <div style="background: {ORANGE}; color: #1b0f08; {SANS}; font-weight: 800; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 9px; line-height: 1.15">We are here<br><span style="font-weight: 600; letter-spacing: 0.04em">Open all night</span></div></div>
   <div style="position: absolute; left: 14px; top: 690px; width: 262px; background: {CARD}; padding: 6px 6px 7px; transform: rotate(-1.5deg)">
     <img src="assets/still-corner.jpg" alt="Spring and Crosby at night, the phone booth and the manhole out front" style="display: block; width: 250px; height: 149px">
-    <div style="{SANS}; font-weight: 600; font-size: 14px; line-height: 1.25; color: #2b2a26; margin-top: 5px">Our corner after the rain. Photo by G. Cooper.</div></div>
-  <div style="position: absolute; right: 14px; bottom: 14px; width: 204px; background: rgba(10,30,34,0.9); padding: 9px 14px 11px">
+    <div style="{SANS}; font-weight: 600; font-size: 14px; line-height: 1.25; color: #2b2a26; margin-top: 5px">After the rain. Photo by G. Cooper.</div></div>
+  <div style="position: absolute; right: 14px; bottom: 14px; width: 180px; background: rgba(10,30,34,0.9); padding: 9px 14px 11px">
     {kicker('Key', MUTE, 'font-size: 14px')}
     {legend_row(sw_us, 'Spring &amp; Crosby')}{legend_row(sw_mh, 'Manhole cover')}{legend_row(sw_sw, 'Sewer main')}{legend_row(sw_tn, 'Old tunnel, keep out')}</div>
 </div>'''
@@ -104,20 +104,20 @@ mapbox = f'''
 CHUD = ''.join(f'<span style="color: {ORANGE}">{w[0]}</span>{w[1:]} ' for w in ('Clean.', 'Hot.', 'Unbeatable.', 'Delicious.')).strip()
 
 left = f'''
-<div style="position: absolute; left: 36px; top: 34px; width: 326px">
-  {kicker('Corner of Spring &amp; Crosby', ORANGE, 'font-size: 16px; letter-spacing: 0.14em')}
-  <div style="{DISP}; font-size: 66px; line-height: 0.9; margin-top: 6px; white-space: nowrap">Spring <span style="color: {ORANGE}">&amp;</span> Crosby</div>
-  <div style="{DISP}; font-size: 30px; line-height: 1; letter-spacing: 0.14em; color: {GREEN}; margin-top: 4px">Coffee Shop, open all night</div>
-  <div style="{SANS}; font-weight: 700; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 10px; color: {INK}">{CHUD}</div>
-  <div style="margin-top: 20px">{head('Off the Counter', 'ALL HOURS')}</div>
+<div style="position: absolute; left: 42px; top: 40px; width: 318px">
+  {kicker('SoHo, open all night', ORANGE, 'font-size: 16px; letter-spacing: 0.14em')}
+  <div style="{DISP}; font-size: 54px; line-height: 0.95; margin-top: 6px; white-space: nowrap">Spring <span style="color: {ORANGE}">&amp;</span> Crosby</div>
+  <div style="{DISP}; font-size: 30px; line-height: 1; letter-spacing: 0.14em; color: {GREEN}; margin-top: 4px">Coffee Shop</div>
+  <div style="{SANS}; font-weight: 700; font-size: 15px; letter-spacing: 0.03em; white-space: nowrap; text-transform: uppercase; margin-top: 10px; color: {INK}">{CHUD}</div>
+  <div style="margin-top: 20px">{head('Off the Counter')}</div>
   {S('Soup kitchen cheddar and onion rolls', 10)}{S('Manhole cover mini pizzas')}
   <div style="margin-top: 20px">{head('Hot Plates')}</div>
   {S("The Reverend's soup kitchen stew", 10)}{A('burger')}{A('omelette')}
 </div>'''
 
 right = f'''
-<div style="position: absolute; left: 982px; top: 34px; width: 326px">
-  {head('The Fountain')}
+<div style="position: absolute; left: 980px; top: 40px; width: 322px">
+  <div style="padding-top: 6px">{head('The Fountain')}</div>
   {S('Greenwich Village cider doughnuts', 10)}{A('pudding')}{S('Glowing green cordial', 16, note=True)}{A('coffee')}
   <div style="margin-top: 22px; background: {CARD}; color: #22211d; padding: 12px 16px 10px; transform: rotate(1.2deg)">
     {kicker('A word from the precinct', '#b4470f', 'font-size: 14px')}
@@ -130,7 +130,7 @@ right = f'''
     <div style="{DISP}; font-size: 30px; line-height: 1; margin-top: 4px; color: {ORANGE}">One hot supper, on us</div>
     <div style="{SERIF}; font-size: 16px; line-height: 1.3; margin-top: 4px; color: #d9d6c6">Tear off and give it to anyone who needs a meal. Good at the counter any night.</div></div>
 </div>
-<div style="position: absolute; left: 982px; top: 884px; width: 326px; {SANS}; font-weight: 600; font-size: 14px; line-height: 1.35; color: {MUTE}">
+<div style="position: absolute; left: 980px; top: 862px; width: 322px; {SANS}; font-weight: 600; font-size: 14px; line-height: 1.35; color: {MUTE}">
   Prices subject to change. Minimum at tables after midnight, 1.25.<br>96 Crosby St. WOrth 6-0831. 1984</div>'''
 
 fade = (f'<div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; '

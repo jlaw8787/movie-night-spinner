@@ -2,18 +2,18 @@
  "fmt": "spenditall",
  "fn": "fmtSpendItAll",
  "faces": [
-  "front.html",
-  "back.html"
+  "outside.html",
+  "inside.html"
  ],
  "names": [
-  "Front",
-  "Back"
+  "Outside",
+  "Inside"
  ],
  "mm": [
-  215.9,
-  279.4
+  355.6,
+  254
  ],
- "fonts": "family=Bodoni+Moda:opsz,wght@6..96,700;6..96,900&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=Homemade+Apple",
+ "fonts": "family=Bodoni+Moda:ital,opsz,wght@0,6..96,700;0,6..96,900;1,6..96,700&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=Homemade+Apple",
  "fams": [
   "Bodoni Moda",
   "Libre Franklin",
