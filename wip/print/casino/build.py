@@ -2,7 +2,7 @@
 canary keno stock, Tangiers red and felt green inks, every dish has a keno spot number (two already marked
 by a keno writer's brush). Signature: the Tangiers sign on the Strip (TMDB) plus a 1972 DOCUMERICA photo
 of a Las Vegas casino sign (NARA, public domain). Props: a $25 Tangiers chip, a comp card signed by Ace.
-Big gags: ten blueberries in every muffin (counted), the eye in the sky, Ace's rules.
+Big gags: ten blueberries in every muffin (a real muffin photo, CC0, counted 1 to 10), the eye in the sky (type), Ace's rules.
 Writes assets and front.body.html, front.html."""
 import os, random, math
 from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageEnhance
@@ -54,43 +54,11 @@ def wear():
 wear()
 
 # ---------------- painted bits (PIL, 4x then down) ----------------
-def blueberry(seed, px=34):
-    rnd = random.Random(seed); s = px * 4
-    im = Image.new('RGBA', (s, s), (0, 0, 0, 0))
-    body = Image.new('L', (s, s), 0); bd = ImageDraw.Draw(body)
-    sq = rnd.uniform(0.92, 1.0)
-    bd.ellipse([s * 0.06, s * 0.06 + s * (1 - sq) / 2, s * 0.94, s * 0.94 - s * (1 - sq) / 2], fill=255)
-    col = Image.new('RGBA', (s, s))
-    cd = ImageDraw.Draw(col)
-    for i in range(60, 0, -1):          # radial shading, light from upper left
-        t = i / 60
-        c = (int(28 + 70 * (1 - t) ** 2), int(36 + 64 * (1 - t) ** 2), int(82 + 90 * (1 - t) ** 2), 255)
-        cx, cy = s * 0.40, s * 0.38
-        rr = s * 0.62 * t
-        cd.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], fill=c)
-    bloom = Image.new('L', (s, s), 0); bl = ImageDraw.Draw(bloom)
-    for _ in range(260):
-        x, y = rnd.uniform(0, s), rnd.uniform(0, s); r = rnd.uniform(1, 3)
-        bl.ellipse([x - r, y - r, x + r, y + r], fill=rnd.randint(30, 80))
-    bloom = bloom.filter(ImageFilter.GaussianBlur(2))
-    col = Image.composite(Image.new('RGBA', (s, s), (150, 160, 200, 255)), col, bloom)
-    cd = ImageDraw.Draw(col)
-    cx, cy = s * 0.5 + rnd.uniform(-4, 4), s * 0.30
-    for k in range(5):                   # the crown on top
-        a = k * 2 * math.pi / 5 + rnd.uniform(0, .5)
-        cd.polygon([(cx, cy), (cx + math.cos(a - .35) * s * .06, cy + math.sin(a - .35) * s * .045),
-                    (cx + math.cos(a) * s * .13, cy + math.sin(a) * s * .095),
-                    (cx + math.cos(a + .35) * s * .06, cy + math.sin(a + .35) * s * .045)], fill=(18, 20, 40, 255))
-    cd.ellipse([cx - s * .03, cy - s * .022, cx + s * .03, cy + s * .022], fill=(70, 50, 60, 255))
-    hl = Image.new('L', (s, s), 0); ImageDraw.Draw(hl).ellipse([s * .22, s * .48, s * .34, s * .62], fill=120)
-    col = Image.composite(Image.new('RGBA', (s, s), (220, 228, 255, 255)), col, hl.filter(ImageFilter.GaussianBlur(5)))
-    im.paste(col, (0, 0), body)
-    sh = Image.new('RGBA', (s, s), (0, 0, 0, 0)); ImageDraw.Draw(sh).ellipse([s * .14, s * .80, s * .9, s * .97], fill=(60, 40, 10, 70))
-    sh = sh.filter(ImageFilter.GaussianBlur(5)); sh.alpha_composite(im)
-    return sh.resize((px * 2, px * 2), Image.LANCZOS)
-
-for i in range(10):
-    blueberry(10 + i).save(A(f'berry-{i}.png'))
+# the muffin: a real blueberry muffin photo (palewire on Flickr, CC0), cropped to the berry-studded top
+MU_W, MU_H = 356, 92
+mu = Image.open(S('flickr-palewire-3711698510.jpg')).convert('RGB')
+mu = ImageEnhance.Contrast(ImageEnhance.Brightness(mu).enhance(1.06)).enhance(1.06)
+fit(mu, MU_W - 4, MU_H, (140, 120, 900, 380)).save(A('blueberry-muffin.jpg'), quality=90)
 
 def brush_x(name, seed, size=40):
     """A keno writer's brush mark, dark ink, slightly dry."""
@@ -106,43 +74,6 @@ def brush_x(name, seed, size=40):
     im = im.filter(ImageFilter.GaussianBlur(1.2))
     im.resize((size * 2, size * 2), Image.LANCZOS).save(A(name))
 brush_x('mark-a.png', 5); brush_x('mark-b.png', 9)
-
-def eye(px=104):
-    """Engraved eye in Tangiers red: hatched lids, ruled iris, solid pupil, rays."""
-    s = px * 4; im = Image.new('RGBA', (s, s), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
-    redc = (179, 34, 27, 255); cx, cy = s / 2, s / 2
-    for k in range(24):                  # rays
-        a = k * 2 * math.pi / 24
-        r0, r1 = s * .40, s * (.47 if k % 2 else .495)
-        d.line([(cx + math.cos(a) * r0, cy + math.sin(a) * r0), (cx + math.cos(a) * r1, cy + math.sin(a) * r1)], fill=redc, width=7)
-    mask = Image.new('L', (s, s), 0); md = ImageDraw.Draw(mask)
-    ew, eh = s * .70, s * .40
-    pts = []
-    for k in range(61):
-        t = k / 60; x = cx - ew / 2 + ew * t; y = cy - eh / 2 * math.sin(math.pi * t); pts.append((x, y))
-    for k in range(61):
-        t = 1 - k / 60; x = cx - ew / 2 + ew * t; y = cy + eh / 2 * math.sin(math.pi * t); pts.append((x, y))
-    md.polygon(pts, fill=255)
-    hatch = Image.new('RGBA', (s, s), (0, 0, 0, 0)); hd = ImageDraw.Draw(hatch)
-    for y in range(0, s, 9):
-        hd.line([(0, y), (s, y)], fill=(179, 34, 27, 150), width=2)
-    white = Image.new('RGBA', (s, s), (0, 0, 0, 0)); white.paste(hatch, (0, 0), mask)
-    im.alpha_composite(white)
-    d = ImageDraw.Draw(im)
-    d.line(pts[:61], fill=redc, width=11); d.line(pts[61:], fill=redc, width=8)
-    ir = s * .155
-    d.ellipse([cx - ir, cy - ir, cx + ir, cy + ir], fill=(244, 233, 179, 255), outline=redc, width=9)
-    for k in range(48):
-        a = k * 2 * math.pi / 48
-        d.line([(cx + math.cos(a) * ir * .45, cy + math.sin(a) * ir * .45), (cx + math.cos(a) * ir * .95, cy + math.sin(a) * ir * .95)], fill=redc, width=4)
-    pr = s * .07; d.ellipse([cx - pr, cy - pr, cx + pr, cy + pr], fill=(32, 26, 20, 255))
-    d.ellipse([cx - pr * .2 - 14, cy - pr * .55 - 14, cx - pr * .2 + 10, cy - pr * .55 + 10], fill=(244, 233, 179, 255))
-    for k in range(9):                   # lashes
-        t = .12 + k * .095; x = cx - ew / 2 + ew * t; y = cy - eh / 2 * math.sin(math.pi * t)
-        a = -math.pi / 2 + (t - .5) * 1.6
-        d.line([(x, y), (x + math.cos(a) * s * .05, y + math.sin(a) * s * .05)], fill=redc, width=8)
-    im.resize((px * 2, px * 2), Image.LANCZOS).save(A('eye.png'))
-eye()
 
 # ---------------- type pieces ----------------
 def at(x, y, w, extra=''):
@@ -231,22 +162,28 @@ c2 = (section('OYSTER BAR', 'MARK ANY 2')
       + item(7, 'Short stack', '.95', 'Whipped butter, warm syrup.'))
 o.append(f'<div style="{at(490, 26, 400)}">{c2}</div>')
 o.append(f'<div style="{at(490, 634, 400, f"height: 90px; box-sizing: border-box; border: 3px solid {RED}; outline: 1px solid {GOLD}; outline-offset: 3px; background: {CARD}")}">'
-         f'<img src="assets/eye.png" alt="An engraved eye with rays" style="position: absolute; left: 4px; top: -8px; width: 104px; height: 104px">'
+         f'<div style="position: absolute; left: 6px; top: 6px; width: 94px; height: 72px; box-sizing: border-box; background: {RED}; '
+         f'display: flex; flex-direction: column; justify-content: center; text-align: center">'
+         f'<div style="position: absolute; left: 3px; top: 3px; right: 3px; bottom: 3px; border: 1px solid {GOLDL}"></div>'
+         f'<div style="position: relative; font-family: {BODY}; font-weight: 800; font-size: 14px; line-height: 1.12; letter-spacing: 0.12em; color: {CARD}">THE EYE<br>IN THE</div>'
+         f'<div style="position: relative; font-family: {DISP}; font-size: 24px; line-height: 1.05; color: #ffd98a">SKY</div></div>'
          f'<div style="position: absolute; left: 112px; top: 10px; width: 276px">'
          f'<div style="font-family: {DISP}; font-size: 22px; line-height: 1.05; color: {RED}">WE SEE ALL.</div>'
          f'<div style="font-family: {BODY}; font-weight: 700; font-size: 18px; line-height: 1.25; color: {INK}; margin-top: 4px">The eye in the sky never blinks. Every table, every muffin.</div></div></div>')
 
 # column 3: the muffin, at the table, Ace's rules
-berries = ''.join(
-    f'<div style="width: 34px; text-align: center"><img src="assets/berry-{i}.png" alt="" aria-hidden="true" style="display: block; width: 34px; height: 34px">'
-    f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; line-height: 1.2; color: {GOLDL}">{i + 1}</div></div>' for i in range(10))
+berries = (f'<div style="position: relative; margin-top: 12px; border: 2px solid {GOLD}; line-height: 0">'
+           f'<img src="assets/blueberry-muffin.jpg" alt="A real blueberry muffin, close up, berries showing through the golden top" style="display: block; width: {MU_W - 4}px; height: {MU_H}px"></div>'
+           f'<div style="position: relative; display: flex; justify-content: space-between; margin-top: 4px; padding: 0 6px">'
+           + ''.join(f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; line-height: 1.2; color: {GOLDL}">{i + 1}</div>' for i in range(10))
+           + '</div>')
 muffin = (f'<div style="position: relative; box-sizing: border-box; background: {GREEN}; padding: 14px 14px 12px; box-shadow: 0 3px 8px rgba(30,10,0,0.35)">'
           f'<div style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px; border: 2px solid {GOLD}"></div>'
           f'<div style="position: relative; display: flex; align-items: center; gap: 14px">'
           f'<div style="font-family: {DISP}; font-size: 70px; line-height: 0.9; color: #ffd98a; {GLOW}">10</div>'
           f'<div><div style="font-family: {BODY}; font-weight: 800; font-size: 18px; letter-spacing: 0.2em; color: {GOLDL}; line-height: 1.2">ACE&rsquo;S STANDARD</div>'
           f'<div style="font-family: {DISP}; font-size: 21px; line-height: 1.15; color: {PAPER}; margin-top: 2px">BLUEBERRIES.<br>EVERY MUFFIN.</div></div></div>'
-          f'<div style="position: relative; display: flex; justify-content: space-between; margin-top: 12px">{berries}</div>'
+          f'{berries}'
           f'<div style="position: relative; display: flex; justify-content: space-between; align-items: baseline; margin-top: 12px; font-family: {BODY}; font-weight: 800; font-size: 26px; line-height: 1.12; color: {PAPER}; text-transform: uppercase">'
           f'<span>Blueberry muffin</span><span style="color: {GOLDL}">.50</span></div>'
           f'<div style="position: relative; font-family: {BODY}; font-size: 18px; line-height: 1.3; color: {PAPER}; margin-top: 3px">Buttermilk batter. Count them. We did.</div></div>')

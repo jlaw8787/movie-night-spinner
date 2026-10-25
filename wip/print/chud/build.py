@@ -1,7 +1,7 @@
 """Spring & Crosby Coffee Shop placemat, C.H.U.D. (1984).
 One landscape diner placemat (14 x 10 in, 1344x960) from the all-night SoHo coffee shop on the corner of
-Spring and Crosby. Signature piece: a painted night map of the SoHo blocks with the sewer mains, manholes
-and old tunnels showing through underneath (paint_map.py). Writes placemat.html, film.json, labels."""
+Spring and Crosby. Signature piece: plate 24 of Perris & Browne's 1884 Insurance Maps of the City of New York
+(Library of Congress), with the sewer mains, manholes and an old tunnel drawn over it as plain lines. Writes placemat.html, film.json, labels."""
 import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
@@ -68,12 +68,23 @@ def kicker(t, color=GREEN, extra=''):
 
 # ---------- map overlays (css px inside the 572x896 map window) ----------
 MX, MY, MW, MH = 386, 32, 572, 896
-VS = {'Greene': 34, 'Mercer': 148, 'Broadway': 268, 'Crosby': 392, 'Lafayette': 510}
-HS = {'Houston St.': 150, 'Prince St.': 322, 'Spring St.': 490, 'Broome St.': 656}
 TAG = f"position: absolute; {SANS}; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: {INK}; background: rgba(10,30,34,0.86); padding: 2px 7px; white-space: nowrap"
-ew_x = {'Houston St.': 362, 'Prince St.': 190, 'Spring St.': 190, 'Broome St.': 420, 'Grand St.': 284}
-labels = ''.join(f'<div style="{TAG}; left: {ew_x[n]}px; top: {y - 11}px">{n}</div>' for n, y in HS.items())
-labels += ''.join(f'<div style="{TAG}; left: {x}px; top: 238px; transform: translateX(-50%)">{n}</div>' for n, x in VS.items())
+# street tags placed on the 1884 Perris & Browne plate 24 (north up, Broadway at left)
+HS = {'Houston St.': (400, 14), 'Prince St.': (300, 279), 'Spring St.': (330, 510)}
+VS = {'Broadway': 52, 'Crosby': 145, 'Lafayette': 252, 'Mulberry': 407, 'Mott': 505}
+labels = ''.join(f'<div style="{TAG}; left: {x}px; top: {y}px">{n}</div>' for n, (x, y) in HS.items())
+labels += ''.join(f'<div style="{TAG}; left: {x}px; top: 630px; transform: translateX(-50%)">{n}</div>' for n, x in VS.items())
+# what runs underneath, as plain lines over the real map
+def sline(x0, y0, x1, y1):
+    return f'<line x1="{x0}" y1="{y0}" x2="{x1}" y2="{y1}" stroke="{GREEN}" stroke-width="3" stroke-dasharray="7 7" opacity="0.95"/>'
+mains = [(145, 0, 145, 896), (22, 0, 22, 896), (0, 312, 572, 266), (0, 560, 572, 501), (0, 791, 572, 754)]
+holes = [(145, 300), (145, 781), (22, 310), (22, 558), (22, 793), (250, 534), (232, 292), (400, 519), (385, 281), (490, 509)]
+under = (f'<svg width="{MW}" height="{MH}" viewBox="0 0 {MW} {MH}" style="position: absolute; left: 0; top: 0" aria-hidden="true">'
+         '<path d="M 600 360 L 470 420 L 330 650 L 330 910" fill="none" stroke="#1a3a24" stroke-width="7" opacity="0.8"/>'
+         '<path d="M 600 360 L 470 420 L 330 650 L 330 910" fill="none" stroke="#5f9a46" stroke-width="2.5" opacity="0.95"/>'
+         + ''.join(sline(*m) for m in mains)
+         + ''.join(f'<circle cx="{x}" cy="{y}" r="6" fill="#2c2e2e" stroke="{ORANGE}" stroke-width="3"/>' for x, y in holes)
+         + f'<rect x="137" y="537" width="17" height="13" fill="{ORANGE}" stroke="#7a2c08" stroke-width="1.5"/></svg>')
 
 legend_row = lambda sw, t: f'<div style="display: flex; align-items: center; gap: 10px; margin-top: 6px">{sw}<span style="{SANS}; font-weight: 600; font-size: 15px; color: {INK}">{t}</span></div>'
 sw_us = f'<div style="width: 22px; height: 14px; background: {ORANGE}; border: 1px solid #7a2c08"></div>'
@@ -84,13 +95,13 @@ sw_tn = f'<div style="width: 22px; height: 10px; background: #34602e; border-top
 mapbox = f'''
 <div style="position: absolute; left: {MX - 4}px; top: {MY - 4}px; width: {MW + 2}px; height: {MH + 2}px; border: 3px solid {ORANGE}"></div>
 <div style="position: absolute; left: {MX}px; top: {MY}px; width: {MW}px; height: {MH}px; overflow: hidden">
-  <img src="assets/soho-map.png" alt="Painted night map of SoHo, Houston to Grand, Greene to Lafayette, with manholes and the tunnels underneath" style="position: absolute; left: 0; top: 0; width: {MW}px; height: {MH}px; display: block">
-  {labels}
+  <img src="assets/soho-map.jpg" alt="1884 Perris and Browne fire insurance map of the blocks from Houston to Broome, Broadway to the Bowery, with the sewer mains, manholes and an old tunnel marked over it" style="position: absolute; left: 0; top: 0; width: {MW}px; height: {MH}px; display: block">
+  {under}{labels}
   <div style="position: absolute; left: 14px; top: 14px; width: 290px; background: rgba(10,30,34,0.9); border-left: 6px solid {ORANGE}; padding: 12px 16px 13px">
     {kicker('How to find us', GREEN, 'font-size: 16px')}
     <div style="{DISP}; font-size: 36px; line-height: 0.95; color: {INK}; margin-top: 4px">SoHo, above and below</div>
     <div style="{SERIF}; font-size: 16px; line-height: 1.3; color: #d9d6c6; margin-top: 6px">Every block from Houston to Grand, and what runs under the street.</div></div>
-  <div style="position: absolute; left: 400px; top: 500px; display: flex; align-items: center">
+  <div style="position: absolute; left: 172px; top: 528px; display: flex; align-items: center">
     <div style="width: 26px; height: 3px; background: {ORANGE}; margin-left: -24px"></div>
     <div style="background: {ORANGE}; color: #1b0f08; {SANS}; font-weight: 800; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 9px; line-height: 1.15">We are here<br><span style="font-weight: 600; letter-spacing: 0.04em">Open all night</span></div></div>
   <div style="position: absolute; left: 14px; top: 690px; width: 262px; background: {CARD}; padding: 6px 6px 7px; transform: rotate(-1.5deg)">
