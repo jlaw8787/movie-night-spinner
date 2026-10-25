@@ -35,3 +35,13 @@ escape-from-new-york: Black Ops One
 the-french-connection: Gilda Display
 midnight-cowboy: Fascinate
 taxi-driver: Bowlby One SC
+home-alone-2: Mountains of Christmas
+spider-man: Racing Sans One
+spider-man-2: Lilita One
+tmnt-2: Bangers
+ghostbusters-2: Rye
+road-to-perdition: Ultra
+the-departed: Alegreya SC
+things-to-do-in-denver: Kavoon
+saturday-night-fever: Audiowide
+raging-bull: Fjalla One
