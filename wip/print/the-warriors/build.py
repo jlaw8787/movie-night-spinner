@@ -32,11 +32,11 @@ def fit(im, w, h, box=None):
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
-HERO_W, HERO_H = 1008, 488
+HERO_W, HERO_H = 1008, 572
 beach = ImageEnhance.Brightness(Image.open(S('avUvhy42KuxO3bXfItr5uTf3p6T.jpg')).convert('RGB')).enhance(1.08)
-fit(beach, HERO_W, HERO_H, (0, 40, 3404, 40 + int(3404 * HERO_H / HERO_W))).save(A('still-beach-dawn.jpg'), quality=90)
+fit(beach, HERO_W, HERO_H).save(A('still-beach-dawn.jpg'), quality=90)
 lips = Image.open(S('yv5tfyzFQkNZEIqABafCiXYMqqT.jpg')).convert('RGB')
-fit(lips, 252, 96, (1050, 120, 3691, 1500)).save(A('still-dj.jpg'), quality=90)
+fit(lips, 252, 64, (1050, 120, 3691, 1500)).save(A('still-dj.jpg'), quality=90)
 bw = ImageEnhance.Brightness(Image.open(S('rK69Zde1MQPLmmGddgJWHMw26Kf.jpg')).convert('RGB')).enhance(1.04)
 fit(bw, 276, 156, (60, 0, 1240, 666)).save(A('still-boardwalk.jpg'), quality=90)
 Image.open(S('uMlZSH5ZsGaznzngJLNxEkCTK2g.png')).save(A('logo.png'))
@@ -78,7 +78,7 @@ def at(x, y, w, inner, extra=''):
 
 def page(inner, name):
     folds = ''.join(f'<div style="position: absolute; left: {fx}px; top: 0; width: 1px; height: {H}px; background: rgba(255,255,255,0.10)"></div>'
-                    f'<div style="position: absolute; left: {fx + 1}px; top: 0; width: 2px; height: {H}px; background: rgba(0,0,0,0.35)"></div>'
+                    f'<div style="position: absolute; left: {fx + 1}px; top: 0; width: 2px; height: {H}px; background: rgba(0,0,0,0.22)"></div>'
                     for fx in (PANEL, 2 * PANEL, 3 * PANEL))
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {BLACK}">'
             + inner + folds +
@@ -90,12 +90,12 @@ def page(inner, name):
 # ---------------- props ----------------
 def dj_card(x, y, ang):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 276px; background: {PAPER}; transform: rotate({ang}deg); '
-            f'box-shadow: 0 6px 16px rgba(0,0,0,0.7); box-sizing: border-box; padding: 0 0 12px">'
-            f'<div style="background: {MAROON}; padding: 7px 12px 5px">{kicker("Late night radio", PAPER, 15, " letter-spacing: 0.2em")}'
-            f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1; color: {PAPER}; margin-top: 2px">REQUEST LINE</div></div>'
+            f'box-shadow: 0 6px 16px rgba(0,0,0,0.7); box-sizing: border-box; padding: 0 0 6px">'
+            f'<div style="background: {MAROON}; padding: 6px 12px 4px">{kicker("Late night radio", PAPER, 14, " letter-spacing: 0.2em")}'
+            f'<div style="font-family: {DISP}; font-size: 28px; line-height: 1; color: {PAPER}; margin-top: 1px">REQUEST LINE</div></div>'
             f'<img src="assets/still-dj.jpg" alt="The radio DJ in close-up, red lipstick at the microphone, red light behind" '
-            f'style="display: block; width: 252px; height: 96px; margin: 8px 12px 0; border: 2px solid {BLACK}; box-sizing: border-box">'
-            f'<div style="padding: 8px 14px 0; font-family: {BODY}; font-size: 17px; line-height: 1.25; color: {BLACK}">'
+            f'style="display: block; width: 252px; height: 64px; margin: 8px 12px 0; border: 2px solid {BLACK}; box-sizing: border-box">'
+            f'<div style="padding: 6px 14px 0; font-family: {BODY}; font-size: 17px; line-height: 1.22; color: {BLACK}">'
             f'<b>Going out to:</b> the boys from Coney.<br>The word was out all night. Now the word is off.</div>'
             f'<div style="padding: 0 14px 0; font-family: {SCRIPT}; font-size: 18px; line-height: 1.3; color: {MAROON}">the DJ</div></div>')
 
@@ -145,28 +145,17 @@ def front():
                 f'{kicker("Coney Island, first light, 1979", DAWN, 17)}'
                 f'<div style="font-family: {DISP}; font-size: 40px; line-height: 1.05; color: {PAPER}; margin-top: 4px">HOME. WORTH THE WHOLE RIDE.</div>'))
 
-    top = 104 + HERO_H + 18
+    top = 104 + HERO_H + 16
     # panel 1: the request card
-    o.append(dj_card(44, top + 4, -2))
-    # panel 2: counter rules
-    rules = [('Bats checked at the door.', 'Uniforms and face paint welcome.'),
-             ('No roller skates past the counter.', ''),
-             ('No bottles clinking.', 'Nobody here is coming out to play.'),
-             ('Vests welcome. Orphans too.', ''),
-             ('Tag the wall outside, Rembrandt.', 'Not the counter.')]
-    rl = ''.join(f'<div style="border-top: 1px solid rgba(240,231,214,0.22); padding: 6px 0 5px">'
-                 f'<div style="font-family: {BODY}; font-weight: 700; font-size: 20px; line-height: 1.2; color: {PAPER}">{a}</div>'
-                 + (f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.2; color: {SOFT}">{b}</div>' if b else '') + '</div>'
-                 for a, b in rules)
-    o.append(at(370, top - 4, 270, f'{kicker("Truce in effect", DAWN, 17)}'
-                f'<div style="font-family: {DISP}; font-size: 44px; line-height: 1; color: {PAPER}; margin: 4px 0 8px">COUNTER RULES</div>{rl}'))
-    # panel 3: token and the vest patch coupon
+    o.append(dj_card(44, top, -1.5))
+    # panel 2: the token, big, with the fare
     o.append(f'<img src="assets/token.png" alt="A brass subway token, good for one fare" '
-             f'style="position: absolute; left: 700px; top: {top + 2}px; width: 112px; height: 112px; transform: rotate(-12deg)">')
-    o.append(at(820, top + 12, 160, f'{kicker("Fare home", DAWN, 16)}'
-                f'<div style="font-family: {DISP}; font-size: 40px; line-height: 1; color: {PAPER}; margin-top: 3px">50&cent;</div>'
-                f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.2; color: {SOFT}; margin-top: 2px">Gets you home.</div>'))
-    o.append(patch_coupon(714, top + 110, 2.5))
+             f'style="position: absolute; left: 368px; top: {top + 8}px; width: 150px; height: 150px; transform: rotate(-12deg)">')
+    o.append(at(528, top + 22, 116, f'{kicker("Fare home", DAWN, 15, " letter-spacing: 0.14em; white-space: nowrap")}'
+                f'<div style="font-family: {DISP}; font-size: 56px; line-height: 1; color: {PAPER}; margin-top: 4px">50&cent;</div>'
+                f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.2; color: {SOFT}; margin-top: 4px">One token. Gets you home.</div>'))
+    # panel 3: the vest patch coupon
+    o.append(patch_coupon(712, top + 4, 2.5))
 
     # panel 4: cover
     cx = 3 * PANEL
@@ -174,24 +163,23 @@ def front():
              f'background: linear-gradient(to bottom, #131313 0%, #1a1414 55%, #3a1c16 85%, #6b3020 100%)"></div>')
     o.append(at(cx + 40, 44, 256, kicker('On the boardwalk', DAWN, 16, ' text-align: center')))
     o.append(f'<img src="assets/logo.png" alt="The Warriors, film title in red brush lettering" '
-             f'style="position: absolute; left: {cx + 40}px; top: 76px; width: 256px; height: 119px">')
-    o.append(at(cx + 40, 212, 256, f'<div style="text-align: center; font-family: {DISP}; font-size: 66px; line-height: 0.9; color: {PAPER}">LAST STOP</div>'
+             f'style="position: absolute; left: {cx + 34}px; top: 74px; width: 268px; height: 125px">')
+    o.append(at(cx + 40, 214, 256, f'<div style="text-align: center; font-family: {DISP}; font-size: 66px; line-height: 0.9; color: {PAPER}; white-space: nowrap">LAST STOP</div>'
                 f'<div style="text-align: center; font-family: {DISP}; font-size: 34px; letter-spacing: 0.16em; line-height: 1; color: {DAWN}; margin-top: 6px">SNACK STAND</div>'))
-    o.append(f'<div style="position: absolute; left: {cx + 30}px; top: 344px; width: 276px; padding: 0; border: 3px solid {MAROON}; box-sizing: content-box">'
-             f'<img src="assets/still-boardwalk.jpg" alt="The Warriors on the Coney Island boardwalk in their vests, a big painted Warriors sign on the shutters behind them" '
-             f'style="display: block; width: 276px; height: 156px"></div>')
-    o.append(at(cx + 40, 512, 256, f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; line-height: 1.25; color: {SOFT}; text-align: center">'
-                f'The boys from Coney, on home turf.</div>'))
-    o.append(at(cx + 40, 560, 256, f'<div style="text-align: center; font-family: {DISP}; font-size: 36px; line-height: 1.05; color: {PAPER}">'
+    rules = ['Bats checked at the door.', 'No roller skates past the counter.', 'No bottles clinking. Nobody comes out to play.',
+             'Vests welcome. Orphans too.', 'Tag the wall outside, Rembrandt.']
+    o.append(at(cx + 40, 356, 256, f'{kicker("Truce in effect", DAWN, 15, " text-align: center")}'
+                + ''.join(f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; line-height: 1.22; color: {PAPER}; text-align: center; margin-top: 7px">{r}</div>' for r in rules)))
+    o.append(at(cx + 40, 588, 256, f'<div style="text-align: center; font-family: {DISP}; font-size: 36px; line-height: 1.05; color: {PAPER}">'
                 f'CHILI DOGS AT SUNRISE.<br><span style="color: {DAWN}">CAN YOU DIG IT?</span></div>'))
-    o.append(at(cx + 40, 690, 256, f'<div style="height: 2px; background: {PAPER}; opacity: 0.5"></div>'
+    o.append(at(cx + 40, 706, 256, f'<div style="height: 2px; background: {PAPER}; opacity: 0.5"></div>'
                 f'<div style="text-align: center; margin-top: 12px">{bullet("1", DAWN, BLACK, 32, 22)} {bullet("2", MAROON, PAPER, 32, 22)} '
                 f'{bullet("3", PAPER, BLACK, 32, 22)} {bullet("4", GREY, BLACK, 32, 22)}</div>'
                 f'{kicker("Menu and ride home map inside", PAPER, 16, " text-align: center; margin-top: 12px; letter-spacing: 0.16em")}'
                 f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.3; color: {SOFT}; text-align: center; margin-top: 10px">'
-                f'Open all night. Grill hot by 5 A.M.<br>Chili dogs nine to a tray, 9.00.</div>'))
-    o.append(at(cx + 40, 856, 256, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {PAPER}; opacity: 0.85; text-align: center">'
-                f'Prices subject to change. Form W-9.<br>Printed in Brooklyn, N.Y., 1979.</div>'))
+                f'Open all night. Grill hot by 5 A.M.</div>'))
+    o.append(at(cx + 40, 852, 256, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {PAPER}; opacity: 0.85; text-align: center">'
+                f'Chili dogs nine to a tray, 9.00.<br>Prices subject to change. Form W-9.<br>Printed in Brooklyn, N.Y., 1979.</div>'))
     return page(''.join(o), 'front')
 
 
@@ -199,16 +187,16 @@ def front():
 MENU = [
     ('1', DAWN, BLACK, 'COUNTER', [
         ('Soft pretzel bites', '.60', 'Brushed with butter, served warm. Sharp cheddar dip, yellow mustard.'),
-        ('Street-cart corn', '.50', 'Charred ribs off the cob, chili butter, lime, smoked salt.'),
-        ('Potato knish', '.65', 'Griddled square, onion and black pepper, brown mustard.')]),
+        ('Street-cart corn', '.50', 'Charred ribs off the cob, chili butter, lime, smoked salt.')
+        ]),
     ('2', MAROON, PAPER, 'GRILL', [
         ('Coney chili dogs', '1.79', 'Griddled beef franks, beef chili, onion, mustard. Shoestring fries.'),
         ('Sausage hero', '1.75', 'Sweet Italian sausage, fried peppers and onions, seeded roll.'),
         ('Egg on a roll', '.85', 'Two fried eggs, salt and pepper, a kaiser roll. Ready at first light.')]),
     ('3', PAPER, BLACK, 'COLD', [
         ('Ice cream sandwich', '.75', 'Vanilla between chewy chocolate cookies, dipped in dark chocolate.'),
-        ('Lemon ice', '.35', 'Shaved and tart, in a paper cup.'),
-        ('Twist cone', '.45', 'Vanilla and chocolate soft serve.')]),
+        ('Lemon ice', '.35', 'Shaved and tart, in a paper cup.')
+        ]),
     ('4', GREY, BLACK, 'FOUNTAIN', [
         ('Cherry cola', '.40', 'Ice-cold cola, cherry syrup, a squeeze of lime.'),
         ('Chocolate egg cream', '.50', 'Chocolate syrup, cold milk, seltzer. No egg, no cream.'),
@@ -236,36 +224,36 @@ def stop_label(lat, lon, name, note, dx, dy, align):
 
 def back():
     o = []
-    o.append(f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 500px; overflow: hidden"><img src="assets/ride-home-map.jpg" alt="Painted map of the ride home, night to dawn: a maroon line runs from Van Cortlandt Park in the Bronx, '
+    o.append(f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 540px; overflow: hidden"><img src="assets/ride-home-map.jpg" alt="Painted map of the ride home, night to dawn: a maroon line runs from Van Cortlandt Park in the Bronx, '
              f'through Tremont, down Manhattan by 96th Street and Union Square, across Brooklyn to Coney Island, where a Ferris wheel and the parachute tower stand against the sunrise" '
              f'style="display: block; width: {W}px; height: 540px"></div>')
     o.extend(stop_label(*s) for s in STOPS)
     # map title, over New Jersey
-    o.append(at(40, 370, 300,
+    o.append(at(40, 404, 300,
                 f'<div style="background: rgba(11,11,11,0.86); padding: 10px 14px 10px; border-top: 2px solid {PAPER}">'
                 f'{kicker("Bronx to Coney Island", DAWN, 15)}'
                 f'<div style="font-family: {DISP}; font-size: 36px; line-height: 1; color: {PAPER}; margin-top: 3px; white-space: nowrap">THE LONG RIDE HOME</div>'
                 f'<div style="margin-top: 6px; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {SOFT}">'
                 f'<span style="display: inline-block; width: 30px; height: 6px; background: {MAROON}; border: 1px solid {PAPER}; vertical-align: middle"></span>'
                 f'&nbsp; One long night, by train and on foot<br>North is to the left. Sunrise, far right.</div></div>'))
-    # menu band
-    o.append(f'<div style="position: absolute; left: 0; top: 500px; width: {W}px; height: 460px; background: {BLACK}"></div><div style="position: absolute; left: 0; top: 500px; width: {W}px; height: 4px; background: {DAWN}"></div>')
+    # menu band, on a warm dawn cream
+    o.append(f'<div style="position: absolute; left: 0; top: 540px; width: {W}px; height: 420px; '
+             f'background: linear-gradient(to right, #f1e6d2 0%, #f3e1c8 60%, #f6d6b4 100%)"></div>'
+             f'<div style="position: absolute; left: 0; top: 540px; width: {W}px; height: 5px; background: {DAWN}"></div>')
     for i, (ch, bg, fg, title, items) in enumerate(MENU):
         x0 = i * PANEL + (40 if i == 0 else 28)
         cw = (i + 1) * PANEL - (40 if i == 3 else 28) - x0
-        head = (f'{bullet(ch, bg, fg, 46, 32)}'
-                f'<span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-family: {DISP}; font-size: 42px; line-height: 1; color: {PAPER}">{title}</span>')
+        ring = f' box-shadow: 0 0 0 2px {PAPER};' if bg in (BLACK, MAROON) else ''
+        head = (f'<div style="background: {BLACK}; border-top: 2px solid {PAPER}; padding: 7px 12px 6px; box-shadow: 0 3px 0 rgba(0,0,0,0.12)">'
+                f'{bullet(ch, bg, fg, 38, 26, ring)}'
+                f'<span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-family: {DISP}; font-size: 40px; line-height: 1; color: {PAPER}">{title}</span></div>')
         body = ''
         for n, p, d in items:
-            body += (f'<div style="margin-top: 17px">'
-                     f'<div style="display: flex; justify-content: space-between; align-items: baseline; font-family: {BODY}; font-weight: 700; font-size: 27px; line-height: 1.1; color: {PAPER}">'
-                     f'<span>{n}</span><span style="color: {DAWN}">{p}</span></div>'
-                     f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.18; color: {SOFT}; margin-top: 1px">{d}</div></div>')
-        o.append(at(x0, 522, cw, f'<div style="border-top: 2px solid {PAPER}; padding-top: 10px">{head}</div>{body}'))
-    o.append(at(40, 884, W - 80, f'<div style="border-top: 1px solid rgba(240,231,214,0.3); padding-top: 8px; display: flex; justify-content: space-between; '
-                f'font-family: {BODY}; font-size: 16px; line-height: 1.2; color: {SOFT}">'
-                f'<span>Chili dogs come nine to a tray for the whole crew, 9.00. Every gang eats.</span>'
-                f'<span>Prices subject to change. Last Stop, the boardwalk at Stillwell, 1979.</span></div>'))
+            body += (f'<div style="margin-top: 15px">'
+                     f'<div style="display: flex; justify-content: space-between; align-items: baseline; font-family: {BODY}; font-weight: 700; font-size: 26px; line-height: 1.1; color: {BLACK}">'
+                     f'<span>{n}</span><span style="color: {MAROON}">{p}</span></div>'
+                     f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.22; color: #3d342c; margin-top: 3px">{d}</div></div>')
+        o.append(at(x0, 564, cw, head + body))
     return page(''.join(o), 'back')
 
 
