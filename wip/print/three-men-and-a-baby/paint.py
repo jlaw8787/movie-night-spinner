@@ -265,9 +265,6 @@ d = ImageDraw.Draw(img)
 vgrad(d, (sx0, GF + 44, sx1, GROUND - 16), (252, 220, 150), (232, 170, 96))
 # inside: back wall shelves, counter, stools, pie case, urn, clock
 d.rectangle((sx0, GF + 44, sx1, GF + 60), fill=(214, 160, 96, 255))
-for x in range(sx0 + 90, sx1 - 160, 34):
-    d.rectangle((x, GF + 66, x + 18, GF + 84), fill=random.choice([(180, 80, 70), (90, 120, 150), (230, 230, 210)]) + (255,))
-d.rectangle((sx0, GF + 86, sx1, GF + 90), fill=(160, 110, 70, 255))
 d.rectangle((sx0, GROUND - 74, sx1, GROUND - 16), fill=(150, 64, 70, 255))
 d.rectangle((sx0, GROUND - 78, sx1, GROUND - 72), fill=(220, 210, 200, 255))
 for x in range(sx0 + 34, sx1 - 20, 64):
@@ -278,18 +275,17 @@ d.ellipse((sx0 + 26, GF + 98, sx0 + 58, GF + 130), fill=(252, 240, 210, 255))
 d.line([(sx0 + 42, GF + 114), (sx0 + 42, GF + 104)], fill=INK + (255,), width=3)
 d.line([(sx0 + 42, GF + 114), (sx0 + 52, GF + 114)], fill=INK + (255,), width=3)
 f = ImageFont.truetype(os.path.join(D, 'fonts', 'Righteous-Regular.ttf'), 44)
-neon = L(); ImageDraw.Draw(neon).text(((sx0 + sx1) // 2, GF + 118), 'Moonlight', font=f, anchor='mm', fill=(255, 84, 136, 255))
-comp(img, neon, 10); comp(img, neon)
-n2 = L(); ImageDraw.Draw(n2).text(((sx0 + sx1) // 2, GF + 118), 'Moonlight', font=f, anchor='mm', fill=(255, 220, 232, 170)); comp(img, n2, 1)
 f2 = ImageFont.truetype(os.path.join(D, 'fonts', 'Righteous-Regular.ttf'), 22)
 d = ImageDraw.Draw(img)
-d.text(((sx0 + sx1) // 2, GF + 154), 'OPEN ALL NIGHT', font=f2, anchor='mm', fill=(96, 156, 226, 255))
 gl = L(); gd = ImageDraw.Draw(gl)
 for x in range(sx0, sx1 + 1, 115):
     gd.rectangle((x - 5, GF + 44, x + 5, GROUND - 16), fill=(54, 56, 84, 255))
     ink(gd, [(x - 5, GF + 44), (x - 5, GROUND - 16)], 1); ink(gd, [(x + 5, GF + 44), (x + 5, GROUND - 16)], 1)
 ink(gd, [(sx0, GF + 44), (sx1, GF + 44), (sx1, GROUND - 16), (sx0, GROUND - 16), (sx0, GF + 44)], 3)
 comp(img, gl)
+neon = L(); ImageDraw.Draw(neon).text(((sx0 + sx1) // 2, GF + 86), 'Moonlight', font=f, anchor='mm', fill=(255, 84, 136, 255))
+comp(img, neon, 10); comp(img, neon)
+n2 = L(); ImageDraw.Draw(n2).text(((sx0 + sx1) // 2, GF + 86), 'Moonlight', font=f, anchor='mm', fill=(255, 220, 232, 170)); comp(img, n2, 1)
 d = ImageDraw.Draw(img)
 # awning with scalloped valance, shaded underside
 aw0, aw1 = sx0 - 14, sx1 + 14
