@@ -35,6 +35,20 @@ Film stills from TMDB. Other photos are public domain or free licence, listed pe
 - assets/paper-grain.png: shared house grain from jurassic/src/assets.
 - No library or Commons images used; both stills are listed in data/film-stills.json.
 
+## ghostbusters-2
+- still-slime.jpg: TMDB still /ux9t4fjjch9ovAeUmXq6HXm2NtJ.jpg (Ghostbusters II, 1989), the mood slime tub on the lab table.
+- still-vigo.jpg: TMDB still /7EHYnYCN5xpXBya1JpSsEQWSgJa.jpg (Ghostbusters II, 1989), the Vigo painting.
+- still-liberty.jpg: TMDB still /uwwaB8pWBQPTYC7K0RWbTxmwH9x.jpg (Ghostbusters II, 1989), the Statue of Liberty walking up the avenue.
+- logo.jpg: TMDB logo image /t6nZ3rppTPsymlbpDP7wYWkTuIV.jpg (Ghostbusters II, 1989).
+- art-slime.png: painted in PIL by build.py (glossy pink slime drip).
+- paper-grain.png: shared grain from jurassic/src/assets.
+- Earlier museum version (in _old/) used LOC LC-D4-4a32910, public domain; no longer used.
+
+## home-alone-2
+- fifth-avenue-1905.jpg: "Fifth Avenue after a snow storm, New York", Detroit Publishing Co. no. 018112, c.1905. Library of Congress det.4a12278, "No known restrictions on publication" (public domain). https://www.loc.gov/item/2016804564/ , file https://tile.loc.gov/storage-services/master/pnp/det/4a10000/4a12000/4a12200/4a12278u.tif . Two small old shop signs softened so no business name reads.
+- suite-tree.jpg: TMDB still /ghL9wx7oaz2zMiTcqQkLsOnJBFq.jpg (Home Alone 2: Lost in New York, 1992).
+- paper-grain.png: shared grain from jurassic/src/assets.
+
 ## king-of-new-york
 
 - Cover photo: "Looking South from the Bronx to Manhattan", May 1973, photographer for the EPA DOCUMERICA project, U.S. National Archives NARA 548407. Public domain (U.S. federal government work).
@@ -75,14 +89,61 @@ Cropped to the street and the cab, no cast and no marquee titles. File: assets/s
 - Central Park and neighborhood lines: click_that_hood public/data/manhattan.geojson.
 - Street grid, Broadway, route, bridges and New Jersey shore drawn by hand in map.py from known coordinates.
 
+## raging-bull
+- hero-title-night.jpg: TMDB still /uBVmi4TxFGl3A8oN9aQDmtG2A1A.jpg (Raging Bull, 1980). Maker's name on the trunks waistband blurred.
+- stage-jake.jpg: TMDB still /jGIzwwzUl1Rbb7Ag8p4pHpbfH4D.jpg (Raging Bull, 1980).
+- No Library of Congress image used in the final build (FSA/OWI ring photos in src/ were reviewed; the film's own ring still was stronger).
+- Fight dates checked against Wikipedia (Sugar Ray Robinson vs. Jake LaMotta; Jake LaMotta): Detroit Feb 5 1943, Detroit Jun 16 1949, Detroit Sep 13 1950, Chicago Feb 14 1951.
+
+## road-to-perdition
+- counter-1940.jpg: "Truck driver in diner. Clinton, Indiana", Arthur Rothstein, Feb. 1940, Farm Security Administration / Office of War Information, Library of Congress LC-USF34-029480-D (8b19476). Rights: no known restrictions (US government work, public domain). https://www.loc.gov/item/2017779666/ , file https://tile.loc.gov/storage-services/master/pnp/fsa/8b19000/8b19400/8b19476u.tif . Small product labels softened, printed as a slate duotone.
+- booth-still.jpg: TMDB still /8B1tuESNpoySSyh5LlUK4QSsgzo.jpg (Road to Perdition, 2002).
+- nickel.png: "Buffalo Nickel Obverse", United States Mint, public domain. https://commons.wikimedia.org/wiki/File:Buffalo_Nickel_Obverse.png . Toned to a worn nickel.
+- paper-grain.png: shared house grain from jurassic/src/assets.
+
+## saturday-night-fever
+- hero-floor.jpg: TMDB still /rksaWEQwMAeJQJVMBIsDph5nLCT.jpg (Saturday Night Fever, 1977).
+- bridge-1973.jpg: "The Verrazano-Narrows Bridge crosses New York Bay and connects Staten Island and Brooklyn", Arthur Tress, June 1973, DOCUMERICA, Environmental Protection Agency. National Archives NAID 547828. US federal government work, public domain. https://commons.wikimedia.org/wiki/File:THE_VERRAZANO-NARROWS_BRIDGE_CROSSES_NEW_YORK_BAY_AND_CONNECTS_STATEN_ISLAND_AND_BROOKLYN_-_NARA_-_547828.jpg (1280px file; magenta slide cast corrected). No brands visible.
+- paper-grain-light.png: recoloured copy of the shared jurassic paper-grain.png.
+- mirror-ball.png: painted in PIL by build.py (no outside source).
+
+## spider-man-2
+
+- Spider-Man 2 (2004), TMDB image /gqwkWnH1YAd3uRcT3d9VPk0715z.jpg, listed in data/film-stills.json.
+- Treatment: cropped to Peter and the boxes, slight lift in brightness and contrast.
+
+- src/cnfqojGmJBmCcrKk52NdGOYnAfU.jpg, TMDB still, Spider-Man 2 (2004).
+- A free-licence pizza slice photo (Wikimedia Commons, File:Fat_Slice_pepperoni_pizza_slice.JPG, GFDL / CC BY-SA, by BrokenSphere) was planned but Wikimedia rate-limited the download; it is not in this build.
+
+- assets/paper-grain.png copied from jurassic/src/assets. assets/paper-wear-flyer.png painted in build.py.
+
+## spider-man
+- bugle-photo.jpg: TMDB still /lAtlbbDD14e48aViozEntFTkjoA.jpg (Spider-Man, 2002), light newsprint dot screen.
+- forest-hills.jpg: TMDB still /cb4BsGIhr06QQFbP8pW9z5aLh3H.jpg (Spider-Man, 2002), Queens street.
+- No Commons photo used: the only free-licence photo of the real diner (File:Diners Clajot.jpg, CC BY-SA 3.0) is 372x250 and shows the real business name. Commons API was rate limiting during the build.
+- rain-kiss.jpg: TMDB still /k4U306K3u0dPoV7ULSuxxW3ImLP.jpg (Spider-Man, 2002), the upside-down kiss in the rain.
+- forest-hills.jpg is no longer used on the faces.
+- web-sign.png, web-paper.png: drawn in PIL by build.py (corner web motif, no character).
+
 ## taxi-driver
 - hero-neon.jpg: TMDB still /yu2kQTsQ4wQy2Dp9BbyQrtC0qcs.jpg (Taxi Driver, 1976). Small beer neons softened.
 - night-street.jpg: TMDB still /kDcgouIjSzVB2henVhgtcn1WZpW.jpg (Taxi Driver, 1976).
 - cab-1973.jpg: "High concentration of taxis on Fifth Avenue near 48th Street", Dan McCoy, 1973, DOCUMERICA, Environmental Protection Agency. National Archives NAID 554315 (412-DA-11863). US federal government work, public domain. https://catalog.archives.gov/id/554315 , file https://catalog.archives.gov/medialz/stillpix/412-da/412-DA-11863_14-0043M.TIF
 
+## the-departed
+- three-deckers.jpg (signature): "Two-family house - South Boston, Massachusetts - DSC08917.jpg", Daderot, 20 December 2018, CC0 1.0 (public domain dedication). https://commons.wikimedia.org/wiki/File:Two-family_house_-_South_Boston,_Massachusetts_-_DSC08917.jpg . 1920px Commons thumbnail, cropped, lightly brightened.
+- corner-table.jpg: TMDB still /pC6oJsuQsSbuQtUJOyTgk90eIw2.jpg (The Departed, 2006). Cropped, brightened.
+- paper-grain.png: shared house grain from jurassic/src/assets.
+
 ## the-french-connection
 - assets/src-street.jpg, photo-street.png: TMDB still from The French Connection (1971), https://image.tmdb.org/t/p/original/vuJ0qEbmkXUNMLbTZ7twVKC2A1b.jpg (listed in data/film-stills.json). Cropped right of the hotel canopy so no sign shows.
 - assets/src-vieuxport.jpg, photo-port.png: [Old Harbor (Vieux-Port), Marseille, France, with Hotel-Dieu Hospital in background], Photochrom, c.1890 to 1900, Library of Congress Prints and Photographs, https://www.loc.gov/item/2002715102/ , image https://tile.loc.gov/storage-services/service/pnp/ppmsc/09900/09986v.jpg . No known restrictions on publication (public domain).
+
+## things-to-do-in-denver
+
+- assets/skyline.jpg: "Skyline, Denver, Colorado", Carol M. Highsmith, between 1980 and 2006. Library of Congress, Carol M. Highsmith Archive, https://www.loc.gov/pictures/item/2011636031/ (full file via https://tile.loc.gov/image-services/iiif/service:pnp:highsm:17800:17837/full/pct:100/0/default.jpg). Rights: "No known restrictions on publication" (Highsmith gifted the archive to the public domain). Cropped to a strip, small rooftop company sign blurred (prep.py).
+- assets/still-counter.jpg: TMDB still /hMo3Hp1CFVJNnGcyO2EuXMOhRXz.jpg (https://image.tmdb.org/t/p/original/hMo3Hp1CFVJNnGcyO2EuXMOhRXz.jpg), Things to Do in Denver When You're Dead (1995). Cropped and lightly brightened. Listed in data/film-stills.json.
+- assets/paper-grain.png: shared house grain from jurassic/src/assets. assets/paper-wear.png: soft edge falloff painted in prep.py.
 
 ## three-men-and-a-baby
 
@@ -92,6 +153,13 @@ Cropped to the street and the cab, no cast and no marquee titles. File: assets/s
 - File: https://tile.loc.gov/storage-services/master/pnp/habshaer/ny/ny0300/ny0379/photos/119885pu.tif
 - Licence: No known restrictions on publication (HABS, work of the US Government, public domain). Rights statement: https://www.loc.gov/rr/print/res/114_habs.html
 - Treatment (photo.py): cropped to the upper arcaded floors so no street-level signs show, toned as a night-blue duotone, left side darkened under the wordmark.
+
+## tmnt-2
+
+- assets/still-lair.jpg: TMDB still /fxqWqgf8hBJeGy8ixqo0Rv6I1Bd.jpg (https://image.tmdb.org/t/p/original/fxqWqgf8hBJeGy8ixqo0Rv6I1Bd.jpg), TMNT II (1991). Light crop and brighten (prep.py).
+- assets/still-april.jpg: TMDB still /wiCct1kBUGyifbcBdW33rniQRky.jpg (https://image.tmdb.org/t/p/original/wiCct1kBUGyifbcBdW33rniQRky.jpg). Cropped to April and Raphael (prep.py).
+- assets/paper-grain.png: shared house grain from jurassic/src/assets.
+- No library or Commons images used. Both stills are in data/film-stills.json.
 
 ## working-girl
 
