@@ -20,7 +20,7 @@ jobs:
         run: python3 scripts/fetch_stills.py
       - name: Commit if changed
         run: |
-          git add data/film-stills.json 2>/dev/null || true
+          git add data/film-stills.json data/film-logos.json 2>/dev/null || true
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git config user.name "movie-night-bot"
           git config user.email "actions@users.noreply.github.com"

@@ -15,6 +15,8 @@ def get(path):
     return None
 out_path = REPO / 'data/film-stills.json'
 out = json.load(open(out_path)) if out_path.exists() else {}
+logo_path = REPO / 'data/film-logos.json'
+logos = json.load(open(logo_path)) if logo_path.exists() else {}
 for fid in want:
     tid = ids.get(fid)
     if not tid: print('no TMDB id for', fid); continue
@@ -22,5 +24,8 @@ for fid in want:
     if not d: print('failed', fid); continue
     bd = sorted(d.get('backdrops', []), key=lambda b: (b.get('iso_639_1') is not None, -b.get('vote_count', 0), -b.get('vote_average', 0)))
     out[fid] = [[b['file_path'], b['width'], b['height'], b.get('iso_639_1')] for b in bd[:200]]
-    print(fid, len(out[fid]))
+    lg = sorted(d.get('logos', []), key=lambda b: (b.get('iso_639_1') != 'en', b.get('file_path','').endswith('.svg'), -b.get('vote_average', 0), -b.get('vote_count', 0)))
+    if lg: logos[fid] = [lg[0]['file_path'], lg[0]['width'], lg[0]['height']]
+    print(fid, len(out[fid]), 'logo' if lg else 'no logo')
 json.dump(out, open(out_path, 'w'), indent=0, ensure_ascii=False)
+json.dump(logos, open(logo_path, 'w'), indent=0, ensure_ascii=False)
