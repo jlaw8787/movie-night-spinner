@@ -44,7 +44,7 @@ RIGHT = [('The bake case', [
          ('Coffee and cocoa', [
             ("The World's Best Cup", '3.75', 'Coffee in maple cocoa milk, whipped cream, marshmallows, candy cane.'),
             ('Bottomless Coffee', '.90', 'Fresh pot on the hour, all night long.'),
-            ("Kids' Hot Cocoa", '1.50', 'Whipped cream and a mini candy cane to stir.')])]
+            ("Kids' Hot Cocoa", '1.50', 'Whipped cream, candy cane stirrer.')])]
 
 
 def column(groups):
@@ -75,7 +75,7 @@ def face():
         f'<div style="font-family: {DISP}; font-weight: 900; font-size: 66px; line-height: 74px; color: {SNOW}; letter-spacing: 0.005em; '
         f'text-shadow: 4px 4px 0 {RED}; margin-top: 4px">WORLD\'S BEST CUP OF COFFEE</div>'))
     o.append(f'<img src="assets/spirit-gauge.png" alt="Christmas spirit gauge" style="position: absolute; left: 1124px; top: 30px; width: 168px; height: 98px">')
-    o.append(at(1104, 128, 208, f'<div style="font-family: {BODY}; font-weight: 800; font-size: 15px; letter-spacing: 0.18em; color: {SNOW}; '
+    o.append(at(1112, 128, 192, f'<div style="font-family: {BODY}; font-weight: 800; font-size: 15px; letter-spacing: 0.18em; color: {SNOW}; '
                                  f'text-align: center; line-height: 18px">CHRISTMAS SPIRIT</div>'))
     # left column, and the clipping at its foot
     o.append(at(52, 214, 360, column(LEFT)))
@@ -96,16 +96,16 @@ def face():
                                f'color: {SOFT}; text-align: center">Our block in December. A regular, saying hi to every cab.</div>'))
     # right column, and the letter from the North Pole
     o.append(at(932, 214, 360, column(RIGHT)))
-    o.append(at(944, 758, 346,
+    o.append(at(944, 754, 346,
         f'<div style="transform: rotate(1.6deg); padding: 6px; box-shadow: 2px 3px 7px rgba(40,30,10,0.2); '
         f'background: repeating-linear-gradient(135deg, {RED} 0 12px, {SNOW} 12px 22px, {GREEN} 22px 34px, {SNOW} 34px 44px)">'
         f'<div style="background: #fffdf7; padding: 8px 14px 8px; position: relative">'
-        f'<div style="font-family: {HAND}; font-size: 18px; line-height: 21px; color: #1c3a8c; padding-right: 30px">Dear Coffee Shop, you did it! It really is the best '
-        f'cup in the whole world. Congratulations! I put syrup in mine.</div>'
+        f'<div style="font-family: {HAND}; font-size: 18px; line-height: 21px; color: #1c3a8c; padding-right: 46px">Dear Coffee Shop, you did it! Best cup in the '
+        f'whole world. I put syrup in mine.</div>'
         f'<div style="display: flex; align-items: baseline; gap: 10px; margin-top: 2px">'
         f'<span style="font-family: {HAND}; font-size: 30px; line-height: 32px; color: #1c3a8c">Love, Buddy</span>'
         f'<span style="font-family: {BODY}; font-weight: 700; font-size: 14px; color: {SOFT}">the elf, North Pole</span></div>'
-        f'<div style="position: absolute; right: -14px; top: -16px; width: 62px; height: 62px; border: 2px solid rgba(196,30,44,0.7); '
+        f'<div style="position: absolute; right: 2px; top: -24px; width: 62px; height: 62px; border: 2px solid rgba(196,30,44,0.7); '
         f'border-radius: 50%; transform: rotate(-12deg); text-align: center; font-family: {BODY}; font-weight: 800; font-size: 14px; '
         f'line-height: 15px; color: rgba(196,30,44,0.8); padding-top: 9px; box-sizing: border-box">NORTH<br>POLE<br>DEC 24</div>'
         f'</div></div>'))
