@@ -52,7 +52,7 @@ class Art:
         out = []
         n = len(pts)
         closed = pts[0] == pts[-1]
-        for i in range(n - 1 if closed else n):
+        for i in range(n - 1):
             x0, y0 = pts[i]; x1, y1 = pts[(i + 1) % n]
             seg = math.hypot(x1 - x0, y1 - y0)
             k = max(1, int(seg / 5))
@@ -66,6 +66,9 @@ class Art:
                 out.append(((x + dx) * SS, (y + dy) * SS))
         if closed:
             out.append(out[0])
+        else:
+            x, y = pts[-1]
+            out.append((x * SS, y * SS))
         return out
 
     def save(self, name, kcell=5.2, gcell=5.6):
@@ -373,7 +376,7 @@ def baguette():
             ImageDraw.Draw(a.kl).ellipse(a.pts([(hx - 1.1, hy - .8), (hx + 1.1, hy + .8)]), fill=255)
         for cxp in (x - rx * 0.35, x + rx * 0.4):   # cornichon coins in the filling
             ImageDraw.Draw(a.kl).ellipse(a.pts([(cxp - 2.2, y), (cxp + 2.2, y + 3.4)]), outline=255, width=int(.9 * s))
-        kline(body, 2.0)
+        kline(body, 2.0, False)
         kline(face, 2.6)
 
     for i in range(6):

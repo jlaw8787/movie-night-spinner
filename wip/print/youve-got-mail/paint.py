@@ -45,12 +45,13 @@ def storefront():
     im = im.resize((bw * P, bh * P), Image.LANCZOS)
     im = ImageEnhance.Contrast(im).enhance(1.06)
     rgb = np.asarray(im).astype(np.float32) / 255
+    rgb = np.clip(rgb * np.array([1.03, 1.0, 0.95]), 0, 1)   # warm the north light a little
     k = 1 - rgb.max(axis=2)
     den = np.maximum(1 - k, 1e-4)
     c = (1 - rgb[..., 0] - k) / den; m = (1 - rgb[..., 1] - k) / den; y = (1 - rgb[..., 2] - k) / den
     k = np.clip(k * 1.05 - 0.02, 0, 1)    # gray component replacement, a little lift in the darks
     cell = 4.2                             # about 90 lpi at this paint size
-    sc = screen(c, 15, cell, 0.16); sm = screen(m, 75, cell, 0.16)
+    sc = screen(c * 0.8, 15, cell, 0.16); sm = screen(m, 75, cell, 0.16)
     sy = screen(y, 0, cell, 0.12); sk = screen(k, 45, cell, 0.18)
     # plates a hair out of register: magenta right, yellow up
     sm = np.roll(sm, 2, axis=1); sy = np.roll(sy, -1, axis=0)
@@ -77,7 +78,7 @@ def engraving():
 
     def hatch(mask, dark, pitch, bow, cx, tilt=0.0):
         """Lines bowed around a cylinder: y' = y - bow*(1-((x-cx)/R)^2)."""
-        R = max(1, (mask.any(axis=0).nonzero()[0].ptp()) / 2)
+        R = max(1, np.ptp(mask.any(axis=0).nonzero()[0]) / 2)
         t = (xx - cx) / R
         yb = yy - bow * np.sqrt(np.clip(1 - t * t, 0, 1)) + tilt * xx
         ph = np.abs(((yb / pitch) % 1) - 0.5) * 2          # 0 at line centre, 1 between
@@ -123,8 +124,6 @@ def engraving():
     ink = np.maximum(ink, hatch(sau & ~body & ~well, dsau, 12, -18, cx))
     ink = np.maximum(ink, hatch(well & ~body, np.clip(dsau + 0.2, 0, 0.85), 10, -10, cx))
     # cast shadow of the cup on the saucer well, cross hatched
-    sh = ((xx - cx - 120) / 250) ** 2 + ((yy - 740) / 40) ** 2 <= 1
-    ink = np.maximum(ink, hatch(sh & ~body & sau, np.full_like(xx, 0.5), 7, 0, cx, -0.5))
     # outlines, cut heavier on the shadow side
     def outline(m, wl, wr):
         e = m & ~ndimage.binary_erosion(m, iterations=int(wl))
@@ -133,7 +132,7 @@ def engraving():
     for m, a_, b_ in ((body, 4, 8), (mouth, 3, 4), (sau, 4, 7), (well, 2, 3), (handle, 4, 7)):
         ink = np.maximum(ink, outline(m, a_, b_))
     # three beans to the left on the table
-    for (bx, by, ang) in ((140, 800, 25), (225, 842, -15), (95, 868, 70)):
+    for (bx, by, ang) in ((1120, 790, 25), (1215, 818, -20), (1150, 848, 75)):
         a = math.radians(ang)
         u = ((xx - bx) * math.cos(a) + (yy - by) * math.sin(a)) / 48
         v = (-(xx - bx) * math.sin(a) + (yy - by) * math.cos(a)) / 32
@@ -157,8 +156,8 @@ def engraving():
     rgba = np.zeros((h, w, 4), np.uint8)
     rgba[..., :3] = (44, 30, 26)
     rgba[..., 3] = (ink * 255).astype(np.uint8)
-    out = Image.fromarray(rgba, 'RGBA').crop((40, 200, 1300, 900))
-    out = out.resize((420 * 1, int(420 * 700 / 1260)), Image.LANCZOS)   # 3x of 140 css px
+    out = Image.fromarray(rgba, 'RGBA').crop((60, 120, 1320, 900))
+    out = out.resize((420, int(420 * 780 / 1260)), Image.LANCZOS)   # 3x of 140 css px
     out.save(os.path.join(A, 'engraving-cup.png'))
 
 

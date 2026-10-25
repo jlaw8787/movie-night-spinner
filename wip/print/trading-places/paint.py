@@ -53,22 +53,23 @@ def screen(gray, cell, angle, gain=1.0, up=4):
 
 
 def halftone_still():
-    # crop to the three men and the breakfast table, 336 x 214 CSS px at 2x
+    # crop to the three men and the breakfast table, 400 x 250 CSS px at 2x
     im = Image.open(os.path.join(A, 'still-dukes.jpg')).convert('RGB')
-    bw, bh = 336 * S, 214 * S
-    box = (380, 20, 1920, 20 + int(1540 * bh / bw))
+    bw, bh = 400 * S, 250 * S
+    box = (380, 1080 - int(1540 * bh / bw), 1920, 1080)
     im = im.crop(box).resize((bw, bh), Image.LANCZOS)
     g = np.asarray(ImageOps.grayscale(im)).astype(float) / 255
     g = ndimage.gaussian_filter(g, 0.6)
     # lift the shadows the way a newsletter printer's camera would, then dot gain
-    lum = np.clip((g - 0.04) / 0.86, 0, 1) ** 0.72
-    k = 1 - lum
-    k = np.clip(k * 1.02 - 0.04, 0, 1)
+    lo, hi = np.percentile(g, 1), np.percentile(g, 99.5)
+    lum = np.clip((g - lo) / (hi - lo), 0, 1) ** 0.62
+    lum = np.clip(0.5 + (lum - 0.5) * 1.35, 0, 1)
+    k = np.clip((1 - lum) * 0.96 - 0.02, 0, 1) ** 1.05
     rgb = np.asarray(im).astype(float) / 255
     warm = np.clip((rgb[..., 0] - rgb[..., 2]) * 1.6 + 0.10, 0, 1) * np.clip(lum * 1.4, 0, 1)
-    o = np.clip(0.18 + warm * 0.55 - lum * 0.1, 0, 0.6)
-    kd = screen(k, 5, 45)
-    od = screen(o, 5, 75)
+    o = np.clip(0.06 + warm * 0.45, 0, 0.5)
+    kd = screen(k, 3, 45)
+    od = screen(o, 3, 75)
     od = np.roll(od, (2, 3), axis=(0, 1))                  # the orange plate sits a hair off
     paper = np.array([246, 244, 238], float)
     out = paper * np.ones((bh, bw, 3))

@@ -56,7 +56,7 @@ def head(en, zh, sub=None, top=0, size=25):
 
 
 def star():
-    return f'<span style="color: {RED}; font-size: 15px; margin-left: 5px">&#9733;</span>'
+    return '<img src="assets/art-star.png" alt="hot" style="display: inline-block; width: 15px; height: 15px; margin-left: 6px; vertical-align: 0px">'
 
 
 def row(num, name, price, desc=None, note=None, hot=False, top=6, nsize=18, prices=None):
@@ -103,7 +103,7 @@ flap = (
                 for a, b in (('15.00', '2 Egg Rolls'), ('25.00', 'Qt. Wonton Soup'), ('35.00', 'Edamame and a Can Soda'), ('45.00', 'Fried Dumplings (8)')))
     + '</div></div>'
     + f'<div style="position: absolute; left: 0; bottom: 4px; width: 360px; display: flex; justify-content: space-between; align-items: center">'
-      f'<div style="font-size: 16px; line-height: 1.3"><span style="color: {RED}">&#9733;</span> Hot and Spicy.<br>Any dish made mild on request.</div>'
+      f'<div style="font-size: 16px; line-height: 1.3"><img src="assets/art-star.png" alt="" style="display: inline-block; width: 15px; height: 15px; vertical-align: 0px"> Hot and Spicy.<br>Any dish made mild on request.</div>'
       f'<div style="flex: none; width: 74px; height: 74px; border-radius: 50%; border: 2px solid {INK}; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 700; font-size: 16px; line-height: 1.05; transform: rotate(-8deg)">TAX<br>INCL.</div></div>'
 )
 

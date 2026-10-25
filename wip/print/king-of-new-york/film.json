@@ -7,23 +7,27 @@
  ],
  "names": [
   "Cover",
-  "Dinner page"
+  "Page 3"
  ],
  "mm": [
   215.9,
   279.4
  ],
- "fonts": "family=Jost:wght@400;500;600;700&family=Libre+Bodoni:ital,wght@0,400;0,600;1,400;1,600",
+ "fonts": "family=News+Cycle:wght@400;700&family=Libre+Bodoni:ital,wght@0,400;0,600;1,400;1,600&family=Cinzel:wght@400;700&family=Pinyon+Script&family=Courier+Prime:wght@400;700&family=Arvo:wght@400;700",
  "fams": [
-  "Jost",
-  "Libre Bodoni"
+  "News Cycle",
+  "Libre Bodoni",
+  "Cinzel",
+  "Pinyon Script",
+  "Courier Prime",
+  "Arvo"
  ],
  "phone": {
-  "disp": "'Jost',sans-serif",
-  "title": "'Jost',sans-serif",
-  "name": "'Jost',sans-serif",
+  "disp": "'Libre Bodoni',serif",
+  "title": "'Libre Bodoni',serif",
+  "name": "'Libre Bodoni',serif",
   "body": "'Libre Bodoni',serif",
-  "price": "'Jost',sans-serif",
+  "price": "'News Cycle',sans-serif",
   "note": "'Libre Bodoni',serif"
  }
 }

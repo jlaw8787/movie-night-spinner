@@ -211,3 +211,19 @@ def frame():
 
 moon(); bowl(); frame()
 print('art done')
+
+
+# ---------------- small red star for hot dishes ----------------
+def star():
+    S2 = 120
+    m = Image.new('L', (S2, S2), 0); d = ImageDraw.Draw(m)
+    pts = []
+    for k in range(10):
+        r = 56 if k % 2 == 0 else 23
+        a = -math.pi / 2 + k * math.pi / 5
+        pts.append((60 + r * math.cos(a), 63 + r * math.sin(a)))
+    d.polygon(pts, fill=255)
+    plate(ink(m, 41, 0.85), RED).resize((40, 40), Image.LANCZOS).save(os.path.join(A, 'art-star.png'))
+
+
+star()
