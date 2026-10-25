@@ -46,7 +46,7 @@ def dish(name, price, desc, top=12):
             f'<div style="display: flex; align-items: baseline; gap: 10px">'
             f'<div style="flex: 1; font-family: {DISP}; font-weight: 600; font-size: 33px; line-height: 0.9; color: {BLK}; text-transform: uppercase">{name}</div>'
             f'<div style="font-family: {DISP}; font-weight: 600; font-size: 33px; line-height: 0.9; color: {RED}">{price}</div></div>'
-            f'<div style="margin-top: 2px; font-family: {BODY}; font-size: 20px; line-height: 1.22; color: {INK}; text-wrap: pretty">{desc}</div></div>')
+            + (f'<div style="margin-top: 2px; font-family: {BODY}; font-size: 20px; line-height: 1.22; color: {INK}; text-wrap: pretty">{desc}</div>' if desc else '') + '</div>')
 
 # ---------- dishes (k = spec key) ----------
 PLATTERS = [
@@ -62,10 +62,10 @@ JAR = [
 ]
 DRINKS = [
   ('No-brakes energy smoothie', 'No brakes', '4.50', 'Smoothie of banana, berries, oats, peanut butter and milk, blended thick. Espresso shot 75 cents.'),
-  (None, 'Tea, soda, water', '1.00', 'Hot milky tea, cans of soda, cold water.'),
+  (None, 'Hot tea, soda, water', '1.00', ''),
 ]
-BAO = ('Chinatown pork buns', 'Char siu bao, bag of 3', '3.00',
-       'Pork neck marinated overnight in hoisin, honey, soy and five spice, roasted, in buns.')
+BAO = ('Chinatown pork buns', 'Char siu bao', '3.00',
+       'Pork neck marinated overnight in hoisin, honey, soy and five spice, roasted, in steamed buns.')
 
 # ---------- map column ----------
 def chip(x, y, text, num=None, side='r', w=None):
@@ -138,6 +138,16 @@ def spoke_card(x, y):
             f'<div style="margin-top: 3px; font-family: {BODY}; font-weight: 600; font-size: 14px; line-height: 1.15; color: {YEL}">with a platter. Fixed gear, no brakes, no problem.</div>'
             f'</div></div>')
 
+def drop():
+    """Stop 5 on the map: the Chinatown drop. A bakery tip, not sold at the truck."""
+    return (f'<div style="position: absolute; left: 318px; top: 1018px; width: 216px; height: 262px; box-sizing: border-box; border: 3px dashed {BLK}; padding: 12px 12px 0">'
+            f'<div style="display: flex; align-items: center; gap: 8px">'
+            f'<div style="width: 24px; height: 24px; flex: none; border: 2px solid {BLK}; border-radius: 50%; background: {RED}; color: {YEL}; text-align: center; font-family: {DISP}; font-weight: 600; font-size: 20px; line-height: 27px">5</div>'
+            f'{kicker("Last stop, Chinatown", RED, 16)}</div>'
+            f'<div style="margin-top: 8px; font-family: {DISP}; font-weight: 600; font-size: 31px; line-height: 0.9; color: {BLK}; text-transform: uppercase">{BAO[1]}</div>'
+            f'<div style="margin-top: 3px; font-family: {BODY}; font-size: 20px; line-height: 1.22; color: {INK}">{BAO[3]}</div>'
+            f'<div style="margin-top: 6px; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.22; color: {RED}">Bakery on Mott, three for 3.00. Not sold at this truck.</div></div>')
+
 # ---------- the sheet ----------
 def sheet():
     pl = ''.join(dish(n, p, d, 10 if i else 6) for i, (_, n, p, d) in enumerate(PLATTERS))
@@ -147,29 +157,26 @@ def sheet():
              f'{kicker("Truck 116 &middot; Broadway at 116th St")}'
              f'<div style="margin-top: 6px; font-family: {DISP}; font-weight: 700; font-size: 88px; line-height: 0.78; padding-top: 12px; color: {BLK}">MORNINGSIDE</div>'
              f'<div style="font-family: {DISP}; font-weight: 700; font-size: 88px; line-height: 0.78; padding-top: 8px; color: {RED}">HALAL FOOD</div>'
-             f'<div style="position: relative; margin-top: 14px; width: 428px; height: 196px; border: 3px solid {RED}">'
-             f'<img src="assets/photo-platter.jpg" alt="Chicken platter in a foil tray" style="position: absolute; left: 0; top: 0; width: 428px; height: 196px; object-fit: cover; object-position: 50% 45%; display: block">'
+             f'<div style="position: relative; margin-top: 14px; width: 428px; height: 150px; border: 3px solid {RED}">'
+             f'<img src="assets/photo-platter.jpg" alt="Chicken platter in a foil tray" style="position: absolute; left: 0; top: 0; width: 428px; height: 150px; object-fit: cover; object-position: 50% 50%; display: block">'
              f'<div style="position: absolute; left: -10px; bottom: -14px; width: 92px; height: 92px; border-radius: 50%; background: {RED}; border: 3px solid {YEL}; text-align: center">'
              f'<div style="margin-top: 14px; font-family: {DISP}; font-weight: 600; font-size: 50px; line-height: 0.8; color: {YEL}">$6</div>'
              f'<div style="margin-top: 2px; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; color: {YEL}">PLATTER</div></div></div>'
-             f'<div style="margin-top: 8px; padding-left: 92px; width: 250px; font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {INK}">Our chicken platter, made to order.</div>'
+             f'<div style="margin-top: 8px; padding-left: 92px; width: 250px; font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {INK}">Our chicken platter.</div>'
              f'{heading("PLATTERS", 10)}{pl}'
-             f'<div style="margin-top: 12px; height: 2px; background: {BLK}"></div>'
-             f'<div style="margin-top: 9px">{kicker("Pork, so not ours: the Chinatown bakery", RED, 16)}</div>'
-             f'{dish(BAO[1], BAO[2], BAO[3], 4)}</div>')
+             f'{heading("DRINKS", 14)}{dr}</div>')
     band = (f'<div style="position: absolute; left: 0; top: 1000px; width: {FW}px; height: 6px; background: {BLK}"></div>'
             f'<div style="position: absolute; left: 40px; top: 1016px; width: 262px">{heading("THE JAR")}{jar}</div>'
-            f'<div style="position: absolute; left: 326px; top: 1016px; width: 270px">{heading("DRINKS")}{dr}</div>'
-            f'<div style="position: absolute; left: 618px; top: 1022px; width: 158px">'
-            f'<div style="width: 152px; height: 100px; border: 3px solid {RED}; overflow: hidden">'
-            f'<img src="assets/still-broadway.jpg" alt="A messenger riding Broadway between cabs" style="width: 152px; height: 100px; object-fit: cover; object-position: 40% 25%; display: block"></div>'
+            f'{drop()}'
+            f'<div style="position: absolute; left: 556px; top: 1020px; width: 220px">'
+            f'<div style="width: 214px; height: 142px; border: 3px solid {RED}; overflow: hidden">'
+            f'<img src="assets/still-broadway.jpg" alt="A messenger riding Broadway between cabs" style="width: 214px; height: 142px; object-fit: cover; object-position: 40% 30%; display: block"></div>'
             f'<div style="margin-top: 5px; font-family: {BODY}; font-size: 16px; line-height: 1.22; color: {INK}">Broadway at 5. Our riders don\'t slow down.</div>'
             f'<div style="margin-top: 8px; font-family: {BODY}; font-size: 16px; line-height: 1.22; color: {INK}">'
             f'<b>Cash only.</b> We don\'t cash tickets. Law students 10% off, bar exam not required.</div></div>'
             f'<div style="position: absolute; left: 40px; top: 1292px; width: 736px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 14px; line-height: 1; color: {INK}">'
             f'<span>Open 10 AM to 10 PM. Mondays, we\'re off. Prices subject to change.</span><span>NYC mobile food permit MV 2012-0116</span></div>')
-    # the bao: Chinatown stop on the run, printed as the map's finish box
-    finish = (f'<div style="position: absolute; left: 342px; top: 1000px; width: 0"></div>')
+    finish = ''
     return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {YEL}; color: {BLK}">'
             f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: -400px; top: 0; width: 1901px; height: 1344px; opacity: 0.3; display: block">'
             f'{map_col()}{right}{band}{finish}'
@@ -192,7 +199,7 @@ NOTES = {'Wilee\'s halal cart chicken over rice': 'Truck 116, Broadway at 116th 
          'Messenger fuel bars': 'From the jar by the window. Goes in the bag.',
          'Dispatch office cookies': 'From the jar. A dollar.',
          'No-brakes energy smoothie': 'Espresso shot 75 cents extra.',
-         'Chinatown pork buns': 'At the bakery by the finish in Chinatown. Pork, so not from the truck.'}
+         'Chinatown pork buns': 'Last stop, Chinatown: from the bakery on Mott, three for 3.00. Not sold at the truck.'}
 labels = {}
 for k, n, p, d in PLATTERS + JAR + DRINKS + [BAO]:
     if k: labels[k] = {'n': n, 'd': d, 'note': NOTES[k]}

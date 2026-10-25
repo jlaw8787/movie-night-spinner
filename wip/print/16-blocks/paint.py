@@ -142,7 +142,7 @@ label('CANAL ST', (xs[6] + xs[7]) / 2 + 6, EAST_Y + 36, 28)
 cxl, cyl = (xs[6] + xs[8]) / 2 + 30, ys[2 + 6] + BY / 2
 d.rectangle(k(cxl - 110, cyl - 20, cxl + 110, cyl + 20), fill=CREAM, outline=NAVY, width=2 * K)
 label('CHINATOWN', cxl + 4, cyl, 26, 0, NAVY, 'BSD-800.ttf', 9)
-label('WALKER ST', (xs[8] + xs[9]) / 2, ys[6], 22, 0)
+label('WALKER ST', (xs[8] + xs[9]) / 2 - 14, ys[6], 22, 0)
 label('SQUARE', (xs[3] + xs[4]) / 2, ys[6], 22, 0)
 
 # shop marker at block 8, the corner
@@ -187,7 +187,7 @@ for s in (-1, 1):
     d.line(k(lx, py + 100, lx, py + ph), fill=NAVY, width=3 * K)
     d.ellipse(k(lx - 9, py + 88, lx + 9, py + 106), fill=YEL, outline=NAVY, width=2 * K)
 d.rectangle(k(px - 10, py + ph, px + pw + 10, py + ph + 6), fill=NAVY)
-label('THE PRECINCT', px + pw / 2 + 92, py + ph + 26, 28, 0)
+label('THE PRECINCT', px + pw / 2 + 86, py + ph + 26, 26, 0)
 
 # ---- vignette: courthouse (bottom right) ----
 cx0, cy0, cw = 528, EAST_Y + 52, 300
