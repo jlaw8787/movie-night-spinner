@@ -1,13 +1,13 @@
-"""Firehouse World Series Supper menu, Frequency (2000). Queens, Saturday October 11, 1969.
-Two-sided US Letter card the neighborhood firehouse prints for the block's Game One supper:
-the radio goes on the apparatus floor, the men cook, Julia Sullivan's pie comes down from the house.
-House style lock (Jurassic system). Run prep.py first. Writes front.html, back.html, film.json and
-sullivansupper.labels.json."""
+"""Firehouse World Series Supper window card, Frequency (2000). Queens, Saturday October 11, 1969.
+One 11 x 14 inch card the neighborhood firehouse posts in windows up and down the block: the radio
+goes on the apparatus floor, the men cook, Julia Sullivan's pie comes down from the house.
+Signature piece: painted firehouse at dusk under the northern lights (paint.py). Run prep.py and
+paint.py first. Writes card.html, film.json and sullivansupper.labels.json."""
 import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
-W, H = 816, 1056
-NAVY, ORANGE, PAPER, MUTE = '#1b2a55', '#dd5a22', '#e2e8e8', '#4a5670'
+W, H = 1056, 1344
+NAVY, ORANGE, PAPER, MUTE, PEACH = '#1b2a55', '#dd5a22', '#e2e8e8', '#4a5670', '#f4a259'
 FONTS = ('family=Alfa+Slab+One&family=Oswald:wght@500;600'
          '&family=Lora:ital,wght@0,400;0,600;1,400&family=Homemade+Apple')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=block">'
@@ -42,8 +42,8 @@ def item(n, d, p, note=None, top=22):
     nt = (f'<div style="{SERIF}; font-style: italic; font-size: 18px; line-height: 1.3; color: {ORANGE}; margin-top: 3px">{note}</div>'
           if note else '')
     return f'''<div style="margin-top: {top}px">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-        <div style="{SLAB}; font-size: 26px; line-height: 1.1; color: {NAVY}">{n}</div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px">
+        <div style="{SLAB}; font-size: 26px; line-height: 1.1; color: {NAVY}; white-space: nowrap">{n}</div>
         <div style="{SLAB}; font-size: 26px; white-space: nowrap; color: {ORANGE}">{p}</div></div>
       <div style="{SERIF}; font-size: 20px; line-height: 1.34; margin-top: 4px; color: #262b38; text-wrap: pretty">{d}</div>{nt}</div>'''
 
@@ -57,106 +57,69 @@ def A(k, top=22):
     return item(*ADD[k], top=top)
 
 
-def pennant(t, sub=None):
-    """Navy swallowtail pennant: a flat bar plus two border triangles cut into the right end."""
-    s = (f'<span style="{COND}; font-weight: 500; font-size: 18px; letter-spacing: 0.16em; color: #f4a259; margin-left: 16px; '
-         f'white-space: nowrap; position: relative; top: -6px">{sub}</span>') if sub else ''
-    return (f'<div style="display: inline-flex; align-items: stretch; height: 58px">'
-            f'<div style="background: {NAVY}; color: {PAPER}; padding: 0 18px 0 22px; display: flex; align-items: center; {SLAB}; '
-            f'font-size: 40px; line-height: 1; letter-spacing: 0.01em; text-transform: uppercase; white-space: nowrap">{t}{s}</div>'
-            f'<div style="width: 0; height: 0; border-top: 29px solid {NAVY}; border-bottom: 29px solid {NAVY}; border-right: 26px solid transparent"></div></div>')
+def section(kick, title, body):
+    return f'''<div>
+      <div style="{COND}; font-weight: 600; font-size: 18px; letter-spacing: 0.2em; text-transform: uppercase; color: {ORANGE}">{kick}</div>
+      <div style="{SLAB}; font-size: 44px; line-height: 1; text-transform: uppercase; color: {NAVY}; margin-top: 2px">{title}</div>
+      <div style="height: 5px; background: {ORANGE}; margin-top: 8px"></div>
+      <div style="height: 1px; background: {NAVY}; margin-top: 3px"></div>{body}</div>'''
 
 
-def kicker(t, extra=''):
-    return (f'<div style="{COND}; font-weight: 600; font-size: 19px; letter-spacing: 0.22em; text-transform: uppercase; '
-            f'color: {ORANGE}; {extra}">{t}</div>')
-
-
-def face(inner):
-    stripes = (f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 16px; background: {NAVY}"></div>'
-               f'<div style="position: absolute; left: 0; top: 16px; width: {W}px; height: 6px; background: {ORANGE}"></div>'
-               f'<div style="position: absolute; left: 0; top: {H - 22}px; width: {W}px; height: 6px; background: {ORANGE}"></div>'
-               f'<div style="position: absolute; left: 0; top: {H - 16}px; width: {W}px; height: 16px; background: {NAVY}"></div>')
-    fade = (f'<div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; '
-            'background: radial-gradient(ellipse 80% 74% at 50% 48%, rgba(240,244,244,0.10) 0%, rgba(240,244,244,0.06) 55%, rgba(150,140,110,0.30) 100%)"></div>')
-    grain = (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; '
-             f'height: {H}px; pointer-events: none; display: block; opacity: 0.8">')
-    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {NAVY}">'
-            f'{inner}{stripes}{fade}{grain}</div>')
-
-
-L, CW = 56, 704
-
-front = face(f'''
-<div style="position: absolute; left: {L}px; top: 50px; width: {CW}px">
-  <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('The firehouse invites the whole block')}{kicker('Queens, N.Y.', 'color: ' + MUTE)}</div>
-  <div style="{SLAB}; font-size: 72px; line-height: 1; text-transform: uppercase; white-space: nowrap; margin-top: 8px">World Series</div>
-  <div style="display: flex; justify-content: space-between; align-items: flex-end">
-    <div style="{SLAB}; font-size: 72px; line-height: 1; text-transform: uppercase; color: {ORANGE}">Supper</div>
-    <div style="text-align: right; padding-bottom: 4px; white-space: nowrap">
-      <div style="{COND}; font-weight: 600; font-size: 22px; letter-spacing: 0.12em; text-transform: uppercase">Saturday, Oct. 11, 1969</div>
-      <div style="{SERIF}; font-size: 19px; line-height: 1.35; color: {MUTE}; margin-top: 4px">Game One on the radio at noon.<br>Supper from four. Bring the kids.</div></div></div>
-  <div style="height: 4px; background: {NAVY}; margin-top: 12px"></div>
-  <div style="margin-top: 16px; border: 3px solid {ORANGE}; padding: 3px; background: #f3f5f2">
-    <img src="assets/hero-batting.jpg" alt="Frank Sullivan teaching his son to bat in front of the house" style="display: block; width: 692px; height: 272px"></div>
-  <div style="{SERIF}; font-style: italic; font-size: 17px; color: {MUTE}; margin-top: 7px">Batting practice out front. Little Chief is ready for the big leagues.</div>
-  <div style="margin-top: 20px">{pennant('From the Kitchen', 'FROM 4 P.M.')}</div>
-  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px">
-    <div>{S('Firehouse chilli bites', 14)}{S('Miracle Mets pretzels with beer mustard', 26)}</div>
-    <div>{S('Queens pizza', 14, note=True)}{A('hero', 26)}</div></div>
-</div>
-<div style="position: absolute; left: {L}px; top: 972px; width: {CW}px; border-top: 1px solid {NAVY}; padding-top: 10px; display: flex; justify-content: space-between; {COND}; font-weight: 500; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: {MUTE}">
-  <span>Tickets and tables: see Frank or Satch</span><span>Northern lights forecast tonight</span></div>''')
-
-ticket = f'''<div style="position: relative; width: 276px; background: #f6d9b4; border: 2px solid {ORANGE}; transform: rotate(-2.5deg); display: flex">
-  <div style="flex: 1; padding: 10px 14px 8px">
-    <div style="{COND}; font-weight: 600; font-size: 15px; letter-spacing: 0.18em; color: {ORANGE}">RAFFLE</div>
-    <div style="{SLAB}; font-size: 22px; line-height: 1.05; color: {NAVY}; margin-top: 2px">Transistor Radio</div>
-    <div style="{SERIF}; font-size: 15px; line-height: 1.3; color: #3a3a3a; margin-top: 4px">25¢ each, five for $1.<br>Drawn by the Chief.</div></div>
+ticket = f'''<div style="width: 262px; background: #f6d9b4; border: 2px solid {ORANGE}; transform: rotate(-3deg); display: flex">
+  <div style="flex: 1; padding: 9px 12px 9px">
+    <div style="{COND}; font-weight: 600; font-size: 15px; letter-spacing: 0.18em; color: {ORANGE}">RAFFLE, 25¢ OR 5 FOR $1</div>
+    <div style="{SLAB}; font-size: 22px; line-height: 1.05; color: {NAVY}; margin-top: 3px">Transistor Radio</div>
+    <div style="{SERIF}; font-size: 15px; line-height: 1.3; color: #3a3a3a; margin-top: 4px">Drawn at supper. Tickets from Frank or Satch.</div></div>
   <div style="width: 0; border-left: 2px dashed {ORANGE}"></div>
-  <div style="width: 66px; display: flex; flex-direction: column; align-items: center; justify-content: center">
+  <div style="width: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center">
     <div style="{COND}; font-weight: 500; font-size: 14px; letter-spacing: 0.1em; color: {MUTE}">NO.</div>
-    <div style="{SLAB}; font-size: 22px; color: {ORANGE}">1012</div></div></div>'''
+    <div style="{SLAB}; font-size: 19px; color: {ORANGE}">1012</div></div></div>'''
 
-stamp = f'''<div style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid rgba(221,90,34,0.82); display: flex; align-items: center; justify-content: center; transform: rotate(12deg); opacity: 0.9">
-  <div style="width: 86px; height: 86px; border-radius: 50%; border: 1.5px solid rgba(221,90,34,0.82); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center">
-    <div style="{COND}; font-weight: 600; font-size: 14px; letter-spacing: 0.1em; color: rgba(221,90,34,0.9)">SUPPER</div>
-    <div style="{SLAB}; font-size: 21px; line-height: 1; color: rgba(221,90,34,0.9); margin: 2px 0">PAID</div>
-    <div style="{COND}; font-weight: 600; font-size: 14px; letter-spacing: 0.06em; color: rgba(221,90,34,0.9)">10.11.69</div></div></div>'''
+L, CW = 56, 944
+PH = 530   # visible height of the painting
 
-back = face(f'''
-<div style="position: absolute; left: {L}px; top: 50px; width: {CW}px">
-  <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('World Series Supper')}{kicker('Saturday, Oct. 11, 1969', 'color: ' + MUTE)}</div>
-  <div style="display: grid; grid-template-columns: 392px 284px; column-gap: 28px; margin-top: 14px">
-    <div>
-      {pennant('The Table')}
-      {S("Julia's apple pie", 14, note=True)}{A('chief', 24)}
-      <div style="height: 1px; background: {NAVY}; margin-top: 22px"></div>
-      <div style="margin-top: 22px">{pennant('The Cooler')}</div>
-      {S('Firehouse lemon shandy', 14)}{A('lemonade', 22)}{A('coffee', 22)}{A('cocoa', 22)}</div>
-    <div style="position: relative">
-      <div style="border: 3px solid {ORANGE}; padding: 3px; background: #f3f5f2; margin-top: 4px">
-        <img src="assets/spot-radio.jpg" alt="Frank Sullivan at his ham radio set at home" style="display: block; width: 272px; height: 202px"></div>
-      <div style="{SERIF}; font-style: italic; font-size: 17px; line-height: 1.3; color: {MUTE}; margin-top: 7px">Frank Sullivan on his ham set. If the big radio quits, his gets the game.</div>
-      <div style="margin-top: 20px">{kicker('A word from the house', 'font-size: 18px')}</div>
-      <div style="{SERIF}; font-size: 20px; line-height: 1.38; margin-top: 6px; color: #262b38">Our boys are in the Series, and the block is family tonight. If the bell rings, we roll, but the chili stays hot and we'll be back for pie. Over and out.</div>
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px">
-        <div><div style="{HAND}; font-size: 26px; line-height: 1.6; color: #23336e; white-space: nowrap; transform: rotate(-3deg); transform-origin: 0 50%">Frank Sullivan</div>
-        <div style="{COND}; font-weight: 500; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; color: {MUTE}">for the men of the house</div></div>
-        {stamp}</div>
-      <div style="margin-top: 18px; margin-left: 2px">{ticket}</div>
-      </div></div>
+inner = f'''
+<div style="position: absolute; left: 0; top: 0; width: {W}px; height: {PH}px; overflow: hidden; background: {NAVY}">
+  <img src="assets/firehouse-dusk.jpg" alt="Painting of the Queens firehouse at dusk, northern lights over the block and a ham radio aerial on the roof" style="display: block; width: {W}px; height: 560px"></div>
+<div style="position: absolute; left: {L}px; top: 54px; width: 560px">
+  <div style="{COND}; font-weight: 600; font-size: 19px; letter-spacing: 0.22em; text-transform: uppercase; color: {PEACH}">The firehouse invites the whole block</div>
+  <div style="{SLAB}; font-size: 92px; line-height: 0.98; text-transform: uppercase; color: {PAPER}; margin-top: 10px; white-space: nowrap">World Series</div>
+  <div style="{SLAB}; font-size: 92px; line-height: 0.98; text-transform: uppercase; color: {PEACH}; white-space: nowrap">Supper</div></div>
+<div style="position: absolute; left: 0; top: {PH}px; width: {W}px; height: 6px; background: {ORANGE}"></div>
+<div style="position: absolute; left: 0; top: {PH + 6}px; width: {W}px; height: 54px; background: {NAVY}"></div>
+<div style="position: absolute; left: {L}px; top: {PH + 6}px; width: {CW}px; height: 54px; display: flex; justify-content: space-between; align-items: center; {COND}; font-weight: 500; font-size: 20px; letter-spacing: 0.14em; text-transform: uppercase; color: {PAPER}">
+  <span>Saturday, Oct. 11, 1969</span><span style="color: {PEACH}">Game One on the radio at noon</span><span>Supper from four</span></div>
+<div style="position: absolute; left: {L}px; top: {PH + 84}px; width: {CW}px; display: grid; grid-template-columns: 300px 300px 300px; column-gap: 22px">
+  {section('Cooked by the men', 'Kitchen', S('Firehouse chilli bites', 16) + S('Miracle Mets pretzels with beer mustard') + S('Queens pizza', note=True))}
+  {section('Supper plates', 'Table', A('hero', 16) + S("Julia's apple pie", note=True) + A('chief'))}
+  {section('Hot and cold', 'Cooler', S('Firehouse lemon shandy', 16) + A('lemonade') + A('coffee') + A('cocoa'))}
 </div>
-<div style="position: absolute; left: {L}px; top: 960px; width: {CW}px; border-top: 1px solid {NAVY}; padding-top: 10px; display: flex; justify-content: space-between; {SERIF}; font-size: 16px; color: {MUTE}">
-  <span>Prices subject to change. Proceeds to the Widows and Orphans Fund.</span><span>Form 10-12-69</span></div>''')
+<div style="position: absolute; left: {L}px; top: 1150px; width: {CW}px; display: flex; align-items: center; gap: 22px; border-top: 1px solid {NAVY}; padding-top: 16px">
+  <div style="flex: none; border: 3px solid {ORANGE}; padding: 3px; background: #f3f5f2"><img src="assets/spot-radio.jpg" alt="Frank Sullivan at his ham radio set" style="display: block; width: 150px; height: 112px"></div>
+  <div style="flex: 1">
+    <div style="{SERIF}; font-size: 20px; line-height: 1.34; color: #262b38; text-wrap: pretty">Our boys are in the Series and the block is family tonight. If the bell rings we roll, but the chili stays hot. Over and out.</div>
+    <div style="display: flex; align-items: baseline; gap: 14px; margin-top: 2px">
+      <div style="{HAND}; font-size: 24px; line-height: 1.7; color: #23336e; white-space: nowrap; transform: rotate(-2deg)">Frank Sullivan</div>
+      <div style="{COND}; font-weight: 500; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: {MUTE}; white-space: nowrap">for the men of the house</div></div></div>
+  <div style="flex: none">{ticket}</div></div>
+<div style="position: absolute; left: {L}px; top: 1278px; width: {CW}px; display: flex; justify-content: space-between; {SERIF}; font-size: 16px; color: {MUTE}">
+  <span>Prices subject to change. Proceeds to the Widows and Orphans Fund. Please post in your window.</span><span>Form 10-12-69</span></div>'''
 
-for name, body in (('front', front), ('back', back)):
-    open(os.path.join(D, name + '.body.html'), 'w').write(body)
-    open(os.path.join(D, name + '.html'), 'w').write(
-        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>World Series Supper</title>{LINK}<style>body{{margin:0}}</style></head><body>{body}</body></html>')
+fade = (f'<div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; '
+        'background: radial-gradient(ellipse 80% 74% at 50% 52%, rgba(240,244,244,0.06) 0%, rgba(240,244,244,0.04) 55%, rgba(150,140,110,0.28) 100%)"></div>')
+grain = (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; '
+         f'height: {H}px; pointer-events: none; display: block; opacity: 0.75">')
+stripes = (f'<div style="position: absolute; left: 0; top: {H - 22}px; width: {W}px; height: 6px; background: {ORANGE}"></div>'
+           f'<div style="position: absolute; left: 0; top: {H - 16}px; width: {W}px; height: 16px; background: {NAVY}"></div>')
+card = (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {NAVY}">'
+        f'{inner}{stripes}{fade}{grain}</div>')
 
-json.dump({"fmt": "sullivansupper", "fn": "fmtSullivanSupper", "faces": ["front.html", "back.html"], "names": ["Front", "Back"],
-           "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Alfa Slab One", "Oswald", "Lora", "Homemade Apple"],
+open(os.path.join(D, 'card.body.html'), 'w').write(card)
+open(os.path.join(D, 'card.html'), 'w').write(
+    f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>World Series Supper</title>{LINK}<style>body{{margin:0}}</style></head><body>{card}</body></html>')
+
+json.dump({"fmt": "sullivansupper", "fn": "fmtSullivanSupper", "faces": ["card.html"], "names": ["Window card"],
+           "mm": [279.4, 355.6], "fonts": FONTS, "fams": ["Alfa Slab One", "Oswald", "Lora", "Homemade Apple"],
            "phone": {"disp": "'Alfa Slab One',serif", "title": "'Alfa Slab One',serif", "name": "'Alfa Slab One',serif",
                      "body": "'Lora',serif", "price": "'Alfa Slab One',serif", "note": "'Lora',serif"}},
           open(os.path.join(D, 'film.json'), 'w'), indent=1)

@@ -83,14 +83,14 @@ def outside():
     o.append(f'<div style="position: absolute; left: {M}px; top: 690px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.45"></div>')
     o.append(box(M, 702, CW, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {MUTE}">'
                  'Whitehall St., N.Y. 10004. (212) 555-1988.<br>Prices subject to change. Form PM-88. Printed in U.S.A.</div>'))
-    o.append(reserved(M + CW - 176, 400))
+    o.append(reserved(M + CW - 170, 548))
     # cover: wordmark over the painted harbor
     o.append(f'<img src="assets/ferry-cover.png" alt="Painting of an orange ferry crossing the bay toward the downtown towers on a hazy morning" '
              f'style="position: absolute; left: {P + 1}px; top: 250px; width: {W - P - 1}px; height: 544px; display: block">')
     o.append(f'<div style="position: absolute; left: {P}px; top: 46px; width: {W - P}px; text-align: center">'
              + kicker('At the South Ferry &middot; Est. 1931', ORANGE, ' font-size: 17px') +
-             f'<div style="font-family: {DISP}; font-size: 76px; line-height: 0.98; color: {DARK}; margin-top: 18px; letter-spacing: 0.01em">WHITEHALL</div>'
-             f'<div style="font-family: {DISP}; font-size: 76px; line-height: 0.98; color: {DARK}; letter-spacing: 0.22em; margin-left: 0.22em">GRILL</div>'
+             f'<div style="font-family: {DISP}; font-size: 68px; line-height: 0.98; color: {DARK}; margin-top: 20px; letter-spacing: 0.01em">WHITEHALL</div>'
+             f'<div style="font-family: {DISP}; font-size: 68px; line-height: 1.02; color: {DARK}; letter-spacing: 0.22em; margin-left: 0.22em">GRILL</div>'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 21px; color: {INK}; margin-top: 14px">Luncheon, dinner and the long bar</div>'
              '</div>')
     return page(''.join(o), 'outside')
@@ -104,7 +104,7 @@ def inside():
                  + item('Crab cakes', '13.75', 'A pair, bound with egg, mayonnaise, Dijon, parsley and crumbs, browned in butter. Lemon and tartar sauce.', 14)
                  + item('Filet of sole', '14.25', 'Broiled with lemon butter and paprika. Rice pilaf, green beans almondine.', 14)
                  + item('Chopped steak', '9.75', 'Ten ounces of ground sirloin under fried onions, with steak fries.', 14)))
-    o.append(box(M, 618, 330, kicker('A word from a regular', ORANGE, ' font-size: 16px')
+    o.append(box(M, 604, 330, kicker('A word from a regular', ORANGE, ' font-size: 16px')
                  + f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.38; color: {INK}; margin-top: 8px">I read the Post, the Journal and the society pages on the boat. Big ideas turn up anywhere.</div>'
                  f'<div style="font-family: {SIGN}; font-size: 40px; line-height: 1; color: {DARK}; margin-top: 0">Tess McGill</div>'))
     o.append(matchbook(M + CW - 112, 596))
@@ -115,7 +115,7 @@ def inside():
                  + title('Wheeled to your table', 'The Pastry Cart')
                  + item('Vanilla layer cake', '3.75', 'Butter sponge split and spread with raspberry jam under Swiss meringue buttercream. Cut tall.', 14)
                  + item('Cheesecake', '3.95', 'Dense and rich, baked here every morning, with strawberries.', 14)))
-    o.append(box(X2, 712, CW, f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; color: {ORANGE}">A head for business? Try the steak.</div>'))
+    o.append(box(X2, 690, CW, f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; color: {ORANGE}">A head for business? Try the steak.</div>'))
     return page(''.join(o), 'inside')
 
 FACES = {'outside': outside(), 'inside': inside()}

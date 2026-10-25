@@ -121,9 +121,8 @@ def back():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 54px">{kicker("Dinner from five, supper until one", DARK)}</div>')
     o.append(f'<div style="position: absolute; left: {L - 2}px; top: 62px; font-family: {SCRIPT}; font-size: 60px; line-height: 1.45; color: {RED}">The Menu</div>')
-    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 92px; width: {CW - 300}px; text-align: right; font-family: {DISP}; font-weight: 700; '
-             f'font-size: 26px; line-height: 1.06; color: {DARK}; text-transform: uppercase; letter-spacing: 0.03em">The Tea Room<br>New York</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 164px; width: {CW}px; height: 9px; border-top: 3px solid {DARK}; border-bottom: 1px solid {RED}"></div>')
+    coat_check(o, L + CW - 122, 40)
     top = (head('From the kitchen')
            + item('Roast chicken', '19.82', 'Butter, grated lemon peel and thyme under the skin. Carved, with potatoes browned in the drippings.', 4)
            + item('Chicken Kiev', '16.75', 'Rolled around herb butter, breaded and fried golden. Careful with the first cut.')
@@ -142,7 +141,6 @@ def back():
              f'<img src="assets/spot-lunch.jpg" alt="A regular and her agent at the front banquette" style="display: block; width: 236px; height: 200px"></div>')
     o.append(f'<div style="position: absolute; left: {L + 318}px; top: {SY + 240}px; width: 248px; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.35; color: {MUTE}">'
              'Agents lunch here, and so do their clients.</div>')
-    coat_check(o, L + 464, SY - 4)
     o.append(f'<div style="position: absolute; left: {L}px; top: 1232px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
              f'<div style="position: absolute; left: {L}px; top: 1240px; width: {CW}px; font-family: {BODY}; font-size: 15px; line-height: 1.45; color: {MUTE}">'
              f'<div style="display: flex; justify-content: space-between"><span>West 57th St., N.Y. 10019. PLaza 7-1982.</span><span>Form 4-82</span></div>'

@@ -1,14 +1,15 @@
-"""Pemrose Corporation Executive Dining Room luncheon card (The Secret of My Success, 1987), on the house STYLE-LOCK system.
+"""Pemrose Corporation Executive Dining Room table card (The Secret of My Success, 1987).
 
+Format: slim table card, two faces 408 x 1056 px (4.25 x 11 in at 96 dpi).
 Venue: the executive dining room upstairs at Pemrose, the floor Brantley talks his way onto as Carlton Whitfield.
 Palette from the film's 1987 corporate world: dove grey stock, charcoal, boardroom burgundy.
-Art: two TMDB stills (front hero, back framed). No painted PNG. Props: routing slip (front), charge slip and stamp (back).
-US Letter, 8.5 x 11 in (816 x 1056 px at 96 dpi), two faces.
+Signature piece (paint.py): a tall engraved view of the Manhattan skyline through a Pemrose tower window,
+running the height of the front, with the venue lettered on the transom glass. Prop: the routing slip.
 """
 import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
-W, H = 816, 1056
+W, H = 408, 1056
 FILM = 'The Secret of My Success (1987)'
 
 FONTS = ('family=Archivo+Black&family=Archivo:wght@500;700;800'
@@ -27,72 +28,59 @@ SLIP = '#f6f2e6'
 
 # (spec key or None if added, printed name, price, printed description, note for the phone view)
 BEGIN = [
-    ('Pemrose boardroom canapés', 'Smoked salmon blini', '19.87',
-     'Warm buckwheat pancakes, crème fraîche, dill and cracked pepper.',
+    ('Pemrose boardroom canapés', 'Salmon blini', '19.87',
+     'Smoked salmon, crème fraîche and dill on warm buckwheat pancakes.',
      'Boardroom trays, order a day ahead.'),
     ('Kansas corn fritters', 'Kansas corn fritters', '3.25',
-     'Kernels and scallions in a light egg batter, fried by the spoonful. Sour cream to dip.',
+     'Kernels and scallions in egg batter, spoon-fried. Sour cream to dip.',
      'A taste of home, straight off the farm.'),
     (None, 'Shrimp cocktail', '7.50', 'Five jumbo shrimp on cracked ice, horseradish red sauce.', None),
 ]
-CART = [
-    ('Mailroom sandwich bites', 'Mail run sandwich', '2.75',
-     'Ham, cheddar and pickle on buttered white bread, crusts off.',
-     'Comes down on the mail cart at 11.'),
-]
 MAIN = [
     ('Executive rib eye', 'Executive rib eye', '16.50',
-     'Seared in a hot iron pan, basted with butter, garlic and thyme, sliced.',
+     'Seared in an iron pan, basted with butter, garlic and thyme.',
      'Charged to your department.'),
     ('Kansas farm fried chicken', 'Fried chicken', '8.75',
-     'Soaked in buttermilk overnight, floured and fried crisp. Mashed potatoes, pan gravy.',
+     'Buttermilk soaked, floured and fried crisp. Mashed potatoes, gravy.',
      'Like Mom makes back home.'),
+    ('Mailroom sandwich bites', 'Mail run sandwich', '2.75',
+     'Ham, cheddar and pickle on buttered white, crusts off.',
+     'Comes up on the mail cart at 11.'),
 ]
 FINISH = [
     ('Kansas apple pie', 'Apple pie à la mode', '3.50',
-     'Double crust, cinnamon apples, sugared top, vanilla ice cream.',
+     'Double crust, cinnamon apples, vanilla ice cream.',
      'To finish, with coffee by the pot.'),
-]
-BAR = [
-    ('Martini', 'Gin martini', '4.75', 'Stirred with dry vermouth, up in a frozen glass, lemon twist.',
+    ('Martini', 'Gin martini', '4.75', 'Bar from 5:30. Dry vermouth, stirred, frozen glass, twist.',
      'Bar from 5:30 PM for those working late.'),
 ]
-ALL = BEGIN + CART + MAIN + FINISH + BAR
+ALL = BEGIN + MAIN + FINISH
 
 
 def ab(x, y, w, inner, style=''):
     return f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; {style}">{inner}</div>'
 
 
-def kicker(t, col=RED, align='left', size=18):
-    return f'<div style="text-align: {align}; font-family: {CAPS}; font-weight: 700; font-size: {size}px; letter-spacing: 0.24em; line-height: 22px; color: {col}">{t}</div>'
+def kicker(t, col=RED, align='left', size=18, sp='0.2em'):
+    return f'<div style="text-align: {align}; white-space: nowrap; font-family: {CAPS}; font-weight: 700; font-size: {size}px; letter-spacing: {sp}; line-height: 22px; color: {col}">{t}</div>'
 
 
-def bar(t):
-    """Charcoal band across the column with a burgundy tab on the left."""
-    return f'''<div style="position: relative; height: 50px; background: {INK}">
-      <div style="position: absolute; left: 0; top: 0; width: 12px; height: 50px; background: {RED}"></div>
-      <div style="position: absolute; left: 24px; top: 0; white-space: nowrap; font-family: {DISP}; font-size: 40px; line-height: 52px; letter-spacing: 0; color: {PAPER}">{t}</div></div>'''
+def head(t):
+    return f'''<div style="font-family: {DISP}; font-size: 40px; line-height: 42px; color: {INK}; white-space: nowrap">{t}</div>
+      <div style="margin-top: 4px; height: 2px; background: {RED}"></div>'''
 
 
 def item(name, price, desc, first=False):
-    return f'''<div style="margin-top: {0 if first else 14}px">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-        <span style="font-family: {CAPS}; font-weight: 800; font-size: 26px; line-height: 1.1; letter-spacing: -0.01em; color: {INK}">{name}</span>
-        <span style="font-family: {CAPS}; font-weight: 800; font-size: 26px; line-height: 1.1; color: {RED}">{price}</span></div>
-      <div style="margin-top: 4px; font-family: {BODY}; font-size: 20px; line-height: 1.32; color: {INK}; text-wrap: pretty">{desc}</div></div>'''
+    return f'''<div style="margin-top: {10 if first else 8}px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; white-space: nowrap">
+        <span style="font-family: {CAPS}; font-weight: 800; font-size: 26px; line-height: 29px; letter-spacing: -0.01em; color: {INK}">{name}</span>
+        <span style="font-family: {CAPS}; font-weight: 800; font-size: 26px; line-height: 29px; color: {RED}">{price}</span></div>
+      <div style="margin-top: 3px; font-family: {BODY}; font-size: 20px; line-height: 25px; color: {INK}; text-wrap: pretty">{desc}</div></div>'''
 
 
 def group(title, items, top=0):
-    rule = f'<div style="height: 1px; background: {INK}; opacity: 0.5; margin: 0 0 16px"></div>' if top else ''
-    return (f'<div style="margin-top: {top}px">{rule}{bar(title)}<div style="margin-top: 14px">'
-            + ''.join(item(n, p, d, i == 0) for i, (_, n, p, d, _) in enumerate(items)) + '</div></div>')
-
-
-def frame():
-    return (ab(0, 0, W, '', f'height: 14px; background: {INK}')
-            + ab(0, 14, W, '', f'height: 5px; background: {RED}')
-            + ab(0, H - 14, W, '', f'height: 14px; background: {INK}'))
+    return (f'<div style="margin-top: {top}px">{head(title)}'
+            + ''.join(item(n, p, d, i == 0) for i, (_, n, p, d, _) in enumerate(items)) + '</div>')
 
 
 def finish(face):
@@ -101,38 +89,29 @@ def finish(face):
   <img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; pointer-events: none">'''
 
 
-def face(name, inner, props):
+def face(name, inner, props=''):
     return f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}">
-  {frame()}
   {inner}
   {finish(name)}
   {props}
 </div>'''
 
 
-# ---------------------------------------------------------------- front: cover
-masthead = f'''<div style="display: flex; justify-content: space-between; align-items: baseline">
-    <span style="font-family: {DISP}; font-size: 34px; line-height: 40px; letter-spacing: 0.2em; color: {INK}">PEMROSE</span>
-    <span style="font-family: {CAPS}; font-weight: 700; font-size: 16px; letter-spacing: 0.24em; line-height: 20px; color: {SOFT}">CORPORATION &nbsp;&#9670;&nbsp; NEW YORK</span></div>
-  <div style="margin-top: 10px; height: 3px; background: {INK}"></div>
-  <div style="margin-top: 3px; height: 1px; background: {RED}"></div>'''
+# ---------------------------------------------------------------- front: the window
+transom = f'''
+  {ab(40, 42, 328, f'<div style="text-align: center; font-family: {DISP}; font-size: 36px; line-height: 40px; letter-spacing: 0.2em; padding-left: 0.2em; color: {INK}">PEMROSE</div>')}
+  {ab(40, 86, 328, kicker('CORPORATION', SOFT, 'center', 18, '0.3em'))}
+  {ab(64, 118, 280, '', f'height: 1px; background: {INK}')}
+  {ab(40, 130, 328, kicker('THE EXECUTIVE', RED, 'center', 20, '0.24em'))}
+  {ab(30, 156, 348, f'<div style="text-align: center; font-family: {DISP}; font-size: 64px; line-height: 64px; letter-spacing: -0.01em; color: {INK}">DINING<br>ROOM</div>')}
+  {ab(40, 296, 328, kicker('LUNCHEON 12 TO 2:30', RED, 'center', 18, '0.2em'))}'''
 
-note = f'''{kicker('FROM THE PRESIDENT')}
-  <p style="margin: 12px 0 0; font-family: {BODY}; font-size: 20px; line-height: 1.45; color: {INK}; text-wrap: pretty">Lean times call for clear heads and a proper lunch. Charges now go to your department, so spend it as if it were your own.</p>
-  <div style="margin-top: 2px; font-family: {SIGN}; font-size: 54px; line-height: 0.95; color: #23305a">Howard Prescott</div>
-  <div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {SOFT}">President and Chief Executive Officer</div>'''
-
-front_inner = f'''
-  {ab(64, 52, 688, masthead)}
-  {ab(64, 134, 688, kicker('LUNCHEON 12 NOON TO 2:30 &nbsp;&#9670;&nbsp; BAR FROM 5:30', RED, 'center'))}
-  {ab(40, 166, 736, f'<div style="text-align: center; font-family: {DISP}; font-size: 66px; line-height: 68px; letter-spacing: -0.01em; color: {INK}">THE EXECUTIVE<br>DINING ROOM</div>')}
-  <div style="position: absolute; left: 64px; top: 320px; width: 688px; height: 395px; border: 2px solid {RED}; box-sizing: border-box; background: #fbfaf6; padding: 5px">
-    <img src="assets/still-view.jpg" alt="" style="display: block; width: 674px; height: 381px"></div>
-  {ab(64, 723, 688, f'<div style="text-align: right; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 22px; color: {SOFT}">Window tables upstairs, by request. Empty offices need a work order.</div>')}
-  {ab(64, 760, 410, note)}
-  {ab(64, 988, 688, f'''<div style="display: flex; justify-content: space-between; font-family: {BODY}; font-size: 16px; line-height: 20px; color: {SOFT}">
-    <span>Food Services, ext. 4110. Form EDR-87.</span><span>Prices subject to change. 1987.</span></div>''')}
-'''
+note = f'''<div style="position: absolute; left: 40px; top: 776px; width: 328px; height: 228px; background: {SLIP}; box-sizing: border-box;
+    border: 1px solid {RED}; box-shadow: 1px 2px 5px rgba(40,30,25,0.25); padding: 14px 18px">
+    {kicker('FROM THE PRESIDENT', RED, 'left', 18, '0.2em')}
+    <p style="margin: 8px 0 0; font-family: {BODY}; font-size: 20px; line-height: 26px; color: {INK}; text-wrap: pretty">Lean times call for a proper lunch. Charges go to your department. Elevators are not changing rooms.</p>
+    <div style="margin-top: 0; font-family: {SIGN}; font-size: 48px; line-height: 46px; color: #23305a">Howard Prescott</div>
+    <div style="font-family: {BODY}; font-size: 16px; line-height: 20px; color: {SOFT}">President and Chief Executive Officer</div></div>'''
 
 
 def box(on):
@@ -141,43 +120,37 @@ def box(on):
 
 
 def row(n, name, on, strike=False):
-    st = 'text-decoration: line-through; text-decoration-color: ' + RED + '; text-decoration-thickness: 2px;' if strike else ''
-    return f'''<div style="display: flex; gap: 10px; margin-top: 7px; font-family: {BODY}; font-size: 17px; line-height: 22px; white-space: nowrap; color: {INK}">
-      {box(on)}<span style="width: 18px">{n}.</span><span style="{st}">{name}</span></div>'''
+    st = f'text-decoration: line-through; text-decoration-color: {RED}; text-decoration-thickness: 2px;' if strike else ''
+    return f'''<div style="display: flex; gap: 8px; margin-top: 6px; white-space: nowrap; font-family: {BODY}; font-size: 17px; line-height: 22px; color: {INK}">
+      {box(on)}<span style="width: 16px">{n}.</span><span style="{st}">{name}</span></div>'''
 
 
-routing = f'''<div style="position: absolute; left: 488px; top: 778px; width: 262px; height: 190px; transform: rotate(3deg);
-    background: {SLIP}; box-shadow: 1px 2px 5px rgba(40,30,25,0.28); box-sizing: border-box; padding: 12px 16px">
+routing = f'''<div style="position: absolute; left: 132px; top: 566px; width: 236px; height: 186px; transform: rotate(3deg);
+    background: {SLIP}; box-shadow: 1px 2px 5px rgba(40,30,25,0.30); box-sizing: border-box; padding: 11px 14px">
     <div style="font-family: {CAPS}; font-weight: 800; font-size: 14px; letter-spacing: 0.2em; line-height: 17px; color: {RED}">ROUTING SLIP</div>
     <div style="margin-top: 4px; height: 1px; background: {INK}"></div>
     {row(1, 'H. Prescott', True)}{row(2, 'C. Wills, Finance', True)}{row(3, 'B. Foster', False, True)}{row(4, 'C. Whitfield', True)}{row(5, 'F. Melrose, Mailroom', False)}
   </div>'''
 
-# ---------------------------------------------------------------- back: the menu
-L, C, G = 64, 330, 28
+front_inner = f'''
+  <img src="assets/skyline-engraving.png" alt="" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">
+  {transom}
+  {note}'''
+
+# ---------------------------------------------------------------- back: the menu, inside the same burgundy window frame
+frame = (ab(18, 18, 6, '', f'height: {H - 36}px; background: {RED}') + ab(W - 24, 18, 6, '', f'height: {H - 36}px; background: {RED}')
+         + ab(18, 18, W - 36, '', f'height: 6px; background: {RED}') + ab(18, H - 24, W - 36, '', f'height: 6px; background: {RED}'))
 back_inner = f'''
-  {ab(L, 60, 440, kicker('CHARGED TO YOUR DEPT.'))}
-  {ab(L, 88, 440, f'<div style="white-space: nowrap; font-family: {DISP}; font-size: 70px; line-height: 76px; color: {INK}">THE MENU</div>')}
-  {ab(L, 176, 380, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 24px; color: {INK}">Jackets and ties, please. Elevators are not changing rooms.</div>')}
-  <div style="position: absolute; left: 504px; top: 40px; width: 248px; height: 182px; border: 2px solid {RED}; box-sizing: border-box; background: #fbfaf6; padding: 5px">
-    <img src="assets/still-hall.jpg" alt="" style="display: block; width: 234px; height: 168px"></div>
-  {ab(400, 228, 352, f'<div style="text-align: right; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 20px; color: {SOFT}">The executive floor. Mr. Whitfield, settling in.</div>')}
-  {ab(L, 266, C, group('TO BEGIN', BEGIN) + group('MAIL CART', CART, 16))}
-  {ab(L + C + G, 266, C, group('ENTRÉES', MAIN) + group('TO FINISH', FINISH, 16) + group('AFTER 5:30', BAR, 16))}
-  {ab(L, 988, 688, f'''<div style="display: flex; justify-content: space-between; font-family: {BODY}; font-size: 16px; line-height: 20px; color: {SOFT}">
-    <span></span><span>Ext. 4110. Prices subject to change. 1987.</span></div>''')}
+  {frame}
+  {ab(40, 42, 328, kicker('CHARGED TO YOUR DEPT.', RED, 'center', 18, '0.2em'))}
+  {ab(40, 76, 328, group('TO BEGIN', BEGIN) + group('ENTRÉES', MAIN, 16) + group('TO FINISH', FINISH, 16))}
+  {ab(40, 994, 328, f'<div style="text-align: center; font-family: {BODY}; font-size: 16px; line-height: 20px; color: {SOFT}">Form EDR-87. Prices subject to change.</div>')}
 '''
-charge = f'''<div style="position: absolute; left: 70px; top: 892px; width: 300px; height: 96px; transform: rotate(-2.5deg);
-    background: {SLIP}; box-shadow: 1px 2px 5px rgba(40,30,25,0.28); box-sizing: border-box; padding: 11px 16px">
-    <div style="display: flex; justify-content: space-between; gap: 10px; white-space: nowrap; font-family: {CAPS}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; line-height: 17px; color: {RED}"><span>DINING ROOM CHARGE</span><span>No. 1987</span></div>
-    <div style="margin-top: 5px; height: 1px; background: {INK}"></div>
-    <div style="margin-top: 6px; font-family: {BODY}; font-size: 17px; line-height: 23px; color: {INK}">Name: <b>C. Whitfield</b><br>Dept.: <b>Executive, see H.P.</b></div>
-  </div>'''
 
 FRONT = face('front', front_inner, routing)
-BACK = face('back', back_inner, charge)
+BACK = face('back', back_inner)
 
-for name, body, title in (('front', FRONT, 'Pemrose dining room menu, front'), ('back', BACK, 'Pemrose dining room menu, back')):
+for name, body, title in (('front', FRONT, 'Pemrose table card, front'), ('back', BACK, 'Pemrose table card, back')):
     open(os.path.join(D, name + '.body.html'), 'w').write(body)
     open(os.path.join(D, name + '.html'), 'w').write(
         f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{title}</title>{LINK}'
@@ -185,7 +158,7 @@ for name, body, title in (('front', FRONT, 'Pemrose dining room menu, front'), (
 
 json.dump({
     'fmt': 'mailroomexecutive', 'fn': 'fmtMailroomExecutive', 'faces': ['front.html', 'back.html'], 'names': ['Front', 'Back'],
-    'mm': [215.9, 279.4], 'fonts': FONTS,
+    'mm': [107.95, 279.4], 'fonts': FONTS,
     'fams': ['Archivo Black', 'Archivo', 'Source Serif 4', 'Herr Von Muellerhoff'],
     'phone': {'disp': "'Archivo Black',sans-serif", 'title': "'Archivo Black',sans-serif", 'name': "'Archivo',sans-serif",
               'body': "'Source Serif 4',serif", 'price': "'Archivo',sans-serif", 'note': "'Source Serif 4',serif"},
