@@ -1,0 +1,31 @@
+{
+ "fmt": "oceansupper",
+ "fn": "fmtOceanSupper",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Gloock&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Tenor+Sans&family=Mrs+Saint+Delafield",
+ "fams": [
+  "Gloock",
+  "Crimson Pro",
+  "Tenor Sans",
+  "Mrs Saint Delafield"
+ ],
+ "phone": {
+  "disp": "'Gloock',serif",
+  "title": "'Gloock',serif",
+  "name": "'Crimson Pro',serif",
+  "body": "'Crimson Pro',serif",
+  "price": "'Crimson Pro',serif",
+  "note": "'Crimson Pro',serif"
+ }
+}

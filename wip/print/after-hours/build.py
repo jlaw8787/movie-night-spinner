@@ -9,9 +9,9 @@ A = os.path.join(D, 'assets')
 W, H = 816, 1056
 NIGHT, RED, YEL, CREAM = '#132b34', '#d23b2b', '#f1dd96', '#f6efd9'
 INK = '#16262c'
-FONTS = ('https://fonts.googleapis.com/css2?family=Monoton&family=Bebas+Neue'
+FONTS = ('https://fonts.googleapis.com/css2?family=Monoton&family=Anton'
          '&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Mrs+Saint+Delafield&family=Gloria+Hallelujah&display=swap')
-SIGN = "'Monoton', sans-serif"; DISP = "'Bebas Neue', sans-serif"; BODY = "'PT Serif', serif"
+SIGN = "'Monoton', sans-serif"; DISP = "'Anton', sans-serif"; BODY = "'PT Serif', serif"
 SCRIPT = "'Mrs Saint Delafield', cursive"; HAND = "'Gloria Hallelujah', cursive"
 L, CW = 56, 704
 
@@ -23,7 +23,7 @@ def crop(src, out, box, size, bright=1.0):
     im.save(os.path.join(A, out), quality=90)
 
 # Julie at a table (no brands in frame). Bar shot cropped above the bottle label and below the beer sign.
-crop('src-julie.jpg', 'still-julie.jpg', (0, 40, 1600, 900), (1384, 744), 1.08)
+crop('src-julie.jpg', 'still-julie.jpg', (0, 60, 1600, 810), (1408, 660), 1.08)
 crop('src-bar.jpg', 'still-bar.jpg', (0, 230, 1880, 900), (956, 340), 1.12)
 
 
@@ -107,12 +107,12 @@ def front():
              f'<div style="flex: 1; height: 2px; background: {YEL}"></div>'
              f'<div style="font-family: {DISP}; font-size: 40px; line-height: 1; letter-spacing: 0.3em; color: {CREAM}; padding-left: 0.3em">BAR AND GRILL</div>'
              f'<div style="flex: 1; height: 2px; background: {YEL}"></div></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 272px; width: {CW}px; height: 372px; background: {CREAM}; padding: 0; outline: 3px solid {YEL}; outline-offset: 5px">'
-             f'<img src="assets/still-julie.jpg" alt="A regular at a table, the waitress leaning in to take his order" style="display: block; width: {CW}px; height: 372px; object-fit: cover"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 660px; width: {CW}px; display: flex; justify-content: space-between; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 272px; width: {CW}px; height: 330px; background: {CREAM}; padding: 0; outline: 3px solid {YEL}; outline-offset: 5px">'
+             f'<img src="assets/still-julie.jpg" alt="A regular at a table, the waitress leaning in to take his order" style="display: block; width: {CW}px; height: 330px; object-fit: cover"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 618px; width: {CW}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-style: italic; font-size: 17px; color: {YEL}">'
              f'<span>Julie takes care of the tables. Tom pours.</span><span>The fare went up at midnight. Ours did not.</span></div>')
-    o.append(f'<div style="position: absolute; left: {L + 6}px; top: 712px; width: {CW - 6}px">'
+    o.append(f'<div style="position: absolute; left: {L + 6}px; top: 668px; width: {CW - 6}px">'
              f'<div style="display: flex; justify-content: space-between; align-items: center">{bar("From the grill", CREAM, NIGHT)}'
              f'{kicker("Hot till close", YEL)}</div>'
              + item('Last Stop burger', '4.75', 'Hand-formed chuck, salted right before the flat top, cooked medium under melted cheddar. Raw onion, dill pickles, toasted bun.', CREAM, gap=22)
@@ -121,9 +121,9 @@ def front():
     o.append(f'<div style="position: absolute; left: {L}px; top: 974px; width: {CW}px; height: 2px; background: {YEL}; opacity: 0.8"></div>'
              f'<div style="position: absolute; left: {L}px; top: 984px; width: {CW}px; display: flex; justify-content: space-between; align-items: baseline; '
              f'font-family: {BODY}; font-size: 17px; color: {CREAM}">'
-             f'{kicker("House rules", RED)}<span>Cash only.</span><span>Hold on to your twenty.</span><span>Menu inside, turn over.</span></div>')
+             f'{kicker("House rules", RED)}<span>Cash only.</span><span>Hold on to your twenty.</span><span>Full menu on the back.</span></div>')
     matchbook(o, L - 4, 300)
-    token(o, L + CW - 92, 584)
+    check(o, L + CW - 214, 372)
     return page(NIGHT, ''.join(o), 'wear-front.png', 0.22)
 
 
@@ -143,26 +143,25 @@ def back():
     left = (bar('To start', INK, YEL, 40)
             + item('Bagel bites', '3.50', 'Toasted minis spread thick with chive and black pepper cream cheese, smoked salmon, capers, sesame, poppy seed and garlic.', INK, 'Softer than a paperweight.', 22)
             + item('French fries', '1.50', 'Hand cut, fried twice, plenty of salt.', INK, '', 16)
-            + item('House chili', '2.25', 'Ground beef and kidney beans simmered all evening with cumin, ancho and tomato. Raw onion, saltines.', INK, '', 16)
-            + f'<div style="height: 2px; background: {INK}; opacity: 0.5; margin: 26px 0 28px"></div>'
+            + f'<div style="height: 2px; background: {INK}; opacity: 0.5; margin: 24px 0 26px"></div>'
             + bar('Sweets', INK, YEL, 40)
-            + item('Plaster of Paris cake', '2.50', 'Vanilla butter layers under thick seven-minute frosting, roughed up with a palette knife so it sets white and matte.', INK, 'For the sculptors on the block.', 22)
-            + item('Dipped cone', '1.75', 'Vanilla soft serve piled high, dipped in dark chocolate that sets to a shell, then crushed peanuts or sprinkles.', INK, 'Better than the truck.', 16))
+            + item('Plaster of Paris cake', '2.50', 'Vanilla butter layers under seven-minute frosting, roughed up with a palette knife to set white and matte.', INK, 'For the sculptors on the block.', 22)
+            + item('Dipped cone', '1.75', 'Vanilla soft serve dipped in dark chocolate that sets to a shell, then crushed peanuts or sprinkles.', INK, 'Better than the truck.', 16))
     right = (bar('Behind the bar', INK, YEL, 40)
              + item('Whiskey sour', '3.50', 'Bourbon, lemon, a little sugar and egg white shaken silky, bitters on the foam, a cherry.', INK, 'Tom shakes them hard.', 22)
              + item('Draft beer', '1.50', 'Cold, in a heavy mug.', INK, '', 16)
              + item('Shot and a beer', '2.75', 'Rye or bourbon with a draft back.', INK, '', 16)
              + item('Coffee', '.90', 'Fresh pot all night, refills free.', INK, '', 16)
              + f'<div style="margin-top: 24px; border: 3px solid {RED}; padding: 4px; background: {CREAM}">'
-             f'<img src="assets/still-bar.jpg" alt="The bartender and a customer at the bar late at night" style="display: block; width: 312px; height: 111px; object-fit: cover"></div>'
+             f'<img src="assets/still-bar.jpg" alt="The bartender and a customer at the bar late at night" style="display: block; width: 312px; height: 100px; object-fit: cover"></div>'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.35; color: {INK}; margin-top: 6px">The bar, a quiet night after midnight.</div>')
     o.append(col(L, left)); o.append(col(X2, right))
     # Tom's note
-    o.append(f'<div style="position: absolute; left: {X2 + 6}px; top: 760px; width: {COLW - 6}px">'
+    o.append(f'<div style="position: absolute; left: {X2 + 6}px; top: 846px; width: {COLW - 6}px">'
              + kicker('From behind the bar') +
-             f'<div style="font-family: {BODY}; font-size: 17.5px; line-height: 1.42; color: {INK}; margin-top: 8px">Lock up when you leave, there have been burglaries on the block. Going on to Club Berlin? Eat first.</div>'
+             f'<div style="font-family: {BODY}; font-size: 17.5px; line-height: 1.42; color: {INK}; margin-top: 8px">Lock up, there have been burglaries on the block. Off to Club Berlin? Eat first.</div>'
              f'<div style="font-family: {SCRIPT}; font-size: 54px; line-height: 1; color: {RED}; margin-top: -4px">Tom</div></div>')
-    check(o, L + CW - 222, 906)
+    token(o, L + CW - 92, 708)
     o.append(f'<div style="position: absolute; left: {L}px; top: 990px; width: 420px; height: 1px; background: {INK}; opacity: 0.5"></div>'
              f'<div style="position: absolute; left: {L}px; top: 996px; width: 420px; font-family: {BODY}; font-size: 15px; line-height: 1.3; color: {INK}">'
              f'Cash only. Prices subject to change. Form 1985.</div>')

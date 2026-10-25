@@ -57,8 +57,8 @@ def front():
     o.append(f'<div style="position: absolute; left: {L}px; top: 44px; width: {CW}px; display: flex; justify-content: space-between">'
              f'{kicker("Madison Ave. at 61st St.")}{kicker("Dinner", DARK)}</div>')
     o.append(f'<div style="position: absolute; left: {L - 3}px; top: 66px; font-family: {DISP}; font-size: 72px; line-height: 1.05; color: {DARK}">The Madison</div>')
-    o.append(f'<div style="position: absolute; left: {L + 420}px; top: 84px; width: {CW - 420}px; text-align: right; white-space: nowrap; font-family: {DISP}; font-size: 34px; '
-             f'line-height: 1; letter-spacing: 0.06em; color: {CORAL}; text-transform: uppercase">Oyster Room</div>')
+    o.append(f'<div style="position: absolute; left: {L + 420}px; top: 88px; width: {CW - 420}px; text-align: right; white-space: nowrap; font-family: {DISP}; font-size: 30px; '
+             f'line-height: 1; letter-spacing: 0.03em; color: {CORAL}; text-transform: uppercase">Oyster Room</div>')
     o.append(f'<div style="position: absolute; left: {L + 460}px; top: 128px; width: {CW - 460}px; text-align: right">{kicker("New York", MUTE, " font-size: 16px")}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 166px; width: {CW}px; height: 3px; background: {CORAL}"></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 186px; width: {CW}px; height: 372px; outline: 2px solid {CORAL}; outline-offset: 5px; overflow: hidden">'
@@ -117,9 +117,9 @@ def back():
             + bar('Desserts')
             + item('Blue sea gelatin', '3.25', 'Coconut cream set firm under a clear sea-blue layer, gummy fish on top.', '', 16)
             + item('Boston cream pie', '3.75', 'Sponge, vanilla custard, dark chocolate glaze.'))
-    right = (f'<div style="outline: 2px solid {CORAL}; outline-offset: 4px; margin-top: 6px"><img src="assets/still-cape.jpg" alt="The shore on Cape Cod at sunrise" '
+    right = (f'<div style="outline: 2px solid {CORAL}; outline-offset: 4px; margin-top: 6px"><img src="assets/still-uptown.jpg" alt="A couple in evening clothes, the Midtown skyline behind them" '
              f'style="display: block; width: {RW}px; height: 176px"></div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}; margin-top: 12px">The Cape, where our oysters grow.</div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}; margin-top: 12px">Two regulars, Midtown behind them.</div>'
              f'<div style="height: 22px"></div>'
              + bar('The bar')
              + item('Blue lagoon', '4.75', 'Vodka and blue cura&ccedil;ao over ice, topped with lemon-lime soda and a lemon wheel.', 'Must be 19 to order.', 16)

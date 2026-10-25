@@ -12,7 +12,7 @@ def crop(src, box, size, out):
     im.save(os.path.join(D, 'assets', out), quality=90)
 
 
-crop('s1.jpg', (0, 120, 3840, 2080), (1384, 706), 'still-park.jpg')       # shown 692x353
+crop('s1.jpg', (0, 170, 3840, 1962), (1384, 646), 'still-park.jpg')       # shown 692x323
 crop('s2.jpg', (40, 20, 1280, 720), (636, 359), 'still-flight.jpg')        # shown 318x179
 
 

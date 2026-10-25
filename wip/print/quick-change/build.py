@@ -17,23 +17,23 @@ HAND = "font-family: 'Dawning of a New Day', cursive"
 
 # spec key -> printed name, description, price, phone note
 SPEC = {
-  "Clown nose cherry tomatoes": ("Stuffed Cherry Tomatoes", "A dozen, filled with feta beaten smooth with basil, olive oil and grated lemon peel.", "3.95",
+  "Clown nose cherry tomatoes": ("Stuffed Cherry Tomatoes", "A dozen, filled with feta beaten smooth with basil, olive oil and lemon peel.", "3.95",
                                  "A red nose for every guest."),
   "Airport bar chilli-lime wings": ("Dynamite Wings", "Oven-crisped, tossed in honey, butter, lime and sweet chili sauce, with hot pepper flakes and cilantro.", "5.95",
                                     "Not as dangerous as they look."),
-  "Bodega sandwiches": ("Turkey & Swiss on a Kaiser", "Sliced roast breast, shredded iceberg, tomato, mayo and mustard. Wrapped tight to go.", "5.25",
+  "Bodega sandwiches": ("Turkey & Swiss on a Kaiser", "Roast breast, Swiss, iceberg, tomato, mayo and mustard. Wrapped to go.", "5.25",
                         "Wrapped to travel. You never know how long the trip takes."),
   "Clown cake": ("Clown Cake", "Jam sponge under white buttercream, with a piped face and a cherry nose.", "2.75",
                  "Every kid gets a balloon."),
-  "Wheels-up bourbon smash": ("Bourbon Smash", "Kentucky bourbon shaken hard with fresh mint, lemon and sugar, poured over crushed ice.", "4.75",
+  "Wheels-up bourbon smash": ("Bourbon Smash", "Bourbon shaken hard with fresh mint, lemon and sugar, over crushed ice.", "4.75",
                               "Last call 1:30 A.M."),
 }
 ADD = {
-  'nachos': ("Nachos Grande", "Tortilla chips under melted Monterey Jack, pickled jalapeños, sour cream and salsa.", "4.75"),
-  'burger': ("Cheeseburger Deluxe", "Half pound on a toasted bun, lettuce, tomato, onion, pickle and steak fries.", "5.95"),
+  'nachos': ("Nachos Grande", "Tortilla chips, melted Monterey Jack, jalapeños, sour cream and salsa.", "4.75"),
+  'burger': ("Cheeseburger Deluxe", "Half pound on a toasted bun with lettuce, tomato, onion and fries.", "5.95"),
   'cheesecake': ("New York Cheesecake", "Dense and creamy on a graham cracker crust.", "2.95"),
-  'beer': ("Draft Beer", "Sixteen ounce glass. Ask what's on tap.", "2.50"),
-  'coffee': ("Coffee", "The million dollar cup. Bottomless, with the morning paper.", "1.00"),
+  'beer': ("Draft Beer", "A cold sixteen ounce glass.", "2.50"),
+  'coffee': ("Coffee", "The million dollar cup. Bottomless.", "1.00"),
 }
 
 
@@ -92,81 +92,83 @@ def check_line(a, b, hand=True):
             f'<span style="{f}; line-height: 1">{a}</span><span style="{f}; line-height: 1">{b}</span></div>')
 
 
-CHECK = f'''<div style="position: absolute; left: 470px; top: 836px; width: 246px; background: #fbfaf2; padding: 10px 14px 12px; transform: rotate(3deg);
-  box-shadow: 0 3px 8px rgba(60,40,10,0.25)">
+CHECK = f'''<div style="position: absolute; left: 508px; top: 392px; width: 236px; background: #fbfaf2; padding: 10px 14px 12px; transform: rotate(4deg);
+  box-shadow: 0 3px 8px rgba(60,40,10,0.3)">
   <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid {GREEN}; padding-bottom: 4px">
-    <span style="{SANS}; font-weight: 800; font-size: 16px; letter-spacing: 0.12em; color: {GREEN}">GUEST CHECK</span>
-    <span style="{SANS}; font-weight: 800; font-size: 16px; color: {RED}">No. 0713</span></div>
+    <span style="{SANS}; font-weight: 800; font-size: 15px; letter-spacing: 0.12em; color: {GREEN}">GUEST CHECK</span>
+    <span style="{SANS}; font-weight: 800; font-size: 15px; color: {RED}">No. 0713</span></div>
   {check_line('Curb, NYPD', 'Chief R.')}
   {check_line('40 coffee', '40.00')}
   {check_line('2 dynamite wings', '11.90')}
   {check_line('Total', '51.90')}
-  <div style="position: absolute; left: 66px; top: 74px; border: 3px solid rgba(196,38,44,0.82); color: rgba(196,38,44,0.82); padding: 0 10px; {SANS}; font-weight: 900;
+  <div style="position: absolute; left: 70px; top: 76px; border: 3px solid rgba(196,38,44,0.82); color: rgba(196,38,44,0.82); padding: 0 10px; {SANS}; font-weight: 900;
     font-size: 30px; letter-spacing: 0.08em; transform: rotate(-12deg); border-radius: 4px">PAID</div>
-  <div style="position: absolute; left: 186px; top: -16px; width: 14px; height: 46px; border: 3px solid #9aa0a8; border-radius: 8px"></div></div>'''
+  <div style="position: absolute; left: 150px; top: -16px; width: 14px; height: 46px; border: 3px solid #9aa0a8; border-radius: 8px"></div></div>'''
 
-front = face(f'''
-<div style="position: absolute; left: {L}px; top: 50px; width: {CW}px">
-  <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('Midtown Manhattan, across from the bank', 'white-space: nowrap; letter-spacing: 0.16em')}{kicker('7 A.M. to 2 A.M.', 'white-space: nowrap; letter-spacing: 0.16em; color: ' + MUTE)}</div>
-  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 8px">
-    <div style="{SANS}; font-weight: 900; font-size: 76px; line-height: 0.9; letter-spacing: -0.035em; text-transform: uppercase; color: {INK}">Night<br><span style="color: {RED}">Deposit</span></div>
-    <div style="text-align: right; padding-bottom: 4px">
-      <div style="{SANS}; font-weight: 900; font-size: 40px; line-height: 1; letter-spacing: 0.06em; text-transform: uppercase">Bar &amp; Grill</div>
-      <div style="{SERIF}; font-style: italic; font-size: 18px; color: {MUTE}; margin-top: 8px">Breakfast, lunch, dinner and a late bar</div></div></div>
-  <div style="height: 4px; background: {INK}; margin-top: 14px"></div>
-  <div style="margin-top: 16px; border: 3px solid {RED}; padding: 6px; background: #fdf8e6">
-    <img src="assets/still-bank.jpg" alt="A clown and a bank guard in the bank lobby across the street" style="display: block; width: 686px; height: 360px"></div>
-  <div style="{SANS}; font-weight: 600; font-size: 16px; letter-spacing: 0.03em; color: {MUTE}; margin-top: 7px">Across the street, the afternoon a clown walked into the bank. We kept the coffee coming.</div>
-  <div style="margin-top: 20px">{bar('To Start', 'FROM 11 A.M.')}</div>
-  {S('Clown nose cherry tomatoes', 14)}
-  {S('Airport bar chilli-lime wings', 18)}
-  <div style="width: 400px">{A('nachos', 18)}</div>
-</div>
-<div style="position: absolute; left: {L}px; top: 900px; width: 390px; border-top: 1px solid {INK}; padding-top: 10px">
-  {kicker('A word from a regular', 'font-size: 15px')}
-  <div style="{SERIF}; font-size: 18px; line-height: 1.32; margin-top: 4px">Forty cups out to the curb and not one came back short. Best coffee on the block.</div>
-  <div style="display: flex; align-items: baseline; gap: 12px; margin-top: 2px">
-    <div style="{HAND}; font-size: 34px; line-height: 1.1; color: #26338a; transform: rotate(-3deg)">Walt Rotzinger</div>
-    <div style="{SANS}; font-weight: 600; font-size: 14px; color: {MUTE}">Chief, NYPD</div></div></div>
-{CHECK}''')
-
-COUPON = f'''<div style="margin-top: 18px; border: 2px dashed {RED}; background: #fbf3d6; padding: 10px 14px 12px; transform: rotate(-1.2deg)">
+COUPON = f'''<div style="margin-top: 22px; border: 2px dashed {RED}; background: #fbf3d6; padding: 10px 14px 12px; transform: rotate(-1.2deg)">
   <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('Coupon', 'font-size: 15px')}<span style="{SANS}; font-weight: 700; font-size: 14px; color: {MUTE}">Good thru 12/31/90</span></div>
   <div style="{SANS}; font-weight: 900; font-size: 26px; line-height: 1.05; margin-top: 4px; text-transform: uppercase">One free coffee</div>
   <div style="{SERIF}; font-size: 16px; line-height: 1.3; margin-top: 4px">Show us your bus transfer. Nobody here asks for exact change.</div></div>'''
 
-MATCH = f'''<div style="position: absolute; left: 196px; top: 456px; width: 132px; height: 196px; background: {INK}; transform: rotate(7deg); box-shadow: 0 3px 8px rgba(40,30,10,0.3)">
-  <div style="position: absolute; left: 0; top: 0; width: 132px; height: 6px; background: {RED}"></div>
-  <div style="{SANS}; font-weight: 900; font-size: 22px; line-height: 0.92; text-transform: uppercase; color: {PAPER}; text-align: center; margin-top: 22px; letter-spacing: -0.02em">Night<br><span style="color: {GOLD}">Deposit</span></div>
-  <div style="text-align: center; margin-top: 10px">{dots().replace('margin-left: 8px', 'margin: 0 3px')}</div>
-  <div style="{SANS}; font-weight: 700; font-size: 14px; color: {PAPER}; text-align: center; margin-top: 10px">(212) 555-0713</div>
-  <div style="position: absolute; left: 0; top: 150px; width: 132px; height: 46px; background: #b9a57a"></div>
-  <div style="position: absolute; left: 0; top: 150px; width: 132px; height: 6px; background: #3b3527"></div></div>'''
+GRID = 'display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px'
+
+front = face(f'''
+<div style="position: absolute; left: {L}px; top: 50px; width: {CW}px">
+  <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('Midtown, across from the bank', 'white-space: nowrap; letter-spacing: 0.16em')}{kicker('7 A.M. to 2 A.M.', 'white-space: nowrap; letter-spacing: 0.16em; color: ' + MUTE)}</div>
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-top: 8px">
+    <div style="{SANS}; font-weight: 900; font-size: 72px; line-height: 0.9; letter-spacing: -0.035em; text-transform: uppercase; color: {INK}">Night<br><span style="color: {RED}">Deposit</span></div>
+    <div style="text-align: right; padding-bottom: 4px">
+      <div style="{SANS}; font-weight: 900; font-size: 40px; line-height: 1; letter-spacing: 0.06em; text-transform: uppercase">Bar &amp; Grill</div>
+      <div style="{SERIF}; font-style: italic; font-size: 18px; color: {MUTE}; margin-top: 8px">Breakfast, lunch, dinner and a late bar</div></div></div>
+  <div style="height: 4px; background: {INK}; margin-top: 12px"></div>
+  <div style="margin-top: 14px; border: 3px solid {RED}; padding: 6px; background: #fdf8e6">
+    <img src="assets/still-bank.jpg" alt="A clown and a bank guard in the bank lobby across the street" style="display: block; width: 686px; height: 260px"></div>
+  <div style="{SANS}; font-weight: 600; font-size: 16px; letter-spacing: 0.03em; color: {MUTE}; margin-top: 7px">Across the street, the day a clown came to the bank.</div>
+  <div style="margin-top: 18px">{bar('To Start', 'FROM 11 A.M.')}</div>
+  <div style="{GRID}">
+    <div>{S('Clown nose cherry tomatoes', 14)}{A('nachos', 14)}</div>
+    <div>{S('Airport bar chilli-lime wings', 14)}{COUPON}</div></div>
+</div>
+<div style="position: absolute; left: {L}px; top: 926px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 10px; display: flex; gap: 24px; align-items: flex-end">
+  <div style="flex: 1">
+    {kicker('A word from a regular', 'font-size: 15px')}
+    <div style="{SERIF}; font-size: 18px; line-height: 1.32; margin-top: 4px">Forty cups out to the curb and not one came back short. Best coffee on the block.</div></div>
+  <div style="flex: none; width: 210px">
+    <div style="{HAND}; font-size: 36px; line-height: 1.1; color: #26338a; transform: rotate(-3deg)">Walt Rotzinger</div>
+    <div style="{SANS}; font-weight: 600; font-size: 14px; color: {MUTE}">Chief, NYPD</div></div></div>
+{CHECK}''')
+
+MATCH = f'''<div style="position: absolute; right: -16px; top: -12px; width: 112px; height: 166px; background: {INK}; transform: rotate(8deg) scale(0.8); transform-origin: 100% 0; box-shadow: 0 3px 8px rgba(40,30,10,0.3)">
+  <div style="position: absolute; left: 0; top: 0; width: 112px; height: 6px; background: {RED}"></div>
+  <div style="{SANS}; font-weight: 900; font-size: 20px; line-height: 0.92; text-transform: uppercase; color: {PAPER}; text-align: center; margin-top: 18px; letter-spacing: -0.02em">Night<br><span style="color: {GOLD}">Deposit</span></div>
+  <div style="text-align: center; margin-top: 8px">{dots().replace('margin-left: 8px', 'margin: 0 3px').replace('14px', '11px')}</div>
+  <div style="{SANS}; font-weight: 700; font-size: 14px; color: {PAPER}; text-align: center; margin-top: 8px">555-0713</div>
+  <div style="position: absolute; left: 0; top: 126px; width: 112px; height: 40px; background: #b9a57a"></div>
+  <div style="position: absolute; left: 0; top: 126px; width: 112px; height: 6px; background: #3b3527"></div></div>'''
 
 back = face(f'''
 <div style="position: absolute; left: {L}px; top: 54px; width: {CW}px">
   <div style="display: flex; justify-content: space-between; align-items: baseline">
     {kicker('Night Deposit Bar &amp; Grill')}{kicker('Kitchen till midnight', 'color: ' + MUTE)}</div>
   <div style="margin-top: 14px">{bar('Sandwiches', 'WITH A PICKLE')}</div>
-  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px">
+  <div style="{GRID}">
     <div>{S('Bodega sandwiches', 14)}</div>
     <div>{A('burger', 14)}</div></div>
-  <div style="height: 1px; background: {INK}; margin-top: 22px"></div>
-  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px; margin-top: 22px">
+  <div style="height: 1px; background: {INK}; margin-top: 20px"></div>
+  <div style="margin-top: 20px">{bar('Desserts', 'KIDS GET A BALLOON')}</div>
+  <div style="{GRID}">
+    <div>{S('Clown cake', 14)}</div>
+    <div>{A('cheesecake', 14)}</div></div>
+  <div style="height: 1px; background: {INK}; margin-top: 20px"></div>
+  <div style="{GRID}; margin-top: 20px">
     <div>
-      {bar('Desserts')}
-      {S('Clown cake', 14, note=True)}{A('cheesecake')}
-      <div style="height: 1px; background: {INK}; margin-top: 22px"></div>
-      <div style="margin-top: 22px">{bar('The Bar', 'TILL 2 A.M.')}</div>
-      {S('Wheels-up bourbon smash', 14)}{A('beer')}{A('coffee')}</div>
+      {bar('The Bar', 'TILL 2 A.M.')}
+      {S('Wheels-up bourbon smash', 14)}{A('beer', 16)}{A('coffee', 16)}</div>
     <div style="position: relative">
       {kicker('Our block')}
-      <div style="margin-top: 10px; border: 3px solid {RED}; padding: 5px; background: #fdf8e6"><img src="assets/still-lobby.jpg" alt="The bank lobby across the street, seen from above" style="display: block; width: 316px; height: 198px"></div>
+      <div style="margin-top: 10px; border: 3px solid {RED}; padding: 5px; background: #fdf8e6"><img src="assets/still-lobby.jpg" alt="The bank lobby across the street, seen from above" style="display: block; width: 316px; height: 180px"></div>
       <div style="{SERIF}; font-size: 18px; line-height: 1.32; margin-top: 8px">The bank lobby across the street. Tellers eat here, and so do the cops.</div>
-      {COUPON}
-      <div style="margin-top: 20px; border: 3px double {INK}; padding: 12px 14px 12px; width: 160px">
-        {kicker('To the airport', 'font-size: 15px; letter-spacing: 0.14em')}
-        <div style="{SERIF}; font-size: 16px; line-height: 1.3; margin-top: 4px">BQE signs are down for construction in Brooklyn. Ask the bartender.</div></div>
+      <div style="{SERIF}; font-size: 18px; line-height: 1.32; margin-top: 8px; color: {RED}; font-style: italic">Off to the airport? The BQE signs are down in Brooklyn. Ask the bartender.</div>
       {MATCH}</div></div>
 </div>
 <div style="position: absolute; left: {L}px; top: 976px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 10px; display: flex; justify-content: space-between; {SANS}; font-weight: 600; font-size: 16px; color: {MUTE}">

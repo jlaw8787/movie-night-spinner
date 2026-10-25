@@ -21,12 +21,12 @@ crop = ImageEnhance.Brightness(crop).enhance(1.10)
 crop = ImageEnhance.Contrast(crop).enhance(1.04)
 crop.resize((1408, 744), Image.LANCZOS).save(os.path.join(A, 'still-lounge.jpg'), quality=90)
 
-# Back: the Congressman at the podium, 340x204 at 2x
+# Back: the Congressman at the podium, 340x190 at 2x
 im = Image.open(os.path.join(SRC, 'o13.jpg')).convert('RGB')        # 1920x1080
-w = 1500; h = int(w * 204 / 340)
+w = 1500; h = int(w * 190 / 340)
 crop = im.crop((420, 60, 420 + w, 60 + h))
 crop = ImageEnhance.Brightness(crop).enhance(1.18)
-crop.resize((680, 408), Image.LANCZOS).save(os.path.join(A, 'still-podium.jpg'), quality=90)
+crop.resize((680, 380), Image.LANCZOS).save(os.path.join(A, 'still-podium.jpg'), quality=90)
 
 # Soft edge wear: gentle cool vignette, low detail
 W, H = 816 * 2, 1056 * 2

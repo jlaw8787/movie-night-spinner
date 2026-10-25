@@ -84,7 +84,7 @@ def front():
                    'Lunch run to the command post out front. Heroes for twenty.')
     heroes = (
         section('Hero counter', 'On our own bread') +
-        dish('Sirloin on ciabatta', 'Seared hard, sliced thin, jammy onions, arugula, horseradish cream, toasted.', '8.95') +
+        dish('Sirloin on ciabatta', 'Seared hard, sliced thin, jammy onions, arugula, horseradish cream, toasted bread.', '8.95') +
         hair() +
         dish('Italian combo', 'Genoa salami, capicola, ham, sharp provolone, oil, vinegar, hot peppers.', '7.25')
     )
@@ -119,7 +119,7 @@ def ticket():
         f'<span style="font-family: {DISP}; font-size: 24px; letter-spacing: 0.08em; color: {INK}">CATERING ORDER</span>'
         f'<span style="font-family: {BODY}; font-weight: 800; font-size: 16px; color: {BRASS}">No. 392</span></div>'
         f'{body}</div>'
-        f'<div style="position: absolute; left: 118px; top: 200px; transform: rotate(-12deg); border: 3px solid rgba(160,38,42,0.82); padding: 3px 10px 0; '
+        f'<div style="position: absolute; left: 112px; top: 226px; transform: rotate(-8deg); border: 3px solid rgba(160,38,42,0.82); padding: 3px 10px 0; '
         f'font-family: {DISP}; font-size: 34px; line-height: 1; letter-spacing: 0.08em; color: rgba(160,38,42,0.82)">DELIVERED</div>'
         f'<div style="position: absolute; left: 34px; top: -18px; width: 20px; height: 56px; border: 3px solid #8b8f96; border-radius: 10px; box-sizing: border-box"></div>'
         f'<div style="position: absolute; left: 39px; top: -10px; width: 11px; height: 40px; border: 3px solid #a3a7ad; border-radius: 6px; box-sizing: border-box"></div>'
@@ -159,7 +159,7 @@ def back():
         f'<div style="position: absolute; left: {L}px; top: 806px; width: 340px; box-sizing: border-box; border-top: 3px solid {INK}; padding-top: 10px">'
         f'<div style="font-family: {BODY}; font-weight: 700; font-size: 18px; letter-spacing: 0.16em; color: {BRASS}">BY THE REGISTER</div>'
         f'<div style="margin-top: 6px; font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 1.3; color: {INK}">"Best sirloin below Canal. Keep the receipts, fellas."</div>'
-        f'<div style="margin-top: 0; font-family: {SCRIPT}; font-size: 46px; line-height: 1; color: {PENCIL}">Keith Frazier</div></div>'
+        f'<div style="margin-top: 10px; font-family: {SCRIPT}; font-size: 46px; line-height: 1; color: {PENCIL}">Keith Frazier</div></div>'
     )
     foot = (f'<div style="position: absolute; left: {L}px; top: 994px; width: {CW}px; font-family: {BODY}; font-size: 16px; color: {SOFT}">'
             f'Prices subject to change. Painters and contractors, coffee half price before 8 A.M.</div>')
@@ -175,7 +175,7 @@ LABELS = {
     'Inside Man (2006)': {
         'Hostage pizza bites': {'n': 'Party pizzettes', 'd': 'Sixteen thin rounds, tomato, mozzarella, pepperoni, crisp underneath.', 'note': 'From the hot counter, 9.00 a tray.'},
         'Brooklyn potato knishes': {'n': 'Potato knishes', 'd': 'Potato, onion cooked slow in butter, white pepper, flaky dough, baked golden. Hot mustard.', 'note': 'Out of the oven, 2.25 each.'},
-        'Manhattan steak sandwich': {'n': 'Sirloin on ciabatta', 'd': 'Seared hard, sliced thin, jammy onions, arugula, horseradish cream, toasted.', 'note': 'Best sirloin below Canal. K. Frazier'},
+        'Manhattan steak sandwich': {'n': 'Sirloin on ciabatta', 'd': 'Seared hard, sliced thin, jammy onions, arugula, horseradish cream, toasted bread.', 'note': 'Best sirloin below Canal. K. Frazier'},
         'Rainbow cookies': {'n': 'Rainbow cookies', 'd': 'Three almond layers, green, white and red, apricot jam between, dark chocolate on top.', 'note': 'From the bakery case, 1.00 each.'},
         "Negotiator's espresso orange tonic": {'n': 'Iced espresso soda', 'd': 'A double shot over ice and tonic water, an orange slice. Stir before you sip.', 'note': 'From the coffee bar, 3.50.'},
     }

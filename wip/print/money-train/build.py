@@ -126,7 +126,7 @@ CHECK = f'''<div style="position: absolute; left: 0; top: 338px; width: 300px; h
     <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #c9d8cc"><span>1 café, Santiago</span><span>.85</span></div>
     <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #c9d8cc"><span>Charlie: on the tab? <span style="color: {RED}">NO.</span></span><span></span></div>
     </div>
-  <div style="position: absolute; left: 168px; top: 104px; border: 3px solid {RED}; color: {RED}; {DISP}; font-size: 17px; line-height: 1; padding: 5px 10px; transform: rotate(-10deg); opacity: 0.85">PAID. JOHN</div></div>'''
+  <div style="position: absolute; left: 196px; top: 114px; border: 3px solid {RED}; color: {RED}; {DISP}; font-size: 15px; line-height: 1; padding: 4px 8px; white-space: nowrap; transform: rotate(-8deg); opacity: 0.85">PAID. JOHN</div></div>'''
 
 back = face(f'''
 <div style="position: absolute; left: {L}px; top: 46px; width: {CW}px">

@@ -86,25 +86,26 @@ def front():
              f'<span style="color: {DARK}">Dial 4</span></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 168px; width: {CW}px; height: 3px; background: {DARK}"></div>'
              f'<div style="position: absolute; left: {L}px; top: 174px; width: {CW}px; height: 1px; background: {GOLD}"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 192px; width: {CW}px; height: 365px; border: 2px solid {GOLD}; background: {CARD}; box-sizing: border-box; padding: 4px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 192px; width: {CW}px; height: 335px; border: 2px solid {GOLD}; background: {CARD}; box-sizing: border-box; padding: 4px">'
              f'<img src="assets/still-park.jpg" alt="Two hotel guests sit on stone steps in Central Park with a snack" '
-             f'style="display: block; width: 692px; height: 353px"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 564px; width: {CW}px; display: flex; justify-content: space-between; '
+             f'style="display: block; width: 692px; height: 323px"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 534px; width: {CW}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-style: italic; font-size: 17px; color: {MUTE}">'
              f'<span>Guests take the morning air in Central Park, a short walk up Fifth.</span><span>Box lunches on request</span></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 598px; width: {CW}px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 566px; width: {CW}px">'
              f'<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px">{bar("Breakfast", 42)}'
              f'{kicker("In your room, 6 A.M. to noon", GOLD, " margin-bottom: 16px")}</div>'
              + item('Rib Eye Steak and Eggs', '5.25', 'Seared to order and rested, two eggs fried, hash browns and buttered toast.', 12)
              + item('The Continental', '1.70', 'Chilled orange juice, a warm croissant, sweet butter, preserves and a pot of coffee.', 10)
              + item('Buttermilk Griddle Cakes', '1.85', 'A tall stack with whipped butter, warm maple syrup and country sausage.', 10)
              + item('Eggs Benedict', '2.95', 'Poached eggs and Canadian bacon on a toasted English muffin, hollandaise.', 10)
+             + item('Strawberries and Cream', '.95', 'Sliced berries, sugared lightly, with a jug of heavy cream.', 10)
              + '</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 998px; width: {CW}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-size: 16px; color: {MUTE}">'
              f'<span>Our kitchen never runs out. Taxis scarce? Ask the doorman.</span><span>Form RS-1970</span></div>')
     matchbook(o, L - 6, 206)
-    message(o, L + CW - 222, 352)
+    message(o, L + CW - 222, 318)
     return page(''.join(o), 'front')
 
 
@@ -136,9 +137,9 @@ def back():
             + f'<div style="height: 1px; background: {DARK}; opacity: 0.45; margin: 22px 0 20px"></div>'
             + bar('The pastry cart', 34)
             + item('New York Cheesecake', '.95', 'Baked slowly in a water bath on a crumb crust, chilled overnight, crowned with sliced strawberries.', 14)
-            + item('Raspberry Jam Fingers', '.60', 'Butter shortbread baked pale, sandwiched with raspberry jam, dusted with sugar. Boxed for the handbag.'))
+            + item('Raspberry Jam Fingers', '.60', 'Butter shortbread sandwiched with raspberry jam, dusted with sugar. Boxed for the handbag.'))
     right = (bar('From the bar', 34)
-             + item('Dry Martini', '1.25', 'Gin and dry vermouth stirred ice cold, strained into a frosted glass, one green olive.', 14)
+             + item('Dry Martini', '1.25', 'Gin and dry vermouth stirred very cold, strained, one green olive.', 14)
              + item('Manhattan', '1.25', 'Rye, sweet vermouth and bitters, stirred, with a cherry.')
              + item('Coffee, by the pot', '.70', 'Fresh brewed, with cream. Serves two.')
              + f'<div style="margin-top: 20px; border: 2px solid {GOLD}; padding: 4px; background: {CARD}">'

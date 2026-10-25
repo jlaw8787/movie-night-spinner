@@ -13,8 +13,8 @@ def still(src, out, box, size, gamma=0.86, sat=1.0):
 
 # hero: the main room, lobster at the table (2048x1152)
 still('1zQMEoRf1NOLWF5wh3VmtcIpI5y.jpg', 'still-main-room.jpg', (0, 70, 2048, 1152), (1408, 744), 0.8, 1.02)
-# back: the Cape shore
-still('eQxT6JoUCpGp56GB3NdD5XdrHtW.jpg', 'still-cape.jpg', (300, 60, 1920, 1080), (660, 416), 0.95)
+# back: two regulars, Midtown behind them (1920x1080)
+still('83RAbxUbiaHlWVRSQo2nlB7nMLJ.jpg', 'still-uptown.jpg', (140, 0, 1790, 1040), (660, 416), 0.95)
 
 def wear(name, seed):
     W, H = 1632, 2112

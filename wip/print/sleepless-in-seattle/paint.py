@@ -19,7 +19,7 @@ def crop(src, out, w, h, cx=0.5, cy=0.5, bright=1.0):
     im.save(os.path.join(A, out), quality=90)
 
 crop('heart-full.jpg', 'still-heart.jpg', 704, 340, 0.5, 0.5, 1.06)
-crop('dinner-full.jpg', 'still-window-table.jpg', 318, 200, 0.5, 0.45, 1.08)
+crop('dinner-full.jpg', 'still-window-table.jpg', 328, 170, 0.5, 0.45, 1.08)
 
 def wear(out, W=816, H=1056, seed=3):
     """Soft aged vignette toward the edges, big gentle mottling, no pixel noise."""

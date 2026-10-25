@@ -72,7 +72,7 @@ def ticket(o, x, y):
              f'<div style="position: absolute; left: 6px; top: 6px; width: 184px; height: 92px; border: 2px solid {RED}; box-sizing: border-box"></div>'
              f'<div style="position: absolute; left: 150px; top: 6px; width: 0; height: 92px; border-left: 2px dashed {RED}"></div>'
              f'<div style="position: absolute; left: 14px; top: 13px; width: 132px; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {RED}; line-height: 1.2">OBSERVATORY</div>'
-             f'<div style="position: absolute; left: 14px; top: 32px; width: 132px; font-family: {DISP}; font-size: 25px; color: {DARK}; line-height: 1.1">86th Floor</div>'
+             f'<div style="position: absolute; left: 14px; top: 32px; width: 132px; font-family: {DISP}; font-size: 22px; color: {DARK}; line-height: 1.1; white-space: nowrap">86th Floor</div>'
              f'<div style="position: absolute; left: 14px; top: 64px; width: 132px; font-family: {BODY}; font-size: 14px; color: {DARK}; line-height: 1.25">Admit one<br>Feb. 14, 1993</div>'
              f'<div style="position: absolute; left: 152px; top: 52px; width: 40px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; color: {RED}; transform: rotate(-90deg)">0214</div>'
              '</div>')
@@ -81,8 +81,8 @@ def ticket(o, x, y):
 def front():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 84px; width: {CW}px; display: flex; justify-content: center">{kicker("Midtown Manhattan &nbsp;&middot;&nbsp; Sixty-fifth floor")}</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 110px; width: {CW}px; text-align: center; font-family: {DISP}; font-size: 66px; '
-             f'line-height: 1.05; color: {DARK}; text-transform: uppercase; letter-spacing: 0.01em">Evening Star Room</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 110px; width: {CW}px; text-align: center; font-family: {DISP}; font-size: 68px; '
+             f'line-height: 1.05; color: {DARK}; letter-spacing: 0">Evening Star Room</div>')
     o.append(f'<div style="position: absolute; left: {L + 92}px; top: 196px">{ornament(CW - 184)}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 212px; width: {CW}px; display: flex; justify-content: center">'
              f'{kicker("Valentine&rsquo;s night &nbsp;&middot;&nbsp; Sunday, February 14, 1993", DARK, 18)}</div>')
@@ -102,7 +102,7 @@ def front():
              f'font-family: {BODY}; font-size: 15px; color: {MUTE}">'
              f'<span>Dinner from six. Dancing until one.</span><span>Reservations (212) 555-0214</span></div>')
     matchbook(o, L - 14, 240)
-    ticket(o, L + CW - 178, 520)
+    ticket(o, L + CW - 190, 462)
     return page(''.join(o), 'Dinner and dancing nightly').replace('PAGE', 'front')
 
 # ---------------- BACK ----------------
@@ -116,7 +116,7 @@ def reservation(o, x, y):
              f'<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid {RED}; padding-bottom: 6px">'
              f'{kicker("Reserved", RED, 16)}<span style="font-family: {DISP}; font-size: 18px; color: {DARK}">Table 14</span></div>'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; line-height: 1.4; color: {DARK}; margin-top: 8px">'
-             f'Two at eight, by the window. Please let the kitchen know about my allergies. Something mild.</div>'
+             f'Two at eight, by the window. Please tell the kitchen about my allergies. Something mild.</div>'
              f'<div style="font-family: {SIG}; font-size: 36px; line-height: 1.1; color: {DARK}; margin-top: 2px">Walter Jackson</div>'
              '</div>')
 
@@ -131,23 +131,22 @@ def back():
     left = (bar('The kitchen', COLW, 34)
             + item('Baked salmon', '26.00', 'Fillet roasted under parsley, grated lemon peel and bread crumbs. Steamed green beans, warm butter spooned over.', 'Mild. Nothing to sneeze at.', 12)
             + item('Filet mignon', '34.00', 'Ten ounces, broiled to order, with b&eacute;arnaise and potatoes Anna.', None, 14)
-            + item('Roast half chicken', '24.00', 'Rosemary and garlic, pan juices, wild rice.', None, 14)
-            + '<div style="height: 22px"></div>'
+            + item('Roast chicken', '24.00', 'Rosemary and garlic, with wild rice.', None, 14)
+            + '<div style="height: 14px"></div>'
             + bar('Sweets', COLW, 34)
-            + item('Valentine hearts', '2.14', 'Sugar cookies made with browned butter, cut by hand, iced red and white.', 'A pair on every saucer tonight.', 12)
-            + item('Souffl&eacute; for two', '14.00', 'Dark chocolate, baked to order, warm sauce poured at the table.', None, 14))
+            + item('Valentine hearts', '2.14', 'Browned butter sugar cookies, hand cut, iced red and white.', 'A pair on every saucer tonight.', 12)
+            + item('Souffl&eacute; for two', '14.00', 'Dark chocolate, baked to order, sauce poured at the table.', None, 14))
     right = (bar('The lounge', COLW, 34)
              + item('Iced mocha', '4.50', 'Strong coffee with dark chocolate melted through, cold milk over ice, whipped cream and cocoa.', 'The way they take it in Seattle.', 12)
              + item('Late show popcorn', '3.50', 'Popped in coconut oil, tossed with browned butter and sea salt.', 'Bar radio stays on the call-in show.', 14)
-             + item('Espresso', '2.50', 'Pulled at the bar, with a twist of lemon peel.', None, 14)
              + f'<div style="margin-top: 20px; border: 2px solid {RED}; padding: 4px; background: {CARD}; width: {COLW - 12}px; box-sizing: content-box">'
-             f'<img src="assets/still-window-table.jpg" alt="A couple at a candlelit table set with red and white flowers" style="display: block; width: {COLW - 12}px; height: 200px"></div>'
+             f'<img src="assets/still-window-table.jpg" alt="A couple at a candlelit table set with red and white flowers" style="display: block; width: {COLW - 12}px; height: 170px"></div>'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.3; color: {MUTE}; margin-top: 6px">Candles and roses on every table, February 14.</div>')
     o.append(col(L, left)); o.append(col(X2, right))
     o.append(f'<div style="position: absolute; left: {L}px; top: 988px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.45"></div>'
              f'<div style="position: absolute; left: {L}px; top: 996px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
              f'<span>Form 0214. Printed in U.S.A. &copy; 1993.</span><span>Prices subject to change.</span></div>')
-    reservation(o, X2 + 4, 830)
+    reservation(o, X2 + 4, 800)
     return page(''.join(o), 'Dinner and dancing nightly').replace('PAGE', 'back')
 
 FACES = {'front': front(), 'back': back()}

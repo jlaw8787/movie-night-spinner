@@ -8,9 +8,9 @@ import os
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
 PAPER, DARK, RED, GOLD, MUTE = '#f8f4ec', '#2b1f1b', '#7e1f2d', '#b08a45', '#6a5a50'
-FONTS = ('https://fonts.googleapis.com/css2?family=Gloock'
+FONTS = ('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display'
          '&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Mrs+Saint+Delafield&display=swap')
-DISP = "'Gloock', serif"; BODY = "'Lora', serif"; SIG = "'Mrs Saint Delafield', cursive"
+DISP = "'Libre Caslon Display', serif"; BODY = "'Lora', serif"; SIG = "'Mrs Saint Delafield', cursive"
 L, CW = 56, 704
 
 def kicker(t, color=RED, extra=''):
@@ -23,10 +23,10 @@ def band(t, size=38, extra=''):
             f'<div style="display: inline-block; background: {RED}; color: {PAPER}; font-family: {DISP}; font-size: {size}px; '
             f'line-height: 1; padding: 8px 18px 10px; letter-spacing: 0.005em">{t}</div></div>')
 
-def item(name, price, desc, gap=18):
+def item(name, price, desc, gap=18, size=28):
     return (f'<div style="margin-top: {gap}px">'
             f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-family: {DISP}; '
-            f'font-size: 28px; line-height: 1.15; color: {DARK}">'
+            f'font-size: {size}px; line-height: 1.15; color: {DARK}">'
             f'<span>{name}</span><span style="color: {RED}">{price}</span></div>'
             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.38; color: {DARK}; margin-top: 3px">{desc}</div></div>')
 
@@ -52,19 +52,19 @@ def stamp(o, x, y):
              f'box-sizing: border-box; transform: rotate(-12deg); opacity: 0.9; background: rgba(248,244,236,0.92)">'
              f'<div style="position: absolute; left: 6px; top: 6px; width: 112px; height: 112px; border: 1.5px solid {RED}; border-radius: 50%; box-sizing: border-box"></div>'
              f'<div style="position: absolute; left: 0; top: 24px; width: 124px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {RED}">FOX BOOKS</div>'
-             f'<div style="position: absolute; left: 0; top: 44px; width: 124px; text-align: center; font-family: {DISP}; font-size: 30px; line-height: 1; color: {RED}">Now<br>Open</div>'
-             f'<div style="position: absolute; left: 0; top: 108px; width: 124px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {RED}; margin-top: -16px">FALL 1998</div>'
+             f'<div style="position: absolute; left: 0; top: 42px; width: 124px; text-align: center; font-family: {DISP}; font-size: 25px; line-height: 1; color: {RED}">Now<br>Open</div>'
+             f'<div style="position: absolute; left: 0; top: 96px; width: 124px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {RED}">FALL 1998</div>'
              '</div>')
 
-def coupon(x, y, w):
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; box-sizing: border-box; border: 2px dashed {RED}; background: #fffdf8; padding: 12px 16px 12px">'
+def coupon(w):
+    return (f'<div style="margin-top: 22px; width: {w}px; box-sizing: border-box; border: 2px dashed {RED}; background: #fffdf8; padding: 12px 16px 12px">'
             f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
             f'<span style="font-family: {DISP}; font-size: 30px; line-height: 1; color: {RED}">Free hot cocoa</span>'
             f'<span style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.18em; color: {MUTE}">CLIP</span></div>'
             f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.35; color: {DARK}; margin-top: 6px">With any picture book bought at Saturday story hour. Good through December 31, 1998.</div></div>')
 
-def bookmark(x, y, w):
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: 96px; background: {DARK}; transform: rotate(-2.5deg); '
+def bookmark(w):
+    return (f'<div style="position: relative; margin: 4px 0 0 4px; width: {w}px; height: 96px; background: {DARK}; transform: rotate(-2.5deg); '
             f'box-shadow: 0 2px 6px rgba(40,25,20,0.3)">'
             f'<div style="position: absolute; left: 8px; top: 8px; width: {w - 16}px; height: 80px; border: 1px solid {GOLD}; box-sizing: border-box"></div>'
             f'<div style="position: absolute; left: 22px; top: 18px; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.2em; color: {GOLD}">STAFF PICK</div>'
@@ -92,45 +92,44 @@ def front():
     o.append(f'<div style="position: absolute; left: {L}px; top: 624px; width: {CW}px">'
              + kicker('Short, tall, light, dark, caf, decaf', RED, ' margin-bottom: 10px')
              + band('The coffee bar', 42)
-             + item('Tall decaf cappuccino', '2.95', 'Two shots of decaf espresso, steamed milk and a deep crown of foam.', 14)
-             + item('Caff&egrave; latte', '2.75', 'Espresso with plenty of steamed milk under a thin layer of foam.', 12)
-             + item('Coffee of the day', '1.52', 'Our house roast, brewed fresh every hour. Refills are free.', 12)
-             + item('Hot cocoa', '1.95', 'Dark chocolate melted into hot milk, with whipped cream.', 12)
+             + item('Tall decaf cappuccino', '2.95', 'Two shots of decaf espresso, steamed milk and a deep crown of foam.', 10)
+             + item('Caff&egrave; latte', '2.75', 'Espresso with plenty of steamed milk under a thin layer of foam.', 8)
+             + item('Coffee of the day', '1.52', 'Our house roast, brewed fresh every hour. Refills are free.', 8)
+             + item('Hot cocoa', '1.95', 'Dark chocolate melted into hot milk, with whipped cream.', 8)
              + '</div>')
-    stamp(o, L + CW - 120, 214)
+    stamp(o, L + CW - 128, 214)
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
-COLW, GAP = 330, 44
+COLW, GAP = 340, 24
 X2 = L + COLW + GAP
 
 def back():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 46px">{kicker("Order at the counter, we bring it to you")}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 78px; font-family: {DISP}; font-size: 66px; line-height: 1; color: {DARK}">The Menu</div>')
-    o.append(f'<div style="position: absolute; left: {L + 330}px; top: 92px; width: {CW - 330}px; display: flex; justify-content: flex-end">{sign(40, 13)}</div>')
+    o.append(f'<div style="position: absolute; left: {L + 330}px; top: 92px; width: {CW - 330}px; display: flex; justify-content: flex-end">{sign(40, 14)}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 166px; width: {CW}px; height: 2px; background: {GOLD}"></div>')
     col = lambda x, inner: f'<div style="position: absolute; left: {x}px; top: 188px; width: {COLW}px">{inner}</div>'
-    left = (band('From the kitchen')
-            + item('Toasted mini bagels', '3.25', 'Three to an order, spread with cream cheese whipped with scallion and cracked pepper.')
-            + item('Pressed turkey and brie', '6.50', 'Cranberry sauce on buttered sourdough, griddled until the cheese runs.')
-            + item('Chicken noodle soup', '3.50', 'Simmered all morning with carrot, celery and dill. With a roll.')
+    left = (band('The kitchen', 36)
+            + item('Toasted mini bagels', '3.25', 'Three to an order, with scallion cream cheese and cracked pepper.', 18, 26)
+            + item('Turkey and brie melt', '6.50', 'Cranberry sauce on buttered sourdough, pressed hot until the cheese runs.', 18, 26)
             + f'<div style="height: 22px"></div>'
-            + band('The bakery case')
-            + item('New York cheesecake', '3.95', 'Baked rich and dense, chilled overnight, with sugared strawberries.')
-            + item('Chocolate chip cookie', '1.25', 'Big and chewy, out of the oven every morning.'))
-    right = (band('Book party platters')
-             + item('Smoked salmon on cucumber', '24.00', 'Two dozen, with dill cream cheese, capers and cracked pepper. Order two days ahead.')
+            + band('Bakery case', 36)
+            + item('New York cheesecake', '3.95', 'Baked rich and dense, with sugared fresh strawberries.', 18, 26)
+            + item('Chocolate chip cookie', '1.25', 'Big and chewy, out of the oven every morning.', 18, 26)
+            + coupon(COLW))
+    right = (band('Party platters', 36)
+             + item('Smoked salmon bites', '24.00', 'Two dozen cucumber rounds with dill cream cheese, capers and cracked pepper.', 18, 26)
              + f'<div style="margin-top: 18px; border: 2px solid {RED}; padding: 4px; background: #fffdf8">'
-             f'<img src="assets/still-platter.jpg" alt="A book party spread with salmon roe, sliced ham and crudites" style="display: block; width: 318px; height: 191px"></div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.35; color: {MUTE}; margin-top: 6px">From a book party spread. The roe is a garnish.</div>'
+             f'<img src="assets/still-platter.jpg" alt="A book party spread with salmon roe, sliced ham and crudites" style="display: block; width: 328px; height: 197px"></div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.35; color: {MUTE}; margin-top: 6px">Platters take two days. The roe is a garnish.</div>'
              f'<div style="height: 2px; background: {GOLD}; margin: 14px 0 14px"></div>'
-             + kicker('Welcome to the neighborhood') +
+             + kicker('Welcome, neighbor') +
              f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.45; color: {DARK}; margin-top: 8px">Take any book off the shelf, bring it to your table and stay as long as you like. We will keep the coffee coming. Dogs wait outside, except Brinkley.</div>'
-             f'<div style="font-family: {SIG}; font-size: 50px; line-height: 1; color: {DARK}; margin-top: 2px">Joe Fox</div>')
+             f'<div style="font-family: {SIG}; font-size: 50px; line-height: 1; color: {DARK}; margin-top: 16px">Joe Fox</div>'
+             + bookmark(COLW - 8))
     o.append(col(L, left)); o.append(col(X2, right))
-    o.append(coupon(L, 866, COLW))
-    o.append(bookmark(X2 + 4, 872, COLW - 8))
     o.append(f'<div style="position: absolute; left: {L}px; top: 984px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.45"></div>'
              f'<div style="position: absolute; left: {L}px; top: 992px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
              f'<span>Fox &amp; Sons Books, Broadway. School supplies on the lower level.</span><span>Prices subject to change. FB-152</span></div>')
