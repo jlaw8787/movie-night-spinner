@@ -1,7 +1,7 @@
 """Sakura Gardens, a Japanese restaurant in New York, spring 1978: the place where the crew would not take their shoes off.
 Bifold dinner menu, two faces 816x1056 (US Letter each panel).
-Outside (front): black lacquer cover, Hiroshige cherry blossom border, the crew photo (TMDB still), the tatami room rule
-with the shoe-check ticket stamped BOOTS STAY ON, and the bar list.
+Outside (front): black lacquer cover, the social club back room (TMDB still) bleeding off the top, Hiroshige blossom border,
+the tatami room shoe rule stamped BOOTS STAY ON, the unclaimed shoe-check ticket, and the bar list.
 Inside: blossom-pink washi stock, appetizers, the lion print by the coat check, the "friend of ours" introduction card
 with Lefty's correction, the tatami room dinners and desserts.
 Writes image crops, wear, front/inside .body.html and .html."""
@@ -28,11 +28,6 @@ def fit(im, w, h, box=None):
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
-HERO_W, HERO_H = 724, 290
-crew = Image.open(S('tmdb-pFO1nsrlQQQSKsoUWjfyT6J2bx6.jpg')).convert('RGB')
-crew = ImageEnhance.Brightness(crew).enhance(1.08)
-crew = ImageEnhance.Contrast(crew).enhance(1.05)
-fit(crew, HERO_W, HERO_H, (0, 0, 1280, 600)).save(A('crew-out-front.jpg'), quality=90)
 
 LION_W, LION_H = 254, 200
 lion = Image.open(S('wellcome-lion-V0021514.jpg')).convert('L').crop((150, 175, 560, 611))
@@ -118,7 +113,7 @@ def shoe_ticket(x, y):
             f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {INK}">Present this ticket for your shoes.</div>'
             f'<div style="position: absolute; left: 46px; top: 106px; transform: rotate(-6deg); border: 3px solid {CINN}; padding: 3px 9px 1px; '
             f'font-family: {BODY}; font-weight: 700; font-size: 22px; letter-spacing: 0.08em; color: {CINN}; line-height: 1.1; white-space: nowrap; '
-            f'background: rgba(232,211,166,0.35)">BOOTS STAY ON</div>'
+            f'background: rgba(232,211,166,0.35)">NEVER CLAIMED</div>'
             f'</div>')
 
 def friend_card(x, y):
@@ -135,39 +130,45 @@ def friend_card(x, y):
 
 
 # ---------------- FRONT (outside cover) ----------------
+CLUB_W, CLUB_H = 816, 520
+club = Image.open(S('tmdb-bIH9GtOCgX9lPAZd2HmV3QOSZY3.jpg')).convert('RGB')
+club = ImageEnhance.Brightness(club).enhance(1.3)
+club = ImageEnhance.Contrast(club).enhance(1.06)
+fit(club, CLUB_W, CLUB_H, (40, 0, 1255, 720)).save(A('social-club-back-room.jpg'), quality=90)
+
 o = []
+o.append(img('social-club-back-room.jpg', 0, 0, CLUB_W, CLUB_H))
+o.append(f'<div style="position: absolute; left: 0; top: 300px; width: {W}px; height: 222px; background: linear-gradient(to bottom, rgba(24,17,15,0) 0%, rgba(24,17,15,0.82) 52%, {LACQ} 100%)"></div>')
+o.append(f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 120px; background: linear-gradient(to bottom, rgba(24,17,15,0.7) 0%, rgba(24,17,15,0) 100%)"></div>')
 o.append(frame(PINK))
-o.append(img('blossom-branch.png', 486, -26, 350, 241))
-o.append(img('blossom-sprig.png', -30, 880, 200, 185))
-o.append(f'<div style="position: absolute; left: 52px; top: 54px; width: 520px">'
-         + kicker('Japanese restaurant', PINK, 18) +
-         f'<div style="font-family: {DISP}; font-size: 68px; line-height: 1.0; color: {CREAM}; margin-top: 12px">SAKURA</div>'
-         f'<div style="font-family: {DISP}; font-size: 68px; line-height: 1.0; color: {CREAM}">GARDENS</div>'
-         f'<div style="width: 92px; height: 4px; background: {CINN}; margin-top: 14px"></div>'
-         f'<div style="font-family: {BODY}; font-style: italic; font-size: 21px; line-height: 1.3; color: {CREAM}; margin-top: 10px">Dinner from five. Tatami rooms and the long bar.</div>'
+o.append(img('blossom-branch.png', 566, -30, 276, 190))
+o.append(img('blossom-sprig.png', -34, 968, 120, 111))
+o.append(f'<div style="position: absolute; left: 52px; top: 52px">' + kicker('Japanese restaurant', CREAM, 18) + '</div>')
+o.append(f'<div style="position: absolute; left: 40px; top: 404px; width: 736px">'
+         f'<div style="font-family: {DISP}; font-size: 64px; line-height: 1.0; color: {CREAM}; white-space: nowrap">SAKURA GARDENS</div>'
+         f'<div style="display: flex; align-items: center; gap: 14px; margin-top: 12px">'
+         f'<div style="width: 70px; height: 4px; background: {CINN}"></div>'
+         f'<div style="font-family: {BODY}; font-style: italic; font-size: 19px; line-height: 1.25; color: {PINK}">'
+         'The social club down the block. Their party of five eats with us Saturdays.</div></div></div>')
+# the boots gag, drawn large
+o.append(f'<div style="position: absolute; left: 40px; top: 548px; width: 736px; height: 214px; box-sizing: border-box; border: 2px solid {CREAM}; padding: 16px 20px 0">'
+         + kicker('House rule, tatami room', PINK, 17) +
+         f'<div style="font-family: {DISP}; font-size: 46px; line-height: 1.05; color: {CREAM}; margin-top: 8px">PLEASE REMOVE<br>YOUR SHOES</div>'
+         f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.25; color: {CREAM}; margin-top: 8px; width: 400px">Slippers at the step. No exceptions.</div>'
+         f'<div style="position: absolute; left: 480px; top: 24px; transform: rotate(-9deg); border: 5px solid {CINN}; padding: 6px 14px 2px; '
+         f'font-family: {DISP}; font-size: 38px; line-height: 1.05; color: {CINN}; text-align: center; background: rgba(24,17,15,0.6)">BOOTS<br>STAY ON</div>'
          '</div>')
-# hero still
-o.append(f'<div style="position: absolute; left: 40px; top: 290px; width: {HERO_W + 12}px; height: {HERO_H + 12}px; box-sizing: border-box; border: 2px solid {CINN}; padding: 4px; background: {LACQ}">'
-         f'<img src="assets/crew-out-front.jpg" alt="" style="width: {HERO_W}px; height: {HERO_H}px; display: block"></div>')
-o.append(f'<div style="position: absolute; left: 40px; top: 600px; width: 736px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {PINK}">'
-         'Saturday regulars from the social club, a party of five, out front before dinner.</div>')
-# tatami room rule
-o.append(f'<div style="position: absolute; left: 40px; top: 652px; width: 340px; height: 182px; box-sizing: border-box; border: 2px solid {CREAM}; padding: 14px 18px 0">'
-         + kicker('House rule', PINK, 16) +
-         f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1.1; color: {CREAM}; margin-top: 6px">TATAMI ROOM</div>'
-         f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.25; color: {CREAM}; margin-top: 6px">Kindly leave your shoes at the step. Slippers provided. No exceptions.</div>'
-         '</div>')
-o.append(shoe_ticket(84, 852))
+o.append(shoe_ticket(474, 708))
 # bar
-bar = [('Social Club Rob Roy', '2.75', 'Scotch, sweet vermouth and bitters over one big cube, orange peel, a cherry.'),
-       ('Hot Sake', '1.50', 'Warm, in a stone carafe.'),
-       ('Plum Wine', '1.50', 'Sweet and cold, over ice.')]
-o.append(f'<div style="position: absolute; left: 412px; top: 652px; width: 364px">'
-         + band('THE BAR', 'nightly', CINN, CREAM, 364)
-         + ''.join(item(n, p, d, CREAM, PINK, gap=(12 if i else 10), dsize=19) for i, (n, p, d) in enumerate(bar)) +
+o.append(f'<div style="position: absolute; left: 40px; top: 800px; width: 400px">'
+         + band('THE BAR', 'nightly', CINN, CREAM, 400)
+         + item('Social Club Rob Roy', '2.75', 'Scotch, sweet vermouth and bitters over one big cube, orange peel, a cherry.', CREAM, PINK, gap=10, dsize=19)
+         + item('Hot Sake', '1.50', 'Warm, in a stone carafe.', CREAM, PINK, gap=12, dsize=19) +
          '</div>')
-o.append(f'<div style="position: absolute; left: 412px; top: 970px; width: 364px; font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {PINK}">'
-         'Prices subject to change. Menu of spring 1978.<br>Not responsible for items left in footwear.</div>')
+o.append(f'<div style="position: absolute; left: 470px; top: 884px; width: 306px">'
+         + item('Plum Wine', '1.50', 'Sweet and cold, over ice.', CREAM, PINK, gap=0, dsize=19) +
+         f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {PINK}; margin-top: 18px">'
+         'Prices subject to change. Spring 1978.<br>Not responsible for items in footwear.</div></div>')
 front = page(''.join(o), 'front', LACQ, 0.1)
 
 

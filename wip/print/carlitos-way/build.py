@@ -35,12 +35,13 @@ gc = ImageEnhance.Contrast(ImageEnhance.Brightness(gc).enhance(1.05)).enhance(1.
 Image.merge('RGB', [gc.point(lambda v: min(255, int(v * 1.0 + 8))), gc.point(lambda v: int(v * 0.95 + 4)),
                     gc.point(lambda v: int(v * 0.86))]).save(A('grand-central-1959.jpg'), quality=90)
 
-CL_W, CL_H = 470, 264
+CL_W, CL_H = 470, 206
 fit(Image.open(S('jSXPooWByKBdFMXNNl5XplGgeL0.jpg')).convert('RGB'), CL_W, CL_H).save(A('club-table.jpg'), quality=90)
 
-PO_W, PO_H = 470, 192
+PO_W, PO_H = 517, 706
 po = Image.open(S('8ESoIezvK2ZlUMH0woyv7NKgHd9.jpg')).convert('RGB')
-fit(po, PO_W, PO_H, (0, 330, 3840, 2160), (0.5, 0.55)).save(A('paradise-poster.jpg'), quality=90)
+po = ImageEnhance.Color(po).enhance(1.08)
+fit(po, PO_W, PO_H, (620, 0, 2420, 2160), (0.5, 0.5)).save(A('paradise-poster.jpg'), quality=90)
 
 def wear(name, seed, rgb, strength):
     rnd = random.Random(seed)
@@ -154,22 +155,22 @@ def outside():
     o.append(f'<div style="position: absolute; left: {LX}px; top: 732px; width: {CW}px; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {SUN2}">'
              'Prices subject to change. Form No. 30-5. New York, 1975.</div>')
 
-    # front cover: the club
-    o.append(f'<div style="position: absolute; left: {RX}px; top: 50px; width: {CW}px; text-align: center">'
-             f'{kicker("Supper &nbsp;&middot;&nbsp; Dancing &nbsp;&middot;&nbsp; Till four")}'
-             f'<div style="font-family: {DISP}; font-size: 116px; line-height: 1; color: {PEACH}; margin-top: 2px; text-shadow: 3px 3px 0 {SUN}">El Paraiso</div>'
-             f'<div style="font-family: {BODY}; font-weight: 500; font-size: 19px; letter-spacing: 0.3em; color: {SUN2}; margin-top: 2px">NIGHT CLUB &middot; UPTOWN</div></div>')
-    o.append(frame('club-table.jpg', 'Carlito in a dark suit at a ringside table with Gail and Dave Kleinfeld, champagne glasses on the cloth',
-                   RX, 236, CL_W, CL_H))
-    o.append(f'<div style="position: absolute; left: {RX}px; top: 516px; width: {CW}px; text-align: center; font-family: {BODY}; font-style: italic; '
-             f'font-size: 18px; line-height: 1.3; color: {SUN2}">Ringside, Saturday. Some old flames are worth the wait.</div>')
-    o.append(f'<div style="position: absolute; left: {RX + 20}px; top: 560px; width: {CW - 40}px; box-sizing: border-box; border: 2px solid {SUN}; '
-             f'padding: 10px 16px 12px; text-align: center; background: {OX2}">'
-             f'{kicker("House rule", size=18)}'
-             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 27px; line-height: 1.15; color: {PEACH}; margin-top: 2px; letter-spacing: 0.01em; white-space: nowrap">NO TABS. NOT FOR NOBODY.</div>'
-             f'<div style="font-family: {BODY}; font-size: 19px; line-height: 1.3; color: {PEACH}; margin-top: 4px">Yes, Dave, that means you, counsellor.</div></div>')
-    o.append(f'<div style="position: absolute; left: {RX}px; top: 718px; width: {CW}px; text-align: center">'
-             f'{kicker("Under new management", color=SUN, size=18)}</div>')
+    # front cover: the Escape to Paradise poster, glowing out of the dark club
+    PX, PY = FOLD + 21, 42
+    o.append(f'<div style="position: absolute; left: {PX - 4}px; top: {PY - 4}px; width: {PO_W + 4}px; height: {PO_H + 4}px; border: 2px solid {SUN}; '
+             f'box-shadow: 0 0 34px rgba(240,122,50,0.45)">'
+             f'<img src="assets/paradise-poster.jpg" alt="The Escape to Paradise poster: a huge setting sun behind palm fronds, a dancer with arms wide on a glittering red sea, figures on the shore" '
+             f'style="position: absolute; left: 0; top: 0; display: block; width: {PO_W}px; height: {PO_H}px">'
+             f'<div style="position: absolute; left: 0; top: 0; width: {PO_W}px; height: 230px; background: linear-gradient(rgba(61,10,21,0.88), rgba(61,10,21,0.55) 60%, rgba(61,10,21,0))"></div>'
+             f'<div style="position: absolute; left: 0; top: {PO_H - 190}px; width: {PO_W}px; height: 190px; background: linear-gradient(rgba(61,10,21,0), rgba(61,10,21,0.82) 45%, rgba(61,10,21,0.95))"></div></div>')
+    o.append(f'<div style="position: absolute; left: {PX}px; top: {PY + 18}px; width: {PO_W}px; text-align: center">'
+             f'{kicker("Supper &nbsp;&middot;&nbsp; Dancing &nbsp;&middot;&nbsp; Till four", color=SUN2)}'
+             f'<div style="font-family: {DISP}; font-size: 120px; line-height: 1; color: {PEACH}; margin-top: 0; text-shadow: 3px 3px 0 {OX}">El Paraiso</div>'
+             f'<div style="font-family: {BODY}; font-weight: 500; font-size: 19px; letter-spacing: 0.3em; color: {PEACH}; margin-top: 0">NIGHT CLUB &middot; UPTOWN</div></div>')
+    o.append(f'<div style="position: absolute; left: {PX}px; top: {PY + PO_H - 152}px; width: {PO_W}px; text-align: center">'
+             f'<div style="font-family: {DISP}; font-size: 66px; line-height: 1; color: {CARD}; text-shadow: 2px 2px 0 {OX}">Escape to Paradise</div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 19px; line-height: 1.3; color: {PEACH}; margin-top: 6px">The poster over our bar. Some nights it&rsquo;s all anybody looks at.</div>'
+             f'<div style="margin-top: 10px">{kicker("Under new management", color=SUN, size=18)}</div></div>')
     return page(''.join(o), 'outside', OX, 'paper-grain-light.png', 0.16)
 
 # ---------------- INSIDE: kitchen (left) and the Paradise Bar (right) ----------------
@@ -185,15 +186,13 @@ def inside():
             + item('Arroz con pollo', '4.75', 'Chicken and yellow rice, sofrito, olives, sweet peppers.')
             + item('Bistec encebollado', '5.95', 'Thin sirloin under vinegar onions, white rice, red beans.')
             + f'<div style="margin-top: 10px; border-top: 1px solid {SUN}; padding-top: 6px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.35; color: {MUTE}">'
-            'Live band nightly. At the door: Pachanga. Gentlemen from the Bronx, wait at the bar.</div>')
+            f'<b style="color: {OX}">House rule: no tabs, not for nobody. Yes, Dave, that means you.</b> Live band nightly. At the door, Pachanga.</div>')
     o.append(f'<div style="position: absolute; left: {LX}px; top: 44px; width: {CW}px">{left}</div>')
 
-    o.append(frame('paradise-poster.jpg', 'Travel poster photo: a huge setting sun behind palm fronds, a dancer silhouetted with arms wide on a glittering red sea',
-                   RX, 44, PO_W, PO_H, color=OX, bg=OX))
-    o.append(f'<div style="position: absolute; left: {RX + 22}px; top: 60px; font-family: {DISP}; font-size: 50px; line-height: 1; color: {CARD}; '
-             f'text-shadow: 2px 2px 0 {OX}">Escape to Paradise</div>')
-    o.append(f'<div style="position: absolute; left: {RX}px; top: 252px; width: {CW}px; text-align: center; font-family: {BODY}; font-style: italic; '
-             f'font-size: 18px; line-height: 1.3; color: {MUTE}">The poster over the bar. The boss looks at it every night.</div>')
+    o.append(frame('club-table.jpg', 'Carlito in a dark suit at a ringside table with Gail and Dave Kleinfeld, champagne glasses on the cloth',
+                   RX, 40, CL_W, CL_H, color=OX, bg=OX))
+    o.append(f'<div style="position: absolute; left: {RX}px; top: 258px; width: {CW}px; text-align: center; font-family: {BODY}; font-style: italic; '
+             f'font-size: 18px; line-height: 1.3; color: {MUTE}">Ringside, Saturday. Some old flames are worth the wait.</div>')
     right = (head('At the bar', 'The Paradise Bar')
              + item('Paradise punch', '2.75', 'Dark rum, pineapple, fresh lime and spiced syrup, long over ice, nutmeg grated on top.', 8)
              + item('Pi&ntilde;a colada', '2.25', 'Rum, cream of coconut, pineapple, crushed ice.', 10)
@@ -201,7 +200,7 @@ def inside():
              + head('One last temptation', 'Dulces')
              + item('Paradise flan', '1.75', 'Coconut caramel custard, baked slow, turned out cold.', 8)
              + item('Tembleque', '1.25', 'Coconut milk pudding, cinnamon on top.', 10))
-    o.append(f'<div style="position: absolute; left: {RX}px; top: 288px; width: {CW}px">{right}</div>')
+    o.append(f'<div style="position: absolute; left: {RX}px; top: 292px; width: {CW}px">{right}</div>')
     return page(''.join(o), 'inside', PEACH, 'paper-grain.png', 0.22)
 
 FACES = {'outside': outside(), 'inside': inside()}

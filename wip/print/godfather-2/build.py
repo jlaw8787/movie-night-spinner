@@ -13,7 +13,7 @@ D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
 W, H = 672, 1056
-PAPER, INK, RED, CREAM, MUTE, ORANGE = '#dcebe2', '#0f343c', '#cc3d2c', '#fbf5e6', '#3b5a5f', '#e39832'
+PAPER, INK, RED, CREAM, MUTE, ORANGE, GOLD = '#f1e1bd', '#0d3a40', '#c3302a', '#fcf4e0', '#4a5048', '#e39832', '#a97f26'
 FONTS = ('https://fonts.googleapis.com/css2?family=Sancreek&family=Jost:ital,wght@0,400;0,500;0,600;1,400'
          '&family=Pinyon+Script&display=swap')
 DISP = "'Sancreek', serif"; BODY = "'Jost', sans-serif"; SCRIPT = "'Pinyon Script', cursive"
@@ -32,9 +32,6 @@ pc = Image.open(S('loc-1b00969.jpg')).convert('RGB')
 pc = ImageEnhance.Color(ImageEnhance.Brightness(pc).enhance(1.04)).enhance(1.06)
 fit(pc, PC_W, PC_H, (300, 300, 3200, 1955)).save(A('malecon-1952.jpg'), quality=90)
 
-CK_W, CK_H = 270, 166
-ck = Image.open(S('dVy3bjKpV7nRiDHVMaDP0IGJViS.jpg')).convert('RGB')
-fit(ck, CK_W, CK_H, (200, 300, 1460, 1076)).save(A('roth-cake.jpg'), quality=90)
 
 # ---------------- the Cuba-shaped cake slice card ----------------
 def cuba_card():
@@ -131,10 +128,11 @@ def ribbon(text, w, h=50, size=36, bg=RED, fg=CREAM, notch=PAPER):
 def marquee():
     """Club edge: a deep teal band with a ring of warm cream bulbs, like the canopy over the door."""
     b = 22; o = [f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; box-sizing: border-box; border: {b}px solid {INK}"></div>',
-                 f'<div style="position: absolute; left: {b + 5}px; top: {b + 5}px; width: {W - 2 * b - 10}px; height: {H - 2 * b - 10}px; box-sizing: border-box; border: 1.5px solid {RED}"></div>']
+                 f'<div style="position: absolute; left: {b + 5}px; top: {b + 5}px; width: {W - 2 * b - 10}px; height: {H - 2 * b - 10}px; box-sizing: border-box; border: 1.5px solid {GOLD}"></div>',
+                 f'<div style="position: absolute; left: {b + 10}px; top: {b + 10}px; width: {W - 2 * b - 20}px; height: {H - 2 * b - 20}px; box-sizing: border-box; border: 0.75px solid {GOLD}"></div>']
     def bulb(x, y):
-        return (f'<div style="position: absolute; left: {x - 4}px; top: {y - 4}px; width: 8px; height: 8px; border-radius: 50%; background: #fff1c4; '
-                f'box-shadow: 0 0 5px 2px rgba(255,214,120,0.55)"></div>')
+        return (f'<div style="position: absolute; left: {x - 4}px; top: {y - 4}px; width: 8px; height: 8px; border-radius: 50%; background: #ffe7a3; '
+                f'box-shadow: 0 0 6px 2px rgba(255,200,90,0.6)"></div>')
     c = b / 2
     n = 26; step = (W - 2 * c) / n
     for i in range(n + 1):
@@ -150,7 +148,7 @@ def page(inner, name):
             f'<img src="assets/wear-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
             + marquee() + inner + '</div>')
 
-def framed(img, alt, x, y, w, h, color=RED):
+def framed(img, alt, x, y, w, h, color=GOLD):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; border: 2px solid {color}; padding: 6px; background: {CREAM}; '
             f'box-shadow: 0 3px 8px rgba(10,40,45,0.25)">'
             f'<img src="assets/{img}" alt="{alt}" style="display: block; width: {w}px; height: {h}px"></div>')
@@ -172,12 +170,12 @@ def noisemaker_ticket(o, x, y, rot=6):
              f'</div></div>')
 
 def slice_card(o, x, y, rot=-4):
-    """The island cake card: die-cut Cuba in orange icing, a cream tag under it."""
+    """The island cake card: die-cut Cuba in orange icing, with a small cream tag pinned under it."""
     o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {CUBA_W}px; transform: rotate({rot}deg)">'
              f'<img src="assets/cuba-card.png" alt="A small card die-cut in the shape of Cuba, iced orange with a piped white edge" style="display: block; width: {CUBA_W}px; height: {CUBA_H}px">'
-             f'<div style="position: absolute; margin-top: 4px; text-align: center">'
-             f'<div style="font-family: {DISP}; font-size: 22px; line-height: 1; color: {INK}">Una porci&oacute;n</div>'
-             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 14px; letter-spacing: 0.1em; line-height: 1.2; color: {INK}; margin-top: 2px">ONE SLICE OF THE ISLAND</div><div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.25; color: {MUTE}">Cut at the table. Everybody gets one.</div></div>'
+             f'<div style="margin: -8px 0 0 100px; width: 200px; box-sizing: border-box; background: {CREAM}; border: 1.5px solid {GOLD}; padding: 5px 8px; text-align: center; box-shadow: 0 3px 7px rgba(10,30,35,0.35)">'
+             f'<div style="font-family: {DISP}; font-size: 22px; line-height: 1; color: {RED}">Una porci&oacute;n</div>'
+             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 14px; letter-spacing: 0.08em; line-height: 1.25; color: {INK}; margin-top: 3px">EVERYBODY GETS ONE</div></div>'
              f'</div>')
 
 # ---------------- FRONT: the club card ----------------
@@ -229,40 +227,45 @@ def front():
     return page(''.join(o), 'front')
 
 # ---------------- BACK: the gala supper ----------------
+BR_W, BR_H = 560, 184
+br = Image.open(S('2PWQsFVAmN30jzNFN1DsCNLNmn9.jpg')).convert('RGB')
+br = ImageEnhance.Brightness(br).enhance(1.12)
+fit(br, BR_W, BR_H, (0, 60, 1910, 742)).save(A('salon-nye.jpg'), quality=90)
+
 def back():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 48px; width: {CW}px; text-align: center">'
              f'{kicker("Served from nine until the countdown")}'
              f'<div style="font-family: {DISP}; font-size: 60px; line-height: 1.05; color: {INK}; margin-top: 2px">La Cena de Gala</div></div>')
-    colw = 280
-    left = (ribbon('Entremeses', colw, 48, 34)
-            + item('Arancini Genco', '.85', 'Saffron rice, beef rag&ugrave;, peas and a mozzarella heart.', 10)
-            + item('Medianoches', '.75', 'Ham, roast pork, Swiss, pickle, mustard, pressed hot.')
-            + item('Shrimp cocktail', '1.25', 'Gulf shrimp on ice, fresh lime, a sharp red sauce.')
-            + '<div style="height: 22px"></div>'
-            + ribbon('Platos fuertes', colw, 48, 34)
-            + item('Ziti al forno', '1.95', 'Sausage tomato sauce, ricotta, blistered mozzarella.', 10)
-            + item('Lech&oacute;n asado', '2.75', 'Roast suckling pig, mojo, black beans, white rice, fried plantain.'))
-    right = (ribbon('Postre', colw, 48, 34)
-             + item('Torta de la Isla', '.67', 'Vanilla slab cake iced pale green, shaped like the island.', 10)
-             + item('Caf&eacute; cubano', '.10', '')
-             + '<div style="height: 22px"></div>'
-             + ribbon('El Bar', colw, 48, 34)
-             + item('Daiquiri', '.75', 'White rum, lime and sugar, shaken ice cold. Banana on request.', 10)
-             + item('Champagne', 'with cover', 'A glass each at midnight.'))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 146px; width: {colw}px">{left}</div>')
-    o.append(f'<div style="position: absolute; left: {L + CW - colw}px; top: 146px; width: {colw}px">'
-             + f'<div style="position: relative; height: {CK_H + 16}px">' + framed('roth-cake.jpg', 'A round white birthday cake piped with an orange map of Cuba, a knife going in to cut the first slice', 0, 0, CK_W - 4, CK_H, INK) + '</div>'
-             + f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {MUTE}; margin: 6px 0 14px">Cut on the hotel roof for a guest&rsquo;s 67th.</div>'
-             + right + '</div>')
-
-    # cover charge, the cake slice card, house rules
-    o.append(f'<div style="position: absolute; left: {L + CW - 280}px; top: 816px; width: 280px; box-sizing: border-box; border: 2px solid {INK}; background: {CREAM}; padding: 8px 12px">'
+    o.append(framed('salon-nye.jpg', 'The grand salon at midnight: crystal chandeliers, a FELIZ ANO NUEVO banner over the balcony, a packed dance floor in party hats', L, 144, BR_W, BR_H))
+    o.append(f'<div style="position: absolute; left: {L}px; top: 348px; width: 340px; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {MUTE}">'
+             'The grand sal&oacute;n, Noche Vieja. Chandeliers, hats, the whole of Havana.</div>')
+    slice_card(o, 330, 222, -5)
+    colw = 274
+    left = (ribbon('Entremeses', colw, 46, 32)
+            + item('Arancini Genco', '.85', 'Saffron rice, beef rag&ugrave;, peas and a mozzarella heart.', 8)
+            + item('Medianoches', '.75', 'Ham, roast pork, Swiss, pickle, mustard, pressed hot.', 12)
+            + item('Shrimp cocktail', '1.25', 'Gulf shrimp on ice, lime, a sharp red sauce.', 12)
+            + '<div style="height: 14px"></div>'
+            + ribbon('Platos fuertes', colw, 46, 32)
+            + item('Ziti al forno', '1.95', 'Sausage tomato sauce, ricotta, blistered mozzarella.', 8)
+            + item('Lech&oacute;n asado', '2.75', 'Roast suckling pig, mojo.', 12))
+    right = (ribbon('Postre', colw, 46, 32)
+             + item('Torta de la Isla', '.67', 'Vanilla slab cake iced pale green, shaped like the island.', 8)
+             + item('Caf&eacute; cubano', '.10', '', 12)
+             + '<div style="height: 14px"></div>'
+             + ribbon('El Bar', colw, 46, 32)
+             + item('Daiquiri', '.75', 'Rum, lime and sugar, ice cold. Banana on request.', 8)
+             + item('Champagne', 'with cover', 'A glass each at midnight.', 12))
+    o.append(f'<div style="position: absolute; left: {L}px; top: 400px; width: {colw}px">{left}</div>')
+    o.append(f'<div style="position: absolute; left: {L + CW - colw}px; top: 400px; width: {colw}px">{right}</div>')
+    # vertical gold hairline between the columns
+    o.append(f'<div style="position: absolute; left: {W // 2}px; top: 408px; width: 0; height: 520px; border-left: 1px solid {GOLD}"></div>')
+    o.append(f'<div style="position: absolute; left: {L + CW - colw}px; top: 812px; width: {colw}px; box-sizing: border-box; border: 1.5px solid {GOLD}; outline: 1px solid {GOLD}; outline-offset: 3px; background: {CREAM}; padding: 8px 12px">'
              f'{kicker("Cover, per person", RED, 16, " letter-spacing: 0.14em")}'
-             f'<div style="margin-top: 2px"><span style="display: block; font-family: {DISP}; font-size: 38px; line-height: 1.05; color: {INK}">$19.58</span>'
-             f'<span style="display: block; font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {INK}">Hat, noisemaker, floor show, champagne</span></div></div>')
-    slice_card(o, 52, 760, -3)
-    o.append(f'<div style="position: absolute; left: {L}px; top: 966px; width: {CW}px; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MUTE}; text-align: center">'
+             f'<div style="display: flex; align-items: baseline; gap: 10px"><span style="font-family: {DISP}; font-size: 38px; line-height: 1.1; color: {INK}">$19.58</span>'
+             f'<span style="font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {INK}">hat, noisemaker, show, champagne</span></div></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 962px; width: {CW}px; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MUTE}; text-align: center">'
              'Seating: friends close, others closer. The orchestra knows a tarantella.<br>'
              'Pesos, at par with the dollar. Prices subject to change. Form 74-II. Vedado, 1958.</div>')
     return page(''.join(o), 'back')

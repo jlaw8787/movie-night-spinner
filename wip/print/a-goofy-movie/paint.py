@@ -13,7 +13,7 @@ D = os.path.dirname(os.path.abspath(__file__))
 A = os.path.join(D, 'assets')
 S = 2
 W, H = 1344, 960
-MW, MH = 1264, 176          # map box in px at 1x
+MW, MH = 854, 246          # map box in px at 1x
 
 INK = (52, 32, 79)
 ORANGE = (224, 69, 43)
@@ -62,114 +62,157 @@ def blob(cx, cy, rx, ry, seed, n=40):
 
 
 def route_map():
+    """Painted relief road map: hillshaded terrain, Midwest fields, forests, lake, desert, ocean, the fork."""
+    import numpy as np
     w, h = MW * S, MH * S
-    rnd = random.Random(7)
-    im = Image.new('RGB', (w, h), LAND)
+    rng = np.random.default_rng(11)
+
+    def noise(gx, gy, blur):
+        g = Image.fromarray((rng.random((gy, gx)) * 255).astype('uint8'))
+        g = g.resize((w, h), Image.BICUBIC).filter(ImageFilter.GaussianBlur(blur))
+        return np.asarray(g, dtype=float) / 255.0
+
+    X, Y = np.meshgrid(np.linspace(0, 1, w), np.linspace(0, 1, h))
+    rough = 0.5 * noise(40, 12, 2) + 0.3 * noise(90, 26, 1) + 0.2 * noise(180, 52, 0)
+    ridges = 1 - np.abs(2 * noise(60, 18, 3) - 1)
+    belt = np.clip((X - 0.43) / 0.08, 0, 1) * np.clip((0.95 - X) / 0.05, 0, 1)
+    north = np.clip((0.78 - Y) / 0.35, 0.25, 1)
+    height = 0.08 * rough + belt * north * (0.55 * ridges ** 1.6 + 0.35 * rough)
+    # lake basin
+    lx, ly = 0.725, 0.24
+    d2 = ((X - lx) / 0.075) ** 2 + ((Y - ly) / 0.11) ** 2
+    height = height * np.clip(d2 / 2.5, 0.2, 1)
+
+    gy, gx = np.gradient(height * 260)
+    shade = np.clip(0.78 + 0.34 * (-gx * 0.7 - gy * 0.7) / np.sqrt(1 + gx ** 2 + gy ** 2), 0.35, 1.25)
+
+    def ramp(v):
+        stops = [(0.0, (124, 186, 74)), (0.12, (150, 196, 86)), (0.26, (196, 186, 104)), (0.42, (168, 128, 82)), (0.6, (140, 104, 74)), (0.75, (246, 242, 230))]
+        out = np.zeros(v.shape + (3,))
+        for (a, ca), (b, cb) in zip(stops, stops[1:]):
+            m = (v >= a) & (v < b)
+            t = ((v - a) / (b - a))[m][:, None]
+            out[m] = np.array(ca) * (1 - t) + np.array(cb) * t
+        out[v >= stops[-1][0]] = stops[-1][1]
+        return out
+    col = ramp(height)
+    # desert south-west, warm sand
+    desert = np.clip((Y - 0.55) / 0.15, 0, 1) * np.clip((X - 0.52) / 0.1, 0, 1) * (height < 0.42)
+    col = col * (1 - desert[..., None] * 0.85) + np.array((236, 196, 120)) * desert[..., None] * 0.85
+    # forests: dark green mottling around the lake and the north road
+    forest = (noise(120, 34, 1) > 0.52) * np.clip(1 - ((X - 0.62) / 0.2) ** 2 - ((Y - 0.28) / 0.38) ** 2, 0, 1) * (height < 0.5)
+    col = col * (1 - forest[..., None] * 0.6) + np.array((46, 112, 58)) * forest[..., None] * 0.6
+    col = np.clip(col * shade[..., None], 0, 255)
+    im = Image.fromarray(col.astype('uint8'), 'RGB')
+    d = ImageDraw.Draw(im)
+    rnd = random.Random(5)
+
+    # Midwest fields: a patchwork grid east of the mountains
+    for gxi in range(0, int(w * 0.42), 34):
+        for gyi in range(0, h, 30):
+            if rnd.random() < 0.55:
+                c = rnd.choice([(162, 206, 92), (186, 214, 104), (214, 204, 110), (132, 186, 80)])
+                d.rectangle([gxi + 2, gyi + 2, gxi + 32, gyi + 28], fill=c)
+    for gxi in range(0, int(w * 0.42), 34):
+        d.line([(gxi, 0), (gxi, h)], fill=(120, 150, 70), width=1)
+    for gyi in range(0, h, 30):
+        d.line([(0, gyi), (w * 0.42, gyi)], fill=(120, 150, 70), width=1)
+    # soften the field edge into the foothills
+    fade = Image.new('L', (w, h), 0)
+    fd = ImageDraw.Draw(fade)
+    for k in range(60):
+        fd.rectangle([0, 0, int(w * (0.36 + k * 0.001)), h], fill=int(255 * (1 - k / 60)))
+    base = Image.fromarray(col.astype('uint8'), 'RGB')
+    im = Image.composite(im, base, fade.filter(ImageFilter.GaussianBlur(30)))
     d = ImageDraw.Draw(im)
 
-    # farm fields: a halftone dot screen in soft patches (the flat country east of the park)
-    noise = Image.new('L', (14, 4))
-    noise.putdata([rnd.randint(0, 255) for _ in range(56)])
-    noise = noise.resize((w, h), Image.BICUBIC).filter(ImageFilter.GaussianBlur(30))
-    step = 9
-    for y in range(0, h, step):
-        for x in range((y // step) % 2 * step // 2, w, step):
-            v = noise.getpixel((min(x, w - 1), min(y, h - 1)))
-            if x > w * 0.43:
-                v -= 70
-            r = max(0, (v - 110) / 145) * 3.4
-            if r > 0.5:
-                d.ellipse([x - r, y - r, x + r, y + r], fill=FIELD)
+    # ocean with depth bands and surf line
+    coast = [(w * 0.935 + 14 * math.sin(y / 41) + 8 * math.sin(y / 11), y) for y in range(-10, h + 20, 6)]
+    d.polygon(coast + [(w + 10, h + 10), (w + 10, -10)], fill=(40, 140, 196))
+    for k, c in ((10, (58, 158, 210)), (26, (30, 120, 180)), (48, (22, 100, 160))):
+        d.line([(x + k, y) for x, y in coast], fill=c, width=8)
+    d.line(coast, fill=(250, 250, 240), width=5)
+    d.line([(x - 3, y) for x, y in coast], fill=(218, 196, 140), width=4)
 
-    # ocean at the west edge (right side of the strip map)
-    ox = w * 0.955
-    coast = [(ox + 18 * math.sin(y / 37) + 10 * math.sin(y / 13), y) for y in range(0, h + 8, 8)]
-    d.polygon(coast + [(w, h), (w, 0)], fill=WATER)
-    for k in range(1, 8):
-        d.line([(x + 14 * k, y) for x, y in coast], fill=WATER_D if k % 2 else (150, 195, 214), width=2)
-    d.line(coast, fill=INK, width=3)
+    # river from the mountains, east across the plains
+    river = bez([P(0.56, 0.5), P(0.48, 0.66), P(0.40, 0.74), P(0.30, 0.82), P(0.18, 0.78), P(0.08, 0.9), P(0.0, 0.94)], 50)
+    line(d, river, (36, 120, 180), 6)
+    line(d, river, (96, 176, 222), 3)
 
-    # Lake Destiny, up in the Idaho pines
-    lx, ly = P(0.745, 0.24)
-    lake = blob(lx, ly, 70 * S, 26 * S, 3)
-    d.polygon(lake, fill=WATER)
-    for k in (0.82, 0.62, 0.42):
-        d.line(blob(lx, ly, 70 * S * k, 26 * S * k, 3) + [blob(lx, ly, 70 * S * k, 26 * S * k, 3)[0]], fill=WATER_D, width=2)
-    d.line(lake + [lake[0]], fill=INK, width=3)
+    # Lake Destiny
+    lxp, lyp = P(lx, ly)
+    lake = blob(lxp, lyp, 62 * S, 26 * S, 3)
+    d.polygon(lake, fill=(38, 132, 196))
+    for k, c in ((0.78, (60, 156, 214)), (0.5, (92, 178, 226))):
+        d.polygon(blob(lxp, lyp, 62 * S * k, 26 * S * k, 3), fill=c)
+    d.line(lake + [lake[0]], fill=(250, 250, 240), width=3)
+    # dock and rowboat
+    dx0, dy0 = lxp + 40 * S, lyp + 12 * S
+    d.rectangle([dx0, dy0, dx0 + 22 * S, dy0 + 4 * S], fill=(120, 80, 44), outline=INK)
+    d.ellipse([lxp - 10 * S, lyp - 4 * S, lxp + 10 * S, lyp + 4 * S], fill=(224, 69, 43), outline=INK, width=2)
 
-    # rivers
-    for pts in ([P(0.11, 0.0), P(0.13, 0.35), P(0.10, 0.7), P(0.14, 1.0)],
-                [P(0.70, 0.30), P(0.64, 0.55), P(0.58, 0.72), P(0.52, 1.0)]):
-        line(d, bez([(x, y) for x, y in pts], 60), WATER_D, 4)
-
-    # mountains: engraved ridges with hatching, between the fork and the coast
-    peaks = []
-    for i in range(22):
-        fx = 0.47 + i * 0.019 + rnd.uniform(-0.006, 0.006)
-        fy = 0.30 + rnd.uniform(-0.08, 0.30)
-        if 0.66 < fx < 0.83 and fy < 0.42:
-            continue
-        peaks.append((fx, fy, rnd.uniform(15, 26)))
-    peaks.sort(key=lambda p: p[1])
-    for fx, fy, ht in peaks:
-        cx, base = P(fx, fy)
-        hh = ht * S
-        bw = hh * 1.15
-        top = (cx, base - hh)
-        left = (cx - bw, base)
-        right = (cx + bw, base)
-        d.polygon([left, top, right], fill=LAND)
-        # shaded east face: hatch lines
-        for t in range(1, 9):
-            u = t / 9
-            x0 = cx + (right[0] - cx) * u
-            y0 = (base - hh) + hh * u
-            d.line([(x0, y0), (cx + (right[0] - cx) * u * 0.35, base)], fill=INK, width=2)
-        d.line([left, top, right], fill=INK, width=3, joint='curve')
-        # snow cap
-        d.polygon([top, (cx - bw * 0.22, base - hh * 0.78), (cx - bw * 0.05, base - hh * 0.72), (cx + bw * 0.12, base - hh * 0.8)], fill=(250, 246, 232))
-        d.line([(cx - bw * 0.22, base - hh * 0.78), top, (cx + bw * 0.12, base - hh * 0.8)], fill=INK, width=2)
-
-    # pine trees around the lake and the campground
+    # pine stands
     def pine(x, y, s):
-        for j in range(3):
-            yy = y - j * s * 0.55
-            ww = s * (0.62 - j * 0.15)
-            d.polygon([(x - ww, yy), (x, yy - s * 0.75), (x + ww, yy)], fill=(70, 104, 62))
-            d.line([(x - ww, yy), (x, yy - s * 0.75), (x + ww, yy)], fill=INK, width=2)
-        d.line([(x, y), (x, y + s * 0.25)], fill=INK, width=3)
-    for fx, fy in [(0.655, 0.16), (0.672, 0.34), (0.69, 0.10), (0.81, 0.13), (0.825, 0.36), (0.80, 0.47),
-                   (0.70, 0.47), (0.845, 0.22), (0.53, 0.20), (0.545, 0.36), (0.515, 0.32)]:
+        d.polygon([(x - s * 0.45, y), (x, y - s * 1.3), (x + s * 0.45, y)], fill=(30, 92, 48), outline=(22, 60, 36))
+        d.line([(x, y), (x, y + s * 0.25)], fill=(80, 50, 30), width=3)
+    for _ in range(70):
+        fx, fy = rnd.uniform(0.5, 0.86), rnd.uniform(0.05, 0.6)
+        if ((fx - lx) / 0.08) ** 2 + ((fy - ly) / 0.14) ** 2 < 1.1:
+            continue
+        if rnd.random() < 0.5 and not (0.58 < fx < 0.82):
+            continue
         x, y = P(fx, fy)
-        pine(x, y, rnd.uniform(14, 18) * S)
+        pine(x, y, rnd.uniform(8, 12) * S)
 
-    # roads: grey county roads first
-    for pts in ([P(0.0, 0.18), P(0.2, 0.25), P(0.34, 0.12), P(0.45, 0.05)],
-                [P(0.05, 0.95), P(0.2, 0.85), P(0.3, 0.92), P(0.4, 0.86)],
-                [P(0.86, 0.95), P(0.9, 0.55), P(0.94, 0.2)]):
-        line(d, bez(pts, 60), (150, 140, 150), 3)
-
-    # the highway west: Spoonerville, Possum Park, the fork
-    main = bez([P(0.02, 0.56), P(0.12, 0.62), P(0.255, 0.52), P(0.34, 0.6), P(0.425, 0.55)], 90)
-    north = bez([P(0.425, 0.55), P(0.5, 0.5), P(0.6, 0.62), P(0.66, 0.5), P(0.72, 0.43)], 90)
-    south = bez([P(0.425, 0.55), P(0.52, 0.72), P(0.64, 0.8), P(0.78, 0.74), P(0.92, 0.80)], 90)
-    for pts in (north, south, main):
-        line(d, pts, INK, 15)
-    for pts in (north, south, main):
+    # roads
+    main = bez([P(0.03, 0.62), P(0.12, 0.66), P(0.205, 0.56), P(0.30, 0.62), P(0.385, 0.58)], 90)
+    northr = bez([P(0.385, 0.58), P(0.46, 0.50), P(0.55, 0.47), P(0.62, 0.36), P(0.69, 0.30)], 90)
+    south = bez([P(0.385, 0.58), P(0.47, 0.74), P(0.6, 0.82), P(0.74, 0.80), P(0.84, 0.74), P(0.905, 0.70)], 90)
+    for pts in (northr, south, main):
+        line(d, pts, (250, 244, 226), 19)
+    for pts in (northr, south, main):
+        line(d, pts, INK, 14)
+    for pts in (northr, south, main):
         line(d, pts, ORANGE, 9)
-    # center dashes on the highway
-    for pts in (main, north, south):
+    for pts in (main, northr, south):
         for i in range(0, len(pts) - 6, 14):
-            d.line(pts[i:i + 6], fill=(250, 236, 200), width=2)
+            d.line(pts[i:i + 6], fill=(255, 238, 190), width=2)
 
-    im = im.filter(ImageFilter.SMOOTH_MORE)
+    # Bigfoot footprints crossing the north road
+    for i in range(6):
+        fx, fy = 0.505 + i * 0.016, 0.30 + i * 0.05 + (0.012 if i % 2 else -0.012)
+        x, y = P(fx, fy)
+        d.ellipse([x - 4 * S, y - 7 * S, x + 4 * S, y + 7 * S], fill=(70, 46, 30))
+        for t in range(4):
+            d.ellipse([x - 5 * S + t * 3 * S, y - 11 * S, x - 3 * S + t * 3 * S, y - 8 * S], fill=(70, 46, 30))
+
+    # Spoonerville houses
+    for i, (fx, fy) in enumerate([(0.03, 0.47), (0.055, 0.44), (0.075, 0.49), (0.045, 0.53)]):
+        x, y = P(fx, fy)
+        d.rectangle([x - 7 * S, y - 6 * S, x + 7 * S, y + 4 * S], fill=(250, 244, 226), outline=INK, width=2)
+        d.polygon([(x - 9 * S, y - 6 * S), (x, y - 13 * S), (x + 9 * S, y - 6 * S)], fill=ORANGE if i % 2 else (90, 60, 140), outline=INK)
+
+    # the concert in L.A.: stage glow and searchlight beams
+    sx, sy = P(0.905, 0.70)
+    glow = Image.new('L', (w, h), 0)
+    gd = ImageDraw.Draw(glow)
+    for ang in (-62, -38, -14):
+        a = math.radians(ang - 90 + 90)
+        ex, ey = sx + 150 * S * math.cos(math.radians(ang - 90)), sy + 150 * S * math.sin(math.radians(ang - 90))
+        gd.polygon([(sx - 3 * S, sy), (ex - 14 * S, ey), (ex + 14 * S, ey), (sx + 3 * S, sy)], fill=120)
+    glow = glow.filter(ImageFilter.GaussianBlur(8))
+    beam = Image.new('RGB', (w, h), (255, 236, 150))
+    im = Image.composite(beam, im, glow)
+    d = ImageDraw.Draw(im)
+
+    im = im.filter(ImageFilter.SMOOTH)
     im.save(os.path.join(A, 'route-map.png'))
 
     def f(pt):
         return [round(pt[0] / S / MW, 4), round(pt[1] / S / MH, 4)]
-    return {'spoonerville': f(main[0]), 'possum': f(P(0.255, 0.52)), 'fork': f(main[-1]),
-            'lake': f(P(0.745, 0.24)), 'la': f(south[-1]), 'neptune': f(south[int(len(south) * 0.62)]),
-            'bigfoot': f(north[int(len(north) * 0.45)])}
+    return {'spoonerville': f(main[0]), 'possum': f(P(0.205, 0.56)), 'fork': f(main[-1]),
+            'lake': f(P(lx, ly)), 'la': f(south[-1]), 'neptune': f(south[int(len(south) * 0.66)]),
+            'bigfoot': f(P(0.545, 0.36)), 'desert': f(P(0.62, 0.9))}
 
 
 def wear(name, seed):
@@ -197,9 +240,9 @@ def still():
     w, h = im.size
     # 390 x 236 frame: keep the map, the wheel and both faces
     th = h
-    tw = int(th * 390 / 236)
+    tw = int(th * 390 / 220)
     left = (w - tw) // 2
-    im = im.crop((left, 0, left + tw, th)).resize((390 * 2, 236 * 2), Image.LANCZOS)
+    im = im.crop((left, 0, left + tw, th)).resize((390 * 2, 220 * 2), Image.LANCZOS)
     im = ImageEnhance.Brightness(im).enhance(1.04)
     im.save(os.path.join(A, 'still-map.jpg'), quality=90)
 
@@ -219,7 +262,7 @@ def postcard():
     # trim the scan's outer white edge a touch
     m = int(w * 0.012)
     im = im.crop((m, m, w - m, h - m))
-    im = im.resize((290 * 2, int(290 * 2 * im.size[1] / im.size[0])), Image.LANCZOS)
+    im = im.resize((276 * 2, int(276 * 2 * im.size[1] / im.size[0])), Image.LANCZOS)
     im = ImageEnhance.Color(im).enhance(1.05)
     im.save(os.path.join(A, 'postcard.jpg'), quality=90)
     print('postcard', im.size)

@@ -11,7 +11,9 @@ D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
 W, H = 1344, 816
-PAPER, RED, GREEN, INK, MUTE, CARD = '#f4e9b3', '#b3221b', '#163a30', '#201c14', '#5b4d2b', '#fffbea'
+PAPER, RED, GREEN, INK, MUTE, CARD = '#f6eed8', '#a3162a', '#1b100d', '#1d1510', '#5e4a30', '#fffaf0'
+GOLD, GOLDL = '#b8892a', '#e8c06a'
+GLOW = 'text-shadow: 0 0 5px rgba(255,214,140,0.85), 0 0 14px rgba(214,40,50,0.9), 0 0 30px rgba(214,40,50,0.55)'
 FONTS = ('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,800;1,400'
          '&family=Herr+Von+Muellerhoff&display=swap')
 DISP = "'Gravitas One', serif"; BODY = "'Libre Franklin', sans-serif"; SCRIPT = "'Herr Von Muellerhoff', cursive"
@@ -24,17 +26,17 @@ def fit(im, w, h, box=None):
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
-ST_W, ST_H = 420, 272
-st = Image.open(S('nWPFpOSQT5Bi7U2UrDHylaieIJA.jpg')).convert('RGB')
-st = ImageEnhance.Brightness(st).enhance(1.12)
-fit(st, ST_W, ST_H, (880, 78, 1900, 739)).save(A('strip-sign.jpg'), quality=90)
+HE_W, HE_H = 406, 300
+he = Image.open(S('16PhF3i6TL0jpPfpHGq1EJQZLYf.jpg')).convert('RGB')
+he = ImageEnhance.Brightness(he).enhance(1.08)
+fit(he, HE_W, HE_H, (700, 0, 3140, 1803)).save(A('ace-floor.jpg'), quality=90)
 
 NA_W, NA_H = 236, 168
 na = Image.open(S('nara-549015.tif')).convert('RGB')
 na = ImageEnhance.Contrast(ImageEnhance.Brightness(na).enhance(1.18)).enhance(1.08)
 r_, g_, b_ = na.split()
 na = Image.merge('RGB', (r_, g_.point(lambda v: min(255, int(v * 1.03))), b_.point(lambda v: min(255, int(v * 1.1) + 4))))
-fit(na, NA_W, NA_H, (60, 300, 2900, 1950)).save(A('neon-1972.jpg'), quality=90)
+fit(na, NA_W - 14, NA_H - 30, (60, 300, 2900, 1950)).save(A('neon-1972.jpg'), quality=90)
 
 def wear():
     rnd = random.Random(73)
@@ -154,8 +156,8 @@ def section(title, mark):
     """Keno-ticket section head: Gravitas title in red, right-hand 'MARK ANY n' tab in green, double rule."""
     return (f'<div style="position: relative; height: 56px; margin-top: 10px">'
             f'<div style="position: absolute; left: 0; top: 0; font-family: {DISP}; font-size: 34px; line-height: 40px; color: {RED}; white-space: nowrap">{title}</div>'
-            f'<div style="position: absolute; left: 0; right: 0; top: 44px; border-top: 3px solid {GREEN}; border-bottom: 1px solid {GREEN}; height: 2px"></div>'
-            f'<div style="position: absolute; right: 0; top: 33px; z-index: 2; background: {GREEN}; color: {PAPER}; font-family: {BODY}; font-weight: 800; '
+            f'<div style="position: absolute; left: 0; right: 0; top: 44px; border-top: 3px solid {GOLD}; border-bottom: 1px solid {GOLD}; height: 2px"></div>'
+            f'<div style="position: absolute; right: 0; top: 33px; z-index: 2; background: {GREEN}; color: {GOLDL}; font-family: {BODY}; font-weight: 800; '
             f'font-size: 14px; letter-spacing: 0.16em; padding: 5px 8px 4px; line-height: 1">{mark}</div>' + '</div>')
 
 def item(spot, name, price, desc, gap=14, mark=None):
@@ -168,7 +170,7 @@ def item(spot, name, price, desc, gap=14, mark=None):
             f'<span>{name}</span><span style="color: {RED}; white-space: nowrap">{price}</span></div>'
             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: {INK}; margin-top: 3px">{desc}</div></div>')
 
-def frame(img, alt, x, y, w, h, col=RED):
+def frame(img, alt, x, y, w, h, col=GOLD):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; border: 3px solid {col}; padding: 4px; background: {CARD}; '
             f'box-shadow: 0 2px 5px rgba(60,40,10,0.25)">'
             f'<img src="assets/{img}" alt="{alt}" style="display: block; width: {w}px; height: {h}px"></div>')
@@ -183,19 +185,19 @@ def chip(x, y, rot=14):
         f'<div style="position: absolute; left: 0; bottom: 0; width: 18px; height: 12px; background: {CARD}"></div></div>'
         for a in (0, 60, 120))
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {d}px; height: {d}px; transform: rotate({rot}deg)">'
-            f'<div style="position: absolute; left: 0; top: 0; width: {d}px; height: {d}px; border-radius: 50%; background: #1f6b4a; '
+            f'<div style="position: absolute; left: 0; top: 0; width: {d}px; height: {d}px; border-radius: 50%; background: {RED}; '
             f'box-shadow: 0 4px 9px rgba(30,20,0,0.45); overflow: hidden">{spots}</div>'
             f'<div style="position: absolute; left: 7px; top: 7px; width: {d - 14}px; height: {d - 14}px; border-radius: 50%; box-sizing: border-box; border: 2px dashed rgba(255,251,234,0.55)"></div>'
             f'<div style="position: absolute; left: 20px; top: 20px; width: {d - 40}px; height: {d - 40}px; border-radius: 50%; background: {CARD}; '
-            f'box-sizing: border-box; border: 3px solid {RED}; text-align: center">'
-            f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1; color: #1f6b4a; margin-top: 14px">$25</div>'
-            f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.06em; line-height: 1.1; color: {RED}; margin-top: 4px">TANGIERS</div>'
+            f'box-sizing: border-box; border: 3px solid {GOLD}; text-align: center">'
+            f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1; color: {RED}; margin-top: 14px">$25</div>'
+            f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.06em; line-height: 1.1; color: {GREEN}; margin-top: 4px">TANGIERS</div>'
             f'</div></div>')
 
 def comp_card(x, y, rot=-4):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 172px; height: 178px; transform: rotate({rot}deg); background: {CARD}; '
-            f'box-shadow: 0 4px 10px rgba(40,25,0,0.35); box-sizing: border-box; border: 2px solid {GREEN}; padding: 10px 12px">'
-            f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.18em; color: {GREEN}; line-height: 1.1">TANGIERS</div>'
+            f'box-shadow: 0 4px 10px rgba(40,25,0,0.35); box-sizing: border-box; border: 2px solid {GOLD}; padding: 10px 12px">'
+            f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.18em; color: {GOLD}; line-height: 1.1">TANGIERS</div>'
             f'<div style="font-family: {DISP}; font-size: 22px; line-height: 1.05; color: {RED}; margin-top: 4px">COMP</div>'
             f'<div style="font-family: {BODY}; font-size: 15px; line-height: 1.25; color: {INK}; margin-top: 4px">Coffee shop, one guest, anything on the card.</div>'
             f'<div style="font-family: {SCRIPT}; font-size: 33px; line-height: 0.95; color: #1d2a6b; margin-top: 2px; white-space: nowrap">Sam Rothstein</div>'
@@ -204,17 +206,20 @@ def comp_card(x, y, rot=-4):
 # ---------------- the face ----------------
 o = []
 # column 1: sign, Strip photo, 1972 neon, comp card, chip
-o.append(f'<div style="{at(40, 40, 420)}">{kicker("Open all night")}'
-         f'<div style="font-family: {DISP}; font-size: 60px; line-height: 1; color: {RED}; margin-top: 8px; letter-spacing: 0.01em; white-space: nowrap">TANGIERS</div>'
-         f'<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 10px">'
-         f'<span style="font-family: {DISP}; font-size: 24px; line-height: 1; color: {GREEN}; letter-spacing: 0.02em; white-space: nowrap">COFFEE SHOP</span>'
-         f'<span style="font-family: {BODY}; font-weight: 700; font-size: 16px; letter-spacing: 0.16em; color: {MUTE}; white-space: nowrap">FORM K-73</span></div></div>')
-o.append(frame('strip-sign.jpg', 'The Tangiers tower sign lit up over the Strip at night, a red neon dome below it and traffic passing', 40, 196, 420 - 14, 258))
-o.append(f'<div style="{at(40, 474, 300)}font-family: {BODY}; font-style: italic; font-size: 17px; line-height: 1.3; color: {MUTE}">Under the camel, the brightest corner on the Strip.</div>')
-o.append(chip(352, 418))
-o.append(frame('neon-1972.jpg', 'A Las Vegas casino sign in thousands of orange bulbs spelling CASINO, 1972', 40, 548, NA_W - 14, NA_H - 14))
-o.append(f'<div style="{at(40, 718, 236)}font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.25; color: {MUTE}">Fremont Street, last year. We do it brighter.</div>')
-o.append(comp_card(290, 546))
+bulbs = lambda y: ''.join(f'<div style="position: absolute; left: {14 + k * 19.6:.1f}px; top: {y}px; width: 7px; height: 7px; border-radius: 50%; background: #ffe7a8; box-shadow: 0 0 5px 2px rgba(255,190,90,0.7)"></div>' for k in range(20))
+o.append(f'<div style="{at(40, 40, 420, f"height: 134px; background: {GREEN}; box-shadow: 0 3px 8px rgba(30,10,0,0.35)")}">'
+         f'<div style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px; border: 2px solid {GOLD}"></div>'
+         + bulbs(12) + bulbs(115) +
+         f'<div style="position: absolute; left: 0; top: 26px; width: 420px; text-align: center; font-family: {DISP}; font-size: 52px; line-height: 1; color: #ffd98a; letter-spacing: 0.01em; white-space: nowrap; {GLOW}">TANGIERS</div>'
+         f'<div style="position: absolute; left: 22px; right: 22px; top: 88px; display: flex; justify-content: space-between; align-items: baseline">'
+         f'<span style="font-family: {DISP}; font-size: 18px; line-height: 1; color: {PAPER}; letter-spacing: 0.04em; white-space: nowrap">COFFEE SHOP</span>'
+         f'<span style="font-family: {BODY}; font-weight: 800; font-size: 16px; letter-spacing: 0.16em; color: {GOLDL}; white-space: nowrap">ALL NIGHT</span></div></div>')
+o.append(frame('ace-floor.jpg', 'Ace in a black silk suit, arms folded, on the Tangiers casino floor under a ceiling of gold lights', 40, 186, HE_W, HE_H))
+o.append(f'<div style="{at(40, 510, 300)}font-family: {BODY}; font-style: italic; font-size: 17px; line-height: 1.3; color: {MUTE}">Mr. Rothstein on the floor. Nothing gets past him.</div>')
+o.append(chip(350, 440))
+o.append(frame('neon-1972.jpg', 'A Las Vegas casino sign in thousands of orange bulbs spelling CASINO, 1972', 40, 568, NA_W - 14, NA_H - 30))
+o.append(f'<div style="{at(40, 722, 236)}font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.25; color: {MUTE}">Fremont Street, last year. We burn brighter.</div>')
+o.append(comp_card(290, 566))
 
 # column 2: oyster bar, around the clock, eye in the sky
 c2 = (section('OYSTER BAR', 'MARK ANY 2')
@@ -225,7 +230,7 @@ c2 = (section('OYSTER BAR', 'MARK ANY 2')
       + item(24, 'Steak and eggs', '2.49', 'Two eggs any style, hash browns.')
       + item(7, 'Short stack', '.95', 'Whipped butter, warm syrup.'))
 o.append(f'<div style="{at(490, 26, 400)}">{c2}</div>')
-o.append(f'<div style="{at(490, 634, 400, f"height: 90px; box-sizing: border-box; border: 3px solid {RED}; outline: 1px solid {RED}; outline-offset: 3px; background: {CARD}")}">'
+o.append(f'<div style="{at(490, 634, 400, f"height: 90px; box-sizing: border-box; border: 3px solid {RED}; outline: 1px solid {GOLD}; outline-offset: 3px; background: {CARD}")}">'
          f'<img src="assets/eye.png" alt="An engraved eye with rays" style="position: absolute; left: 4px; top: -8px; width: 104px; height: 104px">'
          f'<div style="position: absolute; left: 112px; top: 10px; width: 276px">'
          f'<div style="font-family: {DISP}; font-size: 22px; line-height: 1.05; color: {RED}">WE SEE ALL.</div>'
@@ -234,19 +239,17 @@ o.append(f'<div style="{at(490, 634, 400, f"height: 90px; box-sizing: border-box
 # column 3: the muffin, at the table, Ace's rules
 berries = ''.join(
     f'<div style="width: 34px; text-align: center"><img src="assets/berry-{i}.png" alt="" aria-hidden="true" style="display: block; width: 34px; height: 34px">'
-    f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1.2; color: {RED}">{i + 1}</div></div>' for i in range(10))
-muffin = (f'<div style="position: relative; box-sizing: border-box; background: {CARD}; border: 3px solid {GREEN}; padding: 12px 14px 12px">'
-          f'{kicker("From our baker", GREEN, 16)}'
-          f'<div style="position: relative; margin-top: 8px; padding-left: 52px">'
-          f'<div style="position: absolute; left: 0; top: 0; width: 36px; height: 32px; border: 2px solid {RED}; box-sizing: border-box; text-align: center; '
-          f'font-family: {BODY}; font-weight: 700; font-size: 17px; line-height: 28px; color: {RED}">10'
-          f'<img src="assets/mark-a.png" alt="" aria-hidden="true" style="position: absolute; left: -2px; top: -4px; width: 40px; height: 40px; opacity: 0.8"></div>'
-          f'<div style="display: flex; justify-content: space-between; align-items: baseline; font-family: {BODY}; font-weight: 800; font-size: 26px; line-height: 1.12; color: {INK}; text-transform: uppercase">'
-          f'<span>Blueberry muffin</span><span style="color: {RED}">.50</span></div>'
-          '</div>'
-          f'<div style="display: flex; justify-content: space-between; margin-top: 10px">{berries}</div>'
-          f'<div style="font-family: {BODY}; font-weight: 700; font-size: 17px; line-height: 1.25; color: {GREEN}; margin-top: 6px; text-align: center">'
-          f'Buttermilk batter, ten berries in every one. Count them. We did.</div></div>')
+    f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; line-height: 1.2; color: {GOLDL}">{i + 1}</div></div>' for i in range(10))
+muffin = (f'<div style="position: relative; box-sizing: border-box; background: {GREEN}; padding: 14px 14px 12px; box-shadow: 0 3px 8px rgba(30,10,0,0.35)">'
+          f'<div style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px; border: 2px solid {GOLD}"></div>'
+          f'<div style="position: relative; display: flex; align-items: center; gap: 14px">'
+          f'<div style="font-family: {DISP}; font-size: 70px; line-height: 0.9; color: #ffd98a; {GLOW}">10</div>'
+          f'<div><div style="font-family: {BODY}; font-weight: 800; font-size: 18px; letter-spacing: 0.2em; color: {GOLDL}; line-height: 1.2">ACE&rsquo;S STANDARD</div>'
+          f'<div style="font-family: {DISP}; font-size: 21px; line-height: 1.15; color: {PAPER}; margin-top: 2px">BLUEBERRIES.<br>EVERY MUFFIN.</div></div></div>'
+          f'<div style="position: relative; display: flex; justify-content: space-between; margin-top: 12px">{berries}</div>'
+          f'<div style="position: relative; display: flex; justify-content: space-between; align-items: baseline; margin-top: 12px; font-family: {BODY}; font-weight: 800; font-size: 26px; line-height: 1.12; color: {PAPER}; text-transform: uppercase">'
+          f'<span>Blueberry muffin</span><span style="color: {GOLDL}">.50</span></div>'
+          f'<div style="position: relative; font-family: {BODY}; font-size: 18px; line-height: 1.3; color: {PAPER}; margin-top: 3px">Buttermilk batter. Count them. We did.</div></div>')
 c3 = (muffin
       + section('TO DRINK', 'MARK ANY 2')
       + item(25, 'Dry martini', '1.25', 'Gin, dry vermouth, a green olive.', gap=12)
@@ -254,14 +257,15 @@ c3 = (muffin
 c3_rules = True
 rules = ['Same number of blueberries in every muffin. No exceptions.',
          'Three jackpots in twenty minutes? Somebody gets fired.',
-         'Comps are signed by me. Nobody else.',
+         'Comps are signed by me. Period.',
          'Cheats leave by the back door.']
-rl = ''.join(f'<div style="display: flex; gap: 10px; margin-top: 7px"><span style="font-family: {DISP}; font-size: 18px; color: {RED}; line-height: 1.3">{n}.</span>'
+rl = ''.join(f'<div style="position: relative; display: flex; gap: 10px; margin-top: 7px"><span style="font-family: {DISP}; font-size: 18px; color: {GOLDL}; line-height: 1.3">{n}.</span>'
              f'<span style="font-family: {BODY}; font-size: 18px; line-height: 1.3; color: {PAPER}">{t}</span></div>' for n, t in enumerate(rules, 1))
-o.append(f'<div style="{at(920, 40, 384)}">{c3}<div style="margin-top: 16px; box-sizing: border-box; background: {GREEN}; padding: 12px 16px 14px">'
-         f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
-         f'<span style="font-family: {DISP}; font-size: 28px; line-height: 1; color: {PAPER}">ACE&rsquo;S RULES</span>'
-         f'<span style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #e9b949">S.R.</span></div>{rl}</div></div>')
+o.append(f'<div style="{at(920, 40, 384)}">{c3}<div style="margin-top: 16px; box-sizing: border-box; background: {RED}; padding: 14px 18px 16px; position: relative; box-shadow: 0 3px 8px rgba(30,10,0,0.35)">'
+         f'<div style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px; border: 2px solid {GOLD}"></div>'
+         f'<div style="position: relative; display: flex; justify-content: space-between; align-items: baseline">'
+         f'<span style="font-family: {DISP}; font-size: 28px; line-height: 1; color: #ffd98a">ACE&rsquo;S RULES</span>'
+         f'<span style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: {GOLDL}">S.R.</span></div>{rl}</div></div>')
 
 # fine print, column 2 foot
 o.append(f'<div style="{at(490, 734, 400)}font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {MUTE}">'
@@ -271,10 +275,10 @@ def page(inner):
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}">'
             f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.22">'
             f'<img src="assets/wear-front.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
-            f'<div style="position: absolute; left: 14px; top: 14px; width: {W - 28}px; height: {H - 28}px; box-sizing: border-box; border: 3px solid {RED}"></div>'
+            f'<div style="position: absolute; left: 14px; top: 14px; width: {W - 28}px; height: {H - 28}px; box-sizing: border-box; border: 3px solid {GOLD}"></div>'
             f'<div style="position: absolute; left: 20px; top: 20px; width: {W - 40}px; height: {H - 40}px; box-sizing: border-box; border: 1px solid {RED}"></div>'
-            f'<div style="position: absolute; left: 475px; top: 40px; width: 0; height: 736px; border-left: 1px dashed {RED}"></div>'
-            f'<div style="position: absolute; left: 905px; top: 40px; width: 0; height: 736px; border-left: 1px dashed {RED}"></div>'
+            f'<div style="position: absolute; left: 475px; top: 40px; width: 0; height: 736px; border-left: 1px dashed {GOLD}"></div>'
+            f'<div style="position: absolute; left: 905px; top: 40px; width: 0; height: 736px; border-left: 1px dashed {GOLD}"></div>'
             + inner + '</div>')
 
 body = page(''.join(o))
