@@ -28,11 +28,13 @@ async def main():
             pg = await ctx.new_page()
             url = f'http://localhost:{PORT}/wip/genre/horror/harness.html?' + (f'film={quote(film)}' if film else 'stress=1')
             await pg.goto(url); await pg.wait_for_selector('body[data-ready="1"]', timeout=60000); await pg.wait_for_timeout(800)
-            print(film or 'STRESS', await pg.evaluate(CHECK), flush=True)
+            print(film or 'STRESS', await pg.evaluate(CHECK), await pg.evaluate("[...document.querySelectorAll('[data-h=fill]')].map(e=>e.style.display+' '+e.style.top)"), flush=True)
             name = re.sub(r'[^a-z0-9]+', '-', (film or 'stress 60 char title 16 items').lower()).strip('-')
-            faces = await pg.query_selector_all('.fx-face')
+            for old in os.listdir(OUT):
+                if old.startswith(f'proof-{name}-'): os.remove(f'{OUT}/{old}')
+            faces = [e for e in await pg.query_selector_all('.fx-face') if await e.is_visible()]
             for i, el in enumerate(faces):
-                await el.screenshot(path=f'{OUT}/proof-{name}-{"front" if i == 0 else "back"}.png')
+                await el.screenshot(path=f'{OUT}/proof-{name}-{["front", "back"][i] if i < 2 else f"back-continued-{i-1}"}.png')
             await pg.close()
         await b.close()
 asyncio.run(main())

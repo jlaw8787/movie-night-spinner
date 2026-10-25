@@ -27,9 +27,9 @@ const q=new URLSearchParams(location.search);
     menu=JSON.parse(JSON.stringify(menu));
     if(id===STRESS){
       /* many items: 4 per course, long notes, pooled from the film's own dishes */
-      const pool=[...f.S,...f.M,...f.W,...f.K].map(x=>({n:x[0],note:(x[2]||x[1]).slice(0,120)}));
+      const pool=[...f.S,...f.M,...f.W,...f.K].map(x=>({n:x[0],note:(x[2]||x[1]).slice(0,120).replace(/[ ,]+\S*$/,"")}));
       let k=0;["s","m","w","d"].forEach(c=>{while(menu[c].length<4)menu[c].push(pool[k++%pool.length])});
-      ["s","m","w","d"].forEach(c=>menu[c].forEach(it=>{if((it.note||"").length<60)it.note=(it.note+", made the long way, the way the counter has always done it, no shortcuts and no substitutions").slice(0,120)}));
+      ["s","m","w","d"].forEach(c=>menu[c].forEach(it=>{if((it.note||"").length<60)it.note=(it.note+", made the long way, the way the counter has always done it, no shortcuts and no substitutions").slice(0,120).replace(/[ ,]+\S*$/,"")}));
     }
     return {f,menu,poster:(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[id])||null,st:stills[id]};
   }

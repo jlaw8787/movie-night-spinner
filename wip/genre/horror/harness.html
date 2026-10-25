@@ -40,6 +40,8 @@ const toItem=([n,note,how,shop])=>({n,note,how,shop});
       genreCard(f,menu,TMDB_POSTERS[f.id]||null,stills[f.id]||null);
     out.appendChild(wrap);
   }
+  /* load every face the fit measures with, or the fit runs on fallback metrics */
+  await Promise.all(['400 44px "League Gothic"','600 18px "Libre Franklin"','700 28px "Libre Franklin"','400 20px "Source Serif 4"','600 20px "Source Serif 4"','italic 400 20px "Source Serif 4"','italic 600 20px "Source Serif 4"','400 22px "Homemade Apple"'].map(f=>document.fonts.load(f)));
   await document.fonts.ready;
   await Promise.all([...document.images].map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r})));
   horrorFit(out);

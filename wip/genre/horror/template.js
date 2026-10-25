@@ -29,12 +29,21 @@ function titleSize(t,width,maxLines,hi,lo){
 /* the four venue sections, mapped from the app's s, m, w, d courses */
 const SECTIONS=[["s","Before Midnight","to start"],["m","The Night Shift","off the grill"],["w","The Pie Case","under glass"],["d","Behind the Counter","to drink"]];
 
+/* best stills first: no-language (no baked-in title text) and 1280 wide or more, in TMDB's listed order */
+function pickStills(st){
+  if(!st||!st.length)return [];
+  const big=st.filter(x=>x&&x[0]&&(+x[1]||0)>=1280),pool=big.length?big:st.filter(x=>x&&x[0]);
+  return pool.filter(x=>x[3]==null).concat(pool.filter(x=>x[3]!=null)).slice(0,6)}
+const fillArt=(src,cap,n)=>src?`<div data-h="fill" style="display:none;position:absolute;left:44px;right:44px;padding:8px 8px 0;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.25);box-sizing:border-box">
+    <div data-h="fillimg" style="outline:2px solid ${C.red};outline-offset:-2px;height:200px;overflow:hidden"><img alt="" crossorigin="anonymous" src="${IMG}w1280${src}" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div style="display:flex;justify-content:space-between;font:italic 400 17px/40px ${SERIF};color:${C.ink};padding:0 4px"><span>${cap}</span><span style="font:700 14px/40px ${SANS};letter-spacing:.14em;color:${C.mute};font-style:normal">STILL: TMDB</span></div></div>`:"";
+
 function face(bg,inner,n){
-  return `<div class="fx-face" data-face="${n}" data-horror="face" style="position:relative;width:816px;height:1056px;overflow:hidden;background:${bg};box-sizing:border-box;flex:none">${inner}
+  return `<div class="fx-face" data-face="${n}" data-horror="face" style="${n===3?"display:none;":""}position:relative;width:816px;height:1056px;overflow:hidden;background:${bg};box-sizing:border-box;flex:none">${inner}
   <div style="position:absolute;inset:0;background:url('${HORROR_ASSETS}paper-grain.png') center/cover;mix-blend-mode:multiply;opacity:.55;pointer-events:none"></div></div>`}
 
 function front(f,poster,stills){
-  const still=stills&&stills[0]&&stills[0][0];
+  const still=stills[0]&&stills[0][0];
   const bgSrc=still?IMG+"w780"+still:poster?IMG+"w342"+poster:"";
   const title=ESC(f.title),tag=ESC(f.T||""),desc=ESC(f.D||"");
   /* rain on the window: the film's own image, blurred and dark, behind everything */
@@ -83,7 +92,7 @@ function front(f,poster,stills){
 }
 
 function back(f,menu,poster,stills){
-  const s2=stills&&(stills[1]||stills[0]);
+  const s2=stills[1]||stills[0];
   const art=s2?`<div style="position:absolute;right:40px;top:18px;width:300px;padding:7px 7px 6px;background:#fff;transform:rotate(2deg);box-shadow:0 10px 24px rgba(0,0,0,.45);z-index:2">
       <div style="outline:2px solid ${C.red};outline-offset:-2px;height:142px;overflow:hidden"><img alt="Still from ${ESC(f.title)}" crossorigin="anonymous" src="${IMG}w780${s2[0]}" style="width:100%;height:100%;object-fit:cover;display:block"></div>
       <div style="font:italic 400 16px/1.2 ${SERIF};color:${C.ink};padding:7px 2px 0">Booth four, 2:40 a.m. Nobody saw them leave.</div></div>`
@@ -97,10 +106,12 @@ function back(f,menu,poster,stills){
   const item=(k,it)=>`<div data-h="item" style="break-inside:avoid;padding-bottom:16px">
       <div style="display:flex;align-items:baseline;gap:10px"><b data-h="dish" style="font:700 28px/1.12 ${SANS};color:${C.ink};flex:1 1 auto;min-width:0">${ESC(it.n)}</b><span data-h="price" style="font:700 28px/1 ${SANS};color:${C.red};flex:none">${price(f,k,it.n)}</span></div>
       ${it.note?`<div data-h="desc" style="font:400 21px/1.3 ${SERIF};color:#3a3d43;margin-top:4px">${ESC(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
-  const sec=([k,name,sub])=>(menu[k]||[]).length?`<div style="break-inside:avoid"><div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;gap:12px;border-bottom:2px solid ${C.ink};box-shadow:0 3px 0 ${C.paper},0 4px 0 ${C.ink};margin:0 0 14px;padding-bottom:4px">
+  const sec=([k,name,sub],its=menu[k]||[])=>its.length?`<div data-h="secblock"><div style="break-inside:avoid"><div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;gap:12px;border-bottom:2px solid ${C.ink};box-shadow:0 3px 0 ${C.paper},0 4px 0 ${C.ink};margin:0 0 14px;padding-bottom:4px">
       <span data-h="sech" style="white-space:nowrap;font:400 44px/1 ${DISP};letter-spacing:.05em;color:${C.ink};text-transform:uppercase">${name}</span><span style="white-space:nowrap;font:italic 400 17px/1 ${SERIF};color:${C.red}">${sub}</span></div>
-      ${item(k,menu[k][0])}</div>${menu[k].slice(1).map(it=>item(k,it)).join("")}<div data-h="gap" style="height:14px"></div>`:"";
-  const body=`<div data-h="menu" style="position:absolute;left:44px;right:44px;top:228px;bottom:232px;column-count:2;column-gap:40px;column-fill:balance;column-rule:1px solid rgba(22,26,32,.25)">${SECTIONS.map(sec).join("")}</div>`;
+      ${item(k,its[0])}</div>${its.slice(1).map(it=>item(k,it)).join("")}<div data-h="gap" style="height:14px"></div></div>`:"";
+  const chunks=SECTIONS.map(([k,name,sub])=>{const its=menu[k]||[],out=[];
+    for(let i=0;i<its.length;i+=2)out.push(sec([k,name,i?"continued":sub],its.slice(i,i+2)));return out.join("")}).join("");
+  const body=`<template data-h="chunks">${chunks}</template><div data-h="menu" style="position:absolute;left:44px;right:44px;top:228px;bottom:232px;column-count:2;column-gap:40px;column-fill:balance;column-rule:1px solid rgba(22,26,32,.25)">${SECTIONS.map(x=>sec(x)).join("")}</div>`;
   const props=`<div data-h="props" style="position:absolute;left:44px;right:44px;bottom:62px;height:150px;display:flex;gap:24px;align-items:stretch">
     <div style="flex:1.15;background:#fff;padding:14px 18px;box-shadow:0 4px 12px rgba(0,0,0,.18);border-left:6px solid ${C.red};transform:rotate(-.6deg);display:flex;flex-direction:column;justify-content:center">
       <div style="font:700 15px/1 ${SANS};letter-spacing:.24em;color:${C.red}">ORDER UP WHEN</div>
@@ -110,42 +121,73 @@ function back(f,menu,poster,stills){
       <div style="font:400 22px/1.5 ${HAND};color:#23324f;margin-top:4px">Dot, nights</div></div></div>`;
   const foot=`<div style="position:absolute;left:44px;right:44px;bottom:24px;display:flex;justify-content:space-between;font:400 15px/1 ${SANS};color:${C.mute}">
     <span>Prices subject to change without notice, like everything after midnight.</span><span>No refunds after 3:00 a.m.</span></div>`;
-  return face(C.paper,band+art+body+props+foot,2);
+  const fill=fillArt((stills[2]||stills[1]||[])[0],"From the window booth, just before the lights went.");
+  return face(C.paper,band+art+body+fill+props+foot,2);
+}
+
+/* face 3 stays hidden unless horrorFit needs it for overflow at the rule 4 minimum sizes */
+function cont(f,stills){
+  const band=`<div style="position:absolute;left:0;right:0;top:0;height:132px;background:${C.night}">
+    <div style="position:absolute;left:42px;top:26px;font:400 72px/1 ${DISP};letter-spacing:.04em;color:#ffe9e4;text-shadow:${NEON}">THE MENU, CONTINUED</div></div>`;
+  const body=`<div data-h="menu" style="position:absolute;left:44px;right:44px;top:166px;bottom:62px;column-count:2;column-gap:40px;column-fill:balance;column-rule:1px solid rgba(22,26,32,.25)"></div>`;
+  const foot=`<div style="position:absolute;left:44px;right:44px;bottom:24px;font:400 15px/1 ${SANS};color:${C.mute}">Last Light Diner, Route 13. Turn over for the cover.</div>`;
+  return face(C.paper,band+body+fillArt((stills[3]||stills[2]||[])[0],"Route 13 after midnight. Keep your headlights on.")+foot,3);
 }
 
 function genreCard(f,menu,poster,stills){
-  return `<div data-horror="card" style="display:flex;flex-wrap:wrap;gap:24px">${front(f,poster,stills)}${back(f,menu,poster,stills)}</div>`}
+  const st=pickStills(stills);
+  return `<div data-horror="card" style="display:flex;flex-wrap:wrap;gap:24px">${front(f,poster,st)}${back(f,menu,poster,st)}${cont(f,st)}</div>`}
 
 /* step down until the menu columns and the title fit their boxes; nothing below 14px */
 const LEVELS=[
-  {dish:30,price:30,desc:22,sech:48,pad:30,gap:34,mb:18,props:1},
-  {dish:29,price:29,desc:22,sech:46,pad:22,gap:24,mb:16,props:1},
   {dish:28,price:28,desc:21,sech:44,pad:16,gap:14,mb:14,props:1},
   {dish:27,price:27,desc:20,sech:42,pad:12,gap:10,mb:10,props:1},
   {dish:26,price:26,desc:20,sech:40,pad:9,gap:6,mb:8,props:1},
-  {dish:26,price:26,desc:20,sech:40,pad:9,gap:6,mb:8,props:0},
-  {dish:24,price:24,desc:18,sech:36,pad:6,gap:4,mb:6,props:0},
-  {dish:22,price:22,desc:17,sech:32,pad:5,gap:3,mb:5,props:0},
-  {dish:20,price:20,desc:16,sech:30,pad:4,gap:2,mb:4,props:0},
-  {dish:18,price:18,desc:15,sech:28,pad:3,gap:2,mb:3,props:0},
-  {dish:20,price:20,desc:0,sech:30,pad:6,gap:4,mb:4,props:0}];
+];
 function horrorFit(rootEl){
+  const fits=m=>m.scrollWidth<=m.clientWidth+1&&m.scrollHeight<=m.clientHeight+1;
   rootEl.querySelectorAll('[data-horror="card"]').forEach(card=>{
-    const [fr,bk]=card.querySelectorAll('[data-horror="face"]');
+    const [fr,bk,f3]=card.querySelectorAll('[data-horror="face"]');
     const t=fr.querySelector('[data-h="title"]');
     if(t){const box=t.parentElement;let s=+t.dataset.max;
       const over=()=>box.scrollHeight>box.clientHeight+1||t.scrollWidth>t.clientWidth+1;
       while(over()&&s>34){s-=2;t.style.fontSize=s+"px"}}
-    const m=bk.querySelector('[data-h="menu"]'),props=bk.querySelector('[data-h="props"]');
-    const set=(sel,fn)=>bk.querySelectorAll(`[data-h="${sel}"]`).forEach(fn);
-    for(const L of LEVELS){
+    const m=bk.querySelector('[data-h="menu"]'),blank=f3.cloneNode(true);
+    const set=(sel,fn)=>card.querySelectorAll(`[data-h="${sel}"]`).forEach(fn);
+    const apply=L=>{
       set("dish",e=>e.style.fontSize=L.dish+"px");set("price",e=>e.style.fontSize=L.price+"px");
-      set("desc",e=>{e.style.display=L.desc?"":"none";if(L.desc)e.style.fontSize=L.desc+"px"});set("sech",e=>e.style.fontSize=L.sech+"px");
+      set("desc",e=>e.style.fontSize=L.desc+"px");set("sech",e=>e.style.fontSize=L.sech+"px");
       set("item",e=>e.style.paddingBottom=L.pad+"px");set("gap",e=>e.style.height=L.gap+"px");
-      set("sec",e=>e.style.marginBottom=L.mb+"px");
-      bk.querySelector('[data-h="dot"]').style.display=L.props?"flex":"none";
-      props.style.height=L.props?"150px":"104px";m.style.bottom=L.props?"232px":"186px";
-      if(m.scrollWidth<=m.clientWidth+1&&m.scrollHeight<=m.clientHeight+1)break}
+      set("sec",e=>e.style.marginBottom=L.mb+"px")};
+    /* short menus: reserve a band above the props for a large still, biggest band at the biggest type that fits */
+    const fill2=bk.querySelector('[data-h="fill"]');let L,placed=false;
+    if(fill2)outer:for(L of LEVELS){apply(L);for(let fh=360;fh>=200;fh-=40){m.style.bottom=(232+fh)+"px";
+      if(fits(m)){fill2.style.display="block";fill2.style.top=(1056-232-fh+16)+"px";fill2.querySelector('[data-h="fillimg"]').style.height=(fh-16-18-48)+"px";placed=true;break outer}}}
+    if(!placed){m.style.bottom="232px";for(L of LEVELS){apply(L);if(fits(m))break}}
+    /* still too long at dish 26 / note 20: never shrink further. Split sections into 2 item chunks
+       (header repeated as "continued") and flow the last chunks onto as many continued faces as needed */
+    const faces=placed?[]:[bk];
+    if(!fits(m)){
+      m.innerHTML=bk.querySelector('[data-h="chunks"]').innerHTML;apply(L);
+      let cur=bk,next=f3,n=3;
+      while(!fits(cur.querySelector('[data-h="menu"]'))){
+        const cm=cur.querySelector('[data-h="menu"]'),blocks=cm.querySelectorAll('[data-h="secblock"]');
+        if(blocks.length<2)break;
+        if(next.style.display==="none"){next.style.display="block";faces.push(next)}
+        next.querySelector('[data-h="menu"]').prepend(blocks[blocks.length-1]);
+        if(fits(cm)){cur=next;const nb=blank.cloneNode(true);nb.dataset.face=++n;next.after(nb);next=nb}
+      }
+    }
+    /* fill the empty space under short menus with a framed still */
+    faces.forEach(fc=>{
+      const fill=fc.querySelector('[data-h="fill"]'),mm=fc.querySelector('[data-h="menu"]');
+      if(!fill||fc.style.display==="none")return;
+      const top0=fc.getBoundingClientRect().top;let bottom=mm.getBoundingClientRect().top-top0;
+      mm.querySelectorAll('[data-h="item"],[data-h="sec"]').forEach(e=>{for(const r of e.getClientRects())bottom=Math.max(bottom,r.bottom-top0)});
+      const props=fc.querySelector('[data-h="props"]'),limit=props?props.offsetTop-26:1056-70;
+      const h=limit-(bottom+18);
+      if(h>=170){fill.style.display="block";fill.style.top=(bottom+18)+"px";fill.querySelector('[data-h="fillimg"]').style.height=Math.min(h-48,420)+"px"}
+    });
   })}
 
 root.genreCard=genreCard;root.horrorFit=horrorFit;root.HORROR_GENRE={genreCard,horrorFit,SECTIONS};
