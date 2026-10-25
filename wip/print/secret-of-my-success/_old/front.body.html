@@ -1,0 +1,41 @@
+<!-- Page 1. Everything inside COPY was on the original and went through the copier.
+     The staple, the RECEIVED stamp and anything in pen are added afterwards (see build.py). -->
+<div style="position: absolute; left: 0; top: 0; width: 816px; height: 1056px; font-family: 'Courier Prime', 'Courier New', monospace; color: {{INK}}; transform: rotate(-0.22deg); transform-origin: 50% 0">
+
+  <!-- Typeset letterhead, first sheet only -->
+  <div style="position: absolute; left: 64px; top: 50px; width: 688px; text-align: center; font-family: 'Libre Bodoni', serif">
+    <div style="font-weight: 700; font-size: 34px; line-height: 1; letter-spacing: 0.26em; padding-left: 0.26em">PEMROSE</div>
+    <div style="font-weight: 400; font-size: 13px; line-height: 1; letter-spacing: 0.52em; padding-left: 0.52em; margin-top: 8px">CORPORATION</div>
+  </div>
+  <div style="position: absolute; left: 64px; top: 112px; width: 688px; height: 2px; background: {{INK}}"></div>
+  <div style="position: absolute; left: 64px; top: 116px; width: 688px; height: 1px; background: {{INK}}"></div>
+  <div style="position: absolute; left: 64px; top: 124px; width: 688px; display: flex; justify-content: space-between; font-family: 'Libre Bodoni', serif; font-size: 13px; line-height: 1">
+    <span style="font-style: italic; font-size: 16px">Interoffice Memorandum</span>
+    <span style="letter-spacing: 0.12em">EXECUTIVE OFFICES, NEW YORK</span>
+  </div>
+
+  <!-- Typed heading block -->
+  <div style="position: absolute; left: 64px; top: 152px; width: 688px; font-size: 16px; line-height: 26px">
+    {{FIELDS}}
+  </div>
+  <div style="position: absolute; left: 64px; top: 284px; width: 688px; overflow: hidden; white-space: nowrap; font-size: 16px; line-height: 16px">{{RULE}}</div>
+
+  <!-- Typed memo -->
+  <section style="position: absolute; left: 64px; top: 316px; width: 688px; font-size: 16px; line-height: 23px">
+    {{BODY}}
+  </section>
+
+  <section style="position: absolute; left: 64px; top: {{MENU_TOP}}px; width: 688px">
+    {{MENU_HEAD}}
+    <div style="display: flex; gap: 36px; margin-top: 16px">
+      <div style="flex: 1 1 0; min-width: 0">{{EXEC_LEFT}}</div>
+      <div style="flex: 1 1 0; min-width: 0">{{EXEC_RIGHT}}</div>
+    </div>
+  </section>
+
+  <section style="position: absolute; left: 64px; top: {{SPEC_TOP}}px; width: 688px">
+    {{SPECIALS}}
+  </section>
+
+  {{FOOT}}
+</div>

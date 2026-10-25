@@ -1,0 +1,30 @@
+{
+ "fmt": "annietable",
+ "fn": "fmtAnnieTable",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Caprasimo&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Covered+By+Your+Grace",
+ "fams": [
+  "Caprasimo",
+  "Libre Franklin",
+  "Covered By Your Grace"
+ ],
+ "phone": {
+  "disp": "'Caprasimo',serif",
+  "title": "'Caprasimo',serif",
+  "name": "'Caprasimo',serif",
+  "body": "'Libre Franklin',sans-serif",
+  "price": "'Caprasimo',serif",
+  "note": "'Libre Franklin',sans-serif"
+ }
+}

@@ -1,151 +1,184 @@
-"""Builds both faces of The Vandermeer in-suite dining card, New York, 1985.
+"""Hackensack Bulls ballpark bill of fare, Brewster's Millions (1985).
+Two-sided US Letter card handed out at the Bulls' exhibition night against New York, the game Monty
+pays for, with everything in the park on him. Locked house style (Jurassic system). Run paint.py first.
+Writes front.html, back.html (plus .body.html), film.json and spenditall.labels.json."""
+import os, json
 
-US letter (8.5 x 11 in, 816 x 1056 px), one heavy ivory board printed both sides, flat, no folds.
-Made the way a 1985 luxury hotel card was made: a solid black offset flood across the head of
-each face with gold foil stamped into it (a line engraving of the hotel on the front), the menu
-offset printed below in black with a burgundy second ink, English courses with French headings,
-dot leaders, and a blind embossed frame pressed into the board. Art layers come from paint_print.py.
-
-Writes front.body.html, back.body.html, front.html and back.html.
-"""
-import os
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
-IVORY, INK, GREY, BURG, PENCIL = '#f2ead9', '#1c1618', '#463a3c', '#7a1d2f', '#57525a'
-FONTS = ('family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800'
-         '&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nothing+You+Could+Do')
-FONT_LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
+PAPER, GREEN, RED, MUTE, CARD = '#f3e3ad', '#123f2b', '#b3302a', '#3b4636', '#fbf3d6'
+FONTS = ('family=Bodoni+Moda:opsz,wght@6..96,700;6..96,900'
+         '&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400'
+         '&family=Homemade+Apple')
+LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=block">'
 BOD = "font-family: 'Bodoni Moda', 'Didot', serif"
-GAR = "font-family: 'EB Garamond', 'Garamond', serif"
-HAND = "font-family: 'Nothing You Could Do', cursive"
-NUM = "font-variant-numeric: lining-nums tabular-nums; font-feature-settings: 'lnum' 1, 'tnum' 1"
+SANS = "font-family: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif"
+HAND = "font-family: 'Homemade Apple', cursive"
 
-# (name, description, price)
-BEGIN = [
-    ('Jumbo shrimp cocktail', 'Six, poached and chilled, on shredded iceberg with a rosy tomato mayonnaise and lemon. Paprika.', '11.50'),
-    ('Blini with red caviar', 'Warm buckwheat pancakes, crème fraîche, salmon roe and chopped chives.', '16.00'),
-    ('Onion soup gratinée', 'Rich beef broth and sweet cooked onions under a crouton and bubbling Gruyère.', '5.50'),
-]
-GRILL = [
-    ('Surf and turf', 'An eight ounce filet mignon cooked to your liking and a lobster tail, split and broiled in garlic butter. Béarnaise on the side.', '30.00'),
-    ('Club sandwich', 'Roast turkey, bacon, lettuce and tomato, three decks high on toast, with a pickle.', '9.75'),
-]
-SIDES = [
-    ('Shoestring potatoes', 'Cut thin, fried crisp and well salted.', '3.50'),
-    ('Creamed spinach', 'A little nutmeg and grated Parmesan.', '3.75'),
-]
-SWEETS = [
-    ('Postage stamps', 'Butter shortbread with a pinked edge, each piped with an iced stamp. Six to a plate.', '4.50'),
-    ('Hot fudge sundae', 'Vanilla ice cream, warm chocolate sauce, toasted almonds and a cherry.', '5.25'),
-]
-BAR = [
-    ('Champagne cocktail', 'A sugar cube soaked in bitters and a dash of orange liqueur, then chilled brut to the brim and a twist of peel.', '7.00'),
-    ('House champagne', 'French brut by the bottle, sent up on ice with two glasses.', '45.00'),
-    ('Pot of coffee', 'Fresh brewed, regular or decaffeinated, with cream. Serves two.', '3.75'),
-    ('Orange juice', 'Squeezed to order and served in the large glass.', '3.25'),
-]
-BREAKFAST = [
-    ('Eggs Benedict', 'Two poached eggs on Canadian bacon and a toasted English muffin, hollandaise.', '9.50'),
-    ('Ham and eggs', 'Two eggs any style with a ham steak, home fried potatoes and buttered toast.', '7.25'),
-    ('Berries Romanoff', 'Strawberries steeped in Curaçao and folded into whipped cream.', '6.50'),
-]
-SERVICES = [
-    ('Postcards and stamps', 'At the front desk. Mail left with the bell captain goes out each afternoon.'),
-    ('The concierge', 'Limousines, theater tickets and dinner reservations.'),
-    ('The Grand Ballroom', 'Private parties for twenty to two thousand.'),
-    ('Valet', 'Pressing back within the hour. Shoes shined overnight.'),
-]
+# spec key -> printed name, description, price, phone note
+SPEC = {
+    "Prawn cocktail for the whole hotel": ("Jumbo Shrimp Cocktail",
+        "Six, poached and chilled, on shredded iceberg with rosy tomato mayonnaise, lemon and paprika.", "6.50",
+        "Passed through the box seats all night."),
+    "Caviar blini": ("Blini with Red Caviar",
+        "Warm buckwheat pancakes with cr&#232;me fra&#238;che, salmon roe and chives.", "9.00",
+        "Made to order. Allow twenty minutes."),
+    "Surf and turf": ("Surf and Turf",
+        "An eight ounce filet mignon seared to order and a lobster tail broiled in garlic butter. B&#233;arnaise.", "30.00",
+        "The most expensive thing on the card. Thirty even."),
+    "Rare stamp shortbread": ("Postage Stamps",
+        "Butter shortbread cut with a pinked edge, each piped with an iced stamp. Six to a plate.", "2.50",
+        "Iced like the real thing. Do not mail."),
+    "Monty's champagne cocktails for the bar": ("Champagne Cocktail",
+        "A sugar cube soaked in bitters, orange liqueur, chilled brut to the brim and a twist of peel.", "4.50",
+        "The whole bar, on Monty."),
+}
+ADD = {
+    'chili': ("Spike&#8217;s Chili Dogs", "Two franks under beef chili, chopped onion and sharp cheddar, on toasted buns.", "2.50"),
+    'icecream': ("Ice Cream Cup", "Vanilla malted, frozen hard, eaten with a flat wooden spoon.", "1.00"),
+    'peanuts': ("Roasted Peanuts", "Hot in the shell from the vendor&#8217;s cart. Toss the shells.", ".75"),
+    'beer': ("Draft Beer", "Ice cold, poured to the line in a tall paper cup.", "1.75"),
+    'lemonade': ("Fresh Lemonade", "Squeezed at the stand, plenty of ice.", ".90"),
+}
 
 
-def head(en, fr, top=0):
-    """Course heading: burgundy spaced capitals, the French in italic, a fine rule running on."""
-    return (f'<div style="margin-top: {top}px; display: flex; align-items: baseline; gap: 12px">'
-            f'<div style="{BOD}; font-weight: 600; font-size: 14px; letter-spacing: 0.26em; color: {BURG}; white-space: nowrap">{en}</div>'
-            f'<div style="{GAR}; font-style: italic; font-size: 17px; color: {GREY}; white-space: nowrap">{fr}</div>'
-            f'<div style="flex: 1; height: 0; border-top: 1px solid {BURG}; transform: translateY(-4px)"></div></div>')
+def item(n, d, p, top=18):
+    return (f'<div style="margin-top: {top}px">'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">'
+            f'<div style="{BOD}; font-weight: 700; font-size: 27px; line-height: 1.1; color: {GREEN}">{n}</div>'
+            f'<div style="{BOD}; font-weight: 700; font-size: 27px; color: {RED}; white-space: nowrap">{p}</div></div>'
+            f'<div style="{SANS}; font-size: 20px; line-height: 1.36; margin-top: 4px; color: {MUTE}; text-wrap: pretty">{d}</div></div>')
 
 
-def item(n, d, p, top=10, size=23, desc_right=64, extra=''):
-    return (f'<div style="position: relative; margin-top: {top}px">'
-            f'<div style="display: flex; align-items: baseline; gap: 8px">'
-            f'<h3 style="margin: 0; flex: 0 1 auto; min-width: 0; {BOD}; font-weight: 600; font-size: {size}px; line-height: 1.12; color: {INK}">{n}</h3>'
-            f'<div style="flex: 1; min-width: 8px; border-bottom: 1.5px dotted {INK}; transform: translateY(-5px); opacity: 0.75"></div>'
-            f'<span style="{BOD}; {NUM}; font-weight: 600; font-size: {size - 2}px; color: {INK}; white-space: nowrap">{p}</span></div>'
-            f'<p style="margin: 2px {desc_right}px 0 0; {GAR}; font-size: 17px; line-height: 1.32; color: {GREY}; text-wrap: pretty">{d}</p>{extra}</div>')
+def S(k, top=18):
+    n, d, p, _ = SPEC[k]
+    return item(n, d, p, top)
 
 
-def items(lst, size=23, desc_right=64, first=9, gap=11):
-    return ''.join(item(*x, top=(first if i == 0 else gap), size=size, desc_right=desc_right) for i, x in enumerate(lst))
+def A(k, top=18):
+    return item(*ADD[k], top=top)
 
 
-def layers(face):
-    flood_h = 452 if face == 'front' else 128
-    alt = ('Gold foil engraving of The Vandermeer at dusk: a flat roofed limestone hotel with a deep cornice, '
-           'a canopy to the curb, a limousine and a checker cab outside') if face == 'front' else 'The Vandermeer'
-    under = (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.55">'
-             f'<img src="assets/flood-{face}.png" alt="{alt}" style="position: absolute; left: 0; top: 0; width: {W}px; height: {flood_h}px; display: block">'
-             f'<img src="assets/paper-emboss-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">')
-    over = (f'<img src="assets/paper-ink-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; pointer-events: none">'
-            f'<img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; pointer-events: none">')
-    return under, over
+def kicker(t, color=RED, extra=''):
+    return f'<div style="{SANS}; font-weight: 800; font-size: 18px; letter-spacing: 0.2em; text-transform: uppercase; color: {color}; white-space: nowrap; {extra}">{t}</div>'
+
+
+def pennant(t, kick):
+    """Section title on a green swallowtail pennant, kicker above in red spaced caps."""
+    return (f'{kicker(kick, extra="font-size: 16px; letter-spacing: 0.18em")}'
+            f'<div style="display: flex; margin-top: 8px">'
+            f'<div style="background: {GREEN}; color: {PAPER}; height: 58px; padding: 0 16px 0 20px; {BOD}; font-weight: 900; font-size: 40px; line-height: 60px; letter-spacing: 0.01em; white-space: nowrap">{t}</div>'
+            f'<div style="width: 0; height: 0; border-top: 29px solid {GREEN}; border-bottom: 29px solid {GREEN}; border-right: 24px solid transparent"></div></div>')
 
 
 def footer(left, right):
-    return (f'<div style="margin-top: auto; display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid {INK}; padding-top: 7px">'
-            f'<div style="{GAR}; font-style: italic; font-size: 16px; color: {GREY}; {NUM}">{left}</div>'
-            f'<div style="{BOD}; font-weight: 600; font-size: 12px; letter-spacing: 0.2em; color: {BURG}; white-space: nowrap; {NUM}">{right}</div></div>')
+    return (f'<div style="margin-top: auto; display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid {GREEN}; padding-top: 8px">'
+            f'<div style="{SANS}; font-size: 16px; color: {MUTE}">{left}</div>'
+            f'<div style="{SANS}; font-weight: 600; font-size: 16px; color: {MUTE}; white-space: nowrap">{right}</div></div>')
+
+
+def shell(inner, extra=''):
+    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {GREEN}">'
+            f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.5">'
+            f'<img src="assets/paper-wear.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
+            f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 16px; background: {GREEN}"></div>'
+            f'<div style="position: absolute; left: 0; top: 16px; width: {W}px; height: 4px; background: {RED}"></div>'
+            f'<div style="position: absolute; left: 0; bottom: 0; width: {W}px; height: 16px; background: {GREEN}"></div>'
+            f'<div style="position: absolute; left: 0; bottom: 16px; width: {W}px; height: 4px; background: {RED}"></div>'
+            f'<section style="position: absolute; left: 64px; top: 52px; width: 688px; height: 952px; display: flex; flex-direction: column">{inner}</section>{extra}</div>')
+
+
+def ticket():
+    return (f'<div style="position: absolute; left: 34px; top: 238px; width: 214px; transform: rotate(-6deg); display: flex; background: {CARD}; '
+            f'border: 2px solid {RED}; box-shadow: 0 3px 8px rgba(40,30,10,0.35)">'
+            f'<div style="flex: 1; padding: 9px 10px 9px 14px; border-right: 2px dashed {RED}">'
+            f'<div style="{SANS}; font-weight: 800; font-size: 14px; letter-spacing: 0.2em; color: {RED}">ADMIT ONE</div>'
+            f'<div style="{BOD}; font-weight: 900; font-size: 22px; line-height: 1.1; color: {GREEN}; margin-top: 2px">EXHIBITION</div>'
+            f'<div style="{SANS}; font-weight: 600; font-size: 14px; color: {MUTE}; margin-top: 3px">Will call: A. Drake</div></div>'
+            f'<div style="width: 46px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: {RED}; color: {CARD}">'
+            f'<div style="{SANS}; font-weight: 800; font-size: 14px; letter-spacing: 0.1em">GATE</div>'
+            f'<div style="{BOD}; font-weight: 900; font-size: 26px; line-height: 1">30</div></div></div>')
+
+
+def button():
+    return (f'<div style="position: absolute; left: 632px; top: 470px; width: 132px; height: 132px; border-radius: 50%; transform: rotate(8deg); '
+            f'background: radial-gradient(circle at 38% 30%, #ffffff 0%, #f6f1e6 55%, #dcd4c2 100%); border: 9px solid {RED}; box-sizing: border-box; '
+            f'box-shadow: 0 4px 9px rgba(30,20,10,0.4); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center">'
+            f'<div style="{SANS}; font-weight: 800; font-size: 14px; letter-spacing: 0.3em; color: {RED}; margin-left: 0.3em">VOTE</div>'
+            f'<div style="{SANS}; font-weight: 800; font-size: 16px; line-height: 1.05; color: #1d2f6b; margin-top: 2px">NONE OF<br>THE ABOVE</div>'
+            f'<div style="{SANS}; font-size: 14px; color: {RED}; margin-top: 1px">&#9733; &#9733; &#9733;</div></div>')
 
 
 def front():
-    under, over = layers('front')
-    pencil = (f'<div style="position: absolute; left: 300px; top: -14px; transform: rotate(-4deg); {HAND}; font-size: 21px; line-height: 1; color: {PENCIL}; white-space: nowrap">'
-              f'For the whole hotel!</div>')
-    begin = (item(*BEGIN[0], top=8, desc_right=0, extra=pencil) + items(BEGIN[1:], first=9, gap=9, desc_right=0))
-    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {IVORY}; {GAR}; color: {INK}">'
-            f'{under}'
-            f'<section style="position: absolute; left: 84px; top: 478px; width: 648px; height: 536px; display: flex; flex-direction: column">'
-            f'<div style="{BOD}; font-style: italic; font-weight: 500; font-size: 37px; line-height: 1; font-variation-settings: \'opsz\' 20; color: {BURG}">Room Service</div>'
-            f'<div style="margin-top: 7px; font-size: 17px; line-height: 1.3; color: {GREY}">Served at any hour. Dial <b style="font-weight: 600; color: {INK}; {NUM}">30</b> from your suite.</div>'
-            f'{head("TO BEGIN", "Hors-d&#8217;&#339;uvre", top=12)}{begin}'
-            f'{head("FROM THE GRILL", "Grillades", top=14)}{items(GRILL, first=8, gap=9, desc_right=0)}'
-            f'{footer("A $1.50 room service charge per person and a 15% gratuity are added.", "PLEASE TURN OVER")}'
-            f'</section>'
-            f'<img src="assets/sticker-vote.png" alt="A Vote None of the Above campaign sticker pressed onto the card, one corner lifting" '
-            f'style="position: absolute; left: 524px; top: 392px; width: 281px; height: 197px; display: block">'
-            f'{over}</div>')
+    head = (f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
+            f'{kicker("Hackensack, New Jersey")}{kicker("Exhibition Night", GREEN)}</div>'
+            f'<div style="{BOD}; font-weight: 900; font-size: 66px; line-height: 1; letter-spacing: -0.01em; margin-top: 10px; white-space: nowrap">HACKENSACK BULLS</div>'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 8px">'
+            f'<div style="{SANS}; font-weight: 800; font-size: 22px; letter-spacing: 0.24em; color: {GREEN}">BALLPARK BILL OF FARE</div>'
+            f'<div style="{SANS}; font-style: italic; font-size: 18px; color: {MUTE}">Served in the stands, all nine innings</div></div>'
+            f'<div style="height: 4px; background: {RED}; margin-top: 12px"></div>')
+    hero = (f'<div style="margin-top: 18px; border: 3px solid {RED}; padding: 7px; background: {CARD}">'
+            f'<img src="assets/still-battery.jpg" alt="Monty Brewster and Spike Nolan in Bulls uniforms at home plate, the crowd behind them" style="display: block; width: 668px; height: 312px"></div>'
+            f'<div style="display: flex; justify-content: space-between; margin-top: 7px; {SANS}; font-size: 16px; color: {MUTE}">'
+            f'<div style="font-style: italic">Our battery, Brewster and Nolan, at home plate.</div><div>Gates open at six</div></div>')
+    cols = (f'<div style="display: flex; justify-content: space-between; margin-top: 26px">'
+            f'<div style="width: 324px">{pennant("BOX SEATS", "Passed in the stands")}'
+            f'{S("Prawn cocktail for the whole hotel", 14)}{S("Caviar blini")}</div>'
+            f'<div style="width: 324px">{pennant("HOME PLATE", "Hot off the grill")}'
+            f'{S("Surf and turf", 14)}{A("chili")}</div></div>')
+    foot = footer('Prices subject to change. Please, no souvenirs.', 'Form HB-300M')
+    return shell(head + hero + cols + foot, ticket() + button())
+
+
+def stamp():
+    return (f'<div style="position: absolute; left: 286px; top: 548px; transform: rotate(-9deg); border: 3px solid {RED}; padding: 5px 12px 4px; opacity: 0.85; text-align: center">'
+            f'<div style="{SANS}; font-weight: 800; font-size: 24px; letter-spacing: 0.12em; color: {RED}; line-height: 1">PAID IN FULL</div>'
+            f'<div style="{SANS}; font-weight: 600; font-size: 14px; letter-spacing: 0.2em; color: {RED}; margin-top: 3px; border-top: 1.5px solid {RED}; padding-top: 3px">ACCOUNT M.B.</div></div>')
 
 
 def back():
-    under, over = layers('back')
-    services = ''.join(
-        f'<div style="{"" if i == 0 else "margin-top: 7px"}"><div style="{BOD}; font-weight: 600; font-size: 13px; letter-spacing: 0.2em; color: {BURG}">{t.upper()}</div>'
-        f'<p style="margin: 1px 0 0; font-size: 17px; line-height: 1.3; color: {INK}; text-wrap: pretty">{d}</p></div>'
-        for i, (t, d) in enumerate(SERVICES))
-    note = (f'<div style="position: relative; width: 250px; flex: none; padding-top: 22px">'
-            f'<img src="assets/stain-ring.png" alt="" aria-hidden="true" style="position: absolute; left: 44px; top: 0; width: 196px; height: 196px; display: block">'
-            f'<div style="position: relative; transform: rotate(-4deg); {HAND}; font-size: 22px; line-height: 1.38; color: {PENCIL}">'
-            f'Spike, order anything<br>you want. Put it<br>on the suite.<div style="text-align: right; margin-right: 26px">Monty</div></div></div>')
-    bfast = ''.join(f'<div style="width: {bw}px; flex: none">{item(*x, top=8, size=19, desc_right=0)}</div>' for x, bw in zip(BREAKFAST, (200, 190, 242)))
-    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {IVORY}; {GAR}; color: {INK}">'
-            f'{under}'
-            f'<section style="position: absolute; left: 84px; top: 156px; width: 648px; height: 858px; display: flex; flex-direction: column">'
-            f'<div style="display: flex; gap: 24px">'
-            f'<div style="width: 312px; flex: none">{head("ALONGSIDE", "Garnitures")}{items(SIDES, size=22, desc_right=0)}'
-            f'{head("SWEETS", "Desserts", top=20)}{items(SWEETS, size=22, desc_right=0)}</div>'
-            f'<div style="width: 312px; flex: none">{head("THE BAR", "Le bar")}{items(BAR, size=22, desc_right=0)}</div></div>'
-            f'{head("BREAKFAST IN THE SUITE", "Le petit d&#233;jeuner", top=22)}'
-            f'<div style="display: flex; gap: 8px">{bfast}</div>'
-            f'<div style="margin-top: 7px; font-style: italic; font-size: 17px; color: {GREY}">Hang the breakfast card on your door before 3 a.m.</div>'
-            f'{head("AT YOUR SERVICE", "Les services", top=20)}'
-            f'<div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: flex-start"><div style="width: 392px">{services}</div>{note}</div>'
-            f'{footer("Please allow thirty minutes. Trays are collected on request.", "FORM RS-30 4/85")}'
-            f'</section>{over}</div>')
+    CHAMP = "Monty's champagne cocktails for the bar"
+    head = (kicker("A word from tonight&#8217;s host") +
+            f'<div style="{BOD}; font-weight: 900; font-size: 64px; line-height: 1; letter-spacing: -0.01em; margin-top: 10px">IT&#8217;S ALL ON MONTY.</div>'
+            f'<div style="height: 4px; background: {RED}; margin-top: 14px; width: 688px"></div>')
+    note = (f'<div style="display: flex; justify-content: space-between; margin-top: 22px">'
+            f'<div style="width: 392px">'
+            f'<div style="{SANS}; font-size: 21px; line-height: 1.5; color: {GREEN}">Tonight the Bulls take on New York, and every frank, every shrimp and every glass of champagne in this park is on me.</div>'
+            f'<div style="{SANS}; font-size: 21px; line-height: 1.5; color: {GREEN}; margin-top: 12px">Order the most expensive thing on the card. Then order it again.</div>'
+            f'<div style="{HAND}; font-size: 30px; line-height: 1; color: #1d2f6b; margin-top: 26px; transform: rotate(-3deg); transform-origin: left">Monty Brewster</div>'
+            f'<div style="{SANS}; font-size: 16px; color: {MUTE}; margin-top: 20px">Starting pitcher, Hackensack Bulls</div></div>'
+            f'<div style="width: 262px">'
+            f'<div style="border: 3px solid {RED}; padding: 7px; background: {CARD}">'
+            f'<img src="assets/still-pitcher.jpg" alt="Monty Brewster in his pinstriped Bulls uniform and cap" style="display: block; width: 242px; height: 302px"></div>'
+            f'<div style="{SANS}; font-style: italic; font-size: 16px; color: {MUTE}; margin-top: 7px">Tonight&#8217;s starter, warming up.</div></div></div>')
+    cols = (f'<div style="display: flex; justify-content: space-between; margin-top: 30px">'
+            f'<div style="width: 324px">{pennant("SWEETS", "Seventh inning stretch")}'
+            f'{S("Rare stamp shortbread", 14)}{A("icecream")}{A("peanuts")}</div>'
+            f'<div style="width: 324px">{pennant("THE BAR", "Poured at the stand")}'
+            f'{S(CHAMP, 14)}{A("beer")}{A("lemonade")}</div></div>')
+    foot = footer('Box 1 held for Granville &amp; Baxter.', '&#169; 1985 Hackensack Bulls')
+    return shell(head + note + cols + foot, stamp())
 
 
-for face, fn in (('front', front), ('back', back)):
-    b = fn()
+faces = {'front': front(), 'back': back()}
+for face, b in faces.items():
     open(os.path.join(D, face + '.body.html'), 'w').write(b + '\n')
     open(os.path.join(D, face + '.html'), 'w').write(
-        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>The Vandermeer in-suite dining card, {face}</title>{FONT_LINK}'
+        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Hackensack Bulls bill of fare, {face}</title>{LINK}'
         f'<style>body{{margin:0}}</style></head><body>{b}</body></html>')
+
+json.dump({"fmt": "spenditall", "fn": "fmtSpendItAll", "faces": ["front.html", "back.html"], "names": ["Front", "Back"],
+           "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Bodoni Moda", "Libre Franklin", "Homemade Apple"],
+           "phone": {"disp": "'Bodoni Moda',serif", "title": "'Bodoni Moda',serif", "name": "'Bodoni Moda',serif",
+                     "body": "'Libre Franklin',sans-serif", "price": "'Bodoni Moda',serif", "note": "'Libre Franklin',sans-serif"}},
+          open(os.path.join(D, 'film.json'), 'w'), indent=1)
+
+
+def plain(s):
+    import html
+    return html.unescape(s)
+
+
+json.dump({"Brewster's Millions (1985)": {k: {"n": plain(v[0]), "d": plain(v[1]), "note": v[3]} for k, v in SPEC.items()}},
+          open(os.path.join(D, 'spenditall.labels.json'), 'w'), indent=1, ensure_ascii=False)
 print('built')

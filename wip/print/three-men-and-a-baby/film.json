@@ -2,26 +2,30 @@
  "fmt": "loftsupper",
  "fn": "fmtLoftSupper",
  "faces": [
-  "sheet.html"
+  "front.html",
+  "back.html"
  ],
  "names": [
-  "Sheet A-1"
+  "Front",
+  "Back"
  ],
  "mm": [
-  431.8,
+  215.9,
   279.4
  ],
- "fonts": "family=Architects+Daughter&family=Barlow+Condensed:wght@500;600;700",
+ "fonts": "family=Righteous&family=Figtree:wght@600;800&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&family=Caveat:wght@500;700",
  "fams": [
-  "Architects Daughter",
-  "Barlow Condensed"
+  "Righteous",
+  "Figtree",
+  "Literata",
+  "Caveat"
  ],
  "phone": {
-  "disp": "'Architects Daughter',cursive",
-  "title": "'Architects Daughter',cursive",
-  "name": "'Architects Daughter',cursive",
-  "body": "'Architects Daughter',cursive",
-  "price": "'Barlow Condensed',sans-serif",
-  "note": "'Barlow Condensed',sans-serif"
+  "disp": "'Righteous',sans-serif",
+  "title": "'Righteous',sans-serif",
+  "name": "'Figtree',sans-serif",
+  "body": "'Literata',serif",
+  "price": "'Figtree',sans-serif",
+  "note": "'Literata',serif"
  }
 }

@@ -1,5 +1,5 @@
 """Renders front.png and back.png at 2x, reports text inside 40 px of the trim and the smallest
-font size, then writes the trim PDF (US Legal, two pages) with Chromium."""
+font size, then writes the trim PDF (US Letter, two pages) with Chromium."""
 import asyncio, os
 from playwright.async_api import async_playwright
 D = os.path.dirname(os.path.abspath(__file__))
@@ -17,7 +17,6 @@ async def main():
             await pg.goto('file://' + D + '/' + n + '.html'); await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(1200)
             await pg.screenshot(path=D + '/' + n + '.png')
             print(n, await pg.evaluate(CHECK))
-            print(' crease', await pg.evaluate(CREASE))
         bodies = [open(os.path.join(D, n + '.body.html')).read() for n in ('front', 'back')]
         head = open(os.path.join(D, 'front.html')).read().split('<head>')[1].split('</head>')[0]
         html = ('<!doctype html><html><head>' + head.replace('<style>', '<style>@page{size:8.5in 11in;margin:0}.pg{width:816px;height:1056px;overflow:hidden;break-after:page}.pg *{text-shadow:none!important}')

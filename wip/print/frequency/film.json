@@ -2,28 +2,30 @@
  "fmt": "sullivansupper",
  "fn": "fmtSullivanSupper",
  "faces": [
-  "card.html"
+  "front.html",
+  "back.html"
  ],
  "names": [
-  "Window card"
+  "Front",
+  "Back"
  ],
  "mm": [
-  279.4,
-  355.6
+  215.9,
+  279.4
  ],
- "fonts": "family=Anton&family=Alfa+Slab+One&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Rock+Salt",
+ "fonts": "family=Alfa+Slab+One&family=Oswald:wght@500;600&family=Lora:ital,wght@0,400;0,600;1,400&family=Homemade+Apple",
  "fams": [
-  "Anton",
   "Alfa Slab One",
-  "Old Standard TT",
-  "Rock Salt"
+  "Oswald",
+  "Lora",
+  "Homemade Apple"
  ],
  "phone": {
-  "disp": "'Anton',sans-serif",
-  "title": "'Anton',sans-serif",
+  "disp": "'Alfa Slab One',serif",
+  "title": "'Alfa Slab One',serif",
   "name": "'Alfa Slab One',serif",
-  "body": "'Old Standard TT',serif",
+  "body": "'Lora',serif",
   "price": "'Alfa Slab One',serif",
-  "note": "'Old Standard TT',serif"
+  "note": "'Lora',serif"
  }
 }

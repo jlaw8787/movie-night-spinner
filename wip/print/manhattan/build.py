@@ -1,193 +1,158 @@
-"""Builds both faces of the Kessler & Lowe caterer's price folder, spring 1979.
-US Letter landscape (11 x 8.5 in), offset in two inks (black and a cool grey) on white felt finish cover stock,
-folded once to 5.5 x 8.5 in. outside.html: back panel (left) and cover (right). inside.html: the price list.
-Type: Futura (Jost) for heads, names and prices, as phototypeset in 1979; Caslon (Libre Caslon Text) for reading copy.
-Image paths are relative to this folder. Run paint.py first, then this, then shot.py."""
+"""Edie's, Second Avenue at 88th Street, New York, 1979.
+The saloon where Manhattan opens: Isaac, Tracy, Yale and Emily at the back table, everyone talking at once.
+The house's own two-sided table card (US Letter), black ink and one blue on bright white stock,
+built on the house style lock. Front: sign, the bridge at dawn, the bar list and a guest check.
+Back: brunch, late supper, desserts, a still of the back table, a matchbook and a note from a regular.
+Writes front.body.html / back.body.html and full pages front.html / back.html."""
 import os
 D = os.path.dirname(os.path.abspath(__file__))
-W, H, FOLD = 1056, 816, 528
-INK, GREYINK, PAPER = '#18191d', '#8a8d92', '#f1f0eb'
-BODY = '#26272b'
-FONTS = ('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700'
-         '&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap')
-SANS, SERIF = "'Jost', 'Futura', sans-serif", "'Libre Caslon Text', Georgia, serif"
-LX, RX, PW = 48, FOLD + 48, 432     # left panel x, right panel x, panel text width
-# ink spread on uncoated stock: a hair of dot gain round every letter (inherited by all text)
-GAIN = 'text-shadow: 0 0 0.6px rgba(24,25,29,0.55)'
+W, H = 816, 1056
+PAPER, DARK, BLUE, MUTE = '#f3f2ee', '#161618', '#2b4f9e', '#55565c'
+FONTS = ('https://fonts.googleapis.com/css2?family=Poiret+One&family=Josefin+Sans:wght@600;700'
+         '&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Allura&display=swap')
+DISP = "'Poiret One', sans-serif"; SANS = "'Josefin Sans', sans-serif"
+BODY = "'Crimson Pro', serif"; SCRIPT = "'Allura', cursive"
 
-# (section, intro, [(name, unit, price, description, note)])
-LEFT = [
-    ('Cocktail hour', 'Passed on trays, or set out on your sideboard.', [
-        ('Italian toasts', 'the dozen', '9.00',
-         'French bread rounds, baked crisp. Half with ricotta, lemon peel and honey, half with mushrooms sautéed in garlic and thyme, under Parmesan.', ''),
-        ('Shrimp cocktail', 'the dozen', '18.00',
-         'Jumbo shrimp, poached and well chilled, with a sharp horseradish sauce and lemon.', ''),
-        ('Rumaki', 'the dozen', '7.50',
-         'Chicken livers and water chestnuts in bacon, broiled.', ''),
-        ('Manhattans', 'the pitcher', '18.00',
-         'Rye, sweet vermouth and bitters, stirred with ice, poured straight up over a cherry. Serves eight.', ''),
-    ]),
-    ('Sunday brunch', 'Delivered from dawn. We set it out and slip away.', [
-        ('Sutton Place platter', 'per guest', '6.50',
-         'Toasted bagels, whipped cream cheese, sliced Nova, capers, red onion cut thin and fresh dill.', ''),
-        ('Belgian waffles', 'per guest', '4.25',
-         'Made at your stove by our cook. Maple syrup, sweet butter, berries in season.',
-         'A favorite with dachshund owners.'),
-    ]),
-]
-RIGHT = [
-    ('Chinese supper', 'Collected on Mott Street, in the cartons by nine.', [
-        ('Kung pao chicken', 'per guest', '7.50',
-         'Diced dark meat stir-fried with dried red peppers, soy, rice wine and Chinese black vinegar, tossed with roasted peanuts and scallions. Steamed rice.',
-         'Good in front of the late movie.'),
-        ('Cold sesame noodles', 'per guest', '3.25',
-         'Thin wheat noodles in sesame paste and hot oil, with shredded cucumber.', ''),
-        ('Barbecued spareribs', 'the pound', '6.00',
-         'Roasted red, glazed with honey.', ''),
-    ]),
-    ('Desserts', 'Baked here, the morning of your party.', [
-        ('New York cheesecake', 'whole', '14.00',
-         'Rich and dense, lemon and vanilla, buttery crumb crust. Baked slow, chilled overnight. Serves ten.',
-         'Worth living for, say our regulars.'),
-        ('Pears in red wine', 'per guest', '2.25',
-         'Bosc halves poached with cinnamon and orange peel, heavy cream alongside.',
-         'Our answer to Cézanne.'),
-        ('Coffee service', 'the urn', '6.00',
-         'Thirty cups, fresh brewed, with cream and sugar.', ''),
-    ]),
-]
+def kicker(t, color=BLUE, extra=''):
+    return (f'<div style="font-family: {SANS}; font-weight: 700; font-size: 18px; letter-spacing: 0.26em; color: {color}; '
+            f'text-transform: uppercase; line-height: 1;{extra}">{t}</div>')
 
+def band(t, size=44, side=''):
+    """Section title: black band, deco hairline inset, Poiret One in paper white."""
+    s = (f'<span style="font-family: {SANS}; font-weight: 600; font-size: 16px; letter-spacing: 0.16em; color: #b9c6e6; text-transform: uppercase">{side}</span>' if side else '')
+    return (f'<div style="background: {DARK}; padding: 4px">'
+            f'<div style="border: 1px solid #8d8f96; display: flex; justify-content: space-between; align-items: center; padding: 6px 16px 4px">'
+            f'<span style="font-family: {DISP}; font-size: {size}px; line-height: 1.05; color: {PAPER}; letter-spacing: 0.08em; text-transform: uppercase; '
+            f'-webkit-text-stroke: 0.6px {PAPER}">{t}</span>{s}</div></div>')
 
-def tint(x, y, w, h, extra=''):
-    """a screened box in the grey ink, printed 1.5 px out of register with the black keyline over it."""
-    return (f'<div style="position: absolute; left: {x + 1.5}px; top: {y + 1}px; width: {w}px; height: {h}px; overflow: hidden{extra}">'
-            f'<img src="assets/tint-grey.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 528px; height: 816px; display: block"></div>'
-            f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w - 2}px; height: {h - 2}px; border: 1px solid {INK}"></div>')
+def item(name, price, desc, note='', gap=16, size=29, caps=True, dsize=21):
+    n = (f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {BLUE}; margin-top: 2px">{note}</div>' if note else '')
+    return (f'<div style="margin-top: {gap}px">'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; font-family: {SANS}; font-weight: 700; '
+            f'font-size: {size}px; line-height: 1.12; color: {DARK}; {"text-transform: uppercase; letter-spacing: 0.03em" if caps else "letter-spacing: 0.005em"}">'
+            f'<span>{name}</span><span style="color: {BLUE}">{price}</span></div>'
+            f'<div style="font-family: {BODY}; font-size: {dsize}px; line-height: 1.28; color: {DARK}; margin-top: 3px">{desc}</div>{n}</div>')
 
+def page(inner, face):
+    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}">'
+            f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.22">'
+            f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 12px; background: {DARK}"></div>'
+            f'<div style="position: absolute; left: 0; top: 16px; width: {W}px; height: 3px; background: {BLUE}"></div>'
+            f'<div style="position: absolute; left: 0; top: {H - 12}px; width: {W}px; height: 12px; background: {DARK}"></div>'
+            + inner +
+            f'<img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
+            '</div>')
 
-def dots(n=90):
-    return (f'<span style="flex: 1; min-width: 14px; overflow: hidden; font-family: {SANS}; font-size: 13px; '
-            f'letter-spacing: 0.16em; color: {GREYINK}; line-height: 1; text-shadow: none">{". " * n}</span>')
+L, CW = 56, 704
 
+def check(o, gx, gy):
+    """Guest check prop: the opening night's table, stamped PAID."""
+    lines = [('Davis, party of 4', None), ('3 Manhattan', '7.50'), ('1 ginger ale', '.75'), ('1 crostini', '2.75'), ('', None), ('Total', '11.00')]
+    rows = ''
+    for i, (t, p) in enumerate(lines):
+        rows += (f'<div style="position: absolute; left: 0; top: {56 + i * 27}px; width: 220px; height: 27px; border-bottom: 1px solid #b3bfd9"></div>'
+                 f'<div style="position: absolute; left: 12px; top: {59 + i * 27}px; width: 196px; display: flex; justify-content: space-between; '
+                 f'font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.2; color: #1d2c5e"><span>{t}</span><span>{p or ""}</span></div>')
+    o.append(f'<div style="position: absolute; left: {gx}px; top: {gy}px; width: 220px; height: 231px; background: #fcfcfa; '
+             f'box-shadow: 0 2px 7px rgba(20,20,30,0.30); transform: rotate(-3deg)">'
+             f'<div style="position: absolute; left: 0; top: 0; width: 220px; height: 44px; border-bottom: 2px solid {DARK}; display: flex; '
+             f'justify-content: space-between; align-items: center; padding: 3px 12px 0; box-sizing: border-box; font-family: {SANS}; font-weight: 700; '
+             f'font-size: 15px; letter-spacing: 0.14em; color: {DARK}"><span>EDIE&rsquo;S</span><span style="color: {BLUE}">TABLE 4</span></div>'
+             + rows +
+             f'<div style="position: absolute; left: 26px; top: 158px; border: 3px solid {BLUE}; border-radius: 4px; padding: 5px 10px 1px; '
+             f'font-family: {SANS}; font-weight: 700; font-size: 30px; line-height: 1; letter-spacing: 0.12em; color: {BLUE}; opacity: 0.8; transform: rotate(-9deg)">PAID</div>'
+             '</div>')
 
-def leader(name, unit, price):
-    return f'''<div style="display: flex; align-items: baseline; gap: 7px; white-space: nowrap">
-      <h3 style="margin: 0; font-family: {SANS}; font-weight: 600; font-size: 18px; line-height: 1.2; letter-spacing: 0.035em; text-transform: uppercase; color: {INK}">{name}</h3>
-      {dots()}
-      <span style="font-family: {SANS}; font-weight: 500; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: {GREYINK}">{unit}</span>
-      <span style="font-family: {SANS}; font-weight: 600; font-size: 18px; color: {INK}; min-width: 48px; text-align: right">{price}</span></div>'''
+def matchbook(o, x, y):
+    """Prop: the house matchbook, tucked over the corner of the photograph."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 100px; height: 146px; background: {DARK}; '
+             f'box-shadow: 0 2px 7px rgba(20,20,30,0.38); transform: rotate(-8deg); overflow: hidden">'
+             f'<div style="position: absolute; left: 6px; top: 6px; width: 86px; height: 98px; border: 1px solid #8d8f96"></div>'
+             f'<div style="position: absolute; left: 0; top: 16px; width: 100px; text-align: center; font-family: {DISP}; font-size: 34px; line-height: 1.1; color: {PAPER}; -webkit-text-stroke: 0.5px {PAPER}">Edie&rsquo;s</div>'
+             f'<div style="position: absolute; left: 22px; top: 60px; width: 56px; height: 2px; background: {BLUE}"></div>'
+             f'<div style="position: absolute; left: 0; top: 68px; width: 100px; text-align: center; font-family: {SANS}; font-weight: 700; font-size: 14px; line-height: 1.3; letter-spacing: 0.08em; color: {PAPER}">2ND AVE<br>AT 88TH</div>'
+             f'<div style="position: absolute; left: 0; top: 112px; width: 100px; height: 34px; background: {BLUE}"></div>'
+             f'<div style="position: absolute; left: 0; top: 118px; width: 100px; height: 9px; background: repeating-linear-gradient(90deg, #7a6a5a 0 2px, #3a3029 2px 4px)"></div>'
+             '</div>')
 
+# ---------------- FRONT ----------------
+def front():
+    o = []
+    o.append(f'<div style="position: absolute; left: {L}px; top: 46px; width: {CW}px; display: flex; justify-content: space-between">'
+             f'{kicker("Second Avenue at 88th Street")}{kicker("Dinner till two", DARK)}</div>')
+    o.append(f'<div style="position: absolute; left: {L - 4}px; top: 62px; font-family: {DISP}; font-size: 128px; line-height: 1.05; color: {DARK}; '
+             f'-webkit-text-stroke: 1.6px {DARK}; letter-spacing: 0.01em">Edie&rsquo;s</div>')
+    o.append(f'<div style="position: absolute; left: {L + 360}px; top: 84px; width: {CW - 360}px; text-align: right; font-family: {DISP}; font-size: 46px; '
+             f'line-height: 1.04; color: {DARK}; -webkit-text-stroke: 0.9px {DARK}; text-transform: uppercase; letter-spacing: 0.06em">Restaurant<br>&amp; Saloon</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 204px; width: {CW}px; height: 3px; background: {DARK}"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 210px; width: {CW}px; height: 1px; background: {BLUE}"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 230px; width: {CW}px; height: 350px; outline: 2px solid {BLUE}; outline-offset: 5px">'
+             f'<img src="assets/still-bridge.jpg" alt="Two figures on a bench under the Queensboro Bridge at dawn" '
+             f'style="display: block; width: {CW}px; height: 350px"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 594px; width: {CW}px; display: flex; justify-content: space-between; '
+             f'font-family: {BODY}; font-style: italic; font-size: 17px; color: {MUTE}">'
+             f'<span>The bridge at first light. Our last tables often end up here.</span><span>Est. 1963</span></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 630px; width: {CW}px">'
+             + kicker('Chapter one') + '<div style="height: 10px"></div>'
+             + band('At the bar', 44, 'From six o&rsquo;clock')
+             + item('Manhattan', '2.50', 'Rye, sweet vermouth and bitters, stirred cold, served up with a cherry.',
+                    'The pitcher for your table, 17.00.', 14)
+             + item('Crostini misti', '2.75', 'Little rounds of French bread, toasted. Ricotta with lemon peel and honey, or mushrooms, garlic and thyme under Parmesan.', '', 14)
+             + item('Shrimp cocktail', '4.95', 'Jumbo shrimp, poached and well chilled, with a sharp horseradish sauce and lemon.', '', 14)
+             + '</div>')
+    check(o, L - 10, 368)
+    return page(''.join(o), 'front')
 
-def item(n, u, p, d, note, first):
-    nt = (f'<p style="margin: 2px 0 0; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {INK}">{note}</p>' if note else '')
-    return f'''<div style="margin-top: {0 if first else 9}px">{leader(n, u, p)}
-      <p style="margin: 3px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.34; color: {BODY}; text-wrap: pretty">{d}</p>{nt}</div>'''
+# ---------------- BACK ----------------
+LW, RW, GAP = 368, 296, 40
+X2 = L + LW + GAP
 
+def back():
+    o = []
+    o.append(f'<div style="position: absolute; left: {L}px; top: 46px; width: {CW}px; display: flex; justify-content: space-between">'
+             f'{kicker("Kitchen open late")}{kicker("Chapters two to four", DARK)}</div>')
+    o.append(f'<div style="position: absolute; left: {L - 2}px; top: 64px; font-family: {DISP}; font-size: 76px; line-height: 1.05; color: {DARK}; -webkit-text-stroke: 1.1px {DARK}">Edie&rsquo;s</div>')
+    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 92px; width: {CW - 300}px; text-align: right; font-family: {BODY}; font-style: italic; '
+             f'font-size: 21px; line-height: 1.35; color: {MUTE}">Brunch on Sundays from eleven.<br>Supper every night, late.</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 162px; width: {CW}px; height: 3px; background: {DARK}"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 168px; width: {CW}px; height: 1px; background: {BLUE}"></div>')
+    it = lambda *a, **k: item(*a, size=25, caps=False, dsize=19, gap=k.pop('gap', 12), **k)
+    left = (kicker('Chapter two') + '<div style="height: 10px"></div>' + band('Sunday brunch', 38)
+            + it('Sutton Place platter', '5.50', 'Toasted bagels, cream cheese, sliced Nova, capers, red onion cut thin and fresh dill.',
+                 note='Wrapped to go for the bench by the bridge.')
+            + it('Belgian waffles', '3.50', 'Crisp squares with maple syrup, sweet butter and berries in season.',
+                 note='Dachshunds welcome at brunch.')
+            + f'<div style="height: 1px; background: {DARK}; opacity: 0.4; margin: 20px 0 18px"></div>'
+            + kicker('Chapter three') + '<div style="height: 10px"></div>' + band('Late supper', 38)
+            + it('Chicken Kung Pao', '7.25', 'Diced dark meat stir-fried hot with dried red peppers, soy, rice wine and black vinegar. Roasted peanuts, scallions and rice.',
+                 note='Szechuan style. Packed to go for the late movie.')
+            + it('Linguine, white clam', '7.75', 'Littlenecks opened in garlic, oil and white wine, with parsley and red pepper.')
+            + it('Veal piccata', '9.50', 'Thin scallops saut&eacute;ed in butter with lemon, capers and dry vermouth.'))
+    right = (f'<div style="border: 2px solid {BLUE}; padding: 4px; background: #fcfcfa">'
+             f'<img src="assets/still-table.jpg" alt="Friends talking over wine at the back table" style="display: block; width: {RW - 12}px; height: {round((RW - 12) * 169 / 300)}px"></div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {MUTE}; margin-top: 6px">The back table, everyone talking at once.</div>'
+             + '<div style="height: 18px"></div>' + kicker('Chapter four') + '<div style="height: 10px"></div>' + band('Desserts', 38)
+             + it('NY cheesecake', '2.50', 'Lemon and vanilla on a buttery crumb crust. Baked slow, chilled overnight.',
+                  note='Worth living for, the regulars say.')
+             + it('Pears in red wine', '2.25', 'Bosc halves poached with cinnamon and orange peel. Heavy cream.',
+                  note='Our answer to C&eacute;zanne.')
+             + f'<div style="height: 1px; background: {DARK}; opacity: 0.4; margin: 20px 0 16px"></div>'
+             + kicker('From a regular') +
+             f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.4; color: {DARK}; margin-top: 8px">Best room in New York to argue about Bergman until two. Get the cheesecake. It&rsquo;s on my list.</div>'
+             f'<div style="font-family: {SCRIPT}; font-size: 40px; line-height: 1.1; color: {BLUE}; margin-top: 2px">Isaac Davis</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 190px; width: {LW}px">{left}</div>')
+    o.append(f'<div style="position: absolute; left: {X2}px; top: 190px; width: {RW}px">{right}</div>')
+    matchbook(o, X2 + RW - 64, 226)
+    o.append(f'<div style="position: absolute; left: {L}px; top: 962px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 970px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; line-height: 1.3; color: {MUTE}">'
+             f'<span>Second Ave. at 88th St., N.Y. 10028. Book parties in the back room.<br>Tap water on request. It runs clear. Nothing here is overrated.</span>'
+             f'<span style="text-align: right">Menu No. 79<br>Prices subject to change.</span></div>')
+    return page(''.join(o), 'back')
 
-def head(title, size=23):
-    return f'''<div style="border-top: 4px solid {INK}; padding-top: 6px">
-        <div style="font-family: {SANS}; font-weight: 700; font-size: {size}px; line-height: 1; letter-spacing: 0.01em; text-transform: uppercase; color: {INK}">{title}</div>
-      <div style="margin-top: 6px; height: 1px; background: {INK}"></div></div>'''
-
-
-def section(title, intro, items, first):
-    rows = ''.join(item(*it, i == 0) for i, it in enumerate(items))
-    return f'''<section style="margin-top: {0 if first else 14}px">{head(title)}
-      <p style="margin: 5px 0 8px; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {BODY}">{intro}</p>
-      {rows}</section>'''
-
-
-def column(x, top, secs):
-    return (f'<div style="position: absolute; left: {x}px; top: {top}px; width: {PW}px">'
-            + ''.join(section(*s, i == 0) for i, s in enumerate(secs)) + '</div>')
-
-
-def layers(face, top):
-    img = lambda f: (f'<img src="assets/{f}" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; '
-                     f'width: {W}px; height: {H}px; pointer-events: none; display: block">')
-    if not top:
-        return img(f'paper-stock-{face}.png')
-    return img(f'wear-ink-{face}.png') + img('paper-grain.png') + img(f'wear-{face}.png')
-
-
-def row(n, p, size=16, fam=None, weight=400, color=None):
-    fam = fam or SERIF
-    color = color or BODY
-    return f'''<div style="display: flex; align-items: baseline; gap: 7px; white-space: nowrap; margin-top: 4px">
-        <span style="font-family: {fam}; font-weight: {weight}; font-size: {size}px; color: {color}">{n}</span>{dots(70)}
-        <span style="font-family: {SANS}; font-weight: 600; font-size: 16px; color: {INK}">{p}</span></div>'''
-
-
-def outside():
-    staff = [('Waiter, for the evening', '35.00'), ('Bartender, for the evening', '40.00'),
-             ('Pianist, for the evening', '60.00')]
-    rent = [('Glasses, the dozen', '3.00'), ('Linen, per table', '4.00'), ('Folding chairs, each', '.75')]
-    also = ['Gallery openings and museum benefits', 'Book parties for publishers',
-            'Rehearsal lunches for television', 'Picnic hampers for the park']
-    al = ''.join(f'<div style="margin-top: {0 if i == 0 else 2}px; font-family: {SERIF}; font-size: 16px; line-height: 1.36; color: {BODY}">'
-                 f'<span style="display: inline-block; width: 6px; height: 6px; background: {INK}; margin-right: 10px; position: relative; top: -3px"></span>{t}</div>'
-                 for i, t in enumerate(also))
-    back = f'''<div style="position: absolute; left: {LX}px; top: 48px; width: {PW}px">
-      {head('How to order')}
-      <p style="margin: 9px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.4; color: {BODY}; text-wrap: pretty">Telephone us by Wednesday for a weekend party, by five o’clock the day before for brunch. We deliver from the Battery to 96th Street, early, late and in thunderstorms.</p>
-      <p style="margin: 5px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.4; color: {BODY}; text-wrap: pretty">Twelve guests or more. One third down holds your date.</p>
-      <div style="margin-top: 18px">{head('Staff and rentals')}</div>
-      <div style="position: relative; margin-top: 10px; height: 200px">
-        {tint(0, 0, PW, 200)}
-        <div style="position: absolute; left: 16px; top: 7px; width: {PW - 32}px">
-          {''.join(row(n, p, 16, SANS, 500, INK) for n, p in staff)}
-          <p style="margin: 2px 0 5px; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {INK}">Our pianist takes requests. Gershwin a specialty.</p>
-          <div style="height: 1px; background: {INK}; margin: 2px 0 3px"></div>
-          {''.join(row(n, p, 16, SANS, 500, INK) for n, p in rent)}</div></div>
-      <div style="margin-top: 18px">{head('We also do')}</div>
-      <div style="margin-top: 9px">{al}</div>
-      <p style="margin: 4px 0 0; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {BODY}">Carriage and rowboat not included.</p>
-      <div style="margin-top: 12px; height: 1px; background: {INK}"></div>
-      <p style="margin: 7px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.38; color: {BODY}; text-wrap: pretty">Gift certificates in any amount, for any party.</p>
-    </div>
-    <div style="position: absolute; left: {LX}px; top: 706px; width: {PW}px; border-top: 4px solid {INK}; padding-top: 9px; display: flex; justify-content: space-between; align-items: flex-start">
-      <div>
-        <div style="font-family: {SANS}; font-weight: 700; font-size: 22px; line-height: 1; letter-spacing: -0.01em; color: {INK}">KESSLER <span style="font-family: {SERIF}; font-style: italic; font-weight: 400">&amp;</span> LOWE</div>
-        <div style="margin-top: 7px; font-family: {SANS}; font-weight: 500; font-size: 12px; letter-spacing: 0.08em; line-height: 1.35; color: {BODY}">EAST 58TH STREET, N.Y. 10022</div></div>
-      <div style="text-align: right">
-        <div style="font-family: {SANS}; font-weight: 700; font-size: 22px; line-height: 1; color: {INK}">(212) 555-0179</div>
-        <div style="margin-top: 7px; font-family: {SANS}; font-weight: 500; font-size: 12px; letter-spacing: 0.08em; color: {BODY}">TAX AND GRATUITY EXTRA</div></div></div>'''
-
-    cover = f'''<img src="assets/bridge-halftone.png" alt="Dawn under the Queensboro Bridge, Sutton Place" style="position: absolute; left: {FOLD}px; top: 0; width: 528px; height: 528px; display: block">
-    <div style="position: absolute; left: {FOLD}px; top: 536px; width: 528px; height: 280px; background: {INK}"></div>
-    <div style="position: absolute; left: {RX}px; top: 568px; width: {PW}px; color: {PAPER}; text-shadow: 0 0 0.7px rgba(24,25,29,0.9)">
-      <div style="display: flex; justify-content: space-between; font-family: {SANS}; font-weight: 500; font-size: 13px; letter-spacing: 0.34em">
-        <span>CATERERS</span><span>EAST 58TH STREET</span></div>
-      <div style="margin-top: 14px; font-family: {SANS}; font-weight: 700; font-size: 51px; line-height: 0.95; letter-spacing: -0.02em; white-space: nowrap">KESSLER <span style="font-family: {SERIF}; font-style: italic; font-weight: 400; font-size: 48px">&amp;</span> LOWE</div>
-      <div style="margin-top: 16px; height: 3px; background: {GREYINK}; position: relative; left: 1.5px; top: 1px"></div>
-      <p style="margin: 13px 0 0; font-family: {SERIF}; font-style: italic; font-size: 23px; line-height: 1.25">We adore New York City.</p>
-      <p style="margin: 6px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.4; color: #d9d8d2">Parties, brunches and suppers, to your door.</p></div>
-    <div style="position: absolute; left: {RX}px; top: 752px; width: {PW}px; display: flex; justify-content: space-between; font-family: {SANS}; font-weight: 500; font-size: 13px; letter-spacing: 0.3em; color: {GREYINK}; text-shadow: none">
-      <span>PRICE LIST</span><span>SPRING 1979</span></div>'''
-    return back + cover
-
-
-def inside():
-    box = f'''<div id="party" style="position: absolute; left: {LX}px; top: PARTYTOP px; width: {PW}px; height: 72px">
-      {tint(0, 0, PW, 72)}
-      <div style="position: absolute; left: 16px; top: 7px; width: {PW - 32}px">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; line-height: 1.1">
-          <span style="font-family: {SANS}; font-weight: 700; font-size: 15px; letter-spacing: 0.08em; color: {INK}">A COCKTAIL PARTY FOR TWELVE</span>
-          <span style="font-family: {SANS}; font-weight: 700; font-size: 18px; color: {INK}">145.00</span></div>
-        <p style="margin: 3px 0 0; font-family: {SERIF}; font-size: 14px; line-height: 1.3; color: {INK}; text-wrap: pretty">Two pitchers of Manhattans, two dozen shrimp, two dozen toasts, one cheesecake, coffee for thirty and a waiter.</p></div></div>'''.replace("PARTYTOP px", "704px")
-    foot = f'''<div style="position: absolute; left: {RX}px; top: 740px; width: {PW}px; border-top: 4px solid {INK}; padding-top: 8px; display: flex; justify-content: space-between; align-items: baseline">
-      <span style="font-family: {SERIF}; font-style: italic; font-size: 16px; color: {INK}">Nothing here is overrated.</span>
-      <span style="font-family: {SANS}; font-weight: 600; font-size: 13px; letter-spacing: 0.2em; color: {INK}">(212) 555-0179</span></div>'''
-    return column(LX, 48, LEFT) + box + column(RX, 48, RIGHT) + foot
-
-
-def page(face, body):
-    root = (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}; {GAIN}">'
-            f'{layers(face, False)}{body}{layers(face, True)}</div>')
-    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Kessler &amp; Lowe price list, {face}</title>'
-            f'<link rel="stylesheet" href="{FONTS}"><style>body{{margin:0}}</style></head><body>{root}</body></html>')
-
-
-for face, fn in (('outside', outside), ('inside', inside)):
-    open(os.path.join(D, face + '.html'), 'w').write(page(face, fn()))
+FACES = {'front': front(), 'back': back()}
+for n, b in FACES.items():
+    open(os.path.join(D, n + '.body.html'), 'w').write(b)
+    open(os.path.join(D, n + '.html'), 'w').write(
+        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Edie\'s menu, {n}</title>'
+        f'<link rel="stylesheet" href="{FONTS}"><style>body{{margin:0}}</style></head><body>{b}</body></html>')
 print('built')
