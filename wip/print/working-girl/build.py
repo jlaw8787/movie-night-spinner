@@ -1,7 +1,7 @@
 """The Whitehall Grill, at the South Ferry, New York, 1988 (Working Girl).
 The grill's oversized single luncheon sheet, one portrait face 960 x 1344 px (10 x 14 in), burgundy and ferry
-orange on warm ivory stock. The top half is the painted hero: a Kennedy-class ferry crossing toward lower
-Manhattan in the morning, with the wordmark in the sky, a snapshot of the private room and the reserved card
+orange on warm ivory stock. The top half is the hero photo (photo.py, NARA 549900, May 1973): a ferry crossing toward lower
+Manhattan in the haze, with the wordmark in the sky, a snapshot of the private room and the reserved card
 tucked over the water, and the matchbook on the far corner. The lower half is the menu.
 Writes sheet.body.html and the full page sheet.html."""
 import os
@@ -64,10 +64,11 @@ def snapshot(x, y):
 def sheet():
     o = []
     # hero: painting, wordmark in the sky
-    o.append(f'<img src="assets/ferry-hero.png" alt="Gouache painting of an orange Staten Island ferry crossing the bay toward the lower Manhattan skyline on a hazy morning" '
+    o.append(f'<img src="assets/ferry-hero.jpg" alt="Photograph, May 1973: a Staten Island ferry crossing the upper bay toward the hazy lower Manhattan skyline and the twin towers" '
              f'style="position: absolute; left: 0; top: 0; width: {W}px; height: 600px; display: block">')
     o.append(f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 14px; background: {DARK}"></div>'
-             f'<div style="position: absolute; left: 0; top: 14px; width: {W}px; height: 4px; background: {ORANGE}"></div>')
+             f'<div style="position: absolute; left: 0; top: 14px; width: {W}px; height: 4px; background: {ORANGE}"></div>'
+             f'<div style="position: absolute; left: 0; top: 597px; width: {W}px; height: 3px; background: {ORANGE}"></div>')
     o.append(f'<div style="position: absolute; left: {M}px; top: 52px; width: {W - 2 * M}px; display: flex; justify-content: space-between">'
              f'{kicker("At the South Ferry, New York")}{kicker("Est. 1931 &middot; (212) 555-1988", DARK)}</div>')
     o.append(f'<div style="position: absolute; left: {M - 4}px; top: 78px; width: {W - 2 * M + 8}px; font-family: {DISP}; font-size: 80px; line-height: 1; '
@@ -76,7 +77,7 @@ def sheet():
              f'<span style="font-family: {BODY}; font-style: italic; font-size: 22px; color: {INK}">Luncheon, dinner and the long bar</span>'
              f'<span style="font-family: {BODY}; font-style: italic; font-size: 22px; color: {ORANGE}">A head for business? Try the steak.</span></div>')
     o.append(snapshot(M + 4, 408))
-    o.append(reserved(M + 130, 330))
+    o.append(reserved(M + 96, 330))
     o.append(matchbook(W - M - 116, 452))
     # menu, lower half
     TOP = 630

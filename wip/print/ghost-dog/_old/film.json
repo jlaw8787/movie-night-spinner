@@ -1,0 +1,31 @@
+{
+ "fmt": "rooftop",
+ "fn": "fmtRooftop",
+ "faces": [
+  "outside.html",
+  "inside.html"
+ ],
+ "names": [
+  "Outside",
+  "Inside"
+ ],
+ "mm": [
+  355.6,
+  215.9
+ ],
+ "fonts": "family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+TC:wght@900&family=Kaushan+Script&family=Reenie+Beanie",
+ "fams": [
+  "Tinos",
+  "Noto Serif TC",
+  "Kaushan Script",
+  "Reenie Beanie"
+ ],
+ "phone": {
+  "disp": "'Tinos',serif",
+  "title": "'Tinos',serif",
+  "name": "'Tinos',serif",
+  "body": "'Tinos',serif",
+  "price": "'Tinos',serif",
+  "note": "'Tinos',serif"
+ }
+}

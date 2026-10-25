@@ -1,0 +1,3 @@
+# Image credits
+- assets/src-street.jpg, photo-street.png: TMDB still from The French Connection (1971), https://image.tmdb.org/t/p/original/vuJ0qEbmkXUNMLbTZ7twVKC2A1b.jpg (listed in data/film-stills.json). Cropped right of the hotel canopy so no sign shows.
+- assets/src-vieuxport.jpg, photo-port.png: [Old Harbor (Vieux-Port), Marseille, France, with Hotel-Dieu Hospital in background], Photochrom, c.1890 to 1900, Library of Congress Prints and Photographs, https://www.loc.gov/item/2002715102/ , image https://tile.loc.gov/storage-services/service/pnp/ppmsc/09900/09986v.jpg . No known restrictions on publication (public domain).

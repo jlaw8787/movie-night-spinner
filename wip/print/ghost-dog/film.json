@@ -2,30 +2,27 @@
  "fmt": "rooftop",
  "fn": "fmtRooftop",
  "faces": [
-  "outside.html",
-  "inside.html"
+  "board.html"
  ],
  "names": [
-  "Outside",
-  "Inside"
+  "Truck board"
  ],
  "mm": [
-  355.6,
-  215.9
+  254,
+  254
  ],
- "fonts": "family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+TC:wght@900&family=Kaushan+Script&family=Reenie+Beanie",
+ "fonts": "family=Sniglet:wght@400;800&family=Nunito:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Caveat:wght@600",
  "fams": [
-  "Tinos",
-  "Noto Serif TC",
-  "Kaushan Script",
-  "Reenie Beanie"
+  "Sniglet",
+  "Nunito",
+  "Caveat"
  ],
  "phone": {
-  "disp": "'Tinos',serif",
-  "title": "'Tinos',serif",
-  "name": "'Tinos',serif",
-  "body": "'Tinos',serif",
-  "price": "'Tinos',serif",
-  "note": "'Tinos',serif"
+  "disp": "'Sniglet',sans-serif",
+  "title": "'Sniglet',sans-serif",
+  "name": "'Nunito',sans-serif",
+  "body": "'Nunito',sans-serif",
+  "price": "'Nunito',sans-serif",
+  "note": "'Nunito',sans-serif"
  }
 }

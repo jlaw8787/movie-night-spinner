@@ -1,290 +1,118 @@
-"""Builds the Villafane Food Market weekly circular (Leon: The Professional, 1994).
-The neighbourhood grocer's two-sided sale flyer that sits in a stack by the register, the store
-Mathilda runs to for groceries and Leon's milk. The owner speaks Spanish, so the name is his. US Letter, groundwood newsprint, printed web-offset
-in two inks, black and one spot green, with halftone clip art and a little misregistration.
-Front: dairy case (milk), lunch counter, bakery case, houseplants. Back: deli counter, a paid ad
-from Tony's restaurant, clip coupons. One sheet, no fold.
-Writes front.html / back.html, front.body.html / back.body.html, film.json and leon.labels.json."""
-import os, json
+"""Tony's, Mulberry Street, Little Italy, 1994. The restaurant's own tall slim table card,
+two faces 528x1344 (5.5 x 14 in), walnut stock, cream and tablecloth red.
+Front: the sign, the Mulberry Street photograph (signature), the pasta, Tony's note.
+Back: the back-table still, antipasti, dolci, drinks, fine print. Props: Tony's card, milk coupon.
+Writes front.body.html / back.body.html and full pages front.html / back.html."""
+import os
 D = os.path.dirname(os.path.abspath(__file__))
+W, H = 528, 1344
+PAPER, CREAM, RED, SOFT = '#2b1e17', '#f1e6cf', '#d6523c', '#e3d4b6'
+FONTS = ('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;700'
+         '&family=Spectral:ital,wght@0,400;0,600;1,400&family=Allura&display=swap')
+DISP = "'Cormorant SC', serif"; BODY = "'Spectral', serif"; SCRIPT = "'Allura', cursive"
+L, CW = 40, 448
 
-FW, FH = 816, 1056
-PAPER = '#ebe5d2'
-INK = '#1d1c1a'
-SOFT = '#3d3a34'
-GREEN = '#1e7a46'
-TINT = '#cfe0cf'      # 20% screen of the green, printed as a flat tint
-WHITE = '#f6f2e6'
-FONTS = ('family=Libre+Franklin:ital,wght@0,400;0,600;0,900;1,900'
-         '&family=Oswald:wght@600;700'
-         '&family=Archivo+Narrow:ital,wght@0,700;1,700'
-         '&family=DM+Serif+Display:ital@0;1')
-LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-HEAVY = "'Libre Franklin', 'Franklin Gothic Heavy', sans-serif"   # phototype Franklin Gothic Heavy look
-DISP = "'Oswald', 'Alternate Gothic', 'Arial Narrow', sans-serif"     # condensed gothic for heads and tags
-NAME = "'Archivo Narrow', 'Arial Narrow', sans-serif"
-BODY = "'Libre Franklin', 'Helvetica Neue', Arial, sans-serif"
-SERIF = "'DM Serif Display', Georgia, serif"
+def kicker(t, color=RED, extra=''):
+    return (f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; letter-spacing: 0.22em; color: {color}; '
+            f'text-transform: uppercase; line-height: 1;{extra}">{t}</div>')
 
+def section(k, t):
+    return (f'<div style="margin-top: 26px">{kicker(k)}'
+            f'<div style="display: flex; align-items: center; gap: 14px; margin-top: 8px">'
+            f'<img src="assets/gingham-square.png" alt="" aria-hidden="true" style="display: block; width: 26px; height: 26px">'
+            f'<div style="font-family: {DISP}; font-weight: 700; font-size: 46px; line-height: 0.9; color: {CREAM}; letter-spacing: 0.02em">{t}</div></div>'
+            f'<div style="height: 2px; background: {RED}; margin-top: 10px"></div></div>')
 
-def spread(col, r=.7):
-    """Ink spread on newsprint: the heavy type fattens and softens a touch at its edges."""
-    return f'text-shadow: 0 0 {r}px {col}, 0 0 {r}px {col}'
+def item(name, price, desc, note='', gap=14):
+    n = f' <span style="font-style: italic; color: {RED}">{note}</span>' if note else ''
+    return (f'<div style="margin-top: {gap}px">'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">'
+            f'<span style="font-family: {DISP}; font-weight: 700; font-size: 30px; line-height: 1.08; color: {CREAM}">{name}</span>'
+            f'<span style="font-family: {BODY}; font-weight: 600; font-size: 27px; line-height: 1; color: {RED}">{price}</span></div>'
+            f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.36; color: {SOFT}; margin-top: 3px">{desc}{n}</div></div>')
 
+def page(inner, wear):
+    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}">'
+            f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.22">'
+            f'<img src="assets/wear-{wear}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
+            f'<img src="assets/gingham-band.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: 24px; display: block">'
+            f'<img src="assets/gingham-band.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: {H - 24}px; width: {W}px; height: 24px; display: block">'
+            + inner + '</div>')
 
-def esc(s):
-    return s.replace('&', '&amp;')
+def card(x, y):
+    """Prop: Tony's business card, with a pencilled note on it."""
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 212px; height: 122px; background: #f6efe0; '
+            f'box-shadow: 0 3px 8px rgba(0,0,0,0.45); transform: rotate(5deg)">'
+            f'<div style="position: absolute; left: 0; top: 12px; width: 212px; text-align: center; font-family: {DISP}; font-weight: 700; font-size: 34px; line-height: 1; color: #a83524">Tony&rsquo;s</div>'
+            f'<div style="position: absolute; left: 0; top: 48px; width: 212px; text-align: center; font-family: {BODY}; font-size: 14px; line-height: 1.3; color: #2b1e17">'
+            f'Tony, proprietor<br>Mulberry St., New York<br>(212) 555-0194</div>'
+            f'<div style="position: absolute; left: 118px; top: 84px; font-family: {SCRIPT}; font-size: 30px; line-height: 1; color: #2c3a78; transform: rotate(-8deg)">Thurs. T.</div>'
+            '</div>')
 
+def coupon(x, y):
+    """Prop: a cut-out milk coupon."""
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 184px; height: 118px; background: #f6efe0; '
+            f'box-shadow: 0 3px 8px rgba(0,0,0,0.45); transform: rotate(-4deg); padding: 6px; box-sizing: border-box">'
+            f'<div style="border: 2px dashed #a83524; height: 102px; box-sizing: border-box; text-align: center; padding-top: 7px">'
+            f'<div style="font-family: {BODY}; font-weight: 600; font-size: 14px; letter-spacing: 0.2em; color: #a83524; line-height: 1">COUPON</div>'
+            f'<div style="font-family: {DISP}; font-weight: 700; font-size: 25px; line-height: 0.95; color: #2b1e17; margin-top: 5px">Free Glass<br>of Cold Milk</div>'
+            f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.2; color: #2b1e17; margin-top: 4px">with dinner. Limit two quarts.</div>'
+            '</div></div>')
 
-def at(x, y, w, extra=''):
-    return f'position: absolute; left: {x}px; top: {y}px; width: {w}px; {extra}'
+def photo(src, alt, x, y, w, h):
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; outline: 2px solid {RED}; outline-offset: 4px">'
+            f'<img src="{src}" alt="{alt}" style="display: block; width: {w}px; height: {h}px"></div>')
 
+def caption(t, y):
+    return (f'<div style="position: absolute; left: {L}px; top: {y}px; width: {CW}px; font-family: {BODY}; font-style: italic; '
+            f'font-size: 18px; line-height: 1.3; color: {SOFT}">{t}</div>')
 
-def img(src, x, y, w, h, alt=''):
-    a = f'alt="{alt}"' if alt else 'alt="" aria-hidden="true"'
-    return f'<img src="assets/{src}" {a} style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; display: block">'
+# ---------------- FRONT ----------------
+def front():
+    o = []
+    o.append(f'<div style="position: absolute; left: {L}px; top: 50px; width: {CW}px">{kicker("Mulberry Street, Little Italy")}</div>')
+    o.append(f'<div style="position: absolute; left: {L - 4}px; top: 70px; font-family: {DISP}; font-weight: 700; font-size: 116px; line-height: 1; color: {CREAM}; letter-spacing: 0.01em">TONY&rsquo;S</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 186px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 21px; line-height: 1.2; color: {SOFT}">Ristorante. Lunch and dinner, every day.</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 224px; width: {CW}px; height: 2px; background: {RED}"></div>')
+    o.append(photo('assets/mulberry.jpg', 'Mulberry Street around 1900, crowded with pushcarts, awnings and families', L, 246, CW, 488))
+    o.append(card(292, 232))
+    o.append(caption('Our block of Mulberry Street, 1900. Still feeding it.', 746))
+    col = section('Dalla cucina', 'Pasta')
+    col += item('Spaghetti Tony', '8.95', 'San Marzano tomatoes crushed by hand, garlic cooked slow, basil and a knob of butter. Parmigiano on the side.', 'Ask for Tony.')
+    col += item('Baked Ziti', '9.25', 'Ricotta, mozzarella and Sunday gravy, baked bubbling in its own dish.')
+    col += item('Linguine Vongole', '11.50', 'Littleneck clams, garlic, white wine and parsley.')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 762px; width: {CW}px">{col}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 1196px; width: {CW}px; height: 1px; background: {RED}; opacity: 0.7"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 1208px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 1.36; color: {CREAM}">'
+             'My regulars sit in the back, drink their milk and say nothing. Quiet people, I trust. Mangia.</div>')
+    o.append(f'<div style="position: absolute; left: {L + 290}px; top: 1250px; font-family: {SCRIPT}; font-size: 48px; line-height: 1; color: {CREAM}">Tony</div>')
+    return page(''.join(o), 'front')
 
+# ---------------- BACK ----------------
+def back():
+    o = []
+    o.append(photo('assets/milk.jpg', 'A tall glass of milk between two hands on a red checked tablecloth', L, 52, CW, 236))
+    o.append(coupon(316, 34))
+    o.append(caption('The back table. Cold milk, checked cloth, no questions.', 300))
+    col = section('Per cominciare', 'Antipasti')
+    col += item('The French Loaf', '6.50', 'Crusty bread spread thick with sweet butter, thin boiled ham and little sour pickles, cut in twelve.')
+    col += item('Olive Calde', '4.25', 'Mixed and warmed in oil with orange peel, thyme and garlic. Cornichons and pickled onions alongside.')
+    col += section('Dal banco', 'Dolci')
+    col += item('The Window Pot', '4.50', 'Dark chocolate mousse under crushed cookie soil in a little clay pot, fresh mint growing out the top.', 'Likes the sun.')
+    col += item('Cannoli', '3.25', 'Crisp shells filled to order with sweet ricotta and chocolate chips.')
+    col += section('Da bere', 'Bevande')
+    col += item('Vanilla Malted', '3.75', 'Whole milk blended thick with ice cream, malt and honey, in a frosted glass.', gap=12)
+    col += item('Cold Milk', '1.25', 'Whole, poured tall. A quart to go, 1.94.', gap=12)
+    col += item('Champagne', '6.50', 'By the glass, well chilled.', 'Over eighteen only.', gap=12)
+    o.append(f'<div style="position: absolute; left: {L}px; top: 322px; width: {CW}px">{col}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 1250px; width: {CW}px; text-align: center; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {SOFT}">'
+             'Prices subject to change. Thursday nights, a little Beethoven.<br>Mulberry St., New York, N.Y. 10013. Form 194. 1994.</div>')
+    return page(''.join(o), 'back')
 
-def price(d, c, unit='', size=64, col=INK, align='right'):
-    """Circular price: big figures, cents raised, unit tucked under the cents."""
-    if d:
-        big = f'<span style="font-size: {size * .42:.0f}px; line-height: 1; vertical-align: top; position: relative; top: {size * .08:.0f}px">$</span>{d}'
-        small = c
-    else:
-        big = c
-        small = '&cent;'
-    u = (f'<div style="font-family: {NAME}; font-weight: 700; letter-spacing: .03em; text-shadow: none; font-size: {max(13, size * .2):.0f}px; line-height: 1; '
-         f'letter-spacing: .04em; text-transform: uppercase; margin-top: {size * .06:.0f}px">{unit}</div>') if unit else ''
-    size = round(size * .84)
-    return (f'<div style="display: inline-flex; align-items: flex-start; font-family: {HEAVY}; font-weight: 900; letter-spacing: -.02em; color: {col}; {spread(col)}; line-height: .9; '
-            f'justify-content: {"flex-end" if align == "right" else "flex-start"}">'
-            f'<span style="font-size: {size}px; line-height: .9">{big}</span>'
-            f'<div style="margin-left: 2px; padding-top: {size * .05:.0f}px"><div style="font-size: {size * .46:.0f}px; line-height: .9; '
-            f'border-bottom: {max(2, size * .04):.0f}px solid {col}; padding-bottom: 2px">{small}</div>{u}</div></div>')
-
-
-def tag(text, bg=INK, col=WHITE, size=17):
-    return (f'<div style="display: inline-block; background: {bg}; color: {col}; font-family: {DISP}; font-weight: 700; font-size: {size}px; '
-            f'line-height: 1; letter-spacing: .08em; padding: 5px 9px 5px">{text}</div>')
-
-
-def overlays(face):
-    gw = round(FH * 2246 / 1588)
-    return (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: {(FW - gw) // 2}px; top: 0; '
-            f'width: {gw}px; height: {FH}px; opacity: .55; pointer-events: none; display: block">'
-            f'<img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; '
-            f'height: {FH}px; pointer-events: none; display: block">')
-
-
-def root(inner, face):
-    return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {PAPER}; '
-            f'font-family: {BODY}; color: {INK}">{inner}{overlays(face)}</div>')
-
-
-def box(x, y, w, h, border=2, extra=''):
-    return f'<div style="{at(x, y, w, f"height: {h}px; box-sizing: border-box; border: {border}px solid {INK}; {extra}")}"></div>'
-
-
-def tintbox(x, y, w, h, col=TINT, mis=(2, 1)):
-    """A flat tint laid down by the green plate, a hair off register from the black rules."""
-    return f'<div style="{at(x + mis[0], y + mis[1], w, f"height: {h}px; background: {col}")}"></div>'
-
-
-DESC = f'font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {SOFT}; text-wrap: pretty'
-NOTE = f'font-family: {NAME}; font-style: italic; font-weight: 700; font-size: 18px; line-height: 1.15; color: {GREEN}'
-NM = f'font-family: {NAME}; font-weight: 700; text-transform: uppercase; letter-spacing: .01em; line-height: 1; color: {INK}'
-
-# ============================== FRONT ==============================
-MILK_D = 'Grade A, homogenized, vitamin D added. In cold every morning before we open.'
-
-
-def dairy_row(name, sub, p, top, last=False):
-    rule = '' if last else f'border-bottom: 1.5px solid {INK};'
-    return (f'<div style="{at(0, top, 234, f"height: {102 if last else 92}px; box-sizing: border-box; {rule} display: flex; justify-content: space-between; align-items: center; gap: 8px")}">'
-            f'<div style="min-width: 0"><div style="{NM}; font-size: 25px">{name}</div>'
-            f'<div style="{DESC}; font-size: 16px; margin-top: 4px">{sub}</div></div>'
-            f'<div style="flex: none">{p}</div></div>')
-
-
-def counter_cell(x, w, head, art, aw, ah, name, desc, note, p):
-    return f"""
-<div style="{at(x, 594, w, 'height: 356px; box-sizing: border-box; border: 2px solid ' + INK)}">
-  <div style="background: {INK}; color: {WHITE}; font-family: {DISP}; font-weight: 700; font-size: 19px; letter-spacing: .1em; line-height: 1; padding: 7px 10px 6px">{head}</div>
-  <div style="padding: 10px 11px 0">
-    <div style="{NM}; font-size: 27px">{name}</div>
-    <div style="{DESC}; margin-top: 6px">{desc}</div>
-    <div style="{NOTE}; margin-top: 7px">{note}</div>
-  </div>
-  {img(art, 8, 356 - 4 - ah - 8, aw, ah)}
-  <div style="position: absolute; right: 10px; bottom: 10px">{p}</div>
-</div>"""
-
-
-front = f"""
-<div style="{at(0, 0, FW, 'height: 198px; background: ' + GREEN)}"></div>
-<div style="{at(48, 42, 720, f'display: flex; justify-content: space-between; font-family: {NAME}; font-weight: 700; font-size: 16px; letter-spacing: .16em; color: {WHITE}')}">
-  <span>GROCERIES</span><span>DAIRY</span><span>DELI</span><span>LUNCH COUNTER</span><span>BAKERY</span><span>HOUSEPLANTS</span></div>
-<div style="{at(44, 64, 560, f'font-family: {HEAVY}; font-weight: 900; font-style: italic; font-size: 86px; line-height: 1; letter-spacing: -.035em; color: {WHITE}; {spread(WHITE, .8)}; white-space: nowrap')}">Villafañe</div>
-<div style="{at(560, 70, 208, f'text-align: right; color: {WHITE}')}">
-  <div style="font-family: {DISP}; font-weight: 700; font-size: 40px; line-height: .98; letter-spacing: .04em">FOOD<br>MARKET</div>
-</div>
-<div style="{at(48, 162, 720, f'display: flex; justify-content: space-between; font-family: {BODY}; font-weight: 600; font-size: 16px; color: {WHITE}')}">
-  <span>Little Italy, New York</span><span>Open 7 days, 7 A.M. to 10 P.M.</span><span style="font-style: italic">Se habla español</span></div>
-<div style="{at(0, 200, FW, 'height: 40px; background: ' + INK)}"></div>
-<div style="{at(48, 208, 720, f'display: flex; justify-content: space-between; align-items: baseline; color: {WHITE}')}">
-  <span style="font-family: {DISP}; font-weight: 700; font-size: 25px; letter-spacing: .1em; line-height: 1">THIS WEEK'S SPECIALS</span>
-  <span style="font-family: {NAME}; font-weight: 700; font-size: 17px; letter-spacing: .06em">PRICES GOOD SUNDAY THRU SATURDAY</span></div>
-
-{tintbox(48, 256, 470, 322, '#e3ecdf')}
-{box(48, 256, 470, 322, 2.5)}
-<div style="{at(60, 268, 200)}">{tag('DAIRY CASE', GREEN)}</div>
-{img('carton.png', 58, 296, 206, 272, 'Quart carton of whole milk')}
-<div style="{at(74, 430, 102, f'text-align: center; color: {GREEN}')}">
-  <div style="font-family: {NAME}; font-weight: 700; font-size: 13px; letter-spacing: .12em; color: {INK}">GRADE A</div>
-  <div style="font-family: {HEAVY}; font-weight: 900; font-size: 36px; line-height: 1.05; letter-spacing: -.01em; {spread(GREEN, .5)}">MILK</div>
-  <div style="font-family: {NAME}; font-weight: 700; font-size: 13px; line-height: 1.15; letter-spacing: .06em; color: {INK}">VITAMIN D<br>ONE QUART</div></div>
-<div style="{at(278, 270, 228)}">
-  <div style="font-family: {HEAVY}; font-weight: 900; font-size: 34px; line-height: 1; letter-spacing: -.03em; {spread(INK)}; white-space: nowrap">WHOLE MILK</div>
-  <div style="{DESC}; margin-top: 8px">{MILK_D}</div>
-  <div style="{NOTE}; font-size: 21px; margin-top: 8px">Fill the fridge.</div>
-</div>
-{img('burst.png', 280, 432, 142, 142)}
-<div style="{at(280, 463, 142, 'display: flex; justify-content: center')}">{price('', '79', 'quart', 62, WHITE)}</div>
-<div style="{at(428, 498, 80, f'font-family: {NAME}; font-weight: 700; font-size: 15px; line-height: 1.15; color: {INK}')}">Limit four<br>with a $5<br>purchase</div>
-
-<div style="{at(534, 256, 234)}">
-  <div style="font-family: {DISP}; font-weight: 700; font-size: 25px; line-height: 1; letter-spacing: .06em; border-bottom: 3px solid {INK}; padding-bottom: 6px">FROM THE COOLER</div></div>
-<div style="{at(534, 292, 234, 'height: 286px')}">
-  <div style="position: relative; height: 286px">
-    {dairy_row('Large eggs', 'Grade A, the dozen.', price('', '99', 'doz', 46), 0)}
-    {dairy_row('Sweet butter', 'Unsalted, the pound.', price('1', '89', 'lb', 46), 92)}
-    {dairy_row('Fresh mozzarella', 'Made in back daily.', price('3', '99', 'lb', 46), 184, True)}
-  </div>
-</div>
-
-{counter_cell(48, 232, 'LUNCH COUNTER', 'shake.png', 70, 113, 'Thick vanilla shake',
-    'Cold whole milk blended with ice cream, malted milk powder and a spoon of honey, poured into a glass frosted in the freezer.',
-    'Made to order.', price('1', '95', 'glass', 46))}
-{counter_cell(292, 232, 'BAKERY CASE', 'dirtcup.png', 82, 87, 'Flowerpot dirt cups',
-    'Dark chocolate mousse layered with crushed chocolate cookie crumbs in a little terracotta tumbler, a sprig of fresh mint planted on top.',
-    'By the register.', price('1', '29', 'each', 46))}
-{counter_cell(536, 232, 'HOUSEPLANTS', 'plant.png', 124, 140, 'Window plant',
-    'Glossy green leaves in a six-inch pot. Set it out on the sill each morning and mist it with a spray bottle.',
-    'Happy in a pot. No roots.', price('5', '99', 'pot', 46))}
-
-<div style="{at(48, 962, 720, f'height: 42px; box-sizing: border-box; border-top: 3px solid {INK}; border-bottom: 1.5px solid {INK}; display: flex; align-items: center; justify-content: space-between; font-family: {NAME}; font-weight: 700; font-size: 17px; letter-spacing: .03em')}">
-  <span style="white-space: nowrap">SEMOLINA BREAD <span style="font-family: {HEAVY}; font-weight: 900; font-size: 19px; color: {GREEN}; {spread(GREEN, .5)}">99&cent;</span></span>
-  <span style="white-space: nowrap">HOT COFFEE <span style="font-family: {HEAVY}; font-weight: 900; font-size: 19px; color: {GREEN}; {spread(GREEN, .5)}">50&cent;</span></span>
-  <span style="white-space: nowrap">PIG OVEN MITT <span style="font-family: {HEAVY}; font-weight: 900; font-size: 19px; color: {GREEN}; {spread(GREEN, .5)}">$1.49</span> <span style="font-style: italic; color: {GREEN}">Nicer than people.</span></span></div>
-<div style="{at(48, 1004, 720, f'display: flex; justify-content: space-between; font-family: {BODY}; font-size: 12px; line-height: 1; color: {SOFT}')}">
-  <span>We reserve the right to limit quantities. Not responsible for typographical errors.</span><span>Deli and coupons on back</span></div>
-"""
-
-# ============================== BACK ==============================
-BAG_D = ('Crusty French loaf spread thick with cultured butter, layered with shaved leg ham and sliced cornichons, '
-         'pressed and cut in twelve. Dijon mustard on the side.')
-OLIVE_D = 'Mixed olives warmed in olive oil with orange peel, thyme and crushed garlic, packed with cornichons and pickled onions.'
-TONY_D = ('San Marzano tomatoes crushed by hand, garlic cooked gently in olive oil, simmered twenty-five minutes, '
-          'finished with basil and a knob of butter. Grated parmesan on the side.')
-
-DOTS = ' .' * 60
-
-
-def lb_row(name, p, last=False):
-    rule = '' if last else f'border-bottom: 1px solid {INK};'
-    return (f'<div style="display: flex; align-items: baseline; gap: 6px; padding: 9px 0 8px; {rule}">'
-            f'<span style="flex: none; {NM}; font-size: 21px">{name}</span>'
-            f'<span style="flex: 1; min-width: 16px; overflow: hidden; white-space: nowrap; font-family: {BODY}; font-size: 14px; color: {SOFT}">{DOTS}</span>'
-            f'<span style="flex: none; font-family: {HEAVY}; font-weight: 900; font-size: 22px; line-height: 1; {spread(INK, .5)}">{p}</span>'
-            f'<span style="flex: none; font-family: {NAME}; font-weight: 700; font-size: 14px; width: 18px">LB</span></div>')
-
-
-def coupon(x, w, big, line1, line2, small):
-    return f"""
-<div style="{at(x, 906, w, f'height: 88px; box-sizing: border-box; border: 2.5px dashed {INK}; padding: 9px 12px; display: flex; align-items: center; gap: 12px')}">
-  <div style="flex: none; font-family: {HEAVY}; font-weight: 900; font-size: 40px; line-height: 1; letter-spacing: -.03em; color: {GREEN}; {spread(GREEN)}">{big}</div>
-  <div style="min-width: 0"><div style="{NM}; font-size: 21px">{line1}</div>
-    <div style="font-family: {BODY}; font-size: 15px; line-height: 1.2; margin-top: 2px">{line2}</div>
-    <div style="font-family: {BODY}; font-size: 12px; line-height: 1.2; margin-top: 3px; color: {SOFT}">{small}</div></div>
-</div>"""
-
-
-back = f"""
-<div style="{at(0, 0, FW, 'height: 122px; background: ' + GREEN)}"></div>
-<div style="{at(46, 46, 470, f'font-family: {HEAVY}; font-weight: 900; font-style: italic; font-size: 58px; line-height: 1; letter-spacing: -.035em; color: {WHITE}; {spread(WHITE, .8)}; white-space: nowrap')}">Deli Counter</div>
-<div style="{at(520, 44, 248, f'text-align: right; font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.3; color: {WHITE}')}">Sliced to order while you wait. Party trays on one day's notice.</div>
-<div style="{at(0, 124, FW, 'height: 8px; background: ' + INK)}"></div>
-
-{tintbox(48, 150, 720, 276, '#e3ecdf')}
-{box(48, 150, 720, 276, 2.5)}
-<div style="{at(62, 164, 300)}">{tag('PARTY TRAYS', GREEN)}</div>
-{img('baguette.png', 54, 188, 590, 128, 'Baguette sliced on a party tray')}
-{img('burst.png', 626, 164, 136, 136)}
-<div style="{at(626, 200, 136, 'display: flex; justify-content: center')}">{price('7', '99', 'tray', 56, WHITE)}</div>
-<div style="{at(64, 320, 688)}">
-  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px">
-    <div style="font-family: {HEAVY}; font-weight: 900; font-size: 34px; line-height: 1; letter-spacing: -.025em; {spread(INK)}">BAGUETTE PARTY TRAY</div>
-    <div style="{NOTE}">Twelve pieces. Order a day ahead.</div></div>
-  <div style="{DESC}; font-size: 17px; margin-top: 6px">{BAG_D}</div>
-</div>
-
-{box(48, 442, 344, 234, 2.5)}
-<div style="{at(62, 455, 316)}">
-  {tag('FROM THE DELI CASE')}
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 10px; gap: 8px">
-    <div style="{NM}; font-size: 30px">Antipasto<br>pint</div>{price('3', '49', 'pint', 50)}</div>
-  <div style="{DESC}; margin-top: 8px">{OLIVE_D}</div>
-  <div style="{NOTE}; margin-top: 6px">We'll warm it while you wait.</div>
-</div>
-<div style="{at(412, 442, 356)}">
-  <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 3px solid {INK}; padding-bottom: 5px">
-    <span style="font-family: {DISP}; font-weight: 700; font-size: 25px; letter-spacing: .06em; line-height: 1">BY THE POUND</span>
-    <span style="font-family: {NAME}; font-weight: 700; font-size: 15px; color: {GREEN}">SLICED THIN OR THICK</span></div>
-  {lb_row('Boiled ham', '3.99')}
-  {lb_row('Genoa salami', '4.49')}
-  {lb_row('Sharp provolone', '3.99')}
-  {lb_row('Imported prosciutto', '8.99', True)}
-</div>
-
-<div style="{at(48, 686, 720, f'height: 210px; box-sizing: border-box; border: 5px double {INK}; background: {WHITE}')}"></div>
-{img('spaghetti.png', 62, 730, 206, 124, 'A plate of spaghetti')}
-<div style="{at(284, 698, 470)}">
-  <div style="display: flex; justify-content: space-between; align-items: baseline">
-    <span style="font-family: {SERIF}; font-size: 44px; line-height: 1">Tony's</span>
-    <span style="font-family: {SERIF}; font-style: italic; font-size: 18px; color: {SOFT}">Restaurant, Little Italy</span></div>
-  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; margin-top: 6px; border-top: 1px solid {INK}; padding-top: 6px">
-    <div style="font-family: {SERIF}; font-size: 25px; line-height: 1.05">Tony's spaghetti, by the quart</div>
-    <div style="flex: none">{price('6', '50', 'quart', 42)}</div></div>
-  <div style="{DESC}; margin-top: 5px">{TONY_D}</div>
-  <div style="font-family: {SERIF}; font-style: italic; font-size: 18px; line-height: 1.2; margin-top: 5px; color: {GREEN}">Ask for Tony.</div>
-</div>
-
-{coupon(48, 352, '20&cent;', 'Off a quart of milk', 'With this coupon.', 'One per family. Good thru Saturday.')}
-{coupon(416, 352, 'FREE', 'Cup of hot coffee', 'With any party tray order.', 'One per order. Good thru Saturday.')}
-<div style="{at(48, 1004, 720, f'display: flex; justify-content: space-between; font-family: {BODY}; font-size: 12px; line-height: 1; color: {SOFT}')}">
-  <span>Clip and bring to the register. No cash value.</span><span>Villafañe Food Market, Little Italy. Printed in U.S.A. 1994</span></div>
-"""
-
-TITLES = {'front': 'Villafañe Food Market circular, front', 'back': 'Villafañe Food Market circular, back'}
-for face, inner in (('front', front), ('back', back)):
-    body = root(inner, face)
-    open(os.path.join(D, face + '.body.html'), 'w').write(body)
-    open(os.path.join(D, face + '.html'), 'w').write(
-        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{esc(TITLES[face])}</title>{LINK}'
-        f'<style>body{{margin:0}}</style></head><body>{body}</body></html>')
-
-film = {"fmt": "leon", "fn": "fmtLeon", "faces": ["front.html", "back.html"], "names": ["Front", "Back"],
-        "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Libre Franklin", "Oswald", "Archivo Narrow", "DM Serif Display"],
-        "phone": {"disp": "'Libre Franklin',sans-serif", "title": "'Oswald',sans-serif", "name": "'Archivo Narrow',sans-serif",
-                  "body": "'Libre Franklin',sans-serif", "price": "'Libre Franklin',sans-serif", "note": "'Archivo Narrow',sans-serif"}}
-open(os.path.join(D, 'film.json'), 'w').write(json.dumps(film, indent=1))
-
-labels = {"Léon: The Professional (1994)": {
-    "Jambon-beurre baguette bites": {"n": "Baguette party tray", "d": BAG_D, "note": "Twelve pieces. Order a day ahead."},
-    "Olives and cornichons": {"n": "Antipasto pint", "d": OLIVE_D, "note": "We'll warm it while you wait."},
-    "Tony's spaghetti": {"n": "Tony's spaghetti, by the quart", "d": TONY_D, "note": "Ask for Tony."},
-    "Potted plant dirt cups": {"n": "Flowerpot dirt cups", "d": "Dark chocolate mousse layered with crushed chocolate cookie crumbs in a little terracotta tumbler, a sprig of fresh mint planted on top.", "note": "From the bakery case, by the register."},
-    "Léon's malted vanilla milkshake": {"n": "Thick vanilla shake", "d": "Cold whole milk blended with ice cream, malted milk powder and a spoon of honey, poured into a glass frosted in the freezer.", "note": "Made to order at the lunch counter."},
-}}
-open(os.path.join(D, 'leon.labels.json'), 'w').write(json.dumps(labels, indent=1, ensure_ascii=False))
+FACES = {'front': front(), 'back': back()}
+for n, b in FACES.items():
+    open(os.path.join(D, n + '.body.html'), 'w').write(b)
+    open(os.path.join(D, n + '.html'), 'w').write(
+        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Tony\'s menu, {n}</title>'
+        f'<link rel="stylesheet" href="{FONTS}"><style>body{{margin:0}}</style></head><body>{b}</body></html>')
 print('built')

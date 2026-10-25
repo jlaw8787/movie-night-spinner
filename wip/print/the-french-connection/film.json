@@ -2,29 +2,29 @@
  "fmt": "acrossglass",
  "fn": "fmtAcrossGlass",
  "faces": [
-  "p1.html",
-  "p2.html"
+  "front.html",
+  "back.html"
  ],
  "names": [
-  "Page 1",
-  "Page 2"
+  "Front",
+  "Back"
  ],
  "mm": [
-  215.9,
-  279.4
+  177.8,
+  355.6
  ],
- "fonts": "family=Archivo+Narrow:wght@400;600;700&family=Special+Elite&family=Kalam:wght@400;700",
+ "fonts": "family=Gilda+Display&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Covered+By+Your+Grace",
  "fams": [
-  "Archivo Narrow",
-  "Special Elite",
-  "Kalam"
+  "Gilda Display",
+  "Spectral",
+  "Covered By Your Grace"
  ],
  "phone": {
-  "disp": "'Archivo Narrow',sans-serif",
-  "title": "'Archivo Narrow',sans-serif",
-  "name": "'Special Elite',monospace",
-  "body": "'Special Elite',monospace",
-  "price": "'Special Elite',monospace",
-  "note": "'Kalam',cursive"
+  "disp": "'Gilda Display',serif",
+  "title": "'Gilda Display',serif",
+  "name": "'Spectral',serif",
+  "body": "'Spectral',serif",
+  "price": "'Spectral',serif",
+  "note": "'Covered By Your Grace',cursive"
  }
 }

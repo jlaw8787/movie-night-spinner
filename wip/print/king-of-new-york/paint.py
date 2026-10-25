@@ -1,135 +1,88 @@
-"""Paints the assets for the South Bronx hospital benefit journal (King of New York, 1990).
-The object is the souvenir journal handed out at the benefit dinner Frank White hosts to keep the
-South Bronx hospital open: a saddle-stitched letter-size booklet with a green cover stock printed
-in silver and white, and plain white offset pages inside printed black and green.
-The cover line cut of the hospital is engraved separately by linecut.py.
-Writes:
-  assets/host-halftone.png  Frank's portrait as a coarse newspaper-style dot screen, black ink
-  assets/wear-front.png  soft edge rub, spine crease, staples and a faint glass ring on the cover
-  assets/wear-back.png   gutter shadow, staple and gentle edge yellowing on the inside page
-"""
+"""Prints the two photos as two-ink offset halftones (navy plus steel blue) on the program's pearl stock,
+and paints the soft edge wear. Real images only: a 1973 public domain photo of the South Bronx looking
+south to Manhattan (NARA, Documerica) and a TMDB still of the benefit party."""
 import os, math, random
-from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageOps, ImageEnhance
+from PIL import Image, ImageOps, ImageDraw, ImageFilter, ImageEnhance
 D = os.path.dirname(os.path.abspath(__file__))
 A = os.path.join(D, 'assets')
-FW, FH, S = 816, 1056, 2
-W, H = FW * S, FH * S
-SILVER = (196, 201, 194)
-WHITE = (243, 241, 232)
+PAPER = (226, 228, 223)
+NAVY = (20, 32, 48)
+STEEL = (43, 125, 160)
 
-def mottle(w, h, scale, lo, hi, seed):
+
+def plate(gray, cell, angle, curve, scale=3):
+    """AM halftone plate: returns L mask (255 = ink) for a coverage curve on a grayscale image."""
+    w, h = gray.size
+    big = gray.resize((w * scale, h * scale), Image.LANCZOS)
+    rot = big.rotate(angle, expand=True, fillcolor=255)
+    rw, rh = rot.size
+    small = rot.resize((max(1, rw // (cell * scale)), max(1, rh // (cell * scale))), Image.BOX)
+    px = small.load()
+    out = Image.new('L', (rw, rh), 0)
+    dr = ImageDraw.Draw(out)
+    c = cell * scale
+    for j in range(small.size[1]):
+        for i in range(small.size[0]):
+            cov = curve(1 - px[i, j] / 255.0)
+            if cov <= 0.01:
+                continue
+            r = c * 0.5 * math.sqrt(cov) * 1.414 * 0.98
+            cx, cy = i * c + c / 2, j * c + c / 2
+            dr.ellipse((cx - r, cy - r, cx + r, cy + r), fill=255)
+    out = out.rotate(-angle, fillcolor=0)
+    l, t = (rw - w * scale) // 2, (rh - h * scale) // 2
+    out = out.crop((l, t, l + w * scale, t + h * scale))
+    return out.resize((w, h), Image.LANCZOS)
+
+
+def duotone(src, box, size, lift=0.75, contrast=1.15, cell=4, shift=(1, 0), nt=0.12, sd=0.55):
+    im = Image.open(src).convert('RGB').crop(box).resize(size, Image.LANCZOS)
+    g = ImageOps.grayscale(im)
+    g = ImageOps.autocontrast(g, cutoff=1)
+    g = g.point(lambda v: int(255 * ((v / 255) ** lift)))
+    g = ImageEnhance.Contrast(g).enhance(contrast)
+    navy = plate(g, cell, 45, lambda d: max(0.0, min(1.0, (d - nt) / (1 - nt))) ** 1.25)
+    steel = plate(g, cell, 15, lambda d: max(0.0, min(1.0, 0.85 * math.sin(math.pi * min(1, d * 1.1)) + 0.15 * d)))
+    steel = ImageChops_offset(steel, *shift)
+    base = Image.new('RGB', size, PAPER)
+    for mask, ink, dens in ((steel, STEEL, sd), (navy, NAVY, 0.95)):
+        # multiply ink over what is already printed
+        ink_rgb = [Image.eval(ch, (lambda kk: (lambda v: int(v * (kk / 255) ** dens)))(k)) for ch, k in zip(base.split(), ink)]
+        base = Image.composite(Image.merge('RGB', ink_rgb), base, mask)
+    return base
+
+
+def ImageChops_offset(im, dx, dy):
+    from PIL import ImageChops
+    return ImageChops.offset(im, dx, dy)
+
+
+def wear(w, h, seed):
     random.seed(seed)
-    n = Image.effect_noise((max(2, w // scale), max(2, h // scale)), 60).resize((w, h), Image.BICUBIC)
-    n = n.filter(ImageFilter.GaussianBlur(scale * 0.6))
-    return n.point(lambda v: int(max(0, min(255, lo + (v - 70) / 116 * (hi - lo)))))
-
-def edge_mask(w, h, width, power=2.0):
     m = Image.new('L', (w // 4, h // 4), 0)
-    px = m.load(); ww, hh = m.size; wd = width / 4
-    for y in range(hh):
-        for x in range(ww):
-            d = min(x, y, ww - 1 - x, hh - 1 - y)
-            dc = min(math.hypot(x, y), math.hypot(ww - x, y), math.hypot(x, hh - y), math.hypot(ww - x, hh - y))
-            v = max(0.0, 1 - d / wd) ** power
-            v = max(v, max(0.0, 1 - dc / (wd * 2.2)) ** 1.6)
-            px[x, y] = int(255 * min(1, v))
-    return m.resize((w, h), Image.BICUBIC).filter(ImageFilter.GaussianBlur(6))
+    px = m.load()
+    mw, mh = m.size
+    for y in range(mh):
+        for x in range(mw):
+            e = min(x, y, mw - 1 - x, mh - 1 - y) / (min(mw, mh) * 0.5)
+            px[x, y] = int(255 * max(0.0, 1 - e * 2.6) ** 1.6)
+    noise = Image.effect_noise((mw // 6 + 1, mh // 6 + 1), 60).resize((mw, mh), Image.BICUBIC).filter(ImageFilter.GaussianBlur(6))
+    from PIL import ImageChops
+    m = ImageChops.multiply(m, ImageOps.autocontrast(noise, cutoff=2).point(lambda v: 110 + v * 0.57))
+    m = m.filter(ImageFilter.GaussianBlur(5)).resize((w, h), Image.BICUBIC)
+    col = Image.new('RGBA', (w, h), (120, 112, 96, 0))
+    col.putalpha(m.point(lambda v: int(v * 0.22)))
+    return col
 
-# ---------------- host portrait halftone ----------------
-src = Image.open(os.path.join(D, 'src', 'still-host.jpg')).convert('L')
-src = src.crop((1150, 50, 1960, 970))     # Frank at the theatre bar, head and shoulders, from the TMDB still
-PW, PH = 352, 400                         # 2x of 176 x 200
-g = src.resize((PW, PH), Image.LANCZOS)
-g = ImageOps.autocontrast(g, cutoff=1)
-g = g.point(lambda v: int(255 * (v / 255) ** 0.62))
-g = ImageEnhance.Contrast(g).enhance(1.22)
-# amplitude-modulated screen at 45 degrees, drawn 3x oversize then reduced so the dots stay round
-import numpy as np
-SS = 3
-gs = np.array(g.resize((PW * SS, PH * SS), Image.BICUBIC).filter(ImageFilter.GaussianBlur(0.9 * SS)), np.float32) / 255.0
-cell = 3.8 * SS
-yy, xx = np.mgrid[0:PH * SS, 0:PW * SS].astype(np.float32)
-u = (xx + yy) / math.sqrt(2); v = (xx - yy) / math.sqrt(2)
-du = np.mod(u, cell) - cell / 2; dv = np.mod(v, cell) - cell / 2
-dist = np.sqrt(du * du + dv * dv)
-dark = np.clip(1 - gs, 0, 1)
-r = cell * np.sqrt(dark / math.pi) * 1.06
-ink = np.clip(r - dist + 0.5 * SS, 0, SS) / SS
-dots = Image.fromarray((ink * 255).astype(np.uint8)).resize((PW, PH), Image.LANCZOS)
-ht = Image.new('RGBA', (PW, PH), (24, 24, 22, 0)); ht.putalpha(dots.point(lambda v: int(v * 0.92)))
-ht.save(os.path.join(A, 'host-halftone.png'))
 
-# ---------------- cover wear (on green stock) ----------------
-# A thin, broken rub along the trimmed edges where the stock has scuffed pale, a worn corner at the
-# lower right where the journal was held, and a faint glass ring. No spine effects: the stitched
-# edge is simply the trimmed edge of the cover.
-em = edge_mask(W, H, 5 * S, 1.3)
-a = ImageChops.multiply(em, mottle(W, H, 22, 40, 255, 7)).point(lambda v: int(v * 0.55))
-cor = Image.new('L', (W, H), 0)
-ImageDraw.Draw(cor).ellipse((W - 46 * S, H - 46 * S, W + 30 * S, H + 30 * S), fill=110)
-cor = ImageChops.multiply(cor.filter(ImageFilter.GaussianBlur(10 * S)), mottle(W, H, 14, 60, 255, 8))
-a = ImageChops.lighter(a, cor)
-a = ImageChops.lighter(a, mottle(W, H, 160, 0, 10, 11))
-front = Image.new('RGBA', (W, H), (214, 222, 205, 0)); front.putalpha(a)
-ring = Image.new('L', (W, H), 0); rg = ImageDraw.Draw(ring)
-cx, cy, r = W * 0.86, H * 0.955, 58 * S
-rg.ellipse((cx - r, cy - r, cx + r, cy + r), outline=255, width=6 * S)
-rg.ellipse((cx - r + 4 * S, cy - r + 2 * S, cx + r - 3 * S, cy + r - 4 * S), outline=140, width=2 * S)
-ring = ring.filter(ImageFilter.GaussianBlur(3.2 * S))
-ring = ImageChops.multiply(ring, mottle(W, H, 18, 60, 255, 31)).point(lambda v: int(v * 0.32))
-rl = Image.new('RGBA', (W, H), (8, 22, 16, 0)); rl.putalpha(ring)
-front = Image.alpha_composite(front, rl)
-front.save(os.path.join(A, 'wear-front.png'))
-
-# ---------------- inside page wear (white offset) ----------------
-# gentle yellowing in from the trimmed edges and a soft thumb mark at the lower right
-em2 = edge_mask(W, H, 34 * S, 1.6)
-a2 = ImageChops.multiply(em2, mottle(W, H, 60, 70, 255, 21)).point(lambda v: int(v * 0.26))
-a2 = ImageChops.lighter(a2, mottle(W, H, 120, 0, 14, 23))
-th = Image.new('L', (W, H), 0)
-ImageDraw.Draw(th).ellipse((W - 70 * S, H - 64 * S, W + 10 * S, H + 10 * S), fill=40)
-a2 = ImageChops.lighter(a2, th.filter(ImageFilter.GaussianBlur(14 * S)))
-back = Image.new('RGBA', (W, H), (160, 128, 70, 0)); back.putalpha(a2)
-back.save(os.path.join(A, 'wear-back.png'))
-
-# ---------------- pledge thermometer, a printed line cut ----------------
-# Black plate: the glass tube and bulb in pen line with ruled shading, the scale ruled underneath.
-# Green plate: the column and the bulb, ruled, printed a hair out of register.
-TW, TH = 460, 120                       # 2x of 230 x 60
-blk = Image.new('L', (TW, TH), 0); bd = ImageDraw.Draw(blk)
-grn = Image.new('L', (TW, TH), 0); gd2 = ImageDraw.Draw(grn)
-bx, by, br = 40, 46, 30                 # bulb
-t0, t1, ty0, ty1 = 64, 446, 34, 58      # tube
-# tube outline, double ruled
-bd.rounded_rectangle((bx, ty0, t1, ty1), radius=12, outline=255, width=3)
-bd.ellipse((bx - br, by - br, bx + br, by + br), outline=255, width=3)
-bd.ellipse((bx - br + 3, by - br + 3, bx + br - 3, by + br - 3), fill=0)   # clear the tube line inside the bulb
-bd.rectangle((bx + br - 4, ty0 + 3, bx + br + 2, ty1 - 3), fill=0)         # open the neck
-# glass shine: two fine ruled highlights along the empty part of the tube
-fill_x = t0 + round((t1 - 14 - t0) * 0.70)
-for yy in (ty0 + 7, ty0 + 10):
-    bd.line((fill_x + 10, yy, t1 - 16, yy), fill=255, width=1)
-# column and bulb in green, ruled with horizontal lines like an engraving
-gd2.ellipse((bx - br + 6, by - br + 6, bx + br - 6, by + br - 6), fill=255)
-gd2.rectangle((t0 - 6, ty0 + 7, fill_x, ty1 - 7), fill=255)
-rule = Image.new('L', (TW, TH), 0); rd2 = ImageDraw.Draw(rule)
-for yy in range(0, TH, 4):
-    rd2.line((0, yy, TW, yy), fill=255, width=3)
-grn = ImageChops.multiply(grn, rule)
-gd2 = ImageDraw.Draw(grn)
-gd2.arc((bx - 16, by - 18, bx + 8, by + 6), 200, 290, fill=0, width=4)   # highlight on the bulb
-gd2.line((fill_x, ty0 + 7, fill_x, ty1 - 7), fill=255, width=3)
-# scale: a tick for every million, long ticks at 4, 8, 12 and 16
-for i in range(17):
-    x = t0 + 10 + round((t1 - 24 - t0) * i / 16)
-    ln = 16 if i % 4 == 0 else 8
-    bd.line((x, ty1 + 6, x, ty1 + 6 + ln), fill=255, width=3 if i % 4 == 0 else 2)
-bd.line((t0 + 10, ty1 + 6, t1 - 14, ty1 + 6), fill=255, width=2)
-INKC, GRC = (28, 29, 26), (31, 90, 67)
-th_img = Image.new('RGBA', (TW, TH), GRC + (0,))
-g2 = Image.new('L', (TW, TH), 0); g2.paste(grn, (3, 2))
-th_img.putalpha(g2.filter(ImageFilter.GaussianBlur(0.5)))
-bl = Image.new('RGBA', (TW, TH), INKC + (0,)); bl.putalpha(blk.filter(ImageFilter.GaussianBlur(0.5)))
-th_img = Image.alpha_composite(th_img, bl)
-th_img.save(os.path.join(A, 'thermometer.png'))
-print('painted', ht.size, 'thermometer long ticks at display x', [(t0 + 10 + round((t1 - 24 - t0) * i / 16)) / 2 for i in (0, 4, 8, 12, 16)])
+if __name__ == '__main__':
+    os.makedirs(A, exist_ok=True)
+    # Hero: 592 x 404 css px, printed at 3x
+    duotone(os.path.join(D, 'src/bronx-to-manhattan-1973.jpg'), (330, 44, 1730, 999), (1776, 1212),
+            lift=0.42, contrast=1.18, cell=5, nt=0.3, sd=0.45).save(os.path.join(A, 'hero-bronx-skyline.png'))
+    # Still: benefit party, 300 x 200 css px at 3x
+    duotone(os.path.join(D, 'src/still-benefit.jpg'), (520, 60, 2470, 1360), (900, 600),
+            lift=0.6, contrast=1.12, cell=4).save(os.path.join(A, 'still-benefit-party.png'))
+    wear(672, 1056, 7).save(os.path.join(A, 'wear-front.png'))
+    wear(672, 1056, 19).save(os.path.join(A, 'wear-back.png'))
+    print('ok')
