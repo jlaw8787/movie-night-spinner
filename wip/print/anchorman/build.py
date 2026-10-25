@@ -82,7 +82,7 @@ def front():
              f'{kicker("The Channel 4 News Team", GOLD, 15, " letter-spacing: 0.16em")}'
              f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; line-height: 1.1; color: {PAPER}; margin-top: 2px">Number one in San Diego. Again.</div></div></div>')
     # torn teleprompter roll lying on the desk
-    o.append(f'<div style="position: absolute; left: 150px; top: 604px; width: 516px; height: 50px; background: #fbf8ee; transform: rotate(-1.4deg); '
+    o.append(f'<div style="position: absolute; left: 120px; top: 604px; width: 576px; height: 50px; background: #fbf8ee; transform: rotate(-1.4deg); '
              f'box-shadow: 0 5px 10px rgba(30,12,8,0.45); display: flex; align-items: center; justify-content: center; gap: 14px; padding-left: 8px; box-sizing: border-box; '
              f'border-left: 3px dotted #b8b2a0; border-right: 3px dotted #b8b2a0">'
              f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: {BURG}; line-height: 1; border: 2px solid {BURG}; padding: 3px 5px 2px; white-space: nowrap">PROMPT 4</div>'

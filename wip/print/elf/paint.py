@@ -142,8 +142,8 @@ def kernel(cx, cy, size, ang):
     col = col + (255 - col) * hi[..., None] * 0.6
     cv.put(m, col, outline=5)
 
-for (x, y, s_, a) in [(430, 1150, 170, 70), (860, 1130, 160, -30), (470, 1300, 200, -20), (690, 1240, 210, 18),
-                      (370, 1440, 180, -52), (800, 1400, 190, 44), (590, 1450, 210, 4)]:
+for (x, y, s_, a) in [(430, 1150, 170, 70), (770, 1110, 150, -30), (470, 1300, 200, -20), (690, 1240, 210, 18),
+                      (370, 1400, 180, -52), (800, 1370, 190, 44), (590, 1410, 200, 4)]:
     kernel(x, y, s_, math.radians(a))
 
 # Quadrant TL: candy. Peppermint swirls, gumdrops, a wrapped candy
@@ -295,7 +295,7 @@ for a in (180, 0):
 
 # quadrant labels on little snow tags
 lf = ImageFont.truetype(GF, 92)
-for text, (x, y) in [('CANDY', (600, 400)), ('CANDY CANES', (1290, 400)), ('CANDY CORN', (600, 1580)), ('SYRUP', (1290, 1580))]:
+for text, (x, y) in [('CANDY', (600, 400)), ('CANDY CANES', (1290, 400)), ('CANDY CORN', (620, 1530)), ('SYRUP', (1300, 1530))]:
     w = lf.getlength(text)
     dr.rounded_rectangle([x - w / 2 - 30, y - 62, x + w / 2 + 30, y + 58], radius=40, fill=(196, 30, 44, 255), outline=(14, 58, 34, 255), width=8)
     dr.text((x, y), text, font=lf, fill=(252, 250, 244, 255), anchor='mm')
