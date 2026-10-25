@@ -1,674 +1,260 @@
-"""Paints the printed faces of the MacMillan Toy Co. party pack (Big, 1988).
+"""Paints the printed art for the MacMillan company party menu (Big, 1988).
 
-The pack is laid out like a 1988 toy carton printed by four-colour offset on white box board:
-everything below is painted as four process plates (C, M, Y, K), screened as halftone dots at
-the usual angles (C 15, M 75, Y 0, K 45), printed slightly out of register, then the die-cut
-window, film glare and shelf wear go on top.
-
-Writes assets/face-front.png and assets/face-back.png (2x, 1632 x 2112) and the wear overlays.
-build.py sets the menu type over these."""
-import os, math, random
-import numpy as np
-from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
-
-from layout import W, H, F, B, PAPER, INKS
+Two spot inks on ivory board, like a 1988 two-colour offset job: black and a lacquer red, with the red
+plate a hair out of register. Everything is drawn at 3x and reduced, so lines come out fine and even.
+  cover-keys.png   the cover engraving: a floor keyboard in perspective under a red deco sunburst
+  strip-keys.png   the back's left border: a straight-on keyboard running the full height
+  clip.png         a small steel paper clip for the business card
+  wear-*.png       soft edge wear and big gentle mottling (no pixel noise)
+"""
+import math, os, random
+from PIL import Image, ImageDraw, ImageFilter, ImageChops
 
 D = os.path.dirname(os.path.abspath(__file__))
 A = os.path.join(D, 'assets')
-FD = os.path.join(D, 'fonts')
-S = 2                                  # output scale
-OW, OH = W * S, H * S
-CELL = 5.2                             # halftone cell in output px (a coarse box-board screen)
-ANG = {'c': 15, 'm': 75, 'y': 0, 'k': 45}
-SHIFT = {'c': (0.0, 0.0), 'm': (1.7, -0.9), 'y': (-1.3, 1.5), 'k': (0.7, 0.5)}   # misregistration, output px
-STILL = os.path.join(A, 'still-piano.jpg')   # TMDB still, the floor-piano duet
-
-BOWL = os.path.join(FD, 'BowlbyOne.ttf')
-MICRO = os.path.join(FD, 'Michroma.ttf')
-SP8 = os.path.join(FD, 'LeagueSpartan-800.ttf')
-SP7 = os.path.join(FD, 'LeagueSpartan-700.ttf')
+S = 3
+BLACK = (28, 24, 22)
+RED = (196, 32, 44)
+W, H = 816, 1056
 
 
-def font(path, px):
-    return ImageFont.truetype(path, int(px * S))
+def plate(w, h):
+    return Image.new('L', (w, h), 0)
 
 
-# ------------------------------------------------------------------ plate canvas
-class Plates:
-    def __init__(self):
-        self.p = {k: np.zeros((OH, OW), np.float32) for k in 'cmyk'}
-
-    def fill(self, mask, c=0, m=0, y=0, k=0):
-        """Lay ink percentages through an L mask. Unlisted inks are knocked out (white board)."""
-        a = np.asarray(mask, np.float32) / 255.0
-        for name, v in (('c', c), ('m', m), ('y', y), ('k', k)):
-            v = v / 100.0 if np.isscalar(v) else v
-            self.p[name] = self.p[name] * (1 - a) + v * a
-
-    def overprint(self, mask, k=100):
-        """Black overprints whatever is under it (keylines, type)."""
-        a = np.asarray(mask, np.float32) / 255.0
-        self.p['k'] = np.maximum(self.p['k'], a * k / 100.0)
-
-    def place_rgb(self, img, x, y, mask=None):
-        """Separate an RGB(A) painting into the four plates and place it at output px (x, y)."""
-        img = img.convert('RGBA')
-        arr = np.asarray(img, np.float32) / 255.0
-        r, g, b, al = arr[..., 0], arr[..., 1], arr[..., 2], arr[..., 3]
-        if mask is not None:
-            al = al * (np.asarray(mask, np.float32) / 255.0)
-        c, m, yy = 1 - r, 1 - g, 1 - b
-        k = np.minimum(np.minimum(c, m), yy) * 0.72
-        d = np.maximum(1 - k, 1e-4)
-        sep = {'c': (c - k) / d, 'm': (m - k) / d, 'y': (yy - k) / d, 'k': k}
-        h, w = al.shape
-        for n in 'cmyk':
-            reg = self.p[n][y:y + h, x:x + w]
-            self.p[n][y:y + h, x:x + w] = reg * (1 - al) + np.clip(sep[n], 0, 1) * al
-
-
-def L():
-    return Image.new('L', (OW, OH), 0)
-
-
-def rect_mask(box, r=0):
-    m = L()
-    x0, y0, x1, y1 = [v * S for v in box]
-    if r:
-        ImageDraw.Draw(m).rounded_rectangle([x0, y0, x1 - 1, y1 - 1], r * S, fill=255)
-    else:
-        ImageDraw.Draw(m).rectangle([x0, y0, x1 - 1, y1 - 1], fill=255)
-    return m
-
-
-def outline_mask(box, w=1.5, r=0):
-    m = L()
-    x0, y0, x1, y1 = [v * S for v in box]
-    if r:
-        ImageDraw.Draw(m).rounded_rectangle([x0, y0, x1 - 1, y1 - 1], r * S, outline=255, width=int(w * S))
-    else:
-        ImageDraw.Draw(m).rectangle([x0, y0, x1 - 1, y1 - 1], outline=255, width=int(w * S))
-    return m
-
-
-def shear(m, k, ybase):
-    """Lean a mask to the right by k (photo-typesetting oblique, the way 1980s package type was set)."""
-    return m.transform(m.size, Image.AFFINE, (1, k, -k * ybase, 0, 1, 0), resample=Image.BICUBIC)
-
-
-def text_mask(txt, fnt, x, y, stroke=0, k=0.0, spacing=0):
-    m = L()
-    d = ImageDraw.Draw(m)
-    if spacing:
-        cx = x * S
-        for ch in txt:
-            d.text((cx, y * S), ch, font=fnt, fill=255, stroke_width=int(stroke * S), stroke_fill=255)
-            cx += fnt.getlength(ch) + spacing * S
-    else:
-        d.text((x * S, y * S), txt, font=fnt, fill=255, stroke_width=int(stroke * S), stroke_fill=255)
-    if k:
-        bb = fnt.getbbox(txt)
-        m = shear(m, k, y * S + bb[3])
-    return m
-
-
-def union_shift(m, dx, dy, steps):
-    out = m.copy()
-    for i in range(1, steps + 1):
-        out = ImageChops.lighter(out, ImageChops.offset(m, int(round(dx * i / steps)), int(round(dy * i / steps))))
+def ink(layers, w, h, reg=(0, 0)):
+    """Stack ink plates (L masks) into an RGBA print; each plate is a flat spot ink."""
+    out = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    for mask, col, off in layers:
+        if off != (0, 0):
+            mask = ImageChops.offset(mask, *off)
+        layer = Image.new('RGBA', (w, h), col + (0,))
+        layer.putalpha(mask)
+        out = Image.alpha_composite(out, layer)
     return out
 
 
-def dilate(m, px):
-    n = int(px * S) | 1
-    return m.filter(ImageFilter.MaxFilter(n)) if n > 1 else m
-
-
-def logotype(pl, txt, fnt, x, y, k=0.2, fill='yellow', stroke=4, extr=(7, 9), outer=4):
-    """1980s toy-box logotype: fill, red keyline, deep blue extrusion, white outer keyline."""
-    body = text_mask(txt, fnt, x, y, 0, k)
-    st = text_mask(txt, fnt, x, y, stroke, k)
-    ex = union_shift(st, extr[0] * S, extr[1] * S, 14)
-    pl.fill(dilate(ex, outer * 2), 0, 0, 0, 0)                          # white outer keyline (knockout)
-    pl.fill(ex, 100, 85, 0, 45)                                         # extrusion
-    pl.fill(st, 0, 100, 100, 0)                                         # red keyline
-    if fill == 'yellow':
-        bb = body.getbbox()
-        grad = np.zeros((OH, OW), np.float32)
-        if bb:
-            y0, y1 = bb[1], bb[3]
-            t = np.clip((np.arange(OH) - y0) / max(1, y1 - y0), 0, 1)[:, None]
-            grad = np.broadcast_to(np.clip((t - 0.45) * 0.62, 0, 0.34), (OH, OW)).astype(np.float32)
-        pl.fill(body, 0, grad, 100, 0)                                  # chrome-yellow, warming to orange low down
-        # a thin white highlight line along the top of each letter
-        hl = ImageChops.subtract(body, ImageChops.offset(body, 0, int(4 * S)))
-        hl = ImageChops.multiply(hl, text_mask(txt, fnt, x, y, -0, k).filter(ImageFilter.MinFilter(3)))
-        pl.fill(hl.point(lambda v: int(v * 0.85)), 0, 0, 0, 0)
-    elif fill == 'white':
-        pl.fill(body, 0, 0, 0, 0)
-    elif fill == 'red':
-        pl.fill(body, 0, 100, 100, 0)
-
-
-# ------------------------------------------------------------------ halftone and press
-def halftone(cov, ang, cell=CELL, ss=2):
-    """Round-dot AM screen. cov is 0..1 at output size; returns antialiased ink coverage."""
-    h, w = cov.shape
-    big = np.asarray(Image.fromarray(cov.astype(np.float32), 'F').resize((w * ss, h * ss), Image.BILINEAR))
-    yy, xx = np.mgrid[0:h * ss, 0:w * ss].astype(np.float32)
-    a = math.radians(ang)
-    f = 2 * math.pi / (cell * ss)
-    u = (xx * math.cos(a) + yy * math.sin(a)) * f
-    v = (-xx * math.sin(a) + yy * math.cos(a)) * f
-    del xx, yy
-    th = 0.5 - 0.25 * (np.cos(u) + np.cos(v))
-    del u, v
-    dots = (big > th).astype(np.float32)
-    dots[big >= 0.985] = 1.0
-    dots[big <= 0.015] = 0.0
-    return dots.reshape(h, ss, w, ss).mean(axis=(1, 3))
-
-
-def mottle(seed, lo=0.9):
-    rnd = np.random.RandomState(seed)
-    n = rnd.rand(OH // 64 + 2, OW // 64 + 2).astype(np.float32)
-    im = Image.fromarray((n * 255).astype(np.uint8)).resize((OW, OH), Image.BICUBIC).filter(ImageFilter.GaussianBlur(40))
-    return lo + (1 - lo) * (np.asarray(im, np.float32) / 255.0)
-
-
-def press(pl, seed):
-    """Screen each plate, print it a hair out of register with a little ink spread, and composite."""
-    out = np.ones((OH, OW, 3), np.float32) * (np.array(PAPER, np.float32) / 255.0)
-    for i, n in enumerate('cmyk'):
-        dots = halftone(np.clip(pl.p[n], 0, 1), ANG[n])
-        im = Image.fromarray((dots * 255 + 0.5).astype(np.uint8), 'L')
-        dx, dy = SHIFT[n]
-        im = im.transform(im.size, Image.AFFINE, (1, 0, -dx, 0, 1, -dy), resample=Image.BILINEAR)
-        im = im.filter(ImageFilter.GaussianBlur(0.45))          # ink spread on board
-        a = np.asarray(im, np.float32) / 255.0 * mottle(seed + i)
-        T = np.array(INKS[n], np.float32)
-        out *= 1 - a[..., None] * (1 - T)
-    return Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8), 'RGB')
-
-
-# ------------------------------------------------------------------ the window painting (airbrush, RGB)
-def soft(img, r):
-    return img.filter(ImageFilter.GaussianBlur(r))
-
-
-def paint_window(aw, ah, seed=88):
+def rough(mask, amt=0.10, seed=1):
+    """Slightly uneven ink coverage: big soft blotches knocked out of a solid, like offset on uncoated board."""
     rnd = random.Random(seed)
-    art = Image.new('RGBA', (aw, ah), (0, 0, 0, 255))
-    hz = int(ah * 0.50)
-    # airbrushed backdrop: night blue to a magenta glow at the horizon, dark floor below
-    g = np.zeros((ah, aw, 3), np.float32)
-    for yv in range(ah):
-        if yv < hz:
-            t = (yv / hz) ** 1.6
-            c = np.array([20, 26, 96]) * (1 - t) + np.array([196, 70, 160]) * t
+    w, h = mask.size
+    n = Image.new('L', (w // 24 + 1, h // 24 + 1))
+    n.putdata([int(255 * (1 - amt * rnd.random())) for _ in range(n.size[0] * n.size[1])])
+    n = n.resize((w, h), Image.BICUBIC).filter(ImageFilter.GaussianBlur(6))
+    return ImageChops.multiply(mask, n)
+
+
+# ------------------------------------------------------------ cover engraving
+def cover_keys():
+    w, h = 736 * S, 330 * S
+    blk, red = plate(w, h), plate(w, h)
+    db, dr = ImageDraw.Draw(blk), ImageDraw.Draw(red)
+
+    N = 15                                  # two octaves, C to C
+    yf, yb = h - 34 * S, int(h * 0.42)      # front and back edge of the keys
+    wf = w - 70 * S                         # front edge width
+    r = 0.50                                # back edge is half the front edge
+    cx = w / 2
+    hy = (yb - yf * r) / (1 - r)            # horizon, from the two edges
+
+    def P(u, t, lift=0.0):
+        """u: key units across (0..N), t: 0 back to 1 front (even in depth), lift: height in key units."""
+        z = (1 / r) * (1 - t) + t
+        x = cx + (u - N / 2) * (wf / N) / z
+        y = hy + (yf - hy) / z - lift * (wf / N) / z
+        return (x, y)
+
+    # deco sunburst behind the keyboard, red plate: alternating wide and hairline rays
+    vx, vy = cx, yb + 6 * S
+    for i in range(-24, 25):
+        a = math.radians(90 + i * 3.4)
+        L = h * 1.4
+        x2, y2 = vx + L * math.cos(a), vy - L * math.sin(a)
+        if i % 2 == 0:
+            a1, a2 = a - math.radians(0.32), a + math.radians(0.32)
+            dr.polygon([(vx, vy), (vx + L * math.cos(a1), vy - L * math.sin(a1)), (vx + L * math.cos(a2), vy - L * math.sin(a2))], fill=255)
         else:
-            t = (yv - hz) / (ah - hz)
-            c = np.array([58, 30, 112]) * (1 - t) + np.array([18, 14, 58]) * t
-        g[yv] = c
-    art = Image.fromarray(g.astype(np.uint8), 'RGB').convert('RGBA')
-    # perspective grid on the floor
-    grid = Image.new('L', (aw, ah), 0)
-    gd = ImageDraw.Draw(grid)
-    vx = aw * 0.5
-    for i in range(-14, 15):
-        gd.line([(vx, hz), (vx + i * aw * 0.16, ah * 1.6)], fill=200, width=3)
-    for j in range(1, 12):
-        yv = hz + (ah - hz) * (j / 11) ** 2.1
-        gd.line([(0, yv), (aw, yv)], fill=200, width=3)
-    fade = Image.linear_gradient('L').resize((aw, ah)).point(lambda v: min(255, int(v * 1.5)))
-    grid = ImageChops.multiply(grid, fade)
-    gl = Image.new('RGBA', (aw, ah), (110, 210, 255, 0)); gl.putalpha(soft(grid, 1.2))
-    art.alpha_composite(gl)
-    hzl = Image.new('L', (aw, ah), 0); ImageDraw.Draw(hzl).rectangle([0, hz - 3, aw, hz + 3], fill=220)
-    glow = Image.new('RGBA', (aw, ah), (255, 190, 230, 0)); glow.putalpha(soft(hzl, 6))
-    art.alpha_composite(glow)
-    # airbrush stars
-    st = Image.new('L', (aw, ah), 0); sd = ImageDraw.Draw(st)
-    for _ in range(70):
-        x, y, r = rnd.randint(0, aw), rnd.randint(0, int(hz * 0.85)), rnd.choice((2, 2, 3, 4))
-        sd.ellipse([x - r, y - r, x + r, y + r], fill=rnd.randint(120, 230))
-    stars = Image.new('RGBA', (aw, ah), (255, 255, 255, 0)); stars.putalpha(soft(st, 1.1))
-    art.alpha_composite(stars)
+            dr.line([(vx, vy), (x2, y2)], fill=255, width=max(1, int(0.7 * S)))
+    # fade the rays out radially so they end well inside the art, like an engraved sunburst
+    import numpy as np
+    yy, xx = np.mgrid[0:h, 0:w]
+    dist = np.hypot((xx - vx) / (w * 0.47), (yy - vy) / (h * 0.62))
+    f = np.clip((1.0 - dist) / 0.45, 0, 1) ** 1.3
+    fade = Image.fromarray((f * 255).astype('uint8'))
+    red = ImageChops.multiply(red, fade)
+    # keep rays above the back edge of the keyboard only
+    cut = plate(w, h)
+    ImageDraw.Draw(cut).rectangle([0, 0, w, yb - 4 * S], fill=255)
+    red = ImageChops.multiply(red, cut)
+    dr = ImageDraw.Draw(red)
 
-    # ---- the giant cookie, painted flat then laid down in perspective
-    R = 360
-    flat = Image.new('RGBA', (2 * R, 2 * R), (0, 0, 0, 0))
-    yy, xx = np.mgrid[0:2 * R, 0:2 * R].astype(np.float32)
-    rr = np.sqrt((xx - R) ** 2 + (yy - R) ** 2) / R
-    noise = np.asarray(soft(Image.fromarray((np.random.RandomState(7).rand(2 * R, 2 * R) * 255).astype(np.uint8)), 9), np.float32) / 255
-    noise2 = np.asarray(soft(Image.fromarray((np.random.RandomState(8).rand(2 * R, 2 * R) * 255).astype(np.uint8)), 3), np.float32) / 255
-    light = 1.0 - 0.28 * np.clip(rr, 0, 1) ** 2.4 + 0.10 * ((R - xx) + (R - yy)) / (2 * R)
-    base = np.stack([np.full_like(rr, 214), np.full_like(rr, 156), np.full_like(rr, 86)], -1)
-    col = base * (light * (0.86 + 0.30 * noise) * (0.95 + 0.1 * noise2))[..., None]
-    alpha = np.clip((1.0 - rr) * R / 2.0, 0, 1) * 255
-    flat = Image.fromarray(np.dstack([np.clip(col, 0, 255), alpha]).astype(np.uint8), 'RGBA')
-    fd = ImageDraw.Draw(flat)
-    # bake cracks: short dark-gold fissures with a light lip
-    cr = Image.new('L', flat.size, 0); crd = ImageDraw.Draw(cr)
-    lip = Image.new('L', flat.size, 0); lpd = ImageDraw.Draw(lip)
-    for _ in range(26):
-        ang = rnd.random() * 2 * math.pi; dist = math.sqrt(rnd.random()) * 0.8 * R
-        x, y = R + dist * math.cos(ang), R + dist * math.sin(ang)
-        pts = [(x, y)]
-        for _s in range(rnd.randint(3, 6)):
-            x += rnd.uniform(-26, 26); y += rnd.uniform(-34, 34); pts.append((x, y))
-        crd.line(pts, fill=200, width=rnd.randint(4, 7))
-        lpd.line([(px - 3, py - 5) for px, py in pts], fill=150, width=3)
-    for img_, colr in ((lip, (240, 200, 140)), (cr, (120, 70, 30))):
-        lay = Image.new('RGBA', flat.size, colr + (0,)); lay.putalpha(ImageChops.multiply(soft(img_, 2.5), flat.getchannel('A')))
-        flat.alpha_composite(lay)
-    # darker baked rim
-    rim = Image.new('L', flat.size, 0); ImageDraw.Draw(rim).ellipse([4, 4, 2 * R - 4, 2 * R - 4], outline=255, width=46)
-    rl = Image.new('RGBA', flat.size, (130, 72, 28, 0)); rl.putalpha(ImageChops.multiply(soft(rim, 22).point(lambda v: int(v * 0.55)), flat.getchannel('A')))
-    flat.alpha_composite(rl)
-    # chips, drawn tall so they sit round once the cookie is laid down in perspective
-    band = (-0.30 * R, 0.30 * R)
-    placed = []
-    for _ in range(34):
-        for _try in range(200):
-            ang = rnd.random() * 2 * math.pi
-            dist = math.sqrt(rnd.random()) * 0.86 * R
-            cx, cy = R + dist * math.cos(ang), R + dist * math.sin(ang)
-            if band[0] - 40 < cy - R < band[1] + 40:
-                continue
-            if all(math.hypot((cx - a) * 1.0, (cy - b) / 1.9) > 52 for a, b in placed):
-                break
-        placed.append((cx, cy))
-        rad = rnd.randint(13, 21)
-        sy = 1.9
-        pts = [(cx + rad * (0.8 + 0.35 * rnd.random()) * math.cos(t), cy + rad * sy * (0.8 + 0.35 * rnd.random()) * math.sin(t))
-               for t in [i * 2 * math.pi / 9 for i in range(9)]]
-        sh = Image.new('L', flat.size, 0); ImageDraw.Draw(sh).polygon([(px + 3, py + 12) for px, py in pts], fill=140)
-        shl = Image.new('RGBA', flat.size, (70, 36, 12, 0)); shl.putalpha(ImageChops.multiply(soft(sh, 5), flat.getchannel('A')))
-        flat.alpha_composite(shl)
-        fd = ImageDraw.Draw(flat)
-        fd.polygon(pts, fill=(58, 33, 22, 255))
-        fd.ellipse([cx - rad * 0.55, cy - rad * sy * 0.6, cx - rad * 0.05, cy - rad * sy * 0.15], fill=(104, 66, 48, 255))
-    # icing keyboard piped across the middle
-    keys = Image.new('RGBA', flat.size, (0, 0, 0, 0))
-    kd = ImageDraw.Draw(keys)
-    kshadow = Image.new('L', flat.size, 0); ksd = ImageDraw.Draw(kshadow)
-    n = 13
-    x0, x1 = R - 0.88 * R, R + 0.88 * R
-    kw = (x1 - x0) / n
-    ky0, ky1 = R + band[0], R + band[1]
-    for i in range(n):
-        a0, a1 = x0 + i * kw + 4 + rnd.uniform(-2, 2), x0 + (i + 1) * kw - 4 + rnd.uniform(-2, 2)
-        t0, t1 = ky0 + rnd.uniform(-4, 4), ky1 + rnd.uniform(-6, 6)
-        ksd.rounded_rectangle([a0 + 5, t0 + 8, a1 + 5, t1 + 8], 14, fill=150)
-        kd.rounded_rectangle([a0, t0, a1, t1], 14, fill=(250, 247, 238, 255))
-        kd.rounded_rectangle([a0 + 6, ky0 + 6, a0 + 14, ky1 - 14], 4, fill=(255, 255, 255, 255))
-        kd.line([(a1 - 3, ky0 + 10), (a1 - 3, ky1 - 6)], fill=(214, 206, 192, 255), width=4)
-    blacks = [0, 1, 3, 4, 5, 7, 8, 10, 11]
-    for i in blacks:
-        cx = x0 + (i + 1) * kw
-        bw = kw * 0.56
-        ksd.rounded_rectangle([cx - bw / 2 + 5, ky0 - 2 + 8, cx + bw / 2 + 5, ky0 + (ky1 - ky0) * 0.58 + 8], 7, fill=170)
-        kd.rounded_rectangle([cx - bw / 2, ky0 - 2, cx + bw / 2, ky0 + (ky1 - ky0) * 0.58], 7, fill=(46, 28, 22, 255))
-        kd.rounded_rectangle([cx - bw / 2 + 5, ky0 + 4, cx - bw / 2 + 10, ky0 + (ky1 - ky0) * 0.45], 3, fill=(120, 92, 80, 255))
-    clip = Image.new('L', flat.size, 0); ImageDraw.Draw(clip).ellipse([R - 0.93 * R, R - 0.93 * R, R + 0.93 * R, R + 0.93 * R], fill=255)
-    ksl = Image.new('RGBA', flat.size, (40, 20, 6, 0)); ksl.putalpha(ImageChops.multiply(soft(kshadow, 6), clip))
-    flat.alpha_composite(ksl)
-    keys.putalpha(ImageChops.multiply(keys.getchannel('A'), clip))
-    flat.alpha_composite(keys)
-    # lay it down
-    sq = 0.40
-    cw, ch = 2 * R, int(2 * R * sq)
-    top = flat.resize((cw, ch), Image.LANCZOS)
-    ccx, ccy = int(aw * 0.385), int(ah * 0.60)
-    thick = 30
-    # floor shadow
-    shd = Image.new('L', (aw, ah), 0)
-    ImageDraw.Draw(shd).ellipse([ccx - R * 1.02, ccy - ch / 2 + thick + 10, ccx + R * 1.06, ccy + ch / 2 + thick + 34], fill=200)
-    shl = Image.new('RGBA', (aw, ah), (6, 4, 20, 0)); shl.putalpha(soft(shd, 22))
-    art.alpha_composite(shl)
-    # baked edge
-    edge = Image.new('RGBA', (aw, ah), (0, 0, 0, 0)); ed = ImageDraw.Draw(edge)
-    for t in range(thick, 0, -1):
-        f = 0.62 + 0.25 * (1 - t / thick)
-        ed.ellipse([ccx - R, ccy - ch / 2 + t, ccx + R, ccy + ch / 2 + t], fill=(int(176 * f), int(110 * f), int(52 * f), 255))
-    # light from the left on the edge
-    lm = Image.new('L', (aw, ah), 0); ImageDraw.Draw(lm).ellipse([ccx - R - 40, ccy - 40, ccx - R * 0.2, ccy + ch], fill=90)
-    hl = Image.new('RGBA', (aw, ah), (255, 220, 170, 0)); hl.putalpha(ImageChops.multiply(soft(lm, 30), edge.getchannel('A')))
-    edge.alpha_composite(hl)
-    art.alpha_composite(edge)
-    art.alpha_composite(top, (ccx - R, ccy - ch // 2))
+    lw = int(1.3 * S)
+    # floor shadow under the front lip, hatched
+    for k in range(0, 26 * S, int(2.6 * S)):
+        y = yf + 9 * S + k * 0.55
+        x0, x1 = P(-0.15, 1)[0] + k * 0.6, P(N + 0.15, 1)[0] - k * 0.6
+        db.line([(x0, y), (x1, y)], fill=int(200 * (1 - k / (26 * S))), width=max(1, int(0.8 * S)))
+    # front lip of the white keys (the key fronts, seen edge on)
+    lip = 8 * S
+    fl, fr = P(0, 1), P(N, 1)
+    db.rectangle([fl[0], fl[1], fr[0], fl[1] + lip], fill=0)
+    for u in range(N + 1):
+        x = P(u, 1)[0]
+        db.line([(x, fl[1]), (x, fl[1] + lip)], fill=255, width=lw)
+    for k in range(int(1.6 * S), lip, int(2.0 * S)):     # hatch the lip
+        db.line([(fl[0], fl[1] + k), (fr[0], fl[1] + k)], fill=150, width=max(1, int(0.6 * S)))
+    db.line([(fl[0], fl[1] + lip), (fr[0], fr[1] + lip)], fill=255, width=int(1.6 * S))
+    # key outlines
+    for u in range(N + 1):
+        db.line([P(u, 0), P(u, 1)], fill=255, width=lw)
+    db.line([P(0, 0), P(N, 0)], fill=255, width=int(1.8 * S))
+    db.line([P(0, 1), P(N, 1)], fill=255, width=int(1.8 * S))
 
-    # ---- egg cream glass
-    gx, gt, gb = int(aw * 0.83), 46, ah - 50
-    tw, bw = 116, 92
-    poly = [(gx - tw, gt), (gx + tw, gt), (gx + bw, gb), (gx - bw, gb)]
-    gshd = Image.new('L', (aw, ah), 0)
-    ImageDraw.Draw(gshd).ellipse([gx - bw - 30, gb - 18, gx + bw + 60, gb + 26], fill=210)
-    gs = Image.new('RGBA', (aw, ah), (6, 4, 20, 0)); gs.putalpha(soft(gshd, 14))
-    art.alpha_composite(gs)
-    # straw first (behind the front wall of glass)
-    straw = Image.new('RGBA', (aw, ah), (0, 0, 0, 0)); sdr = ImageDraw.Draw(straw)
-    sx0, sy0, sx1, sy1 = gx + 30, gt + 150, gx + 120, 2
-    L_ = math.hypot(sx1 - sx0, sy1 - sy0)
-    segs = int(L_ // 20)
-    for i in range(segs):
-        t0, t1 = i / segs, (i + 1) / segs
-        sdr.line([(sx0 + (sx1 - sx0) * t0, sy0 + (sy1 - sy0) * t0), (sx0 + (sx1 - sx0) * t1, sy0 + (sy1 - sy0) * t1)],
-                 fill=(214, 36, 44, 255) if i % 2 else (250, 248, 244, 255), width=17)
-    art.alpha_composite(straw)
-    gm = Image.new('L', (aw, ah), 0); ImageDraw.Draw(gm).polygon(poly, fill=255)
-    # liquid: chocolate milk under a white head
-    liq = np.zeros((ah, aw, 3), np.float32)
-    foam_top, foam_bot = gt + 64, gt + 64 + 120
-    for yv in range(ah):
-        if yv < foam_bot:
-            t = (yv - foam_top) / (foam_bot - foam_top)
-            c = np.array([250, 244, 230]) * (1 - t * 0.18) + np.array([200, 160, 120]) * (t ** 3) * 0.18
-        else:
-            t = (yv - foam_bot) / (gb - foam_bot)
-            c = np.array([138, 88, 54]) * (1 - t) + np.array([82, 48, 30]) * t
-        liq[yv] = c
-    xs = (np.arange(aw) - gx) / tw
-    shade = (1 - 0.30 * np.clip(xs, -1, 1) ** 2 + 0.08 * np.clip(-xs, 0, 1))[None, :, None]
-    liqi = Image.fromarray(np.clip(liq * shade, 0, 255).astype(np.uint8), 'RGB').convert('RGBA')
-    lm = Image.new('L', (aw, ah), 0)
-    inset = [(gx - tw + 9, foam_top), (gx + tw - 9, foam_top), (gx + bw - 9, gb - 22), (gx - bw + 9, gb - 22)]
-    ImageDraw.Draw(lm).polygon(inset, fill=255)
-    ImageDraw.Draw(lm).ellipse([gx - tw + 9, foam_top - 16, gx + tw - 9, foam_top + 16], fill=255)
-    liqi.putalpha(lm)
-    # foam bubbles
-    bd = ImageDraw.Draw(liqi)
-    for _ in range(60):
-        bx = rnd.randint(gx - tw + 20, gx + tw - 20); by = rnd.randint(foam_top - 8, foam_bot - 10)
-        r = rnd.randint(3, 7)
-        bd.ellipse([bx - r, by - r, bx + r, by + r], outline=(222, 210, 190, 255), width=2)
-    liqi.putalpha(lm)
-    art.alpha_composite(liqi)
-    # straw again where it rises out of the foam
-    sm = Image.new('L', (aw, ah), 0); ImageDraw.Draw(sm).rectangle([0, 0, aw, foam_top - 4], fill=255)
-    straw2 = straw.copy(); straw2.putalpha(ImageChops.multiply(straw.getchannel('A'), sm))
-    art.alpha_composite(straw2)
-    # glass: faint tint, rim, highlights
-    tint = Image.new('RGBA', (aw, ah), (200, 220, 255, 0)); tint.putalpha(gm.point(lambda v: int(v * 0.12)))
-    art.alpha_composite(tint)
-    rim = Image.new('L', (aw, ah), 0); rd = ImageDraw.Draw(rim)
-    rd.ellipse([gx - tw, gt - 16, gx + tw, gt + 16], outline=255, width=4)
-    rd.line(poly[1:3], fill=170, width=4); rd.line([poly[3], poly[0]], fill=170, width=4)
-    rd.ellipse([gx - bw, gb - 22, gx + bw, gb + 10], outline=200, width=6)
-    rl = Image.new('RGBA', (aw, ah), (235, 244, 255, 0)); rl.putalpha(soft(rim, 1.2))
-    art.alpha_composite(rl)
-    hlm = Image.new('L', (aw, ah), 0); hd = ImageDraw.Draw(hlm)
-    hd.polygon([(gx - tw + 26, gt + 30), (gx - tw + 50, gt + 30), (gx - bw + 44, gb - 40), (gx - bw + 24, gb - 40)], fill=150)
-    hd.polygon([(gx + tw - 34, gt + 40), (gx + tw - 26, gt + 40), (gx + bw - 22, gb - 60), (gx + bw - 28, gb - 60)], fill=120)
-    hlw = Image.new('RGBA', (aw, ah), (255, 255, 255, 0)); hlw.putalpha(soft(hlm, 5))
-    art.alpha_composite(hlw)
+    # black keys: C# D#  F# G# A# in each octave
+    offs = []
+    for o in range(2):
+        for b in (1, 2, 4, 5, 6):
+            offs.append(o * 7 + b)
+    bw = 0.56
+    tb = 0.60          # black keys run 60% of the way forward
+    hgt = 0.28         # raised height in key units
+    for c in offs:
+        u0, u1 = c - bw / 2, c + bw / 2
+        # cast shadow on the white keys, hatched with fine diagonals toward the right
+        sh = [P(u1, 0.02), P(u1 + 0.30, 0.04), P(u1 + 0.30, tb + 0.05), P(u1, tb)]
+        smask = plate(w, h)
+        ImageDraw.Draw(smask).polygon(sh, fill=255)
+        hatch = plate(w, h)
+        hd = ImageDraw.Draw(hatch)
+        x0, y0 = sh[0]
+        for k in range(-80 * S, 80 * S, int(2.4 * S)):
+            hd.line([(x0 + k, y0 - 10 * S), (x0 + k + 140 * S, y0 + 260 * S)], fill=170, width=max(1, int(0.55 * S)))
+        blk = ImageChops.lighter(blk, ImageChops.multiply(hatch, smask))
+        db = ImageDraw.Draw(blk)
+        # front face (vertical) and top face
+        front = [P(u0, tb), P(u1, tb), P(u1, tb, hgt), P(u0, tb, hgt)]
+        top = [P(u0, 0, hgt), P(u1, 0, hgt), P(u1, tb, hgt), P(u0, tb, hgt)]
+        side = [P(u0, 0), P(u0, tb), P(u0, tb, hgt), P(u0, 0, hgt)]
+        db.polygon(side, fill=255)
+        db.polygon(front, fill=255)
+        db.polygon(top, fill=255)
+        # engraved highlights cut out of the black: one hairline down the top, fine lines across the front face
+        a, b = P(u0 + 0.12, 0.03, hgt), P(u0 + 0.12, tb - 0.04, hgt)
+        db.line([a, b], fill=0, width=max(1, int(0.9 * S)))
+        fy0, fy1 = P(u0, tb)[1], P(u0, tb, hgt)[1]
+        for k in range(1, 4):
+            yy = fy1 + (fy0 - fy1) * k / 4.0
+            db.line([(P(u0, tb)[0] + 2 * S, yy), (P(u1, tb)[0] - 2 * S, yy)], fill=0, width=max(1, int(0.5 * S)))
 
-    # airbrush glints
-    def glint(x, y, s):
-        gmk = Image.new('L', (aw, ah), 0); gdd = ImageDraw.Draw(gmk)
-        gdd.polygon([(x - s, y), (x, y - s * 0.12), (x + s, y), (x, y + s * 0.12)], fill=255)
-        gdd.polygon([(x, y - s * 0.8), (x + s * 0.1, y), (x, y + s * 0.8), (x - s * 0.1, y)], fill=255)
-        gdd.ellipse([x - s * 0.22, y - s * 0.22, x + s * 0.22, y + s * 0.22], fill=200)
-        gw = Image.new('RGBA', (aw, ah), (255, 255, 255, 0)); gw.putalpha(ImageChops.lighter(soft(gmk, 1.2), soft(gmk, 8).point(lambda v: v // 2)))
-        art.alpha_composite(gw)
-    glint(gx - tw + 6, gt - 4, 46)
-    glint(ccx - R * 0.55, ccy - ch * 0.38, 40)
-    glint(gx + bw - 20, gb - 70, 26)
-    return art
+    blk = rough(blk, 0.08, 3)
+    red = rough(red, 0.14, 4)
+    art = ink([(red, RED, (int(1.2 * S), int(0.6 * S))), (blk, BLACK, (0, 0))], w, h)
+    art = art.resize((736 * 2, 330 * 2), Image.LANCZOS)
+    art.save(os.path.join(A, 'cover-keys.png'))
 
 
-# ------------------------------------------------------------------ barcode
-def upc_mask(x, y, digits='01988008800'):
-    s = sum(int(d) * (3 if i % 2 == 0 else 1) for i, d in enumerate(digits))
-    digits += str((10 - s % 10) % 10)
-    Lc = ['0001101', '0011001', '0010011', '0111101', '0100011', '0110001', '0101111', '0111011', '0110111', '0001011']
-    Rc = [''.join('1' if b == '0' else '0' for b in c) for c in Lc]
-    bits = '101' + ''.join(Lc[int(d)] for d in digits[:6]) + '01010' + ''.join(Rc[int(d)] for d in digits[6:]) + '101'
-    guard = set(list(range(0, 3)) + list(range(45, 50)) + list(range(92, 95)) + list(range(3, 10)) + list(range(85, 92)))
-    m = L(); d = ImageDraw.Draw(m)
-    mod = 1.25 * S
-    X = (x + 10) * S
-    for i, b in enumerate(bits):
-        if b == '1':
-            hgt = 58 if i in guard else 50
-            d.rectangle([X + i * mod, y * S, X + (i + 1) * mod - 0.5, (y + hgt) * S], fill=255)
-    f = font(SP7, 12)
-    d.text(((x + 1) * S, (y + 48) * S), digits[0], font=f, fill=255)
-    d.text((X + 12 * mod, (y + 51) * S), digits[1:6], font=f, fill=255)
-    d.text((X + 50 * mod, (y + 51) * S), digits[6:11], font=f, fill=255)
-    d.text((X + 96 * mod, (y + 48) * S), digits[11], font=f, fill=255)
-    return m, 95 * 1.25 + 22, digits
+# ------------------------------------------------------------ the back's keyboard border
+def strip_keys():
+    sw, sh = 104, H
+    w, h = sw * S, sh * S
+    blk, red = plate(w, h), plate(w, h)
+    db, dr = ImageDraw.Draw(blk), ImageDraw.Draw(red)
+    n = 22
+    kh = h / n
+    lw = int(1.2 * S)
+    # keys run left (back) to right (front); black keys sit at the back, against the trim
+    for i in range(n + 1):
+        y = i * kh
+        db.line([(0, y), (w - 8 * S, y)], fill=255, width=lw)
+    db.line([(w - 8 * S, 0), (w - 8 * S, h)], fill=255, width=int(1.8 * S))
+    # front lip shading on the key fronts, engraved hatch
+    for k in range(int(2 * S), int(8 * S), int(1.8 * S)):
+        db.line([(w - 8 * S + k, 0), (w - 8 * S + k, h)], fill=120, width=max(1, int(0.5 * S)))
+    # black keys: pattern of the octave starting on C at the top
+    pat = [1, 2, 4, 5, 6]
+    bl = 0.60 * (w - 8 * S)
+    bwid = 0.56 * kh
+    for i in range(n + 1):
+        if (i % 7) in pat:
+            yc = i * kh
+            y0, y1 = yc - bwid / 2, yc + bwid / 2
+            # hatched shadow below each black key
+            for k in range(0, int(0.28 * kh), int(2.2 * S)):
+                db.line([(0, y1 + k), (bl - k * 0.5, y1 + k)], fill=150, width=max(1, int(0.5 * S)))
+            db.rectangle([0, y0, bl, y1], fill=255)
+            db.line([(0, y0 + 0.22 * bwid), (bl - 4 * S, y0 + 0.22 * bwid)], fill=0, width=max(1, int(0.9 * S)))
+            for k in range(1, 4):
+                xx = bl - k * 1.6 * S
+                db.line([(xx, y0 + 2 * S), (xx, y1 - 2 * S)], fill=0, width=max(1, int(0.45 * S)))
+    # red rule to the right of the keys
+    dr.rectangle([w - 3 * S, 0, w - 1 * S, h], fill=255)
+    blk = rough(blk, 0.08, 7)
+    red = rough(red, 0.12, 8)
+    art = ink([(red, RED, (int(0.9 * S), int(0.5 * S))), (blk, BLACK, (0, 0))], w, h)
+    art.resize((sw * 2, sh * 2), Image.LANCZOS).save(os.path.join(A, 'strip-keys.png'))
 
 
-# ------------------------------------------------------------------ faces
-def bg_blue(pl, seed):
-    """Process blue box colour with an airbrushed glow behind the logotype."""
-    yy, xx = np.mgrid[0:OH, 0:OW].astype(np.float32)
-    d = np.sqrt(((xx - OW * 0.42) / OW) ** 2 + ((yy - OH * 0.27) / OH) ** 2)
-    t = np.clip(d / 0.75, 0, 1)
-    m = 0.42 + 0.48 * t
-    k = 0.02 + 0.30 * t ** 1.5
-    pl.fill(Image.new('L', (OW, OH), 255), 100, m, 0, k)
-    # a printed pinstripe grid, the kind every action-figure box carried
-    g = L(); gd = ImageDraw.Draw(g)
-    for xv in range(0, OW, 32 * S):
-        gd.line([(xv, 0), (xv, OH)], fill=255, width=S)
-    for yv in range(0, OH, 32 * S):
-        gd.line([(0, yv), (OW, yv)], fill=255, width=S)
-    a = np.asarray(g, np.float32) / 255 * 0.55
-    pl.p['m'] = pl.p['m'] * (1 - a) + (pl.p['m'] * 0.45) * a
-    pl.p['k'] = pl.p['k'] * (1 - a)
+# ------------------------------------------------------------ paper clip
+def clip():
+    w, h = 40 * S * 2, 120 * S * 2
+    im = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    sc = 2 * S
+    lw = int(2.6 * sc)
+
+    def loop(x0, y0, x1, y1, col):
+        rr = (x1 - x0) / 2
+        d.arc([x0, y0, x1, y0 + 2 * rr], 180, 360, fill=col, width=lw)
+        d.arc([x0, y1 - 2 * rr, x1, y1], 0, 180, fill=col, width=lw)
+    # outer wire, inner wire: a classic gem clip
+    col = (120, 124, 130, 255)
+    d.line([(6 * sc, 16 * sc), (6 * sc, 100 * sc)], fill=col, width=lw)
+    d.line([(34 * sc, 16 * sc), (34 * sc, 108 * sc)], fill=col, width=lw)
+    d.arc([6 * sc - lw / 2, 2 * sc, 34 * sc + lw / 2, 30 * sc], 180, 360, fill=col, width=lw)
+    d.arc([12 * sc - lw / 2, 92 * sc, 34 * sc + lw / 2, 116 * sc], 0, 180, fill=col, width=lw)
+    d.line([(12 * sc, 104 * sc), (12 * sc, 28 * sc)], fill=col, width=lw)
+    d.arc([12 * sc - lw / 2, 16 * sc, 28 * sc + lw / 2, 38 * sc], 180, 360, fill=col, width=lw)
+    d.line([(28 * sc, 27 * sc), (28 * sc, 88 * sc)], fill=col, width=lw)
+    # highlight
+    hl = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    hd = ImageDraw.Draw(hl)
+    hd.line([(5 * sc, 20 * sc), (5 * sc, 96 * sc)], fill=(235, 238, 242, 200), width=int(0.8 * sc))
+    hd.line([(33 * sc, 20 * sc), (33 * sc, 104 * sc)], fill=(235, 238, 242, 200), width=int(0.8 * sc))
+    im = Image.alpha_composite(im, hl)
+    sh = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    sh.putalpha(im.split()[3].point(lambda v: v * 0.25))
+    sh = ImageChops.offset(sh, int(1.5 * sc), int(2 * sc)).filter(ImageFilter.GaussianBlur(2 * S))
+    out = Image.alpha_composite(sh, im)
+    out.resize((40 * 2, 120 * 2), Image.LANCZOS).save(os.path.join(A, 'clip.png'))
 
 
-def front():
-    pl = Plates()
-    bg_blue(pl, 1)
-    # red maker's band with a yellow rule
-    pl.fill(rect_mask(F['banner']), 0, 100, 100, 0)
-    x0, y0, x1, y1 = F['banner']
-    pl.fill(rect_mask((0, y1, W, y1 + 6)), 0, 0, 100, 0)
-    pl.fill(rect_mask((0, y1 + 6, W, y1 + 8)), 100, 85, 0, 45)
-    # MacMillan maker's logo: white, black drop, leaning
-    f = font(BOWL, 62)
-    sh = text_mask('MacMillan', f, 50 + 4, 30 + 4, 0, 0.18)
-    pl.fill(sh, 0, 100, 100, 100)
-    pl.fill(text_mask('MacMillan', f, 50, 30, 0, 0.18), 0, 0, 0, 0)
-    fm = font(MICRO, 17)
-    pl.fill(text_mask('TOY CO.', fm, 448, 40, 0, 0), 0, 0, 0, 0)
-    pl.fill(text_mask('NEW YORK, N.Y.', font(MICRO, 13), 448, 66, 0, 0), 0, 0, 100, 0)
-    fs = font(MICRO, 13)
-    for i, t in enumerate(('ITEM NO. 8800', 'PARTY PACK')):
-        w = fs.getlength(t) / S
-        pl.fill(text_mask(t, fs, 776 - w, 40 + i * 24, 0, 0), 0, 0, 0, 0)
-    # yellow ribbon
-    fx0, fy0, fx1, fy1 = F['flag']
-    rib = L(); ImageDraw.Draw(rib).polygon([((fx0 + 18) * S, fy0 * S), (fx1 * S, fy0 * S), (fx1 * S, fy1 * S), (fx0 * S, fy1 * S)], fill=255)
-    pl.fill(dilate(rib, 3), 0, 0, 0, 0)
-    pl.fill(rib, 0, 8, 100, 0)
-    pl.fill(text_mask('NEW FOR 1988!', font(BOWL, 25), fx0 + 36, fy0 + 7, 0, 0.18), 0, 100, 100, 0)
-    # product logotype
-    cx, cy = F['company']
-    logotype(pl, 'THE COMPANY', font(BOWL, 46), cx, cy, k=0.2, fill='white', stroke=3, extr=(4, 5), outer=3)
-    px, py = F['party']
-    logotype(pl, 'PARTY', font(BOWL, 140), px, py, k=0.2, fill='yellow', stroke=5, extr=(9, 11), outer=5)
-    # age box
-    ax0, ay0, ax1, ay1 = F['age']
-    pl.fill(rect_mask((ax0 + 5, ay0 + 5, ax1 + 5, ay1 + 5)), 100, 85, 0, 60)
-    pl.fill(rect_mask(F['age']), 0, 0, 0, 0)
-    pl.overprint(outline_mask(F['age'], 3))
-    pl.fill(rect_mask((ax0, ay0, ax1, ay0 + 30)), 0, 0, 0, 100)
-    fa = font(MICRO, 14)
-    wa = fa.getlength('AGES') / S
-    pl.fill(text_mask('AGES', fa, (ax0 + ax1) / 2 - wa / 2, ay0 + 6), 0, 0, 0, 0)
-    fn, fu = font(BOWL, 46), font(BOWL, 18)
-    wn, wu = fn.getlength('30') / S, fu.getlength('& UP') / S
-    lx = (ax0 + ax1) / 2 - (wn + 6 + wu) / 2
-    pl.fill(text_mask('30', fn, lx, ay0 + 22), 0, 100, 100, 0)
-    pl.fill(text_mask('& UP', fu, lx + wn + 6, ay0 + 46), 0, 0, 0, 100)
-    fe = font(SP7, 13)
-    for i, t in enumerate(('Some exceptions', 'apply.')):
-        we = fe.getlength(t) / S
-        pl.fill(text_mask(t, fe, (ax0 + ax1) / 2 - we / 2, ay0 + 88 + i * 16), 0, 0, 0, 100)
-    # window: white printed surround and black keyline, art inside
-    wx0, wy0, wx1, wy1 = F['window']
-    pl.fill(rect_mask((wx0 - 8, wy0 - 8, wx1 + 8, wy1 + 8), 26), 0, 0, 0, 0)
-    pl.overprint(outline_mask((wx0 - 8, wy0 - 8, wx1 + 8, wy1 + 8), 2.5, 26))
-    aw, ah = (wx1 - wx0) * S, (wy1 - wy0) * S
-    art = paint_window(aw, ah)
-    pl.place_rgb(art, wx0 * S, wy0 * S, rect_mask((0, 0, wx1 - wx0, wy1 - wy0), 18).crop((0, 0, aw, ah)))
-    # bottom panel: plain white board, black keyline, red header bar
-    pl.fill(rect_mask(F['panel']), 0, 0, 0, 0)
-    pl.overprint(outline_mask(F['panel'], 3))
-    bx0, by0, bx1, by1 = F['panel']
-    pl.fill(rect_mask((bx0, by0, bx1, by0 + 42)), 0, 100, 100, 0)
-    pl.overprint(outline_mask(F['panel'], 3))
-    pl.fill(text_mask('PASSED ON TRAYS', font(BOWL, 24), bx0 + 22, by0 + 7, 0, 0.18), 0, 0, 0, 0)
-    # thin cyan tint rule above the footer line inside the panel
-    pl.fill(rect_mask((bx0 + 22, by1 - 40, bx1 - 22, by1 - 38)), 100, 85, 0, 45)
-    img = press(pl, 10)
-    return finish_window(img)
-
-
-def finish_window(img):
-    """Die-cut window: the cut board edge, its shadow on the tray behind, and glare on the film."""
-    wx0, wy0, wx1, wy1 = F['window']
-    wm = rect_mask(F['window'], 18)
-    rgba = img.convert('RGBA')
-    # inner shadow from the board thickness (top and left)
-    inner = ImageChops.subtract(wm, ImageChops.offset(wm, 7 * S, 9 * S))
-    sh = Image.new('RGBA', rgba.size, (10, 8, 30, 0)); sh.putalpha(ImageChops.multiply(soft(inner, 5 * S).point(lambda v: int(v * 0.75)), wm))
-    rgba.alpha_composite(sh)
-    # white cut edge of the board
-    edge = ImageChops.subtract(dilate(wm, 1.2), wm)
-    ew = Image.new('RGBA', rgba.size, (252, 250, 244, 0)); ew.putalpha(edge)
-    rgba.alpha_composite(ew)
-    # acetate glare, two diagonal sweeps
-    gl = L(); gd = ImageDraw.Draw(gl)
-    for x, w_, a in ((wx0 + 90, 70, 60), (wx0 + 190, 22, 70), (wx0 + 560, 40, 38)):
-        gd.polygon([((x) * S, wy0 * S), ((x + w_) * S, wy0 * S), ((x + w_ - 150) * S, wy1 * S), ((x - 150) * S, wy1 * S)], fill=a)
-    gl = ImageChops.multiply(soft(gl, 6 * S), wm)
-    gw = Image.new('RGBA', rgba.size, (255, 255, 255, 0)); gw.putalpha(gl)
-    rgba.alpha_composite(gw)
-    return rgba.convert('RGB')
-
-
-def halftone_photo(path, w, h):
-    im = Image.open(path).convert('RGB')
-    iw, ih = im.size
-    tr = w / h
-    if iw / ih > tr:
-        nw = int(ih * tr); x = int((iw - nw) * 0.55); im = im.crop((x, 0, x + nw, ih))
-    else:
-        nh = int(iw / tr); im = im.crop((0, 0, iw, nh))
-    im = im.resize((w, h), Image.LANCZOS)
-    from PIL import ImageEnhance
-    im = ImageEnhance.Contrast(im).enhance(1.12)
-    im = ImageEnhance.Color(im).enhance(1.08)
-    return im
-
-
-def back():
-    pl = Plates()
-    bg_blue(pl, 2)
-    # yellow band, red rule
-    pl.fill(rect_mask(B['banner']), 0, 8, 100, 0)
-    y1 = B['banner'][3]
-    pl.fill(rect_mask((0, y1, W, y1 + 6)), 0, 100, 100, 0)
-    pl.fill(rect_mask((0, y1 + 6, W, y1 + 8)), 100, 85, 0, 45)
-    logotype(pl, 'LOOK WHAT’S INSIDE!', font(BOWL, 44), 46, 30, k=0.2, fill='red', stroke=0.01, extr=(5, 6), outer=3)
-    fs = font(MICRO, 13)
-    for i, t in enumerate(('ITEM NO. 8800', 'PARTY PACK')):
-        w = fs.getlength(t) / S
-        pl.fill(text_mask(t, fs, 776 - w, 44 + i * 24), 100, 85, 0, 45)
-    # white panels with keylines
-    for key in ('menu', 'photo_panel', 'note'):
-        pl.fill(rect_mask(B[key]), 0, 0, 0, 0)
-        pl.overprint(outline_mask(B[key], 3))
-    # menu centre rule
-    mx0, my0, mx1, my1 = B['menu']
-    mid = (mx0 + mx1) // 2
-    pl.fill(rect_mask((mid - 1, my0 + 22, mid + 2, my1 - 44)), 0, 0, 100, 0)
-    # how to play: solid yellow
-    pl.fill(rect_mask(B['play']), 0, 8, 100, 0)
-    pl.overprint(outline_mask(B['play'], 3))
-    # collect panel: light cyan tint
-    pl.fill(rect_mask(B['check']), 28, 0, 6, 0)
-    pl.overprint(outline_mask(B['check'], 3))
-    # token: white with a dashed cut line
-    tx0, ty0, tx1, ty1 = B['token']
-    pl.fill(rect_mask(B['token']), 0, 0, 0, 0)
-    dm = L(); dd = ImageDraw.Draw(dm)
-    def dash(p0, p1):
-        (a, b), (c, d) = p0, p1
-        n = int(math.hypot(c - a, d - b) / 10)
-        for i in range(0, n, 2):
-            dd.line([((a + (c - a) * i / n) * S, (b + (d - b) * i / n) * S), ((a + (c - a) * (i + 1) / n) * S, (b + (d - b) * (i + 1) / n) * S)], fill=255, width=int(2.5 * S))
-    dash((tx0, ty0), (tx1, ty0)); dash((tx1, ty0), (tx1, ty1)); dash((tx1, ty1), (tx0, ty1)); dash((tx0, ty1), (tx0, ty0))
-    pl.overprint(dm)
-    # scissors on the cut line
-    sc = L(); sd = ImageDraw.Draw(sc)
-    sx, sy = (tx0 + 28) * S, ty0 * S
-    for oy in (-7, 7):
-        sd.ellipse([sx - 16 * S, sy + oy * S - 5 * S, sx - 6 * S, sy + oy * S + 5 * S], outline=255, width=int(2.2 * S))
-    sd.line([(sx - 6 * S, sy - 5 * S), (sx + 16 * S, sy + 4 * S)], fill=255, width=int(2.4 * S))
-    sd.line([(sx - 6 * S, sy + 5 * S), (sx + 16 * S, sy - 4 * S)], fill=255, width=int(2.4 * S))
-    pl.fill(dilate(sc, 4), 0, 0, 0, 0)
-    pl.overprint(sc)
-    # photo, four-colour halftone
-    px0, py0, px1, py1 = B['photo']
-    ph = halftone_photo(STILL, (px1 - px0) * S, (py1 - py0) * S)
-    pl.place_rgb(ph, px0 * S, py0 * S)
-    pl.overprint(outline_mask(B['photo'], 1))
-    # UPC with lot code and the press check dots
-    ux, uy = B['upc']
-    pl.fill(rect_mask((ux - 4, uy - 6, ux + 136, uy + 72)), 0, 0, 0, 0)
-    um, uw, digits = upc_mask(ux, uy)
-    pl.overprint(um)
-    dots = [(100, 0, 0, 0), (0, 100, 0, 0), (0, 0, 100, 0), (0, 0, 0, 100)]
-    for i, inks in enumerate(dots):
-        m = L(); cx_, cy_ = (ux + 12 + i * 16) * S, (uy + 80) * S
-        ImageDraw.Draw(m).ellipse([cx_ - 5 * S, cy_ - 5 * S, cx_ + 5 * S, cy_ + 5 * S], fill=255)
-        pl.fill(m, *inks)
-    img = press(pl, 20)
-    return img, digits
-
-
-# ------------------------------------------------------------------ wear
-def wear(seed, name):
-    """Shelf wear on box board: rubbed corners and thin scuffs along the cut edges, where the ink
-    wears through to the white board. Kept soft and low detail."""
+# ------------------------------------------------------------ soft wear
+def wear(name, seed):
     rnd = random.Random(seed)
-    w, h = W, H
-    lt = Image.new('L', (w, h), 0); ld = ImageDraw.Draw(lt)
-    for _ in range(22):
-        side = rnd.choice('tblr'); t = rnd.uniform(0.04, 0.96); ln = rnd.randint(20, 90); th = rnd.uniform(1.5, 3.5)
-        if side in 'tb':
-            y = 0 if side == 't' else h
-            ld.ellipse([t * w - ln, y - th, t * w + ln, y + th], fill=rnd.randint(70, 140))
-        else:
-            x = 0 if side == 'l' else w
-            ld.ellipse([x - th, t * h - ln, x + th, t * h + ln], fill=rnd.randint(70, 140))
-    for (x, y) in ((0, 0), (w, 0), (0, h), (w, h)):
-        r = rnd.randint(7, 11)
-        ld.ellipse([x - r, y - r, x + r, y + r], fill=170)
-    lt = lt.filter(ImageFilter.GaussianBlur(2.2))
-    light = Image.new('RGBA', (w, h), (246, 242, 232, 0)); light.putalpha(lt)
-    # very soft handling haze, large and faint
-    mt = Image.new('L', (w, h), 0); md = ImageDraw.Draw(mt)
-    for _ in range(6):
-        x, y, r = rnd.randint(0, w), rnd.randint(0, h), rnd.randint(220, 340)
-        md.ellipse([x - r, y - r, x + r, y + r], fill=rnd.randint(5, 10))
-    mt = mt.filter(ImageFilter.GaussianBlur(120))
-    mott = Image.new('RGBA', (w, h), (255, 250, 238, 0)); mott.putalpha(mt)
-    out = Image.new('RGBA', (w, h), (0, 0, 0, 0))
-    out.alpha_composite(mott); out.alpha_composite(light)
-    out.save(os.path.join(A, name))
+    w, h = W * 2, H * 2
+    # big gentle mottling
+    n = Image.new('L', (9, 12))
+    n.putdata([rnd.randint(0, 255) for _ in range(9 * 12)])
+    n = n.resize((w, h), Image.BICUBIC).filter(ImageFilter.GaussianBlur(60))
+    mott = n.point(lambda v: int(max(0, v - 120) * 0.10))
+    # edge wear: a soft warm darkening right at the trim, a touch heavier at corners
+    e = Image.new('L', (w, h), 0)
+    ed = ImageDraw.Draw(e)
+    for k in range(40):
+        a = int(46 * (1 - k / 40) ** 2.2)
+        ed.rectangle([k, k, w - 1 - k, h - 1 - k], outline=a)
+    e = e.filter(ImageFilter.GaussianBlur(5))
+    alpha = ImageChops.lighter(mott, e)
+    out = Image.new('RGBA', (w, h), (120, 92, 52, 0))
+    out.putalpha(alpha)
+    out.save(os.path.join(A, f'wear-{name}.png'))
 
 
 if __name__ == '__main__':
     os.makedirs(A, exist_ok=True)
-    f = front(); f.save(os.path.join(A, 'face-front.png'), optimize=True)
-    b, digits = back(); b.save(os.path.join(A, 'face-back.png'), optimize=True)
-    wear(1, 'wear-front.png'); wear(2, 'wear-back.png')
-    print('painted; UPC', digits)
+    cover_keys()
+    strip_keys()
+    clip()
+    wear('front', 11)
+    wear('back', 12)
+    print('painted')

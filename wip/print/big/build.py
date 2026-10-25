@@ -1,155 +1,205 @@
-"""Builds the MacMillan Toy Co. party pack menu (Big, 1988).
+"""Builds the MacMillan Toy Company party menu (Big, 1988).
 
-The object: the company party menu, printed by MacMillan's own packaging department on white box
-board as the front and back panels of a toy carton, four-colour offset like every box on the line
-that year. paint.py paints the printed board (logotypes, die-cut window art, panels, halftone photo,
-UPC). This file sets the menu type over it and writes front.html and back.html (plus .body.html
-copies for the PDF), film.json and toystore.labels.json.
-US Letter, 8.5 x 11 in (816 x 1056 px at 96 dpi), two faces."""
+The venue: the MacMillan company party, the night Josh turns up in his white tuxedo, eats the baby corn
+like a cob and meets the caviar. This is the printed menu set at each place: a two-colour offset card
+(black and lacquer red on ivory board), the kind a New York toy company would order from its printer for
+its big night in 1988. Deco revival type (Limelight, Playfair Display, Josefin Sans), a painted floor
+keyboard on the cover and a straight keyboard border down the back.
+Prop bits: Zoltar's card tucked in the cover corner, a pencilled note in Josh's hand, his new business
+card clipped on the back, and a coat check ticket.
+US Letter, 8.5 x 11 in (816 x 1056 px at 96 dpi), two faces: front (cover and trays) and back (supper).
+"""
 import os, json
-from layout import W, H, F, B, ink
 
 D = os.path.dirname(os.path.abspath(__file__))
-
-FONTS = 'family=Bowlby+One&family=League+Spartan:wght@500;600;700;800&family=Michroma'
-LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-DISP = "'Bowlby One', 'Arial Black', sans-serif"
-SANS = "'League Spartan', 'Futura', 'Century Gothic', sans-serif"
-TECH = "'Michroma', 'Eurostile', sans-serif"
-
-RED = ink(m=100, y=100)
-YEL = ink(m=8, y=100)
-NAVY = ink(c=100, m=85, k=45)
-BLK = ink(k=100)
-BOARD = '#f7f3ea'
-SPREAD = lambda c: f'text-shadow: 0 0 0.5px {c}'      # a touch of ink spread on board
-
+W, H = 816, 1056
 FILM = 'Big (1988)'
 
-# (spec key or None for added items, item no., printed name, description, note)
+FONTS = ('family=Limelight&family=Josefin+Sans:wght@400;600;700'
+         '&family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,700'
+         '&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Schoolbell')
+LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
+DECO = "'Limelight', 'Broadway', serif"
+CAPS = "'Josefin Sans', 'Futura', sans-serif"
+NAME = "'Playfair Display', 'Bodoni 72', serif"
+BODY = "'Libre Baskerville', 'Baskerville', serif"
+HAND = "'Schoolbell', cursive"
+
+PAPER = '#f5f0e4'
+INK = '#1c1816'
+RED = '#c4202c'
+SOFT = '#5a4f47'
+SPREAD = 'text-shadow: 0 0 0.6px rgba(28,24,22,0.55)'
+RSPREAD = 'text-shadow: 0 0 0.6px rgba(196,32,44,0.5)'
+
+# (spec key or None if added, printed name, description, note)
 TRAYS = [
-    ('Baby corn', '8801', 'Griddled baby corn',
-     'Little ears blanched, then blistered in butter on a hot griddle. Crushed red pepper, lime zest, salt and a wedge to squeeze.',
-     'Hold it like a cob.'),
-    ('Caviar on crackers', '8802', 'Red caviar canapés',
-     'Salmon roe and snipped chives over crème fraîche on crisp water crackers, put together just before they go out.',
+    ('Baby corn', 'Griddled baby corn',
+     'Little ears blanched, then charred in butter on a hot flat-top. Crushed red pepper, lime zest and salt, with a wedge to squeeze.',
+     'Best eaten like corn on the cob.'),
+    ('Caviar on crackers', 'Red caviar canapés',
+     'Salmon roe and snipped chives on crème fraîche over crisp water crackers, put together just before they go out.',
      'An acquired taste.'),
-    (None, '8803', 'Soft pretzels',
-     'Twisted by hand, baked deep brown and scattered with coarse salt. Yellow mustard to dip.',
-     'Warm from the oven all night.'),
+    (None, 'Chicken satay',
+     'Thigh meat marinated in garlic and soy, grilled on bamboo skewers. Warm peanut sauce for dipping.',
+     None),
 ]
 CART = [
-    ('Street cart hot dog', '8804', 'Corner cart hot dog',
-     'Poached, then griddled until the skin snaps. Steamed bun, yellow mustard, sauerkraut and sweet onions stewed down in tomato.',
-     'Have a second. Nobody is counting.'),
+    ('Street cart hot dog', 'Corner cart hot dog',
+     'Simmered, then blistered on the griddle until the skin snaps. Steamed bun, yellow mustard, sauerkraut and onions stewed down with tomato.',
+     'Have two. Nobody is counting.'),
+    (None, 'Hot soft pretzel',
+     'Twisted by hand, baked deep brown and scattered with coarse salt. Mustard on the side.',
+     None),
 ]
 BIG = [
-    ('Giant choc chip cookie', '8805', 'The giant cookie',
-     'Browned-butter chocolate chip dough pressed out on a pizza pan and baked soft in the middle. White icing piano keys piped across, cut at the table.',
-     'Big enough for a duet.'),
+    ('Giant choc chip cookie', 'The giant cookie',
+     'Brown-butter chocolate chip dough pressed into a pizza pan and baked soft in the middle. Piano keys piped across in white icing, cut at the table.',
+     'Big enough for four hands.'),
+    (None, 'Cotton candy',
+     'Spun to order at the cart, pink or blue, on a paper cone.',
+     'Just like Sea Point Park.'),
 ]
 FOUNTAIN = [
-    ('Chocolate egg cream', '8806', 'Chocolate egg cream',
+    ('Chocolate egg cream', 'Chocolate egg cream',
      'Syrup and cold milk in a tall glass, then seltzer poured hard from up high and stirred with a long spoon until a white head rises.',
      'No egg, no cream. Never was.'),
-    (None, '8807', 'Fresh lemonade', 'Squeezed this afternoon, sweetened just enough, plenty of ice.', None),
-    (None, '8808', 'Vanilla malted', 'Ice cream, cold milk and malt powder spun thick. The rest comes in the steel cup.', None),
+    (None, 'Kiddie cocktail',
+     'Ginger ale over ice with a splash of grenadine and a maraschino cherry.',
+     None),
+    (None, 'Fresh lemonade',
+     'Squeezed this afternoon, sweetened just enough, plenty of ice.',
+     None),
+    (None, 'Coffee and tea',
+     'Fresh-brewed regular and decaf, hot tea, cream and sugar.',
+     None),
 ]
 ALL = TRAYS + CART + BIG + FOUNTAIN
 
 
-def ab(x0, y0, x1, y1, inner='', style=''):
-    return f'<div style="position: absolute; left: {x0}px; top: {y0}px; width: {x1 - x0}px; height: {y1 - y0}px; {style}">{inner}</div>'
+def ab(x, y, w, h, inner='', style=''):
+    hh = f'height: {h}px; ' if h else ''
+    return f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; {hh}{style}">{inner}</div>'
 
 
-def item(no, name, desc, note, first, gap=16, name_px=22, body_px=16):
-    nt = (f'<p style="margin: 3px 0 0; font-family: {SANS}; font-weight: 700; font-size: 16px; line-height: 1.22; color: {RED}; {SPREAD(RED)}">{note}</p>') if note else ''
-    return f'''<div style="margin-top: {0 if first else gap}px">
-      <div style="font-family: {TECH}; font-size: 12px; letter-spacing: 0.04em; line-height: 1.2; color: {NAVY}">NO. {no}</div>
-      <h3 style="margin: 3px 0 0; font-family: {SANS}; font-weight: 800; font-size: {name_px}px; line-height: 1.05; letter-spacing: -0.01em; color: {BLK}; {SPREAD(BLK)}">{name}</h3>
-      <p style="margin: 3px 0 0; font-family: {SANS}; font-weight: 500; font-size: {body_px}px; line-height: 1.24; text-wrap: pretty; color: {BLK}; {SPREAD(BLK)}">{desc}</p>{nt}</div>'''
+def item(name, desc, note, top=0, name_px=23):
+    nt = (f'<p style="margin: 5px 0 0; font-family: {NAME}; font-style: italic; font-weight: 400; font-size: 17px; '
+          f'line-height: 1.2; color: {RED}; {RSPREAD}">{note}</p>') if note else ''
+    return f'''<div style="margin-top: {top}px">
+      <h3 style="margin: 0; font-family: {NAME}; font-weight: 700; font-size: {name_px}px; line-height: 1.12; color: {INK}; {SPREAD}">{name}</h3>
+      <p style="margin: 6px 0 0; font-family: {BODY}; font-size: 16px; line-height: 1.5; color: {INK}; text-wrap: pretty; {SPREAD}">{desc}</p>{nt}</div>'''
 
 
-def bar(t, first=True, gap=20):
-    return f'''<div style="margin: {0 if first else gap}px 0 10px; background: {RED}; padding: 5px 10px 3px">
-      <span style="font-family: {DISP}; font-size: 18px; line-height: 1.2; letter-spacing: 0.01em; color: {BOARD}">{t}</span></div>'''
+def head(t, w=None, align='left'):
+    """Section head: red letterspaced caps over a black hairline with a short red bar, deco style."""
+    return f'''<div style="text-align: {align}">
+      <div style="font-family: {CAPS}; font-weight: 700; font-size: 15px; letter-spacing: 0.24em; line-height: 1; color: {RED}; {RSPREAD}">{t}</div>
+      <div style="position: relative; height: 9px; margin-top: 8px">
+        <div style="position: absolute; left: 0; right: 0; top: 4px; height: 1px; background: {INK}"></div>
+        <div style="position: absolute; left: 0; top: 2px; width: 46px; height: 5px; background: {RED}"></div></div></div>'''
+
+
+def border(x0, y0, x1, y1):
+    return (ab(x0, y0, x1 - x0, y1 - y0, '', f'border: 2px solid {INK}; box-sizing: border-box')
+            + ab(x0 + 7, y0 + 7, x1 - x0 - 14, y1 - y0 - 14, '', f'border: 1px solid {RED}; box-sizing: border-box'))
 
 
 def finish(face):
     return f'''
-  <img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; pointer-events: none; opacity: 0.32">
+  <img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; pointer-events: none; opacity: 0.30">
   <img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; pointer-events: none">'''
 
 
-def face(name, inner):
-    return f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {NAVY}; font-family: {SANS}; color: {BLK}">
-  <img src="assets/face-{name}.png" alt="" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">
+def face(name, inner, props=''):
+    # props sit above the paper finish: they are separate pieces of paper lying on the card
+    return f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}">
   {inner}
   {finish(name)}
+  {props}
 </div>'''
 
 
-# ---------------- front: the box front ----------------
-px0, py0, px1, py1 = F['panel']
-cols = ''.join(f'<div style="flex: 1; min-width: 0">{item(n, a, d, t, True, name_px=23, body_px=17)}</div>' for _, n, a, d, t in TRAYS)
+# ---------------------------------------------------------------- front: cover and trays
+cols = ''.join(f'<div style="flex: 1; min-width: 0">{item(n, d, t, name_px=23)}</div>' for _, n, d, t in TRAYS)
 front_inner = f'''
-  {ab(48, F['tag_y'], 640, F['tag_y'] + 26, f'<span style="font-family: {SANS}; font-weight: 800; font-size: 21px; letter-spacing: 0.06em; line-height: 26px; color: {BOARD}">GROWN-UP FOOD FOR A KID AT HEART.</span>')}
-  {ab(48, F['subline_y'], 768, F['subline_y'] + 20, f"""<div style="display: flex; justify-content: space-between; font-family: {SANS}; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; line-height: 20px; color: {BOARD}">
-    <span>8 PIECES. NO BATTERIES NEEDED.</span><span style="color: {YEL}">CONTENTS MAY BE BIGGER THAN SHOWN.</span></div>""")}
-  {ab(px1 - 260, py0 + 12, px1 - 22, py0 + 32, f'<div style="font-family: {TECH}; font-size: 13px; line-height: 20px; text-align: right; color: {YEL}">NO. 8801 TO 8803</div>')}
-  {ab(px0 + 22, py0 + 58, px1 - 22, py1 - 46, f'<div style="display: flex; gap: 24px">{cols}</div>')}
-  {ab(px0 + 22, py1 - 32, px1 - 22, py1 - 14, f'<div style="font-family: {TECH}; font-size: 12px; letter-spacing: 0.02em; line-height: 18px; color: {NAVY}; text-align: center">THE CART, THE COOKIE AND THE FOUNTAIN ARE ON THE BACK OF THE BOX.</div>')}
+  {border(26, 26, W - 26, H - 26)}
+  {ab(60, 64, W - 120, 20, f'<div style="text-align: center; font-family: {CAPS}; font-weight: 600; font-size: 15px; letter-spacing: 0.36em; line-height: 20px; color: {INK}; {SPREAD}">MACMILLAN TOY COMPANY</div>')}
+  {ab(60, 96, W - 120, 60, f'<div style="text-align: center; font-family: {DECO}; font-size: 50px; line-height: 60px; color: {INK}; {SPREAD}">The Company</div>')}
+  {ab(40, 150, W - 80, 136, f'<div style="text-align: center; font-family: {DECO}; font-size: 132px; line-height: 136px; letter-spacing: 0.02em; color: {RED}; {RSPREAD}">PARTY</div>')}
+  {ab(60, 292, W - 120, 26, f'<div style="text-align: center; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 26px; color: {INK}; {SPREAD}">Supper, sweets and the soda fountain. New York, 1988.</div>')}
+  <img src="assets/cover-keys.png" alt="" style="position: absolute; left: 40px; top: 322px; width: 736px; height: 330px; display: block">
+  {ab(60, 662, W - 120, 20, f'<div style="text-align: center; font-family: {CAPS}; font-weight: 600; font-size: 14px; letter-spacing: 0.26em; line-height: 20px; color: {INK}; {SPREAD}">BLACK TIE &nbsp;<span style="color: {RED}">&#9670;</span>&nbsp; WHITE TUXEDOS WELCOME</div>')}
+  {ab(64, 708, W - 128, 0, head('PASSED ON TRAYS ALL EVENING'))}
+  {ab(64, 746, W - 128, 0, f'<div style="display: flex; gap: 30px">{cols}</div>')}
+  {ab(64, 950, 470, 0, f"""<p style="margin: 0; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.45; color: {INK}; {SPREAD}">Thank you all for a big year. Tonight, have fun. That is an order.</p>
+    <p style="margin: 4px 0 0; font-family: {CAPS}; font-weight: 600; font-size: 13px; letter-spacing: 0.18em; line-height: 1.3; color: {RED}; {RSPREAD}">MR. MACMILLAN</p>""")}
 '''
 
-# ---------------- back: the box back ----------------
-mx0, my0, mx1, my1 = B['menu']
-mid = (mx0 + mx1) // 2
-left = (bar('Off the corner cart') + ''.join(item(*t[1:], first=(i == 0)) for i, t in enumerate(CART))
-        + bar('Something big', first=False) + ''.join(item(*t[1:], first=(i == 0)) for i, t in enumerate(BIG)))
-right = bar('The soda fountain') + ''.join(item(*t[1:], first=(i == 0), gap=14) for i, t in enumerate(FOUNTAIN))
+# Zoltar's card, tucked into the cover's bottom corner (the card the machine gives Josh)
+zoltar = f'''<div style="position: absolute; left: 574px; top: 908px; width: 188px; height: 112px; transform: rotate(-5deg); transform-origin: 50% 50%;
+    background: #efe3c4; box-shadow: 1px 2px 4px rgba(60,40,20,0.28); box-sizing: border-box; padding: 9px 10px">
+    <div style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px; border: 1px solid #8a2a1e"></div>
+    <div style="position: relative; text-align: center; font-family: {CAPS}; font-weight: 700; font-size: 12px; letter-spacing: 0.3em; line-height: 16px; color: #8a2a1e; padding-top: 6px">ZOLTAR SPEAKS</div>
+    <div style="position: relative; text-align: center; font-family: {NAME}; font-style: italic; font-weight: 400; font-size: 21px; line-height: 26px; color: #2a1d14; margin-top: 10px">Your wish is granted</div>
+  </div>'''
 
-ph0x, ph0y, ph1x, ph1y = B['photo_panel']
-phx0, phy0, phx1, phy1 = B['photo']
-caption = (f'<p style="margin: 0; font-family: {SANS}; font-weight: 600; font-size: 14px; line-height: 1.25; color: {BLK}; {SPREAD(BLK)}">'
-           f'Mr. MacMillan and our new V.P. of Product Development at the store, four hands on one keyboard.</p>')
+# Josh's pencilled note on his own menu, next to the caviar
+pencil = f'''<div style="position: absolute; left: 330px; top: 900px; width: 200px; transform: rotate(-4deg);
+    font-family: {HAND}; font-size: 19px; line-height: 1.1; color: #5d6168">Do NOT try the caviar.</div>'''
 
-pl0x, pl0y, pl1x, pl1y = B['play']
-steps = ''.join(f'''<div style="display: flex; gap: 9px; align-items: baseline; margin-top: 6px">
-      <span style="flex: none; width: 22px; height: 22px; background: {RED}; color: {BOARD}; font-family: {DISP}; font-size: 14px; line-height: 23px; text-align: center">{n}</span>
-      <span style="font-family: {SANS}; font-weight: 700; font-size: 16px; line-height: 1.2; color: {BLK}; {SPREAD(BLK)}">{t}</span></div>'''
-                for n, t in (('1', 'Catch a tray as it goes by.'), ('2', 'Try one of everything, even the caviar.'), ('3', 'Save room for the cookie.')))
+# ---------------------------------------------------------------- back: supper
+KX = 104                     # the keyboard border width
+cx0 = 152
+colw = 296
+gap = 28
+left = (head('FROM THE CORNER CART') + item(*CART[0][1:], top=14) + item(*CART[1][1:], top=20)
+        + f'<div style="height: 30px"></div>' + head('SOMETHING BIG') + item(*BIG[0][1:], top=14) + item(*BIG[1][1:], top=20))
+right = (head('THE SODA FOUNTAIN') + item(*FOUNTAIN[0][1:], top=14) + ''.join(item(*f[1:], top=18, name_px=21) for f in FOUNTAIN[1:]))
 
-tk0x, tk0y, tk1x, tk1y = B['token']
-ck0x, ck0y, ck1x, ck1y = B['check']
-checks = ''.join(f'''<div style="display: flex; align-items: center; gap: 7px; height: 21px">
-      <span style="flex: none; width: 13px; height: 13px; border: 2px solid {BLK}; background: {BOARD}; box-sizing: border-box"></span>
-      <span style="font-family: {SANS}; font-weight: 700; font-size: 14px; line-height: 1; color: {BLK}; white-space: nowrap">{n}</span></div>'''
-                 for _, _, n, _, _ in ALL)
-nt0x, nt0y, nt1x, nt1y = B['note']
+times = ''.join(f'''<div style="display: flex; gap: 14px; align-items: baseline; margin-top: 7px">
+      <span style="flex: none; width: 46px; font-family: {CAPS}; font-weight: 700; font-size: 15px; letter-spacing: 0.04em; color: {RED}; {RSPREAD}">{t}</span>
+      <span style="font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {INK}; {SPREAD}">{x}</span></div>'''
+                for t, x in (('7:30', 'Doors open, trays go round'), ('8:00', 'The cart and the fountain open'), ('9:30', 'The giant cookie is cut')))
 
 back_inner = f'''
-  {ab(mx0 + 22, my0 + 20, mid - 20, my1 - 40, left)}
-  {ab(mid + 20, my0 + 20, mx1 - 22, my1 - 40, right)}
-  {ab(mx0 + 22, my1 - 30, mx1 - 22, my1 - 12, f'<div style="font-family: {SANS}; font-weight: 600; font-size: 12px; letter-spacing: 0.02em; line-height: 18px; color: {NAVY}; text-align: center">© 1988 MacMillan Toy Co., New York, N.Y. Party pack, not for resale. Printed in U.S.A.</div>')}
-  {ab(phx0, phy1 + 8, phx1, ph1y - 8, caption)}
-  {ab(pl0x + 16, pl0y + 12, pl1x - 14, pl1y - 8, f'<div style="font-family: {DISP}; font-size: 20px; line-height: 1.1; color: {RED}">HOW TO PLAY</div>{steps}')}
-  {ab(tk0x + 20, tk0y + 16, tk1x - 16, tk1y - 10, f"""<div style="font-family: {DISP}; font-size: 18px; line-height: 1.1; color: {NAVY}">PARTY TRAY TOKEN</div>
-    <p style="margin: 4px 0 0; font-family: {SANS}; font-weight: 600; font-size: 15px; line-height: 1.22; color: {BLK}; {SPREAD(BLK)}">Good for one more corner cart hot dog. Hand it to any waiter.</p>
-    <div style="margin-top: 10px; display: flex; justify-content: space-between; font-family: {TECH}; font-size: 12px; line-height: 1.3; color: {RED}"><span>NO CASH VALUE.</span><span>NO. 00417</span></div>""")}
-  {ab(ck0x + 16, ck0y + 10, ck1x - 14, ck1y - 8, f"""<div style="display: flex; justify-content: space-between; align-items: baseline">
-      <span style="font-family: {DISP}; font-size: 21px; line-height: 1.1; color: {RED}">COLLECT ALL 8!</span>
-      <span style="font-family: {SANS}; font-weight: 700; font-size: 13px; color: {NAVY}">Check each one off.</span></div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 10px; margin-top: 8px">{checks}</div>""")}
-  {ab(nt0x + 3, nt0y + 3, nt1x - 3, nt0y + 29, f'<div style="background: {BLK}; height: 26px; padding: 0 12px; font-family: {DISP}; font-size: 16px; line-height: 27px; letter-spacing: 0.04em; color: {YEL}">CAUTION</div>')}
-  {ab(nt0x + 14, nt0y + 38, B['upc'][0] - 8, nt1y - 8, f"""<p style="margin: 0; font-family: {SANS}; font-weight: 700; font-size: 15px; line-height: 1.22; color: {BLK}; {SPREAD(BLK)}">Building does not turn<br>into a robot.</p>
-    <p style="margin: 6px 0 0; font-family: {SANS}; font-weight: 600; font-size: 15px; line-height: 1.22; color: {BLK}; {SPREAD(BLK)}">Tuxedos welcome,<br>any color.</p>
-    <p style="margin: 6px 0 0; font-family: {TECH}; font-size: 12px; line-height: 1.3; color: {NAVY}">LOT 0488 NY</p>""")}
+  <img src="assets/strip-keys.png" alt="" style="position: absolute; left: 0; top: 0; width: {KX}px; height: {H}px; display: block">
+  {border(124, 26, W - 26, H - 26)}
+  {ab(cx0, 62, W - cx0 - 40, 20, f'<div style="font-family: {CAPS}; font-weight: 600; font-size: 14px; letter-spacing: 0.3em; line-height: 20px; color: {RED}; {RSPREAD}">MACMILLAN TOY COMPANY &nbsp;&#9670;&nbsp; THE COMPANY PARTY</div>')}
+  {ab(cx0, 90, W - cx0 - 40, 64, f'<div style="font-family: {DECO}; font-size: 58px; line-height: 64px; color: {INK}; {SPREAD}">Supper <span style="color: {RED}">&amp;</span> Sweets</div>')}
+  {ab(cx0, 162, W - cx0 - 40, 26, f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; line-height: 26px; color: {INK}; {SPREAD}">From eight o&rsquo;clock. Help yourself, and come back as often as you like.</div>')}
+  {ab(cx0, 214, colw, 0, left)}
+  {ab(cx0 + colw + gap, 214, colw, 0, right)}
+  {ab(cx0 + colw + gap, 0, colw, 0, '', 'display: none')}
 '''
 
-FRONT = face('front', front_inner)
-BACK = face('back', back_inner)
+BACK_LOW = f'''
+  {ab(cx0, 0, 0, 0, '', 'display:none')}
+'''
 
-for name, body, title in (('front', FRONT, 'MacMillan party pack, front'), ('back', BACK, 'MacMillan party pack, back')):
+FRONT = face('front', front_inner, pencil + zoltar)
+
+
+def back_face(timeline_top, card_top, foot_top):
+    inner = back_inner + f'''
+  {ab(cx0 + colw + gap, timeline_top, colw, 0, f'<div style="padding: 14px 16px 14px; border: 1px solid {INK}; outline: 0">{head("THIS EVENING")}{times}</div>')}
+  {ab(cx0, foot_top, W - cx0 - 40, 0, f"""<div style="font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.4; color: {INK}; {SPREAD}">Please, no toy pitches at the table.</div>
+    <div style="margin-top: 4px; font-family: {CAPS}; font-weight: 600; font-size: 12px; letter-spacing: 0.16em; line-height: 1.4; color: {SOFT}">MACMILLAN TOY COMPANY, NEW YORK, N.Y. &nbsp; PRINTED IN U.S.A.</div>""")}
+'''
+    card = f'''<div style="position: absolute; left: {cx0 + colw + gap + 40}px; top: {card_top}px; width: 248px; height: 142px; transform: rotate(-3deg);
+    background: #fbf9f3; box-shadow: 1px 2px 5px rgba(50,40,30,0.26); box-sizing: border-box; padding: 16px 18px">
+    <div style="font-family: {CAPS}; font-weight: 700; font-size: 12px; letter-spacing: 0.28em; line-height: 16px; color: {RED}">MACMILLAN TOY CO.</div>
+    <div style="margin-top: 22px; font-family: {NAME}; font-weight: 700; font-size: 21px; line-height: 24px; color: {INK}">Josh Baskin</div>
+    <div style="margin-top: 3px; font-family: {CAPS}; font-weight: 600; font-size: 12px; letter-spacing: 0.06em; line-height: 16px; color: {INK}">Vice President, Product Development</div>
+    <div style="margin-top: 2px; font-family: {CAPS}; font-weight: 400; font-size: 12px; letter-spacing: 0.06em; line-height: 16px; color: {SOFT}">New York, N.Y.</div>
+    <img src="assets/clip.png" alt="" style="position: absolute; left: 196px; top: -22px; width: 26px; height: 78px; display: block">
+  </div>'''
+    ticket = f'''<div style="position: absolute; left: {cx0 + colw + gap - 8}px; top: {card_top + 10}px; width: 0; height: 0"></div>'''
+    return face('back', inner, card + ticket)
+
+
+BACK = back_face(744, 884, 990)
+
+for name, body, title in (('front', FRONT, 'MacMillan party menu, front'), ('back', BACK, 'MacMillan party menu, back')):
     open(os.path.join(D, name + '.body.html'), 'w').write(body)
     open(os.path.join(D, name + '.html'), 'w').write(
         f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{title}</title>{LINK}'
@@ -157,11 +207,12 @@ for name, body, title in (('front', FRONT, 'MacMillan party pack, front'), ('bac
 
 json.dump({
     'fmt': 'toystore', 'fn': 'fmtToyStore', 'faces': ['front.html', 'back.html'], 'names': ['Front', 'Back'],
-    'mm': [215.9, 279.4], 'fonts': FONTS, 'fams': ['Bowlby One', 'League Spartan', 'Michroma'],
-    'phone': {'disp': "'Bowlby One',sans-serif", 'title': "'Bowlby One',sans-serif", 'name': "'League Spartan',sans-serif",
-              'body': "'League Spartan',sans-serif", 'price': "'Michroma',sans-serif", 'note': "'League Spartan',sans-serif"},
+    'mm': [215.9, 279.4], 'fonts': FONTS,
+    'fams': ['Limelight', 'Josefin Sans', 'Playfair Display', 'Libre Baskerville', 'Schoolbell'],
+    'phone': {'disp': "'Limelight',serif", 'title': "'Limelight',serif", 'name': "'Playfair Display',serif",
+              'body': "'Libre Baskerville',serif", 'price': "'Josefin Sans',sans-serif", 'note': "'Playfair Display',serif"},
 }, open(os.path.join(D, 'film.json'), 'w'), indent=1, ensure_ascii=False)
 
-labels = {FILM: {k: {'n': n, 'd': d, 'note': t} for k, _, n, d, t in ALL if k}}
+labels = {FILM: {k: {'n': n, 'd': d, 'note': t} for k, n, d, t in ALL if k}}
 json.dump(labels, open(os.path.join(D, 'toystore.labels.json'), 'w'), indent=1, ensure_ascii=False)
 print('built front.html, back.html, film.json, toystore.labels.json')

@@ -1,5 +1,7 @@
 # Film-world print menus: the standard (set by Jurassic Park, Oct 2026)
 
+READ /home/claude/polish/wip/print/STYLE-LOCK.md FIRST. It is the locked house design system and overrides any rule below that conflicts with it (including the older "Hard quality gate" notes on grime, ditto, misregistration and research).
+
 The owner is a trade-qualified chef and former restaurateur. Target: an honest 9.2 to 9.3 out of 10 against the rules below.
 
 ## The one idea (REVISED by the owner, Oct 25: this overrides anything below that conflicts)

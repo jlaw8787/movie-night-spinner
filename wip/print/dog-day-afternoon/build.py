@@ -1,253 +1,232 @@
-"""Builds the savings deposit ticket for Dog Day Afternoon (Brooklyn, Tuesday August 22, 1972).
-The object: a two-sided counter deposit ticket from the branch's own pad, printed in one green
-spot ink on pale green safety paper, with an engraved vignette of the main office, a lathe-work
-border and a red numbering-machine serial. Halfway through the afternoon the head teller has
-rolled it into the branch typewriter and typed up the food order that goes out through the
-barbershop across the street, then hit it with her date stamp out of habit.
-Half letter, 5.5 x 8.5 in, portrait, two faces (front and reverse), no fold.
+"""Builds the Pizzeria Canicola take-out menu for Dog Day Afternoon (Brooklyn, summer 1972).
+The venue: the neighbourhood pizzeria on the bank's avenue, two doors from the barber shop the
+police take over, the place the pies come from on Tuesday, August 22, 1972. "Canicola" is the
+Italian word for the dog days of summer.
+The object: a two-sided US Letter take-out menu (8.5 x 11 in, portrait, no fold), offset printed in
+warm black plus two spot inks (sun orange and tomato red) on a soft white stock, with a halftone
+sun badge, a clip-out coupon and, on the back, the police order ticket from that afternoon clipped on.
 Writes front.html / back.html, front.body.html / back.body.html, film.json, brooklyn.labels.json."""
-import os, json, random
+import os, json
 D = os.path.dirname(os.path.abspath(__file__))
 
-FW, FH = 528, 816
-PAPER = '#e4ecdf'
-GREEN = '#1f563e'
-GREEN_SOFT = '#3d6b55'
-RED = '#b1362b'
-TYPE = '#141317'
-STAMP = '#5a3f8e'
-FONTS = 'family=Courier+Prime&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=Old+Standard+TT:wght@700'
+FW, FH = 816, 1056
+PAPER = '#f7f0e3'
+INK = '#261c18'
+SOFT = '#4a3d36'
+RED = '#c3341f'
+ORANGE = '#e2741f'
+GOLD = '#f4b43a'
+GREEN = '#d9e6cf'
+GREEN_INK = '#2f6a45'
+PENCIL = '#2b2d3a'
+FONTS = ('family=Yellowtail&family=Sofia+Sans+Extra+Condensed:wght@800;900'
+         '&family=Sofia+Sans+Condensed:wght@700;800&family=Sofia+Sans:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Gochi+Hand')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-ENGR = "'Old Standard TT', 'Times New Roman', serif"
-SANS = "'Libre Franklin', Arial, sans-serif"
-MONO = "'Courier Prime', 'Courier New', monospace"
-L, CW = 46, 436          # content left edge and width, everything 46px or more inside the trim
-DOL, CEN = 44, 34        # amount columns
+SCRIPT = "'Yellowtail', cursive"
+XC = "'Sofia Sans Extra Condensed', 'Arial Narrow', sans-serif"
+CD = "'Sofia Sans Condensed', 'Arial Narrow', sans-serif"
+BODY = "'Sofia Sans', Arial, sans-serif"
+HAND = "'Gochi Hand', cursive"
+L = 56                      # outer text margin, at least 40px inside the trim
+CW = FW - 2 * L
 
 
-def esc(s):
-    return s.replace('&', '&amp;').replace('<', '&lt;')
+def paper(face):
+    return (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: -339px; top: 0; width: 1494px; height: 1056px; opacity: 0.34; pointer-events: none; display: block">'
+            f'<img src="assets/paper-wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; pointer-events: none; display: block">')
 
 
-_rng = random.Random(822)
+def section(title, sub, cols=None):
+    """Section head: a red ink tab with extra condensed caps, a fine rule, and the price column heads."""
+    ch = ''
+    if cols:
+        ch = ''.join(f'<div style="width: 58px; text-align: right; font-family: {CD}; font-weight: 800; font-size: 14px; letter-spacing: 0.08em; color: {RED}; text-transform: uppercase">{c}</div>' for c in cols)
+    return (f'<div style="display: flex; align-items: flex-end; border-bottom: 3px solid {INK}; padding-bottom: 6px; margin-bottom: 4px">'
+            f'<div style="background: {RED}; color: {PAPER}; font-family: {XC}; font-weight: 900; font-size: 30px; line-height: 1; letter-spacing: 0.04em; padding: 5px 10px 3px; text-transform: uppercase">{title}</div>'
+            f'<div style="flex: 1; padding: 0 0 2px 10px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 15px; line-height: 1.1; color: {SOFT}">{sub}</div>'
+            f'{ch}</div>')
 
 
-def typed(text, size=16, weight_jitter=True):
-    """Typewriter impression: each letter struck a touch harder or softer, a hair off the line."""
-    out = []
-    for word in text.split(' '):
-        chars = []
-        for ch in word:
-            op = 0.86 + 0.14 * _rng.random() if weight_jitter else 1
-            dy = round(_rng.uniform(-0.35, 0.35), 2)
-            chars.append(f'<span style="position: relative; top: {dy}px; opacity: {op:.2f}">{esc(ch)}</span>')
-        out.append('<span style="white-space: nowrap">' + ''.join(chars) + '</span>')
-    return ' '.join(out)
+def dish(name, desc, prices, note=None, star=False):
+    if isinstance(prices, str):
+        prices = [prices]
+    pr = ''.join(f'<div style="width: 58px; text-align: right; font-family: {CD}; font-weight: 800; font-size: 22px; line-height: 1; color: {INK}">{p}</div>' for p in prices)
+    nm_color = RED if star else INK
+    nt = (f'<div style="margin-top: 3px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 15px; line-height: 1.25; color: {RED}">{note}</div>' if note else '')
+    ds = (f'<div style="margin-top: 3px; font-family: {BODY}; font-size: 16px; line-height: 1.32; color: {SOFT}; text-wrap: pretty">{desc}</div>' if desc else '')
+    return (f'<div style="padding: 9px 0 9px; border-bottom: 1px solid rgba(38,28,24,0.22)">'
+            f'<div style="display: flex; align-items: baseline">'
+            f'<div style="flex: 1; font-family: {CD}; font-weight: 800; font-size: 23px; line-height: 1.05; color: {nm_color}">{name}</div>{pr}</div>'
+            f'{ds}{nt}</div>')
 
 
-def label(t, extra=''):
-    return (f'<div style="font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.1em; '
-            f'color: {GREEN}; text-transform: uppercase{extra}">{t}</div>')
+def page(face, inner):
+    return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {PAPER}; color: {INK}">'
+            f'{paper(face)}{inner}</div>')
 
 
-def amount_cells(d, c):
-    cell = (f'width: {{w}}px; flex: none; border-left: 1.5px solid {GREEN}; box-sizing: border-box; '
-            f'font-family: {MONO}; font-size: 18px; line-height: 1; color: {TYPE}; padding: 9px 5px 0 0; text-align: right')
-    return (f'<div style="{cell.format(w=DOL)}">{typed(d) if d else ""}</div>'
-            f'<div style="{cell.format(w=CEN)}">{typed(c) if c else ""}</div>')
+# ---------------------------------------------------------------- front
+def front():
+    top = (
+        # sun badge, top right
+        f'<img src="assets/sun-badge.png" alt="" style="position: absolute; left: 520px; top: 14px; width: 292px; height: 292px; display: block">'
+        f'<div style="position: absolute; left: 576px; top: 112px; width: 180px; text-align: center; color: {INK}">'
+        f'<div style="font-family: {XC}; font-weight: 900; font-size: 36px; line-height: 0.9; letter-spacing: 0.02em">AIR<br>CONDITIONED</div>'
+        f'<div style="margin-top: 6px; font-family: {BODY}; font-weight: 800; font-size: 13px; line-height: 1.15; letter-spacing: 0.06em; text-transform: uppercase">Eat in. Cool off.</div></div>'
+        # masthead
+        f'<div style="position: absolute; left: {L}px; top: 50px; font-family: {CD}; font-weight: 800; font-size: 15px; letter-spacing: 0.2em; color: {RED}; text-transform: uppercase">Pizza &nbsp;·&nbsp; Heroes &nbsp;·&nbsp; Dinners &nbsp;·&nbsp; Italian ices</div>'
+        f'<div style="position: absolute; left: {L - 2}px; top: 70px; font-family: {SCRIPT}; font-size: 64px; line-height: 1; color: {RED}">Pizzeria</div>'
+        f'<div style="position: absolute; left: {L - 6}px; top: 118px; font-family: {XC}; font-weight: 900; font-size: 168px; line-height: 0.86; letter-spacing: 0.005em; color: {INK}">CANICOLA</div>'
+        f'<div style="position: absolute; left: {L}px; top: 268px; width: 470px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 17px; line-height: 1.3; color: {SOFT}">'
+        f'On the avenue since 1952, two doors from the barber shop.</div>'
+        # info band
+        f'<div style="position: absolute; left: 0; top: 314px; width: {FW}px; height: 46px; background: {INK}"></div>'
+        f'<div style="position: absolute; left: {L}px; top: 314px; width: {CW}px; height: 46px; display: flex; align-items: center; justify-content: space-between; '
+        f'font-family: {CD}; font-weight: 800; font-size: 19px; letter-spacing: 0.1em; color: {PAPER}; text-transform: uppercase">'
+        f'<span>We deliver</span><span style="color: {GOLD}">Call 555-0822</span><span>Open 11 A.M. to midnight, 7 days</span></div>'
+    )
+    pies = (
+        section('Pizza pies', 'baked on the stone', ['Small', 'Large']) +
+        dish('Plain cheese pie', 'Our own tomato sauce, whole-milk mozzarella, grated romano and a ribbon of olive oil.', ['2.10', '2.75']) +
+        dish('Pepperoni pie', 'Thin crust, crushed tomato and oregano, plenty of mozzarella and coins of spicy cured sausage, baked fast in a blazing oven.', ['2.50', '3.25'], 'The one the whole block orders.', star=True) +
+        dish('Sicilian square pie', 'Thick, airy dough risen in a black steel pan, cheese under the sauce. Twelve squares.', ['', '3.25']) +
+        dish('Extra toppings, each', 'Sausage, mushrooms, green peppers, onions, meatballs, anchovies or extra cheese.', ['.35', '.50']) +
+        f'<div style="display: flex; align-items: baseline; justify-content: space-between; margin-top: 12px; padding: 9px 12px 8px; border: 2px solid {INK}">'
+        f'<span style="font-family: {CD}; font-weight: 800; font-size: 22px; color: {INK}">By the slice, at the counter</span>'
+        f'<span style="font-family: {CD}; font-weight: 800; font-size: 22px; color: {RED}">.35</span></div>'
+    )
+    heroes = (
+        section('Heroes', 'hot, on Italian bread', ['']) +
+        dish('Meatball parmigiana', 'Beef and pork meatballs in tomato sauce under melted mozzarella.', '1.25') +
+        dish('Sausage and peppers', 'Sweet fennel links with green peppers and onions fried soft.', '1.25') +
+        dish('Chicken cutlet parmigiana', 'Breaded, fried golden, then baked with sauce and cheese.', '1.50') +
+        dish('Eggplant parmigiana', 'Thin slices fried crisp and layered with tomato and romano.', '1.10') +
+        dish('Pepper and egg', 'Green peppers scrambled soft with eggs. A Friday favorite.', '.95')
+    )
+    cols = (f'<div style="position: absolute; left: {L}px; top: 384px; width: 344px">{pies}</div>'
+            f'<div style="position: absolute; left: {L + 372}px; top: 384px; width: {CW - 372}px">{heroes}</div>')
+    coupon = (
+        f'<div style="position: absolute; left: {L}px; top: 880px; width: {CW}px; height: 118px; display: flex; gap: 22px">'
+        # clip-out coupon
+        f'<div style="position: relative; width: 420px; box-sizing: border-box; border: 2.5px dashed {INK}; padding: 12px 16px 10px; background: rgba(244,180,58,0.20)">'
+        f'<div style="position: absolute; right: 12px; top: -11px; background: {PAPER}; padding: 0 6px; font-family: {CD}; font-weight: 800; font-size: 12px; letter-spacing: 0.14em; color: {RED}">CLIP AND SAVE</div>'
+        f'<div style="font-family: {XC}; font-weight: 900; font-size: 34px; line-height: 0.95; color: {RED}">FREE LEMON ICE</div>'
+        f'<div style="margin-top: 4px; font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.3; color: {INK}">With every large pie. Bring this coupon.</div>'
+        f'<div style="margin-top: 3px; font-family: {BODY}; font-style: italic; font-size: 14px; line-height: 1.2; color: {SOFT}">Good through Labor Day, Monday, Sept. 4, 1972.</div></div>'
+        # office lunches
+        f'<div style="flex: 1; padding-top: 4px">'
+        f'<div style="font-family: {CD}; font-weight: 800; font-size: 22px; line-height: 1.05; color: {INK}">Bank and office lunches</div>'
+        f'<div style="margin-top: 5px; font-family: {BODY}; font-size: 16px; line-height: 1.32; color: {SOFT}">Call by eleven and the whole staff eats at noon. Party orders and dinners over the page.</div></div>'
+        f'</div>'
+    )
+    foot = (f'<div style="position: absolute; left: {L}px; top: 1012px; width: {CW}px; display: flex; justify-content: space-between; '
+            f'font-family: {BODY}; font-size: 12px; letter-spacing: 0.04em; color: {SOFT}">'
+            f'<span>Pizzeria Canicola, Brooklyn, N.Y.</span><span style="font-weight: 800; color: {RED}; letter-spacing: 0.14em">PLEASE TURN OVER</span></div>')
+    return page('front', top + cols + coupon + foot)
 
 
-def head_row(txt, num=None):
-    n = (f'<span style="font-family: {SANS}; font-weight: 600; font-size: 12px; color: {GREEN}; display: inline-block; width: 18px">{num}</span>'
-         if num else '')
-    return (f'<div style="display: flex; border-bottom: 1px solid {GREEN_SOFT}">'
-            f'<div style="flex: 1; padding: 10px 8px 6px 8px; font-family: {MONO}; font-size: 15px; line-height: 1; color: {TYPE}; letter-spacing: 0.04em">'
-            f'<span style="border-bottom: 1.5px solid {TYPE}; padding-bottom: 2px">{typed(txt.upper(), 15)}</span></div>'
-            f'{amount_cells("", "")}</div>')
+# ---------------------------------------------------------------- back
+def ticket():
+    """The police order from that afternoon: a green guest check clipped to the menu."""
+    line = f'border-bottom: 1px solid rgba(47,106,69,0.55); height: 27px; display: flex; align-items: flex-end'
+    lab = f'font-family: {CD}; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; color: {GREEN_INK}; width: 40px; flex: none; padding-bottom: 4px'
+    hand = f'font-family: {HAND}; font-size: 19px; line-height: 1; color: {PENCIL}; padding-bottom: 2px; white-space: nowrap'
+    rows = [('DATE', 'Tues. 8/22/72'), ('TO', 'The bank, across the st.'), ('', 'Front door only!'),
+            ('', 'Pies, plain + pepperoni'), ('', 'Sodas, cold'), ('BY', 'Police, from the barber shop')]
+    body = ''.join(f'<div style="{line}"><div style="{lab}">{a}</div><div style="{hand}">{b}</div></div>' for a, b in rows)
+    return (
+        f'<div style="position: absolute; left: 520px; top: 742px; width: 250px; height: 262px; transform: rotate(2.2deg); transform-origin: 50% 0">'
+        f'<div style="position: absolute; left: 0; top: 0; width: 250px; height: 262px; background: {GREEN}; box-shadow: 0 2px 5px rgba(38,28,24,0.22)"></div>'
+        f'<div style="position: absolute; left: 14px; top: 12px; width: 222px">'
+        f'<div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid {GREEN_INK}; padding-bottom: 4px">'
+        f'<span style="font-family: {CD}; font-weight: 800; font-size: 15px; letter-spacing: 0.1em; color: {GREEN_INK}">GUEST CHECK</span>'
+        f'<span style="font-family: {CD}; font-weight: 800; font-size: 15px; color: {RED}">No. 0822</span></div>'
+        f'{body}'
+        f'<div style="margin-top: 8px; font-family: {HAND}; font-size: 19px; line-height: 1; color: {RED}; transform: rotate(-3deg)">Kid says he\'s a star!</div>'
+        f'</div>'
+        # paper clip, wire drawn with rounded borders
+        f'<div style="position: absolute; left: 172px; top: -18px; width: 20px; height: 56px; border: 3px solid #8b8f96; border-radius: 10px; box-sizing: border-box"></div>'
+        f'<div style="position: absolute; left: 177px; top: -10px; width: 11px; height: 40px; border: 3px solid #a3a7ad; border-radius: 6px; box-sizing: border-box"></div>'
+        f'</div>')
 
 
-def item_row(num, name, desc, note, d, c, per=None):
-    p = (f'<div style="font-family: {MONO}; font-size: 12px; line-height: 1; color: {TYPE}; margin-top: 4px; text-align: right; padding-right: 4px; white-space: nowrap">{typed(per, 12)}</div>'
-         if per else '')
-    nt = (f'<div style="margin-top: 4px; font-family: {MONO}; font-size: 14px; line-height: 1.25; color: #3a3940">{typed("(" + note + ")", 14)}</div>'
-          if note else '')
-    ds = (f'<div style="margin-top: 4px; font-family: {MONO}; font-size: 16px; line-height: 1.27; color: {TYPE}">{typed(desc)}</div>'
-          if desc else '')
-    return (f'<div style="display: flex; border-bottom: 1px solid {GREEN_SOFT}">'
-            f'<div style="flex: none; width: 22px; padding: 10px 0 0 7px; box-sizing: border-box; font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1; color: {GREEN}">{num}</div>'
-            f'<div style="flex: 1; padding: 8px 10px 8px 2px">'
-            f'<div style="font-family: {MONO}; font-size: 19px; line-height: 1.1; color: {TYPE}; text-shadow: 0.35px 0 0 {TYPE}">{typed(name.upper(), 19)}</div>'
-            f'{ds}{nt}</div>'
-            f'<div style="display: flex; flex-direction: column; flex: none"><div style="display: flex; flex: none">{amount_cells(d, c)}</div>'
-            f'<div style="flex: 1; display: flex; flex-direction: column; justify-content: flex-start">'
-            f'<div style="width: {DOL + CEN}px; flex: 1; display: flex">'
-            f'<div style="width: {DOL}px; border-left: 1.5px solid {GREEN}; box-sizing: border-box; position: relative"><div style="position: absolute; right: -{CEN}px; top: 0">{p}</div></div>'
-            f'<div style="width: {CEN}px; border-left: 1.5px solid {GREEN}; box-sizing: border-box"></div></div></div></div></div>')
+def back():
+    head = (
+        f'<div style="position: absolute; left: 0; top: 0; width: {FW}px; height: 8px; background: {RED}"></div>'
+        f'<div style="position: absolute; left: {L}px; top: 44px; width: {CW}px; display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 3px solid {INK}; padding-bottom: 10px">'
+        f'<div style="display: flex; align-items: baseline; gap: 10px">'
+        f'<span style="font-family: {SCRIPT}; font-size: 40px; line-height: 1; color: {RED}">Pizzeria</span>'
+        f'<span style="font-family: {XC}; font-weight: 900; font-size: 64px; line-height: 0.85; color: {INK}">CANICOLA</span></div>'
+        f'<div style="text-align: right">'
+        f'<div style="font-family: {CD}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: {RED}">WE DELIVER, CALL</div>'
+        f'<div style="font-family: {XC}; font-weight: 900; font-size: 44px; line-height: 0.9; color: {INK}">555-0822</div></div></div>'
+    )
+    left = (
+        section('Dinners', 'with bread and butter') +
+        dish('Spaghetti and meatballs', 'Three big meatballs in a slow Sunday sauce with grated romano.', '1.95') +
+        dish('Baked ziti', 'Tubes of macaroni with ricotta and mozzarella, baked bubbling in the sauce.', '1.75') +
+        dish('Lasagna', 'Wide noodles layered with ground beef, ricotta and mozzarella.', '2.25') +
+        dish('Veal parmigiana', 'Cutlet pounded thin, breaded, baked under sauce and cheese, with spaghetti.', '2.95') +
+        f'<div style="height: 22px"></div>' +
+        section('For a crowd', 'call a day ahead') +
+        dish('Party hero, three foot', 'Ham, salami and provolone with shredded iceberg and ripe tomato, dressed with oil, vinegar and oregano, pressed and cut in wedges. Feeds twelve.', '11.00', star=True) +
+        dish('Chips and dip, party bowl', 'Ridged potato chips with our own dip: onions cooked slow until deep brown, stirred into sour cream and cream cheese with chives.', '1.25')
+    )
+    right = (
+        section('Italian ices', 'made here every morning', ['Small', 'Large']) +
+        dish('Lemon ice', 'Fresh-squeezed juice and grated zest in sugar syrup, frozen and scraped by hand until fluffy. Served in paper cups.', ['.15', '.25'], 'The coldest thing on the avenue.', star=True) +
+        dish('Cherry, chocolate or rainbow', '', ['.15', '.25']) +
+        f'<div style="height: 22px"></div>' +
+        section('Cold drinks', 'from the ice chest', ['']) +
+        dish('Cold beer with lime', 'Lager poured over two ice cubes and a fresh squeeze, the glass rimmed with salt, grated zest and a pinch of chili powder.', '.60') +
+        dish('Bottle beer, to go', '', '.45') +
+        dish('Soda by the bottle', 'Cola, orange, cream, root beer or ginger ale.', '.20') +
+        dish('Coffee, hot or iced', '', '.15')
+    )
+    cols = (f'<div style="position: absolute; left: {L}px; top: 146px; width: 344px">{left}</div>'
+            f'<div style="position: absolute; left: {L + 372}px; top: 146px; width: {CW - 372}px">{right}</div>')
+    deliver = (
+        f'<div style="position: absolute; left: {L}px; top: 862px; width: 420px; box-sizing: border-box; border-top: 3px solid {INK}; padding-top: 10px">'
+        f'<div style="font-family: {XC}; font-weight: 900; font-size: 30px; line-height: 1; color: {RED}">FREE DELIVERY ON THE BLOCK</div>'
+        f'<div style="margin-top: 6px; font-family: {BODY}; font-size: 16px; line-height: 1.34; color: {SOFT}">The avenue and the side streets, 11 A.M. to midnight. Our boys ride bicycles. We don\'t take the car.</div>'
+        f'<div style="margin-top: 5px; font-family: {BODY}; font-style: italic; font-weight: 600; font-size: 15px; line-height: 1.25; color: {RED}">Sorry, no delivery to Wyoming.</div></div>'
+    )
+    foot = (f'<div style="position: absolute; left: {L}px; top: 1012px; width: 420px; font-family: {BODY}; font-size: 12px; letter-spacing: 0.04em; color: {SOFT}">'
+            f'Prices effective June 1972. Pizzeria Canicola, Brooklyn, N.Y.</div>')
+    return page('back', head + cols + deliver + foot + ticket())
 
 
-def total_row(t, typed_val=None, strong=False):
-    bg = f'background: rgba(31,86,62,0.10);' if strong else ''
-    return (f'<div style="display: flex; border-bottom: 1px solid {GREEN_SOFT}; {bg}">'
-            f'<div style="flex: 1; padding: 9px 10px 7px 30px; text-align: right">{label(t)}</div>'
-            f'{amount_cells(*(typed_val or ("", "")))}</div>')
+def wrap(body, title):
+    return (f'<!doctype html><html><head><meta charset="utf-8"><title>{title}</title>{LINK}'
+            f'<style>body{{margin:0}}*{{-webkit-font-smoothing:antialiased}}</style></head><body>{body}</body></html>')
 
 
-def ledger_head(t):
-    return (f'<div style="display: flex; background: {GREEN}; color: {PAPER}; font-family: {SANS}; font-weight: 600; font-size: 12px; '
-            f'letter-spacing: 0.1em; line-height: 1">'
-            f'<div style="flex: 1; padding: 6px 8px 5px">{t}</div>'
-            f'<div style="width: {DOL + CEN}px; padding: 6px 0 5px; text-align: center; border-left: 1.5px solid {PAPER}; box-sizing: border-box">AMOUNT</div></div>')
-
-
-def field(lab, val, w=None, size=17):
-    ww = f'width: {w}px; flex: none;' if w else 'flex: 1;'
-    return (f'<div style="{ww} padding: 6px 8px 7px; box-sizing: border-box">{label(lab)}'
-            f'<div style="margin-top: 6px; font-family: {MONO}; font-size: {size}px; line-height: 1; color: {TYPE}; white-space: nowrap">{typed(val, size)}</div></div>')
-
-
-def stamp(left, top, rot):
-    """Rubber date stamp. Struck once, and the rubber rocked a hair so a faint second strike
-    sits just off the first. Uneven ink comes from the painted wear laid over both."""
-    def face(op, dx, dy):
-        return (f'<div style="position: absolute; left: {dx}px; top: {dy}px; width: 150px; opacity: {op}">'
-                f'<div style="border: 2.5px solid {STAMP}; border-radius: 6px; padding: 3px">'
-                f'<div style="border: 1px solid {STAMP}; border-radius: 3px; padding: 5px 0 6px; text-align: center; color: {STAMP}; font-family: {SANS}">'
-                f'<div style="font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">RECEIVED</div>'
-                f'<div style="margin-top: 4px; font-weight: 800; font-size: 18px; line-height: 1; letter-spacing: 0.03em; white-space: nowrap">AUG 22 1972</div>'
-                f'<div style="margin-top: 4px; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">HEAD TELLER</div>'
-                f'</div></div></div>')
-    return (f'<div style="position: absolute; left: {left}px; top: {top}px; width: 154px; height: 68px; transform: rotate({rot}deg); transform-origin: 50% 50%">'
-            f'{face(0.26, 2.2, 1.6)}{face(0.84, 0, 0)}'
-            f'<img src="assets/stamp-wear.png" alt="" aria-hidden="true" style="position: absolute; left: -1px; top: -1px; width: 154px; height: 68px; display: block">'
-            f'</div>')
-
-
-def overlays(face):
-    gw = round(FH * 2246 / 1588)
-    return (f'<img src="assets/frame-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 1px; top: 0; width: {FW}px; height: {FH}px; display: block; transform: rotate(0.08deg)">'
-            f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: {(FW - gw) // 2}px; top: 0; width: {gw}px; height: {FH}px; opacity: 0.4; pointer-events: none; display: block">'
-            f'<img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; pointer-events: none; display: block">')
-
-
-def root(inner, face):
-    # the safety tint is printed a pass before the green form, so it sits a hair out of register
-    return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {PAPER}; font-family: {SANS}; color: {GREEN}">'
-            f'<img src="assets/paper-safety-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: -2px; top: 1px; width: {FW + 2}px; height: {FH}px; display: block">'
-            f'{inner}{overlays(face)}</div>')
-
-
-DISH = {
-    "Attica chips and onion dip": ("Attica chips and dip", "Ridged and salty, with onions cooked slow till brown in sour cream, cream cheese and chives.", "One big bowl for the counter"),
-    "Deli hero wedges": ("Deli heroes, cut six ways", "Ham, salami, provolone, iceberg and tomato, oil, vinegar, oregano, on long rolls. Pressed.", "Two at 1.40. Plenty for everybody"),
-    "Hostage pizza": ("Pepperoni pies, large", "Thin crust, crushed tomato and oregano, plenty of mozzarella, baked fast in a very hot oven.", "Two at 3.10. Pay the kid at the door"),
-    "Italian ice": ("Lemon ice", "Fresh juice and zest, sugar and water, frozen and scraped fluffy.", "A dozen cups. Not for Mr. Mulvaney"),
-    "Heatwave lager with lime and chilli salt": ("Cold beer with lime", "Lager over ice with a fresh squeeze, the glass dipped in salt and chili powder.", "A six-pack. For after closing"),
+LABELS = {
+    'Dog Day Afternoon (1975)': {
+        'Attica chips and onion dip': {'n': 'Chips and dip, party bowl', 'd': 'Ridged potato chips with our own dip: onions cooked slow until deep brown, stirred into sour cream and cream cheese with chives.', 'note': 'For a crowd. Call a day ahead.'},
+        'Deli hero wedges': {'n': 'Party hero, three foot', 'd': 'Ham, salami and provolone with shredded iceberg and ripe tomato, dressed with oil, vinegar and oregano, pressed and cut in wedges.', 'note': 'Feeds twelve. 11.00.'},
+        'Hostage pizza': {'n': 'Pepperoni pie', 'd': 'Thin crust, crushed tomato and oregano, plenty of mozzarella and coins of spicy cured sausage, baked fast in a blazing oven.', 'note': 'The one the whole block orders.'},
+        'Italian ice': {'n': 'Lemon ice', 'd': 'Fresh-squeezed juice and grated zest in sugar syrup, frozen and scraped by hand until fluffy. Served in paper cups.', 'note': 'The coldest thing on the avenue.'},
+        'Heatwave lager with lime and chilli salt': {'n': 'Cold beer with lime', 'd': 'Lager poured over two ice cubes and a fresh squeeze, the glass rimmed with salt, grated zest and a pinch of chili powder.', 'note': 'From the ice chest. Air conditioned inside.'},
+    }
 }
 
-# ---------------- FRONT ----------------
-front = f'''
-<img src="assets/bank-vignette.png" alt="" style="position: absolute; left: {L - 4}px; top: 44px; width: 160px; height: 108px; display: block">
-<div style="position: absolute; right: {FW - L - CW}px; top: 44px; font-family: {MONO}; font-size: 16px; line-height: 1; color: {RED}; letter-spacing: 0.04em; transform: translate(1px, -1px)">No.&nbsp;08221</div>
-<div style="position: absolute; left: 214px; top: 62px; width: 268px">
-  <div style="font-family: {ENGR}; font-weight: 700; font-size: 21px; line-height: 1.02; letter-spacing: 0.035em; color: {GREEN}; white-space: nowrap">HARBOR HILL<br>SAVINGS BANK</div>
-  <div style="margin-top: 6px; font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.2em; color: {GREEN}">BROOKLYN, NEW YORK</div>
-  <div style="margin-top: 9px; border-top: 2px solid {GREEN}; border-bottom: 0.8px solid {GREEN}; height: 2px"></div>
-  <div style="margin-top: 8px; font-family: {SANS}; font-weight: 800; font-size: 25px; line-height: 1; letter-spacing: 0.06em; color: {GREEN}; white-space: nowrap">SAVINGS DEPOSIT</div>
-</div>
+FILM = {
+    'fmt': 'brooklyn', 'fn': 'fmtBrooklyn',
+    'faces': ['front.html', 'back.html'], 'names': ['Front', 'Back'],
+    'mm': [215.9, 279.4],
+    'fonts': FONTS,
+    'fams': ['Sofia Sans Extra Condensed', 'Sofia Sans Condensed', 'Sofia Sans', 'Yellowtail', 'Gochi Hand'],
+    'phone': {'disp': "'Sofia Sans Extra Condensed',sans-serif", 'title': "'Yellowtail',cursive",
+              'name': "'Sofia Sans Condensed',sans-serif", 'body': "'Sofia Sans',sans-serif",
+              'price': "'Sofia Sans Condensed',sans-serif", 'note': "'Sofia Sans',sans-serif"},
+}
 
-<div style="position: absolute; left: {L}px; top: 178px; width: {CW}px; border: 1.5px solid {GREEN}; box-sizing: border-box">
-  <div style="display: flex; border-bottom: 1px solid {GREEN_SOFT}">
-    {field("Date", "Aug. 22, 1972", 152)}
-    <div style="border-left: 1px solid {GREEN_SOFT}"></div>
-    {field("Account number", "Petty cash", 150)}
-    <div style="border-left: 1px solid {GREEN_SOFT}"></div>
-    {field("Teller", "Sylvia")}
-  </div>
-  {field("Name", "Lunch order, all staff")}
-</div>
-
-<div style="position: absolute; left: {L}px; top: 278px; width: {CW}px; border: 1.5px solid {GREEN}; border-bottom: 0; box-sizing: border-box">
-  {ledger_head("CURRENCY, COIN AND ITEMS, LIST SINGLY")}
-
-  {item_row(1, *DISH["Attica chips and onion dip"], "1", "29")}
-  {item_row(2, *DISH["Deli hero wedges"], "2", "80")}
-
-  {item_row(3, *DISH["Hostage pizza"], "6", "20")}
-  {total_row("Total from other side", ("6", "84"))}
-  {total_row("Total", ("17", "13"), True)}
-</div>
-<div style="position: absolute; left: {L}px; top: 754px; width: {CW}px; display: flex; justify-content: space-between; font-family: {SANS}; font-size: 12px; line-height: 1; color: {GREEN}; white-space: nowrap">
-  <span style="font-style: italic">Deposits insured up to $20,000.</span><span>Form S-822 (7/72)</span>
-</div>
-{stamp(58, 674, -6)}
-'''
-
-# ---------------- BACK ----------------
-notes = [
-    "Call it in to the barbershop.",
-    "Front door only. The back is blocked.",
-    "The air conditioning is off in here.",
-    "Sonny is paying, cash.",
-    "Destination, per Sal: Wyoming.",
-    "Jenny, your husband called again.",
-]
-note_html = ''.join(
-    f'<div style="display: flex; gap: 8px; margin-top: 4px"><div style="flex: none; width: 22px; font-family: {MONO}; font-size: 16px; line-height: 1.27; color: {TYPE}">{i}.</div>'
-    f'<div style="flex: 1; font-family: {MONO}; font-size: 16px; line-height: 1.27; color: {TYPE}">{typed(n)}</div></div>'
-    for i, n in enumerate(notes, 1))
-
-BANK = [("Proof", "S."), ("Entered", ""), ("Checked", "")]
-bank_html = ''.join(
-    f'<div style="flex: 1; border-left: 1px solid {GREEN_SOFT}; padding: 0 6px; display: flex; align-items: center; gap: 6px">{label(l)}'
-    f'<div style="font-family: {MONO}; font-size: 16px; line-height: 1; color: {TYPE}">{typed(v) if v else ""}</div></div>'
-    for l, v in BANK)
-back = f'''
-<div style="position: absolute; left: {L}px; top: 46px; width: {CW}px; display: flex; justify-content: space-between; align-items: flex-end">
-  <div>
-    <div style="font-family: {ENGR}; font-weight: 700; font-size: 17px; line-height: 1; letter-spacing: 0.05em; color: {GREEN}">HARBOR HILL SAVINGS BANK</div>
-    <div style="margin-top: 6px; font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.16em; color: {GREEN}">SAVINGS DEPOSIT, REVERSE</div>
-  </div>
-  <div style="font-family: {MONO}; font-size: 16px; line-height: 1; color: {RED}; letter-spacing: 0.05em">No. 08221</div>
-</div>
-<div style="position: absolute; left: {L}px; top: 90px; width: {CW}px; border-top: 2px solid {GREEN}; border-bottom: 0.8px solid {GREEN}; height: 2px"></div>
-
-
-<div style="position: absolute; left: {L}px; top: 106px; width: {CW}px">
-<div style="border: 1.5px solid {GREEN}; border-bottom: 0; box-sizing: border-box">
-  {ledger_head("ADDITIONAL ITEMS")}
-
-  {item_row(4, *DISH["Italian ice"], "2", "40")}
-  {item_row(5, *DISH["Heatwave lager with lime and chilli salt"], "1", "69")}
-  {item_row(6, "Sodas, one case", "Twenty-four bottles, orange, cream and cola, with a diet one for Mr. Mulvaney.", None, "2", "75")}
-
-  {total_row("Total, carry to other side", ("6", "84"), True)}
-</div>
-<div style="margin-top: 16px">
-  <div style="font-family: {MONO}; font-size: 15px; line-height: 1; color: {TYPE}; letter-spacing: 0.04em"><span style="border-bottom: 1.5px solid {TYPE}; padding-bottom: 2px">{typed("FOR THE DELIVERY", 15)}</span></div>
-  {note_html}
-  <div style="margin-top: 8px; display: flex; justify-content: space-between; font-family: {MONO}; font-size: 16px; line-height: 1.27; color: {TYPE}"><span>{typed("P.S. Get well, Howard.")}</span><span>{typed("S., head teller")}</span></div>
-  <div style="margin-top: 9px; border: 1.5px solid {GREEN}; display: flex; height: 30px; box-sizing: border-box">
-    <div style="flex: none; background: {GREEN}; color: {PAPER}; font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1.05; letter-spacing: 0.1em; padding: 0 8px; display: flex; align-items: center">BANK USE ONLY</div>
-    {bank_html}
-  </div>
-</div></div>
-<div style="position: absolute; left: {L}px; top: 758px; width: {CW}px; display: flex; justify-content: space-between; font-family: {SANS}; font-size: 12px; line-height: 1; color: {GREEN}; white-space: nowrap"><span>This bank acts only as the depositor&#39;s collecting agent.</span><span>Form S-822 (7/72)</span></div>
-'''
-
-TITLES = {'front': 'Savings deposit ticket, front', 'back': 'Savings deposit ticket, reverse'}
-for face, inner in (('front', front), ('back', back)):
-    body = root(inner, face)
-    open(os.path.join(D, face + '.body.html'), 'w').write(body)
-    open(os.path.join(D, face + '.html'), 'w').write(
-        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{esc(TITLES[face])}</title>{LINK}'
-        f'<style>body{{margin:0}}</style></head><body>{body}</body></html>')
-
-film = {"fmt": "brooklyn", "fn": "fmtBrooklyn", "faces": ["front.html", "back.html"], "names": ["Front", "Reverse"],
-        "mm": [139.7, 215.9], "fonts": FONTS, "fams": ["Old Standard TT", "Courier Prime", "Libre Franklin"],
-        "phone": {"disp": "'Old Standard TT',serif", "title": "'Old Standard TT',serif", "name": "'Courier Prime',monospace",
-                  "body": "'Courier Prime',monospace", "price": "'Courier Prime',monospace", "note": "'Libre Franklin',sans-serif"}}
-open(os.path.join(D, 'film.json'), 'w').write(json.dumps(film, indent=1))
-
-labels = {"Dog Day Afternoon (1975)": {k: {"n": n, "d": d, "note": t + "."} for k, (n, d, t) in DISH.items()}}
-open(os.path.join(D, 'brooklyn.labels.json'), 'w').write(json.dumps(labels, indent=1, ensure_ascii=False))
-print('built')
+if __name__ == '__main__':
+    for n, fn in (('front', front), ('back', back)):
+        b = fn()
+        open(os.path.join(D, n + '.body.html'), 'w').write(b)
+        open(os.path.join(D, n + '.html'), 'w').write(wrap(b, 'Pizzeria Canicola, ' + n))
+    json.dump(FILM, open(os.path.join(D, 'film.json'), 'w'), indent=1)
+    json.dump(LABELS, open(os.path.join(D, 'brooklyn.labels.json'), 'w'), indent=1, ensure_ascii=False)
+    print('built')

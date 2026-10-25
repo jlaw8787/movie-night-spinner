@@ -1,0 +1,30 @@
+{
+ "fmt": "brooklyn",
+ "fn": "fmtBrooklyn",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Reverse"
+ ],
+ "mm": [
+  139.7,
+  215.9
+ ],
+ "fonts": "family=Courier+Prime&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400&family=Old+Standard+TT:wght@700",
+ "fams": [
+  "Old Standard TT",
+  "Courier Prime",
+  "Libre Franklin"
+ ],
+ "phone": {
+  "disp": "'Old Standard TT',serif",
+  "title": "'Old Standard TT',serif",
+  "name": "'Courier Prime',monospace",
+  "body": "'Courier Prime',monospace",
+  "price": "'Courier Prime',monospace",
+  "note": "'Libre Franklin',sans-serif"
+ }
+}

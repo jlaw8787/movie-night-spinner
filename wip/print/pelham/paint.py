@@ -1,187 +1,231 @@
-"""Paints the assets for the Command Center lunch run sheet (The Taking of Pelham One Two Three, 1974).
-A ditto (spirit duplicator) copy on legal paper, 8.5 x 14 in, purple ink, pinned to a board.
-- assets/doodle-hero.png : the hero sandwich someone drew on the ditto master with a stylus
-- assets/ditto-wear.png  : soft uneven ink transfer, edge wear, two tack holes, a coffee ring
-Low detail on purpose: big gentle shapes, no pixel noise."""
-import os, math
-import numpy as np
-from PIL import Image, ImageDraw, ImageFilter
+"""Paints the printed and prop parts of the Motorman Coffee Shop menu (Pelham One Two Three, 1974).
+- assets/photo-halftone.png : TMDB still of the Lexington local pulling in, as a two ink letterpress halftone
+- assets/guest-check.png    : the pencilled lunch run guest check, paper clip and PAID stamp baked in
+- assets/paper-wear.png     : soft edge wear and big gentle mottling for the card stock
+Run once before build.py. Needs the still in /tmp scratch or downloads it from TMDB."""
+import os, math, random, subprocess
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 
 D = os.path.dirname(os.path.abspath(__file__))
-A = os.path.join(D, 'assets')
-W, H = 1632, 2688          # 2x of 816 x 1344
-INK = (93, 71, 168)
+A = os.path.join(D, 'assets'); F = os.path.join(D, 'fonts')
+BROWN = (46, 31, 24); ORANGE = (201, 83, 29)
+random.seed(123)
+
+# ---------- 1. halftone photo ----------
+STILL = os.path.join(D, 'assets', 'src-still.jpg')
+if not os.path.exists(STILL):
+    subprocess.run(['curl', '-s', '-o', STILL, 'https://image.tmdb.org/t/p/original/syWyIUCzKB0xYiDpKlYbgV7ctGi.jpg'], check=True)
+BW, BH = 1440, 520                      # 2x of a 720 x 260 box
+src = Image.open(STILL).convert('RGB')
+sw, sh = src.size
+ch = int(sw * BH / BW); top = 170
+src = src.crop((0, top, sw, top + ch)).resize((BW, BH), Image.LANCZOS)
 
 
-def field(seed, scale, blur, w=W, h=H):
-    rng = np.random.default_rng(seed)
-    small = rng.random((h // scale + 2, w // scale + 2)).astype(np.float32)
-    im = Image.fromarray((small * 255).astype(np.uint8)).resize((w, h), Image.BICUBIC)
-    im = im.filter(ImageFilter.GaussianBlur(blur))
-    a = np.asarray(im).astype(np.float32) / 255
-    return (a - a.min()) / (a.max() - a.min() + 1e-6)
+def lum(im):
+    g = im.convert('L')
+    # the still is dark: lift the shadows so the platform, columns and roof read in print
+    lut = [int(255 * ((i / 255) ** 0.38)) for i in range(256)]
+    g = g.point(lut)
+    g = g.point(lambda v: max(0, min(255, int((v - 40) * 1.32))))
+    return g
 
 
-def wob(points, rng, amp=2.2):
-    out = []
-    for i in range(len(points) - 1):
-        (x0, y0), (x1, y1) = points[i], points[i + 1]
-        n = max(2, int(math.hypot(x1 - x0, y1 - y0) / 14))
-        for k in range(n):
-            t = k / n
-            out.append((x0 + (x1 - x0) * t + rng.normal(0, amp * .35), y0 + (y1 - y0) * t + rng.normal(0, amp * .35)))
-    out.append(points[-1])
-    return out
+def screen(gray, cell, angle, gain=1.0, floor=0.0):
+    """Classic AM halftone: dark = big dots. Returns an L coverage mask."""
+    W0, H0 = gray.size
+    P = 80                                          # pad with edge pixels so the screen runs to the edges
+    padded = Image.new('L', (W0 + 2 * P, H0 + 2 * P))
+    padded.paste(gray.resize((W0 + 2 * P, H0 + 2 * P)), (0, 0)); padded.paste(gray, (P, P))
+    gray = padded; W, H = gray.size
+    rot = gray.rotate(angle, resample=Image.BICUBIC, expand=True, fillcolor=255)
+    rw, rh = rot.size
+    S = 4                                           # supersample for smooth dots
+    out = Image.new('L', (rw * S, rh * S), 0)
+    dr = ImageDraw.Draw(out)
+    px = rot.load()
+    for y in range(0, rh, cell):
+        for x in range(0, rw, cell):
+            cx, cy = min(rw - 1, x + cell // 2), min(rh - 1, y + cell // 2)
+            dark = (255 - px[cx, cy]) / 255 * gain
+            if dark <= floor:
+                continue
+            r = cell * 0.62 * math.sqrt(min(1.0, dark))
+            dr.ellipse(((x + cell / 2 - r) * S, (y + cell / 2 - r) * S, (x + cell / 2 + r) * S, (y + cell / 2 + r) * S), fill=255)
+    out = out.resize((rw, rh), Image.LANCZOS)
+    out = out.rotate(-angle, resample=Image.BICUBIC, expand=False)
+    ox, oy = (rw - W) // 2 + P, (rh - H) // 2 + P
+    return out.crop((ox, oy, ox + W0, oy + H0))
 
 
-def arc(cx, cy, rx, ry, a0, a1, n=40):
-    return [(cx + rx * math.cos(math.radians(a0 + (a1 - a0) * i / n)),
-             cy + ry * math.sin(math.radians(a0 + (a1 - a0) * i / n))) for i in range(n + 1)]
+g = lum(src)
+k = screen(g, 6, 45, gain=0.9)
+# second ink: the red headlights and the glow, pulled from the red channel's lead over green
+r, gg, b = src.split()
+red = ImageChops.subtract(r, gg).point(lambda v: min(255, v * 3))
+red = red.filter(ImageFilter.GaussianBlur(3))
+o = screen(Image.eval(red, lambda v: 255 - v), 6, 15, gain=1.0, floor=0.06)
 
 
-def hero():
-    w, h = 720, 300
-    m = Image.new('L', (w, h), 0)
-    d = ImageDraw.Draw(m)
-    rng = np.random.default_rng(7)
-    lw = 6
-    def line(pts):
-        q = wob(pts, rng, 3.4)
-        for i in range(len(q) - 1):
-            wv = max(3, int(lw + rng.normal(0, 1.4)))
-            d.line([q[i], q[i + 1]], fill=255, width=wv)
-            d.ellipse((q[i][0] - wv / 2, q[i][1] - wv / 2, q[i][0] + wv / 2, q[i][1] + wv / 2), fill=255)
-    # top of the roll: a long dome
-    line(arc(360, 128, 320, 92, 180, 360, 60))
-    line([(40, 128), (680, 128)])
-    # seeds on the crust
-    for x, y in ((170, 70), (250, 52), (330, 44), (410, 46), (490, 56), (570, 76), (210, 96), (450, 90)):
-        d.ellipse((x - 5, y - 3, x + 5, y + 3), fill=255)
-    # lettuce: a frilly zigzag hanging under the roll
-    pts = []
-    for i in range(33):
-        x = 34 + i * 20
-        pts.append((x, 140 + (14 if i % 2 else 0)))
-    line(pts)
-    # tomato slices peeking out
-    for x in (120, 300, 480, 620):
-        line(arc(x, 160, 34, 14, 0, 180, 18))
-    # meat and cheese layers
-    line([(44, 182), (676, 182)])
-    line([(56, 200), (664, 200)])
-    # bottom of the roll
-    line(arc(360, 206, 316, 40, 0, 180, 50))
-    line([(44, 206), (676, 206)])
-    # toothpick with a little flag
-    line([(360, 20), (360, 110)])
-    line([(360, 20), (404, 30), (360, 42)])
-    halo = np.asarray(m.filter(ImageFilter.GaussianBlur(5))).astype(np.float32) / 255
-    a = np.asarray(m.filter(ImageFilter.GaussianBlur(1.3))).astype(np.float32) / 255
-    a = np.clip(np.clip(a * 1.2, 0, 1) * (0.6 + 0.4 * field(3, 30, 8, w, h)) + halo * .18, 0, 1)
-    out = np.zeros((h, w, 4), np.uint8)
-    out[..., 0], out[..., 1], out[..., 2] = INK
-    out[..., 3] = (a * 255).astype(np.uint8)
-    Image.fromarray(out, 'RGBA').save(os.path.join(A, 'doodle-hero.png'))
+def ink(mask, col, alpha=1.0):
+    lay = Image.new('RGBA', mask.size, col + (0,))
+    lay.putalpha(mask.point(lambda v: int(v * alpha)))
+    return lay
 
 
-def wear():
-    out = np.zeros((H, W, 4), np.float32)
-    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
-    # uneven ditto transfer: big soft pale patches, a little stronger toward the lower right
-    pale = field(11, 260, 120)
-    lean = np.clip((xx / W) * .5 + (yy / H) * .5, 0, 1)
-    a_pale = np.clip(pale - .45, 0, 1) * .55 + lean * .10
-    # a crease in the master prints as a pale streak running across the sheet
-    cy0 = 1180 + (xx - W / 2) * .06
-    crease = np.exp(-((yy - cy0) / 9) ** 2) * .42 * (0.5 + 0.5 * field(21, 90, 20))
-    # the right side of the sheet came off the drum short of fluid: it fades
-    fade = np.clip((xx / W - .5) / .5, 0, 1) ** 1.4 * .30 * (0.7 + 0.3 * field(25, 200, 60))
-    a_pale = np.clip(a_pale + crease + fade, 0, .8)
-    # purple thumb smudge where the operator pulled the sheet off the drum
-    sx, sy = 1560, 1500
-    sm = np.exp(-(((xx - sx) / 34) ** 2 + ((yy - sy) / 52) ** 2)) * .16 * (0.6 + 0.4 * field(23, 20, 6))
-    # a wet drag: the copy slid on the tray and pulled a faint purple smear sideways
-    sm += np.exp(-(((xx - 330) / 260) ** 2 + ((yy - 1640) / 16) ** 2)) * .07 * (0.5 + 0.5 * field(27, 30, 8))
-    # edge wear: darker, slightly yellowed border fading in
-    e = np.minimum(np.minimum(xx, W - xx), np.minimum(yy, H - yy))
-    a_edge = np.clip(1 - e / 70, 0, 1) ** 2 * .22 * (0.6 + 0.4 * field(5, 120, 30))
-    # coffee ring, lower right
-    cx, cy, r = 1360, 2330, 118
-    dist = np.hypot(xx - cx, yy - cy)
-    ring = np.exp(-((dist - r) / 7) ** 2) * .20 + np.exp(-((dist - r + 10) / 22) ** 2) * .05
-    ring *= (0.55 + 0.45 * field(9, 60, 14))
-    inside = np.clip(1 - dist / r, 0, 1) ** .3 * .035
-    stain = ring + inside
-    # compose: pale (white), edge (warm grey), stain (coffee)
-    def over(rgb, a):
-        nonlocal out
-        a = np.clip(a, 0, 1)
-        out[..., :3] = out[..., :3] * (1 - a[..., None]) * (out[..., 3:4] > 0) + np.array(rgb, np.float32) * a[..., None] + \
-            out[..., :3] * (out[..., 3:4] == 0) * 0
-        out[..., 3] = out[..., 3] + a * (1 - out[..., 3])
-    # simpler premultiplied-style stack
-    rgb = np.zeros((H, W, 3), np.float32); al = np.zeros((H, W), np.float32)
-    haze = field(41, 300, 140) * .05 + np.exp(-(((xx - 300) / 500) ** 2 + ((yy - 900) / 700) ** 2)) * .03
-    for col, a in (((150, 120, 210), haze), ((247, 245, 240), a_pale), ((150, 136, 108), a_edge), ((122, 82, 42), stain), ((96, 70, 170), sm)):
-        a = np.clip(a, 0, 1)
-        rgb = rgb * (1 - a[..., None]) + np.array(col, np.float32) * a[..., None]
-        al = al + a * (1 - al)
-    rgb = np.where(al[..., None] > 1e-4, rgb / np.maximum(al[..., None], 1e-4) * np.minimum(1, al[..., None] / np.maximum(al[..., None], 1e-4)), 0)
-    img = np.dstack([np.clip(rgb, 0, 255), np.clip(al * 255, 0, 255)]).astype(np.uint8)
-    im = Image.fromarray(img, 'RGBA')
-    # two tack holes at the top
-    d = ImageDraw.Draw(im)
-    for x in (150, W - 150):
-        d.ellipse((x - 9, 52, x + 9, 70), fill=(70, 66, 60, 150))
-        d.ellipse((x - 5, 56, x + 5, 66), fill=(40, 38, 35, 200))
-    im.save(os.path.join(A, 'ditto-wear.png'))
+ph = Image.new('RGBA', (BW, BH), (0, 0, 0, 0))
+ph.alpha_composite(ink(o, ORANGE, 0.95), (2, 1))   # slight misregister of the second plate
+ph.alpha_composite(ink(k, BROWN, 0.86))
+# soft letterpress edge: ink a touch lighter toward the right, like a real press sheet
+ph.save(os.path.join(A, 'photo-halftone.png'))
+
+# ---------- 2. guest check with clip and stamp ----------
+SW, SH = 520, 700                      # check paper at 2x (260 x 350 css)
+PAD = 70                               # room for the clip above and the shadow
+GREEN = (48, 104, 78); PAPER = (234, 240, 224); RED = (196, 46, 38); LEAD = (66, 66, 74)
+fh = ImageFont.truetype(os.path.join(F, 'ArchivoNarrow-700.ttf'), 30)
+fs = ImageFont.truetype(os.path.join(F, 'ArchivoNarrow-700.ttf'), 18)
+fn = ImageFont.truetype(os.path.join(F, 'ArchivoNarrow-700.ttf'), 30)
+pen = lambda s: ImageFont.truetype(os.path.join(F, 'ShadowsIntoLight.ttf'), s)
+
+chk = Image.new('RGBA', (SW, SH), PAPER + (255,))
+d = ImageDraw.Draw(chk)
+# printed form, green ink
+d.text((26, 20), 'GUEST CHECK', font=fh, fill=GREEN)
+d.text((SW - 26, 22), 'No 0123', font=fn, fill=RED, anchor='ra')
+y0 = 66
+d.line((0, y0, SW, y0), fill=GREEN, width=3)
+cols = [('TABLE', 0), ('TAKE OUT', 150), ('', 300)]
+for t, x in cols:
+    d.text((x + 10, y0 + 6), t, font=fs, fill=GREEN)
+    if x:
+        d.line((x, y0, x, y0 + 56), fill=GREEN, width=2)
+d.line((0, y0 + 56, SW, y0 + 56), fill=GREEN, width=3)
+rows_top, row_h = y0 + 56, 44
+for i in range(12):
+    yy = rows_top + row_h * (i + 1)
+    d.line((0, yy, SW, yy), fill=GREEN + (150,), width=2)
+d.line((SW - 112, rows_top, SW - 112, rows_top + row_h * 11), fill=GREEN, width=2)
+d.text((26, SH - 40), 'THANK YOU, CALL AGAIN', font=fs, fill=GREEN)
+d.text((SW - 26, SH - 40), 'TOTAL', font=fs, fill=GREEN, anchor='ra')
+
+# pencil layer (graphite: grey, a touch of grain)
+pl = Image.new('L', (SW, SH), 0)
+pd = ImageDraw.Draw(pl)
+pd.text((14, y0 + 8 + 4), '', font=pen(30), fill=255)
+pd.text((22, y0 + 22), 'Cmd Ctr', font=pen(28), fill=230)
+pd.text((170, y0 + 22), 'del.', font=pen(28), fill=230)
+lines = [('1 Tky Swiss hero', '1.23', 'Garber'), ('1 Coffee reg', '.25', ''),
+         ('1 Tky Swiss hero', '1.23', 'Patrone'), ('1 Egg cream', '.35', ''),
+         ('2 Cheese danish', '.80', 'Correll'), ('1 Coffee BLACK', '.25', ''),
+         ('6 Coffee, Tokyo visitors', '1.50', '')]
+for i, (it, pr, who) in enumerate(lines):
+    yy = rows_top + row_h * i + 2
+    jit = random.uniform(-2, 2)
+    pd.text((18 + jit, yy + jit), it, font=pen(31), fill=random.randint(205, 240))
+    pd.text((SW - 22, yy + 1), pr, font=pen(31), fill=225, anchor='ra')
+    if who:
+        w = pd.textlength(it, font=pen(31))
+        pd.text((18 + w + 14, yy + 4), who, font=pen(25), fill=180)
+yy = rows_top + row_h * 8 + 6
+pd.text((18, yy), 'Inside the hour!', font=pen(31), fill=225)
+pd.text((SW - 22, rows_top + row_h * 11 + 8), '5.61', font=pen(36), fill=240, anchor='ra')
+pd.line((SW - 100, rows_top + row_h * 11 + 50, SW - 20, rows_top + row_h * 11 + 47), fill=200, width=2)
+# graphite texture: break up the strokes a little, low detail
+noise = Image.effect_noise((SW // 2, SH // 2), 60).resize((SW, SH), Image.BILINEAR)
+pl = ImageChops.multiply(pl, noise.point(lambda v: min(255, 150 + v)))
+lead = Image.new('RGBA', (SW, SH), LEAD + (0,)); lead.putalpha(pl)
+chk.alpha_composite(lead)
+
+# PAID rubber stamp, red, rotated, inked unevenly
+st = Image.new('L', (230, 100), 0)
+sd = ImageDraw.Draw(st)
+sd.rounded_rectangle((4, 4, 225, 95), radius=10, outline=255, width=6)
+sd.text((115, 52), 'PAID', font=ImageFont.truetype(os.path.join(F, 'ArchivoNarrow-700.ttf'), 72), fill=255, anchor='mm')
+mott = Image.effect_noise((58, 25), 90).resize((230, 100), Image.BICUBIC).point(lambda v: 255 if v > 70 else int(v * 2.6))
+st = ImageChops.multiply(st, mott).rotate(-14, resample=Image.BICUBIC, expand=True)
+stamp = Image.new('RGBA', st.size, RED + (0,)); stamp.putalpha(st.point(lambda v: int(v * .82)))
+chk.alpha_composite(stamp, (40, rows_top + row_h * 9 - 6))
+
+# soft paper wear on the check: a faint fold line and darker edges
+wear = Image.new('L', (SW, SH), 0)
+wd = ImageDraw.Draw(wear)
+wd.rectangle((0, 0, SW - 1, SH - 1), outline=60, width=10)
+wear = wear.filter(ImageFilter.GaussianBlur(10))
+shade = Image.new('RGBA', (SW, SH), (120, 110, 80, 0)); shade.putalpha(wear)
+chk.alpha_composite(shade)
+# ragged top edge where it tore off the pad
+mask = Image.new('L', (SW, SH), 255)
+md = ImageDraw.Draw(mask)
+for x in range(0, SW, 3):
+    md.line((x, 0, x, random.choice([0, 1, 2, 3, 4])), fill=0)
+chk.putalpha(ImageChops.multiply(chk.split()[3], mask))
+
+# compose on a canvas with room for clip and shadow, then rotate a little
+CW, CH = SW + PAD * 2, SH + PAD * 2
+can = Image.new('RGBA', (CW, CH), (0, 0, 0, 0))
+sh_ = Image.new('L', (CW, CH), 0)
+sh_.paste(chk.split()[3].point(lambda v: int(v * .30)), (PAD + 5, PAD + 8))
+sh_ = sh_.filter(ImageFilter.GaussianBlur(9))
+shadow = Image.new('RGBA', (CW, CH), (40, 28, 20, 0)); shadow.putalpha(sh_)
+can.alpha_composite(shadow)
+can.alpha_composite(chk, (PAD, PAD))
 
 
-hero(); wear(); print('painted')
+def clip_layer():
+    """A steel paper clip, drawn as a wire with a dark edge and a highlight, 4x supersampled."""
+    S = 4
+    w, h = 76, 196
+    L = Image.new('RGBA', (w * S, h * S), (0, 0, 0, 0))
+    dr = ImageDraw.Draw(L)
+
+    def loop(x0, x1, ytop, ybot):
+        r = (x1 - x0) / 2
+        pts = []
+        for a in range(180, 361, 6):
+            t = math.radians(a)
+            pts.append((x0 + r + r * math.cos(t), ytop + r + r * math.sin(t)))
+        return pts, r
+
+    def path():
+        # outer wire: down the left, round the top, down the right, round the bottom, up the inner
+        P = []
+        top, r = loop(8, 68, 8, 0)
+        P += [(8, 150)] + top + [(68, 160)]
+        for a in range(0, 181, 6):
+            t = math.radians(a)
+            P.append((48 + 20 * math.cos(t), 160 + 20 * math.sin(t)))
+        P += [(28, 160), (28, 40)]
+        for a in range(180, 361, 6):
+            t = math.radians(a)
+            P.append((40 + 12 * math.cos(t), 40 + 12 * math.sin(t)))
+        P += [(52, 130)]
+        return [(x * S, y * S) for x, y in P]
+
+    p = path()
+    dr.line(p, fill=(92, 94, 100, 255), width=7 * S, joint='curve')
+    dr.line(p, fill=(168, 172, 178, 255), width=5 * S, joint='curve')
+    dr.line([(x - 1.2 * S, y - 1.2 * S) for x, y in p], fill=(232, 234, 236, 255), width=int(1.6 * S), joint='curve')
+    return L.resize((w, h), Image.LANCZOS)
 
 
-def title():
-    """LUNCH RUN as hand-drawn outline block letters with diagonal hatching, the way people lettered
-    a ditto master with a ballpoint and a ruler. Painted at 2x for a 470 x 100 px slot."""
-    from PIL import ImageFont
-    w, h = 940, 200
-    S = 3                                    # work large, then shrink
-    f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 178 * S)
-    m = Image.new('L', (w * S * 2, h * S * 2), 0)
-    d = ImageDraw.Draw(m)
-    d.text((10 * S, 10 * S), 'LUNCH RUN', font=f, fill=255)
-    bb = m.getbbox()
-    m = m.crop(bb).resize((w * S - 30 * S, h * S - 30 * S), Image.LANCZOS)
-    base = Image.new('L', (w * S, h * S), 0); base.paste(m, (15 * S, 15 * S)); m = base
-    # hand wobble: displace with a smooth noise field
-    a = np.asarray(m).astype(np.float32)
-    H2, W2 = a.shape
-    dx = (field(31, 60 * S, 30 * S, W2, H2) - .5) * 14 * S
-    dy = (field(32, 60 * S, 30 * S, W2, H2) - .5) * 14 * S
-    yy, xx = np.mgrid[0:H2, 0:W2]
-    sx = np.clip((xx + dx).astype(int), 0, W2 - 1); sy = np.clip((yy + dy).astype(int), 0, H2 - 1)
-    a = a[sy, sx]
-    solid = Image.fromarray(a.astype(np.uint8)).point(lambda v: 255 if v > 127 else 0)
-    inner = solid.filter(ImageFilter.MinFilter(2 * (3 * S) + 1))
-    outline = np.asarray(solid).astype(np.float32) - np.asarray(inner).astype(np.float32)
-    # diagonal hatching inside, slightly irregular spacing and weight
-    rng = np.random.default_rng(4)
-    hatch = Image.new('L', solid.size, 0); hd = ImageDraw.Draw(hatch)
-    x = -H2
-    while x < W2:
-        hd.line((x, H2, x + H2, 0), fill=255, width=int(2 * S + rng.integers(0, S + 1)))
-        x += int(10 * S + rng.integers(-S, S + 1))
-    inner2 = np.asarray(inner.filter(ImageFilter.MinFilter(2 * S + 1))).astype(np.float32) / 255
-    hat = np.asarray(hatch).astype(np.float32) / 255 * inner2
-    ink = np.clip(outline / 255 + hat * .9, 0, 1)
-    im = Image.fromarray((ink * 255).astype(np.uint8)).resize((w, h), Image.LANCZOS).filter(ImageFilter.GaussianBlur(.9))
-    halo = np.asarray(im.filter(ImageFilter.GaussianBlur(4))).astype(np.float32) / 255
-    al = np.asarray(im).astype(np.float32) / 255
-    al = np.clip(np.clip(al * 1.35, 0, 1) * (0.62 + 0.38 * field(33, 26, 8, w, h)) + halo * .14, 0, 1)
-    out = np.zeros((h, w, 4), np.uint8)
-    out[..., 0], out[..., 1], out[..., 2] = (75, 54, 160)
-    out[..., 3] = (al * 255).astype(np.uint8)
-    Image.fromarray(out, 'RGBA').save(os.path.join(A, 'title-lunch-run.png'))
+cl = clip_layer()
+csh = Image.new('RGBA', cl.size, (30, 20, 10, 0)); csh.putalpha(cl.split()[3].point(lambda v: int(v * .35)).filter(ImageFilter.GaussianBlur(3)))
+cx, cy = PAD + 334, PAD - 46
+can.alpha_composite(csh, (cx + 4, cy + 5))
+can.alpha_composite(cl, (cx, cy))
+can = can.rotate(3.2, resample=Image.BICUBIC, expand=False)
+can.save(os.path.join(A, 'guest-check.png'))
+print('guest check', can.size)
 
-
-title(); print('title')
+# ---------- 3. paper wear for the card ----------
+PW, PH = 816, 1056
+small = Image.effect_noise((34, 44), 40).resize((PW, PH), Image.BICUBIC)   # big gentle mottling
+edge = Image.new('L', (PW, PH), 0)
+ed = ImageDraw.Draw(edge)
+ed.rectangle((0, 0, PW - 1, PH - 1), outline=255, width=22)
+edge = edge.filter(ImageFilter.GaussianBlur(26))
+m = ImageChops.add(edge.point(lambda v: int(v * .55)), small.point(lambda v: max(0, int((v - 110) * .35))))
+wl = Image.new('RGBA', (PW, PH), (150, 112, 60, 0)); wl.putalpha(m.point(lambda v: min(90, v)))
+wl.save(os.path.join(A, 'paper-wear.png'))
+print('done')
