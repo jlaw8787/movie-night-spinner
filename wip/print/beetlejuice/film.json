@@ -10,22 +10,22 @@
   "Back"
  ],
  "mm": [
-  108,
-  279
+  215.9,
+  279.4
  ],
- "fonts": "family=Creepster&family=Barlow+Semi+Condensed:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Mrs+Saint+Delafield",
+ "fonts": "family=Jolly+Lodger&family=Spectral:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Mrs+Saint+Delafield",
  "fams": [
-  "Creepster",
-  "Barlow Semi Condensed",
+  "Jolly Lodger",
+  "Spectral",
   "Mrs Saint Delafield"
  ],
  "phone": {
-  "disp": "'Creepster',cursive",
-  "title": "'Creepster',cursive",
-  "name": "'Barlow Semi Condensed',sans-serif",
-  "body": "'Barlow Semi Condensed',sans-serif",
-  "price": "'Barlow Semi Condensed',sans-serif",
-  "note": "'Barlow Semi Condensed',sans-serif"
+  "disp": "'Jolly Lodger',cursive",
+  "title": "'Jolly Lodger',cursive",
+  "name": "'Spectral',serif",
+  "body": "'Spectral',serif",
+  "price": "'Spectral',serif",
+  "note": "'Spectral',serif"
  },
- "build": "python3 build.py && python3 shot.py"
+ "build": "python3 paint.py && python3 build.py && python3 shot.py"
 }

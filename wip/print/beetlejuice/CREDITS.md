@@ -1,5 +1,8 @@
-# Beetlejuice menu, image credits
-- hero-waiting-room.jpg: TMDB still /txNbQS3JAxP5w07UFddoaTyzsJt.jpg (Beetlejuice, 1988). The afterlife waiting room.
-- caution-shrimp.jpg: TMDB still /afFK9J35wcwpk0LKgXEGbzDffhR.jpg (Beetlejuice, 1988), shrimp cocktail scene, framed in a PIL hazard-stripe border.
+# Beetlejuice menu (Dinner at the Deetzes'), image credits
+- model-town.jpg / model-town-crop.jpg: painted in PIL by paint.py (attic model of Winter River). No characters drawn.
+- worm-border.png, paper-front-spirals.jpg, spiral-*.png: painted in PIL by paint.py.
+- still-shrimp.jpg: TMDB still /afFK9J35wcwpk0LKgXEGbzDffhR.jpg (Beetlejuice, 1988), dinner table, cropped clear of the wine glass.
+- still-handbook.jpg: TMDB still /2qlBTuaKPRTCgsoRcL0GbW70ZQq.jpg (Beetlejuice, 1988), Handbook for the Recently Deceased.
+- still-house.jpg: TMDB still /499IKhvHNeo7KRHxlbPQFgIiBIz.jpg (Beetlejuice, 1988), the Maitland house model.
 - paper-grain.png: shared house grain from jurassic/src/assets.
-- No Library of Congress, NYPL or Wikimedia image used: the venue is the film's own afterlife, which no real photo can show.
+- No LoC, NYPL or Wikimedia image: the house and town are the film's own sets.

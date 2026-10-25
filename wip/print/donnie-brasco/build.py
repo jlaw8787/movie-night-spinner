@@ -155,8 +155,8 @@ o.append(f'<div style="position: absolute; left: 40px; top: 548px; width: 736px;
          + kicker('House rule, tatami room', PINK, 17) +
          f'<div style="font-family: {DISP}; font-size: 46px; line-height: 1.05; color: {CREAM}; margin-top: 8px">PLEASE REMOVE<br>YOUR SHOES</div>'
          f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.25; color: {CREAM}; margin-top: 8px; width: 400px">Slippers at the step. No exceptions.</div>'
-         f'<div style="position: absolute; left: 480px; top: 24px; transform: rotate(-9deg); border: 5px solid {CINN}; padding: 6px 14px 2px; '
-         f'font-family: {DISP}; font-size: 38px; line-height: 1.05; color: {CINN}; text-align: center; background: rgba(24,17,15,0.6)">BOOTS<br>STAY ON</div>'
+         f'<div style="position: absolute; left: 514px; top: 26px; transform: rotate(-9deg); border: 5px solid {CINN}; padding: 6px 14px 2px; '
+         f'font-family: {DISP}; font-size: 33px; line-height: 1.05; color: {CINN}; text-align: center; background: rgba(24,17,15,0.6)">BOOTS<br>STAY ON</div>'
          '</div>')
 o.append(shoe_ticket(474, 708))
 # bar
