@@ -45,8 +45,8 @@ function front(f,poster,stills){
     <div style="font:400 118px/1 ${DISP};letter-spacing:.04em;color:#ffe9e4;text-shadow:${NEON};margin-top:18px">LAST LIGHT DINER</div>
     <div style="font:italic 400 23px/1.2 ${SERIF};color:${C.bone};margin-top:10px">Coffee, pie and shelter from the storm. Est. ${ESC(f.year)}.</div>
   </div>`;
-  const kicker=`<div style="font:700 18px/1 ${SANS};letter-spacing:.3em;color:${C.neon};text-transform:uppercase">Channel 13, the late show</div>`;
-  const notice=(top,right,rot)=>`<div style="position:absolute;top:${top}px;right:${right}px;width:236px;transform:rotate(${rot}deg);background:${C.paper};color:${C.ink};padding:14px 16px 14px;box-shadow:0 8px 22px rgba(0,0,0,.55);border-top:6px solid ${C.red}">
+  const kicker=`<div style="white-space:nowrap;font:700 17px/1 ${SANS};letter-spacing:.18em;color:${C.neon};text-transform:uppercase">Channel 13, the late show</div>`;
+  const notice=(top,right,rot)=>`<div style="position:absolute;top:${top}px;right:${right}px;width:244px;box-sizing:border-box;transform:rotate(${rot}deg);background:${C.paper};color:${C.ink};padding:14px 16px 14px;box-shadow:0 8px 22px rgba(0,0,0,.55);border-top:6px solid ${C.red}">
     <div style="font:400 30px/1 ${DISP};letter-spacing:.06em;color:${C.red}">STORM NOTICE</div>
     <div style="font:400 17px/1.32 ${SERIF};margin-top:6px">Bridge out past mile 13. Phone lines down since ten. Kitchen open till the lights go.</div>
     <div style="font:700 14px/1 ${SANS};letter-spacing:.18em;margin-top:9px;color:${C.mute}">THE MANAGEMENT</div></div>`;

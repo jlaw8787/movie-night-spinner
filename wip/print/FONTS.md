@@ -76,3 +76,4 @@ the-warriors: Squada One
 die-hard: Michroma
 anchorman: Rammetto One
 genre-kids: Fredoka
+genre-horror: League Gothic
