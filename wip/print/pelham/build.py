@@ -7,10 +7,10 @@ import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1344
-PAPER, INK, LEAD = '#f4f2ec', '#57369b', '#4f4f56'
+PAPER, INK, LEAD = '#f3f2ee', '#5d47a8', '#4f4f56'
 FONTS = 'family=Architects+Daughter&family=Cutive+Mono&family=Reenie+Beanie'
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=block">'
-SPREAD = 'text-shadow: 0 0 1px rgba(87,54,155,.55)'
+SPREAD = 'text-shadow: 0 0 1.4px rgba(93,71,168,.75), .5px .3px 0 rgba(93,71,168,.3)'
 HL = f"font-family: 'Architects Daughter', 'Comic Sans MS', cursive; {SPREAD}"
 TY = f"font-family: 'Cutive Mono', 'Courier New', monospace; {SPREAD}"
 PN = f"font-family: 'Reenie Beanie', cursive; color: {LEAD}"
@@ -70,10 +70,9 @@ ROWS = [("Lt. Garber", "hero, coffee reg.", "1.48"),
         ("Lt. Patrone", "hero, egg cream", "1.58"),
         ("Correll", "2 cheese danish, coffee blk", ".95"),
         ("Insp. Daniels", "soup, coffee light", "1.10"),
-        ("the floor", "doz. jelly", "2.00"),
-        ("", "", "")]
+        ("the floor", "doz. jelly", "2.00")]
 C1, C2 = 200, 600     # column x positions inside the grid (absolute)
-GT, RH = 1086, 30     # grid top, row height
+GT, RH = 1112, 28     # grid top, row height
 
 
 def grid():
@@ -85,18 +84,19 @@ def grid():
     out.append(rule(GX, y, GW, 2))
     for n, o, c in ROWS:
         if n:
-            out.append(f'<div style="position: absolute; left: {GX + 6}px; top: {y + 1}px; {PN}; font-size: 29px; line-height: 30px; white-space: nowrap">{n}</div>'
-                       f'<div style="position: absolute; left: {C1 + 10}px; top: {y + 1}px; {PN}; font-size: 29px; line-height: 30px; white-space: nowrap">{o}</div>'
-                       f'<div style="position: absolute; left: {C2}px; width: {R - C2 - 8}px; top: {y + 1}px; text-align: right; {PN}; font-size: 29px; line-height: 30px">{c}</div>')
+            out.append(f'<div style="position: absolute; left: {GX + 6}px; top: {y + 1}px; {PN}; font-size: 29px; line-height: 28px; white-space: nowrap">{n}</div>'
+                       f'<div style="position: absolute; left: {C1 + 10}px; top: {y + 1}px; {PN}; font-size: 29px; line-height: 28px; white-space: nowrap">{o}</div>'
+                       f'<div style="position: absolute; left: {C2}px; width: {R - C2 - 8}px; top: {y + 1}px; text-align: right; {PN}; font-size: 29px; line-height: 28px">{c}</div>')
         y += RH
         out.append(rule(GX, y, GW, 1))
     bottom = y
     for x in (C1, C2):
         out.append(f'<div style="position: absolute; left: {x}px; top: {GT}px; width: 1px; height: {bottom - GT}px; background: {INK}"></div>')
-    out.append(f'<div style="position: absolute; left: {C2 - 150}px; top: {bottom + 8}px; width: 140px; text-align: right; {HL}; font-size: 18px; letter-spacing: .06em">TOTAL</div>')
-    out.append(f'<div style="position: absolute; left: {C2}px; width: {R - C2 - 8}px; top: {bottom + 2}px; text-align: right; {PN}; font-size: 32px; line-height: 32px">7.11</div>')
-    out.append(f'<div style="position: absolute; left: {R - 76}px; top: {bottom + 34}px; width: 70px; height: 2px; background: {LEAD}; opacity: .8"></div>')
-    out.append(f'<div style="position: absolute; left: {R - 76}px; top: {bottom + 39}px; width: 70px; height: 2px; background: {LEAD}; opacity: .8"></div>')
+    out.append(f'<div style="position: absolute; left: {C1 + 10}px; top: {bottom + 6}px; {TY}; font-size: 15px">Leave the money with the order. No IOUs.</div>')
+    out.append(f'<div style="position: absolute; left: {C2 - 112}px; top: {bottom + 4}px; width: 104px; text-align: right; {HL}; font-size: 18px; letter-spacing: .06em">TOTAL</div>')
+    out.append(f'<div style="position: absolute; left: {C2}px; width: {R - C2 - 8}px; top: {bottom - 2}px; text-align: right; {PN}; font-size: 32px; line-height: 32px">7.11</div>')
+    out.append(f'<div style="position: absolute; left: {R - 70}px; top: {bottom + 27}px; width: 64px; height: 2px; background: {LEAD}; opacity: .75"></div>')
+    out.append(f'<div style="position: absolute; left: {R - 70}px; top: {bottom + 31}px; width: 64px; height: 2px; background: {LEAD}; opacity: .75"></div>')
     return ''.join(out), bottom
 
 

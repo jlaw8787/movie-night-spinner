@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw, ImageFilter
 D = os.path.dirname(os.path.abspath(__file__))
 A = os.path.join(D, 'assets')
 W, H = 1632, 2688          # 2x of 816 x 1344
-INK = (86, 52, 150)
+INK = (93, 71, 168)
 
 
 def field(seed, scale, blur, w=W, h=H):
@@ -45,7 +45,12 @@ def hero():
     d = ImageDraw.Draw(m)
     rng = np.random.default_rng(7)
     lw = 6
-    def line(pts): d.line(wob(pts, rng), fill=255, width=lw, joint='curve')
+    def line(pts):
+        q = wob(pts, rng, 3.4)
+        for i in range(len(q) - 1):
+            wv = max(3, int(lw + rng.normal(0, 1.4)))
+            d.line([q[i], q[i + 1]], fill=255, width=wv)
+            d.ellipse((q[i][0] - wv / 2, q[i][1] - wv / 2, q[i][0] + wv / 2, q[i][1] + wv / 2), fill=255)
     # top of the roll: a long dome
     line(arc(360, 128, 320, 92, 180, 360, 60))
     line([(40, 128), (680, 128)])
@@ -70,9 +75,9 @@ def hero():
     # toothpick with a little flag
     line([(360, 20), (360, 110)])
     line([(360, 20), (404, 30), (360, 42)])
-    m = m.filter(ImageFilter.GaussianBlur(1.1))
-    a = np.asarray(m).astype(np.float32) / 255
-    a = np.clip(a * 1.25, 0, 1) * (0.78 + 0.22 * field(3, 40, 12, w, h))
+    halo = np.asarray(m.filter(ImageFilter.GaussianBlur(5))).astype(np.float32) / 255
+    a = np.asarray(m.filter(ImageFilter.GaussianBlur(1.3))).astype(np.float32) / 255
+    a = np.clip(np.clip(a * 1.2, 0, 1) * (0.6 + 0.4 * field(3, 30, 8, w, h)) + halo * .18, 0, 1)
     out = np.zeros((h, w, 4), np.uint8)
     out[..., 0], out[..., 1], out[..., 2] = INK
     out[..., 3] = (a * 255).astype(np.uint8)
@@ -85,7 +90,14 @@ def wear():
     # uneven ditto transfer: big soft pale patches, a little stronger toward the lower right
     pale = field(11, 260, 120)
     lean = np.clip((xx / W) * .5 + (yy / H) * .5, 0, 1)
-    a_pale = np.clip(pale - .55, 0, 1) * .34 + lean * .05
+    a_pale = np.clip(pale - .45, 0, 1) * .55 + lean * .10
+    # a crease in the master prints as a pale streak running across the sheet
+    cy0 = 1180 + (xx - W / 2) * .06
+    crease = np.exp(-((yy - cy0) / 9) ** 2) * .42 * (0.5 + 0.5 * field(21, 90, 20))
+    a_pale = np.clip(a_pale + crease, 0, .8)
+    # purple thumb smudge where the operator pulled the sheet off the drum
+    sx, sy = 1560, 1500
+    sm = np.exp(-(((xx - sx) / 34) ** 2 + ((yy - sy) / 52) ** 2)) * .16 * (0.6 + 0.4 * field(23, 20, 6))
     # edge wear: darker, slightly yellowed border fading in
     e = np.minimum(np.minimum(xx, W - xx), np.minimum(yy, H - yy))
     a_edge = np.clip(1 - e / 70, 0, 1) ** 2 * .22 * (0.6 + 0.4 * field(5, 120, 30))
@@ -105,7 +117,7 @@ def wear():
         out[..., 3] = out[..., 3] + a * (1 - out[..., 3])
     # simpler premultiplied-style stack
     rgb = np.zeros((H, W, 3), np.float32); al = np.zeros((H, W), np.float32)
-    for col, a in (((250, 249, 245), a_pale), ((150, 136, 108), a_edge), ((122, 82, 42), stain)):
+    for col, a in (((247, 245, 240), a_pale), ((150, 136, 108), a_edge), ((122, 82, 42), stain), ((96, 70, 170), sm)):
         a = np.clip(a, 0, 1)
         rgb = rgb * (1 - a[..., None]) + np.array(col, np.float32) * a[..., None]
         al = al + a * (1 - al)

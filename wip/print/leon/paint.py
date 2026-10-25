@@ -47,7 +47,7 @@ class Art:
     def pts(self, pts):
         return [(x * SS, y * SS) for x, y in pts]
 
-    def save(self, name, kcell=7, gcell=7):
+    def save(self, name, kcell=5.2, gcell=5.6):
         kd = np.asarray(self.k, np.float32) / 255
         gd = np.asarray(self.g, np.float32) / 255
         kink = screen(kd, kcell * SS / 2, 45) | (np.asarray(self.kl) > 127)
@@ -55,6 +55,8 @@ class Art:
         knock = np.asarray(self.p) > 127
         kink &= ~knock
         gink &= ~knock
+        # the green plate never quite lines up with the black on a web press
+        gink = np.roll(gink, (int(1.1 * SS), int(1.4 * SS)), axis=(0, 1))
         out = np.zeros((self.H, self.W, 4), np.float32)
         # green first, black overprints
         for ink, col in ((gink, GREEN), (kink, BLACK)):
@@ -124,7 +126,7 @@ def carton():
     sh = Image.new('L', (a.W, a.H), 0)
     ImageDraw.Draw(sh).polygon(a.pts([(20, 318), (150, 318), (226, 296), (246, 300), (190, 326), (30, 326)]), fill=255)
     a.k = masked(a.k, sh, 70)
-    a.save('carton.png', kcell=6, gcell=6)
+    a.save('carton.png')
 
 
 # ---------------- Chinese evergreen in a pot ----------------
@@ -291,6 +293,47 @@ def baguette():
     a.save('baguette.png')
 
 
+# ---------------- plate of spaghetti for Tony's ad ----------------
+def spaghetti():
+    a = Art(250, 150)
+    s = SS
+    kd = ImageDraw.Draw(a.kl); gd = ImageDraw.Draw(a.gl)
+    plate = Image.new('L', (a.W, a.H), 0)
+    ImageDraw.Draw(plate).ellipse(a.pts([(8, 40), (242, 144)]), fill=255)
+    a.k = Image.composite(shade(Image.new('L', plate.size, 0), (0, 40 * s, a.W, 144 * s), 0.05, 0.32), a.k, plate)
+    kd.ellipse(a.pts([(8, 40), (242, 144)]), outline=255, width=int(2.4 * s))
+    kd.ellipse(a.pts([(34, 52), (216, 132)]), outline=255, width=int(1.3 * s))
+    # nest of pasta: many loose loops, sauce as a dark screen in the middle
+    nest = Image.new('L', (a.W, a.H), 0)
+    ImageDraw.Draw(nest).ellipse(a.pts([(50, 30), (200, 118)]), fill=255)
+    pd = ImageDraw.Draw(a.p)
+    pd.ellipse(a.pts([(50, 30), (200, 118)]), fill=255)
+    random.seed(25)
+    strands = Image.new('L', (a.W, a.H), 0); sd = ImageDraw.Draw(strands)
+    for _ in range(46):
+        cx, cy = random.uniform(80, 170), random.uniform(52, 98)
+        rx, ry = random.uniform(18, 52), random.uniform(8, 24)
+        t0 = random.uniform(0, 6.28); span = random.uniform(2.2, 4.4)
+        pts = [(cx + rx * math.cos(t0 + span * i / 30), cy + ry * math.sin(t0 + span * i / 30)) for i in range(31)]
+        sd.line(a.pts(pts), fill=255, width=int(1.5 * s))
+    a.p = Image.fromarray(np.where(np.asarray(strands) > 0, 0, np.asarray(a.p)).astype(np.uint8))
+    a.kl = Image.fromarray(np.maximum(np.asarray(a.kl), np.asarray(strands)))
+    sauce = Image.new('L', (a.W, a.H), 0)
+    ImageDraw.Draw(sauce).ellipse(a.pts([(92, 46), (160, 84)]), fill=255)
+    sauce = sauce.filter(ImageFilter.GaussianBlur(6 * s))
+    a.k = Image.fromarray(np.maximum(np.asarray(a.k), (np.asarray(sauce) * 0.75).astype(np.uint8)))
+    a.p = Image.fromarray(np.where(np.asarray(sauce) > 60, 0, np.asarray(a.p)).astype(np.uint8))
+    for (cx, cy, deg) in ((118, 54, -40), (136, 50, 20), (128, 60, 80)):
+        poly = leaf(cx, cy, 20, 7, math.radians(deg))
+        gd.polygon(a.pts(poly), fill=255)
+        kd.line(a.pts(poly + [poly[0]]), fill=255, width=int(1.2 * s))
+    # fork resting on the rim
+    kd.line(a.pts([(196, 132), (246, 96)]), fill=255, width=int(3.2 * s))
+    for k in range(4):
+        kd.line(a.pts([(190 - k * 2.2, 128 + k * 2.8), (170 - k * 2.2, 142 + k * 2.8)]), fill=255, width=int(1.4 * s))
+    a.save('spaghetti.png')
+
+
 # ---------------- price burst ----------------
 def burst():
     a = Art(170, 170)
@@ -328,7 +371,7 @@ def wear(name, seed, edge_w, tone):
 
 if __name__ == '__main__':
     os.makedirs(A, exist_ok=True)
-    carton(); plant(); shake(); dirtcup(); baguette(); burst()
+    carton(); plant(); shake(); dirtcup(); baguette(); spaghetti(); burst()
     wear('wear-front.png', 94, 90, (176, 146, 86))
     wear('wear-back.png', 12, 90, (176, 146, 86))
     print('painted')

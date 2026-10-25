@@ -1,6 +1,6 @@
 """Paints the art for the Silver Palm Coaches timetable (Midnight Cowboy, 1969).
-assets/coach-art.png    cover picture: a stainless intercity coach on the coast road under palms,
-                        flat offset colours (sky aqua, tangerine, black, silver), no people.
+assets/coach-art.png    cover picture: a 1960s stainless coach on the causeway into Miami Beach,
+                        printed as two spot inks (black halftone plus line cut, orange off register).
 assets/pencil-ring.png  a soft graphite ring, someone circled the midnight departure.
 assets/wear-outside.png / wear-inside.png  soft edge yellowing, two fold creases, pocket wear.
 assets/paper-grain.png  shared grain, copied from the Jurassic kit.
@@ -24,128 +24,185 @@ SILVER = (206, 208, 206)
 SILVER_D = (150, 154, 155)
 GLASS = (34, 52, 58)
 
-# ---------------- cover art: 352 x 330 css px, painted at 4x ----------------
+# ---------------- cover art: two spot inks, halftone and line cut ----------------
+# Drawn as three plates at 4x: a tone plate (black halftone), a line plate (solid black line cut)
+# and an orange plate (solid and tint screen). Plates are screened, overprinted by multiply,
+# and the orange plate is set 3px off register, like a cheap two-colour job on a small press.
+import numpy as np
+AW, AH = 272, 290             # css px
 S = 4
-W, H = 352 * S, 330 * S
-im = Image.new('RGB', (W, H), PAPER)
-d = ImageDraw.Draw(im)
+W, H = AW * S, AH * S
+tone = Image.new('L', (W, H), 0)     # 0 = no ink, 255 = full black (before screening)
+line = Image.new('L', (W, H), 0)     # solid black line work
+org = Image.new('L', (W, H), 0)      # orange coverage (0 to 255)
+t, l, o = ImageDraw.Draw(tone), ImageDraw.Draw(line), ImageDraw.Draw(org)
+def P(*xy): return [v * S for v in xy]
 
-# sky in two flat bands, like a two-pass offset job
-d.rectangle([0, 0, W, int(H * 0.30)], fill=SKY)
-d.rectangle([0, int(H * 0.30), W, int(H * 0.52)], fill=SKY2)
-# a few flat clouds
-for cx, cy, r in ((70, 52, 26), (100, 46, 32), (134, 56, 22), (250, 88, 18), (272, 82, 24), (296, 90, 16)):
-    d.ellipse([(cx - r) * S, (cy - r * 0.55) * S, (cx + r) * S, (cy + r * 0.55) * S], fill=PAPER)
-d.rectangle([40 * S, 56 * S, 160 * S, 64 * S], fill=PAPER)
-d.rectangle([232 * S, 90 * S, 316 * S, 96 * S], fill=PAPER)
-# sea and sand
-d.rectangle([0, int(H * 0.52), W, int(H * 0.62)], fill=SEA)
-for y in (0.555, 0.59):
-    for x0 in range(0, 352, 46):
-        d.rectangle([(x0 + 8) * S, int(H * y), (x0 + 30) * S, int(H * y) + 2 * S], fill=SKY2)
-d.rectangle([0, int(H * 0.62), W, int(H * 0.70)], fill=SAND)
+HZ = 128          # horizon
+SHORE = 150       # far shore line
+ROAD = 214
+# sky: orange tint screen fading to paper at the horizon, plus a thin black screen high up
+for y in range(0, HZ):
+    k = y / HZ
+    o.line(P(0, y, AW, y), fill=int(120 * (1 - k) ** 1.4 + 22), width=S)
+    t.line(P(0, y, AW, y), fill=int(28 * (1 - k)), width=S)
+# clouds: knocked out of both plates, edged with line
+for cx, cy, rx, ry in ((70, 40, 44, 13), (108, 32, 30, 14), (200, 64, 36, 9), (226, 58, 24, 9)):
+    for d_ in (o, t):
+        d_.ellipse(P(cx - rx, cy - ry, cx + rx, cy + ry), fill=0)
+# Miami Beach hotel row across the water, period slab blocks
+x = 4
+random.seed(11)
+while x < AW - 4:
+    w_ = random.choice((14, 18, 22, 26, 30))
+    h_ = random.choice((12, 18, 24, 30, 38))
+    if 96 < x < 170: h_ = min(h_, 14)
+    t.rectangle(P(x, HZ - h_, x + w_, HZ + 2), fill=118)
+    for yy in range(HZ - h_ + 3, HZ, 4):
+        t.line(P(x + 2, yy, x + w_ - 2, yy), fill=40, width=S)
+    l.line(P(x, HZ - h_, x + w_, HZ - h_), fill=255, width=S)
+    x += w_ + random.choice((0, 2, 4))
+# bay: mid tone with white line-cut streaks
+t.rectangle(P(0, HZ + 2, AW, SHORE + 2), fill=110)
+o.rectangle(P(0, HZ + 2, AW, SHORE + 2), fill=40)
+for i, y in enumerate(range(HZ + 6, SHORE, 5)):
+    for x0 in range(-20 + (i % 2) * 17, AW, 34):
+        t.line(P(x0, y, x0 + 18 - (i % 3) * 3, y), fill=0, width=int(1.4 * S))
+# causeway shoulder and sand
+t.rectangle(P(0, SHORE + 2, AW, ROAD), fill=34)
+o.rectangle(P(0, SHORE + 2, AW, ROAD), fill=70)
+for y in range(SHORE + 8, ROAD, 6):
+    for x0 in range((y * 7) % 23, AW, 23):
+        l.point([(x0 * S + dx, y * S + dy) for dx in range(4) for dy in range(4)], fill=200)
+# road
+t.rectangle(P(0, ROAD, AW, AH), fill=150)
+l.rectangle(P(0, ROAD, AW, ROAD + 1.5), fill=255)
+for x0 in range(-6, AW, 34):
+    t.rectangle(P(x0, 262, x0 + 18, 265), fill=0)
+    o.rectangle(P(x0, 262, x0 + 18, 265), fill=255)
 
-def palm(x, base, height, lean, scale=1.0):
-    """trunk from (x, base) curving by lean, crown of fronds"""
-    pts = []
-    for i in range(41):
-        t = i / 40
-        pts.append((x + lean * t * t, base - height * t))
+def palm(x, base, height, lean, sc):
+    pts = [(x + lean * (i / 40) ** 2, base - height * i / 40) for i in range(41)]
     for i in range(40):
         (x1, y1), (x2, y2) = pts[i], pts[i + 1]
-        w = (9 - 4 * i / 40) * scale
-        d.line([(x1 * S, y1 * S), (x2 * S, y2 * S)], fill=INK, width=int(w * S))
-    # trunk rings
-    for i in range(3, 40, 4):
-        x1, y1 = pts[i]
-        w = (9 - 4 * i / 40) * scale
-        d.line([((x1 - w / 2) * S, y1 * S), ((x1 + w / 2) * S, (y1 + 1.5) * S)], fill=PAPER, width=int(1.2 * S))
+        w = (7.5 - 3.5 * i / 40) * sc
+        l.line(P(x1, y1, x2, y2), fill=255, width=int(w * S))
+    for i in range(2, 40, 3):     # bark rings cut out of the trunk
+        x1, y1 = pts[i]; w = (7.5 - 3.5 * i / 40) * sc
+        l.line(P(x1 - w / 2 + 1, y1, x1 + w / 2, y1 + 1.2), fill=0, width=int(0.9 * S))
     tx, ty = pts[-1]
-    for ang, ln in ((-170, 58), (-140, 64), (-110, 50), (-75, 46), (-40, 62), (-10, 60), (20, 46), (160, 44), (195, 48)):
-        a = math.radians(ang)
-        ln *= scale
-        # frond as a curved leaf: spine bends downward
-        spine = []
-        for j in range(21):
-            t = j / 20
-            sx = tx + math.cos(a) * ln * t
-            sy = ty + math.sin(a) * ln * t + (ln * 0.55) * t * t
-            spine.append((sx, sy))
-        left, right = [], []
-        for j, (sx, sy) in enumerate(spine):
-            t = j / 20
-            wdt = 7 * scale * math.sin(math.pi * min(1, t * 1.15)) + 0.6
-            if j < 20:
-                nx, ny = spine[j + 1][0] - sx, spine[j + 1][1] - sy
-            else:
-                nx, ny = sx - spine[j - 1][0], sy - spine[j - 1][1]
+    for ang, ln in ((-172, 50), (-145, 56), (-115, 42), (-82, 38), (-48, 52), (-15, 54), (14, 44), (162, 40), (196, 44)):
+        a = math.radians(ang); ln *= sc
+        spine = [(tx + math.cos(a) * ln * k / 24, ty + math.sin(a) * ln * k / 24 + ln * 0.5 * (k / 24) ** 2) for k in range(25)]
+        for k in range(24):
+            l.line(P(*spine[k], *spine[k + 1]), fill=255, width=int(1.8 * S))
+        # leaflets drawn as short strokes, like an engraver's line cut
+        for k in range(2, 24):
+            sx, sy = spine[k]
+            nx, ny = spine[min(k + 1, 24)][0] - spine[k - 1][0], spine[min(k + 1, 24)][1] - spine[k - 1][1]
             nl = math.hypot(nx, ny) or 1
-            px, py = -ny / nl, nx / nl
-            left.append(((sx + px * wdt) * S, (sy + py * wdt) * S))
-            right.append(((sx - px * wdt * 0.5) * S, (sy - py * wdt * 0.5) * S))
-        d.polygon(left + right[::-1], fill=INK)
-        # notches in the frond
-        for j in range(4, 19, 3):
-            sx, sy = spine[j]
-            d.line([(sx * S, sy * S), left[j]], fill=SKY2 if sy < H * 0.52 / S else SEA, width=int(1.1 * S))
-    d.ellipse([(tx - 6 * scale) * S, (ty - 3 * scale) * S, (tx + 6 * scale) * S, (ty + 7 * scale) * S], fill=INK)
+            ux, uy = nx / nl, ny / nl
+            lf = 9 * sc * math.sin(math.pi * k / 26) + 2
+            for side in (1, -1):
+                px, py = -uy * side, ux * side
+                ex = sx + (px * 0.85 + ux * 0.55) * lf
+                ey = sy + (py * 0.85 + uy * 0.55) * lf + 2.5
+                l.line(P(sx, sy, ex, ey), fill=255, width=int(1.1 * S))
+    l.ellipse(P(tx - 4 * sc, ty - 2 * sc, tx + 4 * sc, ty + 5 * sc), fill=255)
 
-palm(56, 236, 150, 22, 1.0)
-palm(300, 236, 118, -16, 0.85)
-palm(330, 236, 160, 12, 1.05)
+palm(30, ROAD - 2, 150, 16, 0.95)
+palm(250, ROAD - 2, 120, -12, 0.8)
 
-# road
-d.rectangle([0, int(H * 0.70), W, H], fill=(88, 88, 84))
-for x0 in range(-10, 352, 40):
-    d.rectangle([x0 * S, int(H * 0.86), (x0 + 22) * S, int(H * 0.86) + 3 * S], fill=YEL)
-d.rectangle([0, int(H * 0.70), W, int(H * 0.70) + 3 * S], fill=PAPER)
-
-# the coach, facing right, flat-roof stainless body
-bx0, bx1 = 22, 330         # css px
-by0, by1 = 152, 252
-r = 14
-d.rounded_rectangle([bx0 * S, by0 * S, bx1 * S, by1 * S], radius=r * S, fill=SILVER)
-# fluted lower panels
-for y in range(206, 244, 5):
-    d.rectangle([(bx0 + 4) * S, y * S, (bx1 - 6) * S, (y + 1.6) * S], fill=SILVER_D)
-# livery stripes under the windows
-d.rectangle([bx0 * S, 192 * S, bx1 * S, 199 * S], fill=ORANGE)
-d.rectangle([bx0 * S, 199 * S, bx1 * S, 203 * S], fill=YEL)
-# window band
-d.rounded_rectangle([(bx0 + 8) * S, 162 * S, (bx1 - 4) * S, 188 * S], radius=5 * S, fill=GLASS)
-for x in range(bx0 + 44, bx1 - 40, 30):
-    d.rectangle([x * S, 162 * S, (x + 3) * S, 188 * S], fill=SILVER)
-# windscreen sweeps down at the nose
-d.polygon([((bx1 - 34) * S, 162 * S), ((bx1 - 4) * S, 162 * S), ((bx1 - 1) * S, 196 * S), ((bx1 - 30) * S, 196 * S)], fill=GLASS)
-d.rectangle([(bx1 - 36) * S, 162 * S, (bx1 - 33) * S, 196 * S], fill=SILVER)
-# destination sign box (text goes on in HTML)
-d.rectangle([(bx1 - 92) * S, 149 * S, (bx1 - 8) * S, 163 * S], fill=INK)
+# the coach: a 1960s flat-roof stainless intercity coach, nose to the right
+bx0, bx1, by0, by1 = 14, 252, 150, 240
+# body tone: light at the roof, shaded under the belt
+t.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=20)
+for y in range(by0 + 46, by1):
+    t.line(P(bx0 + 2, y, bx1 - 2, y), fill=int(30 + (y - by0 - 46) * 1.6), width=S)
+o.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=0)
+l.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, outline=255, width=int(1.6 * S))
+# roof marker lamps and roof rib
+l.line(P(bx0 + 16, by0 + 5, bx1 - 22, by0 + 5), fill=255, width=int(0.9 * S))
+for xm in (bx0 + 8, bx1 - 14):
+    o.rectangle(P(xm, by0 - 3, xm + 6, by0), fill=255); l.rectangle(P(xm, by0 - 3, xm + 6, by0), outline=255, width=S)
+# window band: dark tone with a white diagonal glint per pane
+t.rectangle(P(bx0 + 6, by0 + 10, bx1 - 30, by0 + 36), fill=210)
+for xw in range(bx0 + 6, bx1 - 34, 26):
+    l.rectangle(P(xw + 22, by0 + 10, xw + 26, by0 + 36), fill=255)
+    t.polygon(P(xw + 6, by0 + 36, xw + 11, by0 + 36, xw + 19, by0 + 10, xw + 14, by0 + 10), fill=60)
+l.rectangle(P(bx0 + 6, by0 + 10, bx1 - 30, by0 + 36), outline=255, width=int(1.4 * S))
+# windshield, raked
+t.polygon(P(bx1 - 27, by0 + 10, bx1 - 5, by0 + 10, bx1 - 1, by0 + 44, bx1 - 24, by0 + 44), fill=210)
+t.polygon(P(bx1 - 20, by0 + 44, bx1 - 15, by0 + 44, bx1 - 11, by0 + 10, bx1 - 16, by0 + 10), fill=70)
+l.polygon(P(bx1 - 27, by0 + 10, bx1 - 5, by0 + 10, bx1 - 1, by0 + 44, bx1 - 24, by0 + 44), outline=255, width=int(1.4 * S))
+# destination sign over the windshield (lettered in the HTML? no, too small: lettered here)
 from PIL import ImageFont
-f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 11 * S)
-d.text(((bx1 - 50) * S, 156.5 * S), 'MIAMI', font=f, fill=YEL, anchor='mm')
-# door at the front
-d.rectangle([(bx1 - 66) * S, 204 * S, (bx1 - 40) * S, 248 * S], fill=SILVER_D)
-d.rectangle([(bx1 - 64) * S, 206 * S, (bx1 - 54) * S, 230 * S], fill=GLASS)
-d.rectangle([(bx1 - 52) * S, 206 * S, (bx1 - 42) * S, 230 * S], fill=GLASS)
-# baggage bay doors
-for x in (110, 170):
-    d.rectangle([x * S, 208 * S, (x + 50) * S, 244 * S], outline=SILVER_D, width=2 * S)
-# headlamp and bumper
-d.ellipse([(bx1 - 12) * S, 226 * S, (bx1 - 2) * S, 236 * S], fill=YEL)
-d.rectangle([(bx1 - 22) * S, 244 * S, (bx1 + 4) * S, 252 * S], fill=INK)
-d.rectangle([(bx0 - 2) * S, 244 * S, (bx0 + 16) * S, 252 * S], fill=INK)
-# wheels
-for wx in (78, 278):
-    d.ellipse([(wx - 21) * S, 232 * S, (wx + 21) * S, 274 * S], fill=INK)
-    d.ellipse([(wx - 10) * S, 243 * S, (wx + 10) * S, 263 * S], fill=SILVER)
-    d.ellipse([(wx - 4) * S, 249 * S, (wx + 4) * S, 257 * S], fill=SILVER_D)
-# wheel arches
-for wx in (78, 278):
-    d.pieslice([(wx - 25) * S, 228 * S, (wx + 25) * S, 278 * S], 180, 360, fill=None, outline=INK, width=2 * S)
-# shadow on road
-d.rectangle([(bx0 + 6) * S, 274 * S, (bx1 - 6) * S, 278 * S], fill=(48, 48, 46))
+F = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', int(7.2 * S))
+l.rectangle(P(bx1 - 70, by0 + 1, bx1 - 30, by0 + 9), fill=255)
+l.text(((bx1 - 50) * S, (by0 + 5.2) * S), 'MIAMI', font=F, fill=0, anchor='mm')
+# livery: orange belt stripe with black pinstripes
+o.rectangle(P(bx0 + 1, by0 + 39, bx1 - 1, by0 + 47), fill=255)
+t.rectangle(P(bx0 + 1, by0 + 39, bx1 - 1, by0 + 47), fill=0)
+l.line(P(bx0 + 1, by0 + 38.5, bx1 - 3, by0 + 38.5), fill=255, width=int(1.2 * S))
+l.line(P(bx0 + 1, by0 + 47.5, bx1 - 1, by0 + 47.5), fill=255, width=int(1.2 * S))
+# fluted stainless side panels: fine engraved lines
+for y in range(by0 + 52, by1 - 6, 3):
+    l.line(P(bx0 + 3, y, bx1 - 3, y), fill=255, width=int(0.75 * S))
+# baggage bays and entrance door
+for xb in (78, 128):
+    t.rectangle(P(xb, by0 + 52, xb + 42, by1 - 10), fill=40)
+    l.rectangle(P(xb, by0 + 52, xb + 42, by1 - 10), outline=255, width=int(1.2 * S))
+t.rectangle(P(bx1 - 46, by0 + 50, bx1 - 26, by1 - 4), fill=200)
+l.rectangle(P(bx1 - 46, by0 + 50, bx1 - 26, by1 - 4), outline=255, width=int(1.4 * S))
+l.line(P(bx1 - 36, by0 + 50, bx1 - 36, by1 - 4), fill=255, width=int(1.2 * S))
+# headlamps and bumper
+l.ellipse(P(bx1 - 9, by1 - 24, bx1 - 1, by1 - 16), outline=255, width=S)
+o.ellipse(P(bx1 - 9, by1 - 24, bx1 - 1, by1 - 16), fill=150)
+l.rectangle(P(bx1 - 20, by1 - 6, bx1 + 3, by1 + 1), fill=255)
+l.rectangle(P(bx0 - 2, by1 - 6, bx0 + 14, by1 + 1), fill=255)
+# wheels in arches
+for wx in (56, 210):
+    l.pieslice(P(wx - 21, by1 - 22, wx + 21, by1 + 20), 180, 360, fill=255)
+    l.ellipse(P(wx - 17, by1 - 16, wx + 17, by1 + 18), fill=255)
+    l.ellipse(P(wx - 8, by1 - 7, wx + 8, by1 + 9), fill=0)
+    t.ellipse(P(wx - 8, by1 - 7, wx + 8, by1 + 9), fill=70)
+    l.ellipse(P(wx - 3, by1 - 2, wx + 3, by1 + 4), fill=255)
+# shadow under the coach
+t.rectangle(P(bx0 + 4, by1 + 14, bx1 - 4, by1 + 20), fill=230)
 
-art = im.resize((352 * 2, 330 * 2), Image.LANCZOS)
+def screen(plate, cell, angle, w, h):
+    """AM halftone at the given cell size (px at 4x) and angle, returns 0..1 ink coverage at 4x"""
+    a = np.asarray(plate, dtype=np.float32) / 255.0
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    ca, sa = math.cos(math.radians(angle)), math.sin(math.radians(angle))
+    u = (xx * ca + yy * sa) / cell
+    v = (-xx * sa + yy * ca) / cell
+    du = u - np.floor(u) - 0.5
+    dv = v - np.floor(v) - 0.5
+    dist = np.sqrt(du * du + dv * dv)          # 0 at centre to ~0.707 at corner
+    r = np.sqrt(a / math.pi)                   # dot radius giving coverage a
+    ink = (dist < r).astype(np.float32)
+    ink[a > 0.93] = 1.0
+    return ink
+
+tb = screen(tone, 2.6 * S, 45, W, H)
+lb = np.asarray(line, dtype=np.float32) / 255.0
+blk = np.maximum(tb, lb)
+ob = screen(org, 2.6 * S, 15, W, H)
+ob = np.maximum(ob, (np.asarray(org, dtype=np.float32) > 250).astype(np.float32))
+# misregister the orange plate by 3 css px right, 2 up (scaled at 4x)
+ob = np.roll(np.roll(ob, 3 * S // 2, axis=1), -S, axis=0)
+
+paper = np.array(PAPER, dtype=np.float32) / 255
+ink_k = np.array((38, 34, 32), dtype=np.float32) / 255
+ink_o = np.array((226, 96, 44), dtype=np.float32) / 255
+img = np.ones((H, W, 3), dtype=np.float32) * paper
+img *= (1 - ob[..., None] * 0.92) + ob[..., None] * 0.92 * (ink_o / paper)
+img *= (1 - blk[..., None] * 0.94) + blk[..., None] * 0.94 * ink_k
+art = Image.fromarray(np.clip(img * 255, 0, 255).astype(np.uint8)).resize((AW * 2, AH * 2), Image.LANCZOS)
+# soft ink unevenness, large and gentle
+mott = Image.effect_noise((AW // 8, AH // 8), 40).resize((AW * 2, AH * 2), Image.BICUBIC).filter(ImageFilter.GaussianBlur(16))
+art = Image.composite(art, Image.blend(art, Image.new('RGB', art.size, PAPER), 0.16), mott.point(lambda v: 255 if v > 118 else int(v * 1.6)))
 art.save(os.path.join(A, 'coach-art.png'))
 
 # ---------------- pencil ring ----------------

@@ -99,3 +99,141 @@ wear(22, (170, 1480, 70, 90)).save(os.path.join(A, 'wear-back.png'), optimize=Tr
 stamp_wear().save(os.path.join(A, 'stamp-wear.png'), optimize=True)
 shutil.copy(os.path.join(D, '..', 'jurassic', 'src', 'assets', 'paper-grain.png'), os.path.join(A, 'paper-grain.png'))
 print('painted')
+
+
+# ---------------- printed art, in the bank's green spot ink ----------------
+GREEN = (31, 86, 62)
+
+
+def engrave(tone, orient, pitch=3.4, outline=None):
+    """tone 0..1 (1 = darkest) -> line-engraved ink mask. orient: 0 horizontal lines, 1 vertical.
+    Line thickness swells with tone, the way a banknote or bank-form vignette is cut."""
+    h, w = tone.shape
+    y, x = np.mgrid[0:h, 0:w].astype(float)
+    dh = np.abs(((y + 0.6 * np.sin(x / 23.0)) % pitch) - pitch / 2)
+    dv = np.abs((x % pitch) - pitch / 2)
+    dist = np.where(orient > 0.5, dv, dh)
+    half = tone * pitch * 0.55
+    ink = np.clip((half - dist) * 1.6 + 0.5, 0, 1) * (tone > 0.04)
+    if outline is not None:
+        ink = np.maximum(ink, outline)
+    return ink
+
+
+def vignette(wc, hc):
+    """Engraved oval vignette of the bank's main office, a domed granite savings bank,
+    drawn at 4x of the 2x page pixels then reduced."""
+    S = 8  # px per css px in the working canvas
+    w, h = wc * S, hc * S
+    tone = Image.new('F', (w, h), 0.0)
+    ori = Image.new('L', (w, h), 0)
+    ol = Image.new('L', (w, h), 0)
+    T = ImageDraw.Draw(tone); O = ImageDraw.Draw(ori); L = ImageDraw.Draw(ol)
+    u = lambda *v: [int(round(a * S)) for a in v]
+    cx = wc / 2
+    # sky, darker toward the top like a cut sky
+    arr = np.zeros((h, w), np.float32)
+    yy = np.arange(h)[:, None] / h
+    arr += np.clip(0.42 - yy * 0.75, 0, 0.42)
+    tone = Image.fromarray(arr, 'F'); T = ImageDraw.Draw(tone)
+    # trees left and right, dark soft masses
+    tr = np.zeros((h, w), np.float32)
+    n = soft_noise(w, h, 22 * S // 4, 77)
+    for (tx, ty, rx, ry) in ((16, 70, 24, 30), (wc - 16, 72, 24, 30)):
+        yy2, xx2 = np.mgrid[0:h, 0:w]
+        dd = np.hypot((xx2 / S - tx) / rx, (yy2 / S - ty) / ry)
+        tr = np.maximum(tr, np.clip((1.0 - dd) * 3 + (n - 0.5) * 1.6, 0, 1) * (0.55 + 0.3 * n))
+    arr = np.maximum(np.asarray(tone), tr)
+    tone = Image.fromarray(arr.astype(np.float32), 'F'); T = ImageDraw.Draw(tone)
+    # dome and drum
+    T.rectangle(u(cx - 22, 20, cx + 22, 34), fill=0.3)
+    T.pieslice(u(cx - 22, 2, cx + 22, 40), 180, 360, fill=0.22)
+    T.rectangle(u(cx - 3, -1, cx + 3, 4), fill=0.5)
+    L.arc(u(cx - 22, 2, cx + 22, 40), 180, 360, fill=255, width=S)
+    for k in range(-3, 4):
+        T.line(u(cx + k * 6, 21, cx + k * 6, 34), fill=0.65, width=S)
+    # main block behind the portico
+    T.rectangle(u(cx - 62, 34, cx + 62, 100), fill=0.24)
+    L.rectangle(u(cx - 62, 34, cx + 62, 100), outline=255, width=S)
+    # side windows
+    for wx in (cx - 54, cx - 44, cx + 38, cx + 48):
+        T.rectangle(u(wx, 52, wx + 6, 76), fill=0.8)
+    # pediment
+    T.polygon(u(cx - 42, 44, cx, 28, cx + 42, 44), fill=0.36)
+    T.polygon(u(cx - 34, 42, cx, 32, cx + 34, 42), fill=0.5)
+    L.line(u(cx - 44, 44, cx, 27, cx + 44, 44), fill=255, width=S)
+    # entablature
+    T.rectangle(u(cx - 44, 44, cx + 44, 52), fill=0.18)
+    T.rectangle(u(cx - 44, 51, cx + 44, 53), fill=0.85)
+    # dark portico behind the columns
+    T.rectangle(u(cx - 40, 53, cx + 40, 90), fill=0.86)
+    # door
+    T.rectangle(u(cx - 7, 66, cx + 7, 90), fill=1.0)
+    # six columns, shaded like cylinders, cut with vertical lines
+    cols = [cx - 36 + i * 14.4 for i in range(6)]
+    carr = np.asarray(tone).copy()
+    oarr = np.asarray(ori).copy()
+    for c in cols:
+        x0, x1 = int((c - 4) * S), int((c + 4) * S)
+        y0, y1 = int(53 * S), int(90 * S)
+        t = (np.arange(x0, x1) - x0) / (x1 - x0)
+        prof = 0.12 + 0.55 * np.clip(np.abs(t - 0.32) * 1.6, 0, 1) ** 1.4
+        carr[y0:y1, x0:x1] = prof[None, :]
+        oarr[y0:y1, x0:x1] = 255
+    tone = Image.fromarray(carr, 'F'); T = ImageDraw.Draw(tone)
+    ori = Image.fromarray(oarr, 'L')
+    for c in cols:
+        L.line(u(c - 4, 53, c - 4, 90), fill=255, width=max(1, S // 2))
+        L.line(u(c + 4, 53, c + 4, 90), fill=255, width=S)
+        T.rectangle(u(c - 5, 51, c + 5, 54), fill=0.3)
+        T.rectangle(u(c - 5, 89, c + 5, 91), fill=0.35)
+    # steps
+    for i, (yy0, inset) in enumerate(((90, 46), (94, 52), (98, 58))):
+        T.rectangle(u(cx - inset, yy0, cx + inset, yy0 + 4), fill=0.18 + 0.12 * (i % 2))
+        L.line(u(cx - inset, yy0 + 4, cx + inset, yy0 + 4), fill=255, width=max(1, S // 2))
+    # pavement
+    T.rectangle(u(0, 102, wc, hc), fill=0.2)
+    tone_a = np.asarray(tone, float)
+    ink = engrave(tone_a, np.asarray(ori, float) / 255.0, pitch=2.6 * S / 2, outline=np.asarray(ol, float) / 255.0)
+    # oval vignette: lines thin out toward the oval edge
+    yy, xx = np.mgrid[0:h, 0:w]
+    dd = np.hypot((xx - w / 2) / (w / 2), (yy - h / 2) / (h / 2))
+    fade = np.clip((1.0 - dd) / 0.12, 0, 1)
+    ink *= fade
+    m = Image.fromarray((np.clip(ink, 0, 1) * 255).astype(np.uint8)).resize((wc * 2, hc * 2), Image.LANCZOS)
+    out = Image.new('RGBA', m.size, GREEN + (0,))
+    out.putalpha(m)
+    return out
+
+
+def frame(wc, hc, seed):
+    """Lathe-work border, the scalloped cycloid band on bank paper, plus a hairline inside it."""
+    w, h = wc * 2, hc * 2
+    m = np.zeros((h, w), float)
+    y, x = np.mgrid[0:h, 0:w].astype(float)
+    o0, o1 = 18 * 2, 30 * 2   # band from 18 to 30 css px inside the trim
+    d = np.minimum.reduce([x, y, w - 1 - x, h - 1 - y])
+    inband = (d >= o0) & (d <= o1)
+    # coordinate running along the band
+    s = np.where((d == y) | (d == h - 1 - y), x, y)
+    t = (d - o0) / (o1 - o0)  # 0..1 across the band
+    band = np.zeros_like(m)
+    for k, ph in enumerate((0, 2.1, 4.2)):
+        curve = 0.5 + 0.45 * np.sin(s / 9.0 + ph)
+        band = np.maximum(band, np.clip(1 - np.abs(t - curve) * (o1 - o0) / 1.1, 0, 1))
+    band = np.maximum(band, np.clip(1 - np.abs(d - o0) / 1.0, 0, 1))
+    band = np.maximum(band, np.clip(1 - np.abs(d - o1) / 1.0, 0, 1))
+    m = np.where((d >= o0 - 1) & (d <= o1 + 1), band, 0)
+    # hairline rule inside
+    m = np.maximum(m, np.clip(1 - np.abs(d - (o1 + 5)) / 0.8, 0, 1) * 0.9)
+    # ink spread variation, soft
+    m *= 0.8 + 0.2 * soft_noise(w, h, 120, seed)
+    out = Image.new('RGBA', (w, h), GREEN + (0,))
+    out.putalpha(Image.fromarray((np.clip(m, 0, 1) * 255).astype(np.uint8)))
+    return out
+
+
+vignette(150, 104).save(os.path.join(A, 'bank-vignette.png'), optimize=True)
+frame(528, 816, 31).save(os.path.join(A, 'frame-front.png'), optimize=True)
+frame(528, 816, 32).save(os.path.join(A, 'frame-back.png'), optimize=True)
+print('art painted')
