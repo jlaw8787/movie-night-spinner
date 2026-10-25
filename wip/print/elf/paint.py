@@ -286,7 +286,7 @@ def arc_text(img, text, radius, centre_deg, font, fill, top=True, track=6):
 
 gf = ImageFont.truetype(GF, 120)
 arc_text(wheel, 'THE FOUR MAIN FOOD GROUPS', 840, -90, gf, (252, 250, 244, 255), top=True)
-arc_text(wheel, 'AS TAUGHT AT THE NORTH POLE', 840, 90, ImageFont.truetype(GF, 92), (252, 250, 244, 255), top=False)
+arc_text(wheel, 'NORTH POLE APPROVED', 840, 90, ImageFont.truetype(GF, 100), (252, 250, 244, 255), top=False)
 for a in (180, 0):
     x = C + 840 * math.cos(math.radians(a)); y = C + 840 * math.sin(math.radians(a))
     for k in range(6):
@@ -295,13 +295,13 @@ for a in (180, 0):
 
 # quadrant labels on little snow tags
 lf = ImageFont.truetype(GF, 92)
-for text, (x, y) in [('CANDY', (600, 400)), ('CANDY CANES', (1290, 400)), ('CANDY CORN', (620, 1530)), ('SYRUP', (1300, 1530))]:
+for text, (x, y) in [('CANDY', (600, 400)), ('CANDY CANES', (1290, 400)), ('CANDY CORN', (650, 1490)), ('SYRUP', (1250, 1490))]:
     w = lf.getlength(text)
     dr.rounded_rectangle([x - w / 2 - 30, y - 62, x + w / 2 + 30, y + 58], radius=40, fill=(196, 30, 44, 255), outline=(14, 58, 34, 255), width=8)
     dr.text((x, y), text, font=lf, fill=(252, 250, 244, 255), anchor='mm')
-hf = ImageFont.truetype(GF, 64)
+hf = ImageFont.truetype(GF, 52)
 for i, t in enumerate(['EAT', 'ALL FOUR,', 'EVERY DAY']):
-    dr.text((C, C - 62 + i * 62), t, font=hf, fill=(252, 250, 244, 255), anchor='mm')
+    dr.text((C, C - 54 + i * 54), t, font=hf, fill=(252, 250, 244, 255), anchor='mm')
 wheel.resize((940, 940), Image.LANCZOS).save(A('food-groups-wheel.png'))
 
 # ------------------------------------------------------------------ spirit gauge (180x120 css, painted at 4x)
@@ -326,10 +326,10 @@ for k in range(21):
     x1, y1 = gc[0] + (290 - L) * math.cos(a), gc[1] - (290 - L) * math.sin(a)
     gd.line([(x0, y0), (x1, y1)], fill=(22, 44, 30, 255), width=8 if k % 5 == 0 else 5)
 nf = ImageFont.truetype(NF, 40)
-for t, a in [('LOW', 160), ('JOLLY', 90), ('FULL', 20)]:
-    x, y = gc[0] + 170 * math.cos(math.radians(a)), gc[1] - 170 * math.sin(math.radians(a))
+for t, a in [('LOW', 152), ('JOLLY', 90), ('FULL', 26)]:
+    x, y = gc[0] + 150 * math.cos(math.radians(a)), gc[1] - 170 * math.sin(math.radians(a))
     gd.text((x, y), t, font=nf, fill=(22, 44, 30, 255), anchor='mm')
-a = math.radians(180 - 0.86 * 180)
+a = math.radians(180 - 0.70 * 180)
 tip = (gc[0] + 270 * math.cos(a), gc[1] - 270 * math.sin(a))
 nrm = (math.sin(a), math.cos(a))
 gd.polygon([tip, (gc[0] + 14 * nrm[0], gc[1] + 14 * nrm[1]), (gc[0] - 14 * nrm[0], gc[1] - 14 * nrm[1])], fill=(196, 30, 44, 255))
@@ -340,20 +340,22 @@ gim.resize((360, 210), Image.LANCZOS).save(A('spirit-gauge.png'))
 # ------------------------------------------------------------------ fur trim for the header band (1300x44 css)
 FW, FH = 2600, 88
 fur = np.zeros((FH, FW)); yy, xx = np.mgrid[0:FH, 0:FW].astype(float)
-edge = 40 + 10 * np.sin(xx / 37) + 7 * np.sin(xx / 13 + 1) + mottle(1, FW, 9, 9, 4)[0]
-fur = (yy < edge).astype(float)
+top_e = 18 + 9 * np.sin(xx / 37) + 6 * np.sin(xx / 13 + 1) + mottle(1, FW, 9, 8, 4)[0]
+bot_e = 70 + 7 * np.sin(xx / 29 + 2) + 5 * np.sin(xx / 11) + mottle(1, FW, 9, 7, 6)[0]
+fur = ((yy > top_e) & (yy < bot_e)).astype(float)
+edge = bot_e
 tuft = Image.fromarray((fur * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(2))
 t = np.asarray(tuft, float) / 255
-strands = (rng.random((FH, FW)) < 0.05) & (yy < edge + 10)
+strands = (rng.random((FH, FW)) < 0.05) & (yy > top_e - 8) & (yy < bot_e + 6)
 t = np.maximum(t, strands * 0.9)
-tone = 236 + mottle(FH, FW, 6, 14, 8) - yy / FH * 18
+tone = 250 + mottle(FH, FW, 6, 10, 8) - np.clip((yy - top_e) / (bot_e - top_e), 0, 1) ** 2 * 40
 col = np.dstack([tone, tone, tone - 6])
 Image.fromarray(np.dstack([col.clip(0, 255), t * 255]).astype('uint8'), 'RGBA').resize((1300, 44), Image.LANCZOS).save(A('fur-trim.png'))
 
 # ------------------------------------------------------------------ the street still, signs softened
 st = Image.open(S('2dsieAsbogrPNpGHwK7fMRMTWd1.jpg')).convert('RGB')
 k = 3.0
-for b in [(440, 255, 530, 300), (590, 60, 780, 140), (1010, 225, 1090, 280), (0, 150, 100, 235), (1150, 230, 1190, 260)]:
+for b in []:
     bb = tuple(int(v * k) for v in b)
     st.paste(st.crop(bb).filter(ImageFilter.GaussianBlur(18)), bb[:2])
 crop = st.crop((int(170 * k), int(28 * k), int(1110 * k), int(28 * k + 940 * k / 2.35)))
