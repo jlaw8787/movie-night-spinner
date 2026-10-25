@@ -8,7 +8,7 @@ A = os.path.join(D, 'assets')
 
 # rooftop coop, crop to the coop and sky, no figures
 im = Image.open(os.path.join(A, 'src-coop.jpg')).convert('RGB')
-im = im.crop((230, 0, 1050, 500)).resize((968, 590), Image.LANCZOS)
+im = im.crop((40, 0, 1547, 486)).resize((1696, 547), Image.LANCZOS)
 im = ImageEnhance.Brightness(im).enhance(1.10)
 im = ImageEnhance.Contrast(im).enhance(1.08)
 im = ImageEnhance.Color(im).enhance(1.15)
