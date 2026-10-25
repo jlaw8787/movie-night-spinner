@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 D = os.path.dirname(os.path.abspath(__file__))
-COLW, COLH = 316, 1344          # CSS px of the map column
+COLW, COLH = 316, 1000          # CSS px of the map column
 K = 2                           # paint scale
 W, H = COLW * K, COLH * K
 YEL, BLK, RED = (245, 196, 49), (22, 22, 22), (193, 39, 45)
@@ -42,10 +42,10 @@ def grid(av, st):               # avenue number (5 = 5th, 8 = CPW), street numbe
     return (PX1 - (av - 5) * AV, PY0 + (st - 59) * ST)
 
 # frame: Battery to about 127th St
-S = 0.071 * K                   # px per metre at 2x
+S = 0.0575 * K                   # px per metre at 2x
 TOP_ST = 127.5
-YTOP = 200 * K                  # CSS 186 is where the map starts under the title
-X5 = 172 * K                    # where 5th Ave sits across the column
+YTOP = 192 * K                  # CSS px where the map starts under the title
+X5 = 166 * K                    # where 5th Ave sits across the column
 def P(xm, ym):                  # turned metres -> paint px
     gx0, gy0 = grid(5, TOP_ST)
     return (X5 + (xm - gx0) * S, YTOP + (gy0 - ym) * S)

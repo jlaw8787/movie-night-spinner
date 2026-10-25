@@ -1,8 +1,8 @@
 """Firehouse World Series Supper window card, Frequency (2000). Queens, Saturday October 11, 1969.
 One 11 x 14 inch card the neighborhood firehouse posts in windows up and down the block: the radio
 goes on the apparatus floor, the men cook, Julia Sullivan's pie comes down from the house.
-Signature piece: painted firehouse at dusk under the northern lights (paint.py). Run prep.py and
-paint.py first. Writes card.html, film.json and sullivansupper.labels.json."""
+Hero: a real photo of a Queens firehouse front, toned toward dusk (photo.py, CC0). Run prep.py and
+photo.py first. Writes card.html, film.json and sullivansupper.labels.json."""
 import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
@@ -80,7 +80,7 @@ PH = 500   # visible height of the painting
 
 inner = f'''
 <div style="position: absolute; left: 0; top: 0; width: {W}px; height: {PH}px; overflow: hidden; background: {NAVY}">
-  <img src="assets/firehouse-dusk.jpg" alt="Painting of the Queens firehouse at dusk, northern lights over the block and a ham radio aerial on the roof" style="display: block; width: {W}px; height: 560px"></div>
+  <img src="assets/firehouse-photo.jpg" alt="Photograph of a Queens brick firehouse front, arched upper windows over the carved ENGINE frieze, toned toward dusk" style="display: block; width: {W}px; height: {PH}px"></div>
 <div style="position: absolute; left: {L}px; top: 42px; width: 560px">
   <div style="{COND}; font-weight: 600; font-size: 19px; letter-spacing: 0.22em; text-transform: uppercase; color: {PEACH}">The firehouse invites the whole block</div>
   <div style="{SLAB}; font-size: 76px; line-height: 0.98; text-transform: uppercase; color: {PAPER}; margin-top: 10px; white-space: nowrap">World Series</div>

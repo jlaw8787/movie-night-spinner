@@ -16,21 +16,21 @@ LAY = json.load(open(os.path.join(D, 'map_layout.json')))
 
 # spec key -> printed name, description, price, phone note (recipe food unchanged)
 SPEC = {
-  "Bacon egg and cheese on a roll": ("Bacon, Egg & Cheese", "Crisp strips, a fried yolk broken flat and melted American on a toasted, buttered kaiser roll.", "$1.95",
+  "Bacon egg and cheese on a roll": ("Bacon, Egg & Cheese", "Crisp strips, fried yolk, American, on a toasted buttered kaiser.", "$1.95",
                                      "Ketchup on the side. Wrapped to go in a minute."),
-  "Harlem chicken and waffles": ("Chicken & Waffles", "Buttermilk-soaked thighs fried crisp in seasoned flour, with butter and hot sauce honey.", "$5.55",
+  "Harlem chicken and waffles": ("Chicken & Waffles", "Buttermilk thighs fried crisp, butter and hot sauce honey.", "$5.55",
                                  "The house plate, served all day."),
-  "Zeus's salted peanut caramel slab": ("Peanut Caramel Squares", "Chewy brown sugar caramel packed with roasted salted nuts, milk chocolate and coarse salt on top.", "85¢",
+  "Zeus's salted peanut caramel slab": ("Caramel Squares", "Brown sugar caramel, salted peanuts, milk chocolate, coarse salt.", "85¢",
                                         "Cut fresh at the counter every morning."),
-  "Crumb cake": ("Crumb Cake", "Buttery yellow batter under a thick brown sugar and cinnamon streusel, powdered sugar over.", "$1.38",
+  "Crumb cake": ("Crumb Cake", "Butter batter under cinnamon streusel, powdered sugar.", "$1.38",
                  "Ask for the corner piece."),
-  "Water jug lemonade": ("Fresh Lemonade", "Squeezed lemons, sugar syrup and cold water, poured over ice.", "$1.00",
+  "Water jug lemonade": ("Fresh Lemonade", "Squeezed lemons, sugar syrup, cold water, over ice.", "$1.00",
                          "By the jug for parties, 3 or 5 gallons."),
 }
 ADD = {
-  'patty': ("Jamaican Beef Patty", "Curried chuck and onion folded into golden turmeric pastry.", "$1.25"),
-  'cheese': ("Raymond's Grilled Cheese", "American on white bread, griddled golden, with a pickle spear.", "$1.75"),
-  'frank': ("Dexter's Hot Dog", "All-beef frank on a toasted bun, ketchup or mustard, potato chips.", "$1.50"),
+  'patty': ("Beef Patty", "Curried chuck and onion in golden turmeric pastry.", "$1.25"),
+  'cheese': ("Raymond's Grilled Cheese", "American on white, griddled golden, pickle spear.", "$1.75"),
+  'frank': ("Dexter's Hot Dog", "All-beef frank, toasted bun, potato chips.", "$1.50"),
 }
 
 
@@ -59,26 +59,26 @@ def head(kick, title, top=0):
         <div style="flex: 1; height: 10px; background: {YEL}; margin-top: 6px"></div></div></div>'''
 
 
-TOP, BOT = 190, 876
+TOP, BOT = 166, 880
 
 # ---------- header band ----------
 header = f'''
-<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 172px; background: {INK}"></div>
-<div style="position: absolute; left: 0; top: 172px; width: {W}px; height: 6px; background: {YEL}"></div>
+<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 142px; background: {INK}"></div>
+<div style="position: absolute; left: 0; top: 142px; width: {W}px; height: 6px; background: {YEL}"></div>
 <div style="position: absolute; left: 48px; top: 40px; width: 600px">
   <div style="{SANS}; font-weight: 800; font-size: 18px; letter-spacing: 0.2em; color: {PAPER}">COFFEE SHOP, 138TH STREET AT AMSTERDAM</div>
-  <div style="{TITAN}; font-size: 64px; line-height: 1; color: {YEL}; margin-top: 6px; white-space: nowrap; letter-spacing: 0.01em">HEIGHTS CORNER</div>
-  <div style="{SANS}; font-weight: 700; font-size: 16px; letter-spacing: 0.08em; color: #d9d3c4; margin-top: 8px">OPEN 6 AM TO 9 PM, SEVEN DAYS. TAKEOUT 555-0138</div></div>
-<div style="position: absolute; left: 676px; top: 44px; width: 270px">
-  <div style="display: inline-block; background: {RED}; padding: 7px 14px 6px; transform: rotate(-3deg); border: 3px solid {PAPER}">
-    <div style="{TITAN}; font-size: 24px; line-height: 1.05; color: {PAPER}; white-space: nowrap">KIDS' RIDDLE<br>PLACEMAT</div></div>
-  <div style="{SANS}; font-size: 16px; line-height: 1.3; color: {PAPER}; margin-top: 12px">Solve all three, show your waitress, get a lollipop.</div></div>
-<div style="position: absolute; left: 988px; top: 26px; width: 300px">
-  <div style="border: 4px solid {YEL}; line-height: 0"><img src="assets/still-avenue.jpg" alt="Amsterdam Avenue traffic at midday" style="display: block; width: 300px; height: 106px"></div>
-  <div style="{SANS}; font-weight: 700; font-size: 16px; color: {YEL}; margin-top: 5px; text-align: right; letter-spacing: 0.03em">Our avenue, lunch hour.</div></div>'''
+  <div style="{TITAN}; font-size: 58px; line-height: 1; color: {YEL}; margin-top: 6px; white-space: nowrap; letter-spacing: 0.01em">HEIGHTS CORNER</div>
+</div>
+<div style="position: absolute; left: 666px; top: 38px; width: 290px">
+  <div style="display: inline-block; background: {RED}; padding: 5px 12px 4px; transform: rotate(-2deg); border: 3px solid {PAPER}">
+    <div style="{TITAN}; font-size: 21px; line-height: 1.05; color: {PAPER}; white-space: nowrap">KIDS' RIDDLE PLACEMAT</div></div>
+  <div style="{SANS}; font-size: 16px; line-height: 1.3; color: {PAPER}; margin-top: 10px">Solve all three for a lollipop. Takeout 555-0138.</div></div>
+<div style="position: absolute; left: 1000px; top: 22px; width: 288px">
+  <div style="border: 4px solid {YEL}; line-height: 0"><img src="assets/still-avenue.jpg" alt="Amsterdam Avenue traffic at midday" style="display: block; width: 280px; height: 85px"></div>
+  <div style="{SANS}; font-weight: 700; font-size: 16px; color: {YEL}; margin-top: 3px; text-align: right; letter-spacing: 0.03em">Our avenue, lunch hour.</div></div>'''
 
 # ---------- menu ----------
-colA = f'''<div style="position: absolute; left: 48px; top: {TOP}px; width: 288px">
+colA = f'''<div style="position: absolute; left: 48px; top: {TOP}px; width: 306px">
   {head('Served all day', 'GRIDDLE')}
   {S('Bacon egg and cheese on a roll', 10)}
   {S('Harlem chicken and waffles')}
@@ -94,7 +94,7 @@ card = f'''<div style="width: 250px; height: 132px; background: {INK}; border-ra
   <div style="position: absolute; left: 14px; top: 50px; {TITAN}; font-size: 30px; line-height: 1; color: {YEL}">30 MINUTES</div>
   <div style="position: absolute; left: 14px; top: 88px; width: 222px; {SANS}; font-weight: 700; font-size: 15px; line-height: 1.2; color: {PAPER}">Any pay phone in the city. Dial the number on the back.</div></div>'''
 
-colB = f'''<div style="position: absolute; left: 360px; top: {TOP}px; width: 288px">
+colB = f'''<div style="position: absolute; left: 374px; top: {TOP}px; width: 306px">
   {head('From our oven', 'BAKE CASE')}
   {S("Zeus's salted peanut caramel slab", 10)}
   {S('Crumb cake')}
@@ -107,8 +107,8 @@ colB = f'''<div style="position: absolute; left: 360px; top: {TOP}px; width: 288
   <div style="{SANS}; font-size: 16px; line-height: 1.3; color: {MUTE}; margin-top: 10px">Red star under your plate? The phone card is yours.</div></div>'''
 
 # ---------- map ----------
-MS = 280 / 296
-mx, my = 680, TOP + 70
+MS = 272 / 296
+mx, my = 702, TOP + 86
 pins = ''
 for i, (x, y) in enumerate(LAY['stops']):
     pins += (f'<div style="position: absolute; left: {mx + x * MS - 13:.1f}px; top: {my + y * MS - 13:.1f}px; width: 26px; height: 26px; '
@@ -122,7 +122,7 @@ def lab(t, x, y, size=14):
             f'{SANS}; font-weight: 800; font-size: {size}px; letter-spacing: 0.14em; color: {INK}; white-space: nowrap">{t}</div>')
 
 
-labels = (lab('NEW JERSEY', 2, 18) + lab('HARLEM', 112, 52) + lab('MANHATTAN', 40, 306) + lab('QUEENS', 228, 300)
+labels = (lab('NEW JERSEY', 2, 18) + lab('HARLEM', 112, 52) + lab('MANHATTAN', 30, 262) + lab('QUEENS', 228, 300)
           + lab('BROOKLYN', 176, 400) + lab('BRONX', 238, 4)
           + f'<div style="position: absolute; left: {mx + nx * MS - 5:.0f}px; top: {my + ny * MS + 14:.0f}px; {TITAN}; font-size: 15px; color: {INK}">N</div>')
 
@@ -132,28 +132,30 @@ legend = ''.join(f'''<div style="display: flex; align-items: center; gap: 8px; m
   <div style="flex: none; width: 20px; height: 20px; border-radius: 10px; background: {RED}; display: flex; align-items: center; justify-content: center; {TITAN}; font-size: 14px; color: {PAPER}">{i + 1}</div>
   <div style="{SANS}; font-weight: 700; font-size: 16px; line-height: 1.2; color: {INK}">{t}</div></div>''' for i, t in enumerate(stops))
 
-colMap = f'''<div style="position: absolute; left: 672px; top: {TOP}px; width: 296px">
-  {head('Trace the cab, stop by stop', 'TAXI RACE!')}
+colMap = f'''<div style="position: absolute; left: 700px; top: {TOP}px; width: 276px">
+  {head('Trace the cab', 'TAXI RACE!')}
 </div>
-<div style="position: absolute; left: {mx - 2}px; top: {my - 2}px; width: 280px; height: {497 * MS:.0f}px; border: 2px solid {INK}; line-height: 0">
-  <img src="assets/map-run.png" alt="Map of Manhattan with the taxi race route" style="display: block; width: 280px; height: {497 * MS:.0f}px"></div>
+<div style="position: absolute; left: {mx - 2}px; top: {my - 2}px; width: 272px; height: {497 * MS:.0f}px; border: 2px solid {INK}; line-height: 0">
+  <img src="assets/map-run.png" alt="Map of Manhattan with the taxi race route" style="display: block; width: 272px; height: {497 * MS:.0f}px"></div>
 {pins}{labels}
-<div style="position: absolute; left: 672px; top: {my + 497 * MS + 8:.0f}px; width: 296px">{legend}</div>'''
+<div style="position: absolute; left: 700px; top: {my + 497 * MS + 8:.0f}px; width: 276px">{legend}</div>'''
 
 # ---------- riddle panel ----------
 slip = f'''<div style="background: {PAPER}; border: 2px solid {INK}; padding: 10px 14px 6px; transform: rotate(-1.5deg); margin-top: 14px">
   <div style="{TITAN}; font-size: 20px; line-height: 1.1; color: {RED}">3. FROM NEXT DOOR</div>
-  <div style="{SANS}; font-size: 19px; line-height: 1.25; color: {INK}; margin-top: 4px">What has a face and two hands, but no arms and no legs? Bring me one that quit ticking.</div>
+  <div style="{SANS}; font-size: 19px; line-height: 1.25; color: {INK}; margin-top: 4px">What has a face and two hands, but no arms or legs? Bring me one that quit.</div>
   <div style="display: flex; align-items: baseline; gap: 10px">
     <div style="{HAND}; font-size: 38px; line-height: 1.05; color: #22327a">Zeus</div>
     <div style="{SANS}; font-weight: 700; font-size: 15px; color: {MUTE}">Carver Electrical, radios and clocks</div></div></div>'''
 
-panel = f'''<div style="position: absolute; left: 992px; top: {TOP - 12}px; width: 320px; height: {BOT - TOP + 14}px; background: {YEL}"></div>
-<div style="position: absolute; left: 1010px; top: {TOP}px; width: 284px">
-  <div style="{SANS}; font-weight: 800; font-size: 18px; letter-spacing: 0.16em; color: {INK}">SIMON SAYS: NO PEEKING</div>
+panel = f'''<div style="position: absolute; left: 996px; top: {TOP - 10}px; width: 316px; height: {BOT - TOP + 10}px; background: {YEL}"></div>
+<div style="position: absolute; left: 1014px; top: {TOP}px; width: 282px">
+  <div style="{SANS}; font-weight: 800; font-size: 18px; letter-spacing: 0.16em; color: {INK}">SIMON SAYS: SOLVE!</div>
   <div style="{TITAN}; font-size: 44px; line-height: 1; color: {INK}; margin-top: 2px">RIDDLE ME THIS!</div>
   <div style="{TITAN}; font-size: 20px; line-height: 1.1; color: {RED}; margin-top: 12px">1. THE FOUNTAIN JUGS</div>
-  <div style="line-height: 0; margin-top: 6px; border: 2px solid {INK}; background: {PAPER}"><img src="assets/jugs.png" alt="A 5 gallon and a 3 gallon jug" style="display: block; width: 280px; height: 138px"></div>
+  <div style="position: relative; line-height: 0; margin-top: 6px; border: 2px solid {INK}; background: {PAPER}; height: 124px; overflow: hidden"><img src="assets/jugs.png" alt="A 5 gallon and a 3 gallon jug" style="display: block; width: 252px; height: 124px; margin-left: 14px">
+    <div style="position: absolute; left: 50px; top: 48px; {TITAN}; font-size: 18px; line-height: 1; color: {RED}">5 GAL.</div>
+    <div style="position: absolute; left: 166px; top: 72px; {TITAN}; font-size: 15px; line-height: 1; color: {RED}">3 GAL.</div></div>
   <div style="{SANS}; font-size: 19px; line-height: 1.25; color: {INK}; margin-top: 6px">A 5-gallon jug, a 3-gallon jug and a fountain. Measure out exactly 4 gallons.</div>
   <div style="{TITAN}; font-size: 20px; line-height: 1.1; color: {RED}; margin-top: 12px">2. GOING TO ST. IVES</div>
   <div style="{SANS}; font-size: 19px; line-height: 1.22; color: {INK}; margin-top: 4px">As I was going to St. Ives, I met a man with seven wives. Each wife had seven sacks, each sack had seven cats, each cat had seven kits. Kits, cats, sacks and wives: how many were going to St. Ives?</div>
@@ -164,7 +166,7 @@ jl = (f'<div style="position: absolute; left: 1046px; top: 0px"></div>')
 
 footer = f'''<div style="position: absolute; left: 48px; top: 892px; width: 1248px; display: flex; justify-content: space-between; {SANS}; font-size: 16px; color: {MUTE}">
   <span>Prices subject to change. Placemat No. 354. Printed in U.S.A. 1995.</span>
-  <span>Answers: 1. Fill 5, pour into 3, dump 3, pour 2 into 3, fill 5, top off 3. 2. One. 3. A clock.</span></div>'''
+  <span>Answers: 1. Fill 5, pour into 3, empty 3, pour 2 in, fill 5, top off 3. 2. One. 3. A clock.</span></div>'''
 
 fade = (f'<div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; '
         'background: radial-gradient(ellipse 82% 78% at 50% 54%, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 60%, rgba(150,135,100,0.22) 100%)"></div>')
