@@ -27,7 +27,9 @@ def bump(cx, cy, rx, ry, a=1.0):
 
 # ---- height field ----
 isl = LAYOUT['island']
-r2 = ((xx - isl['cx']) / isl['rx']) ** 2 + ((yy - isl['cy']) / isl['ry']) ** 2
+_t = np.clip((yy - (isl['cy'] - isl['ry'])) / (2 * isl['ry']), 0, 1)
+_rx = isl['rx'] * ((1.18 - 0.62 * _t) if isl.get('taper') else 1)
+r2 = ((xx - isl['cx']) / _rx) ** 2 + ((yy - isl['cy']) / isl['ry']) ** 2
 n1 = noise(6, 3, 11)
 height = (1 - r2) * 0.55 + n1 * 0.22
 ridged = 1 - np.abs(noise(5, 8, 21))*2.2
@@ -89,11 +91,12 @@ def smooth(pts, k=8):
             out.append(tuple(0.5 * ((2 * p1[a]) + (-p0[a] + p2[a]) * t + (2 * p0[a] - 5 * p1[a] + 4 * p2[a] - p3[a]) * t2 + (-p0[a] + 3 * p1[a] - 3 * p2[a] + p3[a]) * t3) for a in (0, 1)))
     out.append(pts[-1]); return out
 
-def stroke(pts, width, fill, k=8):
+def stroke(pts, width, fill, k=8, caps=True):
     sp = [P(p) for p in smooth(pts, k)]
     dr.line(sp, fill=fill, width=int(width * S), joint='curve')
     r = width * S / 2
-    for p in (sp[0], sp[-1]): dr.ellipse([p[0] - r, p[1] - r, p[0] + r, p[1] + r], fill=fill)
+    if caps:
+        for p in (sp[0], sp[-1]): dr.ellipse([p[0] - r, p[1] - r, p[0] + r, p[1] + r], fill=fill)
 
 # ---- coastal surf lines ----
 for d0 in (6, 13):
@@ -102,11 +105,14 @@ for d0 in (6, 13):
     for y, x in zip(ys[::9], xs[::9]):
         dr.ellipse([x * 3 - 3, y * 3 - 3, x * 3 + 3, y * 3 + 3], fill=(255, 255, 255, 70))
 
-# ---- rivers ----
+# ---- rivers (clipped to the shoreline) ----
+_pre_river = im.copy()
 for rv in LAYOUT['rivers']:
     stroke(rv['pts'], rv['w'] + 3, (52, 116, 138, 255))
     stroke(rv['pts'], rv['w'], (88, 160, 184, 255))
     stroke(rv['pts'], max(1.5, rv['w'] * 0.3), (150, 205, 220, 200))
+_mask = Image.fromarray((ndimage.binary_dilation(land, iterations=int(2*S)) * 255).astype(np.uint8))
+im = Image.composite(im, _pre_river, _mask); dr = ImageDraw.Draw(im, 'RGBA')
 # waterfall
 wf = LAYOUT['waterfall']
 for i in range(7):
@@ -117,8 +123,8 @@ dr.ellipse([P((wf[0] - 14, wf[1] + 18)), P((wf[0] + 14, wf[1] + 30))], fill=(235
 # ---- roads (drawn before trees so canopy can overhang slightly) ----
 road_mask = Image.new('L', (w, h), 0); rm = ImageDraw.Draw(road_mask)
 for rd in LAYOUT['roads']:
-    stroke(rd, 9, (120, 98, 60, 255)); stroke(rd, 7, (222, 202, 150, 255))
-    sp = [P(p) for p in smooth(rd)]; rm.line(sp, fill=255, width=int(26 * S))
+    stroke(rd, 9, (120, 98, 60, 255), caps=False); stroke(rd, 7, (222, 202, 150, 255), caps=False)
+    sp = [P(p) for p in smooth(rd)]; rm.line(sp, fill=255, width=int(14 * S))
 
 # ---- clearings: buildings, paddock meadows ----
 clear = np.asarray(road_mask) > 0
@@ -142,7 +148,7 @@ for _ in range(26000):
     if hh > 1.05 + r.uniform(-0.12, 0.12): continue
     dens = 0.85 if hh > 0.25 else 0.55
     if r.random() > dens: continue
-    trees.append((y, x, r.uniform(3.2, 6.2), r.choice(greens)))
+    trees.append((y, x, r.uniform(2.6, 7.2), r.choice(greens)))
 trees.sort()
 def draw_tree(y, x, rad, g):
     dr.ellipse([P((x - rad + 1.6, y - rad + 2.2)), P((x + rad + 1.6, y + rad + 2.2))], fill=(20, 40, 18, 90))
@@ -174,6 +180,22 @@ for _ in range(900):
         ang = a * 72 + r.uniform(-12, 12); L = r.uniform(4, 6)
         dr.line([P((x, y)), P((x + L * math.cos(math.radians(ang)), y + L * math.sin(math.radians(ang))))], fill=(60, 112, 44, 255), width=int(1.6 * S))
 
+# ---- airbrushed tonal patches over the canopy, and a soft shoreline shade ----
+from PIL import Image as _I
+tone=np.zeros((h,w)); rr=random.Random(9)
+for _ in range(38):
+    cx_=rr.uniform(60,600); cy_=rr.uniform(60,540); rx_=rr.uniform(40,110); ry_=rr.uniform(30,80); v=rr.choice([-1,1])*rr.uniform(0.5,1)
+    tone+=v*np.exp(-(((xx-cx_)/rx_)**2+((yy-cy_)/ry_)**2))
+tone=ndimage.gaussian_filter(tone,6*S)
+base=np.asarray(im).astype(float)
+k=np.clip(1+tone*0.10,0.82,1.18)[...,None]
+shore=np.clip(1-np.clip(inland/14,0,1),0,1)[...,None]*0.12
+lm=land[...,None]
+out=np.where(lm, np.clip(base*k*(1-shore)+ (1-k)*0,0,255), base)
+im=_I.fromarray(out.astype(np.uint8)); dr=ImageDraw.Draw(im,'RGBA')
+
+for m in LAYOUT['meadows']:
+    dr.ellipse([P((m[0]-m[2]*1.02, m[1]-m[3]*1.02)), P((m[0]+m[2]*1.02, m[1]+m[3]*1.02))], outline=(70,110,44,200), width=int(1.4*S))
 # ---- paddock fences ----
 for fz in LAYOUT['fences']:
     pts = fz + [fz[0]]
@@ -199,7 +221,6 @@ def roof(x, y, bw, bh, c=(186, 140, 78), ridge=(140, 98, 50)):
 vc = LAYOUT['visitor_centre']
 roof(vc[0] - 26, vc[1] + 4, 36, 26)                       # kitchen wing
 roof(vc[0] + 2, vc[1], 40, 34)                            # dining hall
-dr.rectangle([P((272, 374)), P((292, 386))], fill=(242, 178, 27, 255), outline=(40, 34, 26, 255), width=int(1.2 * S))
 cx, cy = vc[0] + 34, vc[1] - 2                            # rotunda
 dr.ellipse([P((cx - 15, cy - 13)), P((cx + 17, cy + 19))], fill=(20, 30, 18, 110))
 dr.ellipse([P((cx - 16, cy - 16)), P((cx + 16, cy + 16))], fill=(196, 150, 86, 255), outline=(40, 34, 26, 255), width=int(1.4 * S))
@@ -216,11 +237,30 @@ for i in range(1, 8):
     dr.line([P((dk[0] + i * 4.2, dk[1] - 4)), P((dk[0] + i * 4.2, dk[1] + 4))], fill=(90, 66, 38, 255), width=int(0.8 * S))
 # main gate: two torch pillars across the road
 gt = LAYOUT['gate']
-for dx in (-9, 9):
-    dr.rectangle([P((gt[0] + dx - 3, gt[1] - 3)), P((gt[0] + dx + 3, gt[1] + 3))], fill=(70, 58, 46, 255), outline=(30, 24, 18, 255), width=int(1 * S))
+for dx in (-12, 12):
+    dr.rectangle([P((gt[0] + dx - 4, gt[1] - 4)), P((gt[0] + dx + 4, gt[1] + 4))], fill=(70, 58, 46, 255), outline=(30, 24, 18, 255), width=int(1 * S))
     dr.ellipse([P((gt[0] + dx - 2, gt[1] - 7)), P((gt[0] + dx + 2, gt[1] - 3))], fill=(255, 150, 30, 255))
-dr.line([P((gt[0] - 9, gt[1] - 1)), P((gt[0] + 9, gt[1] - 1))], fill=(70, 58, 46, 255), width=int(2.2 * S))
+dr.line([P((gt[0] - 12, gt[1] - 2)), P((gt[0] + 12, gt[1] - 2))], fill=(70, 58, 46, 255), width=int(3 * S))
 
+# bridges where a road crosses a river
+def dense(pts):
+    sp=smooth(pts); out=[]
+    for a,b in zip(sp,sp[1:]):
+        n=max(1,int(math.hypot(b[0]-a[0],b[1]-a[1])/1.5))
+        out+= [(a[0]+(b[0]-a[0])*k/n, a[1]+(b[1]-a[1])*k/n) for k in range(n)]
+    return out
+rv=[q for r_ in LAYOUT['rivers'] for q in dense(r_['pts'])]
+done=[]
+for rd in LAYOUT['roads']:
+    dp=dense(rd)
+    for k,q in enumerate(dp):
+        if any(math.hypot(q[0]-a[0],q[1]-a[1])<3 for a in rv) and all(math.hypot(q[0]-d[0],q[1]-d[1])>20 for d in done):
+            done.append(q); q2=dp[min(k+3,len(dp)-1)]; q1=dp[max(k-3,0)]
+            ang=math.atan2(q2[1]-q1[1],q2[0]-q1[0]); c,s_=math.cos(ang),math.sin(ang)
+            for side in (-1,1):
+                ox,oy=-s_*6*side, c*6*side
+                dr.line([P((q[0]-c*9+ox,q[1]-s_*9+oy)),P((q[0]+c*9+ox,q[1]+s_*9+oy))],fill=(60,44,26,255),width=int(2*S))
+            dr.polygon([P((q[0]-c*9-s_*5,q[1]-s_*9+c*5)),P((q[0]+c*9-s_*5,q[1]+s_*9+c*5)),P((q[0]+c*9+s_*5,q[1]+s_*9-c*5)),P((q[0]-c*9+s_*5,q[1]-s_*9-c*5))],fill=(196,170,120,255))
 im = im.filter(ImageFilter.UnsharpMask(radius=2, percent=40, threshold=2))
 im.save(os.path.join(D, 'assets', 'isla-nublar-map.jpg'), quality=90)
 print('map', im.size)

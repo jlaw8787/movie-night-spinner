@@ -4,8 +4,9 @@ mode = sys.argv[1] if len(sys.argv) > 1 else 'local'   # local | dc
 SPELL = os.environ.get('SPELL', 'us')                    # us: in-world American park | au: Australian
 IMG = json.load(open(os.path.join(D, 'img_' + mode + '.json')))
 INK, RED, GOLD, GREEN = '#16170f', '#b5241a', '#f2b21b', '#133a2a'
-FONT_LINK = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400'
-             '&family=Caveat:wght@700&display=swap">')
+FONT_LINK_WEB = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400'
+             '&family=Caveat:wght@700&family=Homemade+Apple&display=swap">')
+FONT_LINK = '<link rel="stylesheet" href="fonts/fonts.css">' if mode == 'local' else FONT_LINK_WEB
 CENTER = 'Visitor Center' if SPELL == 'us' else 'Visitor Centre'
 FAV = 'favorite' if SPELL == 'us' else 'favourite'
 CTR = 'center' if SPELL == 'us' else 'centre'
@@ -13,23 +14,25 @@ CTR = 'center' if SPELL == 'us' else 'centre'
 # outlet number, outlet, where and when, dishes: (name, description, note, price)
 OUTLETS = [
   (1, f'{CENTER} Restaurant', 'Table service. Lunch 11:30 AM to 2:00 PM.', [
-     ('Chilled shrimp cocktail', 'Lime, avocado and chili, served on crushed ice.', None, '8.50'),
-     ('Coffee-rubbed rack of lamb', 'Coffee and chili rub, chimichurri, crisp potatoes.', None, '19.93'),
-     ('Grilled mahi-mahi', 'Black beans, sweet plantain and lime butter.', None, '16.50'),
-     ('Gallo pinto bowl', 'Rice, black beans, avocado and a fried egg.', None, '11.00'),
-     ("The Founder's sundae", 'Vanilla bean, hot fudge, crushed honeycomb.', f"Mr. Hammond's {FAV}.", '6.50'),
-     ('Junior explorer plate', 'Chicken tenders, corn and a fruit cup.', None, '5.95')]),
+     ('Chilled shrimp cocktail', 'House cocktail sauce, lemon wedge.', None, '8.50'),
+     ('Rosemary rack of lamb', 'Red wine jus, new potatoes, green beans.', None, '19.93'),
+     ('Grilled mahi-mahi', 'Coconut rice, pineapple salsa.', None, '16.50'),
+     ('Casado plate', 'Vegetarian. Rice, beans, plantain, fried egg, slaw.', None, '11.00'),
+     ('Junior explorer plate', 'Chicken tenders, corn, fruit cup.', None, '5.95'),
+     ("The Founder’s sundae", 'Vanilla bean, hot fudge, toffee crunch.', None, '4.95'),
+     ('Fresh-squeezed lemonade', 'Cane sugar, lemon peel, over ice.', None, '1.95'),
+     ('Hot Tarrazú coffee', 'Bottomless, by the pot.', None, '1.25')]),
   (2, 'Gift Shop Counter', 'Grab and go, beside the main hall.', [
-     ('Dino egg cookies', f'Brown butter with a soft dark chocolate {CTR}.', 'Speckled like the real thing in our hatchery.', '3.50'),
-     ('Raptor claw crisps', 'Smoked paprika tortilla claws with guacamole.', None, '4.75')]),
-  (3, 'Tour Departure Kiosk', 'Handed to you as you board.', [
-     ('Tour car iced tea', 'Black tea shaken with honey, lime and mint.', None, '2.50'),
-     ('Costa Rican coffee', 'Brewed from mainland beans, hot or iced.', None, '1.75')]),
+     ('Dino egg cookies (2)', 'Egg-shaped shortbread, speckled icing.', None, '3.50'),
+     ('Raptor claw chips', 'Claw-cut tortilla chips, pico de gallo.', None, '4.75')]),
+  (3, 'Tour Departure Kiosk', 'Cold drinks to take on your tour car.', [
+     ('Tour car iced tea', 'Black tea, honey, fresh mint.', None, '1.75'),
+     ('Iced Costa Rican coffee', 'Brewed strong, poured over ice.', None, '2.50')]),
 ]
 INFO = [
-  ('A', GOLD, INK, 'Tour cars', 'Electric and guided along the tour road, with interactive CD-ROM narration. Stay seated, hands inside.'),
-  ('B', GOLD, INK, 'Electric fences', '10,000 volts. Please do not touch or lean on any fence.'),
-  ('C', GOLD, INK, 'Night-vision goggles', 'Every tour car carries a pair for viewing after dark.'),
+  ('Tour cars', 'Electric cars guided along the tour road, with touch-screen narration. Please stay seated with hands inside.'),
+  ('Electric fences', '10,000 volts. Please do not touch or lean on the fences.'),
+  ('Night-vision goggles', 'Every tour car carries a pair for low light.'),
 ]
 
 def pin(n, s, fs):
@@ -42,14 +45,14 @@ def outlets():
     for n, name, when, items in OUTLETS:
         rows = ''
         for (dn, desc, note, price) in items:
-            nt = f'<p style="margin: 2px 0 0; font-size: 13px; line-height: 1.3; font-style: italic; color: #4b4e42">{note}</p>' if note else ''
-            rows += f'''<div style="margin-top: 6px">
+            nt = f'<p style="margin: 2px 0 0; font-size: 13px; line-height: 1.3; text-wrap: pretty; font-style: italic; color: #4b4e42">{note}</p>' if note else ''
+            rows += f'''<div style="margin-top: 5px">
             <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px">
-              <h3 style="margin: 0; font-weight: 800; font-size: 17px; line-height: 1.15">{dn}</h3>
+              <h3 style="margin: 0; font-weight: 800; font-size: 17px; line-height: 1.02">{dn}</h3>
               <span style="font-weight: 800; font-size: 16px; white-space: nowrap">${price}</span></div>
-            <p style="margin: 1px 0 0; font-size: 13px; line-height: 1.32; text-wrap: pretty">{desc}</p>
+            <p style="margin: 0; font-size: 13px; line-height: 1.25; text-wrap: pretty">{desc}</p>
             {nt}</div>'''
-        out.append(f'''<div>
+        out.append(f'''<div style="{'' if n == 1 else 'margin-top: 12px'}">
           <div style="display: flex; gap: 10px; align-items: center; border-bottom: 1px solid #16170f; padding-bottom: 6px">
             {pin(n, 30, 15)}
             <div><div style="font-weight: 900; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase">{name}</div>
@@ -58,10 +61,9 @@ def outlets():
     return '\n'.join(out)
 
 def info():
-    return '\n'.join(f'''<div style="display: flex; gap: 14px; align-items: flex-start">
-        <div style="flex: none; width: 38px; height: 38px; border-radius: 50%; background: {bg}; color: {fg}; font-weight: 900; font-size: 17px; line-height: 38px; text-align: center">{k}</div>
-        <div><div style="font-weight: 800; font-size: 16px; letter-spacing: 0.04em; text-transform: uppercase">{t}</div>
-        <div style="font-size: 14px; line-height: 1.45; color: #d6dfd2; margin-top: 2px">{d}</div></div></div>''' for k, bg, fg, t, d in INFO)
+    return '\n'.join(f'''<div style="{'' if t == INFO[0][0] else 'border-top: 1px solid #3c5a4a; padding-top: 12px'}">
+        <div style="font-weight: 800; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; color: #f2b21b">{t}</div>
+        <div style="font-size: 14px; line-height: 1.45; color: #e3e9df; margin-top: 3px; text-wrap: pretty">{d}</div></div>''' for t, d in INFO)
 
 def tag(x, y, text, kind='dark', size=11.5):
     bg, fg = {'dark': ('rgba(22,23,15,0.88)', '#ffffff'), 'gold': (GOLD, INK), 'paper': ('#f3ecd8', INK)}[kind]
@@ -70,10 +72,10 @@ def tag(x, y, text, kind='dark', size=11.5):
 
 def map_labels():
     s = ''
-    s += tag(122, 64, 'Dilophosaurus') + tag(66, 194, 'Velociraptor pen') + tag(446, 112, 'Tyrannosaurus rex')
-    s += tag(400, 320, 'Brachiosaurus', 'paper') + tag(422, 502, 'Triceratops') + tag(150, 444, 'Gallimimus', 'paper')
-    s += tag(122, 380, CENTER, 'gold', 13) + tag(548, 340, 'Helipad') + tag(556, 452, 'East dock') + tag(488, 382, 'Main gate') + tag(590, 268, 'Falls', 'paper')
-    for n, (x, y) in enumerate([(240, 318), (206, 326), (282, 400)], 1):
+    s += tag(124, 122, 'Tyrannosaurus rex') + tag(94, 246, 'Raptor pen') + tag(378, 144, 'Dilophosaurus')
+    s += tag(206, 202, 'Brachiosaurus', 'paper', 11) + tag(202, 476, 'Triceratops') + tag(212, 515, 'Gallimimus', 'paper', 11)
+    s += tag(158, 338, CENTER, 'gold', 13) + tag(458, 280, 'Helipad') + tag(482, 410, 'East dock') + tag(364, 384, 'Main gate') + tag(468, 236, 'Falls')
+    for n, (x, y) in enumerate([(288, 282), (244, 296), (312, 330)], 1):
         s += f'<div style="position: absolute; left: {x - 14}px; top: {y - 14}px">{pin(n, 28, 14)}</div>'
     # compass rose with needle
     s += ('<div style="position: absolute; left: 596px; top: 12px; width: 52px; height: 52px; border-radius: 50%; background: #f3ecd8; border: 3px solid #16170f; box-sizing: border-box"></div>'

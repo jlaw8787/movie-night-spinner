@@ -3,28 +3,24 @@ from playwright.async_api import async_playwright
 D=os.path.dirname(os.path.abspath(__file__))
 B=11.34   # 3mm bleed in px
 M=22.68   # 6mm slug for crop marks
-FACES={'outside':[(0,371,'#f3ecd8'),(371,747,'#0f2c21'),(747,1123,'#133a2a')],'inside':[(0,376,'#f3ecd8'),(376,1123,'#e9dfc2')]}
 def body(n): return open(os.path.join(D,n+'.html')).read().split('<body>')[1].split('</body>')[0]
+PANELS={'outside':[(0,359,'#f3ecd8'),(359,1123,'#133a2a')],'inside':[(0,1123,'#f3ecd8')]}
+FOLDS={'outside':[365,744],'inside':[379,758]}
 def bleed_page(n):
     o=M+B; W=1123+2*o; H=794+2*o; s=''
-    p=FACES[n]
-    # side bleeds
-    s+=f'<div style="position:absolute;left:{M}px;top:{M}px;width:{B+1}px;height:{794+2*B}px;background:{p[0][2]}"></div>'
-    s+=f'<div style="position:absolute;left:{o+1123-1}px;top:{M}px;width:{B+1}px;height:{794+2*B}px;background:{p[-1][2]}"></div>'
-    # bottom bleed per panel
-    for x0,x1,c in p: s+=f'<div style="position:absolute;left:{o+x0-(B if x0==0 else 0)}px;top:{o+793}px;width:{x1-x0+(B if x0==0 else 0)+(B if x1==1123 else 0)}px;height:{B+1}px;background:{c}"></div>'
-    # top bleed carries the gold livery stripe
-    s+=f'<div style="position:absolute;left:{M}px;top:{M}px;width:{1123+2*B}px;height:{B+1}px;background:#f2b21b"></div>'
+    for x0,x1,c in PANELS[n]:
+        L=o+x0-(B if x0==0 else 0); R=o+x1+(B if x1==1123 else 0)
+        s+=f'<div style="position:absolute;left:{L}px;top:{M}px;width:{R-L}px;height:{794+2*B+2}px;background:{c}"></div>'
+    s+=f'<div style="position:absolute;left:{M}px;top:{M}px;width:{1123+2*B}px;height:{B+12}px;background:#f2b21b"></div>'
+    s+=f'<div style="position:absolute;left:{M}px;top:{o+12}px;width:{1123+2*B}px;height:6px;background:#b5241a"></div>'
+    s+=f'<img src="assets/paper-grain.png" alt="" style="position:absolute;left:{M}px;top:{M}px;width:{1123+2*B}px;height:{794+2*B+2}px">'
     s+=f'<div style="position:absolute;left:{o}px;top:{o}px;width:1123px;height:794px;overflow:hidden">{body(n)}</div>'
-    # crop marks at the trim corners and fold marks
-    k='#000'
-    for x in (o,o+1123):
-        s+=f'<div style="position:absolute;left:{x-0.25}px;top:0;width:0.5px;height:{M-3}px;background:{k}"></div><div style="position:absolute;left:{x-0.25}px;top:{H-M+3}px;width:0.5px;height:{M-3}px;background:{k}"></div>'
-    for y in (o,o+794):
-        s+=f'<div style="position:absolute;top:{y-0.25}px;left:0;height:0.5px;width:{M-3}px;background:{k}"></div><div style="position:absolute;top:{y-0.25}px;left:{W-M+3}px;height:0.5px;width:{M-3}px;background:{k}"></div>'
-    for x0,_,_ in p[1:]:
-        s+=f'<div style="position:absolute;left:{o+x0-0.25}px;top:0;width:0.5px;height:{M-3}px;background:repeating-linear-gradient(180deg,#000 0 3px,transparent 3px 5px)"></div>'
-        s+=f'<div style="position:absolute;left:{o+x0-0.25}px;top:{H-M+3}px;width:0.5px;height:{M-3}px;background:repeating-linear-gradient(180deg,#000 0 3px,transparent 3px 5px)"></div>'
+    def ln(x,y,w,h): return f'<div style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px;background:#000"></div>'
+    for x in (o,o+1123): s+=ln(x-0.25,0,0.5,M-3)+ln(x-0.25,H-M+3,0.5,M-3)
+    for y in (o,o+794): s+=ln(0,y-0.25,M-3,0.5)+ln(W-M+3,y-0.25,M-3,0.5)
+    for fx in FOLDS[n]:
+        for y0 in (0,H-M+3):
+            for t in range(0,int(M-3),5): s+=ln(o+fx-0.25,y0+t,0.5,3)
     return W,H,f'<div class="pg" style="position:relative;width:{W}px;height:{H}px;overflow:hidden;background:#fff">{s}</div>'
 async def main():
   async with async_playwright() as pw:
@@ -46,3 +42,15 @@ async def main():
     await pg.set_viewport_size({'width':int(W)+1,'height':int(H)+1});await pg.screenshot(path=os.path.join(D,'bleed_check.png'),clip={'x':0,'y':0,'width':W,'height':H})
     await b.close()
 asyncio.run(main())
+import pikepdf
+o=(M+B)*0.75; b_=B*0.75
+with pikepdf.open(os.path.join(D,'Jurassic-Park-dining-guide-A4-print-bleed.pdf'),allow_overwriting_input=True) as pdf:
+    for p in pdf.pages:
+        p.TrimBox=pikepdf.Array([o,o,o+841.89,o+595.28])
+        p.BleedBox=pikepdf.Array([o-8.504,o-8.504,o+841.89+8.504,o+595.28+8.504])
+    pdf.save(os.path.join(D,'Jurassic-Park-dining-guide-A4-print-bleed.pdf'))
+
+with pikepdf.open(os.path.join(D,'Jurassic-Park-dining-guide-A4.pdf'),allow_overwriting_input=True) as pdf:
+    for pg_ in pdf.pages:
+        pg_.MediaBox=pikepdf.Array([0,0,841.89,595.28]); pg_.TrimBox=pikepdf.Array([0,0,841.89,595.28])
+    pdf.save(os.path.join(D,'Jurassic-Park-dining-guide-A4.pdf'))
