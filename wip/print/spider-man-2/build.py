@@ -115,15 +115,34 @@ def coupons():
     c_title = lambda t, col=NAVY, s=25: f'<div style="font-family: {DISP}; font-size: {s}px; line-height: 0.95; color: {col}">{t}</div>'
     c_text = lambda t, col=INK: f'<div style="margin-top: 3px; font-family: {BODY}; font-weight: 600; font-size: 15px; line-height: 1.15; color: {col}">{t}</div>'
     row = (coupon(0, 214, kicker('Our promise', SLIP, 14) + c_title('29 MINUTES OR IT\'S FREE', PAPER, 22)
-                  + c_text('Hand this to a late driver.', PAPER), RED)
-           + coupon(224, 166, c_title('TWO PIES') + c_title('$20.04', RED, 30) + c_text('Cheese. Toppings extra.'))
-           + coupon(400, 166, c_title('FREE KNOTS') + c_text('Six garlic knots with any pie. Any floor, any building.'))
+                  + c_text('Late pie? It\'s on us, and Mr. Aziz has words with the driver.', PAPER), RED)
+           + coupon(224, 166, c_title('FOUR ARMS, FOUR PIES', NAVY, 22) + c_title('$40.04', RED, 30) + c_text('For a doctor with his hands full.'))
+           + coupon(400, 166, c_title('FREE KNOTS') + c_text('With any pie. Any floor. We take the stairs, the lift or the wall.'))
            + coupon(576, 160, c_title('STUDENT SLICE') + c_text('Slice and soda 2.50 with a university ID.')))
     return (f'<div style="position: absolute; left: 40px; top: 882px; width: 736px; height: 104px">{row}</div>'
             f'<div style="position: absolute; left: 40px; top: 862px; width: 736px; display: flex; align-items: center; gap: 10px">'
             f'<div style="flex: 1; border-top: 2px dashed {NAVY}"></div>'
             f'{kicker("Clip and save. One coupon per order", NAVY, 14, "letter-spacing: 0.14em")}'
             f'<div style="flex: 1; border-top: 2px dashed {NAVY}"></div></div>')
+
+def tally_board():
+    """The late board by the register: every late run gets a mark."""
+    def group(n, slash=True):
+        bars = ''.join(f'<div style="position: absolute; left: {i * 9}px; top: 0; width: 4px; height: 34px; background: {NAVY}"></div>' for i in range(min(n, 4)))
+        sl = (f'<div style="position: absolute; left: -6px; top: 15px; width: 46px; height: 4px; background: {RED}; transform: rotate(-28deg)"></div>' if n == 5 else '')
+        return f'<div style="position: relative; width: {min(n, 4) * 9}px; height: 34px; margin-right: 14px">{bars}{sl}</div>'
+    marks = group(5) + group(5) + group(5) + group(2)
+    return (f'<div style="margin-top: 14px; border: 3px solid {NAVY}; padding: 8px 10px 10px; background: #ffffff">'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
+            f'<div style="font-family: {DISP}; font-size: 24px; line-height: 1; color: {RED}">LATE AGAIN</div>'
+            f'<div style="font-family: {COND}; font-weight: 700; font-size: 16px; letter-spacing: 0.08em; color: {NAVY}">DRIVER: P. PARKER</div></div>'
+            f'<div style="margin-top: 8px; display: flex; align-items: center">{marks}</div>'
+            f'<div style="margin-top: 6px; font-family: {BODY}; font-weight: 600; font-size: 15px; line-height: 1.2; color: {INK}">Seventeen this month. The board stays up until he learns.</div></div>')
+
+def late_stamp(x, y):
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; transform: rotate(-9deg); border: 4px solid {RED}; border-radius: 6px; padding: 4px 12px 2px; background: rgba(251,248,241,0.82)">'
+            f'<div style="font-family: {DISP}; font-size: 38px; line-height: 1; color: {RED}; letter-spacing: 0.04em">LATE AGAIN</div>'
+            f'<div style="font-family: {COND}; font-weight: 700; font-size: 15px; letter-spacing: 0.16em; color: {RED}; text-align: center">31 MINUTES. PIE IS FREE.</div></div>')
 
 # ---------- the sheet ----------
 def sheet():
@@ -140,23 +159,24 @@ def sheet():
     hero = (f'<div style="position: absolute; left: 40px; top: 214px; width: 736px; height: 282px; box-sizing: border-box; border: 4px solid {RED}; overflow: hidden">'
             f'<img src="assets/still-delivery.jpg" alt="Peter in a marble office lobby with a stack of pizza boxes held on by a bungee cord" style="position: absolute; left: 0; top: 0; width: 728px; height: 274px; object-fit: cover; object-position: 50% 30%; display: block">'
             f'<div style="position: absolute; left: 0; bottom: 0; background: {NAVY}; padding: 7px 14px 6px; font-family: {BODY}; font-weight: 600; font-size: 18px; line-height: 1.2; color: {PAPER}">'
-            f'Our driver, 42 blocks and still smiling. Hot to any lobby.</div></div>'
-            f'{warning_slip(528, 232)}')
+            f'One driver, one bungee cord, a stack of pies. 42 blocks to go.</div></div>'
+            f'{warning_slip(528, 232)}{late_stamp(560, 420)}')
     c1 = ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(PIES))
     c2 = ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(START))
     c3 = (''.join(dish(n, p, d, 10) for _, n, p, d in MORN)
           + f'<div style="margin-top: 14px">{head("DRINKS")}</div>'
           + ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(DRINK)))
     menu = (f'<div style="position: absolute; left: 40px; top: 512px; width: 736px; height: 336px; display: flex; gap: 20px">'
-            f'<div style="width: 250px">{head("PIES", "18 inch")}{c1}</div>'
+            f'<div style="width: 250px">{head("PIES", "18 inch")}{c1}{tally_board()}</div>'
             f'<div style="width: 1px; background: {NAVY}; opacity: 0.35"></div>'
             f'<div style="width: 222px">{head("STARTERS")}{c2}'
-            f'<div style="margin-top: 12px; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.25; color: {RED}">Our deck oven runs hotter than a small sun.</div></div>'
+            f'<div style="margin-top: 12px; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.25; color: {RED}">Our deck oven runs hotter than a small sun.</div>'
+            f'<div style="margin-top: 8px; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.25; color: {NAVY}">Costume party? We deliver. We hear the suits itch.</div></div>'
             f'<div style="width: 1px; background: {NAVY}; opacity: 0.35"></div>'
             f'<div style="width: 222px">{head("WEEKENDS", "to noon")}{c3}</div>'
             f'</div>')
     foot = (f'<div style="position: absolute; left: 40px; top: 996px; width: 736px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {INK}">'
-            f'<span>Prices subject to change. Drivers carry under $20. Bugle newsroom orders, ask for Betty.</span>'
+            f'<span>Prices subject to change. Drivers carry under $20. Fired drivers return the helmet sticker. Bugle newsroom orders, ask for Betty.</span>'
             f'<span style="white-space: nowrap; margin-left: 12px">Form 2004-SM2</span></div>')
     return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {PAPER}; color: {INK}">'
             f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; object-fit: cover; opacity: 0.22; display: block">'
