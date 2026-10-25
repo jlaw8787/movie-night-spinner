@@ -33,13 +33,13 @@ def soften(im, boxes, r=9):
     return Image.composite(blur, im, m)
 
 PH_W, PH_H = CW - 12, 262
-street = Image.open(S('loc-8d21715.jpg')).convert('L')
-street = soften(street, [(676, 482, 930, 535), (680, 540, 760, 575), (820, 555, 930, 600), (836, 655, 880, 690), (628, 512, 680, 584)])
-street = ImageEnhance.Contrast(ImageEnhance.Brightness(street).enhance(1.14)).enhance(1.1)
-st = fit(street, PH_W, PH_H, (205, 330, 676, 614))
-# warm black and white, printed in the card's oxblood so it sits on pink stock
-st = ImageOps.colorize(st, black=(34, 14, 16), white=(252, 242, 236), mid=(156, 122, 114))
-st.save(A('feast-street.jpg'), quality=90)
+bar = Image.open(S('o-mffFvDS2MiP2m26Mdoo2tw0ejWa.jpg')).convert('RGB')
+bar = ImageEnhance.Brightness(bar).enhance(1.42)
+bar = ImageEnhance.Contrast(bar).enhance(1.04)
+# warm it: lift reds and ambers a touch, ease the blue
+r, g, b = bar.split()
+bar = Image.merge('RGB', (r.point(lambda v: min(255, int(v * 1.06 + 6))), g.point(lambda v: min(255, int(v * 1.02 + 4))), b.point(lambda v: int(v * 0.9))))
+fit(bar, PH_W, PH_H, (60, 0, 1857, 1080)).save(A('red-light-bar.jpg'), quality=90)
 
 JB_W, JB_H = 190, 140
 jb = Image.open(S('o-sKyj7i4NPPZCRBea1W5AbTchox9.jpg')).convert('RGB')
@@ -137,13 +137,13 @@ def front():
              f'line-height: 1.1; color: #ffb3ac; letter-spacing: 0.06em">THE RED LIGHT&rsquo;S ON. WE&rsquo;RE OPEN.</div>')
 
     # signature: the street on parade day
-    o.append(f'<div style="position: absolute; left: {L}px; top: 194px; width: {CW}px">{kicker("Feast week on the block")}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 194px; width: {CW}px">{kicker("Under the red light")}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 218px; width: {PH_W}px; height: {PH_H}px; border: 4px solid {CARD}; '
              f'outline: 2px solid {RED}; box-shadow: 0 2px 6px rgba(60,10,10,0.3)">'
-             f'<img src="assets/feast-street.jpg" alt="A Little Italy street packed for a parade, flags and bunting hung from every fire escape" '
+             f'<img src="assets/red-light-bar.jpg" alt="The bar under its red lights, Johnny Boy laughing at the counter, Michael in his good suit" '
              f'style="display: block; width: {PH_W}px; height: {PH_H}px"></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 498px; width: 192px; font-family: {BODY}; font-style: italic; font-size: 17px; '
-             f'line-height: 1.3; color: {MUTE}">The whole block turns out. Bunting up, saints out, nobody sleeps.</div>')
+             f'line-height: 1.3; color: {MUTE}">Feast week. Everybody&rsquo;s here. Nobody&rsquo;s paying.</div>')
     raffle(o, 236, 452)
 
     feast = (item('Sausage &amp; peppers', '.73', 'Charred onion and red pepper, hot mustard.', 10)

@@ -1,4 +1,4 @@
 # Mean Streets menu, image credits
-- feast-street.jpg: "Parade of Italian-Americans on Mott Street", Marjory Collins, August 1942, FSA/OWI, Library of Congress LC-USW3-006885-E (digital id fsa 8d21715). Public domain, no known restrictions. https://commons.wikimedia.org/wiki/File:Parade_of_Italian-Americans_on_Mott_Street8d21715v.jpg , file https://tile.loc.gov/storage-services/service/pnp/fsa/8d21000/8d21700/8d21715v.jpg . Cropped, shop signs softened, printed as an oxblood duotone.
-- johnny-at-the-bar.jpg: TMDB still /sKyj7i4NPPZCRBea1W5AbTchox9.jpg (Mean Streets, 1973). Beer sign behind softened.
-- No 1970s public domain feast photo was reachable (Commons and loc.gov searches turned up only 2004+ CC photos or 1940s FSA/OWI work), so the closest public domain Little Italy street festival photo was used.
+- red-light-bar.jpg (front hero): TMDB still /mffFvDS2MiP2m26Mdoo2tw0ejWa.jpg (Mean Streets, 1973), Tony's bar under the red lights. Brightened and warmed.
+- johnny-at-the-bar.jpg (back): TMDB still /sKyj7i4NPPZCRBea1W5AbTchox9.jpg (Mean Streets, 1973). Beer sign behind softened.
+- Dropped: the 1942 Marjory Collins Mott Street parade photo (LoC fsa 8d21715, public domain) was replaced as hero on the coordinator's call; it no longer appears.

@@ -25,11 +25,9 @@ def fit(im, w, h, box=None):
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
 PW, PH = 226, 252   # portrait photo size
-host = Image.open(S('eqVWC6wlPgbW7bH2MFBP9MMpCX.jpg')).convert('L')
-host = ImageOps.autocontrast(host, cutoff=0.5)
+host = Image.open(S('ybhvuncCI4LRq7grViINuMbmHTl.jpg')).convert('RGB')
 host = ImageEnhance.Brightness(host).enhance(1.05)
-host = Image.merge('RGB', [host.point(lambda v, a=a: int(v * a + (1 - a) * 24)) for a in (0.97, 1.0, 0.96)])
-fit(host, PW, PH, (0, 60, 640, 920)).save(A('host-carmine.jpg'), quality=90)
+fit(host, PW, PH, (110, 80, 620, 650)).save(A('host-carmine.jpg'), quality=90)
 
 guest = Image.open(S('k3.jpg')).convert('RGB')
 guest = ImageEnhance.Brightness(guest).enhance(1.06)
@@ -112,9 +110,9 @@ def business_card(o, x, y):
 
 def crate_tag(o, x, y):
     """Shipping tag wired to the guest of honor's crate: manila, eyelet, red warning."""
-    o.append(f'<div style="position: absolute; left: {x - 34}px; top: {y + 14}px; width: 46px; height: 2px; background: #6c6a55; transform: rotate(-24deg); transform-origin: 100% 50%"></div>')
     o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 160px; height: 100px; background: #dcc493; border-radius: 4px 14px 14px 4px; '
              f'box-shadow: 0 3px 8px rgba(10,25,15,0.45); transform: rotate(6deg); box-sizing: border-box; padding: 9px 8px 0 30px">'
+             f'<div style="position: absolute; left: -44px; top: 47px; width: 60px; height: 2px; background: #6c6a55; transform: rotate(-24deg); transform-origin: 100% 50%"></div>'
              f'<div style="position: absolute; left: 8px; top: 40px; width: 15px; height: 16px; border-radius: 50%; background: {PAPER}; border: 3px solid #a98f5e; box-sizing: border-box"></div>'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 19px; letter-spacing: 0.02em; line-height: 1.0; color: {RED}; white-space: nowrap">DO NOT FEED</div>'
              f'<div style="border-top: 1px solid #8b7448; margin-top: 4px; padding-top: 3px; font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.2; color: #3b3220">'
@@ -135,7 +133,7 @@ def front():
              f'font-size: 18px; letter-spacing: 0.08em; line-height: 1.2; color: {MUTE}">EIGHT O&rsquo;CLOCK. THE ADDRESS FOLLOWS BY TELEPHONE.</div>')
     o.append(rose_rule(246))
     o.append(portrait(48, 272, 'Our host', 'host-carmine.jpg',
-                      'An older gentleman in a dinner jacket and bow tie, a rose in his lapel, hair combed straight back',
+                      'An older gentleman facing the camera in a dinner jacket and bow tie, a red rose in his lapel, hair combed straight back',
                       'Mr. Carmine Sabatini', 'Any likeness to a gentleman<br>in the pictures is coincidence.'))
     o.append(portrait(310, 272, 'Guest of honor', 'guest-komodo.jpg',
                       'A Komodo dragon facing the camera on rocks and logs, front legs planted, looking straight ahead',

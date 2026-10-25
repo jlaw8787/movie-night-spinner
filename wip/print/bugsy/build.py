@@ -72,7 +72,7 @@ def item(name, price, desc, gap=16, size=26, dsize=20):
 def section(sub, title, size=40):
     """Deco section head: gold kicker, Federo title, gold double rule with a pink diamond."""
     return (f'{kicker(sub)}'
-            f'<div style="font-family: {DISP}; font-size: {size}px; line-height: 1.05; color: {PINK}; margin-top: 4px; letter-spacing: 0.04em">{title}</div>'
+            f'<div style="font-family: {DISP}; font-size: {size}px; line-height: 1.05; color: {PINK}; margin-top: 4px; letter-spacing: 0.05em; text-shadow: 0.9px 0 0 currentColor, -0.9px 0 0 currentColor, 0 0.45px 0 currentColor">{title}</div>'
             f'<div style="position: relative; height: 12px; margin-top: 6px">'
             f'<div style="position: absolute; left: 0; right: 0; top: 2px; border-top: 2px solid {GOLD}; border-bottom: 1px solid {GOLD}; height: 3px"></div>'
             f'<div style="position: absolute; left: 0; top: -1px; width: 12px; height: 12px; background: {PINK}; transform: rotate(45deg)"></div></div>')
@@ -128,7 +128,7 @@ def front():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 54px; width: {CW}px; text-align: center">'
              f'{kicker("Grand opening &nbsp;&middot;&nbsp; Highway 91 &nbsp;&middot;&nbsp; Nevada")}'
-             f'<div style="font-family: {DISP}; font-size: 84px; line-height: 0.96; color: {INK}; margin-top: 12px; letter-spacing: 0.03em">THE PINK<br>PLUME</div>'
+             f'<div style="font-family: {DISP}; font-size: 88px; line-height: 0.96; color: {INK}; margin-top: 10px; letter-spacing: 0.04em; text-shadow: 1.6px 0 0 currentColor, -1.6px 0 0 currentColor, 0 0.8px 0 currentColor">THE PINK<br>PLUME</div>'
              f'<div style="font-family: {DISP}; font-size: 21px; line-height: 1.2; color: {PINK}; margin-top: 12px; letter-spacing: 0.2em">HOTEL &nbsp;&middot;&nbsp; CASINO &nbsp;&middot;&nbsp; SHOWROOM</div></div>')
     o.append(gold_frame('flamingo-plate.jpg', 'A painted American flamingo bending its long neck down to the shore, more flamingos wading behind',
                         L - 1, 300, PL_W, PL_H))
@@ -139,7 +139,7 @@ def front():
     # Ben's welcome, left column
     o.append(f'<div style="position: absolute; left: {L}px; top: 920px; width: 316px">'
              f'{kicker("From the boss")}'
-             f'<div style="font-family: {DISP}; font-size: 36px; line-height: 1.05; color: {PINK}; margin-top: 4px; white-space: nowrap">OPENING NIGHT</div>'
+             f'<div style="font-family: {DISP}; font-size: 36px; line-height: 1.05; color: {PINK}; margin-top: 4px; white-space: nowrap; text-shadow: 0.9px 0 0 currentColor, -0.9px 0 0 currentColor, 0 0.45px 0 currentColor">OPENING NIGHT</div>'
              f'<div style="font-family: {BODY}; font-size: 19px; line-height: 1.4; color: {INK}; margin-top: 10px">'
              'They said nobody would drive out to the middle of nowhere for a steak. Look around. Order anything. The house can take it.</div>'
              f'<div style="font-family: {SCRIPT}; font-size: 44px; line-height: 1; color: {INK}; margin-top: 6px">Ben Siegel</div>'
@@ -167,19 +167,19 @@ def back():
     invitation(o, 404, 34)
 
     colw = 282
-    left = (section('From eight', 'APPETIZERS', 36)
+    left = (section('From eight', 'APPETIZERS', 38)
             + item('Caviar blini', '1.75', 'Warm buckwheat cakes, cr&egrave;me fra&icirc;che, red salmon caviar, snipped chives.', 12)
             + item('Cobb cups', '.85', 'Chicken, bacon, avocado, egg, tomato, blue cheese, in lettuce cups.', 14)
             + item('Shrimp on ice', '1.00', 'Sharp horseradish cocktail sauce, lemon.', 14)
             + f'<div style="height: 22px"></div>'
-            + section('In the lounge', 'THE BAR', 36)
+            + section('In the lounge', 'THE BAR', 38)
             + item('Gin rickey', '.60', 'Miss Hill&rsquo;s way: gin, fresh lime and soda, shell left in.', 12)
             + item('Champagne cocktail', '1.46', 'Sugar cube, bitters, a lemon twist.', 14))
-    right = (section('Served at nine', 'THE SUPPER', 36)
+    right = (section('Served at nine', 'THE SUPPER', 38)
              + item('Steak Diane', '4.75', 'Rib eye pounded thin, seared hot, flamed in brandy, then shallot, Dijon, Worcestershire and cream.', 12)
              + item('Prime rib', '3.95', 'Carved to order, natural juices, popover.', 14)
              + f'<div style="height: 22px"></div>'
-             + section('After the show', 'DESSERT', 36)
+             + section('After the show', 'DESSERT', 38)
              + item('Pavlova', '.75', 'Crisp meringue, soft middle, whipped cream and crushed raspberries.', 12)
              + item('Coffee', '.15', '', 14))
     o.append(f'<div style="position: absolute; left: {L}px; top: 446px; width: {colw}px">{left}</div>')

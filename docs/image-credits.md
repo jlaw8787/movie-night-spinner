@@ -7,6 +7,18 @@ Film stills from TMDB. Other photos are public domain or free licence, listed pe
 - assets/map16.png: painted in PIL by paint.py (no outside source)
 - assets/paper-grain.png: shared house grain from jurassic/src/assets
 
+## analyze-this
+- hero-couch.jpg: TMDB still /an58YOHXRHzAN9E5IjEfuAzfjeQ.jpg (Analyze This, 1999). Vitti on the couch in Sobel's office.
+- hug-cutout.png: TMDB image /k8V1VfebAwSSNrDypupZ22eLT6U.jpg (Analyze This, 1999), white ground removed.
+- paper-grain.png: shared house grain from jurassic/src/assets.
+- No Library of Congress, NYPL or Wikimedia image used: the venue is a fictional hotel ballroom and the film's own stills carry both faces.
+
+## bugsy
+- roulette-1940.jpg (back, signature): Russell Lee, "Roulette players. Las Vegas, Nevada", 1940. Library of Congress, FSA/OWI collection, https://www.loc.gov/item/2017779953/ , master tile.loc.gov/storage-services/master/pnp/fsa/8b19000/8b19700/8b19716u.tif . No known restrictions on publication (public domain). Cropped, warm sepia.
+- flamingo-plate.jpg (front): Robert Havell after John James Audubon, "American Flamingo", 1838. National Gallery of Art via Wikimedia Commons, File:Robert_Havell_after_John_James_Audubon,_American_Flamingo,_1838,_NGA_32572.jpg . CC0. Cropped.
+- site-desert.jpg (front): TMDB still /fBcQZtzSVEEUAlLmHPnex7p4Doe.jpg (Bugsy, 1991).
+- Hotel name is fictional (The Pink Plume); the real hotel's name is not used.
+
 ## die-hard-with-a-vengeance
 - assets/still-avenue.jpg: TMDB still of Die Hard with a Vengeance (1995), https://image.tmdb.org/t/p/original/hLyGN90wfypN2lXSnThHLwrbNdv.jpg (listed in data/film-stills.json). Film still, used as on the rest of the site.
 - assets/map-run.png: painted in paint.py from borough outlines in https://raw.githubusercontent.com/dwillis/nyc-maps/master/boroughs.geojson (NYC Department of City Planning borough boundaries, NYC Open Data, free public data). New Jersey shore drawn by hand.
@@ -28,6 +40,12 @@ Film stills from TMDB. Other photos are public domain or free licence, listed pe
 - File: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Engine_291_HL_48_56-07_Metropolitan_Ave_jeh.jpg/1920px-Engine_291_HL_48_56-07_Metropolitan_Ave_jeh.jpg
 - Licence: CC0 1.0 (public domain dedication by the author, {{self|cc-zero}} on the file page).
 - Treatment (photo.py): hanging department banner covered with neighbouring brick, cropped above street level so no shop signs, cars or people show, toned toward dusk with a navy falloff under the headline.
+
+## get-shorty
+- palms-out-front.jpg: "Palm lined street in Los Angeles, California" by Carol M. Highsmith, Library of Congress LCCN 2013632428, public domain. Via https://commons.wikimedia.org/wiki/File:Palm_lined_street_in_Los_Angeles,_California_LCCN2013632428.tif
+- lunch-pitch.jpg: TMDB still /7mbBY0I99nLegO8rcmdLKSU8y28.jpg (Get Shorty, 1995).
+- booth-chili.jpg: TMDB still /noN7a2cxhMBAX303m7isGBwgxbs.jpg (Get Shorty, 1995).
+- Not used: src/cc0-sepulveda.jpg, src/cc0-dreaming.jpg (CC0, reviewed; the second shows the Hollywood sign, left out).
 
 ## ghost-dog
 
@@ -62,6 +80,16 @@ Film stills from TMDB. Other photos are public domain or free licence, listed pe
 - Mulberry Street, New York City, c.1900. Detroit Publishing Co. photochrom, Library of Congress cph 3g04637. Public domain (published 1900, no known restrictions). Restored file from Wikimedia Commons: https://commons.wikimedia.org/wiki/File:Mulberry_Street_NYC_c1900_LOC_3g04637u_edit.jpg (also at https://tile.loc.gov/storage-services/service/pnp/cph/3g00000/3g04000/3g04600/3g04637v.jpg). Cropped to remove the brewery sign at left and the publisher's caption.
 - Film still, the glass of milk on the checked cloth: TMDB /tv9JUVVNJgHL97CIBrf1zbc1ZfW.jpg (Léon: The Professional, 1994).
 
+## mean-streets
+- red-light-bar.jpg (front hero): TMDB still /mffFvDS2MiP2m26Mdoo2tw0ejWa.jpg (Mean Streets, 1973), Tony's bar under the red lights. Brightened and warmed.
+- johnny-at-the-bar.jpg (back): TMDB still /sKyj7i4NPPZCRBea1W5AbTchox9.jpg (Mean Streets, 1973). Beer sign behind softened.
+- Dropped: the 1942 Marjory Collins Mott Street parade photo (LoC fsa 8d21715, public domain) was replaced as hero on the coordinator's call; it no longer appears.
+
+## mickey-blue-eyes
+- mulberry-street.jpg: "[Italian neighborhood with street market, Mulberry Street, New York]", Detroit Publishing Co. glass negative, c1900. Library of Congress Prints and Photographs, digital ID det 4a27270 (https://tile.loc.gov/storage-services/service/pnp/det/4a20000/4a27000/4a27200/4a27270v.jpg). Public domain, no known restrictions. Cropped past a jeweller's clock and a watch sign, two small signs blurred so no brand reads. Replaces the 3g04637 photochrom, which the Leon menu uses.
+- the-lesson.jpg: TMDB still /5FNiyS5m6JXXmPEFG7YWAqcTrFz.jpg (Mickey Blue Eyes, 1999).
+- the-family.jpg: TMDB still /ubzEOsAItmoFuEUppGqaDzq4gR2.jpg (Mickey Blue Eyes, 1999).
+
 ## midnight-cowboy
 
 "Under the shady palms of Lummus Park at Miami Beach, Florida", linen postcard, ca. 1930 to 1945.
@@ -76,6 +104,16 @@ File: assets/postcard-miami.jpg
 Midnight Cowboy (1969), Forty-Second Street. TMDB /yAjncbMAhi1VsPxakYQWI3davOo.jpg (listed in data/film-stills.json).
 Cropped to the street and the cab, no cast and no marquee titles. File: assets/still-42nd-crop.jpg
 
+## millers-crossing
+- street-1928.jpg (signature): "Downtown Street Scene", John H. Kammerdiener, Minneapolis, 1928, Hennepin County Library via Minnesota Digital Library and DPLA. Public domain (PD US). https://commons.wikimedia.org/wiki/File:Downtown_Street_Scene_-_DPLA_-_ad6fc81480cb003b21bfdfb437e5a2b9.jpg . 1920px Commons thumbnail, negative number cropped off, toned smoke duotone. Shown unnamed as "our corner".
+- hat-woods.jpg: TMDB still /qMfJPDviH3AVbZ8FMmcpdqxkj6n.jpg (Miller's Crossing, 1990), listed in data/film-stills.json.
+- paper-grain.png: shared house grain from jurassic/src/assets. wear-smoke-*.png painted in build.py.
+
+## pope-of-greenwich-village
+- assets/bleecker-1942.jpg: "Blowing horns on Bleeker Street" (New Year's Eve, New York), Marjory Collins, 1942, Farm Security Administration / Office of War Information, Library of Congress 8d23898 (OWI-13049-E). Rights: no known restrictions (US government work, public domain). File https://tile.loc.gov/storage-services/master/pnp/fsa/8d23000/8d23800/8d23898u.tif . Cropped to the building and horns; the only shop lettering is a partial "C".
+- assets/still-captain.jpg: TMDB still /kTwweg7r2XBU38CNjRt3KPmit3V.jpg (The Pope of Greenwich Village, 1984), brightened.
+- Plot details checked against the AFI Catalog entry: https://catalog.afi.com/Film/57168-THE-POPE-OF-GREENWICH-VILLAGE
+
 ## premium-rush
 
 - "Chicken over rice", photographer T.Tseng, 1 February 2015, New York.
@@ -88,6 +126,12 @@ Cropped to the street and the cab, no cast and no marquee titles. File: assets/s
 - Manhattan, Brooklyn, Queens and Bronx shorelines: NYC borough boundaries (NYC Department of City Planning open data), via codeforgermany/click_that_hood public/data/new-york-city-boroughs.geojson.
 - Central Park and neighborhood lines: click_that_hood public/data/manhattan.geojson.
 - Street grid, Broadway, route, bridges and New Jersey shore drawn by hand in map.py from known coordinates.
+
+## prizzis-honor
+- parish-arch.png: "OLPH north sun jeh.jpg", Basilica of Our Lady of Perpetual Help, Sunset Park, Brooklyn, photo by Jim Henderson, Wikimedia Commons, CC0 1.0 Universal Public Domain Dedication. https://commons.wikimedia.org/wiki/File:OLPH_north_sun_jeh.jpg (960x1044 file). Cropped, warm sepia tone, arch mask; lettering on a school banner by the steps blurred so no names read.
+- couple-armed.png: TMDB image /nWuMujweJPPuvwakC5Y6wyrZmfp.jpg (Prizzi's Honor, 1985 key art), cream ground keyed out.
+- don-sweets.jpg: TMDB still /2KWUR87bUjCfk5HGQCUTbpYFBnd.jpg (Prizzi's Honor, 1985).
+- Replaced: LOC FSA/OWI 1944 "Brooklyn, New York. The Church of the Good Shepherd" (fsa 8d35884, public domain), kept in src/ only.
 
 ## raging-bull
 - hero-title-night.jpg: TMDB still /uBVmi4TxFGl3A8oN9aQDmtG2A1A.jpg (Raging Bull, 1980). Maker's name on the trunks waistband blurred.
@@ -106,6 +150,13 @@ Cropped to the street and the cab, no cast and no marquee titles. File: assets/s
 - bridge-1973.jpg: "The Verrazano-Narrows Bridge crosses New York Bay and connects Staten Island and Brooklyn", Arthur Tress, June 1973, DOCUMERICA, Environmental Protection Agency. National Archives NAID 547828. US federal government work, public domain. https://commons.wikimedia.org/wiki/File:THE_VERRAZANO-NARROWS_BRIDGE_CROSSES_NEW_YORK_BAY_AND_CONNECTS_STATEN_ISLAND_AND_BROOKLYN_-_NARA_-_547828.jpg (1280px file; magenta slide cast corrected). No brands visible.
 - paper-grain-light.png: recoloured copy of the shared jurassic paper-grain.png.
 - mirror-ball.png: painted in PIL by build.py (no outside source).
+
+## scarface
+- floor-still.jpg: TMDB still /az8n4ty1MklkjIX23I0qig4BZcp.jpg (Scarface, 1983), the Babylon Club dance floor.
+- blimp.jpg: TMDB still /7dAGeHU2p9r0sBNUGr495xZ0i1l.jpg (Scarface, 1983), the "The World Is Yours" airship, used on the ticket prop.
+- ocean-drive.jpg: Century Hotel, 140 Ocean Drive, Miami Beach. Historic American Buildings Survey, HABS FL-322-K, photo 052098p. Library of Congress https://www.loc.gov/item/fl0277/ , file https://tile.loc.gov/storage-services/master/pnp/habshaer/fl/fl0200/fl0277/photos/052098pu.tif . US government work, "No known restrictions on images made by the U.S. Government". Cropped above the hotel's name sign so no business name shows; printed as a pink duotone.
+- flamingo-tile.jpg: lobby mural detail, Victor Hotel, 1144 Ocean Drive. HABS FL-322-Z, photo 052160p. https://www.loc.gov/item/fl0292/ , file https://tile.loc.gov/storage-services/master/pnp/habshaer/fl/fl0200/fl0292/photos/052160pu.tif . Same rights statement. Cropped to the two flamingos (painter's signature left out), pink duotone.
+- paper-grain-light.png: recoloured copy of the shared jurassic paper-grain.png.
 
 ## spider-man-2
 
@@ -138,6 +189,13 @@ Cropped to the street and the cab, no cast and no marquee titles. File: assets/s
 ## the-french-connection
 - assets/src-street.jpg, photo-street.png: TMDB still from The French Connection (1971), https://image.tmdb.org/t/p/original/vuJ0qEbmkXUNMLbTZ7twVKC2A1b.jpg (listed in data/film-stills.json). Cropped right of the hotel canopy so no sign shows.
 - assets/src-vieuxport.jpg, photo-port.png: [Old Harbor (Vieux-Port), Marseille, France, with Hotel-Dieu Hospital in background], Photochrom, c.1890 to 1900, Library of Congress Prints and Photographs, https://www.loc.gov/item/2002715102/ , image https://tile.loc.gov/storage-services/service/pnp/ppmsc/09900/09986v.jpg . No known restrictions on publication (public domain).
+
+## the-freshman
+- guest-komodo.jpg: "A Komodo Dragon at the Roger Williams Park Zoo", Jonathan Desrosiers, WordPress Photo Directory, CC0. https://wordpress.org/photos/photo/6086763800/ , file https://pd.w.org/2024/12/608676380043f8f20.85418657-1536x2048.jpeg (found via Openverse, licence cc0).
+- host-carmine.jpg: TMDB still /eqVWC6wlPgbW7bH2MFBP9MMpCX.jpg (The Freshman, 1990), cropped to Carmine.
+- chef-london.jpg: TMDB still /ybhvuncCI4LRq7grViINuMbmHTl.jpg (The Freshman, 1990), cropped to Larry London.
+- paper-grain.png: shared grain from jurassic/src/assets.
+- src/k1, k2, k4, k5, k6: unused CC0 candidates (Flickr and WordPress Photo Directory), not published.
 
 ## things-to-do-in-denver
 
