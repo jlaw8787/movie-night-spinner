@@ -1,10 +1,10 @@
 """The Tea Room, West 57th Street, New York, 1982. The room where Dorothy Michaels lunches with her agent.
 Tall room service style folder, two faces 672x1344 (7 x 14 in), rose stock, deep teal and banquette red.
-Front: sign, the engraved samovar and tea glass running the height of the face, zakuski, guest book, Reserved card.
+Front: sign, a real 1927 samovar photograph over a still of the room's own samovar, down the left side, zakuski, guest book, Reserved card.
 Back: kitchen, sweets, samovar drinks, the lunch still with the coat check ticket, fine print.
-Run paint.py first (assets/samovar.png). Writes still crop, paper wear, front/back.body.html and front.html / back.html."""
+Writes photo crops, still crop, paper wear, front/back.body.html and front.html / back.html."""
 import os, random
-from PIL import Image, ImageDraw, ImageFilter, ImageChops
+from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageOps
 D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 W, H = 672, 1344
@@ -36,6 +36,23 @@ def wear(name, seed):
     lay.save(A(f'wear-{name}.png'))
 
 crop('still-lunch.jpg', 'spot-lunch.jpg', 236, 200, fy=0.3, fx=0.62)
+
+def samovar_photo(w, h):
+    """1927 samovar photograph (Khoroshikh, LOC / World Digital Library): crop to the samovar and cloth,
+    tone it teal-black on the rose card."""
+    im = Image.open(A('loc-samovar-1927.jpg')).convert('L'); sw, sh = im.size
+    box = (int(sw * 0.20), int(sh * 0.12), int(sw * 0.82), int(sh * 0.86))
+    im = im.crop(box); bw, bh = im.size; r = w / h
+    if bw / bh > r:
+        nw = int(bh * r); im = im.crop(((bw - nw) // 2, 0, (bw - nw) // 2 + nw, bh))
+    else:
+        nh = int(bw / r); im = im.crop((0, (bh - nh) // 2, bw, (bh - nh) // 2 + nh))
+    im = ImageOps.autocontrast(im.resize((w * 2, h * 2), Image.LANCZOS), cutoff=0.5)
+    ImageOps.colorize(im, black=(23, 52, 50), white=(253, 246, 241), mid=(140, 132, 128)).save(A('photo-samovar-1927.jpg'), quality=90)
+
+SAMW, SAMH, ROOMH = 248, 380, 420
+samovar_photo(SAMW, SAMH)
+crop('still-samovar.jpg', 'spot-samovar-room.jpg', SAMW, ROOMH, fy=0.5, fx=0.47)
 wear('front', 7); wear('back', 40)
 
 # ---------------- type pieces ----------------
@@ -98,8 +115,11 @@ def front():
     o.append(f'<div style="position: absolute; left: {L}px; top: 66px; width: {CW}px; text-align: center; font-family: {SCRIPT}; font-size: 76px; line-height: 1.45; color: {RED}">The Tea Room</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 184px; width: {CW}px; text-align: center">{kicker("Christmas all year round")}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 214px; width: {CW}px; height: 9px; border-top: 3px solid {DARK}; border-bottom: 1px solid {RED}"></div>')
-    o.append(f'<img src="assets/samovar.png" alt="Engraving of a copper samovar with its teapot on the crown, and a glass of tea in a pierced holder" '
-             f'style="position: absolute; left: 34px; top: 244px; width: 284px; height: 1041px; display: block">')
+    frame = f'border: 2px solid {RED}; padding: 5px; background: {CARD}; box-shadow: 0 1px 4px rgba(40,20,20,0.18)'
+    o.append(f'<div style="position: absolute; left: {L - 4}px; top: 252px; {frame}">'
+             f'<img src="assets/photo-samovar-1927.jpg" alt="A brass samovar on a white cloth, photographed in 1927" style="display: block; width: {SAMW}px; height: {SAMH}px"></div>')
+    o.append(f'<div style="position: absolute; left: {L - 4}px; top: {252 + SAMH + 14 + 30}px; {frame}">'
+             f'<img src="assets/spot-samovar-room.jpg" alt="Dorothy Michaels at a banquette, the room\'s brass samovar behind her" style="display: block; width: {SAMW}px; height: {ROOMH}px"></div>')
     col = (kicker('To begin, at the table')
            + f'<div style="margin-top: 6px">{head("Zakuski", 44)}</div>'
            + item('Finger sandwiches', '5.50', 'Egg salad with watercress, and cucumber with cream cheese, on soft white bread. Crusts off, cut in triangles.', 6, 26)

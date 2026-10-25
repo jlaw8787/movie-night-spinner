@@ -3,7 +3,7 @@
 Format: slim table card, two faces 408 x 1056 px (4.25 x 11 in at 96 dpi).
 Venue: the executive dining room upstairs at Pemrose, the floor Brantley talks his way onto as Carlton Whitfield.
 Palette from the film's 1987 corporate world: dove grey stock, charcoal, boardroom burgundy.
-Signature piece (paint.py): a tall engraved view of the Manhattan skyline through a Pemrose tower window,
+Signature piece: a real Midtown Manhattan photo (Carol M. Highsmith, LOC, public domain) through a Pemrose tower window,
 running the height of the front, with the venue lettered on the transom glass. Prop: the routing slip. Back: one framed TMDB still.
 """
 import os, json
@@ -133,7 +133,9 @@ routing = f'''<div style="position: absolute; left: 132px; top: 566px; width: 23
   </div>'''
 
 front_inner = f'''
-  <img src="assets/skyline-engraving.png" alt="" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">
+  <img src="assets/window-skyline.jpg" alt="Midtown Manhattan office towers and the Empire State Building, seen from high up a tower window" style="position: absolute; left: 24px; top: 345px; width: 360px; height: 687px; display: block; object-fit: cover">
+  {ab(18, 18, 6, '', f'height: {H - 36}px; background: {RED}')}{ab(W - 24, 18, 6, '', f'height: {H - 36}px; background: {RED}')}
+  {ab(18, 18, W - 36, '', f'height: 6px; background: {RED}')}{ab(18, 339, W - 36, '', f'height: 6px; background: {RED}')}{ab(18, H - 24, W - 36, '', f'height: 6px; background: {RED}')}
   {transom}
   {note}'''
 

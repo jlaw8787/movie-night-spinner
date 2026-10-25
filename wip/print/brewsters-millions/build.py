@@ -180,7 +180,7 @@ def plan():
     pins += f'<div style="position: absolute; left: {8 + round(150 * k) - 50}px; top: {8 + round(720 * k) - 12}px; {tag}; color: {RED}">GATE 30</div>'
     pins += (f'<div style="position: absolute; left: {8 + round(590 * k) - 44}px; top: 372px; {tag}; background: {GREEN}; color: #e7c35a; '
              f'{BOD}; font-weight: 900; font-size: 15px; letter-spacing: 0.24em">BULLS</div>')
-    return (f'<div style="position: relative; width: 540px; margin: 22px auto 0; box-sizing: border-box; padding: 6px; background: {CARD}; border: 2px solid {GREEN}">'
+    return (f'<div style="position: relative; width: 540px; margin: 60px auto 0; box-sizing: border-box; padding: 6px; background: {CARD}; border: 2px solid {GREEN}">'
             f'<img src="assets/ballpark-photo.jpg" alt="Photograph of a packed ballpark seen from the outfield: the diamond, the double deck grandstand behind home plate and the crowd along the outfield rail, with the food stands numbered 1 to 4" style="display: block; width: 524px; height: 408px">'
             f'{pins}</div>')
 

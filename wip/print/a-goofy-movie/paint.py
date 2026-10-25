@@ -1,6 +1,7 @@
 """Paints the art for the Lester's Possum Park placemat (A Goofy Movie, 1995).
 
-assets/route-map.png   the strip road map, Spoonerville to the fork, Lake Destiny and L.A. (labels are HTML)
+assets/route-map.jpg   real 1950 Bureau of Public Roads US highway map (LOC, public domain), cropped to the band
+                       from Lake Destiny down to L.A. Route line and pins are HTML/SVG overlays in build.py
 assets/wear-front.png  soft edge wear and big gentle mottling
 assets/still-map.jpg   TMDB still, cropped (Goofy and Max with the road map)
 assets/postcard.jpg    public domain Tichnor linen postcard, cropped and warmed
@@ -274,8 +275,31 @@ def postcard():
     print('postcard', im.size)
 
 
+def real_map():
+    """Crop the LOC 1950 'United States System of Highways' map to the panel shape, warm it a touch."""
+    im = Image.open(os.path.join(D, 'src', 'loc-ct006400-25pct.jpg')).convert('RGB')
+    w, h = im.size
+    top = int(h * 0.1605)
+    ch = round(w * MH / MW)
+    im = im.crop((0, top, w, top + ch)).resize((MW * S, MH * S), Image.LANCZOS)
+    im = ImageEnhance.Contrast(im).enhance(0.92)
+    tone = Image.new('RGB', im.size, (255, 238, 196))
+    im = ImageChops.multiply(im, tone)
+    im.save(os.path.join(A, 'route-map.jpg'), quality=90)
+    # anchors as fractions of the panel, placed on the real geography
+    lay = {'spoonerville': [0.715, 0.66], 'possum': [0.63, 0.62], 'fork': [0.355, 0.6],
+           'bigfoot': [0.25, 0.32], 'lake': [0.205, 0.1], 'desert': [0.215, 0.8],
+           'neptune': [0.15, 0.89], 'la': [0.11, 0.955]}
+    lay['route'] = [
+        [lay['spoonerville'], lay['possum'], [0.55, 0.6], [0.46, 0.61], lay['fork']],
+        [lay['fork'], [0.3, 0.47], lay['bigfoot'], [0.225, 0.2], lay['lake']],
+        [lay['fork'], [0.28, 0.69], lay['desert'], lay['neptune'], lay['la']],
+    ]
+    return lay
+
+
 if __name__ == '__main__':
-    lay = route_map()
+    lay = real_map()
     json.dump(lay, open(os.path.join(D, 'map_layout.json'), 'w'), indent=1)
     wear('front', 31)
     still()

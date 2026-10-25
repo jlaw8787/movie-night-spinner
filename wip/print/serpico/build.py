@@ -4,7 +4,21 @@ style lock (Jurassic system). Front: sign, painted storefront, the steam table. 
 bakery, fountain, the owner's note and a guest check stamped PAID.
 Writes front.body.html / back.body.html and full pages front.html / back.html."""
 import os
+from PIL import Image, ImageOps
 D = os.path.dirname(os.path.abspath(__file__))
+
+def street_photo():
+    """Cover picture: Angelo Rizzuto's July 1956 photograph of Grove St. at 7th Ave., Greenwich Village
+    (LOC, Anthony Angel Collection, no known restrictions). Cropped to the frame and printed as a
+    green-black duotone on the deli stock."""
+    im = Image.open(os.path.join(D, 'assets', 'loc-grove-street-1956.jpg')).convert('L')
+    w, h = im.size; r = 704 / 374; ch = int(w / r)
+    im = im.crop((0, 0, w, ch)).resize((1408, 748), Image.LANCZOS)
+    im = ImageOps.autocontrast(im, cutoff=0.5)
+    ImageOps.colorize(im, black=(26, 38, 30), white=(238, 240, 226), mid=(128, 136, 120)).save(
+        os.path.join(D, 'assets', 'photo-grove-street.jpg'), quality=90)
+
+street_photo()
 W, H = 816, 1056
 PAPER, DARK, RED, MUTE = '#e5ead3', '#1d2b22', '#b5262b', '#4c5a4c'
 FONTS = ('https://fonts.googleapis.com/css2?family=Antonio:wght@600;700'
@@ -76,14 +90,13 @@ def front():
              f'font-size: 54px; line-height: 0.96; color: {DARK}; text-transform: uppercase; letter-spacing: 0.005em">Delicatessen<br>&amp; Appetizing</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 196px; width: {CW}px; height: 3px; background: {RED}"></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 214px; width: {CW}px; height: 374px; outline: 2px solid {RED}; outline-offset: 5px">'
-             f'<img src="assets/storefront.png" alt="Line drawing of the Garfein\'s storefront, red striped awning, salamis in the window" '
+             f'<img src="assets/photo-grove-street.jpg" alt="Greenwich Village street corner in 1956, cafe signs, awnings and parked cars on Grove Street at Seventh Avenue" '
              f'style="display: block; width: {CW}px; height: 374px"></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 600px; width: {CW}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-style: italic; font-size: 16px; color: {MUTE}">'
              f'<span>Our store on West 10th, a few doors from the Sixth Precinct.</span><span>Platters 60&cent; more</span></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 626px; width: {CW}px">'
-             f'<div style="display: flex; align-items: flex-end; justify-content: space-between">{bar("Hot from the steam table")}'
-             f'<img src="assets/spot-sandwich.png" alt="Pastrami on rye with a pickle" style="display: block; width: 160px; height: 67px; margin-bottom: -2px"></div>'
+             f'<div style="display: flex; align-items: flex-end; justify-content: space-between">{bar("Hot from the steam table")}</div>'
              + item('Hot pastrami on rye', '1.35', 'Steamed soft, hand sliced, piled high, with mustard and a pickle.', 12)
              + item('The Village hero', '1.73', 'Steamed pastrami, Swiss, slaw and Russian dressing on a long roll.', 12)
              + item('Hot corned beef on rye', '1.35', 'Brisket cured in our own brine, carved to order, with mustard.', 12)
@@ -110,8 +123,7 @@ def back():
             + f'<div style="height: 1px; background: {DARK}; opacity: 0.45; margin: 26px 0 24px"></div>'
             + bar('From our bakery', 40)
             + item('Black and white', '.25', 'Soft sour cream cake cookie, iced half vanilla, half chocolate.')
-            + item('Cheesecake', '.45', 'Rich and dense, a thick slice baked here every morning.')
-            + '<img src="assets/spot-fountain.png" alt="Egg cream, black and white cookie and a cup of coffee" style="display: block; width: 330px; height: 112px; margin-top: 20px">')
+            + item('Cheesecake', '.45', 'Rich and dense, a thick slice baked here every morning.'))
     right = (bar('Fountain', 40)
              + item('Iced coffee float', '.45', 'Dark roast steeped overnight in the icebox, vanilla syrup, milk and a scoop of vanilla ice cream.')
              + item('Chocolate egg cream', '.20', 'Syrup, cold milk and seltzer from the siphon.')

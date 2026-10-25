@@ -2,11 +2,12 @@
 
 Venue: the MacMillan company party, the night Josh wears the white tuxedo, eats the baby corn like a cob
 and tries the caviar. This is the printed menu set at each place. Hosted by the company, so no prices.
-Palette from the film: Big red, near-black, ivory. One painted art PNG (paint.py: the floor keyboard).
+Palette from the film: Big red, near-black, ivory. Cover picture: TMDB still of the floor piano scene.
 Props: Zoltar's card (front), Josh's new business card (back).
 US Letter, 8.5 x 11 in (816 x 1056 px at 96 dpi), two faces.
 """
 import os, json
+from PIL import Image
 
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
@@ -106,6 +107,15 @@ def keys(x, y, n=28, kw=24, kh=46):
     return ''.join(out)
 
 
+# ---------------------------------------------------------------- cover picture
+def cover_still():
+    """TMDB still of the floor piano scene, cropped to the cover frame (684x318 inside the 2px rule)."""
+    im = Image.open(os.path.join(D, 'assets', 'still-floor-piano.jpg')).convert('RGB')
+    w, h = im.size; ch = int(w * 318 / 684); y = int((h - ch) * 0.78)
+    im.crop((0, y, w, y + ch)).resize((1368, 636), Image.LANCZOS).save(os.path.join(D, 'assets', 'cover-floor-piano.jpg'), quality=90)
+
+cover_still()
+
 # ---------------------------------------------------------------- front: cover
 welcome = f'''{kicker('FROM THE BOSS')}
   <p style="margin: 12px 0 0; font-family: {BODY}; font-size: 20px; line-height: 1.45; color: {INK}">Thank you all for a big year. Tonight, no meetings. Eat well, try something new, and have fun. That is an order.</p>
@@ -118,7 +128,7 @@ front_inner = f'''
   {ab(60, 182, W - 120, f'<div style="text-align: center; font-family: {HEAD}; font-weight: 400; font-size: 62px; line-height: 66px; letter-spacing: -0.005em; color: {INK}">THE COMPANY PARTY</div>')}
   {ab(60, 254, W - 120, kicker('SUPPER, SWEETS AND THE SODA FOUNTAIN', RED, 'center'))}
   <div style="position: absolute; left: 64px; top: 296px; width: 688px; height: 322px; border: 2px solid {RED}; box-sizing: border-box; overflow: hidden">
-    <img src="assets/cover-keys.png" alt="" style="position: absolute; left: -26px; top: -6px; width: 736px; height: 330px; display: block"></div>
+    <img src="assets/cover-floor-piano.jpg" alt="Mr. MacMillan and Josh dancing on the giant floor piano in the toy store" style="position: absolute; left: 0; top: 0; width: 684px; height: 318px; display: block"></div>
   {ab(64, 626, 688, f'<div style="text-align: right; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 22px; color: {SOFT}">Black tie. White tuxedos welcome.</div>')}
   <div style="position: absolute; left: 64px; top: 672px; width: 356px; height: 238px; border: 2px solid {RED}; box-sizing: border-box; background: #fff; padding: 5px">
     <img src="assets/still-duet-crop.jpg" alt="" style="display: block; width: 342px; height: 224px"></div>
@@ -136,7 +146,6 @@ zoltar = f'''<div style="position: absolute; left: 46px; top: 540px; width: 196p
 # ---------------------------------------------------------------- back: the menu
 L, C, G = 64, 330, 28
 back_inner = f'''
-  <img src="assets/cookie.png" alt="" style="position: absolute; left: 540px; top: 22px; width: 220px; height: 220px; display: block">
   {ab(L, 58, 460, kicker('COMPLIMENTS OF THE COMPANY'))}
   {ab(L, 86, 460, f'<div style="font-family: {HEAD}; font-weight: 400; font-size: 70px; line-height: 74px; color: {INK}">THE MENU</div>')}
   {ab(L, 168, 400, f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 21px; color: {INK}">Please, no toy pitches at the table.</div>')}

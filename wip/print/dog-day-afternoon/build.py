@@ -3,8 +3,8 @@ The venue: the neighbourhood pizzeria on the bank's avenue, two doors from the b
 police take over, the place the pies come from on Tuesday, August 22, 1972. "Canicola" is the
 Italian word for the dog days of summer.
 The object: a two-sided US Letter take-out menu (8.5 x 11 in, portrait, no fold), offset printed in
-warm black plus two spot inks (sun orange and tomato red) on a soft white stock, with a halftone
-sun badge, a clip-out coupon and, on the back, the police order ticket from that afternoon clipped on.
+warm black plus two spot inks (sun orange and tomato red) on a soft white stock, with a framed
+still of the bank street in the heat, a clip-out coupon and, on the back, the police order ticket from that afternoon clipped on.
 Writes front.html / back.html, front.body.html / back.body.html, film.json, brooklyn.labels.json."""
 import os, json
 D = os.path.dirname(os.path.abspath(__file__))
@@ -58,10 +58,22 @@ def page(face, inner):
             f'{paper(face)}{inner}</div>')
 
 
+def heat_still():
+    """TMDB still of the bank street in the heat, cropped portrait for the header frame (196x238)."""
+    from PIL import Image
+    im = Image.open(os.path.join(D, 'assets', 'still-bank-street.jpg')).convert('RGB')
+    w, h = im.size; cw = int(h * 196 / 238); x = 1060 * w // 2000 - cw // 2
+    im.crop((x, 0, x + cw, h)).resize((392, 476), Image.LANCZOS).save(os.path.join(D, 'assets', 'heat-bank-street.jpg'), quality=90)
+
+
+heat_still()
+
+
 # ---------------------------------------------------------------- front
 def front():
     top = (
-        f'<img src="assets/engraved-sun.png" alt="" style="position: absolute; left: 512px; top: 8px; width: 300px; height: 300px; display: block">'
+        f'<div style="position: absolute; left: 548px; top: 44px; width: 212px; border: 3px solid {RED}; padding: 5px; background: {PAPER}; box-sizing: border-box">'
+        f'<img src="assets/heat-bank-street.jpg" alt="Sonny on the sidewalk outside the bank, a handkerchief on his head in the heat, police lines behind" style="display: block; width: 196px; height: 238px"></div>'
         f'<div style="position: absolute; left: {L}px; top: 48px; font-family: {CD}; font-weight: 800; font-size: 18px; letter-spacing: 0.18em; color: {RED}; text-transform: uppercase">Pizza &nbsp;·&nbsp; Heroes &nbsp;·&nbsp; Italian ices</div>'
         f'<div style="position: absolute; left: {L}px; top: 92px; font-family: {XC}; font-weight: 900; font-size: 40px; line-height: 1; letter-spacing: 0.32em; color: {INK}">PIZZERIA</div>'
         f'<div style="position: absolute; left: {L - 4}px; top: 126px; font-family: {DISP}; font-size: 100px; line-height: 1.1; color: {RED}">Canicola</div>'
@@ -171,8 +183,7 @@ def back():
     )
     foot = (f'<div style="position: absolute; left: {L}px; top: 996px; width: 420px; font-family: {BODY}; font-size: 16px; color: {SOFT}">'
             f'Prices subject to change. Form 1100, 6/72.</div>')
-    pie = f'<img src="assets/engraved-pie.png" alt="" style="position: absolute; left: 566px; top: 622px; width: 192px; height: 192px; display: block">'
-    return page('back', head + cols + pie + deliver + foot + ticket())
+    return page('back', head + cols + deliver + foot + ticket())
 
 
 def wrap(body, title):

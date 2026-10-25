@@ -3,7 +3,7 @@
 Venue: Lester's Possum Park, the roadside attraction Goofy drags Max to on day one of the trip.
 Format: roadside attraction placemat, one landscape face 1344 x 960 px (14 x 10 in at 96 dpi).
 Signature: a TMDB still (Goofy and Max with the road map) plus a public domain Tichnor linen postcard.
-Props: a Possum Park admission ticket, the road map west (fork to Lake Destiny or L.A.), Dad's pencil note.
+Props: a Possum Park admission ticket, the road west over a real 1950 LOC highway map (fork to Lake Destiny or L.A.), Dad's pencil note.
 Palette from the film: Powerline purple, Max's orange-red, buff placemat stock.
 """
 import os, json
@@ -132,27 +132,31 @@ def route():
     def dot(key, r=7, col=INK):
         return at(key, -r, -r, 2 * r, '', f'height: {2 * r}px; border-radius: 50%; background: {col}; border: 2px solid {CREAM}; box-sizing: border-box')
 
-    out = [ab(X, Y, MW, f'<img src="assets/route-map.png" alt="" style="display: block; width: {MW}px; height: {MH}px">',
+    out = [ab(X, Y, MW, f'<img src="assets/route-map.jpg" alt="1950 United States highway map, cropped from the Pacific coast across to Ohio, with the road west drawn over it" style="display: block; width: {MW}px; height: {MH}px">',
               f'height: {MH}px; border: 3px solid {INK}; box-sizing: content-box; margin: -3px')]
-    out.append(ab(X + 10, Y + 10, 300, f'<div style="display: inline-block; background: {INK}; padding: 5px 12px 4px; border-radius: 6px; white-space: nowrap">{lab("THE ROAD WEST", 16, PAPER)}</div>'))
+    pts = lambda line: ' '.join(f'{fx * MW:.1f},{fy * MH:.1f}' for fx, fy in line)
+    lines = ''.join(f'<polyline points="{pts(l)}" fill="none" stroke="{CREAM}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>' for l in lay['route'])
+    lines += ''.join(f'<polyline points="{pts(l)}" fill="none" stroke="{ORANGE}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>' for l in lay['route'])
+    out.append(ab(X, Y, MW, f'<svg width="{MW}" height="{MH}" viewBox="0 0 {MW} {MH}" aria-hidden="true" style="display: block">{lines}</svg>', f'height: {MH}px'))
+    out.append(ab(X + MW - 186, Y + 10, 176, f'<div style="text-align: right"><div style="display: inline-block; background: {INK}; padding: 5px 12px 4px; border-radius: 6px; white-space: nowrap">{lab("THE ROAD WEST", 16, PAPER)}</div></div>'))
     out.append(dot('spoonerville'))
-    out.append(at('spoonerville', -14, 16, 170, plate(lab('SPOONERVILLE') + lab('Home sweet home', 16, INK, 400, '0'))))
+    out.append(at('spoonerville', 14, -28, 170, plate(lab('SPOONERVILLE') + lab('Home sweet home', 16, INK, 400, '0'))))
     out.append(at('possum', -18, -20, 36, f'<div style="font-family: {DISP}; font-size: 38px; line-height: 36px; color: {ORANGE}; text-align: center">&#9733;</div>'))
-    out.append(at('possum', -124, -66, 200, plate(lab('YOU ARE HERE', 16, ORANGE, 800, '0.12em', 'center') + lab('Lester&rsquo;s Possum Park', 16, INK, 700, '0', 'center'), 'center')))
+    out.append(at('possum', -100, -70, 200, plate(lab('YOU ARE HERE', 16, ORANGE, 800, '0.12em', 'center') + lab('Lester&rsquo;s Possum Park', 16, INK, 700, '0', 'center'), 'center')))
     out.append(dot('fork', 6))
-    out.append(at('fork', -80, -64, 200, plate(lab('THE FORK', 16, INK, 800, '0.1em', 'center') + lab('Pick a road, any road', 16, INK, 400, '0', 'center'), 'center')))
-    out.append(at('bigfoot', -90, 52, 180, plate(lab('BIGFOOT COUNTRY', 16, INK, 800, '0.04em', 'center') + lab('Lock your cooler', 16, INK, 400, '0', 'center'), 'center')))
+    out.append(at('fork', -60, -66, 200, plate(lab('THE FORK', 16, INK, 800, '0.1em', 'center') + lab('Pick a road, any road', 16, INK, 400, '0', 'center'), 'center')))
+    out.append(at('bigfoot', -200, -14, 180, plate(lab('BIGFOOT COUNTRY', 16, INK, 800, '0.04em', 'center') + lab('Lock your cooler', 16, INK, 400, '0', 'center'), 'center')))
     out.append(dot('lake', 7, ORANGE))
-    out.append(at('lake', -250, -40, 200, plate(lab('LAKE DESTINY', 16, INK) + lab('Idaho. Big ones bite.', 16, INK, 400, '0'))))
-    out.append(at('desert', -110, -28, 220, plate(lab('Fill up before the desert', 16, INK, 400, '0', 'center'), 'center')))
+    out.append(at('lake', 14, -20, 200, plate(lab('LAKE DESTINY', 16, INK) + lab('Idaho. Big ones bite.', 16, INK, 400, '0'))))
+    out.append(at('desert', 16, -16, 220, plate(lab('Fill up before the desert', 16, INK, 400, '0'))))
     out.append(dot('neptune', 5))
-    out.append(at('neptune', -40, -38, 120, plate(lab('Neptune Inn', 16, INK, 700, '0', 'center'), 'center')))
+    out.append(at('neptune', 12, -8, 120, plate(lab('Neptune Inn', 16, INK, 700, '0'))))
     out.append(dot('la', 7, ORANGE))
-    out.append(at('la', -236, -76, 240, f'''<div style="background: {INK}; border: 2px solid {ORANGE}; border-radius: 6px; padding: 4px 10px 5px; text-align: center">
+    out.append(at('la', 336, -48, 240, f'''<div style="background: {INK}; border: 2px solid {ORANGE}; border-radius: 6px; padding: 4px 10px 5px; text-align: center">
         <div style="font-family: {DISP}; font-size: 20px; line-height: 22px; color: {ORANGE}">POWERLINE &middot; LIVE IN L.A.</div>
         <div style="font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 19px; color: {PAPER}">Final night of the world tour</div></div>'''))
-    out.append(ab(X + MW - 58, Y + 10, 46, f'''<div style="width: 46px; height: 46px; border-radius: 50%; background: {CREAM}; border: 2px solid {INK}; box-sizing: border-box; text-align: center">
-        <div style="font-family: {DISP}; font-size: 20px; line-height: 44px; color: {INK}">W&#8594;</div></div>'''))
+    out.append(ab(X + MW - 50, Y + MH - 50, 40, f'''<div style="width: 40px; height: 40px; border-radius: 50%; background: {CREAM}; border: 2px solid {INK}; box-sizing: border-box; text-align: center">
+        <div style="font-family: {DISP}; font-size: 18px; line-height: 38px; color: {INK}">N&#8593;</div></div>'''))
     return ''.join(out)
 
 
