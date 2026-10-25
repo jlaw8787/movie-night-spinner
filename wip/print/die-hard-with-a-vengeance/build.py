@@ -72,7 +72,7 @@ header = f'''
 <div style="position: absolute; left: 666px; top: 38px; width: 290px">
   <div style="display: inline-block; background: {RED}; padding: 5px 12px 4px; transform: rotate(-2deg); border: 3px solid {PAPER}">
     <div style="{TITAN}; font-size: 21px; line-height: 1.05; color: {PAPER}; white-space: nowrap">KIDS' RIDDLE PLACEMAT</div></div>
-  <div style="{SANS}; font-size: 16px; line-height: 1.3; color: {PAPER}; margin-top: 10px">Solve all three for a lollipop. Takeout 555-0138.</div></div>
+  <div style="{SANS}; font-size: 16px; line-height: 1.3; color: {PAPER}; margin-top: 10px">Solve all three, win a lollipop.<br>Takeout orders: 555-0138</div></div>
 <div style="position: absolute; left: 1000px; top: 22px; width: 288px">
   <div style="border: 4px solid {YEL}; line-height: 0"><img src="assets/still-avenue.jpg" alt="Amsterdam Avenue traffic at midday" style="display: block; width: 280px; height: 85px"></div>
   <div style="{SANS}; font-weight: 700; font-size: 16px; color: {YEL}; margin-top: 3px; text-align: right; letter-spacing: 0.03em">Our avenue, lunch hour.</div></div>'''
@@ -123,11 +123,11 @@ def lab(t, x, y, size=14):
 
 
 labels = (lab('NEW JERSEY', 2, 18) + lab('HARLEM', 112, 52) + lab('MANHATTAN', 30, 262) + lab('QUEENS', 228, 300)
-          + lab('BROOKLYN', 176, 400) + lab('BRONX', 238, 4)
+          + lab('BROOKLYN', 176, 400) + lab('BRONX', 196, 4)
           + f'<div style="position: absolute; left: {mx + nx * MS - 5:.0f}px; top: {my + ny * MS + 14:.0f}px; {TITAN}; font-size: 15px; color: {INK}">N</div>')
 
-stops = ["Our counter, 138th and Amsterdam", "Cut through Central Park", "72nd Street and Broadway",
-         "Down to Wall Street", "Tompkins Square, by the fountain", "Up to the Stadium in the Bronx"]
+stops = ["Our counter, 138th Street", "Cut through Central Park", "72nd Street and Broadway",
+         "Down to Wall Street", "Tompkins Square fountain", "Up to the Stadium in the Bronx"]
 legend = ''.join(f'''<div style="display: flex; align-items: center; gap: 8px; margin-top: 4px">
   <div style="flex: none; width: 20px; height: 20px; border-radius: 10px; background: {RED}; display: flex; align-items: center; justify-content: center; {TITAN}; font-size: 14px; color: {PAPER}">{i + 1}</div>
   <div style="{SANS}; font-weight: 700; font-size: 16px; line-height: 1.2; color: {INK}">{t}</div></div>''' for i, t in enumerate(stops))
@@ -141,21 +141,21 @@ colMap = f'''<div style="position: absolute; left: 700px; top: {TOP}px; width: 2
 <div style="position: absolute; left: 700px; top: {my + 497 * MS + 8:.0f}px; width: 276px">{legend}</div>'''
 
 # ---------- riddle panel ----------
-slip = f'''<div style="background: {PAPER}; border: 2px solid {INK}; padding: 10px 14px 6px; transform: rotate(-1.5deg); margin-top: 14px">
+slip = f'''<div style="background: {PAPER}; border: 2px solid {INK}; padding: 10px 14px 6px; transform: rotate(-1.5deg); margin-top: 12px">
   <div style="{TITAN}; font-size: 20px; line-height: 1.1; color: {RED}">3. FROM NEXT DOOR</div>
   <div style="{SANS}; font-size: 19px; line-height: 1.25; color: {INK}; margin-top: 4px">What has a face and two hands, but no arms or legs? Bring me one that quit.</div>
   <div style="display: flex; align-items: baseline; gap: 10px">
     <div style="{HAND}; font-size: 38px; line-height: 1.05; color: #22327a">Zeus</div>
-    <div style="{SANS}; font-weight: 700; font-size: 15px; color: {MUTE}">Carver Electrical, radios and clocks</div></div></div>'''
+    <div style="{SANS}; font-weight: 700; font-size: 15px; color: {MUTE}">Carver Electrical</div></div></div>'''
 
 panel = f'''<div style="position: absolute; left: 996px; top: {TOP - 10}px; width: 316px; height: {BOT - TOP + 10}px; background: {YEL}"></div>
 <div style="position: absolute; left: 1014px; top: {TOP}px; width: 282px">
   <div style="{SANS}; font-weight: 800; font-size: 18px; letter-spacing: 0.16em; color: {INK}">SIMON SAYS: SOLVE!</div>
   <div style="{TITAN}; font-size: 44px; line-height: 1; color: {INK}; margin-top: 2px">RIDDLE ME THIS!</div>
   <div style="{TITAN}; font-size: 20px; line-height: 1.1; color: {RED}; margin-top: 12px">1. THE FOUNTAIN JUGS</div>
-  <div style="position: relative; line-height: 0; margin-top: 6px; border: 2px solid {INK}; background: {PAPER}; height: 124px; overflow: hidden"><img src="assets/jugs.png" alt="A 5 gallon and a 3 gallon jug" style="display: block; width: 252px; height: 124px; margin-left: 14px">
+  <div style="position: relative; line-height: 0; margin-top: 6px; border: 2px solid {INK}; background: {PAPER}; height: 116px; overflow: hidden"><img src="assets/jugs.png" alt="A 5 gallon and a 3 gallon jug" style="display: block; width: 252px; height: 124px; margin-left: 14px; margin-top: -6px">
     <div style="position: absolute; left: 50px; top: 48px; {TITAN}; font-size: 18px; line-height: 1; color: {RED}">5 GAL.</div>
-    <div style="position: absolute; left: 166px; top: 72px; {TITAN}; font-size: 15px; line-height: 1; color: {RED}">3 GAL.</div></div>
+    <div style="position: absolute; left: 171px; top: 77px; {TITAN}; font-size: 14px; line-height: 1; color: {RED}">3 GAL.</div></div>
   <div style="{SANS}; font-size: 19px; line-height: 1.25; color: {INK}; margin-top: 6px">A 5-gallon jug, a 3-gallon jug and a fountain. Measure out exactly 4 gallons.</div>
   <div style="{TITAN}; font-size: 20px; line-height: 1.1; color: {RED}; margin-top: 12px">2. GOING TO ST. IVES</div>
   <div style="{SANS}; font-size: 19px; line-height: 1.22; color: {INK}; margin-top: 4px">As I was going to St. Ives, I met a man with seven wives. Each wife had seven sacks, each sack had seven cats, each cat had seven kits. Kits, cats, sacks and wives: how many were going to St. Ives?</div>
@@ -164,7 +164,7 @@ panel = f'''<div style="position: absolute; left: 996px; top: {TOP - 10}px; widt
 # jug labels over the painted jugs
 jl = (f'<div style="position: absolute; left: 1046px; top: 0px"></div>')
 
-footer = f'''<div style="position: absolute; left: 48px; top: 892px; width: 1248px; display: flex; justify-content: space-between; {SANS}; font-size: 16px; color: {MUTE}">
+footer = f'''<div style="position: absolute; left: 48px; top: 898px; width: 1248px; display: flex; justify-content: space-between; {SANS}; font-size: 16px; color: {MUTE}">
   <span>Prices subject to change. Placemat No. 354. Printed in U.S.A. 1995.</span>
   <span>Answers: 1. Fill 5, pour into 3, empty 3, pour 2 in, fill 5, top off 3. 2. One. 3. A clock.</span></div>'''
 
