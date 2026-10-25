@@ -19,7 +19,7 @@ LEFT = [
         ('Shrimp cocktail', 'the dozen', '18.00',
          'Jumbo, poached and well chilled, with a sharp horseradish sauce and lemon.', ''),
         ('Manhattans by the pitcher', 'the pitcher', '18.00',
-         'Rye, sweet vermouth and bitters, stirred over ice and poured into chilled coupes, a cherry in each. Serves eight.', ''),
+         'Rye, sweet vermouth and bitters, stirred over ice, poured into chilled coupes with a cherry. Serves eight.', ''),
     ]),
     ('brunch', 'Delivered from dawn. We set it out and slip away.', [
         ('Sutton Place board', 'per guest', '6.50',
@@ -31,7 +31,7 @@ LEFT = [
 RIGHT = [
     ('suppers', 'Hot, in the cartons, by nine o’clock.', [
         ('Kung pao chicken', 'per guest', '7.50',
-         'Thigh meat tossed in a hot wok with dried red chilies and Szechuan peppercorns, glazed with black vinegar, soy and rice wine, then roasted peanuts and scallions. Steamed rice.',
+         'Thigh meat tossed in a hot wok with dried red chilies and Szechuan peppercorns, glazed with black vinegar, soy and rice wine. Roasted peanuts, scallions and steamed rice.',
          'Good in front of the late movie.'),
         ('Cold sesame noodles', 'per guest', '3.25',
          'Thin wheat noodles in sesame paste and chili oil, with shredded cucumber.', ''),
@@ -101,7 +101,7 @@ def outside():
     al = ''.join(f'<div style="margin-top: {0 if i == 0 else 5}px; font-family: {SERIF}; font-size: 16px; line-height: 1.4; color: #2a2a2c">{sq()}{t}</div>' for i, t in enumerate(also))
     back = f'''<div style="position: absolute; left: {LX}px; top: 52px; width: {PW}px">
       <div style="font-family: {SANS}; font-weight: 300; font-size: 38px; line-height: 1; color: {INK}; border-bottom: 2px solid {INK}; padding-bottom: 6px">how to order</div>
-      <p style="margin: 14px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.5; color: #2a2a2c; text-wrap: pretty">Telephone us by Wednesday for a weekend party, and by five o’clock the day before for brunch. We deliver anywhere from the Battery to 96th Street, and we start early.</p>
+      <p style="margin: 14px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.5; color: #2a2a2c; text-wrap: pretty">Telephone us by Wednesday for a weekend party, and by five o’clock the day before for brunch. We deliver from the Battery to 96th Street, and we start early.</p>
       <p style="margin: 10px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.5; color: #2a2a2c; text-wrap: pretty">Parties of twelve or more. Glasses, linen and folding chairs to rent; ask when you call.</p>
 
       <div style="margin-top: 24px; font-family: {SANS}; font-weight: 300; font-size: 36px; line-height: 1; color: {INK}; border-bottom: 2px solid {INK}; padding-bottom: 6px">we also do</div>
