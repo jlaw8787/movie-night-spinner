@@ -93,7 +93,7 @@ def burst(x, y, s=170):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {s}px; height: {s}px; transform: rotate(-9deg)">{sq}'
             f'<div style="position: absolute; left: 14px; top: 14px; width: {s - 28}px; height: {s - 28}px; border-radius: 50%; background: {SLIP}; border: 3px solid {NAVY}; box-sizing: border-box; text-align: center">'
             f'<div style="margin-top: 12px; font-family: {DISP}; font-size: 48px; line-height: 0.9; color: {RED}">29</div>'
-            f'<div style="font-family: {DISP}; font-size: 19px; line-height: 0.95; color: {NAVY}">MINUTES<br>OR IT\'S FREE</div></div></div>')
+            f'<div style="font-family: {DISP}; font-size: 17px; line-height: 0.95; color: {NAVY}">MINUTES<br>OR IT\'S FREE</div></div></div>')
 
 def warning_slip(x, y):
     """Aziz's warning slip, stapled to the shop copy of the flyer by the register."""

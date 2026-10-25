@@ -116,9 +116,9 @@ def gift_tag(o, x, y):
     """Duncan's Toy Chest gift tag, tied through the hanger hole on red string."""
     o.append(f'<div style="position: absolute; left: {HX + HR - 14}px; top: {HY - 8}px; width: 74px; height: 2px; background: #d9b25a; '
              f'transform: rotate(38deg); transform-origin: 0 50%"></div>')
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 128px; height: 176px; background: {CARD}; border-radius: 16px 16px 4px 4px; '
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 122px; height: 176px; background: {CARD}; border-radius: 16px 16px 4px 4px; '
              f'box-shadow: 0 3px 8px rgba(30,0,0,0.45); transform: rotate(9deg); box-sizing: border-box; padding: 30px 9px 0; text-align: center">'
-             f'<div style="position: absolute; left: 55px; top: 9px; width: 16px; height: 16px; border-radius: 50%; border: 3px solid #d9b25a; background: {RED}; box-sizing: border-box"></div>'
+             f'<div style="position: absolute; left: 52px; top: 9px; width: 16px; height: 16px; border-radius: 50%; border: 3px solid #d9b25a; background: {RED}; box-sizing: border-box"></div>'
              f'<div style="border-top: 2px solid {GREEN}; border-bottom: 2px solid {GREEN}; padding: 4px 0 3px; font-family: {BODY}; font-weight: 800; font-size: 14px; '
              f'letter-spacing: 0.08em; line-height: 1.15; color: {GREEN}">DUNCAN\'S<br>TOY CHEST</div>'
              f'<div style="margin-top: 7px; font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.2; color: {INK}">Turtle doves,<br>a pair</div>'
@@ -130,19 +130,19 @@ def charge_slip(o, x, y):
     cells = ''.join(f'<div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #b9b0a2; height: 23px">'
                     f'<span style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; color: {GREEN}">{a}</span>'
                     f'<span style="font-family: {HAND}; font-size: 22px; line-height: 1; color: #23305e">{b}</span></div>' for a, b in rows)
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 176px; background: #fbfaf5; box-shadow: 0 3px 8px rgba(0,20,10,0.5); '
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 150px; background: #fbfaf5; box-shadow: 0 3px 8px rgba(0,20,10,0.5); '
              f'transform: rotate(-6deg); padding: 8px 10px 6px; box-sizing: border-box">'
              f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.12em; line-height: 1.1; color: {RED}; text-align: center">GUEST CHARGE</div>'
              f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.25; color: {MUTE}; text-align: center; margin-bottom: 4px">In-suite dining</div>'
              + cells +
              f'<div style="border-top: 1px solid {INK}; margin-top: 20px; position: relative; height: 18px">'
-             f'<div style="position: absolute; left: 2px; top: -30px; font-family: {HAND}; font-size: 25px; line-height: 1; color: #23305e; white-space: nowrap; transform: rotate(-3deg)">Peter McCallister</div>'
+             f'<div style="position: absolute; left: 2px; top: -30px; font-family: {HAND}; font-size: 22px; line-height: 1; color: #23305e; white-space: nowrap; transform: rotate(-3deg)">Peter McCallister</div>'
              f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {MUTE}; padding-top: 1px">Guest signature</div></div></div>')
 
 # ---------------- FRONT ----------------
 def front():
     o = [hanger_head(RED, 300)]
-    gift_tag(o, 330, 26)
+    gift_tag(o, 304, 24)
     o.append(f'<div style="position: absolute; left: {L}px; top: 168px; width: {CW}px">{kicker("Fifth Avenue at the Park", PAPER)}</div>')
     o.append(f'<div style="position: absolute; left: 0; top: 188px; width: {W}px; text-align: center; font-family: {DISP}; font-weight: 700; '
              f'font-size: 66px; line-height: 1; color: {PAPER}; white-space: nowrap">The Halloway</div>')
@@ -168,8 +168,8 @@ def front():
 # ---------------- BACK ----------------
 def back():
     o = [hanger_head(GREEN, 250)]
-    charge_slip(o, 296, 18)
-    o.append(f'<div style="position: absolute; left: 30px; top: 30px; width: 130px; font-family: {BODY}; font-weight: 800; font-size: 14px; '
+    charge_slip(o, 290, 22)
+    o.append(f'<div style="position: absolute; left: 40px; top: 40px; width: 130px; font-family: {BODY}; font-weight: 800; font-size: 14px; '
              f'letter-spacing: 0.14em; line-height: 1.5; color: {PAPER}">ROOM NO.<div style="width: 108px; height: 30px; border-bottom: 1px solid {PAPER}; '
              f'font-family: {HAND}; font-weight: 600; font-size: 28px; letter-spacing: 0; line-height: 30px; color: {PAPER}"></div></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 166px; width: {CW}px">{kicker("Tick, then hang on your handle", "#f2c9a8", "font-size: 17px; letter-spacing: 0.16em")}</div>')
