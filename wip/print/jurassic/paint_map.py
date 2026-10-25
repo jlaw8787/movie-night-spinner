@@ -205,7 +205,7 @@ dr.ellipse([P((cx - 16, cy - 16)), P((cx + 16, cy + 16))], fill=(196, 150, 86, 2
 for a in range(0, 360, 30):
     dr.line([P((cx, cy)), P((cx + 15 * math.cos(math.radians(a)), cy + 15 * math.sin(math.radians(a))))], fill=(140, 98, 50, 170), width=int(0.8 * S))
 dr.ellipse([P((cx - 4, cy - 4)), P((cx + 4, cy + 4))], fill=(230, 214, 170, 255))
-hx = LAYOUT['hatchery']; roof(hx[0], hx[1], 30, 20, (196, 198, 190), (150, 152, 146))
+gr = LAYOUT['garage']; roof(gr[0], gr[1], 30, 18, (176, 178, 170), (130, 132, 126))
 ms = LAYOUT['shed']; roof(ms[0], ms[1], 22, 16, (150, 150, 140), (110, 110, 104))
 hp = LAYOUT['helipad']
 dr.ellipse([P((hp[0] - 15, hp[1] - 15)), P((hp[0] + 15, hp[1] + 15))], fill=(70, 74, 72, 255), outline=(240, 240, 232, 255), width=int(1.6 * S))
