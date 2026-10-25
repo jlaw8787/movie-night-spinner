@@ -40,7 +40,7 @@ def paper(face):
 def section(title, kicker):
     """Jurassic system: spaced-caps kicker in the accent, then a dark label bar with paper-coloured caps."""
     return (f'<div style="font-family: {CD}; font-weight: 800; font-size: 18px; line-height: 1; letter-spacing: 0.16em; color: {RED}; text-transform: uppercase">{kicker}</div>'
-            f'<div style="display: inline-block; margin-top: 8px; border: 3px solid {RED}; outline: 1.5px solid {RED}; outline-offset: 3px; color: {RED}; font-family: {DISP}; font-size: 40px; line-height: 1; padding: 6px 16px 8px">{title}</div>'
+            f'<div style="display: inline-block; margin-top: 8px; border: 3px solid {RED}; outline: 1.5px solid {RED}; outline-offset: 3px; color: {RED}; font-family: {DISP}; font-size: 34px; line-height: 1; padding: 3px 14px 5px">{title}</div>'
             f'<div style="height: 2px; background: {INK}; margin: 12px 0 2px"></div>')
 
 
@@ -93,8 +93,8 @@ def front():
     cols = (f'<div style="position: absolute; left: {L}px; top: 392px; width: 336px">{pies}</div>'
             f'<div style="position: absolute; left: {L + 368}px; top: 392px; width: {CW - 368}px">{heroes}</div>')
     coupon = (
-        f'<div style="position: absolute; left: {L}px; top: 852px; width: {CW}px; height: 128px; display: flex; gap: 32px">'
-        f'<div style="position: relative; width: 400px; box-sizing: border-box; border: 2.5px dashed {INK}; padding: 14px 18px 10px; background: rgba(255,250,240,0.45)">'
+        f'<div style="position: absolute; left: {L}px; top: 864px; width: {CW}px; height: 118px; display: flex; gap: 32px">'
+        f'<div style="position: relative; width: 400px; box-sizing: border-box; border: 2.5px dashed {INK}; padding: 10px 18px 8px; background: rgba(255,250,240,0.45)">'
         f'<div style="position: absolute; right: 12px; top: -10px; background: {PAPER}; padding: 0 6px; font-family: {CD}; font-weight: 800; font-size: 14px; line-height: 1; letter-spacing: 0.14em; color: {RED}">CLIP AND SAVE</div>'
         f'<div style="font-family: {XC}; font-weight: 900; font-size: 40px; line-height: 0.95; color: {RED}">FREE LEMON ICE</div>'
         f'<div style="margin-top: 5px; font-family: {BODY}; font-weight: 600; font-size: 20px; line-height: 1.25; color: {INK}">With every large pie.</div>'
@@ -119,7 +119,7 @@ def ticket():
             ('', 'Pies, plain + pepperoni')]
     body = ''.join(f'<div style="{line}"><div style="{lab}">{a}</div><div style="{hand}">{b}</div></div>' for a, b in rows)
     return (
-        f'<div style="position: absolute; left: 500px; top: 770px; width: 262px; height: 222px; transform: rotate(2deg); transform-origin: 50% 0">'
+        f'<div style="position: absolute; left: 500px; top: 776px; width: 262px; height: 222px; transform: rotate(2deg); transform-origin: 50% 0">'
         f'<div style="position: absolute; left: 0; top: 0; width: 262px; height: 222px; background: {GREEN}; box-shadow: 0 2px 5px rgba(38,28,24,0.22)"></div>'
         f'<div style="position: absolute; left: 14px; top: 12px; width: 234px">'
         f'<div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid {GREEN_INK}; padding-bottom: 4px">'
@@ -129,8 +129,8 @@ def ticket():
         f'<div style="margin-top: 8px; display: flex; align-items: baseline; gap: 8px"><span style="{lab}; width: auto">OK</span>'
         f'<span style="font-family: {SCRIPT}; font-size: 30px; line-height: 1; color: {PENCIL}">Sgt. Moretti</span></div>'
         f'</div>'
-        f'<div style="position: absolute; left: 110px; top: -18px; width: 20px; height: 56px; border: 3px solid #8b8f96; border-radius: 10px; box-sizing: border-box"></div>'
-        f'<div style="position: absolute; left: 115px; top: -10px; width: 11px; height: 40px; border: 3px solid #a3a7ad; border-radius: 6px; box-sizing: border-box"></div>'
+        f'<div style="position: absolute; left: 150px; top: -18px; width: 20px; height: 56px; border: 3px solid #8b8f96; border-radius: 10px; box-sizing: border-box"></div>'
+        f'<div style="position: absolute; left: 155px; top: -10px; width: 11px; height: 40px; border: 3px solid #a3a7ad; border-radius: 6px; box-sizing: border-box"></div>'
         f'</div>')
 
 
@@ -171,7 +171,7 @@ def back():
     )
     foot = (f'<div style="position: absolute; left: {L}px; top: 996px; width: 420px; font-family: {BODY}; font-size: 16px; color: {SOFT}">'
             f'Prices subject to change. Form 1100, 6/72.</div>')
-    pie = f'<img src="assets/engraved-pie.png" alt="" style="position: absolute; left: 532px; top: 560px; width: 236px; height: 236px; display: block">'
+    pie = f'<img src="assets/engraved-pie.png" alt="" style="position: absolute; left: 566px; top: 606px; width: 192px; height: 192px; display: block">'
     return page('back', head + cols + pie + deliver + foot + ticket())
 
 
