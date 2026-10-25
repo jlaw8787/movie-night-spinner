@@ -110,7 +110,7 @@ right = bar('The soda fountain') + ''.join(item(*t[1:], first=(i == 0), gap=14) 
 ph0x, ph0y, ph1x, ph1y = B['photo_panel']
 phx0, phy0, phx1, phy1 = B['photo']
 caption = (f'<p style="margin: 0; font-family: {SANS}; font-weight: 600; font-size: 14px; line-height: 1.25; color: {BLK}; {SPREAD(BLK)}">'
-           f'At the store: Mr. MacMillan and our new Vice President in charge of Product Development, four hands on one keyboard.</p>')
+           f'Mr. MacMillan and our new V.P. of Product Development at the store, four hands on one keyboard.</p>')
 
 pl0x, pl0y, pl1x, pl1y = B['play']
 steps = ''.join(f'''<div style="display: flex; gap: 9px; align-items: baseline; margin-top: 6px">
@@ -132,16 +132,16 @@ back_inner = f'''
   {ab(mx0 + 22, my1 - 30, mx1 - 22, my1 - 12, f'<div style="font-family: {SANS}; font-weight: 600; font-size: 12px; letter-spacing: 0.02em; line-height: 18px; color: {NAVY}; text-align: center">© 1988 MacMillan Toy Co., New York, N.Y. Party pack, not for resale. Printed in U.S.A.</div>')}
   {ab(phx0, phy1 + 8, phx1, ph1y - 8, caption)}
   {ab(pl0x + 16, pl0y + 12, pl1x - 14, pl1y - 8, f'<div style="font-family: {DISP}; font-size: 20px; line-height: 1.1; color: {RED}">HOW TO PLAY</div>{steps}')}
-  {ab(tk0x + 54, tk0y + 12, tk1x - 16, tk1y - 8, f"""<div style="font-family: {DISP}; font-size: 18px; line-height: 1.1; color: {NAVY}">PARTY TRAY TOKEN</div>
+  {ab(tk0x + 20, tk0y + 16, tk1x - 16, tk1y - 10, f"""<div style="font-family: {DISP}; font-size: 18px; line-height: 1.1; color: {NAVY}">PARTY TRAY TOKEN</div>
     <p style="margin: 4px 0 0; font-family: {SANS}; font-weight: 600; font-size: 15px; line-height: 1.22; color: {BLK}; {SPREAD(BLK)}">Good for one more corner cart hot dog. Hand it to any waiter.</p>
-    <p style="margin: 3px 0 0; font-family: {TECH}; font-size: 12px; line-height: 1.3; color: {RED}">NO CASH VALUE.</p>""")}
+    <div style="margin-top: 10px; display: flex; justify-content: space-between; font-family: {TECH}; font-size: 12px; line-height: 1.3; color: {RED}"><span>NO CASH VALUE.</span><span>NO. 00417</span></div>""")}
   {ab(ck0x + 16, ck0y + 10, ck1x - 14, ck1y - 8, f"""<div style="display: flex; justify-content: space-between; align-items: baseline">
       <span style="font-family: {DISP}; font-size: 21px; line-height: 1.1; color: {RED}">COLLECT ALL 8!</span>
       <span style="font-family: {SANS}; font-weight: 700; font-size: 13px; color: {NAVY}">Check each one off.</span></div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 10px; margin-top: 8px">{checks}</div>""")}
   {ab(nt0x + 3, nt0y + 3, nt1x - 3, nt0y + 29, f'<div style="background: {BLK}; height: 26px; padding: 0 12px; font-family: {DISP}; font-size: 16px; line-height: 27px; letter-spacing: 0.04em; color: {YEL}">CAUTION</div>')}
-  {ab(nt0x + 14, nt0y + 38, B['upc'][0] - 8, nt1y - 8, f"""<p style="margin: 0; font-family: {SANS}; font-weight: 700; font-size: 15px; line-height: 1.22; color: {BLK}; {SPREAD(BLK)}">Building does not turn into a robot.</p>
-    <p style="margin: 6px 0 0; font-family: {SANS}; font-weight: 600; font-size: 15px; line-height: 1.22; color: {BLK}; {SPREAD(BLK)}">Tuxedos welcome, any color.</p>
+  {ab(nt0x + 14, nt0y + 38, B['upc'][0] - 8, nt1y - 8, f"""<p style="margin: 0; font-family: {SANS}; font-weight: 700; font-size: 15px; line-height: 1.22; color: {BLK}; {SPREAD(BLK)}">Building does not turn<br>into a robot.</p>
+    <p style="margin: 6px 0 0; font-family: {SANS}; font-weight: 600; font-size: 15px; line-height: 1.22; color: {BLK}; {SPREAD(BLK)}">Tuxedos welcome,<br>any color.</p>
     <p style="margin: 6px 0 0; font-family: {TECH}; font-size: 12px; line-height: 1.3; color: {NAVY}">LOT 0488 NY</p>""")}
 '''
 

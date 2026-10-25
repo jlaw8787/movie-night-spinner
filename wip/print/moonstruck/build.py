@@ -82,7 +82,7 @@ ADS = ''.join([
        'Fittings nightly. 555-0181', face=OSW, nstyle='font-weight: 500; letter-spacing: 0.04em', nsize=20),
     ad('PUGLIESE PORK STORE', 'Veal and chicken cutlets pounded while you wait. Sweet and hot sausage made daily.',
        'Tel. 555-0155', face=OSW, nstyle='font-weight: 600', nsize=18),
-    ad('Corner Wines &amp; Liquors', 'Asti Spumante by the case for engagements. Ice and mixers. We deliver.',
+    ad('Corner Wines &amp; Liquors', 'Asti Spumante by the case for engagements. Free delivery.',
        'Tel. 555-0114', nstyle='font-weight: 700', nsize=18),
     ad('Tedeschi Funeral Home', 'Family owned since 1921. Chapel and private parking. Plans arranged in advance.',
        'Day or night. 555-0102', nstyle='font-weight: 400; font-variant: small-caps; letter-spacing: 0.02em', nsize=16, center=True),
@@ -118,7 +118,7 @@ COLLECTION = (
     '</div></div>')
 
 BREAKFAST_ITEMS = [
-    ('Eggs in the hole', 'Thick white toast fried in butter with a ring of sweet red pepper, the yolk left soft in the middle.'),
+    ('Eggs in the hole', 'Thick white toast fried in butter with a ring of red pepper, the yolk left soft in the middle.'),
     ('Sausage and home fries', 'Sweet links from the pork store, potatoes crisped with onion.'),
 ]
 BREAKFAST = (

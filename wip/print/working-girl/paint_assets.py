@@ -45,7 +45,7 @@ def multiply(base, color, mask, strength):
     return Image.composite(tinted, base, m)
 
 
-def skyline(w=456, h=1088):
+def skyline(w=456, h=860):
     """TMDB publicity still (/obybnndTx4I0rUaBvGpjX2nSftT.jpg), cropped to the left edge only: the downtown
     towers over the water, no people. Printed as a two-ink duotone: a navy key plate from the cool channel and
     an orange plate in the warm stone, out of register by about 1.5 CSS px."""

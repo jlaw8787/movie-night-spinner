@@ -621,8 +621,8 @@ if 'lobster' in ONLY:
     bm = body.arr()
     lob_blue = np.maximum(lob_blue, (legs.arr() + ant.arr()) * (1 - bm))
     red_body = np.maximum(bm, legs.arr() * 0.0)
-    compose(LW_, LH_, [(inkify(np.clip(red_body, 0, 1) * 0.94, 9, 0.6, 0.25, 0.04), RED, (0, 0)),
-                       (inkify(np.clip(lob_blue, 0, 1), 10, 0.42, 0.15, 0.0), BLUE, (-1.2, 0.8))], 'lobster.png', alpha=True)
+    compose(LW_, LH_, [(inkify(np.clip(red_body, 0, 1) * 0.94, 9, 0.6, 0.25, 0.04), RED, (7, 0)),
+                       (inkify(np.clip(lob_blue, 0, 1), 10, 0.42, 0.15, 0.0), BLUE, (5.8, 0.8))], 'lobster.png', alpha=True)
     print('lobster')
 
 

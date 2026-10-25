@@ -22,7 +22,7 @@ LEFT = [
     ('Party pizzettes', 'Sixteen thin dough rounds with tomato, mozzarella and pepperoni, baked crisp underneath.', '9.00'),
   ]),
   ('From the counter', [
-    ('Potato knishes', 'Onion slow-cooked in butter, white pepper, wrapped in flaky dough and baked. Hot mustard.', '2.25'),
+    ('Potato knishes', 'Mashed with butter-softened onion and white pepper, wrapped in flaky dough, baked golden. Hot mustard.', '2.25'),
     ('Garlic knots, six', None, '2.50'),
   ]),
 ]
@@ -82,7 +82,7 @@ def ticket():
             f'<span style="font-family: {SLAB}; font-weight: 800; font-size: 13px; letter-spacing: 0.02em; color: {RED}; white-space: nowrap">GUEST CHECK</span>'
             f'<span style="font-family: {SLAB}; font-weight: 700; font-size: 13px; color: {RED}; white-space: nowrap">No. 392</span></div>'
             f'<div style="height: 1.5px; background: {RED}; margin-top: 2px"></div>'
-            f'{line("For", "NYPD", 30, -2)}'
+            f'{line("For", "NYPD", 27, -2)}'
             f'{line("To", "bank, front door", 23, -1.5)}'
             f'{line("Order", "pies, assorted", 23, -1)}'
             f'{line("Taken by", "Stevie", 26, -2)}'
@@ -98,11 +98,12 @@ def lid():
             f'<div style="font-family: {SLAB}; font-weight: 800; font-size: 19px; letter-spacing: 0.16em; color: {INK}; white-space: nowrap; {SPREAD_K}">PIZZERIA &middot; HEROS &middot; BAKERY</div>'
             f'<div style="margin-top: 1px; font-family: {BODY}; font-weight: 700; font-size: 16px; color: {INK}; white-space: nowrap; {SPREAD_K}">Pizza you can trust. We&#8217;re always listening.</div></div>')
     hot = (f'<div style="{at(326, 50, 70, f"font-family: {SLAB}; font-weight: 800; font-size: 22px; letter-spacing: 0.08em; color: {RED}; {SPREAD_R}")}">HOT</div>'
-           f'<div style="{at(486, 50, 90, f"font-family: {SLAB}; font-weight: 800; font-size: 22px; letter-spacing: 0.08em; color: {RED}; {SPREAD_R}")}">FRESH</div>'
+           f'<div style="{at(493, 50, 80, f"font-family: {SLAB}; font-weight: 800; font-size: 22px; letter-spacing: 0.03em; color: {RED}; {SPREAD_R}")}">FRESH</div>'
            f'<div style="{at(320, 204, 240, f"text-align: center; font-family: {SCRIPT}; font-weight: 700; font-size: 20px; color: {RED}; {SPREAD_R}")}">Oven fresh to your door</div>')
     band = (f'<div style="{at(32, 292, W - 64, f"height: 28px; display: flex; align-items: center; justify-content: center; gap: 14px")}">'
-            + ''.join(f'<span style="font-family: {SLAB}; font-weight: 800; font-size: 17px; letter-spacing: 0.08em; color: {KRAFT}; white-space: nowrap">{t}</span>'
-                      for t in ('FREE DELIVERY', '&#9733;', '(212) 555-0147', '&#9733;', 'OPEN 7 DAYS, 10 AM TO 11 PM'))
+            + ''.join((f'<span style="display: inline-block; width: 7px; height: 7px; background: {KRAFT}; transform: rotate(45deg)"></span>' if t == '*' else
+                       f'<span style="font-family: {SLAB}; font-weight: 800; font-size: 17px; letter-spacing: 0.08em; color: {KRAFT}; white-space: nowrap">{t}</span>')
+                      for t in ('FREE DELIVERY', '*', '(212) 555-0147', '*', 'OPEN 7 DAYS, 10 AM TO 11 PM'))
             + '</div>')
     cols = (f'<div style="{at(46, 336, 322)}">{column(LEFT)}</div>'
             f'<div style="position: absolute; left: 383px; top: 340px; width: 2px; height: 346px; background: {RED}; opacity: 0.85"></div>'

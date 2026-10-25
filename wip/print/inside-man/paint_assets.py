@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFilter
 D = os.path.dirname(os.path.abspath(__file__)); A = os.path.join(D, 'assets')
 F = 768; S = 1536; K = 4; BIG = F * K
 rng = np.random.default_rng(2006); random.seed(392)
-RED = (176, 36, 27); BLACK = (33, 27, 23)
+RED = (176, 36, 27); BLACK = (22, 18, 15)
 
 def blur_noise(scale, sigma, size=S):
     small = rng.random((size // scale + 2, size // scale + 2)).astype('float32')
@@ -27,13 +27,13 @@ CREST *= 0.6 + 0.4 * blur_noise(96, 50)
 def save(arr, name):
     Image.fromarray(arr, 'RGBA').save(os.path.join(A, name))
 
-def ink(mask4, color, seed, cover=0.86, wash=0.20, pins=0.985):
+def ink(mask4, color, seed, cover=0.86, wash=0.20, pins=0.99):
     """mask4: L image at 4x. Returns RGBA uint8 at 2x printed like flexo on corrugate."""
     m = mask4.resize((S, S), Image.LANCZOS)
     squash = m.filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(0.35))
-    halo = np.asarray(m.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(1.2)), 'float32') / 255
+    halo = np.asarray(m.filter(ImageFilter.MaxFilter(7)).filter(ImageFilter.GaussianBlur(0.8)), 'float32') / 255
     core = np.asarray(squash, 'float32') / 255
-    halo = np.clip(halo - np.asarray(m.filter(ImageFilter.MaxFilter(5)), 'float32') / 255, 0, 1) * 0.16
+    halo = np.clip(halo - np.asarray(m.filter(ImageFilter.MaxFilter(5)), 'float32') / 255, 0, 1) * 0.09
     r2 = np.random.default_rng(seed)
     mott = blur_noise(30, 16) * 0.6 + blur_noise(120, 60) * 0.4
     # small soft pinholes where ink skipped the liner
@@ -146,7 +146,7 @@ for i, (x, w, h) in enumerate(blds):
                 d.rectangle(P(wx, wy, wx + 3, wy + 3.5), fill=0)
 # ground and band
 d.rectangle(P(31, BASE, F - 31, BAND), fill=255)
-blk_ink = ink(blk, BLACK, 23, cover=0.93, wash=0.10, pins=0.993)
+blk_ink = ink(blk, BLACK, 23, cover=0.96, wash=0.09, pins=0.994)
 save(blk_ink, 'flexo-black.png')
 
 # ---------------- 4. washboard ink layer laid over the type ----------------

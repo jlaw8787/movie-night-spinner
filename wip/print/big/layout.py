@@ -32,9 +32,9 @@ F = dict(
     party=(40, 168),                 # "PARTY" logotype origin
     age=(632, 206, 776, 334),        # age box
     tag_y=350,
-    window=(48, 394, 768, 662),      # die-cut window
-    subline_y=672,
-    panel=(40, 702, 776, 1016),      # white board panel, passed trays
+    window=(48, 394, 768, 680),      # die-cut window
+    subline_y=690,
+    panel=(40, 720, 776, 1016),      # white board panel, passed trays
 )
 
 # back
@@ -43,9 +43,9 @@ B = dict(
     menu=(40, 138, 776, 566),
     photo_panel=(40, 582, 420, 852),
     photo=(54, 596, 406, 794),
-    play=(436, 582, 776, 716),
-    token=(436, 730, 776, 852),
+    play=(436, 582, 776, 706),
+    token=(436, 720, 776, 852),
     check=(40, 868, 420, 1016),
     note=(436, 868, 776, 1016),
-    upc=(632, 906),                  # top-left of the barcode block
+    upc=(636, 906),                  # top-left of the barcode block
 )

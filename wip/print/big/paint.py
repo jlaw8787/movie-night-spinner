@@ -268,15 +268,15 @@ def paint_window(aw, ah, seed=88):
     flat.alpha_composite(rl)
     # chips, drawn tall so they sit round once the cookie is laid down in perspective
     band = (-0.30 * R, 0.30 * R)
-    for _ in range(64):
+    for _ in range(42):
         for _try in range(40):
             ang = rnd.random() * 2 * math.pi
             dist = math.sqrt(rnd.random()) * 0.87 * R
             cx, cy = R + dist * math.cos(ang), R + dist * math.sin(ang)
             if not (band[0] - 40 < cy - R < band[1] + 40):
                 break
-        rad = rnd.randint(9, 16)
-        sy = 2.1
+        rad = rnd.randint(13, 21)
+        sy = 1.9
         pts = [(cx + rad * (0.8 + 0.35 * rnd.random()) * math.cos(t), cy + rad * sy * (0.8 + 0.35 * rnd.random()) * math.sin(t))
                for t in [i * 2 * math.pi / 9 for i in range(9)]]
         sh = Image.new('L', flat.size, 0); ImageDraw.Draw(sh).polygon([(px + 3, py + 12) for px, py in pts], fill=140)
@@ -587,7 +587,7 @@ def back():
     # menu centre rule
     mx0, my0, mx1, my1 = B['menu']
     mid = (mx0 + mx1) // 2
-    pl.fill(rect_mask((mid - 1, my0 + 22, mid + 2, my1 - 22)), 0, 0, 100, 0)
+    pl.fill(rect_mask((mid - 1, my0 + 22, mid + 2, my1 - 44)), 0, 0, 100, 0)
     # how to play: solid yellow
     pl.fill(rect_mask(B['play']), 0, 8, 100, 0)
     pl.overprint(outline_mask(B['play'], 3))
@@ -635,23 +635,30 @@ def back():
 
 # ------------------------------------------------------------------ wear
 def wear(seed, name):
+    """Shelf wear on box board: rubbed corners and thin scuffs along the cut edges, where the ink
+    wears through to the white board. Kept soft and low detail."""
     rnd = random.Random(seed)
     w, h = W, H
     lt = Image.new('L', (w, h), 0); ld = ImageDraw.Draw(lt)
-    for _ in range(30):
-        side = rnd.choice('tblr'); t = rnd.random(); r = rnd.randint(3, 10)
-        x, y = {'t': (t * w, rnd.randint(-3, 4)), 'b': (t * w, h - rnd.randint(-3, 4)),
-                'l': (rnd.randint(-3, 4), t * h), 'r': (w - rnd.randint(-3, 4), t * h)}[side]
-        ld.ellipse([x - r * 2.4, y - r, x + r * 2.4, y + r], fill=rnd.randint(40, 90))
+    for _ in range(22):
+        side = rnd.choice('tblr'); t = rnd.uniform(0.04, 0.96); ln = rnd.randint(20, 90); th = rnd.uniform(1.5, 3.5)
+        if side in 'tb':
+            y = 0 if side == 't' else h
+            ld.ellipse([t * w - ln, y - th, t * w + ln, y + th], fill=rnd.randint(70, 140))
+        else:
+            x = 0 if side == 'l' else w
+            ld.ellipse([x - th, t * h - ln, x + th, t * h + ln], fill=rnd.randint(70, 140))
     for (x, y) in ((0, 0), (w, 0), (0, h), (w, h)):
-        ld.ellipse([x - 22, y - 22, x + 22, y + 22], fill=120)
-    lt = lt.filter(ImageFilter.GaussianBlur(5))
+        r = rnd.randint(7, 11)
+        ld.ellipse([x - r, y - r, x + r, y + r], fill=170)
+    lt = lt.filter(ImageFilter.GaussianBlur(2.2))
     light = Image.new('RGBA', (w, h), (246, 242, 232, 0)); light.putalpha(lt)
+    # very soft handling haze, large and faint
     mt = Image.new('L', (w, h), 0); md = ImageDraw.Draw(mt)
-    for _ in range(12):
-        x, y, r = rnd.randint(0, w), rnd.randint(0, h), rnd.randint(140, 280)
-        md.ellipse([x - r, y - r, x + r, y + r], fill=rnd.randint(6, 14))
-    mt = mt.filter(ImageFilter.GaussianBlur(90))
+    for _ in range(6):
+        x, y, r = rnd.randint(0, w), rnd.randint(0, h), rnd.randint(220, 340)
+        md.ellipse([x - r, y - r, x + r, y + r], fill=rnd.randint(5, 10))
+    mt = mt.filter(ImageFilter.GaussianBlur(120))
     mott = Image.new('RGBA', (w, h), (255, 250, 238, 0)); mott.putalpha(mt)
     out = Image.new('RGBA', (w, h), (0, 0, 0, 0))
     out.alpha_composite(mott); out.alpha_composite(light)

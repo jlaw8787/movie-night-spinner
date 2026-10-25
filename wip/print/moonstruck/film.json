@@ -1,3 +1,4 @@
-{"fmt":"moonlit","fn":"fmtMoonstruck","faces":["front.html","back.html"],"names":["Front","Back"],"mm":[215.9,279.4],
- "fonts":"family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Pinyon+Script","fams":["EB Garamond","Pinyon Script"],
- "phone":{"disp":"'Pinyon Script',cursive","title":"'Pinyon Script',cursive","name":"'EB Garamond',serif","body":"'EB Garamond',serif","price":"'EB Garamond',serif","note":"'EB Garamond',serif"}}
+{"fmt":"moonlit","fn":"fmtMoonstruck","faces":["outside.html","inside.html"],"names":["Outside","Inside"],"mm":[279.4,215.9],
+ "fonts":"family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;600&family=UnifrakturMaguntia",
+ "fams":["UnifrakturMaguntia","Old Standard TT","Courier Prime","Oswald"],
+ "phone":{"disp":"'UnifrakturMaguntia',serif","title":"'UnifrakturMaguntia',serif","name":"'Old Standard TT',serif","body":"'Old Standard TT',serif","price":"'Old Standard TT',serif","note":"'Courier Prime',monospace"}}

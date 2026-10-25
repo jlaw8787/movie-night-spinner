@@ -178,7 +178,7 @@ back_right = ''.join([
 stations = [('Boston', 'Lv', '8:30 PM'), ('Back Bay', '', '8:36'), ('Route 128', '', '8:50'), ('Providence', '', '9:22'),
             ('Kingston', '', '9:45'), ('Westerly', '', '9:58'), ('New London', '', '10:20'),
             ('Old Saybrook', '', '10:42'), ('New Haven', '', '11:20'), ('Bridgeport', '', '11:45'), ('Stamford', '', '12:10 AM'),
-            ('New Rochelle', '', '12:30'), ('125th Street', '', '12:48'), ('New York, 42nd St.', 'Ar', '12:57')]
+            ('New Rochelle', '', '12:30'), ('125th Street', '', '12:48'), ('New York', 'Ar', '12:57 AM')]
 
 
 def tt_col(rows):

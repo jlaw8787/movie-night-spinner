@@ -50,7 +50,7 @@ COCKTAIL = [
 LUNCH = [
     ('Sliced sirloin salad', 'Seared rare, cut thin and laid over romaine with cherry tomatoes, red onion and crumbled blue cheese. Red wine vinaigrette.', '12.95'),
     ('Chicken parmigiana', 'Breaded cutlet under marinara and melted mozzarella, with a side of buttered spaghetti.', '11.50'),
-    ('Broiled filet of sole', 'Lemon butter and paprika, with rice pilaf and green beans almondine.', '13.25'),
+    ('Filet of sole', 'Broiled with lemon butter and paprika. Rice pilaf, green beans almondine.', '13.25'),
 ]
 
 def front():
@@ -58,20 +58,20 @@ def front():
             f'<div style="display: flex; justify-content: space-between; align-items: flex-end">'
             f'<div>'
             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 13px; letter-spacing: 0.24em; color: {ORANGE}">CATERING FOR EVERY OCCASION SINCE 1951</div>'
-            f'<h1 style="margin: 4px 0 0 -3px; font-family: {DISP}; font-style: italic; font-weight: 800; font-size: 66px; line-height: 1; letter-spacing: -0.01em; color: {NAVY}; {INK}">Liberty View Manor</h1></div>'
+            f'<h1 style="margin: 4px 0 0 -3px; font-family: {DISP}; font-style: italic; font-weight: 800; font-size: 58px; line-height: 1; letter-spacing: -0.01em; white-space: nowrap; color: {NAVY}; {INK}">Liberty View Manor</h1></div>'
             f'<div style="text-align: right; padding-bottom: 4px">'
-            f'<div style="font-family: {DISP}; font-weight: 700; font-size: 25px; line-height: 1; color: {NAVY}">(718) 555-0130</div>'
-            f'<div style="margin-top: 5px; font-family: {BODY}; font-size: 14px; line-height: 1.3; color: {SOFT}">Richmond Terrace, St. George<br>Staten Island, N.Y. 10301</div></div></div>'
+            f'<div style="font-family: {DISP}; font-weight: 700; font-size: 25px; line-height: 1; color: {NAVY}; white-space: nowrap">(718) 555-0130</div>'
+            f'<div style="margin-top: 5px; font-family: {BODY}; font-size: 14px; line-height: 1.3; color: {SOFT}; white-space: nowrap">Richmond Terrace, St. George<br>Staten Island, N.Y. 10301</div></div></div>'
             f'<div style="height: 3px; background: {NAVY}; margin-top: 10px"></div>'
-            f'<div style="display: flex; justify-content: space-between; margin-top: 7px; font-family: {BODY}; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; color: {NAVY}">'
-            + ''.join(f'<span>{t}</span>' for t in ['WEDDINGS', 'ENGAGEMENTS', 'SHOWERS', 'COMMUNIONS', 'BIRTHDAYS', 'BON VOYAGE PARTIES', 'OFFICE PARTIES']) +
+            f'<div style="display: flex; justify-content: space-between; margin-top: 7px; font-family: {BODY}; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; color: {NAVY}; white-space: nowrap">'
+            + ''.join(f'<span>{t}</span>' for t in ['WEDDINGS', 'ENGAGEMENTS', 'SHOWERS', 'COMMUNIONS', 'BIRTHDAYS', 'BON VOYAGE PARTIES']) +
             f'</div><div style="position: relative; height: 4px; margin-top: 7px"><div style="position: absolute; left: 1px; top: 1px; width: 720px; height: 2px; background: {ORANGE}"></div></div></div>')
 
     photo = (f'<div style="position: absolute; left: 48px; top: 216px; width: 228px">'
-             f'<div style="position: relative; width: 228px; height: 544px; border: 1.5px solid {NAVY}; box-sizing: border-box; overflow: hidden">'
-             f'<img src="assets/photo-skyline.png" alt="Downtown towers over the harbor, printed as a navy and orange halftone" style="display: block; width: 228px; height: 544px; margin: -1.5px 0 0 -1.5px">'
+             f'<div style="position: relative; width: 228px; height: 430px; border: 1.5px solid {NAVY}; box-sizing: border-box; overflow: hidden">'
+             f'<img src="assets/photo-skyline.png" alt="Downtown towers over the harbor, printed as a navy and orange halftone" style="display: block; width: 228px; height: 430px; margin: -1.5px 0 0 -1.5px">'
              f'</div>'
-             f'<div style="position: absolute; left: 22px; top: 418px; width: 184px; height: 112px; border-radius: 50%; border: 2px solid {NAVY}; background: {PAPER}; box-sizing: border-box">'
+             f'<div style="position: absolute; left: 22px; top: 304px; width: 184px; height: 112px; border-radius: 50%; border: 2px solid {NAVY}; background: {PAPER}; box-sizing: border-box">'
              f'<div style="position: absolute; left: 4px; top: 4px; right: 4px; bottom: 4px; border-radius: 50%; {tint("orange")}"></div>'
              f'<div style="position: absolute; left: 0; top: 17px; width: 180px; text-align: center; font-family: {DISP}; font-style: italic; font-weight: 800; font-size: 22px; line-height: 1.05; color: {NAVY}">Party Menus<br>1988</div>'
              f'<div style="position: absolute; left: 0; top: 70px; width: 180px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; color: {NAVY}">PRICES AS MARKED</div></div>'
@@ -80,11 +80,9 @@ def front():
     cock = ''.join(item(n, d, p, u, mt=(14 if i else 12)) for i, (n, d, p, u) in enumerate(COCKTAIL))
     right = (f'<div style="position: absolute; left: 304px; top: 212px; width: 464px">'
              f'{head("The Cocktail Hour", "SERVED ON SILVER TRAYS")}'
-             f'<p style="margin: 10px 0 0; font-family: {BODY}; font-size: 16px; line-height: 1.32; color: {NAVY}">Butlered hot and cold for the first hour while your guests arrive. Choose any five for <b>8.95 per person</b>, or order by the dozen for parties at home.</p>'
+             f'<p style="margin: 10px 0 0; font-family: {BODY}; font-size: 16px; line-height: 1.32; color: {NAVY}">Butlered hot and cold for the first hour while your guests arrive. Any five for <b>8.95 per person</b>, or by the dozen for parties at home.</p>'
              f'{cock}'
-             f'<div style="margin-top: 16px; padding: 10px 14px 11px; border: 1.5px solid {NAVY}; position: relative">'
-             f'<div style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; {tint("navy")}; opacity: 0.6"></div>'
-             f'<div style="position: relative; font-family: {BODY}; font-size: 16px; line-height: 1.32; color: {NAVY}"><b>ADD A COLD DISPLAY.</b> Antipasto of provolone, soppressata, roasted peppers and olives, <b>3.50 per person.</b> Shrimp cocktail on ice, <b>4.75 per person.</b></div></div></div>')
+             f'</div>')
 
     lunch = ''.join(
         f'<div style="width: 226px">'
@@ -92,10 +90,10 @@ def front():
         f'<div style="margin-top: 1px; font-family: {BODY}; font-weight: 700; font-size: 17px; color: {ORANGE}">{p} <span style="font-size: 13px; font-style: italic; font-weight: 400; color: {SOFT}">per person</span></div>'
         f'<p style="margin: 3px 0 0; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {SOFT}; text-wrap: pretty">{d}</p></div>'
         for n, d, p in LUNCH)
-    bottom = (f'<div style="position: absolute; left: 48px; top: 796px; width: 720px">'
+    bottom = (f'<div style="position: absolute; left: 48px; top: 738px; width: 720px">'
               f'{head("Luncheons, Showers and Communions", "NOON TO FOUR, MONDAY TO SATURDAY", size=30)}'
               f'<div style="display: flex; justify-content: space-between; margin-top: 12px">{lunch}</div>'
-              f'<p style="margin: 10px 0 0; font-family: {BODY}; font-size: 15px; line-height: 1.3; color: {NAVY}">Every luncheon includes a tossed salad, Italian bread and butter, coffee or tea, and a sheet cake from our own bakery with your inscription.</p></div>')
+              f'<p style="margin: 10px 0 0; font-family: {BODY}; font-size: 15px; line-height: 1.3; color: {NAVY}">Every luncheon includes tossed salad, Italian bread, coffee or tea, and a sheet cake with your inscription.</p></div>')
 
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {NAVY}">{grain()}'
             f'{mast}{photo}{right}{bottom}{wear("front")}</div>')

@@ -93,10 +93,10 @@ def panel_front():
     d = ImageDraw.Draw(m)
     d.rectangle([0, 0, w, PH * S], fill=255)
     # knock out NORRIS
-    f = font('Antonio.ttf', 400 * S // 2 * 2, 700)
+    f = font('Antonio.ttf', 400 * S, 700)
     bb = f.getbbox('NORRIS')
     sc = (W - 2 * 38) * S / (bb[2] - bb[0])
-    f = font('Antonio.ttf', int(400 * S * sc / S), 700)
+    f = font('Antonio.ttf', int(400 * S * sc), 700)
     bb = f.getbbox('NORRIS')
     x0 = 38 * S - bb[0]
     y0 = 78 * S - bb[1]
@@ -108,7 +108,7 @@ def panel_front():
         star(d, (W - 44 - i * 17) * S, 50 * S, 6 * S, 0)
     # knocked out rule under the wordmark
     d.rectangle([40 * S, cap_bottom + 14 * S, (W - 40) * S, cap_bottom + 16 * S], fill=0)
-    navy = press(m, 7, lo=0.84, pin=3)
+    navy = press(m, 7, lo=0.84, pin=1)
     img = ink_layer(navy, NAVY)
     img.alpha_composite(stripes(PH + 26, PH + 3, 8))
     img.save(os.path.join(A, 'panel-front.png'))
@@ -122,7 +122,7 @@ def panel_back():
     d.rectangle([0, 0, w, hh * S], fill=255)
     for i in range(3):
         star(d, (W - 48 - i * 17) * S, 18 * S, 5 * S, 0)
-    navy = press(m, 17, lo=0.84, pin=3)
+    navy = press(m, 17, lo=0.84, pin=1)
     img = ink_layer(navy, NAVY)
     img.alpha_composite(stripes(hh + 26, hh + 3, 18))
     img.save(os.path.join(A, 'panel-back.png'))
@@ -138,7 +138,8 @@ def halftone():
     im = im.crop(box)
     # lift the deep shadows so a one-colour plate still holds the jacket and the dark backdrop
     im = ImageOps.autocontrast(im, cutoff=0.5)
-    im = im.point(lambda v: int(255 * ((v / 255) ** 0.72)))
+    im = im.point(lambda v: int(255 * ((v / 255) ** 0.8)))
+    im = im.filter(ImageFilter.UnsharpMask(6, 120, 2))
     im = ImageOps.autocontrast(im.point(lambda v: int(40 + v * 0.84)))
     SS = 4                                  # supersample for clean dots
     W2, H2 = cw * S * SS, ch * S * SS
@@ -160,7 +161,8 @@ def halftone():
                 continue
             g = px[min(W2 - 1, max(0, int(x))), min(H2 - 1, max(0, int(y)))]
             dark = 1 - g / 255
-            if dark < 0.04:
+            dark = 0.04 + 0.64 * dark            # cap the solids so the screen stays open in the backdrop
+            if dark < 0.05:
                 continue
             gain = 1.06 + random.uniform(-0.05, 0.05)       # dot gain on uncoated stock
             r = cell * 0.5 * math.sqrt(dark * 4 / math.pi) * gain
@@ -195,7 +197,7 @@ def perf(horizontal, length_css):
 # ---------- union bug ----------
 def union_bug():
     SS = 4
-    cw, ch = 64, 36
+    cw, ch = 70, 38
     w, h = cw * S * SS, ch * S * SS
     m = Image.new('L', (w, h), 0)
     d = ImageDraw.Draw(m)
@@ -205,7 +207,7 @@ def union_bug():
     f = font('Antonio.ttf', int(9.5 * S * SS), 700)
     def arc_text(txt, top):
         n = len(txt)
-        span = math.radians(118)
+        span = math.radians(100 if top else 50)
         cx, cy = w / 2, h / 2
         rx, ry = w / 2 - lw * 5.8, h / 2 - lw * 5.8
         for k, ch_ in enumerate(txt):
@@ -220,10 +222,10 @@ def union_bug():
             rot = -math.degrees(a + math.pi / 2) if top else -math.degrees(a - math.pi / 2)
             g = g.rotate(rot, resample=Image.BICUBIC)
             m.paste(255, (int(x - g.width / 2), int(y - g.height / 2)), g)
-    arc_text('UNION PRINTED', True)
-    arc_text('NEW YORK', False)
+    arc_text('UNION LABEL', True)
+    arc_text('N.Y.C.', False)
     f2 = font('Antonio.ttf', int(10 * S * SS), 700)
-    d.text((w / 2, h / 2), 'SHOP 12', font=f2, fill=255, anchor='mm')
+    d.text((w / 2, h / 2), '12', font=f2, fill=255, anchor='mm')
     m = m.resize((cw * S, ch * S), Image.LANCZOS)
     ink_layer(press(m, 51, lo=0.9, spread=0.4), NAVY).save(os.path.join(A, 'union-bug.png'))
 
