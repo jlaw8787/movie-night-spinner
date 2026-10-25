@@ -17,7 +17,7 @@ CHECK = r"""(()=>{const out=[];document.querySelectorAll('#preview .fx-face').fo
   const over=Math.max(r.bottom-fr.bottom,r.right-fr.right,fr.top-r.top,fr.left-r.left);
   if(over>3)out.push(`face ${f.dataset.face}: "${e.textContent.trim().slice(0,40)}" spills ${Math.round(over)}px`)});
  const m=f.querySelector('[data-h="menu"]');if(m&&(m.scrollWidth>m.clientWidth+1||m.scrollHeight>m.clientHeight+1))out.push('face 2: menu columns overflow');
- const t=f.querySelector('[data-h="title"]');if(t){const b=t.parentElement;if(b.scrollHeight>b.clientHeight+1)out.push('face 1: title box overflow')}});
+ const t=f.querySelector('[data-h="title"]');if(t){const b=t.closest('[data-h="info"]')||t.parentElement;if(b.scrollHeight>b.clientHeight+1)out.push('face 1: title box overflow')}});
  const sizes=[...document.querySelectorAll('#preview .fx-face *')].filter(e=>[...e.childNodes].some(n=>n.nodeType===3&&n.textContent.trim())&&e.offsetParent).map(e=>parseFloat(getComputedStyle(e).fontSize));
  out.push('min font '+Math.min(...sizes)+'px');return out})()"""
 async def main():

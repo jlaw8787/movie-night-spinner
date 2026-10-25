@@ -17,6 +17,8 @@ const q=new URLSearchParams(location.search);
 (async()=>{
   const films=await (await fetch("../../../data/films.json")).json();
   const stills=await (await fetch("../../../data/film-stills.json")).json();
+  const j=async u=>{try{const r=await fetch(u);return r.ok?await r.json():{}}catch(e){return {}}};
+  const [LOGOS,PAL,FLAV]=await Promise.all(["film-logos","film-palette","film-flavour"].map(n=>j("../../../data/"+n+".json")));
   const R="../../../data/film/";
   async function load(id){
     const f=Object.assign({},films.find(x=>`${x.title} (${x.year})`===id));f.id=id;
@@ -31,7 +33,7 @@ const q=new URLSearchParams(location.search);
       let k=0;["s","m","w","d"].forEach(c=>{while(menu[c].length<4)menu[c].push(pool[k++%pool.length])});
       ["s","m","w","d"].forEach(c=>menu[c].forEach(it=>{if((it.note||"").length<60)it.note=(it.note+", made the long way, the way the counter has always done it, no shortcuts and no substitutions").slice(0,120).replace(/[ ,]+\S*$/,"")}));
     }
-    return {f,menu,poster:(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[id])||null,st:stills[id]};
+    return {f,menu,poster:(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[id])||null,st:stills[id],x:{logo:LOGOS[id],palette:PAL[id],flavour:FLAV[id]}};
   }
   let list=SAMPLES.slice();
   if(q.has("i"))list=[SAMPLES[+q.get("i")]];
@@ -43,7 +45,7 @@ const q=new URLSearchParams(location.search);
     cases.push({...s,f:{...s.f,title:"Spider-Man: Across the Spider-Verse and Beyond the Very End"},menu:(await load(STRESS)).menu});
   }
   const box=document.getElementById("preview");
-  for(const c of cases){const d=document.createElement("div");d.innerHTML=genreCard(c.f,c.menu,c.poster,c.st);box.appendChild(d)}
+  for(const c of cases){const d=document.createElement("div");d.innerHTML=genreCard(c.f,c.menu,c.poster,c.st,c.x);box.appendChild(d)}
   await document.fonts.ready;
   await Promise.all([...document.images].map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r})));
   document.body.dataset.ready="1";

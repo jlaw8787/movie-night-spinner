@@ -28,6 +28,18 @@ Palette: storm black #0d1014, neon red #c42f27 / #ff4b3e (the sign glow), bone p
 - Integration: load the fonts explicitly (document.fonts.load) before horrorFit, or it measures with fallback metrics. Set HORROR_ASSETS for paper-grain.png.
 - Spill check (kit overflow logic): all 7 proofs pass, minimum 14px.
 
+## Per-film lift (Oct 26)
+genreCard(f, menu, poster, stills, {logo, palette, flavour}) takes the extras from data/film-logos.json, film-palette.json and film-flavour.json. Any of them can be missing.
+- Venue and sign: flavour.venue goes in the neon sign, fitted to one line between 52 and 118px. flavour.sign goes in the kicker above it. The diner subline and "open all night" stay. With no flavour (C.H.U.D., Beetlejuice) it falls back to Last Light Diner.
+- Logo: the TMDB w500 logo sits in the title spot. horrorFit reads its opaque pixels on a canvas (TMDB sends CORS headers) and keeps it only if the mean luminance is 0.3 or more, otherwise the set type stays. Tall logos shrink until the block fits. Night of the Living Dead's dark logo falls back to type.
+- Accent: the poster accent drives the rules, prices, frames, kickers and neon glow when its luminance is 0.05 to 0.24 and its saturation is 0.3 or more. Otherwise the genre red is used (IT's drab accent fails, for example). The neon text is lightened until it reads on black.
+- Note: becomes "Left on the counter" with the character's script signature.
+- Winks: 0 goes in the front still caption, 1 the band card, 2 the back still, 3 the storm notice, 4 the back fine print ("Overheard at the counter").
+- Prop: a type-only slip, badge or receipt over the hero's top-left corner.
+- Number: goes in "Form No." on both faces. 2 digits become the cents of the first drink, 3 or 4 digits the price of the first main (Halloween 19.63).
+
 ## Known weak spots
 - Still picking is blind, so a still can be dark or off-tone. Night of the Living Dead's band still is a murky close-up.
 - The stress card's continued faces have no stills, because its synthetic id has no stills.
+- Winks are matched to stills blind, so a caption can describe a different moment from its picture (Silence: "Clarice Starling at Quantico" sits under Lecter).
+- Some poster accents are muted (Halloween brown), so their neon glows weakly.

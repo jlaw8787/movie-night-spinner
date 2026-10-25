@@ -17,7 +17,8 @@ const slug=id=>id.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const toItem=([n,note,how,shop])=>({n,note,how,shop});
 (async()=>{
   const q=new URLSearchParams(location.search);
-  const [films,stills]=await Promise.all([fetch("../../../data/films.json").then(r=>r.json()),fetch("../../../data/film-stills.json").then(r=>r.json())]);
+  const J=u=>fetch("../../../data/"+u).then(r=>r.ok?r.json():{}).catch(()=>({}));
+  const [films,stills,logos,pals,flav]=await Promise.all(["films.json","film-stills.json","film-logos.json","film-palette.json","film-flavour.json"].map(J));
   films.forEach(f=>f.id=`${f.title} (${f.year})`);
   let list=q.get("film")?[q.get("film")]:SAMPLES.slice();
   if(q.get("stress"))list=q.get("film")?list:["STRESS"];
@@ -37,7 +38,7 @@ const toItem=([n,note,how,shop])=>({n,note,how,shop});
     }
     const wrap=document.createElement("section");wrap.dataset.film=f.id;
     wrap.innerHTML=`<h2 style="margin:0 0 12px;font-weight:600">${f.id}: ${Object.values(menu).flat().length} items, ${stills[f.id]?"stills":"poster only"}</h2>`+
-      genreCard(f,menu,TMDB_POSTERS[f.id]||null,stills[f.id]||null);
+      genreCard(f,menu,TMDB_POSTERS[f.id]||null,stills[f.id]||null,{logo:logos[f.id],palette:pals[f.id],flavour:flav[f.id]});
     out.appendChild(wrap);
   }
   /* load every face the fit measures with, or the fit runs on fallback metrics */

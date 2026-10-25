@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kids placemat pilot</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="../../../tmdb-posters.js"></script>
 <script src="template.js"></script>
 </head>
@@ -22,7 +22,8 @@ const slug=k=>k.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const toItem=([n,note])=>({n,note});
 (async()=>{
   const q=new URLSearchParams(location.search);
-  const [films,stills]=await Promise.all([fetch("../../../data/films.json").then(r=>r.json()),fetch("../../../data/film-stills.json").then(r=>r.json())]);
+  const J=u=>fetch("../../../data/"+u).then(r=>r.json());
+  const [films,stills,logos,pals,flav]=await Promise.all([J("films.json"),J("film-stills.json"),J("film-logos.json"),J("film-palette.json"),J("film-flavour.json")]);
   let list=FILMS;if(q.get("film"))list=[[q.get("film"),q.get("mode")||""]];
   if(q.get("stress"))list=list.concat([["Peter Rabbit 2: The Runaway (2021)","stress"]]);
   const box=document.getElementById("preview");
@@ -39,7 +40,7 @@ const toItem=([n,note])=>({n,note});
     const face=document.createElement("div");
     face.className="fx-face";face.dataset.face=slug(key)+(mode==="stress"?"-stress":"");
     face.style.cssText="width:1344px;height:960px;flex:none";
-    face.innerHTML=GENRE.kids.card(f,menu,(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[key])||null,stills[key]||null,{tag:ed&&ed.tagline,cue:ed&&ed.cue,root:"../../../"});
+    face.innerHTML=GENRE.kids.card(f,menu,(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[key])||null,stills[key]||null,{tag:ed&&ed.tagline,cue:ed&&ed.cue,root:"../../../",logo:logos[key]||null,palette:pals[key]||null,flavour:flav[key]||null});
     box.appendChild(face);
   }
   await document.fonts.ready;

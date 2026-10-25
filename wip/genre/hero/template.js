@@ -3,13 +3,28 @@
    genreCard(f, menu, poster, stills) returns two US Letter faces (816 x 1056): the front page (masthead, banner
    headline, a TMDB still across a third of the page, the counterman's note, the late bulletin) and Page 2
    (the full menu as newspaper sections, with a second still). Inline styles only.
+   Per-film lift: optional 5th argument x = {logo, palette, flavour}, the film's entries from data/film-logos.json
+   ([path, w, h]), data/film-palette.json ({dark, accent}) and data/film-flavour.json ({venue, sign, note, winks, prop, number}).
+   Each part falls back to the genre default when missing.
    f: film record ({title, year, T tagline, D description, P showtime cue}; pass the edition tagline and cue in T and P when one exists)
    menu: {s, m, w, d} arrays of {n, note}
    poster: TMDB poster path ("/abc.jpg") or null
    stills: data/film-stills.json entry for the film ([[path, w, h, lang], ...]) or undefined */
 (function(root){
 const W=816,H=1056,PX=40,PY=30,IW=W-2*PX,G=26,CW=(IW-2*G)/3;
-const C={paper:"#f2ecde",ink:"#1b1a17",red:"#c3241a",soft:"#5d584f"};
+const C={paper:"#f2ecde",ink:"#1b1a17",red:"#c3241a",soft:"#5d584f",head:"#1b1a17"};
+const GENRE_RED="#c3241a";
+/* contrast against the newsprint; accents that are too light get darkened until they read */
+const hex=h=>{h=String(h||"").replace("#","");if(h.length===3)h=h.split("").map(c=>c+c).join("");return /^[0-9a-f]{6}$/i.test(h)?[0,2,4].map(i=>parseInt(h.slice(i,i+2),16)):null};
+const lum=c=>{const v=c.map(x=>{x/=255;return x<=.03928?x/12.92:Math.pow((x+.055)/1.055,2.4)});return .2126*v[0]+.7152*v[1]+.0722*v[2]};
+const ratio=(a,b)=>{const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)};
+const toHex=c=>"#"+c.map(x=>Math.round(x).toString(16).padStart(2,"0")).join("");
+function inkFor(h,min){
+  let c=hex(h);if(!c)return null;const P=hex(C.paper);
+  const sat=Math.max(...c)-Math.min(...c);if(sat<40)return null;   /* grey accents carry no film colour */
+  for(let i=0;i<12&&ratio(c,P)<min;i++)c=c.map(x=>x*.85);
+  return ratio(c,P)>=min?toHex(c):null;
+}
 const FD="'Oswald','Arial Narrow',Impact,sans-serif";
 const FS="'Homemade Apple',cursive";
 const FB="'Source Serif 4',Georgia,'Times New Roman',serif";
@@ -132,11 +147,18 @@ pickStills.nth=(stills,i)=>{const all=(stills||[]).filter(s=>s&&s[0]&&!s[3]&&(!s
 const NOISE="url('data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .12 0 0 0 0 .1 0 0 0 0 .07 0 0 0 .13 0'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>").replace(/'/g,"%27")+"')";
 const PAPER=`background:${NOISE},linear-gradient(180deg,transparent 49.5%,rgba(90,70,40,.09) 50%,rgba(255,255,255,.22) 50.3%,transparent 51%),radial-gradient(ellipse 80% 75% at 50% 46%,rgba(255,252,240,.35) 0%,rgba(255,252,240,0) 55%,rgba(128,100,52,.22) 100%),${C.paper};background-size:260px 260px,100% 100%,100% 100%`;
 const face=(n,inner)=>`<div data-face="${n}" style="position:relative;width:${W}px;height:${H}px;box-sizing:border-box;padding:${PY}px ${PX}px;${PAPER};color:${C.ink};overflow:hidden">${inner}</div>`;
-const fine=(year,right)=>`<div style="display:flex;justify-content:space-between;gap:16px;padding-top:6px;border-top:1px solid ${C.ink};font-family:${FB};font-size:15px;line-height:19px;color:${C.soft}">
-      <span>Prices subject to change. Printed at the counter every morning. Form DS-${esc(year)}.</span><span style="white-space:nowrap">${right}</span></div>`;
+const fine=(year,right,num)=>`<div style="display:flex;justify-content:space-between;gap:16px;padding-top:6px;border-top:1px solid ${C.ink};font-family:${FB};font-size:15px;line-height:19px;color:${C.soft}">
+      <span>Prices subject to change. Printed at the counter every morning. Form DS-${esc(num||year)}.</span><span style="white-space:nowrap">${right}</span></div>`;
 
-function genreCard(f,menu,poster,stills){
+function genreCard(f,menu,poster,stills,x){
+  x=x||{};const fl=x.flavour||null,logo=x.logo||null,pal=x.palette||{};
+  C.red=inkFor(pal.accent,4.8)||GENRE_RED;
+  const dk=hex(pal.dark);C.head=dk&&ratio(dk,hex(C.paper))>=9?pal.dark:C.ink;
   const year=String(f.year||"");
+  const num=clean(fl&&fl.number)||year;
+  const venue=clean(fl&&fl.venue)||"The Daily Special";
+  const sign=clean(fl&&fl.sign).toUpperCase()||"CITY NEWSSTAND AND LUNCH COUNTER";
+  const winks=(fl&&fl.winks||[]).map(clean).filter(Boolean);
   const courses=[["s",0],["m",1],["w",2],["d",3]].map(([k,i])=>({label:LAB[i],sec:i,items:(menu&&menu[k]||[]).filter(x=>x&&x.n)})).filter(c=>c.items.length);
   const list=[];courses.forEach((c,ci)=>c.items.forEach((it,ii)=>list.push({ci,ii})));
   const [s1,s2]=pickStills(stills);
@@ -151,9 +173,12 @@ function genreCard(f,menu,poster,stills){
   /* ---------- front page ---------- */
   const MAST=138;
   const B=banner(f.title||"",104);
+  /* the film's own title logo, printed in ink; type if the logo is missing or would print too small */
+  let LG=null;
+  if(logo&&logo[0]&&logo[1]&&logo[2]){const a=logo[1]/logo[2];let h=Math.min(150,(IW-60)/a);if(h>=58&&a>=1.1)LG={src:IMG+"original"+logo[0],h:Math.round(h),w:Math.round(h*a)}}
   const tag=clean(f.T);
   const deckZ=25,deckL=tag?wrap(sentence(tag),IW-40,s=>sw(s,deckZ,1)).length:0;
-  const HEAD=30+B.lines.length*Math.ceil(B.size*1.08)+(deckL?17+deckL*Math.round(deckZ*1.25):0)+12;
+  const HEAD=30+(LG?LG.h+14:B.lines.length*Math.ceil(B.size*1.08))+(deckL?17+deckL*Math.round(deckZ*1.25):0)+12;
   const FOOT=40;
   const BODY=H-PY*2-MAST-HEAD-FOOT;
   const capText=sentence(f.D),capZ=17;
@@ -162,14 +187,17 @@ function genreCard(f,menu,poster,stills){
 
   /* the counterman's note, built from the film's own tagline and dishes */
   const main=pick(1),sweet=pick(2),drink=pick(3),snack=pick(0);
-  const noteTxt=[ "Big night on the corner, folks.",
+  const by=clean(fl&&fl.note&&fl.note.by)||"Sal";
+  const noteTxt=fl&&fl.note&&fl.note.text?sentence(fl.note.text):[ "Big night on the corner, folks.",
     tag?sentence(tag):"",
     main?`On the grill: ${main}.`:snack?`Up first: ${snack}.`:"",
     sweet?`In the pie case: ${sweet}.`:"",
     drink?`${drink}, first one on the house.`:"",
     "Grab a paper and a stool." ].filter(Boolean).join(" ");
+  const counterLine=[main?`On the grill: ${main}.`:snack?`Up first: ${snack}.`:"",sweet?`In the case: ${sweet}.`:""].filter(Boolean).join(" ");
+  const showCounter=!!(fl&&fl.note&&fl.note.text)&&counterLine;
   const LW=2*CW+G,noteZ=18;
-  const noteH=22+wrap(noteTxt,LW,s=>sw(s,noteZ,1)*1.04).length*24+6+40+26;
+  const noteH=22+wrap(noteTxt,LW,s=>sw(s,noteZ,1)*1.04).length*24+6+46+(showCounter?wrap(counterLine,LW,s=>sw(s,16)*1.04).length*21+6:0)+26;
   const cue=sentence(f.P),cueZ=18;
   const cueH=cue?4+34+12+18+wrap(cue,CW-24,s=>sw(s,cueZ)*1.04).length*Math.ceil(cueZ*1.28)+4:0;
   const below=Math.max(noteH,cueH)+16;
@@ -179,34 +207,41 @@ function genreCard(f,menu,poster,stills){
     <div style="font-family:${FB};font-size:14px;line-height:17px;font-weight:700;letter-spacing:.14em;color:${C.red}">${k}</div>
     <div style="font-family:${FB};font-size:15px;line-height:19px;color:${C.ink};margin-top:3px;white-space:nowrap">${l1}<br>${l2}</div></div>`;
   /* prop: the late edition slip the stand tucks over the corner of the photo (type only) */
-  const slip=`<div style="position:absolute;right:14px;top:14px;transform:rotate(3deg);width:178px;background:#fbf7ec;border:1px solid ${C.ink};box-shadow:0 3px 8px rgba(40,30,15,.28);padding:8px 10px 9px;box-sizing:border-box;text-align:center;font-family:${FB};color:${C.ink}">
-    <div style="border-top:2px solid ${C.red};border-bottom:2px solid ${C.red};padding:3px 0;font-family:${FD};font-weight:700;font-size:24px;line-height:28px;color:${C.red};letter-spacing:.04em">LATE EDITION</div>
-    <div style="font-size:15px;line-height:19px;margin-top:5px">Hot off the grill<br>Full menu inside</div>
-    <div style="font-family:${FD};font-weight:700;font-size:26px;line-height:30px;margin-top:2px">5 CENTS</div></div>`;
+  /* prop: the film's own paper object (ticket, slip, card), type only, tucked over the corner of the photo */
+  const pr=fl&&fl.prop&&fl.prop.title?fl.prop:{kind:"slip",title:"Late Edition",lines:["Hot off the grill","Full menu inside"]};
+  const ptitle=clean(pr.title).toUpperCase(),plines=(pr.lines||[]).map(clean).filter(Boolean).slice(0,3);
+  const tz=Math.max(16,Math.min(24,Math.floor(170/gw(ptitle,1))));
+  const edge=pr.kind==="ticket"?`border:1px solid ${C.ink};border-left:3px dashed ${C.ink};border-right:3px dashed ${C.ink}`:pr.kind==="card"?`border:2px solid ${C.ink}`:`border:1px solid ${C.ink}`;
+  const slip=`<div style="position:absolute;right:14px;top:14px;transform:rotate(${pr.kind==="card"?-2.5:3}deg);width:200px;background:#fbf7ec;${edge};box-shadow:0 3px 8px rgba(40,30,15,.28);padding:8px 12px 9px;box-sizing:border-box;text-align:center;font-family:${FB};color:${C.ink}">
+    <div style="border-top:2px solid ${C.red};border-bottom:2px solid ${C.red};padding:3px 0;font-family:${FD};font-weight:700;font-size:${tz}px;line-height:${tz+4}px;color:${C.red};letter-spacing:.03em;white-space:nowrap">${esc(ptitle)}</div>
+    <div style="font-size:15px;line-height:19px;margin-top:5px">${plines.map(esc).join("<br>")}</div>
+    <div style="font-family:${FD};font-weight:700;font-size:22px;line-height:28px;margin-top:3px">${fl&&fl.number?`No. ${esc(fl.number)}`:"5 CENTS"}</div></div>`;
 
   const front=face("front",`
   <header style="height:${MAST}px;box-sizing:border-box">
     <div style="display:flex;justify-content:space-between;align-items:center;height:88px;gap:10px">
       ${ear("LUNCH EDITION","Counter open","6 AM to late")}
-      <div style="font-family:${FM};font-size:60px;line-height:1;color:${C.ink};white-space:nowrap;text-align:center;flex:1">The Daily Special</div>
+      <div style="font-family:${FM};font-size:${Math.max(26,Math.min(60,Math.floor(440/(venue.length*.53))))}px;line-height:1;color:${C.head};white-space:nowrap;text-align:center;flex:1;min-width:0;overflow:hidden">${esc(venue)}</div>
       ${ear("WEATHER","Clear skies.","Look up.")}
     </div>
     <div style="border-top:1px solid ${C.ink};margin-top:8px;display:flex;justify-content:space-between;align-items:center;height:30px;font-family:${FB};font-size:15px;font-weight:700;letter-spacing:.14em;color:${C.ink}">
-      <span>VOL. ${esc(year.slice(-2))}, No. ${esc(year)}</span><span>CITY NEWSSTAND AND LUNCH COUNTER</span><span>FIVE CENTS</span></div>
-    <div style="border-top:4px solid ${C.ink};border-bottom:1px solid ${C.ink};height:3px"></div>
+      <span>VOL. ${esc(year.slice(-2))}, No. ${esc(num)}</span><span style="color:${C.red};white-space:nowrap;overflow:hidden;max-width:420px">${esc(sign.length>34?sign.slice(0,34).replace(/[ ,]+\S*$/,""):sign)}</span><span>FIVE CENTS</span></div>
+    <div style="border-top:4px solid ${C.head};border-bottom:1px solid ${C.head};height:3px"></div>
   </header>
   <section style="height:${HEAD}px;box-sizing:border-box;padding-top:8px;text-align:center">
     <div style="display:flex;justify-content:space-between;font-family:${FB};font-size:18px;font-weight:700;letter-spacing:.2em;color:${C.red};height:22px;line-height:22px"><span>EXTRA! EXTRA!</span><span>TONIGHT'S FEATURE, ${esc(year)}</span></div>
-    <h1 style="margin:4px 0 0;font-weight:700;font-family:${FD};font-size:${B.size}px;line-height:1.06;letter-spacing:-.005em;color:${C.ink};white-space:nowrap">${B.lines.map(esc).join("<br>")}</h1>
+    ${LG?`<h1 style="margin:8px 0 6px;height:${LG.h}px;font-size:0"><img crossorigin="anonymous" src="${esc(LG.src)}" alt="${esc(f.title)}" style="height:${LG.h}px;width:${LG.w}px;object-fit:contain;filter:brightness(0);opacity:.92"></h1>`
+      :`<h1 style="margin:4px 0 0;font-weight:700;font-family:${FD};font-size:${B.size}px;line-height:1.06;letter-spacing:-.005em;color:${C.head};white-space:nowrap">${B.lines.map(esc).join("<br>")}</h1>`}
     ${tag?`<div style="border-top:1px solid ${C.ink};margin:8px 20px 0;padding-top:8px;font-family:${FB};font-style:italic;font-size:${deckZ}px;line-height:${Math.round(deckZ*1.25)}px;color:${C.ink}">${esc(sentence(tag))}</div>`:""}
   </section>
   <main style="height:${BODY}px">
     <div style="position:relative">${photo(pic1,IW,P1,`${f.title} (${year}) film still`,"38%")}${slip}</div>
     <div style="margin:8px 0 12px;font-family:${FB};font-size:${capZ}px;line-height:22px;color:${C.ink}"><b style="letter-spacing:.06em">SCENE OF THE ACTION.</b> <i>${esc(capText)}</i> <span style="font-size:14px;color:${C.soft};white-space:nowrap">Photo: TMDB</span></div>
     <div style="display:flex;border-top:3px solid ${C.ink};padding-top:12px">
-      ${ruled(LW,true,`<div style="font-family:${FB};font-size:14px;line-height:18px;font-weight:700;letter-spacing:.16em;color:${C.red};margin-bottom:4px">A WORD FROM THE COUNTER</div>
+      ${ruled(LW,true,`<div style="font-family:${FB};font-size:14px;line-height:18px;font-weight:700;letter-spacing:.16em;color:${C.red};margin-bottom:4px">${fl?`A WORD FROM ${esc(by.toUpperCase())}`:"A WORD FROM THE COUNTER"}</div>
         <div style="font-family:${FB};font-style:italic;font-size:${noteZ}px;line-height:24px;color:${C.ink}">${esc(noteTxt)}</div>
-        <div style="display:flex;align-items:baseline;gap:12px;margin-top:4px;height:42px"><span style="font-family:${FS};font-size:24px;line-height:42px;color:#22305a">Sal</span><span style="font-family:${FB};font-size:15px;color:${C.soft}">Sal, behind the counter since the first edition</span></div>
+        <div style="display:flex;align-items:baseline;gap:12px;margin-top:4px;height:46px;white-space:nowrap;overflow:hidden"><span style="font-family:${FS};font-size:${Math.min(24,Math.floor(330/Math.max(4,by.length*.75)))}px;line-height:46px;color:#22305a">${esc(by)}</span><span style="font-family:${FB};font-size:15px;color:${C.soft}">${fl?`at ${esc(venue)}`:"Sal, behind the counter since the first edition"}</span></div>
+        ${showCounter?`<div style="font-family:${FB};font-size:16px;line-height:21px;color:${C.ink};margin-bottom:6px">${esc(counterLine)}</div>`:""}
         <div style="font-family:${FB};font-size:15px;line-height:20px;font-weight:700;letter-spacing:.14em;color:${C.red}">TODAY'S MENU: SECTIONS A TO D, PAGE 2</div>`)}
       ${ruled(CW,false,cue?`<div style="border:2px solid ${C.ink};background:rgba(255,253,246,.5)">
         <div style="background:${C.red};color:${C.paper};font-family:${FD};font-weight:700;font-size:24px;line-height:34px;height:34px;text-align:center;letter-spacing:.03em">STOP PRESS</div>
@@ -214,23 +249,29 @@ function genreCard(f,menu,poster,stills){
         <div style="font-size:${cueZ}px;line-height:${Math.ceil(cueZ*1.28)}px">${esc(cue)}</div></div></div>`:"")}
     </div>
   </main>
-  <footer style="position:absolute;left:${PX}px;right:${PX}px;bottom:${PY}px">${fine(year,"Read it. Eat it. Fold it.")}</footer>`);
+  <footer style="position:absolute;left:${PX}px;right:${PX}px;bottom:${PY}px">${fine(year,"Read it. Eat it. Fold it.",num)}</footer>`);
 
   /* ---------- Page 2 (and Page 3 only if needed): the menu, each page with its own still ---------- */
   const FOL=74,P2=H-2*PY-FOL-FOOT-14,SAFE2=P2-16;
-  const cap2L=wrap("ON THE BEAT. Another look from tonight's feature. Photo: TMDB",IW,s=>sw(s,capZ)*1.04).length,cap2H=8+cap2L*22+14;
+  let WH=0;
+  const cap2=winks[0]?sentence(winks[0]):"Another look from tonight's feature.";
+  const rest=winks.slice(1,5);
+  const winksTxt=rest.length?"ALSO IN THIS EDITION: "+rest.map(w=>w.replace(/[.]$/,"")).join(". ")+".":"";
+  const WL=winksTxt?wrap(winksTxt,IW,s=>sw(s,15)*1.06).length:0;WH=WL?WL*19+8:0;
+  const winksLine=WL?`<div style="font-family:${FB};font-size:15px;line-height:19px;color:${C.soft};margin-bottom:8px"><b style="color:${C.red};letter-spacing:.1em">ALSO IN THIS EDITION:</b> ${esc(winksTxt.slice(22))}</div>`:"";
+  const cap2L=wrap("ON THE BEAT. "+cap2+" Photo: TMDB",IW,s=>sw(s,capZ)*1.04).length,cap2H=8+cap2L*22+14;
   const pages=[];let left=list;
   while(left.length&&pages.length<4){
-    const last=pages.length>=1;let fit=null;
+    const last=pages.length>=2;let fit=null;
     /* a full-width still on top, then the menu in three balanced columns; the photo gives way before the type does */
     for(const tt of TIERS.slice(2,last?8:6)){
       for(const p of [360,330,300,270,240,210]){
-        const r=balance(courses,left,[0,1,2].map(()=>({w:CW,h:SAFE2-p-cap2H})),tt);
+        const r=balance(courses,left,[0,1,2].map(()=>({w:CW,h:SAFE2-WH-p-cap2H})),tt);
         if(r){fit={t:tt,p,r};break}
       }
       if(fit)break;
     }
-    if(!fit&&!last){const tt=TIERS[3],p=240;fit={t:tt,p,r:flow(courses,left,[0,1,2].map(()=>({w:CW,h:SAFE2-p-cap2H-CONT_H})),tt)}}
+    if(!fit&&!last){const tt=TIERS[3],p=240;fit={t:tt,p,r:flow(courses,left,[0,1,2].map(()=>({w:CW,h:SAFE2-WH-p-cap2H-CONT_H})),tt)}}
     if(!fit){const tt=TIERS[TIERS.length-1],p=150;fit={t:tt,p,r:balance(courses,left,[0,1,2].map(()=>({w:CW,h:99999})),tt)}}
     if(!fit.r.cols.some(c=>c.length))break;
     pages.push(fit);left=fit.r.rest||[];
@@ -241,16 +282,16 @@ function genreCard(f,menu,poster,stills){
     const pic=k===0?pic2:(stillN(k+2)||pic2);
     const lastCol=cols[2].length?2:cols[1].length?1:0;
     return face("page-"+pg,`
-  <header style="height:${FOL}px;box-sizing:border-box;border-bottom:4px solid ${C.ink};display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:8px">
-    <span style="font-family:${FM};font-size:40px;line-height:1">The Daily Special</span>
+  <header style="height:${FOL}px;box-sizing:border-box;border-bottom:4px solid ${C.head};display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:8px;gap:14px">
+    <span style="font-family:${FM};font-size:${Math.max(24,Math.min(40,Math.floor(330/(venue.length*.47))))}px;line-height:1;color:${C.head};white-space:nowrap">${esc(venue)}</span>
     <span style="font-family:${FB};font-size:15px;font-weight:700;letter-spacing:.16em;color:${C.red}">${k?`CONTINUED FROM PAGE ${pg-1}`:"THE LUNCH COUNTER MENU"}</span>
     <span style="font-family:${FD};font-weight:700;font-size:30px;line-height:1">PAGE ${pg}</span></header>
   <main style="height:${P2}px;padding-top:14px;box-sizing:border-box">
     ${photo(pic,IW,fit.p,`${f.title} (${year}) film still`,"40%")}
-    <div style="margin:8px 0 14px;font-family:${FB};font-size:${capZ}px;line-height:22px;color:${C.ink}"><b style="letter-spacing:.06em">ON THE BEAT.</b> <i>Another look from tonight's feature.</i> <span style="font-size:14px;color:${C.soft};white-space:nowrap">Photo: TMDB</span></div>
+    <div style="margin:8px 0 14px;font-family:${FB};font-size:${capZ}px;line-height:22px;color:${C.ink}"><b style="letter-spacing:.06em">ON THE BEAT.</b> <i>${esc(cap2)}</i> <span style="font-size:14px;color:${C.soft};white-space:nowrap">Photo: TMDB</span></div>
     <div style="display:flex">${cols.map((c,i)=>ruled(CW,i===0,columnHTML(f,courses,c,t,CW)+(i===lastCol?more:""))).join("")}</div>
   </main>
-  <footer style="position:absolute;left:${PX}px;right:${PX}px;bottom:${PY}px">${fine(year,`Page ${pg} of ${n}`)}</footer>`);
+  <footer style="position:absolute;left:${PX}px;right:${PX}px;bottom:${PY}px">${winksLine}${fine(year,`Page ${pg} of ${n}`,num)}</footer>`);
   }).join("");
   return `<link rel="stylesheet" href="${FONTS}">`+front+inner;
 }

@@ -21,3 +21,12 @@ Alcohol: the kids data is already dry (ginger beer, root beer, punches). A safet
 Proofs (2x): Ratatouille (stills), A Goofy Movie (stills), Toy Story (no stills entry), Wallace & Gromit: The Curse of the Were-Rabbit (long title), E.T. (many items: the exact menu plus the full S/M/W/K lists, 8 dishes), Up (2-character title).
 
 API: template.js sets window.GENRE.kids = {card, fit, size}. card(f, menu, poster, stills, {tag, cue, root}).
+
+## Per-film lift (Oct 26)
+template.js now also takes opts.logo (data/film-logos.json), opts.palette (data/film-palette.json) and opts.flavour (data/film-flavour.json).
+- Masthead: the film's real TMDB logo (w500, at most 140px tall, drop shadow) next to the flavour venue name and its sign. genreFit() samples the logo on a canvas. A dark logo switches the masthead to light stock. A logo that fails to load falls back to set type.
+- Colours: the palette accent sets the checker border, course pills, tagline, word search frame and photo frames. A grey or pale accent falls back to the genre blue. The label colour is darkened until it reaches 4.2:1 on white. The masthead is the accent at 50% black.
+- Flavour: the character note sits in the hero print margin, signed in Caveat (the one script use). Winks feed the word search (names first), the second still's caption, the prop and the fine print. The prop (ticket, stub, badge, tag, slip, receipt, card) is a type-only paper object. The number goes into the form number, and a 2 or 3 digit number also sets the first main's price (62 gives 6.20).
+- No flavour (Ratatouille, A Goofy Movie): Pip's Family Kitchen, the synopsis caption and a Clean Plate Club card. Logo and palette still apply.
+- Extreme menus: after the 1-line note clamp, notes are dropped altogether, so dish names and prices always fit.
+- Still open: Who Framed Roger Rabbit's drink note (Eddie's desk drawer bottle) needs a rewrite in the data. Its flavour venue "Ink and Paint Club" is a nightclub, which is also worth a look for a kids' placemat.

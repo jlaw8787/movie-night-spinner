@@ -7,6 +7,13 @@
 - Page 2: folio header, a second still across the top ("ON THE BEAT"), then the menu as sections A to D in three balanced columns. Prices are lunch counter prices, and the first main carries the film year as its cents (Batman 7.89).
 - Page 3 only appears if the menu can't fit page 2 (stress test only). It gets a third still and "Continued" lines.
 
+## Per-film lift (round 2)
+`genreCard(f, menu, poster, stills, x)`, where x = {logo, palette, flavour} is the film's entry from data/film-logos.json, film-palette.json and film-flavour.json. Every part falls back on its own.
+- Logo: the TMDB title logo (original size), printed as black ink (CSS brightness(0)) as the banner. Falls back to Oswald type when it's missing or would print under 58px tall (very wide logos, such as Spider-Man 2's at 1502x70).
+- Palette: the accent drives kickers, section letters, prices, label bars and the prop rules. It's darkened until it reaches 4.8:1 contrast on the newsprint, and grey or missing accents fall back to genre red. The dark colour is used for the nameplate, banner type and heavy rules when it reaches 9:1.
+- Flavour: the venue becomes the blackletter nameplate (page 1 and the page 2 folio) and the sign goes in the dateline. The note becomes "A WORD FROM <BY>", signed in script by the character, with a counter line of the film's main and sweet underneath. Winks: the first is the page 2 caption, and the rest go on an "Also in this edition" line above the page 2 fine print. The prop (ticket, slip or card, type only) is the corner slip, with the number as "No. <number>". The number also goes in the volume number and the form number.
+- Spider-Man 2 has no flavour entry, so it shows the generic Daily Special, Sal and the Late Edition slip. That proves the fallback.
+
 ## Faces and palette
 - Display: Oswald 700 (banner, section heads), 500 (dish names, prices). Nameplate: UnifrakturMaguntia. Text: Source Serif 4. Signature: Homemade Apple.
 - FONTS.md: `genre-hero: Oswald` added. League Gothic went to the horror pilot.

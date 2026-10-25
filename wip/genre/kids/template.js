@@ -22,17 +22,21 @@ const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
 /* tiny seeded random so a film always gets the same word search */
 function rng(seed){let h=2166136261;for(const ch of seed)h=Math.imul(h^ch.charCodeAt(0),16777619);return()=>{h=Math.imul(h^h>>>15,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
 
-const STOP=new Set("THE AND WITH FOR FROM INTO YOUR THAT THIS ONE TWO OUR ITS HIS HER ARE BIG LITTLE MINI EXTRA HOMEMADE THEMED STYLE BITES".split(" "));
-function searchWords(f,menu){
+const STOP=new Set("WITH ALWAYS VERY JUST ACROSS ABOUT AGAIN BEING THEIR NEXT DOOR STRICTLY THE AND WITH FOR FROM INTO YOUR THAT THIS ONE TWO OUR ITS HIS HER ARE BIG LITTLE MINI EXTRA HOMEMADE THEMED STYLE BITES".split(" "));
+function searchWords(f,menu,winks){
   const pick=[],seen=new Set();
-  const add=s=>String(s).toUpperCase().replace(/[^A-Z ]/g," ").split(/\s+/).forEach(w=>{if(w.length>=3&&w.length<=8&&!STOP.has(w)&&!seen.has(w)&&pick.length<6){seen.add(w);pick.push(w)}});
-  add(f.title);["m","s","w","d"].forEach(k=>(menu[k]||[]).forEach(it=>add(it.n)));
-  ["MOVIE","POPCORN","PLATE"].forEach(add);
+  const add=(s,max)=>String(s).toUpperCase().replace(/[^A-Z ]/g," ").split(/\s+/).forEach(w=>{if(w.length>=3&&w.length<=8&&!STOP.has(w)&&!seen.has(w)&&pick.length<(max||6)){seen.add(w);pick.push(w)}});
+  add(f.title,2);
+  /* names from the winks first (capitalised words), then the rest of the winks, then the dishes */
+  (winks||[]).forEach(w=>add((w.match(/\b[A-Z][a-z]+/g)||[]).slice(w.match(/^[A-Z]/)&&/^(The|A|An)\b/.test(w)?1:0).join(" "),5));
+  (winks||[]).forEach(w=>add(w,6));
+  ["m","s","w","d"].forEach(k=>(menu[k]||[]).forEach(it=>add(it.n)));
+  ["MOVIE","POPCORN","PLATE"].forEach(w=>add(w));
   return pick.slice(0,6);
 }
-function wordSearch(f,menu,N){
+function wordSearch(f,menu,N,winks){
   const r=rng(f.title+f.year),g=Array.from({length:N},()=>Array(N).fill("")),placed=[];
-  for(const w of searchWords(f,menu)){
+  for(const w of searchWords(f,menu,winks)){
     let ok=false;
     for(let t=0;t<80&&!ok;t++){
       const down=r()<.45,x=Math.floor(r()*(down?N:N-w.length+1)),y=Math.floor(r()*(down?N-w.length+1:N));
@@ -72,6 +76,22 @@ function pickStills(stills){
   return ok.filter(s=>!s[3]).concat(ok.filter(s=>s[3]));
 }
 
+/* colour helpers: contrast checks so the film's palette never makes the menu hard to read */
+const hex=h=>{h=String(h||"").replace("#","");if(!/^[0-9a-f]{6}$/i.test(h))return null;return[0,2,4].map(i=>parseInt(h.slice(i,i+2),16))};
+const toHex=a=>"#"+a.map(v=>Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,"0")).join("");
+const lum=a=>{const c=a.map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*c[0]+.7152*c[1]+.0722*c[2]};
+const contrast=(a,b)=>{const x=lum(a),y=lum(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05)};
+const mix=(a,b,t)=>a.map((v,i)=>v+(b[i]-v)*t);
+function filmColours(pal){
+  const white=[255,255,255],black=[0,0,0];
+  let acc=pal&&hex(pal.accent);
+  /* too grey or too pale: use the genre blue */
+  if(!acc||Math.max(...acc)-Math.min(...acc)<40||contrast(acc,hex(C.paper))<1.6)acc=hex(C.blue);
+  let lab=acc;for(let k=0;k<10&&contrast(lab,white)<4.2;k++)lab=mix(lab,black,.12);
+  const deep=mix(acc,black,.5);
+  return{acc:toHex(acc),lab:toHex(lab),deep:toHex(deep)};
+}
+
 /* real paper: fibre noise (procedural, not a picture) under the shared grain */
 const NOISE="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .36  0 0 0 0 .22  0 0 0 .55 0'/></filter><rect width='300' height='300' filter='url(#n)'/></svg>");
 const BLOTCH="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='4' seed='7'/><feColorMatrix values='0 0 0 0 .62  0 0 0 0 .5  0 0 0 0 .3  0 0 0 .32 0'/></filter><rect width='900' height='900' filter='url(#b)'/></svg>");
@@ -79,76 +99,120 @@ const BLOTCH="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3
 function genreCard(f,menu,poster,stills,opts){
   opts=opts||{};
   const root=opts.root||"";
+  const fl=opts.flavour||null,logo=opts.logo||null,K=filmColours(opts.palette);
   const tag=clean(opts.tag||f.T||""),cue=clean(opts.cue||f.P||"");
   const yy=String(f.year).slice(-2);
+  const num=fl&&/^\d{1,4}$/.test(String(fl.number||""))?String(fl.number):"";
+  const winks=(fl&&fl.winks||[]).map(clean).filter(Boolean);
+  const venue=clean(fl&&fl.venue||"Pip's Family Kitchen");
+  const sign=clean(fl&&fl.sign||"Kids' movie night menu");
   const lab=["Snacks","Mains","Treats","Drinks"];
   const keys=["s","m","w","d"];
   const tz=tiers(menu);
   const st=pickStills(stills);
   const grain=`${root}assets/era/_shared/paper-grain.webp`;
   const tex=(op)=>`<div style="position:absolute;inset:0;background:url('${grain}') 0 0/520px,url("${NOISE}") 0 0/300px;opacity:${op};mix-blend-mode:multiply;pointer-events:none"></div>`;
+  const pr=(k,i)=>{if(k==="m"&&i===0&&num.length===2)return num[0]+"."+num[1]+"0";if(k==="m"&&i===0&&num.length===3)return num[0]+"."+num.slice(1);return price(k,i,yy)};
 
   /* framed photo print */
-  const print=(src,w,h,pos,rot,cap,capSize)=>`<div style="position:relative;background:#fffdf7;padding:11px 11px 0;box-shadow:0 1px 0 rgba(0,0,0,.05),0 6px 14px rgba(29,42,82,.30);transform:rotate(${rot}deg);width:${w+22}px;box-sizing:border-box">
-    <div style="position:relative;width:${w}px;height:${h}px;overflow:hidden;background:#cfd9ea;box-shadow:inset 0 0 0 5px ${C.blue}"><img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:saturate(1.08) contrast(1.04)"><div style="position:absolute;inset:0;box-shadow:inset 0 0 0 5px ${C.blue},inset 0 0 40px rgba(0,0,0,.18)"></div></div>
+  const print=(src,w,h,pos,rot,cap)=>`<div style="position:relative;background:#fffdf7;padding:11px 11px 0;box-shadow:0 1px 0 rgba(0,0,0,.05),0 6px 14px rgba(29,42,82,.30);transform:rotate(${rot}deg);width:${w+22}px;box-sizing:border-box">
+    <div style="position:relative;width:${w}px;height:${h}px;overflow:hidden;background:#cfd9ea"><img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:saturate(1.08) contrast(1.04)"><div style="position:absolute;inset:0;box-shadow:inset 0 0 0 5px ${K.acc},inset 0 0 40px rgba(0,0,0,.18)"></div></div>
     <div style="padding:9px 4px 11px">${cap}</div></div>`;
   const hero=st[0]?IMG+"w1280"+st[0][0]:(poster?IMG+"w780"+poster:"");
   const second=st[1]?IMG+"w780"+st[1][0]:"";
-  const storyCap=`<div style="font:800 15px/1 ${BODY};letter-spacing:.2em;color:${C.red}">TONIGHT'S STORY</div><div data-fit="story" style="font:700 17px/1.3 ${BODY};color:${C.ink};margin-top:5px">${esc(sentence(f.D||tag))}</div>`;
+  /* the character's note sits in the print margin, signed in script */
+  const note=fl&&fl.note&&fl.note.text?fl.note:null;
+  const heroCap=note
+    ?`<div style="display:flex;align-items:flex-end;gap:16px"><div data-fit="story" style="flex:1;font:italic 700 17px/1.3 ${BODY};color:${C.ink}">"${esc(note.text)}"</div><div style="flex:none;font:700 30px/1 'Caveat',cursive;color:${K.lab};transform:rotate(-3deg);padding-bottom:2px">${esc(note.by)}</div></div>`
+    :`<div style="font:800 15px/1 ${BODY};letter-spacing:.2em;color:${C.red}">TONIGHT'S STORY</div><div data-fit="story" style="font:700 17px/1.3 ${BODY};color:${C.ink};margin-top:5px">${esc(sentence(f.D||tag))}</div>`;
 
   /* the menu: two balanced columns, dish and price on one line, the film note under it */
   const item=(k,it,i)=>`<div style="break-inside:avoid;padding:0 0 ${tz.gap}px">
-    <div style="display:flex;align-items:baseline;gap:12px"><span data-fit="dish" style="flex:1;font:700 ${tz.dish}px/1.08 ${DISP};color:${C.ink}">${esc(dry(it.n))}</span><span data-fit="dish" style="font:700 ${tz.dish}px/1 ${DISP};color:${C.red}">${price(k,i,yy)}</span></div>
+    <div style="display:flex;align-items:baseline;gap:12px"><span data-fit="dish" style="flex:1;font:700 ${tz.dish}px/1.08 ${DISP};color:${C.ink}">${esc(dry(it.n))}</span><span data-fit="dish" style="font:700 ${tz.dish}px/1 ${DISP};color:${C.red}">${pr(k,i)}</span></div>
     ${it.note?`<div data-fit="note" style="font:600 ${tz.note}px/1.25 ${BODY};color:${C.soft};margin-top:4px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
   const course=(k,j)=>{const its=menu[k]||[];if(!its.length)return"";
-    return `<div style="break-inside:avoid-column;break-after:avoid"><div data-fit="head" style="display:inline-block;background:${j%2?C.red:C.blue};color:#fff;font:700 ${tz.head}px/1 ${DISP};letter-spacing:.04em;text-transform:uppercase;padding:9px 18px 8px;border-radius:999px;box-shadow:3px 3px 0 ${C.yellow};margin:0 0 12px">${lab[j]}</div></div>${its.map((it,i)=>item(k,it,i)).join("")}`};
+    return `<div style="break-inside:avoid-column;break-after:avoid"><div data-fit="head" style="display:inline-block;background:${j%2?C.red:K.lab};color:#fff;font:700 ${tz.head}px/1 ${DISP};letter-spacing:.04em;text-transform:uppercase;padding:9px 18px 8px;border-radius:999px;box-shadow:3px 3px 0 ${C.yellow};margin:0 0 12px">${lab[j]}</div></div>${its.map((it,i)=>item(k,it,i)).join("")}`};
   const courses=keys.map(course).join("");
 
-  /* word search, all type */
-  const N=9,cell=22,ws=wordSearch(f,menu,N);
-  const grid=`<div style="display:grid;grid-template-columns:repeat(${N},${cell}px);border:3px solid ${C.blue};border-radius:6px;overflow:hidden;background:#fffdf7;width:${N*cell}px;flex:none">${ws.g.flat().map((ch,i)=>`<div style="height:${cell}px;display:flex;align-items:center;justify-content:center;font:800 16px/1 ${BODY};color:${C.ink};${i%N<N-1?`border-right:1px solid #c9d8f1;`:""}${i<N*(N-1)?`border-bottom:1px solid #c9d8f1;`:""}">${ch}</div>`).join("")}</div>`;
+  /* word search, all type, words from the title and the film's winks */
+  const N=9,cell=22,ws=wordSearch(f,menu,N,winks);
+  const grid=`<div style="display:grid;grid-template-columns:repeat(${N},${cell}px);border:3px solid ${K.lab};border-radius:6px;overflow:hidden;background:#fffdf7;width:${N*cell}px;flex:none">${ws.g.flat().map((ch,i)=>`<div style="height:${cell}px;display:flex;align-items:center;justify-content:center;font:800 16px/1 ${BODY};color:${C.ink};${i%N<N-1?`border-right:1px solid rgba(29,42,82,.16);`:""}${i<N*(N-1)?`border-bottom:1px solid rgba(29,42,82,.16);`:""}">${ch}</div>`).join("")}</div>`;
   const tsz=titleSize(f.title);
 
-  return `<div data-genre="kids" style="position:relative;width:${W}px;height:${H}px;overflow:hidden;background:repeating-conic-gradient(${C.red} 0 25%,#fff4e2 0 50%) 0 0/36px 36px;font-family:${BODY};color:${C.ink}">
+  /* masthead: the film's real logo (type if none), then the venue and its sign */
+  const lr=logo&&logo[0]&&logo[1]&&logo[2]?logo[1]/logo[2]:0;
+  const lh=lr?Math.min(140,Math.round(640/lr)):0,lw=lr?Math.round(lh*lr):0;
+  const head=lr
+    ?`<img data-logo crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${logo[0]}" style="height:${lh}px;width:${lw}px;flex:none;object-fit:contain;filter:drop-shadow(0 3px 0 rgba(0,0,0,.35)) drop-shadow(0 0 10px rgba(0,0,0,.25))">
+       <div data-title-fallback style="display:none;font:700 ${Math.min(tsz,66)}px/1.02 ${DISP};color:#fff;text-transform:uppercase;text-shadow:4px 4px 0 ${C.red}">${esc(f.title)}</div>`
+    :`<div data-fit="title" style="font:700 ${Math.min(tsz,lr?66:tsz)}px/1.02 ${DISP};color:#fff;text-transform:uppercase;letter-spacing:.005em;text-shadow:4px 4px 0 ${C.red},5px 6px 0 rgba(0,0,0,.18)">${esc(f.title)}</div>`;
+  const venueBlock=`<div data-venue style="min-width:0;flex:1;${lr?`border-left:3px solid rgba(255,255,255,.35);padding-left:24px`:""}">
+      <div data-ink="kick" style="font:800 16px/1.15 ${BODY};letter-spacing:.24em;color:${C.yellow};text-transform:uppercase">Kids' menu</div>
+      <div data-ink="venue" data-fit="venue" style="font:700 ${venue.length>22?34:42}px/1.02 ${DISP};color:#fff;text-transform:uppercase;margin-top:6px">${esc(venue)}</div>
+      <div data-ink="sign" style="font:800 18px/1.2 ${BODY};color:${C.yellow};margin-top:6px">${esc(sign)}</div></div>`;
+
+  /* the film's own prop, as a type-only paper object */
+  const p=fl&&fl.prop&&fl.prop.title?fl.prop:{kind:"card",title:"Clean Plate Club",lines:["Finish your plate,","ask for a sticker."]};
+  const pk=p.kind||"card";
+  const propLines=(p.lines||[]).slice(0,3).map(l=>`<div style="font:700 14px/1.3 ${BODY};color:${C.ink}">${esc(l)}</div>`).join("");
+  const propStyle={
+    ticket:`background:${C.yellow};border-radius:6px;-webkit-mask:radial-gradient(circle 9px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 9px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat;`,
+    stub:`background:${C.yellow};border-radius:6px;border-left:3px dashed ${C.ink};`,
+    badge:`background:#fffdf7;border-radius:18px;box-shadow:inset 0 0 0 4px ${K.lab},inset 0 0 0 7px #fffdf7,inset 0 0 0 9px ${C.yellow},0 3px 8px rgba(29,42,82,.25);`,
+    tag:`background:#f6e7c8;border-radius:6px 30px 30px 6px;`,
+    slip:`background:#fffdf7;border-top:6px solid ${K.lab};border-radius:3px;`,
+    receipt:`background:#fffdf7;border-radius:2px;`,
+    card:`background:#fffdf7;border-radius:6px;border-bottom:8px solid ${K.lab};`
+  }[pk]||`background:#fffdf7;border-radius:6px;border-bottom:8px solid ${K.lab};`;
+  const propHTML=`<div style="position:absolute;right:28px;width:206px;bottom:58px;box-sizing:border-box;${propStyle}padding:14px 18px 13px;transform:rotate(-1.8deg);box-shadow:0 3px 8px rgba(29,42,82,.25);overflow:hidden">
+      ${tex(.3)}
+      <div style="position:relative;font:800 13px/1 ${BODY};letter-spacing:.2em;color:${K.lab};text-transform:uppercase">${esc(pk==="badge"?"Official badge":pk==="ticket"||pk==="stub"?"Admit one":pk==="receipt"?"Receipt":"Keep this")}</div>
+      <div data-fit="prop" style="position:relative;font:700 21px/1.05 ${DISP};color:${C.ink};text-transform:uppercase;margin:6px 0 7px">${esc(p.title)}</div>
+      <div style="position:relative">${propLines}</div>
+      ${winks[3]?`<div style="position:relative;font:italic 700 14px/1.25 ${BODY};color:${C.soft};margin-top:6px;border-top:1px dashed rgba(29,42,82,.3);padding-top:6px">${esc(sentence(winks[3]))}</div>`:""}
+    </div>`;
+
+  const lc=w=>/^(The|A|An)\b/.test(w)?w.charAt(0).toLowerCase()+w.slice(1):w;
+  const cap2=winks[1]?`Spotted at our table: ${lc(winks[1])}`:"Friday night on our big screen";
+  const fine=`*With a grown-up's meal. Ages 12 and under. Prices subject to change. Every drink here is alcohol-free.${winks[2]?` Table talk tonight: ${lc(winks[2])}.`:""}`;
+
+  return `<div data-genre="kids" style="position:relative;width:${W}px;height:${H}px;overflow:hidden;background:repeating-conic-gradient(${K.lab} 0 25%,#fff4e2 0 50%) 0 0/36px 36px;font-family:${BODY};color:${C.ink}">
   ${tex(.45)}
   <div style="position:absolute;left:24px;top:24px;right:24px;bottom:24px;background:${C.paper};border-radius:26px;box-shadow:0 0 0 5px ${C.yellow},0 0 0 7px rgba(0,0,0,.08);overflow:hidden">
     <div style="position:absolute;inset:0;background:url("${BLOTCH}") 0 0/900px;mix-blend-mode:multiply;opacity:.55;pointer-events:none"></div>
 
-    <div style="position:absolute;left:0;top:0;right:0;height:172px;background:${C.blue};overflow:hidden">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(0,0,0,.10))"></div>
+    <div data-band data-lab="${K.lab}" style="position:absolute;left:0;top:0;right:0;height:172px;background:${K.deep};overflow:hidden">
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 0%,rgba(255,255,255,.16),rgba(255,255,255,0) 60%),linear-gradient(180deg,rgba(255,255,255,.06),rgba(0,0,0,.14))"></div>
       ${tex(.5)}
-      <div style="position:absolute;left:30px;top:22px;right:220px;bottom:14px;display:flex;flex-direction:column;justify-content:center">
-        <div style="font:800 18px/1 ${BODY};letter-spacing:.26em;color:${C.yellow};text-transform:uppercase">Pip's Family Kitchen &nbsp;/&nbsp; Kids' movie night menu</div>
-        <div data-fit="title" style="font:700 ${tsz}px/1.02 ${DISP};color:#fff;text-transform:uppercase;letter-spacing:.005em;margin-top:8px;text-shadow:4px 4px 0 ${C.red},5px 6px 0 rgba(0,0,0,.18)">${esc(f.title)}</div>
-      </div>
+      <div data-band-in style="position:absolute;left:30px;top:16px;right:230px;bottom:16px;display:flex;align-items:center;gap:24px">${head}${venueBlock}</div>
     </div>
     <div style="position:absolute;left:0;right:0;top:172px;height:7px;background:${C.yellow}"></div>
     <div style="position:absolute;left:0;right:0;top:179px;height:4px;background:${C.red}"></div>
 
     <div style="position:absolute;right:26px;top:22px;width:168px;height:168px;border-radius:50%;background:${C.yellow};box-shadow:0 0 0 6px #fffdf7,0 0 0 10px ${C.red},0 8px 16px rgba(0,0,0,.25);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(8deg);text-align:center;overflow:hidden">
       ${tex(.35)}
-      <div style="font:800 15px/1.1 ${BODY};letter-spacing:.14em;color:${C.ink}">NOW SHOWING</div>
-      <div style="font:700 52px/1 ${DISP};color:${C.red};margin:4px 0">${esc(f.year)}</div>
-      <div style="font:800 15px/1.1 ${BODY};letter-spacing:.14em;color:${C.ink}">KIDS EAT FREE*</div>
+      <div style="position:relative;font:800 15px/1.1 ${BODY};letter-spacing:.14em;color:${C.ink}">NOW SHOWING</div>
+      <div style="position:relative;font:700 52px/1 ${DISP};color:${C.red};margin:4px 0">${esc(f.year)}</div>
+      <div style="position:relative;font:800 15px/1.1 ${BODY};letter-spacing:.14em;color:${C.ink}">KIDS EAT FREE*</div>
     </div>
 
     <div style="position:absolute;left:28px;top:206px;width:612px">
-      ${hero?print(hero,590,302,"center 35%",-1.2,storyCap):""}
+      ${hero?print(hero,590,302,"center 35%",-1.2,heroCap):""}
     </div>
 
-    <div style="position:absolute;left:30px;bottom:64px;width:300px;height:226px">
+    <div style="position:absolute;left:30px;bottom:72px;width:300px;height:226px">
       <div style="font:700 25px/1 ${DISP};color:${C.red};text-transform:uppercase">Word Search</div>
       <div style="display:flex;gap:14px;margin-top:8px">${grid}
-        <div style="display:flex;flex-direction:column;gap:6px;font:800 15px/1.1 ${BODY};color:${C.ink};letter-spacing:.06em;padding-top:2px">${ws.placed.map(w=>`<span>${w}</span>`).join("")}</div></div>
+        <div style="display:flex;flex-direction:column;gap:6px;font:800 14px/1.2 ${BODY};color:${C.ink};letter-spacing:.03em;padding-top:2px">${ws.placed.map(w=>`<span>${w}</span>`).join("")}</div></div>
     </div>
-    ${second?`<div style="position:absolute;left:346px;bottom:64px;width:292px">${print(second,270,152,"center",2,`<div style="font:700 15px/1.2 ${BODY};color:${C.soft};text-align:center">Friday night on our big screen</div>`)}</div>`:""}
+    ${second?`<div style="position:absolute;left:346px;bottom:72px;width:292px">${print(second,270,152,"center",2,`<div data-fit="cap2" style="font:700 15px/1.2 ${BODY};color:${C.soft};text-align:center">${esc(sentence(cap2))}</div>`)}</div>`:""}
 
     <div style="position:absolute;left:672px;top:206px;width:594px;bottom:190px;display:flex;flex-direction:column">
-      ${tag?`<div data-fit="tag" style="font:700 30px/1.1 ${DISP};color:${C.red};margin:0 0 18px;flex:none">${esc(sentence(tag))}</div>`:""}
+      ${tag?`<div data-fit="tag" style="font:700 30px/1.1 ${DISP};color:${K.lab};margin:0 0 18px;flex:none">${esc(sentence(tag))}</div>`:""}
       <div data-fit="menu" style="flex:1;min-height:0;column-count:2;column-gap:32px;column-fill:balance;overflow:hidden">${courses}</div>
     </div>
 
-    <div style="position:absolute;left:672px;width:370px;bottom:56px;height:116px;background:${C.red};border-radius:10px;display:flex;align-items:center;color:#fff;box-sizing:border-box;overflow:hidden;box-shadow:0 3px 8px rgba(29,42,82,.22)">
+    <div style="position:absolute;left:672px;width:370px;bottom:66px;height:116px;background:${C.red};border-radius:10px;display:flex;align-items:center;color:#fff;box-sizing:border-box;overflow:hidden;box-shadow:0 3px 8px rgba(29,42,82,.22)">
       ${tex(.4)}
       <div style="position:relative;width:96px;align-self:stretch;border-right:3px dashed rgba(255,255,255,.65);display:flex;flex-direction:column;align-items:center;justify-content:center;flex:none">
         <div style="font:800 14px/1.1 ${BODY};letter-spacing:.18em">ADMIT</div><div style="font:700 26px/1 ${DISP};color:${C.yellow};text-align:center">ONE<br>KID</div></div>
@@ -157,16 +221,11 @@ function genreCard(f,menu,poster,stills,opts){
         <div data-fit="cue" style="font:700 ${cue.length>80?16:18}px/1.25 ${BODY};margin-top:6px">${esc(sentence(cue))}</div></div>
     </div>
 
-    <div style="position:absolute;right:28px;width:206px;bottom:58px;background:${C.yellow};border-radius:8px;padding:12px 14px 12px;transform:rotate(-1.8deg);box-shadow:0 3px 8px rgba(29,42,82,.25);overflow:hidden">
-      ${tex(.35)}
-      <div style="position:relative;font:700 20px/1 ${DISP};color:${C.ink};text-transform:uppercase;white-space:nowrap">Clean Plate Club</div>
-      <div style="position:relative;font:700 14px/1.25 ${BODY};color:${C.ink};margin:6px 0 8px">Tick each one, then ask for your sticker.</div>
-      <div style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:6px 8px;font:800 14px/1 ${BODY};color:${C.ink}">${lab.filter((l,j)=>(menu[keys[j]]||[]).length).map(l=>`<span style="display:flex;align-items:center;gap:6px"><i style="width:14px;height:14px;border:2.5px solid ${C.ink};border-radius:3px;background:#fff;flex:none"></i>${l}</span>`).join("")}</div>
-    </div>
+    ${propHTML}
 
-    <div style="position:absolute;left:30px;right:30px;bottom:20px;font:700 15px/1.2 ${BODY};color:${C.soft};display:flex;justify-content:space-between;gap:20px;white-space:nowrap">
-      <span>*With a grown-up's meal. Ages 12 and under. Prices subject to change. Every drink at this table is alcohol-free.</span>
-      <span>Form KM-${esc(f.year)} / ${st[0]?"Stills":"Poster"}: TMDB</span>
+    <div style="position:absolute;left:30px;right:30px;bottom:14px;height:40px;font:700 14px/1.25 ${BODY};color:${C.soft};display:flex;justify-content:space-between;align-items:flex-end;gap:24px">
+      <span data-fit="fine" style="min-width:0">${esc(fine)}</span>
+      <span style="white-space:nowrap;flex:none">Form KM-${esc(num||f.year)} / ${esc(venue)} / Images: TMDB</span>
     </div>
   </div>
 </div>`;
@@ -187,11 +246,32 @@ function genreFit(el){
   if(menu){shrink('[data-fit="dish"],[data-fit="note"],[data-fit="head"]',menu,16);
     /* last resort for extreme menus: notes wrap to two lines, then one */
     for(const n of [2,1])if(menu.scrollHeight>menu.clientHeight+1||menu.scrollWidth>menu.clientWidth+1)
-      menu.querySelectorAll('[data-fit="note"]').forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(n);e.style.overflow="hidden"});}
-  /* title: at most two lines and inside the band */
+      menu.querySelectorAll('[data-fit="note"]').forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(n);e.style.overflow="hidden"});
+    /* still too much: drop the notes, dish names and prices always stay */
+    if(menu.scrollHeight>menu.clientHeight+1||menu.scrollWidth>menu.clientWidth+1)menu.querySelectorAll('[data-fit="note"]').forEach(e=>e.style.display="none");}
+  /* logo: hide if it failed; if it is dark, print the masthead on light stock so it reads */
+  const lg=el.querySelector('[data-logo]'),band=el.querySelector('[data-band]');
+  if(lg&&band){
+    if(lg.complete&&!lg.naturalWidth){lg.remove();const fb=el.querySelector('[data-title-fallback]');if(fb){fb.style.display="";fb.dataset.fit="title"}}
+    else if(lg.naturalWidth){try{
+      const cv=document.createElement("canvas");cv.width=96;cv.height=Math.max(8,Math.round(96*lg.naturalHeight/lg.naturalWidth));
+      const cx=cv.getContext("2d");cx.drawImage(lg,0,0,cv.width,cv.height);const d=cx.getImageData(0,0,cv.width,cv.height).data;
+      let sum=0,n=0;for(let i=0;i<d.length;i+=4)if(d[i+3]>128){sum+=.2126*d[i]+.7152*d[i+1]+.0722*d[i+2];n++}
+      if(n&&sum/n<95){band.style.background="#fff3d6";lg.style.filter="drop-shadow(0 2px 0 rgba(255,255,255,.6))";
+        const lab=band.dataset.lab;el.querySelectorAll('[data-ink]').forEach(e=>{e.style.color=e.dataset.ink==="venue"?lab:"#e5392c"});
+        const v=el.querySelector('[data-venue]');if(v)v.style.borderLeftColor="rgba(29,42,82,.25)"}
+    }catch(e){/* canvas blocked: keep the dark band */}}
+  }
+  /* title type (no logo): at most two lines and inside the band */
   const t=el.querySelector('[data-fit="title"]');
-  for(let k=0;t&&k<30;k++){const fs=parseFloat(getComputedStyle(t).fontSize),band=t.parentNode;
-    if(fs<=36||(t.offsetHeight<=fs*1.02*2+4&&band.scrollHeight<=band.clientHeight+1&&t.scrollWidth<=t.clientWidth+1))break;t.style.fontSize=(fs-2)+"px"}
+  for(let k=0;t&&k<30;k++){const fs=parseFloat(getComputedStyle(t).fontSize),bi=t.parentNode;
+    if(fs<=36||(t.offsetHeight<=fs*1.02*2+4&&bi.scrollHeight<=bi.clientHeight+1&&t.scrollWidth<=t.clientWidth+1))break;t.style.fontSize=(fs-2)+"px"}
+  const bi=el.querySelector('[data-band-in]'),vn=el.querySelector('[data-fit="venue"]');
+  for(let k=0;bi&&vn&&k<20&&(bi.scrollHeight>bi.clientHeight+1||vn.scrollWidth>vn.clientWidth+1||vn.offsetHeight>parseFloat(getComputedStyle(vn).fontSize)*2.2);k++)vn.style.fontSize=(parseFloat(getComputedStyle(vn).fontSize)-2)+"px";
+  const fine=el.querySelector('[data-fit="fine"]');
+  if(fine&&fine.parentNode)shrink('[data-fit="fine"]',fine.parentNode,14);
+  const pp=el.querySelector('[data-fit="prop"]');
+  if(pp)for(let k=0;k<8&&pp.parentNode.scrollHeight>pp.parentNode.clientHeight+1;k++)pp.style.fontSize=(parseFloat(getComputedStyle(pp).fontSize)-1)+"px";
   const c=el.querySelector('[data-fit="cue"]');
   if(c&&c.parentNode.parentNode)shrink('[data-fit="cue"]',c.parentNode.parentNode,14);
 }
