@@ -47,7 +47,7 @@ for w_ in widths: xs.append(xs[-1] + w_)
 ys = [Y0 + j * BY for j in range(-2, 15)]
 SW = {}   # street half widths
 def hw_x(x): return 13 if x == X0 else 8
-def hw_y(y): return 13 if y == Y0 + 8 * BY else 8
+def hw_y(y): return 13 if y == Y0 + 8 * BY else (17 if y == Y0 + 4 * BY else 8)
 EAST_Y = Y0 + 8 * BY
 END_X = xs[2 + 8]
 
@@ -142,8 +142,8 @@ label('CANAL ST', (xs[6] + xs[7]) / 2 + 6, EAST_Y + 36, 28)
 cxl, cyl = (xs[6] + xs[8]) / 2 + 30, ys[2 + 6] + BY / 2
 d.rectangle(k(cxl - 110, cyl - 20, cxl + 110, cyl + 20), fill=CREAM, outline=NAVY, width=2 * K)
 label('CHINATOWN', cxl + 4, cyl, 26, 0, NAVY, 'BSD-800.ttf', 9)
-label('WALKER ST', (xs[8] + xs[9]) / 2, ys[2 + 4], 24, 0)
-label('SQUARE', (xs[3] + xs[4]) / 2, ys[7] + 16, 24, 0)
+label('WALKER ST', (xs[8] + xs[9]) / 2, ys[6], 22, 0)
+label('SQUARE', (xs[3] + xs[4]) / 2, ys[6], 22, 0)
 
 # shop marker at block 8, the corner
 cx, cy = X0, EAST_Y
@@ -222,15 +222,15 @@ d.polygon([tuple(k(END_X - 14, EAST_Y + 14)), tuple(k(END_X + 14, EAST_Y + 14)),
 label('THE COURTS', cx0 + cw / 2, sy + 62, 32, 0)
 
 # ---- compass ----
-nx, ny = 800, 100
+nx, ny = 800, 84
 d.polygon([tuple(k(nx, ny - 34)), tuple(k(nx + 11, ny)), tuple(k(nx, ny - 6)), tuple(k(nx - 11, ny))], fill=NAVY)
 d.polygon([tuple(k(nx, ny + 34)), tuple(k(nx + 11, ny)), tuple(k(nx, ny + 6)), tuple(k(nx - 11, ny))], outline=NAVY, fill=CREAM)
 d.ellipse(k(nx - 22, ny - 22, nx + 22, ny + 22), outline=NAVY, width=K)
 label('N', nx, ny - 48, 18, 0)
 # scale
-d.rectangle(k(620, 64, 620 + BX, 72), outline=NAVY, width=K * 2, fill=CREAM)
-d.rectangle(k(620, 64, 620 + BX / 2, 72), fill=NAVY)
-label('ONE BLOCK', 620 + BX / 2, 94, 24, 0)
+d.rectangle(k(724, 140, 724 + BX, 148), outline=NAVY, width=K * 2, fill=CREAM)
+d.rectangle(k(724, 140, 724 + BX / 2, 148), fill=NAVY)
+label('ONE BLOCK', 763, 170, 22, 0)
 
 # border
 d.rectangle(k(3, 3, W - 4, H - 4), outline=NAVY, width=4 * K)

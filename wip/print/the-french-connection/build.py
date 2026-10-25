@@ -90,7 +90,8 @@ front = f'''<div style="position:relative;width:{W}px;height:{H}px;overflow:hidd
 {ab(352, 500, 272, 252, notebook)}
 <img src="assets/ring.png" alt="" style="position:absolute;left:520px;top:668px;width:120px;height:120px;display:block">
 
-{ab(40, 790, W - 80, 0, section('Hors d&#39;oeuvre', 'ET POTAGES') + f'<div style="margin-top:6px">{items(HORS)}</div>')}
+{ab(40, 790, W - 80, 0, section('Hors d&#39;oeuvre', 'ET POTAGES') + f'<div style="margin-top:10px">{items(HORS)}</div>')}
+{ab(40, 1276, W - 80, 0, kicker('LA CARTE CONTINUE AU VERSO', SOFT, 'center'))}
 </div>'''
 
 # ---------------------------------------------------------------- back
