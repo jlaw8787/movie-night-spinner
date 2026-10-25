@@ -205,7 +205,7 @@ def back():
                + item('Tostones', '2.75', 'Green plantain fried twice, smashed flat, garlic and lime mojo.', 14)
                + item('Medianoche sliders', '4.95', 'Ham, roast pork, Swiss and pickle on sweet rolls, pressed.', 14)
                + sub('SUPPER')
-               + item('Ropa vieja', '12.50', 'Flank steak shredded into peppers, tomato, olives. Black beans.', 10)
+               + item('Ropa vieja', '12.50', 'Flank steak shredded into peppers, tomato, olives. Rice, beans.', 10)
                + item('Babylon surf and turf', '19.83', 'Filet mignon, garlic butter jumbo shrimp, béarnaise sauce.', 14)
                + sub('SWEET')
                + item('World Is Yours pastelitos', '3.95', 'Puff pastry, guava paste and cream cheese, sugar crust.', 10))
@@ -221,7 +221,7 @@ def back():
              f'<div style="font-family: {SCRIPT}; font-size: 34px; line-height: 1.1; color: {GOLD}; text-align: right; padding-right: 10px">Frank L.</div></div>')
     o.append(f'<div style="position: absolute; left: 384px; top: {FY + 14}px; width: 248px; font-family: {BODY}; font-size: 16px; line-height: 1.38; color: {MUTE}">'
              + kicker('House rules', PINK, 16) +
-             f'<div style="margin-top: 8px">Nobody here is your baby.<br>Every dog has his day.<br>Ladies night is Tuesday.<br>Showtime at 11 and 1.</div></div>')
+             f'<div style="margin-top: 8px">Nobody here is your baby.<br>Every dog has his day.<br>Ladies night is Tuesday.<br>Jackets after nine.</div></div>')
     o.append(f'<div style="position: absolute; left: 40px; top: {H - 62}px; width: {W - 80}px; text-align: center; font-family: {BODY}; font-size: 16px; color: {MUTE}">'
              'Prices subject to change. Form BC-83. Babylon Club, Miami Beach, 1983.</div>')
     return page(''.join(o), 'back')

@@ -25,10 +25,14 @@ def fit(im, w, h, box=None):
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
 # 1. The parish, LOC FSA/OWI 1944, warm sepia, cut into a church arch with a gold rule baked in.
-AW, AH = 440, 340
-ch = Image.open(S('fsa2.jpg')).convert('L')
+AW, AH = 380, 350
+src = Image.open(S('olph-north-jeh.jpg')).convert('RGB')
+_b = src.filter(ImageFilter.GaussianBlur(9)); _m = Image.new('L', src.size, 0)
+ImageDraw.Draw(_m).rectangle([292, 926, 368, 1000], fill=255)  # melt the school banner lettering
+src = Image.composite(_b, src, _m.filter(ImageFilter.GaussianBlur(3)))
+ch = src.convert('L')
 ch = ImageEnhance.Contrast(ImageEnhance.Brightness(ch).enhance(1.06)).enhance(1.08)
-ch = fit(ch, AW, AH, (60, 60, 930, 765))
+ch = fit(ch, AW, AH, (0, 56, 960, 940))
 lo, hi = np.array([46, 30, 28]), np.array([250, 242, 228])
 g = np.asarray(ch).astype(float)[..., None] / 255
 ch = Image.fromarray((lo + (hi - lo) * g).astype('uint8'), 'RGB')
@@ -142,29 +146,29 @@ def front():
              f'font-size: 70px; line-height: 0.98; color: {WINE}">The Prizzi<br>Wedding</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 218px; width: {CW}px; text-align: center; font-family: {BODY}; font-style: italic; '
              f'font-size: 21px; line-height: 1.25; color: {INK}">Supper in honor of Don Corrado\'s granddaughter<br>and her groom</div>')
-    o.append(f'<img src="assets/parish-arch.png" alt="The parish church on a Brooklyn corner, its bell tower topped with a cross" '
-             f'style="position: absolute; left: {(W - AW) // 2}px; top: 272px; width: {AW}px; height: {AH}px; display: block">')
+    o.append(f'<img src="assets/parish-arch.png" alt="The parish church on a stone church front with twin towers, arched doors and a cross on the gable" '
+             f'style="position: absolute; left: {(W - AW) // 2}px; top: 268px; width: {AW}px; height: {AH}px; display: block">')
     envelope(o, 392, 262)
-    o.append(f'<div style="position: absolute; left: {L}px; top: 620px; width: {CW}px; text-align: center; font-family: {BODY}; font-style: italic; '
-             f'font-size: 18px; line-height: 1.25; color: {SOFT}">The parish on the corner. Every Prizzi marries here.</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 626px; width: {CW}px; text-align: center; font-family: {BODY}; font-style: italic; '
+             f'font-size: 18px; line-height: 1.25; color: {SOFT}">Our Lady, Sunset Park. Every Prizzi marries here.</div>')
 
     ap = (kicker('To begin', size=18) + f'<div style="margin-top: 6px">{course("Antipasti")}</div>'
           + item('The bride\'s antipasto', 'Lemon-marinated mushrooms, salami, olives, artichokes.', 10)
           + item('Brooklyn arancini', 'Saffron rice round a mozzarella heart, fried gold, marinara.', 12)
           + item('Zucchini fritti', 'Light crisp batter, sea salt and a squeeze of lemon.', 12))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 656px; width: {CW}px">{ap}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 662px; width: {CW}px">{ap}</div>')
 
     # seating plan, left; the couple who both came armed, right
     rows = [('1', 'Don Corrado'), ('2', 'Charley and Angelo'), ('7', 'Maerose. Far from Charley.'), ('?', 'The lady in lavender')]
     rs = ''.join(f'<div style="display: flex; gap: 10px; align-items: baseline; margin-top: 5px; border-top: 1px solid rgba(148,112,47,0.5); padding-top: 5px">'
                  f'<div style="width: 22px; font-family: {DISP}; font-size: 24px; color: {WINE}; line-height: 1">{n}</div>'
                  f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.15; color: {INK}">{t}</div></div>' for n, t in rows)
-    o.append(f'<div style="position: absolute; left: {L + 4}px; top: 950px; width: 262px">'
+    o.append(f'<div style="position: absolute; left: {L + 4}px; top: 954px; width: 262px">'
              f'{kicker("Seating", size=17, extra=" text-align: left")}'
              f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1.05; color: {WINE}; margin-top: 2px">Who Sits Where</div>{rs}</div>')
     o.append(f'<img src="assets/couple-armed.png" alt="A man in a tuxedo and a woman in a red sequined dress embrace, each hiding a pistol behind the other\'s back" '
-             f'style="position: absolute; left: 336px; top: 936px; width: 210px; height: 187px; display: block">')
-    o.append(f'<div style="position: absolute; left: 322px; top: 1124px; width: 236px; text-align: center; font-family: {BODY}; font-style: italic; '
+             f'style="position: absolute; left: 336px; top: 940px; width: 210px; height: 187px; display: block">')
+    o.append(f'<div style="position: absolute; left: 322px; top: 1128px; width: 236px; text-align: center; font-family: {BODY}; font-style: italic; '
              f'font-size: 16px; line-height: 1.2; color: {SOFT}">First dance. Both came armed.</div>')
     return page(''.join(o), 'front')
 
