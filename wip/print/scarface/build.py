@@ -36,11 +36,12 @@ st = Image.open(S('az8n4ty1MklkjIX23I0qig4BZcp.jpg')).convert('RGB')
 st = ImageEnhance.Brightness(ImageEnhance.Contrast(st).enhance(1.04)).enhance(1.12)
 cover(st, HERO_W, HERO_H, 0.42, 0.3).save(A('floor-still.jpg'), quality=90)
 
-# back: Art Deco hotel on Ocean Drive, HABS FL-322-K. Crop keeps the tower and leaves the name sign out.
+# back: Art Deco hotel tops on Ocean Drive, Carol M. Highsmith (LOC, public domain), with sky, clouds and palms.
+# Crop sits above the street level so no hotel name or awning sign shows. Pink duotone at natural contrast,
+# so the stucco keeps its light and shade.
 PH = 380
-hotel = Image.open(S('century-master.jpg')).crop((560, 120, 4440, 1990))
-hotel = ImageOps.autocontrast(ImageEnhance.Contrast(hotel).enhance(1.35), cutoff=2)
-duotone(cover(hotel, W, PH, 0.5, 0.12), '#1c0614', '#ffe4f0').save(A('ocean-drive.jpg'), quality=90)
+hotel = Image.open(S('loc-highsmith-12202.jpg')).convert('RGB').crop((0, 1480, 3406, 3406))
+duotone(cover(hotel, W, PH, 0.5, 0.5), '#1c0614', '#ffe4f0').save(A('ocean-drive.jpg'), quality=90)
 
 # flamingo tile: the two flamingos from the Victor Hotel lobby mural (HABS FL-322-Z), glazed pink
 fl = Image.open(S('mural-master.jpg')).crop((2480, 1660, 3780, 2560))
@@ -188,7 +189,7 @@ def front():
 # ---------------- BACK ----------------
 def back():
     o = []
-    o.append(f'<img src="assets/ocean-drive.jpg" alt="A white Art Deco hotel with a striped tower, porthole windows and racing stripes, under a bright sky" '
+    o.append(f'<img src="assets/ocean-drive.jpg" alt="White Art Deco hotels on Ocean Drive with porthole trim and stepped parapets, a flag and tall palms under a cloudy sky" '
              f'style="position: absolute; left: 0; top: 0; width: {W}px; height: {PH}px; display: block">')
     o.append(f'<div style="position: absolute; left: 0; top: {PH}px; width: {W}px; height: 4px; background: {GOLD}"></div>')
     o.append(f'<div style="position: absolute; left: 40px; top: 40px; background: {BLACK}; padding: 7px 12px; font-family: {BODY}; font-style: italic; '

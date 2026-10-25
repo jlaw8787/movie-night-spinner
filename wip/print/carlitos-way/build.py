@@ -39,9 +39,11 @@ CL_W, CL_H = 470, 206
 fit(Image.open(S('jSXPooWByKBdFMXNNl5XplGgeL0.jpg')).convert('RGB'), CL_W, CL_H).save(A('club-table.jpg'), quality=90)
 
 PO_W, PO_H = 517, 706
-po = Image.open(S('8ESoIezvK2ZlUMH0woyv7NKgHd9.jpg')).convert('RGB')
-po = ImageEnhance.Color(po).enhance(1.08)
-fit(po, PO_W, PO_H, (620, 0, 2420, 2160), (0.5, 0.5)).save(A('paradise-poster.jpg'), quality=90)
+# real travel print: "On the Miami River", Detroit Photographic Co. photochrom, c1900 (LOC, no known restrictions).
+# Crop keeps the palms, pink sky and the reflections; the printed caption along the foot is left out.
+po = Image.open(S('loc-18067.jpg')).convert('RGB')
+po = ImageEnhance.Color(ImageEnhance.Contrast(po).enhance(1.06)).enhance(1.12)
+fit(po, PO_W, PO_H, (3120, 0, 7150, 4950), (0.6, 0.5)).save(A('paradise-poster.jpg'), quality=90)
 
 def wear(name, seed, rgb, strength):
     rnd = random.Random(seed)
@@ -159,7 +161,7 @@ def outside():
     PX, PY = FOLD + 21, 42
     o.append(f'<div style="position: absolute; left: {PX - 4}px; top: {PY - 4}px; width: {PO_W + 4}px; height: {PO_H + 4}px; border: 2px solid {SUN}; '
              f'box-shadow: 0 0 34px rgba(240,122,50,0.45)">'
-             f'<img src="assets/paradise-poster.jpg" alt="The Escape to Paradise poster: a huge setting sun behind palm fronds, a dancer with arms wide on a glittering red sea, figures on the shore" '
+             f'<img src="assets/paradise-poster.jpg" alt="The Escape to Paradise poster: tall coconut palms against a pink evening sky, mirrored in a still tropical river, an old hand-coloured travel print" '
              f'style="position: absolute; left: 0; top: 0; display: block; width: {PO_W}px; height: {PO_H}px">'
              f'<div style="position: absolute; left: 0; top: 0; width: {PO_W}px; height: 230px; background: linear-gradient(rgba(61,10,21,0.88), rgba(61,10,21,0.55) 60%, rgba(61,10,21,0))"></div>'
              f'<div style="position: absolute; left: 0; top: {PO_H - 190}px; width: {PO_W}px; height: 190px; background: linear-gradient(rgba(61,10,21,0), rgba(61,10,21,0.82) 45%, rgba(61,10,21,0.95))"></div></div>')

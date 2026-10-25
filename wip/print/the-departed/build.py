@@ -1,6 +1,6 @@
 """Fitzy's Tap & Grill, West Broadway, South Boston, 2006. The neighbourhood bar where Costello's crew drinks.
 Laminated pub menu, two portrait faces 672x1056 (7 x 11 in). Harp green board, cream type, State House gold.
-Front: sign, the real three-decker street photo (signature), starters, Costello's note, Citizens envelope.
+Front: sign, the real three-decker street photo (signature), starters, Costello's note, Citizens slip (typographic paper).
 Back: Mr. C's corner table still, suppers, dessert, the bar, visitor badge, fine print.
 Writes photo crops, laminate sheen, front/back .body.html and .html."""
 import os, random
@@ -91,15 +91,12 @@ def page(inner, name):
 
 # ---------------- props ----------------
 def envelope(o, x, y, sc=1.0):
-    """Sealed manila envelope, Costello's hand on the front."""
+    """Costello's manila slip, typographic paper only: no drawn flap or seal."""
     w, h = 214, 128
     o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; transform: rotate(-7deg) scale({sc}); transform-origin: 0 0; '
-             f'background: #d9bf86; box-shadow: 0 4px 10px rgba(0,0,0,0.5); overflow: hidden">'
-             f'<div style="position: absolute; left: {(w - 152) // 2}px; top: -76px; width: 152px; height: 152px; transform: rotate(45deg); '
-             f'background: #ccb077; border: 1px solid rgba(90,60,20,0.35)"></div>'
-             f'<div style="position: absolute; left: {w // 2 - 15}px; top: 22px; width: 30px; height: 30px; border-radius: 50%; background: #8c2a1e; '
-             f'box-shadow: 0 1px 2px rgba(0,0,0,0.4)"></div>'
-             f'<div style="position: absolute; left: 0; width: {w}px; top: 66px; text-align: center; font-family: {SCRIPT}; font-size: 25px; line-height: 1.3; color: #1d2a44">Citizens</div>'
+             f'background: #d9bf86; box-shadow: 0 4px 10px rgba(0,0,0,0.5); box-sizing: border-box; padding: 14px 16px">'
+             f'<div style="border-top: 2px solid #8c2a1e; border-bottom: 1px solid #8c2a1e; height: 4px"></div>'
+             f'<div style="text-align: center; font-family: {SCRIPT}; font-size: 25px; line-height: 1.3; color: #1d2a44; margin-top: 22px">Citizens</div>'
              '</div>')
 
 def badge(o, x, y):
@@ -117,27 +114,11 @@ def badge(o, x, y):
 
 # ---------------- more props ----------------
 def rat_trap(o, x, y):
-    """A wooden snap trap, baited, branded by the house."""
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 236px; height: 104px; transform: rotate(-8deg)">'
-             # board
-             f'<div style="position: absolute; left: 0; top: 30px; width: 236px; height: 74px; border-radius: 6px; '
-             f'background: repeating-linear-gradient(176deg, #c99a5a 0 7px, #c0904f 7px 9px, #cfa262 9px 15px); box-shadow: 0 5px 12px rgba(0,0,0,0.55)"></div>'
-             f'<div style="position: absolute; left: 0; top: 96px; width: 236px; height: 8px; border-radius: 0 0 6px 6px; background: #8d6232"></div>'
-             f'<div style="position: absolute; left: 18px; top: 68px; width: 120px; font-family: {BODY}; font-weight: 800; font-size: 14px; line-height: 1; letter-spacing: 0.12em; color: #6a3f17">FITZY&#8217;S</div>'
-             f'<div style="position: absolute; left: 18px; top: 82px; width: 140px; font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1; color: #6a3f17; opacity: 0.85">for informants</div>'
-             # spring coils
-             + ''.join(f'<div style="position: absolute; left: {96 + i * 7}px; top: 38px; width: 9px; height: 22px; border: 2px solid #9aa0a6; border-radius: 50%; box-sizing: border-box"></div>' for i in range(5)) +
-             # hammer bail, set back
-             f'<div style="position: absolute; left: 22px; top: 36px; width: 82px; height: 30px; border: 3px solid #b7bcc2; border-right: none; border-radius: 4px 0 0 4px; box-sizing: border-box"></div>'
-             # trigger plate and arm
-             f'<div style="position: absolute; left: 150px; top: 46px; width: 56px; height: 22px; background: #a9aeb4; border-radius: 3px"></div>'
-             f'<div style="position: absolute; left: 22px; top: 49px; width: 130px; height: 3px; background: #b7bcc2"></div>'
-             # cheese wedge with holes
-             f'<div style="position: absolute; left: 152px; top: 8px; width: 0; height: 0; border-left: 30px solid transparent; border-right: 30px solid transparent; border-bottom: 42px solid #f2c443"></div>'
-             f'<div style="position: absolute; left: 152px; top: 50px; width: 60px; height: 8px; background: #e3b232"></div>'
-             f'<div style="position: absolute; left: 175px; top: 30px; width: 9px; height: 9px; border-radius: 50%; background: #d29e22"></div>'
-             f'<div style="position: absolute; left: 165px; top: 41px; width: 6px; height: 6px; border-radius: 50%; background: #d29e22"></div>'
-             f'<div style="position: absolute; left: 190px; top: 43px; width: 5px; height: 5px; border-radius: 50%; background: #d29e22"></div>'
+    """House card for the rat's cheese plate, typographic paper only."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 236px; height: 104px; transform: rotate(-8deg); box-sizing: border-box; '
+             f'background: {CREAM}; box-shadow: 0 5px 12px rgba(0,0,0,0.55); padding: 14px 18px">'
+             f'<div style="font-family: {DISP}; font-weight: 900; font-size: 34px; line-height: 1; letter-spacing: 0.06em; color: {RED}">FITZY&#8217;S</div>'
+             f'<div style="margin-top: 8px; border-top: 2px solid {DEEP}; padding-top: 8px; font-family: {BODY}; font-style: italic; font-size: 21px; line-height: 1; color: {DEEP}">for informants</div>'
              '</div>')
 
 def no_rats(o, x, y, w, h):

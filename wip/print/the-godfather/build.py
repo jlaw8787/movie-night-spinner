@@ -2,13 +2,13 @@
 Single heavy card, two faces 816x1056 (US Letter). Lift pass: Gordon Willis chiaroscuro.
 Deep espresso stock, warm amber light falling from above, cream and amber inks.
 Signature: a real 1940 Bronx pushcart market photo (Library of Congress, no known restrictions) across the front,
-plus the TMDB still of the fruit stand with the spilled oranges, large on the back, and an engraved spot of oranges.
+plus the TMDB still of the fruit stand with the spilled oranges, large on the back, and a small public domain botanical print of oranges.
 Props: a bakery cannoli box tied with string (Nazorine's), a wedding favour card from Connie's wedding.
 Film moments: the best veal in the city, take the cannoli, the oranges. Played straight.
 Writes photo crops, painted art, props and light, front/back .body.html and .html."""
 import os, random, math
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter, ImageEnhance, ImageOps
+from PIL import Image, ImageDraw, ImageFilter, ImageEnhance, ImageOps, ImageChops
 D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
@@ -81,80 +81,14 @@ def light(name, cx, cy, rx, ry, seed):
     g.save(A(f'light-{name}.png'))
 light('front', 408, 640, 520, 420, 3); light('back', 300, 560, 560, 520, 9)
 
-# ---------------- engraved spot: oranges and leaves, scraperboard on the dark stock ----------------
-def engraved_oranges():
-    SS = 2
-    cw, ch = 300 * 2 * SS, 210 * 2 * SS
-    yy, xx = np.mgrid[0:ch, 0:cw].astype(float)
-    lum = np.zeros((ch, cw)); cov = np.zeros((ch, cw), bool)
-    rnd = np.random.default_rng(7)
-    Lx, Ly, Lz = -0.55, -0.62, 0.56
-    def sphere(cx, cy, r, ax=(0.28, -1.0, 0.25), N=30):
-        nonlocal lum, cov
-        nx, ny = (xx - cx) / r, (yy - cy) / r
-        rr = nx * nx + ny * ny; ins = rr < 1
-        nz = np.sqrt(np.clip(1 - rr, 0, 1))
-        lit = np.clip(nx * Lx + ny * Ly + nz * Lz, 0, 1)
-        a = np.array(ax) / np.linalg.norm(ax)
-        ph = np.arcsin(np.clip(nx * a[0] + ny * a[1] + nz * a[2], -1, 1)) / math.pi * N
-        f = ph - np.floor(ph)
-        w = 0.06 + 0.8 * lit ** 1.3
-        line = np.abs(f - 0.5) < w / 2
-        pores = rnd.random((ch, cw)) < 0.012 * (0.3 + lit)
-        rim = (rr > 0.93) & (lit > 0.05)
-        v = (line | pores | rim).astype(float) * (0.55 + 0.45 * lit)
-        lum = np.where(ins, v, lum); cov |= ins
-    def half(cx, cy, r, sq=0.62):
-        nonlocal lum, cov
-        nx, ny = (xx - cx) / r, (yy - cy) / (r * sq)
-        rr = np.sqrt(nx * nx + ny * ny); ins = rr < 1
-        th = np.arctan2(ny, nx) + math.pi
-        seg = th / (2 * math.pi) * 11
-        fs = seg - np.floor(seg)
-        membrane = (np.minimum(fs, 1 - fs) < 0.05) & (rr < 0.84) & (rr > 0.1)
-        rad = th / (2 * math.pi) * 150; fr_ = rad - np.floor(rad)
-        flesh = (np.abs(fr_ - 0.5) < 0.22 * (1.1 - rr)) & (rr < 0.8) & (rr > 0.12) & ~membrane
-        ves = (rnd.random((ch, cw)) < 0.05) & (rr < 0.8)
-        pith = (rr > 0.84) & (rr < 0.89)
-        rindl = (rr >= 0.89) & ((np.sin(th * 90) > 0.2) | (rr > 0.975))
-        centre = rr < 0.07
-        v = np.zeros_like(rr)
-        v[flesh | ves] = 0.85; v[membrane] = 0.35; v[pith] = 1.0; v[rindl] = 0.75; v[centre] = 0.9
-        lum = np.where(ins, v, lum); cov |= ins
-    def leaf(x0, y0, x1, y1, wid, ang=35):
-        nonlocal lum, cov
-        L = math.hypot(x1 - x0, y1 - y0); ux, uy = (x1 - x0) / L, (y1 - y0) / L
-        s = ((xx - x0) * ux + (yy - y0) * uy) / L
-        t = (-(xx - x0) * uy + (yy - y0) * ux)
-        half_w = wid * np.sin(np.clip(s, 0, 1) * math.pi) ** 0.8
-        ins = (s > 0) & (s < 1) & (np.abs(t) < half_w)
-        rib = np.abs(t) < 2.6 * SS
-        vein = np.sin((s * L + np.abs(t) * 0.9) / (5.5 * SS) * math.pi) > 0.55
-        edge = np.abs(np.abs(t) - half_w) < 2.2 * SS
-        side = (t < 0)
-        v = np.where(rib | edge, 0.9, np.where(vein, np.where(side, 0.7, 0.4), 0))
-        lum = np.where(ins & ~cov, v, lum); cov |= ins
-    S2 = SS * 2
-    sphere(150 * S2, 120 * S2, 72 * S2)
-    half(232 * S2, 160 * S2, 56 * S2)
-    sphere(66 * S2, 150 * S2, 50 * S2, ax=(-0.2, -1, 0.3), N=24)
-    leaf(150 * S2, 52 * S2, 250 * S2, 18 * S2, 20 * S2)
-    leaf(132 * S2, 50 * S2, 40 * S2, 30 * S2, 17 * S2)
-    # colour: lit lines amber to cream, a soft dark halo so the spot reads over the photo
-    c0, c1 = np.array([205, 98, 34]), np.array([250, 214, 150])
-    rgb = c0 + (c1 - c0) * np.clip(lum, 0, 1)[..., None] ** 1.2
-    al = np.clip(lum * 1.4, 0, 1) * 255
-    halo = Image.fromarray((cov * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(14 * SS))
-    halo = np.asarray(halo).astype(float) / 255
-    base = np.zeros((ch, cw, 4)); base[..., :3] = BGc; base[..., 3] = np.clip(halo * 1.25, 0, 1) * 235
-    top = np.dstack([rgb, al])
-    a1 = top[..., 3:4] / 255
-    out = base.copy()
-    out[..., :3] = top[..., :3] * a1 + base[..., :3] * (1 - a1)
-    out[..., 3] = np.maximum(base[..., 3], top[..., 3])
-    im = Image.fromarray(out.clip(0, 255).astype('uint8'), 'RGBA').resize((cw // SS, ch // SS), Image.LANCZOS)
-    im.save(A('engraved-oranges.png'))
-engraved_oranges()
+# ---------------- orange plate: Koehler's Medizinal-Pflanzen, Citrus aurantium (1887, public domain) ----------------
+def orange_plate():
+    im = Image.open(S('koehler-citrus-aurantium-042.jpg')).convert('RGB').crop((0, 230, 473, 577))
+    im = ImageEnhance.Color(im).enhance(0.92)
+    tone = Image.new('RGB', im.size, (247, 238, 218))
+    im = ImageChops.multiply(im, tone).resize((280, 206), Image.LANCZOS)
+    im.save(A('orange-plate.jpg'), quality=92)
+orange_plate()
 
 # ---------------- painted props ----------------
 def twine(dr, p0, p1, w=7):
@@ -324,11 +258,12 @@ def front():
 # ---------------- back ----------------
 def back():
     o = []
-    # the fruit stand, large, with the engraved oranges laid over its corner
+    # the fruit stand, large, with a small botanical orange print beside the caption
     o.append(f'<div style="position: absolute; left: {M}px; top: {M}px; width: {FW + 8}px; height: {FH + 8}px; background: #c9a24a"></div>')
     o.append(f'<img src="assets/garden.jpg" alt="Oranges and red wine at a garden table" '
              f'style="position: absolute; left: {M + 3}px; top: {M + 3}px; width: {FW + 2}px; height: {FH + 2}px">')
-    o.append(f'<img src="assets/engraved-oranges.png" alt="Engraved oranges" style="position: absolute; left: 616px; top: 414px; width: 160px; height: 112px">')
+    o.append(f'<div style="position: absolute; left: 626px; top: 414px; width: 140px; height: 103px; padding: 4px; background: #c9a24a; transform: rotate(2deg); box-shadow: 0 6px 14px rgba(0,0,0,0.5)">'
+             f'<img src="assets/orange-plate.jpg" alt="Botanical print of the bitter orange: leaves, blossom, a cut fruit and a whole orange" style="display: block; width: 140px; height: 103px"></div>')
     o.append(at(M, M + FH + 22, 440, f'<div style="font-family: {DISP}; font-size: 34px; line-height: 36px; color: {CREAM}">An orange on every table</div>'
                 f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MID}; margin-top: 4px">'
                 'Sunday in the garden: fruit, red wine, family.</div>'))

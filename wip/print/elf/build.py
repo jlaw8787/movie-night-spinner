@@ -1,8 +1,8 @@
 """The Seventh Avenue Coffee Shop, New York, Christmas 2003. Elf (2003).
 Diner placemat, one landscape face 1344x960. Snow white stock inside a candy cane border,
 an elf green header band with Buddy's white fur trim, the "World's Best Cup of Coffee" sign as the headline.
-Signature: the four main food groups wheel (painted in paint.py). Still: Buddy waving on the avenue (TMDB).
-Props: a "world's best cup" clipping, a Christmas spirit gauge, a letter from the North Pole.
+Signature: the four main food groups as four real photos (Wikimedia Commons, see CREDITS.md). Still: Buddy waving on the avenue (TMDB).
+Props: a "world's best cup" clipping, a typed Christmas spirit card, a letter from the North Pole.
 Writes front.body.html and front.html."""
 import os
 D = os.path.dirname(os.path.abspath(__file__))
@@ -74,9 +74,13 @@ def face():
         f'THE SEVENTH AVENUE COFFEE SHOP, NEW YORK CITY</div>'
         f'<div style="font-family: {DISP}; font-weight: 900; font-size: 66px; line-height: 74px; color: {SNOW}; letter-spacing: 0.005em; '
         f'text-shadow: 4px 4px 0 {RED}; margin-top: 4px">WORLD\'S BEST CUP OF COFFEE</div>'))
-    o.append(f'<img src="assets/spirit-gauge.png" alt="Christmas spirit gauge" style="position: absolute; left: 1124px; top: 30px; width: 168px; height: 98px">')
-    o.append(at(1112, 128, 192, f'<div style="font-family: {BODY}; font-weight: 800; font-size: 15px; letter-spacing: 0.18em; color: {SNOW}; '
-                                 f'text-align: center; line-height: 18px">CHRISTMAS SPIRIT</div>'))
+    # Christmas spirit meter, a plain typed card pinned to the band
+    o.append(at(1112, 42, 182,
+        f'<div style="background: {SNOW}; border: 2px solid {RED}; border-radius: 4px; padding: 6px 8px 7px; transform: rotate(2deg); '
+        f'box-shadow: 2px 3px 6px rgba(0,0,0,0.25); text-align: center">'
+        f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.08em; color: {RED}; line-height: 17px">CHRISTMAS SPIRIT</div>'
+        f'<div style="font-family: {DISP}; font-weight: 900; font-size: 25px; line-height: 30px; color: {GREEN}; margin-top: 1px">RUNNING LOW</div>'
+        f'<div style="font-family: {BODY}; font-weight: 700; font-size: 15px; line-height: 18px; color: {SOFT}; margin-top: 3px">Sing loud. It helps.</div></div>'))
     # left column, and the clipping at its foot
     o.append(at(52, 214, 360, column(LEFT)))
     o.append(at(56, 806, 352,
@@ -86,9 +90,19 @@ def face():
         f'CUP NAMED &ldquo;WORLD\'S BEST&rdquo;</div>'
         f'<div style="font-family: {BODY}; font-weight: 600; font-size: 15px; line-height: 19px; color: #333">'
         f'A tall man in green shook every hand here Tuesday: &ldquo;Great job, everybody!&rdquo;</div></div>'))
-    # centre: the signature wheel, then the avenue still
-    o.append(f'<img src="assets/food-groups-wheel.png" alt="The four main food groups: candy, candy canes, candy corn and syrup" '
-             f'style="position: absolute; left: 441px; top: 202px; width: 462px; height: 462px">')
+    # centre: the four food groups in real photos, then the avenue still
+    o.append(at(437, 206, 470,
+        f'<div style="text-align: center; font-family: {BODY}; font-weight: 800; font-size: 16px; letter-spacing: 0.22em; color: {RED}; line-height: 20px">'
+        f'AS TAUGHT AT THE NORTH POLE</div>'
+        f'<div style="text-align: center; font-family: {DISP}; font-weight: 900; font-size: 32px; line-height: 40px; color: {GREEN}">'
+        f'THE FOUR MAIN FOOD GROUPS</div>'))
+    for i, (src, lab, alt) in enumerate([('fg-candy.jpg', 'Candy', 'Sugared gumdrops'), ('fg-canes.jpg', 'Candy canes', 'Peppermint candy canes'),
+                                         ('fg-corn.jpg', 'Candy corn', 'A heap of candy corn'), ('fg-syrup.jpg', 'Syrup', 'A glass bottle of maple syrup')]):
+        x = 437 + (i % 2) * 241; y = 270 + (i // 2) * 200
+        o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 223px; height: 186px; border: 3px solid {RED}; '
+                 f'background: {SNOW}; padding: 3px"><img src="assets/{src}" alt="{alt}" style="display: block; width: 223px; height: 186px"></div>')
+        o.append(f'<div style="position: absolute; left: {x + 10}px; top: {y + 150}px; background: {GREEN}; color: {SNOW}; font-family: {DISP}; '
+                 f'font-weight: 900; font-size: 24px; line-height: 30px; padding: 0 10px; border-radius: 4px">{i + 1}. {lab.upper()}</div>')
     o.append(f'<div style="position: absolute; left: 437px; top: 672px; width: 458px; height: 190px; border: 3px solid {RED}; '
              f'background: {SNOW}; padding: 3px"><img src="assets/still-seventh-ave.jpg" alt="A regular waving on the avenue" '
              f'style="display: block; width: 458px; height: 190px"></div>')
