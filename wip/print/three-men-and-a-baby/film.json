@@ -2,28 +2,26 @@
  "fmt": "loftsupper",
  "fn": "fmtLoftSupper",
  "faces": [
-  "front.html",
-  "back.html"
+  "sheet.html"
  ],
  "names": [
-  "Front",
-  "Back"
+  "Sheet A-1"
  ],
  "mm": [
-  215.9,
+  431.8,
   279.4
  ],
- "fonts": "family=Caprasimo&family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500",
+ "fonts": "family=Architects+Daughter&family=Barlow+Condensed:wght@500;600;700",
  "fams": [
-  "Caprasimo",
-  "Archivo Narrow"
+  "Architects Daughter",
+  "Barlow Condensed"
  ],
  "phone": {
-  "disp": "'Caprasimo',serif",
-  "title": "'Caprasimo',serif",
-  "name": "'Archivo Narrow',sans-serif",
-  "body": "'Archivo Narrow',sans-serif",
-  "price": "'Archivo Narrow',sans-serif",
-  "note": "'Archivo Narrow',sans-serif"
+  "disp": "'Architects Daughter',cursive",
+  "title": "'Architects Daughter',cursive",
+  "name": "'Architects Daughter',cursive",
+  "body": "'Architects Daughter',cursive",
+  "price": "'Barlow Condensed',sans-serif",
+  "note": "'Barlow Condensed',sans-serif"
  }
 }

@@ -1,0 +1,30 @@
+{
+ "fmt": "sohoaftermidnight",
+ "fn": "fmtSohoAfterMidnight",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Barlow+Condensed:wght@400;600;700&family=Libre+Franklin:wght@400;600;700&family=Courier+Prime:wght@400;700",
+ "fams": [
+  "Barlow Condensed",
+  "Libre Franklin",
+  "Courier Prime"
+ ],
+ "phone": {
+  "disp": "'Barlow Condensed',sans-serif",
+  "title": "'Barlow Condensed',sans-serif",
+  "name": "'Barlow Condensed',sans-serif",
+  "body": "'Libre Franklin',sans-serif",
+  "price": "'Courier Prime',monospace",
+  "note": "'Courier Prime',monospace"
+ }
+}

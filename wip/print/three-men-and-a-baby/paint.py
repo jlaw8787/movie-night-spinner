@@ -1,235 +1,243 @@
-"""Paints the one-ink art and the paper textures for the Lowenthal & Daughter delivery menu.
-Everything is drawn in a single ink colour on transparency, the way a quick-print shop
-would run a one-colour job on canary stock in 1987."""
+"""Paints the line work for the loft supper sheet (Three Men and a Baby, 1987).
+Everything is drawn the way a diazo blueline print looks: one violet blue ink, lines
+slightly soft where the ammonia print spread them. Text is NOT painted here; it sits
+on top as live HTML so it stays crisp.
+Writes assets/plan.png, assets/north.png, assets/wear-sheet.png."""
 import os, math, random
 from PIL import Image, ImageDraw, ImageFilter, ImageChops
-
 D = os.path.dirname(os.path.abspath(__file__))
 A = os.path.join(D, 'assets')
-INK = (150, 34, 24)
+S = 2                                   # paint at 2x
+INK = (44, 58, 143)
 random.seed(1987)
 
-def ink_layer(mask):
-    """mask (L) -> RGBA in ink colour."""
-    out = Image.new('RGBA', mask.size, INK + (0,))
-    out.putalpha(mask)
+def layer(w, h):
+    im = Image.new('RGBA', (w * S, h * S), (0, 0, 0, 0))
+    return im, ImageDraw.Draw(im)
+
+def P(*v): return [round(x * S) for x in v]
+
+def soften(im, r=0.55):
+    """Diazo spread: a touch of blur and a slightly uneven ink density."""
+    a = im.split()[3].filter(ImageFilter.GaussianBlur(r * S))
+    n = Image.effect_noise((im.width // 24 + 1, im.height // 24 + 1), 40).resize(im.size, Image.BICUBIC)
+    n = n.point(lambda v: 205 + (v - 128) * 0.35)
+    a = ImageChops.multiply(a, n)
+    out = Image.new('RGBA', im.size, INK + (0,)); out.putalpha(a)
     return out
 
-def halftone(draw, box, step, r, clipmask=None):
-    x0, y0, x1, y1 = [v * S for v in box]
-    y = y0
-    row = 0
-    while y < y1:
-        x = x0 + (step / 2 if row % 2 else 0)
-        while x < x1:
-            draw.ellipse([x - r, y - r, x + r, y + r], fill=255)
-            x += step
-        y += step * 0.866
-        row += 1
+def dashed(d, x1, y1, x2, y2, dash=10, gap=6, w=1.2):
+    L = math.hypot(x2 - x1, y2 - y1); ux, uy = (x2 - x1) / L, (y2 - y1) / L
+    t = 0
+    while t < L:
+        e = min(t + dash, L)
+        d.line(P(x1 + ux * t, y1 + uy * t, x1 + ux * e, y1 + uy * e), fill=INK + (255,), width=round(w * S))
+        t = e + gap
 
-# ---------- storefront, 2x of 736 x 300 ----------
-S = 3                                   # supersample
-W, H = 1472, 600
-w, h = W * S, H * S
-m = Image.new('L', (w, h), 0)
-d = ImageDraw.Draw(m)
-def P(v): return [int(t * S) for t in v]
-def L(x0, y0, x1, y1, wd=3): d.line(P([x0, y0, x1, y1]), fill=255, width=int(wd * S))
-def R(x0, y0, x1, y1, wd=3, fill=None):
-    if fill is not None: d.rectangle(P([x0, y0, x1, y1]), fill=fill)
-    d.rectangle(P([x0, y0, x1, y1]), outline=255, width=int(wd * S))
+def wall(d, x1, y1, x2, y2, t=12):
+    """Solid poche wall with diagonal hatch, outlined."""
+    d.rectangle(P(x1, y1, x2, y2), outline=INK + (255,), width=round(1.6 * S))
+    w, h = x2 - x1, y2 - y1
+    for k in range(-int(h), int(w), 6):
+        ax, ay = x1 + k, y1
+        bx, by = x1 + k + h, y2
+        # clip the diagonal to the wall rectangle
+        if ax < x1: ay += (x1 - ax); ax = x1
+        if bx > x2: by -= (bx - x2); bx = x2
+        if ay < by:
+            d.line(P(ax, ay, bx, by), fill=INK + (200,), width=round(0.9 * S))
 
-GROUND = 540
-# building outline
-R(60, 20, 1412, GROUND, 4)
-# brick courses above the awning
-for i, y in enumerate(range(28, 150, 18)):
-    L(64, y, 1408, y, 1.4)
-    off = 0 if i % 2 else 30
-    for x in range(64 + off, 1408, 60):
-        L(x, y, x, y + 18, 1.4)
-# cornice band
-R(60, 150, 1412, 170, 3, fill=255)
-# awning: slanted striped canopy
-AW_T, AW_B = 182, 268
-d.polygon(P([90, AW_T, 1382, AW_T, 1412, AW_B, 60, AW_B]), outline=255)
-stripes = 16
-for i in range(stripes):
-    if i % 2: continue
-    xa0 = 90 + (1382 - 90) * i / stripes
-    xa1 = 90 + (1382 - 90) * (i + 1) / stripes
-    xb0 = 60 + (1412 - 60) * i / stripes
-    xb1 = 60 + (1412 - 60) * (i + 1) / stripes
-    d.polygon(P([xa0, AW_T, xa1, AW_T, xb1, AW_B, xb0, AW_B]), fill=255)
-L(90, AW_T, 1382, AW_T, 4); L(60, AW_B, 1412, AW_B, 4)
-# scalloped valance
-VW = (1412 - 60) / 32
-for i in range(32):
-    x = 60 + i * VW
-    d.chord(P([x, AW_B - 16, x + VW, AW_B + 22]), 0, 180, fill=255 if i % 2 == 0 else 0, outline=255, width=int(3 * S))
-# shopfront: two windows and a door
-WIN_T = 300
-for (x0, x1) in ((96, 600), (872, 1376)):
-    R(x0, WIN_T, x1, 500, 5)
-    # dark interior as halftone
-    halftone(d, (x0 + 10, WIN_T + 10, x1 - 10, 492), 9 * S, 2.1 * S)
-    # shelf
-    d.rectangle(P([x0 + 6, 430, x1 - 6, 438]), fill=255)
-    # cans and jars on the shelf
-    x = x0 + 24
-    k = 0
-    while x < x1 - 60:
-        cw = 30 if k % 3 else 40
-        ch = 44 if k % 2 else 58
-        d.rectangle(P([x, 430 - ch, x + cw, 430]), fill=0, outline=255, width=int(3 * S))
-        L(x, 430 - ch + 12, x + cw, 430 - ch + 12, 2)
-        x += cw + 12
-        k += 1
-    # hanging salamis and cheeses from a rail
-    L(x0 + 10, WIN_T + 20, x1 - 10, WIN_T + 20, 3)
-    for j, x in enumerate(range(x0 + 46, x1 - 30, 64)):
-        if j % 3 == 1:
-            # cheese ball on a string
-            L(x, WIN_T + 20, x, WIN_T + 44, 2)
-            d.ellipse(P([x - 20, WIN_T + 44, x + 20, WIN_T + 80]), fill=0, outline=255, width=int(3 * S))
-            d.ellipse(P([x - 7, WIN_T + 54, x + 3, WIN_T + 62]), fill=255)
-        else:
-            L(x, WIN_T + 20, x, WIN_T + 34, 2)
-            d.rounded_rectangle(P([x - 10, WIN_T + 34, x + 10, WIN_T + 100 + (j % 2) * 10]), radius=10 * S, fill=0, outline=255, width=int(3 * S))
-            for t in range(3):
-                L(x - 9, WIN_T + 50 + t * 16, x + 9, WIN_T + 50 + t * 16, 1.5)
-    # base panel
-    R(x0, 500, x1, GROUND, 4)
-# door
-R(640, WIN_T - 6, 832, GROUND, 5)
-R(660, WIN_T + 14, 812, 440, 3)
-halftone(d, (668, WIN_T + 22, 806, 434), 9 * S, 2.1 * S)
-d.ellipse(P([792, 470, 808, 486]), fill=255)
-# transom with house number, left blank for type
-R(640, 276, 832, WIN_T - 6, 3)
-# pavement
-L(0, GROUND, W, GROUND, 5)
-for x in range(20, W, 140):
-    L(x, GROUND + 6, x + 30, H - 4, 1.6)
-# fruit crates on the pavement, left
-for cx in (150, 290, 430):
-    cy = GROUND - 62
-    # fruit heaped in two rows above the crate
-    for row, (n, yy) in enumerate(((5, cy - 14), (4, cy - 36))):
-        for j in range(n):
-            fx = cx - (n - 1) * 11.5 + j * 23
-            d.ellipse(P([fx - 12, yy - 12, fx + 12, yy + 12]), fill=0, outline=255, width=int(3 * S))
-            d.ellipse(P([fx - 5, yy - 7, fx + 1, yy - 1]), fill=255)
-    d.rectangle(P([cx - 62, cy, cx + 62, GROUND]), fill=0, outline=255, width=int(4 * S))
-    for t in (1, 2):
-        L(cx - 62, cy + 62 * t / 3, cx + 62, cy + 62 * t / 3, 2)
-# delivery bicycle, right, with a wicker basket on the front
-base_mask = m
-m = Image.new('L', (w, h), 0)
-d = ImageDraw.Draw(m)
-bx, by = 1180, GROUND - 50
-r = 52
-for wx in (bx - 120, bx + 120):
-    d.ellipse(P([wx - r, by - r, wx + r, by + r]), outline=255, width=int(5 * S))
-    d.ellipse(P([wx - 5, by - 5, wx + 5, by + 5]), fill=255)
-    for a in range(0, 360, 30):
-        L(wx, by, wx + (r - 4) * math.cos(math.radians(a)), by + (r - 4) * math.sin(math.radians(a)), 1.2)
-# frame
-seat = (bx - 60, by - 110)
-head = (bx + 86, by - 118)
-crank = (bx - 6, by)
-L(bx - 120, by, *crank, 5); L(*crank, *seat, 5); L(bx - 120, by, *seat, 5)
-L(*seat, head[0] - 6, head[1] + 8, 5); L(*crank, head[0] - 4, head[1] + 4, 5)
-L(head[0] - 4, head[1] + 4, bx + 120, by, 5)
-d.rounded_rectangle(P([seat[0] - 26, seat[1] - 12, seat[0] + 22, seat[1] + 2]), radius=6 * S, fill=255)
-L(head[0], head[1], head[0] + 10, head[1] - 34, 5)
-L(head[0] - 18, head[1] - 34, head[0] + 30, head[1] - 34, 5)
-d.ellipse(P([crank[0] - 14, crank[1] - 14, crank[0] + 14, crank[1] + 14]), outline=255, width=int(4 * S))
-# basket, woven
-bk = (head[0] + 4, head[1] - 30, head[0] + 120, head[1] + 44)
-d.polygon(P([bk[0], bk[1], bk[2], bk[1], bk[2] - 10, bk[3], bk[0] + 10, bk[3]]), fill=0, outline=255)
-d.line(P([bk[0], bk[1], bk[2], bk[1], bk[2] - 10, bk[3], bk[0] + 10, bk[3], bk[0], bk[1]]), fill=255, width=int(4 * S))
-for t in range(1, 5):
-    y = bk[1] + (bk[3] - bk[1]) * t / 5
-    L(bk[0] + 2 * t, y, bk[2] - 2 * t, y, 2)
-for t in range(1, 8):
-    x = bk[0] + (bk[2] - bk[0]) * t / 8
-    L(x, bk[1], x + (5 if t < 4 else -5), bk[3], 1.6)
-# a paper bag and a loaf poking out of the basket
-d.rectangle(P([bk[0] + 20, bk[1] - 46, bk[0] + 64, bk[1]]), fill=0, outline=255, width=int(3 * S))
-L(bk[0] + 20, bk[1] - 38, bk[0] + 64, bk[1] - 38, 2)
-d.rounded_rectangle(P([bk[0] + 70, bk[1] - 64, bk[0] + 88, bk[1] + 2]), radius=9 * S, fill=0, outline=255, width=int(3 * S))
-for t in range(3):
-    L(bk[0] + 72, bk[1] - 50 + t * 16, bk[0] + 86, bk[1] - 56 + t * 16, 1.6)
+def door(d, hx, hy, r, a0, a1, leaf_angle):
+    """Hinge at (hx, hy), leaf of length r drawn open at leaf_angle, swing arc a0 to a1."""
+    d.arc(P(hx - r, hy - r, hx + r, hy + r), a0, a1, fill=INK + (230,), width=round(1 * S))
+    ex, ey = hx + r * math.cos(math.radians(leaf_angle)), hy + r * math.sin(math.radians(leaf_angle))
+    d.line(P(hx, hy, ex, ey), fill=INK + (255,), width=round(2 * S))
 
-# knock the window dots out from behind the bicycle so it reads clean
-solid = m.copy()
-sd_ = ImageDraw.Draw(solid)
-for wx in (bx - 120, bx + 120):
-    sd_.ellipse(P([wx - r, by - r, wx + r, by + r]), fill=255)
-sd_.polygon(P([bx - 120, by, crank[0], crank[1], head[0], head[1], *seat]), fill=255)
-sd_.rectangle(P([bk[0], bk[1] - 64, bk[2], bk[3]]), fill=255)
-halo = solid.filter(ImageFilter.MaxFilter(int(8 * S) | 1))
-m = ImageChops.add(ImageChops.subtract(base_mask, halo), m)
-m = m.resize((W, H), Image.LANCZOS)
-# offset-press softness: a touch of ink spread, then speckle where the ink starved
-m = m.filter(ImageFilter.GaussianBlur(0.5))
-noise = Image.effect_noise((W // 6, H // 6), 60).resize((W, H), Image.BICUBIC).point(lambda v: 255 if v > 40 else int(255 * (0.4 + 0.6 * v / 40)))
-m = ImageChops.multiply(m, noise)
-ink_layer(m).save(os.path.join(A, 'storefront.png'))
+def window(d, x1, y1, x2, y2, horiz=True):
+    d.rectangle(P(x1, y1, x2, y2), fill=(0, 0, 0, 0), outline=INK + (255,), width=round(1.4 * S))
+    if horiz:
+        m = (y1 + y2) / 2
+        d.line(P(x1, m - 2, x2, m - 2), fill=INK + (255,), width=round(1 * S))
+        d.line(P(x1, m + 2, x2, m + 2), fill=INK + (255,), width=round(1 * S))
+    else:
+        m = (x1 + x2) / 2
+        d.line(P(m - 2, y1, m - 2, y2), fill=INK + (255,), width=round(1 * S))
+        d.line(P(m + 2, y1, m + 2, y2), fill=INK + (255,), width=round(1 * S))
 
-# ---------- paper wear, one per face, at 2x of 816 x 1056 ----------
-PW, PH = 1632, 2112
-def wear(seed, curl_corner):
-    rnd = random.Random(seed)
-    base = Image.effect_noise((PW // 48, PH // 48), 40).resize((PW, PH), Image.BICUBIC).filter(ImageFilter.GaussianBlur(40))
-    # big soft mottling, warm brown in low alpha
-    a = base.point(lambda v: max(0, min(255, int((v - 110) * 0.55))))
-    # edge darkening: distance from edge
-    edge = Image.new('L', (PW, PH), 0)
-    ed = ImageDraw.Draw(edge)
-    for i in range(60):
-        v = int(70 * (1 - i / 60) ** 2.2)
-        ed.rectangle([i, i, PW - 1 - i, PH - 1 - i], outline=v, width=1)
-    edge = edge.filter(ImageFilter.GaussianBlur(10))
-    # one corner that was pushed under a door: a soft diagonal crease shadow
-    cr = Image.new('L', (PW, PH), 0)
-    cd = ImageDraw.Draw(cr)
-    cx, cy = curl_corner
-    sx = -1 if cx > 0 else 1
-    sy = -1 if cy > 0 else 1
-    p1 = (cx + sx * 190, cy)
-    p2 = (cx, cy + sy * 150)
-    cd.line([p1, p2], fill=46, width=6)
-    cd.polygon([(cx, cy), p1, p2], fill=18)
-    cr = cr.filter(ImageFilter.GaussianBlur(5))
-    alpha = ImageChops.add(ImageChops.add(a, edge), cr)
-    out = Image.new('RGBA', (PW, PH), (120, 82, 30, 0))
-    out.putalpha(alpha)
-    return out
+def rect(d, x1, y1, x2, y2, w=1.6, fill=None, r=0):
+    if r:
+        d.rounded_rectangle(P(x1, y1, x2, y2), radius=r * S, outline=INK + (255,), width=round(w * S), fill=fill)
+    else:
+        d.rectangle(P(x1, y1, x2, y2), outline=INK + (255,), width=round(w * S), fill=fill)
 
-wear(1, (PW, PH)).save(os.path.join(A, 'wear-front.png'))
-wear(2, (0, PH)).save(os.path.join(A, 'wear-back.png'))
+def cloud(d, x1, y1, x2, y2, bump=13):
+    """Revision cloud: a ring of scalloped arcs around a rounded rectangle."""
+    pts = []
+    cx, cy, rx, ry = (x1 + x2) / 2, (y1 + y2) / 2, (x2 - x1) / 2, (y2 - y1) / 2
+    n = 400
+    for i in range(n):
+        t = 2 * math.pi * i / n
+        c, s = math.cos(t), math.sin(t)
+        # superellipse so the cloud hugs a rectangle
+        x = cx + rx * math.copysign(abs(c) ** 0.45, c)
+        y = cy + ry * math.copysign(abs(s) ** 0.45, s)
+        pts.append((x, y))
+    # walk the path and drop arcs every ~bump px
+    acc, last, marks = 0, pts[0], [pts[0]]
+    for p in pts[1:] + [pts[0]]:
+        acc += math.hypot(p[0] - last[0], p[1] - last[1]); last = p
+        if acc >= bump * 1.6:
+            marks.append(p); acc = 0
+    for (ax, ay), (bx, by) in zip(marks, marks[1:] + marks[:1]):
+        mx, my = (ax + bx) / 2, (ay + by) / 2
+        r = math.hypot(bx - ax, by - ay) / 2
+        ang = math.degrees(math.atan2(by - ay, bx - ax))
+        # outward bulge: arc on the side away from the centre
+        out = math.degrees(math.atan2(my - cy, mx - cx))
+        d.arc(P(mx - r, my - r, mx + r, my + r), out - 95, out + 95, fill=INK + (255,), width=round(1.6 * S))
 
-# ---------- a blue ballpoint ring, drawn by hand around one grocery line ----------
-BW, BH = 520, 120
-s = 3
-bm = Image.new('L', (BW * s, BH * s), 0)
-bd = ImageDraw.Draw(bm)
-pts = []
-turns = 1.12
-for i in range(260):
-    t = i / 259 * turns * 2 * math.pi
-    rx = (BW / 2 - 14) * (1 + 0.025 * math.sin(3 * t))
-    ry = (BH / 2 - 14) * (1 + 0.05 * math.sin(2 * t + 1))
-    x = BW / 2 + rx * math.cos(t - 0.3) + 4 * math.sin(t * 0.5)
-    y = BH / 2 + ry * math.sin(t - 0.3) + 3 * (t / (2 * math.pi))
-    pts.append((x * s, y * s))
-for i in range(len(pts) - 1):
-    wdt = int((2.4 + 0.8 * math.sin(i / 20)) * s)
-    bd.line([pts[i], pts[i + 1]], fill=230, width=wdt)
-bm = bm.resize((BW, BH), Image.LANCZOS)
-pen = Image.new('RGBA', (BW, BH), (34, 52, 140, 0))
-pen.putalpha(bm)
-pen.save(os.path.join(A, 'pen-ring.png'))
+# ------------------------------------------------------------------ plan
+W, H = 660, 600
+im, d = layer(W, H)
+X1, Y1, X2, Y2, T = 40, 50, 640, 560, 12
+
+# column grid, dashed centre lines (bubbles are HTML)
+for gx in (40, 240, 440, 640):
+    dashed(d, gx, 30, gx, 582, 14, 5, 0.9)
+for gy in (50, 305, 560):
+    dashed(d, 24, gy, 650, gy, 14, 5, 0.9)
+for gx, gy in ((240, 305), (440, 305)):
+    rect(d, gx - 6, gy - 6, gx + 6, gy + 6, 1.4, fill=INK + (255,))
+
+# exterior walls with openings for windows and the front door
+wall(d, X1 - T / 2, Y1 - T / 2, X2 + T / 2, Y1 + T / 2)              # north
+wall(d, X1 - T / 2, Y2 - T / 2, X2 + T / 2, Y2 + T / 2)              # south
+wall(d, X1 - T / 2, Y1 - T / 2, X1 + T / 2, Y2 + T / 2)              # west
+wall(d, X2 - T / 2, Y1 - T / 2, X2 + T / 2, Y2 + T / 2)              # east
+# loft windows along the north and west walls
+for a, b in ((70, 130), (318, 420)):
+    d.rectangle(P(a, Y1 - T / 2 + 1, b, Y1 + T / 2 - 1), fill=(0, 0, 0, 0))
+    window(d, a, Y1 - T / 2, b, Y1 + T / 2, True)
+for a, b in ((330, 420), (470, 545)):
+    d.rectangle(P(X1 - T / 2 + 1, a, X1 + T / 2 - 1, b), fill=(0, 0, 0, 0))
+    window(d, X1 - T / 2, a, X1 + T / 2, b, False)
+# front door opening in the south wall
+DX1, DX2 = 252, 300
+d.rectangle(P(DX1, Y2 - T / 2 - 1, DX2, Y2 + T / 2 + 1), fill=(0, 0, 0, 0))
+door(d, DX1, Y2 - T / 2, DX2 - DX1, 270, 360, 270)
+d.line(P(DX1, Y2 - T / 2, DX1, Y2 + T / 2), fill=INK + (255,), width=round(1.6 * S))
+d.line(P(DX2, Y2 - T / 2, DX2, Y2 + T / 2), fill=INK + (255,), width=round(1.6 * S))
+
+# bedroom partitions on the east side
+PX = 470
+def part(x1, y1, x2, y2): wall(d, x1, y1, x2, y2, 0)
+part(PX - 4, Y1, PX + 4, Y2)
+part(PX, 220 - 4, X2, 220 + 4)
+part(PX, 390 - 4, X2, 390 + 4)
+for y0 in (172, 342, 512):                          # door openings into each bedroom
+    d.rectangle(P(PX - 5, y0 - 34, PX + 5, y0 + 1), fill=(0, 0, 0, 0))
+    d.line(P(PX - 4, y0 - 34, PX + 4, y0 - 34), fill=INK + (255,), width=round(1.4 * S))
+    d.line(P(PX - 4, y0, PX + 4, y0), fill=INK + (255,), width=round(1.4 * S))
+    door(d, PX + 4, y0, 34, 270, 360, 0)
+# beds, each with a pillow and turned-down sheet
+for y0 in (90, 260, 430):
+    rect(d, 560, y0, 628, y0 + 96, 1.6)
+    rect(d, 566, y0 + 6, 622, y0 + 22, 1.1, r=4)
+    d.line(P(560, y0 + 34, 628, y0 + 34), fill=INK + (255,), width=round(1 * S))
+    rect(d, 562, y0 + 100, 580, y0 + 118, 1.1)     # night table
+
+# kitchen run along the north wall, refrigerator in the corner
+rect(d, 52, 62, 300, 92, 1.6)
+d.line(P(52, 86, 300, 86), fill=INK + (160,), width=round(0.8 * S))
+rect(d, 52, 100, 88, 146, 1.6)                     # refrigerator
+d.line(P(52, 100, 88, 146), fill=INK + (190,), width=round(0.8 * S))
+d.line(P(88, 100, 52, 146), fill=INK + (190,), width=round(0.8 * S))
+for cx in (166, 192):                              # range, four burners
+    for cy in (70, 84):
+        r = 5.5
+        d.ellipse(P(cx - r, cy - r, cx + r, cy + r), outline=INK + (255,), width=round(1.1 * S))
+rect(d, 228, 66, 270, 88, 1.2, r=4)                # sink
+d.ellipse(P(247, 69, 251, 73), fill=INK + (255,))
+# island counter
+rect(d, 120, 128, 300, 156, 1.6)
+for sx in (150, 200, 250):                         # stools
+    d.ellipse(P(sx - 8, 166 - 8, sx + 8, 166 + 8), outline=INK + (255,), width=round(1.1 * S))
+
+# long dining table and chairs
+TX1, TY1, TX2, TY2 = 110, 222, 330, 276
+rect(d, TX1, TY1, TX2, TY2, 1.8)
+for cx in (145, 220, 295):
+    rect(d, cx - 12, TY1 - 22, cx + 12, TY1 - 6, 1.2, r=3)
+    rect(d, cx - 12, TY2 + 6, cx + 12, TY2 + 22, 1.2, r=3)
+rect(d, TX1 - 22, 237, TX1 - 6, 261, 1.2, r=3)
+rect(d, TX2 + 6, 237, TX2 + 22, 261, 1.2, r=3)
+
+# Mary's bassinet by the column, inside revision cloud 1
+rect(d, 384, 230, 432, 260, 1.6, r=12)
+rect(d, 389, 235, 402, 255, 1.0, r=5)
+cloud(d, 366, 210, 450, 280)
+
+# living area: sofa, coffee table, two drawing tables by the west windows
+rect(d, 80, 470, 250, 500, 1.6, r=4)               # sofa
+rect(d, 86, 476, 244, 494, 0.9, r=3)
+rect(d, 110, 400, 220, 440, 1.4)                   # coffee table
+rect(d, 70, 340, 92, 400, 1.4)                     # side chair
+# drafting table (Peter) and drawing board (Michael), each with a stool
+for x0, y0 in ((300, 470), (380, 470)):
+    rect(d, x0, y0, x0 + 64, y0 + 42, 1.6)
+    d.line(P(x0 + 4, y0 + 10, x0 + 60, y0 + 10), fill=INK + (190,), width=round(0.9 * S))
+    d.ellipse(P(x0 + 24, y0 + 50, x0 + 40, y0 + 66), outline=INK + (255,), width=round(1.1 * S))
+
+# hall outside the front door, dashed outline where the bassinet was found
+dashed(d, 222, 576, 340, 576, 8, 5, 1.0)
+for (a, b, c, e) in ((262, 572, 292, 572), (262, 590, 292, 590), (262, 572, 262, 590), (292, 572, 292, 590)):
+    dashed(d, a, b, c, e, 4, 3, 1.0)
+
+soften(im).save(os.path.join(A, 'plan.png'))
+
+# ------------------------------------------------------------------ north arrow
+im, d = layer(64, 64)
+d.ellipse(P(6, 6, 58, 58), outline=INK + (255,), width=round(1.6 * S))
+d.polygon(P(32, 8, 42, 44, 32, 37, 22, 44), outline=INK + (255,))
+d.polygon(P(32, 8, 32, 37, 22, 44), fill=INK + (255,))
+d.line(P(32, 8, 42, 44), fill=INK + (255,), width=round(1.2 * S))
+d.line(P(42, 44, 32, 37), fill=INK + (255,), width=round(1.2 * S))
+soften(im, 0.4).save(os.path.join(A, 'north.png'))
+
+# ------------------------------------------------------------------ wear
+FW, FH = 1632, 1056
+w, h = FW, FH
+base = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+# 1. soft blue background haze, the light tint every diazo print carries, uneven
+haze = Image.effect_noise((w // 90, h // 90), 60).resize((w, h), Image.BICUBIC).filter(ImageFilter.GaussianBlur(40))
+haze_a = haze.point(lambda v: max(0, min(255, int((v - 100) * 0.22))))
+tint = Image.new('RGBA', (w, h), (120, 132, 196, 0)); tint.putalpha(haze_a)
+base = Image.alpha_composite(base, tint)
+# 2. the faint banding a diazo machine leaves along the feed direction
+band = Image.new('L', (1, h))
+for y in range(h):
+    band.putpixel((0, y), int(9 + 7 * math.sin(y / 37.0) + 5 * math.sin(y / 11.3 + 1)))
+band = band.resize((w, h)).filter(ImageFilter.GaussianBlur(6))
+bl = Image.new('RGBA', (w, h), (110, 120, 180, 0)); bl.putalpha(band.point(lambda v: max(0, v - 6)))
+base = Image.alpha_composite(base, bl)
+# 3. edges yellowed from the light, stronger on the right where it sat on a sill
+edge = Image.new('L', (w, h), 0); ed = ImageDraw.Draw(edge)
+for i in range(70):
+    a = int((70 - i) * 0.95)
+    ed.rectangle([i, i, w - 1 - i, h - 1 - i], outline=a)
+edge = edge.filter(ImageFilter.GaussianBlur(18))
+side = Image.linear_gradient('L').rotate(90, expand=True).resize((w, h)).point(lambda v: int((255 - v) * 0.10))
+edge = ImageChops.add(edge, side)
+yl = Image.new('RGBA', (w, h), (196, 170, 96, 0)); yl.putalpha(edge)
+base = Image.alpha_composite(base, yl)
+# 4. a pale ring where a baby bottle stood on the sheet, partly off the plan corner
+ring = Image.new('L', (w, h), 0); rd = ImageDraw.Draw(ring)
+cx, cy, r = 660, 690, 46
+for k in range(5):
+    rd.ellipse([cx - r - k, cy - r - k, cx + r + k, cy + r + k], outline=26 - k * 4, width=2)
+rd.arc([cx - r - 3, cy - r - 3, cx + r + 3, cy + r + 3], 200, 320, fill=40, width=4)
+ring = ring.filter(ImageFilter.GaussianBlur(3))
+rg = Image.new('RGBA', (w, h), (170, 150, 110, 0)); rg.putalpha(ring)
+base = Image.alpha_composite(base, rg)
+base.save(os.path.join(A, 'wear-sheet.png'))
 print('painted')

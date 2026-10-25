@@ -1,6 +1,6 @@
 """Soft wear layers for the hotel in-suite dining card (US letter, heavy two sided card).
-Laid card stock that has sat on a room service tray: faint warm mottling over the cream,
-the green border rubbed pale at the corners and edges where it has been handled,
+Gloss black board with a rose panel that has sat on a room service tray: faint warm mottling,
+the black rubbed grey at the corners and edges where the board core shows through,
 and a pale champagne ring on the back by the bar list. Big, low-detail shapes only.
 The fine grain comes from the shared paper-grain.png."""
 import os
@@ -25,13 +25,13 @@ def wear(face, seed):
     tone = Image.fromarray(rgba.astype(np.uint8), 'RGBA')
     # pale rubbing on the green border, strongest at the corners
     rub = np.zeros((H, W, 4), np.float32)
-    rub[..., :3] = np.array([226, 214, 180], np.float32)
+    rub[..., :3] = np.array([150, 136, 130], np.float32)
     e = np.minimum.reduce([xx, yy, W - xx, H - yy])
     wob = lowfreq(9, seed + 2) * 6
     edge = np.clip(1 - (e + wob * 0.5) / 7, 0, 1) ** 1.6 * 46
     cx = np.minimum(xx, W - xx); cy = np.minimum(yy, H - yy)
     corner = np.clip(1 - np.sqrt(cx ** 2 + cy ** 2) / 42, 0, 1) ** 1.8 * 60
-    rub[..., 3] = np.clip(edge + corner, 0, 70)
+    rub[..., 3] = np.clip(edge * 0.8 + corner, 0, 64)
     rub = Image.fromarray(rub.astype(np.uint8), 'RGBA').filter(ImageFilter.GaussianBlur(1))
     out = Image.alpha_composite(tone, rub)
     # a soft thumb mark, lower right on the front where the card gets picked up

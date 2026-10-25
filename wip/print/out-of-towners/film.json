@@ -1,0 +1,29 @@
+{
+ "fmt": "eventually",
+ "fn": "fmtDinnerEventually",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Dining Car",
+  "Lounge Car"
+ ],
+ "mm": [
+  177.8,
+  279.4
+ ],
+ "fonts": "family=Hanken+Grotesk:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400",
+ "fams": [
+  "Hanken Grotesk",
+  "Source Serif 4"
+ ],
+ "phone": {
+  "disp": "'Hanken Grotesk',sans-serif",
+  "title": "'Hanken Grotesk',sans-serif",
+  "name": "'Hanken Grotesk',sans-serif",
+  "body": "'Source Serif 4',serif",
+  "price": "'Hanken Grotesk',sans-serif",
+  "note": "'Source Serif 4',serif"
+ }
+}

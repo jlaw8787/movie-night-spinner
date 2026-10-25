@@ -1,0 +1,31 @@
+{
+ "fmt": "sixteen",
+ "fn": "fmtSixteen",
+ "faces": [
+  "p1.html",
+  "p2.html"
+ ],
+ "names": [
+  "Page 1",
+  "Page 2"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Archivo+Black&family=Arimo:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&family=Kalam:wght@400;700",
+ "fams": [
+  "Archivo Black",
+  "Arimo",
+  "Courier Prime",
+  "Kalam"
+ ],
+ "phone": {
+  "disp": "'Archivo Black',sans-serif",
+  "title": "'Archivo Black',sans-serif",
+  "name": "'Arimo',sans-serif",
+  "body": "'Arimo',sans-serif",
+  "price": "'Arimo',sans-serif",
+  "note": "'Arimo',sans-serif"
+ }
+}
