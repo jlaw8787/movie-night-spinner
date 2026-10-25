@@ -7,7 +7,7 @@ D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
 FONTS = 'family=Archivo:wdth,wght@62..125,100..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script'
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-PAPER, RED, INK, SOFT, PENCIL, BLUE = '#f4dcd5', '#ae2330', '#1e1b21', '#4a3f44', '#6a6470', '#24398f'
+PAPER, RED, INK, SOFT, PENCIL, BLUE = '#f4dcd5', '#ae2330', '#1e1b21', '#4a3f44', '#55505a', '#24398f'
 AR = "'Archivo', 'Helvetica Neue', Arial, sans-serif"
 TY = "'Courier Prime', 'Courier New', monospace"
 HW = "'Nanum Pen Script', cursive"
@@ -75,9 +75,9 @@ def front():
         rows += (f'<div style="position: relative; display: flex; align-items: baseline; padding: 7px 0 6px; border-bottom: 1px solid {RED}">'
                  + ''.join(f'<div style="width: {w}px; flex: none">{typed(v)}</div>' for v, (c, w) in zip(vals, cols)) + '</div>')
     notes = ''.join(f'<div style="display: flex; gap: 10px; padding: 3px 0">{typed("&#8226;")}{typed(t)}</div>' for t in NOTES)
-    tootsie = (f'<div style="position: absolute; left: 616px; top: 674px; transform: rotate(-5deg)">'
-               f'<div style="position: relative; display: inline-block; font-family: {HW}; font-size: 28px; line-height: 1; color: {PENCIL}">Tootsie'
-               f'<div style="position: absolute; left: -4px; right: -6px; top: 13px; height: 2px; background: {BLUE}; transform: rotate(-3deg)"></div></div>'
+    tootsie = (f'<div style="position: absolute; left: 616px; top: 686px; transform: rotate(-5deg)">'
+               f'<div style="position: relative; display: inline-block; font-family: {HW}; font-size: 31px; line-height: 1; color: {PENCIL}">Tootsie'
+               f'<div style="position: absolute; left: -4px; right: -6px; top: 17px; height: 1.5px; background: {BLUE}; transform: rotate(-3deg)"></div></div>'
                f'<div style="font-family: {HW}; font-size: 30px; line-height: 1; color: {BLUE}; margin: 2px 0 0 14px">It&#8217;s Dorothy.</div></div>')
     pol = (f'<div style="position: absolute; left: 548px; top: 392px; width: 196px; transform: rotate(3deg)">'
            f'<div style="background: #f7f5ef; padding: 12px 12px 40px; box-shadow: 0 2px 6px rgba(60,30,30,0.28)">'

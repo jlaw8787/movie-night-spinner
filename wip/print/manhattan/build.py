@@ -26,8 +26,6 @@ LEFT = [
          'Toasted bagels, cream cheese whipped light, sliced Nova, capers, paper-thin red onion and dill.', ''),
         ('Belgian waffles', 'per guest', '4.25',
          'Cooked to order in your kitchen by our cook. Maple syrup, sweet butter, berries in season.', ''),
-        ('Coffee service', 'the urn', '6.00',
-         'Thirty cups, fresh brewed, with cream and sugar.', ''),
     ]),
 ]
 RIGHT = [
@@ -43,6 +41,8 @@ RIGHT = [
          'Dense and creamy, lemon and vanilla, on a buttery crumb crust. Baked low, chilled overnight. Serves ten.', ''),
         ('Pears in red wine', 'per guest', '2.25',
          'Bosc halves poached with cinnamon and orange peel, whipped cream alongside.', ''),
+        ('Coffee service', 'the urn', '6.00',
+         'Thirty cups, fresh brewed, with cream and sugar.', ''),
     ]),
 ]
 
@@ -130,7 +130,7 @@ def outside():
     return back + cover
 
 def inside():
-    foot = f'''<div style="position: absolute; left: {RX}px; top: 706px; width: {PW}px; border-top: 1px solid {INK}; padding-top: 10px; display: flex; justify-content: space-between; align-items: baseline">
+    foot = f'''<div style="position: absolute; left: {RX}px; top: 726px; width: {PW}px; border-top: 1px solid {INK}; padding-top: 10px; display: flex; justify-content: space-between; align-items: baseline">
       <span style="font-family: {SERIF}; font-style: italic; font-size: 16px; color: {INK}">Nothing here is overrated.</span>
       <span style="font-family: {SANS}; font-weight: 500; font-size: 13px; letter-spacing: 0.22em; color: {INK}">KESSLER &amp; LOWE</span></div>'''
     return column(LX, 52, LEFT) + column(RX, 52, RIGHT) + foot

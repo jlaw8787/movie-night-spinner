@@ -147,7 +147,7 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
     {item(ADDED['celery'], gap=22, nsz=24)}
     {item(ADDED['coffee'], gap=22, nsz=24)}
   </section>
-  <div style="position: absolute; left: 330px; top: 704px; width: 260px; {P}; font-size: 27px; line-height: 1.1; color: #4a4741; transform: rotate(-5deg)">1 rye, mustard<br>1 white, mayo ?!<br><span style="font-size: 22px; margin-left: 46px">la-di-da</span></div>
+  <div style="position: absolute; left: 300px; top: 722px; width: 400px; {P}; font-size: 27px; line-height: 1.1; color: #4a4741; transform: rotate(-4deg)">1 rye, mustard<br>1 white, mayo ?!<span style="font-size: 22px; margin-left: 30px">la-di-da</span></div>
 
   {rules(L, 806, R - L)}
   <div style="position: absolute; left: {L}px; top: 836px; width: 520px">
