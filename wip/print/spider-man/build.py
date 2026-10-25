@@ -182,8 +182,8 @@ def front():
              + kicker('House rule')
              + f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1.04; color: {NAVY}; margin-top: 8px">Drop a tray? We catch it.</div>'
              f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: #2a2d3a; margin-top: 6px">Every plate stays on it.</div></div>')
-    ticket(o, 540, 378)
-    coupon(o, 542, 518)
+    ticket(o, 540, 352)
+    coupon(o, 542, 494)
 
     o.append(f'<div style="position: absolute; left: {L}px; top: 664px; width: {CW}px">'
              + bar('Breakfast All Day', 42)

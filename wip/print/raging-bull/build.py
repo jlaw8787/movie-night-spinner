@@ -179,7 +179,7 @@ def back():
              'Heckle at your own risk.</div></div>'
              f'<img src="assets/stage-jake.jpg" alt="Jake on a stool at the microphone in a white dinner jacket, the bass player laughing behind him" '
              f'style="position: absolute; right: 8px; top: 8px; display: block; width: 392px; height: 224px"></div>')
-    o.append(f'<div style="position: absolute; left: {L + 24}px; top: 222px; font-family: {SCRIPT}; font-size: 38px; line-height: 1; color: {RED}">Jake</div>')
+    o.append(f'<div style="position: absolute; left: {L + 24}px; top: 234px; font-family: {SCRIPT}; font-size: 36px; line-height: 1; color: {RED}">Jake</div>')
 
     prelim = (billing('Tonight\'s supper card &middot; four rounds', 'PRELIMINARIES')
               + item('Bronx deviled eggs', '.85', 'Whipped yolks with Dijon, crisp pancetta, smoked paprika, chives.', 12)
@@ -196,7 +196,7 @@ def back():
                'In his corner: hashed browns .50 &middot; creamed spinach .50</div></div>'
              f'<div style="position: absolute; left: 482px; top: 64px; width: 192px; border: 4px solid {RED}; padding: 8px 0 8px; text-align: center; '
              f'transform: rotate(-5deg); background: {CARD}">'
-             f'<div style="font-family: {DISP}; font-size: 42px; line-height: 0.98; color: {RED}">NEVER<br>OVERCOOKED</div>'
+             f'<div style="font-family: {DISP}; font-size: 38px; line-height: 1; color: {RED}">NEVER<br>OVERCOOKED</div>'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.25; color: {INK}; margin-top: 6px">Overcook it, it defeats<br>the purpose.</div></div></div>')
 
     def corner(sub, title, body, x):
