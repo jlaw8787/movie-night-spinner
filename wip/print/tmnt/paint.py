@@ -7,7 +7,7 @@ import os, random, math
 from PIL import Image, ImageDraw, ImageFilter, ImageChops
 
 D = os.path.dirname(os.path.abspath(__file__))
-W1, H1, S = 1272, 330, 2
+W1, H1, S = 1272, 370, 2
 W, H = W1 * S, H1 * S
 R = random.Random(1990)
 
@@ -98,12 +98,14 @@ def bricks(x0, y0, x1, y1, base, mortar, bh=5.0, bw=12.0, var=14):
             xx += bw
         yy += bh; row += 1
 
+LIT = []
 def windows(x0, x1, top, floors, fh, lit=(), cols=3, ww=16, wh=20, frame=BLACK):
     gap = (x1 - x0 - cols * ww) / (cols + 1)
     for f in range(floors):
         for c in range(cols):
             wx = x0 + gap + c * (ww + gap); wy = top + f * fh + (fh - wh) / 2
             on = (f, c) in lit
+            if on: LIT.append((wx, wy, wx + ww, wy + wh))
             rect(wx - 2, wy - 2, wx + ww + 2, wy + wh + 3, fill=(196, 190, 170))  # lintel and sill stone
             rect(wx, wy, wx + ww, wy + wh, fill=GLOW if on else (30, 34, 40))
             if on:
@@ -154,7 +156,7 @@ ell(AX0 + 80, 152, AX0 + 96, 164, fill=(70, 50, 34))
 rect(AX0 + 124, 150, AX0 + 150, STREET, fill=(40, 30, 24))           # door
 rect(AX0 + 164, 150, AX1 - 16, STREET - 2, fill=(196, 176, 120))
 halftone((AX0 + 164, 150, AX1 - 16, STREET - 2), (150, 110, 60), lambda x, y: 0.5, 3.2, 1.3)
-water_tower(AX0 + 50, ATOP - 6, 0.9)
+water_tower(340, 64, 0.9)
 
 # small walk-up between
 bricks(300, 64, 380, STREET, (120, 110, 100), (96, 92, 86), 4.5, 11)
@@ -170,7 +172,7 @@ bricks(PX0, PTOP, PX1, STREET, (176, 150, 112), (140, 124, 100))
 rect(PX0 - 4, PTOP - 6, PX1 + 4, PTOP, fill=(206, 196, 172))
 windows(PX0, PX1, PTOP + 4, 2, 32, lit={(0, 2), (1, 0), (1, 3)}, cols=5, ww=18, wh=20)
 fire_escape(PX0 + 40, PX0 + 150, PTOP + 4, 3, 32)
-water_tower(PX1 - 50, PTOP - 6, 1.05)
+water_tower(812, 98, 1.0)
 # rooftop vent and stair bulkhead
 rect(PX0 + 20, PTOP - 22, PX0 + 54, PTOP - 6, fill=(96, 92, 86))
 rect(PX0 + 30, PTOP - 30, PX0 + 44, PTOP - 22, fill=(96, 92, 86))
@@ -203,7 +205,7 @@ rect(760, 158, 860, STREET, fill=(44, 46, 48))
 RX = 890
 bricks(RX, 70, RX + 120, STREET, (150, 84, 64), (118, 108, 96))
 windows(RX, RX + 120, 76, 3, 30, lit={(2, 2), (0, 0)}, cols=3, ww=16, wh=18)
-water_tower(RX + 92, 64, 1.0)
+water_tower(RX + 300, 88, 1.0)
 rect(RX + 10, 54, RX + 34, 70, fill=(110, 104, 96))
 bricks(RX + 120, 40, RX + 260, STREET, (112, 104, 96), (90, 86, 80))
 rect(RX + 116, 34, RX + 264, 40, fill=(186, 178, 160))
@@ -271,6 +273,21 @@ for k in range(140):
 for k in range(60, W1, 130):
     ell(k, TUN_T + 8, k + 14, TUN_T + 22, fill=(20, 24, 22), outline=(96, 104, 96), w=1.4)
     line([(k + 7, TUN_T + 22), (k + 7, TUN_B - 22)], (90, 130, 88), 0.8)
+
+# ---------------- deep ground below the tunnel ----------------
+rect(0, TUN_B + 8, W1, H1, fill=(84, 72, 56))
+for (y0, y1, c) in [(TUN_B + 8, TUN_B + 20, (98, 84, 62)), (TUN_B + 20, TUN_B + 32, (78, 66, 52)), (TUN_B + 32, H1, (60, 58, 56))]:
+    pts = [(x, y0 + 2 * math.sin(x / 41 + y0)) for x in range(0, W1 + 8, 8)]
+    poly(pts + [(W1, y1), (0, y1)], fill=c)
+halftone((0, TUN_B + 8, W1, H1), (40, 36, 32), lambda x, y: 0.25 + 0.25 * math.sin(x / 19) * math.cos(y / 7), 3.4, 1.5)
+for k in range(26):   # bedrock stones
+    x, y = R.uniform(0, W1), R.uniform(TUN_B + 34, H1 - 4)
+    ell(x, y, x + R.uniform(8, 18), y + R.uniform(4, 8), fill=(92, 90, 86), outline=(44, 42, 40), w=0.6)
+# a big old water main in cross-section, and a drain pipe running to it
+for cx in (520, 980):
+    ell(cx - 15, TUN_B + 16, cx + 15, TUN_B + 46, fill=(40, 44, 46), outline=(20, 22, 22), w=1.2)
+    ell(cx - 10, TUN_B + 21, cx + 10, TUN_B + 41, fill=(26, 44, 34))
+    ell(cx - 6, TUN_B + 23, cx + 2, TUN_B + 29, fill=(70, 110, 80))
 
 # ---------------- the lair (left, under April's block) ----------------
 LX0, LX1, LT = 40, 330, 214
@@ -349,6 +366,32 @@ rect(MX2 - 8, GROUND, MX2 + 8, TUN_T, fill=(18, 26, 22))
 for y in range(int(GROUND) + 4, TUN_B - 26, 7):
     line([(MX2 - 6, y), (MX2 + 6, y)], (130, 134, 130), 1.0)
 ell(MX2 - 12, STREET + 6, MX2 + 12, STREET + 10, fill=IRON, outline=BLACK, w=0.8)
+
+# ---------------- painted light ----------------
+def glow_layer(shapes, color, blur, strength):
+    g = Image.new('L', (W, H), 0); gd = ImageDraw.Draw(g)
+    for kind, box, v in shapes:
+        b = [s(box[0]), s(box[1]), s(box[2]), s(box[3])]
+        (gd.ellipse if kind == 'e' else gd.rectangle)(b, fill=v)
+    g = g.filter(ImageFilter.GaussianBlur(s(blur))).point(lambda v: int(v * strength))
+    return Image.composite(Image.new('RGB', (W, H), color), im, g)
+im = glow_layer([('r', (x0 - 4, y0 - 4, x1 + 4, y1 + 4), 255) for (x0, y0, x1, y1) in LIT], (250, 222, 150), 5, 0.55)
+im = glow_layer([('e', (PX0 - 30, 140, PX1 + 10, STREET + 20), 200), ('e', (AX0 + 10, 146, AX1, STREET + 14), 140)], (250, 196, 110), 12, 0.42)
+im = glow_layer([('e', (MX - 30, STREET - 10, MX + 30, GROUND + 30), 255)], (200, 230, 170), 10, 0.35)
+im = glow_layer([('r', (0, TUN_B - 30, W1, TUN_B), 200)], (120, 190, 110), 10, 0.30)
+d = ImageDraw.Draw(im)
+for k in range(90):   # reflections of the lair lamp and street light in the water
+    x = R.uniform(120, 260) if k < 40 else R.uniform(0, W1)
+    y = R.uniform(TUN_B - 20, TUN_B - 3)
+    line([(x, y), (x + R.uniform(3, 10), y)], (226, 200, 130) if k < 40 else (150, 200, 140), 0.8)
+# brush texture: long soft strokes, multiplied in
+br = Image.effect_noise((W // 16, H // 4), 40).resize((W, H), Image.BICUBIC).filter(ImageFilter.GaussianBlur(3))
+br = br.point(lambda v: 228 + (v - 128) // 6)
+im = ImageChops.multiply(im, Image.merge('RGB', [br] * 3))
+# soft vignette toward the frame
+vg = Image.new('L', (W, H), 0); ImageDraw.Draw(vg).rectangle([0, 0, W, H], outline=255, width=s(18))
+vg = vg.filter(ImageFilter.GaussianBlur(s(18))).point(lambda v: int(v * 0.5))
+im = Image.composite(Image.new('RGB', (W, H), (16, 18, 18)), im, vg)
 
 # ---------------- print finish ----------------
 # soft misregistration of the red ink, gentle ink spread, grain

@@ -75,6 +75,14 @@ STATEN = [(40.6450, -74.0800), (40.6400, -74.0700), (40.6200, -74.0620), (40.600
 CENTRAL_PARK = [(40.7968, -73.9493), (40.8007, -73.9581), (40.7681, -73.9819), (40.7644, -73.9730)]
 VCP = [(40.9120, -73.8970), (40.9100, -73.8650), (40.8840, -73.8780), (40.8880, -73.9000)]
 WOODLAWN = [(40.9000, -73.8780), (40.8980, -73.8640), (40.8840, -73.8620), (40.8850, -73.8780)]
+PROSPECT = [(40.6720, -73.9700), (40.6650, -73.9620), (40.6510, -73.9660), (40.6550, -73.9790)]
+GREENWOOD = [(40.6600, -73.9960), (40.6550, -73.9850), (40.6480, -73.9890), (40.6520, -74.0000)]
+HIGHWAYS = [
+    [(40.5850, -73.9200), (40.5800, -73.9600), (40.5900, -74.0000), (40.6100, -74.0350), (40.6400, -74.0300), (40.6700, -74.0150)],
+    [(40.7050, -74.0130), (40.7400, -74.0090), (40.7700, -73.9930), (40.8000, -73.9760), (40.8500, -73.9480)],
+    [(40.7100, -73.9790), (40.7400, -73.9740), (40.7700, -73.9480), (40.8000, -73.9320)],
+    [(40.8050, -73.9200), (40.8400, -73.9150), (40.8800, -73.9050), (40.9100, -73.8980)],
+]
 RIVERSIDE = [(40.8150, -73.9600), (40.8155, -73.9625), (40.7700, -73.9930), (40.7690, -73.9900)]
 
 ROUTE = [(40.8970, -73.8860), (40.8900, -73.8800), (40.8780, -73.8880), (40.8620, -73.8960), (40.8480, -73.9050),
@@ -145,10 +153,14 @@ def paint_map():
     rim = ImageChops.subtract(rim, land)
     img = Image.composite(Image.new('RGB', (W4, H4), (120, 120, 130)), img, rim.point(lambda v: int(v * 0.35)))
 
+    for i, rad in enumerate((4, 9, 15, 23, 33)):
+        b = land.filter(ImageFilter.GaussianBlur(rad * K * 0.6)).point(lambda v: 255 if v > 14 else 0)
+        ring = ImageChops.subtract(b, b.filter(ImageFilter.MinFilter(5))).filter(ImageFilter.GaussianBlur(0.5 * K))
+        img = Image.composite(Image.new('RGB', (W4, H4), (196, 186, 170)), img, ring.point(lambda v, i=i: int(v * (0.42 - i * 0.07))))
     lt = t[..., None] if t.shape == (H4, W4) else np.broadcast_to(t, (H4, W4))[..., None]
     lnight = np.array([74, 71, 68], np.float32)
     ldawn = np.array([70, 46, 40], np.float32)
-    lcol = lnight * (1 - lt) + ldawn * lt + lowfreq(11, 60 * K // 4, 22)[..., None] + lowfreq(12, 14 * K // 4, 8)[..., None]
+    lcol = lnight * (1 - lt) + ldawn * lt + lowfreq(11, 60 * K // 4, 22)[..., None] + lowfreq(12, 14 * K // 4, 10)[..., None] + lowfreq(13, 5 * K, 16)[..., None]
     lcol = lcol + glow[..., None] * np.array([18, 10, 4], np.float32)
     land_img = Image.fromarray(np.clip(lcol, 0, 255).astype(np.uint8))
     img = Image.composite(land_img, img, land)
@@ -173,7 +185,7 @@ def paint_map():
         gd.line([(ox - vx * 3000 * K, oy - vy * 3000 * K), (ox + vx * 3000 * K, oy + vy * 3000 * K)], fill=40, width=int(0.4 * K))
     mman = mask_of(MANHATTAN, wob=0)
     mman = mman.filter(ImageFilter.MinFilter(2 * K + 1))
-    img = Image.composite(Image.new('RGB', (W4, H4), (150, 140, 130)), img, ImageChops.multiply(grid, mman).point(lambda v: int(v * 0.55)))
+    img = Image.composite(Image.new('RGB', (W4, H4), (150, 140, 130)), img, ImageChops.multiply(grid, mman).point(lambda v: int(v * 0.85)))
     # Brooklyn and Bronx blocks, a looser grid
     for poly, ang, sp in ((LONG_ISLAND, 0.18, 6.0), (BRONX, -0.05, 6.5)):
         g2 = Image.new('L', (W4, H4), 0); g2d = ImageDraw.Draw(g2)
@@ -183,11 +195,11 @@ def paint_map():
             g2d.line([(o * ca - 3000 * K * sa, o * sa + 3000 * K * ca), (o * ca + 3000 * K * sa, o * sa - 3000 * K * ca)], fill=50, width=int(0.4 * K))
             g2d.line([(o * sa * -1 - 3000 * K * ca, o * ca - 3000 * K * sa), (-o * sa + 3000 * K * ca, o * ca + 3000 * K * sa)], fill=50, width=int(0.4 * K))
         mm = mask_of(poly, wob=0).filter(ImageFilter.MinFilter(3 * K + 1))
-        img = Image.composite(Image.new('RGB', (W4, H4), (150, 140, 130)), img, ImageChops.multiply(g2, mm).point(lambda v: int(v * 0.6)))
+        img = Image.composite(Image.new('RGB', (W4, H4), (150, 140, 130)), img, ImageChops.multiply(g2, mm).point(lambda v: int(v * 0.95)))
 
     # parks, with tree stipple
     d = ImageDraw.Draw(img, 'RGBA')
-    for poly, col in ((CENTRAL_PARK, (44, 58, 40)), (VCP, (40, 54, 38)), (WOODLAWN, (52, 58, 44)), (RIVERSIDE, (44, 58, 40))):
+    for poly, col in ((CENTRAL_PARK, (44, 58, 40)), (VCP, (40, 54, 38)), (WOODLAWN, (52, 58, 44)), (RIVERSIDE, (44, 58, 40)), (PROSPECT, (44, 60, 40)), (GREENWOOD, (52, 58, 44))):
         pts = smooth(wobble(geo(poly), 0.8 * K), 6)
         d.polygon(pts, fill=col + (255,))
         xs = [p[0] for p in pts]; ys = [p[1] for p in pts]
@@ -220,6 +232,9 @@ def paint_map():
         r = rnd.uniform(0.35, 0.9) * K
         al = rnd.randint(90, 230)
         d.ellipse([px - r, py - r, px + r, py + r], fill=(255, rnd.randint(190, 226), rnd.randint(110, 160), al))
+    # parkways and highways, pale
+    for ln in HIGHWAYS:
+        d.line(smooth(geo(ln), 8, closed=False), fill=(214, 196, 168, 95), width=int(1.6 * K), joint='curve')
     # faint other lines
     for ln in OTHER_LINES:
         d.line(smooth(geo(ln), 8, closed=False), fill=(150, 146, 140, 120), width=int(2.2 * K), joint='curve')

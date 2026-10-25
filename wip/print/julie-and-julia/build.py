@@ -39,21 +39,15 @@ def lift(im, gamma=0.9, warm=1.0, sat=1.0, con=1.0):
 
 
 # ---------------- pictures ----------------
-# Paris: Victor A. Lundy, Place St. Andre des Arts, 1949 (LoC, no known restrictions). Sketchbook spiral cropped off.
-WC_W, WC_H = 322, 424
-wc = Image.open(S('lundy-49824.jpg')).convert('RGB').crop((210, 600, 5470, 7540))
-wc = lift(wc, 0.78, 1.04, 1.1, 1.04)
-fit(wc, WC_W, WC_H, 0.5, 0.45).save(A('paris-1949.jpg'), quality=90)
-
 # Julia at the fish market (TMDB still), bright, the chalk price board kept in.
-JM_W, JM_H = PW - 6, 190
+JM_W, JM_H = PW - 6, 366
 jm = Image.open(S('1fQgpbNHwgNh6rAL6xch8y0XwQI.jpg')).convert('RGB')
-fit(lift(jm, 0.95, 1.01, 1.02, 1.03), JM_W, JM_H, 0.5, 0.62).save(A('julia-market.jpg'), quality=90)
+fit(lift(jm, 0.9, 1.02, 1.03, 1.03), JM_W, JM_H, 0.62, 0.7).save(A('julia-market.jpg'), quality=90)
 
 # Julie and Eric at the kitchen table with the Reine de Saba (TMDB still), lifted out of the shadows.
-JT_W, JT_H = PW - 6, 252
+JT_W, JT_H = PW - 6, 296
 jt = Image.open(S('l9BFVhzBaB2w7lJ0UjtK00ooHgI.jpg')).convert('RGB')
-fit(lift(jt, 0.74, 1.02, 1.04, 1.02), JT_W, JT_H, 0.5, 0.35).save(A('julie-table.jpg'), quality=90)
+fit(lift(jt, 0.74, 1.02, 1.04, 1.02), JT_W, JT_H, 0.5, 0.4).save(A('julie-table.jpg'), quality=90)
 
 
 # ---------------- paper: soft warm vignette, gentle mottling, fold shading ----------------
@@ -165,50 +159,45 @@ def page(name, inner):
 
 
 # ---------------- outside: Paris, 1949 ----------------
+BUTTER_PROP = (f'<img src="assets/butter.png" alt="" style="position: absolute; left: 0; top: 0; width: 240px; height: 131px">'
+               f'<div style="position: absolute; left: 40px; top: 14px; width: 164px; text-align: center">'
+               f'<div style="font-family: {BODY}; font-weight: 700; font-size: 15px; letter-spacing: 0.24em; color: {BLUE}; line-height: 18px">BEURRE DOUX</div>'
+               f'<div style="font-family: {DISP}; font-weight: 700; font-size: 38px; line-height: 40px; color: {BLUE}">Butter</div>'
+               f'<div style="height: 2px; background: {TOMATO}; margin: 2px 20px 4px"></div>'
+               f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 19px; color: {TOMATO}">You can never have<br>too much.</div></div>')
+
 def outside():
     o = []
     # back cover: Julia's table
     o.append(at(LX, 40, PW, kicker("81, rue de l'Universit&eacute;, Paris")))
     o.append(at(LX, 62, PW, f'<div style="font-family: {DISP}; font-weight: 700; font-size: 64px; line-height: 68px; color: {BLUE}">Paris, 1949</div>'))
-    o.append(at(LX, 134, PW, f'<div style="font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 25px; color: {NAVY}">'
+    o.append(at(LX, 140, PW, f'<div style="font-family: {BODY}; font-style: italic; font-size: 21px; line-height: 27px; color: {NAVY}">'
                 'Where it all began: a lunch in Rouen, a cooking class full of men in white, and a mountain of onions.</div>'))
-    o.append(photo('julia-market.jpg', 'Julia at a Paris fish market', LX, 194, JM_W, JM_H, BLUE))
-    o.append(at(LX, 394, PW, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 22px; color: {MUTED}">'
-                'Julia at the fish market. The sole, 70 francs the kilo.</div>'))
     menu = (bar("Julia's table", BLUE, 'In old francs')
-            + item('Sole meuni&egrave;re', '70 fr', 'Whole sole dusted in flour, browned in butter, lemon, parsley.', 8,
+            + item('Sole meuni&egrave;re', '70 fr', 'Whole sole dusted in flour, browned in butter, lemon, parsley.', 18,
                    'Rouen, the first lunch. Paul ordered.')
-            + item("Soupe &agrave; l'oignon", '45 fr', 'Onions cooked slow, beef broth, toast, melted cheese.', 8,
-                   'A mountain of onions, chopped by hand.')
-            + item('Goug&egrave;res', '30 fr', 'Warm Gruy&egrave;re choux puffs, a grating of nutmeg.', 8))
-    o.append(at(LX, 426, PW, menu))
+            + item('Goug&egrave;res', '30 fr', 'Warm Gruy&egrave;re choux puffs, a grating of nutmeg.', 22,
+                   'Practice for the cooking school.')
+            + item('Reine de Saba', '40 fr', 'Chocolate almond cake, soft middle, dark chocolate glaze.', 22,
+                   'The Queen of Sheba. A cake from the book.'))
+    o.append(at(LX, 222, PW, menu))
+    o.append(f'<div style="position: absolute; left: {LX + 236}px; top: 586px; width: 240px; height: 131px; transform: rotate(-6deg)">{BUTTER_PROP}</div>')
+    o.append(at(LX, 618, 200, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 21px; color: {MUTED}">'
+                "L'&Eacute;cole des Trois Gourmandes.<br>Bon app&eacute;tit!</div>"))
 
-    # front cover
+    # front cover: the hero, Julia at the market
     o.append(at(RX, 40, PW, kicker('A dinner from the book', TOMATO, 18, 'center')))
     o.append(at(RX, 58, PW, f'<div style="font-family: {DISP}; font-weight: 700; font-size: 72px; line-height: 80px; color: {BLUE}; text-align: center">'
                 f'Julie <span style="color: {TOMATO}">&amp;</span> Julia</div>'))
     o.append(at(RX, 138, PW, f'<div style="font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 24px; color: {NAVY}; text-align: center">'
                 'Paris, 1949 &nbsp;and&nbsp; Queens, 2002</div>'))
-    wx = RX + (PW - WC_W - 6) // 2 + 34
-    o.append(photo('paris-1949.jpg', 'Watercolor of a Left Bank street, Paris, 1949', wx, 176, WC_W, WC_H, BLUE,
-                   ' box-shadow: 0 3px 10px rgba(60,40,10,0.25)'))
-    # butter wrapper prop, over the watercolor's lower left corner
-    o.append(f'<div style="position: absolute; left: {RX - 4}px; top: 488px; width: 220px; height: 120px; transform: rotate(-7deg)">'
-             f'<img src="assets/butter.png" alt="" style="position: absolute; left: 0; top: 0; width: 220px; height: 120px">'
-             f'<div style="position: absolute; left: 36px; top: 12px; width: 150px; text-align: center">'
-             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.24em; color: {BLUE}; line-height: 18px">BEURRE DOUX</div>'
-             f'<div style="font-family: {DISP}; font-weight: 700; font-size: 34px; line-height: 36px; color: {BLUE}">Butter</div>'
-             f'<div style="height: 2px; background: {TOMATO}; margin: 2px 18px 3px"></div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 18px; color: {TOMATO}">You can never have<br>too much.</div>'
-             f'</div></div>')
-    o.append(at(RX + 20, 616, PW - 40, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 22px; color: {MUTED}; text-align: center">'
-                'The Left Bank, painted in 1949, the year Julia went to cooking school.</div>'))
-    o.append(at(RX, 668, PW, f'<div style="font-family: {DISP}; font-weight: 700; font-size: 28px; line-height: 32px; color: {TOMATO}; text-align: center">'
+    o.append(photo('julia-market.jpg', 'Julia at a Paris fish market', RX, 178, JM_W, JM_H, BLUE, ' box-shadow: 0 3px 10px rgba(60,40,10,0.22)'))
+    o.append(at(RX, 562, PW, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 22px; color: {MUTED}; text-align: center">'
+                'Julia at the fish market. The sole, 70 francs the kilo.</div>'))
+    o.append(at(RX, 614, PW, f'<div style="font-family: {DISP}; font-weight: 700; font-size: 34px; line-height: 38px; color: {TOMATO}; text-align: center">'
                 '365 days. 524 recipes.</div>'
-                f'<div style="font-family: {BODY}; font-size: 18px; line-height: 22px; color: {NAVY}; text-align: center; margin-top: 2px">'
-                'One tiny kitchen in Queens. Bon app&eacute;tit!</div>'))
-    o.append(at(RX, 730, PW, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 20px; color: {MUTED}; text-align: center">'
-                "L'&Eacute;cole des Trois Gourmandes. Watercolor, V. A. Lundy.</div>"))
+                f'<div style="font-family: {BODY}; font-size: 20px; line-height: 24px; color: {NAVY}; text-align: center; margin-top: 4px">'
+                'One tiny kitchen in Queens.</div>'))
     return page('outside', ''.join(o))
 
 
@@ -218,45 +207,42 @@ def inside():
     o.append(at(LX, 40, PW, kicker('Long Island City, Queens, N.Y.')))
     o.append(at(LX, 62, PW, f'<div style="font-family: {DISP}; font-weight: 700; font-size: 64px; line-height: 68px; color: {BLUE}">Queens, 2002</div>'))
     o.append(photo('julie-table.jpg', 'Julie and Eric at the kitchen table with the chocolate almond cake', LX, 140, JT_W, JT_H, TOMATO))
-    o.append(at(LX, 404, PW, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 22px; color: {MUTED}">'
+    o.append(at(LX, 446, PW, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 22px; color: {MUTED}">'
                 'Our kitchen table, and the Queen of Sheba, going fast.</div>'))
-    o.append(at(LX, 440, PW, f'<div style="font-family: {BODY}; font-size: 20px; line-height: 26px; color: {NAVY}">'
-                'Welcome, everybody. Everything tonight comes out of Julia\'s book, cooked in a kitchen the size of a closet. '
-                'The beef is attempt number two. I fell asleep on attempt one. Please do not look in the trash.</div>'))
-    o.append(at(LX + 250, 556, 220, f'<div style="font-family: {SCRIPT}; font-size: 38px; line-height: 42px; color: {BLUE}">Julie</div>'))
+    o.append(at(LX, 482, PW, f'<div style="font-family: {BODY}; font-size: 20px; line-height: 26px; color: {NAVY}">'
+                "Everything tonight comes out of Julia's book, cooked in a kitchen the size of a closet. "
+                'The beef is attempt two. I fell asleep on attempt one.</div>'))
+    o.append(at(LX + 330, 558, 150, f'<div style="font-family: {SCRIPT}; font-size: 38px; line-height: 42px; color: {BLUE}">Julie</div>'))
     # prop: blog comment card
-    o.append(f'<div style="position: absolute; left: {LX + 6}px; top: 616px; width: 292px; height: 128px; background: #fffdf6; transform: rotate(-2.5deg); '
+    o.append(f'<div style="position: absolute; left: {LX + 6}px; top: 620px; width: 292px; height: 124px; background: #fffdf6; transform: rotate(-2.5deg); '
              f'box-shadow: 0 3px 9px rgba(70,50,20,0.28); border-top: 6px solid {BLUE}; box-sizing: border-box; padding: 9px 14px 0">'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {BLUE}; line-height: 18px">COMMENTS (17)</div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; line-height: 21px; color: {NAVY}; margin-top: 4px">'
-             'Did the lobsters make it? I check this blog before I check my email.</div>'
-             f'<div style="font-family: {BODY}; font-size: 14px; line-height: 18px; color: {MUTED}; margin-top: 5px">posted by a reader, 11:42 P.M.</div></div>')
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 22px; color: {NAVY}; margin-top: 4px">'
+             'Did the lobsters make it? I check this blog before my email.</div>'
+             f'<div style="font-family: {BODY}; font-size: 14px; line-height: 18px; color: {MUTED}; margin-top: 4px">posted by a reader, 11:42 P.M.</div></div>')
     # prop: the day counter, a tear-off block
-    o.append(f'<div style="position: absolute; left: {LX + 326}px; top: 600px; width: 148px; height: 150px; background: #fffdf6; transform: rotate(3deg); '
+    o.append(f'<div style="position: absolute; left: {LX + 332}px; top: 612px; width: 140px; height: 136px; background: #fffdf6; transform: rotate(3deg); '
              f'box-shadow: 0 3px 9px rgba(70,50,20,0.3); text-align: center">'
-             f'<div style="height: 30px; background: {TOMATO}; font-family: {BODY}; font-weight: 700; font-size: 15px; letter-spacing: 0.2em; color: {BUTTER}; line-height: 30px">DAY</div>'
-             f'<div style="font-family: {DISP}; font-weight: 700; font-size: 64px; line-height: 64px; color: {NAVY}; margin-top: 2px">1</div>'
+             f'<div style="height: 28px; background: {TOMATO}; font-family: {BODY}; font-weight: 700; font-size: 15px; letter-spacing: 0.2em; color: {BUTTER}; line-height: 28px">DAY</div>'
+             f'<div style="font-family: {DISP}; font-weight: 700; font-size: 56px; line-height: 58px; color: {NAVY}; margin-top: 2px">1</div>'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 19px; color: {NAVY}">of 365</div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 19px; color: {TOMATO}">524 recipes</div>'
-             f'<div style="position: absolute; left: 0; top: 30px; width: 148px; height: 2px; background: repeating-linear-gradient(90deg, #d9cfb4 0 4px, transparent 4px 8px)"></div></div>')
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 19px; color: {TOMATO}">524 recipes</div></div>')
 
     # the dinner
     o.append(at(RX, 40, PW, kicker("At Julie's, above the pizza place")))
     o.append(at(RX, 62, PW, f'<div style="font-family: {DISP}; font-weight: 700; font-size: 64px; line-height: 68px; color: {BLUE}">The Dinner</div>'))
     menu = (bar('To start', TOMATO, 'Priced at cost')
-            + item('Kir', '$3.65', 'Dry white Burgundy poured over cr&egrave;me de cassis, a blackberry.', 8)
-            + item("Julie's bruschetta", '$5.24', 'Toasted ciabatta rubbed with garlic, ripe tomato, basil, olive oil.', 8)
-            + '<div style="height: 8px"></div>'
+            + item('Kir', '$3.65', 'Dry white Burgundy poured over cr&egrave;me de cassis, a blackberry.', 16)
+            + item("Julie's bruschetta", '$5.24', 'Toasted ciabatta rubbed with garlic, ripe tomato, basil, olive oil.', 18)
+            + '<div style="height: 22px"></div>'
             + bar('The main event', TOMATO)
-            + item('Lobster, melted butter', '$26.00', 'Two live lobsters, boiled, lemon and drawn butter.', 8,
+            + item('Lobster, melted butter', '$26.00', 'Two live lobsters, boiled, lemon and drawn butter.', 16,
                    'Bought live. There was screaming.')
-            + item('Boeuf bourguignon', '$31.50', 'Beef in red Burgundy, bacon, carrots, pearl onions, mushrooms.', 8,
+            + item('Boeuf bourguignon', '$31.50', 'Beef braised in red wine, bacon, carrots, onions, mushrooms.', 20,
                    'Attempt number two. Nobody fell asleep.')
-            + item('P&acirc;t&eacute; de canard en cro&ucirc;te', '$20.02', 'Whole duck, boned, stuffed with pork and veal, in pastry.', 8,
-                   'Boned by hand. It took a while.')
-            + f'<div style="height: 2px; background: {BLUE}; margin-top: 14px"></div>'
-            + item('Reine de Saba', '$8.15', 'Chocolate almond cake, soft middle, dark chocolate glaze.', 8))
-    o.append(at(RX, 136, PW, menu))
+            + item('P&acirc;t&eacute; de canard en cro&ucirc;te', '$20.02', 'Whole duck, boned, stuffed with pork and veal, in pastry.', 20,
+                   'Boned by hand. It took a while.'))
+    o.append(at(RX, 140, PW, menu))
     o.append(at(RX, 734, PW, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 20px; color: {MUTED}; text-align: right">'
                 'Prices are the grocery bill. No Cobb salad.</div>'))
     return page('inside', ''.join(o))

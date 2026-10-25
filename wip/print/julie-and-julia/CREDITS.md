@@ -1,5 +1,6 @@
 # Julie & Julia menu (Julie's dinner, Queens, 2002), image credits
-- paris-1949.jpg (outside, front cover): Victor A. Lundy, "Place St. André des Arts, Paris between Rue Suger & Rue St. André des Arts", watercolor, 1949, Rotch Travelling Scholarship Sketchbook p. 6. Library of Congress, Victor A. Lundy archive, ppmsca 49824. Rights: "No known restrictions on publication." https://www.loc.gov/item/2016650168/ , master https://tile.loc.gov/storage-services/master/pnp/ppmsca/49800/49824u.tif . Spiral binding cropped off, lightly lifted. Painted shop words are generic (mercerie, pain), no business names.
-- julia-market.jpg (outside, back cover): TMDB still /1fQgpbNHwgNh6rAL6xch8y0XwQI.jpg (Julie & Julia, 2009), Julia at the fish market, listed in data/film-stills.json.
+- julia-market.jpg (outside, front cover hero): TMDB still /1fQgpbNHwgNh6rAL6xch8y0XwQI.jpg (Julie & Julia, 2009), Julia at the fish market, listed in data/film-stills.json.
 - julie-table.jpg (inside): TMDB still /l9BFVhzBaB2w7lJ0UjtK00ooHgI.jpg (Julie & Julia, 2009), Julie and Eric with the chocolate almond cake, lifted.
 - paper-*.png, band.png, butter.png: painted in build.py. paper-grain.png: shared house grain from jurassic/src/assets.
+
+- Lundy watercolor dropped in the design lift (owner asked for one big hero per face); source kept in src/ only.
