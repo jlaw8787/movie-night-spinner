@@ -45,6 +45,9 @@ A real menu, printed by a food venue in the film's world, in that year and place
    - Props and pictures chosen to pull you into the world, not just paperwork.
    It must never feel like a polite generic restaurant with the film's name on it.
 
+## Design-led (owner, Oct 26: Beetlejuice graded 4.5, batch 6 "ok-ish")
+24. Use the film's OWN visual language as the design system: its palette, cinematography, production design, title design and iconic motifs (Burton stripes and crooked type, Willis shadows and amber, Vegas neon, Leone sepia). Do not settle for a neat generic layout with film details pasted on. The front should feel like a frame from the film. Signature art large and skilled.
+
 ## Film variables (the only things that change per film)
 Venue and its name, palette, display face, logo or sign, hero picture, section names, dishes and wording, character note, Easter eggs, prop accent, format.
 

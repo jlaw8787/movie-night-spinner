@@ -62,6 +62,6 @@ godfather-3: Tenor Sans
 casino: Gravitas One
 a-bronx-tale: Damion
 godfather-2: Sancreek
-beetlejuice: Creepster
+beetlejuice: Jolly Lodger
 a-goofy-movie: Luckiest Guy
 the-godfather: IM Fell English SC
