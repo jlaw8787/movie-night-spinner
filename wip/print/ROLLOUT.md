@@ -11,6 +11,7 @@ You are rebuilding one film's menu to the locked house standard. Do not invent a
 7. One self-check at full size, one fix pass. Then stop.
 8. Every printed dish from the recipe stays the same food. Write film.json and <fmt>.labels.json.
 9. Report in under 120 words: venue, display face, props, number of winks, dish renames, honest grade.
+10. Rule 25 is a hard ban: no flat vector or clip art. Every picture is a still, a real photo or a real period illustration; painted art only for a map or cutaway at Jurassic level.
 PRIVACY: never put the owner's email address, name or any personal detail in a User-Agent header, URL or request to any site. If a site wants a contact in the User-Agent, use "MovieNightSpinner/1.0 (personal project)" and nothing else.
 Budget: up to 4 web searches (owner wants research where it helps: the venue, period menus, and reference for the signature art), no more than one art redo.
 Every film must be unique (owner): its own format, signature piece, palette, display face and props, all assigned in your prompt. Match the film's world and era.

@@ -48,6 +48,14 @@ A real menu, printed by a food venue in the film's world, in that year and place
 ## Design-led (owner, Oct 26: Beetlejuice graded 4.5, batch 6 "ok-ish")
 24. Use the film's OWN visual language as the design system: its palette, cinematography, production design, title design and iconic motifs (Burton stripes and crooked type, Willis shadows and amber, Vegas neon, Leone sepia). Do not settle for a neat generic layout with film details pasted on. The front should feel like a frame from the film. Signature art large and skilled.
 
+## No flat art (owner, Oct 26: "clip art, flat shit creeping back in". HARD BAN)
+25. No flat vector or clip art anywhere on a menu. Banned: flat colour fills with no texture or light, simple geometric icons, cartoon objects drawn from basic shapes, flat city skylines or building rows, flat pie or wheel diagrams, flat drawn jars, cups, food, clocks or gauges, emoji-like drawings, and any "infographic" look.
+   - Every picture must be one of: a TMDB still, a real public domain or free-licence photo, or a real period engraving or illustration from LOC, NYPL or Wikimedia.
+   - Painted art is allowed only for a map or cutaway with no real image alternative, and only if it has real texture, light and shading at Jurassic island map level. If in doubt, use a photo or still instead.
+   - Small props (cards, tickets, stamps, tags) stay as typographic paper objects; they must not carry drawn icons.
+   - Self-check before reporting: for every picture, ask "could this pass as clip art or a vector icon?" If yes, replace it with a real photo or still. Report each picture's source in the reply.
+   - Review gate: any menu with flat art is sent back, whatever its grade.
+
 ## Film variables (the only things that change per film)
 Venue and its name, palette, display face, logo or sign, hero picture, section names, dishes and wording, character note, Easter eggs, prop accent, format.
 
