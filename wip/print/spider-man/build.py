@@ -42,6 +42,29 @@ queens = Image.open(S('cb4BsGIhr06QQFbP8pW9z5aLh3H.jpg')).convert('RGB')
 queens = ImageEnhance.Brightness(queens).enhance(1.06)
 fit(queens, 384, 216, (0, 120, 3840, 2160)).save(A('forest-hills.jpg'), quality=90)
 
+kiss = Image.open(S('k4U306K3u0dPoV7ULSuxxW3ImLP.jpg')).convert('RGB')
+kiss = ImageEnhance.Brightness(kiss).enhance(1.08)
+fit(kiss, 384, 200, (0, 0, 2074, 1100)).save(A('rain-kiss.jpg'), quality=90)
+
+def web(fn, r, rgba, spokes=8, rings=7, width=2):
+    """Corner web, engraved line style: spokes from the corner, sagging threads between them."""
+    import math
+    k = 2; R2 = r * k; im = Image.new('RGBA', (R2, R2), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    angs = [math.pi / 2 + i * (math.pi / 2) / (spokes - 1) for i in range(spokes)]  # corner at top right
+    cx, cy = R2, 0
+    for a in angs: d.line([(cx, cy), (cx + math.cos(a) * R2 * 1.02, cy + math.sin(a) * R2 * 1.02)], fill=rgba, width=width * k)
+    for j in range(1, rings + 1):
+        rr = R2 * j / (rings + 0.6)
+        for a, b in zip(angs, angs[1:]):
+            p0 = (cx + math.cos(a) * rr, cy + math.sin(a) * rr); p1 = (cx + math.cos(b) * rr, cy + math.sin(b) * rr)
+            m = ((a + b) / 2); sag = rr * 0.86
+            pm = (cx + math.cos(m) * sag, cy + math.sin(m) * sag)
+            pts = [((1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * pm[0] + t * t * p1[0], (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * pm[1] + t * t * p1[1]) for t in [i / 12 for i in range(13)]]
+            d.line(pts, fill=rgba, width=max(1, int(width * k * 0.75)))
+    im.resize((r, r), Image.LANCZOS).save(A(fn))
+web('web-sign.png', 200, (142, 155, 199, 255))
+web('web-paper.png', 170, (28, 43, 90, 60))
+
 def finish(name, seed):
     """Laminate: soft diagonal sheen plus gentle edge wear. Low detail, never over text strongly."""
     rnd = random.Random(seed)
@@ -122,6 +145,15 @@ def clipping(o, x, y):
              f'<span style="font-style: italic">Swinging over Sixth Avenue at lunch hour.</span><span style="font-weight: 800">Photo: P. Parker</span></div>'
              '</div>')
 
+def ticket(o, x, y):
+    """Wrestling night ticket, Bone Saw's three minutes."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 232px; background: {NAVY}; border-radius: 6px; padding: 10px 12px 10px; '
+             f'box-sizing: border-box; transform: rotate(-2deg); box-shadow: 0 2px 6px rgba(30,25,20,0.35); text-align: center; border: 2px solid {RED}">'
+             f'{kicker("Friday, on the TV", "#c9d1ea", "font-size: 14px")}'
+             f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1; color: {PAPER}; margin-top: 6px; white-space: nowrap">Wrestling Night</div>'
+             f'<div style="font-family: {BODY}; font-weight: 800; font-size: 16px; line-height: 1.3; color: #ff6b6b; margin-top: 5px">BONE SAW VS. ALL COMERS</div>'
+             f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {PAPER}; margin-top: 3px">Eat a Bone Saw in three minutes, it\'s on us.</div></div>')
+
 def coupon(o, x, y):
     o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 236px; background: {CREAM}; border: 3px dashed {RED}; padding: 10px 12px; '
              f'box-sizing: border-box; transform: rotate(2.2deg); box-shadow: 0 2px 6px rgba(30,25,20,0.3); text-align: center">'
@@ -141,17 +173,17 @@ def front():
              f'font-family: {BODY}; font-weight: 800; font-size: 22px; letter-spacing: 0.34em; line-height: 38px; color: {PAPER}">DINER</div>')
     o.append(f'<div style="position: absolute; left: 340px; top: 122px; width: 432px; text-align: right; font-family: {BODY}; font-weight: 600; font-size: 18px; '
              f'letter-spacing: 0.16em; line-height: 1.35; color: #c9d1ea">SIXTH AVE. AT GRAND ST.<br>OPEN 6 A.M. TO 1 A.M.</div>')
-    o.append(f'<div style="position: absolute; left: 560px; top: 44px; width: 212px">{speed(212, "#8e9bc7", 9)}</div>')
+    o.append(f'<div style="position: absolute; left: {W - 200}px; top: 0; width: 200px; height: 176px; overflow: hidden"><img src="assets/web-sign.png" alt="" aria-hidden="true" style="width: 200px; height: 200px; display: block; opacity: 0.55"></div>')
     o.append(f'<div style="position: absolute; left: 0; top: 176px; width: {W}px; height: 6px; background: {RED}"></div>')
     o.append(f'<div style="position: absolute; left: 0; top: 186px; width: {W}px; height: 2px; background: {NAVY}"></div>')
 
     clipping(o, L + 2, 212)
     o.append(f'<div style="position: absolute; left: 540px; top: 214px; width: 232px">'
-             + kicker('Our corner')
-             + f'<div style="font-family: {DISP}; font-size: 34px; line-height: 1.05; color: {NAVY}; margin-top: 8px">Front page, right outside the window.</div>'
-             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.32; color: #2a2d3a; margin-top: 10px">Grab a booth and keep watching the sky.</div>'
-             f'<div style="font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.35; color: {RED}; margin-top: 10px">Midtown Science students, 10% off with school ID.</div></div>')
-    coupon(o, 540, 482)
+             + kicker('House rule')
+             + f'<div style="font-family: {DISP}; font-size: 33px; line-height: 1.04; color: {NAVY}; margin-top: 8px">Drop your tray? We catch it.</div>'
+             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: #2a2d3a; margin-top: 6px">Every plate, still on it. Don\'t ask how.</div></div>')
+    ticket(o, 540, 386)
+    coupon(o, 542, 532)
 
     o.append(f'<div style="position: absolute; left: {L}px; top: 658px; width: {CW}px">'
              + bar('Breakfast All Day', 42)
@@ -160,6 +192,7 @@ def front():
              + item('Two eggs any style', '4.50', 'Home fries and buttered toast, rye or white.')
              + item('Western omelette', '5.75', 'Three eggs folded over ham, green pepper and onion. Home fries.')
              + '</div>')
+    o.insert(0, f'<img src="assets/web-paper.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: {H - 170}px; width: 170px; height: 170px; display: block; transform: rotate(180deg)">')
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
@@ -168,21 +201,27 @@ def back():
     o.append(f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 98px; background: {NAVY}"></div>')
     o.append(moon(L, 32, 56))
     o.append(f'<div style="position: absolute; left: 114px; top: 40px; font-family: {DISP}; font-size: 44px; line-height: 1; color: {PAPER}; white-space: nowrap">Grand Moon Diner</div>')
-    o.append(f'<div style="position: absolute; left: 470px; top: 44px; width: 302px">{speed(302, "#8e9bc7", 8)}</div>')
+    o.append(f'<div style="position: absolute; left: {W - 130}px; top: 0; width: 130px; height: 98px; overflow: hidden"><img src="assets/web-sign.png" alt="" aria-hidden="true" style="position: absolute; left: -70px; top: 0; width: 200px; height: 200px; display: block; opacity: 0.55"></div>')
+    o.append(f'<div style="position: absolute; left: 500px; top: 46px; width: 160px">{speed(160, "#8e9bc7", 8)}</div>')
     o.append(f'<div style="position: absolute; left: 0; top: 98px; width: {W}px; height: 6px; background: {RED}"></div>')
 
     # waitress note
-    o.append(f'<div style="position: absolute; left: {L}px; top: 122px; width: 314px; height: 262px; background: {CREAM}; border: 2px solid {NAVY}; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 122px; width: 314px; height: 150px; background: {CREAM}; border: 2px solid {NAVY}; '
              f'border-radius: 10px; padding: 16px 18px 0; box-sizing: border-box">'
              + kicker('From your waitress', RED, 'font-size: 16px')
-             + f'<div style="font-family: {BODY}; font-style: italic; font-size: 21px; line-height: 1.4; color: {NAVY}; margin-top: 12px">'
-             'If I am not pouring your coffee, I am at an audition. Order the rickey, I squeeze the limes myself.</div>'
-             f'<div style="font-family: {SCRIPT}; font-size: 40px; line-height: 1; color: {RED}; text-align: right; margin-top: 6px">M.J.</div></div>')
+             + f'<div style="font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 1.35; color: {NAVY}; margin-top: 8px">'
+             'Not pouring your coffee? I am at an audition.</div>'
+             f'<div style="font-family: {SCRIPT}; font-size: 36px; line-height: 1; color: {RED}; text-align: right; margin-top: 0">M.J.</div></div>')
+    o.append(f'<div style="position: absolute; left: {L + 4}px; top: 288px; width: 306px; background: {NEWS}; border: 2px solid #222; padding: 8px 12px; box-sizing: border-box; '
+             f'transform: rotate(-1.5deg); box-shadow: 1px 2px 6px rgba(30,25,20,0.3)">'
+             f'<div style="font-family: {BODY}; font-weight: 800; font-size: 28px; line-height: 1; color: #111; letter-spacing: 0.02em">PHOTOS WANTED</div>'
+             f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: #222; margin-top: 4px">Spider-Man. Clear pictures only. Cash paid. '
+             f'<b>J. Jonah Jameson, Daily Bugle.</b></div></div>')
     # Queens still
     o.append(f'<div style="position: absolute; left: 380px; top: 122px; border: 3px solid {NAVY}; padding: 3px; background: {PAPER}">'
-             f'<img src="assets/forest-hills.jpg" alt="A row of small gabled houses with stoops and old sedans on a sunny Queens street" style="display: block; width: 384px; height: 200px"></div>')
+             f'<img src="assets/rain-kiss.jpg" alt="An upside-down masked man and a red-haired woman kissing in the pouring rain" style="display: block; width: 384px; height: 200px"></div>')
     o.append(f'<div style="position: absolute; left: 380px; top: 338px; width: 392px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}">'
-             'Forest Hills, Queens. Half our breakfast crowd comes in from out here.</div>')
+             'Seen in the alley out back, in the rain. Upside down. The kitchen has questions.</div>')
 
     lw, rx, rw = 352, 424, 348
     left = (bar('Sandwiches', 40)
@@ -204,8 +243,8 @@ def back():
     o.append(f'<div style="position: absolute; left: {L}px; top: 956px; width: {CW}px; height: 2px; background: {NAVY}"></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 966px; width: {CW}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {MUTE}">'
-             '<span>Grand Moon Diner, Sixth Ave. at Grand St., New York<br>(212) 555-0503. Since 1962. Menu No. 15.</span>'
-             f'<span style="text-align: right">Prices subject to change.<br><span style="color: {RED}; font-weight: 600">No substitutions on the Bone Saw.</span></span></div>')
+             '<span>Grand Moon Diner, Sixth Ave. at Grand St., N.Y. (212) 555-0503<br>Since 1962. Midtown Science kids 10% off.</span>'
+             f'<span style="text-align: right">Menu No. 15. Prices subject to change.<br><span style="color: {RED}; font-weight: 600">No substitutions on the Bone Saw.</span></span></div>')
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}

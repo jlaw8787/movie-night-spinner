@@ -17,7 +17,7 @@ HAND = "font-family: 'Caveat', cursive"
 
 # spec key -> printed name, description, price, phone note
 SPEC = {
-  "Boat drink piña coladas": ("Boat Drinks Colada", "White rum, pineapple, coconut cream, blended thick. Coconut rim, umbrella.", "4.75",
+  "Boat drink piña coladas": ("Boat Drinks Colada", "Rum, pineapple, coconut cream, blended. Umbrella.", "4.75",
                               "Say it with the crew: boat drinks."),
   "Afterlife Advice deviled eggs": ("Deviled Eggs", "Six halves, yolks whipped with Dijon and pickle juice, smoked paprika, chives.", "1.95",
                                     "Bar snack of the house since the booths went in."),
@@ -30,11 +30,10 @@ SPEC = {
 }
 DRINKS = [
   ("Boat drink piña coladas", None),
-  (None, ("Mai Tai", "Light and dark rum, orange curaçao, almond syrup, fresh lime.", "4.50")),
-  (None, ("Blue Hawaiian", "Rum, blue curaçao, pineapple, cream of coconut, on ice.", "4.50")),
-  (None, ("Zombie", "Three rums, lime, grapefruit and cinnamon syrup. Limit two a night.", "5.50")),
-  (None, ("Give It a Name", "Tell the bartender how the day went. He pours to match.", "4.00")),
-  (None, ("Virgin Colada", "All the pineapple and coconut, none of the rum.", "2.25")),
+  (None, ("Mai Tai", "Two rums, orange curaçao, almond syrup, lime.", "4.50")),
+  (None, ("Blue Hawaiian", "Rum, blue curaçao, pineapple, cream of coconut.", "4.50")),
+  (None, ("Zombie", "Three rums, lime, grapefruit. Limit two a night.", "5.50")),
+  (None, ("Give It a Name", "Tell us your day. We pour to match it.", "4.00")),
 ]
 FOOD = [
   ("Afterlife Advice deviled eggs", None),
@@ -97,19 +96,22 @@ def front():
     o.append(f'<div style="position: absolute; left: 0; top: 154px; width: {S}px; height: 240px; background: {NAVY}">'
              f'<img src="assets/skyline.jpg" alt="Downtown Denver and the Front Range from City Park" style="display: block; width: {S}px; height: 240px; object-fit: cover; object-position: center 0"></div>')
     o.append(stripe(397))
-    o.append(f'''<div style="position: absolute; left: 40px; top: 352px; background: {WHITE}; padding: 5px 12px 6px; {BODY}; font-size: 16px; line-height: 1.2; color: {MUTE}; white-space: nowrap">
-      <b style="color: {NAVY}">Our view west.</b> City Park to the mountains, five minutes up Colfax.</div>''')
-    # section ribbon
-    o.append(f'''<div style="position: absolute; left: 40px; top: 420px; display: flex; align-items: center; gap: 14px">
-      <div style="background: {CORAL}; color: {WHITE}; {DISP}; font-size: 30px; line-height: 1; padding: 6px 18px 8px; border-radius: 4px; white-space: nowrap">Boat Drinks</div>
-      {kicker('Poured 4 p.m. to last call', NAVY)}</div>''')
-    # drinks, two columns of three
-    L = ''.join(item(*pick(r), top=(0 if i == 0 else 10)) for i, r in enumerate(DRINKS[:3]))
-    R = ''.join(item(*pick(r), top=(0 if i == 0 else 10)) for i, r in enumerate(DRINKS[3:]))
-    o.append(box(40, 478, 350, L))
-    o.append(box(426, 478, 350, R))
-    o.append(f'<div style="position: absolute; left: 407px; top: 482px; width: 2px; height: 256px; background: #b9cfc8"></div>')
-    o.append(box(40, 756, 736, f'<div style="{BODY}; font-size: 16px; line-height: 1.2; color: {MUTE}">Prices subject to change. Colorado draft by the pitcher. Kitchen on the back. Denver, 1995.</div>'))
+    o.append(f'''<div style="position: absolute; left: 40px; top: 168px; background: {WHITE}; padding: 4px 10px 5px; {BODY}; font-size: 15px; line-height: 1.2; color: {MUTE}; white-space: nowrap">
+      <b style="color: {NAVY}">Our view west.</b> City Park to the mountains.</div>''')
+    # running gag, drawn large: the crew's toast as a coral banner over the photo edge
+    o.append(f'''<div style="position: absolute; left: 30px; top: 352px; transform: rotate(-3deg); background: {CORAL}; padding: 6px 22px 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.25); white-space: nowrap">
+      <span style="{DISP}; font-size: 56px; line-height: 1; color: {WHITE}">Boat Drinks!</span></div>''')
+    # drinks, one list
+    o.append(box(40, 450, 450, ''.join(item(*pick(r), top=(0 if i == 0 else 7)) for i, r in enumerate(DRINKS))))
+    # house rules panel
+    rule = lambda t: f'<div style="{BODY}; font-size: 18px; line-height: 1.24; color: {SEA}; margin-top: 11px; padding-left: 14px; position: relative"><span style="position: absolute; left: 0; top: 0; color: #ff8f78; font-weight: 800">&bull;</span>{t}</div>'
+    o.append(f'''<div style="position: absolute; left: 516px; top: 436px; width: 300px; height: 380px; background: {NAVY}"></div>''')
+    o.append(box(536, 452, 240, f'<div style="{DISP}; font-size: 32px; line-height: 1; color: {WHITE}">House Rules</div>'
+        + rule('<b style="color: #ffffff">Give it a name.</b> Lingo is free here. Rum is not.')
+        + rule('Every round of boat drinks gets a toast from the bar.')
+        + rule('The Man with the Plan gets the corner table.')
+        + rule('Mister Shhh drinks alone. Let him.')
+        + f'<div style="{BODY}; font-size: 15px; line-height: 1.25; color: #9fbcb5; margin-top: 12px">Prices subject to change.</div>'))
 
     # prop 1: Afterlife Advice business card, tucked over the treeline corner of the photo
     o.append(f'''<div style="position: absolute; left: 524px; top: 236px; width: 252px; height: 140px; background: {WHITE}; border: 1px solid #c8c6bb; transform: rotate(-4deg); box-shadow: 0 3px 8px rgba(0,0,0,0.28)">
@@ -126,19 +128,19 @@ def front():
 def back():
     o = []
     # left: kitchen list
-    o.append(box(40, 42, 350, kicker('From the grill &middot; all night')
+    o.append(box(40, 42, 350, kicker('Name it, we grill it')
                  + f'<div style="{DISP}; font-size: 46px; line-height: 1.02; color: {NAVY}; margin-top: 6px">The Kitchen</div>'
                  + f'<div style="width: 350px; height: 4px; background: {NAVY}; margin-top: 10px"></div>'
                  + f'<div style="width: 350px; height: 4px; background: {CORAL}; margin-top: 3px"></div>'))
     o.append(box(40, 160, 350, ''.join(item(*pick(r), top=(0 if i == 0 else 13)) for i, r in enumerate(FOOD))))
 
     # right: the counter still in a coral frame
-    o.append(f'<div style="position: absolute; left: 420px; top: 40px; width: 356px; height: 248px; border: 5px solid {CORAL}; background: {NAVY}">'
-             f'<img src="assets/still-counter.jpg" alt="A regular at the lunch counter" style="display: block; width: 356px; height: 248px; object-fit: cover"></div>')
-    o.append(box(420, 302, 366, f'<div style="{BODY}; font-size: 18px; line-height: 1.25; color: {MUTE}"><b style="color: {NAVY}">The counter.</b> Sugar on every stool, pie under glass. Joe Heff keeps the corner booth.</div>'))
+    o.append(f'<div style="position: absolute; left: 420px; top: 40px; width: 356px; height: 200px; border: 5px solid {CORAL}; background: {NAVY}">'
+             f'<img src="assets/still-counter.jpg" alt="A regular at the lunch counter" style="display: block; width: 356px; height: 200px; object-fit: cover; object-position: center 20%"></div>')
+    o.append(box(420, 254, 366, f'<div style="{BODY}; font-size: 18px; line-height: 1.25; color: {MUTE}"><b style="color: {NAVY}">The counter.</b> Sugar on every stool, pie under glass. Joe Heff keeps the corner booth.</div>'))
 
     # prop 2: drink chit with Jimmy's note (the character voice)
-    o.append(f'''<div style="position: absolute; left: 432px; top: 380px; width: 336px; height: 258px; background: {WHITE}; border: 1px solid #c8c6bb; transform: rotate(2.5deg); box-shadow: 0 3px 8px rgba(0,0,0,0.22)">
+    o.append(f'''<div style="position: absolute; left: 432px; top: 318px; width: 336px; height: 258px; background: {WHITE}; border: 1px solid #c8c6bb; transform: rotate(2.5deg); box-shadow: 0 3px 8px rgba(0,0,0,0.22)">
       <div style="position: absolute; left: 0; top: 0; width: 336px; height: 38px; background: {NAVY}"></div>
       <div style="position: absolute; left: 14px; top: 8px; {DISP}; font-size: 20px; line-height: 1.1; color: {WHITE}">The Altitude</div>
       <div style="position: absolute; right: 14px; top: 11px; {BODY}; font-weight: 700; font-size: 16px; letter-spacing: 0.14em; color: #f2b8ac">DRINK CHIT</div>
@@ -154,8 +156,14 @@ def back():
       <div style="position: absolute; left: 14px; top: 222px; {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.12em; color: {CORAL}">BOAT DRINKS!</div></div>''')
 
     # footer, right column
-    o.append(box(420, 676, 356, f'''<div style="{BODY}; font-size: 16px; line-height: 1.3; color: {MUTE}">
-      The Altitude, 1995 E. Colfax Ave., Denver. Form AA-95. Prices subject to change. No buckwheats on the premises.</div>'''))
+    # the Afterlife Advice video booth, a big gag fans spot at once
+    o.append(f'''<div style="position: absolute; left: 420px; top: 598px; width: 356px; height: 112px; box-sizing: border-box; border: 3px solid {CORAL}; background: {WHITE}">
+      <div style="position: absolute; left: 14px; top: 12px; width: 16px; height: 16px; border-radius: 8px; background: {CORAL}"></div>
+      <div style="position: absolute; left: 38px; top: 6px; {DISP}; font-size: 26px; line-height: 1.1; color: {NAVY}">Video Booth</div>
+      <div style="position: absolute; right: 14px; top: 12px; {BODY}; font-weight: 800; font-size: 20px; color: {CORAL}">19.95</div>
+      <div style="position: absolute; left: 14px; top: 42px; width: 324px; {BODY}; font-size: 16px; line-height: 1.25; color: {INK}">Afterlife Advice, back hallway. Say your piece to camera in one take. Give it a name, we label the tape.</div></div>''')
+    o.append(box(420, 722, 356, f'''<div style="{BODY}; font-size: 16px; line-height: 1.3; color: {MUTE}">
+      The Altitude, 1995 E. Colfax Ave., Denver. Form No. 95. No buckwheats on the premises.</div>'''))
     return paper(o)
 
 

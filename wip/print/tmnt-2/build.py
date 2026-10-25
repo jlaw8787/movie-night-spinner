@@ -31,17 +31,17 @@ SPEC = {
 ADD = {
   'plain': ("Plain Cheese Pie", "Red sauce, whole milk mozzarella. Slice 1.25.", "9.50"),
   'four': ("Four Brothers Special", "A topping per quarter: pepperoni, sausage, mushroom, peppers.", "13.50"),
-  'family': ("Family Night", "Two large pies, any toppings, four sodas.", "19.91"),
+  'family': ("Cowabunga-Sized Pie", "Our 24 inch giant, four toppings, four sodas. Feeds four brothers and a dad.", "19.91"),
   'zeppole': ("Zeppole", "Fried dough puffs shaken in powdered sugar, hot in a bag.", "1.99"),
   'soda': ("Canned Soda", "Cola, orange, root beer, ginger ale.", ".75"),
 }
 
 
-def item(n, d, p, top=14):
+def item(n, d, p, top=14, pc=RED):
     return f'''<div style="margin-top: {top}px">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px">
         <div style="{BODY}; font-weight: 700; font-size: 28px; line-height: 1.05; color: {INK}; text-transform: uppercase; letter-spacing: 0.01em">{n}</div>
-        <div style="{BODY}; font-weight: 700; font-size: 28px; line-height: 1.05; white-space: nowrap; color: {RED}">{p}</div></div>
+        <div style="{BODY}; font-weight: 700; font-size: 28px; line-height: 1.05; white-space: nowrap; color: {pc}">{p}</div></div>
       <div style="{BODY}; font-weight: 500; font-size: 20px; line-height: 1.22; margin-top: 2px; color: #2b362d">{d}</div></div>'''
 
 
@@ -83,6 +83,35 @@ def tgri_label():
       <div style="position: absolute; left: 0; top: 98px; width: 236px; height: 26px; background: #f2d23a; overflow: hidden">{stripes}</div></div>'''
 
 
+def splat():
+    """Big ooze splat behind the starters and sweets: overlapping blobs and drips, flat green ink."""
+    blobs = [(44, 586, 524, 266, '46% 54% 42% 58% / 58% 44% 56% 42%'), (42, 640, 110, 120, '50%'), (470, 620, 96, 90, '50%'),
+             (180, 584, 110, 50, '50%'), (390, 584, 120, 50, '50%'), (470, 790, 96, 80, '50%'), (60, 800, 110, 70, '50%')]
+    o = [f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; border-radius: {r}; background: {OOZE}"></div>' for x, y, w, h, r in blobs]
+    for x, h in ((120, 40), (230, 30), (410, 36), (520, 24)):
+        o.append(f'<div style="position: absolute; left: {x}px; top: 836px; width: 16px; height: {h}px; border-radius: 8px; background: {OOZE}"></div>')
+        o.append(f'<div style="position: absolute; left: {x - 3}px; top: {836 + h - 14}px; width: 22px; height: 22px; border-radius: 11px; background: {OOZE}"></div>')
+    for x, y, d in ((46, 610, 16), (548, 610, 12), (44, 790, 12)):
+        o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {d}px; height: {d}px; border-radius: 50%; background: {OOZE}"></div>')
+    return ''.join(o)
+
+
+def manhole():
+    """Sewer delivery roundel on the hero still: a cast-iron manhole lid."""
+    grid = ''.join(f'<div style="position: absolute; left: 18px; top: {y}px; width: 118px; height: 3px; background: #4a4d47"></div>' for y in (30, 124))
+    return f'''<div style="position: absolute; left: 70px; top: 384px; width: 154px; height: 154px; border-radius: 50%; background: #2f322d; border: 5px solid {OOZE}; box-sizing: border-box; transform: rotate(-8deg); box-shadow: 1px 3px 4px rgba(0,0,0,0.35)">
+      {grid}
+      <div style="position: absolute; left: 0; top: 38px; width: 144px; text-align: center; {DISP}; font-size: 26px; line-height: 0.95; letter-spacing: 0.03em; color: {OOZE}">SEWER<br>DELIVERY</div>
+      <div style="position: absolute; left: 0; top: 92px; width: 144px; text-align: center; {BODY}; font-weight: 700; font-size: 15px; line-height: 1.1; color: {BOARD}">Leave it at the grate.<br>No extra charge.</div></div>'''
+
+
+def no_feed():
+    """Tokka and Rahzar sign, like a zoo notice."""
+    return f'''<div style="position: absolute; left: 66px; top: 540px; width: 250px; height: 44px; background: #f2d23a; border: 3px solid {INK}; box-sizing: border-box; transform: rotate(-2deg); text-align: center">
+      <div style="{DISP}; font-size: 22px; line-height: 22px; letter-spacing: 0.04em; color: {INK}; margin-top: 2px">PLEASE DO NOT FEED</div>
+      <div style="{BODY}; font-weight: 700; font-size: 14px; line-height: 14px; color: {INK}">the big babies. They only want more.</div></div>'''
+
+
 def lid():
     o = []
     # board grain and corrugation, two-ink border printed on the lid
@@ -106,21 +135,25 @@ def lid():
 
     # hero still, the lair with a pie
     o.append(photo('assets/still-lair.jpg', 'The Turtles at home in their new lair with a pie from the shop', 56, 260, 488, 266))
-    o.append(box(56, 540, 270, f'<div style="{BODY}; font-style: italic; font-weight: 500; font-size: 16px; line-height: 1.2; color: {MUTE}">We deliver anywhere. Even below street level.</div>'))
+    o.append(manhole())
     o.append(tgri_label())
 
     # right column: pies, then cold
     o.append(box(584, 262, 320, bar('PIES', GREEN, 'OUT OF THE BRICK OVEN')
                  + A_('plain', top=10) + A_('four') + S_("Late-pizza pepperoni and pineapple pie") + A_('family')))
-    o.append(box(584, 684, 320, bar('COLD', RED)
+    o.append(box(584, 696, 320, bar('COLD', RED)
                  + S_("Ooze canister lime and kiwi slushie", top=10) + A_('soda')))
 
     # left bottom: starters and sweets
-    o.append(box(56, 598, 244, bar('STARTERS', RED) + S_("TCRI ooze dip", top=10) + S_("Sewer lair pizza bagels")))
-    o.append(box(312, 598, 244, bar('SWEETS', GREEN) + S_("Tokka and Rahzar mint choc shakes", top=10) + A_('zeppole')))
+    o.append(splat())
+    o.append(no_feed())
+    o.append(box(56, 600, 244, bar('STARTERS', RED) + S_("TCRI ooze dip", top=8, pc=INK) + S_("Sewer lair pizza bagels", top=10, pc=INK)))
+    o.append(box(312, 600, 244, bar('SWEETS', GREEN) + S_("Tokka and Rahzar mint choc shakes", top=8, pc=INK) + A_('zeppole', top=10, pc=INK)))
 
     # fine print
-    o.append(box(56, 892, 520, f'<div style="{BODY}; font-weight: 500; font-size: 16px; line-height: 1.2; color: {MUTE}">Prices subject to change. As seen on Channel 3. Box no. 4-1991. New York, N.Y.</div>'))
+    o.append(f'''<div style="position: absolute; left: 56px; top: 862px; width: 500px; height: 50px; box-sizing: border-box; background: {BOARD}; border: 3px solid {RED}; padding: 4px 10px 0">
+      <div style="{BODY}; font-weight: 700; font-size: 18px; line-height: 1.1; color: {RED}; letter-spacing: 0.04em">WARNING: NO DELIVERY TO ANYONE 7 FT TALL IN SPIKED ARMOR.</div>
+      <div style="{BODY}; font-weight: 500; font-size: 16px; line-height: 1.2; color: {MUTE}; white-space: nowrap">Prices subject to change. As seen on Channel 3. Box no. 4-1991. N.Y., N.Y.</div></div>''')
 
     o.append(f'<img src="assets/wear-lid.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {S}px; height: {S}px; opacity: 0.7; pointer-events: none; display: block">')
     return (f'<div style="position: relative; width: {S}px; height: {S}px; overflow: hidden; background: {BOARD}; color: {INK}; {BODY}">'

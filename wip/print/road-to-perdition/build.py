@@ -45,6 +45,8 @@ st = Image.open(S('8B1tuESNpoySSyh5LlUK4QSsgzo.jpg')).convert('RGB')
 st = ImageEnhance.Brightness(st).enhance(1.16)
 SW, SH = 296, 178
 fit(st, SW, SH, (0, 0, 3000, 1688)).save(A('booth-still.jpg'), quality=90)
+car = ImageEnhance.Brightness(Image.open(S('s8vzpUCTtIpA25wnIyl7srLNVFG.jpg')).convert('RGB')).enhance(1.08)
+fit(car, 266, 140, (150, 30, 2850, 1452)).save(A('getaway-snap.jpg'), quality=90)
 
 nk = Image.open(S('nickel-obverse.png')).convert('RGBA')
 g = ImageOps.grayscale(nk.convert('RGB')).filter(ImageFilter.GaussianBlur(1.2))
@@ -111,6 +113,14 @@ def ticket(o, x, y):
              f'<div style="font-family: {DISP}; font-size: 25px; color: {INK}; line-height: 1.05; margin-top: 2px">PERDITION</div>'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; color: {INK}; line-height: 1.3; margin-top: 3px">1 adult, 1 child, half fare</div></div>')
 
+def snapshot(o, x, y):
+    """The big gag: a deckle-edge snapshot pinned over the counter photo, the boy barely over the wheel."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 286px; background: #f8f5ec; padding: 10px 10px 0; box-sizing: border-box; '
+             f'box-shadow: 0 4px 10px rgba(10,10,0,0.45); transform: rotate(4deg)">'
+             f'<img src="assets/getaway-snap.jpg" alt="A boy in a flat cap peering over the steering wheel of an old sedan, his father in the passenger seat" style="display: block; width: 266px; height: 140px">'
+             f'<div style="font-family: {BODY}; font-style: italic; font-weight: 700; font-size: 17px; line-height: 36px; color: {INK}; text-align: center">Our youngest driver. Engine running.</div>'
+             f'<div style="position: absolute; left: 129px; top: -8px; width: 28px; height: 14px; background: rgba(140,42,31,0.85)"></div></div>')
+
 def nickel(o, x, y):
     o.append(f'<img src="assets/nickel.png" alt="A worn buffalo nickel" style="position: absolute; left: {x}px; top: {y}px; width: 78px; height: 78px; '
              f'border-radius: 50%; box-shadow: 1px 3px 5px rgba(10,10,0,0.45); transform: rotate(-14deg)">')
@@ -133,9 +143,10 @@ def front():
              f'<img src="assets/counter-1940.jpg" alt="A driver in a peaked cap at a long diner counter, the waitress smiling across it, a wall clock and coffee urn behind" '
              f'style="display: block; width: {HW - 2}px; height: {HH}px"></div>')
     o.append(f'<div style="position: absolute; left: {M}px; top: {HY + HH + 12}px; width: 380px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}">'
-             'Our counter. Open day and night, rain or shine.</div>')
+             'Our counter, open all night. It is raining again.</div>')
     nickel(o, HX + HW - 336, HY + HH - 46)
     ticket(o, HX + HW - 258, HY + HH - 84)
+    snapshot(o, HX + HW - 278, HY + 10)
 
     CY = HY + HH + 56          # menu columns start
     LW, RX, RW = 410, M + 410 + 40, W - 2 * M - 410 - 40
@@ -145,29 +156,30 @@ def front():
             + head('SANDWICHES', 22)
             + item('Toasted cheese', '.15', 'Sharp cheddar on white, fried crisp in butter, cut in fingers. Bread and butter pickles.')
             + item('Hamburger sandwich', '.10', 'Fresh ground beef off the griddle, onions.')
-            + item('Irish soda bread', '.10', 'Warm buttermilk loaf, salted butter, cheddar.'))
+            + item('Irish soda bread', '.10', 'Warm buttermilk loaf, salted butter, cheddar.')
+            + f'<div style="margin-top: 24px; border: 2px solid {RED}; padding: 10px 14px 9px">' + kicker('House rule')
+            + f'<div style="font-family: {BODY}; font-weight: 700; font-size: 22px; line-height: 1.2; color: {INK}; margin-top: 6px">Drivers must see over the wheel.</div></div>')
     o.append(f'<div style="position: absolute; left: {M}px; top: {CY}px; width: {LW}px">{left}</div>')
 
     right = (f'<div style="border: 1px solid {INK}; padding: 3px; background: {CARD}; width: {RW - 8}px">'
              f'<img src="assets/booth-still.jpg" alt="A man in a tweed suit and his young son eating supper and pie at a diner table, coffee cups and a milk glass beside them" '
              f'style="display: block; width: {RW - 8}px; height: {int((RW - 8) * 0.6)}px"></div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}; margin-top: 8px">A man and his boy, on the road.</div>'
-             + head('PIE', 12)
+             f'<div style="margin-top: 8px; transform: rotate(-2deg); font-family: {SCRIPT}; font-size: 18px; line-height: 1.45; color: #3b4150">'
+             f'Michael, eat your pie.<br>We go at first light. <span style="color: {RED}">M.S.</span></div>'
+             + head('PIE', 6)
              + item('Apple pie', '.10', 'Deep dish, cinnamon apples, sharp cheddar melted on top.')
-             + head('THE URN', 18)
+             + head('THE URN', 12)
              + item('Coffee or milk', '.05', 'Hot from the urn, or cold.')
              + item('Wake coffee', '.35', 'Brown sugar, soft cream, Irish style. Strictly medicinal.'))
-    o.append(f'<div style="position: absolute; left: {RX}px; top: {CY + 34}px; width: {RW}px">{right}</div>')
+    o.append(f'<div style="position: absolute; left: {RX}px; top: {CY + 20}px; width: {RW}px">{right}</div>')
 
     # pencilled note left on the bill
-    o.append(f'<div style="position: absolute; left: {M}px; top: 1164px; width: {LW}px; transform: rotate(-2deg); font-family: {SCRIPT}; font-size: 21px; line-height: 1.5; color: #3b4150">'
-             'Michael, eat your pie.<br>We go at first light.'
-             f'<span style="margin-left: 18px; color: {RED}">M.S.</span></div>')
+    pass
 
     # fine print
     o.append(f'<div style="position: absolute; left: {M}px; top: 1250px; width: {W - 2 * M}px; height: 1px; background: {INK}; opacity: 0.6"></div>'
              f'<div style="position: absolute; left: {M}px; top: 1258px; width: {W - 2 * M}px; text-align: center; font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {INK}">'
-             'Cash only, we keep no money in the bank. No photographers in the dining room.<br>'
+             'Cash only. Pa always pays in cash. No photographers in the dining room.<br>'
              f'<span style="color: {MUTE}">Prices subject to change. Form 2002. Printed in Illinois, 1931.</span></div>')
     return page(''.join(o))
 

@@ -126,7 +126,7 @@ def gift_tag(o, x, y):
 
 def charge_slip(o, x, y):
     """Guest charge slip, the room service tab, tucked into the back head."""
-    rows = [('ROOM', '411'), ('SERVER', 'Cedric'), ('TOTAL', '$967.43')]
+    rows = [('ROOM', '411'), ('SERVER', 'Cedric')]
     cells = ''.join(f'<div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid #b9b0a2; height: 23px">'
                     f'<span style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; color: {GREEN}">{a}</span>'
                     f'<span style="font-family: {HAND}; font-size: 22px; line-height: 1; color: #23305e">{b}</span></div>' for a, b in rows)
@@ -134,9 +134,28 @@ def charge_slip(o, x, y):
              f'transform: rotate(-6deg); padding: 8px 10px 6px; box-sizing: border-box">'
              f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.12em; line-height: 1.1; color: {RED}; text-align: center">GUEST CHARGE</div>'
              + cells +
-             f'<div style="border-top: 1px solid {INK}; margin-top: 32px; position: relative; height: 18px">'
+             f'<div style="border-top: 1px solid #b9b0a2; position: relative; height: 40px">'
+             f'<span style="position: absolute; left: 0; top: 13px; font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; color: {GREEN}">TOTAL</span>'
+             f'<span style="position: absolute; right: -2px; top: 4px; font-family: {HAND}; font-size: 29px; line-height: 1; color: {RED}; white-space: nowrap">$967.43</span>'
+             f'<div style="position: absolute; right: -9px; top: 0px; width: 94px; height: 38px; border: 2px solid {RED}; border-radius: 50%; transform: rotate(-5deg)"></div></div>'
+             f'<div style="border-top: 1px solid {INK}; margin-top: 30px; position: relative; height: 4px">'
              f'<div style="position: absolute; left: 2px; top: -30px; font-family: {HAND}; font-size: 22px; line-height: 1; color: #23305e; white-space: nowrap; transform: rotate(-3deg)">Peter McCallister</div>'
-             f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {MUTE}; padding-top: 1px">Guest signature</div></div></div>')
+             '</div></div>')
+
+
+def recorder(o, x, y):
+    """A child's pocket tape recorder with a long microphone, no maker's name. The tape is labelled in marker."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 128px; height: 84px; transform: rotate(-9deg)">'
+             f'<div style="position: absolute; left: 92px; top: -30px; width: 9px; height: 40px; background: #3a3d42; border-radius: 4px"></div>'
+             f'<div style="position: absolute; left: 86px; top: -42px; width: 21px; height: 18px; background: #2a2c30; border-radius: 9px"></div>'
+             f'<div style="position: absolute; left: 0; top: 0; width: 128px; height: 84px; background: #c7cbd1; border-radius: 10px; box-shadow: 0 4px 9px rgba(0,0,0,0.5)"></div>'
+             f'<div style="position: absolute; left: 7px; top: 7px; width: 34px; height: 70px; border-radius: 6px; background: repeating-linear-gradient(0deg, #4b4f56 0 3px, #9ea3aa 3px 6px)"></div>'
+             f'<div style="position: absolute; left: 48px; top: 8px; width: 72px; height: 44px; background: #2b2d31; border-radius: 5px"></div>'
+             f'<div style="position: absolute; left: 52px; top: 12px; width: 64px; height: 36px; background: #fbf6e6; border-radius: 3px; text-align: center; '
+             f'font-family: {HAND}; font-size: 15px; line-height: 0.95; color: {RED}; padding-top: 3px; box-sizing: border-box">keep the<br>change!</div>'
+             f'<div style="position: absolute; left: 50px; top: 59px; width: 18px; height: 16px; border-radius: 3px; background: {RED}"></div>'
+             f'<div style="position: absolute; left: 73px; top: 59px; width: 18px; height: 16px; border-radius: 3px; background: #5a5e65"></div>'
+             f'<div style="position: absolute; left: 96px; top: 59px; width: 18px; height: 16px; border-radius: 3px; background: #5a5e65"></div></div>')
 
 # ---------------- FRONT ----------------
 def front():
@@ -150,9 +169,10 @@ def front():
              + frame('fifth-avenue-1905.jpg', CW + 2, 280, 'Fifth Avenue after a snowstorm, two women in long coats walking between snowbanks, a clock tower beyond') + '</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 622px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}; text-align: center">'
              'The avenue after a snowstorm, our first winter.</div>')
+    recorder(o, 318, 528)
     o.append(f'<div style="position: absolute; left: {L}px; top: 664px; width: {CW}px; box-sizing: border-box; border-left: 4px solid {GREEN}; padding: 2px 0 0 16px">'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 1.34; color: {INK}">'
-             'Should you or your young ones require anything at all, simply ring. The kitchen never sleeps, and neither does the front desk.</div>'
+             'Young guests are most welcome. Every order is charged to the card on file, and I check each one myself. All night.</div>'
              f'<div style="display: flex; justify-content: flex-end; align-items: baseline; gap: 10px; margin-top: -2px">'
              f'<span style="font-family: {SIG}; font-size: 40px; line-height: 1.1; color: {RED}">Mr. Hector</span>'
              f'<span style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: {GREEN}">CONCIERGE</span></div></div>')
@@ -167,10 +187,10 @@ def front():
 # ---------------- BACK ----------------
 def back():
     o = [hanger_head(GREEN, 268)]
-    charge_slip(o, 290, 22)
+    charge_slip(o, 290, 12)
     o.append(f'<div style="position: absolute; left: 40px; top: 40px; width: 130px; font-family: {BODY}; font-weight: 800; font-size: 14px; '
-             f'letter-spacing: 0.14em; line-height: 1.5; color: {PAPER}">ROOM NO.<div style="width: 108px; height: 30px; border-bottom: 1px solid {PAPER}; '
-             f'font-family: {HAND}; font-weight: 600; font-size: 28px; letter-spacing: 0; line-height: 30px; color: {PAPER}"></div></div>')
+             f'letter-spacing: 0.14em; line-height: 1.5; color: #f2c9a8">HOUSE RULE<div style="font-family: {BODY}; font-weight: 400; font-style: italic; font-size: 17px; letter-spacing: 0; line-height: 1.3; color: {PAPER}; margin-top: 2px">'
+             'Any tab over $900 needs a grown-up to sign, in person.</div></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 184px; width: {CW}px">{kicker("Tick, then hang on your handle", "#f2c9a8", "font-size: 17px; letter-spacing: 0.16em")}</div>')
     o.append(f'<div style="position: absolute; left: 0; top: 206px; width: {W}px; text-align: center; font-family: {DISP}; font-weight: 700; '
              f'font-size: 50px; line-height: 1; color: {PAPER}; white-space: nowrap">We Knock Softly</div>')
@@ -182,14 +202,14 @@ def back():
             + item('Cheese pizza for one', '16.00', 'Tomato sauce and plenty of mozzarella, boxed hot for the limousine.', 8)
             + item('Minibar mix', '9.67', 'Nuts roasted with rosemary and brown sugar, chocolate almonds and pretzels.')
             + ornament('After the Park', 16)
-            + item('The Works sundae', '9.50', 'Vanilla ice cream, hot fudge, whipped cream, nuts, sprinkles and a cherry.', 8)
+            + item('The Works sundae cart', '19.92', 'Rolled up: vanilla ice cream, hot fudge, whipped cream, nuts, sprinkles, cherry.', 8)
             + item('Hot apple cider', '4.50', 'Mulled with cinnamon, cloves and orange.')
             + item('Hot cocoa', '4.11', 'Whole milk, a heap of marshmallows.'))
     o.append(f'<div style="position: absolute; left: {L}px; top: 508px; width: {CW}px">{menu}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 1070px; width: {CW}px; border-top: 1px solid {GREEN}; padding-top: 8px; '
              f'font-family: {BODY}; font-size: 16px; line-height: 1.32; color: {MUTE}; text-align: center">'
              f'<span style="font-weight: 800; letter-spacing: 0.14em; color: {GREEN}">THE HALLOWAY</span>, Fifth Avenue at the Park<br>'
-             'Tonight on the in-room channel: <i>Angels with Even Filthier Souls</i>.<br>'
+             'In-room movie tonight: <i>Angels with Even Filthier Souls</i>.<br>'
              'Prices subject to change. Form 411-92.</div>')
     return page(''.join(o), 'back')
 

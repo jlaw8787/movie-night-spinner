@@ -9,7 +9,7 @@ D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
 W, H, M = 672, 1056, 40
-GREEN, DEEP, CREAM, GOLD, MUTE = '#173a2c', '#0f2a1f', '#f3ead6', '#d4a645', '#b9c4b2'
+GREEN, DEEP, CREAM, GOLD, MUTE, RED = '#173a2c', '#0f2a1f', '#f3ead6', '#d4a645', '#b9c4b2', '#a3271d'
 FONTS = ('https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@700;800;900'
          '&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Homemade+Apple&display=swap')
 DISP = "'Alegreya SC', serif"; BODY = "'Alegreya Sans', sans-serif"; SCRIPT = "'Homemade Apple', cursive"
@@ -25,11 +25,11 @@ def fit(im, w, h, box=None):
 
 street = Image.open(S('southie-house.jpg')).convert('RGB')   # CC0, see CREDITS.md
 street = ImageEnhance.Contrast(ImageEnhance.Brightness(street).enhance(1.02)).enhance(1.04)
-fit(street, CW - 8, 352, (0, 40, 1920, 1197)).save(A('three-deckers.jpg'), quality=92)
+fit(street, CW - 8, 300, (0, 40, 1920, 1197)).save(A('three-deckers.jpg'), quality=92)
 
 table = Image.open(S('pC6oJsuQsSbuQtUJOyTgk90eIw2.jpg')).convert('RGB')
 table = ImageEnhance.Brightness(table).enhance(1.12)
-fit(table, CW - 8, 236, (0, 180, 1920, 1000)).save(A('corner-table.jpg'), quality=90)
+fit(table, CW - 8, 150, (0, 300, 1920, 900)).save(A('corner-table.jpg'), quality=90)
 
 def sheen(name, seed):
     """Laminate: a broad soft diagonal highlight and gentle darkening at the edges. Low detail, never over text strongly."""
@@ -53,13 +53,13 @@ def kicker(t, color=GOLD, size=18, extra=''):
     return (f'<div style="font-family: {BODY}; font-weight: 800; font-size: {size}px; letter-spacing: 0.22em; color: {color}; '
             f'text-transform: uppercase; line-height: 1;{extra}">{t}</div>')
 
-def band(t, sub=''):
+def band(t, sub='', bg=GOLD):
     """Section title: a gold ribbon with notched ends, the name in board green."""
     s = (f'<span style="font-family: {BODY}; font-weight: 700; font-size: 18px; letter-spacing: 0.16em; color: {DEEP}; '
          f'text-transform: uppercase">{sub}</span>') if sub else ''
     notch = lambda side: (f'<div style="position: absolute; {side}: -1px; top: 0; width: 0; height: 0; '
                           f'border-top: 23px solid transparent; border-bottom: 23px solid transparent; border-{side}: 14px solid {GREEN}"></div>')
-    return (f'<div style="position: relative; height: 46px; background: {GOLD}">' + notch('left') + notch('right') +
+    return (f'<div style="position: relative; height: 46px; background: {bg}">' + notch('left') + notch('right') +
             f'<div style="position: absolute; left: 30px; right: 30px; top: 0; display: flex; justify-content: space-between; align-items: center; height: 46px">'
             f'<span style="font-family: {DISP}; font-weight: 900; font-size: 40px; line-height: 1; color: {DEEP}; margin-top: -6px">{t}</span>{s}</div></div>')
 
@@ -115,6 +115,43 @@ def badge(o, x, y):
              f'<div style="margin: 0 12px; font-family: {BODY}; font-size: 14px; color: #333; line-height: 1.3; text-align: left">Must be worn</div>'
              '</div></div>')
 
+# ---------------- more props ----------------
+def rat_trap(o, x, y):
+    """A wooden snap trap, baited, branded by the house."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 236px; height: 104px; transform: rotate(-8deg)">'
+             # board
+             f'<div style="position: absolute; left: 0; top: 30px; width: 236px; height: 74px; border-radius: 6px; '
+             f'background: repeating-linear-gradient(176deg, #c99a5a 0 7px, #c0904f 7px 9px, #cfa262 9px 15px); box-shadow: 0 5px 12px rgba(0,0,0,0.55)"></div>'
+             f'<div style="position: absolute; left: 0; top: 96px; width: 236px; height: 8px; border-radius: 0 0 6px 6px; background: #8d6232"></div>'
+             f'<div style="position: absolute; left: 18px; top: 74px; width: 120px; font-family: {BODY}; font-weight: 800; font-size: 14px; line-height: 1; letter-spacing: 0.12em; color: #6a3f17">FITZY&#8217;S</div>'
+             f'<div style="position: absolute; left: 18px; top: 88px; width: 140px; font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1; color: #6a3f17; opacity: 0.85">for informants</div>'
+             # spring coils
+             + ''.join(f'<div style="position: absolute; left: {96 + i * 7}px; top: 38px; width: 9px; height: 22px; border: 2px solid #9aa0a6; border-radius: 50%; box-sizing: border-box"></div>' for i in range(5)) +
+             # hammer bail, set back
+             f'<div style="position: absolute; left: 22px; top: 36px; width: 82px; height: 30px; border: 3px solid #b7bcc2; border-right: none; border-radius: 4px 0 0 4px; box-sizing: border-box"></div>'
+             # trigger plate and arm
+             f'<div style="position: absolute; left: 150px; top: 46px; width: 56px; height: 22px; background: #a9aeb4; border-radius: 3px"></div>'
+             f'<div style="position: absolute; left: 22px; top: 49px; width: 130px; height: 3px; background: #b7bcc2"></div>'
+             # cheese wedge with holes
+             f'<div style="position: absolute; left: 152px; top: 8px; width: 0; height: 0; border-left: 30px solid transparent; border-right: 30px solid transparent; border-bottom: 42px solid #f2c443"></div>'
+             f'<div style="position: absolute; left: 152px; top: 50px; width: 60px; height: 8px; background: #e3b232"></div>'
+             f'<div style="position: absolute; left: 175px; top: 30px; width: 9px; height: 9px; border-radius: 50%; background: #d29e22"></div>'
+             f'<div style="position: absolute; left: 165px; top: 41px; width: 6px; height: 6px; border-radius: 50%; background: #d29e22"></div>'
+             f'<div style="position: absolute; left: 190px; top: 43px; width: 5px; height: 5px; border-radius: 50%; background: #d29e22"></div>'
+             '</div>')
+
+def no_rats(o, x, y, w, h):
+    """The big enamel sign behind the bar."""
+    screw = lambda l, t: (f'<div style="position: absolute; left: {l}px; top: {t}px; width: 12px; height: 12px; border-radius: 50%; background: #b9b2a2; '
+                          f'box-shadow: inset 0 0 0 1px #7d7768"><div style="margin: 5px 2px 0; height: 2px; background: #6f695b"></div></div>')
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; background: {CREAM}; border-radius: 12px; '
+             f'box-shadow: 0 4px 12px rgba(0,0,0,0.45)">'
+             f'<div style="position: absolute; left: 10px; top: 10px; right: 10px; bottom: 10px; border: 4px solid {RED}; border-radius: 8px"></div>'
+             + screw(18, 18) + screw(w - 30, 18) + screw(18, h - 30) + screw(w - 30, h - 30) +
+             f'<div style="position: absolute; left: 0; width: {w}px; top: 22px; text-align: center; font-family: {DISP}; font-weight: 900; font-size: 92px; line-height: 0.95; color: {RED}; letter-spacing: 0.03em">No Rats</div>'
+             f'<div style="position: absolute; left: 0; width: {w}px; top: {h - 50}px; text-align: center; font-family: {BODY}; font-weight: 800; font-size: 18px; letter-spacing: 0.2em; color: {DEEP}">'
+             'VIOLATORS WILL BE FOUND OUT</div></div>')
+
 # ---------------- FRONT ----------------
 def front():
     o = []
@@ -125,43 +162,50 @@ def front():
              f'<div style="height: 2px; width: 110px; background: {GOLD}"></div>'
              f'<div style="font-family: {DISP}; font-weight: 800; font-size: 30px; line-height: 1; color: {GOLD}; letter-spacing: 0.08em">Tap &amp; Grill</div>'
              f'<div style="height: 2px; width: 110px; background: {GOLD}"></div></div></div>')
-    o.append(f'<div style="position: absolute; left: {M}px; top: 222px">'
-             + frame('three-deckers.jpg', CW - 8, 352, 'A tall painted row house with bay windows and wreaths on every window, a blue clapboard house beside it, cars parked out front') + '</div>')
-    o.append(cap('Up the block from the bar, wreaths on every window.', 590))
-    envelope(o, W - M - 232, 474)
+    o.append(f'<div style="position: absolute; left: {M}px; top: 214px">'
+             + frame('three-deckers.jpg', CW - 8, 300, 'A tall painted row house with bay windows and wreaths on every window, a blue clapboard house beside it, cars parked out front') + '</div>')
+    o.append(cap('Up the block. Everybody knows everybody.', 528))
+    rat_trap(o, W - M - 232, 452)
     left = (band('Start at the Bar')
-            + item('Clam chowder, cup', '4.50', 'Clams, potato and bacon in cream. Oyster crackers.', 18)
-            + item('Soda bread and butter', '3.00', 'Baked here each morning, cut thick, salted butter.', 22)
-            + item('Pickled eggs', '1.50', 'Two from the jar on the bar, salt and pepper.', 22))
-    o.append(f'<div style="position: absolute; left: {M}px; top: 636px; width: {CW}px">{left}</div>')
-    o.append(f'<div style="position: absolute; left: {M}px; top: 934px; width: {CW}px">' + rule(0) +
-             f'<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-top: 12px">'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 21px; line-height: 1.3; color: {CREAM}; width: 380px">'
-             'No one gives it to you. You have to take it. So eat.</div>'
-             f'<div style="font-family: {SCRIPT}; font-size: 24px; line-height: 1.5; color: {GOLD}; white-space: nowrap">F. Costello</div></div>'
-             + kicker('Cops or criminals, same chowder', MUTE, 16, ' margin-top: 12px; letter-spacing: 0.18em') + '</div>')
+            + item('Clam chowder, cup', '4.50', 'Clams, potato and bacon in cream. Oyster crackers.', 12)
+            + item('Soda bread and butter', '3.00', 'Baked here each morning, cut thick, salted butter.', 16)
+            + item('The rat&#8217;s cheese plate', '6.00', 'Sharp cheddar, crackers, pickles. Informants eat once.', 16))
+    o.append(f'<div style="position: absolute; left: {M}px; top: 572px; width: {CW}px">{left}</div>')
+    rules = [('Cops or criminals, everybody pays cash.', ''),
+             ('Want a booth? Maybe. Maybe not.', 'Sgt. D.'),
+             ('We do our job here. You must be the other guy.', 'Sgt. D.'),
+             ('Nobody hands you the last egg. You take it.', '')]
+    rl = ''.join(f'<div style="display: flex; gap: 10px; font-family: {BODY}; font-size: 20px; line-height: 1.32; color: {CREAM}; margin-top: 3px">'
+                 f'<span style="color: {GOLD}; font-weight: 800">{i + 1}.</span><span>{t}'
+                 + (f' <span style="color: {MUTE}; font-style: italic">({a})</span>' if a else '') + '</span></div>'
+                 for i, (t, a) in enumerate(rules))
+    o.append(f'<div style="position: absolute; left: {M}px; top: 846px; width: {CW}px">' + rule(0) +
+             kicker('House rules', GOLD, 18, ' margin-top: 12px') + rl +
+             f'<div style="position: absolute; right: 0; top: 10px; font-family: {SCRIPT}; font-size: 21px; line-height: 1.5; color: {GOLD}; white-space: nowrap">F. Costello</div></div>')
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
 def back():
     o = []
-    o.append(f'<div style="position: absolute; left: {M}px; top: 44px">'
-             + frame('corner-table.jpg', CW - 8, 236, 'A young man in a dark sweater leans in to talk with an older man in a pale jacket at a white tablecloth, a brandy glass between them') + '</div>')
-    o.append(cap('Mr. C&#8217;s corner table. Knock first.', 292))
-    badge(o, W - M - 158, 128)
-    body = (band('Suppers', 'after 5')
-            + item('Southie fish and chips', '11.95', 'White fish in lager batter, chips, minted mushy peas.', 12)
-            + item('Steak tips', '14.95', 'Marinated sirloin off the grill, onions, baked potato.')
-            + item('Mr. C&#8217;s lobster', 'MKT', 'Split and broiled, drawn butter. Robe optional.')
-            + f'<div style="margin-top: 20px">{band("Sweet")}</div>'
-            + item('Boston cream pie', '4.95', 'Sponge, vanilla custard, dark chocolate ganache.', 12)
-            + f'<div style="margin-top: 20px">{band("The Bar", "pints &amp; more")}</div>'
-            + item('Cranberry and lime', '2.50', 'Fresh lime, orange, soda, crushed ice. A natural diuretic.', 12)
-            + item('Irish stout', '4.75', 'Pulled slow, settled, topped. By the pint.'))
-    o.append(f'<div style="position: absolute; left: {M}px; top: 332px; width: {CW}px">{body}</div>')
-    o.append(f'<div style="position: absolute; left: {M}px; top: 966px; width: {CW}px; text-align: center; font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {MUTE}">'
-             'Our chowder is a product of its environment. Cash at the bar.<br>'
-             'Prices subject to change. No rats. West Broadway, Mass. 02127. Form 2006.</div>')
+    no_rats(o, M, 42, CW, 150)
+    badge(o, W - M - 116, 96)
+    o.append(f'<div style="position: absolute; left: {M}px; top: 208px">'
+             + frame('corner-table.jpg', CW - 8, 150, 'A young man in a dark sweater leans in to talk with an older man in a pale jacket at a white tablecloth, a brandy glass between them') + '</div>')
+    o.append(f'<div style="position: absolute; left: {M + 6}px; top: 332px; background: {DEEP}; padding: 2px 10px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {CREAM}">'
+             'Mr. C&#8217;s table. Knock first.</div>')
+    envelope(o, W - M - 196, 300)
+    body = (band('The Staties', 'cops&#8217; side', CREAM)
+            + item('Academy fish and chips', '11.95', 'White fish in lager batter, chips, minted mushy peas.', 8)
+            + item('Staties&#8217; steak tips', '14.95', 'Marinated sirloin, grilled onions, baked potato.', 12)
+            + item('Costigan&#8217;s cranberry', '2.50', 'Lime, orange, soda, crushed ice. A natural diuretic.', 12)
+            + f'<div style="margin-top: 18px">{band("The Crew", "crooks&#8217; side")}</div>'
+            + item('Mr. C&#8217;s lobster', 'MKT', 'Split and broiled, drawn butter. Robe optional.', 8)
+            + item('Boston cream pie', '4.95', 'Sponge, vanilla custard, ganache. Nobody talks.', 12)
+            + item('Irish stout', '4.75', 'Pulled slow, settled, topped. By the pint.', 12))
+    o.append(f'<div style="position: absolute; left: {M}px; top: 384px; width: {CW}px">{body}</div>')
+    o.append(f'<div style="position: absolute; left: {M}px; top: 972px; width: {CW}px; text-align: center; font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {MUTE}">'
+             'Our chowder is a product of its environment. Prices subject to change.<br>'
+             'West Broadway, Mass. 02127. Form 2006. Rats will be served last.</div>')
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}

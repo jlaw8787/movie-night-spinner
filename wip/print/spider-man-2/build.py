@@ -61,7 +61,7 @@ def dish(name, price, desc, top=10):
 # ---------- dishes (k = spec key) ----------
 PIES = [
   ('Thirty-minute pepperoni pie', 'Pepperoni pie', '14.29',
-   'Thin crisp crust, crushed tomato, low-moisture mozzarella, cupping pepperoni.'),
+   'Thin crisp crust, crushed tomato, mozzarella, cupping pepperoni.'),
   (None, 'Cheese pie', '12.00', 'Eight big slices. Fold them.'),
   (None, 'By the slice', '2.00', 'Toppings 50 cents each.'),
 ]
@@ -115,9 +115,9 @@ def coupons():
     c_title = lambda t, col=NAVY, s=25: f'<div style="font-family: {DISP}; font-size: {s}px; line-height: 0.95; color: {col}">{t}</div>'
     c_text = lambda t, col=INK: f'<div style="margin-top: 3px; font-family: {BODY}; font-weight: 600; font-size: 15px; line-height: 1.15; color: {col}">{t}</div>'
     row = (coupon(0, 214, kicker('Our promise', SLIP, 14) + c_title('29 MINUTES OR IT\'S FREE', PAPER, 22)
-                  + c_text('Late pie? It\'s on us, and Mr. Aziz has words with the driver.', PAPER), RED)
-           + coupon(224, 166, c_title('FOUR ARMS, FOUR PIES', NAVY, 22) + c_title('$40.04', RED, 30) + c_text('For a doctor with his hands full.'))
-           + coupon(400, 166, c_title('FREE KNOTS') + c_text('With any pie. Any floor. We take the stairs, the lift or the wall.'))
+                  + c_text('Late? It\'s free. The driver answers to Mr. Aziz.', PAPER), RED)
+           + coupon(224, 166, c_title('FOUR ARMS?', NAVY, 24) + c_title('4 PIES $40.04', RED, 26) + c_text('For a doctor with his hands full.'))
+           + coupon(400, 166, c_title('FREE KNOTS') + c_text('With any pie. Any floor, by stairs, lift or wall.'))
            + coupon(576, 160, c_title('STUDENT SLICE') + c_text('Slice and soda 2.50 with a university ID.')))
     return (f'<div style="position: absolute; left: 40px; top: 882px; width: 736px; height: 104px">{row}</div>'
             f'<div style="position: absolute; left: 40px; top: 862px; width: 736px; display: flex; align-items: center; gap: 10px">'
@@ -132,12 +132,9 @@ def tally_board():
         sl = (f'<div style="position: absolute; left: -6px; top: 15px; width: 46px; height: 4px; background: {RED}; transform: rotate(-28deg)"></div>' if n == 5 else '')
         return f'<div style="position: relative; width: {min(n, 4) * 9}px; height: 34px; margin-right: 14px">{bars}{sl}</div>'
     marks = group(5) + group(5) + group(5) + group(2)
-    return (f'<div style="margin-top: 14px; border: 3px solid {NAVY}; padding: 8px 10px 10px; background: #ffffff">'
-            f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
-            f'<div style="font-family: {DISP}; font-size: 24px; line-height: 1; color: {RED}">LATE AGAIN</div>'
-            f'<div style="font-family: {COND}; font-weight: 700; font-size: 16px; letter-spacing: 0.08em; color: {NAVY}">DRIVER: P. PARKER</div></div>'
-            f'<div style="margin-top: 8px; display: flex; align-items: center">{marks}</div>'
-            f'<div style="margin-top: 6px; font-family: {BODY}; font-weight: 600; font-size: 15px; line-height: 1.2; color: {INK}">Seventeen this month. The board stays up until he learns.</div></div>')
+    return (f'<div style="margin-top: 10px; border: 3px solid {NAVY}; padding: 5px 10px 7px; background: #ffffff">'
+            f'<div style="font-family: {COND}; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.06em; color: {NAVY}; white-space: nowrap"><span style="font-family: {DISP}; font-weight: 400; font-size: 20px; color: {RED}">LATE AGAIN</span> &nbsp;P. PARKER, THIS MONTH</div>'
+            f'<div style="margin-top: 6px; display: flex; align-items: center; transform: scaleY(0.8); transform-origin: 0 0; height: 28px">{marks}</div></div>')
 
 def late_stamp(x, y):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; transform: rotate(-9deg); border: 4px solid {RED}; border-radius: 6px; padding: 4px 12px 2px; background: rgba(251,248,241,0.82)">'
@@ -159,8 +156,8 @@ def sheet():
     hero = (f'<div style="position: absolute; left: 40px; top: 214px; width: 736px; height: 282px; box-sizing: border-box; border: 4px solid {RED}; overflow: hidden">'
             f'<img src="assets/still-delivery.jpg" alt="Peter in a marble office lobby with a stack of pizza boxes held on by a bungee cord" style="position: absolute; left: 0; top: 0; width: 728px; height: 274px; object-fit: cover; object-position: 50% 30%; display: block">'
             f'<div style="position: absolute; left: 0; bottom: 0; background: {NAVY}; padding: 7px 14px 6px; font-family: {BODY}; font-weight: 600; font-size: 18px; line-height: 1.2; color: {PAPER}">'
-            f'One driver, one bungee cord, a stack of pies. 42 blocks to go.</div></div>'
-            f'{warning_slip(528, 232)}{late_stamp(560, 420)}')
+            f'A stack of pies, one bungee cord, 42 blocks.</div></div>'
+            f'{warning_slip(528, 232)}{late_stamp(506, 418)}')
     c1 = ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(PIES))
     c2 = ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(START))
     c3 = (''.join(dish(n, p, d, 10) for _, n, p, d in MORN)
@@ -176,7 +173,7 @@ def sheet():
             f'<div style="width: 222px">{head("WEEKENDS", "to noon")}{c3}</div>'
             f'</div>')
     foot = (f'<div style="position: absolute; left: 40px; top: 996px; width: 736px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {INK}">'
-            f'<span>Prices subject to change. Drivers carry under $20. Fired drivers return the helmet sticker. Bugle newsroom orders, ask for Betty.</span>'
+            f'<span>Prices subject to change. Drivers carry under $20. Bugle orders, ask for Betty.</span>'
             f'<span style="white-space: nowrap; margin-left: 12px">Form 2004-SM2</span></div>')
     return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {PAPER}; color: {INK}">'
             f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; object-fit: cover; opacity: 0.22; display: block">'
