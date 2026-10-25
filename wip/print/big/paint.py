@@ -248,24 +248,44 @@ def paint_window(aw, ah, seed=88):
     alpha = np.clip((1.0 - rr) * R / 2.0, 0, 1) * 255
     flat = Image.fromarray(np.dstack([np.clip(col, 0, 255), alpha]).astype(np.uint8), 'RGBA')
     fd = ImageDraw.Draw(flat)
-    # chips
+    # bake cracks: short dark-gold fissures with a light lip
+    cr = Image.new('L', flat.size, 0); crd = ImageDraw.Draw(cr)
+    lip = Image.new('L', flat.size, 0); lpd = ImageDraw.Draw(lip)
+    for _ in range(26):
+        ang = rnd.random() * 2 * math.pi; dist = math.sqrt(rnd.random()) * 0.8 * R
+        x, y = R + dist * math.cos(ang), R + dist * math.sin(ang)
+        pts = [(x, y)]
+        for _s in range(rnd.randint(3, 6)):
+            x += rnd.uniform(-26, 26); y += rnd.uniform(-34, 34); pts.append((x, y))
+        crd.line(pts, fill=200, width=rnd.randint(4, 7))
+        lpd.line([(px - 3, py - 5) for px, py in pts], fill=150, width=3)
+    for img_, colr in ((lip, (240, 200, 140)), (cr, (120, 70, 30))):
+        lay = Image.new('RGBA', flat.size, colr + (0,)); lay.putalpha(ImageChops.multiply(soft(img_, 2.5), flat.getchannel('A')))
+        flat.alpha_composite(lay)
+    # darker baked rim
+    rim = Image.new('L', flat.size, 0); ImageDraw.Draw(rim).ellipse([4, 4, 2 * R - 4, 2 * R - 4], outline=255, width=46)
+    rl = Image.new('RGBA', flat.size, (130, 72, 28, 0)); rl.putalpha(ImageChops.multiply(soft(rim, 22).point(lambda v: int(v * 0.55)), flat.getchannel('A')))
+    flat.alpha_composite(rl)
+    # chips, drawn tall so they sit round once the cookie is laid down in perspective
     band = (-0.30 * R, 0.30 * R)
-    for _ in range(46):
-        for _try in range(30):
+    for _ in range(64):
+        for _try in range(40):
             ang = rnd.random() * 2 * math.pi
-            dist = math.sqrt(rnd.random()) * 0.86 * R
+            dist = math.sqrt(rnd.random()) * 0.87 * R
             cx, cy = R + dist * math.cos(ang), R + dist * math.sin(ang)
-            if not (band[0] - 20 < cy - R < band[1] + 20):
+            if not (band[0] - 40 < cy - R < band[1] + 40):
                 break
-        rad = rnd.randint(13, 22)
-        pts = [(cx + rad * (0.7 + 0.5 * rnd.random()) * math.cos(t), cy + rad * (0.6 + 0.5 * rnd.random()) * math.sin(t))
-               for t in [i * 2 * math.pi / 7 for i in range(7)]]
-        sh = Image.new('L', flat.size, 0); ImageDraw.Draw(sh).polygon([(px + 4, py + 6) for px, py in pts], fill=120)
-        shl = Image.new('RGBA', flat.size, (60, 30, 10, 0)); shl.putalpha(ImageChops.multiply(soft(sh, 4), flat.getchannel('A')))
+        rad = rnd.randint(9, 16)
+        sy = 2.1
+        pts = [(cx + rad * (0.8 + 0.35 * rnd.random()) * math.cos(t), cy + rad * sy * (0.8 + 0.35 * rnd.random()) * math.sin(t))
+               for t in [i * 2 * math.pi / 9 for i in range(9)]]
+        sh = Image.new('L', flat.size, 0); ImageDraw.Draw(sh).polygon([(px + 3, py + 12) for px, py in pts], fill=140)
+        shl = Image.new('RGBA', flat.size, (70, 36, 12, 0)); shl.putalpha(ImageChops.multiply(soft(sh, 5), flat.getchannel('A')))
         flat.alpha_composite(shl)
         fd = ImageDraw.Draw(flat)
-        fd.polygon(pts, fill=(62, 36, 24, 255))
-        fd.ellipse([cx - rad * 0.45, cy - rad * 0.5, cx - rad * 0.05, cy - rad * 0.15], fill=(128, 88, 66, 255))
+        fd.polygon(pts, fill=(58, 33, 22, 255))
+        fd.ellipse([cx - rad * 0.55, cy - rad * sy * 0.6, cx - rad * 0.05, cy - rad * sy * 0.15], fill=(104, 66, 48, 255))
+        fd.ellipse([cx - rad * 0.42, cy - rad * sy * 0.5, cx - rad * 0.18, cy - rad * sy * 0.3], fill=(170, 130, 108, 255))
     # icing keyboard piped across the middle
     keys = Image.new('RGBA', flat.size, (0, 0, 0, 0))
     kd = ImageDraw.Draw(keys)

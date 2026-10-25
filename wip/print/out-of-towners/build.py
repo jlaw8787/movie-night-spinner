@@ -51,7 +51,7 @@ def item(name, desc, price, top=12, size=21, pencil=0):
             f'<div style="position: relative; font-family: {BOD}; font-weight: 700; font-size: {size}px; line-height: 1.12; {SQ}">{esc(name)}{st}</div>'
             f'<div style="flex: 1; border-bottom: 1.5px dotted {INK}; opacity: 0.55; transform: translateY(-4px); min-width: 12px"></div>'
             f'<div style="font-family: {BOD}; font-weight: 600; font-size: 18px; line-height: 1.1; white-space: nowrap; {SQ}">{price}</div></div>'
-            f'<div style="margin-top: 3px; font-family: {BOD}; font-size: 16px; line-height: 1.3; color: {SOFT}; {SQ}">{esc(desc)}</div></div>')
+            f'<div style="margin-top: 3px; font-family: {BOD}; font-size: 16px; line-height: 1.28; color: {SOFT}; text-wrap: pretty; {SQ}">{esc(desc)}</div></div>')
 
 
 def line(name, price, top=6, pencil=0, size=17, italic_tail=None):
@@ -99,57 +99,51 @@ def masthead(title, right_html):
 
 # ---------------- FRONT: the dining car ----------------
 front_left = ''.join([
-    head('Table d’hote breakfast', 'Complete, with coffee, tea or milk.'),
+    head('Table d\u2019hote breakfast', 'Complete, with coffee, tea or milk.'),
     combo(1, 'Chilled orange juice, two eggs any style, buttered toast', '1.35', 10),
-    combo(2, 'Half grapefruit, griddle cakes with maple syrup and country sausage', '1.65', 10),
-    combo(3, 'Chilled tomato juice, codfish cakes and baked beans, corn muffin', '1.85', 10),
-    head('From the broiler', 'Served at all hours.', 22),
+    combo(2, 'Half grapefruit, griddle cakes, maple syrup, country sausage', '1.65', 8),
+    combo(3, 'Tomato juice, codfish cakes, baked beans, corn muffin', '1.85', 8),
+    head('From the broiler, at all hours', None, 14),
     item('Rib Eye Steak Breakfast', 'Seared to your order and rested, with two eggs fried, crisp hash brown potatoes and buttered toast.', '5.25', 10, 22),
-    head('Complete dinners', 'With clam chowder or chilled juice, potato, vegetable, rolls and butter, dessert and coffee.', 22),
-    line('Broiled Boston scrod, lemon butter', '3.75', 10, pencil=1),
-    line('Roast young turkey, sage dressing', '3.95', 6, pencil=2),
-    line('Yankee pot roast, brown gravy', '4.25', 6),
+    head('Sandwich board', None, 14),
+    line('Baked Virginia ham on rye', '.95', 8),
+    line('Chicken salad on white', '1.10', 5),
+    line('Club sandwich, three decker', '1.75', 5, pencil=3),
+    line('Grilled American cheese', '.80', 5),
 ])
 front_right = ''.join([
-    head('Sandwich board', 'On white, whole wheat or rye, with potato chips and a dill pickle.'),
-    line('Baked Virginia ham', '.95', 10),
-    line('Chicken salad', '1.10', 6),
-    line('Club sandwich, three decker', '1.75', 6, pencil=3),
-    line('Grilled American cheese', '.80', 6),
-    head('From the pantry', None, 22),
+    head('Complete dinners', 'With chowder or juice, potato, vegetable, rolls, dessert and coffee.'),
+    line('Broiled Boston scrod', '3.75', 8, pencil=1),
+    line('Roast young turkey, sage dressing', '3.95', 5, pencil=2),
+    line('Yankee pot roast, brown gravy', '4.25', 5),
+    line('Junior plate, under twelve', '1.10', 5),
+    f'<div style="margin-top: 3px; font-family: {BOD}; font-style: italic; font-size: 15px; line-height: 1.3; color: {SOFT}; {SQ}">Beef patty, whipped potatoes, peas and milk.</div>',
+    head('From the pantry', None, 14),
     item('New York Cheese Cake', 'Baked slowly in a water bath on a crumb crust, chilled overnight, under sliced fresh strawberries.', '.85', 10),
-    item('Raspberry Jam Fingers', 'Butter shortbread baked pale and crisp, sandwiched in pairs, dusted with powdered sugar.', '.60', 12),
-    line('Apple pie', '.45', 12, pencil=2, italic_tail='with Cheddar .60'),
-    line('Indian pudding, warm, vanilla ice cream', '.50', 6),
-    head('Beverages', None, 22),
-    f'<div style="margin-top: 8px; font-family: {BOD}; font-size: 16px; line-height: 1.45; {SQ}">Coffee, by the pot .30 &nbsp; Hot tea .30<br>Cold milk .30 &nbsp; Hot chocolate .35</div>',
+    item('Raspberry Jam Fingers', 'Butter shortbread baked pale and crisp, sandwiched in pairs, dusted with powdered sugar.', '.60', 10),
+    line('Apple pie', '.45', 10, pencil=2, italic_tail='with Cheddar .60'),
+    line('Indian pudding, vanilla ice cream', '.50', 5),
 ])
-kids = (f'<div style="position: absolute; left: {X0}px; top: 914px; width: {CWID}px; display: flex; gap: 16px; align-items: center; '
-        f'border-top: 0.75px solid {INK}; border-bottom: 0.75px solid {INK}; padding: 7px 0">'
-        f'<div style="flex: none; font-family: {GOTH}; font-size: 19px; letter-spacing: 0.08em; color: {RED}; {SQR}">YOUNG TRAVELERS</div>'
-        f'<div style="flex: 1; font-family: {BOD}; font-size: 16px; line-height: 1.3; {SQ}">Junior plate: chopped beef patty, whipped potatoes, buttered peas, milk <b>1.10</b>. '
-        f'Half portions of any dinner at half price.</div></div>')
-front_foot = (f'<div style="position: absolute; left: {X0}px; top: 978px; width: {CWID}px; display: flex; justify-content: space-between; align-items: baseline; gap: 20px">'
+front_foot = (f'<div style="position: absolute; left: {X0}px; top: 972px; width: {CWID}px; border-top: 0.75px solid {INK}; padding-top: 8px; display: flex; justify-content: space-between; align-items: baseline; gap: 20px">'
               f'<div style="font-family: {BOD}; font-size: 15px; line-height: 1.3; {SQ}"><b>Seating is by call.</b> Please wait in your coach until the steward calls you.</div>'
               f'<div style="flex: none; font-family: {GOTH}; font-size: 14px; letter-spacing: 0.1em; {SQ}">FORM DC-70</div></div>')
 
 front = f'''
 {masthead("Dining Car", "THE HARBOR LIGHT<br>BOSTON &middot; PROVIDENCE<br>NEW HAVEN &middot; NEW YORK")}
-<img src="assets/engraving.png" alt="" style="position: absolute; left: {X0 - 4}px; top: 158px; width: 672px; height: 300px; display: block">
-<div style="position: absolute; left: {X0}px; top: 466px; width: {CWID}px; display: flex; justify-content: space-between; align-items: baseline">
+<img src="assets/engraving.png" alt="" style="position: absolute; left: {X0 - 4}px; top: 158px; width: 672px; height: 262px; display: block">
+<div style="position: absolute; left: {X0}px; top: 426px; width: {CWID}px; display: flex; justify-content: space-between; align-items: baseline">
   <div style="font-family: {BOD}; font-style: italic; font-size: 15px; {SQ}">The Harbor Light on the shore line, east of New Haven.</div>
   <div style="font-family: {GOTH}; font-size: 15px; letter-spacing: 0.12em; color: {RED}; {SQR}">FOG AT THE AIRPORTS? TAKE THE TRAIN.</div>
 </div>
-<div style="position: absolute; left: {X0}px; top: 504px; width: {COL}px">{front_left}</div>
-<div style="position: absolute; left: {X0 + COL + GUT}px; top: 504px; width: {COL}px">{front_right}</div>
-<div style="position: absolute; left: {X0 + COL + GUT // 2}px; top: 510px; width: 0.75px; height: 390px; background: {INK}; opacity: 0.6"></div>
-{kids}
+<div style="position: absolute; left: {X0}px; top: 460px; width: {COL}px">{front_left}</div>
+<div style="position: absolute; left: {X0 + COL + GUT}px; top: 460px; width: {COL}px">{front_right}</div>
+<div style="position: absolute; left: {X0 + COL + GUT // 2}px; top: 472px; width: 0.75px; height: 484px; background: {INK}; opacity: 0.6"></div>
 {front_foot}
 '''
 
 # ---------------- BACK: the lounge car ----------------
 back_left = ''.join([
-    head('Cocktails', 'Mixed to order by the lounge attendant.'),
+    head('Cocktails'),
     item('Dry Martini', 'Gin stirred ice cold with a little French vermouth, strained into a chilled glass, one green olive.', '1.25', 10),
     line('Manhattan', '1.25', 12),
     line('Tom Collins', '1.10', 6),
@@ -160,7 +154,6 @@ back_left = ''.join([
     line('Scotch and soda', '1.10', 6),
     line('Gin and tonic', '1.10', 6),
     line('Domestic beer', '.60', 6),
-    line('Wine, by the split', '.95', 6),
 ])
 counter = ''.join([
     line('Peanut butter sandwich', '.55', 8),
@@ -168,10 +161,10 @@ counter = ''.join([
     line('Soda crackers', '.15', 5),
     line('Tonic water', '.35', 5),
     line('Clam juice cocktail, chilled', '.45', 5),
-    line('Ginger ale', '.30', 5),
+    line('Coffee, by the pot', '.30', 5),
 ])
 back_right = ''.join([
-    head('From the grill', 'At the rear of the car.'),
+    head('From the grill'),
     item('Cocktail Franks', 'Glazed sticky in honey, mustard, brown sugar and Worcestershire, on picks with pickled pearl onions.', '1.10', 10),
     line('Frankfurter on a toasted roll', '.50', 12),
     line('Cheeseburger, sliced onion', '.95', 6),
@@ -185,7 +178,7 @@ back_right = ''.join([
 stations = [('Boston', 'Lv', '8:30 PM'), ('Back Bay', '', '8:36'), ('Route 128', '', '8:50'), ('Providence', '', '9:22'),
             ('Kingston', '', '9:45'), ('Westerly', '', '9:58'), ('New London', '', '10:20'),
             ('Old Saybrook', '', '10:42'), ('New Haven', '', '11:20'), ('Bridgeport', '', '11:45'), ('Stamford', '', '12:10 AM'),
-            ('New Rochelle', '', '12:30'), ('125th Street', '', '12:48'), ('New York, 42nd St.', 'Ar', '12:57 AM')]
+            ('New Rochelle', '', '12:30'), ('125th Street', '', '12:48'), ('New York, 42nd St.', 'Ar', '12:57')]
 
 
 def tt_col(rows):
@@ -196,15 +189,16 @@ def tt_col(rows):
         out += (f'<div style="display: flex; align-items: baseline; padding: 3px 0; {bb}">'
                 f'<div style="flex: 1; font-family: {BOD}; font-weight: {w}; font-size: 15px; line-height: 1.2; {SQ}">{esc(n)}</div>'
                 f'<div style="width: 24px; font-family: {GOTH}; font-size: 15px; color: {RED}; {SQR}">{a}</div>'
-                f'<div style="width: 70px; text-align: right; font-family: {BOD}; font-weight: {w}; font-size: 15px; line-height: 1.2; {SQ}">{t}</div></div>')
+                f'<div style="width: 66px; text-align: right; font-family: {BOD}; font-weight: {w}; font-size: 15px; line-height: 1.2; {SQ}">{t}</div></div>')
     return out
 
 
-timetable = (f'<div style="position: absolute; left: {X0}px; top: 618px; width: {CWID}px">'
+timetable = (f'<div style="position: absolute; left: {X0}px; top: 590px; width: {CWID}px">'
              f'{head("Train 175, The Harbor Light, daily", None)}'
-             f'<div style="margin-top: 6px; display: flex; gap: {GUT}px">'
-             f'<div style="width: {COL}px">{tt_col(stations[:7])}</div>'
-             f'<div style="width: {COL}px">{tt_col(stations[7:])}</div></div>'
+             f'<div style="margin-top: 6px; display: flex; gap: 24px">'
+             f'<div style="width: 205px">{tt_col(stations[:5])}</div>'
+             f'<div style="width: 205px">{tt_col(stations[5:10])}</div>'
+             f'<div style="width: 206px">{tt_col(stations[10:])}</div></div>'
              f'<div style="margin-top: 6px; font-family: {BOD}; font-style: italic; font-size: 14px; line-height: 1.3; color: {SOFT}; {SQ}">'
              f'When fog closes the airports, extra coaches are added at Boston.</div></div>')
 
@@ -219,10 +213,10 @@ rows = ''.join(f'<div style="display: flex; height: 21px; border-bottom: 0.75px 
                f'<div style="width: 44px; border-right: 0.75px solid {INK}"></div><div style="flex: 1"></div>'
                f'<div style="width: 84px; border-left: 0.75px solid {INK}"></div></div>' for _ in range(5))
 check = f'''
-<div style="position: absolute; left: 30px; top: 812px; width: {FW - 60}px; height: 0; border-top: 2px dashed {INK}; opacity: 0.7"></div>
-<div style="position: absolute; left: {X0}px; top: 797px; width: {CWID}px; text-align: center">
+<div style="position: absolute; left: 30px; top: 790px; width: {FW - 60}px; height: 0; border-top: 2px dashed {INK}; opacity: 0.7"></div>
+<div style="position: absolute; left: {X0}px; top: 781px; width: {CWID}px; text-align: center">
   <span style="background: {PAPER}; padding: 0 10px; font-family: {GOTH}; font-size: 13px; letter-spacing: 0.14em; {SQ}">TEAR HERE AND HAND THE CHECK TO YOUR WAITER</span></div>
-<div style="position: absolute; left: {X0}px; top: 830px; width: {CWID}px; display: flex; gap: 22px">
+<div style="position: absolute; left: {X0}px; top: 808px; width: {CWID}px; display: flex; gap: 22px">
   <div style="width: 236px">
     <div style="display: flex; justify-content: space-between; align-items: baseline">
       <div style="font-family: {GOTH}; font-size: 24px; letter-spacing: 0.1em; color: {RED}; {SQR}">MEAL CHECK</div>
@@ -230,7 +224,6 @@ check = f'''
     <div style="margin-top: 4px; font-family: {BOD}; font-size: 14px; line-height: 1.32; {SQ}">Passengers will please write each item on this check. Waiters are not permitted to take spoken orders.</div>
     <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px 12px">{field("TRAIN", 112)}{field("CAR", 112)}{field("WAITER", 112)}{field("DATE", 112)}</div>
     <div style="margin-top: 9px">{field("NAME OF EMPLOYEE", 236)}</div>
-    <div style="margin-top: 4px; font-family: {BOD}; font-style: italic; font-size: 13px; line-height: 1.25; color: {SOFT}; {SQ}">Comments go to the Superintendent of Dining Service.</div>
   </div>
   <div style="flex: 1; border: 1.5px solid {INK}; align-self: flex-start">
     <div style="display: flex; border-bottom: 1.5px solid {INK}; font-family: {GOTH}; font-size: 14px; letter-spacing: 0.08em; {SQ}">
@@ -244,14 +237,14 @@ check = f'''
   </div>
 </div>
 <div style="position: absolute; left: {X0}px; top: 990px; width: {CWID}px; display: flex; justify-content: space-between; font-family: {GOTH}; font-size: 13px; letter-spacing: 0.1em; {SQ}">
-  <div>PRICES INCLUDE ALL TAXES</div><div>PRINTED IN U.S.A.</div></div>
+  <div>COMMENTS TO THE SUPERINTENDENT OF DINING SERVICE</div><div>PRICES INCLUDE TAXES &middot; PRINTED IN U.S.A.</div></div>
 '''
 
 back = f'''
 {masthead("Lounge Car", "CLUB AND GRILL SERVICE<br>BAR OPEN FROM BOSTON<br>TO STAMFORD")}
 <div style="position: absolute; left: {X0}px; top: 164px; width: {COL}px">{back_left}</div>
 <div style="position: absolute; left: {X0 + COL + GUT}px; top: 164px; width: {COL}px">{back_right}</div>
-<div style="position: absolute; left: {X0 + COL + GUT // 2}px; top: 170px; width: 0.75px; height: 420px; background: {INK}; opacity: 0.6"></div>
+<div style="position: absolute; left: {X0 + COL + GUT // 2}px; top: 170px; width: 0.75px; height: 392px; background: {INK}; opacity: 0.6"></div>
 {timetable}
 {check}
 '''

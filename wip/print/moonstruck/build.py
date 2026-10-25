@@ -45,10 +45,12 @@ COVER_L = (typed_head('MASSES', 0) +
     typed_head('CONFESSIONS', 12) +
     typed('Saturday 3:30 to 5 PM, or by appointment.'))
 COVER_R = (typed_head('RECTORY', 0) +
-    typed('Msgr. Vincent Amato, Pastor') +
+    typed('Msgr. Amato, Pastor') +
     typed('Rev. Peter Kelleher', extra='margin-top: 6px') +
     typed('Office open 9 to 5 for baptisms, weddings and sick calls.', extra='margin-top: 6px') +
     typed('Tel. 555-0119', extra='margin-top: 6px'))
+COVER_B = (typed_head('THIS WEEK', 0) +
+    typed('Monday 7:30 PM, novena to St. Cecilia, patroness of musicians. The choir sings.'))
 
 # ---------- page 4: the advertisers ----------
 def ad(name, body, foot, face="'Old Standard TT', serif", nsize=19, nstyle='font-weight: 700', cut=None, center=False):
@@ -72,7 +74,7 @@ ADS = ''.join([
        'Ask for Angela. 555-0148', face=OSW, nstyle='font-weight: 600; letter-spacing: 0.06em', nsize=19, cut=('ad-plane-linecut.png', 96, 37), center=True),
     ad('DeMarco Jewelers', 'Engagement rings, wedding bands, watch repair.',
        'No ring? See us first.', nstyle='font-weight: 700; font-style: italic', nsize=20, cut=('ad-ring-linecut.png', 34, 34), center=True),
-    ad('Carmela&#8217;s Salon', 'Cut, set and color. We cover gray. Walk-ins Tuesday to Saturday.',
+    ad('Carmela&#8217;s Salon', 'Cut, set and color. We cover gray. Manicures on Saturday. Walk-ins Tuesday to Saturday.',
        'Tel. 555-0172', nstyle='font-weight: 400; font-style: italic', nsize=21),
     ad('GOWNS BY ADELE', 'Evening dresses and coats, and shoes to match. Alterations ready by Friday.',
        'Tel. 555-0126', nstyle='font-weight: 700; letter-spacing: 0.08em', nsize=17),
@@ -80,10 +82,10 @@ ADS = ''.join([
        'Fittings nightly. 555-0181', face=OSW, nstyle='font-weight: 500; letter-spacing: 0.04em', nsize=20),
     ad('PUGLIESE PORK STORE', 'Veal and chicken cutlets pounded while you wait. Sweet and hot sausage made daily.',
        'Tel. 555-0155', face=OSW, nstyle='font-weight: 600', nsize=18),
-    ad('Corner Wines &amp; Liquors', 'Asti Spumante by the case for engagements. Party orders delivered.',
+    ad('Corner Wines &amp; Liquors', 'Asti Spumante by the case for engagements. We deliver.',
        'Tel. 555-0114', nstyle='font-weight: 700', nsize=18),
     ad('Tedeschi Funeral Home', 'Family owned since 1921. Chapel and private parking.',
-       'Day or night. 555-0102', nstyle='font-weight: 400; font-variant: small-caps; letter-spacing: 0.02em', nsize=18, center=True),
+       'Day or night. 555-0102', nstyle='font-weight: 400; font-variant: small-caps; letter-spacing: 0.02em', nsize=16, center=True),
 ])
 
 # ---------- page 2: typed parish notes ----------
@@ -135,13 +137,15 @@ DINNER = [
     ('Antipasto', 'Salami, provolone, roasted peppers and olives.'),
     ('Escarole soup', 'Tiny meatballs, grated cheese.'),
     ('Baked ziti', 'Ricotta and mozzarella in Sunday gravy.'),
-    ('Chicken scaloppine', 'Cutlets pounded thin, floured and sautéed with lemon, white wine, capers and butter. Tossed salad alongside.'),
+    ('Chicken scaloppine', 'Cutlets pounded thin, floured and sautéed with lemon, white wine, capers and butter.'),
+    ('Sheet cake', 'Coffee and anisette to finish.'),
 ]
 BAR = [
-    ('Amaretto sour', 'Shaken frothy with lemon and egg white, over ice, a cherry on top.', '2.50'),
+    ('Amaretto sour', 'Shaken frothy with lemon and egg white, over ice, with a cherry.', '2.50'),
     ('Highballs', 'Rye and ginger ale, scotch and soda.', '2.50'),
     ('House wine', 'Red or white.', '2.00'),
-    ('Beer', 'Bottles on ice. Soda .75', '1.50'),
+    ('Beer', 'Cold, by the bottle.', '1.50'),
+    ('Soda', 'For the children.', '.75'),
 ]
 BAKE = [
     ('Rosemary focaccia', 'Olive oil bread from sheet pans, dimpled, with coarse salt. Slices .75', '4.00'),
@@ -173,8 +177,7 @@ FLYER = (
     '<div style="flex: 1.4">' + col_head('DINNER') + ''.join(dish(n, d, gap=6, size=18) for n, d in DINNER) + '</div>'
     '<div style="flex: 1">' + col_head('CASH BAR') + ''.join(dish(n, d, p, gap=6, size=18) for n, d, p in BAR) + '</div>'
     '</div>'
-    f'<div style="margin-top: 10px; padding-top: 7px; border-top: 1px solid {INK}; text-align: center; font-family: \'Old Standard TT\', serif; font-style: italic; font-size: 16px; line-height: 1.2">'
-    'Sheet cake, coffee and anisette on every table.</div></div>')
+    '</div>')
 
 BAKESALE = (
     '<div style="border: 1.5px solid ' + INK + '; padding: 10px 14px 12px">'
@@ -199,7 +202,7 @@ P3 = (
 LAYOUT = {'MAST': 44, 'GAP3': 16}
 
 def fill(s):
-    for k, v in {'INK': INK, 'OCHRE': OCHRE, 'OCHRE_TXT': OCHRE_TXT, 'ADS': ADS, 'COVER_L': COVER_L, 'COVER_R': COVER_R,
+    for k, v in {'INK': INK, 'OCHRE': OCHRE, 'OCHRE_TXT': OCHRE_TXT, 'ADS': ADS, 'COVER_L': COVER_L, 'COVER_R': COVER_R, 'COVER_B': COVER_B,
                  'P2': P2, 'P3': P3, 'COLLECTION': COLLECTION, 'BREAKFAST': BREAKFAST}.items():
         s = s.replace('{{' + k + '}}', v)
     for k, v in LAYOUT.items():

@@ -39,7 +39,7 @@ SWEETS = [
     ('Hot fudge sundae', 'Vanilla ice cream, warm chocolate sauce, toasted almonds and a cherry.', '5.25'),
 ]
 BAR = [
-    ('Champagne cocktail', 'A sugar cube soaked in bitters, a dash of orange liqueur, filled with chilled brut and a twist of peel.', '7.00'),
+    ('Champagne cocktail', 'A sugar cube soaked in bitters and a dash of orange liqueur, then chilled brut to the brim and a twist of peel.', '7.00'),
     ('House champagne', 'French brut by the bottle, sent up on ice with two glasses.', '45.00'),
     ('Pot of coffee', 'Fresh brewed, regular or decaffeinated, with cream. Serves two.', '3.75'),
     ('Orange juice', 'Squeezed to order and served in the large glass.', '3.25'),
@@ -53,6 +53,7 @@ SERVICES = [
     ('Postcards and stamps', 'At the front desk. Mail left with the bell captain goes out each afternoon.'),
     ('The concierge', 'Limousines, theater tickets and dinner reservations.'),
     ('The Grand Ballroom', 'Private parties for twenty to two thousand.'),
+    ('Valet', 'Pressing back within the hour. Shoes shined overnight.'),
 ]
 
 
@@ -136,7 +137,7 @@ def back():
             f'<div style="display: flex; gap: 8px">{bfast}</div>'
             f'<div style="margin-top: 7px; font-style: italic; font-size: 17px; color: {GREY}">Hang the breakfast card on your door before 3 a.m.</div>'
             f'{head("AT YOUR SERVICE", "Les services", top=20)}'
-            f'<div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: flex-start"><div style="width: 360px">{services}</div>{note}</div>'
+            f'<div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: flex-start"><div style="width: 392px">{services}</div>{note}</div>'
             f'{footer("Please allow thirty minutes. Trays are collected on request.", "FORM RS-30 4/85")}'
             f'</section>{over}</div>')
 

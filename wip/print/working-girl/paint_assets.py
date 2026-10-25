@@ -45,21 +45,21 @@ def multiply(base, color, mask, strength):
     return Image.composite(tinted, base, m)
 
 
-def skyline(w=520, h=860):
+def skyline(w=456, h=1088):
     """TMDB publicity still (/obybnndTx4I0rUaBvGpjX2nSftT.jpg), cropped to the left edge only: the downtown
     towers over the water, no people. Printed as a two-ink duotone: a navy key plate from the cool channel and
     an orange plate in the warm stone, out of register by about 1.5 CSS px."""
     src = Image.open(os.path.join(HERE, 'src', 'skyline-still.jpg')).convert('RGB')
-    bw = 578
+    bw = 540
     box = (0, 1730 - int(bw * h / w), bw, 1730)
     im = src.crop(box).resize((w, h), Image.LANCZOS)
     im = ImageEnhance.Sharpness(im).enhance(1.6)
     r, g, b = im.split()
-    val = ImageChops.lighter(ImageChops.lighter(r, g), b)
-    key = ImageOps.invert(val).point(lambda v: max(0, min(255, int((v - 48) * 1.45))))
-    warm = ImageChops.subtract(r, b)
-    warm = ImageOps.autocontrast(warm, cutoff=1).point(lambda v: max(0, int((v - 40) * 0.7)))
-    sky = ImageChops.subtract(b, r).point(lambda v: 70 if v > 40 else int(v * 1.6))  # flat orange-free sky
+    lum = ImageOps.equalize(im.convert('L'))
+    skym = ImageChops.subtract(b, r).point(lambda v: max(0, min(255, int((v - 18) * 6))))
+    key = ImageOps.invert(lum).point(lambda v: int(((v / 255.0) ** 1.3) * 212))
+    key = ImageChops.subtract(key, skym.point(lambda v: int(v * 0.42)))
+    warm = skym.point(lambda v: int(v * 0.27))  # blue sky goes to the orange plate as a light tint
     random.seed(11)
     navy_m = halftone(key, 4.4, 45, gain=1.0)
     random.seed(12)

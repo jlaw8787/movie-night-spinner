@@ -204,7 +204,7 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
 </div>'''
 
 back_marks = f'''
-  <img src="assets/stamp-prices.png" alt="" style="position: absolute; left: 372px; top: 826px; width: 150px; height: 66px">
+  <img src="assets/stamp-prices.png" alt="" style="position: absolute; left: 405px; top: 833px; width: 126px; height: 55px">
   <div style="position: absolute; left: 584px; top: 48px; width: 184px; {P}; font-size: 23px; line-height: 1.0; color: {PEN}; transform: rotate(-4deg)">1 rye, mustard<br>1 white, mayo ?!<br><span style="font-size: 20px; margin-left: 64px">la-di-da</span></div>'''
 
 
@@ -226,6 +226,7 @@ json.dump({"fmt": "annietable", "fn": "fmtAnnieTable", "faces": ["front.html", "
            "phone": {"disp": "'Caprasimo',serif", "title": "'Caprasimo',serif", "name": "'Caprasimo',serif",
                      "body": "'Libre Franklin',sans-serif", "price": "'Caprasimo',serif", "note": "'Libre Franklin',sans-serif"}},
           open(os.path.join(D, 'film.json'), 'w'), indent=1)
-labels = {k: {"n": v[0], "d": v[1], "note": v[3]} for k, v in SPEC.items()}
+PHONE_NOTE = {"Alvy's potato knishes": "Hot from the steam table all day."}
+labels = {k: {"n": v[0], "d": v[1], "note": v[3] or PHONE_NOTE[k]} for k, v in SPEC.items()}
 json.dump({"Annie Hall (1977)": labels}, open(os.path.join(D, 'annietable.labels.json'), 'w'), indent=1, ensure_ascii=False)
 print('built')

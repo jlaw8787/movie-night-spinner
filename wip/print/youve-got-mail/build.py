@@ -40,7 +40,7 @@ STORE = [
 ]
 LABELS = {
     'Publishing party salmon cucumber bites': {'n': 'Smoked salmon on cucumber', 'd': 'Two dozen, with dill cream cheese, capers and black pepper.', 'note': 'Book party platter. Order two days ahead.'},
-    'Upper West Side bagels': {'n': 'Toasted mini bagels', 'd': 'Three to an order, with scallion cream cheese and cracked pepper.', 'note': 'Soup, bagels and sandwiches.'},
+    'Upper West Side bagels': {'n': 'Toasted mini bagels', 'd': 'Three to an order, with scallion cream cheese and cracked pepper.', 'note': 'From the cafe kitchen, 3.25.'},
     'Fox Books cafe sandwiches': {'n': 'Pressed turkey and brie', 'd': 'On sourdough with cranberry sauce, grilled until the cheese runs.', 'note': 'From the cafe kitchen, 6.50.'},
     'Cafe cheesecake': {'n': 'New York cheesecake', 'd': 'Rich and dense, with sugared fresh strawberries.', 'note': 'From the bakery case, 3.95.'},
     'Tall decaf cappuccino': {'n': 'Cappuccino', 'd': 'Double decaf espresso and steamed milk, topped high with foam.', 'note': 'Tall. Decaf. Cappuccino. 2.95'},

@@ -116,13 +116,13 @@ def wear(seed, name, holes_left):
     cx = 36 if holes_left else W - 36
     for cy in (H / 2 - 408, H / 2, H / 2 + 408):
         r = 12
-        dr.ellipse(((cx - r) * S, (cy - r) * S, (cx + r) * S, (cy + r) * S), fill=(58, 55, 52, 255))
-        dr.ellipse(((cx - r + 1.5) * S, (cy - r + 2) * S, (cx + r - 1) * S, (cy + r) * S), fill=(40, 38, 36, 255))
+        # the desk shows through: mid grey, with the hole's own shadow along the top edge
+        dr.ellipse(((cx - r) * S, (cy - r) * S, (cx + r) * S, (cy + r) * S), fill=(92, 88, 82, 255))
+        dr.ellipse(((cx - r + 1) * S, (cy - r + 3) * S, (cx + r - 1) * S, (cy + r) * S), fill=(122, 117, 110, 255))
+        dr.arc(((cx - r - 1) * S, (cy - r - 1) * S, (cx + r + 1) * S, (cy + r + 1) * S), 200, 340, fill=(150, 140, 125, 120), width=S)
     img.save(os.path.join(A, name))
 
 
-halftone_still()
-tint_screen()
 wear(11, 'wear-front.png', True)
 wear(23, 'wear-back.png', False)
 print('painted')

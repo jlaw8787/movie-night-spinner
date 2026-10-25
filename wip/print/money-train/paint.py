@@ -258,8 +258,8 @@ def counter():
     P.line(rgt, 8)
     P.d.arc((150, 424, 330, 456), 0, 180, fill=255, width=7)
     # handle
-    P.d.arc((340, 230, 470, 380), -80, 90, fill=255, width=16)
-    P.d.arc((372, 262, 438, 348), -70, 80, fill=255, width=5)
+    P.d.arc((326, 232, 466, 380), -84, 84, fill=255, width=20)
+    P.d.arc((352, 260, 440, 352), -70, 70, fill=255, width=4)
     # rim and the coffee
     P.d.ellipse((84, 176, 396, 226), outline=255, width=8)
     cof = P.mask(lambda d: d.ellipse((104, 186, 376, 220), fill=255))
@@ -270,10 +270,10 @@ def counter():
         pts = [(x0 + 18 * math.sin(t / 26 + i * 1.7), 170 - t) for t in range(0, 140, 4)]
         P.line(pts, 6 if i != 1 else 7)
     # wax paper
-    paper = [(470, 330), (812, 300), (826, 540), (486, 576)]
+    paper = [(452, 300), (826, 262), (834, 548), (470, 588)]
     P.poly(paper, 4)
-    P.line([(520, 560), (560, 470)], 3)
-    P.line([(760, 318), (790, 420)], 3)
+    P.line([(500, 578), (528, 520)], 3)
+    P.line([(790, 272), (806, 330)], 3)
 
     def pastry(p):
         (a, b, c, e) = p
@@ -287,7 +287,7 @@ def counter():
         P.line([e, (e[0], e[1] + 26)], 6)
         P.line([c, (c[0], c[1] + 26)], 6)
         for (p0, p1) in ((a, b), (b, c), (c, e), (e, a)):        # fork crimp along the seal
-            n = 9
+            n = 7
             for k in range(1, n):
                 t = k / n
                 x = p0[0] + (p1[0] - p0[0]) * t
@@ -296,15 +296,16 @@ def counter():
                 cy = (a[1] + c[1]) / 2
                 dx, dy = cx - x, cy - y
                 L = math.hypot(dx, dy)
-                P.line([(x, y), (x + dx / L * 15, y + dy / L * 15)], 3)
+                P.line([(x + dx / L * 6, y + dy / L * 6), (x + dx / L * 16, y + dy / L * 16)], 3)
         cx = (a[0] + b[0] + c[0] + e[0]) / 4
         cy = (a[1] + b[1] + c[1] + e[1]) / 4
+        # puffed top: a few curved flake lines, then three slits with guava showing
+        P.hatch(P.mask(lambda d: d.polygon([(a[0] + 22, a[1] + 24), (a[0] + 70, a[1] + 18), (a[0] + 26, a[1] + 66)], fill=255)), -40, 7, 2.4)
         for k in (-1, 0, 1):
-            P.line([(cx - 22 + k * 22, cy + 18), (cx + 2 + k * 22, cy - 18)], 6)
-        # guava peeking from the slits
-        P.hatch(P.mask(lambda d: d.ellipse((cx - 40, cy - 8, cx + 40, cy + 10), fill=255)), 30, 8, 3)
-    pastry([(500, 362), (640, 348), (648, 446), (508, 462)])
-    pastry([(660, 340), (792, 326), (800, 420), (668, 434)])
+            sx0 = cx + k * 26
+            P.d.polygon([(sx0 - 14, cy + 22), (sx0 - 6, cy + 22), (sx0 + 14, cy - 22), (sx0 + 6, cy - 22)], fill=255)
+    pastry([(482, 336), (640, 318), (650, 470), (492, 490)])
+    pastry([(662, 312), (808, 296), (816, 440), (672, 456)])
     flexo(P, 560, 400, 'counter-ink.png', 11)
 
 
