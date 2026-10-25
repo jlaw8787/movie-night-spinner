@@ -8,9 +8,9 @@ import os
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
 PAPER, NAVY, BRASS, MUTE, CARD = '#dde3e3', '#1b2841', '#a26f26', '#4d5866', '#f3f4ef'
-FONTS = ('https://fonts.googleapis.com/css2?family=Gloock'
+FONTS = ('https://fonts.googleapis.com/css2?family=Fraunces:wght@600'
          '&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Mrs+Saint+Delafield&display=swap')
-DISP = "'Gloock', serif"; BODY = "'Spectral', serif"; SIG = "'Mrs Saint Delafield', cursive"
+DISP = "'Fraunces', serif"; BODY = "'Spectral', serif"; SIG = "'Mrs Saint Delafield', cursive"
 
 def kicker(t, color=BRASS, extra=''):
     return (f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; letter-spacing: 0.2em; color: {color}; '
@@ -19,12 +19,12 @@ def kicker(t, color=BRASS, extra=''):
 def door(t, size=40):
     """Section title in a navy door frame, with a brass knob."""
     return (f'<div style="position: relative; display: inline-block; border: 3px solid {NAVY}; padding: 9px 46px 7px 16px; '
-            f'font-family: {DISP}; font-size: {size}px; line-height: 1; color: {NAVY}; text-transform: uppercase; letter-spacing: 0.01em; white-space: nowrap">{t}'
+            f'font-family: {DISP}; font-weight: 600; font-size: {size}px; line-height: 1; color: {NAVY}; text-transform: uppercase; letter-spacing: 0.01em; white-space: nowrap">{t}'
             f'<div style="position: absolute; right: 15px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: {BRASS}"></div></div>')
 
 def item(name, price, desc, gap=20):
     return (f'<div style="margin-top: {gap}px">'
-            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; font-family: {DISP}; '
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; font-family: {DISP}; font-weight: 600; '
             f'font-size: 27px; line-height: 1.12; color: {NAVY}">'
             f'<span>{name}</span><span style="font-family: {BODY}; font-weight: 600; font-size: 26px; color: {BRASS}">{price}</span></div>'
             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.36; color: {NAVY}; margin-top: 4px">{desc}</div></div>')
@@ -44,7 +44,7 @@ def sign(x, y, w, size=19, color=BRASS):
     """The hotel's own sign line: name between two brass rules."""
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; display: flex; align-items: center; gap: 14px">'
             f'<div style="flex: 1; height: 1px; background: {color}"></div>'
-            f'<div style="font-family: {DISP}; font-size: {size}px; letter-spacing: 0.3em; color: {color}; line-height: 1">THE HOTEL CARROW</div>'
+            f'<div style="font-family: {DISP}; font-weight: 600; font-size: {size}px; letter-spacing: 0.3em; color: {color}; line-height: 1">THE HOTEL CARROW</div>'
             f'<div style="flex: 1; height: 1px; background: {color}"></div></div>')
 
 def button(o, x, y):
@@ -53,7 +53,7 @@ def button(o, x, y):
              f'box-shadow: 0 3px 7px rgba(20,25,35,0.35); transform: rotate(-8deg)">'
              f'<div style="position: absolute; left: 6px; top: 6px; width: 106px; height: 106px; border-radius: 50%; background: {NAVY}"></div>'
              f'<div style="position: absolute; left: 0; top: 22px; width: 118px; text-align: center; font-family: {BODY}; font-size: 14px; letter-spacing: 0.5em; color: {BRASS}">&#9733;&#9733;&#9733;</div>'
-             f'<div style="position: absolute; left: 0; top: 41px; width: 118px; text-align: center; font-family: {DISP}; font-size: 29px; line-height: 1; color: {CARD}">NORRIS</div>'
+             f'<div style="position: absolute; left: 0; top: 44px; width: 118px; text-align: center; font-family: {DISP}; font-weight: 600; font-size: 23px; line-height: 1; color: {CARD}">NORRIS</div>'
              f'<div style="position: absolute; left: 22px; top: 75px; width: 74px; height: 2px; background: #b8323a"></div>'
              f'<div style="position: absolute; left: 0; top: 81px; width: 118px; text-align: center; font-family: {BODY}; font-weight: 600; font-size: 14px; letter-spacing: 0.12em; color: {CARD}">SENATE</div>'
              '</div>')
@@ -61,7 +61,7 @@ def button(o, x, y):
 def front():
     o = []
     o.append(sign(L, 46, CW, 19))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 78px; width: {CW}px; font-family: {DISP}; font-size: 72px; line-height: 1; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 78px; width: {CW}px; font-family: {DISP}; font-weight: 600; font-size: 72px; line-height: 1; '
              f'color: {NAVY}; text-transform: uppercase; letter-spacing: -0.005em; white-space: nowrap">Election night</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 158px">{kicker("The Grand Ballroom, Park Avenue")}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 184px; width: {CW - 130}px; font-family: {BODY}; font-style: italic; font-size: 20px; color: {MUTE}">'
@@ -94,7 +94,7 @@ def hatcheck(o, x, y):
              f'box-shadow: 0 2px 5px rgba(20,25,35,0.3); transform: rotate(-6deg)">'
              f'<div style="position: absolute; left: 6px; top: 6px; width: 134px; height: 76px; border: 1.5px solid {NAVY}"></div>'
              f'<div style="position: absolute; left: 0; top: 14px; width: 150px; text-align: center; font-family: {BODY}; font-weight: 600; font-size: 14px; letter-spacing: 0.2em; color: {NAVY}">HAT CHECK</div>'
-             f'<div style="position: absolute; left: 0; top: 34px; width: 150px; text-align: center; font-family: {DISP}; font-size: 34px; line-height: 1; color: #8e2a2a">No. 47</div>'
+             f'<div style="position: absolute; left: 0; top: 34px; width: 150px; text-align: center; font-family: {DISP}; font-weight: 600; font-size: 34px; line-height: 1; color: #8e2a2a">No. 47</div>'
              f'<div style="position: absolute; left: 0; top: 68px; width: 150px; text-align: center; font-family: {BODY}; font-size: 14px; color: {NAVY}">Hats and umbrellas</div>'
              '</div>')
 
@@ -105,7 +105,7 @@ def ticket(o, x, y):
              f'<div style="position: absolute; left: 0; top: 0; width: 34px; height: 80px; background: {NAVY}"></div>'
              f'<div style="position: absolute; left: 34px; top: 0; width: 0; height: 80px; border-left: 2px dotted {CARD}"></div>'
              f'<div style="position: absolute; left: 0; top: 29px; width: 34px; text-align: center; font-family: {BODY}; font-size: 15px; color: {BRASS}">&#9733;</div>'
-             f'<div style="position: absolute; left: 46px; top: 10px; font-family: {DISP}; font-size: 24px; line-height: 1; color: {NAVY}; white-space: nowrap">ONE DRINK</div>'
+             f'<div style="position: absolute; left: 46px; top: 10px; font-family: {DISP}; font-weight: 600; font-size: 20px; line-height: 1; color: {NAVY}; white-space: nowrap">ONE DRINK</div>'
              f'<div style="position: absolute; left: 46px; top: 40px; font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {NAVY}">Ballroom bar<br>'
              f'<span style="color: #8e2a2a; font-weight: 600">No. 0705</span></div>'
              '</div>')
@@ -113,14 +113,14 @@ def ticket(o, x, y):
 def back():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 48px">{kicker("Norris for Senate")}</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 78px; font-family: {DISP}; font-size: 64px; line-height: 1; color: {NAVY}; text-transform: uppercase">The menu</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 78px; font-family: {DISP}; font-weight: 600; font-size: 64px; line-height: 1; color: {NAVY}; text-transform: uppercase">The menu</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 160px; width: {CW}px; height: 3px; background: {NAVY}"></div>')
     col = lambda x, inner: f'<div style="position: absolute; left: {x}px; top: 186px; width: {COLW}px">{inner}</div>'
     left = (door('Late supper', 38)
             + f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; color: {MUTE}; margin-top: 10px">In the ballroom foyer from 11 P.M.</div>'
             + item('Steak frites', '32.00', 'Seared sirloin, shallot and red wine butter, double-fried potatoes.', 12)
             + item('Lobster linguine', '36.00', 'Split tails, garlic, chili, cherry tomatoes and white wine.', 16)
-            + item('The Chairman&rsquo;s cake', '11.00', 'Dark chocolate, baked to order, set at the edges, soft in the center.', 16)
+            + item('Chairman&rsquo;s cake', '11.00', 'Dark chocolate, baked to order, set at the edges, soft in the center.', 16)
             + item('Coffee or tea', '7.05', 'Poured at the table. Mind your shirt.', 16))
     right = (door('The bar', 38)
              + f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; color: {MUTE}; margin-top: 10px">Cash bar. Drink tickets welcome.</div>'
@@ -131,20 +131,20 @@ def back():
              + item('Soft drinks', '4.00', 'Cola, ginger ale, club soda.', 16))
     o.append(col(L, left)); o.append(col(X2, right))
     # lower band: podium still and Charlie's note
-    o.append(f'<div style="position: absolute; left: {L}px; top: 712px; width: {CW}px; height: 1px; background: {NAVY}; opacity: 0.5"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 738px; width: 340px; height: 190px; outline: 2px solid {BRASS}; outline-offset: 5px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 704px; width: {CW}px; height: 1px; background: {NAVY}; opacity: 0.5"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 728px; width: 340px; height: 190px; outline: 2px solid {BRASS}; outline-offset: 5px">'
              f'<img src="assets/still-podium.jpg" alt="The Congressman at the podium in front of the flag" style="display: block; width: 340px; height: 190px"></div>'
-             f'<div style="position: absolute; left: {L}px; top: 940px; width: 340px; font-family: {BODY}; font-style: italic; font-size: 16px; color: {MUTE}">'
+             f'<div style="position: absolute; left: {L}px; top: 928px; width: 340px; font-family: {BODY}; font-style: italic; font-size: 16px; color: {MUTE}">'
              f'Congressman David Norris of Brooklyn.</div>')
-    o.append(f'<div style="position: absolute; left: {X2 + 4}px; top: 736px; width: {COLW - 4}px">'
+    o.append(f'<div style="position: absolute; left: {X2 + 4}px; top: 724px; width: {COLW - 4}px">'
              + kicker('From the campaign') +
              f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.42; color: {NAVY}; margin-top: 9px">Whatever the count says, thank you. '
              f'Eat something, the returns run late. Hats to the cloakroom, and no photographs at the bar. The bus back to Brooklyn leaves the side doors at 1 A.M.</div>'
              f'<div style="font-family: {SIG}; font-size: 50px; line-height: 1; color: {NAVY}; margin-top: 2px">Charlie Traynor</div></div>')
     hatcheck(o, L + CW - 150, 40)
     ticket(o, L + 372, 62)
-    o.append(f'<div style="position: absolute; left: {L}px; top: 968px; width: {CW}px; height: 1px; background: {NAVY}; opacity: 0.5"></div>'
-             f'<div style="position: absolute; left: {L}px; top: 975px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MUTE}">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 960px; width: {CW}px; height: 1px; background: {NAVY}; opacity: 0.5"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 967px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MUTE}">'
              f'<span>A private wedding is also with us tonight. Kindly keep to the ballroom.<br>Service doors are for staff only. The Hotel Carrow.</span>'
              f'<span style="text-align: right">Prices subject to change.<br>Banquet order 1107, 2006</span></div>')
     return page(''.join(o), 'back')

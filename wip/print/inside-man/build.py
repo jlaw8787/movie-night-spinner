@@ -80,26 +80,39 @@ def front():
         f'font-family: {DISP}; font-size: 26px; letter-spacing: 0.08em; white-space: nowrap; color: {PAPER}; padding-top: 3px">'
         f'<span>Delivery below Canal</span><span style="color: {BRASS_LT}">212 555 0392</span><span>Weekdays 6 A.M. to 7 P.M.</span></div>'
     )
-    still = framed('still-command.jpg', L, 304, CW, 262, '50% 36%',
+    still = framed('still-command.jpg', L, 292, CW, 300, '50% 72%',
                    'Lunch run to the command post out front. Heroes for twenty.')
     heroes = (
         section('Hero counter', 'On our own bread') +
         dish('Sirloin on ciabatta', 'Seared hard, sliced thin, jammy onions, arugula, horseradish cream, toasted bread.', '8.95') +
         hair() +
-        dish('Italian combo', 'Genoa salami, capicola, ham, sharp provolone, oil, vinegar, hot peppers.', '7.25')
+        dish('Italian combo', 'Genoa salami, capicola, ham, provolone, hot peppers.', '7.25')
     )
     counter = (
         section('Hot counter', 'Out of the oven') +
         dish('Potato knishes', 'Potato, onion cooked slow in butter, white pepper, flaky dough, baked golden. Hot mustard.', '2.25') +
         hair() +
-        dish('Party pizzettes', 'Sixteen thin rounds, tomato, mozzarella, pepperoni, crisp underneath.', '9.00')
+        dish('Party pizzettes', 'Sixteen thin rounds, tomato, mozzarella, pepperoni.', '9.00')
     )
-    cols = (f'<div style="position: absolute; left: {L}px; top: 628px; width: 340px">{heroes}</div>'
-            f'<div style="position: absolute; left: {L + 368}px; top: 628px; width: {CW - 368}px">{counter}</div>')
+    cols = (f'<div style="position: absolute; left: {L}px; top: 652px; width: 340px">{heroes}</div>'
+            f'<div style="position: absolute; left: {L + 368}px; top: 652px; width: {CW - 368}px">{counter}</div>')
     foot = (f'<div style="position: absolute; left: {L}px; top: 994px; width: {CW}px; display: flex; justify-content: space-between; '
             f'font-family: {BODY}; font-size: 16px; color: {SOFT}">'
             f'<span>Prices subject to change. New York, N.Y. 2006.</span><span style="font-weight: 700; color: {BRASS}; letter-spacing: 0.14em">PLEASE TURN OVER</span></div>')
-    return page('front', top + still + cols + foot)
+    return page('front', top + still + matchbook() + cols + foot)
+
+
+def matchbook():
+    """A Fortuna matchbook resting on the corner of the photo, clear of the dish text."""
+    return (f'<div style="position: absolute; left: 618px; top: 452px; width: 124px; height: 168px; transform: rotate(-7deg); box-shadow: 0 3px 7px rgba(20,28,38,0.3)">'
+            f'<div style="position: absolute; left: 0; top: 0; width: 124px; height: 132px; background: {INK}; box-sizing: border-box; border: 2px solid {BRASS_LT}; text-align: center; padding-top: 14px">'
+            f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {BRASS_LT}">SALUMERIA</div>'
+            f'<div style="margin-top: 4px; font-family: {DISP}; font-size: 38px; line-height: 1; color: {PAPER}">FORTUNA</div>'
+            f'<div style="width: 70px; height: 1px; background: {BRASS_LT}; margin: 7px auto 6px"></div>'
+            f'<div style="font-family: {DISP}; font-size: 22px; line-height: 1; letter-spacing: 0.04em; color: {BRASS_LT}">555 0392</div></div>'
+            f'<div style="position: absolute; left: 0; top: 132px; width: 124px; height: 14px; background: #6b5a3e"></div>'
+            f'<div style="position: absolute; left: 0; top: 146px; width: 124px; height: 22px; background: {INK}; box-sizing: border-box; border: 2px solid {BRASS_LT}; border-top: 0"></div>'
+            f'</div>')
 
 
 # ---------------------------------------------------------------- back
@@ -173,7 +186,7 @@ def wrap(body, title):
 
 LABELS = {
     'Inside Man (2006)': {
-        'Hostage pizza bites': {'n': 'Party pizzettes', 'd': 'Sixteen thin rounds, tomato, mozzarella, pepperoni, crisp underneath.', 'note': 'From the hot counter, 9.00 a tray.'},
+        'Hostage pizza bites': {'n': 'Party pizzettes', 'd': 'Sixteen thin rounds, tomato, mozzarella, pepperoni.', 'note': 'From the hot counter, 9.00 a tray.'},
         'Brooklyn potato knishes': {'n': 'Potato knishes', 'd': 'Potato, onion cooked slow in butter, white pepper, flaky dough, baked golden. Hot mustard.', 'note': 'Out of the oven, 2.25 each.'},
         'Manhattan steak sandwich': {'n': 'Sirloin on ciabatta', 'd': 'Seared hard, sliced thin, jammy onions, arugula, horseradish cream, toasted bread.', 'note': 'Best sirloin below Canal. K. Frazier'},
         'Rainbow cookies': {'n': 'Rainbow cookies', 'd': 'Three almond layers, green, white and red, apricot jam between, dark chocolate on top.', 'note': 'From the bakery case, 1.00 each.'},

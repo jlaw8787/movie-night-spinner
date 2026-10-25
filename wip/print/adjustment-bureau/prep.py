@@ -16,7 +16,7 @@ mask = Image.new('L', patch.size, 0)
 ImageDraw.Draw(mask).rounded_rectangle((6, 6, patch.size[0] - 6, patch.size[1] - 6), 40, fill=255)
 mask = mask.filter(ImageFilter.GaussianBlur(14))
 im.paste(patch, box[:2], mask)
-crop = im.crop((260, 40, 3840, 40 + int(3580 * 372 / 704)))
+crop = im.crop((1345, 0, 3840, int(2495 * 372 / 704)))   # right of the bottle, above its neck: no label in frame
 crop = ImageEnhance.Brightness(crop).enhance(1.10)
 crop = ImageEnhance.Contrast(crop).enhance(1.04)
 crop.resize((1408, 744), Image.LANCZOS).save(os.path.join(A, 'still-lounge.jpg'), quality=90)

@@ -28,23 +28,23 @@ crop('src-bar.jpg', 'still-bar.jpg', (0, 230, 1880, 900), (956, 340), 1.12)
 
 
 def kicker(t, color=RED, extra=''):
-    return (f'<div style="font-family: {DISP}; font-size: 22px; letter-spacing: 0.26em; color: {color}; '
+    return (f'<div style="font-family: {DISP}; text-transform: uppercase; font-size: 19px; letter-spacing: 0.22em; color: {color}; '
             f'line-height: 1;{extra}">{t}</div>')
 
 
 def bar(t, ink, ring, size=44):
     """Section title in a neon-tube style double outline box, printed flat."""
     return (f'<div style="display: inline-block; border: 3px solid {RED}; border-radius: 14px; '
-            f'box-shadow: 0 0 0 4px {ring}, 0 0 0 6px {RED}; padding: 7px 18px 3px; font-family: {DISP}; '
-            f'font-size: {size}px; line-height: 1; letter-spacing: 0.05em; color: {ink}">{t}</div>')
+            f'box-shadow: 0 0 0 4px {ring}, 0 0 0 6px {RED}; padding: 7px 18px 3px; font-family: {DISP}; text-transform: uppercase; '
+            f'font-size: {round(size * 0.84)}px; line-height: 1.05; letter-spacing: 0.04em; color: {ink}">{t}</div>')
 
 
 def item(name, price, desc, ink, note='', gap=20, nc=RED):
     n = (f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {nc}; margin-top: 3px">{note}</div>'
          if note else '')
     return (f'<div style="margin-top: {gap}px">'
-            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-family: {DISP}; '
-            f'font-size: 32px; line-height: 1.05; color: {ink}; letter-spacing: 0.03em">'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-family: {DISP}; text-transform: uppercase; '
+            f'font-size: 27px; line-height: 1.12; color: {ink}; letter-spacing: 0.02em">'
             f'<span>{name}</span><span style="color: {RED}">{price}</span></div>'
             f'<div style="font-family: {BODY}; font-size: 19.5px; line-height: 1.38; color: {ink}; margin-top: 3px">{desc}</div>{n}</div>')
 
@@ -60,9 +60,9 @@ def page(bg, inner, wear, grain=0.3):
 def matchbook(o, x, y):
     o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 100px; height: 146px; background: {RED}; '
              f'box-shadow: 0 2px 7px rgba(0,0,0,0.45); transform: rotate(-8deg); overflow: hidden">'
-             f'<div style="position: absolute; left: 0; top: 12px; width: 100px; text-align: center; font-family: {DISP}; font-size: 34px; line-height: 0.9; letter-spacing: 0.04em; color: {CREAM}">LAST<br>STOP</div>'
+             f'<div style="position: absolute; left: 0; top: 12px; width: 100px; text-align: center; font-family: {DISP}; text-transform: uppercase; font-size: 28px; line-height: 1; letter-spacing: 0.03em; color: {CREAM}">LAST<br>STOP</div>'
              f'<div style="position: absolute; left: 10px; top: 80px; width: 80px; height: 2px; background: {YEL}"></div>'
-             f'<div style="position: absolute; left: 0; top: 87px; width: 100px; text-align: center; font-family: {DISP}; font-size: 16px; line-height: 1.1; letter-spacing: 0.08em; color: {YEL}">SOHO<br>TILL 4 A.M.</div>'
+             f'<div style="position: absolute; left: 0; top: 87px; width: 100px; text-align: center; font-family: {DISP}; text-transform: uppercase; font-size: 16px; line-height: 1.1; letter-spacing: 0.08em; color: {YEL}">SOHO<br>TILL 4 A.M.</div>'
              f'<div style="position: absolute; left: 0; top: 120px; width: 100px; height: 26px; background: {NIGHT}"></div>'
              f'<div style="position: absolute; left: 0; top: 126px; width: 100px; height: 9px; background: repeating-linear-gradient(90deg, #7a6a58 0 2px, #3b332c 2px 4px)"></div>'
              '</div>')
@@ -72,9 +72,9 @@ def token(o, x, y):
     o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 104px; height: 104px; border-radius: 52px; '
              f'background: radial-gradient(circle at 38% 34%, #f3d98a 0%, #c99b3e 55%, #8f6a25 100%); box-shadow: 0 2px 6px rgba(0,0,0,0.5); transform: rotate(12deg)">'
              f'<div style="position: absolute; left: 7px; top: 7px; width: 86px; height: 86px; border-radius: 43px; border: 2px solid #8a6421"></div>'
-             f'<div style="position: absolute; left: 0; top: 17px; width: 104px; text-align: center; font-family: {DISP}; font-size: 17px; letter-spacing: 0.12em; line-height: 1; color: #5c4214">GOOD FOR</div>'
+             f'<div style="position: absolute; left: 0; top: 17px; width: 104px; text-align: center; font-family: {DISP}; text-transform: uppercase; font-size: 14px; letter-spacing: 0.1em; line-height: 1; color: #5c4214">GOOD FOR</div>'
              f'<div style="position: absolute; left: 39px; top: 38px; width: 26px; height: 26px; border-radius: 13px; background: {NIGHT}"></div>'
-             f'<div style="position: absolute; left: 0; top: 71px; width: 104px; text-align: center; font-family: {DISP}; font-size: 17px; letter-spacing: 0.12em; line-height: 1; color: #5c4214">ONE FARE</div>'
+             f'<div style="position: absolute; left: 0; top: 71px; width: 104px; text-align: center; font-family: {DISP}; text-transform: uppercase; font-size: 14px; letter-spacing: 0.1em; line-height: 1; color: #5c4214">ONE FARE</div>'
              '</div>')
 
 
@@ -88,11 +88,11 @@ def check(o, gx, gy):
     o.append(f'<div style="position: absolute; left: {gx}px; top: {gy}px; width: 224px; height: 202px; background: #fbf8ee; '
              f'box-shadow: 0 2px 6px rgba(40,30,20,0.3); transform: rotate(-4deg)">'
              f'<div style="position: absolute; left: 0; top: 0; width: 224px; height: 44px; border-bottom: 2px solid #3d7a5c; display: flex; '
-             f'justify-content: space-between; align-items: center; padding: 0 12px; box-sizing: border-box; font-family: {DISP}; '
-             f'font-size: 20px; letter-spacing: 0.12em; color: #3d7a5c"><span>GUEST CHECK</span><span style="color: {RED}">No. 0150</span></div>'
+             f'justify-content: space-between; align-items: center; padding: 0 12px; box-sizing: border-box; font-family: {DISP}; text-transform: uppercase; '
+             f'font-size: 16px; letter-spacing: 0.08em; color: #3d7a5c"><span>GUEST CHECK</span><span style="color: {RED}">No. 0150</span></div>'
              + rows +
              f'<div style="position: absolute; left: 104px; top: 88px; border: 3px solid {RED}; border-radius: 4px; padding: 4px 10px 0; '
-             f'font-family: {DISP}; font-size: 38px; line-height: 1; letter-spacing: 0.1em; color: {RED}; opacity: 0.85; transform: rotate(-13deg)">PAID</div>'
+             f'font-family: {DISP}; text-transform: uppercase; font-size: 31px; line-height: 1; letter-spacing: 0.08em; color: {RED}; opacity: 0.85; transform: rotate(-13deg)">PAID</div>'
              '</div>')
 
 
@@ -105,7 +105,7 @@ def front():
              f'line-height: 1.1; color: {RED}; letter-spacing: 0.02em">LAST STOP</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 214px; width: {CW}px; display: flex; align-items: center; gap: 18px">'
              f'<div style="flex: 1; height: 2px; background: {YEL}"></div>'
-             f'<div style="font-family: {DISP}; font-size: 40px; line-height: 1; letter-spacing: 0.3em; color: {CREAM}; padding-left: 0.3em">BAR AND GRILL</div>'
+             f'<div style="font-family: {DISP}; text-transform: uppercase; font-size: 34px; line-height: 1; letter-spacing: 0.3em; color: {CREAM}; padding-left: 0.3em">BAR AND GRILL</div>'
              f'<div style="flex: 1; height: 2px; background: {YEL}"></div></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 272px; width: {CW}px; height: 330px; background: {CREAM}; padding: 0; outline: 3px solid {YEL}; outline-offset: 5px">'
              f'<img src="assets/still-julie.jpg" alt="A regular at a table, the waitress leaning in to take his order" style="display: block; width: {CW}px; height: 330px; object-fit: cover"></div>')
@@ -137,7 +137,7 @@ def back():
     o.append(f'<div style="position: absolute; left: {L}px; top: 50px">{kicker("Kitchen open till close")}</div>')
     o.append(f'<div style="position: absolute; left: {L + 6}px; top: 84px">{bar("The menu", INK, YEL, 60)}</div>')
     o.append(f'<div style="position: absolute; left: {L + 300}px; top: 64px; width: {CW - 300}px; text-align: right; font-family: {SIGN}; font-size: 58px; line-height: 1.15; color: {RED}">LAST STOP</div>')
-    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 136px; width: {CW - 300}px; text-align: right; font-family: {DISP}; font-size: 22px; letter-spacing: 0.26em; color: {INK}">BAR AND GRILL, SOHO</div>')
+    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 136px; width: {CW - 300}px; text-align: right; font-family: {DISP}; text-transform: uppercase; font-size: 19px; letter-spacing: 0.22em; color: {INK}">BAR AND GRILL, SOHO</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 180px; width: {CW}px; height: 3px; background: {INK}"></div>')
     col = lambda x, inner: f'<div style="position: absolute; left: {x + 6}px; top: 210px; width: {COLW - 6}px">{inner}</div>'
     left = (bar('To start', INK, YEL, 40)
