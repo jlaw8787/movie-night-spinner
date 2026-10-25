@@ -112,15 +112,15 @@ def stripes(w, ys, dx=0):
     return layers, hmax
 
 # ---------------------------------------------------------------- front header
-AW, AH = W * S, 300 * S
+AW, AH = W * S, 248 * S
 random.seed(1990)
 key = Image.new('L', (AW, AH), 0)          # brown plate
 org = Image.new('L', (AW, AH), 0)          # orange plate
 kd, od = ImageDraw.Draw(key), ImageDraw.Draw(org)
-hz = int(AH * 0.70)                          # horizon
+hz = int(AH * 0.71)                          # horizon
 
 # 1. the sun, a coarse halftone that thins toward its rim, cut by bands below the middle
-cx, cy, R = int(AW * 0.66), int(AH * 0.43), int(AW * 0.30)
+cx, cy, R = int(AW * 0.66), int(AH * 0.45), int(AW * 0.27)
 g = Image.new('L', (AW, AH), 0); gp = g.load()
 for y in range(max(0, cy - R), min(AH, cy + R)):
     for x in range(max(0, cx - R), min(AW, cx + R)):
@@ -189,10 +189,10 @@ for (x0, y0, n) in ((60, 150, 4), (int(AW * 0.48), int(AH * 0.56), 5), (int(AW *
         cd.line((xs, y0 + k * 13, xs + L, y0 + k * 13), fill=255, width=4)
 
 # 4. the jet climbing out, line-cut in the key plate, over the sun
-jet = jet747(6.4).rotate(10, resample=Image.BICUBIC, expand=True)
+jet = jet747(5.5).rotate(10, resample=Image.BICUBIC, expand=True)
 # knock the sun dots out behind the jet so it reads cleanly
 sil = jet.filter(ImageFilter.MaxFilter(9)).point(lambda v: 255 if v > 30 else 0)
-jx, jy = int(AW * 0.27), int(AH * 0.08)
+jx, jy = int(AW * 0.29), int(AH * 0.06)
 holes = Image.new('L', (AW, AH), 0); holes.paste(sil, (jx, jy))
 org = ImageChops.subtract(org, holes)
 key = ImageChops.subtract(key, holes)

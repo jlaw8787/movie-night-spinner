@@ -117,7 +117,7 @@ def tape(name, seed, w0=96, h0=30):
     for i in range(9):   # torn right end
         pts.append((w - rnd.uniform(0, 4) * S, h - i * h / 8))
     d.polygon(pts, fill=255)
-    body = Image.new('RGBA', (w, h), (240, 232, 196, 0)); body.putalpha(m.point(lambda v: int(v * 0.22)))
+    body = Image.new('RGBA', (w, h), (240, 232, 196, 0)); body.putalpha(m.point(lambda v: int(v * 0.32)))
     # a soft sheen band and yellowed edges
     sheen = Image.new('L', (w, h), 0); sd = ImageDraw.Draw(sheen)
     sd.rectangle([0, int(h * 0.22), w, int(h * 0.36)], fill=70)

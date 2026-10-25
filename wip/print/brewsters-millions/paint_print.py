@@ -336,10 +336,10 @@ def flood_front():
     # flood edge: the offset black stops a hair unevenly on the board
     img = Image.fromarray(np.clip(out, 0, 255).astype(np.uint8), 'RGB').convert('RGBA')
     al = np.full((h, w), 255, np.uint8)
-    wav = (lowfreq(8, w, 2, 5)[0] * 0.9).astype(np.float32)
-    for x in range(w):
-        cut = int(h - 1 - max(0, wav[x]))
-        al[cut:, x] = 0
+    xs = np.arange(w, dtype=np.float32)
+    wav = 0.8 + 0.6 * np.sin(xs / 173.0) + 0.4 * np.sin(xs / 61.0 + 1.3)      # 0 to 1.8 px, smooth
+    yy = np.arange(h, dtype=np.float32)[:, None]
+    al = (np.clip((h - wav[None, :]) - yy, 0, 1) * 255).astype(np.uint8)
     img.putalpha(Image.fromarray(al))
     img.save(os.path.join(A, 'flood-front.png'), optimize=True)
 
@@ -391,7 +391,7 @@ def emboss(top, name):
     Image.fromarray(rgba.astype(np.uint8), 'RGBA').save(os.path.join(A, f'paper-emboss-{name}.png'), optimize=True)
 
 
-def ink_take(name, seed):
+def ink_take(name, seed, flood_h):
     """Uneven offset ink take: soft ivory blotches that lighten the printing here and there,
     plus a faint grey lift in the solids. Big, gentle shapes only."""
     h, w = H, W
@@ -399,6 +399,7 @@ def ink_take(name, seed):
     a = np.clip((m - 0.15) * 22, 0, 26)
     rgba = np.zeros((h, w, 4), np.float32)
     rgba[..., :3] = np.array([244, 238, 224], np.float32)
+    a[:flood_h] = 0
     rgba[..., 3] = a
     Image.fromarray(rgba.astype(np.uint8), 'RGBA').save(os.path.join(A, f'paper-ink-{name}.png'), optimize=True)
 
@@ -415,9 +416,9 @@ def wear(name, seed, flood_h):
     col = np.empty((h, w, 3), np.float32); col[...] = np.array([170, 138, 92], np.float32)
     # on the flood, rubbing reads as pale grey board showing through
     on_flood = yy < flood_h
-    rub = np.clip(1 - (e + lowfreq(h, w, 14, seed + 2) * 3) / 6, 0, 1) ** 1.4 * 120
+    rub = np.clip(1 - (e + lowfreq(h, w, 14, seed + 2) * 2.5) / 4, 0, 1) ** 1.6 * 70
     cx = np.minimum(xx, w - xx); cy = np.minimum(yy, h - yy)
-    corner = np.clip(1 - np.sqrt(cx ** 2 + cy ** 2) / 34, 0, 1) ** 1.5 * 140
+    corner = np.clip(1 - np.sqrt(cx ** 2 + cy ** 2) / 30, 0, 1) ** 1.5 * 120
     a = np.where(on_flood, np.maximum(rub, corner), np.maximum(tone_a, corner * 0.7))
     col[on_flood] = np.array([150, 142, 136], np.float32)
     rgba[..., :3] = col; rgba[..., 3] = np.clip(a, 0, 170)
@@ -534,7 +535,7 @@ if __name__ == '__main__':
     os.makedirs(A, exist_ok=True)
     flood_front(); flood_back()
     emboss(FLOOD_F, 'front'); emboss(FLOOD_B, 'back')
-    ink_take('front', 5); ink_take('back', 9)
+    ink_take('front', 5, FLOOD_F); ink_take('back', 9, FLOOD_B)
     wear('front', 31, FLOOD_F); wear('back', 47, FLOOD_B)
     ring()
     print('sticker size (2x px):', sticker())

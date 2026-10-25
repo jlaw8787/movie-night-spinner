@@ -89,6 +89,10 @@ def clear_lines(region_pts):
     LD.polygon(P(region_pts), fill=0)
 
 
+def bez(p0, p1, p2, n=14):
+    return [((1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * p1[0] + t * t * p2[0], (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * p1[1] + t * t * p2[1]) for t in np.linspace(0, 1, n)]
+
+
 HOR = 132   # horizon
 RAIL = 228  # rail head
 
@@ -157,9 +161,6 @@ m = mask_poly([(598, 74), (606, 66), (614, 74)])
 put(hatch(m, 0.8, 0, 1.2), m)
 stroke([(606, 66), (606, 62)], 0.6)
 # light rays, faint engraved fan
-for ang in (-14, -6, 6, 14):
-    r = math.radians(ang)
-    stroke([(593, 78 + 0), (593 - 34 * math.cos(r), 78 - 34 * math.sin(r))], 0.45)
 # keeper's house
 hs = [(620, 118), (620, 106), (630, 98), (640, 106), (640, 118)]
 m = mask_poly(hs)
@@ -169,12 +170,12 @@ m = mask_poly([(618, 106), (630, 96), (642, 106)])
 put(hatch(m, 0.7, 0, 1.3), m)
 
 # ---------------- sea ----------------
-sea = mask_rect(0, HOR, CW, 214)
-tone = vgrad(HOR, 214, 0.20, 0.52)
+sea = mask_rect(0, HOR, CW, 226)
+tone = vgrad(HOR, 226, 0.20, 0.55)
 # glitter path where the lines break up
 gl = (np.abs(xx - 380 * S) < (30 + (yy / S - HOR) * 1.6) * S) & (rng.random((H, W)) > 0.0)
 gl_noise = np.asarray(Image.fromarray((rng.random((H // 9, W // 24)) * 255).astype(np.uint8)).resize((W, H), Image.NEAREST), np.float32) / 255
-tone = np.where(gl & (gl_noise > 0.55), tone * 0.25, tone)
+tone = np.where(gl, tone * 0.55, tone)
 ink |= hatch(sea, tone, 0, 1.75, wave=(0.6, 23)) & (yy >= HOR * S)
 stroke([(0, HOR), (CW, HOR)], 0.6)
 
@@ -207,40 +208,48 @@ for dx, yy0 in ((-8, 115), (8, 115), (-5, 121), (5, 121)):
     stroke(pts, 0.45)
 
 # ---------------- embankment and riprap ----------------
-emb = [(0, 230), (CW, 230), (CW, 300), (0, 300)]
+emb = [(0, 226), (CW, 226), (CW, 300), (0, 300)]
 m = mask_poly(emb)
-put(hatch(m, vgrad(230, 262, 0.30, 0.55), -32, 1.8), m)
+put(hatch(m, vgrad(226, 262, 0.30, 0.55), -32, 1.8), m)
 # ballast shoulder: stipple of stones just under the rails
 stip = (rng.random((H, W)) > 0.93) & (yy > 230 * S) & (yy < 240 * S)
 ink |= stip
-# riprap stones down to the water
-stones = Image.new('L', (W, H), 0)
-sd = ImageDraw.Draw(stones)
+# riprap: big angular granite blocks tumbled down to the water, nearer ones larger
 rocks = []
-for row, ry in enumerate([248, 260, 272]):
-    x = -10 + row * 7
-    while x < CW + 10:
-        w = random.uniform(16, 30); h = random.uniform(9, 13)
-        cx, cy = x + w / 2, ry + random.uniform(-2, 2)
-        pts = [(cx + math.cos(t) * w / 2 * random.uniform(0.85, 1.05), cy + math.sin(t) * h / 2 * random.uniform(0.85, 1.05))
-               for t in np.linspace(0, 2 * math.pi, 9)[:-1]]
+for row, (ry, sz) in enumerate([(244, 0.8), (258, 1.0), (274, 1.25)]):
+    x = -20 + random.uniform(0, 14)
+    while x < CW + 20:
+        w = random.uniform(22, 44) * sz; h = random.uniform(11, 17) * sz
+        cx, cy = x + w / 2, ry + random.uniform(-3, 3)
+        n = random.randint(5, 7)
+        ang0 = random.uniform(0, 1)
+        pts = []
+        for k in range(n):
+            t = ang0 + 2 * math.pi * k / n + random.uniform(-0.25, 0.25)
+            pts.append((cx + math.cos(t) * w / 2 * random.uniform(0.75, 1.05), cy + math.sin(t) * h / 2 * random.uniform(0.7, 1.05)))
         rocks.append(pts)
-        x += w + random.uniform(1, 4)
+        x += w * random.uniform(0.72, 0.95)
 for pts in rocks:
     m = mask_poly(pts)
     top = min(p[1] for p in pts); bot = max(p[1] for p in pts)
-    t = vgrad(top, bot, 0.18, 0.8)
-    put(hatch(m, t, random.choice([-40, -30, 35, 50]), 1.5) | hatch(m, np.clip(t - 0.45, 0, 1) * 1.6, 90, 1.7), m)
-    stroke(pts + [pts[0]], 0.7)
+    lft = min(p[0] for p in pts); rgt = max(p[0] for p in pts)
+    t = vgrad(top, bot, 0.12, 0.75) + hgrad(lft, rgt, -0.08, 0.12)
+    a1 = random.choice([-40, -28, 32, 48])
+    put(hatch(m, t, a1, 1.45) | hatch(m, np.clip(t - 0.5, 0, 1) * 1.8, a1 + 80, 1.7), m)
+    stroke(pts + [pts[0]], 0.8)
+    # a facet line across the top of each block
+    k = len(pts)
+    stroke([pts[k // 2], pts[0]], 0.45)
 # tide water and beach grass in the foreground
 fw = mask_rect(0, 280, CW, 300)
 put(hatch(fw, vgrad(280, 300, 0.25, 0.5), 0, 1.6, wave=(0.5, 17)), fw)
-for i in range(70):
+for i in range(26):
     gx = random.uniform(-4, CW + 4)
-    if 200 < gx < 330:
-        continue
-    base = random.uniform(286, 300); hgt = random.uniform(10, 26); lean = random.uniform(-6, 6)
-    stroke([(gx, base), (gx + lean * 0.4, base - hgt * 0.55), (gx + lean, base - hgt)], random.uniform(0.5, 0.9))
+    base = random.uniform(292, 302)
+    for b in range(random.randint(5, 9)):
+        hgt = random.uniform(12, 30); lean = random.uniform(-10, 10)
+        bx = gx + random.uniform(-3, 3)
+        stroke(bez((bx, base), (bx + lean * 0.2, base - hgt * 0.6), (bx + lean, base - hgt), 8), random.uniform(0.45, 0.8))
 
 # ---------------- the train ----------------
 TRUCK_Y = RAIL - 6.5   # axle centre
@@ -260,7 +269,7 @@ def wheels(xc, n, gap=13):
 
 def truck(xc, n, gap=13):
     half = (n - 1) * gap / 2 + 9
-    fr = [(xc - half, TRUCK_Y - 6), (xc + half, TRUCK_Y - 6), (xc + half - 3, TRUCK_Y + 2), (xc - half + 3, TRUCK_Y + 2)]
+    fr = [(xc - half, TRUCK_Y - 7), (xc + half, TRUCK_Y - 7), (xc + half - 3, TRUCK_Y - 2), (xc - half + 3, TRUCK_Y - 2)]
     wheels(xc, n, gap)
     m = mask_poly(fr)
     put(hatch(m, 0.78, 0, 1.2), m)
@@ -338,10 +347,6 @@ L0, L1 = 54, 287
 LT, LB = 160, 212   # roof line and body bottom
 
 
-def bez(p0, p1, p2, n=14):
-    return [((1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * p1[0] + t * t * p2[0], (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * p1[1] + t * t * p2[1]) for t in np.linspace(0, 1, n)]
-
-
 nose = (bez((L0, LB), (L0 - 4, 196), (L0 + 3, 186)) + bez((L0 + 3, 186), (L0 + 10, 179), (L0 + 22, 177))
         + [(L0 + 34, LT + 4)] + bez((L0 + 34, LT + 4), (L0 + 38, LT), (L0 + 46, LT)))
 body = nose + [(L1 - 8, LT), (L1 - 2, LT + 3), (L1, LT + 9), (L1, LB)]
@@ -404,14 +409,6 @@ for k in range(4):
 stroke([(L0 + 2, LB + 3), (L0 - 3, LB + 3)], 0.8)   # coupler
 truck(L0 + 44, 2, 15)
 truck(L1 - 44, 3, 13)
-# exhaust: soft engraved smoke drifting back over the train roof
-smk = Image.new('L', (W, H), 0)
-sdd = ImageDraw.Draw(smk)
-for k, (sx, sy, r) in enumerate([(L0 + 82, LT - 9, 4), (L0 + 96, LT - 15, 6), (L0 + 116, LT - 20, 8), (L0 + 142, LT - 23, 9), (L0 + 172, LT - 24, 9)]):
-    sdd.ellipse([(sx - r * 1.4) * S, (sy - r) * S, (sx + r * 1.4) * S, (sy + r) * S], fill=255)
-smm = np.asarray(smk.filter(ImageFilter.GaussianBlur(2 * S)), np.float32) / 255
-put(hatch(smm > 0.4, 0.14 + 0.18 * smm, 20, 1.6), (smm > 0.4).astype(np.float32))
-
 # ---------------- merge, frame, ink squash ----------------
 lin = np.asarray(lines, np.float32) / 255
 art = np.maximum(ink.astype(np.float32), lin)
@@ -425,10 +422,10 @@ img = Image.fromarray((art * 255).astype(np.uint8)).filter(ImageFilter.GaussianB
 a = np.asarray(img, np.float32) / 255
 cov = np.asarray(Image.fromarray((rng.random((H // 40 + 1, W // 40 + 1)) * 255).astype(np.uint8)).resize((W, H), Image.BICUBIC), np.float32) / 255
 fine = rng.random((H, W)).astype(np.float32)
-th = 0.40 + (cov - 0.5) * 0.16 + (fine - 0.5) * 0.10
+th = 0.42 + (cov - 0.5) * 0.08 + (fine - 0.5) * 0.06
 a = np.clip((a - th) * 6 + 0.5, 0, 1)
 # light patches where the forme did not quite kiss the paper
-a *= 1 - np.clip((cov - 0.78) * 2.0, 0, 0.35)
+a *= 1 - np.clip((cov - 0.85) * 1.2, 0, 0.12)
 
 out_w, out_h = CW * 2, CH * 2
 black = Image.fromarray((a * 255).astype(np.uint8)).resize((out_w, out_h), Image.LANCZOS)

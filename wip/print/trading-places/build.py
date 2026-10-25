@@ -21,33 +21,30 @@ SPREAD_OR = f'text-shadow: 0 0 0.6px {OR}'
 
 # ---------- copy ----------
 LEAD = ('<b style="font-family: %s; font-size: 14px; letter-spacing: 0.04em">THE PARTNERS INVITE</b> all staff, '
-        'with husbands and wives, to the firm’s Christmas party on Friday afternoon. Trading closes at the usual hour '
-        'and the buffet opens on the floor at three. The Heritage Club kitchen is sending the food, a carver for the '
-        'roast and two men for the bar, which stays open until six. Please clear order tickets from your desks and '
-        'lock your desk drawers before you leave them.') % AR
+        'with husbands and wives, to the Christmas party on Friday. The buffet opens on the floor at three, sent over '
+        'by the Heritage Club kitchen with a carver for the roast, and the bar stays open until six. Please clear your '
+        'desks and lock your drawers before you leave them.') % AR
 WELCOME = ('<b style="font-family: %s; font-size: 14px; letter-spacing: 0.04em">WELCOME.</b> Mr. William Ray Valentine '
-           'has joined the firm and takes the desk lately held by Mr. Louis Winthorpe III, who has left Duke &amp; Duke.') % AR
+           'has joined the firm and takes the desk lately held by Mr. Louis Winthorpe III, who has left us.') % AR
 CAPTION = ('Mr. Mortimer Duke, left, and Mr. Randolph Duke take Mr. Valentine through the business over breakfast: '
            'coffee, wheat, pork bellies and orange juice.')
 
 BUFFET_L = ('Passed and on the sideboard', [
-    ('Devils on horseback', 'Prunes stuffed with a whole almond, wrapped in bacon and baked until crisp. Passed hot.', 'Out on trays from three.'),
-    ('Shrimp cocktail', 'Six Gulf shrimp, poached and chilled on cracked ice, with a sharp red sauce and lemon.', None),
-    ('Smoked salmon', 'Nova, sliced thin from the whole side, with pumpernickel, cream cheese, capers and red onion.', 'A whole side on the board.'),
-    ('Swedish meatballs', 'Beef and pork, simmered in a sour cream gravy and kept hot in the chafing dish.', None),
+    ('Devils on horseback', 'Prunes stuffed with a whole almond, wrapped in bacon and baked until crisp.', 'Passed hot on trays from three.'),
+    ('Shrimp cocktail', 'Six Gulf shrimp, poached and chilled on cracked ice. Sharp red sauce, lemon.', None),
+    ('Smoked salmon', 'Nova, sliced thin, with pumpernickel, cream cheese, capers and red onion.', 'A whole side on the board.'),
 ])
 BUFFET_R = ('From the carving board', [
-    ('Roast prime rib of beef', 'Standing rib, salted the day before, roasted slow and carved to order. Natural juices, horseradish cream and oven-browned potatoes.', 'The Heritage Club carver.'),
+    ('Roast prime rib of beef', 'Standing rib, salted a day ahead, roasted slow and carved to order. Natural juices, horseradish cream, browned potatoes.', 'Carved by the Heritage Club man.'),
 ], 'Sweets', [
-    ('Orange butter cake', 'Grated rind and fresh juice in the batter, brushed while still warm with a thick citrus syrup.', 'From the club’s own pastry kitchen.'),
-    ('Christmas cookies', 'Butter spritz, sugar stars and pecan crescents, by the plateful.', None),
+    ('Orange butter cake', 'Grated rind and fresh juice in the batter, brushed while warm with a thick citrus syrup.', None),
 ])
 
 BAR = [
     ('Mimosa', 'Fresh-squeezed orange juice and chilled champagne, half and half, in a tall flute.', None),
-    ('Frozen screwdriver', 'Vodka and orange juice whirled in the blender with crushed ice, poured in small glasses.', 'Plain orange for the drivers.'),
+    ('Frozen screwdriver', 'Vodka and orange juice whirled in the blender with crushed ice, in small glasses.', 'Plain orange for the drivers.'),
     ('Eggnog', 'Cream, eggs and nutmeg, with a little brandy.', None),
-    ('Coffee', 'A fresh pot all afternoon, regular or decaffeinated.', None),
+    ('Coffee and cookies', 'A fresh pot all afternoon. Butter spritz, sugar stars and pecan crescents.', None),
 ]
 
 MARKETS = [
@@ -65,10 +62,9 @@ MARKETS = [
     ('Silver', 'Mar', 'cents per troy oz.', '915.00', '+12.50', '1,055.00'),
 ]
 NOTES = [
-    ('ORANGE JUICE.', 'Frozen concentrate firmed on talk of a cold winter in Florida. The trade waits on the Agriculture Department’s orange crop estimate, due in January. Clients holding positions over the holiday should call their broker before Friday.'),
-    ('PORK BELLIES.', 'Bacon, as in the BLT. Bellies drifted lower on heavy cold storage stocks and light holiday buying.'),
-    ('GOLD AND SILVER.', 'Steady. Gold held near $390 the ounce through a quiet week.'),
-    ('HOLIDAY TRADING.', 'The exchanges are closed Monday, December 26, and Monday, January 2. Our order desk is staffed every other trading day.'),
+    ('ORANGE JUICE.', 'Frozen concentrate firmed on talk of a cold Florida winter. The trade now waits on the Agriculture Department’s orange crop estimate, due in January.'),
+    ('PORK BELLIES.', 'Bacon, as in the BLT. Bellies drifted lower on heavy cold storage stocks.'),
+    ('HOLIDAY TRADING.', 'The exchanges are closed Monday, December 26, and Monday, January 2.'),
     ('BOWL POOL.', 'One dollar a square. Sign up at the front desk.'),
 ]
 
@@ -109,15 +105,15 @@ def wear(name):
 def masthead():
     # two-colour masthead: the orange plate prints a heavy drop under the black, a hair off register
     word = 'DUKE &amp; DUKE'
-    common = f'font-family: {BO}; font-weight: 900; font-size: 86px; line-height: 1; letter-spacing: 0.01em; white-space: nowrap'
+    common = f'font-family: {BO}; font-weight: 900; font-size: 74px; line-height: 1; letter-spacing: 0; white-space: nowrap'
     return f'''
 <div style="position: absolute; left: {L}px; top: 40px; width: {CW}px; display: flex; justify-content: space-between;
      font-family: {AR}; font-weight: 700; font-size: 12px; letter-spacing: 0.16em; color: {INK}; {SPREAD}">
   <span>FOR THE CLIENTS AND STAFF OF THE FIRM</span><span>PHILADELPHIA, PENNSYLVANIA</span></div>
 <div style="position: absolute; left: {L}px; top: 58px; width: {CW}px; height: 8px; background: {INK}"></div>
-<div style="position: absolute; left: {L + 4}px; top: 80px; {common}; color: {OR}">{word}</div>
-<div style="position: absolute; left: {L}px; top: 76px; {common}; color: {INK}; {SPREAD}">{word}</div>
-<div style="position: absolute; left: {L + 540}px; top: 82px; width: {CW - 540}px; text-align: right">
+<div style="position: absolute; left: {L + 4}px; top: 86px; {common}; color: {OR}">{word}</div>
+<div style="position: absolute; left: {L}px; top: 82px; {common}; color: {INK}; {SPREAD}">{word}</div>
+<div style="position: absolute; left: {L + 520}px; top: 86px; width: {CW - 520}px; text-align: right">
   <div style="font-family: {AR}; font-weight: 700; font-size: 25px; line-height: 1.02; letter-spacing: 0.06em; color: {OR}; {SPREAD_OR}">MARKET<br>LETTER</div>
   <div style="margin-top: 6px; font-family: {TI}; font-style: italic; font-size: 15px; line-height: 1.2; color: {INK}; {SPREAD}">Commodity brokers</div>
 </div>
@@ -133,56 +129,59 @@ def masthead():
 
 # ---------- faces ----------
 def front():
-    lc = 252
-    left = f'''
-<div style="position: absolute; left: {L}px; top: 240px; width: {lc}px">
-  {kicker('In the office')}
-  <h1 style="margin: 6px 0 0; font-family: {TI}; font-weight: 700; font-size: 31px; line-height: 1.06; color: {INK}; {SPREAD}">Christmas on the floor, Friday at three</h1>
-  {para(LEAD, 10)}
-  <div style="height: 1px; background: {INK}; margin: 14px 0 0"></div>
-  {para(WELCOME, 10)}
-</div>'''
-    right = f'''
-<div style="position: absolute; left: {L + lc + 20}px; top: 240px; width: 400px">
-  <img src="assets/still-halftone.png" alt="" style="display: block; width: 400px; height: 288px">
-  <p style="margin: 7px 0 0; font-family: {TI}; font-style: italic; font-size: 15px; line-height: 1.3; color: {INK}; {SPREAD}">{CAPTION}</p>
-</div>'''
+    lc = 292
     t, items = BUFFET_L
     rt, ritems, st, sitems = BUFFET_R
-    box = f'''
-<div style="position: absolute; left: {L}px; top: 614px; width: {CW}px; height: {H - 44 - 614}px; box-sizing: border-box; border: 3px solid {INK}">
-  <div style="position: absolute; left: 4px; top: 4px; right: 4px; bottom: 4px; border: 1px solid {OR}"></div>
-  <div style="position: absolute; left: 22px; top: 18px; right: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px">
-    <div style="font-family: {TI}; font-weight: 700; font-size: 30px; line-height: 1; color: {INK}; {SPREAD}">The Christmas Buffet</div>
-    <div style="font-family: {AR}; font-size: 14px; line-height: 1.25; color: {INK}; text-align: right; {SPREAD}">Friday, December 23, from 3 P.M.<br>With the compliments of the partners</div>
+    return masthead() + f'''
+<div style="position: absolute; left: {L}px; top: 238px; width: {CW}px; height: {H - 44 - 238}px; display: flex; flex-direction: column">
+  <div style="display: flex; gap: 20px">
+    <div style="width: {lc}px">
+      {kicker('In the office')}
+      <h1 style="margin: 5px 0 0; font-family: {TI}; font-weight: 700; font-size: 30px; line-height: 1.06; color: {INK}; {SPREAD}">Christmas on the floor, Friday at three</h1>
+      {para(LEAD, 9)}
+      <div style="height: 1px; background: {INK}; margin: 12px 0 0"></div>
+      {para(WELCOME, 9)}
+    </div>
+    <div style="width: 360px">
+      <img src="assets/still-halftone.png" alt="" style="display: block; width: 360px; height: 259px">
+      <p style="margin: 6px 0 0; font-family: {TI}; font-style: italic; font-size: 15px; line-height: 1.3; color: {INK}; {SPREAD}">{CAPTION}</p>
+    </div>
   </div>
-  <div style="position: absolute; left: 22px; top: 64px; right: 22px; height: 2px; background: {INK}"></div>
-  <div style="position: absolute; left: 22px; top: 80px; width: 296px">{dish_group(t, items)}</div>
-  <div style="position: absolute; left: 335px; top: 80px; width: 1px; bottom: 22px; background: {INK}; opacity: 0.5"></div>
-  <div style="position: absolute; left: 352px; top: 80px; width: 292px">{dish_group(rt, ritems)}{dish_group(st, sitems, 22)}</div>
-</div>'''
-    return masthead() + left + right + box + wear('front')
+  <div style="flex: 1; margin-top: 16px; position: relative; box-sizing: border-box; border: 3px solid {INK}; padding: 14px 20px 16px">
+    <div style="position: absolute; left: 3px; top: 3px; right: 3px; bottom: 3px; border: 1px solid {OR}"></div>
+    <div style="position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; padding-bottom: 8px; border-bottom: 2px solid {INK}">
+      <div style="font-family: {TI}; font-weight: 700; font-size: 30px; line-height: 1; color: {INK}; {SPREAD}">The Christmas Buffet</div>
+      <div style="font-family: {AR}; font-size: 14px; line-height: 1.25; color: {INK}; text-align: right; {SPREAD}">Friday, December 23, from 3 P.M.<br>With the compliments of the partners</div>
+    </div>
+    <div style="position: relative; display: flex; gap: 0; margin-top: 12px">
+      <div style="width: 300px; padding-right: 16px; border-right: 1px solid rgba(28,25,23,0.5)">{dish_group(t, items)}</div>
+      <div style="flex: 1; padding-left: 16px">{dish_group(rt, ritems)}{dish_group(st, sitems, 16)}</div>
+    </div>
+  </div>
+</div>
+{wear('front')}'''
 
 
 def back():
+    td = 'padding: 2px 6px; background-image: url(assets/tint-screen.png); background-size: 120px 120px'
     rows = ''
     for i, (c, m, u, s, ch, y) in enumerate(MARKETS):
-        rows += (f'<tr style="background: {"rgba(226,112,42,0.10)" if i % 2 == 0 else "transparent"}">'
-                 f'<td style="padding: 3px 6px; text-align: left">{c}</td><td style="padding: 3px 6px">{m}</td>'
-                 f'<td style="padding: 3px 6px; text-align: left; font-style: italic">{u}</td>'
-                 f'<td style="padding: 3px 6px; text-align: right; font-weight: 700">{s}</td>'
-                 f'<td style="padding: 3px 6px; text-align: right">{ch}</td><td style="padding: 3px 6px; text-align: right">{y}</td></tr>')
-    th = f'font-family: {AR}; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; padding: 0 6px 5px; border-bottom: 1px solid {INK}'
+        bg = td if i % 2 == 0 else 'padding: 2px 6px'
+        rows += (f'<tr><td style="{bg}; text-align: left">{c}</td><td style="{bg}">{m}</td>'
+                 f'<td style="{bg}; text-align: left; font-style: italic">{u}</td>'
+                 f'<td style="{bg}; text-align: right; font-weight: 700">{s}</td>'
+                 f'<td style="{bg}; text-align: right">{ch}</td><td style="{bg}; text-align: right">{y}</td></tr>')
+    th = f'font-family: {AR}; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; padding: 0 6px 4px; border-bottom: 1px solid {INK}'
     table = f'''
-<table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-family: {TI}; font-size: 15px; line-height: 1.2; color: {INK};
-       font-variant-numeric: tabular-nums; {SPREAD}">
+<table style="width: 100%; border-collapse: collapse; margin-top: 8px; font-family: {TI}; font-size: 15px; line-height: 1.2; color: {INK};
+       font-variant-numeric: tabular-nums; border-bottom: 1px solid {INK}; {SPREAD}">
   <tr><th style="{th}; text-align: left">COMMODITY</th><th style="{th}">MONTH</th><th style="{th}; text-align: left">UNIT</th>
       <th style="{th}; text-align: right">SETTLE</th><th style="{th}; text-align: right">WEEK</th><th style="{th}; text-align: right">YEAR AGO</th></tr>
   {rows}
 </table>'''
-    notes = ''.join(para(f'<b style="font-family: {AR}; font-size: 14px; letter-spacing: 0.04em">{h}</b> {b}', 0 if i == 0 else 9)
+    notes = ''.join(para(f'<b style="font-family: {AR}; font-size: 14px; letter-spacing: 0.04em">{h}</b> {b}', 0 if i == 0 else 8)
                     for i, (h, b) in enumerate(NOTES))
-    bar = ''.join(dish(*b, top=(10 if i == 0 else 13)) for i, b in enumerate(BAR))
+    bar = ''.join(dish(*b, top=(8 if i == 0 else 12)) for i, b in enumerate(BAR))
     bl, br = R, L     # holes now on the right
     cw = W - bl - br
     return f'''
@@ -191,39 +190,39 @@ def back():
   <span style="font-weight: 700; letter-spacing: 0.14em">DUKE &amp; DUKE MARKET LETTER</span><span>Week of December 19, 1983&nbsp;&nbsp;&nbsp;<b>2</b></span></div>
 <div style="position: absolute; left: {bl}px; top: 60px; width: {cw}px; height: 3px; background: {INK}"></div>
 <div style="position: absolute; left: {bl}px; top: 66px; width: {cw}px; height: 2px; background: {OR}"></div>
-<div style="position: absolute; left: {bl}px; top: 82px; width: {cw}px">
+<div style="position: absolute; left: {bl}px; top: 80px; width: {cw}px; height: {900 - 80}px; display: flex; flex-direction: column">
   {kicker('The week in the markets')}
-  <div style="margin-top: 4px; font-family: {TI}; font-weight: 700; font-size: 26px; line-height: 1.1; color: {INK}; {SPREAD}">Nearby futures, Friday’s settlement</div>
+  <div style="margin-top: 3px; font-family: {TI}; font-weight: 700; font-size: 26px; line-height: 1.1; color: {INK}; {SPREAD}">Nearby futures, Friday’s settlement</div>
   {table}
-</div>
-<div style="position: absolute; left: {bl}px; top: 470px; width: 340px">{notes}</div>
-<div style="position: absolute; left: {bl + 362}px; top: 470px; width: {cw - 362}px; box-sizing: border-box; padding: 16px 18px 18px;
-     background-image: url(assets/tint-screen.png); background-size: 120px 120px; border-top: 4px solid {INK}">
-  {kicker('Friday at the bar', INK)}
-  <div style="margin-top: 3px; font-family: {TI}; font-weight: 700; font-size: 26px; line-height: 1.05; color: {INK}; {SPREAD}">Open until six</div>
-  {bar}
-</div>
-<div style="position: absolute; left: {bl}px; top: 790px; width: {cw}px; height: 1px; background: {INK}"></div>
-<div style="position: absolute; left: {bl}px; top: 804px; width: {cw}px; display: flex; gap: 24px; align-items: flex-start">
-  <div style="flex: 1">
-    {kicker('From the partners')}
-    {para('Our thanks to every member of the firm for a good year on the floor and off it. We wish you and your families a merry Christmas and a prosperous New Year.', 4, 16, 'left')}
+  <div style="flex: 1; display: flex; gap: 22px; margin-top: 16px">
+    <div style="width: 330px; display: flex; flex-direction: column">
+      {notes}
+      <div style="height: 1px; background: {INK}; margin: 14px 0 10px"></div>
+      {kicker('From the partners')}
+      {para('Our thanks to all of you for a good year. A merry Christmas and a prosperous New Year to you and your families.', 4, 16, 'left')}
+      <div style="position: relative; height: 62px; margin-top: 2px">
+        <div style="position: absolute; left: 6px; top: 0; font-family: {SIG}; font-size: 40px; line-height: 1; color: #1f2a52; transform: rotate(-3deg)">Randolph Duke</div>
+        <div style="position: absolute; left: 150px; top: 22px; font-family: {SIG}; font-size: 40px; line-height: 1; color: #1f2a52; transform: rotate(-2deg)">Mortimer Duke</div>
+      </div>
+    </div>
+    <div style="flex: 1; box-sizing: border-box; padding: 14px 18px 16px; border-top: 4px solid {INK};
+         background-image: url(assets/tint-screen.png); background-size: 120px 120px">
+      {kicker('Friday at the bar', INK)}
+      <div style="margin-top: 3px; font-family: {TI}; font-weight: 700; font-size: 26px; line-height: 1.05; color: {INK}; {SPREAD}">Open until six</div>
+      {bar}
+    </div>
   </div>
-  <div style="width: 236px; position: relative; height: 70px">
-    <div style="position: absolute; left: 0; top: -8px; font-family: {SIG}; font-size: 44px; line-height: 1; color: #1f2a52; transform: rotate(-4deg)">Randolph Duke</div>
-    <div style="position: absolute; left: 50px; top: 30px; font-family: {SIG}; font-size: 42px; line-height: 1; color: #1f2a52; transform: rotate(-2deg)">Mortimer Duke</div>
-  </div>
 </div>
-<div style="position: absolute; left: {bl}px; top: 900px; width: {cw}px; height: {H - 44 - 900}px; border-top: 2px dashed {INK}; box-sizing: border-box">
-  <div style="position: absolute; left: 0; top: 14px; font-family: {TI}; font-size: 15px; line-height: 1.3; color: {INK}; {SPREAD}">
+<div style="position: absolute; left: {bl}px; top: 908px; width: {cw}px; height: {H - 40 - 908}px; border-top: 2px dashed {INK}; box-sizing: border-box">
+  <div style="position: absolute; left: 0; top: 12px; font-family: {TI}; font-size: 15px; line-height: 1.3; color: {INK}; {SPREAD}">
     <b style="font-family: {AR}; letter-spacing: 0.06em">DUKE &amp; DUKE</b><br>Commodity Brokers<br>Philadelphia, Pennsylvania<br>
     <span style="font-family: {AR}; font-size: 12px; letter-spacing: 0.08em">ADDRESS CORRECTION REQUESTED</span></div>
-  <div style="position: absolute; right: 0; top: 14px; width: 132px; box-sizing: border-box; border: 2px solid {INK}; padding: 6px 4px;
-       font-family: {AR}; font-weight: 700; font-size: 12px; line-height: 1.25; text-align: center; color: {INK}; {SPREAD}">
+  <div style="position: absolute; right: 0; top: 12px; width: 128px; box-sizing: border-box; border: 2px solid {INK}; padding: 5px 4px;
+       font-family: {AR}; font-weight: 700; font-size: 12px; line-height: 1.22; text-align: center; color: {INK}; {SPREAD}">
     FIRST CLASS MAIL<br>U.S. POSTAGE<br>PAID<br>PHILADELPHIA, PA<br>PERMIT NO. 50</div>
-  <div style="position: absolute; left: 252px; top: 30px; width: 300px; box-sizing: border-box; padding: 9px 14px 8px; background: #fbfaf6;
+  <div style="position: absolute; left: 270px; top: 10px; width: 262px; box-sizing: border-box; padding: 7px 12px 6px; background: #fbfaf6;
        transform: rotate(-0.8deg); box-shadow: 0 1px 1px rgba(40,30,20,0.25), 0 2px 5px rgba(40,30,20,0.12);
-       font-family: {DOT}; font-size: 15px; line-height: 1.32; letter-spacing: 0.04em; color: #2c2b33">
+       font-family: {DOT}; font-size: 15px; line-height: 1.28; letter-spacing: 0.04em; color: #2c2b33">
     *DD 1983-12 ** 0001<br>THE HERITAGE CLUB<br>ATTN THE LIBRARY<br>PHILADELPHIA PA</div>
 </div>
 {wear('back')}'''

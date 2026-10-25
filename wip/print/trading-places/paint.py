@@ -82,10 +82,10 @@ def halftone_still():
 
 
 def tint_screen():
-    # 20% orange tint as a visible dot screen, 300 x 340 CSS px region is plenty; tiled in CSS
+    # 16% orange tint as a visible dot screen, 300 x 340 CSS px region is plenty; tiled in CSS
     w = h = 120 * S
-    v = np.full((h, w), 0.20)
-    d = screen(v, 4, 15)
+    v = np.full((h, w), 0.16)
+    d = screen(v, 3, 15)
     rgba = np.zeros((h, w, 4)); rgba[..., :3] = ORANGE; rgba[..., 3] = d * 235
     Image.fromarray(rgba.astype(np.uint8), 'RGBA').save(os.path.join(A, 'tint-screen.png'))
 

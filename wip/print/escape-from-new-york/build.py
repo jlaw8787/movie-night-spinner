@@ -64,9 +64,9 @@ class Page:
         end = self.s.text(nx, top, name, 2, 2, True)
         px = x1 - len(price) * CELL * 2
         self.s.text(px, top, price, 2, 2, True)
-        nd = int((px - end - CELL * 0.5) / CELL)
+        nd = int((px - end - CELL * 1.5) / CELL)
         if nd > 0:
-            self.s.text(px - nd * CELL - CELL * 0.5, top + 14, '.' * nd)
+            self.s.text(px - nd * CELL - CELL * 0.75, top + 14, '.' * nd)
         self.alt.append(f'{name} {price}')
         width = int((x1 - x0) / CELL) - 5
         r = self.para(r + 2, desc, 5, width, x0)
@@ -82,9 +82,9 @@ class Page:
         end = self.s.text(x0 + 5 * CELL, top, name, 2, 1, True)
         px = x1 - len(price) * CELL * 2
         self.s.text(px, top, price, 2, 1, True)
-        nd = int((px - end - CELL * 0.5) / CELL)
+        nd = int((px - end - CELL * 1.5) / CELL)
         if nd > 0:
-            self.s.text(px - nd * CELL - CELL * 0.5, top, '.' * nd)
+            self.s.text(px - nd * CELL - CELL * 0.75, top, '.' * nd)
         self.alt.append(f'{name} {price}')
         r += 1
         if desc:
@@ -99,7 +99,7 @@ class Page:
     def header(self, page):
         self.t(L, 0, 'USPF SECURITY CONTROL / LIBERTY IS.')
         mid = 'RUN 1997 WATCH 3'
-        self.t((L + R) / 2 - len(mid) * CELL / 2 + 3 * CELL, 0, mid)
+        self.t(L + 44 * CELL, 0, mid)
         self.t(0, 0, f'PAGE {page:04d}', right=R)
         self.lr(1, 'JOB MESSNITE   FORM STD 9.5X11   LP2', 'COPY 1 OF 1')
 
@@ -156,8 +156,8 @@ p2 = Page(2)
 p2.header(2)
 p2.lr(2, 'MANHATTAN ISLAND MAXIMUM SECURITY PENITENTIARY', 'EST. 1988', True)
 p2.rule(3, '=')
-MX, MY = 512, y(4) + 8
-CR = L + 44 * CELL        # left column right edge
+MX, MY = 524, y(4) + 8
+CR = L + 46 * CELL        # left column right edge
 r = p2.section(4, 'C', 'SWEET', 'ANY HOUR', L, CR)
 r = p2.item(r, '0301', 'RATION BAR', '.75',
             'Rolled oats, butter, golden syrup and brown sugar pressed into a pan and baked, then spread with dark chocolate and flaky salt.',
@@ -176,9 +176,9 @@ def lab(mx, my, lines):
     for i, s in enumerate(lines):
         p2.s.text(MX + mx, MY + my + i * 22, s)
     p2.alt.append(' '.join(lines))
-lab(40, 8, ['CONTAINMENT', 'WALL, 50 FT ->'])
+lab(46, 8, ['CONTAINMENT', 'WALL, 50 FT ->'])
 lab(mp['bridge'][0] + 30, mp['bridge'][1] - 4, ['69TH ST', 'BRIDGE', 'MINED'])
-lab(mp['liberty'][0] + 24, mp['liberty'][1] - 7, ['<-- SECURITY CONTROL'])
+lab(mp['liberty'][0] + 24, mp['liberty'][1] - 2, ['<-- SECURITY CONTROL'])
 p2.rule(26, '-')
 p2.t(L, 27, 'TRANSFERS DUE, PROCESSING DECK', bold=True)
 p2.t(L, 28, '  PLISSKEN, S.    EX LT, SPECIAL FORCES    FEDERAL RESERVE DEPOSITORY')

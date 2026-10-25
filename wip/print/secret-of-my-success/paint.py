@@ -107,25 +107,22 @@ def staple():
     nx, ny = -uy, ux
     L = 24 * S
     def P(t, o=0.0): return (cx + ux * t + nx * o, cy + uy * t + ny * o)
-    # dimples and holes
     d = ImageDraw.Draw(im)
-    for s in (-1, 1):
-        x, y = P(s * L)
-        d.ellipse([x - 3.5 * S, y - 3.5 * S, x + 3.5 * S, y + 3.5 * S], fill=(120, 120, 116, 50))
-    # shadow
+    # cast shadow, offset down and right, plus a faint pressed crease along the crown
     sh = Image.new('RGBA', (cw, ch), (0, 0, 0, 0)); sd = ImageDraw.Draw(sh)
-    sd.line([P(-L + 1 * S, 1.6 * S), P(L - 1 * S, 1.6 * S)], fill=(20, 20, 20, 120), width=int(4.2 * S))
-    sh = sh.filter(ImageFilter.GaussianBlur(1.6 * S))
+    sd.line([P(-L + 1 * S, 2.2 * S), P(L + 0.5 * S, 2.2 * S)], fill=(20, 20, 20, 140), width=int(4.4 * S))
+    sh = sh.filter(ImageFilter.GaussianBlur(1.4 * S))
     im = Image.alpha_composite(im, sh); d = ImageDraw.Draw(im)
-    # legs: short dark stubs at each end going into the paper
-    for s in (-1, 1):
-        x, y = P(s * L)
-        d.ellipse([x - 2.1 * S, y - 2.1 * S, x + 2.1 * S, y + 2.1 * S], fill=(48, 50, 54, 255))
-    # crown: layered strokes, dark edge, steel body, bright highlight
-    d.line([P(-L, 0), P(L, 0)], fill=(70, 72, 78, 255), width=int(4 * S))
-    d.line([P(-L + 0.8 * S, -0.3 * S), P(L - 0.8 * S, -0.3 * S)], fill=(150, 153, 160, 255), width=int(2.8 * S))
-    d.line([P(-L + 3 * S, -0.8 * S), P(L - 6 * S, -0.8 * S)], fill=(226, 228, 232, 255), width=int(1.1 * S))
-    d.line([P(-L + 1 * S, 0.9 * S), P(L - 1 * S, 0.9 * S)], fill=(92, 94, 100, 200), width=int(0.8 * S))
+    # flat wire crown: dark rim, flat steel face, one thin sheen line, square shoulders where it bends into the paper
+    def bar(t0, t1, off, wid, col):
+        d.line([P(t0, off), P(t1, off)], fill=col, width=max(1, int(wid)))
+    bar(-L, L, 0, 4.6 * S, (64, 66, 72, 255))
+    bar(-L + 0.6 * S, L - 0.6 * S, -0.2 * S, 3.4 * S, (172, 175, 182, 255))
+    bar(-L + 4 * S, L - 9 * S, -0.9 * S, 0.9 * S, (232, 234, 238, 255))
+    bar(-L + 1 * S, L - 1 * S, 1.3 * S, 0.8 * S, (110, 112, 118, 255))
+    for sgn in (-1, 1):
+        x, y = P(sgn * (L - 1.2 * S))
+        d.rectangle([x - 1.3 * S, y - 1.3 * S, x + 1.3 * S, y + 1.3 * S], fill=(78, 80, 86, 255))
     im = im.filter(ImageFilter.GaussianBlur(0.35))
     im.save(os.path.join(A, 'staple.png'), optimize=True)
 

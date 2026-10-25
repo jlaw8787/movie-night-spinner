@@ -13,9 +13,8 @@ body = src.split('<body>')[1].split('</body>')[0]
 def bleed_page():
     o = M + B; W = PW + 2 * o; H = PH + 2 * o; s = ''
     # the same painted paper (it already carries 12 px of bleed) and wear layer, laid under and over the trimmed sheet
-    s += f'<img src="assets/paper.png" alt="" style="position:absolute;left:{o-12}px;top:{o-12}px;width:840px;height:1080px">'
+    s += f'<img src="assets/paper.jpg" alt="" style="position:absolute;left:{o-12}px;top:{o-12}px;width:840px;height:1080px">'
     s += f'<div style="position:absolute;left:{o}px;top:{o}px;width:{PW}px;height:{PH}px;overflow:hidden">{body}</div>'
-    s += f'<img src="assets/wear.png" alt="" style="position:absolute;left:{o-12}px;top:{o-12}px;width:840px;height:1080px">'
     s += f'<div style="position:absolute;left:0;top:0;width:{W}px;height:{M}px;background:#fff"></div><div style="position:absolute;left:0;top:{H-M}px;width:{W}px;height:{M}px;background:#fff"></div>'
     s += f'<div style="position:absolute;left:0;top:0;width:{M}px;height:{H}px;background:#fff"></div><div style="position:absolute;left:{W-M}px;top:0;width:{M}px;height:{H}px;background:#fff"></div>'
     def ln(x, y, w, h): return f'<div style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px;background:#000"></div>'
@@ -29,13 +28,13 @@ async def main():
     pg = await b.new_page()
     html = '<!doctype html><html><head>' + head + '<style>@page{size:8.5in 11in;margin:0}body{margin:0}</style></head><body>' + body + '</body></html>'
     open(os.path.join(D, 'trim.html'), 'w').write(html)
-    await pg.goto('file://' + D + '/trim.html'); await pg.wait_for_timeout(2500)
+    await pg.goto('file://' + D + '/trim.html'); await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(2500)
     await pg.pdf(path=os.path.join(D, NAME + '.pdf'), width='8.5in', height='11in', print_background=True, margin={'top': '0', 'bottom': '0', 'left': '0', 'right': '0'})
     W, H, page = bleed_page()
     win, hin = W / 96, H / 96
     html = '<!doctype html><html><head>' + head + f'<style>@page{{size:{win:.4f}in {hin:.4f}in;margin:0}}body{{margin:0}}</style></head><body>' + page + '</body></html>'
     open(os.path.join(D, 'bleed.html'), 'w').write(html)
-    await pg.goto('file://' + D + '/bleed.html'); await pg.wait_for_timeout(2500)
+    await pg.goto('file://' + D + '/bleed.html'); await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(2500)
     await pg.pdf(path=os.path.join(D, NAME + '-print-bleed.pdf'), width=f'{win:.4f}in', height=f'{hin:.4f}in', print_background=True, margin={'top': '0', 'bottom': '0', 'left': '0', 'right': '0'})
     await b.close()
 asyncio.run(main())

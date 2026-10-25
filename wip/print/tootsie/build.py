@@ -88,7 +88,7 @@ CAST = [('1', 'DOROTHY MICHAELS', 'Emily Kimberly', '7:00', '9:30', ''),
 NOTES = ["Please tape the lines as written. R.C.",
          "Closed set during tape. No visitors.",
          "No coffee cups on the nurses' station set.",
-         "Wardrobe: red jacket to the rack after sc. 4."]
+         "Red jacket back to wardrobe after sc. 4."]
 
 def front():
     L, CW = 60, 696
@@ -117,12 +117,12 @@ def front():
            f'<img src="assets/polaroid.png" alt="Wardrobe Polaroid of Emily Kimberly on the set" style="display: block; width: 196px; height: 238px; box-shadow: 0 1px 3px rgba(70,30,30,0.35), 0 4px 10px rgba(70,30,30,0.12)">'
            f'<div style="position: absolute; left: 0; right: 0; top: 196px; text-align: center; transform: rotate(-1.5deg)">{hand("Emily, red jacket", 24, INK)}</div>'
            f'<img src="assets/tape.png" alt="" aria-hidden="true" style="position: absolute; left: 52px; top: -14px; width: 96px; height: 30px; display: block; transform: rotate(-4deg)"></div>')
-    scrawl = (f'<div style="position: absolute; left: 622px; top: 668px; transform: rotate(-6deg)">'
+    scrawl = (f'<div style="position: absolute; left: 616px; top: 688px; transform: rotate(-6deg)">'
               f'<div style="position: relative; display: inline-block">{hand("Tootsie", 28, PENCIL, "opacity: 0.9")}'
               f'<div style="position: absolute; left: -5px; right: -7px; top: 15px; height: 1.6px; background: {BLUE}; transform: rotate(-4deg)"></div>'
               f'<div style="position: absolute; left: -3px; right: -5px; top: 18px; height: 1.2px; background: {BLUE}; transform: rotate(3deg)"></div></div>'
               f'{hand("It&#8217;s Dorothy.", 28, BLUE, "margin: 1px 0 0 10px")}</div>')
-    stamp = '<img src="assets/stamp-revised.png" alt="" aria-hidden="true" style="position: absolute; left: 452px; top: 52px; width: 117px; height: 45px; display: block">'
+    stamp = '<img src="assets/stamp-revised.png" alt="" aria-hidden="true" style="position: absolute; left: 452px; top: 84px; width: 117px; height: 45px; display: block">'
     return f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}; font-family: {FR}">
 {overlays('front')}
 <section style="position: absolute; left: {L}px; top: 48px; width: {CW}px; height: {H - 96}px; display: flex; flex-direction: column">
@@ -163,13 +163,13 @@ def front():
 # ---------- BACK: reverse of the form, lunch typed on ----------
 MAJOR = {
  'table': [('FINGER SANDWICHES', 'Egg salad with watercress, and cucumber with cream cheese, on soft white bread. Crusts off, cut in triangles.'),
-           ('GREEK PEPPER AND FETA SPREAD', 'Red peppers charred under the broiler, peeled, then whipped smooth with feta, plain yogurt, garlic, crushed red pepper and olive oil. Sesame crackers.')],
- 'hot':   [('ROAST CHICKEN AND BROWNED POTATOES', 'Butter, grated lemon peel and thyme under the skin. Carved to order, the potatoes cooked under the bird in the pan.')],
- 'sweet': [('STRAWBERRY SHORTCAKE', 'Cream biscuits baked here today, split and piled with sugared berries and soft whipped cream.')],
- 'drink': [('TEA, THE RUSSIAN WAY', 'Strong black tea poured into glasses. Sliced lemon and cherry preserves on the side, to stir in.')],
+           ('GREEK RED PEPPER AND FETA SPREAD', 'Broiled black, peeled, whipped smooth with feta, plain yogurt, garlic, hot chili flakes and olive oil. Sesame crackers.')],
+ 'hot':   [('ROAST CHICKEN AND PAN POTATOES', 'Butter, grated lemon peel and thyme under the skin. Carved to order. The spuds go underneath to brown in the drippings.')],
+ 'sweet': [('STRAWBERRY SHORTCAKE', 'Biscuits baked here today, split and piled with sugared berries and soft whipped cream.')],
+ 'drink': [('TEA, THE RUSSIAN WAY', 'Brewed strong and black, poured into glasses. Sliced lemon and cherry preserves on the side, to stir in.')],
 }
 MINOR = {
- 'hot':   [('Cole slaw', 'Cabbage and carrot, creamy dressing.'), ('Tossed salad', 'Boston lettuce, radishes, oil and vinegar.')],
+ 'hot':   [('Cole slaw', 'Cabbage and carrot, mayonnaise dressing.'), ('Tossed salad', 'Boston lettuce, radishes, oil and vinegar.')],
  'drink': [('Coffee', 'Regular and decaf in the urn, all day.'), ('Sodas and seltzer', 'In the cooler by the door.')],
 }
 
@@ -196,7 +196,7 @@ def back():
     {lab('Form PO-7, reverse. Meals and notices', 'letter-spacing: 0.08em; font-weight: 600')}
   </div>
   <div style="margin-top: 20px; text-align: center; white-space: pre; line-height: 1.1">{typed(title, 21, bold=True)}</div>
-  <div style="text-align: center; white-space: pre; line-height: 1; margin-top: 1px">{typed("=" * 37)}</div>
+  <div style="text-align: center; white-space: pre; line-height: 1; margin-top: 1px">{typed("=" * 48)}</div>
   <div style="margin-top: 8px; text-align: center; line-height: 1.4">{typed("Thursday, tape day. Rehearsal Hall, 12:30 PM.")}<br>{typed("From the 4th floor kitchen. Please read before you line up.")}</div>
   <div style="transform: rotate(0.25deg); transform-origin: left top">
     {sec('ON THE TABLE FROM 7 AM', 'table', 18)}

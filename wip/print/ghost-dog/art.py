@@ -166,15 +166,35 @@ def bowl():
         if (gx - cx) ** 2 / 280 ** 2 + (gy - rimy + 10) ** 2 / 110 ** 2 < 1 and gy < rimy + 40 - abs(gx - cx) * 0.1:
             a = rng.uniform(0, math.pi)
             d.line([(gx - 9 * math.cos(a), gy - 9 * math.sin(a)), (gx + 9 * math.cos(a), gy + 9 * math.sin(a))], fill=255, width=5)
-    # sliced glazed chicken fanned on the rice: red glaze, black edge, two cut lines each
-    for i in range(4):
-        px, py = cx - 120 + i * 62, rimy - 60 - 18 * math.sin((i + 0.5) / 4 * math.pi)
-        box = (px - 44, py - 30, px + 44, py + 30)
-        dr.ellipse(box, fill=255)
-        d.arc(box, 200, 340, fill=255, width=7)
-        d.arc(box, 20, 160, fill=255, width=4)
-        for j in (-12, 12):
-            d.line([(px + j - 6, py - 18), (px + j + 6, py + 18)], fill=255, width=4)
+    # sliced teriyaki thigh fanned across the rice, drawn back to front: each slice has a crisp
+    # domed skin edge (heavy black with short ticks), a cut face in red line tone, black outline
+    slices = [(-150 + i * 40, -62 - 26 * math.sin((i + 0.5) / 8 * math.pi), 0.30) for i in range(8)]
+    for (ox, oy, ang) in slices:
+        px, py = cx + ox, rimy + oy
+        ca, sa = math.cos(ang), math.sin(ang)
+        def T(pts): return [(px + x * ca - y * sa, py + x * sa + y * ca) for x, y in pts]
+        top = bez((-24, -26), (-20, -46), (20, -48), (26, -28), 20)
+        bot = [(28, 30), (18, 38)] + bez((18, 38), (6, 42), (-8, 42), (-22, 34), 8)
+        poly = T(top + bot)
+        # knock out whatever is behind this slice on both plates
+        d.polygon(poly, fill=0); dr.polygon(poly, fill=0)
+        sm = Image.new('L', (W, H), 0); ImageDraw.Draw(sm).polygon(poly, fill=255)
+        ln = Image.new('L', (W, H), 0); dl = ImageDraw.Draw(ln)
+        for k in range(-60, 60, 9):
+            dl.line(T([(k - 20, -50), (k + 20, 50)]), fill=255, width=5)
+        from PIL import ImageChops
+        red.paste(ImageChops.lighter(red, ImageChops.multiply(sm, ln)), (0, 0))
+        d.line(poly + [poly[0]], fill=255, width=6, joint='curve')
+        d.line(T(top), fill=255, width=11, joint='curve')
+        for t in range(3, 18, 4):
+            x0, y0 = T([top[t]])[0]
+            x1, y1 = T([(top[t][0] * 0.95, top[t][1] - 7)])[0]
+            d.line([(x0, y0), (x1, y1)], fill=255, width=4)
+    # scallion rings and a curl of pickled ginger
+    for (gx, gy) in [(cx - 170, rimy - 20), (cx - 40, rimy - 30), (cx + 90, rimy - 24), (cx + 190, rimy - 16), (cx - 110, rimy - 10)]:
+        d.ellipse((gx - 9, gy - 6, gx + 9, gy + 6), outline=255, width=4)
+    d.arc((cx + 196, rimy - 62, cx + 246, rimy - 22), 180, 30, fill=255, width=6)
+    dr.arc((cx + 202, rimy - 56, cx + 240, rimy - 28), 160, 40, fill=255, width=9)
     # chopsticks laid across the rim
     for (x0, y0, x1, y1) in [(cx - 40, rimy - 210, cx + 470, rimy + 90), (cx + 10, rimy - 236, cx + 494, rimy + 52)]:
         ang = math.atan2(y1 - y0, x1 - x0); nx, ny = -math.sin(ang), math.cos(ang)

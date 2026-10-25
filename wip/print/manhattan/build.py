@@ -19,12 +19,12 @@ GAIN = 'text-shadow: 0 0 0.6px rgba(24,25,29,0.55)'
 LEFT = [
     ('Cocktail hour', 'Passed on trays, or set out on your sideboard.', [
         ('Italian toasts', 'the dozen', '9.00',
-         'French bread rounds, oiled and baked crisp. Half spread with ricotta, lemon peel and honey, half heaped with mushrooms sautéed in garlic and thyme, under Parmesan.', ''),
+         'French bread rounds, baked crisp. Half with ricotta, lemon peel and honey, half with mushrooms sautéed in garlic and thyme, under Parmesan.', ''),
         ('Shrimp cocktail', 'the dozen', '18.00',
          'Jumbo shrimp, poached and well chilled, with a sharp horseradish sauce and lemon.', ''),
         ('Rumaki', 'the dozen', '7.50',
-         'Chicken livers and water chestnuts wrapped in bacon, broiled crisp.', ''),
-        ('Manhattans by the pitcher', 'the pitcher', '18.00',
+         'Chicken livers and water chestnuts in bacon, broiled.', ''),
+        ('Manhattans', 'the pitcher', '18.00',
          'Rye, sweet vermouth and bitters, stirred with ice, poured straight up over a cherry. Serves eight.', ''),
     ]),
     ('Sunday brunch', 'Delivered from dawn. We set it out and slip away.', [
@@ -43,14 +43,14 @@ RIGHT = [
         ('Cold sesame noodles', 'per guest', '3.25',
          'Thin wheat noodles in sesame paste and hot oil, with shredded cucumber.', ''),
         ('Barbecued spareribs', 'the pound', '6.00',
-         'Roasted red and glazed with honey, cut between the bones.', ''),
+         'Roasted red, glazed with honey.', ''),
     ]),
     ('Desserts', 'Baked here, the morning of your party.', [
         ('New York cheesecake', 'whole', '14.00',
-         'Rich and dense, lemon and vanilla, on a buttery crumb crust. Baked slow, chilled overnight. Serves ten.',
+         'Rich and dense, lemon and vanilla, buttery crumb crust. Baked slow, chilled overnight. Serves ten.',
          'Worth living for, say our regulars.'),
         ('Pears in red wine', 'per guest', '2.25',
-         'Bosc halves poached with cinnamon and orange peel, a pitcher of heavy cream alongside.',
+         'Bosc halves poached with cinnamon and orange peel, heavy cream alongside.',
          'Our answer to Cézanne.'),
         ('Coffee service', 'the urn', '6.00',
          'Thirty cups, fresh brewed, with cream and sugar.', ''),
@@ -80,22 +80,20 @@ def leader(name, unit, price):
 
 def item(n, u, p, d, note, first):
     nt = (f'<p style="margin: 2px 0 0; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {INK}">{note}</p>' if note else '')
-    return f'''<div style="margin-top: {0 if first else 11}px">{leader(n, u, p)}
-      <p style="margin: 3px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.38; color: {BODY}; text-wrap: pretty">{d}</p>{nt}</div>'''
+    return f'''<div style="margin-top: {0 if first else 9}px">{leader(n, u, p)}
+      <p style="margin: 3px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.34; color: {BODY}; text-wrap: pretty">{d}</p>{nt}</div>'''
 
 
-def head(title, size=26):
-    return f'''<div style="border-top: 4px solid {INK}; padding-top: 7px">
-      <div style="display: flex; align-items: baseline; justify-content: space-between">
+def head(title, size=23):
+    return f'''<div style="border-top: 4px solid {INK}; padding-top: 6px">
         <div style="font-family: {SANS}; font-weight: 700; font-size: {size}px; line-height: 1; letter-spacing: 0.01em; text-transform: uppercase; color: {INK}">{title}</div>
-        <div style="font-family: {SANS}; font-weight: 500; font-size: 12px; letter-spacing: 0.2em; color: {GREYINK}">KESSLER &amp; LOWE</div></div>
-      <div style="margin-top: 7px; height: 1px; background: {INK}"></div></div>'''
+      <div style="margin-top: 6px; height: 1px; background: {INK}"></div></div>'''
 
 
 def section(title, intro, items, first):
     rows = ''.join(item(*it, i == 0) for i, it in enumerate(items))
-    return f'''<section style="margin-top: {0 if first else 22}px">{head(title)}
-      <p style="margin: 6px 0 10px; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {BODY}">{intro}</p>
+    return f'''<section style="margin-top: {0 if first else 14}px">{head(title)}
+      <p style="margin: 5px 0 8px; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {BODY}">{intro}</p>
       {rows}</section>'''
 
 
@@ -126,62 +124,56 @@ def outside():
     rent = [('Glasses, the dozen', '3.00'), ('Linen, per table', '4.00'), ('Folding chairs, each', '.75')]
     also = ['Gallery openings and museum benefits', 'Book parties for publishers',
             'Rehearsal lunches for television', 'Picnic hampers for the park']
-    al = ''.join(f'<div style="margin-top: {0 if i == 0 else 3}px; font-family: {SERIF}; font-size: 16px; line-height: 1.38; color: {BODY}">'
+    al = ''.join(f'<div style="margin-top: {0 if i == 0 else 2}px; font-family: {SERIF}; font-size: 16px; line-height: 1.36; color: {BODY}">'
                  f'<span style="display: inline-block; width: 6px; height: 6px; background: {INK}; margin-right: 10px; position: relative; top: -3px"></span>{t}</div>'
                  for i, t in enumerate(also))
     back = f'''<div style="position: absolute; left: {LX}px; top: 48px; width: {PW}px">
       {head('How to order')}
-      <p style="margin: 10px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.42; color: {BODY}; text-wrap: pretty">Telephone us by Wednesday for a weekend party, and by five o’clock the day before for brunch. We deliver from the Battery to 96th Street, early, late and in thunderstorms.</p>
-      <p style="margin: 7px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.42; color: {BODY}; text-wrap: pretty">Parties of twelve or more. A deposit of one third holds your date.</p>
-      <div style="margin-top: 20px">{head('Staff and rentals')}</div>
-      <div style="position: relative; margin-top: 10px; height: 214px">
-        {tint(0, 0, PW, 214)}
-        <div style="position: absolute; left: 16px; top: 10px; width: {PW - 32}px">
+      <p style="margin: 9px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.4; color: {BODY}; text-wrap: pretty">Telephone us by Wednesday for a weekend party, by five o’clock the day before for brunch. We deliver from the Battery to 96th Street, early, late and in thunderstorms.</p>
+      <p style="margin: 5px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.4; color: {BODY}; text-wrap: pretty">Twelve guests or more. One third down holds your date.</p>
+      <div style="margin-top: 18px">{head('Staff and rentals')}</div>
+      <div style="position: relative; margin-top: 10px; height: 200px">
+        {tint(0, 0, PW, 200)}
+        <div style="position: absolute; left: 16px; top: 7px; width: {PW - 32}px">
           {''.join(row(n, p, 16, SANS, 500, INK) for n, p in staff)}
-          <p style="margin: 3px 0 6px; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {INK}">Our pianist takes requests. Gershwin a specialty.</p>
-          <div style="height: 1px; background: {INK}; margin: 2px 0 4px"></div>
+          <p style="margin: 2px 0 5px; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {INK}">Our pianist takes requests. Gershwin a specialty.</p>
+          <div style="height: 1px; background: {INK}; margin: 2px 0 3px"></div>
           {''.join(row(n, p, 16, SANS, 500, INK) for n, p in rent)}</div></div>
-      <div style="margin-top: 20px">{head('We also do')}</div>
-      <div style="margin-top: 10px">{al}</div>
-      <p style="margin: 5px 0 0; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {BODY}">Carriage and rowboat not included.</p>
+      <div style="margin-top: 18px">{head('We also do')}</div>
+      <div style="margin-top: 9px">{al}</div>
+      <p style="margin: 4px 0 0; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {BODY}">Carriage and rowboat not included.</p>
     </div>
-    <div style="position: absolute; left: {LX}px; top: 694px; width: {PW}px; border-top: 4px solid {INK}; padding-top: 9px; display: flex; justify-content: space-between; align-items: flex-start">
+    <div style="position: absolute; left: {LX}px; top: 706px; width: {PW}px; border-top: 4px solid {INK}; padding-top: 9px; display: flex; justify-content: space-between; align-items: flex-start">
       <div>
         <div style="font-family: {SANS}; font-weight: 700; font-size: 22px; line-height: 1; letter-spacing: -0.01em; color: {INK}">KESSLER <span style="font-family: {SERIF}; font-style: italic; font-weight: 400">&amp;</span> LOWE</div>
-        <div style="margin-top: 6px; font-family: {SANS}; font-weight: 500; font-size: 13px; letter-spacing: 0.06em; line-height: 1.35; color: {BODY}">EAST 58TH STREET, NEW YORK, N.Y. 10022</div></div>
+        <div style="margin-top: 7px; font-family: {SANS}; font-weight: 500; font-size: 12px; letter-spacing: 0.08em; line-height: 1.35; color: {BODY}">EAST 58TH STREET, N.Y. 10022</div></div>
       <div style="text-align: right">
         <div style="font-family: {SANS}; font-weight: 700; font-size: 22px; line-height: 1; color: {INK}">(212) 555-0179</div>
-        <div style="margin-top: 6px; font-family: {SANS}; font-weight: 500; font-size: 13px; letter-spacing: 0.06em; color: {BODY}">TAX AND GRATUITY EXTRA</div></div></div>'''
+        <div style="margin-top: 7px; font-family: {SANS}; font-weight: 500; font-size: 12px; letter-spacing: 0.08em; color: {BODY}">TAX AND GRATUITY EXTRA</div></div></div>'''
 
     cover = f'''<img src="assets/bridge-halftone.png" alt="Dawn under the Queensboro Bridge, Sutton Place" style="position: absolute; left: {FOLD}px; top: 0; width: 528px; height: 528px; display: block">
     <div style="position: absolute; left: {FOLD}px; top: 536px; width: 528px; height: 280px; background: {INK}"></div>
-    <div style="position: absolute; left: {RX}px; top: 566px; width: {PW}px; color: {PAPER}; text-shadow: 0 0 0.7px rgba(24,25,29,0.9)">
+    <div style="position: absolute; left: {RX}px; top: 568px; width: {PW}px; color: {PAPER}; text-shadow: 0 0 0.7px rgba(24,25,29,0.9)">
       <div style="display: flex; justify-content: space-between; font-family: {SANS}; font-weight: 500; font-size: 13px; letter-spacing: 0.34em">
         <span>CATERERS</span><span>EAST 58TH STREET</span></div>
-      <div style="margin-top: 14px; font-family: {SANS}; font-weight: 700; font-size: 58px; line-height: 0.95; letter-spacing: -0.025em; white-space: nowrap">KESSLER <span style="font-family: {SERIF}; font-style: italic; font-weight: 400; font-size: 54px">&amp;</span> LOWE</div>
-      <div style="margin-top: 16px; height: 3px; background: {GREYINK}; position: relative; left: 1.5px"></div>
+      <div style="margin-top: 14px; font-family: {SANS}; font-weight: 700; font-size: 51px; line-height: 0.95; letter-spacing: -0.02em; white-space: nowrap">KESSLER <span style="font-family: {SERIF}; font-style: italic; font-weight: 400; font-size: 48px">&amp;</span> LOWE</div>
+      <div style="margin-top: 16px; height: 3px; background: {GREYINK}; position: relative; left: 1.5px; top: 1px"></div>
       <p style="margin: 13px 0 0; font-family: {SERIF}; font-style: italic; font-size: 23px; line-height: 1.25">We adore New York City.</p>
-      <p style="margin: 6px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.4; color: #d9d8d2">Cocktail parties, brunches, suppers and desserts, to your door.</p></div>
+      <p style="margin: 6px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.4; color: #d9d8d2">Parties, brunches and suppers, to your door.</p></div>
     <div style="position: absolute; left: {RX}px; top: 752px; width: {PW}px; display: flex; justify-content: space-between; font-family: {SANS}; font-weight: 500; font-size: 13px; letter-spacing: 0.3em; color: {GREYINK}; text-shadow: none">
       <span>PRICE LIST</span><span>SPRING 1979</span></div>'''
     return back + cover
 
 
 def inside():
-    party = [('Manhattans, two pitchers', '36.00'), ('Shrimp cocktail, two dozen', '36.00'),
-             ('Italian toasts, two dozen', '18.00'), ('New York cheesecake', '14.00'),
-             ('Coffee service', '6.00'), ('Waiter, for the evening', '35.00')]
-    box_y = 0
-    box = f'''<div style="position: absolute; left: {LX}px; top: 640px; width: {PW}px; height: 136px">
-      {tint(0, 0, PW, 136)}
-      <div style="position: absolute; left: 16px; top: 10px; width: {PW - 32}px">
+    box = f'''<div id="party" style="position: absolute; left: {LX}px; top: PARTYTOP px; width: {PW}px; height: 76px">
+      {tint(0, 0, PW, 76)}
+      <div style="position: absolute; left: 16px; top: 9px; width: {PW - 32}px">
         <div style="display: flex; justify-content: space-between; align-items: baseline">
           <span style="font-family: {SANS}; font-weight: 700; font-size: 15px; letter-spacing: 0.08em; color: {INK}">A COCKTAIL PARTY FOR TWELVE</span>
           <span style="font-family: {SANS}; font-weight: 700; font-size: 18px; color: {INK}">145.00</span></div>
-        <div style="margin-top: 6px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 18px; row-gap: 1px">
-          {''.join(f'<div style="display: flex; justify-content: space-between; font-family: {SERIF}; font-size: 14px; line-height: 1.45; color: {INK}"><span>{n.split(",")[0]}</span><span style="font-family: {SANS}; font-weight: 500">{p}</span></div>' for n, p in party)}</div>
-        <p style="margin: 5px 0 0; font-family: {SERIF}; font-style: italic; font-size: 14px; line-height: 1.3; color: {INK}">Two pitchers, two dozen of each, one cake and one waiter.</p></div></div>'''
-    foot = f'''<div style="position: absolute; left: {RX}px; top: 732px; width: {PW}px; border-top: 4px solid {INK}; padding-top: 9px; display: flex; justify-content: space-between; align-items: baseline">
+        <p style="margin: 4px 0 0; font-family: {SERIF}; font-size: 14px; line-height: 1.35; color: {INK}; text-wrap: pretty">Two pitchers of Manhattans, two dozen shrimp, two dozen toasts, one cheesecake, coffee for thirty and a waiter.</p></div></div>'''.replace("PARTYTOP px", "700px")
+    foot = f'''<div style="position: absolute; left: {RX}px; top: 740px; width: {PW}px; border-top: 4px solid {INK}; padding-top: 8px; display: flex; justify-content: space-between; align-items: baseline">
       <span style="font-family: {SERIF}; font-style: italic; font-size: 16px; color: {INK}">Nothing here is overrated.</span>
       <span style="font-family: {SANS}; font-weight: 600; font-size: 13px; letter-spacing: 0.2em; color: {INK}">(212) 555-0179</span></div>'''
     return column(LX, 48, LEFT) + box + column(RX, 48, RIGHT) + foot

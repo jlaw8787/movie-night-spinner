@@ -44,7 +44,7 @@ def fields(rows):
     return ''.join(f'<div style="display: flex"><span style="width: 120px; flex: none">{lab}</span><span>{val}</span></div>' for lab, val in rows)
 
 def foot(form, right):
-    return (f'<div style="position: absolute; left: 64px; top: 988px; width: 688px; display: flex; justify-content: space-between; align-items: baseline">'
+    return (f'<div style="position: absolute; left: 64px; top: 994px; width: 688px; display: flex; justify-content: space-between; align-items: baseline">'
             f'<span style="font-family: \'Libre Bodoni\', serif; font-size: 12px; letter-spacing: 0.06em">{form}</span>'
             f'<span style="font-size: 16px">{right}</span></div>')
 
@@ -96,9 +96,11 @@ CAF_LEFT = col([('AT THE COUNTER', [
     ('KANSAS CORN FRITTERS', '1.10', 'Sweet corn and scallions in an egg batter, dropped by the spoonful and fried golden. Sour cream for dipping.')])])
 CAF_RIGHT = col([('HOT PLATE', [
     ('BUTTERMILK FRIED CHICKEN', '3.95', 'Soaked overnight, rolled in seasoned flour and cooked crisp. Mashed potatoes, pan gravy.'),
-    ('SOUP OF THE DAY', '.90', 'Cup, with oyster crackers.'),
-    ('CHEESE DANISH', '.75', 'Off the bakery cart each morning.'),
-    ('COFFEE', '.40', 'Black or regular. Free refills.')])])
+    ('SOUP OF THE DAY', '.90', 'Cup, with oyster crackers.')]),
+    ('FROM THE CART', [
+    ('CHEESE DANISH', '.75', 'Baked fresh every morning.'),
+    ('COFFEE', '.40', 'Black or regular. Free refills.'),
+    ('COLD DRINKS', '.45', 'Milk, orange juice or soda.')])])
 REMIND = (sub('BOARDROOM CATERING', True)
           + item('SMOKED SALMON BLINI', '16.00', 'Warm buckwheat pancakes with sour cream, dill and cracked pepper. By the dozen.', True)
           + item('CHEESE AND FRUIT TRAY', '22.00', 'Serves ten. Order a day ahead.')
@@ -127,7 +129,7 @@ def fill(name, extra):
     return b
 
 MENU_TOP, SPEC_TOP = 434, 854
-LOW_TOP = 636
+LOW_TOP = 676
 # distribution box geometry, for the pen marks laid on top after copying
 RX, RY = 64 + 688 - 300, LOW_TOP
 ROW0 = RY + 1.5 + 10 + 24          # border + padding + title
@@ -146,7 +148,7 @@ FACES = {
                                MENU_HEAD=head('EXECUTIVE DINING ROOM', 'Charged to your department'),
                                EXEC_LEFT=EXEC_LEFT, EXEC_RIGHT=EXEC_RIGHT, SPECIALS=SPECIALS,
                                FOOT=foot('Form OS-114 (Rev. 1/87)', '(continued)'))), FRONT_POST),
-  'back': (fill('back', dict(CAF_TOP=158, CAF_INTRO=CAF_INTRO, CAF_HEAD=head('EMPLOYEE CAFETERIA', 'Lower level'),
+  'back': (fill('back', dict(CAF_TOP=146, CAF_INTRO=CAF_INTRO, CAF_HEAD=head('EMPLOYEE CAFETERIA', 'Lower level'),
                              CAF_LEFT=CAF_LEFT, CAF_RIGHT=CAF_RIGHT, LOW_TOP=LOW_TOP, REMIND=REMIND, ROUTE=ROUTE,
                              FOOT=foot('Form OS-114A (Rev. 1/87)', '- 2 -'))), BACK_POST),
 }

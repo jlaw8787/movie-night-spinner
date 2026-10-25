@@ -1,182 +1,230 @@
 """Mandel's Delicatessen take-out menu (Annie Hall, 1977).
 One flat sheet of goldenrod offset stock, US Letter portrait 8.5 x 11 in, printed both sides in
-brown and red, no fold. The kind of menu left on the counter by the register or pushed under
-an apartment door on the Upper East Side.
-Writes front.body.html, back.body.html, then front.html and back.html (one root div each)."""
+two inks (brown and red) by a neighbourhood job printer, no fold. Left in a pile by the register
+and pushed under apartment doors on the Upper East Side. Since then it has picked up a purple
+"prices effective" rubber stamp from the catering desk and somebody's ballpoint order.
+Art and ink texture are painted by paint.py. Writes front/back .body.html and .html."""
 import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
-PAPER, INK, RED, TINT = '#ecc163', '#3d2213', '#b4321f', '#e3b453'
-FONTS = ('family=Fraunces:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900'
-         '&family=Archivo+Narrow:wght@400;600;700&family=Covered+By+Your+Grace')
+PAPER, INK, RED, PEN = '#ecbd5c', '#3a2012', '#b2301e', '#22347a'
+FONTS = ('family=Caprasimo&family=Libre+Franklin:ital,wght@0,400;0,600;0,800;1,400;1,600'
+         '&family=Covered+By+Your+Grace')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=block">'
-F = "font-family: 'Fraunces', Georgia, serif"
-N = "font-family: 'Archivo Narrow', 'Arial Narrow', sans-serif"
+C = "font-family: 'Caprasimo', 'Cooper Black', Georgia, serif; font-weight: 400"
+F = "font-family: 'Libre Franklin', 'Franklin Gothic', Arial, sans-serif"
 P = "font-family: 'Covered By Your Grace', cursive"
+L, R = 48, 768
+LW, RX, RW = 456, 536, 232
 
 # ---------------------------------------------------------------- copy
 # spec key -> (printed name, description, price, in-world note)
 SPEC = {
   "Pastrami on white with mayo": ("Pastrami on white",
-      "Steamed until glossy and piled high on soft sandwich bread with mayonnaise, iceberg lettuce and sliced tomato.",
+      "Steamed until it glistens, then piled high on soft Pullman slices with mayonnaise, iceberg lettuce and sliced tomato.",
       "3.25", "Yes, we make it. Max the counterman winces."),
   "Alvy's potato knishes": ("Potato knish",
       "Flaky pastry around a mash of boiled Idahos and onions fried slow in butter, egg-washed and baked golden.",
-      ".75", "Out of the oven every hour, all day."),
+      ".75", "Baked here, the Coney Island way."),
   "Lobster bites": ("Lobster canapés",
-      "Sweet cooked meat folded with mayonnaise, lemon, diced celery and chives, piled on rounds of buttered, toasted brioche.",
-      "8.50 doz.", "Cooked and shelled for you. No chasing them round the kitchen."),
+      "Sweet cooked meat folded with mayonnaise, lemon, diced celery and chives, piled on rounds of buttered, toasted egg bread.",
+      "8.50 doz.", "Shelled. None behind the refrigerator."),
   "New York cheesecake": ("New York cheesecake",
       "Cream cheese, sour cream and lemon zest on a buttery crumb crust, baked slow in a water bath and chilled overnight.",
       "1.25", "Baked every morning. Never leaves Manhattan."),
-  "Alvy's LA cucumber mint cooler": ("California cooler",
-      "Fresh cucumber, lime, mint and honey, strained and poured over ice, topped up with seltzer.",
+  "Alvy's LA cucumber mint cooler": ("Garden rickey",
+      "Lime juice and honey shaken with fresh cucumber and mint, strained over ice and topped with seltzer.",
       ".95", "Big in Los Angeles, we hear. We wouldn't know."),
 }
-ADDED = {
-  'rye': ("Hot pastrami on rye", "Peppered and smoked beef navel, steamed until it shines and sliced thick by hand. Brown mustard on the side.", "3.25", None),
-  'soup': ("Matzo ball soup", "Golden chicken broth with carrot, fresh dill and one big, light dumpling.", "1.25", None),
-  'eggcream': ("Egg cream", "Chocolate syrup and cold milk, hit hard with seltzer and stirred fast so it heads up.", ".60", "No egg, no cream. Don't ask."),
-  'celery': ("Celery tonic", "Celery seed soda, sweet and sharp, served ice cold in the bottle.", ".45", None),
-  'coffee': ("Coffee", "A fresh pot every hour, and refills are free at the counter.", ".30", None),
-}
 
 
-def item(it, first=False, gap=20, nsz=27):
+def feat(num, it, gap=18, ring=False, tick=False):
     name, desc, price, note = it
-    nt = f'<div style="{F}; font-style: italic; font-weight: 600; font-size: 16px; line-height: 1.3; color: {RED}; margin-top: 4px; text-wrap: pretty">{note}</div>' if note else ''
-    return f'''<div style="margin-top: {0 if first else gap}px">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px">
-        <div style="{F}; font-weight: 900; font-size: {nsz}px; line-height: 1.05; color: {INK}">{name}</div>
-        <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1; color: {INK}; white-space: nowrap">{price}</div></div>
-      <div style="{N}; font-size: 17px; line-height: 1.34; color: {INK}; margin-top: 5px; text-wrap: pretty">{desc}</div>{nt}</div>'''
+    n = f'<span style="{F}; font-weight: 800; font-size: 13px; letter-spacing: .08em; color: {RED}; margin-right: 8px; position: relative; top: -3px">NO.&thinsp;{num}</span>' if num else ''
+    ringimg = (f'<img src="assets/pen-ring.png" alt="" style="position: absolute; left: -26px; top: -13px; width: 96px; height: 50px">' if ring else '')
+    tk = (f'<img src="assets/pen-tick.png" alt="" style="position: absolute; left: -40px; top: -4px; width: 36px; height: 30px">' if tick else '')
+    nt = f'<div style="{F}; font-style: italic; font-weight: 600; font-size: 16px; line-height: 1.3; color: {RED}; margin-top: 3px">{note}</div>' if note else ''
+    return f'''<div style="margin-top: {gap}px; position: relative">{tk}
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
+        <div style="{C}; font-size: 25px; line-height: 1.08; color: {INK}">{n}{name}</div>
+        <div style="{C}; font-size: 23px; line-height: 1; color: {INK}; white-space: nowrap; position: relative">{price}{ringimg}</div></div>
+      <div style="{F}; font-size: 16px; line-height: 1.32; color: {INK}; margin-top: 4px; text-wrap: pretty">{desc}</div>{nt}</div>'''
 
 
-def bar(t, sub=None, top=0):
-    s = f'<span style="{N}; font-weight: 400; font-size: 15px; letter-spacing: .04em; text-transform: none; margin-left: 10px; color: {PAPER}">{sub}</span>' if sub else ''
-    return (f'<div style="margin-top: {top}px; margin-bottom: 16px; background: {INK}; padding: 7px 12px 6px; '
-            f'{N}; font-weight: 700; font-size: 17px; line-height: 1.2; letter-spacing: .16em; text-transform: uppercase; color: {PAPER}">{t}{s}</div>')
+def row(num, name, desc, price, gap=9, tick=False):
+    n = f'<span style="{F}; font-weight: 800; font-size: 13px; letter-spacing: .06em; color: {RED}; display: inline-block; width: 26px">{num}</span>' if num else ''
+    tk = (f'<img src="assets/pen-tick.png" alt="" style="position: absolute; left: -38px; top: -2px; width: 36px; height: 30px">' if tick else '')
+    ds = f'<div style="{F}; font-size: 16px; line-height: 1.3; color: {INK}; margin-top: 1px; padding-left: {26 if num else 0}px">{desc}</div>' if desc else ''
+    return f'''<div style="margin-top: {gap}px; position: relative">{tk}
+      <div style="display: flex; align-items: baseline; gap: 6px">
+        <div style="{C}; font-size: 20px; line-height: 1.1; color: {INK}; white-space: nowrap">{n}{name}</div>
+        <div style="flex: 1; border-bottom: 2px dotted {INK}; opacity: .55; transform: translateY(-4px)"></div>
+        <div style="{C}; font-size: 20px; line-height: 1; color: {INK}; white-space: nowrap">{price}</div></div>{ds}</div>'''
 
 
-def star(x, y, size, lines, rot=-10, fs=22):
-    sq = round(size * 0.70)
-    off = (size - sq) / 2
-    sqs = ''.join(f'<div style="position: absolute; left: {off}px; top: {off}px; width: {sq}px; height: {sq}px; background: {RED}; transform: rotate({a}deg)"></div>' for a in (0, 30, 60))
-    txt = '<br>'.join(lines)
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {size}px; height: {size}px; transform: rotate({rot}deg)">{sqs}'
-            f'<div style="position: absolute; left: 0; top: 0; width: {size}px; height: {size}px; display: flex; align-items: center; justify-content: center; text-align: center; '
-            f'{F}; font-weight: 900; font-size: {fs}px; line-height: 1.02; color: {PAPER}">{txt}</div></div>')
+def bar(t, img, w, sub=None, top=0):
+    s = f'<span style="{F}; font-weight: 600; font-style: italic; font-size: 15px; letter-spacing: .02em; text-transform: none; margin-left: 10px">{sub}</span>' if sub else ''
+    return (f'<div style="position: relative; margin-top: {top}px; width: {w}px; height: 34px">'
+            f'<img src="assets/{img}" alt="" style="position: absolute; left: 0; top: 0; width: {w}px; height: 34px">'
+            f'<div style="position: absolute; left: 12px; top: 0; height: 34px; line-height: 35px; white-space: nowrap; {F}; font-weight: 800; font-size: 16px; letter-spacing: .16em; text-transform: uppercase; color: {PAPER}">{t}{s}</div></div>'
+            f'<div style="width: {w}px; height: 3px; background: {RED}; margin-top: 3px; margin-left: 2px"></div>')
 
 
-def rules(x, y, w):
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: 4px; background: {INK}"></div>'
-            f'<div style="position: absolute; left: {x}px; top: {y + 7}px; width: {w}px; height: 1px; background: {INK}"></div>')
+def rules(x, y, w, col=INK):
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: 4px; background: {col}"></div>'
+            f'<div style="position: absolute; left: {x}px; top: {y + 7}px; width: {w}px; height: 1px; background: {col}"></div>')
+
+
+def head(t, size=22):
+    return f'<div style="{C}; font-size: {size}px; line-height: 1.1; color: {INK}">{t}</div>'
+
+
+def body(t, top=6, size=16):
+    return f'<div style="{F}; font-size: {size}px; line-height: 1.36; color: {INK}; margin-top: {top}px; text-wrap: pretty">{t}</div>'
+
+
+def kicker(t, col=RED):
+    return f'<div style="{F}; font-weight: 800; font-size: 13px; letter-spacing: .2em; color: {col}">{t}</div>'
 
 
 # ---------------------------------------------------------------- front
-L, R = 48, 768
 front = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; color: {INK}">
-  <header style="position: absolute; left: {L}px; top: 46px; width: 560px">
-    <div style="{N}; font-weight: 700; font-size: 16px; letter-spacing: .3em; color: {RED}">DELICATESSEN &amp; APPETIZING</div>
-    <div style="{F}; font-style: italic; font-weight: 900; font-size: 124px; line-height: .98; letter-spacing: -.02em; color: {INK}; margin-top: 4px">Mandel&rsquo;s</div>
-    <div style="{F}; font-style: italic; font-weight: 600; font-size: 25px; line-height: 1.2; color: {RED}; margin-top: 6px">The food is good. And such big portions.</div>
-  </header>
-  {star(598, 44, 172, ['WE', 'DELIVER'], -9, 25)}
-  {rules(L, 262, R - L)}
-  <div style="position: absolute; left: {L}px; top: 280px; width: {R - L}px; display: flex; justify-content: space-between; {N}; font-weight: 700; font-size: 16px; letter-spacing: .1em; text-transform: uppercase; color: {INK}">
-    <span>Upper East Side, New York</span><span>Open 7 days, 7 a.m. to 1 a.m.</span><span>Phone 555-0177</span></div>
-  {rules(L, 312, R - L)}
+  <div style="position: absolute; left: {L}px; top: 44px; {F}; font-weight: 800; font-size: 15px; letter-spacing: .28em; color: {RED}">DELICATESSEN &middot; RESTAURANT &middot; CATERING</div>
+  <img src="assets/mast-front.png" alt="Mandel's" style="position: absolute; left: {L - 8}px; top: 52px; width: 590px; height: 165px">
+  <div style="position: absolute; left: {L}px; top: 206px; {F}; font-style: italic; font-weight: 600; font-size: 24px; color: {INK}">The food is good. And such big portions.</div>
+  <img src="assets/burst-deliver.png" alt="We deliver" style="position: absolute; left: 594px; top: 34px; width: 176px; height: 176px">
 
-  <section style="position: absolute; left: {L}px; top: 348px; width: 452px">
-    {bar('From the carving board')}
-    {item(ADDED['rye'], True)}
-    {item(SPEC['Pastrami on white with mayo'], gap=22)}
-    <div style="{N}; font-size: 16px; line-height: 1.34; color: {INK}; margin-top: 16px; padding-top: 12px; border-top: 1px solid {INK}">Every sandwich comes with a sour pickle and a scoop of coleslaw.</div>
-    {bar('Hot from the steam table', None, 30)}
-    {item(SPEC["Alvy's potato knishes"], True)}
-    {item(ADDED['soup'], gap=22)}
+  {rules(L, 250, R - L)}
+  <div style="position: absolute; left: {L}px; top: 266px; width: {R - L}px; display: flex; justify-content: space-between; {F}; font-weight: 800; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; color: {INK}">
+    <span>Second Ave. at 77th St.</span><span>Open 7 days, 7 a.m. to 1 a.m.</span><span>Phone 555-0177</span></div>
+  {rules(L, 294, R - L)}
+
+  <section style="position: absolute; left: {L}px; top: 322px; width: {LW}px">
+    {bar('Sandwiches', 'bar-front.png', LW, 'sliced by hand, to order')}
+    {feat(1, ("Hot corned beef", "Brisket cured in garlic brine with pickling spice, carved thin on rye and served warm with brown mustard.", "3.15", None), 12)}
+    {feat(2, SPEC['Pastrami on white with mayo'], 16, ring=True)}
+    {row(3, 'Rare roast beef', 'Top round, cooked pink, Russian dressing', '3.10', 14)}
+    {row(4, 'Tongue', 'Pickled and sliced thin, mustard', '3.25')}
+    {row(5, 'Chopped liver', 'Schmaltz, fried onion and hard-cooked egg', '2.25')}
+    {row(6, 'Turkey breast', 'Roasted here, all white meat', '2.95')}
+    <div style="{F}; font-size: 16px; line-height: 1.34; margin-top: 12px; padding-top: 9px; border-top: 1px solid {INK}">Every sandwich comes with a sour pickle and coleslaw. Rye, pumpernickel, white or a club roll.</div>
+    {bar('From the steam table', 'bar-fronts.png', LW, None, 22)}
+    {feat(None, SPEC["Alvy's potato knishes"], 12)}
+    {row(None, 'Matzo ball soup', 'Golden chicken broth, carrot, dill, one big dumpling', '1.25', 14)}
+    {row(None, 'Stuffed cabbage', 'Beef and rice rolls in sweet and sour tomato sauce', '2.75')}
+    {row(None, 'Kasha varnishkes', 'Toasted buckwheat, bow-tie noodles, fried onion', '.95')}
   </section>
 
-  <aside style="position: absolute; left: 532px; top: 348px; width: 236px">
-    <div style="border: 3px solid {INK}; padding: 18px 18px 20px; background: {TINT}">
-      <div style="{N}; font-weight: 700; font-size: 15px; letter-spacing: .2em; color: {RED}">SINCE 1946</div>
-      <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.08; margin-top: 8px">From Coney Island to uptown</div>
-      <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 10px">Our first counter sat right under the roller coaster. Every time the cars went over, the soup shook. We moved uptown in 1959. The recipes came with us.</div>
-      <div style="{F}; font-style: italic; font-weight: 600; font-size: 16px; line-height: 1.3; color: {RED}; margin-top: 10px">Sam and Ruth Mandel</div>
-    </div>
-    <div style="margin-top: 28px; border-top: 4px solid {INK}; padding-top: 14px">
-      <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.1">Seeing a picture?</div>
-      <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Four-hour picture? Take sandwiches. We wrap anything to go, and we are open after the last show lets out.</div>
-    </div>
-    <div style="margin-top: 28px; border-top: 4px solid {INK}; padding-top: 14px">
-      <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.1">Breakfast, 7 to 11</div>
-      <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Bagel with lox and a schmear, eggs any style, hot rolls and butter.</div>
-    </div>
+  <aside style="position: absolute; left: {RX}px; top: 322px; width: {RW}px">
+    <div style="border: 2px solid {INK}; padding: 4px; width: {RW - 12}px">
+      <img src="assets/linecut-coaster.png" alt="" style="display: block; width: {RW - 12}px; height: {round((RW - 12) * 168 / 232)}px"></div>
+    <div style="position: relative; margin-top: 12px; width: {RW}px">
+      <img src="assets/tint-history.png" alt="" style="position: absolute; left: 0; top: 0; width: {RW}px; height: 100%">
+      <div style="position: relative; padding: 12px 14px 14px; border: 2px solid {INK}">
+        {kicker('SINCE 1946')}
+        {head('Born under the roller coaster', 21)}
+        {body('Our first counter sat under the tracks in Coney Island. Every time the cars went over, the soup shook. We came uptown in 1959. Brooklyn wasn&rsquo;t expanding.', 7, 15.5)}
+        <div style="{F}; font-style: italic; font-weight: 600; font-size: 15px; color: {RED}; margin-top: 6px">Sam and Ruth Mandel</div></div></div>
+    <div style="margin-top: 16px; border-top: 4px solid {INK}; padding-top: 10px">
+      {head('Seeing a picture?')}
+      {body('Four-hour picture? Take sandwiches. We wrap anything to go and stay open past the last show.', 5)}</div>
+    <div style="margin-top: 16px; border-top: 4px solid {INK}; padding-top: 10px">
+      {head('Breakfast, 7 to 11')}
+      {row(None, 'Eggs any style', None, '.95', 6)}
+      {row(None, 'Lox, eggs, onions', None, '2.75', 4)}
+      {row(None, 'Bagel and a schmear', None, '.60', 4)}
+      <div style="{F}; font-style: italic; font-weight: 600; font-size: 16px; color: {RED}; margin-top: 5px">We need the eggs.</div></div>
   </aside>
 
-  {rules(L, 958, R - L)}
-  <div style="position: absolute; left: {L}px; top: 978px; width: {R - L}px; display: flex; justify-content: space-between; align-items: baseline">
-    <span style="{F}; font-style: italic; font-weight: 600; font-size: 19px; color: {INK}">Platters, cheesecake and the fountain are over the page.</span>
-    <span style="{N}; font-weight: 700; font-size: 15px; letter-spacing: .14em; color: {RED}">PLEASE TURN</span></div>
+  {rules(L, 962, R - L)}
+  <div style="position: absolute; left: {L}px; top: 980px; width: {R - L}px; display: flex; justify-content: space-between; align-items: baseline">
+    <span style="{F}; font-style: italic; font-weight: 600; font-size: 18px; color: {INK}">Party trays, the bake case and the fountain are over the page.</span>
+    <span style="{F}; font-weight: 800; font-size: 14px; letter-spacing: .16em; color: {RED}">PLEASE TURN</span></div>
 </div>'''
+
+front_marks = ''
 
 # ---------------------------------------------------------------- back
 back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; color: {INK}">
-  <header style="position: absolute; left: {L}px; top: 46px; width: {R - L}px; display: flex; align-items: baseline; gap: 18px">
-    <span style="{F}; font-style: italic; font-weight: 900; font-size: 52px; line-height: 1; letter-spacing: -.02em">Mandel&rsquo;s</span>
-    <span style="{N}; font-weight: 700; font-size: 16px; letter-spacing: .24em; color: {RED}">PLATTERS, BAKE CASE, FOUNTAIN</span></header>
+  <img src="assets/mast-back.png" alt="Mandel's" style="position: absolute; left: {L - 4}px; top: 40px; width: 280px; height: 75px">
+  <div style="position: absolute; left: 330px; top: 72px; {F}; font-weight: 800; font-size: 15px; letter-spacing: .22em; color: {RED}">PARTY TRAYS &middot; BAKE CASE &middot; FOUNTAIN</div>
   {rules(L, 124, R - L)}
 
-  <section style="position: absolute; left: {L}px; top: 160px; width: 452px">
-    {bar('Platters and party trays')}
-    {item(SPEC['Lobster bites'], True)}
-    <div style="margin-top: 22px; border: 3px solid {INK}; background: {TINT}; padding: 16px 18px 18px">
-      <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.1">Weekend at the beach?</div>
-      <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Order your platters by Thursday noon. We pack them on ice for the drive out, with the bread wrapped separately so nothing goes soggy.</div>
-    </div>
-    {bar('From the bake case', None, 44)}
-    {item(SPEC['New York cheesecake'], True)}
-    <div style="{N}; font-size: 16px; line-height: 1.34; margin-top: 16px; padding-top: 12px; border-top: 1px solid {INK}">Whole cakes 9.50 with a day's notice. Plain only, the way it should be.</div>
+  <section style="position: absolute; left: {L}px; top: 152px; width: {LW}px">
+    {bar('Platters and party trays', 'bar-back.png', LW)}
+    {feat(None, SPEC['Lobster bites'], 12)}
+    {row(None, 'Deli platter', 'Corned beef, pastrami, turkey, tongue. Serves 10', '32.00', 14)}
+    {row(None, 'Smoked fish platter', 'Nova, sable, whitefish, bagels. Per person', '4.75')}
+    {row(None, 'Franks in blankets', 'Cocktail size in puff pastry, 50 pieces', '9.00')}
+    {row(None, 'Sandwich tray', 'Twelve halves, pickles and slaw', '21.00')}
+    <div style="position: relative; margin-top: 18px; width: {LW}px">
+      <img src="assets/tint-beach.png" alt="" style="position: absolute; left: 0; top: 0; width: {LW}px; height: 100%">
+      <div style="position: relative; padding: 12px 16px 14px; border: 2px solid {INK}">
+        {head('Weekend at the beach?')}
+        {body('Order trays by Thursday noon. We pack them on ice for the drive out east, with the bread wrapped apart so nothing goes soggy.', 5)}</div></div>
   </section>
 
-  <section style="position: absolute; left: 532px; top: 160px; width: 236px">
-    {bar('The fountain')}
-    {item(SPEC["Alvy's LA cucumber mint cooler"], True, nsz=24)}
-    {item(ADDED['eggcream'], gap=22, nsz=24)}
-    {item(ADDED['celery'], gap=22, nsz=24)}
-    {item(ADDED['coffee'], gap=22, nsz=24)}
+  <section style="position: absolute; left: {RX}px; top: 152px; width: {RW}px">
+    {bar('The fountain', 'bar-backr.png', RW)}
+    {feat(None, SPEC["Alvy's LA cucumber mint cooler"], 12)}
+    {feat(None, ("Egg cream", "Chocolate syrup and cold milk, hit hard with seltzer and stirred fast so it heads up.", ".60", "No egg, no cream. Don't ask."), 16, tick=True)}
+    {row(None, 'Celery tonic', 'Ice cold, in the bottle', '.45', 14)}
+    {row(None, 'Orange juice', 'Squeezed to order', '.65')}
+    {row(None, 'Coffee', 'Refills free at the counter', '.30')}
+    {row(None, 'Hot tea', 'Glass or cup, with lemon', '.30')}
   </section>
-  <div style="position: absolute; left: 300px; top: 722px; width: 400px; {P}; font-size: 27px; line-height: 1.1; color: #4a4741; transform: rotate(-4deg)">1 rye, mustard<br>1 white, mayo ?!<span style="font-size: 22px; margin-left: 30px">la-di-da</span></div>
 
-  {rules(L, 806, R - L)}
-  <div style="position: absolute; left: {L}px; top: 836px; width: 520px">
-    <div style="{F}; font-weight: 900; font-size: 26px; line-height: 1.1">We deliver, East 59th to East 96th</div>
-    <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Fifth Avenue to the river. Minimum order 5.00. Allow 30 minutes, a little longer when it rains. Cash only, no checks.</div>
+  <div style="position: absolute; left: {L}px; top: 648px">{bar('From the bake case', 'bar-wide.png', R - L, 'everything baked downstairs')}</div>
+  <section style="position: absolute; left: {L}px; top: 698px; width: {LW}px">
+    {feat(None, SPEC['New York cheesecake'], 0, tick=True)}
+    <div style="{F}; font-size: 16px; line-height: 1.34; margin-top: 10px; padding-top: 8px; border-top: 1px solid {INK}">Whole cakes 9.50 with a day&rsquo;s notice. Plain only, the way it should be.</div>
+  </section>
+  <section style="position: absolute; left: {RX}px; top: 698px; width: {RW}px">
+    {row(None, 'Rugelach', None, '.15 ea.', 0)}
+    {row(None, 'Black and white', None, '.40', 5)}
+    {row(None, 'Chocolate babka', None, '2.50', 5)}
+    {row(None, 'Apple strudel', None, '.65', 5)}
+    {row(None, 'Rice pudding', None, '.55', 5)}
+    <div style="{F}; font-style: italic; font-weight: 600; font-size: 15px; color: {RED}; margin-top: 7px">No sneezing near the bake case.</div>
+  </section>
+
+  <div style="position: absolute; left: {L}px; top: 892px; width: {R - L}px; height: 96px">
+    <img src="assets/tint-deliver.png" alt="" style="position: absolute; left: 0; top: 0; width: {R - L}px; height: 96px">
+    <div style="position: absolute; left: 0; top: 0; width: {R - L - 4}px; height: 92px; border: 2px solid {INK}"></div>
+    <div style="position: absolute; left: 16px; top: 12px; width: 480px">
+      {head('We deliver, East 59th to East 96th', 22)}
+      {body('Fifth Avenue to the river. Minimum order 5.00. Allow 30 minutes, longer when it rains. Cash only, no checks.', 4, 15.5)}</div>
+    <div style="position: absolute; right: 18px; top: 14px; text-align: right">
+      {kicker('CALL', INK)}
+      <div style="{C}; font-size: 38px; line-height: 1.05; color: {RED}">555-0177</div></div>
   </div>
-  {star(616, 822, 142, ['555', '0177'], 8, 23)}
-  <div style="position: absolute; left: {L}px; top: 976px; width: {R - L}px; {N}; font-size: 13px; letter-spacing: .06em; color: {INK}">PRICES EFFECTIVE SPRING 1977 AND SUBJECT TO CHANGE. PRINTED IN N.Y.C.</div>
+  <div style="position: absolute; left: {L}px; top: 996px; width: {R - L}px; display: flex; justify-content: space-between; {F}; font-size: 12px; letter-spacing: .08em; color: {INK}">
+    <span>PRICES SUBJECT TO CHANGE WITHOUT NOTICE.</span><span>PRINTED IN N.Y.C.</span></div>
 </div>'''
 
+back_marks = f'''
+  <img src="assets/stamp-prices.png" alt="" style="position: absolute; left: 300px; top: 540px; width: 236px; height: 104px">
+  <div style="position: absolute; left: 556px; top: 6px; width: 230px; {P}; font-size: 25px; line-height: 1.02; color: {PEN}; transform: rotate(-4deg)">1 rye, mustard<br>1 white, mayo ?!<br><span style="font-size: 21px; margin-left: 70px">la-di-da</span></div>'''
 
-def face(body, name):
-    grain = f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">'
-    wear = f'<img src="assets/wear-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">'
+
+def face(body, marks, name):
+    img = lambda src: f'<img src="assets/{src}" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">'
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}">'
-            f'{grain}{body}{wear}</div>')
+            f'{img(f"paper-goldenrod-{name}.png")}{img("paper-grain.png")}{body}{img(f"wear-ink-{name}.png")}{marks}{img(f"wear-{name}.png")}</div>')
 
 
-for name, body in (('front', front), ('back', back)):
-    open(os.path.join(D, name + '.body.html'), 'w').write(body)
+for name, b, m in (('front', front, front_marks), ('back', back, back_marks)):
+    open(os.path.join(D, name + '.body.html'), 'w').write(b + m)
     open(os.path.join(D, name + '.html'), 'w').write(
         f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width={W}">'
-        f'<title>Mandel\'s, {name}</title>{LINK}<style>body{{margin:0}}</style></head><body>{face(body, name)}</body></html>')
+        f'<title>Mandel\'s, {name}</title>{LINK}<style>body{{margin:0}}</style></head><body>{face(b, m, name)}</body></html>')
 
 # ---------------------------------------------------------------- site data
 json.dump({"fmt": "annietable", "fn": "fmtAnnieTable", "faces": ["front.html", "back.html"], "names": ["Front", "Back"],
-           "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Fraunces", "Archivo Narrow", "Covered By Your Grace"],
-           "phone": {"disp": "'Fraunces',serif", "title": "'Fraunces',serif", "name": "'Fraunces',serif",
-                     "body": "'Archivo Narrow',sans-serif", "price": "'Fraunces',serif", "note": "'Fraunces',serif"}},
+           "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Caprasimo", "Libre Franklin", "Covered By Your Grace"],
+           "phone": {"disp": "'Caprasimo',serif", "title": "'Caprasimo',serif", "name": "'Caprasimo',serif",
+                     "body": "'Libre Franklin',sans-serif", "price": "'Caprasimo',serif", "note": "'Libre Franklin',sans-serif"}},
           open(os.path.join(D, 'film.json'), 'w'), indent=1)
 labels = {k: {"n": v[0], "d": v[1], "note": v[3]} for k, v in SPEC.items()}
 json.dump({"Annie Hall (1977)": labels}, open(os.path.join(D, 'annietable.labels.json'), 'w'), indent=1, ensure_ascii=False)

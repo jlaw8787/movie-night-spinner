@@ -34,7 +34,7 @@ FOOD = [
 ]
 STORE = [
     [('Reading group', 'Thursdays at 7 in the cafe. This month, <i>Pride and Prejudice</i>.'),
-     ('Storytime', 'Saturdays at 11 in the children’s department. Ask us for the Shoe books.')],
+     ('Storytime', 'Saturdays at 11, children’s department. This fall, the Shoe books.')],
     [('Store hours', 'Every day, 9 AM to 11 PM. The cafe closes at 10:30.'),
      ('Back to school', 'Notebooks, planners and bouquets of sharpened pencils by the door.')],
 ]
@@ -51,7 +51,7 @@ MIS = 'text-shadow: 0 -0.6px 0 rgba(214, 160, 60, 0.45)'      # yellow plate a h
 def lockup(size, on_flood):
     fg = CREAM if on_flood else FLOOD
     plate_bg, plate_fg = (TAUPE, CREAM)
-    box = round(size * 0.33)
+    box = max(12, round(size * 0.33))
     sh = 'text-shadow: -0.6px 0 0 rgba(175, 40, 72, 0.75)' if on_flood else MIS
     return (f'<div style="display: flex; align-items: center; justify-content: center; gap: {round(size * 0.2)}px; color: {fg}; '
             f'font-family: \'Bodoni Moda\', serif; font-weight: 700; font-size: {size}px; line-height: 1; letter-spacing: 0.03em; {sh}">'
@@ -60,7 +60,7 @@ def lockup(size, on_flood):
 
 
 def bar():
-    col = 'width: 58px; text-align: right'
+    col = 'width: 64px; text-align: center'
     head = (f'<div style="display: flex; align-items: flex-end; border-bottom: 2px solid {INK}; padding-bottom: 5px">'
             f'<div style="flex: 1; font-family: \'Cinzel\', serif; font-weight: 700; font-size: 17px; letter-spacing: 0.12em; color: {FLOOD}; {MIS}">The Espresso Bar</div>'
             + ''.join(f'<span style="{col}; font-family: \'Cinzel\', serif; font-weight: 700; font-size: 12px; letter-spacing: 0.03em; color: {BODY}">{c}</span>' for c in ('SHORT', 'TALL', 'GRANDE'))
@@ -98,7 +98,7 @@ def store():
         cell = ''
         for j, (t, d) in enumerate(c):
             cell += (f'<div style="{"" if j == 0 else "margin-top: 7px"}"><div style="font-family: \'Cinzel\', serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: {FLOOD}">{t.upper()}</div>'
-                     f'<p style="margin: 1px 0 0; font-size: 16px; line-height: 1.22">{d}</p></div>')
+                     f'<p style="margin: 1px 0 0; font-size: 16px; line-height: 1.22; text-wrap: pretty">{d}</p></div>')
         cols += f'<div style="flex: 1; min-width: 0">{cell}</div>'
     return cols
 
@@ -117,7 +117,7 @@ def overlays(face):
 
 for face in ('front', 'back'):
     b = open(os.path.join(D, face + '.body.html')).read()
-    b = (b.replace('{{LOCKUP}}', lockup(48, True)).replace('{{LOCKUP_SM}}', '<div style="flex-shrink: 0">' + lockup(19, False) + '</div>')
+    b = (b.replace('{{LOCKUP}}', lockup(48, True)).replace('{{LOCKUP_SM}}', '<div style="flex-shrink: 0">' + lockup(22, False) + '</div>')
           .replace('{{BAR}}', bar()).replace('{{FOOD}}', food()).replace('{{STORE}}', store()))
     i = b.rindex('</div>')
     b = b[:i] + overlays(face) + b[i:]

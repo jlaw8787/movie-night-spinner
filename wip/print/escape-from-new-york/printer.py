@@ -120,7 +120,7 @@ class Sheet:
 
     def ribbon(self, y):
         """how much ink this stretch of ribbon gives a line at page height y (css px)"""
-        return 0.84 + 0.1 * math.sin(y / 61.0) + 0.05 * math.sin(y / 23.0 + 1.3)
+        return 0.9 + 0.07 * math.sin(y / 61.0) + 0.04 * math.sin(y / 23.0 + 1.3)
 
     def dot(self, x, y, k):
         st = self.stamp

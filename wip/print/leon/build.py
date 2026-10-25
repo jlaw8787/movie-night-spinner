@@ -1,6 +1,6 @@
 """Builds the Villafane Food Market weekly circular (Leon: The Professional, 1994).
 The neighbourhood grocer's two-sided sale flyer that sits in a stack by the register, the store
-Mathilda runs to for groceries and Leon's milk. US Letter, groundwood newsprint, printed web-offset
+Mathilda runs to for groceries and Leon's milk. The owner speaks Spanish, so the name is his. US Letter, groundwood newsprint, printed web-offset
 in two inks, black and one spot green, with halftone clip art and a little misregistration.
 Front: dairy case (milk), lunch counter, bakery case, houseplants. Back: deli counter, a paid ad
 from Tony's restaurant, clip coupons. One sheet, no fold.
@@ -218,7 +218,7 @@ back = f"""
 {tintbox(48, 150, 720, 276, '#e3ecdf')}
 {box(48, 150, 720, 276, 2.5)}
 <div style="{at(62, 164, 300)}">{tag('PARTY TRAYS', GREEN)}</div>
-{img('baguette.png', 56, 196, 566, 104, 'Baguette sliced on a party tray')}
+{img('baguette.png', 54, 188, 590, 128, 'Baguette sliced on a party tray')}
 {img('burst.png', 626, 164, 136, 136)}
 <div style="{at(626, 200, 136, 'display: flex; justify-content: center')}">{price('7', '99', 'tray', 56, WHITE)}</div>
 <div style="{at(64, 320, 688)}">
