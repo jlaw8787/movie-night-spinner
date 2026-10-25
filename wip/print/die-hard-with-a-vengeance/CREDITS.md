@@ -1,5 +1,5 @@
 # Credits, Heights Corner kids' riddle placemat
 - assets/still-avenue.jpg: TMDB still of Die Hard with a Vengeance (1995), https://image.tmdb.org/t/p/original/hLyGN90wfypN2lXSnThHLwrbNdv.jpg (listed in data/film-stills.json). Film still, used as on the rest of the site.
-- assets/map-run.png: painted in paint.py from borough outlines in https://raw.githubusercontent.com/dwillis/nyc-maps/master/boroughs.geojson (NYC Department of City Planning borough boundaries, NYC Open Data, free public data). New Jersey shore drawn by hand.
-- assets/jugs.png: painted in paint.py.
+- assets/map-1885.jpg: "Map of New York City, Brooklyn, and vicinity, shewing suburban lines of Long Island Railroad and its connections", New York, 1885. Library of Congress Geography and Map Division, https://www.loc.gov/item/98688700/ (image via tile.loc.gov, g3804n rr004490). Public domain, no known restrictions (published 1885). Treatment: cropped to Manhattan from the Battery to the south Bronx, lightened slightly toward the placemat paper. Route, stops and place names are HTML and SVG over the map.
 - assets/paper-grain.png: shared house grain from jurassic/src/assets.
+- The fountain jugs are now type only (5 GAL., 3 GAL.); the painted jugs and the old painted map are retired to _old with paint.py, which also holds the recipe for still-avenue.jpg.

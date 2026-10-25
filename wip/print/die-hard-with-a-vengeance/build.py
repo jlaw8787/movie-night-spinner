@@ -1,7 +1,7 @@
 """Kids' riddle placemat, Heights Corner Coffee Shop, 138th Street at Amsterdam Avenue, Harlem. Summer 1995.
 One landscape face, 14 x 10 in (1344 x 960 at 96 dpi), printed in black, taxi yellow and red on white placemat stock.
-Signature: riddle panel (fountain jugs, St. Ives, a riddle slip from Zeus next door) plus the taxi race map.
-Run paint.py first. Writes placemat.html, placemat.body.html, film.json and cityrun.labels.json."""
+Signature: riddle panel (fountain jugs as type, St. Ives, a riddle slip from Zeus next door) plus the taxi race\nover a real 1885 map of New York City, Brooklyn and vicinity (Library of Congress).
+Writes placemat.html, placemat.body.html, film.json and cityrun.labels.json."""
 import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
@@ -122,9 +122,14 @@ def lab(t, x, y, size=14):
             f'{SANS}; font-weight: 800; font-size: {size}px; letter-spacing: 0.14em; color: {INK}; white-space: nowrap">{t}</div>')
 
 
-labels = (lab('NEW JERSEY', 2, 18) + lab('HARLEM', 112, 52) + lab('MANHATTAN', 30, 262) + lab('QUEENS', 228, 300)
-          + lab('BROOKLYN', 176, 400) + lab('BRONX', 196, 4)
-          + f'<div style="position: absolute; left: {mx + nx * MS - 5:.0f}px; top: {my + ny * MS + 14:.0f}px; {TITAN}; font-size: 15px; color: {INK}">N</div>')
+labels = (lab('NEW JERSEY', 4, 226) + lab('HARLEM', 116, 96) + lab('MANHATTAN', 74, 296) + lab('QUEENS', 226, 286)
+          + lab('BROOKLYN', 140, 440) + lab('BRONX', 228, 18)
+          + f'<div style="position: absolute; left: {mx + nx * MS - 1:.0f}px; top: {my + (ny - 22) * MS:.0f}px; width: 2px; height: 20px; background: {INK}"></div>'
+          + f'<div style="position: absolute; left: {mx + nx * MS - 6:.0f}px; top: {my + ny * MS + 0:.0f}px; background: {PAPER}; padding: 0 2px; {TITAN}; font-size: 15px; line-height: 1.1; color: {INK}">N</div>')
+_rp = ' '.join(f'{x * MS:.1f},{y * MS:.1f}' for x, y in LAY['stops'])
+route = (f'<svg width="272" height="{497 * MS:.0f}" viewBox="0 0 272 {497 * MS:.0f}" style="position: absolute; left: {mx}px; top: {my}px" aria-hidden="true">'
+         f'<polyline points="{_rp}" fill="none" stroke="{PAPER}" stroke-width="6" stroke-linejoin="round" opacity="0.85"/>'
+         f'<polyline points="{_rp}" fill="none" stroke="{RED}" stroke-width="3" stroke-dasharray="8 5" stroke-linejoin="round"/></svg>')
 
 stops = ["Our counter, 138th Street", "Cut through Central Park", "72nd Street and Broadway",
          "Down to Wall Street", "Tompkins Square fountain", "Up to the Stadium in the Bronx"]
@@ -136,8 +141,8 @@ colMap = f'''<div style="position: absolute; left: 700px; top: {TOP}px; width: 2
   {head('Trace the cab', 'TAXI RACE!')}
 </div>
 <div style="position: absolute; left: {mx - 2}px; top: {my - 2}px; width: 272px; height: {497 * MS:.0f}px; border: 2px solid {INK}; line-height: 0">
-  <img src="assets/map-run.png" alt="Map of Manhattan with the taxi race route" style="display: block; width: 272px; height: {497 * MS:.0f}px"></div>
-{pins}{labels}
+  <img src="assets/map-1885.jpg" alt="1885 map of New York City, Brooklyn and vicinity with the taxi race route marked" style="display: block; width: 272px; height: {497 * MS:.0f}px"></div>
+{route}{pins}{labels}
 <div style="position: absolute; left: 700px; top: {my + 497 * MS + 8:.0f}px; width: 276px">{legend}</div>'''
 
 # ---------- riddle panel ----------
@@ -153,9 +158,9 @@ panel = f'''<div style="position: absolute; left: 996px; top: {TOP - 10}px; widt
   <div style="{SANS}; font-weight: 800; font-size: 18px; letter-spacing: 0.16em; color: {INK}">SIMON SAYS: SOLVE!</div>
   <div style="{TITAN}; font-size: 44px; line-height: 1; color: {INK}; margin-top: 2px">RIDDLE ME THIS!</div>
   <div style="{TITAN}; font-size: 20px; line-height: 1.1; color: {RED}; margin-top: 12px">1. THE FOUNTAIN JUGS</div>
-  <div style="position: relative; line-height: 0; margin-top: 6px; border: 2px solid {INK}; background: {PAPER}; height: 116px; overflow: hidden"><img src="assets/jugs.png" alt="A 5 gallon and a 3 gallon jug" style="display: block; width: 252px; height: 124px; margin-left: 14px; margin-top: -6px">
-    <div style="position: absolute; left: 50px; top: 48px; {TITAN}; font-size: 18px; line-height: 1; color: {RED}">5 GAL.</div>
-    <div style="position: absolute; left: 171px; top: 77px; {TITAN}; font-size: 14px; line-height: 1; color: {RED}">3 GAL.</div></div>
+  <div style="margin-top: 6px; border: 2px solid {INK}; background: {PAPER}; height: 112px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 16px; white-space: nowrap">
+    <div style="{TITAN}; font-size: 40px; line-height: 1; color: {RED}">5 GAL.</div>
+    <div style="{TITAN}; font-size: 28px; line-height: 1; color: {RED}">3 GAL.</div></div>
   <div style="{SANS}; font-size: 19px; line-height: 1.25; color: {INK}; margin-top: 6px">A 5-gallon jug, a 3-gallon jug and a fountain. Measure out exactly 4 gallons.</div>
   <div style="{TITAN}; font-size: 20px; line-height: 1.1; color: {RED}; margin-top: 12px">2. GOING TO ST. IVES</div>
   <div style="{SANS}; font-size: 19px; line-height: 1.22; color: {INK}; margin-top: 4px">As I was going to St. Ives, I met a man with seven wives. Each wife had seven sacks, each sack had seven cats, each cat had seven kits. Kits, cats, sacks and wives: how many were going to St. Ives?</div>

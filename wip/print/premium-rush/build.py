@@ -2,7 +2,7 @@
 The venue: a halal food truck parked on Broadway at 116th St, by the university gates where the
 messengers pick up. The object: the legal-size sheet taped inside the order window (8.5 x 14 in,
 portrait, one face), printed by a copy shop in cab yellow, black and Wilee red.
-Signature piece: the painted strip map (map.py) of Manhattan with the run from 116th St to Chinatown.
+Signature piece: Hammond's c1921 map of Manhattan (Library of Congress) with the run from 116th St to Chinatown drawn over it.
 Real images: a chicken platter photo (Wikimedia Commons, CC BY 2.0) and a TMDB still of Broadway.
 Props: a messenger's delivery manifest tag and the truck's spoke card.
 Writes window.html, window.body.html, film.json, messenger.labels.json."""
@@ -68,15 +68,16 @@ BAO = ('Chinatown pork buns', 'Char siu bao', '3.00',
        'Pork neck marinated overnight in hoisin, honey, soy and five spice, roasted, in steamed buns.')
 
 # ---------- map column ----------
-def chip(x, y, text, num=None, side='r', w=None):
+def chip(x, y, text, num=None, side='r', w=None, lx=None, dy=0):
     """A route label: numbered red stop on the line, a paper chip beside it."""
     out = ''
     if num is not None:
         out += (f'<div style="position: absolute; left: {x - 13}px; top: {y - 13}px; width: 22px; height: 22px; border: 2px solid {BLK}; border-radius: 50%; '
                 f'background: {RED}; color: {YEL}; text-align: center; font-family: {DISP}; font-weight: 600; font-size: 20px; line-height: 25px">{num}</div>')
-    pos = f'left: {x + 14}px' if side == 'r' else f'right: {316 - x + 14}px'
+    ax = x if lx is None else lx
+    pos = f'left: {ax + 14}px' if side == 'r' else f'right: {316 - ax + 14}px'
     ww = f'width: {w}px;' if w else 'white-space: nowrap;'
-    out += (f'<div style="position: absolute; {pos}; top: {y - 13}px; {ww} background: {YEL}; border: 2px solid {BLK}; padding: 3px 6px 0; '
+    out += (f'<div style="position: absolute; {pos}; top: {y - 13 + dy}px; {ww} background: {YEL}; border: 2px solid {BLK}; padding: 3px 6px 0; '
             f'font-family: {DISP}; font-weight: 500; font-size: 19px; line-height: 0.95; color: {BLK}; text-transform: uppercase">{text}</div>')
     return out
 
@@ -86,11 +87,15 @@ def water(x, y, text, align='left'):
 
 def map_col():
     L = LAY
-    sts = ''.join(f'<div style="position: absolute; left: 4px; top: {y - 8}px; font-family: {DISP}; font-weight: 500; font-size: 15px; line-height: 1; color: {YEL}">{n}</div>'
+    sts = ''.join(f'<div style="position: absolute; left: 4px; top: {y - 9}px; background: {BLK}; padding: 2px 3px 1px; font-family: {DISP}; font-weight: 500; font-size: 15px; line-height: 1; color: {YEL}">{n}</div>'
                   for n, (x, y) in [(k + (' ST' if k == '125' else ''), v) for k, v in L['st'].items()] if n in ('125 ST', '110', '96', '72', '59', '42', '34', '23', '14'))
+    route = ' '.join(f'{x},{y}' for x, y in (L[k] for k in ('start', 'turn', 'park_in', 'park_mid', 'circle', 'times', 'union', 'canal', 'end')))
     sx, sy = L['start']; px, py = L['park_in']; cx, cy = L['circle']; tx, ty = L['times']; ex, ey = L['end']
     return (f'<div style="position: absolute; left: 0; top: 0; width: 316px; height: 1000px; background: {BLK}">'
-            f'<img src="assets/map.png" alt="Map of Manhattan with the bike route from 116th St to Chinatown" style="position: absolute; left: 0; top: 0; width: 316px; height: 1000px; display: block">'
+            f'<img src="assets/map-hammond.jpg" alt="Hammond\'s 1921 map of Manhattan with the bike route from 116th St to Chinatown" style="position: absolute; left: 0; top: 190px; width: 316px; height: 810px; display: block">'
+            f'<svg width="316" height="1000" viewBox="0 0 316 1000" style="position: absolute; left: 0; top: 0" aria-hidden="true">'
+            f'<polyline points="{route}" fill="none" stroke="{BLK}" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>'
+            f'<polyline points="{route}" fill="none" stroke="{RED}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></svg>'
             f'<div style="position: absolute; left: 36px; top: 40px; width: 262px">'
             f'{kicker("By bike, about 7 miles", YEL, 17)}'
             f'<div style="margin-top: 8px; font-family: {DISP}; font-weight: 600; font-size: 60px; line-height: 0.8; padding-top: 8px; color: {YEL}">UPTOWN TO<br>CHINATOWN</div>'
@@ -103,9 +108,9 @@ def map_col():
             + chip(px, py + 2, 'Into the park', 2)
             + chip(cx, cy, 'Columbus Circle', 3)
             + chip(tx, ty + 6, 'Times Sq.<br>Watch the cabs', 4, w=124)
-            + chip(ex, ey, 'Chinatown', 5, side='l')
+            + chip(ex, ey, 'Chinatown', 5, side='l', lx=192, dy=-30)
             + water(252, 430, 'EAST<br>RIVER')
-            + water(4, 742, 'HUDSON<br>RIVER')
+            + water(4, 772, 'HUDSON<br>RIVER')
             + water(246, 900, 'BROOKLYN')
             + '</div>')
 

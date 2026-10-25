@@ -9,7 +9,7 @@
 ## Film still (assets/still-broadway.jpg, from src/A1ERUEc-orig.jpg)
 - Premium Rush (2012), TMDB image /A1ERUEcDEvtD38mq3v9ReFI1YEp.jpg, listed in data/film-stills.json.
 
-## Map data (assets/map.png, painted by map.py)
-- Manhattan, Brooklyn, Queens and Bronx shorelines: NYC borough boundaries (NYC Department of City Planning open data), via codeforgermany/click_that_hood public/data/new-york-city-boroughs.geojson.
-- Central Park and neighborhood lines: click_that_hood public/data/manhattan.geojson.
-- Street grid, Broadway, route, bridges and New Jersey shore drawn by hand in map.py from known coordinates.
+## Map (assets/map-hammond.jpg)
+- "Hammond's subway system map of New York City (Manhattan and The Bronx)", C.S. Hammond & Company, New York, c1921. Library of Congress Geography and Map Division, https://www.loc.gov/item/2013589728/ (image via tile.loc.gov, g3804n ct008314).
+- Licence: public domain in the US (published before 1929), no known restrictions per the Library of Congress.
+- Treatment: cropped to Manhattan from 125th St to the Battery, colour softened and warmed toward the truck's yellow. Route, stops, street numbers and water labels are HTML and SVG over the map. The old painted map (map.py, map.png) is retired to _old.

@@ -1,7 +1,7 @@
 """16 Blocks (2006). The printed wall menu board of the Docket Coffee Shop & Grill,
 the 24-hour counter halfway along the walk from the precinct to the courts.
-One landscape face, 1344x816. Signature piece: the shop's own delivery map of the
-sixteen blocks (assets/map16.png, painted by paint.py). Writes board.html,
+One landscape face, 1344x816. Signature piece: the shop's delivery map, a real 1884 Perris & Browne
+index sheet of lower Manhattan (Library of Congress) with the sixteen blocks overlaid as type and lines. Writes board.html,
 board.body.html, film.json and sixteen.labels.json."""
 import os, json
 D = os.path.dirname(os.path.abspath(__file__))
@@ -94,6 +94,49 @@ note = f'''<div style="position: absolute; left: 272px; top: 12px; width: 168px;
   <div style="font-family: {SIGN}; font-size: 16px; line-height: 1.6; margin-top: 0; text-align: right; color: #233b72">Jack Mosley</div>
 </div>'''
 
+# ---------- route overlay on the 1884 Perris & Browne index sheet (css px of the 432x548 map box) ----------
+import math as _m
+ROUTE = [(118, 14), (122, 345), (318, 377), (322, 495), (216, 503), (214, 462)]
+def _along(pts, n):
+    seg = [(_m.dist(a, b), a, b) for a, b in zip(pts, pts[1:])]
+    tot = sum(s_[0] for s_ in seg); out = []
+    for i in range(n):
+        t = tot * i / (n - 1)
+        for L, a, b in seg:
+            if t <= L + 1e-6:
+                out.append((a[0] + (b[0] - a[0]) * t / L, a[1] + (b[1] - a[1]) * t / L)); break
+            t -= L
+    return out
+# block 8 sits on the Canal corner: first half evenly down Broadway, second half evenly to the courts
+PINS = _along(ROUTE[:2], 8) + _along(ROUTE[1:], 9)[1:]
+_pts = ' '.join(f'{x},{y}' for x, y in ROUTE)
+route_svg = (f'<svg width="432" height="548" viewBox="0 0 432 548" style="position: absolute; left: 0; top: 0" aria-hidden="true">'
+             f'<polyline points="{_pts}" fill="none" stroke="{NAVY}" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" opacity="0.9"/>'
+             f'<polyline points="{_pts}" fill="none" stroke="{YEL}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>'
+             f'<path d="M {ROUTE[-1][0] - 7} {ROUTE[-1][1] + 9} L {ROUTE[-1][0]} {ROUTE[-1][1] - 4} L {ROUTE[-1][0] + 7} {ROUTE[-1][1] + 9} Z" fill="{NAVY}"/></svg>')
+def _pin(i, x, y):
+    if i == 8:
+        return (f'<div style="position: absolute; left: {x - 13}px; top: {y - 13}px; width: 26px; height: 26px; border-radius: 50%; background: {YEL}; '
+                f'border: 3px solid {NAVY}; box-sizing: border-box"></div>')
+    return (f'<div style="position: absolute; left: {x - 11}px; top: {y - 11}px; width: 22px; height: 22px; border-radius: 50%; background: {NAVY}; '
+            f'color: {CREAM}; font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 22px; text-align: center">{i}</div>')
+pins = ''.join(_pin(i + 1, x, y) for i, (x, y) in enumerate(PINS))
+MT = f"position: absolute; font-family: {BODY}; font-weight: 700; letter-spacing: 0.12em; color: {NAVY}; background: rgba(242,233,212,0.92); white-space: nowrap; line-height: 1"
+map_layer = f'''<div style="position: absolute; left: 10px; top: 104px; width: 432px; height: 548px; overflow: hidden; border: 2px solid {NAVY}; box-sizing: border-box">
+  <img src="assets/map16-perris.jpg" alt="Perris and Browne 1884 index map of lower Manhattan, with the sixteen blocks marked from the precinct down Broadway and along Canal Street through Chinatown to the courts." style="position: absolute; left: -2px; top: -2px; width: 432px; height: 548px; display: block">
+  {route_svg}{pins}
+  <div style="{MT}; left: 134px; top: 6px; font-size: 14px; padding: 4px 7px; border: 1.5px solid {NAVY}">THE PRECINCT</div>
+  <div style="{MT}; left: 126px; top: 236px; font-size: 14px; padding: 3px 6px; transform: rotate(-90deg); transform-origin: left top">BROADWAY</div>
+  <div style="{MT}; left: 172px; top: 330px; font-size: 14px; padding: 3px 6px; transform: rotate(9deg)">CANAL ST</div>
+  <div style="{MT}; left: 330px; top: 418px; font-size: 14px; padding: 4px 6px; letter-spacing: 0.06em; border: 1.5px solid {NAVY}">CHINATOWN</div>
+  <div style="{MT}; left: 236px; top: 390px; font-size: 14px; padding: 3px 5px; background: {NAVY}; color: {CREAM}">BUS</div>
+  <div style="{MT}; left: 150px; top: 416px; font-size: 15px; padding: 5px 8px; background: {NAVY}; color: {CREAM}; letter-spacing: 0.1em">THE COURTS</div>
+  <div style="{MT}; left: 398px; top: 10px; width: 22px; font-size: 14px; padding: 4px 0 3px; text-align: center; border: 1.5px solid {NAVY}">N<div style="margin: 3px auto 0; width: 2px; height: 14px; background: {NAVY}"></div></div>
+  <div style="position: absolute; left: 8px; top: 360px; background: {NAVY}; padding: 7px 10px 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.3)">
+    <div style="font-family: {DISP}; font-weight: 800; font-size: 18px; line-height: 1; letter-spacing: 0.06em; color: {CREAM}">DOCKET, WE ARE HERE</div>
+    <div style="margin-top: 4px; font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1; letter-spacing: 0.14em; color: {YEL}">HALFWAY, BLOCK 8</div></div>
+</div>'''
+
 body = f'''<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {NAVY}; font-family: {BODY}; color: {CREAM}">
 <img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; opacity: 0.22; display: block; pointer-events: none">
 <div style="position: absolute; left: 12px; top: 12px; width: {FW - 24}px; height: {FH - 24}px; border: 2px solid {YEL}; box-sizing: border-box"></div>
@@ -114,7 +157,7 @@ body = f'''<div style="position: relative; width: {FW}px; height: {FH}px; overfl
   <div style="position: absolute; left: 14px; top: 14px; font-family: {BODY}; font-weight: 700; font-size: 18px; line-height: 1; letter-spacing: 0.2em; color: #b07a10">WE DELIVER</div>
   <div style="position: absolute; left: 13px; top: 36px; font-family: {DISP}; font-weight: 900; font-size: 46px; line-height: 0.95; color: {NAVY}">THE 16 BLOCKS</div>
   {note}
-  <img src="assets/map16.png" alt="The shop's delivery map: sixteen blocks from the precinct down Broadway and along Canal Street through Chinatown to the courts." style="position: absolute; left: 10px; top: 104px; width: 432px; height: 548px; display: block">
+  {map_layer}
   {court_pass}
 </div>
 
