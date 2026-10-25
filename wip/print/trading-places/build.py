@@ -29,8 +29,8 @@ BAR_L = [
   ('Cocktails', [
     ('Mimosa', 'Fresh-squeezed juice and chilled champagne, half and half, in a flute.', '3.25'),
     ('Frozen orange frappé', 'Juice blended with shaved ice and a splash of vodka, in a small glass.', '2.75'),
-    ('Dry martini', 'Gin or vodka, stirred. Olive or a twist.', '3.50'),
-    ('Manhattan', 'Rye, sweet vermouth, bitters, a cherry.', '3.50')]),
+    ('Dry martini', 'Gin or vodka, stirred until very cold, with an olive or a lemon twist.', '3.50'),
+    ('Manhattan', 'Rye whiskey, sweet vermouth and a dash of bitters, with a cherry.', '3.50')]),
 ]
 BAR_R = [
   ('Wine and port', [
@@ -43,7 +43,7 @@ BAR_R = [
 RULES = [
   'Jackets and ties in all club rooms.',
   'Guests remain with the member who signed them in.',
-  'No cash is taken. All charges are signed to the member.',
+  'No cash is taken. All charges are signed to the member’s account.',
   'Business papers are not to be shown in the Dining Room.',
 ]
 
@@ -158,7 +158,7 @@ def back():
   {head('House rules', 0, center=False)}
   {rules}
 </div>
-<img src="assets/stain-port.png" alt="" aria-hidden="true" style="position: absolute; left: 560px; top: 596px; width: 200px; height: 200px; pointer-events: none; display: block">
+<img src="assets/stain-port.png" alt="" aria-hidden="true" style="position: absolute; left: 572px; top: 580px; width: 200px; height: 200px; pointer-events: none; display: block">
 {slip}
 <div style="position: absolute; left: 76px; top: {H - 112}px; width: {W - 152}px; text-align: center">
   {ornament(110)}

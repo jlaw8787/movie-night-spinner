@@ -105,7 +105,7 @@ def back():
             f'{field("Member", "K. Parker", rot=-1.2)}'
             f'{field("Department", "Mergers &amp; Acq.", rot=-0.8)}'
             f'<div style="display: flex; gap: 18px">{field("Party of", "2", 140, 0)}{field("Time", "1:00", None, 0)}</div>'
-            f'{field("Order", "1 sirloin salad, 1 crab cakes", rot=-0.6)}'
+            f'{field("Order", "sirloin salad, crab cakes", rot=-0.6)}'
             f'<div style="margin-top: 12px; display: flex; justify-content: space-between; font-family: {SERIF}; font-size: 12px; color: {SOFT}">'
             f'<span>Office Services</span><span>Form DR-4, Rev. 1/88</span></div></div>')
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}">{grain()}'

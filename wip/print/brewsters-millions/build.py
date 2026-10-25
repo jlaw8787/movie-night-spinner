@@ -25,7 +25,7 @@ SIDES = [
     ('Creamed spinach', 'With nutmeg and grated Parmesan.', '3.75'),
 ]
 SWEETS = [
-    ('Postage stamp shortbread', 'Butter cookies with pinked edges, each piped with an icing design. Six to a plate.', '4.50'),
+    ('Postage stamp shortbread', 'Pinked-edge butter cookies, each piped with icing. Six to a plate.', '4.50'),
     ('Hot fudge sundae', 'Vanilla ice cream, warm chocolate sauce, whipped cream, a cherry.', '4.75'),
 ]
 BAR = [
@@ -36,6 +36,7 @@ BAR = [
 ]
 SERVICES = [
     ('Postcards and stamps', 'At the front desk. Mail left with the bell captain goes out each afternoon.'),
+    ('The concierge', 'Limousines and theater tickets.'),
     ('The Grand Ballroom', 'Private parties of twenty to two thousand.'),
 ]
 

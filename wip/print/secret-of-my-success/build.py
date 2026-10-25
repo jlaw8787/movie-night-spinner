@@ -82,9 +82,10 @@ CAF_LEFT = col([('AT THE COUNTER', [
     ('Kansas corn fritters', 'Sweet kernels and spring onion in a light batter, fried golden. Sour cream on the side.', '1.10')])])
 CAF_RIGHT = col([('HOT PLATE', [
     ('Buttermilk chicken', 'Brined overnight, dredged in seasoned flour and fried crisp. Mashed potatoes and gravy.', '3.95'),
+    ('Cheese Danish', 'Sweet cheese, baked each morning.', '.75'),
     ('Coffee', 'Black or regular, in a paper cup. Free refills.', '.40')])])
 REMIND = (sub('BOARDROOM CATERING', True)
-          + item('Smoked salmon blini', 'Warm buckwheat pancakes, cr&egrave;me fra&icirc;che, dill and cracked pepper. By the dozen.', '16.00')
+          + item('Smoked salmon blini', 'Warm buckwheat pancakes, cr&egrave;me fra&icirc;che, dill and cracked pepper. Sold by the dozen.', '16.00')
           + sub('OFFICE SERVICES REMINDERS')
           + ''.join(f'<div style="display: flex; gap: 10px; margin-top: {0 if i == 0 else 6}px; font-size: 16px; line-height: 1.38"><span>-</span><span>{t}</span></div>'
                     for i, t in enumerate(['Mail runs at 9, 11, 2 and 4.', 'Elevators are not changing rooms.', 'Empty offices need a work order.'])))

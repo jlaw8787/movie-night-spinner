@@ -35,14 +35,14 @@ def spot(cx, cy, rx, ry, seed):
     wob = blob_field(seed, 40, 30) * 0.35
     d = np.sqrt(((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2) + wob - 0.15
     core = np.clip(1 - d, 0, 1) ** 0.8
-    rim = np.exp(-((d - 0.92) / 0.06) ** 2) * 0.6
+    rim = np.exp(-((d - 0.9) / 0.14) ** 2) * 0.35
     return np.clip(core * 0.55 + rim, 0, 1)
 
 
 def paint(name, seed, grease=None):
     mott = blob_field(seed, 90, 60) * 0.6 + blob_field(seed + 1, 30, 22) * 0.4
     alpha = (mott - 0.45).clip(0, 1) * 0.10            # gentle darker clouds
-    alpha += edge_field(150) * 0.20                      # sun-faded, handled edges
+    alpha += edge_field(170) * 0.26                      # sun-faded, handled edges
     alpha += corner(W, H, 520) * 0.10 + corner(0, H, 380) * 0.07 + corner(W, 0, 300) * 0.05
     rgb = np.zeros((H, W, 3), np.float32)
     rgb[...] = (122, 78, 24)                              # warm brown, reads as age on goldenrod
@@ -57,5 +57,5 @@ def paint(name, seed, grease=None):
 
 
 paint('front', 11)
-paint('back', 23, grease=(1330, 1700, 150, 120))
+paint('back', 23, grease=(560, 1500, 170, 130))
 print('painted')

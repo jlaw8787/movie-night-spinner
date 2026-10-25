@@ -23,23 +23,23 @@ SPEC = {
       "3.25", "Yes, we make it. Max the counterman winces."),
   "Alvy's potato knishes": ("Potato knish",
       "Flaky pastry around a mash of boiled Idahos and onions fried slow in butter, egg-washed and baked golden.",
-      ".75", "Same recipe as our first counter in Coney Island."),
+      ".75", "Out of the oven every hour, all day."),
   "Lobster bites": ("Lobster canapés",
       "Sweet cooked meat folded with mayonnaise, lemon, diced celery and chives, piled on rounds of buttered, toasted brioche.",
       "8.50 doz.", "Cooked and shelled for you. No chasing them round the kitchen."),
   "New York cheesecake": ("New York cheesecake",
       "Cream cheese, sour cream and lemon zest on a buttery crumb crust, baked slow in a water bath and chilled overnight.",
-      "1.25", "Whole cakes 9.50 with a day's notice."),
+      "1.25", "Baked every morning. Never leaves Manhattan."),
   "Alvy's LA cucumber mint cooler": ("California cooler",
       "Fresh cucumber, lime, mint and honey, strained and poured over ice, topped up with seltzer.",
       ".95", "Big in Los Angeles, we hear. We wouldn't know."),
 }
 ADDED = {
-  'rye': ("Hot pastrami on rye", "Peppered, smoked navel, steamed until it shines and hand-sliced thick. Brown mustard on the side.", "3.25", None),
-  'soup': ("Matzo ball soup", "Golden chicken broth with carrot, fresh dill and one big, light dumpling.", "1.25", "By the bowl."),
+  'rye': ("Hot pastrami on rye", "Peppered and smoked beef navel, steamed until it shines and hand-sliced thick. Brown mustard on the side.", "3.25", None),
+  'soup': ("Matzo ball soup", "Golden chicken broth with carrot, fresh dill and one big, light dumpling.", "1.25", None),
   'eggcream': ("Egg cream", "Chocolate syrup and cold milk, hit hard with seltzer and stirred fast so it heads up.", ".60", "No egg, no cream. Don't ask."),
-  'celery': ("Celery tonic", "Sweet, sharp and ice cold, by the bottle.", ".45", None),
-  'coffee': ("Coffee", "A fresh pot every hour. Refills at the counter.", ".30", None),
+  'celery': ("Celery tonic", "Celery seed soda, sweet and sharp, served ice cold in the bottle.", ".45", None),
+  'coffee': ("Coffee", "A fresh pot every hour, and refills are free at the counter.", ".30", None),
 }
 
 
@@ -50,7 +50,7 @@ def item(it, first=False, gap=20, nsz=27):
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px">
         <div style="{F}; font-weight: 900; font-size: {nsz}px; line-height: 1.05; color: {INK}">{name}</div>
         <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1; color: {INK}; white-space: nowrap">{price}</div></div>
-      <div style="{N}; font-size: 17px; line-height: 1.34; color: {INK}; margin-top: 5px">{desc}</div>{nt}</div>'''
+      <div style="{N}; font-size: 17px; line-height: 1.34; color: {INK}; margin-top: 5px; text-wrap: pretty">{desc}</div>{nt}</div>'''
 
 
 def bar(t, sub=None, top=0):
@@ -109,6 +109,10 @@ front = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; heigh
       <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.1">Going to the pictures?</div>
       <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Four-hour picture? Take sandwiches. We wrap anything to go, and we are open after the last show lets out.</div>
     </div>
+    <div style="margin-top: 28px; border-top: 4px solid {INK}; padding-top: 14px">
+      <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.1">Breakfast, 7 to 11</div>
+      <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Bagel with lox and a schmear, eggs any style, hot rolls and butter. Coffee is on before we unlock the door.</div>
+    </div>
   </aside>
 
   {rules(L, 958, R - L)}
@@ -122,7 +126,6 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
   <header style="position: absolute; left: {L}px; top: 46px; width: {R - L}px; display: flex; align-items: baseline; gap: 18px">
     <span style="{F}; font-style: italic; font-weight: 900; font-size: 52px; line-height: 1; letter-spacing: -.02em">Mandel&rsquo;s</span>
     <span style="{N}; font-weight: 700; font-size: 16px; letter-spacing: .24em; color: {RED}">PLATTERS, BAKE CASE, FOUNTAIN</span></header>
-  <div style="position: absolute; left: 548px; top: 34px; width: 240px; {P}; font-size: 25px; line-height: 1.05; color: #4d4a44; transform: rotate(-4deg)">1 rye, mustard<br>1 white, mayo ?!</div>
   {rules(L, 124, R - L)}
 
   <section style="position: absolute; left: {L}px; top: 160px; width: 452px">
@@ -132,9 +135,9 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
       <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.1">Weekend at the beach?</div>
       <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Order your platters by Thursday noon. We pack them on ice for the drive out, with the bread wrapped separately so nothing goes soggy.</div>
     </div>
-    {bar('From the bake case', None, 34)}
+    {bar('From the bake case', None, 44)}
     {item(SPEC['New York cheesecake'], True)}
-    <div style="{F}; font-style: italic; font-weight: 600; font-size: 16px; line-height: 1.3; color: {INK}; margin-top: 4px">Baked here every morning. Never leaves Manhattan.</div>
+    <div style="{N}; font-size: 16px; line-height: 1.34; margin-top: 16px; padding-top: 12px; border-top: 1px solid {INK}">Whole cakes 9.50 with a day's notice. Plain only, the way it should be.</div>
   </section>
 
   <section style="position: absolute; left: 532px; top: 160px; width: 236px">
@@ -143,6 +146,7 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
     {item(ADDED['eggcream'], gap=22, nsz=24)}
     {item(ADDED['celery'], gap=22, nsz=24)}
     {item(ADDED['coffee'], gap=22, nsz=24)}
+    <div style="margin: 34px 0 0 6px; {P}; font-size: 27px; line-height: 1.1; color: #4a4741; transform: rotate(-5deg)">1 rye, mustard<br>1 white, mayo ?!<br><span style="font-size: 22px; margin-left: 46px">la-di-da</span></div>
   </section>
 
   {rules(L, 852, R - L)}
