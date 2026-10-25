@@ -11,7 +11,7 @@ inside-man: Bebas Neue
 splash: Gloock
 sleepless-in-seattle: Yeseva One
 moonstruck: Marcellus SC
-adjustment-bureau: DM Serif Display
+adjustment-bureau: Fraunces
 after-hours: Monoton, Anton
 youve-got-mail: Libre Caslon Display
 quick-change: (pending)
