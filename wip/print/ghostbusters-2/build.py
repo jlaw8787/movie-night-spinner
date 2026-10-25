@@ -29,12 +29,12 @@ lib = ImageOps.autocontrast(lib, cutoff=1)
 lib = lib.filter(ImageFilter.UnsharpMask(radius=2, percent=90, threshold=2))
 lib = ImageOps.colorize(lib, black='#1c1420', white='#f7f1e6', mid='#857a78')   # warm silver print, no muddy tint
 lib = ImageEnhance.Brightness(lib).enhance(1.05)
-LIB_W, LIB_H = 480, 300
+LIB_W, LIB_H = 480, 280
 fit(lib, LIB_W, LIB_H, (40, 40, 820, 700)).save(A('liberty-1892.jpg'), quality=90)
 
 vigo = Image.open(S('o-bXcD5ZrA5noh509iLurKoytFwOB.jpg')).convert('RGB')
 vigo = ImageEnhance.Brightness(ImageEnhance.Contrast(vigo).enhance(1.05)).enhance(1.12)
-VIG_W, VIG_H = CW - 8, 206
+VIG_W, VIG_H = CW - 8, 184
 fit(vigo, VIG_W, VIG_H, (0, 40, 1421, 800)).save(A('still-vigo.jpg'), quality=90)
 
 def wear(name, seed):
@@ -65,8 +65,8 @@ def band(t):
             + stud('left') + stud('right') +
             f'<div style="font-family: {DISP}; font-size: 30px; line-height: 42px; color: {PAPER}; letter-spacing: 0.04em; white-space: nowrap">{t}</div></div>')
 
-def item(name, price, desc='', gap=14):
-    d = (f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.28; color: {INK}; margin-top: 2px">{desc}</div>' if desc else '')
+def item(name, price, desc='', gap=11):
+    d = (f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.24; color: {INK}; margin-top: 2px">{desc}</div>' if desc else '')
     return (f'<div style="margin-top: {gap}px">'
             f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-family: {BODY}; font-weight: 800; '
             f'font-size: 26px; line-height: 1.12; color: {INK}">'
@@ -86,6 +86,11 @@ def page(inner, name):
 
 def at(x, y, html, w=CW, extra=''):
     return f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px;{extra}">{html}</div>'
+
+def plate(t, w):
+    """Museum label plate laid along the foot of a picture."""
+    return (f'<div style="position: absolute; left: 0; bottom: 0; width: {w}px; box-sizing: border-box; background: rgba(43,23,51,0.86); '
+            f'padding: 6px 12px 7px; font-family: {BODY}; font-size: 16px; line-height: 1.25; color: {PAPER}">{t}</div>')
 
 # ---------------- props ----------------
 def admission_button(x, y, d=92):
@@ -117,55 +122,55 @@ def slime_sticker(x, y, d=118):
 
 def janosz_note(x, y, w=232):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; box-sizing: border-box; background: {CARD}; '
-            f'box-shadow: 0 3px 8px rgba(30,10,30,0.4); transform: rotate(2.5deg); padding: 10px 12px 6px; border-top: 5px solid {PINK}">'
+            f'box-shadow: 0 3px 8px rgba(30,10,30,0.4); transform: rotate(-1.5deg); padding: 9px 12px 4px; border-top: 5px solid {PINK}">'
             f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {INK}">'
-            'Come up after lunch and watch the old masters come back to life.</div>'
-            f'<div style="font-family: {SCRIPT}; font-size: 30px; line-height: 1.05; color: {PINK}; margin-top: 2px">Janosz Poha</div>'
-            f'<div style="font-family: {BODY}; font-size: 14px; letter-spacing: 0.08em; color: {MUTE}; line-height: 1.2">HEAD OF RESTORATION</div></div>')
+            'Come upstairs after lunch and watch the old masters come back to life.</div>'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 1px">'
+            f'<span style="font-family: {SCRIPT}; font-size: 30px; line-height: 1.05; color: {PINK}">Janosz Poha</span>'
+            f'<span style="font-family: {BODY}; font-size: 14px; letter-spacing: 0.08em; color: {MUTE}">RESTORATION</span></div></div>')
 
 # ---------------- FRONT ----------------
 def front():
     o = []
-    # hero: collection print of Liberty, full width inside the frame
+    # hero: collection print of Liberty, full width inside the frame, with its museum label
     o.append(f'<div style="position: absolute; left: 24px; top: 24px; width: {LIB_W}px; height: {LIB_H}px">'
              f'<img src="assets/liberty-1892.jpg" alt="The Statue of Liberty on its pedestal, seen from the landing path on the island, an old silver print" '
              f'style="display: block; width: {LIB_W}px; height: {LIB_H}px">'
-             f'<div style="position: absolute; left: 0; bottom: 0; width: {LIB_W}px; height: 4px; background: {PINK}"></div></div>')
-    o.append(at(M, 334, f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {MUTE}">'
-                'Liberty, New York Harbor, 1892. From the photography collection, second floor.</div>'))
-    o.append(at(M, 384, kicker('Manhattan Museum of Art')))
-    o.append(at(M - 2, 408, f'<div style="font-family: {DISP}; font-size: 58px; line-height: 1; color: {INK}; white-space: nowrap">ROTUNDA CAFE</div>', CW + 4))
-    o.append(at(M, 474, f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; letter-spacing: 0.04em; line-height: 1.2; color: {MUTE}">'
+             + plate('<i>Liberty, New York Harbor,</i> 1892. Photography collection, second floor.', LIB_W) +
+             f'<div style="position: absolute; left: 0; bottom: -4px; width: {LIB_W}px; height: 4px; background: {PINK}"></div></div>')
+    o.append(at(M, 322, kicker('Manhattan Museum of Art')))
+    o.append(at(M - 2, 346, f'<div style="font-family: {DISP}; font-size: 56px; line-height: 1; color: {INK}; white-space: nowrap">ROTUNDA CAFE</div>', CW + 4))
+    o.append(at(M, 410, f'<div style="font-family: {BODY}; font-weight: 600; font-size: 18px; letter-spacing: 0.04em; line-height: 1.2; color: {MUTE}">'
                 'Lunch, tea and early supper. Tuesday to Sunday.</div>'))
     menu = (band('SMALL PLATES')
-            + item('Pink beet and feta dip', '3.75', 'Roasted beets whipped with yogurt, garlic, lemon and dill. Warm flatbread wedges.', 10)
-            + item('Toasted crumpets', '2.25', 'Crisp in the holes, with whipped honey butter and a pinch of salt.')
-            + item('Mini bagel pizzas', '3.50', 'Oregano tomato sauce, hot salami and mozzarella, a drizzle of chili honey.')
-            + item('Fifth Avenue frank', '2.55', 'Griddled, steamed bun, mustard, green pickle relish, onion and hot sauerkraut.'))
-    o.append(at(M, 510, menu))
-    o.append(admission_button(W - 140, 262))
+            + item('Pink beet and feta dip', '3.75', 'Roast beets whipped with yogurt, garlic, lemon and dill. Warm flatbread wedges.', 10)
+            + item('Toasted crumpets', '2.25', 'Whipped honey butter and a pinch of salt.')
+            + item('Mini bagel pizzas', '3.50', 'Hot salami, mozzarella and chili honey.')
+            + item('Fifth Avenue frank', '2.55', 'Mustard, green relish, onion, sauerkraut.'))
+    o.append(at(M, 444, menu))
+    o.append(admission_button(W - 132, 168))
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
 def back():
     o = []
-    o.append(at(M, 42, kicker('Upstairs in the restoration studio', size=17)))
-    o.append(at(M, 70, f'<div style="border: 2px solid {PINK}; padding: 2px; background: {CARD}; width: {VIG_W}px">'
+    o.append(at(M, 40, f'<div style="position: relative; border: 2px solid {PINK}; padding: 2px; background: {CARD}; width: {VIG_W}px">'
+                f'<div style="position: relative; width: {VIG_W}px; height: {VIG_H}px">'
                 f'<img src="assets/still-vigo.jpg" alt="A fine brush cleaning the eye of a painted portrait of a stern long-haired prince" '
-                f'style="display: block; width: {VIG_W}px; height: {VIG_H}px"></div>'))
-    o.append(at(M, 288, f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {MUTE}; width: 190px">'
-                'Prince Vigo of Carpathia, 16th century, oil on canvas. Cleaning in progress for the winter show.</div>', 196))
-    o.append(janosz_note(M + 214, 262))
+                f'style="display: block; width: {VIG_W}px; height: {VIG_H}px">'
+                + plate('<b style="letter-spacing: 0.12em">UPSTAIRS IN RESTORATION.</b> Prince Vigo of Carpathia, 16th century, being cleaned.', VIG_W) +
+                '</div></div>'))
+    o.append(janosz_note(M, 244, 300))
+    o.append(slime_sticker(W - 40 - 116, 240, 116))
     menu = (band('SUPPER')
             + item('Carpathian goulash', '6.10', 'Beef chuck braised slowly with sweet paprika, onions, caraway and tomato. Egg noodles, sour cream.', 10)
-            + f'<div style="margin-top: 16px">{band("SWEETS AND DRINKS")}</div>'
+            + f'<div style="margin-top: 14px">{band("SWEETS AND DRINKS")}</div>'
             + item('Pink lemonade gelatin', '1.89', 'Set in a ring with raspberries. Wobbles when the band plays.', 10)
-            + item('Pink lemonade cooler', '1.50', 'Poured over raspberry sorbet so it foams. Spoon and straw.')
-            + item('Hot cocoa, coffee or tea', '.95', '', 12))
-    o.append(at(M, 400, menu))
-    o.append(at(M, 742, f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.3; color: {MUTE}; width: 300px">'
-                'Strollers please park at the coat check. Prices subject to change. Form MMA-1231, New York, 1989.</div>', 300))
-    o.append(slime_sticker(W - 40 - 112, 676))
+            + item('Pink lemonade cooler', '1.50', 'Poured over raspberry sorbet so it foams up.')
+            + item('Hot cocoa, coffee or tea', '.95'))
+    o.append(at(M, 376, menu))
+    o.append(at(M, 740, f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.3; color: {MUTE}">'
+                'Strollers please park at the coat check. Prices subject to change.<br>Form MMA-1231. Manhattan Museum of Art, New York, 1989.</div>'))
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}

@@ -95,7 +95,7 @@ def front():
     # signature: real skyline strip, full bleed
     o.append(stripe(140))
     o.append(f'<div style="position: absolute; left: 0; top: 154px; width: {S}px; height: 240px; background: {NAVY}">'
-             f'<img src="assets/skyline.jpg" alt="Downtown Denver and the Front Range from City Park" style="display: block; width: {S}px; height: 240px; object-fit: cover"></div>')
+             f'<img src="assets/skyline.jpg" alt="Downtown Denver and the Front Range from City Park" style="display: block; width: {S}px; height: 240px; object-fit: cover; object-position: center 0"></div>')
     o.append(stripe(397))
     o.append(f'''<div style="position: absolute; left: 40px; top: 352px; background: {WHITE}; padding: 5px 12px 6px; {BODY}; font-size: 16px; line-height: 1.2; color: {MUTE}; white-space: nowrap">
       <b style="color: {NAVY}">Our view west.</b> City Park to the mountains, five minutes up Colfax.</div>''')

@@ -128,13 +128,13 @@ def front():
     o.append(f'<div style="position: absolute; left: {M}px; top: 222px">'
              + frame('three-deckers.jpg', CW - 8, 352, 'Three-decker houses and a crowded street corner below the Heights, the city skyline behind') + '</div>')
     o.append(cap('The three-deckers below the Heights, parade day.', 590))
-    envelope(o, W - M - 196, 486)
+    envelope(o, W - M - 232, 474)
     left = (band('Start at the Bar')
-            + item('Clam chowder, cup', '4.50', 'Clams, potato and bacon in cream. Oyster crackers.', 14)
-            + item('Soda bread and butter', '3.00', 'Baked here each morning, cut thick, salted butter.')
-            + item('Pickled eggs', '1.50', 'Two from the jar on the bar, salt and pepper.'))
-    o.append(f'<div style="position: absolute; left: {M}px; top: 630px; width: {CW}px">{left}</div>')
-    o.append(f'<div style="position: absolute; left: {M}px; top: 902px; width: {CW}px">' + rule(0) +
+            + item('Clam chowder, cup', '4.50', 'Clams, potato and bacon in cream. Oyster crackers.', 18)
+            + item('Soda bread and butter', '3.00', 'Baked here each morning, cut thick, salted butter.', 22)
+            + item('Pickled eggs', '1.50', 'Two from the jar on the bar, salt and pepper.', 22))
+    o.append(f'<div style="position: absolute; left: {M}px; top: 636px; width: {CW}px">{left}</div>')
+    o.append(f'<div style="position: absolute; left: {M}px; top: 934px; width: {CW}px">' + rule(0) +
              f'<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-top: 12px">'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 21px; line-height: 1.3; color: {CREAM}; width: 380px">'
              'No one gives it to you. You have to take it. So eat.</div>'
@@ -148,7 +148,7 @@ def back():
     o.append(f'<div style="position: absolute; left: {M}px; top: 44px">'
              + frame('corner-table.jpg', CW - 8, 236, 'A young man in a dark sweater leans in to talk with an older man in a pale jacket at a white tablecloth, a brandy glass between them') + '</div>')
     o.append(cap('Mr. C&#8217;s corner table. Knock first.', 292))
-    badge(o, W - M - 140, 196)
+    badge(o, W - M - 158, 128)
     body = (band('Suppers', 'after 5')
             + item('Southie fish and chips', '11.95', 'White fish in lager batter, chips, minted mushy peas.', 12)
             + item('Steak tips', '14.95', 'Marinated sirloin off the grill, onions, baked potato.')
