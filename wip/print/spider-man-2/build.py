@@ -74,7 +74,7 @@ MORN = [
 ]
 DRINK = [
   ('Iced coffee', 'Coffee float', '2.75', 'Cold brew on ice, milk, a scoop of vanilla ice cream.'),
-  (None, 'Soda', '1.00', '2 liter bottle 2.50.'),
+  (None, 'Soda, can', '1.00', ''),
 ]
 
 # ---------- pieces ----------
@@ -85,7 +85,7 @@ def sticker(x, y, d=176):
             f'<div style="position: absolute; left: 0; top: {d*0.15:.0f}px; width: {d - 10}px; text-align: center; font-family: {COND}; font-weight: 700; font-size: 16px; letter-spacing: 0.2em; color: {PAPER}">EST. 1962</div>'
             f'<div style="position: absolute; left: 0; top: {d*0.26:.0f}px; width: {d - 10}px; text-align: center; font-family: {DISP}; font-size: {d//4}px; line-height: 1; color: {PAPER}">AZIZ\'S</div>'
             f'<div style="position: absolute; left: 22px; top: {d*0.54:.0f}px; width: {d - 54}px; height: 3px; background: {PAPER}"></div>'
-            f'<div style="position: absolute; left: 0; top: {d*0.59:.0f}px; width: {d - 10}px; text-align: center; font-family: {COND}; font-weight: 700; font-size: 17px; letter-spacing: 0.18em; color: {PAPER}">FAST DELIVERY</div>'
+            f'<div style="position: absolute; left: 0; top: {d*0.59:.0f}px; width: {d - 10}px; text-align: center; font-family: {COND}; font-weight: 700; font-size: 14px; letter-spacing: 0.14em; color: {PAPER}">FAST DELIVERY</div>'
             f'</div>')
 
 def burst(x, y, s=170):
@@ -115,7 +115,7 @@ def coupons():
     c_title = lambda t, col=NAVY, s=25: f'<div style="font-family: {DISP}; font-size: {s}px; line-height: 0.95; color: {col}">{t}</div>'
     c_text = lambda t, col=INK: f'<div style="margin-top: 3px; font-family: {BODY}; font-weight: 600; font-size: 15px; line-height: 1.15; color: {col}">{t}</div>'
     row = (coupon(0, 214, kicker('Our promise', SLIP, 14) + c_title('29 MINUTES OR IT\'S FREE', PAPER, 22)
-                  + c_text('Hand this to a late driver. No tip needed.', PAPER), RED)
+                  + c_text('Hand this to a late driver.', PAPER), RED)
            + coupon(224, 166, c_title('TWO PIES') + c_title('$20.04', RED, 30) + c_text('Cheese. Toppings extra.'))
            + coupon(400, 166, c_title('FREE KNOTS') + c_text('Six garlic knots with any pie. Any floor, any building.'))
            + coupon(576, 160, c_title('STUDENT SLICE') + c_text('Slice and soda 2.50 with a university ID.')))
@@ -136,7 +136,7 @@ def sheet():
            f'<div style="position: absolute; left: 212px; top: 146px; width: 400px; display: flex; align-items: baseline; gap: 12px">'
            f'<div style="font-family: {COND}; font-weight: 700; font-size: 20px; letter-spacing: 0.1em; color: {RED}">CALL</div>'
            f'<div style="font-family: {DISP}; font-size: 46px; line-height: 1; color: {NAVY}">212-555-0629</div></div>'
-           f'{burst(624, 24, 150)}')
+           f'{burst(622, 34, 146)}')
     hero = (f'<div style="position: absolute; left: 40px; top: 214px; width: 736px; height: 282px; box-sizing: border-box; border: 4px solid {RED}; overflow: hidden">'
             f'<img src="assets/still-delivery.jpg" alt="Peter in a marble office lobby with a stack of pizza boxes held on by a bungee cord" style="position: absolute; left: 0; top: 0; width: 728px; height: 274px; object-fit: cover; object-position: 50% 30%; display: block">'
             f'<div style="position: absolute; left: 0; bottom: 0; background: {NAVY}; padding: 7px 14px 6px; font-family: {BODY}; font-weight: 600; font-size: 18px; line-height: 1.2; color: {PAPER}">'
@@ -147,7 +147,7 @@ def sheet():
     c3 = (''.join(dish(n, p, d, 10) for _, n, p, d in MORN)
           + f'<div style="margin-top: 14px">{head("DRINKS")}</div>'
           + ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(DRINK)))
-    menu = (f'<div style="position: absolute; left: 40px; top: 512px; width: 736px; display: flex; gap: 20px">'
+    menu = (f'<div style="position: absolute; left: 40px; top: 512px; width: 736px; height: 336px; display: flex; gap: 20px">'
             f'<div style="width: 250px">{head("PIES", "18 inch")}{c1}</div>'
             f'<div style="width: 1px; background: {NAVY}; opacity: 0.35"></div>'
             f'<div style="width: 222px">{head("STARTERS")}{c2}'
