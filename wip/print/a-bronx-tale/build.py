@@ -4,7 +4,7 @@ Ivory card, bottle green, neon red, sign gold.
 Front: the green sign band with the name lit up like the window neon, the fellas out front (TMDB still), Lorenzo's bus transfer,
        the bar kitchen, and the complaints department.
 Back:  Sunday at Sonny's table, the block (1964 Macombs Road photo, LoC, public domain) with the door test card,
-       the jukebox corner (drinks as title strips), Sonny's note, house rules.
+       the jukebox corner (a real jukebox photo, LoC, public domain; drinks as typographic title strips), Sonny's note, house rules.
 Writes photo crops, wear, front/back .body.html and .html."""
 import os, random
 from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageEnhance, ImageOps
@@ -50,6 +50,15 @@ blk = ImageEnhance.Brightness(blk).enhance(1.06)
 # warm silver print, not a heavy tint
 blk = ImageOps.colorize(blk, black='#1b1a17', white='#fbf6ea', mid='#8a8577')
 fit(blk, BLK_W, BLK_H).save(A('the-block-1964.jpg'), quality=90)
+
+# the jukebox: a real 1940s machine lit up, Carol M. Highsmith (LOC, public domain). Both maker's nameplates melted
+# so no brand reads; the title strips are too small to read at print size.
+JB_W, JB_H = 180, 312
+jb = Image.open(S('loc-highsmith-15125.jpg')).convert('RGB')
+jb = soften(jb, [(1270, 1082, 1560, 1136)], 18, 8)                    # small wordmark under the record stack
+jb = soften(jb, [(1160, 1690, 1670, 1790)], 34, 12)                   # front nameplate
+jb = ImageEnhance.Brightness(jb).enhance(1.06)
+fit(jb, JB_W, JB_H, (380, 0, 2500, 3618)).save(A('the-jukebox.jpg'), quality=90)
 
 def wear(name, seed):
     rnd = random.Random(seed)
@@ -181,13 +190,12 @@ def front():
 
 # ---------------- BACK ----------------
 def jukebox(o, top):
-    """The jukebox itself, drawn from blocks: neon arch, bubble tubes, title-strip window, chrome grille.
-    The drinks are the records."""
+    """The jukebox corner: a real lit jukebox photo on the left, the drinks as typographic title strips on the right."""
     strips = (('A1', 'Espresso &amp; anisette', '.35', 'Anisette or sambuca on the side, lemon peel.'),
               ('A2', 'Egg cream', '.20', 'Chocolate syrup, cold milk, seltzer.'),
               ('B1', 'Draft beer', '.15', ''),
               ('B2', 'Rye &amp; ginger', '.50', ''))
-    def strip(c, n, p, d, fs=26):
+    def strip(c, n, p, d, fs=24):
         dd = (f'<div style="font-family: {BODY}; font-weight: 500; font-size: 18px; line-height: 1.12; color: {MUTE}">{d}</div>' if d else '')
         return (f'<div style="background: #fffaf0; box-sizing: border-box; position: relative; padding: 8px 10px 9px">'
                 f'<div style="position: absolute; left: 0; top: 0; width: 100%; height: 5px; background: {RED}"></div>'
@@ -195,39 +203,17 @@ def jukebox(o, top):
                 f'<div style="display: flex; justify-content: space-between; align-items: baseline; font-family: {BODY}; font-weight: 700; font-size: {fs}px; '
                 f'line-height: 1.05; color: {GREEN}; text-transform: uppercase; letter-spacing: 0.01em; white-space: nowrap; gap: 8px">'
                 f'<span><span style="color: {RED}; font-size: 18px; margin-right: 7px">{c}</span>{n}</span><span style="color: {RED}">{p}</span></div>{dd}</div>')
-    full = ''.join(strip(*x) for x in strips[:2])
-    half = ''.join(strip(*x, fs=23) for x in strips[2:])
-    tube = lambda side: (f'<div style="position: absolute; {side}: 18px; top: 122px; width: 22px; height: 210px; border-radius: 11px; '
-                         f'background: linear-gradient(180deg, {GOLD} 0%, #f07a3a 30%, {RED} 55%, #6a8fd6 80%, {BLUE} 100%); '
-                         f'box-shadow: 0 0 10px rgba(227,176,75,0.8); border: 2px solid #f4e2b0"></div>')
-    bubbles = lambda side: ''.join(f'<div style="position: absolute; {side}: {25 + (k % 2) * 4}px; top: {140 + k * 30}px; width: 8px; height: 8px; '
-                                   f'border-radius: 50%; background: rgba(255,250,235,0.85)"></div>' for k in range(6))
-    grille = ''.join(f'<div style="height: 5px; margin-top: 5px; border-radius: 3px; background: linear-gradient(90deg, #8d8a80, #f2efe6 50%, #8d8a80)"></div>' for _ in range(3))
-    buttons = ''.join(f'<div style="width: 34px; height: 20px; border-radius: 4px; background: #fffaf0; border: 2px solid {GOLD}; box-sizing: border-box; '
-                      f'font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 16px; text-align: center; color: {GREEN}">{b}</div>' for b in ('A', 'B', '1', '2'))
-    o.append(f'<div style="position: absolute; left: {L}px; top: {top}px; width: {CW}px; height: 410px">'
-             # cabinet with neon arch
-             f'<div style="position: absolute; left: 0; top: 0; width: {CW}px; height: 410px; box-sizing: border-box; background: {GREEN}; '
-             f'border: 5px solid #ffb3a8; border-radius: 260px 260px 18px 18px; box-shadow: 0 0 10px {RED}, 0 0 22px rgba(196,47,39,0.7)"></div>'
-             f'<div style="position: absolute; left: 16px; top: 16px; width: {CW - 32}px; height: 378px; box-sizing: border-box; '
-             f'border: 3px solid {GOLD}; border-radius: 244px 244px 10px 10px"></div>'
-             + tube('left') + tube('right') + bubbles('left') + bubbles('right') +
-             f'<div style="position: absolute; left: 0; top: 40px; width: {CW}px; text-align: center">'
-             f'<div style="font-family: {DISP}; font-size: 52px; line-height: 1; color: #fff6ea; margin-top: 2px; '
-             f'text-shadow: 0 0 4px #fff, 0 0 10px {RED}, 0 0 20px rgba(196,47,39,0.8)">The jukebox corner</div>'
-             f'{kicker("Doo-wop. Three plays a quarter", GOLD, 15, " margin-top: 4px;")}</div>'
-             # title strip window
-             f'<div style="position: absolute; left: 54px; top: 122px; width: {CW - 108}px; box-sizing: border-box; padding: 6px; background: #0e2419; '
-             f'border: 3px solid #d9d4c6; border-radius: 6px">'
-             f'<div style="display: grid; grid-template-columns: 1fr; row-gap: 5px">{full}'
-             f'<div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 5px">{half}</div></div></div>'
-             # selector buttons and grille
-             f'<div style="position: absolute; left: 54px; top: 338px; width: {CW - 108}px; display: flex; justify-content: space-between; align-items: center">'
-             f'<div style="display: flex; gap: 6px">{buttons}</div>'
-             f'<div style="width: 50px; height: 20px; border-radius: 4px; background: {RED}; box-sizing: border-box; border: 2px solid {GOLD}; '
-             f'font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 16px; text-align: center; color: #fff6ea">25&cent;</div></div>'
-             f'<div style="position: absolute; left: 70px; top: 360px; width: {CW - 140}px">{grille}</div>'
-             '</div>')
+    o.append(title('The jukebox corner', 'Doo-wop. Three plays a quarter', top))
+    y = top + 90
+    o.append(photo('the-jukebox.jpg', 'A real 1940s jukebox lit up: glowing amber and red arch, rows of title strips, bubble tubes and a diamond grille',
+                   L, y, JB_W, JB_H, GREEN))
+    sx = L + JB_W + 12 + 16; sw = L + CW - sx
+    o.append(f'<div style="position: absolute; left: {sx}px; top: {y}px; width: {sw}px">'
+             f'<div style="box-sizing: border-box; padding: 6px; background: #0e2419; border: 3px solid #d9d4c6; border-radius: 6px; '
+             f'display: grid; grid-template-columns: 1fr; row-gap: 5px">' + ''.join(strip(*x) for x in strips) + '</div>'
+             f'<div style="display: flex; justify-content: flex-end; margin-top: 10px">'
+             f'<div style="padding: 3px 10px; background: {RED}; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.1; '
+             f'letter-spacing: 0.06em; color: #fff6ea">25&cent;</div></div></div>')
 
 def back():
     o = []

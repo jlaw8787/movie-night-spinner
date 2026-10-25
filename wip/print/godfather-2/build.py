@@ -33,59 +33,10 @@ pc = ImageEnhance.Color(ImageEnhance.Brightness(pc).enhance(1.04)).enhance(1.06)
 fit(pc, PC_W, PC_H, (300, 300, 3200, 1955)).save(A('malecon-1952.jpg'), quality=90)
 
 
-# ---------------- the Cuba-shaped cake slice card ----------------
-def cuba_card():
-    """Die-cut cream card in the shape of the island, orange icing inset, piped white edge (2x)."""
-    polys = json.load(open(S('cuba-outline.json')))
-    main = polys[0]
-    lons = [p[0] for p in main]; lats = [p[1] for p in main]
-    x0, x1, y0, y1 = min(lons), max(lons), min(lats), max(lats)
-    k = 0.927  # cos of 22 degrees
-    cw, ch = 300 * 2, 0
-    sc = (cw - 40) / ((x1 - x0) * k)
-    ch = int((y1 - y0) * sc) + 40
-    def pt(p): return (20 + (p[0] - x0) * k * sc, 20 + (y1 - p[1]) * sc)
-    big = 4
-    def poly_mask(grow):
-        m = Image.new('L', (cw * big, ch * big), 0); d = ImageDraw.Draw(m)
-        d.polygon([(x * big, y * big) for x, y in map(pt, main)], fill=255)
-        m = m.resize((cw, ch), Image.LANCZOS)
-        if grow:
-            r = abs(grow) / 2
-            bl = m.filter(ImageFilter.GaussianBlur(r))
-            m = bl.point(lambda v: 255 if v > (40 if grow > 0 else 215) else 0).filter(ImageFilter.GaussianBlur(0.7))
-        return m
-    card = poly_mask(15)
-    icing = poly_mask(-1)
-    out = Image.new('RGBA', (cw, ch), (0, 0, 0, 0))
-    sh = Image.new('RGBA', (cw, ch), (15, 40, 45, 0)); sh.putalpha(card.filter(ImageFilter.GaussianBlur(5)).point(lambda v: int(v * 0.42)))
-    out.alpha_composite(sh, (3, 5)) if False else None
-    shadow = Image.new('RGBA', (cw, ch), (0, 0, 0, 0)); shadow.paste(sh, (4, 6))
-    out.alpha_composite(shadow)
-    cr = Image.new('RGBA', (cw, ch), (251, 245, 230, 255)); cr.putalpha(card); out.alpha_composite(cr)
-    # icing: warm orange with soft mottling so it reads as piped sugar, not a flat vector
-    rnd = random.Random(7)
-    mot = Image.new('L', (cw // 6, ch // 6), 0)
-    for x in range(mot.width):
-        for y in range(mot.height):
-            mot.putpixel((x, y), rnd.randint(0, 40))
-    mot = mot.resize((cw, ch), Image.BICUBIC).filter(ImageFilter.GaussianBlur(4))
-    ic = Image.merge('RGB', [mot.point(lambda v: 227 + v // 6), mot.point(lambda v: 146 + v // 3), mot.point(lambda v: 46 + v // 4)])
-    ic = ic.convert('RGBA'); ic.putalpha(icing); out.alpha_composite(ic)
-    # piped edge: a fine dotted cream line just inside the cut
-    edge = ImageChops.subtract(poly_mask(7), poly_mask(3))
-    dots = Image.new('L', (cw, ch), 0); dd = ImageDraw.Draw(dots)
-    for x in range(0, cw, 7):
-        for y in range(0, ch, 7):
-            dd.ellipse([x, y, x + 5, y + 5], fill=255)
-    pipe = ImageChops.multiply(edge, dots).filter(ImageFilter.GaussianBlur(0.6))
-    pp = Image.new('RGBA', (cw, ch), (255, 253, 244, 255)); pp.putalpha(pipe); out.alpha_composite(pp)
-    # hairline cut edge
-    rim = ImageChops.subtract(card, poly_mask(13))
-    rr = Image.new('RGBA', (cw, ch), (15, 52, 60, 255)); rr.putalpha(rim.point(lambda v: int(v * 0.5))); out.alpha_composite(rr)
-    out.save(A('cuba-card.png'))
-    return cw // 2, ch // 2
-CUBA_W, CUBA_H = cuba_card()
+# ---------------- the Cuba cake, TMDB still ----------------
+CUBA_W, CUBA_H = 200, 114
+ck = ImageEnhance.Brightness(Image.open(S('dVy3bjKpV7nRiDHVMaDP0IGJViS.jpg')).convert('RGB')).enhance(0.98)
+fit(ck, CUBA_W, CUBA_H, (150, 290, 1500, 1060)).save(A('cake-still.jpg'), quality=90)
 
 def wear(name, seed):
     rnd = random.Random(seed)
@@ -170,10 +121,11 @@ def noisemaker_ticket(o, x, y, rot=6):
              f'</div></div>')
 
 def slice_card(o, x, y, rot=-4):
-    """The island cake card: die-cut Cuba in orange icing, with a small cream tag pinned under it."""
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {CUBA_W}px; transform: rotate({rot}deg)">'
-             f'<img src="assets/cuba-card.png" alt="A small card die-cut in the shape of Cuba, iced orange with a piped white edge" style="display: block; width: {CUBA_W}px; height: {CUBA_H}px">'
-             f'<div style="margin: -8px 0 0 100px; width: 200px; box-sizing: border-box; background: {CREAM}; border: 1.5px solid {GOLD}; padding: 5px 8px; text-align: center; box-shadow: 0 3px 7px rgba(10,30,35,0.35)">'
+    """The island cake: TMDB still of the cake iced with Cuba, in a cream mat, with a small cream tag pinned under it."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {CUBA_W + 12}px; transform: rotate({rot}deg)">'
+             f'<div style="background: {CREAM}; padding: 6px; border: 1.5px solid {GOLD}; box-shadow: 0 5px 12px rgba(10,30,35,0.45)">'
+             f'<img src="assets/cake-still.jpg" alt="Film still: a round birthday cake iced with an orange map of Cuba, a knife ready to cut it" style="display: block; width: {CUBA_W}px; height: {CUBA_H}px"></div>'
+             f'<div style="margin: -8px 0 0 40px; width: 200px; box-sizing: border-box; background: {CREAM}; border: 1.5px solid {GOLD}; padding: 5px 8px; text-align: center; box-shadow: 0 3px 7px rgba(10,30,35,0.35)">'
              f'<div style="font-family: {DISP}; font-size: 22px; line-height: 1; color: {RED}">Una porci&oacute;n</div>'
              f'<div style="font-family: {BODY}; font-weight: 600; font-size: 14px; letter-spacing: 0.08em; line-height: 1.25; color: {INK}; margin-top: 3px">EVERYBODY GETS ONE</div></div>'
              f'</div>')
@@ -240,7 +192,7 @@ def back():
     o.append(framed('salon-nye.jpg', 'The grand salon at midnight: crystal chandeliers, a FELIZ ANO NUEVO banner over the balcony, a packed dance floor in party hats', L, 144, BR_W, BR_H))
     o.append(f'<div style="position: absolute; left: {L}px; top: 348px; width: 340px; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {MUTE}">'
              'The grand sal&oacute;n, Noche Vieja. Chandeliers, hats, the whole of Havana.</div>')
-    slice_card(o, 330, 222, -5)
+    slice_card(o, 400, 204, -4)
     colw = 274
     left = (ribbon('Entremeses', colw, 46, 32)
             + item('Arancini Genco', '.85', 'Saffron rice, beef rag&ugrave;, peas and a mozzarella heart.', 8)
