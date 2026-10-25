@@ -126,7 +126,7 @@ def tip_grate(o, x, y, ang):
              f'<div style="position: relative; flex: none; width: 150px; height: 90px; background: #4a4f53; border-radius: 10px; '
              f'box-shadow: 0 4px 10px rgba(0,0,0,0.45); border: 3px solid {INK}">{slots}</div>'
              f'<div><div style="font-family: {DISP}; font-size: 22px; color: {INK}; line-height: 1">TIPS</div>'
-             f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.25; color: {INK}; margin-top: 4px">For the driver. Down the grate is fine, we know the way.</div></div></div>')
+             f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.25; color: {INK}; margin-top: 4px">For the driver. Down the grate is fine.</div></div></div>')
 
 # ---------------- OUTSIDE ----------------
 def outside():
@@ -139,9 +139,9 @@ def outside():
              + f'<div style="margin-top: 8px">{bar("COOLER", RED, PAPER)}</div>'
              + item('Green Apple Fizz', '.95', 'Fresh-pressed Granny Smiths, lime juice, club soda, over ice.', 'As seen on Channel 3.', 14, PAPER, '#9cc48a', '#9cc48a')
              + item('Fountain Soda', '.75', 'Cola, lemon-lime or root beer, on crushed ice.', '', 14, PAPER, '#9cc48a')
-             + item('Milk', '.60', 'Half-pint carton, whole, straight from the cooler.', '', 14, PAPER, '#9cc48a')
+             + item('Milk', '.60', 'Half-pint carton of whole milk, ice cold.', '', 14, PAPER, '#9cc48a')
              + '</div>')
-    o.append(f'<div style="position: absolute; left: {x}px; top: 424px; width: {P - 2 * M}px; background: {PAPER}; transform: rotate(-1.5deg); '
+    o.append(f'<div style="position: absolute; left: {x}px; top: 438px; width: {P - 2 * M}px; background: {PAPER}; transform: rotate(-1.5deg); '
              f'box-shadow: 0 6px 16px rgba(0,0,0,0.5); box-sizing: border-box; padding: 16px 20px 14px; border-left: 8px solid {GREEN}">'
              + kicker('Posted by the register', GREEN, 15)
              + f'<div style="font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 1.35; color: {INK}; margin-top: 6px">'
@@ -149,8 +149,8 @@ def outside():
              f'<div style="display: flex; align-items: baseline; gap: 12px; margin-top: 4px">'
              f'<div style="font-family: {HAND}; font-weight: 700; font-size: 32px; line-height: 1.1; color: #233a8a; transform: rotate(-3deg)">April O&rsquo;Neil</div>'
              '</div></div>')
-    press_card(o, 214, 600, 4)
-    o.append(f'<div style="position: absolute; left: {x}px; top: 628px; width: 160px; font-family: {BODY}; font-weight: 500; font-size: 17px; line-height: 1.3; color: #c9ccc4">'
+    press_card(o, 214, 610, 4)
+    o.append(f'<div style="position: absolute; left: {x}px; top: 640px; width: 160px; font-family: {BODY}; font-weight: 500; font-size: 17px; line-height: 1.3; color: #c9ccc4">'
              f'<div style="font-family: {DISP}; font-size: 15px; color: {RED}; margin-bottom: 4px">HOUSE RULES</div>No hockey masks at the counter. Hold on to your wallets on the subway.</div>')
 
     # --- back panel: the promise, the late ticket, the press card
@@ -191,13 +191,13 @@ def outside():
              f'box-shadow: 0 0 0 4px {INK}">'
              f'<img src="assets/still-manhole.jpg" alt="Looking down an open manhole at night, a regular customer peers up out of the sewer" '
              f'style="display: block; width: 272px; height: 272px"></div>')
-    burst(o, 2 * P + 306, 284, 116, 12,
+    burst(o, 2 * P + 294, 280, 116, 12,
           f'<div style="font-family: {DISP}; font-size: 15px; line-height: 1.1">COWA<br>BUNGA!</div>'
           f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1.1; margin-top: 3px">Party box<br>19.90</div>')
     o.append(f'<div style="position: absolute; left: {x}px; top: 646px; width: {P - 2 * M}px; text-align: center">'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.25; color: #c9ccc4">We deliver to any address. Yes, even that one.</div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.25; color: #c9ccc4">We deliver anywhere. Yes, even there.</div>'
              f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1; color: {PAPER}; margin-top: 10px">555&#8209;1990</div>'
-             f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: #c9ccc4; margin-top: 8px">Open late. Prices subject to change. Mozzarella shredded by hand, no relation. Form 4&#8209;1990, N.Y., N.Y.</div></div>')
+             f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: #c9ccc4; margin-top: 8px">Open late. Prices subject to change. Cheese shredded by hand, no relation. Form 4&#8209;1990.</div></div>')
     return page(''.join(o), 'outside', IRON, 0.16)
 
 # ---------------- INSIDE ----------------
@@ -211,12 +211,12 @@ def inside():
     mx = lambda v: 36 + v
     my = lambda v: MT + v
     # signs lettered on the painted shopfronts
-    o.append(f'<div style="position: absolute; left: {mx(50)}px; top: {my(131)}px; width: 240px; height: 16px; text-align: center; font-family: {BODY}; '
-             f'font-weight: 900; font-size: 14px; line-height: 16px; letter-spacing: 0.06em; color: #4a2e1e">2ND TIME AROUND ANTIQUES</div>')
+    o.append(f'<div style="position: absolute; left: {mx(50)}px; top: {my(131)}px; width: 232px; height: 16px; text-align: center; font-family: {BODY}; '
+             f'font-weight: 900; font-size: 14px; line-height: 16px; letter-spacing: 0.04em; color: #4a2e1e">2ND TIME AROUND</div>')
     o.append(f'<div style="position: absolute; left: {mx(476)}px; top: {my(124)}px; width: 278px; height: 16px; text-align: center; font-family: {DISP}; '
              f'font-size: 14px; line-height: 17px; color: {PAPER}">CORNER GRATE PIZZA</div>')
     # headline painted on the tunnel wall
-    o.append(f'<div style="position: absolute; left: {mx(372)}px; top: {my(250)}px; width: 300px; text-align: center">'
+    o.append(f'<div style="position: absolute; left: {mx(436)}px; top: {my(246)}px; width: 262px; text-align: center">'
              + kicker('Our delivery area', '#e6c86e', 15)
              + f'<div style="font-family: {DISP}; font-size: 25px; line-height: 1.05; color: {PAPER}; margin-top: 4px">ABOVE AND<br>BELOW</div></div>')
     # numbered call-outs
@@ -228,27 +228,27 @@ def inside():
                  f'<div style="background: {PAPER}; color: {INK}; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; '
                  f'padding: 3px 7px; white-space: nowrap">{text}</div></div>')
     tag(1, 52, 224, 'THE LAIR. BIG ORDERS.')
-    tag(2, 742, 200, 'THE MANHOLE DROP')
+    tag(2, 470, 196, 'THE MANHOLE DROP', True)
     tag(3, 196, 50, 'APRIL&rsquo;S, 3RD FL.')
     tag(4, 486, 92, 'US. SINCE 1984')
-    tag(5, 1050, 116, 'ROOFTOPS, ON REQUEST')
+    tag(5, 960, 116, 'ROOFTOPS, ON REQUEST')
 
     # menu columns
     top = 392
     cols = [
         ('PIES', item('Plain Cheese Pie', '7.50', 'Hand-tossed thin crust, red sauce, whole milk mozzarella. Slice 1.25.', '', 14)
                  + item('Pepperoni Pie', '8.75', 'Thin crust, red sauce, mozzarella, spicy salami cups crisped at the edges.', '', 14)
-                 + item('Cowabunga Party Box', '19.90', 'Four thin pies: pepperoni, mushroom, the works, and a cook&rsquo;s choice.', 'You call the toppings.', 14)),
+                 + item('Cowabunga Box', '19.90', 'Four thin pies: pepperoni, mushroom, the works, and a cook&rsquo;s choice.', 'You call the toppings.', 14)),
         ('SIDES', item('Pizza Rolls', '3.25', 'A dozen pinwheels: dough, red sauce, pepperoni, mozzarella. Baked golden.', '', 14)
                   + item('Garlic Knots', '1.84', 'Six tied knots brushed with garlic butter, parsley and parm.', '', 14)
-                  + item('Sensei&rsquo;s Cheese Board', '5.50', 'Aged cheddar, brie, gouda, crackers, grapes, honey on the brie.', 'Very wise. Very old school.', 14)),
+                  + item('Sensei&rsquo;s Cheeses', '5.50', 'Aged cheddar, brie, gouda, crackers, grapes, honey on the brie.', 'Very wise. Very old school.', 14)),
         ('SWEETS', item('Cookie Pizza', '3.50', 'Chocolate chip dough baked in a pie tin, chocolate drizzle, candy.', 'Cut in wedges, like it should be.', 14)
                    + item('Lemon Ice', '1.00', 'Shaved Italian ice, fresh lemon and sugar, in a paper cup.', '', 14)),
     ]
     for i, (h, body) in enumerate(cols):
         x = i * P + M
         o.append(f'<div style="position: absolute; left: {x}px; top: {top}px; width: {P - 2 * M}px">{bar(h, IRON if i != 1 else GREEN)}{body}</div>')
-    tip_grate(o, 2 * P + M, 680, 0)
+    tip_grate(o, 2 * P + M, 684, 0)
     folds(o, 'rgba(255,255,255,0.45)')
     return page(''.join(o), 'inside', STOCK, 0.22)
 

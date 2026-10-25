@@ -26,7 +26,7 @@ def fy(n): return GY - sum(HT[k] for k in range(1, n + 1))
 # ---------------- still and wear ----------------
 st = Image.open(S('mYOlKvVGfhql8j9dI2ycL5yiiwS.jpg')).convert('RGB')
 st = ImageEnhance.Brightness(st).enhance(1.08)
-SW, SH = 592, 176
+SW, SH = 592, 160
 box = (1000, 260, 3740, 150 + int(2740 * SH / SW))   # tower, palms and avenue trees, clear of the cars
 st.crop(box).resize((SW * 2, SH * 2), Image.LANCZOS).save(A('still-tower.jpg'), quality=90)
 
@@ -113,7 +113,7 @@ def front():
         strip(o, y, lab, line, hot)
         leader(o, L - 8 + 262, ly, {'ELEVATORS': 495, 'ROOF': 414}.get(lab, X0 + 4), RED if hot else GOLD)
     badge(o, 50, 884, -4)
-    strip(o, GY - 22, 'LOBBY AND GARAGE', 'Sign in at the desk. Limos on P1.', False, 262)
+    strip(o, GY - 22, 'LOBBY / P1', 'Sign in at the desk. Limos on P1.', False, 262)
     leader(o, L - 8 + 262, GY - 10, X0 + 4)
     leader(o, L - 8 + 262, GY + 20, 392)
     # guest relations tip and footer
@@ -157,7 +157,7 @@ def back():
     o.append(f'<div style="position: absolute; left: {L - 4}px; top: 132px; width: {SW}px; height: {SH}px; border: 4px solid {GOLD}; background: {GOLD}">'
              f'<img src="assets/still-tower.jpg" alt="Nakatomi Plaza at sunset, a tall gold-banded tower rising over palms and avenue trees" '
              f'style="display: block; width: {SW}px; height: {SH}px"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 318px; width: {W - 2 * L}px; display: flex; justify-content: space-between; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 302px; width: {W - 2 * L}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-size: 16px; line-height: 1.2; color: {SOFT}">'
              f'<span style="font-style: italic">Our new home, from the Avenue. Done in time for Christmas.</span><span style="font-weight: 600; color: {RED}">35 FLOORS</span></div>')
     menu = (section('PASSED', '7')
@@ -173,14 +173,14 @@ def back():
             + item('Eggnog', 'all night', 'Cold and thick, fresh nutmeg on top.')
             + f'<div style="margin-top: 10px; font-family: {BODY}; font-size: 20px; line-height: 1.3; color: #33343a">'
               f'<b style="font-size: 22px; color: {INK}">Champagne</b> by the bottle, Ellis picks. <b style="font-size: 22px; color: {INK}">Coffee</b> from nine.</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 340px; width: {W - 2 * L}px">{menu}</div>')
-    limo(o, 44, 1110, -3)
-    o.append(f'<div style="position: absolute; left: 346px; top: 1104px; width: 286px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 324px; width: {W - 2 * L}px">{menu}</div>')
+    limo(o, 44, 1116, -3)
+    o.append(f'<div style="position: absolute; left: 346px; top: 1122px; width: 286px">'
              f'{kicker("From the president", RED, 15)}'
-             f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.35; color: {INK}; margin-top: 4px">A big year, a new tower. Tonight the 30th floor is yours. '
-             f'Bring the family, come out to the coast, have a few laughs.</div>'
+             f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.35; color: {INK}; margin-top: 4px">A big year, a new tower. The 30th floor is yours tonight. '
+             f'Come out to the coast, have a few laughs.</div>'
              f'<div style="font-family: {SCRIPT}; font-size: 46px; line-height: 0.9; color: #1d2a55; margin-top: 2px">Joseph Takagi</div></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 1274px; width: {W - 2 * L}px; border-top: 1px solid #b9b2a2; padding-top: 6px; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 1280px; width: {W - 2 * L}px; border-top: 1px solid #b9b2a2; padding-top: 6px; '
              f'font-family: {BODY}; font-size: 16px; line-height: 1.2; color: {SOFT}">No charge tonight. Merry Christmas from Nakatomi. Form NP-3024.</div>')
     return page(''.join(o), 'back', PAPER, 0.22)
 

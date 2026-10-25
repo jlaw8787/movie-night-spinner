@@ -1,0 +1,18 @@
+{
+ "fmt": "nakatomi",
+ "fn": "fmtNakatomi",
+ "faces": ["front.html", "back.html"],
+ "names": ["Front", "Back"],
+ "mm": [177.8, 355.6],
+ "fonts": "family=Michroma&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Herr+Von+Muellerhoff",
+ "fams": ["Michroma", "IBM Plex Sans", "Herr Von Muellerhoff"],
+ "phone": {
+  "disp": "'Michroma',sans-serif",
+  "title": "'Michroma',sans-serif",
+  "name": "'IBM Plex Sans',sans-serif",
+  "body": "'IBM Plex Sans',sans-serif",
+  "price": "'IBM Plex Sans',sans-serif",
+  "note": "'IBM Plex Sans',sans-serif"
+ },
+ "build": "python3 paint.py && python3 build.py && python3 shot.py"
+}

@@ -1,0 +1,31 @@
+{
+ "fmt": "whistle",
+ "fn": "fmtWhistle",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  158.8,
+  317.5
+ ],
+ "fonts": "family=Bevan&family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Homemade+Apple",
+ "fams": [
+  "Bevan",
+  "Vollkorn",
+  "Homemade Apple"
+ ],
+ "phone": {
+  "disp": "'Bevan',serif",
+  "title": "'Bevan',serif",
+  "name": "'Vollkorn',serif",
+  "body": "'Vollkorn',serif",
+  "price": "'Vollkorn',serif",
+  "note": "'Vollkorn',serif"
+ },
+ "build": "python3 paint.py && python3 build.py && python3 shot.py"
+}

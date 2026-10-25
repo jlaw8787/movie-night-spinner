@@ -206,6 +206,20 @@ def paint_map():
         px, py = cx + math.cos(a_) * rr, cy + math.sin(a_) * rr * 0.8
         d.ellipse([px - 0.7 * K, py - 0.7 * K, px + 0.7 * K, py + 0.7 * K], fill=(20, 18, 18, 230))
 
+    # city lights, thinning out as the sun comes up
+    la = np.asarray(land.filter(ImageFilter.MinFilter(3 * K + 1)))
+    mm_ = np.asarray(mask_of(MANHATTAN, wob=0))
+    for i in range(16000):
+        px, py = rnd.uniform(0, W4 - 1), rnd.uniform(0, H4 - 1)
+        if not la[int(py), int(px)]:
+            continue
+        dawnf = float(np.clip((px / W4 - 0.30) / 0.70, 0, 1))
+        keep = (1 - dawnf) ** 1.5 * (1.0 if mm_[int(py), int(px)] else 0.38)
+        if rnd.random() > keep:
+            continue
+        r = rnd.uniform(0.35, 0.9) * K
+        al = rnd.randint(90, 230)
+        d.ellipse([px - r, py - r, px + r, py + r], fill=(255, rnd.randint(190, 226), rnd.randint(110, 160), al))
     # faint other lines
     for ln in OTHER_LINES:
         d.line(smooth(geo(ln), 8, closed=False), fill=(150, 146, 140, 120), width=int(2.2 * K), joint='curve')

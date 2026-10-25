@@ -117,7 +117,7 @@ def front():
             + item('Garlic Knots', '1.25', 'Six knots, melted butter, parsley, parmesan.')
             + item('Watermelon &amp; Feta Sticks', '1.50', 'Ice cold, with mint, lime and chili salt.'))
     o.append(at(CX, BY + 26, CW, left))
-    o.append(f'<div style="position: absolute; left: {M + 480}px; top: {BY + 30}px; width: 2px; height: {BH - 60}px; background: {BRICK}; opacity: 0.45"></div>')
+    o.append(f'<div style="position: absolute; left: {M + 480}px; top: {BY + 30}px; width: 2px; height: {BH - 104}px; background: {BRICK}; opacity: 0.45"></div>')
     RX = M + 506
     right = (bar('SOMETHING COLD')
              + item('Cherry Ice', '.75', 'Shaved fine, our own syrup, fresh lemon.')

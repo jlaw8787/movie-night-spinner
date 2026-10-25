@@ -96,9 +96,9 @@ def cane(pts_fn, rad, steps=900, seed=0):
         lit, hi = shade_cyl(np.clip(p, -1, 1))
         col = col * lit[..., None]
         col = col + (255 - col) * (hi[..., None] * 0.85)
-        sub = cv.rgb[ya:yb, xa:xb]; sa = cv.a[ya:yb, xa:xb]
-        sub[edge & (sa < 2)] = INK
-        sub[inside] = col[inside]; sa[inside | edge] = 1
+        sub = cv.rgb[ya:yb, xa:xb]; cs = CANE[ya:yb, xa:xb]
+        sub[edge & ~cs] = INK
+        sub[inside] = col[inside]; cs[inside] = True
 
 
 def hook(cx, cy, length, hr, ang, flip=1):
@@ -115,9 +115,12 @@ def hook(cx, cy, length, hr, ang, flip=1):
 
 
 # Quadrant TR: candy canes, crossed
-cane(hook(1130, 1060 - 200, 560, 120, math.radians(-14)), 34)
-cane(hook(1420, 1080 - 210, 600, 128, math.radians(16), flip=-1), 36)
-cane(hook(1280, 1060 - 160, 480, 100, math.radians(2)), 30)
+CANE = np.zeros((N, N), bool)
+cane(hook(1120, 560, 330, 92, math.radians(-16)), 32)
+CANE[:] = False
+cane(hook(1450, 560, 330, 96, math.radians(18), flip=-1), 34)
+CANE[:] = False
+cane(hook(1290, 520, 360, 84, math.radians(3)), 30)
 
 # Quadrant BL: candy corn, a little heap
 def kernel(cx, cy, size, ang):
@@ -125,7 +128,7 @@ def kernel(cx, cy, size, ang):
     lx = (cv.xx - cx) * ca + (cv.yy - cy) * sa
     ly = -(cv.xx - cx) * sa + (cv.yy - cy) * ca
     y = (ly / size + 0.55)
-    wd = 0.42 * size * (0.18 + 0.82 * np.sqrt(np.clip(y, 0, 1))) * (1 - 0.25 * np.clip((y - 0.85) / 0.15, 0, 1) ** 2)
+    wd = 0.42 * size * (0.06 + 0.94 * np.clip(y, 0, 1) ** 0.62) * (1 - 0.25 * np.clip((y - 0.85) / 0.15, 0, 1) ** 2)
     base = 1.0 + 0.06 * (1 - (lx / (0.42 * size)) ** 2)
     m = (y > 0) & (y < base) & (np.abs(lx) < wd)
     tip = np.hypot(lx, (y - 0.06) * size) < 0.08 * size
@@ -139,8 +142,8 @@ def kernel(cx, cy, size, ang):
     col = col + (255 - col) * hi[..., None] * 0.6
     cv.put(m, col, outline=5)
 
-for (x, y, s_, a) in [(470, 1330, 210, -20), (690, 1270, 220, 18), (560, 1520, 230, 4), (360, 1500, 190, -52),
-                      (800, 1480, 200, 44), (690, 1660, 180, -84), (430, 1180, 170, 70), (900, 1300, 170, -30)]:
+for (x, y, s_, a) in [(430, 1150, 170, 70), (860, 1130, 160, -30), (470, 1300, 200, -20), (690, 1240, 210, 18),
+                      (370, 1440, 180, -52), (800, 1400, 190, 44), (590, 1450, 210, 4)]:
     kernel(x, y, s_, math.radians(a))
 
 # Quadrant TL: candy. Peppermint swirls, gumdrops, a wrapped candy
@@ -177,12 +180,12 @@ def gumdrop(cx, cy, w, h, col0):
     col = col + (255 - col) * hi[..., None] * 0.5
     cv.put(m, col, outline=6)
 
-peppermint(560, 560, 160, wrap=True, spin=0.3)
+peppermint(600, 610, 140, wrap=True, spin=0.3)
 gumdrop(860, 900, 210, 200, np.array([30, 128, 70.]))
-peppermint(370, 880, 120, spin=1.2)
+peppermint(330, 800, 100, spin=1.2)
 gumdrop(620, 920, 230, 220, RED)
-peppermint(860, 520, 100, spin=2.0)
-gumdrop(420, 1040 - 20, 150, 130, np.array([248, 196, 40.]))
+peppermint(840, 560, 80, spin=2.0)
+gumdrop(420, 900, 140, 120, np.array([248, 196, 40.]))
 
 # Quadrant BR: syrup. A diner glass dispenser, a short stack, syrup running down
 def ellipse_mask(cx, cy, rx, ry):
@@ -203,26 +206,26 @@ def pancake(cx, cy, rx, ry, th_):
     col = np.array([226, 168, 92.]) + tex[..., None] - ((cv.xx - cx) / rx * 12)[..., None]
     cv.put(top, col, outline=5)
 
-cx0 = 1290
+cx0 = 1380
 for i in range(3):
-    pancake(cx0, 1640 - i * 46, 250, 72, 40)
+    pancake(cx0, 1440 - i * 40, 190, 54, 34)
 # syrup pool on top with drips over the edge
-top = ellipse_mask(cx0 + 10, 1548, 180, 50)
-for dx_, ln in [(-150, 90), (-60, 150), (70, 120), (165, 70)]:
-    top |= (np.abs(cv.xx - (cx0 + dx_)) < 18) & (cv.yy > 1540) & (cv.yy < 1560 + ln)
-    top |= ellipse_mask(cx0 + dx_, 1560 + ln, 20, 24)
+top = ellipse_mask(cx0 + 10, 1362, 130, 36)
+for dx_, ln in [(-110, 60), (-40, 110), (60, 90), (125, 50)]:
+    top |= (np.abs(cv.xx - (cx0 + dx_)) < 14) & (cv.yy > 1360) & (cv.yy < 1372 + ln)
+    top |= ellipse_mask(cx0 + dx_, 1372 + ln, 16, 19)
 amber = np.array([150, 70, 18.])
-lit = 0.75 + 0.5 * np.clip(1 - np.hypot(cv.xx - (cx0 - 60), cv.yy - 1530) / 220, 0, 1)
+lit = 0.75 + 0.5 * np.clip(1 - np.hypot(cv.xx - (cx0 - 40), cv.yy - 1350) / 180, 0, 1)
 col = amber * lit[..., None]
-gl = np.clip(1 - np.hypot((cv.xx - (cx0 - 70)) / 60, (cv.yy - 1530) / 12), 0, 1)
+gl = np.clip(1 - np.hypot((cv.xx - (cx0 - 50)) / 50, (cv.yy - 1350) / 10), 0, 1)
 col = col + (255 - col) * gl[..., None] * 0.9
 cv.put(top, col, outline=5)
 # butter pat
-bm = (np.abs(cv.xx - (cx0 + 30)) < 46) & (np.abs(cv.yy - 1520) < 22)
+bm = (np.abs(cv.xx - (cx0 + 20)) < 36) & (np.abs(cv.yy - 1340) < 17)
 cv.put(bm, np.array([252, 232, 150.]), outline=4)
 
 # the dispenser
-dx0, dy0, dw, dh = 1310, 990, 300, 330
+dx0, dy0, dw, dh = 1160, 1090, 220, 250
 body = (np.abs(cv.xx - dx0) < dw / 2) & (cv.yy > dy0) & (cv.yy < dy0 + dh)
 body |= ellipse_mask(dx0, dy0 + dh, dw / 2, 36)
 handle = (np.hypot((cv.xx - (dx0 + dw / 2 + 30)) / 70, (cv.yy - (dy0 + 150)) / 110) < 1) & \
@@ -244,13 +247,13 @@ pp = np.clip((cv.xx - dx0) / (dw / 2 + 14), -1, 1)
 chrome = 150 + 95 * np.sin(pp * 5 + 1.2) ** 2
 col = np.dstack([chrome, chrome + 4, chrome + 8])
 cv.put(lid, col, outline=6)
-spout = (cv.xx > dx0 - 200) & (cv.xx < dx0 - 40) & (np.abs(cv.yy - (dy0 - 46) + (dx0 - 40 - cv.xx) * 0.32) < 20)
+spout = (cv.xx > dx0 - 150) & (cv.xx < dx0 - 40) & (np.abs(cv.yy - (dy0 - 46) + (dx0 - 40 - cv.xx) * 0.32) < 20)
 cv.put(spout, np.dstack([chrome, chrome + 4, chrome + 8]) * 0.95, outline=5)
 knob = ellipse_mask(dx0 + 20, dy0 - 96, 34, 24)
 cv.put(knob, np.array([200, 204, 210.]), outline=5)
 # a drip from the spout falling to the stack
-drip = (np.abs(cv.xx - (dx0 - 196)) < 9 + (cv.yy - (dy0 - 60)) * 0.01) & (cv.yy > dy0 - 40) & (cv.yy < 1520)
-drip |= ellipse_mask(dx0 - 196, 1525, 14, 18)
+drip = (np.abs(cv.xx - (dx0 - 146)) < 8) & (cv.yy > dy0 - 40) & (cv.yy < dy0 + 10)
+drip |= ellipse_mask(dx0 - 146, dy0 + 14, 12, 16)
 cv.put(drip, np.array([176, 88, 24.]), outline=3)
 
 # hub
@@ -292,7 +295,7 @@ for a in (180, 0):
 
 # quadrant labels on little snow tags
 lf = ImageFont.truetype(GF, 92)
-for text, (x, y) in [('CANDY', (520, 330)), ('CANDY CANES', (1340, 330)), ('CANDY CORN', (560, 1750 - 40)), ('SYRUP', (1360, 1750 - 40))]:
+for text, (x, y) in [('CANDY', (600, 400)), ('CANDY CANES', (1290, 400)), ('CANDY CORN', (600, 1580)), ('SYRUP', (1290, 1580))]:
     w = lf.getlength(text)
     dr.rounded_rectangle([x - w / 2 - 30, y - 62, x + w / 2 + 30, y + 58], radius=40, fill=(196, 30, 44, 255), outline=(14, 58, 34, 255), width=8)
     dr.text((x, y), text, font=lf, fill=(252, 250, 244, 255), anchor='mm')
