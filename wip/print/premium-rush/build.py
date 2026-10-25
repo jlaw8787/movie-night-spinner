@@ -140,13 +140,13 @@ def spoke_card(x, y):
 
 def drop():
     """Stop 5 on the map: the Chinatown drop. A bakery tip, not sold at the truck."""
-    return (f'<div style="position: absolute; left: 318px; top: 1018px; width: 216px; height: 262px; box-sizing: border-box; border: 3px dashed {BLK}; padding: 12px 12px 0">'
+    return (f'<div style="position: absolute; left: 312px; top: 1018px; width: 230px; height: 266px; box-sizing: border-box; border: 3px dashed {BLK}; padding: 12px 12px 0">'
             f'<div style="display: flex; align-items: center; gap: 8px">'
             f'<div style="width: 24px; height: 24px; flex: none; border: 2px solid {BLK}; border-radius: 50%; background: {RED}; color: {YEL}; text-align: center; font-family: {DISP}; font-weight: 600; font-size: 20px; line-height: 27px">5</div>'
             f'{kicker("Last stop, Chinatown", RED, 16)}</div>'
             f'<div style="margin-top: 8px; font-family: {DISP}; font-weight: 600; font-size: 31px; line-height: 0.9; color: {BLK}; text-transform: uppercase">{BAO[1]}</div>'
             f'<div style="margin-top: 3px; font-family: {BODY}; font-size: 20px; line-height: 1.22; color: {INK}">{BAO[3]}</div>'
-            f'<div style="margin-top: 6px; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.22; color: {RED}">Bakery on Mott, three for 3.00. Not sold at this truck.</div></div>')
+            f'<div style="margin-top: 6px; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.22; color: {RED}">Mott St bakery, three for 3.00. Not sold at this truck.</div></div>')
 
 # ---------- the sheet ----------
 def sheet():
