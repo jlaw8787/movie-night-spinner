@@ -28,7 +28,7 @@ SNACK = [
     ('Perfect Cast fish fingers', 'Perfect Cast Fish Fingers', '3.95',
      'Panko-crusted white fish, lemon and a pickle and caper tartare.', 'Practice your Perfect Cast at the pond out back.'),
     ('Powerline concert nachos', 'Powerline Nachos', '4.25',
-     'Corn chips, spiced beef, black beans, cheddar, guacamole, sour cream, salsa.', 'Powerline plays L.A. this summer. Turn left at the fork.'),
+     'Corn chips, spiced beef, black beans, cheddar, guacamole, sour cream, salsa.', 'Powerline plays L.A. this summer. Take the south road at the fork.'),
     (None, 'Hand-Dipped Corn Dog', '1.95', 'Beef frank, cornmeal batter, mustard.', None),
 ]
 GRILL = [
@@ -36,7 +36,7 @@ GRILL = [
      'Chargrilled beef sausages in rolls, fried onions, mustard, ketchup, buttered corn.', 'Big rigs and RVs park out back.'),
 ]
 SWEET = [
-    ("Bigfoot campsite s'mores", "Bigfoot S'mores", '2.25',
+    ("Bigfoot campsite s'mores", 'Bigfoot S&rsquo;mores', '2.25',
      'Toasted marshmallow and milk chocolate between graham crackers.', 'Bigfoot country ahead. Lock your cooler.'),
     (None, 'Possum Pie', '2.50', 'Pecan crust, cream cheese, chocolate pudding, whipped cream.', None),
 ]
@@ -79,7 +79,7 @@ def header():
     band = ab(0, 0, W, '', f'height: 158px; background: {INK}')
     stripe = ab(0, 158, W, '', f'height: 8px; background: {ORANGE}')
     kick = ab(40, 42, 880, kicker('SPOONERVILLE TO THE COAST &nbsp;&#9670;&nbsp; THE BEST STOP ON THE ROAD WEST', PAPER))
-    title = ab(38, 66, 900, f'<div style="font-family: {DISP}; font-size: 70px; line-height: 76px; color: {PAPER}; text-shadow: 4px 4px 0 {ORANGE}; white-space: nowrap">LESTER&rsquo;S POSSUM PARK</div>')
+    title = ab(40, 66, 900, f'<div style="font-family: {DISP}; font-size: 70px; line-height: 76px; color: {PAPER}; text-shadow: 4px 4px 0 {ORANGE}; white-space: nowrap">LESTER&rsquo;S POSSUM PARK</div>')
     # the singing possums show sign
     show = ab(948, 36, 356, f'''
       <div style="background: {ORANGE}; border: 3px solid {PAPER}; border-radius: 12px; padding: 9px 14px 10px; box-sizing: border-box; transform: rotate(-2deg)">
@@ -93,16 +93,16 @@ def header():
 def left():
     frame = ab(40, 186, 390, f'<img src="assets/still-map.jpg" alt="Goofy and Max in the car with the road map" style="display: block; width: 390px; height: 236px">',
                f'border: 3px solid {ORANGE}; outline: 1px solid {INK}; box-sizing: content-box; height: 236px')
-    cap = ab(40, 434, 396, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 22px; color: {INK}">Road trip season. Navigator, keep the map handy.</div>')
+    cap = ab(40, 434, 396, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 22px; color: {INK}">Road trip season. Keep the map handy.</div>')
     card = ab(46, 476, 304, f'''<div style="background: #fffaf0; padding: 7px; transform: rotate(-3deg); box-shadow: 2px 4px 8px rgba(52,32,79,0.35)">
-        <img src="assets/postcard.jpg" alt="Vintage linen postcard, Greetings from Coeur d&rsquo;Alene, Idaho" style="display: block; width: 290px; height: 182px"></div>''')
+        <img src="assets/postcard.jpg" alt="Vintage linen postcard, Greetings from Coeur d&rsquo;Alene, Idaho" style="display: block; width: 290px; height: 180px"></div>''')
     cardcap = ab(46, 686, 300, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 19px; color: {INK}">Idaho postcards, 10&cent; at the gift shop.</div>')
-    ticket = ab(318, 494, 128, f'''<div style="transform: rotate(7deg); background: {ORANGE}; border: 2px dashed {CREAM}; outline: 3px solid {ORANGE}; padding: 8px 6px 9px; text-align: center; box-shadow: 1px 3px 6px rgba(52,32,79,0.35)">
+    ticket = ab(318, 480, 128, f'''<div style="transform: rotate(7deg); background: {ORANGE}; border: 2px dashed {CREAM}; outline: 3px solid {ORANGE}; padding: 8px 6px 9px; text-align: center; box-shadow: 1px 3px 6px rgba(52,32,79,0.35)">
         <div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.16em; line-height: 17px; color: {CREAM}">LESTER&rsquo;S</div>
         <div style="font-family: {DISP}; font-size: 24px; line-height: 26px; color: {INK}">POSSUM PARK</div>
         <div style="margin-top: 3px; font-family: {BODY}; font-weight: 800; font-size: 16px; line-height: 19px; color: {CREAM}">ADMIT ONE</div>
         <div style="font-family: {BODY}; font-size: 14px; line-height: 17px; color: {INK}">No. 1995 &nbsp;Adult</div></div>''')
-    note = ab(346, 620, 100, f'<div style="transform: rotate(-4deg); font-family: {HAND}; font-weight: 600; font-size: 25px; line-height: 24px; color: #4a5a8a">Max! The possums! Love, Dad</div>')
+    note = ab(334, 626, 112, f'<div style="transform: rotate(-4deg); font-family: {HAND}; font-weight: 600; font-size: 24px; line-height: 22px; color: #4a5a8a">Max! The possums! Love, Dad</div>')
     return frame + cap + card + cardcap + ticket + note
 
 
@@ -114,7 +114,7 @@ def menu():
 
 def route():
     lay = json.load(open(os.path.join(D, 'map_layout.json')))
-    X, Y, MW, MH = 40, 724, 1264, 176
+    X, Y, MW, MH = 40, 712, 1264, 176
 
     def at(key, dx, dy, w, inner, style=''):
         fx, fy = lay[key]
@@ -144,8 +144,8 @@ def route():
     out.append(dot('neptune', 5))
     out.append(at('neptune', -70, 8, 140, plate(lab('Neptune Inn', 16, INK, 700, '0', 'center'), 'center')))
     out.append(dot('la', 7, ORANGE))
-    out.append(at('la', -300, -64, 290, f'''<div style="background: {INK}; border: 2px solid {ORANGE}; border-radius: 6px; padding: 4px 10px 5px; text-align: center">
-        <div style="font-family: {DISP}; font-size: 22px; line-height: 24px; color: {ORANGE}">POWERLINE &middot; LIVE IN L.A.</div>
+    out.append(at('la', -236, -62, 240, f'''<div style="background: {INK}; border: 2px solid {ORANGE}; border-radius: 6px; padding: 4px 10px 5px; text-align: center">
+        <div style="font-family: {DISP}; font-size: 20px; line-height: 22px; color: {ORANGE}">POWERLINE &middot; LIVE IN L.A.</div>
         <div style="font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 19px; color: {PAPER}">Final night of the world tour</div></div>'''))
     # compass: the strip map runs west to the right
     out.append(ab(X + MW - 64, Y + MH - 66, 52, f'''<div style="width: 52px; height: 52px; border-radius: 50%; background: {CREAM}; border: 2px solid {INK}; box-sizing: border-box; text-align: center">
@@ -154,8 +154,8 @@ def route():
 
 
 def footer():
-    l = ab(40, 904, 700, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 18px; color: {INK}">Prices subject to change. Placemat No. 95. Printed in U.S.A. 1995.</div>')
-    r = ab(744, 904, 560, f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 18px; color: {INK}; text-align: right">Please do not feed the possums. They are robots.</div>')
+    l = ab(40, 900, 700, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 18px; color: {INK}">Prices subject to change. Placemat No. 95. Printed in U.S.A. 1995.</div>')
+    r = ab(744, 900, 560, f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 18px; color: {INK}; text-align: right">Please do not feed the possums. They are robots.</div>')
     return l + r
 
 
@@ -187,6 +187,6 @@ json.dump({
               'body': "'Bitter',serif", 'price': "'Bitter',serif", 'note': "'Bitter',serif"},
 }, open(os.path.join(D, 'film.json'), 'w'), indent=1, ensure_ascii=False)
 
-labels = {FILM: {k: {'n': n, 'd': d, 'note': t} for k, n, p, d, t in ALL if k}}
+labels = {FILM: {k: {'n': n.replace('&rsquo;', '\u2019'), 'd': d, 'note': t} for k, n, p, d, t in ALL if k}}
 json.dump(labels, open(os.path.join(D, 'roadtrip.labels.json'), 'w'), indent=1, ensure_ascii=False)
 print('built')
