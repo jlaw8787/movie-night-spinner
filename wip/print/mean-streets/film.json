@@ -1,0 +1,18 @@
+{
+ "fmt": "afterhours",
+ "fn": "fmtAfterhours",
+ "faces": ["front.html", "back.html"],
+ "names": ["Front", "Back"],
+ "mm": [140, 216],
+ "fonts": "family=Rakkas&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;1,400&family=Nothing+You+Could+Do",
+ "fams": ["Rakkas", "Libre Franklin", "Nothing You Could Do"],
+ "phone": {
+  "disp": "'Rakkas',serif",
+  "title": "'Rakkas',serif",
+  "name": "'Libre Franklin',sans-serif",
+  "body": "'Libre Franklin',sans-serif",
+  "price": "'Libre Franklin',sans-serif",
+  "note": "'Libre Franklin',sans-serif"
+ },
+ "build": "python3 build.py && python3 shot.py"
+}

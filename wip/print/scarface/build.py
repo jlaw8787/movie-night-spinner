@@ -39,8 +39,8 @@ cover(st, HERO_W, HERO_H, 0.42, 0.3).save(A('floor-still.jpg'), quality=90)
 # back: Art Deco hotel on Ocean Drive, HABS FL-322-K. Crop keeps the tower and leaves the name sign out.
 PH = 380
 hotel = Image.open(S('century-master.jpg')).crop((560, 120, 4440, 1990))
-hotel = ImageEnhance.Contrast(hotel).enhance(1.15)
-duotone(cover(hotel, W, PH, 0.5, 0.12), '#2a0a1e', '#ffd6ea').save(A('ocean-drive.jpg'), quality=90)
+hotel = ImageOps.autocontrast(ImageEnhance.Contrast(hotel).enhance(1.35), cutoff=2)
+duotone(cover(hotel, W, PH, 0.5, 0.12), '#1c0614', '#ffe4f0').save(A('ocean-drive.jpg'), quality=90)
 
 # flamingo tile: the two flamingos from the Victor Hotel lobby mural (HABS FL-322-Z), glazed pink
 fl = Image.open(S('mural-master.jpg')).crop((2480, 1660, 3780, 2560))
@@ -221,7 +221,7 @@ def back():
              f'<div style="font-family: {SCRIPT}; font-size: 34px; line-height: 1.1; color: {GOLD}; text-align: right; padding-right: 10px">Frank L.</div></div>')
     o.append(f'<div style="position: absolute; left: 384px; top: {FY + 14}px; width: 248px; font-family: {BODY}; font-size: 16px; line-height: 1.38; color: {MUTE}">'
              + kicker('House rules', PINK, 16) +
-             f'<div style="margin-top: 8px">Nobody here is your baby.<br>Every dog has his day.<br>Ladies night is Tuesday.<br>Jackets after nine.</div></div>')
+             f'<div style="margin-top: 8px">Nobody here is your baby.<br>Every dog has his day.<br>Ladies&#39; night is Tuesday.<br>Jackets after nine.</div></div>')
     o.append(f'<div style="position: absolute; left: 40px; top: {H - 62}px; width: {W - 80}px; text-align: center; font-family: {BODY}; font-size: 16px; color: {MUTE}">'
              'Prices subject to change. Form BC-83. Babylon Club, Miami Beach, 1983.</div>')
     return page(''.join(o), 'back')
