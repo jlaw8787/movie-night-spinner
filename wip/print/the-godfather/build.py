@@ -1,10 +1,11 @@
 """Louis' Italian-American Restaurant, the Bronx, 1946.
-Single heavy card, two faces 816x1056 (US Letter). Olive oil paper, espresso ink, orange.
+Single heavy card, two faces 816x1056 (US Letter). Lift pass: Gordon Willis chiaroscuro.
+Deep espresso stock, warm amber light falling from above, cream and amber inks.
 Signature: a real 1940 Bronx pushcart market photo (Library of Congress, no known restrictions) across the front,
-plus the TMDB still of the fruit stand with the spilled oranges on the back.
+plus the TMDB still of the fruit stand with the spilled oranges, large on the back, and an engraved spot of oranges.
 Props: a bakery cannoli box tied with string (Nazorine's), a wedding favour card from Connie's wedding.
-Big gags: "try the veal, best in the city", leave the tip take the cannoli, the oranges.
-Writes photo crops, painted props and wear, front/back .body.html and .html."""
+Film moments: the best veal in the city, take the cannoli, the oranges. Played straight.
+Writes photo crops, painted art, props and light, front/back .body.html and .html."""
 import os, random, math
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance, ImageOps
@@ -12,61 +13,148 @@ D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
 W, H = 816, 1056
-PAPER, INK, ORANGE, MID, CARD = '#e7e1bf', '#2b1b13', '#c4561b', '#57463a', '#f7f2e4'
+BG, CREAM, MID, AMBER, ORANGE, INK, CARD = '#1b120d', '#f1e3c3', '#cdb790', '#e39a3c', '#d0621f', '#2b1b13', '#f7f2e4'
 FONTS = ('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC'
          '&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Mrs+Saint+Delafield&display=swap')
 DISP = "'IM Fell English SC', serif"; BODY = "'Spectral', serif"; SCRIPT = "'Mrs Saint Delafield', cursive"
 M = 40
+BGc = (27, 18, 13)
 
-# ---------------- photos ----------------
 def fit(im, w, h):
     sw, sh = im.size; r = w / h
     cw, ch = (int(sh * r), sh) if sw / sh > r else (sw, int(sw / r))
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
-# Front: 1940 Arthur Avenue pushcart market. Crop under the beer billboard, blur the two shop-name signs.
-PH = 300
+def fade(im, bottom=0, sides=0, top=0):
+    """Melt a photo into the dark stock: alpha ramps at the chosen edges, composited on the background colour."""
+    w, h = im.size
+    m = np.ones((h, w))
+    yy, xx = np.mgrid[0:h, 0:w].astype(float)
+    if bottom: m *= np.clip((h - yy) / bottom, 0, 1) ** 1.4
+    if top: m *= np.clip(yy / top, 0, 1) ** 1.4
+    if sides: m *= np.clip(np.minimum(xx, w - xx) / sides, 0, 1) ** 1.2
+    a = np.asarray(im.convert('RGB')).astype(float)
+    out = a * m[..., None] + np.array(BGc) * (1 - m[..., None])
+    return Image.fromarray(out.clip(0, 255).astype('uint8'))
+
+# Front: 1940 Arthur Avenue pushcart market, lit amber, melting into the dark at the foot.
+PH = 400
 st = Image.open(S('loc-12707-3000.jpg')).convert('L')
-X0, Y0, K = 88, 879, 2.03          # preview-to-source mapping used when choosing the crop
+X0, Y0, K = 88, 879, 2.03
 def box(x0, y0, x1, y1):
     return tuple(int(v) for v in (X0 + x0 * K, Y0 + y0 * K, X0 + x1 * K, Y0 + y1 * K))
 for b in [box(400, 0, 578, 70), box(808, 0, 875, 68), box(1190, 130, 1245, 180)]:
     reg = st.crop(b).filter(ImageFilter.GaussianBlur(9)); st.paste(reg, b[:2])
-st = st.crop(box(0, 0, 1400, 583))
+st = st.crop(box(0, 0, 1400, 610))
 st = ImageOps.autocontrast(st, cutoff=0.4)
-st = ImageEnhance.Brightness(st).enhance(1.06)
-st = ImageOps.colorize(st, black='#22150f', white='#f3ecd2', mid='#8a7458')
-fit(st, W, PH).save(A('market-1940.jpg'), quality=90)
+st = ImageOps.colorize(st, black='#120a06', white='#f6deae', mid='#8c5f2e')
+fade(fit(st, W, PH), bottom=230, sides=0).save(A('market-1940.jpg'), quality=90)
 
-# Back: TMDB fruit stand still, the basket of oranges spilled on the street. Lifted out of the night, warmed.
-fr = Image.open(S('c4y3FQ0cCVuhJCvJrV9a8KeBuvq.jpg')).convert('RGB').crop((1560, 0, 3200, 1260))
+# Back: TMDB fruit stand still, the spilled oranges. Wide crop above the car, lifted and warmed.
+fr = Image.open(S('c4y3FQ0cCVuhJCvJrV9a8KeBuvq.jpg')).convert('RGB').crop((1300, 0, 3300, 1090))
 a = np.asarray(fr).astype(float) / 255
 a = a ** 0.55
-a[..., 0] *= 1.06; a[..., 1] *= 0.98; a[..., 2] *= 0.9
+a[..., 0] *= 1.08; a[..., 1] *= 0.98; a[..., 2] *= 0.86
 fr = Image.fromarray((a.clip(0, 1) * 255).astype('uint8'))
 fr = ImageEnhance.Contrast(fr).enhance(1.15); fr = ImageEnhance.Color(fr).enhance(1.12)
-FW, FH = 372, 286
+FW, FH = W - 2 * M - 8, 360
 fit(fr, FW, FH).save(A('fruit-stand.jpg'), quality=90)
 
-# ---------------- painted wear ----------------
-def wear(name, seed):
-    """Soft aged vignette toward the edges, a few big gentle mottles. Low detail, nothing over the text."""
+# ---------------- light: a warm pool from above, deep shadow at the corners ----------------
+def light(name, cx, cy, rx, ry, seed):
     rnd = random.Random(seed)
-    m = Image.new('L', (W, H), 0); md = ImageDraw.Draw(m)
-    for i in range(46):
-        md.rectangle([i, i, W - 1 - i, H - 1 - i], outline=max(0, int(92 - i * 2)))
-    m = m.filter(ImageFilter.GaussianBlur(18))
-    mot = Image.new('L', (W, H), 0); dd = ImageDraw.Draw(mot)
-    for i in range(14):
-        x = rnd.choice([rnd.randint(-60, 140), rnd.randint(W - 140, W + 60)]); y = rnd.randint(-60, H + 60)
-        r = rnd.randint(80, 190)
-        dd.ellipse([x - r, y - r, x + r, y + r], fill=rnd.randint(8, 18))
-    mot = mot.filter(ImageFilter.GaussianBlur(60))
-    m = Image.fromarray(np.minimum(255, np.asarray(m, int) + np.asarray(mot, int)).astype('uint8'))
-    lay = Image.new('RGBA', (W, H), (96, 70, 30, 0)); lay.putalpha(m)
-    lay.save(A(f'wear-paper-{name}.png'))
-wear('front', 11); wear('back', 46)
+    yy, xx = np.mgrid[0:H, 0:W].astype(float)
+    d = ((xx - cx) / rx) ** 2 + ((yy - cy) / ry) ** 2
+    glow = np.exp(-d * 1.6) * 62
+    for i in range(6):
+        x, y, r = rnd.randint(0, W), rnd.randint(0, H), rnd.randint(140, 260)
+        glow += np.exp(-(((xx - x) / r) ** 2 + ((yy - y) / r) ** 2)) * rnd.uniform(3, 7)
+    lay = np.zeros((H, W, 4))
+    lay[..., 0], lay[..., 1], lay[..., 2] = 214, 140, 62
+    lay[..., 3] = glow.clip(0, 255)
+    edge = np.minimum(np.minimum(xx, W - xx), np.minimum(yy, H - yy))
+    dark = (np.clip(1 - edge / 70, 0, 1) ** 2) * 120
+    g = Image.fromarray(lay.astype('uint8'), 'RGBA')
+    k = np.zeros((H, W, 4)); k[..., 3] = dark
+    g = Image.alpha_composite(g, Image.fromarray(k.astype('uint8'), 'RGBA'))
+    g.save(A(f'light-{name}.png'))
+light('front', 408, 640, 520, 420, 3); light('back', 300, 560, 560, 520, 9)
+
+# ---------------- engraved spot: oranges and leaves, scraperboard on the dark stock ----------------
+def engraved_oranges():
+    SS = 2
+    cw, ch = 300 * 2 * SS, 210 * 2 * SS
+    yy, xx = np.mgrid[0:ch, 0:cw].astype(float)
+    lum = np.zeros((ch, cw)); cov = np.zeros((ch, cw), bool)
+    rnd = np.random.default_rng(7)
+    Lx, Ly, Lz = -0.55, -0.62, 0.56
+    def sphere(cx, cy, r, ax=(0.28, -1.0, 0.25), N=30):
+        nonlocal lum, cov
+        nx, ny = (xx - cx) / r, (yy - cy) / r
+        rr = nx * nx + ny * ny; ins = rr < 1
+        nz = np.sqrt(np.clip(1 - rr, 0, 1))
+        lit = np.clip(nx * Lx + ny * Ly + nz * Lz, 0, 1)
+        a = np.array(ax) / np.linalg.norm(ax)
+        ph = np.arcsin(np.clip(nx * a[0] + ny * a[1] + nz * a[2], -1, 1)) / math.pi * N
+        f = ph - np.floor(ph)
+        w = 0.06 + 0.8 * lit ** 1.3
+        line = np.abs(f - 0.5) < w / 2
+        pores = rnd.random((ch, cw)) < 0.012 * (0.3 + lit)
+        rim = (rr > 0.93) & (lit > 0.05)
+        v = (line | pores | rim).astype(float) * (0.55 + 0.45 * lit)
+        lum = np.where(ins, v, lum); cov |= ins
+    def half(cx, cy, r, sq=0.62):
+        nonlocal lum, cov
+        nx, ny = (xx - cx) / r, (yy - cy) / (r * sq)
+        rr = np.sqrt(nx * nx + ny * ny); ins = rr < 1
+        th = np.arctan2(ny, nx) + math.pi
+        seg = th / (2 * math.pi) * 11
+        fs = seg - np.floor(seg)
+        membrane = (np.minimum(fs, 1 - fs) < 0.05) & (rr < 0.84) & (rr > 0.1)
+        rad = th / (2 * math.pi) * 150; fr_ = rad - np.floor(rad)
+        flesh = (np.abs(fr_ - 0.5) < 0.22 * (1.1 - rr)) & (rr < 0.8) & (rr > 0.12) & ~membrane
+        ves = (rnd.random((ch, cw)) < 0.05) & (rr < 0.8)
+        pith = (rr > 0.84) & (rr < 0.89)
+        rindl = (rr >= 0.89) & ((np.sin(th * 90) > 0.2) | (rr > 0.975))
+        centre = rr < 0.07
+        v = np.zeros_like(rr)
+        v[flesh | ves] = 0.85; v[membrane] = 0.35; v[pith] = 1.0; v[rindl] = 0.75; v[centre] = 0.9
+        lum = np.where(ins, v, lum); cov |= ins
+    def leaf(x0, y0, x1, y1, wid, ang=35):
+        nonlocal lum, cov
+        L = math.hypot(x1 - x0, y1 - y0); ux, uy = (x1 - x0) / L, (y1 - y0) / L
+        s = ((xx - x0) * ux + (yy - y0) * uy) / L
+        t = (-(xx - x0) * uy + (yy - y0) * ux)
+        half_w = wid * np.sin(np.clip(s, 0, 1) * math.pi) ** 0.8
+        ins = (s > 0) & (s < 1) & (np.abs(t) < half_w)
+        rib = np.abs(t) < 2.6 * SS
+        vein = np.sin((s * L + np.abs(t) * 0.9) / (5.5 * SS) * math.pi) > 0.55
+        edge = np.abs(np.abs(t) - half_w) < 2.2 * SS
+        side = (t < 0)
+        v = np.where(rib | edge, 0.9, np.where(vein, np.where(side, 0.7, 0.4), 0))
+        lum = np.where(ins & ~cov, v, lum); cov |= ins
+    S2 = SS * 2
+    sphere(150 * S2, 120 * S2, 72 * S2)
+    half(232 * S2, 160 * S2, 56 * S2)
+    sphere(66 * S2, 150 * S2, 50 * S2, ax=(-0.2, -1, 0.3), N=24)
+    leaf(150 * S2, 52 * S2, 250 * S2, 18 * S2, 20 * S2)
+    leaf(132 * S2, 50 * S2, 40 * S2, 30 * S2, 17 * S2)
+    # colour: lit lines amber to cream, a soft dark halo so the spot reads over the photo
+    c0, c1 = np.array([205, 98, 34]), np.array([250, 214, 150])
+    rgb = c0 + (c1 - c0) * np.clip(lum, 0, 1)[..., None] ** 1.2
+    al = np.clip(lum * 1.4, 0, 1) * 255
+    halo = Image.fromarray((cov * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(14 * SS))
+    halo = np.asarray(halo).astype(float) / 255
+    base = np.zeros((ch, cw, 4)); base[..., :3] = BGc; base[..., 3] = np.clip(halo * 1.25, 0, 1) * 235
+    top = np.dstack([rgb, al])
+    a1 = top[..., 3:4] / 255
+    out = base.copy()
+    out[..., :3] = top[..., :3] * a1 + base[..., :3] * (1 - a1)
+    out[..., 3] = np.maximum(base[..., 3], top[..., 3])
+    im = Image.fromarray(out.clip(0, 255).astype('uint8'), 'RGBA').resize((cw // SS, ch // SS), Image.LANCZOS)
+    im.save(A('engraved-oranges.png'))
+engraved_oranges()
 
 # ---------------- painted props ----------------
 def twine(dr, p0, p1, w=7):
@@ -148,91 +236,87 @@ def almonds():
     im.save(A('almonds.png'))
 almonds()
 
+
 # ---------------- type pieces ----------------
-def kicker(t, color=ORANGE, size=18, extra=''):
+def kicker(t, color=AMBER, size=18, extra=''):
     return (f'<div style="font-family: {BODY}; font-weight: 700; font-size: {size}px; letter-spacing: 0.2em; color: {color}; '
             f'text-transform: uppercase; line-height: 22px;{extra}">{t}</div>')
 
-def head(kick, title, top=0):
-    """Kicker, then an engraved small-caps title with a thick and thin orange rule beneath."""
+def head(kick, title, top=0, size=42):
     return (f'<div style="margin-top: {top}px">{kicker(kick)}'
-            f'<div style="font-family: {DISP}; font-size: 42px; line-height: 44px; color: {INK}; margin-top: 2px">{title}</div>'
-            f'<div style="height: 4px; background: {ORANGE}; margin-top: 4px"></div>'
-            f'<div style="height: 1px; background: {ORANGE}; margin-top: 2px"></div></div>')
+            f'<div style="font-family: {DISP}; font-size: {size}px; line-height: 44px; color: {CREAM}; margin-top: 2px">{title}</div>'
+            f'<div style="height: 3px; background: {AMBER}; margin-top: 4px; opacity: 0.9"></div>'
+            f'<div style="height: 1px; background: {AMBER}; margin-top: 2px; opacity: 0.7"></div></div>')
 
 def item(name, price, desc, top=14, note=None, size=27):
-    n = (f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.25; color: {ORANGE}; margin-top: 2px">{note}</div>'
+    n = (f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.25; color: {AMBER}; margin-top: 3px">{note}</div>'
          if note else '')
     return (f'<div style="margin-top: {top}px">'
             f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-family: {BODY}; font-weight: 700; '
-            f'font-size: {size}px; line-height: 1.15; color: {INK}"><span>{name}</span><span>{price}</span></div>'
+            f'font-size: {size}px; line-height: 1.15; color: {CREAM}"><span>{name}</span><span>{price}</span></div>'
             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: {MID}; margin-top: 3px">{desc}</div>{n}</div>')
 
 def at(x, y, w, inner, extra=''):
     return f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px;{extra}">{inner}</div>'
 
 def page(name, inner):
-    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}">'
-            f'<img src="assets/paper-grain.png" alt="" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; opacity: 0.55">'
-            f'{inner}'
-            f'<img src="assets/wear-paper-{name}.png" alt="" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px">'
-            f'</div>')
+    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {BG}">'
+            f'<img src="assets/light-{name}.png" alt="" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px">'
+            f'<img src="assets/paper-grain.png" alt="" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; opacity: 0.25">'
+            f'{inner}</div>')
 
 # ---------------- front ----------------
 def front():
     o = []
     o.append(f'<img src="assets/market-1940.jpg" alt="Pushcart market on Arthur Avenue, the Bronx, 1940" '
              f'style="position: absolute; left: 0; top: 0; width: {W}px; height: {PH}px">')
-    o.append(f'<div style="position: absolute; left: 0; top: {PH}px; width: {W}px; height: 4px; background: {ORANGE}"></div>')
-    # name plate
-    o.append(f'<div style="position: absolute; left: 0; top: {PH + 4}px; width: {W}px; height: 112px; background: {INK}"></div>')
-    o.append(at(M, PH + 16, 540, kicker('Ristorante, the Bronx, N.Y.', ORANGE, 18)
-                + f'<div style="font-family: {DISP}; font-size: 72px; line-height: 72px; color: {CARD}; margin-top: 2px">Louis\'</div>'))
-    o.append(at(266, PH + 44, 300, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: #d8ccb0">'
+    # name, set into the shadow at the foot of the photograph
+    o.append(at(M, 286, 520, kicker('Ristorante, the Bronx, N.Y.', AMBER, 18)
+                + f'<div style="font-family: {DISP}; font-size: 72px; line-height: 72px; color: {CREAM}; margin-top: 2px">Louis\'</div>'))
+    o.append(at(276, 318, 300, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MID}">'
                 'The pushcart market round our corner, where we buy every tomato.</div>'))
-    # big gag 1: the veal seal
-    o.append(f'<div style="position: absolute; left: 592px; top: 214px; width: 196px; height: 196px; border-radius: 50%; background: {ORANGE}; '
-             f'transform: rotate(-6deg); box-shadow: 0 3px 8px rgba(30,15,5,0.35)">'
-             f'<div style="position: absolute; left: 9px; top: 9px; width: 174px; height: 174px; border-radius: 50%; border: 2px solid {CARD}; box-sizing: border-box"></div>'
-             f'<div style="position: absolute; left: 0; top: 36px; width: 196px; text-align: center; color: {CARD}">'
+    # the veal seal
+    o.append(f'<div style="position: absolute; left: 592px; top: 236px; width: 190px; height: 190px; border-radius: 50%; background: {ORANGE}; '
+             f'transform: rotate(-6deg); box-shadow: 0 4px 14px rgba(0,0,0,0.55)">'
+             f'<div style="position: absolute; left: 9px; top: 9px; width: 172px; height: 172px; border-radius: 50%; border: 2px solid {CARD}; box-sizing: border-box"></div>'
+             f'<div style="position: absolute; left: 0; top: 34px; width: 190px; text-align: center; color: {CARD}">'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 16px; letter-spacing: 0.2em; line-height: 22px">THE BEST</div>'
-             f'<div style="font-family: {DISP}; font-size: 66px; line-height: 62px">Veal</div>'
+             f'<div style="font-family: {DISP}; font-size: 64px; line-height: 62px">Veal</div>'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 16px; letter-spacing: 0.14em; line-height: 20px">IN THE CITY</div>'
              f'</div></div>')
-    TOP = PH + 4 + 112 + 26
+    TOP = 424
     left = (head('To start', 'Antipasti')
             + item('Antipasto, wedding style', '.65', 'Salami, aged provolone, olives and roasted peppers, at room temperature.')
-            + item('Arancini', '.40', 'Crisp fried risotto balls with a melting mozzarella center.')
+            + item('Arancini', '.40', 'Crisp risotto balls, fried golden round a melting mozzarella heart.')
             + head('By hand, every morning', 'Pasta', 26)
-            + item('Rigatoni, Sunday gravy', '.85', 'Pork and beef meatballs, fennel sausage, slow-cooked tomato. Pecorino at the table.')
-            + f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MID}; margin-top: 18px">'
+            + item('Rigatoni, Sunday gravy', '.85', 'Pork and beef meatballs, fennel sausage, slow tomato, pecorino.')
+            + f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MID}; margin-top: 22px">'
               'We cook with Genco Pura olive oil. Prices subject to change. OLinville 2-1972. Form L-46.</div>')
     o.append(at(M, TOP, 366, left))
-    o.append(f'<div style="position: absolute; left: 427px; top: {TOP + 4}px; width: 1px; height: 520px; background: {INK}; opacity: 0.35"></div>')
+    o.append(f'<div style="position: absolute; left: 427px; top: {TOP + 4}px; width: 1px; height: 540px; background: {AMBER}; opacity: 0.35"></div>')
     RX = 448; RW = W - M - RX
     right = (head('Specialità della casa', 'The Veal')
-             + item('Veal scaloppine', '1.72', 'Thin cutlets pounded to order, pan-fried in butter, Marsala wine sauce, mushrooms.', 14,
+             + item('Veal scaloppine', '1.72', 'Thin cutlets pan-fried in butter, with Marsala wine and mushrooms.', 14,
                     'Pounded to order. Allow a few minutes.', 28))
     o.append(at(RX, TOP, RW, right))
-    # big gag: the offer box
-    o.append(at(RX, TOP + 240, RW,
-                f'<div style="border: 3px solid {ORANGE}; padding: 12px 16px 14px; box-sizing: border-box; background: rgba(247,242,228,0.55)">'
-                + kicker('Complete dinner', ORANGE, 16)
+    o.append(at(RX, TOP + 232, RW,
+                f'<div style="border: 2px solid {AMBER}; padding: 12px 16px 14px; box-sizing: border-box; background: rgba(0,0,0,0.28)">'
+                + kicker('Complete dinner', AMBER, 16)
                 + f'<div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 4px">'
-                  f'<div style="font-family: {DISP}; font-size: 30px; line-height: 32px; color: {INK}">The family dinner</div>'
-                  f'<div style="font-family: {BODY}; font-weight: 700; font-size: 28px; color: {INK}">2.50</div></div>'
+                  f'<div style="font-family: {DISP}; font-size: 30px; line-height: 32px; color: {CREAM}">The family dinner</div>'
+                  f'<div style="font-family: {BODY}; font-weight: 700; font-size: 28px; color: {CREAM}">2.50</div></div>'
                 + f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: {MID}; margin-top: 6px">'
-                  'Antipasto, rigatoni with gravy, the veal, a cannoli and espresso.</div></div>'))
-    # prop: wedding favour card
-    o.append(f'<div style="position: absolute; left: {RX + 22}px; top: {TOP + 416}px; width: 300px; height: 140px; background: {CARD}; '
-             f'transform: rotate(3.5deg); box-shadow: 0 3px 7px rgba(40,25,10,0.3); border: 1px solid #cfc3a6">'
+                  'Antipasto, rigatoni and gravy, the veal, cannoli, espresso.</div></div>'))
+    # prop: wedding favour card, catching the light on the table
+    o.append(f'<div style="position: absolute; left: {RX + 22}px; top: {TOP + 412}px; width: 300px; height: 140px; background: {CARD}; '
+             f'transform: rotate(3.5deg); box-shadow: 0 6px 14px rgba(0,0,0,0.6); border: 1px solid #cfc3a6">'
              f'<div style="position: absolute; left: 22px; top: 0; width: 16px; height: 140px; background: #ead2c9"></div>'
              f'<div style="position: absolute; left: 22px; top: 0; width: 2px; height: 140px; background: #d9b9ad"></div>'
              f'<div style="position: absolute; left: 36px; top: 0; width: 2px; height: 140px; background: #d9b9ad"></div>'
              f'<div style="position: absolute; left: 54px; top: 12px; width: 234px; text-align: center">'
              + kicker('Bomboniera', ORANGE, 16)
              + f'<div style="font-family: {DISP}; font-size: 28px; line-height: 30px; color: {INK}">Connie &amp; Carlo</div>'
-               f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 20px; color: {MID}">Long Beach, 1945</div></div>'
+               f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 20px; color: #57463a">Long Beach, 1945</div></div>'
              f'<img src="assets/almonds.png" alt="" style="position: absolute; left: 62px; top: 74px; width: 218px; height: 61px">'
              f'</div>')
     return page('front', ''.join(o))
@@ -240,56 +324,41 @@ def front():
 # ---------------- back ----------------
 def back():
     o = []
-    # Dolci and the cannoli box
-    o.append(at(M, M, 380, head('From the pastry shop', 'Dolci')
-                + item('Cannoli', '.25', 'Crisp shells, orange-scented ricotta, dark chocolate, crushed pistachio.')
-                + item('Spumoni', '.20', 'Cherry, pistachio and chocolate layers with candied fruit.')))
-    o.append(f'<img src="assets/cannoli-box.png" alt="" style="position: absolute; left: 448px; top: 38px; width: 330px; height: 210px">')
-    o.append(f'<div style="position: absolute; left: 470px; top: 66px; width: 196px; height: 112px; border-radius: 50%; border: 3px solid {ORANGE}; '
-             f'box-sizing: border-box; text-align: center; padding-top: 18px">'
-             f'<div style="font-family: {DISP}; font-size: 30px; line-height: 30px; color: {INK}">Nazorine</div>'
-             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 16px; letter-spacing: 0.18em; line-height: 20px; color: {ORANGE}">PASTRY SHOP</div>'
-             f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 20px; color: {MID}">wedding cakes</div></div>')
-    # big gag 2
-    o.append(at(448, 258, W - M - 448, f'<div style="font-family: {DISP}; font-size: 40px; line-height: 42px; color: {ORANGE}; text-align: center">'
-                'Take the cannoli.</div>'
-                f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.3; color: {MID}; text-align: center; margin-top: 4px">'
-                'Boxed and tied with string for the ride.</div>'))
-    # signature still: the fruit stand and the oranges
-    PY = 358
-    o.append(f'<div style="position: absolute; left: {M}px; top: {PY}px; width: {FW + 8}px; height: {FH + 8}px; background: {ORANGE}"></div>')
+    # the fruit stand, large, with the engraved oranges laid over its corner
+    o.append(f'<div style="position: absolute; left: {M}px; top: {M}px; width: {FW + 8}px; height: {FH + 8}px; background: {AMBER}"></div>')
     o.append(f'<img src="assets/fruit-stand.jpg" alt="The fruit stand with oranges on the street" '
-             f'style="position: absolute; left: {M + 4}px; top: {PY + 4}px; width: {FW}px; height: {FH}px">')
-    o.append(at(M, PY + FH + 18, FW + 8, f'<div style="font-family: {DISP}; font-size: 30px; line-height: 32px; color: {INK}">An orange on every table</div>'
-                f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MID}; margin-top: 2px">'
-                'Bought every morning at the fruit stand by the olive oil company.</div>'))
+             f'style="position: absolute; left: {M + 4}px; top: {M + 4}px; width: {FW}px; height: {FH}px">')
+    o.append(f'<img src="assets/engraved-oranges.png" alt="Engraved oranges" style="position: absolute; left: 486px; top: 290px; width: 300px; height: 210px">')
+    o.append(at(M, M + FH + 22, 440, f'<div style="font-family: {DISP}; font-size: 34px; line-height: 36px; color: {CREAM}">An orange on every table</div>'
+                f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MID}; margin-top: 4px">'
+                'Bought each morning at the fruit stand<br>by the olive oil company.</div>'))
+    TOP = 524
+    # dolci and the cannoli box
+    o.append(at(M, TOP, 366, head('From Nazorine\'s', 'Take the cannoli', 0, 38)
+                + item('Cannoli', '.25', 'Crisp shells, orange-scented ricotta, dark chocolate, crushed pistachio.')))
+    o.append(f'<img src="assets/cannoli-box.png" alt="" style="position: absolute; left: 30px; top: 710px; width: 250px; height: 159px">')
+    o.append(f'<div style="position: absolute; left: 44px; top: 729px; width: 150px; height: 86px; border-radius: 50%; border: 2px solid {ORANGE}; '
+             f'box-sizing: border-box; text-align: center; padding-top: 14px">'
+             f'<div style="font-family: {DISP}; font-size: 24px; line-height: 24px; color: {INK}">Nazorine</div>'
+             f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.14em; line-height: 20px; color: {ORANGE}">PASTRY</div></div>')
+    o.append(at(296, 722, 132, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MID}">'
+                'Boxed and tied with string, for the ride home.</div>'))
+    # character voice
+    o.append(at(M, 884, 388, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {CREAM}">'
+                'Oil, garlic, tomatoes, then sausage and meatballs. Wine and a pinch of sugar. My trick.</div>'))
+    o.append(at(250, 942, 200, f'<div style="font-family: {SCRIPT}; font-size: 36px; line-height: 34px; color: {AMBER}">Pete Clemenza</div>'))
     # cafe and bar
     BX = 448; BW = W - M - BX
-    o.append(at(BX, PY - 4, BW, head('After dinner', 'Caffè &amp; Bar')
+    o.append(at(BX, TOP, BW, head('After dinner', 'Caffè &amp; Bar')
                 + item('Espresso', '.10', 'Dark roast, a curl of lemon peel.', 10)
-                + item('Blood orange soda', '.15', 'Ruby citrus syrup, cold seltzer, a twist of fresh peel.', 10)
+                + item('Blood orange soda', '.15', 'Ruby citrus syrup, cold seltzer.', 10)
                 + item('Chianti', '.35', 'By the glass, from the straw bottle.', 10)
                 + item('Anisette', '.30', 'Sweet cordial, two coffee beans.', 10)))
-    # character voice: Clemenza
-    NY = PY + FH + 112
-    o.append(at(M, NY, FW + 8, f'<div style="border-left: 4px solid {ORANGE}; padding-left: 14px">'
-                + kicker('A friend of the kitchen', ORANGE, 16)
-                + f'<div style="font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 1.32; color: {INK}; margin-top: 4px">'
-                  'A little oil, fry the garlic, in go the tomatoes, then sausage and meatballs. '
-                  'A splash of wine, a pinch of sugar. My trick.</div>'
-                + f'<div style="font-family: {SCRIPT}; font-size: 44px; line-height: 44px; color: {INK}; margin-top: 2px">Pete Clemenza</div></div>'))
-    # house rules
-    rules = ['Business stays off the table.',
-             'The washroom is at the rear. Old-fashioned plumbing.',
-             'Police officers dine with us often.',
-             'Never take sides against the family.']
-    rl = ''.join(f'<div style="display: flex; gap: 10px; margin-top: 6px"><div style="width: 8px; height: 8px; background: {ORANGE}; margin-top: 9px; flex: none"></div>'
-                 f'<div style="font-family: {BODY}; font-size: 18px; line-height: 1.3; color: {INK}">{r}</div></div>' for r in rules)
-    o.append(at(BX, 766, BW, f'<div style="background: {INK}; padding: 8px 16px 8px">'
-                f'<div style="font-family: {DISP}; font-size: 30px; line-height: 32px; color: {CARD}">House customs</div></div>'
-                f'<div style="border: 2px solid {INK}; border-top: none; padding: 4px 14px 12px">{rl}</div>'))
-    o.append(at(M, 966, FW + 8, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MID}">'
-                'Louis\', the Bronx, N.Y. Cannoli fresh daily from Nazorine\'s. No checks cashed. Printed 1946.</div>'))
+    rules = ['Old-fashioned plumbing out back.',
+             'Police officers dine here often.', 'Never side against the family.']
+    rl = ''.join(f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.3; color: {CREAM}; margin-top: 3px">{r}</div>' for r in rules)
+    o.append(at(BX, 890, BW, f'<div style="border-top: 2px solid {AMBER}; padding-top: 6px">'
+                + kicker('House customs', AMBER, 16) + rl + '</div>'))
     return page('back', ''.join(o))
 
 FACES = {'front': front(), 'back': back()}

@@ -25,18 +25,16 @@ def fit(im, w, h, box=None):
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
-PH_W, PH_H = CW - 16, 300
-tm = Image.open(S('tm-cc0.jpg')).convert('RGB')
-tm = ImageEnhance.Contrast(tm).enhance(1.05)
-r, g, b = tm.split()  # a touch of evening warmth on the stone
-tm = Image.merge('RGB', (r.point(lambda v: min(255, int(v * 1.04 + 4))), g, b.point(lambda v: int(v * 0.95))))
-fit(tm, PH_W, PH_H, (4, 96, 846, 580)).save(A('teatro-massimo.jpg'), quality=92)
+PH_W, PH_H = CW - 20, 270
+bx = Image.open(S('box.jpg')).convert('RGB')
+bx = ImageEnhance.Brightness(bx).enhance(1.7)
+bx = ImageEnhance.Contrast(bx).enhance(1.06)
+fit(bx, PH_W, PH_H, (0, 200, 3465, 1840)).save(A('the-boxes.jpg'), quality=92)
 
 BX_W, BX_H = 300, 196
-bx = Image.open(S('box.jpg')).convert('RGB')
-bx = ImageEnhance.Brightness(bx).enhance(1.75)
-bx = ImageEnhance.Contrast(bx).enhance(1.05)
-fit(bx, BX_W, BX_H, (1473, 560, 2989, 1640)).save(A('the-box.jpg'), quality=92)
+on = Image.open(S('opera-night.jpg')).convert('RGB')
+on = ImageEnhance.Brightness(on).enhance(1.12)
+fit(on, BX_W, BX_H, (360, 30, 1920, 1050)).save(A('opera-night.jpg'), quality=92)
 
 def wear(name, seed, rgb, strength):
     rnd = random.Random(seed)
@@ -73,6 +71,15 @@ def act(title, sub, color, rule, extra=''):
             f'<div style="flex: 1; height: 1px; background: {rule}"></div>'
             f'<div style="font-family: {BODY}; font-style: italic; font-size: 20px; color: {color}">{sub}</div></div>')
 
+def gilt(content, extra=''):
+    """Heavy gilt picture frame with corner rosettes, like the box fronts in the house."""
+    ros = ''.join(f'<div style="position: absolute; {v}: -9px; {h}: -9px; width: 18px; height: 18px; border-radius: 50%; '
+                  f'background: radial-gradient(circle at 40% 35%, {GOLDL} 0%, {GOLD} 45%, #7a5a22 100%); box-shadow: 0 1px 3px rgba(0,0,0,.5)"></div>'
+                  for v in ('top', 'bottom') for h in ('left', 'right'))
+    return (f'<div style="position: absolute; {extra} border: 4px solid {GOLD}; padding: 5px; background: #1a0306; '
+            f'box-shadow: 0 0 0 1px #6b4a1c, 0 0 0 3px {GOLDL}, 0 0 0 4px #6b4a1c, 0 6px 14px rgba(0,0,0,.5)">'
+            f'<div style="border: 1px solid {GOLDL}; line-height: 0">{content}</div>{ros}</div>')
+
 def frame(border, inner, content, extra=''):
     return (f'<div style="position: absolute; {extra} border: 2px solid {border}; padding: 5px">'
             f'<div style="border: 1px solid {inner}; line-height: 0">{content}</div></div>')
@@ -80,7 +87,7 @@ def frame(border, inner, content, extra=''):
 grain = '<img src="assets/paper-grain.png" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.35">'
 
 # ---------------- FRONT ----------------
-ticket = f'''<div style="position: absolute; left: 392px; top: 318px; width: 236px; height: 112px; transform: rotate(-5deg);
+ticket = f'''<div style="position: absolute; left: 386px; top: 382px; width: 236px; height: 112px; transform: rotate(-5deg);
  background: #f6eedb; box-shadow: 0 3px 8px rgba(0,0,0,.45); display: flex">
  <div style="flex: 1; padding: 10px 0 0 14px; border-right: 2px dashed #b89a5c">
   <div style="font-family: {DISP}; font-size: 14px; letter-spacing: .16em; color: {RED}">PALCO DI PRIM'ORDINE</div>
@@ -102,21 +109,23 @@ front = f'''<div style="position: relative; width: {W}px; height: {H}px; overflo
 {grain}
 <img src="assets/wear-front.png" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px">
 <div style="position: absolute; left: 18px; top: 18px; width: {W-40}px; height: {H-40}px; border: 1px solid rgba(201,161,78,.55)"></div>
-<div style="position: absolute; left: {L}px; top: 44px; width: {CW}px; text-align: center">
+<div style="position: absolute; left: 24px; top: 24px; width: {W-52}px; height: {H-52}px; border: 3px double rgba(201,161,78,.5)"></div>
+<img src="assets/velvet-valance.png" style="position: absolute; left: 0; top: 0; width: {W}px; height: 130px">
+<div style="position: absolute; left: {L}px; top: 128px; width: {CW}px; text-align: center">
  {kicker('Teatro Massimo &nbsp;&middot;&nbsp; Palermo', GOLD, 18)}
  {kicker('Stagione lirica 1979 &nbsp;&middot;&nbsp; serata di gala', GOLDL, 16, ' margin-top: 8px; letter-spacing: .2em')}
 </div>
-{frame(GOLD, 'rgba(230,205,143,.6)', f'<img src="assets/teatro-massimo.jpg" style="width: {PH_W - 14}px; height: {PH_H}px; display: block">', f'left: {L}px; top: 106px;')}
+{gilt(f'<img src="assets/the-boxes.jpg" style="width: {PH_W}px; height: {PH_H}px; display: block">', f'left: {L}px; top: 186px;')}
 {ticket}
-<div style="position: absolute; left: {L}px; top: 426px; width: 340px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.25; color: {GOLDL}">Piazza Verdi. The house has kept the curtain for Palermo since 1897.</div>
-<div style="position: absolute; left: {L}px; top: 476px; width: {CW}px; text-align: center">
- <div style="font-family: {DISP}; font-size: 58px; line-height: 1.0; color: {IVORY}; letter-spacing: .04em">CAVALLERIA<br>RUSTICANA</div>
- <div style="font-family: {BODY}; font-style: italic; font-size: 22px; color: {GOLDL}; margin-top: 10px">Melodramma in un atto di Pietro Mascagni</div>
- <div style="height: 1px; background: {GOLD}; width: 200px; margin: 14px auto 12px"></div>
+<div style="position: absolute; left: {L}px; top: 486px; width: 350px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.25; color: {GOLDL}">The boxes on a gala night, carnations on the rail.</div>
+<div style="position: absolute; left: {L}px; top: 520px; width: {CW}px; text-align: center">
+ <div style="font-family: {DISP}; font-size: 54px; line-height: 1.0; color: {IVORY}; letter-spacing: .04em">CAVALLERIA<br>RUSTICANA</div>
+ <div style="font-family: {BODY}; font-style: italic; font-size: 22px; color: {GOLDL}; margin-top: 8px">Melodramma in un atto di Pietro Mascagni</div>
+ <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: 8px auto 6px"><div style="width: 90px; height: 1px; background: {GOLD}"></div><div style="width: 9px; height: 9px; background: {GOLD}; transform: rotate(45deg)"></div><div style="width: 90px; height: 1px; background: {GOLD}"></div></div>
  <div style="font-family: {BODY}; font-size: 22px; color: {IVORY}; line-height: 1.3">Turiddu: <b>Anthony Vito Corleone</b>, in his debut</div>
  <div style="font-family: {BODY}; font-size: 19px; color: {GOLDL}; line-height: 1.3; margin-top: 4px">Tonight the house welcomes his father home to Sicily.</div>
 </div>
-<div style="position: absolute; left: {L}px; top: 726px; width: {CW}px">
+<div style="position: absolute; left: {L}px; top: 754px; width: {CW}px">
  {act('PRIMA DEL SIPARIO', 'foyer', GOLD, 'rgba(201,161,78,.7)')}
  {front_items}
 </div>
@@ -144,8 +153,8 @@ back = f'''<div style="position: relative; width: {W}px; height: {H}px; overflow
  <div style="font-family: {DISP}; font-size: 46px; line-height: 1.02; color: {INK}; margin-top: 10px; letter-spacing: .03em; white-space: nowrap">CENA DOPO L'OPERA</div>
  <div style="font-family: {BODY}; font-style: italic; font-size: 21px; color: {RED}; margin-top: 4px">Supper after the opera. Una sera in Sicilia.</div>
 </div>
-{frame(GOLD, 'rgba(125,21,32,.5)', f'<img src="assets/the-box.jpg" style="width: {BX_W}px; height: {BX_H}px; display: block">', f'left: {L}px; top: 160px;')}
-<div style="position: absolute; left: {L}px; top: 376px; width: 316px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.2; color: {INK}">The prim'ordine on opening night, white carnations on the rail.</div>
+{frame(GOLD, 'rgba(125,21,32,.5)', f'<img src="assets/opera-night.jpg" style="width: {BX_W}px; height: {BX_H}px; display: block">', f'left: {L}px; top: 160px;')}
+<div style="position: absolute; left: {L}px; top: 376px; width: 316px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.2; color: {INK}">Gala night. The Corleone party arrives.</div>
 <div style="position: absolute; left: 380px; top: 160px; width: 252px">
  {kicker('Dal camerino', RED, 16)}
  <div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: {INK}; margin-top: 8px">Papa, you came back to Sicily to hear me sing. Tonight Turiddu is for you. Stay for supper after, Mamma has promised she will.</div>

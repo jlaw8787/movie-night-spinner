@@ -73,17 +73,18 @@ def route_map():
         return np.asarray(g, dtype=float) / 255.0
 
     X, Y = np.meshgrid(np.linspace(0, 1, w), np.linspace(0, 1, h))
-    rough = 0.5 * noise(40, 12, 2) + 0.3 * noise(90, 26, 1) + 0.2 * noise(180, 52, 0)
-    ridges = 1 - np.abs(2 * noise(60, 18, 3) - 1)
-    belt = np.clip((X - 0.43) / 0.08, 0, 1) * np.clip((0.95 - X) / 0.05, 0, 1)
+    rough = 0.45 * noise(24, 7, 6) + 0.3 * noise(60, 17, 3) + 0.17 * noise(140, 40, 1) + 0.08 * noise(300, 86, 0)
+    ridges = 1 - np.abs(2 * (0.6 * noise(26, 8, 6) + 0.4 * noise(70, 20, 2)) - 1)
+    bt = np.clip((X - 0.40) / 0.14, 0, 1)
+    belt = bt * bt * (3 - 2 * bt) * np.clip((0.95 - X) / 0.05, 0, 1)
     north = np.clip((0.78 - Y) / 0.35, 0.25, 1)
-    height = 0.08 * rough + belt * north * (0.55 * ridges ** 1.6 + 0.35 * rough)
+    height = 0.025 * rough + belt * north * (0.5 * ridges ** 2.2 + 0.32 * rough)
     # lake basin
     lx, ly = 0.725, 0.24
     d2 = ((X - lx) / 0.075) ** 2 + ((Y - ly) / 0.11) ** 2
     height = height * np.clip(d2 / 2.5, 0.2, 1)
 
-    gy, gx = np.gradient(height * 260)
+    gy, gx = np.gradient(height * 150)
     shade = np.clip(0.78 + 0.34 * (-gx * 0.7 - gy * 0.7) / np.sqrt(1 + gx ** 2 + gy ** 2), 0.35, 1.25)
 
     def ramp(v):
@@ -108,20 +109,26 @@ def route_map():
     rnd = random.Random(5)
 
     # Midwest fields: a patchwork grid east of the mountains
-    for gxi in range(0, int(w * 0.42), 34):
-        for gyi in range(0, h, 30):
-            if rnd.random() < 0.55:
-                c = rnd.choice([(162, 206, 92), (186, 214, 104), (214, 204, 110), (132, 186, 80)])
-                d.rectangle([gxi + 2, gyi + 2, gxi + 32, gyi + 28], fill=c)
-    for gxi in range(0, int(w * 0.42), 34):
-        d.line([(gxi, 0), (gxi, h)], fill=(120, 150, 70), width=1)
-    for gyi in range(0, h, 30):
-        d.line([(0, gyi), (w * 0.42, gyi)], fill=(120, 150, 70), width=1)
+    lay = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    ld = ImageDraw.Draw(lay)
+    gyi = 0
+    while gyi < h:
+        rh = rnd.choice([22, 28, 34])
+        gxi = 0
+        while gxi < w * 0.42:
+            rw = rnd.choice([26, 34, 44, 52])
+            if rnd.random() < 0.6:
+                c = rnd.choice([(176, 214, 96), (206, 214, 112), (226, 206, 118), (120, 176, 70)])
+                ld.rectangle([gxi + 1, gyi + 1, gxi + rw - 1, gyi + rh - 1], fill=c + (95,))
+            gxi += rw
+        gyi += rh
+    im = Image.alpha_composite(im.convert('RGBA'), lay).convert('RGB')
+    d = ImageDraw.Draw(im)
     # soften the field edge into the foothills
     fade = Image.new('L', (w, h), 0)
     fd = ImageDraw.Draw(fade)
-    for k in range(60):
-        fd.rectangle([0, 0, int(w * (0.36 + k * 0.001)), h], fill=int(255 * (1 - k / 60)))
+    for k in range(59, -1, -1):
+        fd.rectangle([0, 0, int(w * (0.34 + k * 0.0012)), h], fill=int(255 * (1 - k / 60)))
     base = Image.fromarray(col.astype('uint8'), 'RGB')
     im = Image.composite(im, base, fade.filter(ImageFilter.GaussianBlur(30)))
     d = ImageDraw.Draw(im)
@@ -149,7 +156,6 @@ def route_map():
     # dock and rowboat
     dx0, dy0 = lxp + 40 * S, lyp + 12 * S
     d.rectangle([dx0, dy0, dx0 + 22 * S, dy0 + 4 * S], fill=(120, 80, 44), outline=INK)
-    d.ellipse([lxp - 10 * S, lyp - 4 * S, lxp + 10 * S, lyp + 4 * S], fill=(224, 69, 43), outline=INK, width=2)
 
     # pine stands
     def pine(x, y, s):
@@ -182,9 +188,9 @@ def route_map():
     for i in range(6):
         fx, fy = 0.505 + i * 0.016, 0.30 + i * 0.05 + (0.012 if i % 2 else -0.012)
         x, y = P(fx, fy)
-        d.ellipse([x - 4 * S, y - 7 * S, x + 4 * S, y + 7 * S], fill=(70, 46, 30))
+        d.ellipse([x - 3 * S, y - 5 * S, x + 3 * S, y + 5 * S], fill=(60, 38, 26))
         for t in range(4):
-            d.ellipse([x - 5 * S + t * 3 * S, y - 11 * S, x - 3 * S + t * 3 * S, y - 8 * S], fill=(70, 46, 30))
+            d.ellipse([x - 4 * S + t * 2.2 * S, y - 8 * S, x - 2.4 * S + t * 2.2 * S, y - 6.2 * S], fill=(60, 38, 26))
 
     # Spoonerville houses
     for i, (fx, fy) in enumerate([(0.03, 0.47), (0.055, 0.44), (0.075, 0.49), (0.045, 0.53)]):
@@ -198,9 +204,9 @@ def route_map():
     gd = ImageDraw.Draw(glow)
     for ang in (-62, -38, -14):
         a = math.radians(ang - 90 + 90)
-        ex, ey = sx + 150 * S * math.cos(math.radians(ang - 90)), sy + 150 * S * math.sin(math.radians(ang - 90))
-        gd.polygon([(sx - 3 * S, sy), (ex - 14 * S, ey), (ex + 14 * S, ey), (sx + 3 * S, sy)], fill=120)
-    glow = glow.filter(ImageFilter.GaussianBlur(8))
+        ex, ey = sx + 80 * S * math.cos(math.radians(ang * 0.6 - 80)), sy + 80 * S * math.sin(math.radians(ang * 0.6 - 80))
+        gd.polygon([(sx - 3 * S, sy), (ex - 14 * S, ey), (ex + 14 * S, ey), (sx + 3 * S, sy)], fill=210)
+    glow = glow.filter(ImageFilter.GaussianBlur(6))
     beam = Image.new('RGB', (w, h), (255, 236, 150))
     im = Image.composite(beam, im, glow)
     d = ImageDraw.Draw(im)
@@ -240,9 +246,9 @@ def still():
     w, h = im.size
     # 390 x 236 frame: keep the map, the wheel and both faces
     th = h
-    tw = int(th * 390 / 220)
+    tw = int(th * 390 / 240)
     left = (w - tw) // 2
-    im = im.crop((left, 0, left + tw, th)).resize((390 * 2, 220 * 2), Image.LANCZOS)
+    im = im.crop((left, 0, left + tw, th)).resize((390 * 2, 240 * 2), Image.LANCZOS)
     im = ImageEnhance.Brightness(im).enhance(1.04)
     im.save(os.path.join(A, 'still-map.jpg'), quality=90)
 

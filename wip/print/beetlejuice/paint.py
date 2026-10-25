@@ -180,13 +180,17 @@ def painting():
     g = Image.linear_gradient('L').resize((PW, PH))
     img = Image.composite(Image.new('RGB', (PW, PH), (14, 9, 20)), Image.new('RGB', (PW, PH), (48, 32, 66)), g)
     bg = Image.new('L', (PW, PH), 0)
-    ImageDraw.Draw(bg).ellipse([-200, -380, 820, 560], fill=255)
+    ImageDraw.Draw(bg).ellipse([-100, -300, 760, 520], fill=255)
     bg = bg.filter(ImageFilter.GaussianBlur(170))
-    img = Image.composite(Image.new('RGB', (PW, PH), (150, 150, 92)), img, bg.point(lambda v: int(v * 0.42)))
+    img = Image.composite(Image.new('RGB', (PW, PH), (120, 132, 70)), img, bg.point(lambda v: int(v * 0.4)))
     d = ImageDraw.Draw(img)
-    for x in (260, 700, 1140):  # attic rafters, faint
-        d.line([(x + 160, 0), (x - 120, 420)], fill=(24, 16, 32), width=40)
-        d.line([(x + 140, 0), (x - 140, 420)], fill=(70, 56, 84), width=3)
+    # bare attic bulb on its cord
+    d.line([(300, 0), (300, 96)], fill=(10, 8, 14), width=4)
+    hal = Image.new('L', (PW, PH), 0); ImageDraw.Draw(hal).ellipse([180, 20, 420, 240], fill=255)
+    img.paste((214, 222, 140), (0, 0), hal.filter(ImageFilter.GaussianBlur(50)).point(lambda v: int(v * 0.55)))
+    d = ImageDraw.Draw(img)
+    d.rectangle([288, 92, 312, 112], fill=(60, 56, 50), outline=(10, 8, 14), width=2)
+    d.ellipse([272, 108, 328, 166], fill=(250, 248, 210), outline=(150, 150, 90), width=2)
     # board top surface (flock grass), lit from the upper left
     top = wob([(30, 470), (360, 400), (760, 380), (1180, 420), (1370, 470), (1372, 1030), (900, 1100), (330, 1080), (24, 1010)], 4)
     shade_fill(img, top, (150, 166, 80), (84, 104, 50), 0.45, ow=4)
@@ -204,7 +208,7 @@ def painting():
     d.line(side + [side[0]], fill=INKC, width=4)
     d.line([(24, 1016), (330, 1086), (900, 1106), (1372, 1036)], fill=(250, 248, 236), width=2)
     # big hill with the house
-    hill = wob([(720, 640), (800, 520), (900, 430), (1020, 380), (1150, 400), (1260, 470), (1350, 560), (1370, 700), (1200, 760), (900, 760)], 4)
+    hill = wob([(700, 640), (770, 500), (880, 410), (1010, 372), (1150, 384), (1270, 436), (1350, 500), (1372, 520), (1372, 700), (1200, 760), (900, 760)], 4)
     soft_shadow(img, [(x + 30, y + 26) for x, y in hill], (30, 30, 40), 150, 30)
     shade_fill(img, hill, (186, 196, 104), (110, 132, 60), 0.4, ow=4)
     soft_shadow(img, [(1120, 380), (1372, 520), (1372, 760), (1100, 760)], (70, 56, 96), 110, 60)
@@ -241,7 +245,7 @@ def painting():
              (880, 520), (1220, 640), (170, 1070), (620, 1080), (1000, 790), (1120, 780), (1250, 760)]
     for i, (x, y) in enumerate(spots):
         items.append((y, 't', (x + R.uniform(-10, 10), y + R.uniform(-8, 8), R.uniform(24, 34) * (0.75 + y / 1400), i)))
-    items.append((640, 'm', None))
+    items.append((470, 'm', None))
     items.sort(key=lambda t: t[0])
     for y, k, a in items:
         if k == 'h':
@@ -254,12 +258,12 @@ def painting():
         elif k == 't':
             tree(img, a[0], a[1], a[2], a[3])
         elif k == 'm':
-            maitland(img, 1010, 590, 112)
+            maitland(img, 1010, 470, 96)
     # a tiny striped worm sneaking along the board edge (the sandworm motif, not a character)
     # paint finish: oil-paint blotch, lamp falloff, soft grain
     img = img.filter(ImageFilter.ModeFilter(3))
     br = Image.effect_noise((PW // 3, PH // 14), 50).resize((PW, PH), Image.BICUBIC).filter(ImageFilter.GaussianBlur(1))
-    br = br.rotate(-8, resample=Image.BICUBIC, expand=False, fillcolor=128).point(lambda v: 128 + (v - 128) // 3)
+    br = br.rotate(-8, resample=Image.BICUBIC, expand=False, fillcolor=128).point(lambda v: 128 + (v - 128) // 14)
     img = ImageChops.overlay(img, Image.merge('RGB', (br, br, br)))
     img = img.filter(ImageFilter.UnsharpMask(2, 60, 2))
     vig = Image.new('L', (PW, PH), 0)
@@ -298,7 +302,7 @@ def worm_border(name, W=816, H=1056, band=26, seg=22, light=(232, 230, 220), dar
         t += L; i += 1
     # rounded inner edge shading so the band reads as a body
     sh = Image.new('L', (w, h), 0); sd = ImageDraw.Draw(sh)
-    sd.rectangle([b * 0.55, b * 0.55, w - b * 0.55, h - b * 0.55], outline=120, width=int(b * 0.5))
+    sd.rectangle([b * 0.55, b * 0.55, w - b * 0.55, h - b * 0.55], outline=60, width=int(b * 0.4))
     sh = sh.filter(ImageFilter.GaussianBlur(8))
     dark_l = Image.new('RGBA', (w, h), (40, 20, 60, 0)); dark_l.putalpha(ImageChops.multiply(sh, img.getchannel('A')))
     img = Image.alpha_composite(img, dark_l)

@@ -18,10 +18,10 @@ DISP = "'Luckiest Guy', sans-serif"
 BODY = "'Bitter', serif"
 HAND = "'Caveat', cursive"
 
-PAPER = '#f5e4ae'
-INK = '#34204f'
-ORANGE = '#e0452b'
-CREAM = '#fbf3da'
+PAPER = '#ffd84f'
+INK = '#3a1670'
+ORANGE = '#ff5424'
+CREAM = '#fff6dc'
 
 # (spec key or None if added, printed name, price, printed description, phone note)
 SNACK = [
@@ -76,45 +76,48 @@ def group(title, items, top=0):
 
 
 def header():
-    band = ab(0, 0, W, '', f'height: 158px; background: {INK}')
-    stripe = ab(0, 158, W, '', f'height: 8px; background: {ORANGE}')
-    kick = ab(40, 42, 880, kicker('SPOONERVILLE TO THE COAST &nbsp;&#9670;&nbsp; THE BEST STOP ON THE ROAD WEST', PAPER))
-    title = ab(40, 66, 900, f'<div style="font-family: {DISP}; font-size: 70px; line-height: 76px; color: {PAPER}; text-shadow: 4px 4px 0 {ORANGE}; white-space: nowrap">LESTER&rsquo;S POSSUM PARK</div>')
-    # the singing possums show sign
-    show = ab(948, 36, 356, f'''
-      <div style="background: {ORANGE}; border: 3px solid {PAPER}; border-radius: 12px; padding: 9px 14px 10px; box-sizing: border-box; transform: rotate(-2deg)">
-        <div style="font-family: {DISP}; font-size: 31px; line-height: 34px; color: {CREAM}; text-align: center">SEE THE SINGING POSSUMS!</div>
-        <div style="margin-top: 5px; font-family: {BODY}; font-weight: 700; font-size: 18px; line-height: 22px; color: {INK}; text-align: center">Live on stage* every hour, 10 to 6</div>
+    band = ab(0, 0, W, '', f'height: 206px; background: {INK}')
+    stripe = ab(0, 206, W, '', f'height: 8px; background: {ORANGE}')
+    # marquee bulbs along the sign
+    bulbs = ''.join(ab(22 + i * 34, 190, 10, '', f'height: 10px; border-radius: 50%; background: {PAPER}; border: 2px solid {ORANGE}; box-sizing: border-box') for i in range(27))
+    top = ab(40, 40, 880, f'''<div style="display: flex; align-items: baseline; gap: 22px">
+        <div style="font-family: {DISP}; font-size: 46px; line-height: 46px; color: {ORANGE}">LESTER&rsquo;S</div>
+        <div style="font-family: {BODY}; font-weight: 800; font-size: 18px; letter-spacing: 0.2em; color: {PAPER}">THE BEST STOP ON THE ROAD WEST</div></div>''')
+    title = ab(40, 82, 900, f'<div style="font-family: {DISP}; font-size: 116px; line-height: 104px; color: {PAPER}; text-shadow: 6px 6px 0 {ORANGE}; white-space: nowrap">POSSUM PARK</div>')
+    show = ab(920, 42, 384, f'''
+      <div style="background: {ORANGE}; border: 4px solid {PAPER}; border-radius: 14px; padding: 10px 14px 12px; box-sizing: border-box; transform: rotate(-2.5deg); box-shadow: 4px 5px 0 rgba(0,0,0,0.35)">
+        <div style="font-family: {DISP}; font-size: 38px; line-height: 40px; color: {PAPER}; text-align: center">SEE THE SINGING POSSUMS!</div>
+        <div style="margin-top: 6px; font-family: {BODY}; font-weight: 800; font-size: 20px; line-height: 24px; color: {INK}; text-align: center">Live on stage* every hour, 10 to 6</div>
         <div style="margin-top: 2px; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 20px; color: {CREAM}; text-align: center">*Animatronic. They know every word.</div>
       </div>''')
-    return band + stripe + kick + title + show
-
-
-def left():
-    frame = ab(40, 186, 390, f'<img src="assets/still-map.jpg" alt="Goofy and Max in the car with the road map" style="display: block; width: 390px; height: 236px">',
-               f'border: 3px solid {ORANGE}; outline: 1px solid {INK}; box-sizing: content-box; height: 236px')
-    cap = ab(40, 434, 396, f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 22px; color: {INK}">Road trip season. Keep the map handy.</div>')
-    card = ab(46, 476, 304, f'''<div style="background: #fffaf0; padding: 7px; transform: rotate(-3deg); box-shadow: 2px 4px 8px rgba(52,32,79,0.35)">
-        <img src="assets/postcard.jpg" alt="Vintage linen postcard, Greetings from Coeur d&rsquo;Alene, Idaho" style="display: block; width: 290px; height: 180px"></div>''')
-    cardcap = ab(46, 686, 300, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 19px; color: {INK}">Idaho postcards, 10&cent; at the gift shop.</div>')
-    ticket = ab(318, 480, 128, f'''<div style="transform: rotate(7deg); background: {ORANGE}; border: 2px dashed {CREAM}; outline: 3px solid {ORANGE}; padding: 8px 6px 9px; text-align: center; box-shadow: 1px 3px 6px rgba(52,32,79,0.35)">
-        <div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.16em; line-height: 17px; color: {CREAM}">LESTER&rsquo;S</div>
-        <div style="font-family: {DISP}; font-size: 24px; line-height: 26px; color: {INK}">POSSUM PARK</div>
-        <div style="margin-top: 3px; font-family: {BODY}; font-weight: 800; font-size: 16px; line-height: 19px; color: {CREAM}">ADMIT ONE</div>
-        <div style="font-family: {BODY}; font-size: 14px; line-height: 17px; color: {INK}">No. 1995 &nbsp;Adult</div></div>''')
-    note = ab(334, 626, 112, f'<div style="transform: rotate(-4deg); font-family: {HAND}; font-weight: 600; font-size: 24px; line-height: 22px; color: #4a5a8a">Max! The possums! Love, Dad</div>')
-    return frame + cap + card + cardcap + ticket + note
+    return band + stripe + bulbs + top + title + show
 
 
 def menu():
-    a = ab(470, 186, 400, group('THE SNACK BAR', SNACK) + group('OFF THE GRILL', GRILL, 18))
-    b = ab(904, 186, 400, group('CAMPFIRE SWEETS', SWEET) + group('THE COOLER', COOLER, 18))
-    return a + b
+    T = 230
+    a = ab(40, T, 400, group('THE SNACK BAR', SNACK))
+    note = ab(52, T + 330, 384, f'''<div style="transform: rotate(-1.5deg); font-family: {HAND}; font-weight: 600; font-size: 27px; line-height: 25px; color: #2c3f8f">Max, I know it&rsquo;s not the trip you wanted. But it&rsquo;s you and me, pal.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Love you, kiddo. Dad</div>''')
+    b2 = ab(472, T, 400, group('OFF THE GRILL', GRILL) + group('CAMPFIRE SWEETS', SWEET, 18))
+    c = ab(904, T, 400, group('THE COOLER', COOLER))
+    card = ab(912, T + 238, 290, f'''<div style="background: #fffaf0; padding: 7px; transform: rotate(-3deg); box-shadow: 3px 5px 8px rgba(58,22,112,0.35)">
+        <img src="assets/postcard.jpg" alt="Vintage linen postcard, Greetings from Coeur d&rsquo;Alene, Idaho" style="display: block; width: 276px; height: 171px"></div>''')
+    ticket = ab(1176, T + 262, 124, f'''<div style="transform: rotate(8deg); background: {ORANGE}; border: 2px dashed {CREAM}; outline: 3px solid {ORANGE}; padding: 8px 6px 9px; text-align: center; box-shadow: 2px 4px 6px rgba(58,22,112,0.35)">
+        <div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.16em; line-height: 17px; color: {CREAM}">LESTER&rsquo;S</div>
+        <div style="font-family: {DISP}; font-size: 23px; line-height: 25px; color: {INK}">POSSUM PARK</div>
+        <div style="margin-top: 3px; font-family: {BODY}; font-weight: 800; font-size: 16px; line-height: 19px; color: {CREAM}">ADMIT ONE</div>
+        <div style="font-family: {BODY}; font-size: 14px; line-height: 17px; color: {INK}">No. 1995 &nbsp;Adult</div></div>''')
+    return a + note + b2 + c + card + ticket
+
+
+def still():
+    img = f'<img src="assets/still-map.jpg" alt="Goofy and Max in the car with the road map" style="display: block; width: 390px; height: 240px">'
+    cap = f'<div style="position: absolute; left: 0; bottom: 0; width: 390px; background: rgba(58,22,112,0.88); padding: 4px 10px 5px; box-sizing: border-box; font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 19px; color: {CREAM}">Road trip season. Keep the map handy, navigator.</div>'
+    return ab(40, 652, 390, img + cap, f'height: 240px; border: 3px solid {ORANGE}; box-sizing: content-box; margin: -3px')
 
 
 def route():
     lay = json.load(open(os.path.join(D, 'map_layout.json')))
-    X, Y, MW, MH = 40, 712, 1264, 176
+    X, Y, MW, MH = 450, 652, 854, 246
 
     def at(key, dx, dy, w, inner, style=''):
         fx, fy = lay[key]
@@ -124,38 +127,38 @@ def route():
         return f'<div style="font-family: {BODY}; font-weight: {weight}; font-size: {size}px; line-height: {size + 3}px; letter-spacing: {sp}; color: {col}; text-align: {align}">{t}</div>'
 
     def plate(inner, align='left'):
-        return f'<div style="text-align: {align}"><div style="display: inline-block; background: rgba(251,243,218,0.9); border-radius: 4px; padding: 2px 6px 3px">{inner}</div></div>'
+        return f'<div style="text-align: {align}"><div style="display: inline-block; background: rgba(255,246,220,0.92); border-radius: 4px; padding: 2px 6px 3px">{inner}</div></div>'
 
     def dot(key, r=7, col=INK):
         return at(key, -r, -r, 2 * r, '', f'height: {2 * r}px; border-radius: 50%; background: {col}; border: 2px solid {CREAM}; box-sizing: border-box')
 
     out = [ab(X, Y, MW, f'<img src="assets/route-map.png" alt="" style="display: block; width: {MW}px; height: {MH}px">',
               f'height: {MH}px; border: 3px solid {INK}; box-sizing: content-box; margin: -3px')]
-    out.append(ab(X + 14, Y + 10, 330, f'<div style="display: inline-block; background: {INK}; padding: 5px 12px 4px; border-radius: 6px">{lab("THE ROAD WEST, FROM OUR DOOR", 16, PAPER)}</div>'))
+    out.append(ab(X + 10, Y + 10, 300, f'<div style="display: inline-block; background: {INK}; padding: 5px 12px 4px; border-radius: 6px; white-space: nowrap">{lab("THE ROAD WEST", 16, PAPER)}</div>'))
     out.append(dot('spoonerville'))
-    out.append(at('spoonerville', 4, 20, 170, plate(lab('SPOONERVILLE') + lab('Home sweet home', 16, INK, 400, '0'))))
-    out.append(at('possum', -16, -16, 32, f'<div style="font-family: {DISP}; font-size: 34px; line-height: 32px; color: {ORANGE}; text-align: center">&#9733;</div>'))
-    out.append(at('possum', -100, 18, 200, plate(lab('YOU ARE HERE', 16, ORANGE, 800, '0.12em', 'center') + lab('Lester&rsquo;s Possum Park', 16, INK, 700, '0', 'center'), 'center')))
+    out.append(at('spoonerville', -14, 16, 170, plate(lab('SPOONERVILLE') + lab('Home sweet home', 16, INK, 400, '0'))))
+    out.append(at('possum', -18, -20, 36, f'<div style="font-family: {DISP}; font-size: 38px; line-height: 36px; color: {ORANGE}; text-align: center">&#9733;</div>'))
+    out.append(at('possum', -124, -66, 200, plate(lab('YOU ARE HERE', 16, ORANGE, 800, '0.12em', 'center') + lab('Lester&rsquo;s Possum Park', 16, INK, 700, '0', 'center'), 'center')))
     out.append(dot('fork', 6))
-    out.append(at('fork', -100, -60, 200, plate(lab('THE FORK', 16, INK, 800, '0.1em', 'center') + lab('Pick a road, any road', 16, INK, 400, '0', 'center'), 'center')))
-    out.append(at('bigfoot', -100, -62, 200, plate(lab('BIGFOOT COUNTRY', 16, INK, 800, '0.06em', 'center') + lab('Lock your cooler', 16, INK, 400, '0', 'center'), 'center')))
+    out.append(at('fork', -80, -64, 200, plate(lab('THE FORK', 16, INK, 800, '0.1em', 'center') + lab('Pick a road, any road', 16, INK, 400, '0', 'center'), 'center')))
+    out.append(at('bigfoot', -90, 52, 180, plate(lab('BIGFOOT COUNTRY', 16, INK, 800, '0.04em', 'center') + lab('Lock your cooler', 16, INK, 400, '0', 'center'), 'center')))
     out.append(dot('lake', 7, ORANGE))
-    out.append(at('lake', 80, -28, 200, plate(lab('LAKE DESTINY, IDAHO', 16, INK) + lab('The big ones bite here', 16, INK, 400, '0'))))
+    out.append(at('lake', -250, -40, 200, plate(lab('LAKE DESTINY', 16, INK) + lab('Idaho. Big ones bite.', 16, INK, 400, '0'))))
+    out.append(at('desert', -110, -28, 220, plate(lab('Fill up before the desert', 16, INK, 400, '0', 'center'), 'center')))
     out.append(dot('neptune', 5))
-    out.append(at('neptune', -70, 8, 140, plate(lab('Neptune Inn', 16, INK, 700, '0', 'center'), 'center')))
+    out.append(at('neptune', -40, -38, 120, plate(lab('Neptune Inn', 16, INK, 700, '0', 'center'), 'center')))
     out.append(dot('la', 7, ORANGE))
-    out.append(at('la', -236, -62, 240, f'''<div style="background: {INK}; border: 2px solid {ORANGE}; border-radius: 6px; padding: 4px 10px 5px; text-align: center">
+    out.append(at('la', -236, -76, 240, f'''<div style="background: {INK}; border: 2px solid {ORANGE}; border-radius: 6px; padding: 4px 10px 5px; text-align: center">
         <div style="font-family: {DISP}; font-size: 20px; line-height: 22px; color: {ORANGE}">POWERLINE &middot; LIVE IN L.A.</div>
         <div style="font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 19px; color: {PAPER}">Final night of the world tour</div></div>'''))
-    # compass: the strip map runs west to the right
-    out.append(ab(X + MW - 64, Y + MH - 66, 52, f'''<div style="width: 52px; height: 52px; border-radius: 50%; background: {CREAM}; border: 2px solid {INK}; box-sizing: border-box; text-align: center">
-        <div style="font-family: {DISP}; font-size: 22px; line-height: 50px; color: {INK}">W&#8594;</div></div>'''))
+    out.append(ab(X + MW - 58, Y + 10, 46, f'''<div style="width: 46px; height: 46px; border-radius: 50%; background: {CREAM}; border: 2px solid {INK}; box-sizing: border-box; text-align: center">
+        <div style="font-family: {DISP}; font-size: 20px; line-height: 44px; color: {INK}">W&#8594;</div></div>'''))
     return ''.join(out)
 
 
 def footer():
-    l = ab(40, 900, 700, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 18px; color: {INK}">Prices subject to change. Placemat No. 95. Printed in U.S.A. 1995.</div>')
-    r = ab(744, 900, 560, f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 18px; color: {INK}; text-align: right">Please do not feed the possums. They are robots.</div>')
+    l = ab(40, 903, 640, f'<div style="font-family: {BODY}; font-size: 16px; line-height: 17px; color: {INK}">Prices subject to change. Placemat No. 95. Printed in U.S.A. 1995.</div>')
+    r = ab(744, 903, 560, f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 17px; color: {INK}; text-align: right">Please do not feed the possums. They are robots.</div>')
     return l + r
 
 
@@ -167,8 +170,8 @@ def finish():
 
 body = f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}">
   {header()}
-  {left()}
   {menu()}
+  {still()}
   {route()}
   {footer()}
   {finish()}

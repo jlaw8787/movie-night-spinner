@@ -27,17 +27,17 @@ def fit(im, w, h, box=None):
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
-def soften(im, boxes, r=9):
+def soften(im, boxes, r=9, feather=6):
     """Melt signs and badges so no brand reads."""
     blur = im.filter(ImageFilter.GaussianBlur(r))
     m = Image.new('L', im.size, 0); md = ImageDraw.Draw(m)
     for b in boxes: md.rectangle(b, fill=255)
-    m = m.filter(ImageFilter.GaussianBlur(6))
+    m = m.filter(ImageFilter.GaussianBlur(feather))
     return Image.composite(blur, im, m)
 
 HERO_W, HERO_H = CW - 12, 290
 win = Image.open(S('o-n0iWJRwSqxxm89Ux9gopzFlH5ti.jpg')).convert('RGB')
-win = soften(win, [(735, 440, 1150, 735)], 26)           # beer neon between the two men melts to plain glow
+win = soften(win, [(760, 450, 1140, 770)], 40, 34)           # beer neon between the two men melts to plain glow
 win = ImageEnhance.Brightness(win).enhance(1.1)
 fit(win, HERO_W, HERO_H, (60, 40, 1880, 1060)).save(A('the-window-at-night.jpg'), quality=90)
 
@@ -139,7 +139,7 @@ def neon_sign(top):
             f'border: 4px solid #ffb3a8; border-radius: 26px; box-shadow: 0 0 8px {RED}, 0 0 20px rgba(196,47,39,0.8), 0 0 2px #fff"></div>'
             f'<div style="position: absolute; left: 26px; top: {top + 20}px; width: 548px; text-align: center">'
             f'{kicker("187th Street &amp; Belmont Ave. &nbsp;The Bronx", GOLD, 17)}'
-            f'<div style="font-family: {DISP}; font-size: 138px; line-height: 1.02; color: #fff6ea; margin-top: 0; text-shadow: {glow}">Chez Bippy</div>'
+            f'<div style="font-family: {DISP}; font-size: 118px; line-height: 1.12; white-space: nowrap; color: #fff6ea; margin-top: 2px; text-shadow: {glow}">Chez Bippy</div>'
             f'<div style="display: flex; justify-content: center; align-items: center; gap: 14px; margin-top: -2px">'
             f'<div style="width: 46px; height: 3px; background: {GOLD}; box-shadow: 0 0 6px {GOLD}"></div>'
             f'{kicker("Bar &amp; Kitchen &nbsp;Cash only", GOLD, 17)}'
@@ -159,24 +159,23 @@ def front():
     o.append(f'<div style="position: absolute; left: {L}px; top: 650px; width: 286px">'
              f'{kicker("A word from the owner", RED, 17)}'
              f'<div style="font-family: {BODY}; font-weight: 500; font-size: 20px; line-height: 1.2; color: {GREEN}; margin-top: 5px">'
-             f'Eat, have a drink, leave the dice alone. Eddie, that means you.</div>'
-             f'<div style="font-family: {DISP}; font-size: 34px; line-height: 1; color: {GREEN}; margin-top: 0">Sonny</div></div>')
+             f'Eat, have a drink, leave the dice alone.<br>Eddie, that means you.'
+             f'<span style="font-family: {DISP}; font-size: 34px; line-height: 0; color: {GREEN}; margin-left: 14px; position: relative; top: 4px">Sonny</span></div></div>')
     transfer(o, 328, 626)
 
     bar = (item('Fried stuffed olives', '.60', 'Big green olives packed with sharp provolone, crackling crumb, lemon garlic mayonnaise, a pinch of chili.', 8)
            + item('Garlic knots', '.40', 'Hot from the oven, brushed with butter, parsley and grated parmesan.', 12)
            + item('Sausage &amp; peppers hero', '.75', 'Sweet fennel links, soft onions, green peppers, seeded roll.', 12))
-    o.append(title('From the bar', 'Kitchen till midnight', 790))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 852px; width: {CW}px">{bar}</div>')
+    o.append(title('From the bar', 'Kitchen till midnight', 770))
+    o.append(f'<div style="position: absolute; left: {L}px; top: 832px; width: {CW}px">{bar}</div>')
 
     # the boy between two fathers: one line from the bus, one from the bar
     def say(k, line, color):
-        return (f'<div style="width: 250px">{kicker(k, RED, 16, " white-space: nowrap;")}'
-                f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1.02; color: {color}; margin-top: 5px">{line}</div></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 1072px; width: {CW}px; border-top: 1px solid rgba(23,59,44,0.35); padding-top: 10px; '
-             f'display: flex; justify-content: space-between">'
+        return (f'<div style="display: flex; align-items: baseline; gap: 16px; height: 40px">'
+                f'<div style="width: 176px; flex: none">{kicker(k, RED, 16, " white-space: nowrap;")}</div>'
+                f'<div style="font-family: {DISP}; font-size: 34px; line-height: 1.1; white-space: nowrap; color: {color}">{line}</div></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 1068px; width: {CW}px; border-top: 1px solid rgba(23,59,44,0.35); padding-top: 8px">'
              + say('Heard on the bus', 'Don&rsquo;t waste your talent.', BLUE)
-             + f'<div style="width: 1px; background: rgba(23,59,44,0.35)"></div>'
              + say('Heard at the bar', 'Mantle? Nobody cares.', RED) + '</div>')
     return page(''.join(o), 'front')
 
@@ -188,47 +187,46 @@ def jukebox(o, top):
               ('A2', 'Egg cream', '.20', 'Chocolate syrup, cold milk, seltzer.'),
               ('B1', 'Draft beer', '.15', ''),
               ('B2', 'Rye &amp; ginger', '.50', ''))
-    def strip(c, n, p, d):
+    def strip(c, n, p, d, fs=26):
         dd = (f'<div style="font-family: {BODY}; font-weight: 500; font-size: 18px; line-height: 1.12; color: {MUTE}">{d}</div>' if d else '')
         return (f'<div style="background: #fffaf0; box-sizing: border-box; position: relative; padding: 8px 10px 9px">'
                 f'<div style="position: absolute; left: 0; top: 0; width: 100%; height: 5px; background: {RED}"></div>'
                 f'<div style="position: absolute; left: 0; bottom: 0; width: 100%; height: 5px; background: {BLUE}"></div>'
-                f'<div style="display: flex; justify-content: space-between; align-items: baseline; font-family: {BODY}; font-weight: 700; font-size: 26px; '
-                f'line-height: 1.05; color: {GREEN}; text-transform: uppercase; letter-spacing: 0.01em; white-space: nowrap">'
+                f'<div style="display: flex; justify-content: space-between; align-items: baseline; font-family: {BODY}; font-weight: 700; font-size: {fs}px; '
+                f'line-height: 1.05; color: {GREEN}; text-transform: uppercase; letter-spacing: 0.01em; white-space: nowrap; gap: 8px">'
                 f'<span><span style="color: {RED}; font-size: 18px; margin-right: 7px">{c}</span>{n}</span><span style="color: {RED}">{p}</span></div>{dd}</div>')
     full = ''.join(strip(*x) for x in strips[:2])
-    half = ''.join(strip(*x) for x in strips[2:])
-    tube = lambda side: (f'<div style="position: absolute; {side}: 18px; top: 128px; width: 22px; height: 236px; border-radius: 11px; '
+    half = ''.join(strip(*x, fs=23) for x in strips[2:])
+    tube = lambda side: (f'<div style="position: absolute; {side}: 18px; top: 122px; width: 22px; height: 210px; border-radius: 11px; '
                          f'background: linear-gradient(180deg, {GOLD} 0%, #f07a3a 30%, {RED} 55%, #6a8fd6 80%, {BLUE} 100%); '
                          f'box-shadow: 0 0 10px rgba(227,176,75,0.8); border: 2px solid #f4e2b0"></div>')
-    bubbles = lambda side: ''.join(f'<div style="position: absolute; {side}: {25 + (k % 2) * 4}px; top: {150 + k * 34}px; width: 8px; height: 8px; '
+    bubbles = lambda side: ''.join(f'<div style="position: absolute; {side}: {25 + (k % 2) * 4}px; top: {140 + k * 30}px; width: 8px; height: 8px; '
                                    f'border-radius: 50%; background: rgba(255,250,235,0.85)"></div>' for k in range(6))
-    grille = ''.join(f'<div style="height: 5px; margin-top: 5px; border-radius: 3px; background: linear-gradient(90deg, #8d8a80, #f2efe6 50%, #8d8a80)"></div>' for _ in range(4))
+    grille = ''.join(f'<div style="height: 5px; margin-top: 5px; border-radius: 3px; background: linear-gradient(90deg, #8d8a80, #f2efe6 50%, #8d8a80)"></div>' for _ in range(3))
     buttons = ''.join(f'<div style="width: 34px; height: 20px; border-radius: 4px; background: #fffaf0; border: 2px solid {GOLD}; box-sizing: border-box; '
                       f'font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 16px; text-align: center; color: {GREEN}">{b}</div>' for b in ('A', 'B', '1', '2'))
-    o.append(f'<div style="position: absolute; left: {L}px; top: {top}px; width: {CW}px; height: 452px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: {top}px; width: {CW}px; height: 410px">'
              # cabinet with neon arch
-             f'<div style="position: absolute; left: 0; top: 0; width: {CW}px; height: 452px; box-sizing: border-box; background: {GREEN}; '
+             f'<div style="position: absolute; left: 0; top: 0; width: {CW}px; height: 410px; box-sizing: border-box; background: {GREEN}; '
              f'border: 5px solid #ffb3a8; border-radius: 260px 260px 18px 18px; box-shadow: 0 0 10px {RED}, 0 0 22px rgba(196,47,39,0.7)"></div>'
-             f'<div style="position: absolute; left: 16px; top: 16px; width: {CW - 32}px; height: 420px; box-sizing: border-box; '
+             f'<div style="position: absolute; left: 16px; top: 16px; width: {CW - 32}px; height: 378px; box-sizing: border-box; '
              f'border: 3px solid {GOLD}; border-radius: 244px 244px 10px 10px"></div>'
              + tube('left') + tube('right') + bubbles('left') + bubbles('right') +
-             f'<div style="position: absolute; left: 0; top: 34px; width: {CW}px; text-align: center">'
-             f'{kicker("Doo-wop on the box", GOLD, 16)}'
+             f'<div style="position: absolute; left: 0; top: 40px; width: {CW}px; text-align: center">'
              f'<div style="font-family: {DISP}; font-size: 52px; line-height: 1; color: #fff6ea; margin-top: 2px; '
              f'text-shadow: 0 0 4px #fff, 0 0 10px {RED}, 0 0 20px rgba(196,47,39,0.8)">The jukebox corner</div>'
-             f'{kicker("Three plays a quarter", GOLD, 15, " margin-top: 4px;")}</div>'
+             f'{kicker("Doo-wop. Three plays a quarter", GOLD, 15, " margin-top: 4px;")}</div>'
              # title strip window
-             f'<div style="position: absolute; left: 54px; top: 132px; width: {CW - 108}px; box-sizing: border-box; padding: 6px; background: #0e2419; '
+             f'<div style="position: absolute; left: 54px; top: 122px; width: {CW - 108}px; box-sizing: border-box; padding: 6px; background: #0e2419; '
              f'border: 3px solid #d9d4c6; border-radius: 6px">'
              f'<div style="display: grid; grid-template-columns: 1fr; row-gap: 5px">{full}'
              f'<div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 5px">{half}</div></div></div>'
              # selector buttons and grille
-             f'<div style="position: absolute; left: 54px; top: 372px; width: {CW - 108}px; display: flex; justify-content: space-between; align-items: center">'
+             f'<div style="position: absolute; left: 54px; top: 338px; width: {CW - 108}px; display: flex; justify-content: space-between; align-items: center">'
              f'<div style="display: flex; gap: 6px">{buttons}</div>'
              f'<div style="width: 50px; height: 20px; border-radius: 4px; background: {RED}; box-sizing: border-box; border: 2px solid {GOLD}; '
              f'font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 16px; text-align: center; color: #fff6ea">25&cent;</div></div>'
-             f'<div style="position: absolute; left: 70px; top: 396px; width: {CW - 140}px">{grille}</div>'
+             f'<div style="position: absolute; left: 70px; top: 360px; width: {CW - 140}px">{grille}</div>'
              '</div>')
 
 def back():
@@ -243,10 +241,10 @@ def back():
 
     o.append(photo('the-block-1964.jpg', 'A Bronx street of six-storey walk-ups, an old sedan stripped at the curb with its hood up',
                    L, 384, BLK_W, BLK_H, GREEN))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 664px; width: 310px; font-family: {BODY}; font-style: italic; font-weight: 500; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 658px; width: 310px; font-family: {BODY}; font-style: italic; font-weight: 500; '
              f'font-size: 18px; line-height: 1.2; color: {MUTE}">Up the block. Somebody forgot to lock it.</div>')
     doortest(o, 364, 392)
-    jukebox(o, 700)
+    jukebox(o, 698)
     o.append(f'<div style="position: absolute; left: {L}px; top: 1160px; width: {CW}px; display: flex; justify-content: space-between; align-items: flex-end; '
              f'font-family: {BODY}; font-weight: 500; font-size: 15px; line-height: 1.2; color: {MUTE}; transform: translateY(-100%)">'
              f'<div>No motorcycles on the sidewalk.<br>Door locks at closing. Now youse can&rsquo;t leave.</div>'
