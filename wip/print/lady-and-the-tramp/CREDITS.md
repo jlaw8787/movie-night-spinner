@@ -1,0 +1,4 @@
+# Lady and the Tramp menu (Tony's, the back alley table, about 1910), image credits
+- still-spaghetti.jpg (front, hero): TMDB still /xJbWJK3NAMCzknfCFdMUYekNezS.jpg (Lady and the Tramp, 1955), listed in data/film-stills.json. Shared spaghetti strand by candlelight. Lightly brightened, no tint.
+- avenue-1905.jpg (back): "Residences on upper Genesee Street, Utica, N.Y.", c1905, Detroit Publishing Co., Library of Congress, item https://www.loc.gov/item/2016804622/ , master https://tile.loc.gov/storage-services/master/pnp/det/4a10000/4a12000/4a12300/4a12358u.tif . Rights: "No known restrictions on publication." Cropped off the plate caption, warm sepia duotone. No signs or brand names visible.
+- paper-grain.png: shared house grain from jurassic/src/assets. border-*.png (woven gingham), check-strip.png, light-front.png, wear-back.png, licence-tag.png painted in build.py.

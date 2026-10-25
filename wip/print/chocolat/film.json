@@ -1,0 +1,11 @@
+{
+ "fmt": "chocolaterie",
+ "fn": "fmtChocolaterie",
+ "faces": ["front.html", "back.html"],
+ "names": ["Front", "Back"],
+ "mm": [215.9, 279.4],
+ "fonts": "family=Berkshire+Swash&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Parisienne",
+ "fams": ["Berkshire Swash", "Cormorant Garamond", "Parisienne"],
+ "phone": {"disp": "'Berkshire Swash',serif", "title": "'Berkshire Swash',serif", "name": "'Cormorant Garamond',serif", "body": "'Cormorant Garamond',serif", "price": "'Cormorant Garamond',serif", "note": "'Cormorant Garamond',serif"},
+ "build": "python3 paint.py && python3 build.py && python3 shot.py"
+}
