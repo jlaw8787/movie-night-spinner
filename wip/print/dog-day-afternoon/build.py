@@ -86,7 +86,7 @@ def front():
         section('Heroes', 'Hot, on Italian bread') +
         dish('Meatball parmigiana', 'Beef and pork meatballs, tomato sauce, melted mozzarella.', '1.25') +
         dish('Sausage and peppers', 'Sweet fennel links with green peppers and onions fried soft.', '1.25') +
-        dish('Eggplant parmigiana', 'Fried crisp, then baked with tomato and romano.', '1.10')
+        dish('Eggplant parmigiana', 'Fried crisp, baked under the sauce.', '1.10')
     )
     cols = (f'<div style="position: absolute; left: {L}px; top: 392px; width: 336px">{pies}</div>'
             f'<div style="position: absolute; left: {L + 368}px; top: 392px; width: {CW - 368}px">{heroes}</div>')
