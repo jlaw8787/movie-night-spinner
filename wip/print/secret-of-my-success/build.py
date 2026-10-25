@@ -93,7 +93,8 @@ CAF_INTRO = ('<p style="margin: 0 0 22px">The Employee Cafeteria on the lower le
 CAF_LEFT = col([('AT THE COUNTER', [
     ('EGG ON A ROLL', '.85', 'Fried egg and American cheese on a kaiser roll, until 10:30.'),
     ('MAIL RUN SANDWICH', '1.75', 'Ham, cheddar and pickle on buttered white bread, crusts off, cut in fingers, in wax paper.'),
-    ('KANSAS CORN FRITTERS', '1.10', 'Sweet corn and scallions in an egg batter, dropped by the spoonful and fried golden. Sour cream for dipping.')])])
+    ('KANSAS CORN FRITTERS', '1.10', 'Sweet corn and scallions in an egg batter, dropped by the spoonful and fried golden. Sour cream for dipping.'),
+    ('TUNA ON RYE', '1.60', 'With celery and mayonnaise, lettuce, seeded rye.')])])
 CAF_RIGHT = col([('HOT PLATE', [
     ('BUTTERMILK FRIED CHICKEN', '3.95', 'Soaked overnight, rolled in seasoned flour and cooked crisp. Mashed potatoes, pan gravy.'),
     ('SOUP OF THE DAY', '.90', 'Cup, with oyster crackers.')]),

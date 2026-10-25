@@ -142,6 +142,8 @@ def outside():
       <div style="margin-top: 18px">{head('We also do')}</div>
       <div style="margin-top: 9px">{al}</div>
       <p style="margin: 4px 0 0; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {BODY}">Carriage and rowboat not included.</p>
+      <div style="margin-top: 12px; height: 1px; background: {INK}"></div>
+      <p style="margin: 7px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.38; color: {BODY}; text-wrap: pretty">Gift certificates in any amount, for any party.</p>
     </div>
     <div style="position: absolute; left: {LX}px; top: 706px; width: {PW}px; border-top: 4px solid {INK}; padding-top: 9px; display: flex; justify-content: space-between; align-items: flex-start">
       <div>
@@ -166,13 +168,13 @@ def outside():
 
 
 def inside():
-    box = f'''<div id="party" style="position: absolute; left: {LX}px; top: PARTYTOP px; width: {PW}px; height: 76px">
-      {tint(0, 0, PW, 76)}
-      <div style="position: absolute; left: 16px; top: 9px; width: {PW - 32}px">
-        <div style="display: flex; justify-content: space-between; align-items: baseline">
+    box = f'''<div id="party" style="position: absolute; left: {LX}px; top: PARTYTOP px; width: {PW}px; height: 72px">
+      {tint(0, 0, PW, 72)}
+      <div style="position: absolute; left: 16px; top: 7px; width: {PW - 32}px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; line-height: 1.1">
           <span style="font-family: {SANS}; font-weight: 700; font-size: 15px; letter-spacing: 0.08em; color: {INK}">A COCKTAIL PARTY FOR TWELVE</span>
           <span style="font-family: {SANS}; font-weight: 700; font-size: 18px; color: {INK}">145.00</span></div>
-        <p style="margin: 4px 0 0; font-family: {SERIF}; font-size: 14px; line-height: 1.35; color: {INK}; text-wrap: pretty">Two pitchers of Manhattans, two dozen shrimp, two dozen toasts, one cheesecake, coffee for thirty and a waiter.</p></div></div>'''.replace("PARTYTOP px", "700px")
+        <p style="margin: 3px 0 0; font-family: {SERIF}; font-size: 14px; line-height: 1.3; color: {INK}; text-wrap: pretty">Two pitchers of Manhattans, two dozen shrimp, two dozen toasts, one cheesecake, coffee for thirty and a waiter.</p></div></div>'''.replace("PARTYTOP px", "704px")
     foot = f'''<div style="position: absolute; left: {RX}px; top: 740px; width: {PW}px; border-top: 4px solid {INK}; padding-top: 8px; display: flex; justify-content: space-between; align-items: baseline">
       <span style="font-family: {SERIF}; font-style: italic; font-size: 16px; color: {INK}">Nothing here is overrated.</span>
       <span style="font-family: {SANS}; font-weight: 600; font-size: 13px; letter-spacing: 0.2em; color: {INK}">(212) 555-0179</span></div>'''

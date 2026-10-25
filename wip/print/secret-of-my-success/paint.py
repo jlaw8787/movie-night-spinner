@@ -187,7 +187,7 @@ def ticks():
         im = im.rotate(r.uniform(-8, 4), resample=Image.BICUBIC)
         im.filter(ImageFilter.GaussianBlur(0.3)).save(os.path.join(A, f'pen-initials-{i}.png'), optimize=True)
 
-wear('front', 11); wear('back', 23)
+wear('front', 11); wear('back', 27)
 fade('front', 31); fade('back', 41)
 staple(); stamp(); ticks()
 print('paint done')

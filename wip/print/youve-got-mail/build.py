@@ -117,7 +117,7 @@ def overlays(face):
 
 for face in ('front', 'back'):
     b = open(os.path.join(D, face + '.body.html')).read()
-    b = (b.replace('{{LOCKUP}}', lockup(48, True)).replace('{{LOCKUP_SM}}', '<div style="flex-shrink: 0">' + lockup(22, False) + '</div>')
+    b = (b.replace('{{LOCKUP}}', lockup(48, True)).replace('{{LOCKUP_SM}}', '<div style="flex-shrink: 0">' + lockup(20, False) + '</div>')
           .replace('{{BAR}}', bar()).replace('{{FOOD}}', food()).replace('{{STORE}}', store()))
     i = b.rindex('</div>')
     b = b[:i] + overlays(face) + b[i:]

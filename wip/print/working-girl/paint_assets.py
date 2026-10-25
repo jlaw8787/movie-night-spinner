@@ -1,47 +1,162 @@
-"""Paints the soft textures and pencil marks for the Petty Marsh dining room card.
-Card is 4.25 x 11 in, 408 x 1056 CSS px; textures are painted at 2x."""
+"""Paints the print textures and art for the Liberty View Manor party menu (Working Girl, 1988).
+Sheet is US letter, 816 x 1056 CSS px; everything is painted at 2x.
+Two-ink offset look: harbor navy plus ferry orange on pale blue card stock."""
 import os, random, math
-from PIL import Image, ImageDraw, ImageFilter
-D = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets')
-W, H = 816, 2112
+from PIL import Image, ImageDraw, ImageFilter, ImageOps, ImageEnhance, ImageChops
 
-def mottle(seed, alpha):
+HERE = os.path.dirname(os.path.abspath(__file__))
+A = os.path.join(HERE, 'assets')
+PAPER = (221, 228, 229)
+NAVY = (31, 43, 78)
+ORANGE = (214, 98, 44)
+
+
+def halftone(gray, pitch, angle, gain=1.0, ss=3):
+    """gray: L image where 255 = full ink. Returns L mask (255 = ink) of round dots on a rotated screen."""
+    w, h = gray.size
+    big = gray.resize((w * ss, h * ss), Image.BICUBIC)
+    rot = big.rotate(angle, expand=True, resample=Image.BICUBIC, fillcolor=0)
+    rw, rh = rot.size
+    out = Image.new('L', (rw, rh), 0)
+    d = ImageDraw.Draw(out)
+    p = pitch * ss
+    px = rot.load()
+    y = p / 2
+    while y < rh:
+        x = p / 2
+        while x < rw:
+            v = px[int(x), int(y)] / 255.0
+            if v > 0.02:
+                r = math.sqrt(min(1.0, v * gain)) * p * 0.72
+                r *= random.uniform(0.93, 1.07)  # slightly ragged ink
+                d.ellipse((x - r, y - r, x + r, y + r), fill=255)
+            x += p
+        y += p
+    back = out.rotate(-angle, expand=True, resample=Image.BICUBIC)
+    bw, bh = back.size
+    back = back.crop(((bw - w * ss) // 2, (bh - h * ss) // 2, (bw - w * ss) // 2 + w * ss, (bh - h * ss) // 2 + h * ss))
+    return back.resize((w, h), Image.LANCZOS)
+
+
+def multiply(base, color, mask, strength):
+    ink = Image.new('RGB', base.size, color)
+    tinted = ImageChops.multiply(base, ink)
+    m = mask.point(lambda v: int(v * strength))
+    return Image.composite(tinted, base, m)
+
+
+def skyline(w=520, h=860):
+    """TMDB publicity still (/obybnndTx4I0rUaBvGpjX2nSftT.jpg), cropped to the left edge only: the downtown
+    towers over the water, no people. Printed as a two-ink duotone: a navy key plate from the cool channel and
+    an orange plate in the warm stone, out of register by about 1.5 CSS px."""
+    src = Image.open(os.path.join(HERE, 'src', 'skyline-still.jpg')).convert('RGB')
+    bw = 578
+    box = (0, 1730 - int(bw * h / w), bw, 1730)
+    im = src.crop(box).resize((w, h), Image.LANCZOS)
+    im = ImageEnhance.Sharpness(im).enhance(1.6)
+    r, g, b = im.split()
+    val = ImageChops.lighter(ImageChops.lighter(r, g), b)
+    key = ImageOps.invert(val).point(lambda v: max(0, min(255, int((v - 48) * 1.45))))
+    warm = ImageChops.subtract(r, b)
+    warm = ImageOps.autocontrast(warm, cutoff=1).point(lambda v: max(0, int((v - 40) * 0.7)))
+    sky = ImageChops.subtract(b, r).point(lambda v: 70 if v > 40 else int(v * 1.6))  # flat orange-free sky
+    random.seed(11)
+    navy_m = halftone(key, 4.4, 45, gain=1.0)
+    random.seed(12)
+    org_m = halftone(warm, 4.4, 15, gain=0.9)
+    shifted = Image.new('L', (w, h), 0)
+    shifted.paste(org_m, (3, 2))
+    base = Image.new('RGB', (w, h), PAPER)
+    base = multiply(base, ORANGE, shifted, 0.85)
+    base = multiply(base, NAVY, navy_m, 0.95)
+    base.save(os.path.join(A, 'photo-skyline.png'))
+
+
+def tint_tile(color, name, cell=12, frac=0.32):
+    """A 45 degree flat screen tint (one tile = two dots), used behind panels so tints are dots, not flat fills."""
+    ss = 4
+    t = Image.new('RGBA', (cell * ss, cell * ss), (0, 0, 0, 0))
+    d = ImageDraw.Draw(t)
+    r = math.sqrt(frac / math.pi) * cell * ss * 0.72
+    for cx, cy in ((0, 0), (cell * ss, 0), (0, cell * ss), (cell * ss, cell * ss), (cell * ss / 2, cell * ss / 2)):
+        d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=color + (235,))
+    t = t.resize((cell, cell), Image.LANCZOS)
+    t.save(os.path.join(A, name))
+
+
+def mottle(seed, w=1632, h=2112):
+    """Soft card-stock mottling, a darker handled edge, and a faint thumb smudge. Low detail by design."""
     random.seed(seed)
-    small = Image.new('L', (17, 44), 128)
+    small = Image.new('L', (12, 16), 128)
     px = small.load()
-    for y in range(44):
-        for x in range(17): px[x, y] = random.randint(96, 160)
-    big = small.resize((W, H), Image.BICUBIC).filter(ImageFilter.GaussianBlur(60))
-    out = Image.new('RGBA', (W, H))
-    o = out.load(); b = big.load()
-    for y in range(H):
-        for x in range(W):
-            v = b[x, y] - 128
-            # edge wear: darken toward the edges, more at corners
-            dx = min(x, W - 1 - x) / W; dy = min(y, H - 1 - y) / H
-            e = max(0, 1 - min(dx * 9, dy * 22))
-            a = max(0, v) * alpha + e * e * 70
-            o[x, y] = (120, 104, 72, int(min(a, 90)))
+    for y in range(16):
+        for x in range(12):
+            px[x, y] = random.randint(100, 156)
+    big = small.resize((w, h), Image.BICUBIC).filter(ImageFilter.GaussianBlur(70))
+    a = big.point(lambda v: max(0, v - 128) * 0.55)
+    # edge wear
+    edge = Image.new('L', (w, h), 0)
+    ed = ImageDraw.Draw(edge)
+    for i in range(40):
+        ed.rectangle((i, i, w - 1 - i, h - 1 - i), outline=int(70 - i * 1.7))
+    edge = edge.filter(ImageFilter.GaussianBlur(10))
+    a = ImageChops.add(a, edge)
+    # corner rubbed where it was held
+    c = Image.new('L', (w, h), 0)
+    cd = ImageDraw.Draw(c)
+    cx, cy = (w - 60, h - 60) if seed % 2 else (60, h - 70)
+    cd.ellipse((cx - 220, cy - 160, cx + 220, cy + 160), fill=38)
+    a = ImageChops.add(a, c.filter(ImageFilter.GaussianBlur(70)))
+    out = Image.new('RGBA', (w, h), (92, 96, 98, 0))
+    out.putalpha(a.point(lambda v: min(v, 80)))
     return out
 
-def ring():
-    im = Image.new('RGBA', (360, 360)); d = ImageDraw.Draw(im)
-    for i in range(14):
-        r = 140 + i * 0.6
-        d.ellipse((180 - r, 180 - r * 0.97, 180 + r, 180 + r * 0.97), outline=(150, 128, 92, 34 - i * 2), width=3)
-    d.arc((40, 42, 320, 318), 200, 330, fill=(150, 128, 92, 40), width=6)
-    return im.filter(ImageFilter.GaussianBlur(2.2))
 
-def tick():
-    im = Image.new('RGBA', (120, 100)); d = ImageDraw.Draw(im)
-    pts = [(14, 52), (30, 66), (44, 82), (62, 56), (84, 30), (108, 10)]
-    for k in range(3):
-        j = [(x + random.uniform(-1.2, 1.2), y + random.uniform(-1.2, 1.2)) for x, y in pts]
-        d.line(j, fill=(70, 72, 78, 110), width=5, joint='curve')
-    return im.filter(ImageFilter.GaussianBlur(0.8))
+def pencil(points_list, size, width=4, seed=1):
+    random.seed(seed)
+    im = Image.new('RGBA', size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    for pts in points_list:
+        for k in range(3):
+            j = [(x + random.uniform(-1.1, 1.1), y + random.uniform(-1.1, 1.1)) for x, y in pts]
+            d.line(j, fill=(74, 76, 84, 95), width=width, joint='curve')
+    return im.filter(ImageFilter.GaussianBlur(0.7))
 
-mottle(7, 0.9).save(os.path.join(D, 'wear-front.png'))
-mottle(19, 0.9).save(os.path.join(D, 'wear-back.png'))
-ring().save(os.path.join(D, 'stain-ring.png'))
-random.seed(3); tick().save(os.path.join(D, 'pencil-tick.png'))
-print('painted')
+
+def pencil_ring(w, h, seed=4):
+    pts = []
+    for i in range(0, 400):
+        t = i / 360 * 2 * math.pi * 1.08 - 0.5
+        rx = (w / 2 - 10) * (1 + 0.03 * math.sin(3 * t))
+        ry = (h / 2 - 10) * (1 + 0.04 * math.cos(2 * t))
+        pts.append((w / 2 + rx * math.cos(t) + i * 0.03, h / 2 + ry * math.sin(t)))
+    return pencil([pts], (w, h), width=4, seed=seed)
+
+
+def scissors(w=88, h=52):
+    """Coupon scissors in the navy plate, drawn as a small line cut with thick and thin strokes."""
+    ss = 4
+    im = Image.new('RGBA', (w * ss, h * ss), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    ink = NAVY + (255,)
+    # finger loops
+    for cy in (14, 38):
+        d.ellipse((4 * ss, (cy - 9) * ss, 26 * ss, (cy + 9) * ss), outline=ink, width=int(3.2 * ss))
+    # blades, crossing at the pivot
+    d.polygon([(24 * ss, 18 * ss), (86 * ss, 33 * ss), (26 * ss, 24 * ss)], fill=ink)
+    d.polygon([(24 * ss, 34 * ss), (86 * ss, 19 * ss), (26 * ss, 28 * ss)], fill=ink)
+    d.ellipse((44 * ss, 23 * ss, 50 * ss, 29 * ss), fill=PAPER + (255,))
+    im = im.resize((w, h), Image.LANCZOS)
+    return im
+
+
+if __name__ == '__main__':
+    os.makedirs(A, exist_ok=True)
+    skyline()
+    tint_tile(ORANGE, 'tint-orange.png', 12, 0.30)
+    tint_tile(NAVY, 'tint-navy.png', 12, 0.14)
+    mottle(7).save(os.path.join(A, 'wear-front.png'))
+    mottle(8).save(os.path.join(A, 'wear-back.png'))
+    pencil_ring(300, 96).save(os.path.join(A, 'pencil-ring.png'))
+    scissors().save(os.path.join(A, 'scissors.png'))
+    print('painted')

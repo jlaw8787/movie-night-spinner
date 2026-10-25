@@ -1,51 +1,74 @@
-"""Builds the Harbor & Hudson Railroad dining car card (The Out-of-Towners, 1970).
-The card that sits on every dining car table on the Boston to New York run, the train
-George and Gwen chase by cab after the flight is diverted to Boston. Heavy card stock,
-7 x 11 in portrait, printed both sides, no fold. Front is the dining car, back the lounge car.
+"""Builds the Harbor & Hudson Lines dining car card for The Out-of-Towners (1970).
+
+The table card on the Boston to New York shore line train George and Gwen chase by cab after
+their flight is diverted to Boston. 8 x 11 in heavy card, printed both sides, no fold, the size
+the New Haven road used for its own menus. Printed letterpress in three inks: black, a vermilion
+second colour and a gold tint plate under the engraved cut. Front: dining car. Back: lounge car,
+timetable and a tear-off meal check.
 Writes front.html / back.html (full pages), the .body.html fragments, film.json and labels."""
 import os, json
 D = os.path.dirname(os.path.abspath(__file__))
 
-FW, FH = 672, 1056
-PAPER = '#f4efe5'
-INK = '#2b1d16'
-SOFT = '#5a463a'
-ORANGE = '#d2562a'
-BROWN = '#4a2c1d'
-CREAM = '#f6ecd9'
-FONTS = 'family=Hanken+Grotesk:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400'
+FW, FH = 768, 1056
+PAPER = '#f2eadb'
+INK = '#1f1a17'
+SOFT = '#3d342e'
+RED = '#b3392b'
+GOLD = '#d6a846'
+FONTS = 'family=Libre+Bodoni:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Pathway+Gothic+One'
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-SANS = "'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif"
-SERIF = "'Source Serif 4', Georgia, serif"
+GOTH = "'Pathway Gothic One', 'Arial Narrow', sans-serif"
+BOD = "'Libre Bodoni', 'Bodoni 72', Georgia, serif"
+# letterpress: ink spreads a hair past the letter edge
+SQ = 'text-shadow: 0 0 0.6px rgba(31,26,23,0.55)'
+SQR = 'text-shadow: 0 0 0.6px rgba(179,57,43,0.55)'
+X0, CWID = 52, 664      # text block
+COL, GUT = 316, 32
 
 
 def esc(s): return s.replace('&', '&amp;')
 
 
-def head(t, top=0, sub=None):
-    s = (f'<div style="margin-top: {top}px; display: flex; align-items: center; gap: 12px">'
-         f'<div style="width: 22px; height: 6px; background: {ORANGE}"></div>'
-         f'<div style="font-family: {SANS}; font-weight: 700; font-size: 14px; letter-spacing: 0.2em; color: {ORANGE}; white-space: nowrap">{esc(t.upper())}</div>'
-         f'<div style="flex: 1; height: 1.5px; background: {BROWN}; opacity: 0.55"></div></div>')
+def head(t, sub=None, top=0):
+    s = (f'<div style="margin-top: {top}px">'
+         f'<div style="font-family: {GOTH}; font-size: 22px; line-height: 1; letter-spacing: 0.09em; color: {RED}; {SQR}">{esc(t.upper())}</div>'
+         f'<div style="margin-top: 5px; height: 2px; background: {INK}"></div>'
+         f'<div style="margin-top: 2px; height: 0.75px; background: {INK}"></div>')
     if sub:
-        s += f'<div style="margin-top: 6px; font-family: {SERIF}; font-style: italic; font-size: 16px; line-height: 1.3; color: {SOFT}">{esc(sub)}</div>'
-    return s
+        s += f'<div style="margin-top: 6px; font-family: {BOD}; font-style: italic; font-size: 15px; line-height: 1.3; color: {SOFT}; {SQ}">{esc(sub)}</div>'
+    return s + '</div>'
 
 
-def item(name, desc, price, top=16, big=False):
-    fs = 28 if big else 24
+def strike(n):
+    return (f'<img src="assets/pencil-{n}.png" alt="" aria-hidden="true" style="position: absolute; left: -6px; top: 50%; '
+            f'width: calc(100% + 12px); height: 18px; margin-top: -9px; display: block; pointer-events: none">')
+
+
+def item(name, desc, price, top=12, size=21, pencil=0):
+    st = strike(pencil) if pencil else ''
     return (f'<div style="margin-top: {top}px">'
-            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px">'
-            f'<div style="font-family: {SANS}; font-weight: 800; font-size: {fs}px; line-height: 1.1; letter-spacing: -0.01em">{esc(name)}</div>'
-            f'<div style="font-family: {SANS}; font-weight: 700; font-size: 20px; line-height: 1.1; white-space: nowrap">{price}</div></div>'
-            f'<div style="margin-top: 4px; font-family: {SERIF}; font-size: 16px; line-height: 1.38; color: {SOFT}; text-wrap: pretty">{esc(desc)}</div></div>')
+            f'<div style="display: flex; align-items: baseline; gap: 6px">'
+            f'<div style="position: relative; font-family: {BOD}; font-weight: 700; font-size: {size}px; line-height: 1.12; {SQ}">{esc(name)}{st}</div>'
+            f'<div style="flex: 1; border-bottom: 1.5px dotted {INK}; opacity: 0.55; transform: translateY(-4px); min-width: 12px"></div>'
+            f'<div style="font-family: {BOD}; font-weight: 600; font-size: 18px; line-height: 1.1; white-space: nowrap; {SQ}">{price}</div></div>'
+            f'<div style="margin-top: 3px; font-family: {BOD}; font-size: 16px; line-height: 1.3; color: {SOFT}; {SQ}">{esc(desc)}</div></div>')
 
 
-def line(name, price, top=0, last=False):
-    bb = '' if last else f'border-bottom: 1px dotted rgba(246,236,217,0.55);'
-    return (f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 8px 0; {bb}">'
-            f'<span style="font-family: {SANS}; font-weight: 600; font-size: 17px; line-height: 1.2">{esc(name)}</span>'
-            f'<span style="font-family: {SANS}; font-weight: 700; font-size: 17px; line-height: 1.2">{price}</span></div>')
+def line(name, price, top=6, pencil=0, size=17, italic_tail=None):
+    st = strike(pencil) if pencil else ''
+    tail = f' <span style="font-style: italic; font-weight: 400; font-size: 15px">{esc(italic_tail)}</span>' if italic_tail else ''
+    return (f'<div style="margin-top: {top}px; display: flex; align-items: baseline; gap: 6px">'
+            f'<div style="position: relative; font-family: {BOD}; font-size: {size}px; line-height: 1.2; {SQ}">{esc(name)}{tail}{st}</div>'
+            f'<div style="flex: 1; border-bottom: 1.5px dotted {INK}; opacity: 0.5; transform: translateY(-4px); min-width: 12px"></div>'
+            f'<div style="font-family: {BOD}; font-weight: 600; font-size: {size}px; line-height: 1.2; white-space: nowrap; {SQ}">{price}</div></div>')
+
+
+def combo(no, text, price, top=10, pencil=0):
+    st = strike(pencil) if pencil else ''
+    return (f'<div style="margin-top: {top}px; display: flex; gap: 10px; align-items: baseline">'
+            f'<div style="flex: none; width: 40px; font-family: {GOTH}; font-size: 19px; line-height: 1; color: {RED}; letter-spacing: 0.04em; {SQR}">No. {no}</div>'
+            f'<div style="flex: 1; position: relative; font-family: {BOD}; font-size: 16px; line-height: 1.3; {SQ}">{esc(text)}{st}</div>'
+            f'<div style="flex: none; font-family: {BOD}; font-weight: 600; font-size: 18px; line-height: 1.1; {SQ}">{price}</div></div>')
 
 
 def overlays(face):
@@ -54,104 +77,183 @@ def overlays(face):
             f'<img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; pointer-events: none; display: block">')
 
 
+def border():
+    # printed rule border: heavy black outer, fine inner, with the red plate's rule a hair out of register
+    return (f'<div style="position: absolute; left: 22px; top: 22px; width: {FW - 44}px; height: {FH - 44}px; border: 2.5px solid {INK}; box-sizing: border-box"></div>'
+            f'<div style="position: absolute; left: 29px; top: 29px; width: {FW - 58}px; height: {FH - 58}px; border: 0.75px solid {INK}; box-sizing: border-box"></div>'
+            f'<div style="position: absolute; left: 34px; top: 35px; width: {FW - 68}px; height: {FH - 69}px; border: 1px solid {RED}; opacity: 0.85; box-sizing: border-box"></div>')
+
+
 def root(inner, face):
     return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {PAPER}; '
-            f'font-family: {SERIF}; color: {INK}">{inner}{overlays(face)}</div>')
+            f'font-family: {BOD}; color: {INK}">{border()}{inner}{overlays(face)}</div>')
 
 
-def mark(size, bg, fg):
-    # the railroad's mark: an H built from two rails and a tie, in a rounded block
-    b = round(size * 0.15); m = round(size * 0.22); h = size - 2 * m
-    return (f'<div style="position: relative; width: {size}px; height: {size}px; background: {bg}; border-radius: 6px">'
-            f'<div style="position: absolute; left: {m}px; top: {m}px; width: {b}px; height: {h}px; background: {fg}"></div>'
-            f'<div style="position: absolute; left: {size - m - b}px; top: {m}px; width: {b}px; height: {h}px; background: {fg}"></div>'
-            f'<div style="position: absolute; left: {m}px; top: {(size - b) // 2}px; width: {size - 2 * m}px; height: {b}px; background: {ORANGE}"></div>'
-            f'</div>')
+def masthead(title, right_html):
+    return (f'<div style="position: absolute; left: {X0}px; top: 52px; width: {CWID}px; display: flex; justify-content: space-between; align-items: flex-end">'
+            f'<div><div style="font-family: {GOTH}; font-size: 20px; line-height: 1; letter-spacing: 0.22em; color: {RED}; {SQR}">HARBOR &amp; HUDSON LINES</div>'
+            f'<div style="margin-top: 4px; font-family: {BOD}; font-weight: 700; font-style: italic; font-size: 64px; line-height: 1; letter-spacing: -0.01em; {SQ}">{title}</div></div>'
+            f'<div style="text-align: right; font-family: {GOTH}; font-size: 17px; line-height: 1.3; letter-spacing: 0.08em; padding-bottom: 6px; {SQ}">{right_html}</div></div>'
+            f'<div style="position: absolute; left: {X0}px; top: 140px; width: {CWID}px; height: 2px; background: {INK}"></div>')
 
 
 # ---------------- FRONT: the dining car ----------------
+front_left = ''.join([
+    head('Table d’hote breakfast', 'Complete, with coffee, tea or milk.'),
+    combo(1, 'Chilled orange juice, two eggs any style, buttered toast', '1.35', 10),
+    combo(2, 'Half grapefruit, griddle cakes with maple syrup and country sausage', '1.65', 10),
+    combo(3, 'Chilled tomato juice, codfish cakes and baked beans, corn muffin', '1.85', 10),
+    head('From the broiler', 'Served at all hours.', 22),
+    item('Rib Eye Steak Breakfast', 'Seared to your order and rested, with two eggs fried, crisp hash brown potatoes and buttered toast.', '5.25', 10, 22),
+    head('Complete dinners', 'With clam chowder or chilled juice, potato, vegetable, rolls and butter, dessert and coffee.', 22),
+    line('Broiled Boston scrod, lemon butter', '3.75', 10, pencil=1),
+    line('Roast young turkey, sage dressing', '3.95', 6, pencil=2),
+    line('Yankee pot roast, brown gravy', '4.25', 6),
+])
+front_right = ''.join([
+    head('Sandwich board', 'On white, whole wheat or rye, with potato chips and a dill pickle.'),
+    line('Baked Virginia ham', '.95', 10),
+    line('Chicken salad', '1.10', 6),
+    line('Club sandwich, three decker', '1.75', 6, pencil=3),
+    line('Grilled American cheese', '.80', 6),
+    head('From the pantry', None, 22),
+    item('New York Cheese Cake', 'Baked slowly in a water bath on a crumb crust, chilled overnight, under sliced fresh strawberries.', '.85', 10),
+    item('Raspberry Jam Fingers', 'Butter shortbread baked pale and crisp, sandwiched in pairs, dusted with powdered sugar.', '.60', 12),
+    line('Apple pie', '.45', 12, pencil=2, italic_tail='with Cheddar .60'),
+    line('Indian pudding, warm, vanilla ice cream', '.50', 6),
+    head('Beverages', None, 22),
+    f'<div style="margin-top: 8px; font-family: {BOD}; font-size: 16px; line-height: 1.45; {SQ}">Coffee, by the pot .30 &nbsp; Hot tea .30<br>Cold milk .30 &nbsp; Hot chocolate .35</div>',
+])
+kids = (f'<div style="position: absolute; left: {X0}px; top: 914px; width: {CWID}px; display: flex; gap: 16px; align-items: center; '
+        f'border-top: 0.75px solid {INK}; border-bottom: 0.75px solid {INK}; padding: 7px 0">'
+        f'<div style="flex: none; font-family: {GOTH}; font-size: 19px; letter-spacing: 0.08em; color: {RED}; {SQR}">YOUNG TRAVELERS</div>'
+        f'<div style="flex: 1; font-family: {BOD}; font-size: 16px; line-height: 1.3; {SQ}">Junior plate: chopped beef patty, whipped potatoes, buttered peas, milk <b>1.10</b>. '
+        f'Half portions of any dinner at half price.</div></div>')
+front_foot = (f'<div style="position: absolute; left: {X0}px; top: 978px; width: {CWID}px; display: flex; justify-content: space-between; align-items: baseline; gap: 20px">'
+              f'<div style="font-family: {BOD}; font-size: 15px; line-height: 1.3; {SQ}"><b>Seating is by call.</b> Please wait in your coach until the steward calls you.</div>'
+              f'<div style="flex: none; font-family: {GOTH}; font-size: 14px; letter-spacing: 0.1em; {SQ}">FORM DC-70</div></div>')
+
 front = f'''
-<div style="position: absolute; left: 0; top: 0; width: {FW}px; height: 176px; background: {ORANGE}"></div>
-<div style="position: absolute; left: 0; top: 184px; width: {FW}px; height: 14px; background: {BROWN}"></div>
-<div style="position: absolute; left: 48px; top: 48px; width: 576px; display: flex; justify-content: space-between; align-items: flex-start; color: {CREAM}">
-  <div>
-    <div style="font-family: {SANS}; font-weight: 700; font-size: 14px; letter-spacing: 0.26em">HARBOR &amp; HUDSON RAILROAD</div>
-    <div style="margin-top: 8px; font-family: {SANS}; font-weight: 800; font-size: 72px; line-height: 0.95; letter-spacing: -0.03em">Dining Car</div>
-  </div>
-  {mark(78, BROWN, CREAM)}
+{masthead("Dining Car", "THE HARBOR LIGHT<br>BOSTON &middot; PROVIDENCE<br>NEW HAVEN &middot; NEW YORK")}
+<img src="assets/engraving.png" alt="" style="position: absolute; left: {X0 - 4}px; top: 158px; width: 672px; height: 300px; display: block">
+<div style="position: absolute; left: {X0}px; top: 466px; width: {CWID}px; display: flex; justify-content: space-between; align-items: baseline">
+  <div style="font-family: {BOD}; font-style: italic; font-size: 15px; {SQ}">The Harbor Light on the shore line, east of New Haven.</div>
+  <div style="font-family: {GOTH}; font-size: 15px; letter-spacing: 0.12em; color: {RED}; {SQR}">FOG AT THE AIRPORTS? TAKE THE TRAIN.</div>
 </div>
-<img src="assets/coast-train.png" alt="" style="position: absolute; left: 48px; top: 222px; width: 576px; height: 232px; display: block">
-<div style="position: absolute; left: 48px; top: 468px; width: 576px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
-  <div style="font-family: {SERIF}; font-style: italic; font-size: 20px; line-height: 1.2">Fog at the airports? Take the train.</div>
-  <div style="font-family: {SANS}; font-weight: 700; font-size: 13px; letter-spacing: 0.18em; white-space: nowrap">BOSTON TO NEW YORK</div>
-</div>
-<div style="position: absolute; left: 48px; top: 532px; width: 576px">
-  {head("From the Grill", 0, "Served at all hours, breakfast through dinner.")}
-  {item("Rib eye platter", "Seared to your liking and rested, two eggs fried as you like, crisp hash browns and buttered toast.", "5.25", 12, True)}
-  {head("From the Pantry", 38)}
-  {item("New York cheesecake", "Baked slow in a water bath, chilled overnight and topped with sliced strawberries.", ".85", 12)}
-  {item("Shortbread fingers", "Baked pale and crisp, sandwiched in pairs with raspberry jam, powdered sugar over the top.", ".60", 20)}
-</div>
-<div style="position: absolute; left: 48px; top: 916px; width: 576px; border-top: 3px solid {BROWN}; padding-top: 12px; display: flex; gap: 28px; font-family: {SANS}; font-size: 15px; text-wrap: balance; line-height: 1.4; font-weight: 500">
-  <div style="flex: 1"><span style="font-weight: 800">Seating is by call.</span> Please wait in your coach. Your name will be called in turn.</div>
-  <div style="flex: 1"><span style="font-weight: 800">Please write your order</span> on the meal check. No spoken orders.</div>
-</div>
+<div style="position: absolute; left: {X0}px; top: 504px; width: {COL}px">{front_left}</div>
+<div style="position: absolute; left: {X0 + COL + GUT}px; top: 504px; width: {COL}px">{front_right}</div>
+<div style="position: absolute; left: {X0 + COL + GUT // 2}px; top: 510px; width: 0.75px; height: 390px; background: {INK}; opacity: 0.6"></div>
+{kids}
+{front_foot}
 '''
 
 # ---------------- BACK: the lounge car ----------------
-counter = [('Green olives, a dish', '.35'), ('Soda crackers', '.15'), ('Tonic water', '.35'), ('Clam juice cocktail', '.45'),
-           ('Domestic beer', '.60'), ('Rye highball', '1.10'), ('Coffee, by the pot', '.30'), ('Hot tea', '.30'), ('Cold milk', '.30')]
-clist = ''.join(line(n, p, last=(i == len(counter) - 1)) for i, (n, p) in enumerate(counter))
+back_left = ''.join([
+    head('Cocktails', 'Mixed to order by the lounge attendant.'),
+    item('Dry Martini', 'Gin stirred ice cold with a little French vermouth, strained into a chilled glass, one green olive.', '1.25', 10),
+    line('Manhattan', '1.25', 12),
+    line('Tom Collins', '1.10', 6),
+    line('Whiskey sour', '1.10', 6),
+    line('Old fashioned', '1.15', 6),
+    head('Highballs and beer', None, 20),
+    line('Rye or bourbon highball', '1.00', 10),
+    line('Scotch and soda', '1.10', 6),
+    line('Gin and tonic', '1.10', 6),
+    line('Domestic beer', '.60', 6),
+    line('Wine, by the split', '.95', 6),
+])
+counter = ''.join([
+    line('Peanut butter sandwich', '.55', 8),
+    line('Green olives, a dish', '.35', 5),
+    line('Soda crackers', '.15', 5),
+    line('Tonic water', '.35', 5),
+    line('Clam juice cocktail, chilled', '.45', 5),
+    line('Ginger ale', '.30', 5),
+])
+back_right = ''.join([
+    head('From the grill', 'At the rear of the car.'),
+    item('Cocktail Franks', 'Glazed sticky in honey, mustard, brown sugar and Worcestershire, on picks with pickled pearl onions.', '1.10', 10),
+    line('Frankfurter on a toasted roll', '.50', 12),
+    line('Cheeseburger, sliced onion', '.95', 6),
+    f'<div style="margin-top: 18px; position: relative">'
+    f'<div style="position: absolute; left: 3px; top: 2px; right: -3px; bottom: -2px; background: {GOLD}; opacity: 0.38"></div>'
+    f'<div style="position: relative; border: 1.5px solid {INK}; padding: 10px 14px 12px">'
+    f'<div style="font-family: {GOTH}; font-size: 21px; line-height: 1; letter-spacing: 0.09em; color: {RED}; {SQR}">AT THE COUNTER</div>'
+    f'{counter}</div></div>',
+])
 
-stations = ['Boston', 'Providence', 'New London', 'New Haven', 'Stamford', 'New York']
-route = ''
-n = len(stations)
-for i, st in enumerate(stations):
-    x = round(i * 576 / (n - 1))
-    end = i in (0, n - 1)
-    dot = 20 if end else 14
-    route += (f'<div style="position: absolute; left: {x - dot // 2}px; top: {34 - dot // 2}px; width: {dot}px; height: {dot}px; border-radius: 50%; '
-              f'background: {ORANGE if end else PAPER}; border: 3px solid {BROWN}; box-sizing: border-box"></div>')
-    up = i % 2 == 1
-    align = 'left' if i == 0 else ('right' if i == n - 1 else 'center')
-    lx = 0 if i == 0 else (x - 140 if i == n - 1 else x - 70)
-    lw = 140
-    ty = 0 if up else 52
-    if up:
-        ty = -2
-    route += (f'<div style="position: absolute; left: {lx}px; top: {ty if up else 52}px; width: {lw}px; text-align: {align}; '
-              f'font-family: {SANS}; font-weight: {800 if end else 600}; font-size: {16 if end else 14}px; line-height: 1; letter-spacing: 0.04em">{esc(st)}</div>')
-route_html = (f'<div style="position: relative; width: 576px; height: 76px">'
-              f'<div style="position: absolute; left: 0; top: 31px; width: 576px; height: 6px; background: {BROWN}"></div>{route}</div>')
+stations = [('Boston', 'Lv', '8:30 PM'), ('Back Bay', '', '8:36'), ('Route 128', '', '8:50'), ('Providence', '', '9:22'),
+            ('Kingston', '', '9:45'), ('Westerly', '', '9:58'), ('New London', '', '10:20'),
+            ('Old Saybrook', '', '10:42'), ('New Haven', '', '11:20'), ('Bridgeport', '', '11:45'), ('Stamford', '', '12:10 AM'),
+            ('New Rochelle', '', '12:30'), ('125th Street', '', '12:48'), ('New York, 42nd St.', 'Ar', '12:57 AM')]
+
+
+def tt_col(rows):
+    out = ''
+    for i, (n, a, t) in enumerate(rows):
+        bb = f'border-bottom: 0.75px solid rgba(31,26,23,0.45);' if i < len(rows) - 1 else ''
+        w = 700 if a else 400
+        out += (f'<div style="display: flex; align-items: baseline; padding: 3px 0; {bb}">'
+                f'<div style="flex: 1; font-family: {BOD}; font-weight: {w}; font-size: 15px; line-height: 1.2; {SQ}">{esc(n)}</div>'
+                f'<div style="width: 24px; font-family: {GOTH}; font-size: 15px; color: {RED}; {SQR}">{a}</div>'
+                f'<div style="width: 70px; text-align: right; font-family: {BOD}; font-weight: {w}; font-size: 15px; line-height: 1.2; {SQ}">{t}</div></div>')
+    return out
+
+
+timetable = (f'<div style="position: absolute; left: {X0}px; top: 618px; width: {CWID}px">'
+             f'{head("Train 175, The Harbor Light, daily", None)}'
+             f'<div style="margin-top: 6px; display: flex; gap: {GUT}px">'
+             f'<div style="width: {COL}px">{tt_col(stations[:7])}</div>'
+             f'<div style="width: {COL}px">{tt_col(stations[7:])}</div></div>'
+             f'<div style="margin-top: 6px; font-family: {BOD}; font-style: italic; font-size: 14px; line-height: 1.3; color: {SOFT}; {SQ}">'
+             f'When fog closes the airports, extra coaches are added at Boston.</div></div>')
+
+
+def field(label, w):
+    return (f'<div style="display: flex; align-items: baseline; gap: 6px; width: {w}px">'
+            f'<div style="font-family: {GOTH}; font-size: 15px; letter-spacing: 0.06em; {SQ}">{label}</div>'
+            f'<div style="flex: 1; border-bottom: 1px solid {INK}; height: 14px"></div></div>')
+
+
+rows = ''.join(f'<div style="display: flex; height: 21px; border-bottom: 0.75px solid {INK}">'
+               f'<div style="width: 44px; border-right: 0.75px solid {INK}"></div><div style="flex: 1"></div>'
+               f'<div style="width: 84px; border-left: 0.75px solid {INK}"></div></div>' for _ in range(5))
+check = f'''
+<div style="position: absolute; left: 30px; top: 812px; width: {FW - 60}px; height: 0; border-top: 2px dashed {INK}; opacity: 0.7"></div>
+<div style="position: absolute; left: {X0}px; top: 797px; width: {CWID}px; text-align: center">
+  <span style="background: {PAPER}; padding: 0 10px; font-family: {GOTH}; font-size: 13px; letter-spacing: 0.14em; {SQ}">TEAR HERE AND HAND THE CHECK TO YOUR WAITER</span></div>
+<div style="position: absolute; left: {X0}px; top: 830px; width: {CWID}px; display: flex; gap: 22px">
+  <div style="width: 236px">
+    <div style="display: flex; justify-content: space-between; align-items: baseline">
+      <div style="font-family: {GOTH}; font-size: 24px; letter-spacing: 0.1em; color: {RED}; {SQR}">MEAL CHECK</div>
+      <div style="font-family: {BOD}; font-weight: 700; font-size: 17px; color: {RED}; {SQR}">No. 07135</div></div>
+    <div style="margin-top: 4px; font-family: {BOD}; font-size: 14px; line-height: 1.32; {SQ}">Passengers will please write each item on this check. Waiters are not permitted to take spoken orders.</div>
+    <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px 12px">{field("TRAIN", 112)}{field("CAR", 112)}{field("WAITER", 112)}{field("DATE", 112)}</div>
+    <div style="margin-top: 9px">{field("NAME OF EMPLOYEE", 236)}</div>
+    <div style="margin-top: 4px; font-family: {BOD}; font-style: italic; font-size: 13px; line-height: 1.25; color: {SOFT}; {SQ}">Comments go to the Superintendent of Dining Service.</div>
+  </div>
+  <div style="flex: 1; border: 1.5px solid {INK}; align-self: flex-start">
+    <div style="display: flex; border-bottom: 1.5px solid {INK}; font-family: {GOTH}; font-size: 14px; letter-spacing: 0.08em; {SQ}">
+      <div style="width: 44px; padding: 3px 0; text-align: center; border-right: 0.75px solid {INK}">QTY.</div>
+      <div style="flex: 1; padding: 3px 8px">WRITE YOUR ORDER HERE</div>
+      <div style="width: 84px; padding: 3px 0; text-align: center; border-left: 0.75px solid {INK}">AMOUNT</div></div>
+    {rows}
+    <div style="display: flex; height: 26px; align-items: center">
+      <div style="flex: 1; padding-right: 10px; text-align: right; font-family: {GOTH}; font-size: 15px; letter-spacing: 0.1em; {SQ}">TOTAL</div>
+      <div style="width: 84px; height: 26px; border-left: 0.75px solid {INK}; background: rgba(214,168,70,0.35)"></div></div>
+  </div>
+</div>
+<div style="position: absolute; left: {X0}px; top: 990px; width: {CWID}px; display: flex; justify-content: space-between; font-family: {GOTH}; font-size: 13px; letter-spacing: 0.1em; {SQ}">
+  <div>PRICES INCLUDE ALL TAXES</div><div>PRINTED IN U.S.A.</div></div>
+'''
 
 back = f'''
-<div style="position: absolute; left: 0; top: 0; width: {FW}px; height: 128px; background: {BROWN}"></div>
-<div style="position: absolute; left: 0; top: 136px; width: {FW}px; height: 10px; background: {ORANGE}"></div>
-<div style="position: absolute; left: 48px; top: 44px; width: 576px; display: flex; justify-content: space-between; align-items: center; color: {CREAM}">
-  <div style="font-family: {SANS}; font-weight: 800; font-size: 50px; line-height: 1; letter-spacing: -0.02em">Lounge Car</div>
-  <div style="text-align: right; font-family: {SANS}; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; line-height: 1.6">HARBOR &amp; HUDSON<br>RAILROAD</div>
-</div>
-<div style="position: absolute; left: 48px; top: 182px; width: 300px">
-  {head("Snacks", 0)}
-  {item("Cocktail franks", "Little franks glazed sticky with honey, mustard and brown sugar, on picks with pickled pearl onions.", "1.10", 12)}
-  {item("Peanut butter sandwich", "Spread thick on white bread and cut corner to corner.", ".65", 20)}
-  {head("From the Bar", 30)}
-  {item("Martini", "Gin stirred very cold with dry vermouth, strained into a chilled glass, one green olive.", "1.25", 12)}
-  {item("Tom Collins", "Gin, fresh lemon and sugar shaken, topped with soda over ice, an orange slice and a cherry.", "1.10", 20)}
-</div>
-<div style="position: absolute; left: 372px; top: 182px; width: 252px; background: {BROWN}; color: {CREAM}; box-sizing: border-box; padding: 20px 20px 12px">
-  <div style="font-family: {SANS}; font-weight: 800; font-size: 24px; line-height: 1">At the Counter</div>
-  <div style="margin-top: 6px; font-family: {SERIF}; font-style: italic; font-size: 16px; line-height: 1.3">Ask the attendant.</div>
-  <div style="margin-top: 8px">{clist}</div>
-</div>
-<div style="position: absolute; left: 48px; top: 750px; width: 576px">
-  {head("Your Route", 0)}
-  <div style="margin-top: 18px">{route_html}</div>
-</div>
-<div style="position: absolute; left: 48px; top: 900px; width: 576px; border-top: 3px solid {BROWN}; padding-top: 12px; display: flex; gap: 28px; font-family: {SANS}; font-size: 15px; text-wrap: balance; line-height: 1.4; font-weight: 500">
-  <div style="flex: 1"><span style="font-weight: 800">Special diets,</span> bland or salt free, are prepared on request. Ask the steward.</div>
-  <div style="flex: 1"><span style="font-weight: 800">Comments welcome.</span> Please note your waiter&#39;s name and the car number.</div>
-</div>
+{masthead("Lounge Car", "CLUB AND GRILL SERVICE<br>BAR OPEN FROM BOSTON<br>TO STAMFORD")}
+<div style="position: absolute; left: {X0}px; top: 164px; width: {COL}px">{back_left}</div>
+<div style="position: absolute; left: {X0 + COL + GUT}px; top: 164px; width: {COL}px">{back_right}</div>
+<div style="position: absolute; left: {X0 + COL + GUT // 2}px; top: 170px; width: 0.75px; height: 420px; background: {INK}; opacity: 0.6"></div>
+{timetable}
+{check}
 '''
 
 TITLES = {'front': 'Harbor & Hudson dining car card, front', 'back': 'Harbor & Hudson dining car card, back'}
@@ -163,17 +265,17 @@ for face, inner in (('front', front), ('back', back)):
         f'<style>body{{margin:0}}</style></head><body>{body}</body></html>')
 
 film = {"fmt": "eventually", "fn": "fmtDinnerEventually", "faces": ["front.html", "back.html"], "names": ["Dining Car", "Lounge Car"],
-        "mm": [177.8, 279.4], "fonts": FONTS, "fams": ["Hanken Grotesk", "Source Serif 4"],
-        "phone": {"disp": "'Hanken Grotesk',sans-serif", "title": "'Hanken Grotesk',sans-serif", "name": "'Hanken Grotesk',sans-serif",
-                  "body": "'Source Serif 4',serif", "price": "'Hanken Grotesk',sans-serif", "note": "'Source Serif 4',serif"}}
+        "mm": [203.2, 279.4], "fonts": FONTS, "fams": ["Libre Bodoni", "Pathway Gothic One"],
+        "phone": {"disp": "'Libre Bodoni',serif", "title": "'Pathway Gothic One',sans-serif", "name": "'Libre Bodoni',serif",
+                  "body": "'Libre Bodoni',serif", "price": "'Libre Bodoni',serif", "note": "'Libre Bodoni',serif"}}
 open(os.path.join(D, 'film.json'), 'w').write(json.dumps(film, indent=1))
 
 labels = {"The Out-of-Towners (1970)": {
-  "Handbag shortbread fingers with jam": {"n": "Shortbread fingers", "d": "Baked pale and crisp, sandwiched in pairs with raspberry jam, powdered sugar over the top.", "note": "From the pantry, with coffee or tea."},
-  "Diverted flight cocktail franks": {"n": "Cocktail franks", "d": "Little franks glazed sticky with honey, mustard and brown sugar, on picks with pickled pearl onions.", "note": "Lounge car snacks."},
-  "Hotel rib eye breakfast": {"n": "Rib eye platter", "d": "Seared to your liking and rested, two eggs fried as you like, crisp hash browns and buttered toast.", "note": "From the grill, served at all hours."},
-  "Waldorf cheesecake": {"n": "New York cheesecake", "d": "Baked slow in a water bath, chilled overnight and topped with sliced strawberries.", "note": "From the pantry, cut to order."},
-  "Hotel bar martini": {"n": "Martini", "d": "Gin stirred very cold with dry vermouth, strained into a chilled glass, one green olive.", "note": "Fog at the airports? Take the train."}
+  "Handbag shortbread fingers with jam": {"n": "Raspberry Jam Fingers", "d": "Butter shortbread baked pale and crisp, sandwiched in pairs, dusted with powdered sugar.", "note": "From the pantry, with coffee or tea."},
+  "Diverted flight cocktail franks": {"n": "Cocktail Franks", "d": "Glazed sticky in honey, mustard, brown sugar and Worcestershire, on picks with pickled pearl onions.", "note": "From the grill, lounge car."},
+  "Hotel rib eye breakfast": {"n": "Rib Eye Steak Breakfast", "d": "Seared to your order and rested, with two eggs fried, crisp hash brown potatoes and buttered toast.", "note": "From the broiler, served at all hours."},
+  "Waldorf cheesecake": {"n": "New York Cheese Cake", "d": "Baked slowly in a water bath on a crumb crust, chilled overnight, under sliced fresh strawberries.", "note": "From the pantry, cut to order."},
+  "Hotel bar martini": {"n": "Dry Martini", "d": "Gin stirred ice cold with a little French vermouth, strained into a chilled glass, one green olive.", "note": "Fog at the airports? Take the train."}
 }}
 open(os.path.join(D, 'eventually.labels.json'), 'w').write(json.dumps(labels, indent=1, ensure_ascii=False))
 print('built')

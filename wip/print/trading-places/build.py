@@ -16,7 +16,7 @@ L, R = 84, 60            # left margin clears the binder holes on the front; mir
 CW = W - L - R           # 672
 
 # offset press ink: a hair of spread on every glyph, no filters
-SPREAD = f'text-shadow: 0 0 0.6px {INK}'
+SPREAD = f'text-shadow: 0 0 0.7px {INK}'
 SPREAD_OR = f'text-shadow: 0 0 0.6px {OR}'
 
 # ---------- copy ----------
@@ -36,15 +36,17 @@ BUFFET_L = ('Passed and on the sideboard', [
 ])
 BUFFET_R = ('From the carving board', [
     ('Roast prime rib of beef', 'Standing rib, salted a day ahead, roasted slow and carved to order. Natural juices, horseradish cream, browned potatoes.', 'Carved by the Heritage Club man.'),
+    ('Swedish meatballs', 'Beef and pork in a sour cream gravy, kept hot in the chafing dish.', None),
 ], 'Sweets', [
-    ('Orange butter cake', 'Grated rind and fresh juice in the batter, brushed while warm with a thick citrus syrup.', None),
+    ('Orange butter cake', 'Grated rind and juice in the batter, brushed warm with a thick citrus syrup.', None),
 ])
 
 BAR = [
     ('Mimosa', 'Fresh-squeezed orange juice and chilled champagne, half and half, in a tall flute.', None),
+    ('Scotch and soda', 'Over plenty of ice, in a tall glass.', None),
     ('Frozen screwdriver', 'Vodka and orange juice whirled in the blender with crushed ice, in small glasses.', 'Plain orange for the drivers.'),
-    ('Eggnog', 'Cream, eggs and nutmeg, with a little brandy.', None),
-    ('Coffee and cookies', 'A fresh pot all afternoon. Butter spritz, sugar stars and pecan crescents.', None),
+    ('Eggnog', 'Cream, nutmeg and a little brandy.', None),
+    ('Coffee and cookies', 'Spritz, sugar stars and pecan crescents.', None),
 ]
 
 MARKETS = [
@@ -105,7 +107,7 @@ def wear(name):
 def masthead():
     # two-colour masthead: the orange plate prints a heavy drop under the black, a hair off register
     word = 'DUKE &amp; DUKE'
-    common = f'font-family: {BO}; font-weight: 900; font-size: 74px; line-height: 1; letter-spacing: 0; white-space: nowrap'
+    common = f'font-family: {BO}; font-weight: 900; font-size: 68px; line-height: 1; letter-spacing: 0; white-space: nowrap'
     return f'''
 <div style="position: absolute; left: {L}px; top: 40px; width: {CW}px; display: flex; justify-content: space-between;
      font-family: {AR}; font-weight: 700; font-size: 12px; letter-spacing: 0.16em; color: {INK}; {SPREAD}">
@@ -147,13 +149,13 @@ def front():
       <p style="margin: 6px 0 0; font-family: {TI}; font-style: italic; font-size: 15px; line-height: 1.3; color: {INK}; {SPREAD}">{CAPTION}</p>
     </div>
   </div>
-  <div style="flex: 1; margin-top: 16px; position: relative; box-sizing: border-box; border: 3px solid {INK}; padding: 14px 20px 16px">
+  <div style="flex: 1; margin-top: 8px; position: relative; box-sizing: border-box; border: 3px solid {INK}; padding: 10px 20px 14px">
     <div style="position: absolute; left: 3px; top: 3px; right: 3px; bottom: 3px; border: 1px solid {OR}"></div>
-    <div style="position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; padding-bottom: 8px; border-bottom: 2px solid {INK}">
+    <div style="position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; padding-bottom: 6px; border-bottom: 2px solid {INK}">
       <div style="font-family: {TI}; font-weight: 700; font-size: 30px; line-height: 1; color: {INK}; {SPREAD}">The Christmas Buffet</div>
       <div style="font-family: {AR}; font-size: 14px; line-height: 1.25; color: {INK}; text-align: right; {SPREAD}">Friday, December 23, from 3 P.M.<br>With the compliments of the partners</div>
     </div>
-    <div style="position: relative; display: flex; gap: 0; margin-top: 12px">
+    <div style="position: relative; display: flex; gap: 0; margin-top: 8px">
       <div style="width: 300px; padding-right: 16px; border-right: 1px solid rgba(28,25,23,0.5)">{dish_group(t, items)}</div>
       <div style="flex: 1; padding-left: 16px">{dish_group(rt, ritems)}{dish_group(st, sitems, 16)}</div>
     </div>
@@ -197,18 +199,18 @@ def back():
   <div style="flex: 1; display: flex; gap: 22px; margin-top: 16px">
     <div style="width: 330px; display: flex; flex-direction: column">
       {notes}
-      <div style="height: 1px; background: {INK}; margin: 14px 0 10px"></div>
+      <div style="height: 1px; background: {INK}; margin: 18px 0 18px"></div>
       {kicker('From the partners')}
       {para('Our thanks to all of you for a good year. A merry Christmas and a prosperous New Year to you and your families.', 4, 16, 'left')}
-      <div style="position: relative; height: 62px; margin-top: 2px">
-        <div style="position: absolute; left: 6px; top: 0; font-family: {SIG}; font-size: 40px; line-height: 1; color: #1f2a52; transform: rotate(-3deg)">Randolph Duke</div>
-        <div style="position: absolute; left: 150px; top: 22px; font-family: {SIG}; font-size: 40px; line-height: 1; color: #1f2a52; transform: rotate(-2deg)">Mortimer Duke</div>
+      <div style="position: relative; height: 72px; margin-top: 2px">
+        <div style="position: absolute; left: 4px; top: 0; font-family: {SIG}; font-size: 38px; white-space: nowrap; line-height: 1; color: #1f2a52; transform: rotate(-3deg)">Randolph Duke</div>
+        <div style="position: absolute; left: 128px; top: 28px; font-family: {SIG}; font-size: 38px; white-space: nowrap; line-height: 1; color: #1f2a52; transform: rotate(-2deg)">Mortimer Duke</div>
       </div>
     </div>
     <div style="flex: 1; box-sizing: border-box; padding: 14px 18px 16px; border-top: 4px solid {INK};
          background-image: url(assets/tint-screen.png); background-size: 120px 120px">
-      {kicker('Friday at the bar', INK)}
-      <div style="margin-top: 3px; font-family: {TI}; font-weight: 700; font-size: 26px; line-height: 1.05; color: {INK}; {SPREAD}">Open until six</div>
+      <div style="font-family: {TI}; font-weight: 700; font-size: 26px; line-height: 1.05; color: {INK}; {SPREAD}">Friday at the bar</div>
+      <div style="margin-top: 2px; font-family: {AR}; font-size: 13px; letter-spacing: 0.1em; color: {INK}; {SPREAD}">OPEN FROM THREE UNTIL SIX</div>
       {bar}
     </div>
   </div>

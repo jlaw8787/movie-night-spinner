@@ -243,7 +243,7 @@ def coaster(name, W1, H1, seed):
 
 
 # ------------------------------------------------------------- coarse tint screen (red, about 15%)
-def tint(name, W1, H1, seed, cell=6, cover=0.13, col=RED):
+def tint(name, W1, H1, seed, cell=5, cover=0.085, col=RED):
     w, h = W1 * S, H1 * S
     yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
     c = cell * S
@@ -274,8 +274,8 @@ def stamp(name, W1, H1, lines, seed, rot=-6):
     d = ImageDraw.Draw(im)
     d.rounded_rectangle([10, 10, w - 10, h - 10], radius=10, outline=255, width=5)
     d.rounded_rectangle([20, 20, w - 20, h - 20], radius=6, outline=255, width=2)
-    fs = [font('Franklin800.ttf', 30), font('Franklin800.ttf', 46), font('Franklin800.ttf', 30)]
-    ys = [h * 0.28, h * 0.53, h * 0.77]
+    fs = [font('Franklin800.ttf', int(h * 0.25)), font('Franklin800.ttf', int(h * 0.36))]
+    ys = [h * 0.34, h * 0.66]
     for ln, f, y in zip(lines, fs, ys):
         d.text((w / 2, y), ln, font=f, fill=255, anchor='mm')
     im = im.rotate(rot, resample=Image.BICUBIC, expand=False)
@@ -401,7 +401,7 @@ if __name__ == '__main__':
     tint('tint-history.png', 232, 210, 8)
     tint('tint-beach.png', 456, 118, 9)
     tint('tint-deliver.png', 720, 96, 10)
-    stamp('stamp-prices.png', 236, 104, ['PRICES EFFECTIVE', 'MAY 1, 1977', 'CATERING DEPT.'], 11)
+    stamp('stamp-prices.png', 150, 66, ['EFFECTIVE', 'MAY 1, 1977'], 11)
     pen_ring('pen-ring.png', 96, 50, 12)
     pen_tick('pen-tick.png', 13)
     paper('paper-goldenrod-front.png', 21)

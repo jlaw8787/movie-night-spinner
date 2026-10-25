@@ -29,12 +29,12 @@ F = dict(
     banner=(0, 0, W, 124),           # solid red band, bleeds
     flag=(500, 136, W, 184),         # yellow ribbon, bleeds right
     company=(46, 140),               # "THE COMPANY" logotype origin
-    party=(40, 186),                 # "PARTY" logotype origin
-    age=(620, 212, 776, 352),        # age box
-    tag_y=366,
-    window=(48, 404, 768, 676),      # die-cut window
-    subline_y=686,
-    panel=(40, 718, 776, 1016),      # white board panel, passed trays
+    party=(40, 168),                 # "PARTY" logotype origin
+    age=(632, 206, 776, 334),        # age box
+    tag_y=350,
+    window=(48, 394, 768, 662),      # die-cut window
+    subline_y=672,
+    panel=(40, 702, 776, 1016),      # white board panel, passed trays
 )
 
 # back
@@ -45,7 +45,7 @@ B = dict(
     photo=(54, 596, 406, 794),
     play=(436, 582, 776, 716),
     token=(436, 730, 776, 852),
-    check=(40, 868, 452, 1016),
-    note=(468, 868, 776, 1016),
-    upc=(640, 920),                  # top-left of the barcode block
+    check=(40, 868, 420, 1016),
+    note=(436, 868, 776, 1016),
+    upc=(632, 906),                  # top-left of the barcode block
 )

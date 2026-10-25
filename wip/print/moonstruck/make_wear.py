@@ -49,8 +49,9 @@ def layer(face, seed):
         od.line([((W - 34) * S, h), (w, (H - 30) * S)], fill=(250, 246, 236, 130), width=2 * S)
     # press scum: a few faint specks of ink, mostly in the margins
     r = np.random.default_rng(seed + 9)
-    for _ in range(26):
+    for _ in range(120):
         x, y = r.uniform(10, W - 10), r.uniform(10, H - 10)
+        if 40 < x < W - 40 and 40 < y < H - 40 and abs(x - FOLD) > 30: continue
         rad = r.uniform(0.5, 1.3)
         od.ellipse([((x - rad) * S, (y - rad) * S), ((x + rad) * S, (y + rad) * S)], fill=(40, 36, 30, int(r.uniform(40, 110))))
     over = over.filter(ImageFilter.GaussianBlur(0.8 * S))

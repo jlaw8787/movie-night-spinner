@@ -12,14 +12,14 @@ FONT_LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FO
 SAIRA = "'Saira Semi Condensed', sans-serif"
 TINOS = "'Tinos', serif"
 
-HOURS = [('Coffee', 'from 6 AM'), ('Kitchen', '11 AM to 11 PM'),
+HOURS = [('Coffee', 'From 6 AM'), ('Kitchen', '11 AM to 11 PM'),
          ('Bar', '11 AM to 11:30 PM'), ('Lounge closes', 'Midnight')]
 FARE = [
     ('Stuffed cherry tomatoes', 'A dozen, filled with feta cheese beaten smooth with fresh basil and grated lemon peel.', '3.95'),
     ('Thai-style chicken wings', 'Oven-crisped, glazed with honey, butter, lime and sweet chili sauce, under hot pepper flakes and fresh coriander.', '5.95'),
     ('Nachos', 'Tortilla chips under melted Monterey Jack, pickled jalape&ntilde;os, sour cream and salsa.', '4.75'),
     ('Shrimp cocktail', 'Five jumbo shrimp on cracked ice, horseradish red sauce, a wedge of lemon.', '7.50'),
-    ('Turkey and Swiss on a kaiser', 'Roast breast, iceberg, tomato, mayonnaise and yellow mustard, wrapped in deli paper to carry on board.', '5.25'),
+    ('Turkey and Swiss on a kaiser', 'Roast breast, iceberg, tomato, mayo and mustard. Wrapped in deli paper to carry on board.', '5.25'),
 ]
 JULEP = ('Kentucky julep', 'Bourbon shaken with fresh mint, lemon and sugar, poured over crushed ice.', '4.75')
 COCKTAILS = [('Bloody Mary', 'With a celery stalk', '4.50'), ('Screwdriver', 'Fresh orange juice', '4.25')]
@@ -66,17 +66,16 @@ def small(n, d, p, top=5):
             f'<span style="font-family: {SAIRA}; font-weight: 700; font-size: 17px; color: {BROWN}">{p}</span></div>')
 
 def hours():
-    rows = ''.join(
-        f'<div style="display: flex; align-items: baseline; gap: 6px; margin-top: {0 if i == 0 else 1}px">'
-        f'<span style="font-family: {TINOS}; font-size: 16px; color: {BODY}">{a}</span>'
-        f'<span style="flex: 1; border-bottom: 2px dotted #9a7c63; transform: translateY(-4px)"></span>'
-        f'<span style="font-family: {SAIRA}; font-weight: 700; font-size: 16px; color: {BROWN}">{b}</span></div>' for i, (a, b) in enumerate(HOURS))
+    cells = ''.join(
+        f'<div style="padding: {"0 10px 0 0" if i % 2 == 0 else "0 0 0 12px"}; {"border-left: 1px solid " + BROWN + ";" if i % 2 else ""} {"margin-top: 7px;" if i > 1 else ""}">'
+        f'<div style="font-family: {SAIRA}; font-weight: 600; font-size: 12px; letter-spacing: 0.16em; color: {RUST}">{a.upper()}</div>'
+        f'<div style="font-family: {SAIRA}; font-weight: 700; font-size: 17px; line-height: 1.15; color: {BROWN}">{b}</div></div>' for i, (a, b) in enumerate(HOURS))
     return (f'<div style="margin-top: 14px; border: 2px solid {BROWN}; padding: 3px">'
-            f'<div style="border: 1px solid {BROWN}; padding: 7px 12px 8px">'
-            f'<div style="font-family: {SAIRA}; font-weight: 700; font-size: 13px; letter-spacing: 0.22em; color: {RUST}; margin-bottom: 5px">OPEN EVERY DAY</div>{rows}</div></div>')
+            f'<div style="border: 1px solid {BROWN}; padding: 8px 12px 9px">'
+            f'<div style="display: grid; grid-template-columns: 1fr 1fr">{cells}</div></div></div>')
 
 def fare():
-    return head('LIGHT FARE', 'AT THE BAR OR YOUR TABLE', 16) + ''.join(item(*x, top=8) for x in FARE)
+    return head('LIGHT FARE', 'AT THE BAR OR YOUR TABLE', 16) + ''.join(item(*x, top=11) for x in FARE)
 
 def bar():
     s = head('COCKTAILS', 'LAST CALL 11:30 PM') + item(*JULEP, top=8) + ''.join(small(*x) for x in COCKTAILS)

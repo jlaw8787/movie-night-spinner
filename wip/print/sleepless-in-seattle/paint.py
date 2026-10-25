@@ -84,7 +84,7 @@ def R(x0, y0, x1, y1, width):
     d.rectangle([x0 * S * 2, y0 * S * 2, x1 * S * 2, y1 * S * 2], outline=255, width=int(width * S * 2))
 # heavy rule at 20 css px, hairline at 36 css px, bead row between
 R(20, 20, 1324, 940, 4)
-R(36, 36, 1308, 924, 1.2)
+R(36, 36, 1308, 924, 2)
 step = 14
 def beads(x0, y0, x1, y1):
     n = int(max(x1 - x0, y1 - y0) / step)
@@ -98,7 +98,7 @@ beads(28, 28, 28, 932); beads(1316, 28, 1316, 932)
 # roughen the ink edge: blur, add low noise, re-threshold
 m = m.filter(ImageFilter.GaussianBlur(1.6 * S))
 noise = Image.fromarray((rng.random((bh // 6, bw // 6)) * 255).astype(np.uint8)).resize((bw, bh), Image.BICUBIC)
-na = np.asarray(m).astype(np.float32) + (np.asarray(noise).astype(np.float32) - 128) * 0.55
+na = np.asarray(m).astype(np.float32) + (np.asarray(noise).astype(np.float32) - 128) * 0.42
 m = Image.fromarray(np.where(na > 120, 255, 0).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.8)).resize((W, H), Image.LANCZOS)
 ink = Image.new('RGBA', (W, H), (23, 76, 87, 0))
 ink.putalpha(m.point(lambda v: int(v * 0.93)))
@@ -173,4 +173,11 @@ a = np.asarray(n).astype(np.float32)
 alpha = np.clip((a - 150) * 2.2, 0, 150).astype(np.uint8)
 st = Image.new('RGBA', (SW, SH), (240, 232, 212, 0)); st.putalpha(Image.fromarray(alpha))
 st.save(os.path.join(A, 'stamp-wear.png'))
+
+# ---------- 5. ink laydown: paper-coloured soft patches over everything, so solids and type print a
+# little uneven, the way a fast offset run starves the ink in places (big, low-detail, faint)
+lay = Image.new('RGBA', (PW, PH), (240, 232, 212, 0))
+la = np.asarray(soft_noise(60, 44, 10)).astype(np.float32)
+lay.putalpha(Image.fromarray(np.clip((la - 120) * 0.55, 0, 40).astype(np.uint8)))
+lay.resize((PW * 2, PH * 2), Image.BICUBIC).save(os.path.join(A, 'ink-wear.png'))
 print('painted')

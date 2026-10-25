@@ -1,5 +1,5 @@
 """Trim PDF and printer PDF (3 mm bleed, crop marks, TrimBox and BleedBox) for the
-Fox & Sons Books cafe card. 5.5 x 8.5 in (US half letter), two sided, flat, no folds."""
+Fox & Sons Books cafe card, four colour on gloss coated card. 5.5 x 8.5 in (US half letter), two sided, flat, no folds."""
 import asyncio, os
 from playwright.async_api import async_playwright
 D = os.path.dirname(os.path.abspath(__file__))
@@ -14,10 +14,11 @@ def body(n): return open(os.path.join(D, n + '.html')).read().split('<body>')[1]
 
 def bleed_page(n):
     o = M + B; W = TW + 2 * o; H = TH + 2 * o
-    s = f'<div style="position:absolute;left:{M}px;top:{M}px;width:{TW+2*B}px;height:{TH+2*B}px;background:#f5efe1"></div>'
-    s += f'<img src="assets/grain-{n}.png" alt="" style="position:absolute;left:{M}px;top:{M}px;width:{TW+2*B}px;height:{TH+2*B}px">'
-    if n == 'back':   # the ring runs off the top edge, so carry it into the bleed
-        s += f'<div style="position:absolute;left:{M}px;top:{M}px;width:{TW+2*B}px;height:{TH+2*B}px;overflow:hidden"><img src="assets/coffee-ring.png" alt="" style="position:absolute;left:{330+B}px;top:{-108+B}px;width:240px;height:240px"></div>'
+    s = f'<div style="position:absolute;left:{M}px;top:{M}px;width:{TW+2*B}px;height:{TH+2*B}px;background:#faf7f0"></div>'
+    band = 350 if n == 'front' else 14          # the burgundy flood runs off the top and both sides
+    s += f'<div style="position:absolute;left:{M}px;top:{M}px;width:{TW+2*B}px;height:{band+B}px;background:#6a1824"></div>'
+    rule_top = 351 if n == 'front' else 14; rule_h = 3 if n == 'front' else 2
+    s += f'<div style="position:absolute;left:{M}px;top:{o+rule_top}px;width:{TW+2*B}px;height:{rule_h}px;background:#231a17"></div>'
     s += f'<div style="position:absolute;left:{o}px;top:{o}px;width:{TW}px;height:{TH}px;overflow:hidden">{body(n)}</div>'
     def ln(x, y, w, h): return f'<div style="position:absolute;left:{x}px;top:{y}px;width:{w}px;height:{h}px;background:#000"></div>'
     for x in (o, o + TW): s += ln(x - 0.25, 0, 0.5, M - 3) + ln(x - 0.25, H - M + 3, 0.5, M - 3)
@@ -29,6 +30,8 @@ async def main():
         b = await pw.chromium.launch(proxy={'server': os.environ['HTTPS_PROXY'], 'bypass': 'localhost,127.0.0.1'})
         pg = await b.new_page()
         head = open(os.path.join(D, 'front.html')).read().split('<head>')[1].split('</head>')[0]
+        # print files use the same faces as static TrueType instances, so they embed as TrueType, not Type 3
+        import re; head = re.sub(r'<link rel="stylesheet" href="https://fonts.googleapis.com[^>]*>', '<link rel="stylesheet" href="fonts/fonts.css">', head)
         html = ('<!doctype html><html><head>' + head + '<style>@page{size:5.5in 8.5in;margin:0}body{margin:0}.pg{width:528px;height:816px;overflow:hidden;break-after:page}</style></head><body>'
                 + ''.join('<div class="pg">' + body(n) + '</div>' for n in FACES) + '</body></html>')
         open(os.path.join(D, 'trim.html'), 'w').write(html)

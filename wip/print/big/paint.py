@@ -21,7 +21,7 @@ OW, OH = W * S, H * S
 CELL = 5.2                             # halftone cell in output px (a coarse box-board screen)
 ANG = {'c': 15, 'm': 75, 'y': 0, 'k': 45}
 SHIFT = {'c': (0.0, 0.0), 'm': (1.7, -0.9), 'y': (-1.3, 1.5), 'k': (0.7, 0.5)}   # misregistration, output px
-STILL = os.environ.get('BIG_STILL', '/tmp/claude-0/-home-claude/6d06a22c-2024-50a8-a2d1-a12880d59711/scratchpad/bigstills/foMHIjKCwJm2L3waE1dqQk0LS62.jpg')
+STILL = os.path.join(A, 'still-piano.jpg')   # TMDB still, the floor-piano duet
 
 BOWL = os.path.join(FD, 'BowlbyOne.ttf')
 MICRO = os.path.join(FD, 'Michroma.ttf')
@@ -181,11 +181,11 @@ def press(pl, seed):
     out = np.ones((OH, OW, 3), np.float32) * (np.array(PAPER, np.float32) / 255.0)
     for i, n in enumerate('cmyk'):
         dots = halftone(np.clip(pl.p[n], 0, 1), ANG[n])
-        im = Image.fromarray(dots, 'F')
+        im = Image.fromarray((dots * 255 + 0.5).astype(np.uint8), 'L')
         dx, dy = SHIFT[n]
         im = im.transform(im.size, Image.AFFINE, (1, 0, -dx, 0, 1, -dy), resample=Image.BILINEAR)
         im = im.filter(ImageFilter.GaussianBlur(0.45))          # ink spread on board
-        a = np.asarray(im, np.float32) * mottle(seed + i)
+        a = np.asarray(im, np.float32) / 255.0 * mottle(seed + i)
         T = np.array(INKS[n], np.float32)
         out *= 1 - a[..., None] * (1 - T)
     return Image.fromarray((np.clip(out, 0, 1) * 255).astype(np.uint8), 'RGB')
@@ -275,9 +275,10 @@ def paint_window(aw, ah, seed=88):
     kw = (x1 - x0) / n
     ky0, ky1 = R + band[0], R + band[1]
     for i in range(n):
-        a0, a1 = x0 + i * kw + 4, x0 + (i + 1) * kw - 4
-        ksd.rounded_rectangle([a0 + 5, ky0 + 8, a1 + 5, ky1 + 8], 10, fill=150)
-        kd.rounded_rectangle([a0, ky0, a1, ky1], 10, fill=(250, 247, 238, 255))
+        a0, a1 = x0 + i * kw + 4 + rnd.uniform(-2, 2), x0 + (i + 1) * kw - 4 + rnd.uniform(-2, 2)
+        t0, t1 = ky0 + rnd.uniform(-4, 4), ky1 + rnd.uniform(-6, 6)
+        ksd.rounded_rectangle([a0 + 5, t0 + 8, a1 + 5, t1 + 8], 14, fill=150)
+        kd.rounded_rectangle([a0, t0, a1, t1], 14, fill=(250, 247, 238, 255))
         kd.rounded_rectangle([a0 + 6, ky0 + 6, a0 + 14, ky1 - 14], 4, fill=(255, 255, 255, 255))
         kd.line([(a1 - 3, ky0 + 10), (a1 - 3, ky1 - 6)], fill=(214, 206, 192, 255), width=4)
     blacks = [0, 1, 3, 4, 5, 7, 8, 10, 11]
@@ -467,7 +468,7 @@ def front():
     cx, cy = F['company']
     logotype(pl, 'THE COMPANY', font(BOWL, 46), cx, cy, k=0.2, fill='white', stroke=3, extr=(4, 5), outer=3)
     px, py = F['party']
-    logotype(pl, 'PARTY', font(BOWL, 150), px, py, k=0.2, fill='yellow', stroke=5, extr=(9, 11), outer=5)
+    logotype(pl, 'PARTY', font(BOWL, 140), px, py, k=0.2, fill='yellow', stroke=5, extr=(9, 11), outer=5)
     # age box
     ax0, ay0, ax1, ay1 = F['age']
     pl.fill(rect_mask((ax0 + 5, ay0 + 5, ax1 + 5, ay1 + 5)), 100, 85, 0, 60)
@@ -477,11 +478,15 @@ def front():
     fa = font(MICRO, 14)
     wa = fa.getlength('AGES') / S
     pl.fill(text_mask('AGES', fa, (ax0 + ax1) / 2 - wa / 2, ay0 + 6), 0, 0, 0, 0)
-    fn = font(BOWL, 58)
-    t = '30'
-    wn = fn.getlength(t) / S
-    pl.fill(text_mask(t, fn, (ax0 + ax1) / 2 - wn / 2 - 12, ay0 + 26), 0, 100, 100, 0)
-    pl.fill(text_mask('& UP', font(BOWL, 18), (ax0 + ax1) / 2 + wn / 2 - 10, ay0 + 66), 0, 0, 0, 100)
+    fn, fu = font(BOWL, 46), font(BOWL, 18)
+    wn, wu = fn.getlength('30') / S, fu.getlength('& UP') / S
+    lx = (ax0 + ax1) / 2 - (wn + 6 + wu) / 2
+    pl.fill(text_mask('30', fn, lx, ay0 + 22), 0, 100, 100, 0)
+    pl.fill(text_mask('& UP', fu, lx + wn + 6, ay0 + 46), 0, 0, 0, 100)
+    fe = font(SP7, 13)
+    for i, t in enumerate(('Some exceptions', 'apply.')):
+        we = fe.getlength(t) / S
+        pl.fill(text_mask(t, fe, (ax0 + ax1) / 2 - we / 2, ay0 + 88 + i * 16), 0, 0, 0, 100)
     # window: white printed surround and black keyline, art inside
     wx0, wy0, wx1, wy1 = F['window']
     pl.fill(rect_mask((wx0 - 8, wy0 - 8, wx1 + 8, wy1 + 8), 26), 0, 0, 0, 0)

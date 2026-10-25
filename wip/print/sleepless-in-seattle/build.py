@@ -30,7 +30,7 @@ RIGHT = [
   ('Sweets', None, [
     ('Valentine hearts', 'Sugar cookies cut by hand, iced red and white.', 'Baked through February 14.', '2 for 2.14'),
     ('Tiramisu', 'Espresso-soaked ladyfingers layered with mascarpone and cocoa.', 'What is it? You’ll see.', '3.25'),
-    ('Marionberry pie', 'Oregon berries under a lattice top. À la mode, 75¢ more.', None, '2.75')]),
+    ('Marionberry pie', 'Oregon berries, lattice top, baked every morning.', 'À la mode, 75¢ more.', '2.75')]),
   ('Coffee bar', None, [
     ('Iced mocha', 'Strong drip coffee with dark chocolate melted in, cold milk, plenty of ice and whipped cream.', 'Yes, even in February.', '2.25'),
     ('Caffe latte', 'Double shot of espresso, steamed milk.', None, '1.75'),
@@ -90,7 +90,7 @@ facts = ''.join(f'<div style="display: flex; gap: 8px; margin-top: {0 if i == 0 
 
 SEC = lambda t: f'<div style="padding: 3px 0 4px; border-top: 3px solid {BURG}; border-bottom: 1px solid {BURG}; font-family: {COND}; font-size: 19px; letter-spacing: 0.16em; color: {BURG}">{t}</div>'
 
-body = f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; font-family: {SANS}; color: {TEAL}">
+body = f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; font-family: {SANS}; color: {TEAL}; text-shadow: 0 0 0.9px rgba(23,76,87,0.6)">
   <img src="assets/border-paper.png" alt="" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">
 
   <!-- left column: masthead, halftone, hours, kids corner -->
@@ -106,7 +106,7 @@ body = f'''<div style="position: relative; width: {W}px; height: {H}px; overflow
     <div style="display: flex; justify-content: space-between; margin-top: 4px; font-size: 13px; line-height: 1.3; font-weight: 700; letter-spacing: 0.04em">
       <span>THE VIEW FROM OUR BACK DECK</span><span>PHOTO BY A REGULAR</span></div>
     <div style="margin-top: 8px; font-family: {SCRIPT}; font-size: 37px; line-height: 1; color: {BURG}">Sleepless in Seattle? So are we.</div>
-    <div style="margin-top: 4px; font-size: 16px; line-height: 1.3; text-wrap: pretty">Hot food every night till 2 AM, with Dr. Marcia Fieldstone’s call-in show on the radio.</div>
+    <div style="margin-top: 4px; font-size: 16px; line-height: 1.3; text-wrap: pretty">The grill stays hot all night, and Dr. Marcia Fieldstone’s call-in show stays on the radio.</div>
 
     <div style="margin-top: 10px; border: 2px solid {BURG}; padding: 7px 10px 9px">
       <div style="display: flex; align-items: baseline; justify-content: space-between">
@@ -146,11 +146,15 @@ body = f'''<div style="position: relative; width: {W}px; height: {H}px; overflow
   <div style="position: absolute; left: 60px; bottom: 54px; width: 836px; display: flex; justify-content: space-between; font-size: 13px; line-height: 1.3; font-weight: 700; letter-spacing: 0.03em; color: {TEAL}">
     <span>PRINTED ON RECYCLED PAPER. PLEASE RECYCLE.</span><span>PAY AT THE COUNTER. CASH OR LOCAL CHECKS, PLEASE.</span></div>
 
+  <img src="assets/ink-wear.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">
   <!-- finish: shared grain and the soft wear layer (coffee ring, grease, gloss, edges) -->
   <img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block; opacity: 0.75">
   <img src="assets/wear-stain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">
 </div>'''
 
+import re
+# ink spread on the burgundy plate too: give burgundy type its own slight gain
+body = re.sub(r'(color: #8c2232)(?![^"]*text-shadow)', r'\1; text-shadow: 0 0 0.9px rgba(140,34,50,0.6)', body)
 open(os.path.join(D, 'placemat.html'), 'w').write(
     f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Night Owl Dock Cafe placemat</title>{LINK}<style>body{{margin:0}}</style></head><body>{body}</body></html>')
 print('built placemat.html')

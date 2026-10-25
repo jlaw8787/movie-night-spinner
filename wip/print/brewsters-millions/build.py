@@ -46,7 +46,7 @@ BAR = [
 ]
 BREAKFAST = [
     ('Eggs Benedict', 'Two poached eggs on Canadian bacon and a toasted English muffin, hollandaise.', '9.50'),
-    ('Two eggs any style', 'With bacon, ham or sausage, home fried potatoes and toast.', '7.25'),
+    ('Ham and eggs', 'Two eggs any style with a ham steak, home fried potatoes and buttered toast.', '7.25'),
     ('Berries Romanoff', 'Strawberries steeped in Curaçao and folded into whipped cream.', '6.50'),
 ]
 SERVICES = [
@@ -68,7 +68,7 @@ def item(n, d, p, top=10, size=23, desc_right=64, extra=''):
     return (f'<div style="position: relative; margin-top: {top}px">'
             f'<div style="display: flex; align-items: baseline; gap: 8px">'
             f'<h3 style="margin: 0; flex: 0 1 auto; min-width: 0; {BOD}; font-weight: 600; font-size: {size}px; line-height: 1.12; color: {INK}">{n}</h3>'
-            f'<div style="flex: 1; min-width: 12px; border-bottom: 1.5px dotted {INK}; transform: translateY(-5px); opacity: 0.75"></div>'
+            f'<div style="flex: 1; min-width: 8px; border-bottom: 1.5px dotted {INK}; transform: translateY(-5px); opacity: 0.75"></div>'
             f'<span style="{BOD}; {NUM}; font-weight: 600; font-size: {size - 2}px; color: {INK}; white-space: nowrap">{p}</span></div>'
             f'<p style="margin: 2px {desc_right}px 0 0; {GAR}; font-size: 17px; line-height: 1.32; color: {GREY}; text-wrap: pretty">{d}</p>{extra}</div>')
 
@@ -103,7 +103,7 @@ def front():
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {IVORY}; {GAR}; color: {INK}">'
             f'{under}'
             f'<section style="position: absolute; left: 84px; top: 478px; width: 648px; height: 536px; display: flex; flex-direction: column">'
-            f'<div style="{BOD}; font-style: italic; font-weight: 500; font-size: 37px; line-height: 1; color: {BURG}">In-Suite Dining</div>'
+            f'<div style="{BOD}; font-style: italic; font-weight: 500; font-size: 37px; line-height: 1; font-variation-settings: \'opsz\' 20; color: {BURG}">Room Service</div>'
             f'<div style="margin-top: 7px; font-size: 17px; line-height: 1.3; color: {GREY}">Served at any hour. Dial <b style="font-weight: 600; color: {INK}; {NUM}">30</b> from your suite.</div>'
             f'{head("TO BEGIN", "Hors-d&#8217;&#339;uvre", top=12)}{begin}'
             f'{head("FROM THE GRILL", "Grillades", top=14)}{items(GRILL, first=8, gap=9, desc_right=0)}'
@@ -124,7 +124,7 @@ def back():
             f'<img src="assets/stain-ring.png" alt="" aria-hidden="true" style="position: absolute; left: 44px; top: 0; width: 196px; height: 196px; display: block">'
             f'<div style="position: relative; transform: rotate(-4deg); {HAND}; font-size: 22px; line-height: 1.38; color: {PENCIL}">'
             f'Spike, order anything<br>you want. Put it<br>on the suite.<div style="text-align: right; margin-right: 26px">Monty</div></div></div>')
-    bfast = ''.join(f'<div style="width: 200px; flex: none">{item(*x, top=8, size=20, desc_right=0)}</div>' for x in BREAKFAST)
+    bfast = ''.join(f'<div style="width: {bw}px; flex: none">{item(*x, top=8, size=19, desc_right=0)}</div>' for x, bw in zip(BREAKFAST, (200, 190, 242)))
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {IVORY}; {GAR}; color: {INK}">'
             f'{under}'
             f'<section style="position: absolute; left: 84px; top: 156px; width: 648px; height: 858px; display: flex; flex-direction: column">'
@@ -133,7 +133,7 @@ def back():
             f'{head("SWEETS", "Desserts", top=20)}{items(SWEETS, size=22, desc_right=0)}</div>'
             f'<div style="width: 312px; flex: none">{head("THE BAR", "Le bar")}{items(BAR, size=22, desc_right=0)}</div></div>'
             f'{head("BREAKFAST IN THE SUITE", "Le petit d&#233;jeuner", top=22)}'
-            f'<div style="display: flex; gap: 24px">{bfast}</div>'
+            f'<div style="display: flex; gap: 8px">{bfast}</div>'
             f'<div style="margin-top: 7px; font-style: italic; font-size: 17px; color: {GREY}">Hang the breakfast card on your door before 3 a.m.</div>'
             f'{head("AT YOUR SERVICE", "Les services", top=20)}'
             f'<div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: flex-start"><div style="width: 360px">{services}</div>{note}</div>'

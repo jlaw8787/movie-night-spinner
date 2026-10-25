@@ -175,7 +175,6 @@ tone = vgrad(HOR, 226, 0.20, 0.55)
 # glitter path where the lines break up
 gl = (np.abs(xx - 380 * S) < (30 + (yy / S - HOR) * 1.6) * S) & (rng.random((H, W)) > 0.0)
 gl_noise = np.asarray(Image.fromarray((rng.random((H // 9, W // 24)) * 255).astype(np.uint8)).resize((W, H), Image.NEAREST), np.float32) / 255
-tone = np.where(gl, tone * 0.55, tone)
 ink |= hatch(sea, tone, 0, 1.75, wave=(0.6, 23)) & (yy >= HOR * S)
 stroke([(0, HOR), (CW, HOR)], 0.6)
 
@@ -412,6 +411,10 @@ truck(L1 - 44, 3, 13)
 # ---------------- merge, frame, ink squash ----------------
 lin = np.asarray(lines, np.float32) / 255
 art = np.maximum(ink.astype(np.float32), lin)
+# crop the plate to the card's cut: lose a strip of open sky and the bottom of the grass
+TOPC, CH = 22, 262
+art = art[TOPC * S:(TOPC + CH) * S]
+H = CH * S
 # keyline frame of the cut
 fr = Image.new('L', (W, H), 0)
 fd = ImageDraw.Draw(fr)

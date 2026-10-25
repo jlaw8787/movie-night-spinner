@@ -3,8 +3,7 @@ Printed look: two spot inks (brown key, orange) offset on cover stock, with the 
 a hair out of register, a coarse halftone screen and line-cut (engraved) hatching.
 
 assets/header-art.png     front header: halftone sun, line-cut 747 climbing out, terminal and runway, speed stripes
-assets/back-art.png       back header: speed stripes with a small line-cut control tower and tail fin
-assets/foot-stripes.png   speed stripes for the foot of each face
+assets/stripes-top.png, assets/stripes-foot.png   speed stripes for the top of the back and the foot of each face
 assets/wear-front.png, assets/wear-back.png   soft mottling, edge wear and a laminate sheen
 assets/stain-ring.png     the ring a cold glass leaves on the laminate"""
 import os, math, random
@@ -112,7 +111,7 @@ def stripes(w, ys, dx=0):
     return layers, hmax
 
 # ---------------------------------------------------------------- front header
-AW, AH = W * S, 248 * S
+AW, AH = W * S, 234 * S
 random.seed(1990)
 key = Image.new('L', (AW, AH), 0)          # brown plate
 org = Image.new('L', (AW, AH), 0)          # orange plate
@@ -182,7 +181,7 @@ for side in (-1, 1):
 
 # 3. engraved cloud streaks crossing the sun
 cd = ImageDraw.Draw(key)
-for (x0, y0, n) in ((60, 150, 4), (int(AW * 0.48), int(AH * 0.56), 5), (int(AW * 0.70), int(AH * 0.22), 3)):
+for (x0, y0, n) in ((int(AW * 0.48), int(AH * 0.56), 5), (int(AW * 0.70), int(AH * 0.22), 3)):
     for k in range(n):
         L = random.randrange(140, 300) - k * 22
         xs = x0 + random.randrange(-30, 40)
@@ -233,33 +232,6 @@ def stripe_band(w, h, seed, flip=False, tower=False):
 
 stripe_band(W * S, 66, 21).save(os.path.join(A, 'stripes-top.png'))
 stripe_band(W * S, 66, 23, flip=True).save(os.path.join(A, 'stripes-foot.png'))
-
-# a small line-cut vignette for the back: tail fin of the 747 and the tower over the stripes
-BW, BH = 150 * S, 120 * S
-k = Image.new('L', (BW, BH), 0); o = Image.new('L', (BW, BH), 0)
-bh = int(BH * 0.86)
-kd = ImageDraw.Draw(k)
-t0 = int(BW * 0.52)
-kd.rectangle((t0 - 12, bh - 200, t0 + 12, bh), fill=255)
-kd.polygon([(t0 - 50, bh - 240), (t0 + 50, bh - 240), (t0 + 38, bh - 200), (t0 - 38, bh - 200)], fill=255)
-kd.rectangle((t0 - 55, bh - 254, t0 + 55, bh - 240), fill=255)
-kd.rectangle((t0 - 2, bh - 290, t0 + 2, bh - 254), fill=255)
-hh = hatch((BW, BH), 7, lambda t: 3.0, angle=90)
-k = ImageChops.multiply(k, hh)
-kd = ImageDraw.Draw(k)
-kd.rectangle((t0 - 45, bh - 236, t0 + 45, bh - 206), fill=0)
-for q in range(-45, 47, 18): kd.rectangle((t0 + q, bh - 236, t0 + q + 4, bh - 206), fill=255)
-kd.line((0, bh, BW, bh), fill=255, width=5)
-for i in range(4): kd.line((0, bh + 12 + i * 11, BW, bh + 12 + i * 11), fill=255, width=3 + i)
-og = Image.new('L', (BW, BH), 0); ogp = og.load()
-scx, scy, sr = int(BW * 0.52), int(bh - 150), 130
-for y in range(BH):
-    for x in range(BW):
-        rr = math.hypot(x - scx, y - scy) / sr
-        if rr < 1 and y < bh - 4: ogp[x, y] = int(255 * (0.85 - 0.5 * rr ** 2))
-o = halftone(og, 12)
-o = ImageChops.subtract(o, k.filter(ImageFilter.MaxFilter(7)))
-compose(k, o, None, 31).save(os.path.join(A, 'tower-art.png'))
 
 # ---------------------------------------------------------------- soft wear, laminate sheen
 def wear(name, seed, warm):

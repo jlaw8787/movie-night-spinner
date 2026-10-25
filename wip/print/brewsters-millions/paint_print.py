@@ -52,7 +52,7 @@ def foil(mask, seed):
     t = np.clip((f - 0.9) / 0.45, 0, 1)[..., None]
     col = base * np.minimum(f, 1.0)[..., None] * (1 - t) + hi * t
     # foil breaks: tiny pinholes where the foil did not lift cleanly
-    holes = (rng.random((h, w)) < 0.0018).astype(np.float32)
+    holes = (rng.random((h, w)) < 0.0009).astype(np.float32)
     holes = np.asarray(Image.fromarray((holes * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.9))).astype(np.float32) / 255
     a = np.clip(mask * (1 - np.clip(holes * 3.0, 0, 0.85)), 0, 1)
     return col, a
@@ -321,9 +321,9 @@ def flood_front():
     for cx, cy in ((22, 22), (W - 22, 22), (22, FLOOD_F - 14), (W - 22, FLOOD_F - 14)):
         diamond(mask, cx, cy, 5)
     # wordmark and address line
-    text_mask(None, 'THE VANDERMEER', os.path.join(F, 'BodoniModa-96-600.ttf'), 52, track=0.16,
+    text_mask(None, 'THE VANDERMEER', os.path.join(F, 'BodoniModa-24-600.ttf'), 52, track=0.16,
               anchor_xy=(W / 2 * S, 381 * S), canvas=mask)
-    text_mask(None, 'EAST SIXTY-FIRST STREET, NEW YORK', os.path.join(F, 'BodoniModa-11-500.ttf'), 13.5, track=0.32,
+    text_mask(None, 'EAST SIXTY-FIRST STREET, NEW YORK', os.path.join(F, 'BodoniModa-11-600.ttf'), 13.5, track=0.32,
               anchor_xy=(W / 2 * S, 410 * S), canvas=mask)
     ImageDraw.Draw(mask).rectangle([150 * S, 393 * S, 666 * S, 393 * S + 1], fill=255)
     for x in (140, 676):
@@ -352,9 +352,9 @@ def flood_back():
     rule_mask(mask, 28, 28, W - 28, FLOOD_B - 20, 0.7)
     for cx, cy in ((22, 22), (W - 22, 22), (22, FLOOD_B - 14), (W - 22, FLOOD_B - 14)):
         diamond(mask, cx, cy, 5)
-    text_mask(None, 'THE VANDERMEER', os.path.join(F, 'BodoniModa-96-600.ttf'), 34, track=0.14,
+    text_mask(None, 'THE VANDERMEER', os.path.join(F, 'BodoniModa-24-600.ttf'), 34, track=0.14,
               anchor_xy=(64 * S, 80 * S), align='left', canvas=mask)
-    text_mask(None, 'In-Suite Dining, continued', os.path.join(F, 'BodoniModa-96-500i.ttf'), 25, track=0.0,
+    text_mask(None, 'Room Service, continued', os.path.join(F, 'BodoniModa-24-500i.ttf'), 25, track=0.0,
               anchor_xy=((W - 64) * S, 78 * S), align='right', canvas=mask)
     mk = np.asarray(mask, np.float32) / 255
     col, a = foil(mk, 23)

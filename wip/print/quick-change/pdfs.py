@@ -1,4 +1,4 @@
-"""Trim PDF for the Departure Lounge table card: 4.25 x 11 in, two pages (front, back), made with Chromium."""
+"""Trim PDF for the Runway Lounge table card: 4.25 x 11 in, two pages (front, back), made with Chromium."""
 import asyncio, os
 from playwright.async_api import async_playwright
 D = os.path.dirname(os.path.abspath(__file__))

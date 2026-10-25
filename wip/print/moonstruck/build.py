@@ -21,7 +21,7 @@ def typed(text, size=16, lh=1.34, bold=False, extra=''):
     return (f'<div style="font-family: \'Courier Prime\', \'Courier New\', monospace; {w}font-size: {size}px; '
             f'line-height: {lh}; {extra}">{" ".join(out)}</div>')
 
-def typed_head(text, gap=14):
+def typed_head(text, gap=11):
     """Typed caps, underscored with the typewriter's own underline."""
     return (f'<div style="margin-top: {gap}px; font-family: \'Courier Prime\', monospace; font-weight: 700; font-size: 16px; '
             f'line-height: 1.2; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px">{text}</div>')
@@ -40,14 +40,14 @@ def paste(inner, x, y, w, pad='14px 16px', border=f'1.5px solid {INK}', extra=''
 # ---------- page 1: the parish's imprint on the cover ----------
 COVER_L = (typed_head('MASSES', 0) +
     typed('Saturday vigil 5:30 PM') +
-    typed('Sunday 7:30, 9:00, 10:30 (in Italian) and 12 noon', extra='margin-top: 6px') +
-    typed('Weekdays 7:00 and 8:00 AM', extra='margin-top: 6px') +
+    typed('Sunday 7:30, 9, 10:30 (Italian) and noon', extra='margin-top: 6px') +
+    typed('Weekdays 7 and 8 AM', extra='margin-top: 6px') +
     typed_head('CONFESSIONS', 12) +
-    typed('Saturday 3:30 to 5:00 PM, and any time on request.'))
+    typed('Saturday 3:30 to 5 PM, or by appointment.'))
 COVER_R = (typed_head('RECTORY', 0) +
-    typed('Rev. Msgr. Vincent Amato, Pastor') +
+    typed('Msgr. Vincent Amato, Pastor') +
     typed('Rev. Peter Kelleher', extra='margin-top: 6px') +
-    typed('Rectory office open 9 to 5. Call for baptisms, weddings and sick calls.', extra='margin-top: 6px') +
+    typed('Office open 9 to 5 for baptisms, weddings and sick calls.', extra='margin-top: 6px') +
     typed('Tel. 555-0119', extra='margin-top: 6px'))
 
 # ---------- page 4: the advertisers ----------
@@ -68,11 +68,11 @@ ADS = ''.join([
        'Open 6 AM. Tel. 555-0163', face=OSW, nstyle='font-weight: 600; letter-spacing: 0.04em', nsize=18),
     ad('C. Castorini', '<b>Plumbing and Heating.</b> Boilers, baths and kitchens. Copper pipe? Ask us why.',
        'Licensed. Tel. 555-0137', face="'UnifrakturMaguntia', serif", nstyle='font-weight: 400', nsize=24),
-    ad('Kings Travel', 'Flights to Palermo, Rome and all of Italy. Passports and visas arranged.',
+    ad('Kings Travel', 'Flights to Palermo, Rome and all of Italy. Passports arranged.',
        'Ask for Angela. 555-0148', face=OSW, nstyle='font-weight: 600; letter-spacing: 0.06em', nsize=19, cut=('ad-plane-linecut.png', 96, 37), center=True),
-    ad('DeMarco Jewelers', 'Engagement rings and wedding bands. Watch repair while you wait.',
+    ad('DeMarco Jewelers', 'Engagement rings, wedding bands, watch repair.',
        'No ring? See us first.', nstyle='font-weight: 700; font-style: italic', nsize=20, cut=('ad-ring-linecut.png', 34, 34), center=True),
-    ad('Carmela&#8217;s Beauty Salon', 'Cut, set and color. We cover gray. Walk-ins welcome Tuesday to Saturday.',
+    ad('Carmela&#8217;s Salon', 'Cut, set and color. We cover gray. Walk-ins Tuesday to Saturday.',
        'Tel. 555-0172', nstyle='font-weight: 400; font-style: italic', nsize=21),
     ad('GOWNS BY ADELE', 'Evening dresses and coats, and shoes to match. Alterations ready by Friday.',
        'Tel. 555-0126', nstyle='font-weight: 700; letter-spacing: 0.08em', nsize=17),
@@ -80,10 +80,10 @@ ADS = ''.join([
        'Fittings nightly. 555-0181', face=OSW, nstyle='font-weight: 500; letter-spacing: 0.04em', nsize=20),
     ad('PUGLIESE PORK STORE', 'Veal and chicken cutlets pounded while you wait. Sweet and hot sausage made daily.',
        'Tel. 555-0155', face=OSW, nstyle='font-weight: 600', nsize=18),
-    ad('Corner Wines &amp; Liquors', 'Asti Spumante by the case for weddings and engagements. Party orders delivered.',
+    ad('Corner Wines &amp; Liquors', 'Asti Spumante by the case for engagements. Party orders delivered.',
        'Tel. 555-0114', nstyle='font-weight: 700', nsize=18),
-    ad('Tedeschi Funeral Home', 'Family owned since 1921. Chapel on the premises, private parking.',
-       'Day or night. 555-0102', nstyle='font-weight: 400; font-variant: small-caps; letter-spacing: 0.03em', nsize=20, center=True),
+    ad('Tedeschi Funeral Home', 'Family owned since 1921. Chapel and private parking.',
+       'Day or night. 555-0102', nstyle='font-weight: 400; font-variant: small-caps; letter-spacing: 0.02em', nsize=18, center=True),
 ])
 
 # ---------- page 2: typed parish notes ----------
@@ -93,12 +93,13 @@ P2 = (
     f'<div style="margin-top: 6px; height: 1.5px; background: {INK}"></div>'
     + typed_head('BANNS OF MARRIAGE', 12)
     + typed('Loretta Castorini and John Cammareri, both of this parish. First time of asking.')
-    + typed('Anthony Ferraro and Donna Lisi. Second time of asking.', extra='margin-top: 5px')
-    + typed('If you know any reason why these couples should not marry, please tell the pastor.', extra='margin-top: 5px; font-style: italic')
+    + typed('Anthony Ferraro and Donna Lisi, second time.', extra='margin-top: 5px')
+    + typed('Objections? Please see the pastor.', extra='margin-top: 5px; font-style: italic')
     + typed_head('PLEASE PRAY FOR THE SICK')
-    + typed('Mrs. Cammareri (in Palermo), Frank Spina, Ann Marie Doyle, and all our homebound.')
+    + typed('Mrs. Cammareri (in Palermo), Frank Spina, Ann Marie Doyle and our homebound.')
     + typed_head('ON THE FRONT STEPS')
     + typed('Dog walkers, please keep the steps clear before the 9 o&#8217;clock Mass. This means the gentleman with all the dogs.')
+    + typed_head('BINGO') + typed('Every Tuesday, 7:30 PM, school hall.')
     + '{{COLLECTION}}'
     + '{{BREAKFAST}}'
 )
@@ -110,23 +111,22 @@ COLLECTION = (
     '</div>'
     '<div style="position: relative; width: 70px; height: 124px; margin-top: 14px">'
     '<img src="assets/roof-fund-thermometer.png" alt="Roof fund thermometer" style="position: absolute; left: 0; top: 0; width: 32px; height: 124px; display: block">'
-    '<div style="position: absolute; left: 30px; top: 2px; font-family: \'Courier Prime\', monospace; font-size: 12px; line-height: 1">40,000</div>'
-    '<div style="position: absolute; left: 30px; top: 50px; font-family: \'Courier Prime\', monospace; font-size: 12px; line-height: 1">20,000</div>'
+    '<div style="position: absolute; left: 34px; top: 2px; width: 36px; font-family: \'Courier Prime\', monospace; font-size: 12px; line-height: 1">40,000</div>'
+    '<div style="position: absolute; left: 34px; top: 50px; width: 36px; font-family: \'Courier Prime\', monospace; font-size: 12px; line-height: 1">20,000</div>'
     '</div></div>')
 
 BREAKFAST_ITEMS = [
     ('Eggs in the hole', 'Thick white toast fried in butter with a ring of sweet red pepper, the yolk left soft in the middle.'),
     ('Sausage and home fries', 'Sweet links from the pork store, potatoes crisped with onion.'),
-    ('Juice and coffee', 'Orange juice by the glass, coffee from the big urn.'),
 ]
 BREAKFAST = (
-    '<div style="margin-top: 16px; position: relative">'
+    '<div style="margin-top: 14px; position: relative">'
     '<div style="position: absolute; left: -7px; top: -6px; right: -7px; bottom: -6px; border: 1px solid rgba(60,52,40,0.10)"></div>'
     f'<div style="border: 1.5px solid {INK}; padding: 10px 14px 12px">'
     '<div style="display: flex; justify-content: space-between; align-items: baseline">'
     "<span style=\"font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 17px; letter-spacing: 0.06em; line-height: 1.1\">HOLY NAME SOCIETY</span>"
     "<span style=\"font-family: 'Old Standard TT', serif; font-weight: 700; font-size: 16px\">$5.00</span></div>"
-    "<div style=\"font-family: 'Old Standard TT', serif; font-style: italic; font-size: 16px; line-height: 1.28\">Communion breakfast after the 9 o&#8217;clock Mass, school cafeteria. Children $3.00.</div>"
+    "<div style=\"font-family: 'Old Standard TT', serif; font-style: italic; font-size: 16px; line-height: 1.28\">Communion breakfast after the 9 o&#8217;clock Mass, school cafeteria. Juice and coffee included. Children $3.00.</div>"
     + ''.join(dish(n, d, gap=7, size=18) for n, d in BREAKFAST_ITEMS) +
     '</div></div>')
 
@@ -135,22 +135,17 @@ DINNER = [
     ('Antipasto', 'Salami, provolone, roasted peppers and olives.'),
     ('Escarole soup', 'Tiny meatballs, grated cheese.'),
     ('Baked ziti', 'Ricotta and mozzarella in Sunday gravy.'),
-    ('Chicken scaloppine', 'Cutlets pounded thin and floured, sautéed with lemon, white wine, capers and butter.'),
-    ('Tossed salad', 'Oil and vinegar.'),
-    ('Sheet cake', 'With coffee, and anisette on every table.'),
+    ('Chicken scaloppine', 'Cutlets pounded thin, floured and sautéed with lemon, white wine, capers and butter. Tossed salad alongside.'),
 ]
 BAR = [
     ('Amaretto sour', 'Shaken frothy with lemon and egg white, over ice, a cherry on top.', '2.50'),
     ('Highballs', 'Rye and ginger ale, scotch and soda.', '2.50'),
-    ('House wine', 'Red or white, by the glass.', '2.00'),
-    ('Beer', 'Bottles, on ice.', '1.50'),
-    ('Soda', 'For the children.', '.75'),
+    ('House wine', 'Red or white.', '2.00'),
+    ('Beer', 'Bottles on ice. Soda .75', '1.50'),
 ]
 BAKE = [
-    ('Rosemary focaccia', 'Olive oil bread baked in sheet pans, dimpled and scattered with coarse salt.', '.75 slice<br>4.00 pan'),
-    ('Cannoli', 'Sweet ricotta with grated orange peel, chocolate-dipped ends. Filled while you wait.', '1.00'),
-    ('Pignoli cookies', 'Almond paste and pine nuts.', '6.00 lb'),
-    ('Sfogliatelle', 'Flaky shells, ricotta and citron.', '1.25'),
+    ('Rosemary focaccia', 'Olive oil bread from sheet pans, dimpled, with coarse salt. Slices .75', '4.00'),
+    ('Cannoli', 'Sweet ricotta and grated orange peel, ends dipped in chocolate. Filled to order.', '1.00'),
 ]
 
 def col_head(t):
@@ -166,18 +161,20 @@ def bake_item(n, d, p):
 FLYER = (
     f'<div style="border: 4px double {INK}; padding: 12px 16px 14px">'
     '<div style="display: flex; gap: 14px; align-items: center">'
-    '<img src="assets/dance-moon-linecut.png" alt="A full moon" style="display: block; width: 104px; height: 104px; flex: none">'
+    '<img src="assets/dance-moon-linecut.png" alt="A full moon" style="display: block; width: 92px; height: 92px; flex: none">'
     '<div style="flex: 1; text-align: center">'
     "<div style=\"font-family: 'Old Standard TT', serif; font-style: italic; font-size: 16px; line-height: 1.2\">The Parish Council invites you to the</div>"
-    "<div style=\"font-family: 'Old Standard TT', serif; font-style: italic; font-weight: 700; font-size: 50px; line-height: 1; margin-top: 2px\">Bella Luna</div>"
+    "<div style=\"font-family: 'Old Standard TT', serif; font-style: italic; font-weight: 700; font-size: 46px; line-height: 1; margin-top: 2px\">Bella Luna</div>"
     "<div style=\"font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 0.22em; padding-left: 0.22em; line-height: 1.1; margin-top: 4px\">DINNER DANCE</div>"
     '</div></div>'
     "<div style=\"margin-top: 10px; text-align: center; font-family: 'Old Standard TT', serif; font-size: 16px; line-height: 1.3\">"
-    'Saturday at 7 o&#8217;clock in the school hall. Music by the Sal Esposito Trio. <b>$22.50 a person</b>, tables of ten. Tickets at the rectory.</div>'
-    '<div style="display: flex; gap: 20px; margin-top: 12px">'
-    '<div style="flex: 1">' + col_head('DINNER') + ''.join(dish(n, d, gap=7, size=18) for n, d in DINNER) + '</div>'
-    '<div style="flex: 1">' + col_head('CASH BAR') + ''.join(dish(n, d, p, gap=7, size=18) for n, d, p in BAR) + '</div>'
-    '</div></div>')
+    'Saturday at 7 PM, school hall. Music by the Sal Esposito Trio. <b>$22.50 a person</b>, tickets at the rectory.</div>'
+    '<div style="display: flex; gap: 18px; margin-top: 10px">'
+    '<div style="flex: 1.4">' + col_head('DINNER') + ''.join(dish(n, d, gap=6, size=18) for n, d in DINNER) + '</div>'
+    '<div style="flex: 1">' + col_head('CASH BAR') + ''.join(dish(n, d, p, gap=6, size=18) for n, d, p in BAR) + '</div>'
+    '</div>'
+    f'<div style="margin-top: 10px; padding-top: 7px; border-top: 1px solid {INK}; text-align: center; font-family: \'Old Standard TT\', serif; font-style: italic; font-size: 16px; line-height: 1.2">'
+    'Sheet cake, coffee and anisette on every table.</div></div>')
 
 BAKESALE = (
     '<div style="border: 1.5px solid ' + INK + '; padding: 10px 14px 12px">'
@@ -186,7 +183,9 @@ BAKESALE = (
     "<span style=\"font-family: 'Old Standard TT', serif; font-style: italic; font-size: 15px\">after every Mass</span></div>"
     '<div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 18px">'
     + ''.join(bake_item(*b) for b in BAKE) +
-    '</div></div>')
+    '</div>'
+    "<div style=\"margin-top: 8px; font-family: 'Old Standard TT', serif; font-size: 16px; line-height: 1.26\">Also pignoli and rainbow cookies by the pound.</div>"
+    '</div>')
 
 P3 = (
     '<div style="position: relative">'
@@ -197,7 +196,7 @@ P3 = (
     + BAKESALE + '</div>'
 )
 
-LAYOUT = {'MAST': 44, 'GAP3': 18}
+LAYOUT = {'MAST': 44, 'GAP3': 16}
 
 def fill(s):
     for k, v in {'INK': INK, 'OCHRE': OCHRE, 'OCHRE_TXT': OCHRE_TXT, 'ADS': ADS, 'COVER_L': COVER_L, 'COVER_R': COVER_R,
