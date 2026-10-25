@@ -153,7 +153,6 @@ def elephant(w=168, h=124):
     # body outline
     p.ellipse(98, 58, 52, 34, 2.6, 200, 520)
     # belly shading
-    p.hatch(lambda d, s, f=255: d.chord(((46) * s, (24) * s, (150) * s, (92) * s), 20, 160, fill=f), 60, 3.8, 0.9)
     # legs
     for x in (60, 80, 118, 136):
         p.line([(x, 80), (x - 1, 114), (x + 13, 114), (x + 13, 84)], 2.4)
@@ -161,7 +160,7 @@ def elephant(w=168, h=124):
     # head and ear
     p.ellipse(44, 46, 26, 28, 2.6, 120, 420)
     p.ellipse(60, 46, 17, 23, 2.2, -100, 210, rot=8)
-    p.hatch(ell(60, 50, 12, 16), -35, 3.8, 0.9)
+    p.ellipse(60, 50, 9, 13, 1.2, 100, 260)
     # trunk up and curled, as for a parade
     p.line([(21, 56), (14, 72), (13, 90), (17, 104), (27, 108), (33, 101), (27, 96)], 2.6, 0.4)
     p.line([(30, 66), (25, 78), (24, 92), (27, 96)], 2.0, 0.4)
@@ -413,14 +412,22 @@ def beachball(w=150, h=104):
     """beach ball with solid panels next to a pail and shovel, for the summer box"""
     p = Pen(w, h, 41)
     cx, cy, r = 48, 54, 38
-    for k in range(6):
-        if k % 2 == 0:
-            a0, a1 = math.radians(k * 60 - 90), math.radians(k * 60 - 30)
-            pts = [(cx, cy)] + [(cx + r * math.cos(t), cy + r * 0.98 * math.sin(t)) for t in np.linspace(a0, a1, 12)]
-            p.blot(poly(pts))
+    # curved panels: meridian coordinate u across the ball, alternate bands solid
+    W, H = p.im.size
+    yy, xx = np.mgrid[0:H, 0:W] / S
+    dx, dy = xx - cx, yy - cy
+    inside = dx ** 2 + dy ** 2 < r ** 2
+    half = np.sqrt(np.clip(r ** 2 - dy ** 2, 1e-6, None))
+    u = dx / half + 0.25 * (dy / r)
+    band = ((u < -0.62) | ((u > -0.12) & (u < 0.38))) & inside & (dx ** 2 + (dy + r * 0.86) ** 2 > (r * 0.3) ** 2)
+    arr = np.maximum(np.asarray(p.im), (band * 255).astype(np.uint8))
+    p.im.paste(Image.fromarray(arr)); p.d = ImageDraw.Draw(p.im)
+    for u0 in (-0.62, -0.12, 0.38):
+        pts = [(cx + (u0 - 0.25 * t) * math.sqrt(max(r * r - (t * r) ** 2, 0)), cy + t * r) for t in np.linspace(-0.97, 0.97, 30)]
+        p.line(pts, 1.6, 0.2, taper=False)
     p.ellipse(cx, cy, r, r, 2.6, wob=0.2)
-    p.blot(ell(cx, cy, 6, 6)); p.erase(ell(cx, cy, 2.4, 2.4))
-    p.erase(lambda d, s, f=0: d.ellipse(((cx - 26) * s, (cy - 30) * s, (cx - 14) * s, (cy - 14) * s), fill=f))
+    p.ellipse(cx, cy - r * 0.86, r * 0.3, r * 0.14, 2.0, wob=0.1)
+    p.erase(lambda d, s, f=0: d.ellipse(((cx - 24) * s, (cy - 24) * s, (cx - 15) * s, (cy - 10) * s), fill=f))
     p.line([(10, 98), (140, 98)], 1.6, 0.4)
     # pail
     p.line([(98, 52), (102, 96), (134, 96), (138, 52)], 2.4, 0.3)

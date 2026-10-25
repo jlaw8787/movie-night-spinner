@@ -106,16 +106,43 @@ wline([(tx - 8, BTOP - 172), (tx + 53, BTOP - 214), (tx + 114, BTOP - 172)], 4)
 cone = Image.new('L', (W, H), 0)
 ImageDraw.Draw(cone).polygon([(tx - 8, BTOP - 172), (tx + 53, BTOP - 214), (tx + 114, BTOP - 172)], fill=255)
 T[np.array(cone) > 0] = 0.62
-# windows: six floors, double-hung, about a third lit
-def window(x, y, w=36, h=54):
+# windows: six floors, double-hung, every room different: dark wards, lit rooms, shades pulled to
+# different heights, venetian blinds, curtains, window air conditioners, and grilles on the ground floor
+KINDS = ['dark'] * 40 + ['lit'] * 16 + ['shade'] * 17 + ['blinds'] * 13 + ['curtain'] * 8 + ['ac'] * 6
+def window(x, y, w=36, h=54, ground=False):
+    kind = random.choice(KINDS)
     rect(T, x, y, x + w, y + h, 0.0)
     Dg[y:y + h, x:x + w] = 0.0
-    if random.random() < 0.34:
-        wd.rectangle((x + 3, y + 3, x + w - 3, y + h - 3), fill=255)
-    else:
+    if kind in ('dark', 'ac'):
         Dg[y + 4:y + h - 4, x + 4:x + w - 4] = 0.16
+    elif kind == 'lit':
+        wd.rectangle((x + 3, y + 3, x + w - 3, y + h - 3), fill=255)
+    elif kind == 'shade':
+        sh = int(h * random.uniform(0.25, 0.7))
+        wd.rectangle((x + 3, y + sh, x + w - 3, y + h - 3), fill=255)
+        rect(T, x + 3, y + 3, x + w - 3, y + sh, 0.62)
+        pd.line((x + 3, y + sh, x + w - 3, y + sh), fill=255, width=2)
+        pd.line((x + w // 2, y + sh, x + w // 2, y + sh + 6), fill=255, width=1)
+    elif kind == 'blinds':
+        wd.rectangle((x + 3, y + 3, x + w - 3, y + h - 3), fill=255)
+        for k in range(y + 7, y + h - 4, 6):
+            wd.line((x + 3, k, x + w - 3, k), fill=0, width=2)
+            pd.line((x + 3, k, x + w - 3, k), fill=255, width=1)
+    elif kind == 'curtain':
+        wd.rectangle((x + 11, y + 3, x + w - 11, y + h - 3), fill=255)
+        Dg[y + 3:y + h - 3, x + 3:x + 11] = 0.5
+        Dg[y + 3:y + h - 3, x + w - 11:x + w - 3] = 0.5
     box(x, y, x + w, y + h, 3)
     pd.line((x, y + h // 2, x + w, y + h // 2), fill=255, width=2)
+    if kind == 'ac':                                          # a window unit in the lower sash
+        ay = y + h // 2 + 4
+        rect(T, x + 2, ay, x + w - 2, ay + 18, 0.9)
+        box(x + 1, ay, x + w - 1, ay + 18, 2)
+        for k in range(x + 6, x + w - 4, 5):
+            pd.line((k, ay + 4, k, ay + 14), fill=0, width=2)
+    if ground and random.random() < 0.7:                      # security grille
+        for k in range(x + 6, x + w - 2, 7):
+            pd.line((k, y, k, y + h), fill=255, width=2)
     rect(T, x - 4, y + h, x + w + 4, y + h + 7, 0.95)       # stone sill
 floors = [BTOP + 30, BTOP + 120, BTOP + 196, BTOP + 272, BTOP + 348, BTOP + 424]
 for f, y in enumerate(floors):
@@ -123,11 +150,22 @@ for f, y in enumerate(floors):
         x = BX0 + 26 + b * 72
         if PX0 - 30 < x < PX1:
             continue
-        window(x, y)
+        window(x, y, ground=(f == 5))
     for b in range(3):
         x = PX0 + 34 + b * 70
         if f >= 5: continue
         window(x, y - (0 if f else 0), 42, 54)
+# name plaque across the top of the pavilion, white ink with the letters knocked out
+from PIL import ImageFont
+pf = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf', 22)
+wd.rectangle((PX0 + 22, PTOP + 22, PX1 - 22, PTOP + 52), fill=255)
+pd.rectangle((PX0 + 19, PTOP + 19, PX1 - 19, PTOP + 55), outline=255, width=2)
+lab2 = 'HOSPITAL'
+tw2 = sum(wd.textlength(c, font=pf) for c in lab2) + 7 * (len(lab2) - 1)
+x2 = (PX0 + PX1) / 2 - tw2 / 2
+for ch in lab2:
+    wd.text((x2, PTOP + 25), ch, font=pf, fill=0)
+    x2 += wd.textlength(ch, font=pf) + 7
 # entrance: steps, doors, the canopy with its sign (lettering set in HTML)
 rect(T, PX0 + 30, GROUND - 120, PX1 - 30, GROUND - 6, 0.0)
 box(PX0 + 30, GROUND - 120, PX1 - 30, GROUND - 6, 3)

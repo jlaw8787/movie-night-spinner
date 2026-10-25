@@ -37,12 +37,12 @@ SPEC = {
       "$2.75", "Friday is payday. Cash only.", "Friday is payday. Cash only."),
 }
 ADDED = {
-  'mallorca': ("Mallorca", "Soft, sweet spiral bun, split, pressed on the grill with butter and buried in powdered sugar.", "75¢", "Ask for it with ham and cheese."),
+  'mallorca': ("Mallorca", "Soft, sweet spiral bun, split, pressed on the grill with butter and buried in powdered sugar.", "75¢", None),
   'pan': ("Pan de agua", "Crusty white loaf, soft inside, baked twice a day. Comes buttered with every lunch plate.", "$1.25", "A loaf for a token."),
   'tostones': ("Tostones", "Green plantain fried, smashed flat and fried again till crisp, with garlic mojo for dipping.", "$1.50", None),
   'malta': ("Malta", "Dark, sweet barley soda, ice cold in the bottle. No alcohol.", "$1", None),
   'cafe': ("Café con leche", "Dark roast brewed strong and poured into steamed milk, sugared the way you take it.", "65¢", None),
-  'negro': ("Café negro", "Small, black and strong. The night shift special.", "50¢", None),
+  'negro': ("Café negro", "Small, black and strong. For the night shift.", "50¢", None),
 }
 
 
@@ -134,20 +134,20 @@ front = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; heigh
 RB = 736          # glued seam sits at x 766, keep the type left of it
 FOLD = 904        # bottom folded up from here
 back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; color: {INK}; {SPREAD}">
-  <header style="position: absolute; left: {L}px; top: 58px; width: {RB - L}px; display: flex; justify-content: space-between; align-items: flex-end">
+  <header style="position: absolute; left: {L}px; top: 66px; width: {RB - L}px; display: flex; justify-content: space-between; align-items: flex-end">
     <span style="{C}; font-size: 52px; line-height: 1">El &Uacute;ltimo Tren</span>
     <span style="{O}; font-weight: 700; font-size: 15px; letter-spacing: .2em; text-align: right; line-height: 1.35">LUNCH COUNTER<br>Y CAFETER&Iacute;A</span></header>
-  {rules(L, 124, RB - L)}
-  {bar(L, 140, RB - L, ['ALMUERZO 11 A 3', 'CAF&Eacute; TODO EL D&Iacute;A', 'CENA HASTA TARDE'])}
+  {rules(L, 130, RB - L)}
+  {bar(L, 146, RB - L, ['ALMUERZO 11 A 3', 'CAF&Eacute; TODO EL D&Iacute;A', 'CENA HASTA TARDE'])}
 
-  <section style="position: absolute; left: {L}px; top: 198px; width: 354px">
+  <section style="position: absolute; left: {L}px; top: 202px; width: 354px">
     {head('Almuerzo', 'Hot plate')}
     {item(SPEC['Arroz con pollo'], True, nsz=28)}
     {item(ADDED['pan'], gap=14, nsz=24, psz=22)}
     {item(ADDED['tostones'], gap=14, nsz=24, psz=22)}
   </section>
 
-  <section style="position: absolute; left: 432px; top: 198px; width: {RB - 432}px">
+  <section style="position: absolute; left: 432px; top: 202px; width: {RB - 432}px">
     {head('Bebidas', 'Clocking off')}
     {item(SPEC['Money Train payday michelada'], True, nsz=23)}
     {item(ADDED['malta'], nsz=23, gap=12)}
@@ -157,7 +157,7 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
 
   <div style="position: absolute; left: {L}px; top: 624px; width: 354px; box-sizing: border-box; background: {INK}; color: {KRAFT}; text-shadow: none; padding: 14px 18px 15px">
     <div style="{O}; font-weight: 700; font-size: 23px; line-height: 1.1; letter-spacing: .05em">ON THE MIDNIGHT TOUR?</div>
-    <div style="{B}; font-size: 16px; line-height: 1.36; margin-top: 6px">Token clerks, motormen, conductors and transit cops on nights: after twelve the coffee is on the house. Show your pass.</div>
+    <div style="{B}; font-size: 16px; line-height: 1.36; margin-top: 6px">Token clerks, motormen, conductors and transit cops on nights: coffee is on the house after twelve with your pass.</div>
     <div style="{B}; font-style: italic; font-weight: 700; font-size: 16px; line-height: 1.3; margin-top: 7px">Decoys too. We never saw you.</div>
   </div>
 
@@ -185,7 +185,7 @@ def stamp(x, y, rot, lines):
             f'<div style="{O}; font-weight: 700; font-size: 22px; letter-spacing: .08em; line-height: 1.15; margin-top: 2px">{lines[1]}</div></div>')
 
 
-FRONT_STAMP = stamp(600, 452, -6, ('HORNEADO HOY', 'NOV 17 1995'))
+FRONT_STAMP = stamp(318, 896, -5, ('HORNEADO HOY', 'NOV 17 1995'))
 
 
 def face(body, name, extra=''):

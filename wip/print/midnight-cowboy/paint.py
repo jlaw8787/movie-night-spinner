@@ -114,65 +114,96 @@ def palm(x, base, height, lean, sc):
 palm(30, ROAD - 2, 150, 16, 0.95)
 palm(250, ROAD - 2, 120, -12, 0.8)
 
-# the coach: a 1960s flat-roof stainless intercity coach, nose to the right
-bx0, bx1, by0, by1 = 14, 252, 150, 240
-# body tone: light at the roof, shaded under the belt; the coach sits in front of the palm
-l.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=0)
-t.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=20)
-for y in range(by0 + 46, by1):
-    t.line(P(bx0 + 2, y, bx1 - 2, y), fill=int(24 + ((y - by0 - 46) / (by1 - by0 - 46)) ** 1.4 * 120), width=S)
-for y in range(by0 + 2, by0 + 10):
-    t.line(P(bx0 + 4, y, bx1 - 4, y), fill=int(50 - (y - by0) * 5), width=S)
-o.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, fill=0)
-l.rounded_rectangle(P(bx0, by0, bx1, by1), radius=10 * S, outline=255, width=int(1.6 * S))
-# roof marker lamps and roof rib
-l.line(P(bx0 + 16, by0 + 5, bx1 - 22, by0 + 5), fill=255, width=int(0.9 * S))
-for xm in (bx0 + 8, bx1 - 14):
-    o.rectangle(P(xm, by0 - 3, xm + 6, by0), fill=255); l.rectangle(P(xm, by0 - 3, xm + 6, by0), outline=255, width=S)
-# window band: dark tone with a white diagonal glint per pane
-t.rectangle(P(bx0 + 6, by0 + 10, bx1 - 30, by0 + 36), fill=210)
-for xw in range(bx0 + 6, bx1 - 34, 26):
-    l.rectangle(P(xw + 22, by0 + 10, xw + 26, by0 + 36), fill=255)
-    t.polygon(P(xw + 6, by0 + 36, xw + 11, by0 + 36, xw + 19, by0 + 10, xw + 14, by0 + 10), fill=60)
-l.rectangle(P(bx0 + 6, by0 + 10, bx1 - 30, by0 + 36), outline=255, width=int(1.4 * S))
-# windshield, raked
-t.polygon(P(bx1 - 27, by0 + 10, bx1 - 5, by0 + 10, bx1 - 1, by0 + 44, bx1 - 24, by0 + 44), fill=210)
-t.polygon(P(bx1 - 20, by0 + 44, bx1 - 15, by0 + 44, bx1 - 11, by0 + 10, bx1 - 16, by0 + 10), fill=70)
-l.polygon(P(bx1 - 27, by0 + 10, bx1 - 5, by0 + 10, bx1 - 1, by0 + 44, bx1 - 24, by0 + 44), outline=255, width=int(1.4 * S))
-# destination sign over the windshield (lettered in the HTML? no, too small: lettered here)
+# the coach: a 1960s split-level intercity coach, nose to the right. Raised rear deck with its
+# own window row, a lower front cab, fluted stainless sides, chrome belt, tandem rear axle,
+# louvred engine door at the tail. Drawn as an engraver would: outline, fluting, glazing tone.
 from PIL import ImageFont
-F = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', int(7.2 * S))
-l.rectangle(P(bx1 - 70, by0 + 1, bx1 - 30, by0 + 9), fill=255)
-l.text(((bx1 - 50) * S, (by0 + 5.2) * S), 'MIAMI', font=F, fill=0, anchor='mm')
-# livery: orange belt stripe with black pinstripes
-o.rectangle(P(bx0 + 1, by0 + 39, bx1 - 1, by0 + 47), fill=255)
-t.rectangle(P(bx0 + 1, by0 + 39, bx1 - 1, by0 + 47), fill=0)
-l.line(P(bx0 + 1, by0 + 38.5, bx1 - 3, by0 + 38.5), fill=255, width=int(1.2 * S))
-l.line(P(bx0 + 1, by0 + 47.5, bx1 - 1, by0 + 47.5), fill=255, width=int(1.2 * S))
-# fluted stainless side panels: fine engraved lines
-for y in range(by0 + 52, by1 - 6, 3):
-    l.line(P(bx0 + 3, y, bx1 - 3, y), fill=255, width=int(0.75 * S))
-# baggage bays and entrance door
-for xb in (78, 128):
-    t.rectangle(P(xb, by0 + 52, xb + 42, by1 - 10), fill=40)
-    l.rectangle(P(xb, by0 + 52, xb + 42, by1 - 10), outline=255, width=int(1.2 * S))
-t.rectangle(P(bx1 - 46, by0 + 50, bx1 - 26, by1 - 4), fill=200)
-l.rectangle(P(bx1 - 46, by0 + 50, bx1 - 26, by1 - 4), outline=255, width=int(1.4 * S))
-l.line(P(bx1 - 36, by0 + 50, bx1 - 36, by1 - 4), fill=255, width=int(1.2 * S))
-# headlamps and bumper
-l.ellipse(P(bx1 - 9, by1 - 24, bx1 - 1, by1 - 16), outline=255, width=S)
-o.ellipse(P(bx1 - 9, by1 - 24, bx1 - 1, by1 - 16), fill=150)
-l.rectangle(P(bx1 - 20, by1 - 6, bx1 + 3, by1 + 1), fill=255)
-l.rectangle(P(bx0 - 2, by1 - 6, bx0 + 14, by1 + 1), fill=255)
-# wheels in arches
-for wx in (56, 210):
-    l.pieslice(P(wx - 21, by1 - 22, wx + 21, by1 + 20), 180, 360, fill=255)
-    l.ellipse(P(wx - 17, by1 - 16, wx + 17, by1 + 18), fill=255)
-    l.ellipse(P(wx - 8, by1 - 7, wx + 8, by1 + 9), fill=0)
-    t.ellipse(P(wx - 8, by1 - 7, wx + 8, by1 + 9), fill=70)
-    l.ellipse(P(wx - 3, by1 - 2, wx + 3, by1 + 4), fill=255)
+GND = 250
+BX0, BX1 = 10, 260          # tail, nose
+DECK, CAB = 138, 160        # roof heights: raised deck, front cab
+STEP0, STEP1 = 168, 186     # where the roof steps down
+BELT = 200
+BOT = 238
+body = [(BX0 + 4, DECK + 6), (BX0 + 10, DECK), (STEP0, DECK), (STEP1, CAB), (BX1 - 12, CAB), (BX1 - 3, CAB + 8),
+        (BX1, CAB + 30), (BX1, BOT), (BX0, BOT), (BX0, DECK + 14)]
+bodyS = [(x * S, y * S) for x, y in body]
+l.polygon(bodyS, fill=0)                 # coach sits in front of palms
+t.polygon(bodyS, fill=34)
+o.polygon(bodyS, fill=0)
+# shading: light roof, darker toward the rocker panel
+for y in range(BELT + 6, BOT):
+    t.line(P(BX0 + 1, y, BX1 - 1, y), fill=int(26 + ((y - BELT - 6) / (BOT - BELT - 6)) ** 1.3 * 110), width=S)
+for y in range(DECK, DECK + 8):
+    t.line(P(BX0 + 12, y, STEP0 - 2, y), fill=int(46 - (y - DECK) * 5), width=S)
+l.line(bodyS + [bodyS[0]], fill=255, width=int(1.6 * S))
+# roof rib and marker lamps
+l.line(P(BX0 + 16, DECK + 4, STEP0 - 4, DECK + 4), fill=255, width=int(0.8 * S))
+for xm in (BX0 + 14, STEP0 - 10, BX1 - 18):
+    yy = DECK if xm < STEP0 else CAB
+    o.rectangle(P(xm, yy - 3, xm + 5, yy), fill=255); l.rectangle(P(xm, yy - 3, xm + 5, yy), outline=255, width=S)
+# raised deck windows, tinted glass with pillars and a glint each
+UW0, UW1 = DECK + 9, DECK + 31
+t.rectangle(P(BX0 + 14, UW0, STEP0 - 4, UW1), fill=215)
+for xw in range(BX0 + 14, STEP0 - 8, 22):
+    l.rectangle(P(xw + 19, UW0, xw + 22, UW1), fill=255)
+    t.polygon(P(xw + 5, UW1, xw + 9, UW1, xw + 15, UW0, xw + 11, UW0), fill=70)
+l.rectangle(P(BX0 + 14, UW0, STEP0 - 4, UW1), outline=255, width=int(1.3 * S))
+# raked glass where the deck steps down
+t.polygon(P(STEP0 + 1, DECK + 5, STEP1 - 3, CAB - 2, STEP1 - 3, CAB + 4, STEP0 + 1, CAB + 4), fill=200)
+# lower front windows under the cab roof
+LW0, LW1 = CAB + 8, CAB + 32
+t.rectangle(P(STEP0 + 2, LW0, BX1 - 30, LW1), fill=215)
+for xw in (STEP0 + 2, STEP0 + 24, STEP0 + 46):
+    l.rectangle(P(xw + 20, LW0, xw + 23, LW1), fill=255)
+    t.polygon(P(xw + 5, LW1, xw + 9, LW1, xw + 15, LW0, xw + 11, LW0), fill=70)
+l.rectangle(P(STEP0 + 2, LW0, BX1 - 30, LW1), outline=255, width=int(1.3 * S))
+# lower deck windows under the raised section (the passengers' lounge row)
+t.rectangle(P(96, DECK + 38, STEP0 - 2, DECK + 52), fill=200)
+for xw in (96, 120, 144):
+    l.rectangle(P(xw + 21, DECK + 38, xw + 24, DECK + 52), fill=255)
+l.rectangle(P(96, DECK + 38, STEP0 - 2, DECK + 52), outline=255, width=int(1.2 * S))
+# windshield, two pieces, raked back
+t.polygon(P(BX1 - 27, CAB + 6, BX1 - 6, CAB + 6, BX1 - 1, CAB + 40, BX1 - 24, CAB + 40), fill=215)
+l.line(P(BX1 - 15, CAB + 6, BX1 - 12, CAB + 40), fill=255, width=int(1.4 * S))
+t.polygon(P(BX1 - 22, CAB + 40, BX1 - 18, CAB + 40, BX1 - 12, CAB + 8, BX1 - 16, CAB + 8), fill=60)
+l.polygon(P(BX1 - 27, CAB + 6, BX1 - 6, CAB + 6, BX1 - 1, CAB + 40, BX1 - 24, CAB + 40), outline=255, width=int(1.3 * S))
+# destination sign
+F = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', int(6.6 * S))
+l.rectangle(P(STEP1 + 6, CAB - 1, BX1 - 30, CAB + 6), fill=255)
+l.text(((STEP1 + BX1 - 24) / 2 * S, (CAB + 2.6) * S), 'MIAMI', font=F, fill=0, anchor='mm')
+# chrome belt molding with the orange stripe under it
+l.line(P(BX0 + 1, BELT - 1, BX1 - 1, BELT - 1), fill=255, width=int(1.3 * S))
+o.rectangle(P(BX0 + 1, BELT, BX1 - 1, BELT + 6), fill=255)
+t.rectangle(P(BX0 + 1, BELT, BX1 - 1, BELT + 6), fill=0)
+l.line(P(BX0 + 1, BELT + 6.5, BX1 - 1, BELT + 6.5), fill=255, width=int(1.1 * S))
+# fluted stainless lower sides: fine engraved lines
+for y in range(BELT + 10, BOT - 3, 4):
+    l.line(P(BX0 + 2, y, BX1 - 2, y), fill=255, width=int(1.0 * S))
+# baggage bay doors and the entrance door behind the front wheel
+for xb in (100, 140):
+    t.rectangle(P(xb, BELT + 9, xb + 36, BOT - 7), fill=40)
+    l.rectangle(P(xb, BELT + 9, xb + 36, BOT - 7), outline=255, width=int(1.1 * S))
+t.rectangle(P(BX1 - 50, LW1 + 2, BX1 - 32, BOT - 2), fill=205)
+l.rectangle(P(BX1 - 50, LW1 + 2, BX1 - 32, BOT - 2), outline=255, width=int(1.3 * S))
+l.line(P(BX1 - 41, LW1 + 2, BX1 - 41, BOT - 2), fill=255, width=int(1.1 * S))
+# louvred engine door at the tail
+t.rectangle(P(BX0 + 3, BELT + 9, BX0 + 26, BOT - 6), fill=60)
+for y in range(BELT + 11, BOT - 7, 4):
+    l.line(P(BX0 + 5, y, BX0 + 24, y), fill=255, width=int(1.4 * S))
+# lamps and bumpers
+l.ellipse(P(BX1 - 8, BOT - 22, BX1 - 1, BOT - 15), outline=255, width=S)
+o.ellipse(P(BX1 - 8, BOT - 22, BX1 - 1, BOT - 15), fill=170)
+l.rectangle(P(BX1 - 18, BOT - 5, BX1 + 3, BOT + 1), fill=255)
+l.rectangle(P(BX0 - 3, BOT - 5, BX0 + 12, BOT + 1), fill=255)
+# wheels: single front axle, tandem rear axle
+for wx in (52, 86, 214):
+    l.pieslice(P(wx - 19, BOT - 19, wx + 19, BOT + 19), 180, 360, fill=255)
+    l.ellipse(P(wx - 15, BOT - 15, wx + 15, BOT + 15), fill=255)
+    l.ellipse(P(wx - 7, BOT - 7, wx + 7, BOT + 7), fill=0)
+    t.ellipse(P(wx - 7, BOT - 7, wx + 7, BOT + 7), fill=80)
+    l.ellipse(P(wx - 2.5, BOT - 2.5, wx + 2.5, BOT + 2.5), fill=255)
 # shadow under the coach
-t.rectangle(P(bx0 + 4, by1 + 14, bx1 - 4, by1 + 20), fill=230)
+t.rectangle(P(BX0 + 4, BOT + 13, BX1 - 4, BOT + 18), fill=230)
 
 def screen(plate, cell, angle, w, h):
     """AM halftone at the given cell size (px at 4x) and angle, returns 0..1 ink coverage at 4x"""
@@ -197,7 +228,8 @@ rng = np.random.default_rng(4)
 gain = np.asarray(Image.fromarray((rng.random((H // 64 + 1, W // 64 + 1)) * 255).astype(np.uint8)).resize((W, H), Image.BICUBIC), dtype=np.float32) / 255.0
 def spread(cov, rad, base):
     b = np.asarray(Image.fromarray((cov * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(rad)), dtype=np.float32) / 255.0
-    thr = base - 0.08 * gain
+    g = gain if gain.shape == cov.shape else np.asarray(Image.fromarray((gain * 255).astype(np.uint8)).resize((cov.shape[1], cov.shape[0])), dtype=np.float32) / 255.0
+    thr = base - 0.08 * g
     out = np.clip((b - thr) / 0.10 + 0.5, 0, 1)
     return np.asarray(Image.fromarray((out * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.7)), dtype=np.float32) / 255.0
 blk = spread(blk, 1.3, 0.47)
@@ -215,6 +247,70 @@ img *= (1 - ob[..., None] * 0.92) + ob[..., None] * 0.92 * (ink_o / paper)
 img *= (1 - blk[..., None] * 0.94) + blk[..., None] * 0.94 * ink_k
 art = Image.fromarray(np.clip(img * 255, 0, 255).astype(np.uint8)).resize((AW * 2, AH * 2), Image.LANCZOS)
 art.save(os.path.join(A, 'coach-art.png'))
+
+# ---------------- route map: line-cut coast, tint-screened land, two inks ----------------
+import json
+MW, MH = 272, 236
+LON0, LON1, LAT0, LAT1 = -84.2, -73.2, 25.0, 41.0
+ky = MH / (LAT1 - LAT0)
+kx = ky * math.cos(math.radians(33))
+def pj(lon, lat): return ((lon - LON0) * kx, (LAT1 - lat) * ky)
+COAST = [(-73.2, 40.75), (-73.9, 40.55), (-74.0, 40.4), (-74.05, 40.0), (-74.3, 39.45), (-74.9, 38.93), (-75.05, 39.2),
+         (-75.5, 39.6), (-75.4, 39.0), (-75.1, 38.6), (-75.25, 38.1), (-75.6, 37.8), (-75.95, 37.15), (-76.25, 37.95),
+         (-76.4, 38.9), (-76.6, 39.25), (-76.3, 38.3), (-76.3, 37.3), (-75.98, 36.9), (-75.75, 36.2), (-75.5, 35.25),
+         (-76.0, 35.05), (-76.55, 34.65), (-77.4, 34.45), (-77.9, 33.88), (-78.6, 33.82), (-79.15, 33.25), (-79.9, 32.75),
+         (-80.5, 32.3), (-81.1, 31.85), (-81.3, 31.2), (-81.45, 30.5), (-81.3, 29.9), (-81.0, 29.2), (-80.6, 28.45),
+         (-80.55, 28.0), (-80.15, 27.2), (-80.03, 26.6), (-80.1, 25.9), (-80.3, 25.35), (-80.9, 25.15), (-81.2, 25.55),
+         (-81.75, 26.2), (-82.15, 26.8), (-82.6, 27.6), (-82.75, 28.3), (-82.7, 29.0), (-83.6, 29.85), (-84.2, 30.05)]
+CITIES = [('New York', -74.0, 40.71), ('Newark', -74.17, 40.73), ('Philadelphia', -75.16, 39.95), ('Wilmington', -75.55, 39.74),
+          ('Baltimore', -76.61, 39.29), ('Washington', -77.04, 38.9), ('Richmond', -77.44, 37.54), ('Rocky Mount', -77.79, 35.94),
+          ('Florence', -79.76, 34.2), ('Savannah', -81.1, 32.08), ('Jacksonville', -81.66, 30.33), ('Daytona Beach', -81.02, 29.21),
+          ('West Palm Beach', -80.05, 26.71), ('Fort Lauderdale', -80.14, 26.12), ('Miami', -80.19, 25.77)]
+mt = Image.new('L', (MW * S, MH * S), 0); ml = Image.new('L', (MW * S, MH * S), 0); mo = Image.new('L', (MW * S, MH * S), 0)
+dt, dl, do = ImageDraw.Draw(mt), ImageDraw.Draw(ml), ImageDraw.Draw(mo)
+# engraved water lines over the whole sheet, land knocks them out
+for y in range(2, MH, 4):
+    dl.line([(0, y * S), (MW * S, y * S)], fill=150, width=int(0.6 * S))
+land = [pj(*p) for p in COAST] + [pj(LON0, 25.0)[0:1] + (MH + 5,), (-5, MH + 5), (-5, -5), (MW + 5, -5), (MW + 5, pj(-73.2, 40.75)[1])]
+land = [(x * S, y * S) for x, y in land]
+dl.polygon(land, fill=0)
+do.polygon(land, fill=70)
+dt.polygon(land, fill=10)
+dl.line([(x * S, y * S) for x, y in (pj(*p) for p in COAST)], fill=255, width=int(1.3 * S))
+# state lines, dotted, the way old folders show them
+STATES = [[(-75.55, 39.72), (-79.5, 39.72)], [(-75.25, 38.45), (-75.7, 38.45), (-75.8, 39.72)], [(-75.9, 36.55), (-83.6, 36.6)],
+          [(-78.55, 33.85), (-80.8, 35.1), (-84.3, 35.0)], [(-80.9, 32.05), (-82.2, 33.6), (-83.1, 34.9)], [(-81.5, 30.7), (-82.2, 30.5), (-84.9, 30.7)]]
+for line_ in STATES:
+    pts = [pj(*p) for p in line_]
+    for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
+        n = int(math.hypot(x2 - x1, y2 - y1) / 3)
+        for k in range(n):
+            if k % 2 == 0:
+                fx, fy = x1 + (x2 - x1) * k / n, y1 + (y2 - y1) * k / n
+                dl.ellipse([(fx - 0.6) * S, (fy - 0.6) * S, (fx + 0.6) * S, (fy + 0.6) * S], fill=255)
+# the route
+rp = [pj(lon, lat) for _, lon, lat in CITIES]
+dl.line([(x * S, y * S) for x, y in rp], fill=255, width=int(2.6 * S), joint='curve')
+do.line([(x * S, y * S) for x, y in rp[10:]], fill=255, width=int(5 * S), joint='curve')
+for i, (x, y) in enumerate(rp):
+    r = 3.4 if i in (0, 2, 5, 9, 10, 14) else 2.4
+    dl.ellipse([(x - r) * S, (y - r) * S, (x + r) * S, (y + r) * S], fill=255)
+    if r > 3:
+        dl.ellipse([(x - 1.5) * S, (y - 1.5) * S, (x + 1.5) * S, (y + 1.5) * S], fill=0)
+# compass N
+dl.polygon([((MW - 18) * S, 8 * S), ((MW - 23) * S, 24 * S), ((MW - 18) * S, 20 * S), ((MW - 13) * S, 24 * S)], fill=255)
+mtb = screen(mt, 3 * S, 45, MW * S, MH * S)
+mlb = np.asarray(ml, dtype=np.float32) / 255.0
+mb = np.maximum(mtb, mlb)
+mb = spread(mb, 1.0, 0.47)
+mob = screen(mo, 3 * S, 75, MW * S, MH * S)
+mob = np.maximum(mob, (np.asarray(mo, dtype=np.float32) > 250).astype(np.float32))
+mob = np.roll(np.roll(spread(mob, 1.2, 0.47), 2 * S // 2, axis=1), S, axis=0)
+mi = np.ones((MH * S, MW * S, 3), dtype=np.float32) * paper
+mi *= (1 - mob[..., None] * 0.92) + mob[..., None] * 0.92 * (ink_o / paper)
+mi *= (1 - mb[..., None] * 0.94) + mb[..., None] * 0.94 * ink_k
+Image.fromarray(np.clip(mi * 255, 0, 255).astype(np.uint8)).resize((MW * 2, MH * 2), Image.LANCZOS).save(os.path.join(A, 'route-map.png'))
+json.dump({n: [round(x, 1), round(y, 1)] for (n, _, _), (x, y) in zip(CITIES, rp)}, open(os.path.join(A, 'map-cities.json'), 'w'), indent=0)
 
 # ---------------- pencil ring ----------------
 PW, PH = 150, 54

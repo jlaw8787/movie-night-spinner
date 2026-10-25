@@ -48,10 +48,10 @@ def root(inner, face, bg, color, grain_op):
 # ---------------- DISHES (one source for print and phone) ----------------
 DISH = {
   "Plaza suite champagne cocktails": {"n": "Champagne cocktails", "d": "A sugar cube soaked in bitters and a splash of cognac, topped up with chilled brut, lemon twist.", "note": "To the doors staying open."},
-  "Chinatown dumplings": {"n": "Chinatown dumplings", "d": "Pork and chive, pan-fried until the bottoms go crisp. Black vinegar and chili oil, no MSG.", "note": "Sent up from downtown."},
+  "Chinatown dumplings": {"n": "Chinatown dumplings", "d": "Pork and chive, pan-fried until the bottoms go crisp, with black vinegar and chili oil for dipping.", "note": "Sent up from downtown."},
   "Plaza Hotel prawn cocktail": {"n": "Shrimp cocktail", "d": "Jumbos poached and iced over shredded iceberg, red sauce sharp with horseradish, lemon wedge.", "note": "On ice when you sit down."},
   "Frank's Plaza steak dinner": {"n": "Rib eye au poivre", "d": "Seared and rested, cracked pepper sauce finished with brandy and cream. Pommes frites.", "note": "Medium rare unless you say."},
-  "New York cheesecake": {"n": "New York cheesecake", "d": "Dense, with sour cream and lemon zest beaten through, baked slow in a water bath on a buttered crumb crust.", "note": "Baked in the Bronx."},
+  "New York cheesecake": {"n": "New York cheesecake", "d": "Dense, with sour cream and lemon zest beaten through, baked slow in a water bath on a buttered crumb crust.", "note": "From the bakery up the block."},
 }
 
 # ================= FRONT: the journal cover =================
@@ -115,59 +115,58 @@ def prog(time, what):
             f'<span style="flex: none; width: 46px; font-family: {SANS}; font-weight: 700; font-size: 15px; line-height: 1.4; color: {GREEN}">{time}</span>'
             f'<span style="font-family: {SERIF}; font-size: 16px; line-height: 1.32; color: {INK}">{what}</span></div>')
 
-FILL = 0.70      # $11.2 million pledged when the journal went to press
-def thermo(bw=176):
-    fw = round(bw * FILL)
-    ticks = ''
-    for i, lab in enumerate(['', '$4M', '$8M', '$12M', '$16M']):
-        x = 26 + round(bw * i / 4)
-        ticks += f'<div style="position: absolute; left: {x - 1}px; top: 26px; width: 2px; height: 6px; background: {INK}"></div>'
-        if lab:
-            ticks += f'<div style="position: absolute; left: {x - 24}px; top: 33px; width: 48px; text-align: center; font-family: {SANS}; font-size: 13px; line-height: 1.1; color: {INK}">{lab}</div>'
-    return f"""<div style="position: relative; width: {bw + 40}px; height: 50px">
-      <div style="position: absolute; left: 20px; top: 6px; width: {bw + 12}px; height: 20px; box-sizing: border-box; border: 2px solid {INK}; border-left: none; border-radius: 0 10px 10px 0; background: {PAPER}"></div>
-      <div style="position: absolute; left: 22px; top: 10px; width: {fw}px; height: 12px; background: {GREEN}; {MIS}"></div>
-      <div style="position: absolute; left: 0; top: 0; width: 32px; height: 32px; box-sizing: border-box; border-radius: 50%; background: {GREEN}; {MIS}"></div>
-      <div style="position: absolute; left: 0; top: 0; width: 32px; height: 32px; box-sizing: border-box; border-radius: 50%; border: 2px solid {INK}"></div>
-      {ticks}
-    </div>"""
+# pledge thermometer: a printed line cut (assets/thermometer.png from paint.py), scale figures set in type
+def thermo():
+    labs = ''
+    for x, lab in ((82, '$4M'), (126.5, '$8M'), (171, '$12M'), (216, '$16M')):
+        labs += f'<div style="position: absolute; left: {x - 24}px; top: 42px; width: 48px; text-align: center; font-family: {SANS}; font-size: 13px; line-height: 1.1; color: {INK}">{lab}</div>'
+    return (f'<div style="position: relative; width: 230px; height: 58px">'
+            f'<img src="assets/thermometer.png" alt="Pledge thermometer" style="position: absolute; left: 0; top: 0; width: 230px; height: 60px; display: block">{labs}</div>')
 
-# the Gold Pages: each ad came in camera-ready from whoever bought it
-def ad(inner, style, span=1):
-    return f'<div style="grid-column: span {span}; position: relative; box-sizing: border-box; height: 92px; {style}">{inner}</div>'
+# the Gold Pages: each ad came in camera-ready from whoever bought it, so no two match
+def ad(inner, style, span=1, h=84):
+    return f'<div style="grid-column: span {span}; position: relative; box-sizing: border-box; height: {h}px; {style}">{inner}</div>'
 
 ads_row1 = (
-  ad(f'<div style="font-family: {SCRIPT}; font-size: 30px; line-height: 1.05; text-align: center; color: {INK}">Compliments<br>of a Friend</div>',
-     f'border: 4px double {INK}; display: flex; align-items: center; justify-content: center; padding: 4px'),
+  ad(f'<div style="font-family: {SCRIPT}; font-size: 29px; line-height: 1.02; text-align: center; color: {INK}">Compliments<br>of a Friend</div>',
+     f'border: 4px double {INK}; display: flex; align-items: center; justify-content: center; padding: 2px'),
   ad(f'<div style="position: absolute; inset: 0; background: {GREEN}; {MIS}"></div>'
      f'<div style="position: absolute; inset: 0; border: 1px solid {INK}"></div>'
-     f'<div style="position: relative; padding: 11px 12px 0; {MIS}"><div style="font-family: {SANS}; font-weight: 700; font-size: 23px; line-height: 1.02; color: {WHITE}">Next stop,<br>City Hall.</div>'
-     f'<div style="margin-top: 6px; font-family: {SERIF}; font-style: italic; font-size: 15px; color: #e3e9e0">Friends downtown</div></div>', ''),
+     f'<div style="position: relative; padding: 9px 12px 0; {MIS}"><div style="font-family: {SANS}; font-weight: 700; font-size: 22px; line-height: 1.02; color: {WHITE}">Next stop,<br>City Hall.</div>'
+     f'<div style="margin-top: 5px; font-family: {SERIF}; font-style: italic; font-size: 14px; color: #e3e9e0">Friends downtown</div></div>', ''),
   ad(f'<div style="font-family: {SLAB}; font-weight: 700; font-size: 17px; line-height: 1.05; color: {INK}">Welcome home, Frank!</div>'
      f'<div style="margin-top: 5px; font-family: {SLAB}; font-size: 14px; line-height: 1.22; color: {INK}">Jimmy Jump, Test Tube and the crew</div>',
-     f'border: 3px solid {INK}; padding: 7px 9px 4px'),
-  ad(f'<div style="font-family: {SERIF}; font-size: 16px; line-height: 1.22; color: {INK}">With thanks from the nurses and doctors of the night shift.</div>'
-     f'<div style="margin-top: 4px; font-family: {SANS}; font-weight: 700; font-size: 13px; letter-spacing: 0.2em; color: {GREEN}; {MIS}">EMERGENCY ROOM</div>',
-     f'border-top: 3px solid {INK}; border-bottom: 1px solid {INK}; padding: 5px 2px 2px'),
+     f'border: 3px solid {INK}; padding: 6px 9px 3px'),
+  ad(f'<div style="font-family: {SERIF}; font-size: 16px; line-height: 1.2; color: {INK}">With thanks from the nurses and doctors of the night shift.</div>'
+     f'<div style="margin-top: 3px; font-family: {SANS}; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; color: {GREEN}; {MIS}">EMERGENCY ROOM</div>',
+     f'border-top: 3px solid {INK}; border-bottom: 1px solid {INK}; padding: 4px 2px 2px'),
 )
 ads_row2 = (
-  ad(f'<div style="height: 1px; background: {INK}"></div><div style="height: 3px"></div><div style="height: 1px; background: {INK}"></div>'
-     f'<div style="margin-top: 7px; text-align: center; font-family: {CINZEL}; font-size: 13px; line-height: 1; letter-spacing: 0.22em; color: {INK}">WITH THE COMPLIMENTS OF</div>'
-     f'<div style="margin-top: 5px; text-align: center; font-family: {CINZEL}; font-weight: 700; font-size: 30px; line-height: 1; letter-spacing: 0.12em; color: {INK}">COUNSEL</div>'
-     f'<div style="margin-top: 5px; text-align: center; font-family: {CINZEL}; font-size: 13px; line-height: 1; letter-spacing: 0.22em; color: {INK}">TO THE COMMITTEE</div>'
-     f'<div style="margin-top: 7px; height: 1px; background: {INK}"></div><div style="height: 3px"></div><div style="height: 1px; background: {INK}"></div>',
-     'padding: 2px 6px 0', 2),
-  ad(f'<div style="font-family: {TYPE}; font-weight: 700; font-size: 15px; line-height: 1.15; color: {INK}">HOT FRIED CHICKEN</div>'
-     f'<div style="margin-top: 4px; font-family: {TYPE}; font-size: 14px; line-height: 1.25; color: {INK}">Eat in. Take out.<br>Open late.<br>Good luck, Frank!</div>',
-     f'border: 1px dashed {INK}; padding: 7px 10px 4px'),
-  ad(f'<div style="font-family: {SERIF}; font-style: italic; font-size: 16px; line-height: 1.24; color: {INK}">Tonight&#8217;s cheesecakes were baked right up the block.</div>'
-     f'<div style="margin-top: 5px; font-family: {SANS}; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; color: {SOFT}; white-space: nowrap">A BRONX BAKERY</div>',
-     f'border-left: 4px solid {GREEN}; padding: 5px 4px 4px 12px'),
+  ad(f'<div style="text-align: center; font-family: {CINZEL}; font-size: 12px; line-height: 1; letter-spacing: 0.2em; color: {INK}">WITH THE COMPLIMENTS OF</div>'
+     f'<div style="margin-top: 5px; text-align: center; font-family: {CINZEL}; font-weight: 700; font-size: 19px; line-height: 1; letter-spacing: 0.08em; color: {INK}">COUNSEL TO THE COMMITTEE</div>',
+     f'border-top: 3px double {INK}; border-bottom: 3px double {INK}; padding: 9px 4px 0', 2, 52),
+  ad(f'<div style="font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.15; color: {INK}">Proud to supply tonight&#8217;s cheesecake.</div>'
+     f'<div style="margin-top: 2px; font-family: {SANS}; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; color: {SOFT}; white-space: nowrap">A BRONX BAKERY</div>',
+     f'border-left: 4px solid {GREEN}; padding: 3px 4px 0 10px', 1, 52),
+  ad(f'<div style="font-family: {TYPE}; font-size: 14px; line-height: 1.2; color: {INK}">Compliments of<br><b>a Grateful Patient</b></div>',
+     f'border: 1px dashed {INK}; padding: 7px 9px 0', 1, 52),
+)
+ads_row3 = (
+  ad(f'<div style="font-family: {SANS}; font-size: 13px; line-height: 1; letter-spacing: 0.12em; color: {INK}">BEST WISHES</div>'
+     f'<div style="margin-top: 4px; font-family: {SANS}; font-weight: 700; font-size: 16px; line-height: 1.1; color: {INK}">The Ladies&#8217; Auxiliary</div>',
+     f'border: 1px solid {INK}; padding: 8px 8px 0', 1, 52),
+  ad(f'<div style="font-family: {SLAB}; font-size: 13px; line-height: 1.15; color: {INK}">Good luck from</div>'
+     f'<div style="font-family: {SLAB}; font-weight: 700; font-size: 15px; line-height: 1.15; color: {INK}">the Tenants of Fox Street</div>',
+     f'border: 2px dotted {INK}; padding: 6px 8px 0', 1, 52),
+  ad(f'<div style="font-family: {SERIF}; font-style: italic; font-size: 16px; line-height: 1.12; text-align: center; color: {INK}">In loving memory<br>of our mothers and fathers</div>',
+     f'border-top: 1px solid {INK}; border-bottom: 1px solid {INK}; padding: 7px 2px 0', 1, 52),
+  ad(f'<div style="font-family: {SANS}; font-size: 12px; line-height: 1; letter-spacing: 0.14em; color: #e9e7de">COMPLIMENTS OF THE</div>'
+     f'<div style="margin-top: 4px; font-family: {SANS}; font-weight: 700; font-size: 17px; line-height: 1.05; color: {WHITE}">Car service. Limousines at the door.</div>',
+     f'background: {INK}; padding: 7px 9px 0', 1, 52),
 )
 
 _names = ['<b>Mr. Frank White</b>, Honorary Chairman', 'Mrs. Dolores Rivera, Chairwoman', 'Rev. Calvin Brooks', 'Dr. Miriam Katz',
-          'Mr. and Mrs. Hector Morales', 'Ms. Angela Price', 'Mr. Leon Feldman', 'Mrs. Rose Washington', 'Mr. and Mrs. Tommy Ng',
-          'The Nurses&#8217; Auxiliary', 'The Tenants of Fox Street']
+          'Mr. and Mrs. Hector Morales', 'Ms. Angela Price', 'Mr. Leon Feldman', 'The Nurses&#8217; Auxiliary']
 COMMITTEE = '&nbsp;&#183; '.join(n.replace(' ', '&nbsp;').replace('<b>Mr.&nbsp;', '<b>Mr. ').replace('&nbsp;White</b>', ' White</b>').replace('White</b>,&nbsp;Honorary&nbsp;Chairman', 'White</b>, Honorary Chairman') for n in _names)
 
 back = f"""
@@ -177,7 +176,7 @@ back = f"""
 </div>
 <div style="position: absolute; left: {BL}px; top: 74px; width: {BW}px; height: 3px; background: {INK}"></div>
 
-<div style="position: absolute; left: {BL}px; top: 88px; width: 222px">
+<div style="position: absolute; left: {BL}px; top: 88px; width: 230px">
   <div style="font-family: {SERIF}; font-weight: 600; font-size: 29px; line-height: 1; color: {INK}">The Evening</div>
   <div style="margin-top: 8px; border-top: 1px solid rgba(28,29,26,0.3)">
     {prog('7:00', 'Champagne reception')}
@@ -209,7 +208,7 @@ back = f"""
   <div style="margin-top: 4px; font-family: {SERIF}; font-size: 14px; line-height: 1.38; color: {INK}; text-align: center; text-wrap: balance">{COMMITTEE}</div>
 </div>
 
-<div style="position: absolute; left: {BL}px; top: 404px; width: {BW}px; height: 32px">
+<div style="position: absolute; left: {BL}px; top: 388px; width: {BW}px; height: 32px">
   <div style="position: absolute; inset: 0; background: {GREEN}; {MIS}"></div>
   <div style="position: absolute; inset: 0; border: 1px solid {INK}"></div>
   <div style="position: absolute; left: 14px; right: 14px; top: 0; height: 32px; display: flex; align-items: center; justify-content: space-between; {MIS}">
@@ -217,14 +216,14 @@ back = f"""
     <span style="font-family: {SERIF}; font-style: italic; font-size: 16px; color: #e3e9e0">Served at eight in the Grand Ballroom</span>
   </div>
 </div>
-<div style="position: absolute; left: {BL}px; top: 444px; width: 326px">
+<div style="position: absolute; left: {BL}px; top: 428px; width: 326px">
   {head('THE RECEPTION')}
   {dish("Plaza suite champagne cocktails", 6)}
   {dish("Chinatown dumplings", 8)}
   {head('DESSERT', 12)}
   {dish("New York cheesecake", 6)}
 </div>
-<div style="position: absolute; left: 434px; top: 444px; width: 326px">
+<div style="position: absolute; left: 434px; top: 428px; width: 326px">
   {head('AT TABLE')}
   {dish("Plaza Hotel prawn cocktail", 6)}
   {dish("Frank's Plaza steak dinner", 8)}
@@ -233,14 +232,15 @@ back = f"""
   {extra('Coffee', 'regular or decaf, tea, cognac.', 6)}
 </div>
 
-<div style="position: absolute; left: {BL}px; top: 798px; width: {BW}px; display: flex; align-items: center; gap: 10px">
+<div style="position: absolute; left: {BL}px; top: 780px; width: {BW}px; display: flex; align-items: center; gap: 10px">
   <span style="flex: none; font-family: {SANS}; font-weight: 700; font-size: 13px; letter-spacing: 0.3em; color: {INK}; border: 1px solid {INK}; padding: 1px 6px 0">GOLD PAGE</span>
   <span style="flex: 1; height: 3px; background: {INK}"></span>
   <span style="flex: none; font-family: {SERIF}; font-style: italic; font-size: 14px; color: {SOFT}">Our thanks to every advertiser</span>
 </div>
-<div style="position: absolute; left: {BL}px; top: 820px; width: {BW}px; display: grid; grid-template-columns: 0.9fr 1fr 1.2fr 1.2fr; gap: 9px 10px">
+<div style="position: absolute; left: {BL}px; top: 802px; width: {BW}px; display: grid; grid-template-columns: 1fr 1fr 1.15fr 1.15fr; gap: 7px 10px">
   {''.join(ads_row1)}
   {''.join(ads_row2)}
+  {''.join(ads_row3)}
 </div>
 """
 

@@ -60,11 +60,11 @@ def letter(key, text, cap, seed=1, track=.075, weight=.12):
 
 
 PIECES = [
-  ("deli", "FROM THE DELI", 24), ('bakery', 'BAKERY', 24), ('also', 'ALSO AT THE DELI', 15),
+  ("deli", "FROM THE DELI", 22), ('bakery', 'BAKERY', 22), ('also', 'ALSO AT THE DELI', 15),
   ('daytour', 'DAY TOUR', 22), ('tokyo', 'TOKYO SUBWAY VISITORS TODAY. JACKETS ON.', 17),
   ('hero', 'TURKEY & SWISS HERO', 19), ('soup', 'CHICKEN SOUP', 19), ('eggcream', 'EGG CREAM', 19),
-  ('coffee', 'COFFEE', 19), ('danish', 'DANISH', 19), ('jelly', 'JELLY DOUGHNUTS', 19),
-  ('rugelach', 'RUGELACH', 19), ('toddy', 'AFTER THE TOUR: HOT TODDY', 20),
+  ('coffee', 'COFFEE', 19), ('danish', 'DANISH', 18), ('jelly', 'JELLY DOUGHNUTS', 16),
+  ('rugelach', 'RUGELACH', 18), ('toddy', 'AFTER THE TOUR: HOT TODDY', 20),
   ('flu', 'FLU GOING ROUND. EVEN THE MAYOR.', 14), ('friday', 'FRIDAY PASTRY RUN', 16),
   ('name', 'NAME', 13), ('want', 'WHAT YOU WANT', 13), ('total', 'TOTAL', 14),
 ]

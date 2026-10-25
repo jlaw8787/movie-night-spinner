@@ -1,6 +1,4 @@
-Rebuild queue: all rebuilds launched.
-Owner notes: Splash keeps the vodka Blue Lagoon. Money Train and Inside Man must not share fonts.
-Integration note: Secret of My Success blini printed "sour cream" but the recipe uses creme fraiche. At integration, print "creme fraiche" to match the recipe (fine for a 1987 executive dining room).
-In blind review: review-C (wave 3: leon, die-hard-with-a-vengeance, ghost-dog, king-of-new-york, pelham, the-french-connection, serpico, dog-day-afternoon, midnight-cowboy); review-D (chud, tootsie, secret-of-my-success, sleepless-in-seattle, manhattan, youve-got-mail, quick-change, escape-from-new-york).
-Rebuilding: moonstruck, annie-hall, trading-places, brewsters-millions, working-girl, out-of-towners, big, splash, money-train, inside-man, adjustment-bureau, after-hours, three-men-and-a-baby, frequency, 16-blocks, premium-rush.
-Moonstruck: rename St. Cecilia's parish before integration (real Greenpoint parish). Awaiting review-E: trading-places, annie-hall, brewsters-millions, moonstruck, inside-man.
+DIRECTION CHANGE (owner, Oct 25 14:52): always a real menu from a venue in the film's world; good-looking, readable, light wear; keep prop bits as small accents and strong film theming. See BRIEF-PRINT.md top sections.
+All prop-direction builds stopped. Pilot of 4 running: serpico, big, pelham, dog-day-afternoon. Show owner before rolling out.
+After pilot sign-off: rebuild every film in the new direction (all 24 live + wave 3), then waves 4 to 7.
+Notes carried: Splash keeps vodka Blue Lagoon. Moonstruck: avoid real parish names. Secret of My Success blini topping is creme fraiche.

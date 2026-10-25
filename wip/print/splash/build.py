@@ -56,7 +56,7 @@ def bar(x, y, w, h, color):
 
 
 # ======================================================================== FRONT
-CHX, CHY, CHW, CHH = 336, 494, 198, 257          # chart frame (image 220 x 286 scaled)
+CHX, CHY, CHW, CHH = 362, 461, 172, 224          # chart frame (image 220 x 286 scaled)
 
 def chart_label(t, x, y, size=12, color=BLUE, italic=False, align='left'):
     st = 'font-style: italic; ' if italic else ''
@@ -88,65 +88,66 @@ def sail_row(name, length, desc, times, first=False):
       <div style="margin-top: 2px; font-size: 15px; line-height: 1.28">{esc(desc)}</div>
       <div style="display: flex; margin-top: 6px">{cells}</div></div>'''
 
-FARES = [('Adults', '5.00'), ('Children 3 to 11', '2.50'), ('Under 3, on a lap', 'free'), ('Six-day pass, any sailing', '18.00')]
-fares = ''.join(f'''<div style="display: flex; align-items: baseline; gap: 6px; font-size: 16px; line-height: 1.5">
-      <span style="white-space: nowrap">{esc(n)}</span><span style="flex: 1; border-bottom: 1px dotted {BLUE}; transform: translateY(-4px)"></span>
-      <span style="font-family: {GOTH}; font-size: 18px; white-space: nowrap">{p}</span></div>''' for n, p in FARES)
-
+FARES = [('Adults', '5.00'), ('Children 3 to 11', '2.50'), ('Under 3, on a lap', 'free'), ('Six-day pass', '18.00')]
 def legend_dots(n=7, dash=False):
     if dash:
         return ''.join(f'<span style="display: inline-block; width: 6px; height: 2px; margin-right: 3px; background: {RED}; vertical-align: middle"></span>' for _ in range(4))
     return ''.join(f'<span style="display: inline-block; width: 3px; height: 3px; border-radius: 50%; margin-right: 2.5px; background: {RED}; vertical-align: middle"></span>' for _ in range(n))
 
-LCW = 278
+LCW = 288
+ART_Y, ART_H, CROP = 176, 222, 24          # cover drawing, top 24px of sky cropped by the frame
+COL_Y = ART_Y + ART_H + 38
+RULES = ['Children stay behind the rail.', 'No jumping from the upper deck.', 'Please don&#8217;t drop coins on deck.', 'Non-swimmers, tell a deckhand.']
+rules = ''.join(f'<div style="display: flex; gap: 7px"><span style="flex: none; width: 5px; height: 5px; margin-top: 8px; background: {RED}"></span><span>{r}</span></div>' for r in RULES)
+fares = ''.join(f'''<div style="display: flex; align-items: baseline; gap: 5px">
+      <span style="white-space: nowrap">{esc(n)}</span><span style="flex: 1; border-bottom: 1px dotted {BLUE}; transform: translateY(-4px)"></span>
+      <span style="white-space: nowrap">{p}</span></div>''' for n, p in FARES)
+BAND_Y = 704
 front = f'''
-<div style="position: absolute; left: {L}px; top: 38px; width: {TW}px; display: flex; justify-content: space-between">
+<div style="position: absolute; left: {L}px; top: 41px; width: {TW}px; display: flex; justify-content: space-between">
   {kick('CAPE COD, MASSACHUSETTS', RED, 16, 0.16)}{kick('SEASON OF 1984', RED, 16, 0.16)}</div>
-{bar(L, 60, TW, 3, BLUE)}{bar(L, 66, TW, 1, BLUE)}
-<div style="position: absolute; left: {L - 2}px; top: 76px; font-family: {DISP}; font-size: 60px; line-height: 1; letter-spacing: -0.01em; color: {BLUE}">Cape Bay</div>
-<div style="position: absolute; left: {L}px; top: 142px; width: 380px; display: flex; align-items: center; gap: 10px">
-  {kick('EXCURSION LINE', RED, 24, 0.3)}<div style="flex: 1; height: 2px; background: {RED}; margin-top: 2px"></div></div>
-<div style="position: absolute; left: {R - 92}px; top: 74px; width: 92px; height: 92px; box-sizing: border-box; border: 2px solid {RED}; border-radius: 50%"></div>
-<div style="position: absolute; left: {R - 86.5}px; top: 79.5px; width: 81px; height: 81px; box-sizing: border-box; border: 1px solid {RED}; border-radius: 50%"></div>
-<div style="position: absolute; left: {R - 92}px; top: 92px; width: 92px; text-align: center; color: {RED}; {SPREAD_R}">
+{bar(L, 62, TW, 3, BLUE)}{bar(L, 68, TW, 1, BLUE)}
+<div style="position: absolute; left: {L - 2}px; top: 78px; font-family: {DISP}; font-size: 58px; line-height: 1; letter-spacing: -0.01em; color: {BLUE}">Cape Bay</div>
+<div style="position: absolute; left: {L}px; top: 141px; width: 382px; display: flex; align-items: center; gap: 10px">
+  {kick('EXCURSION LINE', RED, 23, 0.3)}<div style="flex: 1; height: 2px; background: {RED}; margin-top: 2px"></div></div>
+<div style="position: absolute; left: {R - 90}px; top: 74px; width: 90px; height: 90px; box-sizing: border-box; border: 2px solid {RED}; border-radius: 50%"></div>
+<div style="position: absolute; left: {R - 84.5}px; top: 79.5px; width: 79px; height: 79px; box-sizing: border-box; border: 1px solid {RED}; border-radius: 50%"></div>
+<div style="position: absolute; left: {R - 90}px; top: 91px; width: 90px; text-align: center; color: {RED}; {SPREAD_R}">
   <div style="font-family: {GOTH}; font-size: 14px; letter-spacing: 0.14em; line-height: 1">SAILING</div>
   <div style="font-family: {GOTH}; font-size: 14px; letter-spacing: 0.14em; line-height: 1; margin-top: 2px">SINCE</div>
-  <div style="font-family: {DISP}; font-size: 24px; line-height: 1; margin-top: 3px">1964</div></div>
-{box(L - 1, 180, TW + 2, 254, BLUE, 1)}
-<img src="assets/boat-art.png" alt="The excursion boat leaving the town pier, drawn in pen and ink" style="position: absolute; left: {L}px; top: 181px; width: {TW}px; height: 252px; display: block">
-<div style="position: absolute; left: {L}px; top: 440px; width: {TW}px; display: flex; justify-content: space-between; align-items: baseline">
+  <div style="font-family: {DISP}; font-size: 23px; line-height: 1; margin-top: 3px">1964</div></div>
+<div style="position: absolute; left: {L - 1}px; top: {ART_Y - 1}px; width: {TW + 2}px; height: {ART_H + 2}px; box-sizing: border-box; border: 1px solid {BLUE}; overflow: hidden">
+  <img src="assets/boat-art.png" alt="The excursion boat leaving the town pier, drawn in pen and ink" style="position: absolute; left: 0; top: {-CROP}px; width: {TW}px; height: 252px; display: block"></div>
+<div style="position: absolute; left: {L}px; top: {ART_Y + ART_H + 7}px; width: {TW}px; display: flex; justify-content: space-between; align-items: baseline">
   <div style="font-style: italic; font-size: 15px">The Cape Bay Queen leaving the Town Pier.</div>
   <div style="font-family: {GOTH}; font-size: 14px; letter-spacing: 0.08em">U.S.C.G. INSPECTED, 149 PASSENGERS</div></div>
-<div style="position: absolute; left: {L}px; top: 468px; width: {LCW}px">
+<div style="position: absolute; left: {L}px; top: {COL_Y}px; width: {LCW}px">
   <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px">
     {kick('DAILY SAILINGS', RED, 18, 0.14)}<div style="font-style: italic; font-size: 15px">June 16 to Labor Day</div></div>
-  {sail_row('Harbor and seal cruise', '1 HOUR', 'Out round Seal Ledge and the bell buoy. Seals most days, mermaids never promised.', ['10:00', '12:00', '2:00', '4:00'], True)}
-  {sail_row('Sunset supper cruise', '2 HOURS', 'Round Gull Island at dusk. Supper from the galley, see over.', ['6:30 P.M.'])}
-  <div style="border-top: 2px solid {BLUE}; padding-top: 7px">
-    <div style="display: flex; justify-content: space-between; align-items: baseline">{kick('FARES', RED, 18, 0.14)}<div style="font-style: italic; font-size: 15px">Supper is extra</div></div>
-    <div style="margin-top: 2px">{fares}</div></div>
+  {sail_row('Harbor and seal cruise', '1 HOUR', 'Round Seal Ledge and the bell buoy. Seals most days, mermaids never promised.', ['10:00', '12:00', '2:00', '4:00'], True)}
+  {sail_row('Sunset supper cruise', '2 HOURS', 'Round Gull Island as the sun goes down, with supper from the galley.', ['6:30 P.M.'])}
+  <div style="border-top: 2px solid {BLUE}; padding-top: 7px; font-style: italic; font-size: 15px; line-height: 1.3">Island runs by small boat, ask for Jack at the fuel dock.</div>
 </div>
-<div style="position: absolute; left: {CHX}px; top: 468px; width: {CHW}px; display: flex; justify-content: space-between; align-items: baseline">
-  {kick('HARBOR CHART', RED, 18, 0.14)}</div>
+{kick('HARBOR CHART', RED, 18, 0.14, f'position: absolute; left: {CHX}px; top: {COL_Y}px')}
 {chart}
-<div style="position: absolute; left: {CHX}px; top: {CHY + CHH + 7}px; width: {CHW}px; font-family: {GOTH}; font-size: 14px; letter-spacing: 0.05em; line-height: 1.35">
-  <div>{legend_dots()}&nbsp; HARBOR AND SEAL CRUISE</div>
-  <div>{legend_dots(dash=True)}&nbsp; SUNSET SUPPER CRUISE</div></div>
-<div style="position: absolute; left: {L}px; top: 750px; width: {TW}px; box-sizing: border-box; border: 2px solid {RED}; padding: 13px 14px 9px 16px">
-  <div style="position: absolute; left: 12px; top: -11px; background: {PAPER}; padding: 0 7px">{kick('ON BOARD, PLEASE', RED, 18, 0.14)}</div>
-  <div style="display: flex; gap: 14px; font-size: 15px; line-height: 1.4">
-    <div style="flex: 1">Children stay behind the rail.<br>No jumping from the upper deck.</div>
-    <div style="flex: 1">Please don&#8217;t drop coins on deck.<br>Non-swimmers, tell a deckhand.</div></div>
-</div>
-<div style="position: absolute; left: {L}px; top: 814px; width: {TW}px; display: flex; justify-content: space-between; align-items: baseline">
-  <div style="font-size: 13px; font-style: italic">Tickets at the booth. Island runs by small boat, ask for Jack.</div>
-  {kick('GALLEY MENU OVER', RED, 14, 0.14)}</div>
+<div style="position: absolute; left: {CHX + 6}px; top: {CHY + CHH - 44}px; box-sizing: border-box; padding: 4px 7px 3px; background: {PAPER}; border: 1px solid {BLUE}; font-family: {GOTH}; font-size: 13px; letter-spacing: 0.05em; line-height: 1.3">
+  <div>{legend_dots(5)}&nbsp; SEAL CRUISE</div>
+  <div>{legend_dots(dash=True)}&nbsp; SUPPER CRUISE</div></div>
+<div style="position: absolute; left: {L}px; top: {BAND_Y}px; width: 222px; height: {808 - BAND_Y}px; box-sizing: border-box; border: 2px solid {BLUE}; padding: 14px 12px 0 13px; font-family: {GOTH}; font-size: 17px; line-height: 1.32; letter-spacing: 0.02em">
+  <div style="position: absolute; left: 9px; top: -11px; background: {PAPER}; padding: 0 6px">{kick('FARES', RED, 18, 0.14)}</div>
+  {fares}</div>
+<div style="position: absolute; left: {L + 236}px; top: {BAND_Y}px; width: {TW - 236}px; height: {808 - BAND_Y}px; box-sizing: border-box; border: 2px solid {RED}; padding: 14px 12px 0 13px; font-family: {GOTH}; font-size: 17px; line-height: 1.32; letter-spacing: 0.02em">
+  <div style="position: absolute; left: 9px; top: -11px; background: {PAPER}; padding: 0 6px">{kick('ON BOARD, PLEASE', RED, 18, 0.14)}</div>
+  {rules}</div>
+<div style="position: absolute; left: {L}px; top: 812px; width: {TW}px; display: flex; justify-content: space-between; align-items: baseline">
+  <div style="font-family: {GOTH}; font-size: 12px; letter-spacing: 0.08em">TICKETS AT THE BOOTH ON THE TOWN PIER. SUPPER IS EXTRA.</div>
+  {kick('GALLEY MENU OVER', RED, 12, 0.14)}</div>
 '''
 
 # ======================================================================== BACK
 def item(name, desc, price, top=12, note=None, size=20):
     n = f'<div style="margin-top: 2px; font-style: italic; font-size: 15px; line-height: 1.3; color: {RED}; {SPREAD_R}">{esc(note)}</div>' if note else ''
-    d = f'<div style="margin-top: 2px; font-size: 16px; line-height: 1.3">{esc(desc)}</div>' if desc else ''
+    d = f'<div style="margin-top: 2px; font-size: 16px; line-height: 1.28">{esc(desc)}</div>' if desc else ''
     return f'''<div style="margin-top: {top}px">
       <div style="display: flex; align-items: baseline; gap: 6px">
         <div style="font-weight: 700; font-size: {size}px; line-height: 1.12">{esc(name)}</div>
@@ -158,61 +159,66 @@ def head(t, top=0):
       {kick(t, RED, 18, 0.14)}<div style="flex: 1; height: 2px; background: {RED}"></div></div>'''
 
 LEFT = (head('RAW BAR')
-        + item('Cape oysters', 'Opened to order, on crushed ice. Shallots in red wine vinegar, cracked pepper and lemon.', '6 for 6.50', 8, 'Six for 6.50 at the raw bar.')
-        + item('Clam chowder', 'Chopped quahogs, salt pork, potato and onion in a creamy broth. Oyster crackers.', 'cup 1.25')
-        + head('FROM THE FRYER', 16)
-        + item('Fish and fries', 'White fish in a cold lager batter, cooked golden. Thick-cut potatoes done twice for crunch. Tartar sauce and lemon, in a paper cone.', '5.25', 8, 'Hold on to the cone at the rail.')
-        + item('Fried clam strips', 'Ipswich-style, in cracker meal. Tartar sauce.', '3.95')
-        + item('Corn on the cob', 'Boiled sweet, plenty of butter.', '.95'))
+        + item('Cape oysters', 'Opened to order, on crushed ice. Shallots in red wine vinegar, cracked pepper and lemon.', '6 for 6.50', 7)
+        + item('Clam chowder', 'Chopped quahogs, salt pork, potato and onion in a creamy broth.', 'cup 1.25', 11)
+        + head('FROM THE FRYER', 15)
+        + item('Fish and fries', 'White fish in a cold lager batter, cooked golden. Thick-cut potatoes done twice. Tartar sauce and lemon.', '5.25', 7, 'In a paper cone. Hold on at the rail.')
+        + item('Fried clam strips', 'In cracker meal, tartar sauce.', '3.95', 11))
 
-KIDS = f'''<div style="margin-top: 16px; position: relative; box-sizing: border-box; border: 1px solid {BLUE}; padding: 12px 11px 9px">
-  <div style="position: absolute; left: 9px; top: -10px; background: {PAPER}; padding: 0 5px">{kick('DECKHANDS UNDER 12', RED, 16, 0.12)}</div>
-  {item('Hot dog and chips', 'Grilled frank, toasted bun, a bag of potato chips.', '1.75', 0, None, 18)}
-  {item('Grilled cheese', 'American cheese on white, cut corner to corner.', '1.50', 8, None, 18)}
-  <div style="margin-top: 5px; font-style: italic; font-size: 14px; line-height: 1.3; color: {RED}; {SPREAD_R}">Small lemonade or milk with either.</div></div>'''
+KIDS = f'''<div style="margin-top: 17px; position: relative; box-sizing: border-box; border: 1px solid {BLUE}; padding: 11px 10px 8px">
+  <div style="position: absolute; left: 8px; top: -10px; background: {PAPER}; padding: 0 5px">{kick('DECKHANDS UNDER 12', RED, 16, 0.12)}</div>
+  {item('Hot dog and chips', 'Grilled frank, toasted bun.', '1.75', 0, None, 18)}
+  {item('Grilled cheese', 'American cheese on white.', '1.50', 6, None, 18)}
+  <div style="margin-top: 4px; font-style: italic; font-size: 14px; line-height: 1.3; color: {RED}; {SPREAD_R}">Small lemonade or milk with either.</div></div>'''
+
+def pair(a, pa, b, pb, top=8):
+    one = lambda n, p_: f'''<div style="flex: 1; display: flex; align-items: baseline; gap: 5px"><div style="font-weight: 700; font-size: 17px; white-space: nowrap">{n}</div>
+      <div style="flex: 1; border-bottom: 1px dotted {BLUE}; transform: translateY(-5px); min-width: 6px"></div><div style="font-family: {GOTH}; font-size: 19px">{p_}</div></div>'''
+    return f'<div style="margin-top: {top}px; display: flex; gap: 14px">{one(a, pa)}{one(b, pb)}</div>'
 
 RIGHT = (head('SWEETS')
-         + item('Deep blue gelatin', 'Sweet coconut cream set firm, a clear sea-colored layer poured over, gummy fish on top.', '1.25', 8, 'From the galley on every sailing.')
+         + item('Deep blue gelatin', 'Sweet coconut cream set firm, a clear sea-colored layer poured over, gummy fish on top.', '1.25', 7)
          + KIDS
-         + head('BAR AND FOUNTAIN', 16)
-         + item('Blue lagoon', 'Vodka and blue curaçao over ice, topped with lemon-lime soda and a lemon wheel.', '3.25', 8, 'Sunset cruise only. Must be 20.')
-         + item('Fresh lemonade', 'Squeezed in the galley.', '.75', 9, None, 18)
-         + item('Galley coffee', 'Hot from the urn.', '.50', 7, None, 18))
+         + head('BAR AND FOUNTAIN', 15)
+         + item('Blue lagoon', 'Vodka and blue curaçao on ice, lemon-lime soda, a lemon wheel.', '3.25', 7, 'Sunset cruise only. Must be 20.')
+         + pair('Lemonade', '.75', 'Coffee', '.50', 9))
 
-TIDES = [('Sat 16', '10:41', '11:02'), ('Sun 17', '11:29', '11:51'), ('Mon 18', '12:16', '12:39'), ('Tue 19', '12:40', '1:05'), ('Wed 20', '1:27', '1:52'), ('Thu 21', '2:15', '2:41'), ('Fri 22', '3:04', '3:30')]
-tide_cells = ''.join(f'''<div style="flex: 1; text-align: center; border-left: {'0' if i == 0 else '1px'} solid rgba(30,58,128,0.6); font-family: {GOTH}; font-size: 13px; line-height: 1.25; letter-spacing: 0.03em">
-   <div style="color: {RED}; {SPREAD_R}">{d.upper()}</div><div>{a}</div><div>{p}</div></div>''' for i, (d, a, p) in enumerate(TIDES))
+TIDES = [('Sat 16', '10:41', '11:02'), ('Sun 17', '11:29', '11:51'), ('Mon 18', '12:16', '12:39'), ('Tue 19', '12:58', '1:24'), ('Wed 20', '1:41', '2:07'), ('Thu 21', '2:25', '2:52'), ('Fri 22', '3:11', '3:38')]
+tide_cells = ''.join(f'''<div style="flex: 1; text-align: center; border-left: {'0' if i == 0 else '1px'} solid rgba(30,58,128,0.6); font-family: {GOTH}; font-size: 13px; line-height: 1.22; letter-spacing: 0.03em">
+   <div style="color: {RED}; {SPREAD_R}">{d.upper()}</div><div>{a} / {p}</div></div>''' for i, (d, a, p) in enumerate(TIDES))
 
+BOX_Y, BOX_H = 146, 160
+COLS_Y = BOX_Y + BOX_H + 20
 back = f'''
-{bar(0, 0, FW, 122, BLUE)}
-<div style="position: absolute; left: {L}px; top: 36px; width: {TW}px; color: {PAPER}; {SPREAD_P}">
+{bar(0, 0, FW, 120, BLUE)}
+<div style="position: absolute; left: {L}px; top: 40px; width: {TW}px; color: {PAPER}; {SPREAD_P}">
   <div style="display: flex; justify-content: space-between; align-items: baseline">
-    <div style="font-family: {DISP}; font-size: 46px; line-height: 1">The Galley</div>
+    <div style="font-family: {DISP}; font-size: 44px; line-height: 1">The Galley</div>
     <div style="font-family: {GOTH}; font-size: 16px; letter-spacing: 0.16em">CAPE BAY EXCURSION LINE</div></div>
-  <div style="margin-top: 9px; font-style: italic; font-size: 17px; line-height: 1.3">Open on every sailing. Order at the counter, lower deck aft.</div>
+  <div style="margin-top: 8px; font-style: italic; font-size: 17px; line-height: 1.3">Open on every sailing. Order at the counter, lower deck aft.</div>
 </div>
-{bar(0, 122, FW, 5, RED)}
-<div style="position: absolute; left: {L}px; top: 150px; width: {TW}px; height: 186px; box-sizing: border-box; border: 2px solid {RED}"></div>
-<div style="position: absolute; left: {L + 12}px; top: 139px; background: {PAPER}; padding: 0 7px">{kick('SUNSET SUPPER CRUISE, 6:30 NIGHTLY', RED, 18, 0.14)}</div>
-<img src="assets/lobster.png" alt="Lobster, drawn in two inks" style="position: absolute; left: {L + 6}px; top: 168px; width: 200px; height: 136px; display: block">
-<div style="position: absolute; left: {L + 212}px; top: 168px; width: {TW - 230}px">
-  <div style="font-family: {DISP}; font-size: 23px; line-height: 1.08">Whole boiled lobster</div>
-  <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 3px">
-    <div style="font-family: {GOTH}; font-size: 15px; letter-spacing: 0.08em">ABOUT 1&frac34; LB, FROM THE TANK</div>
+{bar(0, 120, FW, 5, RED)}
+<div style="position: absolute; left: {L}px; top: {BOX_Y}px; width: {TW}px; height: {BOX_H}px; box-sizing: border-box; border: 2px solid {RED}"></div>
+<div style="position: absolute; left: {L + 12}px; top: {BOX_Y - 11}px; background: {PAPER}; padding: 0 7px">{kick('SUNSET SUPPER CRUISE, 6:30 NIGHTLY', RED, 18, 0.14)}</div>
+<img src="assets/lobster.png" alt="Lobster, drawn in two inks" style="position: absolute; left: {L + 4}px; top: {BOX_Y + 20}px; width: 184px; height: 125px; display: block">
+<div style="position: absolute; left: {L + 192}px; top: {BOX_Y + 18}px; width: {TW - 206}px">
+  <div style="display: flex; justify-content: space-between; align-items: baseline">
+    <div style="font-family: {DISP}; font-size: 21px; line-height: 1.08">Whole boiled lobster</div>
     <div style="font-family: {GOTH}; font-size: 24px; line-height: 1">12.95</div></div>
-  <div style="margin-top: 5px; font-size: 16px; line-height: 1.3">Split, brushed with garlic butter and finished under the broiler. Drawn butter, lemon, a cracker, a pick and a bib.</div>
-  <div style="margin-top: 4px; font-style: italic; font-size: 15px; line-height: 1.3; color: {RED}; {SPREAD_R}">Most guests leave the shell.</div>
+  <div style="font-family: {GOTH}; font-size: 15px; letter-spacing: 0.08em; margin-top: 4px">ABOUT 1&frac34; LB, FROM THE TANK</div>
+  <div style="margin-top: 3px; font-size: 16px; line-height: 1.28">Split, brushed with garlic butter and finished under the broiler. Drawn butter, lemon, a cracker, a pick and a bib.</div>
+  <div style="margin-top: 3px; font-style: italic; font-size: 15px; line-height: 1.3; color: {RED}; {SPREAD_R}">Most guests leave the shell.</div>
 </div>
-<div style="position: absolute; left: {L}px; top: 356px; width: 236px">{LEFT}</div>
-<div style="position: absolute; left: {L + 256}px; top: 356px; width: 236px">{RIGHT}</div>
-<div style="position: absolute; left: {L}px; top: 734px; width: {TW}px">
-  <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid {BLUE}; padding-top: 6px">
+<div style="position: absolute; left: {L}px; top: {COLS_Y}px; width: 236px">{LEFT}</div>
+<div style="position: absolute; left: {L + 256}px; top: {COLS_Y}px; width: 236px">{RIGHT}</div>
+<div style="position: absolute; left: {L}px; top: 748px; width: {TW}px">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid {BLUE}; padding-top: 5px">
     {kick('HIGH WATER AT THE TOWN PIER, JUNE 16 TO 22', RED, 15, 0.1)}<div style="font-family: {GOTH}; font-size: 13px; letter-spacing: 0.06em">A.M. / P.M.</div></div>
   <div style="display: flex; margin-top: 4px">{tide_cells}</div>
 </div>
-<div style="position: absolute; left: {L}px; top: 806px; width: {TW}px; border-top: 1px solid {BLUE}; padding-top: 5px; display: flex; justify-content: space-between; align-items: baseline">
-  <div style="font-size: 13px; font-style: italic">Cash only at the counter. Lost wallets kept at the booth.</div>
-  <div style="font-family: {GOTH}; font-size: 12px; letter-spacing: 0.06em">PRINTED IN U.S.A. 25M 5/84</div></div>
+<div style="position: absolute; left: {L}px; top: 803px; width: {TW}px; border-top: 1px solid {BLUE}; padding-top: 4px; display: flex; justify-content: space-between; align-items: baseline">
+  <div style="font-size: 13px; font-style: italic; line-height: 1.2">Cash only at the counter. Lost wallets kept at the booth.</div>
+  <div style="font-family: {GOTH}; font-size: 12px; letter-spacing: 0.06em; line-height: 1.2">PRINTED IN U.S.A. 25M 5/84</div></div>
 '''
 
 FACES = {'front': front, 'back': back}

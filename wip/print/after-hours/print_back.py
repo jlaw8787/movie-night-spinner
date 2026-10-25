@@ -45,14 +45,21 @@ for cx, cy, w, h, ang in cubes:
     a = math.radians(ang); ca, sa = math.cos(a), math.sin(a)
     pts = [(cx + ca * px - sa * py, cy + sa * px + ca * py) for px, py in ((0, 0), (w, 0), (w, h), (0, h))]
     for i in range(4): ln(*pts[i], *pts[(i + 1) % 4], 0.9)
-    for k in range(1, 6):
-        t = k / 6
-        p = (pts[0][0] + (pts[3][0] - pts[0][0]) * t, pts[0][1] + (pts[3][1] - pts[0][1]) * t)
-        ln(p[0] + 2, p[1], p[0] + 2 + ca * w * 0.35, p[1] + sa * w * 0.35, 0.45)
+    # bevel: an inner edge along the top and right, so the cube reads as glassy ice
+    inner = [(cx + ca * px - sa * py, cy + sa * px + ca * py) for px, py in ((3, 3), (w - 3, 3), (w - 3, h - 3))]
+    ln(*inner[0], *inner[1], 0.5); ln(*inner[1], *inner[2], 0.5)
+    # shadow corner: short diagonal cuts in the lower left
+    for k in range(1, 5):
+        a0 = (cx + ca * 0 - sa * (h - k * 3), cy + sa * 0 + ca * (h - k * 3))
+        a1 = (cx + ca * (k * 3) - sa * h, cy + sa * (k * 3) + ca * h)
+        ln(*a0, *a1, 0.45)
 # liquid shading: vertical hatching on the right side of the glass, sparse
-for k in range(12):
-    x = gx1 - 8 - k * 2.2
-    ln(x, fy + 4 + k * 0.5, x - 0.4 * (k % 3), gb - 14, 0.4)
+for k in range(5):
+    x = gx1 - 3 - k * 2.0 - (k * 0.2)
+    ln(x, fy + 6, x - tap * (1 - (x - gx0) / (gx1 - gx0)) * 0.2, gb - 16, 0.4)
+for k in range(4):
+    x = gx0 + 4 + k * 2.0
+    ln(x, fy + 6, x + 1, gb - 16, 0.35)
 # highlight: a clean strip left of centre (by leaving it bare)
 # cherry: red ball with a black stem and outline
 cx, cy, cr = 104, 44, 9

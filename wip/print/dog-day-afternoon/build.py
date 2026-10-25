@@ -88,7 +88,7 @@ def item_row(num, name, desc, note, d, c, per=None):
 def total_row(t, typed_val=None, strong=False):
     bg = f'background: rgba(31,86,62,0.10);' if strong else ''
     return (f'<div style="display: flex; border-bottom: 1px solid {GREEN_SOFT}; {bg}">'
-            f'<div style="flex: 1; padding: 9px 10px 7px 30px">{label(t)}</div>'
+            f'<div style="flex: 1; padding: 9px 10px 7px 30px; text-align: right">{label(t)}</div>'
             f'{amount_cells(*(typed_val or ("", "")))}</div>')
 
 
@@ -109,16 +109,16 @@ def stamp(left, top, rot):
     """Rubber date stamp. Struck once, and the rubber rocked a hair so a faint second strike
     sits just off the first. Uneven ink comes from the painted wear laid over both."""
     def face(op, dx, dy):
-        return (f'<div style="position: absolute; left: {dx}px; top: {dy}px; width: 180px; opacity: {op}">'
+        return (f'<div style="position: absolute; left: {dx}px; top: {dy}px; width: 150px; opacity: {op}">'
                 f'<div style="border: 2.5px solid {STAMP}; border-radius: 6px; padding: 3px">'
                 f'<div style="border: 1px solid {STAMP}; border-radius: 3px; padding: 5px 0 6px; text-align: center; color: {STAMP}; font-family: {SANS}">'
                 f'<div style="font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">RECEIVED</div>'
-                f'<div style="margin-top: 4px; font-weight: 800; font-size: 21px; line-height: 1; letter-spacing: 0.04em; white-space: nowrap">AUG 22 1972</div>'
+                f'<div style="margin-top: 4px; font-weight: 800; font-size: 18px; line-height: 1; letter-spacing: 0.03em; white-space: nowrap">AUG 22 1972</div>'
                 f'<div style="margin-top: 4px; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">HEAD TELLER</div>'
                 f'</div></div></div>')
-    return (f'<div style="position: absolute; left: {left}px; top: {top}px; width: 184px; height: 78px; transform: rotate({rot}deg); transform-origin: 50% 50%">'
+    return (f'<div style="position: absolute; left: {left}px; top: {top}px; width: 154px; height: 68px; transform: rotate({rot}deg); transform-origin: 50% 50%">'
             f'{face(0.26, 2.2, 1.6)}{face(0.84, 0, 0)}'
-            f'<img src="assets/stamp-wear.png" alt="" aria-hidden="true" style="position: absolute; left: -1px; top: -1px; width: 184px; height: 78px; display: block">'
+            f'<img src="assets/stamp-wear.png" alt="" aria-hidden="true" style="position: absolute; left: -1px; top: -1px; width: 154px; height: 68px; display: block">'
             f'</div>')
 
 
@@ -137,11 +137,11 @@ def root(inner, face):
 
 
 DISH = {
-    "Attica chips and onion dip": ("Attica chips and dip", "Ridged and salty, with onions cooked slow till deep brown in sour cream, cream cheese and chives.", "One big bowl for the counter"),
-    "Deli hero wedges": ("Deli heroes, cut six ways", "Ham, salami, provolone, iceberg and tomato on long rolls, oil, red wine vinegar, oregano. Pressed.", "Two, 1.40 each. Plenty for everybody"),
-    "Hostage pizza": ("Pepperoni pies, large", "Thin crust, crushed tomato and oregano, plenty of mozzarella, baked fast in a very hot oven.", "Two, 3.10 a pie. Pay the kid at the door"),
+    "Attica chips and onion dip": ("Attica chips and dip", "Ridged and salty, with onions cooked slow till brown in sour cream, cream cheese and chives.", "One big bowl for the counter"),
+    "Deli hero wedges": ("Deli heroes, cut six ways", "Ham, salami, provolone, iceberg and tomato, oil, vinegar, oregano, on long rolls. Pressed.", "Two at 1.40. Plenty for everybody"),
+    "Hostage pizza": ("Pepperoni pies, large", "Thin crust, crushed tomato and oregano, plenty of mozzarella, baked fast in a very hot oven.", "Two at 3.10. Pay the kid at the door"),
     "Italian ice": ("Lemon ice", "Fresh juice and zest, sugar and water, frozen and scraped fluffy.", "A dozen cups. Not for Mr. Mulvaney"),
-    "Heatwave lager with lime and chilli salt": ("Cold beer with lime", "Lager over ice with a fresh squeeze, the glass dipped in salt and chili powder.", "Six bottles. For after closing"),
+    "Heatwave lager with lime and chilli salt": ("Cold beer with lime", "Lager over ice with a fresh squeeze, the glass dipped in salt and chili powder.", "A six-pack. For after closing"),
 }
 
 # ---------------- FRONT ----------------
@@ -173,13 +173,13 @@ front = f'''
   {item_row(2, *DISH["Deli hero wedges"], "2", "80")}
 
   {item_row(3, *DISH["Hostage pizza"], "6", "20")}
-  {total_row("Total from other side", ("7", "85"))}
-  {total_row("Total", ("18", "14"), True)}
+  {total_row("Total from other side", ("6", "84"))}
+  {total_row("Total", ("17", "13"), True)}
 </div>
 <div style="position: absolute; left: {L}px; top: 754px; width: {CW}px; display: flex; justify-content: space-between; font-family: {SANS}; font-size: 12px; line-height: 1; color: {GREEN}; white-space: nowrap">
   <span style="font-style: italic">Deposits insured up to $20,000.</span><span>Form S-822 (7/72)</span>
 </div>
-{stamp(290, 666, -6)}
+{stamp(58, 674, -6)}
 '''
 
 # ---------------- BACK ----------------
@@ -217,10 +217,10 @@ back = f'''
   {ledger_head("ADDITIONAL ITEMS")}
 
   {item_row(4, *DISH["Italian ice"], "2", "40")}
-  {item_row(5, *DISH["Heatwave lager with lime and chilli salt"], "2", "70")}
+  {item_row(5, *DISH["Heatwave lager with lime and chilli salt"], "1", "69")}
   {item_row(6, "Sodas, one case", "Twenty-four bottles, orange, cream and cola, with a diet one for Mr. Mulvaney.", None, "2", "75")}
 
-  {total_row("Total, carry to other side", ("7", "85"), True)}
+  {total_row("Total, carry to other side", ("6", "84"), True)}
 </div>
 <div style="margin-top: 16px">
   <div style="font-family: {MONO}; font-size: 15px; line-height: 1; color: {TYPE}; letter-spacing: 0.04em"><span style="border-bottom: 1.5px solid {TYPE}; padding-bottom: 2px">{typed("FOR THE DELIVERY", 15)}</span></div>

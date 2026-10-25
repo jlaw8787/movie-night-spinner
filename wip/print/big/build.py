@@ -62,12 +62,12 @@ def ab(x0, y0, x1, y1, inner='', style=''):
     return f'<div style="position: absolute; left: {x0}px; top: {y0}px; width: {x1 - x0}px; height: {y1 - y0}px; {style}">{inner}</div>'
 
 
-def item(no, name, desc, note, first, gap=16, name_px=22):
+def item(no, name, desc, note, first, gap=16, name_px=22, body_px=16):
     nt = (f'<p style="margin: 3px 0 0; font-family: {SANS}; font-weight: 700; font-size: 16px; line-height: 1.22; color: {RED}; {SPREAD(RED)}">{note}</p>') if note else ''
     return f'''<div style="margin-top: {0 if first else gap}px">
       <div style="font-family: {TECH}; font-size: 12px; letter-spacing: 0.04em; line-height: 1.2; color: {NAVY}">NO. {no}</div>
       <h3 style="margin: 3px 0 0; font-family: {SANS}; font-weight: 800; font-size: {name_px}px; line-height: 1.05; letter-spacing: -0.01em; color: {BLK}; {SPREAD(BLK)}">{name}</h3>
-      <p style="margin: 3px 0 0; font-family: {SANS}; font-weight: 500; font-size: 16px; line-height: 1.24; color: {BLK}; {SPREAD(BLK)}">{desc}</p>{nt}</div>'''
+      <p style="margin: 3px 0 0; font-family: {SANS}; font-weight: 500; font-size: {body_px}px; line-height: 1.24; text-wrap: pretty; color: {BLK}; {SPREAD(BLK)}">{desc}</p>{nt}</div>'''
 
 
 def bar(t, first=True, gap=20):
@@ -91,7 +91,7 @@ def face(name, inner):
 
 # ---------------- front: the box front ----------------
 px0, py0, px1, py1 = F['panel']
-cols = ''.join(f'<div style="flex: 1; min-width: 0">{item(n, a, d, t, True)}</div>' for _, n, a, d, t in TRAYS)
+cols = ''.join(f'<div style="flex: 1; min-width: 0">{item(n, a, d, t, True, name_px=23, body_px=17)}</div>' for _, n, a, d, t in TRAYS)
 front_inner = f'''
   {ab(48, F['tag_y'], 640, F['tag_y'] + 26, f'<span style="font-family: {SANS}; font-weight: 800; font-size: 21px; letter-spacing: 0.06em; line-height: 26px; color: {BOARD}">GROWN-UP FOOD FOR A KID AT HEART.</span>')}
   {ab(48, F['subline_y'], 768, F['subline_y'] + 20, f"""<div style="display: flex; justify-content: space-between; font-family: {SANS}; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; line-height: 20px; color: {BOARD}">

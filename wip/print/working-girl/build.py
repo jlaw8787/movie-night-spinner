@@ -95,8 +95,11 @@ def front():
               f'<div style="display: flex; justify-content: space-between; margin-top: 12px">{lunch}</div>'
               f'<p style="margin: 10px 0 0; font-family: {BODY}; font-size: 15px; line-height: 1.3; color: {NAVY}">Every luncheon includes tossed salad, Italian bread, coffee or tea, and a sheet cake with your inscription.</p></div>')
 
+    band = (f'<div style="position: absolute; left: 48px; top: 964px; width: 720px; height: 40px; background: {NAVY}; display: flex; justify-content: space-between; align-items: center; padding: 0 18px; box-sizing: border-box; '
+            f'font-family: {BODY}; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; color: {PAPER}; white-space: nowrap">'
+            + f'<span style="color: {ORANGE}; font-size: 11px">&#9670;</span>'.join(f'<span>{t}</span>' for t in ['VIEWINGS DAILY 10 TO 8', 'FREE PARKING', 'TWO BALLROOMS, 25 TO 300', 'BRIDAL SUITE']) + '</div>')
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {NAVY}">{grain()}'
-            f'{mast}{photo}{right}{bottom}{wear("front")}</div>')
+            f'{mast}{photo}{right}{bottom}{band}{wear("front")}</div>')
 
 # ---------- BACK ----------
 PACKS = [
@@ -156,7 +159,7 @@ def back():
               f'<div style="display: flex; gap: 22px; margin-top: 6px">{field("OCCASION", "engagement party!!", "1.6", -1.5)}{field("GUESTS", "80", "0.7", -1)}</div>'
               f'<div style="display: flex; gap: 22px; margin-top: 6px">{field("PACKAGE", "The Narrows", "1.2", -1.4)}{field("DATE WANTED", "a Saturday", "1.1", -1)}</div>'
               f'<div style="display: flex; justify-content: space-between; margin-top: 11px; font-family: {BODY}; font-size: 12px; letter-spacing: 0.04em; color: {SOFT}">'
-              f'<span>HEAR OUR SPOTS ON METRO RADIO</span><span>FREE PARKING. TWO BALLROOMS, 25 TO 300.</span><span>PRINTED IN U.S.A. 1/88</span></div></div>')
+              f'<span>HEAR OUR SPOTS ON METRO RADIO</span><span>LIBERTY VIEW MANOR, STATEN ISLAND</span><span>PRINTED IN U.S.A. 1/88</span></div></div>')
 
     return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {NAVY}">{grain()}'
             f'{top}{packs}{left}{right}{coupon}{wear("back")}</div>')

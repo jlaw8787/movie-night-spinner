@@ -2,8 +2,7 @@
 Cream card stock, printed with a solid black flood on the front and black plus red on the back.
 Wear is big and gentle: rubbed corners and edges where the black flood has scuffed back to the
 card, a little yellowing at the edges of the back, and one faint glass ring.
-Also paints the slate panel behind the chalk specials box on the back.
-Writes assets/wear-front.png, assets/wear-back.png, assets/slate-wear.png."""
+Writes assets/wear-front.png, assets/wear-back.png."""
 import os, math, random
 from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageEnhance
 D = os.path.dirname(os.path.abspath(__file__))
@@ -64,28 +63,4 @@ ringl = Image.new('RGBA', (W, H), (140, 92, 40, 0)); ringl.putalpha(ring)
 back = Image.alpha_composite(back, ringl)
 back.save(os.path.join(A, 'wear-back.png'))
 
-# ---- chalk specials box: slate panel with old chalk smudges and eraser swipes ----
-CW, CH = 300 * S, 488 * S
-def mot(w, h, scale, lo, hi, seed):
-    random.seed(seed)
-    n = Image.effect_noise((max(2, w // scale), max(2, h // scale)), 60).resize((w, h), Image.BICUBIC)
-    n = n.filter(ImageFilter.GaussianBlur(scale * 0.6))
-    return n.point(lambda v: int(max(0, min(255, lo + (v - 70) / 116 * (hi - lo)))))
-slate = Image.new('RGB', (CW, CH), (36, 41, 38))
-haze = Image.new('RGB', (CW, CH), (128, 134, 128))
-slate = Image.composite(haze, slate, mot(CW, CH, 60, 0, 70, 41))
-sw = Image.new('L', (CW, CH), 0); sd = ImageDraw.Draw(sw)
-random.seed(85)
-for i in range(7):
-    cx, cy = random.uniform(0.1, 0.9) * CW, random.uniform(0.05, 0.95) * CH
-    r = random.uniform(0.25, 0.5) * CW
-    a0 = random.uniform(180, 250)
-    sd.arc((cx - r, cy - r * 0.5, cx + r, cy + r * 0.5), a0, a0 + random.uniform(60, 110), fill=random.randint(40, 70), width=int(random.uniform(18, 30) * S))
-sw = sw.filter(ImageFilter.GaussianBlur(9 * S))
-slate = Image.composite(Image.new('RGB', (CW, CH), (150, 156, 150)), slate, sw)
-# soft darker rim where the printed panel ink sat heavier
-rim = Image.new('L', (CW, CH), 0); ImageDraw.Draw(rim).rectangle((0, 0, CW - 1, CH - 1), outline=120, width=10 * S)
-rim = rim.filter(ImageFilter.GaussianBlur(8 * S))
-slate = Image.composite(Image.new('RGB', (CW, CH), (22, 25, 23)), slate, rim)
-slate.save(os.path.join(A, 'slate-wear.png'))
-print('painted slate', slate.size)
+print('painted wear')

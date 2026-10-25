@@ -1,4 +1,4 @@
-"""Builds the Chester A. Arthur Elementary School breakfast and lunch menu for June 1995
+"""Builds the P.S. 128 breakfast and lunch menu for June 1995
 (Die Hard with a Vengeance). Front: the cafeteria calendar the school sends home each month.
 Back: the Parents Association news, with the Field Day lemonade and bake sale and a
 permission slip that Zeus has filled in for Dexter. One US Letter sheet, two sides,
@@ -12,10 +12,10 @@ FW, FH = 816, 1056
 PAPER = '#d9e6c6'
 INK = '#1d211d'
 PEN = '#25369a'
-FONTS = ('family=Alfa+Slab+One&family=Arimo:ital,wght@0,400;0,700;1,400'
+FONTS = ('family=Arimo:ital,wght@0,400;0,700;1,400'
          '&family=Tinos:ital,wght@0,400;0,700;1,400&family=Reenie+Beanie')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-SLAB = "'Alfa Slab One', 'Rockwell', serif"
+SLAB = "'Tinos', 'Times New Roman', serif"  # Times Bold, as the 1995 office printed headlines
 SANS = "'Arimo', Arial, sans-serif"
 SERIF = "'Tinos', 'Times New Roman', serif"
 HAND = "'Reenie Beanie', cursive"
@@ -65,7 +65,7 @@ def cell(r, c, date, lines, span=1, star=None, art=None):
     body = ''.join(
         f'<div style="font-size: 12.5px; line-height: 1.24; {"font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;" if b else ""}">{esc(t)}</div>'
         for t, b in lines)
-    dn = f'<div style="float: right; margin: -1px 0 0 6px; font-family: {SLAB}; font-size: 19px; line-height: 1">{date}</div>'
+    dn = f'<div style="float: right; margin: -1px 0 0 6px; font-family: {SLAB}; font-weight: 700; font-size: 19px; line-height: 1">{date}</div>'
     st = (f'<div style="display: inline-block; margin-bottom: 3px; font-weight: 700; font-size: 12px; line-height: 1; '
           f'letter-spacing: 0.06em; background: {INK}; color: {PAPER}; padding: 3px 5px 2px">{star}</div>') if star else ''
     return box(x, y, CW * span + 1.5, RH + 1.5,
@@ -93,7 +93,7 @@ cells = [  # first line sits beside the date, so keep it short
     cell(3, 2, 21, [('Grades 1 to 3', 0)], star='ZOO TRIP', art=('elephant', 56, 41)),
     cell(3, 3, 22, [('Meatball hero', 0), ('Tossed salad', 0), ('Watermelon', 0)]),
     cell(3, 4, 23, [('Fish on a bun', 0), ('Corn on the cob', 0), ('Ice pop', 0)]),
-    cell(4, 0, 26, [("Cook's choice", 0), ('Ask on the line!', 0), ('Fresh fruit', 0)]),
+    cell(4, 0, 26, [('Chicken patty', 0), ('on a bun', 0), ('Green peas', 0), ('Fruit cup', 0)]),
     cell(4, 1, 27, [('Picnic lunch', 0), ('Out at 11:30', 0)], star='LAST DAY'),
 ]
 
@@ -105,15 +105,15 @@ head_row = ''.join(
 riddle = box(GX, GY + HH, CW * 3 + 1.5, RH + 1.5, f'''
   <div style="position: absolute; left: 12px; top: 9px; right: 12px">
     <div style="display: flex; align-items: baseline; justify-content: space-between">
-      <div style="font-family: {SLAB}; font-size: 18px; line-height: 1; white-space: nowrap">Riddle of the Week</div>
+      <div style="font-family: {SLAB}; font-weight: 700; font-size: 18px; line-height: 1; white-space: nowrap">Riddle of the Week</div>
       <div style="font-weight: 700; font-size: 12px; letter-spacing: 0.08em; white-space: nowrap">ANSWER MONDAY AT LUNCH</div></div>
     <div style="margin-top: 7px; font-family: {SERIF}; font-style: italic; font-size: 16px; line-height: 1.24">As I was going to St. Ives, I met a man with seven wives. How many were going to St. Ives? Count carefully!</div>
   </div>''', f'border: 1.5px solid {INK}')
 
 summer = box(GX + 2 * CW, GY + HH + 4 * RH, CW * 3 + 1.5, RH + 1.5, f'''
-  {img('sun', 12, 6, 74, 74)}
-  <div style="position: absolute; left: 100px; top: 12px; right: 10px">
-    <div style="font-family: {SLAB}; font-size: 25px; line-height: 1">Have a safe summer!</div>
+  {img('beachball', 8, 10, 100, 69)}
+  <div style="position: absolute; left: 118px; top: 12px; right: 10px">
+    <div style="font-family: {SLAB}; font-weight: 700; font-size: 27px; line-height: 1">Have a safe summer!</div>
     <div style="margin-top: 6px; font-family: {SERIF}; font-size: 16px; line-height: 1.22">Free summer lunch at the park, weekdays at noon, July and August. No forms needed.</div>
   </div>''', f'border: 1.5px solid {INK}')
 
@@ -122,26 +122,26 @@ def feature(left, label, name, desc, art, aw, ah, price):
     return f'''<div style="position: absolute; left: {left}px; top: 722px; width: 224px">
   <div style="height: 74px; position: relative">{img(art, 0, 74 - ah, aw, ah)}</div>
   <div style="margin-top: 6px; border-top: 2px solid {INK}; padding-top: 6px; display: flex; justify-content: space-between; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; white-space: nowrap"><span>{label}</span><span>{price}</span></div>
-  <div style="margin-top: 5px; font-family: {SLAB}; font-size: 22px; line-height: 1.05">{esc(name)}</div>
+  <div style="margin-top: 5px; font-family: {SLAB}; font-weight: 700; font-size: 22px; line-height: 1.05">{esc(name)}</div>
   <div style="margin-top: 6px; font-family: {SERIF}; font-size: 16px; line-height: 1.28">{esc(desc)}</div>
 </div>'''
 
 
 front = f'''
 <div style="position: absolute; left: 48px; top: 44px; width: 540px">
-  <div style="font-weight: 700; font-size: 14px; letter-spacing: 0.14em; line-height: 1">CHESTER A. ARTHUR ELEMENTARY SCHOOL</div>
-  <div style="margin-top: 3px; font-size: 13px; line-height: 1.3">School Food Service. Named for our 21st President.</div>
-  <div style="margin-top: 10px; font-family: {SLAB}; font-size: 45px; line-height: 1; white-space: nowrap">Breakfast &amp; Lunch</div>
+  <div style="font-weight: 700; font-size: 14px; letter-spacing: 0.14em; line-height: 1">PUBLIC SCHOOL 128, MANHATTAN</div>
+  <div style="margin-top: 3px; font-size: 13px; line-height: 1.3">Office of School Food. A good breakfast starts a good day.</div>
+  <div style="margin-top: 10px; font-family: {SLAB}; font-weight: 700; font-size: 52px; line-height: 0.92; letter-spacing: -0.01em; white-space: nowrap">Breakfast &amp; Lunch</div>
   <div style="margin-top: 8px; display: flex; align-items: center; gap: 14px">
-    <div style="font-family: {SLAB}; font-size: 28px; line-height: 1; background: {INK}; color: {PAPER}; padding: 5px 12px 4px">JUNE 1995</div>
+    <div style="font-family: {SLAB}; font-weight: 700; font-size: 28px; line-height: 1; background: {INK}; color: {PAPER}; padding: 5px 12px 4px">JUNE 1995</div>
     <div style="font-family: {SERIF}; font-style: italic; font-size: 16px; line-height: 1.2">Please keep this menu<br>on the refrigerator.</div>
   </div>
 </div>
 {img('carton', 590, 38, 98, 125)}
-<div style="position: absolute; left: 694px; top: 48px; width: 76px; font-family: {SLAB}; font-size: 17px; line-height: 1.06">June is Dairy Month</div>
+<div style="position: absolute; left: 694px; top: 48px; width: 76px; font-family: {SLAB}; font-weight: 700; font-size: 17px; line-height: 1.06">June is Dairy Month</div>
 <div style="position: absolute; left: 694px; top: 118px; width: 76px; font-size: 12px; line-height: 1.25; font-weight: 700">Milk with every meal.</div>
 
-<div style="position: absolute; left: 48px; top: 182px; width: 720px; height: 42px; box-sizing: border-box; border: 2px solid {INK}; border-left-width: 8px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; font-size: 14px; line-height: 1.2; white-space: nowrap">
+<div style="position: absolute; left: 48px; top: 190px; width: 720px; height: 40px; box-sizing: border-box; border: 2px solid {INK}; border-left-width: 8px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; font-size: 14px; line-height: 1.2; white-space: nowrap">
   <span><b>BREAKFAST</b> free for every child, 7:30 to 8:00 A.M.</span>
   <span><b>LUNCH</b> $1.00. Reduced price 40&#162;.</span>
 </div>
@@ -152,17 +152,17 @@ front = f'''
 {summer}
 
 <div style="position: absolute; left: 48px; top: 702px; width: 720px; display: flex; align-items: center; gap: 12px">
-  <div style="font-family: {SLAB}; font-size: 15px; line-height: 1; white-space: nowrap">FROM OUR KITCHEN THIS MONTH</div>
+  <div style="font-family: {SLAB}; font-weight: 700; font-size: 15px; line-height: 1; white-space: nowrap">FROM OUR KITCHEN THIS MONTH</div>
   <div style="flex: 1; border-top: 1.5px dashed {INK}"></div></div>
-{feature(48, 'EVERY SCHOOL DAY', 'Bacon, Egg & Cheese', 'Crisp strips and a fried yolk broken flat under melting American, on a butter-toasted kaiser roll. Ketchup on the side.', 'roll', 111, 71, 'FREE')}
+{feature(48, 'EVERY SCHOOL DAY', 'Bacon, Egg & Cheese', 'Crisp strips and a fried yolk broken flat under melting American, on a butter-toasted kaiser roll. Ketchup on the side.', 'skillet', 120, 74, 'FREE')}
 <div style="position: absolute; left: 290px; top: 716px; width: 236px">
-  {img('lunchline', 0, 0, 232, 150)}
+  {img('tray', 4, 2, 224, 145)}
   <div style="position: absolute; left: 6px; top: 156px; width: 224px">
     <div style="border-top: 2px solid {INK}; padding-top: 6px; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; white-space: nowrap">LUNCH LINE MANNERS</div>
-    <div style="margin-top: 5px; font-family: {SERIF}; font-size: 16px; line-height: 1.28">Walk, wait your turn, take a milk and say thank you to Mrs. Gaines and the cooks.</div>
+    <div style="margin-top: 5px; font-family: {SERIF}; font-size: 16px; line-height: 1.28">Walk, wait your turn, take a milk, and always say thank you to the cooks on the line.</div>
   </div>
 </div>
-{feature(544, 'WEDNESDAYS', 'Crumb Cake', 'Buttery yellow sponge baked under a thick layer of brown sugar and cinnamon streusel, dusted with powdered sugar.', 'crumb', 98, 74, 'WITH LUNCH')}
+{feature(544, 'WEDNESDAYS', 'Crumb Cake', 'Buttery yellow batter baked under a thick layer of brown sugar and cinnamon streusel, dusted with powdered sugar.', 'crumb', 98, 74, 'WITH LUNCH')}
 
 <div style="position: absolute; left: 48px; top: 990px; width: 720px; border-top: 2px solid {INK}; padding-top: 7px; display: flex; justify-content: space-between; font-size: 12px; line-height: 1.2; white-space: nowrap">
   <span><b>MENUS MAY CHANGE WITHOUT NOTICE.</b> Lunch tickets sold Mondays in the office.</span><span><b>OFFICE</b> {OFFICE}</span>
@@ -174,15 +174,15 @@ front = f'''
 
 def head(t, top=0):
     return (f'<div style="margin-top: {top}px; display: flex; align-items: center; gap: 10px">'
-            f'<div style="font-family: {SLAB}; font-size: 22px; line-height: 1.05; white-space: nowrap">{esc(t)}</div>'
+            f'<div style="font-family: {SLAB}; font-weight: 700; font-size: 22px; line-height: 1.05; white-space: nowrap">{esc(t)}</div>'
             f'<div style="flex: 1; border-top: 3px double {INK}; height: 3px"></div></div>')
 
 
 def sale(name, desc, price, top=12):
     d = f'<div style="margin-top: 3px; font-family: {SERIF}; font-size: 16px; line-height: 1.27">{esc(desc)}</div>' if desc else ''
     return (f'<div style="margin-top: {top}px"><div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px">'
-            f'<div style="font-family: {SLAB}; font-size: 21px; line-height: 1.1">{esc(name)}</div>'
-            f'<div style="font-family: {SLAB}; font-size: 19px; line-height: 1.1; white-space: nowrap">{price}</div></div>{d}</div>')
+            f'<div style="font-family: {SLAB}; font-weight: 700; font-size: 21px; line-height: 1.1">{esc(name)}</div>'
+            f'<div style="font-family: {SLAB}; font-weight: 700; font-size: 19px; line-height: 1.1; white-space: nowrap">{price}</div></div>{d}</div>')
 
 
 def small(name, price):
@@ -212,8 +212,8 @@ def check(on, text):
 back = f'''
 <div style="position: absolute; left: 48px; top: 44px; width: 720px; border-top: 6px solid {INK}; border-bottom: 2px solid {INK}; padding: 8px 0 8px; display: flex; justify-content: space-between; align-items: flex-end">
   <div>
-    <div style="font-family: {SLAB}; font-size: 40px; line-height: 1; white-space: nowrap">Parents Association News</div>
-    <div style="margin-top: 6px; font-weight: 700; font-size: 13px; letter-spacing: 0.12em">CHESTER A. ARTHUR ELEMENTARY SCHOOL</div>
+    <div style="font-family: {SLAB}; font-weight: 700; font-size: 40px; line-height: 1; white-space: nowrap">Parents Association News</div>
+    <div style="margin-top: 6px; font-weight: 700; font-size: 13px; letter-spacing: 0.12em">PUBLIC SCHOOL 128, MANHATTAN</div>
   </div>
   <div style="text-align: right; font-size: 13px; line-height: 1.35; white-space: nowrap"><b>JUNE 1995</b><br>Meetings first Tuesday<br>6 P.M., in the library</div>
 </div>
@@ -224,10 +224,10 @@ back = f'''
 
   <div style="margin-top: 16px; position: relative; border: 2px solid {INK}; padding: 12px 16px 14px">
     <div style="position: absolute; right: 10px; top: -22px; width: 104px; height: 119px">{img('jug', 0, 0, 104, 119)}</div>
-    <div style="font-family: {SLAB}; font-size: 26px; line-height: 1.02; width: 260px">Lemonade &amp;<br>Bake Sale</div>
+    <div style="font-family: {SLAB}; font-weight: 700; font-size: 26px; line-height: 1.02; width: 260px">Lemonade &amp;<br>Bake Sale</div>
     <div style="margin-top: 5px; font-size: 13px; line-height: 1.3; width: 270px">PA table by the yard gate, all day. Every penny goes to the library fund.</div>
     {sale('Fresh Lemonade', 'Squeezed lemons, sugar syrup and cold water, mixed by the jug and poured over ice.', '25&#162;', 14)}
-    {sale('Peanut Caramel Squares', 'Brown sugar, butter and cream cooked to soft ball with roasted salted nuts, set in a pan and spread with milk chocolate and flaky salt.', '50&#162;')}
+    {sale('Peanut Caramel Squares', 'Brown sugar, butter and cream cooked to soft ball with roasted salted nuts, set in a pan and spread with milk chocolate and coarse salt.', '50&#162;')}
     <div style="margin-top: 12px">
       {small('Banana bread, by the slice', '35&#162;')}
       {small('Oatmeal raisin cookies', '2 for 25&#162;')}
@@ -241,15 +241,15 @@ back = f'''
 <div style="position: absolute; left: 480px; top: 152px; width: 288px">
   {head('Notes Home')}
   {note('FROM THE NURSE', 'Medicine needs a doctor\'s note. We cannot give out aspirin without one.', 8)}
-  {note('42 AND COUNTING', 'Class 5-2 can name all 42 Presidents in order. Ask them who was number 21.')}
+  {note('FROM THE LIBRARY', 'Summer reading lists come home with report cards. Two books by September!')}
   {note('LUNCHROOM HELPERS', 'Raymond and Dexter, for wiping every table without being asked.')}
   {note('GOOD SAMARITAN AWARD', 'Class 2-3 collected 311 cans for the food drive. Well done!')}
   <div style="margin-top: 16px; position: relative; border: 2px solid {INK}; padding: 10px 14px 12px">
     {img('chickwaffle', 168, 6, 92, 66)}
-    <div style="font-family: {SLAB}; font-size: 22px; line-height: 1.02; width: 160px">PA Breakfast</div>
+    <div style="font-family: {SLAB}; font-weight: 700; font-size: 22px; line-height: 1.02; width: 160px">PA Breakfast</div>
     <div style="margin-top: 5px; width: 160px; font-size: 13px; line-height: 1.3"><b>Saturday, June 10</b><br>8 to 11 A.M., cafeteria</div>
     <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: baseline">
-      <div style="font-family: {SLAB}; font-size: 19px; line-height: 1.1">Fried Chicken &amp; Waffles</div></div>
+      <div style="font-family: {SLAB}; font-weight: 700; font-size: 19px; line-height: 1.1">Fried Chicken &amp; Waffles</div></div>
     <div style="margin-top: 3px; font-family: {SERIF}; font-size: 16px; line-height: 1.27">Thighs soaked in buttermilk, dredged in paprika flour, fried golden, on hot waffles with warm honey and a dash of pepper sauce.</div>
     <div style="margin-top: 6px; display: flex; justify-content: space-between; font-size: 13px; line-height: 1.3"><b>$3.00 a plate, kids $1.50</b><b>Coffee 50&#162;</b></div>
     <div style="margin-top: 3px; font-size: 13px; line-height: 1.3">Waffle irons lent by Mr. Carver's shop.</div>
@@ -262,7 +262,7 @@ back = f'''
 
 <div style="position: absolute; left: 48px; top: 792px; width: 720px; height: 214px; box-sizing: border-box; border: 2px solid {INK}; padding: 14px 20px">
   <div style="display: flex; justify-content: space-between; align-items: baseline">
-    <div style="font-family: {SLAB}; font-size: 24px; line-height: 1">Field Day Permission Slip</div>
+    <div style="font-family: {SLAB}; font-weight: 700; font-size: 24px; line-height: 1">Field Day Permission Slip</div>
     <div style="font-size: 14px; line-height: 1"><b>Return by Wednesday, June 14</b></div></div>
   <div style="display: flex; gap: 24px; margin-top: 24px; font-size: 15px; line-height: 1">
     {field("Child's name", 'Dexter', None, 34)}{field('Class', '3-1', 170, 34)}
@@ -286,16 +286,16 @@ for face, inner, rot in (('front', front, 0.22), ('back', back, -0.18)):
         f'<style>body{{margin:0}}</style></head><body>{body}</body></html>')
 
 film = {"fmt": "cityrun", "fn": "fmtCityrun", "faces": ["front.html", "back.html"], "names": ["Lunch menu", "Parents news"],
-        "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Alfa Slab One", "Arimo", "Tinos", "Reenie Beanie"],
-        "phone": {"disp": "'Alfa Slab One',serif", "title": "'Alfa Slab One',serif", "name": "'Alfa Slab One',serif",
+        "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Tinos", "Arimo", "Reenie Beanie"],
+        "phone": {"disp": "'Tinos',serif", "title": "'Tinos',serif", "name": "'Tinos',serif",
                   "body": "'Tinos',serif", "price": "'Arimo',sans-serif", "note": "'Arimo',sans-serif"}}
 open(os.path.join(D, 'film.json'), 'w').write(json.dumps(film, indent=1))
 
 labels = {"Die Hard with a Vengeance (1995)": {
-    "Zeus's salted peanut caramel slab": {"n": "Peanut Caramel Squares", "d": "Brown sugar, butter and cream cooked to soft ball with roasted salted nuts, set in a pan and spread with milk chocolate and flaky salt.", "note": "Parents Association bake sale, Field Day. 50 cents."},
+    "Zeus's salted peanut caramel slab": {"n": "Peanut Caramel Squares", "d": "Brown sugar, butter and cream cooked to soft ball with roasted salted nuts, set in a pan and spread with milk chocolate and coarse salt.", "note": "Parents Association bake sale, Field Day. 50 cents."},
     "Harlem chicken and waffles": {"n": "Fried Chicken & Waffles", "d": "Thighs soaked in buttermilk, dredged in paprika flour, fried golden, on hot waffles with warm honey and a dash of pepper sauce.", "note": "Parents Association breakfast, Saturday, June 10."},
     "Bacon egg and cheese on a roll": {"n": "Bacon, Egg & Cheese", "d": "Crisp strips and a fried yolk broken flat under melting American, on a butter-toasted kaiser roll. Ketchup on the side.", "note": "Free breakfast every school day, 7:30 to 8:00."},
-    "Crumb cake": {"n": "Crumb Cake", "d": "Buttery yellow sponge baked under a thick layer of brown sugar and cinnamon streusel, dusted with powdered sugar.", "note": "Every Wednesday with lunch."},
+    "Crumb cake": {"n": "Crumb Cake", "d": "Buttery yellow batter baked under a thick layer of brown sugar and cinnamon streusel, dusted with powdered sugar.", "note": "Every Wednesday with lunch."},
     "Water jug lemonade": {"n": "Fresh Lemonade", "d": "Squeezed lemons, sugar syrup and cold water, mixed by the jug and poured over ice.", "note": "Field Day lemonade table. 25 cents a cup."},
 }}
 open(os.path.join(D, 'cityrun.labels.json'), 'w').write(json.dumps(labels, indent=1, ensure_ascii=False))
