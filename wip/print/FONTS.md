@@ -55,3 +55,13 @@ analyze-this: Chango
 prizzis-honor: Pirata One
 scarface: Tilt Neon
 mean-streets: Rakkas
+donnie-brasco: Shojumaru
+carlitos-way: Yesteryear
+once-upon-a-time-in-america: Old Standard TT
+godfather-3: Tenor Sans
+casino: Gravitas One
+a-bronx-tale: Damion
+godfather-2: Sancreek
+beetlejuice: Creepster
+a-goofy-movie: Luckiest Guy
+the-godfather: IM Fell English SC
