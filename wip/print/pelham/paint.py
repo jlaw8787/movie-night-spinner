@@ -17,11 +17,12 @@ if not os.path.exists(STILL):
     subprocess.run(['curl', '-s', '-o', STILL, 'https://image.tmdb.org/t/p/original/syWyIUCzKB0xYiDpKlYbgV7ctGi.jpg'], check=True)
 src = Image.open(STILL).convert('RGB')
 sw, sh = src.size
-ph = src.crop((40, 150, 1240, 150 + int(1200 * 268 / 686)))       # tighter on the platform and the train
+ph = src.crop((20, 130, 1260, 130 + int(1240 * 330 / 686)))       # tighter on the platform and the train
 from PIL import ImageEnhance
-ph = ph.point([int(255 * ((i % 256) / 255) ** 0.62) for i in range(768)])
-ph = ImageEnhance.Contrast(ph).enhance(1.12)
-ph.resize((1372, 536), Image.LANCZOS).save(os.path.join(A, 'still-platform.jpg'), quality=90)
+ph = ph.point([int(255 * ((i % 256) / 255) ** 0.5) for i in range(768)])
+ph = ImageEnhance.Contrast(ph).enhance(1.15)
+ph = ImageEnhance.Brightness(ph).enhance(1.08)
+ph.resize((1372, 660), Image.LANCZOS).save(os.path.join(A, 'still-platform.jpg'), quality=90)
 bd = Image.open(os.path.join(A, 'src-board.jpg')).convert('RGB').crop((0, 0, 1180, 520))
 bd = bd.point([int(255 * ((i % 256) / 255) ** 0.8) for i in range(768)])
 bd.resize((664, 292), Image.LANCZOS).save(os.path.join(A, 'still-board.jpg'), quality=90)

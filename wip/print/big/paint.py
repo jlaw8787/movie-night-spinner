@@ -110,6 +110,10 @@ def cover_keys():
     db.line([P(0, 0), P(N, 0)], fill=255, width=int(1.8 * S))
     db.line([P(0, 1), P(N, 1)], fill=255, width=int(1.8 * S))
 
+    # depth shading: fine lines across the far end of the keys, closer together toward the back
+    for k in range(14):
+        t = 0.30 * (k / 14) ** 1.6
+        db.line([P(0, t), P(N, t)], fill=int(170 * (1 - k / 14)), width=max(1, int(0.55 * S)))
     # black keys: C# D#  F# G# A# in each octave
     offs = []
     for o in range(2):
@@ -252,7 +256,7 @@ def wear(name, seed):
 
 # ------------------------------------------------------------ the giant cookie, engraved spot art for the back
 def cookie():
-    w = h = 300 * S
+    w = h = 460 * S
     rnd = random.Random(21)
     cx = cy = w / 2
     R = w * 0.46
@@ -269,28 +273,41 @@ def cookie():
     db = ImageDraw.Draw(blk)
     db.line(pts + [pts[0]], fill=255, width=int(1.6 * S))
     # stipple: denser toward the rim and lower right, like an engraved shaded disc
-    for _ in range(9000):
+    for _ in range(30000):
         a = rnd.random() * 2 * math.pi
         rr = R * math.sqrt(rnd.random())
         x, y = cx + rr * math.cos(a), cy + rr * math.sin(a)
         p = 0.08 + 0.75 * (rr / R) ** 3 + 0.25 * max(0, ((x - cx) + (y - cy)) / (2 * R))
         if rnd.random() < p:
-            r0 = rnd.uniform(0.5, 1.1) * S
+            r0 = rnd.uniform(0.45, 1.0) * S
             db.ellipse([x - r0, y - r0, x + r0, y + r0], fill=255)
     # chocolate chips, kept off the icing band
     band0, band1 = cy - R * 0.20, cy + R * 0.20
-    for _ in range(26):
+    for _ in range(34):
         for _t in range(40):
             a = rnd.random() * 2 * math.pi
             rr = R * 0.82 * math.sqrt(rnd.random())
             x, y = cx + rr * math.cos(a), cy + rr * math.sin(a)
             if not (band0 - 22 * S < y < band1 + 22 * S):
                 break
-        s0 = rnd.uniform(8, 13) * S
+        s0 = rnd.uniform(11, 18) * S
         poly = [(x + s0 * (0.7 + 0.4 * rnd.random()) * math.cos(t), y + s0 * (0.7 + 0.4 * rnd.random()) * math.sin(t))
                 for t in [i * 2 * math.pi / 7 for i in range(7)]]
         db.polygon(poly, fill=255)
         db.line([(x - s0 * 0.35, y - s0 * 0.25), (x + s0 * 0.05, y - s0 * 0.45)], fill=0, width=max(1, int(0.8 * S)))
+    # baked cracks: short engraved branching lines from the rim inward
+    for _ in range(16):
+        a = rnd.random() * 2 * math.pi
+        rr = R * rnd.uniform(0.55, 0.92)
+        x, y = cx + rr * math.cos(a), cy + rr * math.sin(a)
+        if band0 - 30 * S < y < band1 + 30 * S:
+            continue
+        pts2 = [(x, y)]
+        for _k in range(5):
+            a += rnd.uniform(-0.7, 0.7)
+            x, y = x + 9 * S * math.cos(a + 1.6), y + 9 * S * math.sin(a + 1.6)
+            pts2.append((x, y))
+        db.line(pts2, fill=255, width=max(1, int(1.0 * S)))
     # piped icing keyboard across the middle: knock out to paper, then draw keys
     icing = plate(w, h)
     x0, x1 = cx - R * 0.86, cx + R * 0.86
@@ -307,6 +324,11 @@ def cookie():
     for i in range(1, n):
         if (i - 1) % 7 in (0, 1, 3, 4, 5):
             db.rectangle([x0 + i * kw - kw * 0.28, band0, x0 + i * kw + kw * 0.28, band0 + (band1 - band0) * 0.6], fill=255)
+    for i in range(int((x1 - x0) / (7 * S)) + 1):
+        for yy0 in (band0, band1):
+            px = x0 + 6 * S + i * 7 * S
+            if px < x1 - 6 * S:
+                db.ellipse([px - 1.6 * S, yy0 - 1.6 * S, px + 1.6 * S, yy0 + 1.6 * S], outline=255, width=max(1, int(0.6 * S)))
     tan = rough(tan, 0.18, 22)
     blk = rough(blk, 0.06, 23)
     white = icing.point(lambda v: int(v * 0.9))
@@ -314,9 +336,9 @@ def cookie():
     # soft plate shadow so it sits on the card
     sh = Image.new('RGBA', (w, h), (27, 42, 74, 0))
     sh.putalpha(body.point(lambda v: int(v * 0.22)))
-    sh = ImageChops.offset(sh, int(3 * S), int(4 * S)).filter(ImageFilter.GaussianBlur(4 * S))
+    sh = ImageChops.offset(sh, int(4 * S), int(5 * S)).filter(ImageFilter.GaussianBlur(5 * S))
     out = Image.alpha_composite(sh, art)
-    out.resize((300, 300), Image.LANCZOS).save(os.path.join(A, 'cookie.png'))
+    out.resize((460, 460), Image.LANCZOS).save(os.path.join(A, 'cookie.png'))
 
 
 if __name__ == '__main__':

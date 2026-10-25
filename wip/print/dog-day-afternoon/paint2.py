@@ -49,11 +49,19 @@ def sun():
         # straight fine ray in brown between flames
         b = a + math.pi / n
         db.line([(c + R * 1.15 * math.cos(b), c + R * 1.15 * math.sin(b)), (c + S * 0.40 * math.cos(b), c + S * 0.40 * math.sin(b))], fill=255, width=2 * K)
-    # the disc: line engraving, darker to the lower right, ring outline
-    tone = lambda x, y: min(1, max(0, 0.15 + 0.85 * ((x - c) + (y - c)) / (2 * R) + 0.35 * (math.hypot(x - c, y - c) / R) ** 3))
-    engrave_disc(db, c, c, R - 4 * K, 5 * K, tone, rng)
+# the disc: solid red ink sun cut by paper stripes that thicken toward the bottom (the heat haze),
+    # with an engraved brown rim and a fine outer ring
+    dr.ellipse([c - R, c - R, c + R, c + R], fill=255)
+    cut = Image.new('L', (S, S), 0); cd = ImageDraw.Draw(cut)
+    y, k = c - R * 0.05, 0
+    while y < c + R:
+        w = 2 * K + k * 1.6 * K
+        cd.rectangle([0, y, S, y + w], fill=255)
+        y += w + 9 * K - k * 0.5 * K; k += 1
+    disc = Image.new('L', (S, S), 0); ImageDraw.Draw(disc).ellipse([c - R, c - R, c + R, c + R], fill=255)
+    rd = ImageChops.subtract(rd, ImageChops.multiply(cut, disc)); dr = ImageDraw.Draw(rd)
     db.ellipse([c - R, c - R, c + R, c + R], outline=255, width=3 * K)
-    db.ellipse([c - R * 1.06, c - R * 1.06, c + R * 1.06, c + R * 1.06], outline=255, width=K)
+    db.ellipse([c - R * 1.07, c - R * 1.07, c + R * 1.07, c + R * 1.07], outline=255, width=K)
     im = Image.new('RGBA', (S, S), (0, 0, 0, 0))
     im.alpha_composite(ink(rd, RED, (2 * K, K)))
     im.alpha_composite(ink(br, BROWN))
