@@ -1,0 +1,30 @@
+{
+ "fmt": "collection",
+ "fn": "fmtCollection",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Outside",
+  "Inside"
+ ],
+ "mm": [
+  216,
+  279
+ ],
+ "fonts": "family=Playball&family=Lora:ital,wght@0,400;0,700;1,400;1,700",
+ "fams": [
+  "Playball",
+  "Lora"
+ ],
+ "phone": {
+  "disp": "'Playball',cursive",
+  "title": "'Playball',cursive",
+  "name": "'Lora',serif",
+  "body": "'Lora',serif",
+  "price": "'Lora',serif",
+  "note": "'Lora',serif"
+ },
+ "build": "python3 build.py && python3 shot.py"
+}

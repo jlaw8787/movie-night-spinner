@@ -1,0 +1,18 @@
+{
+ "fmt": "flamingo",
+ "fn": "fmtFlamingo",
+ "faces": ["front.html", "back.html"],
+ "names": ["Front", "Back"],
+ "mm": [178, 356],
+ "fonts": "family=Federo&family=Lora:ital,wght@0,400;0,600;1,400&family=Pinyon+Script",
+ "fams": ["Federo", "Lora", "Pinyon Script"],
+ "phone": {
+  "disp": "'Federo',sans-serif",
+  "title": "'Federo',sans-serif",
+  "name": "'Federo',sans-serif",
+  "body": "'Lora',serif",
+  "price": "'Federo',sans-serif",
+  "note": "'Lora',serif"
+ },
+ "build": "python3 build.py && python3 shot.py"
+}

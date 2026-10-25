@@ -1,0 +1,31 @@
+{
+ "fmt": "sobelsupper",
+ "fn": "fmtSobelSupper",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  108,
+  279
+ ],
+ "fonts": "family=Chango&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Allura",
+ "fams": [
+  "Chango",
+  "Crimson Pro",
+  "Allura"
+ ],
+ "phone": {
+  "disp": "'Chango',serif",
+  "title": "'Chango',serif",
+  "name": "'Crimson Pro',serif",
+  "body": "'Crimson Pro',serif",
+  "price": "'Crimson Pro',serif",
+  "note": "'Crimson Pro',serif"
+ },
+ "build": "python3 build.py && python3 shot.py"
+}
