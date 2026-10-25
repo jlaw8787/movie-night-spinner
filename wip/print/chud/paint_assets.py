@@ -181,15 +181,15 @@ sh.save(os.path.join(A, 'tape.png'), optimize=True)
 # ---------- photo: newspaper clipping, photocopied ----------
 src = Image.open(os.path.join(A, 'manhole_orig.jpg')).convert('L')
 w0, h0 = src.size
-crop = src.crop((int(w0 * 0.14), int(h0 * 0.50), int(w0 * 0.86), h0))   # the cover and its steam, nobody in frame
-PWc, PHc = 264, 138                                                       # css px of the printed picture
+crop = src.crop((int(w0 * 0.15), int(h0 * 0.50), int(w0 * 0.85), h0))   # the cover and its steam, nobody in frame
+PWc, PHc = 264, 112                                                       # css px of the printed picture
 pw, phh = PWc * S, PHc * S
 p = ImageOps.fit(crop, (pw, phh), Image.LANCZOS, centering=(0.5, 0.55))
-p = ImageOps.autocontrast(p, cutoff=1)
+p = ImageOps.autocontrast(p, cutoff=0.5).filter(ImageFilter.UnsharpMask(radius=4 * S, percent=90, threshold=2))
 tone = np.asarray(p).astype(np.float32) / 255
-tone = np.clip((tone - 0.06) / 0.86, 0, 1) ** 0.85
+tone = np.clip((tone - 0.02) / 0.80, 0, 1) ** 0.62
 # 65 line newspaper screen at 45 degrees
-pitch = 1.6 * S                                   # about 1.6 css px a cell
+pitch = 2.1 * S                                   # about 1.6 css px a cell
 gy, gx = np.mgrid[0:phh, 0:pw].astype(np.float32)
 c, s_ = math.cos(math.radians(45)), math.sin(math.radians(45))
 u = (gx * c + gy * s_) / pitch; v = (-gx * s_ + gy * c) / pitch
@@ -200,8 +200,8 @@ rad = np.sqrt(np.clip(cover, 0, 1) / math.pi) * 1.02
 ink = np.clip((rad - dd) * pitch / 1.1 + 0.5, 0, 1)
 ink = np.maximum(ink, (cover > 0.9) * 1.0)
 # copier: the screen fills in, blacks crush, highlights drop out, a little blur
-ink = ndimage.gaussian_filter(ink, 0.55 * S)
-ink = np.clip((ink - 0.22) / 0.5, 0, 1)
+ink = ndimage.gaussian_filter(ink, 0.45 * S)
+ink = np.clip((ink - 0.18) / 0.58, 0, 1)
 ink *= np.clip(smooth_noise(pw, phh, 6, 61) * 0.15 + 0.92, 0, 1)
 news = np.array([214, 211, 203], np.float32)           # newsprint reads grey on the copy
 toner = np.array([36, 35, 33], np.float32)

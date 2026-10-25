@@ -37,33 +37,25 @@ def edge_mask(w, h, width, power=2.0):
 
 # ---------------- host portrait halftone ----------------
 src = Image.open(os.path.join(D, 'src', 'still-host.jpg')).convert('L')
-src = src.crop((330, 0, 1460, 1080))      # head and shoulders, 950 x 1080
-PW, PH = 440, 420                         # 2x of 220 x 210
+src = src.crop((1150, 50, 1960, 970))     # Frank at the theatre bar, head and shoulders, from the TMDB still
+PW, PH = 352, 400                         # 2x of 176 x 200
 g = src.resize((PW, PH), Image.LANCZOS)
-g = ImageOps.autocontrast(g, cutoff=2)
-g = g.point(lambda v: int(255 * (v / 255) ** 0.72))
-g = ImageEnhance.Contrast(g).enhance(1.12)
-big = 3 * max(PW, PH)
-canvas = Image.new('L', (big, big), 255)
-canvas.paste(g, ((big - PW) // 2, (big - PH) // 2))
-rot = canvas.rotate(45, resample=Image.BICUBIC, fillcolor=255)
-dots = Image.new('L', (big, big), 0)
-dd = ImageDraw.Draw(dots)
-cell = 5.0
-px = rot.load()
-y = 0.0
-while y < big:
-    x = 0.0
-    while x < big:
-        cx, cy = int(x + cell / 2), int(y + cell / 2)
-        if 0 <= cx < big and 0 <= cy < big:
-            dark = 1 - px[cx, cy] / 255
-            r = cell * 0.6 * math.sqrt(dark)
-            if r > 0.35:
-                dd.ellipse((x + cell / 2 - r, y + cell / 2 - r, x + cell / 2 + r, y + cell / 2 + r), fill=255)
-        x += cell
-    y += cell
-dots = dots.rotate(-45, resample=Image.BICUBIC).crop(((big - PW) // 2, (big - PH) // 2, (big + PW) // 2, (big + PH) // 2))
+g = ImageOps.autocontrast(g, cutoff=1)
+g = g.point(lambda v: int(255 * (v / 255) ** 0.62))
+g = ImageEnhance.Contrast(g).enhance(1.22)
+# amplitude-modulated screen at 45 degrees, drawn 3x oversize then reduced so the dots stay round
+import numpy as np
+SS = 3
+gs = np.array(g.resize((PW * SS, PH * SS), Image.BICUBIC).filter(ImageFilter.GaussianBlur(0.9 * SS)), np.float32) / 255.0
+cell = 3.8 * SS
+yy, xx = np.mgrid[0:PH * SS, 0:PW * SS].astype(np.float32)
+u = (xx + yy) / math.sqrt(2); v = (xx - yy) / math.sqrt(2)
+du = np.mod(u, cell) - cell / 2; dv = np.mod(v, cell) - cell / 2
+dist = np.sqrt(du * du + dv * dv)
+dark = np.clip(1 - gs, 0, 1)
+r = cell * np.sqrt(dark / math.pi) * 1.06
+ink = np.clip(r - dist + 0.5 * SS, 0, SS) / SS
+dots = Image.fromarray((ink * 255).astype(np.uint8)).resize((PW, PH), Image.LANCZOS)
 ht = Image.new('RGBA', (PW, PH), (24, 24, 22, 0)); ht.putalpha(dots.point(lambda v: int(v * 0.92)))
 ht.save(os.path.join(A, 'host-halftone.png'))
 

@@ -13,17 +13,17 @@
   279.4,
   215.9
  ],
- "fonts": "family=Archivo:ital,wght@0,400;0,600;0,800;0,900;1,400&family=Archivo+Narrow:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Yellowtail",
+ "fonts": "family=League+Gothic&family=News+Cycle:wght@400;700&family=Archivo+Narrow:ital,wght@0,400;0,600;0,700;1,400;1,600",
  "fams": [
-  "Archivo",
-  "Archivo Narrow",
-  "Yellowtail"
+  "League Gothic",
+  "News Cycle",
+  "Archivo Narrow"
  ],
  "phone": {
-  "disp": "'Yellowtail',cursive",
-  "title": "'Archivo',sans-serif",
-  "name": "'Archivo',sans-serif",
-  "body": "'Archivo',sans-serif",
+  "disp": "'League Gothic',sans-serif",
+  "title": "'League Gothic',sans-serif",
+  "name": "'League Gothic',sans-serif",
+  "body": "'News Cycle',sans-serif",
   "price": "'Archivo Narrow',sans-serif",
   "note": "'Archivo Narrow',sans-serif"
  }

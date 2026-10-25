@@ -1,16 +1,19 @@
-import json, os
+import os
 D = os.path.dirname(os.path.abspath(__file__))
-IMG = {'paper': 'assets/paper.png', 'wear': 'assets/wear.png', 'tack': 'assets/tack.png', 'photo': 'assets/photo.jpg'}
-FONT_LINK = '<link rel="stylesheet" href="fonts/fonts.css">'
+IMG = {'paper': 'assets/paper.jpg', 'grain': 'assets/paper-grain.png', 'wear': 'assets/toner-wear.png',
+       'tape': 'assets/tape.png', 'photo': 'assets/photo.png'}
+FONTS = 'family=Special+Elite&family=Permanent+Marker&family=Reenie+Beanie'
+FONT_LINK = ('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+             f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">')
 
 # name, description. Everything is free; coffee asks for a quarter if you have one.
 MENU = [
   ('BEEF STEW', 'Chuck braised for hours with carrot, celery, onion and potato. Italian bread to mop it up.'),
-  ('CHEDDAR AND ONION ROLLS', 'A pull-apart batch, baked this morning with sharp cheese on top. Good for dunking.'),
+  ('CHEDDAR AND ONION ROLLS', 'A pull-apart pan, baked this morning with sharp cheese on top. Good for dunking.'),
   ('MANHOLE COVER PIZZAS', 'Little rounds of tomato sauce and mozzarella, pepperoni laid on in a crosshatch.'),
   ('CIDER DOUGHNUTS', 'Cake rings made with apple juice boiled down thick, fried and rolled in cinnamon sugar.'),
-  ('LIME COOLER', 'Lime cordial and tonic water, poured over a glass full of ice.'),
-  ('HOT COFFEE', 'Black, all day. Milk and sugar on the counter. 25&nbsp;cents in the jar if you can spare it.'),
+  ('LIME COOLER', 'Sweetened lime juice and tonic water, poured over a glass full of ice.'),
+  ('COFFEE', 'Black, all day. Milk and sugar on the counter. 25&nbsp;cents in the jar if you can spare it.'),
 ]
 
 def menu():
@@ -22,10 +25,9 @@ def menu():
     return '\n'.join(out)
 
 b = open(os.path.join(D, 'notice.body.html')).read()
-b = b.replace('{{MENU}}', menu()).replace('{{IMG_PAPER}}', IMG['paper']).replace('{{IMG_PHOTO}}', IMG['photo'])
-i = b.rindex('</div>')
-tack = f'<img src="{IMG["tack"]}" alt="" aria-hidden="true" style="position: absolute; left: 380px; top: 4px; width: 64px; height: 64px; display: block">'
-wear = f'<img src="{IMG["wear"]}" alt="" aria-hidden="true" style="position: absolute; left: -12px; top: -12px; width: 840px; height: 1080px; pointer-events: none; display: block">'
-b = b[:i] + wear + tack + b[i:]
+b = b.replace('{{MENU}}', menu())
+for k, v in IMG.items():
+    b = b.replace('{{IMG_' + k.upper() + '}}', v)
+assert '{{' not in b
 open(os.path.join(D, 'notice.html'), 'w').write(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Soup kitchen notice</title>{FONT_LINK}<style>body{{margin:0}}</style></head><body>{b}</body></html>')
 print('built')

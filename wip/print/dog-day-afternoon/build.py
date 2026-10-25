@@ -106,14 +106,19 @@ def field(lab, val, w=None, size=17):
 
 
 def stamp(left, top, rot):
-    return (f'<div style="position: absolute; left: {left}px; top: {top}px; width: 180px; transform: rotate({rot}deg); transform-origin: 50% 50%; opacity: 0.82">'
-            f'<div style="border: 2.5px solid {STAMP}; border-radius: 6px; padding: 3px">'
-            f'<div style="border: 1px solid {STAMP}; border-radius: 3px; padding: 5px 0 6px; text-align: center; color: {STAMP}; font-family: {SANS}">'
-            f'<div style="font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">RECEIVED</div>'
-            f'<div style="margin-top: 4px; font-weight: 800; font-size: 21px; line-height: 1; letter-spacing: 0.04em; white-space: nowrap">AUG 22 1972</div>'
-            f'<div style="margin-top: 4px; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">HEAD TELLER</div>'
-            f'</div></div>'
-            f'<img src="assets/stamp-wear.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 180px; height: 74px; display: block">'
+    """Rubber date stamp. Struck once, and the rubber rocked a hair so a faint second strike
+    sits just off the first. Uneven ink comes from the painted wear laid over both."""
+    def face(op, dx, dy):
+        return (f'<div style="position: absolute; left: {dx}px; top: {dy}px; width: 180px; opacity: {op}">'
+                f'<div style="border: 2.5px solid {STAMP}; border-radius: 6px; padding: 3px">'
+                f'<div style="border: 1px solid {STAMP}; border-radius: 3px; padding: 5px 0 6px; text-align: center; color: {STAMP}; font-family: {SANS}">'
+                f'<div style="font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">RECEIVED</div>'
+                f'<div style="margin-top: 4px; font-weight: 800; font-size: 21px; line-height: 1; letter-spacing: 0.04em; white-space: nowrap">AUG 22 1972</div>'
+                f'<div style="margin-top: 4px; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">HEAD TELLER</div>'
+                f'</div></div></div>')
+    return (f'<div style="position: absolute; left: {left}px; top: {top}px; width: 184px; height: 78px; transform: rotate({rot}deg); transform-origin: 50% 50%">'
+            f'{face(0.26, 2.2, 1.6)}{face(0.84, 0, 0)}'
+            f'<img src="assets/stamp-wear.png" alt="" aria-hidden="true" style="position: absolute; left: -1px; top: -1px; width: 184px; height: 78px; display: block">'
             f'</div>')
 
 
@@ -191,6 +196,11 @@ note_html = ''.join(
     f'<div style="flex: 1; font-family: {MONO}; font-size: 16px; line-height: 1.27; letter-spacing: -0.045em; color: {TYPE}">{typed(n)}</div></div>'
     for i, n in enumerate(notes, 1))
 
+BANK = [("Proof", "S."), ("Entered", ""), ("Checked", "")]
+bank_html = ''.join(
+    f'<div style="flex: 1; border-left: 1px solid {GREEN_SOFT}; padding: 0 6px; display: flex; align-items: center; gap: 6px">{label(l)}'
+    f'<div style="font-family: {MONO}; font-size: 16px; line-height: 1; color: {TYPE}">{typed(v) if v else ""}</div></div>'
+    for l, v in BANK)
 back = f'''
 <div style="position: absolute; left: {L}px; top: 46px; width: {CW}px; display: flex; justify-content: space-between; align-items: flex-end">
   <div>
@@ -216,9 +226,13 @@ back = f'''
 <div style="margin-top: 16px">
   <div style="font-family: {MONO}; font-size: 15px; line-height: 1; color: {TYPE}; letter-spacing: 0.04em"><span style="border-bottom: 1.5px solid {TYPE}; padding-bottom: 2px">{typed("FOR THE DELIVERY", 15)}</span></div>
   {note_html}
-  <div style="margin-top: 10px; display: flex; justify-content: space-between; font-family: {MONO}; font-size: 16px; line-height: 1.27; letter-spacing: -0.045em; color: {TYPE}"><span>{typed("P.S. Get well, Howard.")}</span><span>{typed("S., head teller")}</span></div>
+  <div style="margin-top: 8px; display: flex; justify-content: space-between; font-family: {MONO}; font-size: 16px; line-height: 1.27; letter-spacing: -0.045em; color: {TYPE}"><span>{typed("P.S. Get well, Howard.")}</span><span>{typed("S., head teller")}</span></div>
+  <div style="margin-top: 9px; border: 1.5px solid {GREEN}; display: flex; height: 30px; box-sizing: border-box">
+    <div style="flex: none; background: {GREEN}; color: {PAPER}; font-family: {SANS}; font-weight: 600; font-size: 12px; line-height: 1.05; letter-spacing: 0.1em; padding: 0 8px; display: flex; align-items: center">BANK USE ONLY</div>
+    {bank_html}
+  </div>
 </div></div>
-<div style="position: absolute; left: {L}px; top: 748px; width: {CW}px; border-top: 1px solid {GREEN_SOFT}; padding-top: 7px; display: flex; justify-content: space-between; font-family: {SANS}; font-size: 12px; line-height: 1; color: {GREEN}; white-space: nowrap"><span>This bank acts only as the depositor&#39;s collecting agent.</span><span>Form S-822 (7/72)</span></div>
+<div style="position: absolute; left: {L}px; top: 758px; width: {CW}px; display: flex; justify-content: space-between; font-family: {SANS}; font-size: 12px; line-height: 1; color: {GREEN}; white-space: nowrap"><span>This bank acts only as the depositor&#39;s collecting agent.</span><span>Form S-822 (7/72)</span></div>
 '''
 
 TITLES = {'front': 'Savings deposit ticket, front', 'back': 'Savings deposit ticket, reverse'}

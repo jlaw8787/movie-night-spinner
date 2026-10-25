@@ -83,25 +83,26 @@ def colhead(labels):
 # A: flap (left), luncheon specials
 flap = (
     head('LUNCHEON SPECIALS', '午餐特價', 'Mon. to Sat., 11:30 A.M. to 3:00 P.M.', size=22)
-    + f'<div style="margin-top: 8px; padding: 6px 8px; border: 1.5px solid {INK}; font-size: 16px; line-height: 1.28; text-align: center">'
-      'Served with Pork Fried Rice or White Rice, and Egg Roll or Wonton Soup</div>'
-    + row('L 1.', 'Chicken Teriyaki', '5.25', top=10)
-    + row('L 2.', "General Tso's Chicken", '4.95', hot=True)
-    + row('L 3.', 'Sesame Chicken', '4.95')
-    + row('L 4.', 'Chicken with Garlic Sauce', '4.95', hot=True)
-    + row('L 5.', 'Beef with Broccoli', '4.95')
-    + row('L 6.', 'Shrimp with Lobster Sauce', '5.25')
-    + row('L 7.', 'Chicken Lo Mein', '4.50')
-    + row('L 8.', 'Mixed Chinese Vegetables', '4.25')
-    + row('L 9.', 'Beef Teriyaki', '5.75')
-    + row('L10.', 'Pork Lo Mein', '4.50')
-    + f'<div style="margin-top: 14px; border: 2px solid {RED}; display: flex">'
+    + f'<div style="margin-top: 8px; padding: 6px 8px; border: 1.5px solid {INK}; font-size: 16px; line-height: 1.28; text-align: center; text-wrap: balance">'
+      'Served with Pork Fried Rice or White Rice, plus an Egg Roll or Wonton Soup</div>'
+    + row('L 1.', 'Chicken Teriyaki', '5.25', top=12)
+    + row('L 2.', "General Tso's Chicken", '4.95', hot=True, top=9)
+    + row('L 3.', 'Sesame Chicken', '4.95', top=9)
+    + row('L 4.', 'Chicken with Garlic Sauce', '4.95', hot=True, top=9)
+    + row('L 5.', 'Beef with Broccoli', '4.95', top=9)
+    + row('L 6.', 'Shrimp with Lobster Sauce', '5.25', top=9)
+    + row('L 7.', 'Chicken Lo Mein', '4.50', top=9)
+    + row('L 8.', 'Mixed Chinese Vegetables', '4.25', top=9)
+    + row('L 9.', 'Beef Teriyaki', '5.75', top=9)
+    + row('L10.', 'Pork Lo Mein', '4.50', top=9)
+    + row('L11.', 'Sweet & Sour Chicken', '4.95', top=9)
+    + f'<div style="margin-top: 16px; border: 2px solid {RED}; display: flex">'
       f'<div style="flex: none; width: 92px; background: {RED}; color: {PAPER}; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; font-weight: 700; font-size: 18px; line-height: 1.12; padding: 6px 4px">FREE<br>WITH<br>ORDERS<br>OVER</div>'
       f'<div style="flex: 1; padding: 6px 10px; font-size: 16px; line-height: 1.5">'
       + ''.join(f'<div style="display: flex; gap: 10px"><span style="flex: none; width: 58px; font-weight: 700">${a}</span><span>{b}</span></div>'
-                for a, b in (('15.00', '2 Egg Rolls'), ('25.00', 'Qt. Wonton Soup'), ('35.00', 'Edamame and a Can Soda'), ('45.00', '2 Liter Soda and Fried Dumplings')))
+                for a, b in (('15.00', '2 Egg Rolls'), ('25.00', 'Qt. Wonton Soup'), ('35.00', 'Edamame and a Can Soda'), ('45.00', 'Fried Dumplings (8)')))
     + '</div></div>'
-    + f'<div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center">'
+    + f'<div style="position: absolute; left: 0; bottom: 4px; width: 360px; display: flex; justify-content: space-between; align-items: center">'
       f'<div style="font-size: 16px; line-height: 1.3"><span style="color: {RED}">&#9733;</span> Hot and Spicy.<br>Any dish made mild on request.</div>'
       f'<div style="flex: none; width: 74px; height: 74px; border-radius: 50%; border: 2px solid {INK}; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 700; font-size: 16px; line-height: 1.05; transform: rotate(-8deg)">TAX<br>INCL.</div></div>'
 )
@@ -112,7 +113,7 @@ back = (
     f'<div style="font-weight: 700; font-size: 30px; line-height: 1; letter-spacing: 0.04em">FAST FREE DELIVERY</div>'
     f'<div style="margin-top: 4px; font-style: italic; font-size: 16px">Minimum order $10.00. Limited area.</div></div>'
     f'<div style="display: flex; align-items: flex-start; gap: 6px; margin-top: 10px">'
-    f'<div style="flex: 1; font-size: 16px; line-height: 1.3"><b style="font-size: 19px">Catering and Party Orders</b><br>Party trays for the office, the shop or the club.<br>'
+    f'<div style="flex: 1; font-size: 16px; line-height: 1.3"><b style="font-size: 19px">Party Orders</b><br>Trays for the office, the shop or the club.<br>'
     f'<b style="color: {RED}">Private room in back.</b><br>Ask at the counter.</div>'
     f'<img src="assets/art-bowl.png" alt="Rice bowl with chopsticks" style="flex: none; width: 170px; height: 129px; display: block; margin-top: 4px"></div>'
     f'<div style="position: relative; margin-top: 14px; border: 2px dashed {INK}; padding: 10px 12px 9px; text-align: center">'
@@ -126,29 +127,29 @@ back = (
     + f'<div style="display: flex; gap: 14px"><div style="flex: 1; display: flex; align-items: flex-end; gap: 6px; margin-top: 9px; font-size: 16px"><span style="font-weight: 700">TIME</span><span style="flex: 1; border-bottom: 1px solid {INK}; height: 16px"></span></div>'
       f'<div style="flex: 1; display: flex; align-items: flex-end; gap: 6px; margin-top: 9px; font-size: 16px"><span style="font-weight: 700">TOTAL $</span><span style="flex: 1; border-bottom: 1px solid {INK}; height: 16px"></span></div></div>'
     + f'<div style="margin-top: 16px; display: flex; gap: 10px; font-size: 16px; line-height: 1.28"><div style="flex: 1"><b>Delivery</b><br>5:00 P.M. to closing.<br>Allow 30 to 45 minutes.</div><div style="flex: 1"><b>Sorry,</b><br>no checks. Exact<br>change appreciated.</div></div>'
-    + f'<div style="position: absolute; left: 0; bottom: 0; width: 360px; text-align: center; font-size: 12px; line-height: 1.3">Prices subject to change without notice. Not responsible for typographical errors.<br>Printed by Lucky Print Shop, Jersey City</div>'
+    + f'<div style="position: absolute; left: 0; bottom: 0; width: 360px; text-align: center; font-size: 12px; line-height: 1.3">Prices subject to change without notice.<br>Printed by Lucky Print Shop, Jersey City</div>'
 )
 # ballpoint in the margin of the back cover, next to the private room line, and a fortune slip
-pen = (f'<div style="position: absolute; left: 610px; top: 212px; transform: rotate(-7deg); font-family: {PEN}; font-size: 27px; line-height: 1; white-space: nowrap; color: {BALL}">rent due!!</div>'
-       f'<div style="position: absolute; left: 488px; top: 213px; width: 118px; height: 27px; border: 2px solid {BALL}; border-radius: 50%; transform: rotate(-3deg); opacity: 0.85"></div>')
-fortune = (f'<div style="position: absolute; left: 516px; top: 676px; width: 300px; padding: 6px 10px 5px; box-sizing: border-box; background: #f7f5ee; transform: rotate(-3.5deg); box-shadow: 1px 2px 3px rgba(40,50,40,0.28); text-align: center; color: {RED}">'
+pen = (f'<div style="position: absolute; left: 624px; top: 247px; transform: rotate(-7deg); font-family: {PEN}; font-size: 27px; line-height: 1; white-space: nowrap; color: {BALL}">rent due!!</div>'
+       f'<div style="position: absolute; left: 485px; top: 206px; width: 160px; height: 28px; border: 2px solid {BALL}; border-radius: 50%; transform: rotate(-3deg); opacity: 0.85"></div>')
+fortune = (f'<div style="position: absolute; left: 520px; top: 652px; width: 300px; padding: 6px 10px 5px; box-sizing: border-box; background: #f7f5ee; transform: rotate(-3.5deg); box-shadow: 1px 2px 3px rgba(40,50,40,0.28); text-align: center; color: {RED}">'
            f'<div style="font-size: 15px; line-height: 1.2">A good retainer serves one master.</div>'
            f'<div style="margin-top: 2px; font-size: 12px; letter-spacing: 0.06em">LUCKY NUMBERS 8 12 23 31 38 44</div></div>')
 
 # C: front cover
 cover = (
     f'<div style="text-align: center; font-family: {BRUSH}; font-size: 25px; line-height: 1.1; color: {RED}">Chinese &amp; Japanese Restaurant</div>'
-    f'<div style="margin-top: 4px; text-align: center; font-weight: 700; font-size: 62px; line-height: 0.92; letter-spacing: 0.03em; color: {RED}">AUTUMN<br>MOON</div>'
-    f'<div style="display: flex; justify-content: center; align-items: center; gap: 14px; margin-top: 10px">'
+    f'<div style="margin-top: 4px; text-align: center; font-weight: 700; font-size: 68px; line-height: 0.92; letter-spacing: 0.03em; color: {RED}">AUTUMN<br>MOON</div>'
+    f'<div style="display: flex; justify-content: center; align-items: center; gap: 14px; margin-top: 16px">'
     f'<img src="assets/art-moon.png" alt="The moon with three pigeons flying across it" style="flex: none; width: 252px; height: 252px; display: block">'
     f'<div style="font-family: {ZH}; font-weight: 900; font-size: 58px; line-height: 1.12; text-align: center">秋<br>月<br>樓</div></div>'
-    f'<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">'
+    f'<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px">'
     f'<div style="font-weight: 700; font-size: 23px; line-height: 1.1">Eat In or<br>Take Out</div>'
     f'<div style="border: 2.5px solid {INK}; padding: 5px 10px 4px; font-weight: 700; font-size: 22px; letter-spacing: 0.04em">No M.S.G.</div>'
     f'<div style="font-weight: 700; font-size: 20px; line-height: 1.1; text-align: right; color: {RED}">FREE<br>DELIVERY</div></div>'
-    f'<div style="margin-top: 10px; border-top: 1px solid {RED}; border-bottom: 1px solid {RED}; padding: 6px 0 5px; text-align: center; font-size: 16px; line-height: 1.3">'
+    f'<div style="margin-top: 14px; border-top: 1px solid {RED}; border-bottom: 1px solid {RED}; padding: 6px 0 5px; text-align: center; font-size: 16px; line-height: 1.3">'
     f'<b>Open 7 Days a Week</b><br>Mon. to Thurs. 11:30 A.M. to 10:30 P.M.<br>Fri. and Sat. 11:30 A.M. to 11:30 P.M.<br>Sun. 12 Noon to 10:00 P.M.</div>'
-    f'<div style="margin-top: 8px; text-align: center; font-weight: 700; font-size: 30px; line-height: 1.05">Tel.: (201) 555-0188</div>'
+    f'<div style="margin-top: 12px; text-align: center; font-weight: 700; font-size: 30px; line-height: 1.05">Tel.: (201) 555-0188</div>'
     f'<div style="text-align: center; font-weight: 700; font-size: 22px; line-height: 1.15">555-0189</div>'
     f'<div style="margin-top: 10px; display: flex; justify-content: space-between; font-size: 16px"><span>Jersey City, N.J. 07302</span><span style="font-style: italic; color: {RED}">Est. 1991</span></div>'
 )
@@ -189,7 +190,7 @@ p2 = (
     + row('15B.', 'Mixed Chinese Vegetables', '6.95', 'Bok choy, snow peas, broccoli, light white sauce.', top=7)
 )
 p3 = (
-    head('FRIED RICE & LO MEIN', '炒飯撈麵', size=22)
+    head('FRIED RICE & LO MEIN', '炒飯撈麵', size=20)
     + colhead(('Pt.', 'Qt.'))
     + row('16.', 'Pork Fried Rice', None, prices=('2.95', '4.75'), top=2)
     + row('17.', 'Shrimp Fried Rice', None, prices=('3.50', '5.50'))
@@ -197,17 +198,19 @@ p3 = (
     + row('19.', 'Vegetable Lo Mein', None, prices=('3.25', '5.25'))
     + head('DESSERT', '甜品', top=15)
     + row('20.', 'Toasted Coconut Ice Cream', '1.95', 'Churned in our kitchen, rich and smooth, with golden flakes stirred through and more on top.', 'Made here. One flavor only.', top=9)
-    + row('21.', 'Fortune Cookies', 'free', 'In every bag.', top=7)
+    + row('21.', 'Almond Cookies (3)', '.75', top=7)
+    + row('22.', 'Fortune Cookies', 'free', 'In every bag.', top=6)
     + head('BEVERAGES', '飲品', top=15)
-    + row('22.', 'Iced Matcha Lemonade', '1.75', 'Fresh squeezed, sweetened with honey, poured over ice with frothy whisked green tea floated on top. Sprig of mint.', 'Made to order. Stir before drinking.', top=9)
-    + row('23.', 'Hot Jasmine Tea (pot)', '.75', top=7)
-    + row('24.', 'Can Soda', '.85', top=6)
+    + row('23.', 'Iced Matcha Lemonade', '1.75', 'Fresh squeezed, sweetened with honey, poured over ice with frothy whisked green tea floated on top. Sprig of mint.', 'Made to order. Stir before drinking.', top=9)
+    + row('24.', 'Hot Jasmine Tea (pot)', '.75', top=7)
+    + row('25.', 'Can Soda', '.85', top=6)
+    + row('26.', '2 Liter Soda', '2.25', top=6)
     + f'<div style="position: absolute; left: 0; bottom: 0; width: 360px; border-top: 1px solid {RED}; padding-top: 6px; text-align: center; font-size: 16px; line-height: 1.28">'
       f'<b>Please order by number.</b> Brown rice add .50.<br>We cook with 100% vegetable oil.</div>'
 )
 # ballpoint: someone circled No. 10 and wrote x2
-pen_in = (f'<div style="position: absolute; left: 487px; top: 146px; width: 46px; height: 34px; border: 2px solid {BALL}; border-radius: 50%; transform: rotate(-6deg); opacity: 0.85"></div>'
-          f'<div style="position: absolute; left: 840px; top: 122px; transform: rotate(-8deg); font-family: {PEN}; font-size: 28px; line-height: 1; color: {BALL}">x2</div>')
+pen_in = (f'<div style="position: absolute; left: 486px; top: 137px; width: 44px; height: 34px; border: 2px solid {BALL}; border-radius: 50%; transform: rotate(-6deg); opacity: 0.85"></div>'
+          f'<div style="position: absolute; left: 702px; top: 243px; transform: rotate(-8deg); font-family: {PEN}; font-size: 28px; line-height: 1; color: {BALL}">x2</div>')
 
 inside = panel(0, p1) + panel(1, p2) + panel(2, p3) + pen_in
 

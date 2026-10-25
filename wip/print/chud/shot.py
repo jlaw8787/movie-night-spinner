@@ -5,7 +5,7 @@ async def main():
   async with async_playwright() as p:
     b = await p.chromium.launch(proxy={'server': os.environ['HTTPS_PROXY'], 'bypass': 'localhost,127.0.0.1'})
     pg = await (await b.new_context(viewport={'width': 816, 'height': 1056}, device_scale_factor=2)).new_page()
-    await pg.goto('file://' + D + '/notice.html'); await pg.wait_for_timeout(2000)
+    await pg.goto('file://' + D + '/notice.html'); await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(2500)
     await pg.screenshot(path=D + '/notice.png')
     # text inside 40px of the trim, text boxes overlapping each other, smallest font
     rep = await pg.evaluate("""()=>{const out=[],boxes=[];let minf=99;

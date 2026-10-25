@@ -80,16 +80,19 @@ def wear(seed, thumb):
 
 
 def stamp_wear():
-    # paper showing through a rubber stamp: soft blotches, not pixel noise
-    w, h = 480, 220
-    n = soft_noise(w, h, 14, 822)
-    m = np.clip((n - 0.62) * 3.0, 0, 1)
-    edge = soft_noise(w, h, 60, 823)
-    m = np.clip(m + np.clip(edge - 0.7, 0, 1) * 1.5, 0, 0.85)
+    """Paper showing through a rubber date stamp: inked harder on the left where the hand
+    pressed, starved toward the top right, with soft uneven patches. Same 180 x 74 box as the stamp."""
+    w, h = 360, 148
+    y, x = np.mgrid[0:h, 0:w].astype(float)
+    press = np.clip((x / w) * 0.55 + (1 - y / h) * 0.35 - 0.25, 0, 1)   # 0 where pressed hard
+    n1 = soft_noise(w, h, 10, 822)
+    n2 = soft_noise(w, h, 34, 823)
+    m = press * 0.75 + np.clip((n1 - 0.58) * 2.4, 0, 1) * 0.55 + np.clip((n2 - 0.66) * 2.5, 0, 1) * 0.5
+    m = np.clip(m, 0, 0.82)
     out = np.zeros((h, w, 4), np.uint8)
     out[..., :3] = BASE.astype(np.uint8)
     out[..., 3] = (m * 255).astype(np.uint8)
-    return Image.fromarray(out, 'RGBA').filter(ImageFilter.GaussianBlur(1.0))
+    return Image.fromarray(out, 'RGBA').filter(ImageFilter.GaussianBlur(0.8))
 
 
 safety(11).save(os.path.join(A, 'paper-safety-front.png'), optimize=True)
@@ -196,8 +199,35 @@ def vignette(wc, hc):
         L.line(u(cx - inset, yy0 + 4, cx + inset, yy0 + 4), fill=255, width=max(1, S // 2))
     # pavement
     T.rectangle(u(0, 102, wc, hc), fill=0.3)
-    tone_a = np.asarray(tone, float)
-    ink = engrave(tone_a, np.asarray(ori, float) / 255.0, pitch=2.6 * S / 2, outline=np.asarray(ol, float) / 255.0)
+    tone_a = np.asarray(tone, float).copy()
+    col_mask = np.asarray(ori, float) > 127
+    yy, xx = np.mgrid[0:h, 0:w].astype(float)
+    X, Y = xx / S, yy / S   # css units
+    # light from the upper left: shade every mass toward its right side
+    block = (X > cx - 62) & (X < cx + 62) & (Y > 34) & (Y < 90) & ~col_mask & (tone_a < 0.5)
+    tone_a[block] += 0.16 * np.clip((X[block] - (cx - 62)) / 124, 0, 1)
+    dome_c = (cx, 21.0)
+    rd = np.hypot(X - dome_c[0], (Y - dome_c[1]) * 1.0)
+    dome = (rd < 22) & (Y < 21)
+    tone_a[dome] = 0.06 + 0.5 * np.clip((X[dome] - cx + 6) / 26, 0, 1) ** 1.3 + 0.12 * (rd[dome] / 22) ** 3
+    steps = (Y > 90) & (Y < 102) & (np.abs(X - cx) < 58)
+    tone_a[steps] += 0.1 * np.clip((X[steps] - cx + 58) / 116, 0, 1)
+    trees = ((np.hypot((X - 16) / 24, (Y - 70) / 30) < 1.05) | (np.hypot((X - wc + 16) / 24, (Y - 72) / 30) < 1.05)) & ~((X > cx - 63) & (X < cx + 63) & (Y > 33)) & (Y < 102)
+    fol = soft_noise(w, h, 5 * S, 91)
+    sky = (Y < 60) & ~block & ~dome & ~trees & (tone_a < 0.4) & ~((X > cx - 44) & (X < cx + 44) & (Y > 27))
+    pitch = 2.6 * S / 2
+    def lines(phi, t, pt=pitch):
+        d = np.abs((phi % pt) - pt / 2)
+        return np.clip((t * pt * 0.55 - d) * 1.6 + 0.5, 0, 1) * (t > 0.04)
+    phi = yy + 0.6 * np.sin(xx / 23.0)                      # default: level courses
+    phi = np.where(col_mask, xx, phi)                        # columns: flutes
+    phi = np.where(dome, (Y - 0.02 * (X - cx) ** 2) * S, phi)   # dome: latitude lines, bowed as seen from the street
+    phi = np.where(trees, (xx - yy) * 0.7071 + 2.2 * S * fol, phi)   # foliage: short broken diagonals
+    ink = lines(phi, tone_a)
+    # sky gets a second, finer cut on the diagonal where it darkens toward the top
+    sky_t = np.where(sky, np.clip(tone_a - 0.12, 0, 1) * 1.4, 0)
+    ink = np.maximum(ink, lines((xx * 0.5 + yy) / 1.118, sky_t, pitch * 1.15))
+    ink = np.maximum(ink, np.asarray(ol, float) / 255.0)
     # oval vignette: lines thin out toward the oval edge
     yy, xx = np.mgrid[0:h, 0:w]
     dd = np.hypot((xx - w / 2) / (w / 2), (yy - h / 2) / (h / 2))

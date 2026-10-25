@@ -281,6 +281,76 @@ def roll(w=150, h=96):
     p.save('roll.png', 23)
 
 
+def lunchline(w=232, h=150):
+    """three kids with trays shuffling toward the counter, a lunch lady in a hairnet serving"""
+    p = Pen(w, h, 29)
+    floor = 142
+    p.line([(4, floor), (228, floor)], 1.4, 0.5)
+    # counter with sneeze guard on the right
+    p.line([(160, 92), (228, 92)], 2.6, 0.4)
+    p.line([(160, 92), (160, floor)], 2.4, 0.4)
+    p.hatch(poly([(162, 96), (228, 96), (228, floor - 2), (162, floor - 2)]), 75, 4.0, 0.9)
+    p.line([(166, 60), (228, 56)], 1.6, 0.3); p.line([(168, 60), (168, 90)], 1.4, 0.2)
+    p.erase(poly([(176, 98), (222, 98), (222, 118), (176, 118)]))
+    p.line([(176, 98), (222, 98), (222, 118), (176, 118), (176, 98)], 1.4, 0.3, taper=False)
+    # lunch lady behind the counter
+    p.ellipse(198, 40, 13, 14, 2.2)
+    p.ellipse(198, 30, 14, 7, 1.4, 180, 360)                         # hairnet
+    for x in range(186, 212, 4):
+        p.line([(x, 25), (x + 2, 31)], 0.8, 0.1, taper=False)
+    p.blot(ell(193, 39, 1.3, 1.5)); p.blot(ell(203, 39, 1.3, 1.5))
+    p.ellipse(198, 45, 5, 3, 1.3, 20, 160)
+    smock = [(186, 55), (210, 55), (218, 92), (178, 92)]
+    p.line([(178, 92), (182, 64), (186, 55), (198, 58), (210, 55), (214, 64), (218, 92)], 2.2, 0.3)
+    p.line([(192, 58), (198, 70), (204, 58)], 1.4, 0.2)                # collar
+    p.hatch(poly([(186, 72), (210, 72), (216, 92), (180, 92)]), 30, 3.4, 0.8)
+    p.blot(ell(198, 76, 1.4, 1.4)); p.blot(ell(198, 84, 1.4, 1.4))
+    p.line([(184, 62), (174, 76), (164, 78)], 2.2)                    # arm with serving spoon
+    p.line([(164, 78), (150, 82)], 1.8)
+    p.ellipse(146, 83, 5, 3, 1.6, 0, 200)
+    def kid(x, top, hair, seed):
+        r = np.random.default_rng(seed)
+        hy = top + 12
+        p.ellipse(x, hy, 11, 12, 2.2)
+        if hair == 'curly':
+            for a in range(190, 350, 22):
+                t = math.radians(a)
+                p.ellipse(x + 11 * math.cos(t), hy + 12 * math.sin(t), 4, 4, 1.6, wob=0.2)
+        elif hair == 'pony':
+            p.ellipse(x, hy - 2, 12, 11, 2.0, 180, 360)
+            p.hatch(lambda d, s, f=255: d.chord(((x - 12) * s, (hy - 13) * s, (x + 12) * s, (hy + 9) * s), 180, 360, fill=f), -40, 2.6, 0.8)
+            p.line([(x - 11, hy - 2), (x - 18, hy + 8), (x - 15, hy + 14)], 2.4)
+        else:  # ball cap
+            p.blot(lambda d, s, f=255: d.chord(((x - 12) * s, (hy - 14) * s, (x + 12) * s, (hy + 6) * s), 180, 360, fill=f))
+            p.line([(x + 4, hy - 4), (x + 18, hy - 3)], 3.0)
+        p.blot(ell(x + 3, hy + 1, 1.2, 1.4)); p.blot(ell(x + 8, hy + 1, 1.2, 1.4))
+        p.ellipse(x + 5, hy + 5, 3.5, 2.2, 1.2, 20, 160)
+        by = hy + 12
+        # shirt, hatched, with stripes on one kid
+        body = [(x - 10, by), (x + 10, by), (x + 12, by + 30), (x - 12, by + 30)]
+        p.line(body + [body[0]], 2.2, 0.3, taper=False)
+        if seed % 2:
+            for k in range(6, 30, 7):
+                p.line([(x - 11, by + k), (x + 11, by + k)], 1.4, 0.2, taper=False)
+        else:
+            p.hatch(poly(body), 60, 3.2, 0.8)
+        # legs and sneakers
+        p.line([(x - 6, by + 40), (x - 7, floor - 4)], 2.4); p.line([(x + 6, by + 40), (x + 7, floor - 4)], 2.4)
+        p.blot(ell(x - 5, floor - 3, 6, 3)); p.blot(ell(x + 10, floor - 3, 6, 3))
+        # arms out holding a tray with a milk and a plate
+        ty = by + 12
+        p.line([(x + 9, by + 4), (x + 18, ty + 2)], 2.0); p.line([(x - 8, by + 6), (x + 6, ty + 4)], 2.0)
+        p.line([(x + 4, ty), (x + 28, ty - 2), (x + 31, ty + 2), (x + 7, ty + 5), (x + 4, ty)], 1.8, 0.2, taper=False)
+        p.ellipse(x + 13, ty - 1, 6, 2.2, 1.2)
+        p.line([(x + 21, ty - 1), (x + 21, ty - 9), (x + 24, ty - 13), (x + 27, ty - 9), (x + 27, ty - 2)], 1.3, 0.1, taper=False)
+        # shorts
+        p.line([(x - 12, by + 30), (x - 11, by + 40), (x - 1, by + 40), (x, by + 34), (x + 1, by + 40), (x + 11, by + 40), (x + 12, by + 30)], 1.8, 0.2, taper=False)
+    kid(20, 58, 'pony', 2)
+    kid(70, 48, 'cap', 3)
+    kid(120, 62, 'curly', 4)
+    p.save('lunchline.png', 29)
+
+
 def sun(w=120, h=120):
     p = Pen(w, h, 17)
     p.ellipse(60, 60, 26, 26, 2.8)
@@ -310,6 +380,39 @@ def soft_noise(w, h, scale, seed):
     small = r.random((max(2, h // scale), max(2, w // scale)))
     im = Image.fromarray((small * 255).astype(np.uint8)).resize((w, h), Image.BICUBIC)
     return np.asarray(im.filter(ImageFilter.GaussianBlur(scale / 2)), dtype=float) / 255.0
+
+
+def punches(w, h, edge):
+    """three-hole punch down the binding edge (4.25 in centers) and a pulled staple in the top corner,
+    seen as the dark desk through the holes. 2x pixel space."""
+    lay = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    hx = 56 if edge == 'left' else w - 56
+    for cy in (h // 2 - 816, h // 2, h // 2 + 816):
+        sh = Image.new('L', (w, h), 0)
+        ImageDraw.Draw(sh).ellipse((hx - 27, cy - 25, hx + 29, cy + 31), fill=90)       # soft shadow of the rim
+        sh = sh.filter(ImageFilter.GaussianBlur(4))
+        t = Image.new('RGBA', (w, h), (30, 36, 28, 0)); t.putalpha(sh)
+        lay = Image.alpha_composite(lay, t)
+        hole = Image.new('L', (w, h), 0)
+        ImageDraw.Draw(hole).ellipse((hx - 24, cy - 24, hx + 24, cy + 24), fill=255)
+        hole = hole.filter(ImageFilter.GaussianBlur(0.8))
+        t = Image.new('RGBA', (w, h), (74, 64, 52, 0)); t.putalpha(hole)               # wood desk showing through
+        lay = Image.alpha_composite(lay, t)
+    # staple: two punctures with a pressed dent between, top corner
+    sx = 50 if edge == 'left' else w - 50
+    d = 1 if edge == 'left' else -1
+    a, b = (sx, 36), (sx + d * 38, 62)
+    dent = Image.new('L', (w, h), 0)
+    ImageDraw.Draw(dent).line((a, b), fill=70, width=5)
+    dent = dent.filter(ImageFilter.GaussianBlur(2))
+    t = Image.new('RGBA', (w, h), (40, 46, 36, 0)); t.putalpha(dent)
+    lay = Image.alpha_composite(lay, t)
+    pk = Image.new('L', (w, h), 0)
+    pd = ImageDraw.Draw(pk)
+    for x, y in (a, b):
+        pd.ellipse((x - 4, y - 4, x + 4, y + 4), fill=235)
+    t = Image.new('RGBA', (w, h), (50, 44, 36, 0)); t.putalpha(pk.filter(ImageFilter.GaussianBlur(0.7)))
+    return Image.alpha_composite(lay, t)
 
 
 def wear(face, seed, edge):
@@ -346,11 +449,12 @@ def wear(face, seed, edge):
         tint = (60, 66, 52)
     lay = Image.new('RGBA', (w, h), tint + (0,)); lay.putalpha(st)
     img = Image.alpha_composite(img, lay)
+    img = Image.alpha_composite(img, punches(w, h, edge))
     img.save(os.path.join(A, f'wear-{face}.png'))
 
 
 if __name__ == '__main__':
-    carton(); roll(); elephant(); jug(); chickwaffle(); crumb(); sun(); scissors()
+    carton(); roll(); lunchline(); elephant(); jug(); chickwaffle(); crumb(); sun(); scissors()
     wear('front', 7, 'left')
     wear('back', 11, 'right')
     print('painted')

@@ -65,9 +65,9 @@ while x < AW - 4:
 # bay: mid tone with white line-cut streaks
 t.rectangle(P(0, HZ + 2, AW, SHORE + 2), fill=125)
 o.rectangle(P(0, HZ + 2, AW, SHORE + 2), fill=40)
-for i, y in enumerate(range(HZ + 6, SHORE, 5)):
-    for x0 in range(-20 + (i % 2) * 17, AW, 34):
-        t.line(P(x0, y, x0 + 18 - (i % 3) * 3, y), fill=0, width=int(2.2 * S))
+for i, y in enumerate(range(HZ + 7, SHORE, 8)):
+    for x0 in range(-30 + (i % 2) * 29, AW, 58):
+        t.line(P(x0, y, x0 + 30 - (i % 3) * 5, y), fill=0, width=int(1.8 * S))
 # causeway shoulder and sand
 t.rectangle(P(0, SHORE + 2, AW, ROAD), fill=0)
 o.rectangle(P(0, SHORE + 2, AW, ROAD), fill=95)
@@ -197,14 +197,14 @@ rng = np.random.default_rng(4)
 gain = np.asarray(Image.fromarray((rng.random((H // 64 + 1, W // 64 + 1)) * 255).astype(np.uint8)).resize((W, H), Image.BICUBIC), dtype=np.float32) / 255.0
 def spread(cov, rad, base):
     b = np.asarray(Image.fromarray((cov * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(rad)), dtype=np.float32) / 255.0
-    thr = base - 0.14 * gain
+    thr = base - 0.08 * gain
     out = np.clip((b - thr) / 0.10 + 0.5, 0, 1)
-    return np.asarray(Image.fromarray((out * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.0)), dtype=np.float32) / 255.0
-blk = spread(blk, 2.2, 0.42)
+    return np.asarray(Image.fromarray((out * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.7)), dtype=np.float32) / 255.0
+blk = spread(blk, 1.3, 0.47)
 ob = screen(org, 3 * S, 75, W, H)
 ob = np.maximum(ob, (np.asarray(org, dtype=np.float32) > 250).astype(np.float32))
 # misregister the orange plate by 3 css px right, 2 up (scaled at 4x)
-ob = spread(ob, 2.0, 0.45)
+ob = spread(ob, 1.4, 0.47)
 ob = np.roll(np.roll(ob, 3 * S // 2, axis=1), -S, axis=0)
 
 paper = np.array(PAPER, dtype=np.float32) / 255

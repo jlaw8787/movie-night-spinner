@@ -109,7 +109,7 @@ STOPS = [('New York', 'N.Y.', 0, 'big'), ('Newark', 'N.J.', 10, 'small'), ('Phil
          ('Richmond', 'Va.', 335, 'meal'), ('Rocky Mount', 'N.C.', 455, 'small'), ('Florence', 'S.C.', 605, 'meal'),
          ('Savannah', 'Ga.', 765, 'big'), ('Jacksonville', 'Fla.', 905, 'fmeal'), ('Daytona Beach', 'Fla.', 995, 'fla'),
          ('W. Palm Beach', 'Fla.', 1180, 'fmeal'), ('Ft. Lauderdale', 'Fla.', 1225, 'fla'), ('Miami', 'Fla.', 1250, 'end')]
-MX, MY0, STEP = 404, 214, 32.5
+MX, MY0, STEP = 404, 222, 32.5
 OWR, RTR = 610, 664          # right edges of the fare columns
 route = ''
 jy = MY0 + 10 * STEP
@@ -127,24 +127,24 @@ for i, (n, st, mi, kind) in enumerate(STOPS):
     wt = 700 if kind in ('big', 'end') else 400
     ow, rt = ('', '') if mi == 0 else fare(mi)
     if mi == 0:
-        ow, rt = 'Lv', ''
+        ow, rt = '', ''
     route += dot
     route += (f'<div style="{at(MX + 18, y - 11, 150, "white-space: nowrap")}">'
               f'<span style="font-weight: {wt}; font-size: 16px; line-height: 1.3">{n}, {st}</span></div>')
     pc = ORG if mi == 0 else INK
-    route += (f'<div style="{at(OWR - 52, y - 11, 52, f"text-align: right; font-family: {NARROW}; font-weight: 600; font-size: 16px; line-height: 1.3; color: {pc}")}">{ow}</div>'
-              f'<div style="{at(RTR - 54, y - 11, 54, f"text-align: right; font-family: {NARROW}; font-weight: 700; font-size: 16px; line-height: 1.3")}">{rt}</div>')
+    route += (f'<div style="{at(OWR - 52, y - 8, 52, f"text-align: right; font-family: {NARROW}; font-weight: 600; font-size: 16px; line-height: 1.3; color: {pc}")}">{ow}</div>'
+              f'<div style="{at(RTR - 54, y - 8, 54, f"text-align: right; font-family: {NARROW}; font-weight: 700; font-size: 16px; line-height: 1.3")}">{rt}</div>')
 
 back = f"""
 <div style="{at(392, 40, 272)}">
   {kicker('THE COASTAL ROUTE')}
-  <div style="margin-top: 5px">{head('Fares from New York', 44)}</div>
+  <div style="margin-top: 5px">{head('Fares from New York', 40)}</div>
   <div style="margin-top: 5px; font-size: 15px; line-height: 1.3">By the Atlantic shore to Miami, 1,250 miles. Children 5 to 11 ride half fare.</div>
   {double_rule(8)}
   <div style="margin-top: 5px; display: flex; justify-content: space-between; align-items: baseline; font-family: {NARROW}; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; color: {SOFT}">
-    <span>STOP</span><span style="margin-left: auto; width: 64px; text-align: right">ONE WAY</span><span style="width: 66px; text-align: right">ROUND TRIP</span></div>
+    <span>STOP</span><span style="margin-left: auto; text-align: right; white-space: nowrap">ONE WAY</span><span style="margin-left: 14px; text-align: right; white-space: nowrap">ROUND TRIP</span></div>
 </div>
-<div style="{at(MX + 18, MY0 - 31, 200, f'font-family: {NARROW}; font-style: italic; font-weight: 600; font-size: 14px; line-height: 1.2; color: {ORG}')}">Connections from Texas and the West</div>
+<div style="{at(MX + 18, MY0 - 30, 240, f'font-family: {NARROW}; font-style: italic; font-weight: 600; font-size: 14px; line-height: 1.2; color: {ORG}')}">Connections from Texas and the West</div>
 <div style="{at(MX - 1, MY0 - 28, 2, f'height: 20px; background: {INK}')}"></div>
 <div style="{at(MX - 6, MY0 - 32, 12, f'height: 12px; border-left: 2px solid {INK}; border-top: 2px solid {INK}; transform: rotate(45deg); box-sizing: border-box')}"></div>
 {route}
@@ -203,7 +203,7 @@ ROWS = [
     ('Miami, Fla.', ('4:30', False, False), ('2:00', True, False), ('8:00', True, False)),
 ]
 TX0, TY0, RH = 40, 214, 28
-C1, C2, C3 = 222, 268, 312      # right edges of the three time columns
+C1, C2, C3 = 210, 258, 312      # right edges of the three time columns
 def tcell(t, pm, meal, right, w=48):
     if pm == 'mid':
         return (f'<div style="{at(right - 64, 3, 64, "text-align: right; white-space: nowrap")}"><span style="font-family: {NARROW}; font-weight: 400; font-size: 16px">{t}</span>'
@@ -218,36 +218,40 @@ for i, (stop, a, b, c) in enumerate(ROWS):
     end = i in (0, len(ROWS) - 1)
     rows += (f'<div style="{at(TX0 - 6, y, 284, f"height: {RH}px; {shade}")}">'
              f'<div style="{at(6, 3, 120, "white-space: nowrap")}"><span style="font-family: {NARROW}; font-weight: {700 if end else 600}; font-size: 15.5px; color: {INK}">{stop}</span></div>'
-             f'{tcell(*a, C1 - TX0 + 6)}{tcell(*b, C2 - TX0 + 6)}{tcell(*c, C3 - TX0 + 6, 46)}</div>')
+             f'{tcell(*a, C1 - TX0 + 6)}{tcell(*b, C2 - TX0 + 6)}{tcell(*c, C3 - TX0 + 6, 50)}</div>')
 # the northbound column gets a thin rule to its left, like a real "read up" column
-rows += f'<div style="{at(C2 + 4, TY0, 1.5, f"height: {15 * RH}px; background: {INK}")}"></div>'
+rows += f'<div style="{at(C2 + 5, TY0, 1.5, f"height: {15 * RH}px; background: {INK}")}"></div>'
 
-def colhead(right, w, trip, sub, arrow):
+def tri(up, col=ORG):
+    side = 'border-bottom' if up else 'border-top'
+    return (f'<span style="display: inline-block; width: 0; height: 0; border-left: 6px solid transparent; '
+            f'border-right: 6px solid transparent; {side}: 8px solid {col}; vertical-align: 1px; margin-right: 3px"></span>')
+
+def colhead(right, w, trip, sub, up):
     return (f'<div style="{at(right - w, 0, w, "text-align: right")}">'
-            f'<div style="font-family: {GOTH}; font-size: 22px; line-height: 1; letter-spacing: 0.03em">{trip}</div>'
-            f'<div style="font-family: {NARROW}; font-weight: 600; font-size: 12px; line-height: 1.2; color: {SOFT}">{sub}</div>'
-            f'<div style="font-family: {NARROW}; font-weight: 700; font-size: 12px; line-height: 1.2; color: {ORG}">{arrow}</div></div>')
+            f'<div style="font-family: {GOTH}; font-size: 24px; line-height: 1; letter-spacing: 0.03em">{trip}</div>'
+            f'<div style="margin-top: 3px; font-family: {NARROW}; font-weight: 600; font-size: 13px; line-height: 1.2; color: {SOFT}; white-space: nowrap">{tri(up)}{sub}</div></div>')
 
 sched = f"""
 <div style="{at(0, 0, 336, f'height: 128px; background: {INK}')}"></div>
 <div style="{at(2, 130, 336, f'height: 6px; background: {ORG}')}"></div>
 <div style="{at(40, 40, 272, f'color: {CREAMINK}')}">
   <div style="font-family: {NARROW}; font-weight: 700; font-size: 14px; letter-spacing: 0.32em; color: {ORG}">TABLE 1</div>
-  <div style="margin-top: 2px; font-family: {GOTH}; font-size: 50px; line-height: 0.92; letter-spacing: 0.03em">NEW YORK and MIAMI</div>
-  <div style="margin-top: 4px; font-family: {NARROW}; font-weight: 600; font-size: 15px">Southbound read down. Northbound read up.</div>
+  <div style="margin-top: 2px; font-family: {GOTH}; font-size: 46px; line-height: 0.92; letter-spacing: 0.03em">SCHEDULES</div>
+  <div style="margin-top: 5px; font-family: {NARROW}; font-weight: 600; font-size: 15px">South read down. North read up.</div>
 </div>
-<div style="{at(TX0, 150, 272, f'height: 58px; border-bottom: 2px solid {INK}')}">
-  <div style="{at(0, 38, 110, f'font-family: {NARROW}; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; color: {SOFT}')}">STOP</div>
-  {colhead(C1 - TX0, 52, 'Trip 1', 'Daily', 'READ DOWN')}
-  {colhead(C2 - TX0, 44, 'Trip 3', 'Daily', 'DOWN')}
-  {colhead(C3 - TX0, 40, 'Trip 2', 'Daily', 'READ UP')}
+<div style="{at(TX0, 156, 272, f'height: 50px; border-bottom: 2px solid {INK}')}">
+  <div style="{at(0, 28, 110, f'font-family: {NARROW}; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; color: {SOFT}')}">STOP</div>
+  {colhead(C1 - TX0, 56, 'Trip 1', 'Daily', False)}
+  {colhead(C2 - TX0, 46, 'Trip 3', 'Daily', False)}
+  {colhead(C3 - TX0, 48, 'Trip 2', 'Daily', True)}
 </div>
 {rows}
 <img src="assets/pencil-ring.png" alt="" aria-hidden="true" style="{at(C1 - 82, TY0 - 8, 96, 'height: 42px; display: block; pointer-events: none')}">
 <div style="{at(TX0, TY0 + 15 * RH + 6, 272, f'border-top: 2px solid {INK}; padding-top: 6px; font-size: 14px; line-height: 1.36')}">
   <div style="display: flex; justify-content: space-between"><span>Light face type <span style="font-family: {NARROW}">A.M.</span></span><span>Dark face type <b style="font-family: {NARROW}; font-weight: 700">P.M.</b></span></div>
   <div style="display: flex; gap: 6px; align-items: baseline"><span style="display: inline-block; width: 8px; height: 8px; background: {INK}; flex: none"></span><span>Meal stop, 30 minutes.</span></div>
-  <div><b>Through coaches.</b> Running time 28 hours 30 minutes.</div>
+  <div><b>Through coaches.</b> About 28 hours end to end.</div>
 </div>
 """
 
@@ -277,7 +281,7 @@ def panel_head(x, kick, title, sub):
 <div style="{at(x - 26, 130, 320, f'height: 6px; background: {INK}')}"></div>
 <div style="{at(x, 40, 272, f'color: {CREAMINK}')}">
   <div style="font-family: {NARROW}; font-weight: 700; font-size: 14px; letter-spacing: 0.32em; color: {INK}">{kick}</div>
-  <div style="margin-top: 2px; font-family: {GOTH}; font-size: 50px; line-height: 0.92; letter-spacing: 0.03em; text-shadow: -2px -1.5px 0 rgba(35,33,32,0.55)">{title}</div>
+  <div style="margin-top: 2px; font-family: {GOTH}; font-size: 46px; line-height: 0.92; letter-spacing: 0.03em; text-shadow: -2px -1.5px 0 rgba(35,33,32,0.55)">{title}</div>
   <div style="margin-top: 4px; font-family: {NARROW}; font-weight: 600; font-size: 15px">{sub}</div>
 </div>"""
 

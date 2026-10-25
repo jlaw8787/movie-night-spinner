@@ -60,7 +60,7 @@ GX, GY, CW, RH, HH = 48, 244, 144, 84, 26
 DAYS = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY']
 
 
-def cell(r, c, date, lines, span=1, star=None):
+def cell(r, c, date, lines, span=1, star=None, art=None):
     x, y = GX + c * CW, GY + HH + r * RH
     body = ''.join(
         f'<div style="font-size: 12.5px; line-height: 1.24; {"font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;" if b else ""}">{esc(t)}</div>'
@@ -69,7 +69,8 @@ def cell(r, c, date, lines, span=1, star=None):
     st = (f'<div style="display: inline-block; margin-bottom: 3px; font-weight: 700; font-size: 12px; line-height: 1; '
           f'letter-spacing: 0.06em; background: {INK}; color: {PAPER}; padding: 3px 5px 2px">{star}</div>') if star else ''
     return box(x, y, CW * span + 1.5, RH + 1.5,
-               f'<div style="position: absolute; left: 8px; top: 6px; right: 7px">{dn}{st}{body}</div>',
+               f'<div style="position: absolute; left: 8px; top: 6px; right: 7px">{dn}{st}{body}</div>'
+               + (img(art[0], CW - art[1] - 6, RH - art[2] - 4, art[1], art[2]) if art else ''),
                f'border: 1.5px solid {INK}')
 
 
@@ -81,7 +82,7 @@ cells = [  # first line sits beside the date, so keep it short
     cell(1, 1, 6, [('Spaghetti', 0), ('with meat sauce', 0), ('Garlic bread', 0), ('Green beans', 0)]),
     cell(1, 2, 7, [('Roast turkey', 0), ('Gravy and stuffing', 0), ('Crumb cake', B)]),
     cell(1, 3, 8, [('Grilled cheese', 0), ('Tomato soup', 0), ('Orange smiles', 0)]),
-    cell(1, 4, 9, [('Chicken & waffles', B), ('Carrot sticks', 0)], star='SPECIAL'),
+    cell(1, 4, 9, [('Cheese pizza', 0), ('Tossed salad', 0), ('PA breakfast', B), ('tomorrow!', B)]),
     cell(2, 0, 12, [('Beef tacos', 0), ('Lettuce, cheese', 0), ('Spanish rice', 0)]),
     cell(2, 1, 13, [('Hot dog', 0), ('Baked beans', 0), ('Sliced peaches', 0)]),
     cell(2, 2, 14, [('Chicken nuggets', 0), ('Crumb cake', B)], star='SLIPS DUE'),
@@ -89,9 +90,9 @@ cells = [  # first line sits beside the date, so keep it short
     cell(2, 4, 16, [('Bag lunch', 0), ('Turkey on rye', 0), ('Lemonade at 25\u00a2', 0)], star='FIELD DAY'),
     cell(3, 0, 19, [('Baked ziti', 0), ('Stewed tomatoes', 0), ('Applesauce', 0)]),
     cell(3, 1, 20, [('Chow mein', 0), ('Steamed rice', 0), ('Almond cookie', 0)]),
-    cell(3, 2, 21, [('Grades 1 to 3', 0), ('pack a lunch', 0), ('Crumb cake', B)], star='ZOO TRIP'),
+    cell(3, 2, 21, [('Grades 1 to 3', 0)], star='ZOO TRIP', art=('elephant', 56, 41)),
     cell(3, 3, 22, [('Meatball hero', 0), ('Tossed salad', 0), ('Watermelon', 0)]),
-    cell(3, 4, 23, [('Chicken & waffles', B), ('Corn on the cob', 0)], star='SPECIAL'),
+    cell(3, 4, 23, [('Fish on a bun', 0), ('Corn on the cob', 0), ('Ice pop', 0)]),
     cell(4, 0, 26, [("Cook's choice", 0), ('Ask on the line!', 0), ('Fresh fruit', 0)]),
     cell(4, 1, 27, [('Picnic lunch', 0), ('Out at 11:30', 0)], star='LAST DAY'),
 ]
@@ -154,7 +155,13 @@ front = f'''
   <div style="font-family: {SLAB}; font-size: 15px; line-height: 1; white-space: nowrap">FROM OUR KITCHEN THIS MONTH</div>
   <div style="flex: 1; border-top: 1.5px dashed {INK}"></div></div>
 {feature(48, 'EVERY SCHOOL DAY', 'Bacon, Egg & Cheese', 'Crisp strips and a fried yolk broken flat under melting American, on a butter-toasted kaiser roll. Ketchup on the side.', 'roll', 111, 71, 'FREE')}
-{feature(296, 'FRIDAYS, JUNE 9 &amp; 23', 'Fried Chicken & Waffles', 'Thighs soaked in buttermilk, dredged in paprika flour, fried golden, on hot waffles with warm honey and a dash of pepper sauce.', 'chickwaffle', 104, 74, '$1.00')}
+<div style="position: absolute; left: 290px; top: 716px; width: 236px">
+  {img('lunchline', 0, 0, 232, 150)}
+  <div style="position: absolute; left: 6px; top: 156px; width: 224px">
+    <div style="border-top: 2px solid {INK}; padding-top: 6px; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; white-space: nowrap">LUNCH LINE MANNERS</div>
+    <div style="margin-top: 5px; font-family: {SERIF}; font-size: 16px; line-height: 1.28">Walk, wait your turn, take a milk and say thank you to Mrs. Gaines and the cooks.</div>
+  </div>
+</div>
 {feature(544, 'WEDNESDAYS', 'Crumb Cake', 'Buttery yellow sponge baked under a thick layer of brown sugar and cinnamon streusel, dusted with powdered sugar.', 'crumb', 98, 74, 'WITH LUNCH')}
 
 <div style="position: absolute; left: 48px; top: 990px; width: 720px; border-top: 2px solid {INK}; padding-top: 7px; display: flex; justify-content: space-between; font-size: 12px; line-height: 1.2; white-space: nowrap">
@@ -233,23 +240,27 @@ back = f'''
 
 <div style="position: absolute; left: 480px; top: 152px; width: 288px">
   {head('Notes Home')}
-  {note('FROM THE NURSE', 'Medicine must come in its own bottle with a doctor\'s note. We cannot give out aspirin without one.', 8)}
+  {note('FROM THE NURSE', 'Medicine needs a doctor\'s note. We cannot give out aspirin without one.', 8)}
   {note('42 AND COUNTING', 'Class 5-2 can name all 42 Presidents in order. Ask them who was number 21.')}
   {note('LUNCHROOM HELPERS', 'Raymond and Dexter, for wiping every table without being asked.')}
-  {note('THANK YOU', 'To Mr. Carver, who fixed the gym fans for free. We noticed.')}
   {note('GOOD SAMARITAN AWARD', 'Class 2-3 collected 311 cans for the food drive. Well done!')}
-  <div style="margin-top: 16px; position: relative; height: 112px; border-top: 1.5px solid {INK}; padding-top: 8px">
-    {img('elephant', 150, 14, 138, 102)}
-    <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.1em; line-height: 1.2">ZOO TRIP, JUNE 21</div>
-    <div style="margin-top: 3px; width: 150px; font-family: {SERIF}; font-size: 16px; line-height: 1.27">Grades 1 to 3. The bus leaves at 8:45. Pack a bag lunch.</div>
+  <div style="margin-top: 16px; position: relative; border: 2px solid {INK}; padding: 10px 14px 12px">
+    {img('chickwaffle', 168, 6, 92, 66)}
+    <div style="font-family: {SLAB}; font-size: 22px; line-height: 1.02; width: 160px">PA Breakfast</div>
+    <div style="margin-top: 5px; width: 160px; font-size: 13px; line-height: 1.3"><b>Saturday, June 10</b><br>8 to 11 A.M., cafeteria</div>
+    <div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: baseline">
+      <div style="font-family: {SLAB}; font-size: 19px; line-height: 1.1">Fried Chicken &amp; Waffles</div></div>
+    <div style="margin-top: 3px; font-family: {SERIF}; font-size: 16px; line-height: 1.27">Thighs soaked in buttermilk, dredged in paprika flour, fried golden, on hot waffles with warm honey and a dash of pepper sauce.</div>
+    <div style="margin-top: 6px; display: flex; justify-content: space-between; font-size: 13px; line-height: 1.3"><b>$3.00 a plate, kids $1.50</b><b>Coffee 50&#162;</b></div>
+    <div style="margin-top: 3px; font-size: 13px; line-height: 1.3">Waffle irons lent by Mr. Carver's shop.</div>
   </div>
 </div>
 
-<div style="position: absolute; left: 30px; top: 748px; width: 756px; border-top: 2px dashed {INK}"></div>
-{img('scissors', 52, 733, 54, 33)}
-<div style="position: absolute; left: 116px; top: 754px; font-weight: 700; font-size: 12px; letter-spacing: 0.12em">CUT HERE AND RETURN</div>
+<div style="position: absolute; left: 30px; top: 762px; width: 756px; border-top: 2px dashed {INK}"></div>
+{img('scissors', 52, 747, 54, 33)}
+<div style="position: absolute; left: 116px; top: 768px; font-weight: 700; font-size: 12px; letter-spacing: 0.12em">CUT HERE AND RETURN</div>
 
-<div style="position: absolute; left: 48px; top: 784px; width: 720px; height: 222px; box-sizing: border-box; border: 2px solid {INK}; padding: 14px 20px">
+<div style="position: absolute; left: 48px; top: 792px; width: 720px; height: 214px; box-sizing: border-box; border: 2px solid {INK}; padding: 14px 20px">
   <div style="display: flex; justify-content: space-between; align-items: baseline">
     <div style="font-family: {SLAB}; font-size: 24px; line-height: 1">Field Day Permission Slip</div>
     <div style="font-size: 14px; line-height: 1"><b>Return by Wednesday, June 14</b></div></div>
@@ -282,7 +293,7 @@ open(os.path.join(D, 'film.json'), 'w').write(json.dumps(film, indent=1))
 
 labels = {"Die Hard with a Vengeance (1995)": {
     "Zeus's salted peanut caramel slab": {"n": "Peanut Caramel Squares", "d": "Brown sugar, butter and cream cooked to soft ball with roasted salted nuts, set in a pan and spread with milk chocolate and flaky salt.", "note": "Parents Association bake sale, Field Day. 50 cents."},
-    "Harlem chicken and waffles": {"n": "Fried Chicken & Waffles", "d": "Thighs soaked in buttermilk, dredged in paprika flour, fried golden, on hot waffles with warm honey and a dash of pepper sauce.", "note": "Friday special, June 9 and 23."},
+    "Harlem chicken and waffles": {"n": "Fried Chicken & Waffles", "d": "Thighs soaked in buttermilk, dredged in paprika flour, fried golden, on hot waffles with warm honey and a dash of pepper sauce.", "note": "Parents Association breakfast, Saturday, June 10."},
     "Bacon egg and cheese on a roll": {"n": "Bacon, Egg & Cheese", "d": "Crisp strips and a fried yolk broken flat under melting American, on a butter-toasted kaiser roll. Ketchup on the side.", "note": "Free breakfast every school day, 7:30 to 8:00."},
     "Crumb cake": {"n": "Crumb Cake", "d": "Buttery yellow sponge baked under a thick layer of brown sugar and cinnamon streusel, dusted with powdered sugar.", "note": "Every Wednesday with lunch."},
     "Water jug lemonade": {"n": "Fresh Lemonade", "d": "Squeezed lemons, sugar syrup and cold water, mixed by the jug and poured over ice.", "note": "Field Day lemonade table. 25 cents a cup."},
