@@ -1,0 +1,210 @@
+{
+ "Harry Potter and the Philosopher's Stone (2001)": {
+  "venue": "Hogwarts Great Hall",
+  "sign": "Welcome Feast, New Students",
+  "note": {"text": "Sorry about the squashed birthday cake, Harry. It still tastes fine. Eat up, you've got a long term ahead.", "by": "Hagrid"},
+  "winks": ["Sorting Hat picks your table", "Trolley snacks on the train from Platform 9 3/4", "The cupboard under the stairs at Privet Drive", "A very large troll in the dungeon", "Golden Snitch on the side"],
+  "prop": {"kind": "ticket", "title": "Hogwarts Express", "lines": ["Platform 9 3/4", "Departs eleven o'clock sharp"]},
+  "number": "4"
+ },
+ "Harry Potter and the Chamber of Secrets (2002)": {
+  "venue": "The Burrow Kitchen",
+  "sign": "Weasley Family Kitchen",
+  "note": {"text": "Ronald Weasley, you flew a car to school! Sit down, all of you, and eat before it goes cold.", "by": "Molly Weasley"},
+  "winks": ["The flying car stuck in the Whomping Willow", "Dobby and the pillowcase", "Polyjuice Potion in Moaning Myrtle's bathroom", "Giant spiders in the Forbidden Forest", "Tom Riddle's diary"],
+  "prop": {"kind": "slip", "title": "Howler for Ron", "lines": ["Delivered at breakfast", "Open it before it explodes"]},
+  "number": ""
+ },
+ "Harry Potter and the Prisoner of Azkaban (2004)": {
+  "venue": "Three Broomsticks Inn",
+  "sign": "Hogsmeade's Warmest Welcome",
+  "note": {"text": "Have some chocolate, Harry. It helps after a Dementor. I'm Professor Lupin, by the way.", "by": "Remus Lupin"},
+  "winks": ["Dementor on the Hogwarts Express", "Buckbeak the hippogriff, bow first", "Marauder's Map, solemnly sworn", "The Shrieking Shack", "Hermione's Time-Turner"],
+  "prop": {"kind": "ticket", "title": "Knight Bus", "lines": ["One seat, any destination", "Hold onto your hat"]},
+  "number": ""
+ },
+ "Harry Potter and the Goblet of Fire (2005)": {
+  "venue": "Hogwarts Yule Ball",
+  "sign": "Triwizard Tournament Yule Ball",
+  "note": {"text": "Champions, glory is on offer, but eat first. You will need the strength for what comes next.", "by": "Albus Dumbledore"},
+  "winks": ["The Goblet's blue flame spits out a name", "A Hungarian Horntail in the first task", "The Beauxbatons carriage and the Durmstrang ship", "Mad-Eye Moody's spinning eye", "The maze in the final task"],
+  "prop": {"kind": "badge", "title": "Support Cedric Diggory", "lines": ["Hogwarts champion", "Wear it with pride"]},
+  "number": ""
+ },
+ "The Lord of the Rings: The Fellowship of the Ring (2001)": {
+  "venue": "The Prancing Pony",
+  "sign": "Bree: Beds and Hot Suppers",
+  "note": {"text": "Aragorn, we've had breakfast, yes. But have you thought about second breakfast? I have.", "by": "Pippin"},
+  "winks": ["Bilbo's eleventy-first birthday party", "Gandalf's fireworks over Hobbiton", "The Council of Elrond in Rivendell", "Gandalf on the bridge in Moria", "Lembas bread from Lothlorien"],
+  "prop": {"kind": "tag", "title": "Fireworks Crate", "lines": ["Property of Gandalf the Grey", "Handle with care"]},
+  "number": "111"
+ },
+ "The Lord of the Rings: The Two Towers (2002)": {
+  "venue": "Meduseld, Edoras",
+  "sign": "Golden Hall of Rohan",
+  "note": {"text": "Gollum caught a rabbit, Mr. Frodo, so we're having stew. Mind you, I'd still choose potatoes.", "by": "Samwise Gamgee"},
+  "winks": ["Treebeard and the Ents", "Gandalf the White returns", "Legolas and Gimli keeping an orc count", "Gollum arguing with Smeagol", "The last stand at Helm's Deep"],
+  "prop": {"kind": "card", "title": "Orc Count Scorecard", "lines": ["Legolas versus Gimli", "Tally kept at Helm's Deep"]},
+  "number": ""
+ },
+ "The Lord of the Rings: The Return of the King (2003)": {
+  "venue": "Minas Tirith Citadel",
+  "sign": "White City of Gondor",
+  "note": {"text": "I can't carry it for you, Mr. Frodo, but I can carry you. Come on, up we go.", "by": "Samwise Gamgee"},
+  "winks": ["Beacons lit from hill to hill", "Shelob's lair at Cirith Ungol", "Pippin singing for Denethor", "The charge of Rohan on the Pelennor Fields", "Aragorn crowned, hobbits bow"],
+  "prop": {"kind": "ticket", "title": "Grey Havens Passage", "lines": ["One berth, sailing west", "Ship leaves at dusk"]},
+  "number": ""
+ },
+ "Willow (1988)": {
+  "venue": "Nelwyn Village Fair",
+  "sign": "Nelwyn Harvest Day",
+  "note": {"text": "I'm only a farmer, but I'll see this baby safe to Tir Asleen. First, some bread for the road.", "by": "Willow Ufgood"},
+  "winks": ["Baby Elora Danan in a basket", "Madmartigan, swordsman for hire", "Fin Raziel changed into a possum", "Queen Bavmorda at Nockmaar Castle", "The tiny brownies Franjean and Rool"],
+  "prop": {"kind": "card", "title": "Nelwyn Wizard's Test", "lines": ["Pass: one acorn trick", "Examiner: High Aldwin"]},
+  "number": ""
+ },
+ "The NeverEnding Story (1984)": {
+  "venue": "Bastian's Attic Hideout",
+  "sign": "Quiet Please, Reading in Progress",
+  "note": {"text": "Atreyu, keep going. I'm not putting this book down until the Nothing is stopped.", "by": "Bastian"},
+  "winks": ["Falkor the luckdragon", "Artax in the Swamps of Sadness", "The Rock Biter and his lost friends", "Auryn, the Childlike Empress's amulet", "The Nothing eating Fantasia"],
+  "prop": {"kind": "card", "title": "Coreander Bookshop", "lines": ["Rare and used books", "Not for borrowing"]},
+  "number": ""
+ },
+ "Harry Potter and the Order of the Phoenix (2007)": {
+  "venue": "Grimmauld Place Kitchen",
+  "sign": "Headquarters of the Order",
+  "note": {"text": "Make yourself at home, Harry. It's a gloomy old house, but it's ours for now.", "by": "Sirius Black"},
+  "winks": ["Umbridge's pink office and kitten plates", "Dumbledore's Army in the Room of Requirement", "Fred and George's fireworks in the corridors", "Thestrals pulling the carriages", "The prophecy in the Department of Mysteries"],
+  "prop": {"kind": "slip", "title": "Educational Decree", "lines": ["By order of the High Inquisitor", "Signed D. Umbridge"]},
+  "number": "12"
+ },
+ "Harry Potter and the Half-Blood Prince (2009)": {
+  "venue": "Slughorn's Slug Club",
+  "sign": "Slug Club Supper, By Invitation",
+  "note": {"text": "Take a seat, Harry. Talent like yours deserves a good dinner. Bring a friend, if you like.", "by": "Horace Slughorn"},
+  "winks": ["The Half-Blood Prince's scribbled potions book", "A bottle of Felix Felicis, liquid luck", "Lavender Brown calling Ron Won-Won", "The Vanishing Cabinet", "The Horcrux cave and its Inferi"],
+  "prop": {"kind": "slip", "title": "Slug Club Invitation", "lines": ["Supper with Professor Slughorn", "Guests welcome"]},
+  "number": ""
+ },
+ "Harry Potter and the Deathly Hallows: Part 1 (2010)": {
+  "venue": "Shell Cottage",
+  "sign": "Shell Cottage, By the Sea",
+  "note": {"text": "We have the tent, the beaded bag and a plan. Eat something, both of you, then we move.", "by": "Hermione Granger"},
+  "winks": ["Seven Potters leaving Privet Drive", "Hermione's bottomless beaded bag", "The locket Horcrux weighing on Ron", "The Tale of the Three Brothers", "Godric's Hollow in the snow"],
+  "prop": {"kind": "tag", "title": "Beaded Bag", "lines": ["Owner: Hermione Granger", "Holds far more than it looks"]},
+  "number": "7"
+ },
+ "Harry Potter and the Deathly Hallows: Part 2 (2011)": {
+  "venue": "Room of Requirement",
+  "sign": "Everything You Need Is Here",
+  "note": {"text": "Hogwarts isn't done yet. Stand up, eat something, and let's hold this castle.", "by": "Neville Longbottom"},
+  "winks": ["A dragon guarding the Gringotts vaults", "Snape's memories in a silver stream", "Mrs. Weasley's duel with Bellatrix", "Neville and the Sword of Gryffindor", "King's Cross station, white and empty"],
+  "prop": {"kind": "ticket", "title": "Gringotts Cart Ride", "lines": ["Down to the deep vaults", "Hold tight, goblins drive"]},
+  "number": ""
+ },
+ "Fantastic Beasts and Where to Find Them (2016)": {
+  "venue": "Newt's Suitcase Menagerie",
+  "sign": "Please Do Not Feed the Beasts",
+  "note": {"text": "Don't mind the Niffler. Anything shiny in your pocket will vanish, so check your pockets now.", "by": "Newt Scamander"},
+  "winks": ["The Niffler stealing every shiny thing", "Pickett the Bowtruckle in Newt's pocket", "Jacob Kowalski and his bakery dream", "Queenie reading minds", "Frank the Thunderbird released over New York"],
+  "prop": {"kind": "tag", "title": "Suitcase Mix-up Tag", "lines": ["Two brown cases look alike", "Check which one is yours"]},
+  "number": "1926"
+ },
+ "The Hobbit: An Unexpected Journey (2012)": {
+  "venue": "Bag End Dining Room",
+  "sign": "Bag End, Hobbiton",
+  "note": {"text": "Thirteen dwarves, and not one of them wiped his feet. And the pantry is empty.", "by": "Bilbo Baggins"},
+  "winks": ["Dwarves tossing dishes across the kitchen", "Riddles in the Dark with Gollum", "Trolls arguing over the campfire", "Radagast's sled pulled by rabbits", "Eagles lifting the company from the fire"],
+  "prop": {"kind": "slip", "title": "Burglar Contract", "lines": ["Wanted: one hobbit", "Signed by Bilbo Baggins"]},
+  "number": "13"
+ },
+ "The Hobbit: The Desolation of Smaug (2013)": {
+  "venue": "Lake-town Market",
+  "sign": "Esgaroth, Town on the Lake",
+  "note": {"text": "I've smuggled dwarves in barrels before. Tonight there's fish for supper and not much else.", "by": "Bard"},
+  "winks": ["Dwarves riding barrels down the river", "Giant spiders of Mirkwood", "Beorn the skin-changer", "Smaug under a sea of gold", "Tauriel and her wood-elf bow"],
+  "prop": {"kind": "ticket", "title": "Barrel Ride", "lines": ["One dwarf per barrel", "Hold on, Mr. Baggins"]},
+  "number": ""
+ },
+ "The Hobbit: The Battle of the Five Armies (2014)": {
+  "venue": "Erebor, Lonely Mountain",
+  "sign": "Halls of Thorin Oakenshield",
+  "note": {"text": "Pack up. I'm going home to Bag End, my armchair and a proper breakfast.", "by": "Bilbo Baggins"},
+  "winks": ["The Arkenstone hidden in Bilbo's pocket", "Dragon sickness on Thorin", "Dain arriving with the Iron Hills dwarves", "Eagles turning the tide", "Bard's black arrow"],
+  "prop": {"kind": "tag", "title": "Company of Thorin", "lines": ["Thirteen dwarves, one hobbit", "Reclaim the mountain"]},
+  "number": "5"
+ },
+ "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)": {
+  "venue": "Mr. Tumnus's Cave",
+  "sign": "Tea and Toast by the Fire",
+  "note": {"text": "Come in out of the snow, Lucy. There's tea, toast, sardines and cake, and a story or two.", "by": "Mr. Tumnus"},
+  "winks": ["The lamp-post glowing in the snow", "The wardrobe full of fur coats", "Edmund and the Turkish delight", "Mr. Beaver's dam", "Aslan at the Stone Table"],
+  "prop": {"kind": "ticket", "title": "Wardrobe Door Pass", "lines": ["Through the coats to Narnia", "Always winter, never Christmas"]},
+  "number": "4"
+ },
+ "Wicked (2024)": {
+  "venue": "Shiz University Dining Hall",
+  "sign": "Shiz University Welcome Day",
+  "note": {"text": "Sit by me, Elphie. I'll do the talking and you do whatever it is you do. Pink goes with everything.", "by": "Glinda"},
+  "winks": ["Elphaba's green skin", "Glinda's pink bubble", "Dr. Dillamond, the goat professor", "Dancing at the Ozdust Ballroom", "The train to the Emerald City"],
+  "prop": {"kind": "ticket", "title": "Emerald City Express", "lines": ["Shiz Station to the Emerald City", "One seat, bring your luggage"]},
+  "number": ""
+ },
+ "The Wizard of Oz (1939)": {
+  "venue": "Emerald City Palace",
+  "sign": "The Great Wizard Will See You",
+  "note": {"text": "Toto and I are a long way from Kansas. Auntie Em would want us to eat something first.", "by": "Dorothy Gale"},
+  "winks": ["The yellow brick road", "Ruby slippers", "Scarecrow, Tin Man and the Cowardly Lion", "Flying monkeys over the forest", "The Wicked Witch melting"],
+  "prop": {"kind": "ticket", "title": "Yellow Brick Road", "lines": ["Follow it to the Emerald City", "Bring Toto"]},
+  "number": ""
+ },
+ "The Sword in the Stone (1963)": {
+  "venue": "Sir Ector's Castle Kitchen",
+  "sign": "Castle Kitchens, Mind the Dishes",
+  "note": {"text": "Wart, an education beats a sword any day. Now watch the dishes wash themselves.", "by": "Merlin"},
+  "winks": ["Archimedes the grumpy owl", "Dishes washing themselves", "Wart turned into a fish and a squirrel", "Madam Mim's wizard duel", "The sword in the stone in London"],
+  "prop": {"kind": "slip", "title": "Squire Duties", "lines": ["Fetch Sir Kay's arrow", "Do not lose it in the forest"]},
+  "number": ""
+ },
+ "Fantastic Beasts: The Crimes of Grindelwald (2018)": {
+  "venue": "Cirque Arcanus",
+  "sign": "Cirque Arcanus, Paris",
+  "note": {"text": "Jacob, I read your mind and you want a bakery. I also heard the part about the wedding.", "by": "Queenie Goldstein"},
+  "winks": ["Credence in the circus", "Nagini as a circus performer", "A Zouwu cat the size of a house", "Leta Lestrange's family vault", "Dumbledore teaching Defense class"],
+  "prop": {"kind": "ticket", "title": "Cirque Arcanus", "lines": ["Admit one, Paris", "Creatures and curiosities"]},
+  "number": "1927"
+ },
+ "Fantastic Beasts: The Secrets of Dumbledore (2022)": {
+  "venue": "Bhutan Election Hall",
+  "sign": "Votes Cast Here",
+  "note": {"text": "Never thought a baker would end up at a wizard election. I'd honestly rather be making donuts.", "by": "Jacob Kowalski"},
+  "winks": ["The Qilin bowing to the pure of heart", "Newt dancing to calm the Manticore", "Credence and the Dumbledore family secret", "Theseus Scamander", "Jacob Kowalski, baker among wizards"],
+  "prop": {"kind": "slip", "title": "Ballot Slip", "lines": ["Bhutan, International Wizards", "The Qilin decides"]},
+  "number": "1932"
+ },
+ "The Chronicles of Narnia: Prince Caspian (2008)": {
+  "venue": "Cair Paravel Ruins",
+  "sign": "Cair Paravel, Home of Kings",
+  "note": {"text": "Pass the bread, friends. A mouse of honor needs his sword, and a decent meal.", "by": "Reepicheep"},
+  "winks": ["Reepicheep and his sword", "Trumpkin the dwarf", "Susan's horn calling the Pevensies back", "Miraz and the Telmarine castle", "The ruins of Cair Paravel on the beach"],
+  "prop": {"kind": "card", "title": "Old Narnian Roll Call", "lines": ["Reepicheep, Trufflehunter, Trumpkin", "Report to Aslan's How"]},
+  "number": "1300"
+ },
+ "The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)": {
+  "venue": "Dawn Treader Galley",
+  "sign": "Ship's Galley, Caspian's Vessel",
+  "note": {"text": "We sail east to the end of the world. Keep the biscuits dry, if you please.", "by": "Reepicheep"},
+  "winks": ["Eustace turned into a dragon", "The painting that pulls them into the sea", "Seven lost lords' swords", "The sea serpent", "The Dark Island of bad dreams"],
+  "prop": {"kind": "ticket", "title": "Passage East", "lines": ["Dawn Treader, bound for the edge", "Aslan's Country, final stop"]},
+  "number": "7"
+ },
+ "Wicked: For Good (2025)": {
+  "venue": "Emerald City Palace",
+  "sign": "The Wizard's Palace, All Welcome",
+  "note": {"text": "I'm the Good Witch in name now, Elphie, but you're the one I'd follow. Eat something, you're thin as a broom.", "by": "Glinda"},
+  "winks": ["Dorothy arriving from Kansas", "The Scarecrow, the Tin Man and the Lion", "Nessarose's ruby slippers", "Flying monkeys over the city", "The Wizard's balloon"],
+  "prop": {"kind": "ticket", "title": "Yellow Brick Road Pass", "lines": ["Emerald City bound", "Ruby slippers required"]},
+  "number": ""
+ }
+}
