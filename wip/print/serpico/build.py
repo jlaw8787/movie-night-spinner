@@ -8,9 +8,9 @@ D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
 PAPER, DARK, RED, MUTE = '#e5ead3', '#1d2b22', '#b5262b', '#4c5a4c'
 FONTS = ('https://fonts.googleapis.com/css2?family=Antonio:wght@600;700'
-         '&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&family=Yellowtail&display=swap')
+         '&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&family=Grand+Hotel&display=swap')
 DISP = "'Antonio', sans-serif"; BODY = "'Libre Baskerville', serif"
-SCRIPT = "'Yellowtail', cursive"; HAND = "'Patrick Hand', cursive"
+SCRIPT = "'Grand Hotel', cursive"; HAND = "'Patrick Hand', cursive"
 
 def kicker(t, color=RED, extra=''):
     return f'<div style="font-family: {DISP}; font-weight: 700; font-size: 19px; letter-spacing: 0.24em; color: {color}; text-transform: uppercase; line-height: 1;{extra}">{t}</div>'
@@ -56,34 +56,41 @@ def check(o, gx, gy):
              '</div>')
 
 # ---------------- FRONT ----------------
+def matchbook(o, x, y):
+    """Prop: the shop's matchbook, tucked over the corner of the picture."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 96px; height: 138px; background: {RED}; '
+             f'box-shadow: 0 2px 6px rgba(30,30,20,0.35); transform: rotate(-7deg); overflow: hidden">'
+             f'<div style="position: absolute; left: 0; top: 10px; width: 96px; text-align: center; font-family: {SCRIPT}; font-size: 30px; line-height: 1.1; color: #fbfaf4">Garfein&rsquo;s</div>'
+             f'<div style="position: absolute; left: 6px; top: 50px; width: 84px; height: 2px; background: #fbfaf4; opacity: 0.8"></div>'
+             f'<div style="position: absolute; left: 0; top: 58px; width: 96px; text-align: center; font-family: {DISP}; font-weight: 700; font-size: 14px; line-height: 1.25; letter-spacing: 0.06em; color: #fbfaf4">HOT PASTRAMI<br>WAtkins 4-1967</div>'
+             f'<div style="position: absolute; left: 0; top: 104px; width: 96px; height: 34px; background: {DARK}"></div>'
+             f'<div style="position: absolute; left: 0; top: 110px; width: 96px; height: 10px; background: repeating-linear-gradient(90deg, #6b5a4a 0 2px, #3a3029 2px 4px)"></div>'
+             '</div>')
+
 def front():
     o = []
-    o.append(f'<div style="position: absolute; left: {L}px; top: 50px; width: {CW}px; display: flex; justify-content: space-between">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 46px; width: {CW}px; display: flex; justify-content: space-between">'
              f'{kicker("Greenwich Village, New York")}{kicker("Since 1938", DARK)}</div>')
-    o.append(f'<div style="position: absolute; left: {L - 4}px; top: 66px; font-family: {SCRIPT}; font-size: 96px; line-height: 1.15; color: {RED}">Garfein&rsquo;s</div>')
-    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 92px; width: {CW - 300}px; text-align: right; font-family: {DISP}; font-weight: 700; '
-             f'font-size: 58px; line-height: 0.96; color: {DARK}; text-transform: uppercase; letter-spacing: 0.005em">Delicatessen<br>&amp; Appetizing</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 216px; width: {CW}px; height: 3px; background: {RED}"></div>')
-    # hero: the painted storefront in a thin red frame
-    o.append(f'<div style="position: absolute; left: {L}px; top: 234px; width: {CW}px; height: 300px; outline: 2px solid {RED}; outline-offset: 5px">'
+    o.append(f'<div style="position: absolute; left: {L - 2}px; top: 58px; font-family: {SCRIPT}; font-size: 100px; line-height: 1.15; color: {RED}">Garfein&rsquo;s</div>')
+    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 82px; width: {CW - 300}px; text-align: right; font-family: {DISP}; font-weight: 700; '
+             f'font-size: 54px; line-height: 0.96; color: {DARK}; text-transform: uppercase; letter-spacing: 0.005em">Delicatessen<br>&amp; Appetizing</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 196px; width: {CW}px; height: 3px; background: {RED}"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 214px; width: {CW}px; height: 374px; outline: 2px solid {RED}; outline-offset: 5px">'
              f'<img src="assets/storefront.png" alt="Line drawing of the Garfein\'s storefront, red striped awning, salamis in the window" '
-             f'style="display: block; width: {CW}px; height: 300px"></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 548px; width: {CW}px; display: flex; justify-content: space-between; '
+             f'style="display: block; width: {CW}px; height: 374px"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 600px; width: {CW}px; display: flex; justify-content: space-between; '
              f'font-family: {BODY}; font-style: italic; font-size: 16px; color: {MUTE}">'
-             f'<span>Our store on West 10th, a few doors from the Sixth Precinct.</span></div>')
-    # the steam table
-    o.append(f'<div style="position: absolute; left: {L}px; top: 560px; width: {CW}px">'
+             f'<span>Our store on West 10th, a few doors from the Sixth Precinct.</span><span>Platters 60&cent; more</span></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 626px; width: {CW}px">'
              f'<div style="display: flex; align-items: flex-end; justify-content: space-between">{bar("Hot from the steam table")}'
-             f'<img src="assets/spot-sandwich.png" alt="Pastrami on rye with a pickle" style="display: block; width: 220px; height: 92px; margin-bottom: -6px"></div>'
-             + item('Hot pastrami on rye', '1.35', 'Steamed soft, hand sliced, piled high, with mustard and a pickle.')
-             + item('The Village hero', '1.73', 'Steamed pastrami, Swiss, slaw and Russian dressing on a long roll.')
-             + item('Hot corned beef on rye', '1.35', 'Brisket cured in our own brine, carved to order, with mustard.')
-             + item('Roast beef on a kaiser', '1.25', 'Rare top round, sliced thin while you wait. Ask for it lean.')
+             f'<img src="assets/spot-sandwich.png" alt="Pastrami on rye with a pickle" style="display: block; width: 160px; height: 67px; margin-bottom: -2px"></div>'
+             + item('Hot pastrami on rye', '1.35', 'Steamed soft, hand sliced, piled high, with mustard and a pickle.', 12)
+             + item('The Village hero', '1.73', 'Steamed pastrami, Swiss, slaw and Russian dressing on a long roll.', 12)
+             + item('Hot corned beef on rye', '1.35', 'Brisket cured in our own brine, carved to order, with mustard.', 12)
+             + item('Roast beef on a kaiser', '1.25', 'Rare top round, sliced thin while you wait. Ask for it lean.', 12)
              + '</div>')
-    check(o, L + CW - 210, 318)
-    o.append(f'<div style="position: absolute; left: {L}px; top: 986px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
-             f'<div style="position: absolute; left: {L}px; top: 994px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
-             f'<span>Any sandwich as a platter, with slaw, potato salad and pickle, 60&cent; more.</span><span>Over, please</span></div>')
+    matchbook(o, L - 2, 236)
+    check(o, L + CW - 210, 352)
     return page(''.join(o)).replace('PAGE', 'front')
 
 # ---------------- BACK ----------------
@@ -94,30 +101,29 @@ def back():
     o = []
     o.append(f'<div style="position: absolute; left: {L}px; top: 50px">{kicker("Eat at the counter or take it home")}</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 80px">{bar("The menu", 64)}</div>')
-    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 76px; width: {CW - 300}px; text-align: right; font-family: {SCRIPT}; font-size: 66px; line-height: 1.15; color: {RED}">Garfein&rsquo;s</div>')
+    o.append(f'<div style="position: absolute; left: {L + 300}px; top: 70px; width: {CW - 300}px; text-align: right; font-family: {SCRIPT}; font-size: 72px; line-height: 1.15; color: {RED}">Garfein&rsquo;s</div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 174px; width: {CW}px; height: 3px; background: {RED}"></div>')
     col = lambda x, inner: f'<div style="position: absolute; left: {x}px; top: 196px; width: {COLW}px">{inner}</div>'
     left = (bar('Appetizing', 40)
             + item('Nova on a bagel', '1.10', 'Toasted and spread thick with cream cheese, smoked salmon, capers, red onion and fresh dill.')
-            + item('Chopped liver', '.95', 'Chicken livers with schmaltz, fried onion and egg, on rye.')
             + item('Potato knish', '.35', 'Baked golden, split and spread with brown mustard.')
             + f'<div style="height: 1px; background: {DARK}; opacity: 0.45; margin: 26px 0 24px"></div>'
             + bar('From our bakery', 40)
             + item('Black and white', '.25', 'Soft sour cream cake cookie, iced half vanilla, half chocolate.')
-            + item('Cheesecake', '.45', 'Rich and dense, a thick slice baked here every morning.'))
+            + item('Cheesecake', '.45', 'Rich and dense, a thick slice baked here every morning.')
+            + '<img src="assets/spot-fountain.png" alt="Egg cream, black and white cookie and a cup of coffee" style="display: block; width: 330px; height: 112px; margin-top: 20px">')
     right = (bar('Fountain', 40)
              + item('Iced coffee float', '.45', 'Dark roast steeped overnight in the icebox, vanilla syrup, milk and a scoop of vanilla ice cream.')
              + item('Chocolate egg cream', '.20', 'Syrup, cold milk and seltzer from the siphon.')
-             + item('Celery tonic', '.15', 'Ice cold, by the bottle.')
-             + item('Coffee or tea', '.10', 'Hot all day. Tea comes in a glass.'))
+             + item('Coffee or tea', '.10', 'Hot all day. Tea comes in a glass.')
+             + f'<div style="margin-top: 16px; border: 2px solid {RED}; padding: 4px; background: #fbfaf4">'
+             f'<img src="assets/still-washington-square.jpg" alt="Two regulars on a motorcycle by Washington Square" style="display: block; width: 318px; height: 130px"></div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.35; color: {MUTE}; margin-top: 6px">Regulars on Washington Square.</div>'
+             f'<div style="height: 1px; background: {DARK}; opacity: 0.45; margin: 10px 0 10px"></div>'
+             + kicker('From the counter') +
+             f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.45; color: {DARK}; margin-top: 8px">Everybody pays at the register, the boys from the Sixth too. Opera on the radio Saturdays. Dogs wait outside, even the sheepdog.</div>'
+             f'<div style="font-family: {SCRIPT}; font-size: 34px; line-height: 1.05; color: {RED}; margin-top: 0">Morris Garfein</div>')
     o.append(col(L, left)); o.append(col(X2, right))
-    # the owner's note
-    o.append(f'<div style="position: absolute; left: {X2}px; top: 676px; width: {COLW}px; height: 1px; background: {DARK}; opacity: 0.45"></div>')
-    o.append(f'<div style="position: absolute; left: {X2}px; top: 690px; width: {COLW}px">{kicker("From the counter")}'
-             f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.5; color: {DARK}; margin-top: 10px">Everybody pays at the register, the boys from the Sixth too. Saturday afternoons, the opera on the radio. Dogs wait outside, even the sheepdog.</div>'
-             f'<div style="font-family: {SCRIPT}; font-size: 36px; line-height: 1.2; color: {RED}; margin-top: 4px">Morris Garfein</div></div>')
-    o.append(f'<img src="assets/spot-fountain.png" alt="Egg cream, black and white cookie and a cup of coffee" style="position: absolute; left: {X2}px; top: 870px; width: 330px; height: 112px; display: block">')
-    # footer
     o.append(f'<div style="position: absolute; left: {L}px; top: 986px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.5"></div>'
              f'<div style="position: absolute; left: {L}px; top: 994px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
              f'<span>West 10th St., N.Y. 10014. WAtkins 4-1967. Open 7 to midnight.</span><span>Prices subject to change.</span></div>')

@@ -286,30 +286,6 @@ hatch(ink, ImageChops.multiply(hm, region(box=(hx + 1, 240, hx + 14, 300))), 90,
 red.paste(ImageChops.lighter(red, ImageChops.multiply(hm, Image.new('L', (CW, CH), 235))), (0, 0))
 
 
-# sheepdog waiting outside, tied to the hydrant: shaggy pen strokes, grey coat, dark rump
-def fur(cx, cy, rx, ry, n, dark=False):
-    for _ in range(n):
-        a = random.uniform(0, 2 * math.pi); r = random.uniform(0.2, 1.0)
-        x0 = cx + math.cos(a) * rx * r; y0 = cy + math.sin(a) * ry * r
-        ln = random.uniform(2.5, 5.5)
-        line(di, x0, y0, x0 + random.uniform(-0.8, 0.8), y0 + ln, 0.42 if not dark else 0.6, 0.35, seg=2)
-dogm = shape_dog = Image.new('L', (CW, CH), 0)
-dd = ImageDraw.Draw(dogm)
-dd.ellipse([P(232, 266), P(282, 292)], fill=255)        # body
-dd.ellipse([P(270, 256), P(294, 280)], fill=255)        # head
-dd.rectangle([P(238, 284), P(246, 296)], fill=255); dd.rectangle([P(268, 284), P(276, 296)], fill=255)
-clear(ink, dogm.filter(ImageFilter.MaxFilter(5)))
-edge = ImageChops.subtract(dogm.filter(ImageFilter.MaxFilter(3)), dogm)
-ink.paste(ImageChops.lighter(ink, edge.point(lambda v: v // 2)), (0, 0))
-fur(257, 279, 24, 12, 170)
-fur(240, 278, 9, 9, 70, dark=True)                     # darker rump
-fur(282, 268, 11, 10, 70)
-hatch(ink, ImageChops.multiply(dogm, region(box=(228, 286, 290, 298))), 0, 1.2, 0.45)
-di.ellipse([P(288.5, 268), P(292, 271)], fill=255)    # nose
-line(di, 278, 263, 281, 262, 0.5, 0); line(di, 284, 263, 287, 262, 0.5, 0)   # fringe over the eyes
-pts = [(283, 276), (288, 281), (294, 284), (299, 282)]  # leash to the hydrant
-di.line([P(*q) for q in pts], fill=255, width=int(0.7 * K), joint='curve')
-
 # ---------------- taller sheet: one more storey, a cornice and a painted wall sign ----------------
 TOPX = 74
 ink0, red0 = ink, red
