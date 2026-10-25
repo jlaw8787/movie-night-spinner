@@ -14,4 +14,4 @@ moonstruck: Marcellus SC
 adjustment-bureau: Fraunces
 after-hours: Monoton, Anton
 youve-got-mail: Libre Caslon Display
-quick-change: (pending)
+quick-change: Hanken Grotesk

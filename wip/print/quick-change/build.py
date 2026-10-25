@@ -129,7 +129,7 @@ front = face(f'''
     <div>{S('Clown nose cherry tomatoes', 14)}{A('nachos', 14)}</div>
     <div>{S('Airport bar chilli-lime wings', 14)}{COUPON}</div></div>
 </div>
-<div style="position: absolute; left: {L}px; top: 926px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 10px; display: flex; gap: 24px; align-items: flex-end">
+<div style="position: absolute; left: {L}px; top: 922px; width: {CW}px; box-sizing: border-box; border: 2px solid {RED}; outline: 1px solid {RED}; outline-offset: 3px; background: #fbf3d6; padding: 8px 16px 10px; display: flex; gap: 24px; align-items: flex-end">
   <div style="flex: 1">
     {kicker('A word from a regular', 'font-size: 15px')}
     <div style="{SERIF}; font-size: 18px; line-height: 1.32; margin-top: 4px">Forty cups out to the curb and not one came back short. Best coffee on the block.</div></div>
@@ -165,10 +165,12 @@ back = face(f'''
       {bar('The Bar', 'TILL 2 A.M.')}
       {S('Wheels-up bourbon smash', 14)}{A('beer', 16)}{A('coffee', 16)}</div>
     <div style="position: relative">
-      {kicker('Our block')}
-      <div style="margin-top: 10px; border: 3px solid {RED}; padding: 5px; background: #fdf8e6"><img src="assets/still-lobby.jpg" alt="The bank lobby across the street, seen from above" style="display: block; width: 316px; height: 180px"></div>
-      <div style="{SERIF}; font-size: 18px; line-height: 1.32; margin-top: 8px">The bank lobby across the street. Tellers eat here, and so do the cops.</div>
-      <div style="{SERIF}; font-size: 18px; line-height: 1.32; margin-top: 8px; color: {RED}; font-style: italic">Off to the airport? The BQE signs are down in Brooklyn. Ask the bartender.</div>
+      {kicker('Our regulars')}
+      <div style="margin-top: 10px; border: 3px solid {RED}; padding: 5px; background: #fdf8e6"><img src="assets/still-tellers.jpg" alt="Tellers and customers from the bank across the street" style="display: block; width: 316px; height: 160px"></div>
+      <div style="{SERIF}; font-size: 18px; line-height: 1.32; margin-top: 8px">Tellers and customers from the bank across the street. They eat here, and so do the cops.</div>
+      <div style="margin-top: 12px; background: {INK}; border-left: 10px solid {RED}; padding: 10px 14px 12px">
+        {kicker('To the airport', 'font-size: 15px; color: ' + GOLD)}
+        <div style="{SERIF}; font-size: 17px; line-height: 1.3; margin-top: 4px; color: {PAPER}">The BQE signs are down in Brooklyn. Ask the bartender before you go.</div></div>
       {MATCH}</div></div>
 </div>
 <div style="position: absolute; left: {L}px; top: 976px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 10px; display: flex; justify-content: space-between; {SANS}; font-weight: 600; font-size: 16px; color: {MUTE}">
