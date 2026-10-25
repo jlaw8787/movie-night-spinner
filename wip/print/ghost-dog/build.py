@@ -35,7 +35,22 @@ def overlays(face):
             f'<img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; pointer-events: none; display: block">')
 
 
+def regshift(html):
+    """The red plate prints a hair out of register: nudge red type and add a slight ink spread."""
+    import re
+    def fix(m):
+        st = m.group(1)
+        if f'color: {RED}' not in st or 'background' in st:
+            return m.group(0)
+        st += '; text-shadow: 0.5px 0.3px 0 rgba(181,40,31,0.35)'
+        if 'position:' not in st and 'transform' not in st:
+            st += '; position: relative; left: 1px; top: 0.6px'
+        return f'style="{st}"'
+    return re.sub(r'style="([^"]*)"', fix, html)
+
+
 def root(inner, face):
+    inner = regshift(inner)
     return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {PAPER}; '
             f'font-family: {SERIF}; color: {INK}">{inner}{overlays(face)}</div>')
 
@@ -65,10 +80,10 @@ def row(num, name, price, desc=None, note=None, hot=False, top=6, nsize=18, pric
         pc = ''.join(f'<span style="flex: none; width: 50px; text-align: right; font-weight: 700; font-size: 17px">{p}</span>' for p in prices)
     else:
         pc = f'<span style="flex: none; font-weight: 700; font-size: 17px">{price}</span>'
-    d = f'<div style="margin: 2px 0 0 34px; font-style: italic; font-size: 16px; line-height: 1.26; text-wrap: pretty">{esc(desc)}</div>' if desc else ''
-    n = f'<div style="margin: 3px 0 0 34px; font-style: italic; font-weight: 700; font-size: 16px; line-height: 1.2; color: {RED}">{esc(note)}</div>' if note else ''
+    d = f'<div style="margin: 2px 0 0 42px; font-style: italic; font-size: 16px; line-height: 1.26; text-wrap: pretty">{esc(desc)}</div>' if desc else ''
+    n = f'<div style="margin: 3px 0 0 42px; font-style: italic; font-weight: 700; font-size: 16px; line-height: 1.2; color: {RED}">{esc(note)}</div>' if note else ''
     return (f'<div style="margin-top: {top}px"><div style="display: flex; align-items: baseline; gap: 4px">'
-            f'<span style="flex: none; width: 30px; font-size: 16px">{num}</span>'
+            f'<span style="flex: none; width: 38px; font-size: 16px">{num}</span>'
             f'<span style="flex: none; font-weight: 700; font-size: {nsize}px; line-height: 1.15">{esc(name)}{star() if hot else ""}</span>'
             f'<span style="flex: 1; min-width: 14px; overflow: hidden; white-space: nowrap; font-size: 15px; letter-spacing: 0.06em">{DOTS}</span>'
             f'{pc}</div>{d}{n}</div>')
@@ -102,6 +117,8 @@ flap = (
       + ''.join(f'<div style="display: flex; gap: 10px"><span style="flex: none; width: 58px; font-weight: 700">${a}</span><span>{b}</span></div>'
                 for a, b in (('15.00', '2 Egg Rolls'), ('25.00', 'Qt. Wonton Soup'), ('35.00', 'Edamame and a Can Soda'), ('45.00', 'Fried Dumplings (8)')))
     + '</div></div>'
+    + f'<div style="margin-top: 14px; border-top: 2px solid {INK}; border-bottom: 2px solid {INK}; padding: 6px 0 5px; display: flex; justify-content: space-between; align-items: baseline">'
+      f'<span style="font-weight: 700; font-size: 19px; letter-spacing: 0.03em">LUNCH TO GO</span><span style="font-style: italic; font-size: 16px">Call ahead, ready in 10 minutes.</span></div>'
     + f'<div style="position: absolute; left: 0; bottom: 4px; width: 360px; display: flex; justify-content: space-between; align-items: center">'
       f'<div style="font-size: 16px; line-height: 1.3"><img src="assets/art-star.png" alt="" style="display: inline-block; width: 15px; height: 15px; vertical-align: 0px"> Hot and Spicy.<br>Any dish made mild on request.</div>'
       f'<div style="flex: none; width: 74px; height: 74px; border-radius: 50%; border: 2px solid {INK}; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: 700; font-size: 16px; line-height: 1.05; transform: rotate(-8deg)">TAX<br>INCL.</div></div>'
@@ -130,8 +147,8 @@ back = (
     + f'<div style="position: absolute; left: 0; bottom: 0; width: 360px; text-align: center; font-size: 12px; line-height: 1.3">Prices subject to change without notice.<br>Printed by Lucky Print Shop, Jersey City</div>'
 )
 # ballpoint in the margin of the back cover, next to the private room line, and a fortune slip
-pen = (f'<div style="position: absolute; left: 624px; top: 247px; transform: rotate(-7deg); font-family: {PEN}; font-size: 27px; line-height: 1; white-space: nowrap; color: {BALL}">rent due!!</div>'
-       f'<div style="position: absolute; left: 485px; top: 206px; width: 160px; height: 28px; border: 2px solid {BALL}; border-radius: 50%; transform: rotate(-3deg); opacity: 0.85"></div>')
+pen = (f'<div style="position: absolute; left: 628px; top: 214px; transform: rotate(-7deg); font-family: {PEN}; font-size: 27px; line-height: 1; white-space: nowrap; color: {BALL}">rent due!!</div>'
+       f'<div style="position: absolute; left: 485px; top: 186px; width: 160px; height: 28px; border: 2px solid {BALL}; border-radius: 50%; transform: rotate(-3deg); opacity: 0.85"></div>')
 fortune = (f'<div style="position: absolute; left: 520px; top: 652px; width: 300px; padding: 6px 10px 5px; box-sizing: border-box; background: #f7f5ee; transform: rotate(-3.5deg); box-shadow: 1px 2px 3px rgba(40,50,40,0.28); text-align: center; color: {RED}">'
            f'<div style="font-size: 15px; line-height: 1.2">A good retainer serves one master.</div>'
            f'<div style="margin-top: 2px; font-size: 12px; letter-spacing: 0.06em">LUCKY NUMBERS 8 12 23 31 38 44</div></div>')
@@ -201,7 +218,7 @@ p3 = (
     + row('21.', 'Almond Cookies (3)', '.75', top=7)
     + row('22.', 'Fortune Cookies', 'free', 'In every bag.', top=6)
     + head('BEVERAGES', '飲品', top=15)
-    + row('23.', 'Iced Matcha Lemonade', '1.75', 'Fresh squeezed, sweetened with honey, poured over ice with frothy whisked green tea floated on top. Sprig of mint.', 'Made to order. Stir before drinking.', top=9)
+    + row('23.', 'Green Tea Lemonade', '1.75', 'Fresh squeezed, sweetened with honey, poured over ice, with a frothy shot of whisked Japanese matcha floated on top. Sprig of mint.', 'Made to order. Stir before drinking.', top=9)
     + row('24.', 'Hot Jasmine Tea (pot)', '.75', top=7)
     + row('25.', 'Can Soda', '.85', top=6)
     + row('26.', '2 Liter Soda', '2.25', top=6)
@@ -209,7 +226,7 @@ p3 = (
       f'<b>Please order by number.</b> Brown rice add .50.<br>We cook with 100% vegetable oil.</div>'
 )
 # ballpoint: someone circled No. 10 and wrote x2
-pen_in = (f'<div style="position: absolute; left: 486px; top: 137px; width: 44px; height: 34px; border: 2px solid {BALL}; border-radius: 50%; transform: rotate(-6deg); opacity: 0.85"></div>'
+pen_in = (f'<div style="position: absolute; left: 487px; top: 137px; width: 46px; height: 34px; border: 2px solid {BALL}; border-radius: 50%; transform: rotate(-6deg); opacity: 0.85"></div>'
           f'<div style="position: absolute; left: 702px; top: 243px; transform: rotate(-8deg); font-family: {PEN}; font-size: 28px; line-height: 1; color: {BALL}">x2</div>')
 
 inside = panel(0, p1) + panel(1, p2) + panel(2, p3) + pen_in
@@ -233,7 +250,7 @@ labels = {"Ghost Dog: The Way of the Samurai (1999)": {
     "Edamame": {"n": "Edamame", "d": "Young green soybeans boiled in the pod, sea salt and a few drops of sesame oil.", "note": "We bring a bowl for the pods."},
     "Teriyaki rice bowl": {"n": "Chicken Teriyaki Bowl", "d": "Boneless thigh seared crisp on the skin side, glazed with soy, mirin, sake and sugar, sliced over steamed short grain rice with pink pickled ginger and scallion.", "note": "Chef's special. Our number one seller."},
     "Coconut ice cream": {"n": "Toasted Coconut Ice Cream", "d": "Churned in our kitchen, rich and smooth, with golden flakes stirred through and more on top.", "note": "Made here. One flavor only."},
-    "Rooftop iced matcha honey lemonade": {"n": "Iced Matcha Lemonade", "d": "Fresh squeezed, sweetened with honey, poured over ice with frothy whisked green tea floated on top. Sprig of mint.", "note": "Made to order. Stir before drinking."}
+    "Rooftop iced matcha honey lemonade": {"n": "Green Tea Lemonade", "d": "Fresh squeezed, sweetened with honey, poured over ice, with a frothy shot of whisked Japanese matcha floated on top. Sprig of mint.", "note": "Made to order. Stir before drinking."}
 }}
 open(os.path.join(D, 'rooftop.labels.json'), 'w').write(json.dumps(labels, indent=1, ensure_ascii=False))
 print('built')

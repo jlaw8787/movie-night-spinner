@@ -1,106 +1,123 @@
-"""Builds both faces of the Departure Lounge table card, 1990.
-4.25 x 11 in (a tall two-sided table card, flat, no folds), 408 x 1056 px per face.
+"""Builds both faces of the Runway Lounge table card, 1990.
+A tall two-sided laminated table card that stands in a clear acrylic holder on the bar:
+4.25 x 11 in, flat, no folds, 408 x 1056 px per face.
+Printed in two spot inks (brown key and orange, with a rust stripe) on oatmeal cover stock.
 Writes front.html and back.html from front.body.html and back.body.html."""
 import os
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 408, 1056
-NAVY, AMBER, INK, MUTED, RULE = '#1c2847', '#e0892b', '#1f2333', '#545a6b', '#b9b2a2'
-FONTS = 'family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Archivo+Narrow:wght@600;700&family=Space+Mono:wght@700'
+BROWN, ORANGE, RUST, BODY, PAPER = '#42281a', '#e06e22', '#b0401e', '#4a3326', '#ebe3d2'
+FONTS = 'family=Michroma&family=Saira+Semi+Condensed:wght@500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400'
 FONT_LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=block">'
-NARROW = "'Archivo Narrow', sans-serif"
+SAIRA = "'Saira Semi Condensed', sans-serif"
+TINOS = "'Tinos', serif"
 
-# split-flap board over the bar: (label, status)
-BOARD = [('BAR', 'OPEN'), ('KITCHEN', 'TO 11PM'), ('LAST CALL', '11:30')]
-KITCHEN = [
-    ('Stuffed cherry tomatoes', 'A dozen, filled with whipped feta, fresh basil and lemon zest.', '3.95'),
-    ('Honey-lime chicken wings', 'Roasted crisp, tossed in butter with sweet chili sauce, red pepper flakes and fresh cilantro.', '5.95'),
-    ('Turkey and Swiss on a kaiser', 'Lettuce, tomato, mayo and mustard. Wrapped tight in paper so it travels.', '5.25'),
-    ('Shrimp cocktail', 'Five jumbo shrimp on ice with horseradish red sauce and a lemon wedge.', '7.50'),
+HOURS = [('Coffee and Danish', 'from 6 AM'), ('Kitchen', '11 AM to 11 PM'),
+         ('Last call at the bar', '11:30 PM'), ('Lounge closes', 'Midnight')]
+FARE = [
+    ('Stuffed cherry tomatoes', 'A dozen, filled with feta cheese beaten smooth with fresh basil and grated lemon peel.', '3.95'),
+    ('Thai-style chicken wings', 'Oven-crisped, then glazed with honey, butter, lime juice and sweet chili sauce. Hot pepper flakes and fresh coriander on top.', '5.95'),
+    ('Nachos', 'Tortilla chips under melted Monterey Jack, pickled jalape&ntilde;os, sour cream and salsa.', '4.75'),
+    ('Shrimp cocktail', 'Five jumbo shrimp on cracked ice, horseradish red sauce, a wedge of lemon.', '7.50'),
+    ('Turkey and Swiss on a kaiser', 'Thin-sliced roast breast, iceberg, tomato, mayonnaise and yellow mustard. Wrapped in deli paper to carry on board.', '5.25'),
 ]
 COCKTAILS = [
-    ('Wheels Up bourbon smash', 'Fresh mint and lemon muddled with sugar, shaken hard and poured over crushed ice.', '4.75'),
+    ('Kentucky julep', 'Bourbon shaken with fresh mint, lemon and sugar, poured over crushed ice.', '4.75'),
+    ('Bloody Mary', 'Vodka and spiced tomato juice, with a celery stalk.', '4.50'),
     ('Screwdriver', 'Vodka and fresh orange juice over ice.', '4.25'),
 ]
-SMALL = [('Draft beer', '16 oz glass', '3.25'), ('House wine', 'Red, white or blush', '3.75'),
-         ('Coffee', 'Free refills', '1.00'), ('Sodas', 'Cola, ginger ale, lemon-lime', '1.25')]
-KID_DRINK = ('Milk or orange juice', 'Small glass', '.95')
+BEER = [('Draft beer', '16 oz glass', '3.25'), ('Imported beer', 'Ask for today&rsquo;s bottles', '3.75'),
+        ('House wine', 'Chablis, burgundy or white zinfandel', '3.75'), ('Sodas', 'Cola, diet cola, ginger ale', '1.25')]
+COFFEE = [('Coffee', 'Bottomless cup', '1.00'), ('Hot tea', 'Pot for one', '.95'),
+          ('Danish', 'Cheese or cherry, warmed', '1.50'), ('Chili con carne', 'Bowl, with saltines', '3.95')]
 KIDS = [
-    ('Clown cake', 'Jam sponge under white buttercream, a piped face and a cherry nose.', '2.25'),
-    ('Grilled cheese', 'American cheese on white bread, with fries.', '3.50'),
+    ('Clown cake', 'Jam sponge under white buttercream, with a piped face and a cherry nose.', '2.25', 'The crying-on-the-inside kind.'),
+    ('Grilled cheese', 'American cheese on white bread, with French fries.', '3.50', ''),
 ]
+KID_DRINK = ('Milk or orange juice', 'Small glass', '.95')
 NOTES = [
-    ('Airport buses', 'Exact change only.'),
-    ('Taxis', 'Agree the route with your driver.'),
-    ('From Brooklyn', 'Expressway signs are down for roadwork. Allow extra time.'),
-    ('Police and flight crews', 'Coffee is on us.'),
+    ('City buses', 'Drivers take exact fare only. Our cashier will make change.'),
+    ('Taxis', 'Agree on the route before you ride.'),
+    ('Driving from Brooklyn', 'Expressway signs are down for construction. Allow extra time.'),
+    ('Bound for Fiji', 'Pacific flights board 45 minutes before departure.'),
+    ('Police and flight crews', 'Coffee is on the house.'),
 ]
 
-def head(label, right=''):
-    r = f'<span style="font-family: {NARROW}; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; color: {MUTED}">{right}</span>' if right else ''
-    return (f'<div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid {NAVY}; padding-bottom: 5px">'
-            f'<span style="font-family: {NARROW}; font-weight: 700; font-size: 15px; letter-spacing: 0.2em; color: {NAVY}">{label}</span>{r}</div>')
+def head(label, right='', top=0):
+    r = (f'<span style="font-family: {SAIRA}; font-weight: 600; font-size: 13px; letter-spacing: 0.1em; color: {RUST}">{right}</span>' if right else '')
+    return (f'<div style="position: relative; margin-top: {top}px; height: 26px">'
+            # the orange bar sits a hair out of register with the brown rule above it
+            f'<div style="position: absolute; left: 1px; right: -1px; bottom: 0; height: 5px; background: {ORANGE}"></div>'
+            f'<div style="position: absolute; left: 0; right: 0; bottom: 6px; height: 1px; background: {BROWN}"></div>'
+            f'<div style="position: absolute; left: 0; right: 0; top: 0; display: flex; justify-content: space-between; align-items: baseline">'
+            f'<span style="font-family: {SAIRA}; font-weight: 700; font-size: 16px; letter-spacing: 0.16em; color: {BROWN}">{label}</span>{r}</div></div>')
 
-def item(n, d, p, top=12):
-    return (f'<div style="margin-top: {top}px"><div style="display: flex; align-items: baseline; gap: 12px">'
-            f'<h3 style="flex: 1; min-width: 0; margin: 0; font-weight: 700; font-size: 20px; line-height: 1.15; color: {INK}">{n}</h3>'
-            f'<span style="font-family: \'Space Mono\', monospace; font-weight: 700; font-size: 17px; color: {NAVY}">{p}</span></div>'
-            f'<p style="margin: 3px 0 0; font-size: 16px; line-height: 1.36; color: #3b4152; text-wrap: pretty">{d}</p></div>')
+def leader(n, p, size=20, weight=700):
+    return (f'<div style="display: flex; align-items: baseline; gap: 6px">'
+            f'<span style="font-family: {SAIRA}; font-weight: {weight}; font-size: {size}px; line-height: 1.1; color: {BROWN}">{n}</span>'
+            f'<span style="flex: 1; min-width: 10px; border-bottom: 2px dotted #9a7c63; transform: translateY(-4px)"></span>'
+            f'<span style="font-family: {SAIRA}; font-weight: 700; font-size: {size - 1}px; color: {BROWN}">{p}</span></div>')
 
-def flap(ch, amber):
-    col = '#f2b04a' if amber else '#ece6d6'
-    t = ch if ch != ' ' else '&nbsp;'
-    return (f'<div style="position: relative; width: 17px; height: 26px; background: #2a2d36; border-radius: 2px; text-align: center; '
-            f'font-family: \'Space Mono\', monospace; font-weight: 700; font-size: 17px; line-height: 26px; color: {col}">{t}'
-            f'<div style="position: absolute; left: 0; top: 12.5px; width: 17px; height: 1px; background: #15171d"></div></div>')
+def item(n, d, p, top=11, note=''):
+    nt = (f'<p style="margin: 2px 0 0; font-family: {SAIRA}; font-weight: 600; font-size: 14px; letter-spacing: 0.04em; color: {ORANGE}">{note}</p>' if note else '')
+    return (f'<div style="margin-top: {top}px">{leader(n, p)}'
+            f'<p style="margin: 2px 0 0; font-family: {TINOS}; font-size: 16px; line-height: 1.3; color: {BODY}; text-wrap: pretty">{d}</p>{nt}</div>')
 
-def board():
-    rows = ''
-    for i, (a, b) in enumerate(BOARD):
-        pad = 18 - len(a) - len(b)
-        cells = ''.join(flap(c, False) for c in a) + ''.join(flap(' ', False) for _ in range(pad)) + ''.join(flap(c, True) for c in b)
-        rows += f'<div style="display: flex; gap: 1px; {"" if i == 0 else "margin-top: 3px"}">{cells}</div>'
-    return (f'<div style="margin-top: 20px; background: #16181f; padding: 8px 5px 9px; border-radius: 3px">'
-            f'<div style="font-family: {NARROW}; font-weight: 700; font-size: 12px; letter-spacing: 0.24em; color: #f2b04a; margin: 0 0 6px 2px">NOW SERVING</div>{rows}</div>')
+def small(n, d, p, top=6):
+    return (f'<div style="margin-top: {top}px; display: flex; align-items: baseline; gap: 6px">'
+            f'<span style="font-family: {SAIRA}; font-weight: 700; font-size: 18px; color: {BROWN}">{n}</span>'
+            f'<span style="font-family: {TINOS}; font-style: italic; font-size: 15px; color: {BODY}">{d}</span>'
+            f'<span style="flex: 1; min-width: 8px; border-bottom: 2px dotted #9a7c63; transform: translateY(-4px)"></span>'
+            f'<span style="font-family: {SAIRA}; font-weight: 700; font-size: 17px; color: {BROWN}">{p}</span></div>')
 
-def kitchen():
-    return '<div style="margin-top: 24px">' + head('LIGHT FARE', 'FROM 11 AM') + ''.join(item(*x) for x in KITCHEN) + '</div>'
+def hours():
+    rows = ''.join(
+        f'<div style="display: flex; align-items: baseline; gap: 6px; margin-top: {0 if i == 0 else 3}px">'
+        f'<span style="font-family: {TINOS}; font-size: 16px; color: {BODY}">{a}</span>'
+        f'<span style="flex: 1; border-bottom: 2px dotted #9a7c63; transform: translateY(-4px)"></span>'
+        f'<span style="font-family: {SAIRA}; font-weight: 700; font-size: 16px; color: {BROWN}">{b}</span></div>' for i, (a, b) in enumerate(HOURS))
+    return (f'<div style="margin-top: 16px; border: 2px solid {BROWN}; padding: 3px">'
+            f'<div style="border: 1px solid {BROWN}; padding: 9px 12px 10px">'
+            f'<div style="font-family: {SAIRA}; font-weight: 700; font-size: 13px; letter-spacing: 0.22em; color: {RUST}; margin-bottom: 5px">OPEN EVERY DAY</div>{rows}</div></div>')
+
+def fare():
+    return head('LIGHT FARE', 'KITCHEN 11 AM TO 11 PM', 20) + ''.join(item(*x) for x in FARE)
 
 def bar():
-    s = head('COCKTAILS') + ''.join(item(*x) for x in COCKTAILS)
-    rows = ''.join(
-        f'<div style="display: flex; align-items: baseline; gap: 8px; margin-top: 7px"><span style="font-weight: 700; font-size: 18px; color: {INK}">{n}</span>'
-        f'<span style="flex: 1; min-width: 0; font-size: 16px; color: #3b4152">{d}</span>'
-        f'<span style="font-family: \'Space Mono\', monospace; font-weight: 700; font-size: 17px; color: {NAVY}">{p}</span></div>' for n, d, p in SMALL)
-    return s + f'<div style="margin-top: 26px">{head("MORE TO DRINK")}<div style="margin-top: 4px">{rows}</div></div>'
-
-def small(n, d, p):
-    return (f'<div style="display: flex; align-items: baseline; gap: 8px; margin-top: 7px"><span style="font-weight: 700; font-size: 18px; color: {INK}">{n}</span>'
-            f'<span style="flex: 1; min-width: 0; font-size: 16px; color: #3b4152">{d}</span>'
-            f'<span style="font-family: \'Space Mono\', monospace; font-weight: 700; font-size: 17px; color: {NAVY}">{p}</span></div>')
+    s = head('COCKTAILS', 'FROM 11 AM') + ''.join(item(*x, top=9) for x in COCKTAILS)
+    s += head('BEER, WINE AND SODA', '', 18) + '<div style="margin-top: 4px">' + ''.join(small(*x) for x in BEER) + '</div>'
+    s += head('COFFEE BAR', 'FROM 6 AM', 18) + '<div style="margin-top: 4px">' + ''.join(small(*x) for x in COFFEE) + '</div>'
+    return s
 
 def kids():
-    return f'<div style="margin-top: 26px">{head("YOUNG TRAVELERS", "12 AND UNDER")}' + ''.join(item(*x) for x in KIDS) + f'<div style="margin-top: 5px">{small(*KID_DRINK)}</div></div>'
+    s = head('YOUNG TRAVELERS', '12 AND UNDER', 18)
+    s += ''.join(item(n, d, p, top=9, note=nt) for n, d, p, nt in KIDS)
+    s += small(*KID_DRINK, top=8)
+    s += f'<p style="margin: 6px 0 0; font-family: {TINOS}; font-style: italic; font-size: 15px; color: {BODY}">Every young traveler gets a balloon.</p>'
+    return s
 
 def notes():
-    rows = ''.join(f'<p style="margin: {0 if i == 0 else 7}px 0 0; font-size: 16px; line-height: 1.35; color: {INK}; text-wrap: pretty"><b style="font-weight: 700">{t}.</b> {d}</p>' for i, (t, d) in enumerate(NOTES))
-    return (f'<div style="margin-top: 28px; border: 2px solid {NAVY}; padding: 12px 14px 13px">'
-            f'<div style="font-family: {NARROW}; font-weight: 700; font-size: 15px; letter-spacing: 0.2em; color: {AMBER}; margin-bottom: 7px">BEFORE YOU FLY</div>{rows}</div>')
+    rows = ''.join(f'<p style="margin: {0 if i == 0 else 5}px 0 0; font-family: {TINOS}; font-size: 15px; line-height: 1.3; color: {BODY}; text-wrap: pretty">'
+                   f'<b style="font-family: {SAIRA}; font-weight: 700; font-size: 15px; color: {BROWN}">{t}.</b> {d}</p>' for i, (t, d) in enumerate(NOTES))
+    return (f'<div style="margin-top: 18px; border: 2px solid {BROWN}; padding: 3px"><div style="border: 1px solid {BROWN}; padding: 9px 12px 10px">'
+            f'<div style="font-family: {SAIRA}; font-weight: 700; font-size: 13px; letter-spacing: 0.22em; color: {RUST}; margin-bottom: 5px">BEFORE YOU FLY</div>{rows}</div></div>')
 
 def overlays(face):
-    # shared fine grain at its own shape (no stretch), then soft wear, then the glass ring on the back
-    s = f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: -540px; top: 0; width: 1494px; height: {H}px; pointer-events: none; display: block">'
+    # shared fine grain at its own shape (no stretch), then soft wear and laminate sheen, then the glass ring
+    s = f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: -540px; top: 0; width: 1494px; height: {H}px; pointer-events: none; display: block; opacity: 0.8">'
     s += f'<img src="assets/wear-{face}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">'
     if face == 'back':
-        s += '<img src="assets/stain-ring.png" alt="" aria-hidden="true" style="position: absolute; left: 292px; top: -96px; width: 210px; height: 210px; pointer-events: none; display: block">'
+        s += '<img src="assets/stain-ring.png" alt="" aria-hidden="true" style="position: absolute; left: 236px; top: 470px; width: 200px; height: 200px; pointer-events: none; display: block">'
     return s
 
 for face in ('front', 'back'):
     b = open(os.path.join(D, face + '.body.html')).read()
-    b = (b.replace('{{GRAIN}}', '').replace('{{BOARD}}', board()).replace('{{KITCHEN}}', kitchen())
-          .replace('{{BAR}}', bar()).replace('{{KIDS}}', kids()).replace('{{NOTES}}', notes()))
+    for k, v in (('{{HOURS}}', hours), ('{{FARE}}', fare), ('{{BAR}}', bar), ('{{KIDS}}', kids), ('{{NOTES}}', notes)):
+        if k in b: b = b.replace(k, v())
+    b = b.replace('{{BROWN}}', BROWN).replace('{{ORANGE}}', ORANGE).replace('{{RUST}}', RUST).replace('{{BODY}}', BODY).replace('{{PAPER}}', PAPER)
     i = b.rindex('</div>')
     b = b[:i] + overlays(face) + b[i:]
     open(os.path.join(D, face + '.html'), 'w').write(
-        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Departure Lounge table card, {face}</title>{FONT_LINK}'
+        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Runway Lounge table card, {face}</title>{FONT_LINK}'
         f'<style>body{{margin:0}}</style></head><body>{b}</body></html>')
 print('built')

@@ -53,11 +53,13 @@ crop = src.crop((0, 760, 1600, 760 + int(1600 * CH / CW)))
 big = crop.resize((OW * SS, OH * SS), Image.LANCZOS).filter(ImageFilter.GaussianBlur(SS * 0.8))
 arr = np.asarray(big).astype(np.float32) / 255.0
 lum = 0.3 * arr[..., 0] + 0.59 * arr[..., 1] + 0.11 * arr[..., 2]
-# teal plate: darkness, pushed so the night sky prints near solid and the lights stay open
-cov_t = np.clip((1 - lum) ** 1.15 * 1.02 - 0.02, 0, 1)
+# levels: open the shadows so the navy sky separates from the black buildings and water
+lev = np.clip((lum - 0.015) / 0.24, 0, 1) ** 0.8
 # burgundy plate: warm light only (moon, sodium lights, their reflections)
-warm = np.clip((arr[..., 0] - arr[..., 2]) * 2.4 + (arr[..., 0] - 0.35) * 0.4, 0, 1)
-cov_b = np.clip(warm ** 0.9 * 0.9, 0, 0.9)
+warm = np.clip((arr[..., 0] - arr[..., 2]) * 2.6 + (arr[..., 0] - 0.35) * 0.5, 0, 1)
+cov_b = np.clip(warm * 0.62, 0, 0.62)
+# teal plate: darkness, knocked out under the warm areas so the moon prints in burgundy alone
+cov_t = np.clip(1 - lev * 0.62, 0, 1) * (1 - np.clip(warm * 1.4, 0, 0.92))
 pitch = 4.4 * SS  # about 44 lines per inch at print size, coarse enough to read as a screen
 mt = plate(cov_t, pitch, 45, cov_t.shape).astype(np.float32)
 mb = plate(cov_b, pitch, 75, cov_b.shape).astype(np.float32)

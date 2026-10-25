@@ -1,176 +1,239 @@
-"""Builds the Heritage Club bill of fare (Trading Places, 1983): a two-sided card on heavy cream
-stock, US Legal portrait (8.5 x 14 in, 816 x 1344 CSS px), printed both sides, no fold.
-Front: the Dining Room. Back: the Members' Bar, the Wager Book and the house rules, with the
-Head Steward's typed notice clipped on. Writes front.body.html, back.body.html, front.html, back.html."""
+"""Builds the Duke & Duke Market Letter, Christmas issue (Trading Places, 1983).
+The firm's weekly letter to clients and staff: one sheet of white offset stock, US Letter portrait
+(8.5 x 11 in, 816 x 1056 CSS px), printed both sides in black and one orange spot ink, folded in
+thirds for the envelope and later punched for a binder. The front leads with the partners'
+Christmas buffet; the back carries the market table, the bar list and the mailing panel.
+Writes front.body.html, back.body.html, front.html, back.html."""
 import os
 D = os.path.dirname(os.path.abspath(__file__))
-W, H = 816, 1344
-GREEN, OX, INK, SOFT, PAPER, RULE = '#1d3a2e', '#7a2f2a', '#26231e', '#4d473d', '#f2ead6', '#1d3a2e'
-FONTS = ('family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600'
-         '&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700')
+W, H = 816, 1056
+INK, OR, PAPER, GREY = '#1c1917', '#e2702a', '#f6f4ee', '#4a4540'
+FONTS = ('family=Arimo:ital,wght@0,400;0,700;1,400&family=Bodoni+Moda:opsz,wght@96,900'
+         '&family=DotGothic16&family=Herr+Von+Muellerhoff&family=Tinos:ital,wght@0,400;0,700;1,400;1,700')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-CG, LC, CP = "'Cormorant Garamond',serif", "'Libre Caslon Text',serif", "'Courier Prime',monospace"
+TI, AR, BO, DOT, SIG = "'Tinos',serif", "'Arimo',sans-serif", "'Bodoni Moda',serif", "'DotGothic16',monospace", "'Herr Von Muellerhoff',cursive"
+L, R = 84, 60            # left margin clears the binder holes on the front; mirrored on the back
+CW = W - L - R           # 672
+
+# offset press ink: a hair of spread on every glyph, no filters
+SPREAD = f'text-shadow: 0 0 0.6px {INK}'
+SPREAD_OR = f'text-shadow: 0 0 0.6px {OR}'
 
 # ---------- copy ----------
-FRONT = [
-  ('To begin', [
-    ('Devils on horseback', 'Prunes stuffed with a whole almond, wrapped in thin bacon and baked until crisp. Served warm.', '3.25', None),
-    ('Snapper soup', 'Turtle simmered dark and thick with tomato and chopped egg. Dry sherry poured at the table.', '3.50', None),
-    ('Shrimp cocktail', 'Six Gulf shrimp, poached and served ice cold with a sharp red sauce and a wedge of lemon.', '6.95', None)]),
-  ('From the carving cart', [
-    ('Prime rib of beef, au jus', 'Slow roasted on the bone and carved at your table. Horseradish cream, crisp roast potatoes.', '15.50', None)]),
-  ('The Grill Room', [
-    ('Bacon, lettuce and tomato', 'Thick-cut and crisp, iceberg leaf, ripe beefsteak slices and mayonnaise on toasted white.', '4.25', None),
-    ('Smoked salmon', 'Sliced thin from the side. Warm buckwheat blini, sour cream, capers, red onion and dill.', '7.25', 'Kindly enjoy it at the table.')]),
-  ('Desserts', [
-    ('Orange butter cake', 'Fresh zest beaten through the batter, brushed while warm with frozen juice concentrate boiled to a syrup.', '2.75', None)]),
+LEAD = ('<b style="font-family: %s; font-size: 14px; letter-spacing: 0.04em">THE PARTNERS INVITE</b> all staff, '
+        'with husbands and wives, to the firm’s Christmas party on Friday afternoon. Trading closes at the usual hour '
+        'and the buffet opens on the floor at three. The Heritage Club kitchen is sending the food, a carver for the '
+        'roast and two men for the bar, which stays open until six. Please clear order tickets from your desks and '
+        'lock your desk drawers before you leave them.') % AR
+WELCOME = ('<b style="font-family: %s; font-size: 14px; letter-spacing: 0.04em">WELCOME.</b> Mr. William Ray Valentine '
+           'has joined the firm and takes the desk lately held by Mr. Louis Winthorpe III, who has left Duke &amp; Duke.') % AR
+CAPTION = ('Mr. Mortimer Duke, left, and Mr. Randolph Duke take Mr. Valentine through the business over breakfast: '
+           'coffee, wheat, pork bellies and orange juice.')
+
+BUFFET_L = ('Passed and on the sideboard', [
+    ('Devils on horseback', 'Prunes stuffed with a whole almond, wrapped in bacon and baked until crisp. Passed hot.', 'Out on trays from three.'),
+    ('Shrimp cocktail', 'Six Gulf shrimp, poached and chilled on cracked ice, with a sharp red sauce and lemon.', None),
+    ('Smoked salmon', 'Nova, sliced thin from the whole side, with pumpernickel, cream cheese, capers and red onion.', 'A whole side on the board.'),
+    ('Swedish meatballs', 'Beef and pork, simmered in a sour cream gravy and kept hot in the chafing dish.', None),
+])
+BUFFET_R = ('From the carving board', [
+    ('Roast prime rib of beef', 'Standing rib, salted the day before, roasted slow and carved to order. Natural juices, horseradish cream and oven-browned potatoes.', 'The Heritage Club carver.'),
+], 'Sweets', [
+    ('Orange butter cake', 'Grated rind and fresh juice in the batter, brushed while still warm with a thick citrus syrup.', 'From the club’s own pastry kitchen.'),
+    ('Christmas cookies', 'Butter spritz, sugar stars and pecan crescents, by the plateful.', None),
+])
+
+BAR = [
+    ('Mimosa', 'Fresh-squeezed orange juice and chilled champagne, half and half, in a tall flute.', None),
+    ('Frozen screwdriver', 'Vodka and orange juice whirled in the blender with crushed ice, poured in small glasses.', 'Plain orange for the drivers.'),
+    ('Eggnog', 'Cream, eggs and nutmeg, with a little brandy.', None),
+    ('Coffee', 'A fresh pot all afternoon, regular or decaffeinated.', None),
 ]
-BAR_L = [
-  ('Cocktails', [
-    ('Mimosa', 'Fresh-squeezed juice and chilled champagne, half and half, in a flute.', '3.25'),
-    ('Frozen orange frappé', 'Juice blended with shaved ice and a splash of vodka, in a small glass.', '2.75'),
-    ('Dry martini', 'Gin or vodka, stirred until very cold, with an olive or a lemon twist.', '3.50'),
-    ('Manhattan', 'Rye whiskey, sweet vermouth and a dash of bitters, with a cherry.', '3.50')]),
+
+MARKETS = [
+    ('Frozen concentrated orange juice', 'Jan', 'cents per lb.', '146.20', '+2.35', '115.80'),
+    ('Pork bellies', 'Feb', 'cents per lb.', '61.45', '−1.10', '78.20'),
+    ('Live hogs', 'Feb', 'cents per lb.', '47.10', '−0.40', '56.30'),
+    ('Live cattle', 'Feb', 'cents per lb.', '66.35', '+0.25', '60.10'),
+    ('Wheat', 'Mar', 'cents per bu.', '352.50', '+3.00', '352.00'),
+    ('Corn', 'Mar', 'cents per bu.', '339.25', '+1.75', '245.00'),
+    ('Soybeans', 'Jan', 'cents per bu.', '812.50', '−6.00', '563.00'),
+    ('Coffee', 'Mar', 'cents per lb.', '140.10', '+0.85', '128.40'),
+    ('Cocoa', 'Mar', 'dollars per metric ton', '2,465', '+38', '1,610'),
+    ('Sugar, world', 'Mar', 'cents per lb.', '8.42', '−0.11', '6.90'),
+    ('Gold', 'Feb', 'dollars per troy oz.', '388.40', '+4.20', '452.00'),
+    ('Silver', 'Mar', 'cents per troy oz.', '915.00', '+12.50', '1,055.00'),
 ]
-BAR_R = [
-  ('Wine and port', [
-    ('Club claret', 'Our own Bordeaux. Glass or bottle.', '2.50 / 12.00'),
-    ('Champagne, brut', 'Kept on ice behind the bar.', '3.75 / 26.00'),
-    ('Vintage port', 'Decanted each evening at six.', '3.50')]),
-  ('After dinner', [
-    ('Coffee', 'A fresh pot to every table.', '1.00')]),
+NOTES = [
+    ('ORANGE JUICE.', 'Frozen concentrate firmed on talk of a cold winter in Florida. The trade waits on the Agriculture Department’s orange crop estimate, due in January. Clients holding positions over the holiday should call their broker before Friday.'),
+    ('PORK BELLIES.', 'Bacon, as in the BLT. Bellies drifted lower on heavy cold storage stocks and light holiday buying.'),
+    ('GOLD AND SILVER.', 'Steady. Gold held near $390 the ounce through a quiet week.'),
+    ('HOLIDAY TRADING.', 'The exchanges are closed Monday, December 26, and Monday, January 2. Our order desk is staffed every other trading day.'),
+    ('BOWL POOL.', 'One dollar a square. Sign up at the front desk.'),
 ]
-RULES = [
-  'Jackets and ties in all club rooms.',
-  'Guests remain with the member who signed them in.',
-  'No cash is taken. All charges are signed to the member’s account.',
-  'Business papers are not to be shown in the Dining Room.',
-]
+
 
 # ---------- pieces ----------
-def frame():
-    return (f'<div style="position: absolute; left: 28px; top: 28px; width: {W - 60}px; height: {H - 60}px; border: 2px solid {RULE}"></div>'
-            f'<div style="position: absolute; left: 37px; top: 37px; width: {W - 76}px; height: {H - 76}px; border: 1px solid {RULE}"></div>'
-            + ''.join(f'<div style="position: absolute; left: {x - 5}px; top: {y - 5}px; width: 10px; height: 10px; background: {PAPER}; '
-                      f'border: 1px solid {RULE}; transform: rotate(45deg)"></div>' for x, y in ((33, 33), (W - 33, 33), (33, H - 33), (W - 33, H - 33))))
+def kicker(t, color=OR):
+    return (f'<div style="font-family: {AR}; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; color: {color}; '
+            f'{SPREAD_OR if color == OR else SPREAD}">{t.upper()}</div>')
 
-def medallion(size=104):
-    f = round(size * 0.44)
-    return (f'<div style="position: relative; width: {size}px; height: {size}px; margin: 0 auto; border-radius: 50%; border: 2px solid {GREEN}; box-sizing: border-box">'
-            f'<div style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px; border-radius: 50%; border: 1px solid {GREEN}"></div>'
-            f'<div style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; '
-            f'font-family: {CG}; font-style: italic; font-weight: 700; font-size: {f}px; color: {GREEN}; line-height: 1">'
-            f'<span>H</span><span style="margin-left: -{round(f * 0.08)}px; color: {OX}">C</span></div></div>')
 
-def ornament(w=150):
-    return (f'<div style="display: flex; align-items: center; justify-content: center; gap: 12px">'
-            f'<span style="width: {w}px; height: 1px; background: {GREEN}"></span>'
-            f'<span style="width: 7px; height: 7px; background: {OX}; transform: rotate(45deg)"></span>'
-            f'<span style="width: {w}px; height: 1px; background: {GREEN}"></span></div>')
-
-def head(t, gap, w=54, center=True):
-    return (f'<div style="display: flex; align-items: center; justify-content: {"center" if center else "flex-start"}; gap: 14px; margin: {gap}px 0 8px">'
-            + (f'<span style="width: {w}px; height: 1px; background: {OX}"></span>' if center else '')
-            + f'<span style="font-family: {CG}; font-weight: 700; font-size: 17px; letter-spacing: 0.3em; color: {OX}; padding-left: 0.3em">{t.upper()}</span>'
-            f'<span style="{"width: %dpx" % w if center else "flex: 1"}; height: 1px; background: {OX}"></span></div>')
-
-def dish(n, d, p, note, gap):
-    s = (f'<div style="text-align: center; margin-top: {gap}px">'
-         f'<h3 style="margin: 0; font-family: {CG}; font-weight: 700; font-size: 28px; line-height: 1.1; color: {GREEN}">{n}'
-         f'<span style="font-family: {LC}; font-weight: 400; font-size: 17px; color: {OX}; margin-left: 14px">{p}</span></h3>'
-         f'<p style="margin: 4px auto 0; max-width: 540px; font-family: {LC}; font-style: italic; font-size: 16px; line-height: 1.42; color: {INK}; text-wrap: balance">{d}</p>')
+def dish(n, d, note, top):
+    s = (f'<div style="margin-top: {top}px">'
+         f'<div style="font-family: {TI}; font-weight: 700; font-size: 22px; line-height: 1.12; color: {INK}; {SPREAD}">{n}</div>'
+         f'<div style="margin-top: 3px; font-family: {TI}; font-size: 16px; line-height: 1.32; color: {INK}; text-wrap: pretty; {SPREAD}">{d}</div>')
     if note:
-        s += f'<p style="margin: 3px 0 0; font-family: {CG}; font-weight: 600; font-size: 16px; letter-spacing: 0.06em; color: {OX}">{note}</p>'
+        s += f'<div style="margin-top: 3px; font-family: {TI}; font-style: italic; font-size: 15px; line-height: 1.25; color: {OR}; {SPREAD_OR}">{note}</div>'
     return s + '</div>'
 
-def bar_item(n, d, p, first):
-    return (f'<div style="margin-top: {0 if first else 18}px">'
-            f'<div style="display: flex; align-items: baseline; gap: 8px">'
-            f'<h3 style="margin: 0; font-family: {CG}; font-weight: 700; font-size: 25px; line-height: 1.1; color: {GREEN}; white-space: nowrap">{n}</h3>'
-            f'<span style="flex: 1; border-bottom: 2px dotted {SOFT}; opacity: 0.55; transform: translateY(-5px)"></span>'
-            f'<span style="font-family: {LC}; font-size: 16px; color: {OX}; white-space: nowrap">{p}</span></div>'
-            f'<p style="margin: 2px 0 0; font-family: {LC}; font-style: italic; font-size: 16px; line-height: 1.4; color: {INK}; text-wrap: pretty">{d}</p></div>')
 
-def bar_col(groups):
-    s = ''
-    for gi, (t, items) in enumerate(groups):
-        s += head(t, 0 if gi == 0 else 26, center=False) + ''.join(bar_item(*it, first=(i == 0)) for i, it in enumerate(items))
-    return s
+def dish_group(title, items, top=0):
+    return (f'<div style="margin-top: {top}px">{kicker(title)}'
+            f'<div style="height: 1px; background: {INK}; margin: 5px 0 0"></div>'
+            + ''.join(dish(*it, top=(10 if i == 0 else 15)) for i, it in enumerate(items)) + '</div>')
 
-def grain(name):
-    # shared A4-landscape grain turned on its side to cover the portrait card, then this face's wear
+
+def para(html, top=0, size=16, align='justify'):
+    return (f'<p style="margin: {top}px 0 0; font-family: {TI}; font-size: {size}px; line-height: 1.36; color: {INK}; '
+            f'text-align: {align}; hyphens: auto; {SPREAD}">{html}</p>')
+
+
+def wear(name):
     return (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: {(W - H) // 2}px; top: {(H - W) // 2}px; '
             f'width: {H}px; height: {W}px; transform: rotate(90deg); pointer-events: none; display: block">'
-            f'<img src="assets/wear-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">')
+            f'<img src="assets/wear-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; '
+            f'width: {W}px; height: {H}px; pointer-events: none; display: block">')
+
+
+def masthead():
+    # two-colour masthead: the orange plate prints a heavy drop under the black, a hair off register
+    word = 'DUKE &amp; DUKE'
+    common = f'font-family: {BO}; font-weight: 900; font-size: 86px; line-height: 1; letter-spacing: 0.01em; white-space: nowrap'
+    return f'''
+<div style="position: absolute; left: {L}px; top: 40px; width: {CW}px; display: flex; justify-content: space-between;
+     font-family: {AR}; font-weight: 700; font-size: 12px; letter-spacing: 0.16em; color: {INK}; {SPREAD}">
+  <span>FOR THE CLIENTS AND STAFF OF THE FIRM</span><span>PHILADELPHIA, PENNSYLVANIA</span></div>
+<div style="position: absolute; left: {L}px; top: 58px; width: {CW}px; height: 8px; background: {INK}"></div>
+<div style="position: absolute; left: {L + 4}px; top: 80px; {common}; color: {OR}">{word}</div>
+<div style="position: absolute; left: {L}px; top: 76px; {common}; color: {INK}; {SPREAD}">{word}</div>
+<div style="position: absolute; left: {L + 540}px; top: 82px; width: {CW - 540}px; text-align: right">
+  <div style="font-family: {AR}; font-weight: 700; font-size: 25px; line-height: 1.02; letter-spacing: 0.06em; color: {OR}; {SPREAD_OR}">MARKET<br>LETTER</div>
+  <div style="margin-top: 6px; font-family: {TI}; font-style: italic; font-size: 15px; line-height: 1.2; color: {INK}; {SPREAD}">Commodity brokers</div>
+</div>
+<div style="position: absolute; left: {L}px; top: 176px; width: {CW}px; height: 3px; background: {INK}"></div>
+<div style="position: absolute; left: {L}px; top: 182px; width: {CW}px; height: 2px; background: {OR}"></div>
+<div style="position: absolute; left: {L}px; top: 190px; width: {CW}px; height: 30px; box-sizing: border-box; display: flex;
+     align-items: center; font-family: {AR}; font-size: 14px; color: {INK}; {SPREAD}">
+  <span style="flex: 1">Week of December 19, 1983</span>
+  <span style="font-weight: 700; letter-spacing: 0.12em; color: {OR}; {SPREAD_OR}">CHRISTMAS ISSUE</span>
+  <span style="flex: 1; text-align: right">Number 50</span></div>
+<div style="position: absolute; left: {L}px; top: 222px; width: {CW}px; height: 1px; background: {INK}"></div>'''
+
 
 # ---------- faces ----------
 def front():
-    secs = ''
-    for gi, (t, items) in enumerate(FRONT):
-        secs += head(t, 0 if gi == 0 else 26) + ''.join(dish(*it, gap=(4 if i == 0 else 14)) for i, it in enumerate(items))
-    return f'''{frame()}
-<div style="position: absolute; left: 76px; top: 72px; width: {W - 152}px; text-align: center">
-  {medallion(88)}
-  <h1 style="margin: 14px 0 0; font-family: {CG}; font-weight: 700; font-size: 50px; line-height: 1; letter-spacing: 0.12em; padding-left: 0.12em; color: {GREEN}">THE HERITAGE CLUB</h1>
-  <div style="margin: 9px 0 16px; font-family: {LC}; font-size: 13px; letter-spacing: 0.42em; padding-left: 0.42em; color: {SOFT}">PHILADELPHIA</div>
-  {ornament()}
-  <div style="margin-top: 12px; font-family: {CG}; font-style: italic; font-weight: 600; font-size: 34px; line-height: 1.1; color: {OX}">The Dining Room</div>
-  <div style="margin-top: 4px; font-family: {LC}; font-size: 16px; color: {SOFT}">Bill of fare for December</div>
-  <div style="margin-top: 24px">{secs}</div>
-</div>
-<div style="position: absolute; left: 76px; top: {H - 120}px; width: {W - 152}px; text-align: center">
-  {ornament(110)}
-  <p style="margin: 12px 0 0; font-family: {LC}; font-size: 16px; line-height: 1.45; color: {SOFT}">Luncheon from noon to half past two. Dinner from six until ten.<br>The Members’ Bar and the Wager Book are overleaf.</p>
-</div>
-{grain('front')}'''
+    lc = 252
+    left = f'''
+<div style="position: absolute; left: {L}px; top: 240px; width: {lc}px">
+  {kicker('In the office')}
+  <h1 style="margin: 6px 0 0; font-family: {TI}; font-weight: 700; font-size: 31px; line-height: 1.06; color: {INK}; {SPREAD}">Christmas on the floor, Friday at three</h1>
+  {para(LEAD, 10)}
+  <div style="height: 1px; background: {INK}; margin: 14px 0 0"></div>
+  {para(WELCOME, 10)}
+</div>'''
+    right = f'''
+<div style="position: absolute; left: {L + lc + 20}px; top: 240px; width: 400px">
+  <img src="assets/still-halftone.png" alt="" style="display: block; width: 400px; height: 288px">
+  <p style="margin: 7px 0 0; font-family: {TI}; font-style: italic; font-size: 15px; line-height: 1.3; color: {INK}; {SPREAD}">{CAPTION}</p>
+</div>'''
+    t, items = BUFFET_L
+    rt, ritems, st, sitems = BUFFET_R
+    box = f'''
+<div style="position: absolute; left: {L}px; top: 614px; width: {CW}px; height: {H - 44 - 614}px; box-sizing: border-box; border: 3px solid {INK}">
+  <div style="position: absolute; left: 4px; top: 4px; right: 4px; bottom: 4px; border: 1px solid {OR}"></div>
+  <div style="position: absolute; left: 22px; top: 18px; right: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px">
+    <div style="font-family: {TI}; font-weight: 700; font-size: 30px; line-height: 1; color: {INK}; {SPREAD}">The Christmas Buffet</div>
+    <div style="font-family: {AR}; font-size: 14px; line-height: 1.25; color: {INK}; text-align: right; {SPREAD}">Friday, December 23, from 3 P.M.<br>With the compliments of the partners</div>
+  </div>
+  <div style="position: absolute; left: 22px; top: 64px; right: 22px; height: 2px; background: {INK}"></div>
+  <div style="position: absolute; left: 22px; top: 80px; width: 296px">{dish_group(t, items)}</div>
+  <div style="position: absolute; left: 335px; top: 80px; width: 1px; bottom: 22px; background: {INK}; opacity: 0.5"></div>
+  <div style="position: absolute; left: 352px; top: 80px; width: 292px">{dish_group(rt, ritems)}{dish_group(st, sitems, 22)}</div>
+</div>'''
+    return masthead() + left + right + box + wear('front')
+
 
 def back():
-    rules = ''.join(f'<p style="margin: {0 if i == 0 else 9}px 0 0; font-family: {LC}; font-size: 16px; line-height: 1.4; color: {INK}; text-wrap: pretty">{r}</p>' for i, r in enumerate(RULES))
-    clip = (f'<div style="position: absolute; left: 252px; top: -24px; width: 18px; height: 54px; border: 2px solid #8a8d8f; border-radius: 9px; box-sizing: border-box"></div>'
-            f'<div style="position: absolute; left: 256px; top: -16px; width: 10px; height: 38px; border: 2px solid #9a9da0; border-radius: 5px; box-sizing: border-box"></div>')
-    slip = f'''<div style="position: absolute; left: 432px; top: 952px; width: 300px; padding: 22px 22px 20px; box-sizing: border-box; background: #fbf7ec;
-      box-shadow: 0 1px 2px rgba(60,45,20,0.18), 0 6px 14px rgba(60,45,20,0.10); transform: rotate(1.6deg); font-family: {CP}; font-size: 16px; line-height: 1.35; color: #2c2a28">
-      {clip}
-      <div style="font-weight: 700; letter-spacing: 0.04em">HEAD STEWARD’S NOTICE</div>
-      <div style="margin-top: 10px">The Dining Room closes at 4 P.M. on Christmas Eve and New Year’s Eve.</div>
-      <div style="margin-top: 10px">Closing prices from the exchanges are posted in the Library at 5 P.M. Pork bellies and orange juice added at members’ request.</div>
-    </div>'''
-    return f'''{frame()}
-<div style="position: absolute; left: 76px; top: 72px; width: {W - 152}px; text-align: center">
-  {medallion(76)}
-  <h1 style="margin: 14px 0 0; font-family: {CG}; font-weight: 700; font-size: 42px; line-height: 1; letter-spacing: 0.12em; padding-left: 0.12em; color: {GREEN}">THE MEMBERS’ BAR</h1>
-  <div style="margin: 10px 0 16px; font-family: {LC}; font-style: italic; font-size: 16px; color: {SOFT}">Open from eleven in the morning until midnight</div>
-  {ornament()}
+    rows = ''
+    for i, (c, m, u, s, ch, y) in enumerate(MARKETS):
+        rows += (f'<tr style="background: {"rgba(226,112,42,0.10)" if i % 2 == 0 else "transparent"}">'
+                 f'<td style="padding: 3px 6px; text-align: left">{c}</td><td style="padding: 3px 6px">{m}</td>'
+                 f'<td style="padding: 3px 6px; text-align: left; font-style: italic">{u}</td>'
+                 f'<td style="padding: 3px 6px; text-align: right; font-weight: 700">{s}</td>'
+                 f'<td style="padding: 3px 6px; text-align: right">{ch}</td><td style="padding: 3px 6px; text-align: right">{y}</td></tr>')
+    th = f'font-family: {AR}; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; padding: 0 6px 5px; border-bottom: 1px solid {INK}'
+    table = f'''
+<table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-family: {TI}; font-size: 15px; line-height: 1.2; color: {INK};
+       font-variant-numeric: tabular-nums; {SPREAD}">
+  <tr><th style="{th}; text-align: left">COMMODITY</th><th style="{th}">MONTH</th><th style="{th}; text-align: left">UNIT</th>
+      <th style="{th}; text-align: right">SETTLE</th><th style="{th}; text-align: right">WEEK</th><th style="{th}; text-align: right">YEAR AGO</th></tr>
+  {rows}
+</table>'''
+    notes = ''.join(para(f'<b style="font-family: {AR}; font-size: 14px; letter-spacing: 0.04em">{h}</b> {b}', 0 if i == 0 else 9)
+                    for i, (h, b) in enumerate(NOTES))
+    bar = ''.join(dish(*b, top=(10 if i == 0 else 13)) for i, b in enumerate(BAR))
+    bl, br = R, L     # holes now on the right
+    cw = W - bl - br
+    return f'''
+<div style="position: absolute; left: {bl}px; top: 40px; width: {cw}px; display: flex; justify-content: space-between; align-items: baseline;
+     font-family: {AR}; font-size: 13px; color: {INK}; {SPREAD}">
+  <span style="font-weight: 700; letter-spacing: 0.14em">DUKE &amp; DUKE MARKET LETTER</span><span>Week of December 19, 1983&nbsp;&nbsp;&nbsp;<b>2</b></span></div>
+<div style="position: absolute; left: {bl}px; top: 60px; width: {cw}px; height: 3px; background: {INK}"></div>
+<div style="position: absolute; left: {bl}px; top: 66px; width: {cw}px; height: 2px; background: {OR}"></div>
+<div style="position: absolute; left: {bl}px; top: 82px; width: {cw}px">
+  {kicker('The week in the markets')}
+  <div style="margin-top: 4px; font-family: {TI}; font-weight: 700; font-size: 26px; line-height: 1.1; color: {INK}; {SPREAD}">Nearby futures, Friday’s settlement</div>
+  {table}
 </div>
-<div style="position: absolute; left: 76px; top: 300px; width: {W - 152}px; display: flex; gap: 44px">
-  <div style="flex: 1">{bar_col(BAR_L)}</div>
-  <div style="width: 1px; background: {GREEN}; opacity: 0.4"></div>
-  <div style="flex: 1">{bar_col(BAR_R)}</div>
+<div style="position: absolute; left: {bl}px; top: 470px; width: 340px">{notes}</div>
+<div style="position: absolute; left: {bl + 362}px; top: 470px; width: {cw - 362}px; box-sizing: border-box; padding: 16px 18px 18px;
+     background-image: url(assets/tint-screen.png); background-size: 120px 120px; border-top: 4px solid {INK}">
+  {kicker('Friday at the bar', INK)}
+  <div style="margin-top: 3px; font-family: {TI}; font-weight: 700; font-size: 26px; line-height: 1.05; color: {INK}; {SPREAD}">Open until six</div>
+  {bar}
 </div>
-<div style="position: absolute; left: 76px; top: 726px; width: {W - 152}px; box-sizing: border-box; border: 2px solid {GREEN}; padding: 4px">
-  <div style="border: 1px solid {GREEN}; padding: 18px 34px 20px; text-align: center">
-    <div style="font-family: {CG}; font-weight: 700; font-size: 30px; letter-spacing: 0.14em; padding-left: 0.14em; color: {GREEN}">THE WAGER BOOK</div>
-    <p style="margin: 8px 0 0; font-family: {LC}; font-size: 16px; line-height: 1.45; color: {INK}; text-wrap: balance">Wagers between members are entered in the book kept behind the bar, signed by both parties and settled on the day agreed.</p>
-    <p style="margin: 8px 0 0; font-family: {CG}; font-style: italic; font-weight: 600; font-size: 24px; color: {OX}">The customary stake is one dollar.</p>
+<div style="position: absolute; left: {bl}px; top: 790px; width: {cw}px; height: 1px; background: {INK}"></div>
+<div style="position: absolute; left: {bl}px; top: 804px; width: {cw}px; display: flex; gap: 24px; align-items: flex-start">
+  <div style="flex: 1">
+    {kicker('From the partners')}
+    {para('Our thanks to every member of the firm for a good year on the floor and off it. We wish you and your families a merry Christmas and a prosperous New Year.', 4, 16, 'left')}
+  </div>
+  <div style="width: 236px; position: relative; height: 70px">
+    <div style="position: absolute; left: 0; top: -8px; font-family: {SIG}; font-size: 44px; line-height: 1; color: #1f2a52; transform: rotate(-4deg)">Randolph Duke</div>
+    <div style="position: absolute; left: 50px; top: 30px; font-family: {SIG}; font-size: 42px; line-height: 1; color: #1f2a52; transform: rotate(-2deg)">Mortimer Duke</div>
   </div>
 </div>
-<div style="position: absolute; left: 76px; top: 966px; width: 320px">
-  {head('House rules', 0, center=False)}
-  {rules}
+<div style="position: absolute; left: {bl}px; top: 900px; width: {cw}px; height: {H - 44 - 900}px; border-top: 2px dashed {INK}; box-sizing: border-box">
+  <div style="position: absolute; left: 0; top: 14px; font-family: {TI}; font-size: 15px; line-height: 1.3; color: {INK}; {SPREAD}">
+    <b style="font-family: {AR}; letter-spacing: 0.06em">DUKE &amp; DUKE</b><br>Commodity Brokers<br>Philadelphia, Pennsylvania<br>
+    <span style="font-family: {AR}; font-size: 12px; letter-spacing: 0.08em">ADDRESS CORRECTION REQUESTED</span></div>
+  <div style="position: absolute; right: 0; top: 14px; width: 132px; box-sizing: border-box; border: 2px solid {INK}; padding: 6px 4px;
+       font-family: {AR}; font-weight: 700; font-size: 12px; line-height: 1.25; text-align: center; color: {INK}; {SPREAD}">
+    FIRST CLASS MAIL<br>U.S. POSTAGE<br>PAID<br>PHILADELPHIA, PA<br>PERMIT NO. 50</div>
+  <div style="position: absolute; left: 252px; top: 30px; width: 300px; box-sizing: border-box; padding: 9px 14px 8px; background: #fbfaf6;
+       transform: rotate(-0.8deg); box-shadow: 0 1px 1px rgba(40,30,20,0.25), 0 2px 5px rgba(40,30,20,0.12);
+       font-family: {DOT}; font-size: 15px; line-height: 1.32; letter-spacing: 0.04em; color: #2c2b33">
+    *DD 1983-12 ** 0001<br>THE HERITAGE CLUB<br>ATTN THE LIBRARY<br>PHILADELPHIA PA</div>
 </div>
-<img src="assets/stain-port.png" alt="" aria-hidden="true" style="position: absolute; left: 572px; top: 580px; width: 200px; height: 200px; pointer-events: none; display: block">
-{slip}
-<div style="position: absolute; left: 76px; top: {H - 112}px; width: {W - 152}px; text-align: center">
-  {ornament(110)}
-  <p style="margin: 12px 0 0; font-family: {LC}; font-size: 16px; color: {SOFT}">Members’ accounts are rendered on the first of each month.</p>
-</div>
-{grain('back')}'''
+{wear('back')}'''
+
 
 FACES = {'front': front(), 'back': back()}
 for name, body in FACES.items():
     root = f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}">{body}</div>'
     open(os.path.join(D, name + '.body.html'), 'w').write(root)
     open(os.path.join(D, name + '.html'), 'w').write(
-        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>The Heritage Club, {name}</title>{LINK}'
-        f'<style>body{{margin:0}}h1,h3,p{{font-weight:inherit}}</style></head><body>{root}</body></html>')
+        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Duke &amp; Duke Market Letter, {name}</title>{LINK}'
+        f'<style>body{{margin:0}}h1,p{{font-weight:inherit}}h1{{font-weight:700}}</style></head><body>{root}</body></html>')
 print('built')

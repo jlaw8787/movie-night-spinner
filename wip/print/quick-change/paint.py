@@ -42,7 +42,7 @@ def halftone(gray, pitch, angle=45):
             x, y = u * ca - v * sa, u * sa + v * ca
             if 0 <= x < w and 0 <= y < h:
                 t = gp[int(x), int(y)] / 255
-                if t > 0.03:
+                if t > 0.004:
                     r = pitch * 0.72 * math.sqrt(t)
                     d.ellipse((x - r, y - r, x + r, y + r), fill=255)
     return out
@@ -68,8 +68,8 @@ def jet747(scale):
             (6, 49.0), (14, 52.6), (24, 54.4), (92, 54.4), (96.6, 53.6), (99.2, 52.2)]
     fin = [(15, 44.4), (6.5, 25.5), (1.6, 23.8), (-1.6, 24.4), (0.8, 41.8), (4, 44.4)]
     stab = [(10, 47.6), (-2.6, 46.0), (-5.6, 47.0), (-4.8, 48.0), (6, 50.4)]
-    wing = [(63, 51.6), (52, 54.8), (31, 62.4), (27.8, 63.2), (27.2, 62.4), (40, 55.8), (47, 51.6)]
-    eng = [((51.5, 56.2), (60.5, 59.6)), ((38.5, 59.6), (46.5, 62.6))]
+    wing = [(66, 51.8), (54, 54.6), (34, 61.6), (30.4, 62.2), (29.8, 61.4), (40, 55.4), (45, 53.0)]
+    eng = [((52, 54.9), (61.5, 58.1)), ((38, 59.4), (46.5, 62.4))]
     out = Image.new('L', (w, h), 0); fill = Image.new('L', (w, h), 0); det = Image.new('L', (w, h), 0)
     od, fd, dd = ImageDraw.Draw(out), ImageDraw.Draw(fill), ImageDraw.Draw(det)
     for poly in (body, fin, stab, wing):
@@ -79,6 +79,8 @@ def jet747(scale):
         bx = P([a, b]); fd.rounded_rectangle(bx, radius=U * 1.2, fill=255)
         od.rounded_rectangle(bx, radius=U * 1.2, outline=255, width=max(2, int(U * 0.42)))
         dd.line((bx[0][0] + U * 0.8, bx[0][1] + U * 0.9, bx[0][0] + U * 0.8, bx[1][1] - U * 0.9), fill=255, width=max(2, int(U * 0.5)))
+        px = (bx[0][0] + bx[1][0]) / 2
+        dd.line((px, bx[0][1] - U * 1.4, px + U * 2.2, bx[0][1]), fill=255, width=max(2, int(U * 0.45)))   # pylon
     # cheatline under the windows, upper deck windows and the main window row
     dd.line(P([(97, 49.0), (14, 49.0)]), fill=255, width=max(2, int(U * 0.9)))
     for x in range(20, 92, 2): dd.rectangle(P([(x, 46.6), (x + 0.7, 47.5)]), fill=255)
@@ -86,12 +88,14 @@ def jet747(scale):
     dd.polygon(P([(97.4, 46.6), (95.6, 45.4), (94.4, 46.6), (96.2, 47.2)]), fill=255)       # cockpit glass
     for x in (82, 56, 30): dd.line(P([(x, 45.4), (x, 48.0)]), fill=255, width=max(1, int(U * 0.3)))   # door outlines
     # engraved shading: light hatching on top, heavier underneath
-    hz = hatch((w, h), max(4, int(U * 0.9)), lambda t: 1 + 2.6 * t ** 1.6)
-    shade = Image.new('L', (w, h), 0); sd = ImageDraw.Draw(shade)
-    for y in range(h):
-        t = (y / h)
-        sd.line((0, y, w, y), fill=int(255 * min(1, 0.25 + 1.2 * max(0, t - 0.55))))
-    fillmask = ImageChops.multiply(ImageChops.multiply(fill, hz), ImageChops.lighter(shade, Image.new('L', (w, h), 0)))
+    hz = Image.new('L', (w, h), 0); hd = ImageDraw.Draw(hz)
+    y0, y1 = 41.6, 54.4                       # fuselage top and belly in units
+    sp = max(5, int(U * 1.15))
+    for y in range(0, h, sp):
+        t = min(max((y / U + 10 - y0) / (y1 - y0), 0), 1)
+        lw = 1.5 if t < 0.5 else 1.5 + (t - 0.5) * 7
+        hd.line((0, y, w, y), fill=255, width=max(2, round(lw)))
+    fillmask = ImageChops.multiply(fill, hz)
     # the wing and tail get diagonal hatching so they read as separate surfaces
     wmask = Image.new('L', (w, h), 0); ImageDraw.Draw(wmask).polygon(P(wing), fill=255); ImageDraw.Draw(wmask).polygon(P(fin), fill=255)
     dh = hatch((w, h), max(4, int(U * 0.85)), lambda t: 1.6, angle=-35)
@@ -131,7 +135,7 @@ org = ImageChops.lighter(org, halftone(g, 13))
 # a pale orange screen for the sky behind, fading upward
 sky = Image.new('L', (AW, AH), 0); sp = ImageDraw.Draw(sky)
 for y in range(hz):
-    sp.line((0, y, AW, y), fill=int(255 * 0.30 * (y / hz) ** 2.4))
+    sp.line((0, y, AW, y), fill=int(255 * 0.32 * (y / hz) ** 1.4))
 org = ImageChops.lighter(org, halftone(sky, 13))
 
 # 2. ground: the terminal and tower in line-cut, runway lights in perspective
@@ -185,26 +189,23 @@ for (x0, y0, n) in ((60, 150, 4), (int(AW * 0.48), int(AH * 0.56), 5), (int(AW *
         cd.line((xs, y0 + k * 13, xs + L, y0 + k * 13), fill=255, width=4)
 
 # 4. the jet climbing out, line-cut in the key plate, over the sun
-jet = jet747(8.4).rotate(11, resample=Image.BICUBIC, expand=True)
+jet = jet747(6.4).rotate(10, resample=Image.BICUBIC, expand=True)
 # knock the sun dots out behind the jet so it reads cleanly
 sil = jet.filter(ImageFilter.MaxFilter(9)).point(lambda v: 255 if v > 30 else 0)
-jx, jy = int(AW * 0.24), int(AH * 0.10)
+jx, jy = int(AW * 0.27), int(AH * 0.08)
 holes = Image.new('L', (AW, AH), 0); holes.paste(sil, (jx, jy))
 org = ImageChops.subtract(org, holes)
 key = ImageChops.subtract(key, holes)
 key.paste(ImageChops.lighter(key.crop((jx, jy, jx + jet.width, jy + jet.height)), jet), (jx, jy))
 
-# 5. speed stripes along the bottom edge of the art
+# 5. speed stripes along the bottom edge of the art: clear a band, then lay three stripes
 SY = AH - 66
-for y, t, plate in ((SY, 24, org), (SY + 32, 14, 'rust'), (SY + 52, 8, key)):
-    if plate == 'rust': continue
-    ImageDraw.Draw(plate).rectangle((-4, y, AW + 4, y + t), fill=255)
-ImageDraw.Draw(key).rectangle((0, SY - 12, AW, SY - 1), fill=0)
-ImageDraw.Draw(org).rectangle((0, SY - 12, AW, SY - 1), fill=0)
-rust = Image.new('L', (AW, AH), 0); ImageDraw.Draw(rust).rectangle((-4, SY + 32, AW + 4, SY + 45), fill=255)
-key = ImageChops.subtract(key, Image.new('L', (AW, AH), 0))
-ImageDraw.Draw(key).rectangle((0, SY + 24, AW, SY + 51), fill=0)
-ImageDraw.Draw(key).rectangle((-4, SY + 52, AW + 4, SY + 60), fill=255)
+for p in (key, org):
+    ImageDraw.Draw(p).rectangle((0, SY - 14, AW, AH), fill=0)
+rust = Image.new('L', (AW, AH), 0)
+ImageDraw.Draw(org).rectangle((-4, SY, AW + 4, SY + 23), fill=255)
+ImageDraw.Draw(rust).rectangle((-4, SY + 32, AW + 4, SY + 45), fill=255)
+ImageDraw.Draw(key).rectangle((-4, SY + 54, AW + 4, SY + 61), fill=255)
 
 def compose(key, org, rust, seed, shift=(4, 2)):
     w, h = key.size

@@ -484,8 +484,8 @@ def wear(name, seed, edge_w, tone, crease=None, ring=None):
         # a soft handling crease from being folded into a grocery bag: faint shadow, then a light ridge
         (x0, y0), (x1, y1) = [(px * S2, py * S2) for px, py in crease]
         dist = ((x - x0) * (y1 - y0) - (y - y0) * (x1 - x0)) / math.hypot(x1 - x0, y1 - y0)
-        sh = np.exp(-((dist - 5) / 7) ** 2) * 0.13 + np.exp(-((dist - 26) / 40) ** 2) * 0.035
-        hi = np.exp(-((dist + 1.5) / 2.6) ** 2) * 0.32
+        sh = np.exp(-((dist - 6) / 9) ** 2) * 0.08 + np.exp(-((dist - 30) / 44) ** 2) * 0.03
+        hi = np.exp(-((dist + 2) / 4.5) ** 2) * 0.14
         fade = np.clip(np.minimum.reduce([x, y, W - x, H - y]) / (60 * S2), 0.55, 1)
         shade_l = Image.new('RGBA', (W, H), (92, 74, 44, 0)); shade_l.putalpha(Image.fromarray((np.clip(sh * fade, 0, 1) * 255).astype(np.uint8)))
         hi_l = Image.new('RGBA', (W, H), (252, 249, 238, 0)); hi_l.putalpha(Image.fromarray((np.clip(hi * fade, 0, 1) * 255).astype(np.uint8)))

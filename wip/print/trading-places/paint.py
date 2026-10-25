@@ -53,10 +53,10 @@ def screen(gray, cell, angle, gain=1.0, up=4):
 
 
 def halftone_still():
-    # crop to the three men and the breakfast table, 400 x 250 CSS px at 2x
+    # crop to the three men and the breakfast table, 400 x 288 CSS px at 2x
     im = Image.open(os.path.join(A, 'still-dukes.jpg')).convert('RGB')
-    bw, bh = 400 * S, 250 * S
-    box = (380, 1080 - int(1540 * bh / bw), 1920, 1080)
+    bw, bh = 400 * S, 288 * S
+    box = (440, 22, 1880, 22 + int(1440 * bh / bw))
     im = im.crop(box).resize((bw, bh), Image.LANCZOS)
     g = np.asarray(ImageOps.grayscale(im)).astype(float) / 255
     g = ndimage.gaussian_filter(g, 0.6)

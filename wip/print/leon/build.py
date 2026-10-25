@@ -1,4 +1,4 @@
-"""Builds the Corner Food Market weekly circular (Leon: The Professional, 1994).
+"""Builds the Villafane Food Market weekly circular (Leon: The Professional, 1994).
 The neighbourhood grocer's two-sided sale flyer that sits in a stack by the register, the store
 Mathilda runs to for groceries and Leon's milk. US Letter, groundwood newsprint, printed web-offset
 in two inks, black and one spot green, with halftone clip art and a little misregistration.
@@ -15,15 +15,21 @@ SOFT = '#3d3a34'
 GREEN = '#1e7a46'
 TINT = '#cfe0cf'      # 20% screen of the green, printed as a flat tint
 WHITE = '#f6f2e6'
-FONTS = ('family=Anton'
-         '&family=Archivo+Narrow:ital,wght@0,500;0,700;1,500;1,700'
-         '&family=Archivo:wght@400;600;800'
+FONTS = ('family=Libre+Franklin:ital,wght@0,400;0,600;0,900;1,900'
+         '&family=Oswald:wght@600;700'
+         '&family=Archivo+Narrow:ital,wght@0,700;1,700'
          '&family=DM+Serif+Display:ital@0;1')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-DISP = "'Anton', 'Impact', sans-serif"
+HEAVY = "'Libre Franklin', 'Franklin Gothic Heavy', sans-serif"   # phototype Franklin Gothic Heavy look
+DISP = "'Oswald', 'Alternate Gothic', 'Arial Narrow', sans-serif"     # condensed gothic for heads and tags
 NAME = "'Archivo Narrow', 'Arial Narrow', sans-serif"
-BODY = "'Archivo', 'Helvetica Neue', Arial, sans-serif"
+BODY = "'Libre Franklin', 'Helvetica Neue', Arial, sans-serif"
 SERIF = "'DM Serif Display', Georgia, serif"
+
+
+def spread(col, r=.7):
+    """Ink spread on newsprint: the heavy type fattens and softens a touch at its edges."""
+    return f'text-shadow: 0 0 {r}px {col}, 0 0 {r}px {col}'
 
 
 def esc(s):
@@ -47,9 +53,10 @@ def price(d, c, unit='', size=64, col=INK, align='right'):
     else:
         big = c
         small = '&cent;'
-    u = (f'<div style="font-family: {NAME}; font-weight: 700; font-size: {max(13, size * .2):.0f}px; line-height: 1; '
+    u = (f'<div style="font-family: {NAME}; font-weight: 700; letter-spacing: .03em; text-shadow: none; font-size: {max(13, size * .2):.0f}px; line-height: 1; '
          f'letter-spacing: .04em; text-transform: uppercase; margin-top: {size * .06:.0f}px">{unit}</div>') if unit else ''
-    return (f'<div style="display: inline-flex; align-items: flex-start; font-family: {DISP}; color: {col}; line-height: .9; '
+    size = round(size * .84)
+    return (f'<div style="display: inline-flex; align-items: flex-start; font-family: {HEAVY}; font-weight: 900; letter-spacing: -.02em; color: {col}; {spread(col)}; line-height: .9; '
             f'justify-content: {"flex-end" if align == "right" else "flex-start"}">'
             f'<span style="font-size: {size}px; line-height: .9">{big}</span>'
             f'<div style="margin-left: 2px; padding-top: {size * .05:.0f}px"><div style="font-size: {size * .46:.0f}px; line-height: .9; '
@@ -57,8 +64,8 @@ def price(d, c, unit='', size=64, col=INK, align='right'):
 
 
 def tag(text, bg=INK, col=WHITE, size=17):
-    return (f'<div style="display: inline-block; background: {bg}; color: {col}; font-family: {DISP}; font-size: {size}px; '
-            f'line-height: 1; letter-spacing: .08em; padding: 5px 9px 4px">{text}</div>')
+    return (f'<div style="display: inline-block; background: {bg}; color: {col}; font-family: {DISP}; font-weight: 700; font-size: {size}px; '
+            f'line-height: 1; letter-spacing: .08em; padding: 5px 9px 5px">{text}</div>')
 
 
 def overlays(face):
@@ -102,7 +109,7 @@ def dairy_row(name, sub, p, top, last=False):
 def counter_cell(x, w, head, art, aw, ah, name, desc, note, p):
     return f"""
 <div style="{at(x, 594, w, 'height: 356px; box-sizing: border-box; border: 2px solid ' + INK)}">
-  <div style="background: {INK}; color: {WHITE}; font-family: {DISP}; font-size: 19px; letter-spacing: .1em; line-height: 1; padding: 7px 10px 6px">{head}</div>
+  <div style="background: {INK}; color: {WHITE}; font-family: {DISP}; font-weight: 700; font-size: 19px; letter-spacing: .1em; line-height: 1; padding: 7px 10px 6px">{head}</div>
   <div style="padding: 10px 11px 0">
     <div style="{NM}; font-size: 27px">{name}</div>
     <div style="{DESC}; margin-top: 6px">{desc}</div>
@@ -117,12 +124,15 @@ front = f"""
 <div style="{at(0, 0, FW, 'height: 198px; background: ' + GREEN)}"></div>
 <div style="{at(48, 42, 720, f'display: flex; justify-content: space-between; font-family: {NAME}; font-weight: 700; font-size: 16px; letter-spacing: .16em; color: {WHITE}')}">
   <span>GROCERIES</span><span>DAIRY</span><span>DELI</span><span>LUNCH COUNTER</span><span>BAKERY</span><span>HOUSEPLANTS</span></div>
-<div style="{at(44, 62, 730, f'font-family: {DISP}; font-style: italic; font-size: 84px; line-height: 1; letter-spacing: .005em; color: {WHITE}; white-space: nowrap')}">CORNER FOOD MARKET</div>
+<div style="{at(44, 64, 560, f'font-family: {HEAVY}; font-weight: 900; font-style: italic; font-size: 86px; line-height: 1; letter-spacing: -.035em; color: {WHITE}; {spread(WHITE, .8)}; white-space: nowrap')}">Villafañe</div>
+<div style="{at(560, 70, 208, f'text-align: right; color: {WHITE}')}">
+  <div style="font-family: {DISP}; font-weight: 700; font-size: 40px; line-height: .98; letter-spacing: .04em">FOOD<br>MARKET</div>
+</div>
 <div style="{at(48, 162, 720, f'display: flex; justify-content: space-between; font-family: {BODY}; font-weight: 600; font-size: 16px; color: {WHITE}')}">
-  <span>Little Italy, New York</span><span>Open 7 days, 7 A.M. to 10 P.M.</span><span>We deliver on the block</span></div>
+  <span>Little Italy, New York</span><span>Open 7 days, 7 A.M. to 10 P.M.</span><span style="font-style: italic">Se habla español</span></div>
 <div style="{at(0, 200, FW, 'height: 40px; background: ' + INK)}"></div>
 <div style="{at(48, 208, 720, f'display: flex; justify-content: space-between; align-items: baseline; color: {WHITE}')}">
-  <span style="font-family: {DISP}; font-size: 25px; letter-spacing: .1em; line-height: 1">THIS WEEK'S SPECIALS</span>
+  <span style="font-family: {DISP}; font-weight: 700; font-size: 25px; letter-spacing: .1em; line-height: 1">THIS WEEK'S SPECIALS</span>
   <span style="font-family: {NAME}; font-weight: 700; font-size: 17px; letter-spacing: .06em">PRICES GOOD SUNDAY THRU SATURDAY</span></div>
 
 {tintbox(48, 256, 470, 322, '#e3ecdf')}
@@ -131,19 +141,19 @@ front = f"""
 {img('carton.png', 58, 296, 206, 272, 'Quart carton of whole milk')}
 <div style="{at(74, 430, 102, f'text-align: center; color: {GREEN}')}">
   <div style="font-family: {NAME}; font-weight: 700; font-size: 13px; letter-spacing: .12em; color: {INK}">GRADE A</div>
-  <div style="font-family: {DISP}; font-size: 43px; line-height: 1; letter-spacing: .03em">MILK</div>
+  <div style="font-family: {HEAVY}; font-weight: 900; font-size: 36px; line-height: 1.05; letter-spacing: -.01em; {spread(GREEN, .5)}">MILK</div>
   <div style="font-family: {NAME}; font-weight: 700; font-size: 13px; line-height: 1.15; letter-spacing: .06em; color: {INK}">VITAMIN D<br>ONE QUART</div></div>
 <div style="{at(278, 270, 228)}">
-  <div style="font-family: {DISP}; font-size: 47px; line-height: 1; letter-spacing: .01em; white-space: nowrap">WHOLE MILK</div>
+  <div style="font-family: {HEAVY}; font-weight: 900; font-size: 34px; line-height: 1; letter-spacing: -.03em; {spread(INK)}; white-space: nowrap">WHOLE MILK</div>
   <div style="{DESC}; margin-top: 8px">{MILK_D}</div>
-  <div style="{NOTE}; font-size: 21px; margin-top: 8px">Two quarts, every day.</div>
+  <div style="{NOTE}; font-size: 21px; margin-top: 8px">Fill the fridge.</div>
 </div>
 {img('burst.png', 280, 432, 142, 142)}
 <div style="{at(280, 463, 142, 'display: flex; justify-content: center')}">{price('', '79', 'quart', 62, WHITE)}</div>
 <div style="{at(428, 498, 80, f'font-family: {NAME}; font-weight: 700; font-size: 15px; line-height: 1.15; color: {INK}')}">Limit four<br>with a $5<br>purchase</div>
 
 <div style="{at(534, 256, 234)}">
-  <div style="font-family: {DISP}; font-size: 25px; line-height: 1; letter-spacing: .06em; border-bottom: 3px solid {INK}; padding-bottom: 6px">FROM THE COOLER</div></div>
+  <div style="font-family: {DISP}; font-weight: 700; font-size: 25px; line-height: 1; letter-spacing: .06em; border-bottom: 3px solid {INK}; padding-bottom: 6px">FROM THE COOLER</div></div>
 <div style="{at(534, 292, 234, 'height: 286px')}">
   <div style="position: relative; height: 286px">
     {dairy_row('Large eggs', 'Grade A, the dozen.', price('', '99', 'doz', 46), 0)}
@@ -158,15 +168,14 @@ front = f"""
 {counter_cell(292, 232, 'BAKERY CASE', 'dirtcup.png', 82, 87, 'Flowerpot dirt cups',
     'Dark chocolate mousse layered with crushed chocolate cookie crumbs in a little terracotta tumbler, a sprig of fresh mint planted on top.',
     'By the register.', price('1', '29', 'each', 46))}
-{counter_cell(536, 232, 'HOUSEPLANTS', 'plant.png', 124, 140, 'Chinese evergreen',
-    'Six-inch pot. Give it a window every morning and a drink twice a week. Hard to kill.',
-    'Always happy. No questions.', price('5', '99', 'pot', 46))}
+{counter_cell(536, 232, 'HOUSEPLANTS', 'plant.png', 124, 140, 'Window plant',
+    'Glossy green leaves in a six-inch pot. Set it out on the sill each morning and mist it with a spray bottle.',
+    'Happy in a pot. No roots.', price('5', '99', 'pot', 46))}
 
 <div style="{at(48, 962, 720, f'height: 42px; box-sizing: border-box; border-top: 3px solid {INK}; border-bottom: 1.5px solid {INK}; display: flex; align-items: center; justify-content: space-between; font-family: {NAME}; font-weight: 700; font-size: 17px; letter-spacing: .03em')}">
-  <span>SEMOLINA BREAD <span style="font-family: {DISP}; font-weight: 400; font-size: 21px; color: {GREEN}">99&cent;</span> loaf</span>
-  <span>BANANAS <span style="font-family: {DISP}; font-weight: 400; font-size: 21px; color: {GREEN}">39&cent;</span> lb</span>
-  <span>HOT COFFEE <span style="font-family: {DISP}; font-weight: 400; font-size: 21px; color: {GREEN}">50&cent;</span> cup</span>
-  <span>PLUM TOMATOES <span style="font-family: {DISP}; font-weight: 400; font-size: 21px; color: {GREEN}">69&cent;</span> lb</span></div>
+  <span style="white-space: nowrap">SEMOLINA BREAD <span style="font-family: {HEAVY}; font-weight: 900; font-size: 19px; color: {GREEN}; {spread(GREEN, .5)}">99&cent;</span></span>
+  <span style="white-space: nowrap">HOT COFFEE <span style="font-family: {HEAVY}; font-weight: 900; font-size: 19px; color: {GREEN}; {spread(GREEN, .5)}">50&cent;</span></span>
+  <span style="white-space: nowrap">PIG OVEN MITT <span style="font-family: {HEAVY}; font-weight: 900; font-size: 19px; color: {GREEN}; {spread(GREEN, .5)}">$1.49</span> <span style="font-style: italic; color: {GREEN}">Nicer than people.</span></span></div>
 <div style="{at(48, 1004, 720, f'display: flex; justify-content: space-between; font-family: {BODY}; font-size: 12px; line-height: 1; color: {SOFT}')}">
   <span>We reserve the right to limit quantities. Not responsible for typographical errors.</span><span>Deli and coupons on back</span></div>
 """
@@ -186,14 +195,14 @@ def lb_row(name, p, last=False):
     return (f'<div style="display: flex; align-items: baseline; gap: 6px; padding: 9px 0 8px; {rule}">'
             f'<span style="flex: none; {NM}; font-size: 21px">{name}</span>'
             f'<span style="flex: 1; min-width: 16px; overflow: hidden; white-space: nowrap; font-family: {BODY}; font-size: 14px; color: {SOFT}">{DOTS}</span>'
-            f'<span style="flex: none; font-family: {DISP}; font-size: 26px; line-height: 1">{p}</span>'
+            f'<span style="flex: none; font-family: {HEAVY}; font-weight: 900; font-size: 22px; line-height: 1; {spread(INK, .5)}">{p}</span>'
             f'<span style="flex: none; font-family: {NAME}; font-weight: 700; font-size: 14px; width: 18px">LB</span></div>')
 
 
 def coupon(x, w, big, line1, line2, small):
     return f"""
 <div style="{at(x, 906, w, f'height: 88px; box-sizing: border-box; border: 2.5px dashed {INK}; padding: 9px 12px; display: flex; align-items: center; gap: 12px')}">
-  <div style="flex: none; font-family: {DISP}; font-size: 46px; line-height: 1; color: {GREEN}">{big}</div>
+  <div style="flex: none; font-family: {HEAVY}; font-weight: 900; font-size: 40px; line-height: 1; letter-spacing: -.03em; color: {GREEN}; {spread(GREEN)}">{big}</div>
   <div style="min-width: 0"><div style="{NM}; font-size: 21px">{line1}</div>
     <div style="font-family: {BODY}; font-size: 15px; line-height: 1.2; margin-top: 2px">{line2}</div>
     <div style="font-family: {BODY}; font-size: 12px; line-height: 1.2; margin-top: 3px; color: {SOFT}">{small}</div></div>
@@ -202,7 +211,7 @@ def coupon(x, w, big, line1, line2, small):
 
 back = f"""
 <div style="{at(0, 0, FW, 'height: 122px; background: ' + GREEN)}"></div>
-<div style="{at(46, 44, 470, f'font-family: {DISP}; font-style: italic; font-size: 64px; line-height: 1; color: {WHITE}; white-space: nowrap')}">DELI COUNTER</div>
+<div style="{at(46, 46, 470, f'font-family: {HEAVY}; font-weight: 900; font-style: italic; font-size: 58px; line-height: 1; letter-spacing: -.035em; color: {WHITE}; {spread(WHITE, .8)}; white-space: nowrap')}">Deli Counter</div>
 <div style="{at(520, 44, 248, f'text-align: right; font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.3; color: {WHITE}')}">Sliced to order while you wait. Party trays on one day's notice.</div>
 <div style="{at(0, 124, FW, 'height: 8px; background: ' + INK)}"></div>
 
@@ -214,12 +223,12 @@ back = f"""
 <div style="{at(626, 200, 136, 'display: flex; justify-content: center')}">{price('7', '99', 'tray', 56, WHITE)}</div>
 <div style="{at(64, 320, 688)}">
   <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px">
-    <div style="font-family: {DISP}; font-size: 40px; line-height: 1; letter-spacing: .01em">BAGUETTE PARTY TRAY</div>
+    <div style="font-family: {HEAVY}; font-weight: 900; font-size: 34px; line-height: 1; letter-spacing: -.025em; {spread(INK)}">BAGUETTE PARTY TRAY</div>
     <div style="{NOTE}">Twelve pieces. Order a day ahead.</div></div>
   <div style="{DESC}; font-size: 17px; margin-top: 6px">{BAG_D}</div>
 </div>
 
-{box(48, 442, 344, 220, 2.5)}
+{box(48, 442, 344, 234, 2.5)}
 <div style="{at(62, 455, 316)}">
   {tag('FROM THE DELI CASE')}
   <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 10px; gap: 8px">
@@ -229,7 +238,7 @@ back = f"""
 </div>
 <div style="{at(412, 442, 356)}">
   <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 3px solid {INK}; padding-bottom: 5px">
-    <span style="font-family: {DISP}; font-size: 25px; letter-spacing: .06em; line-height: 1">BY THE POUND</span>
+    <span style="font-family: {DISP}; font-weight: 700; font-size: 25px; letter-spacing: .06em; line-height: 1">BY THE POUND</span>
     <span style="font-family: {NAME}; font-weight: 700; font-size: 15px; color: {GREEN}">SLICED THIN OR THICK</span></div>
   {lb_row('Boiled ham', '3.99')}
   {lb_row('Genoa salami', '4.49')}
@@ -237,9 +246,9 @@ back = f"""
   {lb_row('Imported prosciutto', '8.99', True)}
 </div>
 
-<div style="{at(48, 678, 720, f'height: 214px; box-sizing: border-box; border: 5px double {INK}; background: {WHITE}')}"></div>
-{img('spaghetti.png', 62, 724, 206, 124, 'A plate of spaghetti')}
-<div style="{at(284, 692, 470)}">
+<div style="{at(48, 686, 720, f'height: 210px; box-sizing: border-box; border: 5px double {INK}; background: {WHITE}')}"></div>
+{img('spaghetti.png', 62, 730, 206, 124, 'A plate of spaghetti')}
+<div style="{at(284, 698, 470)}">
   <div style="display: flex; justify-content: space-between; align-items: baseline">
     <span style="font-family: {SERIF}; font-size: 44px; line-height: 1">Tony's</span>
     <span style="font-family: {SERIF}; font-style: italic; font-size: 18px; color: {SOFT}">Restaurant, Little Italy</span></div>
@@ -247,16 +256,16 @@ back = f"""
     <div style="font-family: {SERIF}; font-size: 25px; line-height: 1.05">Tony's spaghetti, by the quart</div>
     <div style="flex: none">{price('6', '50', 'quart', 42)}</div></div>
   <div style="{DESC}; margin-top: 5px">{TONY_D}</div>
-  <div style="font-family: {SERIF}; font-style: italic; font-size: 18px; line-height: 1.2; margin-top: 5px; color: {GREEN}">Ask for Tony. Private room in the back.</div>
+  <div style="font-family: {SERIF}; font-style: italic; font-size: 18px; line-height: 1.2; margin-top: 5px; color: {GREEN}">Ask for Tony.</div>
 </div>
 
 {coupon(48, 352, '20&cent;', 'Off a quart of milk', 'With this coupon.', 'One per family. Good thru Saturday.')}
 {coupon(416, 352, 'FREE', 'Cup of hot coffee', 'With any party tray order.', 'One per order. Good thru Saturday.')}
 <div style="{at(48, 1004, 720, f'display: flex; justify-content: space-between; font-family: {BODY}; font-size: 12px; line-height: 1; color: {SOFT}')}">
-  <span>Clip and bring to the register. No cash value.</span><span>Corner Food Market, Little Italy. Printed in U.S.A. 1994</span></div>
+  <span>Clip and bring to the register. No cash value.</span><span>Villafañe Food Market, Little Italy. Printed in U.S.A. 1994</span></div>
 """
 
-TITLES = {'front': 'Corner Food Market circular, front', 'back': 'Corner Food Market circular, back'}
+TITLES = {'front': 'Villafañe Food Market circular, front', 'back': 'Villafañe Food Market circular, back'}
 for face, inner in (('front', front), ('back', back)):
     body = root(inner, face)
     open(os.path.join(D, face + '.body.html'), 'w').write(body)
@@ -265,15 +274,15 @@ for face, inner in (('front', front), ('back', back)):
         f'<style>body{{margin:0}}</style></head><body>{body}</body></html>')
 
 film = {"fmt": "leon", "fn": "fmtLeon", "faces": ["front.html", "back.html"], "names": ["Front", "Back"],
-        "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Anton", "Archivo Narrow", "Archivo", "DM Serif Display"],
-        "phone": {"disp": "'Anton',sans-serif", "title": "'Anton',sans-serif", "name": "'Archivo Narrow',sans-serif",
-                  "body": "'Archivo',sans-serif", "price": "'Anton',sans-serif", "note": "'Archivo Narrow',sans-serif"}}
+        "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Libre Franklin", "Oswald", "Archivo Narrow", "DM Serif Display"],
+        "phone": {"disp": "'Libre Franklin',sans-serif", "title": "'Oswald',sans-serif", "name": "'Archivo Narrow',sans-serif",
+                  "body": "'Libre Franklin',sans-serif", "price": "'Libre Franklin',sans-serif", "note": "'Archivo Narrow',sans-serif"}}
 open(os.path.join(D, 'film.json'), 'w').write(json.dumps(film, indent=1))
 
 labels = {"Léon: The Professional (1994)": {
     "Jambon-beurre baguette bites": {"n": "Baguette party tray", "d": BAG_D, "note": "Twelve pieces. Order a day ahead."},
     "Olives and cornichons": {"n": "Antipasto pint", "d": OLIVE_D, "note": "We'll warm it while you wait."},
-    "Tony's spaghetti": {"n": "Tony's spaghetti, by the quart", "d": TONY_D, "note": "Ask for Tony. Private room in the back."},
+    "Tony's spaghetti": {"n": "Tony's spaghetti, by the quart", "d": TONY_D, "note": "Ask for Tony."},
     "Potted plant dirt cups": {"n": "Flowerpot dirt cups", "d": "Dark chocolate mousse layered with crushed chocolate cookie crumbs in a little terracotta tumbler, a sprig of fresh mint planted on top.", "note": "From the bakery case, by the register."},
     "Léon's malted vanilla milkshake": {"n": "Thick vanilla shake", "d": "Cold whole milk blended with ice cream, malted milk powder and a spoon of honey, poured into a glass frosted in the freezer.", "note": "Made to order at the lunch counter."},
 }}

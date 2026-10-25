@@ -36,7 +36,8 @@ class Plate:
     def poly(self, pts, tone, ang=0, och=None, edge=True):
         p = self.P(pts)
         self.dt.polygon(p, fill=float(tone)); self.da.polygon(p, fill=float(ang))
-        self.n += 1; self.dr.polygon(p, fill=self.n if edge else 0)
+        self.n += 1
+        if edge: self.dr.polygon(p, fill=self.n)
         if och is not None: self.do.polygon(p, fill=float(och))
 
     def rect(self, x0, y0, x1, y1, tone, ang=0, och=None, edge=True):
@@ -45,7 +46,8 @@ class Plate:
     def ellipse(self, cx, cy, rx, ry, tone, ang=0, och=None, edge=True):
         b = [((cx - rx) * self.S, (cy - ry) * self.S), ((cx + rx) * self.S, (cy + ry) * self.S)]
         self.dt.ellipse(b, fill=float(tone)); self.da.ellipse(b, fill=float(ang))
-        self.n += 1; self.dr.ellipse(b, fill=self.n if edge else 0)
+        self.n += 1
+        if edge: self.dr.ellipse(b, fill=self.n)
         if och is not None: self.do.ellipse(b, fill=float(och))
 
     def arch(self, x0, y0, x1, y1, tone, ang=0, och=None):
@@ -73,7 +75,7 @@ class Plate:
         if tone_mod is not None: T = np.clip(T + tone_mod(T, h, w), 0, 1)
         yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
         p = period * S
-        wob = lowfreq(h, w, 30, seed + 5) * 0.5 * S + lowfreq(h, w, 140, seed + 6) * 0.18 * S
+        wob = lowfreq(h, w, 18, seed + 5) * 0.35 * S + lowfreq(h, w, 90, seed + 6) * 0.05 * S
         # main hatch: line width follows the tone
         d = -xx * np.sin(A) + yy * np.cos(A) + wob
         ph = np.abs((d / p) % 1 - 0.5) * 2
@@ -127,15 +129,23 @@ def cover():
     # sky, lightening toward the horizon and around the moon
     yy, xx = np.mgrid[0:H * S, 0:W * S] / S
     md = np.sqrt((xx - 338) ** 2 + (yy - 84) ** 2)
-    sky = 0.52 - yy / H * 0.22 - np.clip(1 - (md - 52) / 90, 0, 1) * 0.36
+    sky = 0.36 - yy / H * 0.18 - np.clip(1 - (md - 52) / 90, 0, 1) * 0.36
     pl.tone = Image.fromarray(np.clip(sky, 0.04, 1).astype(np.float32), 'F')
     pl.dt = ImageDraw.Draw(pl.tone)
     glow = np.clip(1 - (md - 50) / 70, 0, 1) ** 1.6 * 0.22
     pl.och = Image.fromarray(glow.astype(np.float32), 'F'); pl.do = ImageDraw.Draw(pl.och)
     # the moon: no black on the face except the seas, ochre dot screen for its colour
     pl.ellipse(338, 84, 52, 52, 0.0, 0, och=0.30)
-    for cx, cy, rx, ry, t in [(322, 66, 17, 12, 0.14), (350, 100, 15, 10, 0.12), (356, 64, 9, 8, 0.10), (316, 98, 8, 7, 0.10), (340, 82, 6, 5, 0.08)]:
-        pl.ellipse(cx, cy, rx, ry, t, 30, och=0.5, edge=False)
+    # the seas: soft blotches from low noise, cut lightly, deeper ochre
+    mar = lowfreq(H * S, W * S, 26, 41)
+    inm = md < 50
+    seas = np.clip((mar - 0.35) * 0.9, 0, 0.32) * inm
+    T0 = np.asarray(pl.tone).copy(); T0[inm] = seas[inm] * 0.55
+    O0 = np.asarray(pl.och).copy(); O0[inm] = 0.26 + seas[inm] * 1.1
+    pl.tone = Image.fromarray(T0.astype(np.float32), 'F'); pl.dt = ImageDraw.Draw(pl.tone)
+    pl.och = Image.fromarray(O0.astype(np.float32), 'F'); pl.do = ImageDraw.Draw(pl.och)
+    A0 = np.asarray(pl.ang).copy(); A0[inm] = 28
+    pl.ang = Image.fromarray(A0.astype(np.float32), 'F'); pl.da = ImageDraw.Draw(pl.ang)
     # left brownstones
     pl.rect(-4, 124, 118, 282, 0.62, 90)
     pl.rect(-4, 116, 118, 128, 0.28, 0)                  # cornice
@@ -204,14 +214,16 @@ def dance_moon():
     S = pl.S
     yy, xx = np.mgrid[0:H * S, 0:W * S] / S
     md = np.sqrt((xx - 66) ** 2 + (yy - 66) ** 2)
-    shade = np.clip((xx - 40) / 120 + (yy - 40) / 160, 0, 0.5) * 0.5
-    t = np.where(md < 56, 0.08 + shade, 0)
+    inm = md < 56
+    mar = lowfreq(H * S, W * S, 7, 43)
+    seas = np.clip((mar - 0.25) * 0.5, 0, 0.3)
+    rim = np.clip((md - 38) / 18, 0, 1) ** 2 * 0.3 * np.clip((xx + yy - 110) / 60, 0, 1)
+    t = np.where(inm, 0.05 + seas + rim, 0)
     pl.tone = Image.fromarray(t.astype(np.float32), 'F'); pl.dt = ImageDraw.Draw(pl.tone)
-    pl.och = Image.fromarray(np.where(md < 56, 0.32, np.clip(1 - (md - 56) / 12, 0, 1) * 0.12).astype(np.float32), 'F')
-    pl.do = ImageDraw.Draw(pl.och)
+    pl.ang = Image.fromarray(np.full((H * S, W * S), 20, np.float32), 'F'); pl.da = ImageDraw.Draw(pl.ang)
+    o = np.where(inm, 0.26 + seas * 1.2, np.clip(1 - (md - 56) / 12, 0, 1) * 0.12)
+    pl.och = Image.fromarray(o.astype(np.float32), 'F'); pl.do = ImageDraw.Draw(pl.och)
     pl.n += 1; pl.dr.ellipse([(10 * S, 10 * S), (122 * S, 122 * S)], fill=pl.n)
-    for cx, cy, rx, ry, tt in [(50, 46, 18, 13, 0.36), (80, 78, 16, 11, 0.32), (86, 44, 10, 9, 0.28), (44, 82, 9, 8, 0.3), (66, 62, 6, 5, 0.26), (96, 62, 5, 5, 0.3)]:
-        pl.ellipse(cx, cy, rx, ry, tt, 35, och=0.55, edge=False)
     pl.render('dance-moon-linecut.png', period=2.0, seed=2)
 
 
@@ -279,4 +291,4 @@ def thermometer():
 
 if __name__ == '__main__':
     os.makedirs(OUT, exist_ok=True)
-    cover(); dance_moon(); bread(); wrench(); plane(); ring(); thermometer()
+    cover(); dance_moon(); plane(); ring(); thermometer()

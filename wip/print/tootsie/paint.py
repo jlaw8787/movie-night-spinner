@@ -117,14 +117,14 @@ def tape(name, seed, w0=96, h0=30):
     for i in range(9):   # torn right end
         pts.append((w - rnd.uniform(0, 4) * S, h - i * h / 8))
     d.polygon(pts, fill=255)
-    body = Image.new('RGBA', (w, h), (236, 220, 160, 0)); body.putalpha(m.point(lambda v: int(v * 0.42)))
+    body = Image.new('RGBA', (w, h), (240, 232, 196, 0)); body.putalpha(m.point(lambda v: int(v * 0.22)))
     # a soft sheen band and yellowed edges
     sheen = Image.new('L', (w, h), 0); sd = ImageDraw.Draw(sheen)
     sd.rectangle([0, int(h * 0.22), w, int(h * 0.36)], fill=70)
     sheen = ImageChops.multiply(sheen.filter(ImageFilter.GaussianBlur(4 * S)), m)
     s = Image.new('RGBA', (w, h), (255, 255, 250, 0)); s.putalpha(sheen)
     e = Image.new('L', (w, h), 0); ed = ImageDraw.Draw(e)
-    ed.rectangle([0, 0, w, h], outline=110, width=int(1.4 * S))
+    ed.rectangle([0, 0, w, h], outline=60, width=int(1.4 * S))
     e = ImageChops.multiply(e.filter(ImageFilter.GaussianBlur(S)), m)
     eb = Image.new('RGBA', (w, h), (176, 140, 70, 0)); eb.putalpha(e)
     out = Image.alpha_composite(Image.alpha_composite(body, s), eb)

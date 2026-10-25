@@ -20,7 +20,7 @@ def lowfreq(cells, seed, ww=w, hh=h):
     g = r.standard_normal((cells, int(cells * ww / hh) + 2)).astype(np.float32)
     return np.asarray(Image.fromarray(g, mode='F').resize((ww, hh), Image.BICUBIC))
 
-STAPLE_AT = (36, 34)          # 1x position of the staple crown centre, top left corner
+STAPLE_AT = (46, 42)          # 1x position of the staple crown centre, top left corner
 STAPLE_ANG = -32              # degrees
 
 def wear(face, seed):
@@ -32,14 +32,14 @@ def wear(face, seed):
     a = np.clip(5 + mott * 5, 0, 12)
     # left edge: original lifted off the platen, a soft grey band with a wavy inner edge
     wob = lowfreq(9, seed + 2) * 5
-    band = 10 + wob + (yy / H) * 6
+    band = np.clip(10 + wob + (yy / H) * 6, 4, 24)
     left = np.clip(1 - (xx - 0) / np.maximum(band, 2), 0, 1) ** 1.3 * 120
     left += np.clip(1 - xx / (band * 2.6), 0, 1) ** 2 * 40
     # top edge: thinner shadow
-    top = np.clip(1 - yy / (5 + lowfreq(7, seed + 3) * 2), 0, 1) ** 1.5 * 70
+    top = np.clip(1 - yy / np.clip(5 + lowfreq(7, seed + 3) * 1.5, 3, 8), 0, 1) ** 1.5 * 70
     # lost corner at bottom right, a wedge where the sheet sat crooked on the glass
     cx = (W - xx) + (H - yy)
-    corner = np.clip(1 - (cx - 0) / (46 + lowfreq(6, seed + 4) * 6), 0, 1)
+    corner = np.clip(1 - cx / np.clip(46 + lowfreq(6, seed + 4) * 6, 36, 58), 0, 1)
     corner = np.where(corner > 0, 0.55 + 0.45 * corner, 0) * 175
     # faint drum streak
     sx = 594 if face == 'front' else 588
@@ -68,11 +68,9 @@ def wear(face, seed):
         cx0, cy0 = STAPLE_AT
         ang = math.radians(STAPLE_ANG)
         for s in (-1, 1):
-            px, py = cx0 + s * 17 * math.cos(ang), cy0 + s * 17 * math.sin(ang)
+            px, py = cx0 + s * 24 * math.cos(ang), cy0 + s * 24 * math.sin(ang)
             sd.ellipse([((px - 1.6) * S, (py - 1.6) * S), ((px + 1.6) * S, (py + 1.6) * S)], fill=(30, 30, 30, 210))
             sd.ellipse([((px - 4) * S, (py - 4) * S), ((px + 4) * S, (py + 4) * S)], outline=(90, 90, 86, 60), width=2)
-        sd.line([((cx0 - 15 * math.cos(ang)) * S, (cy0 - 15 * math.sin(ang)) * S),
-                 ((cx0 + 15 * math.cos(ang)) * S, (cy0 + 15 * math.sin(ang)) * S)], fill=(90, 90, 86, 40), width=5)
         # a coffee ring from the cafeteria cup, mostly off the page at lower right
         ring = Image.new('RGBA', (w, h), (0, 0, 0, 0)); rd = ImageDraw.Draw(ring)
         rd.ellipse([(668 * S, 954 * S), (842 * S, 1128 * S)], outline=(150, 112, 70, 70), width=5)
@@ -101,13 +99,13 @@ def fade(face, seed):
 def staple():
     """A real chisel-point staple seen from the front: a short steel crown with rounded
     shoulders, a highlight, a dark underside and a soft cast shadow, both legs into the paper."""
-    cw, ch = 70 * S, 40 * S
+    cw, ch = 80 * S, 56 * S
     im = Image.new('RGBA', (cw, ch), (0, 0, 0, 0))
     cx, cy = cw / 2, ch / 2
     ang = math.radians(STAPLE_ANG)
     ux, uy = math.cos(ang), math.sin(ang)
     nx, ny = -uy, ux
-    L = 17 * S
+    L = 24 * S
     def P(t, o=0.0): return (cx + ux * t + nx * o, cy + uy * t + ny * o)
     # dimples and holes
     d = ImageDraw.Draw(im)
@@ -116,17 +114,17 @@ def staple():
         d.ellipse([x - 3.5 * S, y - 3.5 * S, x + 3.5 * S, y + 3.5 * S], fill=(120, 120, 116, 50))
     # shadow
     sh = Image.new('RGBA', (cw, ch), (0, 0, 0, 0)); sd = ImageDraw.Draw(sh)
-    sd.line([P(-L + 1 * S, 1.6 * S), P(L - 1 * S, 1.6 * S)], fill=(20, 20, 20, 120), width=int(3.4 * S))
+    sd.line([P(-L + 1 * S, 1.6 * S), P(L - 1 * S, 1.6 * S)], fill=(20, 20, 20, 120), width=int(4.2 * S))
     sh = sh.filter(ImageFilter.GaussianBlur(1.6 * S))
     im = Image.alpha_composite(im, sh); d = ImageDraw.Draw(im)
     # legs: short dark stubs at each end going into the paper
     for s in (-1, 1):
         x, y = P(s * L)
-        d.ellipse([x - 1.6 * S, y - 1.6 * S, x + 1.6 * S, y + 1.6 * S], fill=(48, 50, 54, 255))
+        d.ellipse([x - 2.1 * S, y - 2.1 * S, x + 2.1 * S, y + 2.1 * S], fill=(48, 50, 54, 255))
     # crown: layered strokes, dark edge, steel body, bright highlight
-    d.line([P(-L, 0), P(L, 0)], fill=(70, 72, 78, 255), width=int(3.2 * S))
-    d.line([P(-L + 0.8 * S, -0.3 * S), P(L - 0.8 * S, -0.3 * S)], fill=(150, 153, 160, 255), width=int(2.2 * S))
-    d.line([P(-L + 3 * S, -0.8 * S), P(L - 6 * S, -0.8 * S)], fill=(226, 228, 232, 255), width=int(0.9 * S))
+    d.line([P(-L, 0), P(L, 0)], fill=(70, 72, 78, 255), width=int(4 * S))
+    d.line([P(-L + 0.8 * S, -0.3 * S), P(L - 0.8 * S, -0.3 * S)], fill=(150, 153, 160, 255), width=int(2.8 * S))
+    d.line([P(-L + 3 * S, -0.8 * S), P(L - 6 * S, -0.8 * S)], fill=(226, 228, 232, 255), width=int(1.1 * S))
     d.line([P(-L + 1 * S, 0.9 * S), P(L - 1 * S, 0.9 * S)], fill=(92, 94, 100, 200), width=int(0.8 * S))
     im = im.filter(ImageFilter.GaussianBlur(0.35))
     im.save(os.path.join(A, 'staple.png'), optimize=True)

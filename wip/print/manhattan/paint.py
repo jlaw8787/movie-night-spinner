@@ -95,22 +95,22 @@ def stock(face, seed):
     # felt finish: soft mid scale mottle, faintly darker in a woven direction
     felt = lowfreq(w, h, 60, seed) * 0.5 + lowfreq(w, h, 140, seed + 1) * 0.35 + lowfreq(w, h, 9, seed + 2) * 0.5
     rgba[..., :3] = [120, 118, 110]
-    rgba[..., 3] = np.clip(felt * 5 + 6, 0, 16)
+    rgba[..., 3] = np.clip(felt * 3 + 4, 0, 9)
     im = Image.fromarray(rgba.astype(np.uint8), 'RGBA').filter(ImageFilter.GaussianBlur(1.2))
     im.save(os.path.join(A, f'paper-stock-{face}.png'), optimize=True)
 
 
 def inkwear(face, seed):
     # patches where the ink ran thin, paper coloured, only visible over ink
-    m = lowfreq(w, h, 90, seed) * 0.55 + lowfreq(w, h, 30, seed + 1) * 0.45
-    a = np.clip((m - 0.15) * 70, 0, 46)
+    m = lowfreq(w, h, 70, seed) * 0.5 + lowfreq(w, h, 24, seed + 1) * 0.5
+    a = np.clip(m * 9 + 7, 0, 20)
     # a pale roller band across the sheet, very slight
-    band = np.exp(-((yy - (300 if face == 'outside' else 520)) / 60) ** 2) * 14
-    a = np.clip(a + band, 0, 60)
+    band = np.exp(-((yy - (300 if face == 'outside' else 520)) / 60) ** 2) * 8
+    a = np.clip(a + band, 0, 26)
     rgba = np.zeros((h, w, 4))
     rgba[..., :3] = PAPER
     rgba[..., 3] = a
-    Image.fromarray(rgba.astype(np.uint8), 'RGBA').filter(ImageFilter.GaussianBlur(1.6)).save(
+    Image.fromarray(rgba.astype(np.uint8), 'RGBA').filter(ImageFilter.GaussianBlur(3)).save(
         os.path.join(A, f'wear-ink-{face}.png'), optimize=True)
 
 

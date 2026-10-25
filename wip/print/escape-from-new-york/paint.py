@@ -16,7 +16,7 @@ os.makedirs(A, exist_ok=True)
 FW, FH, S = 912, 1056, 2
 PAPER = (246, 244, 236)
 GREEN = (206, 228, 204)
-INK = (40, 38, 48)
+INK = (36, 34, 46)
 random.seed(1997); np.random.seed(1997)
 
 
@@ -48,6 +48,19 @@ def paper(name, band_start):
             d.ellipse([cx * S - r, cy * S - r, cx * S + r, cy * S + r], fill=(118, 116, 110))
             d.ellipse([cx * S - r + 2, cy * S - r + 2, cx * S + r - 1, cy * S + r - 1], fill=(138, 136, 130))
     im = im.filter(ImageFilter.GaussianBlur(0.6))
+    # torn fanfold perforation along the top and bottom: the ties leave ragged nubs and a grey shadow line
+    d = ImageDraw.Draw(im)
+    rr = random.Random(name)
+    for y0, sgn in ((0, 1), (FH * S - 1, -1)):
+        d.line([0, y0 + sgn * 3, FW * S, y0 + sgn * 3], fill=(214, 211, 202), width=2)
+        for x in range(0, FW * S, 8):
+            h = rr.choice((2, 3, 4, 5, 6))
+            w = rr.choice((3, 4, 5))
+            sh = rr.randint(150, 190)
+            d.rectangle([x, min(y0, y0 + sgn * h), x + w, max(y0, y0 + sgn * h)], fill=(sh, sh - 2, sh - 8))
+            if rr.random() < 0.35:   # a loose paper fiber
+                fx = x + rr.randint(0, 6)
+                d.line([fx, y0 + sgn * (h + 1), fx + rr.randint(-3, 3), y0 + sgn * (h + rr.randint(3, 7))], fill=(200, 197, 188), width=1)
     im.save(os.path.join(A, name))
 
 
@@ -56,15 +69,20 @@ paper('paper-p2.png', 0)
 
 # ---------------- dot-matrix plot of the island ----------------
 # lat, lon, rough outline of Manhattan clockwise from the Battery
-ISLAND = [(40.7003, -74.0170), (40.7060, -74.0190), (40.7150, -74.0160), (40.7280, -74.0110), (40.7420, -74.0090),
-          (40.7550, -74.0070), (40.7680, -73.9960), (40.7800, -73.9880), (40.7950, -73.9780), (40.8100, -73.9690),
-          (40.8250, -73.9590), (40.8400, -73.9490), (40.8550, -73.9410), (40.8680, -73.9310), (40.8760, -73.9260),
-          (40.8790, -73.9220), (40.8740, -73.9110), (40.8650, -73.9150), (40.8520, -73.9260), (40.8350, -73.9330),
-          (40.8180, -73.9340), (40.8040, -73.9300), (40.7960, -73.9290), (40.7870, -73.9380), (40.7760, -73.9430),
-          (40.7620, -73.9560), (40.7500, -73.9660), (40.7400, -73.9720), (40.7270, -73.9730), (40.7130, -73.9770),
-          (40.7100, -73.9890), (40.7060, -74.0000), (40.7020, -74.0100)]
+ISLAND = [  # west side, Hudson, Battery north to Spuyten Duyvil
+    (40.7006, -74.0141), (40.7033, -74.0172), (40.7080, -74.0190), (40.7140, -74.0172), (40.7205, -74.0140),
+    (40.7300, -74.0115), (40.7400, -74.0105), (40.7465, -74.0095), (40.7545, -74.0075), (40.7645, -74.0000),
+    (40.7730, -73.9935), (40.7870, -73.9855), (40.8000, -73.9760), (40.8150, -73.9640), (40.8270, -73.9555),
+    (40.8400, -73.9500), (40.8517, -73.9475), (40.8650, -73.9330), (40.8730, -73.9270), (40.8775, -73.9225),
+    # Harlem River, north to south
+    (40.8740, -73.9110), (40.8620, -73.9145), (40.8460, -73.9285), (40.8280, -73.9330), (40.8195, -73.9335),
+    (40.8130, -73.9340), (40.8075, -73.9300), (40.8000, -73.9300),
+    # East River, north to south
+    (40.7925, -73.9375), (40.7830, -73.9425), (40.7755, -73.9430), (40.7650, -73.9535), (40.7590, -73.9590),
+    (40.7490, -73.9680), (40.7365, -73.9745), (40.7300, -73.9725), (40.7180, -73.9745), (40.7125, -73.9765),
+    (40.7110, -73.9800), (40.7075, -73.9905), (40.7060, -73.9970), (40.7030, -74.0060), (40.7010, -74.0130)]
 LIBERTY = (40.6892, -74.0445)
-BRIDGE69 = (40.7655, -73.9545)
+BRIDGE69 = (40.7660, -73.9530)
 LAT0, LON0, LAT1, LON1 = 40.888, -74.062, 40.676, -73.888
 MW, MH = 330, 560          # css px of the plot box
 coslat = math.cos(math.radians(40.78))
@@ -87,7 +105,6 @@ m = np.asarray(mask) > 127
 px_per_km = sc / 111.0 * G
 wall_r = int(0.95 * px_per_km)
 grown = ndimage.distance_transform_edt(~m) <= wall_r
-edge_island = m & ~ndimage.binary_erosion(m, iterations=G * 2)
 edge_wall = grown & ~ndimage.binary_erosion(grown, iterations=G * 2)
 
 DOT = 4.0                   # css px between printer dots (a coarse 24 dpi plot mode)
@@ -113,10 +130,6 @@ for j in range(ny):
     for i in range(nx):
         x, y = (i + 0.5) * DOT, (j + 0.5) * DOT
         # outline of the island: every dot, solid
-        win = edge_island[max(0, int((y - DOT / 2) * G)):int((y + DOT / 2) * G), max(0, int((x - DOT / 2) * G)):int((x + DOT / 2) * G)]
-        if win.any():
-            dot(x, y, 1.75)
-            continue
         if at(m, x, y):
             # land: a light checker fill so the island reads as ground
             if (i + j) % 2 == 0 and (j % 2 == 0):
@@ -125,6 +138,19 @@ for j in range(ny):
         winw = edge_wall[max(0, int((y - DOT / 2) * G)):int((y + DOT / 2) * G), max(0, int((x - DOT / 2) * G)):int((x + DOT / 2) * G)]
         if winw.any() and (i * 7 + j * 3) % 5 < 3:
             dot(x, y, 1.45)   # the wall, printed as a broken run of dots
+
+# the shoreline: plotted along the outline in a fine graphics mode, every 2 px, snapped to its grid
+pts = [P(*p) for p in ISLAND] + [P(*ISLAND[0])]
+seen = set()
+for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+    n = max(1, int(math.hypot(x1 - x0, y1 - y0) / 1.0))
+    for t in range(n):
+        x = x0 + (x1 - x0) * t / n; y = y0 + (y1 - y0) * t / n
+        key = (round(x / 2.0), round(y / 2.0))
+        if key in seen:
+            continue
+        seen.add(key)
+        dot(key[0] * 2.0, key[1] * 2.0, 1.4, random.randint(170, 225))
 
 # Liberty Island: a small solid block with a ring around it
 lx, ly = P(*LIBERTY)

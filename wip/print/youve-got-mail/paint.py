@@ -170,13 +170,13 @@ def front_wear():
     yy, xx = np.mgrid[0:gh, 0:gw] / S
     d = np.minimum.reduce([xx, yy, W - xx, H - yy])
     nz = noise(gh, gw, 5, 10, 33)
-    rub = np.clip((5.5 - d) / 5.5, 0, 1) ** 1.5 * np.clip(nz * 1.6 + 0.55, 0, 1)
+    rub = np.clip((3.5 - d) / 3.5, 0, 1) ** 1.5 * np.clip(nz * 1.6 + 0.3, 0, 1)
     corner = np.zeros_like(d)
     for (cx_, cy_) in ((0, 0), (W, 0), (0, H), (W, H)):
-        corner = np.maximum(corner, np.clip(1 - np.hypot(xx - cx_, yy - cy_) / 22, 0, 1) ** 2)
-    rub = np.clip(rub + corner * np.clip(nz + 0.7, 0, 1) * 0.8, 0, 1)
+        corner = np.maximum(corner, np.clip(1 - np.hypot(xx - cx_, yy - cy_) / 14, 0, 1) ** 2)
+    rub = np.clip(rub + corner * np.clip(nz + 0.7, 0, 1) * 0.6, 0, 1)
     dark = np.clip(mott, 0, None) * 0.10
-    light = np.clip(-mott, 0, None) * 0.08 + rub * 0.55
+    light = np.clip(-mott, 0, None) * 0.07 + rub * 0.4
     rgba = np.zeros((gh, gw, 4), np.float32)
     # light where the flood is rubbed or thin, dark where ink pooled
     rgba[..., :3] = np.where((light > dark)[..., None], np.array([250, 244, 232]), np.array([40, 6, 12]))
@@ -201,10 +201,10 @@ def back_wear():
     c0 = 100; R = 46
     ang = np.arctan2(yy - c0, xx - c0)
     r = np.hypot(xx - c0, yy - c0) - (R + 1.2 * np.sin(ang * 3 + 0.4) + 0.6 * np.sin(ang * 8))
-    rim = np.exp(-(r / 1.1) ** 2) * np.clip(np.sin(ang * 1.1 + 0.8) * 0.8 + 0.5, 0.05, 1)
+    rim = np.exp(-(r / 1.1) ** 2) * np.clip(np.sin(ang * 1.1 + 0.8) * 0.6 + 0.6, 0.3, 1)
     beads = noise(rw, rw, 3, 18, 5)
     rim *= np.clip(beads * 2 + 0.6, 0, 1)
-    inner = np.where(r < 0, np.exp(r / 20) * 0.06, 0)
+    inner = np.where(r < 0, np.exp(r / 20) * 0.10, 0)
     al = ndimage.gaussian_filter((rim + inner), 0.5 * S) * 150
     rgba = np.zeros((rw, rw, 4), np.float32); rgba[..., :3] = (128, 84, 44); rgba[..., 3] = al
     Image.fromarray(rgba.clip(0, 255).astype(np.uint8), 'RGBA').save(os.path.join(A, 'stain-ring.png'))

@@ -12,7 +12,7 @@ async def main():
         bad = await pg.evaluate(f"""()=>{{const o=[];document.querySelectorAll('h3,p,span,div').forEach(e=>{{const t=[...e.childNodes].filter(n=>n.nodeType==3&&n.textContent.trim()).map(n=>n.textContent.trim()).join(' ');if(!t)return;const r=e.getBoundingClientRect();if(r.left<40||r.top<40||r.right>{W-40}||r.bottom>{H-40})o.push(t.slice(0,30)+' '+Math.round(r.left)+','+Math.round(r.top)+','+Math.round(r.right)+','+Math.round(r.bottom))}});return o}}""")
         size = await pg.evaluate("""()=>{let m=99;document.querySelectorAll('h3,p,span,div').forEach(e=>{if([...e.childNodes].some(n=>n.nodeType==3&&n.textContent.trim()))m=Math.min(m,parseFloat(getComputedStyle(e).fontSize))});return m}""")
         secs = await pg.evaluate("""()=>[...document.querySelectorAll('section')].map(s=>{const r=s.getBoundingClientRect();return [Math.round(r.left),Math.round(r.top),Math.round(r.bottom)]})""")
-        fam = await pg.evaluate("""()=>document.fonts.check('22px Jost')+' '+document.fonts.check('40px Yellowtail')""")
+        fam = await pg.evaluate("""()=>document.fonts.check('22px "Fjalla One"')+' '+document.fonts.check('40px Damion')+' '+document.fonts.check('16px "News Cycle"')""")
         print('edge:', bad, 'min font px:', size, 'sections:', secs, 'fonts:', fam)
         await pg.pdf(path=D + '/Sleepless-in-Seattle-menu.pdf', width='14in', height='10in', print_background=True,
                      margin={'top': '0', 'bottom': '0', 'left': '0', 'right': '0'})

@@ -33,7 +33,7 @@ def noise(h, w, scale, seed, blur=None):
     return (a - a.min()) / (a.max() - a.min() + 1e-6)
 
 
-def inkify(mask, seed, spread=0.0, rough=0.22, blur=1.6, voids=0.06):
+def inkify(mask, seed, spread=0.0, rough=0.22, blur=1.6, voids=0.03):
     """mask: float 0..1 (hi-res). Returns float alpha with rough, slightly spread edges,
     uneven density and a few pinholes where the ink did not take."""
     h, w = mask.shape
@@ -145,7 +145,7 @@ def coaster(name, W1, H1, seed):
     poly = top + [(1.02 * w, ground), (-0.02 * w, ground)]
     d.polygon(poly, fill=0)
     # bents (posts) every so often, braces and ledgers between them
-    step = 13 * S * k // 2
+    step = 19 * S * k // 2
     posts = list(range(int(0.01 * w), int(w), step))
     for i, x in enumerate(posts):
         ty = track(x) + 6 * k
@@ -154,7 +154,7 @@ def coaster(name, W1, H1, seed):
             x2 = posts[i + 1]
             ty2 = track(x2) + 6 * k
             yl = max(ty, ty2)
-            ledg = 14 * S * k // 2
+            ledg = 20 * S * k // 2
             yy = ground - ledg
             levels = []
             while yy > yl + 3 * k:
@@ -181,9 +181,9 @@ def coaster(name, W1, H1, seed):
         pts = [(0, 0), (L, 0), (L, -Hh), (0, -Hh * 0.7)]
         d.polygon([(cx + px * ca - py * sa, cy + px * sa + py * ca - 2 * k) for px, py in pts], fill=255)
     # the house under the track: two storeys, clapboard, porch
-    hx0, hx1 = int(0.50 * w), int(0.80 * w)
-    hy0 = int(track(0.65 * w) + 34 * k)
-    roof = int(hy0 - 22 * k)
+    hx0, hx1 = int(0.47 * w), int(0.83 * w)
+    roof = int(max(track(x) for x in range(hx0, hx1, 8)) + 12 * k)
+    hy0 = int(roof + 26 * k)
     d.rectangle([hx0 - 6 * k, roof, hx1 + 6 * k, ground], fill=0)
     d.polygon([(hx0 - 6 * k, hy0), ((hx0 + hx1) // 2, roof), (hx1 + 6 * k, hy0)], fill=0)
     # roof hatching
@@ -209,10 +209,10 @@ def coaster(name, W1, H1, seed):
         for i in range(3):
             if wy == wy2 and i == 1:
                 continue
-            wx = hx0 + int((hx1 - hx0) * (0.14 + i * 0.30))
+            wx = hx0 + int((hx1 - hx0) * (0.12 + i * 0.32))
             win.append((wx, wy))
     for wx, wy in win:
-        ww, wh = 13 * k, 16 * k
+        ww, wh = 16 * k, 19 * k
         d.rectangle([wx, wy, wx + ww, wy + wh], fill=0, outline=255, width=lw)
         d.line([(wx + ww // 2, wy), (wx + ww // 2, wy + wh)], fill=255, width=max(2, lw // 2))
         d.line([(wx, wy + wh // 2), (wx + ww, wy + wh // 2)], fill=255, width=max(2, lw // 2))
@@ -243,7 +243,7 @@ def coaster(name, W1, H1, seed):
 
 
 # ------------------------------------------------------------- coarse tint screen (red, about 15%)
-def tint(name, W1, H1, seed, cell=7, cover=0.30, col=RED):
+def tint(name, W1, H1, seed, cell=6, cover=0.13, col=RED):
     w, h = W1 * S, H1 * S
     yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
     c = cell * S
@@ -394,10 +394,10 @@ if __name__ == '__main__':
     os.makedirs(A, exist_ok=True)
     masthead('mast-front.png', 'Mandel’s', 250, 1180, 330, 3)
     masthead('mast-back.png', 'Mandel’s', 110, 560, 150, 4, 3, 2)
-    burst('burst-deliver.png', 176, ['WE', 'DELIVER'], 27, 5)
+    burst('burst-deliver.png', 176, ['WE', 'DELIVER'], 22, 5)
     coaster('linecut-coaster.png', 232, 168, 6)
     for nm, w, h in (('front', 456, 34), ('fronts', 456, 34), ('back', 456, 34), ('backr', 232, 34), ('wide', 720, 34)):
-        bar(f'bar-{nm}.png', w, h, hash(nm) % 97)
+        bar(f'bar-{nm}.png', w, h, sum(map(ord, nm)))
     tint('tint-history.png', 232, 210, 8)
     tint('tint-beach.png', 456, 118, 9)
     tint('tint-deliver.png', 720, 96, 10)

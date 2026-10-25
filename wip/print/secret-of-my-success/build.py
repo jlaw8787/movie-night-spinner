@@ -56,19 +56,20 @@ def img(src, left, top, extra=''):
 # ---------- page 1: the memo and the Executive Dining Room ----------
 FIELDS = fields([('TO:', 'All Executive Staff'), ('FROM:', 'Food Services, ext. 4110'), ('DATE:', 'March 2, 1987'),
                  ('SUBJECT:', 'New Executive Dining Room menu'), ('CC:', 'H. Prescott')])
-BODY = ('<p style="margin: 0">Starting Monday, March 9, the Executive Dining Room will serve the menu below. '
-        'Luncheon is from 12 noon to 2:30 PM. Bar service starts at 5:30 PM for anyone working late.</p>'
-        '<p style="margin: 12px 0 0">In line with the current cost review, all charges now go to your department '
-        'and appear on the monthly statement. Tables of four or more, please call by 11 AM.</p>')
+BODY = ('<p style="margin: 0">From Monday, March 9, the Executive Dining Room serves the menu below. '
+        'Luncheon 12 noon to 2:30 PM, bar from 5:30 PM for those working late.</p>'
+        '<p style="margin: 10px 0 0">Under the current cost review, all charges now go to your department. '
+        'Tables of four or more, please call by 11 AM.</p>')
 EXEC_LEFT = col([('LUNCHEON', [
     ('SHRIMP COCKTAIL', '6.50', 'Five jumbo shrimp on cracked ice with horseradish red sauce.'),
     ('EXECUTIVE RIB EYE', '15.75', 'Seared in a hot iron pan, basted with butter, garlic and fresh thyme, then sliced.'),
-    ('FILET OF SOLE', '12.50', 'Broiled with lemon and parsley, buttered new potatoes.')])])
+    ('FILET OF SOLE', '12.50', 'Broiled with lemon and parsley, buttered new potatoes.'),
+    ('CHEF\'S SALAD', '7.50', 'Julienne of ham, turkey and Swiss on iceberg, Russian dressing.')])])
 EXEC_RIGHT = col([
     ('TO FINISH', [
         ('APPLE PIE A LA MODE', '2.75', 'Double crust, cinnamon apples and a sugared top, vanilla ice cream.'),
         ('COFFEE OR TEA', '.75', 'Regular or decaf, by the pot.')]),
-    ('AFTER 5:30 PM', [
+    ('BAR, AFTER 5:30 PM', [
         ('GIN MARTINI', '3.75', 'Stirred with dry vermouth, served up in a frozen glass, twist.'),
         ('SCOTCH AND SODA', '3.25', 'Tall, over ice.')])])
 
@@ -76,27 +77,27 @@ def specials(rows):
     cells = ''
     for day, dish, price in rows:
         cells += (f'<div style="display: flex; align-items: baseline; font-size: 16px; line-height: 23px">'
-                  f'<span style="width: 48px; flex: none; font-weight: 700">{day}</span><span style="white-space: nowrap">{dish}</span>'
+                  f'<span style="width: 62px; flex: none; font-weight: 700">{day}</span><span style="white-space: nowrap">{dish}</span>'
                   f'<span style="flex: 1 1 0; min-width: 0; overflow: hidden; white-space: nowrap; padding: 0 5px; letter-spacing: 0.04em">{LEAD}</span><span>{price}</span></div>')
     return (f'<div style="border: 1.5px solid {INK}; padding: 10px 16px 11px">'
             f'<div style="display: flex; justify-content: space-between; font-size: 16px; line-height: 22px; margin-bottom: 6px">'
             f'<span style="font-weight: 700; text-decoration: underline; text-underline-offset: 3px">THIS WEEK\'S SPECIALS</span><span>Week of March 9</span></div>'
-            f'<div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px">{cells}</div></div>')
-SPECIALS = specials([('MON', 'Manhattan clam chowder', '1.95'), ('THU', 'Yankee pot roast', '9.25'),
-                     ('TUE', 'Chicken pot pie', '7.25'), ('FRI', 'Broiled swordfish', '13.75'),
-                     ('WED', 'Veal piccata, noodles', '11.50'), ('', 'Soup and half sandwich', '4.25')])
+            f'<div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 32px">{cells}</div></div>')
+SPECIALS = specials([('MON', 'Clam chowder, cup', '1.95'), ('THU', 'Yankee pot roast', '9.25'),
+                     ('TUE', 'Chicken pot pie', '7.25'), ('FRI', 'Swordfish steak', '13.75'),
+                     ('WED', 'Veal piccata', '11.50'), ('DAILY', 'Soup, half sandwich', '4.25')])
 
 # ---------- page 2: cafeteria, catering, reminders ----------
 CAF_INTRO = ('<p style="margin: 0 0 22px">The Employee Cafeteria on the lower level, next to the mailroom, is open '
-             'from 7:30 AM to 3:30 PM. Cash only. Executive staff are always welcome.</p>')
+             '7:30 AM to 3:30 PM. Cash only. Executive staff welcome.</p>')
 CAF_LEFT = col([('AT THE COUNTER', [
     ('EGG ON A ROLL', '.85', 'Fried egg and American cheese on a kaiser roll, until 10:30.'),
-    ('MAIL RUN SANDWICH', '1.75', 'Ham, cheddar and pickle on buttered white bread, crusts off, cut in fingers and wrapped in wax paper.'),
+    ('MAIL RUN SANDWICH', '1.75', 'Ham, cheddar and pickle on buttered white bread, crusts off, cut in fingers, in wax paper.'),
     ('KANSAS CORN FRITTERS', '1.10', 'Sweet corn and scallions in an egg batter, dropped by the spoonful and fried golden. Sour cream for dipping.')])])
 CAF_RIGHT = col([('HOT PLATE', [
     ('BUTTERMILK FRIED CHICKEN', '3.95', 'Soaked overnight, rolled in seasoned flour and cooked crisp. Mashed potatoes, pan gravy.'),
     ('SOUP OF THE DAY', '.90', 'Cup, with oyster crackers.'),
-    ('CHEESE DANISH', '.75', 'From the bakery cart, every morning.'),
+    ('CHEESE DANISH', '.75', 'Off the bakery cart each morning.'),
     ('COFFEE', '.40', 'Black or regular. Free refills.')])])
 REMIND = (sub('BOARDROOM CATERING', True)
           + item('SMOKED SALMON BLINI', '16.00', 'Warm buckwheat pancakes with sour cream, dill and cracked pepper. By the dozen.', True)
@@ -125,8 +126,8 @@ def fill(name, extra):
     assert '{{' not in b, name
     return b
 
-MENU_TOP, SPEC_TOP = 474, 862
-LOW_TOP = 668
+MENU_TOP, SPEC_TOP = 434, 854
+LOW_TOP = 636
 # distribution box geometry, for the pen marks laid on top after copying
 RX, RY = 64 + 688 - 300, LOW_TOP
 ROW0 = RY + 1.5 + 10 + 24          # border + padding + title
@@ -137,7 +138,7 @@ for i, (n, t) in enumerate(ROUTE_NAMES):
     pen += img(f'pen-tick-{t}.png', RX + 14, y - 2)
     if i < 3: pen += img(f'pen-initials-{i}.png', RX + 238, y - 4)
 
-FRONT_POST = img('staple.png', 36 - 35, 34 - 20) + img('stamp-received.png', 520, 154)
+FRONT_POST = img('staple.png', 46 - 40, 42 - 28) + img('stamp-received.png', 520, 154)
 BACK_POST = pen
 
 FACES = {

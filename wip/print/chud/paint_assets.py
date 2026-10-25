@@ -59,7 +59,7 @@ dist = np.maximum.reduce([sx_ - right_line, sy_ - bottom_line, corner * 30])
 dark = np.clip(dist * 1.6 + 0.5, 0, 1)                        # about a 1 px soft edge
 mott = np.clip(smooth_noise(W, H, 40, 31) * 0.35 + smooth_noise(W, H, 160, 32) * 0.2 + 0.5, 0, 1)
 streak = np.clip(smooth_noise(1, H, 220, 33)[:, :1] * 0.4 + 0.5, 0, 1)   # roller streaks run down the sheet
-glass = np.array([40, 39, 37], np.float32) + (mott * 26 + streak * 14)[..., None]
+glass = np.array([30, 29, 28], np.float32) + (mott * 22 + streak * 12)[..., None]
 img = img * (1 - dark[..., None]) + glass * dark[..., None]
 # the bright halo copiers leave just inside a dark edge
 halo = np.clip(1 - np.abs(dist + 2.5) / 2.5, 0, 1) * (dist < 0)
@@ -86,7 +86,7 @@ drop = smooth_noise(W, H, 5, 41) * 0.55 + smooth_noise(W, H, 16, 42) * 0.35 + sm
 drop = np.clip(drop * 0.5 + 0.30, 0, 1)
 band = np.exp(-((sy_ - 610) / 70) ** 2) * 0.55 + np.exp(-((sy_ - 205) / 40) ** 2) * 0.3   # roller bands
 side = np.clip((sx_ - 420) / 400, 0, 1) * 0.35                                               # drum worn on the right
-put((drop + band + side) * 0.36, (236, 234, 227))
+put((drop + band + side) * 0.36 * (1 - dark), (236, 234, 227))
 
 # toner specks and clumps (soft, a few px, not pixel noise)
 sp = np.zeros((H, W), np.float32)
