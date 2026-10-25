@@ -95,8 +95,10 @@ for name in ('outside', 'inside'):
           .replace('{{OUTLETS}}', outlets()).replace('{{INFO}}', info()).replace('{{MAP_LABELS}}', map_labels())
           .replace('{{CENTER_L}}', CENTER).replace('{{CENTER}}', CENTER))
     i = b.rindex('</div>')
+    fade = ('<div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 1123px; height: 794px; pointer-events: none; '
+            'background: radial-gradient(ellipse 75% 70% at 50% 48%, rgba(246,238,218,0.06) 0%, rgba(246,238,218,0.09) 55%, rgba(205,178,124,0.20) 100%)"></div>')
     grain = f'<img src="{IMG["grain"]}" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 1123px; height: 794px; pointer-events: none; display: block">'
-    out[name] = b[:i] + livery(1123) + grain + b[i:]
+    out[name] = b[:i] + livery(1123) + fade + grain + b[i:]
 if mode == 'local':
     for name, b in out.items():
         open(os.path.join(D, name + '.html'), 'w').write(f'<!doctype html><html lang="en"><head><meta charset="utf-8">{FONT_LINK}<style>body{{margin:0}}</style></head><body>{b}</body></html>')
