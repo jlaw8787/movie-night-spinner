@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Horror Menu Harness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Libre+Franklin:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Homemade+Apple&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0;background:#2a2c30;color:#eee;font:16px/1.4 system-ui,sans-serif">
+<div id="preview" style="padding:24px;display:flex;flex-direction:column;gap:48px"></div>
+<script src="../../../tmdb-posters.js"></script>
+<script>window.HORROR_ASSETS="./";</script>
+<script src="template.js"></script>
+<script>
+/* Served from the repo root: http://localhost:8795/wip/genre/horror/harness.html
+   ?film=Title%20(Year) renders one film; ?stress=1 adds a 60 character title with 4 items per course. */
+const SAMPLES=["C.H.U.D. (1984)","An American Werewolf in London (1981)","Night of the Living Dead (1968)","IT (2017)","The Silence of the Lambs (1991)","Halloween (1978)"];
+const slug=id=>id.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const toItem=([n,note,how,shop])=>({n,note,how,shop});
+(async()=>{
+  const q=new URLSearchParams(location.search);
+  const [films,stills]=await Promise.all([fetch("../../../data/films.json").then(r=>r.json()),fetch("../../../data/film-stills.json").then(r=>r.json())]);
+  films.forEach(f=>f.id=`${f.title} (${f.year})`);
+  let list=q.get("film")?[q.get("film")]:SAMPLES.slice();
+  if(q.get("stress"))list=q.get("film")?list:["STRESS"];
+  const out=document.getElementById("preview");
+  for(const id of list){
+    let f,menu;
+    if(id==="STRESS"){
+      const b=films.find(x=>x.id==="Pet Sematary (1989)");
+      f={...b,title:"The Night the Lights Went Out on Route Thirteen, Part Two",id:"stress"};
+      const all=[...b.S,...b.M,...b.W,...b.K].map(toItem);
+      const four=k=>[0,1,2,3].map(i=>({...all[(i+k*2)%all.length],note:"A long note of one hundred and twenty characters to test wrapping in the narrow menu column tonight, ok."}));
+      menu={s:four(0),m:four(1),w:four(2),d:four(3)};
+    }else{
+      f=films.find(x=>x.id===id);
+      const r=await fetch("../../../data/recipes/"+slug(id)+".json");
+      menu=r.ok?await r.json():{s:f.S.slice(0,2).map(toItem),m:f.M.map(toItem),w:f.W.map(toItem),d:f.K.map(toItem)};
+    }
+    const wrap=document.createElement("section");wrap.dataset.film=f.id;
+    wrap.innerHTML=`<h2 style="margin:0 0 12px;font-weight:600">${f.id}: ${Object.values(menu).flat().length} items, ${stills[f.id]?"stills":"poster only"}</h2>`+
+      genreCard(f,menu,TMDB_POSTERS[f.id]||null,stills[f.id]||null);
+    out.appendChild(wrap);
+  }
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r})));
+  horrorFit(out);
+  document.body.dataset.ready="1";
+})();
+</script>
+</body></html>

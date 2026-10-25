@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kids placemat pilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="../../../tmdb-posters.js"></script>
+<script src="template.js"></script>
+</head>
+<body style="margin:0;background:#cfd4dc;font-family:Nunito,sans-serif">
+<div id="preview" style="display:flex;flex-direction:column;gap:40px;padding:28px;align-items:flex-start"></div>
+<script>
+/* ?film=Title (Year) renders one film; ?stress=1 adds a 4-items-per-course test face */
+const FILMS=[
+  ["Ratatouille (2007)",""],
+  ["A Goofy Movie (1995)",""],
+  ["Toy Story (1995)",""],
+  ["Wallace & Gromit: The Curse of the Were-Rabbit (2005)",""],
+  ["E.T. the Extra-Terrestrial (1982)","many"],
+  ["Up (2009)",""]
+];
+const slug=k=>k.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const toItem=([n,note])=>({n,note});
+(async()=>{
+  const q=new URLSearchParams(location.search);
+  const [films,stills]=await Promise.all([fetch("../../../data/films.json").then(r=>r.json()),fetch("../../../data/film-stills.json").then(r=>r.json())]);
+  let list=FILMS;if(q.get("film"))list=[[q.get("film"),q.get("mode")||""]];
+  if(q.get("stress"))list=list.concat([["Peter Rabbit 2: The Runaway (2021)","stress"]]);
+  const box=document.getElementById("preview");
+  for(const [key,mode] of list){
+    const f=films.find(x=>`${x.title} (${x.year})`===key);if(!f){console.warn("missing",key);continue}
+    const d=await fetch("../../../data/film/"+slug(key)+".json").then(r=>r.json());
+    Object.assign(f,{T:d.T,D:d.D,P:d.P,S:d.S,M:d.M,W:d.W,K:d.K});
+    const ed=d.edition||null,exact=ed?ed.menu:d.recipe;
+    let menu=exact?JSON.parse(JSON.stringify(exact)):{s:f.S.slice(0,2).map(toItem),m:f.M.map(toItem),w:f.W.map(toItem),d:f.K.map(toItem)};
+    if(mode==="many"){/* every dish the film has: the exact menu plus the full S/M/W/K lists, de-duplicated */
+      const add=(k,arr)=>arr.forEach(x=>{const it=toItem(x);if(!menu[k].some(y=>y.n===it.n))menu[k].push(it)});
+      add("s",f.S);add("m",f.M);add("w",f.W);add("d",f.K);}
+    if(mode==="stress"){const pad=(k,arr)=>{const all=arr.map(toItem);while(menu[k].length<4)menu[k].push({n:all[menu[k].length%all.length].n+" "+(menu[k].length+1),note:"A note stretched out to the full one hundred and twenty characters so we can see how the column copes with it."})};pad("s",f.S);pad("m",f.M);pad("w",f.W);pad("d",f.K)}
+    const face=document.createElement("div");
+    face.className="fx-face";face.dataset.face=slug(key)+(mode==="stress"?"-stress":"");
+    face.style.cssText="width:1344px;height:960px;flex:none";
+    face.innerHTML=GENRE.kids.card(f,menu,(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[key])||null,stills[key]||null,{tag:ed&&ed.tagline,cue:ed&&ed.cue,root:"../../../"});
+    box.appendChild(face);
+  }
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r})));
+  document.querySelectorAll(".fx-face").forEach(GENRE.kids.fit);
+  document.body.dataset.ready="1";
+})();
+</script>
+</body></html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hero Genre Harness</title>
+<style>body{margin:0;background:#8a857b;font-family:system-ui,sans-serif}</style>
+<script src="../../../tmdb-posters.js"></script>
+<script src="template.js"></script>
+</head><body>
+<div id="preview" style="display:flex;flex-wrap:wrap;gap:30px;padding:30px"></div>
+<script>
+/* served from the repo root: http://localhost:8795/wip/genre/hero/harness.html
+   ?i=N renders one sample alone (for proofs); ?test=1 adds edge cases (60 char title, one dish, missing tagline) */
+const SAMPLES=["Spider-Man 2 (2004)","Batman (1989)","Doctor Strange in the Multiverse of Madness (2022)","Superman (1978)","Black Panther (2018)","Captain America: The Winter Soldier (2014)"];
+const STRESS="Captain America: The Winter Soldier (2014)";
+const slug=id=>id.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const toItem=([n,note])=>({n,note});
+const q=new URLSearchParams(location.search);
+(async()=>{
+  const films=await (await fetch("../../../data/films.json")).json();
+  const stills=await (await fetch("../../../data/film-stills.json")).json();
+  const R="../../../data/film/";
+  async function load(id){
+    const f=Object.assign({},films.find(x=>`${x.title} (${x.year})`===id));f.id=id;
+    const d=await (await fetch(R+slug(id)+".json")).json();
+    Object.assign(f,{T:d.T,D:d.D,P:d.P,S:d.S,M:d.M,W:d.W,K:d.K});
+    const e=d.edition;if(e){f.T=e.tagline||f.T;f.P=e.cue||f.P}
+    let menu=e&&e.menu||d.recipe||{s:f.S.slice(0,2).map(toItem),m:f.M.map(toItem),w:f.W.map(toItem),d:f.K.map(toItem)};
+    menu=JSON.parse(JSON.stringify(menu));
+    if(id===STRESS){
+      /* many items: 4 per course, long notes, pooled from the film's own dishes */
+      const pool=[...f.S,...f.M,...f.W,...f.K].map(x=>({n:x[0],note:(x[2]||x[1]).slice(0,120)}));
+      let k=0;["s","m","w","d"].forEach(c=>{while(menu[c].length<4)menu[c].push(pool[k++%pool.length])});
+      ["s","m","w","d"].forEach(c=>menu[c].forEach(it=>{if((it.note||"").length<60)it.note=(it.note+", made the long way, the way the counter has always done it, no shortcuts and no substitutions").slice(0,120)}));
+    }
+    return {f,menu,poster:(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[id])||null,st:stills[id]};
+  }
+  let list=SAMPLES.slice();
+  if(q.has("i"))list=[SAMPLES[+q.get("i")]];
+  const cases=await Promise.all(list.map(load));
+  if(q.get("test")){
+    const b=await load("Batman (1989)");
+    cases.push({...b,f:{...b.f,title:"The Extraordinarily Long Title of a Superhero Picture Show 2",T:""},menu:{s:[b.menu.s[0]],m:[],w:[],d:[b.menu.d[0]]}});
+    const s=await load("Spider-Man 2 (2004)");
+    cases.push({...s,f:{...s.f,title:"Spider-Man: Across the Spider-Verse and Beyond the Very End"},menu:(await load(STRESS)).menu});
+  }
+  const box=document.getElementById("preview");
+  for(const c of cases){const d=document.createElement("div");d.innerHTML=genreCard(c.f,c.menu,c.poster,c.st);box.appendChild(d)}
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r})));
+  document.body.dataset.ready="1";
+})();
+</script>
+</body></html>

@@ -75,3 +75,4 @@ do-the-right-thing: Passion One
 the-warriors: Squada One
 die-hard: Michroma
 anchorman: Rammetto One
+genre-kids: Fredoka
