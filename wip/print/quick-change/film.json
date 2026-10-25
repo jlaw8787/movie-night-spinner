@@ -1,4 +1,30 @@
-{"fmt":"getawaysupper","fn":"fmtGetawaySupper","faces":["front.html","back.html"],"names":["Front","Back"],"mm":[107.95,279.4],
- "fonts":"family=Michroma&family=Saira+Semi+Condensed:wght@500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400","fams":["Michroma","Saira Semi Condensed","Tinos"],
- "phone":{"disp":"'Michroma',sans-serif","title":"'Saira Semi Condensed',sans-serif","name":"'Saira Semi Condensed',sans-serif","body":"'Tinos',serif","price":"'Saira Semi Condensed',sans-serif","note":"'Tinos',serif"},
- "build":"python3 paint.py && python3 build.py && python3 shot.py && python3 pdfs.py"}
+{
+ "fmt": "getawaysupper",
+ "fn": "fmtGetawaySupper",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Hanken+Grotesk:wght@600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Dawning+of+a+New+Day",
+ "fams": [
+  "Hanken Grotesk",
+  "Lora",
+  "Dawning of a New Day"
+ ],
+ "phone": {
+  "disp": "'Hanken Grotesk',sans-serif",
+  "title": "'Hanken Grotesk',sans-serif",
+  "name": "'Hanken Grotesk',sans-serif",
+  "body": "'Lora',serif",
+  "price": "'Hanken Grotesk',sans-serif",
+  "note": "'Lora',serif"
+ }
+}

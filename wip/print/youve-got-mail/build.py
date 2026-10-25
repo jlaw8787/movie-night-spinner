@@ -1,135 +1,145 @@
-"""Builds both faces of the Fox & Sons Books cafe card: 5.5 x 8.5 in (US half letter),
-two sided, flat, four colour process on gloss coated card, fall 1998.
-Writes front.html and back.html from the .body.html files, and the phone labels."""
-import os, json
+"""The Cafe at Fox Books, Fox & Sons Books, Broadway, Upper West Side, autumn 1998.
+The chain superstore's two-sided table menu (US Letter) on bright coated stock in the store's own
+colours: awning burgundy, sign gold, espresso brown. Front: the sign, the new store on Broadway,
+the coffee bar. Back: kitchen, bakery case, book party platters, a note from Joe Fox, a story hour
+coupon and a staff pick bookmark.
+Writes front.body.html / back.body.html and full pages front.html / back.html."""
+import os
 D = os.path.dirname(os.path.abspath(__file__))
-W, H = 528, 816
-FLOOD, CREAM, INK, BODY, TAUPE, TINT = '#6a1824', '#f3e9d5', '#231a17', '#3e322c', '#5a4844', '#f1e8d8'
-CSS2 = 'family=Bodoni+Moda:wght@700&family=Cinzel:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400'
-FONT_LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{CSS2}&display=swap">'
-FILM = "You've Got Mail (1998)"
+W, H = 816, 1056
+PAPER, DARK, RED, GOLD, MUTE = '#f8f4ec', '#2b1f1b', '#7e1f2d', '#b08a45', '#6a5a50'
+FONTS = ('https://fonts.googleapis.com/css2?family=Gloock'
+         '&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Mrs+Saint+Delafield&display=swap')
+DISP = "'Gloock', serif"; BODY = "'Lora', serif"; SIG = "'Mrs Saint Delafield', cursive"
+L, CW = 56, 704
 
-# The espresso bar: (spec key or None, name, description, short, tall, grande)
-BAR = [
-    (None, 'Coffee of the day', 'A different roast each morning, brewed by the hour.', '1.25', '1.45', '1.65'),
-    (None, 'Caffe latte', 'Espresso and steamed milk under a thin layer of foam.', '2.45', '2.95', '3.35'),
-    ('Tall decaf cappuccino', 'Cappuccino', 'Double espresso and steamed milk, topped high with foam.', '2.45', '2.95', '3.35'),
-    (None, 'Caffe mocha', 'Espresso, dark chocolate and milk, with whipped cream.', '2.75', '3.25', '3.60'),
-    (None, 'Hot cocoa', 'Bittersweet chocolate melted into whole milk.', '1.75', '2.10', '2.40'),
-    (None, 'Hot apple cider', 'Mulled with cinnamon and clove all through the fall.', '1.75', '2.10', '2.40'),
-]
-# The kitchen: (section, [(spec key or None, name, description, price)], note)
-FOOD = [
-    ('The bakery case', [
-        ('Cafe cheesecake', 'New York cheesecake', 'Rich and dense, with sugared fresh strawberries.', '3.95'),
-        (None, 'Lemon poppy seed muffin', 'Made each morning, under a sharp lemon glaze.', '1.75'),
-        (None, 'Almond biscotti', 'Twice baked and crisp. Good with an espresso.', '1.25')], None),
-    ('Soup, bagels and sandwiches', [
-        (None, 'Chicken noodle soup', 'Egg noodles, carrot, celery and dill. By the cup or bowl.', '2.25 / 3.25'),
-        ('Upper West Side bagels', 'Toasted mini bagels', 'Three to an order, with scallion cream cheese and cracked pepper.', '3.25'),
-        ('Fox Books cafe sandwiches', 'Pressed turkey and brie', 'On sourdough with cranberry sauce, grilled until the cheese runs.', '6.50')], None),
-    ('Book party platters', [
-        ('Publishing party salmon cucumber bites', 'Smoked salmon on cucumber', 'Two dozen, with dill cream cheese, capers and black pepper.', '32.00')],
-        'For signings and reading groups. Two days\u2019 notice, please.'),
-]
-STORE = [
-    [('Reading group', 'Thursdays at 7 in the cafe. This month, <i>Pride and Prejudice</i>.'),
-     ('Storytime', 'Saturdays at 11, children’s department. This fall, the Shoe books.')],
-    [('Store hours', 'Every day, 9 AM to 11 PM. The cafe closes at 10:30.'),
-     ('Back to school', 'Notebooks, planners and bouquets of sharpened pencils by the door.')],
-]
-LABELS = {
-    'Publishing party salmon cucumber bites': {'n': 'Smoked salmon on cucumber', 'd': 'Two dozen, with dill cream cheese, capers and black pepper.', 'note': 'Book party platter. Order two days ahead.'},
-    'Upper West Side bagels': {'n': 'Toasted mini bagels', 'd': 'Three to an order, with scallion cream cheese and cracked pepper.', 'note': 'From the cafe kitchen, 3.25.'},
-    'Fox Books cafe sandwiches': {'n': 'Pressed turkey and brie', 'd': 'On sourdough with cranberry sauce, grilled until the cheese runs.', 'note': 'From the cafe kitchen, 6.50.'},
-    'Cafe cheesecake': {'n': 'New York cheesecake', 'd': 'Rich and dense, with sugared fresh strawberries.', 'note': 'From the bakery case, 3.95.'},
-    'Tall decaf cappuccino': {'n': 'Cappuccino', 'd': 'Double decaf espresso and steamed milk, topped high with foam.', 'note': 'Tall. Decaf. Cappuccino. 2.95'},
-}
-MIS = 'text-shadow: 0 -0.6px 0 rgba(214, 160, 60, 0.45)'      # yellow plate a hair high on burgundy type
+def kicker(t, color=RED, extra=''):
+    return (f'<div style="font-family: {BODY}; font-weight: 700; font-size: 18px; letter-spacing: 0.22em; color: {color}; '
+            f'text-transform: uppercase; line-height: 1;{extra}">{t}</div>')
 
+def band(t, size=38, extra=''):
+    """Section title: an awning-burgundy band over a gold valance rule."""
+    return (f'<div style="border-bottom: 3px solid {GOLD}; padding-bottom: 4px;{extra}">'
+            f'<div style="display: inline-block; background: {RED}; color: {PAPER}; font-family: {DISP}; font-size: {size}px; '
+            f'line-height: 1; padding: 8px 18px 10px; letter-spacing: 0.005em">{t}</div></div>')
 
-def lockup(size, on_flood):
-    fg = CREAM if on_flood else FLOOD
-    plate_bg, plate_fg = (TAUPE, CREAM)
-    box = max(12, round(size * 0.33))
-    sh = 'text-shadow: -0.6px 0 0 rgba(175, 40, 72, 0.75)' if on_flood else MIS
-    return (f'<div style="display: flex; align-items: center; justify-content: center; gap: {round(size * 0.2)}px; color: {fg}; '
-            f'font-family: \'Bodoni Moda\', serif; font-weight: 700; font-size: {size}px; line-height: 1; letter-spacing: 0.03em; {sh}">'
-            f'<span>FOX</span><span style="font-family: \'EB Garamond\', serif; font-weight: 500; font-size: {box}px; letter-spacing: 0.04em; text-shadow: none; '
-            f'background: {plate_bg}; color: {plate_fg}; padding: {round(box * 0.24)}px {round(box * 0.42)}px {round(box * 0.2)}px; line-height: 1; border: 1px solid {"#8d7670" if on_flood else TAUPE}">&amp; SONS</span><span>BOOKS</span></div>')
+def item(name, price, desc, gap=18):
+    return (f'<div style="margin-top: {gap}px">'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-family: {DISP}; '
+            f'font-size: 28px; line-height: 1.15; color: {DARK}">'
+            f'<span>{name}</span><span style="color: {RED}">{price}</span></div>'
+            f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.38; color: {DARK}; margin-top: 3px">{desc}</div></div>')
 
+def sign(size, plate):
+    """The store sign: FOX, the small & SONS plate, BOOKS."""
+    return (f'<div style="display: flex; align-items: center; gap: {int(size * 0.2)}px; font-family: {DISP}; font-size: {size}px; line-height: 1; color: {DARK}; letter-spacing: 0.03em">'
+            f'<span>FOX</span><span style="font-family: {BODY}; font-weight: 700; font-size: {plate}px; letter-spacing: 0.12em; background: {DARK}; color: {PAPER}; '
+            f'padding: {int(plate * 0.35)}px {int(plate * 0.55)}px; line-height: 1">&amp; SONS</span><span>BOOKS</span></div>')
 
-def bar():
-    col = 'width: 64px; text-align: center'
-    head = (f'<div style="display: flex; align-items: flex-end; border-bottom: 2px solid {INK}; padding-bottom: 5px">'
-            f'<div style="flex: 1; font-family: \'Cinzel\', serif; font-weight: 700; font-size: 17px; letter-spacing: 0.12em; color: {FLOOD}; {MIS}">The Espresso Bar</div>'
-            + ''.join(f'<span style="{col}; font-family: \'Cinzel\', serif; font-weight: 700; font-size: 12px; letter-spacing: 0.03em; color: {BODY}">{c}</span>' for c in ('SHORT', 'TALL', 'GRANDE'))
-            + '</div>')
-    rows = ''
-    for i, (_, n, d, s, t, g) in enumerate(BAR):
-        bg = f'background: {TINT}; ' if i % 2 == 1 else ''
-        rows += f'''<div style="{bg}padding: 3px 6px 4px; margin: 0 -6px">
-          <div style="display: flex; align-items: baseline">
-            <h3 style="flex: 1; margin: 0; font-weight: 600; font-size: 20px; line-height: 1.1">{n}</h3>
-            {''.join(f'<span style="{col}; font-weight: 500; font-size: 18px; font-variant-numeric: lining-nums">{p}</span>' for p in (s, t, g))}</div>
-          <p style="margin: 0; font-size: 16px; line-height: 1.2; color: {BODY}">{d}</p></div>'''
-    return head + f'<div style="margin-top: 4px">{rows}</div>'
+def page(inner, name):
+    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}">'
+            f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.22">'
+            f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 14px; background: {RED}"></div>'
+            f'<div style="position: absolute; left: 0; top: 17px; width: {W}px; height: 3px; background: {GOLD}"></div>'
+            + inner +
+            f'<img src="assets/wear-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
+            '</div>')
 
+# ---------------- props ----------------
+def stamp(o, x, y):
+    """Round rubber stamp, burgundy ink, struck over the corner of the photo."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 132px; height: 132px; border: 4px solid {RED}; border-radius: 50%; '
+             f'box-sizing: border-box; transform: rotate(-12deg); opacity: 0.9; background: rgba(248,244,236,0.92)">'
+             f'<div style="position: absolute; left: 6px; top: 6px; width: 112px; height: 112px; border: 1.5px solid {RED}; border-radius: 50%; box-sizing: border-box"></div>'
+             f'<div style="position: absolute; left: 0; top: 24px; width: 124px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {RED}">FOX BOOKS</div>'
+             f'<div style="position: absolute; left: 0; top: 44px; width: 124px; text-align: center; font-family: {DISP}; font-size: 30px; line-height: 1; color: {RED}">Now<br>Open</div>'
+             f'<div style="position: absolute; left: 0; top: 108px; width: 124px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {RED}; margin-top: -16px">FALL 1998</div>'
+             '</div>')
 
-def food():
-    out = ''
-    for i, (sec, items, note) in enumerate(FOOD):
-        rows = ''
-        for _, n, d, p in items:
-            rows += f'''<div style="display: flex; align-items: baseline; gap: 14px; margin-top: 6px">
-              <div style="flex: 1; min-width: 0">
-                <h3 style="margin: 0; font-weight: 600; font-size: 20px; line-height: 1.05">{n}</h3>
-                <p style="margin: 1px 0 0; font-size: 16px; line-height: 1.2; color: {BODY}">{d}</p></div>
-              <span style="font-weight: 500; font-size: 18px; white-space: nowrap; font-variant-numeric: lining-nums">{p}</span></div>'''
-        nt = (f'<p style="margin: 5px 0 0; font-style: italic; font-size: 16px; line-height: 1.25; color: {FLOOD}">{note}</p>' if note else '')
-        out += (f'<div style="{"" if i == 0 else "margin-top: 14px"}"><div style="border-bottom: 1px solid {FLOOD}; padding-bottom: 3px; '
-                f'font-family: \'Cinzel\', serif; font-weight: 700; font-size: 14px; letter-spacing: 0.14em; color: {FLOOD}; {MIS}">{sec}</div>{rows}{nt}</div>')
-    return out
+def coupon(x, y, w):
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; box-sizing: border-box; border: 2px dashed {RED}; background: #fffdf8; padding: 12px 16px 12px">'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
+            f'<span style="font-family: {DISP}; font-size: 30px; line-height: 1; color: {RED}">Free hot cocoa</span>'
+            f'<span style="font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.18em; color: {MUTE}">CLIP</span></div>'
+            f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.35; color: {DARK}; margin-top: 6px">With any picture book bought at Saturday story hour. Good through December 31, 1998.</div></div>')
 
+def bookmark(x, y, w):
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: 96px; background: {DARK}; transform: rotate(-2.5deg); '
+            f'box-shadow: 0 2px 6px rgba(40,25,20,0.3)">'
+            f'<div style="position: absolute; left: 8px; top: 8px; width: {w - 16}px; height: 80px; border: 1px solid {GOLD}; box-sizing: border-box"></div>'
+            f'<div style="position: absolute; left: 22px; top: 18px; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.2em; color: {GOLD}">STAFF PICK</div>'
+            f'<div style="position: absolute; left: 22px; top: 38px; font-family: {DISP}; font-size: 26px; line-height: 1; color: {PAPER}">Pride and Prejudice</div>'
+            f'<div style="position: absolute; left: 22px; top: 66px; font-family: {BODY}; font-style: italic; font-size: 15px; color: #e3d6c0">Jane Austen. Paperback, 5.95</div>'
+            f'<div style="position: absolute; left: {w - 46}px; top: 22px; width: 18px; height: 52px; background: {RED}"></div>'
+            '</div>')
 
-def store():
-    cols = ''
-    for c in STORE:
-        cell = ''
-        for j, (t, d) in enumerate(c):
-            cell += (f'<div style="{"" if j == 0 else "margin-top: 7px"}"><div style="font-family: \'Cinzel\', serif; font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: {FLOOD}">{t.upper()}</div>'
-                     f'<p style="margin: 1px 0 0; font-size: 16px; line-height: 1.22; text-wrap: pretty">{d}</p></div>')
-        cols += f'<div style="flex: 1; min-width: 0">{cell}</div>'
-    return cols
+# ---------------- FRONT ----------------
+def front():
+    o = []
+    o.append(f'<div style="position: absolute; left: {L}px; top: 44px; width: {CW}px; display: flex; justify-content: space-between">'
+             f'{kicker("Upper West Side, New York")}{kicker("Open 7 a.m. to 11 p.m.", DARK)}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 74px; width: {CW}px; display: flex; justify-content: center">{sign(88, 24)}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 176px; width: {CW}px; display: flex; align-items: center; gap: 18px">'
+             f'<div style="flex: 1; height: 2px; background: {GOLD}"></div>'
+             f'<div style="font-family: {DISP}; font-size: 40px; line-height: 1; color: {RED}">The Cafe</div>'
+             f'<div style="flex: 1; height: 2px; background: {GOLD}"></div></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 238px; width: {CW}px; height: 332px; outline: 2px solid {RED}; outline-offset: 5px; background: #ddd">'
+             f'<img src="assets/still-facade.jpg" alt="The Fox and Sons Books store on Broadway, gold sign letters over burgundy awnings" '
+             f'style="display: block; width: {CW}px; height: 332px"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 584px; width: {CW}px; display: flex; justify-content: space-between; '
+             f'font-family: {BODY}; font-style: italic; font-size: 16px; color: {MUTE}">'
+             f'<span>Our new store on Broadway. Bring any book to your table.</span><span>Story hour Saturdays at 11</span></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 624px; width: {CW}px">'
+             + kicker('Short, tall, light, dark, caf, decaf', RED, ' margin-bottom: 10px')
+             + band('The coffee bar', 42)
+             + item('Tall decaf cappuccino', '2.95', 'Two shots of decaf espresso, steamed milk and a deep crown of foam.', 14)
+             + item('Caff&egrave; latte', '2.75', 'Espresso with plenty of steamed milk under a thin layer of foam.', 12)
+             + item('Coffee of the day', '1.52', 'Our house roast, brewed fresh every hour. Refills are free.', 12)
+             + item('Hot cocoa', '1.95', 'Dark chocolate melted into hot milk, with whipped cream.', 12)
+             + '</div>')
+    stamp(o, L + CW - 120, 214)
+    return page(''.join(o), 'front')
 
+# ---------------- BACK ----------------
+COLW, GAP = 330, 44
+X2 = L + COLW + GAP
 
-def overlays(face):
-    s = ''
-    if face == 'front':
-        s += f'<img src="assets/wear-front.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">'
-    else:
-        s += f'<img src="assets/stain-ring.png" alt="" aria-hidden="true" style="position: absolute; left: 250px; top: 590px; width: 200px; height: 200px; pointer-events: none; display: block; opacity: 0.55">'
-        s += f'<img src="assets/wear-back.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">'
-    s += f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: -313px; top: 0; width: 1154px; height: {H}px; opacity: 0.35; pointer-events: none; display: block">'
-    s += f'<img src="assets/paper-gloss.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">'
-    return s
+def back():
+    o = []
+    o.append(f'<div style="position: absolute; left: {L}px; top: 46px">{kicker("Order at the counter, we bring it to you")}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 78px; font-family: {DISP}; font-size: 66px; line-height: 1; color: {DARK}">The Menu</div>')
+    o.append(f'<div style="position: absolute; left: {L + 330}px; top: 92px; width: {CW - 330}px; display: flex; justify-content: flex-end">{sign(40, 13)}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 166px; width: {CW}px; height: 2px; background: {GOLD}"></div>')
+    col = lambda x, inner: f'<div style="position: absolute; left: {x}px; top: 188px; width: {COLW}px">{inner}</div>'
+    left = (band('From the kitchen')
+            + item('Toasted mini bagels', '3.25', 'Three to an order, spread with cream cheese whipped with scallion and cracked pepper.')
+            + item('Pressed turkey and brie', '6.50', 'Cranberry sauce on buttered sourdough, griddled until the cheese runs.')
+            + item('Chicken noodle soup', '3.50', 'Simmered all morning with carrot, celery and dill. With a roll.')
+            + f'<div style="height: 22px"></div>'
+            + band('The bakery case')
+            + item('New York cheesecake', '3.95', 'Baked rich and dense, chilled overnight, with sugared strawberries.')
+            + item('Chocolate chip cookie', '1.25', 'Big and chewy, out of the oven every morning.'))
+    right = (band('Book party platters')
+             + item('Smoked salmon on cucumber', '24.00', 'Two dozen, with dill cream cheese, capers and cracked pepper. Order two days ahead.')
+             + f'<div style="margin-top: 18px; border: 2px solid {RED}; padding: 4px; background: #fffdf8">'
+             f'<img src="assets/still-platter.jpg" alt="A book party spread with salmon roe, sliced ham and crudites" style="display: block; width: 318px; height: 191px"></div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.35; color: {MUTE}; margin-top: 6px">From a book party spread. The roe is a garnish.</div>'
+             f'<div style="height: 2px; background: {GOLD}; margin: 14px 0 14px"></div>'
+             + kicker('Welcome to the neighborhood') +
+             f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.45; color: {DARK}; margin-top: 8px">Take any book off the shelf, bring it to your table and stay as long as you like. We will keep the coffee coming. Dogs wait outside, except Brinkley.</div>'
+             f'<div style="font-family: {SIG}; font-size: 50px; line-height: 1; color: {DARK}; margin-top: 2px">Joe Fox</div>')
+    o.append(col(L, left)); o.append(col(X2, right))
+    o.append(coupon(L, 866, COLW))
+    o.append(bookmark(X2 + 4, 872, COLW - 8))
+    o.append(f'<div style="position: absolute; left: {L}px; top: 984px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.45"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 992px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
+             f'<span>Fox &amp; Sons Books, Broadway. School supplies on the lower level.</span><span>Prices subject to change. FB-152</span></div>')
+    return page(''.join(o), 'back')
 
-
-for face in ('front', 'back'):
-    b = open(os.path.join(D, face + '.body.html')).read()
-    b = (b.replace('{{LOCKUP}}', lockup(48, True)).replace('{{LOCKUP_SM}}', '<div style="flex-shrink: 0">' + lockup(20, False) + '</div>')
-          .replace('{{BAR}}', bar()).replace('{{FOOD}}', food()).replace('{{STORE}}', store()))
-    i = b.rindex('</div>')
-    b = b[:i] + overlays(face) + b[i:]
-    open(os.path.join(D, face + '.html'), 'w').write(
-        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
-        f'<title>Fox &amp; Sons Books cafe card, {face}</title>{FONT_LINK}'
-        f'<style>body{{margin:0;background:#faf7f0}}</style></head><body>{b}</body></html>')
-
-json.dump({FILM: LABELS}, open(os.path.join(D, 'bookshopcafe.labels.json'), 'w'), indent=1, ensure_ascii=False)
-json.dump({'fmt': 'bookshopcafe', 'fn': 'fmtBookshopCafe', 'faces': ['front.html', 'back.html'], 'names': ['Front', 'Back'],
-           'mm': [139.7, 215.9], 'fonts': CSS2, 'fams': ['Bodoni Moda', 'Cinzel', 'EB Garamond'],
-           'phone': {'disp': "'Bodoni Moda',serif", 'title': "'Cinzel',serif", 'name': "'EB Garamond',serif",
-                     'body': "'EB Garamond',serif", 'price': "'EB Garamond',serif", 'note': "'EB Garamond',serif"}},
-          open(os.path.join(D, 'film.json'), 'w'), indent=1)
+FACES = {'front': front(), 'back': back()}
+for n, b in FACES.items():
+    open(os.path.join(D, n + '.body.html'), 'w').write(b)
+    open(os.path.join(D, n + '.html'), 'w').write(
+        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>The Cafe at Fox Books, {n}</title>'
+        f'<link rel="stylesheet" href="{FONTS}"><style>body{{margin:0}}</style></head><body>{b}</body></html>')
 print('built')

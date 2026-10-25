@@ -6,24 +6,25 @@
   "back.html"
  ],
  "names": [
-  "Dining Car",
-  "Lounge Car"
+  "Front",
+  "Back"
  ],
  "mm": [
-  203.2,
+  215.9,
   279.4
  ],
- "fonts": "family=Libre+Bodoni:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Pathway+Gothic+One",
+ "fonts": "family=Rozha+One&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Mrs+Saint+Delafield",
  "fams": [
-  "Libre Bodoni",
-  "Pathway Gothic One"
+  "Rozha One",
+  "Crimson Pro",
+  "Mrs Saint Delafield"
  ],
  "phone": {
-  "disp": "'Libre Bodoni',serif",
-  "title": "'Pathway Gothic One',sans-serif",
-  "name": "'Libre Bodoni',serif",
-  "body": "'Libre Bodoni',serif",
-  "price": "'Libre Bodoni',serif",
-  "note": "'Libre Bodoni',serif"
+  "disp": "'Rozha One',serif",
+  "title": "'Rozha One',serif",
+  "name": "'Crimson Pro',serif",
+  "body": "'Crimson Pro',serif",
+  "price": "'Crimson Pro',serif",
+  "note": "'Crimson Pro',serif"
  }
 }

@@ -2,13 +2,12 @@
 import asyncio, os
 from playwright.async_api import async_playwright
 D = os.path.dirname(os.path.abspath(__file__))
-FACES = ('front', 'back')
-FW, FH = 816, 1056
-CHECK = """()=>{const o=[];let m=99;document.querySelectorAll('div,span').forEach(e=>{const t=[...e.childNodes].filter(n=>n.nodeType==3&&n.textContent.trim()).map(n=>n.textContent.trim()).join(' ');if(!t)return;m=Math.min(m,parseFloat(getComputedStyle(e).fontSize));const r=e.getBoundingClientRect();if(r.left<40||r.top<40||r.right>%d||r.bottom>%d)o.push(t.slice(0,30)+' '+[r.left,r.top,r.right,r.bottom].map(Math.round))});return [o,m]}""" % (FW - 40, FH - 40)
+FACES = ("front", "back")
+CHECK = """()=>{const o=[];let m=99;document.querySelectorAll('div,span').forEach(e=>{const t=[...e.childNodes].filter(n=>n.nodeType==3&&n.textContent.trim()).map(n=>n.textContent.trim()).join(' ');if(!t)return;m=Math.min(m,parseFloat(getComputedStyle(e).fontSize));const r=e.getBoundingClientRect();if(r.left<40||r.top<40||r.right>776||r.bottom>1016)o.push(t.slice(0,30)+' '+[r.left,r.top,r.right,r.bottom].map(Math.round))});return [o,m]}"""
 async def main():
     async with async_playwright() as p:
         b = await p.chromium.launch(proxy={'server': os.environ['HTTPS_PROXY'], 'bypass': 'localhost,127.0.0.1'})
-        ctx = await b.new_context(viewport={'width': FW, 'height': FH}, device_scale_factor=2, ignore_https_errors=True)
+        ctx = await b.new_context(viewport={'width': 816, 'height': 1056}, device_scale_factor=2, ignore_https_errors=True)
         pg = await ctx.new_page()
         for n in FACES:
             await pg.goto('file://' + D + '/' + n + '.html'); await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(800)

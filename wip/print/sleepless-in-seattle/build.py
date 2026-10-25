@@ -1,160 +1,159 @@
-"""Builds the Night Owl Dock Cafe paper placemat (Sleepless in Seattle, set February 1993).
-One face, 14 x 10 in landscape (1344 x 960 CSS px), the standard diner placemat sheet, single
-sided, no fold. Printed two-colour offset (teal and burgundy) on ecru grease-resistant stock,
-with a rubber stamp added at the counter. Writes placemat.html."""
-import os, random
+"""The Evening Star Room, a sixty-fifth floor supper club in Midtown Manhattan, Valentine's night 1993.
+Where Annie takes Walter to dinner and sees the Empire State Building light a heart.
+Two-sided US Letter supper card, blush stock, midnight and heart-red inks, on the house style lock.
+Front: wordmark, the heart from the window tables, starters. Back: kitchen, sweets, the lounge,
+a window-table still and Walter's reservation card.
+Writes front.body.html / back.body.html and full pages front.html / back.html."""
+import os
 D = os.path.dirname(os.path.abspath(__file__))
-TEAL, BURG, PAPER = '#174c57', '#8c2232', '#f0e8d4'
-FONTS = 'family=Damion&family=Fjalla+One&family=News+Cycle:wght@400;700'
-LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
-W, H = 1344, 960
-SANS = "'News Cycle', 'News Gothic', Arial, sans-serif"
-COND = "'Fjalla One', 'Franklin Gothic Medium Cond', sans-serif"
-SCRIPT = "'Damion', 'Brush Script MT', cursive"
+W, H = 816, 1056
+PAPER, DARK, RED, MUTE, CARD = '#f3e1da', '#1f2245', '#c22a3f', '#5a4e5e', '#fbf3ee'
+FONTS = ('https://fonts.googleapis.com/css2?family=Yeseva+One'
+         '&family=Lora:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap')
+DISP = "'Yeseva One', serif"; BODY = "'Lora', serif"; SIG = "'Great Vibes', cursive"
+L, CW = 56, 704
 
-# (section, sub, [(name, description, note or None, price)])
-MIDDLE = [
-  ('From the dock', None, [
-    ('Northwest salmon dip', 'Hot-smoked fish blended into cream cheese with dill, capers, lemon and a bite of horseradish. Toasted bagel chips.', 'We ship it anywhere, even Baltimore.', '4.95'),
-    ('Clam chowder', 'Puget Sound Manilas, potato, onion and bacon simmered in cream. Oyster crackers.', None, 'cup 2.25 &nbsp;bowl 3.50'),
-    ('Late show popcorn', 'Popped to order in coconut oil, tossed with browned butter and coarse sea salt.', 'Radio on till the call-in show signs off.', '1.50')]),
-  ('Suppers', 'from 5 PM', [
-    ('Baked salmon', 'Fillet under a crust of parsley, bread crumbs and grated lemon peel. Steamed green beans, warm butter spooned over.', 'Mild and gentle. Nothing to sneeze at.', '10.95'),
-    ('Meat loaf', 'Thick slice, brown gravy, mashed potatoes and peas.', None, '6.95')]),
-  ('Breakfast all night', None, [
-    ('Two eggs any style', 'Hash browns, toast or a biscuit, bacon or link sausage.', None, '3.75')]),
-  ('Deckhands’ plates', '10 and under', [
-    ('Grilled cheese', 'American on white bread, a cup of tomato soup, apple slices.', None, '2.95')]),
-]
-RIGHT = [
-  ('Sweets', None, [
-    ('Valentine hearts', 'Sugar cookies cut by hand, iced red and white.', 'Baked through February 14.', '2 for 2.14'),
-    ('Tiramisu', 'Espresso-soaked ladyfingers layered with mascarpone and cocoa.', 'What is it? You’ll see.', '3.25'),
-    ('Marionberry pie', 'Oregon berries, lattice top, baked every morning.', 'À la mode, 75¢ more.', '2.75')]),
-  ('Coffee bar', None, [
-    ('Iced mocha', 'Strong drip coffee with dark chocolate melted in, cold milk, plenty of ice and whipped cream.', 'Yes, even in February.', '2.25'),
-    ('Caffe latte', 'Double shot of espresso, steamed milk.', None, '1.75'),
-    ('Drip coffee', 'Dark roast, bottomless cup.', None, '.75'),
-    ('Hot cocoa', 'Whole milk, marshmallows.', None, '1.25')]),
-]
+def kicker(t, color=RED, size=18, extra=''):
+    return (f'<div style="font-family: {BODY}; font-weight: 700; font-size: {size}px; letter-spacing: 0.26em; color: {color}; '
+            f'text-transform: uppercase; line-height: 1.2;{extra}">{t}</div>')
 
+def diamond(color=RED, s=9):
+    return f'<div style="width: {s}px; height: {s}px; background: {color}; transform: rotate(45deg); flex: none"></div>'
 
-def item(name, desc, note, price, first, gap):
-    nt = f'<div style="margin-top: 2px; font-weight: 700; font-size: 16px; line-height: 1.25; color: {BURG}">{note}</div>' if note else ''
-    return f'''<div style="margin-top: {0 if first else gap}px">
-      <div style="display: flex; align-items: baseline; gap: 6px; font-family: {COND}; color: {TEAL}">
-        <span style="font-size: 23px; line-height: 1.12; letter-spacing: 0.01em">{name}</span>
-        <span style="flex: 1; border-bottom: 2px dotted {TEAL}; transform: translateY(-5px); min-width: 16px"></span>
-        <span style="font-size: 20px; white-space: nowrap">{price}</span></div>
-      <div style="margin-top: 1px; font-family: {SANS}; font-size: 16px; line-height: 1.3; color: {TEAL}; text-wrap: pretty">{desc}</div>{nt}</div>'''
+def ornament(w, color=RED):
+    """Deco rule: line, diamond, line."""
+    return (f'<div style="display: flex; align-items: center; gap: 12px; width: {w}px">'
+            f'<div style="flex: 1; height: 1px; background: {color}"></div>{diamond(color)}'
+            f'<div style="flex: 1; height: 1px; background: {color}"></div></div>')
 
+def bar(t, w, size=40):
+    """Midnight band with paper type and a heart-red underline."""
+    return (f'<div style="width: {w}px">'
+            f'<div style="background: {DARK}; color: {PAPER}; font-family: {DISP}; font-size: {size}px; line-height: 1; '
+            f'letter-spacing: 0.04em; text-transform: uppercase; padding: 9px 16px 11px; display: flex; align-items: center; gap: 14px">'
+            f'{diamond(RED, 10)}<span>{t}</span></div>'
+            f'<div style="height: 3px; background: {RED}; margin-top: 3px"></div></div>')
 
-def head(t, sub, first, gap):
-    s = f'<span style="font-family: {SANS}; font-weight: 700; font-size: 15px; letter-spacing: 0.04em; color: {TEAL}">{sub}</span>' if sub else ''
-    return f'''<div style="display: flex; align-items: baseline; gap: 10px; margin: {0 if first else gap}px 0 8px; padding: 3px 0 4px; border-top: 3px solid {BURG}; border-bottom: 1px solid {BURG}">
-      <span style="font-family: {COND}; font-size: 19px; letter-spacing: 0.16em; color: {BURG}">{t.upper()}</span>{s}</div>'''
+def item(name, price, desc, note=None, gap=16):
+    n = (f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; line-height: 1.3; color: {RED}; margin-top: 3px">{note}</div>'
+         if note else '')
+    return (f'<div style="margin-top: {gap}px">'
+            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; font-family: {DISP}; '
+            f'font-size: 27px; line-height: 1.15; color: {DARK}"><span>{name}</span><span style="color: {RED}">{price}</span></div>'
+            f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.36; color: {DARK}; margin-top: 3px">{desc}</div>{n}</div>')
 
+def page(inner, top):
+    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}">'
+            f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.28">'
+            f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 52px; background: {DARK}"></div>'
+            f'<div style="position: absolute; left: 0; top: 52px; width: {W}px; height: 4px; background: {RED}"></div>'
+            f'<div style="position: absolute; left: 0; top: 16px; width: {W}px; display: flex; justify-content: center">{kicker(top, PAPER, 17)}</div>'
+            f'<div style="position: absolute; left: 0; top: {H - 10}px; width: {W}px; height: 10px; background: {DARK}"></div>'
+            + inner +
+            f'<img src="assets/wear-PAGE.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
+            '</div>')
 
-def column(groups, ig, hg):
-    return ''.join(head(t, sub, gi == 0, hg) + ''.join(item(*it, first=(i == 0), gap=ig) for i, it in enumerate(items))
-                   for gi, (t, sub, items) in enumerate(groups))
+def matchbook(o, x, y):
+    """Prop: the room's matchbook, tucked over the corner of the picture."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 104px; height: 146px; background: {DARK}; '
+             f'box-shadow: 0 2px 7px rgba(30,20,40,0.4); transform: rotate(-8deg); overflow: hidden">'
+             f'<div style="position: absolute; left: 0; top: 12px; width: 104px; display: flex; justify-content: center">{diamond(RED, 10)}</div>'
+             f'<div style="position: absolute; left: 0; top: 30px; width: 104px; text-align: center; font-family: {DISP}; font-size: 19px; line-height: 1.05; color: {PAPER}">Evening<br>Star Room</div>'
+             f'<div style="position: absolute; left: 14px; top: 76px; width: 76px; height: 1px; background: {RED}"></div>'
+             f'<div style="position: absolute; left: 0; top: 83px; width: 104px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1.25; letter-spacing: 0.08em; color: {PAPER}">DANCING<br>555-0214</div>'
+             f'<div style="position: absolute; left: 0; top: 122px; width: 104px; height: 24px; background: {RED}"></div>'
+             f'<div style="position: absolute; left: 0; top: 128px; width: 104px; height: 8px; background: repeating-linear-gradient(90deg, #6a4a4e 0 2px, #3a2a30 2px 4px)"></div>'
+             '</div>')
 
+def ticket(o, x, y):
+    """Prop: an observatory ticket for the same night."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 196px; height: 104px; background: {CARD}; '
+             f'box-shadow: 0 2px 7px rgba(30,20,40,0.35); transform: rotate(5deg)">'
+             f'<div style="position: absolute; left: 6px; top: 6px; width: 184px; height: 92px; border: 2px solid {RED}; box-sizing: border-box"></div>'
+             f'<div style="position: absolute; left: 150px; top: 6px; width: 0; height: 92px; border-left: 2px dashed {RED}"></div>'
+             f'<div style="position: absolute; left: 14px; top: 13px; width: 132px; font-family: {BODY}; font-weight: 700; font-size: 14px; letter-spacing: 0.16em; color: {RED}; line-height: 1.2">OBSERVATORY</div>'
+             f'<div style="position: absolute; left: 14px; top: 32px; width: 132px; font-family: {DISP}; font-size: 25px; color: {DARK}; line-height: 1.1">86th Floor</div>'
+             f'<div style="position: absolute; left: 14px; top: 64px; width: 132px; font-family: {BODY}; font-size: 14px; color: {DARK}; line-height: 1.25">Admit one<br>Feb. 14, 1993</div>'
+             f'<div style="position: absolute; left: 152px; top: 52px; width: 40px; text-align: center; font-family: {BODY}; font-weight: 700; font-size: 14px; color: {RED}; transform: rotate(-90deg)">0214</div>'
+             '</div>')
 
-# ---- kids word search, 11 x 8. Listed words plus two hidden bonus names.
-GW, GH = 11, 8
-words = [('HOUSEBOAT', 0, 1, 'h'), ('FERRY', 1, 0, 'v'), ('NEEDLE', 1, 10, 'v'), ('MOCHA', 3, 2, 'h'),
-         ('SALMON', 7, 3, 'h'), ('RAIN', 2, 5, 'h'), ('KAYAK', 1, 1, 'v'),
-         ('JONAH', 5, 4, 'h'), ('MAGIC', 2, 9, 'v')]
-grid = [[None] * GW for _ in range(GH)]
-for w, r, c, dr in words:
-    for i, ch in enumerate(w):
-        rr, cc = (r, c + i) if dr == 'h' else (r + i, c)
-        assert grid[rr][cc] in (None, ch), (w, rr, cc, grid[rr][cc])
-        grid[rr][cc] = ch
-random.seed(1993)
-filler = 'BDEFGLPRSTUWBCEHLMNPRT'
-for r in range(GH):
-    for c in range(GW):
-        if grid[r][c] is None:
-            grid[r][c] = random.choice(filler)
-cell = 24
-cells = ''.join(f'<div style="position: absolute; left: {c * cell}px; top: {r * cell}px; width: {cell}px; height: {cell}px; text-align: center; line-height: {cell}px; font-family: {SANS}; font-weight: 700; font-size: 17px; color: {TEAL}">{grid[r][c]}</div>'
-                for r in range(GH) for c in range(GW))
-rows_txt = [''.join(row) for row in grid]
-print('\n'.join(rows_txt))
+# ---------------- FRONT ----------------
+def front():
+    o = []
+    o.append(f'<div style="position: absolute; left: {L}px; top: 84px; width: {CW}px; display: flex; justify-content: center">{kicker("Midtown Manhattan &nbsp;&middot;&nbsp; Sixty-fifth floor")}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 110px; width: {CW}px; text-align: center; font-family: {DISP}; font-size: 66px; '
+             f'line-height: 1.05; color: {DARK}; text-transform: uppercase; letter-spacing: 0.01em">Evening Star Room</div>')
+    o.append(f'<div style="position: absolute; left: {L + 92}px; top: 196px">{ornament(CW - 184)}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 212px; width: {CW}px; display: flex; justify-content: center">'
+             f'{kicker("Valentine&rsquo;s night &nbsp;&middot;&nbsp; Sunday, February 14, 1993", DARK, 18)}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 256px; width: {CW}px; height: 340px; outline: 2px solid {RED}; outline-offset: 5px; background: {DARK}">'
+             f'<img src="assets/still-heart.jpg" alt="The Empire State Building lit with a red heart over the Manhattan night skyline" '
+             f'style="display: block; width: {CW}px; height: 340px"></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 610px; width: {CW}px; display: flex; justify-content: space-between; gap: 20px; '
+             f'font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.3; color: {MUTE}">'
+             f'<span>The view from our window tables on Valentine&rsquo;s night.</span><span>Ask for a window.</span></div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 650px; width: {CW}px">'
+             + bar('To begin', CW, 40)
+             + item('Northwest salmon spread', '9.50', 'Hot-smoked fish worked into cream cheese and cr&egrave;me fra&icirc;che with dill, capers, lemon and horseradish. Toasted bagel chips.', 'Flown in overnight from Seattle.', 14)
+             + item('Baltimore crab cake', '12.50', 'Maryland lump meat, barely bound and pan browned, with remoulade.', None, 14)
+             + item('Jumbo shrimp cocktail', '14.00', 'Five on crushed ice with cocktail sauce and a wedge of lemon.', None, 14)
+             + '</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 1006px; width: {CW}px; display: flex; justify-content: space-between; '
+             f'font-family: {BODY}; font-size: 15px; color: {MUTE}">'
+             f'<span>Dinner from six. Dancing until one.</span><span>Reservations (212) 555-0214</span></div>')
+    matchbook(o, L - 14, 240)
+    ticket(o, L + CW - 178, 520)
+    return page(''.join(o), 'Dinner and dancing nightly').replace('PAGE', 'front')
 
-FACTS = ['Seattle gets less rain in a year than New York.',
-         'The Space Needle opened for the 1962 World’s Fair.',
-         'The city is named for Chief Sealth.']
-facts = ''.join(f'<div style="display: flex; gap: 8px; margin-top: {0 if i == 0 else 3}px"><span style="font-family: {COND}; font-size: 17px; color: {BURG}; line-height: 1.3">{i + 1}.</span><span style="font-family: {SANS}; font-size: 16px; line-height: 1.3; color: {TEAL}">{f}</span></div>' for i, f in enumerate(FACTS))
+# ---------------- BACK ----------------
+COLW, GAP = 340, 24
+X2 = L + COLW + GAP
 
-SEC = lambda t: f'<div style="padding: 3px 0 4px; border-top: 3px solid {BURG}; border-bottom: 1px solid {BURG}; font-family: {COND}; font-size: 19px; letter-spacing: 0.16em; color: {BURG}">{t}</div>'
+def reservation(o, x, y):
+    """Prop and character note: Walter's reservation card, signed."""
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {COLW - 10}px; background: {CARD}; '
+             f'box-shadow: 0 2px 7px rgba(30,20,40,0.32); transform: rotate(-2deg); padding: 12px 16px 8px; box-sizing: border-box">'
+             f'<div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid {RED}; padding-bottom: 6px">'
+             f'{kicker("Reserved", RED, 16)}<span style="font-family: {DISP}; font-size: 18px; color: {DARK}">Table 14</span></div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 17px; line-height: 1.4; color: {DARK}; margin-top: 8px">'
+             f'Two at eight, by the window. Please let the kitchen know about my allergies. Something mild.</div>'
+             f'<div style="font-family: {SIG}; font-size: 36px; line-height: 1.1; color: {DARK}; margin-top: 2px">Walter Jackson</div>'
+             '</div>')
 
-body = f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; font-family: {SANS}; color: {TEAL}; text-shadow: 0 0 0.9px rgba(23,76,87,0.6)">
-  <img src="assets/border-paper.png" alt="" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">
+def back():
+    o = []
+    o.append(f'<div style="position: absolute; left: {L}px; top: 82px">{kicker("Supper is served from six")}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 104px; font-family: {DISP}; font-size: 64px; line-height: 1.05; color: {DARK}; text-transform: uppercase">The Menu</div>')
+    o.append(f'<div style="position: absolute; left: {L + 360}px; top: 112px; width: {CW - 360}px; text-align: right; font-family: {DISP}; font-size: 30px; line-height: 1.1; color: {RED}">Evening Star Room</div>'
+             f'<div style="position: absolute; left: {L + 360}px; top: 150px; width: {CW - 360}px; text-align: right; font-family: {BODY}; font-style: italic; font-size: 16px; color: {MUTE}">Sixty-fifth floor</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 186px">{ornament(CW)}</div>')
+    col = lambda x, inner: f'<div style="position: absolute; left: {x}px; top: 208px; width: {COLW}px">{inner}</div>'
+    left = (bar('The kitchen', COLW, 34)
+            + item('Baked salmon', '26.00', 'Fillet roasted under parsley, grated lemon peel and bread crumbs. Steamed green beans, warm butter spooned over.', 'Mild. Nothing to sneeze at.', 12)
+            + item('Filet mignon', '34.00', 'Ten ounces, broiled to order, with b&eacute;arnaise and potatoes Anna.', None, 14)
+            + item('Roast half chicken', '24.00', 'Rosemary and garlic, pan juices, wild rice.', None, 14)
+            + '<div style="height: 22px"></div>'
+            + bar('Sweets', COLW, 34)
+            + item('Valentine hearts', '2.14', 'Sugar cookies made with browned butter, cut by hand, iced red and white.', 'A pair on every saucer tonight.', 12)
+            + item('Souffl&eacute; for two', '14.00', 'Dark chocolate, baked to order, warm sauce poured at the table.', None, 14))
+    right = (bar('The lounge', COLW, 34)
+             + item('Iced mocha', '4.50', 'Strong coffee with dark chocolate melted through, cold milk over ice, whipped cream and cocoa.', 'The way they take it in Seattle.', 12)
+             + item('Late show popcorn', '3.50', 'Popped in coconut oil, tossed with browned butter and sea salt.', 'Bar radio stays on the call-in show.', 14)
+             + item('Espresso', '2.50', 'Pulled at the bar, with a twist of lemon peel.', None, 14)
+             + f'<div style="margin-top: 20px; border: 2px solid {RED}; padding: 4px; background: {CARD}; width: {COLW - 12}px; box-sizing: content-box">'
+             f'<img src="assets/still-window-table.jpg" alt="A couple at a candlelit table set with red and white flowers" style="display: block; width: {COLW - 12}px; height: 200px"></div>'
+             f'<div style="font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.3; color: {MUTE}; margin-top: 6px">Candles and roses on every table, February 14.</div>')
+    o.append(col(L, left)); o.append(col(X2, right))
+    o.append(f'<div style="position: absolute; left: {L}px; top: 988px; width: {CW}px; height: 1px; background: {DARK}; opacity: 0.45"></div>'
+             f'<div style="position: absolute; left: {L}px; top: 996px; width: {CW}px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 15px; color: {MUTE}">'
+             f'<span>Form 0214. Printed in U.S.A. &copy; 1993.</span><span>Prices subject to change.</span></div>')
+    reservation(o, X2 + 4, 830)
+    return page(''.join(o), 'Dinner and dancing nightly').replace('PAGE', 'back')
 
-  <!-- left column: masthead, halftone, hours, kids corner -->
-  <section style="position: absolute; left: 60px; top: 50px; width: 440px">
-    <div style="font-family: {SCRIPT}; font-size: 98px; line-height: 0.95; color: {BURG}; text-shadow: 3px 3px 0 {TEAL}; margin-left: -2px">Night Owl</div>
-    <div style="display: flex; align-items: center; gap: 10px; margin-top: 2px">
-      <span style="font-family: {COND}; font-size: 25px; letter-spacing: 0.34em; color: {TEAL}">DOCK CAFE</span>
-      <span style="flex: 1; height: 3px; background: {TEAL}"></span>
-      <span style="font-family: {COND}; font-size: 21px; letter-spacing: 0.06em; color: {BURG}">OPEN TILL 2 AM</span></div>
-    <div style="margin-top: 3px; font-size: 16px; line-height: 1.3; font-weight: 700">On the houseboat docks, Lake Union &nbsp;·&nbsp; (206) 555-0193</div>
-    <div style="margin-top: 10px; border: 2px solid {TEAL}; padding: 3px; background: {PAPER}">
-      <img src="assets/skyline-halftone.png" alt="" style="display: block; width: 430px; height: 268px; object-fit: cover; object-position: 50% 35%"></div>
-    <div style="display: flex; justify-content: space-between; margin-top: 4px; font-size: 13px; line-height: 1.3; font-weight: 700; letter-spacing: 0.04em">
-      <span>THE VIEW FROM OUR BACK DECK</span><span>PHOTO BY A REGULAR</span></div>
-    <div style="margin-top: 8px; font-family: {SCRIPT}; font-size: 37px; line-height: 1; color: {BURG}">Sleepless in Seattle? So are we.</div>
-    <div style="margin-top: 4px; font-size: 16px; line-height: 1.3; text-wrap: pretty">The grill stays hot all night, and Dr. Marcia Fieldstone’s call-in show stays on the radio.</div>
-
-    <div style="margin-top: 10px; border: 2px solid {BURG}; padding: 7px 10px 9px">
-      <div style="display: flex; align-items: baseline; justify-content: space-between">
-        <span style="font-family: {COND}; font-size: 19px; letter-spacing: 0.12em; color: {BURG}">DECKHANDS’ WORD SEARCH</span>
-        <span style="font-size: 13px; font-weight: 700">CRAYONS AT THE COUNTER</span></div>
-      <div style="display: flex; gap: 14px; margin-top: 6px">
-        <div style="position: relative; flex: none; width: {GW * cell}px; height: {GH * cell}px; border: 1px solid {TEAL}">{cells}</div>
-        <div style="flex: 1; font-size: 16px; line-height: 1.24">
-          <div style="font-family: {COND}; font-size: 17px; color: {BURG}; letter-spacing: 0.06em">FIND THESE</div>
-          <div style="font-weight: 700; margin-top: 2px">HOUSEBOAT<br>FERRY &nbsp;KAYAK<br>NEEDLE<br>MOCHA &nbsp;RAIN<br>SALMON</div>
-          <div style="margin-top: 4px">Two names are hiding too.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <div style="position: absolute; left: 522px; top: 58px; width: 1px; height: 844px; border-left: 2px dotted {TEAL}"></div>
-
-  <section style="position: absolute; left: 544px; top: 58px; width: 352px">
-    {column(MIDDLE, ig=10, hg=16)}
-  </section>
-
-  <div style="position: absolute; left: 918px; top: 58px; width: 1px; height: 844px; border-left: 2px dotted {TEAL}"></div>
-
-  <section style="position: absolute; left: 940px; top: 58px; width: 344px">
-    {column(RIGHT, ig=9, hg=14)}
-    <div style="margin-top: 14px">{SEC('DID YOU KNOW?')}</div>
-    <div style="margin-top: 7px">{facts}</div>
-  </section>
-
-  <!-- February run: Valentine's notice printed in the burgundy plate -->
-  <div id="valbox" style="position: absolute; left: 940px; bottom: 50px; width: 344px; box-sizing: border-box; border: 3px double {BURG}; padding: 6px 10px 7px; text-align: center; color: {BURG}">
-    <div style="font-family: {SCRIPT}; font-size: 31px; line-height: 1">Valentine’s Day</div>
-    <div style="font-family: {COND}; font-size: 17px; letter-spacing: 0.12em; margin-top: 2px">SUNDAY, FEBRUARY 14 &nbsp;·&nbsp; OPEN LATE</div>
-    <div style="font-weight: 700; font-size: 16px; margin-top: 1px; line-height: 1.25">A heart on every saucer.</div>
-  </div>
-
-  <div style="position: absolute; left: 60px; bottom: 54px; width: 836px; display: flex; justify-content: space-between; font-size: 13px; line-height: 1.3; font-weight: 700; letter-spacing: 0.03em; color: {TEAL}">
-    <span>PRINTED ON RECYCLED PAPER. PLEASE RECYCLE.</span><span>PAY AT THE COUNTER. CASH OR LOCAL CHECKS, PLEASE.</span></div>
-
-  <img src="assets/ink-wear.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">
-  <!-- finish: shared grain and the soft wear layer (coffee ring, grease, gloss, edges) -->
-  <img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block; opacity: 0.75">
-  <img src="assets/wear-stain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">
-</div>'''
-
-import re
-# ink spread on the burgundy plate too: give burgundy type its own slight gain
-body = re.sub(r'(color: #8c2232)(?![^"]*text-shadow)', r'\1; text-shadow: 0 0 0.9px rgba(140,34,50,0.6)', body)
-open(os.path.join(D, 'placemat.html'), 'w').write(
-    f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Night Owl Dock Cafe placemat</title>{LINK}<style>body{{margin:0}}</style></head><body>{body}</body></html>')
-print('built placemat.html')
+FACES = {'front': front(), 'back': back()}
+for n, b in FACES.items():
+    open(os.path.join(D, n + '.body.html'), 'w').write(b)
+    open(os.path.join(D, n + '.html'), 'w').write(
+        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Evening Star Room menu, {n}</title>'
+        f'<link rel="stylesheet" href="{FONTS}"><style>body{{margin:0}}</style></head><body>{b}</body></html>')
+print('built')

@@ -1,215 +1,166 @@
-"""El Ultimo Tren bakery bag (Money Train, 1995).
-A gusseted kraft bag (self-opening sack) from a Puerto Rican bakery and lunch counter at the top of
-the subway stairs, the bag they hand you your pastelitos in. Face 8.5 x 11 in (US Letter), printed
-one ink, dark green, by flexo from a line-cut plate, front and back. A violet rubber date stamp is
-added at the counter. Construction: serrated top, thumb notch on the front, side folds, glued seam
-and the folded bottom on the back.
-Writes front.body.html, back.body.html, front.html, back.html, film.json and lasttrain.labels.json."""
+"""El Ultimo Tren cafeteria menu, Money Train (1995).
+Two-sided US Letter table card from the Latin cafeteria at the top of the subway stairs,
+where the transit cops of the night tour eat. House style lock (Jurassic system).
+Writes front.html, back.html, film.json and lasttrain.labels.json."""
 import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 816, 1056
-KRAFT, INK, VIOLET = '#c49a6c', '#183c2a', '#4c3a7a'
-FONTS = ('family=Corben:wght@400;700&family=Oswald:wght@500;700'
-         '&family=Arvo:ital,wght@0,400;0,700;1,400;1,700')
+INK, RED, PAPER, GOLD, MUTE = '#1d1b2c', '#c8371c', '#f5e6b0', '#b9852a', '#5a4f3c'
+FONTS = ('family=Bungee'
+         '&family=Bitter:ital,wght@0,400;0,600;0,800;1,400;1,600'
+         '&family=Caveat+Brush')
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=block">'
-C = "font-family: 'Corben', 'Cooper Black', serif; font-weight: 700"
-O = "font-family: 'Oswald', 'Arial Narrow', sans-serif"
-B = "font-family: 'Arvo', 'Rockwell', serif"
-SPREAD = 'text-shadow: 0 0 .7px rgba(24,60,42,.6)'
+DISP = "font-family: 'Bungee', Impact, sans-serif"
+TEXT = "font-family: 'Bitter', Georgia, serif"
+HAND = "font-family: 'Caveat Brush', cursive"
 
-# spec key -> (printed name, description, price, note on the bag or None, phone note)
+# spec key -> printed name, description, price, phone note
 SPEC = {
-  "Guava pastelitos": ("Pastelitos de guayaba",
-      "Puff pastry sealed around guava paste and cream cheese, baked golden and brushed with sugar syrup.",
-      "60¢", "Out of the oven every hour.", "Out of the oven every hour."),
-  "Gold token cookies": ("Token cookies",
-      "Butter shortbread rounds the size of a subway fare, the middle punched out, the tops brushed with gold.",
-      "4 for $1", "Good for a cookie. Not a ride.", "Good for a cookie. Not a ride."),
-  "Token booth honey roasted nuts": ("Honey roasted nuts",
-      "Almonds, cashews and peanuts tossed in honey, sugar, cinnamon and a pinch of salt, baked and stirred till glossy. Sold warm in a paper cone.",
-      "$1.50", "Made here. Never torched.", "Made here. Never torched."),
-  "Arroz con pollo": ("Arroz con pollo",
-      "Chicken thighs browned hard, then set on long-grain rice cooked slow with onion, green pepper, garlic, cilantro, achiote, green olives and capers.",
-      "$4.95", "Big enough for two brothers.", "Big enough for two brothers."),
-  "Money Train payday michelada": ("Payday cerveza",
-      "Cold lager over ice with fresh lime, tomato juice, hot sauce and a dash of Worcestershire, chili salt on the rim. Out the door it goes in a paper sack.",
-      "$2.75", "Friday is payday. Cash only.", "Friday is payday. Cash only."),
+  "Guava pastelitos": ("Pastelitos de guayaba", "Puff pastry sealed around guava paste and cream cheese, brushed with sugar syrup.", ".75",
+                       "Out of the oven every hour till close."),
+  "Gold token cookies": ("Token cookies", "Butter shortbread the size of a fare, punched through the middle, brushed with gold.", "4 for 1.25",
+                         "Good for a cookie. Not a ride."),
+  "Arroz con pollo": ("Arroz con pollo", "Thighs browned hard, then set on long-grain rice cooked slow with onion, green pepper, garlic, cilantro, achiote, green olives and capers.", "5.95",
+                      "Big enough for two brothers."),
+  "Token booth honey roasted nuts": ("Honey roasted nuts", "Almonds, cashews and peanuts baked with honey, sugar, cinnamon and salt, stirred till glossy. Warm in a paper cone.", "1.50",
+                                     "Roasted here. Never torched."),
+  "Money Train payday michelada": ("Payday michelada", "Cold lager over ice, fresh lime, tomato juice, hot sauce and Worcestershire, chili salt rim.", "3.50",
+                                   "Friday is payday. Cash only."),
 }
-ADDED = {
-  'mallorca': ("Mallorca", "Soft, sweet spiral bun, split, pressed on the grill with butter and buried in powdered sugar.", "75¢", None),
-  'pan': ("Pan de agua", "Crusty white loaf, soft inside, baked twice a day. Comes buttered with every lunch plate.", "$1.25", "A loaf for a token."),
-  'tostones': ("Tostones", "Green plantain fried, smashed flat and fried again till crisp, with garlic mojo for dipping.", "$1.50", None),
-  'malta': ("Malta", "Dark, sweet barley soda, ice cold in the bottle. No alcohol.", "$1", None),
-  'cafe': ("Café con leche", "Dark roast brewed strong and poured into steamed milk, sugared the way you take it.", "65¢", None),
-  'negro': ("Café negro", "Small, black and strong. For the night shift.", "50¢", None),
+ADD = {
+  'mallorca': ("Mallorca", "Soft, sweet spiral bun, split, pressed on the griddle with butter and buried in powdered sugar.", "1.10"),
+  'cafe': ("Café con leche", "Dark roast pulled strong with scalded milk. Sugar on the counter.", ".85"),
+  'pernil': ("Pernil asado", "Pork shoulder rubbed with garlic, oregano and sour orange, roasted overnight till the skin crackles. Rice and red beans.", "6.25"),
+  'bistec': ("Bistec encebollado", "Thin top round simmered under a pile of onions with vinegar and garlic. White rice and tostones.", "6.95"),
+  'cubano': ("Sandwich cubano", "Roast pork, ham, Swiss, pickles and mustard, pressed flat and hot.", "3.95"),
+  'morir': ("Morir soñando", "Fresh orange juice whisked into cold sweet milk over crushed ice.", "1.75"),
 }
 
 
-def item(it, first=False, gap=16, nsz=25, psz=22):
-    name, desc, price, note = it[:4]
-    nt = (f'<div style="{B}; font-style: italic; font-weight: 700; font-size: 16px; line-height: 1.3; margin-top: 4px">{note}</div>'
+def item(n, d, p, note=None, top=22):
+    nt = (f'<div style="{TEXT}; font-style: italic; font-weight: 600; font-size: 18px; line-height: 1.3; color: {RED}; margin-top: 4px">{note}</div>'
           if note else '')
-    return f'''<div style="margin-top: {0 if first else gap}px">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
-        <div style="{O}; font-weight: 700; font-size: {nsz}px; line-height: 1.08; text-transform: uppercase; letter-spacing: .015em">{name}</div>
-        <div style="{O}; font-weight: 700; font-size: {psz}px; line-height: 1; white-space: nowrap">{price}</div></div>
-      <div style="{B}; font-size: 16px; line-height: 1.36; margin-top: 4px">{desc}</div>{nt}</div>'''
+    return f'''<div style="margin-top: {top}px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px">
+        <div style="{TEXT}; font-weight: 800; font-size: 27px; line-height: 1.08">{n}</div>
+        <div style="{TEXT}; font-weight: 800; font-size: 27px; white-space: nowrap">{p}</div></div>
+      <div style="{TEXT}; font-size: 20px; line-height: 1.32; margin-top: 4px; color: #2e2a26; text-wrap: pretty">{d}</div>{nt}</div>'''
 
 
-def head(es, en, top=0, sz=31):
-    return (f'<div style="margin-top: {top}px; margin-bottom: 12px; display: flex; align-items: baseline; justify-content: space-between; '
-            f'border-bottom: 3px solid {INK}; padding-bottom: 4px">'
-            f'<span style="{C}; font-size: {sz}px; line-height: 1">{es}</span>'
-            f'<span style="{O}; font-weight: 500; font-size: 14px; letter-spacing: .2em; text-transform: uppercase">{en}</span></div>')
+def S(k, top=22, note=False):
+    n, d, p, nt = SPEC[k]
+    return item(n, d, p, nt if note else None, top)
 
 
-def bar(x, y, w, parts, h=36, fs=16):
-    inner = '<span style="font-size: 12px">&#9733;</span>'.join(f'<span>{p}</span>' for p in parts)
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; background: {INK}; '
-            f'display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-sizing: border-box; '
-            f'{O}; font-weight: 700; font-size: {fs}px; letter-spacing: .16em; color: {KRAFT}; text-shadow: none">{inner}</div>')
+def A(k, top=22):
+    return item(*ADD[k], top=top)
 
 
-def rules(x, y, w):
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: 3px; background: {INK}"></div>'
-            f'<div style="position: absolute; left: {x}px; top: {y + 6}px; width: {w}px; height: 1px; background: {INK}"></div>')
+def bar(t, sub=None, width=None):
+    s = f'<span style="{TEXT}; font-weight: 800; font-size: 18px; letter-spacing: 0.16em; color: {PAPER}; margin-left: auto; padding-left: 16px; white-space: nowrap; opacity: 0.9">{sub}</span>' if sub else ''
+    w = f'width: {width}px;' if width else ''
+    token = (f'<div style="flex: none; width: 34px; height: 34px; border-radius: 50%; background: {GOLD}; border: 3px solid {PAPER}; margin-right: 16px; '
+             f'position: relative"><div style="position: absolute; left: 11px; top: 11px; width: 12px; height: 12px; border-radius: 50%; background: {RED}"></div></div>')
+    return (f'<div style="display: flex; align-items: center; {w} background: {RED}; color: {PAPER}; padding: 9px 20px 9px 14px; border-bottom: 5px solid {INK}">'
+            f'{token}<span style="{DISP}; font-size: 40px; line-height: 1; white-space: nowrap">{t}</span>{s}</div>')
 
 
-def leader(label, price):
-    return (f'<div style="display: flex; align-items: baseline; gap: 6px; {B}; font-size: 16px; line-height: 1.5">'
-            f'<span style="white-space: nowrap">{label}</span>'
-            f'<span style="flex: 1; border-bottom: 2px dotted {INK}; transform: translateY(-4px)"></span>'
-            f'<span style="{O}; font-weight: 700; font-size: 17px; white-space: nowrap">{price}</span></div>')
+def kicker(t, extra=''):
+    return f'<div style="{TEXT}; font-weight: 800; font-size: 18px; letter-spacing: 0.2em; text-transform: uppercase; color: {RED}; {extra}">{t}</div>'
 
 
-L, R = 48, 768
-
-# ---------------------------------------------------------------- front of the bag
-front = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; color: {INK}; {SPREAD}">
-  <div style="position: absolute; left: {L}px; top: 70px; {O}; font-weight: 700; font-size: 15px; letter-spacing: .26em">PANADER&Iacute;A &middot; REPOSTER&Iacute;A</div>
-  <div style="position: absolute; right: {W - R}px; top: 70px; {O}; font-weight: 700; font-size: 15px; letter-spacing: .26em; text-align: right">CAFETER&Iacute;A &middot; ALMUERZO</div>
-  {rules(L, 96, R - L)}
-  <div style="position: absolute; left: {L}px; top: 118px; width: {R - L}px; text-align: center; {C}; font-size: 70px; line-height: 1; white-space: nowrap">El &Uacute;ltimo Tren</div>
-  {rules(L, 200, R - L)}
-
-  <aside style="position: absolute; left: {L}px; top: 222px; width: 194px">
-    <div style="{O}; font-weight: 700; font-size: 35px; line-height: 1.08; letter-spacing: .01em">ABIERTO<br>HASTA EL<br>&Uacute;LTIMO TREN</div>
-    <div style="{B}; font-style: italic; font-size: 16px; line-height: 1.32; margin-top: 9px; padding-top: 8px; border-top: 2px solid {INK}">Open till the last train, seven days a week.</div>
-    <div style="margin-top: 9px; padding-top: 4px; border-top: 2px solid {INK}">
-      {leader('Pan', '5 A.M.')}{leader('Almuerzo', '11 to 3')}{leader('Cena', 'till late')}</div>
-  </aside>
-  <img src="assets/car-ink.png" alt="" style="position: absolute; left: 266px; top: 214px; width: 284px; height: 317px; display: block">
-  <aside style="position: absolute; left: 574px; top: 216px; width: 194px; text-align: center">
-    <img src="assets/token-ink.png" alt="" style="display: block; width: 112px; height: 112px; margin: 0 auto">
-    <div style="{O}; font-weight: 700; font-size: 19px; letter-spacing: .1em; margin-top: 6px; line-height: 1.1">SE ACEPTAN FICHAS</div>
-    <div style="{B}; font-size: 16px; line-height: 1.3; margin-top: 4px">One token, $1.25, buys you a caf&eacute; con leche and a pastelito.</div>
-    <div style="{B}; font-style: italic; font-weight: 700; font-size: 16px; line-height: 1.3; margin-top: 4px">Here, tokens skip the money train.</div>
-  </aside>
-
-  {bar(L, 542, R - L, ['PASTELITOS', 'MALLORCAS', 'PAN DE AGUA', 'CAF&Eacute;', 'PARA LLEVAR'])}
-
-  <section style="position: absolute; left: {L}px; top: 596px; width: 446px">
-    {head('Del horno', 'From the oven')}
-    {item(SPEC['Guava pastelitos'], True)}
-    {item(SPEC['Gold token cookies'])}
-    {item(ADDED['mallorca'])}
-  </section>
-
-  <section style="position: absolute; left: 524px; top: 596px; width: {R - 524}px">
-    {head('Al peso', 'By the bag')}
-    {item(SPEC['Token booth honey roasted nuts'], True, nsz=20, psz=20)}
-    <div style="margin-top: 14px; border: 2px solid {INK}; padding: 6px 10px 6px">
-      <div style="{O}; font-weight: 700; font-size: 17px; letter-spacing: .14em; text-align: center; border-bottom: 1px solid {INK}; padding-bottom: 3px; margin-bottom: 2px">POR DOCENA</div>
-      {leader('Pastelitos', '6.50')}{leader('Mallorcas', '8.00')}{leader('Token cookies', '2.75')}</div>
-  </section>
-
-  {rules(L, 962, R - L)}
-  <div style="position: absolute; left: {L}px; top: 978px; width: {R - L}px; display: flex; justify-content: space-between; align-items: baseline">
-    <span style="{B}; font-size: 16px">At the top of the subway stairs. Tel. 555-0195</span>
-    <span style="{O}; font-weight: 700; font-size: 16px; letter-spacing: .14em">LUNCH Y BEBIDAS AL DORSO</span></div>
-</div>'''
-
-# ---------------------------------------------------------------- back of the bag
-RB = 736          # glued seam sits at x 766, keep the type left of it
-FOLD = 904        # bottom folded up from here
-back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; color: {INK}; {SPREAD}">
-  <header style="position: absolute; left: {L}px; top: 66px; width: {RB - L}px; display: flex; justify-content: space-between; align-items: flex-end">
-    <span style="{C}; font-size: 52px; line-height: 1">El &Uacute;ltimo Tren</span>
-    <span style="{O}; font-weight: 700; font-size: 15px; letter-spacing: .2em; text-align: right; line-height: 1.35">LUNCH COUNTER<br>Y CAFETER&Iacute;A</span></header>
-  {rules(L, 130, RB - L)}
-  {bar(L, 146, RB - L, ['ALMUERZO 11 A 3', 'CAF&Eacute; TODO EL D&Iacute;A', 'CENA HASTA TARDE'])}
-
-  <section style="position: absolute; left: {L}px; top: 202px; width: 354px">
-    {head('Almuerzo', 'Hot plate')}
-    {item(SPEC['Arroz con pollo'], True, nsz=28)}
-    {item(ADDED['pan'], gap=14, nsz=24, psz=22)}
-    {item(ADDED['tostones'], gap=14, nsz=24, psz=22)}
-  </section>
-
-  <section style="position: absolute; left: 432px; top: 202px; width: {RB - 432}px">
-    {head('Bebidas', 'Clocking off')}
-    {item(SPEC['Money Train payday michelada'], True, nsz=23)}
-    {item(ADDED['malta'], nsz=23, gap=12)}
-    {item(ADDED['cafe'], nsz=23, gap=12)}
-    {item(ADDED['negro'], nsz=23, gap=12)}
-  </section>
-
-  <div style="position: absolute; left: {L}px; top: 624px; width: 354px; box-sizing: border-box; background: {INK}; color: {KRAFT}; text-shadow: none; padding: 14px 18px 15px">
-    <div style="{O}; font-weight: 700; font-size: 23px; line-height: 1.1; letter-spacing: .05em">ON THE MIDNIGHT TOUR?</div>
-    <div style="{B}; font-size: 16px; line-height: 1.36; margin-top: 6px">Token clerks, motormen, conductors and transit cops on nights: coffee is on the house after twelve with your pass.</div>
-    <div style="{B}; font-style: italic; font-weight: 700; font-size: 16px; line-height: 1.3; margin-top: 7px">Decoys too. We never saw you.</div>
-  </div>
-
-  <img src="assets/counter-ink.png" alt="" style="position: absolute; left: 440px; top: 670px; width: 290px; height: 207px; display: block">
-
-  <section style="position: absolute; left: {L}px; top: 812px; width: 354px">
-    <div style="{B}; font-size: 16px; line-height: 1.36"><span style="{O}; font-weight: 700; font-size: 17px; letter-spacing: .12em">PEDIDOS.</span> Pastelitos, mallorcas and token cookies by the dozen for the station house or the depot. Call a day ahead.</div>
-  </section>
-
-  <img src="assets/recycle-ink.png" alt="" style="position: absolute; left: 132px; top: 926px; width: 62px; height: 62px; display: block">
-  <div style="position: absolute; left: 206px; top: 924px; width: 210px; {B}; font-size: 12px; line-height: 1.32">Hecha de papel reciclado.<br>Made from recycled paper.<br>Please use this bag again.</div>
-  <div style="position: absolute; left: 428px; top: 920px; width: 256px; text-align: center">
-    <div style="{C}; font-size: 30px; line-height: 1">Gracias</div>
-    <div style="{O}; font-weight: 700; font-size: 15px; letter-spacing: .2em; margin-top: 6px">THANK YOU &middot; VUELVA PRONTO</div>
-    <div style="{B}; font-size: 12px; margin-top: 5px">Prices good through 1995.</div>
-  </div>
-</div>'''
+def face(inner):
+    edge = (f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 10px; background: {INK}"></div>'
+            f'<div style="position: absolute; left: 0; top: 10px; width: {W}px; height: 6px; background: {RED}"></div>'
+            f'<div style="position: absolute; left: 0; top: {H - 16}px; width: {W}px; height: 6px; background: {RED}"></div>'
+            f'<div style="position: absolute; left: 0; top: {H - 10}px; width: {W}px; height: 10px; background: {INK}"></div>')
+    fade = (f'<div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; '
+            'background: radial-gradient(ellipse 80% 74% at 50% 48%, rgba(255,246,214,0.10) 0%, rgba(255,246,214,0.08) 55%, rgba(150,110,40,0.24) 100%)"></div>')
+    grain = (f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; '
+             f'height: {H}px; pointer-events: none; display: block; opacity: 0.8">')
+    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}">'
+            f'{inner}{edge}{fade}{grain}</div>')
 
 
-def stamp(x, y, rot, lines):
-    """violet rubber stamp pressed by hand at the counter: uneven, a little crooked"""
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; transform: rotate({rot}deg); color: {VIOLET}; text-shadow: 0 0 .8px rgba(76,58,122,.7); '
-            f'border: 3px solid {VIOLET}; border-radius: 4px; padding: 4px 10px 5px; text-align: center; opacity: .86">'
-            f'<div style="border-bottom: 1px solid {VIOLET}; {O}; font-weight: 700; font-size: 14px; letter-spacing: .18em; padding-bottom: 2px">{lines[0]}</div>'
-            f'<div style="{O}; font-weight: 700; font-size: 22px; letter-spacing: .08em; line-height: 1.15; margin-top: 2px">{lines[1]}</div></div>')
+L, CW = 56, 704
 
+TOKEN = f'''<div style="flex: none; width: 118px; height: 118px; border-radius: 50%; background: {GOLD}; border: 4px solid {INK}; position: relative; transform: rotate(-8deg)">
+  <div style="position: absolute; left: 7px; top: 7px; width: 96px; height: 96px; border-radius: 50%; border: 2px dashed {PAPER}"></div>
+  <div style="position: absolute; left: 0; top: 22px; width: 118px; text-align: center; {TEXT}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: {INK}">FICHAS</div>
+  <div style="position: absolute; left: 0; top: 40px; width: 118px; text-align: center; {DISP}; font-size: 30px; line-height: 1; color: {PAPER}">1.25</div>
+  <div style="position: absolute; left: 0; top: 76px; width: 118px; text-align: center; {TEXT}; font-weight: 800; font-size: 14px; letter-spacing: 0.1em; color: {INK}">ACEPTADAS</div></div>'''
 
-FRONT_STAMP = stamp(318, 896, -5, ('HORNEADO HOY', 'NOV 17 1995'))
+front = face(f'''
+<div style="position: absolute; left: {L}px; top: 44px; width: {CW}px">
+  <div style="display: flex; justify-content: space-between; align-items: baseline">{kicker('Top of the subway stairs', 'white-space: nowrap')}{kicker('Open till the last train', 'white-space: nowrap; color: ' + MUTE)}</div>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">
+    <div>
+      <div style="{DISP}; font-size: 60px; line-height: 1; color: {INK}; white-space: nowrap">El Último <span style="color: {RED}">Tren</span></div>
+      <div style="{TEXT}; font-weight: 800; font-size: 20px; letter-spacing: 0.32em; text-transform: uppercase; color: {MUTE}; margin-top: 12px">Cafetería y Panadería</div></div>
+    {TOKEN}</div>
+  <div style="height: 5px; background: {INK}; margin-top: 14px"></div>
+  <div style="margin-top: 16px; border: 3px solid {RED}; padding: 6px; background: #fff7dc">
+    <img src="assets/still-regulars.jpg" alt="Three transit cops riding a subway car on the night tour" style="display: block; width: {CW - 18}px; height: 262px; object-fit: cover"></div>
+  <div style="{TEXT}; font-style: italic; font-size: 17px; color: {MUTE}; margin-top: 7px">Our regulars from the night tour. The window table is theirs.</div>
+  <div style="margin-top: 14px">{bar('Del Horno', 'FROM THE OVEN')}</div>
+  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px">
+    <div>{S('Guava pastelitos', 12)}{S('Gold token cookies', 16)}</div>
+    <div>{A('mallorca', 12)}{A('cafe', 16)}</div></div>
+  <div style="display: flex; gap: 24px; margin-top: 18px; align-items: flex-end; border-top: 1px solid {INK}; padding-top: 12px">
+    <div style="flex: 1">
+      {kicker('A word from a regular', 'font-size: 16px')}
+      <div style="{TEXT}; font-size: 19px; line-height: 1.32; margin-top: 4px">Best pastelitos on the line, and the coffee is on when the night tour lets out. Put mine on John's tab.</div></div>
+    <div style="flex: none; width: 200px">
+      <div style="{HAND}; font-size: 46px; line-height: 1; color: #23336a; transform: rotate(-5deg)">Charlie</div>
+      <div style="{TEXT}; font-weight: 600; font-size: 14px; color: {MUTE}; margin-top: 6px">Transit Police, Decoy Unit</div></div></div>
+</div>
+<div style="position: absolute; left: {L}px; top: 990px; width: {CW}px; display: flex; justify-content: space-between; {TEXT}; font-weight: 600; font-size: 15px; color: {MUTE}">
+  <span>Para llevar, call 555-0125</span><span>Lunch and drinks on the back</span></div>''')
 
+CHECK = f'''<div style="position: absolute; left: 0; top: 338px; width: 300px; height: 146px; background: #fbf8ee; border: 1px solid #b9b3a0; transform: rotate(-2.5deg); box-shadow: 2px 3px 6px rgba(60,40,10,0.25); padding: 10px 14px; box-sizing: border-box">
+  <div style="display: flex; justify-content: space-between; border-bottom: 2px solid #2f6b4f; padding-bottom: 3px">
+    <span style="{TEXT}; font-weight: 800; font-size: 15px; letter-spacing: 0.12em; color: #2f6b4f">GUEST CHECK</span><span style="{TEXT}; font-weight: 800; font-size: 15px; color: {RED}">No. 1995</span></div>
+  <div style="{HAND}; font-size: 21px; line-height: 1.38; color: #23336a; margin-top: 4px">
+    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #c9d8cc"><span>2 arroz c/ pollo</span><span>11.90</span></div>
+    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #c9d8cc"><span>1 café, Santiago</span><span>.85</span></div>
+    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #c9d8cc"><span>Charlie: on the tab? <span style="color: {RED}">NO.</span></span><span></span></div>
+    </div>
+  <div style="position: absolute; left: 168px; top: 104px; border: 3px solid {RED}; color: {RED}; {DISP}; font-size: 17px; line-height: 1; padding: 5px 10px; transform: rotate(-10deg); opacity: 0.85">PAID. JOHN</div></div>'''
 
-def face(body, name, extra=''):
-    paper = f'<img src="assets/kraft-paper-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
-    grain = f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block; opacity: .7">'
-    inkw = f'<img src="assets/ink-wear-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">'
-    wear = f'<img src="assets/bag-paper-{name}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; pointer-events: none; display: block">'
-    return (f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {KRAFT}">'
-            f'{paper}{grain}{body}{inkw}{extra}{wear}</div>')
+back = face(f'''
+<div style="position: absolute; left: {L}px; top: 46px; width: {CW}px">
+  <div style="display: flex; justify-content: space-between; align-items: baseline">
+    {kicker('El Último Tren')}{kicker('Almuerzo 11 to 3, cena till late', 'color: ' + MUTE)}</div>
+  <div style="margin-top: 12px">{bar('Platos del Día', 'HOT PLATES')}</div>
+  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px">
+    <div>{S('Arroz con pollo', 14, note=True)}{A('cubano')}</div>
+    <div>{A('pernil', 14)}{A('bistec')}</div></div>
+  <div style="height: 1px; background: {INK}; margin-top: 20px"></div>
+  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 40px; margin-top: 20px">
+    <div style="position: relative">
+      {bar('Bebidas')}
+      {S('Money Train payday michelada', 14, note=True)}{A('morir')}
+      {CHECK}</div>
+    <div style="position: relative">
+      {bar('Al Peso')}
+      {S('Token booth honey roasted nuts', 14, note=True)}
+      <div style="margin-top: 18px; border: 3px solid {RED}; padding: 5px; background: #fff7dc"><img src="assets/still-payday.jpg" alt="Two transit cops beside the canvas fare bags" style="display: block; width: 316px; height: 150px; object-fit: cover"></div>
+      <div style="{TEXT}; font-style: italic; font-size: 17px; line-height: 1.3; color: {MUTE}; margin-top: 7px">The money train runs right under us. Up here, cash only.</div></div></div>
+</div>
+<div style="position: absolute; left: {L}px; top: 976px; width: {CW}px; border-top: 1px solid {INK}; padding-top: 9px; display: flex; justify-content: space-between; {TEXT}; font-weight: 600; font-size: 15px; color: {MUTE}">
+  <span>Prices subject to change. No tabs, that means you, Charlie.</span><span>Form 125, 1995</span></div>''')
 
+for name, body in (('front', front), ('back', back)):
+    open(os.path.join(D, name + '.body.html'), 'w').write(body)
+    open(os.path.join(D, name + '.html'), 'w').write(
+        f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>El Ultimo Tren</title>{LINK}<style>body{{margin:0}}</style></head><body>{body}</body></html>')
 
-if __name__ == '__main__':
-    for name, body, extra in (('front', front, FRONT_STAMP), ('back', back, '')):
-        open(os.path.join(D, name + '.body.html'), 'w').write(body + extra)
-        open(os.path.join(D, name + '.html'), 'w').write(
-            f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width={W}">'
-            f'<title>El Ultimo Tren bag, {name}</title>{LINK}<style>body{{margin:0}}</style></head><body>{face(body, name, extra)}</body></html>')
-
-    # ------------------------------------------------------------ site data
-    json.dump({"fmt": "lasttrain", "fn": "fmtLastTrain", "faces": ["front.html", "back.html"], "names": ["Front", "Back"],
-               "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Corben", "Oswald", "Arvo"],
-               "phone": {"disp": "'Corben',serif", "title": "'Corben',serif", "name": "'Oswald',sans-serif",
-                         "body": "'Arvo',serif", "price": "'Oswald',sans-serif", "note": "'Arvo',serif"}},
-              open(os.path.join(D, 'film.json'), 'w'), indent=1)
-    labels = {k: {"n": v[0], "d": v[1], "note": v[4]} for k, v in SPEC.items()}
-    json.dump({"Money Train (1995)": labels}, open(os.path.join(D, 'lasttrain.labels.json'), 'w'), indent=1, ensure_ascii=False)
-    print('built')
+json.dump({"fmt": "lasttrain", "fn": "fmtLastTrain", "faces": ["front.html", "back.html"], "names": ["Front", "Back"],
+           "mm": [215.9, 279.4], "fonts": FONTS, "fams": ["Bungee", "Bitter", "Caveat Brush"],
+           "phone": {"disp": "'Bungee',sans-serif", "title": "'Bungee',sans-serif", "name": "'Bitter',serif",
+                     "body": "'Bitter',serif", "price": "'Bitter',serif", "note": "'Bitter',serif"}},
+          open(os.path.join(D, 'film.json'), 'w'), indent=1)
+json.dump({"Money Train (1995)": {k: {"n": v[0], "d": v[1], "note": v[3]} for k, v in SPEC.items()}},
+          open(os.path.join(D, 'lasttrain.labels.json'), 'w'), indent=1, ensure_ascii=False)
+print('built')

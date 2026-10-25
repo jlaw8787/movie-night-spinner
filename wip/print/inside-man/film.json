@@ -1,3 +1,31 @@
-{"fmt":"negotiation","fn":"fmtNegotiation","faces":["lid.html"],"names":["Box lid"],"mm":[203.2,203.2],
- "fonts":"family=Oleo+Script:wght@700&family=Rokkitt:wght@500;700;800&family=PT+Sans+Narrow:wght@400;700&family=Just+Another+Hand","fams":["Oleo Script","Rokkitt","PT Sans Narrow","Just Another Hand"],
- "phone":{"disp":"'Oleo Script',cursive","title":"'Rokkitt',serif","name":"'Rokkitt',serif","body":"'PT Sans Narrow',sans-serif","price":"'Rokkitt',serif","note":"'PT Sans Narrow',sans-serif"}}
+{
+ "fmt": "negotiation",
+ "fn": "fmtNegotiation",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Bebas+Neue&family=Work+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&family=Mrs+Saint+Delafield&family=Nanum+Pen+Script",
+ "fams": [
+  "Bebas Neue",
+  "Work Sans",
+  "Mrs Saint Delafield",
+  "Nanum Pen Script"
+ ],
+ "phone": {
+  "disp": "'Bebas Neue',sans-serif",
+  "title": "'Bebas Neue',sans-serif",
+  "name": "'Work Sans',sans-serif",
+  "body": "'Work Sans',sans-serif",
+  "price": "'Work Sans',sans-serif",
+  "note": "'Work Sans',sans-serif"
+ }
+}

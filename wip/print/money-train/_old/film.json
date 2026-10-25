@@ -1,0 +1,30 @@
+{
+ "fmt": "lasttrain",
+ "fn": "fmtLastTrain",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Corben:wght@400;700&family=Oswald:wght@500;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700",
+ "fams": [
+  "Corben",
+  "Oswald",
+  "Arvo"
+ ],
+ "phone": {
+  "disp": "'Corben',serif",
+  "title": "'Corben',serif",
+  "name": "'Oswald',sans-serif",
+  "body": "'Arvo',serif",
+  "price": "'Oswald',sans-serif",
+  "note": "'Arvo',serif"
+ }
+}

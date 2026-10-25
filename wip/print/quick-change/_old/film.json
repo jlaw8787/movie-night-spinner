@@ -1,0 +1,4 @@
+{"fmt":"getawaysupper","fn":"fmtGetawaySupper","faces":["front.html","back.html"],"names":["Front","Back"],"mm":[107.95,279.4],
+ "fonts":"family=Michroma&family=Saira+Semi+Condensed:wght@500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400","fams":["Michroma","Saira Semi Condensed","Tinos"],
+ "phone":{"disp":"'Michroma',sans-serif","title":"'Saira Semi Condensed',sans-serif","name":"'Saira Semi Condensed',sans-serif","body":"'Tinos',serif","price":"'Saira Semi Condensed',sans-serif","note":"'Tinos',serif"},
+ "build":"python3 paint.py && python3 build.py && python3 shot.py && python3 pdfs.py"}
