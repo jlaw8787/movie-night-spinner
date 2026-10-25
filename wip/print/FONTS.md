@@ -65,3 +65,13 @@ godfather-2: Sancreek
 beetlejuice: Jolly Lodger
 a-goofy-movie: Luckiest Guy
 the-godfather: IM Fell English SC
+chocolat: Berkshire Swash
+julie-and-julia: Cherry Swash
+elf: Grandstander
+tmnt: Rubik Mono One
+lady-and-the-tramp: Corben
+fried-green-tomatoes: Bevan
+do-the-right-thing: Passion One
+the-warriors: Squada One
+die-hard: Michroma
+anchorman: Rammetto One
