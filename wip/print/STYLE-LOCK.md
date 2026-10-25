@@ -17,6 +17,11 @@ A real menu, printed by a food venue in the film's world, in that year and place
 9. Prop accent: at most one or two small, clean props (order ticket, stamp, coupon, matchbook, ticket stub, business card), never over dish text.
 10. Format: the real format of that venue's menu. Single card, two-sided card, or a fold-out only if the venue would fold it. US Letter or a real smaller menu size.
 
+## Distinctness (added after the pilot, owner approved)
+11. Every film gets its OWN paper colour and palette, taken from the film. Not every menu is cream with black label bars. Change the paper (white, kraft, green, pink, black, coloured stock), the bar shape (black bar, coloured band, outline box, ribbon, ornament) and the display face so no two films look like the same template.
+12. Signature art on BOTH faces, at Jurassic level: the front carries the hero (logo or sign plus one strong still or painted illustration); the back carries a second piece (a painted spot illustration, a small map, a framed still, or a bold decorative panel). No face is type only.
+13. Art quality bar: if it could pass as clip art, redo it once as a cleaner engraving, painted scene or a TMDB still instead.
+
 ## Film variables (the only things that change per film)
 Venue and its name, palette, display face, logo or sign, hero picture, section names, dishes and wording, character note, Easter eggs, prop accent, format.
 
