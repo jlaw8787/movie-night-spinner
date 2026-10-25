@@ -44,11 +44,11 @@ ave = soften(ave, [(int(125 * k), int(120 * k), int(170 * k), int(200 * k)),    
 ave = ImageOps.autocontrast(ave, cutoff=0.6)
 ave = ImageEnhance.Brightness(ave).enhance(1.04)
 ave = Image.merge('RGB', [ave.point(lambda v, a=a: int(v * a + (1 - a) * 18)) for a in (1.0, 0.985, 0.95)])  # faint warm black
-fit(ave, CW - 8, 322, (int(128 * k), int(78 * k), int(684 * k), int(600 * k))).save(A('fifth-avenue-1905.jpg'), quality=90)
+fit(ave, CW + 2, 280, (int(128 * k), int(78 * k), int(684 * k), int(600 * k))).save(A('fifth-avenue-1905.jpg'), quality=90)
 
 suite = Image.open(S('ghL9wx7oaz2zMiTcqQkLsOnJBFq.jpg')).convert('RGB')
 suite = ImageEnhance.Brightness(suite).enhance(1.08)
-fit(suite, CW - 8, 166, (240, 120, 1640, 725)).save(A('suite-tree.jpg'), quality=90)
+fit(suite, CW + 2, 166, (240, 120, 1640, 725)).save(A('suite-tree.jpg'), quality=90)
 
 def wear(name, seed):
     rnd = random.Random(seed)
@@ -116,13 +116,13 @@ def gift_tag(o, x, y):
     """Duncan's Toy Chest gift tag, tied through the hanger hole on red string."""
     o.append(f'<div style="position: absolute; left: {HX + HR - 14}px; top: {HY - 8}px; width: 74px; height: 2px; background: #d9b25a; '
              f'transform: rotate(38deg); transform-origin: 0 50%"></div>')
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 122px; height: 176px; background: {CARD}; border-radius: 16px 16px 4px 4px; '
-             f'box-shadow: 0 3px 8px rgba(30,0,0,0.45); transform: rotate(9deg); box-sizing: border-box; padding: 30px 9px 0; text-align: center">'
-             f'<div style="position: absolute; left: 52px; top: 9px; width: 16px; height: 16px; border-radius: 50%; border: 3px solid #d9b25a; background: {RED}; box-sizing: border-box"></div>'
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 132px; height: 140px; background: {CARD}; border-radius: 16px 16px 4px 4px; '
+             f'box-shadow: 0 3px 8px rgba(30,0,0,0.45); transform: rotate(7deg); box-sizing: border-box; padding: 30px 8px 0; text-align: center">'
+             f'<div style="position: absolute; left: 57px; top: 9px; width: 16px; height: 16px; border-radius: 50%; border: 3px solid #d9b25a; background: {RED}; box-sizing: border-box"></div>'
              f'<div style="border-top: 2px solid {GREEN}; border-bottom: 2px solid {GREEN}; padding: 4px 0 3px; font-family: {BODY}; font-weight: 800; font-size: 14px; '
              f'letter-spacing: 0.08em; line-height: 1.15; color: {GREEN}">DUNCAN\'S<br>TOY CHEST</div>'
-             f'<div style="margin-top: 7px; font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.2; color: {INK}">Turtle doves,<br>a pair</div>'
-             f'<div style="margin-top: 5px; font-family: {HAND}; font-size: 21px; line-height: 1.0; color: {RED}">one for you,<br>one for a friend</div></div>')
+             f'<div style="margin-top: 7px; font-family: {BODY}; font-style: italic; font-size: 15px; line-height: 1.2; color: {INK}">Turtle doves, a pair</div>'
+             f'<div style="margin-top: 3px; font-family: {HAND}; font-size: 19px; line-height: 1.0; color: {RED}">one for you,<br>one for a friend</div></div>')
 
 def charge_slip(o, x, y):
     """Guest charge slip, the room service tab, tucked into the back head."""
@@ -133,63 +133,62 @@ def charge_slip(o, x, y):
     o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 150px; background: #fbfaf5; box-shadow: 0 3px 8px rgba(0,20,10,0.5); '
              f'transform: rotate(-6deg); padding: 8px 10px 6px; box-sizing: border-box">'
              f'<div style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.12em; line-height: 1.1; color: {RED}; text-align: center">GUEST CHARGE</div>'
-             f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.25; color: {MUTE}; text-align: center; margin-bottom: 4px">In-suite dining</div>'
              + cells +
-             f'<div style="border-top: 1px solid {INK}; margin-top: 20px; position: relative; height: 18px">'
+             f'<div style="border-top: 1px solid {INK}; margin-top: 32px; position: relative; height: 18px">'
              f'<div style="position: absolute; left: 2px; top: -30px; font-family: {HAND}; font-size: 22px; line-height: 1; color: #23305e; white-space: nowrap; transform: rotate(-3deg)">Peter McCallister</div>'
              f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {MUTE}; padding-top: 1px">Guest signature</div></div></div>')
 
 # ---------------- FRONT ----------------
 def front():
-    o = [hanger_head(RED, 300)]
-    gift_tag(o, 304, 24)
-    o.append(f'<div style="position: absolute; left: {L}px; top: 168px; width: {CW}px">{kicker("Fifth Avenue at the Park", PAPER)}</div>')
-    o.append(f'<div style="position: absolute; left: 0; top: 188px; width: {W}px; text-align: center; font-family: {DISP}; font-weight: 700; '
+    o = [hanger_head(RED, 306)]
+    gift_tag(o, 300, 16)
+    o.append(f'<div style="position: absolute; left: {L}px; top: 176px; width: {CW}px">{kicker("Fifth Avenue at the Park", PAPER)}</div>')
+    o.append(f'<div style="position: absolute; left: 0; top: 196px; width: {W}px; text-align: center; font-family: {DISP}; font-weight: 700; '
              f'font-size: 66px; line-height: 1; color: {PAPER}; white-space: nowrap">The Halloway</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 262px; width: {CW}px">{kicker("In-suite dining, day and night", "#f2c9a8", "font-size: 17px; letter-spacing: 0.16em")}</div>')
-    o.append(f'<div style="position: absolute; left: {L - 5}px; top: 320px">'
-             + frame('fifth-avenue-1905.jpg', CW + 2, 322, 'Fifth Avenue after a snowstorm, two women in long coats walking between snowbanks, a clock tower beyond') + '</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 658px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}; text-align: center">'
-             'Fifth Avenue after a snowstorm, our first winter on the avenue.</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 712px; width: {CW}px; box-sizing: border-box; border-left: 4px solid {GREEN}; padding: 2px 0 0 16px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 270px; width: {CW}px">{kicker("In-suite dining, day and night", "#f2c9a8", "font-size: 17px; letter-spacing: 0.16em")}</div>')
+    o.append(f'<div style="position: absolute; left: {L - 5}px; top: 326px">'
+             + frame('fifth-avenue-1905.jpg', CW + 2, 280, 'Fifth Avenue after a snowstorm, two women in long coats walking between snowbanks, a clock tower beyond') + '</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 622px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}; text-align: center">'
+             'The avenue after a snowstorm, our first winter.</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 664px; width: {CW}px; box-sizing: border-box; border-left: 4px solid {GREEN}; padding: 2px 0 0 16px">'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 20px; line-height: 1.34; color: {INK}">'
              'Should you or your young ones require anything at all, simply ring. The kitchen never sleeps, and neither does the front desk.</div>'
              f'<div style="display: flex; justify-content: flex-end; align-items: baseline; gap: 10px; margin-top: -2px">'
              f'<span style="font-family: {SIG}; font-size: 40px; line-height: 1.1; color: {RED}">Mr. Hector</span>'
              f'<span style="font-family: {BODY}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: {GREEN}">CONCIERGE</span></div></div>')
-    menu = (kicker('Served until two in the morning', GREEN)
+    menu = (kicker('Served until 2 a.m.', GREEN)
             + ornament('Supper in the Suite', 6)
-            + item('Triple-decker club', '14.50', 'Poached chicken, crisp bacon, iceberg, tomato and mayonnaise on toasted white, cut in four.', 10)
+            + item('Triple-decker club', '14.50', 'Chicken, crisp bacon, iceberg, tomato and mayonnaise on toasted white.', 10)
             + item('Lobster mac and cheese', '28.00', 'Butter-poached tail meat and elbows in Gruy&egrave;re and cheddar sauce, baked under golden crumbs.')
             + item('Shoestring potatoes', '5.50', 'Fried crisp and salted, ketchup on the side.'))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 888px; width: {CW}px">{menu}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 797px; width: {CW}px">{menu}</div>')
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
 def back():
-    o = [hanger_head(GREEN, 250)]
+    o = [hanger_head(GREEN, 268)]
     charge_slip(o, 290, 22)
     o.append(f'<div style="position: absolute; left: 40px; top: 40px; width: 130px; font-family: {BODY}; font-weight: 800; font-size: 14px; '
              f'letter-spacing: 0.14em; line-height: 1.5; color: {PAPER}">ROOM NO.<div style="width: 108px; height: 30px; border-bottom: 1px solid {PAPER}; '
              f'font-family: {HAND}; font-weight: 600; font-size: 28px; letter-spacing: 0; line-height: 30px; color: {PAPER}"></div></div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 166px; width: {CW}px">{kicker("Tick, then hang on your handle", "#f2c9a8", "font-size: 17px; letter-spacing: 0.16em")}</div>')
-    o.append(f'<div style="position: absolute; left: 0; top: 188px; width: {W}px; text-align: center; font-family: {DISP}; font-weight: 700; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 184px; width: {CW}px">{kicker("Tick, then hang on your handle", "#f2c9a8", "font-size: 17px; letter-spacing: 0.16em")}</div>')
+    o.append(f'<div style="position: absolute; left: 0; top: 206px; width: {W}px; text-align: center; font-family: {DISP}; font-weight: 700; '
              f'font-size: 50px; line-height: 1; color: {PAPER}; white-space: nowrap">We Knock Softly</div>')
-    o.append(f'<div style="position: absolute; left: {L - 5}px; top: 272px">'
+    o.append(f'<div style="position: absolute; left: {L - 5}px; top: 288px">'
              + frame('suite-tree.jpg', CW + 2, 166, 'A grand hotel suite with a lit Christmas tree, chandeliers and presents piled across the floor') + '</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 454px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}; text-align: center">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 470px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {MUTE}; text-align: center">'
              'A park-side suite, dressed for Christmas.</div>')
     menu = (ornament('Little Suppers')
             + item('Cheese pizza for one', '16.00', 'Tomato sauce and plenty of mozzarella, boxed hot for the limousine.', 8)
             + item('Minibar mix', '9.67', 'Nuts roasted with rosemary and brown sugar, chocolate almonds and pretzels.')
-            + ornament('Sweets &amp; Warm Cups', 16)
+            + ornament('After the Park', 16)
             + item('The Works sundae', '9.50', 'Vanilla ice cream, hot fudge, whipped cream, nuts, sprinkles and a cherry.', 8)
-            + item('Hot apple cider', '4.50', 'Mulled with cinnamon, cloves and orange peel.')
+            + item('Hot apple cider', '4.50', 'Mulled with cinnamon, cloves and orange.')
             + item('Hot cocoa', '4.11', 'Whole milk, a heap of marshmallows.'))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 494px; width: {CW}px">{menu}</div>')
-    o.append(f'<div style="position: absolute; left: {L}px; top: 1066px; width: {CW}px; border-top: 1px solid {GREEN}; padding-top: 8px; '
+    o.append(f'<div style="position: absolute; left: {L}px; top: 508px; width: {CW}px">{menu}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 1070px; width: {CW}px; border-top: 1px solid {GREEN}; padding-top: 8px; '
              f'font-family: {BODY}; font-size: 16px; line-height: 1.32; color: {MUTE}; text-align: center">'
-             f'<span style="font-weight: 800; letter-spacing: 0.14em; color: {GREEN}">THE HALLOWAY</span>, Fifth Avenue at Central Park South, New York.<br>'
+             f'<span style="font-weight: 800; letter-spacing: 0.14em; color: {GREEN}">THE HALLOWAY</span>, Fifth Avenue at the Park<br>'
              'Tonight on the in-room channel: <i>Angels with Even Filthier Souls</i>.<br>'
              'Prices subject to change. Form 411-92.</div>')
     return page(''.join(o), 'back')
