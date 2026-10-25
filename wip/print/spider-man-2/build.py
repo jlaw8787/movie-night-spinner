@@ -73,7 +73,7 @@ MORN = [
   ("Aunt May's pancakes", 'Pancakes', '4.50', 'Buttermilk stack cooked in butter, maple syrup. Like your aunt makes.'),
 ]
 DRINK = [
-  ('Iced coffee', 'Coffee float', '2.75', 'Cold brew on ice, milk, a scoop of vanilla ice cream.'),
+  ('Iced coffee', 'Coffee float', '2.75', 'Cold brew on ice, milk, vanilla ice cream.'),
   (None, 'Soda, can', '1.00', ''),
 ]
 
@@ -116,7 +116,7 @@ def coupons():
     c_text = lambda t, col=INK: f'<div style="margin-top: 3px; font-family: {BODY}; font-weight: 600; font-size: 15px; line-height: 1.15; color: {col}">{t}</div>'
     row = (coupon(0, 214, kicker('Our promise', SLIP, 14) + c_title('29 MINUTES OR IT\'S FREE', PAPER, 22)
                   + c_text('Late? It\'s free. The driver answers to Mr. Aziz.', PAPER), RED)
-           + coupon(224, 166, c_title('FOUR ARMS?', NAVY, 24) + c_title('4 PIES $40.04', RED, 26) + c_text('For a doctor with his hands full.'))
+           + coupon(224, 166, c_title('FOUR ARMS?', NAVY, 24) + c_title('4 PIES $40.04', RED, 21) + c_text('For a doctor with his hands full.'))
            + coupon(400, 166, c_title('FREE KNOTS') + c_text('With any pie. Any floor, by stairs, lift or wall.'))
            + coupon(576, 160, c_title('STUDENT SLICE') + c_text('Slice and soda 2.50 with a university ID.')))
     return (f'<div style="position: absolute; left: 40px; top: 882px; width: 736px; height: 104px">{row}</div>'
@@ -133,7 +133,7 @@ def tally_board():
         return f'<div style="position: relative; width: {min(n, 4) * 9}px; height: 34px; margin-right: 14px">{bars}{sl}</div>'
     marks = group(5) + group(5) + group(5) + group(2)
     return (f'<div style="margin-top: 10px; border: 3px solid {NAVY}; padding: 5px 10px 7px; background: #ffffff">'
-            f'<div style="font-family: {COND}; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.06em; color: {NAVY}; white-space: nowrap"><span style="font-family: {DISP}; font-weight: 400; font-size: 20px; color: {RED}">LATE AGAIN</span> &nbsp;P. PARKER, THIS MONTH</div>'
+            f'<div style="font-family: {COND}; font-weight: 700; font-size: 14px; line-height: 1; letter-spacing: 0.04em; color: {NAVY}; white-space: nowrap"><span style="font-family: {DISP}; font-weight: 400; font-size: 20px; color: {RED}">LATE AGAIN</span> &nbsp;DRIVER P. PARKER</div>'
             f'<div style="margin-top: 6px; display: flex; align-items: center; transform: scaleY(0.8); transform-origin: 0 0; height: 28px">{marks}</div></div>')
 
 def late_stamp(x, y):
@@ -164,13 +164,13 @@ def sheet():
           + f'<div style="margin-top: 14px">{head("DRINKS")}</div>'
           + ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(DRINK)))
     menu = (f'<div style="position: absolute; left: 40px; top: 512px; width: 736px; height: 336px; display: flex; gap: 20px">'
-            f'<div style="width: 250px">{head("PIES", "18 inch")}{c1}{tally_board()}</div>'
+            f'<div style="width: 234px; flex: none">{head("PIES", "18 inch")}{c1}{tally_board()}</div>'
             f'<div style="width: 1px; background: {NAVY}; opacity: 0.35"></div>'
-            f'<div style="width: 222px">{head("STARTERS")}{c2}'
-            f'<div style="margin-top: 12px; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.25; color: {RED}">Our deck oven runs hotter than a small sun.</div>'
-            f'<div style="margin-top: 8px; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.25; color: {NAVY}">Costume party? We deliver. We hear the suits itch.</div></div>'
+            f'<div style="width: 210px; flex: none">{head("STARTERS")}{c2}'
+            f'<div style="margin-top: 14px; font-family: {BODY}; font-weight: 700; font-size: 17px; line-height: 1.25; color: {RED}">Costume party? We deliver. We hear the suits itch.</div>'
+            '</div>'
             f'<div style="width: 1px; background: {NAVY}; opacity: 0.35"></div>'
-            f'<div style="width: 222px">{head("WEEKENDS", "to noon")}{c3}</div>'
+            f'<div style="width: 210px; flex: none">{head("SAT &amp; SUN")}{c3}</div>'
             f'</div>')
     foot = (f'<div style="position: absolute; left: 40px; top: 996px; width: 736px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {INK}">'
             f'<span>Prices subject to change. Drivers carry under $20. Bugle orders, ask for Betty.</span>'

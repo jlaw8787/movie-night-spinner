@@ -29,7 +29,7 @@ fit(street, CW - 8, 300, (0, 40, 1920, 1197)).save(A('three-deckers.jpg'), quali
 
 table = Image.open(S('pC6oJsuQsSbuQtUJOyTgk90eIw2.jpg')).convert('RGB')
 table = ImageEnhance.Brightness(table).enhance(1.12)
-fit(table, CW - 8, 150, (0, 300, 1920, 900)).save(A('corner-table.jpg'), quality=90)
+fit(table, 404, 150, (100, 260, 1920, 940)).save(A('corner-table.jpg'), quality=90)
 
 def sheen(name, seed):
     """Laminate: a broad soft diagonal highlight and gentle darkening at the edges. Low detail, never over text strongly."""
@@ -90,10 +90,10 @@ def page(inner, name):
             '</div>')
 
 # ---------------- props ----------------
-def envelope(o, x, y):
+def envelope(o, x, y, sc=1.0):
     """Sealed manila envelope, Costello's hand on the front."""
     w, h = 214, 128
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; transform: rotate(-7deg); '
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; transform: rotate(-7deg) scale({sc}); transform-origin: 0 0; '
              f'background: #d9bf86; box-shadow: 0 4px 10px rgba(0,0,0,0.5); overflow: hidden">'
              f'<div style="position: absolute; left: {(w - 152) // 2}px; top: -76px; width: 152px; height: 152px; transform: rotate(45deg); '
              f'background: #ccb077; border: 1px solid rgba(90,60,20,0.35)"></div>'
@@ -123,8 +123,8 @@ def rat_trap(o, x, y):
              f'<div style="position: absolute; left: 0; top: 30px; width: 236px; height: 74px; border-radius: 6px; '
              f'background: repeating-linear-gradient(176deg, #c99a5a 0 7px, #c0904f 7px 9px, #cfa262 9px 15px); box-shadow: 0 5px 12px rgba(0,0,0,0.55)"></div>'
              f'<div style="position: absolute; left: 0; top: 96px; width: 236px; height: 8px; border-radius: 0 0 6px 6px; background: #8d6232"></div>'
-             f'<div style="position: absolute; left: 18px; top: 74px; width: 120px; font-family: {BODY}; font-weight: 800; font-size: 14px; line-height: 1; letter-spacing: 0.12em; color: #6a3f17">FITZY&#8217;S</div>'
-             f'<div style="position: absolute; left: 18px; top: 88px; width: 140px; font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1; color: #6a3f17; opacity: 0.85">for informants</div>'
+             f'<div style="position: absolute; left: 18px; top: 68px; width: 120px; font-family: {BODY}; font-weight: 800; font-size: 14px; line-height: 1; letter-spacing: 0.12em; color: #6a3f17">FITZY&#8217;S</div>'
+             f'<div style="position: absolute; left: 18px; top: 82px; width: 140px; font-family: {BODY}; font-weight: 700; font-size: 14px; line-height: 1; color: #6a3f17; opacity: 0.85">for informants</div>'
              # spring coils
              + ''.join(f'<div style="position: absolute; left: {96 + i * 7}px; top: 38px; width: 9px; height: 22px; border: 2px solid #9aa0a6; border-radius: 50%; box-sizing: border-box"></div>' for i in range(5)) +
              # hammer bail, set back
@@ -176,24 +176,24 @@ def front():
              ('We do our job here. You must be the other guy.', 'Sgt. D.'),
              ('Nobody hands you the last egg. You take it.', '')]
     rl = ''.join(f'<div style="display: flex; gap: 10px; font-family: {BODY}; font-size: 20px; line-height: 1.32; color: {CREAM}; margin-top: 3px">'
-                 f'<span style="color: {GOLD}; font-weight: 800">{i + 1}.</span><span>{t}'
+                 f'<span style="color: {GOLD}; font-weight: 800; width: 18px; flex: none">{i + 1}.</span><span>{t}'
                  + (f' <span style="color: {MUTE}; font-style: italic">({a})</span>' if a else '') + '</span></div>'
                  for i, (t, a) in enumerate(rules))
     o.append(f'<div style="position: absolute; left: {M}px; top: 846px; width: {CW}px">' + rule(0) +
              kicker('House rules', GOLD, 18, ' margin-top: 12px') + rl +
-             f'<div style="position: absolute; right: 0; top: 10px; font-family: {SCRIPT}; font-size: 21px; line-height: 1.5; color: {GOLD}; white-space: nowrap">F. Costello</div></div>')
+             f'<div style="position: absolute; right: 0; top: 4px; font-family: {SCRIPT}; font-size: 21px; line-height: 1.5; color: {GOLD}; white-space: nowrap">F. Costello</div></div>')
+    envelope(o, W - M - 140, 916, 0.68)
     return page(''.join(o), 'front')
 
 # ---------------- BACK ----------------
 def back():
     o = []
     no_rats(o, M, 42, CW, 150)
-    badge(o, W - M - 116, 96)
     o.append(f'<div style="position: absolute; left: {M}px; top: 208px">'
-             + frame('corner-table.jpg', CW - 8, 150, 'A young man in a dark sweater leans in to talk with an older man in a pale jacket at a white tablecloth, a brandy glass between them') + '</div>')
+             + frame('corner-table.jpg', 404, 150, 'A young man in a dark sweater leans in to talk with an older man in a pale jacket at a white tablecloth, a brandy glass between them') + '</div>')
     o.append(f'<div style="position: absolute; left: {M + 6}px; top: 332px; background: {DEEP}; padding: 2px 10px; font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: {CREAM}">'
              'Mr. C&#8217;s table. Knock first.</div>')
-    envelope(o, W - M - 196, 300)
+    badge(o, W - M - 152, 200)
     body = (band('The Staties', 'cops&#8217; side', CREAM)
             + item('Academy fish and chips', '11.95', 'White fish in lager batter, chips, minted mushy peas.', 8)
             + item('Staties&#8217; steak tips', '14.95', 'Marinated sirloin, grilled onions, baked potato.', 12)

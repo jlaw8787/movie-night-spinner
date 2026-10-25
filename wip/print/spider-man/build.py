@@ -63,7 +63,7 @@ def web(fn, r, rgba, spokes=8, rings=7, width=2):
             d.line(pts, fill=rgba, width=max(1, int(width * k * 0.75)))
     im.resize((r, r), Image.LANCZOS).save(A(fn))
 web('web-sign.png', 200, (142, 155, 199, 255))
-web('web-paper.png', 170, (28, 43, 90, 60))
+web('web-paper.png', 170, (28, 43, 90, 40))
 
 def finish(name, seed):
     """Laminate: soft diagonal sheen plus gentle edge wear. Low detail, never over text strongly."""
@@ -111,7 +111,7 @@ def bar(t, size=42, note=''):
             + (f'<div style="font-family: {BODY}; font-weight: 600; font-style: italic; font-size: 18px; color: {MUTE}; white-space: nowrap">{note}</div>' if note else '')
             + '</div>')
 
-def item(name, price, desc, gap=14):
+def item(name, price, desc, gap=12):
     return (f'<div style="margin-top: {gap}px">'
             f'<div style="display: flex; align-items: baseline; gap: 8px; font-family: {BODY}; font-weight: 800; font-size: 27px; line-height: 1.12; color: {NAVY}">'
             f'<span style="white-space: nowrap">{name}</span>'
@@ -150,7 +150,7 @@ def ticket(o, x, y):
     o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 232px; background: {NAVY}; border-radius: 6px; padding: 10px 12px 10px; '
              f'box-sizing: border-box; transform: rotate(-2deg); box-shadow: 0 2px 6px rgba(30,25,20,0.35); text-align: center; border: 2px solid {RED}">'
              f'{kicker("Friday, on the TV", "#c9d1ea", "font-size: 14px")}'
-             f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1; color: {PAPER}; margin-top: 6px; white-space: nowrap">Wrestling Night</div>'
+             f'<div style="font-family: {DISP}; font-size: 26px; line-height: 1; color: {PAPER}; margin-top: 6px; white-space: nowrap">Wrestling Night</div>'
              f'<div style="font-family: {BODY}; font-weight: 800; font-size: 16px; line-height: 1.3; color: #ff6b6b; margin-top: 5px">BONE SAW VS. ALL COMERS</div>'
              f'<div style="font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {PAPER}; margin-top: 3px">Eat a Bone Saw in three minutes, it\'s on us.</div></div>')
 
@@ -180,12 +180,12 @@ def front():
     clipping(o, L + 2, 212)
     o.append(f'<div style="position: absolute; left: 540px; top: 214px; width: 232px">'
              + kicker('House rule')
-             + f'<div style="font-family: {DISP}; font-size: 33px; line-height: 1.04; color: {NAVY}; margin-top: 8px">Drop your tray? We catch it.</div>'
-             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: #2a2d3a; margin-top: 6px">Every plate, still on it. Don\'t ask how.</div></div>')
-    ticket(o, 540, 386)
-    coupon(o, 542, 532)
+             + f'<div style="font-family: {DISP}; font-size: 30px; line-height: 1.04; color: {NAVY}; margin-top: 8px">Drop a tray? We catch it.</div>'
+             f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.3; color: #2a2d3a; margin-top: 6px">Every plate stays on it.</div></div>')
+    ticket(o, 540, 378)
+    coupon(o, 542, 518)
 
-    o.append(f'<div style="position: absolute; left: {L}px; top: 658px; width: {CW}px">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 664px; width: {CW}px">'
              + bar('Breakfast All Day', 42)
              + item('The Bone Saw', '3.00', 'Two fried eggs, melted American and hot sauce, wrapped in foil on a soft roll.', 10)
              + item('Buttermilk tall stack', '5.25', 'Fluffy pancakes cooked in butter, piled high, with warm maple syrup.')

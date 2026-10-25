@@ -1,4 +1,4 @@
-"""Jake's Corner, the champ's supper club on Miami Beach, 1956. Fight night program with the supper card inside.
+"""Jake's Corner, the champ's supper club on Miami Beach, 1950s. Fight night program with the supper card inside.
 Two faces 816x1056 (US Letter). Program stock white, black ink, one red.
 Front: club sign band, hero ring still (the title night), tonight's fight films, Jake's note, ringside ticket stub.
 Back: tonight's supper card billed like a fight card, stage still, club matchbook, fine print.
@@ -164,7 +164,7 @@ def belt(o, x, y):
              f'<div style="position: absolute; left: 7px; top: 7px; width: 104px; height: 110px; border-radius: 50%; border: 3px solid {RED}"></div>'
              f'<div style="position: absolute; left: 0; top: 30px; width: 124px; text-align: center; font-family: {DISP}; color: {INK}; line-height: 1">'
              f'<div style="font-size: 14px; letter-spacing: 0.12em">WORLD</div>'
-             f'<div style="font-size: 18px; color: {RED}; margin-top: 4px">MIDDLEWEIGHT</div>'
+             f'<div style="font-size: 16px; color: {RED}; margin-top: 4px">MIDDLEWEIGHT</div>'
              f'<div style="font-size: 18px; margin-top: 3px">CHAMPION</div>'
              f'<div style="font-size: 14px; letter-spacing: 0.12em; margin-top: 4px">1949</div></div></div></div>')
 
@@ -173,34 +173,34 @@ def back():
     o = []
     # the act: Jake's nightclub show, a full-width marquee panel
     o.append(f'<div style="position: absolute; left: {L}px; top: 44px; width: {CW}px; height: 244px; background: {INK}; border: 2px solid {RED}; box-sizing: border-box">'
-             f'<div style="position: absolute; left: 22px; top: 22px; width: 260px">{kicker("Live on stage &middot; 11 P.M.")}'
+             f'<div style="position: absolute; left: 22px; top: 22px; width: 260px">{kicker("On stage at eleven")}'
              f'<div style="font-family: {DISP}; font-size: 50px; line-height: 1.02; color: {PAPER}; margin-top: 12px">THE CHAMP<br>ON THE MIKE</div>'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.3; color: #d9d6cf; margin-top: 10px">'
-             'Jokes, a poem or two. Heckle at your own risk.</div></div>'
+             'Heckle at your own risk.</div></div>'
              f'<img src="assets/stage-jake.jpg" alt="Jake on a stool at the microphone in a white dinner jacket, the bass player laughing behind him" '
              f'style="position: absolute; right: 8px; top: 8px; display: block; width: 392px; height: 224px"></div>')
-    o.append(f'<div style="position: absolute; left: {L + 24}px; top: 226px; font-family: {SCRIPT}; font-size: 40px; line-height: 1; color: {RED}">Jake</div>')
+    o.append(f'<div style="position: absolute; left: {L + 24}px; top: 222px; font-family: {SCRIPT}; font-size: 38px; line-height: 1; color: {RED}">Jake</div>')
 
     prelim = (billing('Tonight\'s supper card &middot; four rounds', 'PRELIMINARIES')
               + item('Bronx deviled eggs', '.85', 'Whipped yolks with Dijon, crisp pancetta, smoked paprika, chives.', 12)
               + item('Shrimp cocktail on ice', '1.60', 'Poached and chilled, sharp tomato horseradish sauce, lemon.', 12))
-    o.append(f'<div style="position: absolute; left: {L}px; top: 308px; width: {CW}px">{prelim}</div>')
+    o.append(f'<div style="position: absolute; left: {L}px; top: 312px; width: {CW}px">{prelim}</div>')
 
-    o.append(f'<div style="position: absolute; left: {L}px; top: 524px; width: {CW}px; height: 214px; box-sizing: border-box; border: 4px solid {RED}; background: {CARD}">'
+    o.append(f'<div style="position: absolute; left: {L}px; top: 528px; width: {CW}px; height: 214px; box-sizing: border-box; border: 4px solid {RED}; background: {CARD}">'
              f'<div style="background: {INK}; height: 50px; display: flex; justify-content: space-between; align-items: center; padding: 0 18px">'
              f'<div style="font-family: {DISP}; font-size: 40px; line-height: 1; color: {PAPER}; letter-spacing: 0.04em">MAIN EVENT</div>'
              f'<div style="font-family: {DISP}; font-size: 19px; letter-spacing: 0.22em; color: {PAPER}">FIFTEEN ROUNDS</div></div>'
-             f'<div style="position: absolute; left: 18px; top: 50px; width: 420px">'
-             + item('The champ\'s porterhouse<br>for two &nbsp;<span style="color: ' + RED + '">6.49</span>', '', 'Salted the night before, seared hard, basted with butter, garlic and thyme, carved off the bone.', 10, 30, 20)
+             f'<div style="position: absolute; left: 18px; top: 50px; width: 440px">'
+             + item('The champ\'s porterhouse', '6.49', 'For two. Salted overnight, seared hard, basted in butter, garlic and thyme, carved off the bone.', 10, 30, 20)
              + f'<div style="font-family: {BODY}; font-size: 17px; line-height: 1.3; color: {MUTE}; margin-top: 6px; font-style: italic">'
                'In his corner: hashed browns .50 &middot; creamed spinach .50</div></div>'
-             f'<div style="position: absolute; left: 458px; top: 70px; width: 214px; border: 4px solid {RED}; padding: 8px 0 8px; text-align: center; '
+             f'<div style="position: absolute; left: 482px; top: 64px; width: 192px; border: 4px solid {RED}; padding: 8px 0 8px; text-align: center; '
              f'transform: rotate(-5deg); background: {CARD}">'
-             f'<div style="font-family: {DISP}; font-size: 50px; line-height: 0.98; color: {RED}">NEVER<br>OVERCOOKED</div>'
+             f'<div style="font-family: {DISP}; font-size: 42px; line-height: 0.98; color: {RED}">NEVER<br>OVERCOOKED</div>'
              f'<div style="font-family: {BODY}; font-style: italic; font-size: 16px; line-height: 1.25; color: {INK}; margin-top: 6px">Overcook it, it defeats<br>the purpose.</div></div></div>')
 
     def corner(sub, title, body, x):
-        return (f'<div style="position: absolute; left: {x}px; top: 754px; width: 336px">'
+        return (f'<div style="position: absolute; left: {x}px; top: 756px; width: 336px">'
                 f'{kicker(sub, size=17)}'
                 f'<div style="font-family: {DISP}; font-size: 40px; line-height: 1.05; color: {INK}; margin-top: 4px; '
                 f'border-bottom: 4px solid {INK}; padding-bottom: 4px">{title}</div>{body}</div>')
@@ -213,7 +213,7 @@ def back():
 
     o.append(f'<div style="position: absolute; left: {L}px; top: 990px; width: {CW}px; font-family: {BODY}; font-size: 16px; line-height: 1.3; color: {MUTE}">'
              'Coffee or espresso .15. Prices subject to change. Form 15-R. Miami Beach, Fla.</div>')
-    matchbook(o, 566, 236)
+    matchbook(o, 566, 192)
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}
