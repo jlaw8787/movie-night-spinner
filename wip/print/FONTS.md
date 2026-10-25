@@ -15,3 +15,13 @@ adjustment-bureau: Fraunces
 after-hours: Monoton, Anton
 youve-got-mail: Libre Caslon Display
 quick-change: Hanken Grotesk
+chud: Staatliches
+tootsie: Pacifico
+manhattan: Poiret One
+annie-hall: Caprasimo
+trading-places: Cinzel Decorative
+brewsters-millions: Bodoni Moda
+secret-of-my-success: Archivo Black
+working-girl: Prata
+three-men-and-a-baby: Righteous
+frequency: Alfa Slab One
