@@ -13,17 +13,18 @@
   152.4,
   228.6
  ],
- "fonts": "family=Fraunces:ital,wght@0,600;0,800;1,500;1,600;1,800&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400",
+ "fonts": "family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&family=Ultra",
  "fams": [
-  "Fraunces",
-  "Libre Franklin"
+  "Ultra",
+  "Old Standard TT",
+  "Pathway Gothic One"
  ],
  "phone": {
-  "disp": "'Fraunces',serif",
-  "title": "'Fraunces',serif",
-  "name": "'Fraunces',serif",
-  "body": "'Libre Franklin',sans-serif",
-  "price": "'Libre Franklin',sans-serif",
-  "note": "'Libre Franklin',sans-serif"
+  "disp": "'Ultra',serif",
+  "title": "'Ultra',serif",
+  "name": "'Old Standard TT',serif",
+  "body": "'Old Standard TT',serif",
+  "price": "'Pathway Gothic One',sans-serif",
+  "note": "'Old Standard TT',serif"
  }
 }

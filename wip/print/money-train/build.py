@@ -37,8 +37,8 @@ SPEC = {
       "$2.75", "Friday is payday. Cash only.", "Friday is payday. Cash only."),
 }
 ADDED = {
-  'mallorca': ("Mallorca", "Soft, sweet spiral bun, split, pressed on the grill with butter and buried in powdered sugar.", "75¢", None),
-  'pan': ("Pan de agua", "Crusty white loaf, soft inside, baked twice a day. Ask for it buttered and pressed on the grill.", "$1.25", "A loaf for a token."),
+  'mallorca': ("Mallorca", "Soft, sweet spiral bun, split, pressed on the grill with butter and buried in powdered sugar.", "75¢", "Ask for it with ham and cheese."),
+  'pan': ("Pan de agua", "Crusty white loaf, soft inside, baked twice a day. Every lunch plate comes with it, buttered.", "$1.25", "A loaf for a token."),
   'tostones': ("Tostones", "Green plantain fried, smashed flat and fried again till crisp, with garlic mojo for dipping.", "$1.50", None),
   'malta': ("Malta", "Dark, sweet barley soda, ice cold in the bottle. No alcohol.", "$1", None),
   'cafe': ("Café con leche", "Dark roast brewed strong and poured into steamed milk, sugared the way you take it.", "65¢", None),
@@ -94,7 +94,7 @@ front = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; heigh
   {rules(L, 200, R - L)}
 
   <aside style="position: absolute; left: {L}px; top: 222px; width: 194px">
-    <div style="{O}; font-weight: 700; font-size: 35px; line-height: .98; letter-spacing: .01em">ABIERTO<br>HASTA EL<br>&Uacute;LTIMO TREN</div>
+    <div style="{O}; font-weight: 700; font-size: 35px; line-height: 1.08; letter-spacing: .01em">ABIERTO<br>HASTA EL<br>&Uacute;LTIMO TREN</div>
     <div style="{B}; font-style: italic; font-size: 16px; line-height: 1.32; margin-top: 9px; padding-top: 8px; border-top: 2px solid {INK}">Open till the last train, seven days a week.</div>
     <div style="margin-top: 9px; padding-top: 4px; border-top: 2px solid {INK}">
       {leader('Pan', '5 A.M.')}{leader('Almuerzo', '11 to 3')}{leader('Cena', 'till late')}</div>
@@ -118,7 +118,7 @@ front = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; heigh
 
   <section style="position: absolute; left: 524px; top: 596px; width: {R - 524}px">
     {head('Al peso', 'By the bag')}
-    {item(SPEC['Token booth honey roasted nuts'], True, nsz=21, psz=20)}
+    {item(SPEC['Token booth honey roasted nuts'], True, nsz=20, psz=20)}
     <div style="margin-top: 14px; border: 2px solid {INK}; padding: 6px 10px 6px">
       <div style="{O}; font-weight: 700; font-size: 17px; letter-spacing: .14em; text-align: center; border-bottom: 1px solid {INK}; padding-bottom: 3px; margin-bottom: 2px">POR DOCENA</div>
       {leader('Pastelitos', '6.50')}{leader('Mallorcas', '8.00')}{leader('Token cookies', '2.75')}</div>
@@ -143,8 +143,8 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
   <section style="position: absolute; left: {L}px; top: 194px; width: 354px">
     {head('Almuerzo', 'Hot plate')}
     {item(SPEC['Arroz con pollo'], True, nsz=28)}
-    <div style="{B}; font-size: 16px; line-height: 1.36; margin-top: 10px; padding-top: 8px; border-top: 1px solid {INK}">Every plate comes with pan de agua and butter.</div>
-    {item(ADDED['tostones'], gap=14)}
+    {item(ADDED['pan'], gap=14, nsz=24, psz=22)}
+    {item(ADDED['tostones'], gap=14, nsz=24, psz=22)}
   </section>
 
   <section style="position: absolute; left: 432px; top: 194px; width: {RB - 432}px">
@@ -155,24 +155,22 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
     {item(ADDED['negro'], nsz=23, gap=12)}
   </section>
 
-  <div style="position: absolute; left: {L}px; top: 548px; width: 354px; box-sizing: border-box; background: {INK}; color: {KRAFT}; text-shadow: none; padding: 14px 18px 15px">
+  <div style="position: absolute; left: {L}px; top: 664px; width: 354px; box-sizing: border-box; background: {INK}; color: {KRAFT}; text-shadow: none; padding: 14px 18px 15px">
     <div style="{O}; font-weight: 700; font-size: 23px; line-height: 1.1; letter-spacing: .05em">ON THE MIDNIGHT TOUR?</div>
     <div style="{B}; font-size: 16px; line-height: 1.36; margin-top: 6px">Token clerks, motormen, conductors and transit cops working nights: coffee is on the house after twelve. Show your pass.</div>
     <div style="{B}; font-style: italic; font-weight: 700; font-size: 16px; line-height: 1.3; margin-top: 7px">Decoys too. We never saw you.</div>
   </div>
 
-  <img src="assets/counter-ink.png" alt="" style="position: absolute; left: 434px; top: 648px; width: 302px; height: 216px; display: block">
+  <img src="assets/counter-ink.png" alt="" style="position: absolute; left: 434px; top: 664px; width: 302px; height: 216px; display: block">
 
-  <section style="position: absolute; left: {L}px; top: 762px; width: 354px">
-    {head('Pedidos', 'Orders', sz=28)}
-    <div style="{B}; font-size: 16px; line-height: 1.36">Pastelitos, mallorcas, token cookies and pan de agua by the dozen for the station house, the depot or the block party. Call a day ahead.</div>
+  <section style="position: absolute; left: {L}px; top: 832px; width: 354px">
+    <div style="{B}; font-size: 16px; line-height: 1.36"><span style="{O}; font-weight: 700; font-size: 17px; letter-spacing: .12em">PEDIDOS.</span> Pastelitos, mallorcas, token cookies and pan de agua by the dozen for the station house, the depot or the block party. Call a day ahead.</div>
   </section>
-  {item(ADDED['pan'], True, nsz=21, psz=20).replace('<div style="margin-top: 0px">', f'<div style="position: absolute; left: 434px; top: 548px; width: {RB - 434}px">', 1)}
 
   <img src="assets/recycle-ink.png" alt="" style="position: absolute; left: 132px; top: 926px; width: 62px; height: 62px; display: block">
   <div style="position: absolute; left: 206px; top: 924px; width: 210px; {B}; font-size: 12px; line-height: 1.32">Hecha de papel reciclado.<br>Made from recycled paper.<br>Please use this bag again.</div>
   <div style="position: absolute; left: 428px; top: 920px; width: 256px; text-align: center">
-    <div style="{C}; font-size: 30px; line-height: 1">&iexcl;Gracias!</div>
+    <div style="{C}; font-size: 30px; line-height: 1">Gracias</div>
     <div style="{O}; font-weight: 700; font-size: 15px; letter-spacing: .2em; margin-top: 6px">THANK YOU &middot; VUELVA PRONTO</div>
     <div style="{B}; font-size: 12px; margin-top: 5px">Prices good through 1995.</div>
   </div>
@@ -187,7 +185,7 @@ def stamp(x, y, rot, lines):
             f'<div style="{O}; font-weight: 700; font-size: 22px; letter-spacing: .08em; line-height: 1.15; margin-top: 2px">{lines[1]}</div></div>')
 
 
-FRONT_STAMP = stamp(612, 534, -7, ('HORNEADO HOY', 'NOV 17 1995'))
+FRONT_STAMP = stamp(600, 452, -6, ('HORNEADO HOY', 'NOV 17 1995'))
 
 
 def face(body, name, extra=''):

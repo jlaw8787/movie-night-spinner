@@ -310,8 +310,8 @@ def mottle(scale, seed):
     n = rs.rand(H // scale + 2, W // scale + 2)
     im = Image.fromarray((n * 255).astype(np.uint8)).resize((W, H), Image.BICUBIC).filter(ImageFilter.GaussianBlur(scale * 0.5))
     return np.asarray(im, float) / 255
-mk = mottle(40, 3)
-k_ink = BLACK[None, None, :] + (mk[..., None] - 0.5) * 16       # uneven solid
+mk = mottle(90, 3)
+k_ink = BLACK[None, None, :] + (mk[..., None] - 0.5) * 7       # uneven solid
 r_ink = RED[None, None, :] * (0.94 + 0.08 * mottle(30, 5)[..., None])
 
 out = np.ones((H, W, 3)) * PAPER

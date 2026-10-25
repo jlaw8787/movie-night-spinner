@@ -32,11 +32,6 @@ def dish(name, desc, price='', size=19, gap=10, face="'Old Standard TT', serif")
             f'<span style="font-family: {face}; font-weight: 700; font-size: {size}px; line-height: 1.1">{name}</span>{p}</div>'
             f'<div style="font-family: {face}; font-size: 16px; line-height: 1.28; margin-top: 2px">{desc}</div></div>')
 
-def paste(inner, x, y, w, pad='14px 16px', border=f'1.5px solid {INK}', extra=''):
-    """A flyer pasted onto the board: its own rule, plus the faint shadow line of the cut paper edge."""
-    return (f'<div style="position: absolute; left: {x - 7}px; top: {y - 6}px; width: {w + 14}px; height: calc(100% - {y - 6}px); pointer-events: none"></div>'
-            f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; box-sizing: border-box; border: {border}; padding: {pad}; {extra}">{inner}</div>')
-
 # ---------- page 1: the parish's imprint on the cover ----------
 COVER_L = (typed_head('MASSES', 0) +
     typed('Saturday vigil 5:30 PM') +

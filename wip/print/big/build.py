@@ -96,6 +96,7 @@ front_inner = f'''
   {ab(48, F['tag_y'], 640, F['tag_y'] + 26, f'<span style="font-family: {SANS}; font-weight: 800; font-size: 21px; letter-spacing: 0.06em; line-height: 26px; color: {BOARD}">GROWN-UP FOOD FOR A KID AT HEART.</span>')}
   {ab(48, F['subline_y'], 768, F['subline_y'] + 20, f"""<div style="display: flex; justify-content: space-between; font-family: {SANS}; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; line-height: 20px; color: {BOARD}">
     <span>8 PIECES. NO BATTERIES NEEDED.</span><span style="color: {YEL}">CONTENTS MAY BE BIGGER THAN SHOWN.</span></div>""")}
+  {ab(px1 - 260, py0 + 12, px1 - 22, py0 + 32, f'<div style="font-family: {TECH}; font-size: 13px; line-height: 20px; text-align: right; color: {YEL}">NO. 8801 TO 8803</div>')}
   {ab(px0 + 22, py0 + 58, px1 - 22, py1 - 46, f'<div style="display: flex; gap: 24px">{cols}</div>')}
   {ab(px0 + 22, py1 - 32, px1 - 22, py1 - 14, f'<div style="font-family: {TECH}; font-size: 12px; letter-spacing: 0.02em; line-height: 18px; color: {NAVY}; text-align: center">THE CART, THE COOKIE AND THE FOUNTAIN ARE ON THE BACK OF THE BOX.</div>')}
 '''

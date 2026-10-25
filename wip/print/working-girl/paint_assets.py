@@ -119,7 +119,7 @@ def pencil(points_list, size, width=4, seed=1):
     for pts in points_list:
         for k in range(3):
             j = [(x + random.uniform(-1.1, 1.1), y + random.uniform(-1.1, 1.1)) for x, y in pts]
-            d.line(j, fill=(74, 76, 84, 95), width=width, joint='curve')
+            d.line(j, fill=(74, 76, 84, 70), width=width, joint='curve')
     return im.filter(ImageFilter.GaussianBlur(0.7))
 
 
@@ -130,7 +130,7 @@ def pencil_ring(w, h, seed=4):
         rx = (w / 2 - 10) * (1 + 0.03 * math.sin(3 * t))
         ry = (h / 2 - 10) * (1 + 0.04 * math.cos(2 * t))
         pts.append((w / 2 + rx * math.cos(t) + i * 0.03, h / 2 + ry * math.sin(t)))
-    return pencil([pts], (w, h), width=4, seed=seed)
+    return pencil([pts], (w, h), width=3, seed=seed)
 
 
 def scissors(w=88, h=52):
@@ -154,9 +154,9 @@ if __name__ == '__main__':
     os.makedirs(A, exist_ok=True)
     skyline()
     tint_tile(ORANGE, 'tint-orange.png', 12, 0.30)
-    tint_tile(NAVY, 'tint-navy.png', 12, 0.14)
+    tint_tile(ORANGE, 'tint-orange-light.png', 12, 0.13)
     mottle(7).save(os.path.join(A, 'wear-front.png'))
     mottle(8).save(os.path.join(A, 'wear-back.png'))
-    pencil_ring(300, 96).save(os.path.join(A, 'pencil-ring.png'))
+    pencil_ring(428, 128).save(os.path.join(A, 'pencil-ring.png'))
     scissors().save(os.path.join(A, 'scissors.png'))
     print('painted')

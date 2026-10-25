@@ -56,7 +56,7 @@ def bar(x, y, w, h, color):
 
 
 # ======================================================================== FRONT
-CHX, CHY, CHW, CHH = 336, 466, 198, 257          # chart frame (image 220 x 286 scaled)
+CHX, CHY, CHW, CHH = 336, 494, 198, 257          # chart frame (image 220 x 286 scaled)
 
 def chart_label(t, x, y, size=12, color=BLUE, italic=False, align='left'):
     st = 'font-style: italic; ' if italic else ''
@@ -128,8 +128,8 @@ front = f'''
 </div>
 <div style="position: absolute; left: {CHX}px; top: 468px; width: {CHW}px; display: flex; justify-content: space-between; align-items: baseline">
   {kick('HARBOR CHART', RED, 18, 0.14)}</div>
-{chart.replace(f'top: {CHY}px', f'top: {CHY + 26}px').replace(f'top: {CHY - 1}px', f'top: {CHY + 25}px')}
-<div style="position: absolute; left: {CHX}px; top: {CHY + 26 + CHH + 7}px; width: {CHW}px; font-family: {GOTH}; font-size: 14px; letter-spacing: 0.05em; line-height: 1.35">
+{chart}
+<div style="position: absolute; left: {CHX}px; top: {CHY + CHH + 7}px; width: {CHW}px; font-family: {GOTH}; font-size: 14px; letter-spacing: 0.05em; line-height: 1.35">
   <div>{legend_dots()}&nbsp; HARBOR AND SEAL CRUISE</div>
   <div>{legend_dots(dash=True)}&nbsp; SUNSET SUPPER CRUISE</div></div>
 <div style="position: absolute; left: {L}px; top: 750px; width: {TW}px; box-sizing: border-box; border: 2px solid {RED}; padding: 13px 14px 9px 16px">

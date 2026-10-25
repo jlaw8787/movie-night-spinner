@@ -268,13 +268,17 @@ def paint_window(aw, ah, seed=88):
     flat.alpha_composite(rl)
     # chips, drawn tall so they sit round once the cookie is laid down in perspective
     band = (-0.30 * R, 0.30 * R)
-    for _ in range(42):
-        for _try in range(40):
+    placed = []
+    for _ in range(34):
+        for _try in range(200):
             ang = rnd.random() * 2 * math.pi
-            dist = math.sqrt(rnd.random()) * 0.87 * R
+            dist = math.sqrt(rnd.random()) * 0.86 * R
             cx, cy = R + dist * math.cos(ang), R + dist * math.sin(ang)
-            if not (band[0] - 40 < cy - R < band[1] + 40):
+            if band[0] - 40 < cy - R < band[1] + 40:
+                continue
+            if all(math.hypot((cx - a) * 1.0, (cy - b) / 1.9) > 52 for a, b in placed):
                 break
+        placed.append((cx, cy))
         rad = rnd.randint(13, 21)
         sy = 1.9
         pts = [(cx + rad * (0.8 + 0.35 * rnd.random()) * math.cos(t), cy + rad * sy * (0.8 + 0.35 * rnd.random()) * math.sin(t))
@@ -285,7 +289,6 @@ def paint_window(aw, ah, seed=88):
         fd = ImageDraw.Draw(flat)
         fd.polygon(pts, fill=(58, 33, 22, 255))
         fd.ellipse([cx - rad * 0.55, cy - rad * sy * 0.6, cx - rad * 0.05, cy - rad * sy * 0.15], fill=(104, 66, 48, 255))
-        fd.ellipse([cx - rad * 0.42, cy - rad * sy * 0.5, cx - rad * 0.18, cy - rad * sy * 0.3], fill=(170, 130, 108, 255))
     # icing keyboard piped across the middle
     keys = Image.new('RGBA', flat.size, (0, 0, 0, 0))
     kd = ImageDraw.Draw(keys)
@@ -521,8 +524,6 @@ def front():
     pl.fill(rect_mask((bx0, by0, bx1, by0 + 42)), 0, 100, 100, 0)
     pl.overprint(outline_mask(F['panel'], 3))
     pl.fill(text_mask('PASSED ON TRAYS', font(BOWL, 24), bx0 + 22, by0 + 7, 0, 0.18), 0, 0, 0, 0)
-    t = 'NO. 8801 TO 8803'
-    pl.fill(text_mask(t, fs, bx1 - 22 - fs.getlength(t) / S, by0 + 14), 0, 0, 100, 0)
     # thin cyan tint rule above the footer line inside the panel
     pl.fill(rect_mask((bx0 + 22, by1 - 40, bx1 - 22, by1 - 38)), 100, 85, 0, 45)
     img = press(pl, 10)

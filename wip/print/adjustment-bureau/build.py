@@ -1,140 +1,153 @@
 """Builds the Norris for Senate election night reception card (The Adjustment Bureau, 2006).
-6 x 9 in invitation card, printed two sides in two spot colours (campaign red and black)
-on white coated card. No fold. Two tear-off drink tickets along the foot of the front.
+6 x 9 in card, 130 lb uncoated white cover, printed two sides in two spot inks
+(campaign navy and campaign red) by a union campaign print shop. No fold.
+Front: invitation, red halftone of the candidate, program, two numbered tear-off drink tickets.
+Back: the passed bites and late supper, the cash bar, a county call-in tally for the
+precinct captains, house notes and the printed "Paid for by" box with the union bug.
 Writes front.body.html / back.body.html (face markup) and front.html / back.html (full pages)."""
 import os
 D = os.path.dirname(os.path.abspath(__file__))
 W, H = 576, 864
-TW = 232                    # drink ticket width
-PAPER, RED, INK, GREY, RULE, PINK = '#f7f5f0', '#c4232f', '#222226', '#5d5f64', '#c9c6bf', '#f3dcdc'
-FONTS = ('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800'
-         '&family=Barlow:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap')
-COND = "'Barlow Condensed', sans-serif"; SANS = "'Barlow', sans-serif"
-M = 40                      # safe margin
-CW = W - 2 * M              # 496
+M = 40
+CW = W - 2 * M
+PAPER, NAVY, RED = '#f8f6f0', '#1d2a4e', '#c4222e'
+FONTS = ('https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700'
+         '&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap')
+GOTH = "'Antonio', sans-serif"
+SERIF = "'Crimson Pro', serif"
 
-def grain(): return f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block; opacity: 0.35">'
-def wear(n): return f'<img src="assets/wear-{n}.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">'
-def face(inner): return f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}">{inner}</div>'
+def img(src, x, y, w, h, extra=''):
+    return (f'<img src="assets/{src}" alt="" aria-hidden="true" style="position: absolute; left: {x}px; top: {y}px; '
+            f'width: {w}px; height: {h}px; display: block{extra}">')
 
-def dots_h(y, x0=0, x1=W, col='#a9a59c'):
-    d = ''.join(f'<div style="position: absolute; left: {x}px; top: 0; width: 3px; height: 3px; border-radius: 50%; background: {col}"></div>'
-                for x in range(x0 + 4, x1 - 4, 7))
-    return f'<div style="position: absolute; left: 0; top: {y}px; width: {W}px; height: 3px">{d}</div>'
+def grain(): return img('paper-grain.png', 0, 0, W, H, '; opacity: 0.30')
+def wear(n): return img(f'wear-{n}.png', 0, 0, W, H)
+def face(inner):
+    return f'<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {NAVY}">{inner}</div>'
 
-def dots_v(x, y0, y1, col='#a9a59c'):
-    d = ''.join(f'<div style="position: absolute; left: 0; top: {y}px; width: 3px; height: 3px; border-radius: 50%; background: {col}"></div>'
-                for y in range(0, y1 - y0, 7))
-    return f'<div style="position: absolute; left: {x}px; top: {y0}px; width: 3px; height: {y1 - y0}px">{d}</div>'
+def box(x, y, w, inner, extra=''):
+    return f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px{extra}">{inner}</div>'
 
 # ---------------- FRONT ----------------
 PROGRAM = [
-    ('7:00 P.M.', 'Doors open. Cash bar and passed bites.'),
-    ('9:00 P.M.', 'Election returns on the ballroom screens.'),
-    ('11:00 P.M.', 'Late supper in the ballroom foyer.'),
-    ('THE CALL', 'Remarks by Congressman David Norris.'),
+    ('7 P.M.', 'Doors open. Passed bites and a cash bar.'),
+    ('9 P.M.', 'Polls close. Returns on the ballroom screens.'),
+    ('11 P.M.', 'Late supper in the ballroom foyer.'),
+    ('The call', 'Remarks by Congressman David Norris.'),
 ]
+TICKETS = ('0705', '0706')
 
-def ticket(x):
-    return (f'<div style="position: absolute; left: {x}px; top: 740px; width: {TW}px; height: 60px; border: 2px solid {RED}; box-sizing: border-box; text-align: center">'
-            f'<div style="margin-top: 7px; font-family: {COND}; font-weight: 800; font-size: 27px; line-height: 1; letter-spacing: 0.08em; color: {RED}">ONE DRINK</div>'
-            f'<div style="margin-top: 4px; font-family: {SANS}; font-weight: 500; font-size: 12px; letter-spacing: 0.03em; color: {INK}">AT THE CASH BAR, WITH OUR THANKS</div></div>')
+def ticket(x, no):
+    w = 236
+    return (f'<div style="position: absolute; left: {x}px; top: 778px; width: {w}px; height: 52px; border: 1.5px solid {NAVY}; box-sizing: border-box">'
+            f'<div style="position: absolute; left: 3px; top: 3px; right: 3px; bottom: 3px; border: 0.75px solid {NAVY}"></div>'
+            f'<div style="position: absolute; left: 12px; top: 7px; font-family: {GOTH}; font-weight: 700; font-size: 22px; line-height: 1; letter-spacing: 0.05em; color: {NAVY}">ONE DRINK</div>'
+            f'<div style="position: absolute; right: 12px; top: 9px; font-family: {GOTH}; font-weight: 600; font-size: 14px; line-height: 1; letter-spacing: 0.06em; color: {RED}">No. {no}</div>'
+            f'<div style="position: absolute; left: 12px; top: 31px; font-family: {SERIF}; font-size: 13px; line-height: 1; color: {NAVY}">Good at the bar. Election night, Nov. 7, 2006</div></div>')
 
 def front():
-    band = (f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 424px; background: {RED}"></div>'
-            f'<div style="position: absolute; left: {M}px; top: 44px; width: {CW}px; color: #fff">'
-            f'<div style="font-family: {COND}; font-weight: 700; font-size: 18px; letter-spacing: 0.26em">ELECTION NIGHT RECEPTION</div>'
-            f'<div style="margin-top: 6px; font-family: {COND}; font-weight: 800; font-size: 164px; line-height: 0.86; letter-spacing: 0.01em; margin-left: -6px">NORRIS</div>'
-            f'<div style="margin-top: 10px; font-family: {SANS}; font-weight: 500; font-style: italic; font-size: 27px; line-height: 1">for United States Senate</div></div>')
-    photo = (f'<div style="position: absolute; left: {M}px; top: 276px; width: 200px; height: 254px; background: #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.18)">'
-             f'<img src="assets/candidate.jpg" alt="" style="position: absolute; left: 5px; top: 5px; width: 190px; height: 244px; display: block; object-fit: cover"></div>')
-    when = (f'<div style="position: absolute; left: 268px; top: 282px; width: 268px; color: #fff">'
-            f'<div style="font-family: {COND}; font-weight: 700; font-size: 28px; line-height: 1.05">Tuesday<br>November 7, 2006</div>'
-            f'<div style="margin-top: 10px; font-family: {SANS}; font-size: 17px; line-height: 1.35">The Grand Ballroom, Mezzanine</div>'
-            f'<div style="margin-top: 4px; font-family: {SANS}; font-weight: 600; font-size: 17px">Doors at 7 p.m.</div></div>')
-    beside = (f'<div style="position: absolute; left: 268px; top: 442px; width: 268px; font-family: {SANS}; font-size: 16px; line-height: 1.38; color: {GREY}">'
-              f'Thank you for every door you knocked on and every call you made. Tonight, we wait for the count together.</div>')
+    panel = img('panel-front.png', 0, 0, W, 330)
+    kicker = box(120, 41, 336, f'<div style="text-align: center; font-family: {GOTH}; font-weight: 600; font-size: 15px; line-height: 1; letter-spacing: 0.3em; color: {PAPER}">ELECTION NIGHT RECEPTION</div>')
+    senate = box(M, 263, CW, f'<div style="text-align: center; font-family: {SERIF}; font-style: italic; font-weight: 500; font-size: 30px; line-height: 1; color: {PAPER}">for United States Senate</div>')
+    # red halftone with a navy keyline that sits a hair off register
+    photo = (img('photo-halftone.png', M, 350, 236, 288) +
+             f'<div style="position: absolute; left: {M - 3}px; top: 346px; width: 242px; height: 294px; border: 1.5px solid {NAVY}; box-sizing: border-box"></div>' +
+             box(M, 648, 236, f'<div style="font-family: {GOTH}; font-weight: 600; font-size: 14px; line-height: 1.2; letter-spacing: 0.08em; color: {NAVY}">CONGRESSMAN DAVID NORRIS</div>'
+                 f'<div style="font-family: {SERIF}; font-style: italic; font-size: 14px; line-height: 1.3; color: {NAVY}">Brooklyn, New York</div>'))
     rows = ''.join(
-        f'<div style="display: flex; align-items: baseline; margin-top: {0 if i == 0 else 7}px">'
-        f'<div style="width: 112px; flex: none; font-family: {COND}; font-weight: 700; font-size: 20px; letter-spacing: 0.04em; color: {RED}">{t}</div>'
-        f'<div style="font-family: {SANS}; font-size: 17px; line-height: 1.3; color: {INK}">{d}</div></div>'
+        f'<div style="display: flex; align-items: baseline; margin-top: {0 if i == 0 else 8}px">'
+        f'<div style="width: 64px; flex: none; font-family: {GOTH}; font-weight: 700; font-size: 17px; line-height: 1.15; letter-spacing: 0.02em; color: {RED}">{t.upper()}</div>'
+        f'<div style="font-family: {SERIF}; font-size: 17px; line-height: 1.2; color: {NAVY}">{d}</div></div>'
         for i, (t, d) in enumerate(PROGRAM))
-    program = (f'<div style="position: absolute; left: {M}px; top: 550px; width: {CW}px">'
-               f'<div style="font-family: {COND}; font-weight: 800; font-size: 22px; letter-spacing: 0.14em; color: {INK}">THE EVENING</div>'
-               f'<div style="height: 3px; background: {RED}; margin: 5px 0 12px"></div>{rows}</div>')
-    tear = (dots_h(728) + ticket(M) + ticket(W - M - TW) + dots_v(W // 2 - 1, 734, 804) +
-            f'<div style="position: absolute; left: {M}px; top: 808px; width: {CW}px; text-align: center; font-family: {SANS}; font-size: 12px; letter-spacing: 0.04em; color: {GREY}">'
-            f'Paid for by Norris for Senate</div>')
-    return face(grain() + band + photo + when + beside + program + tear + wear('front'))
+    right = box(296, 348, 240,
+        f'<div style="font-family: {GOTH}; font-weight: 600; font-size: 15px; line-height: 1; letter-spacing: 0.22em; color: {RED}">TUESDAY</div>'
+        f'<div style="margin-top: 5px; font-family: {GOTH}; font-weight: 700; font-size: 37px; line-height: 1; color: {NAVY}">November 7, 2006</div>'
+        f'<div style="margin-top: 9px; font-family: {SERIF}; font-size: 18px; line-height: 1.25; color: {NAVY}">The Grand Ballroom, Mezzanine Level<br><b style="font-weight: 600">Doors open at 7 P.M.</b></div>'
+        f'<div style="margin-top: 16px; height: 2px; background: {RED}"></div>'
+        f'<div style="margin-top: 9px; margin-bottom: 9px; font-family: {GOTH}; font-weight: 700; font-size: 16px; line-height: 1; letter-spacing: 0.18em; color: {NAVY}">THE EVENING</div>'
+        f'{rows}')
+    thanks = box(M, 694, CW,
+        f'<div style="text-align: center; font-family: {SERIF}; font-style: italic; font-size: 19px; line-height: 1.3; color: {NAVY}">'
+        f'Thank you for every door you knocked on and every call you made.<br>Tonight we wait for the count together.</div>'
+        f'<div style="margin-top: 6px; text-align: center; font-family: {GOTH}; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.16em; color: {RED}">PLEASE SHOW THIS CARD AT THE BALLROOM DOORS</div>')
+    tear = (img('perf-h.png', 0, 765, W, 6) + img('perf-v.png', W // 2 - 3, 768, 6, 96) +
+            ticket(M, TICKETS[0]) + ticket(W - M - 236, TICKETS[1]))
+    return face(grain() + panel + kicker + senate + photo + right + thanks + tear + wear('front'))
 
 # ---------------- BACK ----------------
 PASSED = [
-    ('Honey-roasted nuts', 'Almonds, cashews and pecans glazed with butter, brown sugar and a pinch of cinnamon. Warm, in paper cones.'),
-    ('Crostini with warm honey and thyme', 'Toasted baguette, whipped goat’s cheese, cracked black pepper.'),
+    ('Warm roasted nuts', 'Almonds, cashews and pecans glazed with honey, butter, brown sugar and a pinch of cinnamon. In paper cones.'),
+    ('Crostini with warm honey and thyme', 'Toasted baguette, whipped goat cheese, cracked black pepper.'),
     ('Smoked salmon on cucumber', 'Crème fraîche whipped with lemon, fresh dill, black pepper.'),
 ]
 SUPPER = [
     ('Steak frites', 'Sirloin seared hard, rested and sliced, shallot and red wine butter melting over, double-fried potatoes.'),
-    ('Molten chocolate cake', 'Baked to order. Set at the edges, soft in the centre.'),
+    ('Molten chocolate cake', 'Baked to order. Set at the edges, soft in the center.'),
+    ('Coffee and tea', 'Poured with supper. Mind your shirt.'),
 ]
-BAR = [
-    ('French 75', 'Gin, fresh lemon and sugar, topped with brut champagne.', '14.00'),
-    ('Wine by the glass', 'Red or white.', '11.00'),
-    ('Bottled beer', 'Domestic or imported.', '8.00'),
-    ('Soft drinks', 'Cola, ginger ale, soda water.', '4.00'),
-    ('Coffee and tea', 'With supper. Mind your shirt.', 'on us'),
-]
+BAR = [('Wine by the glass', 'red or white', '$11'), ('Bottled beer', 'domestic or imported', '$8'), ('Soft drinks', 'cola, ginger ale, club soda', '$4')]
+COUNTIES = ['Kings', 'Queens', 'New York', 'Bronx', 'Richmond', 'Nassau', 'Suffolk', 'Westchester', 'Erie', 'Monroe']
 NOTES = [
-    'Hats, coats and umbrellas: cloakroom by the main doors.',
-    'A private wedding is also in the hotel tonight. Please keep to the ballroom.',
+    'Hats and coats: the cloakroom by the main doors.',
+    'A private wedding is in the hotel tonight. Please keep to the ballroom.',
     'No photographs at the bar, please.',
-    'Questions on the night: Charlie Traynor.',
+    'The volunteer bus back to Brooklyn leaves the side doors at 1 A.M.',
 ]
 
-def head(t, sub, first=False):
-    return (f'<div style="margin-top: {0 if first else 18}px; display: flex; justify-content: space-between; align-items: baseline">'
-            f'<div style="font-family: {COND}; font-weight: 800; font-size: 22px; letter-spacing: 0.14em; color: {INK}">{t}</div>'
-            f'<div style="font-family: {SANS}; font-style: italic; font-size: 14px; color: {GREY}">{sub}</div></div>'
-            f'<div style="height: 3px; background: {RED}; margin: 4px 0 10px"></div>')
+def head(t, sub=None, first=False):
+    s = f'<div style="margin-top: 3px; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.2; color: {NAVY}">{sub}</div>' if sub else ''
+    return (f'<div style="margin-top: {0 if first else 20}px; font-family: {GOTH}; font-weight: 700; font-size: 19px; line-height: 1; letter-spacing: 0.14em; color: {NAVY}">{t}</div>'
+            f'<div style="height: 2px; background: {RED}; margin-top: 5px"></div>{s}<div style="height: 8px"></div>')
 
-def item(n, d, p=None, first=False):
-    pr = f'<span style="font-family: {COND}; font-weight: 700; font-size: 20px; color: {RED}; white-space: nowrap">{p}</span>' if p else ''
-    return (f'<div style="margin-top: {0 if first else 9}px">'
-            f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">'
-            f'<h3 style="margin: 0; font-family: {COND}; font-weight: 700; font-size: 22px; line-height: 1.1; color: {INK}">{n}</h3>{pr}</div>'
-            f'<p style="margin: 1px 0 0; font-family: {SANS}; font-size: 16px; line-height: 1.3; color: {GREY}; text-wrap: pretty">{d}</p></div>')
+def item(n, d, first=False):
+    return (f'<div style="margin-top: {0 if first else 10}px">'
+            f'<h3 style="margin: 0; font-family: {GOTH}; font-weight: 600; font-size: 21px; line-height: 1.12; letter-spacing: 0.01em; color: {NAVY}">{n}</h3>'
+            f'<p style="margin: 2px 0 0; font-family: {SERIF}; font-size: 17px; line-height: 1.2; color: {NAVY}; text-wrap: pretty">{d}</p></div>')
 
-def bar_row(n, d, p, first=False):
-    return (f'<div style="display: flex; align-items: baseline; gap: 10px; margin-top: {0 if first else 6}px">'
-            f'<h3 style="margin: 0; flex: none; font-family: {COND}; font-weight: 700; font-size: 22px; line-height: 1.1; color: {INK}">{n}</h3>'
-            f'<span style="flex: 1; font-family: {SANS}; font-size: 16px; color: {GREY}">{d}</span>'
-            f'<span style="font-family: {COND}; font-weight: 700; font-size: 20px; color: {RED}">{p}</span></div>')
-
-def cell(n, d, p):
-    return (f'<div style="width: 232px; margin-top: 9px">'
-            f'<div style="display: flex; justify-content: space-between; align-items: baseline">'
-            f'<h3 style="margin: 0; font-family: {COND}; font-weight: 700; font-size: 21px; line-height: 1.1; color: {INK}">{n}</h3>'
-            f'<span style="font-family: {COND}; font-weight: 700; font-size: 20px; color: {RED}; white-space: nowrap">{p}</span></div>'
-            f'<div style="font-family: {SANS}; font-size: 15px; line-height: 1.3; color: {GREY}">{d}</div></div>')
+def tally():
+    cols = [('COUNTY', 92, 'left'), ('PCTS. IN', 48, 'center'), ('NORRIS', 50, 'center'), ('OPP.', 46, 'center')]
+    hdr = ''.join(f'<div style="width: {w}px; flex: none; box-sizing: border-box; padding: 0 4px; text-align: {a}; font-family: {GOTH}; font-weight: 700; font-size: 12px; line-height: 20px; letter-spacing: 0.06em; color: {PAPER}; border-left: {"0" if i == 0 else "1px solid " + PAPER}">{c}</div>'
+                  for i, (c, w, a) in enumerate(cols))
+    rows = ''
+    for c in COUNTIES:
+        cells = ''.join(f'<div style="width: {w}px; flex: none; height: 21px; box-sizing: border-box; border-left: {"0" if i == 0 else "1px solid " + NAVY}; padding: 0 5px; font-family: {SERIF}; font-size: 15px; line-height: 21px; color: {NAVY}">{c if i == 0 else ""}</div>'
+                        for i, (_, w, a) in enumerate(cols))
+        rows += f'<div style="display: flex; border-bottom: 1px solid {NAVY}">{cells}</div>'
+    total = ''.join(f'<div style="width: {w}px; flex: none; height: 22px; box-sizing: border-box; border-left: {"0" if i == 0 else "1px solid " + NAVY}; padding: 0 5px; font-family: {GOTH}; font-weight: 700; font-size: 13px; line-height: 22px; letter-spacing: 0.06em; color: {RED}">{"STATEWIDE" if i == 0 else ""}</div>'
+                    for i, (_, w, a) in enumerate(cols))
+    return (f'<div style="border: 1.5px solid {NAVY}">'
+            f'<div style="display: flex; background: {NAVY}">{hdr}</div>{rows}'
+            f'<div style="display: flex; border-top: 1px solid {NAVY}">{total}</div></div>')
 
 def back():
-    top = (f'<div style="position: absolute; left: 0; top: 0; width: {W}px; height: 14px; background: {RED}"></div>'
-           f'<div style="position: absolute; left: {M}px; top: 36px; width: {CW}px; display: flex; justify-content: space-between; align-items: flex-end">'
-           f'<div style="font-family: {COND}; font-weight: 800; font-size: 50px; line-height: 0.85; color: {RED}">NORRIS</div>'
-           f'<div style="text-align: right; font-family: {SANS}; font-size: 14px; line-height: 1.3; color: {GREY}">Election Night Reception<br>November 7, 2006</div></div>')
-    fr = bar_row(*BAR[0][:1], BAR[0][1], BAR[0][2], first=True)
-    passed = ''.join(item(n, d, first=(i == 0)) for i, (n, d) in enumerate(PASSED))
-    supper = ''.join(item(n, d, first=(i == 0)) for i, (n, d) in enumerate(SUPPER))
-    bar = item(*BAR[0], first=True) + '<div style="display: flex; flex-wrap: wrap; justify-content: space-between">' + ''.join(cell(n, d, p) for n, d, p in BAR[1:]) + '</div>'
-    notes = ''.join(f'<div style="margin-top: {0 if i == 0 else 3}px; font-family: {SANS}; font-size: 14px; line-height: 1.3; color: {INK}">{t}</div>'
+    panel = img('panel-back.png', 0, 0, W, 84)
+    top = (box(M, 11, 300, f'<div style="font-family: {GOTH}; font-weight: 700; font-size: 34px; line-height: 1; letter-spacing: 0.04em; color: {PAPER}">NORRIS</div>') +
+           box(W - M - 300, 33, 300, f'<div style="text-align: right; font-family: {GOTH}; font-weight: 600; font-size: 13px; line-height: 1; letter-spacing: 0.16em; color: {PAPER}">ELECTION NIGHT · NOVEMBER 7, 2006</div>'))
+    passed = ''.join(item(n, d, i == 0) for i, (n, d) in enumerate(PASSED))
+    supper = ''.join(item(n, d, i == 0) for i, (n, d) in enumerate(SUPPER))
+    left = box(M, 104, 238, head('PASSED FROM 7 P.M.', 'With the campaign’s compliments', True) + passed +
+               head('LATE SUPPER', 'In the ballroom foyer from 11 P.M.') + supper)
+    bar_rows = ''.join(
+        f'<div style="display: flex; align-items: baseline; margin-top: 7px">'
+        f'<div style="flex: 1"><span style="font-family: {GOTH}; font-weight: 600; font-size: 19px; line-height: 1.1; color: {NAVY}">{n}</span>'
+        f'<div style="font-family: {SERIF}; font-size: 15px; line-height: 1.15; color: {NAVY}">{d}</div></div>'
+        f'<div style="font-family: {GOTH}; font-weight: 700; font-size: 19px; color: {RED}">{p}</div></div>' for n, d, p in BAR)
+    bar = (head('THE BAR', 'Cash bar. Each ticket on the front of this card is good for one drink.', True) +
+           f'<div style="display: flex; align-items: baseline"><h3 style="flex: 1; margin: 0; font-family: {GOTH}; font-weight: 600; font-size: 21px; line-height: 1.12; color: {NAVY}">French 75</h3>'
+           f'<div style="font-family: {GOTH}; font-weight: 700; font-size: 19px; color: {RED}">$14</div></div>'
+           f'<p style="margin: 2px 0 0; font-family: {SERIF}; font-size: 17px; line-height: 1.2; color: {NAVY}">Gin, fresh lemon and sugar, topped with brut champagne and a long twist.</p>'
+           + bar_rows)
+    calls = (head('CALL IN THE NUMBERS', 'Precinct captains: phone your counts to Charlie Traynor in the back office.') + tally())
+    right = box(298, 104, 238, bar + calls)
+    notes = ''.join(f'<div style="width: 228px; font-family: {SERIF}; font-size: 15px; line-height: 1.2; color: {NAVY}; margin-top: {0 if i < 2 else 6}px">{t}</div>'
                     for i, t in enumerate(NOTES))
-    body = (f'<div style="position: absolute; left: {M}px; top: 96px; width: {CW}px">'
-            f'{head("PASSED ALL EVENING", "With the campaign’s compliments", True)}{passed}'
-            f'{head("LATE SUPPER", "In the foyer from 11 p.m.")}{supper}'
-            f'{head("CASH BAR", "Drink tickets welcome")}{bar}</div>')
-    foot = (f'<div style="position: absolute; left: {M}px; bottom: 40px; width: {CW - 32}px; padding: 10px 16px; background: {PINK}">{notes}</div>')
-    ring = f'<img src="assets/stain-ring.png" alt="" aria-hidden="true" style="position: absolute; left: 418px; top: 380px; width: 172px; height: 172px; display: block">'
-    return face(grain() + top + body + foot + ring + wear('back'))
+    house = box(M, 704, CW,
+        f'<div style="border-top: 2px solid {RED}; padding-top: 8px; display: flex; flex-wrap: wrap; justify-content: space-between">{notes}</div>')
+    paid = (box(M, 792, 400, f'<div style="display: inline-block; border: 1px solid {NAVY}; padding: 5px 9px; font-family: {SERIF}; font-size: 13px; line-height: 1.15; color: {NAVY}">'
+                f'Paid for by Norris for Senate. Contributions to Norris for Senate are not tax deductible.</div>') +
+            img('union-bug.png', W - M - 64, 788, 64, 35))
+    ring = img('stain-ring.png', 448, -60, 168, 168)
+    return face(grain() + panel + top + left + right + house + paid + ring + wear('back'))
 
 FACES = {'front': front(), 'back': back()}
 for n, b in FACES.items():
