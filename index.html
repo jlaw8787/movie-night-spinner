@@ -458,6 +458,7 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
   #printArea .mcard{transform:none!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   #printArea .mcard+.mcard{break-before:page;page-break-before:always}
   #printArea .mcard.fmt{page:land}
+  #printArea .mcard.fmt.fx-paper{padding:0!important;background:transparent!important}#printArea .mcard.fmt.fx-port{page:auto}
   @page land{size:A4 landscape;margin:0}
 }
 .overlay{position:fixed;inset:0;background:rgba(10,4,6,.94);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px}
@@ -828,6 +829,9 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 
 /* ===== era formats: landscape A4 spread ===== */
 .mcard.fmt{width:1123px;height:794px;background:#0b1530;padding:26px;box-sizing:border-box;font-size:16px;line-height:1.3}
+.mcard.fmt.fx-paper,.mcard.fmt.fx-paper.for-print{padding:0;background:transparent}
+.preview:has(.fx-paper)::after{display:none}
+.mcard.fmt.fx-paper .fx-face{box-shadow:0 18px 40px rgba(0,0,0,.45)}.mcard.fmt.fx-paper.for-print .fx-face{box-shadow:none}
 .mcard.fmt .fx-back{position:absolute;inset:0;overflow:hidden}
 .mcard.fmt .fx-back img{position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(4px) brightness(.45)}
 .mcard.fmt .fx-sheet{position:relative;height:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));box-shadow:0 26px 60px rgba(0,0,0,.7)}
@@ -1564,8 +1568,8 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 <script src="ratings.js?v=750f6b42" defer></script>
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=e86181bb" defer></script>
-<script src="formats-core.js?v=cec79c40" defer></script>
-<script src="app.js?v=a632b1bc" defer></script>
+<script src="formats-core.js?v=e400f798" defer></script>
+<script src="app.js?v=d3f04326" defer></script>
 
 </body>
 </html>

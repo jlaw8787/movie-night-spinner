@@ -14,6 +14,7 @@ const exactMenu=f=>f.edition?f.edition.menu:f.recipe;
 const toItem=([n,note,how,shop])=>({n,note,how,shop});
 const lobbyPoster=f=>TMDB_POSTERS[f.id]||null;
 `+rd('tmdb-posters.js')+rd('formats.js')+`;this.specs=FMT_FILMS;this.renderers=FMT_RENDER;this.palettes=FMT_PHONE;this.menu=fmtMenu;this.phone=fmtPhoneHTML;`,ctx);
+
 const identityText=s=>s.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/[’‘]/g,"'").replace(/\s+/g,' ').toLowerCase();
 const batch=['Anchorman: The Legend of Ron Burgundy (2004)',...Object.entries(ctx.specs).filter(([,spec])=>spec.art).map(([id])=>id)];
 let dishes=0;
@@ -35,10 +36,27 @@ for(const[id,spec]of Object.entries(ctx.specs)){
   assert.equal(JSON.stringify(it.shop),JSON.stringify(original.shop),id+' shopping: '+it.n);
  }
  const html=ctx.renderers[spec.fmt](f,spec,menu,'/poster.jpg');
- assert.ok(html.includes('fx-poster')&&html.includes('fx-wall'),id+' printable artwork');
+ const sheet=ctx.renderers[spec.fmt].sheet;
  assert.ok(!/undefined|NaN/.test(html),id+' complete markup');
+ if(sheet){
+  /* real printed objects: one page per face at the object's own size, art kept in assets/era/<fmt>/ */
+  const n=Array.isArray(sheet.faces)?sheet.faces.length:sheet.faces;
+  assert.equal((html.match(/class="fx-face"/g)||[]).length,n,id+' every face rendered');
+  assert.ok(sheet.w>0&&sheet.h>0&&sheet.mm&&sheet.mm.length===2,id+' sheet size');
+  const imageSources=[...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m=>m[1]);
+  assert.ok(imageSources.length>=1,id+' film imagery');
+  for(const src of imageSources){
+   assert.ok(src.startsWith('https://image.tmdb.org/t/p/')||new RegExp('^assets/era/('+spec.fmt+'|_shared)/[\\w.-]+\\.webp$').test(src),id+' image source '+src);
+   if(src.startsWith('assets/'))assert.ok(fs.existsSync(path.join(root,src)),id+' image file exists '+src);
+  }
+  assert.ok(!/api_key=|access_token=|api\.themoviedb/.test(html),id+' no credentials or API requests in browser markup');
+  assert.ok(!/[\u2013\u2014]/.test(html),id+' no en or em dashes');
+  assert.ok(ctx.phone(f,spec,menu).includes(ESCForTest(f.edition?.cue||f.P)),id+' serving cue kept on the phone menu');
+ }else{
+ assert.ok(html.includes('fx-poster')&&html.includes('fx-wall'),id+' printable artwork');
  assert.ok(html.includes(ESCForTest(f.edition?.cue||f.P)),id+' serving cue included');
- if(spec.art){
+ }
+ if(spec.art&&!sheet){
   const imageSources=[...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m=>m[1]);
   assert.ok(imageSources.every(src=>src.startsWith('https://image.tmdb.org/t/p/')||src==='assets/hero/paper.webp'||(id==='Coming to America (1988)'&&src==='assets/menu-details/mcdowells-film-source.jpg')),id+' imagery uses authentic film assets and paper texture');
   const used=Object.entries(spec.art).filter(([,path])=>html.includes(path));
