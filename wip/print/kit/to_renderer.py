@@ -37,9 +37,11 @@ def port_image(src, base):
         return 'assets/era/_shared/paper-grain.webp'
     has_alpha = im.mode in ('RGBA', 'LA') or (im.mode == 'P' and 'transparency' in im.info)
     im = im.convert('RGBA' if has_alpha else 'RGB')
-    if im.width > 1700: im = im.resize((1700, round(im.height * 1700 / im.width)), Image.LANCZOS)
+    texture = bool(re.search(r'grain|wear|weather|paper|texture|stain', os.path.basename(p)))
+    cap = 900 if texture else 1700
+    if im.width > cap: im = im.resize((cap, round(im.height * cap / im.width)), Image.LANCZOS)
     name = os.path.splitext(os.path.basename(p))[0] + '-' + hashlib.sha1(open(p, 'rb').read()).hexdigest()[:6] + '.webp'
-    im.save(os.path.join(out_dir, name), 'WEBP', quality=80 if not has_alpha else 85, method=6)
+    im.save(os.path.join(out_dir, name), 'WEBP', quality=(32 if texture else (80 if not has_alpha else 85)), method=6)
     return f'assets/era/{fmt}/{name}'
 
 html_faces = []
