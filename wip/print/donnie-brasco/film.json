@@ -1,0 +1,18 @@
+{
+ "fmt": "leftys",
+ "fn": "fmtLeftys",
+ "faces": ["front.html", "inside.html"],
+ "names": ["Outside", "Inside"],
+ "mm": [216, 279],
+ "fonts": "family=Shojumaru&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Reenie+Beanie",
+ "fams": ["Shojumaru", "Spectral", "Reenie Beanie"],
+ "phone": {
+  "disp": "'Shojumaru',serif",
+  "title": "'Shojumaru',serif",
+  "name": "'Spectral',serif",
+  "body": "'Spectral',serif",
+  "price": "'Spectral',serif",
+  "note": "'Spectral',serif"
+ },
+ "build": "python3 build.py && python3 shot.py"
+}

@@ -1,0 +1,31 @@
+{
+ "fmt": "palermo",
+ "fn": "fmtPalermo",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  178,
+  279
+ ],
+ "fonts": "family=Tenor+Sans&family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Herr+Von+Muellerhoff",
+ "fams": [
+  "Tenor Sans",
+  "EB Garamond",
+  "Herr Von Muellerhoff"
+ ],
+ "phone": {
+  "disp": "'Tenor Sans',sans-serif",
+  "title": "'Tenor Sans',sans-serif",
+  "name": "'EB Garamond',serif",
+  "body": "'EB Garamond',serif",
+  "price": "'EB Garamond',serif",
+  "note": "'EB Garamond',serif"
+ },
+ "build": "python3 build.py && python3 shot.py"
+}
