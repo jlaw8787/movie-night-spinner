@@ -16,3 +16,10 @@ The 75 era films have one-off printed menus. The other 775 films show a shared "
 - Pilot first: hero, kids, horror. Each builds wip/genre/<theme>/: template.js (a function genreCard(f, menu, poster, stills) returning face HTML, inline styles only, no head CSS classes), harness.html that renders it for 6 sample films from that theme, PNG proofs of those 6, and NOTES.md (venue, face, palette, how it handles long titles and missing stills).
 - One build, one self-check at full size, one fix. Report in under 150 words.
 - Owner approves the pilot proof before the other 22 themes are built, and approves again before anything goes live.
+
+## Per-film lift (owner, Oct 26: "do they get their own individuality and movie theming?" then "Full per-film lift")
+Every genre template must also use, per film:
+- data/film-logos.json: the film's real TMDB title logo (w500 or original) as the headline where the layout has a title; fall back to set type when missing or unreadable on the background.
+- data/film-palette.json: {dark, accent} sampled from the poster, used for the accent rules, label bars and headline colour, keeping the genre's paper and layout. Check contrast; fall back to the genre palette if accent is too light or too close to paper.
+- wip/genre/flavour/out/*.json (merged later into data/film-flavour.json): venue, sign, note {text, by}, winks (3 to 5), prop {kind, title, lines}, number. The venue name and sign replace the generic genre venue name; the note is the character note with a script signature; winks go in fine print, captions and the prop; number goes into a price or form number.
+Result: same genre system, but each film reads as its own place.
