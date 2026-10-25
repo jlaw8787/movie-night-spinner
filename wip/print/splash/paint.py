@@ -487,7 +487,7 @@ if 'chart' in ONLY:
     dist = ndimage.distance_transform_edt(la < 0.5) / S
     wl = np.zeros_like(la)
     for k, dd in enumerate((1.8, 3.8, 6.2, 9.0, 12.4)):
-        wl = np.maximum(wl, np.clip(1 - np.abs(dist - dd) / (0.36 - k * 0.04), 0, 1) * (1 - k * 0.12))
+        wl = np.maximum(wl, np.clip(1 - np.abs(dist - dd) / (0.62 - k * 0.07), 0, 1) * (1 - k * 0.1))
     wl *= (la < 0.5)
     coast = Plate(MW, MH)
     coast.line(arm, 1.2); coast.line(island + [island[0]], 1.2)
@@ -499,7 +499,7 @@ if 'chart' in ONLY:
             tint.ell((i + (j % 2) * 0.5) * pitch, j * pitch * 0.866, 0.5, 0.5)
     chart_blue = np.maximum(np.maximum(wl, coast.arr()), tint.arr() * la * 0.95)
     # a road along the arm and through the town, drawn double, knocked out of the tint
-    road = smooth([(0, 240), (40, 236), (86, 232), (124, 226), (170, 210), (186, 170), (186, 120), (176, 84), (172, 56), (188, 36)], 8)
+    road = smooth([(0, 252), (40, 248), (84, 242), (126, 236), (164, 222), (184, 186), (190, 140), (180, 100), (170, 66), (176, 44), (192, 30)], 8)
     rk_ = Plate(MW, MH); rk_.line(road, 2.6)
     rkk = rk_.arr()
     chart_blue = chart_blue * (1 - rkk * la)
@@ -516,9 +516,9 @@ if 'chart' in ONLY:
     sym.poly([(cxn, cyn - 17), (cxn + 4, cyn), (cxn - 4, cyn)])
     sym.poly([(cxn, cyn + 17), (cxn + 4, cyn), (cxn - 4, cyn)], 0, 255, 0.6)
     sym.rect(82, 214, 86, 228)                                                       # town pier
-    sym.line([(126, 270), (176, 270)], 0.9)                                          # scale bar
-    for x in (126, 151, 176): sym.line([(x, 266), (x, 270)], 0.7)
-    sym.rect(126, 269, 151, 271)
+    sym.line([(60, 22), (110, 22)], 0.9)                                             # scale bar, one mile
+    for x in (60, 85, 110): sym.line([(x, 18), (x, 22)], 0.7)
+    sym.rect(60, 21, 85, 23)
     chart_blue = np.maximum(chart_blue * (1 - region(MW, MH, lambda m: m.rect(80, 212, 88, 230))), sym.arr())
     # red plate: the two cruise courses, bell buoy, light flash, pier dot
     rt = Plate(MW, MH)
@@ -570,17 +570,17 @@ if 'lobster' in ONLY:
     # antennae
     ant = Plate(LW_, LH_)
     for sg in (-1, 1):
-        ant.line(smooth([(66, cy + sg * 4), (52, cy + sg * 14), (40, cy + sg * 34), (44, cy + sg * 54), (80, cy + sg * 66), (150, cy + sg * 68), (200, cy + sg * 62)], 10), 0.6)
+        ant.line(smooth([(66, cy + sg * 4), (52, cy + sg * 14), (40, cy + sg * 34), (44, cy + sg * 54), (80, cy + sg * 66), (150, cy + sg * 68), (206, cy + sg * 62)], 10), 0.7)
         ant.line(smooth([(66, cy + sg * 3), (58, cy + sg * 8), (52, cy + sg * 10)], 6), 0.5)   # short antennules
     # claws: merus, carpus, propodus (big), dactyl (moving finger)
     def claw(sg, big):
         out = []
-        out.append(part(76, cy + sg * 17, 22, 8, -sg * 120 + 180 if False else (150 if sg < 0 else 210), 0.2))  # merus
-        out.append(part(62, cy + sg * 27, 13, 9, 0, 0.1))                                                      # carpus
-        L, Wd = (50, 24) if big else (48, 16)
-        pc = (34, cy + sg * 33)
-        out.append(part(pc[0], pc[1], L, Wd, 180 + sg * 8, 0.38))                                              # propodus
-        out.append(part(pc[0] - 10, pc[1] - sg * (Wd * 0.42), L * 0.62, Wd * 0.36, 180 + sg * 18, 0.5))        # dactyl
+        out.append(part(68, cy + sg * 19, 26, 8, 215 if sg < 0 else 145, 0.2))      # merus, body to wrist
+        out.append(part(54, cy + sg * 28, 13, 9, 200 if sg < 0 else 160, 0.1))     # carpus
+        L, Wd = (48, 24) if big else (46, 16)
+        pc = (26, cy + sg * 32)
+        out.append(part(pc[0], pc[1], L, Wd, 180 + sg * 8, 0.38))                  # propodus
+        out.append(part(pc[0] - 9, pc[1] + sg * (Wd * 0.40), L * 0.6, Wd * 0.34, 180 - sg * 10, 0.5))  # dactyl, outer side
         return out
     claws = claw(-1, True) + claw(1, False)
     cara = part(90, cy, 58, 30, 0, 0.18)
@@ -616,8 +616,6 @@ if 'lobster' in ONLY:
     det.line(smooth([(84, cy - 13), (80, cy - 4), (80, cy + 4), (84, cy + 13)], 6), 0.6)
     for sg in (-1, 1):
         det.ell(64, cy + sg * 5, 1.6, 1.6)
-    for t in np.linspace(0.15, 0.75, 6):
-        det.ell(34 - 50 * 0.5 * t + 6, cy - 33 + 24 * 0.18, 0.9, 0.9)
     dt = Plate(LW_, LH_); dt.poly(rostrum, 0, 255, 0.7)
     lob_blue = np.maximum(np.maximum(full, shade), np.maximum(det.arr(), dt.arr()))
     bm = body.arr()

@@ -20,7 +20,7 @@ async def main():
             print(' crease', await pg.evaluate(CREASE))
         bodies = [open(os.path.join(D, n + '.body.html')).read() for n in ('front', 'back')]
         head = open(os.path.join(D, 'front.html')).read().split('<head>')[1].split('</head>')[0]
-        html = ('<!doctype html><html><head>' + head.replace('<style>', '<style>@page{size:8.5in 11in;margin:0}.pg{width:816px;height:1056px;overflow:hidden;break-after:page}')
+        html = ('<!doctype html><html><head>' + head.replace('<style>', '<style>@page{size:8.5in 11in;margin:0}.pg{width:816px;height:1056px;overflow:hidden;break-after:page}.pg *{text-shadow:none!important}')
                 + '</head><body>' + ''.join('<div class="pg">' + x + '</div>' for x in bodies) + '</body></html>')
         open(os.path.join(D, 'trim.html'), 'w').write(html)
         await pg.goto('file://' + D + '/trim.html'); await pg.evaluate('document.fonts.ready'); await pg.wait_for_timeout(1500)

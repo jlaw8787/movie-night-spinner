@@ -65,7 +65,7 @@ class Plate:
         self.dt.line(p, fill=float(tone), width=int(width * self.S))
         self.da.line(p, fill=float(ang), width=int(width * self.S))
 
-    def render(self, name, period=2.3, seed=0, outline=1.0, och_shift=(2, 1), tone_mod=None):
+    def render(self, name, period=2.3, seed=0, outline=1.0, och_shift=(4, 2), tone_mod=None):
         S = self.S
         T = np.asarray(self.tone, dtype=np.float32).copy()
         A = np.deg2rad(np.asarray(self.ang, dtype=np.float32))

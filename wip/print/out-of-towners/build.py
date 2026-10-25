@@ -48,7 +48,7 @@ def item(name, desc, price, top=12, size=21, pencil=0):
     st = strike(pencil) if pencil else ''
     return (f'<div style="margin-top: {top}px">'
             f'<div style="display: flex; align-items: baseline; gap: 6px">'
-            f'<div style="position: relative; font-family: {BOD}; font-weight: 700; font-size: {size}px; line-height: 1.12; {SQ}">{esc(name)}{st}</div>'
+            f'<div style="position: relative; font-family: {BOD}; font-weight: 700; font-size: {size}px; line-height: 1.12; word-spacing: 0.08em; {SQ}">{esc(name)}{st}</div>'
             f'<div style="flex: 1; border-bottom: 1.5px dotted {INK}; opacity: 0.55; transform: translateY(-4px); min-width: 12px"></div>'
             f'<div style="font-family: {BOD}; font-weight: 600; font-size: 18px; line-height: 1.1; white-space: nowrap; {SQ}">{price}</div></div>'
             f'<div style="margin-top: 3px; font-family: {BOD}; font-size: 16px; line-height: 1.28; color: {SOFT}; text-wrap: pretty; {SQ}">{esc(desc)}</div></div>')

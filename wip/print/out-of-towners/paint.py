@@ -190,7 +190,7 @@ stroke([(516, 158), (552, 158)], 0.5)
 poles = [26, 286, 548]
 tops = {}
 for px in poles:
-    stroke([(px, 112), (px, 214)], 1.6)
+    stroke([(px, 112), (px, 226 if px < 40 else 158)], 1.6)
     stroke([(px - 9, 116), (px + 9, 116)], 1.3)
     stroke([(px - 7, 122), (px + 7, 122)], 1.1)
     for dx in (-8, -3, 3, 8):
