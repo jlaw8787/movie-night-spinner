@@ -17,7 +17,7 @@ M = 40; CW = W - 2 * M
 
 # ---------------- painted slime (the one painted piece) ----------------
 def paint_slime():
-    s = 2; w, h = W * s, 190 * s
+    s = 2; w, h = W * s, 170 * s
     rnd = random.Random(1989)
     m = Image.new('L', (w, h), 0); d = ImageDraw.Draw(m)
     d.rectangle([0, 0, w, 74 * s], fill=255)
@@ -25,7 +25,7 @@ def paint_slime():
     while x < w:
         r = rnd.randint(16, 30) * s
         d.ellipse([x - r, 74 * s - r, x + r, 74 * s + r * 0.7], fill=255); x += int(r * 1.3)
-    drips = [(34, 70), (92, 128), (150, 52), (214, 104), (300, 150), (362, 64), (420, 116), (488, 82)]
+    drips = [(34, 44), (92, 76), (150, 30), (214, 62), (300, 82), (362, 38), (420, 70), (488, 50)]
     for dx, ln in drips:                             # drips: tapered neck with a fat bead at the end
         dx *= s; ln *= s; bw = rnd.randint(13, 18) * s
         d.polygon([(dx - bw, 70 * s), (dx + bw, 70 * s), (dx + bw * 0.55, 70 * s + ln), (dx - bw * 0.55, 70 * s + ln)], fill=255)
@@ -68,12 +68,12 @@ def fit(im, w, h, box=None):
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
-HERO_W, HERO_H = CW - 8, 232
+HERO_W, HERO_H = CW - 8, 212
 jar = Image.open(S('o-ux9t4fjjch9ovAeUmXq6HXm2NtJ.jpg')).convert('RGB')
 jar = ImageEnhance.Color(ImageEnhance.Brightness(jar).enhance(1.16)).enhance(1.12)
 fit(jar, HERO_W, HERO_H, (240, 120, 1680, 1060)).save(A('still-slime.jpg'), quality=92)
 
-PIC_W, PIC_H = 196, 214
+PIC_W, PIC_H = 196, 176
 vigo = Image.open(S('o-7EHYnYCN5xpXBya1JpSsEQWSgJa.jpg')).convert('RGB')
 vigo = ImageEnhance.Brightness(vigo).enhance(1.12)
 fit(vigo, PIC_W - 20, PIC_H - 20, (560, 0, 1400, 1080)).save(A('still-vigo.jpg'), quality=92)
@@ -82,7 +82,7 @@ lib = ImageEnhance.Brightness(lib).enhance(1.2)
 fit(lib, 222, PIC_H, (430, 20, 1030, 640)).save(A('still-liberty.jpg'), quality=92)
 
 logo = Image.open(S('o-t6nZ3rppTPsymlbpDP7wYWkTuIV.jpg')).convert('RGB')
-fit(logo, 120, 120, (560, 140, 1360, 940)).save(A('logo.jpg'), quality=94)
+fit(logo, 120, 120, (470, 40, 1450, 1020)).save(A('logo.jpg'), quality=94)
 
 def wear(name, seed):
     rnd = random.Random(seed)
@@ -112,15 +112,15 @@ def band(t):
             + haz('left') + haz('right') +
             f'<div style="font-family: {DISP}; font-size: 30px; line-height: 42px; color: {PAPER}; letter-spacing: 0.03em; white-space: nowrap">{t}</div></div>')
 
-def item(name, price, desc='', gap=10):
+def item(name, price, desc='', gap=9):
     d = (f'<div style="font-family: {BODY}; font-size: 20px; line-height: 1.24; color: {INK}; margin-top: 1px">{desc}</div>' if desc else '')
     return (f'<div style="margin-top: {gap}px">'
             f'<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-family: {BODY}; font-weight: 800; '
             f'font-size: 26px; line-height: 1.12; color: {INK}">'
             f'<span>{name}</span><span style="color: {DEEP}">{price}</span></div>{d}</div>')
 
-def plate(t, w):
-    return (f'<div style="position: absolute; left: 0; bottom: 0; width: {w}px; box-sizing: border-box; background: rgba(24,22,26,0.82); '
+def plate(t, w, pos='bottom'):
+    return (f'<div style="position: absolute; left: 0; {pos}: 0; width: {w}px; box-sizing: border-box; background: rgba(24,22,26,0.82); '
             f'padding: 6px 12px 7px; font-family: {BODY}; font-size: 16px; line-height: 1.25; color: #ffffff">{t}</div>')
 
 def page(inner, name, slime=False):
@@ -160,29 +160,29 @@ def ray_note(x, y, w):
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; box-sizing: border-box; background: #fff; '
             f'box-shadow: 0 3px 8px rgba(30,10,30,0.35); transform: rotate(-1.5deg); padding: 9px 12px 4px; border-left: 6px solid {PINK}">'
             f'<div style="font-family: {BODY}; font-style: italic; font-size: 18px; line-height: 1.28; color: {INK}">'
-            'Kids, the slime feeds on bad moods. Big smiles, lots of cheering, and it stays in the jar.</div>'
+            'The slime feeds on bad moods. Keep cheering, kids!</div>'
             f'<div style="font-family: {SCRIPT}; font-size: 30px; line-height: 1.05; color: {DEEP}">Ray &amp; Winston</div></div>')
 
 # ---------------- FRONT ----------------
 def front():
     o = []
-    o.append(f'<img src="assets/art-slime.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: 190px; display: block">')
+    o.append(f'<img src="assets/art-slime.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: 170px; display: block">')
     # logo badge on the slime
-    o.append(f'<div style="position: absolute; left: {W // 2 - 70}px; top: 18px; width: 140px; height: 140px; border-radius: 50%; background: #fff; '
+    o.append(f'<div style="position: absolute; left: {W // 2 - 66}px; top: 16px; width: 132px; height: 132px; border-radius: 50%; background: #fff; '
              f'border: 4px solid {INK}; box-sizing: border-box; overflow: hidden; box-shadow: 0 4px 10px rgba(60,0,30,0.4)">'
-             f'<img src="assets/logo.jpg" alt="The Ghostbusters logo, the ghost holding up two fingers" style="display: block; width: 120px; height: 120px; margin: 6px 0 0 6px"></div>')
-    o.append(at(M, 196, kicker("The Ghostbusters do birthdays", align='center')))
-    o.append(at(M - 4, 220, f'<div style="font-family: {DISP}; font-size: 64px; line-height: 1; color: {INK}; text-align: center; white-space: nowrap">PARTY MENU</div>', CW + 8))
-    o.append(at(M, 296, f'<div style="border: 4px solid {PINK}; background: {PINK}; width: {HERO_W}px">'
+             f'<img src="assets/logo.jpg" alt="The Ghostbusters logo, the ghost holding up two fingers" style="display: block; width: 116px; height: 116px; margin: 4px 0 0 4px"></div>')
+    o.append(at(M, 176, kicker("The Ghostbusters do birthdays", align='center')))
+    o.append(at(M - 4, 198, f'<div style="font-family: {DISP}; font-size: 64px; line-height: 1; color: {INK}; text-align: center; white-space: nowrap">PARTY MENU</div>', CW + 8))
+    o.append(at(M, 274, f'<div style="border: 4px solid {PINK}; background: {PINK}; width: {HERO_W}px">'
                 f'<div style="position: relative; width: {HERO_W}px; height: {HERO_H}px">'
                 f'<img src="assets/still-slime.jpg" alt="Four men lean over a lab table staring at a tub of glowing slime" style="display: block; width: {HERO_W}px; height: {HERO_H}px">'
-                + plate('<b style="color: #ff8cc6">MOOD SLIME.</b> It loves a happy party. Our guys bring a jar to every birthday.', HERO_W) +
+                + plate('<b style="color: #ff8cc6">MOOD SLIME.</b> It loves a happy party.', HERO_W, 'top') +
                 '</div></div>'))
     menu = (band('PARTY PLATES')
             + item('Pink slime dip', '8.50', 'Roast beets, feta, yogurt, garlic, lemon and dill, with warm flatbread.')
-            + item('Dancing toaster crumpets', '5.55', 'Crisp, with honey butter. Play them something upbeat.')
+            + item('Dancing toaster crumpets', '5.55', 'Honey butter. Play them something upbeat.')
             + item('Mini bagel pizzas', '9.00', 'Hot salami, mozzarella, chili honey.'))
-    o.append(at(M, 552, menu))
+    o.append(at(M, 500, menu))
     return page(''.join(o), 'front', True)
 
 # ---------------- BACK ----------------
@@ -194,17 +194,17 @@ def back():
     o.append(at(M + 226, 40, f'<div style="border: 4px solid {PINK}; width: 214px; height: {PIC_H - 8}px; overflow: hidden; position: relative">'
                 f'<img src="assets/still-liberty.jpg" alt="The Statue of Liberty walking up a city avenue at night between tall buildings" style="display: block; width: 222px; height: {PIC_H}px; margin: -4px 0 0 -4px">'
                 + plate('Our ride home on New Year’s Eve.', 214) + '</div>', 222))
-    o.append(at(M, 262, f'<div style="font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.25; color: {MUTE}">Not on the guest list. Keep him away from the baby.</div>', 200))
-    o.append(ray_note(M, 312, 290))
-    o.append(ghost_trap(M + 300, 300))
+    o.append(at(M, 224, f'<div style="font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.25; color: {MUTE}">Not on the guest list. Keep him away from the baby.</div>', 212))
+    o.append(ray_note(M, 276, 290))
+    o.append(ghost_trap(M + 300, 236))
     menu = (band('BIG PLATES')
             + item("Vigo's goulash", '16.10', 'Slow paprika beef, onions, caraway and tomato. Egg noodles, sour cream.')
-            + item('Liberty hot dogs', '18.86', 'Mustard, green relish, onion and hot sauerkraut.')
+            + item('Liberty hot dogs', '18.86', 'Mustard, green relish, onion, sauerkraut.')
             + f'<div style="margin-top: 12px">{band("SWEETS AND SIPS")}</div>'
             + item('Pink lemonade gelatin', '4.50', 'Raspberries inside. It wobbles to music.')
             + item('Pink slime float', '1.25', 'Pink lemonade over raspberry sorbet.'))
-    o.append(at(M, 438, menu))
-    o.append(at(M, 752, f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.3; color: {MUTE}; white-space: nowrap">'
+    o.append(at(M, 378, menu))
+    o.append(at(M, 758, f'<div style="font-family: {BODY}; font-size: 14px; line-height: 1.3; color: {MUTE}; white-space: nowrap">'
                 'Trays serve 12 kids. Book a party: 555-2368. Form GB-1231.</div>'))
     return page(''.join(o), 'back')
 
