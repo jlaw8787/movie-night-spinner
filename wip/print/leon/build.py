@@ -114,7 +114,7 @@ def counter_cell(x, w, head, art, aw, ah, name, desc, note, p):
 
 
 front = f"""
-<div style="{at(0, 0, FW, 'height: 200px; background: ' + GREEN)}"></div>
+<div style="{at(0, 0, FW, 'height: 198px; background: ' + GREEN)}"></div>
 <div style="{at(48, 42, 720, f'display: flex; justify-content: space-between; font-family: {NAME}; font-weight: 700; font-size: 16px; letter-spacing: .16em; color: {WHITE}')}">
   <span>GROCERIES</span><span>DAIRY</span><span>DELI</span><span>LUNCH COUNTER</span><span>BAKERY</span><span>HOUSEPLANTS</span></div>
 <div style="{at(44, 62, 730, f'font-family: {DISP}; font-style: italic; font-size: 84px; line-height: 1; letter-spacing: .005em; color: {WHITE}; white-space: nowrap')}">CORNER FOOD MARKET</div>
@@ -134,13 +134,13 @@ front = f"""
   <div style="font-family: {DISP}; font-size: 43px; line-height: 1; letter-spacing: .03em">MILK</div>
   <div style="font-family: {NAME}; font-weight: 700; font-size: 13px; line-height: 1.15; letter-spacing: .06em; color: {INK}">VITAMIN D<br>ONE QUART</div></div>
 <div style="{at(278, 270, 228)}">
-  <div style="font-family: {DISP}; font-size: 54px; line-height: .95; letter-spacing: .01em">WHOLE MILK</div>
+  <div style="font-family: {DISP}; font-size: 47px; line-height: 1; letter-spacing: .01em; white-space: nowrap">WHOLE MILK</div>
   <div style="{DESC}; margin-top: 8px">{MILK_D}</div>
   <div style="{NOTE}; font-size: 21px; margin-top: 8px">Two quarts, every day.</div>
 </div>
-{img('burst.png', 284, 438, 134, 134)}
-<div style="{at(284, 467, 134, 'display: flex; justify-content: center')}">{price('', '79', 'quart', 62, WHITE)}</div>
-<div style="{at(428, 500, 80, f'font-family: {NAME}; font-weight: 700; font-size: 15px; line-height: 1.15; color: {INK}')}">Limit four<br>with a $5<br>purchase</div>
+{img('burst.png', 280, 432, 142, 142)}
+<div style="{at(280, 463, 142, 'display: flex; justify-content: center')}">{price('', '79', 'quart', 62, WHITE)}</div>
+<div style="{at(428, 498, 80, f'font-family: {NAME}; font-weight: 700; font-size: 15px; line-height: 1.15; color: {INK}')}">Limit four<br>with a $5<br>purchase</div>
 
 <div style="{at(534, 256, 234)}">
   <div style="font-family: {DISP}; font-size: 25px; line-height: 1; letter-spacing: .06em; border-bottom: 3px solid {INK}; padding-bottom: 6px">FROM THE COOLER</div></div>
@@ -148,17 +148,17 @@ front = f"""
   <div style="position: relative; height: 286px">
     {dairy_row('Large eggs', 'Grade A, the dozen.', price('', '99', 'doz', 46), 0)}
     {dairy_row('Sweet butter', 'Unsalted, the pound.', price('1', '89', 'lb', 46), 92)}
-    {dairy_row('Fresh mozzarella', 'Pulled in back every morning.', price('3', '99', 'lb', 46), 184, True)}
+    {dairy_row('Fresh mozzarella', 'Made in back daily.', price('3', '99', 'lb', 46), 184, True)}
   </div>
 </div>
 
-{counter_cell(48, 232, 'LUNCH COUNTER', 'shake.png', 58, 94, 'Thick vanilla shake',
+{counter_cell(48, 232, 'LUNCH COUNTER', 'shake.png', 70, 113, 'Thick vanilla shake',
     'Cold whole milk blended with ice cream, malted milk powder and a spoon of honey, poured into a glass frosted in the freezer.',
     'Made to order.', price('1', '95', 'glass', 46))}
 {counter_cell(292, 232, 'BAKERY CASE', 'dirtcup.png', 82, 87, 'Flowerpot dirt cups',
     'Dark chocolate mousse layered with crushed chocolate cookie crumbs in a little terracotta tumbler, a sprig of fresh mint planted on top.',
     'By the register.', price('1', '29', 'each', 46))}
-{counter_cell(536, 232, 'HOUSEPLANTS', 'plant.png', 104, 117, 'Chinese evergreen',
+{counter_cell(536, 232, 'HOUSEPLANTS', 'plant.png', 124, 140, 'Chinese evergreen',
     'Six-inch pot. Give it a window every morning and a drink twice a week. Hard to kill.',
     'Always happy. No questions.', price('5', '99', 'pot', 46))}
 
@@ -201,7 +201,7 @@ def coupon(x, w, big, line1, line2, small):
 
 
 back = f"""
-<div style="{at(0, 0, FW, 'height: 124px; background: ' + GREEN)}"></div>
+<div style="{at(0, 0, FW, 'height: 122px; background: ' + GREEN)}"></div>
 <div style="{at(46, 44, 470, f'font-family: {DISP}; font-style: italic; font-size: 64px; line-height: 1; color: {WHITE}; white-space: nowrap')}">DELI COUNTER</div>
 <div style="{at(520, 44, 248, f'text-align: right; font-family: {BODY}; font-weight: 600; font-size: 16px; line-height: 1.3; color: {WHITE}')}">Sliced to order while you wait. Party trays on one day's notice.</div>
 <div style="{at(0, 124, FW, 'height: 8px; background: ' + INK)}"></div>
@@ -209,9 +209,9 @@ back = f"""
 {tintbox(48, 150, 720, 276, '#e3ecdf')}
 {box(48, 150, 720, 276, 2.5)}
 <div style="{at(62, 164, 300)}">{tag('PARTY TRAYS', GREEN)}</div>
-{img('baguette.png', 60, 204, 540, 99, 'Baguette sliced on a party tray')}
-{img('burst.png', 610, 162, 148, 148)}
-<div style="{at(610, 198, 148, 'display: flex; justify-content: center')}">{price('7', '99', 'tray', 62, WHITE)}</div>
+{img('baguette.png', 56, 196, 566, 104, 'Baguette sliced on a party tray')}
+{img('burst.png', 626, 164, 136, 136)}
+<div style="{at(626, 200, 136, 'display: flex; justify-content: center')}">{price('7', '99', 'tray', 56, WHITE)}</div>
 <div style="{at(64, 320, 688)}">
   <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px">
     <div style="font-family: {DISP}; font-size: 40px; line-height: 1; letter-spacing: .01em">BAGUETTE PARTY TRAY</div>

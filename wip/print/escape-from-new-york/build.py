@@ -17,10 +17,9 @@ PAPER = '#f6f4ec'
 INK = 'rgba(38,36,48,0.93)'
 RED = '#b3392e'
 PEN = '#22408f'
-FONTS = 'family=VT323&family=Black+Ops+One&family=Reenie+Beanie'
+FONTS = 'family=VT323&family=Reenie+Beanie'
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
 MONO = "'VT323', 'Courier New', monospace"
-STAMP = "'Black Ops One', Impact, sans-serif"
 HAND = "'Reenie Beanie', 'Comic Sans MS', cursive"
 BOLD = 'text-shadow: 0.75px 0 0 rgba(38,36,48,0.8)'   # double-strike, the printer's bold
 LH = 24
@@ -85,7 +84,7 @@ GLYPH = {
 }
 
 
-def banner(word, size=21, lh=13.3):
+def banner(word, size=24, lh=16):
     rows = []
     for r in range(9):
         rows.append(lp('  '.join(GLYPH[c][r].replace('.', ' ') for c in word)))
@@ -131,6 +130,11 @@ def section(letter, title, sub, w):
 BLANK = f'<div style="height: {LH}px"></div>'
 
 
+def pen_row(x, text, size=34, rot=-3):
+    return (f'<div style="position: relative; height: {LH}px"><div style="position: absolute; left: {x}px; top: -4px; '
+            f'font-family: {HAND}; font-size: {size}px; line-height: 30px; color: {PEN}; transform: rotate({rot}deg); white-space: nowrap">{esc(text)}</div></div>')
+
+
 def pen(x, y, text, size=34, rot=-4):
     return at(x, y, 400, esc(text), f'font-family: {HAND}; font-size: {size}px; line-height: 30px; color: {PEN}; transform: rotate({rot}deg); transform-origin: left center; white-space: nowrap')
 
@@ -138,19 +142,19 @@ def pen(x, y, text, size=34, rot=-4):
 # ================= PAGE 1 =================
 W = R - L
 p1 = header(1) \
-    + at(L, row(2) + 4, 300, banner('MESS')) \
-    + at(410, row(2), R - 410, f"""
+    + at(L, row(2), 360, banner('MESS')) \
+    + at(468, row(2) + 12, R - 468, f"""
   <div style="font-size: 46px; line-height: 48px; letter-spacing: 0.05em; white-space: pre; {BOLD}">{lp("OFFICERS' MESS")}</div>
   {line('NIGHT WATCH MENU', 30, 'letter-spacing: 0.04em', True)}
   {line('U.S. POLICE FORCE')}
   {line('LIBERTY ISLAND SECURITY CONTROL')}""") \
-    + at(L, row(7), W, chars('=', W) + f"""
+    + at(L, row(8), W, chars('=', W) + f"""
   {line('*' * 76)}
   {line('*  THE RULES ARE SIMPLE.', bold=True)}
   {line('*  HOT LINE OPEN 2200 TO 0600. MUGS BACK TO THE RACK, PLEASE.')}
   {line('*  NO FOOD OR DRINK AT THE CONSOLES, THE PAD OR ON THE WALL.')}
   {line('*' * 76)}""") \
-    + at(L, row(13), W, section('A', 'TO START', 'FROM 2200', W)
+    + at(L, row(14), W, section('A', 'TO START', 'FROM 2200', W)
          + item('0101', 'WALL WATCH JERKY', '1.25',
                 'Top round cut thin across the grain, soaked overnight in soy, Worcestershire, brown sugar, smoked paprika, red pepper flakes and garlic, then dried low in the oven until leathery but still bendy.',
                 'PACKS FLAT IN A VEST POCKET.')
@@ -162,12 +166,10 @@ p1 = header(1) \
          + section('B', 'HOT LINE', 'TILL 0600', W)
          + item('0201', 'A NUMBER ONE STEW', '2.40',
                 'Smoked sausage browned in the pot with onion, carrot and potato, then white beans, crushed tomatoes, smoked paprika and chicken stock. Cabbage goes in at the end. Ladled into a mug.')
-         + BLANK
+         + pen_row(330, 'Hold a bowl for Hauk. R.')
          + small('0202', 'RYE AND BUTTER', '.35', 'Two thick slices, for the mug.')
-         + BLANK
          + f'<div style="display: flex; justify-content: space-between; white-space: pre; font-size: 24px; line-height: {LH}px">'
            f'<span>{lp("COFFEE AND TEA: SEE PAGE 0002")}</span><span>{lp("CONTINUED PAGE 0002")}</span></div>') \
-    + pen(500, row(32) + 2, 'Hold a bowl for Hauk. R.')
 
 # ================= PAGE 2 =================
 MX, MY = 486, row(4) + 8
@@ -184,38 +186,35 @@ p2 = header(2) + at(L, row(2), W, f"""
     <span style="{BOLD}">{lp('MANHATTAN ISLAND MAXIMUM SECURITY PENITENTIARY')}</span><span>{lp('EST. 1988')}</span></div>
   {chars('=', W)}""") \
     + at(MX, MY, mp['w'], f'<img src="assets/plot-map.png" alt="Dot plot of Manhattan island" style="display: block; width: {mp["w"]}px; height: {mp["h"]}px">') \
-    + lab(0, 4, lp('PLOT 1 OF 1') + '<br>' + lp('NOT TO SCALE')) \
-    + lab(4, 214, lp('CONTAINMENT') + '<br>' + lp('WALL, 50 FT') + '<br>' + lp('------>'), 130) \
+    + lab(14, 4, lp('PLOT 1 OF 1') + '<br>' + lp('NOT TO SCALE')) \
+    + lab(4, 206, lp('CONTAINMENT') + '<br>' + lp('WALL, 50 FT') + '<br>' + lp('----------->'), 130) \
     + lab(mp['bridge'][0] + 34, mp['bridge'][1] - 6, lp('69TH ST') + '<br>' + lp('BRIDGE') + '<br>' + lp('MINED'), 100) \
     + lab(mp['liberty'][0] + 26, mp['liberty'][1] - 12, lp('<-- SECURITY CONTROL'), 240) \
-    + lab(mp['harlem'][0] + 6, mp['harlem'][1] - 102, lp('ALL BRIDGES') + '<br>' + lp('AND WATERWAYS') + '<br>' + lp('MINED'), 160) \
+    + lab(206, 404, lp('ALL BRIDGES') + '<br>' + lp('AND WATERWAYS') + '<br>' + lp('MINED'), 124) \
     + at(L, row(4), CW, section('C', 'SWEET', 'ANY HOUR', CW)
          + item('0301', 'RATION BAR', '.75',
-                'Rolled oats, butter, golden syrup and brown sugar pressed into a pan and baked until golden, spread with dark chocolate, finished with flaky salt. Cut in squares.',
-                'POCKET SIZE, FOR CHOPPER CREWS.', 40, 36)
+                'Rolled oats, butter, golden syrup and brown sugar pressed into a pan and baked, then spread with dark chocolate and flaky salt.',
+                'FOR THE CHOPPER CREWS.', 40, 36)
          + BLANK
          + section('D', 'OFF WATCH', 'AFTER 0600', CW)
          + item('0401', 'WHITE LIGHTNING', '2.50',
                 'Corn whiskey shaken hard with fresh lemon and sugar, poured over ice in a jelly jar.',
                 'REFINED IN HOUSE. NO GASOLINE.', 32, 32)
          + BLANK
-         + small('0402', 'LEMONADE', '.40', 'Squeezed fresh. On duty, this.')
-         + small('0403', 'COFFEE, URN', '.25', 'Black, all watch.')
-         + small('0404', 'HOT TEA', '.25', 'Bag, mug, sugar if any.')) \
-    + at(L, row(28), W, chars('-', W)
+         + small('0402', 'LEMONADE', '.40')
+         + small('0403', 'COFFEE, URN', '.25')
+         + small('0404', 'HOT TEA', '.25')) \
+    + at(L, row(27), W, chars('-', W)
          + line('TRANSFERS DUE, PROCESSING DECK', bold=True)
          + line('  PLISSKEN, S.    EX LT, SPECIAL FORCES    FEDERAL RESERVE DEPOSITORY')
          + line('  SENTENCE: LIFE, MANHATTAN.   ONCE IN, NOBODY COMES OUT.')
+         + pen_row(380, 'Heard he was dead?', 36, -3)
          + chars('-', W)
-         + line('PERIMETER: WALL 50 FT. ALL BRIDGES AND WATERWAYS MINED. NO RELEASES.')
+         + line('REPORT ANY CRAFT ON THE WATER TO THE DUTY OFFICER AT ONCE.')
          + BLANK
-         + line('*** END OF RUN ***', extra='text-align: center')) \
-    + pen(540, row(34) - 2, 'Heard he was dead?', 36, -3) \
-    + at(612, row(36) - 6, 196, f'<div style="position: relative; border: 4px solid {RED}; border-radius: 4px; padding: 6px 8px 4px; text-align: center; color: {RED}; opacity: 0.82">'
-         f'<div style="font-family: {STAMP}; font-size: 28px; line-height: 28px; letter-spacing: 0.06em">FILE COPY</div>'
-         f'<div style="font-family: {STAMP}; font-size: 13px; line-height: 16px; letter-spacing: 0.12em; margin-top: 3px">SECURITY CONTROL</div>'
-         f'<img src="assets/stamp-wear.png" alt="" aria-hidden="true" style="position: absolute; left: -10px; top: -10px; width: 216px; height: 81px; display: block"></div>',
-         'transform: rotate(-6deg)')
+         + line('*** END OF RUN ***')
+         + line('LINES 0079   FORMS 0002   LP2 READY')) \
+    + at(588, row(34) + 6, 232, '<img src="assets/stamp-file-copy.png" alt="FILE COPY, SECURITY CONTROL stamp" style="display: block; width: 232px; height: 100px">')
 
 TITLES = {'p1': 'Officers mess printout, page 1', 'p2': 'Officers mess printout, page 2'}
 for face, inner in (('p1', p1), ('p2', p2)):
@@ -226,7 +225,7 @@ for face, inner in (('p1', p1), ('p2', p2)):
         f'<style>body{{margin:0}}</style></head><body>{body}</body></html>')
 
 film = {"fmt": "escape", "fn": "fmtEscape", "faces": ["p1.html", "p2.html"], "names": ["Page 1", "Page 2"],
-        "mm": [241.3, 279.4], "fonts": FONTS, "fams": ["VT323", "Black Ops One", "Reenie Beanie"],
+        "mm": [241.3, 279.4], "fonts": FONTS, "fams": ["VT323", "Reenie Beanie"],
         "phone": {"disp": "'VT323',monospace", "title": "'VT323',monospace", "name": "'VT323',monospace",
                   "body": "'VT323',monospace", "price": "'VT323',monospace", "note": "'VT323',monospace"}}
 open(os.path.join(D, 'film.json'), 'w').write(json.dumps(film, indent=1))

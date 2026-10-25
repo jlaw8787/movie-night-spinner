@@ -45,7 +45,7 @@ def overlays(face):
 def root(inner, face, rot):
     # the copier feeds each side a hair off square
     return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {PAPER}; '
-            f'font-family: {SANS}; color: {INK}">'
+            f'font-family: {SANS}; color: {INK}; text-wrap: pretty">'
             f'<div style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; transform: rotate({rot}deg); transform-origin: 50% 50%">{inner}</div>'
             f'{overlays(face)}</div>')
 
@@ -104,10 +104,9 @@ head_row = ''.join(
 riddle = box(GX, GY + HH, CW * 3 + 1.5, RH + 1.5, f'''
   <div style="position: absolute; left: 12px; top: 9px; right: 12px">
     <div style="display: flex; align-items: baseline; justify-content: space-between">
-      <div style="font-family: {SLAB}; font-size: 17px; line-height: 1">Riddle of the Week</div>
-      <div style="font-weight: 700; font-size: 12px; letter-spacing: 0.08em">FROM MRS. ALVAREZ'S CLASS</div></div>
-    <div style="margin-top: 6px; font-family: {SERIF}; font-style: italic; font-size: 16px; line-height: 1.22">As I was going to St. Ives, I met a man with seven wives. How many were going to St. Ives?</div>
-    <div style="margin-top: 3px; font-size: 12px; line-height: 1.2; font-weight: 700">Answer on the lunch line Monday. Count carefully!</div>
+      <div style="font-family: {SLAB}; font-size: 18px; line-height: 1; white-space: nowrap">Riddle of the Week</div>
+      <div style="font-weight: 700; font-size: 12px; letter-spacing: 0.08em; white-space: nowrap">ANSWER MONDAY AT LUNCH</div></div>
+    <div style="margin-top: 7px; font-family: {SERIF}; font-style: italic; font-size: 16px; line-height: 1.24">As I was going to St. Ives, I met a man with seven wives. How many were going to St. Ives? Count carefully!</div>
   </div>''', f'border: 1.5px solid {INK}')
 
 summer = box(GX + 2 * CW, GY + HH + 4 * RH, CW * 3 + 1.5, RH + 1.5, f'''
@@ -119,7 +118,7 @@ summer = box(GX + 2 * CW, GY + HH + 4 * RH, CW * 3 + 1.5, RH + 1.5, f'''
 
 
 def feature(left, label, name, desc, art, aw, ah, price):
-    return f'''<div style="position: absolute; left: {left}px; top: 706px; width: 224px">
+    return f'''<div style="position: absolute; left: {left}px; top: 722px; width: 224px">
   <div style="height: 74px; position: relative">{img(art, 0, 74 - ah, aw, ah)}</div>
   <div style="margin-top: 6px; border-top: 2px solid {INK}; padding-top: 6px; display: flex; justify-content: space-between; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; white-space: nowrap"><span>{label}</span><span>{price}</span></div>
   <div style="margin-top: 5px; font-family: {SLAB}; font-size: 22px; line-height: 1.05">{esc(name)}</div>
@@ -151,12 +150,12 @@ front = f'''
 {''.join(cells)}
 {summer}
 
-<div style="position: absolute; left: 48px; top: 674px; width: 720px; display: flex; align-items: center; gap: 12px">
+<div style="position: absolute; left: 48px; top: 702px; width: 720px; display: flex; align-items: center; gap: 12px">
   <div style="font-family: {SLAB}; font-size: 15px; line-height: 1; white-space: nowrap">FROM OUR KITCHEN THIS MONTH</div>
   <div style="flex: 1; border-top: 1.5px dashed {INK}"></div></div>
 {feature(48, 'EVERY SCHOOL DAY', 'Bacon, Egg & Cheese', 'Crisp strips and a fried yolk broken flat under melting American, on a butter-toasted kaiser roll. Ketchup on the side.', 'roll', 111, 71, 'FREE')}
 {feature(296, 'FRIDAYS, JUNE 9 &amp; 23', 'Fried Chicken & Waffles', 'Thighs soaked in buttermilk, dredged in paprika flour, fried golden, on hot waffles with warm honey and a dash of pepper sauce.', 'chickwaffle', 104, 74, '$1.00')}
-{feature(544, 'EVERY WEDNESDAY', 'Crumb Cake', 'Buttery yellow sponge baked under a thick layer of brown sugar and cinnamon streusel, dusted with powdered sugar.', 'crumb', 98, 74, 'WITH LUNCH')}
+{feature(544, 'WEDNESDAYS', 'Crumb Cake', 'Buttery yellow sponge baked under a thick layer of brown sugar and cinnamon streusel, dusted with powdered sugar.', 'crumb', 98, 74, 'WITH LUNCH')}
 
 <div style="position: absolute; left: 48px; top: 990px; width: 720px; border-top: 2px solid {INK}; padding-top: 7px; display: flex; justify-content: space-between; font-size: 12px; line-height: 1.2; white-space: nowrap">
   <span><b>MENUS MAY CHANGE WITHOUT NOTICE.</b> Lunch tickets sold Mondays in the office.</span><span><b>OFFICE</b> {OFFICE}</span>
@@ -218,7 +217,7 @@ back = f'''
 
   <div style="margin-top: 16px; position: relative; border: 2px solid {INK}; padding: 12px 16px 14px">
     <div style="position: absolute; right: 10px; top: -22px; width: 104px; height: 119px">{img('jug', 0, 0, 104, 119)}</div>
-    <div style="font-family: {SLAB}; font-size: 26px; line-height: 1.02; width: 260px">Lemonade &amp; Bake Sale</div>
+    <div style="font-family: {SLAB}; font-size: 26px; line-height: 1.02; width: 260px">Lemonade &amp;<br>Bake Sale</div>
     <div style="margin-top: 5px; font-size: 13px; line-height: 1.3; width: 270px">PA table by the yard gate, all day. Every penny goes to the library fund.</div>
     {sale('Fresh Lemonade', 'Squeezed lemons, sugar syrup and cold water, mixed by the jug and poured over ice.', '25&#162;', 14)}
     {sale('Peanut Caramel Squares', 'Brown sugar, butter and cream cooked to soft ball with roasted salted nuts, set in a pan and spread with milk chocolate and flaky salt.', '50&#162;')}
@@ -228,7 +227,7 @@ back = f'''
       {small('Fudge brownies', '35&#162;')}
       {small('Ice pops, all flavors', '25&#162;')}
     </div>
-    <div style="margin-top: 8px; font-size: 13px; line-height: 1.3"><b>Bakers wanted.</b> Drop off by 9 A.M. Please label anything with nuts.</div>
+    <div style="margin-top: 8px; font-size: 13px; line-height: 1.3"><b>Bakers wanted!</b> Drop off by 9 A.M. and please label anything made with nuts.</div>
   </div>
 </div>
 
@@ -238,11 +237,11 @@ back = f'''
   {note('42 AND COUNTING', 'Class 5-2 can name all 42 Presidents in order. Ask them who was number 21.')}
   {note('LUNCHROOM HELPERS', 'Raymond and Dexter, for wiping every table without being asked.')}
   {note('THANK YOU', 'To Mr. Carver, who fixed the gym fans for free. We noticed.')}
-  {note('GOOD SAMARITAN AWARD', 'Class 2-3 brought in 311 cans for the food drive.')}
+  {note('GOOD SAMARITAN AWARD', 'Class 2-3 collected 311 cans for the food drive. Well done!')}
   <div style="margin-top: 16px; position: relative; height: 112px; border-top: 1.5px solid {INK}; padding-top: 8px">
     {img('elephant', 150, 14, 138, 102)}
     <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.1em; line-height: 1.2">ZOO TRIP, JUNE 21</div>
-    <div style="margin-top: 3px; width: 150px; font-family: {SERIF}; font-size: 16px; line-height: 1.27">Grades 1 to 3. Bus leaves 8:45. Pack a bag lunch.</div>
+    <div style="margin-top: 3px; width: 150px; font-family: {SERIF}; font-size: 16px; line-height: 1.27">Grades 1 to 3. The bus leaves at 8:45. Pack a bag lunch.</div>
   </div>
 </div>
 

@@ -38,8 +38,8 @@ def root(inner, face, bg, color, grain_op):
 # ---------------- DISHES (one source for print and phone) ----------------
 DISH = {
   "Plaza suite champagne cocktails": {"n": "Champagne cocktails", "d": "A sugar cube soaked in bitters and a splash of cognac, topped up with chilled brut, lemon twist.", "note": "To the doors staying open."},
-  "Chinatown dumplings": {"n": "Chinatown dumplings", "d": "Pork and chive, pan-fried until the bottoms crisp, with black vinegar and chili oil. No MSG.", "note": "Sent up from downtown."},
-  "Plaza Hotel prawn cocktail": {"n": "Shrimp cocktail", "d": "Jumbo shrimp poached and iced, hung on a glass of shredded iceberg. Red sauce sharp with horseradish, lemon.", "note": "On ice when you sit down."},
+  "Chinatown dumplings": {"n": "Chinatown dumplings", "d": "Pork and chive, pan-fried until the bottoms go crisp. Black vinegar and chili oil, no MSG.", "note": "Sent up from downtown."},
+  "Plaza Hotel prawn cocktail": {"n": "Shrimp cocktail", "d": "Jumbos poached and iced, hung on a glass of shredded iceberg. Red sauce sharp with horseradish, lemon wedge.", "note": "On ice when you sit down."},
   "Frank's Plaza steak dinner": {"n": "Rib eye au poivre", "d": "Seared and rested, cracked pepper sauce finished with brandy and cream. Pommes frites.", "note": "Medium rare unless you say."},
   "New York cheesecake": {"n": "New York cheesecake", "d": "Rich and dense, sour cream and lemon zest beaten through, baked slow in a water bath on a buttered crumb crust.", "note": "Baked in the Bronx."},
 }
