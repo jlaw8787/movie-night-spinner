@@ -1,70 +1,52 @@
-<div style="position: relative; width: 1123px; height: 794px; overflow: hidden; background: #f6f0de; font-family: 'Barlow', Arial, sans-serif; color: #141612">
+<div style="position: relative; width: 1123px; height: 794px; overflow: hidden; background: #f4eedb; font-family: 'Archivo', Arial, sans-serif; color: #15170f">
 
-  <!-- Panel 1: inside flap, Hammond's welcome -->
-  <section style="position: absolute; left: 0; top: 0; width: 371px; height: 794px; box-sizing: border-box; padding: 46px 34px 40px 44px; display: flex; flex-direction: column; background: #f6f0de">
-    <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.18em; color: #c42a1c">A WORD FROM YOUR HOST</div>
-    <h2 style="margin: 8px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 46px; line-height: 0.95; text-transform: uppercase; color: #12382a">Welcome to<br>Jurassic Park.</h2>
-    <div style="width: 64px; height: 6px; background: #f4b41a; margin-top: 16px"></div>
-    <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.55; text-wrap: pretty">You are among the very first guests to see what we have built on Isla Nublar. Your tour car will bring you back to the visitor centre for lunch, and I promise you this: we spared no expense.</p>
-    <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; text-wrap: pretty">Follow the numbers on the park map, eat well, and keep your hands inside the vehicle.</p>
-    <div style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 34px; line-height: 1; color: #12382a; margin-top: 14px">John Hammond</div>
-    <div style="font-size: 13px; color: #4a4e45; margin-top: 2px">Founder, InGen</div>
-    <figure style="margin: 26px 0 0; display: flex; flex-direction: column; gap: 8px">
-      <img src="{{IMG_EGGS}}" alt="Hammond and the scientists watch a raptor hatch in the lab" style="display: block; width: 293px; height: 200px; object-fit: cover; object-position: center 45%; border: 5px solid #ffffff; box-shadow: 0 2px 0 #d8cdaa">
-      <figcaption style="font-size: 13px; line-height: 1.4; color: #4a4e45">The hatchery. Hammond is there for every birth on the island.</figcaption>
+  <!-- Panel 1: inside flap, a welcome from the founder -->
+  <section style="position: absolute; left: 0; top: 0; width: 371px; height: 794px; box-sizing: border-box; padding: 0 34px 40px 44px; display: flex; flex-direction: column; background: #f4eedb">
+    {{LIVERY_FLAP}}
+    <div style="margin-top: 46px; font-weight: 700; font-stretch: 75%; font-size: 14px; letter-spacing: 0.16em; color: #b8261a">A WORD FROM OUR FOUNDER</div>
+    <h2 style="margin: 8px 0 0; font-weight: 900; font-stretch: 62%; font-size: 48px; line-height: 0.92; text-transform: uppercase; color: #123628">Welcome to<br>Jurassic Park.</h2>
+    <p style="margin: 18px 0 0; font-size: 15.5px; line-height: 1.55; text-wrap: pretty">You are among the very first guests on Isla Nublar. After your tour, our visitor centre kitchen will look after you, and I have made sure of one thing above all: we spared no expense.</p>
+    <p style="margin: 12px 0 0; font-size: 15.5px; line-height: 1.55; text-wrap: pretty">Every dining stop is numbered on the guest map inside. Please keep your hands inside the tour car between stops.</p>
+    <div style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 36px; line-height: 1; color: #123628; margin-top: 14px">John Hammond</div>
+    <div style="font-size: 13px; color: #4b4f43; margin-top: 2px">Founder and Chairman, InGen</div>
+    <figure style="margin: auto 0 0; display: flex; flex-direction: column; gap: 8px">
+      <img src="{{IMG_EGGS}}" alt="Mr. Hammond and guests in the hatchery as an egg hatches" style="display: block; width: 293px; height: 232px; object-fit: cover; object-position: center 45%; border: 6px solid #ffffff; box-shadow: 0 1px 0 #cfc29c, 0 3px 8px rgba(0,0,0,0.12); box-sizing: border-box">
+      <figcaption style="font-size: 13px; line-height: 1.4; color: #4b4f43">In the hatchery. Mr. Hammond insists on being there for every birth on the island.</figcaption>
     </figure>
   </section>
 
-  <!-- Panel 2: back panel, park information -->
-  <section style="position: absolute; left: 371px; top: 0; width: 376px; height: 794px; box-sizing: border-box; padding: 46px 40px 36px; display: flex; flex-direction: column; gap: 14px; background: #0f2d22; color: #f6f0de">
-    <div>
-      <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.18em; color: #f4b41a">BEFORE YOU SET OFF</div>
-      <h2 style="margin: 6px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 36px; line-height: 1; text-transform: uppercase">Park Information</h2>
+  <!-- Panel 2: back panel, guest information -->
+  <section style="position: absolute; left: 371px; top: 0; width: 376px; height: 794px; box-sizing: border-box; padding: 0 40px 36px; display: flex; flex-direction: column; background: #0f2c21; color: #f4eedb">
+    {{LIVERY_BACK}}
+    <div style="margin-top: 46px; font-weight: 700; font-stretch: 75%; font-size: 14px; letter-spacing: 0.16em; color: #f2b21b">BEFORE YOU BOARD</div>
+    <h2 style="margin: 6px 0 0; font-weight: 900; font-stretch: 68%; font-size: 40px; line-height: 0.95; text-transform: uppercase">Guest Information</h2>
+    <div style="margin-top: 22px; display: flex; flex-direction: column; gap: 20px">
+      {{INFO}}
     </div>
-    <div style="display: flex; flex-direction: column; gap: 12px">
-      <div style="display: flex; gap: 14px; align-items: flex-start">
-        <div style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #f4b41a; color: #141612; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; line-height: 40px; text-align: center">A</div>
-        <div><div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.04em">TOUR CARS</div><div style="font-size: 15px; line-height: 1.45; color: #d9e2d4">Electric and guided by the track. Stay seated with your hands inside.</div></div>
-      </div>
-      <div style="display: flex; gap: 14px; align-items: flex-start">
-        <div style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #d6281c; color: #ffffff; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; line-height: 40px; text-align: center">B</div>
-        <div><div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.04em">ELECTRIC FENCES</div><div style="font-size: 15px; line-height: 1.45; color: #d9e2d4">10,000 volts. Do not touch, do not climb.</div></div>
-      </div>
-      <div style="display: flex; gap: 14px; align-items: flex-start">
-        <div style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: #f6f0de; color: #12382a; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px; line-height: 40px; text-align: center">C</div>
-        <div><div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: 0.04em">IF IT MOVES</div><div style="font-size: 15px; line-height: 1.45; color: #d9e2d4">Keep absolutely still. Objects in mirror are closer than they appear.</div></div>
-      </div>
+    <div style="margin-top: 28px; display: flex; gap: 14px; align-items: center; background: #0a2018; border: 1px solid #2c4a3b; padding: 13px 15px">
+      <div style="flex: none; width: 54px; height: 54px; border-radius: 50%; background: #f2b21b; border: 3px solid #f4eedb; box-sizing: border-box; color: #15170f; font-weight: 900; font-stretch: 70%; font-size: 18px; line-height: 48px; text-align: center">DNA</div>
+      <div style="font-size: 14.5px; line-height: 1.42"><b style="color: #f2b21b">Meet Mr. DNA</b> in the visitor centre theatre. He will show you how we filled the gaps in a 65 million year old recipe.</div>
     </div>
-    <div style="display: flex; gap: 14px; align-items: center; background: #0b2519; padding: 14px 16px">
-      <div style="flex: none; width: 52px; height: 52px; border-radius: 50%; background: #f4b41a; border: 3px solid #f6f0de; box-sizing: border-box; color: #141612; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; line-height: 46px; text-align: center">DNA</div>
-      <div style="font-size: 15px; line-height: 1.4"><b style="color: #f4b41a">Mr. DNA's kitchen tip:</b> where the recipe has gaps, we fill them in. Never with frog.</div>
+    <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #2c4a3b; padding-top: 16px">
+      <div style="font-weight: 800; font-stretch: 75%; font-size: 15px; letter-spacing: 0.08em; color: #f2b21b">VISITOR CENTRE DINING</div>
+      <div style="font-size: 14px; line-height: 1.45; color: #d6dfd2">Lunch is served in the dining room on return from the tour. The dessert bar in the rotunda stays open until the last tour car is back.</div>
     </div>
-    <div style="display: flex; gap: 14px; align-items: center; border: 2px solid #f4b41a; padding: 12px 16px">
-      <div style="flex: 1"><div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.14em; color: #f4b41a">CONTROL ROOM</div>
-      <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; line-height: 1.08; margin-top: 2px">Power out? Ray Arnold says hold onto your butts.</div></div>
-    </div>
-    <div style="margin-top: auto; background: #f4b41a; color: #141612; padding: 14px 16px">
-      <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: 0.1em">SHOWTIME CUE</div>
-      <div style="font-size: 15px; line-height: 1.42; margin-top: 3px">{{CUE}}</div>
-    </div>
-    <div style="font-size: 12px; letter-spacing: 0.04em; color: #9fb5a2">Jurassic Park (1993). Logo and film images: TMDB.</div>
+    <div style="margin-top: auto; font-size: 12px; line-height: 1.4; color: #9db39f">Jurassic Park is an InGen attraction. Preview season edition.</div>
   </section>
 
   <!-- Panel 3: front cover -->
-  <section style="position: absolute; left: 747px; top: 0; width: 376px; height: 794px; background: #12382a; overflow: hidden">
-    <img src="{{IMG_GATE}}" alt="The park gates with a tour car arriving" style="position: absolute; left: 0; top: 0; width: 376px; height: 470px; object-fit: cover; object-position: 46% center; display: block">
-    <div style="position: absolute; left: 0; top: 300px; width: 376px; height: 172px; background: linear-gradient(180deg, rgba(18,56,42,0) 0%, rgba(18,56,42,0.85) 62%, #12382a 100%)"></div>
-    <img src="{{IMG_LOGO}}" alt="Jurassic Park logo" style="position: absolute; left: 63px; top: 352px; width: 250px; height: 186px; object-fit: contain; display: block">
-    <div style="position: absolute; left: 40px; top: 556px; width: 296px; text-align: center">
-      <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.32em; color: #f4b41a">ISLA NUBLAR</div>
-      <h1 style="margin: 6px 0 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 40px; line-height: 0.95; text-transform: uppercase; color: #ffffff">Visitor Centre<br>Dining Guide</h1>
-      <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 18px; letter-spacing: 0.06em; color: #d9e2d4; margin-top: 8px; text-transform: uppercase">With guest map inside</div>
-    </div>
-    <div style="position: absolute; left: 0; bottom: 34px; width: 376px; height: 14px; background: #f4b41a"></div>
-    <div style="position: absolute; left: 0; bottom: 22px; width: 376px; height: 8px; background: #d6281c"></div>
+  <section style="position: absolute; left: 747px; top: 0; width: 376px; height: 794px; box-sizing: border-box; background: #123628; display: flex; flex-direction: column; align-items: center; padding: 0 36px 0">
+    {{LIVERY_COVER}}
+    <img src="{{IMG_LOGO}}" alt="Jurassic Park" style="display: block; width: 280px; height: 208px; object-fit: contain; margin-top: 44px">
+    <div style="margin-top: 14px; font-weight: 700; font-stretch: 75%; font-size: 15px; letter-spacing: 0.34em; color: #f2b21b">ISLA NUBLAR</div>
+    <h1 style="margin: 6px 0 0; text-align: center; font-weight: 900; font-stretch: 68%; font-size: 46px; line-height: 0.92; text-transform: uppercase; color: #ffffff">Dining Guide<br>&amp; Guest Map</h1>
+    <figure style="margin: 22px 0 0; width: 304px; display: flex; flex-direction: column; gap: 7px">
+      <img src="{{IMG_GATE}}" alt="The main gate with a tour car arriving" style="display: block; width: 304px; height: 246px; object-fit: cover; object-position: 47% 40%; border: 5px solid #f2b21b; box-sizing: border-box">
+      <figcaption style="display: flex; justify-content: space-between; font-weight: 700; font-stretch: 75%; font-size: 13px; letter-spacing: 0.1em; color: #d6dfd2"><span>THE MAIN GATE</span><span>PREVIEW SEASON</span></figcaption>
+    </figure>
+    <div style="margin-top: auto; margin-bottom: 30px; font-weight: 700; font-stretch: 75%; font-size: 15px; letter-spacing: 0.08em; color: #f4eedb">SPARED NO EXPENSE</div>
   </section>
 
-  <!-- fold marks: printed hairlines at the top and bottom edges only -->
-  <div style="position: absolute; left: 371px; top: 0; width: 1px; height: 14px; background: rgba(0,0,0,0.35)"></div>
-  <div style="position: absolute; left: 747px; top: 0; width: 1px; height: 14px; background: rgba(255,255,255,0.45)"></div>
+  <div style="position: absolute; left: 371px; top: 0; width: 1px; height: 12px; background: rgba(0,0,0,0.4)"></div>
+  <div style="position: absolute; left: 747px; top: 0; width: 1px; height: 12px; background: rgba(0,0,0,0.4)"></div>
 </div>

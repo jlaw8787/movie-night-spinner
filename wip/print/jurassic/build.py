@@ -1,152 +1,90 @@
-import math, json, sys, os
+import json, sys, os
 D = os.path.dirname(os.path.abspath(__file__))
 mode = sys.argv[1] if len(sys.argv) > 1 else 'local'   # local | dc
 IMG = json.load(open(os.path.join(D, 'img_' + mode + '.json')))
-CUE = "Serve dessert when Hammond eats melting ice cream in the dark visitor centre."
-COND = "font-family: 'Barlow Condensed', sans-serif"
-INK = '#141612'
+INK, RED, GOLD, GREEN = '#15170f', '#b8261a', '#f2b21b', '#123628'
+FONT_LINK = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900'
+             '&family=Caveat:wght@700&display=swap">')
 
+# place, service, name, description, note, price, pin colour
 STOPS = [
-  ('#1d6f80', 'Hatchery', 'Grab and go', "Hammond's hatchery egg cookies", "Brown butter cookies, chocolate egg centres, cocoa speckles.", "He's been there for every birth."),
-  ('#c4610e', 'Visitor Centre Kitchen', 'Quick service', "Clever girl claw crisps", "Smoked paprika tortilla claws, lime guacamole.", "Muldoon never saw the second one."),
-  ('#c42a1c', 'Visitor Centre Dining Room', 'Table service', "Could vs should lamb rack", "Pink lamb, pea and mint puree, crisp baby potatoes.", "Malcolm's lunch, with a side of ethics."),
-  ('#6b4f12', 'Visitor Centre Rotunda', 'Dessert bar', "Power's out melting sundae", "Vanilla bean scoops, hot fudge, crushed honeycomb. Served soft.", "Hammond and Ellie, ice cream in the dark."),
-  ('#2f7a26', 'T. rex Paddock', 'Tour car drinks', "Ripple in the cup iced tea", "Black tea, honey, lime and mint in a tall clear glass.", "Watch the water. Then don't move."),
+  ('Hatchery', 'Grab and go', 'Hatchery egg cookies', 'Brown butter cookies, chocolate egg centres, cocoa speckles.', 'Baked in the shape of our newest arrivals.', '3.50', '#1d6f80'),
+  ('Kitchen', 'Quick service', 'Raptor claw crisps', 'Smoked paprika tortilla claws, lime guacamole to dip.', 'Our raptors are fed by crane. You are not.', '4.75', '#c4610e'),
+  ('Dining Room', 'Table service', 'Herb-crusted lamb rack', 'Pink lamb, pea and mint puree, crisp baby potatoes.', 'Served on return from the tour.', '19.93', RED),
+  ('Rotunda', 'Dessert bar', 'Spared no expense sundae', 'Vanilla bean scoops, hot fudge, crushed honeycomb.', "Mr. Hammond's own favourite.", '6.50', '#6b4f12'),
+  ('Tour Road', 'Tour car drinks', 'Tour car iced tea', 'Black tea, honey, lime and mint in a tall clear cup.', 'Sized for the cup holder in every tour car.', '2.50', '#2f7a26'),
+]
+INFO = [
+  ('A', GOLD, INK, 'Tour cars', 'Fully electric and guided along the tour road. No driver needed.'),
+  ('B', RED, '#ffffff', 'Electric fences', '10,000 volts. Please do not touch or lean on any fence.'),
+  ('C', '#f4eedb', GREEN, 'Tour car safety', 'Stay seated with hands inside. Objects in mirror are closer than they appear.'),
 ]
 
 def pin(n, c, s, fs):
-    return (f'<div style="flex: none; width: {s}px; height: {s}px; border-radius: 50%; background: {c}; border: 3px solid #ffffff; '
-            f'box-sizing: border-box; box-shadow: 0 0 0 1px {INK}; color: #ffffff; {COND}; font-weight: 800; font-size: {fs}px; '
-            f'line-height: {s-6}px; text-align: center">{n}</div>')
+    return (f'<div style="flex: none; width: {s}px; height: {s}px; border-radius: 50%; background: {c}; border: 3px solid #ffffff; box-sizing: border-box; '
+            f'box-shadow: 0 0 0 1px {INK}, 0 2px 4px rgba(0,0,0,0.3); color: #ffffff; font-family: \'Archivo\', sans-serif; font-weight: 900; font-stretch: 75%; '
+            f'font-size: {fs}px; line-height: {s-6}px; text-align: center">{n}</div>')
 
 def dishes():
     out = []
-    for i, (c, place, svc, name, desc, note) in enumerate(STOPS):
-        out.append(f'''<article style="display: flex; gap: 12px; padding: 11px 0 0; border-top: {'0' if i == 0 else '1px solid #d6caa6'}">
+    for i, (place, svc, name, desc, note, price, c) in enumerate(STOPS):
+        out.append(f'''<article style="display: flex; gap: 12px; padding-top: 9px; border-top: {'0' if i == 0 else '1px solid #d4c79f'}">
         {pin(i+1, c, 34, 18)}
         <div style="flex: 1; min-width: 0">
-          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
-            <span style="{COND}; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: {c}">{place}</span>
-            <span style="{COND}; font-weight: 700; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #4a4e45; white-space: nowrap">{svc}</span>
-          </div>
-          <h3 style="margin: 2px 0 0; {COND}; font-weight: 800; font-size: 23px; line-height: 1.02; text-transform: uppercase; text-wrap: balance">{name}</h3>
-          <p style="margin: 4px 0 0; font-size: 15px; line-height: 1.38; text-wrap: pretty">{desc}</p>
-          <p style="margin: 3px 0 0; font-size: 14px; line-height: 1.3; font-style: italic; color: #4a4e45">{note}</p>
+          <div style="display: flex; justify-content: space-between; gap: 8px; font-weight: 700; font-stretch: 75%; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase">
+            <span style="color: {c}">{place}</span><span style="color: #4b4f43; white-space: nowrap">{svc}</span></div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-top: 2px">
+            <h3 style="margin: 0; font-weight: 900; font-stretch: 66%; font-size: 23px; line-height: 1; text-transform: uppercase">{name}</h3>
+            <span style="font-weight: 800; font-stretch: 75%; font-size: 19px; white-space: nowrap">${price}</span></div>
+          <p style="margin: 4px 0 0; font-size: 14px; line-height: 1.36; text-wrap: pretty">{desc}</p>
+          <p style="margin: 2px 0 0; font-size: 13px; line-height: 1.3; font-style: italic; color: #4b4f43">{note}</p>
         </div></article>''')
     return '\n'.join(out)
 
-# ---------- map (all plain positioned boxes so it prints and exports cleanly) ----------
-def box(x, y, w, h, style):
-    return f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; {style}"></div>'
+def info():
+    return '\n'.join(f'''<div style="display: flex; gap: 14px; align-items: flex-start">
+        <div style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: {bg}; color: {fg}; font-weight: 900; font-stretch: 75%; font-size: 20px; line-height: 40px; text-align: center">{k}</div>
+        <div><div style="font-weight: 800; font-stretch: 75%; font-size: 19px; letter-spacing: 0.04em; text-transform: uppercase">{t}</div>
+        <div style="font-size: 14.5px; line-height: 1.45; color: #d6dfd2; margin-top: 1px">{d}</div></div></div>''' for k, bg, fg, t, d in INFO)
 
-def blob(x, y, w, h, c, r='50%'):
-    return box(x, y, w, h, f'background: {c}; border-radius: {r}')
-
-def seg(x1, y1, x2, y2, w, c, extra=''):
-    L = math.hypot(x2 - x1, y2 - y1); a = math.degrees(math.atan2(y2 - y1, x2 - x1))
-    return (f'<div style="position: absolute; left: {x1}px; top: {y1 - w/2}px; width: {L:.1f}px; height: {w}px; background: {c}; '
-            f'border-radius: {w/2}px; transform: rotate({a:.2f}deg); transform-origin: 0 {w/2}px; {extra}"></div>')
-
-def path(pts, w, c, edge=None):
-    s = ''
-    if edge:
-        for (a, b) in zip(pts, pts[1:]): s += seg(*a, *b, w + 4, edge)
-    for (a, b) in zip(pts, pts[1:]): s += seg(*a, *b, w, c)
-    for p in pts[1:-1]: s += box(p[0] - w/2, p[1] - w/2, w, w, f'background: {c}; border-radius: 50%')
-    return s
-
-def fence(x, y, w, h, r=14):
-    return box(x, y, w, h, f'border: 3px dashed #f4b41a; border-radius: {r}px; box-sizing: border-box; background: rgba(20,22,18,0.08)')
-
-def mountain(x, y, w, h, c='#56604a', snow='#8a917c'):
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 0; height: 0; border-left: {w/2}px solid transparent; '
-            f'border-right: {w/2}px solid transparent; border-bottom: {h}px solid {c}"></div>'
-            f'<div style="position: absolute; left: {x + w*0.32}px; top: {y}px; width: 0; height: 0; border-left: {w*0.18}px solid transparent; '
-            f'border-right: {w*0.18}px solid transparent; border-bottom: {h*0.36}px solid {snow}"></div>')
-
-def trees(cx, cy, n, spread, size, seed):
-    import random; r = random.Random(seed); s = ''
-    for _ in range(n):
-        x = cx + r.uniform(-spread, spread); y = cy + r.uniform(-spread * 0.6, spread * 0.6); d = size * r.uniform(0.75, 1.2)
-        s += box(x, y, d, d, f'background: {r.choice(["#3f6e2c", "#4a7a33", "#355f26"])}; border-radius: 50%; box-shadow: 0 2px 0 rgba(0,0,0,0.18)')
-    return s
-
-def label(x, y, text, kind='dark', size=13):
-    bg, fg = {'dark': ('#141612', '#ffffff'), 'gold': ('#f4b41a', '#141612'), 'red': ('#c42a1c', '#ffffff'), 'paper': ('#f6f0de', '#141612')}[kind]
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; {COND}; font-weight: 700; font-size: {size}px; letter-spacing: 0.06em; '
+def tag(x, y, text, kind='dark', size=12.5):
+    bg, fg = {'dark': ('rgba(21,23,15,0.9)', '#ffffff'), 'gold': (GOLD, INK), 'red': (RED, '#ffffff'), 'paper': ('#f4eedb', INK)}[kind]
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; font-weight: 800; font-stretch: 75%; font-size: {size}px; letter-spacing: 0.07em; '
             f'text-transform: uppercase; white-space: nowrap; background: {bg}; color: {fg}; padding: 2px 7px">{text}</div>')
 
-def mpin(n, x, y):
-    c = STOPS[n - 1][0]
-    return (f'<div style="position: absolute; left: {x - 17}px; top: {y - 17}px">{pin(n, c, 34, 18)}</div>')
-
-def build_map():
+def map_labels():
     s = ''
-    # ocean texture: a few soft swell lines
-    for i in range(9):
-        s += box(-20, 30 + i * 66, 720, 2, 'background: rgba(255,255,255,0.10)')
-    # island with beach rim
-    s += box(36, 34, 590, 520, 'background: #e6d6a2; border-radius: 46% 54% 44% 56% / 40% 42% 58% 60%')
-    s += box(46, 44, 570, 500, 'background: #7aa457; border-radius: 46% 54% 44% 56% / 40% 42% 58% 60%')
-    # open plains
-    s += blob(330, 250, 210, 150, '#93b86a')
-    s += blob(150, 400, 190, 110, '#8db263')
-    # mountains along the north
-    for (x, y, w, h) in [(250, 70, 110, 74), (320, 58, 130, 92), (410, 78, 100, 66)]:
-        s += mountain(x, y, w, h)
-    # river from the mountains to the west coast
-    s += path([(330, 150), (290, 210), (240, 250), (190, 330), (120, 400), (70, 470)], 12, '#4f9bb4', '#3a7f96')
-    # jungle
-    s += trees(140, 150, 16, 60, 26, 1) + trees(470, 430, 14, 60, 26, 2) + trees(520, 160, 10, 40, 24, 3) + trees(240, 470, 8, 40, 22, 4)
-    # tour road
-    road = [(118, 488), (210, 410), (300, 352), (360, 300), (420, 238), (470, 170)]
-    s += path(road, 9, '#d9c58f', '#a8925a')
-    s += path([(300, 352), (380, 410), (450, 470)], 9, '#d9c58f', '#a8925a')
-    # paddocks
-    s += fence(92, 96, 130, 92) + label(98, 70, 'Dilophosaurus')
-    s += fence(80, 220, 110, 86) + label(86, 312, 'Raptor pen', 'red')
-    s += fence(440, 112, 140, 112) + label(476, 86, 'T. rex')
-    s += label(360, 266, 'Brachiosaurus', 'paper')
-    s += fence(400, 440, 140, 80) + label(420, 524, 'Triceratops')
-    s += label(176, 446, 'Gallimimus', 'paper', 12)
-    # visitor centre
-    s += box(268, 318, 70, 56, 'background: #f6f0de; border: 3px solid #141612; border-radius: 14px 14px 4px 4px; box-sizing: border-box')
-    s += box(282, 304, 42, 18, 'background: #c42a1c; border: 3px solid #141612; border-radius: 10px 10px 0 0; box-sizing: border-box')
-    s += label(196, 380, 'Visitor Centre', 'gold', 14)
-    # helipad and east dock
-    s += box(560, 300, 38, 38, 'background: #f6f0de; border: 3px solid #141612; border-radius: 50%; box-sizing: border-box')
-    s += f'<div style="position: absolute; left: 560px; top: 300px; width: 38px; line-height: 32px; text-align: center; {COND}; font-weight: 800; font-size: 18px">H</div>'
-    s += label(548, 342, 'Helipad', 'dark', 12)
-    s += box(598, 420, 40, 10, 'background: #8a6a3a; border: 2px solid #141612')
-    s += label(570, 438, 'East dock', 'dark', 12)
-    # dining pins
-    for n, (x, y) in enumerate([(150, 470), (250, 300), (312, 346), (378, 420), (492, 196)], 1):
-        s += mpin(n, x, y)
-    # compass
-    s += box(588, 38, 46, 46, 'background: #f6f0de; border: 3px solid #141612; border-radius: 50%; box-sizing: border-box')
-    s += f'<div style="position: absolute; left: 588px; top: 41px; width: 46px; text-align: center; {COND}; font-weight: 800; font-size: 20px; line-height: 38px">N</div>'
+    s += tag(112, 72, 'Dilophosaurus') + tag(92, 306, 'Velociraptor pen', 'red') + tag(448, 146, 'Tyrannosaurus rex') + tag(392, 250, 'Brachiosaurus', 'paper')
+    s += tag(418, 500, 'Triceratops') + tag(196, 428, 'Gallimimus', 'paper') + tag(228, 368, 'Visitor Centre', 'gold', 14)
+    s += tag(112, 486, 'Hatchery') + tag(334, 404, 'Maintenance shed', 'dark', 11.5) + tag(548, 320, 'Helipad', 'dark', 11.5)
+    s += tag(562, 450, 'East dock', 'dark', 11.5) + tag(500, 382, 'Main gate', 'dark', 11.5) + tag(574, 258, 'Falls', 'paper', 11.5)
+    for n, (x, y) in enumerate([(150, 448), (266, 324), (300, 318), (334, 322), (444, 212)], 1):
+        s += f'<div style="position: absolute; left: {x - 15}px; top: {y - 15}px">{pin(n, STOPS[n-1][6], 30, 16)}</div>'
+    s += ('<div style="position: absolute; left: 600px; top: 14px; width: 46px; height: 46px; border-radius: 50%; background: #f4eedb; border: 3px solid #15170f; '
+          'box-sizing: border-box; text-align: center; font-weight: 900; font-stretch: 75%; font-size: 20px; line-height: 40px">N</div>')
     return s
 
-def page(body, title, fonts=True):
-    link = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800'
-            '&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@700&display=swap">')
-    return body, link
+def livery(w):
+    return (f'<div style="position: absolute; left: 0; top: 0; width: {w}px; height: 12px; background: {GOLD}"></div>'
+            f'<div style="position: absolute; left: 0; top: 12px; width: {w}px; height: 6px; background: {RED}"></div>')
 
 out = {}
 for name in ('outside', 'inside'):
     b = open(os.path.join(D, name + '.body.html')).read()
-    b = (b.replace('{{IMG_EGGS}}', IMG['eggs']).replace('{{IMG_GATE}}', IMG['gate']).replace('{{IMG_LOGO}}', IMG['logo'])
-          .replace('{{CUE}}', CUE).replace('{{DISHES}}', dishes()).replace('{{MAP}}', build_map()))
+    for k in ('LIVERY_FLAP', 'LIVERY_BACK', 'LIVERY_COVER', 'LIVERY_MENU', 'LIVERY_MAP'):
+        b = b.replace('{{' + k + '}}', '')
+    b = (b.replace('{{IMG_EGGS}}', IMG['eggs']).replace('{{IMG_GATE}}', IMG['gate']).replace('{{IMG_LOGO}}', IMG['logo']).replace('{{IMG_MAP}}', IMG['map'])
+          .replace('{{DISHES}}', dishes()).replace('{{INFO}}', info()).replace('{{MAP_LABELS}}', map_labels()))
+    i = b.rindex('</div>')
+    b = b[:i] + livery(1123) + b[i:]
     out[name] = b
-link = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800'
-        '&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@700&display=swap">')
 if mode == 'local':
     for name, b in out.items():
-        open(os.path.join(D, name + '.html'), 'w').write(f'<!doctype html><html lang="en"><head><meta charset="utf-8">{link}<style>body{{margin:0}}</style></head><body>{b}</body></html>')
+        open(os.path.join(D, name + '.html'), 'w').write(f'<!doctype html><html lang="en"><head><meta charset="utf-8">{FONT_LINK}<style>body{{margin:0}}</style></head><body>{b}</body></html>')
 else:
     titles = {'outside': 'Jurassic Park dining guide, outside', 'inside': 'Jurassic Park dining guide, inside'}
     for name, b in out.items():
-        dc = f'''<!doctype html>
+        open(os.path.join(D, 'board_' + name + '.dc.html'), 'w').write(f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -156,7 +94,7 @@ else:
 <body>
 <x-dc>
 <helmet>
-{link}
+{FONT_LINK}
 <style>
 body{{margin:0}}
 a{{color:#666}}a:hover{{color:#333}}
@@ -173,6 +111,5 @@ return {{}};
 </script>
 </body>
 </html>
-'''
-        open(os.path.join(D, 'board_' + name + '.dc.html'), 'w').write(dc)
+''')
 print('built', mode)
