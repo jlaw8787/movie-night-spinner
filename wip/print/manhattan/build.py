@@ -26,6 +26,8 @@ LEFT = [
          'Toasted bagels, cream cheese whipped light, sliced Nova, capers, paper-thin red onion and dill.', ''),
         ('Belgian waffles', 'per guest', '4.25',
          'Cooked to order in your kitchen by our cook. Maple syrup, sweet butter, berries in season.', ''),
+        ('Coffee service', 'the urn', '6.00',
+         'Thirty cups, fresh brewed, with cream and sugar.', ''),
     ]),
 ]
 RIGHT = [
@@ -41,8 +43,6 @@ RIGHT = [
          'Dense and creamy, lemon and vanilla, on a buttery crumb crust. Baked low, chilled overnight. Serves ten.', ''),
         ('Pears in red wine', 'per guest', '2.25',
          'Bosc halves poached with cinnamon and orange peel, whipped cream alongside.', ''),
-        ('Coffee service', 'the urn', '6.00',
-         'Thirty cups, fresh brewed, with cream and sugar.', ''),
     ]),
 ]
 
@@ -56,15 +56,15 @@ def leader(name, unit, price):
 
 def item(n, u, p, d, note, first):
     nt = (f'<p style="margin: 3px 0 0; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.35; color: {INK}">{note}</p>' if note else '')
-    return f'''<div style="margin-top: {0 if first else 15}px">{leader(n, u, p)}
+    return f'''<div style="margin-top: {0 if first else 12}px">{leader(n, u, p)}
       <p style="margin: 4px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.42; color: #2a2a2c; text-wrap: pretty">{d}</p>{nt}</div>'''
 
 def section(title, intro, items, first):
     rows = ''.join(item(*it, i == 0) for i, it in enumerate(items))
-    return f'''<section style="margin-top: {0 if first else 30}px">
+    return f'''<section style="margin-top: {0 if first else 24}px">
       <div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid {INK}; padding-bottom: 6px">
         <div style="font-family: {SANS}; font-weight: 300; font-size: 38px; line-height: 1; letter-spacing: -0.01em; color: {INK}">{title}</div></div>
-      <p style="margin: 8px 0 14px; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {GREY}">{intro}</p>
+      <p style="margin: 7px 0 11px; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.3; color: {GREY}">{intro}</p>
       {rows}</section>'''
 
 def column(x, top, secs):
@@ -104,15 +104,15 @@ def outside():
       <p style="margin: 14px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.5; color: #2a2a2c; text-wrap: pretty">Telephone us by Wednesday for a weekend party, and by five o’clock the day before for brunch. We deliver anywhere from the Battery to 96th Street, and we start early.</p>
       <p style="margin: 10px 0 0; font-family: {SERIF}; font-size: 16px; line-height: 1.5; color: #2a2a2c; text-wrap: pretty">Parties of twelve or more. Glasses, linen and folding chairs to rent; ask when you call.</p>
 
-      <div style="margin-top: 30px; font-family: {SANS}; font-weight: 300; font-size: 38px; line-height: 1; color: {INK}; border-bottom: 2px solid {INK}; padding-bottom: 6px">we also do</div>
+      <div style="margin-top: 24px; font-family: {SANS}; font-weight: 300; font-size: 36px; line-height: 1; color: {INK}; border-bottom: 2px solid {INK}; padding-bottom: 6px">we also do</div>
       <div style="margin-top: 14px">{al}</div>
       <p style="margin: 8px 0 0; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.35; color: {GREY}">Carriage and rowboat not included.</p>
 
-      <div style="margin-top: 30px; font-family: {SANS}; font-weight: 300; font-size: 38px; line-height: 1; color: {INK}; border-bottom: 2px solid {INK}; padding-bottom: 6px">service</div>
+      <div style="margin-top: 24px; font-family: {SANS}; font-weight: 300; font-size: 36px; line-height: 1; color: {INK}; border-bottom: 2px solid {INK}; padding-bottom: 6px">service</div>
       <div style="margin-top: 14px">{srv}</div>
       <p style="margin: 8px 0 0; font-family: {SERIF}; font-style: italic; font-size: 15px; line-height: 1.35; color: {GREY}">Our pianist takes requests. Gershwin a specialty.</p>
     </div>
-    <div style="position: absolute; left: {LX}px; top: 690px; width: {PW}px; display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid {INK}; padding-top: 12px">
+    <div style="position: absolute; left: {LX}px; top: 698px; width: {PW}px; display: flex; justify-content: space-between; align-items: flex-end; border-top: 1px solid {INK}; padding-top: 12px">
       <div>{wordmark(24, 400)}
         <div style="margin-top: 6px; font-family: {SANS}; font-weight: 400; font-size: 14px; line-height: 1.4; color: #2a2a2c">East 58th Street, New York 10022</div></div>
       <div style="text-align: right; font-family: {SANS}; font-size: 14px; line-height: 1.4; color: #2a2a2c">

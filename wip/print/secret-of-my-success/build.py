@@ -64,7 +64,7 @@ BODY = ('<p style="margin: 0">Starting Monday, March 9, the Executive Dining Roo
         '<p style="margin: 14px 0 0">In line with the current cost review, all charges now go to your department. '
         'Book tables of four or more on extension 4110.</p>')
 EXEC_LEFT = col([('LUNCHEON', [
-    ('Shrimp cocktail', 'Five jumbo, chilled on cracked ice, with horseradish red sauce and lemon.', '6.50'),
+    ('Shrimp cocktail', 'Chilled on cracked ice, five to a glass, horseradish red sauce and lemon.', '6.50'),
     ('Executive rib eye', 'Dry-brined, seared hard and basted in butter with thyme and garlic, rested, then sliced.', '15.75'),
     ('Filet of sole', 'Broiled with lemon butter and parsley, boiled new potatoes.', '12.50')])])
 EXEC_RIGHT = col([
@@ -75,14 +75,14 @@ EXEC_RIGHT = col([
         ('Gin martini', 'Stirred over ice with dry vermouth, strained into a frozen glass, lemon twist.', '3.75')])])
 
 # ---------- page 2: cafeteria, catering, reminders ----------
-CAF_INTRO = ('<p style="margin: 0 0 28px">The Employee Cafeteria on the lower level, next to the mailroom, is open '
+CAF_INTRO = ('<p style="margin: 0 0 24px">The Employee Cafeteria on the lower level, next to the mailroom, is open '
              'from 7:30 AM to 3:30 PM. Cash only, and executive staff are always welcome.</p>')
 CAF_LEFT = col([('AT THE COUNTER', [
     ('Mail run sandwich', 'Ham, cheddar and pickle on buttered white bread, crusts off, cut in fingers and wrapped in wax paper.', '1.75'),
     ('Kansas corn fritters', 'Sweet kernels and spring onion in a light batter, fried golden. Sour cream on the side.', '1.10')])])
 CAF_RIGHT = col([('HOT PLATE', [
     ('Buttermilk chicken', 'Brined overnight, dredged in seasoned flour and fried crisp. Mashed potatoes and gravy.', '3.95'),
-    ('Cheese Danish', 'Sweet cheese, baked each morning.', '.75'),
+    ('Cheese Danish', 'Sweet cheese, baked daily.', '.75'),
     ('Coffee', 'Black or regular, in a paper cup. Free refills.', '.40')])])
 REMIND = (sub('BOARDROOM CATERING', True)
           + item('Smoked salmon blini', 'Warm buckwheat pancakes, cr&egrave;me fra&icirc;che, dill and cracked pepper. Sold by the dozen.', '16.00')
@@ -113,11 +113,11 @@ def fill(name, extra):
     return b
 
 FACES = {
-  'front': fill('front', dict(FIELDS=FIELDS, STAMP=STAMP_HTML, BODY=BODY, BODY_TOP=352, MENU_TOP=530,
+  'front': fill('front', dict(FIELDS=FIELDS, STAMP=STAMP_HTML, BODY=BODY, BODY_TOP=352, MENU_TOP=516,
                               MENU_HEAD=head('EXECUTIVE DINING ROOM', 'Charged to your department'),
                               EXEC_LEFT=EXEC_LEFT, EXEC_RIGHT=EXEC_RIGHT, FOOT=foot(1))),
   'back': fill('back', dict(CAF_TOP=222, CAF_INTRO=CAF_INTRO, CAF_HEAD=head('EMPLOYEE CAFETERIA', 'Lower level'),
-                            CAF_LEFT=CAF_LEFT, CAF_RIGHT=CAF_RIGHT, LOW_TOP=672, REMIND=REMIND, ROUTE=ROUTE, FOOT=foot(2))),
+                            CAF_LEFT=CAF_LEFT, CAF_RIGHT=CAF_RIGHT, LOW_TOP=692, REMIND=REMIND, ROUTE=ROUTE, FOOT=foot(2))),
 }
 LINK = f'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?{FONTS}&display=swap">'
 for name, inner in FACES.items():

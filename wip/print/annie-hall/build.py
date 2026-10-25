@@ -35,7 +35,7 @@ SPEC = {
       ".95", "Big in Los Angeles, we hear. We wouldn't know."),
 }
 ADDED = {
-  'rye': ("Hot pastrami on rye", "Peppered and smoked beef navel, steamed until it shines and hand-sliced thick. Brown mustard on the side.", "3.25", None),
+  'rye': ("Hot pastrami on rye", "Peppered and smoked beef navel, steamed until it shines and sliced thick by hand. Brown mustard on the side.", "3.25", None),
   'soup': ("Matzo ball soup", "Golden chicken broth with carrot, fresh dill and one big, light dumpling.", "1.25", None),
   'eggcream': ("Egg cream", "Chocolate syrup and cold milk, hit hard with seltzer and stirred fast so it heads up.", ".60", "No egg, no cream. Don't ask."),
   'celery': ("Celery tonic", "Celery seed soda, sweet and sharp, served ice cold in the bottle.", ".45", None),
@@ -45,7 +45,7 @@ ADDED = {
 
 def item(it, first=False, gap=20, nsz=27):
     name, desc, price, note = it
-    nt = f'<div style="{F}; font-style: italic; font-weight: 600; font-size: 16px; line-height: 1.3; color: {RED}; margin-top: 4px">{note}</div>' if note else ''
+    nt = f'<div style="{F}; font-style: italic; font-weight: 600; font-size: 16px; line-height: 1.3; color: {RED}; margin-top: 4px; text-wrap: pretty">{note}</div>' if note else ''
     return f'''<div style="margin-top: {0 if first else gap}px">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px">
         <div style="{F}; font-weight: 900; font-size: {nsz}px; line-height: 1.05; color: {INK}">{name}</div>
@@ -106,12 +106,12 @@ front = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; heigh
       <div style="{F}; font-style: italic; font-weight: 600; font-size: 16px; line-height: 1.3; color: {RED}; margin-top: 10px">Sam and Ruth Mandel</div>
     </div>
     <div style="margin-top: 28px; border-top: 4px solid {INK}; padding-top: 14px">
-      <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.1">Going to the pictures?</div>
+      <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.1">Seeing a picture?</div>
       <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Four-hour picture? Take sandwiches. We wrap anything to go, and we are open after the last show lets out.</div>
     </div>
     <div style="margin-top: 28px; border-top: 4px solid {INK}; padding-top: 14px">
       <div style="{F}; font-weight: 900; font-size: 24px; line-height: 1.1">Breakfast, 7 to 11</div>
-      <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Bagel with lox and a schmear, eggs any style, hot rolls and butter. Coffee is on before we unlock the door.</div>
+      <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Bagel with lox and a schmear, eggs any style, hot rolls and butter.</div>
     </div>
   </aside>
 
@@ -146,16 +146,16 @@ back = f'''<div style="position: absolute; left: 0; top: 0; width: {W}px; height
     {item(ADDED['eggcream'], gap=22, nsz=24)}
     {item(ADDED['celery'], gap=22, nsz=24)}
     {item(ADDED['coffee'], gap=22, nsz=24)}
-    <div style="margin: 34px 0 0 6px; {P}; font-size: 27px; line-height: 1.1; color: #4a4741; transform: rotate(-5deg)">1 rye, mustard<br>1 white, mayo ?!<br><span style="font-size: 22px; margin-left: 46px">la-di-da</span></div>
   </section>
+  <div style="position: absolute; left: 330px; top: 704px; width: 260px; {P}; font-size: 27px; line-height: 1.1; color: #4a4741; transform: rotate(-5deg)">1 rye, mustard<br>1 white, mayo ?!<br><span style="font-size: 22px; margin-left: 46px">la-di-da</span></div>
 
-  {rules(L, 852, R - L)}
-  <div style="position: absolute; left: {L}px; top: 880px; width: 520px">
+  {rules(L, 806, R - L)}
+  <div style="position: absolute; left: {L}px; top: 836px; width: 520px">
     <div style="{F}; font-weight: 900; font-size: 26px; line-height: 1.1">We deliver, East 59th to East 96th</div>
     <div style="{N}; font-size: 16px; line-height: 1.38; margin-top: 8px">Fifth Avenue to the river. Minimum order 5.00. Allow 30 minutes, a little longer when it rains. Cash only, no checks.</div>
   </div>
-  {star(616, 864, 142, ['555', '0177'], 8, 23)}
-  <div style="position: absolute; left: {L}px; top: 990px; width: {R - L}px; {N}; font-size: 13px; letter-spacing: .06em; color: {INK}">PRICES EFFECTIVE SPRING 1977 AND SUBJECT TO CHANGE. PRINTED IN N.Y.C.</div>
+  {star(616, 822, 142, ['555', '0177'], 8, 23)}
+  <div style="position: absolute; left: {L}px; top: 976px; width: {R - L}px; {N}; font-size: 13px; letter-spacing: .06em; color: {INK}">PRICES EFFECTIVE SPRING 1977 AND SUBJECT TO CHANGE. PRINTED IN N.Y.C.</div>
 </div>'''
 
 

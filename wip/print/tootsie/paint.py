@@ -22,7 +22,7 @@ def wear(name, seed, holes_left):
     # darken toward the edges, a sheet handled all day
     edge = Image.new('L', (w, h), 0); d = ImageDraw.Draw(edge)
     for i in range(60):
-        d.rectangle([i, i, w - 1 - i, h - 1 - i], outline=int(150 * (1 - i / 60) ** 2.2))
+        d.rectangle([i, i, w - 1 - i, h - 1 - i], outline=int(85 * (1 - i / 60) ** 2.4))
     edge = edge.filter(ImageFilter.GaussianBlur(10))
     tone = Image.new('RGBA', (w, h), (120, 60, 50, 0))
     alpha = ImageChops.add(m.point(lambda v: max(0, v - 120) * 0.22), edge)

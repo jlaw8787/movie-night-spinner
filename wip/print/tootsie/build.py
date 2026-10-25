@@ -54,11 +54,12 @@ DAY = [('7:00 AM', 'Makeup and hair, 3rd floor'),
 CAST = [('DOROTHY MICHAELS', 'Emily Kimberly', '7:00', '2, 4'),
         ('JOHN VAN HORN', 'Dr. Brewster', '7:30', '2, 3'),
         ('JULIE NICHOLS', '', '7:15', '1, 3'),
-        ('DAY PLAYERS (3)', 'Orderlies, patient', '9:30', '1')]
+        ('DAY PLAYERS (3)', 'Orderlies', '9:30', '1')]
 SETS = [('1', 'Nurses&#8217; station'), ('2', 'Emily Kimberly&#8217;s office'), ('3', 'Corridor, 3 West'), ('4', 'Emily Kimberly&#8217;s office')]
 NOTES = ['Please tape the lines as written. R.C.',
          'Closed set during tape. No visitors on the floor.',
-         'No coffee cups on the nurses&#8217; station set.']
+         'No coffee cups on the nurses&#8217; station set.',
+         'Wardrobe: red jacket back on the rack after sc. 4.']
 
 def front():
     L = 76; R = 52; CW = W - L - R
@@ -66,7 +67,7 @@ def front():
                   f'<div style="width: 118px; flex: none">{typed(t)}</div><div style="flex: 1">{typed(v)}</div></div>' for t, v in DAY)
     sets = ''.join(f'<div style="display: flex; align-items: baseline; padding: 5px 0; border-bottom: 1px dotted {RED}">'
                    f'<div style="width: 46px; flex: none">{typed(n)}</div><div style="flex: 1">{typed(v)}</div></div>' for n, v in SETS)
-    cols = [('Cast', 214), ('Role', 166), ('Makeup', 82), ('Scenes', 70)]
+    cols = [('Cast', 206), ('Role', 160), ('Makeup', 78), ('Scenes', 64)]
     head = ''.join(f'<div style="width: {w}px; flex: none">{label(c)}</div>' for c, w in cols)
     rows = ''
     for i, (n, r, mk, sc) in enumerate(CAST):
@@ -74,15 +75,15 @@ def front():
         rows += (f'<div style="position: relative; display: flex; align-items: baseline; padding: 7px 0 6px; border-bottom: 1px solid {RED}">'
                  + ''.join(f'<div style="width: {w}px; flex: none">{typed(v)}</div>' for v, (c, w) in zip(vals, cols)) + '</div>')
     notes = ''.join(f'<div style="display: flex; gap: 10px; padding: 3px 0">{typed("&#8226;")}{typed(t)}</div>' for t in NOTES)
-    tootsie = (f'<div style="position: absolute; left: {L + 6}px; top: 668px; transform: rotate(-4deg)">'
+    tootsie = (f'<div style="position: absolute; left: 616px; top: 674px; transform: rotate(-5deg)">'
                f'<div style="position: relative; display: inline-block; font-family: {HW}; font-size: 28px; line-height: 1; color: {PENCIL}">Tootsie'
                f'<div style="position: absolute; left: -4px; right: -6px; top: 13px; height: 2px; background: {BLUE}; transform: rotate(-3deg)"></div></div>'
-               f'<span style="font-family: {HW}; font-size: 30px; line-height: 1; color: {BLUE}; margin-left: 12px">It&#8217;s Dorothy.</span></div>')
-    pol = (f'<div style="position: absolute; left: 556px; top: 404px; width: 196px; transform: rotate(3deg)">'
+               f'<div style="font-family: {HW}; font-size: 30px; line-height: 1; color: {BLUE}; margin: 2px 0 0 14px">It&#8217;s Dorothy.</div></div>')
+    pol = (f'<div style="position: absolute; left: 548px; top: 392px; width: 196px; transform: rotate(3deg)">'
            f'<div style="background: #f7f5ef; padding: 12px 12px 40px; box-shadow: 0 2px 6px rgba(60,30,30,0.28)">'
            f'<img src="assets/polaroid.jpg" alt="Wardrobe Polaroid of Emily Kimberly on set" style="display: block; width: 172px; height: 172px">'
            f'<div style="margin-top: 8px; text-align: center; font-family: {HW}; font-size: 24px; line-height: 1; color: {INK}">Emily, red jacket</div></div>'
-           f'<img src="assets/paperclip.png" alt="" style="position: absolute; left: 22px; top: -40px; width: 46px; height: 150px; display: block"></div>')
+           f'<img src="assets/paperclip.png" alt="" style="position: absolute; left: 136px; top: -42px; width: 46px; height: 150px; display: block"></div>')
     return f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}; font-family: {AR}">
 {overlays('front')}{holes('left')}
 <section style="position: absolute; left: {L}px; top: 46px; width: {CW}px; height: {H - 92}px; display: flex; flex-direction: column">
@@ -100,7 +101,7 @@ def front():
   </div>
   <div style="margin-top: 22px">{band('The day', 'All times are on the studio clock')}<div style="padding: 2px 4px 0">{day}</div></div>
   <div style="margin-top: 20px; width: 430px">{band('Scenes')}<div style="padding: 2px 4px 0">{sets}</div></div>
-  <div style="margin-top: 46px">{band('Cast called')}<div style="display: flex; padding: 8px 4px 4px; border-bottom: 1px solid {RED}">{head}</div><div style="padding: 0 4px">{rows}</div></div>
+  <div style="margin-top: 34px">{band('Cast called')}<div style="display: flex; padding: 8px 4px 4px; border-bottom: 1px solid {RED}">{head}</div><div style="padding: 0 4px">{rows}</div></div>
   <div style="margin-top: 20px">{band('Production notes')}<div style="padding: 6px 4px 0">{notes}</div></div>
   <div style="margin-top: auto; display: flex; justify-content: space-between; border-top: 1px solid {RED}; padding-top: 6px">
     {label('Revisions are issued on pink. Toss the white.', 'letter-spacing: 0.08em')}{label('Form PO-7', 'letter-spacing: 0.08em')}
@@ -132,7 +133,7 @@ def back():
           <div style="font-family: {AR}; font-stretch: 80%; font-weight: 800; font-size: 25px; line-height: 1.1; color: {INK}">{n}</div>
           <div style="margin-top: 3px; font-family: {AR}; font-stretch: 100%; font-weight: 400; font-size: 16px; line-height: 1.4; color: {SOFT}; text-wrap: pretty">{d}</div></div>''' for n, d in items)
         secs += f'<div style="margin-top: {0 if i == 0 else 20}px">{band(h)}<div style="padding: 0 4px">{rows}</div></div>'
-    lip = '<img src="assets/lipstick-stain.png" alt="" aria-hidden="true" style="position: absolute; left: 598px; top: 912px; width: 120px; height: 78px; transform: rotate(-14deg); display: block">'
+    lip = '<img src="assets/lipstick-stain.png" alt="" aria-hidden="true" style="position: absolute; left: 596px; top: 600px; width: 120px; height: 78px; transform: rotate(-12deg); display: block">'
     return f'''<div style="position: relative; width: {W}px; height: {H}px; overflow: hidden; background: {PAPER}; color: {INK}; font-family: {AR}">
 {overlays('back')}{holes('right')}
 <section style="position: absolute; left: {L}px; top: 46px; width: {CW}px; height: {H - 92}px; display: flex; flex-direction: column">
@@ -140,7 +141,7 @@ def back():
     {masthead(False)}
     {label('Tape days only', 'letter-spacing: 0.16em')}
   </div>
-  <div style="margin-top: 10px; font-family: {AR}; font-stretch: 68%; font-weight: 900; font-size: 74px; line-height: 0.92; letter-spacing: 0.005em; text-transform: uppercase; color: {RED}">Cast and crew lunch</div>
+  <div style="margin-top: 10px; font-family: {AR}; font-stretch: 68%; font-weight: 900; font-size: 70px; line-height: 0.95; white-space: nowrap; letter-spacing: 0.005em; text-transform: uppercase; color: {RED}">Cast and crew lunch</div>
   <div style="margin-top: 10px; border-top: 3px solid {RED}; border-bottom: 1px solid {RED}; height: 3px"></div>
   <div style="margin-top: 10px; font-family: {AR}; font-weight: 500; font-size: 17px; line-height: 1.4; color: {INK}">Served in the Rehearsal Hall from the fourth floor kitchen.</div>
   <div style="margin-top: 18px">{secs}</div>

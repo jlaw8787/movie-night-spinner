@@ -57,5 +57,5 @@ def paint(name, seed, grease=None):
 
 
 paint('front', 11)
-paint('back', 23, grease=(560, 1500, 170, 130))
+paint('back', 23, grease=(820, 1470, 170, 130))
 print('painted')

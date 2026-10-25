@@ -39,7 +39,7 @@ def layer(face, seed):
     rgba = np.zeros((h, w, 4))
     # big, gentle mottling in the stock
     m = lowfreq(7, seed) * 0.65 + lowfreq(16, seed + 1) * 0.35
-    a = np.clip(m * 7 + 5, 0, 14)
+    a = np.clip(m * 3.5 + 3, 0, 8)
     rgba[..., :3] = [150, 140, 118]
     rgba[..., 3] = a
     # toned, uneven edges from a kitchen drawer

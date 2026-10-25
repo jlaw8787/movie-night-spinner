@@ -20,7 +20,7 @@ def head(t, sub=None, top=0, cols=None):
     c = ''
     if cols:
         c = ('<div style="display: flex; gap: 0; font-weight: 700; font-size: 12px; letter-spacing: 0.14em">'
-             + ''.join(f'<span style="width: 56px; text-align: right">{x}</span>' for x in cols) + '</div>')
+             + ''.join(f'<span style="width: 52px; text-align: right">{x}</span>' for x in cols) + '</div>')
     s = f'''<div style="margin-top: {top}px; border-bottom: 3px solid {INK}; padding-bottom: 6px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
       <div style="font-family: {DISP}; font-size: 30px; line-height: 1.02">{esc(t)}</div>{c}</div>'''
     if sub:
@@ -29,12 +29,12 @@ def head(t, sub=None, top=0, cols=None):
 
 def item(name, desc, prices, top=14):
     if isinstance(prices, str): prices = [prices]
-    pr = ''.join(f'<span style="width: 56px; text-align: right">{p}</span>' for p in prices)
+    pr = ''.join(f'<span style="width: 52px; text-align: right">{p}</span>' for p in prices)
     return f'''<div style="margin-top: {top}px">
       <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px">
-        <div style="font-weight: 700; font-size: 22px; line-height: 1.1; letter-spacing: 0.02em; text-transform: uppercase">{esc(name)}</div>
+        <div style="font-weight: 700; font-size: 22px; line-height: 1.1; letter-spacing: 0.005em; text-transform: uppercase">{esc(name)}</div>
         <div style="display: flex; font-weight: 700; font-size: 20px; line-height: 1.1; white-space: nowrap">{pr}</div></div>
-      <div style="margin-top: 3px; font-size: 16px; line-height: 1.32; color: {INK_SOFT}; padding-right: 0">{esc(desc)}</div></div>'''
+      <div style="margin-top: 3px; font-size: 16px; line-height: 1.32; color: {INK_SOFT}; text-wrap: pretty">{esc(desc)}</div></div>'''
 
 def overlays(face):
     gw = round(FH * 2246 / 1588)
@@ -67,9 +67,9 @@ front = f'''
   {item("Grilled cheese and soup", "American on white, griddled in butter and cut in four, with a cup of chicken noodle.", "2.75", 12)}
 </div>
 <div style="position: absolute; left: 464px; top: 550px; width: 304px">
-  {head("Hot Sandwiches", "Named for our regulars. Pickle and coleslaw on every plate.", 0)}
+  {head("Hot Sandwiches", "Named for our regulars. Each comes with a pickle and coleslaw.", 0)}
   {item("The Architect", "Seared sirloin sliced thin, slow-cooked onions, melted Swiss and horseradish mayo on toasted sourdough.", "6.95", 12)}
-  {item("The Leading Man", "Hot pastrami piled high on rye, spicy brown mustard.", "5.95")}
+  {item("The Leading Man", "Hot pastrami piled high on seeded rye, spicy brown mustard, sliced to order.", "5.95")}
   {item("The Cartoonist", "Roast turkey, crisp bacon, lettuce and tomato, three decks high on white toast.", "5.75")}
 </div>
 <div style="position: absolute; left: 48px; top: 984px; width: 720px; border-top: 1.5px solid {INK}; padding-top: 8px; display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.12em; font-weight: 600">
@@ -109,7 +109,7 @@ back = f'''
   {item("Coffee", "A fresh pot every hour, regular or black.", ".60")}
   <div style="margin-top: 34px; border-top: 3px double {INK}; border-bottom: 3px double {INK}; padding: 14px 0 14px">
     <div style="font-family: {DISP}; font-size: 24px; line-height: 1.05">Night Owls</div>
-    <div style="margin-top: 6px; font-size: 16px; line-height: 1.35">After midnight the counter keeps a short list: hot sandwiches, custard, milk punch, cold milk and coffee. Ring the side bell for pickup.</div>
+    <div style="margin-top: 6px; font-size: 16px; line-height: 1.35">After midnight the counter keeps a short list: hot sandwiches, custard, milk punch and coffee. Ring the side bell after hours.</div>
   </div>
 </div>
 <div style="position: absolute; left: 464px; top: 146px; width: 304px">
@@ -151,7 +151,7 @@ open(os.path.join(D, 'film.json'), 'w').write(json.dumps(film, indent=1))
 
 labels = {"Three Men and a Baby (1987)": {
   "Doorstep basket prawn toast": {"n": "Shrimp toast", "d": "Ginger and scallion blended in, sesame pressed on, fried golden and cut in triangles. Sweet chili sauce to dip.", "note": "Party tray, two dozen for 16.00."},
-  "Bagel chips and schmear": {"n": "Bagel chips and chive schmear", "d": "Yesterday's batch sliced thin and baked crisp, with cream cheese whipped up with lemon zest.", "note": "Trays serve twelve. Call by noon."},
+  "Bagel chips and schmear": {"n": "Bagel chips and schmear", "d": "Yesterday's batch sliced thin and baked crisp, with cream cheese whipped up with chives and lemon zest.", "note": "Trays serve twelve. Call by noon."},
   "Peter's loft steak sandwich": {"n": "The Architect", "d": "Seared sirloin sliced thin, slow-cooked onions, melted Swiss and horseradish mayo on toasted sourdough.", "note": "Named for one of our regulars."},
   "Baby Mary's bedtime vanilla custard": {"n": "Vanilla bean custard", "d": "Stirred slow on the stove until thick and smooth. Warm or chilled, by the cup.", "note": "Delivery until 3 A.M."},
   "Night-feed bourbon milk punch": {"n": "Midnight milk punch", "d": "Cold whole milk shaken frothy with vanilla and a spoon of honey, nutmeg grated over.", "note": "The night owl favourite."}
