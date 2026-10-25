@@ -75,7 +75,7 @@ def wear(seed, thumb):
     out[..., 3] = np.clip(a, 0, 0.4) * 255
     gcol = np.array([168, 92, 70], float)
     out[..., :3] = out[..., :3] * (1 - gum[..., None]) + gcol * gum[..., None]
-    out[..., 3] = np.maximum(out[..., 3], gum * 0.75 * 255)
+    out[..., 3] = np.maximum(out[..., 3], gum * 0.5 * 255)
     return Image.fromarray(out.astype(np.uint8), 'RGBA')
 
 

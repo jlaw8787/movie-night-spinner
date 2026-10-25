@@ -193,26 +193,26 @@ def wear(name, seed, ring=None):
     Image.fromarray(out.astype(np.uint8), 'RGBA').save(os.path.join(A, name))
 
 
-wear('wear-p1.png', 11, ring=(770, 990, 54))
+wear('wear-p1.png', 11, ring=(770, 1012, 50))
 
 # rubber stamp, inked unevenly: red with voids where the pad ran dry, slightly rotated
 from PIL import ImageFont
-SW, SH = 232, 100
+SW, SH = 250, 120
 st = Image.new('L', (SW * S, SH * S), 0)
 sd = ImageDraw.Draw(st)
-bx0, by0, bx1, by1 = 16 * S, 16 * S, (SW - 16) * S, (SH - 16) * S
+bx0, by0, bx1, by1 = 24 * S, 24 * S, (SW - 24) * S, (SH - 24) * S
 sd.rounded_rectangle([bx0, by0, bx1, by1], radius=5 * S, outline=255, width=4 * S)
 fbig = ImageFont.truetype(os.path.join(D, 'fonts', 'BlackOpsOne-Regular.ttf'), 30 * S)
 fsm = ImageFont.truetype(os.path.join(D, 'fonts', 'BlackOpsOne-Regular.ttf'), 14 * S)
 cx = SW * S / 2
-sd.text((cx, 42 * S), 'FILE COPY', font=fbig, fill=255, anchor='mm')
-sd.text((cx, 68 * S), 'S E C U R I T Y   C O N T R O L', font=fsm, fill=255, anchor='mm')
-st = st.rotate(6, resample=Image.BICUBIC, expand=False)
+sd.text((cx, 52 * S), 'FILE COPY', font=fbig, fill=255, anchor='mm')
+sd.text((cx, 80 * S), 'SECURITY  CONTROL', font=fsm, fill=255, anchor='mm')
+st = st.rotate(5, resample=Image.BICUBIC, expand=False)
 ink = np.asarray(st).astype(np.float32) / 255.0
 n1 = soft_noise(SW * S, SH * S, 18, 77)
 n2 = soft_noise(SW * S, SH * S, 4, 78)
-dens = np.clip(0.55 + (n1 - 0.5) * 1.3 + (n2 - 0.5) * 0.9, 0, 1)
-dens = np.where(n2 < 0.3, dens * 0.25, dens)          # dry speckles
+dens = np.clip(0.86 + (n1 - 0.5) * 0.9 + (n2 - 0.5) * 0.6, 0, 1)
+dens = np.where(n2 < 0.2, dens * 0.35, dens)          # dry speckles
 alpha = ink * dens * 225
 img = np.zeros((SH * S, SW * S, 4), np.uint8)
 img[..., 0], img[..., 1], img[..., 2] = 176, 52, 44

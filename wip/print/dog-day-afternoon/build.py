@@ -110,7 +110,7 @@ def stamp(left, top, rot):
             f'<div style="border: 2.5px solid {STAMP}; border-radius: 6px; padding: 3px">'
             f'<div style="border: 1px solid {STAMP}; border-radius: 3px; padding: 5px 0 6px; text-align: center; color: {STAMP}; font-family: {SANS}">'
             f'<div style="font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">RECEIVED</div>'
-            f'<div style="margin-top: 4px; font-weight: 800; font-size: 23px; line-height: 1; letter-spacing: 0.05em; white-space: nowrap">AUG 22 1972</div>'
+            f'<div style="margin-top: 4px; font-weight: 800; font-size: 21px; line-height: 1; letter-spacing: 0.04em; white-space: nowrap">AUG 22 1972</div>'
             f'<div style="margin-top: 4px; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.18em">HEAD TELLER</div>'
             f'</div></div>'
             f'<img src="assets/stamp-wear.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 180px; height: 74px; display: block">'
@@ -134,7 +134,7 @@ def root(inner, face):
 DISH = {
     "Attica chips and onion dip": ("Attica chips and dip", "Ridged and salty, with onions cooked slow till deep brown in sour cream, cream cheese and chives.", "One big bowl for the counter"),
     "Deli hero wedges": ("Deli heroes, cut six ways", "Ham, salami, provolone, iceberg and tomato on long rolls, oil, red wine vinegar, oregano. Pressed.", "1.40 each. Two will feed everybody"),
-    "Hostage pizza": ("Pepperoni pies, large", "Thin crust, crushed tomato and oregano, low-moisture mozzarella, baked fast in a very hot oven.", "Two pies. Pay the kid at the door"),
+    "Hostage pizza": ("Pepperoni pies, large", "Thin crust, crushed tomato and oregano, low-moisture mozzarella, baked fast in a very hot oven.", "3.10 a pie. Pay the kid at the door"),
     "Italian ice": ("Lemon ice", "Fresh juice and zest, sugar and water, frozen and scraped fluffy.", "A cup each. Not for Mr. Mulvaney"),
     "Heatwave lager with lime and chilli salt": ("Cold beer with lime", "Lager over ice and a squeeze of fresh juice, chili salt on the rim.", "By the bottle. For after closing"),
 }
@@ -174,7 +174,7 @@ front = f'''
 <div style="position: absolute; left: {L}px; top: 754px; width: {CW}px; display: flex; justify-content: space-between; font-family: {SANS}; font-size: 12px; line-height: 1; color: {GREEN}; white-space: nowrap">
   <span style="font-style: italic">Deposits insured up to $20,000.</span><span>Form S-822 (7/72)</span>
 </div>
-{stamp(286, 650, -6)}
+{stamp(290, 666, -6)}
 '''
 
 # ---------------- BACK ----------------
@@ -187,8 +187,8 @@ notes = [
     "Jenny, your husband called again.",
 ]
 note_html = ''.join(
-    f'<div style="display: flex; gap: 10px; margin-top: 5px"><div style="flex: none; width: 22px; font-family: {MONO}; font-size: 16px; line-height: 1.28; color: {TYPE}">{i}.</div>'
-    f'<div style="flex: 1; font-family: {MONO}; font-size: 16px; line-height: 1.28; color: {TYPE}">{typed(n)}</div></div>'
+    f'<div style="display: flex; gap: 8px; margin-top: 4px"><div style="flex: none; width: 22px; font-family: {MONO}; font-size: 16px; line-height: 1.27; color: {TYPE}">{i}.</div>'
+    f'<div style="flex: 1; font-family: {MONO}; font-size: 16px; line-height: 1.27; letter-spacing: -0.045em; color: {TYPE}">{typed(n)}</div></div>'
     for i, n in enumerate(notes, 1))
 
 back = f'''
@@ -208,17 +208,17 @@ back = f'''
 
   {item_row(4, *DISH["Italian ice"], "", "20")}
   {item_row(5, *DISH["Heatwave lager with lime and chilli salt"], "", "45")}
-  {item_row(6, "Sodas, by the case", "Orange, cream or cola by the bottle, and a diet one for Mr. Mulvaney.", None, "", "20")}
+  {item_row(6, "Sodas, by the case", "Orange, cream or cola, and a diet one for Mr. Mulvaney.", None, "", "20")}
 
   {item_row(7, "Aspirin, one bottle", None, "Sonny asked for this too", "", "69")}
   {total_row("Total, carry to other side")}
 </div>
-<div style="margin-top: 18px">
+<div style="margin-top: 16px">
   <div style="font-family: {MONO}; font-size: 15px; line-height: 1; color: {TYPE}; letter-spacing: 0.04em"><span style="border-bottom: 1.5px solid {TYPE}; padding-bottom: 2px">{typed("FOR THE DELIVERY", 15)}</span></div>
   {note_html}
-  <div style="margin-top: 10px; display: flex; justify-content: space-between; font-family: {MONO}; font-size: 16px; line-height: 1.28; color: {TYPE}"><span>{typed("P.S. Get well, Howard.")}</span><span>{typed("S., head teller")}</span></div>
+  <div style="margin-top: 10px; display: flex; justify-content: space-between; font-family: {MONO}; font-size: 16px; line-height: 1.27; letter-spacing: -0.045em; color: {TYPE}"><span>{typed("P.S. Get well, Howard.")}</span><span>{typed("S., head teller")}</span></div>
 </div></div>
-<div style="position: absolute; left: {L}px; top: 734px; width: {CW}px; border-top: 1px solid {GREEN_SOFT}; padding-top: 7px; font-family: {SANS}; font-size: 12px; line-height: 1.3; color: {GREEN}">In receiving items for deposit this bank acts only as the depositor&#39;s collecting agent and assumes no responsibility beyond due care.</div>
+<div style="position: absolute; left: {L}px; top: 748px; width: {CW}px; border-top: 1px solid {GREEN_SOFT}; padding-top: 7px; display: flex; justify-content: space-between; font-family: {SANS}; font-size: 12px; line-height: 1; color: {GREEN}; white-space: nowrap"><span>This bank acts only as the depositor&#39;s collecting agent.</span><span>Form S-822 (7/72)</span></div>
 '''
 
 TITLES = {'front': 'Savings deposit ticket, front', 'back': 'Savings deposit ticket, reverse'}

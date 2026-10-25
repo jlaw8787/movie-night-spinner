@@ -2,8 +2,8 @@
 The object is the souvenir journal handed out at the benefit dinner Frank White hosts to keep the
 South Bronx hospital open: a saddle-stitched letter-size booklet with a green cover stock printed
 in silver and white, and plain white offset pages inside printed black and green.
+The cover line cut of the hospital is engraved separately by linecut.py.
 Writes:
-  assets/hospital.png    the cover drawing, the hospital at night, silver and white inks only
   assets/host-halftone.png  Frank's portrait as a coarse newspaper-style dot screen, black ink
   assets/wear-front.png  soft edge rub, spine crease, staples and a faint glass ring on the cover
   assets/wear-back.png   gutter shadow, staple and gentle edge yellowing on the inside page
@@ -34,65 +34,6 @@ def edge_mask(w, h, width, power=2.0):
             v = max(v, max(0.0, 1 - dc / (wd * 2.2)) ** 1.6)
             px[x, y] = int(255 * min(1, v))
     return m.resize((w, h), Image.BICUBIC).filter(ImageFilter.GaussianBlur(6))
-
-# ---------------- hospital drawing ----------------
-HW, HH = 1440, 640
-art = Image.new('RGBA', (HW, HH), (0, 0, 0, 0))
-d = ImageDraw.Draw(art)
-G = 600                                   # ground line
-# rooftop bulkhead and water tank (drawn first so the block sits over the legs)
-d.rectangle((250, 92, 370, 150), fill=SILVER)
-tx, ty = 1060, 12
-for lx in (tx + 8, tx + 52, tx + 96):
-    d.rectangle((lx, ty + 112, lx + 8, 150), fill=SILVER)
-d.rectangle((tx + 4, ty + 104, tx + 108, ty + 112), fill=SILVER)
-d.rectangle((tx, ty + 30, tx + 112, ty + 104), fill=SILVER)
-d.polygon([(tx - 6, ty + 32), (tx + 56, ty - 6), (tx + 118, ty + 32)], fill=SILVER)
-for i in range(4):                        # hoops on the tank, knocked out
-    yy = ty + 44 + i * 16
-    d.rectangle((tx, yy, tx + 112, yy + 2), fill=(0, 0, 0, 0))
-# main block
-d.rectangle((90, 150, 1350, G), fill=SILVER)
-d.rectangle((80, 140, 1360, 156), fill=WHITE)            # cornice
-d.rectangle((90, 236, 1350, 240), fill=(0, 0, 0, 0))      # string course
-# centre pavilion, one floor taller
-d.rectangle((560, 104, 880, G), fill=SILVER)
-d.rectangle((550, 94, 890, 110), fill=WHITE)
-# windows: 5 floors x 18 bays, lit ones in white ink, dark ones knocked out to the cover green
-random.seed(1990)
-lit_bias = {1: 0.30, 2: 0.42, 3: 0.36, 4: 0.28, 5: 0.22}
-for f in range(5):
-    y0 = 262 + f * 64
-    for b in range(18):
-        x0 = 118 + b * 68
-        if 548 < x0 + 34 < 892 and f == 4:
-            continue                       # entrance floor of the pavilion
-        lit = random.random() < lit_bias[f + 1]
-        d.rectangle((x0, y0, x0 + 34, y0 + 40), fill=WHITE if lit else (0, 0, 0, 0))
-        if lit:
-            d.rectangle((x0, y0 + 19, x0 + 34, y0 + 21), fill=SILVER)   # sash bar
-# pavilion attic windows
-for b in range(4):
-    x0 = 600 + b * 66
-    d.rectangle((x0, 170, x0 + 40, 214), fill=WHITE if b in (1, 2) else (0, 0, 0, 0))
-# entrance: doorway, canopy, steps (the sign lettering is set in HTML over the canopy)
-d.rectangle((640, 530, 800, G), fill=WHITE)
-d.rectangle((662, 540, 716, G), fill=(0, 0, 0, 0)); d.rectangle((724, 540, 778, G), fill=(0, 0, 0, 0))
-d.rectangle((590, 488, 850, 520), fill=WHITE)
-d.rectangle((604, 520, 610, G), fill=WHITE); d.rectangle((830, 520, 836, G), fill=WHITE)
-# street: kerb and sidewalk
-d.rectangle((0, G, HW, G + 6), fill=WHITE)
-d.rectangle((0, G + 18, HW, G + 22), fill=SILVER)
-# street lamps
-for lx in (40, 1398):
-    d.rectangle((lx, 470, lx + 6, G), fill=SILVER)
-    d.rectangle((lx - 4, 462, lx + 26, 470), fill=SILVER)
-    d.ellipse((lx + 14, 466, lx + 34, 482), fill=WHITE)
-# ink mottle so the flats look printed, not digital
-a = art.split()[3]
-m = mottle(HW, HH, 90, 232, 255, 5)
-art.putalpha(ImageChops.multiply(a, m))
-art.save(os.path.join(A, 'hospital.png'))
 
 # ---------------- host portrait halftone ----------------
 src = Image.open(os.path.join(D, 'src', 'still-host.jpg')).convert('L')
@@ -173,4 +114,4 @@ for yy in (FH * 0.25, FH * 0.75):
     s2.rectangle((2 * S, y0 - 22 * S, 4 * S, y0 + 22 * S), fill=(150, 152, 150, 210))
 back = Image.alpha_composite(back, st2)
 back.save(os.path.join(A, 'wear-back.png'))
-print('painted', art.size, ht.size)
+print('painted', ht.size)

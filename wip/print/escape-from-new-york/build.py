@@ -84,7 +84,7 @@ GLYPH = {
 }
 
 
-def banner(word, size=24, lh=16):
+def banner(word, size=24, lh=15):
     rows = []
     for r in range(9):
         rows.append(lp('  '.join(GLYPH[c][r].replace('.', ' ') for c in word)))
@@ -142,7 +142,7 @@ def pen(x, y, text, size=34, rot=-4):
 # ================= PAGE 1 =================
 W = R - L
 p1 = header(1) \
-    + at(L, row(2), 360, banner('MESS')) \
+    + at(L, row(2) + 3, 360, banner('MESS')) \
     + at(468, row(2) + 12, R - 468, f"""
   <div style="font-size: 46px; line-height: 48px; letter-spacing: 0.05em; white-space: pre; {BOLD}">{lp("OFFICERS' MESS")}</div>
   {line('NIGHT WATCH MENU', 30, 'letter-spacing: 0.04em', True)}
@@ -166,7 +166,7 @@ p1 = header(1) \
          + section('B', 'HOT LINE', 'TILL 0600', W)
          + item('0201', 'A NUMBER ONE STEW', '2.40',
                 'Smoked sausage browned in the pot with onion, carrot and potato, then white beans, crushed tomatoes, smoked paprika and chicken stock. Cabbage goes in at the end. Ladled into a mug.')
-         + pen_row(330, 'Hold a bowl for Hauk. R.')
+         + pen_row(430, 'Hold a bowl for Hauk. R.')
          + small('0202', 'RYE AND BUTTER', '.35', 'Two thick slices, for the mug.')
          + f'<div style="display: flex; justify-content: space-between; white-space: pre; font-size: 24px; line-height: {LH}px">'
            f'<span>{lp("COFFEE AND TEA: SEE PAGE 0002")}</span><span>{lp("CONTINUED PAGE 0002")}</span></div>') \
@@ -204,7 +204,7 @@ p2 = header(2) + at(L, row(2), W, f"""
          + small('0402', 'LEMONADE', '.40')
          + small('0403', 'COFFEE, URN', '.25')
          + small('0404', 'HOT TEA', '.25')) \
-    + at(L, row(27), W, chars('-', W)
+    + at(L, row(26), W, chars('-', W)
          + line('TRANSFERS DUE, PROCESSING DECK', bold=True)
          + line('  PLISSKEN, S.    EX LT, SPECIAL FORCES    FEDERAL RESERVE DEPOSITORY')
          + line('  SENTENCE: LIFE, MANHATTAN.   ONCE IN, NOBODY COMES OUT.')
@@ -212,9 +212,10 @@ p2 = header(2) + at(L, row(2), W, f"""
          + chars('-', W)
          + line('REPORT ANY CRAFT ON THE WATER TO THE DUTY OFFICER AT ONCE.')
          + BLANK
+         + BLANK
          + line('*** END OF RUN ***')
          + line('LINES 0079   FORMS 0002   LP2 READY')) \
-    + at(588, row(34) + 6, 232, '<img src="assets/stamp-file-copy.png" alt="FILE COPY, SECURITY CONTROL stamp" style="display: block; width: 232px; height: 100px">')
+    + at(566, row(34) - 4, 250, '<img src="assets/stamp-file-copy.png" alt="FILE COPY, SECURITY CONTROL stamp" style="display: block; width: 250px; height: 120px">')
 
 TITLES = {'p1': 'Officers mess printout, page 1', 'p2': 'Officers mess printout, page 2'}
 for face, inner in (('p1', p1), ('p2', p2)):
