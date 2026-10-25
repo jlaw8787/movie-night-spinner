@@ -1,6 +1,6 @@
 """Hackensack Bulls scorecard and bill of fare, Brewster's Millions (1985).
 Scorecard fold: two landscape faces 1344x960, each two 672px panels folded at the centre. Outside is the
-cover and the scorecard; inside is the painted ballpark plan with numbered stands and the bill of fare.
+cover and the scorecard; inside is a real ballpark photo (LOC, Polo Grounds 1913) with numbered stand pins and the bill of fare.
 Handed out at the Bulls' exhibition night against New York, the game Monty pays for. Run paint.py first.
 Writes outside.html, inside.html (plus .body.html), film.json and spenditall.labels.json."""
 import os, json, html
@@ -168,17 +168,20 @@ def cover():
 
 # ---------- inside: ballpark plan and bill of fare ----------
 def plan():
-    k = 540 / 576
+    """Real 1913 Polo Grounds photo (LOC) seen from the outfield, with the stands keyed as typographic pins.
+    Pin points are in the source crop's pixels (1173 x 912), scaled to the 524 x 408 picture."""
+    k = 524 / 1173
+    pts = {'1': (760, 560), '2': (300, 640), '3': (1250, 640), '4': (1290, 880)}
     pins = ''
-    for key, lab in (('1', ''), ('2', ''), ('3', ''), ('4', '')):
-        x, y = MARKS[key]
-        pins += f'<div style="position: absolute; left: {round(x * k) - 19}px; top: {round(y * k) - 19}px">{disc(key, 38, 22)}</div>'
-    gx, gy = MARKS['gate']
-    pins += (f'<div style="position: absolute; left: {round(gx * k) - 50}px; top: {round(gy * k) - 26}px; width: 100px; text-align: center; {SANS}; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: {RED}">GATE 30</div>')
-    bx, by = MARKS['board']
-    pins += (f'<div style="position: absolute; left: {round(bx * k) - 60}px; top: {round(by * k) - 15}px; width: 120px; text-align: center; {BOD}; font-weight: 900; font-size: 15px; letter-spacing: 0.24em; color: #e7c35a">BULLS</div>')
-    return (f'<div style="position: relative; width: 540px; height: 548px; margin: 10px auto 0">'
-            f'<img src="assets/ballpark-plan.png" alt="Painted plan of the Bulls ballpark from above: the diamond and outfield, the grandstand behind home plate, the scoreboard in centre field, the beer garden in left and Gate 30 in right, with the food stands numbered 1 to 4" style="display: block; width: 540px; height: 548px">'
+    for key, (x, y) in pts.items():
+        pins += f'<div style="position: absolute; left: {8 + round((x - 180) * k) - 19}px; top: {8 + round((y - 150) * k) - 19}px">{disc(key, 38, 22)}</div>'
+    tag = (f'background: {CARD}; border: 2px solid {GREEN}; padding: 4px 9px 3px; {SANS}; font-weight: 800; font-size: 14px; '
+           f'letter-spacing: 0.14em; line-height: 1; white-space: nowrap')
+    pins += f'<div style="position: absolute; left: {8 + round(150 * k) - 50}px; top: {8 + round(720 * k) - 12}px; {tag}; color: {RED}">GATE 30</div>'
+    pins += (f'<div style="position: absolute; left: {8 + round(590 * k) - 44}px; top: 372px; {tag}; background: {GREEN}; color: #e7c35a; '
+             f'{BOD}; font-weight: 900; font-size: 15px; letter-spacing: 0.24em">BULLS</div>')
+    return (f'<div style="position: relative; width: 540px; margin: 22px auto 0; box-sizing: border-box; padding: 6px; background: {CARD}; border: 2px solid {GREEN}">'
+            f'<img src="assets/ballpark-photo.jpg" alt="Photograph of a packed ballpark seen from the outfield: the diamond, the double deck grandstand behind home plate and the crowd along the outfield rail, with the food stands numbered 1 to 4" style="display: block; width: 524px; height: 408px">'
             f'{pins}</div>')
 
 

@@ -84,16 +84,9 @@ def tgri_label():
 
 
 def splat():
-    """Big ooze splat behind the starters and sweets: overlapping blobs and drips, flat green ink."""
-    blobs = [(44, 586, 524, 266, '46% 54% 42% 58% / 58% 44% 56% 42%'), (42, 640, 110, 120, '50%'), (470, 620, 96, 90, '50%'),
-             (180, 584, 110, 50, '50%'), (390, 584, 120, 50, '50%'), (470, 790, 96, 80, '50%'), (60, 800, 110, 70, '50%')]
-    o = [f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: {h}px; border-radius: {r}; background: {OOZE}"></div>' for x, y, w, h, r in blobs]
-    for x, h in ((120, 40), (230, 30), (410, 36), (520, 24)):
-        o.append(f'<div style="position: absolute; left: {x}px; top: 836px; width: 16px; height: {h}px; border-radius: 8px; background: {OOZE}"></div>')
-        o.append(f'<div style="position: absolute; left: {x - 3}px; top: {836 + h - 14}px; width: 22px; height: 22px; border-radius: 11px; background: {OOZE}"></div>')
-    for x, y, d in ((46, 610, 16), (548, 610, 12), (44, 790, 12)):
-        o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {d}px; height: {d}px; border-radius: 50%; background: {OOZE}"></div>')
-    return ''.join(o)
+    """Plain panel behind the starters and sweets: a light ooze tint with a ruled green edge, no blobs."""
+    return (f'<div style="position: absolute; left: 44px; top: 586px; width: 524px; height: 266px; box-sizing: border-box; '
+            f'background: rgba(134,201,58,0.16); border: 3px solid {OOZE}"></div>')
 
 
 def manhole():

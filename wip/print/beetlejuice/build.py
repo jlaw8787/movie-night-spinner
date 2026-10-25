@@ -1,6 +1,6 @@
 """Dinner at the Deetzes', the Maitland house, Winter River, Connecticut, 1988.
 Menu card in Delia and Otho's taste. Two faces 816x1056 (US Letter card).
-Front: crooked title, the painted attic model of Winter River (signature, from paint.py), Delia sculpture placard,
+Front: crooked title, the TMDB still of the attic model of Winter River (signature), Delia sculpture placard,
 a snapshot of the house before the remodel, a Netherworld take-a-number ticket. Sandworm-stripe border on both faces.
 Back: the menu with tilted course tags, shrimp cocktail still, Handbook still, Bio-Exorcist TV ad card, house rule.
 Writes photo crops, wear, front/back .body.html and .html."""
@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageEnhance
 D = os.path.dirname(os.path.abspath(__file__))
 A = lambda f: os.path.join(D, 'assets', f)
 S = lambda f: os.path.join(D, 'src', f)
-if not os.path.exists(A('model-town.jpg')):
+if not os.path.exists(A('paper-front.jpg')):
     subprocess.run([sys.executable, os.path.join(D, 'paint.py')], check=True)
 W, H = 816, 1056
 INK, BONE, PAPER, SLIME, PURPLE, NIGHT, RED = '#18121c', '#ecebdf', '#e4e6cf', '#b4cf4a', '#5e3a7a', '#1e1428', '#a8262c'
@@ -26,8 +26,9 @@ def fit(im, w, h, box=None):
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
-PAINT_W, PAINT_H = 680, 560
-Image.open(A('model-town.jpg')).crop((0, 40, 1392, 40 + int(1392 * PAINT_H / PAINT_W))).resize((PAINT_W * 2, PAINT_H * 2), Image.LANCZOS).save(A('model-town-crop.jpg'), quality=92)
+PAINT_W, PAINT_H = 700, 540
+mt = ImageEnhance.Brightness(Image.open(S('rkfvfBDtGoLL5C26Y62Jlkilyfp.jpg')).convert('RGB')).enhance(1.12)
+fit(mt, PAINT_W, PAINT_H, (150, 0, 2898, 1631)).save(A('still-model-town.jpg'), quality=92)
 sh = ImageEnhance.Brightness(Image.open(S('afFK9J35wcwpk0LKgXEGbzDffhR.jpg')).convert('RGB')).enhance(1.2)
 fit(sh, 236, 196, (700, 120, 2500, 1634)).save(A('still-shrimp.jpg'), quality=90)
 hb = ImageEnhance.Brightness(Image.open(S('2qlBTuaKPRTCgsoRcL0GbW70ZQq.jpg')).convert('RGB')).enhance(1.35)
@@ -124,16 +125,16 @@ def ad_card(o, x, y, ang):
 # ---------------- FRONT ----------------
 def front():
     o = []
-    o.append(f'<img src="assets/paper-front-spirals.jpg" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">')
+    o.append(f'<img src="assets/paper-front.jpg" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: {H}px; display: block">')
     o.append(f'<div style="position: absolute; left: {L}px; top: 46px; width: {W - 2 * L}px; text-align: center">{kicker("Charles and Delia Deetz, at home", SLIME)}</div>')
     o.append(f'<div style="position: absolute; left: 0; top: 72px; width: {W}px; text-align: center">'
              f'<div style="display: inline-block; transform: rotate(-4deg)">{crooked("Dinner at", 60, BONE, 7)}</div></div>')
     o.append(f'<div style="position: absolute; left: 0; top: 122px; width: {W}px; text-align: center">'
              f'<div style="display: inline-block; transform: rotate(1.5deg)">{crooked("THE DEETZES&rsquo;".replace("&rsquo;", "’"), 128, BONE, 13)}</div></div>')
-    # signature: painted attic model of Winter River
+    # signature: TMDB still of the attic model of Winter River
     o.append(f'<div style="position: absolute; left: {(W - PAINT_W) // 2 - 10}px; top: 270px; width: {PAINT_W}px; height: {PAINT_H}px; padding: 10px; background: {BONE}; '
              f'transform: rotate(-1.6deg); box-shadow: 6px 8px 0 {INK}, 0 10px 30px rgba(0,0,0,0.6)">'
-             f'<img src="assets/model-town-crop.jpg" alt="Painting of the attic model of Winter River: little clapboard houses, a church, a red covered bridge over the river, and the Maitland house on its hill under a bare bulb" '
+             f'<img src="assets/still-model-town.jpg" alt="Film still: the attic model of Winter River, little clapboard houses and a winding road, with the couple resting on a sheeted sofa behind it" '
              f'style="display: block; width: {PAINT_W}px; height: {PAINT_H}px"></div>')
     o.append(f'<div style="position: absolute; left: 262px; top: 846px; transform: rotate(-2deg); background: {SLIME}; padding: 2px 12px; box-shadow: 3px 3px 0 {INK}">'
              f'<div style="font-family: {BODY}; font-weight: 700; font-style: italic; font-size: 18px; line-height: 1.2; color: {INK}; white-space: nowrap">Winter River, to scale. Found in the attic.</div></div>')
@@ -148,8 +149,6 @@ def front():
 # ---------------- BACK ----------------
 def back():
     o = []
-    o.append(f'<img src="assets/spiral-purple.png" alt="" aria-hidden="true" style="position: absolute; left: 92px; top: 62px; width: 92px; height: 92px">')
-    o.append(f'<img src="assets/spiral-purple.png" alt="" aria-hidden="true" style="position: absolute; left: 632px; top: 62px; width: 92px; height: 92px; transform: scaleX(-1)">')
     o.append(f'<div style="position: absolute; left: {L}px; top: 46px; width: {W - 2 * L}px; text-align: center">{kicker("This evening", PURPLE)}</div>')
     o.append(f'<div style="position: absolute; left: 0; top: 70px; width: {W}px; text-align: center">'
              f'<div style="display: inline-block; transform: rotate(-2deg)">{crooked("THE MENU", 104, INK, 21)}</div></div>')

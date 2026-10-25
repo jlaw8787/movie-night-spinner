@@ -149,24 +149,15 @@ def front():
     return page(''.join(o), 'front')
 
 def belt(o, x, y):
-    """The middleweight title belt, drawn as leather strap, two side plates with red stones and a big centre plate."""
+    """Title card for the belt, type only: double ink rule, red inner rule, the title in four lines."""
     w = 248
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: 130px">'
-             f'<div style="position: absolute; left: 0; top: 38px; width: {w}px; height: 56px; border-radius: 10px; '
-             f'background: linear-gradient(180deg, #2b2b2b, #0e0e0e 55%, #222); box-shadow: 0 3px 8px rgba(0,0,0,0.4)">'
-             f'<div style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px; border: 1.5px dashed #7a7a7a; border-radius: 7px"></div></div>'
-             + ''.join(f'<div style="position: absolute; left: {px}px; top: 44px; width: 38px; height: 44px; border-radius: 6px; border: 2px solid #111; '
-                       f'background: linear-gradient(160deg, #ffffff, #c9c6bf 60%, #9d9a93)">'
-                       f'<div style="position: absolute; left: 11px; top: 13px; width: 13px; height: 13px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #ff7b7f, {RED} 60%, #6d0a0e)"></div></div>'
-                       for px in (14, 54, w - 92, w - 52)) +
-             f'<div style="position: absolute; left: {w // 2 - 62}px; top: 0; width: 124px; height: 130px; border-radius: 50%; border: 3px solid #111; '
-             f'background: radial-gradient(circle at 40% 35%, #ffffff, #d6d3cc 55%, #a29f98); box-shadow: 0 3px 8px rgba(0,0,0,0.4)">'
-             f'<div style="position: absolute; left: 7px; top: 7px; width: 104px; height: 110px; border-radius: 50%; border: 3px solid {RED}"></div>'
-             f'<div style="position: absolute; left: 0; top: 30px; width: 124px; text-align: center; font-family: {DISP}; color: {INK}; line-height: 1">'
-             f'<div style="font-size: 14px; letter-spacing: 0.12em">WORLD</div>'
-             f'<div style="font-size: 16px; color: {RED}; margin-top: 4px">MIDDLEWEIGHT</div>'
-             f'<div style="font-size: 18px; margin-top: 3px">CHAMPION</div>'
-             f'<div style="font-size: 14px; letter-spacing: 0.12em; margin-top: 4px">1949</div></div></div></div>')
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: {w}px; height: 130px; box-sizing: border-box; '
+             f'border: 4px double {INK}; padding: 5px; background: {CARD}">'
+             f'<div style="height: 100%; box-sizing: border-box; border: 2px solid {RED}; text-align: center; font-family: {DISP}; color: {INK}; line-height: 1; padding-top: 14px">'
+             f'<div style="font-size: 14px; letter-spacing: 0.24em">WORLD</div>'
+             f'<div style="font-size: 26px; color: {RED}; margin-top: 6px; letter-spacing: 0.04em">MIDDLEWEIGHT</div>'
+             f'<div style="font-size: 22px; margin-top: 4px; letter-spacing: 0.08em">CHAMPION</div>'
+             f'<div style="font-size: 14px; letter-spacing: 0.24em; margin-top: 6px">1949</div></div></div>')
 
 # ---------------- BACK: the supper card ----------------
 def back():

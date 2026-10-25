@@ -4,3 +4,4 @@
 - assets/still-april.jpg: TMDB still /wiCct1kBUGyifbcBdW33rniQRky.jpg (https://image.tmdb.org/t/p/original/wiCct1kBUGyifbcBdW33rniQRky.jpg). Cropped to April and Raphael (prep.py).
 - assets/paper-grain.png: shared house grain from jurassic/src/assets.
 - No library or Commons images used. Both stills are in data/film-stills.json.
+- Starters and sweets panel: the flat green ooze blobs were replaced by a plain tinted panel with a green rule (flat art sweep, Oct 26). No new image.

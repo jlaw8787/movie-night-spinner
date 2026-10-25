@@ -1,5 +1,5 @@
 """Paints the signature piece: Adam's attic model of Winter River, the Maitland house on its hill,
-as a painted tabletop model under an attic lamp. Also paints the sandworm-stripe border and the spiral paper texture.
+as a painted tabletop model (no longer used on the menu). Paints the sandworm-stripe border and the plain night paper for the front.
 Everything is drawn here in PIL; no characters are drawn."""
 import math, os, random
 from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageEnhance
@@ -320,13 +320,15 @@ def spiral(d, cx, cy, r, turns, col, wd):
 def front_paper(W=816, H=1056):
     img = Image.new('RGB', (W * 2, H * 2), (30, 20, 40))
     d = ImageDraw.Draw(img)
-    for cx, cy, r in [(160, 280, 260), (1480, 220, 300), (1400, 1900, 340), (240, 1960, 240), (820, 120, 160)]:
-        spiral(d, cx, cy, r, 3.2, (46, 32, 60), 10)
-    img = img.filter(ImageFilter.GaussianBlur(3))
+    rnd = random.Random(88)
+    for _ in range(9000):
+        x, y = rnd.randrange(W * 2), rnd.randrange(H * 2); c = rnd.randint(22, 44)
+        d.point((x, y), fill=(c, c - 8, c + 12))
+    img = img.filter(ImageFilter.GaussianBlur(1.2))
     v = Image.new('L', img.size, 0); ImageDraw.Draw(v).ellipse([-300, -200, W * 2 + 300, H * 2 + 200], fill=255)
     v = v.filter(ImageFilter.GaussianBlur(220))
     img = Image.composite(img, ImageEnhance.Brightness(img).enhance(0.5), v)
-    img.save(A('paper-front-spirals.jpg'), quality=90)
+    img.save(A('paper-front.jpg'), quality=90)
 
 def spiral_png(name, col=(24, 18, 28), size=120):
     img = Image.new('RGBA', (size, size), (0, 0, 0, 0))
@@ -334,8 +336,6 @@ def spiral_png(name, col=(24, 18, 28), size=120):
     img.save(A(name))
 
 if __name__ == '__main__':
-    painting()
     worm_border('worm-border.png')
     front_paper()
-    spiral_png('spiral-ink.png'); spiral_png('spiral-purple.png', (94, 58, 122))
     print('painted')

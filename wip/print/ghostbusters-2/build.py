@@ -1,7 +1,7 @@
 """Ghostbusters kids' birthday party catering menu, New York, spring 1990 season (printed after New Year's Eve 1989).
 Table tent card for the party table, two faces 528x816 (folds into a tent). Bright white card, Ghostbusters black, mood slime pink.
-Front: painted glossy pink slime dripping off the top, TMDB logo badge, PARTY MENU in Rye, sharp TMDB still of the slime jar, party plates.
-Back: Vigo painting in a gilt frame and the Liberty walk still, Ray's note, ghost trap party favour, big plates, sweets, fine print.
+Front: TMDB still of the river of slime across the top, TMDB logo badge, PARTY MENU in Rye, sharp TMDB still of the slime jar, party plates.
+Back: Vigo painting in a gilt frame and the Liberty walk still, Ray's note, party favour tag, big plates, sweets, fine print.
 Writes slime art, photo crops, wear, front/back .body.html and .html."""
 import os, random
 from PIL import Image, ImageDraw, ImageFilter, ImageChops, ImageEnhance
@@ -15,51 +15,7 @@ FONTS = ('https://fonts.googleapis.com/css2?family=Rye&family=Work+Sans:ital,wgh
 DISP = "'Rye', serif"; BODY = "'Work Sans', sans-serif"; SCRIPT = "'Caveat', cursive"
 M = 40; CW = W - 2 * M
 
-# ---------------- painted slime (the one painted piece) ----------------
-def paint_slime():
-    s = 2; w, h = W * s, 170 * s
-    rnd = random.Random(1989)
-    m = Image.new('L', (w, h), 0); d = ImageDraw.Draw(m)
-    d.rectangle([0, 0, w, 74 * s], fill=255)
-    x = 0                                            # lumpy lower edge of the sheet
-    while x < w:
-        r = rnd.randint(16, 30) * s
-        d.ellipse([x - r, 74 * s - r, x + r, 74 * s + r * 0.7], fill=255); x += int(r * 1.3)
-    drips = [(34, 44), (92, 76), (150, 30), (214, 62), (300, 82), (362, 38), (420, 70), (488, 50)]
-    for dx, ln in drips:                             # drips: tapered neck with a fat bead at the end
-        dx *= s; ln *= s; bw = rnd.randint(13, 18) * s
-        d.polygon([(dx - bw, 70 * s), (dx + bw, 70 * s), (dx + bw * 0.55, 70 * s + ln), (dx - bw * 0.55, 70 * s + ln)], fill=255)
-        br = int(bw * 0.95)
-        d.ellipse([dx - br, 70 * s + ln - br, dx + br, 70 * s + ln + br * 1.15], fill=255)
-    m = m.filter(ImageFilter.GaussianBlur(5 * s)).point(lambda v: 255 if v > 120 else 0).filter(ImageFilter.GaussianBlur(1.2))
-    # body colour: lighter in the middle of every blob, deeper at the rims
-    core = m.filter(ImageFilter.GaussianBlur(14 * s))
-    base = Image.new('RGB', (w, h), (198, 30, 116))
-    light = Image.new('RGB', (w, h), (255, 92, 172))
-    body = Image.composite(light, base, core.point(lambda v: min(255, int(v * 1.25))))
-    # glossy highlights: the blob edge shifted down-right, cut against itself, blurred into a sheen
-    shift = ImageChops.offset(m, -4 * s, -6 * s)
-    rim = ImageChops.subtract(m, shift).filter(ImageFilter.GaussianBlur(2.5 * s))
-    body = Image.composite(Image.new('RGB', (w, h), (255, 214, 236)), body, rim.point(lambda v: int(v * 0.85)))
-    gl = Image.new('L', (w, h), 0); gd = ImageDraw.Draw(gl)
-    for dx, ln in drips:                             # a bright spec on each bead
-        dx *= s; ln *= s
-        gd.ellipse([dx - 9 * s, 70 * s + ln - 9 * s, dx - 2 * s, 70 * s + ln - 1 * s], fill=235)
-    for i in range(9):                               # long soft streaks along the sheet
-        x0 = rnd.randint(10, W - 80) * s; y0 = rnd.randint(14, 44) * s
-        gd.ellipse([x0, y0, x0 + rnd.randint(40, 90) * s, y0 + 5 * s], fill=150)
-    gl = ImageChops.multiply(gl.filter(ImageFilter.GaussianBlur(2.2 * s)), m)
-    body = Image.composite(Image.new('RGB', (w, h), (255, 255, 255)), body, gl)
-    # soft shadow under the slime on the card
-    sh = m.filter(ImageFilter.GaussianBlur(6 * s)).point(lambda v: int(v * 0.35))
-    out = Image.new('RGBA', (w, h), (0, 0, 0, 0))
-    shadow = Image.new('RGBA', (w, h), (90, 10, 50, 0)); shadow.putalpha(ImageChops.offset(sh, 0, 4 * s))
-    out = Image.alpha_composite(out, shadow)
-    top = body.convert('RGBA'); top.putalpha(m)
-    out = Image.alpha_composite(out, top)
-    out.save(A('art-slime.png'))
-paint_slime()
-
+# ---------------- river of slime banner (TMDB still) ----------------
 # ---------------- photos ----------------
 def fit(im, w, h, box=None):
     if box: im = im.crop(box)
@@ -67,6 +23,10 @@ def fit(im, w, h, box=None):
     cw, ch = (int(sh * r), sh) if sw / sh > r else (sw, int(sw / r))
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
+
+river = Image.open(S('o-xXk0HUgEi2Untg6EILuewfZlwzY.jpg')).convert('RGB')
+river = ImageEnhance.Brightness(river).enhance(1.08)
+fit(river, W, 170, (0, 260, 1920, 880)).save(A('still-river.jpg'), quality=92)
 
 HERO_W, HERO_H = CW - 8, 212
 jar = Image.open(S('o-ux9t4fjjch9ovAeUmXq6HXm2NtJ.jpg')).convert('RGB')
@@ -136,24 +96,12 @@ def at(x, y, html, w=CW, extra=''):
 
 # ---------------- props ----------------
 def ghost_trap(x, y):
-    """Party favour box built like a ghost trap: grey case, hazard side, split lid, pedal on a cord, and its tag."""
-    g1, g2 = '#8d9096', '#5b5e64'
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 150px; height: 128px; transform: rotate(-6deg)">'
-            # lid halves, slightly open
-            f'<div style="position: absolute; left: 10px; top: 6px; width: 62px; height: 16px; background: {g1}; border: 2px solid {INK}; border-radius: 4px 4px 0 0; transform: rotate(-9deg); transform-origin: right bottom"></div>'
-            f'<div style="position: absolute; left: 76px; top: 6px; width: 62px; height: 16px; background: {g1}; border: 2px solid {INK}; border-radius: 4px 4px 0 0; transform: rotate(9deg); transform-origin: left bottom"></div>'
-            f'<div style="position: absolute; left: 62px; top: 0; width: 26px; height: 22px; border-radius: 50%; background: rgba(242,71,154,0.55)"></div>'
-            # case
-            f'<div style="position: absolute; left: 6px; top: 22px; width: 136px; height: 44px; background: {g2}; border: 2px solid {INK}; border-radius: 5px; overflow: hidden">'
-            f'<div style="position: absolute; left: 0; bottom: 0; width: 136px; height: 15px; background: repeating-linear-gradient(45deg, {YEL} 0 7px, {INK} 7px 14px)"></div>'
-            f'<div style="position: absolute; left: 10px; top: 7px; width: 9px; height: 9px; border-radius: 50%; background: #ff3b30; box-shadow: 0 0 6px #ff3b30"></div>'
-            f'<div style="position: absolute; left: 26px; top: 8px; width: 96px; height: 6px; background: {g1}; border-radius: 3px"></div></div>'
-            # cord and pedal
-            f'<div style="position: absolute; left: 134px; top: 52px; width: 10px; height: 34px; border-right: 3px solid {INK}; border-bottom: 3px solid {INK}; border-radius: 0 0 10px 0"></div>'
-            f'<div style="position: absolute; left: 112px; top: 84px; width: 34px; height: 14px; background: {INK}; border-radius: 3px"></div>'
-            # tag
-            f'<div style="position: absolute; left: 0; top: 76px; width: 106px; background: {YEL}; border: 2px solid {INK}; padding: 3px 4px; '
-            f'font-family: {BODY}; font-weight: 800; font-size: 14px; line-height: 1.1; color: {INK}; text-align: center; transform: rotate(4deg)">'
+    """Party favour tag, type only: yellow card with a punched hole and string."""
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 140px; transform: rotate(5deg)">'
+            f'<div style="position: relative; background: {YEL}; border: 3px solid {INK}; border-radius: 6px; padding: 26px 8px 12px; '
+            f'box-shadow: 0 3px 8px rgba(30,10,30,0.35); font-family: {BODY}; font-weight: 800; font-size: 20px; line-height: 1.1; '
+            f'color: {INK}; text-align: center">'
+            f'<div style="position: absolute; left: 61px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: {PAPER}; border: 2px solid {INK}"></div>'
             "DON'T LOOK IN THE TRAP</div></div>")
 
 def ray_note(x, y, w):
@@ -166,7 +114,7 @@ def ray_note(x, y, w):
 # ---------------- FRONT ----------------
 def front():
     o = []
-    o.append(f'<img src="assets/art-slime.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {W}px; height: 170px; display: block">')
+    o.append(f'<img src="assets/still-river.jpg" alt="A river of glowing pink slime running through an old brick tunnel" style="position: absolute; left: 0; top: 0; width: {W}px; height: 170px; display: block; border-bottom: 4px solid {PINK}">')
     # logo badge on the slime
     o.append(f'<div style="position: absolute; left: {W // 2 - 66}px; top: 16px; width: 132px; height: 132px; border-radius: 50%; background: #fff; '
              f'border: 4px solid {INK}; box-sizing: border-box; overflow: hidden; box-shadow: 0 4px 10px rgba(60,0,30,0.4)">'

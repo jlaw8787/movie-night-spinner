@@ -1,8 +1,8 @@
 """Mandel's Delicatessen & Restaurant takeaway trifold, Annie Hall (1977).
 Two landscape faces, 1344x816 (14 x 8.5 in), three 448px panels each, folded in thirds.
-Outside: party trays flap | back panel (delivery, terrace still) | cover with the engraved Coney Island coaster.
+Outside: party trays flap | back panel (delivery, terrace still) | cover with the Coney Island coaster photo (LOC, Bain).
 Inside: the counter | the bake case | the fountain.
-Run paint.py first (assets/coaster-engraving.png). Writes outside.html, inside.html, film.json, annietable.labels.json."""
+Run paint.py first (pen ring, stamp). Writes outside.html, inside.html, film.json, annietable.labels.json."""
 import os, json
 
 D = os.path.dirname(os.path.abspath(__file__))
@@ -119,7 +119,7 @@ cover = panel(2, f'''
   <div style="{DISP}; font-size: 82px; line-height: 1.05; color: {ACC}; white-space: nowrap; margin-top: 2px">Mandel’s</div>
   <div style="{DISP}; font-size: 19px; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.02em; white-space: nowrap">Delicatessen &amp; Restaurant</div>
   <div style="{SANS}; font-style: italic; font-weight: 600; font-size: 18px; margin-top: 10px">The food is good. And such big portions.</div>
-  <img src="assets/coaster-engraving.png" alt="Engraving of the wooden roller coaster at Coney Island with a frame house underneath it" style="display: block; width: 368px; height: 470px; margin-top: 14px">
+  <div style="margin-top: 14px">{framed('assets/coaster-photo.jpg', 'Riders on the wooden roller coaster at Coney Island, about 1910', 368, 314)}</div>
   {cap('Our first counter, under the coaster at Coney Island, 1946. We came uptown in 1959.')}''', top=46)
 
 outside = face(flap + back + cover)

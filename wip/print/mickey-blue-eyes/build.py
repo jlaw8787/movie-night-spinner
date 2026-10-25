@@ -135,14 +135,12 @@ def lesson_card(x, y, w=262, h=470):
             '</div></div>')
 
 def paddle(x, y):
-    """Auction bidding paddle, Lot 1, borrowed from the auction house uptown."""
-    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 120px; height: 196px; transform: rotate(10deg)">'
-            f'<div style="position: absolute; left: 49px; top: 104px; width: 22px; height: 92px; border-radius: 6px; '
-            f'background: linear-gradient(90deg, #8a5a2e, #c08a52 45%, #7a4c24); box-shadow: 0 3px 7px rgba(10,20,50,0.35)"></div>'
-            f'<div style="position: absolute; left: 0; top: 0; width: 120px; height: 120px; border-radius: 50%; background: {PAPER}; '
-            f'border: 6px solid {BLUE}; box-sizing: border-box; box-shadow: 0 4px 10px rgba(10,20,50,0.35); text-align: center">'
-            f'<div style="font-family: {BODY}; font-weight: 700; font-size: 15px; letter-spacing: 0.22em; color: {NAVY}; margin-top: 18px; line-height: 1">LOT</div>'
-            f'<div style="font-family: {BODY}; font-weight: 700; font-size: 60px; color: {BLUE}; line-height: 1">1</div></div></div>')
+    """Auction bid card, Lot 1, type only: a numbered card like the ones handed out at the auction house uptown."""
+    return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: 120px; height: 148px; transform: rotate(6deg); '
+            f'background: {PAPER}; border: 4px double {NAVY}; box-sizing: border-box; padding: 5px; box-shadow: 0 3px 8px rgba(10,20,50,0.3)">'
+            f'<div style="height: 100%; box-sizing: border-box; border: 2px solid {BLUE}; text-align: center">'
+            f'<div style="font-family: {BODY}; font-weight: 700; font-size: 15px; letter-spacing: 0.22em; color: {NAVY}; margin-top: 16px; line-height: 1">LOT</div>'
+            f'<div style="font-family: {BODY}; font-weight: 700; font-size: 72px; color: {BLUE}; line-height: 1">1</div></div></div>')
 
 # ---------------- FRONT: cover + flap outside ----------------
 def front():
