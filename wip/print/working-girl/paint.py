@@ -12,10 +12,10 @@ def crop(src, out, w, h, cx=0.5, cy=0.5, bright=1.0):
     im = im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
     im = ImageEnhance.Brightness(im).enhance(bright)
     im.save(os.path.join(A, out), quality=90)
-crop('boardroom.jpg', 'still-private-room.jpg', 465, 200, 0.55, 0.5, 1.10)
+crop('boardroom.jpg', 'still-private-room.jpg', 270, 150, 0.5, 0.45, 1.10)
 # warm vignette: big soft mottling toward the edges, nothing in the middle
-W2, H2 = 2246, 1588
-for n, seed in (('outside', 3), ('inside', 7)):
+W2, H2 = 1920, 2688
+for n, seed in (('sheet', 3),):
     rng = np.random.default_rng(seed)
     yy, xx = np.mgrid[0:H2, 0:W2]
     dx = np.minimum(xx, W2 - xx) / 180.0; dy = np.minimum(yy, H2 - yy) / 180.0

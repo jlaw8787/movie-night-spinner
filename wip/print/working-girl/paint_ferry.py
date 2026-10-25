@@ -195,21 +195,21 @@ prism(plan(3, 97, 11.0, 9), 6.0, 13.0)
 prism(plan(9, 91, 10.2, 8), 13.0, 19.5, OR, np.array((96, 92, 92)))
 prism(plan(11, 21, 4.6, 3), 19.5, 24.5)
 prism(plan(79, 89, 4.6, 3), 19.5, 24.5)
-prism(plan(46.5, 53.5, 2.8, 1.5), 19.5, 29.5, OR * 0.88)
+prism(plan(47.6, 52.4, 2.0, 1.0), 19.5, 30.5, OR * 0.88)
 faces.sort(key=lambda f_: -f_[0])
 
 # fit the ferry to its place in the picture
 allp = np.array([proj(p) for _, q, _ in faces for p in q])
 mn, mx = allp.min(0), allp.max(0)
-S = 1060 / (mx[0] - mn[0])
-WL = 1092                                      # waterline at the near end, px
+S = 860 / (mx[0] - mn[0])
+WL = 1132                                      # waterline at the near end, px
 def scr(p):
     v = proj(p)
     return (650 + (v[0] - mn[0]) * S, 0)
 y_near = proj((0, 0, -12.5))[1]
 def P(p):
     v = proj(p)
-    return (650 + (v[0] - mn[0]) * S, WL - (v[1] - y_near) * S)
+    return (720 + (v[0] - mn[0]) * S, WL - (v[1] - y_near) * S)
 
 SS = 2
 lay = Image.new('RGBA', (W * SS, H * SS), (0, 0, 0, 0))
@@ -231,13 +231,11 @@ line3((11, 3.6, -hwh - .1), (89, 3.6, -hwh - .1), (250, 238, 222), 1)
 def windows(x0, x1, y0, y1, z, step, ww):
     x = x0
     while x + ww <= x1:
-        poly([(x, y0, z), (x + ww, y0, z), (x + ww, y1, z), (x, y1, z)], (38, 42, 52))
+        poly([(x, y0, z), (x + ww, y0, z), (x + ww, y1, z), (x, y1, z)], (62, 56, 62))
         poly([(x, y1 - (y1 - y0) * 0.35, z - .02), (x + ww * 0.45, y1 - (y1 - y0) * 0.35, z - .02), (x + ww * 0.45, y1, z - .02), (x, y1, z - .02)], (150, 172, 188), 120)
         x += step
 windows(12, 88, 8.2, 11.4, -11.06, 3.1, 2.0)
 windows(17, 83, 15.0, 18.0, -10.26, 2.6, 1.7)
-for xa, xb in ((3.5, 10), (90, 96.5)):        # dark open ends of the main deck
-    poly([(xa, 6.4, -10.9), (xb, 6.4, -10.9), (xb, 12.2, -10.9), (xa, 12.2, -10.9)], (58, 44, 42))
 line3((9, 13.0, -10.3), (91, 13.0, -10.3), (250, 240, 226), 2)
 line3((9, 14.6, -10.6), (17, 14.6, -10.6), (250, 240, 226), 1); line3((83, 14.6, -10.6), (91, 14.6, -10.6), (250, 240, 226), 1)
 line3((9, 19.5, -10.25), (91, 19.5, -10.25), (250, 240, 226), 2)
@@ -246,8 +244,8 @@ for xr in np.arange(11, 89.1, 2.6): line3((xr, 19.5, -10.0), (xr, 21.0, -10.0), 
 for xa in (11, 79):                             # pilot house windows, white roof
     windows(xa + 1, xa + 9.5, 21.6, 23.6, -4.66, 2.2, 1.6)
     poly([(xa - .5, 24.5, -5.1), (xa + 10.5, 24.5, -5.1), (xa + 10.5, 25.1, -5.1), (xa - .5, 25.1, -5.1)], (250, 242, 230))
-poly([(46.5, 28.2, -2.85), (53.5, 28.2, -2.85), (53.5, 29.5, -2.85), (46.5, 29.5, -2.85)], (40, 36, 38))
-line3((50, 29.5, 0), (50, 38, 0), (60, 56, 58), 2); line3((47, 35.5, 0), (53, 35.5, 0), (60, 56, 58), 1)
+poly([(47.6, 29.2, -2.05), (52.4, 29.2, -2.05), (52.4, 30.5, -2.05), (47.6, 30.5, -2.05)], (40, 36, 38))
+line3((50, 30.5, 0), (50, 39, 0), (60, 56, 58), 2); line3((47, 35.5, 0), (53, 35.5, 0), (60, 56, 58), 1)
 fer = lay.resize((W, H), Image.LANCZOS)
 fa = np.asarray(fer).astype(float)
 grad = 1.05 - 0.20 * np.clip((yy - 900) / 220.0, 0, 1)        # gouache light falling off toward the water
@@ -261,13 +259,13 @@ nx, ny = P((0, 0, -6))
 for i in range(1100):
     t = rng.random() ** 0.75
     side = rng.choice([-1, 1])
-    x = nx - t * 640 + rng.normal(0, 10)
-    y = ny + 8 + t * 60 + side * t * 46 + rng.normal(0, 3 + 7 * t)
+    x = nx - 40 + t * 380 + rng.normal(0, 10)
+    y = ny + 6 + t * 46 + side * t * 22 + rng.normal(0, 3 + 5 * t)
     L = rng.uniform(12, 50) * (1 - 0.5 * t)
     d.ellipse((x, y, x + L, y + rng.uniform(2, 6)), fill=(252, 250, 244, int(rng.uniform(70, 200) * (1 - 0.75 * t))))
 bx, by = P((100, 0, -4))
 for i in range(160):
-    x = bx - rng.uniform(-30, 80); y = by + rng.uniform(-2, 14)
+    x = bx - rng.uniform(0, 90); y = by + rng.uniform(-2, 10)
     d.ellipse((x, y, x + rng.uniform(10, 40), y + 4), fill=(252, 250, 244, int(rng.uniform(90, 200))))
 box = fer.getbbox()
 rf = fer.crop(box).transpose(Image.FLIP_TOP_BOTTOM).filter(ImageFilter.GaussianBlur(3))
