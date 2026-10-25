@@ -171,7 +171,7 @@ def back():
     )
     foot = (f'<div style="position: absolute; left: {L}px; top: 996px; width: 420px; font-family: {BODY}; font-size: 16px; color: {SOFT}">'
             f'Prices subject to change. Form 1100, 6/72.</div>')
-    pie = f'<img src="assets/engraved-pie.png" alt="" style="position: absolute; left: 566px; top: 606px; width: 192px; height: 192px; display: block">'
+    pie = f'<img src="assets/engraved-pie.png" alt="" style="position: absolute; left: 566px; top: 622px; width: 192px; height: 192px; display: block">'
     return page('back', head + cols + pie + deliver + foot + ticket())
 
 

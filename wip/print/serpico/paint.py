@@ -358,16 +358,25 @@ def slice_(y, tilt):
         cx, cy = random.uniform(32, 150), y + random.uniform(4, 8)
         di.ellipse([P(cx - 0.7, cy - 0.35), P(cx + 0.7, cy + 0.35)], fill=255)
 slice_(60, 0)
-# pastrami pile: wavy layers overhanging the bread
-for i, yy in enumerate((54, 47, 40, 33, 27)):
-    pts = [(14 + j * 4, yy + 3.2 * math.sin(j * 0.9 + i)) for j in range(38)]
+# pastrami pile: wavy slices folded over each other, peppered dark edges, overhanging the bread
+layers = []
+for i, yy in enumerate((53, 46, 39, 32, 26)):
+    amp = 2.6 + (i % 2) * 1.2
+    pts = [(12 + j * 4.2, yy + amp * math.sin(j * 0.75 + i * 1.3)) for j in range(37)]
+    layers.append(pts)
     m = shape(lambda d: d.polygon([P(px, py) for px, py in pts] + [P(px, py + 9) for px, py in pts[::-1]], fill=255))
-    clear(ink, m); fill(red, m, 225)
-    line(di, *pts[0], *pts[0], 0.1)
-    di.line([P(px, py) for px, py in pts], fill=255, width=int(0.9 * K))
-    for px, py in pts[::2]:                                           # peppered edge
-        if random.random() < 0.7: di.ellipse([P(px - 0.6, py - 0.6), P(px + 0.6, py + 0.6)], fill=255)
-hatch(ink, region(box=(128, 26, 170, 64)), 70, 1.6, 0.4)
+    clear(ink, m); fill(red, m, 215)
+for i, pts in enumerate(layers):
+    di.line([P(px, py) for px, py in pts], fill=255, width=int(1.1 * K), joint='curve')
+    for px, py in pts:
+        if random.random() < 0.85:
+            r = random.uniform(0.5, 0.9); di.ellipse([P(px - r, py + 0.6 - r), P(px + r, py + 0.6 + r)], fill=255)
+    for px, py in pts[1::3]:                                        # grain of the meat
+        line(di, px, py + 3, px + 2.4, py + 6.5, 0.35, 0)
+for pts in layers:                                                   # ends of the folds
+    line(di, pts[0][0], pts[0][1], pts[0][0] - 1, pts[0][1] + 9, 0.8, 0)
+    line(di, pts[-1][0], pts[-1][1], pts[-1][0] + 1, pts[-1][1] + 9, 0.8, 0)
+hatch(ink, ImageChops.multiply(shape(lambda d: d.rectangle([P(140, 22), P(170, 66)], fill=255)), red.point(lambda v: 255 if v > 100 else 0)), 90, 1.3, 0.4)
 slice_(14, -2)
 # half-sour pickle
 pk = shape(lambda d: d.ellipse([P(166, 54), P(208, 72)], fill=255)).rotate(-12, center=P(187, 63), resample=Image.BICUBIC)
