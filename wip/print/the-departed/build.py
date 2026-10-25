@@ -23,9 +23,9 @@ def fit(im, w, h, box=None):
     x, y = (sw - cw) // 2, (sh - ch) // 2
     return im.crop((x, y, x + cw, y + ch)).resize((w * 2, h * 2), Image.LANCZOS)
 
-street = Image.open(S('cand8.jpg')).convert('RGB')          # CC BY-SA 3.0, see CREDITS.md
-street = ImageEnhance.Contrast(ImageEnhance.Brightness(street).enhance(1.08)).enhance(1.06)
-fit(street, CW - 8, 352, (0, 120, 960, 680)).filter(ImageFilter.UnsharpMask(2, 60, 2)).save(A('three-deckers.jpg'), quality=92)
+street = Image.open(S('southie-house.jpg')).convert('RGB')   # CC0, see CREDITS.md
+street = ImageEnhance.Contrast(ImageEnhance.Brightness(street).enhance(1.02)).enhance(1.04)
+fit(street, CW - 8, 352, (0, 40, 1920, 1197)).save(A('three-deckers.jpg'), quality=92)
 
 table = Image.open(S('pC6oJsuQsSbuQtUJOyTgk90eIw2.jpg')).convert('RGB')
 table = ImageEnhance.Brightness(table).enhance(1.12)
@@ -126,8 +126,8 @@ def front():
              f'<div style="font-family: {DISP}; font-weight: 800; font-size: 30px; line-height: 1; color: {GOLD}; letter-spacing: 0.08em">Tap &amp; Grill</div>'
              f'<div style="height: 2px; width: 110px; background: {GOLD}"></div></div></div>')
     o.append(f'<div style="position: absolute; left: {M}px; top: 222px">'
-             + frame('three-deckers.jpg', CW - 8, 352, 'Three-decker houses and a crowded street corner below the Heights, the city skyline behind') + '</div>')
-    o.append(cap('The three-deckers below the Heights, parade day.', 590))
+             + frame('three-deckers.jpg', CW - 8, 352, 'A tall painted row house with bay windows and wreaths on every window, a blue clapboard house beside it, cars parked out front') + '</div>')
+    o.append(cap('Up the block from the bar, wreaths on every window.', 590))
     envelope(o, W - M - 232, 474)
     left = (band('Start at the Bar')
             + item('Clam chowder, cup', '4.50', 'Clams, potato and bacon in cream. Oyster crackers.', 18)

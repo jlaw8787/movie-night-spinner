@@ -56,27 +56,25 @@ def dish(name, price, desc, top=10):
             f'<div style="display: flex; align-items: baseline; gap: 8px">'
             f'<div style="flex: 1; font-family: {DISP}; font-size: 26px; line-height: 1; color: {NAVY}">{name}</div>'
             f'<div style="font-family: {DISP}; font-size: 26px; line-height: 1; color: {RED}">{price}</div></div>'
-            + (f'<div style="margin-top: 2px; font-family: {BODY}; font-size: 18px; line-height: 1.2; color: {INK}">{desc}</div>' if desc else '') + '</div>')
+            + (f'<div style="margin-top: 2px; font-family: {BODY}; font-size: 19px; line-height: 1.18; color: {INK}">{desc}</div>' if desc else '') + '</div>')
 
 # ---------- dishes (k = spec key) ----------
 PIES = [
   ('Thirty-minute pepperoni pie', 'Pepperoni pie', '14.29',
-   'Thin crisp crust, crushed tomato, low-moisture mozzarella and cupping pepperoni, baked on the hot deck.'),
-  (None, 'Plain cheese pie', '12.00', 'Eight big slices. Fold them.'),
-  (None, 'Sicilian square', '15.00', 'Thick pan crust, sauce on top, twelve squares.'),
-  (None, 'By the slice', '2.00', 'Plain. Toppings 50 cents.'),
+   'Thin crisp crust, crushed tomato, low-moisture mozzarella, cupping pepperoni.'),
+  (None, 'Cheese pie', '12.00', 'Eight big slices. Fold them.'),
+  (None, 'By the slice', '2.00', 'Toppings 50 cents each.'),
 ]
 START = [
-  ("Joe's Pizza garlic knots", 'Garlic knots', '6 for 3.00', 'Our pizza dough tied and baked golden, tossed in garlic butter and parsley.'),
-  ('Potato knishes', 'Potato knish', '2.50', 'Mashed potato and fried onion in thin pastry, baked golden. Yellow mustard.'),
-  (None, 'Calzone', '6.50', 'Ricotta, mozzarella and ham, folded and baked.'),
+  ("Joe's Pizza garlic knots", 'Garlic knots', '3.00', 'Six knots of our dough, baked golden, tossed in garlic butter and parsley.'),
+  ('Potato knishes', 'Knish', '2.50', 'Potato and fried onion in thin pastry, baked golden. Yellow mustard.'),
 ]
 MORN = [
-  ("Aunt May's pancakes", 'Buttermilk pancakes', '4.50', 'A tall stack, light and fluffy, cooked in butter. Maple syrup. Just like your aunt makes.'),
+  ("Aunt May's pancakes", 'Pancakes', '4.50', 'Buttermilk stack cooked in butter, maple syrup. Like your aunt makes.'),
 ]
 DRINK = [
-  ('Iced coffee', 'Iced coffee float', '2.75', 'Cold brew over ice with milk and a scoop of vanilla ice cream.'),
-  (None, 'Soda, can or 2 liter', '1.00 / 2.50', ''),
+  ('Iced coffee', 'Coffee float', '2.75', 'Cold brew on ice, milk, a scoop of vanilla ice cream.'),
+  (None, 'Soda', '1.00', '2 liter bottle 2.50.'),
 ]
 
 # ---------- pieces ----------
@@ -84,18 +82,18 @@ def sticker(x, y, d=176):
     """The round shop sticker, the same one on the drivers' helmets."""
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {d}px; height: {d}px; border-radius: 50%; background: {RED}; box-sizing: border-box; border: 5px solid {NAVY}">'
             f'<div style="position: absolute; left: 7px; top: 7px; width: {d - 24}px; height: {d - 24}px; border-radius: 50%; border: 2px solid {PAPER}"></div>'
-            f'<div style="position: absolute; left: 0; top: 28px; width: {d - 10}px; text-align: center; font-family: {COND}; font-weight: 700; font-size: 16px; letter-spacing: 0.2em; color: {PAPER}">EST. 1962</div>'
-            f'<div style="position: absolute; left: 0; top: 46px; width: {d - 10}px; text-align: center; font-family: {DISP}; font-size: 44px; line-height: 1; color: {PAPER}">AZIZ\'S</div>'
-            f'<div style="position: absolute; left: 22px; top: 94px; width: {d - 54}px; height: 3px; background: {PAPER}"></div>'
-            f'<div style="position: absolute; left: 0; top: 102px; width: {d - 10}px; text-align: center; font-family: {COND}; font-weight: 700; font-size: 17px; letter-spacing: 0.18em; color: {PAPER}">FAST DELIVERY</div>'
+            f'<div style="position: absolute; left: 0; top: {d*0.15:.0f}px; width: {d - 10}px; text-align: center; font-family: {COND}; font-weight: 700; font-size: 16px; letter-spacing: 0.2em; color: {PAPER}">EST. 1962</div>'
+            f'<div style="position: absolute; left: 0; top: {d*0.26:.0f}px; width: {d - 10}px; text-align: center; font-family: {DISP}; font-size: {d//4}px; line-height: 1; color: {PAPER}">AZIZ\'S</div>'
+            f'<div style="position: absolute; left: 22px; top: {d*0.54:.0f}px; width: {d - 54}px; height: 3px; background: {PAPER}"></div>'
+            f'<div style="position: absolute; left: 0; top: {d*0.59:.0f}px; width: {d - 10}px; text-align: center; font-family: {COND}; font-weight: 700; font-size: 17px; letter-spacing: 0.18em; color: {PAPER}">FAST DELIVERY</div>'
             f'</div>')
 
 def burst(x, y, s=170):
     sq = ''.join(f'<div style="position: absolute; left: 0; top: 0; width: {s}px; height: {s}px; background: {RED}; transform: rotate({a}deg)"></div>' for a in (0, 22.5, 45, 67.5))
     return (f'<div style="position: absolute; left: {x}px; top: {y}px; width: {s}px; height: {s}px; transform: rotate(-9deg)">{sq}'
             f'<div style="position: absolute; left: 14px; top: 14px; width: {s - 28}px; height: {s - 28}px; border-radius: 50%; background: {SLIP}; border: 3px solid {NAVY}; box-sizing: border-box; text-align: center">'
-            f'<div style="margin-top: 16px; font-family: {DISP}; font-size: 54px; line-height: 0.9; color: {RED}">29</div>'
-            f'<div style="font-family: {DISP}; font-size: 22px; line-height: 0.95; color: {NAVY}">MINUTES<br>OR IT\'S FREE</div></div></div>')
+            f'<div style="margin-top: 12px; font-family: {DISP}; font-size: 48px; line-height: 0.9; color: {RED}">29</div>'
+            f'<div style="font-family: {DISP}; font-size: 19px; line-height: 0.95; color: {NAVY}">MINUTES<br>OR IT\'S FREE</div></div></div>')
 
 def warning_slip(x, y):
     """Aziz's warning slip, stapled to the shop copy of the flyer by the register."""
@@ -116,49 +114,49 @@ def coupon(x, w, inner, bg=PAPER):
 def coupons():
     c_title = lambda t, col=NAVY, s=25: f'<div style="font-family: {DISP}; font-size: {s}px; line-height: 0.95; color: {col}">{t}</div>'
     c_text = lambda t, col=INK: f'<div style="margin-top: 3px; font-family: {BODY}; font-weight: 600; font-size: 15px; line-height: 1.15; color: {col}">{t}</div>'
-    row = (coupon(0, 214, kicker('Our promise', SLIP, 14) + c_title('29 MINUTES OR IT\'S FREE', PAPER, 24)
-                  + c_text('Clock starts when you hang up. Hand this to a late driver.', PAPER), RED)
-           + coupon(224, 166, c_title('2 LARGE PIES') + c_title('$20.04', RED, 28) + c_text('Plain. Toppings extra.'))
+    row = (coupon(0, 214, kicker('Our promise', SLIP, 14) + c_title('29 MINUTES OR IT\'S FREE', PAPER, 22)
+                  + c_text('Hand this to a late driver. No tip needed.', PAPER), RED)
+           + coupon(224, 166, c_title('TWO PIES') + c_title('$20.04', RED, 30) + c_text('Cheese. Toppings extra.'))
            + coupon(400, 166, c_title('FREE KNOTS') + c_text('Six garlic knots with any pie. Any floor, any building.'))
            + coupon(576, 160, c_title('STUDENT SLICE') + c_text('Slice and soda 2.50 with a university ID.')))
-    return (f'<div style="position: absolute; left: 40px; top: 890px; width: 736px; height: 104px">{row}</div>'
-            f'<div style="position: absolute; left: 40px; top: 872px; width: 736px; display: flex; align-items: center; gap: 10px">'
+    return (f'<div style="position: absolute; left: 40px; top: 882px; width: 736px; height: 104px">{row}</div>'
+            f'<div style="position: absolute; left: 40px; top: 862px; width: 736px; display: flex; align-items: center; gap: 10px">'
             f'<div style="flex: 1; border-top: 2px dashed {NAVY}"></div>'
             f'{kicker("Clip and save. One coupon per order", NAVY, 14, "letter-spacing: 0.14em")}'
             f'<div style="flex: 1; border-top: 2px dashed {NAVY}"></div></div>')
 
 # ---------- the sheet ----------
 def sheet():
-    top = (f'{sticker(40, 36)}'
-           f'<div style="position: absolute; left: 236px; top: 40px; width: 360px">'
+    top = (f'{sticker(40, 30, 160)}'
+           f'<div style="position: absolute; left: 212px; top: 40px; width: 400px">'
            f'{kicker("Greenwich Village &middot; Since 1962")}'
-           f'<div style="margin-top: 4px; font-family: {DISP}; font-size: 78px; line-height: 0.92; color: {RED}; text-shadow: 3px 3px 0 {NAVY}">AZIZ\'S PIZZA</div>'
-           f'<div style="margin-top: 8px; font-family: {BODY}; font-weight: 700; font-size: 20px; line-height: 1.2; color: {NAVY}">Free delivery, Village to Midtown.<br>Every day, 11 AM to 2 AM.</div>'
+           f'<div style="margin-top: 4px; font-family: {DISP}; font-size: 58px; line-height: 1; white-space: nowrap; color: {RED}; text-shadow: 3px 3px 0 {NAVY}">AZIZ\'S PIZZA</div>'
+           f'<div style="margin-top: 4px; font-family: {BODY}; font-weight: 700; font-size: 19px; line-height: 1.2; color: {NAVY}">Free delivery, Village to Midtown. 11 AM to 2 AM.</div>'
            f'</div>'
-           f'<div style="position: absolute; left: 236px; top: 168px; width: 380px; display: flex; align-items: baseline; gap: 12px">'
+           f'<div style="position: absolute; left: 212px; top: 146px; width: 400px; display: flex; align-items: baseline; gap: 12px">'
            f'<div style="font-family: {COND}; font-weight: 700; font-size: 20px; letter-spacing: 0.1em; color: {RED}">CALL</div>'
-           f'<div style="font-family: {DISP}; font-size: 50px; line-height: 1; color: {NAVY}">212-555-0629</div></div>'
-           f'{burst(608, 28)}')
-    hero = (f'<div style="position: absolute; left: 40px; top: 236px; width: 736px; height: 330px; box-sizing: border-box; border: 4px solid {RED}; overflow: hidden">'
-            f'<img src="assets/still-delivery.jpg" alt="Peter in a marble office lobby with a stack of pizza boxes held on by a bungee cord" style="position: absolute; left: 0; top: 0; width: 728px; height: 322px; object-fit: cover; display: block">'
+           f'<div style="font-family: {DISP}; font-size: 46px; line-height: 1; color: {NAVY}">212-555-0629</div></div>'
+           f'{burst(624, 24, 150)}')
+    hero = (f'<div style="position: absolute; left: 40px; top: 214px; width: 736px; height: 282px; box-sizing: border-box; border: 4px solid {RED}; overflow: hidden">'
+            f'<img src="assets/still-delivery.jpg" alt="Peter in a marble office lobby with a stack of pizza boxes held on by a bungee cord" style="position: absolute; left: 0; top: 0; width: 728px; height: 274px; object-fit: cover; object-position: 50% 30%; display: block">'
             f'<div style="position: absolute; left: 0; bottom: 0; background: {NAVY}; padding: 7px 14px 6px; font-family: {BODY}; font-weight: 600; font-size: 18px; line-height: 1.2; color: {PAPER}">'
-            f'Our driver, 42 blocks and still smiling. Hot to your lobby, any floor.</div></div>'
-            f'{warning_slip(552, 418)}')
+            f'Our driver, 42 blocks and still smiling. Hot to any lobby.</div></div>'
+            f'{warning_slip(528, 232)}')
     c1 = ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(PIES))
     c2 = ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(START))
     c3 = (''.join(dish(n, p, d, 10) for _, n, p, d in MORN)
-          + f'<div style="margin-top: 12px">{head("DRINKS")}</div>'
+          + f'<div style="margin-top: 14px">{head("DRINKS")}</div>'
           + ''.join(dish(n, p, d, 8 if i else 10) for i, (_, n, p, d) in enumerate(DRINK)))
-    menu = (f'<div style="position: absolute; left: 40px; top: 584px; width: 736px; display: flex; gap: 22px">'
+    menu = (f'<div style="position: absolute; left: 40px; top: 512px; width: 736px; display: flex; gap: 20px">'
             f'<div style="width: 250px">{head("PIES", "18 inch")}{c1}</div>'
             f'<div style="width: 1px; background: {NAVY}; opacity: 0.35"></div>'
-            f'<div style="width: 220px">{head("STARTERS")}{c2}'
+            f'<div style="width: 222px">{head("STARTERS")}{c2}'
             f'<div style="margin-top: 12px; font-family: {BODY}; font-weight: 700; font-size: 16px; line-height: 1.25; color: {RED}">Our deck oven runs hotter than a small sun.</div></div>'
             f'<div style="width: 1px; background: {NAVY}; opacity: 0.35"></div>'
-            f'<div style="width: 220px">{head("MORNINGS", "Sat, Sun")}{c3}</div>'
+            f'<div style="width: 222px">{head("WEEKENDS", "to noon")}{c3}</div>'
             f'</div>')
-    foot = (f'<div style="position: absolute; left: 40px; top: 1000px; width: 736px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {INK}">'
-            f'<span>Prices subject to change. Drivers carry less than $20. Office accounts welcome, Bugle newsroom ask for Betty.</span>'
+    foot = (f'<div style="position: absolute; left: 40px; top: 996px; width: 736px; display: flex; justify-content: space-between; font-family: {BODY}; font-size: 14px; line-height: 1.2; color: {INK}">'
+            f'<span>Prices subject to change. Drivers carry under $20. Bugle newsroom orders, ask for Betty.</span>'
             f'<span style="white-space: nowrap; margin-left: 12px">Form 2004-SM2</span></div>')
     return (f'<div style="position: relative; width: {FW}px; height: {FH}px; overflow: hidden; background: {PAPER}; color: {INK}">'
             f'<img src="assets/paper-grain.png" alt="" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: {FW}px; height: {FH}px; object-fit: cover; opacity: 0.22; display: block">'

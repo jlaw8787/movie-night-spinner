@@ -98,14 +98,14 @@ def ticket(o, x, y):
 
 def matchbook(o, x, y):
     """Club matchbook, cover folded open, striker strip at the bottom."""
-    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 196px; height: 92px; background: {RED}; '
+    o.append(f'<div style="position: absolute; left: {x}px; top: {y}px; width: 196px; height: 104px; background: {RED}; '
              f'box-shadow: 0 3px 8px rgba(0,0,0,0.42); transform: rotate(-4deg); overflow: hidden">'
-             f'<div style="position: absolute; left: 0; top: 0; width: 196px; height: 70px; text-align: center">'
+             f'<div style="position: absolute; left: 0; top: 0; width: 196px; height: 82px; text-align: center">'
              f'<div style="font-family: {DISP}; font-size: 26px; color: #fbf6ee; line-height: 1; margin-top: 10px; letter-spacing: 0.04em">JAKE\'S CORNER</div>'
              f'<div style="font-family: {DISP}; font-size: 14px; color: #fbf6ee; letter-spacing: 0.14em; line-height: 1; margin-top: 6px">MIAMI BEACH</div>'
              f'<div style="font-family: {BODY}; font-weight: 700; font-size: 14px; color: #fbf6ee; line-height: 1; margin-top: 5px">JEfferson 1-1949</div></div>'
-             f'<div style="position: absolute; left: 0; top: 72px; width: 196px; height: 20px; background: #2a201b"></div>'
-             f'<div style="position: absolute; left: 0; top: 76px; width: 196px; height: 12px; '
+             f'<div style="position: absolute; left: 0; top: 84px; width: 196px; height: 20px; background: #2a201b"></div>'
+             f'<div style="position: absolute; left: 0; top: 88px; width: 196px; height: 12px; '
              f'background: repeating-linear-gradient(90deg, #4a3a30 0 3px, #2a201b 3px 6px)"></div></div>')
 
 # ---------------- FRONT: program cover ----------------
@@ -125,7 +125,7 @@ def front():
              f'style="display: block; width: {CW - 8}px; height: {HERO_H}px"></div>')
     o.append(f'<div style="position: absolute; left: {L}px; top: 704px; width: {CW}px; font-family: {BODY}; font-style: italic; font-size: 19px; '
              f'line-height: 1.3; color: {MUTE}">Detroit, 1949. The night the Bronx Bull took the title.</div>')
-    ticket(o, 496, 214)
+    ticket(o, 496, 246)
 
     bouts = [('1943', 'vs. Robinson', 'New York. Ray\'s first loss.'),
              ('1947', 'vs. Janiro', 'He wasn\'t pretty no more.'),
@@ -189,7 +189,7 @@ def back():
 
     o.append(f'<div style="position: absolute; left: {L}px; top: 966px; width: {CW}px; font-family: {BODY}; font-size: 16px; line-height: 1.35; color: {MUTE}">'
              'Coffee or espresso .15. Prices subject to change. Positively no minors served. Form 15-R. Miami Beach, Fla., 1956.</div>')
-    matchbook(o, 580, 172)
+    matchbook(o, 566, 166)
     return page(''.join(o), 'back')
 
 FACES = {'front': front(), 'back': back()}
