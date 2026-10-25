@@ -1,0 +1,30 @@
+{
+ "fmt": "annietable",
+ "fn": "fmtAnnieTable",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Front",
+  "Back"
+ ],
+ "mm": [
+  215.9,
+  279.4
+ ],
+ "fonts": "family=Fraunces:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Archivo+Narrow:wght@400;600;700&family=Covered+By+Your+Grace",
+ "fams": [
+  "Fraunces",
+  "Archivo Narrow",
+  "Covered By Your Grace"
+ ],
+ "phone": {
+  "disp": "'Fraunces',serif",
+  "title": "'Fraunces',serif",
+  "name": "'Fraunces',serif",
+  "body": "'Archivo Narrow',sans-serif",
+  "price": "'Fraunces',serif",
+  "note": "'Fraunces',serif"
+ }
+}

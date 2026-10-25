@@ -1,0 +1,43 @@
+<div style="position: absolute; left: 0; top: 0; width: 816px; height: 1056px; font-family: 'Courier Prime', 'Courier New', monospace; color: {{INK}}">
+
+  <!-- Printed letterhead, two inks -->
+  <div style="position: absolute; left: 64px; top: 56px; width: 48px; height: 48px; background: {{NAVY}}">
+    <div style="position: absolute; left: 8px; bottom: 8px; width: 6px; height: 9px; background: #fbf8f0"></div>
+    <div style="position: absolute; left: 17px; bottom: 8px; width: 6px; height: 16px; background: #fbf8f0"></div>
+    <div style="position: absolute; left: 26px; bottom: 8px; width: 6px; height: 23px; background: #fbf8f0"></div>
+    <div style="position: absolute; left: 35px; bottom: 8px; width: 6px; height: 32px; background: {{RED}}"></div>
+  </div>
+  <div style="position: absolute; left: 126px; top: 52px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 36px; line-height: 1; letter-spacing: 0.14em; color: {{NAVY}}">PEMROSE</div>
+  <div style="position: absolute; left: 127px; top: 92px; font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 12px; line-height: 1; letter-spacing: 0.5em; color: {{RED}}">CORPORATION</div>
+  <div style="position: absolute; right: 64px; top: 58px; text-align: right; font-family: 'Archivo', sans-serif">
+    <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.22em; color: {{RED}}">INTEROFFICE MEMORANDUM</div>
+    <div style="font-weight: 500; font-size: 12px; letter-spacing: 0.06em; color: {{SOFT}}; margin-top: 6px">Not for outside distribution</div>
+  </div>
+  <div style="position: absolute; left: 64px; top: 122px; width: 688px; height: 3px; background: {{NAVY}}"></div>
+  <div style="position: absolute; left: 64px; top: 128px; width: 688px; height: 1px; background: {{RED}}"></div>
+
+  <!-- Form fields: printed labels, typed fills -->
+  <div style="position: absolute; left: 64px; top: 150px; width: 688px">
+    {{FIELDS}}
+  </div>
+
+  <!-- Mailroom receiving stamp -->
+  {{STAMP}}
+
+  <!-- Typed memo -->
+  <section style="position: absolute; left: 64px; top: {{BODY_TOP}}px; width: 688px; font-size: 17px; line-height: 1.42">
+    {{BODY}}
+  </section>
+
+  <section style="position: absolute; left: 64px; top: {{MENU_TOP}}px; width: 688px">
+    {{MENU_HEAD}}
+    <div style="display: flex; gap: 40px; margin-top: 18px">
+      <div style="flex: 1">{{EXEC_LEFT}}</div>
+      <div style="width: 1px; background: rgba(31,34,48,0.25)"></div>
+      <div style="flex: 1">{{EXEC_RIGHT}}</div>
+    </div>
+  </section>
+
+  <div style="position: absolute; right: 64px; top: 952px; font-size: 16px">(continued)</div>
+  {{FOOT}}
+</div>
