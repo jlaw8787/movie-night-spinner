@@ -1,0 +1,30 @@
+{
+ "fmt": "boatdrinks",
+ "fn": "fmtBoatdrinks",
+ "faces": [
+  "front.html",
+  "back.html"
+ ],
+ "names": [
+  "Bar",
+  "Kitchen"
+ ],
+ "mm": [
+  216,
+  216
+ ],
+ "fonts": "family=Kavoon&family=Barlow:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Caveat:wght@600",
+ "fams": [
+  "Kavoon",
+  "Barlow",
+  "Caveat"
+ ],
+ "phone": {
+  "disp": "'Kavoon',serif",
+  "title": "'Kavoon',serif",
+  "name": "'Barlow',sans-serif",
+  "body": "'Barlow',sans-serif",
+  "price": "'Barlow',sans-serif",
+  "note": "'Barlow',sans-serif"
+ }
+}
