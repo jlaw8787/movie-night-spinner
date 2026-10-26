@@ -160,12 +160,17 @@ window.MENU_FORMATS[ID]=ctx=>{
   const items={};C.forEach(([k])=>items[k]=(ctx.menu[k]||[]).slice(0,4));
   const pr=prices(items,e,ei,egg);
   const menuTop=118,lounge=winks.slice(0,2),fineH=lounge.length?120:64,menuH=H-menuTop-fineH-20;
-  const tiers=[{d:28,n:21,g:18,h:34,nl:2},{d:26,n:19,g:14,h:30,nl:2},{d:24,n:18,g:11,h:28,nl:2},{d:22,n:17,g:9,h:26,nl:1},{d:21,n:16,g:7,h:24,nl:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:5,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
+  const tiers=[{d:30,n:22,g:20,h:38,nl:3},{d:28,n:21,g:18,h:34,nl:2},{d:26,n:19,g:14,h:30,nl:2},{d:24,n:18,g:11,h:28,nl:2},{d:22,n:17,g:9,h:26,nl:1},{d:21,n:16,g:7,h:24,nl:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:5,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
   let dmax=3;const priceW=d=>d*2.6+8;
   const heightOf=tr=>C.reduce((s,[k])=>s+tr.h*1.3+12+items[k].reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),e.cwd));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.32+(nl?3:0)+tr.g},0),0);
-  let tr=null;for(const x of tiers)if(heightOf(x)*1.12<=menuH){tr=x;break}
+  let tr=null;for(const x of tiers)if(heightOf(x)*1.02<=menuH){tr=x;break}
   if(!tr){tr=tiers[tiers.length-1];dmax=2}
-  const spare=Math.max(0,menuH-heightOf(tr)*1.12),cgap=12+Math.min(34,spare/Math.max(1,C.length));
+  /* fill the column: when the bill of fare is short, a window photo takes the spare depth (flex, so it sizes to what is really left) */
+  const est=heightOf(tr),spare0=Math.max(0,menuH-est);
+  const winSrc=stills[2]?ctx.img(stills[2],"w1280"):stills[0]&&stills[1]?ctx.img(stills[0],"w1280"):"";
+  const winPos=stills[2]?"50% 40%":heroPos;
+  const usePhoto=winSrc&&spare0>230;
+  const spare=usePhoto?Math.min(spare0,60):spare0,cgap=12+Math.min(usePhoto?20:56,spare/Math.max(1,C.length));
   const head=l=>{
     if(e.bar==="ribbon")return `<div style="display:inline-block;background:${acc};color:${paper};font:${e.dw} ${tr.h}px/1.15 ${DF};padding:2px 14px 3px;margin-bottom:8px;${up?"text-transform:uppercase;letter-spacing:.04em;":""}">${l}</div>`;
     if(e.bar==="block")return `<div style="background:${band};color:${bandText};font:${e.dw} ${tr.h}px/1.1 ${DF};padding:3px 10px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">${l}</div>`;
@@ -180,7 +185,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const backHead=`<div style="position:absolute;left:${CX}px;width:${CW}px;top:${e.border==="none"?30:34}px">
     ${kick(sign.length>26?"Served at your seat":sign,acc,14)}
     <div style="font:${e.dw} 44px/1.05 ${DF};color:${ink};margin-top:6px;${up?"text-transform:uppercase;letter-spacing:.03em;":""}">${fH}</div></div>`;
-  const menuBox=`<div style="position:absolute;left:${CX}px;width:${CW}px;top:${menuTop}px;height:${menuH}px;overflow:hidden">${menuHtml}</div>`;
+  const winPhoto=usePhoto?`<div style="flex:1 1 auto;min-height:0;position:relative;overflow:hidden;background:#222;box-shadow:0 0 0 2px ${acc};margin:4px 2px 2px">${photo(winSrc,pf,winPos,overlay())}<div style="position:absolute;left:0;right:0;bottom:0;padding:22px 12px 8px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));font:700 14px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:#fbf6ea">${esc(e.tt)}, car ${esc(num.slice(-2))}</div></div>`:"";
+  const menuBox=`<div style="position:absolute;left:${CX}px;width:${CW}px;top:${menuTop}px;height:${menuH}px;overflow:hidden;display:flex;flex-direction:column${usePhoto?"":";justify-content:space-between"}">${menuHtml.replace(new RegExp("margin-bottom:"+cgap+"px","g"),usePhoto?"margin-bottom:"+cgap+"px;flex:none":"flex:none")}${winPhoto}</div>`;
   const fine2=`<div style="position:absolute;left:${CX}px;width:${CW}px;bottom:${e.border==="none"?20:26}px">
     ${lounge.length?`<div style="border-top:1px solid ${mix(ink,paper,.6)};padding-top:8px">${kick(t.lounge,acc,14)}${lounge.map(w=>`<div style="font:italic 400 15px/1.3 ${BF};color:${soft};margin-top:3px;${clamp(1)}">${esc(w)}.</div>`).join("")}</div>`:""}
     <div style="font:400 15px/1.3 ${BF};color:${soft};margin-top:8px">Write your order on the check. Prices subject to change.${fam?" All drinks alcohol free.":""} Images: TMDB.</div></div>`;

@@ -28,3 +28,6 @@ Result: same genre system, but each film reads as its own place.
 - Bigger, bolder pictures: the hero still fills at least 40 percent of the front face; the second still at least 25 percent of its face. Fewer, larger photos beat many small boxes. Captions must not describe a specific scene unless that still was chosen for it.
 - More movie world: push the genre's venue look harder (materials, signage, real-photo textures) so it feels like a place, not a template; the film's logo, colours and flavour sit on top.
 - Logos in colour: show the TMDB title logo in its own colours (no black-ink recolouring). Put it on a panel that suits it (dark or light) so it reads.
+
+## Owner ruling on logos (Oct 26, 14:04): "I would be happy with logos, movie logos or whatever"
+The film's own TMDB title logo is always allowed, even when it carries a studio mark (Disney, Marvel, Pixar). Prefer the logo over set type. Formats must make it read: pick a light or dark panel to suit the logo, never black-ink recolouring. The no-brands rule still covers everything else on the menu.

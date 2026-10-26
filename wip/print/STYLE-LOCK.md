@@ -56,6 +56,9 @@ A real menu, printed by a food venue in the film's world, in that year and place
    - Self-check before reporting: for every picture, ask "could this pass as clip art or a vector icon?" If yes, replace it with a real photo or still. Report each picture's source in the reply.
    - Review gate: any menu with flat art is sent back, whatever its grade.
 
+## Logos (owner ruling, Oct 26)
+26. The film's own title logo is always allowed, studio marks included. Prefer it over set type; put it on a panel that suits it. The no-brands rule covers everything else.
+
 ## Film variables (the only things that change per film)
 Venue and its name, palette, display face, logo or sign, hero picture, section names, dishes and wording, character note, Easter eggs, prop accent, format.
 
