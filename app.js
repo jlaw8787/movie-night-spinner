@@ -285,7 +285,7 @@ function ensureExact(f){
     for(let tryN=0;tryN<2;tryN++){
       try{const r=await fetch(filmFile(f));if(!r.ok)break;const d=await r.json();
         Object.assign(f,{T:d.T,D:d.D,P:d.P,S:d.S,M:d.M,W:d.W,K:d.K,_full:true});
-        if(d.edition)EDITIONS[f.id]=d.edition;if(d.recipe)RECIPE_MENUS[f.id]=d.recipe;return}
+        if(d.edition)EDITIONS[f.id]=d.edition;if(d.recipe)RECIPE_MENUS[f.id]=d.recipe;if(d.lib)f._lib=d.lib;return}
       catch(e){}
     }
     delete _filmLoads[f.id];
@@ -696,6 +696,16 @@ function phoneView(f,spec,menu){
 $("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
 
 let renderId=0;
+/* menu format library: one script per printed-menu format, fetched the first time a film needs it */
+const _libLoads={};
+function libLoad(k){
+  if(window.MENU_FORMATS&&window.MENU_FORMATS[k])return Promise.resolve(true);
+  window.MENU_FORMATS=window.MENU_FORMATS||{};
+  return _libLoads[k]||(_libLoads[k]=new Promise(ok=>{
+    const s=document.createElement("script");s.src="menu-formats/"+k+".js?v="+(window.LIB_VER&&LIB_VER[k]||"1");
+    s.onload=()=>ok(!!window.MENU_FORMATS[k]);s.onerror=()=>{delete _libLoads[k];ok(false)};document.head.appendChild(s);
+  }));
+}
 async function show(f,preferSig){
   const id=++renderId;
   current=f;
@@ -725,6 +735,20 @@ async function show(f,preferSig){
     refitP();await document.fonts.ready;refitP();
     return;
   }
+  if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
+    try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
+      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f,menu,poster:lobbyPoster(f),stills:L.stills||[],logo:L.logo,palette:L.palette,flavour:L.flavour,era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
+      const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
+      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);
+      {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
+      await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
+      phoneView(null);styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
+      const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
+      refitL();await document.fonts.ready;refitL();scalePreview();
+      return;
+    }catch(e){console.warn("menu format failed",e)}
+  }
+  current.libSheet=null;
   phoneView(null);
   styleCard(card,f);card.style.transform="";
   const lobby=lobbyPoster(f);
@@ -1543,7 +1567,7 @@ async function exportMenu(kind){
     let data,filename;
     if(kind==="pdf"){
       const {jsPDF}=window.jspdf;
-      const spec=fmtSpec(current),sh=card.classList.contains("fx-paper")&&spec&&fmtSheet(spec);
+      const spec=fmtSpec(current),sh=card.classList.contains("fx-paper")&&(spec&&fmtSheet(spec)||current.libSheet);
       let pdf;
       if(sh){
         const mm=sh.mm||[sh.w*25.4/96,sh.h*25.4/96],o=mm[0]>mm[1]?"landscape":"portrait";
