@@ -268,7 +268,8 @@ window.MENU_FORMATS[ID]=ctx=>{
         safe:JSON.stringify({pos:[[50,35],[50,20],[32,35],[68,35],[50,55]],items:[{q:"[data-sp=logo]",c:[["l",16,"b",16],["r",16,"b",16],["l",16,"t",16],["r",16,"t",16]]}]})})}</div>`;
   /* ticket prop: admit one with a perforated stub */
   const ty=PMq?SY+8+570+14:SY+SH+22,tw=PMq?282:262,th=PMq?172:196;
-  const pT=fitType(prop.title,tw-86,60,E.dcw,30,18,1.05,2);
+  const pT=fitType(prop.title,tw-(PMq?136:104),60,E.dcw,30,18,1.05,2);
+  {const lw=Math.max(...String(prop.title).split(/\s+/).map(w=>w.length)),room=tw-58-34;pT.z=Math.max(16,Math.min(pT.z,Math.floor(room/(lw*0.74))))}
   const ticket=`<div style="position:absolute;left:22px;top:${ty}px;width:${tw}px;height:${th}px;transform:rotate(${(T.tilt*.8).toFixed(2)}deg);background:linear-gradient(160deg,rgba(255,255,255,.35),transparent 50%),${dkPaper?"#f3ecd9":mix(E.paper,ACC,.12)};border:2px solid ${ACC};box-shadow:0 3px 9px rgba(0,0,0,.22);display:flex;color:#231d18">
       <div style="flex:1;padding:14px 14px 10px 16px;display:flex;flex-direction:column;gap:5px;overflow:hidden">
         <div style="${caps(15,fit(ACC,"#f3ecd9","#5a2a1a",3.2),.2)}">Admit one</div>
