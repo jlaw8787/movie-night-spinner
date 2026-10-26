@@ -1,3 +1,94 @@
+/* shared picture helper (same block in placemat, stadium, prom, kiosk, invite; first file to load wins).
+   still: a still that is mostly blank white or near black is swapped for the next candidate, the least bad one is kept,
+          a dark keeper gets lifted; a failed still falls through to the next one, then the poster.
+   logo: transparent padding is trimmed and the logo is sized by area into its max box, so the panel wraps the logo.
+   place: props and logo panels on a photo go to the candidate spot that covers the least face and detail
+          (skin tone weighted edges), and the crop can slide to give faces room. */
+(function(){
+if(window.__PICK)return;
+const P=window.__PICK={};
+const grab=(img,w)=>{const c=document.createElement("canvas");c.width=w;c.height=Math.max(4,Math.round(w*img.naturalHeight/img.naturalWidth));const x=c.getContext("2d",{willReadFrequently:true});x.drawImage(img,0,0,c.width,c.height);return {w:c.width,h:c.height,d:x.getImageData(0,0,c.width,c.height).data}};
+P.stats=img=>{const g=grab(img,64),d=g.d;let n=0,wh=0,bl=0,s=0;for(let i=0;i<d.length;i+=4){const r=d[i],gg=d[i+1],b=d[i+2],L=.2126*r+.7152*gg+.0722*b,mx=Math.max(r,gg,b),mn=Math.min(r,gg,b);n++;s+=L;if(L>228&&mx-mn<34)wh++;if(L<26)bl++}return {white:wh/n,black:bl/n,mean:s/n}};
+P.bad=st=>st.white>.28||st.black>.48||st.mean<42;
+P.score=st=>st.white*2+st.black+Math.max(0,70-st.mean)/70;
+P.still=img=>{
+  if(img.dataset.done){P.place(img);return}
+  let st;try{st=P.stats(img)}catch(e){img.dataset.done="1";P.place(img);return}
+  const sc=P.score(st);if(!img.__best||sc<img.__best.sc)img.__best={sc,src:img.src,st};
+  const alts=(img.dataset.alts||"").split("|").filter(Boolean),tries=+(img.dataset.tries||0);
+  if(P.bad(st)&&alts.length&&tries<4){img.dataset.tries=tries+1;img.dataset.alts=alts.slice(1).join("|");img.src=alts[0];return}
+  const b=img.__best;img.dataset.done="1";
+  if(b.st.mean<72&&!img.dataset.lift){img.dataset.lift="1";img.style.filter=(img.style.filter||"")+" brightness("+(b.st.mean<45?1.45:1.25)+")"}
+  if(b.src!==img.src){img.src=b.src;return}
+  P.place(img)};
+P.fail=img=>{const alts=(img.dataset.alts||"").split("|").filter(Boolean);
+  if(alts.length){img.dataset.alts=alts.slice(1).join("|");img.src=alts[0];return}
+  if(img.dataset.last&&img.src!==img.dataset.last){img.dataset.done="1";img.src=img.dataset.last}};
+/* saliency grid: edges, boosted where the colour is skin, lightly blurred so faces read as solid blocks */
+P.sal=img=>{
+  if(img.__sal&&img.__sal.src===img.src)return img.__sal;
+  const g=grab(img,96),w=g.w,h=g.h,d=g.d,N=w*h,L=new Float32Array(N),S=new Float32Array(N);
+  for(let i=0,p=0;i<d.length;i+=4,p++){const r=d[i],gg=d[i+1],b=d[i+2];L[p]=.299*r+.587*gg+.114*b;const cb=128-.1687*r-.3313*gg+.5*b,cr=128+.5*r-.4187*gg-.0813*b;S[p]=(cb>=77&&cb<=127&&cr>=137&&cr<=175&&L[p]>40&&L[p]<240)?1:0}
+  const E=new Float32Array(N);let em=0;
+  for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){const p=y*w+x,e=Math.abs(L[p+1]-L[p-1])+Math.abs(L[p+w]-L[p-w]);E[p]=e;em+=e}
+  em=em/N||1;const R=new Float32Array(N);
+  for(let p=0;p<N;p++)R[p]=Math.min(3,E[p]/em)*(.35+1.65*S[p]);
+  const G=new Float32Array(N);let tot=0;
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){let s=0,n=0;for(let j=-2;j<=2;j++)for(let i=-2;i<=2;i++){const yy=y+j,xx=x+i;if(yy<0||xx<0||yy>=h||xx>=w)continue;s+=R[yy*w+xx];n++}G[y*w+x]=s/n;tot+=s/n}
+  return img.__sal={src:img.src,w,h,G,tot:tot||1}};
+P.place=img=>{
+  const box=img.closest("[data-safe]");if(!box||!img.naturalWidth)return;
+  let cfg;try{cfg=JSON.parse(box.dataset.safe)}catch(e){return}
+  let sal;try{sal=P.sal(img)}catch(e){return}
+  const bw=box.clientWidth,bh=box.clientHeight;if(!bw||!bh)return;
+  const ib={x:img.offsetLeft,y:img.offsetTop,w:img.clientWidth||bw,h:img.clientHeight||bh};
+  const contain=getComputedStyle(img).objectFit==="contain";
+  const items=(cfg.items||[]).map(it=>({it,el:box.querySelector(it.q)})).filter(o=>o.el&&o.el.offsetWidth);
+  const fixed=(cfg.fixed||[]).map(q=>box.querySelector(q)).filter(Boolean).map(el=>({x:el.offsetLeft,y:el.offsetTop,w:el.offsetWidth,h:el.offsetHeight}));
+  const pos=cfg.pos&&cfg.pos.length&&!contain?cfg.pos:[[50,50]];
+  const p0=pos[0];let best=null;
+  for(const [px,py] of pos){
+    const s=contain?Math.min(ib.w/sal.w,ib.h/sal.h):Math.max(ib.w/sal.w,ib.h/sal.h),dw=sal.w*s,dh=sal.h*s,ox=ib.x+(ib.w-dw)*px/100,oy=ib.y+(ib.h-dh)*py/100;
+    const sum=(x0,y0,x1,y1)=>{const i0=Math.max(0,Math.floor((x0-ox)/s)),i1=Math.min(sal.w-1,Math.ceil((x1-ox)/s)),j0=Math.max(0,Math.floor((y0-oy)/s)),j1=Math.min(sal.h-1,Math.ceil((y1-oy)/s));let t=0;
+      for(let j=j0;j<=j1;j++){const cy=oy+(j+.5)*s;if(cy<y0||cy>y1)continue;for(let i=i0;i<=i1;i++){const cx=ox+(i+.5)*s;if(cx>=x0&&cx<=x1)t+=sal.G[j*sal.w+i]}}return t};
+    const vis=sum(0,0,bw,bh);let cost=-.6*vis/sal.tot+(Math.abs(px-p0[0])+Math.abs(py-p0[1]))/500;
+    const taken=fixed.slice(),pick=[];
+    for(const {it,el} of items){
+      const w=el.offsetWidth,h=el.offsetHeight;let bc=null;
+      it.c.forEach((c,ci)=>{const x=c[0]==="l"?c[1]:c[0]==="r"?bw-w-c[1]:(bw-w)/2+(c[1]||0),y=c[2]==="t"?c[3]:c[2]==="b"?bh-h-c[3]:(bh-h)/2+(c[3]||0);
+        let k=sum(x,y,x+w,y+h)/sal.tot*(it.w||1)+ci*.004;
+        for(const r of taken)if(x<r.x+r.w+6&&x+w+6>r.x&&y<r.y+r.h+6&&y+h+6>r.y)k+=10;
+        if(!bc||k<bc.k)bc={k,c,x,y,w,h}});
+      if(!bc)continue;cost+=bc.k;taken.push(bc);pick.push({el,c:bc.c})}
+    if(!best||cost<best.cost)best={cost,px,py,pick}}
+  if(!best)return;
+  if(!contain&&cfg.pos){const v=best.px+"% "+best.py+"%";img.style.objectPosition=v;box.querySelectorAll("[data-follow]").forEach(e=>e.style.objectPosition=v)}
+  for(const {el,c} of best.pick){const st=el.style;st.left=st.right=st.top=st.bottom="auto";
+    if(c[0]==="l")st.left=c[1]+"px";else if(c[0]==="r")st.right=c[1]+"px";else st.left=`calc(50% - ${el.offsetWidth/2}px + ${c[1]||0}px)`;
+    if(c[2]==="t")st.top=c[3]+"px";else if(c[2]==="b")st.bottom=c[3]+"px";else st.top=`calc(50% - ${el.offsetHeight/2}px + ${c[3]||0}px)`}};
+/* logo: trim transparent padding, size by area inside [maxW,maxH], then pick the stock that loses the fewest logo pixels:
+   dark pixels vanish on dark stock, light pixels on light stock; mid and multicolour logos stay on dark with a soft halo */
+P.logo=img=>{
+  const wrap=img.parentNode;
+  try{const mx=(wrap.dataset.lmax||"300,110").split(",").map(Number),A=+wrap.dataset.larea||mx[0]*mx[1]*.5;
+    const g=grab(img,Math.min(360,img.naturalWidth||360)),w=g.w,h=g.h,d=g.d;let x0=w,y0=h,x1=-1,y1=-1,dk=0,lt=0;
+    for(let y=0;y<h;y++)for(let x=0;x<w;x++){const i=(y*w+x)*4;if(d[i+3]>28){if(x<x0)x0=x;if(x>x1)x1=x;if(y<y0)y0=y;if(y>y1)y1=y}
+      if(d[i+3]>128){const lin=v=>{v/=255;return v<=.04045?v/12.92:Math.pow((v+.055)/1.055,2.4)},Y=.2126*lin(d[i])+.7152*lin(d[i+1])+.0722*lin(d[i+2]);if(Y<.14)dk++;if(Y>.5)lt++}}
+    if(x1>=0){const fw=(x1-x0+1)/w,fh=(y1-y0+1)/h,a=fw*img.naturalWidth/(fh*img.naturalHeight);
+      let lh=Math.min(mx[1],Math.sqrt(A/a)),lw=lh*a;if(lw>mx[0]){lw=mx[0];lh=lw/a}
+      const W=lw/fw,H=lh/fh;
+      Object.assign(wrap.style,{position:"relative",overflow:"hidden",width:Math.round(lw)+"px",height:Math.round(lh)+"px",display:"block",flex:"none"});
+      Object.assign(img.style,{position:"absolute",maxWidth:"none",maxHeight:"none",left:(-x0/w*W)+"px",top:(-y0/h*H)+"px",width:W+"px",height:H+"px",objectFit:"fill",display:"block"})}
+    const p=img.closest("[data-lpanel]");
+    if(p&&p.dataset.light&&p.dataset.dark){const light=dk>lt;p.style.background=light?p.dataset.light:p.dataset.dark;img.style.filter=light?"drop-shadow(0 0 1px rgba(0,0,0,.3))":"drop-shadow(0 0 1.5px rgba(255,255,255,.45))";
+      p.querySelectorAll("[data-pk]").forEach(e=>{if(!e.dataset.ink0)e.dataset.ink0=e.style.color;e.style.color=light&&p.dataset.lightink?p.dataset.lightink:e.dataset.ink0})}
+  }catch(e){}
+  const box=img.closest("[data-safe]");if(box){const s=box.querySelector("[data-pick]");if(s&&s.dataset.done)P.place(s)}};
+P.logoFail=img=>{const p=img.closest("[data-lpanel]");img.style.display="none";const wrap=img.parentNode;if(wrap&&wrap.dataset.lmax){wrap.style.width="auto";wrap.style.height="auto"}
+  const t=p&&p.querySelector("[data-ltype]");if(t)t.style.display="";if(p&&p.dataset.type)p.style.background=p.dataset.type;
+  const box=img.closest("[data-safe]");if(box){const s=box.querySelector("[data-pick]");if(s&&s.dataset.done)P.place(s)}};
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>setTimeout(()=>document.querySelectorAll("img[data-pick]").forEach(i=>{if(i.dataset.done)P.place(i)}),60));
+})();
 /* Format: placemat. A restaurant's printed paper placemat, one landscape face, 1344x960.
    Ported from the kids pilot (wip/genre/kids). Era sets type pairing, paper, border, print process and photo
    treatment; tone sets wear, contrast and photo mood. Film logo, palette, stills and flavour sit on top.
@@ -144,11 +235,12 @@ window.MENU_FORMATS.placemat=ctx=>{
   const photoFilter=L.photo+T.photo;
 
   /* photos: still, or the poster on its own blurred bed when the film has no stills */
-  const photo=(p,pos,isPoster)=>{
+  const photo=(p,pos,isPoster,alts)=>{
     const src=img(p,isPoster?"w780":"w1280");if(!src)return"";
+    const pick=`data-pick data-alts="${(alts||[]).map(a=>img(a,"w1280")).join("|")}" data-last="${ctx.poster?img(ctx.poster,"w780"):""}"${isPoster?' data-done="1"':""} onload="window.__PICK&&__PICK.still(this)" onerror="window.__PICK&&__PICK.fail(this)"`;
     const base=isPoster
-      ?`<img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(18px) ${photoFilter} brightness(.7)"><img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right center;filter:${photoFilter}">`
-      :`<img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:${photoFilter}">`;
+      ?`<img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(18px) ${photoFilter} brightness(.7)"><img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right center;filter:${photoFilter}" ${pick}>`
+      :`<img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:${photoFilter}" ${pick}>`;
     return base
       +(L.halftone?`<div style="position:absolute;inset:0;background:${HALFTONE};mix-blend-mode:multiply;opacity:.55"></div>`:"")
       +(T.sheen?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.22),rgba(255,255,255,0) 38%)"></div>`:"")
@@ -160,12 +252,12 @@ window.MENU_FORMATS.placemat=ctx=>{
 
   /* logo panel */
   const lr=logo&&logo[0]&&logo[1]&&logo[2]?logo[1]/logo[2]:0;
-  const lh=lr?Math.min(120,Math.round(330/lr)):0,lw=lr?Math.round(lh*lr):0;
+  let lh=lr?Math.min(140,Math.sqrt(40000/lr)):0,lw=lh*lr;if(lw>480){lw=480;lh=lw/lr}lw=Math.round(lw);lh=Math.round(lh);
   const tl=f.title.length,tsz=tl<=10?72:tl<=20?60:tl<=34?48:tl<=48?40:36;
   const dark=eg==="now"?"rgba(16,18,24,.74)":`${K.deep}e0`,light=eg==="e40"?"rgba(241,227,196,.95)":"rgba(255,251,242,.94)";
   const titleType=`font:${L.dispW} ${tsz}px/1.04 ${L.disp};color:#fff;${caps}letter-spacing:${L.track};text-shadow:3px 3px 0 ${L.red}`;
-  const lpanel=`<div data-fit="lpanel" data-light="${light}" data-lightink="${L.red}" style="position:absolute;left:22px;bottom:22px;max-width:540px;padding:16px 22px 14px;border-radius:${Math.min(L.radius,14)}px;background:${dark};box-shadow:0 6px 18px rgba(0,0,0,.35),inset 0 0 0 2px rgba(255,255,255,.16)${T.gold?",inset 0 0 0 5px rgba(201,162,74,.8)":""}">
-      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${img(logo[0],"w500")}" onload="window.__placematLogo&&__placematLogo(this,true)" onerror="window.__placematLogo&&__placematLogo(this,false)" style="display:block;height:${lh}px;width:${lw}px;max-width:496px;object-fit:contain"><div data-fallback style="display:none;${titleType}">${esc(f.title)}</div>`
+  const lpanel=`<div data-fit="lpanel" data-lpanel data-sp="logo" data-dark="${dark}" data-light="${light}" data-lightink="${L.red}" style="position:absolute;left:22px;bottom:22px;max-width:540px;padding:16px 22px 14px;border-radius:${Math.min(L.radius,14)}px;background:${dark};box-shadow:0 6px 18px rgba(0,0,0,.35),inset 0 0 0 2px rgba(255,255,255,.16)${T.gold?",inset 0 0 0 5px rgba(201,162,74,.8)":""}">
+      ${lr?`<span data-lmax="480,140" data-larea="40000" style="display:block;width:${lw}px;height:${lh}px"><img crossorigin="anonymous" alt="${esc(f.title)}" src="${img(logo[0],"w500")}" onload="window.__PICK&&__PICK.logo(this)" onerror="this.parentNode.style.display='none';window.__placematLogo&&__placematLogo(this,false)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain"></span><div data-fallback style="display:none;${titleType}">${esc(f.title)}</div>`
           :`<div data-fit="title" style="${titleType}">${esc(f.title)}</div>`}
       <div data-pk style="font:800 15px/1 ${L.body};letter-spacing:.24em;color:${L.hi};margin-top:10px;text-transform:uppercase">${esc(L.nowShowing)} &nbsp;/&nbsp; ${esc(f.year)}</div>
     </div>`;
@@ -203,7 +295,7 @@ window.MENU_FORMATS.placemat=ctx=>{
     receipt:`background:${pbg};border-radius:2px;`,
     card:`background:${pbg};border-radius:6px;border-bottom:8px solid ${K.lab};`
   }[pk]||`background:${pbg};border-radius:6px;border-bottom:8px solid ${K.lab};`;
-  const propHTML=`<div data-fit="prop" style="position:absolute;right:-10px;top:-14px;width:214px;max-height:200px;box-sizing:border-box;${propStyle}padding:13px 18px 12px;transform:rotate(${T.tilt}deg);box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden">
+  const propHTML=`<div data-fit="prop" data-sp="prop" style="position:absolute;right:14px;top:14px;width:214px;max-height:200px;box-sizing:border-box;${propStyle}padding:13px 18px 12px;transform:rotate(${T.tilt}deg);box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden">
       ${tex(.35)}
       <div style="position:relative;font:800 14px/1 ${L.body};letter-spacing:.18em;color:${K.lab};text-transform:uppercase">${esc(pk==="badge"?"Official badge":pk==="ticket"||pk==="stub"?"Admit one":pk==="receipt"?"Receipt":"Keep this")}</div>
       <div data-fit="ptitle" style="position:relative;font:${L.dispW} 20px/1.05 ${L.disp};color:${L.ink};${caps}margin:6px 0 6px">${esc(p.title)}</div>
@@ -238,18 +330,18 @@ window.MENU_FORMATS.placemat=ctx=>{
     ${tex(T.tex)}
     <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${80+T.vig*160}px rgba(110,80,40,${T.vig*.6});pointer-events:none"></div>
 
-    <div style="position:absolute;left:0;top:0;width:${heroW}px;height:${heroH}px;overflow:hidden;background:${K.deep}">
-      ${photo(heroP,"center 40%",heroIsPoster)}
+    <div data-safe='${JSON.stringify({pos:[[50,40],[50,22],[50,60],[30,40],[70,40]],items:[{q:"[data-sp=logo]",c:[["l",22,"b",22],["r",22,"b",22],["l",22,"t",22],["r",22,"t",22]]}]})}' style="position:absolute;left:0;top:0;width:${heroW}px;height:${heroH}px;overflow:hidden;background:${K.deep}">
+      ${photo(heroP,"50% 40%",heroIsPoster,stills.slice(5,8))}
       ${lpanel}
     </div>
     <div style="position:absolute;left:0;top:${heroH}px;width:${heroW}px;height:${gut}px;background:${gc}"></div>
     <div style="position:absolute;left:${heroW}px;top:0;width:${gut}px;bottom:0;background:${gc}"></div>
 
     <div style="position:absolute;left:0;top:${heroH+gut}px;width:${secW}px;bottom:0;background:${K.deep}">
-      <div style="position:absolute;inset:0;overflow:hidden">${secondP?photo(secondP,"center",false)
+      <div ${secondP?`data-safe='${JSON.stringify({pos:[[50,45],[50,25],[50,70],[35,45],[65,45]],fixed:["[data-sp=lab]"],items:[{q:"[data-sp=prop]",c:[["r",14,"t",14],["l",14,"t",14],["r",14,"b",14],["c",0,"t",14]]}]})}'`:""} style="position:absolute;inset:0;overflow:hidden">${secondP?photo(secondP,"50% 45%",false,stills.slice(2,5))
         :`<div style="position:absolute;inset:0;padding:30px 230px 30px 30px;display:flex;align-items:center;font:${L.dispW} 30px/1.15 ${L.disp};color:#fff;${caps}">${esc(sentence(tag||T.voice))}</div>`}
-        ${secondP?`<div style="position:absolute;left:14px;bottom:14px;background:rgba(255,253,247,.92);padding:6px 12px;border-radius:${Math.min(L.radius,4)}px;font:800 14px/1.2 ${L.body};letter-spacing:.06em;color:${L.ink};box-shadow:0 2px 6px rgba(0,0,0,.3)">ON THE BIG SCREEN TONIGHT</div>`:""}</div>
-      ${propHTML}
+        ${secondP?`<div data-sp="lab" style="position:absolute;left:14px;bottom:14px;background:rgba(255,253,247,.92);padding:6px 12px;border-radius:${Math.min(L.radius,4)}px;font:800 14px/1.2 ${L.body};letter-spacing:.06em;color:${L.ink};box-shadow:0 2px 6px rgba(0,0,0,.3)">ON THE BIG SCREEN TONIGHT</div>`:""}
+      ${propHTML}</div>
     </div>
     <div style="position:absolute;left:${secW}px;top:${heroH+gut}px;width:${gut}px;bottom:0;background:${gc}"></div>
 

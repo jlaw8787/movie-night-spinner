@@ -260,8 +260,8 @@ function fit(faces,night){
       let dk=0,lt=0;for(let i=0;i<d.length;i+=4)if(d[i+3]>128){const y=(.2126*d[i]+.7152*d[i+1]+.0722*d[i+2])/255;s+=y;if(y<.36)dk++;if(y>.8)lt++;n++}
       const L=n?s/n:.5,DK=n?dk/n:0,LT=n?lt/n:0;
       /* the logo keeps its own colours; the plate behind it changes so it reads */
-      if(night&&(L<.4||DK>.3)){plate.style.background="#ece6d6";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.15)"}
-      if(!night&&(L>.62||LT>.5)){plate.style.background="#16191f";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.3)"}}catch(e){}
+      if(night&&(L<.4||DK>.3&&DK>LT)){plate.style.background="#ece6d6";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.15)"}
+      if(!night&&(L>.62||LT>.5&&LT>DK)){plate.style.background="#16191f";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.3)"}}catch(e){}
       const ar=lg.naturalWidth/lg.naturalHeight;let h=lg.offsetHeight;
       while(over()&&h>56){h-=8;lg.style.height=h+"px";lg.style.width=Math.min(318,Math.round(h*ar))+"px"}}}
   const t=fr.querySelector('[data-h="title"]');

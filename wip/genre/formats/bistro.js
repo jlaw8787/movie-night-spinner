@@ -4,7 +4,7 @@
    trim: crops baked-in letterbox bars and dead flat edges off a still, then cover-fits what is left.
    logo: scores a title logo against a dark and a light panel (20th percentile contrast, so multicolour
    logos read in every part) and returns the better panel; a weak best score gets a fine halo, never a recolour. */
-if(!window.__fmtLift||window.__fmtLift.v<1)window.__fmtLift={v:1,
+if(!window.__fmtLift||window.__fmtLift.v<2)window.__fmtLift={v:2,
   px(img,w){const cv=document.createElement("canvas");cv.width=w;cv.height=Math.max(8,Math.round(w*img.naturalHeight/img.naturalWidth));
     const cx=cv.getContext("2d");cx.drawImage(img,0,0,cv.width,cv.height);return{d:cx.getImageData(0,0,cv.width,cv.height).data,w:cv.width,h:cv.height}},
   trim(img,tries){try{
@@ -13,10 +13,10 @@ if(!window.__fmtLift||window.__fmtLift.v<1)window.__fmtLift={v:1,
     if(!bw||!bh){if((tries||0)<6)setTimeout(()=>window.__fmtLift.trim(img,(tries||0)+1),400);return}
     img.dataset.trim="1";
     const{d,w,h}=window.__fmtLift.px(img,160),L=(x,y)=>{const i=(y*w+x)*4;return .2126*d[i]+.7152*d[i+1]+.0722*d[i+2]};
-    const dead=(n,get)=>{let dk=0,s=0,s2=0;for(let j=0;j<n;j++){const l=get(j);if(l<28)dk++;s+=l;s2+=l*l}const m=s/n,v=s2/n-m*m;return dk/n>.94||(v<30&&(m<46||m>238))};
+    const dead=(n,get)=>{let dk=0,s=0,s2=0;for(let j=0;j<n;j++){const l=get(j);if(l<28)dk++;s+=l;s2+=l*l}const m=s/n,v=s2/n-m*m;return dk/n>.94||(dk/n>.74&&m<34)||(v<30&&(m<46||m>238))};
     const col=x=>dead(h,y=>L(x,y)),row=y=>dead(w,x=>L(x,y));
     let l=0,r=w-1,t=0,b=h-1;
-    while(l<w*.3&&col(l))l++;while(r>w*.7&&col(r))r--;while(t<h*.3&&row(t))t++;while(b>h*.7&&row(b))b--;
+    while(l<w*.42&&col(l))l++;while(r>w*.58&&col(r))r--;while(t<h*.3&&row(t))t++;while(b>h*.7&&row(b))b--;
     if(l<2&&w-1-r<2&&t<2&&h-1-b<2)return;
     l=l?l+1:0;t=t?t+1:0;r=r<w-1?r-1:r;b=b<h-1?b-1:b;
     const kx=img.naturalWidth/w,ky=img.naturalHeight/h,x0=l*kx,y0=t*ky,cw=(r+1)*kx-x0,ch=(b+1)*ky-y0;
@@ -120,7 +120,7 @@ function borderHTML(style,col,gilt,radius){
 /* one photo: era process plus tone treatment, halftone or gloss over it */
 function photoHTML(src,pos,era,t){
   if(!src)return"";const P=PROCESS[era],T=TONES[t];
-  return`<img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:${P.photo} ${T.photo}">
+  return`<img crossorigin="anonymous" alt="" onload="window.__fmtLift&&__fmtLift.trim(this)" onerror="window.__fmtLift&&__fmtLift.cors(this)" src="${src}" style="position:absolute;inset:0;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:${P.photo} ${T.photo}">
   ${P.half?`<div style="position:absolute;inset:0;background:radial-gradient(circle,rgba(0,0,0,.5) 28%,transparent 32%) 0 0/4px 4px;opacity:.13;mix-blend-mode:multiply"></div>`:""}
   ${(P.sheen||T.sheen)?`<div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.2) 50%,rgba(255,255,255,0) 62%)"></div>`:""}
   ${T.copy?`<div style="position:absolute;inset:0;background:url(&quot;${TONER}&quot;) 0 0/240px;opacity:.22"></div>`:""}
@@ -186,7 +186,7 @@ function logoPanel(ctx,o){
   const r=lg?lg[1]/lg[2]:0;let lh=lg?Math.min(o.maxH,Math.round(o.maxW/r)):0,lw=Math.round(lh*r);
   const fb=`<div data-logofb data-fline="3" data-fs="22" style="display:${lg?"none":"block"};font:${o.titleFont};font-size:${title.length>40?30:title.length>22?38:46}px;line-height:1.02;color:${o.titleCol};max-width:${o.maxW}px">${esc(title)}</div>`;
   return`<div data-lpanel data-dark="${o.dark}" data-light="${o.light}" data-darkk="${o.darkk}" data-lightk="${o.lightk}" style="${o.style};background:${lg?o.dark:o.fbBg}">
-    ${lg?`<img data-logo crossorigin="anonymous" alt="${esc(title)}" src="${ctx.img(lg[0],"w500")}" onload="window.__fmtBHA&&__fmtBHA.logo(this)" onerror="window.__fmtBHA&&__fmtBHA.nologo(this)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain;margin:${o.center?"0 auto":"0"}">`:""}${fb}
+    ${lg?`<img data-logo crossorigin="anonymous" alt="${esc(title)}" src="${ctx.img(lg[0],"w500")}" onload="(function(i){var p=i.closest('[data-lpanel]'),w=p&&window.__fmtLift&&__fmtLift.logo(i);if(!w)return;var dk=w==='dark';p.style.background=dk?p.dataset.dark:p.dataset.light;p.querySelectorAll('[data-lk]').forEach(function(k){k.style.color=dk?p.dataset.darkk:p.dataset.lightk})})(this)" onerror="window.__fmtBHA&&__fmtBHA.nologo(this)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain;margin:${o.center?"0 auto":"0"}">`:""}${fb}
     ${o.under?`<div data-lk style="font:${o.underFont};color:${lg?o.darkk:o.fbK};margin-top:9px;text-align:${o.center?"center":"left"}">${o.under}</div>`:""}</div>`;
 }
 /* film flavour with theme-neutral fallbacks */

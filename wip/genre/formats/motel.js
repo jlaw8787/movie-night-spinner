@@ -11,7 +11,7 @@
    trim: crops baked-in letterbox bars and dead flat edges off a still, then cover-fits what is left.
    logo: scores a title logo against a dark and a light panel (20th percentile contrast, so multicolour
    logos read in every part) and returns the better panel; a weak best score gets a fine halo, never a recolour. */
-if(!window.__fmtLift||window.__fmtLift.v<1)window.__fmtLift={v:1,
+if(!window.__fmtLift||window.__fmtLift.v<2)window.__fmtLift={v:2,
   px(img,w){const cv=document.createElement("canvas");cv.width=w;cv.height=Math.max(8,Math.round(w*img.naturalHeight/img.naturalWidth));
     const cx=cv.getContext("2d");cx.drawImage(img,0,0,cv.width,cv.height);return{d:cx.getImageData(0,0,cv.width,cv.height).data,w:cv.width,h:cv.height}},
   trim(img,tries){try{
@@ -20,10 +20,10 @@ if(!window.__fmtLift||window.__fmtLift.v<1)window.__fmtLift={v:1,
     if(!bw||!bh){if((tries||0)<6)setTimeout(()=>window.__fmtLift.trim(img,(tries||0)+1),400);return}
     img.dataset.trim="1";
     const{d,w,h}=window.__fmtLift.px(img,160),L=(x,y)=>{const i=(y*w+x)*4;return .2126*d[i]+.7152*d[i+1]+.0722*d[i+2]};
-    const dead=(n,get)=>{let dk=0,s=0,s2=0;for(let j=0;j<n;j++){const l=get(j);if(l<28)dk++;s+=l;s2+=l*l}const m=s/n,v=s2/n-m*m;return dk/n>.94||(v<30&&(m<46||m>238))};
+    const dead=(n,get)=>{let dk=0,s=0,s2=0;for(let j=0;j<n;j++){const l=get(j);if(l<28)dk++;s+=l;s2+=l*l}const m=s/n,v=s2/n-m*m;return dk/n>.94||(dk/n>.74&&m<34)||(v<30&&(m<46||m>238))};
     const col=x=>dead(h,y=>L(x,y)),row=y=>dead(w,x=>L(x,y));
     let l=0,r=w-1,t=0,b=h-1;
-    while(l<w*.3&&col(l))l++;while(r>w*.7&&col(r))r--;while(t<h*.3&&row(t))t++;while(b>h*.7&&row(b))b--;
+    while(l<w*.42&&col(l))l++;while(r>w*.58&&col(r))r--;while(t<h*.3&&row(t))t++;while(b>h*.7&&row(b))b--;
     if(l<2&&w-1-r<2&&t<2&&h-1-b<2)return;
     l=l?l+1:0;t=t?t+1:0;r=r<w-1?r-1:r;b=b<h-1?b-1:b;
     const kx=img.naturalWidth/w,ky=img.naturalHeight/h,x0=l*kx,y0=t*ky,cw=(r+1)*kx-x0,ch=(b+1)*ky-y0;
@@ -140,22 +140,28 @@ window.MENU_FORMATS["motel"]=ctx=>{
   /* ---------- front: the picture side ---------- */
   const B=e.border,PW=W-2*B,PHh=H-2*B;
   const LB=logoBox(ctx,era==="1930s-40s"?250:300,era==="1930s-40s"?78:96);
-  const lp=(x,y,anchor)=>LB?`<div data-lp data-dark="1" data-alt="rgba(250,248,242,.94)" data-altsh="0 6px 18px rgba(0,0,0,.4)" style="position:absolute;${anchor}:${x}px;top:${y}px;padding:12px 16px;background:rgba(10,10,12,.74);border-radius:${e.rad?12:4}px;box-shadow:0 6px 18px rgba(0,0,0,.4)">${LB.html}</div>`
-    :`<div style="position:absolute;${anchor}:${x}px;top:${y}px;max-width:330px;padding:10px 16px;background:rgba(10,10,12,.74);color:#fff;font-family:${DISP};font-weight:${e.dw||400};font-size:${f.title&&f.title.length>22?22:30}px;line-height:1.05;border-radius:4px">${esc(f.title)}</div>`;
+  /* old postcards get a printed card panel (cream or sepia brown), later eras a plain dark or light one; the logo picks */
+  const OLD=era==="1930s-40s"||era==="1950s"||era==="1970s";
+  const pDark=OLD?"rgba(44,30,18,.9)":"rgba(10,10,12,.78)",pLight=OLD?"rgba(246,238,216,.95)":"rgba(250,248,242,.94)";
+  const pEdge=OLD?`,inset 0 0 0 3px ${e.paper},inset 0 0 0 4px ${mix(ACC,"#000000",.2)}`:"";
+  const lp=(x,y,anchor)=>LB?`<div data-lp data-dark="1" data-dl="${OLD?.016:.006}" data-ll="${OLD?.84:.92}" data-alt="${pLight}" data-altsh="0 6px 18px rgba(0,0,0,.4)${pEdge}" style="position:absolute;${anchor}:${x}px;top:${y}px;padding:12px 16px;background:${pDark};border-radius:${e.rad?12:4}px;box-shadow:0 6px 18px rgba(0,0,0,.4)${pEdge}">${LB.html}</div>`
+    :`<div style="position:absolute;${anchor}:${x}px;top:${y}px;max-width:330px;padding:10px 16px;background:${pDark};color:#fff;font-family:${DISP};font-weight:${e.dw||400};font-size:${f.title&&f.title.length>22?22:30}px;line-height:1.05;border-radius:4px">${esc(f.title)}</div>`;
   let front="";
   const vshort=venue.replace(/^(the)\s+/i,"");
   if(e.cap==="big"){
     /* big letter postcard: the venue's name cut from a second still */
     const words=vshort.split(/\s+/);let big=words.length>2?words.slice(0,2).join(" "):vshort;if(big.length>18)big=words[0];big=big.slice(0,18);
-    const bs=Math.max(46,Math.min(150,Math.floor((PW-60)/(big.length*e.dr))));
-    const fill=s1||s0||posterOf(ctx);
+    const bs=Math.max(44,Math.min(104,Math.floor((PW-80)/(big.length*e.dr))));
+    /* linen postcard letters: hand tinted in the film's colour, cream keyline, block shadow; sit low so faces stay clear */
+    const tint=mix(ACC,"#c9a46a",.25),tintHi=mix(tint,"#fff4dc",.4),tintLo=mix(tint,"#2a1a0c",.35);
     front=`<div style="position:absolute;inset:0;background:${e.bcol}"></div>
       <div style="position:absolute;left:${B}px;top:${B}px;width:${PW}px;height:${PHh}px;overflow:hidden">${photo(ctx,s0,PW,PHh,filt)}<div style="position:absolute;inset:0;background:${linen};mix-blend-mode:multiply"></div>
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 40%,rgba(0,0,0,${T.vig}) 100%)"></div></div>
-      <div style="position:absolute;left:${B+24}px;top:${B+18}px;font-family:'${sigF}',cursive;font-size:44px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.7)">${esc(T.kick)}</div>
-      <div style="position:absolute;left:${B}px;right:${B}px;top:${Math.round(H/2-bs*.62)}px;text-align:center;font-family:${DISP};font-size:${bs}px;line-height:1.1;text-transform:uppercase;letter-spacing:.01em;
-        background-image:url('${fill?ctx.img(fill,"w1280"):""}');background-size:cover;background-position:50% 40%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:3px #fff8e6;filter:drop-shadow(5px 6px 0 ${mix(ACC,"#000000",.25)}) drop-shadow(0 6px 10px rgba(0,0,0,.5)) saturate(1.4)">${esc(big)}</div>
-      <div style="position:absolute;left:${B}px;right:${B}px;bottom:${B+16}px;text-align:center;font-family:${BODY};font-weight:800;font-size:20px;letter-spacing:.22em;text-transform:uppercase;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.8)">${esc(sign)}</div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(0,0,0,0) 40%,rgba(0,0,0,${T.vig}) 100%)"></div>
+      <div style="position:absolute;left:0;right:0;bottom:0;height:${Math.round(bs*1.1)+90}px;background:linear-gradient(180deg,rgba(40,26,12,0),rgba(40,26,12,.55))"></div></div>
+      <div style="position:absolute;left:${B+24}px;top:${B+18}px;font-family:'${sigF}',cursive;font-size:44px;color:#fff8e6;text-shadow:0 2px 6px rgba(0,0,0,.7)">${esc(T.kick)}</div>
+      <div style="position:absolute;left:${B}px;right:${B}px;top:${H-B-52-Math.round(bs*1.1)}px;text-align:center;font-family:${DISP};font-size:${bs}px;line-height:1.1;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;
+        background:linear-gradient(180deg,${tintHi},${tint} 55%,${tintLo});-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:2.5px #fff4dc;filter:drop-shadow(4px 5px 0 rgba(42,26,12,.85)) drop-shadow(0 4px 8px rgba(0,0,0,.4))">${esc(big)}</div>
+      <div style="position:absolute;left:${B}px;right:${B}px;bottom:${B+14}px;text-align:center;font-family:${BODY};font-weight:800;font-size:18px;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff4dc;text-shadow:0 2px 6px rgba(0,0,0,.8)">${esc(sign)}</div>
       ${lp(B+18,B+14,"right")}`;
   }else if(e.cap==="strip"){
     const SH=96;

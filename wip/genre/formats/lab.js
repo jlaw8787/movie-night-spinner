@@ -37,7 +37,7 @@ function logoPanel(ctx,o){
   if(!L||!L[0]||!L[1]||!L[2])return {html:`<div style="${o.wrap};background:${o.light};padding:14px 18px">${fb.replace(o.typeInk,o.lightInk)}</div>`};
   const a=L[1]/L[2];let w=o.maxW,h=w/a;if(h>o.maxH){h=o.maxH;w=h*a}
   if(h<34)return {html:`<div style="${o.wrap};background:${o.light};padding:14px 18px">${fb.replace(o.typeInk,o.lightInk)}</div>`};
-  const chk="(function(i){try{var c=document.createElement('canvas'),w=c.width=60,h=c.height=Math.max(6,Math.round(60*i.naturalHeight/i.naturalWidth)),x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0,q=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){var y=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];s+=y;if(y<95)q++;n++}}if(n&&(s/n<105||q/n>.3)){i.parentNode.style.background=i.parentNode.getAttribute('data-light')}}catch(e){}})(this)";
+  const chk="(function(i){try{var c=document.createElement('canvas'),w=c.width=60,h=c.height=Math.max(6,Math.round(60*i.naturalHeight/i.naturalWidth)),x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0,q=0,l=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){var y=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];s+=y;if(y<95)q++;if(y>170)l++;n++}}if(n&&(s/n<105||q/n>.3&&q>l)){i.parentNode.style.background=i.parentNode.getAttribute('data-light')}}catch(e){}})(this)";
   const err="this.style.display='none';this.nextElementSibling.style.display='block'";
   return {html:`<div data-light="${o.light}" style="${o.wrap};background:${o.dark};padding:14px 18px"><img crossorigin="anonymous" src="${ctx.img(L[0],"w500")}" alt="${esc(t)}" onload="${chk}" onerror="${err}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"><div style="display:none">${fb}</div></div>`};
 }

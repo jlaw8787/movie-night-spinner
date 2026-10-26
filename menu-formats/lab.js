@@ -32,12 +32,12 @@ function price(f,fl,ci,ii,name,scale){
 /* logo on a panel that suits it: dark by default; the onload check flips it to the light panel when the logo itself is dark */
 function logoPanel(ctx,o){
   const L=ctx.logo,t=clean(ctx.f.title);
-  const ts=t.length<=12?o.typeSize:t.length<=24?Math.round(o.typeSize*.78):Math.round(o.typeSize*.6);
-  const fb=`<div style="font-family:${o.font};font-weight:800;font-size:${ts}px;line-height:1.05;color:${o.typeInk};text-transform:uppercase;max-width:${o.maxW}px;overflow-wrap:break-word">${esc(t)}</div>`;
+  const lw=Math.max(...t.split(/\s+/).map(x=>x.length),1);const ts=Math.max(16,Math.min(t.length<=12?o.typeSize:t.length<=24?Math.round(o.typeSize*.78):Math.round(o.typeSize*.6),Math.floor(o.maxW/(lw*.74))));
+  const fb=`<div style="font-family:${o.font};font-weight:800;font-size:${ts}px;line-height:1.05;color:${o.typeInk};text-transform:uppercase;max-width:${o.maxW}px;overflow-wrap:normal">${esc(t)}</div>`;
   if(!L||!L[0]||!L[1]||!L[2])return {html:`<div style="${o.wrap};background:${o.light};padding:14px 18px">${fb.replace(o.typeInk,o.lightInk)}</div>`};
   const a=L[1]/L[2];let w=o.maxW,h=w/a;if(h>o.maxH){h=o.maxH;w=h*a}
   if(h<34)return {html:`<div style="${o.wrap};background:${o.light};padding:14px 18px">${fb.replace(o.typeInk,o.lightInk)}</div>`};
-  const chk="(function(i){try{var c=document.createElement('canvas'),w=c.width=60,h=c.height=Math.max(6,Math.round(60*i.naturalHeight/i.naturalWidth)),x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){s+=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];n++}}if(n&&s/n<105){i.parentNode.style.background=i.parentNode.getAttribute('data-light')}}catch(e){}})(this)";
+  const chk="(function(i){try{var c=document.createElement('canvas'),w=c.width=60,h=c.height=Math.max(6,Math.round(60*i.naturalHeight/i.naturalWidth)),x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0,q=0,l=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){var y=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];s+=y;if(y<95)q++;if(y>170)l++;n++}}if(n&&(s/n<105||q/n>.3&&q>l)){i.parentNode.style.background=i.parentNode.getAttribute('data-light')}}catch(e){}})(this)";
   const err="this.style.display='none';this.nextElementSibling.style.display='block'";
   return {html:`<div data-light="${o.light}" style="${o.wrap};background:${o.dark};padding:14px 18px"><img crossorigin="anonymous" src="${ctx.img(L[0],"w500")}" alt="${esc(t)}" onload="${chk}" onerror="${err}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"><div style="display:none">${fb}</div></div>`};
 }
@@ -46,6 +46,7 @@ if(!window.__fmtFitLab)window.__fmtFitLab=function(t){
   const face=t.parentNode;
   const run=()=>{
     face.querySelectorAll("[data-fitw]").forEach(e=>{let s=+e.getAttribute("data-fitw"),n=0;e.style.fontSize=s+"px";const lo=+(e.getAttribute("data-min")||16);while(e.scrollWidth>e.clientWidth+1&&s>lo&&n++<60){s-=1;e.style.fontSize=s+"px"}});
+    face.querySelectorAll("[data-fith]").forEach(e=>{let s=+e.getAttribute("data-fith"),n=0;e.style.fontSize=s+"px";const lo=+(e.getAttribute("data-min")||14);while((e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1)&&s>lo&&n++<60){s-=.5;e.style.fontSize=s+"px"}});
     face.querySelectorAll("[data-fit]").forEach(e=>{
       const b=+e.getAttribute("data-fit");const over=()=>e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1;
       e.querySelectorAll("[data-drop],[data-drop2]").forEach(d=>d.style.display="");
@@ -125,14 +126,14 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* badge: laminated access card, ID photo from a second still */
   const by=clean(fl&&fl.note&&fl.note.by)||"Duty Officer";
-  const badge=`<div style="position:absolute;right:${M+4}px;top:16px;width:178px;height:214px;transform:rotate(${T.tilt}deg);background:linear-gradient(160deg,rgba(255,255,255,.55),rgba(255,255,255,0) 40%),#fbfbf7;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.32);border:1px solid rgba(0,0,0,.18);overflow:hidden;z-index:3">
+  const badge=`<div style="position:absolute;right:${M+4}px;top:16px;width:178px;height:236px;transform:rotate(${T.tilt}deg);background:linear-gradient(160deg,rgba(255,255,255,.55),rgba(255,255,255,0) 40%),#fbfbf7;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.32);border:1px solid rgba(0,0,0,.18);overflow:hidden;z-index:3">
     <div style="background:${acc};color:#fff;font:${E.dw} 18px/1 ${D};letter-spacing:.1em;text-transform:uppercase;padding:9px 12px 8px;display:flex;justify-content:space-between;white-space:nowrap"><span>Access</span><span>Lv ${esc(num.slice(-2))}</span></div>
     <div style="display:flex;gap:10px;padding:10px 10px 0">
       <div style="width:76px;height:84px;flex:none;overflow:hidden;border:1px solid #888;background:#222">${idSrc?`<img src="${idSrc}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:${pf}">`:""}</div>
       <div style="font:600 14px/1.2 ${B};color:#222;text-transform:uppercase;letter-spacing:.06em;min-width:0">Badge<br>No. ${esc(num)}<br><span style="color:${acc}">All areas</span></div>
     </div>
-    <div data-fitw="22" data-min="14" style="margin:8px 10px 0;font-family:${D};font-weight:${E.dw};font-size:22px;line-height:1.1;color:#111;text-transform:uppercase;white-space:nowrap;overflow:hidden">${esc(by)}</div>
-    <div style="margin:6px 10px 0;border-top:1px solid #999;padding-top:5px;font:400 14px/1.15 ${B};color:#333;height:34px;overflow:hidden">${esc(venue)}</div>
+    <div data-fith="22" data-min="14" style="margin:8px 10px 0;height:48px;display:flex;align-items:center;font-family:${D};font-weight:${E.dw};font-size:22px;line-height:1.05;color:#111;text-transform:uppercase;overflow:hidden;overflow-wrap:normal;word-break:normal"><div style="min-width:0;max-width:100%">${esc(by)}</div></div>
+    <div style="margin:6px 10px 0;border-top:1px solid #999;padding-top:5px;font:400 14px/1.15 ${B};color:#333;height:33px;overflow:hidden">${esc(venue)}</div>
   </div>`;
 
   /* header */
