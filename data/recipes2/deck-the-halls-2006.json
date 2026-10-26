@@ -1,0 +1,410 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Christmas lights caprese skewers",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "baby bocconcini, halved",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle balsamic glaze",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz some basil leaves with the oil and a pinch of salt, then strain.",
+     "min": 5
+    },
+    {
+     "text": "Halve the bocconcini.",
+     "min": 3
+    },
+    {
+     "text": "Thread skewers with a cherry tomato, a basil leaf and a bocconcini half, then another tomato.",
+     "min": 12
+    },
+    {
+     "text": "Lay them in rows on a long platter like strings of lights. Drizzle with basil oil and balsamic glaze and finish with cracked pepper and sea salt.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Street party cranberry chilli meatballs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the minces with the egg, breadcrumbs, garlic and salt.",
+     "min": 5
+    },
+    {
+     "text": "Roll into small balls and bake on a lined tray at 200C.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the cranberry sauce, sweet chilli, soy and lemon juice until glossy.",
+     "min": 3
+    },
+    {
+     "text": "Toss the meatballs through, scatter with spring onion and serve on toothpicks.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Feud's-over turkey with cranberry glaze",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch sage, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the turkey with some of the butter and salt.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 180C.",
+     "min": 60
+    },
+    {
+     "text": "Simmer the cranberry sauce with the orange juice and honey and brush over the turkey for the last part of the roasting.",
+     "min": 5
+    },
+    {
+     "text": "Fry the onion, mix with the breadcrumbs, sage, egg and melted butter and bake in a dish. Roast the potatoes in oil alongside.",
+     "min": 20
+    },
+    {
+     "text": "Toss the beans in butter and serve.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Cul-de-sac Christmas trifle",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 120,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet strawberry jelly crystals",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sponge cake",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mixed berries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thick vanilla custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "crushed honeycomb",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make up the jelly with boiling water and cool.",
+     "min": 10
+    },
+    {
+     "text": "Break the sponge into a glass bowl, drizzle with orange juice and add the berries. Pour over the jelly.",
+     "min": 5
+    },
+    {
+     "text": "Chill until set.",
+     "min": 120
+    },
+    {
+     "text": "Spoon over the custard.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream with the icing sugar and spread on top. Scatter with honeycomb just before serving.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Neighbourly vanilla eggnog",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 120,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs (yolks only)",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 700,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks with the sugar.",
+     "min": 3
+    },
+    {
+     "text": "Heat the milk, cream, cinnamon and vanilla until steaming, then slowly whisk into the yolks.",
+     "min": 6
+    },
+    {
+     "text": "Return to the pan and stir over low heat until it coats a spoon.",
+     "min": 5
+    },
+    {
+     "text": "Strain and chill.",
+     "min": 120
+    },
+    {
+     "text": "Pour into glasses and grate fresh nutmeg over the top.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

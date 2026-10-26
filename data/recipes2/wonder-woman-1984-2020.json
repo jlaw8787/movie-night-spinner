@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Food court sausage rolls and potato skins",
+   "course": "s",
+   "prep_min": 65,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "cocktail franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced and crisped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wrap the franks in strips of puff pastry.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 15
+    },
+    {
+     "text": "Bake the potatoes until soft.",
+     "min": 60
+    },
+    {
+     "text": "Halve the potatoes, scoop out a little and fill with cheddar and bacon.",
+     "min": 10
+    },
+    {
+     "text": "Grill until bubbling and serve both with sour cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Themyscira olive and feta",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "kalamata olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "feta, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the olives and feta with strips of lemon peel, oregano and olive oil.",
+     "min": 5
+    },
+    {
+     "text": "Leave to marinate.",
+     "min": 60
+    },
+    {
+     "text": "Serve in a shallow bowl with warm pita torn into pieces.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Fourth of July sticky pork ribs",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 180,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the ribs with salt.",
+     "min": 10
+    },
+    {
+     "text": "Bake covered at 150C.",
+     "min": 150
+    },
+    {
+     "text": "Brush with barbecue sauce and grill until sticky.",
+     "min": 15
+    },
+    {
+     "text": "Boil the potatoes, cool and dress with mayonnaise and spring onion.",
+     "min": 20
+    },
+    {
+     "text": "Grill the corn and serve it all picnic style.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "1984 food court cinnamon rolls",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, warm before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "sweet bread dough or pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the dough into a rectangle and spread with butter mixed with sugar and cinnamon.",
+     "min": 10
+    },
+    {
+     "text": "Roll up and cut eight scrolls.",
+     "min": 5
+    },
+    {
+     "text": "Prove until puffy.",
+     "min": 30
+    },
+    {
+     "text": "Bake at 180C until golden.",
+     "min": 25
+    },
+    {
+     "text": "Ice with cream cheese beaten with icing sugar.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Wishing stone champagne cocktail",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dashes orange bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling grape juice",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drop a sugar cube into each flute and add a dash of orange bitters.",
+     "min": 2
+    },
+    {
+     "text": "Pour sparkling wine for the grown-ups or sparkling grape juice for everyone else. Be careful what you wish for.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

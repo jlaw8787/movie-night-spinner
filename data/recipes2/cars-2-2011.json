@@ -1,0 +1,332 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tokyo party edamame",
+   "course": "s",
+   "prep_min": 4,
+   "cook_min": 9,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen edamame",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt, for the water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring a pot of salted water to the boil.",
+     "min": 5
+    },
+    {
+     "text": "Boil the edamame and drain.",
+     "min": 4
+    },
+    {
+     "text": "Toss while hot with sesame oil, chilli flakes and sea salt.",
+     "min": 2
+    },
+    {
+     "text": "Pile into small bowls.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Paris market crêpes",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 78,
+   "make_ahead": "Batter up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, eggs and milk into a smooth batter.",
+     "min": 5
+    },
+    {
+     "text": "Rest the batter.",
+     "min": 60
+    },
+    {
+     "text": "Cook thin crepes in a buttered pan.",
+     "min": 15
+    },
+    {
+     "text": "Fill each with ham and gruyere and fold into quarters.",
+     "min": 6
+    },
+    {
+     "text": "Crisp again in the pan.",
+     "min": 8
+    },
+    {
+     "text": "Cut into triangles and serve hot.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Porto Corsa prawn pasta",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 21,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns, halve the tomatoes and chop the parsley.",
+     "min": 12
+    },
+    {
+     "text": "Boil the spaghetti until al dente.",
+     "min": 12
+    },
+    {
+     "text": "Soften the garlic and chilli in the olive oil.",
+     "min": 3
+    },
+    {
+     "text": "Add the prawns, tomatoes and wine and cook until the prawns turn pink.",
+     "min": 6
+    },
+    {
+     "text": "Toss through the spaghetti with the parsley.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pistachio ice cream",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pistachio ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pistachios",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the pistachios in a dry pan, then crush.",
+     "min": 5
+    },
+    {
+     "text": "Scoop ice cream into chilled bowls.",
+     "min": 4
+    },
+    {
+     "text": "Scatter with pistachios and drizzle with honey.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Porto Corsa blood orange soda",
+   "course": "d",
+   "prep_min": 14,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "blood orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the honey into the warm water to make a syrup.",
+     "min": 2
+    },
+    {
+     "text": "Mix the blood orange juice, lemon juice and syrup.",
+     "min": 3
+    },
+    {
+     "text": "Slice the orange thinly.",
+     "min": 3
+    },
+    {
+     "text": "Fill wine glasses with ice and an orange slice each, pour in the juice mix to half full and top with sparkling water.",
+     "min": 4
+    },
+    {
+     "text": "Finish with a mint sprig and serve straight away.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

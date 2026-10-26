@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Restaurant garlic prawns",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 6,
+   "make_ahead": "Serve straight away",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns and slice the garlic.",
+     "min": 12
+    },
+    {
+     "text": "Melt the butter until foaming, add the garlic and chilli and cook briefly.",
+     "min": 2
+    },
+    {
+     "text": "Add the prawns and toss over high heat until just pink.",
+     "min": 2
+    },
+    {
+     "text": "Add the stock and lemon juice and bubble briefly. Finish with chopped parsley and serve with crusty bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Euphegenia's tea sandwiches",
+   "course": "s",
+   "prep_min": 22,
+   "cook_min": 13,
+   "make_ahead": "Up to 3 hours, keep covered",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch watercress",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs hard, cool and peel.",
+     "min": 13
+    },
+    {
+     "text": "Mash the eggs with the mayonnaise and chopped cress. Mix the cream cheese with dill.",
+     "min": 8
+    },
+    {
+     "text": "Spread the bread with the cream cheese, layer with egg and thin cucumber, and close up.",
+     "min": 10
+    },
+    {
+     "text": "Cut off the crusts and cut into fingers.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "The takeaway she passes off as home cooking",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 85,
+   "make_ahead": "Up to 1 day, assemble then bake",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onion and carrots. Peel and chop the potatoes.",
+     "min": 15
+    },
+    {
+     "text": "Brown the mince, add the onion and carrot, then the tomato paste, Worcestershire sauce and water. Simmer.",
+     "min": 40
+    },
+    {
+     "text": "Boil the potatoes and mash with the butter and milk.",
+     "min": 20
+    },
+    {
+     "text": "Top the mince with the mash and bake at 200C until golden.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Frosting face cake",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 65,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mascarpone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with most of the sugar, add the eggs, then fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Bake in two tins at 175C.",
+     "min": 25
+    },
+    {
+     "text": "Cool the cakes.",
+     "min": 40
+    },
+    {
+     "text": "Whip the mascarpone with the cream and remaining sugar.",
+     "min": 8
+    },
+    {
+     "text": "Fill and cover the cake, then pile on halved strawberries.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "A proper cuppa",
+   "course": "d",
+   "prep_min": 4,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "tea bags English breakfast tea",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "caster sugar, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the teapot with hot water and tip it out.",
+     "min": 2
+    },
+    {
+     "text": "Add the tea bags and freshly boiled water and brew.",
+     "min": 4
+    },
+    {
+     "text": "Pour into four cups with milk, and sugar on the side.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Central Park corn chips",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Salsa up to 1 day, chips up to 1 day airtight",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the tortillas into wedges. Heat the oil to 180C and fry in batches until crisp, then salt.",
+     "min": 12
+    },
+    {
+     "text": "Char the corn cobs on a hot grill or pan, then cut off the kernels.",
+     "min": 8
+    },
+    {
+     "text": "Mix the corn with the tomatoes, coriander, lime juice and salt.",
+     "min": 5
+    },
+    {
+     "text": "Serve the salsa in a bowl with the chips.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Pantry stash grilled peaches and honey",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned peach halves (2 tins)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 15,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "flaked almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cinnamon, to dust",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the peaches and pat dry. Mix the yoghurt with the honey.",
+     "min": 3
+    },
+    {
+     "text": "Toast the almonds in a dry pan.",
+     "min": 2
+    },
+    {
+     "text": "Heat a griddle pan over high heat, brush with butter and grill the peaches cut side down until charred and caramelised.",
+     "min": 4
+    },
+    {
+     "text": "Serve warm with the yoghurt, almonds and a dusting of cinnamon.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pan-fried steak",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the steaks well. Sear in a hot pan, turning once.",
+     "min": 6
+    },
+    {
+     "text": "Add the butter, garlic and thyme and baste.",
+     "min": 1
+    },
+    {
+     "text": "Rest the steaks, then slice. Keep a plain unseasoned piece aside for the dog.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Neville's shelter pantry rice pudding",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 160,
+   "make_ahead": "Up to 2 days, keep chilled and reheat",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "short grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 150C and butter a baking dish.",
+     "min": 3
+    },
+    {
+     "text": "Stir the rice, sugar and milk together in the dish and add a long strip of lemon peel.",
+     "min": 3
+    },
+    {
+     "text": "Grate nutmeg over the top and dot with butter.",
+     "min": 2
+    },
+    {
+     "text": "Bake, stirring once after 30 minutes, until thick and creamy with a golden skin.",
+     "min": 140
+    },
+    {
+     "text": "Rest, then serve warm with a spoon of raspberry jam.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Lab bench bourbon peach smash",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 410,
+     "u": "g",
+     "item": "tinned sliced peaches, drained (keep 60ml syrup)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 10,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "mint sprigs, to garnish",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, for shaking",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle half the peach slices with the syrup, lemon juice and mint leaves in a shaker.",
+     "min": 4
+    },
+    {
+     "text": "Add the bourbon and ice and shake hard.",
+     "min": 2
+    },
+    {
+     "text": "Strain into tumblers packed with crushed ice and garnish with a peach slice and a mint sprig.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

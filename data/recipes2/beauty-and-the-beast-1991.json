@@ -1,0 +1,300 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Gaston's eggs",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs hard, cool, peel and halve.",
+     "min": 15
+    },
+    {
+     "text": "Whip the yolks with the mayonnaise, Dijon and butter until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Pipe back into the whites and finish with paprika and chives.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Village bakery baguette",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "pears",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette and brush with olive oil.",
+     "min": 5
+    },
+    {
+     "text": "Toast at 200C.",
+     "min": 8
+    },
+    {
+     "text": "Top with sliced brie and a thin slice of pear, return briefly to warm, and drizzle with honey.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Gaston's tavern roast chicken",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 95,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chicken with butter and salt and chop the potatoes into the tray.",
+     "min": 15
+    },
+    {
+     "text": "Roast at 220C to start, then lower to 180C until cooked through.",
+     "min": 70
+    },
+    {
+     "text": "Rest the chicken.",
+     "min": 15
+    },
+    {
+     "text": "Make gravy with the pan juices, thyme and stock. Tear the chicken apart at the table.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Enchanted rose panna cotta",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 248,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "gelatine leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "rosewater",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugared rose petals",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine leaves in cold water.",
+     "min": 5
+    },
+    {
+     "text": "Warm the cream with most of the sugar, stir in the squeezed gelatine and the rosewater, and pour into four glasses.",
+     "min": 8
+    },
+    {
+     "text": "Set in the fridge.",
+     "min": 240
+    },
+    {
+     "text": "Crush the raspberries with the remaining sugar and spoon on top with a rose petal.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "LeFou's apple slush",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 180,
+   "make_ahead": "Freeze on the day",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "marshmallow creme",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box English breakfast tea",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the apple juice with the lemon juice and pour into a tray to freeze.",
+     "min": 5
+    },
+    {
+     "text": "Freeze, scraping with a fork every 30 minutes.",
+     "min": 180
+    },
+    {
+     "text": "Whip the cream and fold in the marshmallow creme.",
+     "min": 5
+    },
+    {
+     "text": "Spoon the slush into glasses and top with the cream. Brew a pot of English breakfast tea for the grown-ups.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Star Lasso Experience popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chipotle powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil, for popping",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in the oil in a covered pot.",
+     "min": 8
+    },
+    {
+     "text": "Cook the butter until golden and nutty, then stir in the paprika, chipotle and salt.",
+     "min": 5
+    },
+    {
+     "text": "Toss through the popcorn and fill striped paper bags.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Chuckwagon beans",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Better the next day",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins pinto beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "chipotle in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "molasses",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon and onion in a cast-iron pot until golden.",
+     "min": 10
+    },
+    {
+     "text": "Add the beans, chipotle, molasses, tomato paste and water.",
+     "min": 5
+    },
+    {
+     "text": "Simmer for 30 minutes until thick and smoky.",
+     "min": 30
+    },
+    {
+     "text": "Serve in tin cups.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Haywood Ranch tri-tip cookout",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "rump cap",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins pinto beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the rump cap with salt, pepper and garlic.",
+     "min": 5
+    },
+    {
+     "text": "Grill over coals, fat side first, until 54C inside.",
+     "min": 25
+    },
+    {
+     "text": "Rest for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Warm the beans. Mix the tomatoes, onion, coriander and lime for salsa.",
+     "min": 20
+    },
+    {
+     "text": "Slice the meat and serve.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Jean Jacket flying saucer cookies",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "silver sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the butter, beat in the sugar and egg, then the flour.",
+     "min": 10
+    },
+    {
+     "text": "Shape small rounds and bake at 175C for 9 minutes. Cool.",
+     "min": 20
+    },
+    {
+     "text": "Sandwich pairs of cookies with a marshmallow each and warm for 1 minute to melt.",
+     "min": 8
+    },
+    {
+     "text": "Roll the edges in silver sprinkles.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Jupe's watermelon agua fresca",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "watermelon flesh",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the watermelon with the lime juice and sugar.",
+     "min": 4
+    },
+    {
+     "text": "Strain into a jug and add cold water.",
+     "min": 3
+    },
+    {
+     "text": "Serve over ice with mint.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

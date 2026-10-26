@@ -1,0 +1,444 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "San Gennaro sausage bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 18,
+   "make_ahead": "Cook up to 2 hours ahead and reheat in a hot oven",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "hot mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the sausages over high heat, turning, until blistered and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Toss the capsicum and onion in oil and grill until charred at the edges.",
+     "min": 10
+    },
+    {
+     "text": "Slice the sausages thick and thread onto toothpicks with the capsicum and onion.",
+     "min": 10
+    },
+    {
+     "text": "Serve with the hot mustard.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Fried calamari",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Soak up to 2 hours ahead; fry just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "squid tubes",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine semolina",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the squid into rings and soak in the buttermilk for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Mix the semolina, flour and plenty of salt.",
+     "min": 3
+    },
+    {
+     "text": "Drain the squid and toss in the flour mix.",
+     "min": 4
+    },
+    {
+     "text": "Fry in 190C oil in batches for 90 seconds each until pale gold.",
+     "min": 8
+    },
+    {
+     "text": "Salt and serve with lemon wedges.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Penne arrabbiata",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Sauce up to 3 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "penne",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pecorino, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Gently fry the garlic and chilli in the olive oil.",
+     "min": 2
+    },
+    {
+     "text": "Add the tomatoes, season well and simmer.",
+     "min": 15
+    },
+    {
+     "text": "Cook the penne until al dente and toss through the sauce with a splash of pasta water and parsley.",
+     "min": 12
+    },
+    {
+     "text": "Finish with the pecorino.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Zeppole",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 70,
+   "make_ahead": "Batter can rise up to 1 hour; eat hot",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, salt and warm water into a sticky batter.",
+     "min": 5
+    },
+    {
+     "text": "Cover and leave to rise for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Drop teaspoons into 175C oil and fry in batches for 3 minutes until puffed and golden.",
+     "min": 10
+    },
+    {
+     "text": "Drain, tip into a paper bag with icing sugar, shake and eat hot.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "San Gennaro red wine with white peaches",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe white peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "light Italian red, such as Lambrusco secco or young Chianti",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve, stone and thinly slice the peaches into a large jug. Sprinkle with the sugar and leave for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Pour over the wine and refrigerate for at least 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Serve in tumblers with a spoonful of peach in each. Eat the peaches last.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Draft beer",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "lager, cold",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the beer and the glasses, then pour a cold glass for each guest.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Rye & ginger",
+   "course": "d",
+   "extra": true,
+   "prep_min": 3,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "rye whiskey",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tall glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add rye to each and top with ginger ale.",
+     "min": 1
+    },
+    {
+     "text": "Finish with a squeeze of lime.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Scotch, rocks",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "blended Scotch",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tumblers with ice.",
+     "min": 1
+    },
+    {
+     "text": "Pour a measure of Scotch over each.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Anisette",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "anisette liqueur",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour a small glass of anisette per guest.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

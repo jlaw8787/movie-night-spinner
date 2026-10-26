@@ -1,0 +1,718 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cammareri Bros. rosemary focaccia",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 180,
+   "make_ahead": "Best the day it is baked; keeps 1 day airtight",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "bread flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 90,
+     "u": "ml",
+     "item": "olive oil, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs rosemary, leaves picked",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "flaky salt, to finish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, salt and warm water into a wet dough. Cover and rise for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Oil a 30 x 20cm tin with most of the oil, tip in the dough and stretch to the corners. Rest for 30 minutes.",
+     "min": 35
+    },
+    {
+     "text": "Dimple deeply with oiled fingers, scatter with rosemary and flaky salt and drizzle with the remaining oil.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 230C until deep golden.",
+     "min": 24
+    }
+   ]
+  },
+  {
+   "n": "Eggs in the hole",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, cut in 4 thick rings",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut a hole in each slice of bread.",
+     "min": 2
+    },
+    {
+     "text": "Melt the butter in a big pan and lay in the bread. Put a capsicum ring in each hole and crack an egg into it.",
+     "min": 3
+    },
+    {
+     "text": "Fry until the white sets, flipping the bread once. Season.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Chicken scaloppine",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken breast (2 large)",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the chicken in half horizontally and pound thin.",
+     "min": 8
+    },
+    {
+     "text": "Dust in flour and sear in the oil and butter for 2 minutes a side, then set aside.",
+     "min": 6
+    },
+    {
+     "text": "Add the wine, lemon juice and capers, reduce by half and swirl in the cold butter and parsley.",
+     "min": 5
+    },
+    {
+     "text": "Return the chicken to coat.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Cannoli",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 125,
+   "make_ahead": "Filling up to 1 day ahead; fill shells just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "fresh ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "icing sugar, plus extra for dusting",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "cannoli shells",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the ricotta in a sieve for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Beat with icing sugar and orange zest, then fold in the chocolate.",
+     "min": 8
+    },
+    {
+     "text": "Pipe into the shells just before serving and dust with icing sugar.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Brooklyn amaretto sours",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "amaretto",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the amaretto, lemon juice and egg white hard without ice, in rounds for two drinks at a time.",
+     "min": 4
+    },
+    {
+     "text": "Shake again with ice.",
+     "min": 2
+    },
+    {
+     "text": "Strain over fresh ice in four short glasses and add a cherry to each.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Veal parmigiana",
+   "course": "m",
+   "extra": true,
+   "prep_min": 25,
+   "cook_min": 11,
+   "make_ahead": "Crumb up to 3 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "veal escalopes",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "marinara sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "ziti",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dust the veal in flour, dip in egg and coat in breadcrumbs.",
+     "min": 10
+    },
+    {
+     "text": "Shallow-fry 2 minutes a side until golden.",
+     "min": 8
+    },
+    {
+     "text": "Top each cutlet with marinara and mozzarella and grill until bubbling.",
+     "min": 8
+    },
+    {
+     "text": "Boil the ziti and toss in a little marinara to serve as a side.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Linguine with white clam sauce",
+   "course": "m",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 37,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "littleneck clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "linguine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the clams in salted water for 30 minutes, then rinse.",
+     "min": 32
+    },
+    {
+     "text": "Gently fry the garlic in some of the oil, add the clams and wine, cover and steam until they open.",
+     "min": 8
+    },
+    {
+     "text": "Cook the linguine, finish it in the clam juices and toss with parsley and more olive oil.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Rigatoni with sausage",
+   "course": "m",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Sauce up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "sweet fennel sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "capsicums, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "rigatoni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the sausages in olive oil, then slice thickly.",
+     "min": 10
+    },
+    {
+     "text": "Soften the onion, capsicums and garlic, add the tomatoes and sausage and simmer gently.",
+     "min": 45
+    },
+    {
+     "text": "Boil the rigatoni and toss with the gravy.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Fried mozzarella",
+   "course": "s",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Crumb up to 3 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "anchovy fillets, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make 4 mozzarella sandwiches from the bread with crusts removed and cut into triangles.",
+     "min": 8
+    },
+    {
+     "text": "Dip in the eggs beaten with milk.",
+     "min": 4
+    },
+    {
+     "text": "Shallow-fry 2 minutes a side until golden and the cheese melts.",
+     "min": 8
+    },
+    {
+     "text": "Melt the butter with the anchovies, capers and lemon juice for a warm sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Stuffed artichoke",
+   "course": "s",
+   "extra": true,
+   "prep_min": 30,
+   "cook_min": 27,
+   "make_ahead": "Stuff up to 3 hours ahead, keep chilled; steam to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "globe artichokes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pecorino, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, minced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Trim the artichokes, cut off the tops, rub with lemon and open out the leaves.",
+     "min": 12
+    },
+    {
+     "text": "Mix the breadcrumbs, pecorino, garlic, parsley and olive oil and push between the leaves.",
+     "min": 10
+    },
+    {
+     "text": "Stand upright in a pot with a little water and steam covered until a leaf pulls out easily.",
+     "min": 35
+    }
+   ]
+  },
+  {
+   "n": "Espresso",
+   "course": "d",
+   "extra": true,
+   "prep_min": 3,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 32,
+     "u": "g",
+     "item": "ground espresso coffee",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew four short, strong espressos.",
+     "min": 5
+    },
+    {
+     "text": "Serve in small cups.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Champagne",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 0,
+   "make_ahead": "Chill the bottle at least 3 hours",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "champagne",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour a glass for each guest and toast la famiglia.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,440 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bowling lane chilli cheese fries",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 48,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin kidney beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled jalapeños",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the frozen chips at 220C for 25 minutes, turning once.",
+     "min": 26
+    },
+    {
+     "text": "Meanwhile brown the beef mince with the diced onion, add the smoked paprika, the ground cumin, the chilli powder, the crushed tomatoes and the drained kidney beans, and simmer 20 minutes until thick.",
+     "min": 24
+    },
+    {
+     "text": "Pile the chips into a baking dish, spoon over the chilli, scatter with the grated cheddar and grill 3 minutes until melted.",
+     "min": 7
+    },
+    {
+     "text": "Top with the sour cream, sliced jalapeños and spring onion.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Amish farm soft pretzels with apple butter",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Divide the pizza dough into pieces, roll each into a 50cm rope and twist into pretzels.",
+     "min": 7
+    },
+    {
+     "text": "Bring the water and the bicarb to a simmer and dip each pretzel for 30 seconds.",
+     "min": 11
+    },
+    {
+     "text": "Lay on a lined tray, brush with the beaten egg, sprinkle with sea salt flakes and bake at 220C for 12 minutes until deep brown.",
+     "min": 20
+    },
+    {
+     "text": "For the apple butter, simmer the peeled diced apples with the brown sugar, the cinnamon and the apple juice for 25 minutes and mash smooth.",
+     "min": 34
+    },
+    {
+     "text": "Serve with American mustard.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Amish chicken and noodles over mash",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "wide egg noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the chicken thighs in the chicken stock with the diced onion, the diced carrots and the celery sticks for 35 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Lift out the chicken, shred it and return it to the pot.",
+     "min": 4
+    },
+    {
+     "text": "Add the wide egg noodles and simmer 8 minutes until the broth thickens.",
+     "min": 13
+    },
+    {
+     "text": "Season well with salt and plenty of white pepper.",
+     "min": 4
+    },
+    {
+     "text": "Meanwhile boil the peeled potatoes for 20 minutes and mash with the butter and the milk.",
+     "min": 26
+    },
+    {
+     "text": "Ladle the chicken and noodles over the mash and scatter with chopped parsley.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Shoofly molasses crumb pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "molasses",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a 23cm pie dish with the sheet shortcrust pastry.",
+     "min": 7
+    },
+    {
+     "text": "Rub the plain flour, the brown sugar and the cold butter into crumbs.",
+     "min": 7
+    },
+    {
+     "text": "Whisk the molasses, the egg and the hot water with the bicarb.",
+     "min": 7
+    },
+    {
+     "text": "Pour into the pastry case, then scatter the crumbs evenly over the top.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 200C for 10 minutes, then drop to 180C for 30 minutes until just set with a slight wobble.",
+     "min": 43
+    },
+    {
+     "text": "Cool 30 minutes and serve with the whipped cream.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Farmyard vanilla malt milkshake",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 5,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the tall glasses in the freezer for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Blend the cold full cream milk with the scoops vanilla ice cream, the malted milk powder and the vanilla extract until thick and smooth.",
+     "min": 1
+    },
+    {
+     "text": "Pour into the cold glasses.",
+     "min": 1
+    },
+    {
+     "text": "Whip the thickened cream to soft peaks, spoon on top and sprinkle each with a little more malt powder.",
+     "min": 1
+    },
+    {
+     "text": "Serve straight away with thick straws.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

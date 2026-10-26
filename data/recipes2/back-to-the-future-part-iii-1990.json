@@ -1,0 +1,322 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Festival corn on the cob",
+   "course": "s",
+   "prep_min": 4,
+   "cook_min": 11,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the corn in salted water.",
+     "min": 5
+    },
+    {
+     "text": "Char on a hot grill, turning, until blackened in spots.",
+     "min": 6
+    },
+    {
+     "text": "Melt the butter, roll each cob in it and sprinkle with flaky salt and smoked paprika.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Clara's apple slices",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "crisp apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the apples and toss in the lemon juice so they stay white.",
+     "min": 8
+    },
+    {
+     "text": "Whip the yoghurt with the honey and cinnamon.",
+     "min": 3
+    },
+    {
+     "text": "Fan the apples around a bowl of the yoghurt for dipping.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Doc's blacksmith shop stew",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 190,
+   "make_ahead": "Up to 2 days, keep chilled, flavour improves",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "dark ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 150C. Season the beef and brown in batches in a heavy ovenproof pot.",
+     "min": 20
+    },
+    {
+     "text": "Soften the sliced onions and chopped carrots in the same pot.",
+     "min": 10
+    },
+    {
+     "text": "Return the beef, add the ale and stock and bring to a simmer.",
+     "min": 5
+    },
+    {
+     "text": "Cover and braise in the oven until the beef falls apart.",
+     "min": 180
+    },
+    {
+     "text": "Serve with the crusty bread for mopping up.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Clara's festival apple pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, reheat to serve warm",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "Granny Smith apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar, for sprinkling",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C. Peel, core and slice the apples and toss with the sugar, cinnamon, nutmeg and flour.",
+     "min": 15
+    },
+    {
+     "text": "Line a pie dish with two pastry sheets and fill with the apples.",
+     "min": 8
+    },
+    {
+     "text": "Cover with the other two sheets, seal and trim the edges, cut a few steam vents.",
+     "min": 7
+    },
+    {
+     "text": "Brush with beaten egg and sprinkle with sugar.",
+     "min": 2
+    },
+    {
+     "text": "Bake until deep golden and the juices bubble. Rest before slicing.",
+     "min": 50
+    }
+   ]
+  },
+  {
+   "n": "Wake-up juice",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Juice mix up to 1 day, top with ginger beer at the table",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger (5 cm), grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small red chilli, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons and blitz with the ginger, honey and chilli, then strain.",
+     "min": 7
+    },
+    {
+     "text": "Fill four glasses with ice and divide the juice between them.",
+     "min": 2
+    },
+    {
+     "text": "Top each with very cold ginger beer.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

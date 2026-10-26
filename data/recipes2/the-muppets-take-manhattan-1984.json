@@ -1,0 +1,326 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pete's Diner fries",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips.",
+     "min": 10
+    },
+    {
+     "text": "Fry in 140C oil until soft but pale, then drain.",
+     "min": 12
+    },
+    {
+     "text": "Fry again in 185C oil until golden and crisp.",
+     "min": 8
+    },
+    {
+     "text": "Toss while hot with oregano, lemon zest, salt and crumbled feta. Squeeze the lemon over just before serving.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Rizzo's kitchen sandwiches",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the bread with Dijon and fill with cheddar.",
+     "min": 5
+    },
+    {
+     "text": "Butter the outsides and griddle over medium heat until golden and melted, turning once.",
+     "min": 7
+    },
+    {
+     "text": "Cut into soldiers.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pete's Diner club sandwich",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sliced turkey",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag potato chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the bacon until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Toast the bread.",
+     "min": 5
+    },
+    {
+     "text": "Layer turkey, bacon, lettuce, sliced tomato and mayo across three slices for each sandwich.",
+     "min": 10
+    },
+    {
+     "text": "Pin with toothpicks, cut into triangles and serve with potato chips.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Kermit and Piggy's wedding cake",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened, for icing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pink food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "green food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and line two tins. Beat the butter and sugar until pale.",
+     "min": 10
+    },
+    {
+     "text": "Add the eggs, fold in the flour and divide between the tins.",
+     "min": 8
+    },
+    {
+     "text": "Bake until a skewer comes out clean.",
+     "min": 25
+    },
+    {
+     "text": "Cool the cakes completely.",
+     "min": 40
+    },
+    {
+     "text": "Beat the icing butter with the icing sugar, split in half and tint one half pink and one half green.",
+     "min": 10
+    },
+    {
+     "text": "Ice the cakes and pipe flowers.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Pete's honey yoghurt frappé",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cinnamon, to dust",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the bananas.",
+     "min": 2
+    },
+    {
+     "text": "Blend with the yoghurt, milk, some of the honey and the ice until thick and frothy. Taste and add more honey if needed.",
+     "min": 2
+    },
+    {
+     "text": "Pour into tall glasses, drizzle with honey and dust with cinnamon.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

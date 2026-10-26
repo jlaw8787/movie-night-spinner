@@ -1,0 +1,308 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Big Jeff's fries",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 70,
+   "make_ahead": "Soak and dry up to 2 hours ahead, fry just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "russet potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fine salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thin fries and soak in cold water.",
+     "min": 30
+    },
+    {
+     "text": "Drain and dry very well.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 140C for the first cook until pale and soft, then lift out and rest.",
+     "min": 15
+    },
+    {
+     "text": "Fry again at 190C until golden and crisp.",
+     "min": 8
+    },
+    {
+     "text": "Salt straight away and serve with tomato sauce in a squeeze bottle.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tech Noir bar nachos",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "refried beans (1 tin)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar sliced jalapenos",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar salsa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Spread the chips over a tray.",
+     "min": 3
+    },
+    {
+     "text": "Dot with the refried beans and scatter over the cheddar and jalapenos.",
+     "min": 5
+    },
+    {
+     "text": "Bake until the cheese is melted and bubbling.",
+     "min": 8
+    },
+    {
+     "text": "Top with sour cream and salsa and serve at once.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Big Jeff's burger",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef chuck mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shape the mince into four thick patties. Prep the lettuce, tomato, onion and pickles.",
+     "min": 10
+    },
+    {
+     "text": "Season just before cooking and griddle on a hot surface to medium.",
+     "min": 10
+    },
+    {
+     "text": "Lay cheddar on top and cover with a lid until melted.",
+     "min": 2
+    },
+    {
+     "text": "Toast the buns and build the burgers with all the toppings.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Big Jeff's cherry pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, reheat to serve warm",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pitted cherries, fresh or frozen",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C. Toss the cherries with the sugar, lemon juice and cornflour.",
+     "min": 8
+    },
+    {
+     "text": "Line a pie dish with two pastry sheets and fill with the cherries.",
+     "min": 7
+    },
+    {
+     "text": "Cut the other two sheets into strips and weave a lattice over the top.",
+     "min": 15
+    },
+    {
+     "text": "Bake until deep golden and the filling bubbles. Cool a little before slicing.",
+     "min": 50
+    }
+   ]
+  },
+  {
+   "n": "Tech Noir dark rum Cuba libre",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cola",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the limes into quarters.",
+     "min": 2
+    },
+    {
+     "text": "Fill four highball glasses with ice and squeeze two lime quarters into each, dropping the shells in.",
+     "min": 2
+    },
+    {
+     "text": "Add the rum and a dash of bitters to each glass, top with cold cola and stir once.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

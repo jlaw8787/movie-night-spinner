@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lakeside crumbed fish bites with tartare",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "flathead fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the fish into bite-size pieces.",
+     "min": 4
+    },
+    {
+     "text": "Toss in flour, dip in egg, then coat in panko.",
+     "min": 8
+    },
+    {
+     "text": "Shallow fry at 180C, turning once, until golden. Drain.",
+     "min": 8
+    },
+    {
+     "text": "Mix the mayonnaise with the capers, pickles, parsley and a squeeze of lemon.",
+     "min": 3
+    },
+    {
+     "text": "Serve hot with the tartare and lemon wedges.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Lake cabin campfire s'mores",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "plain sweet wheatmeal biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caramel sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "large marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay half the biscuits on a lined tray. Top some with milk chocolate and the rest with dark chocolate and a little caramel.",
+     "min": 5
+    },
+    {
+     "text": "Thread the marshmallows onto skewers and toast over a fire or gas flame until golden, or grill on a tray.",
+     "min": 5
+    },
+    {
+     "text": "Put marshmallows on each chocolate biscuit and press another biscuit on top. Eat while warm.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "The Old 96er rump steak",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 65,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "rump steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen onion rings",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce, cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "ranch dressing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the steak with oil and salt. Toss the potatoes in oil.",
+     "min": 5
+    },
+    {
+     "text": "Roast the potatoes at 220C.",
+     "min": 40
+    },
+    {
+     "text": "Grill the steak over high heat for medium rare.",
+     "min": 16
+    },
+    {
+     "text": "Rest the steak. Bake the onion rings.",
+     "min": 15
+    },
+    {
+     "text": "Melt the butter with the garlic. Drizzle the lettuce wedges with ranch.",
+     "min": 4
+    },
+    {
+     "text": "Slice the steak thickly, pour over the garlic butter and serve.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Bald-headed bear blueberry pie",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 77,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "frozen blueberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 135,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream, to serve",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the blueberries with most of the sugar, cornflour and the lemon zest and juice.",
+     "min": 5
+    },
+    {
+     "text": "Line a 23cm pie dish with one pastry sheet and fill with the berries. Cover with the second sheet, crimp the edges and cut slits on top.",
+     "min": 10
+    },
+    {
+     "text": "Brush with egg and sprinkle with the remaining sugar.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 200C, then at 180C until bubbling.",
+     "min": 50
+    },
+    {
+     "text": "Cool, then serve with ice cream.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Chet's waterski root beer floats",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 21,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "cold root beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill large mugs in the freezer.",
+     "min": 20
+    },
+    {
+     "text": "Add ice cream to each mug.",
+     "min": 2
+    },
+    {
+     "text": "Slowly pour root beer down the side until it foams to the top, letting it settle and topping up.",
+     "min": 3
+    },
+    {
+     "text": "Add a cherry and serve with straws and long spoons.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

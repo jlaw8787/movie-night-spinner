@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Jud's porch snacks",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "peanuts in the shell",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sharp cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the peanuts at 180C for 20 minutes and salt while hot.",
+     "min": 20
+    },
+    {
+     "text": "Lay out on an old tray with pickled onions, a wedge of cheddar and crackers for the porch.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Church's blueberry muffins",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cinnamon crumble topping",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, sugar and baking powder. Stir in the buttermilk, butter and egg briefly.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the blueberries and spoon into a 12-hole tin.",
+     "min": 7
+    },
+    {
+     "text": "Top with cinnamon crumble and bake at 200C for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Cool in the tin for 10 minutes.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Ludlow bean supper",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 600,
+   "make_ahead": "Soak overnight, bean dish keeps 3 days chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "dried navy beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "ham hock",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "molasses",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf wholemeal bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag coleslaw mix",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the beans overnight in cold water, then drain.",
+     "min": 480
+    },
+    {
+     "text": "Put the beans, ham hock, onion, molasses, sugar, mustard and water in a covered dish.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 150C for 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Serve with buttered brown bread and coleslaw.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Route 15 apple crisp",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "apples, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pouring cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the apples with cinnamon, sugar and lemon juice in a dish.",
+     "min": 8
+    },
+    {
+     "text": "Rub the butter into the flour, oats and brown sugar and scatter over.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 180C for 40 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Serve with pouring cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Jud's porch lager and apple cider shandy",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles lager, 200ml needed per glass",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "sparkling apple cider",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put four pint glasses in the freezer for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Pour cold lager into each, then top slowly with chilled sparkling apple cider.",
+     "min": 3
+    },
+    {
+     "text": "Add a squeeze of lemon and a thin slice of green apple and serve straight away.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

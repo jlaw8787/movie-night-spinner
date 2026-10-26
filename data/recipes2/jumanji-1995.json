@@ -1,0 +1,336 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Kitchen raid banana fritters",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, sparkling water and a pinch of sugar into a batter.",
+     "min": 5
+    },
+    {
+     "text": "Slice the bananas thickly and dip in the batter.",
+     "min": 5
+    },
+    {
+     "text": "Fry at 180C until puffed and golden.",
+     "min": 10
+    },
+    {
+     "text": "Roll in the remaining sugar mixed with cinnamon while hot.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Stampede refried bean nachos",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "refried beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tasty cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tomato salsa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pickled jalapenos",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the refried beans with the cumin and grate the cheese.",
+     "min": 5
+    },
+    {
+     "text": "Spread the chips on a tray, spoon over the beans and cover with cheese.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until melted.",
+     "min": 10
+    },
+    {
+     "text": "Top with salsa, sour cream and jalapenos and serve straight from the tray.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Van Pelt's juniper venison and redcurrant",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "venison backstrap",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "juniper berries",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "redcurrant jelly",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "parsnips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and boil the parsnips and potatoes until soft.",
+     "min": 20
+    },
+    {
+     "text": "Crush the juniper with the pepper and thyme and rub over the venison.",
+     "min": 5
+    },
+    {
+     "text": "Sear in a hot pan, a few minutes a side for rare.",
+     "min": 6
+    },
+    {
+     "text": "Rest the venison.",
+     "min": 8
+    },
+    {
+     "text": "Add the stock and redcurrant jelly to the pan and reduce until glossy, then whisk in a little of the butter.",
+     "min": 8
+    },
+    {
+     "text": "Mash the vegetables with the remaining butter and serve with the sliced venison.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "New Hampshire maple walnut fudge",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 90,
+   "make_ahead": "Keeps 1 week in an airtight tin",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast and chop the walnuts.",
+     "min": 8
+    },
+    {
+     "text": "Boil the maple syrup, sugar, cream and butter to 115C, stirring gently.",
+     "min": 12
+    },
+    {
+     "text": "Cool, then beat until thick and losing its gloss.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the walnuts and spread in a lined tin.",
+     "min": 5
+    },
+    {
+     "text": "Cool and set, then cut into squares.",
+     "min": 50
+    }
+   ]
+  },
+  {
+   "n": "Brantford mulled apple and maple punch",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the apple juice with the cinnamon, cloves, orange peel and maple syrup over low heat without boiling.",
+     "min": 15
+    },
+    {
+     "text": "Strain into four mugs and add a cinnamon stick and an orange slice to each.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

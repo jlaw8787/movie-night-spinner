@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Warbucks mansion canapés",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "vol-au-vent cases",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches asparagus",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices prosciutto",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the vol-au-vent cases until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Dice the chicken and mushrooms and fry in butter until browned.",
+     "min": 10
+    },
+    {
+     "text": "Add the cream and thyme and reduce until thick, then fill the cases.",
+     "min": 6
+    },
+    {
+     "text": "Blanch the asparagus and wrap each spear in half a slice of prosciutto.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Radio City popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popping corn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fine salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oil with three kernels in a covered pot.",
+     "min": 3
+    },
+    {
+     "text": "When they pop, add the rest of the kernels, cover and shake until the popping slows.",
+     "min": 5
+    },
+    {
+     "text": "Toss with the butter and salt, then fill paper cones.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Warbucks roast chicken",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 80,
+   "make_ahead": "Dry-brine the night before",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "flaky salt, for dry-brining",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter, for the peas",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "The night before, salt the chicken and leave uncovered in the fridge.",
+     "min": 5
+    },
+    {
+     "text": "Mix the softened butter with chopped tarragon and push it under the skin.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 220C with the halved potatoes.",
+     "min": 20
+    },
+    {
+     "text": "Lower to 180C and roast until the thigh reads 72C.",
+     "min": 45
+    },
+    {
+     "text": "Rest the chicken and make gravy from the pan juices and stock.",
+     "min": 15
+    },
+    {
+     "text": "Cook the peas and toss with butter.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mansion sundaes",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "flaked almonds, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cherries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the cream and golden syrup into a hot fudge.",
+     "min": 8
+    },
+    {
+     "text": "Toast the almonds in a dry pan and whip the cream.",
+     "min": 7
+    },
+    {
+     "text": "Scoop the ice cream into tall glasses, pour over the fudge and top with whipped cream, almonds and a cherry.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mansion ginger beer and orange punch",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "ginger beer, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Combine the juices and torn mint in a large jug.",
+     "min": 3
+    },
+    {
+     "text": "Add ice, pour in the ginger beer and stir gently.",
+     "min": 2
+    },
+    {
+     "text": "Add orange slices and serve with a mint sprig.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

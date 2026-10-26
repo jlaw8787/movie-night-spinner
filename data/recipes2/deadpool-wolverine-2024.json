@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chimichanga bites",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 25,
+   "make_ahead": "Filling up to 1 day, fry fresh",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sachet taco seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "refried beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "small flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "tasty cheese, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "tomato salsa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the taco seasoning, add the refried beans and cool.",
+     "min": 10
+    },
+    {
+     "text": "Fill the tortillas with the mix and cheese and roll tightly.",
+     "min": 10
+    },
+    {
+     "text": "Fry seam down at 180C until golden.",
+     "min": 8
+    },
+    {
+     "text": "Halve and serve with sour cream and salsa.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Void wasteland chips",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes paper thin on a mandoline and rinse well.",
+     "min": 10
+    },
+    {
+     "text": "Dry thoroughly.",
+     "min": 5
+    },
+    {
+     "text": "Fry at 170C in batches until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Toss straight away with paprika, garlic powder and salt.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Void campfire chilli",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 53,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion and garlic.",
+     "min": 20
+    },
+    {
+     "text": "Add the chilli powder, cumin, tomatoes and beans.",
+     "min": 3
+    },
+    {
+     "text": "Simmer until thick.",
+     "min": 40
+    },
+    {
+     "text": "Serve with cheddar and corn chips.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Red and yellow sundae",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Sauces up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the raspberries with the sugar and strain.",
+     "min": 10
+    },
+    {
+     "text": "Blend the mango until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Scoop ice cream into tall glasses, spoon raspberry sauce down one side and mango down the other.",
+     "min": 5
+    },
+    {
+     "text": "Pile whipped cream on top.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Logan's whisky and ginger highball",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dashes bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put big ice cubes into tall glasses.",
+     "min": 3
+    },
+    {
+     "text": "Pour in whisky, a little lime juice and a dash of bitters.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with cold ginger ale, stir once and garnish with a lime wedge.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

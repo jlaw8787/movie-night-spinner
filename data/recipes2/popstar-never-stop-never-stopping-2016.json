@@ -1,0 +1,432 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tour rider tropical fruit with chilli salt",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "watermelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "papaya",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the fruit into long wedges and arrange on a big platter.",
+     "min": 15
+    },
+    {
+     "text": "Chill the platter.",
+     "min": 30
+    },
+    {
+     "text": "Grind the salt with the chilli, sugar and lime zest.",
+     "min": 3
+    },
+    {
+     "text": "Just before serving, squeeze over lime juice and sprinkle with the chilli salt. Serve with lime wedges.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tour bus crispy chicken sliders",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chicken tenderloins",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sriracha",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "brioche slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk with salt.",
+     "min": 30
+    },
+    {
+     "text": "Toss the chicken in the flour mixed with paprika and garlic powder.",
+     "min": 5
+    },
+    {
+     "text": "Shallow fry at 180C, turning once, until golden and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise with the sriracha. Toss the cabbage with the vinegar.",
+     "min": 3
+    },
+    {
+     "text": "Toast the buns and fill with chicken, slaw, pickles and sriracha mayo.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Style Boyz fish tacos with mango salsa",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "firm white fish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "red cabbage, shredded",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the fish with the chilli powder, cumin, lime zest and oil.",
+     "min": 3
+    },
+    {
+     "text": "Grill the fish, turning once, then flake.",
+     "min": 6
+    },
+    {
+     "text": "Toss the mango, onion, chilli, lime juice and coriander for the salsa.",
+     "min": 8
+    },
+    {
+     "text": "Blend the avocado with the sour cream and lime juice into a crema.",
+     "min": 4
+    },
+    {
+     "text": "Warm the tortillas in a dry pan.",
+     "min": 4
+    },
+    {
+     "text": "Fill with cabbage, fish, salsa and crema.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Platinum record vanilla bean cookies",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 45,
+   "make_ahead": "Baked cookies up to 3 days, iced cookies up to 2 days in an airtight container",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla bean paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pack food colouring (black and one bright colour)",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with some of the icing sugar, then add the egg yolk, vanilla and flour to make a dough.",
+     "min": 10
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Roll out thin and cut into rounds with an 8cm cutter.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 170C and cool completely.",
+     "min": 15
+    },
+    {
+     "text": "Mix the remaining icing sugar with water and a drop of black colouring to make grey icing. Flood each cookie.",
+     "min": 10
+    },
+    {
+     "text": "Let the icing set, then pipe thin circles for grooves and a small coloured label in the centre.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Conner4Real cucumber gin spritz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle some cucumber slices with the mint, juice of two limes and sugar syrup in a jug. Add the gin and stir.",
+     "min": 4
+    },
+    {
+     "text": "Fill wine glasses with ice and the remaining cucumber.",
+     "min": 2
+    },
+    {
+     "text": "Strain the gin mix into the glasses and top with sparkling water. Garnish with mint and a lime wheel.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

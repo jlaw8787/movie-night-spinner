@@ -1,0 +1,316 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Outback pub sausage rolls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day uncooked, or freeze",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork sausage mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "mixed dried herbs",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "tomato sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the onion and carrot and mix through the sausage mince with the herbs.",
+     "min": 10
+    },
+    {
+     "text": "Lay the mince along each pastry sheet, roll up, brush with beaten egg and sprinkle with sesame seeds.",
+     "min": 10
+    },
+    {
+     "text": "Cut into 16 pieces and bake at 200C until puffed and golden. Serve with tomato sauce.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Alice Springs damper",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Best the day it is baked",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "golden syrup, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub a portion of the butter into the flour and salt, add the milk and mix to a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Shape into a round and cut a cross on top.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 200C until it sounds hollow when tapped.",
+     "min": 30
+    },
+    {
+     "text": "Serve warm with the rest of the butter and golden syrup.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Alice Springs kangaroo",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 49,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "kangaroo fillet",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground pepperberry",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "sweet potato",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "plum sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the sweet potato into wedges, toss in oil and roast at 200C.",
+     "min": 10
+    },
+    {
+     "text": "Rub the kangaroo with the pepperberry, crushed garlic and oil.",
+     "min": 5
+    },
+    {
+     "text": "Roast the wedges until golden.",
+     "min": 35
+    },
+    {
+     "text": "Sear the fillet hard in a hot pan to keep it rare.",
+     "min": 6
+    },
+    {
+     "text": "Rest the fillet, then slice. Warm the plum sauce and serve alongside.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Kings Canyon summit pavlova",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 120,
+   "make_ahead": "Meringue up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whip the egg whites to soft peaks, add the sugar gradually until glossy, then fold in the cornflour and vinegar.",
+     "min": 15
+    },
+    {
+     "text": "Shape on a lined tray and bake at 120C for 90 minutes, then cool in the oven with the door closed.",
+     "min": 90
+    },
+    {
+     "text": "Cool completely in the oven.",
+     "min": 30
+    },
+    {
+     "text": "Whip the cream and top the pavlova with cream, passionfruit and sliced strawberries.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Bernadette's pink champagne bellini",
+   "course": "d",
+   "prep_min": 13,
+   "cook_min": 0,
+   "make_ahead": "Purée up to 1 day, top with sparkling just before serving",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "ripe peach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sparkling rose",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend most of the raspberries with the peach and sugar syrup until smooth, then strain.",
+     "min": 8
+    },
+    {
+     "text": "Spoon the purée into four chilled flutes.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with cold sparkling rosé, stir once gently and drop in a raspberry. Use sparkling grape juice for an alcohol-free version.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

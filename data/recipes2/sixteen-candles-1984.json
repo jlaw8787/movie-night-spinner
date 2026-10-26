@@ -1,0 +1,378 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wedding reception canapés",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 25,
+   "make_ahead": "Tartlets up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "leg ham, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut rounds from the pastry and line a 12-hole tin.",
+     "min": 12
+    },
+    {
+     "text": "Whisk the eggs with the cream, add the ham and chives and fill the cases.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 180C until set and golden.",
+     "min": 15
+    },
+    {
+     "text": "Cut thick cucumber rounds and top with smoked salmon.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Long Duk Dong's party snacks",
+   "course": "s",
+   "prep_min": 2,
+   "cook_min": 9,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "frozen pork dumplings",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "spring onion, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the soy, black vinegar and spring onion for dipping.",
+     "min": 2
+    },
+    {
+     "text": "Fry the dumplings flat side down in a little oil until golden.",
+     "min": 3
+    },
+    {
+     "text": "Add water, cover and steam.",
+     "min": 4
+    },
+    {
+     "text": "Uncover and crisp again.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Wedding buffet chicken",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Add the mushrooms, thyme and wine and braise.",
+     "min": 35
+    },
+    {
+     "text": "Cook the rice with the butter and stock for a pilaf.",
+     "min": 20
+    },
+    {
+     "text": "Stir the cream into the chicken and serve with the pilaf.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sixteen candles birthday cake",
+   "course": "w",
+   "prep_min": 50,
+   "cook_min": 80,
+   "make_ahead": "Cake up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "birthday candles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and prepare two tins. Beat half the butter with the sugar, then the eggs.",
+     "min": 12
+    },
+    {
+     "text": "Fold in the flour and milk, divide between the tins and bake.",
+     "min": 30
+    },
+    {
+     "text": "Cool completely.",
+     "min": 25
+    },
+    {
+     "text": "Blitz the strawberries and beat into the remaining butter with the icing sugar.",
+     "min": 8
+    },
+    {
+     "text": "Fill and cover the cake and add exactly sixteen candles.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Shermer High dance tropical punch",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Base up to 1 day, add lemonade and ice at serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen mixed berries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pineapple, orange and cranberry juices with the passionfruit pulp and lime juice in a punch bowl.",
+     "min": 8
+    },
+    {
+     "text": "Chill.",
+     "min": 60
+    },
+    {
+     "text": "Just before serving add the lemonade, plenty of ice, orange slices and berries.",
+     "min": 4
+    },
+    {
+     "text": "Ladle into cups.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

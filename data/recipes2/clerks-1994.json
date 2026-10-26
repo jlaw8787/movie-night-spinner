@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Perfect dozen devilled eggs",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "smoked paprika, to dust",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 10 minutes, cool in cold water, peel and halve.",
+     "min": 15
+    },
+    {
+     "text": "Mash the yolks with the mayonnaise, Dijon and vinegar.",
+     "min": 5
+    },
+    {
+     "text": "Pipe the filling back into the whites, dust with paprika and add chives. Exactly twelve.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Quick Stop chips with nacho cheese",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped pickled jalapenos",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "jalapeno pickling liquid",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, stir in the flour and cook for 1 minute. Whisk in the milk and simmer until thick.",
+     "min": 8
+    },
+    {
+     "text": "Off the heat, stir in the cheddar until smooth, then the jalapenos, pickling liquid and paprika.",
+     "min": 5
+    },
+    {
+     "text": "Warm the corn chips on a tray at 180C for 4 minutes. Serve with the hot cheese for dunking.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Jersey hoagie",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Up to 4 hours ahead, wrap tight",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "long bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salami, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "provolone, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the rolls and layer with the salami, ham, provolone, lettuce, tomato and onion.",
+     "min": 12
+    },
+    {
+     "text": "Drizzle with oil and vinegar and sprinkle with oregano. Wrap tight and cut in half.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Quick Stop cream-filled chocolate cakes",
+   "course": "w",
+   "prep_min": 60,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, airtight in the fridge",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "marshmallow fluff",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs and caster sugar until thick, then fold in the flour and cocoa.",
+     "min": 15
+    },
+    {
+     "text": "Spread in a lined slice tin and bake at 180C for 12 minutes. Cool and cut into 12 rectangles.",
+     "min": 15
+    },
+    {
+     "text": "Beat the butter, most of the icing sugar, marshmallow fluff and vanilla until fluffy. Sandwich pairs of cake with it.",
+     "min": 15
+    },
+    {
+     "text": "Melt the chocolate with the cream and dip the cakes in it. Let them set.",
+     "min": 20
+    },
+    {
+     "text": "Mix the leftover icing sugar with a few drops of water and pipe a white squiggle on top.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Back fridge chocolate malt shake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "chocolate malt balls",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, ice cream, cocoa and malt powder until thick and frothy.",
+     "min": 4
+    },
+    {
+     "text": "Crush the malt balls in a bag with a rolling pin.",
+     "min": 3
+    },
+    {
+     "text": "Pour into four chilled tall glasses, scatter the crushed malt balls over and add a straw.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

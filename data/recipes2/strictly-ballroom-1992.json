@@ -1,0 +1,364 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pan-Pacific canapés",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "blinis",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "crème fraîche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Top the blinis with crème fraîche, smoked salmon and dill.",
+     "min": 10
+    },
+    {
+     "text": "Cut the cucumber into thick rounds, scoop a small hollow in each and whip the goat's cheese smooth.",
+     "min": 8
+    },
+    {
+     "text": "Fill the cucumber cups with the cheese and lay everything on trays.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Fran's family tortilla",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 37,
+   "make_ahead": "Up to 1 day, serve warm or at room temperature",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes and onion thin.",
+     "min": 10
+    },
+    {
+     "text": "Cook slowly in the olive oil until soft but not coloured.",
+     "min": 25
+    },
+    {
+     "text": "Drain, then fold into the beaten eggs and season.",
+     "min": 5
+    },
+    {
+     "text": "Cook in a pan over low heat until nearly set, flip with a plate and cook the other side. Cut into squares.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Rico's backyard paella",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "chorizo",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "paella rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the chorizo, dice the onion and capsicum, and crush the garlic. Heat the stock with the saffron.",
+     "min": 15
+    },
+    {
+     "text": "Brown the chicken and chorizo in a wide pan.",
+     "min": 10
+    },
+    {
+     "text": "Add the onion, garlic, capsicum and paprika and cook until soft.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the rice and hot stock, then cook without stirring.",
+     "min": 15
+    },
+    {
+     "text": "Push the prawns into the rice for the last 5 minutes, then rest briefly before serving.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Churros and chocolate",
+   "course": "w",
+   "prep_min": 13,
+   "cook_min": 17,
+   "make_ahead": "Dough up to 2 hours ahead, fry just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water with the butter, beat in the flour until a smooth dough forms, then beat in the eggs.",
+     "min": 10
+    },
+    {
+     "text": "Pipe strips into oil heated to 180C and fry in batches until golden.",
+     "min": 12
+    },
+    {
+     "text": "Toss the churros in the sugar and cinnamon.",
+     "min": 3
+    },
+    {
+     "text": "Melt the chocolate into the hot milk for dipping.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Paso doble sangria",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 120,
+   "make_ahead": "Up to 1 day, add the soda just before serving",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, to serve",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the orange, lemon and apple and mix in a jug with the wine, brandy and juice.",
+     "min": 8
+    },
+    {
+     "text": "Chill for 2 hours so the flavours come together.",
+     "min": 120
+    },
+    {
+     "text": "Top with the soda water and pour over ice.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

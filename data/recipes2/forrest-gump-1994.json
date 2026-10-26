@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Box of chocolates",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caramels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and paint it into chocolate moulds. Set.",
+     "min": 20
+    },
+    {
+     "text": "Fill some moulds with caramel melted with a little cream, some with raspberry ganache and some with peanut butter.",
+     "min": 15
+    },
+    {
+     "text": "Seal with more chocolate and set.",
+     "min": 30
+    },
+    {
+     "text": "Pack them in a box and mix them up.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Bubba's barbecue prawns",
+   "course": "s",
+   "prep_min": 19,
+   "cook_min": 4,
+   "make_ahead": "Skewer up to 3 hours ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns and thread onto skewers.",
+     "min": 15
+    },
+    {
+     "text": "Melt the butter with crushed garlic, paprika and cayenne and brush over.",
+     "min": 4
+    },
+    {
+     "text": "Grill, turning once, and squeeze lemon over.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Bubba's prawn gumbo",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 108,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "smoked sausage",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the oil and flour over medium heat into a dark roux.",
+     "min": 30
+    },
+    {
+     "text": "Dice the onion, celery and capsicum and slice the sausage. Peel the prawns.",
+     "min": 20
+    },
+    {
+     "text": "Add the vegetables and garlic to the roux, then the stock and sausage. Simmer.",
+     "min": 60
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 15
+    },
+    {
+     "text": "Add the prawns to the gumbo for the last few minutes and serve over the rice.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Peach cobbler",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Best the day it is baked",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the peaches and toss with the sugar and cinnamon in a dish.",
+     "min": 10
+    },
+    {
+     "text": "Rub the butter into the flour, add the milk and drop spoonfuls over the fruit.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 190C.",
+     "min": 40
+    },
+    {
+     "text": "Serve with vanilla ice cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "White House cherry vanilla soda",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 30,
+   "make_ahead": "Syrup up to 1 week",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen pitted cherries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, to serve",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the cherries with the sugar, water and split vanilla bean.",
+     "min": 10
+    },
+    {
+     "text": "Mash, strain and cool the syrup.",
+     "min": 20
+    },
+    {
+     "text": "Fill four tall glasses with ice and add syrup and a squeeze of lime to each.",
+     "min": 4
+    },
+    {
+     "text": "Top with cold soda water, stir, and finish with a cherry.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

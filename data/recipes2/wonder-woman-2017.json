@@ -1,0 +1,380 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Themyscira island platter",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "haloumi, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fresh thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "figs, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Griddle the haloumi until golden and squeeze lemon over.",
+     "min": 8
+    },
+    {
+     "text": "Drizzle the feta with honey and thyme.",
+     "min": 2
+    },
+    {
+     "text": "Warm the pitas.",
+     "min": 3
+    },
+    {
+     "text": "Arrange everything on a big platter with the olives and figs.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "London 1918 pasties",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "potato, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets of shortcrust pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "English mustard, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Mix the mince, potato, onion and pepper.",
+     "min": 7
+    },
+    {
+     "text": "Cut the pastry into rounds, fill and fold into half moons.",
+     "min": 13
+    },
+    {
+     "text": "Crimp, egg wash and bake.",
+     "min": 30
+    },
+    {
+     "text": "Serve with English mustard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Veld celebration stew",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 210,
+   "make_ahead": "Stew up to 2 days ahead, fry the chips fresh",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "dark beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut in chips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches.",
+     "min": 15
+    },
+    {
+     "text": "Cook the onions slowly.",
+     "min": 20
+    },
+    {
+     "text": "Add the beer, thyme, bay leaves and mustard and braise at 160C.",
+     "min": 180
+    },
+    {
+     "text": "Fry the potatoes at 140C, then again at 180C until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Serve the stew with the frites.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Diana's raspberry ripple ice cream cones",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 290,
+   "make_ahead": "Make the ice cream a day ahead",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar, for the sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "ice cream cones",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk and cream with the split vanilla bean.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the yolks and sugar, whisk in the hot milk and cook to 82C, stirring.",
+     "min": 10
+    },
+    {
+     "text": "Strain and chill overnight, then churn.",
+     "min": 25
+    },
+    {
+     "text": "Simmer the raspberries with sugar, sieve and cool.",
+     "min": 12
+    },
+    {
+     "text": "Layer the ice cream and sauce, swirl once with a knife and freeze.",
+     "min": 240
+    },
+    {
+     "text": "Scoop into cones.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Veld Belgian ale with orange and honey",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Syrup up to 3 days, chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peeled zest and 1 strip for garnish",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of crushed coriander seed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles Belgian white ale, 330ml each",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the orange zest with the honey, water and coriander seed, then cool and strain.",
+     "min": 8
+    },
+    {
+     "text": "Put a spoon of syrup and a squeeze of lemon in each of 4 chilled glasses.",
+     "min": 3
+    },
+    {
+     "text": "Pour the ale slowly so it builds a head.",
+     "min": 2
+    },
+    {
+     "text": "Twist orange peel over the top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

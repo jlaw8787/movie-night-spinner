@@ -1,0 +1,306 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bali chicken satay",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 123,
+   "make_ahead": "Marinate up to 1 day, grill fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets, cut into strips",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "stalks lemongrass",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "coconut milk, for the sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "bamboo skewers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the lemongrass and mix with the coconut milk and turmeric. Add the chicken and marinate in the fridge.",
+     "min": 130
+    },
+    {
+     "text": "Soak the skewers in water, then thread on the chicken.",
+     "min": 5
+    },
+    {
+     "text": "Grill until charred and cooked through.",
+     "min": 8
+    },
+    {
+     "text": "Warm the peanut butter with the extra coconut milk and lime juice into a thick sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Beer pong prawn crackers",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Crackers keep a day in an airtight tin",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet prawn crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oil to 190C.",
+     "min": 5
+    },
+    {
+     "text": "Drop in the prawn crackers a few at a time. They puff up in seconds. Scoop out and drain on paper.",
+     "min": 4
+    },
+    {
+     "text": "Pile into a big bowl with sweet chilli sauce for dipping.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Gede's seaweed farm nasi goreng",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "cups cooked jasmine rice, cold",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chicken thighs, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "kecap manis",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the chicken, crush the garlic, chop the chillies and slice the cucumber.",
+     "min": 10
+    },
+    {
+     "text": "Stir fry the chicken with the garlic and chilli in a very hot wok.",
+     "min": 6
+    },
+    {
+     "text": "Add the cold rice and kecap manis and toss until smoky.",
+     "min": 5
+    },
+    {
+     "text": "Fry the eggs and serve on top with cucumber slices.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Black rice pudding",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 520,
+   "make_ahead": "Make the night before, serve warm or chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "black rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "palm sugar, or to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch sea salt flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the black rice overnight, which is the resting time.",
+     "min": 480
+    },
+    {
+     "text": "Simmer in the water until thick and soft.",
+     "min": 40
+    },
+    {
+     "text": "Stir in palm sugar to taste.",
+     "min": 2
+    },
+    {
+     "text": "Warm the coconut milk with a pinch of salt and pour over each bowl.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Wedding wreckers sunset cooler",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "coconut water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill tall glasses with ice and mint leaves.",
+     "min": 2
+    },
+    {
+     "text": "Pour in the coconut water and pineapple juice, then squeeze in a wedge of lime.",
+     "min": 2
+    },
+    {
+     "text": "Stir and serve cold.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

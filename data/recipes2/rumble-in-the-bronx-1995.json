@@ -1,0 +1,382 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Elaine's supermarket Reuben bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sliced pastrami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sauerkraut, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "dill pickle, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices dill pickle, to garnish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the rye into quarters and toast lightly at 200C.",
+     "min": 8
+    },
+    {
+     "text": "Top each with folded pastrami, sauerkraut and a square of Swiss cheese.",
+     "min": 5
+    },
+    {
+     "text": "Bake until melted.",
+     "min": 5
+    },
+    {
+     "text": "Mix the mayonnaise with tomato sauce, horseradish and chopped pickle.",
+     "min": 4
+    },
+    {
+     "text": "Dab on each bite and spear with a slice of dill pickle.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pork and chive dumplings",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch garlic chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Chinkiang vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork with chives, ginger and sesame oil.",
+     "min": 10
+    },
+    {
+     "text": "Fill the wrappers and pleat.",
+     "min": 20
+    },
+    {
+     "text": "Fry until crisp underneath.",
+     "min": 4
+    },
+    {
+     "text": "Add water and steam under a lid.",
+     "min": 4
+    },
+    {
+     "text": "Serve with black vinegar.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Hovercraft sweet and sour pork",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "pork shoulder, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pineapple and capsicum into chunks and toss the pork in egg and cornflour.",
+     "min": 10
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 15
+    },
+    {
+     "text": "Fry the pork in batches at 180C until crisp.",
+     "min": 12
+    },
+    {
+     "text": "Simmer the pineapple and capsicum with vinegar, sugar and tomato sauce, then thicken.",
+     "min": 8
+    },
+    {
+     "text": "Toss the pork through and serve with the rice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Almond jelly with fruit",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 180,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "gelatine leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "almond extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 425,
+     "u": "g",
+     "item": "tin lychees",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mandarins",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine leaves in cold water.",
+     "min": 5
+    },
+    {
+     "text": "Warm the milk with the sugar, then stir in the gelatine and almond extract.",
+     "min": 5
+    },
+    {
+     "text": "Set in a tray for 3 hours.",
+     "min": 180
+    },
+    {
+     "text": "Cut into cubes.",
+     "min": 5
+    },
+    {
+     "text": "Serve in bowls with lychees and mandarin segments in their syrup.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Uncle Bill's wedding iced jasmine tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 63,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "tsp",
+     "item": "jasmine tea",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 565,
+     "u": "g",
+     "item": "tin lychees",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the water to just off the boil and steep the jasmine tea.",
+     "min": 4
+    },
+    {
+     "text": "Strain and cool, and drain the lychees keeping the syrup.",
+     "min": 4
+    },
+    {
+     "text": "Stir some of the lychee syrup and lime juice into the tea.",
+     "min": 3
+    },
+    {
+     "text": "Chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Fill four tall glasses with ice and a few lychees, pour in the tea and finish with a twist of lime peel.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Stockman's damper",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 30,
+   "make_ahead": "Best the day it is baked",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "golden syrup, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub a portion of the butter into the flour and salt.",
+     "min": 5
+    },
+    {
+     "text": "Mix in the milk with a knife, shape into a round and score the top.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until it sounds hollow.",
+     "min": 30
+    },
+    {
+     "text": "Serve warm with the remaining butter and golden syrup.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "High country corned beef sandwiches",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 180,
+   "make_ahead": "Beef up to 3 days, assemble on the day",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "corned silverside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mustard pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the beef in a pot with the halved onion, carrot and peppercorns, cover with water and bring to a simmer.",
+     "min": 10
+    },
+    {
+     "text": "Simmer gently, then leave to cool in the liquid.",
+     "min": 180
+    },
+    {
+     "text": "Butter the bread, slice the beef thin and layer with mustard and pickles.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Camp oven lamb stew",
+   "course": "m",
+   "prep_min": 17,
+   "cook_min": 165,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "lamb shoulder chops",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the onions, carrots and potatoes into chunks.",
+     "min": 15
+    },
+    {
+     "text": "Brown the lamb in a heavy pot in batches.",
+     "min": 15
+    },
+    {
+     "text": "Add the vegetables, stock and rosemary, cover and cook over coals or at 160C until the lamb is tender.",
+     "min": 150
+    },
+    {
+     "text": "Finish with chopped parsley.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Colt from Old Regret spotted dog",
+   "course": "w",
+   "prep_min": 22,
+   "cook_min": 120,
+   "make_ahead": "Pudding up to 1 day, reheat by steaming",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "currants",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "golden syrup, to serve",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, then stir in the sugar and currants.",
+     "min": 10
+    },
+    {
+     "text": "Add the milk to make a soft dough and wrap in a floured cloth or put in a basin.",
+     "min": 7
+    },
+    {
+     "text": "Steam until firm and cooked through.",
+     "min": 120
+    },
+    {
+     "text": "Slice and serve with golden syrup and warm custard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Clancy's billy tea",
+   "course": "d",
+   "prep_min": 2,
+   "cook_min": 11,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "loose leaf tea",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "sugar, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water in a billy or pot.",
+     "min": 8
+    },
+    {
+     "text": "Throw in the tea and a gum leaf if you have one, take it off the heat and swing it round to settle the leaves.",
+     "min": 3
+    },
+    {
+     "text": "Pour into tin mugs with milk and sugar.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

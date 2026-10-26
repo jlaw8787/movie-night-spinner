@@ -1,0 +1,662 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Southwest General green room sandwiches",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Up to 3 hours, keep covered and chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful cress",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices soft white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs, then cool.",
+     "min": 10
+    },
+    {
+     "text": "Mash the eggs with mayonnaise and cress.",
+     "min": 5
+    },
+    {
+     "text": "Spread cream cheese on some of the bread and layer with cucumber.",
+     "min": 5
+    },
+    {
+     "text": "Make up the sandwiches, cut off the crusts and cut into triangles.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Sandy's audition capsicum and feta dip",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "red capsicums",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil, plus extra to drizzle",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "seeded crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Char the capsicums under a hot grill.",
+     "min": 15
+    },
+    {
+     "text": "Cover, then peel and seed.",
+     "min": 10
+    },
+    {
+     "text": "Blitz with the feta, yoghurt, garlic, chilli and oil until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into a bowl, drizzle with oil and serve with crackers.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Les's farm roast chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 1033,
+   "make_ahead": "Salt the chicken the night before",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, 1 zested, 1 halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, halved",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the chicken and refrigerate uncovered overnight to dry-brine.",
+     "min": 960
+    },
+    {
+     "text": "Mix the butter with lemon zest and thyme and push under the skin.",
+     "min": 8
+    },
+    {
+     "text": "Roast at 220C with the potatoes in the tray.",
+     "min": 20
+    },
+    {
+     "text": "Lower to 180C and roast until cooked through.",
+     "min": 50
+    },
+    {
+     "text": "Rest before carving.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Strawberry shortcake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Scones best the same day",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "strawberries, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, 200ml of the cream and some of the sugar to a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Pat out, cut 4 rounds and bake at 220C.",
+     "min": 14
+    },
+    {
+     "text": "Toss the strawberries with sugar.",
+     "min": 3
+    },
+    {
+     "text": "Whip the remaining cream softly.",
+     "min": 4
+    },
+    {
+     "text": "Split the scones and fill with berries and cream.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Dorothy Michaels' Russian caravan tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "loose black tea",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "just-boiled water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cherry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea in the just-boiled water and strain into 4 glasses.",
+     "min": 8
+    },
+    {
+     "text": "Serve with lemon slices and a small dish of cherry jam on the side for stirring in.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Blini, red caviar",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "buckwheat flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salmon roe",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flours, yeast, milk and eggs into a batter and stand.",
+     "min": 30
+    },
+    {
+     "text": "Cook small pancakes on a buttered pan until golden each side.",
+     "min": 15
+    },
+    {
+     "text": "Top with sour cream, salmon roe and melted butter.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Chicken Kiev",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "oil for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the butter with garlic and herbs and chill.",
+     "min": 15
+    },
+    {
+     "text": "Slit each breast, fill with herb butter, and roll tight.",
+     "min": 12
+    },
+    {
+     "text": "Crumb in flour, egg and breadcrumbs.",
+     "min": 8
+    },
+    {
+     "text": "Fry until golden, then finish in the oven at 180C.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Beef Stroganoff",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef tenderloin, in strips",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "egg noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the noodles and toss with a little butter.",
+     "min": 10
+    },
+    {
+     "text": "Sear the beef in batches and set aside.",
+     "min": 8
+    },
+    {
+     "text": "Cook the onion and mushrooms in butter with the paprika.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the sour cream and return the beef to heat through.",
+     "min": 4
+    },
+    {
+     "text": "Serve over the buttered noodles.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Blintzes",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "farmer cheese or ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, eggs and milk into a thin batter.",
+     "min": 5
+    },
+    {
+     "text": "Cook thin crepes in a buttered pan.",
+     "min": 15
+    },
+    {
+     "text": "Mix the cheese with the sugar and roll the filling in the crepes.",
+     "min": 8
+    },
+    {
+     "text": "Brown the parcels in butter.",
+     "min": 7
+    },
+    {
+     "text": "Serve with sour cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Iced vodka",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 240,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle vodka, 700ml",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the bottle until syrupy.",
+     "min": 240
+    },
+    {
+     "text": "Pour from a frosted carafe into small glasses.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coffee",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a fresh pot.",
+     "min": 10
+    },
+    {
+     "text": "Serve with cream and keep refilling.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

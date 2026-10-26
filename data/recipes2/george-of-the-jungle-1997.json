@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ape's jungle banana bread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 70,
+   "make_ahead": "Up to 3 days, wrapped",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted, plus extra to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the bananas with the sugar, melted butter, eggs and cinnamon. Fold in the flour until just combined.",
+     "min": 10
+    },
+    {
+     "text": "Pour into a lined loaf tin and bake at 175C.",
+     "min": 55
+    },
+    {
+     "text": "Cool a little, then slice thick and butter.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Safari tropical fruit",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Up to 3 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "papaya",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "torn mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and cube the mangoes, pineapple and papaya into a big bowl.",
+     "min": 12
+    },
+    {
+     "text": "Scoop over the passionfruit pulp, squeeze over the lime juice and toss gently with mint.",
+     "min": 3
+    },
+    {
+     "text": "Chill for 20 minutes before serving.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "San Francisco cioppino with garlic toast",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Base up to 2 days, add seafood fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, 3 sliced and 1 halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "fish stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "white fish fillets, in chunks",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mussels, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf sourdough, sliced",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the fennel, onion and sliced garlic in the oil with the chilli.",
+     "min": 10
+    },
+    {
+     "text": "Add the tomatoes and stock and simmer.",
+     "min": 20
+    },
+    {
+     "text": "Add the fish, prawns and mussels, cover and cook until the mussels open. Stir through the parsley.",
+     "min": 6
+    },
+    {
+     "text": "Toast the sourdough, rub with the cut garlic clove and serve alongside.",
+     "min": 9
+    }
+   ]
+  },
+  {
+   "n": "Watch-out-for-that-tree coconut pudding",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 150,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "arborio rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla bean paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "shredded coconut, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the rice with the coconut milk, sugar and vanilla, stirring often, until thick and creamy.",
+     "min": 30
+    },
+    {
+     "text": "Chill for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Spoon into bowls and top with toasted coconut and fresh mango.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Shep's jungle smoothie",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the bananas and mango and drop into a blender with the yoghurt, honey and ice.",
+     "min": 5
+    },
+    {
+     "text": "Blend until thick and smooth, adding a splash of water if too thick, then pour into tall glasses with straws.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "The Sommelier's antipasti tasting",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pecorino",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "prosciutto",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "rockmelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "anchovy fillets",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pecorino into shards. Warm the honey with chilli flakes and drizzle over.",
+     "min": 8
+    },
+    {
+     "text": "Wrap prosciutto around wedges of rockmelon and add mint leaves.",
+     "min": 8
+    },
+    {
+     "text": "Chop the parsley with capers, lemon zest and oil for salsa verde.",
+     "min": 8
+    },
+    {
+     "text": "Toast baguette slices, spread with salsa verde and top each with an anchovy.",
+     "min": 10
+    },
+    {
+     "text": "Lay it all out in neat rows on a long board.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Rome supplì",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 60,
+   "make_ahead": "Risotto cooled a day ahead",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "arborio rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice with the tomatoes and stock into a thick risotto.",
+     "min": 25
+    },
+    {
+     "text": "Stir in the parmesan and cool completely.",
+     "min": 30
+    },
+    {
+     "text": "Roll around cubes of mozzarella.",
+     "min": 15
+    },
+    {
+     "text": "Crumb in beaten egg and breadcrumbs.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 180C until golden.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Cacio e pepe",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pecorino",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the pepper in a dry pan.",
+     "min": 2
+    },
+    {
+     "text": "Cook the spaghetti in a small amount of salted water.",
+     "min": 12
+    },
+    {
+     "text": "Off the heat, toss with finely grated pecorino, the pepper and ladles of starchy pasta water until creamy, never stringy.",
+     "min": 11
+    }
+   ]
+  },
+  {
+   "n": "Tiramisu",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 480,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "strong brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "coffee liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mascarpone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "savoiardi biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee, cool and add the liqueur.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the yolks with the sugar, then fold in the mascarpone and whipped cream.",
+     "min": 12
+    },
+    {
+     "text": "Dip the savoiardi quickly and layer with the cream in a dish.",
+     "min": 10
+    },
+    {
+     "text": "Set overnight in the fridge.",
+     "min": 480
+    },
+    {
+     "text": "Sift cocoa on top.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Negroni",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "red bitter aperitivo",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sweet vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the gin, aperitivo and vermouth over ice for 20 seconds, one drink at a time.",
+     "min": 3
+    },
+    {
+     "text": "Strain over a big cube and twist orange peel over the top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

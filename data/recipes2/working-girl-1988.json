@@ -1,0 +1,526 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Trask wedding canapés",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the prawns until just pink, chill and peel.",
+     "min": 15
+    },
+    {
+     "text": "Cut the cucumbers into thick rounds.",
+     "min": 5
+    },
+    {
+     "text": "Mix the mayonnaise and tomato sauce.",
+     "min": 2
+    },
+    {
+     "text": "Top each round with a prawn, a dot of sauce and a dill sprig. Serve cold.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Wall Street crab cakes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Cakes shaped up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "tartare sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab, mayonnaise, egg, Dijon, parsley and breadcrumbs.",
+     "min": 5
+    },
+    {
+     "text": "Shape 12 small cakes and chill.",
+     "min": 20
+    },
+    {
+     "text": "Pan-fry in butter, turning once, until golden.",
+     "min": 6
+    },
+    {
+     "text": "Serve with lemon wedges and tartare sauce.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Power lunch steak salad",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "large sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cos lettuces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese, crumbled",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Sear the steaks hard in a hot pan, then rest.",
+     "min": 12
+    },
+    {
+     "text": "Toss the cos with the tomatoes and onion.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the vinegar, oil and Dijon.",
+     "min": 3
+    },
+    {
+     "text": "Slice the steak thin and arrange over the salad with dressing and blue cheese.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Wedding cake slice",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 75,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "",
+     "item": "eggs, 4 whole and 3 whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar raspberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the first batch of butter with half the sugar, add the whole eggs and fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Bake in two tins at 175C.",
+     "min": 25
+    },
+    {
+     "text": "Cool the cakes.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the whites with the rest of the sugar over hot water until thick and glossy.",
+     "min": 10
+    },
+    {
+     "text": "Beat in the remaining butter, a little at a time, to make the buttercream.",
+     "min": 10
+    },
+    {
+     "text": "Layer the cakes with jam and buttercream and chill.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Tess's Manhattan cocktail",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sweet vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the bourbon, vermouth and bitters with ice.",
+     "min": 3
+    },
+    {
+     "text": "Strain into 4 chilled coupes and drop a cherry in each.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Filet of sole",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "sole fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced, plus wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "flaked almonds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Sauté the onion in butter, add the rice and stock and simmer covered for the pilaf.",
+     "min": 20
+    },
+    {
+     "text": "Melt the rest of the butter with the lemon juice and brush over the sole.",
+     "min": 4
+    },
+    {
+     "text": "Grill or broil the sole until just cooked.",
+     "min": 6
+    },
+    {
+     "text": "Blanch the beans, toss with toasted almonds and butter.",
+     "min": 8
+    },
+    {
+     "text": "Serve with lemon wedges.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Dry martini",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gin or vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "dry vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "green olives or lemon twists",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the glasses.",
+     "min": 5
+    },
+    {
+     "text": "Stir the spirit and vermouth over ice, strain and garnish.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Clam chowder",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salt pork or bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "shucked clams or 1.2 kg littlenecks",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "fish or clam stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag oyster crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Render the salt pork, then soften the onion.",
+     "min": 10
+    },
+    {
+     "text": "Add the potatoes and stock and simmer until tender.",
+     "min": 15
+    },
+    {
+     "text": "Add the clams and cream and heat gently.",
+     "min": 10
+    },
+    {
+     "text": "Serve with oyster crackers.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

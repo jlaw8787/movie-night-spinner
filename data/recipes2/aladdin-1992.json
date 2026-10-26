@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Agrabah market flatbread",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 75,
+   "make_ahead": "Dough up to 1 day in the fridge",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "za'atar",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, yoghurt and warm water into a dough.",
+     "min": 10
+    },
+    {
+     "text": "Rest the dough.",
+     "min": 60
+    },
+    {
+     "text": "Roll into 6 rounds and cook on a smoking hot pan until puffed and blistered.",
+     "min": 15
+    },
+    {
+     "text": "Brush with butter mixed with za'atar.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Abu's dates",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "medjool dates",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pistachios",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the dates and remove the stones.",
+     "min": 8
+    },
+    {
+     "text": "Mix the cream cheese with orange zest and chopped pistachios.",
+     "min": 6
+    },
+    {
+     "text": "Fill each date and dust with cinnamon.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Sultan's palace chicken",
+   "course": "m",
+   "prep_min": 13,
+   "cook_min": 510,
+   "make_ahead": "Marinate a day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground coriander",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "garlic sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pickled turnips, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the yoghurt, crushed garlic, spices and lemon juice and coat the chicken.",
+     "min": 10
+    },
+    {
+     "text": "Marinate in the fridge overnight.",
+     "min": 480
+    },
+    {
+     "text": "Skewer the chicken and grill hot until charred and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Cook the basmati with the saffron.",
+     "min": 15
+    },
+    {
+     "text": "Serve with garlic sauce and pickles.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Magic carpet baklava",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 75,
+   "make_ahead": "Up to 4 days",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pistachios",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "sheets filo pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "orange blossom water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the nuts and mix with the cinnamon and sugar.",
+     "min": 10
+    },
+    {
+     "text": "Layer the filo brushed with melted butter, with the nuts between.",
+     "min": 20
+    },
+    {
+     "text": "Cut into diamonds and bake at 170C until golden.",
+     "min": 45
+    },
+    {
+     "text": "Warm the honey with the orange blossom water and pour over the hot baklava. Cool before serving.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Genie's mint lemonade",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make a sugar syrup by dissolving the sugar in a little hot water, then cool.",
+     "min": 8
+    },
+    {
+     "text": "Blend the lemon juice, mint, syrup, cold water and ice until frothy.",
+     "min": 3
+    },
+    {
+     "text": "Strain into four glasses.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

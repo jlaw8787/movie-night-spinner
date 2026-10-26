@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Andrew's triple-stack ham and cheese",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mayo with the wholegrain mustard.",
+     "min": 2
+    },
+    {
+     "text": "Toast the bread.",
+     "min": 8
+    },
+    {
+     "text": "Build four stacks: toast, sauce, ham and Swiss, toast, sauce, ham, cheddar and pickles, then toast.",
+     "min": 10
+    },
+    {
+     "text": "Press lightly, cut each into three fingers and pin with toothpicks.",
+     "min": 3
+    },
+    {
+     "text": "Slice the apples and toss with lemon juice to serve alongside.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bender's share plate",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sliced salami",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cube the cheddar.",
+     "min": 2
+    },
+    {
+     "text": "Arrange the crackers, cheddar and salami on a shared plate in the middle of the table.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Brian's lunch",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Soup up to 2 days, keep chilled and reheat",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the tomatoes and roast with the onion, garlic and oil at 200C until softened and browned.",
+     "min": 35
+    },
+    {
+     "text": "Transfer to a pot with the stock and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Blitz smooth with the cream and season. Pour into warmed thermoses.",
+     "min": 5
+    },
+    {
+     "text": "Make four peanut butter and jam sandwiches, cut off the crusts and serve with the soup.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Detention brownies",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 55,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and line an 18cm square tin. Melt the chocolate and butter gently and cool slightly.",
+     "min": 8
+    },
+    {
+     "text": "Whisk in the sugar and eggs, then fold in the flour and salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake until the edges are set and the middle gently wobbles.",
+     "min": 25
+    },
+    {
+     "text": "Cool before cutting into four portions.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Detention strawberry milkshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can whipped cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Hull the strawberries, keeping four for garnish.",
+     "min": 4
+    },
+    {
+     "text": "Blend the rest with the ice cream, milk and sugar until thick and smooth.",
+     "min": 3
+    },
+    {
+     "text": "Pour into four tall glasses, top with whipped cream and a strawberry on the rim, and serve with straws.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

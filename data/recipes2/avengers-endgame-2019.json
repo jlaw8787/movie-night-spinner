@@ -1,0 +1,396 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lake house chicken salad rolls",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Up to 3 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 5,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft dinner rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet of strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the chicken in simmering salted water, then cool and shred.",
+     "min": 20
+    },
+    {
+     "text": "Mix with the mayonnaise, celery, chives, lemon juice and seasoning.",
+     "min": 5
+    },
+    {
+     "text": "Split and butter the rolls and fill with lettuce and chicken salad.",
+     "min": 8
+    },
+    {
+     "text": "Toss the apple in lemon and pack in a basket with the strawberries.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Compound kitchen tacos",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "taco spice mix",
+     "aisle": "Spices"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "hard taco shells",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the cumin and taco spices.",
+     "min": 12
+    },
+    {
+     "text": "Warm the taco shells.",
+     "min": 3
+    },
+    {
+     "text": "Shred the lettuce and dice the tomato.",
+     "min": 6
+    },
+    {
+     "text": "Fill the shells and lay them out.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Morgan's cheeseburgers",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chuck mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices of American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "tomato sauce, to serve",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "mustard, to serve",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "crinkle cut potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into 8 balls.",
+     "min": 5
+    },
+    {
+     "text": "Fry the potatoes once at a low heat, then again until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Smash the balls thin on a smoking griddle, flip and top with cheese.",
+     "min": 8
+    },
+    {
+     "text": "Toast the buns.",
+     "min": 3
+    },
+    {
+     "text": "Stack two patties per bun with pickles, onion, sauce and mustard.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Love you 3000 cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 60,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened, for the frosting",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tube red icing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and line two tins.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate and butter, whisk in the eggs and sugar and fold in the flour.",
+     "min": 12
+    },
+    {
+     "text": "Bake in two tins.",
+     "min": 30
+    },
+    {
+     "text": "Cool, then beat the icing sugar, cocoa and butter into fudge frosting.",
+     "min": 15
+    },
+    {
+     "text": "Layer and cover the cake and pipe 3000 on top in red.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Lake house juice pop slushies",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 480,
+   "make_ahead": "Freeze the cubes the night before",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit, pulp",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cold apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "vodka, optional for adults",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the orange juice in ice cube trays overnight.",
+     "min": 480
+    },
+    {
+     "text": "Blend the juice cubes with the mango, passionfruit, apple juice and honey until slushy.",
+     "min": 5
+    },
+    {
+     "text": "Pour into tall cups with a straw. Stir vodka into any adult cups if you like.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

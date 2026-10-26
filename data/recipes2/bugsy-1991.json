@@ -1,0 +1,526 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hollywood party blini and caviar",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 1,
+   "make_ahead": "Top just before serving",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "buckwheat blini",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "crème fraîche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "tsp",
+     "item": "salmon roe",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "snipped chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the blini at 180C for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Top each with a teaspoon of crème fraîche, salmon roe and chives.",
+     "min": 5
+    },
+    {
+     "text": "Serve straight away on a tray.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Brown Derby Cobb salad cups",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Components up to 1 day ahead; fill just before serving",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chicken breast (2)",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "little gem lettuce leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "blue cheese, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "red wine vinaigrette",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the chicken for 12 minutes, cool and dice.",
+     "min": 15
+    },
+    {
+     "text": "Fry the bacon until crisp and crumble. Boil the eggs for 9 minutes and chop.",
+     "min": 12
+    },
+    {
+     "text": "Dice the avocado and tomatoes.",
+     "min": 6
+    },
+    {
+     "text": "Fill the lettuce leaves with everything, scatter over the blue cheese and spoon over the vinaigrette.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Flamingo steak Diane",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "scotch fillet steaks (4)",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "shallots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Flatten the steaks and sear hot for 2 minutes a side, then rest.",
+     "min": 8
+    },
+    {
+     "text": "In the same pan soften the shallots and garlic in the butter, add the brandy and flame.",
+     "min": 4
+    },
+    {
+     "text": "Stir in the mustard, Worcestershire, stock and cream and reduce.",
+     "min": 5
+    },
+    {
+     "text": "Return the steaks to coat in the sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Pink flamingo pavlova",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 178,
+   "make_ahead": "Meringue up to 2 days ahead airtight; top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries, crushed",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to soft peaks, then add the sugar a spoon at a time until glossy.",
+     "min": 15
+    },
+    {
+     "text": "Fold in the cornflour and vinegar and spread into a round.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 120C for 90 minutes, then cool in the oven.",
+     "min": 180
+    },
+    {
+     "text": "Whip the cream and fold through the raspberries. Pile on top just before serving.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Virginia Hill's gin rickey",
+   "course": "d",
+   "prep_min": 3,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four highball glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add gin and the juice of half a lime to each and drop in the squeezed shell.",
+     "min": 2
+    },
+    {
+     "text": "Top with soda water.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Shrimp on ice",
+   "course": "s",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "cooked king prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the prawns on ice.",
+     "min": 5
+    },
+    {
+     "text": "Mix the horseradish, tomato sauce and Worcestershire for a sharp cocktail sauce.",
+     "min": 4
+    },
+    {
+     "text": "Serve the prawns on ice with the sauce and lemon.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Champagne cocktail",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "aromatic bitters, 8 dashes",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "champagne, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drop a sugar cube into each flute and shake bitters over it.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with cold champagne.",
+     "min": 2
+    },
+    {
+     "text": "Finish with a lemon twist.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Prime rib",
+   "course": "m",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 200,
+   "make_ahead": "Season the day before; rest and carve to order",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef rib roast, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "popovers or Yorkshire puddings",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the beef and leave uncovered in the fridge overnight, then bring to room temperature.",
+     "min": 60
+    },
+    {
+     "text": "Rub with oil and pepper and roast at 230C for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Lower to 160C and roast to 52C inside.",
+     "min": 100
+    },
+    {
+     "text": "Rest for 20 minutes. Deglaze the tin with stock for natural juices.",
+     "min": 25
+    },
+    {
+     "text": "Carve to order and serve with a popover.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coffee",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "milk and sugar, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a pot of coffee for four.",
+     "min": 5
+    },
+    {
+     "text": "Serve hot.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

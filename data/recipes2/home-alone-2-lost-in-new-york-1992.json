@@ -1,0 +1,452 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Plaza minibar mix",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 27,
+   "make_ahead": "Up to 1 week in an airtight jar",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "chocolate almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pretzels",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter with the brown sugar and rosemary, then toss through the nuts.",
+     "min": 5
+    },
+    {
+     "text": "Spread on a tray and roast at 170C, stirring once.",
+     "min": 12
+    },
+    {
+     "text": "Cool completely, then mix with the chocolate almonds and pretzels.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Plaza room service club sandwiches",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chicken breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the chicken breasts in simmering water until cooked through, then slice.",
+     "min": 12
+    },
+    {
+     "text": "Grill the bacon until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Toast the bread and spread with mayonnaise. Slice the tomatoes and shred the lettuce.",
+     "min": 6
+    },
+    {
+     "text": "Build 4 triple-deckers with chicken, bacon, lettuce and tomato. Cut into quarters and pin each with a toothpick.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Lobster mac and cheese",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Assemble up to 1 day ahead, bake to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "lobster tails",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk, warm",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "grated Gruyere",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "grated cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "cooked macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Remove the lobster meat from the shells. Boil the macaroni and drain well.",
+     "min": 8
+    },
+    {
+     "text": "Gently poach the lobster meat in some of the butter, then chop.",
+     "min": 4
+    },
+    {
+     "text": "Melt more butter, stir in the flour, then whisk in the warm milk and simmer. Stir in the Gruyere and cheddar.",
+     "min": 8
+    },
+    {
+     "text": "Fold through the macaroni and lobster and tip into a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Top with the panko mixed with melted butter and bake at 200C until golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Room service sundae",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Fudge up to 3 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "chopped mixed nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar sprinkles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with some of the cream for the hot fudge.",
+     "min": 5
+    },
+    {
+     "text": "Whip the remaining cream.",
+     "min": 5
+    },
+    {
+     "text": "Pile the ice cream into four tall glasses, pour over the fudge, then add cream, nuts, sprinkles and a cherry on each.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Hot apple cider",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel strips of orange peel.",
+     "min": 3
+    },
+    {
+     "text": "Warm the apple juice with some of the cinnamon sticks, the cloves, peel and sugar over low heat without boiling.",
+     "min": 15
+    },
+    {
+     "text": "Strain into 4 mugs and serve steaming with a fresh cinnamon stick in each.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Cheese pizza for one",
+   "course": "m",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 70,
+   "make_ahead": "Dough can be made a day ahead",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "grated mozzarella",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rest the dough at room temperature so it relaxes.",
+     "min": 60
+    },
+    {
+     "text": "Stretch the dough thin and spread with the sauce and mozzarella.",
+     "min": 8
+    },
+    {
+     "text": "Bake on a preheated tray at the oven's highest setting until bubbling and golden. Box it up hot.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Shoestring potatoes",
+   "course": "s",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "tomato ketchup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into very thin matchsticks, rinse and dry well.",
+     "min": 10
+    },
+    {
+     "text": "Fry in batches in oil heated to 180C until crisp and golden. Drain on paper towel.",
+     "min": 15
+    },
+    {
+     "text": "Salt well and serve with ketchup on the side.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Hot cocoa",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "whole milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "mini marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the milk, whisk in the cocoa and sugar until smooth and steaming.",
+     "min": 8
+    },
+    {
+     "text": "Pour into 4 mugs and top with a heap of marshmallows.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

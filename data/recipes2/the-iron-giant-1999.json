@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Diner pie bites",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "apples, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the apples with the sugar and cinnamon until soft, then cool.",
+     "min": 12
+    },
+    {
+     "text": "Cut rounds from two pastry sheets and line a 12-hole muffin tin. Fill with the apple.",
+     "min": 10
+    },
+    {
+     "text": "Cut the third sheet into strips and lay a lattice over each.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Beatnik coffee shop biscotti",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 65,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, sugar, baking powder, eggs, almonds and orange zest into a dough.",
+     "min": 10
+    },
+    {
+     "text": "Shape into a log on a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 170C.",
+     "min": 25
+    },
+    {
+     "text": "Cool, slice and bake again, turning once.",
+     "min": 20
+    },
+    {
+     "text": "Cool completely to crisp up.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Diner meatloaf",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "Loaf up to 1 day, keep chilled and reheat",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix both minces with the breadcrumbs, egg, onion, salt and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Shape in a tin, glaze with tomato sauce and bake at 180C.",
+     "min": 60
+    },
+    {
+     "text": "Boil the potatoes and mash with the butter. Cook the peas.",
+     "min": 15
+    },
+    {
+     "text": "Slice the loaf thick and serve with mash and peas.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dean's scrap metal peanut brittle",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "liquid glucose",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "roasted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "flaky sea salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "silver edible lustre",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tray with baking paper. Heat the sugar, glucose and water in a heavy pan to 150C on a sugar thermometer.",
+     "min": 15
+    },
+    {
+     "text": "Off the heat, quickly stir in the peanuts, butter and bicarb.",
+     "min": 1
+    },
+    {
+     "text": "Pour onto the tray and spread thin. Sprinkle with salt and brush lightly with silver lustre.",
+     "min": 4
+    },
+    {
+     "text": "Cool, then smash into jagged shards.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Hogarth's buzzing espresso milkshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Use decaf for younger kids",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "shots espresso coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can whipped cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bag chocolate-coated coffee beans",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the espresso and cool.",
+     "min": 6
+    },
+    {
+     "text": "Blend with the ice cream, milk and malted milk powder until thick.",
+     "min": 2
+    },
+    {
+     "text": "Pour into four tall glasses and top with whipped cream and chocolate-coated coffee beans, or sprinkles for little ones.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

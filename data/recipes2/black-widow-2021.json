@@ -1,0 +1,336 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Budapest langos",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 75,
+   "make_ahead": "Dough can prove up to 1 day in the fridge",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast and warm water to a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Prove until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Stretch into rounds and fry in hot oil until puffed and golden.",
+     "min": 8
+    },
+    {
+     "text": "Brush with garlic butter, spread with sour cream and top with cheddar.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Norway hideout fish",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "rye crispbreads",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "dill sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the crispbreads with creme fraiche.",
+     "min": 5
+    },
+    {
+     "text": "Top with folds of smoked salmon, cucumber and a sprig of dill.",
+     "min": 10
+    },
+    {
+     "text": "Squeeze over a little lemon just before serving.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Melina's pork chops (not Alexei)",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "pork chops",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green apples, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "small cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Sear the pork chops until golden.",
+     "min": 10
+    },
+    {
+     "text": "Add the apples and onions to the pan and roast at 200C.",
+     "min": 20
+    },
+    {
+     "text": "Boil the potatoes and mash with butter.",
+     "min": 25
+    },
+    {
+     "text": "Braise the cabbage in a little butter and water until soft.",
+     "min": 25
+    },
+    {
+     "text": "Serve it all on big plates.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Ohio childhood cupcakes",
+   "course": "w",
+   "prep_min": 13,
+   "cook_min": 25,
+   "make_ahead": "Cakes up to 1 day, ice on the day",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter for buttercream, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "pastel food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, then the eggs, then fold in the flour and milk.",
+     "min": 10
+    },
+    {
+     "text": "Spoon into patty pans and bake at 175C, then cool completely.",
+     "min": 18
+    },
+    {
+     "text": "Beat the buttercream with icing sugar and colouring and pipe on top.",
+     "min": 10
+    },
+    {
+     "text": "Cover with sprinkles.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Red Guardian's black tea with cherry jam",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemon slices",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea in the boiling water.",
+     "min": 5
+    },
+    {
+     "text": "Pour into heatproof glasses, stir a spoon of jam into each and add a slice of lemon.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

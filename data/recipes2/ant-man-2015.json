@@ -1,0 +1,370 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ant trail sesame crackers",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 8,
+   "make_ahead": "Crackers up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets of lavash bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "black sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Brush the lavash with oil.",
+     "min": 4
+    },
+    {
+     "text": "Sprinkle the black and white sesame seeds in winding trails.",
+     "min": 4
+    },
+    {
+     "text": "Bake until crisp, then snap into shards.",
+     "min": 10
+    },
+    {
+     "text": "Whip the feta with the yoghurt and a little oil for dipping.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Luis's long story taquitos",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Rolled taquitos up to 1 day ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "shredded cooked chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "salsa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "sour cream, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C. Mix the chicken, cheddar and salsa.",
+     "min": 5
+    },
+    {
+     "text": "Warm the tortillas so they stay pliable.",
+     "min": 5
+    },
+    {
+     "text": "Roll a spoonful tightly in each tortilla.",
+     "min": 15
+    },
+    {
+     "text": "Brush with oil and bake seam side down until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Serve with sour cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "San Francisco burritos",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin of black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "salsa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the chicken thighs and slice.",
+     "min": 15
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 15
+    },
+    {
+     "text": "Fill the tortillas with chicken, rice, beans, cheddar, salsa and sour cream.",
+     "min": 8
+    },
+    {
+     "text": "Roll tight and toast in a dry pan.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Ice cream shop hot fudge brownie sundaes",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 35,
+   "make_ahead": "Brownies up to 1 day, assemble to serve",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "dark chocolate, chopped, for the fudge",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "whipped cream, to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "roasted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and line a 20cm tin.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate and butter, whisk in the sugar and eggs, then fold in the flour and cocoa.",
+     "min": 10
+    },
+    {
+     "text": "Bake and cool slightly.",
+     "min": 25
+    },
+    {
+     "text": "Heat the cream until steaming and stir in the chocolate until smooth for the hot fudge.",
+     "min": 8
+    },
+    {
+     "text": "Put a brownie square in each bowl and top with ice cream, fudge, whipped cream, peanuts and a cherry.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Shrunk-down raspberry lemonade shooters",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chilled soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "raspberries, for the rims",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the raspberries, lemon juice, sugar and mint, then strain into a jug.",
+     "min": 8
+    },
+    {
+     "text": "Add the soda water and stir.",
+     "min": 2
+    },
+    {
+     "text": "Line up shot glasses on a tray and fill each.",
+     "min": 3
+    },
+    {
+     "text": "Hang a raspberry on each rim. Keep the jug in the fridge for refills.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

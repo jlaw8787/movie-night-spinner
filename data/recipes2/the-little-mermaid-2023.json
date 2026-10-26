@@ -1,0 +1,312 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Dinglehopper island fruit platter",
+   "course": "s",
+   "prep_min": 19,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "papaya",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the mangoes, pineapple and papaya into wedges and halve the passionfruit.",
+     "min": 15
+    },
+    {
+     "text": "Mix the salt and chilli flakes.",
+     "min": 1
+    },
+    {
+     "text": "Pile the fruit on a platter, squeeze over lime juice and sprinkle with the chilli salt.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Plantain chips",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the plantains and slice them thin.",
+     "min": 12
+    },
+    {
+     "text": "Stir chopped coriander and lime juice through the sour cream for a dip.",
+     "min": 4
+    },
+    {
+     "text": "Fry at 180C in batches until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Salt well and serve with the dip.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Castle dinner jerk chicken",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 160,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ground allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can kidney beans",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the allspice, thyme, chilli, lime juice and spring onion into a paste.",
+     "min": 8
+    },
+    {
+     "text": "Marinate the chicken in the paste.",
+     "min": 120
+    },
+    {
+     "text": "Cook the rice with the drained kidney beans.",
+     "min": 20
+    },
+    {
+     "text": "Grill the chicken until charred and cooked through.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Ariel's grotto jelly",
+   "course": "w",
+   "prep_min": 24,
+   "cook_min": 180,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "packets blue jelly crystals",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "kiwifruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the mango and kiwifruit into little fish shapes.",
+     "min": 12
+    },
+    {
+     "text": "Make up the jelly and pour into clear glasses with the fruit suspended inside.",
+     "min": 8
+    },
+    {
+     "text": "Chill until set.",
+     "min": 180
+    },
+    {
+     "text": "Whip the cream and spoon on top like sea foam.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Sebastian's seashell coconut cooler",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "coconut water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill tall glasses with ice and mint leaves.",
+     "min": 3
+    },
+    {
+     "text": "Pour in equal parts coconut water and pineapple juice.",
+     "min": 2
+    },
+    {
+     "text": "Squeeze in a lime wedge, stir and serve cold.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

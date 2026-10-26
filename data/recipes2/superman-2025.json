@@ -1,0 +1,336 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Daily Planet bagel bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "mini bagels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "dill sprigs",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split and toast the bagels.",
+     "min": 5
+    },
+    {
+     "text": "Spread with cream cheese and top with salmon, capers, red onion and dill.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Fortress crystal prawn rice paper rolls",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 5,
+   "make_ahead": "Up to 4 hours, covered with damp paper towel",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rice vermicelli",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "cooked peeled prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "rice paper sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, cut into sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fish sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the vermicelli in boiling water, drain and cool.",
+     "min": 8
+    },
+    {
+     "text": "Halve the prawns lengthways.",
+     "min": 5
+    },
+    {
+     "text": "Dip each rice paper in warm water until pliable, lay flat, fill with prawns, noodles, cucumber and herbs, fold in the sides and roll tightly.",
+     "min": 22
+    },
+    {
+     "text": "Mix the sweet chilli sauce with lime juice and fish sauce for dipping.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ma Kent's beef pot roast",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 195,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef all over.",
+     "min": 15
+    },
+    {
+     "text": "Add the onion, carrots, stock and thyme.",
+     "min": 5
+    },
+    {
+     "text": "Cover and braise at 160C.",
+     "min": 120
+    },
+    {
+     "text": "Add the potatoes for the last hour.",
+     "min": 60
+    },
+    {
+     "text": "Thicken the juices into gravy and serve family style.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Red cape strawberry shortcake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Shortcakes up to 1 day, fill just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "strawberries, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cream, whipped, for filling",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the strawberries with sugar.",
+     "min": 5
+    },
+    {
+     "text": "Leave to macerate.",
+     "min": 30
+    },
+    {
+     "text": "Rub the butter into the flour, add the cream and mix to a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Cut rounds and bake at 220C.",
+     "min": 15
+    },
+    {
+     "text": "Split and fill with whipped cream and strawberries.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Smallville honey malt milkshake",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, ice cream, honey, malted milk powder and vanilla until thick and frothy.",
+     "min": 2
+    },
+    {
+     "text": "Pour into chilled tall glasses and top with whipped cream and a drizzle of honey.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

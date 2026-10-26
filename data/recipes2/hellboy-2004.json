@@ -1,0 +1,342 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Abe Sapien's devilled eggs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill sprigs",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs, cool and peel.",
+     "min": 10
+    },
+    {
+     "text": "Halve and mash the yolks with mayonnaise, Dijon and dill until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Pipe back into the whites and finish with paprika and a sprig of dill.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Bureau red chilli wings",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies, finely chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Warm the butter with honey, soy sauce and chilli until sticky and toss the wings through until glossy.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Moscow cemetery borscht",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "beetroot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "small cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Prepare the vegetables.",
+     "min": 30
+    },
+    {
+     "text": "Simmer the vegetables in the stock until tender.",
+     "min": 40
+    },
+    {
+     "text": "Season with dill and vinegar.",
+     "min": 2
+    },
+    {
+     "text": "Serve in bowls with sour cream.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Rooftop brown butter choc chip cookies",
+   "course": "w",
+   "prep_min": 50,
+   "cook_min": 10,
+   "make_ahead": "Up to 2 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter until nutty, then cool.",
+     "min": 10
+    },
+    {
+     "text": "Beat with both sugars, the egg and vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the flour, bicarb soda and chocolate, then chill.",
+     "min": 5
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Roll into sixteen balls and bake at 180C until golden at the edges but soft in the middle.",
+     "min": 10
+    },
+    {
+     "text": "Sprinkle with sea salt.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Rooftop strawberry malted milk",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, hulled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "strawberries, halved, to finish",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the strawberries, milk, malted milk powder, honey and ice cream until smooth and frothy.",
+     "min": 2
+    },
+    {
+     "text": "Pour into chilled tall glasses and top each with a halved strawberry.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

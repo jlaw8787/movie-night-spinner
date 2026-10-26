@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Glowing forest fruit skewers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "dragon fruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "kiwifruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the dragon fruit, kiwifruit and pineapple into chunks.",
+     "min": 10
+    },
+    {
+     "text": "Thread onto skewers with the blueberries.",
+     "min": 7
+    },
+    {
+     "text": "Drizzle with lime juice and honey.",
+     "min": 2
+    },
+    {
+     "text": "Serve on a dark board under low light.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Hallelujah Mountains bao",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 122,
+   "make_ahead": "Pork up to 2 days chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pork belly",
+     "aisle": "Meat"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "bao buns",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "peanuts, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the pork belly in a pot with soy, ginger, star anise and water.",
+     "min": 10
+    },
+    {
+     "text": "Simmer until tender.",
+     "min": 120
+    },
+    {
+     "text": "Slice the pork and pickle the cucumber in a little vinegar and salt.",
+     "min": 8
+    },
+    {
+     "text": "Steam the bao buns.",
+     "min": 10
+    },
+    {
+     "text": "Fill with pork, pickled cucumber, coriander and crushed peanuts.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Hometree hunter's spit-roast",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 310,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "lamb shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the lamb with crushed garlic, rosemary and paprika.",
+     "min": 10
+    },
+    {
+     "text": "Roast covered at 150C until it pulls apart.",
+     "min": 300
+    },
+    {
+     "text": "Rest and shred the lamb.",
+     "min": 10
+    },
+    {
+     "text": "Toss mint and parsley into a salad.",
+     "min": 6
+    },
+    {
+     "text": "Serve with warm flatbreads and the salad.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Tree of Souls pudding",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 124,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "tapioca pearls",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "shredded coconut, toasted",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the tapioca in coconut milk, water and sugar until clear.",
+     "min": 15
+    },
+    {
+     "text": "Chill.",
+     "min": 120
+    },
+    {
+     "text": "Layer in glasses with mango and passionfruit pulp.",
+     "min": 6
+    },
+    {
+     "text": "Top with toasted coconut.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pandora blue lagoon",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "coconut water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "blue curaçao",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pineapple wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Pour in coconut water and pineapple juice.",
+     "min": 2
+    },
+    {
+     "text": "Add a splash of blue curacao for the adults.",
+     "min": 1
+    },
+    {
+     "text": "Garnish with a pineapple wedge.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sailing trip sandwiches",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours, wrap tight",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "roast chicken, torn",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cos lettuce",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the chicken with the mayo and lemon juice.",
+     "min": 5
+    },
+    {
+     "text": "Pile into the rolls with sliced avocado and crisp cos.",
+     "min": 7
+    },
+    {
+     "text": "Wrap tight in paper for the boat.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Amity Island fried clams",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "calamari, cut into strips",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tartare sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut into wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the calamari in buttermilk for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Mix the cornmeal and flour and dredge the calamari.",
+     "min": 5
+    },
+    {
+     "text": "Fry at 185C for 90 seconds, in batches.",
+     "min": 10
+    },
+    {
+     "text": "Serve with tartare and lemon wedges.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cable Junction clambake",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "new potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked sausage, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes for 10 minutes in a big pot.",
+     "min": 10
+    },
+    {
+     "text": "Add the corn, sausage, butter and a splash of water.",
+     "min": 5
+    },
+    {
+     "text": "Add the clams and prawns, cover and steam for 8 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Tip it all onto the table.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Blueberry cobbler",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tub vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the blueberries with the sugar and lemon juice in a dish.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour, add the milk and drop spoonfuls over the fruit.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 190C for 40 minutes.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Amity sailing day rum punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Make the rum-free jug the same way for the younger crew",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "golden rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "grenadine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "whole nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pineapple wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water, for the rum-free jug",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the rum, juices and grenadine in a large jug.",
+     "min": 5
+    },
+    {
+     "text": "Chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Fill tall glasses with ice, pour in the punch and finish with grated nutmeg, a pineapple wedge and a cherry.",
+     "min": 5
+    },
+    {
+     "text": "For the younger crew, make a second jug without the rum and top it with soda water.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

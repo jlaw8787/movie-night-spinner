@@ -1,0 +1,370 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Willow's magic acorn bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "hazelnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "bocconcini",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the hazelnuts at 180C, rub off the skins and chop finely. Mix with the chives.",
+     "min": 12
+    },
+    {
+     "text": "Pat the bocconcini dry and roll each ball in the hazelnut mix so it looks like a little acorn.",
+     "min": 10
+    },
+    {
+     "text": "Arrange on a plate and drizzle with a little honey.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Nelwyn harvest bread",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 90,
+   "make_ahead": "Best the day it is baked",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, soft, for serving",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, salt, butter and warm water to a dough and knead until smooth.",
+     "min": 15
+    },
+    {
+     "text": "Prove the dough for an hour until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Shape into rolls and bake at 200C until golden.",
+     "min": 18
+    },
+    {
+     "text": "Mash the soft butter with the parsley and chives. Serve the warm rolls with it and a wedge of brie.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Crossroads tavern beef and root veg stew",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 185,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "parsnips, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bay leaf",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf crusty bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in the oil in batches.",
+     "min": 15
+    },
+    {
+     "text": "Add the onion, carrots and parsnips and cook for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the flour and tomato paste, then the stock, thyme and bay leaf.",
+     "min": 5
+    },
+    {
+     "text": "Cover and simmer for 3 hours until the beef is tender and the sauce is rich.",
+     "min": 180
+    },
+    {
+     "text": "Serve in bowls with crusty bread and butter.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Nockmaar castle blackberry tart",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 90,
+   "make_ahead": "Up to 2 days, keep cool",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "almond meal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen blackberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thick cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a 23cm tart tin with the pastry and chill for 20 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Beat the butter and sugar, then the eggs and almond meal. Spread in the case and press in the blackberries.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C for 40 minutes until golden and set.",
+     "min": 40
+    },
+    {
+     "text": "Cool, dust with icing sugar and serve with thick cream.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Nelwyn warm spiced apple punch",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Make fresh, keep warm on low heat",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peeled into strips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple, thinly sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the apple juice into a pot with the cinnamon, cloves, orange peel and honey.",
+     "min": 5
+    },
+    {
+     "text": "Warm gently for 15 minutes without boiling so the spices come through. Strain out the cloves.",
+     "min": 15
+    },
+    {
+     "text": "Ladle into mugs and float a thin apple slice in each.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,326 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Liar's dice halloumi with chilli honey",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 360,
+     "u": "g",
+     "item": "halloumi, cut into 2cm cubes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the halloumi cubes dry and toss in the flour.",
+     "min": 5
+    },
+    {
+     "text": "Fry in the oil over medium-high heat for 1 minute a side until golden all over. Warm the honey with the chilli flakes.",
+     "min": 10
+    },
+    {
+     "text": "Pile into a cup, tip onto a board like a throw of dice, and drizzle with chilli honey, lemon and thyme.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Pelegosto island skewers",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Skewer up to 4 hours ahead, grill fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork scotch fillet, cut into chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thread the pork and pineapple onto skewers.",
+     "min": 15
+    },
+    {
+     "text": "Warm the honey with the chilli and lime juice.",
+     "min": 5
+    },
+    {
+     "text": "Grill over hot coals, brushing with the glaze, until sticky and charred on all sides.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Davy Jones's seafood boil",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, 2 in the water and 2 crushed for the butter",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "mussels, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes in salted water with the paprika, garlic and lemon.",
+     "min": 15
+    },
+    {
+     "text": "Add the corn and cook for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Add the prawns and mussels for 4 minutes until the mussels open.",
+     "min": 4
+    },
+    {
+     "text": "Drain, tip onto paper and pour over melted butter mixed with the crushed garlic.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Kraken ink chocolate tart",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 255,
+   "make_ahead": "Make the night before, slice just before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "sea salt flakes, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the cocoa into the pastry, line a tart tin and blind bake at 180C. Cool.",
+     "min": 35
+    },
+    {
+     "text": "Heat the cream and pour over the chocolate, stirring until glossy.",
+     "min": 10
+    },
+    {
+     "text": "Pour into the case and chill overnight.",
+     "min": 240
+    },
+    {
+     "text": "Sprinkle with sea salt flakes before slicing.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tia Dalma's sorrel brew",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Make a day ahead, rum added at serving",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "dried hibiscus flowers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peeled into strips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "dark rum, optional for the grown-ups",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the hibiscus, ginger, cloves and orange peel in the boiling water for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Strain, stir in the sugar and chill.",
+     "min": 8
+    },
+    {
+     "text": "Serve over ice, with a splash of dark rum for the grown-ups.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

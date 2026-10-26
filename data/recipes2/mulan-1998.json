@@ -1,0 +1,308 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Matchmaker's tea and dumplings",
+   "course": "s",
+   "prep_min": 50,
+   "cook_min": 10,
+   "make_ahead": "Fill up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch garlic chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Chinkiang vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork, garlic chives and ginger.",
+     "min": 8
+    },
+    {
+     "text": "Fill the dumpling wrappers and pleat.",
+     "min": 32
+    },
+    {
+     "text": "Steam for 8 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Serve with soy and Chinkiang vinegar, and pour the tea carefully.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Training camp edamame",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen edamame",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "flaky salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the edamame for 4 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Toss in a hot wok with the garlic, chilli flakes and a splash of soy.",
+     "min": 4
+    },
+    {
+     "text": "Finish with plenty of flaky salt and serve in a big bowl.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Mushu's breakfast congee",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 100,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the rice in the stock with the ginger for 90 minutes, stirring often, until silky.",
+     "min": 90
+    },
+    {
+     "text": "Fry the eggs and bacon.",
+     "min": 12
+    },
+    {
+     "text": "Top each bowl with an egg and bacon smile, spring onion and soy.",
+     "min": 13
+    }
+   ]
+  },
+  {
+   "n": "Mooncakes",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 140,
+   "make_ahead": "Keep 2 days before eating, they soften",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "alkaline water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "lotus seed paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the golden syrup, oil and alkaline water, then the flour into a dough.",
+     "min": 10
+    },
+    {
+     "text": "Rest the dough for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Divide the paste into balls and wrap thin portions of dough around each. Press into moulds.",
+     "min": 35
+    },
+    {
+     "text": "Bake at 180C for 10 minutes, egg wash, then bake 10 minutes more.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Family temple iced jasmine lychee tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 180,
+   "make_ahead": "Chill the tea up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bags jasmine green tea",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin lychees, 565g, drained with syrup kept",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in water at 80C for 3 minutes, remove and chill.",
+     "min": 180
+    },
+    {
+     "text": "Stir some of the lychee syrup and the lime juice into the cold tea.",
+     "min": 3
+    },
+    {
+     "text": "Pour over ice in glasses with lychees and a few mint leaves.",
+     "min": 7
+    }
+   ]
+  }
+ ]
+}

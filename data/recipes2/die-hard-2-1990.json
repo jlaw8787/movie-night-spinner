@@ -1,0 +1,396 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Virginia ham biscuits",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "thin-sliced leg ham",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C. Rub the cold butter into the flour and salt.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the buttermilk and pat out the dough thick. Cut into rounds.",
+     "min": 10
+    },
+    {
+     "text": "Bake until risen and golden.",
+     "min": 12
+    },
+    {
+     "text": "Split warm, spread with butter mixed with Dijon and fill with ham.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Snowbound loaded potato skins",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 63,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the potatoes at 200C until tender.",
+     "min": 45
+    },
+    {
+     "text": "Cook the bacon until crisp and crumble it.",
+     "min": 8
+    },
+    {
+     "text": "Halve the potatoes, scoop out most of the flesh and brush with butter.",
+     "min": 10
+    },
+    {
+     "text": "Crisp the skins at 220C.",
+     "min": 10
+    },
+    {
+     "text": "Fill with cheddar and bacon and bake until melted.",
+     "min": 5
+    },
+    {
+     "text": "Top with sour cream and chives.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "General Esperanza's snowbound chilli",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 155,
+   "make_ahead": "Better made the day before",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "diced beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins chopped tomatoes (400g each)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins kidney beans (400g each)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chuck and mince in batches.",
+     "min": 15
+    },
+    {
+     "text": "Add the chopped onion, chilli powder and cumin, then the tomatoes.",
+     "min": 10
+    },
+    {
+     "text": "Braise gently, covered.",
+     "min": 90
+    },
+    {
+     "text": "Add the drained kidney beans for the last stretch.",
+     "min": 30
+    },
+    {
+     "text": "Serve with sour cream and grated cheddar.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Christmas cookies",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 85,
+   "make_ahead": "Up to 4 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, sugar and golden syrup together. Stir in the flour, spices and bicarb to a dough.",
+     "min": 10
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 60
+    },
+    {
+     "text": "Roll out and cut into planes and snowflakes.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 10
+    },
+    {
+     "text": "Cool on a rack.",
+     "min": 15
+    },
+    {
+     "text": "Mix the icing sugar with a little water and ice the cookies.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Same-guy-twice bourbon eggnog",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 145,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fresh nutmeg, to grate",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks and sugar until pale.",
+     "min": 4
+    },
+    {
+     "text": "Warm the milk, cream and nutmeg until steaming, then slowly whisk into the yolks.",
+     "min": 9
+    },
+    {
+     "text": "Return to the pan and stir over low heat until it coats a spoon, without boiling.",
+     "min": 4
+    },
+    {
+     "text": "Cool, then stir in the bourbon.",
+     "min": 20
+    },
+    {
+     "text": "Chill.",
+     "min": 120
+    },
+    {
+     "text": "Pour into tumblers and grate fresh nutmeg on top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

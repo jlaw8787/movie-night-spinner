@@ -1,0 +1,372 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Overlook storeroom antipasto board",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mixed olives",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peel in strips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "provolone",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "giardiniera pickled vegetables",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "marinated artichokes",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet grissini",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "cornichons",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the olives in the oil with orange peel, garlic and chilli flakes, then cool",
+     "min": 12
+    },
+    {
+     "text": "Slice the salami and provolone",
+     "min": 8
+    },
+    {
+     "text": "Arrange on a big board in tidy rows with the olives, giardiniera, artichokes, grissini and cornichons",
+     "min": 8
+    },
+    {
+     "text": "Serve at room temperature",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Gold Room spiced nuts",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "mixed unsalted nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "rosemary, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the nuts with the butter, sugar, rosemary, salt and cayenne",
+     "min": 5
+    },
+    {
+     "text": "Spread on a lined tray and roast at 180C, stirring halfway",
+     "min": 12
+    },
+    {
+     "text": "Cool so the coating sets",
+     "min": 5
+    },
+    {
+     "text": "Serve warm in small bowls",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Hallorann's roast leg of lamb",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 130,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "lamb leg",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rosemary sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stud the lamb with garlic and rosemary and rub with oil, salt and pepper",
+     "min": 15
+    },
+    {
+     "text": "Roast at 200C with the potatoes around it",
+     "min": 80
+    },
+    {
+     "text": "Rest",
+     "min": 15
+    },
+    {
+     "text": "Stir the flour into the pan juices, add the stock and simmer for gravy",
+     "min": 15
+    },
+    {
+     "text": "Carve and serve",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Hallorann's chocolate ice cream",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 600,
+   "make_ahead": "Make a day ahead",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the cream, milk, chocolate and cocoa until melted",
+     "min": 10
+    },
+    {
+     "text": "Whisk the yolks with the sugar",
+     "min": 5
+    },
+    {
+     "text": "Pour the warm mix over, return to the pan and cook, stirring, to 82C",
+     "min": 10
+    },
+    {
+     "text": "Chill overnight",
+     "min": 480
+    },
+    {
+     "text": "Churn, or freeze and stir every 30 minutes",
+     "min": 120
+    }
+   ]
+  },
+  {
+   "n": "Gold Room bourbon old fashioned",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "demerara sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large ice blocks",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir each drink with ice in a mixing glass for 20 seconds",
+     "min": 6
+    },
+    {
+     "text": "Strain into a rocks glass over one large ice block",
+     "min": 2
+    },
+    {
+     "text": "Squeeze a strip of orange peel over the top and drop it in",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

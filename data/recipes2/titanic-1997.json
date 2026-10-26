@@ -1,0 +1,292 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "First class oysters",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Mignonette up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "shallots, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "freshly shucked oysters",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the shallots with the vinegar and cracked pepper.",
+     "min": 5
+    },
+    {
+     "text": "Rest the mignonette for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Lay the oysters on crushed ice with lemon wedges and serve with the mignonette.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "King of the world ham sandwiches",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty Italian loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes in their skins until tender.",
+     "min": 20
+    },
+    {
+     "text": "Butter thick slices of loaf and fill with ham and mustard.",
+     "min": 10
+    },
+    {
+     "text": "Toss the drained potatoes with butter and salt. Serve together below deck.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Molly Brown's first class filet mignon",
+   "course": "m",
+   "prep_min": 45,
+   "cook_min": 75,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eye fillet steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "shallots, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Layer the potatoes with melted butter in a pan, season and bake at 200C for 50 minutes for pommes Anna.",
+     "min": 60
+    },
+    {
+     "text": "Tie the steaks, sear in butter and roast to 54C.",
+     "min": 20
+    },
+    {
+     "text": "Reduce the shallots, wine and stock to a sauce in the steak pan.",
+     "min": 20
+    },
+    {
+     "text": "Steam the beans and serve everything together.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Waldorf pudding",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day ahead, serve warm or cold",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "apples, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "sultanas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the apples in the butter with the sultanas until soft. Tip into a dish.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the eggs, milk and sugar and pour over.",
+     "min": 5
+    },
+    {
+     "text": "Grate nutmeg over the top and set in a water bath.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 160C for 40 minutes.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Lucky poker hand black velvet",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Chill drinks 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cans Irish stout, 440ml, chilled",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Half fill four tall glasses with stout, poured slowly so it settles.",
+     "min": 5
+    },
+    {
+     "text": "Top each slowly with sparkling wine poured over the back of a spoon so it sits on top. Serve straight away.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

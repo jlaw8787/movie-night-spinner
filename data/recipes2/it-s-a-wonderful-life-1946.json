@@ -1,0 +1,296 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Coconut macaroons",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the coconut with the condensed milk, vanilla and salt.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the egg whites to stiff peaks and fold through.",
+     "min": 10
+    },
+    {
+     "text": "Scoop 20 mounds onto lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 160C until golden on the edges.",
+     "min": 20
+    },
+    {
+     "text": "Cool on the tray.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Christmas Eve cheese straws",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sharp cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Sprinkle one sheet with the cheeses and cayenne, top with the second sheet and press.",
+     "min": 5
+    },
+    {
+     "text": "Cut into 2cm strips and twist each one.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until crisp.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Honeymoon spit-roast chicken",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 85,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the butter with crushed garlic, thyme and salt and rub over the chicken.",
+     "min": 10
+    },
+    {
+     "text": "Cut the potatoes into chunks and set a rack over them in a roasting tin.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 200C, turning the potatoes halfway, until the juices run clear.",
+     "min": 75
+    },
+    {
+     "text": "Rest, then carve.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Gower's chocolate sundae",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the cream into a hot fudge sauce.",
+     "min": 6
+    },
+    {
+     "text": "Scoop the ice cream into 4 tall glasses and pour over the fudge.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream, top each sundae and add a cherry. No coconut.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Eggnog",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 180,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks with the sugar.",
+     "min": 3
+    },
+    {
+     "text": "Heat the milk and cream until steaming, whisk into the yolks and return to the pan.",
+     "min": 7
+    },
+    {
+     "text": "Stir over low heat until it coats a spoon.",
+     "min": 5
+    },
+    {
+     "text": "Add the vanilla and chill, which is the resting time.",
+     "min": 180
+    },
+    {
+     "text": "Serve with grated nutmeg.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

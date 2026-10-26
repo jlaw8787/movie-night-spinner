@@ -1,0 +1,440 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "The headwaiter's famous tossed salad",
+   "course": "s",
+   "prep_min": 21,
+   "cook_min": 17,
+   "make_ahead": "Dressing and croutons up to 1 day ahead, toss just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bread roll",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "anchovy fillets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cos lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "butter lettuce",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Tear the bread roll into chunks, toss with olive oil and crushed garlic.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 10
+    },
+    {
+     "text": "Cook the eggs, then cool and halve.",
+     "min": 7
+    },
+    {
+     "text": "Mash the anchovies with garlic, then whisk in Dijon, lemon juice, mayonnaise and parmesan.",
+     "min": 8
+    },
+    {
+     "text": "Tear the cos and butter lettuce into a big bowl.",
+     "min": 5
+    },
+    {
+     "text": "Toss with the dressing and croutons and top with the eggs and more parmesan.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Opening night gruyère gougères",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 37,
+   "make_ahead": "Up to 1 day, reheat to crisp",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyère",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water, butter and salt to the boil.",
+     "min": 8
+    },
+    {
+     "text": "Beat in the flour until it forms a ball and cook.",
+     "min": 2
+    },
+    {
+     "text": "Cool before beating in the eggs.",
+     "min": 5
+    },
+    {
+     "text": "Beat in the eggs one at a time, then the gruyere, Dijon and cayenne.",
+     "min": 15
+    },
+    {
+     "text": "Pipe small mounds on lined trays and sprinkle with more gruyere.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 22
+    }
+   ]
+  },
+  {
+   "n": "Easter Sunday roast lamb with mint sauce",
+   "course": "m",
+   "prep_min": 38,
+   "cook_min": 159,
+   "make_ahead": "Mint sauce up to 1 day ahead, roast fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "lamb leg",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malt vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make small cuts all over the lamb and push in slivers of garlic and rosemary sprigs.",
+     "min": 15
+    },
+    {
+     "text": "Rub with oil and salt.",
+     "min": 3
+    },
+    {
+     "text": "Roast at 190C for medium.",
+     "min": 90
+    },
+    {
+     "text": "Rest the lamb.",
+     "min": 20
+    },
+    {
+     "text": "Peel the potatoes and parboil them.",
+     "min": 15
+    },
+    {
+     "text": "Roast the potatoes in oil alongside.",
+     "min": 45
+    },
+    {
+     "text": "For mint sauce, chop the mint with sugar, add boiling water and malt vinegar.",
+     "min": 5
+    },
+    {
+     "text": "Toss the peas in butter and serve alongside.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Hot cross bun bread and butter pudding",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 52,
+   "make_ahead": "Assemble up to 4 hours ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "hot cross buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the halved hot cross buns and layer them in a baking dish.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs, milk, cream, sugar, vanilla and orange zest and pour over.",
+     "min": 5
+    },
+    {
+     "text": "Stand for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 170C until golden and just set.",
+     "min": 35
+    },
+    {
+     "text": "Warm the apricot jam with a splash of water.",
+     "min": 2
+    },
+    {
+     "text": "Brush over the top and serve warm with cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Easter bonnet pink fizz punch",
+   "course": "d",
+   "prep_min": 22,
+   "cook_min": 30,
+   "make_ahead": "Base up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pink grapefruit juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the strawberries.",
+     "min": 10
+    },
+    {
+     "text": "In a punch bowl, mix the cranberry juice, grapefruit juice and strawberries.",
+     "min": 5
+    },
+    {
+     "text": "Chill for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Add plenty of ice.",
+     "min": 2
+    },
+    {
+     "text": "For the adults, top glasses with sparkling wine. For everyone else, top with lemonade.",
+     "min": 3
+    },
+    {
+     "text": "Garnish each glass with a strawberry on the rim.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

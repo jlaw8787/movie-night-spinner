@@ -1,0 +1,368 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bad Baby quiche bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day ahead, reheat gently",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut rounds from the pastry, line a 24 hole mini muffin tin and blind-bake.",
+     "min": 20
+    },
+    {
+     "text": "Dice the brie and ham and chop the chives.",
+     "min": 5
+    },
+    {
+     "text": "Fill the cases. Whisk the eggs with the cream, pour in and bake at 170C.",
+     "min": 5
+    },
+    {
+     "text": "Bake until just set.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Diner biscuits and gravy",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork sausage mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar black peppercorns",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into part of the flour with the baking powder and stir in the buttermilk.",
+     "min": 10
+    },
+    {
+     "text": "Cut rounds and bake at 220C.",
+     "min": 12
+    },
+    {
+     "text": "Brown the sausage mince, stir in the remaining flour and then the milk.",
+     "min": 10
+    },
+    {
+     "text": "Simmer with lots of pepper until thick.",
+     "min": 8
+    },
+    {
+     "text": "Split the biscuits and pour over the gravy.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Chicken pot pie",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 45,
+   "make_ahead": "Filling up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken, then add the diced onion, carrots, celery and thyme.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the flour, then the stock and cream, and simmer until thick.",
+     "min": 20
+    },
+    {
+     "text": "Add the peas and tip into a pie dish.",
+     "min": 5
+    },
+    {
+     "text": "Cover with puff pastry and brush with egg.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "I Hate My Husband pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 90,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caramels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits, mix with melted butter and press into a pie tin.",
+     "min": 10
+    },
+    {
+     "text": "Melt the caramels with some of the cream and pour in.",
+     "min": 10
+    },
+    {
+     "text": "Heat the rest of the cream, pour over the chocolate and stir to a ganache. Pour over the caramel.",
+     "min": 10
+    },
+    {
+     "text": "Chill until set.",
+     "min": 90
+    },
+    {
+     "text": "Drizzle with more caramel and scatter flaky salt on top.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Pie diner caramel coffee shake",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Coffee chilled up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "strong brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "thick caramel",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "shortbread biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee and chill.",
+     "min": 60
+    },
+    {
+     "text": "Whip the cream.",
+     "min": 5
+    },
+    {
+     "text": "Blend the coffee, ice cream, milk and caramel with a pinch of salt until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Pour into tall glasses, top with whipped cream, a drizzle of caramel and crumbled shortbread.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

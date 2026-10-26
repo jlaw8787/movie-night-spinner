@@ -1,0 +1,362 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Midnight liverwurst on rye and buttermilk",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "liverwurst or smooth pork pate",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, in rings",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "well-chilled buttermilk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the bread with butter and a thin layer of mustard.",
+     "min": 4
+    },
+    {
+     "text": "Slice the liverwurst and lay it over half the slices. Top with pickles and red onion, then the other slices.",
+     "min": 5
+    },
+    {
+     "text": "Press down, trim the crusts and cut into fingers.",
+     "min": 4
+    },
+    {
+     "text": "Pour the buttermilk into small glasses and serve together.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Columbia Inn cheese puffs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring water and the butter to the boil, beat in the flour until it forms a ball, then cool.",
+     "min": 10
+    },
+    {
+     "text": "Beat in the eggs one at a time, then the cheddar.",
+     "min": 6
+    },
+    {
+     "text": "Pipe small balls onto lined trays.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Vermont inn roast turkey",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 80,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "mixed dried herbs",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar cranberry sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the turkey with some of the butter and the herbs.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 180C.",
+     "min": 80
+    },
+    {
+     "text": "Mix the breadcrumbs with the onion, chopped sage and melted butter and bake the stuffing alongside the turkey.",
+     "min": 10
+    },
+    {
+     "text": "Toss the potatoes in oil and roast on another tray.",
+     "min": 5
+    },
+    {
+     "text": "Rest the turkey and serve with stuffing, cranberry sauce and potatoes.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Snowy coconut cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the sugar until pale, then add the eggs, flour, some of the coconut and the coconut milk.",
+     "min": 10
+    },
+    {
+     "text": "Bake in two tins at 175C.",
+     "min": 28
+    },
+    {
+     "text": "Cool the cakes.",
+     "min": 25
+    },
+    {
+     "text": "Beat the cream cheese with the icing sugar, sandwich and cover the cakes.",
+     "min": 7
+    },
+    {
+     "text": "Roll the sides in the rest of the coconut.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Eggnog by the fire",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 123,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs (yolks only)",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks with the sugar.",
+     "min": 3
+    },
+    {
+     "text": "Heat the milk, cream and cinnamon stick until steaming, whisk into the yolks and return to the pan.",
+     "min": 7
+    },
+    {
+     "text": "Stir over low heat until it coats a spoon.",
+     "min": 5
+    },
+    {
+     "text": "Chill.",
+     "min": 120
+    },
+    {
+     "text": "Serve with grated nutmeg and brandy on the side.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

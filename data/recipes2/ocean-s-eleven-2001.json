@@ -1,0 +1,302 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Rusty's prawn cocktail",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Sauce up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "dash Worcestershire sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the prawns in salted water for 2 minutes, plunge into iced water and peel.",
+     "min": 15
+    },
+    {
+     "text": "Mix the tomato sauce, horseradish, lemon juice and Worcestershire sauce.",
+     "min": 5
+    },
+    {
+     "text": "Chill the prawns.",
+     "min": 20
+    },
+    {
+     "text": "Serve over shredded iceberg in martini glasses with lemon wedges.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "High roller chips",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "truffle salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes paper thin on a mandoline, rinse and dry very well.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 170C in batches until golden.",
+     "min": 20
+    },
+    {
+     "text": "Toss straight away with truffle salt and finely grated parmesan so it sticks.",
+     "min": 5
+    },
+    {
+     "text": "Serve in a silver bowl.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Benedict's casino rib eye with béarnaise",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 760,
+   "make_ahead": "Salt the steaks the night before",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rib eye steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "frozen shoestring fries",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dry-brine the steaks overnight.",
+     "min": 720
+    },
+    {
+     "text": "Bake the fries at 220C.",
+     "min": 20
+    },
+    {
+     "text": "Reduce the vinegar with tarragon and the chopped shallot to a spoonful.",
+     "min": 8
+    },
+    {
+     "text": "Whisk with the yolks over simmering water and drizzle in the warm melted butter.",
+     "min": 10
+    },
+    {
+     "text": "Wilt the spinach, squeeze and simmer in the cream.",
+     "min": 8
+    },
+    {
+     "text": "Sear the steaks, pull at 54C and rest.",
+     "min": 14
+    }
+   ]
+  },
+  {
+   "n": "Fountain show sundae",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Fudge up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar gold sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with some of the cream for hot fudge.",
+     "min": 5
+    },
+    {
+     "text": "Whip the remaining cream.",
+     "min": 5
+    },
+    {
+     "text": "Scoop ice cream into four tall glasses and pour over the fudge.",
+     "min": 5
+    },
+    {
+     "text": "Pipe whipped cream high and scatter gold sprinkles so they catch the light.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Casino martini",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "dry vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the gin and vermouth over plenty of ice until very cold, one drink at a time.",
+     "min": 4
+    },
+    {
+     "text": "Strain into chilled martini glasses and add a green olive on a pick.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

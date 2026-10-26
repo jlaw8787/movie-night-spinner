@@ -1,0 +1,340 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Emergency marmalade sandwiches",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours ahead, wrap well",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "Seville orange marmalade",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread right to the edges.",
+     "min": 4
+    },
+    {
+     "text": "Spread four slices with marmalade and close.",
+     "min": 3
+    },
+    {
+     "text": "Leave the crusts on, cut into squares and wrap in baking paper. Keep one under your hat for emergencies.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Mr Gruber's elevenses Dundee cake",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 125,
+   "make_ahead": "Keeps 1 week in a tin",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed dried fruit",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "whole almonds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until light, then add the eggs one at a time.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the flour, dried fruit and orange zest.",
+     "min": 5
+    },
+    {
+     "text": "Spread in a lined 20cm round tin and arrange the almonds in circles on top.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 150C until a skewer comes out clean.",
+     "min": 120
+    },
+    {
+     "text": "Cool in the tin and cut into small slices.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "The Browns' shepherd's pie",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 65,
+   "make_ahead": "Assemble up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the lamb mince, then add the diced onion and carrots.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the tomato paste, Worcestershire sauce and stock and simmer until thick.",
+     "min": 40
+    },
+    {
+     "text": "Boil the potatoes, mash with most of the butter and the milk.",
+     "min": 15
+    },
+    {
+     "text": "Tip the filling into a baking dish, spread the mash over and rough up the top with a fork.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 25
+    },
+    {
+     "text": "Toss the peas with the last of the butter and serve.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Marmalade bread and butter pudding",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Best fresh from the oven",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "Seville orange marmalade",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread and spread with marmalade, then layer in a dish.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs, milk, cream and sugar and pour over.",
+     "min": 5
+    },
+    {
+     "text": "Rest so the bread soaks it up.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 170C until set and golden.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Mr Gruber's orange cocoa with cream",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cocoa and sugar with a splash of milk into a smooth paste.",
+     "min": 3
+    },
+    {
+     "text": "Add the rest of the milk, orange zest and a pinch of salt and heat, whisking, until steaming but not boiling.",
+     "min": 8
+    },
+    {
+     "text": "Whip the cream to soft peaks.",
+     "min": 4
+    },
+    {
+     "text": "Strain into four cups and top with cream and a sprinkle of extra zest.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

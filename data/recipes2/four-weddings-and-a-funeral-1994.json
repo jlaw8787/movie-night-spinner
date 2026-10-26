@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Charles's running late canapés",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "blinis",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch asparagus",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "prosciutto",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Trim the asparagus and blanch for a minute.",
+     "min": 3
+    },
+    {
+     "text": "Blanch.",
+     "min": 1
+    },
+    {
+     "text": "Wrap each spear in prosciutto and grill until crisp.",
+     "min": 7
+    },
+    {
+     "text": "Top the blinis with creme fraiche, salmon and dill.",
+     "min": 10
+    },
+    {
+     "text": "Arrange both on trays.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Hamish's castle wedding oatcakes",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet oatcakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the oatcakes with cream cheese.",
+     "min": 5
+    },
+    {
+     "text": "Top with folds of salmon and a sprig of dill.",
+     "min": 5
+    },
+    {
+     "text": "Squeeze over a little lemon and lay on a slate.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "English wedding roast beef",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 105,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef topside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef. Whisk the flour, eggs and milk into a batter and rest it.",
+     "min": 15
+    },
+    {
+     "text": "Roast the beef at 200C to medium.",
+     "min": 70
+    },
+    {
+     "text": "Peel and chop the potatoes and put them in alongside.",
+     "min": 10
+    },
+    {
+     "text": "Rest the beef. Heat oiled muffin tins.",
+     "min": 15
+    },
+    {
+     "text": "Pour in the batter and bake.",
+     "min": 20
+    },
+    {
+     "text": "Make gravy from the pan juices and stock.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Four weddings lemon curd cake",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 70,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar lemon curd",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fresh edible flowers",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and prepare two tins. Beat the butter and sugar, add the eggs and lemon zest, then fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Bake in two tins.",
+     "min": 30
+    },
+    {
+     "text": "Cool completely.",
+     "min": 40
+    },
+    {
+     "text": "Whip the cream and sandwich with lemon curd and cream.",
+     "min": 10
+    },
+    {
+     "text": "Ice white with icing sugar and water and decorate with flowers.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Gareth's waistcoat elderflower fizz",
+   "course": "d",
+   "prep_min": 12,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the cucumber into long ribbons and curl one into each of four glasses.",
+     "min": 6
+    },
+    {
+     "text": "Add cordial and a squeeze of lemon to each.",
+     "min": 3
+    },
+    {
+     "text": "Top slowly with cold sparkling wine.",
+     "min": 2
+    },
+    {
+     "text": "For drivers, use sparkling water and a little extra cordial.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

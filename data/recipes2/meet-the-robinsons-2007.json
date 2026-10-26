@@ -1,0 +1,306 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lewis's peanut butter and jelly bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "jar peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "jar strawberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the bread with butter, peanut butter and jam.",
+     "min": 8
+    },
+    {
+     "text": "Cut off the crusts.",
+     "min": 3
+    },
+    {
+     "text": "Slice each sandwich into four small triangles and stack on a plate.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Uncle Art's space pizza bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "jar pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C. Roll the dough thin and cut into small rounds.",
+     "min": 10
+    },
+    {
+     "text": "Top each with sauce, grated mozzarella, a slice of pepperoni and oregano.",
+     "min": 10
+    },
+    {
+     "text": "Bake until crisp and bubbling.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Meatball cannon dinner",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 62,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cans crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the minces with parmesan and egg, roll into balls.",
+     "min": 15
+    },
+    {
+     "text": "Brown the meatballs in oil.",
+     "min": 10
+    },
+    {
+     "text": "Add the tomatoes and torn basil and simmer.",
+     "min": 40
+    },
+    {
+     "text": "Cook the spaghetti and pile the meatballs on top.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Keep moving forward cupcakes",
+   "course": "w",
+   "prep_min": 22,
+   "cook_min": 38,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened, for buttercream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and line a muffin tin. Beat the butter and sugar, then the eggs, then fold in flour and milk.",
+     "min": 10
+    },
+    {
+     "text": "Bake.",
+     "min": 18
+    },
+    {
+     "text": "Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Beat the buttercream with colouring and pipe on top. Add a little icing arrow to each.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Bowler Hat Guy's grape smoothie",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 480,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "red grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "banana",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vanilla yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wash the grapes and pull from the stems.",
+     "min": 4
+    },
+    {
+     "text": "Freeze overnight.",
+     "min": 480
+    },
+    {
+     "text": "Blend with the banana, grape juice and yoghurt until thick.",
+     "min": 3
+    },
+    {
+     "text": "Pour into four glasses and serve with straws.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

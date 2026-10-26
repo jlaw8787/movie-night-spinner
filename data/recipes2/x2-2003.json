@@ -1,0 +1,336 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Boston clam chowder cups",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cans clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet oyster crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the bacon, onion and potatoes.",
+     "min": 10
+    },
+    {
+     "text": "Fry the bacon, then soften the onion and potato in butter.",
+     "min": 10
+    },
+    {
+     "text": "Add the clams with their juice and the milk and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the cream, season well and ladle into small cups with oyster crackers.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Iceman frozen grapes",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 180,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "red grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pull the grapes from the stems, wash and dry well.",
+     "min": 8
+    },
+    {
+     "text": "Spread on a lined tray and freeze until solid.",
+     "min": 180
+    },
+    {
+     "text": "Serve from the freezer in a cold bowl with mint leaves.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Alkali Lake beef stew",
+   "course": "m",
+   "prep_min": 17,
+   "cook_min": 215,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onions and carrots.",
+     "min": 10
+    },
+    {
+     "text": "Brown the beef in batches in oil.",
+     "min": 15
+    },
+    {
+     "text": "Soften the vegetables, return the beef with red wine and water to cover and simmer.",
+     "min": 180
+    },
+    {
+     "text": "Boil the potatoes and mash with plenty of butter.",
+     "min": 5
+    },
+    {
+     "text": "Cook the potatoes.",
+     "min": 20
+    },
+    {
+     "text": "Spoon the stew over the mash.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Iceman ice cream sandwiches",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 100,
+   "make_ahead": "Up to 1 week, keep frozen",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Beat the butter and sugar with the egg, then mix in the flour and cocoa.",
+     "min": 10
+    },
+    {
+     "text": "Roll into balls and flatten on lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake.",
+     "min": 10
+    },
+    {
+     "text": "Cool completely.",
+     "min": 30
+    },
+    {
+     "text": "Sandwich thick slabs of ice cream between pairs of cookies.",
+     "min": 10
+    },
+    {
+     "text": "Freeze until firm.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Iceman frozen apple and mint spritz",
+   "course": "d",
+   "prep_min": 12,
+   "cook_min": 480,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze half the apple juice in ice cube trays overnight.",
+     "min": 3
+    },
+    {
+     "text": "Freeze.",
+     "min": 480
+    },
+    {
+     "text": "Muddle mint and a squeeze of lime in the bottom of four glasses. Slice the apple thinly.",
+     "min": 5
+    },
+    {
+     "text": "Fill with apple ice cubes and apple slices.",
+     "min": 2
+    },
+    {
+     "text": "Pour in the remaining apple juice, top with soda water and stir gently.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

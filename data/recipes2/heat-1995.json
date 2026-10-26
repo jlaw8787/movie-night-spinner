@@ -1,0 +1,374 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Diner coffee and pie",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 110,
+   "make_ahead": "Pie up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "Granny Smith apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the apples and toss with the sugar, cinnamon and flour.",
+     "min": 15
+    },
+    {
+     "text": "Line a 23cm dish with one sheet of pastry, fill, cover with the second sheet and cut vents.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 190C.",
+     "min": 50
+    },
+    {
+     "text": "Cool slightly.",
+     "min": 50
+    },
+    {
+     "text": "Brew strong drip coffee and serve the pie in wedges with cream.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Ocean view oysters",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Mignonette up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "shallots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "freshly shucked oysters",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Finely dice the shallots and mix with the vinegar and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Rest.",
+     "min": 20
+    },
+    {
+     "text": "Lay the oysters on crushed ice with lemon wedges and the mignonette alongside.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Hanna's three-hour beef and pork ragù",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 210,
+   "make_ahead": "Better the next day",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "celery stick",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "parmesan rind",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "rigatoni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the diced onion, carrot and celery in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Add both minces and brown hard.",
+     "min": 15
+    },
+    {
+     "text": "Pour in the wine and reduce, then add the tomatoes, parmesan rind and water.",
+     "min": 10
+    },
+    {
+     "text": "Simmer gently, topping up with water.",
+     "min": 180
+    },
+    {
+     "text": "Cook the rigatoni and toss through the ragu with a splash of pasta water.",
+     "min": 12
+    },
+    {
+     "text": "Grate the parmesan over.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Thirty seconds flat cheesecake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 780,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 750,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits, mix with melted butter and press into a tin.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese with the sugar, eggs and sour cream.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a water bath at 150C for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Cool in the oven.",
+     "min": 60
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 660
+    }
+   ]
+  },
+  {
+   "n": "Face-to-face cold brew with cinnamon cream",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 720,
+   "make_ahead": "Brew the night before",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "coarse ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the coffee into the cold water and leave in the fridge for 12 hours.",
+     "min": 720
+    },
+    {
+     "text": "Strain through a fine sieve lined with paper towel.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the cream with the sugar and cinnamon until just thickened.",
+     "min": 3
+    },
+    {
+     "text": "Fill four glasses with ice, pour in the cold brew and spoon the cream over.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

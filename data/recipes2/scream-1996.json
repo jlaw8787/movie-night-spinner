@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Stovetop popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "popcorn kernels, extra",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the coconut oil with three kernels in a heavy covered pot",
+     "min": 3
+    },
+    {
+     "text": "When they pop, add the rest of the kernels and shake constantly until the popping slows",
+     "min": 5
+    },
+    {
+     "text": "Tip out and toss with the butter and salt",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Party chips and salsa",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jalapeno, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the tomatoes, onion and jalapeno",
+     "min": 10
+    },
+    {
+     "text": "Mix with the coriander, lime juice and salt",
+     "min": 3
+    },
+    {
+     "text": "Leave to get juicy",
+     "min": 10
+    },
+    {
+     "text": "Serve with the corn chips",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Stu's party lasagne",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 105,
+   "make_ahead": "Assemble a day ahead, bake on the day",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "lasagne sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion and garlic",
+     "min": 12
+    },
+    {
+     "text": "Add the passata and simmer",
+     "min": 20
+    },
+    {
+     "text": "Mix the ricotta with the egg",
+     "min": 3
+    },
+    {
+     "text": "Layer the sheets, ricotta mix and sauce in a dish, finishing with mozzarella",
+     "min": 15
+    },
+    {
+     "text": "Bake at 180C",
+     "min": 45
+    },
+    {
+     "text": "Rest before cutting",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Ghost mask cookies",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 20,
+   "make_ahead": "Undecorated cookies keep 3 days",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "black food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the sugar and one egg, then mix in the flour",
+     "min": 10
+    },
+    {
+     "text": "Roll out and cut into long ovals",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C",
+     "min": 8
+    },
+    {
+     "text": "Cool the cookies",
+     "min": 20
+    },
+    {
+     "text": "Ice white with the icing sugar mixed with egg white",
+     "min": 7
+    },
+    {
+     "text": "Pipe the face in black icing",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Woodsboro house party punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "lemonade, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the vodka, juices and lime juice together in a big punch bowl",
+     "min": 5
+    },
+    {
+     "text": "Chill",
+     "min": 60
+    },
+    {
+     "text": "Just before serving add the lemonade, ice and orange slices",
+     "min": 3
+    },
+    {
+     "text": "Ladle into party cups. Swap the vodka for extra lemonade for anyone driving",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

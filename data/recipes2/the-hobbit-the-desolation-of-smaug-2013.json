@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Beorn's honey bites",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "thick slices sourdough bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the ricotta with some of the honey until light and smooth.",
+     "min": 4
+    },
+    {
+     "text": "Toast the sourdough until golden and cut into fingers.",
+     "min": 8
+    },
+    {
+     "text": "Spread with the ricotta, drizzle with more honey and scatter with walnuts.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Mirkwood mushroom toasts",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 9,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mixed mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices crusty bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, shaved",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the mushrooms.",
+     "min": 6
+    },
+    {
+     "text": "Fry in the butter over high heat until golden.",
+     "min": 8
+    },
+    {
+     "text": "Add the garlic and thyme and cook another minute.",
+     "min": 1
+    },
+    {
+     "text": "Toast the bread.",
+     "min": 6
+    },
+    {
+     "text": "Spoon the mushrooms on top and finish with parmesan and pepper.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Erebor gold roast",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 805,
+   "make_ahead": "Salt the pork the night before",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork belly",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "fennel seeds, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "green apples, halved",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the pork skin and rub with salt and fennel seeds.",
+     "min": 10
+    },
+    {
+     "text": "Leave uncovered in the fridge overnight.",
+     "min": 600
+    },
+    {
+     "text": "Roast at 160C, brushing the meat side with honey.",
+     "min": 140
+    },
+    {
+     "text": "Add the apple halves and roast for the last part of the cooking.",
+     "min": 40
+    },
+    {
+     "text": "Blast at 240C until the crackling is golden.",
+     "min": 15
+    },
+    {
+     "text": "Rest before carving.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Smaug's golden honey cake",
+   "course": "w",
+   "prep_min": 24,
+   "cook_min": 62,
+   "make_ahead": "Up to 2 days, keep covered",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honey, for the syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "gold sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter, brown sugar and honey until pale.",
+     "min": 8
+    },
+    {
+     "text": "Beat in the eggs.",
+     "min": 3
+    },
+    {
+     "text": "Fold in the flour.",
+     "min": 3
+    },
+    {
+     "text": "Pour into a lined tin.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 175C.",
+     "min": 40
+    },
+    {
+     "text": "Warm the syrup honey with the water.",
+     "min": 5
+    },
+    {
+     "text": "Pour the syrup over the warm cake.",
+     "min": 2
+    },
+    {
+     "text": "Cool the cake.",
+     "min": 20
+    },
+    {
+     "text": "Finish with gold sprinkles.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Beorn's honey bourbon milk punch",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "nutmeg, to grate",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the honey with the water until runny.",
+     "min": 2
+    },
+    {
+     "text": "Cool the honey syrup.",
+     "min": 10
+    },
+    {
+     "text": "Shake the first batch with ice: half the milk, bourbon, honey and vanilla, then strain into two cups.",
+     "min": 3
+    },
+    {
+     "text": "Repeat for the second batch.",
+     "min": 3
+    },
+    {
+     "text": "Grate fresh nutmeg over the top. For a non-drinking version, leave out the bourbon and add a pinch of cinnamon.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,300 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bleeker's orange candied almonds",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, finely zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cashews",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "sea salt flakes, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the sugar, water and zest until the sugar dissolves and bubbles. Take off the heat and stir in the nuts and cinnamon until coated.",
+     "min": 8
+    },
+    {
+     "text": "Spread on a lined tray and roast at 170C, stirring halfway, until glassy.",
+     "min": 15
+    },
+    {
+     "text": "Sprinkle with sea salt, cool completely and break apart.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Hamburger phone sliders",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Shape up to 4 hours ahead, cook fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shape the mince into 8 small patties and season well.",
+     "min": 8
+    },
+    {
+     "text": "Fry for 2 minutes a side, adding a slice of cheddar to each at the end.",
+     "min": 5
+    },
+    {
+     "text": "Split the buns and add tomato sauce and pickles. Stack the patties in, scatter sesame seeds and push a toothpick through each.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Minnesota tater tot hotdish",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Up to 1 day, bake fresh with the tots on top",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "corn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "green beans, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen potato gems",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion in the oil. Add the mushrooms and cook until their liquid has gone.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the corn, beans and cream and simmer briefly. Spread in a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Cover with neat rows of potato gems and bake at 200C until golden.",
+     "min": 35
+    }
+   ]
+  },
+  {
+   "n": "Blue raspberry jelly trifle cups",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 200,
+   "make_ahead": "Up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "packets blue jelly crystals",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thick vanilla custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "shortbread biscuits, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make up the jelly following the packet. Drop a few raspberries into 4 clear cups and pour in the jelly.",
+     "min": 10
+    },
+    {
+     "text": "Chill for 3 hours until set.",
+     "min": 180
+    },
+    {
+     "text": "Spoon the custard over the jelly. Whip the cream to soft peaks and spoon on top.",
+     "min": 8
+    },
+    {
+     "text": "Finish with the crushed shortbread and the rest of the raspberries just before serving.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Big jug of orange",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Squeeze up to 1 day ahead, add soda fresh",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "mango nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the oranges into a big jug over plenty of ice.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the mango nectar, then top up with soda water just before serving. Add orange slices and pour into tall glasses.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

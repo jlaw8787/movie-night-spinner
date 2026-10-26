@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mrs Judson's cheese crumpets",
+   "course": "s",
+   "prep_min": 11,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "crumpets",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the cheddar and mix with the mustard.",
+     "min": 4
+    },
+    {
+     "text": "Toast the crumpets until golden and butter them.",
+     "min": 5
+    },
+    {
+     "text": "Pile the cheese onto each crumpet.",
+     "min": 2
+    },
+    {
+     "text": "Grill until bubbling and golden.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Rat Trap pub bites",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 24,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork sausage mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the four eggs, cool and peel.",
+     "min": 3
+    },
+    {
+     "text": "Boil.",
+     "min": 6
+    },
+    {
+     "text": "Cool.",
+     "min": 10
+    },
+    {
+     "text": "Wrap each egg in sausage mince.",
+     "min": 10
+    },
+    {
+     "text": "Roll in flour, beaten egg and panko.",
+     "min": 8
+    },
+    {
+     "text": "Fry at 170C until golden.",
+     "min": 8
+    },
+    {
+     "text": "Halve and serve with mustard.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Baker Street shepherd's pie",
+   "course": "m",
+   "prep_min": 17,
+   "cook_min": 75,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onion, grate the carrots and peel the potatoes.",
+     "min": 12
+    },
+    {
+     "text": "Brown the mince with onion and carrot, add peas and a little water and simmer until thick.",
+     "min": 35
+    },
+    {
+     "text": "Boil and mash the potatoes with butter.",
+     "min": 20
+    },
+    {
+     "text": "Spread the mince in a dish and top with mash.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Big Ben Victoria sponge",
+   "course": "w",
+   "prep_min": 21,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and prepare two tins. Beat the butter and sugar, add the eggs, then fold in the flour.",
+     "min": 12
+    },
+    {
+     "text": "Bake in two tins.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely.",
+     "min": 30
+    },
+    {
+     "text": "Whip the cream. Sandwich the cakes with jam and cream.",
+     "min": 8
+    },
+    {
+     "text": "Dust the top with icing sugar.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Baker Street Earl Grey lemonade",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 125,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "Earl Grey tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet shortbread fingers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags for 5 minutes, remove and stir in the honey.",
+     "min": 5
+    },
+    {
+     "text": "Chill.",
+     "min": 120
+    },
+    {
+     "text": "Juice three lemons and slice the fourth.",
+     "min": 4
+    },
+    {
+     "text": "Add the juice to the tea. Fill four glasses with ice and lemon slices, pour in the tea two thirds full and top with sparkling water.",
+     "min": 4
+    },
+    {
+     "text": "Serve with shortbread fingers.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

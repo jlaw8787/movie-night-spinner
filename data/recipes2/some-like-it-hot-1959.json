@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Speakeasy devilled eggs with crispy pancetta",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, keep chilled, top with pancetta just before serving",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices pancetta",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs hard, cool in iced water, peel and halve.",
+     "min": 15
+    },
+    {
+     "text": "Mash the yolks with the mayonnaise, mustard, vinegar and a pinch of paprika until smooth. Pipe back into the whites.",
+     "min": 10
+    },
+    {
+     "text": "Bake the pancetta on a tray at 200C until crisp, cool and break into shards.",
+     "min": 8
+    },
+    {
+     "text": "Top each egg with pancetta, a dusting of paprika and snipped chives.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Florida beach prawns",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns, raw and shell on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, for the water",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring a pot of salted water to the boil with lemon slices.",
+     "min": 5
+    },
+    {
+     "text": "Poach the prawns until pink, then plunge into iced water.",
+     "min": 4
+    },
+    {
+     "text": "Peel the prawns.",
+     "min": 8
+    },
+    {
+     "text": "Mix the mayonnaise with tomato sauce, a squeeze of lemon and hot sauce. Serve the prawns on ice with the sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Osgood's yacht lobster",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lobster tails",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the lobster tails, brush with butter mixed with crushed garlic.",
+     "min": 8
+    },
+    {
+     "text": "Boil the potatoes. Steam the green beans.",
+     "min": 15
+    },
+    {
+     "text": "Grill the lobster until just cooked.",
+     "min": 6
+    },
+    {
+     "text": "Toss the potatoes and beans with butter and serve with lemon wedges.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Big birthday cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 85,
+   "make_ahead": "Bake up to 1 day ahead, assemble on the day",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "candles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour. Divide between 3 tins.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 175C until golden and springy.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely.",
+     "min": 40
+    },
+    {
+     "text": "Whip the cream and stack the cakes with jam and cream.",
+     "min": 12
+    },
+    {
+     "text": "Ice white with icing sugar mixed with milk and top with candles.",
+     "min": 18
+    }
+   ]
+  },
+  {
+   "n": "Hot water bottle Manhattans",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix a jug ahead, strain over ice per glass",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sweet vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "aromatic bitters, 8 dashes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the bourbon, vermouth and bitters with ice in a jug.",
+     "min": 7
+    },
+    {
+     "text": "Strain into chilled glasses.",
+     "min": 2
+    },
+    {
+     "text": "Drop a cherry into each glass.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

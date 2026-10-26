@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ellis Island crostini",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "ciabatta",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "ripe tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the ciabatta and grill until charred.",
+     "min": 5
+    },
+    {
+     "text": "Rub with the cut garlic clove.",
+     "min": 2
+    },
+    {
+     "text": "Dice the tomatoes and mix with torn basil, finely chopped red onion, oil and salt.",
+     "min": 8
+    },
+    {
+     "text": "Spoon on just before serving.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Albert's meatball sliders",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 38,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork and veal mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 700,
+     "u": "ml",
+     "item": "passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch basil",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with the breadcrumbs, egg and parmesan and roll into balls.",
+     "min": 15
+    },
+    {
+     "text": "Brown the meatballs in oil.",
+     "min": 10
+    },
+    {
+     "text": "Simmer in the passata.",
+     "min": 25
+    },
+    {
+     "text": "Put each in a slider bun with provolone and basil and grill until the cheese melts.",
+     "min": 13
+    }
+   ]
+  },
+  {
+   "n": "Chicken piccata",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "large chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "angel hair pasta",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pound the chicken thin, cut in half, then flour.",
+     "min": 8
+    },
+    {
+     "text": "Boil the pasta until tender and drain.",
+     "min": 8
+    },
+    {
+     "text": "Sear the chicken in oil until golden and cooked through.",
+     "min": 10
+    },
+    {
+     "text": "Add the wine, lemon juice and capers and reduce.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the butter. Toss the pasta through and serve the chicken on top.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Sara's chocolate-dipped strawberries",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 22,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "large strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "pistachios, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wash and fully dry the strawberries, leaving the tops on.",
+     "min": 10
+    },
+    {
+     "text": "Melt the dark chocolate in a bowl over simmering water.",
+     "min": 5
+    },
+    {
+     "text": "Dip each strawberry two thirds of the way in, then lay on baking paper.",
+     "min": 10
+    },
+    {
+     "text": "Sprinkle with pistachios.",
+     "min": 2
+    },
+    {
+     "text": "Melt the white chocolate and drizzle in thin lines.",
+     "min": 5
+    },
+    {
+     "text": "Chill until set.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Date doctor French 75",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 360,
+     "u": "ml",
+     "item": "brut sparkling wine, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the flutes.",
+     "min": 10
+    },
+    {
+     "text": "Shake the gin, lemon juice and syrup with ice.",
+     "min": 3
+    },
+    {
+     "text": "Strain into the flutes and top with sparkling wine, pouring slowly.",
+     "min": 3
+    },
+    {
+     "text": "Twist a strip of lemon peel over each glass and drop it in.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

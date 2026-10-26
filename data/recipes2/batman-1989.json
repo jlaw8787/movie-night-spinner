@@ -1,0 +1,364 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Gotham anniversary popcorn",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop purple food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop green food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in a covered pot and split between two trays.",
+     "min": 8
+    },
+    {
+     "text": "Melt the white chocolate, divide in two and tint one half purple and the other green.",
+     "min": 7
+    },
+    {
+     "text": "Drizzle one over each tray and toss. Let set.",
+     "min": 20
+    },
+    {
+     "text": "Break up and mix together in a big bowl.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Bat-shaped chips and black bean dip",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, chips airtight, dip chilled",
+   "ingredients": [
+    {
+     "q": 10,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "black beans (2 tins), drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "chipotle in adobo",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the tortillas with a bat cutter.",
+     "min": 12
+    },
+    {
+     "text": "Fry at 180C in batches until crisp, then salt.",
+     "min": 12
+    },
+    {
+     "text": "Blitz the beans with garlic, lime juice and chipotle until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Serve the dip with the bats.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Wayne Manor dinner",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 1620,
+   "make_ahead": "Salt the beef the night before",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef rib, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the beef and leave uncovered in the fridge overnight.",
+     "min": 1440
+    },
+    {
+     "text": "Roast at 120C until 52C inside, then rest.",
+     "min": 120
+    },
+    {
+     "text": "Peel and chop the potatoes and roast them in some of the oil.",
+     "min": 45
+    },
+    {
+     "text": "Whisk the eggs, flour and milk and bake in hot oiled tins at 220C until puffed.",
+     "min": 20
+    },
+    {
+     "text": "Blast the beef at 260C for 10 minutes. Reduce the red wine with the stock for a jus.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Joker's birthday cake",
+   "course": "w",
+   "prep_min": 50,
+   "cook_min": 70,
+   "make_ahead": "Cake up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "purple food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "green food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and prepare two tins. Beat half the butter with the sugar, then beat in the eggs.",
+     "min": 12
+    },
+    {
+     "text": "Fold in the flour, cocoa and milk, divide between the tins and bake.",
+     "min": 30
+    },
+    {
+     "text": "Cool completely.",
+     "min": 25
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and tint most purple and a little green.",
+     "min": 10
+    },
+    {
+     "text": "Sandwich and cover the cake, then pipe a crooked smile.",
+     "min": 13
+    }
+   ]
+  },
+  {
+   "n": "Alfred's Earl Grey gin sour",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 62,
+   "make_ahead": "Gin infuses ahead",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Earl Grey tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the gin for an hour, then remove.",
+     "min": 60
+    },
+    {
+     "text": "Dissolve the honey in the hot water. Juice the lemons.",
+     "min": 4
+    },
+    {
+     "text": "Shake the gin, lemon juice, honey syrup and egg whites hard without ice, then add ice and shake again.",
+     "min": 4
+    },
+    {
+     "text": "Strain into chilled coupes and twist lemon peel over each.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,352 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Studio lot café pastries",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "almond meal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "day old croissants",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "flaked almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Beat the butter, sugar, almond meal and egg into almond cream.",
+     "min": 7
+    },
+    {
+     "text": "Split the croissants and fill with the cream.",
+     "min": 6
+    },
+    {
+     "text": "Top with flaked almonds.",
+     "min": 2
+    },
+    {
+     "text": "Bake.",
+     "min": 15
+    },
+    {
+     "text": "Dust with icing sugar.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Jazz club bar snacks",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "strip of orange peel",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fennel seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig of rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the olives in the oil with orange peel and fennel seeds.",
+     "min": 8
+    },
+    {
+     "text": "Roast the almonds at 170C with rosemary and salt.",
+     "min": 10
+    },
+    {
+     "text": "Bake small rounds of parmesan at 190C.",
+     "min": 6
+    },
+    {
+     "text": "Serve in little bowls.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Paris bistro chicken",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 95,
+   "make_ahead": "Rest 15 minutes before carving",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "fresh tarragon, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, for the mash",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of salad leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the butter with tarragon and push under the chicken skin.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 220C, then drop to 180C.",
+     "min": 70
+    },
+    {
+     "text": "Rest and carve.",
+     "min": 15
+    },
+    {
+     "text": "Boil the potatoes and mash with the butter until silky.",
+     "min": 25
+    },
+    {
+     "text": "Whisk the oil, mustard and vinegar and toss through the leaves.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Observatory starry chocolate tart",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 210,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets of sweet shortcrust pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of flaky salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "edible gold stars",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Line a tart tin and blind bake.",
+     "min": 25
+    },
+    {
+     "text": "Melt the chocolate into the cream until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Pour into the case and set.",
+     "min": 180
+    },
+    {
+     "text": "Finish with flaky salt and gold stars.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Jazz club old fashioned",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peel only",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle the sugar cubes with the bitters in a mixing glass.",
+     "min": 2
+    },
+    {
+     "text": "Add the bourbon and ice and stir.",
+     "min": 2
+    },
+    {
+     "text": "Strain over a big cube in each glass.",
+     "min": 1
+    },
+    {
+     "text": "Twist orange peel over the top.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bogey's party spinach dip",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, assemble and bake fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "frozen spinach, thawed and squeezed dry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar artichoke hearts, drained and chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette, sliced and toasted",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cream cheese, sour cream, spinach, artichokes, garlic and mozzarella and spoon into a baking dish.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 190C until bubbling. Meanwhile slice and toast the baguette.",
+     "min": 20
+    },
+    {
+     "text": "Serve the dip hot with the toasted baguette.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cameron's French lesson croque",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, assemble and grill fresh",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, stir in the flour and cook for a minute. Whisk in the milk and simmer until thick to make the bechamel.",
+     "min": 8
+    },
+    {
+     "text": "Spread the bread with Dijon and fill with ham and some of the gruyere.",
+     "min": 7
+    },
+    {
+     "text": "Top with bechamel and the rest of the cheese. Grill until bubbling and golden, then cut into small squares.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Prom night pasta",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Sauce up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "penne",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "basil leaves, torn",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the garlic and chilli in the oil. Add the tomatoes and vodka and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the cream until the sauce turns rosy. Meanwhile cook the penne in salted water until al dente.",
+     "min": 10
+    },
+    {
+     "text": "Toss the pasta through the sauce and finish with parmesan and basil.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ten things brownies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Up to 3 days, airtight at room temperature",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "mixed nuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "flaky salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and butter together and let it cool slightly. Whisk in the sugar and eggs, then fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Pour into a lined tin and bake at 170C. Cool completely in the tin.",
+     "min": 25
+    },
+    {
+     "text": "Cut into ten squares and top each differently with raspberries, nuts, salt flakes or anything you like.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Club Skunk iced vanilla latte",
+   "course": "d",
+   "prep_min": 12,
+   "cook_min": 5,
+   "make_ahead": "Syrup up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean, split",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "very strong coffee, or 4 espresso shots",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar, water and vanilla bean for 3 minutes. Cool and remove the bean.",
+     "min": 8
+    },
+    {
+     "text": "Brew the strong coffee and let it cool.",
+     "min": 5
+    },
+    {
+     "text": "Shake the coffee with 2 tablespoons of the syrup and a handful of ice until frothy.",
+     "min": 2
+    },
+    {
+     "text": "Fill four tall glasses with ice and the cold milk, then pour the frothy coffee slowly over the top so it sits in layers.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

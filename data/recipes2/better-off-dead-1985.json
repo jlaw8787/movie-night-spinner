@@ -1,0 +1,314 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Paperboy's two-dollar fries",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 68,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fine salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thin fries.",
+     "min": 10
+    },
+    {
+     "text": "Soak in cold water for an hour, then dry well.",
+     "min": 60
+    },
+    {
+     "text": "Fry at 140C until soft.",
+     "min": 10
+    },
+    {
+     "text": "Fry again at 190C until golden and crisp.",
+     "min": 6
+    },
+    {
+     "text": "Toss with fine salt and pile into paper cones with tomato sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Ski lodge cheese fondue",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Swiss cheese, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette, cubed",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples, cubed",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cube the baguette and apple and toss the cheese with cornflour.",
+     "min": 6
+    },
+    {
+     "text": "Rub a pot with the cut garlic clove.",
+     "min": 2
+    },
+    {
+     "text": "Warm the wine, then stir in the cheese gradually until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Keep warm over low heat and dip in the baguette and apple.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Mum's mystery casserole, done right",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "hot chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken and mushrooms.",
+     "min": 10
+    },
+    {
+     "text": "Spread the rice in a baking dish and add the chicken and mushrooms.",
+     "min": 3
+    },
+    {
+     "text": "Pour over the hot stock and cream with thyme.",
+     "min": 2
+    },
+    {
+     "text": "Cover and bake at 180C until golden on top.",
+     "min": 50
+    }
+   ]
+  },
+  {
+   "n": "French crêpes",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 55,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, for the pan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, eggs and milk until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Rest for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Cook thin crepes in a buttered pan, a minute a side.",
+     "min": 12
+    },
+    {
+     "text": "Fold with a squeeze of lemon and sugar, or with sliced banana and melted chocolate.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Monique's citron pressé",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "iced water, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the lemons into a jug.",
+     "min": 5
+    },
+    {
+     "text": "Dissolve the sugar in hot water and cool.",
+     "min": 3
+    },
+    {
+     "text": "Put the lemon juice, syrup and a jug of iced water on the table so everyone mixes their own glass.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

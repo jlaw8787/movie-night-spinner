@@ -1,0 +1,374 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cinnamon sugar French toast soldiers",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "thick slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "maple syrup, warm",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the milk, vanilla and salt",
+     "min": 4
+    },
+    {
+     "text": "Cut the bread into fingers",
+     "min": 4
+    },
+    {
+     "text": "Soak each finger briefly and fry in batches in butter until golden on both sides",
+     "min": 18
+    },
+    {
+     "text": "Roll straight away in the sugar mixed with cinnamon",
+     "min": 4
+    },
+    {
+     "text": "Serve with warm maple syrup for dipping",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Party cocktail franks",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cocktail frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the franks in the sauce, sugar, mustard and water, stirring until sticky and glossy",
+     "min": 10
+    },
+    {
+     "text": "Pile into a warm bowl with toothpicks for picking",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Frank's dinner party meatloaf",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the breadcrumbs in the milk",
+     "min": 5
+    },
+    {
+     "text": "Mix lightly with the minces, onion, egg and Worcestershire",
+     "min": 8
+    },
+    {
+     "text": "Shape in a loaf tin",
+     "min": 4
+    },
+    {
+     "text": "Glaze with the tomato sauce and brown sugar",
+     "min": 3
+    },
+    {
+     "text": "Bake at 180C",
+     "min": 60
+    },
+    {
+     "text": "Rest before slicing",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Rocky's birthday cake",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 85,
+   "make_ahead": "Frost on the day",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "edible gold dust",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat half the butter with the sugar, add the eggs, then fold in the flour",
+     "min": 15
+    },
+    {
+     "text": "Bake in two tins at 175C",
+     "min": 25
+    },
+    {
+     "text": "Cool completely",
+     "min": 35
+    },
+    {
+     "text": "Fill with jam and whipped cream",
+     "min": 10
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and cover the cake",
+     "min": 10
+    },
+    {
+     "text": "Brush with edible gold and add candles",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Red lips cranberry cosmopolitan",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four coupes",
+     "min": 5
+    },
+    {
+     "text": "Shake each drink with ice for 15 seconds",
+     "min": 4
+    },
+    {
+     "text": "Strain into the coupes",
+     "min": 1
+    },
+    {
+     "text": "Hold a strip of orange peel over each glass, warm it with a match and squeeze so the oil flashes, then drop it in",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

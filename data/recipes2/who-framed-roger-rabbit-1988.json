@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ink and Paint Club canapés",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 22,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "cocktail franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs hard, cool, peel and halve.",
+     "min": 15
+    },
+    {
+     "text": "Whip the yolks with mayonnaise and pipe back into the whites.",
+     "min": 10
+    },
+    {
+     "text": "Top buttered rye squares with smoked salmon.",
+     "min": 8
+    },
+    {
+     "text": "Glaze the franks in a pan with the sugar and a splash of water.",
+     "min": 7
+    },
+    {
+     "text": "Serve on silver trays.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Toontown carrot sticks",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches baby carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the carrots with the honey, cumin, thyme and oil.",
+     "min": 8
+    },
+    {
+     "text": "Roast at 200C until caramelised.",
+     "min": 25
+    },
+    {
+     "text": "Whip the feta with the yoghurt for the dip.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Valiant & Valiant pastrami on rye",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pastrami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the pastrami until glossy.",
+     "min": 10
+    },
+    {
+     "text": "Pile onto rye spread with mustard and top with Swiss cheese.",
+     "min": 8
+    },
+    {
+     "text": "Grill until the cheese melts. Serve each with a dill pickle.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "\"Just drawn that way\" red velvet cake",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 70,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "red food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour, cocoa, buttermilk and red colouring.",
+     "min": 15
+    },
+    {
+     "text": "Bake in two tins at 175C.",
+     "min": 30
+    },
+    {
+     "text": "Cool the cakes completely.",
+     "min": 40
+    },
+    {
+     "text": "Beat the cream cheese with the icing sugar for the frosting and layer the cakes.",
+     "min": 12
+    },
+    {
+     "text": "Pour a glossy red icing over the top.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Eddie's ginger beer on the rocks",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "drops vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "large ice blocks, to serve",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put one large ice block in each of four heavy tumblers.",
+     "min": 3
+    },
+    {
+     "text": "Squeeze lime juice into each and add the vanilla.",
+     "min": 3
+    },
+    {
+     "text": "Top with cold ginger beer, poured slowly. Stir once and add a lime wheel.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

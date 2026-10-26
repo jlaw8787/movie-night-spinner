@@ -1,0 +1,514 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wedding antipasto",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, keep chilled, serve at room temperature",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sliced salami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "aged provolone, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "drained roast capsicum",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cracked black pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Arrange the salami, provolone and olives on a platter.",
+     "min": 4
+    },
+    {
+     "text": "Pile the roast capsicum alongside, drizzle with olive oil and add cracked pepper.",
+     "min": 3
+    },
+    {
+     "text": "Leave out for a few minutes so it comes to room temperature before serving.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Golden arancini",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 22,
+   "make_ahead": "Make the risotto up to 1 day ahead; shape and crumb up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "cold cooked risotto, thick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "sea salt, to finish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the mozzarella into 8 cubes. Divide the cold risotto into 8 portions and wrap each around a cube, rolling into balls.",
+     "min": 12
+    },
+    {
+     "text": "Roll the balls in flour, dip in the beaten egg and coat in breadcrumbs.",
+     "min": 8
+    },
+    {
+     "text": "Chill the crumbed balls for 20 minutes so they hold their shape.",
+     "min": 20
+    },
+    {
+     "text": "Heat the oil to 170C and fry in batches until golden and hot through, about 4 to 5 minutes. Drain and finish with sea salt.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Clemenza's Sunday sauce",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 100,
+   "make_ahead": "Sauce is better made 1 day ahead, keeps 3 days chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork and beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "fennel sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "pecorino, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "rigatoni",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with the egg, breadcrumbs, a share of the pecorino and a pinch of salt. Form 12 meatballs.",
+     "min": 12
+    },
+    {
+     "text": "Brown the meatballs in olive oil with the sausages cut into chunks, then set aside.",
+     "min": 12
+    },
+    {
+     "text": "Soften the onion in the same pot, add the garlic and tomato paste, then stir in the tomatoes and water.",
+     "min": 8
+    },
+    {
+     "text": "Return the meat, cover partly and simmer gently, stirring and adding water if needed. Check the meatballs are cooked through.",
+     "min": 75
+    },
+    {
+     "text": "Boil the rigatoni, toss with the sauce and serve with the meat and the rest of the pecorino.",
+     "min": 13
+    }
+   ]
+  },
+  {
+   "n": "Ricotta & pistachio cannoli",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "Filling up to 1 day ahead; fill shells just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "icing sugar, plus extra for dusting",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "dark chocolate, finely chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "small cannoli shells",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "pistachios, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the ricotta in a lined sieve in the fridge for at least 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Beat the ricotta with the icing sugar and orange zest, then fold in the chocolate.",
+     "min": 8
+    },
+    {
+     "text": "Pipe into the cannoli shells just before serving.",
+     "min": 8
+    },
+    {
+     "text": "Dip the ends in crushed pistachios and dust lightly with icing sugar.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Blood orange Italian soda",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Syrup mix ready any time; add soda just before serving",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "blood orange syrup",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill 4 glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add the syrup to each glass and top with sparkling water. Stir gently, adjusting syrup to taste.",
+     "min": 2
+    },
+    {
+     "text": "Finish each with a thin twist of orange.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Veal scaloppine",
+   "course": "m",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 9,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "thin veal cutlets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "Marsala wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pound the cutlets thin between baking paper, season and dust with flour.",
+     "min": 8
+    },
+    {
+     "text": "Pan-fry the veal in batches in some of the butter for about 1 minute a side, then set aside.",
+     "min": 6
+    },
+    {
+     "text": "Cook the mushrooms in the rest of the butter until golden, add the Marsala and stock and reduce until glossy.",
+     "min": 8
+    },
+    {
+     "text": "Return the veal to the pan for a minute to warm through and scatter with parsley.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Espresso",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 32,
+     "u": "g",
+     "item": "ground dark roast coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "strips lemon peel",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pull four short espressos from a machine or stovetop pot.",
+     "min": 3
+    },
+    {
+     "text": "Serve each with a curl of lemon peel.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Chianti",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "Chianti",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour a glass of Chianti per guest, ideally from a straw bottle on the table.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Anisette",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "anisette liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "coffee beans",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour a small glass of anisette per guest.",
+     "min": 1
+    },
+    {
+     "text": "Float two coffee beans on top of each.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

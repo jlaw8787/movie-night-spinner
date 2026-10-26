@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mos Eisley cantina smoky snack mix",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 35,
+   "make_ahead": "Up to 5 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pretzels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rice crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "roasted chickpeas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mixed nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 150C. Toss the pretzels, crackers, chickpeas and nuts with the melted butter and seasonings.",
+     "min": 8
+    },
+    {
+     "text": "Spread on a lined tray and bake, stirring twice.",
+     "min": 25
+    },
+    {
+     "text": "Cool before serving.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Death Star meatballs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, keep chilled and reheat gently",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork and beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the mince and roll into 20 balls, pressing a thumb dent into each.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 220C until browned.",
+     "min": 15
+    },
+    {
+     "text": "Fry the mushrooms in a wide pan, then add the stock, cream and Dijon and simmer.",
+     "min": 8
+    },
+    {
+     "text": "Add the meatballs and simmer through.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ronto wrap",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "pork sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sliced roast pork",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "cracked black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick pita breads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the sausages until cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Toss the cabbage and carrot with the mayo and plenty of black pepper.",
+     "min": 8
+    },
+    {
+     "text": "Reduce the shallot, stock, cream and cracked pepper into a sauce.",
+     "min": 12
+    },
+    {
+     "text": "Warm the roast pork and the pitas.",
+     "min": 5
+    },
+    {
+     "text": "Fill the pitas with sausage, pork, slaw and sauce and wrap tightly.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Aunt Beru's blue milk pudding",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 195,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop blue food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "shortbread biscuits, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cornflour into a little of the cold milk until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Heat the rest of the milk with the sugar until steaming, then whisk in the cornflour mix and stir until thick.",
+     "min": 8
+    },
+    {
+     "text": "Off the heat, stir in the vanilla and blue colouring.",
+     "min": 1
+    },
+    {
+     "text": "Pour into four glasses and chill until set.",
+     "min": 180
+    },
+    {
+     "text": "Top with crushed shortbread.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Blue milk",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "full cream milk, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen pineapple",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "blue spirulina",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "honey, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, pineapple, lime juice and spirulina until smooth and pale blue.",
+     "min": 3
+    },
+    {
+     "text": "Add a little honey if you like it sweeter and pour straight away.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

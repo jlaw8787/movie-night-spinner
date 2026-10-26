@@ -1,0 +1,288 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Jersey disco fries",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 55,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thick chips, soak and dry well.",
+     "min": 40
+    },
+    {
+     "text": "Fry at 150C, then again at 190C until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Melt the butter, stir in the flour, whisk in the stock and simmer until thick.",
+     "min": 10
+    },
+    {
+     "text": "Pile the chips on a tray, pour over the gravy, cover with mozzarella and grill until melted.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Comic strip pizza bagels",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "plain bagels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "tbsp",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "pepperoni, sliced",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the bagels and toast lightly.",
+     "min": 4
+    },
+    {
+     "text": "Spread each half with pizza sauce and top with mozzarella and pepperoni.",
+     "min": 3
+    },
+    {
+     "text": "Grill until bubbling. Cut into halves to share.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Jersey Italian hot dogs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green capsicums",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pizza bread rounds",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the potatoes and slice the capsicums and onions.",
+     "min": 12
+    },
+    {
+     "text": "Fry the potatoes in oil until golden, then add the capsicums and onions and cook until soft.",
+     "min": 20
+    },
+    {
+     "text": "Fry the franks until blistered.",
+     "min": 6
+    },
+    {
+     "text": "Split the pizza bread rounds, fill with franks and the potato and pepper mix and finish with mustard.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Diner rice pudding",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 155,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "arborio rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the rice in the milk with the sugar over low heat, stirring often, until thick and creamy.",
+     "min": 35
+    },
+    {
+     "text": "Stir in the vanilla, pour into 4 glasses.",
+     "min": 5
+    },
+    {
+     "text": "Chill for the setting time.",
+     "min": 120
+    },
+    {
+     "text": "Dust with cinnamon before serving.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Jersey diner root beer float",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "vanilla ice cream (8 scoops)",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "root beer, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put 4 tall glasses in the freezer to chill.",
+     "min": 30
+    },
+    {
+     "text": "Drop 2 scoops of ice cream into each glass and pour the root beer slowly down the side.",
+     "min": 3
+    },
+    {
+     "text": "Whip the cream and finish each with a swirl of cream and a cherry. Serve with a long spoon and a straw.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

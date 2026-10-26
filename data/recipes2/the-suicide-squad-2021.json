@@ -1,0 +1,352 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Corto Maltese empanadas",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 32,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onion and chop the olives.",
+     "min": 6
+    },
+    {
+     "text": "Brown the mince with onion and cumin, stir in the olives and cool.",
+     "min": 12
+    },
+    {
+     "text": "Cut pastry into rounds, fill, fold and crimp.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 20
+    },
+    {
+     "text": "Blitz parsley, garlic, vinegar and oil for chimichurri.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Polka-Dot Man's spotty skewers",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "bocconcini",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Reduce the balsamic in a small pan until syrupy and cool.",
+     "min": 10
+    },
+    {
+     "text": "Thread bocconcini, tomatoes and basil onto toothpicks.",
+     "min": 12
+    },
+    {
+     "text": "Lay on a white platter and drizzle with oil.",
+     "min": 2
+    },
+    {
+     "text": "Dot the balsamic all over the plate.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Jungle mission chicken",
+   "course": "m",
+   "prep_min": 16,
+   "cook_min": 95,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can black beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in lime juice, crushed garlic, chopped chilli and salt.",
+     "min": 8
+    },
+    {
+     "text": "Leave to marinate.",
+     "min": 60
+    },
+    {
+     "text": "Cook the rice and warm the drained beans.",
+     "min": 20
+    },
+    {
+     "text": "Grill the chicken until charred and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Make a salsa of diced tomato, red onion and lime.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Starro starfish cookies",
+   "course": "w",
+   "prep_min": 32,
+   "cook_min": 35,
+   "make_ahead": "Up to 4 days, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pink and blue food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, then mix in the flour.",
+     "min": 8
+    },
+    {
+     "text": "Roll out and cut into starfish shapes.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 160C.",
+     "min": 15
+    },
+    {
+     "text": "Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Ice pink and blue with icing sugar, colouring and a little water, and pipe white dots along each arm.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Corto Maltese mango batida",
+   "course": "d",
+   "prep_min": 11,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cups ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the mangoes and juice the limes.",
+     "min": 6
+    },
+    {
+     "text": "Blend the mango, coconut milk, lime juice, sugar and ice until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Pour into four glasses and add a measure of rum to the adult glasses only.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

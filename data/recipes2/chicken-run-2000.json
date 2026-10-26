@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Egg quota curried egg and cress sandwiches",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 14,
+   "make_ahead": "Up to 3 hours, keep covered",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "mild curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and white pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices soft white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet cress",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs hard, cool in iced water and peel.",
+     "min": 14
+    },
+    {
+     "text": "Mash with the mayonnaise, curry powder, chopped chives, salt and white pepper.",
+     "min": 6
+    },
+    {
+     "text": "Butter the bread and spread the egg over half of it. Scatter with cress and close up.",
+     "min": 8
+    },
+    {
+     "text": "Cut off the crusts and cut each into 4 triangles.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Babs's knitted cheese straws",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 12,
+   "make_ahead": "Up to 2 days in a tin",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch sweet paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush one pastry sheet with beaten egg and cover with the parmesan and paprika.",
+     "min": 8
+    },
+    {
+     "text": "Lay the other sheet on top, press, cut into strips and twist.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C until golden and crisp.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Pie machine beef and onion pies",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 213,
+   "make_ahead": "Filling up to 2 days, bake fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the beef and slice the onions.",
+     "min": 15
+    },
+    {
+     "text": "Brown the beef in batches, add the onions, thyme, tomato paste, Worcestershire sauce and stock, cover and braise.",
+     "min": 150
+    },
+    {
+     "text": "Thicken with cornflour mixed in water, then cool.",
+     "min": 25
+    },
+    {
+     "text": "Line four pie tins with shortcrust, fill, top with puff and egg wash.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 200C.",
+     "min": 30
+    },
+    {
+     "text": "Simmer the peas with the butter and mash roughly.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Escape plane jam roly-poly",
+   "course": "w",
+   "prep_min": 18,
+   "cook_min": 45,
+   "make_ahead": "Best the day it is baked",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, then add the water to a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Roll to a rectangle, spread with jam and roll up. Wrap loosely in baking paper and foil.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 40
+    },
+    {
+     "text": "Heat the custard and serve with slices.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coop meeting honey malt hot chocolate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the milk until steaming but not boiling. Whip the cream.",
+     "min": 8
+    },
+    {
+     "text": "Whisk in the cocoa, malt and honey until smooth and frothy.",
+     "min": 2
+    },
+    {
+     "text": "Pour into four mugs, top with cream and grate dark chocolate over.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

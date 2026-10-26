@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Baby Groot's twig fries",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "sweet potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the sweet potatoes into thin sticks and toss with oil, paprika and salt.",
+     "min": 10
+    },
+    {
+     "text": "Spread in a single layer on lined trays and bake at 220C, turning once, until crisp at the edges.",
+     "min": 25
+    },
+    {
+     "text": "Pile into little pots to serve.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Sovereign golden saffron arancini",
+   "course": "s",
+   "prep_min": 128,
+   "cook_min": 40,
+   "make_ahead": "Make the risotto up to 1 day ahead; fry just before serving",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "arborio rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chicken stock, hot",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "saffron threads",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice with the hot stock and saffron into a risotto, stir in the parmesan, then spread out to cool.",
+     "min": 25
+    },
+    {
+     "text": "Chill overnight or at least a few hours until firm.",
+     "min": 120
+    },
+    {
+     "text": "Roll into balls around cubes of mozzarella, coat in egg and then panko.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 180C in batches until golden all over.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Yondu's Ravager stew",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 185,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "stout",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf of crusty bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches in a heavy pot.",
+     "min": 10
+    },
+    {
+     "text": "Add the onions, carrots and paprika and stir for a few minutes.",
+     "min": 15
+    },
+    {
+     "text": "Pour in the stout and enough water to cover.",
+     "min": 3
+    },
+    {
+     "text": "Simmer gently until thick and tender.",
+     "min": 170
+    },
+    {
+     "text": "Serve in big bowls with crusty bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Ravager fireworks popping candy sundaes",
+   "course": "w",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "Sauce up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "packets popping candy",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream until steaming and pour over the chocolate, stirring until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Scoop ice cream into bowls and pour over the warm sauce.",
+     "min": 3
+    },
+    {
+     "text": "Scatter popping candy on top at the table so it crackles.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Ego's garden pear and passionfruit cooler",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, add the sparkling water at serving",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "pear nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pear, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pear nectar with the passionfruit pulp and lime juice, and bruise the mint through it.",
+     "min": 5
+    },
+    {
+     "text": "Chill for half an hour.",
+     "min": 30
+    },
+    {
+     "text": "Fill glasses with crushed ice, pour in the nectar until three quarters full and top with sparkling water.",
+     "min": 0
+    },
+    {
+     "text": "Garnish with mint sprigs and a pear slice.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

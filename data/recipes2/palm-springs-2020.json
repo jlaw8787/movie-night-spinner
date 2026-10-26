@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pool float pizza bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, bake fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pepperoni, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the dough thin and cut into small rounds.",
+     "min": 10
+    },
+    {
+     "text": "Top each with sauce, mozzarella, a slice of pepperoni and a pinch of oregano.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 220C until crisp and bubbling.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Desert bar jalapeño poppers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Fill up to 1 day, bake fresh",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "large jalapeno chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "rashers streaky bacon, halved",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the jalapenos lengthways and scrape out the seeds.",
+     "min": 10
+    },
+    {
+     "text": "Mix the cream cheese with the cheddar and fill each half.",
+     "min": 5
+    },
+    {
+     "text": "Wrap each half with half a rasher of bacon.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until the bacon is crisp.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Tala and Abe's wedding fish tacos",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 5,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "white fish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "small cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Quickly pickle the sliced red onion in some of the lime juice.",
+     "min": 15
+    },
+    {
+     "text": "Mix the sour cream with lime juice for a crema and shred the cabbage.",
+     "min": 5
+    },
+    {
+     "text": "Dust the fish with chilli, cumin and salt and pan fry until just cooked.",
+     "min": 8
+    },
+    {
+     "text": "Warm the tortillas and fill with cabbage, fish, crema and pickled onion.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Wedding cake again",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 80,
+   "make_ahead": "Bake up to 1 day ahead, assemble on the day",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "lemon curd",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour. Divide between 2 tins.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 175C until golden and springy.",
+     "min": 30
+    },
+    {
+     "text": "Cool completely.",
+     "min": 40
+    },
+    {
+     "text": "Whip the cream and fill the cakes with lemon curd and cream.",
+     "min": 10
+    },
+    {
+     "text": "Ice white with icing sugar mixed with milk.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Roy's crossbow michelada",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "tomato juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, 16 dashes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles Mexican style lager (330 ml each)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the salt with the chilli powder on a plate.",
+     "min": 2
+    },
+    {
+     "text": "Rub the rims of 4 tall glasses with lime and dip into the salt. Fill with ice.",
+     "min": 3
+    },
+    {
+     "text": "Into each glass add lime juice, tomato juice, hot sauce and Worcestershire.",
+     "min": 3
+    },
+    {
+     "text": "Top slowly with cold lager, stir gently and add a lime wedge. Use soda water instead of beer for anyone not drinking.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

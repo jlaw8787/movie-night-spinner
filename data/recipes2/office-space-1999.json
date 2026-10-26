@@ -1,0 +1,360 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chotchkie's loaded potato skins",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cooked bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the potatoes at 200C.",
+     "min": 45
+    },
+    {
+     "text": "Halve, scoop out and brush with melted butter.",
+     "min": 10
+    },
+    {
+     "text": "Crisp the skins at 220C.",
+     "min": 10
+    },
+    {
+     "text": "Fill with cheddar and bacon and bake again.",
+     "min": 5
+    },
+    {
+     "text": "Top with sour cream and chives.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "TPS report crackers",
+   "course": "s",
+   "prep_min": 14,
+   "cook_min": 12,
+   "make_ahead": "Crackers up to 2 days",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "lavash breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the lavash into neat rectangles like sheets of paper.",
+     "min": 8
+    },
+    {
+     "text": "Brush with oil, salt and bake at 180C until crisp.",
+     "min": 12
+    },
+    {
+     "text": "Whip the feta with the yoghurt and stack the crackers around it. Did you get the memo?",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Peter's fish",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "snapper fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salad leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips and season the flour.",
+     "min": 12
+    },
+    {
+     "text": "Fry the chips twice, once low and once hot, until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Dust the fish in the flour and fry skin down in the butter until crisp, then flip.",
+     "min": 8
+    },
+    {
+     "text": "Add lemon juice, capers and parsley to the pan.",
+     "min": 2
+    },
+    {
+     "text": "Serve with a green salad.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Office birthday cake",
+   "course": "w",
+   "prep_min": 27,
+   "cook_min": 70,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat 200g of the butter with the sugar, add the eggs and fold in the flour and milk.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a slab tin at 175C.",
+     "min": 30
+    },
+    {
+     "text": "Cool the cake.",
+     "min": 40
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar, spread on and cover with sprinkles. Cut a square for Milton first.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Lumbergh's vanilla iced coffee",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 38,
+   "make_ahead": "Syrup up to 1 week",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "strong coffee",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "small scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cocoa powder, to dust",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, to serve",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee and chill.",
+     "min": 30
+    },
+    {
+     "text": "Simmer the sugar with the water and split vanilla bean, then cool.",
+     "min": 8
+    },
+    {
+     "text": "Fill four tall glasses with ice and add vanilla syrup, coffee and cold milk.",
+     "min": 4
+    },
+    {
+     "text": "Top each with ice cream and dust with cocoa.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

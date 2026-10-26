@@ -1,0 +1,388 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bartertown trade platter",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "medjool dates",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Meat"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "almonds, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dried figs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the dates and fill each with goat's cheese and a toasted almond",
+     "min": 12
+    },
+    {
+     "text": "Halve the dried figs",
+     "min": 3
+    },
+    {
+     "text": "Lay out on a rough board with shards of cheddar and crackers",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Crack in the Earth damper",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub half the butter into the flour and salt",
+     "min": 5
+    },
+    {
+     "text": "Mix in the milk with a knife until just combined",
+     "min": 4
+    },
+    {
+     "text": "Shape into a round and score",
+     "min": 4
+    },
+    {
+     "text": "Bake at 200C until hollow when tapped",
+     "min": 30
+    },
+    {
+     "text": "Serve with the remaining butter and golden syrup",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Aunty Entity's lamb",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 110,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "lamb leg",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rosemary sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "mint leaves, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stud the lamb with garlic and rosemary, rub with oil and salt",
+     "min": 10
+    },
+    {
+     "text": "Roast at 180C until 58C inside, with the potatoes alongside",
+     "min": 80
+    },
+    {
+     "text": "Rest",
+     "min": 20
+    },
+    {
+     "text": "Mix the mint with sugar, vinegar and boiling water for mint sauce",
+     "min": 5
+    },
+    {
+     "text": "Carve and serve",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Thunderdome lamingtons",
+   "course": "w",
+   "prep_min": 60,
+   "cook_min": 45,
+   "make_ahead": "Better the next day",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the sugar, add the eggs, then fold in the flour and milk",
+     "min": 15
+    },
+    {
+     "text": "Bake the sponge at 180C",
+     "min": 25
+    },
+    {
+     "text": "Cool and cut into squares",
+     "min": 25
+    },
+    {
+     "text": "Split and fill with jam",
+     "min": 8
+    },
+    {
+     "text": "Mix the icing sugar, cocoa and a little milk, dip the squares and roll in coconut",
+     "min": 15
+    },
+    {
+     "text": "Pipe cream in the middle",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Bartertown fiery fresh ginger beer",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fresh ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "soda water, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the ginger",
+     "min": 5
+    },
+    {
+     "text": "Simmer with the sugar and water",
+     "min": 10
+    },
+    {
+     "text": "Cool, then strain, pressing hard on the ginger",
+     "min": 20
+    },
+    {
+     "text": "Stir in the lemon juice",
+     "min": 1
+    },
+    {
+     "text": "Divide the syrup between tall glasses of ice and top with soda water",
+     "min": 3
+    },
+    {
+     "text": "Stir and add a lime wedge and a thin slice of ginger",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

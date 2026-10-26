@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Officers' club wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "Wings can dry overnight uncovered in the fridge",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "celery sticks, cut into sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the wings dry and season. Bake at 220C for 45 minutes, turning once.",
+     "min": 45
+    },
+    {
+     "text": "Melt the hot sauce with the butter and honey and toss the wings through it.",
+     "min": 5
+    },
+    {
+     "text": "Mash the blue cheese into the sour cream. Serve the wings with the dip and celery.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Beach volleyball fish tacos",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Slaw and salsa up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "flathead fillets, cut into strips",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour with the lager into a batter. Mix the sour cream with lime juice.",
+     "min": 10
+    },
+    {
+     "text": "Dice the tomato and onion and shred the cabbage.",
+     "min": 8
+    },
+    {
+     "text": "Dip the fish in batter and fry at 180C for 3 minutes, in batches, until golden.",
+     "min": 12
+    },
+    {
+     "text": "Warm the tortillas and fill with fish, cabbage, tomato, onion and the lime cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Charlie's dinner invitation",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "Chicken can marinate up to 1 day",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the chicken with the juice of one lemon, the garlic and oregano.",
+     "min": 5
+    },
+    {
+     "text": "Marinate in the fridge for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Grill the chicken until charred and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Toss the tomato, cucumber, red onion, olives and feta for a Greek salad, with lemon juice.",
+     "min": 10
+    },
+    {
+     "text": "Warm the pita and serve everything together.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Aviator sunglasses brownies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Keeps 4 days airtight",
+   "ingredients": [
+    {
+     "q": 280,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 170,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt most of the chocolate with most of the butter. Whisk in the sugar and eggs, then fold in the flour and cocoa.",
+     "min": 10
+    },
+    {
+     "text": "Pour into a lined tin and bake at 170C for 25 minutes. Cool.",
+     "min": 25
+    },
+    {
+     "text": "Melt the remaining chocolate with the last of the butter and drizzle over. Cut into rectangles.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Iceman's frozen lemon lager slushie",
+   "course": "d",
+   "prep_min": 20,
+   "cook_min": 210,
+   "make_ahead": "Slush base freezes up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles lager, 250ml each",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the lemon juice, sugar syrup and water together and pour into a shallow tray.",
+     "min": 5
+    },
+    {
+     "text": "Freeze for 3 hours, scraping with a fork every hour into a slush.",
+     "min": 180
+    },
+    {
+     "text": "Put four glasses in the freezer for 30 minutes to frost.",
+     "min": 30
+    },
+    {
+     "text": "Spoon the slush into the frosted glasses and top each with ice-cold lager.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

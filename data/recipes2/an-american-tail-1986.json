@@ -1,0 +1,372 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Fievel's potato latkes",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "apple sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the potatoes and onion and squeeze out the liquid well.",
+     "min": 15
+    },
+    {
+     "text": "Mix with the eggs, flour and salt.",
+     "min": 5
+    },
+    {
+     "text": "Fry spoonfuls in hot oil until crisp, turning once. Work in batches.",
+     "min": 20
+    },
+    {
+     "text": "Serve with sour cream and apple sauce.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Pirozhki",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 97,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, warm milk, sugar and butter into a soft dough and knead briefly.",
+     "min": 10
+    },
+    {
+     "text": "Cover and let the dough prove.",
+     "min": 60
+    },
+    {
+     "text": "Fry the mince with the chopped onion and dill.",
+     "min": 12
+    },
+    {
+     "text": "Cool the filling.",
+     "min": 15
+    },
+    {
+     "text": "Cut the dough into rounds, fill, and seal.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Mama Mousekewitz's borscht",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "beetroots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the beetroot and carrots, shred the cabbage and dice the potatoes.",
+     "min": 15
+    },
+    {
+     "text": "Simmer all the vegetables in the stock until tender.",
+     "min": 40
+    },
+    {
+     "text": "Add the vinegar and plenty of dill.",
+     "min": 3
+    },
+    {
+     "text": "Serve with a big spoon of sour cream and rye bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Shostka honey cake",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 70,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "strong coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mixed spice",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and line a tin.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the honey, oil, eggs, sugar and coffee.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the flour, baking powder and mixed spice and pour into the tin.",
+     "min": 5
+    },
+    {
+     "text": "Bake until a skewer comes out clean.",
+     "min": 50
+    },
+    {
+     "text": "Cool in the tin.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Papa's fiddle-night Russian tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "black tea leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea in just-boiled water and strain into heatproof glasses.",
+     "min": 5
+    },
+    {
+     "text": "Add a lemon slice to each and serve with jam for stirring in.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

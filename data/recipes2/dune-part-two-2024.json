@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Spice-roasted chickpeas",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chickpeas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain and dry the chickpeas well.",
+     "min": 4
+    },
+    {
+     "text": "Toss with the oil, the cumin, the smoked paprika, the cinnamon and salt.",
+     "min": 4
+    },
+    {
+     "text": "Roast at 200C for 35 minutes, shaking twice, until crunchy.",
+     "min": 32
+    },
+    {
+     "text": "Cool 5 minutes before serving.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Sietch Tabr stuffed desert dates",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "medjool dates",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the medjool dates and remove the stones.",
+     "min": 5
+    },
+    {
+     "text": "Fill each with a little goat's cheese and a toasted almond.",
+     "min": 5
+    },
+    {
+     "text": "Lay on a plate and drizzle with the warm honey just before serving.",
+     "min": 9
+    }
+   ]
+  },
+  {
+   "n": "Lisan al Gaib spice-rubbed lamb",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 210,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "lamb shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground coriander",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the lamb shoulder with the cumin, the coriander, the cinnamon, chilli and salt.",
+     "min": 14
+    },
+    {
+     "text": "Roast covered at 160C for 3.5 hours until it pulls apart.",
+     "min": 213
+    },
+    {
+     "text": "Steep a pinch of saffron in hot water and cook the basmati rice with it until golden and fluffy.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Shai-Hulud melange spice cake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cardamom",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter with the honey and the brown sugar.",
+     "min": 8
+    },
+    {
+     "text": "Mix with the self-raising flour, the cardamom, the cinnamon, the ginger, the eggs and the milk.",
+     "min": 8
+    },
+    {
+     "text": "Bake in a loaf tin at 170C for 50 minutes and brush with warm honey.",
+     "min": 73
+    }
+   ]
+  },
+  {
+   "n": "Cardamom spice coffee with date syrup",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "cardamom pods",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "whole cloves, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground coffee, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "date syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lightly crush the cardamom pods.",
+     "min": 1
+    },
+    {
+     "text": "Put them in a saucepan with the water, the cinnamon stick and the cloves and simmer 5 minutes.",
+     "min": 7
+    },
+    {
+     "text": "Stir in the finely ground coffee, take off the heat and steep 4 minutes, then strain through a fine sieve or plunger.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the date syrup.",
+     "min": 1
+    },
+    {
+     "text": "Froth the hot milk and spoon over the small cups of the coffee, with a pinch of cinnamon on top.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

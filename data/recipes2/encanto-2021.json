@@ -1,0 +1,306 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Julieta's healing arepas",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "arepa flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch fine salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the arepa flour with the warm water, salt and butter into a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Shape into discs, fill with mozzarella and seal.",
+     "min": 12
+    },
+    {
+     "text": "Cook on a griddle for 5 minutes a side until golden and crisp.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Pandebono",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Best eaten warm",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "tapioca starch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "arepa flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the starch, arepa flour, feta, egg and sugar into a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Roll into balls.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C for 15 minutes until puffed and golden. Eat warm.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Madrigal family feast",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 220,
+   "make_ahead": "Beef braise up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tin black beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green plantains, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Braise the beef with the tomatoes, onions and cumin for 3 hours, then shred.",
+     "min": 180
+    },
+    {
+     "text": "Cook the rice and warm the black beans.",
+     "min": 20
+    },
+    {
+     "text": "Fry the plantain slices until golden.",
+     "min": 10
+    },
+    {
+     "text": "Fry the eggs.",
+     "min": 10
+    },
+    {
+     "text": "Serve it all on one plate.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Buñuelos",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Best warm",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "tapioca starch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the feta, cornflour, starch, egg and sugar into a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Roll into balls.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 160C for 6 minutes until golden and round, in batches.",
+     "min": 10
+    },
+    {
+     "text": "Drain and serve warm.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Colombian hot chocolate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cubes mozzarella",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk and whisk in the chocolate and cinnamon until frothy.",
+     "min": 8
+    },
+    {
+     "text": "Pour into four mugs and drop a cube of mozzarella into each so it goes soft and stringy.",
+     "min": 2
+    },
+    {
+     "text": "Fish it out with a spoon.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

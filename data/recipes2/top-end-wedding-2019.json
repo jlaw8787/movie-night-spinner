@@ -1,0 +1,380 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mindil Beach laksa cups",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "laksa paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "tofu puffs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "rice noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bean sprouts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the laksa paste for 2 minutes, add the coconut milk and the water and simmer.",
+     "min": 5
+    },
+    {
+     "text": "Add the sliced chicken thighs and cook 8 minutes, then the tofu puffs.",
+     "min": 16
+    },
+    {
+     "text": "Divide the cooked rice noodles into bowls, ladle over the laksa and top with bean sprouts.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Darwin mango and prawn rice paper rolls",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rice vermicelli",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "cooked prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "continental cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch Vietnamese mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "rice paper sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "fish sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the rice vermicelli in boiling water 5 minutes, drain and cool.",
+     "min": 2
+    },
+    {
+     "text": "Peel and halve the cooked prawns.",
+     "min": 8
+    },
+    {
+     "text": "Slice the mangoes and the cucumber into strips.",
+     "min": 8
+    },
+    {
+     "text": "Dip a rice paper sheet in warm water for 10 seconds, lay flat, add prawns, mango, cucumber, noodles, mint and Vietnamese mint and roll tightly.",
+     "min": 11
+    },
+    {
+     "text": "Repeat until all the rolls are made.",
+     "min": 8
+    },
+    {
+     "text": "Mix the fish sauce, the lime juice, the sugar, the water, the chopped chilli and the garlic clove.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Tiwi Islands barbecued barramundi",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 720,
+     "u": "g",
+     "item": "barramundi fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "fish sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the barramundi fillets and season.",
+     "min": 6
+    },
+    {
+     "text": "Grill skin down over high heat for 5 minutes, flip for 2.",
+     "min": 10
+    },
+    {
+     "text": "Toss the shredded green mango with mint, the sliced chilli, the juice of the limes and the fish sauce and pile on top.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Lauren and Ned's mango pavlova",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 150,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to stiff peaks, add the caster sugar a spoon at a time until glossy, then fold in the cornflour and the vinegar.",
+     "min": 7
+    },
+    {
+     "text": "Shape a round and bake at 120C for 90 minutes, then cool in the oven.",
+     "min": 157
+    },
+    {
+     "text": "Top with the whipped cream, the sliced mangoes and the passionfruit.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Top End frozen mango daiquiri",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 120,
+   "make_ahead": "Up to 1 week, keep frozen",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "chilli flakes, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, as needed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the flesh of the ripe mangoes in chunks for at least 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Mix the salt with a little chilli flakes, wet the rims of the glasses with lime and dip.",
+     "min": 3
+    },
+    {
+     "text": "Blend the frozen mango with the white rum, the lime juice, the sugar syrup and the ice until thick and slushy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into the glasses and add a lime wheel.",
+     "min": 3
+    },
+    {
+     "text": "Leave out the rum and add the coconut water for non-drinkers.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

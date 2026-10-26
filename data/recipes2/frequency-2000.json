@@ -1,0 +1,668 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Firehouse chilli bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, assemble just before serving",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "wonton wrappers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "oil, plus extra to grease",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tinned chopped tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "tinned kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Press the wonton wrappers into a lightly oiled mini muffin tin. Bake at 180C until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Brown the mince in oil, add the onion and cook until soft.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the chilli powder, tomatoes and beans. Simmer until thick.",
+     "min": 15
+    },
+    {
+     "text": "Spoon into the baked cups, top with cheddar and return to the oven to melt.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Miracle Mets pretzels with beer mustard",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 95,
+   "make_ahead": "Best the same day",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water for boiling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "coarse salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, salt and warm water and knead.",
+     "min": 10
+    },
+    {
+     "text": "Rise in a covered bowl until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Shape into 8 pretzels.",
+     "min": 10
+    },
+    {
+     "text": "Boil each briefly in the water with the bicarb, then drain and sprinkle with coarse salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until deep brown.",
+     "min": 13
+    },
+    {
+     "text": "Mix the mustard, lager and honey for the dip.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Queens pizza",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 1620,
+   "make_ahead": "Dough needs 1 to 2 days in the fridge",
+   "ingredients": [
+    {
+     "q": 380,
+     "u": "g",
+     "item": "bread flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 245,
+     "u": "ml",
+     "item": "cool water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "low-moisture mozzarella, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, salt and water and knead. Divide into two balls.",
+     "min": 12
+    },
+    {
+     "text": "Refrigerate covered to cold-ferment for a day or two.",
+     "min": 1440
+    },
+    {
+     "text": "Bring to room temperature.",
+     "min": 120
+    },
+    {
+     "text": "Heat a pizza steel at the oven's maximum, about 250 to 275C.",
+     "min": 45
+    },
+    {
+     "text": "Remove the sausage from its casings, crumble and pan-fry until cooked.",
+     "min": 5
+    },
+    {
+     "text": "Stretch the dough thin into two pizzas. Top with tomatoes, mozzarella and sausage.",
+     "min": 10
+    },
+    {
+     "text": "Bake each on the steel until crisp and cooked, then cut into wedges.",
+     "min": 14
+    }
+   ]
+  },
+  {
+   "n": "Julia's apple pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 70,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "Granny Smith apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 85,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 15,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a 20cm pie dish with half of the pastry.",
+     "min": 10
+    },
+    {
+     "text": "Peel, core and thinly slice the apples. Toss with sugar, cinnamon and flour.",
+     "min": 15
+    },
+    {
+     "text": "Fill the pastry, cover with the rest and crimp. Cut two steam vents, brush with egg and sprinkle with a little sugar.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 190C until golden and the apples are tender.",
+     "min": 50
+    },
+    {
+     "text": "Rest before cutting into four portions.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Firehouse lemon shandy",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Lemon mix up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut into wheels",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the lemon juice, sugar and water until the sugar dissolves.",
+     "min": 3
+    },
+    {
+     "text": "Chill 4 glasses in the freezer.",
+     "min": 20
+    },
+    {
+     "text": "Pour lager into each glass and top with lemonade. Add a splash of the lemon mix.",
+     "min": 4
+    },
+    {
+     "text": "Add a sprig of mint and a lemon wheel.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Meatball Hero",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "Sauce up to 2 days",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince, egg, breadcrumbs, parmesan and garlic and roll into small meatballs.",
+     "min": 15
+    },
+    {
+     "text": "Brown the meatballs in oil.",
+     "min": 10
+    },
+    {
+     "text": "Add the tomatoes and simmer until cooked through.",
+     "min": 25
+    },
+    {
+     "text": "Pile into split rolls, top with provolone and grill until melted.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Little Chief's Plate",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag potato chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer or grill the franks.",
+     "min": 8
+    },
+    {
+     "text": "Butter the rolls and tuck in the franks.",
+     "min": 2
+    },
+    {
+     "text": "Serve with chips and a cold glass of milk.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the lemon juice and sugar until dissolved.",
+     "min": 4
+    },
+    {
+     "text": "Add the water and stir.",
+     "min": 1
+    },
+    {
+     "text": "Pour over ice in a pitcher.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coffee",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "milk and sugar",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill the percolator with water and coffee.",
+     "min": 5
+    },
+    {
+     "text": "Percolate until dark and hot.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Hot Cocoa",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cocoa and sugar with a splash of the milk into a paste.",
+     "min": 3
+    },
+    {
+     "text": "Heat the rest of the milk and whisk in the paste until hot.",
+     "min": 10
+    },
+    {
+     "text": "Pour into mugs with a marshmallow on top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

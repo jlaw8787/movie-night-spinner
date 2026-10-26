@@ -1,0 +1,362 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Talent quest party pies and sauce",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets of shortcrust pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets of puff pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "tomato sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince and onion, stir in the flour, Worcestershire, tomato sauce and stock and simmer until thick.",
+     "min": 25
+    },
+    {
+     "text": "Cool the filling.",
+     "min": 15
+    },
+    {
+     "text": "Heat the oven to 200C. Cut 24 rounds from the shortcrust and press into mini muffin tins.",
+     "min": 12
+    },
+    {
+     "text": "Fill, top with rounds of puff pastry, pinch the edges and brush with egg.",
+     "min": 13
+    },
+    {
+     "text": "Bake until golden and serve hot with tomato sauce.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Damper with golden syrup",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "extra butter, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Rub the butter into the flour and salt.",
+     "min": 5
+    },
+    {
+     "text": "Mix in the milk with a knife until just combined.",
+     "min": 3
+    },
+    {
+     "text": "Shape, score and bake.",
+     "min": 30
+    },
+    {
+     "text": "Serve warm with butter and golden syrup.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Army mess roast",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 100,
+   "make_ahead": "Rest 20 minutes before carving",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef topside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, peeled and halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pumpkin, cut in pieces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Season the beef and roast until 52C in the middle.",
+     "min": 60
+    },
+    {
+     "text": "Rest the beef under foil.",
+     "min": 20
+    },
+    {
+     "text": "Roast the potatoes and pumpkin in oil.",
+     "min": 50
+    },
+    {
+     "text": "Cook the peas.",
+     "min": 5
+    },
+    {
+     "text": "Stir the flour into the roasting tin, add the stock and simmer into gravy.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Cummeragunja lamingtons",
+   "course": "w",
+   "prep_min": 50,
+   "cook_min": 50,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line a tin. Beat the butter and sugar, add the eggs, then fold in the flour and milk.",
+     "min": 15
+    },
+    {
+     "text": "Bake the sponge and cool.",
+     "min": 30
+    },
+    {
+     "text": "Cut into cubes.",
+     "min": 8
+    },
+    {
+     "text": "Mix the icing sugar, cocoa and a little milk into icing.",
+     "min": 5
+    },
+    {
+     "text": "Dip each cube in icing and roll in coconut.",
+     "min": 15
+    },
+    {
+     "text": "Set on a rack.",
+     "min": 17
+    }
+   ]
+  },
+  {
+   "n": "Dave Lovelace's Saigon iced coffee",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Best served fresh",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "dark ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "tbsp",
+     "item": "sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew very strong coffee.",
+     "min": 5
+    },
+    {
+     "text": "Put the condensed milk in 4 glasses, pour over the hot coffee and stir.",
+     "min": 3
+    },
+    {
+     "text": "Fill with ice and serve straight away.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

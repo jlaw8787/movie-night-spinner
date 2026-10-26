@@ -1,0 +1,394 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Valentine's night gruyère heart toasts",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "tomato chutney",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut hearts from the sourdough with a heart cutter.",
+     "min": 5
+    },
+    {
+     "text": "Brush both sides with butter and toast under the grill.",
+     "min": 3
+    },
+    {
+     "text": "Spread with chutney, top with gruyere and thyme.",
+     "min": 3
+    },
+    {
+     "text": "Grill until the cheese is melted and bubbling with brown spots. Finish with cracked pepper and serve hot.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Firecracker smoked paprika corn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs, husked",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "feta, finely crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the butter with the paprika, chilli, garlic and a pinch of salt.",
+     "min": 4
+    },
+    {
+     "text": "Grill the corn over high heat, turning, until charred in places.",
+     "min": 12
+    },
+    {
+     "text": "Brush the hot cobs with the butter and roll in the feta.",
+     "min": 3
+    },
+    {
+     "text": "Scatter with coriander and serve with lime wedges.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Calendar-hopping turkey dinner",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 106,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 140,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar cranberry sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash some of the butter with chopped sage, thyme and one garlic clove and push it under the skin of the turkey.",
+     "min": 8
+    },
+    {
+     "text": "Roast at 180C.",
+     "min": 80
+    },
+    {
+     "text": "Rest the turkey.",
+     "min": 15
+    },
+    {
+     "text": "Boil the potatoes and mash with some of the butter and the milk.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the flour into the pan juices, add the stock and simmer to a gravy.",
+     "min": 8
+    },
+    {
+     "text": "Blanch the beans and toss with garlic butter. Serve with cranberry sauce.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Christmas plum pudding with brandy custard",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "Christmas pudding",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the pudding in its basin over simmering water, or follow the packet.",
+     "min": 60
+    },
+    {
+     "text": "Warm the milk and cream until steaming.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the yolks with the sugar and cornflour, pour in the hot milk while whisking, then return to the pan.",
+     "min": 5
+    },
+    {
+     "text": "Stir over low heat until it thickens, then stir in the brandy and vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Turn out the pudding and pour over the custard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Connecticut inn hot buttered rum cider",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange (peel in strips)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the apple juice with the cinnamon, cloves, orange peel and ginger without boiling.",
+     "min": 15
+    },
+    {
+     "text": "Mash the butter with the sugar and nutmeg.",
+     "min": 3
+    },
+    {
+     "text": "Strain the cider into mugs, add the rum and drop in a teaspoon of spiced butter to melt on top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bodega Bay crab toasts",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "small slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, cut in half",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fold the crab with mayo, lemon juice, chives and cayenne.",
+     "min": 5
+    },
+    {
+     "text": "Toast the sourdough and rub with the cut garlic.",
+     "min": 5
+    },
+    {
+     "text": "Pile the crab on top and serve straight away.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Lovebird bites",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 10,
+   "make_ahead": "Cases up to 1 day ahead, fill just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets filo pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "goat's cheese, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "frozen peas, blanched",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the filo into squares and brush with melted butter.",
+     "min": 10
+    },
+    {
+     "text": "Press in layers into a mini muffin tin.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C for 8 minutes until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Fill with whipped goat's cheese, peas and a mint leaf. Serve two to a plate.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "San Francisco cioppino",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "fish stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mussels",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "snapper fillets, cut into chunks",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sourdough loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion, fennel and garlic in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Add the tomatoes, wine and stock and simmer for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Add the mussels and clams, cover and cook until they open.",
+     "min": 7
+    },
+    {
+     "text": "Add the prawns and snapper and cook just until done. Serve with sourdough.",
+     "min": 13
+    }
+   ]
+  },
+  {
+   "n": "Meringue birds' nests",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 100,
+   "make_ahead": "Nests up to 2 days ahead, airtight",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar lemon curd",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "speckled chocolate eggs",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites and sugar over simmering water until hot, then beat to stiff peaks.",
+     "min": 12
+    },
+    {
+     "text": "Pipe small nests onto lined trays.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 100C for 90 minutes, then cool.",
+     "min": 90
+    },
+    {
+     "text": "Fill with lemon curd and top each with three speckled eggs.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Irish coffee",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "Irish whiskey",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream, lightly whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee.",
+     "min": 5
+    },
+    {
+     "text": "For each glass stir sugar into hot coffee with whiskey.",
+     "min": 3
+    },
+    {
+     "text": "Pour the cream over the back of a spoon so it floats.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Book tour canapés",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "blinis",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "snipped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "rockmelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "prosciutto",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Top the blinis with creme fraiche, a fold of smoked salmon and chives.",
+     "min": 15
+    },
+    {
+     "text": "Cut the rockmelon into neat wedges, remove the skin and wrap each with a thin slice of prosciutto.",
+     "min": 10
+    },
+    {
+     "text": "Lay both out on trays in rows.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cover model coconut prawns",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Crumb up to 2 hours ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns, peeled, tails on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns, leaving the tails on.",
+     "min": 10
+    },
+    {
+     "text": "Dip each in beaten egg, then press into the mixed coconut and panko.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 180C for 2 minutes until golden and crisp, in batches.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Island grilled fish",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Marinate up to 2 hours, grill fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "snapper fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "banana leaves, softened",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "black beans, drained",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the snapper with the lime juice, garlic, chilli and salt. Wrap each in a softened banana leaf.",
+     "min": 12
+    },
+    {
+     "text": "Grill for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Cook the rice in the coconut milk with a pinch of salt. Warm the black beans.",
+     "min": 18
+    },
+    {
+     "text": "Serve the fish in its leaf.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Crown of fire mango sorbet",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 250,
+   "make_ahead": "Make a day ahead, scrape and serve fresh",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool.",
+     "min": 10
+    },
+    {
+     "text": "Blend the mango flesh with the syrup and lime juice until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Freeze in a tray, scraping with a fork every hour for 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Scoop into glasses and top with passionfruit pulp.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Jungle escape cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "coconut water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill tall glasses with ice and a few mint leaves.",
+     "min": 5
+    },
+    {
+     "text": "Pour in equal parts coconut water and pineapple juice, squeeze in a lime wedge and stir well.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

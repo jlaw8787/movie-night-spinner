@@ -1,0 +1,400 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Alva's fish shop bites",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "smoked trout",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "rye crispbreads",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "pickled onions, sliced",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Flake the trout into the cream cheese with chopped dill and lemon juice.",
+     "min": 4
+    },
+    {
+     "text": "Spread on the crispbreads.",
+     "min": 5
+    },
+    {
+     "text": "Top with slices of pickled onion.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Feuding family meatballs",
+   "course": "s",
+   "prep_min": 32,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork and beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the breadcrumbs in milk.",
+     "min": 5
+    },
+    {
+     "text": "Mix the mince with the soaked crumbs, egg, onion, allspice and salt.",
+     "min": 8
+    },
+    {
+     "text": "Roll into 24 small balls.",
+     "min": 7
+    },
+    {
+     "text": "Brown in butter.",
+     "min": 10
+    },
+    {
+     "text": "Serve on toothpicks with cranberry sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Klaus's juniper beef stew with mash",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 200,
+   "make_ahead": "Stew better the next day",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "juniper berries, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "blackcurrant jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches.",
+     "min": 15
+    },
+    {
+     "text": "Slice the onions and chop the carrots, then cook with the beef.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the flour, juniper, thyme, jam and stock.",
+     "min": 3
+    },
+    {
+     "text": "Cover and simmer until the beef falls apart.",
+     "min": 180
+    },
+    {
+     "text": "Boil the potatoes and mash with butter and milk.",
+     "min": 20
+    },
+    {
+     "text": "Serve the stew over the mash.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Letter gingerbread envelopes",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 26,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop red food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, brown sugar and golden syrup.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the flour, ginger and cinnamon.",
+     "min": 5
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Roll and cut into envelopes.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 10
+    },
+    {
+     "text": "Pipe with white icing and add a red seal.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Márgu's warm lingonberry cordial",
+   "course": "d",
+   "prep_min": 24,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 days chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen lingonberries or cranberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water, for serving cold",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the berries with sugar, cinnamon and half the water.",
+     "min": 10
+    },
+    {
+     "text": "Mash well and strain through a sieve, pressing on the fruit.",
+     "min": 4
+    },
+    {
+     "text": "Add the remaining water and orange juice.",
+     "min": 3
+    },
+    {
+     "text": "To serve warm, heat gently and pour into mugs with an orange slice.",
+     "min": 5
+    },
+    {
+     "text": "To serve cold, pour over ice and top with soda water.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

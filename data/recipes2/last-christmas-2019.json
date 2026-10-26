@@ -1,0 +1,432 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Covent Garden cevapi rolls with ajvar",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar ajvar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the minces with the garlic, paprika, bicarb and salt and knead briefly.",
+     "min": 5
+    },
+    {
+     "text": "Roll into short fingers and chill.",
+     "min": 30
+    },
+    {
+     "text": "Grill over high heat, turning, until charred.",
+     "min": 8
+    },
+    {
+     "text": "Split and toast the rolls and spread with ajvar.",
+     "min": 3
+    },
+    {
+     "text": "Add cevapi to each and top with sour cream, onion and parsley.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Santa's shop mince pies with orange cream",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar fruit mince (400g)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brandy",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut rounds from two pastry sheets and press into a greased patty pan tin.",
+     "min": 8
+    },
+    {
+     "text": "Fill each with fruit mince. Cut stars from the third sheet and lay on top.",
+     "min": 10
+    },
+    {
+     "text": "Brush with egg and bake at 190C until golden.",
+     "min": 18
+    },
+    {
+     "text": "Whip the cream with some of the icing sugar, the orange zest and brandy.",
+     "min": 5
+    },
+    {
+     "text": "Dust the warm pies with icing sugar and serve with the orange cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Petra's stuffed capsicums with yoghurt",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves (2 for the filling, 1 for the yoghurt)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large red capsicums",
+     "aisle": "Produce"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf crusty bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the onion and two of the garlic cloves, add the mince and brown.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the rice, both paprikas, salt and a little water and cook briefly.",
+     "min": 5
+    },
+    {
+     "text": "Cut the tops off the capsicums, remove the seeds and fill.",
+     "min": 8
+    },
+    {
+     "text": "Stand in a dish, pour around the passata mixed with water and bake covered at 180C.",
+     "min": 50
+    },
+    {
+     "text": "Mix the yoghurt with the remaining crushed garlic. Serve with crusty bread.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Year-round Christmas shop gingerbread",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 50,
+   "make_ahead": "Up to 5 days, keep in an airtight container",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter with the golden syrup and sugar. Mix in the flour, spices, orange zest and egg.",
+     "min": 8
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Roll out and cut stars and snowflakes.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 180C, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Mix the icing sugar with lemon juice and pipe on snowflake patterns.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Covent Garden mulled wine",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice (for anyone not drinking)",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the wine into a saucepan with the orange juice, sugar, half the spices and a sliced orange.",
+     "min": 3
+    },
+    {
+     "text": "Warm gently, keeping it under a simmer.",
+     "min": 15
+    },
+    {
+     "text": "Ladle into heatproof glasses with an orange wheel.",
+     "min": 2
+    },
+    {
+     "text": "For anyone not drinking, warm the apple juice with the remaining spices.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,366 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Gingerbread squares",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 65,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and line a 20cm square tin. Melt the butter with the brown sugar and golden syrup.",
+     "min": 5
+    },
+    {
+     "text": "Stir into the flour, bicarb, ginger and cinnamon with the egg and milk. Pour into the tin.",
+     "min": 8
+    },
+    {
+     "text": "Bake until firm.",
+     "min": 35
+    },
+    {
+     "text": "Cool in the tin.",
+     "min": 30
+    },
+    {
+     "text": "Mix the icing sugar with the lemon juice, glaze the top and cut into squares.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Wollman Rink roasted chestnuts",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chestnuts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score a cross through the shell of each chestnut.",
+     "min": 10
+    },
+    {
+     "text": "Soak in water and drain.",
+     "min": 20
+    },
+    {
+     "text": "Roast on a tray at 220C until the shells curl back.",
+     "min": 20
+    },
+    {
+     "text": "Wrap in a clean towel to steam.",
+     "min": 5
+    },
+    {
+     "text": "Peel while still warm, sprinkle with salt and serve.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Manhattan bistro steak",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 42,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks (about 200g each)",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thin frites, rinse and dry thoroughly.",
+     "min": 15
+    },
+    {
+     "text": "Fry in 140C oil until cooked but pale, drain and cool.",
+     "min": 5
+    },
+    {
+     "text": "While the frites cool, season the steaks.",
+     "min": 15
+    },
+    {
+     "text": "Fry the frites again at 185C until crisp. Season with salt.",
+     "min": 3
+    },
+    {
+     "text": "Sear the steaks in a heavy hot pan with oil on both sides.",
+     "min": 6
+    },
+    {
+     "text": "Lower the heat, add the butter and thyme and baste briefly, then rest the steaks.",
+     "min": 9
+    },
+    {
+     "text": "Add the peppercorns to the pan, then the brandy, carefully and away from the flame, and simmer briefly.",
+     "min": 1
+    },
+    {
+     "text": "Add the stock and reduce, then stir in the cream and simmer. Serve with the steaks and frites.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Frozen hot chocolate",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "ice (about 3 cups)",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "dark chocolate, shaved",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Gently melt the chocolate with the cocoa, sugar and part of the milk, stirring until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Blend with the rest of the milk and the ice until slushy.",
+     "min": 3
+    },
+    {
+     "text": "Divide into small glasses, spoon over softly whipped cream and finish with shaved chocolate.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Mulled cranberry punch",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the juice with one sliced orange, the cinnamon and cloves over low heat without boiling.",
+     "min": 15
+    },
+    {
+     "text": "Strain into mugs and float a fresh orange slice on top of each.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

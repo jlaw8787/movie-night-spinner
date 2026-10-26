@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Garlic serum bread",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 52,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "head garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the whole garlic head at 200C until soft.",
+     "min": 40
+    },
+    {
+     "text": "Squeeze the garlic into the butter with parsley and parmesan.",
+     "min": 5
+    },
+    {
+     "text": "Split the baguette, spread thickly and bake at 200C until crisp.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Blood rave beetroot dip",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "beetroot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wrap the beetroot in foil, roast at 200C and peel.",
+     "min": 60
+    },
+    {
+     "text": "Blitz with yoghurt, garlic, lemon juice and cumin until deep red and smooth.",
+     "min": 5
+    },
+    {
+     "text": "Cut the pita into wedges and bake crisp.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Garlic-heavy steak",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rib eye steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "head garlic, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter for mash",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches broccolini",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast garlic cloves for the mash while the oven is on.",
+     "min": 5
+    },
+    {
+     "text": "Boil the potatoes and mash with butter and roasted garlic.",
+     "min": 30
+    },
+    {
+     "text": "Sear the steaks in a hot pan, then add butter and crushed garlic and baste for two minutes.",
+     "min": 10
+    },
+    {
+     "text": "Rest the steaks and steam the broccolini.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Blood orange tart",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 90,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "blood oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blind bake a pastry case.",
+     "min": 25
+    },
+    {
+     "text": "Whisk the blood orange juice, sugar, eggs, cornflour and butter over heat until thick and pour into the case.",
+     "min": 15
+    },
+    {
+     "text": "Chill to set.",
+     "min": 60
+    },
+    {
+     "text": "Simmer blood orange slices in a sugar syrup and arrange on top.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Blood rave pomegranate sangria",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 120,
+   "make_ahead": "Up to 1 day, add ice at serving",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "pomegranate juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "blood oranges, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pomegranate, seeds only",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the wine, pomegranate juice, brandy, sugar and cinnamon in a big jug.",
+     "min": 10
+    },
+    {
+     "text": "Add the oranges and pomegranate seeds.",
+     "min": 0
+    },
+    {
+     "text": "Chill for at least two hours.",
+     "min": 120
+    },
+    {
+     "text": "Add plenty of ice and top with soda water just before serving.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

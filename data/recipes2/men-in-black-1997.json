@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Farmhouse cornbread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "butter, to grease the pan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put a 25cm cast-iron pan in the oven and heat to 210C.",
+     "min": 5
+    },
+    {
+     "text": "Mix the dry ingredients, then stir in the buttermilk, eggs and melted butter.",
+     "min": 5
+    },
+    {
+     "text": "Pour the batter into the hot greased pan and bake until golden.",
+     "min": 20
+    },
+    {
+     "text": "Beat the softened butter with the honey and serve with the cornbread cut in wedges.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Black bean dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins black beans, drained (400g each)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "chipotle in adobo",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the beans with the garlic, lime juice, cumin and chipotle until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into a bowl, top with crumbled feta and coriander and serve with corn chips.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Deli pastrami sandwiches",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "deli mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "sliced pastrami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the rye slices with mustard and fill four of them with pastrami and Swiss cheese. Close the sandwiches.",
+     "min": 8
+    },
+    {
+     "text": "Toast in a pan with the butter over medium heat until the cheese melts, turning once.",
+     "min": 6
+    },
+    {
+     "text": "Cut on the diagonal and serve with pickles.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Neuralyser cake pops",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 80,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "butter cake",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese icing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "lolly sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "silver lustre dust",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crumble the cake and mix with the icing until it holds together.",
+     "min": 10
+    },
+    {
+     "text": "Roll into balls, push in the sticks and chill.",
+     "min": 15
+    },
+    {
+     "text": "Leave to chill so the balls firm up.",
+     "min": 60
+    },
+    {
+     "text": "Melt the white chocolate, dip each ball and stand upright to set.",
+     "min": 15
+    },
+    {
+     "text": "Brush with silver lustre dust once set.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Edgar's sugar water lemonade slush",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cups ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemon wheels",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "mint sprigs",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool.",
+     "min": 12
+    },
+    {
+     "text": "Blend the syrup with the lemon juice, cold water and ice until slushy.",
+     "min": 4
+    },
+    {
+     "text": "Pour into glasses, add a lemon wheel and mint sprig, and serve with spoons and straws.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

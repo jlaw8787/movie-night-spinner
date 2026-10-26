@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Raptor egg devilled eggs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "snipped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "smoked paprika, to dust",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 10 minutes, cool and peel.",
+     "min": 12
+    },
+    {
+     "text": "Halve and mash the yolks with the mayonnaise, Dijon and chives until smooth.",
+     "min": 10
+    },
+    {
+     "text": "Pipe back into the whites and dust with paprika so they look speckled like eggs from a nest.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Isla Sorna tostones with garlic lime mojo",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the plantains and cut into thick pieces. Mix the garlic, lime juice, olive oil, coriander and a pinch of salt for the mojo.",
+     "min": 10
+    },
+    {
+     "text": "Fry the plantain at 160C for 4 minutes until soft but pale. Drain and smash each flat with a heavy glass.",
+     "min": 10
+    },
+    {
+     "text": "Fry again at 190C for 2 minutes until crisp and golden, then salt well.",
+     "min": 5
+    },
+    {
+     "text": "Serve hot with the mojo for dipping.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Costa Rican rice and beans",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Rice up to 1 day, fry eggs fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "black beans, with their liquid",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, diced, for the salsa",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion and capsicum in the oil.",
+     "min": 7
+    },
+    {
+     "text": "Add the rice, beans with their liquid and water. Simmer covered until the rice is tender, then stir through the coriander.",
+     "min": 20
+    },
+    {
+     "text": "Fry the eggs and mix the tomatoes with a little salt for a fresh salsa.",
+     "min": 8
+    },
+    {
+     "text": "Serve the rice topped with fried eggs and salsa.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Pteranodon nest pavlovas",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Up to 1 day, fill just before serving",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 170,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "blueberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to stiff peaks, then add the sugar a spoon at a time until glossy.",
+     "min": 15
+    },
+    {
+     "text": "Pipe into small nests and bake at 120C. Cool in the oven.",
+     "min": 75
+    },
+    {
+     "text": "Fill with whipped cream and passionfruit and add three blueberries to each like eggs.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Island rescue punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the pineapple and orange juice into a big jug. Scoop in the passionfruit pulp and stir well.",
+     "min": 6
+    },
+    {
+     "text": "Top with soda water and plenty of ice. Pour into glasses.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

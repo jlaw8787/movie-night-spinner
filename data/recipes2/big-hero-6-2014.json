@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Aunt Cass's hot wings",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "gochujang",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Warm the gochujang with the honey, garlic and soy until glossy.",
+     "min": 5
+    },
+    {
+     "text": "Toss the wings through and scatter with sesame seeds.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Baymax marshmallow bites",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the white chocolate.",
+     "min": 8
+    },
+    {
+     "text": "Dip each marshmallow until fully coated and set on baking paper.",
+     "min": 12
+    },
+    {
+     "text": "Melt a little dark chocolate and pipe two small dots joined by a line on each for the face.",
+     "min": 10
+    },
+    {
+     "text": "Leave to set.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "San Fransokyo ramen",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 135,
+   "make_ahead": "Pork can braise a day ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pork belly",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "portions ramen noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "white miso",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "hot chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "nori sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the pork in a pot with soy and water.",
+     "min": 5
+    },
+    {
+     "text": "Braise gently until tender, then slice.",
+     "min": 120
+    },
+    {
+     "text": "Soft-boil the eggs.",
+     "min": 6
+    },
+    {
+     "text": "Whisk the miso into the hot stock for the broth and cook the noodles.",
+     "min": 5
+    },
+    {
+     "text": "Build bowls with noodles, pork, halved eggs, nori and spring onion.",
+     "min": 14
+    }
+   ]
+  },
+  {
+   "n": "Café cream puffs",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "Puffs up to 1 day, fill just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water and butter to the boil, beat in the flour, then the eggs.",
+     "min": 15
+    },
+    {
+     "text": "Pipe small mounds on lined trays.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 200C until puffed and dry, then cool.",
+     "min": 25
+    },
+    {
+     "text": "Whip the cream, fold into the custard and fill each puff.",
+     "min": 20
+    },
+    {
+     "text": "Dust with icing sugar.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Honey Lemon's honey citron tea",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 1440,
+   "make_ahead": "Lemon honey keeps 2 weeks in the fridge",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "hot water or soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "A day ahead, slice the lemons very thinly, remove seeds and layer in a jar with honey and sugar.",
+     "min": 15
+    },
+    {
+     "text": "Leave at room temperature for 24 hours, shaking now and then, until syrupy.",
+     "min": 1440
+    },
+    {
+     "text": "Stir the lemon honey into a mug of hot water, or into a glass of ice topped with soda water for a cold version.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

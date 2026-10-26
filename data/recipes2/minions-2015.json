@@ -1,0 +1,336 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Minion banana fritters with honey",
+   "course": "s",
+   "prep_min": 14,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 170,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "roasted peanuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, cornflour, sugar, salt and soda water into a smooth batter.",
+     "min": 5
+    },
+    {
+     "text": "Cut the bananas into chunks and crush the peanuts.",
+     "min": 6
+    },
+    {
+     "text": "Heat the oil to 180C.",
+     "min": 8
+    },
+    {
+     "text": "Dip the banana in batter and fry in batches.",
+     "min": 10
+    },
+    {
+     "text": "Drain, drizzle with honey and scatter with peanuts.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Queen's crown cheese straws",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 12,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Brush the pastry with beaten egg.",
+     "min": 4
+    },
+    {
+     "text": "Cover with grated cheddar and parmesan.",
+     "min": 5
+    },
+    {
+     "text": "Cut into thin strips and twist each a few times.",
+     "min": 8
+    },
+    {
+     "text": "Bake on lined trays until golden.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Queen's coronation chicken",
+   "course": "m",
+   "prep_min": 12,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "sultanas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "cooked rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the chicken, then cool and shred.",
+     "min": 3
+    },
+    {
+     "text": "Poach.",
+     "min": 15
+    },
+    {
+     "text": "Cool.",
+     "min": 20
+    },
+    {
+     "text": "Mix the mayonnaise, yoghurt, curry powder, jam and sultanas and fold through the chicken.",
+     "min": 6
+    },
+    {
+     "text": "Serve with rice and salad leaves.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Minion hot fudge banana split",
+   "course": "w",
+   "prep_min": 12,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the chocolate. Heat the cream and pour over the chocolate, stirring into a hot fudge.",
+     "min": 3
+    },
+    {
+     "text": "Heat.",
+     "min": 3
+    },
+    {
+     "text": "Whip the remaining cream. Split the bananas lengthways into long dishes.",
+     "min": 5
+    },
+    {
+     "text": "Add three scoops of ice cream to each, pour over the fudge and top with cream and a cherry.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Bob's banana caramel thickshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 5,
+     "u": "tbsp",
+     "item": "salted caramel sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can whipped cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the bananas, ice cream, milk and some of the caramel until thick and smooth.",
+     "min": 4
+    },
+    {
+     "text": "Drizzle caramel inside four tall glasses and pour in the shake.",
+     "min": 3
+    },
+    {
+     "text": "Top with whipped cream, a banana slice and a final drizzle of caramel.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

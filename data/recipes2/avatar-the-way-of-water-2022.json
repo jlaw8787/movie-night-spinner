@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Reef village garlic prawns",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak 8 skewers. Crush the garlic, chop the chilli, zest a lime and cut the rest into wedges. Melt the butter.",
+     "min": 10
+    },
+    {
+     "text": "Toss the prawns with garlic, chilli, zest and butter and thread onto skewers.",
+     "min": 8
+    },
+    {
+     "text": "Grill a couple of minutes a side until charred.",
+     "min": 5
+    },
+    {
+     "text": "Serve with lime wedges and spoon over any butter left in the pan.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tulkun tropical fruit",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 24,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "papaya",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the coconut in a dry pan.",
+     "min": 4
+    },
+    {
+     "text": "Cut the mangoes, pineapple and papaya into wedges and halve the passionfruit.",
+     "min": 15
+    },
+    {
+     "text": "Pile onto a platter, squeeze over lime juice and scatter with coconut.",
+     "min": 3
+    },
+    {
+     "text": "Chill until serving.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Metkayina coconut fish",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "stalks lemongrass",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "snapper fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mixed fresh herbs",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bruise the lemongrass and slice the chilli.",
+     "min": 12
+    },
+    {
+     "text": "Simmer the lemongrass and chilli in the coconut milk.",
+     "min": 10
+    },
+    {
+     "text": "Add the fish and poach gently.",
+     "min": 10
+    },
+    {
+     "text": "Steam the rice.",
+     "min": 15
+    },
+    {
+     "text": "Squeeze in lime juice and serve over the rice with fresh herbs.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Lagoon coconut pudding",
+   "course": "w",
+   "prep_min": 13,
+   "cook_min": 245,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "gelatine sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine sheets in cold water. Dice the mangoes.",
+     "min": 8
+    },
+    {
+     "text": "Warm the coconut milk with sugar until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Squeeze the gelatine and stir in.",
+     "min": 2
+    },
+    {
+     "text": "Pour into glasses and chill until set.",
+     "min": 240
+    },
+    {
+     "text": "Top with mango and passionfruit pulp.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Reef coconut pineapple crush",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen pineapple",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "coconut water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lime.",
+     "min": 2
+    },
+    {
+     "text": "Blend the pineapple, coconut water, coconut cream, lime juice, mint and ice until thick and slushy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into four tall glasses and finish with a pineapple wedge and mint sprig.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,666 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Village bagels and lox",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 3,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bagels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split and toast the bagels.",
+     "min": 3
+    },
+    {
+     "text": "Spread each half thickly with cream cheese, then top with smoked salmon, capers, onion and small sprigs of dill. Cut each half in two to share.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Deli pastrami on rye",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "sliced pastrami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "deli mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the pastrami in a covered colander over simmering water until hot and soft.",
+     "min": 8
+    },
+    {
+     "text": "Spread the rye with mustard, pile the pastrami high on half the slices and close. Cut in half and serve with a pickle each.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Deli hero, paid for",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Dressing and slaw up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "sliced pastrami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "dill pickle, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "coleslaw mix",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the pastrami until glossy.",
+     "min": 10
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce, horseradish and pickle for Russian dressing.",
+     "min": 5
+    },
+    {
+     "text": "Toss the coleslaw mix with half the dressing.",
+     "min": 5
+    },
+    {
+     "text": "Fill the rolls with pastrami, Swiss cheese, slaw and the rest of the dressing.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Black and white cookies",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 22,
+   "make_ahead": "Up to 2 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 115,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the egg, sour cream and vanilla, then mix in the flour and baking powder.",
+     "min": 10
+    },
+    {
+     "text": "Scoop 12 mounds onto lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C until set, then cool completely.",
+     "min": 12
+    },
+    {
+     "text": "Make a thick icing with the icing sugar and a little hot water. Ice half of each flat side, then stir the cocoa into the rest and ice the other half.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Village vanilla iced coffee, paid for",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 735,
+   "make_ahead": "Cold brew keeps 3 days in the fridge",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "coarse ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "water, for syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the coffee into the cold water the night before and refrigerate.",
+     "min": 5
+    },
+    {
+     "text": "Steep for 12 hours, then strain through a paper filter.",
+     "min": 720
+    },
+    {
+     "text": "Simmer the sugar with the syrup water and vanilla and cool.",
+     "min": 3
+    },
+    {
+     "text": "Fill 4 glasses with ice and add coffee, syrup and milk to each. Top with a small scoop of ice cream.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Potato knish",
+   "course": "s",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, reheat in the oven",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "brown mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and boil the potatoes until tender, then drain.",
+     "min": 20
+    },
+    {
+     "text": "Fry the onion in the butter until soft. Mash the potatoes with the onion, salt and pepper.",
+     "min": 8
+    },
+    {
+     "text": "Cut the pastry into 8 squares, put a mound of potato on each, fold up and pinch closed.",
+     "min": 10
+    },
+    {
+     "text": "Brush with beaten egg and bake at 200C until golden. Split and spread with brown mustard.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Cheesecake",
+   "course": "w",
+   "extra": true,
+   "prep_min": 30,
+   "cook_min": 480,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain sweet biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 750,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits and mix with the melted butter. Press into a lined 22cm springform tin.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese with the sugar, then beat in the eggs, sour cream, vanilla and lemon zest.",
+     "min": 10
+    },
+    {
+     "text": "Pour over the base and bake at 160C until just set with a slight wobble. Turn off the oven.",
+     "min": 60
+    },
+    {
+     "text": "Cool in the oven, then chill in the fridge until firm. Serve in thick slices.",
+     "min": 400
+    }
+   ]
+  },
+  {
+   "n": "Chocolate egg cream",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold seltzer",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour a little syrup and milk into each of 4 tall glasses, top with seltzer and stir hard until it foams.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coffee or tea",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 8,
+   "make_ahead": "Keep hot in a flask",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a pot of coffee and boil the kettle for the tea.",
+     "min": 8
+    },
+    {
+     "text": "Serve hot, with the tea in a glass.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Hot corned beef on rye",
+   "course": "m",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 190,
+   "make_ahead": "Corned beef can be cooked 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "corned silverside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the beef in a pot with the onion and bay leaves and cover with water.",
+     "min": 10
+    },
+    {
+     "text": "Simmer gently until very tender, then rest in the liquid.",
+     "min": 170
+    },
+    {
+     "text": "Carve the beef thick while still warm, pile onto mustard-spread rye and close.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Roast beef on a kaiser",
+   "course": "m",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 50,
+   "make_ahead": "Beef can be roasted a day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef top round",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "kaiser rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the beef with oil, salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 190C until rare, then rest.",
+     "min": 45
+    },
+    {
+     "text": "Slice the beef thin, split the rolls, spread with mustard and pile on the beef.",
+     "min": 10
+    }
+   ]
+  }
+ ]
+}

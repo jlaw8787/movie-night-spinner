@@ -1,0 +1,292 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Scrat's acorns",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 180,
+   "make_ahead": "Keeps 3 days chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "hazelnuts, toasted and chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "pretzel rods",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream and pour over the chocolate, then stir smooth.",
+     "min": 10
+    },
+    {
+     "text": "Chill for 3 hours.",
+     "min": 180
+    },
+    {
+     "text": "Roll into small ovals and coat the bottom half in hazelnuts.",
+     "min": 15
+    },
+    {
+     "text": "Push a short piece of pretzel rod in the top as the stalk.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dodos' last melon",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Chill the melon well",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "watermelon, cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint leaves, torn",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "flaky sea salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the watermelon into thick wedges and chill well.",
+     "min": 60
+    },
+    {
+     "text": "Crumble the feta over, scatter mint, squeeze over the lime and finish with flaky salt. Serve very cold.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mammoth slow-cooked beef ribs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 260,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef short ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the ribs with salt, pepper and smoked paprika and wrap in foil.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 150C for 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Unwrap, brush with barbecue sauce and glaze under a hot grill.",
+     "min": 10
+    },
+    {
+     "text": "Shred the cabbage with mayo for slaw.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ice age snowballs",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs and vanilla and fold in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Bake in a muffin tin at 180C for 18 minutes. Cool.",
+     "min": 18
+    },
+    {
+     "text": "Melt the marshmallows with the water.",
+     "min": 6
+    },
+    {
+     "text": "Spread over the tops and roll in coconut so they look like snowballs.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Scrat's nutty caramel milkshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caramel sauce, plus extra to drizzle",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "smooth peanut butter",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, ice cream, caramel and peanut butter until thick.",
+     "min": 5
+    },
+    {
+     "text": "Pour into glasses and drizzle a little extra caramel on top.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

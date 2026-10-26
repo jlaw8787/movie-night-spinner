@@ -1,0 +1,300 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Philly cheesesteak bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "rib eye steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "mini bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the steak for 30 minutes so it firms up, then shave as thin as you can.",
+     "min": 30
+    },
+    {
+     "text": "Sear the onion on a hot plate in oil until soft, then push aside and sear the beef quickly.",
+     "min": 8
+    },
+    {
+     "text": "Lay the provolone over the meat to melt.",
+     "min": 2
+    },
+    {
+     "text": "Split the rolls and pile the filling in.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Italian Market antipasto",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, cover and keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salami",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "prosciutto",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar artichoke hearts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar roasted capsicum",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Italian loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the artichokes, olives and capsicum.",
+     "min": 3
+    },
+    {
+     "text": "Arrange the meats and sliced provolone on a board with the jar items.",
+     "min": 10
+    },
+    {
+     "text": "Serve with the loaf torn into pieces.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Meat locker steak",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 735,
+   "make_ahead": "Salt the steaks the night before",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dry-brine the steaks with salt, uncovered in the fridge overnight.",
+     "min": 720
+    },
+    {
+     "text": "Cut the potatoes into chunks, toss in oil and roast at 220C until crisp.",
+     "min": 40
+    },
+    {
+     "text": "Season the steaks with cracked pepper. Sear in a smoking cast iron pan, flipping every minute.",
+     "min": 8
+    },
+    {
+     "text": "Add the butter, garlic and thyme and baste until the steaks reach 54C inside.",
+     "min": 3
+    },
+    {
+     "text": "Rest the steaks before serving with the potatoes.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Adrian's pet shop turtles",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Keeps 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caramels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the pecans in a dry pan and arrange in clusters of four on baking paper.",
+     "min": 10
+    },
+    {
+     "text": "Melt the caramels with the cream and spoon over each cluster.",
+     "min": 8
+    },
+    {
+     "text": "Melt the chocolate and spoon over the top.",
+     "min": 5
+    },
+    {
+     "text": "Set in the fridge until firm.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Training shake",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend everything until thick and smooth.",
+     "min": 5
+    },
+    {
+     "text": "Pour into four glasses. Skip the raw eggs, Rocky.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,282 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Gold coin crackers",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chopped thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "fig jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the parmesan with the thyme. Spoon small rounds onto a lined tray and flatten into coins.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 190C until golden and lacy, then cool on the tray.",
+     "min": 10
+    },
+    {
+     "text": "Serve stacked like coins with fig jam and a wedge of brie.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mansion caviar blinis",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "blinis",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "salmon roe",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "snipped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the blinis in a low oven for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Top each with a small spoon of creme fraiche, a little salmon roe and a few chives.",
+     "min": 10
+    },
+    {
+     "text": "Add a tiny squeeze of lemon and lay them out in neat rows.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Richie's home burger bar",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 40,
+   "make_ahead": "Sauce up to 2 days, cook fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "chopped pickles, for the sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into fries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the fries in oil and bake at 220C, turning once, until golden.",
+     "min": 35
+    },
+    {
+     "text": "Mix the mayonnaise with the chopped pickles for the special sauce. Roll the mince into 4 balls.",
+     "min": 8
+    },
+    {
+     "text": "Smash the balls flat on a very hot pan. Season, flip after 2 minutes and add the cheese.",
+     "min": 6
+    },
+    {
+     "text": "Build on toasted buns with onion, pickles and sauce. Serve with the fries.",
+     "min": 16
+    }
+   ]
+  },
+  {
+   "n": "Gold vault sundae",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Caramel up to 3 days chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "salt, a small pinch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honeycomb, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "gold chocolate coins",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the sugar in a dry pan to amber, then whisk in the cream and salt. Cool slightly.",
+     "min": 10
+    },
+    {
+     "text": "Scoop the ice cream into tall glasses and pour over the caramel.",
+     "min": 5
+    },
+    {
+     "text": "Scatter with crushed honeycomb and top each sundae with a gold chocolate coin.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Backyard baseball milkshake",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "big scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the ice cream, milk and malt powder until thick and smooth.",
+     "min": 3
+    },
+    {
+     "text": "Pour into tall chilled glasses, add a straw to each and serve straight away.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

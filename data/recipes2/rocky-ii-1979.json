@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pork roll sandwiches",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 2,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork roll or thick ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft rolls",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pork roll into 8 slices and nick the edges.",
+     "min": 4
+    },
+    {
+     "text": "Fry until they curl and brown.",
+     "min": 8
+    },
+    {
+     "text": "Fry the eggs.",
+     "min": 4
+    },
+    {
+     "text": "Stack the pork, eggs and cheese into the rolls.",
+     "min": 4
+    },
+    {
+     "text": "Wrap in foil to melt the cheese.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Italian market bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "prosciutto",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red capsicums, roasted",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf Italian bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil, for dipping",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the provolone into cubes.",
+     "min": 4
+    },
+    {
+     "text": "Thread onto toothpicks with folded prosciutto, an olive and a strip of roasted capsicum.",
+     "min": 8
+    },
+    {
+     "text": "Pile onto a board with sliced Italian bread and a small bowl of olive oil for dipping.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Adrian's spaghetti and meatballs",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated, plus extra to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "cans crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with breadcrumbs, parmesan, parsley and egg.",
+     "min": 10
+    },
+    {
+     "text": "Roll into balls and brown.",
+     "min": 8
+    },
+    {
+     "text": "Add the tomatoes and simmer.",
+     "min": 40
+    },
+    {
+     "text": "Cook the spaghetti.",
+     "min": 10
+    },
+    {
+     "text": "Serve the meatballs over the spaghetti with extra parmesan.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Cannoli",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 715,
+   "make_ahead": "Drain the ricotta the day before, fill just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate, finely chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "cannoli shells",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pistachios, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the ricotta overnight.",
+     "min": 720
+    },
+    {
+     "text": "Beat with the icing sugar, orange zest and chocolate.",
+     "min": 8
+    },
+    {
+     "text": "Spoon into a piping bag.",
+     "min": 5
+    },
+    {
+     "text": "Fill the shells just before serving and dip each end in pistachios.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Training shake",
+   "course": "d",
+   "prep_min": 4,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the bananas, milk, oats, peanut butter and honey until thick and smooth.",
+     "min": 3
+    },
+    {
+     "text": "Pour into tall glasses.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

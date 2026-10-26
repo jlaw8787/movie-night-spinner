@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bank heist gold coins",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 6,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar fig jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C. Mix the grated parmesan with chopped thyme.",
+     "min": 4
+    },
+    {
+     "text": "Spoon small rounds onto a lined tray and flatten into coins.",
+     "min": 6
+    },
+    {
+     "text": "Bake until golden.",
+     "min": 6
+    },
+    {
+     "text": "Cool and pile them high with fig jam.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Ghost shark tempura prawns",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "soda water, ice-cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns. Whisk the flour, cornflour and soda water to a thin, lumpy batter.",
+     "min": 15
+    },
+    {
+     "text": "Heat the oil to 180C.",
+     "min": 8
+    },
+    {
+     "text": "Dip the prawns in the batter and fry until puffed and crisp.",
+     "min": 10
+    },
+    {
+     "text": "Stir lime juice into the sweet chilli sauce for dipping.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Caribbean coconut fish",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "snapper fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the garlic, chop the chilli and dice the tomatoes.",
+     "min": 8
+    },
+    {
+     "text": "Soften the garlic and chilli in oil, add the tomatoes and coconut milk and simmer.",
+     "min": 5
+    },
+    {
+     "text": "Add the fish and simmer gently.",
+     "min": 10
+    },
+    {
+     "text": "Cook the jasmine rice.",
+     "min": 15
+    },
+    {
+     "text": "Squeeze in lime and serve over the rice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Saint Martin guava duff",
+   "course": "w",
+   "prep_min": 24,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "guava paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened, for the sauce",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, add the sugar and milk to make a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Roll out, spread with guava paste and roll up.",
+     "min": 8
+    },
+    {
+     "text": "Wrap in buttered foil and steam.",
+     "min": 60
+    },
+    {
+     "text": "Beat the softened butter, icing sugar and rum together for the sauce.",
+     "min": 4
+    },
+    {
+     "text": "Slice and serve with the sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Jack's rum, ginger and lime highball",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "spicy ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices fresh ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tall glasses with ice.",
+     "min": 2
+    },
+    {
+     "text": "Squeeze a quarter of a lime into each and drop in the wedge.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the ginger beer, then float rum over the top.",
+     "min": 2
+    },
+    {
+     "text": "Add a slice of ginger and a stirrer.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

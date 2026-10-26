@@ -1,0 +1,354 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Car wash corner store wings",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "ranch dressing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the chicken wings tossed with the baking powder and salt at 220C for 45 minutes.",
+     "min": 47
+    },
+    {
+     "text": "Toss in the hot sauce melted with the butter and serve with the ranch.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Bel Air salmon roe blinis",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "small blinis",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "crème fraîche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "salmon roe",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the small blinis at 180C for 4 minutes.",
+     "min": 6
+    },
+    {
+     "text": "Mix the crème fraîche with the chopped chives and lemon zest.",
+     "min": 4
+    },
+    {
+     "text": "Top each blini with a spoon of the cream, a ribbon of smoked salmon and half a teaspoon of salmon roe.",
+     "min": 4
+    },
+    {
+     "text": "Finish with a tiny dill sprig and a squeeze of lemon and arrange on a platter.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Darnell's family barbecue chicken",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch silverbeet",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the chicken thighs at 200C for 25 minutes, brush with the barbecue sauce and bake some more.",
+     "min": 32
+    },
+    {
+     "text": "Make mac and cheese from the macaroni, the butter, the flour, the milk and the cheddar.",
+     "min": 4
+    },
+    {
+     "text": "Serve with the sautéed silverbeet.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "San Quentin chocolate pudding cups",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 130,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "vanilla extract, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "chocolate biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "sea salt flakes, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the milk, the caster sugar, the cocoa, the cornflour and a pinch of salt in a saucepan over medium heat until it thickens, about 6 minutes.",
+     "min": 9
+    },
+    {
+     "text": "Off the heat, stir in the chopped dark chocolate and the vanilla until smooth.",
+     "min": 2
+    },
+    {
+     "text": "Pour into the serving dishes, cover the surface and chill 2 hours.",
+     "min": 126
+    },
+    {
+     "text": "Top with whipped cream, crushed chocolate biscuits with a pinch of flaky salt and chocolate curls.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "King's cucumber jalapeño margarita",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "continental cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jalapeño",
+     "aisle": "Produce"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "tequila",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "agave syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt flakes, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, as needed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the continental cucumber with the water and strain.",
+     "min": 2
+    },
+    {
+     "text": "Rim the glasses with lime and salt.",
+     "min": 2
+    },
+    {
+     "text": "For each drink, muddle the slices of jalapeño in a shaker, add the tequila, the cucumber juice, the lime juice and the agave, shake with ice and strain over fresh ice.",
+     "min": 2
+    },
+    {
+     "text": "Garnish with a cucumber ribbon.",
+     "min": 2
+    },
+    {
+     "text": "For non-drinkers, top the cucumber, lime and agave with soda instead.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

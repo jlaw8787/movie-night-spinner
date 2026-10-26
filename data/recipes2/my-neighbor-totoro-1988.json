@@ -1,0 +1,286 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Granny's stream-cooled cucumbers",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "small cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "white miso",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the small cucumbers in a bowl of iced water for 30 minutes, the way Granny cools them in the stream.",
+     "min": 30
+    },
+    {
+     "text": "Cut into spears.",
+     "min": 4
+    },
+    {
+     "text": "Mix the white miso with the honey and the water and serve in a little dish for dipping.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Grilled corn with soy butter",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the corn cobs over high heat for 10 minutes, turning, until charred in spots.",
+     "min": 12
+    },
+    {
+     "text": "Melt the butter with the soy sauce and the sugar and brush all over the corn while it's hot.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Satsuki's bento boxes",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sushi rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled ginger",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the sushi rice.",
+     "min": 21
+    },
+    {
+     "text": "Fry the chicken thighs, then glaze with the soy and the sugar until sticky.",
+     "min": 16
+    },
+    {
+     "text": "Whisk the eggs with a pinch of sugar and roll into a thin omelette in a pan.",
+     "min": 9
+    },
+    {
+     "text": "Pack each box with rice topped with peas, sliced chicken, omelette and pickled ginger.",
+     "min": 9
+    }
+   ]
+  },
+  {
+   "n": "Bus stop umbrella dorayaki",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "red bean paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the sugar and the honey, then the flour, the baking powder and the water.",
+     "min": 6
+    },
+    {
+     "text": "Cook the small pancakes in a lightly oiled pan for 1 minute a side.",
+     "min": 18
+    },
+    {
+     "text": "Sandwich in pairs with the red bean paste.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Catbus iced barley tea with honey",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 135,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "roasted barley tea",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, as needed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water to the boil, add the roasted barley tea (or the tea bags) and simmer 5 minutes.",
+     "min": 6
+    },
+    {
+     "text": "Turn off the heat, stir in the honey and steep 10 minutes more.",
+     "min": 11
+    },
+    {
+     "text": "Strain and chill for at least 2 hours.",
+     "min": 121
+    },
+    {
+     "text": "Fill the tall glasses with ice, add the thin lemon slices to each and pour in the tea.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

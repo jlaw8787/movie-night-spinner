@@ -1,0 +1,340 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "MFP roadhouse chips",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chicken salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "gravy powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thick chips and dry",
+     "min": 10
+    },
+    {
+     "text": "Fry at 140C until cooked through",
+     "min": 12
+    },
+    {
+     "text": "Fry again at 190C until golden",
+     "min": 8
+    },
+    {
+     "text": "Toss in chicken salt",
+     "min": 2
+    },
+    {
+     "text": "Whisk the gravy powder into the boiling water",
+     "min": 3
+    },
+    {
+     "text": "Serve in butcher's paper with gravy for dipping",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Goose's pickled onions",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10080,
+   "make_ahead": "Pickle for a week before eating",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pickling onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "salt, for soaking",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "malt vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tasty cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the onions and soak in salted water overnight",
+     "min": 720
+    },
+    {
+     "text": "Pack into a jar",
+     "min": 8
+    },
+    {
+     "text": "Boil the vinegar with the sugar, chilli and peppercorns",
+     "min": 8
+    },
+    {
+     "text": "Pour over, seal and leave a week",
+     "min": 9360
+    },
+    {
+     "text": "Serve with sliced cheese and crackers",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Last of the V8s highway meat pie",
+   "course": "m",
+   "prep_min": 45,
+   "cook_min": 215,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches",
+     "min": 15
+    },
+    {
+     "text": "Add the stock and Worcestershire and braise",
+     "min": 150
+    },
+    {
+     "text": "Thicken with flour and cool",
+     "min": 30
+    },
+    {
+     "text": "Line four pie tins with shortcrust and fill",
+     "min": 12
+    },
+    {
+     "text": "Top with puff and bake at 200C",
+     "min": 30
+    },
+    {
+     "text": "Add sauce on top",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Jessie's ice cream",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "waffle cones",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the coconut oil and cool slightly",
+     "min": 8
+    },
+    {
+     "text": "Scoop the ice cream into the waffle cones",
+     "min": 3
+    },
+    {
+     "text": "Drizzle over the chocolate so it sets hard in seconds. Eat it before it drips",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Iced coffee",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 120,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee with the water",
+     "min": 5
+    },
+    {
+     "text": "Chill the coffee",
+     "min": 120
+    },
+    {
+     "text": "Pour over ice in tall glasses with the cold milk",
+     "min": 3
+    },
+    {
+     "text": "Add a scoop of ice cream to each",
+     "min": 2
+    },
+    {
+     "text": "Whip the cream and add a swirl to each",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

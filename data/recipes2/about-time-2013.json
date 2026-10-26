@@ -1,0 +1,432 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cornish beach crab and cress sandwiches",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, keep covered and chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet of cress",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab with mayonnaise, lemon zest and juice, cayenne and salt.",
+     "min": 8
+    },
+    {
+     "text": "Butter the bread slices.",
+     "min": 5
+    },
+    {
+     "text": "Spread the crab over half the slices, add thin cucumber slices and cress, then close.",
+     "min": 6
+    },
+    {
+     "text": "Press gently, trim the crusts and cut each sandwich into fingers.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Cornish beef and swede pasties",
+   "course": "s",
+   "prep_min": 45,
+   "cook_min": 35,
+   "make_ahead": "Assemble a day ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "rump steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "potato",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "swede",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle of brown sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Finely dice the rump, potato, swede and onion and mix with salt and pepper.",
+     "min": 20
+    },
+    {
+     "text": "Cut rounds from the pastry sheets.",
+     "min": 10
+    },
+    {
+     "text": "Spoon filling onto one half of each, add a small knob of butter, fold over and crimp the edge.",
+     "min": 10
+    },
+    {
+     "text": "Brush with beaten egg and cut a small slit.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 35
+    },
+    {
+     "text": "Serve with brown sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Dinner-in-the-dark lamb shanks with mash",
+   "course": "m",
+   "prep_min": 28,
+   "cook_min": 200,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lamb shanks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes (tin)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onion, carrots and celery.",
+     "min": 15
+    },
+    {
+     "text": "Brown the lamb shanks in oil.",
+     "min": 15
+    },
+    {
+     "text": "Add the onion, carrots, celery and garlic and cook.",
+     "min": 5
+    },
+    {
+     "text": "Add wine, crushed tomatoes, stock, rosemary and bay leaves.",
+     "min": 3
+    },
+    {
+     "text": "Cover and braise at 160C until the meat falls from the bone.",
+     "min": 150
+    },
+    {
+     "text": "Peel and chop the potatoes.",
+     "min": 10
+    },
+    {
+     "text": "Boil the potatoes until tender, then mash with butter and milk.",
+     "min": 20
+    },
+    {
+     "text": "Reduce the sauce on the stove and spoon over the shanks.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Rained-out wedding Eton mess",
+   "course": "w",
+   "prep_min": 23,
+   "cook_min": 15,
+   "make_ahead": "Fruit up to 2 hours ahead, assemble just before serving",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "meringue nests",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the strawberries and toss with sugar and passionfruit pulp.",
+     "min": 8
+    },
+    {
+     "text": "Leave to macerate for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Whip the cream with vanilla to soft peaks.",
+     "min": 5
+    },
+    {
+     "text": "Roughly break the meringue nests.",
+     "min": 3
+    },
+    {
+     "text": "Gently fold the meringue, most of the strawberries and their juices through the cream so it streaks.",
+     "min": 4
+    },
+    {
+     "text": "Spoon into glasses and top with the rest of the berries.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Dad's ping pong Earl Grey iced tea",
+   "course": "d",
+   "prep_min": 12,
+   "cook_min": 65,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "Earl Grey tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in boiling water with honey.",
+     "min": 3
+    },
+    {
+     "text": "Leave to steep for 5 minutes, then remove the bags.",
+     "min": 5
+    },
+    {
+     "text": "Cool, then chill for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Fill tall glasses with ice and lemon slices.",
+     "min": 5
+    },
+    {
+     "text": "Pour in the tea to three-quarters full and top with a splash of soda water.",
+     "min": 3
+    },
+    {
+     "text": "Garnish with a lemon wheel.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

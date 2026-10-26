@@ -1,0 +1,298 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Susan Johnson engagement canapés",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cracked black pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the rye slices and cut each into small squares.",
+     "min": 8
+    },
+    {
+     "text": "Whip the creme fraiche with the lemon zest until it holds a soft peak.",
+     "min": 4
+    },
+    {
+     "text": "Top each square with smoked salmon, a small dot of creme fraiche, a dill sprig and cracked pepper.",
+     "min": 13
+    }
+   ]
+  },
+  {
+   "n": "Caviar blini",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "buckwheat blini",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small jar salmon roe",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the blini on a tray in a 180C oven.",
+     "min": 5
+    },
+    {
+     "text": "Top each with a teaspoon of creme fraiche, a little roe and snipped chives.",
+     "min": 8
+    },
+    {
+     "text": "Serve straight away on a silver tray if you have one.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Hobson's alert-the-media roast beef",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 85,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef topside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil, for the tins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Rub the beef with oil, salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the eggs, flour and milk into a smooth batter and leave to rest.",
+     "min": 10
+    },
+    {
+     "text": "Roast the beef until the centre reads 52C on a probe.",
+     "min": 60
+    },
+    {
+     "text": "Rest the beef under foil. Raise the oven to 220C, heat the oiled tins until smoking, pour in the batter and bake the puddings until risen and golden.",
+     "min": 20
+    },
+    {
+     "text": "Make gravy by simmering the stock with the pan juices until slightly thickened. Carve and serve.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Crème brûlée",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 400,
+   "make_ahead": "Up to 2 days, keep chilled before torching",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caster sugar, for the top",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 150C. Warm the cream with the split vanilla bean until steaming.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the yolks and sugar, then pour the cream over, whisking gently. Strain into ramekins.",
+     "min": 10
+    },
+    {
+     "text": "Stand the ramekins in a tray of hot water and bake until just set with a wobble.",
+     "min": 35
+    },
+    {
+     "text": "Cool, then chill overnight. Chilling counts toward the cooking time.",
+     "min": 360
+    },
+    {
+     "text": "Sprinkle with sugar and torch to amber.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Arthur's Kir royale",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "creme de cassis",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 480,
+     "u": "ml",
+     "item": "brut champagne, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "raspberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the flutes in the freezer.",
+     "min": 10
+    },
+    {
+     "text": "Pour the cassis into each glass, tilt and top slowly with champagne so it does not foam over.",
+     "min": 3
+    },
+    {
+     "text": "Drop a raspberry into each glass and serve straight away.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

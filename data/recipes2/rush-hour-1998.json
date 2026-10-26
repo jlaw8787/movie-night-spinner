@@ -1,0 +1,408 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Consulate spring rolls",
+   "course": "s",
+   "prep_min": 27,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "glass noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "shiitake mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "light soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "spring roll pastry sheets",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the glass noodles in hot water, drain and cut short.",
+     "min": 5
+    },
+    {
+     "text": "Shred the cabbage, grate the carrot and slice the shiitake.",
+     "min": 10
+    },
+    {
+     "text": "Stir-fry the vegetables in oil, add the noodles and soy and stir briefly. Cool completely.",
+     "min": 8
+    },
+    {
+     "text": "Divide among the pastry sheets, roll tightly and seal with a paste of flour and water.",
+     "min": 12
+    },
+    {
+     "text": "Fry in 180C oil until golden.",
+     "min": 8
+    },
+    {
+     "text": "Serve with sweet chilli sauce.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Carter's hot wings",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 25,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 35,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the wings dry and season with salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a rack at 220C, turning halfway, until crisp and at least 74C inside.",
+     "min": 45
+    },
+    {
+     "text": "Mix the sour cream, mayonnaise, chives, garlic powder and lemon juice for the ranch dip.",
+     "min": 5
+    },
+    {
+     "text": "Melt the butter with the hot sauce and toss through the wings.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Foo Chow noodles",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef rump",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "light soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "fresh wide rice noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bean sprouts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dark soy sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thinly slice the beef and marinate with the light soy, cornflour and sesame oil.",
+     "min": 25
+    },
+    {
+     "text": "Gently separate the noodles.",
+     "min": 5
+    },
+    {
+     "text": "Stir-fry the beef in two batches in a hot wok and set aside.",
+     "min": 5
+    },
+    {
+     "text": "Fry the noodles in more oil.",
+     "min": 2
+    },
+    {
+     "text": "Add the bean sprouts, sliced spring onions and soy sauces. Return the beef and toss over high heat until piping hot.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Fortune cookies",
+   "course": "w",
+   "prep_min": 13,
+   "cook_min": 46,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "paper fortunes (food-safe strips)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 25,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Write the fortunes on small clean paper strips.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the egg whites and sugar until foamy and stir in the butter, flour, vanilla and water.",
+     "min": 8
+    },
+    {
+     "text": "Spread two thin circles at a time on a lined tray and bake at 180C until the edges turn golden.",
+     "min": 9
+    },
+    {
+     "text": "Working quickly while hot, place a fortune in each, fold in half and bend over a mug rim. Cool in muffin-tin cups. Repeat for the rest.",
+     "min": 27
+    },
+    {
+     "text": "Remind everyone to remove the paper before eating.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Consulate lychee and jasmine martini",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "jasmine tea bag",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin lychees (565g)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "lychee syrup (from the tin)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea bag in the hot water and cool.",
+     "min": 18
+    },
+    {
+     "text": "Drain the lychees, keeping the syrup.",
+     "min": 2
+    },
+    {
+     "text": "Shake the vodka, tea, lychee syrup and lime juice with ice.",
+     "min": 2
+    },
+    {
+     "text": "Strain into chilled coupes and drop a lychee into each.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

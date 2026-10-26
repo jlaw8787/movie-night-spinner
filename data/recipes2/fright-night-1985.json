@@ -1,0 +1,280 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Charley's garlic bread",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the butter with the raw garlic, parsley and salt",
+     "min": 5
+    },
+    {
+     "text": "Split the baguette, spread thickly and wrap in foil",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C, opening the foil for the last 3 minutes to crisp",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Jerry's apples",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "red apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the apples and toss in lemon juice",
+     "min": 5
+    },
+    {
+     "text": "Whip the peanut butter with honey and salt until light",
+     "min": 3
+    },
+    {
+     "text": "Fan the apples around the dip. Do not invite anyone in without checking first",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Forty-clove garlic chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "",
+     "item": "garlic cloves, unpeeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Italian loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken skin side down in oil",
+     "min": 10
+    },
+    {
+     "text": "Add the garlic, thyme and wine",
+     "min": 5
+    },
+    {
+     "text": "Cover and bake at 180C",
+     "min": 60
+    },
+    {
+     "text": "Squeeze the soft garlic onto slices of crusty bread and eat with the chicken",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Blood orange posset",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 250,
+   "make_ahead": "Make a day ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "blood oranges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the cream and sugar to the boil and simmer",
+     "min": 8
+    },
+    {
+     "text": "Juice and zest the blood oranges",
+     "min": 5
+    },
+    {
+     "text": "Take off the heat and stir in the juice and zest",
+     "min": 2
+    },
+    {
+     "text": "Pour into glasses and chill until set",
+     "min": 240
+    },
+    {
+     "text": "Top with thin slices of blood orange to serve",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Holy water lemon, lime and bitters",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "lemonade, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the limes and lemon",
+     "min": 4
+    },
+    {
+     "text": "Fill glasses with crushed ice",
+     "min": 2
+    },
+    {
+     "text": "Add lime juice, lemon juice and bitters to each",
+     "min": 2
+    },
+    {
+     "text": "Top with cold lemonade, stir once and drop in a lime wedge. For the bottle look, mix it all in a jug and pour into small glass bottles before serving over ice",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

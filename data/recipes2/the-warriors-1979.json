@@ -1,0 +1,592 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Boardwalk pretzel bites",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 95,
+   "make_ahead": "Best eaten warm, same day",
+   "ingredients": [
+    {
+     "q": 265,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "g",
+     "item": "instant yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water, for boiling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 35,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "grated cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "coarse salt, to finish",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour (keeping a spoonful back for the cheese dip), yeast, sugar, salt and warm water, then knead until smooth.",
+     "min": 15
+    },
+    {
+     "text": "Cover and rise until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Roll into ropes and cut into 24 bites. Bring the boiling water and bicarb to a simmer.",
+     "min": 10
+    },
+    {
+     "text": "Boil the bites in batches for 20 seconds, then drain on baking paper.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until deep golden, then brush with melted butter and coarse salt.",
+     "min": 13
+    },
+    {
+     "text": "For the dip, melt butter, stir in the remaining flour, whisk in the milk and simmer. Off the heat, stir in the cheddar and serve with mustard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Street-cart corn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch smoked salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Quarter the cobs lengthways on a secure board with a sturdy sharp knife (use whole cobs if easier). Melt the butter with the chilli flakes and smoked salt.",
+     "min": 8
+    },
+    {
+     "text": "Brush the corn with the chilli butter.",
+     "min": 2
+    },
+    {
+     "text": "Roast at 220C, turning once, until tender and charred at the edges. Finish with lime juice.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Coney Island chilli dogs",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Chilli up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, minced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "beef franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "shoestring fries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onion and keep a quarter aside for topping. Mince the garlic.",
+     "min": 8
+    },
+    {
+     "text": "Fry the rest of the onion in the oil with the garlic, then add the mince and brown well.",
+     "min": 7
+    },
+    {
+     "text": "Stir in the tomato paste, spices, tomatoes and water and simmer. Season with salt.",
+     "min": 25
+    },
+    {
+     "text": "Bake the fries as directed on the packet.",
+     "min": 20
+    },
+    {
+     "text": "Griddle the franks until piping hot and warm the buns. Fill with franks and chilli and finish with onion and mustard.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Chocolate-dipped ice-cream sandwiches",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 75,
+   "make_ahead": "Make up to 3 days ahead, keep frozen",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "large chewy chocolate cookies",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the ice cream just enough to scoop and sandwich between the cookies to make 4 sandwiches.",
+     "min": 5
+    },
+    {
+     "text": "Freeze on a lined tray until firm.",
+     "min": 60
+    },
+    {
+     "text": "Melt the chocolate gently and cool until just warm. Dip half of each sandwich.",
+     "min": 5
+    },
+    {
+     "text": "Return to the freezer to set.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Cherry cola",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cola",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "cherry syrup",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill 4 glasses with ice, add cherry syrup to each, top with cola and squeeze in a lime wedge. Stir once and taste before adding more syrup.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sausage hero",
+   "course": "m",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "sweet Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green capsicums, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "seeded long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the capsicums and onions.",
+     "min": 8
+    },
+    {
+     "text": "Brown the sausages in a pan until cooked through.",
+     "min": 20
+    },
+    {
+     "text": "Fry the capsicum and onion in the oil until soft. Split the rolls, fill with sausages and peppers and onions.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Egg on a roll",
+   "course": "s",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "kaiser rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the rolls and toast lightly.",
+     "min": 2
+    },
+    {
+     "text": "Fry the eggs in the butter, then season and tuck two into each roll.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Lemon ice",
+   "course": "w",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 240,
+   "make_ahead": "Make up to 2 days ahead, keep frozen",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the water over low heat, then cool.",
+     "min": 5
+    },
+    {
+     "text": "Juice the lemons and stir into the syrup.",
+     "min": 5
+    },
+    {
+     "text": "Freeze in a shallow tray, scraping with a fork every hour, until a fine shaved ice forms.",
+     "min": 240
+    },
+    {
+     "text": "Scoop into paper cups to serve.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Chocolate egg cream",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold seltzer",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour a little syrup and milk into each of 4 tall glasses, top with seltzer and stir hard until it foams.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coffee, regular",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 8,
+   "make_ahead": "Keep hot in a flask",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a pot of coffee.",
+     "min": 8
+    },
+    {
+     "text": "Serve with milk and sugar.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

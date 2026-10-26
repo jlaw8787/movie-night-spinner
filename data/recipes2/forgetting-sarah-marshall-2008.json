@@ -1,0 +1,286 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Resort poke on rice crackers",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix up to 1 hour ahead, top the crackers just before serving",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sashimi tuna",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet rice crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the tuna into small cubes.",
+     "min": 5
+    },
+    {
+     "text": "Toss with soy sauce, sesame oil and sliced spring onion.",
+     "min": 3
+    },
+    {
+     "text": "Spoon onto rice crackers just before serving so they stay crisp.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Do less grilled pineapple",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Marinate up to 2 hours, grill fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pineapple into long spears.",
+     "min": 6
+    },
+    {
+     "text": "Brush with honey mixed with lime juice.",
+     "min": 4
+    },
+    {
+     "text": "Grill over high heat, turning, until caramelised and charred at the edges.",
+     "min": 10
+    },
+    {
+     "text": "Serve warm with extra lime.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Luau kalua pork",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 325,
+   "make_ahead": "Up to 2 days, shred and reheat covered",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "smoked salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "banana leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice, uncooked",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the pork with smoked salt.",
+     "min": 5
+    },
+    {
+     "text": "Wrap tightly in banana leaves, then foil.",
+     "min": 10
+    },
+    {
+     "text": "Cook at 150C until it falls apart.",
+     "min": 300
+    },
+    {
+     "text": "While the pork rests, cook the jasmine rice and shred the cabbage with lime juice and sesame oil.",
+     "min": 20
+    },
+    {
+     "text": "Shred the pork and serve over rice with the cabbage salad.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dracula puppet mango lime sorbet",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 245,
+   "make_ahead": "Up to 1 week, frozen",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool.",
+     "min": 10
+    },
+    {
+     "text": "Blend the mango flesh with the syrup and lime juice until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Freeze in a tray, scraping with a fork every hour.",
+     "min": 240
+    },
+    {
+     "text": "Scoop into glasses.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Infant Sorrow mai tai",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix per glass, rum-free version on request",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "lime juice (about 3 limes)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup (from caster sugar and water)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make the sugar syrup by dissolving equal parts caster sugar and hot water, then cool.",
+     "min": 4
+    },
+    {
+     "text": "Shake the rum, juices and syrup over ice, one drink at a time.",
+     "min": 4
+    },
+    {
+     "text": "Strain over crushed ice and top with mint. Make a rum-free version for anyone not drinking.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

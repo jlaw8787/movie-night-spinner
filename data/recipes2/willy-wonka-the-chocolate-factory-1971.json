@@ -1,0 +1,314 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Edible teacups",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 30,
+   "make_ahead": "Make the cups a day ahead, fill just before serving",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the white chocolate and brush two coats inside small paper cups, setting between coats.",
+     "min": 20
+    },
+    {
+     "text": "Chill until firm, then peel off the paper.",
+     "min": 30
+    },
+    {
+     "text": "Whip the cream with the icing sugar and vanilla seeds and fill the cups.",
+     "min": 10
+    },
+    {
+     "text": "Pipe dark chocolate handles and stick them on. Eat the whole thing.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Snozzberry crackers",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Berries up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blackberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "seeded crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the berries with the sugar using a spoon.",
+     "min": 5
+    },
+    {
+     "text": "Whip the ricotta until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Spread on the crackers and top with the berries. Taste them and decide what a snozzberry is.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Bucket house stew",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 190,
+   "make_ahead": "Better the next day",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef shin, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Italian loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches.",
+     "min": 15
+    },
+    {
+     "text": "Soften the onions, then add the carrots, potatoes, pearl barley and stock.",
+     "min": 15
+    },
+    {
+     "text": "Cover and braise at 160C until thick and tender.",
+     "min": 180
+    },
+    {
+     "text": "Serve with bread to stretch it further.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Gobstopper truffles",
+   "course": "w",
+   "prep_min": 60,
+   "cook_min": 150,
+   "make_ahead": "Keeps 1 week in the fridge",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "coloured sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat part of the cream and pour over the white chocolate to make ganache.",
+     "min": 10
+    },
+    {
+     "text": "Chill until firm enough to handle.",
+     "min": 60
+    },
+    {
+     "text": "Wrap each drained cherry in white ganache and chill again.",
+     "min": 20
+    },
+    {
+     "text": "Heat the rest of the cream, pour over the dark chocolate and cool to a dark ganache.",
+     "min": 15
+    },
+    {
+     "text": "Wrap the white balls in dark ganache and chill.",
+     "min": 60
+    },
+    {
+     "text": "Roll in cocoa and coloured sugar. Bite to see the layers.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Fizzy lifting drink",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops lemon sorbet",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the raspberries and strain.",
+     "min": 5
+    },
+    {
+     "text": "Mix with the lemon juice and sugar syrup and divide between four tall glasses.",
+     "min": 3
+    },
+    {
+     "text": "Top with very cold soda water and drop in a scoop of lemon sorbet so it fizzes up. Don't burp.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

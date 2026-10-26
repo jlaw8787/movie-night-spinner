@@ -1,0 +1,382 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cat lady cover croque monsieur bites",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sliced leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "cornichons",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt some of the butter, stir in the flour, then whisk in the milk and simmer until thick. Season with nutmeg and stir in a little gruyere.",
+     "min": 8
+    },
+    {
+     "text": "Spread the bread thinly with Dijon and make sandwiches with ham and gruyere.",
+     "min": 5
+    },
+    {
+     "text": "Fry the sandwiches in butter on both sides.",
+     "min": 5
+    },
+    {
+     "text": "Spread the bechamel on top, scatter with more gruyere and grill until bubbling.",
+     "min": 3
+    },
+    {
+     "text": "Cut into fingers and serve with cornichons.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Budapest garlic lángos with sour cream",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "tasty cheese, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Divide the dough into four balls and rest.",
+     "min": 15
+    },
+    {
+     "text": "Stretch each by hand into a round, thinner in the middle.",
+     "min": 5
+    },
+    {
+     "text": "Fry in about 3cm of oil at 180C, turning once, until puffed and golden. Drain.",
+     "min": 8
+    },
+    {
+     "text": "Mix the garlic with the olive oil and brush over the hot bread.",
+     "min": 2
+    },
+    {
+     "text": "Spread with sour cream, scatter with cheese, paprika and dill.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Rome cacio e pepe with toasted pepper",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "black peppercorns, coarsely cracked",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "pecorino, finely grated, plus extra to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the spaghetti in well-salted boiling water for 2 minutes less than the packet says.",
+     "min": 12
+    },
+    {
+     "text": "Toast the pepper in a large dry frying pan, then add the butter and a ladle of pasta water.",
+     "min": 3
+    },
+    {
+     "text": "Mix most of the pecorino to a paste with cool pasta water.",
+     "min": 7
+    },
+    {
+     "text": "Move the pasta into the pepper pan with a splash more water and toss. Off the heat, toss in the cheese paste until glossy. Serve with extra pecorino.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "CIA basement fudge sheet cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "Up to 2 days, keep covered",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "hot brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "hazelnuts, toasted and chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, sugar, cocoa and bicarb. Whisk in the eggs, most of the milk, oil and hot coffee to a thin batter.",
+     "min": 8
+    },
+    {
+     "text": "Pour into a lined 23 x 33cm tin and bake at 180C.",
+     "min": 30
+    },
+    {
+     "text": "Cool the cake.",
+     "min": 15
+    },
+    {
+     "text": "Melt the butter and chocolate, then beat in the icing sugar and remaining milk.",
+     "min": 5
+    },
+    {
+     "text": "Spread the icing over the cake and scatter with hazelnuts.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Rayna Boyanov's high roller spritz",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "bitter orange aperitif",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "prosecco, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "blood oranges (or regular oranges)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill large wine glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Pour the aperitif into each, then add the prosecco and soda water. Stir gently once.",
+     "min": 2
+    },
+    {
+     "text": "Slide a thick wedge of blood orange into each glass and serve with a bowl of olives.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

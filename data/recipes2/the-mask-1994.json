@@ -1,0 +1,354 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Coco Bongo club snacks",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "green prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the coconut and panko. Dip the prawns in flour, egg, then the crumb mix.",
+     "min": 12
+    },
+    {
+     "text": "Peel the plantains and slice thin.",
+     "min": 8
+    },
+    {
+     "text": "Fry the prawns at 180C in batches.",
+     "min": 8
+    },
+    {
+     "text": "Fry the plantain slices until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Serve both with sweet chilli.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Green cheese puffs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day airtight, crisp in the oven to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "Gruyere, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the basil and spinach with a little water into a puree.",
+     "min": 5
+    },
+    {
+     "text": "Boil the water with the butter, beat in the flour and cook a minute. Cool.",
+     "min": 8
+    },
+    {
+     "text": "Beat in the eggs, green puree and Gruyere.",
+     "min": 7
+    },
+    {
+     "text": "Pipe onto trays and bake at 200C.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Milo's steak",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rump steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips. Mash the butter with the garlic.",
+     "min": 12
+    },
+    {
+     "text": "Fry the chips at 140C until soft and pale.",
+     "min": 12
+    },
+    {
+     "text": "Fry again at 185C until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Season the steaks and sear hard, then rest.",
+     "min": 12
+    },
+    {
+     "text": "Top each with a slice of garlic butter. Save the trimmings for the dog.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Coco Bongo bananas Foster",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 7,
+   "make_ahead": "Flamed rum, stand back and keep hair tied",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pecans, toasted",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, sugar and cinnamon in a wide pan until bubbling.",
+     "min": 4
+    },
+    {
+     "text": "Halve the bananas lengthways and cook, spooning the sauce over.",
+     "min": 2
+    },
+    {
+     "text": "Pour in the rum and carefully light it with a long match, standing back.",
+     "min": 2
+    },
+    {
+     "text": "When the flames die down, spoon over bowls of ice cream and scatter with pecans.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Coco Bongo cocktail",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "melon liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail umbrellas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tall glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add melon liqueur, vodka and a squeeze of lime to each.",
+     "min": 2
+    },
+    {
+     "text": "Top with lemonade, stir and add an umbrella.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,400 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Porpoise Spit prawn cocktail",
+   "course": "s",
+   "prep_min": 22,
+   "cook_min": 0,
+   "make_ahead": "Sauce up to 1 day, assemble just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cooked king prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns, keeping them chilled.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce, Worcestershire sauce, hot sauce and a squeeze of lemon.",
+     "min": 4
+    },
+    {
+     "text": "Shred the lettuce into four glasses, pile on the prawns and spoon over the sauce. Hang a lemon wedge on each rim.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Wedding reception vol-au-vents",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 33,
+   "make_ahead": "Cases up to 1 day, fill and warm to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thaw the pastry. Cut 16 rounds, press a smaller cutter into each, and place on trays.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 200C until puffed and golden, then push the centres down.",
+     "min": 12
+    },
+    {
+     "text": "Dice the chicken and chop the mushrooms. Fry both in the butter until cooked.",
+     "min": 10
+    },
+    {
+     "text": "Add the cream, tarragon and a squeeze of lemon and simmer until thick.",
+     "min": 8
+    },
+    {
+     "text": "Fill the cases and warm through in the oven.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Sydney Chinese banquet",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pineapple pieces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cube the pork, toss with the soy sauce, then coat in most of the cornflour. Slice the capsicum.",
+     "min": 15
+    },
+    {
+     "text": "Cook the rice by the absorption method and keep warm.",
+     "min": 18
+    },
+    {
+     "text": "Fry the pork in batches in oil at 180C until crisp, then drain.",
+     "min": 15
+    },
+    {
+     "text": "Stir fry the capsicum and pineapple in a wok, add the vinegar, sugar, tomato sauce and water, and thicken with the last of the cornflour mixed with a little water.",
+     "min": 5
+    },
+    {
+     "text": "Toss the pork through the sauce and serve with the rice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Wedding cake",
+   "course": "w",
+   "prep_min": 50,
+   "cook_min": 80,
+   "make_ahead": "Up to 2 days, keep covered",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "white fondant",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fresh edible flowers, to decorate",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat 250g of the butter with the caster sugar until pale, then beat in the eggs. Fold in the flour and milk.",
+     "min": 15
+    },
+    {
+     "text": "Divide between two lined 20cm tins and bake at 165C.",
+     "min": 35
+    },
+    {
+     "text": "Cool the cakes completely in the tins and on a rack.",
+     "min": 45
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar for the buttercream.",
+     "min": 10
+    },
+    {
+     "text": "Sandwich the cakes with jam and buttercream, coat thinly with buttercream, then cover with rolled fondant.",
+     "min": 20
+    },
+    {
+     "text": "Decorate with fresh flowers and serve in fingers.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Hibiscus Island piña colada",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 2,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pineapple into wedges for garnish.",
+     "min": 5
+    },
+    {
+     "text": "Blend the rum, pineapple juice, coconut cream, lime juice, syrup and ice until thick and smooth.",
+     "min": 2
+    },
+    {
+     "text": "Pour into four tall glasses and garnish with a pineapple wedge, a cherry and a paper umbrella. Swap the rum for extra pineapple juice to make it alcohol-free.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

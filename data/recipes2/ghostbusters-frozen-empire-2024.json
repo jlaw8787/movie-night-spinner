@@ -1,0 +1,296 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Firehouse pizza night",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "jar pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 250C. Stretch the dough thin on a big tray.",
+     "min": 10
+    },
+    {
+     "text": "Spread with sauce, grated mozzarella, pepperoni and oregano.",
+     "min": 6
+    },
+    {
+     "text": "Bake until bubbling.",
+     "min": 10
+    },
+    {
+     "text": "Cut into squares.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Phoebe's chess club pigs in blankets",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "cocktail sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar American mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Cut the pastry into 24 strips.",
+     "min": 6
+    },
+    {
+     "text": "Wrap a strip around each sausage, seam underneath, and lay on a lined tray.",
+     "min": 12
+    },
+    {
+     "text": "Brush with beaten egg and sprinkle with sesame seeds.",
+     "min": 3
+    },
+    {
+     "text": "Bake until puffed and golden.",
+     "min": 18
+    },
+    {
+     "text": "Line up on a board with tomato sauce and mustard.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "New York deli Reubens",
+   "course": "m",
+   "prep_min": 16,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "corned beef",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sauerkraut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mayonnaise with tomato sauce and chopped pickle for the dressing.",
+     "min": 4
+    },
+    {
+     "text": "Layer the rye with corned beef, sauerkraut, Swiss cheese and dressing.",
+     "min": 8
+    },
+    {
+     "text": "Butter the outsides.",
+     "min": 3
+    },
+    {
+     "text": "Grill in a pan until golden and melting.",
+     "min": 12
+    },
+    {
+     "text": "Cut in half to serve.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Mini-Puft s'mores",
+   "course": "w",
+   "prep_min": 8,
+   "cook_min": 6,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "plain sweet biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Break the chocolate into squares.",
+     "min": 3
+    },
+    {
+     "text": "Toast the marshmallows over a flame or under a hot grill until golden.",
+     "min": 6
+    },
+    {
+     "text": "Sandwich each between two biscuits with chocolate, squashing so it melts.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ectoplasm lime fizz",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "lime cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops lime sorbet",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tall glasses with crushed ice.",
+     "min": 3
+    },
+    {
+     "text": "Add lime cordial to each and top with soda water.",
+     "min": 2
+    },
+    {
+     "text": "Float a scoop of sorbet on top.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

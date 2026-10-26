@@ -1,0 +1,352 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Prague café chlebíčky open sandwiches",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Up to 2 hours, cover with a damp cloth",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "potato salad",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar gherkins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 10 minutes, cool and slice.",
+     "min": 10
+    },
+    {
+     "text": "Slice the baguette into rounds and spread with butter.",
+     "min": 5
+    },
+    {
+     "text": "Top each with potato salad, a fold of ham, a slice of egg, a gherkin slice and parsley.",
+     "min": 12
+    },
+    {
+     "text": "Line them up neatly on a long board.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Exploding gum bubble crackers",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet prawn crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oil to 190C.",
+     "min": 5
+    },
+    {
+     "text": "Fry a few crackers at a time for a few seconds until they puff up dramatically. Drain on paper towel.",
+     "min": 5
+    },
+    {
+     "text": "Mix the sweet chilli sauce with the lime juice and serve for dipping.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Prague goulash",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 210,
+   "make_ahead": "Better the next day, keeps 3 days chilled",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caraway seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty Italian loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches in a hot heavy pot.",
+     "min": 15
+    },
+    {
+     "text": "Cook the onions slowly for 20 minutes, then stir in the paprika, caraway and tomato paste.",
+     "min": 20
+    },
+    {
+     "text": "Add the water, return the beef and cover. Braise at 160C for 3 hours.",
+     "min": 180
+    },
+    {
+     "text": "Season and serve with crusty bread.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Trdelník",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 75,
+   "make_ahead": "Best eaten the day it is baked",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, a little of the sugar, milk, butter and egg into a soft dough and knead.",
+     "min": 10
+    },
+    {
+     "text": "Prove for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Roll out, cut into strips and wrap around foil-covered rolling pins. Roll in cinnamon, the rest of the sugar and the walnuts.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 200C for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Slide off the pins and fill with whipped cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Self-destruct ginger pilsner shandy",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Syrup up to 1 week ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece ginger, 3cm, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles Czech pilsner, 330ml each",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar, water and ginger for 5 minutes, then cool and strain.",
+     "min": 10
+    },
+    {
+     "text": "Rub the rims of four glasses with lemon and dip in smoked salt.",
+     "min": 4
+    },
+    {
+     "text": "Add some ginger syrup and the juice of half a lemon to each glass. Pour in the pilsner, top with soda water and finish with grated lemon zest.",
+     "min": 6
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mrs Wilson's cookies",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Dough up to 2 days chilled, bake fresh",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cream the butter, sugar and vanilla, then beat in the egg. Fold in the flour, oats and chocolate chips.",
+     "min": 15
+    },
+    {
+     "text": "Roll into balls and bake at 180C until golden at the edges.",
+     "min": 12
+    },
+    {
+     "text": "Cool on the tray for 5 minutes.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Night-blooming flower canapés",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 10,
+   "make_ahead": "Up to 3 hours ahead, keep chilled and covered",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dill sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 10 minutes, then cool and peel.",
+     "min": 12
+    },
+    {
+     "text": "Slice the cucumbers into thick rounds and top each with cream cheese, a fold of salmon and a sprig of dill.",
+     "min": 15
+    },
+    {
+     "text": "Mash the eggs with salt and spread on the bread. Cut off the crusts and slice into fingers.",
+     "min": 18
+    }
+   ]
+  },
+  {
+   "n": "Mr Wilson's quiet dinner",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "lamb loin chops",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, peeled and chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mint sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chops with rosemary, garlic and salt.",
+     "min": 5
+    },
+    {
+     "text": "Boil the potatoes until soft, drain and mash with the butter.",
+     "min": 20
+    },
+    {
+     "text": "Grill the chops, 3 minutes a side, then rest. Cook the peas.",
+     "min": 10
+    },
+    {
+     "text": "Serve everything with a spoon of mint sauce, in peace, with no interruptions at all.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mrs Wilson's apple pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, reheat to serve warm",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "green apples, peeled and sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the apples with the butter, sugar and cinnamon until just soft, then cool.",
+     "min": 10
+    },
+    {
+     "text": "Line a pie dish with 2 sheets of pastry, fill, and cut the last sheet into strips for a lattice.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 190C for 45 minutes. Serve warm with ice cream.",
+     "min": 50
+    }
+   ]
+  },
+  {
+   "n": "Backyard lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Syrup up to 3 days, mix fresh",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "strawberries, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool.",
+     "min": 15
+    },
+    {
+     "text": "Juice the lemons into a jug, add the syrup and cold water and stir.",
+     "min": 5
+    },
+    {
+     "text": "Pour into tall glasses over ice and drop a halved strawberry into each.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

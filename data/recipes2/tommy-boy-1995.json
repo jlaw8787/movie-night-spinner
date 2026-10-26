@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Buckeyes",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "Up to 5 days chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "smooth peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the peanut butter with the butter and icing sugar",
+     "min": 8
+    },
+    {
+     "text": "Roll into 24 small balls and chill",
+     "min": 30
+    },
+    {
+     "text": "Melt the chocolate",
+     "min": 5
+    },
+    {
+     "text": "Dip each ball on a toothpick, leaving a round of peanut butter showing at the top",
+     "min": 10
+    },
+    {
+     "text": "Set on baking paper in the fridge",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Diner chicken wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 735,
+   "make_ahead": "Dry the wings overnight",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Meat"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the wings dry and leave uncovered in the fridge overnight",
+     "min": 660
+    },
+    {
+     "text": "Bake on a rack at 220C, turning once, until crisp",
+     "min": 45
+    },
+    {
+     "text": "Melt the butter with the hot sauce and toss the wings through",
+     "min": 5
+    },
+    {
+     "text": "Mash the blue cheese into the sour cream for a dip",
+     "min": 5
+    },
+    {
+     "text": "Serve with celery sticks",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Cincinnati chilli spaghetti",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 15,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, finely grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the mince in the water, breaking it up fine",
+     "min": 10
+    },
+    {
+     "text": "Add the onion, tomatoes, spices, Worcestershire and chocolate",
+     "min": 5
+    },
+    {
+     "text": "Simmer until thick",
+     "min": 90
+    },
+    {
+     "text": "Cook the spaghetti",
+     "min": 12
+    },
+    {
+     "text": "Ladle the chilli over the spaghetti and pile the cheddar on top",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Diner cherry lattice pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 110,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "frozen cherries, pitted",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 170,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the cherries with most of the sugar, cornflour and lemon juice",
+     "min": 5
+    },
+    {
+     "text": "Line a 23cm pie dish with two pastry sheets and fill with the cherries",
+     "min": 10
+    },
+    {
+     "text": "Cut the remaining sheets into strips and weave a lattice on top",
+     "min": 10
+    },
+    {
+     "text": "Brush with egg and sprinkle with the remaining sugar",
+     "min": 3
+    },
+    {
+     "text": "Bake at 190C until bubbling",
+     "min": 50
+    },
+    {
+     "text": "Cool and serve with ice cream",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Holy schnike lemon shandy",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1.32,
+     "u": "l",
+     "item": "lager, cold",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons and mix the juice with the syrup, then chill",
+     "min": 5
+    },
+    {
+     "text": "Chill four pint glasses in the freezer",
+     "min": 15
+    },
+    {
+     "text": "Pour some lemon mix into each glass, add soda water, then top slowly with cold lager",
+     "min": 3
+    },
+    {
+     "text": "Stir once and add a lemon wheel. Use extra soda water and lemon for anyone driving",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

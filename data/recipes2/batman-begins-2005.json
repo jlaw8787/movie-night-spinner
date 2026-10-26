@@ -1,0 +1,376 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Blue flower Himalayan momo",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 10,
+   "make_ahead": "Cook straight after filling",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves of garlic, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "round dumpling wrappers",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, roasted",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove of garlic, for the achar",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince, onion, garlic, ginger and coriander.",
+     "min": 5
+    },
+    {
+     "text": "Fill the dumpling wrappers and pleat closed.",
+     "min": 25
+    },
+    {
+     "text": "Steam in batches.",
+     "min": 10
+    },
+    {
+     "text": "Blitz the roasted tomatoes with the chilli and garlic for achar.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Alfred's why-do-we-fall tea sandwiches",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours ahead, cover with damp paper",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices of white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cucumber, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dill, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the bread with cream cheese.",
+     "min": 5
+    },
+    {
+     "text": "Fill half with cucumber and half with smoked salmon and dill.",
+     "min": 8
+    },
+    {
+     "text": "Cut off the crusts and cut into neat fingers.",
+     "min": 7
+    },
+    {
+     "text": "Lay on a silver tray.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Wayne Manor Sunday roast",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 150,
+   "make_ahead": "Rest 20 minutes before carving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef rib roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled and halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef well and leave overnight if possible.",
+     "min": 10
+    },
+    {
+     "text": "Heat the oven to 220C and roast the beef, then drop to 160C until 52C inside.",
+     "min": 80
+    },
+    {
+     "text": "Rest the beef under foil.",
+     "min": 20
+    },
+    {
+     "text": "Roast the potatoes in oil.",
+     "min": 45
+    },
+    {
+     "text": "Whisk the eggs, flour and milk and bake in hot oiled tins at 220C.",
+     "min": 20
+    },
+    {
+     "text": "Make gravy with the stock and pan juices.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Bruce's birthday cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 60,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, for the ganache",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "birthday candle",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and line two tins.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate and butter, whisk in the eggs and sugar and fold in the flour.",
+     "min": 12
+    },
+    {
+     "text": "Bake in two tins.",
+     "min": 30
+    },
+    {
+     "text": "Cool, melt the ganache chocolate with the cream and let it thicken.",
+     "min": 20
+    },
+    {
+     "text": "Layer and cover the cake and add a single candle.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Applied Sciences elderflower gin collins",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs of mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill 4 tall glasses with ice and 2 thin cucumber ribbons each.",
+     "min": 4
+    },
+    {
+     "text": "Shake the gin, cordial and lemon juice with ice and strain evenly into the glasses.",
+     "min": 3
+    },
+    {
+     "text": "Top with soda water, stir once and add a mint sprig. For non drinkers use chilled cucumber water instead of gin.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

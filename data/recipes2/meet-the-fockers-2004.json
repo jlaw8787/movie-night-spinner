@@ -1,0 +1,434 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Circle of trust ham croquetas",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 185,
+   "make_ahead": "Up to 1 day, keep chilled before frying",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "leg ham, finely chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, stir in some of the flour for a couple of minutes, then slowly whisk in the milk until very thick.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the ham, nutmeg and pepper. Spread on a tray, cover and chill.",
+     "min": 180
+    },
+    {
+     "text": "Shape into small logs, roll in the remaining flour, dip in egg and coat in breadcrumbs.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 180C until golden, working in batches.",
+     "min": 8
+    },
+    {
+     "text": "Mix the mayonnaise with the garlic and a squeeze of lime juice and serve for dipping.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Coconut Grove prawn fritters",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "peeled green prawns, chopped",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "Cajun seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, egg, soda water, capsicum, spring onions, Cajun seasoning and salt into a thick batter, then fold in the prawns.",
+     "min": 8
+    },
+    {
+     "text": "Drop heaped tablespoons into oil at 180C and fry, turning, until golden. Drain.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise, sweet chilli sauce and lime juice for the sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Wall of Gaylord mojo roast pork",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 830,
+   "make_ahead": "Marinate overnight in the fridge",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "boneless pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins black beans (400g each), drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "firm bananas, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the garlic, orange and lime juice, two teaspoons of the cumin, oregano, oil and salt. Rub over the pork.",
+     "min": 10
+    },
+    {
+     "text": "Marinate overnight in the fridge. This step is the day before.",
+     "min": 600
+    },
+    {
+     "text": "Roast covered at 160C, then uncovered at 200C.",
+     "min": 210
+    },
+    {
+     "text": "Fry the onion and capsicum, add the beans and remaining cumin and simmer.",
+     "min": 15
+    },
+    {
+     "text": "Cook the rice. Fry the banana slices in the butter.",
+     "min": 15
+    },
+    {
+     "text": "Rest and shred the pork and serve with beans, rice and bananas.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Jinx and Moses key lime pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 192,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain sweet biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "tin condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "",
+     "item": "limes (150ml juice and zest)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits, mix with the butter and press into a 23cm pie dish.",
+     "min": 8
+    },
+    {
+     "text": "Bake the base at 180C.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the egg yolks with the condensed milk, then the lime juice and zest of two limes.",
+     "min": 6
+    },
+    {
+     "text": "Pour into the base and bake at 160C until just set.",
+     "min": 15
+    },
+    {
+     "text": "Cool, then chill.",
+     "min": 180
+    },
+    {
+     "text": "Top with whipped cream and more lime zest.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Miami mint mojito",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "In each tall glass muddle mint leaves with lime wedges and sugar until the sugar dissolves.",
+     "min": 5
+    },
+    {
+     "text": "Fill with crushed ice and pour in the rum.",
+     "min": 2
+    },
+    {
+     "text": "Top with soda water and stir from the bottom with a long spoon. Garnish with a mint sprig and a lime wheel.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

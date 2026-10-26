@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hagrid's rock cakes",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Same day, best warm",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mixed spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mixed dried fruit",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line a tray.",
+     "min": 3
+    },
+    {
+     "text": "Rub the butter into the flour, sugar and spice.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the dried fruit, then bind with the egg and milk.",
+     "min": 4
+    },
+    {
+     "text": "Drop in rough piles on the tray and bake until golden.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Pumpkin pasties",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, reheat to crisp",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pumpkin, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "fresh sage, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets of shortcrust pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Toss the pumpkin in the oil and roast until soft.",
+     "min": 25
+    },
+    {
+     "text": "Mash with the feta, sage and nutmeg and cool.",
+     "min": 10
+    },
+    {
+     "text": "Cut the pastry into rounds, fill and fold into half moons, crimping the edges.",
+     "min": 12
+    },
+    {
+     "text": "Brush with egg and bake until golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Great Hall welcome feast",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken drumsticks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "gravy",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Mix the honey and mustard and coat the drumsticks.",
+     "min": 5
+    },
+    {
+     "text": "Toss the potatoes in the olive oil and roast with the chicken.",
+     "min": 40
+    },
+    {
+     "text": "Whisk the flour, eggs and milk into a batter and rest.",
+     "min": 10
+    },
+    {
+     "text": "Heat oil in muffin tins, pour in the batter and bake until puffed.",
+     "min": 20
+    },
+    {
+     "text": "Cook the peas with the butter and warm the gravy.",
+     "min": 5
+    },
+    {
+     "text": "Serve everything together.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Treacle tart",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet of sweet shortcrust pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fresh white breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zest and juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "clotted cream, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Line a tart tin with the pastry and chill briefly.",
+     "min": 10
+    },
+    {
+     "text": "Blind bake the case.",
+     "min": 15
+    },
+    {
+     "text": "Warm the golden syrup with the breadcrumbs, lemon zest and juice.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the case and bake until just set.",
+     "min": 30
+    },
+    {
+     "text": "Cool slightly and serve each slice with clotted cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Pumpkin juice",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 25,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pumpkin, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the pumpkin at 200C until soft and cool completely.",
+     "min": 25
+    },
+    {
+     "text": "Blend with the apple juice, honey and cinnamon until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Strain through a sieve into a jug and chill well.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

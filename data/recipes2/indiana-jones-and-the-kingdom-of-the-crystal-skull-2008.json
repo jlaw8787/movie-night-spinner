@@ -1,0 +1,308 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Marshall College diner fries",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Fry fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into thick fries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "flaky salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thick fries, rinse and dry well.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 140C for 6 minutes, then rest.",
+     "min": 10
+    },
+    {
+     "text": "Fry again at 190C until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Salt with flaky salt and serve in paper cones with tomato sauce.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Peruvian ceviche cups",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Up to 2 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "snapper fillets, very fresh, diced",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sweet potato, boiled and cubed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "corn kernels",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the sweet potato until tender, then cool and cube.",
+     "min": 15
+    },
+    {
+     "text": "Dice the snapper and cover with lime juice for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Add the onion, chilli and coriander. Serve in small cups with the sweet potato and corn.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Peruvian chicken with green sauce",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Marinate up to 1 day, roast fresh",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken drumsticks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jalapeno",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into fries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the drumsticks in the garlic, cumin, paprika and lime juice.",
+     "min": 15
+    },
+    {
+     "text": "Roast at 220C until charred and cooked through.",
+     "min": 40
+    },
+    {
+     "text": "Blitz the coriander, jalapeno, mayonnaise and a squeeze of lime for the sauce.",
+     "min": 5
+    },
+    {
+     "text": "Fry the fries twice, first at a low heat then until crisp. Serve with the chicken.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Akator crystal skull jelly",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 240,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "gelatine sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "green grapes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine sheets in cold water.",
+     "min": 5
+    },
+    {
+     "text": "Heat the water, sugar and lemon juice, then stir in the squeezed gelatine.",
+     "min": 10
+    },
+    {
+     "text": "Layer the grapes and blueberries in glasses and pour over the jelly.",
+     "min": 5
+    },
+    {
+     "text": "Set for 4 hours in the fridge.",
+     "min": 240
+    }
+   ]
+  },
+  {
+   "n": "Mutt's greaser malt shake",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the ice cream, milk and malt powder in batches until thick.",
+     "min": 3
+    },
+    {
+     "text": "Pour into tall glasses and serve at once.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

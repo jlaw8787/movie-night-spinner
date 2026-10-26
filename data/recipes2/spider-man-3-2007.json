@@ -1,0 +1,300 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Harry and MJ's omelette bites",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, snipped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter, for greasing",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the milk, cheddar, chives and salt.",
+     "min": 5
+    },
+    {
+     "text": "Butter a 12-hole muffin tin and pour the mix in evenly.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C until puffed and just set.",
+     "min": 15
+    },
+    {
+     "text": "Ease out with a knife and serve warm.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Sandman sand cookies",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 85,
+   "make_ahead": "Dough up to 3 days in the fridge",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 280,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "raw sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter until nutty and cool until firm.",
+     "min": 10
+    },
+    {
+     "text": "Beat with the brown sugar, then mix in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Roll into logs, coat in raw sugar and chill.",
+     "min": 60
+    },
+    {
+     "text": "Slice into rounds and bake at 170C until golden and sandy.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "French restaurant coq au vin",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken and bacon.",
+     "min": 15
+    },
+    {
+     "text": "Add the mushrooms and cook until golden.",
+     "min": 10
+    },
+    {
+     "text": "Pour in the wine and enough water to cover.",
+     "min": 5
+    },
+    {
+     "text": "Simmer until rich and glossy.",
+     "min": 90
+    },
+    {
+     "text": "Boil and mash the potatoes with plenty of butter and serve under the chicken.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Proposal crème brûlée",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 230,
+   "make_ahead": "Up to 2 days, torch just before serving",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean, split",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caster sugar for the tops",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream with the vanilla bean until steaming.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the yolks with the sugar, pour in the cream and strain into ramekins.",
+     "min": 10
+    },
+    {
+     "text": "Bake in a water bath at 150C until just set.",
+     "min": 35
+    },
+    {
+     "text": "Chill until cold.",
+     "min": 180
+    },
+    {
+     "text": "Sprinkle with sugar and torch until amber and crackly.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Broadway opening night raspberry fizz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Puree up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "prosecco",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "raspberries, whole, to finish",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the raspberries with the sugar and lemon juice, then push through a sieve.",
+     "min": 5
+    },
+    {
+     "text": "Spoon a little puree into each chilled flute.",
+     "min": 5
+    },
+    {
+     "text": "Slowly top with chilled prosecco and drop in two raspberries.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

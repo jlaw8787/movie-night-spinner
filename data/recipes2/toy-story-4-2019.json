@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Carnival corn dogs",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "cocktail franks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "skewers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cornmeal, flour, baking powder and buttermilk to a thick batter.",
+     "min": 6
+    },
+    {
+     "text": "Pat the franks dry and push a skewer into each.",
+     "min": 8
+    },
+    {
+     "text": "Dip in the batter and fry at 180C in batches until golden.",
+     "min": 15
+    },
+    {
+     "text": "Serve with mustard and tomato sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Forky's spork salad cups",
+   "course": "s",
+   "prep_min": 19,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "can corn kernels, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sporks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the corn, halve the tomatoes and dice the cucumber and avocado.",
+     "min": 12
+    },
+    {
+     "text": "Mix with lime juice and salt.",
+     "min": 3
+    },
+    {
+     "text": "Spoon into little cups and stick a spork in each one.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Duke Caboom's poutine",
+   "course": "m",
+   "prep_min": 11,
+   "cook_min": 31,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen thick-cut chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef gravy",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "barbecue chicken, shredded",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "fresh mozzarella, torn",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the chips at 220C until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Shred the chicken and tear the mozzarella.",
+     "min": 5
+    },
+    {
+     "text": "Heat the gravy until bubbling.",
+     "min": 6
+    },
+    {
+     "text": "Pile the chips into bowls with the chicken, scatter over the mozzarella and pour the hot gravy over so the cheese goes melty.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Fairground funnel cake",
+   "course": "w",
+   "prep_min": 14,
+   "cook_min": 23,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, eggs, milk and sugar into a smooth batter.",
+     "min": 6
+    },
+    {
+     "text": "Heat the oil to 180C.",
+     "min": 8
+    },
+    {
+     "text": "Pipe the batter in looping swirls into the oil and fry until golden on both sides.",
+     "min": 15
+    },
+    {
+     "text": "Drain and dust thickly with icing sugar.",
+     "min": 4
+    },
+    {
+     "text": "Slice the strawberries and serve with the warm cake.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Carnival frozen strawberry lemonade",
+   "course": "d",
+   "prep_min": 16,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen strawberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "fresh strawberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar and water until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Cool the syrup.",
+     "min": 15
+    },
+    {
+     "text": "Juice the lemons.",
+     "min": 5
+    },
+    {
+     "text": "Blend the frozen strawberries, lemon juice, syrup, cold water and ice until thick and slushy. Add more syrup if it is too sharp.",
+     "min": 3
+    },
+    {
+     "text": "Pour into big cups with a strawberry on each rim and serve with straws.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

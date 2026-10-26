@@ -1,0 +1,336 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Jabba's palace frog bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butterfly the prawns.",
+     "min": 10
+    },
+    {
+     "text": "Dip in flour, then egg, then panko.",
+     "min": 12
+    },
+    {
+     "text": "Fry at 180C in batches until golden.",
+     "min": 10
+    },
+    {
+     "text": "Drain and serve hot with sweet chilli sauce and lime wedges.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Endor forest berries",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pitted cherries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mascarpone",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the strawberries, blueberries and cherries with some honey and torn mint.",
+     "min": 8
+    },
+    {
+     "text": "Whip the mascarpone with a spoon of honey until soft.",
+     "min": 4
+    },
+    {
+     "text": "Serve the fruit in a bowl with the mascarpone alongside.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Ewok feast",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spatchcock the chicken and cut the potatoes and carrots into chunks.",
+     "min": 15
+    },
+    {
+     "text": "Lay the chicken over the vegetables, season and drizzle with oil.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 220C.",
+     "min": 40
+    },
+    {
+     "text": "Warm the honey with the garlic and thyme, brush over and roast until glossy.",
+     "min": 10
+    },
+    {
+     "text": "Rest and pull apart to share.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ewok forest berry crumble",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "frozen mixed berries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "hazelnuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Toss the berries with the caster sugar and cornflour in a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour until crumbly, then stir in the oats, hazelnuts and brown sugar.",
+     "min": 10
+    },
+    {
+     "text": "Scatter over the berries and bake until golden and bubbling at the edges.",
+     "min": 35
+    },
+    {
+     "text": "Rest, then serve warm with vanilla ice cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Blue milk",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "full cream milk, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen pineapple",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "blue spirulina",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend everything until smooth and pale blue.",
+     "min": 3
+    },
+    {
+     "text": "Pour into four glasses and drink straight away.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

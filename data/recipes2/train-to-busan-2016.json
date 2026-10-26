@@ -1,0 +1,362 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Baseball team Korean fried chicken",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "potato starch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "gochujang",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the wings dry and toss in the potato starch",
+     "min": 8
+    },
+    {
+     "text": "Fry at 160C",
+     "min": 8
+    },
+    {
+     "text": "Rest",
+     "min": 5
+    },
+    {
+     "text": "Fry again at 190C until very crisp",
+     "min": 8
+    },
+    {
+     "text": "Simmer the gochujang, soy, honey and garlic until glossy",
+     "min": 6
+    },
+    {
+     "text": "Toss the wings in the glaze and scatter with sesame seeds",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Spicy rice cakes",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "rice cakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dried anchovies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "gochujang",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "gochugaru",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fish cake, sliced",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the rice cakes in water",
+     "min": 20
+    },
+    {
+     "text": "Simmer the stock with the anchovies, then add the gochujang, gochugaru and sugar",
+     "min": 10
+    },
+    {
+     "text": "Add the rice cakes and fish cake and simmer until thick and glossy",
+     "min": 10
+    },
+    {
+     "text": "Top with spring onion",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "KTX to Busan kimchi fried rice",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Cook the rice a day ahead",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "kimchi, chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "gochujang",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet nori, torn",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice and let it go cold",
+     "min": 20
+    },
+    {
+     "text": "Fry the bacon until crisp",
+     "min": 8
+    },
+    {
+     "text": "Add the kimchi and a splash of its juice",
+     "min": 4
+    },
+    {
+     "text": "Add the cold rice, gochujang and butter and press flat to crisp the bottom",
+     "min": 8
+    },
+    {
+     "text": "Top each bowl with a fried egg and torn nori",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Su-an's birthday hotteok",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 85,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 220,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "peanuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar and warm water into a dough and rest until risen",
+     "min": 60
+    },
+    {
+     "text": "Mix the brown sugar, cinnamon and peanuts",
+     "min": 3
+    },
+    {
+     "text": "Fill eight balls of dough with the mix and seal",
+     "min": 12
+    },
+    {
+     "text": "Press flat in an oiled pan and fry until golden and the sugar melts inside",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Banana milk",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bananas, ripe",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the bananas with the milk, honey and salt until smooth",
+     "min": 4
+    },
+    {
+     "text": "Strain through a sieve for a silky drink",
+     "min": 4
+    },
+    {
+     "text": "Chill well",
+     "min": 30
+    },
+    {
+     "text": "Pour into four glasses",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

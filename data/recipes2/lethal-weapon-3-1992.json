@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hockey game hot dogs",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sweet relish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the franks in water, then griddle until blistered all over.",
+     "min": 10
+    },
+    {
+     "text": "Steam the buns and finely chop the onion.",
+     "min": 5
+    },
+    {
+     "text": "Fill with franks and top with mustard, relish and onion.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Building implosion popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popping corn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oil in a big pot with three kernels.",
+     "min": 3
+    },
+    {
+     "text": "When they pop, add the rest of the kernels, cover and shake until popping slows.",
+     "min": 5
+    },
+    {
+     "text": "Toss with the butter, garlic powder and parmesan while hot.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Trish's chicken and dumplings",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the vegetables and put everything except the dumpling ingredients in a pot.",
+     "min": 15
+    },
+    {
+     "text": "Simmer until the chicken is tender.",
+     "min": 40
+    },
+    {
+     "text": "Shred the chicken back into the pot.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour and mix with the milk.",
+     "min": 5
+    },
+    {
+     "text": "Drop spoonfuls on top and steam covered.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Retirement cake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 175,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, for the syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and line a loaf tin. Beat the butter and sugar, add the eggs, then fold in the flour and the zest of two lemons.",
+     "min": 15
+    },
+    {
+     "text": "Bake the loaf.",
+     "min": 50
+    },
+    {
+     "text": "Mix the juice of two lemons with the sugar and pour over the hot loaf.",
+     "min": 5
+    },
+    {
+     "text": "Cool in the tin.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Eight days to go whiskey sour",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the bourbon, lemon juice, syrup and egg whites hard without ice to foam.",
+     "min": 2
+    },
+    {
+     "text": "Add a big handful of ice and shake again.",
+     "min": 2
+    },
+    {
+     "text": "Strain into tumblers over fresh ice.",
+     "min": 2
+    },
+    {
+     "text": "Shake bitters onto the foam and add a cherry.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chez Quis amuse-bouche",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 20,
+   "make_ahead": "Puffs up to 1 day airtight, fill just before serving",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "Gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water and butter, beat in the flour and cook a minute. Cool.",
+     "min": 8
+    },
+    {
+     "text": "Beat in the eggs and Gruyere.",
+     "min": 6
+    },
+    {
+     "text": "Pipe small rounds and bake at 200C.",
+     "min": 20
+    },
+    {
+     "text": "Whip the goat's cheese with chopped chives.",
+     "min": 4
+    },
+    {
+     "text": "Split the puffs and fill.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Deep dish bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, diced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Knead the cornmeal into the dough and press into a 12-hole mini muffin tin.",
+     "min": 10
+    },
+    {
+     "text": "Squeeze the sausage meat out of its casings and crumble.",
+     "min": 3
+    },
+    {
+     "text": "Fill the cases with mozzarella, sausage and crushed tomato.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 210C until bubbling.",
+     "min": 18
+    }
+   ]
+  },
+  {
+   "n": "Sausage King of Chicago",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "capsicums, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long crusty rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "hot mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the sausages slowly until browned all over.",
+     "min": 20
+    },
+    {
+     "text": "Slice the capsicums and onions.",
+     "min": 7
+    },
+    {
+     "text": "In the same pan, soften the capsicums and onions in the fat with the oregano.",
+     "min": 12
+    },
+    {
+     "text": "Pile the sausages and peppers into the rolls and add hot mustard.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Chez Quis profiteroles",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 45,
+   "make_ahead": "Puffs up to 1 day airtight, fill and sauce to serve",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 380,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water and butter, beat in the flour until it leaves the pan, then cool.",
+     "min": 10
+    },
+    {
+     "text": "Beat in the eggs and pipe 16 small puffs.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 200C until puffed and golden, then cool.",
+     "min": 25
+    },
+    {
+     "text": "Whip most of the cream with the vanilla, split the puffs and fill.",
+     "min": 10
+    },
+    {
+     "text": "Melt the chocolate with the remaining cream and pour over.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Abe Froman's sparkling lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix the lemon base up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "sparkling mineral water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the lemons, keeping a few thin slices, and stir with the sugar until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Pour into a jug with the sparkling water and plenty of ice.",
+     "min": 2
+    },
+    {
+     "text": "Serve in wine glasses with a lemon slice.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

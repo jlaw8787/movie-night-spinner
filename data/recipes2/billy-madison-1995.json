@@ -1,0 +1,398 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Grade one ham and cheese pinwheels",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, keep rolled and chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "cornichons",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cream cheese and mustard until smooth, then spread thinly over the tortillas right to the edges.",
+     "min": 5
+    },
+    {
+     "text": "Layer ham, spinach and grated cheddar over each tortilla.",
+     "min": 5
+    },
+    {
+     "text": "Roll up tightly and wrap in cling film.",
+     "min": 3
+    },
+    {
+     "text": "Chill so the rolls hold their shape.",
+     "min": 30
+    },
+    {
+     "text": "Trim the ends, cut each roll into pinwheels and serve with cherry tomatoes and cornichons.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Madison Hotel mini club sandwiches",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 2,
+   "make_ahead": "Up to 4 hours, keep covered and chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sliced cooked chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag salted potato crisps",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the bacon until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Toast the bread and spread with mayonnaise.",
+     "min": 4
+    },
+    {
+     "text": "Build each sandwich with toast, chicken, lettuce and tomato, then toast, bacon and lettuce, then the last slice of toast.",
+     "min": 6
+    },
+    {
+     "text": "Press down gently, pin with toothpicks, trim the crusts and cut into squares. Serve with crisps.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Pool party chilli cheese dogs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, 1 diced for the chilli and 1 finely diced to serve",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "American mustard, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the diced onion, then add the spices, passata and a splash of water.",
+     "min": 8
+    },
+    {
+     "text": "Simmer until thick.",
+     "min": 15
+    },
+    {
+     "text": "Grill the frankfurts, turning, and toast the split buns.",
+     "min": 6
+    },
+    {
+     "text": "Fill the buns with frankfurts and chilli, top with cheddar and grill until melted.",
+     "min": 3
+    },
+    {
+     "text": "Finish with raw diced onion and a squeeze of mustard.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Lunch box chocolate pudding cups",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 125,
+   "make_ahead": "Up to 2 days, keep chilled with cling film on the surface",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "milk chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chocolate biscuits, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "rainbow sprinkles, to top",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the sugar, cocoa, cornflour and salt in a saucepan, then slowly whisk in the milk.",
+     "min": 5
+    },
+    {
+     "text": "Stir over medium heat until it boils and thickens.",
+     "min": 6
+    },
+    {
+     "text": "Off the heat, stir in the chocolate and vanilla until smooth. Pour into cups and press cling film on the surface.",
+     "min": 4
+    },
+    {
+     "text": "Chill until set.",
+     "min": 120
+    },
+    {
+     "text": "Whip the cream and top each cup with cream, crushed biscuits and sprinkles.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Back to school chocolate malt shake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "chocolate sauce, plus extra to finish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill tall glasses in the freezer.",
+     "min": 15
+    },
+    {
+     "text": "Drizzle chocolate sauce down the inside of each glass.",
+     "min": 2
+    },
+    {
+     "text": "Blend the milk, ice cream, malted milk powder and cocoa until thick and smooth, then pour into the glasses.",
+     "min": 3
+    },
+    {
+     "text": "Top with whipped cream, more chocolate sauce and a sprinkle of malt powder.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,384 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Stark mansion canapés",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 10,
+   "make_ahead": "Tuna mix up to 1 hour ahead, assemble to serve",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "wonton wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sashimi tuna",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "spring onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds, toasted",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the wonton wrappers at 180C until crisp. Drain.",
+     "min": 8
+    },
+    {
+     "text": "Dice the tuna and dress with soy, sesame oil, lime juice and spring onion.",
+     "min": 10
+    },
+    {
+     "text": "Smash the avocado.",
+     "min": 3
+    },
+    {
+     "text": "Spoon the tuna onto the wontons and top with a dot of avocado and the sesame.",
+     "min": 9
+    }
+   ]
+  },
+  {
+   "n": "Cave flatbread",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tub hummus",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yoghurt, baking powder and salt to a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Roll into six thin rounds.",
+     "min": 7
+    },
+    {
+     "text": "Cook in a dry hot pan until blistered, turning once.",
+     "min": 12
+    },
+    {
+     "text": "Brush with butter melted with the garlic and serve with hummus.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Tony's American cheeseburger",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into eight balls and dice the onion.",
+     "min": 8
+    },
+    {
+     "text": "Smash each flat on a smoking griddle, season and cook.",
+     "min": 8
+    },
+    {
+     "text": "Flip, top with cheese and cook a minute more. Toast the buns.",
+     "min": 4
+    },
+    {
+     "text": "Stack two per bun with onion, pickles, mustard and tomato sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Arc reactor cupcakes",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 275,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "blue food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line a 12-hole tin. Beat half the butter with the sugar, then the eggs.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the flour and milk, divide between the cases and bake.",
+     "min": 18
+    },
+    {
+     "text": "Cool completely.",
+     "min": 12
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and tint half blue.",
+     "min": 5
+    },
+    {
+     "text": "Pipe a blue ring with a white centre.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Tony's workshop scotch penicillin",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Syrup up to 2 days",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece ginger (2 cm), sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "blended Scotch",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "peaty single malt",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pieces candied ginger",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large ice cubes",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, for shaking",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the honey, water and ginger, then strain and cool.",
+     "min": 10
+    },
+    {
+     "text": "Shake the Scotch, lemon juice and the syrup with ice.",
+     "min": 2
+    },
+    {
+     "text": "Strain into four tumblers over one large cube each.",
+     "min": 2
+    },
+    {
+     "text": "Float a little peaty single malt on each and garnish with candied ginger.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

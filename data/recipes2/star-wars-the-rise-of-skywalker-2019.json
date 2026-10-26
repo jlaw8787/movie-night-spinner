@@ -1,0 +1,340 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pasaana festival flatbreads",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Dips up to 2 days, grill breads fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sumac",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "beetroot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped herbs (parsley and mint)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "hummus",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the beetroot at 200C until tender, then cool and peel.",
+     "min": 30
+    },
+    {
+     "text": "Blend the beetroot with the garlic and some of the yoghurt for a pink dip. Stir the herbs through more yoghurt for a green dip.",
+     "min": 10
+    },
+    {
+     "text": "Brush the flatbreads with oil, dust with sumac and turmeric and grill until blistered. Serve with the dips and hummus.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Kijimi snowy city dumplings",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 10,
+   "make_ahead": "Fill and pleat up to 1 day ahead, steam fresh",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chicken mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced, plus extra to serve",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "hot chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the chicken with the ginger, spring onion and soy.",
+     "min": 10
+    },
+    {
+     "text": "Fill the wrappers and pleat closed.",
+     "min": 30
+    },
+    {
+     "text": "Steam for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Serve a few in each bowl with hot stock, more spring onion and a drizzle of chilli oil.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Kef Bir ocean seafood stew",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "saffron threads, a good pinch",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "white fish fillets, in chunks",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mussels, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices bread, for garlic toast",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the fennel and garlic in the oil. Add the saffron, tomatoes and wine.",
+     "min": 10
+    },
+    {
+     "text": "Simmer to a rich broth.",
+     "min": 20
+    },
+    {
+     "text": "Add the fish, prawns and mussels, cover and cook until the mussels open.",
+     "min": 6
+    },
+    {
+     "text": "Toast the bread, rub with a cut garlic clove and serve alongside.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Twin suns pavlova",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 150,
+   "make_ahead": "Up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to stiff peaks, then add the sugar a spoon at a time until glossy.",
+     "min": 15
+    },
+    {
+     "text": "Shape into a round on a lined tray and bake at 120C. Cool in the oven.",
+     "min": 120
+    },
+    {
+     "text": "Top with whipped cream, mango and two round pools of passionfruit pulp.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Lars homestead blue milk",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "blue food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, coconut milk, honey and ice until frothy.",
+     "min": 3
+    },
+    {
+     "text": "Add a few drops of blue colouring and blend until evenly pale blue. Serve cold.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

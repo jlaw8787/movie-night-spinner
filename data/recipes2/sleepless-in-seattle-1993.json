@@ -1,0 +1,740 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Seattle smoked salmon dip",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Dip up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "hot-smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "crème fraîche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bagels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Flake the salmon into the cream cheese and crème fraîche.",
+     "min": 5
+    },
+    {
+     "text": "Add lemon juice, dill, capers and horseradish and mix.",
+     "min": 5
+    },
+    {
+     "text": "Slice the bagels thin and brush with oil.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C into crisp chips.",
+     "min": 10
+    },
+    {
+     "text": "Serve the chips with the dip.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Radio show popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "flaky sea salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the butter until nutty and golden.",
+     "min": 5
+    },
+    {
+     "text": "Heat the coconut oil with 3 kernels in a lidded pot.",
+     "min": 3
+    },
+    {
+     "text": "Add the rest of the kernels once they pop, cover and shake until popping slows.",
+     "min": 4
+    },
+    {
+     "text": "Toss with the brown butter and flaky salt.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Annie's dinner with Walter",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, 1 zested, 1 juiced, 1 in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the panko with parsley, lemon zest and oil.",
+     "min": 5
+    },
+    {
+     "text": "Press onto the salmon and roast at 200C.",
+     "min": 12
+    },
+    {
+     "text": "Steam the beans.",
+     "min": 8
+    },
+    {
+     "text": "Melt the butter with the lemon juice and spoon over everything.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Valentine's heart cookies",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 55,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, 1 whole and 1 white",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop red food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter and cool.",
+     "min": 12
+    },
+    {
+     "text": "Beat with the sugar and whole egg, then mix in the flour.",
+     "min": 8
+    },
+    {
+     "text": "Roll to 5mm and cut into hearts.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 9
+    },
+    {
+     "text": "Cool completely.",
+     "min": 15
+    },
+    {
+     "text": "Mix the icing sugar with the egg white. Tint half red and ice the cookies.",
+     "min": 9
+    }
+   ]
+  },
+  {
+   "n": "Houseboat iced mocha",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Mocha base up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "strong brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the hot coffee with the chocolate and sugar until melted.",
+     "min": 5
+    },
+    {
+     "text": "Cool.",
+     "min": 15
+    },
+    {
+     "text": "Whip the cream.",
+     "min": 5
+    },
+    {
+     "text": "Fill 4 glasses with ice and add the mocha and milk.",
+     "min": 3
+    },
+    {
+     "text": "Top with whipped cream and dust with cocoa.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Baltimore crab cake",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Cakes shaped up to 1 day ahead",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "lump crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "remoulade",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Gently mix the crab, mayonnaise, egg, Dijon and crumbs.",
+     "min": 5
+    },
+    {
+     "text": "Shape 8 cakes and chill.",
+     "min": 20
+    },
+    {
+     "text": "Brown in butter, turning once.",
+     "min": 6
+    },
+    {
+     "text": "Serve with remoulade.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Jumbo shrimp cocktail",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "",
+     "item": "jumbo prawns, peeled with tails on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, halved, plus wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cocktail sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the prawns with the lemon, then chill in iced water.",
+     "min": 10
+    },
+    {
+     "text": "Serve five each on crushed ice.",
+     "min": 5
+    },
+    {
+     "text": "Add cocktail sauce and lemon wedges.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Filet mignon",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "filet mignon steaks, about 280g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter for béarnaise, melted",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Layer the potato slices with melted butter in a tin to make potatoes Anna.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 200C until golden and tender.",
+     "min": 40
+    },
+    {
+     "text": "Whisk the yolks, vinegar and tarragon over low heat and drizzle in the melted butter for béarnaise.",
+     "min": 8
+    },
+    {
+     "text": "Broil the steaks to order and rest.",
+     "min": 12
+    },
+    {
+     "text": "Serve with béarnaise and potatoes Anna.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Roast chicken",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 85,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 1.6,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rosemary sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "wild rice mix",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stuff the chicken with rosemary and garlic, rub with oil and salt.",
+     "min": 8
+    },
+    {
+     "text": "Roast at 200C until cooked through.",
+     "min": 70
+    },
+    {
+     "text": "Rest.",
+     "min": 15
+    },
+    {
+     "text": "Cook the wild rice as the pack directs while the chicken rests.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Valentine hearts",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 55,
+   "make_ahead": "Up to 3 days, airtight",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, 1 whole and 1 white",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop red food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter and cool.",
+     "min": 12
+    },
+    {
+     "text": "Beat with the sugar and whole egg, then mix in the flour.",
+     "min": 8
+    },
+    {
+     "text": "Roll to 5mm and cut by hand into hearts.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 9
+    },
+    {
+     "text": "Cool, then ice half red and half white.",
+     "min": 24
+    }
+   ]
+  },
+  {
+   "n": "Soufflé for two",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, plus extra for the dishes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs, separated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter and sugar two ramekins.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate and butter, then stir in the yolks.",
+     "min": 6
+    },
+    {
+     "text": "Whisk the whites with the sugar to stiff peaks and fold in.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 190C until risen.",
+     "min": 15
+    },
+    {
+     "text": "Warm the cream and pour into the soufflé at the table.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

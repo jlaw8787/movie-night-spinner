@@ -1,0 +1,406 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Rocky Mountain smoked trout pâté",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "hot-smoked trout",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet rye crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "black pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the red onion thin and soak in the vinegar with the sugar to pickle.",
+     "min": 20
+    },
+    {
+     "text": "Flake the trout, removing any skin and bones.",
+     "min": 8
+    },
+    {
+     "text": "Blitz half the trout with the cream cheese, lemon juice, horseradish and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the rest of the trout with chopped dill so it stays chunky.",
+     "min": 3
+    },
+    {
+     "text": "Spread thick on rye crackers and top with the pickled onion.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ranger hut roast pumpkin soup",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "pumpkin, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pepitas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Toss the pumpkin with oil and salt.",
+     "min": 10
+    },
+    {
+     "text": "Roast until caramelised.",
+     "min": 30
+    },
+    {
+     "text": "Soften the diced onion and garlic in butter.",
+     "min": 5
+    },
+    {
+     "text": "Add the pumpkin and stock and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Blitz until smooth and stir in the cream.",
+     "min": 5
+    },
+    {
+     "text": "Toast the pepitas in a dry pan.",
+     "min": 3
+    },
+    {
+     "text": "Pour into a warmed thermos and scatter pepitas on each mug.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Campfire steak",
+   "course": "m",
+   "prep_min": 13,
+   "cook_min": 58,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rump steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wrap each potato with a knob of butter in foil.",
+     "min": 8
+    },
+    {
+     "text": "Bake in the coals.",
+     "min": 45
+    },
+    {
+     "text": "Rub the steaks with salt, pepper and chopped rosemary.",
+     "min": 5
+    },
+    {
+     "text": "Grill over hot coals on both sides.",
+     "min": 8
+    },
+    {
+     "text": "Rest on a board.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Treasury cash apple strudel",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "raisins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "sheets filo pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C. Fry the breadcrumbs in butter. Toss the sliced apples with the sugar, cinnamon, raisins and crumbs.",
+     "min": 12
+    },
+    {
+     "text": "Layer the filo, brushing each sheet with melted butter.",
+     "min": 15
+    },
+    {
+     "text": "Pile the apple along one edge and roll up.",
+     "min": 5
+    },
+    {
+     "text": "Bake.",
+     "min": 35
+    },
+    {
+     "text": "Cool a little, dust with icing sugar and serve with cream.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Gabe Walker's hot buttered rum",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the sugar, cinnamon, nutmeg and cloves.",
+     "min": 8
+    },
+    {
+     "text": "Put a heaped tablespoon in each mug with rum.",
+     "min": 2
+    },
+    {
+     "text": "Top with boiling water and stir until melted.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Maryland crab cakes",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day uncooked, keep chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab with the mayonnaise, Dijon, sliced spring onion and breadcrumbs.",
+     "min": 8
+    },
+    {
+     "text": "Shape into small cakes and chill for at least 30 minutes.",
+     "min": 32
+    },
+    {
+     "text": "Pan-fry until golden on both sides.",
+     "min": 10
+    },
+    {
+     "text": "Serve with lemon wedges.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Diner hash browns",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, reheat in a hot oven",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the potatoes and onion, then squeeze out as much liquid as you can.",
+     "min": 10
+    },
+    {
+     "text": "Season and shape into small flat cakes.",
+     "min": 5
+    },
+    {
+     "text": "Fry in butter over medium heat until crisp on both sides.",
+     "min": 20
+    },
+    {
+     "text": "Serve hot with sour cream and chives.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Eggs Benedict",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Hollandaise is best fresh, keep warm up to 30 minutes",
+   "ingredients": [
+    {
+     "q": 11,
+     "u": "",
+     "item": "eggs (3 yolks for the sauce, 8 for poaching)",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "English muffins",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter.",
+     "min": 3
+    },
+    {
+     "text": "Whisk the 3 yolks with lemon juice over a gentle simmer, then slowly pour in the butter until thick.",
+     "min": 7
+    },
+    {
+     "text": "Poach the eggs in barely simmering water.",
+     "min": 3
+    },
+    {
+     "text": "Toast the muffins and top with ham and the eggs.",
+     "min": 5
+    },
+    {
+     "text": "Spoon over the hollandaise and finish with chives.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Abandoned wedding cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 70,
+   "make_ahead": "Bake up to 1 day ahead, ice on the day",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour. Divide between 2 tins.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 175C until golden and springy.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely.",
+     "min": 40
+    },
+    {
+     "text": "Whip the cream and sandwich the cakes with jam and cream.",
+     "min": 8
+    },
+    {
+     "text": "Ice white with icing sugar mixed with milk.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Hale diner orange creamsicle shake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Best made just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "scoops vanilla ice cream (about 600 ml)",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the oranges for juice and zest one of them.",
+     "min": 5
+    },
+    {
+     "text": "Blend the juice and zest with the ice cream, milk and honey until smooth and frothy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into 4 tall glasses with an orange slice on the rim and a straw.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

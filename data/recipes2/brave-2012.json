@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Clan DunBroch Scotch eggs",
+   "course": "s",
+   "prep_min": 43,
+   "cook_min": 22,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 7,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "sausage meat",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sage, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil 6 of the eggs until just set.",
+     "min": 6
+    },
+    {
+     "text": "Cool and peel the eggs.",
+     "min": 10
+    },
+    {
+     "text": "Mix the sausage meat with the sage and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Wrap the sausage meat around each egg.",
+     "min": 15
+    },
+    {
+     "text": "Roll in flour, beaten egg and breadcrumbs.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 170C in two batches.",
+     "min": 16
+    },
+    {
+     "text": "Halve and serve with mustard.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Bear mum's salmon bites",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "oatcakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "sprigs dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the oatcakes with cream cheese.",
+     "min": 6
+    },
+    {
+     "text": "Top with folds of smoked salmon and a sprig of dill.",
+     "min": 8
+    },
+    {
+     "text": "Squeeze over a little lemon and lay out on a slate.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Scotch broth",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 126,
+   "make_ahead": "Up to 3 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "lamb neck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "turnips, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the lamb and barley in the water.",
+     "min": 60
+    },
+    {
+     "text": "Slice and dice the vegetables.",
+     "min": 12
+    },
+    {
+     "text": "Add the vegetables and simmer again.",
+     "min": 60
+    },
+    {
+     "text": "Shred the lamb back into the pot.",
+     "min": 10
+    },
+    {
+     "text": "Season well and stir through the parsley.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "The witch's spell cake",
+   "course": "w",
+   "prep_min": 16,
+   "cook_min": 55,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey, for glazing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and honey until pale.",
+     "min": 5
+    },
+    {
+     "text": "Beat in the eggs.",
+     "min": 3
+    },
+    {
+     "text": "Fold in the flour, oats and most of the raspberries.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 175C.",
+     "min": 40
+    },
+    {
+     "text": "Cool the cake.",
+     "min": 15
+    },
+    {
+     "text": "Glaze with warm honey and set a single raspberry on top.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Highland cranachan shake",
+   "course": "d",
+   "prep_min": 11,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the oats in a dry pan until golden.",
+     "min": 4
+    },
+    {
+     "text": "Blend the raspberries, milk, honey and most of the oats until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Whip the cream.",
+     "min": 4
+    },
+    {
+     "text": "Pour into tall glasses and top with whipped cream and the rest of the oats.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

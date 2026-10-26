@@ -1,0 +1,384 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Washington half-smokes",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 35,
+   "make_ahead": "Chilli up to 2 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "smoked half-pork half-beef sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Finely chop the onions, keeping half aside raw for serving.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the mince with the onion, chilli powder, tomatoes and water, stirring now and then, until thick.",
+     "min": 25
+    },
+    {
+     "text": "Split the sausages and grill until browned and hot.",
+     "min": 6
+    },
+    {
+     "text": "Serve in the buns with the chilli, mustard and the raw chopped onion.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Brooklyn smoked salmon bagel bites",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Up to 1 day, assembled and chilled",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "mini bagels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cracked black pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the bagels and toast until golden.",
+     "min": 5
+    },
+    {
+     "text": "Mix the cream cheese with the lemon zest, dill and salt.",
+     "min": 5
+    },
+    {
+     "text": "Spread thickly on each bagel half, then top with folds of smoked salmon, thin rings of red onion and a few capers.",
+     "min": 5
+    },
+    {
+     "text": "Finish with pepper and a little more dill.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Thai food from the list",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets, minced or finely chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "red chillies, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "fish sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "Thai basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rinse the rice and cook it, then keep warm.",
+     "min": 10
+    },
+    {
+     "text": "Stir-fry the chicken with the garlic and chilli in a hot wok until cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Add the fish sauce and sugar, then toss through the Thai basil.",
+     "min": 2
+    },
+    {
+     "text": "Fry the eggs in hot oil until the edges are crisp.",
+     "min": 3
+    },
+    {
+     "text": "Serve the chicken over rice with a fried egg on top.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Shield pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, bake just before serving",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen cherries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten for glazing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the cherries and blueberries with the sugar and cornflour.",
+     "min": 5
+    },
+    {
+     "text": "Line a pie dish with pastry, add the fruit and weave a lattice top from strips of pastry. Brush with egg.",
+     "min": 30
+    },
+    {
+     "text": "Bake at 190C until golden and bubbling.",
+     "min": 45
+    },
+    {
+     "text": "Serve warm with vanilla ice cream.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Smithsonian cherry lime phosphate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "Syrup up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen pitted cherries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dashes bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lime wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the cherries with the sugar and water, then mash well.",
+     "min": 10
+    },
+    {
+     "text": "Strain and cool the syrup completely.",
+     "min": 10
+    },
+    {
+     "text": "Fill tall glasses with crushed ice and add the cherry syrup, lime juice and bitters to each.",
+     "min": 0
+    },
+    {
+     "text": "Top with soda water, stir once and garnish with a cherry and a lime wedge.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,316 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Turin bagna cauda",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin anchovies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch radishes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the fennel, capsicum and radishes and the bread.",
+     "min": 12
+    },
+    {
+     "text": "Melt the butter in the oil over very low heat with crushed garlic and the anchovies until the anchovies dissolve.",
+     "min": 25
+    },
+    {
+     "text": "Keep warm over a candle and dip the vegetables and bread.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Blow the bloody doors off cheese toasts",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the grated cheddar and parmesan with the mustard and egg.",
+     "min": 5
+    },
+    {
+     "text": "Cut the bread into neat bars and toast one side.",
+     "min": 5
+    },
+    {
+     "text": "Spread the cheese mix on the other side.",
+     "min": 5
+    },
+    {
+     "text": "Grill until golden and bubbling.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Vitello tonnato",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 255,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pork loin",
+     "aisle": "Meat"
+    },
+    {
+     "q": 185,
+     "u": "g",
+     "item": "tinned tuna",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "anchovy fillets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the pork gently in salted water until 63C inside.",
+     "min": 45
+    },
+    {
+     "text": "Chill the pork.",
+     "min": 180
+    },
+    {
+     "text": "Blitz the tuna, anchovies, capers, mayonnaise and lemon juice until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Slice the pork thin and cover with the sauce and more capers.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Bonet",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 285,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "amaretti biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook part of the sugar to a dark caramel and pour into a loaf tin.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the eggs, remaining sugar, milk, cocoa, crushed amaretti and rum.",
+     "min": 15
+    },
+    {
+     "text": "Pour over and bake in a water bath at 160C.",
+     "min": 45
+    },
+    {
+     "text": "Chill and turn out.",
+     "min": 240
+    }
+   ]
+  },
+  {
+   "n": "Hang on a minute, lads bicerin",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "espressos",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk and whisk in the chopped chocolate and sugar until thick and smooth.",
+     "min": 8
+    },
+    {
+     "text": "Brew the espressos. Lightly whip the cream.",
+     "min": 7
+    },
+    {
+     "text": "Pour the hot chocolate into four small heatproof glasses.",
+     "min": 2
+    },
+    {
+     "text": "Gently pour an espresso over the back of a spoon on top, then float the cream. Serve without stirring.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

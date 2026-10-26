@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Trail cornbread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 19,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon until crisp, chop and keep the fat in the pan.",
+     "min": 6
+    },
+    {
+     "text": "Mix the cornmeal, flour, baking powder, egg and buttermilk.",
+     "min": 4
+    },
+    {
+     "text": "Stir in the bacon.",
+     "min": 2
+    },
+    {
+     "text": "Pour into the hot greased pan and bake at 220C.",
+     "min": 20
+    },
+    {
+     "text": "Serve with butter.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Saloon pickled eggs",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 4320,
+   "make_ahead": "Pickle 3 days ahead, keep chilled up to 2 weeks",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 425,
+     "u": "g",
+     "item": "can beetroot with its juice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black peppercorns",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs, cool and peel.",
+     "min": 10
+    },
+    {
+     "text": "Heat the vinegar with the beetroot juice, sugar, mustard seeds and peppercorns.",
+     "min": 5
+    },
+    {
+     "text": "Pour over the eggs in a jar with the beetroot.",
+     "min": 5
+    },
+    {
+     "text": "Pickle in the fridge for 3 days.",
+     "min": 4320
+    }
+   ]
+  },
+  {
+   "n": "Rainy night beef and bean stew",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 180,
+   "make_ahead": "Better the next day, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "dried chillies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "cans kidney beans, drained",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches.",
+     "min": 10
+    },
+    {
+     "text": "Add the sliced onion, crushed garlic and crumbled chillies.",
+     "min": 5
+    },
+    {
+     "text": "Pour in the tomatoes and water to cover.",
+     "min": 5
+    },
+    {
+     "text": "Braise at 160C.",
+     "min": 150
+    },
+    {
+     "text": "Add the kidney beans for the last 30 minutes.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Big Whiskey bread pudding, whiskey sauce",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "day-old white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "raisins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "brown sugar, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "whiskey",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Tear the bread into a buttered dish with the raisins.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs, milk, some of the sugar and cinnamon and pour over.",
+     "min": 5
+    },
+    {
+     "text": "Soak for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 170C until set and golden.",
+     "min": 45
+    },
+    {
+     "text": "Melt the remaining butter with the remaining sugar and cream and simmer.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the whiskey and pour over the warm pudding.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Whiskey trail coffee with cream",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "coarse ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "tsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "whiskey",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water to the boil, stir in the coffee and simmer.",
+     "min": 5
+    },
+    {
+     "text": "Take off the heat, splash in a little cold water to settle the grounds and rest.",
+     "min": 3
+    },
+    {
+     "text": "Lightly whip the cream until just thick.",
+     "min": 2
+    },
+    {
+     "text": "Put the sugar and whiskey in each mug and pour in the coffee carefully.",
+     "min": 3
+    },
+    {
+     "text": "Spoon the cream over the back of a spoon to float it on top.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

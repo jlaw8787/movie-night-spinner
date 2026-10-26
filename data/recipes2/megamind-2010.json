@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Metro City chicken quesadilla wedges",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cooked chicken, shredded",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar and mozzarella mix",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar tomato salsa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the capsicum and slice the spring onions.",
+     "min": 8
+    },
+    {
+     "text": "Mix the chicken, cheese, capsicum, spring onions and paprika.",
+     "min": 3
+    },
+    {
+     "text": "Spread over half of each tortilla and fold over.",
+     "min": 4
+    },
+    {
+     "text": "Cook in a dry pan over medium heat, a few minutes a side, until golden and melted.",
+     "min": 12
+    },
+    {
+     "text": "Cut each into four wedges and serve with salsa and sour cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Minion's fishbowl bites",
+   "course": "s",
+   "prep_min": 21,
+   "cook_min": 42,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cold water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, then mix in the grated cheddar and paprika.",
+     "min": 10
+    },
+    {
+     "text": "Add cold water to bring together and chill.",
+     "min": 30
+    },
+    {
+     "text": "Roll thin and cut into fish shapes.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 12
+    },
+    {
+     "text": "Serve in a round glass bowl.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Villain's chilli",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 195,
+   "make_ahead": "Up to 3 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "chipotles in adobo",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cans kidney beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the chipotles and drain the beans.",
+     "min": 8
+    },
+    {
+     "text": "Brown the beef in batches in oil.",
+     "min": 15
+    },
+    {
+     "text": "Add the tomatoes, cumin, chipotles and water to cover and simmer.",
+     "min": 150
+    },
+    {
+     "text": "Add the beans for the last stretch of cooking.",
+     "min": 30
+    },
+    {
+     "text": "Serve with sour cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Blue velvet cupcakes",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 43,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "blue food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and line a muffin tin.",
+     "min": 4
+    },
+    {
+     "text": "Whisk the flour, cocoa, sugar, egg, oil, buttermilk and colouring to a smooth batter.",
+     "min": 8
+    },
+    {
+     "text": "Bake in cases.",
+     "min": 18
+    },
+    {
+     "text": "Cool completely.",
+     "min": 25
+    },
+    {
+     "text": "Beat the cream cheese with icing sugar and pipe on top.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Evil lair cola spider floats",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "cola",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four tall glasses in the freezer.",
+     "min": 15
+    },
+    {
+     "text": "Put two scoops of ice cream in each glass.",
+     "min": 3
+    },
+    {
+     "text": "Pour cold cola slowly down the side, letting the foam settle before topping up.",
+     "min": 3
+    },
+    {
+     "text": "Shave chocolate over the foam and serve with a long spoon and a straw.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Carried watermelon wedges",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Chill up to 4 hours",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "watermelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "flaky sea salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the watermelon into thick wedges and chill well",
+     "min": 10
+    },
+    {
+     "text": "Top with feta, torn mint, a squeeze of lime and flaky salt",
+     "min": 5
+    },
+    {
+     "text": "Keep ice cold until serving",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Staff cabin onion dip and pretzels",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 75,
+   "make_ahead": "Dip keeps 2 days chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pretzels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 170,
+     "u": "g",
+     "item": "potato chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onions in butter over low heat, stirring often, until deep brown and jammy",
+     "min": 40
+    },
+    {
+     "text": "Cool and chop finely",
+     "min": 10
+    },
+    {
+     "text": "Beat the sour cream with the cream cheese, Worcestershire and salt, then fold in the onions and chives",
+     "min": 5
+    },
+    {
+     "text": "Chill the dip",
+     "min": 30
+    },
+    {
+     "text": "Serve with pretzels and potato chips",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Kellerman's resort brisket",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 250,
+   "make_ahead": "Up to 2 days, reheat gently in its juices",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef brisket",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the brisket in oil on all sides",
+     "min": 15
+    },
+    {
+     "text": "Lay the onions in a roasting dish and sit the brisket on top",
+     "min": 5
+    },
+    {
+     "text": "Mix the stock with tomato paste and paprika, pour over, cover tightly and braise at 150C",
+     "min": 240
+    },
+    {
+     "text": "Rest, slice across the grain and spoon over the juices",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Watermelon sorbet",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 270,
+   "make_ahead": "Up to 3 days frozen",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "watermelon flesh",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool",
+     "min": 5
+    },
+    {
+     "text": "Blitz the watermelon with lime juice and the syrup, then strain",
+     "min": 10
+    },
+    {
+     "text": "Pour into a tray and freeze for 4 hours, scraping with a fork every 30 minutes",
+     "min": 240
+    },
+    {
+     "text": "Scoop into cups",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Kellerman's pineapple and ginger punch",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "cm piece ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "ginger ale, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "pineapple chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the ginger, lime juice and sugar in a punch bowl until the sugar dissolves",
+     "min": 5
+    },
+    {
+     "text": "Add the pineapple and orange juices and chill",
+     "min": 60
+    },
+    {
+     "text": "Just before serving add the ginger ale, ice, orange slices, pineapple and torn mint",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

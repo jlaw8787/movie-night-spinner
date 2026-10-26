@@ -1,0 +1,338 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ferdinand's farmyard egg sandwiches",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 12,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "white pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices soft white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs hard, then cool in cold water and peel.",
+     "min": 12
+    },
+    {
+     "text": "Mash the eggs with the mayonnaise, chopped chives and white pepper.",
+     "min": 5
+    },
+    {
+     "text": "Spread on the bread with shredded lettuce, close up and cut into triangles.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Sheepdog trial cheese",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 60,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pecorino",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sheep's feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "fresh ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "figs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Take the cheeses out of the fridge an hour ahead so they lose the chill.",
+     "min": 60
+    },
+    {
+     "text": "Halve the figs and arrange everything on a board with the honey drizzled over and crackers alongside.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Shepherd's pie",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 97,
+   "make_ahead": "Up to 1 day, assemble then bake",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onion and carrots. Peel the potatoes and cut into chunks.",
+     "min": 15
+    },
+    {
+     "text": "Brown the mince hard in a large pan, then add the onion and carrot and cook a few minutes.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the tomato paste, Worcestershire sauce and stock and simmer until thick.",
+     "min": 40
+    },
+    {
+     "text": "Boil the potatoes until soft, drain and mash with the butter.",
+     "min": 20
+    },
+    {
+     "text": "Spoon the mince into a baking dish, top with mash and fork the surface. Bake at 200C until golden.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Baa-ram-ewe apple crumble",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, bake fresh to serve warm",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel, core and slice the apples.",
+     "min": 12
+    },
+    {
+     "text": "Stew the apples with the caster sugar and cinnamon until just soft, then tip into a baking dish.",
+     "min": 10
+    },
+    {
+     "text": "Rub the cold butter into the flour, then stir in the oats and brown sugar. Scatter over the apples.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 180C until golden and bubbling. Heat the custard and serve alongside.",
+     "min": 35
+    }
+   ]
+  },
+  {
+   "n": "Hoggett farm vanilla malted shake",
+   "course": "d",
+   "prep_min": 11,
+   "cook_min": 1,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "malted milk powder, to dust",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four tall glasses. Whip the cream to soft peaks.",
+     "min": 8
+    },
+    {
+     "text": "Blend the milk, ice cream, malt powder and honey until thick and frothy.",
+     "min": 1
+    },
+    {
+     "text": "Pour into the glasses, spoon the cream on top and dust with malt powder.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

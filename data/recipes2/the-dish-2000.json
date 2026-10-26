@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Parkes country scones",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 12,
+   "make_ahead": "Best the day they are baked",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar strawberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour.",
+     "min": 5
+    },
+    {
+     "text": "Mix in the milk and cream lightly with a knife, pat out and cut rounds.",
+     "min": 8
+    },
+    {
+     "text": "Pack close on a tray and bake at 220C until risen and golden.",
+     "min": 12
+    },
+    {
+     "text": "Whip the cream and serve the scones with jam and cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cricket on the dish snacks",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yeast spread",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "tasty cheese",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour and mix in the milk to a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Roll into a rectangle, spread thinly with yeast spread and cover with grated cheese.",
+     "min": 7
+    },
+    {
+     "text": "Roll up, slice into 12 and bake at 200C until golden.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Mayor's dinner for the ambassador",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pumpkin",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lamb racks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot water, for mint sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes and pumpkin and roast at 200C.",
+     "min": 15
+    },
+    {
+     "text": "Roast the lamb racks alongside at 200C until 56C inside.",
+     "min": 25
+    },
+    {
+     "text": "Roast the vegetables until golden.",
+     "min": 20
+    },
+    {
+     "text": "Rest the lamb, then carve into cutlets. Cook the peas.",
+     "min": 10
+    },
+    {
+     "text": "Mix chopped mint with the vinegar, sugar and hot water for the mint sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Full moon pavlova",
+   "course": "w",
+   "prep_min": 23,
+   "cook_min": 120,
+   "make_ahead": "Meringue up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whip the egg whites to soft peaks, add the sugar gradually until glossy, then fold in the cornflour and vinegar.",
+     "min": 15
+    },
+    {
+     "text": "Shape a perfect round on a lined tray and bake at 120C.",
+     "min": 90
+    },
+    {
+     "text": "Cool in the oven with the door closed.",
+     "min": 30
+    },
+    {
+     "text": "Whip the cream and top the pavlova with cream and passionfruit.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Parkes pub lemon lime shandy",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Syrup up to 1 day",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "x 375ml Australian lager",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons and limes and mix with the sugar syrup.",
+     "min": 8
+    },
+    {
+     "text": "Chill four pot glasses in the freezer.",
+     "min": 15
+    },
+    {
+     "text": "Pour a measure of the citrus syrup into each glass, add soda water, then top slowly with cold lager. Stir once and add a lemon wedge.",
+     "min": 5
+    },
+    {
+     "text": "Make extra with just soda for the drivers.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

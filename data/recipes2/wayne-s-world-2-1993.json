@@ -1,0 +1,366 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Stan Mikita's doughnuts",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, a little of the sugar, egg, milk and butter into a soft dough.",
+     "min": 5
+    },
+    {
+     "text": "Roll into small balls.",
+     "min": 8
+    },
+    {
+     "text": "Fry at 175C, turning, until golden, working in batches.",
+     "min": 10
+    },
+    {
+     "text": "Toss in the remaining sugar mixed with cinnamon while still warm.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Waynestock chilli lime corn cobs",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs, husked",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the butter with the lime zest, chilli, paprika and a pinch of salt.",
+     "min": 4
+    },
+    {
+     "text": "Grill the corn over high heat, turning, until charred in spots.",
+     "min": 12
+    },
+    {
+     "text": "Brush the hot cobs with the chilli lime butter and roll in the parmesan.",
+     "min": 3
+    },
+    {
+     "text": "Scatter with coriander and serve with lime wedges.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Aurora basement deep-dish pizza",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 33,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Italian sausages, meat squeezed out",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Press the dough into a well-oiled 26cm cast iron pan or cake tin, pushing it well up the sides.",
+     "min": 8
+    },
+    {
+     "text": "Layer the mozzarella over the base, then the sausage meat torn into small pieces.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the tomatoes with the garlic, oregano and sugar, then spread over the top.",
+     "min": 10
+    },
+    {
+     "text": "Scatter with parmesan and bake at 220C.",
+     "min": 30
+    },
+    {
+     "text": "Rest before cutting.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Backstage choc cookie ice cream sandwiches",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "Up to 1 week, keep frozen",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "chocolate chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "rainbow sprinkles, for the edges",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar with the egg. Mix in the flour, cocoa, bicarb and chocolate chips.",
+     "min": 8
+    },
+    {
+     "text": "Roll into balls, flatten slightly and bake at 180C. Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Soften the ice cream.",
+     "min": 10
+    },
+    {
+     "text": "Sandwich a thick scoop between two cookies and press together. Roll the edges in sprinkles.",
+     "min": 7
+    },
+    {
+     "text": "Freeze to firm up.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Waynestock pink lemonade slushie",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons, 5 juiced and 1 sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the sugar with water until dissolved, then cool.",
+     "min": 15
+    },
+    {
+     "text": "Blend the syrup with the lemon juice, raspberries, cold water and ice until slushy. Taste and adjust.",
+     "min": 4
+    },
+    {
+     "text": "Pour into big cups and garnish with lemon wheels and a few raspberries.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

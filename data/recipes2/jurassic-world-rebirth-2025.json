@@ -1,0 +1,324 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Dolores's equatorial fruit platter",
+   "course": "s",
+   "prep_min": 22,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "papaya",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet banana leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay banana leaves on a big platter.",
+     "min": 3
+    },
+    {
+     "text": "Cut the pineapple, mangoes and papaya into wedges and halve the passionfruit.",
+     "min": 15
+    },
+    {
+     "text": "Pile the fruit on the leaves and squeeze over lime juice.",
+     "min": 3
+    },
+    {
+     "text": "Sprinkle with salt mixed with chilli.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Mosasaur ocean prawns",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the garlic, chop the chilli, zest and juice a lime and cut the rest into wedges. Melt the butter.",
+     "min": 8
+    },
+    {
+     "text": "Toss the prawns with garlic, chilli, zest and butter.",
+     "min": 3
+    },
+    {
+     "text": "Grill a couple of minutes a side until charred.",
+     "min": 5
+    },
+    {
+     "text": "Pile onto a platter with lime wedges and pour over the pan butter.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "ParkerGenix expedition grilled fish",
+   "course": "m",
+   "prep_min": 17,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "snapper fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "banana leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the banana leaves in hot water. Rub the fish with lime juice, chilli and salt.",
+     "min": 10
+    },
+    {
+     "text": "Wrap each fillet in a leaf.",
+     "min": 5
+    },
+    {
+     "text": "Cook the rice in the coconut milk with a pinch of salt and a splash of water.",
+     "min": 18
+    },
+    {
+     "text": "Grill the parcels.",
+     "min": 10
+    },
+    {
+     "text": "Serve the fish in its leaf on the rice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Quetzalcoatlus nest egg mousse",
+   "course": "w",
+   "prep_min": 26,
+   "cook_min": 180,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag speckled chocolate eggs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet chocolate biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and cool slightly. Separate the eggs.",
+     "min": 10
+    },
+    {
+     "text": "Whip the cream and whisk the whites to soft peaks.",
+     "min": 8
+    },
+    {
+     "text": "Stir the yolks into the chocolate, then fold in the cream and whites.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into glasses and chill.",
+     "min": 180
+    },
+    {
+     "text": "Top with crushed biscuits and a speckled egg.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Jungle coconut cooler",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "coconut water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill tall glasses with ice and a few mint leaves.",
+     "min": 3
+    },
+    {
+     "text": "Pour in equal parts coconut water and pineapple juice.",
+     "min": 2
+    },
+    {
+     "text": "Squeeze in a wedge of lime, stir and serve cold.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

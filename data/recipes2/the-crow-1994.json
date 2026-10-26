@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Devil's Night popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "popping corn",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oil in a large lidded pot and pop the corn, shaking often.",
+     "min": 8
+    },
+    {
+     "text": "Toss with the melted butter, black salt and chilli flakes.",
+     "min": 2
+    },
+    {
+     "text": "Serve in dark bowls by candlelight.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Rainy rooftop toasties",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices thick white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "leg ham, sliced",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread on the outside and fill four sandwiches with cheddar and ham.",
+     "min": 5
+    },
+    {
+     "text": "Cook in a pan over medium heat, pressing down, until golden and melting.",
+     "min": 6
+    },
+    {
+     "text": "Cut each into long soldiers and serve hot.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Albrecht's diner meatloaf",
+   "course": "m",
+   "prep_min": 23,
+   "cook_min": 70,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with the onion, breadcrumbs, egg and salt and press into a loaf tin.",
+     "min": 10
+    },
+    {
+     "text": "Spread with tomato sauce mixed with brown sugar.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 60
+    },
+    {
+     "text": "Boil and mash the potatoes with butter, and make a gravy from the stock and flour.",
+     "min": 20
+    },
+    {
+     "text": "Serve thick slices with mash and gravy.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Devil's Night blackberry crumble",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "frozen blackberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the blackberries with the sugar and cornflour in a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour, stir in the oats and brown sugar and scatter over the fruit.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 180C until golden and bubbling at the edges.",
+     "min": 35
+    },
+    {
+     "text": "Rest, then serve hot with ice cream.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Rainy night Irish coffee",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "tsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "Irish whiskey",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "hot strong coffee",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the heatproof glasses with hot water and tip it out.",
+     "min": 3
+    },
+    {
+     "text": "Add brown sugar and whiskey to each, pour in hot coffee and stir until the sugar dissolves.",
+     "min": 3
+    },
+    {
+     "text": "Lightly whip the cream until just thickened but still pourable.",
+     "min": 4
+    },
+    {
+     "text": "Pour slowly over the back of a spoon so it floats on top. For anyone not drinking, make hot chocolate instead.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

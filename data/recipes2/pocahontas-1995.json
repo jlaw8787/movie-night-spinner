@@ -1,0 +1,380 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Meeko's biscuits",
+   "course": "s",
+   "prep_min": 21,
+   "cook_min": 14,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter, diced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, for spreading",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the cold butter into the flour and salt.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the buttermilk until it just comes together.",
+     "min": 3
+    },
+    {
+     "text": "Pat out and cut into rounds.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 220C until tall and golden.",
+     "min": 14
+    },
+    {
+     "text": "Split while warm and spread with butter and honey.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Grandmother Willow's harvest nuts",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 42,
+   "make_ahead": "Up to 1 week in an airtight jar",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pepitas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the nuts and pepitas with the maple syrup and salt.",
+     "min": 3
+    },
+    {
+     "text": "Spread on a lined tray.",
+     "min": 2
+    },
+    {
+     "text": "Roast at 170C for a few minutes, stirring once.",
+     "min": 12
+    },
+    {
+     "text": "Cool completely so they set.",
+     "min": 30
+    },
+    {
+     "text": "Break into rough clusters.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Virginia harvest stew",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 73,
+   "make_ahead": "Stew up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "butternut pumpkin, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can corn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the chicken and pumpkin.",
+     "min": 12
+    },
+    {
+     "text": "Brown the chicken in the oil.",
+     "min": 8
+    },
+    {
+     "text": "Add the pumpkin, corn, beans, tomatoes and paprika.",
+     "min": 2
+    },
+    {
+     "text": "Simmer until thick and the pumpkin is tender.",
+     "min": 40
+    },
+    {
+     "text": "Meanwhile mix the cornmeal, flour, baking powder, egg, milk and oil into a batter.",
+     "min": 8
+    },
+    {
+     "text": "Pour into a greased tin and bake at 200C until golden.",
+     "min": 20
+    },
+    {
+     "text": "Serve the stew with slices of cornbread.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Maple roasted peaches",
+   "course": "w",
+   "prep_min": 14,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "ripe peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pecans, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the peaches and remove the stones.",
+     "min": 5
+    },
+    {
+     "text": "Sit cut side up in a baking dish, dot with butter and drizzle with maple syrup.",
+     "min": 4
+    },
+    {
+     "text": "Roast at 200C until soft and syrupy.",
+     "min": 15
+    },
+    {
+     "text": "Crush the pecans.",
+     "min": 2
+    },
+    {
+     "text": "Serve warm with ice cream and pecans on top.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Flit's blueberry mint cooler",
+   "course": "d",
+   "prep_min": 11,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle most of the blueberries with the mint, lime juice and honey in a jug until the berries burst.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the cranberry juice and chill.",
+     "min": 30
+    },
+    {
+     "text": "Fill glasses with crushed ice and pour in the berry mix to halfway.",
+     "min": 3
+    },
+    {
+     "text": "Top with sparkling water and garnish with blueberries and a mint sprig.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

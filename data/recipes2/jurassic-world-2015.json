@@ -1,0 +1,314 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mosasaur feeding prawns",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Marinate up to 1 hour, grill fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes, one zested and the rest in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the prawns with the garlic, chilli, lime zest and melted butter.",
+     "min": 10
+    },
+    {
+     "text": "Grill for 2 minutes a side until charred.",
+     "min": 5
+    },
+    {
+     "text": "Pile high on a platter with lime wedges.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Gyrosphere cheese balls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "snipped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts, finely chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cheddar, cream cheese and chives. Roll into small balls.",
+     "min": 15
+    },
+    {
+     "text": "Coat in the walnuts mixed with the paprika.",
+     "min": 5
+    },
+    {
+     "text": "Chill for an hour until firm. Serve with water crackers.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Isla Nublar fish tacos",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 15,
+   "make_ahead": "Salsa up to 2 hours ahead, fish fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "flathead fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "red onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "small cabbage, shredded",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the pineapple and onion and mix with lime juice for the salsa. Mix the sour cream with lime for the crema.",
+     "min": 15
+    },
+    {
+     "text": "Dust the fish in the chilli, cumin and salt and pan-fry until just cooked. Flake into pieces.",
+     "min": 10
+    },
+    {
+     "text": "Warm the tortillas and shred the cabbage.",
+     "min": 5
+    },
+    {
+     "text": "Fill the tortillas with cabbage, fish, salsa and crema.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Dino egg chocolate mousse",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 130,
+   "make_ahead": "Make a day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs, separated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chocolate biscuits, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "speckled chocolate eggs",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and cool slightly.",
+     "min": 10
+    },
+    {
+     "text": "Whip the cream and whisk the egg whites to soft peaks. Stir the yolks into the chocolate, then fold in the cream and whites.",
+     "min": 10
+    },
+    {
+     "text": "Spoon into glasses and chill for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Top with crushed biscuits and a speckled chocolate egg.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Theme park frozen lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 130,
+   "make_ahead": "Freeze a day ahead, blitz fresh",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the lemon juice and water.",
+     "min": 8
+    },
+    {
+     "text": "Freeze in a tray for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Blitz with a few handfuls of ice until slushy and pour into big cups with straws.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

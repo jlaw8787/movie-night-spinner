@@ -1,0 +1,414 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Festival of Fools crêpes",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 76,
+   "make_ahead": "Batter up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, for the pan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, eggs and milk into a smooth batter.",
+     "min": 5
+    },
+    {
+     "text": "Rest the batter.",
+     "min": 60
+    },
+    {
+     "text": "Cook thin crepes in a buttered pan.",
+     "min": 15
+    },
+    {
+     "text": "Fill half with ham and gruyere, fold and warm until melted.",
+     "min": 8
+    },
+    {
+     "text": "Sprinkle the rest with sugar and lemon juice and fold into quarters.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Paris market baguette",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "fig jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette and brush with oil.",
+     "min": 4
+    },
+    {
+     "text": "Toast the slices until golden.",
+     "min": 8
+    },
+    {
+     "text": "Top half with brie and fig jam.",
+     "min": 5
+    },
+    {
+     "text": "Top the rest with chopped tomato, torn basil and salt.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Bell tower beef and mushroom braise",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 231,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "baby onions, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the bacon and beef and peel the baby onions.",
+     "min": 20
+    },
+    {
+     "text": "Brown the bacon, then the beef in batches.",
+     "min": 20
+    },
+    {
+     "text": "Add the onions and mushrooms and colour lightly.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the flour and tomato paste, then add the stock, vinegar, thyme and bay leaves.",
+     "min": 3
+    },
+    {
+     "text": "Cover and simmer gently until the beef is tender.",
+     "min": 180
+    },
+    {
+     "text": "Peel and boil the potatoes, then mash with butter and warm milk.",
+     "min": 25
+    },
+    {
+     "text": "Serve the braise over the mash.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Notre Dame madeleines",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Best eaten the day they are baked",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter and cool.",
+     "min": 3
+    },
+    {
+     "text": "Whisk the eggs, sugar and lemon zest until thick.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the flour and butter.",
+     "min": 3
+    },
+    {
+     "text": "Rest the batter.",
+     "min": 60
+    },
+    {
+     "text": "Spoon into greased shell tins.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 10
+    },
+    {
+     "text": "Dust with icing sugar.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Djali's grenadine lime sirop soda",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Grenadine up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "pomegranate juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the pomegranate juice and sugar until slightly syrupy, then add a squeeze of lemon.",
+     "min": 10
+    },
+    {
+     "text": "Cool the grenadine.",
+     "min": 20
+    },
+    {
+     "text": "Fill tall glasses with ice and add lime juice to each.",
+     "min": 5
+    },
+    {
+     "text": "Top with soda water, then slowly pour the grenadine down the side of each glass so it settles at the bottom. Serve with a spoon.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,326 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chopstick edamame and sesame cucumbers",
+   "course": "s",
+   "prep_min": 9,
+   "cook_min": 24,
+   "make_ahead": "Up to 3 hours",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen edamame",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "flaky salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cucumber into batons and pickle in the vinegar, sugar and salt.",
+     "min": 5
+    },
+    {
+     "text": "Pickle.",
+     "min": 20
+    },
+    {
+     "text": "Steam the edamame in their pods, then toss with flaky salt, chilli and sesame oil.",
+     "min": 4
+    },
+    {
+     "text": "Drain the cucumber and scatter with toasted sesame seeds. Serve both in small bowls with chopsticks only.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Bonsai broccolini",
+   "course": "s",
+   "prep_min": 3,
+   "cook_min": 9,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches broccolini",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oyster sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blanch the broccolini and drain. Slice the garlic.",
+     "min": 4
+    },
+    {
+     "text": "Char in a smoking pan with the garlic.",
+     "min": 5
+    },
+    {
+     "text": "Toss with oyster sauce and sesame oil. Stand them up in a dish like trees.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Johnny's country club spaghetti",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 52,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the onion and garlic.",
+     "min": 6
+    },
+    {
+     "text": "Brown the mince with the onion and garlic.",
+     "min": 10
+    },
+    {
+     "text": "Add the passata and oregano and simmer.",
+     "min": 30
+    },
+    {
+     "text": "Cook the spaghetti, drain and toss with the sauce.",
+     "min": 12
+    },
+    {
+     "text": "Serve with grated parmesan and basil.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Wax on wax off mochi",
+   "course": "w",
+   "prep_min": 23,
+   "cook_min": 20,
+   "make_ahead": "Best the day they are made",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "glutinous rice flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 220,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "red bean paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the rice flour, sugar and water into a dough.",
+     "min": 5
+    },
+    {
+     "text": "Steam.",
+     "min": 20
+    },
+    {
+     "text": "Knead smooth on a cornflour-dusted bench.",
+     "min": 6
+    },
+    {
+     "text": "Divide into 8, wrap each around a ball of red bean paste and dust with cornflour.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Miyagi's honey ginger green tea",
+   "course": "d",
+   "prep_min": 3,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece fresh ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "sencha green tea",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the water with sliced ginger.",
+     "min": 5
+    },
+    {
+     "text": "Cool to about 80C.",
+     "min": 8
+    },
+    {
+     "text": "Add the sencha and steep for 1 minute only, then strain.",
+     "min": 2
+    },
+    {
+     "text": "Stir in honey and a squeeze of lemon. Pour into small cups, or cool completely and serve over ice with a slice of lemon.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

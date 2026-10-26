@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wall-E's pressed picnic loaf",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 720,
+   "make_ahead": "Make the day before, keeps 2 days chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "round cob loaf, about 20cm",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "basil pesto",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "roasted capsicum",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salami, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "semi-dried tomatoes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the top off the loaf and pull out most of the soft inside.",
+     "min": 5
+    },
+    {
+     "text": "Spread the pesto inside the loaf.",
+     "min": 3
+    },
+    {
+     "text": "Layer in the ham, capsicum, mozzarella, spinach, salami and tomatoes, pressing each layer down.",
+     "min": 12
+    },
+    {
+     "text": "Put the lid back on, wrap tightly in plastic wrap and press under a heavy pot in the fridge overnight.",
+     "min": 720
+    },
+    {
+     "text": "Cut into wedges to serve.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Trash cube rice crispies",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "puffed rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a square tray with baking paper.",
+     "min": 3
+    },
+    {
+     "text": "Melt the butter and marshmallows together over low heat.",
+     "min": 7
+    },
+    {
+     "text": "Stir through the puffed rice until well coated.",
+     "min": 3
+    },
+    {
+     "text": "Press firmly into the tray and leave to set.",
+     "min": 60
+    },
+    {
+     "text": "Cut into neat cubes and stack into towers.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Lunch in a cup",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Soup up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pumpkin, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "red lentils",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices of sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion and ginger in the oil.",
+     "min": 8
+    },
+    {
+     "text": "Add the pumpkin, lentils, coconut milk and water and simmer until everything is soft.",
+     "min": 25
+    },
+    {
+     "text": "Blitz the soup until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Make grilled cheese from the sourdough, cheddar and butter.",
+     "min": 10
+    },
+    {
+     "text": "Serve the soup in big mugs with a straw and the toasties on the side.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Golden sponge cakes",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, fill just before serving",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line a tray.",
+     "min": 3
+    },
+    {
+     "text": "Whisk the eggs and sugar until pale and thick, then fold in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Pipe 12 fingers onto the tray and bake.",
+     "min": 12
+    },
+    {
+     "text": "Cool, then whip the cream with the vanilla.",
+     "min": 8
+    },
+    {
+     "text": "Split the sponges and pipe in the cream.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Axiom blue raspberry lemonade slushie",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "blue raspberry cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cups ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut into wheels",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the raspberries, lemon juice, cordial, sugar, water and ice until smooth and slushy.",
+     "min": 5
+    },
+    {
+     "text": "Pour into tall cups, add a lemon wheel and a straw and serve straight away.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,386 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "McGregor's radishes with whipped butter",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 7,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches radishes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "salted butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives, snipped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette, warmed",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wash and trim the radishes, leaving a little stem on, and halve the bigger ones.",
+     "min": 5
+    },
+    {
+     "text": "Keep in iced water so they crunch.",
+     "min": 15
+    },
+    {
+     "text": "Whip the butter with an electric beater until pale and fluffy.",
+     "min": 3
+    },
+    {
+     "text": "Spread the butter in a dish and sprinkle with sea salt and chives. Serve with the drained radishes and warm baguette.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Cottontail's garden crudités with herb dip",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch baby carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "snow peas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, cut into batons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "baby cos lettuces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Trim the carrots and snow peas. Cut the cucumber into batons and separate the lettuces into small leaves.",
+     "min": 12
+    },
+    {
+     "text": "Mix the yoghurt with the garlic, dill, mint, lemon zest and a pinch of salt.",
+     "min": 3
+    },
+    {
+     "text": "Arrange the vegetables around the bowl of dip on a big board.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Lake District garden vegetable pie",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potato and carrot briefly and drain.",
+     "min": 8
+    },
+    {
+     "text": "Fry the leeks in the butter, stir in the flour, then whisk in the milk and simmer until thick.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the cheddar, mustard, vegetables and peas.",
+     "min": 3
+    },
+    {
+     "text": "Tip into a pie dish, cover with the pastry and brush with egg.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Blackberry ambush crumble",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "blackberries (fresh or frozen)",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples, peeled and diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "vanilla custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the blackberries and apples with the sugar and cornflour and tip into a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour, then stir in the oats and brown sugar. Scatter over the fruit.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C until golden and bubbling.",
+     "min": 38
+    },
+    {
+     "text": "Serve warm with custard.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mrs. Rabbit's chamomile apple iced tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "chamomile tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags with the honey in boiling water.",
+     "min": 5
+    },
+    {
+     "text": "Remove the bags, cool, then chill.",
+     "min": 60
+    },
+    {
+     "text": "Stir in the apple juice and lemon juice.",
+     "min": 2
+    },
+    {
+     "text": "Fill glasses with ice and apple slices, pour over the tea and add a mint sprig.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

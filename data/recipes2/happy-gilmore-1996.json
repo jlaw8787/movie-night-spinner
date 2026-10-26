@@ -1,0 +1,332 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chubbs's golf ball cheese balls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the cream cheese with grated cheddar, Worcestershire sauce and chopped spring onions.",
+     "min": 8
+    },
+    {
+     "text": "Roll into golf ball sizes and chill.",
+     "min": 30
+    },
+    {
+     "text": "Toast and crush the pecans, roll the balls in them and spear each with a toothpick.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Grandma's biscuits",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 12,
+   "make_ahead": "Best the day they are baked",
+   "ingredients": [
+    {
+     "q": 140,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "honey, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the cold butter into the flour, baking powder and salt.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the buttermilk, fold the dough over itself a few times and cut into rounds.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 220C.",
+     "min": 12
+    },
+    {
+     "text": "Serve warm with butter and honey.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Grandma's meatloaf",
+   "course": "m",
+   "prep_min": 13,
+   "cook_min": 85,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the breadcrumbs in the milk. Grate the onion.",
+     "min": 5
+    },
+    {
+     "text": "Mix lightly with the beef and pork mince and egg, and press into a loaf tin.",
+     "min": 8
+    },
+    {
+     "text": "Glaze with the tomato sauce mixed with the sugar and bake at 180C.",
+     "min": 60
+    },
+    {
+     "text": "Peel and boil the potatoes and mash. Cook the peas.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Happy place lemon bars",
+   "course": "w",
+   "prep_min": 18,
+   "cook_min": 87,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Press most of the flour, 60g of the icing sugar and the butter into a lined 20cm tin.",
+     "min": 10
+    },
+    {
+     "text": "Bake the base at 170C.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the eggs, caster sugar, remaining flour, lemon juice and zest of two lemons, and pour over the hot base.",
+     "min": 8
+    },
+    {
+     "text": "Bake until just set.",
+     "min": 22
+    },
+    {
+     "text": "Cool, dust with the remaining icing sugar and cut into bars.",
+     "min": 45
+    }
+   ]
+  },
+  {
+   "n": "Happy place lemon shandy pitchers",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "l",
+     "item": "lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill two big jugs in the freezer.",
+     "min": 20
+    },
+    {
+     "text": "Stir the juice of three lemons with the sugar syrup and soda water.",
+     "min": 5
+    },
+    {
+     "text": "Pour half the lager into each jug down the side, then top each with half the lemon soda.",
+     "min": 3
+    },
+    {
+     "text": "Add lemon wheels and pour into chilled glasses.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

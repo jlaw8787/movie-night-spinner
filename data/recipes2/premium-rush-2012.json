@@ -1,0 +1,728 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Messenger fuel bars",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Up to 5 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dates, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "mixed seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, honey and brown sugar together.",
+     "min": 5
+    },
+    {
+     "text": "Stir through the oats, dates, peanuts and seeds.",
+     "min": 5
+    },
+    {
+     "text": "Press into a lined tin and bake at 170C.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely before cutting into bars.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Chinatown pork buns",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 280,
+   "make_ahead": "Pork up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pork neck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "hoisin sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "five spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "frozen bao buns",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the hoisin, honey, soy and five spice and coat the pork.",
+     "min": 5
+    },
+    {
+     "text": "Marinate in the fridge overnight, at least 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Roast at 200C, basting with the marinade.",
+     "min": 35
+    },
+    {
+     "text": "Rest the pork, then chop.",
+     "min": 10
+    },
+    {
+     "text": "Steam the bao buns until soft and fill with the pork.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Wilee's halal cart chicken over rice",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 90,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground coriander",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in the lemon juice, oregano, cumin and coriander.",
+     "min": 60
+    },
+    {
+     "text": "Cook the rice with the turmeric.",
+     "min": 20
+    },
+    {
+     "text": "Mix the yoghurt, mayo, vinegar, sugar and pepper into a white sauce.",
+     "min": 5
+    },
+    {
+     "text": "Griddle the chicken until cooked through, then chop.",
+     "min": 15
+    },
+    {
+     "text": "Serve on shredded lettuce with rice, white sauce and hot sauce.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Dispatch office cookies",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 750,
+   "make_ahead": "Dough up to 2 days, baked cookies up to 3 days",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "choc chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "flaky salt, to sprinkle",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter and cool.",
+     "min": 10
+    },
+    {
+     "text": "Beat with the sugar and egg, then mix in the flour, bicarb and choc chips.",
+     "min": 10
+    },
+    {
+     "text": "Rest the dough overnight in the fridge.",
+     "min": 720
+    },
+    {
+     "text": "Roll into 16 balls on lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C and sprinkle with flaky salt.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "No-brakes energy smoothie",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "frozen berries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "shots espresso, optional",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the bananas, berries, oats, peanut butter and milk until completely smooth.",
+     "min": 4
+    },
+    {
+     "text": "Add a shot of espresso for anyone riding through traffic.",
+     "min": 1
+    },
+    {
+     "text": "Pour into four tall glasses and drink straight away.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Lamb platter",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "lamb leg, thinly sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the lamb with the cumin, oregano, garlic and oil and stand.",
+     "min": 30
+    },
+    {
+     "text": "Cook the rice with the turmeric.",
+     "min": 20
+    },
+    {
+     "text": "Mix the yoghurt, mayo and vinegar into a white sauce.",
+     "min": 5
+    },
+    {
+     "text": "Fry the lamb in a very hot pan in batches until crisp at the edges.",
+     "min": 10
+    },
+    {
+     "text": "Serve on lettuce with rice, white sauce and hot sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Combo platter",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 75,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "lamb leg, thinly sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, extra for the hot ones",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in the lemon juice, half the cumin and oregano. Toss the lamb in the rest.",
+     "min": 45
+    },
+    {
+     "text": "Cook the rice with the turmeric.",
+     "min": 20
+    },
+    {
+     "text": "Mix the yoghurt, mayo and vinegar into a white sauce.",
+     "min": 5
+    },
+    {
+     "text": "Griddle the chicken and chop. Fry the lamb until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Serve half and half over lettuce and rice with white and hot sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Chicken or lamb in pita",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chicken thighs or lamb leg, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the meat in the cumin, oregano and lemon juice.",
+     "min": 30
+    },
+    {
+     "text": "Mix the yoghurt, mayo and vinegar into a white sauce.",
+     "min": 5
+    },
+    {
+     "text": "Griddle or fry the meat until cooked and crisp at the edges.",
+     "min": 10
+    },
+    {
+     "text": "Warm the pitas, fill with meat, lettuce, tomato and white sauce. Wrap tight.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Hot tea, soda, water",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the kettle and steep the tea bags.",
+     "min": 5
+    },
+    {
+     "text": "Serve soda and water over ice alongside.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

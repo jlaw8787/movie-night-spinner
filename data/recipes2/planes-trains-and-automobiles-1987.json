@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Braidwood Inn vending machine mix",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 days in a sealed container",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "salted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "pretzels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "chocolate bars, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "beef jerky",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the chocolate bars into chunks",
+     "min": 5
+    },
+    {
+     "text": "Tip everything into a shared bowl and mix gently",
+     "min": 2
+    },
+    {
+     "text": "Divide between four people for the motel snack break",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Shower curtain ring onion rings",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onions into thick rings and soak in the buttermilk",
+     "min": 30
+    },
+    {
+     "text": "Whisk the flour, lager and salt into a batter",
+     "min": 5
+    },
+    {
+     "text": "Heat the oil to 185C",
+     "min": 10
+    },
+    {
+     "text": "Drain the rings, dip in the batter and fry in small batches until puffed and golden",
+     "min": 10
+    },
+    {
+     "text": "Drain and serve hot",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Thanksgiving turkey sliders",
+   "course": "m",
+   "prep_min": 45,
+   "cook_min": 450,
+   "make_ahead": "Turkey brines the day before. Cooked turkey keeps 2 days chilled",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "turkey breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "stuffing mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the salt in the water, submerge the turkey and refrigerate for 6 hours",
+     "min": 360
+    },
+    {
+     "text": "Drain, pat dry and roast at 170C until the centre reaches 70C for 2 minutes",
+     "min": 55
+    },
+    {
+     "text": "Make the stuffing mix with the packet water amount, spread in a small dish and bake beside the turkey, then cut into squares",
+     "min": 25
+    },
+    {
+     "text": "Rest the turkey and slice",
+     "min": 15
+    },
+    {
+     "text": "Melt the butter, stir in the flour for a minute, whisk in the stock and simmer for gravy",
+     "min": 10
+    },
+    {
+     "text": "Fill the buns with turkey, cranberry sauce, stuffing squares and a spoonful of gravy",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Thanksgiving pumpkin pie",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 140,
+   "make_ahead": "Up to 1 day chilled. Whip the cream on the day",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "peeled pumpkin",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.125,
+     "u": "tsp",
+     "item": "nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the pumpkin at 200C until soft, then puree",
+     "min": 30
+    },
+    {
+     "text": "Line a 20cm pie dish with the pastry and blind-bake with paper and weights at 180C, then remove the weights and bake again",
+     "min": 20
+    },
+    {
+     "text": "Whisk the puree with eggs, sugar, half the cream and the spices",
+     "min": 10
+    },
+    {
+     "text": "Pour into the crust and bake at 170C until just set",
+     "min": 50
+    },
+    {
+     "text": "Cool, whip the remaining cream softly and serve",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Home for Thanksgiving apple cider punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the apple juice, two cinnamon sticks, cloves, orange and sugar in a saucepan",
+     "min": 3
+    },
+    {
+     "text": "Simmer gently for 15 minutes without boiling",
+     "min": 15
+    },
+    {
+     "text": "Strain into a jug and pour into four mugs",
+     "min": 2
+    },
+    {
+     "text": "Add bourbon to each adult mug and serve with a fresh cinnamon stick",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

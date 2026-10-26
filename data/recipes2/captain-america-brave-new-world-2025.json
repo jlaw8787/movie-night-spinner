@@ -1,0 +1,340 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cherry blossom crostini",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen cherries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette and toast until golden.",
+     "min": 8
+    },
+    {
+     "text": "Simmer the cherries with honey and thyme until jammy, then cool.",
+     "min": 8
+    },
+    {
+     "text": "Whip the ricotta until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Spread the toasts with ricotta and spoon the cherries on top.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Falcon wings",
+   "course": "s",
+   "prep_min": 11,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with paprika and salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Warm the barbecue sauce, honey and butter until glossy.",
+     "min": 4
+    },
+    {
+     "text": "Toss the wings through the glaze and serve with napkins.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Sam's Louisiana gumbo",
+   "course": "m",
+   "prep_min": 18,
+   "cook_min": 88,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery stalks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "smoked sausage",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "okra",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the vegetables and slice the sausage and chicken.",
+     "min": 15
+    },
+    {
+     "text": "Cook the flour in the oil, stirring, until dark brown.",
+     "min": 20
+    },
+    {
+     "text": "Add the vegetables and soften them.",
+     "min": 8
+    },
+    {
+     "text": "Add the chicken, sausage, okra and water and simmer.",
+     "min": 60
+    },
+    {
+     "text": "Cook the rice and serve the gumbo over it.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Cherry blossom pavlova",
+   "course": "w",
+   "prep_min": 29,
+   "cook_min": 90,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen cherries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar, for the cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet edible rose petals",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to stiff peaks, then add the sugar a spoon at a time until glossy.",
+     "min": 12
+    },
+    {
+     "text": "Shape into a round on a lined tray.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 120C, then cool in the oven.",
+     "min": 90
+    },
+    {
+     "text": "Cook the cherries briefly with sugar and whip the cream.",
+     "min": 10
+    },
+    {
+     "text": "Top the pavlova with cream, cherries and rose petals.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Ponchatoula strawberry lemon fizz",
+   "course": "d",
+   "prep_min": 13,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Hull the strawberries, keeping four for garnish. Juice one lemon and peel strips from the other.",
+     "min": 5
+    },
+    {
+     "text": "Blitz the rest of the strawberries with sugar and lemon juice, then sieve.",
+     "min": 4
+    },
+    {
+     "text": "Fill four glasses with ice and share the puree between them.",
+     "min": 2
+    },
+    {
+     "text": "Top with soda water, stir gently, and finish with a halved strawberry and lemon peel.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

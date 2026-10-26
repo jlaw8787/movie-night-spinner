@@ -1,0 +1,376 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Keith's tea and brown butter shortbread",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 75,
+   "make_ahead": "Keeps 1 week airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "demerara sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch flaky sea salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "loose black tea",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter and cook until nutty and golden brown. Chill until firm but soft.",
+     "min": 20
+    },
+    {
+     "text": "Beat with the caster sugar until pale, then mix in the flour, cornflour and salt.",
+     "min": 10
+    },
+    {
+     "text": "Press into a lined 20cm square tin, sprinkle with demerara and flaky salt, prick all over.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 160C for 35 minutes.",
+     "min": 35
+    },
+    {
+     "text": "Cut into fingers while warm.",
+     "min": 5
+    },
+    {
+     "text": "Brew a pot of black tea for 4 minutes and serve alongside with milk.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Rental kitchen salami and cheddar toasties",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sharp cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "slices salami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles, sliced",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter one side of every slice of sourdough.",
+     "min": 4
+    },
+    {
+     "text": "On the unbuttered side of half the slices layer cheese, salami and pickles, then more cheese. Top with the remaining bread, buttered side out.",
+     "min": 8
+    },
+    {
+     "text": "Cook in a pan over medium-low heat for 3 to 4 minutes a side, pressing down, until golden and melted.",
+     "min": 8
+    },
+    {
+     "text": "Cut into fingers and serve with hot English mustard.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Detroit-style pizza",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 75,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil, for the tin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Press the dough into an oiled rectangular tin and prove for 30 minutes.",
+     "min": 35
+    },
+    {
+     "text": "Simmer the tomatoes with the garlic into a sauce.",
+     "min": 15
+    },
+    {
+     "text": "Cover the dough right to the edges with the cheeses and pepperoni.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 250C for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Stripe the tomato sauce on top.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Sticky date pudding",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 40,
+   "make_ahead": "Sauce keeps 3 days, reheat to serve",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dates, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the dates in the boiling water with the bicarb.",
+     "min": 10
+    },
+    {
+     "text": "Beat some of the butter with some of the sugar and the eggs, then fold in the flour and dates.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Simmer the rest of the butter, sugar and the cream into a sauce and pour over.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Barbary Street red wine sangria",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 120,
+   "make_ahead": "Chill up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "medium-bodied red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Combine the wine, brandy, sugar, orange, apple and cinnamon in a large jug. Stir to dissolve the sugar.",
+     "min": 8
+    },
+    {
+     "text": "Chill for at least 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Just before serving, add plenty of ice and top with lemonade. Pour into glasses with some of the fruit in each.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

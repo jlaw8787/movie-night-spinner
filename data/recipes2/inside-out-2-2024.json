@@ -1,0 +1,364 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pouchy's every-option platter",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "red grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "roasted almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "baby carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "hummus",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cheddar into cubes.",
+     "min": 6
+    },
+    {
+     "text": "Arrange everything on one big board, filling every gap.",
+     "min": 8
+    },
+    {
+     "text": "Add a few more crackers just in case.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Joy's honey butter sunshine popcorn",
+   "course": "s",
+   "prep_min": 14,
+   "cook_min": 32,
+   "make_ahead": "Up to 2 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "flaky salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in the oil in a lidded pot and tip into a large roasting tin.",
+     "min": 6
+    },
+    {
+     "text": "Melt the butter with the honey, brown sugar and turmeric and bubble.",
+     "min": 5
+    },
+    {
+     "text": "Pour over the popcorn and toss well.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 150C, stirring halfway.",
+     "min": 15
+    },
+    {
+     "text": "Spread on baking paper to cool and crisp.",
+     "min": 15
+    },
+    {
+     "text": "Sprinkle with flaky salt and serve in a big bowl.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Family taco night",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "taco shells",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the cumin and paprika.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the tomato paste and water and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Shred the lettuce, dice the tomato and grate the cheddar.",
+     "min": 12
+    },
+    {
+     "text": "Warm the taco shells.",
+     "min": 4
+    },
+    {
+     "text": "Set everything out so everyone builds their own.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Firehawks hockey puck brownies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 58,
+   "make_ahead": "Up to 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the butter.",
+     "min": 6
+    },
+    {
+     "text": "Whisk in the sugar and eggs.",
+     "min": 6
+    },
+    {
+     "text": "Fold in the flour and cocoa.",
+     "min": 3
+    },
+    {
+     "text": "Pour into a lined 20cm tin.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 170C.",
+     "min": 28
+    },
+    {
+     "text": "Cool before cutting.",
+     "min": 30
+    },
+    {
+     "text": "Cut into squares.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Calm down chamomile",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 34,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "chamomile tea bags",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea bags in the boiling water, then remove.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the honey.",
+     "min": 1
+    },
+    {
+     "text": "Cool completely.",
+     "min": 30
+    },
+    {
+     "text": "Mix with the apple juice and pour over ice in tall glasses.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

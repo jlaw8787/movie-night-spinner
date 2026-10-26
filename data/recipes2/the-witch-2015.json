@@ -1,0 +1,342 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Skillet cornbread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, soft, for serving and pan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat a buttered cast iron pan in a 220C oven",
+     "min": 10
+    },
+    {
+     "text": "Mix the cornmeal, flour, baking powder, buttermilk, egg and melted butter briefly",
+     "min": 5
+    },
+    {
+     "text": "Pour into the hot pan and bake",
+     "min": 20
+    },
+    {
+     "text": "Beat soft butter with the honey and serve alongside",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Woodland apples and cheese",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "red apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the apples thin and toss in lemon juice",
+     "min": 6
+    },
+    {
+     "text": "Toast the walnuts at 170C",
+     "min": 8
+    },
+    {
+     "text": "Fan the apples on a board with sliced cheddar",
+     "min": 4
+    },
+    {
+     "text": "Scatter over the walnuts and drizzle with honey",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Black Phillip's goat stew",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 195,
+   "make_ahead": "Better the next day, keeps 3 days",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "goat or lamb shoulder, in big pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the meat in oil in batches",
+     "min": 15
+    },
+    {
+     "text": "Soften the onions, carrots and garlic",
+     "min": 8
+    },
+    {
+     "text": "Add the stock, thyme and bay leaves",
+     "min": 3
+    },
+    {
+     "text": "Cover and braise at 160C until it falls apart",
+     "min": 180
+    },
+    {
+     "text": "Serve with crusty bread",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Baked apples",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "dates, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pouring cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Core the apples",
+     "min": 5
+    },
+    {
+     "text": "Mix the butter, sugar, cinnamon and dates and fill each apple",
+     "min": 8
+    },
+    {
+     "text": "Add a splash of water to the dish",
+     "min": 1
+    },
+    {
+     "text": "Bake at 180C, basting twice",
+     "min": 40
+    },
+    {
+     "text": "Serve with pouring cream",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mulled cider",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the juice, spices and orange peel in a saucepan",
+     "min": 3
+    },
+    {
+     "text": "Simmer gently",
+     "min": 15
+    },
+    {
+     "text": "Strain and ladle into four mugs. Drink it by the fire with the door shut",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

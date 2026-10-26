@@ -1,0 +1,386 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Space station dumplings",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cups shredded wombok",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork with wombok, ginger and spring onions.",
+     "min": 10
+    },
+    {
+     "text": "Fill the wrappers and pleat.",
+     "min": 20
+    },
+    {
+     "text": "Fry until crisp underneath.",
+     "min": 4
+    },
+    {
+     "text": "Add water, cover and steam.",
+     "min": 4
+    },
+    {
+     "text": "Serve with black vinegar and chilli oil.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Soyuz pelmeni",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 32,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the beef, pork and onion with salt and pepper.",
+     "min": 8
+    },
+    {
+     "text": "Fill the wrappers, fold into little hats and pinch closed.",
+     "min": 22
+    },
+    {
+     "text": "Boil until they float, plus 3 minutes.",
+     "min": 7
+    },
+    {
+     "text": "Toss in butter.",
+     "min": 2
+    },
+    {
+     "text": "Serve with sour cream and chopped dill.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Kowalski's Ganges sunrise curry",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 31,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch kasoori methi",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "naan breads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion with ginger and garlic.",
+     "min": 8
+    },
+    {
+     "text": "Add the garam masala and tomatoes.",
+     "min": 2
+    },
+    {
+     "text": "Add the chicken and simmer.",
+     "min": 25
+    },
+    {
+     "text": "Cook the basmati.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the cream and kasoori methi.",
+     "min": 3
+    },
+    {
+     "text": "Warm the naan.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Floating meringue clouds",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 150,
+   "make_ahead": "Meringues up to 3 days airtight",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites with sugar to stiff glossy peaks.",
+     "min": 10
+    },
+    {
+     "text": "Pipe into clouds on a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 100C.",
+     "min": 90
+    },
+    {
+     "text": "Cool in the oven.",
+     "min": 60
+    },
+    {
+     "text": "Whip the cream and serve the meringues with cream and passionfruit pulp.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mission control orange ginger fizz",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 42,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "cm knob of ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the ginger with sugar and water, then strain.",
+     "min": 7
+    },
+    {
+     "text": "Cool the syrup and squeeze the oranges and lime.",
+     "min": 15
+    },
+    {
+     "text": "Stir the juice and syrup together in a jug.",
+     "min": 2
+    },
+    {
+     "text": "Chill for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Fill four tall glasses with ice, half fill with juice and top with sparkling water, then add an orange wheel.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

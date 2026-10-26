@@ -1,0 +1,424 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wakanda battle suya",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "roasted peanuts, ground",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef rump, thinly sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grind the peanuts with the paprika, ginger, chilli flakes and salt.",
+     "min": 5
+    },
+    {
+     "text": "Coat the beef in the spice and thread onto skewers.",
+     "min": 10
+    },
+    {
+     "text": "Grill hot until charred.",
+     "min": 8
+    },
+    {
+     "text": "Serve with sliced red onion and tomato.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "School bus ham and cheese pizza scrolls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "ham, chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, then mix in the milk to a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Roll out to a 30 x 40cm rectangle and spread with tomato paste.",
+     "min": 7
+    },
+    {
+     "text": "Scatter with ham, cheddar and oregano, then roll up from the long side.",
+     "min": 3
+    },
+    {
+     "text": "Cut into 12 slices and lay cut side up in a lined tin.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 210C until golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Thanos's farm stew",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "butternut pumpkin, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins chickpeas, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion with the cumin in the oil.",
+     "min": 15
+    },
+    {
+     "text": "Add the pumpkin, chickpeas, tomatoes and water and simmer until the pumpkin is tender.",
+     "min": 25
+    },
+    {
+     "text": "Stir in the spinach until wilted.",
+     "min": 2
+    },
+    {
+     "text": "Warm the flatbreads and serve alongside.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Infinity Stone fruit jelly cups",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 245,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "packets jelly crystals (red, orange, green)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "tsp",
+     "item": "gelatine powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "purple grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dried butterfly pea flowers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can pineapple pieces, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "purple grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make up the red, orange and green jellies as the packets say.",
+     "min": 15
+    },
+    {
+     "text": "Steep the pea flowers in the boiling water, strain, then dissolve some gelatine in each of the apple, grape and blue liquids.",
+     "min": 10
+    },
+    {
+     "text": "Divide the fruit between glasses by colour and pour the matching jelly over each.",
+     "min": 10
+    },
+    {
+     "text": "Chill until set, at least 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Whip the cream with the vanilla and spoon on top to serve.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Wakanda pineapple ginger cooler",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "5cm piece ginger, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and chop the pineapple, then blend with the ginger, lime juice, honey and water until smooth.",
+     "min": 10
+    },
+    {
+     "text": "Strain through a sieve, pressing on the pulp.",
+     "min": 5
+    },
+    {
+     "text": "Chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Pour into glasses of ice, top with soda water and garnish with mint and a pineapple wedge.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

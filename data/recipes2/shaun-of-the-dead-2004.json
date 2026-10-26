@@ -1,0 +1,316 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Winchester pub nuts",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg white",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "peanuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg white until frothy and stir in the paprika, salt and sugar",
+     "min": 5
+    },
+    {
+     "text": "Toss through the peanuts and spread on a lined tray",
+     "min": 5
+    },
+    {
+     "text": "Roast at 160C, stirring once",
+     "min": 15
+    },
+    {
+     "text": "Cool and serve in small bowls",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Corner shop crisps",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "malt vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes paper thin on a mandoline, rinse well and dry completely",
+     "min": 15
+    },
+    {
+     "text": "Heat the oil to 170C",
+     "min": 8
+    },
+    {
+     "text": "Fry in small batches until golden and crisp",
+     "min": 20
+    },
+    {
+     "text": "Drain, sprinkle with sea salt flakes and splash with vinegar",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pub pie and chips",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 195,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 330,
+     "u": "ml",
+     "item": "English ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches, then soften the onions",
+     "min": 20
+    },
+    {
+     "text": "Stir in the flour first, then add the ale and stock, cover and braise at 160C",
+     "min": 150
+    },
+    {
+     "text": "Cool slightly, tip into a pie dish and cover with puff pastry",
+     "min": 10
+    },
+    {
+     "text": "Bake at 200C",
+     "min": 25
+    },
+    {
+     "text": "Fry the chips twice",
+     "min": 25
+    },
+    {
+     "text": "Cook and crush the peas",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Sticky toffee pudding",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dates, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the dates in the boiling water with the bicarb",
+     "min": 10
+    },
+    {
+     "text": "Beat some of the butter with half the sugar, add the eggs, then fold in the flour and dates",
+     "min": 10
+    },
+    {
+     "text": "Bake in a greased dish at 180C",
+     "min": 30
+    },
+    {
+     "text": "Simmer the remaining butter, sugar and most of the cream",
+     "min": 3
+    },
+    {
+     "text": "Pour the sauce over and serve with the remaining cream",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Pint at the Winchester",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "English ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "lager",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four cans or bottles of English ale, or lager for anyone who prefers it",
+     "min": 3
+    },
+    {
+     "text": "Pour into pint glasses at a tilt so the head settles",
+     "min": 2
+    },
+    {
+     "text": "Raise them to the Winchester",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,390 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Miami croquetas",
+   "course": "s",
+   "prep_min": 38,
+   "cook_min": 490,
+   "make_ahead": "Chill overnight, up to 1 day before frying",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "leg ham, finely chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "plain flour, for dusting",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, stir in the flour and cook briefly. Gradually whisk in the milk and cook until a very thick bechamel forms.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the ham and nutmeg.",
+     "min": 2
+    },
+    {
+     "text": "Spread in a shallow dish, cool promptly and refrigerate overnight.",
+     "min": 480
+    },
+    {
+     "text": "Shape into logs.",
+     "min": 15
+    },
+    {
+     "text": "Dust with flour, dip in beaten egg and coat in breadcrumbs.",
+     "min": 10
+    },
+    {
+     "text": "Fry in 180C oil until golden and hot throughout. Drain.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Fried sweet plantains",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "very ripe plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the plantains and cut diagonally into slices.",
+     "min": 5
+    },
+    {
+     "text": "Fry in batches in the hot oil until caramelised and soft.",
+     "min": 12
+    },
+    {
+     "text": "Drain and finish with sea salt.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Mike and Marcus swap Cuban sandwich",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 690,
+   "make_ahead": "Marinate and roast the pork ahead",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "boneless pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long soft rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sliced dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the pork with the orange and lime juice, crushed garlic, oregano, cumin and salt.",
+     "min": 10
+    },
+    {
+     "text": "Marinate overnight in the fridge.",
+     "min": 480
+    },
+    {
+     "text": "Put in a covered roasting dish with the water and roast at 160C until tender.",
+     "min": 180
+    },
+    {
+     "text": "Rest the pork, then shred.",
+     "min": 20
+    },
+    {
+     "text": "Split the rolls, spread with mustard and fill with pork, ham, Swiss cheese and pickles.",
+     "min": 10
+    },
+    {
+     "text": "Butter the outsides and press in a hot sandwich press until crisp and the filling is piping hot.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Key lime pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 295,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sweetened condensed milk (1 tin)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits, mix with the butter and press into a 20cm pie dish.",
+     "min": 10
+    },
+    {
+     "text": "Bake the crust at 180C.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the condensed milk with the yolks, lime juice and zest and pour into the crust.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 160C until just set.",
+     "min": 15
+    },
+    {
+     "text": "Cool, then refrigerate.",
+     "min": 270
+    },
+    {
+     "text": "Softly whip the cream and spread over the pie.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mike Lowrey's ocean view mojito",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "large bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Gently muddle the mint leaves with the syrup and lime juice in a jug, without shredding the mint.",
+     "min": 3
+    },
+    {
+     "text": "Add the rum and divide between glasses filled with crushed ice.",
+     "min": 2
+    },
+    {
+     "text": "Top with soda water, stir gently and garnish with a mint sprig.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

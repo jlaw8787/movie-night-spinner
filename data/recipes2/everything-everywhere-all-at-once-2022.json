@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Everything bagel bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "mini bagels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "everything bagel seasoning",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve and toast 8 mini bagels.",
+     "min": 5
+    },
+    {
+     "text": "Beat the cream cheese with the finely sliced spring onions.",
+     "min": 5
+    },
+    {
+     "text": "Spread thickly on each half and shower generously with the everything bagel seasoning.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Chinese New Year dumplings",
+   "course": "s",
+   "prep_min": 45,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork mince with the finely chopped cabbage, the soy sauce and the sesame oil.",
+     "min": 13
+    },
+    {
+     "text": "Fill the dumpling wrappers and pleat closed.",
+     "min": 13
+    },
+    {
+     "text": "Fry flat side down until golden, add the water, cover and steam 6 minutes.",
+     "min": 17
+    },
+    {
+     "text": "Serve with black vinegar and chilli oil.",
+     "min": 13
+    }
+   ]
+  },
+  {
+   "n": "Raccacoonie hibachi stir-fry",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef sirloin",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "zucchini",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice the day before.",
+     "min": 11
+    },
+    {
+     "text": "Sear the sliced sirloin and the peeled prawns on a smoking plate with the garlic butter and soy.",
+     "min": 15
+    },
+    {
+     "text": "Add sliced zucchini and onion.",
+     "min": 11
+    },
+    {
+     "text": "Fry the rice with the eggs, butter and soy alongside, and serve everything together.",
+     "min": 17
+    }
+   ]
+  },
+  {
+   "n": "Sesame balls",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "glutinous rice flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "red bean paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the glutinous rice flour with the sugar and the hot water into a soft dough.",
+     "min": 15
+    },
+    {
+     "text": "Wrap the balls around teaspoons of red bean paste, wet and roll in the sesame seeds.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 160C for 6 minutes, pressing gently, until puffed and golden.",
+     "min": 26
+    }
+   ]
+  },
+  {
+   "n": "Bubble tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "tapioca pearls",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 810,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the black tea bags in the boiling water for 5 minutes and chill.",
+     "min": 21
+    },
+    {
+     "text": "Cook the tapioca pearls as the packet says and toss in the brown sugar melted with the water.",
+     "min": 29
+    },
+    {
+     "text": "Spoon pearls into glasses, add ice, the tea and the milk, and serve with wide straws.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

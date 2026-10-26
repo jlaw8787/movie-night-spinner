@@ -1,0 +1,282 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lou's Tavern spiced nuts",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "mixed nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter with the brown sugar, the cayenne, the chopped rosemary and the salt.",
+     "min": 4
+    },
+    {
+     "text": "Toss through the mixed nuts, spread on a lined tray and roast at 170C for 12 minutes, stirring halfway.",
+     "min": 15
+    },
+    {
+     "text": "Cool 5 minutes so they crisp.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Banquet hall vol-au-vents",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "chicken breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "button mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "vol-au-vent cases",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the diced chicken breast in butter, add the sliced mushrooms, then stir in the flour and the cream and simmer until thick.",
+     "min": 18
+    },
+    {
+     "text": "Warm the vol-au-vent cases at 180C for 5 minutes, fill them and pass around on a tray.",
+     "min": 17
+    }
+   ]
+  },
+  {
+   "n": "Single-serving chicken and rice",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken thighs, then add the diced onion and the garlic cloves.",
+     "min": 7
+    },
+    {
+     "text": "Pour in the chicken stock, cover and simmer 25 minutes.",
+     "min": 36
+    },
+    {
+     "text": "Cook the long grain rice, stir through the butter and the peas.",
+     "min": 12
+    },
+    {
+     "text": "Plate in tidy single portions, like the airline trays.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Single-serving chocolate pots",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 185,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream with the sugar until steaming.",
+     "min": 3
+    },
+    {
+     "text": "Pour over the chopped dark chocolate and stir until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Divide between the small cups and chill for 3 hours until set.",
+     "min": 188
+    }
+   ]
+  },
+  {
+   "n": "Lou's Tavern boilermaker",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "375ml cans lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "salted peanuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the cans of lager until icy and the pint glasses in the freezer for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Pour the lager into the frosted glasses.",
+     "min": 1
+    },
+    {
+     "text": "Pour the bourbon into shot glasses.",
+     "min": 1
+    },
+    {
+     "text": "Drink the shot and chase it with the beer, or drop the shot glass carefully into the beer.",
+     "min": 1
+    },
+    {
+     "text": "Serve with a bowl of salted peanuts.",
+     "min": 1
+    },
+    {
+     "text": "Ginger beer and a squeeze of lime for anyone not drinking.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

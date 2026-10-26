@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cab driver's front seat mix",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Keeps 1 week in an airtight tin",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pretzels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cashews",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "beef jerky",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the pretzels and nuts with melted butter, paprika and sugar.",
+     "min": 8
+    },
+    {
+     "text": "Roast at 160C.",
+     "min": 15
+    },
+    {
+     "text": "Cool.",
+     "min": 10
+    },
+    {
+     "text": "Tip into paper bags with strips of jerky.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Koreatown nightclub fried chicken",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "potato starch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "gochujang",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings in the starch.",
+     "min": 5
+    },
+    {
+     "text": "Fry at 160C, then rest.",
+     "min": 18
+    },
+    {
+     "text": "Fry again at 190C until shattering.",
+     "min": 7
+    },
+    {
+     "text": "Simmer the gochujang, soy, honey and garlic until glossy.",
+     "min": 5
+    },
+    {
+     "text": "Toss the wings in the sauce and top with sesame.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Late night carne asada tacos",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 130,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "skirt steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "white onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar salsa roja",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the steak in lime and orange juice, garlic and cumin.",
+     "min": 120
+    },
+    {
+     "text": "Sear over very high heat.",
+     "min": 10
+    },
+    {
+     "text": "Rest, then slice against the grain.",
+     "min": 10
+    },
+    {
+     "text": "Warm the tortillas. Chop the onion and coriander.",
+     "min": 10
+    },
+    {
+     "text": "Serve in tortillas with onion, coriander and salsa roja.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Island dream coconut tart",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 55,
+   "make_ahead": "Bake the day you serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tart tin with the pastry and blind-bake.",
+     "min": 25
+    },
+    {
+     "text": "Whisk the coconut, eggs, sugar, melted butter and coconut milk.",
+     "min": 10
+    },
+    {
+     "text": "Pour in and bake at 170C until golden and set.",
+     "min": 30
+    },
+    {
+     "text": "Cool.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Max's cab Vietnamese iced coffee",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "dark roast ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "tbsp",
+     "item": "sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew very strong coffee.",
+     "min": 5
+    },
+    {
+     "text": "Put condensed milk and a pinch of salt in each of four tall glasses.",
+     "min": 3
+    },
+    {
+     "text": "Pour hot coffee into each and stir until combined.",
+     "min": 3
+    },
+    {
+     "text": "Fill with ice, stir again and serve with a straw.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

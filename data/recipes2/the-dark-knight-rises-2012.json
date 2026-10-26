@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Stadium game day pretzels",
+   "course": "s",
+   "prep_min": 77,
+   "cook_min": 15,
+   "make_ahead": "Best fresh, up to 1 day",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "rock salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast and warm water into a dough.",
+     "min": 10
+    },
+    {
+     "text": "Rest until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Shape into pretzels, dip in boiling water with bicarb soda and sprinkle with rock salt.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 220C until deep brown.",
+     "min": 12
+    },
+    {
+     "text": "Brush with butter and serve with mustard.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Selina's pearl bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "bocconcini pearls",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "basil leaves, torn",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the bocconcini with olive oil, basil and chilli flakes.",
+     "min": 5
+    },
+    {
+     "text": "Leave to marinate.",
+     "min": 60
+    },
+    {
+     "text": "Thread onto toothpicks with cherry tomatoes.",
+     "min": 10
+    },
+    {
+     "text": "Arrange on a dark plate and drizzle over the leftover oil.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Blake's Gotham meatball hero",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Meatballs and sauce up to 2 days",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with the egg, breadcrumbs, parmesan, one garlic clove and salt and roll into sixteen meatballs.",
+     "min": 25
+    },
+    {
+     "text": "Brown in olive oil.",
+     "min": 5
+    },
+    {
+     "text": "Add the passata, remaining garlic and a few basil leaves and simmer.",
+     "min": 20
+    },
+    {
+     "text": "Split and toast the rolls.",
+     "min": 3
+    },
+    {
+     "text": "Fill with meatballs and sauce, lay provolone over and grill until melted.",
+     "min": 7
+    },
+    {
+     "text": "Finish with fresh basil.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Florence café affogato",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "shots hot espresso",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "amaretti biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a strong pot of espresso.",
+     "min": 5
+    },
+    {
+     "text": "Put a big scoop of ice cream into each glass and set out amaretti alongside.",
+     "min": 2
+    },
+    {
+     "text": "At the table, pour a hot shot of espresso over each scoop and eat straight away.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Florence café shakerato",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Syrup up to 1 week",
+   "ingredients": [
+    {
+     "q": 320,
+     "u": "ml",
+     "item": "strong coffee (8 espresso shots)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the espresso and make a syrup by dissolving the sugar in the hot water.",
+     "min": 5
+    },
+    {
+     "text": "Shake the coffee and syrup in portions with ice very hard until thick and foamy.",
+     "min": 5
+    },
+    {
+     "text": "Strain into chilled glasses and twist a strip of lemon peel over each.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

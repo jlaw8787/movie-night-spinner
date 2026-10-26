@@ -1,0 +1,332 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bulldog Cafe onion rings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the onions into thick rings and soak in the buttermilk.",
+     "min": 30
+    },
+    {
+     "text": "Whisk the flour with the cold lager.",
+     "min": 3
+    },
+    {
+     "text": "Dip the rings in the batter and fry at 185C in batches until puffed and golden.",
+     "min": 10
+    },
+    {
+     "text": "Salt and serve hot.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "South Seas Club canapés",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "green prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "pineapple, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small red onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the coconut and panko. Dip the prawns in flour, egg, then the crumb mix.",
+     "min": 15
+    },
+    {
+     "text": "Dice the pineapple, red onion and chilli and mix with lime juice for a salsa.",
+     "min": 10
+    },
+    {
+     "text": "Fry the prawns at 180C in batches.",
+     "min": 8
+    },
+    {
+     "text": "Serve together.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "South Seas Club tiki chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 150,
+   "make_ahead": "Marinate up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in the pineapple juice, soy, ginger and garlic.",
+     "min": 120
+    },
+    {
+     "text": "Grill the chicken until cooked through, turning.",
+     "min": 18
+    },
+    {
+     "text": "Simmer the marinade until reduced to a glaze and brush over.",
+     "min": 8
+    },
+    {
+     "text": "Cook the rice in the coconut milk and water.",
+     "min": 20
+    },
+    {
+     "text": "Serve the chicken over the rice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Rocket sundae",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Sauce up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sparklers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with some of the cream into a fudge sauce.",
+     "min": 6
+    },
+    {
+     "text": "Whip the rest of the cream.",
+     "min": 4
+    },
+    {
+     "text": "Scoop the ice cream into four tall glasses and pour over the fudge.",
+     "min": 3
+    },
+    {
+     "text": "Top with whipped cream and a cherry. Push a sparkler into each and light it at the table.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bulldog Cafe root beer malt float",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Chill the mugs first",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "root beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put four mugs in the freezer.",
+     "min": 20
+    },
+    {
+     "text": "Add two scoops of ice cream and a teaspoon of malt powder to each.",
+     "min": 3
+    },
+    {
+     "text": "Pour the cold root beer slowly down the side so the foam rises without spilling. Serve with long spoons and straws.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

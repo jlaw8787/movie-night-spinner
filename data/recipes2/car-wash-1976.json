@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lunch truck tacos",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "salsa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onion and garlic.",
+     "min": 5
+    },
+    {
+     "text": "Brown the mince with the onion, garlic, cumin and chilli.",
+     "min": 12
+    },
+    {
+     "text": "Shred the lettuce and warm the tortillas.",
+     "min": 3
+    },
+    {
+     "text": "Fill with the beef, lettuce, cheddar and a spoon of salsa.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Chilli cheese fries",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thick chips.",
+     "min": 10
+    },
+    {
+     "text": "Brown the mince with chopped onion and chilli powder.",
+     "min": 8
+    },
+    {
+     "text": "Add the kidney beans and a splash of water and simmer.",
+     "min": 20
+    },
+    {
+     "text": "Fry the chips until soft, then fry again until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Spoon the chilli over, top with cheddar and grill to melt.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dee-Luxe hot dogs with the works",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet relish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the mince with cumin, chilli powder and water until loose.",
+     "min": 20
+    },
+    {
+     "text": "Griddle the franks and steam the buns.",
+     "min": 8
+    },
+    {
+     "text": "Dice the onion.",
+     "min": 4
+    },
+    {
+     "text": "Fill the buns with franks and top with chilli, mustard, raw onion and relish.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Daddy Rich fruit ice blocks",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 416,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mixed frozen berries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "icy pole sticks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the sugar into the orange juice until dissolved.",
+     "min": 3
+    },
+    {
+     "text": "Drop a few berries into each mould and pour the juice over.",
+     "min": 3
+    },
+    {
+     "text": "Freeze for an hour, then push the sticks in.",
+     "min": 60
+    },
+    {
+     "text": "Freeze solid.",
+     "min": 360
+    }
+   ]
+  },
+  {
+   "n": "Lunch truck watermelon agua fresca",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "seedless watermelon flesh",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the watermelon with water, lime juice and sugar until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Strain into a jug.",
+     "min": 3
+    },
+    {
+     "text": "Chill.",
+     "min": 60
+    },
+    {
+     "text": "Pour over ice with lime wedges.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

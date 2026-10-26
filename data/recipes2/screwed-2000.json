@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Limo back seat prosciutto grissini",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "grissini breadsticks",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "prosciutto",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mixed olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "vintage cheddar, cubed",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wrap each breadstick with prosciutto, spiralling it around the top half.",
+     "min": 6
+    },
+    {
+     "text": "Warm the olives in a small pan with the oil, orange zest, garlic and rosemary, then cool slightly.",
+     "min": 5
+    },
+    {
+     "text": "Cube the cheddar.",
+     "min": 3
+    },
+    {
+     "text": "Stand the grissini in a tall glass and serve with the olives and cheese.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Rusty's diner gravy fries",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chicken salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small onion, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the chips at 220C, turning once, and toss with chicken salt while hot.",
+     "min": 25
+    },
+    {
+     "text": "Melt the butter in a small pan and cook the onion.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the flour, then whisk in the stock and Worcestershire and simmer.",
+     "min": 6
+    },
+    {
+     "text": "Strain into a jug. Serve the chips in a big basket with the gravy for pouring.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Ransom night meat lovers pizza",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sliced pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "leg ham, chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "rashers bacon, chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stretch the dough into two rounds on oiled trays.",
+     "min": 10
+    },
+    {
+     "text": "Mix the pizza sauce with the barbecue sauce and spread over the bases. Scatter with mozzarella.",
+     "min": 5
+    },
+    {
+     "text": "Top with pepperoni, ham, bacon and sausage squeezed from the skins in small pieces.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 240C until the crust is golden and the meat is crisp.",
+     "min": 13
+    }
+   ]
+  },
+  {
+   "n": "Miss Crock's cookies",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "chocolate chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the egg, then mix in the flour and chocolate chips.",
+     "min": 8
+    },
+    {
+     "text": "Roll into balls and flatten slightly on lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C until golden at the edges.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Crock cookie milkshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 13,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "chocolate chip cookies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill tall glasses in the freezer.",
+     "min": 15
+    },
+    {
+     "text": "Crush most of the cookies and blend with the milk and ice cream until thick but still a little chunky.",
+     "min": 4
+    },
+    {
+     "text": "Pour into the glasses, top with whipped cream and crushed cookie.",
+     "min": 3
+    },
+    {
+     "text": "Sit a whole cookie on the rim of each glass.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

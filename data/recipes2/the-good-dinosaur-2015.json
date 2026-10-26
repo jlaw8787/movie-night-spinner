@@ -1,0 +1,372 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Silo corn fritters",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "can corn kernels, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the corn with the flour, eggs, spring onion and salt.",
+     "min": 8
+    },
+    {
+     "text": "Stir the chives through the sour cream for the dip.",
+     "min": 3
+    },
+    {
+     "text": "Fry spoonfuls in a little oil until golden on both sides, in batches.",
+     "min": 12
+    },
+    {
+     "text": "Serve the fritters warm with the dip.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Spot's foraged berries",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blackberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the berries with the honey and a squeeze of lime.",
+     "min": 4
+    },
+    {
+     "text": "Whip the cream to soft peaks.",
+     "min": 4
+    },
+    {
+     "text": "Spoon the cream into small bowls and top with the berries.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Rancher's beef ribs",
+   "course": "m",
+   "prep_min": 34,
+   "cook_min": 315,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef short ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "small cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the ribs with smoked paprika, pepper and salt.",
+     "min": 10
+    },
+    {
+     "text": "Cook at 140C until tender with a dark crust.",
+     "min": 300
+    },
+    {
+     "text": "Rest the ribs.",
+     "min": 15
+    },
+    {
+     "text": "Char the corn cobs on a hot grill, turning.",
+     "min": 12
+    },
+    {
+     "text": "Shred the cabbage and grate the carrot, then mix with the mayonnaise and vinegar for a crunchy coleslaw.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Harvest cornbread",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, soft, for serving",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat a greased cast iron pan in the oven.",
+     "min": 10
+    },
+    {
+     "text": "Mix the cornmeal, flour, baking powder, egg, buttermilk and melted butter until just combined.",
+     "min": 6
+    },
+    {
+     "text": "Pour into the hot pan and bake at 220C.",
+     "min": 20
+    },
+    {
+     "text": "Beat the soft butter with the honey.",
+     "min": 4
+    },
+    {
+     "text": "Serve wedges with the honey butter.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Farm stand watermelon and mint cooler",
+   "course": "d",
+   "prep_min": 22,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "seedless watermelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the watermelon flesh into chunks, keeping four wedges for serving.",
+     "min": 10
+    },
+    {
+     "text": "Blitz the watermelon with the lime juice and mint, then strain into a jug and stir in the honey if the melon is not sweet.",
+     "min": 8
+    },
+    {
+     "text": "Chill.",
+     "min": 30
+    },
+    {
+     "text": "Fill the jug with ice and top with sparkling water. Pour into glasses with a watermelon wedge and mint sprig each.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

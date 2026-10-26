@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Five Ds dip platter",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "continental cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "hummus",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tzatziki",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the vegetables into sticks.",
+     "min": 12
+    },
+    {
+     "text": "Stir the sweet chilli sauce into the sour cream.",
+     "min": 3
+    },
+    {
+     "text": "Serve with the hummus, tzatziki and crackers for anyone who skips the vegetables.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dodgeball meatballs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "Make ahead up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the minces with parmesan, chopped parsley, garlic and some salt. Roll into balls.",
+     "min": 15
+    },
+    {
+     "text": "Brown the meatballs in batches in a pan.",
+     "min": 10
+    },
+    {
+     "text": "Simmer in the crushed tomatoes until cooked through.",
+     "min": 30
+    },
+    {
+     "text": "Serve on toothpicks.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Vegas steak and eggs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "scotch fillet steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "frozen hash browns",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the hash browns at 220C until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Halve the tomatoes and grill until soft.",
+     "min": 10
+    },
+    {
+     "text": "Season the steaks and sear in a hot pan for 3 to 4 minutes a side, then rest.",
+     "min": 12
+    },
+    {
+     "text": "Fry the eggs sunny side up in the butter and place one on each steak.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Underdog cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 55,
+   "make_ahead": "Keeps 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 280,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "red fondant",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with part of the butter. Whisk in the eggs and sugar, then fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a lined tin at 170C.",
+     "min": 40
+    },
+    {
+     "text": "Cool completely.",
+     "min": 10
+    },
+    {
+     "text": "Beat the icing sugar, cocoa and remaining butter into a fudge frosting and spread over the top.",
+     "min": 10
+    },
+    {
+     "text": "Top with a red fondant ball.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Average Joe's orange honey cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "fresh orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the orange juice, lemon juice, honey and a pinch of salt until the honey dissolves.",
+     "min": 5
+    },
+    {
+     "text": "Fill four tall glasses with ice and orange wheels.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the juice and top with soda water. Finish with mint.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

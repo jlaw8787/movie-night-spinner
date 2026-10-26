@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "London pub scotch eggs",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 20,
+   "make_ahead": "Wrap up to 1 day ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork sausage mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 6 minutes, cool and peel.",
+     "min": 15
+    },
+    {
+     "text": "Mix the sausage mince with the sage and wrap around each egg.",
+     "min": 10
+    },
+    {
+     "text": "Roll in flour, beaten egg and panko.",
+     "min": 5
+    },
+    {
+     "text": "Fry at 170C for 6 minutes, then halve and serve with mustard.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Greenwich tube stop chips",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into thick chips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malt vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rinse the chips and dry well.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 140C for 6 minutes until soft, then drain and rest.",
+     "min": 10
+    },
+    {
+     "text": "Fry again at 190C until golden and crisp.",
+     "min": 8
+    },
+    {
+     "text": "Tip into paper, shake over malt vinegar and plenty of sea salt.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "London pie and mash",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 200,
+   "make_ahead": "Filling a day ahead, top and bake fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "brown ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in the oil with the onions, then stir in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Add the brown ale and water to cover and simmer until tender.",
+     "min": 180
+    },
+    {
+     "text": "Pour into a dish and top with puff pastry. Bake at 200C for 25 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Boil and mash the potatoes with butter and milk. Cook the peas and serve everything together.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Dark Elves blackberry tart",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "thick vanilla custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "blackberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "blackberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blind bake the pastry case at 180C until golden and cool completely.",
+     "min": 40
+    },
+    {
+     "text": "Fill with the custard and pile the blackberries on top.",
+     "min": 10
+    },
+    {
+     "text": "Warm the jam with a splash of water and brush over the fruit to glaze.",
+     "min": 5
+    },
+    {
+     "text": "Chill, then dust the edge with icing sugar.",
+     "min": 35
+    }
+   ]
+  },
+  {
+   "n": "Aether blood orange and cranberry spritz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "blood orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "blood orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rosemary sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the vodka, juices and lime juice hard with ice, in batches.",
+     "min": 5
+    },
+    {
+     "text": "Strain into wine glasses full of ice and top with soda water.",
+     "min": 3
+    },
+    {
+     "text": "Garnish with a blood orange wheel and a rosemary sprig. Leave out the vodka for a booze-free version.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

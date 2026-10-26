@@ -1,0 +1,364 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Marigold bridge corn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "orange nasturtium petals",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the corn until charred.",
+     "min": 15
+    },
+    {
+     "text": "Brush with mayo mixed with lime juice.",
+     "min": 3
+    },
+    {
+     "text": "Roll in the feta, dust with chilli powder and coriander and scatter a few petals on top.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Abuelita's tamales",
+   "course": "s",
+   "prep_min": 60,
+   "cook_min": 200,
+   "make_ahead": "Filled tamales up to 1 day ahead, steam to reheat",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "red chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "masa harina",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "lard",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "warm chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "corn husks, soaked",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "salsa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the pork until tender, then shred and mix with the red chilli sauce.",
+     "min": 90
+    },
+    {
+     "text": "Soak the corn husks in warm water.",
+     "min": 15
+    },
+    {
+     "text": "Beat the masa with the lard, baking powder and stock to a soft dough.",
+     "min": 15
+    },
+    {
+     "text": "Spread on the husks, add the pork and fold.",
+     "min": 30
+    },
+    {
+     "text": "Steam for 60 minutes.",
+     "min": 60
+    },
+    {
+     "text": "Serve with salsa.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Rivera family enchiladas",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 60,
+   "make_ahead": "Assemble up to 1 day ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "dried chillies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Monterey Jack, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "white onion, diced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chillies, blitz with the garlic and stock and simmer into a sauce.",
+     "min": 20
+    },
+    {
+     "text": "Poach and shred the chicken.",
+     "min": 20
+    },
+    {
+     "text": "Dip the tortillas in sauce, roll with chicken and some cheese, then cover with sauce and the rest of the cheese.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 190C for 20 minutes. Serve with sour cream and onion.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Pan de muerto",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 180,
+   "make_ahead": "Best the day it is baked",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter, 80g soft and 40g melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, part of the sugar, zest, eggs, soft butter and warm water into a soft dough and knead.",
+     "min": 15
+    },
+    {
+     "text": "Prove for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Shape into rounds with dough bones on top.",
+     "min": 20
+    },
+    {
+     "text": "Prove again for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Bake at 180C for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Brush with melted butter and roll in the remaining sugar.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Champurrado",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "masa harina",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the masa into the water until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Heat the milk with the chocolate, cinnamon and sugar, then whisk in the masa.",
+     "min": 5
+    },
+    {
+     "text": "Simmer, stirring, until thick and silky. Pour into mugs.",
+     "min": 7
+    }
+   ]
+  }
+ ]
+}

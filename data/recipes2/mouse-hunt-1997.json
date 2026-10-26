@@ -1,0 +1,304 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Smuntz string cheese board",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours ahead, cover and keep cool",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sticks string cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "aged cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gouda",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "mixed nuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cheddar, gouda and blue cheese into wedges.",
+     "min": 5
+    },
+    {
+     "text": "Arrange the cheeses and string cheese on a wooden board with the crackers, grapes and a little bowl of nuts.",
+     "min": 8
+    },
+    {
+     "text": "Leave one small wedge of cheese on its own at the edge as bait.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mousetrap cheese toasties",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread on the outside and fill with the cheddar and gruyere.",
+     "min": 5
+    },
+    {
+     "text": "Cook in a pan until golden and melting on both sides.",
+     "min": 10
+    },
+    {
+     "text": "Cut each into cheese-shaped wedges and poke a few holes in the top with a chopstick like cartoon cheese.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ernie's restaurant dinner",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "Gratin up to 1 day, reheat gently",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wilt the spinach, squeeze dry and mix with the ricotta. Cut a pocket in each chicken breast and fill.",
+     "min": 15
+    },
+    {
+     "text": "Layer the potatoes in a dish with most of the cream and bake at 180C.",
+     "min": 60
+    },
+    {
+     "text": "Sear the chicken in oil, then roast at 200C alongside for the last 20 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Cook the mushrooms in butter, add the remaining cream and simmer until thick. Serve over the chicken.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "LaRue house mouse bait cheesecake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sweet biscuits, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "lemon curd",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crushed biscuits with the butter and press into a tin.",
+     "min": 8
+    },
+    {
+     "text": "Beat the cream cheese and sugar, then the eggs. Pour over the base.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 160C for 50 minutes, then cool in the oven. Chill until firm.",
+     "min": 100
+    },
+    {
+     "text": "Spread with lemon curd before serving.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mouse-sized honey vanilla shakes",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "ground cinnamon, a pinch",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "round cheese biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, ice cream, honey and cinnamon until thick and frothy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into eight small glasses. Cut a slit in each biscuit and perch one on each rim.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

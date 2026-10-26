@@ -1,0 +1,526 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cheese danish",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 18,
+   "make_ahead": "Best the day it is baked",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the cream cheese with the sugar, egg yolk and lemon zest. Cut the pastry into 8 squares.",
+     "min": 8
+    },
+    {
+     "text": "Spoon the filling into the middle of each square and fold in the corners.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 16
+    },
+    {
+     "text": "Cool, then drizzle with the icing sugar mixed with lemon juice.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Transit office jam doughnuts",
+   "course": "s",
+   "prep_min": 3,
+   "cook_min": 4,
+   "make_ahead": "Best eaten warm",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "jam doughnuts",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the doughnuts on a tray at 160C.",
+     "min": 2
+    },
+    {
+     "text": "Roll each straight away in the sugar so it sticks and serve on a plate in the middle of the table.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Transit authority hero",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours ahead, wrapped and chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sliced turkey",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the rolls and spread with mayonnaise.",
+     "min": 4
+    },
+    {
+     "text": "Layer with turkey, Swiss cheese, lettuce and tomato. Season.",
+     "min": 6
+    },
+    {
+     "text": "Close, wrap tightly in paper and cut in half.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Transit authority rugelach",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 85,
+   "make_ahead": "Up to 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 225,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 225,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 280,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar apricot jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter and cream cheese into the flour to form a dough.",
+     "min": 10
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 60
+    },
+    {
+     "text": "Roll into circles, spread with jam, walnuts and cinnamon sugar, cut into wedges and roll up from the wide end.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C until golden.",
+     "min": 22
+    }
+   ]
+  },
+  {
+   "n": "Mr Green's honey lemon whisky toddy",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece ginger, about 3cm",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "just-boiled water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thinly slice the ginger and juice the lemons, keeping a few wheels.",
+     "min": 5
+    },
+    {
+     "text": "Into each of 4 heatproof glasses put whisky, honey, lemon juice and ginger slices, top with boiling water and stir until the honey dissolves. Add a lemon wheel and a cinnamon stick.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Chicken noodle soup",
+   "course": "s",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 75,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "egg noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet saltine crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the carrots and celery and peel the onion.",
+     "min": 10
+    },
+    {
+     "text": "Simmer the chicken in the water with the onion until cooked and the broth is rich. Lift out the chicken and shred the meat.",
+     "min": 60
+    },
+    {
+     "text": "Cook the carrot, celery and noodles in the broth until tender, then return the chicken and season. Serve with saltines.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Hot Pastrami on Rye",
+   "course": "m",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "sliced pastrami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "brown mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sour pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the pastrami in a covered colander over simmering water until hot and soft.",
+     "min": 8
+    },
+    {
+     "text": "Spread the rye with mustard, pile on the pastrami and close. Serve with a pickle each.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Grilled Cheese",
+   "course": "m",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 240,
+     "u": "g",
+     "item": "sliced American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread on the outside and fill with cheese.",
+     "min": 3
+    },
+    {
+     "text": "Griddle until golden on both sides and the cheese is melted.",
+     "min": 8
+    },
+    {
+     "text": "Serve with sliced tomato.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Egg Cream",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold seltzer",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour a little syrup and milk into each of 4 tall glasses, top with a hard shot of seltzer and stir hard until it foams.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Chocolate Malted",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "fudge syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the ice cream, milk, malt and fudge syrup until thick and spin into 4 tall glasses.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

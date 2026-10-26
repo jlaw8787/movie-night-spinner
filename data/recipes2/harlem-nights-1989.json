@@ -1,0 +1,360 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Vera's supper club deviled eggs",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "smoked paprika, to dust",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs, cool, peel and halve.",
+     "min": 10
+    },
+    {
+     "text": "Whip the yolks with mayonnaise, Dijon and hot sauce.",
+     "min": 3
+    },
+    {
+     "text": "Pipe back into the whites.",
+     "min": 5
+    },
+    {
+     "text": "Finish with smoked paprika and chives and lay them on silver trays.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Harlem hush puppies",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 2,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cornmeal, flour, baking powder, buttermilk, egg and grated onion.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into 175C oil and fry in batches until golden.",
+     "min": 10
+    },
+    {
+     "text": "Beat the soft butter with honey to serve.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Quick's late-night chicken and waffles",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 138,
+   "make_ahead": "Brine the chicken a day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 700,
+     "u": "ml",
+     "item": "buttermilk, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brine the chicken in some of the buttermilk.",
+     "min": 10
+    },
+    {
+     "text": "Brine for at least 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Whisk flour, baking powder, eggs, buttermilk and melted butter into a waffle batter.",
+     "min": 10
+    },
+    {
+     "text": "Dredge the chicken in seasoned flour.",
+     "min": 8
+    },
+    {
+     "text": "Fry at 165C until the centre reaches 74C.",
+     "min": 15
+    },
+    {
+     "text": "Cook the waffles in a waffle iron.",
+     "min": 12
+    },
+    {
+     "text": "Serve with maple syrup and butter melted with hot sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Club Sugar Ray lemon chess pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 125,
+   "make_ahead": "Up to 2 days chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 110,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a 23cm tin with pastry and blind bake until pale golden.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the eggs, sugar, melted butter, cornmeal, lemon juice, zest and milk.",
+     "min": 10
+    },
+    {
+     "text": "Pour into the case and bake at 170C until just set.",
+     "min": 40
+    },
+    {
+     "text": "Cool completely.",
+     "min": 90
+    }
+   ]
+  },
+  {
+   "n": "Club champagne cocktail",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drop a sugar cube soaked in a few dashes of bitters into each of four flutes.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with chilled sparkling wine.",
+     "min": 2
+    },
+    {
+     "text": "Twist a strip of lemon peel over each.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

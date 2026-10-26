@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ned's labelled fridge snacks",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 10 minutes, cool, peel and mash with the mayonnaise.",
+     "min": 10
+    },
+    {
+     "text": "Make ham, cheese and pickle sandwiches, and egg and lettuce sandwiches.",
+     "min": 10
+    },
+    {
+     "text": "Cut small, wrap each in baking paper and write a name on it in marker.",
+     "min": 5
+    },
+    {
+     "text": "Chill until needed.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Gold star cheese stars",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Keeps 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, then add the grated cheddar and paprika.",
+     "min": 10
+    },
+    {
+     "text": "Bring together with a splash of water, then chill briefly.",
+     "min": 5
+    },
+    {
+     "text": "Roll thin, cut into stars and brush with beaten egg.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C until golden.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Rock and roll pizza",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Dough can be stretched 1 hour ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stretch the dough into two thin bases.",
+     "min": 10
+    },
+    {
+     "text": "Spread with crushed tomatoes and top with mozzarella and pepperoni.",
+     "min": 8
+    },
+    {
+     "text": "Bake on a hot steel at maximum heat.",
+     "min": 7
+    },
+    {
+     "text": "Warm the honey with chilli flakes and drizzle over.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Guitar-shaped cookies",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 30,
+   "make_ahead": "Decorate the day you serve",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle red food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle black food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar with one egg, then mix in the flour to a dough.",
+     "min": 15
+    },
+    {
+     "text": "Roll out, cut into guitar shapes and bake at 180C until firm.",
+     "min": 18
+    },
+    {
+     "text": "Cool on a rack.",
+     "min": 12
+    },
+    {
+     "text": "Mix the icing sugar with the second egg white and a little water, colour some red and black and decorate.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Horace Green raspberry fruit punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cold lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lightly crush the raspberries in a big jug with the lime juice.",
+     "min": 3
+    },
+    {
+     "text": "Add the pineapple and orange juices and stir.",
+     "min": 2
+    },
+    {
+     "text": "Just before serving, fill with ice, top with lemonade and add sliced orange and mint.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

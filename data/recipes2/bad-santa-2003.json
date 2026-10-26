@@ -1,0 +1,370 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Thurman's toasted peanut butter and jam",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 10,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices of thick white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "crunchy peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make 4 sandwiches with peanut butter on one slice and jam on the other.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the eggs, milk and cinnamon.",
+     "min": 3
+    },
+    {
+     "text": "Dip each sandwich briefly on both sides.",
+     "min": 3
+    },
+    {
+     "text": "Fry in butter until golden on each side.",
+     "min": 6
+    },
+    {
+     "text": "Cut into triangles and dust with icing sugar.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Advent calendar chocolates",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "hazelnuts, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of sea salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the dark and milk chocolate separately.",
+     "min": 10
+    },
+    {
+     "text": "Spoon into small squares on baking paper or an ice cube tray.",
+     "min": 6
+    },
+    {
+     "text": "Top half with a toasted hazelnut and half with sea salt.",
+     "min": 4
+    },
+    {
+     "text": "Set in the fridge.",
+     "min": 60
+    },
+    {
+     "text": "Line them up in a numbered tray.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Diner Christmas plate",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 310,
+   "make_ahead": "Rest 20 minutes before carving",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "salt, for the brine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water, for the brine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet of stuffing mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of cranberry sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brine the turkey for a few hours.",
+     "min": 180
+    },
+    {
+     "text": "Roast at 170C until it reaches 70C inside.",
+     "min": 90
+    },
+    {
+     "text": "Bake the stuffing mix in a dish alongside.",
+     "min": 30
+    },
+    {
+     "text": "Boil the potatoes and mash with the butter.",
+     "min": 22
+    },
+    {
+     "text": "Make gravy from the pan juices, flour and stock.",
+     "min": 10
+    },
+    {
+     "text": "Serve with cranberry sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Christmas fruit cake slices",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 150,
+   "make_ahead": "Up to 2 weeks, wrapped",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "mixed dried fruit",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mixed spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of almonds, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the fruit in the brandy overnight.",
+     "min": 10
+    },
+    {
+     "text": "Cream the butter and sugar and beat in the eggs.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the fruit, flour, spice and almonds.",
+     "min": 10
+    },
+    {
+     "text": "Bake in a lined tin at 150C.",
+     "min": 150
+    },
+    {
+     "text": "Cool and slice thin.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Willie's bourbon and ginger highball",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold spicy ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lime wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill 4 tall glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add the bourbon and lime juice to each.",
+     "min": 2
+    },
+    {
+     "text": "Top with ginger beer and stir once.",
+     "min": 1
+    },
+    {
+     "text": "Add a lime wedge and a cinnamon stick. Skip the bourbon for the non drinkers.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

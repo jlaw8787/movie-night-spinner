@@ -1,0 +1,512 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Diner grilled cheese with quick pickles",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Pickles up to 1 week ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sharp cheddar, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thinly slice the cucumbers and onion.",
+     "min": 8
+    },
+    {
+     "text": "Heat the vinegar, water, sugar, salt and mustard seeds until dissolved, then pour over the vegetables.",
+     "min": 3
+    },
+    {
+     "text": "Let the pickles cool and sit while you make the sandwiches.",
+     "min": 30
+    },
+    {
+     "text": "Butter the bread on the outside and fill with the cheddar.",
+     "min": 4
+    },
+    {
+     "text": "Fry over medium heat until golden on both sides. Cut into fingers and serve with the pickles.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Wake table soda bread",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 40,
+   "make_ahead": "Best the day it is baked",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salted butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sharp cheddar",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, bicarb and salt, add the buttermilk and bring together into a round. Cut a deep cross on top.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 220C.",
+     "min": 15
+    },
+    {
+     "text": "Reduce the oven to 200C and bake until golden and hollow when tapped. Serve warm with the butter and cheddar.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Corned beef and cabbage",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 170,
+   "make_ahead": "Beef can be cooked 1 day ahead, keep chilled in its liquid",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "corned silverside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar hot English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the onion, potatoes and carrots and cut the potatoes and carrots into chunks. Quarter the cabbage.",
+     "min": 10
+    },
+    {
+     "text": "Cover the beef with water in a large pot with the onion, bay leaves and peppercorns and bring to a gentle simmer.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the beef gently, topping up the water as needed.",
+     "min": 120
+    },
+    {
+     "text": "Add the potatoes and carrots and keep simmering.",
+     "min": 30
+    },
+    {
+     "text": "Add the cabbage for the last of the cooking.",
+     "min": 10
+    },
+    {
+     "text": "Slice the beef thick and serve with the vegetables, butter and mustard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Apple pie with cheddar",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day ahead, reheat to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "Granny Smith apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "sharp cheddar, sliced",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel, core and slice the apples. Cook them gently with the sugar and cinnamon for 5 minutes, then cool.",
+     "min": 15
+    },
+    {
+     "text": "Line a deep pie dish with one pastry sheet, fill with the apples, cover with the second sheet and cut slits in the top.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 40
+    },
+    {
+     "text": "Lay the cheddar on top for the last stretch of baking so it melts.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Rooney wake Irish coffee",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Whip the cream up to 2 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "strong brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "Irish whiskey",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "tsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whip the cream to soft ribbons so it just holds its shape. Brew the coffee.",
+     "min": 4
+    },
+    {
+     "text": "Warm 4 heatproof glasses with hot water and tip it out.",
+     "min": 3
+    },
+    {
+     "text": "Add brown sugar, whiskey and coffee to each glass and stir until dissolved.",
+     "min": 3
+    },
+    {
+     "text": "Float the cream on top over the back of a spoon. Do not stir.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Driver's breakfast",
+   "course": "m",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the potatoes and onion.",
+     "min": 8
+    },
+    {
+     "text": "Fry the potatoes and onion in some of the butter until golden and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Fry the eggs any style in a second pan.",
+     "min": 5
+    },
+    {
+     "text": "Toast the bread, butter it, and serve it with the eggs and potatoes.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Hamburger sandwich",
+   "course": "m",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft white buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shape the mince into 4 patties and season. Slice the onions.",
+     "min": 8
+    },
+    {
+     "text": "Cook the onions in butter in a hot pan until soft and browned. Keep warm.",
+     "min": 8
+    },
+    {
+     "text": "Cook the patties on a hot griddle until browned and cooked through.",
+     "min": 7
+    },
+    {
+     "text": "Toast the buns, then fill with patties and onions.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Coffee or milk",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 8,
+   "make_ahead": "Best served fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "tsp",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee strong and keep it hot.",
+     "min": 8
+    },
+    {
+     "text": "Serve hot coffee, or pour cold milk, into 4 cups.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,312 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sugar Rush lolly bark",
+   "course": "s",
+   "prep_min": 21,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 week in an airtight tin",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "gummy lollies, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "honeycomb, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "mini marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the dark and white chocolate separately.",
+     "min": 8
+    },
+    {
+     "text": "Spread the dark chocolate over a lined tray and drizzle with the white, then swirl with a skewer.",
+     "min": 5
+    },
+    {
+     "text": "Scatter over the lollies, honeycomb, marshmallows and sprinkles, pressing them in lightly.",
+     "min": 5
+    },
+    {
+     "text": "Chill until set.",
+     "min": 60
+    },
+    {
+     "text": "Smash into shards.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Candy kart pretzel rods",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 19,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "",
+     "item": "pretzel rods",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the white chocolate.",
+     "min": 4
+    },
+    {
+     "text": "Dip each pretzel rod two-thirds of the way in, letting the extra drip off, and roll in sprinkles straight away.",
+     "min": 10
+    },
+    {
+     "text": "Lay on baking paper to set.",
+     "min": 15
+    },
+    {
+     "text": "Stand them in a glass like a bunch of candy karts.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Ralph's wrecking ball meatballs",
+   "course": "m",
+   "prep_min": 18,
+   "cook_min": 47,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince, breadcrumbs, egg, parmesan and garlic. Roll into big meatballs.",
+     "min": 15
+    },
+    {
+     "text": "Brown the meatballs all over in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Add the passata and simmer.",
+     "min": 25
+    },
+    {
+     "text": "Boil the spaghetti until al dente and drain.",
+     "min": 12
+    },
+    {
+     "text": "Serve the meatballs and sauce over the spaghetti.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Felix's anniversary pie",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 82,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "green apples, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tube gold icing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the apples.",
+     "min": 12
+    },
+    {
+     "text": "Cook the apples with the butter, brown sugar and cinnamon until just soft.",
+     "min": 10
+    },
+    {
+     "text": "Cool the filling.",
+     "min": 30
+    },
+    {
+     "text": "Line a pie dish with shortcrust.",
+     "min": 5
+    },
+    {
+     "text": "Fill and weave a lattice top.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 45
+    },
+    {
+     "text": "Pipe a gold star on top and serve with ice cream.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Diet Cola Mountain spider",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cola, cold",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put a scoop of ice cream into each tall glass.",
+     "min": 3
+    },
+    {
+     "text": "Slowly pour the cola over the top so it fizzes up and froths over the rim like a volcano.",
+     "min": 4
+    },
+    {
+     "text": "Stand the glasses on plates and serve with long spoons.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

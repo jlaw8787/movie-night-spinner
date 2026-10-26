@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Moon tower chips",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 45,
+   "make_ahead": "Onion dip up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "big bag thick-cut potato chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onions slowly in the oil until deep brown.",
+     "min": 40
+    },
+    {
+     "text": "Cool and chop.",
+     "min": 3
+    },
+    {
+     "text": "Fold into the sour cream with salt and chopped chives.",
+     "min": 3
+    },
+    {
+     "text": "Serve with the chips.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Freshman paddle pretzels",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "",
+     "item": "pretzel rods",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the peanut butter with the honey.",
+     "min": 3
+    },
+    {
+     "text": "Dip the pretzels halfway and chill.",
+     "min": 17
+    },
+    {
+     "text": "Melt the chocolate and dip the pretzels again.",
+     "min": 6
+    },
+    {
+     "text": "Set on baking paper.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Emporium chicken fried steak",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "thin beef minute steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pound the steaks thin and season the flour.",
+     "min": 6
+    },
+    {
+     "text": "Dip in seasoned flour, then egg, then flour again.",
+     "min": 7
+    },
+    {
+     "text": "Shallow fry in about 1cm oil until golden each side.",
+     "min": 8
+    },
+    {
+     "text": "For the gravy, cook some flour in a little of the oil, whisk in the milk and simmer until thick. Season with lots of pepper.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Last day of '76 sweet tea ice blocks",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 380,
+   "make_ahead": "Up to 1 week frozen",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water, then remove.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the sugar while hot and add the lemon juice. Cool.",
+     "min": 15
+    },
+    {
+     "text": "Pour into ice block moulds and add sticks.",
+     "min": 3
+    },
+    {
+     "text": "Freeze until solid.",
+     "min": 360
+    }
+   ]
+  },
+  {
+   "n": "Wooderson's \"alright, alright\" michelada",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "tomato juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "dashes hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.32,
+     "u": "l",
+     "item": "cold lager (4 x 330ml)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the salt with the chilli powder on a saucer. Rub the glass rims with lime and dip in the salt.",
+     "min": 4
+    },
+    {
+     "text": "Fill the glasses with ice. Add lime juice, tomato juice, hot sauce and Worcestershire to each.",
+     "min": 4
+    },
+    {
+     "text": "Top slowly with cold lager, stir once and serve with a lime wedge.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,442 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Country club Bloody Mary prawn cocktail",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "cooked king prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, a few drops",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "celery salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baby cos lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns, leaving the tails on.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise with the tomato sauce, horseradish, Worcestershire, hot sauce, celery salt and a squeeze of lemon.",
+     "min": 4
+    },
+    {
+     "text": "Shred the lettuce into glasses and spoon over some sauce.",
+     "min": 3
+    },
+    {
+     "text": "Hang the prawns around the rim, dust with paprika and serve with lemon wedges and a celery stick.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Beach kiosk fish bites with lime aioli",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 2,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "snapper fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 220,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "sea salt, to sprinkle",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the fish into bite-size pieces.",
+     "min": 4
+    },
+    {
+     "text": "Whisk the flour, cornflour, baking powder and soda water into a batter.",
+     "min": 3
+    },
+    {
+     "text": "Dip the fish and fry at 180C until crisp and golden, working in batches. Drain.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise with the garlic and lime zest and juice.",
+     "min": 2
+    },
+    {
+     "text": "Sprinkle the fish with sea salt and chilli flakes and serve with the aioli.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Steak sandwich and a steak sandwich",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rump steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "Turkish rolls, halved",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "hot English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slowly fry the onions in the butter and sugar until jammy.",
+     "min": 20
+    },
+    {
+     "text": "Bat the steaks to about 1cm thick, season and sear in a very hot pan.",
+     "min": 4
+    },
+    {
+     "text": "Lay the cheese on the steaks and cover briefly to melt.",
+     "min": 1
+    },
+    {
+     "text": "Toast the rolls. Mix the mayonnaise with the mustard.",
+     "min": 3
+    },
+    {
+     "text": "Build each roll with mayo, rocket, tomato, steak and onions. Make two each.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Country club hot fudge sundaes",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "salted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat some of the cream with the sugar and butter until bubbling. Off the heat, stir in the chocolate and a pinch of salt until glossy.",
+     "min": 5
+    },
+    {
+     "text": "Toast the peanuts in a dry pan and chop.",
+     "min": 3
+    },
+    {
+     "text": "Whip the remaining cream.",
+     "min": 3
+    },
+    {
+     "text": "Scoop ice cream into tall glasses, pour over the warm fudge and top with whipped cream, peanuts and a cherry.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Underhills' tab Bloody Mary",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "celery salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "tomato juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, several dashes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the celery salt and pepper on a saucer, wet the rims of tall glasses with lemon and dip.",
+     "min": 3
+    },
+    {
+     "text": "Fill the glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Stir the tomato juice, vodka, juice of one lemon, horseradish, Worcestershire and hot sauce in a jug.",
+     "min": 3
+    },
+    {
+     "text": "Pour into the glasses and add a celery stick and a lemon wedge.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

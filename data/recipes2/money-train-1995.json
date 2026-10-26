@@ -1,0 +1,674 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Token booth honey roasted nuts",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the nuts with the honey, sugar, cinnamon and salt until coated.",
+     "min": 5
+    },
+    {
+     "text": "Spread on a lined tray and roast at 170C, stirring halfway.",
+     "min": 15
+    },
+    {
+     "text": "Keep stirring as they cool so they do not clump.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Gold token cookies",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small jar edible gold dust",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and icing sugar until pale, then mix in the flour to a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Chill the dough for 15 minutes so it rolls cleanly.",
+     "min": 15
+    },
+    {
+     "text": "Roll 5mm thick, cut rounds the size of a subway token and cut a small hole from the middle of each.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 160C until just set and pale gold.",
+     "min": 15
+    },
+    {
+     "text": "Cool on the tray, then brush with gold dust mixed with a drop of water.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Arroz con pollo",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, reheat with a splash of stock",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground annatto",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 650,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "oil for browning",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in a wide lidded pan until golden, then set aside.",
+     "min": 10
+    },
+    {
+     "text": "Fry the onion, capsicum, garlic and coriander in the same pan until soft.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the annatto, rice, olives, capers and stock and bring to a simmer.",
+     "min": 5
+    },
+    {
+     "text": "Sit the chicken on top, cover and cook on low until the rice is tender.",
+     "min": 25
+    },
+    {
+     "text": "Rest, covered, before serving.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Guava pastelitos",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, crisp in the oven before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "guava paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thaw the pastry, then cut each sheet into 8 squares.",
+     "min": 8
+    },
+    {
+     "text": "Put a slice of guava paste and a little cream cheese on half the squares, cover with the rest and seal the edges with a fork.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the sugar with the water for a few minutes to make a syrup, then brush it over the warm pastries.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Money Train payday michelada",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "flaky salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "limes, juiced, with some cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "tomato juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "dashes hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles cold lager, 375ml each",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the salt and chilli powder on a plate.",
+     "min": 2
+    },
+    {
+     "text": "Rub a lime wedge around each of 4 glass rims and dip in the chilli salt.",
+     "min": 3
+    },
+    {
+     "text": "Add ice a good squeeze of lime juice, the tomato juice, hot sauce and Worcestershire, dividing evenly.",
+     "min": 3
+    },
+    {
+     "text": "Top each with a cold lager, stir gently and slip the glasses into small paper bags.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mallorca",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft sweet spiral buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split each bun and spread the inside with butter.",
+     "min": 5
+    },
+    {
+     "text": "Press in a hot dry pan or sandwich press until golden and warm through.",
+     "min": 10
+    },
+    {
+     "text": "Bury in icing sugar and serve straight away.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sandwich cubano",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lengths Cuban or soft white bread, about 20cm",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "roast pork, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sliced ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the bread and spread the cut sides with mustard.",
+     "min": 4
+    },
+    {
+     "text": "Layer the pork, ham, cheese and pickles, then close.",
+     "min": 6
+    },
+    {
+     "text": "Butter the outside and press in a hot pan or sandwich press until the cheese melts and the crust is crisp.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Pernil asado",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 300,
+   "make_ahead": "Roast a day ahead and reheat",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "pork shoulder, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sour orange juice, or half orange and half lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "cooked red beans, tinned and drained",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the pork skin. Pound the garlic, oregano and salt to a paste with the juice and oil.",
+     "min": 15
+    },
+    {
+     "text": "Rub the paste deep into the pork and marinate in the fridge overnight, or at least 4 hours.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 150C, covered with foil, until the meat falls apart.",
+     "min": 180
+    },
+    {
+     "text": "Remove the foil, raise to 220C and roast until the skin crackles.",
+     "min": 30
+    },
+    {
+     "text": "Cook the rice while the pork rests, and warm the red beans.",
+     "min": 25
+    },
+    {
+     "text": "Rest the pork before pulling and serving with the rice and beans.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Bistec encebollado",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "thin cut beef top round steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large onions, sliced into rings",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the steak with salt and half the garlic.",
+     "min": 5
+    },
+    {
+     "text": "Sear the steak in batches in hot oil and set aside.",
+     "min": 8
+    },
+    {
+     "text": "Soften the onions in the pan, add the remaining garlic, oregano and vinegar and return the steak.",
+     "min": 7
+    },
+    {
+     "text": "Cover and simmer gently until tender.",
+     "min": 20
+    },
+    {
+     "text": "Cook the rice. Slice the plantains thickly, fry, smash flat and fry again for tostones.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Morir soñando",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "fresh orange juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the sugar into the milk until dissolved.",
+     "min": 3
+    },
+    {
+     "text": "Whisk in the orange juice just before serving.",
+     "min": 1
+    },
+    {
+     "text": "Pour over crushed ice in tall glasses.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

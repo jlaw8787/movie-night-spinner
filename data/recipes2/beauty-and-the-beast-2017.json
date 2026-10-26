@@ -1,0 +1,410 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Villeneuve market bread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette and brush with oil.",
+     "min": 4
+    },
+    {
+     "text": "Toast until golden.",
+     "min": 8
+    },
+    {
+     "text": "Slice the apples thinly.",
+     "min": 5
+    },
+    {
+     "text": "Top half with brie and apple, the rest with goat's cheese and a drizzle of honey.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Gaston's five dozen devilled eggs",
+   "course": "s",
+   "prep_min": 28,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, snipped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs until hard.",
+     "min": 10
+    },
+    {
+     "text": "Cool and peel.",
+     "min": 10
+    },
+    {
+     "text": "Halve the eggs and mash the yolks with mayonnaise, Dijon and chives until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Pipe back into the whites.",
+     "min": 8
+    },
+    {
+     "text": "Dust with smoked paprika and pile onto one big platter.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Lumière's beef and mushroom braise",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 231,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "baby onions, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the bacon and beef and peel the baby onions.",
+     "min": 20
+    },
+    {
+     "text": "Brown the bacon, then the beef in batches.",
+     "min": 20
+    },
+    {
+     "text": "Add the onions and mushrooms and colour lightly.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the flour and tomato paste, then add the stock, balsamic vinegar, thyme and bay leaves.",
+     "min": 3
+    },
+    {
+     "text": "Cover and simmer until the beef is tender.",
+     "min": 180
+    },
+    {
+     "text": "Peel and boil the potatoes, then mash with butter and warm milk.",
+     "min": 25
+    },
+    {
+     "text": "Serve the braise over the mash with crusty bread.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Enchanted rose tart",
+   "course": "w",
+   "prep_min": 43,
+   "cook_min": 80,
+   "make_ahead": "Up to 1 day, keep covered",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "thick custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "red apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tart tin with the pastry.",
+     "min": 8
+    },
+    {
+     "text": "Blind bake at 180C until pale gold.",
+     "min": 20
+    },
+    {
+     "text": "Cool the case.",
+     "min": 10
+    },
+    {
+     "text": "Slice the apples paper thin and soften briefly in lemony water, then drain.",
+     "min": 15
+    },
+    {
+     "text": "Fill the case with custard.",
+     "min": 3
+    },
+    {
+     "text": "Arrange the apple slices in overlapping circles into a rose.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 20
+    },
+    {
+     "text": "Warm the jam with a little water and brush over to glaze.",
+     "min": 5
+    },
+    {
+     "text": "Cool before slicing.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Ballroom golden peach punch",
+   "course": "d",
+   "prep_min": 13,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chilled peach nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fresh peach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chilled sparkling apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice two oranges and slice the third. Slice the peach.",
+     "min": 8
+    },
+    {
+     "text": "Mix the peach nectar, orange juice and vanilla in a big jug.",
+     "min": 2
+    },
+    {
+     "text": "Add the orange and peach slices and chill.",
+     "min": 30
+    },
+    {
+     "text": "Just before serving, add ice and top with sparkling apple juice. Stir gently and pour into wide glasses.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

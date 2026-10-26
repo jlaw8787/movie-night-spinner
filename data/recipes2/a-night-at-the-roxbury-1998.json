@@ -1,0 +1,354 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Roxbury club sliders",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 6,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shape the beef mince into small patties and season.",
+     "min": 6
+    },
+    {
+     "text": "Cook on a hot pan for 2 minutes a side, adding half a cheese slice each at the end.",
+     "min": 8
+    },
+    {
+     "text": "Put in the slider buns with pickles and sauce.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Fake plant shop crudités",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the carrots, the celery sticks, the cucumber and the red capsicum into sticks and stand them in jars.",
+     "min": 10
+    },
+    {
+     "text": "Blitz the sour cream with parsley, chives and a squeeze of lemon for the dip.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Sunset Strip chipotle chicken tacos",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin chipotle in adobo",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cumin, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "vegetable oil, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the chipotle in adobo, the crushed garlic cloves, the juice of the lime, the cumin and the oil.",
+     "min": 5
+    },
+    {
+     "text": "Marinate the chicken thigh fillets for 30 minutes.",
+     "min": 28
+    },
+    {
+     "text": "Slice the red onion thin and soak in lime juice and salt for 20 minutes.",
+     "min": 24
+    },
+    {
+     "text": "Grill the chicken on a hot barbecue for 5 minutes a side and slice.",
+     "min": 11
+    },
+    {
+     "text": "Mash the avocados with lime and salt.",
+     "min": 5
+    },
+    {
+     "text": "Warm the small tortillas and fill with avocado, chicken, onion and coriander.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Neon pink raspberry cheesecake cups",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 120,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain sweet biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 110,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "vanilla extract, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the plain sweet biscuits and mix with the melted butter.",
+     "min": 4
+    },
+    {
+     "text": "Press into glasses.",
+     "min": 4
+    },
+    {
+     "text": "Blitz the raspberries with the icing sugar and strain.",
+     "min": 4
+    },
+    {
+     "text": "Beat the cream cheese with the icing sugar and the vanilla, then fold in the whipped cream.",
+     "min": 4
+    },
+    {
+     "text": "Fold half the raspberry sauce through to turn it pink.",
+     "min": 4
+    },
+    {
+     "text": "Spoon into the glasses, swirl the rest of the sauce on top and chill 2 hours.",
+     "min": 124
+    },
+    {
+     "text": "Finish with raspberries and grated white chocolate.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Club cosmopolitan",
+   "course": "d",
+   "prep_min": 4,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the vodka, the orange liqueur, the cranberry juice and the lime juice with ice for each glass.",
+     "min": 1
+    },
+    {
+     "text": "Strain into chilled glasses.",
+     "min": 1
+    },
+    {
+     "text": "Make it just before the film starts and keep the jug cold.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sitka smoked salmon",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "rye crispbreads",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the crispbreads with cream cheese.",
+     "min": 4
+    },
+    {
+     "text": "Top with folds of smoked salmon, a sprig of dill and a few capers.",
+     "min": 6
+    },
+    {
+     "text": "Squeeze over a little lemon just before serving.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Welcome party crab dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, bake just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the spring onions and mix with the crab, cream cheese and mayonnaise.",
+     "min": 10
+    },
+    {
+     "text": "Spread in a small dish and bake at 190C until golden and bubbling.",
+     "min": 20
+    },
+    {
+     "text": "Serve hot with water crackers.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Alaskan salmon dinner",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, roast the salmon fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the maple syrup and mustard and brush over the salmon.",
+     "min": 5
+    },
+    {
+     "text": "Roast the salmon at 200C until just cooked through. While it roasts, boil the potatoes.",
+     "min": 15
+    },
+    {
+     "text": "Steam the green beans, then toss with the potatoes and butter.",
+     "min": 5
+    },
+    {
+     "text": "Serve everything together.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Barn wedding cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 70,
+   "make_ahead": "Bake up to 1 day ahead, ice on the day",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fresh flowers, to decorate",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour. Divide between 2 tins.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 175C until golden and springy.",
+     "min": 25
+    },
+    {
+     "text": "Cool the cakes completely.",
+     "min": 40
+    },
+    {
+     "text": "Whip the cream, sandwich the cakes with jam and cream, then ice white with icing sugar mixed with milk.",
+     "min": 10
+    },
+    {
+     "text": "Top with fresh flowers.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Margaret's iced vanilla latte",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Syrup keeps 1 week chilled",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "strong coffee or 4 double shots espresso",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar, water and split vanilla bean for 3 minutes, then cool.",
+     "min": 8
+    },
+    {
+     "text": "Make the espresso and cool for 5 minutes.",
+     "min": 7
+    },
+    {
+     "text": "Fill 4 tall cups with ice, then add a spoonful of vanilla syrup and the cold milk to each.",
+     "min": 3
+    },
+    {
+     "text": "Pour the espresso over the top, stir and serve with lids and straws.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

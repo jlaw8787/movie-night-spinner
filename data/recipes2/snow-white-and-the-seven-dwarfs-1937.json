@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Diamond mine cheese gems",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gouda, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brie, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "red grapes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cheeses into small cubes.",
+     "min": 10
+    },
+    {
+     "text": "Thread onto toothpicks with red and green grapes, alternating colours.",
+     "min": 5
+    },
+    {
+     "text": "Pile them high on a dark wooden board and serve at room temperature.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Forest honey rosemary nut clusters",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 week, keep airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "hazelnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the nuts with honey, rosemary and salt.",
+     "min": 5
+    },
+    {
+     "text": "Spread on a lined tray and roast at 170C, stirring once.",
+     "min": 15
+    },
+    {
+     "text": "Cool completely, then break into clusters.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Dwarfs' supper soup",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 39,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chicken thigh fillets, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf of crusty bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the leeks in the butter.",
+     "min": 15
+    },
+    {
+     "text": "Add the chicken, potatoes, thyme, water and salt.",
+     "min": 12
+    },
+    {
+     "text": "Simmer until the potatoes break down.",
+     "min": 30
+    },
+    {
+     "text": "Stir in the cream and serve in big bowls with torn bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Snow White's gooseberry pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 85,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "gooseberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the gooseberries with sugar and cornflour until thick, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Line a pie dish with pastry, fill and cover with a pastry lid.",
+     "min": 30
+    },
+    {
+     "text": "Cut slits, brush with milk and bake at 190C.",
+     "min": 45
+    },
+    {
+     "text": "Rest and serve warm with cream.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Shiny red apple and cinnamon punch",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 125,
+   "make_ahead": "Up to 1 day, add ice and sparkling juice at serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks, plus 4 to serve",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red apple, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the apple juice with the cinnamon, cloves and orange peel.",
+     "min": 10
+    },
+    {
+     "text": "Cool and chill, then strain into a jug.",
+     "min": 120
+    },
+    {
+     "text": "Just before serving, add plenty of ice and top with sparkling apple juice.",
+     "min": 0
+    },
+    {
+     "text": "Float apple slices on top and serve with a cinnamon stick each.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

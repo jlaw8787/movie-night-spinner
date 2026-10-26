@@ -1,0 +1,370 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "The worm's tea and cake",
+   "course": "s",
+   "prep_min": 4,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "fruit loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tea bags English breakfast tea",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm a teapot, add the tea bags and boiling water and brew.",
+     "min": 4
+    },
+    {
+     "text": "Toast thick slices of fruit loaf until the edges crisp.",
+     "min": 6
+    },
+    {
+     "text": "Butter generously and cut into fingers. Serve with milk on the side, like a guest in a burrow.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Bog of Eternal Stench garlic dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 45,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic heads",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wrap the garlic heads in foil and roast at 180C.",
+     "min": 45
+    },
+    {
+     "text": "Squeeze out the soft cloves and beat with the cream cheese, sour cream, lemon juice and salt until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Serve with torn baguette for dipping.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Hoggle's beef and mushroom stew",
+   "course": "m",
+   "prep_min": 38,
+   "cook_min": 200,
+   "make_ahead": "Up to 3 days",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the beef, onion and carrots and quarter the mushrooms.",
+     "min": 15
+    },
+    {
+     "text": "Brown the beef in batches in the oil, then soften the vegetables in the same pot.",
+     "min": 20
+    },
+    {
+     "text": "Stir in the tomato paste, Worcestershire sauce, thyme and stock. Cover and braise at 160C.",
+     "min": 180
+    },
+    {
+     "text": "Peel and boil the potatoes and mash with the butter and milk.",
+     "min": 20
+    },
+    {
+     "text": "Serve the stew over the mash with chopped parsley.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Vanilla poached peaches with mascarpone",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 135,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mascarpone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet almond biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the apple juice, water, sugar, honey and split vanilla bean.",
+     "min": 5
+    },
+    {
+     "text": "Add the halved peaches and poach gently, then slip off the skins.",
+     "min": 15
+    },
+    {
+     "text": "Chill the peaches in the syrup.",
+     "min": 120
+    },
+    {
+     "text": "Beat the mascarpone with the icing sugar.",
+     "min": 3
+    },
+    {
+     "text": "Serve two halves each with mascarpone, a little syrup and crumbled almond biscuits.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Goblin King's spiced apple and pear punch",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pear juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the juices in a pot with the cinnamon, star anise and orange peel.",
+     "min": 3
+    },
+    {
+     "text": "Simmer gently so the spices come through, then strain.",
+     "min": 10
+    },
+    {
+     "text": "Serve warm in mugs with a cinnamon stick, or cool it and pour over ice, topping each glass with sparkling water.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

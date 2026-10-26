@@ -1,0 +1,352 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Venom's rocky road chocolate stash",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honeycomb",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "raspberry lollies",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a 20cm square tin with baking paper.",
+     "min": 5
+    },
+    {
+     "text": "Melt both chocolates together in short bursts in the microwave.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the marshmallows, broken honeycomb, peanuts and lollies.",
+     "min": 5
+    },
+    {
+     "text": "Spread into the tin and chill until firm.",
+     "min": 120
+    },
+    {
+     "text": "Smash or cut into chunks and pile in a bowl.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sonny and Cher's chicken bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cooking oil spray",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the chicken into chunks. Beat the eggs.",
+     "min": 8
+    },
+    {
+     "text": "Dip in egg and press into panko.",
+     "min": 10
+    },
+    {
+     "text": "Spread on a lined tray, spray with oil and bake at 220C.",
+     "min": 15
+    },
+    {
+     "text": "Mix the honey and mustard for dipping.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Venom's messy breakfast",
+   "course": "m",
+   "prep_min": 7,
+   "cook_min": 16,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices thick white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs with salt and scramble slowly in some of the butter until soft.",
+     "min": 8
+    },
+    {
+     "text": "Toast and butter the bread.",
+     "min": 5
+    },
+    {
+     "text": "Pile everything onto plates with a square of dark chocolate on the side.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Carnage red velvet",
+   "course": "w",
+   "prep_min": 27,
+   "cook_min": 70,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "red food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and prepare two tins.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the dry ingredients, then the eggs, oil, buttermilk and colouring until smooth.",
+     "min": 10
+    },
+    {
+     "text": "Bake in two tins.",
+     "min": 30
+    },
+    {
+     "text": "Cool completely.",
+     "min": 40
+    },
+    {
+     "text": "Beat the cream cheese with icing sugar, then stack the cakes and cover the whole cake.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Venom's triple chocolate thickshake",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "small brownies",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the chocolate and cream, stirring until smooth, and cool slightly.",
+     "min": 6
+    },
+    {
+     "text": "Drizzle a spoon of the sauce inside four tall glasses.",
+     "min": 3
+    },
+    {
+     "text": "Blend the ice cream, milk and cocoa until thick.",
+     "min": 3
+    },
+    {
+     "text": "Pour into the glasses, drizzle with the rest of the sauce and crumble a brownie over each.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

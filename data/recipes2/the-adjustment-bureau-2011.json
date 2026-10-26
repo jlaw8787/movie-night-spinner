@@ -1,0 +1,648 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hot honey-roasted nuts",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 25,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed nuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter with the honey, sugar, cinnamon and salt.",
+     "min": 3
+    },
+    {
+     "text": "Toss through the nuts, spread on a lined tray and roast at 170C, stirring halfway.",
+     "min": 14
+    },
+    {
+     "text": "Cool so they crisp, then pour into paper cones.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Bureau men's rooftop crostini",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 7,
+   "make_ahead": "Up to 2 hours, assemble just before serving",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "soft goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the baguette into 8 slices and toast at 200C until golden.",
+     "min": 7
+    },
+    {
+     "text": "Beat the goat's cheese with the cream until light.",
+     "min": 4
+    },
+    {
+     "text": "Warm the honey gently.",
+     "min": 1
+    },
+    {
+     "text": "Spread the cheese on the toast, drizzle with honey and finish with thyme and pepper.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Manhattan steak frites",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 50,
+   "make_ahead": "Shallot butter up to 3 days",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "shallots, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "neutral oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "sirloin steak, in four pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil for searing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the shallots with the wine until almost dry. Cool, then mix into the butter with the salt and chill.",
+     "min": 20
+    },
+    {
+     "text": "Cut the potatoes into frites, rinse and dry thoroughly.",
+     "min": 10
+    },
+    {
+     "text": "Fry in oil at 140C, then drain and cool.",
+     "min": 20
+    },
+    {
+     "text": "Fry again at 185C until crisp. Salt lightly.",
+     "min": 3
+    },
+    {
+     "text": "Season the steaks and sear hard in a hot pan with the oil to your preferred doneness.",
+     "min": 6
+    },
+    {
+     "text": "Rest the steaks, then slice and top with the shallot red wine butter. Serve with frites.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "The Chairman's chocolate fondant",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Batter up to 1 day, chilled",
+   "ingredients": [
+    {
+     "q": 145,
+     "u": "g",
+     "item": "butter, plus extra for the moulds",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter four 150ml moulds. Heat the oven to 200C.",
+     "min": 4
+    },
+    {
+     "text": "Melt the chocolate with the butter gently and cool slightly.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the eggs, yolks and sugar until pale. Stir in the chocolate mixture, then fold in the flour.",
+     "min": 5
+    },
+    {
+     "text": "Divide among the moulds and bake until the edges are set and centres stay soft.",
+     "min": 10
+    },
+    {
+     "text": "Rest briefly, loosen the edges and turn onto plates. Serve immediately.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Election night French 75",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 360,
+     "u": "ml",
+     "item": "cold brut champagne",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, for peel strips",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool.",
+     "min": 4
+    },
+    {
+     "text": "Shake the gin, lemon juice and cooled syrup with ice.",
+     "min": 2
+    },
+    {
+     "text": "Strain evenly into 4 chilled flutes and top each with champagne, pouring slowly.",
+     "min": 2
+    },
+    {
+     "text": "Finish with a long strip of lemon peel.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Smoked salmon on cucumber",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "crème fraîche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested and juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cucumbers into thick rounds.",
+     "min": 4
+    },
+    {
+     "text": "Whip the crème fraîche with the lemon zest and a little juice.",
+     "min": 3
+    },
+    {
+     "text": "Spoon onto the rounds, top with salmon and dill.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Lobster linguine",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lobster tails, split",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "linguine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the linguine in salted water until al dente.",
+     "min": 12
+    },
+    {
+     "text": "Pan-fry the split tails in oil, flesh down, until just cooked. Set aside and slice.",
+     "min": 6
+    },
+    {
+     "text": "In the same pan fry the garlic and chilli, add the tomatoes and wine and simmer.",
+     "min": 8
+    },
+    {
+     "text": "Toss the pasta through the sauce with the lobster and parsley.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Coffee or tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "milk and sugar",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water.",
+     "min": 5
+    },
+    {
+     "text": "Brew the coffee and steep the tea, then pour at the table.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Champagne",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle brut champagne",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the bottle well.",
+     "min": 5
+    },
+    {
+     "text": "Pour into chilled flutes.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Wine by the glass",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle house red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle house white wine, chilled",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Open the red to breathe and chill the white.",
+     "min": 5
+    },
+    {
+     "text": "Pour by the glass.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Beer",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "domestic or imported beers, chilled",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the beers.",
+     "min": 5
+    },
+    {
+     "text": "Pour or serve in the bottle.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Soft drinks",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cola",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "ginger ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "club soda",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the bottles.",
+     "min": 5
+    },
+    {
+     "text": "Serve over ice.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

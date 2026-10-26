@@ -1,0 +1,680 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Freedom Town croquetas de jamón",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 500,
+   "make_ahead": "Chill the bechamel overnight; crumb up to 4 hours ahead and fry to serve",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "serrano ham, finely chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, stir in the flour for 2 minutes, then whisk in the warm milk and cook until very thick.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the ham and nutmeg, spread on a tray, cover and chill overnight.",
+     "min": 480
+    },
+    {
+     "text": "Roll into 16 logs, dip in egg and then breadcrumbs.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 180C in batches until golden and serve with lime.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Tostones",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Fry once up to 2 hours ahead; second fry just before serving",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "flaky salt, to finish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the plantains and cut into 3cm chunks.",
+     "min": 8
+    },
+    {
+     "text": "Fry at 160C for 4 minutes until soft.",
+     "min": 6
+    },
+    {
+     "text": "Smash flat with a heavy glass and fry again at 190C until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Mix the garlic, lime juice and olive oil, spoon over and finish with flaky salt.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Ropa vieja",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 150,
+   "make_ahead": "Beef up to 2 days ahead, keep chilled in its broth",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "flank steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1.5,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "capsicums, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned black beans (2 tins)",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the steak with the bay leaves and half an onion in water until tender. Shred it and keep 250ml of the broth.",
+     "min": 120
+    },
+    {
+     "text": "Fry the sliced onion, capsicums and garlic in olive oil until soft.",
+     "min": 12
+    },
+    {
+     "text": "Add the cumin, oregano, tomatoes, olives, beef and broth and simmer.",
+     "min": 20
+    },
+    {
+     "text": "Cook the rice and warm the black beans, and serve alongside.",
+     "min": 18
+    }
+   ]
+  },
+  {
+   "n": "The World Is Yours guava pastelitos",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Assemble up to 4 hours ahead, keep chilled; bake to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "guava paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pastry sheets into 8 squares in all.",
+     "min": 5
+    },
+    {
+     "text": "Put a slice of guava paste and a teaspoon of cream cheese in the middle of 4 squares.",
+     "min": 5
+    },
+    {
+     "text": "Cover with the other squares, press the edges with a fork, brush with egg and sprinkle with sugar.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C until puffed.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Babylon Club mojito",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 2,
+   "make_ahead": "Syrup up to 1 week ahead",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 32,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "lime juice (about 4 limes)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cups crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool to make syrup.",
+     "min": 5
+    },
+    {
+     "text": "In each tall glass, gently muddle mint with some syrup and lime juice.",
+     "min": 4
+    },
+    {
+     "text": "Add rum, fill with crushed ice, top with soda and stir.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Cuba libre",
+   "course": "d",
+   "extra": true,
+   "prep_min": 3,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gold rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cola",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tall glasses with ice and add rum to each.",
+     "min": 1
+    },
+    {
+     "text": "Top with cola and squeeze in a good half lime each.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Piña colada",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "cream of coconut",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 480,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cups crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the rum, cream of coconut, pineapple juice and ice until smooth and frosty.",
+     "min": 3
+    },
+    {
+     "text": "Pour into tall glasses.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Champagne, by the bottle",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 0,
+   "make_ahead": "Chill the bottle at least 3 hours",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "French champagne",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the bottle in a bucket of ice.",
+     "min": 1
+    },
+    {
+     "text": "Pour for as many guests as you have.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "The little friend",
+   "course": "d",
+   "extra": true,
+   "prep_min": 3,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "finely ground espresso coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a strong espresso for four.",
+     "min": 4
+    },
+    {
+     "text": "Stir in sugar to taste and serve in small cups.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Medianoche sliders",
+   "course": "s",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Assemble up to 2 hours ahead; press just before serving",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "sweet slider rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "roast pork, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles, sliced",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the rolls and smear the cut sides with mustard.",
+     "min": 3
+    },
+    {
+     "text": "Layer with ham, pork, Swiss cheese and pickle.",
+     "min": 7
+    },
+    {
+     "text": "Brush the tops with melted butter.",
+     "min": 2
+    },
+    {
+     "text": "Press in a heavy pan over medium heat with a second pan on top, about 3 minutes a side.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Babylon surf and turf",
+   "course": "m",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Béarnaise up to 2 hours ahead, keep warm",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "filet mignon steaks, about 180g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "jumbo prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, melted, for béarnaise",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the vinegar with tarragon until almost gone. Whisk with the yolks over a pan of simmering water, then slowly beat in the melted butter until thick.",
+     "min": 12
+    },
+    {
+     "text": "Sear the steaks in olive oil in a hot pan to your liking and rest 5 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Cook the prawns in garlic butter for 2 minutes a side.",
+     "min": 5
+    },
+    {
+     "text": "Serve the steaks topped with prawns and the béarnaise.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

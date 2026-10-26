@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tortilla head quesadillas",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Monterey Jack, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the tomatoes with the onion and coriander for salsa.",
+     "min": 8
+    },
+    {
+     "text": "Fill half the tortillas with the cheeses, top with the rest and press.",
+     "min": 7
+    },
+    {
+     "text": "Cook in a dry pan until golden and melted, in batches.",
+     "min": 15
+    },
+    {
+     "text": "Cut into wedges.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Sunnyside ham and cheese pinwheels",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Rolls can be chilled up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato relish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Lay the pastry flat and spread with tomato relish.",
+     "min": 5
+    },
+    {
+     "text": "Cover with ham and cheddar and roll up tightly from one edge.",
+     "min": 10
+    },
+    {
+     "text": "Chill the logs for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Cut each log into slices, lay flat on lined trays and brush with beaten egg.",
+     "min": 5
+    },
+    {
+     "text": "Bake for 15 minutes until puffed and golden.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Andy's going-away dinner",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with some of the parmesan and the parsley. Roll into balls.",
+     "min": 15
+    },
+    {
+     "text": "Brown the meatballs in oil.",
+     "min": 10
+    },
+    {
+     "text": "Simmer the meatballs in the tomatoes for 40 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Cook the spaghetti, toss with the sauce and more parmesan, and save a plate for the toys.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Strawberry bear shortcakes",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "strawberries, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, stir in the milk and pat out.",
+     "min": 10
+    },
+    {
+     "text": "Cut into rounds and bake at 200C for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Toss the strawberries with the sugar and stand for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Split the shortcakes and fill with whipped cream and the berries.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Sunnyside strawberry malt shakes",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "ripe strawberries, 2 kept for garnish",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Hull the strawberries and keep two for garnish.",
+     "min": 3
+    },
+    {
+     "text": "Blend the rest with the ice cream, milk, malt and honey until thick and pink.",
+     "min": 4
+    },
+    {
+     "text": "Pour into glasses and top with whipped cream and half a strawberry each.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

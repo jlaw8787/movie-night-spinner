@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "HUNTR/X tour bus kimbap",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sushi rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "nori sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pickled radish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the cooked sushi rice with sesame oil and salt.",
+     "min": 20
+    },
+    {
+     "text": "Lay rice on the nori sheets, add strips of omelette from the eggs, sautéed carrot, blanched spinach and pickled radish, then roll tightly and slice into rounds.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Saja Boys' sugar-dusted hot dogs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bamboo skewers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thread the frankfurts onto skewers with a stick of mozzarella above.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the self-raising flour, the egg, the sugar and the milk into a thick batter, pour into a tall glass, dip each skewer and roll in the panko.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 170C for 4 minutes, roll in sugar and drizzle with ketchup and mustard.",
+     "min": 14
+    }
+   ]
+  },
+  {
+   "n": "Ramyeon with egg",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "gochugaru",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "packets ramen noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "kimchi",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water to the boil with the gochugaru, the soy and a stock cube.",
+     "min": 10
+    },
+    {
+     "text": "Cook the ramen noodles for 3 minutes, crack in the eggs and cover 1 minute.",
+     "min": 10
+    },
+    {
+     "text": "Divide into bowls with the kimchi, sliced spring onions and a slice of cheese melting on top.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Derpy tiger hotteok",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 72,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 220,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, the dried yeast, the sugar and the warm milk into a sticky dough and prove 1 hour.",
+     "min": 78
+    },
+    {
+     "text": "Fill the balls with the brown sugar, the cinnamon and the chopped walnuts, flatten in an oiled pan and fry 2 minutes a side until crisp.",
+     "min": 14
+    }
+   ]
+  },
+  {
+   "n": "Golden honey yuja tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar yuja citron tea",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the water with a 3cm knob of ginger, sliced thin, for 5 minutes.",
+     "min": 6
+    },
+    {
+     "text": "Take off the heat and stir in the yuja citron tea and the honey until dissolved.",
+     "min": 1
+    },
+    {
+     "text": "Pour into heatproof glasses, making sure each gets some citron peel, and add a thin lemon slice.",
+     "min": 1
+    },
+    {
+     "text": "For an iced version, cool it and pour over ice.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

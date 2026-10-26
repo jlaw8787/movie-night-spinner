@@ -1,0 +1,314 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Holly's window breakfast pastries",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, bake fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar, for sweetening the filling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar, for dusting",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pastry into squares.",
+     "min": 4
+    },
+    {
+     "text": "Sweeten the cream cheese with icing sugar and spoon with the jam into the centre of each square. Fold the corners in.",
+     "min": 8
+    },
+    {
+     "text": "Brush with beaten egg and bake at 200C until golden.",
+     "min": 15
+    },
+    {
+     "text": "Dust with icing sugar.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "No-name Cat party canapés",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 2,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "celery stalks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs hard, cool in iced water and peel.",
+     "min": 12
+    },
+    {
+     "text": "Halve the eggs, mash the yolks with mayonnaise and pipe back, then dust with paprika.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese with chopped chives and fill short celery sticks.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sally Tomato's Thursday steak",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Sauce up to 1 day, fry chips fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "black peppercorns, cracked",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag mixed salad leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thin fries.",
+     "min": 10
+    },
+    {
+     "text": "Fry the fries twice until crisp.",
+     "min": 18
+    },
+    {
+     "text": "Sear the steaks to your liking and rest.",
+     "min": 12
+    },
+    {
+     "text": "Toast the cracked peppercorns in the pan, add the cream and simmer until thick.",
+     "min": 5
+    },
+    {
+     "text": "Serve with the fries and a green salad.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Danish pastries",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, bake fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thick custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pastry into rounds.",
+     "min": 5
+    },
+    {
+     "text": "Spoon custard into the centre of each and top with blueberries.",
+     "min": 7
+    },
+    {
+     "text": "Brush the edges with beaten egg and bake at 200C until golden.",
+     "min": 15
+    },
+    {
+     "text": "Brush with warm apricot jam.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Holly's champagne cocktails",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle champagne or dry sparkling wine (750 ml)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "aromatic bitters, a few dashes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the coupes and the bottle.",
+     "min": 4
+    },
+    {
+     "text": "Drop a sugar cube into each glass and shake 3 dashes of bitters over it. Add the brandy.",
+     "min": 3
+    },
+    {
+     "text": "Tilt the glass and pour the sparkling slowly down the side so it does not foam over.",
+     "min": 2
+    },
+    {
+     "text": "Peel long strips of lemon zest, twist over the drinks to spray the oil and drop them in.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

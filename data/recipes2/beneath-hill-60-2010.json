@@ -1,0 +1,362 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tunnellers' macadamia Anzac biscuits",
+   "course": "s",
+   "prep_min": 19,
+   "cook_min": 31,
+   "make_ahead": "Up to 1 week, keep airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "macadamias",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the oats, flour, coconut, chopped macadamias and brown sugar.",
+     "min": 6
+    },
+    {
+     "text": "Melt the butter with golden syrup, then stir in bicarb dissolved in boiling water so it foams.",
+     "min": 3
+    },
+    {
+     "text": "Stir into the dry mix.",
+     "min": 3
+    },
+    {
+     "text": "Roll into balls and flatten slightly on lined trays.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 170C until golden.",
+     "min": 13
+    },
+    {
+     "text": "Cool on the trays to crisp.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Charters Towers corned beef rolls",
+   "course": "s",
+   "prep_min": 22,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, keep covered and chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft white rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sweet mustard pickle",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corned beef",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tomato",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split and butter the rolls.",
+     "min": 6
+    },
+    {
+     "text": "Spread each base generously with mustard pickle.",
+     "min": 4
+    },
+    {
+     "text": "Layer with thickly sliced corned beef, a slice of cheddar and a few leaves of iceberg lettuce.",
+     "min": 8
+    },
+    {
+     "text": "Add thinly sliced tomato and a crack of pepper, close and cut in half.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Messines trench corned beef hash",
+   "course": "m",
+   "prep_min": 12,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, reheat in a hot pan",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "corned beef",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle of brown sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the potatoes, onion and corned beef.",
+     "min": 10
+    },
+    {
+     "text": "Boil the potatoes, then drain well.",
+     "min": 8
+    },
+    {
+     "text": "Fry the onion in butter and oil.",
+     "min": 5
+    },
+    {
+     "text": "Add the potatoes and corned beef and press flat.",
+     "min": 2
+    },
+    {
+     "text": "Cook over medium-high heat, turning in sections, until crusty.",
+     "min": 10
+    },
+    {
+     "text": "Splash with Worcestershire and add chopped parsley.",
+     "min": 2
+    },
+    {
+     "text": "Fry the eggs and sit one on each serve with brown sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Fruit cake from home with brandy butter",
+   "course": "w",
+   "prep_min": 16,
+   "cook_min": 35,
+   "make_ahead": "Brandy butter up to 3 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "fruit cake",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the soft butter with icing sugar until pale, then beat in the brandy a little at a time until fluffy.",
+     "min": 8
+    },
+    {
+     "text": "Chill the brandy butter for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Wrap the fruit cake in foil.",
+     "min": 3
+    },
+    {
+     "text": "Warm at 160C.",
+     "min": 15
+    },
+    {
+     "text": "Cut into thick slices and serve with the brandy butter and cheddar wedges.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dugout cocoa with condensed milk",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 8,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 900,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "condensed milk",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk in a saucepan until steaming but not boiling.",
+     "min": 8
+    },
+    {
+     "text": "Whisk in the cocoa, chopped chocolate and condensed milk until smooth and frothy.",
+     "min": 4
+    },
+    {
+     "text": "Add a pinch of salt to bring out the chocolate.",
+     "min": 1
+    },
+    {
+     "text": "Pour into enamel mugs and serve straight away while piping hot.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

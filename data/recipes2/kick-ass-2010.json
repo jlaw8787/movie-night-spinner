@@ -1,0 +1,322 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Atomic Comics popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oil with 3 kernels, covered, until they pop, then add the rest and shake until the popping slows.",
+     "min": 8
+    },
+    {
+     "text": "Toss with the melted butter, parmesan and cracked pepper.",
+     "min": 2
+    },
+    {
+     "text": "Fill four paper bags.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "D'Amico's prosciutto melon bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "rockmelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 10,
+     "u": "",
+     "item": "slices prosciutto",
+     "aisle": "Meat"
+    },
+    {
+     "q": 20,
+     "u": "",
+     "item": "small basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "aged balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and seed the rockmelon and cut into 20 cubes.",
+     "min": 7
+    },
+    {
+     "text": "Tear the prosciutto in half lengthways.",
+     "min": 3
+    },
+    {
+     "text": "Wrap each cube in prosciutto with a basil leaf tucked inside and spear with a pick.",
+     "min": 8
+    },
+    {
+     "text": "Arrange on a platter, drizzle with balsamic and olive oil and finish with pepper.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bowling alley burger",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet relish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mayo, relish and mustard for the sauce. Cut the potatoes into chips.",
+     "min": 12
+    },
+    {
+     "text": "Fry the chips at 140C, then again at 185C until crisp, and salt.",
+     "min": 22
+    },
+    {
+     "text": "Roll the mince into eight balls and smash thin on a smoking griddle.",
+     "min": 5
+    },
+    {
+     "text": "Top with cheese and stack two per toasted bun with pickles and sauce.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Bowling alley ice cream sundae",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with some of the cream into a hot fudge.",
+     "min": 6
+    },
+    {
+     "text": "Whip the remaining cream.",
+     "min": 4
+    },
+    {
+     "text": "Layer scoops of both ice creams in four tall glasses with the fudge.",
+     "min": 3
+    },
+    {
+     "text": "Finish with whipped cream, sprinkles and a cherry.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Hit-Girl's purple grape ginger fizz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 120,
+   "make_ahead": "Grapes freeze ahead, mix up to 1 day",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "red grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece ginger (2 cm)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the grapes.",
+     "min": 120
+    },
+    {
+     "text": "Grate the ginger and squeeze the juice through a sieve into a jug.",
+     "min": 3
+    },
+    {
+     "text": "Add the grape juice and lime juice and stir.",
+     "min": 2
+    },
+    {
+     "text": "Fill small tumblers with the frozen grapes, pour in the mix and top with soda water.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

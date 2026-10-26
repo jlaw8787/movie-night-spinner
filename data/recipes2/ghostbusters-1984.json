@@ -1,0 +1,390 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Slimer's green dip",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Mix up to 1 day ahead, bake just before serving",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen spinach",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "drained marinated artichokes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "grated mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thaw the spinach and squeeze it very dry. Chop the artichokes.",
+     "min": 10
+    },
+    {
+     "text": "Mix the spinach, artichokes, cream cheese, sour cream, most of the mozzarella and the garlic. Spoon into a small baking dish and top with the rest of the mozzarella.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 190C until bubbling. Serve with the corn chips.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Firehouse wings",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 50,
+   "make_ahead": "Sauce just before serving",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken wings, separated",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "ranch dressing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the wings dry and toss with baking powder, salt and paprika. Spread on a rack over a lined tray.",
+     "min": 8
+    },
+    {
+     "text": "Roast at 220C, turning halfway, until browned and at least 74C in the thickest part.",
+     "min": 42
+    },
+    {
+     "text": "Melt the butter with the hot sauce and toss with most of the wings. Leave some plain for a milder option. Serve with ranch.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "New York sesame chicken",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Rice can be cooked a day ahead and chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "boneless chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour, for coating",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour, for sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chilled cooked rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "head broccoli",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the chicken into bite-size pieces and toss with the coating cornflour. Slice the spring onions and cut the broccoli into florets.",
+     "min": 10
+    },
+    {
+     "text": "Shallow-fry the chicken in batches until crisp and at least 74C inside. Drain.",
+     "min": 12
+    },
+    {
+     "text": "Simmer the soy, honey, vinegar, sesame oil, garlic and water. Thicken with the sauce cornflour mixed with a little water, then toss through the chicken with the sesame seeds.",
+     "min": 5
+    },
+    {
+     "text": "Fry the beaten eggs in a little oil, add the rice, spring onions and a splash of soy, and stir-fry until piping hot.",
+     "min": 8
+    },
+    {
+     "text": "Char the broccoli in a hot pan with oil and a splash of water. Divide everything into 4 takeaway boxes.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Stay Puft brownie skillet",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Bake just before serving",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 15,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter and chocolate together and cool slightly.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the sugar and eggs, then fold in the flour, cocoa and salt. Pour into a buttered 20cm ovenproof skillet.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 180C until the edges are set and the centre is fudgy.",
+     "min": 22
+    },
+    {
+     "text": "Top with the marshmallows and grill briefly until golden, watching closely. Serve with the ice cream.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Green citrus slush",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "green food colouring, optional",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the limes.",
+     "min": 4
+    },
+    {
+     "text": "Blend the orange juice, lime juice, lemonade and ice until slushy. Add a tiny drop of green food colouring if wanted.",
+     "min": 4
+    },
+    {
+     "text": "Divide into 4 glasses and serve immediately.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,276 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Xavier's School cereal bars",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 125,
+   "make_ahead": "Up to 5 days, airtight",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "puffed rice cereal",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, honey and peanut butter together.",
+     "min": 5
+    },
+    {
+     "text": "Stir through the oats and puffed rice until coated.",
+     "min": 4
+    },
+    {
+     "text": "Press firmly into a lined tin.",
+     "min": 6
+    },
+    {
+     "text": "Chill, then cut into bars.",
+     "min": 120
+    }
+   ]
+  },
+  {
+   "n": "Iceman frozen grapes",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 180,
+   "make_ahead": "Up to 3 days frozen",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "red grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "green grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pick the grapes off the stem, wash and dry.",
+     "min": 7
+    },
+    {
+     "text": "Roll in the lime juice, then in the sugar.",
+     "min": 3
+    },
+    {
+     "text": "Spread on a tray and freeze until solid. Serve straight from the freezer.",
+     "min": 180
+    }
+   ]
+  },
+  {
+   "n": "Logan's poutine",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cheese curds",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 140C until soft and pale.",
+     "min": 12
+    },
+    {
+     "text": "Cook the butter and flour for 2 minutes, whisk in the stock and simmer until thick.",
+     "min": 10
+    },
+    {
+     "text": "Fry the chips again at 185C until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Pile chips into bowls, scatter the cheese curds and pour the hot gravy over.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Frozen ice cream",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "very hard vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put four bowls in the freezer.",
+     "min": 60
+    },
+    {
+     "text": "Scoop the ice cream into the bowls.",
+     "min": 3
+    },
+    {
+     "text": "Melt the chocolate with the coconut oil and pour over at the table so it sets into a shell in seconds.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Logan's rye and maple old fashioned",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "Canadian rye whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large ice cubes",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, for stirring",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the rye, maple syrup and bitters over ice in a jug until very cold.",
+     "min": 1
+    },
+    {
+     "text": "Strain into four heavy tumblers over one large ice cube each.",
+     "min": 2
+    },
+    {
+     "text": "Squeeze a strip of orange peel over each glass, rub the rim and drop it in.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

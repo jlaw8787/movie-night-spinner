@@ -285,7 +285,7 @@ function ensureExact(f){
     for(let tryN=0;tryN<2;tryN++){
       try{const r=await fetch(filmFile(f));if(!r.ok)break;const d=await r.json();
         Object.assign(f,{T:d.T,D:d.D,P:d.P,S:d.S,M:d.M,W:d.W,K:d.K,_full:true});
-        if(d.edition)EDITIONS[f.id]=d.edition;if(d.recipe)RECIPE_MENUS[f.id]=d.recipe;if(d.lib)f._lib=d.lib;return}
+        if(d.edition)EDITIONS[f.id]=d.edition;if(d.recipe)RECIPE_MENUS[f.id]=d.recipe;if(d.lib)f._lib=d.lib;if(d.r2)f._r2=d.r2;return}
       catch(e){}
     }
     delete _filmLoads[f.id];
@@ -611,6 +611,7 @@ function cardHTML(f,menu,tag,usePoster=true){
 }
 
 function prepHTML(f,menu){
+  if(f._r2&&f._r2.dishes&&f._r2.dishes.length)return prepHTML2(f,menu);
   const edition=movieEdition(f);
   const L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const shop=shopGroups(menu).map(([a,list])=>`<div class="pp-aisle"><h4>${a}</h4><ul>${list.map(x=>`<li><span class="pp-box"></span>${ESC(x)}</li>`).join("")}</ul></div>`).join("");
@@ -696,6 +697,85 @@ function phoneView(f,spec,menu){
 $("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
 
 let renderId=0;
+/* ---------- plan the night: tick dishes, set guests, scaled shopping and real times (data/recipes2) ---------- */
+const PLAN={guests:4,off:{}};
+function planLoad(f){PLAN.guests=4;PLAN.off={};try{const s=JSON.parse(localStorage.getItem("mns-plan-"+f.id)||"null");if(s){PLAN.guests=Math.min(24,Math.max(1,+s.g||4));PLAN.off=s.off||{}}}catch(e){}}
+function planSave(f){try{localStorage.setItem("mns-plan-"+f.id,JSON.stringify({g:PLAN.guests,off:PLAN.off}))}catch(e){}}
+const planDishes=f=>((f._r2&&f._r2.dishes)||[]).filter(d=>!PLAN.off[d.n]);
+const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
+function fracText(q){const w=Math.floor(q),r=q-w;let best=FRAC[0];for(const x of FRAC)if(Math.abs(x[0]-r)<Math.abs(best[0]-r))best=x;const W=best[0]===1?w+1:w;return (W?String(W):"")+(best[1]?(W?" ":"")+best[1]:"")||"1/4"}
+function planQty(q,u){
+  if(u==="g"&&q>=1000){q/=1000;u="kg"}else if(u==="ml"&&q>=1000){q/=1000;u="l"}else if(u==="kg"&&q<1){q*=1000;u="g"}else if(u==="l"&&q<1){q*=1000;u="ml"}
+  if(u==="g"||u==="ml")return (q>=50?Math.round(q/5)*5:Math.max(1,Math.round(q)))+u;
+  if(u==="kg"||u==="l")return (Math.round(q*100)/100)+u;
+  if(u==="tsp"||u==="tbsp"||u==="cup")return fracText(q)+" "+u;
+  return String(q<1?fracText(q):Math.ceil(q-0.01));
+}
+const UNITB={g:["g",1],kg:["g",1000],ml:["ml",1],l:["ml",1000]};
+const PL_CONT=/^(bag|can|tin|bottle|jar|packet|pack|bunch|clove|rasher|slice|sprig|stick|sheet|block|head|stalk|punnet|loaf|fillet|piece|wedge|strip|scoop|shot|glass|cup|leaf|tray|box|carton|tub|round|ball|sachet)s?$/i;
+function planPlural(item,q){if(!(q>1))return item;let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");if(par>0){rest=[head.slice(par)+(rest.length?","+rest.join(","):"")];head=head.slice(0,par);return planPlural(head,q)+rest[0]}const w=head.trim().split(" ");
+  const pl=x=>/(s|ice|milk|water|juice|sugar|flour|rice|bread|butter|cream|cheese|fish|corn|meat|oil|salt|pepper|mince|beef|pork|lamb|chicken|bacon|ham|tea|coffee|soda)$/i.test(x)?x:/(ch|sh|x)$/i.test(x)?x+"es":/(tomato|potato|mango|avocado)$/i.test(x)?x+"es":/[^aeiou]y$/i.test(x)?x.slice(0,-1)+"ies":/f$/i.test(x)&&/loaf|leaf|half/i.test(x)?x.slice(0,-1)+"ves":x+"s";
+  if(PL_CONT.test(w[0])){w[0]=pl(w[0]);if(w.length>1&&w[1]!=="of")w[0]+=" of"}else w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
+function planShopping(f){
+  const k=PLAN.guests/((f._r2&&f._r2.serves)||4),tally={},order=[];
+  for(const d of planDishes(f))for(const i of d.ingredients||[]){
+    const b=UNITB[i.u]||[i.u||"#",1],a=AISLES.includes(i.aisle)?i.aisle:"Pantry";
+    const key=a+"|"+b[0]+"|"+String(i.item).toLowerCase();
+    if(!tally[key]){tally[key]={a,u:b[0],item:i.item,q:i.q==null?null:0};order.push(key)}
+    if(i.q!=null&&tally[key].q!=null)tally[key].q+=i.q*b[1]*k;
+  }
+  return order.map(key=>{const t=tally[key];const txt=t.q==null?t.item:(t.u==="#"||t.u===""?planQty(t.q,"")+" "+planPlural(t.item,t.q):planQty(t.q,t.u)+" "+t.item);return txt+"@"+t.a});
+}
+const planMin=m=>m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
+function planHTML(f){
+  const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks"};
+  return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">-</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
+  <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.</p>
+  ${["s","m","w","d"].map(c=>{const ds=r.dishes.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.n)}"${PLAN.off[d.n]?"":" checked"}><span>${ESC(d.n)}</span><small>${planMin((d.prep_min||0)+(d.cook_min||0))}</small></label>`).join("")}</fieldset>`:""}).join("")}`;
+}
+function prepHTML2(f,menu){
+  const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
+  const ds=planDishes(f),groups={};
+  for(const x of planShopping(f)){const [n,a]=x.split("@");(groups[a]=groups[a]||[]).push(n)}
+  const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>`<li><span class="pp-box"></span>${ESC(x)}</li>`).join("")}</ul></div>`).join("");
+  const hands=ds.reduce((s,x)=>s+(x.prep_min||0),0),longest=ds.reduce((m,x)=>Math.max(m,(x.prep_min||0)+(x.cook_min||0)),0);
+  const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink"};
+  const steps=ds.map(x=>`<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">Prep ${planMin(x.prep_min||0)}${x.cook_min?`, cook ${planMin(x.cook_min)}`:""}${x.make_ahead?`. Make ahead: ${ESC(x.make_ahead)}`:""}</span><span>${(x.steps||[]).map(s=>ESC(s.text)+(s.min?` <i>(${planMin(s.min)})</i>`:"")).join(" ")}</span></li>`).join("");
+  return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
+  <div class="mc-in pp">
+    <div class="mc-eye">Prep sheet</div>
+    <div class="pp-title">${ESC(f.title)}</div>
+    <p class="pp-serves">Serves ${PLAN.guests} &nbsp;/&nbsp; ${ds.length} dish${ds.length===1?"":"es"} &nbsp;/&nbsp; hands-on ${planMin(hands)}, longest dish ${planMin(longest)}</p>
+    <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
+    <div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition&&edition.cue||f.P)}</span></div>
+  </div>`;
+}
+function planWire(f){
+  const box=$("planner");if(!box)return;
+  if(!f||!f._r2||!f._r2.dishes||!f._r2.dishes.length){box.hidden=true;box.innerHTML="";return}
+  planLoad(f);box.hidden=false;box.innerHTML=planHTML(f);
+  const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
+  box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(24,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo()};
+  box.onchange=e=>{const n=e.target.dataset.dish;if(n==null)return;if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1;redo()};
+}
+/* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
+function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return t.slice(0,i).replace(/[,;:\s]+$/,"")+"."}
+/* after a format's own fitter: any clamped or ellipsis text that still hides words shrinks (to 14px at most) until it shows in full */
+function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;
+  let fs=parseFloat(cs.fontSize),lh=parseFloat(cs.lineHeight)||fs*1.2;
+  /* tall display faces: the glyphs poke past a tight line box, so open the line a little */
+  const one=cs.whiteSpace==="nowrap"||cs.webkitLineClamp==="1";if(e.scrollWidth<=e.clientWidth+2&&e.scrollHeight-e.clientHeight<lh*0.6){while(hid()&&lh<fs*(one?2:1.4)){lh+=1;e.style.lineHeight=lh+"px"}}
+  /* wide tracking on one line: tighten the letter spacing first */
+  const ls=parseFloat(cs.letterSpacing)||0;if(hid()&&ls>fs*0.03){let l=ls;while(hid()&&l>fs*0.02){l-=0.5;e.style.letterSpacing=l+"px"}}
+  /* then shrink the type, never under 14px */
+  const lo=Math.max(14,Math.floor(fs*0.72));while(hid()&&fs>lo){fs-=1;e.style.fontSize=fs+"px";if(e.style.lineHeight)e.style.lineHeight=Math.round(lh*fs/parseFloat(cs.fontSize))+"px"}
+  /* one-line labels a few pixels over: close the word gaps, then let it wrap to a second line */
+  if(hid()&&cs.whiteSpace==="nowrap"){let ws=0;while(hid()&&ws>-3){ws-=0.5;e.style.wordSpacing=ws+"px"}if(hid()){e.style.whiteSpace="normal";e.style.textOverflow="clip"}}
+  /* last resort for plain fine print: drop whole sentences, then whole clauses; if it still cannot fit, hide the line rather than show a broken phrase */
+  if(hid()&&e.children.length===0&&(+cs.webkitLineClamp>=2||(+cs.webkitLineClamp===1&&fs<=20))){let t=e.textContent.trim();const sent=t.match(/[^.!?]+[.!?]+/g);while(hid()&&sent&&sent.length>1){sent.pop();e.textContent=sent.join("").trim()}
+    const cl=e.textContent.trim().split(/,\s*/);while(hid()&&cl.length>1){cl.pop();e.textContent=cl.join(", ").replace(/[.!?]+$/,"")+"."}if(hid())e.style.visibility="hidden";}
+ })}
+function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:libTrim(it.note,100)}));return m}
 /* menu format library: one script per printed-menu format, fetched the first time a film needs it */
 const _libLoads={};
 function libLoad(k){
@@ -720,6 +800,7 @@ async function show(f,preferSig){
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
   $("reroll").hidden=!!exactMenu(f);{const sp=fmtSpec(f);$("foldPdf").hidden=!(sp&&fmtCanFold(sp))}
   $("status").textContent="";
+  planLoad(f);planWire(f);
   await ensureFonts(STY[f.theme]);
   if(id!==renderId)return;
   const spec=fmtSpec(f);
@@ -737,11 +818,12 @@ async function show(f,preferSig){
   }
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
-      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f,menu,poster:lobbyPoster(f),stills:L.stills||[],logo:L.logo,palette:L.palette,flavour:L.flavour,era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
+      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f,menu:libMenu(menu),poster:lobbyPoster(f),stills:L.stills||[],logo:L.logo,palette:L.palette,flavour:L.flavour,era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
+      await new Promise(r=>setTimeout(r,180));libUnclip(card);setTimeout(()=>{if(id===renderId)libUnclip(card)},1400);setTimeout(()=>{if(id===renderId)libUnclip(card,1)},3200);
       phoneView(null);styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();
@@ -878,19 +960,21 @@ function renderMotw(){
   $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f)});
 }
 function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
-function listText(f,groups){return `${f.title} (${f.year}) shopping list, serves 4\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
+function listText(f,groups){return `${f.title} (${f.year}) shopping list, serves ${f._r2?PLAN.guests:4}\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
 const trolleySessionTicks=new Map();
 async function openTrolley(f,menuOverride,label){
   const modalTrigger=document.activeElement;
   await ensureExact(f);
   const mm=makeMenu(f,true);mm.counter=counterShop(f.id);
+  if(!menuOverride&&f._r2&&f._r2.dishes&&f._r2.dishes.length){if(f!==current)planLoad(f);menuOverride={s:[],m:[],w:[],d:[],shopping:planShopping(f)}}
+  const serves=f._r2?PLAN.guests:4;
   const groups=shopGroups(menuOverride||mm);const all=groups.flatMap(([,l])=>l);
   const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Shopping list for ${f.title}`);
   const sessionKey=JSON.stringify([f.id,label||""]);
   if(!trolleySessionTicks.has(sessionKey))trolleySessionTicks.set(sessionKey,Object.create(null));
   const ticks=()=>week&&week.id===f.id?(week.ticks||(week.ticks={})):trolleySessionTicks.get(sessionKey);
   o.innerHTML=`<div class="trolley-in"><h3>${ESC(label||f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(x)}"${ticks()[x]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
-  const prog=()=>{const n=all.filter(x=>ticks()[x]).length;o.querySelector("#tProg").textContent=`${n} of ${all.length} in the trolley. Serves 4.`;o.querySelector("#tBar").style.width=(all.length?100*n/all.length:0)+"%"};
+  const prog=()=>{const n=all.filter(x=>ticks()[x]).length;o.querySelector("#tProg").textContent=`${n} of ${all.length} in the trolley. Serves ${serves}.`;o.querySelector("#tBar").style.width=(all.length?100*n/all.length:0)+"%"};
   o.addEventListener("change",e=>{const k=e.target.dataset.k;if(!k)return;ticks()[k]=e.target.checked;if(week&&week.id===f.id)saveWeek();o.querySelector("#tMsg").textContent="";prog()});
   const close=()=>dismissModal(o);
   o.addEventListener("click",async e=>{
@@ -1572,7 +1656,7 @@ async function exportMenu(kind){
       if(sh){
         const mm=sh.mm||[sh.w*25.4/96,sh.h*25.4/96],o=mm[0]>mm[1]?"landscape":"portrait";
         pdf=new jsPDF({unit:"mm",format:[Math.min(...mm),Math.max(...mm)],orientation:o});
-        const faces=[...card.querySelectorAll(".fx-face")];
+        if(card.classList.contains("fmt-lib"))libUnclip(card);const faces=[...card.querySelectorAll(".fx-face")];
         for(let i=0;i<faces.length;i++){
           const el=document.createElement("div");styleCard(el,current);el.className=card.className;el.style.transform="none";
           el.style.width=sh.w+"px";el.style.height=sh.h+"px";el.dataset.w=sh.w;el.dataset.h=sh.h;el.innerHTML=faces[i].innerHTML;

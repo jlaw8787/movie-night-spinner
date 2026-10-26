@@ -1,0 +1,312 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Miss Torso cucumber soup shots",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 120,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the cucumbers with the yoghurt, dill, mint, garlic and lemon juice until smooth. Season well.",
+     "min": 10
+    },
+    {
+     "text": "Chill.",
+     "min": 120
+    },
+    {
+     "text": "Pour into 8 small glasses.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Stella's sandwiches",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours, keep covered",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ham, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the rye slices with Dijon.",
+     "min": 3
+    },
+    {
+     "text": "Fill 4 with ham and Swiss cheese and close.",
+     "min": 4
+    },
+    {
+     "text": "Cut each into quarters and stack on a plate.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Lisa's lobster dinner",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lobster tails",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the lobster tails and bake at 200C.",
+     "min": 8
+    },
+    {
+     "text": "Boil the potatoes. Steam the beans.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the cream with Dijon until thick and stir in the parmesan.",
+     "min": 6
+    },
+    {
+     "text": "Spoon over the lobster and grill until bubbling.",
+     "min": 5
+    },
+    {
+     "text": "Toss the potatoes in butter and serve with the beans.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Plaster cast lemon icebox pie",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 230,
+   "make_ahead": "Make a day ahead",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits with the melted butter and press into a pie dish.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the condensed milk with the lemon juice and zest until it thickens.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the base and chill, which is the setting time.",
+     "min": 230
+    },
+    {
+     "text": "Top with whipped cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Heatwave iced coffee with ice cream",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 65,
+   "make_ahead": "Coffee up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "strong coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 480,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream (about 250 g)",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee, stir in the sugar and chill.",
+     "min": 60
+    },
+    {
+     "text": "Put 4 tall glasses in the freezer. Fill each a third with ice and add coffee and milk.",
+     "min": 3
+    },
+    {
+     "text": "Add a scoop of ice cream, spoon on whipped cream and dust with cocoa. Serve with a long spoon and a straw.",
+     "min": 7
+    }
+   ]
+  }
+ ]
+}

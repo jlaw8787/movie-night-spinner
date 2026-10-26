@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "World Cup campsite sausages",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "pork sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "brown sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the sausages slowly in a heavy pan until sticky.",
+     "min": 20
+    },
+    {
+     "text": "Fry the onions in the butter until golden.",
+     "min": 10
+    },
+    {
+     "text": "Fill the rolls with sausage and onions and add a good squirt of brown sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Dragon task chilli bites",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "chorizo, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sharp cheddar, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "toothpicks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the chorizo in a hot pan until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Add the honey and chilli flakes and cook until sticky.",
+     "min": 5
+    },
+    {
+     "text": "Spear onto toothpicks with cubes of cheddar.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Yule Ball roast",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 120,
+   "make_ahead": "Gravy and carrots can be made 1 hour ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef rib roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled and halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots, cut in batons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C. Season the beef and roast for the first stage.",
+     "min": 20
+    },
+    {
+     "text": "Drop the oven to 160C and roast the beef until 52C in the middle.",
+     "min": 60
+    },
+    {
+     "text": "Rest the beef under foil.",
+     "min": 20
+    },
+    {
+     "text": "Roast the potatoes in oil alongside the beef.",
+     "min": 45
+    },
+    {
+     "text": "Whisk the eggs, flour and milk and bake Yorkshires in hot oiled tins at 220C.",
+     "min": 20
+    },
+    {
+     "text": "Glaze the carrots with honey and roast.",
+     "min": 25
+    },
+    {
+     "text": "Make gravy by simmering the red wine with the pan juices.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Ice palace pavlova",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 120,
+   "make_ahead": "Base up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "white chocolate, shaved",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mixed berries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 120C. Whip the egg whites to soft peaks, add the sugar gradually until glossy, then fold in the cornflour.",
+     "min": 20
+    },
+    {
+     "text": "Shape on baking paper and bake for 90 minutes.",
+     "min": 90
+    },
+    {
+     "text": "Turn off the oven and cool the pavlova inside.",
+     "min": 30
+    },
+    {
+     "text": "Top with whipped cream, white chocolate and berries, dusted with icing sugar.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mulled apple punch",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Up to 2 days, reheat to serve",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peel only",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the apple juice with the cinnamon, cloves, orange peel and star anise.",
+     "min": 15
+    },
+    {
+     "text": "Strain and serve warm in mugs.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

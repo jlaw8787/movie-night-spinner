@@ -1,0 +1,322 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tunstall's English sandwiches",
+   "course": "s",
+   "prep_min": 19,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread.",
+     "min": 4
+    },
+    {
+     "text": "Fill half with thin cucumber.",
+     "min": 5
+    },
+    {
+     "text": "Fill the rest with ham and English mustard.",
+     "min": 5
+    },
+    {
+     "text": "Cut off the crusts and cut into triangles.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "New Mexico green chilli queso",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "can evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the chillies until blackened, then peel and chop.",
+     "min": 8
+    },
+    {
+     "text": "Warm the evaporated milk with crushed garlic.",
+     "min": 4
+    },
+    {
+     "text": "Stir in the cheddar until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Add the chillies and serve hot with the corn chips.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Green chilli pork",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 160,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pork shoulder, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "green chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tomatillos",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the pork in batches.",
+     "min": 10
+    },
+    {
+     "text": "Char the chillies and tomatillos.",
+     "min": 10
+    },
+    {
+     "text": "Blitz with onion, garlic and cumin.",
+     "min": 5
+    },
+    {
+     "text": "Braise the pork in the sauce until it falls apart.",
+     "min": 150
+    },
+    {
+     "text": "Cook the rice and serve the pork over it.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Biscochitos",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 9,
+   "make_ahead": "Up to 5 days airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "caster sugar, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "aniseed, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with some of the sugar and aniseed.",
+     "min": 8
+    },
+    {
+     "text": "Work in the flour.",
+     "min": 5
+    },
+    {
+     "text": "Roll out and cut into stars.",
+     "min": 8
+    },
+    {
+     "text": "Dip the tops in sugar mixed with cinnamon.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 175C until pale gold.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Lincoln saloon rye old fashioned",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "demerara sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "rye whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the sugar into hot water to make a syrup and cool.",
+     "min": 3
+    },
+    {
+     "text": "For each drink, stir rye, syrup and bitters with ice until very cold.",
+     "min": 4
+    },
+    {
+     "text": "Strain over a large ice cube in a short glass.",
+     "min": 2
+    },
+    {
+     "text": "Squeeze a wide strip of orange peel over the top and drop it in.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

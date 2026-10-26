@@ -1,0 +1,372 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "\"Coming to get you, Barbara\" sandwiches",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "cress, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 25,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs, cool, peel and mash with the mayonnaise",
+     "min": 12
+    },
+    {
+     "text": "Stir in the cress",
+     "min": 2
+    },
+    {
+     "text": "Butter the bread",
+     "min": 3
+    },
+    {
+     "text": "Make two egg-and-cress sandwiches and two ham and mustard sandwiches",
+     "min": 6
+    },
+    {
+     "text": "Trim the crusts and cut each sandwich into four small pieces",
+     "min": 4
+    },
+    {
+     "text": "Wrap in wax paper for a 1968-style picnic",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Black and white popcorn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "black sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in the oil in a covered pot over medium heat, shaking regularly, then divide in half",
+     "min": 5
+    },
+    {
+     "text": "Toss one half with half the butter and the salt",
+     "min": 2
+    },
+    {
+     "text": "Toss the other half with the remaining butter, pepper and black sesame seeds",
+     "min": 2
+    },
+    {
+     "text": "Arrange side by side in a shared bowl",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Cellar or upstairs farmhouse stew",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 165,
+   "make_ahead": "Better the next day, keeps 3 days",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef chuck, cut into chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "crusty Italian bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the beef and season it",
+     "min": 7
+    },
+    {
+     "text": "Brown in batches in a heavy casserole",
+     "min": 8
+    },
+    {
+     "text": "Add the onion, carrots, potatoes, stock and thyme",
+     "min": 5
+    },
+    {
+     "text": "Cover and braise at 160C, stirring once, until the beef is tender",
+     "min": 150
+    },
+    {
+     "text": "Serve with crusty bread for soaking up the stock",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pantry peach cobbler with cream",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1650,
+     "u": "g",
+     "item": "tinned peach halves (2 tins)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "raw sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pouring cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the peaches, keeping a little syrup, and toss with the syrup and cornflour in a baking dish",
+     "min": 7
+    },
+    {
+     "text": "Rub the butter into the flour, sugar and cinnamon, then mix in the milk to a soft dough",
+     "min": 8
+    },
+    {
+     "text": "Drop spoonfuls over the peaches and sprinkle with raw sugar",
+     "min": 5
+    },
+    {
+     "text": "Bake at 190C until golden",
+     "min": 30
+    },
+    {
+     "text": "Serve warm with cream",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Long night spiked percolator coffee",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "strong brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "Irish whiskey",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee in a stovetop pot or plunger",
+     "min": 6
+    },
+    {
+     "text": "Warm four heatproof glasses with hot water and tip it out",
+     "min": 2
+    },
+    {
+     "text": "Put sugar and whiskey in each glass, add hot coffee and stir",
+     "min": 2
+    },
+    {
+     "text": "Whip the cream until just pourable and float over the back of a spoon. Skip the whiskey for anyone who wants it plain",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

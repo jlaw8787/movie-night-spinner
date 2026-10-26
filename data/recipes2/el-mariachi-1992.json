@@ -1,0 +1,388 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Border town street tacos",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 195,
+   "make_ahead": "Up to 2 days, keep the pork chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "dried chillies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "fresh pineapple, plus extra to serve",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small white onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "flaky salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the dried chillies in hot water, then blitz with orange juice, some pineapple and garlic to a smooth marinade.",
+     "min": 15
+    },
+    {
+     "text": "Coat the pork in the marinade, season and rub in well.",
+     "min": 10
+    },
+    {
+     "text": "Roast the pork covered at 160C until it pulls apart.",
+     "min": 180
+    },
+    {
+     "text": "Shred or slice the pork and crisp it in a very hot pan.",
+     "min": 10
+    },
+    {
+     "text": "Warm the tortillas and serve with diced pineapple, onion and coriander.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Charred jalapeño guacamole and chips",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "jalapenos",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "white onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Char the jalapenos in a dry pan until blackened, then seed and chop fine.",
+     "min": 6
+    },
+    {
+     "text": "Smash the avocados roughly with a fork.",
+     "min": 3
+    },
+    {
+     "text": "Stir through the jalapeno, lime juice, onion and coriander, then season well.",
+     "min": 4
+    },
+    {
+     "text": "Top with crumbled feta.",
+     "min": 2
+    },
+    {
+     "text": "Warm the corn chips at 180C and serve straight away.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Moco's carne asada",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 148,
+   "make_ahead": "Marinate up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "skirt steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can black beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix lime juice, a little orange juice, crushed garlic and cumin, then add the steak.",
+     "min": 10
+    },
+    {
+     "text": "Marinate the steak at room temperature for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Cook the rice until tender and fluffy, and warm the beans in a small pot.",
+     "min": 15
+    },
+    {
+     "text": "Sear the steak over very high heat for 3 minutes a side, char the spring onions in the same pan.",
+     "min": 10
+    },
+    {
+     "text": "Rest the steak, then slice thin against the grain.",
+     "min": 10
+    },
+    {
+     "text": "Serve with the rice, beans and spring onions.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Coconut cocadas",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 38,
+   "make_ahead": "Up to 3 days, airtight at room temperature",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the coconut, condensed milk, egg yolks and vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Spoon 20 small mounds onto a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 170C until golden on the edges.",
+     "min": 18
+    },
+    {
+     "text": "Cool on the tray until firm.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Mixed-up guitar case michelada",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 1,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles Mexican lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "tomato juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the salt and chilli powder on a plate.",
+     "min": 3
+    },
+    {
+     "text": "Run a lime wedge around four tall glasses and dip the rims in the chilli salt.",
+     "min": 3
+    },
+    {
+     "text": "Fill the glasses with ice.",
+     "min": 2
+    },
+    {
+     "text": "Add lime juice, tomato juice, hot sauce and Worcestershire sauce to each glass.",
+     "min": 2
+    },
+    {
+     "text": "Top with cold lager, stir once and garnish with a lime wedge.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

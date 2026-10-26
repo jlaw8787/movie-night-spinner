@@ -1,0 +1,338 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Stadium security pretzels",
+   "course": "s",
+   "prep_min": 77,
+   "cook_min": 15,
+   "make_ahead": "Best fresh, up to 1 day",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "rock salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast and warm water into a dough.",
+     "min": 10
+    },
+    {
+     "text": "Rest until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Shape into pretzels, dip in boiling water with bicarb soda and sprinkle with rock salt.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 220C, brush with butter and serve with mustard.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Limited Edition purple potato chips",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 40,
+   "make_ahead": "Up to 2 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "purple sweet potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the sweet potatoes paper thin on a mandoline.",
+     "min": 10
+    },
+    {
+     "text": "Soak in cold water, then drain and dry very well on tea towels.",
+     "min": 20
+    },
+    {
+     "text": "Fry in small batches at 160C, stirring, until the bubbling slows and they crisp up.",
+     "min": 20
+    },
+    {
+     "text": "Drain on paper towel and season straight away.",
+     "min": 2
+    },
+    {
+     "text": "Cool so they crisp fully.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Weight room rump with garlic butter",
+   "course": "m",
+   "prep_min": 13,
+   "cook_min": 55,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rump steaks, about 250g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter for beans",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the potatoes in oil and salt.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Mash the soft butter with garlic and parsley.",
+     "min": 5
+    },
+    {
+     "text": "Season the steaks and grill over high heat for medium.",
+     "min": 8
+    },
+    {
+     "text": "Rest the steaks and blanch the beans, tossing them with butter.",
+     "min": 5
+    },
+    {
+     "text": "Top each steak with a slice of garlic butter.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Mr Glass lemon and berry jelly",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 250,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "gelatine sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the water with the lemon juice and sugar.",
+     "min": 5
+    },
+    {
+     "text": "Soak the gelatine, squeeze and stir in until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Divide the berries among round glasses and pour over the jelly.",
+     "min": 10
+    },
+    {
+     "text": "Chill until clear and set.",
+     "min": 240
+    }
+   ]
+  },
+  {
+   "n": "Green poncho honey ginger tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "5cm piece ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "green tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "whisky, optional",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the ginger in the water, then take off the heat and let it cool for a couple of minutes.",
+     "min": 5
+    },
+    {
+     "text": "Add the tea bags and steep, then remove.",
+     "min": 3
+    },
+    {
+     "text": "Stir in the honey and juice of one lemon.",
+     "min": 2
+    },
+    {
+     "text": "Pour into mugs with a lemon slice each and add whisky to any mug where it is wanted.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

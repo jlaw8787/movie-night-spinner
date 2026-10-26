@@ -1,0 +1,312 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bugs Bunny's carrot sticks",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Dip up to 1 day, assemble on the day",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag baby carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers, cut into sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the sour cream, mayonnaise, garlic, dill and chives into a ranch dip.",
+     "min": 5
+    },
+    {
+     "text": "Spoon some into the bottom of small cups.",
+     "min": 3
+    },
+    {
+     "text": "Stand the carrots and cucumber sticks upright in each cup so everyone gets their own serve.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Basketball cheese balls",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "crushed corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cheddar, cream cheese and spring onions and chill until firm enough to roll.",
+     "min": 20
+    },
+    {
+     "text": "Roll into small balls and coat in the paprika mixed with the crushed corn chips.",
+     "min": 10
+    },
+    {
+     "text": "Mark basketball lines with a chive or skewer. Chill and serve with water crackers.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Courtside meatball subs",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "Meatballs up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, sliced or grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "basil leaves, torn",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the minces with the salt and roll into balls.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 200C until browned.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the meatballs in the crushed tomatoes.",
+     "min": 15
+    },
+    {
+     "text": "Pile into split rolls, cover with mozzarella and grill until bubbly. Finish with basil.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Monstars chocolate pudding",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 135,
+   "make_ahead": "Up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chocolate biscuits, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "gummy worms",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the milk, cornflour and sugar over heat until thick, then stir in the chocolate until smooth.",
+     "min": 15
+    },
+    {
+     "text": "Pour into cups and chill for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Top with crushed biscuits and push in gummy worms so they look like they are crawling out.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Michael's secret stuff orange cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh, shake bottles on serving",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "oranges, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "torn mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the oranges and lime into a jug. Stir in the honey until dissolved and add the mint.",
+     "min": 7
+    },
+    {
+     "text": "Divide between four sports bottles, add ice and top up with sparkling water. Shake gently.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

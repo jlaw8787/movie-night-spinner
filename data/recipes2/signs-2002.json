@@ -1,0 +1,324 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Crop circle corn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch flaky salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the corn over high heat, turning, until charred in rings.",
+     "min": 15
+    },
+    {
+     "text": "Cut into thick wheels.",
+     "min": 3
+    },
+    {
+     "text": "Brush with the butter mixed with lime zest and chilli flakes. Finish with flaky salt and coriander.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Foil hat popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil, for popping",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in a covered pot with the oil.",
+     "min": 7
+    },
+    {
+     "text": "Brown the butter until nutty and toss through the popcorn with the parmesan and garlic powder.",
+     "min": 5
+    },
+    {
+     "text": "Serve in bowls lined with crumpled foil.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pennsylvania farmhouse pot roast",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 190,
+   "make_ahead": "Better the next day",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour, for gravy",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef hard on all sides in a heavy pot.",
+     "min": 15
+    },
+    {
+     "text": "Add the onions, carrots, celery, stock and thyme. Cover and braise at 160C for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Add the potatoes and braise for the last hour.",
+     "min": 60
+    },
+    {
+     "text": "Lift out the meat and veg. Thicken the juices with the flour into gravy.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Swing away strawberry shortcake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "strawberries, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour and a little of the sugar, add the buttermilk and pat out 2cm thick.",
+     "min": 10
+    },
+    {
+     "text": "Cut into rounds and bake at 220C for 13 minutes.",
+     "min": 13
+    },
+    {
+     "text": "Toss the strawberries with the rest of the sugar and stand for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Split the biscuits and fill with strawberries and whipped cream.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Bo's half-full cucumber mint spritzers",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Base up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "continental cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "mint leaves, plus sprigs to serve",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chilled sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend one cucumber with the mint, the juice of three limes and the cordial, then strain through a sieve into a jug.",
+     "min": 8
+    },
+    {
+     "text": "Chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Slice the second cucumber into thin ribbons. Fill glasses with ice and cucumber ribbons.",
+     "min": 4
+    },
+    {
+     "text": "Pour the base in to a third full and top with sparkling water. Finish with a mint sprig and a lime wheel.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

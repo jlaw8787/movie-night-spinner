@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Rosie's potato pancakes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "apple sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the potatoes and onion and squeeze out as much liquid as you can.",
+     "min": 12
+    },
+    {
+     "text": "Mix with the eggs, flour and salt.",
+     "min": 3
+    },
+    {
+     "text": "Fry heaped spoonfuls in oil until crisp on both sides, in batches.",
+     "min": 20
+    },
+    {
+     "text": "Serve hot with apple sauce and sour cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Yorki's brown bread and radishes",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep covered",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "dark rye loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salted butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch radishes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch flaky salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the rye loaf thin.",
+     "min": 5
+    },
+    {
+     "text": "Spread each slice with butter right to the crust.",
+     "min": 6
+    },
+    {
+     "text": "Top with thinly sliced radishes, snipped chives and flaky salt, then cut into fingers.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Sausage and cabbage stew",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "smoked sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caraway seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onion and sausages and dice the potatoes. Shred the cabbage.",
+     "min": 15
+    },
+    {
+     "text": "Fry the onion in a big pot, add the sausages and brown.",
+     "min": 10
+    },
+    {
+     "text": "Add the potatoes, cabbage, caraway and stock. Simmer until the potatoes are soft and the stew is thick.",
+     "min": 30
+    },
+    {
+     "text": "Serve with crusty bread.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Captain K's plum cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 105,
+   "make_ahead": "Best on the day",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "plums, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar, for the topping",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, milk, egg and butter into a dough.",
+     "min": 15
+    },
+    {
+     "text": "Prove the dough, which is the resting time.",
+     "min": 60
+    },
+    {
+     "text": "Press into a lined tray and cover with halved plums, cut side up.",
+     "min": 10
+    },
+    {
+     "text": "Sprinkle with the sugar and cinnamon and bake at 190C.",
+     "min": 35
+    },
+    {
+     "text": "Cool a little before cutting.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Elsa in the walls spiced apple punch",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red apple",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the apple juice into a saucepan with two of the cinnamon sticks, cloves, star anise, orange peel and honey.",
+     "min": 3
+    },
+    {
+     "text": "Bring just to a simmer, then turn to low and steep without boiling.",
+     "min": 17
+    },
+    {
+     "text": "Strain into 4 mugs and float a thin apple slice and a cinnamon stick in each. In summer, chill it and top with sparkling water over ice.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

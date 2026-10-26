@@ -1,0 +1,366 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Eat me cakes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 27,
+   "make_ahead": "Up to 1 day, keep iced cakes in an airtight tin",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pink food colouring, a few drops",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until pale and creamy.",
+     "min": 5
+    },
+    {
+     "text": "Beat in the eggs one at a time, then fold in the flour.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into a greased mini muffin tin and bake at 175C until risen and golden.",
+     "min": 12
+    },
+    {
+     "text": "Cool the cakes on a wire rack.",
+     "min": 15
+    },
+    {
+     "text": "Mix the icing sugar with the water until thick, then ice the cakes white. Tint a little icing pink and pipe EAT ME on top.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Queen of Hearts tarts",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 22,
+   "make_ahead": "Up to 1 day, fill just before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut hearts from the pastry sheets and lay them on lined trays.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 12
+    },
+    {
+     "text": "Cool completely on a rack.",
+     "min": 15
+    },
+    {
+     "text": "Whip the cream to soft peaks.",
+     "min": 4
+    },
+    {
+     "text": "Split each heart in half, fill with jam and cream, then dust the tops with icing sugar.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Croquet lawn chicken and leek pie",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry (or 2 for a deeper lid)",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the oil in batches, then set aside. Slice the leeks.",
+     "min": 12
+    },
+    {
+     "text": "Soften the leeks in the same pan.",
+     "min": 6
+    },
+    {
+     "text": "Stir in the flour, then the stock, cream and thyme. Return the chicken and simmer until thick.",
+     "min": 20
+    },
+    {
+     "text": "Pour into a pie dish and top with the pastry, pressing the edges down.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 200C until puffed and deep golden.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Unbirthday cake",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, keep iced cake covered",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pastel food colouring, a few drops",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "birthday candles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until pale, add the eggs one at a time, then fold in the flour.",
+     "min": 12
+    },
+    {
+     "text": "Divide between 2 lined tins and bake at 175C until a skewer comes out clean.",
+     "min": 25
+    },
+    {
+     "text": "Cool the cakes completely in the tins, then turn out.",
+     "min": 30
+    },
+    {
+     "text": "Mix the icing sugar with the milk and tint in pastel colours.",
+     "min": 8
+    },
+    {
+     "text": "Sandwich the cakes with jam, ice in pastel colours and add the candles.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Drink me iced earl grey lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, keep the tea chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "earl grey tea bags",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water, stir in the honey and remove the bags.",
+     "min": 5
+    },
+    {
+     "text": "Cool the tea, then chill if you have time.",
+     "min": 30
+    },
+    {
+     "text": "Mix the tea with the lemonade and a squeeze of lemon.",
+     "min": 2
+    },
+    {
+     "text": "Pour over ice in mismatched teacups.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

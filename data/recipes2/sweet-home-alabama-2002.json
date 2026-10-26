@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Fried green tomatoes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Fry just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "green tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the tomatoes thickly and salt lightly.",
+     "min": 5
+    },
+    {
+     "text": "Mix the mayonnaise, lemon juice and pickle for a remoulade.",
+     "min": 3
+    },
+    {
+     "text": "Dip the slices in beaten egg, then in cornmeal.",
+     "min": 7
+    },
+    {
+     "text": "Fry in hot oil until golden on both sides and drain on paper.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Spiced pecans",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the pecans with the melted butter, sugar, cayenne and salt.",
+     "min": 5
+    },
+    {
+     "text": "Spread on a lined tray and roast at 170C, stirring once.",
+     "min": 12
+    },
+    {
+     "text": "Cool on the tray until glossy and crisp, then break apart.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Earl and Pearl's fried chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 33,
+   "make_ahead": "Soak the night before, fry fresh",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken drumsticks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour, for the gravy",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the drumsticks in buttermilk in the fridge overnight, which happens the night before and is not counted here.",
+     "min": 0
+    },
+    {
+     "text": "Dredge the drumsticks in flour seasoned with smoked paprika and salt.",
+     "min": 8
+    },
+    {
+     "text": "Boil the potatoes for the mash and mash with butter.",
+     "min": 22
+    },
+    {
+     "text": "Fry the chicken at 170C until crisp and cooked through.",
+     "min": 18
+    },
+    {
+     "text": "Make a gravy by thickening the stock with flour in a saucepan.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Lightning glass pecan pie",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 53,
+   "make_ahead": "Up to 2 days, serve at room temperature",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pouring cream, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a pie dish with shortcrust and blind bake.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the eggs with golden syrup, brown sugar and melted butter.",
+     "min": 5
+    },
+    {
+     "text": "Scatter the pecans in the case and pour over the filling.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 170C until set.",
+     "min": 45
+    },
+    {
+     "text": "Cool a little and serve with cream.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Pigeon Creek porch sweet tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water, half boiling and half cold",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea bags in boiling water and remove the bags.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the sugar while hot, then add cold water.",
+     "min": 2
+    },
+    {
+     "text": "Cool and pour over plenty of ice in tall glasses with lemon slices.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

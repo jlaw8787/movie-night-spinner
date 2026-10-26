@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lighthouse dad's fish bites",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cod fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "ice-cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "tartare sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cod into bite-sized pieces.",
+     "min": 5
+    },
+    {
+     "text": "Whisk some of the flour with the lager to a thin batter.",
+     "min": 5
+    },
+    {
+     "text": "Dust the fish in flour, dip in batter and fry at 180C until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Drain and serve with lemon wedges and tartare.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bikers' bar wings",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 55,
+   "make_ahead": "Wings can dry overnight in the fridge",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the wings dry and leave uncovered in the fridge overnight if you can.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Melt the butter with the hot sauce and toss the wings through.",
+     "min": 5
+    },
+    {
+     "text": "Mash the blue cheese into the sour cream and serve with celery.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Atlantis seafood platter",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mussels, scrubbed",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "scallops",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "white fish fillets, in chunks",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "garlic butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf of crusty bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the seafood in a big roasting tray and dot with garlic butter.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 220C until the mussels open.",
+     "min": 10
+    },
+    {
+     "text": "Squeeze over lemon and serve with crusty bread.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Trident sea salt caramel tart",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 295,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream for ganache",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blind bake a pastry case.",
+     "min": 25
+    },
+    {
+     "text": "Melt the sugar to amber caramel, whisk in the cream and butter and pour into the case.",
+     "min": 15
+    },
+    {
+     "text": "Chill until firm.",
+     "min": 30
+    },
+    {
+     "text": "Pour hot cream over the chocolate and stir to a ganache, then pour over the caramel.",
+     "min": 10
+    },
+    {
+     "text": "Set overnight.",
+     "min": 240
+    },
+    {
+     "text": "Finish with sea salt flakes.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Atlantean blue Hawaiian",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "blue curacao",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 360,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pineapple wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake each drink hard with ice until frothy.",
+     "min": 8
+    },
+    {
+     "text": "Strain into tall glasses full of crushed ice and garnish with a pineapple wedge and a cherry.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

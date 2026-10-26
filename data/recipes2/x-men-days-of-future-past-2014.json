@@ -1,0 +1,338 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pentagon kitchen tomato soup and toasties",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 47,
+   "make_ahead": "Soup up to 2 days, toasties fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the tomatoes, onion and garlic in oil.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 200C until soft and browned.",
+     "min": 30
+    },
+    {
+     "text": "Blend with the stock, sugar and salt, then reheat and stir in the cream.",
+     "min": 5
+    },
+    {
+     "text": "Make cheddar toasties with buttered bread, cooking each side in a frying pan.",
+     "min": 12
+    },
+    {
+     "text": "Cut into fingers and serve with the soup.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Paris peace talks gougères",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, reheat to crisp",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water and butter to the boil and beat in the flour until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Beat in the eggs one at a time, then stir in the gruyere and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Pipe small balls onto lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Xavier mansion beef bourguignon",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 195,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef and bacon.",
+     "min": 15
+    },
+    {
+     "text": "Add the mushrooms and cook until golden.",
+     "min": 10
+    },
+    {
+     "text": "Pour in the red wine.",
+     "min": 5
+    },
+    {
+     "text": "Simmer gently until tender and glossy.",
+     "min": 160
+    },
+    {
+     "text": "Boil and mash the potatoes with plenty of butter and serve under the beef.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Fondue au chocolat",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "sponge cake, cubed",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate gently with the cream in a fondue pot or small pan.",
+     "min": 8
+    },
+    {
+     "text": "Keep warm at the table.",
+     "min": 2
+    },
+    {
+     "text": "Set out strawberries, marshmallows and cake for dipping on forks.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mystique blue margarita",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "tequila",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "blue curacao",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the rims of the glasses with lime and dip in salt.",
+     "min": 3
+    },
+    {
+     "text": "Shake each drink hard with ice for 10 seconds, then strain over fresh ice.",
+     "min": 5
+    },
+    {
+     "text": "Garnish with a lime wheel.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

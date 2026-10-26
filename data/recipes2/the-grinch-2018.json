@@ -1,0 +1,404 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Grinch green spinach and herb dip",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, cut into sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blanch the spinach in boiling water briefly, drain and squeeze dry.",
+     "min": 3
+    },
+    {
+     "text": "Blitz with the avocado, yoghurt, basil, parsley, garlic, lemon juice and salt until smooth and very green.",
+     "min": 4
+    },
+    {
+     "text": "Cut the pita into wedges, brush with oil and bake at 190C until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Serve the dip with the pita chips and cucumber sticks.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mount Crumpit cheesy garlic pull-apart",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cob loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the loaf in a criss-cross pattern without cutting through the base.",
+     "min": 5
+    },
+    {
+     "text": "Melt the butter with the garlic and chives and spoon it into the cuts.",
+     "min": 4
+    },
+    {
+     "text": "Stuff the cuts with mozzarella and parmesan and wrap in foil.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 180C, then unwrap and bake until golden and melted.",
+     "min": 25
+    },
+    {
+     "text": "Pull apart at the table.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Whoville roast beast with crispy potatoes",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef sirloin roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch rosemary, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "potatoes, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "duck fat",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the beef with the garlic, rosemary, oil and salt.",
+     "min": 5
+    },
+    {
+     "text": "Parboil the potatoes, drain, rough up and toss in duck fat.",
+     "min": 12
+    },
+    {
+     "text": "Roast the potatoes at 200C and the beef for medium rare, adding the carrots tossed in honey for the last part.",
+     "min": 50
+    },
+    {
+     "text": "Rest the beef.",
+     "min": 15
+    },
+    {
+     "text": "Whisk the flour into the pan juices with the stock and simmer to make gravy.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Whoville Christmas pudding with custard",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "Christmas pudding",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs (yolks only)",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar Christmas sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the pudding in its basin over simmering water, or follow the packet.",
+     "min": 60
+    },
+    {
+     "text": "Warm the milk and cream.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the yolks with the sugar and cornflour, pour in the hot milk while whisking, then return to the pan.",
+     "min": 5
+    },
+    {
+     "text": "Stir over low heat until thick, then add the vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Turn out the pudding, cut into wedges and serve with custard, ice cream and sprinkles.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Max's frothy whipped hot chocolate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "milk chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar green sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk with the sugar until steaming.",
+     "min": 6
+    },
+    {
+     "text": "Whisk in the chocolate and half the cocoa until melted and frothy, or blitz with a stick blender.",
+     "min": 3
+    },
+    {
+     "text": "Pour into mugs.",
+     "min": 1
+    },
+    {
+     "text": "Whip the cream with the icing sugar, spoon on top and finish with green sprinkles and the remaining cocoa dusted over.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

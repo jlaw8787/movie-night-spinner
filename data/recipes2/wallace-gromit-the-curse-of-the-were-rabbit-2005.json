@@ -1,0 +1,362 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wallace's cheese board",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Assemble up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Wensleydale cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "aged cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet of water crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of apple chutney",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Take the cheeses out of the fridge to come to room temperature.",
+     "min": 60
+    },
+    {
+     "text": "Slice the apples and arrange the cheeses, crackers and apple on a board.",
+     "min": 10
+    },
+    {
+     "text": "Add a pot of chutney and serve.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Anti-Pesto cheese and onion pasties",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, reheat to crisp",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "potato, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets of shortcrust pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line a tray.",
+     "min": 3
+    },
+    {
+     "text": "Mix the cheddar, potato and onion with seasoning.",
+     "min": 7
+    },
+    {
+     "text": "Cut the pastry into rounds, fill, fold over and crimp the edges.",
+     "min": 20
+    },
+    {
+     "text": "Brush with egg and bake until golden.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Prize marrow bake",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "Filling up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "large zucchini",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin of chopped tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C. Halve the zucchini and scoop out the middles, chopping the flesh.",
+     "min": 10
+    },
+    {
+     "text": "Fry the onion and lamb mince in the oil with the zucchini flesh, tomatoes and thyme until thick.",
+     "min": 15
+    },
+    {
+     "text": "Fill the zucchini shells and cover with cheddar.",
+     "min": 5
+    },
+    {
+     "text": "Bake until tender and bubbling.",
+     "min": 35
+    }
+   ]
+  },
+  {
+   "n": "Carrot cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mixed spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and line a cake tin.",
+     "min": 5
+    },
+    {
+     "text": "Mix the carrot, walnuts, oil, sugar, eggs and spice, then fold in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Pour into the tin and bake until a skewer comes out clean.",
+     "min": 50
+    },
+    {
+     "text": "Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Beat the cream cheese and icing sugar, spread over the cake.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Wallace's iced Earl Grey lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, add the sparkling water at serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "Earl Grey tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, peeled zest",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "mint leaves, to serve",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water, then remove and cool.",
+     "min": 8
+    },
+    {
+     "text": "Simmer the sugar, water and lemon zest, then cool and strain.",
+     "min": 6
+    },
+    {
+     "text": "Stir the syrup and lemon juice into the tea.",
+     "min": 2
+    },
+    {
+     "text": "Pour over ice, top with sparkling water and add lemon wheels and mint.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

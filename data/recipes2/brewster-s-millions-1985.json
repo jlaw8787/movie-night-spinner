@@ -1,0 +1,496 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Prawn cocktail for the whole hotel",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bay leaf",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the prawns in salted water with the lemon and bay leaf, then plunge into iced water and peel.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce and a squeeze of lemon.",
+     "min": 3
+    },
+    {
+     "text": "Serve on shredded iceberg in glasses, with sauce and a dusting of paprika.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Caviar blini",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Assemble just before serving",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "buckwheat blini",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "crème fraîche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salmon roe",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives, snipped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the blini on a tray at 180C.",
+     "min": 5
+    },
+    {
+     "text": "Top each with crème fraîche, then salmon roe and chives.",
+     "min": 8
+    },
+    {
+     "text": "Serve straight away while warm.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Surf and turf",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Sauce best made just before serving",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, clarified and kept warm",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eye fillet steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lobster tails",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Reduce the vinegar with the tarragon to a few spoonfuls.",
+     "min": 6
+    },
+    {
+     "text": "Whisk with the yolks over low heat and drizzle in 200g of the warm clarified butter for the béarnaise.",
+     "min": 10
+    },
+    {
+     "text": "Sear the steaks to medium rare, then rest.",
+     "min": 12
+    },
+    {
+     "text": "Split the lobster tails and brush with garlic butter made from the remaining butter.",
+     "min": 5
+    },
+    {
+     "text": "Grill the lobster until cooked through.",
+     "min": 6
+    },
+    {
+     "text": "Plate the steak with lobster and sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Rare stamp shortbread",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 65,
+   "make_ahead": "Up to 4 days, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rice flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with half the icing sugar, then mix in the flours.",
+     "min": 12
+    },
+    {
+     "text": "Roll to 6mm and cut into rectangles with a pinking cutter.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 160C until pale.",
+     "min": 20
+    },
+    {
+     "text": "Cool completely.",
+     "min": 15
+    },
+    {
+     "text": "Mix the rest of the icing sugar with a drop of water and pipe a little stamp design on each.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Monty's champagne cocktails for the bar",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 480,
+     "u": "ml",
+     "item": "chilled brut champagne",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, for peel",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drop a sugar cube into each of 4 flutes and shake bitters onto each.",
+     "min": 2
+    },
+    {
+     "text": "Add orange liqueur to each glass.",
+     "min": 1
+    },
+    {
+     "text": "Top slowly with champagne.",
+     "min": 1
+    },
+    {
+     "text": "Twist a strip of orange peel over each glass and drop it in.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Spike's Chili Dogs",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 40,
+   "make_ahead": "Chili up to 2 days",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, chopped, plus extra to serve",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tinned crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sharp cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion.",
+     "min": 10
+    },
+    {
+     "text": "Add chilli powder and tomatoes and simmer until thick.",
+     "min": 25
+    },
+    {
+     "text": "Grill or simmer the franks.",
+     "min": 8
+    },
+    {
+     "text": "Fill the buns with franks, chili, chopped onion and cheddar.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Postage Stamps",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 65,
+   "make_ahead": "Up to 4 days, airtight",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rice flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with half the icing sugar, then mix in the flours.",
+     "min": 12
+    },
+    {
+     "text": "Roll to 6mm and cut into rectangles with a pinking cutter.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 160C until pale.",
+     "min": 20
+    },
+    {
+     "text": "Cool completely.",
+     "min": 15
+    },
+    {
+     "text": "Ice each like a stamp.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ice Cream Cup",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 120,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla malted ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "small paper cups and wooden spoons",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the ice cream hard.",
+     "min": 120
+    },
+    {
+     "text": "Scoop into cups and serve with wooden spoons.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Draft Beer",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "cold beers, 375ml each",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tall paper cups",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the beers.",
+     "min": 5
+    },
+    {
+     "text": "Pour to the line in each cup.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Roquefort's cheese board",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "pears",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Set the cheese out at room temperature.",
+     "min": 10
+    },
+    {
+     "text": "Toast the walnuts in a dry pan.",
+     "min": 5
+    },
+    {
+     "text": "Slice the pears thinly and fan them beside the cheese.",
+     "min": 5
+    },
+    {
+     "text": "Add the walnuts, honey and crackers.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Scat cats jazz bites",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyere",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make a bechamel from the butter, flour and milk.",
+     "min": 12
+    },
+    {
+     "text": "Spread the bread with Dijon, fill with ham and gruyere and arrange on a tray.",
+     "min": 10
+    },
+    {
+     "text": "Top with bechamel and more grated cheese.",
+     "min": 4
+    },
+    {
+     "text": "Grill until bubbling.",
+     "min": 6
+    },
+    {
+     "text": "Cut into small squares and serve on a silver tray.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Countryside coq au vin",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 133,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the potatoes and slice the mushrooms.",
+     "min": 10
+    },
+    {
+     "text": "Brown the chicken and bacon.",
+     "min": 15
+    },
+    {
+     "text": "Add the mushrooms and cook until golden.",
+     "min": 8
+    },
+    {
+     "text": "Pour in the red wine and water to cover and simmer.",
+     "min": 90
+    },
+    {
+     "text": "Boil and mash the potatoes with butter.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Crème de la crème",
+   "course": "w",
+   "prep_min": 16,
+   "cook_min": 281,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar, for the top",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the vanilla bean and heat with the cream until steaming.",
+     "min": 3
+    },
+    {
+     "text": "Heat.",
+     "min": 6
+    },
+    {
+     "text": "Whisk the yolks with the sugar and pour in the cream. Strain into ramekins.",
+     "min": 8
+    },
+    {
+     "text": "Bake in a water bath at 150C.",
+     "min": 35
+    },
+    {
+     "text": "Chill.",
+     "min": 240
+    },
+    {
+     "text": "Sprinkle with sugar and torch until amber.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Milk truck vanilla honey milkshake",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the bean and scrape the seeds into a blender.",
+     "min": 3
+    },
+    {
+     "text": "Add the milk, ice cream and honey and blend until frothy.",
+     "min": 2
+    },
+    {
+     "text": "Pour into four glasses and dust with nutmeg.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

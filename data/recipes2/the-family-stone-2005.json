@@ -1,0 +1,386 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Stone family pigs in blankets",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 30,
+   "make_ahead": "Wrap up to 1 day ahead, roast fresh",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "",
+     "item": "chipolatas",
+     "aisle": "Meat"
+    },
+    {
+     "q": 10,
+     "u": "",
+     "item": "rashers streaky bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the bacon rashers in half and wrap each chipolata.",
+     "min": 15
+    },
+    {
+     "text": "Lay on a lined tray and roast at 200C, turning once, until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Brush with maple syrup for the last few minutes.",
+     "min": 5
+    },
+    {
+     "text": "Mix the cranberry sauce with wholegrain mustard for dipping and serve hot on toothpicks.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Dinner table garlic herb pull-apart",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 23,
+   "make_ahead": "Prepare up to 1 day ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the loaf in deep diagonal slices every 2cm, without cutting through the base.",
+     "min": 8
+    },
+    {
+     "text": "Mash the soft butter with crushed garlic, parsley and parmesan.",
+     "min": 7
+    },
+    {
+     "text": "Push the butter into every cut and wrap in foil.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 190C.",
+     "min": 15
+    },
+    {
+     "text": "Open the foil and bake until crisp and golden.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Meredith's Christmas morning strata",
+   "course": "m",
+   "prep_min": 27,
+   "cook_min": 175,
+   "make_ahead": "Assemble the night before, bake fresh",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "thick slices day-old bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyère",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of tomato relish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter a 2L baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Tear the bread and layer with the diced ham, spinach and grated gruyere.",
+     "min": 15
+    },
+    {
+     "text": "Whisk the eggs with milk, Dijon, salt and pepper and pour over.",
+     "min": 5
+    },
+    {
+     "text": "Press down and cover.",
+     "min": 2
+    },
+    {
+     "text": "Chill for at least 2 hours or overnight.",
+     "min": 120
+    },
+    {
+     "text": "Bake at 180C until puffed and golden.",
+     "min": 45
+    },
+    {
+     "text": "Rest before serving with tomato relish.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Christmas morning cinnamon scrolls",
+   "course": "w",
+   "prep_min": 33,
+   "cook_min": 52,
+   "make_ahead": "Roll the night before and chill, bake fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the dough into a 30 x 40cm rectangle.",
+     "min": 10
+    },
+    {
+     "text": "Spread with soft butter and sprinkle with brown sugar mixed with cinnamon.",
+     "min": 8
+    },
+    {
+     "text": "Roll up from the long side and cut into scrolls.",
+     "min": 7
+    },
+    {
+     "text": "Pack into a greased 24cm tin and cover.",
+     "min": 3
+    },
+    {
+     "text": "Rest until puffy.",
+     "min": 30
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 22
+    },
+    {
+     "text": "Beat the cream cheese, butter, icing sugar and vanilla and spread over the warm scrolls.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Stone house eggnog latte",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 18,
+   "make_ahead": "Eggnog base up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole nutmeg",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk with cream, sugar, cinnamon stick and vanilla until steaming.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the egg yolks in a bowl and pour in the hot milk while whisking.",
+     "min": 5
+    },
+    {
+     "text": "Return to the pan and stir over low heat until slightly thick.",
+     "min": 3
+    },
+    {
+     "text": "Brew strong coffee and divide between mugs.",
+     "min": 5
+    },
+    {
+     "text": "Froth the eggnog milk, pour over and grate nutmeg on top.",
+     "min": 3
+    },
+    {
+     "text": "Add brandy to each mug if wanted.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,394 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Esqueleto's corn chips",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 8,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "white onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the tortillas into wedges and fry at 180C until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Toss in salt, lime zest and chilli powder.",
+     "min": 2
+    },
+    {
+     "text": "Mix the tomatoes and onion with lime juice and salt.",
+     "min": 6
+    },
+    {
+     "text": "Serve the chips warm with the salsa.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Wrestling night elote",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the corn over high heat until charred all over.",
+     "min": 15
+    },
+    {
+     "text": "Mix the mayonnaise with lime juice and brush on.",
+     "min": 4
+    },
+    {
+     "text": "Roll in feta.",
+     "min": 3
+    },
+    {
+     "text": "Sprinkle with chilli powder and coriander.",
+     "min": 2
+    },
+    {
+     "text": "Serve hot with lime wedges.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Nacho's chorizo feast",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "chorizo, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "white onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "white onion, sliced, for pickling",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the chorizo, potatoes, onion and chilli until crisp and golden.",
+     "min": 20
+    },
+    {
+     "text": "Quickly pickle the extra onion in lime juice.",
+     "min": 10
+    },
+    {
+     "text": "Warm the tortillas.",
+     "min": 5
+    },
+    {
+     "text": "Spoon the filling into the tortillas with avocado, pickled onion and coriander.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Cinnamon churros with chocolate dip",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water, butter and salt, then beat in the flour until it leaves the sides of the pan.",
+     "min": 7
+    },
+    {
+     "text": "Cool, then beat in the eggs one at a time.",
+     "min": 8
+    },
+    {
+     "text": "Pipe 12cm lengths through a star nozzle into 180C oil and fry until golden.",
+     "min": 8
+    },
+    {
+     "text": "Roll in the sugar and cinnamon.",
+     "min": 3
+    },
+    {
+     "text": "Melt the chocolate with the cream and serve warm for dipping.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Horchata",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 720,
+   "make_ahead": "Soak overnight, keeps 3 days chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the rice and cinnamon sticks in the water overnight.",
+     "min": 720
+    },
+    {
+     "text": "Blend until smooth and strain through a fine cloth.",
+     "min": 6
+    },
+    {
+     "text": "Stir in the sugar and milk until dissolved.",
+     "min": 2
+    },
+    {
+     "text": "Chill well, pour over ice and dust with cinnamon.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Crab cakes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "celery salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fold the crab with the mayonnaise, egg, Dijon, celery salt, paprika and breadcrumbs.",
+     "min": 10
+    },
+    {
+     "text": "Shape into 8 cakes.",
+     "min": 10
+    },
+    {
+     "text": "Chill.",
+     "min": 30
+    },
+    {
+     "text": "Pan-fry in the butter until golden.",
+     "min": 10
+    },
+    {
+     "text": "Serve with lemon.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Sailing trip prawn rolls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "cooked prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "celery stick",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the prawns and fold with the mayonnaise, lemon juice, diced celery and chives.",
+     "min": 10
+    },
+    {
+     "text": "Butter the cut sides of the buns and toast.",
+     "min": 5
+    },
+    {
+     "text": "Pile the prawns in.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Secretary Cleary's family dinner",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 100,
+   "make_ahead": "Gratin can be made 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 450,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes thin, layer with part of the cream and the garlic and bake at 160C.",
+     "min": 75
+    },
+    {
+     "text": "Pan-roast the chicken breasts until cooked through.",
+     "min": 20
+    },
+    {
+     "text": "Add the wine, Dijon and tarragon to the pan, then the remaining cream, and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Steam the beans.",
+     "min": 7
+    },
+    {
+     "text": "Serve together.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Rule 76 wedding cake",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 75,
+   "make_ahead": "Bake the day before",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar raspberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat part of the butter with part of the sugar, add 4 eggs and fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Bake in two tins at 165C.",
+     "min": 30
+    },
+    {
+     "text": "Cool.",
+     "min": 20
+    },
+    {
+     "text": "Heat 3 egg whites with the remaining sugar to 70C, whip, then beat in the remaining butter.",
+     "min": 25
+    },
+    {
+     "text": "Layer with raspberry jam and buttercream and cut into fingers.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Reception French 75",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 180,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the sparkling wine for three hours.",
+     "min": 180
+    },
+    {
+     "text": "Shake the gin, lemon juice and sugar syrup with ice, one drink at a time.",
+     "min": 5
+    },
+    {
+     "text": "Strain into flutes and top slowly with sparkling wine.",
+     "min": 3
+    },
+    {
+     "text": "Add a long twist of lemon peel and raise them high while someone gives a speech.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Input popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oil in a large pot with 3 kernels, covered, until they pop.",
+     "min": 3
+    },
+    {
+     "text": "Add the rest of the kernels, cover and shake until the popping slows.",
+     "min": 5
+    },
+    {
+     "text": "Toss half with the melted butter and salt.",
+     "min": 1
+    },
+    {
+     "text": "Toss the other half with the parmesan and cracked pepper.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Stephanie's food truck egg rolls",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 20,
+   "make_ahead": "Rolled and uncooked up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "shredded cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "spring roll wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the pork mince until browned, breaking it up.",
+     "min": 6
+    },
+    {
+     "text": "Add the cabbage, carrot, spring onions and soy sauce and cook until dry. Cool the filling.",
+     "min": 10
+    },
+    {
+     "text": "Roll a spoonful into each wrapper, sealing the edge with water.",
+     "min": 14
+    },
+    {
+     "text": "Heat the oil to about 5cm deep and fry in batches until golden.",
+     "min": 8
+    },
+    {
+     "text": "Drain on paper towel.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Food truck double burger",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into eight balls and slice the onion very thinly.",
+     "min": 10
+    },
+    {
+     "text": "Heat a griddle until very hot. Put a few onion slices on each ball and smash flat, onion side down.",
+     "min": 3
+    },
+    {
+     "text": "Flip after 90 seconds, add a slice of cheese and cook briefly.",
+     "min": 4
+    },
+    {
+     "text": "Toast the buns.",
+     "min": 3
+    },
+    {
+     "text": "Stack two patties per bun with pickles and mustard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Blackberry cobbler",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "frozen blackberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 130,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C. Toss the blackberries with some of the sugar, the cornflour and lemon juice in a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour and remaining sugar, then stir in the milk to a soft batter.",
+     "min": 8
+    },
+    {
+     "text": "Dot the batter over the fruit.",
+     "min": 2
+    },
+    {
+     "text": "Bake until golden on top and bubbling at the edges.",
+     "min": 35
+    },
+    {
+     "text": "Serve warm with vanilla ice cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Stephanie's raspberry lemon crush",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "fresh lemon juice (about 4 lemons)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, sliced into wheels",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle the raspberries with the sugar syrup in a jug until pulpy.",
+     "min": 4
+    },
+    {
+     "text": "Stir in the lemon juice.",
+     "min": 1
+    },
+    {
+     "text": "Fill four tall glasses with crushed ice and divide the raspberry mix between them.",
+     "min": 2
+    },
+    {
+     "text": "Top with cold soda water, stir gently and garnish with a lemon wheel and mint.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

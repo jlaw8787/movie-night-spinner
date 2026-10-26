@@ -1,0 +1,312 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Dingle pub soda bread",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 35,
+   "make_ahead": "Best on the day",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "salted butter, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, bicarb soda and salt.",
+     "min": 3
+    },
+    {
+     "text": "Stir in the buttermilk to a soft dough and shape into a round.",
+     "min": 7
+    },
+    {
+     "text": "Cut a deep cross and bake at 200C until it sounds hollow.",
+     "min": 35
+    },
+    {
+     "text": "Serve warm with butter.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Irish smoked salmon",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices brown bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "black pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the bread thickly with butter.",
+     "min": 4
+    },
+    {
+     "text": "Top with folds of smoked salmon, a few capers and a crack of pepper.",
+     "min": 4
+    },
+    {
+     "text": "Squeeze over a little lemon and cut into triangles.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Irish lamb stew",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 120,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "lamb neck pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes, carrots and onion.",
+     "min": 15
+    },
+    {
+     "text": "Layer the lamb, potatoes, carrots and onion in a heavy pot with thyme, salt and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Add the stock, cover and simmer until the potatoes break down and thicken it.",
+     "min": 120
+    },
+    {
+     "text": "Serve in deep bowls.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Claddagh ring apple crumble",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Up to 1 day, reheat in the oven",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "butter, cold, for the crumble",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the apples and cook with the butter and cinnamon.",
+     "min": 10
+    },
+    {
+     "text": "Spoon into a dish. Rub the cold butter into the oats, flour and sugar.",
+     "min": 10
+    },
+    {
+     "text": "Scatter over the apples and bake at 180C.",
+     "min": 35
+    },
+    {
+     "text": "Warm the custard and serve alongside.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "February 29th Irish coffee",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "hot strong coffee (4 cups)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "whiskey, for the grown-ups",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee. Stir the sugar into each cup until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Add the whiskey for the grown-ups.",
+     "min": 1
+    },
+    {
+     "text": "Lightly whip the cream until just thick and pour it gently over the back of a spoon so it floats on top.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

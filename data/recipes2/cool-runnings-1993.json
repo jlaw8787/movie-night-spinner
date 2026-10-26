@@ -1,0 +1,408 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "\"Sanka, ya dead?\" beef patties",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 37,
+   "make_ahead": "Up to 1 day uncooked, or freeze",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "scotch bonnet chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the onion and chilli finely.",
+     "min": 8
+    },
+    {
+     "text": "Fry the mince with the onion, thyme, chilli, allspice and curry powder, then cool.",
+     "min": 12
+    },
+    {
+     "text": "Cut the pastry into rounds and brush with turmeric water. Fill, fold and crimp.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 200C.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Plantain chips with lime chilli mayo",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 12,
+   "make_ahead": "Chips up to 1 day",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "scotch bonnet chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the plantains by scoring the skin lengthways and prising it off. Slice very thin with a mandoline.",
+     "min": 12
+    },
+    {
+     "text": "Fry at 175C in batches until crisp, then drain on paper towel.",
+     "min": 12
+    },
+    {
+     "text": "Toss with salt mixed with lime zest.",
+     "min": 2
+    },
+    {
+     "text": "Stir the mayonnaise with lime juice and finely chopped chilli for dipping.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Calgary '88 jerk chicken",
+   "course": "m",
+   "prep_min": 12,
+   "cook_min": 545,
+   "make_ahead": "Marinate a day ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "scotch bonnet chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken marylands",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin kidney beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the chillies, allspice, thyme, spring onions, garlic and lime juice into a paste and coat the chicken.",
+     "min": 12
+    },
+    {
+     "text": "Marinate in the fridge overnight.",
+     "min": 480
+    },
+    {
+     "text": "Grill slowly over coals until charred and cooked through.",
+     "min": 45
+    },
+    {
+     "text": "Cook the rice with the drained kidney beans and coconut milk.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Jamaican coconut toto cake",
+   "course": "w",
+   "prep_min": 21,
+   "cook_min": 39,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line a 20 by 30cm tray.",
+     "min": 5
+    },
+    {
+     "text": "Beat the butter with the brown sugar, add the eggs, then stir in the flour, baking powder, spices, coconut and coconut milk.",
+     "min": 12
+    },
+    {
+     "text": "Bake.",
+     "min": 35
+    },
+    {
+     "text": "Simmer the lime juice with the caster sugar and pour over the warm cake.",
+     "min": 4
+    },
+    {
+     "text": "Serve with whipped coconut cream.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Cool Runnings sorrel ginger punch",
+   "course": "d",
+   "prep_min": 4,
+   "cook_min": 128,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "dried hibiscus flowers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece fresh ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water to the boil with the hibiscus, sliced ginger, cloves and the peel of one orange.",
+     "min": 8
+    },
+    {
+     "text": "Turn off the heat and steep, then strain.",
+     "min": 60
+    },
+    {
+     "text": "Stir in the sugar until dissolved and chill.",
+     "min": 60
+    },
+    {
+     "text": "Mix with the pineapple juice and lime juice. Pour over ice and garnish with orange slices.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

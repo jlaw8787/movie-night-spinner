@@ -1,0 +1,364 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Korean yoghurt drink ice blocks",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 360,
+   "make_ahead": "Up to 2 weeks frozen",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "ice block moulds and sticks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the yoghurt with the milk, honey and lemon juice until smooth and pourable.",
+     "min": 5
+    },
+    {
+     "text": "Blitz the strawberries with the sugar.",
+     "min": 3
+    },
+    {
+     "text": "Half fill the moulds with the yoghurt, add a spoonful of strawberry puree to each, then top up and swirl with a skewer.",
+     "min": 10
+    },
+    {
+     "text": "Insert sticks and freeze for at least 6 hours.",
+     "min": 360
+    },
+    {
+     "text": "Run the moulds under warm water to release.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Ski trip hot tub choc bites",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "peppermint lollies",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate.",
+     "min": 5
+    },
+    {
+     "text": "Dip the marshmallows halfway and roll the chocolate end in crushed peppermint lollies.",
+     "min": 10
+    },
+    {
+     "text": "Set on baking paper.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Dr Covey's Korean dinner",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 85,
+   "make_ahead": "Marinate up to 1 day, sear fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef rump",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pear, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice, uncooked",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the beef thin and marinate in soy, grated pear, crushed garlic and sesame oil for an hour.",
+     "min": 70
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 15
+    },
+    {
+     "text": "Toss sliced cucumbers with salt, chilli and vinegar as a quick kimchi.",
+     "min": 5
+    },
+    {
+     "text": "Sear the beef hot in batches.",
+     "min": 10
+    },
+    {
+     "text": "Serve with the rice and cucumbers.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Hatbox love letter choc chip cookies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Dough up to 2 days chilled, bake fresh",
+   "ingredients": [
+    {
+     "q": 170,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "milk chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "flaky salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter in a saucepan and cook until nutty and golden brown.",
+     "min": 8
+    },
+    {
+     "text": "Cool.",
+     "min": 10
+    },
+    {
+     "text": "Whisk with the sugars, egg, yolk and vanilla. Stir in the flour, bicarb and salt, then the chocolate.",
+     "min": 10
+    },
+    {
+     "text": "Chill the dough, which is the resting time.",
+     "min": 30
+    },
+    {
+     "text": "Heat the oven to 180C, roll into 16 balls and bake.",
+     "min": 12
+    },
+    {
+     "text": "Sprinkle with flaky salt and cool on the tray.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Kitty's strawberry milk",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the strawberries with the sugar.",
+     "min": 3
+    },
+    {
+     "text": "Stand until juicy.",
+     "min": 15
+    },
+    {
+     "text": "Spoon into 4 glasses, add ice and top with cold milk. Stir before drinking.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

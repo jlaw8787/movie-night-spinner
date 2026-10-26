@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Slug Club party canapés",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "blinis",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "sprigs dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "fruit mince",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the shortcrust into small rounds and press into a patty tin.",
+     "min": 12
+    },
+    {
+     "text": "Fill with fruit mince.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 15
+    },
+    {
+     "text": "Cool the tarts.",
+     "min": 15
+    },
+    {
+     "text": "Top the blinis with creme fraiche, a fold of smoked salmon and a sprig of dill.",
+     "min": 10
+    },
+    {
+     "text": "Arrange both on trays.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Romilda's chocolates",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 124,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "pink sugar hearts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream until steaming.",
+     "min": 4
+    },
+    {
+     "text": "Pour over the chocolate and stir until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Chill until firm.",
+     "min": 120
+    },
+    {
+     "text": "Roll into small balls, coat in cocoa and press a sugar heart on top.",
+     "min": 15
+    },
+    {
+     "text": "Keep chilled.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Christmas at the Burrow",
+   "course": "m",
+   "prep_min": 42,
+   "cook_min": 110,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sage, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sourdough bread, torn",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "brussels sprouts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, for the sprouts",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the onion with the sage in the butter.",
+     "min": 8
+    },
+    {
+     "text": "Mix with the torn sourdough and season for a stuffing.",
+     "min": 5
+    },
+    {
+     "text": "Butterfly the turkey breast.",
+     "min": 8
+    },
+    {
+     "text": "Spread with the stuffing, roll and tie.",
+     "min": 8
+    },
+    {
+     "text": "Chop the potatoes.",
+     "min": 10
+    },
+    {
+     "text": "Roast the turkey at 180C with the potatoes around it, rubbed with oil.",
+     "min": 90
+    },
+    {
+     "text": "Rest the turkey.",
+     "min": 15
+    },
+    {
+     "text": "Cook the sprouts and toss with butter.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Slughorn's crystallised pineapple",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 185,
+   "make_ahead": "Up to 1 week in an airtight tin",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "pineapple, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, for rolling",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pineapple into chunks.",
+     "min": 10
+    },
+    {
+     "text": "Simmer the sugar and water to a syrup.",
+     "min": 5
+    },
+    {
+     "text": "Add the pineapple and cook very gently until translucent.",
+     "min": 60
+    },
+    {
+     "text": "Drain and dry on a rack in a 90C oven until tacky.",
+     "min": 120
+    },
+    {
+     "text": "Roll in caster sugar.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Slughorn's mead",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the honey into the warm water with the juice of a lemon and the cinnamon stick.",
+     "min": 3
+    },
+    {
+     "text": "Leave to cool and infuse.",
+     "min": 30
+    },
+    {
+     "text": "Pour over ice in glasses and top up with ginger beer.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,428 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Georgia's crab cakes with lemon aioli",
+   "course": "s",
+   "prep_min": 28,
+   "cook_min": 36,
+   "make_ahead": "Shape up to 1 day ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 7,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab with mayonnaise, egg, spring onions, lemon zest, Dijon and panko.",
+     "min": 10
+    },
+    {
+     "text": "Shape into small cakes.",
+     "min": 8
+    },
+    {
+     "text": "Chill for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Roll in more panko.",
+     "min": 3
+    },
+    {
+     "text": "Fry in oil over medium heat until golden each side.",
+     "min": 6
+    },
+    {
+     "text": "Mix the mayonnaise with crushed garlic and lemon juice.",
+     "min": 4
+    },
+    {
+     "text": "Serve with the aioli and a few dressed rocket and parsley leaves.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Grandhotel Pupp mushroom and gruyère tarts",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 21,
+   "make_ahead": "Assemble up to 4 hours ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "gruyère",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle of truffle oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pastry into squares, score a border on each and prick the middle.",
+     "min": 12
+    },
+    {
+     "text": "Fry the mushrooms in butter with garlic and thyme until golden.",
+     "min": 6
+    },
+    {
+     "text": "Spoon onto the pastry centres and top with grated gruyere.",
+     "min": 5
+    },
+    {
+     "text": "Brush the borders with egg.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 15
+    },
+    {
+     "text": "Drizzle with a few drops of truffle oil.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Chef Didier's duck with orange sauce",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 46,
+   "make_ahead": "Serve straight away",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "duck breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the duck skin and season.",
+     "min": 8
+    },
+    {
+     "text": "Place skin-side down in a cold pan and cook over medium heat to render the fat.",
+     "min": 10
+    },
+    {
+     "text": "Flip and roast at 200C.",
+     "min": 6
+    },
+    {
+     "text": "Rest the duck.",
+     "min": 5
+    },
+    {
+     "text": "Fry the par-boiled potatoes in some of the duck fat until crisp.",
+     "min": 12
+    },
+    {
+     "text": "Pour off the rest of the fat, add orange juice, honey, orange liqueur and stock and reduce until glossy.",
+     "min": 8
+    },
+    {
+     "text": "Whisk in the butter.",
+     "min": 2
+    },
+    {
+     "text": "Steam the green beans and serve alongside.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dessert trolley chocolate mousse",
+   "course": "w",
+   "prep_min": 31,
+   "cook_min": 180,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thin wafer biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with butter and cool slightly.",
+     "min": 8
+    },
+    {
+     "text": "Whisk in the egg yolks one at a time.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream to soft peaks and fold in.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the egg whites with sugar to soft peaks and fold through gently in two batches.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into glasses.",
+     "min": 3
+    },
+    {
+     "text": "Chill for 3 hours.",
+     "min": 180
+    },
+    {
+     "text": "Top with whipped cream, raspberries and a thin wafer biscuit.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Grandhotel champagne cocktail",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 0,
+   "make_ahead": "Assemble just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle of aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "champagne",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling apple juice",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Place a sugar cube in each flute and soak with bitters.",
+     "min": 3
+    },
+    {
+     "text": "Add brandy to each glass.",
+     "min": 2
+    },
+    {
+     "text": "Slowly top with chilled champagne or sparkling wine.",
+     "min": 2
+    },
+    {
+     "text": "Twist a strip of orange peel over each glass and drop it in.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

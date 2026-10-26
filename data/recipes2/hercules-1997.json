@@ -1,0 +1,370 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wonder Boy's Thebes spanakopita",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "sheets filo pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wilt the spinach, squeeze dry and chop.",
+     "min": 10
+    },
+    {
+     "text": "Mix with the feta, dill, spring onions and egg.",
+     "min": 5
+    },
+    {
+     "text": "Cut the filo into strips, brush with butter, add a spoon of filling and fold into triangles.",
+     "min": 25
+    },
+    {
+     "text": "Bake at 190C for 25 minutes.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Hydra heads haloumi",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "haloumi, in thick slices",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Griddle the haloumi in a hot dry pan for 2 minutes a side until golden.",
+     "min": 8
+    },
+    {
+     "text": "Drizzle with honey, sprinkle with chilli flakes and thyme, and squeeze over lemon.",
+     "min": 2
+    },
+    {
+     "text": "Cook more as fast as it disappears.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Phil's training island souvlaki",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 140,
+   "make_ahead": "Lamb can marinate up to 1 day",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "lamb leg, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, 3 for the marinade and 1 for the sauce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the lamb in the lemon juice, garlic, oregano and oil.",
+     "min": 10
+    },
+    {
+     "text": "Leave to marinate for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Thread onto skewers and grill hot.",
+     "min": 12
+    },
+    {
+     "text": "Mix the yoghurt with the grated cucumber and garlic.",
+     "min": 5
+    },
+    {
+     "text": "Serve in warm pita with tomato and red onion.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Ambrosia loukoumades",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 80,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "honey, warmed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, salt and water to a thick batter.",
+     "min": 5
+    },
+    {
+     "text": "Rest the batter for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Drop spoonfuls into 175C oil and fry until puffed and golden.",
+     "min": 15
+    },
+    {
+     "text": "Toss in warm honey with cinnamon and scatter over the walnuts.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Olympus golden peach and honey fizz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "peach nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "orange blossom water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "ripe peach, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chilled sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the honey into the warm water until dissolved.",
+     "min": 2
+    },
+    {
+     "text": "In a jug mix the peach nectar, honey water, lemon juice and orange blossom water.",
+     "min": 3
+    },
+    {
+     "text": "Fill glasses with ice and peach slices, pour in the nectar to two thirds and top with sparkling water. Add a mint sprig.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

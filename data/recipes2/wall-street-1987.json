@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Steak tartare",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, keep well chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "eye fillet, well chilled",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cornichons",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "dash Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices brioche",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the chilled eye fillet very finely by hand with a sharp knife.",
+     "min": 12
+    },
+    {
+     "text": "Mix with the diced shallot, capers, chopped cornichons, Dijon, Worcestershire and egg yolk. Season well.",
+     "min": 6
+    },
+    {
+     "text": "Toast the brioche slices and serve alongside.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Gekko's oysters on ice",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "oysters, freshly shucked",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cracked black pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shuck the oysters (or ask the fishmonger to) and lay them on crushed ice.",
+     "min": 15
+    },
+    {
+     "text": "Mix the vinegar with the finely diced shallot and cracked pepper.",
+     "min": 3
+    },
+    {
+     "text": "Cut the lemon into wedges and serve with the dressing on the side.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Raider's rib eye",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Dry-brine the steaks the night before",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rib eye steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "flaky salt, for dry-brining",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "The night before, salt the rib eyes and leave uncovered in the fridge to dry-brine. Bring to room temperature 30 minutes before cooking.",
+     "min": 5
+    },
+    {
+     "text": "Sear the steaks hard in a very hot oiled pan on both sides.",
+     "min": 8
+    },
+    {
+     "text": "Add the butter and rosemary and baste the steaks. Rest on a plate for 8 minutes.",
+     "min": 8
+    },
+    {
+     "text": "In the same pan, crush in the peppercorns, add the brandy and flame it carefully.",
+     "min": 3
+    },
+    {
+     "text": "Add the stock and cream and reduce until the sauce coats a spoon.",
+     "min": 8
+    },
+    {
+     "text": "Pour the sauce over the rested steaks.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Cheesecake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 440,
+   "make_ahead": "Make the day before, chill overnight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain sweet biscuits, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 750,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 150C. Mix the crushed biscuits with the melted butter and press into a lined springform tin.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese with the sugar, eggs and lemon zest until smooth, then pour over the base.",
+     "min": 10
+    },
+    {
+     "text": "Bake in a water bath until just set with a slight wobble.",
+     "min": 60
+    },
+    {
+     "text": "Spread the sour cream on top and bake a little longer.",
+     "min": 10
+    },
+    {
+     "text": "Cool, then chill overnight before slicing. Chilling counts as part of the cooking time.",
+     "min": 360
+    }
+   ]
+  },
+  {
+   "n": "Old fashioned",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 1,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large ice cubes",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice, for stirring",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the bourbon, sugar syrup and bitters over ice, in batches of one drink at a time, for about 30 seconds each.",
+     "min": 4
+    },
+    {
+     "text": "Strain over one big ice cube in a short glass and twist a strip of orange peel over the top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

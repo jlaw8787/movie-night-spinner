@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Elm Street chips and dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Dip keeps 2 days chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "kettle chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the sour cream, cream cheese, garlic, lemon juice, parsley and chives until green and smooth",
+     "min": 5
+    },
+    {
+     "text": "Season with salt",
+     "min": 2
+    },
+    {
+     "text": "Chill",
+     "min": 30
+    },
+    {
+     "text": "Serve with kettle chips",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Five finger pretzels",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "",
+     "item": "pretzel rods",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate in short bursts",
+     "min": 5
+    },
+    {
+     "text": "Dip the tips of the pretzel rods",
+     "min": 5
+    },
+    {
+     "text": "Lay them on baking paper in groups of five like fingers",
+     "min": 3
+    },
+    {
+     "text": "Sprinkle each tip with sea salt",
+     "min": 2
+    },
+    {
+     "text": "Leave to set",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Stay-awake chilli",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 195,
+   "make_ahead": "Better the next day, keeps 3 days",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chipotle in adobo",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches in oil",
+     "min": 15
+    },
+    {
+     "text": "Soften the onions and garlic",
+     "min": 8
+    },
+    {
+     "text": "Add the chipotle, cumin, cocoa, tomatoes, beans and beef",
+     "min": 5
+    },
+    {
+     "text": "Cover and braise at 160C until thick",
+     "min": 180
+    },
+    {
+     "text": "Serve topped with sour cream and cheddar",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Red and green swirl cupcakes",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 18,
+   "make_ahead": "Unfrosted cakes keep 2 days",
+   "ingredients": [
+    {
+     "q": 275,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "drops red food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "drops green food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat about half the butter with the sugar, add the eggs, then fold in the flour and milk",
+     "min": 15
+    },
+    {
+     "text": "Spoon into 12 cases",
+     "min": 5
+    },
+    {
+     "text": "Bake at 175C",
+     "min": 18
+    },
+    {
+     "text": "Cool the cupcakes",
+     "min": 20
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar, split in two and colour one red and one green",
+     "min": 10
+    },
+    {
+     "text": "Spoon both side by side into one piping bag and pipe swirls",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Strong black coffee",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water, just off the boil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the coffee in a large plunger and pour over the water",
+     "min": 2
+    },
+    {
+     "text": "Steep",
+     "min": 4
+    },
+    {
+     "text": "Plunge and pour into four big mugs. Serve black, with milk on the side for anyone who is not trying to stay awake",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,288 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hot dog cart sausages",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "cocktail franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "toothpicks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the franks and drain.",
+     "min": 5
+    },
+    {
+     "text": "Toss in a hot pan with the mustard and honey until sticky and glazed.",
+     "min": 3
+    },
+    {
+     "text": "Spear each on a toothpick and serve hot.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Fish crackers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "splash cold water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pulse the cheddar, butter, flour and salt until it forms a dough, adding a splash of water.",
+     "min": 8
+    },
+    {
+     "text": "Roll thin and cut into little fish shapes.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 180C until crisp.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Louie's hot dogs with everything",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sauerkraut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sweet relish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the franks, then griddle until blistered.",
+     "min": 10
+    },
+    {
+     "text": "Warm the sauerkraut in a small pan.",
+     "min": 4
+    },
+    {
+     "text": "Steam the buns and chop the onion.",
+     "min": 4
+    },
+    {
+     "text": "Fill the buns with franks, mustard, onion, relish and sauerkraut.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Kitten cookies",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 38,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar, for icing",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "orange food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tube white writing icing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the icing sugar and mix in the flour.",
+     "min": 8
+    },
+    {
+     "text": "Roll out and cut into cat shapes.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 160C until just coloured.",
+     "min": 18
+    },
+    {
+     "text": "Cool on a rack.",
+     "min": 20
+    },
+    {
+     "text": "Mix the icing sugar with a little water, tint orange, ice the cookies and pipe on whiskers in white.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Honey and cinnamon warm milk",
+   "course": "d",
+   "prep_min": 3,
+   "cook_min": 7,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the milk with the honey, one cinnamon stick and vanilla until steaming but not boiling.",
+     "min": 5
+    },
+    {
+     "text": "Remove the cinnamon, whisk hard or use a frother until foamy.",
+     "min": 2
+    },
+    {
+     "text": "Pour into mugs, dust with nutmeg and add a fresh cinnamon stick to each.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

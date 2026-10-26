@@ -1,0 +1,428 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Frosty the cheese ball snowman",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 375,
+     "u": "g",
+     "item": "cream cheese, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mozzarella, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pitted black olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag pretzel sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the cream cheese with the cheddar, chives and garlic powder.",
+     "min": 5
+    },
+    {
+     "text": "Chill the mixture.",
+     "min": 30
+    },
+    {
+     "text": "Shape into one large and one small ball, roll both in the mozzarella and stack on a platter.",
+     "min": 8
+    },
+    {
+     "text": "Press in sliced olives for eyes and buttons, a small carrot stick for the nose and pretzel sticks for arms.",
+     "min": 7
+    },
+    {
+     "text": "Chill until serving and surround with crackers.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Caribbean cruise prawn cocktail",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "cooked king prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, a few drops",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baby cos lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado, cubed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns, leaving the tails on.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise with the tomato sauce, juice of one lime, hot sauce and Worcestershire.",
+     "min": 4
+    },
+    {
+     "text": "Shred the lettuce into glasses and add cubes of avocado.",
+     "min": 4
+    },
+    {
+     "text": "Spoon over the sauce and hang the prawns around the rims. Dust with paprika and serve with lime wedges.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Nora's last honey glazed ham",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2.5,
+     "u": "kg",
+     "item": "half leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Remove the rind from the ham, score the fat and stud with cloves.",
+     "min": 8
+    },
+    {
+     "text": "Simmer the honey, sugar, mustard and pineapple juice until syrupy.",
+     "min": 6
+    },
+    {
+     "text": "Bake the ham at 180C, brushing with glaze every so often. Roast the potatoes in oil alongside.",
+     "min": 45
+    },
+    {
+     "text": "Toss the pineapple, chilli, mint and lime juice for the salsa.",
+     "min": 8
+    },
+    {
+     "text": "Slice the ham and serve with the salsa.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Last-minute Christmas Eve trifle",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 115,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet raspberry jelly crystals",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sponge cake",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed berries, plus a few extra to finish",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thick vanilla custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "flaked almonds, toasted",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make up the jelly with boiling water.",
+     "min": 5
+    },
+    {
+     "text": "Break the sponge into a large glass bowl and drizzle with orange juice. Scatter over the berries.",
+     "min": 5
+    },
+    {
+     "text": "Pour the cooled jelly over and chill until set.",
+     "min": 120
+    },
+    {
+     "text": "Spoon the custard on top.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream with the icing sugar and spread over. Finish with almonds and a few berries.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Hemlock Street cranberry fizz punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold ginger ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "frozen cranberries or raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cranberry juice, orange juice and lime juice in a punch bowl. Add the rosemary.",
+     "min": 5
+    },
+    {
+     "text": "Chill.",
+     "min": 30
+    },
+    {
+     "text": "Just before serving, add the ginger ale, orange slices, frozen berries and plenty of ice. Stir gently.",
+     "min": 3
+    },
+    {
+     "text": "Ladle into glasses with a little rosemary in each.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

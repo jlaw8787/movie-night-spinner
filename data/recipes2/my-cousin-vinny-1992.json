@@ -1,0 +1,380 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Five-minute grits",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "stone-ground grits or polenta",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sharp cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the milk, water and salt to the boil.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the grits, then stir over low heat until creamy. It takes much longer than five minutes.",
+     "min": 25
+    },
+    {
+     "text": "Finish with the butter and cheddar.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Fried green tomatoes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Fry to serve; remoulade up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, for the cornmeal",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, a dash",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the tomatoes 1cm thick, salt and leave for 10 minutes, then pat dry.",
+     "min": 12
+    },
+    {
+     "text": "Dip in buttermilk, then in seasoned cornmeal.",
+     "min": 5
+    },
+    {
+     "text": "Shallow-fry at 180C for 2 minutes a side in batches.",
+     "min": 10
+    },
+    {
+     "text": "Mix the mayonnaise, mustard, capers and hot sauce for the remoulade.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Sac-O-Suds chicken fried steak",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "minute steaks (4)",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour, seasoned",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour, for the gravy",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "mashed potato",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pound the steaks very thin.",
+     "min": 5
+    },
+    {
+     "text": "Dredge in seasoned flour, dip in buttermilk, then flour again.",
+     "min": 10
+    },
+    {
+     "text": "Shallow-fry 3 minutes a side until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Pour off most of the oil, stir the gravy flour into the pan, whisk in the milk and simmer thick with lots of black pepper.",
+     "min": 8
+    },
+    {
+     "text": "Serve over the mashed potato.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mona Lisa's blackberry cobbler",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 32,
+   "make_ahead": "Bake up to 4 hours ahead; serve warm",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "blackberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "sugar, for the topping",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the blackberries with the sugar and cornflour in a dish.",
+     "min": 5
+    },
+    {
+     "text": "Rub the butter into the flour and sugar, add the milk and drop spoonfuls on top.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 190C for 35 minutes.",
+     "min": 35
+    },
+    {
+     "text": "Serve with cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Wazoo peach sweet tea",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 125,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe peaches, sliced, plus 1 for serving",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig mint per glass",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the peaches with the sugar and water for 10 minutes, mash lightly and strain, keeping the syrup.",
+     "min": 12
+    },
+    {
+     "text": "Steep the tea bags in the boiling water for 5 minutes and remove.",
+     "min": 6
+    },
+    {
+     "text": "Stir in the peach syrup and lemon juice and chill for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Serve over ice with fresh peach slices and mint.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

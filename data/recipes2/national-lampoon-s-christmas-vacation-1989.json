@@ -1,0 +1,302 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Eggnog in moose mugs",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 490,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fresh nutmeg, to grate",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg yolks with the sugar.",
+     "min": 5
+    },
+    {
+     "text": "Heat the milk and cream, pour over the yolks and stir over low heat to 75C.",
+     "min": 10
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 480
+    },
+    {
+     "text": "Stir in the rum and grate fresh nutmeg on top.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Cousin Eddie's RV sausages",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 23,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "kielbasa",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the kielbasa thick on the diagonal and slice the onions.",
+     "min": 8
+    },
+    {
+     "text": "Griddle the sausage until charred.",
+     "min": 8
+    },
+    {
+     "text": "Cook the onions slowly in the butter until soft.",
+     "min": 15
+    },
+    {
+     "text": "Toss together with the mustard and spear on toothpicks.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Juicy roast turkey",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 703,
+   "make_ahead": "Salt a day ahead",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "stuffing mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the turkey with the salt and leave uncovered in the fridge overnight.",
+     "min": 600
+    },
+    {
+     "text": "Push the butter and thyme under the skin.",
+     "min": 8
+    },
+    {
+     "text": "Roast at 170C until it hits 65C inside.",
+     "min": 75
+    },
+    {
+     "text": "Rest under foil. Make the stuffing as the packet says.",
+     "min": 20
+    },
+    {
+     "text": "Make gravy from the pan juices with the flour and stock.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Pecan pie",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 100,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tin with the pastry and blind bake.",
+     "min": 20
+    },
+    {
+     "text": "Toast the pecans. Whisk the eggs, golden syrup, sugar, melted butter and vanilla.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the pecans, pour into the case and bake at 170C until just set.",
+     "min": 50
+    },
+    {
+     "text": "Cool before slicing.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Sledding hot chocolate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 7,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the chocolate.",
+     "min": 3
+    },
+    {
+     "text": "Heat the milk until steaming, then whisk in the chocolate until frothy.",
+     "min": 7
+    },
+    {
+     "text": "Pour into four mugs and pile marshmallows on top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

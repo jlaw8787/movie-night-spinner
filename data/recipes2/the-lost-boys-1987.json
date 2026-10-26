@@ -1,0 +1,324 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Santa Carla boardwalk fries",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Fries can be soaked up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "russet potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thin fries. Soak in cold water, then drain and dry very well",
+     "min": 30
+    },
+    {
+     "text": "Fry in batches in oil at 140C for about 5 minutes until pale and soft, then rest on a rack",
+     "min": 12
+    },
+    {
+     "text": "Reheat the oil to 190C and fry again until golden and crisp",
+     "min": 8
+    },
+    {
+     "text": "Toss with salt, garlic powder and parsley and serve in paper cones",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Garlic bread",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the butter with the garlic, parsley and salt",
+     "min": 5
+    },
+    {
+     "text": "Split the baguette and spread generously, then wrap in foil",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C, then open the foil and bake again to crisp the top",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Chinese takeaway noodles",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chicken thighs, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "bean sprouts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "fresh egg noodles",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "oyster sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "cooked jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the chicken, shred the cabbage and slice the spring onions",
+     "min": 15
+    },
+    {
+     "text": "Stir-fry the chicken in a smoking wok until browned",
+     "min": 5
+    },
+    {
+     "text": "Add the cabbage, bean sprouts and noodles and toss with the oyster sauce, soy and sesame oil",
+     "min": 5
+    },
+    {
+     "text": "Scramble the eggs in a second pan, add the rice and spring onion and fry until hot, then serve alongside",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Boardwalk caramel popcorn",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Up to 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in a covered pot and tip into a large bowl",
+     "min": 8
+    },
+    {
+     "text": "Boil the sugar, butter and golden syrup for 4 minutes, then stir in the bicarb",
+     "min": 7
+    },
+    {
+     "text": "Pour over the popcorn, toss and bake at 120C, stirring every 15 minutes",
+     "min": 45
+    },
+    {
+     "text": "Cool on the tray and break up",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Holy water cucumber and lime fizz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop half the cucumber and muddle with the lime juice, mint and syrup in a jug",
+     "min": 5
+    },
+    {
+     "text": "Strain into small glass bottles or tall glasses filled with ice",
+     "min": 3
+    },
+    {
+     "text": "Top with chilled soda water and a thin cucumber ribbon. Tie paper cross tags round the necks",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

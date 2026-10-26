@@ -1,0 +1,304 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Thanksgiving at Danny's crostini",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Pumpkin up to 1 day, assemble fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette, sliced",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "butternut pumpkin, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "sage leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the pumpkin in oil and roast at 200C until soft and golden.",
+     "min": 25
+    },
+    {
+     "text": "Brush the baguette slices with oil and toast. Fry the sage leaves in a little oil until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Spread the toasts with goat's cheese, top with pumpkin and sage, and drizzle with honey.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Midwest of California almonds",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the almonds with the oil, rosemary and smoked salt on a tray.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 180C until fragrant. Serve warm in a bowl beside the olives.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mum's double shift casserole",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, bake fresh",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "heads broccoli, cut into florets",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "hot chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the oil in batches.",
+     "min": 10
+    },
+    {
+     "text": "Spread the rice in a baking dish, add the chicken and broccoli, then pour over the hot stock mixed with the cream.",
+     "min": 10
+    },
+    {
+     "text": "Cover and bake at 180C.",
+     "min": 40
+    },
+    {
+     "text": "Top with cheddar and bake uncovered until golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Immaculate Heart bake sale brownies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Up to 4 days, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and butter together and cool slightly. Whisk in the sugar and eggs, then fold in the flour and cocoa.",
+     "min": 15
+    },
+    {
+     "text": "Pour into a lined tin and bake at 170C.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely, cut into squares and wrap each in paper for the stall.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Café shift brown sugar cinnamon latte",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Syrup up to 1 week, make lattes fresh",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "very strong coffee, or 4 espresso shots",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "ground cinnamon, to dust",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar, water and cinnamon stick for 3 minutes, then cool.",
+     "min": 8
+    },
+    {
+     "text": "Brew the coffee. Put 1 tablespoon of syrup in each of four glasses and add the coffee.",
+     "min": 7
+    },
+    {
+     "text": "Heat the milk until steaming and froth it with a whisk or frother.",
+     "min": 5
+    },
+    {
+     "text": "Pour the milk slowly over the coffee, holding back the foam, then spoon the foam on top and dust with cinnamon.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

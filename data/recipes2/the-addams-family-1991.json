@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Thing's finger crackers",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 12,
+   "make_ahead": "Up to 2 days in a tin",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "flaked almonds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, then add the egg to form a dough",
+     "min": 10
+    },
+    {
+     "text": "Roll into 16 finger shapes",
+     "min": 10
+    },
+    {
+     "text": "Press a flaked almond into the tip of each and score knuckles with a knife",
+     "min": 8
+    },
+    {
+     "text": "Bake at 180C",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Morticia's rose petals",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Best eaten within a day",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "beetroots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the beetroots paper thin on a mandoline",
+     "min": 12
+    },
+    {
+     "text": "Toss with oil and spread on lined trays",
+     "min": 5
+    },
+    {
+     "text": "Bake at 150C until curled and crisp",
+     "min": 25
+    },
+    {
+     "text": "Sprinkle with flaky salt",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Gomez's candlelit roast",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 870,
+   "make_ahead": "Season the beef overnight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef rib roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rosemary, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef with salt, garlic and rosemary overnight",
+     "min": 720
+    },
+    {
+     "text": "Roast at 220C",
+     "min": 20
+    },
+    {
+     "text": "Lower to 160C and roast until 52C inside, adding the potatoes",
+     "min": 75
+    },
+    {
+     "text": "Rest",
+     "min": 20
+    },
+    {
+     "text": "Carve at the candlelit table with horseradish",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Black forest cake",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 75,
+   "make_ahead": "Assemble on the day",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 45,
+     "u": "ml",
+     "item": "kirsch",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar morello cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the sugar until thick, then fold in the flour and cocoa",
+     "min": 15
+    },
+    {
+     "text": "Bake at 175C",
+     "min": 25
+    },
+    {
+     "text": "Cool and split the cake",
+     "min": 25
+    },
+    {
+     "text": "Brush with cherry syrup and kirsch",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream and layer with the cherries",
+     "min": 15
+    },
+    {
+     "text": "Shave dark chocolate on top",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Wednesday's blackberry lemonade",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen blackberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the blackberries with the syrup and lemon juice",
+     "min": 5
+    },
+    {
+     "text": "Strain through a sieve, pressing hard",
+     "min": 5
+    },
+    {
+     "text": "Pour into a jug with the cold water and stir",
+     "min": 2
+    },
+    {
+     "text": "Chill",
+     "min": 30
+    },
+    {
+     "text": "Serve over ice with a few whole blackberries, a lemon slice and a mint sprig",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

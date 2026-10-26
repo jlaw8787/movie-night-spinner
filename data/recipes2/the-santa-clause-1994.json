@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Santa's milk and cookies",
+   "course": "s",
+   "prep_min": 11,
+   "cook_min": 503,
+   "make_ahead": "Dough up to 2 days, bake fresh",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "choc chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter in a pan and leave to cool.",
+     "min": 12
+    },
+    {
+     "text": "Beat with the sugar and egg, then mix in the flour, bicarb and choc chips.",
+     "min": 10
+    },
+    {
+     "text": "Rest the dough overnight in the fridge.",
+     "min": 480
+    },
+    {
+     "text": "Shape into 16 cookies and bake at 180C until golden at the edges.",
+     "min": 11
+    },
+    {
+     "text": "Serve with cold milk.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Elf workshop snowmen",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "bocconcini",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crack the peppercorns and halve the cherry tomatoes.",
+     "min": 5
+    },
+    {
+     "text": "Stack three bocconcini on each skewer and top with a half tomato as a hat.",
+     "min": 12
+    },
+    {
+     "text": "Press in peppercorn eyes, tie a basil leaf as a scarf and drizzle with olive oil.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Turkey done right",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 718,
+   "make_ahead": "Brine the day before",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet stuffing mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brine the turkey overnight in salted water in the fridge.",
+     "min": 600
+    },
+    {
+     "text": "Mix the butter with chopped sage, spread over the turkey and roll. Peel and chop the potatoes.",
+     "min": 20
+    },
+    {
+     "text": "Roast the turkey at 170C until 70C inside, with the potatoes in the tray for the last hour.",
+     "min": 90
+    },
+    {
+     "text": "Rest the turkey for 20 minutes. Bake the stuffing alongside as the packet says.",
+     "min": 20
+    },
+    {
+     "text": "Make gravy with the pan juices and stock.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "North Pole gingerbread",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 70,
+   "make_ahead": "Up to 5 days in a tin",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "red and green food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, sugar and golden syrup, then stir in the flour, spices and bicarb.",
+     "min": 10
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 60
+    },
+    {
+     "text": "Roll out and cut into elves and trees.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 180C until firm.",
+     "min": 10
+    },
+    {
+     "text": "Mix the icing sugar with a little water, tint red and green and ice the cooled biscuits.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Judy's cocoa",
+   "course": "d",
+   "prep_min": 4,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 900,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cocoa, sugar and salt with a splash of the milk into a paste.",
+     "min": 3
+    },
+    {
+     "text": "Add the rest of the milk, cream, cinnamon and vanilla. Warm to drinking temperature without boiling.",
+     "min": 8
+    },
+    {
+     "text": "Pour into mugs.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

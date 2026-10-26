@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Annexation of Puerto Rico wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 55,
+   "make_ahead": "Dip up to 1 day, wings fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped herbs (chives and parsley)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with salt and bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Warm the honey with the barbecue sauce and toss the wings through.",
+     "min": 5
+    },
+    {
+     "text": "Mix the sour cream, mayonnaise and herbs into a ranch dip. Serve with celery sticks.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Ohio buckeye bites",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "Up to 4 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "smooth peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the peanut butter, butter and icing sugar until it holds together. Roll into 24 balls.",
+     "min": 20
+    },
+    {
+     "text": "Chill for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Dip each ball in melted chocolate, leaving a round of peanut butter showing on top, then chill until set.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Urbania Cincinnati chilli spaghetti",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Chilli up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, one diced and one finely diced to serve",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "mild chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "diced tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the diced onion.",
+     "min": 10
+    },
+    {
+     "text": "Add the spices, cocoa, tomatoes and water and simmer until thick.",
+     "min": 40
+    },
+    {
+     "text": "Cook the spaghetti.",
+     "min": 10
+    },
+    {
+     "text": "Pile into bowls, ladle over the chilli and top with cheddar and finely diced onion.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Icebox football cookies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cream the butter and sugar, beat in the egg, then mix in the flour and cocoa.",
+     "min": 12
+    },
+    {
+     "text": "Shape into small footballs and flatten slightly. Bake at 180C and cool.",
+     "min": 20
+    },
+    {
+     "text": "Mix the icing sugar with a little water and pipe white laces across the top. Let set.",
+     "min": 18
+    }
+   ]
+  },
+  {
+   "n": "Sideline orange honey cooler",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 7,
+     "u": "",
+     "item": "oranges, 6 juiced and 1 cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "sea salt, a small pinch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the oranges and lemons into a big jug.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the honey dissolved in a little warm water and the salt. Top with cold water and ice and stir well.",
+     "min": 4
+    },
+    {
+     "text": "Pour into paper cups and serve with orange wedges.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

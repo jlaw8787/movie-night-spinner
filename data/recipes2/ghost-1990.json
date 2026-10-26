@@ -1,0 +1,364 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hush puppies",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cornmeal, flour, baking powder, sugar and salt in a bowl.",
+     "min": 3
+    },
+    {
+     "text": "Stir in the buttermilk, egg and sliced spring onions to a thick batter.",
+     "min": 4
+    },
+    {
+     "text": "Beat the softened butter with the honey until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oil to 180C in a deep pan.",
+     "min": 5
+    },
+    {
+     "text": "Drop in teaspoons of batter and fry until golden, turning once. Drain on paper and serve hot with the honey butter.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Tribeca loft crostini",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "baguette slices (about 1 baguette)",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "ripe tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the baguette slices until charred at the edges.",
+     "min": 5
+    },
+    {
+     "text": "Rub each warm toast with the cut garlic clove.",
+     "min": 3
+    },
+    {
+     "text": "Dice the tomatoes and dress with torn basil, salt and olive oil.",
+     "min": 7
+    },
+    {
+     "text": "Spoon the tomato onto the toasts just before serving so they stay crisp.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Sam's Tribeca loft pasta",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "rigatoni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the rigatoni in salted water until just tender, then drain.",
+     "min": 12
+    },
+    {
+     "text": "Meanwhile, remove the sausage skins, crumble the meat and brown it in a large pan.",
+     "min": 7
+    },
+    {
+     "text": "Add the sliced fennel and crushed garlic and cook until soft.",
+     "min": 8
+    },
+    {
+     "text": "Pour in the wine and let it bubble down, then stir in the cream.",
+     "min": 3
+    },
+    {
+     "text": "Toss the rigatoni through the sauce with the grated parmesan.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pottery wheel pie",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line a tray with baking paper.",
+     "min": 5
+    },
+    {
+     "text": "Roll the pastry sheet into a rough circle on the tray.",
+     "min": 5
+    },
+    {
+     "text": "Toss the sliced apples with the sugar and cinnamon and pile in the middle.",
+     "min": 10
+    },
+    {
+     "text": "Fold the edges up by hand, pleating as you go.",
+     "min": 5
+    },
+    {
+     "text": "Bake until golden. Cool a little before slicing.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Molly's studio mulled pinot noir",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "pinot noir",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the wine into a saucepan with the orange peel, the orange juice, cinnamon, star anise, cloves and honey.",
+     "min": 5
+    },
+    {
+     "text": "Warm over low heat without boiling, so the alcohol stays in.",
+     "min": 15
+    },
+    {
+     "text": "Strain into mugs and add a thin orange slice to each.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

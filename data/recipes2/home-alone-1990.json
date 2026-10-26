@@ -1,0 +1,324 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cheese pizza bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Sauce up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the tomatoes with the garlic and oregano for 10 minutes and cool slightly.",
+     "min": 12
+    },
+    {
+     "text": "Stretch the dough thin on a tray and spread with the sauce, then cover with mozzarella.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a hot tray at the oven's highest heat until bubbling.",
+     "min": 6
+    },
+    {
+     "text": "Cut into small squares.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Booby-trap paint can popcorn",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "red food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels and split the popcorn into two bowls.",
+     "min": 10
+    },
+    {
+     "text": "Toss one bowl with the melted butter and salt.",
+     "min": 3
+    },
+    {
+     "text": "Melt the white chocolate, tint red and toss through the other bowl.",
+     "min": 5
+    },
+    {
+     "text": "Let the red popcorn set, about 15 minutes (included in cook time).",
+     "min": 15
+    },
+    {
+     "text": "Mix both together and serve in clean paint tins.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Kevin's mac and cheese",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Assemble up to 1 day ahead, bake on the day",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the macaroni in boiling salted water 2 minutes short of the packet time and drain.",
+     "min": 10
+    },
+    {
+     "text": "Melt the butter, stir in the flour, then whisk in the milk until thick.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the cheddar and mustard, then fold through the macaroni.",
+     "min": 3
+    },
+    {
+     "text": "Tip into a baking dish and top with breadcrumbs.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 200C until golden and bubbling.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Christmas cookies",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 10,
+   "make_ahead": "Up to 4 days, airtight tin",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "green food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "silver cachous",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the sugar and egg, then mix in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Roll out and cut into stars and trees.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C and cool on a rack.",
+     "min": 8
+    },
+    {
+     "text": "Mix the icing sugar with a little water, tint some green, ice the cookies and add silver cachous.",
+     "min": 7
+    },
+    {
+     "text": "Let the icing set (included in cook time).",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Kevin's chocolate malted milkshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "tbsp",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, six scoops of ice cream, malted milk powder and some of the chocolate syrup for 30 seconds until thick.",
+     "min": 5
+    },
+    {
+     "text": "Drizzle chocolate syrup inside tall glasses, pour in the shake and top with whipped cream and a cherry.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

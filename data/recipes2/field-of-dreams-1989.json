@@ -1,0 +1,414 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ray's cornfield elote",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 12,
+   "make_ahead": "Cook fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Husk the corn.",
+     "min": 5
+    },
+    {
+     "text": "Grill over high heat, turning, until charred in spots.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise with lime zest.",
+     "min": 3
+    },
+    {
+     "text": "Brush the hot cobs all over with the mayonnaise, then roll in finely crumbled feta.",
+     "min": 3
+    },
+    {
+     "text": "Sprinkle with chilli powder and chopped coriander and serve with lime wedges.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Fenway sausage and peppers rolls",
+   "course": "s",
+   "prep_min": 11,
+   "cook_min": 30,
+   "make_ahead": "Peppers up to 1 day ahead, reheat",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of wholegrain mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the capsicums and onions.",
+     "min": 8
+    },
+    {
+     "text": "Fry over medium heat until soft and sweet, seasoning with salt and oregano.",
+     "min": 15
+    },
+    {
+     "text": "Grill the sausages, turning, then split lengthways.",
+     "min": 12
+    },
+    {
+     "text": "Toast the long rolls.",
+     "min": 3
+    },
+    {
+     "text": "Fill with sausage, pile on the peppers and onions and finish with mustard.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Iowa breaded pork tenderloin sandwich",
+   "course": "m",
+   "prep_min": 28,
+   "cook_min": 6,
+   "make_ahead": "Crumb up to 2 hours ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pork fillet",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 5,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle of American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pork into pieces and pound each thin and wider than the bun.",
+     "min": 10
+    },
+    {
+     "text": "Dust in flour, dip in beaten egg and press into crushed crackers mixed with panko.",
+     "min": 8
+    },
+    {
+     "text": "Shallow fry at 180C until golden each side.",
+     "min": 6
+    },
+    {
+     "text": "Toss shredded cabbage with mayonnaise and vinegar.",
+     "min": 6
+    },
+    {
+     "text": "Serve in soft buns with mustard, mayo, pickles and sliced onion and the slaw on the side.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Is-this-heaven Iowa apple pie",
+   "course": "w",
+   "prep_min": 32,
+   "cook_min": 80,
+   "make_ahead": "Up to 2 days, warm to serve",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "Granny Smith apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 110,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "salted caramel sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the apples and toss with sugar, cinnamon, cornflour and lemon juice.",
+     "min": 15
+    },
+    {
+     "text": "Line a 23cm pie dish with pastry and fill.",
+     "min": 8
+    },
+    {
+     "text": "Cover with a second sheet, crimp and cut slits.",
+     "min": 7
+    },
+    {
+     "text": "Brush with egg and sprinkle with sugar.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 200C.",
+     "min": 15
+    },
+    {
+     "text": "Reduce to 180C and bake until golden.",
+     "min": 35
+    },
+    {
+     "text": "Rest, then serve warm with ice cream and salted caramel sauce.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Shoeless Joe's strawberry lemonade",
+   "course": "d",
+   "prep_min": 17,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 7,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar with water until dissolved, then cool.",
+     "min": 5
+    },
+    {
+     "text": "Hull the strawberries and blend with the syrup, then strain.",
+     "min": 5
+    },
+    {
+     "text": "Juice the lemons and stir in the juice and cold water.",
+     "min": 8
+    },
+    {
+     "text": "Chill for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Pour over ice into tall glasses and garnish with sliced strawberries, lemon wheels and mint.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

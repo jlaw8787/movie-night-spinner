@@ -1,0 +1,368 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chinese restaurant spring rolls",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "rice vermicelli",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "wombok, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "spring roll pastry sheets",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the vermicelli until soft, drain and chop.",
+     "min": 8
+    },
+    {
+     "text": "Shred the wombok and grate the carrots.",
+     "min": 8
+    },
+    {
+     "text": "Cook the pork mince until browned.",
+     "min": 8
+    },
+    {
+     "text": "Mix the pork with the vermicelli and vegetables and cool.",
+     "min": 10
+    },
+    {
+     "text": "Roll tightly in the spring roll pastry.",
+     "min": 20
+    },
+    {
+     "text": "Fry at 180C in batches until crisp and blistered.",
+     "min": 12
+    },
+    {
+     "text": "Serve hot with sweet chilli sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Garage rehearsal popcorn chicken",
+   "course": "s",
+   "prep_min": 24,
+   "cook_min": 16,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the chicken into bite-size pieces.",
+     "min": 10
+    },
+    {
+     "text": "Mix the flour, panko, paprika and salt. Dip the chicken in egg, then in the crumb mix.",
+     "min": 12
+    },
+    {
+     "text": "Shallow fry in batches until golden.",
+     "min": 16
+    },
+    {
+     "text": "Drain and serve with honey mustard.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Honey chicken",
+   "course": "m",
+   "prep_min": 14,
+   "cook_min": 31,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs, in pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the chicken and toss in cornflour.",
+     "min": 12
+    },
+    {
+     "text": "Cook the jasmine rice.",
+     "min": 15
+    },
+    {
+     "text": "Fry the chicken in batches until crisp.",
+     "min": 12
+    },
+    {
+     "text": "Warm the honey with the soy sauce until bubbling and toss the chicken through.",
+     "min": 4
+    },
+    {
+     "text": "Scatter with sesame seeds and serve over the rice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Homemade fortune cookies",
+   "course": "w",
+   "prep_min": 21,
+   "cook_min": 17,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "paper fortunes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites with the sugar, then mix in the flour, butter and vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Spread thin rounds on a lined tray.",
+     "min": 6
+    },
+    {
+     "text": "Bake until the edges are golden, in batches.",
+     "min": 12
+    },
+    {
+     "text": "Working quickly while hot, lay a fortune on each, fold and bend over a cup.",
+     "min": 10
+    },
+    {
+     "text": "Cool until crisp.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Lychee jasmine iced tea with lime",
+   "course": "d",
+   "prep_min": 12,
+   "cook_min": 62,
+   "make_ahead": "Tea up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "jasmine tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "hot water (about 85C)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 565,
+     "u": "g",
+     "item": "tin lychees",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the hot water, then remove.",
+     "min": 4
+    },
+    {
+     "text": "Chill the tea.",
+     "min": 60
+    },
+    {
+     "text": "Drain the lychees, keeping the syrup.",
+     "min": 3
+    },
+    {
+     "text": "Mix the cold tea with some of the lychee syrup and the juice of a lime.",
+     "min": 2
+    },
+    {
+     "text": "Fill glasses with ice and lychees, pour over the tea and top with soda water and a lime wheel.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

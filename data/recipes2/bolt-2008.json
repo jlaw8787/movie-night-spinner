@@ -1,0 +1,354 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mittens' tuna melt bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins tuna (185g each), drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "celery stick, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "English muffins",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split and toast the muffins.",
+     "min": 5
+    },
+    {
+     "text": "Mix the tuna with the mayonnaise, celery, pickles, a squeeze of lemon and pepper.",
+     "min": 8
+    },
+    {
+     "text": "Spread over the muffin halves and top with cheddar.",
+     "min": 4
+    },
+    {
+     "text": "Grill until the cheese is bubbling and golden.",
+     "min": 3
+    },
+    {
+     "text": "Cut each half into quarters and serve warm.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Rhino's cheese balls",
+   "course": "s",
+   "prep_min": 26,
+   "cook_min": 62,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, snipped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts, finely chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cheddar, cream cheese and chives until well combined.",
+     "min": 8
+    },
+    {
+     "text": "Roll into small balls.",
+     "min": 10
+    },
+    {
+     "text": "Coat in the chopped walnuts.",
+     "min": 8
+    },
+    {
+     "text": "Chill until firm.",
+     "min": 60
+    },
+    {
+     "text": "Serve piled in a bowl with the crackers.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Road trip diner meatloaf",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 79,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince, onion, breadcrumbs, egg and salt.",
+     "min": 12
+    },
+    {
+     "text": "Press into a loaf tin and spread with tomato sauce.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 180C until cooked through.",
+     "min": 60
+    },
+    {
+     "text": "Peel and boil the potatoes, then mash with butter and milk.",
+     "min": 25
+    },
+    {
+     "text": "Slice the meatloaf thickly and serve on the mash.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Lightning bolt cookies",
+   "course": "w",
+   "prep_min": 28,
+   "cook_min": 35,
+   "make_ahead": "Up to 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until creamy.",
+     "min": 5
+    },
+    {
+     "text": "Mix in the flour to a soft dough.",
+     "min": 3
+    },
+    {
+     "text": "Roll out and cut into lightning bolt shapes.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 160C until pale golden.",
+     "min": 15
+    },
+    {
+     "text": "Cool on the tray.",
+     "min": 20
+    },
+    {
+     "text": "Mix the icing sugar and water and ice the cookies white.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Penny's super bark choc malt thickshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "chocolate malt balls",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the ice cream, milk, malted milk powder and cocoa until thick.",
+     "min": 2
+    },
+    {
+     "text": "Pour into chilled tall glasses and top with whipped cream.",
+     "min": 3
+    },
+    {
+     "text": "Crush the malt balls and scatter over in a zigzag like a lightning bolt.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}
