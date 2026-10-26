@@ -11,6 +11,7 @@ c.querySelectorAll('.fx-face').forEach(f=>{const fr=f.getBoundingClientRect(),k=
 f.querySelectorAll('*').forEach(e=>{if(![...e.childNodes].some(n=>n.nodeType===3&&n.textContent.trim()))return;const cs=getComputedStyle(e);
 if(cs.visibility==='hidden'||cs.display==='none'||+cs.opacity===0)return;const r=e.getBoundingClientRect();if(!r.width)return;
 const o=Math.max(r.bottom-fr.bottom,r.right-fr.right,fr.top-r.top,fr.left-r.left)/k;if(o>3)out.push('spill '+Math.round(o)+': '+e.textContent.trim().slice(0,30));
+if(((cs.webkitLineClamp&&cs.webkitLineClamp!=='none')||cs.textOverflow==='ellipsis')&&(e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2))out.push('cut: '+e.textContent.trim().slice(0,30));
 if(parseFloat(cs.fontSize)<13.5)out.push('small '+cs.fontSize+': '+e.textContent.trim().slice(0,20))})});return {cls:c.className,iss:out}})()"""
 async def worker(b,q,res):
   c=await b.new_context(viewport={'width':1400,'height':1000})

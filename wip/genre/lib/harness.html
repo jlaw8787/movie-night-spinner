@@ -14,6 +14,9 @@
           flavour:{venue,sign,note:{text,by},winks,prop:{kind,title,lines},number}|null, era, tone, img:(path,size)=>url}
    Faces: inline styles only, no <style> blocks or head CSS classes, each face exactly w x h with overflow hidden. */
 window.MENU_FORMATS={};
+function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return t.slice(0,i).replace(/[,;:\s]+$/,"")+"."}
+function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:libTrim(it.note,100)}));return m}
+
 const q=new URLSearchParams(location.search);
 const slug=id=>id.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const j=async u=>{try{const r=await fetch(u);return r.ok?await r.json():{}}catch(e){return {}}};
@@ -27,7 +30,7 @@ async function ctxFor(id){
   const toItem=([n,note])=>({n,note});
   const menu=JSON.parse(JSON.stringify(e&&e.menu||d.recipe||{s:(f.S||[]).slice(0,2).map(toItem),m:(f.M||[]).map(toItem),w:(f.W||[]).map(toItem),d:(f.K||[]).map(toItem)}));
   const a=FMT[id]||{};const L=d.lib||null;
-  return {f,menu,poster:(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[id])||null,stills:L&&L.stills?L.stills:(()=>{const a=(stills[id]||[]).filter(s=>s[1]>=1280),c=a.filter(s=>!s[3]);return (c.length>=2?c:a).map(s=>s[0]).slice(0,8)})(),
+  return {f,menu:libMenu(menu),poster:(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[id])||null,stills:L&&L.stills?L.stills:(()=>{const a=(stills[id]||[]).filter(s=>s[1]>=1280),c=a.filter(s=>!s[3]);return (c.length>=2?c:a).map(s=>s[0]).slice(0,8)})(),
     logo:L?L.logo:(BLOCK[id]?null:(LOGOS[id]||null)),palette:PAL[id]||null,flavour:FLAV[id]||null,era:q.get("era")||a.era||"modern",tone:q.get("tone")||a.tone||"warm",img};
 }
 (async()=>{

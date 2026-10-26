@@ -156,7 +156,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="flex:1;min-width:0"><div style="display:flex;align-items:baseline;gap:10px">
         <span ${A}-name style="flex:1;font:700 max(16px,calc(26px*var(--k)))/1.12 ${BODY};color:${ink}">${esc(it.n)}</span>
         <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${acc};white-space:nowrap">${money(it.p,era,space)}</span></div>
-      ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:400 max(14px,calc(20px*var(--k)))/1.26 ${BODY};color:${sub}">${esc(it.note)}</div>`:""}</div></div>`;
+      ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;margin-top:2px;font:400 max(14px,calc(20px*var(--k)))/1.26 ${BODY};color:${sub}">${esc(it.note)}</div>`:""}</div></div>`;
   let ci=0;const course=k=>I[k].length?`<div style="margin:0 0 calc(12px*var(--k))">${label(k,ci++)}<div ${A}-rows>${I[k].map(row).join("")}</div></div>`:"";
 
   /* title block and logo */
