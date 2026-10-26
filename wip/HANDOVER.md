@@ -19,7 +19,7 @@ Live as of commit 08041450 (service worker version mns-19d65fed).
 - app.js libPhotoPass: one shared photo rule (no blurred poster smear, no logo over poster, no photo twice). libUnclip: cut text shrinks to fit or the line hides.
 - Dinner planner on the Prep tab only: tick dishes (fold-away list), guests 1 to 24, real prep and cook times, scaled shopping list.
 - Dish names and notes say what the food is (data/films.json, data/recipes, data/recipes2 kept in step).
-- Bad photos blocked in data/still-block.json (white promo cut-outs, near-black, flat).
+- Hand-pinned stills per film in data/still-pick.json (used first, in order). Bad photos blocked in data/still-block.json (white promo cut-outs, near-black, flat).
 
 ## Done Oct 26 (live in e73e6f50)
 - wip/genre/lib/posterdupe.py: ORB match of every picked still vs the poster; 1085 poster-art stills in 488 films added to data/still-block.json. Real scenes score 0 to 5 inliers, poster crops 20+.
