@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit 08041450 (service worker version mns-19d65fed).
+Live as of commit 0264f779 (service worker version mns-19d65fed).
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
@@ -31,8 +31,10 @@ Live as of commit 08041450 (service worker version mns-19d65fed).
 - Oct 27 (live in 08041450): hand-pick pass over the 224 menus in qreport rule 2. 135 stills blocked in 96 films (promo key art, poster variants ORB missed, cut faces, dark). Tool: wip/genre/lib/framegrab.py OUTDIR list.json grabs each visible scene frame as cropped on the page, numbered, plus a paths json, for contact-sheet review.
 - Left as is: format title bars over the header photo ("THE MENU" on diner/cafe styles) are the layout, not the photo. Hot Tub and Planes Trains titles come from the motel logo panel.
 
-## Next job (owner to pick)
-Photo pass is done. Still stuck on mostly promo stills: Casino Royale, Kung Fu Hustle, Mulan, The Little Mermaid (1989), Thor: Ragnarok. Option: fewer frames for those films, or a different crop. Otherwise move on to the owner's next list item.
+- Oct 27 (live in 0264f779): data/still-pick.json pins 8 hand-chosen stills (in order) for Casino Royale, Kung Fu Hustle, Mulan, The Little Mermaid (1989), Thor: Ragnarok. build-data.cjs uses it before the auto pick. Use it for any film where the auto pick keeps landing on promo art. Put a wide scene first when the format's first frame is a thin header band.
+
+## Next job
+Back-page photo work is finished. Ask the owner for the next item on the list.
 
 ## Tools (run from the repo root; local server: python3 -m http.server 8795)
 - wip/genre/lib/sweep.py [style ...]: full check of library menus (spill, cut, small text, duplicate, dark and white photos, poster hero, hidden lines). About 25 min for all 759.
