@@ -103,14 +103,13 @@ window.MENU_FORMATS["club"]=ctx=>{
 
   /* stock: black gloss with sheen and fine grain; era decides border */
   const stock=`<div style="position:absolute;inset:0;background:${STOCK}"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(255,255,255,${era==="1990s"||era==="modern"?.03:.09}) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 68%,rgba(255,255,255,${era==="1990s"||era==="modern"?.02:.05}) 100%)"></div>
-    <div style="position:absolute;inset:0;background-image:${noise("#ffffff",.05+T.wear*.06,.9,200)}"></div>`;
+    <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(255,255,255,${era==="1990s"||era==="modern"?.03:.09}) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 68%,rgba(255,255,255,${era==="1990s"||era==="modern"?.02:.05}) 100%)"></div>`;
   const border=(()=>{switch(e.border){
     case"deco":return `<div style="position:absolute;inset:14px;border:3px double ${ACC};pointer-events:none"></div><div style="position:absolute;inset:24px;border:1px solid ${ACC}88;pointer-events:none"></div>`;
     case"round":return `<div style="position:absolute;inset:14px;border:2px solid ${ACC};border-radius:28px;pointer-events:none"></div>`;
     case"stripes":return `<div style="position:absolute;left:0;top:0;bottom:0;width:30px;background:linear-gradient(90deg,${ACC} 0 8px,transparent 8px 11px,${mix(ACC,"#ffffff",.4)} 11px 17px,transparent 17px 20px,${mix(ACC,"#000000",.3)} 20px 26px,transparent 26px)"></div>`;
     case"chrome":return `<div style="position:absolute;inset:10px;border:4px solid transparent;border-image:linear-gradient(180deg,#f4f4f8,#7a7a84 30%,#ffffff 50%,#6a6a74 70%,#e8e8ee) 1;pointer-events:none"></div>`;
-    case"neon":return `<div style="position:absolute;inset:16px;border:3px solid ${ACC};border-radius:14px;box-shadow:0 0 10px ${ACC},0 0 26px ${ACC}aa,inset 0 0 10px ${ACC}88;pointer-events:none"></div>`;
+    case"neon":return `<div style="position:absolute;inset:16px;border:3px solid ${ACC};border-radius:14px;box-shadow:0 0 10px ${ACC},0 0 26px ${ACC}aa;pointer-events:none"></div>`;
     case"foil":return `<div style="position:absolute;left:24px;right:24px;top:20px;height:2px;background:linear-gradient(90deg,#6f757b,#e9edf0,#7b8187)"></div><div style="position:absolute;left:24px;right:24px;bottom:20px;height:2px;background:linear-gradient(90deg,#6f757b,#e9edf0,#7b8187)"></div>`;
     case"gloss":return `<div style="position:absolute;inset:12px;border:1.5px solid ${ACC};pointer-events:none"></div><div style="position:absolute;inset:18px;border:1px solid ${ACC}55;pointer-events:none"></div>`;
     default:return `<div style="position:absolute;inset:22px;border:1px solid ${ACC}66;pointer-events:none"></div>`}})();

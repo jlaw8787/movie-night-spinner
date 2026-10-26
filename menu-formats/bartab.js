@@ -123,7 +123,7 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   const photo=(src,isPoster,h,pos)=>{
     if(!src)return `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:${mix(board,acc,.25)}"><div style="font:${g.dw} 40px/1.05 ${g.disp};color:${ink};text-align:center;padding:0 30px;text-transform:uppercase">${esc(venue)}</div></div>`;
-    if(isPoster)return `<div style="position:absolute;inset:0;background:${mix(board,"#000000",.42)}"></div><img crossorigin="anonymous" alt="${esc((f.title||"")+" poster")}" src="${src}" style="position:absolute;left:50%;top:${Math.round(h*.03)}px;height:${Math.round(h*.94)}px;width:auto;transform:translateX(-50%);box-shadow:0 0 0 2px ${rgba(acc,.85)},0 6px 18px rgba(0,0,0,.6)">`;
+    if(isPoster)return `<div style="position:absolute;inset:0;background:${mix(board,"#000000",.42)}"></div><img crossorigin="anonymous" alt="${esc((f.title||"")+" poster")}" src="${src}" style="position:absolute;left:50%;top:${h>400?8:Math.round(h*.03)}px;height:${h>400?h-44:Math.round(h*.94)}px;width:auto;transform:translateX(-50%);box-shadow:0 0 0 2px ${rgba(acc,.85)},0 6px 18px rgba(0,0,0,.6)">`;
     const tint=t.tint?`<div style="position:absolute;inset:0;background:${t.tint};mix-blend-mode:multiply"></div>`:"";
     const gloss=t.gloss?`<div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,0) 38%)"></div>`:"";
     const half=g.key==="offset"?`<div style="position:absolute;inset:0;background:radial-gradient(rgba(0,0,0,.18) 30%,transparent 32%) 0 0/4px 4px;mix-blend-mode:multiply;opacity:.6"></div>`:"";
