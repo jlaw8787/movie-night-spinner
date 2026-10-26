@@ -33,7 +33,7 @@ async def main():
   async with async_playwright() as p:
     b=await p.chromium.launch(proxy={'server':os.environ.get('HTTPS_PROXY',''),'bypass':'localhost,127.0.0.1'})
     q=films[:];res=[]
-    await asyncio.gather(*[worker(b,q,res) for _ in range(6)])
+    await asyncio.gather(*[worker(b,q,res) for _ in range(10)])
     for r in sorted(res,key=lambda x:x[1]): print('FAIL',*r)
     print(len(films),'films,',len(res),'failures')
     await b.close()
