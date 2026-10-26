@@ -202,7 +202,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
   const img=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const stills=(ctx.stills||[]).slice();
-  const hero=stills[0]?{src:img(stills[0],"w1280"),poster:false}:{src:img(poster,"w780"),poster:true};
+  const PM=!!poster; /* poster mode: the whole poster is the hero; the first still is only the fallback */
+  const hero=PM?{src:img(poster,"w780"),poster:true}:{src:img(stills[0],"w1280"),poster:false};
   const booth=[];for(let i=0;i<4;i++){const s=stills.length>1?stills[(i+1)%stills.length]:null;booth.push(s?{src:img(s,"w780"),poster:false}:{src:img(poster,"w500"),poster:true})}
 
   /* colour: film palette for accents, checked against this era's paper */
@@ -243,22 +244,27 @@ window.MENU_FORMATS[ID]=ctx=>{
   const nowLine=`<div data-pk style="${caps(15,"#ffffff",.16)};margin-top:10px;white-space:nowrap">Now showing, ${esc(year)}</div>`;
   const pr=Math.min(E.radius,10);
   if(LG&&LG[0]&&LG[1]&&LG[2]){
-    const a=LG[1]/LG[2];let lh=Math.min(120,Math.sqrt(21000/a)),lw=lh*a;if(lw>320){lw=320;lh=lw/a}
-    const tT=fitType(title,300,124,E.dcw,40,20,1.06,3);
-    logoHtml=`<div data-sp="logo" data-lpanel data-dark="${panelBg}" data-light="rgba(251,249,243,.95)" data-lightink="#2a2420" data-type="${panelBg}" style="position:absolute;left:16px;bottom:16px;max-width:${W-120}px;padding:14px 18px 12px;background:${panelBg};border-radius:${pr}px;box-shadow:0 4px 14px rgba(0,0,0,.35)">
-      <span data-lmax="320,120" data-larea="21000" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px"><img src="${img(LG[0],"w500")}" crossorigin="anonymous" alt="${esc(title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="window.__PICK&&__PICK.logoFail(this)" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.45))"></span>
-      <div data-ltype style="display:none;width:300px;font:${E.disp==="Unbounded"?"800 ":""}${tT.z}px/1.06 ${disp};color:#ffffff">${esc(title)}</div>${nowLine}</div>`;
+    const a=LG[1]/LG[2];const LA=PM?13000:21000,LX=PM?196:320;let lh=Math.min(120,Math.sqrt(LA/a)),lw=lh*a;if(lw>LX){lw=LX;lh=lw/a}
+    const tT=fitType(title,PM?196:300,124,E.dcw,40,20,1.06,3);
+    logoHtml=`<div data-sp="logo" data-lpanel data-dark="${panelBg}" data-light="rgba(251,249,243,.95)" data-lightink="#2a2420" data-type="${panelBg}" style="${PM?"position:relative;":"position:absolute;left:16px;bottom:16px;"}max-width:${PM?"100%":W-120+"px"};box-sizing:border-box;padding:14px 18px 12px;background:${panelBg};border-radius:${pr}px;box-shadow:0 4px 14px rgba(0,0,0,.35)">
+      <span data-lmax="${PM?"196,120":"320,120"}" data-larea="${LA}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px"><img src="${img(LG[0],"w500")}" crossorigin="anonymous" alt="${esc(title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="window.__PICK&&__PICK.logoFail(this)" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.45))"></span>
+      <div data-ltype style="display:none;width:${PM?196:300}px;font:${E.disp==="Unbounded"?"800 ":""}${tT.z}px/1.06 ${disp};color:#ffffff">${esc(title)}</div>${nowLine}</div>`;
   }else{
-    const tT=fitType(title,300,124,E.dcw,46,20,1.06,4);
-    logoHtml=`<div data-sp="logo" style="position:absolute;left:16px;bottom:16px;width:300px;padding:14px 18px 12px;background:${panelBg};border-radius:${pr}px;box-shadow:0 4px 14px rgba(0,0,0,.35)"><div style="font:${E.disp==="Unbounded"?"800 ":""}${tT.z}px/1.06 ${disp};color:#ffffff">${esc(title)}</div>${nowLine}</div>`;
+    const tT=fitType(title,PM?196:300,124,E.dcw,46,20,1.06,4);
+    logoHtml=`<div data-sp="logo" style="${PM?"position:relative;":"position:absolute;left:16px;bottom:16px;"}width:${PM?232:300}px;box-sizing:border-box;padding:14px 18px 12px;background:${panelBg};border-radius:${pr}px;box-shadow:0 4px 14px rgba(0,0,0,.35)"><div style="font:${E.disp==="Unbounded"?"800 ":""}${tT.z}px/1.06 ${disp};color:#ffffff">${esc(title)}</div>${nowLine}</div>`;
   }
   /* hero still with era frame */
   const fr={deckle:`border:12px solid #f7f0dc;box-shadow:0 2px 8px rgba(0,0,0,.3)`,round:`border:9px solid #fffaf2;box-shadow:0 3px 10px rgba(0,0,0,.25)`,white:`border:8px solid #ffffff;box-shadow:0 2px 6px rgba(0,0,0,.2)`,neon:`border:3px solid ${ACC};box-shadow:0 0 18px ${rgba(ACC,.6)}`,thin:`border:2px solid ${ink}`,copy:`border:3px solid #111`,none:``}[E.frame];
   const inset=E.frame==="none"||E.proc==="glossy"?0:20;
   const hw=W-inset*2,hh=SH-(inset?12:0);
   const bw={deckle:12,round:9,white:8,neon:3,thin:2,copy:3,none:0}[E.frame];
+  /* poster hero: the whole 2:3 poster hangs on the era's banner colour, logo panel beside it, never over it */
+  const posterHero=(w,h)=>{const ph=h-28,pw=Math.round(ph*2/3),pad=14;
+    return `<div style="position:relative;width:${w}px;height:${h}px;overflow:hidden;border-radius:${Math.max(0,E.radius-bw)}px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(0,0,0,.25)),${mix(band,"#000000",.4)}">
+      <div style="position:absolute;left:${pad+8}px;top:${pad}px;width:${pw}px;height:${ph}px;box-sizing:border-box;border:${E.frame==="neon"?3:5}px solid ${E.frame==="neon"?ACC:"#fbf8f0"};background:#fbf8f0;box-shadow:0 6px 16px rgba(0,0,0,.5);transform:rotate(${(T.tilt*.4).toFixed(2)}deg)"><img src="${img(poster,"w780")}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain"></div>
+      <div style="position:absolute;left:${pad+8+pw+18}px;right:16px;top:14px;bottom:14px;display:flex;align-items:center;justify-content:center">${logoHtml}</div></div>`};
   const heroHtml=`<div style="position:absolute;left:${inset}px;top:${SY+(inset?4:0)}px;width:${hw}px;height:${hh}px;box-sizing:border-box;${fr};border-radius:${E.radius}px;overflow:hidden;${inset&&T.tilt&&E.proc!=="clean"?`transform:rotate(${(T.tilt*.25).toFixed(2)}deg)`:""}">
-      ${photo(hero.src,hw-bw*2,hh-bw*2,{filter:photoF,poster:hero.poster,halftone:E.proc==="offset",radius:Math.max(0,E.radius-bw),pos:"50% 35%",alts:stills.slice(5,8).map(s=>img(s,"w1280")),last:poster?img(poster,"w780"):"",extra:logoHtml,
+      ${PM?posterHero(hw-bw*2,hh-bw*2):photo(hero.src,hw-bw*2,hh-bw*2,{filter:photoF,poster:hero.poster,halftone:E.proc==="offset",radius:Math.max(0,E.radius-bw),pos:"50% 35%",alts:stills.slice(5,8).map(s=>img(s,"w1280")),last:poster?img(poster,"w780"):"",extra:logoHtml,
         safe:JSON.stringify({pos:[[50,35],[50,20],[32,35],[68,35],[50,55]],items:[{q:"[data-sp=logo]",c:[["l",16,"b",16],["r",16,"b",16],["l",16,"t",16],["r",16,"t",16]]}]})})}</div>`;
   /* ticket prop: admit one with a perforated stub */
   const ty=SY+SH+22,tw=262,th=196;
