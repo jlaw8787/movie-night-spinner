@@ -125,7 +125,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const darkPanel=toHex(mix(pd,[0,0,0],.55)),lightPanel=T.dark?"#f4ecd8":toHex(mix(paper,[255,255,255],.6));
   const titleType=c=>`<div style="font:${E.dw} ${tsz}px/1.04 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${c};text-align:center;max-width:560px">${esc(f.title)}</div>`;
   const logoPanel=`<div data-lpanel data-dark="${darkPanel}" data-light="${lightPanel}" data-darkink="#f3e7c8" data-lightink="${INK}" style="position:absolute;left:50%;top:612px;transform:translateX(-50%);max-width:600px;padding:18px 34px;background:${darkPanel};color:#f3e7c8;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.4);text-align:center">
-     ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="__fmtLogo(this)" onerror="__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:532px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType("currentColor")}</div>`:titleType("currentColor")}
+     ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:532px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType("currentColor")}</div>`:titleType("currentColor")}
    </div>`;
 
   /* ---------- front ---------- */

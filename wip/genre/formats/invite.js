@@ -122,7 +122,7 @@ window.MENU_FORMATS.invite=function(ctx){
   const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0,lw=lr?Math.min(400,90*lr):0,lh=lr?lw/lr:0;
   const logo=`<div style="position:absolute;left:0;right:0;top:${lr?Math.round(440-lh-28):360}px;display:flex;justify-content:center">
     <div data-lpanel data-dark="rgba(18,16,20,.88)" data-light="rgba(253,250,244,.94)" data-type="${dark}" style="padding:12px 20px;background:${lr?"rgba(18,16,20,.88)":dark};box-shadow:0 8px 20px rgba(0,0,0,.35);border-radius:${E.border==="round"?"14px":"2px"}">
-     ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="__MNS.logoTone(this)" onerror="__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
+     ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
      <div data-ltype data-fit="20" style="display:${lr?"none":"block"};width:440px;height:96px;overflow:hidden;text-align:center;font:${E.dw} 40px/1.08 ${dd};${up}color:#fff;font-size:40px">${x(f.title)}</div>
     </div></div>`;
 

@@ -122,7 +122,7 @@ window.MENU_FORMATS.home=function(ctx){
   const lw=lr?Math.min(400,108*lr):0,lh=lr?lw/lr:0;
   const typeT=`<div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:400px;height:112px;overflow:hidden;font:${E.dw} 46px/1.02 ${dd};${up}color:#fff;font-size:46px">${x(f.title)}</div>`;
   const logo=`<div data-lpanel data-dark="rgba(20,20,24,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:46px;top:500px;padding:14px 20px;border-radius:${E.pr.r};background:${lr?"rgba(20,20,24,.9)":dark};box-shadow:0 10px 22px rgba(0,0,0,.35);transform:rotate(${-T.rot*.8}deg);max-width:440px">
-     ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="__MNS.logoTone(this)" onerror="__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
+     ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
      ${typeT}
    </div>`;
 

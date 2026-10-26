@@ -105,7 +105,7 @@ window.MENU_FORMATS.precinct=function(ctx){
   /* logo in its own colours on a case label that suits it */
   const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0,lw=lr?Math.min(420,96*lr):0,lh=lr?lw/lr:0;
   const logo=`<div data-lpanel data-dark="rgba(16,16,20,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:64px;top:${lr?Math.round(640-lh-40):520}px;padding:14px 20px;background:${lr?"rgba(16,16,20,.9)":dark};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${-T.tilt*.5}deg)">
-     ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="__MNS.logoTone(this)" onerror="__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
+     ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
      <div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:440px;height:104px;overflow:hidden;font:${E.dw} 48px/1 ${dd};text-transform:uppercase;color:#fff;font-size:48px">${x(f.title)}</div>
    </div>`;
   const evid=(src,l,t,w,h,rot,op,tag,pad)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;box-sizing:border-box;padding:${pad||E.pb};background:#fbfaf6;transform:rotate(${rot}deg);box-shadow:0 14px 30px rgba(0,0,0,.4),0 2px 4px rgba(0,0,0,.3)">

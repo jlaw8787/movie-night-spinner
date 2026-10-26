@@ -165,7 +165,7 @@ window.MENU_FORMATS.placemat=ctx=>{
   const dark=eg==="now"?"rgba(16,18,24,.74)":`${K.deep}e0`,light=eg==="e40"?"rgba(241,227,196,.95)":"rgba(255,251,242,.94)";
   const titleType=`font:${L.dispW} ${tsz}px/1.04 ${L.disp};color:#fff;${caps}letter-spacing:${L.track};text-shadow:3px 3px 0 ${L.red}`;
   const lpanel=`<div data-fit="lpanel" data-light="${light}" data-lightink="${L.red}" style="position:absolute;left:22px;bottom:22px;max-width:540px;padding:16px 22px 14px;border-radius:${Math.min(L.radius,14)}px;background:${dark};box-shadow:0 6px 18px rgba(0,0,0,.35),inset 0 0 0 2px rgba(255,255,255,.16)${T.gold?",inset 0 0 0 5px rgba(201,162,74,.8)":""}">
-      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${img(logo[0],"w500")}" onload="__placematLogo(this,true)" onerror="__placematLogo(this,false)" style="display:block;height:${lh}px;width:${lw}px;max-width:496px;object-fit:contain"><div data-fallback style="display:none;${titleType}">${esc(f.title)}</div>`
+      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${img(logo[0],"w500")}" onload="window.__placematLogo&&__placematLogo(this,true)" onerror="window.__placematLogo&&__placematLogo(this,false)" style="display:block;height:${lh}px;width:${lw}px;max-width:496px;object-fit:contain"><div data-fallback style="display:none;${titleType}">${esc(f.title)}</div>`
           :`<div data-fit="title" style="${titleType}">${esc(f.title)}</div>`}
       <div data-pk style="font:800 15px/1 ${L.body};letter-spacing:.24em;color:${L.hi};margin-top:10px;text-transform:uppercase">${esc(L.nowShowing)} &nbsp;/&nbsp; ${esc(f.year)}</div>
     </div>`;
@@ -232,7 +232,7 @@ window.MENU_FORMATS.placemat=ctx=>{
 
   const html=`<div data-pm style="position:absolute;inset:0;overflow:hidden;background:${outer};font-family:${L.body};color:${L.ink}">
   ${tex(T.tex*.6)}
-  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" onload="__placematFit(this)" style="position:absolute;width:1px;height:1px;opacity:0">
+  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" onload="window.__placematFit&&__placematFit(this)" style="position:absolute;width:1px;height:1px;opacity:0">
   <div style="position:absolute;left:${inset}px;top:${inset}px;width:${IW}px;height:${IH}px;background:${L.paper};border-radius:${L.radius}px;${frame}overflow:hidden">
     <div style="position:absolute;inset:0;background:url("${BLOTCH}") 0 0/900px;mix-blend-mode:multiply;opacity:${.25+T.tex*.5};pointer-events:none"></div>
     ${tex(T.tex)}

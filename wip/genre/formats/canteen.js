@@ -118,7 +118,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const slots=school?["Period 1","Period 2","Lunch","Period 4","Period 5"]:["9:00","10:30","Lunch","2:00","3:30"];
   const fall=school?["Assembly","Maths","",  "Library","Sport"]:["Briefing","Meetings","","Reports","Home time"];
   const lunchAt=`12:${String((parseInt(number,10)||0)%60).padStart(2,"0")}`;
-  const subj=[winks[0]||fall[0],winks[1]||fall[1],lunchAt,winks[2]||fall[3],winks[3]||fall[4]];
+  const cut=(w,n)=>{if(!w||w.length<=n)return w;const c=w.slice(0,n).replace(/\s+\S*$/,"");return c||w.slice(0,n)};
+  const subj=[cut(winks[0],30)||fall[0],cut(winks[1],30)||fall[1],lunchAt,cut(winks[2],30)||fall[3],cut(winks[3],30)||fall[4]];
   const stripBg=gi===0?`background:${mix(paper,"#000000",.04)};border-bottom:3px double ${ink};`
     :gi===1?`background:${mix(ink,acc,.25)};`
     :gi===2?`background:repeating-linear-gradient(0deg,${mix(paper,"#9fc9a4",.55)} 0 18px,${paper} 18px 36px);border-bottom:2px solid ${mix(ink,paper,.4)};`
@@ -192,7 +193,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const head=`<div ${A}-text="17" ${A}-lo="14" style="position:absolute;left:640px;width:396px;top:84px;height:24px;overflow:hidden;white-space:nowrap;color:${acc};font:700 17px/24px ${g.body};letter-spacing:.2em;text-transform:uppercase">${esc(sign)}</div>
     <div ${A}-text="44" ${A}-lo="20" style="position:absolute;left:640px;width:396px;top:110px;height:82px;overflow:hidden;display:flex;align-items:center;color:${ink};font:${g.dw} 44px/1 ${g.disp};${gi===2?"font-style:italic;":""}">${esc(venue)}</div>`;
   const fine=`<div ${A}-box ${A}-min=".93" style="position:absolute;left:640px;width:396px;top:764px;height:44px;overflow:hidden;--k:1;color:${mix(ink,paper,.3)};font:500 max(14px,calc(15px*var(--k)))/1.3 ${g.body}">
-    <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
+    <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]&&winks[4].length<=44?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
 
   const face=`<div ${A}-face style="position:absolute;inset:0;background-color:${paper};background-image:${tex};overflow:hidden;font-family:${g.body}">
     ${hero}${strip}${logoPanel}${ticket}${noteCard}${propCard}${head}${trayBox}${fine}${gilt}
