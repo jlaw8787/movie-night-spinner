@@ -764,16 +764,16 @@ function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const c
 function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;
   let fs=parseFloat(cs.fontSize),lh=parseFloat(cs.lineHeight)||fs*1.2;
   /* tall display faces: the glyphs poke past a tight line box, so open the line a little */
-  const one=cs.whiteSpace==="nowrap"||cs.webkitLineClamp==="1";if(e.scrollWidth<=e.clientWidth+2&&e.scrollHeight-e.clientHeight<fs*(one?1:0.5)){while(hid()&&lh<fs*(one?2:1.4)){lh+=1;e.style.lineHeight=lh+"px"}}
+  const one=cs.whiteSpace==="nowrap"||cs.webkitLineClamp==="1";if(e.scrollWidth<=e.clientWidth+2&&e.scrollHeight-e.clientHeight<lh*0.6){while(hid()&&lh<fs*(one?2:1.4)){lh+=1;e.style.lineHeight=lh+"px"}}
   /* wide tracking on one line: tighten the letter spacing first */
   const ls=parseFloat(cs.letterSpacing)||0;if(hid()&&ls>fs*0.03){let l=ls;while(hid()&&l>fs*0.02){l-=0.5;e.style.letterSpacing=l+"px"}}
   /* then shrink the type, never under 14px */
   const lo=Math.max(14,Math.floor(fs*0.72));while(hid()&&fs>lo){fs-=1;e.style.fontSize=fs+"px";if(e.style.lineHeight)e.style.lineHeight=Math.round(lh*fs/parseFloat(cs.fontSize))+"px"}
   /* one-line labels a few pixels over: close the word gaps, then let it wrap to a second line */
   if(hid()&&cs.whiteSpace==="nowrap"){let ws=0;while(hid()&&ws>-3){ws-=0.5;e.style.wordSpacing=ws+"px"}if(hid()){e.style.whiteSpace="normal";e.style.textOverflow="clip"}}
-  /* last resort for plain fine print: drop whole sentences, then end on a full word, so it never shows a cut word or dots */
-  if(hid()&&e.children.length===0&&+cs.webkitLineClamp>=2){let t=e.textContent.trim();const sent=t.match(/[^.!?]+[.!?]+/g);while(hid()&&sent&&sent.length>1){sent.pop();e.textContent=sent.join("").trim()}
-    let w=e.textContent.trim().split(" ");while(hid()&&w.length>2){w.pop();e.textContent=w.join(" ").replace(/[,;:.]+$/,"")+"."}}
+  /* last resort for plain fine print: drop whole sentences, then whole clauses; if it still cannot fit, hide the line rather than show a broken phrase */
+  if(hid()&&e.children.length===0&&(+cs.webkitLineClamp>=2||(+cs.webkitLineClamp===1&&fs<=20))){let t=e.textContent.trim();const sent=t.match(/[^.!?]+[.!?]+/g);while(hid()&&sent&&sent.length>1){sent.pop();e.textContent=sent.join("").trim()}
+    const cl=e.textContent.trim().split(/,\s*/);while(hid()&&cl.length>1){cl.pop();e.textContent=cl.join(", ").replace(/[.!?]+$/,"")+"."}if(hid())e.style.visibility="hidden";}
  })}
 function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:libTrim(it.note,100)}));return m}
 /* menu format library: one script per printed-menu format, fetched the first time a film needs it */
@@ -823,7 +823,7 @@ async function show(f,preferSig){
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
-      await new Promise(r=>setTimeout(r,180));libUnclip(card);setTimeout(()=>{if(id===renderId)libUnclip(card,1)},1400);
+      await new Promise(r=>setTimeout(r,180));libUnclip(card);setTimeout(()=>{if(id===renderId)libUnclip(card)},1400);setTimeout(()=>{if(id===renderId)libUnclip(card,1)},3200);
       phoneView(null);styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();
@@ -1656,7 +1656,7 @@ async function exportMenu(kind){
       if(sh){
         const mm=sh.mm||[sh.w*25.4/96,sh.h*25.4/96],o=mm[0]>mm[1]?"landscape":"portrait";
         pdf=new jsPDF({unit:"mm",format:[Math.min(...mm),Math.max(...mm)],orientation:o});
-        const faces=[...card.querySelectorAll(".fx-face")];
+        if(card.classList.contains("fmt-lib"))libUnclip(card);const faces=[...card.querySelectorAll(".fx-face")];
         for(let i=0;i<faces.length;i++){
           const el=document.createElement("div");styleCard(el,current);el.className=card.className;el.style.transform="none";
           el.style.width=sh.w+"px";el.style.height=sh.h+"px";el.dataset.w=sh.w;el.dataset.h=sh.h;el.innerHTML=faces[i].innerHTML;
