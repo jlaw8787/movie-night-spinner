@@ -1,4 +1,5 @@
-/* Format: truck. A food truck menu board, one landscape face 1344x960.
+
+const _ROOT_truck=((document.currentScript&&document.currentScript.src)||"").replace(/menu-formats\/[^/]*$/,"");/* Format: truck. A food truck menu board, one landscape face 1344x960.
    Left: truck side lettering (venue and sign) over the truck photo (hero still, 44 percent), logo on its own panel.
    Right: the menu board (signature; enamel sign, felt letterboard, chalkboard or matte board by era, prices in chalk or sign paint),
    then the order window: cook note card with script signature and a now serving ticket.
@@ -78,7 +79,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const acc=readable(pal.accent||e.acc,truck,4.5,e.acc);
   const bacc=readable(pal.accent&&e.board!=="enamel"?mix(pal.accent,"#ffffff",.35):pal.accent||e.bacc,e.bbg,4.5,e.bacc);
   const bsoft=mix(e.btx,e.bbg,.3);
-  const grain=(ctx.root!=null?ctx.root:"../../../")+"wip/print/jurassic/paper-grain.png";
+  const grain=(ctx.root!=null?ctx.root:_ROOT_truck)+"assets/era/_shared/paper-grain.webp";
   const stills=(ctx.stills||[]).filter(Boolean);
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
   const pf=e.photo+" "+t.photo;

@@ -676,7 +676,7 @@ const card=document.createElement("div");card.className="mcard";preview.appendCh
 const prep=document.createElement("div");prep.className="mcard";prep.hidden=true;preview.appendChild(prep);
 function scalePreview(){const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform=`scale(${kp})`;preview.style.height=(tab==="prep"?1123*kp:ch*kc)+"px"}
 let tab="menu";
-function setTab(t){tab=t;if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current)fitPrep(prep);scalePreview();applyPhone()}
+function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current)fitPrep(prep);scalePreview();applyPhone()}
 $("tabMenu").addEventListener("click",()=>setTab("menu"));
 $("tabPrep").addEventListener("click",()=>setTab("prep"));
 window.addEventListener("resize",()=>{scalePreview();applyPhone()});
@@ -726,13 +726,16 @@ function planShopping(f){
   }
   return order.map(key=>{const t=tally[key];const txt=t.q==null?t.item:(t.u==="#"||t.u===""?planQty(t.q,"")+" "+planPlural(t.item,t.q):planQty(t.q,t.u)+" "+t.item);return txt+"@"+t.a});
 }
-const planMin=m=>m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
+const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days")+" ahead")(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr, start the day before":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
 function planHTML(f){
   const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks"};
   return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">-</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
+  <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.</p>
-  ${["s","m","w","d"].map(c=>{const ds=r.dishes.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.n)}"${PLAN.off[d.n]?"":" checked"}><span>${ESC(d.n)}</span><small>${planMin((d.prep_min||0)+(d.cook_min||0))}</small></label>`).join("")}</fieldset>`:""}).join("")}`;
+  ${["s","m","w","d"].map(c=>{const ds=r.dishes.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.n)}"${PLAN.off[d.n]?"":" checked"}><span>${ESC(d.n)}</span><small>${planMin((d.prep_min||0)+(d.cook_min||0))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
 }
+function planCount(r){const on=r.dishes.filter(d=>!PLAN.off[d.n]).length;return `${on} of ${r.dishes.length} dishes picked`}
+function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
 function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const ds=planDishes(f),groups={};
@@ -752,10 +755,11 @@ function prepHTML2(f,menu){
 }
 function planWire(f){
   const box=$("planner");if(!box)return;
-  if(!f||!f._r2||!f._r2.dishes||!f._r2.dishes.length){box.hidden=true;box.innerHTML="";return}
-  planLoad(f);box.hidden=false;box.innerHTML=planHTML(f);
-  const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
+  if(!f||!f._r2||!f._r2.dishes||!f._r2.dishes.length){box.hidden=true;box.dataset.has="";box.innerHTML="";return}
+  planLoad(f);box.dataset.has="1";box.hidden=tab!=="prep";box.innerHTML=planHTML(f);
+  const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;{const n=box.querySelector(".pl-sum");if(n)n.textContent=planCount(f._r2)}prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
   box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(24,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo()};
+  {const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})}
   box.onchange=e=>{const n=e.target.dataset.dish;if(n==null)return;if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1;redo()};
 }
 /* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
@@ -771,9 +775,9 @@ function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelector
   const lo=Math.max(14,Math.floor(fs*0.72));while(hid()&&fs>lo){fs-=1;e.style.fontSize=fs+"px";if(e.style.lineHeight)e.style.lineHeight=Math.round(lh*fs/parseFloat(cs.fontSize))+"px"}
   /* one-line labels a few pixels over: close the word gaps, then let it wrap to a second line */
   if(hid()&&cs.whiteSpace==="nowrap"){let ws=0;while(hid()&&ws>-3){ws-=0.5;e.style.wordSpacing=ws+"px"}if(hid()){e.style.whiteSpace="normal";e.style.textOverflow="clip"}}
-  /* last resort for plain fine print: drop whole sentences, then whole clauses; if it still cannot fit, hide the line rather than show a broken phrase */
+  /* last resort for plain fine print: drop whole sentences; if it still cannot fit, hide the line rather than show half a description */
   if(hid()&&e.children.length===0&&(+cs.webkitLineClamp>=2||(+cs.webkitLineClamp===1&&fs<=20))){let t=e.textContent.trim();const sent=t.match(/[^.!?]+[.!?]+/g);while(hid()&&sent&&sent.length>1){sent.pop();e.textContent=sent.join("").trim()}
-    const cl=e.textContent.trim().split(/,\s*/);while(hid()&&cl.length>1){cl.pop();e.textContent=cl.join(", ").replace(/[.!?]+$/,"")+"."}if(hid())e.style.visibility="hidden";}
+    if(hid())e.style.visibility="hidden";}
  })}
 function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:libTrim(it.note,100)}));return m}
 /* menu format library: one script per printed-menu format, fetched the first time a film needs it */
@@ -1606,8 +1610,12 @@ async function renderCanvas(src,forPrint){
       if(bg&&bg.includes("data:image/svg"))el.style.backgroundImage=bg.replace(svgRx,`url("${nz}")`);
       if(el.tagName==="IMG"&&/^data:image\/svg/.test(el.getAttribute("src")||""))el.style.visibility="hidden";
       if(el.tagName&&el.tagName.toLowerCase()==="svg")el.style.visibility="hidden";
+      /* html2canvas cannot blend layers, so a grain set to overlay or multiply would paint flat over the paper and wash it out: leave those texture layers out of the export */
+      if(cs.mixBlendMode&&cs.mixBlendMode!=="normal"&&!el.textContent.trim()&&!el.querySelector("img"))el.style.visibility="hidden";
     });
-    return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true});
+    /* only copy the export stage into html2canvas's working page: the video shop alone holds hundreds of posters, and waiting on them made a PDF take a minute */
+    const keep=el=>el===document.head||document.head.contains(el)||el.tagName==="STYLE"||el.tagName==="LINK"||el.contains(stage)||stage.contains(el);
+    return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true,ignoreElements:el=>!keep(el)});
   }finally{stage.remove()}
 }
 const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");

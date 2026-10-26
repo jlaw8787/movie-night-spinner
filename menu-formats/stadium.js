@@ -1,4 +1,5 @@
-/* shared picture helper (same block in placemat, stadium, prom, kiosk, invite; first file to load wins).
+
+const _ROOT_stadium=((document.currentScript&&document.currentScript.src)||"").replace(/menu-formats\/[^/]*$/,"");/* shared picture helper (same block in placemat, stadium, prom, kiosk, invite; first file to load wins).
    still: a still that is mostly blank white or near black is swapped for the next candidate, the least bad one is kept,
           a dark keeper gets lifted; a failed still falls through to the next one, then the poster.
    logo: transparent padding is trimmed and the logo is sized by area into its max box, so the panel wraps the logo.
@@ -170,7 +171,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const soft=mix(ink,paper,.3);
   const band=darkPaper?mix(paper,"#000000",.4):readable(pal.dark||e.ink,"#ffffff",8,e.ink);
   const bandText=darkPaper?ink:mix(paper,"#ffffff",.6);
-  const grain=(ctx.root!=null?ctx.root:"../../../")+"wip/print/jurassic/paper-grain.png";
+  const grain=(ctx.root!=null?ctx.root:_ROOT_stadium)+"assets/era/_shared/paper-grain.webp";
   const stills=(ctx.stills||[]).filter(Boolean);
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
   const pf=e.photo+" "+t.photo;
