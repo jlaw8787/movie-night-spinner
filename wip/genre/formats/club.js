@@ -28,10 +28,10 @@ const noise=(rgb,a,freq,size)=>{const[r,g,b]=hex(rgb).map(v=>(v/255).toFixed(3))
 const CHALKSOFT=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="m"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.4 0 0 0 2.5"/></filter><rect width="100%" height="100%" filter="url(#m)"/></svg>`);
 const CHALKMASK=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="m"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3.2 0 0 0 2.75"/></filter><rect width="100%" height="100%" filter="url(#m)"/></svg>`);
 /* runtime fit: every [data-fit] box scales its type (CSS var --k) until nothing overflows; notes drop as a last resort */
-const FIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(r){function f(){r.querySelectorAll('[data-fit]').forEach(function(b){var k=1;b.style.setProperty('--k',1);b.style.removeProperty('--nd');var o=function(){return b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1};while(o()&&k>.56){k-=.04;b.style.setProperty('--k',k.toFixed(2))}if(o())b.style.setProperty('--nd','none');if(o())b.style.setProperty('--dl','1')})}f();if(document.fonts)document.fonts.ready.then(f);setTimeout(f,900);setTimeout(f,2200)})(this.parentNode)">`;
+const FIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(r){function f(){r.querySelectorAll('[data-fit]').forEach(function(b){var k=1;b.style.setProperty('--k',1);b.style.removeProperty('--nd');b.style.removeProperty('--ql');b.style.removeProperty('--dl');var o=function(){return b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1};while(o()&&k>.56){k-=.04;b.style.setProperty('--k',k.toFixed(2))}if(o())b.style.setProperty('--nd','none');if(o())b.style.setProperty('--dl','1');var q=8;while(o()&&q>1&&b.hasAttribute('data-q')){b.style.setProperty('--ql',q);q--}})}f();if(document.fonts)document.fonts.ready.then(f);setTimeout(f,900);setTimeout(f,2200)})(this.parentNode)">`;
 const fs=(px,min)=>`font-size:max(${min||14}px,calc(${px}px * var(--k,1)))`;
 /* logo panel tone: a dark logo flips its panel to the light stock */
-const LOGOTONE=`onload="(function(i){try{var c=document.createElement('canvas'),w=c.width=72,h=c.height=Math.max(8,Math.round(72*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){s+=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];n++}}var p=i.closest('[data-lp]');if(n&&p&&(s/n<90)===(p.dataset.dark==='1')){p.style.background=p.dataset.alt;p.style.boxShadow=p.dataset.altsh}}catch(e){}})(this)"`;
+const LOGOTONE=`onload="(function(i){try{var c=document.createElement('canvas'),w=c.width=72,h=c.height=Math.max(8,Math.round(72*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0,q=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){var y=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];s+=y;if(y<90)q++;n++}}var p=i.closest('[data-lp]');if(n&&p&&(s/n<90||q/n>.3)===(p.dataset.dark==='1')){p.style.background=p.dataset.alt;p.style.boxShadow=p.dataset.altsh}}catch(e){}})(this)"`;
 function logoBox(ctx,maxW,maxH){const L=ctx.logo;if(!L||!L[0]||!L[1]||!L[2])return null;const a=L[1]/L[2];let h=Math.min(maxH,maxW/a),w=h*a;
   return{w:Math.round(w),h:Math.round(h),html:`<img crossorigin="anonymous" alt="${esc(ctx.f.title)}" src="${ctx.img(L[0],"w500")}" ${LOGOTONE} style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain">`}}
 function posterOf(ctx){if(ctx.poster)return ctx.poster;try{return(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[ctx.f.id])||null}catch(e){return null}}
@@ -118,7 +118,7 @@ window.MENU_FORMATS["club"]=ctx=>{
 
   /* ---------- front ---------- */
   const PH=650;
-  const LB=logoBox(ctx,W-2*PAD-40,120);
+  const LB=logoBox(ctx,W-2*PAD-40,ctx.logo&&ctx.logo[1]/ctx.logo[2]<2.2?170:120);
   const bloom=e.bloom&&s0?`<img alt="" src="${ctx.img(s0,"w780")}" style="position:absolute;inset:0;width:${W}px;height:${PH}px;object-fit:cover;filter:blur(14px) brightness(1.1) ${filt};mix-blend-mode:screen;opacity:.55">`:"";
   const lamps=`<div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 30%,rgba(0,0,0,0) 30%,rgba(0,0,0,${T.vig}) 100%)"></div>`;
   const neonEdge=e.border==="neon"?`box-shadow:0 0 0 3px ${ACC2},0 0 22px ${ACC2}`:`box-shadow:0 10px 30px rgba(0,0,0,.6)`;
@@ -135,9 +135,9 @@ window.MENU_FORMATS["club"]=ctx=>{
       <div style="font-family:${BODY};font-weight:600;color:${mix(INK,STOCK,.2)};font-size:18px;letter-spacing:.08em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(sign)}</div></div>`;
   const noteTop=PH+40+Math.round(vSize*2.2)+40;
   const cardH=176,cardTop=H-cardH-46;
-  const noteBox=`<div data-fit style="position:absolute;left:${PAD+6}px;right:${PAD+6}px;top:${noteTop}px;height:${cardTop-noteTop-18}px;overflow:hidden;text-align:center">
+  const noteBox=`<div data-fit data-q style="position:absolute;left:${PAD+6}px;right:${PAD+6}px;top:${noteTop}px;height:${cardTop-noteTop-18-Math.ceil(150*Math.abs(Math.sin(T.tilt*Math.PI/180)))-6}px;overflow:hidden;text-align:center;display:flex;flex-direction:column;justify-content:safe center">
       <div style="font-family:${BODY};font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:${ACC};${fs(15,14)};margin-bottom:6px">${esc(T.noteH)}</div>
-      <div style="font-family:${BODY};${e.body==="Cormorant Garamond"?"font-style:italic;font-weight:500;":""}color:${INK};line-height:1.32;${fs(e.body==="Cormorant Garamond"?24:21,14)}">“${esc(note.t)}”</div>
+      <div style="font-family:${BODY};${e.body==="Cormorant Garamond"?"font-style:italic;font-weight:500;":""}color:${INK};line-height:1.32;${fs(e.body==="Cormorant Garamond"?24:21,14)};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--ql,12);overflow:hidden;flex:none">“${esc(note.t)}”</div>
       <div style="font-family:'${e.sig}',cursive;color:${ACC};${fs(40,22)};line-height:1.15;margin-top:2px">${esc(note.by)}</div></div>`;
   const ci=e.cardInk;
   const card=`<div style="position:absolute;left:${(W-300)/2}px;top:${cardTop}px;width:300px;height:${cardH}px;border-radius:14px;background:${e.card};transform:rotate(${T.tilt}deg);box-shadow:0 14px 30px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.35);padding:14px 18px;box-sizing:border-box;color:${ci};display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
@@ -173,7 +173,7 @@ window.MENU_FORMATS["club"]=ctx=>{
     <div style="position:absolute;left:${PAD}px;right:${PAD}px;top:${SH-30}px;bottom:${PAD+4}px;display:flex;flex-direction:column">
       <div style="text-align:center;margin-bottom:14px"><div data-fit style="height:${venue.length>18?92:50}px;overflow:hidden;display:flex;align-items:center;justify-content:center"><div style="font-family:${DISP};font-weight:${dispW};${dispSt}${neonTxt}${fs(venue.length>18?36:40,20)};line-height:1.08">${esc(venue)}</div></div>
         <div style="font-family:${BODY};font-size:17px;color:${mix(INK,STOCK,.25)};margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(f.T?sent(f.T):sign)}</div></div>
-      <div data-fit style="flex:1;min-height:0;overflow:hidden">${menu}</div>
+      <div data-fit style="flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">${menu}</div>
       <div style="font-family:${BODY};font-size:15px;line-height:1.3;color:${mix(INK,STOCK,.4)};margin-top:8px;text-align:center;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(rules)}${f.P?" "+esc(sent("Showtime: "+clean(f.P).replace(/\.$/,""))):""}</div>
     </div>${FIT}</div>`;
   return{w:W,h:H,faces:[face0,face1]};

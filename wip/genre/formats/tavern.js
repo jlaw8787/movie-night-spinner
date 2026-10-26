@@ -38,7 +38,7 @@ function logoPanel(ctx,o){
   if(!L||!L[0]||!L[1]||!L[2])return {html:`<div style="${o.wrap};background:${o.light};padding:14px 18px">${fb.replace(o.typeInk,o.lightInk)}</div>`};
   const a=L[1]/L[2];let w=o.maxW,h=w/a;if(h>o.maxH){h=o.maxH;w=h*a}
   if(h<34)return {html:`<div style="${o.wrap};background:${o.light};padding:14px 18px">${fb.replace(o.typeInk,o.lightInk)}</div>`};
-  const chk="(function(i){try{var c=document.createElement('canvas'),w=c.width=60,h=c.height=Math.max(6,Math.round(60*i.naturalHeight/i.naturalWidth)),x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){s+=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];n++}}if(n&&s/n<105){i.parentNode.style.background=i.parentNode.getAttribute('data-light')}}catch(e){}})(this)";
+  const chk="(function(i){try{var c=document.createElement('canvas'),w=c.width=60,h=c.height=Math.max(6,Math.round(60*i.naturalHeight/i.naturalWidth)),x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0,q=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){var y=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];s+=y;if(y<95)q++;n++}}if(n&&(s/n<105||q/n>.3)){i.parentNode.style.background=i.parentNode.getAttribute('data-light')}}catch(e){}})(this)";
   const err="this.style.display='none';this.nextElementSibling.style.display='block'";
   return {html:`<div data-light="${o.light}" style="${o.wrap};background:${o.dark};padding:14px 18px"><img crossorigin="anonymous" src="${ctx.img(L[0],"w500")}" alt="${esc(t)}" onload="${chk}" onerror="${err}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"><div style="display:none">${fb}</div></div>`};
 }
@@ -119,7 +119,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PX=56,PY=160,PW=W-2*PX,PH=nItems>10?400:nItems>8?440:488;
   const heroImg=stills[0]
     ?`<img src="${heroSrc}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`
-    :(poster?`<img src="${heroSrc}" alt="" style="position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(18px) brightness(.7)"><img src="${heroSrc}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
+    :(poster?`<img src="${heroSrc}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
   const bear=(t,pos)=>`<div style="position:absolute;${pos};font:${E.dw} 20px/1 ${D};color:${acc};width:24px;text-align:center">${t}</div>`;
   const logo=logoPanel(ctx,{font:D,typeSize:44,typeInk:"#f4ead2",lightInk:ink,maxW:300,maxH:108,dark:darkPanel,light:"#f3e8cc",
     wrap:`position:absolute;left:16px;top:16px;box-shadow:0 3px 14px rgba(0,0,0,.4);border:1px solid rgba(255,240,200,.35)`});
@@ -130,12 +130,14 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:400 15px/1.2 ${B};letter-spacing:.14em;text-transform:uppercase;color:${acc};margin-top:2px">Token ${esc(num)}</div></div>`;
   const by=clean(fl&&fl.note&&fl.note.by)||"The Innkeeper";
   /* the seal: a real photo (poster crop) pressed into a round medallion with a wax coloured rim; no drawn art */
-  const seal=`<div style="position:absolute;right:-40px;bottom:-10px;width:150px;height:150px;transform:rotate(${T.tilt}deg);z-index:3">
-    <div style="position:absolute;inset:0;border-radius:50%;border:9px solid ${sealRed};box-shadow:0 4px 12px rgba(0,0,0,.45),inset 0 0 14px rgba(0,0,0,.55);overflow:hidden;background:${sealRed}">${sealSrc?`<img src="${sealSrc}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:sepia(.35) saturate(1.1) contrast(1.05)">`:""}</div>
+  const sealAlt=(stills[1]||stills[0])?ctx.img(stills[1]||stills[0],"w780"):"";
+  const seal=!sealSrc?"":`<div data-seal="1" style="position:absolute;right:-40px;bottom:-10px;width:150px;height:150px;transform:rotate(${T.tilt}deg);z-index:3">
+    <div style="position:absolute;inset:0;border-radius:50%;border:9px solid ${sealRed};box-shadow:0 4px 12px rgba(0,0,0,.45),inset 0 0 14px rgba(0,0,0,.55);overflow:hidden;background:${sealRed}">${sealSrc?`<img src="${sealSrc}" alt="" data-alt="${sealAlt}" onerror="var a=this.getAttribute('data-alt');if(a){this.removeAttribute('data-alt');this.src=a}else{this.closest('[data-seal]').style.display='none'}" style="width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:sepia(.35) saturate(1.1) contrast(1.05)">`:""}</div>
     <div style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);background:${sealRed};color:#f6e6c8;font:${E.dw} 15px/1 ${D};letter-spacing:.08em;padding:5px 10px 4px;white-space:nowrap">No. ${esc(num)}</div></div>`;
   const plate=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PW}px;height:${PH}px">
-    ${bear("N","left:50%;top:-24px;margin-left:-12px")}${bear("S","left:50%;bottom:-24px;margin-left:-12px")}${bear("W","left:-34px;top:50%;margin-top:-10px")}${bear("E","right:-34px;top:38%")}
+    ${bear("S","left:50%;bottom:-24px;margin-left:-12px")}${bear("W","left:-34px;top:50%;margin-top:-10px")}${bear("E","right:-34px;top:38%")}
     <div style="position:absolute;inset:0;${E.plate};box-sizing:border-box"><div style="position:relative;width:100%;height:100%;overflow:hidden;background:#1a120a">${heroImg}<div style="position:absolute;inset:0;box-shadow:inset 0 0 ${Math.round(30+50*w)}px rgba(40,20,0,${(.35+.3*w).toFixed(2)})"></div></div></div>
+    <div style="position:absolute;left:50%;top:-13px;transform:translateX(-50%);z-index:2;background:${paper};border:1px solid ${ink};padding:3px 9px 2px;font:${E.dw} 20px/1 ${D};color:${acc}">N</div>
     ${logo.html}${prop}${seal}</div>`;
   const cap=`<div data-fitw="16" data-min="14" style="position:absolute;left:${PX}px;top:${PY+PH+6}px;width:${PW/2-30}px;font-family:${B};font-style:italic;font-size:16px;line-height:1.2;color:${ink};white-space:nowrap;overflow:hidden">The road to ${esc(venue)}, as the traveller finds it.</div>`;
 
