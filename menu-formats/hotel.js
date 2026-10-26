@@ -259,7 +259,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-fbox style="position:absolute;left:18px;right:16px;top:102px;bottom:14px;overflow:hidden;color:${hgc}">
         <div data-fs="14" style="font:700 14px/1.2 ${B};letter-spacing:.2em;text-transform:uppercase">Order by 2 am</div>
         <div data-fs="18" style="${dispStyle}font-size:26px;line-height:1.05;margin:6px 0 8px">Room ${esc(room)}</div>
-        ${pick.map(it=>`<div data-fs="14" style="display:flex;align-items:flex-start;font:700 15px/1.25 ${B};margin-bottom:6px">${box}<span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(dry(it.n))}</span></div>`).join("")}
+        ${pick.map(it=>`<div data-fs="14" style="display:flex;align-items:flex-start;font:700 15px/1.25 ${B};margin-bottom:6px">${box}<span style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(dry(it.n))}</span></div>`).join("")}
         <div data-fs="14" style="font:700 14px/1.3 ${B};margin-top:4px;letter-spacing:.06em">GUESTS &nbsp;${box}1 &nbsp;${box}2</div></div></div></div>`;
   const front=face(crest+header+hero+note+hanger);
 
