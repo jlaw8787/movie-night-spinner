@@ -127,8 +127,8 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="width:76px;height:84px;flex:none;overflow:hidden;border:1px solid #888;background:#222">${idSrc?`<img src="${idSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:${pf}">`:posterSrc?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:contain">`:""}</div>
       <div style="font:600 14px/1.2 ${B};color:#222;text-transform:uppercase;letter-spacing:.06em;min-width:0">Badge<br>No. ${esc(num)}<br><span style="color:${acc}">All areas</span></div>
     </div>
-    <div data-fith="22" data-min="14" style="margin:8px 10px 0;height:48px;display:flex;align-items:center;font-family:${D};font-weight:${E.dw};font-size:22px;line-height:1.05;color:#111;text-transform:uppercase;overflow:hidden;overflow-wrap:normal;word-break:normal"><div style="min-width:0;max-width:100%">${esc(by)}</div></div>
-    <div style="margin:6px 10px 0;border-top:1px solid #999;padding-top:5px;font:400 14px/1.15 ${B};color:#333;height:33px;overflow:hidden">${esc(venue)}</div>
+    <div data-fith="22" data-min="14" style="margin:4px 10px 0;height:44px;display:flex;align-items:center;font-family:${D};font-weight:${E.dw};font-size:22px;line-height:1.05;color:#111;text-transform:uppercase;overflow:hidden;overflow-wrap:normal;word-break:normal"><div style="min-width:0;max-width:100%">${esc(by)}</div></div>
+    <div style="margin:6px 10px 0;border-top:1px solid #999;padding-top:4px;font:400 14px/1.15 ${B};color:#333;height:34px;overflow:hidden">${esc(venue)}</div>
   </div>`;
 
   /* header */
@@ -163,16 +163,6 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${it.note?`<div data-note="1" style="font:400 max(14px,.74em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.12em">${esc(sent(it.note))}</div>`:""}
     </div></div>`;
   }
-  const note=fl&&fl.note&&clean(fl.note.text);
-  if(note)flow+=`<div data-drop2="1" style="break-inside:avoid;margin:.3em 0 .6em;padding:.5em .6em;border-left:4px solid ${acc};background:rgba(255,255,255,.45)">
-      <div style="font:600 max(14px,.62em)/1.2 ${B};letter-spacing:.16em;text-transform:uppercase;color:${acc}">Memo from ${esc(by)}</div>
-      <div style="font:italic 400 max(15px,.8em)/1.3 ${B};color:${ink};margin-top:.2em">"${esc(note)}"</div>
-      <div style="font:600 max(22px,1.25em)/1 'Caveat',cursive;color:${ink};text-align:right;margin-top:.1em">${esc(by)}</div></div>`;
-  else flow+=`<div data-drop2="1" style="break-inside:avoid;margin:.3em 0 .6em;padding:.5em .6em;border-left:4px solid ${acc};background:rgba(255,255,255,.45)"><div style="font:italic 400 max(15px,.8em)/1.3 ${B};color:${ink}">"Sign in, wash up and take a tray. The kitchen closes when the last shift is fed."</div><div style="font:600 max(22px,1.25em)/1 'Caveat',cursive;color:${ink};text-align:right">The Cook</div></div>`;
-  if(f.P)flow+=`<div data-drop2="1" style="break-inside:avoid;margin:0 0 .6em;font-size:max(15px,.76em);line-height:1.3"><span style="font-family:${D};font-weight:${E.dw};letter-spacing:.12em;text-transform:uppercase;color:${acc}">Protocol </span><span style="font-family:${B};color:${ink}">${esc(sent(f.P))}</span></div>`;
-  const winks=((fl&&fl.winks)||[]).slice(0,5).map(clean).filter(Boolean);
-  if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;margin:0"><div style="font:600 max(14px,.6em)/1.2 ${B};letter-spacing:.16em;text-transform:uppercase;color:${acc}">Observations logged</div>${winks.map((w,i)=>`<div style="font:400 max(14px,.64em)/1.3 ${B};color:${ink}">${i+1}. ${esc(w)}</div>`).join("")}</div>`;
-
   const MY=PY+PH+20,MH=H-MY-58;
   const menu=`<div data-fit="27" style="position:absolute;left:${M}px;top:${MY}px;width:${W-2*M}px;height:${MH}px;overflow:hidden;column-count:2;column-gap:30px;column-fill:auto;font-size:27px">${flow}</div>`;
   const side=`<div style="position:absolute;left:${RX}px;top:268px;width:${RW}px;height:${PY+PH-268}px;display:flex;flex-direction:column">${logo.html}${stamp}${plateTab}<div data-fit="24" style="flex:1;min-height:0;margin-top:12px;overflow:hidden;font-size:24px">${flowA}</div></div>`;
