@@ -1,4 +1,5 @@
-/* Format: diningcar. A railway dining car menu, two tall faces 600x1056.
+
+const _ROOT_diningcar=((document.currentScript&&document.currentScript.src)||"").replace(/menu-formats\/[^/]*$/,"");/* Format: diningcar. A railway dining car menu, two tall faces 600x1056.
    Front: railroad header, carriage photo (hero still), logo panel, steward's note, dinner timetable (signature), fine print.
    Back: window strip photo with a punched ticket (type only), bill of fare, lounge car fine print.
    Era sets type pairing, paper, border and print process; tone sets wear, photo treatment and copy voice. */
@@ -82,7 +83,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const soft=mix(ink,paper,.28);
   const band=readable(pal.dark||e.ink,"#ffffff",8,e.ink);
   const bandText=mix(paper,"#ffffff",.5);
-  const grain=(ctx.root!=null?ctx.root:"../../../")+"wip/print/jurassic/paper-grain.png";
+  const grain=(ctx.root!=null?ctx.root:_ROOT_diningcar)+"assets/era/_shared/paper-grain.webp";
   const stills=(ctx.stills||[]).filter(Boolean);
   /* harness note: TMDB_POSTERS is a top-level const, so window.TMDB_POSTERS is undefined and ctx.poster arrives null */
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;

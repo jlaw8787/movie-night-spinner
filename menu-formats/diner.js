@@ -79,7 +79,7 @@ window.MENU_FORMATS.diner=ctx=>{
   const photo=(ERAPHOTO[ek](era||"")+(PHOTO[T]||"")).trim();
   const wear=T==="gritty"||T==="scrappy"?1:T==="eerie"?.85:night?.6:.35;
   const tilt=T==="playful"||T==="scrappy"?1.8:1;
-  const grain=`<div style="position:absolute;inset:0;background:url('${BASE}paper-grain.png') center/cover;mix-blend-mode:multiply;opacity:${night?.55:.4};pointer-events:none"></div>`;
+  const grain=`<div style="position:absolute;inset:0;background:url('${BASE}paper-grain.webp') center/cover;mix-blend-mode:multiply;opacity:${night?.55:.4};pointer-events:none"></div>`;
   const root=(role,bg,inner,over)=>`<div data-diner="${token}" data-role="${role}" style="position:relative;width:816px;height:1056px;overflow:hidden;background:${bg};box-sizing:border-box">${inner}${grain}${over||""}</div>`;
   const disp=s=>`font:${E.dw} ${s}px/1 ${E.disp};letter-spacing:${E.ls};${E.caps?"text-transform:uppercase;":""}`;
 
@@ -101,7 +101,7 @@ window.MENU_FORMATS.diner=ctx=>{
   const backdrop=night
     ?`${bgSrc?`<img alt="" crossorigin="anonymous" src="${bgSrc}" style="position:absolute;left:-60px;top:-60px;width:936px;height:1176px;object-fit:cover;filter:blur(18px) brightness(.34) saturate(.6)">`:""}
       <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 40% at 18% 0%,rgba(190,210,235,.2),transparent 70%),radial-gradient(ellipse 120% 90% at 50% 45%,transparent 40%,rgba(5,7,10,.85) 100%)"></div>
-      ${T!=="tense"?`<div style="position:absolute;inset:0;background:url('${BASE}rain-glass.png') center/cover;opacity:${T==="eerie"?.9:.55}"></div>`:""}`
+      ${T!=="tense"?`<div style="position:absolute;inset:0;background:url('${BASE}rain-glass.webp') center/cover;opacity:${T==="eerie"?.9:.55}"></div>`:""}`
     :`<div style="position:absolute;inset:0;background:radial-gradient(ellipse 120% 80% at 50% 40%,transparent 55%,rgba(90,70,40,.22) 100%)"></div>
       ${ek==="classic"?`<div style="position:absolute;left:0;right:0;top:0;height:16px;background:${chrome}"></div><div style="position:absolute;left:0;right:0;bottom:0;height:16px;background:${chrome}"></div>`
         :`<div style="position:absolute;left:0;right:0;top:0;height:12px;background:${red}"></div><div style="position:absolute;left:0;right:0;bottom:0;height:12px;background:${red}"></div>`}`;
@@ -149,7 +149,7 @@ window.MENU_FORMATS.diner=ctx=>{
   const edge=night?`<div style="position:absolute;inset:0;border:12px solid #17191e;pointer-events:none"></div><div style="position:absolute;inset:6px;border:1.5px dashed rgba(235,230,216,.42);pointer-events:none"></div>`
     :ek==="classic"?`<div style="position:absolute;inset:0;border:12px solid transparent;border-image:${chrome} 1;pointer-events:none"></div><div style="position:absolute;inset:16px;border:1.5px solid ${red};pointer-events:none"></div>`
     :`<div style="position:absolute;inset:0;border:12px solid ${red};pointer-events:none"></div><div style="position:absolute;inset:6px;border:1.5px dashed rgba(255,255,255,.5);pointer-events:none"></div>`;
-  const lam=`<div style="position:absolute;inset:0;background:url('${BASE}laminate-wear.png') center/cover;opacity:${wear};pointer-events:none"></div>${edge}`;
+  const lam=`<div style="position:absolute;inset:0;background:url('${BASE}laminate-wear.webp') center/cover;opacity:${wear};pointer-events:none"></div>${edge}`;
   const topStill=(src,h,kick,head,size,cap)=>`<div data-h="band" style="position:absolute;left:12px;right:12px;top:12px;height:${h}px;overflow:hidden;background:${K.night}">
     ${src?`<img alt="" crossorigin="anonymous" src="${img(src,"w1280")}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}">`:poster?`<img alt="" crossorigin="anonymous" src="${img(poster,"w780")}" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block;filter:${photo}">`:""}
     <div style="position:absolute;left:0;right:0;bottom:0;height:${Math.min(170,Math.round(h*.6))}px;background:linear-gradient(transparent,rgba(8,10,13,.88))"></div>
