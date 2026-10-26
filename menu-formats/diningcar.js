@@ -116,8 +116,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const hero=`<div style="position:absolute;left:${inset}px;width:${heroW}px;top:${heroTop}px;height:${heroH}px;overflow:hidden;background:${band}">
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,0) 60%)"></div>
     <div style="position:absolute;left:${PAD}px;top:${PAD}px;width:${pw}px;height:${ph}px;overflow:hidden;background:#222;box-shadow:0 0 0 3px ${mix(paper,"#ffffff",.3)},0 0 0 4px ${acc},0 8px 18px rgba(0,0,0,.5)">
-    ${heroSrc?(heroIsPoster?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||e.process==="glossy"?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,heroPos,overlay())):""}</div>
-</div>
+    ${heroSrc?(heroIsPoster?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||e.process==="glossy"?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,heroPos,overlay())):""}</div></div>`;
   const nLen0=clean(note.text).length,qSize=nLen0>130?15:16;
   const side=`<div style="position:absolute;left:${colX}px;width:${colW}px;top:${heroTop}px;height:${heroH}px;display:flex;flex-direction:column;justify-content:center;overflow:hidden">
       <div style="font:700 14px/1.2 ${BF};letter-spacing:.16em;text-transform:uppercase;color:${acc}">Now showing</div>
@@ -135,7 +134,7 @@ window.MENU_FORMATS[ID]=ctx=>{
        :`<div style="font:${e.dw} ${tSize}px/1.05 ${DF};color:#fbf6ea;text-align:center;padding:0 24px;${up?"text-transform:uppercase;":""}${clamp(3)}">${esc(title)}</div>`}
     <div style="position:absolute;right:${12}px;bottom:6px;font:700 14px/1 ${BF};letter-spacing:.2em;color:${mix(acc,"#ffffff",.6)}">${esc(year)}</div></div>`;
   /* the steward's note */
-  const noteTop=heroTop+heroH+logoH+4;
+  const noteTop=heroTop+heroH+logoH+4;/* note now sits beside the poster */
   const nLen=clean(note.text).length,nSize=nLen>130?17:nLen>90?18:19;
   const noteBox=`<div style="margin-bottom:4px">
     ${kick(t.hello,acc,14)}
@@ -156,9 +155,9 @@ window.MENU_FORMATS[ID]=ctx=>{
       <span style="font:${e.dw} 24px/1 ${DF};color:${ink};${up?"text-transform:uppercase;letter-spacing:.04em":""}">Dinner Timetable</span>
       <span style="font:700 15px/1 ${BF};letter-spacing:.16em;color:${acc}">TRAIN ${esc(num.slice(0,4))}</span></div>
     ${rows}
-    ${cue?`<div style="font:italic 400 16px/1.35 ${BF};color:${soft};margin-top:7px;${clamp(wrapLines(note.text,nSize,W-2*inset-60,e.cw)>=2?1:2)}">Arriving: ${esc(cue.replace(/^./,c=>c.toLowerCase()))}</div>`:""}</div>`;
+    ${cue?`<div style="font:italic 400 16px/1.35 ${BF};color:${soft};margin-top:7px;${clamp(2)}">Arriving: ${esc(cue.replace(/^./,c=>c.toLowerCase()))}</div>`:""}</div>`;
   const fine1=`<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;bottom:${inset+12}px;font:400 15px/1.2 ${BF};color:${soft};display:flex;justify-content:space-between;gap:10px"><span style="${clamp(1)}">${esc(title.length>34?title.slice(0,32).replace(/\W+\w*$/,"")+"..." :title)}, ${esc(year)}</span><span>Form DC-${esc(num.slice(-4))}</span></div>`;
-  const front=`<div style="position:absolute;inset:0;background:${paper};overflow:hidden">${tex()}${header}${hero}${logo}<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;top:${noteTop+10}px;bottom:${inset+40}px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">${noteBox}${timetable}</div>${fine1}${frame()}</div>`;
+  const front=`<div style="position:absolute;inset:0;background:${paper};overflow:hidden">${tex()}${header}${hero}${side}${logo}<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;top:${noteTop+8}px;bottom:${inset+40}px;overflow:hidden;display:flex;flex-direction:column;justify-content:center">${timetable}</div>${fine1}${frame()}</div>`;
 
   /* ---------- BACK ---------- */
   const SW=176;
