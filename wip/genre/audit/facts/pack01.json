@@ -1,0 +1,251 @@
+{
+ "Batman (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Superman (1978)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Rocketeer (1991)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dick Tracy (1990)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Mask (1994)": {
+  "status": "ok",
+  "changes": []
+ },
+ "X-Men (2000)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Watchmen (2009)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Kick-Ass (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Incredibles (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Avengers (2012)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Iron Man (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Spider-Man: Into the Spider-Verse (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Dark Knight (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Batman Begins (2005)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Black Panther (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Guardians of the Galaxy (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Thor: Ragnarok (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Deadpool (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Logan (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wonder Woman (2017)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Etta Candy's sensible suits",
+    "new": null,
+    "why": "Suit description not certain"
+   }
+  ]
+ },
+ "Avengers: Endgame (2019)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "sign",
+    "old": "Lakeside, Population Four",
+    "new": "Lakeside, Family of Three",
+    "why": "Tony, Pepper and Morgan live there; four is wrong"
+   }
+  ]
+ },
+ "Ant-Man (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Iron Man 2 (2010)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Nick Fury at the door",
+    "new": "Nick Fury in the donut shop",
+    "why": "Fury meets Tony in the giant donut; door not certain"
+   }
+  ]
+ },
+ "Iron Man 3 (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Incredible Hulk (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Thor (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Thor: The Dark World (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Thor: Love and Thunder (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Captain America: The Winter Soldier (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Captain America: Civil War (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Avengers: Age of Ultron (2015)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Ultron in a stolen body",
+    "new": "Ultron and his drone army",
+    "why": "Ultron builds his bodies and drones, he does not steal one"
+   }
+  ]
+ },
+ "Avengers: Infinity War (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Guardians of the Galaxy Vol. 2 (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Guardians of the Galaxy Vol. 3 (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Doctor Strange (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Spider-Man: Homecoming (2017)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Peter Parker, alternate",
+    "new": "Peter Parker, member",
+    "why": "Peter is on the team, alternate not certain"
+   }
+  ]
+ },
+ "Spider-Man: Far From Home (2019)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "The black suit in Berlin",
+    "new": null,
+    "why": "Not certain of black suit in Berlin"
+   }
+  ]
+ },
+ "Spider-Man: No Way Home (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Black Panther: Wakanda Forever (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Captain Marvel (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ant-Man and the Wasp (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Black Widow (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Shang-Chi and the Legend of the Ten Rings (2021)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "The Macau bus fight",
+    "new": "The San Francisco bus fight",
+    "why": "Bus fight is in San Francisco, not Macau"
+   }
+  ]
+ },
+ "Eternals (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Deadpool 2 (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Deadpool & Wolverine (2024)": {
+  "status": "ok",
+  "changes": []
+ },
+ "X-Men: Days of Future Past (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "X-Men: First Class (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Venom (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Spider-Man 3 (2007)": {
+  "status": "ok",
+  "changes": []
+ }
+}

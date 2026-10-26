@@ -1,0 +1,254 @@
+{
+ "Tremors (1990)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Melvin up the water tower",
+    "new": null,
+    "why": "not sure Melvin is on the water tower"
+   }
+  ]
+ },
+ "The Goonies (1985)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hook (1991)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The Tick-Tock Croc clock tower",
+    "new": null,
+    "why": "Tick-Tock Croc clock tower not confirmed in the film"
+   },
+   {
+    "field": "note.text",
+    "old": "Peter, look at the table. You have to believe the food is there before you taste it.",
+    "new": "Rufio, look at the table. You have to believe the food is there before you taste it.",
+    "why": "Peter is the one who tells Rufio to believe; Rufio was the doubter"
+   },
+   {
+    "field": "note.by",
+    "old": "Rufio",
+    "new": "Peter Banning",
+    "why": "speaker was wrong"
+   },
+   {
+    "field": "prop.lines[0]",
+    "old": "Peter Banning, seat 1A",
+    "new": "Peter Banning, London",
+    "why": "seat number unverifiable"
+   }
+  ]
+ },
+ "Night at the Museum (2006)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jumanji: Welcome to the Jungle (2017)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Professor Shelly Oberon, not a boy anymore",
+    "new": "Professor Shelly Oberon, really Bethany",
+    "why": "Shelly Oberon is Bethany's avatar, so 'not a boy anymore' was wrong"
+   },
+   {
+    "field": "winks[2]",
+    "old": "Mouse Finbar and the cake",
+    "new": null,
+    "why": "cake detail not certain"
+   }
+  ]
+ },
+ "Jumanji (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Raiders of the Lost Ark (1981)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "The Ark opened in the desert",
+    "new": "The Ark opened and the faces melting",
+    "why": "Ark was opened on an island, not in the desert"
+   }
+  ]
+ },
+ "Indiana Jones and the Temple of Doom (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Indiana Jones and the Last Crusade (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Pirates of the Caribbean: The Curse of the Black Pearl (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Romancing the Stone (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jumanji: The Next Level (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Indiana Jones and the Kingdom of the Crystal Skull (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Indiana Jones and the Dial of Destiny (2023)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Uncle Indy, the Dial is worth far more than your pension. Come on.",
+    "new": "Indy, the Dial is worth far more than your pension. Come on.",
+    "why": "Helena calls him Indy, not Uncle Indy"
+   }
+  ]
+ },
+ "The Mummy (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Mummy Returns (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jurassic World (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jurassic World: Fallen Kingdom (2018)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "The Indoraptor in the attic",
+    "new": "The Indoraptor on the rooftop",
+    "why": "attic not certain"
+   },
+   {
+    "field": "prop.lines[0]",
+    "old": "Lot 12, Indoraptor",
+    "new": "Indoraptor, final lot",
+    "why": "lot number unverified"
+   }
+  ]
+ },
+ "Jurassic Park III (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Pirates of the Caribbean: Dead Man's Chest (2006)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Davy Jones and his crab beard",
+    "new": "Davy Jones and his tentacle beard",
+    "why": "Jones has a tentacle beard, not crab beard"
+   }
+  ]
+ },
+ "Pirates of the Caribbean: At World's End (2007)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "The wedding on the Dutchman",
+    "new": "The wedding in the middle of the battle",
+    "why": "ship of the wedding not certain"
+   },
+   {
+    "field": "prop.lines[1]",
+    "old": "Lost at Singapore",
+    "new": "Nine lords, nine pieces",
+    "why": "claim unverifiable"
+   }
+  ]
+ },
+ "National Treasure (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Lost City (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Atlantis: The Lost Empire (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Pirates of the Caribbean: On Stranger Tides (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Pirates of the Caribbean: Dead Men Tell No Tales (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jurassic World Dominion (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jurassic World Rebirth (2025)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Zora's team on a rubber boat",
+    "new": null,
+    "why": "rubber boat detail not certain"
+   }
+  ]
+ },
+ "Hunt for the Wilderpeople (2016)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Bella's pig hunt",
+    "new": null,
+    "why": "Bella's pig hunt not a reliable film event"
+   }
+  ]
+ },
+ "How to Train Your Dragon (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ace Ventura: When Nature Calls (1995)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Fulton Greenwater's mission",
+    "new": null,
+    "why": "Fulton Greenwater role not certain"
+   }
+  ]
+ },
+ "The Great Outdoors (1988)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Muppet Treasure Island (1996)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "Long John Silver and his parrot",
+    "new": null,
+    "why": "Silver's parrot not certain"
+   }
+  ]
+ }
+}

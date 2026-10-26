@@ -1,0 +1,298 @@
+{
+ "I Am Legend (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Lost Boys (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Psycho (1960)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rosemary's Baby (1968)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Night of the Living Dead (1968)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Halloween (1978)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Annie, Lynda and Laurie on babysitting duty",
+    "new": "Annie, Lynda and Laurie, three friends",
+    "why": "Lynda does not babysit; Annie sits Lindsey, Laurie sits Tommy"
+   },
+   {
+    "field": "winks[4]",
+    "old": "The Doyle house across the street",
+    "new": "The Wallace house across the street from the Doyle house",
+    "why": "Annie sits at the Wallace house, across from the Doyle house"
+   }
+  ]
+ },
+ "The Thing (1982)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Let the Right One In (2008)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "The Rubik's cube Eli solves",
+    "new": "The puzzle cube Eli solves",
+    "why": "Real brand name"
+   }
+  ]
+ },
+ "The Babadook (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "It Follows (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Witch (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Train to Busan (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Get Out (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hereditary (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "A Quiet Place (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Sinners (2025)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Shutter Island (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "A Nightmare on Elm Street (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Poltergeist (1982)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Fright Night (1985)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Peter Vincent's cape and cross",
+    "new": null,
+    "why": "Not certain of the cape detail"
+   }
+  ]
+ },
+ "An American Werewolf in London (1981)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "David, you are staying with me. Keep to the road next time, and stay clear of the moors.",
+    "new": "David, you are staying with me tonight. Get some rest, and we'll sort the rest out in the morning.",
+    "why": "Warning to keep to the road comes from the pub locals, not Alex"
+   },
+   {
+    "field": "prop.lines[1]",
+    "old": "One game of chess",
+    "new": "Keep to the road",
+    "why": "Chess game not certain"
+   }
+  ]
+ },
+ "The Fly (1986)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hocus Pocus (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Scream (1996)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Do not say you'll be right back. Do not split up. Do not answer the phone. Those are the rules.",
+    "new": "Never say you'll be right back. That's the rule. Horror movies have rules, and I know all of them.",
+    "why": "Randy's rules were sex, drugs and 'I'll be right back'; the others were invented"
+   }
+  ]
+ },
+ "Shaun of the Dead (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Addams Family (1991)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Addams Family Values (1993)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Wednesday and Joan in the Harmony Hut",
+    "new": "Wednesday in the Harmony Hut",
+    "why": "Joan detail not certain"
+   }
+  ]
+ },
+ "The Witches (1990)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "Luke's pet mouse Mr. Jenkins",
+    "new": "Luke's pet mouse",
+    "why": "Pet mouse name not certain"
+   }
+  ]
+ },
+ "Little Shop of Horrors (1986)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Shining (1980)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Young Frankenstein (1974)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Rocky Horror Picture Show (1975)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Practical Magic (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Exorcist (1973)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "Captain Howdy on the Ouija board",
+    "new": "Captain Howdy on the spirit board",
+    "why": "Real brand name"
+   }
+  ]
+ },
+ "The Sixth Sense (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Signs (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Ring (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Others (2001)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "The photograph album in the attic",
+    "new": "The old photograph album",
+    "why": "Attic location not certain"
+   }
+  ]
+ },
+ "Saw (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Conjuring (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Insidious (2010)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "The red-faced figure at the window",
+    "new": "The red-faced demon",
+    "why": "Window placement not certain"
+   }
+  ]
+ },
+ "Us (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Nope (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Midsommar (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "IT (2017)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "number",
+    "old": "29",
+    "new": null,
+    "why": "Number not certain"
+   }
+  ]
+ },
+ "Carrie (1976)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Birds (1963)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Pet Sematary (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Paranormal Activity (2007)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "The Ouija board",
+    "new": "The spirit board",
+    "why": "Real brand name"
+   }
+  ]
+ },
+ "Smile (2022)": {
+  "status": "ok",
+  "changes": []
+ }
+}

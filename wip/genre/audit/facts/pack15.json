@@ -1,0 +1,120 @@
+{
+ "Harry Potter and the Philosopher's Stone (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Harry Potter and the Chamber of Secrets (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Harry Potter and the Prisoner of Azkaban (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Harry Potter and the Goblet of Fire (2005)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Lord of the Rings: The Fellowship of the Ring (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Lord of the Rings: The Two Towers (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Lord of the Rings: The Return of the King (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Willow (1988)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[0]",
+    "old": "Pass: one acorn trick",
+    "new": "Candidate: Willow Ufgood",
+    "why": "acorn trick detail not verifiable in the film"
+   }
+  ]
+ },
+ "The NeverEnding Story (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Harry Potter and the Order of the Phoenix (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Harry Potter and the Half-Blood Prince (2009)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Harry Potter and the Deathly Hallows: Part 1 (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Harry Potter and the Deathly Hallows: Part 2 (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Fantastic Beasts and Where to Find Them (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Hobbit: An Unexpected Journey (2012)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Hobbit: The Desolation of Smaug (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Hobbit: The Battle of the Five Armies (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wicked (2024)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Wizard of Oz (1939)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Sword in the Stone (1963)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Fantastic Beasts: The Crimes of Grindelwald (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Fantastic Beasts: The Secrets of Dumbledore (2022)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Never thought a baker would end up at a wizard election. I'd honestly rather be making donuts.",
+    "new": "Never thought a baker would end up at a wizard election. I'd honestly rather be making pastries.",
+    "why": "Jacob bakes pastries in the films; donuts not certain"
+   }
+  ]
+ },
+ "The Chronicles of Narnia: Prince Caspian (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wicked: For Good (2025)": {
+  "status": "ok",
+  "changes": []
+ }
+}

@@ -1,0 +1,340 @@
+{
+ "The Little Mermaid (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Beauty and the Beast (1991)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Chip the teacup riding on a tray",
+    "new": "Chip the little teacup, Mrs. Potts's son",
+    "why": "Riding on a tray not certain"
+   }
+  ]
+ },
+ "Aladdin (1992)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "Abu the monkey with a stolen apple",
+    "new": "Abu the monkey on Aladdin's shoulder",
+    "why": "Stolen-apple detail not certain"
+   }
+  ]
+ },
+ "The Lion King (1994)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Shrek (2001)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Fiona and Shrek in their mud bath",
+    "new": null,
+    "why": "Mud bath with Fiona not certain"
+   }
+  ]
+ },
+ "The Princess Bride (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Labyrinth (1986)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Paddington (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Paddington 2 (2017)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "A marmalade sandwich in every pocket",
+    "new": null,
+    "why": "Sandwich in every pocket not definite"
+   }
+  ]
+ },
+ "Charlie and the Chocolate Factory (2005)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Willy Wonka & the Chocolate Factory (1971)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Do not rush. The Everlasting Gobstopper never runs out, although you might. Mind the fizzy bubbles, and do not burp. Up is down.",
+    "new": "Do not rush. The Everlasting Gobstopper never runs out, although you might. Mind the fizzy bubbles, and do not burp.",
+    "why": "'Up is down' not reliably Wonka's line"
+   }
+  ]
+ },
+ "Coco (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Moana (2016)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Pua the pig riding in the boat",
+    "new": null,
+    "why": "Pua is not on the boat in Moana 1"
+   }
+  ]
+ },
+ "Frozen (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Encanto (2021)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The magic candle that never goes out",
+    "new": null,
+    "why": "Candle does go out in the film"
+   }
+  ]
+ },
+ "Lilo & Stitch (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mulan (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Tarzan (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hercules (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Emperor's New Groove (2000)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Ask for the secret sauce",
+    "new": "Table for two, one is a llama",
+    "why": "Secret sauce not in the film"
+   }
+  ]
+ },
+ "Shrek 2 (2004)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Fairy Godmother's potion shop",
+    "new": "Fairy Godmother's potion factory",
+    "why": "It is a factory, not a shop"
+   }
+  ]
+ },
+ "Snow White and the Seven Dwarfs (1937)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Pinocchio (1940)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Fantasia (1940)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dumbo (1941)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "The crows who help Dumbo",
+    "new": null,
+    "why": "Crows are a racial caricature, unsuitable for family copy"
+   }
+  ]
+ },
+ "Bambi (1942)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Cinderella (1950)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Alice in Wonderland (1951)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Peter Pan (1953)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Smee holding the cutlery",
+    "new": null,
+    "why": "Smee holding cutlery not in the film"
+   }
+  ]
+ },
+ "Sleeping Beauty (1959)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.by",
+    "old": "Merryweather",
+    "new": "Flora",
+    "why": "Flora insists on no magic, not Merryweather"
+   },
+   {
+    "field": "note.text",
+    "old": "No magic in the kitchen, dear. We'll make the cake by hand, and it will be beautiful, I think. Flora, hold the flour.",
+    "new": "No magic in the kitchen, dear. We'll make the cake by hand, and it will be beautiful, I think. Merryweather, hold the flour.",
+    "why": "Matches speaker change"
+   }
+  ]
+ },
+ "One Hundred and One Dalmatians (1961)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Jungle Book (1967)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Robin Hood (1973)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Pocahontas (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Hunchback of Notre Dame (1996)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Princess and the Frog (2009)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Mama Odie and her bayou hut",
+    "new": "Mama Odie in her boat house in the bayou",
+    "why": "Her home is a boat, not a hut"
+   }
+  ]
+ },
+ "Tangled (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Frozen II (2019)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Ahtohallan, the far north river",
+    "new": "Ahtohallan, where memory is kept",
+    "why": "Not a far north river"
+   }
+  ]
+ },
+ "Moana 2 (2024)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Raya and the Last Dragon (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Zootopia (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wreck-It Ralph (2012)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "I'm bad, but that doesn't mean I'm a bad guy. Hand me the pie, Felix. A little to the left. Bigger piece.",
+    "new": "Hand me the pie, Felix. A little to the left. Bigger piece.",
+    "why": "Removed inexact paraphrase of Bad-Anon mantra"
+   }
+  ]
+ },
+ "Bolt (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mary Poppins (1964)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Spit spot, children. Medicine goes down with a spoon of sugar. And practically perfect people never argue at tea.",
+    "new": "Spit spot, children. Tea first, then tidy the nursery. And practically perfect people never argue at tea.",
+    "why": "Removed paraphrase of song lyric"
+   }
+  ]
+ },
+ "Enchanted (2007)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The big ball in Central Park",
+    "new": "The big ball",
+    "why": "Central Park location not certain"
+   },
+   {
+    "field": "prop.lines[0]",
+    "old": "Central Park Ball",
+    "new": "Grand Ball",
+    "why": "Central Park location not certain"
+   }
+  ]
+ },
+ "Maleficent (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Cruella (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Beauty and the Beast (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Aladdin (2019)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "A lamp rubbed three times",
+    "new": null,
+    "why": "Rubbed three times not in the film"
+   }
+  ]
+ },
+ "The Lion King (2019)": {
+  "status": "ok",
+  "changes": []
+ }
+}

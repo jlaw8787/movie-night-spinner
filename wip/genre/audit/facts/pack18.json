@@ -1,0 +1,198 @@
+{
+ "Point Break (1991)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Weekend at Bernie's (1989)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "Bernie in sunglasses and a robe",
+    "new": "Bernie in sunglasses",
+    "why": "Robe not certain"
+   }
+  ]
+ },
+ "Jaws (1975)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ace Ventura: Pet Detective (1994)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Tropic Thunder (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jaws 2 (1978)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mamma Mia! (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Next Goal Wins (2023)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "The team that never scored in qualifiers",
+    "new": null,
+    "why": "Inaccurate, the team wins a qualifier in the film"
+   }
+  ]
+ },
+ "Glass Onion: A Knives Out Mystery (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Three Amigos! (1986)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Lucky, Dusty and Ned in silver suits",
+    "new": "Lucky, Dusty and Ned, the silent movie heroes",
+    "why": "Suit colour not certain"
+   }
+  ]
+ },
+ "Nacho Libre (2006)": {
+  "status": "ok",
+  "changes": []
+ },
+ "El Mariachi (1992)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Desperado (1995)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Sit down, stranger. The bar is open and the bookstore is closed, so tell me what you want.",
+    "new": "Sit down, stranger. The bookstore is closed, so tell me what you want.",
+    "why": "Carolina owns the bookstore, not the bar"
+   }
+  ]
+ },
+ "Once Upon a Time in Mexico (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Mask of Zorro (1998)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Alejandro learning in a hidden cellar",
+    "new": "Alejandro learning in a hidden cave",
+    "why": "Training place is a cave under the hacienda"
+   }
+  ]
+ },
+ "Selena (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "La Bamba (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rocky (1976)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rocky IV (1985)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rocky II (1979)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rocky III (1982)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Creed (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Million Dollar Baby (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Cinderella Man (2005)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Fighter (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ghost (1990)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Serendipity (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ghostbusters (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ghostbusters: Frozen Empire (2024)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rear Window (1954)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Fast Times at Ridgemont High (1982)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Clerks (1994)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Teenage Mutant Ninja Turtles: Mutant Mayhem (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Teenage Mutant Ninja Turtles III (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mr. Deeds (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Collateral (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Fight Club (1999)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "Pink soap in the bathroom",
+    "new": null,
+    "why": "Pink soap not certain"
+   },
+   {
+    "field": "number",
+    "old": "5123",
+    "new": "",
+    "why": "Address number not verifiable"
+   }
+  ]
+ }
+}

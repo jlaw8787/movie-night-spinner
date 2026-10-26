@@ -1,0 +1,182 @@
+{
+ "The Amazing Spider-Man (2012)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Fantastic Four (2005)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Fantastic Four: First Steps (2025)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Dark Knight Rises (2012)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Man of Steel (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wonder Woman 1984 (2020)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Aquaman (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Shazam! (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Joker (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Batman (2022)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Selina Kyle behind the bar",
+    "new": "Selina Kyle working at the Iceberg Lounge",
+    "why": "She is a waitress there; bar claim unsure"
+   }
+  ]
+ },
+ "Superman (2025)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Batman Forever (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Batman & Robin (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hellboy (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Blade (1998)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Blade's silver stakes",
+    "new": null,
+    "why": "Not certain silver stakes are in the film; removed"
+   },
+   {
+    "field": "winks[3]",
+    "old": "Deacon Frost and the House of Erebus",
+    "new": "Deacon Frost and his vampire gang",
+    "why": "House of Erebus is the pure-blood council, not Frost's group"
+   },
+   {
+    "field": "prop.title",
+    "old": "House of Erebus",
+    "new": "Frost Guest Tag",
+    "why": "House of Erebus attribution to Frost not certain"
+   }
+  ]
+ },
+ "The Crow (1994)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Unbreakable (2000)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Seat 1, if you survive",
+    "new": null,
+    "why": "Seat number unverified and grim"
+   }
+  ]
+ },
+ "Hancock (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Big Hero 6 (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ant-Man and the Wasp: Quantumania (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Marvels (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Doctor Strange in the Multiverse of Madness (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Captain America: The First Avenger (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Thunderbolts* (2025)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Captain America: Brave New World (2025)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Batman v Superman: Dawn of Justice (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Justice League (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Suicide Squad (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Flash (2023)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Barry, I'm making lasagna. I'll need the cans of tomatoes, so don't let me forget them.",
+    "new": "Barry, I need a can of tomatoes for dinner. Don't let me forget them.",
+    "why": "Lasagna unverified; tomatoes certain"
+   }
+  ]
+ },
+ "Blue Beetle (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "X2 (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "X-Men Origins: Wolverine (2009)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Wolverine (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Venom: Let There Be Carnage (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Megamind (2010)": {
+  "status": "ok",
+  "changes": []
+ }
+}

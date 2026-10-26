@@ -1,0 +1,297 @@
+{
+ "The Muppets Take Manhattan (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Annie (1982)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Little girls, everywhere I look. Make those beds, scrub that floor, and keep that dog out of my sight.",
+    "new": "Rooster, this is our chance. Get me that reward and I will never see another orphan in my life.",
+    "why": "Opening echoed the song lyric 'Little Girls'; rewritten in Hannigan's scheming voice"
+   }
+  ]
+ },
+ "Newsies (1992)": {
+  "status": "ok",
+  "changes": []
+ },
+ "An American Tail (1986)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Warren T. Rat and the Mott Street gang",
+    "new": "Warren T. Rat, the con artist",
+    "why": "Mott Street gang is not Warren's gang, unsure"
+   }
+  ]
+ },
+ "Oliver & Company (1988)": {
+  "status": "ok",
+  "changes": []
+ },
+ "E.T. the Extra-Terrestrial (1982)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Honey, I Shrunk the Kids (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Iron Giant (1999)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "venue",
+    "old": "Annie's Diner, Rockwell",
+    "new": "Hughes Family Kitchen, Rockwell",
+    "why": "Name 'Annie's Diner' not verifiable; Annie only waits tables at an unnamed diner"
+   },
+   {
+    "field": "prop.title",
+    "old": "Annie's Diner Check",
+    "new": "Diner Check",
+    "why": "Diner name unverified"
+   }
+  ]
+ },
+ "Who Framed Roger Rabbit (1988)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Toy Story (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Toy Story 2 (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Monsters, Inc. (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Finding Nemo (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mrs. Doubtfire (1993)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Hello, dears. Supper is on the table. Do not ask what is in the pot, and do mind my bosom near the stove.",
+    "new": "Hello, dears. Supper is on the table. Do not ask what is in the pot.",
+    "why": "Removed adult bosom joke for a kids theme"
+   }
+  ]
+ },
+ "Matilda (1996)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Casper (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Cool Runnings (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Sandlot (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Chicken Run (2000)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Cloudy with a Chance of Meatballs (2009)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Toy Story 3 (2010)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Big Baby and the toy phone",
+    "new": "Big Baby, Lotso's quiet muscle",
+    "why": "Toy phone detail not certain"
+   }
+  ]
+ },
+ "Up (2009)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Russell, Troop 54",
+    "new": "Russell, Wilderness Explorer",
+    "why": "Troop 54 not certain (it is a Tribe/Sweat Lodge)"
+   }
+  ]
+ },
+ "Inside Out (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Madagascar (2005)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ice Age (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Despicable Me (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wallace & Gromit: The Curse of the Were-Rabbit (2005)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Space Jam (1996)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "sign",
+    "old": "Tune Squad, Moron Mountain Cup",
+    "new": "Tune Squad, Looney Tunes Team",
+    "why": "'Moron Mountain Cup' is not in the film"
+   }
+  ]
+ },
+ "Free Willy (1993)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Jesse's graffiti and a washing-up job as punishment",
+    "new": "Jesse scrubbing his own graffiti off the park walls",
+    "why": "Jesse cleans graffiti as punishment; 'washing-up' was wrong"
+   }
+  ]
+ },
+ "The Mighty Ducks (1992)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Little Giants (1994)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Junior Floyd's late run onto the field",
+    "new": null,
+    "why": "Junior Floyd's late run not certain"
+   },
+   {
+    "field": "prop.lines[0]",
+    "old": "Play 12: Puerto Rico",
+    "new": "Play: Annexation of Puerto Rico",
+    "why": "Play number 12 invented"
+   }
+  ]
+ },
+ "Dennis the Menace (1993)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Switchblade Sam and the camping trip",
+    "new": "Switchblade Sam, the drifter with a plan",
+    "why": "Camping trip detail not certain"
+   },
+   {
+    "field": "winks[2]",
+    "old": "Dennis's slingshot",
+    "new": null,
+    "why": "Slingshot not certain in the film"
+   }
+  ]
+ },
+ "Richie Rich (1994)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mouse Hunt (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Flubber (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Inspector Gadget (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "George of the Jungle (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Small Soldiers (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Muppets (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "A Bug's Life (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Toy Story 4 (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Finding Dory (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Incredibles 2 (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Brave (2012)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Monsters University (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Cars (2006)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Cars 2 (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Soul (2020)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Luca (2021)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Pasta first, then the race. If we win the Portorosso Cup, Alberto gets his scooter and I get the sea.",
+    "new": "Pasta first, then the race. If we win the Portorosso Cup, Alberto gets his scooter.",
+    "why": "'I get the sea' invented motive"
+   }
+  ]
+ },
+ "Turning Red (2022)": {
+  "status": "ok",
+  "changes": []
+ }
+}

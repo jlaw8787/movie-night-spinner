@@ -1,0 +1,270 @@
+{
+ "The Breakfast Club (1985)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "We are all a bit strange. Some of us are just better at hiding it than others.",
+    "new": "We're all pretty bizarre. Some of us are just better at hiding it, that's all.",
+    "why": "paraphrase presented as Andrew's line; restored actual line"
+   }
+  ]
+ },
+ "Ferris Bueller's Day Off (1986)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Life moves pretty fast. Stop and look around now and then or you will miss it.",
+    "new": "Life moves pretty fast. If you don't stop and look around once in a while, you could miss it.",
+    "why": "misquote; restored actual line"
+   }
+  ]
+ },
+ "Sixteen Candles (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Pretty in Pink (1986)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wayne's World (1992)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Stan Mikita's Donuts",
+    "new": null,
+    "why": "real donut chain brand"
+   }
+  ]
+ },
+ "Clueless (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dazed and Confused (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Napoleon Dynamite (2004)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "I caught a bass with my bare hands. Now pass me my tots, I'm saving some for later.",
+    "new": "I caught you a delicious bass. Now pass me my tots, I'm saving some for later.",
+    "why": "'bare hands' claim not in film; used actual line"
+   }
+  ]
+ },
+ "Stand by Me (1986)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "venue",
+    "old": "Castle Rock Diner",
+    "new": "Castle Rock, Oregon",
+    "why": "diner not confirmed in film; town is certain"
+   },
+   {
+    "field": "note.text",
+    "old": "I never had friends later on like the ones I had when I was twelve. Nobody does.",
+    "new": "I never had any friends later on like the ones I had when I was twelve. Jesus, does anyone?",
+    "why": "misquote; restored actual line"
+   }
+  ]
+ },
+ "Dirty Dancing (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "School of Rock (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mean Girls (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Superbad (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Encino Man (1992)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Weasel, the surfer",
+    "new": null,
+    "why": "Weasel is not a character in Encino Man (that is Son in Law); Pauly Shore plays Stoney"
+   }
+  ]
+ },
+ "Hairspray (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Weird Science (1985)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Better Off Dead (1985)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Ricky Smith, the rival",
+    "new": "Roy Stalin, the rival skier",
+    "why": "rival is Roy Stalin"
+   }
+  ]
+ },
+ "Can't Buy Me Love (1987)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Cindy Mancini's ruined white suede outfit",
+    "new": "Cindy's mother's white suede outfit, ruined",
+    "why": "the outfit belonged to Cindy's mother"
+   }
+  ]
+ },
+ "Say Anything... (1989)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "venue",
+    "old": "Seattle Curbside",
+    "new": "Diane Court's House",
+    "why": "venue not a film location; boombox scene is outside Diane's house"
+   },
+   {
+    "field": "sign",
+    "old": "Boombox Corner, Open All Night",
+    "new": "Court Residence, Seattle",
+    "why": "invented sign, not from film"
+   },
+   {
+    "field": "note.text",
+    "old": "I don't want to sell or buy or process anything for a living. I just want you.",
+    "new": "I don't want to sell anything, buy anything, or process anything as a career.",
+    "why": "misquote; 'I just want you' is not Lloyd's line"
+   }
+  ]
+ },
+ "Heathers (1988)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "A croquet game at the party",
+    "new": "The opening croquet game",
+    "why": "croquet game is the opening scene, not at a party"
+   }
+  ]
+ },
+ "10 Things I Hate About You (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "American Pie (1999)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The pact to graduate with a plan",
+    "new": "The pact the four friends make before prom",
+    "why": "pact is not about a graduation plan"
+   },
+   {
+    "field": "prop.lines[1]",
+    "old": "Sealed before graduation",
+    "new": "Sealed before prom",
+    "why": "pact deadline is prom"
+   }
+  ]
+ },
+ "Easy A (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Juno (2007)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Stepmom Bren and the dog",
+    "new": "Stepmom Bren",
+    "why": "dog detail not certain"
+   }
+  ]
+ },
+ "Lady Bird (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Footloose (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mallrats (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jay and Silent Bob Strike Back (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "BASEketball (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hot Rod (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wet Hot American Summer (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Role Models (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hot Tub Time Machine (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Harold & Kumar Go to White Castle (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dude, Where's My Car? (2000)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Billy Madison (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Grandma's Boy (2006)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wayne's World 2 (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Popstar: Never Stop Never Stopping (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Neighbors (2014)": {
+  "status": "ok",
+  "changes": []
+ }
+}

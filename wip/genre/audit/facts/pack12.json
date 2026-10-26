@@ -1,0 +1,194 @@
+{
+ "Men in Black (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Men in Black II (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Last Action Hero (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Demolition Man (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Back to the Future Part II (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Short Circuit (1986)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Fifth Element (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Terminator (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Terminator 2: Judgment Day (1991)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Predator (1987)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "'Get to the chopper' on the radio",
+    "new": "Dutch shouting 'Get to the chopper'",
+    "why": "Line is shouted, not heard on a radio"
+   }
+  ]
+ },
+ "Aliens (1986)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Alien (1979)": {
+  "status": "ok",
+  "changes": []
+ },
+ "RoboCop (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Total Recall (1990)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The woman with three breasts at the checkpoint",
+    "new": null,
+    "why": "Adult content, removed; 4 winks remain"
+   }
+  ]
+ },
+ "Blade Runner (1982)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Independence Day (1996)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "The White House beam on the lawn",
+    "new": "The White House destroyed by the alien beam",
+    "why": "Beam destroys the building, not a lawn scene"
+   }
+  ]
+ },
+ "Armageddon (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Galaxy Quest (1999)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Commander Taggart and his famous speech",
+    "new": "Commander Taggart, the TV captain Jason plays",
+    "why": "Famous speech not a certain film detail"
+   }
+  ]
+ },
+ "The Matrix (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Coneheads (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Bill & Ted's Excellent Adventure (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Close Encounters of the Third Kind (1977)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Gremlins 2: The New Batch (1990)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Clamp Tower and its smart building",
+    "new": "Clamp Center and its smart building",
+    "why": "Building is called Clamp Center"
+   },
+   {
+    "field": "prop.lines[0]",
+    "old": "Visitor, Floor 35",
+    "new": "Visitor",
+    "why": "Floor number unverified"
+   }
+  ]
+ },
+ "Ghostbusters: Afterlife (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wall-E (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Inception (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Interstellar (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Martian (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Gravity (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Arrival (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Blade Runner 2049 (2017)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "I've never had real food. Joi cooks it for me in my head. It tastes like a lie.",
+    "new": "I've never had real food. Joi cooks dinner for me every night. It looks perfect. It just isn't there.",
+    "why": "Joi is a hologram in his apartment, not in his head"
+   }
+  ]
+ },
+ "Edge of Tomorrow (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Transformers (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Tron: Legacy (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Men in Black 3 (2012)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Idiocracy (2006)": {
+  "status": "ok",
+  "changes": []
+ }
+}

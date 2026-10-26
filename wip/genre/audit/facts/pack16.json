@@ -1,0 +1,294 @@
+{
+ "Elemental (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Onward (2020)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Inside Out 2 (2024)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Sar-chasm on the menu",
+    "new": null,
+    "why": "not sure Sar-chasm is a menu item or confirmed as described; removed"
+   }
+  ]
+ },
+ "The Good Dinosaur (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Despicable Me 2 (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Minions (2015)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "sign",
+    "old": "London Edition, 1968",
+    "new": "Orlando Edition, 1968",
+    "why": "Villain-Con is held in Orlando, not London"
+   },
+   {
+    "field": "prop.lines[1]",
+    "old": "London, 1968",
+    "new": "Orlando, 1968",
+    "why": "Villain-Con is in Orlando"
+   }
+  ]
+ },
+ "Meet the Robinsons (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "My Neighbor Totoro (1988)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wallace & Gromit: Vengeance Most Fowl (2024)": {
+  "status": "ok",
+  "changes": []
+ },
+ "A Minecraft Movie (2025)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Happy Feet (2006)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Daddy's Home (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Uncle Buck (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hop (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Peter Rabbit (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Peter Rabbit 2: The Runaway (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rise of the Guardians (2012)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mary Poppins Returns (2018)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "The kite rising over London",
+    "new": null,
+    "why": "kite finale not certain for this film; removed"
+   }
+  ]
+ },
+ "The Parent Trap (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Freaky Friday (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Aristocats (1970)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Fox and the Hound (1981)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Great Mouse Detective (1986)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Brother Bear (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Wish (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Little Mermaid (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Jungle Book (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jojo Rabbit (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Paddington in Peru (2024)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Time Bandits (1981)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Barbarian (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Annabelle (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "What We Do in the Shadows (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Silence of the Lambs (1991)": {
+  "status": "ok",
+  "changes": []
+ },
+ "This Is the End (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Easter Parade (1948)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Jonathan Harrow and his tuxedo",
+    "new": "Johnny Harrow, Don's friend",
+    "why": "tuxedo detail unverified; character is Johnny Harrow"
+   }
+  ]
+ },
+ "Father of the Bride (1991)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Seabiscuit (2003)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Don't toss a horse out because he's banged up. Same goes for people.",
+    "new": "You don't throw a whole life away just because it's banged up a little.",
+    "why": "paraphrase passed off as Tom Smith quote; use the film line"
+   }
+  ]
+ },
+ "Spaceballs (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Star Wars (1977)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Empire Strikes Back (1980)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Return of the Jedi (1983)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Avatar (2009)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dune (2021)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Star Wars: Episode I - The Phantom Menace (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Star Wars: Episode II - Attack of the Clones (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Star Wars: Episode III - Revenge of the Sith (2005)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "You were meant to bring balance, Anakin. Not this.",
+    "new": "It was said that you would destroy the Sith, not join them. Bring balance to the Force, not leave it in darkness.",
+    "why": "misquote; use the film line"
+   }
+  ]
+ },
+ "Rogue One: A Star Wars Story (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Solo: A Star Wars Story (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Star Wars: The Force Awakens (2015)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Take the saber, child. It's been calling you for a long time.",
+    "new": "That lightsaber was Luke's, and his father's before him. And now it calls to you.",
+    "why": "misquote; use the film line"
+   }
+  ]
+ },
+ "Star Wars: The Last Jedi (2017)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Save what we love, not fight what we hate. Now eat something.",
+    "new": "That's how we're going to win. Not fighting what we hate, saving what we love.",
+    "why": "misquote; use the film line"
+   },
+   {
+    "field": "winks[4]",
+    "old": "Yoda's hut and the tree",
+    "new": "Yoda's spirit and the Jedi tree",
+    "why": "Yoda's hut is not in this film; he burns the tree"
+   }
+  ]
+ },
+ "Star Wars: The Rise of Skywalker (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Flash Gordon (1980)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Treasure Planet (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Avatar: The Way of Water (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dune: Part Two (2024)": {
+  "status": "ok",
+  "changes": []
+ }
+}

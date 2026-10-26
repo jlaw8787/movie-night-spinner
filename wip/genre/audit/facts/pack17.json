@@ -1,0 +1,259 @@
+{
+ "The Last Dragon (1985)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Karate Kid (1984)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Cobra Kai vs. Miyagi-Do",
+    "new": "Cobra Kai vs. Daniel LaRusso",
+    "why": "Miyagi-Do is not named in the 1984 film"
+   }
+  ]
+ },
+ "Kung Fu Hustle (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Kill Bill: Vol. 1 (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Kill Bill: Vol. 2 (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Lost in Translation (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Enter the Dragon (1973)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Bloodsport (1988)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Tiger Tanaka, his teacher's friend",
+    "new": "Tiger Tanaka, Frank's teacher",
+    "why": "Tanaka is Frank's teacher, not a friend of the teacher"
+   }
+  ]
+ },
+ "Rumble in the Bronx (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Crouching Tiger, Hidden Dragon (2000)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Everything Everywhere All at Once (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "KPop Demon Hunters (2025)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Kung Fu Panda 2 (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Farewell (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Easter Sunday (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Cliffhanger (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Back to the Future Part III (1990)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Tombstone (1993)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Say when. I am your huckleberry, Wyatt, and I will see this through.",
+    "new": "Say when. I am your huckleberry, and I will see this through.",
+    "why": "Doc says the huckleberry line to Ringo, not Wyatt"
+   }
+  ]
+ },
+ "Blazing Saddles (1974)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Smokey and the Bandit (1977)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "We have a long way to go and a short time to get there.",
+    "new": "We got a long way to go and a short time to get there.",
+    "why": "Match the actual line"
+   }
+  ]
+ },
+ "Django Unchained (2012)": {
+  "status": "ok",
+  "changes": []
+ },
+ "True Grit (2010)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Nothing is free in this world except the grace of God.",
+    "new": "There is nothing free except the grace of God.",
+    "why": "Match Mattie's actual line"
+   }
+  ]
+ },
+ "The Good, the Bad and the Ugly (1966)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "If you must shoot, shoot. Don't waste breath talking.",
+    "new": "When you have to shoot, shoot. Don't talk.",
+    "why": "Match Tuco's actual line"
+   }
+  ]
+ },
+ "Butch Cassidy and the Sundance Kid (1969)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "I've got vision. The rest of the world wears glasses.",
+    "new": "I've got vision. The rest of the world wears bifocals.",
+    "why": "Misquote, the line is bifocals"
+   }
+  ]
+ },
+ "Shanghai Noon (2000)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Young Guns (1988)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Unforgiven (1992)": {
+  "status": "ok",
+  "changes": []
+ },
+ "City Slickers (1991)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Road House (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Oppenheimer (2023)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "sign",
+    "old": "Gold Badge Required",
+    "new": "Badges Worn at All Times",
+    "why": "Gold badge colour not verifiable"
+   }
+  ]
+ },
+ "Soul Food (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Jackie Brown (1997)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Gate B",
+    "new": "Uniform required",
+    "why": "Gate letter is not in the film"
+   }
+  ]
+ },
+ "Boyz n the Hood (1991)": {
+  "status": "ok",
+  "changes": []
+ },
+ "House Party (1990)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Barbershop (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Harlem Nights (1989)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Vi Withers",
+    "new": "Dominique La Rue",
+    "why": "No Vi Withers in the film; Dominique La Rue is a character"
+   },
+   {
+    "field": "winks[2]",
+    "old": "Bennie Wilson, the rival",
+    "new": "Bugsy Calhoune, the rival",
+    "why": "Bennie is Sugar Ray's friend; Bugsy is the rival"
+   }
+  ]
+ },
+ "Boomerang (1992)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Sister Act (1992)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Car Wash (1976)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Five Heartbeats (1991)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Big Red, the manager",
+    "new": "Big Red, the record label boss",
+    "why": "Big Red Davis owns Big Red Records, not the manager"
+   },
+   {
+    "field": "winks[3]",
+    "old": "Dresser, the tailor",
+    "new": "Dresser, the bass singer",
+    "why": "Dresser is the group's bass singer"
+   }
+  ]
+ },
+ "Shaft (1971)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Blind Side (2009)": {
+  "status": "ok",
+  "changes": []
+ }
+}

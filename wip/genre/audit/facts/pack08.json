@@ -1,0 +1,229 @@
+{
+ "Die Hard 2 (1990)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The church basement and the snowy runway fight",
+    "new": null,
+    "why": "Church scene detail not certain"
+   }
+  ]
+ },
+ "Lethal Weapon (1987)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Riggs talking a jumper off a ledge in the opening",
+    "new": "Riggs cuffing himself to a jumper and leaping off the ledge",
+    "why": "Not in the opening; clarified scene"
+   }
+  ]
+ },
+ "Lethal Weapon 2 (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Lethal Weapon 3 (1992)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[1]",
+    "old": "Bulletproof vest talk at the start of the film",
+    "new": null,
+    "why": "Not certain of this scene"
+   }
+  ]
+ },
+ "Lethal Weapon 4 (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Beverly Hills Cop (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Beverly Hills Cop II (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Beverly Hills Cop III (1994)": {
+  "status": "ok",
+  "changes": []
+ },
+ "48 Hrs. (1982)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Back to prison Monday",
+    "new": "Forty eight hours, no more",
+    "why": "Return day not certain"
+   }
+  ]
+ },
+ "Another 48 Hrs. (1990)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Tango & Cash (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Red Heat (1988)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Turner & Hooch (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Stakeout (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Kindergarten Cop (1990)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Police Academy (1984)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Bad Boys (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rush Hour (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rush Hour 2 (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Speed (1994)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Naked Gun: From the Files of Police Squad! (1988)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Jane Spencer, the love interest with a secret",
+    "new": "Jane Spencer, Ludwig's assistant and Frank's love interest",
+    "why": "She has no secret"
+   }
+  ]
+ },
+ "Con Air (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Rock (1996)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Face/Off (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Under Siege (1992)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hot Shots! (1991)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dragnet (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Running Scared (1986)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Hot Fuzz (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "21 Jump Street (2012)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Heat (1995)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Don't get attached to anything you can't leave in thirty seconds.",
+    "new": "Don't let yourself get attached to anything you are not willing to walk out on in thirty seconds flat.",
+    "why": "Misquote of Neil's line"
+   }
+  ]
+ },
+ "Chinatown (1974)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Shawshank Redemption (1994)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "I have a fix for most things. Fifteen years on the inside teaches patience.",
+    "new": "I have a fix for most things. Forty years on the inside teaches patience.",
+    "why": "Red served about forty years"
+   }
+  ]
+ },
+ "The Other Guys (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Super Troopers (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "MacGruber (2010)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The ticking bomb you must disarm in time",
+    "new": null,
+    "why": "Not certain; film centres on a stolen warhead"
+   }
+  ]
+ },
+ "Spy (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Heat (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "22 Jump Street (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Stripes (1981)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Platoon 4",
+    "new": "Fort Arnold",
+    "why": "Platoon number not certain"
+   }
+  ]
+ },
+ "Fletch (1985)": {
+  "status": "ok",
+  "changes": []
+ }
+}

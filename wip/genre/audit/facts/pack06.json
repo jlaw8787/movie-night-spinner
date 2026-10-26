@@ -1,0 +1,404 @@
+{
+ "Kate & Leopold (2001)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[0]",
+    "old": "Brooklyn Bridge, still being finished in 1876",
+    "new": "Brooklyn Bridge, still unfinished in 1876",
+    "why": "bridge opened 1883; unfinished in the film"
+   },
+   {
+    "field": "winks[1]",
+    "old": "The butter commercial that makes Leopold a star",
+    "new": "Leopold walking off the butter commercial set",
+    "why": "he walks off the set; star claim unverified"
+   },
+   {
+    "field": "winks[2]",
+    "old": "Stuart's attic and the hole in time",
+    "new": "Leopold waking up in Stuart's apartment",
+    "why": "it is an apartment, not an attic"
+   },
+   {
+    "field": "winks[3]",
+    "old": "A duke working out how an elevator works",
+    "new": null,
+    "why": "elevator detail unverified"
+   },
+   {
+    "field": "prop.title",
+    "old": "Brooklyn Bridge Opening",
+    "new": "Albany Ball",
+    "why": "bridge did not open in 1876"
+   }
+  ]
+ },
+ "Hitch (2005)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Allegra Cole and Vance, the problem client",
+    "new": "Allegra Cole, the heiress Albert is after",
+    "why": "Vance reference unclear"
+   }
+  ]
+ },
+ "Mystic Pizza (1988)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Everybody in town thinks the sauce is a big secret. It is. Don't ask me, I only work here.",
+    "new": "Everybody in town thinks the sauce is a big secret. It is. Don't ask me.",
+    "why": "Leona owns the place, not 'only works here'"
+   }
+  ]
+ },
+ "True Romance (1993)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Drexl Spivey and the suitcase swap",
+    "new": "Drexl Spivey and the suitcase",
+    "why": "'swap' is not accurate"
+   }
+  ]
+ },
+ "Four Weddings and a Funeral (1994)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Gareth's funeral eulogy",
+    "new": "Matthew reading the poem at Gareth's funeral",
+    "why": "Gareth is the deceased, not the eulogist"
+   }
+  ]
+ },
+ "Crazy Rich Asians (2018)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Eleanor's jade ring",
+    "new": null,
+    "why": "ring is emerald, not jade; unsure of owner"
+   },
+   {
+    "field": "prop.lines[0]",
+    "old": "Rachel Chu, seat 2A",
+    "new": "Rachel Chu, first class",
+    "why": "seat 2A unverified"
+   }
+  ]
+ },
+ "My Best Friend's Wedding (1997)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Lobster dinner at the fancy restaurant",
+    "new": null,
+    "why": "lobster dinner unverified"
+   },
+   {
+    "field": "winks[4]",
+    "old": "The wedding boat on the Chicago River",
+    "new": null,
+    "why": "wedding boat on Chicago River unverified"
+   }
+  ]
+ },
+ "Runaway Bride (1999)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "A mad dash across a field",
+    "new": null,
+    "why": "field dash unverified"
+   }
+  ]
+ },
+ "Sweet Home Alabama (2002)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Bo the dog",
+    "new": null,
+    "why": "dog named Bo unverified"
+   }
+  ]
+ },
+ "50 First Dates (2004)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Ula, Henry's friend and fellow worker",
+    "new": "Ula, Henry's best friend",
+    "why": "Ula is a friend, not a fellow worker"
+   }
+  ]
+ },
+ "Forgetting Sarah Marshall (2008)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Kunu, the waiter with opinions",
+    "new": null,
+    "why": "Kunu role unverified"
+   }
+  ]
+ },
+ "Breakfast at Tiffany's (1961)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Powder room visits, $100",
+    "new": null,
+    "why": "powder room fee is $50 in the film; removed rather than guess"
+   }
+  ]
+ },
+ "Silver Linings Playbook (2012)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[0]",
+    "old": "Pat and Tiffany, entry 12",
+    "new": "Pat and Tiffany, dance entry",
+    "why": "entry number unverified"
+   }
+  ]
+ },
+ "Set It Up (2018)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[0]",
+    "old": "Dinner for Kirsten, Table 1",
+    "new": "Dinner for Kirsten, late as usual",
+    "why": "table number invented"
+   }
+  ]
+ },
+ "Always Be My Maybe (2019)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[0]",
+    "old": "Marcus on guitar",
+    "new": "Marcus and the band",
+    "why": "guitar claim unverified"
+   }
+  ]
+ },
+ "Anyone But You (2023)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "sign",
+    "old": "Welcome to the Wedding of Halle",
+    "new": "Welcome to the Wedding of Claudia and Halle",
+    "why": "wedding is Claudia and Halle, sign was incomplete"
+   },
+   {
+    "field": "winks[2]",
+    "old": "A kangaroo getting in the way",
+    "new": null,
+    "why": "kangaroo unverified"
+   },
+   {
+    "field": "winks[4]",
+    "old": "Claudia and Halle, the bride and her sister",
+    "new": "Claudia and Halle, the couple getting married",
+    "why": "Halle is Bea's sister, Claudia is Pete's sister, they are the couple"
+   }
+  ]
+ },
+ "Ticket to Paradise (2022)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Rescue mission, seats 14A 14B",
+    "new": "Rescue mission to Bali",
+    "why": "seats 14A 14B unverified"
+   }
+  ]
+ },
+ "As Good as It Gets (1997)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "sign",
+    "old": "Table 4 Reserved, Mostly",
+    "new": "Reserved Table, Mostly",
+    "why": "table 4 unverified"
+   }
+  ]
+ },
+ "The Princess Diaries (2001)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "A princess does not slouch, Amelia. She does not eat the centerpiece either. Now try again.",
+    "new": "A princess does not slouch, Amelia. Shoulders back, chin up. Now try again.",
+    "why": "centerpiece joke unverified"
+   }
+  ]
+ },
+ "Jerry Maguire (1996)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "I wrote a memo at three in the morning about caring more and signing less. It cost me my job and a goldfish.",
+    "new": "I wrote a memo at three in the morning about caring more and signing less. It cost me my job. I kept the goldfish.",
+    "why": "he keeps the goldfish"
+   }
+  ]
+ },
+ "The 40-Year-Old Virgin (2005)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The poker night at David's place",
+    "new": "The poker night with David, Jay and Cal",
+    "why": "location at David's place unverified"
+   }
+  ]
+ },
+ "Mother's Day (2016)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "My sister and I each have a secret husband. Mom doesn't know. She's about to turn up in an RV.",
+    "new": "My sister and I each have a secret spouse. Mom doesn't know. She's about to turn up in an RV.",
+    "why": "Gabi's spouse is a woman, not a husband"
+   }
+  ]
+ },
+ "Notting Hill (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Love Actually (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Bridget Jones's Diary (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Proposal (2009)": {
+  "status": "ok",
+  "changes": []
+ },
+ "How to Lose a Guy in 10 Days (2003)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Wedding Singer (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Devil Wears Prada (2006)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Legally Blonde (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "13 Going on 30 (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Roman Holiday (1953)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Some Like It Hot (1959)": {
+  "status": "ok",
+  "changes": []
+ },
+ "It Happened One Night (1934)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Amélie (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Big Sick (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Palm Springs (2020)": {
+  "status": "ok",
+  "changes": []
+ },
+ "To All the Boys I've Loved Before (2018)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Leap Year (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Bull Durham (1988)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Singin' in the Rain (1952)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Barbie (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Top End Wedding (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Stranger than Fiction (2006)": {
+  "status": "ok",
+  "changes": []
+ },
+ "I Love You, Man (2009)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Knocked Up (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Meet the Fockers (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Valentine's Day (2010)": {
+  "status": "ok",
+  "changes": []
+ },
+ "New Year's Eve (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "About Time (2013)": {
+  "status": "ok",
+  "changes": []
+ }
+}

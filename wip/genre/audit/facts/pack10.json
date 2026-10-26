@@ -1,0 +1,248 @@
+{
+ "Wall Street (1987)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Carl Fox, Bud's dad, the Bluestar mechanic",
+    "new": "Carl Fox, Bud's dad, the Bluestar union man",
+    "why": "Carl is a union leader and machinist, 'mechanic' imprecise"
+   }
+  ]
+ },
+ "Arthur (1981)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Pretty Woman (1990)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Zoolander (2001)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Is there more to life than being really, really good looking? I will think about it after the walk off.",
+    "new": "Is there more to life than being really, really, ridiculously good looking? I will think about it after the walk off.",
+    "why": "Real line includes 'ridiculously'"
+   }
+  ]
+ },
+ "Wedding Crashers (2005)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Chazz Reinhold, the rival crasher",
+    "new": null,
+    "why": "Chazz is not a rival to the leads, doubtful"
+   }
+  ]
+ },
+ "The Hangover (2009)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Bridesmaids (2011)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "I'm the maid of honor and I have everything totally under control. Totally. Please ignore the puppies.",
+    "new": "I'm the maid of honor and I have everything totally under control. Totally.",
+    "why": "Puppies at the shower could not be confirmed"
+   }
+  ]
+ },
+ "The Menu (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "John Wick (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "John Wick: Chapter 2 (2017)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.by",
+    "old": "Winston",
+    "new": "Julius",
+    "why": "Winston is not in Rome; Julius manages the Rome Continental"
+   }
+  ]
+ },
+ "John Wick: Chapter 3 Parabellum (2019)": {
+  "status": "ok",
+  "changes": []
+ },
+ "John Wick: Chapter 4 (2023)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Taken (2008)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "venue",
+    "old": "Mills Backyard Birthday",
+    "new": "Kim's Birthday Party",
+    "why": "Party is not at the Mills home or backyard, location unverified"
+   }
+  ]
+ },
+ "Snatch (2000)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[0]",
+    "old": "Fight: Mickey, round one",
+    "new": "Fight: Mickey, round four",
+    "why": "Mickey is told to go down in the fourth round"
+   }
+  ]
+ },
+ "Lock, Stock and Two Smoking Barrels (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ocean's Eleven (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Ocean's Twelve (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Italian Job (1969)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Goldfinger (1964)": {
+  "status": "ok",
+  "changes": []
+ },
+ "GoldenEye (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Casino Royale (2006)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Shaken or stirred? Do I look like I care? Just make it a Vesper and deal the cards.",
+    "new": "Shaken or stirred? Do I look like I give a damn? Just make it a Vesper and deal the cards.",
+    "why": "Real line is 'give a damn'"
+   },
+   {
+    "field": "winks[3]",
+    "old": "The defibrillator in the Aston car",
+    "new": "The defibrillator in the glove box",
+    "why": "Real brand name removed"
+   }
+  ]
+ },
+ "Skyfall (2012)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.title",
+    "old": "Skyfall Key",
+    "new": "Skyfall Lodge Tag",
+    "why": "No key is a plot item in the film"
+   }
+  ]
+ },
+ "Kingsman: The Secret Service (2014)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Mission: Impossible (1996)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Gladiator (2000)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Braveheart (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Titanic (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Moulin Rouge! (2001)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Greatest Showman (2017)": {
+  "status": "ok",
+  "changes": []
+ },
+ "La La Land (2016)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Chicago (2002)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Casablanca (1942)": {
+  "status": "ok",
+  "changes": []
+ },
+ "North by Northwest (1959)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Knives Out (2019)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Ransom's wide sweater scandal",
+    "new": "Ransom's chunky knit sweater",
+    "why": "'Scandal' is not a film event"
+   }
+  ]
+ },
+ "Gladiator II (2024)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "Lucilla returning to Rome",
+    "new": null,
+    "why": "Lucilla is already in Rome; Lucius returns"
+   }
+  ]
+ },
+ "Anchorman 2: The Legend Continues (2013)": {
+  "status": "ok",
+  "changes": []
+ },
+ "A Night at the Roxbury (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Austin Powers: International Man of Mystery (1997)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "I will hold the world to ransom for one million dollars. Yes, Number Two, that sounds like a lot.",
+    "new": "I will hold the world to ransom for one hundred billion dollars. Yes, Number Two, that sounds like a lot.",
+    "why": "Ransom in the film is 100 billion dollars"
+   }
+  ]
+ },
+ "Last Holiday (2006)": {
+  "status": "ok",
+  "changes": []
+ }
+}

@@ -1,0 +1,285 @@
+{
+ "Airplane! (1980)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Los Angeles to Chicago, no landing gear",
+    "new": "Flight 209, Los Angeles to Chicago",
+    "why": "landing gear detail not certain"
+   }
+  ]
+ },
+ "Grease (1978)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Planes, Trains and Automobiles (1987)": {
+  "status": "ok",
+  "changes": []
+ },
+ "National Lampoon's Vacation (1983)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Blues Brothers (1980)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rain Man (1988)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dumb and Dumber (1994)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Tommy Boy (1995)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Groundhog Day (1993)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Fargo (1996)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Caddyshack (1980)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[2]",
+    "old": "Judge Smails and his yacht club talk",
+    "new": null,
+    "why": "vague, not a certain scene"
+   }
+  ]
+ },
+ "Animal House (1978)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Happy Gilmore (1996)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Office Space (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Forrest Gump (1994)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "Mama always said life was like a box of chocolates. You never know which one you'll get.",
+    "new": "Mama always said life was like a box of chocolates. You never know what you're gonna get.",
+    "why": "film line altered"
+   }
+  ]
+ },
+ "Step Brothers (2008)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Est. at the mixer",
+    "new": "Catalina Wine Mixer",
+    "why": "claim about where Prestige Worldwide was founded is doubtful"
+   }
+  ]
+ },
+ "Talladega Nights: The Ballad of Ricky Bobby (2006)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Meet the Parents (2000)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Old School (2003)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "note.text",
+    "old": "We're going streaking through the quad. Frank is ready. Beanie is nervous.",
+    "new": "We're going streaking through the quad. Frank the Tank is ready.",
+    "why": "Beanie nervous not a film detail"
+   },
+   {
+    "field": "winks[4]",
+    "old": "Beanie and the wedding",
+    "new": null,
+    "why": "not certain"
+   }
+  ]
+ },
+ "Dodgeball: A True Underdog Story (2004)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Waitress (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Big Fish (2003)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "The big fish that nobody catches",
+    "new": "The big fish and the wedding ring",
+    "why": "Edward does catch the fish, with his ring"
+   }
+  ]
+ },
+ "Reservoir Dogs (1992)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Top Gun (1986)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Top Gun: Maverick (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Chasing Amy (1997)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dogma (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Clerks II (2006)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "prop.lines[1]",
+    "old": "Shift: 12 hours",
+    "new": "Welcome to Mooby's",
+    "why": "12 hour shift not verified"
+   }
+  ]
+ },
+ "Clerks III (2022)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Blades of Glory (2007)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Semi-Pro (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Kicking & Screaming (2005)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Eurovision Song Contest: The Story of Fire Saga (2020)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Get Hard (2015)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Friendship (2025)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "Antiquities as the other bond",
+    "new": "Antiques as the other bond",
+    "why": "source says antiques"
+   }
+  ]
+ },
+ "Beerfest (2006)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The beer pong style rivalry",
+    "new": null,
+    "why": "vague and unverified"
+   }
+  ]
+ },
+ "Walk Hard: The Dewey Cox Story (2007)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[4]",
+    "old": "The oversized stage guitar",
+    "new": null,
+    "why": "not certain it is in the film"
+   }
+  ]
+ },
+ "Pineapple Express (2008)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Kingpin (1996)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Black Sheep (1996)": {
+  "status": "ok",
+  "changes": []
+ },
+ "The Waterboy (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Major League (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Horrible Bosses (2011)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Strange Brew (1983)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Dirty Work (1998)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Screwed (2000)": {
+  "status": "fixed",
+  "changes": [
+   {
+    "field": "winks[3]",
+    "old": "The failed ransom handoff in the park",
+    "new": "Two kids steal the ransom briefcase",
+    "why": "park not confirmed; kids stealing briefcase is"
+   }
+  ]
+ },
+ "Big Daddy (1999)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Field of Dreams (1989)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Remember the Titans (2000)": {
+  "status": "ok",
+  "changes": []
+ },
+ "Rudy (1993)": {
+  "status": "ok",
+  "changes": []
+ }
+}
