@@ -213,35 +213,37 @@ window.MENU_FORMATS[ID]=ctx=>{
   const mis=E.mis?`text-shadow:3px 2px 0 ${rgba(C.accA,.45)};`:"";
   const up=ty.up?"text-transform:uppercase;":"";
   const url=logoUrl(ctx),title=T(ctx.f.title||"");
-  const fbS=title.length>40?26:title.length>22?34:44;
+  const PO=ph.heroIsPoster;/* poster layout: big whole poster on top, everything else reflowed below it */
+  const fbS=PO?(title.length>40?22:title.length>22?28:36):(title.length>40?26:title.length>22?34:44);
+  const Y=PO?{mat:696,matH:104,lp:706,ven:808,venH:92,dr:906,drH:136,nt:1048,ntH:116,ft:1170}:{mat:610,matH:200,lp:536,ven:676,venH:126,dr:826,drH:204,nt:1040,ntH:120,ft:1166};
   const vlen=String(F.venue).length,vs=vlen>30?36:vlen>18?42:50;
-  const lpDark=`position:absolute;left:50%;top:536px;transform:translateX(-50%) rotate(${TN.tilt*.5}deg);max-width:470px;padding:14px 24px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".8",2,[255,255,255],.07,seed)};border-radius:${E.g===2?"18px":"6px"};box-shadow:0 10px 24px rgba(0,0,0,.45)`;
+  const lpDark=`position:absolute;left:50%;top:${Y.lp}px;transform:translateX(-50%) rotate(${TN.tilt*.5}deg);max-width:470px;padding:${PO?10:14}px 24px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".8",2,[255,255,255],.07,seed)};border-radius:${E.g===2?"18px":"6px"};box-shadow:0 10px 24px rgba(0,0,0,.45)`;
   const lpLight=lpDark.replace(`background-color:${C.dark}`,`background-color:${P.bg}`);
   const drinks=cs.d.length?cs.d:[{n:"House lagoon cooler",note:"Pineapple, lime and crushed ice"}];
   const waterF=hex(P.water);
   const waterBgF=`background-color:${P.water};background-image:${noise(".012 .03",4,mix(waterF,WHITE,.5),.55,seed+2,700)},${noise(".09 .3",2,mix(waterF,WHITE,.7),.35,seed+3,400)};`;
   const front=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
-    ${ph.heroIsPoster?`<div style="position:absolute;left:0;top:0;width:600px;height:610px;${waterBgF}overflow:hidden"></div>
-    <div style="position:absolute;left:131px;top:20px;width:338px;height:507px;box-sizing:border-box;border:7px solid ${toHex(mix(hex(P.bg),[230,205,150],.5))};box-shadow:0 0 0 5px ${rgba(mix(hex(P.water),WHITE,.35),.6)},0 10px 30px rgba(0,0,0,.5);background:${toHex(mix(hex(P.bg),[230,205,150],.5))}"><img crossorigin="anonymous" alt="" src="${ph.hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"></div>`:img(ph.hero,{x:0,y:0,w:600,h:610,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%",
+    ${ph.heroIsPoster?`<div style="position:absolute;left:0;top:0;width:600px;height:${Y.mat}px;${waterBgF}overflow:hidden"></div>
+    <div style="position:absolute;left:74px;top:12px;width:452px;height:672px;box-sizing:border-box;border:6px solid ${toHex(mix(hex(P.bg),[230,205,150],.5))};box-shadow:0 0 0 5px ${rgba(mix(hex(P.water),WHITE,.35),.6)},0 10px 30px rgba(0,0,0,.5);background:${toHex(mix(hex(P.bg),[230,205,150],.5))}"><img crossorigin="anonymous" alt="" src="${ph.hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"></div>`:img(ph.hero,{x:0,y:0,w:600,h:610,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%",
       extra:`<div style="position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(180deg,transparent,${rgba(hex(P.water),.55)})"></div>`})}
-    <div style="position:absolute;left:0;top:610px;width:600px;height:200px;${mat(P,seed)};box-shadow:inset 0 8px 14px rgba(0,0,0,.35),inset 0 -2px 0 ${rgba(BLACK,.25)}"></div>
+    <div style="position:absolute;left:0;top:${Y.mat}px;width:600px;height:${Y.matH}px;${mat(P,seed)};box-shadow:inset 0 8px 14px rgba(0,0,0,.35),inset 0 -2px 0 ${rgba(BLACK,.25)}"></div>
     <div data-lpanel data-dark="${esc(lpDark)}" data-light="${esc(lpLight)}" style="${lpDark}">
-      ${url?`<img data-logo crossorigin="anonymous" src="${url}" alt="" style="display:block;max-width:420px;max-height:92px;object-fit:contain;margin:0 auto">`:""}
-      <div data-title-fb data-box style="${url?"display:none;":""}width:420px;max-height:96px;overflow:hidden;text-align:center"><div data-fs="${fbS}" data-min="20" style="font:${ty.dw} ${fbS}px ${ty.disp};line-height:1.04;color:${C.onDark};${up}">${title}</div></div>
+      ${url?`<img data-logo crossorigin="anonymous" src="${url}" alt="" style="display:block;max-width:420px;max-height:${PO?60:92}px;object-fit:contain;margin:0 auto">`:""}
+      <div data-title-fb data-box style="${url?"display:none;":""}width:420px;max-height:${PO?64:96}px;overflow:hidden;text-align:center"><div data-fs="${fbS}" data-min="20" style="font:${ty.dw} ${fbS}px ${ty.disp};line-height:1.04;color:${C.onDark};${up}">${title}</div></div>
     </div>
-    <div data-box style="position:absolute;left:30px;top:676px;width:540px;height:126px;overflow:hidden;text-align:center;padding:8px 14px 6px;box-sizing:border-box;background:${rgba(hex(P.bg),.9)};border-radius:4px;box-shadow:0 4px 10px rgba(0,0,0,.3)">
+    <div data-box style="position:absolute;left:30px;top:${Y.ven}px;width:540px;height:${Y.venH}px;overflow:hidden;text-align:center;padding:8px 14px 6px;box-sizing:border-box;background:${rgba(hex(P.bg),.9)};border-radius:4px;box-shadow:0 4px 10px rgba(0,0,0,.3)">
       <div data-fs="${vs}" data-min="24" style="font:${ty.dw} ${vs}px ${ty.disp};line-height:1.02;color:${C.ink};${up}${mis}">${T(F.venue)}</div>
       <div data-line data-fs="18" data-min="14" style="margin-top:6px;font:${ty.cw} 18px ${ty.caps};letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;overflow:hidden">${T(F.sign)}</div>
     </div>
-    <div data-box style="position:absolute;left:34px;top:826px;width:532px;height:204px;overflow:hidden">
+    <div data-box style="position:absolute;left:34px;top:${Y.dr}px;width:532px;height:${Y.drH}px;overflow:hidden">
       <div style="display:flex;align-items:baseline;gap:12px"><span data-fs="34" data-min="22" style="font:${ty.dw} 34px ${ty.disp};color:${P.ink};${up}white-space:nowrap">${fam?"Lagoon Coolers":V.bar}</span><span style="flex:1;border-top:3px double ${C.ink}"></span></div>
       ${items(drinks,"d",era,ty,C,true)}
     </div>
-    <div data-box style="position:absolute;left:34px;top:1040px;width:532px;height:120px;overflow:hidden;border-top:1px solid ${rgba(hex(P.ink),.35)};padding-top:8px;box-sizing:border-box">
+    <div data-box style="position:absolute;left:34px;top:${Y.nt}px;width:532px;height:${Y.ntH}px;overflow:hidden;border-top:1px solid ${rgba(hex(P.ink),.35)};padding-top:8px;box-sizing:border-box">
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${V.note}</div>
       <div data-fs="20" data-min="15" style="font:italic ${ty.bw} 20px ${ty.body};line-height:1.24;margin-top:3px">“${T(F.note.text)}” <span data-fs="${ty.sigS}" data-min="18" style="font:${ty.sigS}px ${ty.sig};color:${C.ink};font-style:normal;white-space:nowrap;margin-left:6px">${T(F.note.by)}</span></div>
     </div>
-    <div data-line data-fs="15" data-min="14" style="position:absolute;left:34px;top:1166px;width:532px;font:${ty.bw} 15px ${ty.body};white-space:nowrap;overflow:hidden;opacity:.8;text-align:center">${fam?"Every cooler is alcohol free. ":""}Unfold for the island map. Poster and stills: TMDB.</div>
+    <div data-line data-fs="15" data-min="14" style="position:absolute;left:34px;top:${Y.ft}px;width:532px;font:${ty.bw} 15px ${ty.body};white-space:nowrap;overflow:hidden;opacity:.8;text-align:center">${fam?"Every cooler is alcohol free. ":""}Unfold for the island map. Poster and stills: TMDB.</div>
     ${wearLayer(P,tone,seed,true)}
   </div>`;
   /* back: island map of stills on the lagoon, then the kitchen */

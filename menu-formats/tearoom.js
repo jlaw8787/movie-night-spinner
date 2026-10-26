@@ -36,12 +36,12 @@ function logoPanel(ctx,o){
   const L=ctx.logo,t=clean(ctx.f.title);
   const ts=t.length<=12?o.typeSize:t.length<=24?Math.round(o.typeSize*.78):Math.round(o.typeSize*.6);
   const fb=`<div style="font-family:${o.font};font-weight:800;font-size:${ts}px;line-height:1.05;color:${o.typeInk};text-transform:uppercase;max-width:${o.maxW}px;overflow-wrap:break-word">${esc(t)}</div>`;
-  if(!L||!L[0]||!L[1]||!L[2])return {html:`<div style="${o.wrap};background:${o.light};padding:14px 18px">${fb.replace(o.typeInk,o.lightInk)}</div>`};
+  if(!L||!L[0]||!L[1]||!L[2])return {html:`<div style="${o.wrap};background:${o.light};padding:${o.pad||"14px 18px"}">${fb.replace(o.typeInk,o.lightInk)}</div>`};
   const a=L[1]/L[2];let w=o.maxW,h=w/a;if(h>o.maxH){h=o.maxH;w=h*a}
-  if(h<34)return {html:`<div style="${o.wrap};background:${o.light};padding:14px 18px">${fb.replace(o.typeInk,o.lightInk)}</div>`};
+  if(h<34)return {html:`<div style="${o.wrap};background:${o.light};padding:${o.pad||"14px 18px"}">${fb.replace(o.typeInk,o.lightInk)}</div>`};
   const chk="(function(i){try{var c=document.createElement('canvas'),w=c.width=60,h=c.height=Math.max(6,Math.round(60*i.naturalHeight/i.naturalWidth)),x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){s+=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];n++}}if(n&&s/n<105){i.parentNode.style.background=i.parentNode.getAttribute('data-light')}}catch(e){}})(this)";
   const err="this.style.display='none';this.nextElementSibling.style.display='block'";
-  return {html:`<div data-light="${o.light}" style="${o.wrap};background:${o.dark};padding:14px 18px"><img crossorigin="anonymous" src="${ctx.img(L[0],"w500")}" alt="${esc(t)}" onload="${chk}" onerror="${err}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"><div style="display:none">${fb}</div></div>`};
+  return {html:`<div data-light="${o.light}" style="${o.wrap};background:${o.dark};padding:${o.pad||"14px 18px"}"><img crossorigin="anonymous" src="${ctx.img(L[0],"w500")}" alt="${esc(t)}" onload="${chk}" onerror="${err}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"><div style="display:none">${fb}</div></div>`};
 }
 /* in-page fit: shrink a block's em base until it fits its box, then drop optional blocks, clamp notes, hide notes */
 if(!window.__fmtFitTearoom)window.__fmtFitTearoom=function(t){
@@ -130,13 +130,15 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="margin-top:6px;font:italic 400 17px/1.2 ${B};opacity:.92">The Tea Room, top floor</div></div>`;
   const WX=24,WY=bandH+52,WW=672-2*WX,WH=470;
   const winLabel=`<div data-fitw="24" data-min="16" style="position:absolute;left:${WX}px;width:${WW-200}px;top:${bandH+14}px;text-align:center;white-space:nowrap;overflow:hidden;font-family:${D};font-weight:${E.dw};font-size:24px;line-height:1.1;color:${acc};${up}">${xmas?"Our Christmas windows":"In the windows this season"}</div>`;
-  const logo=logoPanel(ctx,{font:D,typeSize:42,typeInk:"#f7f1e4",lightInk:ink,maxW:posterSrc?224:330,maxH:104,dark:darkPanel,light:"#f7f1e4",
-    wrap:posterSrc?`position:absolute;right:26px;bottom:26px;box-shadow:0 4px 16px rgba(0,0,0,.35);border:2px solid ${E.gilt};border-radius:${E.radius}px;z-index:2`:`position:absolute;left:50%;bottom:-46px;transform:translateX(-50%);box-shadow:0 4px 16px rgba(0,0,0,.35);border:2px solid ${E.gilt};border-radius:${E.radius}px;z-index:2`});
-  const win=`<div style="position:absolute;left:${WX}px;top:${WY}px;width:${WW}px;height:${WH}px">
-    <div style="position:absolute;inset:0;${E.win};box-sizing:border-box;overflow:hidden;background:#111">${photo(s1,posterSrc?"posterL":"still")}<div style="position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16) 0,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 70%,rgba(255,255,255,.08) 100%)"></div></div>
+  const PW=420,PH=630,BW=({P:10,S:12,E:4,M:1})[band(ctx.era||"modern")],RX=24+PW+2*BW+26,RW=672-24-RX;
+  const logo=logoPanel(ctx,{font:D,typeSize:posterSrc?21:42,typeInk:"#f7f1e4",lightInk:ink,maxW:posterSrc?RW-16:330,maxH:posterSrc?120:104,dark:darkPanel,light:"#f7f1e4",pad:posterSrc?"8px":null,
+    wrap:posterSrc?`position:absolute;left:${RX}px;top:${bandH+22}px;width:${RW}px;box-sizing:border-box;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.35);border:2px solid ${E.gilt};border-radius:${E.radius}px;z-index:2`:`position:absolute;left:50%;bottom:-46px;transform:translateX(-50%);box-shadow:0 4px 16px rgba(0,0,0,.35);border:2px solid ${E.gilt};border-radius:${E.radius}px;z-index:2`});
+  const PY=bandH+22;
+  const win=posterSrc?`<div style="position:absolute;left:24px;top:${PY}px;width:${PW+2*BW}px;height:${PH+2*BW}px;${E.win};box-sizing:border-box;overflow:hidden;background:#111"><img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:${pf}"><div style="position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.14) 0,rgba(255,255,255,0) 32%)"></div></div>${logo.html}`:`<div style="position:absolute;left:${WX}px;top:${WY}px;width:${WW}px;height:${WH}px">
+    <div style="position:absolute;inset:0;${E.win};box-sizing:border-box;overflow:hidden;background:#111">${photo(s1,"still")}<div style="position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16) 0,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 70%,rgba(255,255,255,.08) 100%)"></div></div>
     ${logo.html}</div>`;
   /* gift tag: a paper tag with a punched eyelet, type only */
-  const tag=`<div style="position:absolute;right:14px;top:${WY-30}px;width:178px;transform:rotate(${T.tilt}deg);transform-origin:50% 0;z-index:3;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))">
+  const tag=`<div style="position:absolute;${posterSrc?`left:${RX+4}px;top:${PY+250}px;width:${RW-8}px`:`right:14px;top:${WY-30}px;width:178px`};transform:rotate(${T.tilt}deg);transform-origin:50% 0;z-index:3;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))">
     <div style="background:${E.tag};clip-path:polygon(22% 0,78% 0,100% 13%,100% 100%,0 100%,0 13%);padding:40px 14px 14px;text-align:center;color:#1d1a16;position:relative">
       <div style="position:absolute;left:50%;top:12px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:${paper};box-shadow:inset 0 0 0 2px rgba(0,0,0,.25)"></div>
       <div style="font:600 14px/1.2 ${B};letter-spacing:.2em;text-transform:uppercase">To</div>
@@ -146,7 +148,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-fitw="26" data-min="18" style="font-family:'Great Vibes',cursive;font-size:26px;line-height:1.15;white-space:nowrap;overflow:hidden">${esc(by)}</div>
       <div style="margin-top:4px;font:600 14px/1.2 ${B};letter-spacing:.14em">No. ${esc(num)}</div></div></div>`;
   const note=fl&&fl.note&&clean(fl.note.text);
-  const NY=WY+WH+(posterSrc?34:64);
+  const NY=posterSrc?PY+PH+2*BW+16:WY+WH+64;
   const noteHtml=`<div data-fit="23" style="position:absolute;left:48px;right:48px;top:${NY}px;height:${1056-NY-92}px;overflow:hidden;text-align:center;font-size:23px;display:flex;flex-direction:column;justify-content:center">
     <div style="font:600 max(14px,.66em)/1.2 ${B};letter-spacing:.2em;text-transform:uppercase;color:${acc}">A note from ${esc(by)}</div>
     <div style="font-family:${B};font-style:italic;font-size:max(16px,1em);line-height:1.35;color:${ink};margin-top:.3em">"${esc(note||"Do come up for tea. Coats on the stand, parcels under the table, and the cake trolley comes round twice.")}"</div>
@@ -156,7 +158,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div data-fitw="15" data-min="14" style="font:italic 400 15px/1.3 ${B};opacity:.85;white-space:nowrap;overflow:hidden">${esc(T.kick)}</div></div>`;
   const front=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:8px;${E.frame};pointer-events:none"></div>
-    ${bandHtml}${winLabel}${win}${tag}${noteHtml}${frontFoot}${fitImg()}</div>`;
+    ${bandHtml}${posterSrc?"":winLabel}${win}${tag}${noteHtml}${frontFoot}${fitImg()}</div>`;
 
   /* ---------- back: luncheon list, second still, prop, cue ---------- */
   const m=ctx.menu||{};
