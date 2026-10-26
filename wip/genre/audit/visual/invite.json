@@ -1,0 +1,240 @@
+{
+ "An American Tail (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Anyone But You (2023)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "safety",
+    "detail": "hero is shirtless man and woman in bikini, too revealing for a dinner invite",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Avengers: Age of Ultron (2015)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is composite poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Big Fish (2003)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Breakfast at Tiffany's (1961)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "second still mostly black, subject tiny and dark",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Coco (2017)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Doctor Strange in the Multiverse of Madness (2022)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero looks like poster key art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second still very dark",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Four Weddings and a Funeral (1994)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "blue script logo low contrast on white panel",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Friendship (2025)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "second still very dark, little visible",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Harry Potter and the Goblet of Fire (2005)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, same image as second still",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "duplicate of hero poster crop",
+    "fix": "block-second"
+   },
+   {
+    "type": "logo",
+    "detail": "dark logo on dark sky, weak contrast",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Harry Potter and the Half-Blood Prince (2009)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "dark logo on dark panel, weak contrast",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Kill Bill: Vol. 2 (2004)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Midsommar (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art (maypole)",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "My Best Friend's Wedding (1997)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Sixteen Candles (1984)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "second still is cut-out figures on white, poster-like and small",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Star Wars: The Rise of Skywalker (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Step Brothers (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster art and logo covers the actors' chins",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Taken (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero looks like poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Farewell (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is staged poster-style group portrait",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Lost City (2022)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero looks like poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Muppet Christmas Carol (1992)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Night Before (2015)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster art, faces cropped at edges",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Wedding Singer (1998)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster-style art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "This Is the End (2013)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Wedding Crashers (2005)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is a blank black box, no image",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "logo panel is blank black, no logo",
+    "fix": "block-logo"
+   },
+   {
+    "type": "layout",
+    "detail": "large dead dark area on invite face",
+    "fix": "layout"
+   }
+  ]
+ }
+}

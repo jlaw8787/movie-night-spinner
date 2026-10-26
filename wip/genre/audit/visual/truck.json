@@ -1,0 +1,292 @@
+{
+ "Aladdin (1992)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Always Be My Maybe (2019)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Black Panther (2018)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "cast poster composite with city art, poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Bolt (2008)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Boyz n the Hood (1991)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Can't Buy Me Love (1987)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "dark blue logo low contrast on dark",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "poster-style crop",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Car Wash (1976)": {
+  "status": "ok",
+  "issues": []
+ },
+ "City Slickers (1991)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "painted poster illustration, poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Django Unchained (2012)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Dude, Where's My Car? (2000)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Dumb and Dumber (1994)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Get Hard (2015)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "faces cropped at edge, marker on face; face cut through eyes",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Harold & Kumar Go to White Castle (2004)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Hot Rod (2007)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Inspector Gadget (1999)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney mark in logo",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Iron Man 3 (2013)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "Marvel mark in logo",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Jay and Silent Bob Strike Back (2001)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster collage with title text bleeding at top",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "tilted logo small and low contrast",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Kenny (2006)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "white cutout promo shot, not a frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Klaus (2019)": {
+  "status": "ok",
+  "issues": []
+ },
+ "MacGruber (2010)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "grey logo low contrast on dark panel",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Mad Max Beyond Thunderdome (1985)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "painted poster art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Nope (2022)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Oliver & Company (1988)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney mark in logo",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Once Upon a Time in Mexico (2003)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame, exposed cleavage with knife",
+    "fix": "block-hero"
+   },
+   {
+    "type": "safety",
+    "detail": "sexualised poster pose, wrong for a food truck menu",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Peter Rabbit 2: The Runaway (2021)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Rumble in the Bronx (1995)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster crop with title letters visible behind head",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Short Circuit (1986)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "painted poster art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Smokey and the Bandit (1977)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "logo dark on dark, hard to read",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Stakeout (1987)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Star Wars: Episode I - The Phantom Menace (1999)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Hobbit: The Desolation of Smaug (2013)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Transformers (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster with split composite",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Tremors (1990)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Venom (2018)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Wallace & Gromit: The Curse of the Were-Rabbit (2005)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Willow (1988)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "painted poster art",
+    "fix": "block-hero"
+   }
+  ]
+ }
+}

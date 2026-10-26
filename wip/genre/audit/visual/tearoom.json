@@ -1,0 +1,156 @@
+{
+ "Alice in Wonderland (1951)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Batman Returns (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster style cast montage",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "stylised graphic on white, clip-art look",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Bridesmaids (2011)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Cinderella (1950)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "small Disney mark above logo",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Crouching Tiger, Hidden Dragon (2000)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "stylised sepia poster art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Frozen (2013)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Ghost (1990)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "safety",
+    "detail": "shirtless embrace on hero, too sensual for a family tearoom",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Ladies in Black (2018)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Mary Poppins (1964)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Miracle on 34th Street (1947)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Miracle on 34th Street (1994)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "dark, tiny figure, mostly empty",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Noelle (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney mark on logo",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "dark, subject small at edge",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "cut-out on white, promo",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Paddington (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Peter Rabbit (2018)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Rush Hour (1998)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Snow White and the Seven Dwarfs (1937)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Tangled (2010)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "tight crop of eyes only",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo montage, looks like poster",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Princess Diaries (2001)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney mark on logo",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "posed promo, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Up (2009)": {
+  "status": "ok",
+  "issues": []
+ }
+}

@@ -1,0 +1,228 @@
+{
+ "Amélie (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Another 48 Hrs. (1990)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Barbershop (2002)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Beauty and the Beast (2017)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "brown logo low contrast on dark panel",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Beverly Hills Cop (1984)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Big Hero 6 (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Clerks III (2022)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Deadpool & Wolverine (2024)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster-style cutout on white gradient",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Despicable Me 2 (2013)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Easy A (2010)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "safety",
+    "detail": "hero shows woman in corset, suggestive for an all-ages cafe",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Encanto (2021)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Heat (1995)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster-style composite",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "large empty black area left of hero",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Juno (2007)": {
+  "status": "ok",
+  "issues": []
+ },
+ "La La Land (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Last Christmas (2019)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Muriel's Wedding (1994)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Night at the Museum (2006)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Notting Hill (1999)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster composite, cyan face crop",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Runaway Bride (1999)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Serendipity (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Silver Linings Playbook (2012)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Stranger than Fiction (2006)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Babadook (2014)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "silhouette on white, poster art not a frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Devil Wears Prada (2006)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "cutout poster art, no faces",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "dark red Devil text low contrast",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "The Grinch (2018)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Wog Boy (2000)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "licence plate image, not a film frame; empty black area",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Toy Story 4 (2019)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Unbreakable (2000)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "too dark, face barely visible",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Valentine's Day (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Venom: Let There Be Carnage (2021)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "grey logo low contrast on dark",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Wish (2023)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "blue logo low contrast on dark",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Zoolander (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Zootopia (2016)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney wordmark above title",
+    "fix": "block-logo"
+   }
+  ]
+ }
+}

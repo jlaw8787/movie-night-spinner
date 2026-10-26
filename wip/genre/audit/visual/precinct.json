@@ -1,0 +1,112 @@
+{
+ "21 Jump Street (2012)": {
+  "status": "ok",
+  "issues": []
+ },
+ "48 Hrs. (1982)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "safety",
+    "detail": "rude gesture (middle finger)",
+    "fix": "block-second"
+   },
+   {
+    "type": "second-still",
+    "detail": "painted poster art, not a frame",
+    "fix": "block-second"
+   },
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Ant-Man and the Wasp (2018)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "poster key art collage",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Bad Boys (1995)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Beverly Hills Cop II (1987)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "near duplicate of hero poster art",
+    "fix": "block-second"
+   },
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Dirty Work (1998)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster cutout on white",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Mad Max (1979)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "painted poster illustration",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "tiny logo in small white box",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Reservoir Dogs (1992)": {
+  "status": "ok",
+  "issues": []
+ },
+ "RoboCop (1987)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Naked Gun: From the Files of Police Squad! (1988)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "cartoon poster illustration, flat clip art look",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Other Guys (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Silence of the Lambs (1991)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ }
+}

@@ -1,0 +1,130 @@
+{
+ "Airplane! (1980)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero cockpit frame very dark",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second is flat airplane clip art, rule 25",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Captain America: Civil War (2016)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Marvel Studios text on logo",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Con Air (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "logo dark on dark, low legibility",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Die Hard 2 (1990)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Four Christmases (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "studio promo photo on white, not a frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Hot Shots! (1991)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Jackie Brown (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "blurred fist with raised thumb in foreground, could read as a gesture",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second is airbrushed illustration, not a frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Love Actually (2003)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster collage with ribbon",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Meet the Robinsons (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is washed orange gradient, characters tiny",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "Disney name on logo",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "The Fifth Element (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "logo glitched, unreadable",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Wall-E (2008)": {
+  "status": "ok",
+  "issues": []
+ }
+}

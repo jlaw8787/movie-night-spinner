@@ -1,0 +1,182 @@
+{
+ "Annie (1982)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Arthur (1981)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Batman & Robin (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is poster art composite, not a frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Billy Madison (1995)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is poster-style illustration",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Boomerang (1992)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Casper (1995)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Dirty Dancing (1987)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Pale pink script logo on white panel is barely readable",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Goldfinger (1964)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Inception (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Insidious (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "John Wick (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Lost in Translation (2003)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Mouse Hunt (1997)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Paddington in Peru (2024)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Pretty Woman (1990)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "Second still is a cutout on blank white, dead space and looks broken",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Richie Rich (1994)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is poster key art with composite layout",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Rosemary's Baby (1968)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is dark green and the face is cropped through the eyes",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Shrek 2 (2004)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Some Like It Hot (1959)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Dark Knight (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Dark logo on a dark hero panel, low contrast and small",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "The Exorcist (1973)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Hangover (2009)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is a black block with a sliver of a face cropped at the top; dead area",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Incredibles 2 (2018)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Mummy Returns (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Others (2001)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is almost entirely black, only a sliver of an eye shows; dead area",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Shining (1980)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Water Diviner (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Witches (1990)": {
+  "status": "ok",
+  "issues": []
+ },
+ "White Christmas (1954)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Wicked: For Good (2025)": {
+  "status": "ok",
+  "issues": []
+ }
+}

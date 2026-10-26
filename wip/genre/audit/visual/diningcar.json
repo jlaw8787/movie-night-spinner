@@ -1,0 +1,127 @@
+{
+ "Black Sheep (1996)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "side strip crops face through the eye",
+    "fix": "block-second"
+   },
+   {
+    "type": "layout",
+    "detail": "menu panel has large blank area at bottom, well over 15 percent",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Collateral (2004)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster with title text baked in",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "side strip crops face in half",
+    "fix": "block-second"
+   },
+   {
+    "type": "layout",
+    "detail": "menu panel has large blank area at bottom, well over 15 percent",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Forrest Gump (1994)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster with tagline and title text",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "side strip crops face in half",
+    "fix": "block-second"
+   },
+   {
+    "type": "layout",
+    "detail": "menu panel has large blank area at bottom, well over 15 percent",
+    "fix": "layout"
+   }
+  ]
+ },
+ "North by Northwest (1959)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "blank area on menu panel",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Romancing the Stone (1984)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "painted poster art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "menu panel has large blank area at bottom, well over 15 percent",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Speed (1994)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Polar Express (2004)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster art with text",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "blank area on menu panel",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Train to Busan (2016)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster style promo image",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "menu panel has large blank area at bottom, well over 15 percent",
+    "fix": "layout"
+   }
+  ]
+ }
+}

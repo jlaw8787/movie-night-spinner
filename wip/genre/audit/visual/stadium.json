@@ -1,0 +1,219 @@
+{
+ "BASEketball (1998)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Blades of Glory (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Bloodsport (1988)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Bull Durham (1988)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Captain America: The First Avenger (2011)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, greyscale",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "plain text, not a logo; Marvel title block",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Cars 2 (2011)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "tiny logo in big empty white box",
+    "fix": "block-logo"
+   },
+   {
+    "type": "layout",
+    "detail": "logo panel mostly empty",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Dodgeball: A True Underdog Story (2004)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Happy Gilmore (1996)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Hercules (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "flat animated promo art, rule 25",
+    "fix": "block-second"
+   },
+   {
+    "type": "logo",
+    "detail": "Disney-style flat text logo",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Iron Man 2 (2010)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "Marvel title block as plain text",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Little Giants (1994)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "tiny logo in white box",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Next Goal Wins (2023)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "cyan logo low contrast on white",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Phar Lap (1983)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "small logo low contrast",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "B&W archive photo, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Rocky (1976)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Semi-Pro (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "close promo crop, poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Space Jam (1996)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "small green logo in big empty white box",
+    "fix": "block-logo"
+   },
+   {
+    "type": "layout",
+    "detail": "logo panel mostly empty",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Talladega Nights: The Ballad of Ricky Bobby (2006)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "tiny logo, low contrast on dark",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "The Mighty Ducks (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "cast group shot, poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Thor: Ragnarok (2017)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "fit",
+    "detail": "1980s era for 2017 film",
+    "fix": "format:stadium era:modern tone:glossy"
+   }
+  ]
+ }
+}

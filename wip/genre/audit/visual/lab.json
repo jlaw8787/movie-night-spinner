@@ -1,0 +1,220 @@
+{
+ "Ant-Man (2015)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Austin Powers: International Man of Mystery (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with union jack and logo, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Despicable Me (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Face/Off (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "dark blue logo on dark panel, low contrast",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Fantastic Beasts and Where to Find Them (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Flubber (1997)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Furiosa: A Mad Max Saga (2024)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Ghostbusters (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Harry Potter and the Deathly Hallows: Part 2 (2011)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Hellboy (2004)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Hereditary (2018)": {
+  "status": "ok",
+  "issues": []
+ },
+ "I Am Legend (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Independence Day (1996)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Inside Out (2015)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Jurassic World Dominion (2022)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with title text baked in",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Mad Max 2 (1981)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "dark red logo on dark red panel, hard to read",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Men in Black II (2002)": {
+  "status": "ok",
+  "issues": []
+ },
+ "National Treasure (2004)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Oppenheimer (2023)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "logo wraps as OPPENHEI / MER",
+    "fix": "block-logo"
+   },
+   {
+    "type": "layout",
+    "detail": "badge name clipped: KITTY OPPENHEIME",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Saw (2004)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo art on white, big empty white area",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "badge name clipped: DR. LAWRENCE GORDO",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Spy (2015)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art on white background",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Amazing Spider-Man (2012)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with title text baked in",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Breakfast Club (1985)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Dish (2000)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Fly (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Martian (2015)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Thing (1982)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Thunderbolts* (2025)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Total Recall (1990)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Watchmen (2009)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster-style smiley badge art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Young Frankenstein (1974)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art collage",
+    "fix": "block-hero"
+   }
+  ]
+ }
+}

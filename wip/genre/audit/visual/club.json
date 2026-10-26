@@ -1,0 +1,212 @@
+{
+ "A Night at the Roxbury (1998)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Casablanca (1942)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Cruella (2021)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney mark above the Cruella wordmark",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "Hero is dark key-art crop, face half hidden by black hair, reads as poster",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Desperado (1995)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Dick Tracy (1990)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Fright Night (1985)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is painted poster art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "GoldenEye (1995)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "Second still is a poster-style collage with composited helicopter and fire",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Harlem Nights (1989)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Indiana Jones and the Temple of Doom (1984)": {
+  "status": "ok",
+  "issues": []
+ },
+ "John Wick: Chapter 3 Parabellum (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "VIP card overlaps the end of the quote and clips the signature",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Joker (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is the poster close-up, face cropped at the top through the forehead and very dark",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "KPop Demon Hunters (2025)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Kill Bill: Vol. 1 (2003)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Megamind (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Moulin Rouge! (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "New Year's Eve (2011)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is a poster strip of headshots with big empty brown bands above and between rows",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "Dead brown area above and between the face strips, over 15 percent",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Ocean's Eleven (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Office Christmas Party (2016)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is a dim empty office table with no faces",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Popstar: Never Stop Never Stopping (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Pretty in Pink (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Rush Hour 2 (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Sinners (2025)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is a monochrome poster group shot with circle graphic, key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Soul (2020)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Small blue and yellow Soul logo is hard to read on its dark panel",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Star Wars: Episode III - Revenge of the Sith (2005)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero and second still are red poster-style montages, soft and murky",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Batman (2022)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is red poster art silhouette, no readable face",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Five Heartbeats (1991)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Mask (1994)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Rocky Horror Picture Show (1975)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Sapphires (2012)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Terminator (1984)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Tron: Legacy (2010)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is poster key art, figure tiny against light beam",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Walk Hard: The Dewey Cox Story (2007)": {
+  "status": "ok",
+  "issues": []
+ }
+}

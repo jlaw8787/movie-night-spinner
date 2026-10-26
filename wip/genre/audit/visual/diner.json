@@ -1,0 +1,243 @@
+{
+ "As Good as It Gets (1997)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Back to the Future Part II (1989)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is collage poster key art with lightning effects",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Bill & Ted's Excellent Adventure (1989)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Cars (2006)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Cloudy with a Chance of Meatballs (2009)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Dazed and Confused (1993)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is illustrated poster art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Demolition Man (1993)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is dark, soft poster-style two-face art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Dragnet (1987)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "Three-panel face; third panel has large dead empty area and very small menu text",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Ghostbusters: Afterlife (2021)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Grease (1978)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "Second still is poster art with printed text",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Groundhog Day (1993)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Halloween (1978)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Lethal Weapon 3 (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is posed poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Little Shop of Horrors (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Man of Steel (2013)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Men in Black (1997)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Men in Black 3 (2012)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Million Dollar Baby (2004)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Mr. Deeds (2002)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Rocky III (1982)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Shaft (1971)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Stand by Me (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Star Wars: Episode II - Attack of the Clones (2002)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is poster collage",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Super Troopers (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Adventures of Priscilla, Queen of the Desert (1994)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Birds (1963)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is illustrated poster art on white",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "Second still is poster-style art, not a clean frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "The Blues Brothers (1980)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Emperor's New Groove (2000)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is poster key art cutout",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Flash (2023)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Iron Giant (1999)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Muppets Take Manhattan (1984)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Rocketeer (1991)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is stylised poster art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "Second still is stylised art helmet, not a frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "The Sixth Sense (1999)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Thor (2011)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Uncle Buck (1989)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is split poster art of two images, reads as collage",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Waitress (2007)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Wreck-It Ralph (2012)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "Hero is promo group art with licensed cameos",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "Right menu column has large dead area under fountain",
+    "fix": "layout"
+   }
+  ]
+ }
+}

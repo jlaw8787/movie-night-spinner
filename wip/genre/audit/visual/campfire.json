@@ -1,0 +1,407 @@
+{
+ "A Minecraft Movie (2025)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is a game-world render, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "A Quiet Place (2018)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Addams Family Values (1993)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Arrival (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Avengers: Infinity War (2018)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second still is poster key art, not a film frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Bambi (1942)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Beneath Hill 60 (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Braveheart (1995)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Brother Bear (2003)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Butch Cassidy and the Sundance Kid (1969)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero looks like painted poster art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Cliffhanger (1993)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second still is poster key art, not a film frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Close Encounters of the Third Kind (1977)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Cool Runnings (1993)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney name visible on logo",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Crocodile Dundee II (1988)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is illustrated poster art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second still is poster key art, not a film frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Dune: Part Two (2024)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "logo dark on dark panel, barely readable",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "E.T. the Extra-Terrestrial (1982)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is the poster image",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Encino Man (1992)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Frozen II (2019)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Gallipoli (1981)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Harry Potter and the Deathly Hallows: Part 1 (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Honey, I Shrunk the Kids (1989)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney name visible on logo",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Hunt for the Wilderpeople (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "IT (2017)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Ice Age (2002)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Jumanji: Welcome to the Jungle (2017)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Jurassic Park III (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Logan (2017)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "very dark, hard to read",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Night of the Living Dead (1968)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "nearly black and gory, unclear frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Peter Pan (1953)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Pocahontas (1995)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Predator (1987)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Robin Hood (1973)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Role Models (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo shot with poster text visible, white washed",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Seabiscuit (2003)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Shang-Chi and the Legend of the Ten Rings (2021)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second still is poster key art, not a film frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Shrek (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Sleeping Beauty (1959)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney name visible on logo",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Star Wars: The Last Jedi (2017)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Tarzan (1999)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Chronicles of Narnia: Prince Caspian (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Empire Strikes Back (1980)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Good Dinosaur (2015)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Great Outdoors (1988)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is painted poster art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Jungle Book (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Lighthorsemen (1987)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Mummy (1999)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is murky, too dark and blurry, unreadable face",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Parent Trap (1998)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney name visible and logo muddy over stripe",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "The Proposal (2009)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Waterboy (1998)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "dark frame with large black area on right",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Tropic Thunder (2008)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Wet Hot American Summer (2001)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is flat illustrated art, rule 25",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second is flat illustrated art, rule 25",
+    "fix": "block-second"
+   },
+   {
+    "type": "logo",
+    "detail": "logo cramped, lines overlap",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Wolf Creek (2005)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "safety",
+    "detail": "bloodied woman on road, too grim for a camp card",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "X-Men Origins: Wolverine (2009)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second still is poster key art, not a film frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Young Guns (1988)": {
+  "status": "ok",
+  "issues": []
+ }
+}

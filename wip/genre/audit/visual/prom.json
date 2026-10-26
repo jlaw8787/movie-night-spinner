@@ -1,0 +1,167 @@
+{
+ "13 Going on 30 (2004)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "logo faint and clipped on dark overlay",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "American Pie (1999)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo cutout in bikinis and boxers, poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "safety",
+    "detail": "near-nude promo shot, bikinis, not suitable for prom menu",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "red logo low contrast, clipped on grey box",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Animal House (1978)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Barbie (2023)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Boy (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Carrie (1976)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame with title text across top",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Footloose (1984)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "abstract mosaic poster art, no readable face",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "House Party (1990)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "purple logo on purple, hard to read",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Legally Blonde (2001)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "logo small and low contrast",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "poster promo shot",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Monsters University (2013)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "logo low contrast over image, clipped",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "promo render art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Nativity! (2009)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "brown logo on brown overlay, hard to read",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Neighbors (2014)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "dark red logo on dark overlay, hard to read",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "promo shot",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Old School (2003)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Strictly Ballroom (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "face half covered, poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Superbad (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo shot, poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Wayne's World (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "logo collides with film frame and NOW SHOWING tag",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Weird Science (1985)": {
+  "status": "ok",
+  "issues": []
+ }
+}

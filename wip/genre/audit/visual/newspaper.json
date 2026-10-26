@@ -1,0 +1,64 @@
+{
+ "Anchorman 2: The Legend Continues (2013)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Captain America: The Winter Soldier (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Chinatown (1974)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Clerks (1994)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Fletch (1985)": {
+  "status": "ok",
+  "issues": []
+ },
+ "It's a Wonderful Life (1946)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Newsies (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "Disney brand shown above title",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "hero is a washed-out grey frame, soft and low contrast",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Spider-Man 3 (2007)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Superman (1978)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Superman (2025)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "blurry gradient key art, no clear subject",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second still is poster composite",
+    "fix": "block-second"
+   }
+  ]
+ }
+}
