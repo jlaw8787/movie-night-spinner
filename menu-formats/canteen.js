@@ -188,13 +188,17 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="margin-bottom:calc(6px*var(--k));font:700 max(14px,calc(17px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${cAcc}">${esc(C[k])}</div>${I[k].map(row).join("")}</div>`:"";
   /* compartments stack full width (the tray column is too narrow to split without one word per line); each grows to share the spare depth */
   const trayInner=["m","s","w","d"].map(k=>comp(k,1)).filter(Boolean).map(x=>`<div style="display:flex;flex:${1} 1 auto">${x}</div>`).join("");
+  /* first-paint estimate of the tray scale, so the card is close to fitted before the fitter runs */
+  const lines=(t,cpl)=>Math.max(1,Math.ceil(String(t||"").length/cpl));
+  const estTray=["m","s","w","d"].filter(k=>I[k].length).reduce((h,k)=>h+12+46+I[k].reduce((a,it)=>a+lines(it.n,19)*28+(it.note?Math.min(2,lines(it.note,34))*24+2:0)+8,0),0);
+  const k0=Math.max(.68,Math.min(1,Math.floor(536/estTray*100)/100));
   const trayBox=`<div style="position:absolute;left:634px;top:198px;width:408px;height:560px;box-sizing:border-box;padding:12px;background:${tray};background-image:${gi===3?"linear-gradient(135deg,rgba(255,255,255,.35),rgba(255,255,255,0) 40%,rgba(0,0,0,.06)),":""}${noise(.9,.06,"#ffffff",2)};border-radius:${g.radius+10}px;box-shadow:0 6px 16px rgba(0,0,0,.3),inset 0 2px 0 rgba(255,255,255,.4)">
-    <div ${A}-box style="width:100%;height:100%;overflow:hidden;--k:1;display:flex;flex-direction:column;gap:12px">${trayInner}</div></div>`;
+    <div ${A}-box style="width:100%;height:100%;overflow:hidden;--k:${k0};display:flex;flex-direction:column;gap:12px">${trayInner}</div></div>`;
 
   const head=`<div ${A}-text="17" ${A}-lo="14" style="position:absolute;left:640px;width:396px;top:84px;height:24px;overflow:hidden;white-space:nowrap;color:${acc};font:700 17px/24px ${g.body};letter-spacing:.2em;text-transform:uppercase">${esc(sign)}</div>
     <div ${A}-text="44" ${A}-lo="20" style="position:absolute;left:640px;width:396px;top:110px;height:82px;overflow:hidden;display:flex;align-items:center;color:${ink};font:${g.dw} 44px/1 ${g.disp};${gi===2?"font-style:italic;":""}">${esc(venue)}</div>`;
   const fine=`<div ${A}-box ${A}-min=".93" style="position:absolute;left:640px;width:396px;top:764px;height:44px;overflow:hidden;--k:1;color:${mix(ink,paper,.3)};font:500 max(14px,calc(15px*var(--k)))/1.3 ${g.body}">
-    <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]&&winks[4].length<=44?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
+    <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]&&winks[4].length<=44&&(voice[0].length+winks[4].length+60+(fam?25:0)+String(number).length)<=102?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
 
   const face=`<div ${A}-face style="position:absolute;inset:0;background-color:${paper};background-image:${tex};overflow:hidden;font-family:${g.body}">
     ${hero}${strip}${logoPanel}${ticket}${noteCard}${propCard}${head}${trayBox}${fine}${gilt}

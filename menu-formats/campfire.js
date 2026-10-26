@@ -1,5 +1,41 @@
 /* Format: campfire. Registers window.MENU_FORMATS["campfire"]. Inline styles only; a post-mount fit pass shrinks type so nothing spills. Built for the Movie Night Spinner format library. */
 (()=>{
+/* ---- lift helpers (identical block in cafe, bistro, motel, airline, campfire) ----
+   trim: crops baked-in letterbox bars and dead flat edges off a still, then cover-fits what is left.
+   logo: scores a title logo against a dark and a light panel (20th percentile contrast, so multicolour
+   logos read in every part) and returns the better panel; a weak best score gets a fine halo, never a recolour. */
+if(!window.__fmtLift||window.__fmtLift.v<2)window.__fmtLift={v:2,
+  px(img,w){const cv=document.createElement("canvas");cv.width=w;cv.height=Math.max(8,Math.round(w*img.naturalHeight/img.naturalWidth));
+    const cx=cv.getContext("2d");cx.drawImage(img,0,0,cv.width,cv.height);return{d:cx.getImageData(0,0,cv.width,cv.height).data,w:cv.width,h:cv.height}},
+  trim(img,tries){try{
+    if(!img.naturalWidth||img.dataset.trim==="1")return;
+    const box=img.parentElement,bw=+img.dataset.bw||box.clientWidth,bh=+img.dataset.bh||box.clientHeight;
+    if(!bw||!bh){if((tries||0)<6)setTimeout(()=>window.__fmtLift.trim(img,(tries||0)+1),400);return}
+    img.dataset.trim="1";
+    const{d,w,h}=window.__fmtLift.px(img,160),L=(x,y)=>{const i=(y*w+x)*4;return .2126*d[i]+.7152*d[i+1]+.0722*d[i+2]};
+    const dead=(n,get)=>{let dk=0,s=0,s2=0;for(let j=0;j<n;j++){const l=get(j);if(l<28)dk++;s+=l;s2+=l*l}const m=s/n,v=s2/n-m*m;return dk/n>.94||(dk/n>.74&&m<34)||(v<30&&(m<46||m>238))};
+    const col=x=>dead(h,y=>L(x,y)),row=y=>dead(w,x=>L(x,y));
+    let l=0,r=w-1,t=0,b=h-1;
+    while(l<w*.42&&col(l))l++;while(r>w*.58&&col(r))r--;while(t<h*.3&&row(t))t++;while(b>h*.7&&row(b))b--;
+    if(l<2&&w-1-r<2&&t<2&&h-1-b<2)return;
+    l=l?l+1:0;t=t?t+1:0;r=r<w-1?r-1:r;b=b<h-1?b-1:b;
+    const kx=img.naturalWidth/w,ky=img.naturalHeight/h,x0=l*kx,y0=t*ky,cw=(r+1)*kx-x0,ch=(b+1)*ky-y0;
+    const s=Math.max(bw/cw,bh/ch),pp=(getComputedStyle(img).objectPosition||"50% 40%").split(" ").map(v=>/%$/.test(v)?parseFloat(v)/100:v==="center"?.5:v==="top"||v==="left"?0:v==="bottom"||v==="right"?1:.5);
+    const fx=pp[0]==null?.5:pp[0],fy=pp[1]==null?.4:pp[1];
+    Object.assign(img.style,{objectFit:"fill",objectPosition:"0 0",inset:"auto",right:"auto",bottom:"auto",maxWidth:"none",maxHeight:"none",
+      left:(-x0*s+(bw-cw*s)*fx).toFixed(1)+"px",top:(-y0*s+(bh-ch*s)*fy).toFixed(1)+"px",width:(img.naturalWidth*s).toFixed(1)+"px",height:(img.naturalHeight*s).toFixed(1)+"px"});
+  }catch(e){}},
+  cors(img){if(img.crossOrigin){img.removeAttribute("crossorigin");img.dataset.trim="1";img.src=img.src}},
+  rl(l){l/=255;return l<=.03928?l/12.92:Math.pow((l+.055)/1.055,2.4)},
+  logo(img,darkLum,lightLum){try{
+    const{d}=window.__fmtLift.px(img,120),ls=[];
+    for(let i=0;i<d.length;i+=4)if(d[i+3]>140)ls.push(.2126*window.__fmtLift.rl(d[i])+.7152*window.__fmtLift.rl(d[i+1])+.0722*window.__fmtLift.rl(d[i+2]));
+    if(!ls.length)return null;
+    const sc=P=>{const c=ls.map(x=>(Math.max(x,P)+.05)/(Math.min(x,P)+.05)).sort((a,b)=>a-b);return c[Math.floor(c.length*.2)]};
+    const sd=sc(darkLum==null?.012:darkLum),sl=sc(lightLum==null?.86:lightLum),panel=sd>=sl?"dark":"light",best=Math.max(sd,sl);
+    if(best<3)img.style.filter=panel==="dark"?"drop-shadow(0 0 1.2px rgba(255,255,255,.95)) drop-shadow(0 0 5px rgba(255,255,255,.35))":"drop-shadow(0 0 1.2px rgba(0,0,0,.9)) drop-shadow(0 0 4px rgba(0,0,0,.25))";
+    return panel;
+  }catch(e){return null}}};
 const ID="campfire";
 /* ---- shared helpers (copied into each format so the file stands alone) ---- */
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -24,7 +60,7 @@ function inks(pal,paper,fallback){
 }
 function rng(seed){let h=2166136261;for(const ch of String(seed))h=Math.imul(h^ch.charCodeAt(0),16777619);return()=>{h=Math.imul(h^h>>>15,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
 /* procedural paper and ink texture (filters, never pictures of things) */
-const noise=(freq,oct,rgb,a,seed=1,size=320)=>`url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='${freq}' numOctaves='${oct}' seed='${seed}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${(rgb[0]/255).toFixed(3)}  0 0 0 0 ${(rgb[1]/255).toFixed(3)}  0 0 0 0 ${(rgb[2]/255).toFixed(3)}  0 0 0 ${a} 0'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`)}")`;
+const noise=(freq,oct,rgb,a,seed=1,size=320)=>`url(&quot;data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='${freq}' numOctaves='${oct}' seed='${seed}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${(rgb[0]/255).toFixed(3)}  0 0 0 0 ${(rgb[1]/255).toFixed(3)}  0 0 0 0 ${(rgb[2]/255).toFixed(3)}  ${(a*2.6).toFixed(2)} 0 0 0 ${(-a*1.15).toFixed(2)}'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`)}&quot;)`;
 const HALFTONE=(o,step=4)=>`<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,${o}) 32%,transparent 36%);background-size:${step}px ${step}px;mix-blend-mode:multiply;pointer-events:none"></div>`;
 const SHEEN=o=>`<div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,${o}) 0%,rgba(255,255,255,0) 38%,rgba(255,255,255,0) 70%,rgba(255,255,255,${o*.5}) 100%);pointer-events:none"></div>`;
 /* era: type pairing group, print process, photo handling, price level */
@@ -123,7 +159,7 @@ function logoPass(root){
       try{const cv=document.createElement("canvas");cv.width=120;cv.height=Math.max(8,Math.round(120*lg.naturalHeight/lg.naturalWidth));
         const cx=cv.getContext("2d");cx.drawImage(lg,0,0,cv.width,cv.height);const d=cx.getImageData(0,0,cv.width,cv.height).data;
         let s=0,n=0;for(let i=0;i<d.length;i+=4)if(d[i+3]>128){s+=.2126*d[i]+.7152*d[i+1]+.0722*d[i+2];n++}
-        if(panel&&n){const L=s/n;const want=L<118?"light":"dark";if(panel.dataset[want])panel.setAttribute("style",panel.dataset[want]);
+        if(panel&&n){const want=(window.__fmtLift&&__fmtLift.logo(lg,.012,.82))||(s/n<118?"light":"dark");if(panel.dataset[want])panel.setAttribute("style",panel.dataset[want].replace(/&quot;/g,'"'));
           panel.querySelectorAll("[data-pink]").forEach(e=>{e.style.color=want==="light"?e.dataset.pinkL:e.dataset.pinkD})}
       }catch(e){}
     };
@@ -182,19 +218,20 @@ function border(tone,col){
   return"";
 }
 function stock(P,tone,seed){
-  const wear=TONE[tone].wear;
-  return`background-color:${P.bg};background-image:${noise(".5 .02",3,P.fib,1.1,seed)},${noise(".9 .05",2,P.spk,.8,seed+1)},${noise(".8",2,P.spk,.55,seed+3)},${noise(".012",4,P.fib,.6+wear*.35,seed+5,700)};box-shadow:inset 0 0 ${50+wear*70}px rgba(40,22,6,${.25+wear*.4})`;
+  /* kraft that reads as kraft: dark and pale long fibres, coarse flecks, cloudy pulp, a lit middle and handled edges */
+  const wear=TONE[tone].wear,sm=/glossy|grand/.test(tone)?.6:1,bg=hex(P.bg),dk=mix(bg,BLACK,.42),lt=mix(bg,WHITE,.42),bn=mix(P.fib,BLACK,.2);
+  return`background-color:${P.bg};background-image:radial-gradient(ellipse 75% 60% at 46% 36%,rgba(255,238,205,${(.2*sm).toFixed(2)}),rgba(255,238,205,0) 70%),${noise(".9 .014",3,dk,(.36*sm).toFixed(2),seed)},${noise(".7 .02",2,lt,(.2*sm).toFixed(2),seed+2)},${noise(".9 .05",2,P.spk,.2,seed+1)},${noise("1.4",1,bn,(.32*sm).toFixed(2),seed+4,220)},${noise(".009",4,dk,(.26+wear*.2).toFixed(2),seed+5,760)},${noise(".014",3,lt,.1,seed+6,640)};box-shadow:inset 0 0 ${60+wear*90}px rgba(40,22,6,${(.32+wear*.4).toFixed(2)}),inset 0 0 0 1px rgba(30,16,4,.35)`;
 }
 function wearLayer(P,tone,seed){
   const w=TONE[tone].wear,lt=mix(hex(P.bg),WHITE,.25);
-  let s=`<div style="position:absolute;inset:0;pointer-events:none;background-image:${noise(".045 .07",3,lt,1,seed+9,600)},${noise(".95",1,lt,.9,seed+11)};opacity:${(w*.42).toFixed(2)}"></div>`;
+  let s=`<div style="position:absolute;inset:0;pointer-events:none;background-image:${noise(".045 .07",3,lt,.4,seed+9,600)},${noise(".95",1,lt,.3,seed+11)};opacity:${(w*.3).toFixed(2)}"></div>`;
   if(w>.7)s+=`<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(94deg,transparent 49.4%,rgba(255,255,255,.16) 49.7%,rgba(0,0,0,.14) 50.1%,transparent 50.5%)"></div>`;
   return s;
 }
 function photo(url,o){
   return`<div style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;padding:${o.pad}px;box-sizing:border-box;background:${o.print};transform:rotate(${o.rot}deg);box-shadow:0 10px 20px rgba(20,10,0,.4),0 1px 0 rgba(0,0,0,.2)">
   <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#2a2016">
-    <div style="position:absolute;inset:0;background:url('${url}') ${o.pos||"center 30%"}/cover no-repeat;filter:${o.filter}"></div>
+    <img alt="" crossorigin="anonymous" onload="window.__fmtLift&&__fmtLift.trim(this)" onerror="window.__fmtLift&&__fmtLift.cors(this)" src="${url}" style="position:absolute;inset:0;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:${o.pos||"center 30%"};filter:${o.filter}">
     ${o.half?HALFTONE(o.half):""}${o.sheen?SHEEN(o.sheen):""}${o.extra||""}
   </div></div>`;
 }
@@ -239,13 +276,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const sigCol=C.ink;
   const front=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
     ${border(tone,C.ink)}
-    <div data-box style="position:absolute;left:38px;top:34px;width:596px;height:112px;overflow:hidden">
+    <div data-box style="position:absolute;left:38px;top:34px;width:596px;height:112px;overflow:hidden;mix-blend-mode:multiply">
       <div data-line data-fs="18" data-min="14" style="font:${ty.cw} 18px ${ty.caps};letter-spacing:.2em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.sign)}</div>
       <div data-fs="${vs}" data-min="24" style="margin-top:6px;font:${ty.dw} ${vs}px ${ty.disp};line-height:1.02;${ty.up?"text-transform:uppercase;":""}color:${P.ink};${mis}transform:rotate(${TN.tilt*.3}deg);transform-origin:left">${T(F.venue)}</div>
     </div>
     ${photo(ph.hero,{x:18,y:150,w:636,h:492,pad:10,print:P.print,rot:TN.tilt*.5,filter:filt,half:E.half,sheen:E.sheen,pos:ph.isPoster?"center 22%":"center 35%"})}
     ${logoPanel(ctx,34,560,400,ty,C,P,year)}
-    <div data-box style="position:absolute;left:38px;top:708px;width:596px;height:118px;overflow:hidden">
+    <div data-box style="position:absolute;left:38px;top:708px;width:596px;height:118px;overflow:hidden;mix-blend-mode:multiply">
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${V.n}</div>
       <div data-fs="20" data-min="16" style="margin-top:4px;font:${ty.bw} 20px ${ty.body};line-height:1.25">“${T(F.note.text)}”</div>
       <div data-fs="${ty.sigS}" data-min="18" style="text-align:right;font:700 ${ty.sigS}px ${ty.sig};color:${sigCol};line-height:1.15;margin-top:2px;transform:rotate(-2deg)">${T(F.note.by)}</div>
@@ -259,15 +296,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const stampRot=-4+TN.tilt;
   const back=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed+20)};color:${P.ink};font-family:${ty.body}">
     ${border(tone,C.ink)}
-    <div data-box style="position:absolute;left:38px;top:34px;width:430px;height:72px;overflow:hidden">
+    <div data-box style="position:absolute;left:38px;top:34px;width:430px;height:72px;overflow:hidden;mix-blend-mode:multiply">
       <div data-line data-fs="42" data-min="26" style="font:${ty.dw} 42px ${ty.disp};line-height:1.05;${ty.up?"text-transform:uppercase;":""}white-space:nowrap;overflow:hidden;${mis}">${V.t}</div>
       <div data-line data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.venue)}</div>
     </div>
     <div style="position:absolute;right:40px;top:36px;padding:6px 14px;border:3px solid ${C.ink};border-radius:4px;color:${C.ink};font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;text-align:center;transform:rotate(${stampRot}deg);opacity:.88;line-height:1.25">Card no.<br><span style="font:${ty.dw} 28px ${ty.disp};letter-spacing:.04em">${T(F.number)}</span></div>
     ${photo(ph.second,{x:20,y:112,w:632,h:288,pad:8,print:P.print,rot:-TN.tilt*.4,filter:filt,half:E.half,sheen:E.sheen,pos:ph.isPoster?"center 30%":"center 40%",
       extra:`<div style="position:absolute;left:12px;bottom:12px;padding:5px 12px;background:${P.print};color:#2a2219;font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase">Tonight's feature, ${esc(year)}</div>`})}
-    <div data-box style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden">${menuHTML(cs,era,ty,C,tone)}</div>
-    <div data-box style="position:absolute;left:38px;top:808px;width:370px;height:86px;overflow:hidden">
+    <div data-box style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden;mix-blend-mode:multiply">${menuHTML(cs,era,ty,C,tone)}</div>
+    <div data-box style="position:absolute;left:38px;top:808px;width:370px;height:86px;overflow:hidden;mix-blend-mode:multiply">
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">Bugle call</div>
       <div data-fs="18" data-min="14" style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:2px">${T(ctx.f.P||"Serve the mains when the campfire is lit.")}</div>
     </div>

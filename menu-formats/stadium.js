@@ -1,3 +1,94 @@
+/* shared picture helper (same block in placemat, stadium, prom, kiosk, invite; first file to load wins).
+   still: a still that is mostly blank white or near black is swapped for the next candidate, the least bad one is kept,
+          a dark keeper gets lifted; a failed still falls through to the next one, then the poster.
+   logo: transparent padding is trimmed and the logo is sized by area into its max box, so the panel wraps the logo.
+   place: props and logo panels on a photo go to the candidate spot that covers the least face and detail
+          (skin tone weighted edges), and the crop can slide to give faces room. */
+(function(){
+if(window.__PICK)return;
+const P=window.__PICK={};
+const grab=(img,w)=>{const c=document.createElement("canvas");c.width=w;c.height=Math.max(4,Math.round(w*img.naturalHeight/img.naturalWidth));const x=c.getContext("2d",{willReadFrequently:true});x.drawImage(img,0,0,c.width,c.height);return {w:c.width,h:c.height,d:x.getImageData(0,0,c.width,c.height).data}};
+P.stats=img=>{const g=grab(img,64),d=g.d;let n=0,wh=0,bl=0,s=0;for(let i=0;i<d.length;i+=4){const r=d[i],gg=d[i+1],b=d[i+2],L=.2126*r+.7152*gg+.0722*b,mx=Math.max(r,gg,b),mn=Math.min(r,gg,b);n++;s+=L;if(L>228&&mx-mn<34)wh++;if(L<26)bl++}return {white:wh/n,black:bl/n,mean:s/n}};
+P.bad=st=>st.white>.28||st.black>.48||st.mean<42;
+P.score=st=>st.white*2+st.black+Math.max(0,70-st.mean)/70;
+P.still=img=>{
+  if(img.dataset.done){P.place(img);return}
+  let st;try{st=P.stats(img)}catch(e){img.dataset.done="1";P.place(img);return}
+  const sc=P.score(st);if(!img.__best||sc<img.__best.sc)img.__best={sc,src:img.src,st};
+  const alts=(img.dataset.alts||"").split("|").filter(Boolean),tries=+(img.dataset.tries||0);
+  if(P.bad(st)&&alts.length&&tries<4){img.dataset.tries=tries+1;img.dataset.alts=alts.slice(1).join("|");img.src=alts[0];return}
+  const b=img.__best;img.dataset.done="1";
+  if(b.st.mean<72&&!img.dataset.lift){img.dataset.lift="1";img.style.filter=(img.style.filter||"")+" brightness("+(b.st.mean<45?1.45:1.25)+")"}
+  if(b.src!==img.src){img.src=b.src;return}
+  P.place(img)};
+P.fail=img=>{const alts=(img.dataset.alts||"").split("|").filter(Boolean);
+  if(alts.length){img.dataset.alts=alts.slice(1).join("|");img.src=alts[0];return}
+  if(img.dataset.last&&img.src!==img.dataset.last){img.dataset.done="1";img.src=img.dataset.last}};
+/* saliency grid: edges, boosted where the colour is skin, lightly blurred so faces read as solid blocks */
+P.sal=img=>{
+  if(img.__sal&&img.__sal.src===img.src)return img.__sal;
+  const g=grab(img,96),w=g.w,h=g.h,d=g.d,N=w*h,L=new Float32Array(N),S=new Float32Array(N);
+  for(let i=0,p=0;i<d.length;i+=4,p++){const r=d[i],gg=d[i+1],b=d[i+2];L[p]=.299*r+.587*gg+.114*b;const cb=128-.1687*r-.3313*gg+.5*b,cr=128+.5*r-.4187*gg-.0813*b;S[p]=(cb>=77&&cb<=127&&cr>=137&&cr<=175&&L[p]>40&&L[p]<240)?1:0}
+  const E=new Float32Array(N);let em=0;
+  for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){const p=y*w+x,e=Math.abs(L[p+1]-L[p-1])+Math.abs(L[p+w]-L[p-w]);E[p]=e;em+=e}
+  em=em/N||1;const R=new Float32Array(N);
+  for(let p=0;p<N;p++)R[p]=Math.min(3,E[p]/em)*(.35+1.65*S[p]);
+  const G=new Float32Array(N);let tot=0;
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){let s=0,n=0;for(let j=-2;j<=2;j++)for(let i=-2;i<=2;i++){const yy=y+j,xx=x+i;if(yy<0||xx<0||yy>=h||xx>=w)continue;s+=R[yy*w+xx];n++}G[y*w+x]=s/n;tot+=s/n}
+  return img.__sal={src:img.src,w,h,G,tot:tot||1}};
+P.place=img=>{
+  const box=img.closest("[data-safe]");if(!box||!img.naturalWidth)return;
+  let cfg;try{cfg=JSON.parse(box.dataset.safe)}catch(e){return}
+  let sal;try{sal=P.sal(img)}catch(e){return}
+  const bw=box.clientWidth,bh=box.clientHeight;if(!bw||!bh)return;
+  const ib={x:img.offsetLeft,y:img.offsetTop,w:img.clientWidth||bw,h:img.clientHeight||bh};
+  const contain=getComputedStyle(img).objectFit==="contain";
+  const items=(cfg.items||[]).map(it=>({it,el:box.querySelector(it.q)})).filter(o=>o.el&&o.el.offsetWidth);
+  const fixed=(cfg.fixed||[]).map(q=>box.querySelector(q)).filter(Boolean).map(el=>({x:el.offsetLeft,y:el.offsetTop,w:el.offsetWidth,h:el.offsetHeight}));
+  const pos=cfg.pos&&cfg.pos.length&&!contain?cfg.pos:[[50,50]];
+  const p0=pos[0];let best=null;
+  for(const [px,py] of pos){
+    const s=contain?Math.min(ib.w/sal.w,ib.h/sal.h):Math.max(ib.w/sal.w,ib.h/sal.h),dw=sal.w*s,dh=sal.h*s,ox=ib.x+(ib.w-dw)*px/100,oy=ib.y+(ib.h-dh)*py/100;
+    const sum=(x0,y0,x1,y1)=>{const i0=Math.max(0,Math.floor((x0-ox)/s)),i1=Math.min(sal.w-1,Math.ceil((x1-ox)/s)),j0=Math.max(0,Math.floor((y0-oy)/s)),j1=Math.min(sal.h-1,Math.ceil((y1-oy)/s));let t=0;
+      for(let j=j0;j<=j1;j++){const cy=oy+(j+.5)*s;if(cy<y0||cy>y1)continue;for(let i=i0;i<=i1;i++){const cx=ox+(i+.5)*s;if(cx>=x0&&cx<=x1)t+=sal.G[j*sal.w+i]}}return t};
+    const vis=sum(0,0,bw,bh);let cost=-.35*vis/sal.tot+(Math.abs(px-p0[0])+Math.abs(py-p0[1]))/500;
+    /* every combination of spots is tried (a handful of items, a few spots each), overlaps ruled out */
+    const opts=items.map(({it,el})=>{const w=el.offsetWidth,h=el.offsetHeight;return it.c.map((c,ci)=>{const x=c[0]==="l"?c[1]:c[0]==="r"?bw-w-c[1]:(bw-w)/2+(c[1]||0),y=c[2]==="t"?c[3]:c[2]==="b"?bh-h-c[3]:(bh-h)/2+(c[3]||0);
+      let k=sum(x,y,x+w,y+h)/sal.tot*(it.w||1)+ci*.004;for(const r of fixed)if(x<r.x+r.w+6&&x+w+6>r.x&&y<r.y+r.h+6&&y+h+6>r.y)k+=10;return {k,c,x,y,w,h,el}})});
+    let bp=null;const cur=[];
+    const go=(n,acc)=>{if(bp&&acc>=bp.k)return;if(n===opts.length){bp={k:acc,pick:cur.slice()};return}
+      for(const o of opts[n]){let bad=false;for(const r of cur)if(o.x<r.x+r.w+6&&o.x+o.w+6>r.x&&o.y<r.y+r.h+6&&o.y+o.h+6>r.y){bad=true;break}
+        if(bad)continue;cur.push(o);go(n+1,acc+o.k);cur.pop()}};
+    go(0,0);if(!bp)continue;cost+=bp.k;const pick=bp.pick;
+    if(!best||cost<best.cost)best={cost,px,py,pick}}
+  if(!best)return;
+  if(!contain&&cfg.pos){const v=best.px+"% "+best.py+"%";img.style.objectPosition=v;box.querySelectorAll("[data-follow]").forEach(e=>e.style.objectPosition=v)}
+  for(const {el,c} of best.pick){const st=el.style;st.left=st.right=st.top=st.bottom="auto";
+    if(c[0]==="l")st.left=c[1]+"px";else if(c[0]==="r")st.right=c[1]+"px";else st.left=`calc(50% - ${el.offsetWidth/2}px + ${c[1]||0}px)`;
+    if(c[2]==="t")st.top=c[3]+"px";else if(c[2]==="b")st.bottom=c[3]+"px";else st.top=`calc(50% - ${el.offsetHeight/2}px + ${c[3]||0}px)`}};
+/* logo: trim transparent padding, size by area inside [maxW,maxH], then pick the stock that loses the fewest logo pixels:
+   each pixel scores its shortfall from 4.5:1 on that stock, the lower total wins; ties stay on dark with a soft halo */
+P.logo=img=>{
+  const wrap=img.parentNode;
+  try{const mx=(wrap.dataset.lmax||"300,110").split(",").map(Number),A=+wrap.dataset.larea||mx[0]*mx[1]*.5;
+    const g=grab(img,Math.min(360,img.naturalWidth||360)),w=g.w,h=g.h,d=g.d;let x0=w,y0=h,x1=-1,y1=-1,dk=0,lt=0;
+    for(let y=0;y<h;y++)for(let x=0;x<w;x++){const i=(y*w+x)*4;if(d[i+3]>28){if(x<x0)x0=x;if(x>x1)x1=x;if(y<y0)y0=y;if(y>y1)y1=y}
+      if(d[i+3]>128){const lin=v=>{v/=255;return v<=.04045?v/12.92:Math.pow((v+.055)/1.055,2.4)},Y=.2126*lin(d[i])+.7152*lin(d[i+1])+.0722*lin(d[i+2]);dk+=Math.max(0,4.5-(Y+.05)/.058)/4.5;lt+=Math.max(0,4.5-.98/(Y+.05))/4.5}}
+    if(x1>=0){const fw=(x1-x0+1)/w,fh=(y1-y0+1)/h,a=fw*img.naturalWidth/(fh*img.naturalHeight);
+      let lh=Math.min(mx[1],Math.sqrt(A/a)),lw=lh*a;if(lw>mx[0]){lw=mx[0];lh=lw/a}
+      const W=lw/fw,H=lh/fh;
+      Object.assign(wrap.style,{position:"relative",overflow:"hidden",width:Math.round(lw)+"px",height:Math.round(lh)+"px",display:"block",flex:"none"});
+      Object.assign(img.style,{position:"absolute",maxWidth:"none",maxHeight:"none",left:(-x0/w*W)+"px",top:(-y0/h*H)+"px",width:W+"px",height:H+"px",objectFit:"fill",display:"block"})}
+    const p=img.closest("[data-lpanel]");
+    if(p&&p.dataset.light&&p.dataset.dark){const light=dk>lt;p.style.background=light?p.dataset.light:p.dataset.dark;img.style.filter=light?"drop-shadow(0 0 1px rgba(0,0,0,.3))":"drop-shadow(0 0 1.5px rgba(255,255,255,.45))";
+      p.querySelectorAll("[data-pk]").forEach(e=>{if(!e.dataset.ink0)e.dataset.ink0=e.style.color;e.style.color=light&&p.dataset.lightink?p.dataset.lightink:e.dataset.ink0})}
+  }catch(e){}
+  const box=img.closest("[data-safe]");if(box){const s=box.querySelector("[data-pick]");if(s&&s.dataset.done)P.place(s)}};
+P.logoFail=img=>{const p=img.closest("[data-lpanel]");img.style.display="none";const wrap=img.parentNode;if(wrap&&wrap.dataset.lmax){wrap.style.width="auto";wrap.style.height="auto"}
+  const t=p&&p.querySelector("[data-ltype]");if(t)t.style.display="";if(p&&p.dataset.type)p.style.background=p.dataset.type;
+  const box=img.closest("[data-safe]");if(box){const s=box.querySelector("[data-pick]");if(s&&s.dataset.done)P.place(s)}};
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>setTimeout(()=>document.querySelectorAll("img[data-pick]").forEach(i=>{if(i.dataset.done)P.place(i)}),60));
+})();
 /* Format: stadium. A stadium concession scorecard, two landscape faces 1344x816.
    Front: hero still (58 percent), venue, logo panel, scoreboard in type (signature), ticket stub, fine print.
    Back: section map of stills (2x2 grid labelled by section), concessions in two columns, manager note with script signature.
@@ -25,7 +116,7 @@ function loadFonts(fams){const k="fmt-"+ID+"-fonts";if(document.getElementById(k
 /* logo in its own colours: dark panel by default, switched to the light panel when the logo itself is mostly dark */
 const SAMPLE="try{var i=this,c=document.createElement('canvas');c.width=64;c.height=Math.max(8,Math.round(64*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,c.width,c.height);var d=x.getImageData(0,0,c.width,c.height).data,a=0,b=0;for(var k=0;k<d.length;k+=4){if(d[k+3]<128)continue;var L=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];if(L<95)a++;else if(L>165)b++}if(a>b*1.2){var p=i.parentNode;p.style.background=p.getAttribute('data-light')}}catch(e){}";
 function logoImg(ctx,maxW,maxH){const L=ctx.logo;if(!L||!L[0]||!L[1]||!L[2])return null;const a=L[1]/L[2];let h=Math.min(maxH,maxW/a);if(h<34)return null;return{src:ctx.img(L[0],"w500"),w:Math.round(h*a),h:Math.round(h)}}
-function photo(src,filter,pos,extra){return `<img src="${src}" crossorigin="anonymous" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos||"center 35%"};filter:${filter}">${extra||""}`}
+function photo(src,filter,pos,extra,alts,last){return `<img src="${src}" crossorigin="anonymous" data-pick data-alts="${(alts||[]).join("|")}" data-last="${last||""}" onload="window.__PICK&&__PICK.still(this)" onerror="window.__PICK&&__PICK.fail(this)" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos||"center 35%"};filter:${filter}">${extra||""}`}
 
 /* ---------- era and tone ---------- */
 const ERAS=["1930s-40s","1950s","1960s","1970s","1980s","1990s","2000s","modern"];
@@ -93,17 +184,21 @@ window.MENU_FORMATS[ID]=ctx=>{
   const HX=790;
   const heroSrc=stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):"";
   const tagline=clean(f.T||"");
-  const hero=`<div style="position:absolute;left:0;top:0;width:${HX}px;height:${H}px;overflow:hidden;background:#222">${heroSrc?photo(heroSrc,pf,stills[0]?"center 40%":"center 25%",overlay()):""}
+  const hero=`<div style="position:absolute;left:0;top:0;width:${HX}px;height:${H}px;overflow:hidden;background:#222">${heroSrc?photo(heroSrc,pf,stills[0]?"center 40%":"center 25%",overlay(),stills.slice(5,8).map(s=>ctx.img(s,"w1280")),poster?ctx.img(poster,"w780"):""):""}
     <div style="position:absolute;left:0;top:0;bottom:0;width:${HX}px;box-shadow:inset -10px 0 0 ${acc}"></div>
     ${tagline?`<div style="position:absolute;left:0;right:10px;bottom:0;padding:50px 34px 24px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.75))">${kick("Tonight",mix(acc,"#ffffff",.75),16)}<div style="font:italic 400 22px/1.3 ${BF};color:#fbf6ea;margin-top:6px;${clamp(2)}">${esc(tagline)}</div></div>`:""}</div>`;
   const RW=W-HX-60;
   const vSize=venue.length>28?30:venue.length>18?36:42;
-  const lg=logoImg(ctx,RW-40,96);
+  const LMW=RW-44,LMH=150,LA=41000;
+  const lg=(()=>{const L=ctx.logo;if(!L||!L[0]||!L[1]||!L[2])return null;const a=L[1]/L[2];let h=Math.min(LMH,Math.sqrt(LA/a)),w=h*a;if(w>LMW){w=LMW;h=w/a}return{src:ctx.img(L[0],"w500"),w:Math.round(w),h:Math.round(h)}})();
   const tSize=title.length>40?24:title.length>24?30:title.length>12?38:48;
   const panelDark=mix(band,"#000000",.3),panelLight=darkPaper?"#f2f2ee":mix(paper,"#ffffff",.6);
-  const logo=`<div data-dark="${panelDark}" data-light="${panelLight}" style="position:relative;height:120px;background:${panelDark};display:flex;align-items:center;justify-content:center;border-bottom:5px solid ${acc};flex:none">
-    ${lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))">`
-       :`<div style="font:${e.dw} ${tSize}px/1.08 ${DF};color:#fbf6ea;text-align:center;padding:0 20px;text-transform:uppercase;${clamp(3)}">${esc(title)}</div>`}
+  const logo=lg?`<div data-lpanel data-dark="${panelDark}" data-light="${panelLight}" data-lightink="${darkPaper?"#5a5d66":acc}" data-type="${panelDark}" style="position:relative;align-self:flex-start;max-width:${RW}px;box-sizing:border-box;padding:16px 22px 26px;background:${panelDark};display:flex;align-items:center;justify-content:center;border-bottom:5px solid ${acc};flex:none;box-shadow:0 3px 10px rgba(0,0,0,.18)">
+    <span data-lmax="${LMW},${LMH}" data-larea="${LA}" style="display:block;width:${lg.w}px;height:${lg.h}px"><img src="${lg.src}" crossorigin="anonymous" onload="window.__PICK&&__PICK.logo(this)" onerror="this.parentNode.style.display='none';window.__PICK&&__PICK.logoFail(this)" style="display:block;width:${lg.w}px;height:${lg.h}px;object-fit:contain"></span>
+    <div data-ltype style="font:${e.dw} ${tSize}px/1.08 ${DF};color:#fbf6ea;text-align:center;padding:0 20px;text-transform:uppercase;width:${RW-44}px;${clamp(3)};display:none">${esc(title)}</div>
+    <div data-pk style="position:absolute;right:10px;bottom:6px;font:700 14px/1 ${BF};letter-spacing:.2em;color:${mix(acc,"#ffffff",.6)}">${esc(year)}</div></div>`
+    :`<div style="position:relative;height:120px;background:${panelDark};display:flex;align-items:center;justify-content:center;border-bottom:5px solid ${acc};flex:none">
+       <div style="font:${e.dw} ${tSize}px/1.08 ${DF};color:#fbf6ea;text-align:center;padding:0 20px;text-transform:uppercase;${clamp(3)}">${esc(title)}</div>
     <div style="position:absolute;right:10px;bottom:6px;font:700 14px/1 ${BF};letter-spacing:.2em;color:${mix(acc,"#ffffff",.6)}">${esc(year)}</div></div>`;
   /* signature: the scoreboard, set in type */
   const C=[["s",e.cols[0]],["m",e.cols[1]],["w",e.cols[2]],["d",e.cols[3]]].filter(([k])=>(ctx.menu[k]||[]).length);
@@ -146,7 +241,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const gx=28,gy=96,gw=MX-gx-24,gh=H-gy-30,gap=12;
   const tiles=[];
   for(let i=0;i<n;i++){const tw=n===4?(gw-gap)/2:gw,th=n===1?gh:(gh-gap)/2,x=gx+(n===4?(i%2)*(tw+gap):0),y=gy+(n===4?Math.floor(i/2)*(th+gap):n===2?i*(th+gap):0);
-    tiles.push(`<div style="position:absolute;left:${x}px;top:${y}px;width:${tw}px;height:${th}px;overflow:hidden;background:#222;outline:3px solid ${acc}">${photo(srcs[i],pf,"center 35%",overlay())}
+    tiles.push(`<div style="position:absolute;left:${x}px;top:${y}px;width:${tw}px;height:${th}px;overflow:hidden;background:#222;outline:3px solid ${acc}">${photo(srcs[i],pf,"center 35%",overlay(),[],poster?ctx.img(poster,"w780"):"")}
       <div style="position:absolute;left:0;top:0;background:${band};color:${bandText};font:${e.dw} 20px/1 ${DF};padding:8px 12px;letter-spacing:.04em">SEC ${100+(i+1)}</div>
       <div style="position:absolute;left:0;right:0;bottom:0;padding:24px 12px 8px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));font:700 15px/1.2 ${BF};letter-spacing:.14em;text-transform:uppercase;color:#fbf6ea">${e.secs[i]}</div></div>`)}
   const mapHead=`<div style="position:absolute;left:${gx}px;top:26px;width:${gw}px">${kick(t.gate,acc,15)}<div style="font:${e.dw} 38px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Section Map</div></div>`;

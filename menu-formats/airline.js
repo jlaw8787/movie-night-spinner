@@ -1,5 +1,41 @@
 /* Menu format: airline. Registers window.MENU_FORMATS["airline"]. Inline styles only; era and tone drive type, paper, print process, border, photo treatment and wear. */
 (function(){
+/* ---- lift helpers (identical block in cafe, bistro, motel, airline, campfire) ----
+   trim: crops baked-in letterbox bars and dead flat edges off a still, then cover-fits what is left.
+   logo: scores a title logo against a dark and a light panel (20th percentile contrast, so multicolour
+   logos read in every part) and returns the better panel; a weak best score gets a fine halo, never a recolour. */
+if(!window.__fmtLift||window.__fmtLift.v<2)window.__fmtLift={v:2,
+  px(img,w){const cv=document.createElement("canvas");cv.width=w;cv.height=Math.max(8,Math.round(w*img.naturalHeight/img.naturalWidth));
+    const cx=cv.getContext("2d");cx.drawImage(img,0,0,cv.width,cv.height);return{d:cx.getImageData(0,0,cv.width,cv.height).data,w:cv.width,h:cv.height}},
+  trim(img,tries){try{
+    if(!img.naturalWidth||img.dataset.trim==="1")return;
+    const box=img.parentElement,bw=+img.dataset.bw||box.clientWidth,bh=+img.dataset.bh||box.clientHeight;
+    if(!bw||!bh){if((tries||0)<6)setTimeout(()=>window.__fmtLift.trim(img,(tries||0)+1),400);return}
+    img.dataset.trim="1";
+    const{d,w,h}=window.__fmtLift.px(img,160),L=(x,y)=>{const i=(y*w+x)*4;return .2126*d[i]+.7152*d[i+1]+.0722*d[i+2]};
+    const dead=(n,get)=>{let dk=0,s=0,s2=0;for(let j=0;j<n;j++){const l=get(j);if(l<28)dk++;s+=l;s2+=l*l}const m=s/n,v=s2/n-m*m;return dk/n>.94||(dk/n>.74&&m<34)||(v<30&&(m<46||m>238))};
+    const col=x=>dead(h,y=>L(x,y)),row=y=>dead(w,x=>L(x,y));
+    let l=0,r=w-1,t=0,b=h-1;
+    while(l<w*.42&&col(l))l++;while(r>w*.58&&col(r))r--;while(t<h*.3&&row(t))t++;while(b>h*.7&&row(b))b--;
+    if(l<2&&w-1-r<2&&t<2&&h-1-b<2)return;
+    l=l?l+1:0;t=t?t+1:0;r=r<w-1?r-1:r;b=b<h-1?b-1:b;
+    const kx=img.naturalWidth/w,ky=img.naturalHeight/h,x0=l*kx,y0=t*ky,cw=(r+1)*kx-x0,ch=(b+1)*ky-y0;
+    const s=Math.max(bw/cw,bh/ch),pp=(getComputedStyle(img).objectPosition||"50% 40%").split(" ").map(v=>/%$/.test(v)?parseFloat(v)/100:v==="center"?.5:v==="top"||v==="left"?0:v==="bottom"||v==="right"?1:.5);
+    const fx=pp[0]==null?.5:pp[0],fy=pp[1]==null?.4:pp[1];
+    Object.assign(img.style,{objectFit:"fill",objectPosition:"0 0",inset:"auto",right:"auto",bottom:"auto",maxWidth:"none",maxHeight:"none",
+      left:(-x0*s+(bw-cw*s)*fx).toFixed(1)+"px",top:(-y0*s+(bh-ch*s)*fy).toFixed(1)+"px",width:(img.naturalWidth*s).toFixed(1)+"px",height:(img.naturalHeight*s).toFixed(1)+"px"});
+  }catch(e){}},
+  cors(img){if(img.crossOrigin){img.removeAttribute("crossorigin");img.dataset.trim="1";img.src=img.src}},
+  rl(l){l/=255;return l<=.03928?l/12.92:Math.pow((l+.055)/1.055,2.4)},
+  logo(img,darkLum,lightLum){try{
+    const{d}=window.__fmtLift.px(img,120),ls=[];
+    for(let i=0;i<d.length;i+=4)if(d[i+3]>140)ls.push(.2126*window.__fmtLift.rl(d[i])+.7152*window.__fmtLift.rl(d[i+1])+.0722*window.__fmtLift.rl(d[i+2]));
+    if(!ls.length)return null;
+    const sc=P=>{const c=ls.map(x=>(Math.max(x,P)+.05)/(Math.min(x,P)+.05)).sort((a,b)=>a-b);return c[Math.floor(c.length*.2)]};
+    const sd=sc(darkLum==null?.012:darkLum),sl=sc(lightLum==null?.86:lightLum),panel=sd>=sl?"dark":"light",best=Math.max(sd,sl);
+    if(best<3)img.style.filter=panel==="dark"?"drop-shadow(0 0 1.2px rgba(255,255,255,.95)) drop-shadow(0 0 5px rgba(255,255,255,.35))":"drop-shadow(0 0 1.2px rgba(0,0,0,.9)) drop-shadow(0 0 4px rgba(0,0,0,.25))";
+    return panel;
+  }catch(e){return null}}};
 /* ---- shared helpers (identical block in bistro.js, hotel.js, airline.js) ---- */
 const clean=s=>String(s==null?"":s).replace(/\s*[‒–—―−]\s*/g,", ").replace(/\s+-+\s+/g,", ").replace(/\s{2,}/g," ").trim();
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -84,7 +120,7 @@ function borderHTML(style,col,gilt,radius){
 /* one photo: era process plus tone treatment, halftone or gloss over it */
 function photoHTML(src,pos,era,t){
   if(!src)return"";const P=PROCESS[era],T=TONES[t];
-  return`<img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:${P.photo} ${T.photo}">
+  return`<img crossorigin="anonymous" alt="" onload="window.__fmtLift&&__fmtLift.trim(this)" onerror="window.__fmtLift&&__fmtLift.cors(this)" src="${src}" style="position:absolute;inset:0;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:${P.photo} ${T.photo}">
   ${P.half?`<div style="position:absolute;inset:0;background:radial-gradient(circle,rgba(0,0,0,.5) 28%,transparent 32%) 0 0/4px 4px;opacity:.13;mix-blend-mode:multiply"></div>`:""}
   ${(P.sheen||T.sheen)?`<div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.2) 50%,rgba(255,255,255,0) 62%)"></div>`:""}
   ${T.copy?`<div style="position:absolute;inset:0;background:url(&quot;${TONER}&quot;) 0 0/240px;opacity:.22"></div>`:""}
@@ -150,7 +186,7 @@ function logoPanel(ctx,o){
   const r=lg?lg[1]/lg[2]:0;let lh=lg?Math.min(o.maxH,Math.round(o.maxW/r)):0,lw=Math.round(lh*r);
   const fb=`<div data-logofb data-fline="3" data-fs="22" style="display:${lg?"none":"block"};font:${o.titleFont};font-size:${title.length>40?30:title.length>22?38:46}px;line-height:1.02;color:${o.titleCol};max-width:${o.maxW}px">${esc(title)}</div>`;
   return`<div data-lpanel data-dark="${o.dark}" data-light="${o.light}" data-darkk="${o.darkk}" data-lightk="${o.lightk}" style="${o.style};background:${lg?o.dark:o.fbBg}">
-    ${lg?`<img data-logo crossorigin="anonymous" alt="${esc(title)}" src="${ctx.img(lg[0],"w500")}" onload="window.__fmtBHA&&__fmtBHA.logo(this)" onerror="window.__fmtBHA&&__fmtBHA.nologo(this)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain;margin:${o.center?"0 auto":"0"}">`:""}${fb}
+    ${lg?`<img data-logo crossorigin="anonymous" alt="${esc(title)}" src="${ctx.img(lg[0],"w500")}" onload="(function(i){var p=i.closest('[data-lpanel]'),w=p&&window.__fmtLift&&__fmtLift.logo(i);if(!w)return;var dk=w==='dark';p.style.background=dk?p.dataset.dark:p.dataset.light;p.querySelectorAll('[data-lk]').forEach(function(k){k.style.color=dk?p.dataset.darkk:p.dataset.lightk})})(this)" onerror="window.__fmtBHA&&__fmtBHA.nologo(this)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain;margin:${o.center?"0 auto":"0"}">`:""}${fb}
     ${o.under?`<div data-lk style="font:${o.underFont};color:${lg?o.darkk:o.fbK};margin-top:9px;text-align:${o.center?"center":"left"}">${o.under}</div>`:""}</div>`;
 }
 /* film flavour with theme-neutral fallbacks */
@@ -212,35 +248,68 @@ window.MENU_FORMATS[ID]=ctx=>{
   const row=F.num?(+F.num.slice(-2)%40||12):(+yy%38)+1,seat=row+"A";
   const liv=toHex(mix(hex(K.deep),hex(K.acc),era===3||era===4?.25:.08)),onLiv="#fffaf0";
   const face=inner=>`<div data-fmtface="${ID}" style="position:absolute;inset:0;width:${W}px;height:${H}px;overflow:hidden;background:${paper};color:${K.ink};font-family:${B}">
-    ${paperLayers(t,dark,H)}${inner}${P.border==="band"||P.border==="bleed"?"":borderHTML(P.border==="deco"?"double":P.border,K.acc,T.gilt,P.border==="round"?18:0).replace(/inset:1[246]px/g,"inset:8px").replace(/inset:21px/g,"inset:13px").replace(/inset:17px/g,"inset:11px").replace(/inset:26px/g,"inset:16px")}</div>`;
-  /* livery stripes under the strip: one, two or three by era */
-  const stripes=top=>{const n=era===3?3:era===4||era===2?2:1,cols=[K.acc,K.light,K.acc];
-    return Array.from({length:n},(_,i)=>`<div style="position:absolute;left:0;right:0;top:${top+i*9}px;height:${i?5:7}px;background:${cols[i]}"></div>`).join("")};
+    ${paperLayers(t,dark,H)}${inner}${P.border==="band"||P.border==="bleed"||G==="jet"?"":borderHTML(P.border==="deco"?"double":P.border,K.acc,T.gilt,P.border==="round"?18:0).replace(/inset:1[246]px/g,"inset:8px").replace(/inset:21px/g,"inset:13px").replace(/inset:17px/g,"inset:11px").replace(/inset:26px/g,"inset:16px")}</div>`;
   const price=(k,i)=>{if(k==="m"||k==="w")return"Included";
     const base={s:[6,7,5,8],d:[5,7,6,8]}[k][i%4];if(k==="d"&&i===0)return eggPrice(base,"",yy,Math.max(era,0));return money(base,era)};
   const kick=(s,col,al)=>`<div data-fs="14" style="font:700 16px/1.15 ${B};letter-spacing:.2em;text-transform:uppercase;color:${col||K.acc};text-align:${al||"left"}">${esc(s)}</div>`;
-
-  /* ---- front: livery strip with flight and seat, window photo, logo, captain's note, trolley ---- */
-  const strip=`<div style="position:absolute;left:0;right:0;top:0;height:120px;background:${liv};overflow:hidden">
+  /* era family sets the whole build of the card, not just its colours:
+     prop (30s to 50s): printed on cream, arched cabin window, double keylines, seat on a stub.
+     jet (60s, 70s): photo bleeds off the top, livery block and diagonal stripes, seat on a white tile.
+     wide (80s, 90s): dark livery strip, bezelled rounded window.
+     mod (2000s on): white header, slim rule, wide soft window, livery tail down the edge. */
+  /* tone moves the build too, so two films from one era are different printed objects:
+     glossy and grand get the bleed brochure, gritty, tense and eerie the dark livery strip, scrappy the plain header */
+  const G0=era<=1?"prop":era<=3?"jet":era<=5?"wide":"mod";
+  const G=G0==="prop"?"prop":/glossy|grand/.test(t)?"jet":/gritty|tense|eerie/.test(t)?"wide":t==="playful"?(era>=6?"jet":"mod"):t==="scrappy"?"mod":G0;
+  const stripes=(top,diag)=>{const n=era===3?3:era===4||era===2?2:1,cols=[K.acc,K.light,K.acc];
+    return Array.from({length:n},(_,i)=>`<div style="position:absolute;left:-20px;right:-20px;top:${top+i*(diag?13:9)}px;height:${i?(diag?8:5):(diag?11:7)}px;background:${cols[i]};${diag?"transform:skewY(-4deg);transform-origin:0 0;box-shadow:0 1px 0 rgba(0,0,0,.15);":""}z-index:1"></div>`).join("")};
+  const seatTile=(x,y,bg,fg,sub,bd)=>`<div style="position:absolute;right:${x}px;top:${y}px;width:118px;padding:8px 0 7px;text-align:center;background:${bg};${bd||""};z-index:3">
+      <div style="font:700 14px/1 ${B};letter-spacing:.24em;color:${sub}">SEAT</div>
+      <div style="${dispStyle}font-size:${seat.length>3?44:52}px;line-height:1.02;color:${fg};font-style:normal;margin-top:3px">${seat}</div>
+      <div style="font:700 14px/1 ${B};letter-spacing:.14em;color:${sub}">WINDOW</div></div>`;
+  const heading=(col,sub,acc,al)=>`${kick(`Flight ${flight} · Home to ${ctx.f.year}`,acc,al)}
+        <div data-fline="2" data-fs="20" style="${dispStyle}font-size:${F.venue.length>22?(G==="prop"?30:27):(G==="prop"?36:32)}px;line-height:1.04;color:${col};margin-top:5px;text-align:${al||"left"};${G==="prop"?inkSpread:""}">${esc(F.venue)}</div>
+        <div data-fs="14" style="font:${G==="prop"?"italic ":""}400 16px/1.2 ${B};color:${sub};margin-top:4px;text-align:${al||"left"}">${esc(F.sign)}</div>`;
+  let strip,winTop,winH,winW,winRad,frame,winExtra="";
+  if(G==="prop"){
+    strip=`<div data-fbox style="position:absolute;left:30px;right:164px;top:26px;height:104px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(K.ink,K.soft,K.acc)}</div>
+      ${seatTile(30,28,"transparent",K.ink,K.acc,`border:2px solid ${K.acc};box-shadow:inset 0 0 0 3px ${paper},inset 0 0 0 4px ${rgba(K.acc,.6)}`)}
+      <div style="position:absolute;left:30px;right:30px;top:140px;border-top:4px double ${K.acc}"></div>`;
+    winTop=162;winH=496;winW=500;winRad=`250px 250px 10px 10px`;
+    frame=`0 0 0 7px ${paper},0 0 0 8px ${K.acc},0 0 0 12px ${paper},0 0 0 13px ${rgba(K.acc,.6)},0 10px 24px 10px rgba(60,40,10,.18)`;
+  }else if(G==="jet"){
+    strip=`<div style="position:absolute;left:0;top:0;width:410px;height:128px;background:${liv};z-index:3;box-shadow:0 4px 14px rgba(0,0,0,.3)">
+        <div data-fbox style="position:absolute;left:26px;right:18px;top:12px;bottom:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(onLiv,"rgba(255,250,240,.82)",K.light)}</div></div>
+      ${seatTile(22,18,"#fffaf0",K.ink,K.acc,"box-shadow:0 6px 16px rgba(0,0,0,.35)")}`;
+    winTop=0;winH=612;winW=W;winRad="0";frame="none";
+    winExtra=stripes(600,true);
+  }else if(G==="wide"){
+    strip=`<div style="position:absolute;left:0;right:0;top:0;height:120px;background:${era===4?`linear-gradient(180deg,${toHex(mix(hex(liv),[255,255,255],.12))},${liv} 45%,${toHex(mix(hex(liv),[0,0,0],.3))})`:liv};overflow:hidden">
       <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.2;mix-blend-mode:screen"></div>
-      <div data-fbox style="position:absolute;left:26px;right:168px;top:14px;bottom:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">
-        ${kick(`Flight ${flight} · Home to ${ctx.f.year}`,K.light)}
-        <div data-fline="2" data-fs="20" style="${dispStyle}font-size:${F.venue.length>22?27:32}px;line-height:1.04;color:${onLiv};margin-top:5px">${esc(F.venue)}</div>
-        <div data-fs="14" style="font:400 16px/1.2 ${B};color:rgba(255,250,240,.82);margin-top:4px">${esc(F.sign)}</div></div>
-      <div style="position:absolute;right:22px;top:16px;width:128px;bottom:14px;border-left:1px solid rgba(255,250,240,.35);text-align:center">
-        <div style="font:700 15px/1 ${B};letter-spacing:.24em;color:${K.light};margin-top:6px">SEAT</div>
-        <div style="${dispStyle}font-size:${seat.length>3?50:58}px;line-height:1.05;color:${onLiv};font-style:normal;margin-top:4px">${seat}</div>
-        <div style="font:700 14px/1 ${B};letter-spacing:.14em;color:rgba(255,250,240,.8);margin-top:2px">WINDOW</div></div>
-    </div>${stripes(120)}`;
-  const winTop=158,winH=486,winW=476,winL=(W-winW)/2,rad=era>=6?150:era===3?130:118;
-  const bez=dark?"#3a3d44":"#e4e1d9";
-  const win=`<div style="position:absolute;left:${winL}px;top:${winTop}px;width:${winW}px;height:${winH}px;border-radius:${rad}px;overflow:hidden;background:${K.deep};box-shadow:0 0 0 13px ${bez},0 0 0 14px rgba(0,0,0,.18),0 0 0 22px ${rgba(bez,.55)},0 8px 22px 16px rgba(0,0,0,.18)">
+      <div data-fbox style="position:absolute;left:26px;right:168px;top:14px;bottom:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(onLiv,"rgba(255,250,240,.82)",K.light)}</div>
+      <div style="position:absolute;right:22px;top:16px;width:128px;bottom:14px;border-left:1px solid rgba(255,250,240,.35)"></div>
+    </div>${seatTile(27,8,"transparent",onLiv,K.light,"")}${stripes(120)}`;
+    winTop=158;winH=486;winW=476;winRad=era===3?"130px":"118px";
+    const bez=dark?"#3a3d44":"#e4e1d9";
+    frame=`0 0 0 13px ${bez},0 0 0 14px rgba(0,0,0,.18),0 0 0 22px ${rgba(bez,.55)},0 8px 22px 16px rgba(0,0,0,.18)`;
+  }else{
+    strip=`<div data-fbox style="position:absolute;left:${era===6?44:30}px;right:166px;top:22px;height:92px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(K.ink,K.soft,K.acc)}</div>
+      ${seatTile(30,22,"transparent",K.acc,K.soft,`border:2px solid ${rgba(K.acc,.7)};border-radius:14px`)}
+      <div style="position:absolute;left:${era===6?44:30}px;right:30px;top:126px;height:2px;background:${K.acc}"></div>
+      ${era===6?`<div style="position:absolute;left:0;top:0;bottom:0;width:18px;background:linear-gradient(180deg,${K.acc},${K.light} 60%,${K.acc})"></div>`:""}`;
+    winTop=150;winH=528;winW=era===6?488:500;winRad=`${Math.round(winW*.42)}px / ${Math.round(winH*.36)}px`;
+    const bez=dark?"#3a3d44":"#edeae4";
+    frame=`0 0 0 9px ${bez},0 0 0 10px rgba(0,0,0,.12),0 12px 28px 6px rgba(0,0,0,.16)`;
+  }
+  const winL=G==="jet"?0:Math.round((W-winW)/2+(G==="mod"&&era===6?9:0));
+  const win=`<div style="position:absolute;left:${winL}px;top:${winTop}px;width:${winW}px;height:${winH}px;border-radius:${winRad};overflow:hidden;background:${K.deep};box-shadow:${frame}">
       ${photoHTML(ph.hero,ph.heroPos,era,t)}
-      <div style="position:absolute;inset:0;border-radius:${rad}px;box-shadow:inset 0 0 26px 6px rgba(0,0,0,.45),inset 0 0 0 3px rgba(255,255,255,.25)"></div>
-      <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 32%)"></div></div>`;
-  const lp=logoPanel(ctx,{maxW:330,maxH:92,center:true,dark:rgba(K.deep,.88),light:rgba(dark?"#f1efe9":"#fffdf8",.95),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f1efe9":"#fffdf8",.95),fbK:K.acc,
+      ${G==="jet"?`<div style="position:absolute;left:0;right:0;bottom:0;height:150px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.35))"></div>`:`<div style="position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 26px 6px rgba(0,0,0,${G==="prop"?.3:.45}),inset 0 0 0 3px rgba(255,255,255,.25)"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 32%)"></div>`}</div>${winExtra}`;
+  const lpBottom=G==="jet"?H-winH+44:H-(winTop+winH)-18;
+  const lp=logoPanel(ctx,{maxW:330,maxH:92,center:true,dark:rgba(K.deep,.9),light:rgba(dark?"#f1efe9":"#fffdf8",.96),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f1efe9":"#fffdf8",.95),fbK:K.acc,
     titleFont:`${L.dw} 40px ${D}`,titleCol:"#141414",under:`In-flight feature`,underFont:`700 14px/1.2 ${B};letter-spacing:.16em;text-transform:uppercase`,
-    style:`position:absolute;left:50%;transform:translateX(-50%);bottom:${H-(winTop+winH)-18}px;max-width:430px;padding:13px 20px 11px;text-align:center;border-radius:${era>=6?14:4}px;box-shadow:0 6px 16px rgba(0,0,0,.4);z-index:2`});
+    style:`position:absolute;${G==="jet"?"left:30px":"left:50%;transform:translateX(-50%)"};bottom:${lpBottom}px;max-width:430px;padding:13px 20px 11px;text-align:center;border-radius:${era>=6?14:G==="prop"?0:4}px;box-shadow:0 6px 16px rgba(0,0,0,.4)${G==="prop"?`,inset 0 0 0 3px ${rgba(K.acc,.5)}`:""};z-index:4`});
   const note=`<div data-fbox style="position:absolute;left:28px;width:270px;top:700px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?24:30}px;overflow:hidden">
     ${kick("From the flight deck")}
     <div data-fs="14" style="font:italic 400 18px/1.3 ${B};color:${K.ink};margin-top:7px">"${esc(dry(F.note.text))}"</div>
@@ -255,14 +324,34 @@ window.MENU_FORMATS[ID]=ctx=>{
   const front=face(strip+win+lp+note+trolley);
 
   /* ---- back: meal header, framed still, the film's prop, the meal, fine print ---- */
-  const top=`<div style="position:absolute;left:0;right:0;top:0;height:62px;background:${liv}">
+  let top,sTop,sH,sFrame,sRad;
+  if(G==="prop"){
+    top=`<div style="position:absolute;left:30px;right:30px;top:24px;height:46px;display:flex;align-items:center;gap:14px;border-bottom:4px double ${K.acc}">
+        <div data-fline="1" data-fs="18" style="flex:1;min-width:0;${dispStyle}font-size:26px;color:${K.ink};white-space:nowrap;${inkSpread}">${esc(VOICE[t])}</div>
+        <div style="flex:none;font:700 15px/1 ${B};letter-spacing:.16em;color:${K.acc}">SEAT ${seat}</div></div>`;
+    sTop=96;sH=258;sFrame=`box-shadow:0 0 0 6px ${paper},0 0 0 7px ${K.acc}`;sRad="0";
+  }else if(G==="jet"){
+    top=`<div style="position:absolute;left:0;top:0;padding:14px 26px 12px;background:${liv};z-index:3;max-width:420px">
+        <div data-fline="1" data-fs="14" style="font:700 16px/1.1 ${B};letter-spacing:.18em;text-transform:uppercase;color:${onLiv};white-space:nowrap">${esc(VOICE[t])}</div></div>
+      <div style="position:absolute;right:0;top:0;padding:14px 22px 12px;background:#fffaf0;z-index:3;font:700 16px/1.1 ${B};letter-spacing:.16em;color:${K.acc}">SEAT ${seat}</div>`;
+    sTop=0;sH=318;sFrame="";sRad="0";
+  }else if(G==="wide"){
+    top=`<div style="position:absolute;left:0;right:0;top:0;height:62px;background:${liv}">
       <div style="position:absolute;left:28px;right:28px;top:0;bottom:0;display:flex;align-items:center;gap:16px">
         <div data-fline="1" data-fs="14" style="flex:1;min-width:0;font:700 16px/1.1 ${B};letter-spacing:.18em;text-transform:uppercase;color:${onLiv};white-space:nowrap">${esc(VOICE[t])}</div>
         <div style="flex:none;font:700 16px/1 ${B};letter-spacing:.16em;color:${K.light}">SEAT ${seat}</div></div></div>${stripes(62)}`;
-  const sTop=92,sH=254;
-  const still=`<div style="position:absolute;left:28px;right:28px;top:${sTop}px;height:${sH}px;overflow:hidden;background:${K.deep};outline:1px solid ${K.acc};outline-offset:4px;border-radius:${era>=6?14:era===3?12:0}px">
+    sTop=92;sH=254;sFrame=`outline:1px solid ${K.acc};outline-offset:4px`;sRad=era===3?"12px":"0";
+  }else{
+    top=`<div style="position:absolute;left:${era===6?44:30}px;right:30px;top:22px;height:44px;display:flex;align-items:center;gap:16px;border-bottom:2px solid ${K.acc}">
+        <div data-fline="1" data-fs="14" style="flex:1;min-width:0;font:700 16px/1.1 ${B};letter-spacing:.18em;text-transform:uppercase;color:${K.ink};white-space:nowrap">${esc(VOICE[t])}</div>
+        <div style="flex:none;font:700 16px/1 ${B};letter-spacing:.16em;color:${K.acc}">SEAT ${seat}</div></div>
+      ${era===6?`<div style="position:absolute;left:0;top:0;bottom:0;width:18px;background:linear-gradient(180deg,${K.acc},${K.light} 60%,${K.acc})"></div>`:""}`;
+    sTop=88;sH=262;sFrame="";sRad="22px";
+  }
+  const sL=G==="jet"?0:era===6?44:28,sR=G==="jet"?0:28;
+  const still=`<div style="position:absolute;left:${sL}px;right:${sR}px;top:${sTop}px;height:${sH}px;overflow:hidden;background:${K.deep};${sFrame};border-radius:${sRad}">
       ${photoHTML(ph.second,ph.secondPos,era,t)}
-      <div style="position:absolute;left:12px;bottom:12px;background:${rgba("#fffaf0",.92)};padding:6px 10px;font:700 14px/1.2 ${B};letter-spacing:.12em;text-transform:uppercase;color:#1c1712">Now showing</div></div>`;
+      <div style="position:absolute;left:12px;bottom:${G==="jet"?26:12}px;background:${rgba("#fffaf0",.92)};padding:6px 10px;font:700 14px/1.2 ${B};letter-spacing:.12em;text-transform:uppercase;color:#1c1712">Now showing</div></div>${G==="jet"?stripes(sTop+sH-12,true):""}`;
   const pr=F.prop,pk=pr.kind;
   const prop=`<div style="position:absolute;right:20px;top:${sTop+sH-66}px;width:206px;transform:rotate(${(-T.rot*.7+2).toFixed(1)}deg);${propPaper(pk,K.acc,"#fffcf4")}box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;z-index:2">
     <div data-fbox style="position:relative;padding:11px 16px 10px;max-height:110px;overflow:hidden">

@@ -7,6 +7,42 @@
    Fonts (fmt-motel): Sigmar One, Yellowtail, Atomic Age, Calistoga, Orbitron, Days One, Sarpanch,
    Instrument Serif. */
 (function(){
+/* ---- lift helpers (identical block in cafe, bistro, motel, airline, campfire) ----
+   trim: crops baked-in letterbox bars and dead flat edges off a still, then cover-fits what is left.
+   logo: scores a title logo against a dark and a light panel (20th percentile contrast, so multicolour
+   logos read in every part) and returns the better panel; a weak best score gets a fine halo, never a recolour. */
+if(!window.__fmtLift||window.__fmtLift.v<2)window.__fmtLift={v:2,
+  px(img,w){const cv=document.createElement("canvas");cv.width=w;cv.height=Math.max(8,Math.round(w*img.naturalHeight/img.naturalWidth));
+    const cx=cv.getContext("2d");cx.drawImage(img,0,0,cv.width,cv.height);return{d:cx.getImageData(0,0,cv.width,cv.height).data,w:cv.width,h:cv.height}},
+  trim(img,tries){try{
+    if(!img.naturalWidth||img.dataset.trim==="1")return;
+    const box=img.parentElement,bw=+img.dataset.bw||box.clientWidth,bh=+img.dataset.bh||box.clientHeight;
+    if(!bw||!bh){if((tries||0)<6)setTimeout(()=>window.__fmtLift.trim(img,(tries||0)+1),400);return}
+    img.dataset.trim="1";
+    const{d,w,h}=window.__fmtLift.px(img,160),L=(x,y)=>{const i=(y*w+x)*4;return .2126*d[i]+.7152*d[i+1]+.0722*d[i+2]};
+    const dead=(n,get)=>{let dk=0,s=0,s2=0;for(let j=0;j<n;j++){const l=get(j);if(l<28)dk++;s+=l;s2+=l*l}const m=s/n,v=s2/n-m*m;return dk/n>.94||(dk/n>.74&&m<34)||(v<30&&(m<46||m>238))};
+    const col=x=>dead(h,y=>L(x,y)),row=y=>dead(w,x=>L(x,y));
+    let l=0,r=w-1,t=0,b=h-1;
+    while(l<w*.42&&col(l))l++;while(r>w*.58&&col(r))r--;while(t<h*.3&&row(t))t++;while(b>h*.7&&row(b))b--;
+    if(l<2&&w-1-r<2&&t<2&&h-1-b<2)return;
+    l=l?l+1:0;t=t?t+1:0;r=r<w-1?r-1:r;b=b<h-1?b-1:b;
+    const kx=img.naturalWidth/w,ky=img.naturalHeight/h,x0=l*kx,y0=t*ky,cw=(r+1)*kx-x0,ch=(b+1)*ky-y0;
+    const s=Math.max(bw/cw,bh/ch),pp=(getComputedStyle(img).objectPosition||"50% 40%").split(" ").map(v=>/%$/.test(v)?parseFloat(v)/100:v==="center"?.5:v==="top"||v==="left"?0:v==="bottom"||v==="right"?1:.5);
+    const fx=pp[0]==null?.5:pp[0],fy=pp[1]==null?.4:pp[1];
+    Object.assign(img.style,{objectFit:"fill",objectPosition:"0 0",inset:"auto",right:"auto",bottom:"auto",maxWidth:"none",maxHeight:"none",
+      left:(-x0*s+(bw-cw*s)*fx).toFixed(1)+"px",top:(-y0*s+(bh-ch*s)*fy).toFixed(1)+"px",width:(img.naturalWidth*s).toFixed(1)+"px",height:(img.naturalHeight*s).toFixed(1)+"px"});
+  }catch(e){}},
+  cors(img){if(img.crossOrigin){img.removeAttribute("crossorigin");img.dataset.trim="1";img.src=img.src}},
+  rl(l){l/=255;return l<=.03928?l/12.92:Math.pow((l+.055)/1.055,2.4)},
+  logo(img,darkLum,lightLum){try{
+    const{d}=window.__fmtLift.px(img,120),ls=[];
+    for(let i=0;i<d.length;i+=4)if(d[i+3]>140)ls.push(.2126*window.__fmtLift.rl(d[i])+.7152*window.__fmtLift.rl(d[i+1])+.0722*window.__fmtLift.rl(d[i+2]));
+    if(!ls.length)return null;
+    const sc=P=>{const c=ls.map(x=>(Math.max(x,P)+.05)/(Math.min(x,P)+.05)).sort((a,b)=>a-b);return c[Math.floor(c.length*.2)]};
+    const sd=sc(darkLum==null?.012:darkLum),sl=sc(lightLum==null?.86:lightLum),panel=sd>=sl?"dark":"light",best=Math.max(sd,sl);
+    if(best<3)img.style.filter=panel==="dark"?"drop-shadow(0 0 1.2px rgba(255,255,255,.95)) drop-shadow(0 0 5px rgba(255,255,255,.35))":"drop-shadow(0 0 1.2px rgba(0,0,0,.9)) drop-shadow(0 0 4px rgba(0,0,0,.25))";
+    return panel;
+  }catch(e){return null}}};
 const W=816,H=600;
 /* ---------- shared helpers ---------- */
 const clean=s=>String(s==null?"":s).replace(/\s*[‐-―−]\s*/g,", ").replace(/\s+-\s+/g,", ").replace(/--+/g,", ");
@@ -32,12 +68,12 @@ const CHALKMASK=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" heig
 const FIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(r){function f(){r.querySelectorAll('[data-fit]').forEach(function(b){var k=1;b.style.setProperty('--k',1);b.style.removeProperty('--nd');var o=function(){return b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1};while(o()&&k>.56){k-=.04;b.style.setProperty('--k',k.toFixed(2))}if(o())b.style.setProperty('--nd','none');if(o())b.style.setProperty('--dl','1')})}f();if(document.fonts)document.fonts.ready.then(f);setTimeout(f,900);setTimeout(f,2200)})(this.parentNode)">`;
 const fs=(px,min)=>`font-size:max(${min||14}px,calc(${px}px * var(--k,1)))`;
 /* logo panel tone: a dark logo flips its panel to the light stock */
-const LOGOTONE=`onload="(function(i){try{var c=document.createElement('canvas'),w=c.width=72,h=c.height=Math.max(8,Math.round(72*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){s+=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];n++}}var p=i.closest('[data-lp]');if(n&&p&&(s/n<90)===(p.dataset.dark==='1')){p.style.background=p.dataset.alt;p.style.boxShadow=p.dataset.altsh}}catch(e){}})(this)"`;
+const LOGOTONE=`onload="(function(i){var p=i.closest('[data-lp]'),w=window.__fmtLift&&__fmtLift.logo(i,+((p&&p.dataset.dl)||.012),+((p&&p.dataset.ll)||.86));if(p&&w&&(w==='light')===(p.dataset.dark==='1')){p.style.background=p.dataset.alt;p.style.boxShadow=p.dataset.altsh}})(this)"`;
 function logoBox(ctx,maxW,maxH){const L=ctx.logo;if(!L||!L[0]||!L[1]||!L[2])return null;const a=L[1]/L[2];let h=Math.min(maxH,maxW/a),w=h*a;
   return{w:Math.round(w),h:Math.round(h),html:`<img crossorigin="anonymous" alt="${esc(ctx.f.title)}" src="${ctx.img(L[0],"w500")}" ${LOGOTONE} style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain">`}}
 function posterOf(ctx){if(ctx.poster)return ctx.poster;try{return(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[ctx.f.id])||null}catch(e){return null}}
 function photo(ctx,path,w,h,filter,pos){const poster=posterOf(ctx);
-  if(path)return `<img alt="" src="${ctx.img(path,"w1280")}" style="position:absolute;inset:0;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos||"50% 40%"};filter:${filter}">`;
+  if(path)return `<img alt="" crossorigin="anonymous" data-bw="${w}" data-bh="${h}" onload="window.__fmtLift&&__fmtLift.trim(this)" onerror="window.__fmtLift&&__fmtLift.cors(this)" src="${ctx.img(path,"w1280")}" style="position:absolute;inset:0;left:0;top:0;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos||"50% 40%"};filter:${filter}">`;
   if(poster)return `<img alt="" src="${ctx.img(poster,"w780")}" style="position:absolute;inset:-30px;width:${w+60}px;height:${h+60}px;object-fit:cover;filter:blur(18px) brightness(.7) ${filter}"><img alt="" src="${ctx.img(poster,"w780")}" style="position:absolute;left:50%;top:0;height:${h}px;transform:translateX(-50%);filter:${filter};box-shadow:0 0 40px rgba(0,0,0,.5)">`;
   return `<div style="position:absolute;inset:0;background:#333"></div>`}
 function yy(f){return String(f.year||"").slice(-2)||"00"}
@@ -104,22 +140,28 @@ window.MENU_FORMATS["motel"]=ctx=>{
   /* ---------- front: the picture side ---------- */
   const B=e.border,PW=W-2*B,PHh=H-2*B;
   const LB=logoBox(ctx,era==="1930s-40s"?250:300,era==="1930s-40s"?78:96);
-  const lp=(x,y,anchor)=>LB?`<div data-lp data-dark="1" data-alt="rgba(250,248,242,.94)" data-altsh="0 6px 18px rgba(0,0,0,.4)" style="position:absolute;${anchor}:${x}px;top:${y}px;padding:12px 16px;background:rgba(10,10,12,.74);border-radius:${e.rad?12:4}px;box-shadow:0 6px 18px rgba(0,0,0,.4)">${LB.html}</div>`
-    :`<div style="position:absolute;${anchor}:${x}px;top:${y}px;max-width:330px;padding:10px 16px;background:rgba(10,10,12,.74);color:#fff;font-family:${DISP};font-weight:${e.dw||400};font-size:${f.title&&f.title.length>22?22:30}px;line-height:1.05;border-radius:4px">${esc(f.title)}</div>`;
+  /* old postcards get a printed card panel (cream or sepia brown), later eras a plain dark or light one; the logo picks */
+  const OLD=era==="1930s-40s"||era==="1950s"||era==="1970s";
+  const pDark=OLD?"rgba(44,30,18,.9)":"rgba(10,10,12,.78)",pLight=OLD?"rgba(246,238,216,.95)":"rgba(250,248,242,.94)";
+  const pEdge=OLD?`,inset 0 0 0 3px ${e.paper},inset 0 0 0 4px ${mix(ACC,"#000000",.2)}`:"";
+  const lp=(x,y,anchor)=>LB?`<div data-lp data-dark="1" data-dl="${OLD?.016:.006}" data-ll="${OLD?.84:.92}" data-alt="${pLight}" data-altsh="0 6px 18px rgba(0,0,0,.4)${pEdge}" style="position:absolute;${anchor}:${x}px;top:${y}px;padding:12px 16px;background:${pDark};border-radius:${e.rad?12:4}px;box-shadow:0 6px 18px rgba(0,0,0,.4)${pEdge}">${LB.html}</div>`
+    :`<div style="position:absolute;${anchor}:${x}px;top:${y}px;max-width:330px;padding:10px 16px;background:${pDark};color:#fff;font-family:${DISP};font-weight:${e.dw||400};font-size:${f.title&&f.title.length>22?22:30}px;line-height:1.05;border-radius:4px">${esc(f.title)}</div>`;
   let front="";
   const vshort=venue.replace(/^(the)\s+/i,"");
   if(e.cap==="big"){
     /* big letter postcard: the venue's name cut from a second still */
     const words=vshort.split(/\s+/);let big=words.length>2?words.slice(0,2).join(" "):vshort;if(big.length>18)big=words[0];big=big.slice(0,18);
-    const bs=Math.max(46,Math.min(150,Math.floor((PW-60)/(big.length*e.dr))));
-    const fill=s1||s0||posterOf(ctx);
+    const bs=Math.max(44,Math.min(104,Math.floor((PW-80)/(big.length*e.dr))));
+    /* linen postcard letters: hand tinted in the film's colour, cream keyline, block shadow; sit low so faces stay clear */
+    const tint=mix(ACC,"#c9a46a",.25),tintHi=mix(tint,"#fff4dc",.4),tintLo=mix(tint,"#2a1a0c",.35);
     front=`<div style="position:absolute;inset:0;background:${e.bcol}"></div>
       <div style="position:absolute;left:${B}px;top:${B}px;width:${PW}px;height:${PHh}px;overflow:hidden">${photo(ctx,s0,PW,PHh,filt)}<div style="position:absolute;inset:0;background:${linen};mix-blend-mode:multiply"></div>
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 40%,rgba(0,0,0,${T.vig}) 100%)"></div></div>
-      <div style="position:absolute;left:${B+24}px;top:${B+18}px;font-family:'${sigF}',cursive;font-size:44px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.7)">${esc(T.kick)}</div>
-      <div style="position:absolute;left:${B}px;right:${B}px;top:${Math.round(H/2-bs*.62)}px;text-align:center;font-family:${DISP};font-size:${bs}px;line-height:1.1;text-transform:uppercase;letter-spacing:.01em;
-        background-image:url('${fill?ctx.img(fill,"w1280"):""}');background-size:cover;background-position:50% 40%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:3px #fff8e6;filter:drop-shadow(5px 6px 0 ${mix(ACC,"#000000",.25)}) drop-shadow(0 6px 10px rgba(0,0,0,.5)) saturate(1.4)">${esc(big)}</div>
-      <div style="position:absolute;left:${B}px;right:${B}px;bottom:${B+16}px;text-align:center;font-family:${BODY};font-weight:800;font-size:20px;letter-spacing:.22em;text-transform:uppercase;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.8)">${esc(sign)}</div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(0,0,0,0) 40%,rgba(0,0,0,${T.vig}) 100%)"></div>
+      <div style="position:absolute;left:0;right:0;bottom:0;height:${Math.round(bs*1.1)+90}px;background:linear-gradient(180deg,rgba(40,26,12,0),rgba(40,26,12,.55))"></div></div>
+      <div style="position:absolute;left:${B+24}px;top:${B+18}px;font-family:'${sigF}',cursive;font-size:44px;color:#fff8e6;text-shadow:0 2px 6px rgba(0,0,0,.7)">${esc(T.kick)}</div>
+      <div style="position:absolute;left:${B}px;right:${B}px;top:${H-B-52-Math.round(bs*1.1)}px;text-align:center;font-family:${DISP};font-size:${bs}px;line-height:1.1;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;
+        background:linear-gradient(180deg,${tintHi},${tint} 55%,${tintLo});-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:2.5px #fff4dc;filter:drop-shadow(4px 5px 0 rgba(42,26,12,.85)) drop-shadow(0 4px 8px rgba(0,0,0,.4))">${esc(big)}</div>
+      <div style="position:absolute;left:${B}px;right:${B}px;bottom:${B+14}px;text-align:center;font-family:${BODY};font-weight:800;font-size:18px;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff4dc;text-shadow:0 2px 6px rgba(0,0,0,.8)">${esc(sign)}</div>
       ${lp(B+18,B+14,"right")}`;
   }else if(e.cap==="strip"){
     const SH=96;
