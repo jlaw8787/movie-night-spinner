@@ -792,10 +792,27 @@ function libPhotoPass(card,L,poster){
     const nx=spare.find(x=>!used.has(x));
     if(nx){used.add(nx);i.removeAttribute("srcset");i.src=TMDB_IMG+"w780"+nx}
     else{let e=i;while(e.parentElement&&area(e.parentElement)<FA*0.4&&e.parentElement.querySelectorAll("img").length===1)e=e.parentElement;e.style.visibility="hidden"}});
-  /* 4. aim cropped scene photos at the faces in them, so a tight frame shows a face, not half of one */
-  const foc=L.focus||{};imgs.forEach(i=>{if(i===main||i.style.visibility==="hidden")return;const f=foc[path(i)];if(!f)return;
-    const cs=getComputedStyle(i);if(cs.objectFit!=="cover")return;i.style.objectPosition=Math.round(f[0]*100)+"% "+Math.round(f[1]*100)+"%"});
+  /* 4. a very thin frame (a window strip, a booth strip) shows only a sliver of a wide still, so a face there is always cut in half:
+     give it an unused still with no faces in it (a place, not a person) */
+  const foc=L.focus||{},faceless=spare.filter(x=>!foc[x]&&!used.has(x));
+  shown.forEach(i=>{if(i.style.visibility==="hidden")return;const k=path(i);if(!foc[k])return;
+    const bw=i.clientWidth,bh=i.clientHeight,a=foc[k][2]||1.778;if(!bw||!bh)return;
+    const vis=Math.min(bw/Math.max(bw,bh*a),bh/Math.max(bh,bw/a));if(vis>=0.4)return;
+    const nx=faceless.shift();if(!nx)return;used.add(nx);i.removeAttribute("srcset");i.src=TMDB_IMG+"w780"+nx});
+  /* 5. a still swapped in above gets aimed at its faces too */
+  libAim(card,L);
 }
+/* aim cropped scene photos at the faces in them, so a tight frame shows a face, not half of one.
+   Runs straight after the faces are drawn, before any photo loads, so a format's own load-time trim takes the same aim */
+function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
+  card.querySelectorAll(".fx-face img").forEach(i=>{if(i.dataset.trim==="1"&&i.dataset.aim)return;
+    const m=(i.getAttribute("src")||"").match(/\/t\/p\/[^/]+(\/[^?#]+)/),f=m&&foc[m[1]];if(!f)return;
+    const fit=getComputedStyle(i).objectFit;if(fit!=="cover"&&i.dataset.trim!=="1"&&!/onload/.test(i.outerHTML.slice(0,400)))return;
+    const bw=i.clientWidth,bh=i.clientHeight,a=f[2]||1.778;if(!bw||!bh)return;
+    const W=Math.max(bw,bh*a),H=Math.max(bh,bw/a),c=(v,n)=>Math.min(1,Math.max(0,v));
+    const px=W-bw>1?c((f[0]*W-bw/2)/(W-bw)):.5,py=H-bh>1?c((f[1]*H-bh/2)/(H-bh)):.4;
+    if(i.dataset.trim==="1")return;
+    i.dataset.aim="1";i.style.objectPosition=(px*100).toFixed(1)+"% "+(py*100).toFixed(1)+"%"})}
 /* after a format's own fitter: any clamped or ellipsis text that still hides words shrinks (to 14px at most) until it shows in full */
 function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;
   let fs=parseFloat(cs.fontSize),lh=parseFloat(cs.lineHeight)||fs*1.2;
@@ -858,6 +875,7 @@ async function show(f,preferSig){
       const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
+      try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
       await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);setTimeout(()=>{if(id===renderId)libUnclip(card)},1400);setTimeout(()=>{if(id===renderId)libUnclip(card,1)},3200);
       phoneView(null);styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
