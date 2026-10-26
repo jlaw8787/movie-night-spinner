@@ -117,11 +117,35 @@ window.MENU_FORMATS.home=function(ctx){
   const mags=(word,l,t,size)=>`<div style="position:absolute;left:${l}px;top:${t}px;display:flex;gap:2px;transform:rotate(${-T.rot*1.4}deg)">${[...word].map((ch,i)=>ch===" "?`<span style="width:${size*.35}px"></span>`:`<span style="font:900 ${size}px/1 'Baloo 2',${dd};color:${E.mag[i%E.mag.length]};transform:rotate(${((i*37)%9-4)*T.rot*.9}deg);display:inline-block;text-shadow:0 2px 0 rgba(0,0,0,.28),0 6px 8px rgba(0,0,0,.3)">${x(ch)}</span>`).join("")}</div>`;
   M.font("Baloo+2:wght@800");
 
-  /* logo in its own colours on a stuck-on card that suits it */
+  /* front geometry: the poster is the hero, shown whole at 2:3 in a hugging frame */
+  const padv=E.pr.pad.split(" ").map(v=>parseFloat(v)),pT=padv[0],pR=padv[1]==null?pT:padv[1],pB=padv[2]==null?pT:padv[2],pL=padv[3]==null?pR:padv[3];
+  const IW=464,IH=696,OW=IW+pL+pR,OH=IH+pT+pB,PX=24,PY=22;
+  const colL=PX+OW+26,colW=W-24-colL;
+  const hasP=heroIsPoster;
+  const fprint=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${OW}px;height:${OH}px;box-sizing:border-box;padding:${E.pr.pad};background:${E.pr.bg};border-radius:${E.pr.r};transform:rotate(${-T.rot*.5}deg);box-shadow:0 14px 28px rgba(0,0,0,.34),0 2px 5px rgba(0,0,0,.25)">
+     <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:${E.pr.ir};background:#222">
+      ${hero?(hasP?`<img src="${hero}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain">`:`<img src="${hero}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${heroPos};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`):""}
+     </div>
+     ${E.cap&&pB>=30?`<div style="position:absolute;left:0;right:0;bottom:1px;text-align:right;padding-right:22px;font:26px/1.1 ${SIG};color:#3a3326;white-space:nowrap;overflow:hidden">Now showing</div>`:""}
+   </div>`;
+  /* plastic letter magnets, type only */
+  const mags=(word,l,t,size)=>`<div style="position:absolute;left:${l}px;top:${t}px;display:flex;gap:2px;transform:rotate(${-T.rot*1.4}deg)">${[...word].map((ch,i)=>ch===" "?`<span style="width:${size*.35}px"></span>`:`<span style="font:900 ${size}px/1 'Baloo 2',${dd};color:${E.mag[i%E.mag.length]};transform:rotate(${((i*37)%9-4)*T.rot*.9}deg);display:inline-block;text-shadow:0 2px 0 rgba(0,0,0,.28),0 6px 8px rgba(0,0,0,.3)">${x(ch)}</span>`).join("")}</div>`;
+  M.font("Baloo+2:wght@800");
+  const print=(src,l,t,w,h,rot,op,cap,isP)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;box-sizing:border-box;padding:${E.pr.pad};background:${E.pr.bg};border-radius:${E.pr.r};transform:rotate(${rot}deg);box-shadow:0 14px 28px rgba(0,0,0,.34),0 2px 5px rgba(0,0,0,.25)">
+     <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:${E.pr.ir};background:#222">
+      ${src&&isP?`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;inset:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;filter:blur(16px) brightness(.55)"><img src="${src}" crossorigin="anonymous" alt="" style="position:relative;display:block;width:100%;height:100%;object-fit:contain">`:src?`<img src="${src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
+      <div style="position:absolute;inset:0;background:${isP?`linear-gradient(160deg,rgba(255,255,255,.1),transparent 30%)`:`radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%),linear-gradient(160deg,rgba(255,255,255,${E.stamp?.16:.05}),transparent 40%)`}"></div>
+      ${E.stamp&&!isP?`<div style="position:absolute;right:18px;bottom:12px;font:700 22px/1 ${bd};letter-spacing:3px;color:#ff8a1c;text-shadow:0 0 4px rgba(255,120,0,.7)">'${x(yy)} 10 26</div>`:""}
+     </div>
+     ${cap&&E.cap?`<div style="position:absolute;left:0;right:0;bottom:2px;text-align:right;padding-right:26px;font:30px/1.1 ${SIG};color:#3a3326">${x(cap)}</div>`:""}
+   </div>`;
+
+  /* logo in its own colours on a stuck-on card that suits it, in the column beside the poster */
   const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const lw=lr?Math.min(310,108*lr):0,lh=lr?lw/lr:0;
-  const typeT=`<div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:310px;height:112px;overflow:hidden;font:${E.dw} 46px/1.02 ${dd};${up}color:#fff;font-size:46px">${x(f.title)}</div>`;
-  const logo=`<div data-lpanel data-dark="rgba(20,20,24,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:458px;top:${st0&&heroIsPoster?150:300}px;padding:14px 20px;border-radius:${E.pr.r};background:${lr?"rgba(20,20,24,.9)":dark};box-shadow:0 10px 22px rgba(0,0,0,.35);transform:rotate(${-T.rot*.8}deg);max-width:340px">
+  let lw=lr?Math.min(colW-32,100*lr):0,lh=lr?lw/lr:0;if(lr&&lh>110){lh=110;lw=lh*lr}
+  const typeT=`<div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:${colW-32}px;height:112px;overflow:hidden;font:${E.dw} 46px/1.02 ${dd};${up}color:#fff;font-size:46px">${x(f.title)}</div>`;
+  const LT=100;
+  const logo=`<div data-lpanel data-dark="rgba(20,20,24,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:${colL}px;top:${LT}px;max-width:${colW}px;box-sizing:border-box;padding:14px 16px;border-radius:${E.pr.r};background:${lr?"rgba(20,20,24,.9)":dark};box-shadow:0 10px 22px rgba(0,0,0,.35);transform:rotate(${-T.rot*.6}deg)">
      ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
      ${typeT}
    </div>`;
@@ -129,31 +153,30 @@ window.MENU_FORMATS.home=function(ctx){
   const kick=(t,c)=>`<div style="font:700 .9em/1.2 ${bd};letter-spacing:.2em;text-transform:uppercase;color:${c||acc}">${x(t)}</div>`;
   const lined=`background:${E.card};background-image:repeating-linear-gradient(to bottom,transparent 0 33px,rgba(70,110,180,.16) 33px 34px);`;
   /* front */
-  const padv=E.pr.pad.split(" ").map(v=>parseFloat(v)),pT=padv[0],pR=padv[1]==null?pT:padv[1],pB=padv[2]==null?pT:padv[2],pL=padv[3]==null?pR:padv[3];
-  const PW=Math.round((588-pT-pB)*2/3+pL+pR);
+  const RT=LT+140+22,RH=PY+OH-RT;
+  const NT=PY+OH+30,NH=H-24-NT,NFH=NH-46-20-46;
   const front=`${door}
-   ${print(hero,28,36,PW,588,-T.rot*.5,heroPos,"Now showing",heroIsPoster)}
-   ${st0&&heroIsPoster?print(st0,452,336,320,262,T.rot*.9,"center 40%","",false):""}
-   ${mags("EAT",560,30,58)}
+   ${fprint}
+   ${mags("EAT",colL+4,22,58)}
    ${logo}
-   <div style="position:absolute;left:34px;top:656px;width:372px;height:368px;box-sizing:border-box;padding:46px 26px 20px;${lined}transform:rotate(${T.rot*1.1}deg);box-shadow:0 10px 22px rgba(0,0,0,.28),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6})">
-     <div style="position:absolute;left:0;right:0;top:0;height:30px;background:${acc}"></div>
-     <div data-fit="17" style="height:226px;overflow:hidden;font-size:22px;color:${ink}">
-       ${kick(T.k)}
-       <div style="margin-top:.45em;font:italic 1.05em/1.4 ${bd}">${x(nt.text)}</div>
-     </div>
-     <div style="font:40px/1.1 ${SIG};color:#24407a;margin-top:6px;white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
-   </div>
-   <div style="position:absolute;left:428px;top:640px;width:356px;height:390px;box-sizing:border-box;padding:22px 24px 18px;background:${E.card};transform:rotate(${-T.rot*.7}deg);box-shadow:0 10px 22px rgba(0,0,0,.28),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6})">
+   <div style="position:absolute;left:${colL}px;top:${RT}px;width:${colW}px;height:${RH}px;box-sizing:border-box;padding:20px 20px 16px;background:${E.card};transform:rotate(${-T.rot*.4}deg);box-shadow:0 10px 22px rgba(0,0,0,.28),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6})">
      <div style="height:3px;background:${acc};margin-bottom:4px"></div>
-     <div style="height:1px;background:rgba(60,100,170,.45);margin-bottom:14px"></div>
-     <div data-fit="16" style="height:322px;overflow:hidden;font-size:20px;color:${ink}">
+     <div style="height:1px;background:rgba(60,100,170,.45);margin-bottom:12px"></div>
+     <div data-fit="16" style="height:${RH-20-16-20}px;overflow:hidden;font-size:20px;color:${ink}">
        ${kick(`Recipe box no. ${num}`)}
-       <div style="margin-top:.25em;font:${E.dw} 2em/1.04 ${dd};${up}color:${ink}">${x(venue)}</div>
+       <div style="margin-top:.25em;font:${E.dw} 2em/1.04 ${dd};${up}color:${ink};overflow-wrap:anywhere">${x(venue)}</div>
        <div style="margin-top:.35em;font:700 1em/1.3 ${bd};color:${acc}">${x(sign)}</div>
        ${f.T?`<div style="margin-top:.6em;font:italic 1.05em/1.35 ${bd}">${x(f.T)}</div>`:""}
        ${f.P?`<div style="margin-top:.8em;padding-top:.6em;border-top:1px solid rgba(0,0,0,.18)">${kick("Showtime")}<div style="margin-top:.2em;font:1em/1.35 ${bd}">${x(M.sent(f.P))}</div></div>`:""}
      </div>
+   </div>
+   <div style="position:absolute;left:30px;top:${NT}px;width:${W-60}px;height:${NH}px;box-sizing:border-box;padding:46px 26px 20px;${lined}transform:rotate(${T.rot*.5}deg);box-shadow:0 10px 22px rgba(0,0,0,.28),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6})">
+     <div style="position:absolute;left:0;right:0;top:0;height:30px;background:${acc}"></div>
+     <div data-fit="17" style="height:${NFH}px;overflow:hidden;font-size:22px;color:${ink}">
+       ${kick(T.k)}
+       <div style="margin-top:.45em;font:italic 1.05em/1.4 ${bd}">${x(nt.text)}</div>
+     </div>
+     <div style="font:40px/1.1 ${SIG};color:#24407a;margin-top:6px;white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
    </div>`;
 
   /* back: second print, magnet list of winks, two recipe cards for the courses */
