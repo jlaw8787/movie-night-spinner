@@ -198,7 +198,7 @@ window.MENU_FORMATS.diner=ctx=>{
     /* two faces: grow the back still as far as the menu allows, at the largest type that fits */
     let two=null;
     for(const L of LEVELS){const html=run(0,n,L);
-      for(let bh=470;bh>=296;bh-=16)if(fitsHTML(backHTML(bh,true,html))){two=backHTML(bh,true,html);break}
+      for(let bh=600;bh>=232;bh-=16)if(fitsHTML(backHTML(bh,true,html))){two=backHTML(bh,true,html);break}
       if(two)break}
     if(two)faces=[front,two];
     else{
@@ -210,9 +210,17 @@ window.MENU_FORMATS.diner=ctx=>{
         if(k<1)continue;
         if(fitsHTML(lastHTML(V.lb,V.lp,run(k,n,L)))){pick={L,V,k};break outer}}
       if(!pick){const L=LEVELS[LEVELS.length-1],V=VARIANTS[VARIANTS.length-1];let k=n-1;while(k>1&&!fitsHTML(backHTML(V.bb,V.bp,run(0,k,L))))k--;pick={L,V,k}}
-      const {L,V,k}=pick,rest=run(k,n,L);let lb=V.lb;
-      for(let h=620;h>V.lb;h-=16)if(fitsHTML(lastHTML(h,V.lp,rest))){lb=h;break}
-      faces=[front,backHTML(V.bb,V.bp,run(0,k,L)),lastHTML(lb,V.lp,rest)];
+      /* balance the split: move items to the last face while both stills can grow, so neither face is left with a dead band */
+      const {L,V}=pick;
+      const grow=(mk,hi,lo,html)=>{for(let h=hi;h>=lo;h-=16)if(fitsHTML(mk(h,html)))return h;return 0};
+      let best=null;
+      for(let kk=pick.k;kk>=Math.max(1,Math.ceil(n/2)-1);kk--){
+        const bh=grow((h,x)=>backHTML(h,V.bp,x),600,V.bb,run(0,kk,L)),lh=grow((h,x)=>lastHTML(h,V.lp,x),620,V.lb,run(kk,n,L));
+        if(!bh||!lh)continue;const sc=Math.min(bh,lh);if(!best||sc>best.sc)best={sc,kk,bh,lh}}
+      if(best)faces=[front,backHTML(best.bh,V.bp,run(0,best.kk,L)),lastHTML(best.lh,V.lp,run(best.kk,n,L))];
+      else{const {k}=pick,rest=run(k,n,L);let lb=V.lb;
+        for(let h=620;h>V.lb;h-=16)if(fitsHTML(lastHTML(h,V.lp,rest))){lb=h;break}
+        faces=[front,backHTML(V.bb,V.bp,run(0,k,L)),lastHTML(lb,V.lp,rest)]}
     }
   }finally{host.remove()}
   schedule(token,night);
@@ -249,11 +257,11 @@ function fit(faces,night){
     if(!(lg.complete&&lg.naturalWidth)){plate.style.display="none";const a=fr.querySelector('[data-h="alt"]');a.style.display="";a.dataset.h="title"}
     else{try{const cv=document.createElement("canvas");cv.width=96;cv.height=Math.max(8,Math.round(96*lg.naturalHeight/lg.naturalWidth));
       const cx=cv.getContext("2d");cx.drawImage(lg,0,0,cv.width,cv.height);const d=cx.getImageData(0,0,cv.width,cv.height).data;let s=0,n=0;
-      for(let i=0;i<d.length;i+=4)if(d[i+3]>128){s+=(.2126*d[i]+.7152*d[i+1]+.0722*d[i+2])/255;n++}
-      const L=n?s/n:.5;
+      let dk=0,lt=0;for(let i=0;i<d.length;i+=4)if(d[i+3]>128){const y=(.2126*d[i]+.7152*d[i+1]+.0722*d[i+2])/255;s+=y;if(y<.36)dk++;if(y>.8)lt++;n++}
+      const L=n?s/n:.5,DK=n?dk/n:0,LT=n?lt/n:0;
       /* the logo keeps its own colours; the plate behind it changes so it reads */
-      if(night&&L<.4){plate.style.background="#ece6d6";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.15)"}
-      if(!night&&L>.62){plate.style.background="#16191f";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.3)"}}catch(e){}
+      if(night&&(L<.4||DK>.3&&DK>LT)){plate.style.background="#ece6d6";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.15)"}
+      if(!night&&(L>.62||LT>.5&&LT>DK)){plate.style.background="#16191f";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.3)"}}catch(e){}
       const ar=lg.naturalWidth/lg.naturalHeight;let h=lg.offsetHeight;
       while(over()&&h>56){h-=8;lg.style.height=h+"px";lg.style.width=Math.min(318,Math.round(h*ar))+"px"}}}
   const t=fr.querySelector('[data-h="title"]');

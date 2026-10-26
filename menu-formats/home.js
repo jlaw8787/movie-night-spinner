@@ -179,4 +179,14 @@ window.MENU_FORMATS.home=function(ctx){
    ${rcard(cardB,420,548,T.rot*.5,f.year?String(f.year):"",`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
   return {w:W,h:H,faces:[front,back]};
 };
+/* fonts ready: the app awaits .ready before it renders, so the fitter measures with the real faces and text never spills at a late font swap */
+function fontSpecs(url){const o=[];String(url||"").replace(/family=([^&:]+)(?::([a-z,]+)@([^&]+))?/g,(m,fam,ax,vals)=>{fam=decodeURIComponent(fam.replace(/\+/g," "));
+  if(!ax){o.push(`400 20px "${fam}"`);return m}const a=ax.split(",");vals.split(";").forEach(v=>{const p=v.split(","),g=n=>a.indexOf(n)<0?null:p[a.indexOf(n)];o.push(`${g("ital")==="1"?"italic ":""}${g("wght")||400} 20px "${fam}"`)});return m});return o}
+function fontsReady(links){return Promise.all(links.filter(Boolean).map(l=>new Promise(r=>{if(l.sheet)return r();l.addEventListener("load",r);l.addEventListener("error",r);setTimeout(r,3500)})
+  .then(()=>Promise.all(fontSpecs(l.getAttribute("href")).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
+{const qs=new Set([SIGQ,"Baloo+2:wght@800"]);Object.values(ERA).forEach(e=>{qs.add(e.dq);qs.add(e.bq)});qs.forEach(M.font);
+  const links=[...qs].map(q=>[...document.querySelectorAll("link[rel=stylesheet]")].find(l=>l.getAttribute("href")==="https://fonts.googleapis.com/css2?family="+q+"&display=swap"));
+  window.MENU_FORMATS.home.ready=fontsReady(links)}
+/* fit in the same turn the faces land, so no frame shows unfitted text */
+if(!window.__fitHomeSync){window.__fitHomeSync=1;new MutationObserver(m=>{if(m.some(r=>[...r.addedNodes].some(n=>n.nodeType===1&&(n.matches("[data-fit]")||n.querySelector&&n.querySelector("[data-fit]")))))M.fitAll()}).observe(document.documentElement,{childList:true,subtree:true})}
 })();

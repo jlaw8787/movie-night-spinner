@@ -34,9 +34,10 @@ if(!window.__fmtFit){
 /* logo panel: sample the logo's own colours and put it on whichever stock reads */
 if(!window.__fmtLogo){
   window.__fmtLogo=im=>{try{const p=im.closest("[data-lpanel]");if(!p)return;const c=document.createElement("canvas"),w=80,h=Math.max(8,Math.round(80*im.naturalHeight/im.naturalWidth));c.width=w;c.height=h;
-    const g=c.getContext("2d");g.drawImage(im,0,0,w,h);const d=g.getImageData(0,0,w,h).data;let s=0,n=0;
-    for(let i=0;i<d.length;i+=4)if(d[i+3]>140){s+=lum([d[i],d[i+1],d[i+2]]);n++}
-    if(!n)return;const L=s/n;p.style.background=L>.28?p.dataset.dark:p.dataset.light;p.style.color=L>.28?p.dataset.darkink:p.dataset.lightink}catch(e){}};
+    const g=c.getContext("2d");g.drawImage(im,0,0,w,h);const d=g.getImageData(0,0,w,h).data;const cd=[],cl=[],Ld=lum([12,10,10])*.82+.18*.2,Ll=lum([252,249,242]);
+    /* light, dark or multicolour: 15th percentile contrast (the worst-reading ink decides) of the inked pixels against each stock, keep the one that reads better */
+    for(let i=0;i<d.length;i+=4)if(d[i+3]>140){const L=lum([d[i],d[i+1],d[i+2]]);cd.push((Math.max(L,Ld)+.05)/(Math.min(L,Ld)+.05));cl.push((Math.max(L,Ll)+.05)/(Math.min(L,Ll)+.05))}
+    if(!cd.length)return;const med=a=>a.sort((x,y)=>x-y)[Math.floor(a.length*.15)],lt=med(cl)>med(cd)*1.08;p.style.background=lt?p.dataset.light:p.dataset.dark;p.style.color=lt?p.dataset.lightink:p.dataset.darkink}catch(e){}};
   window.__fmtLogoFail=im=>{im.style.display="none";const t=im.nextElementSibling;if(t)t.style.display="block";try{window.__fmtFit()}catch(e){}};
 }
 const rootPath=ctx=>ctx.root!=null?ctx.root:(/\/wip\//.test(location.pathname)?"../../../":"");
@@ -106,8 +107,8 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* logo on a panel that suits its colours, set type if missing */
   const lg=ctx.logo,lr=lg&&lg[0]&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const lh=lr?Math.min(118,Math.round(340/lr)):0,lw=lr?Math.round(lh*lr):0;
-  const tl=clean(f.title).length,tsz=tl<=14?54:tl<=26?42:tl<=40?32:28;
+  const lh=lr?Math.min(lr<1.6?160:118,Math.round(340/lr)):0,lw=lr?Math.round(lh*lr):0;
+  const tl=clean(f.title).length,lw0=Math.max(...clean(f.title).split(/\s+/).map(w=>w.length)),tsz=Math.max(22,Math.min(tl<=14?54:tl<=26?42:tl<=40?32:28,Math.floor(356/(lw0*(eg==="new"?.8:.66)))));
   const titleType=`<div style="font:${E.dw} ${tsz}px/1.04 ${E.disp};text-transform:uppercase;color:currentColor">${esc(f.title)}</div>`;
   const logoPanel=`<div data-lpanel data-dark="rgba(12,10,10,.82)" data-light="rgba(252,249,242,.92)" data-darkink="#fff" data-lightink="#151515" style="position:absolute;left:918px;right:26px;bottom:26px;padding:16px 20px 14px;background:rgba(12,10,10,.82);color:#fff;border-radius:${eg==="new"?14:3}px;box-shadow:0 6px 18px rgba(0,0,0,.4);text-align:center">
       ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:356px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType}</div>`:titleType}
@@ -173,7 +174,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const setDinner=`<div style="border:2px ${eg==="late"?"dashed":"solid"} ${SPOT};padding:.4em .6em;margin-top:.2em;${eg==="new"?"border-radius:10px;":""}">
      <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:${E.dw} .92em/1.1 ${E.disp};font-size:max(18px,.92em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:.4em">32.${yy||"50"}</span></div>
      <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">One of every course, packed in one bag, ready by the opening credits.</div></div>`;
-  const pnl=(i,inner)=>`<div data-fit data-min="${heavy?14:18}" style="position:absolute;left:${i*448+26}px;top:250px;width:396px;height:${i===2?452:540}px;overflow:hidden;font-size:${heavy?20:28}px;display:flex;flex-direction:column"><div style="margin-bottom:auto">${inner}</div></div>`;
+  /* panel fill: under each panel's dishes a still takes whatever depth is left (flex), so short menus never leave a bare lower panel; tiles too short to read are dropped after fitting */
+  const extra=stills.length>2?stills.slice(2):stills.length?stills.slice(0):[];
+  const tileSrc=i=>extra.length?IMG+"w780"+extra[i%extra.length]:(ctx.poster?IMG+"w780"+ctx.poster:"");
+  const tilePos=["50% 38%","50% 30%","50% 45%"];
+  const tile=i=>tileSrc(i)?`<div data-tw-tile style="flex:1 1 0;min-height:0;position:relative;overflow:hidden;margin-top:.5em;background:#111;border:3px solid ${BAR};${eg==="new"?"border-radius:10px;":""}box-shadow:0 3px 10px rgba(0,0,0,.25)">${photo(tileSrc(i),extra.length>3||!extra.length?"50% 30%":tilePos[i])}</div>`:"";
+  const pnl=(i,inner)=>`<div data-fit data-min="${heavy?14:18}" style="position:absolute;left:${i*448+26}px;top:250px;width:396px;height:${i===2?452:540}px;overflow:hidden;font-size:${heavy?20:28}px;display:flex;flex-direction:column"><div style="flex:none">${inner}</div>${tile(i)}</div>`;
   const cue=clean(f.P||"");
   const inside=`${stock}
    <div style="position:absolute;left:0;top:0;width:1344px;height:226px;overflow:hidden;background:#111">${photo(second,stills[1]?"50% 42%":"50% 30%")}
@@ -189,6 +195,9 @@ window.MENU_FORMATS[ID]=ctx=>{
    ${folds}`;
 
   window.__fmtFitLater();
+  if(!window.__takeawayFill){window.__takeawayFill=()=>document.querySelectorAll("[data-tw-tile]").forEach(t=>{t.style.display="";if(t.offsetHeight<130)t.style.display="none"});
+}
+  [80,380,1280,2100,3000].forEach(ms=>setTimeout(()=>{try{window.__takeawayFill()}catch(e){}},ms));
   return {w:W,h:H,faces:[outside,inside]};
 };
 })();

@@ -1,3 +1,94 @@
+/* shared picture helper (same block in placemat, stadium, prom, kiosk, invite; first file to load wins).
+   still: a still that is mostly blank white or near black is swapped for the next candidate, the least bad one is kept,
+          a dark keeper gets lifted; a failed still falls through to the next one, then the poster.
+   logo: transparent padding is trimmed and the logo is sized by area into its max box, so the panel wraps the logo.
+   place: props and logo panels on a photo go to the candidate spot that covers the least face and detail
+          (skin tone weighted edges), and the crop can slide to give faces room. */
+(function(){
+if(window.__PICK)return;
+const P=window.__PICK={};
+const grab=(img,w)=>{const c=document.createElement("canvas");c.width=w;c.height=Math.max(4,Math.round(w*img.naturalHeight/img.naturalWidth));const x=c.getContext("2d",{willReadFrequently:true});x.drawImage(img,0,0,c.width,c.height);return {w:c.width,h:c.height,d:x.getImageData(0,0,c.width,c.height).data}};
+P.stats=img=>{const g=grab(img,64),d=g.d;let n=0,wh=0,bl=0,s=0;for(let i=0;i<d.length;i+=4){const r=d[i],gg=d[i+1],b=d[i+2],L=.2126*r+.7152*gg+.0722*b,mx=Math.max(r,gg,b),mn=Math.min(r,gg,b);n++;s+=L;if(L>228&&mx-mn<34)wh++;if(L<26)bl++}return {white:wh/n,black:bl/n,mean:s/n}};
+P.bad=st=>st.white>.28||st.black>.48||st.mean<42;
+P.score=st=>st.white*2+st.black+Math.max(0,70-st.mean)/70;
+P.still=img=>{
+  if(img.dataset.done){P.place(img);return}
+  let st;try{st=P.stats(img)}catch(e){img.dataset.done="1";P.place(img);return}
+  const sc=P.score(st);if(!img.__best||sc<img.__best.sc)img.__best={sc,src:img.src,st};
+  const alts=(img.dataset.alts||"").split("|").filter(Boolean),tries=+(img.dataset.tries||0);
+  if(P.bad(st)&&alts.length&&tries<4){img.dataset.tries=tries+1;img.dataset.alts=alts.slice(1).join("|");img.src=alts[0];return}
+  const b=img.__best;img.dataset.done="1";
+  if(b.st.mean<72&&!img.dataset.lift){img.dataset.lift="1";img.style.filter=(img.style.filter||"")+" brightness("+(b.st.mean<45?1.45:1.25)+")"}
+  if(b.src!==img.src){img.src=b.src;return}
+  P.place(img)};
+P.fail=img=>{const alts=(img.dataset.alts||"").split("|").filter(Boolean);
+  if(alts.length){img.dataset.alts=alts.slice(1).join("|");img.src=alts[0];return}
+  if(img.dataset.last&&img.src!==img.dataset.last){img.dataset.done="1";img.src=img.dataset.last}};
+/* saliency grid: edges, boosted where the colour is skin, lightly blurred so faces read as solid blocks */
+P.sal=img=>{
+  if(img.__sal&&img.__sal.src===img.src)return img.__sal;
+  const g=grab(img,96),w=g.w,h=g.h,d=g.d,N=w*h,L=new Float32Array(N),S=new Float32Array(N);
+  for(let i=0,p=0;i<d.length;i+=4,p++){const r=d[i],gg=d[i+1],b=d[i+2];L[p]=.299*r+.587*gg+.114*b;const cb=128-.1687*r-.3313*gg+.5*b,cr=128+.5*r-.4187*gg-.0813*b;S[p]=(cb>=77&&cb<=127&&cr>=137&&cr<=175&&L[p]>40&&L[p]<240)?1:0}
+  const E=new Float32Array(N);let em=0;
+  for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){const p=y*w+x,e=Math.abs(L[p+1]-L[p-1])+Math.abs(L[p+w]-L[p-w]);E[p]=e;em+=e}
+  em=em/N||1;const R=new Float32Array(N);
+  for(let p=0;p<N;p++)R[p]=Math.min(3,E[p]/em)*(.35+1.65*S[p]);
+  const G=new Float32Array(N);let tot=0;
+  for(let y=0;y<h;y++)for(let x=0;x<w;x++){let s=0,n=0;for(let j=-2;j<=2;j++)for(let i=-2;i<=2;i++){const yy=y+j,xx=x+i;if(yy<0||xx<0||yy>=h||xx>=w)continue;s+=R[yy*w+xx];n++}G[y*w+x]=s/n;tot+=s/n}
+  return img.__sal={src:img.src,w,h,G,tot:tot||1}};
+P.place=img=>{
+  const box=img.closest("[data-safe]");if(!box||!img.naturalWidth)return;
+  let cfg;try{cfg=JSON.parse(box.dataset.safe)}catch(e){return}
+  let sal;try{sal=P.sal(img)}catch(e){return}
+  const bw=box.clientWidth,bh=box.clientHeight;if(!bw||!bh)return;
+  const ib={x:img.offsetLeft,y:img.offsetTop,w:img.clientWidth||bw,h:img.clientHeight||bh};
+  const contain=getComputedStyle(img).objectFit==="contain";
+  const items=(cfg.items||[]).map(it=>({it,el:box.querySelector(it.q)})).filter(o=>o.el&&o.el.offsetWidth);
+  const fixed=(cfg.fixed||[]).map(q=>box.querySelector(q)).filter(Boolean).map(el=>({x:el.offsetLeft,y:el.offsetTop,w:el.offsetWidth,h:el.offsetHeight}));
+  const pos=cfg.pos&&cfg.pos.length&&!contain?cfg.pos:[[50,50]];
+  const p0=pos[0];let best=null;
+  for(const [px,py] of pos){
+    const s=contain?Math.min(ib.w/sal.w,ib.h/sal.h):Math.max(ib.w/sal.w,ib.h/sal.h),dw=sal.w*s,dh=sal.h*s,ox=ib.x+(ib.w-dw)*px/100,oy=ib.y+(ib.h-dh)*py/100;
+    const sum=(x0,y0,x1,y1)=>{const i0=Math.max(0,Math.floor((x0-ox)/s)),i1=Math.min(sal.w-1,Math.ceil((x1-ox)/s)),j0=Math.max(0,Math.floor((y0-oy)/s)),j1=Math.min(sal.h-1,Math.ceil((y1-oy)/s));let t=0;
+      for(let j=j0;j<=j1;j++){const cy=oy+(j+.5)*s;if(cy<y0||cy>y1)continue;for(let i=i0;i<=i1;i++){const cx=ox+(i+.5)*s;if(cx>=x0&&cx<=x1)t+=sal.G[j*sal.w+i]}}return t};
+    const vis=sum(0,0,bw,bh);let cost=-.35*vis/sal.tot+(Math.abs(px-p0[0])+Math.abs(py-p0[1]))/500;
+    /* every combination of spots is tried (a handful of items, a few spots each), overlaps ruled out */
+    const opts=items.map(({it,el})=>{const w=el.offsetWidth,h=el.offsetHeight;return it.c.map((c,ci)=>{const x=c[0]==="l"?c[1]:c[0]==="r"?bw-w-c[1]:(bw-w)/2+(c[1]||0),y=c[2]==="t"?c[3]:c[2]==="b"?bh-h-c[3]:(bh-h)/2+(c[3]||0);
+      let k=sum(x,y,x+w,y+h)/sal.tot*(it.w||1)+ci*.004;for(const r of fixed)if(x<r.x+r.w+6&&x+w+6>r.x&&y<r.y+r.h+6&&y+h+6>r.y)k+=10;return {k,c,x,y,w,h,el}})});
+    let bp=null;const cur=[];
+    const go=(n,acc)=>{if(bp&&acc>=bp.k)return;if(n===opts.length){bp={k:acc,pick:cur.slice()};return}
+      for(const o of opts[n]){let bad=false;for(const r of cur)if(o.x<r.x+r.w+6&&o.x+o.w+6>r.x&&o.y<r.y+r.h+6&&o.y+o.h+6>r.y){bad=true;break}
+        if(bad)continue;cur.push(o);go(n+1,acc+o.k);cur.pop()}};
+    go(0,0);if(!bp)continue;cost+=bp.k;const pick=bp.pick;
+    if(!best||cost<best.cost)best={cost,px,py,pick}}
+  if(!best)return;
+  if(!contain&&cfg.pos){const v=best.px+"% "+best.py+"%";img.style.objectPosition=v;box.querySelectorAll("[data-follow]").forEach(e=>e.style.objectPosition=v)}
+  for(const {el,c} of best.pick){const st=el.style;st.left=st.right=st.top=st.bottom="auto";
+    if(c[0]==="l")st.left=c[1]+"px";else if(c[0]==="r")st.right=c[1]+"px";else st.left=`calc(50% - ${el.offsetWidth/2}px + ${c[1]||0}px)`;
+    if(c[2]==="t")st.top=c[3]+"px";else if(c[2]==="b")st.bottom=c[3]+"px";else st.top=`calc(50% - ${el.offsetHeight/2}px + ${c[3]||0}px)`}};
+/* logo: trim transparent padding, size by area inside [maxW,maxH], then pick the stock that loses the fewest logo pixels:
+   each pixel scores its shortfall from 4.5:1 on that stock, the lower total wins; ties stay on dark with a soft halo */
+P.logo=img=>{
+  const wrap=img.parentNode;
+  try{const mx=(wrap.dataset.lmax||"300,110").split(",").map(Number),A=+wrap.dataset.larea||mx[0]*mx[1]*.5;
+    const g=grab(img,Math.min(360,img.naturalWidth||360)),w=g.w,h=g.h,d=g.d;let x0=w,y0=h,x1=-1,y1=-1,dk=0,lt=0;
+    for(let y=0;y<h;y++)for(let x=0;x<w;x++){const i=(y*w+x)*4;if(d[i+3]>28){if(x<x0)x0=x;if(x>x1)x1=x;if(y<y0)y0=y;if(y>y1)y1=y}
+      if(d[i+3]>128){const lin=v=>{v/=255;return v<=.04045?v/12.92:Math.pow((v+.055)/1.055,2.4)},Y=.2126*lin(d[i])+.7152*lin(d[i+1])+.0722*lin(d[i+2]);dk+=Math.max(0,4.5-(Y+.05)/.058)/4.5;lt+=Math.max(0,4.5-.98/(Y+.05))/4.5}}
+    if(x1>=0){const fw=(x1-x0+1)/w,fh=(y1-y0+1)/h,a=fw*img.naturalWidth/(fh*img.naturalHeight);
+      let lh=Math.min(mx[1],Math.sqrt(A/a)),lw=lh*a;if(lw>mx[0]){lw=mx[0];lh=lw/a}
+      const W=lw/fw,H=lh/fh;
+      Object.assign(wrap.style,{position:"relative",overflow:"hidden",width:Math.round(lw)+"px",height:Math.round(lh)+"px",display:"block",flex:"none"});
+      Object.assign(img.style,{position:"absolute",maxWidth:"none",maxHeight:"none",left:(-x0/w*W)+"px",top:(-y0/h*H)+"px",width:W+"px",height:H+"px",objectFit:"fill",display:"block"})}
+    const p=img.closest("[data-lpanel]");
+    if(p&&p.dataset.light&&p.dataset.dark){const light=dk>lt;p.style.background=light?p.dataset.light:p.dataset.dark;img.style.filter=light?"drop-shadow(0 0 1px rgba(0,0,0,.3))":"drop-shadow(0 0 1.5px rgba(255,255,255,.45))";
+      p.querySelectorAll("[data-pk]").forEach(e=>{if(!e.dataset.ink0)e.dataset.ink0=e.style.color;e.style.color=light&&p.dataset.lightink?p.dataset.lightink:e.dataset.ink0})}
+  }catch(e){}
+  const box=img.closest("[data-safe]");if(box){const s=box.querySelector("[data-pick]");if(s&&s.dataset.done)P.place(s)}};
+P.logoFail=img=>{const p=img.closest("[data-lpanel]");img.style.display="none";const wrap=img.parentNode;if(wrap&&wrap.dataset.lmax){wrap.style.width="auto";wrap.style.height="auto"}
+  const t=p&&p.querySelector("[data-ltype]");if(t)t.style.display="";if(p&&p.dataset.type)p.style.background=p.dataset.type;
+  const box=img.closest("[data-safe]");if(box){const s=box.querySelector("[data-pick]");if(s&&s.dataset.done)P.place(s)}};
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>setTimeout(()=>document.querySelectorAll("img[data-pick]").forEach(i=>{if(i.dataset.done)P.place(i)}),60));
+})();
 /* shared helper (same block in home, invite, precinct; first file to load wins) */
 (function(){
 if(window.__MNS)return;
@@ -111,24 +202,24 @@ window.MENU_FORMATS.invite=function(ctx){
     gilt:`<div style="position:absolute;inset:12px;border:2px solid #b08d3c;box-shadow:inset 0 0 0 1px rgba(255,240,200,.8),0 0 0 1px rgba(120,90,30,.5)"></div>`,
     band:`<div style="position:absolute;left:0;top:0;bottom:0;width:12px;background:${acc}"></div>`,
     none:``}[E.border])||"";
-  const photo=(src,l,t,w,h,op)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;overflow:hidden;background:#222;outline:1px solid ${acc};outline-offset:4px;border-radius:${E.border==="round"?"14px":E.border==="dots"?"8px":"0"}">
-     ${src?`<img src="${src}" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
-     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%)${E.press==="gloss"?",linear-gradient(150deg,rgba(255,255,255,.22),transparent 45%)":""}"></div>
-   </div>`;
+  const photo=(src,l,t,w,h,op,o)=>{o=o||{};return `<div ${o.safe?`data-safe='${o.safe}'`:""} style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;overflow:hidden;background:#222;outline:1px solid ${acc};outline-offset:4px;border-radius:${E.border==="round"?"14px":E.border==="dots"?"8px":"0"}">
+     ${src?`<img src="${src}" alt="" crossorigin="anonymous" data-pick data-alts="${(o.alts||[]).join("|")}" data-last="${pos||""}" onload="window.__PICK&&__PICK.still(this)" onerror="window.__PICK&&__PICK.fail(this)" style="position:absolute;left:0;top:0;display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
+     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%)${E.press==="gloss"?",linear-gradient(150deg,rgba(255,255,255,.22),transparent 45%)":""}"></div>${o.extra||""}
+   </div>`};
   const kick=(t,s)=>`<div style="font:700 ${s||".72em"}/1.25 ${bd};letter-spacing:.22em;text-transform:uppercase;color:${acc}">${x(t)}</div>`;
   const rule=`<div style="width:90px;height:2px;background:${acc};margin:.55em auto"></div>`;
 
   /* logo in its own colours on a panel that suits it */
-  const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0,lw=lr?Math.min(400,90*lr):0,lh=lr?lw/lr:0;
-  const logo=`<div style="position:absolute;left:0;right:0;top:${lr?Math.round(440-lh-28):360}px;display:flex;justify-content:center">
-    <div data-lpanel data-dark="rgba(18,16,20,.88)" data-light="rgba(253,250,244,.94)" data-type="${dark}" style="padding:12px 20px;background:${lr?"rgba(18,16,20,.88)":dark};box-shadow:0 8px 20px rgba(0,0,0,.35);border-radius:${E.border==="round"?"14px":"2px"}">
-     ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
+  const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0;let lh=lr?Math.min(120,Math.sqrt(26000/lr)):0,lw=lh*lr;if(lw>400){lw=400;lh=lw/lr}lw=Math.round(lw);lh=Math.round(lh);
+  /* logo panel sits inside the photo, on whichever edge covers the least face */
+  const logo=`<div data-sp="logo" data-lpanel data-dark="rgba(18,16,20,.88)" data-light="rgba(253,250,244,.94)" data-type="${dark}" style="position:absolute;left:${lr?Math.round((532-lw-40)/2):26}px;bottom:18px;padding:12px 20px;background:${lr?"rgba(18,16,20,.88)":dark};box-shadow:0 8px 20px rgba(0,0,0,.35);border-radius:${E.border==="round"?"14px":"2px"}">
+     ${lr?`<span data-lmax="400,120" data-larea="26000" style="display:block;width:${lw}px;height:${lh}px"><img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="this.parentNode.style.display='none';window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain"></span>`:""}
      <div data-ltype data-fit="20" style="display:${lr?"none":"block"};width:440px;height:96px;overflow:hidden;text-align:center;font:${E.dw} 40px/1.08 ${dd};${up}color:#fff;font-size:40px">${x(f.title)}</div>
-    </div></div>`;
+    </div>`;
 
   const front=`${stock}${border}
-   ${photo(hero,34,34,532,416,st[0]?"center 40%":"center 22%")}
-   ${logo}
+   ${photo(hero,34,34,532,416,st[0]?"50% 40%":"50% 22%",{alts:st.slice(5,8).map(s=>ctx.img(s,"w1280")),extra:logo,
+     safe:JSON.stringify({pos:[[50,40],[50,22],[50,60],[30,40],[70,40]],items:[{q:"[data-sp=logo]",c:[["c",0,"b",18],["c",0,"t",18],["l",18,"b",18],["r",18,"b",18],["l",18,"t",18],["r",18,"t",18]]}]})})}
    <div data-fit="18" style="position:absolute;left:44px;top:472px;width:512px;height:236px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:21px;color:${ink};${press}">
      ${kick(T.k,".82em")}
      <div style="margin-top:.35em;font:italic 1em/1.35 ${bd}">${x(T.lead)}</div>
@@ -144,7 +235,7 @@ window.MENU_FORMATS.invite=function(ctx){
   const course=c=>`<div style="margin-bottom:.5em">${kick(LABEL[c.k],".7em")}
      ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="margin-top:.2em"><div style="font:${E.dw} 1em/1.15 ${dd};${up}letter-spacing:${E.up?".03em":"0"};color:${ink}">${x(it.n)}</div>${it.note?`<div data-opt style="font:italic .78em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}</div>`;
   const back=`${stock}${border}
-   ${photo(second,24,24,552,246,st[1]?"center 40%":"center 60%")}
+   ${photo(second,24,24,552,246,st[1]?"50% 40%":"50% 60%",{alts:st.slice(2,5).map(s=>ctx.img(s,"w1280"))})}
    <div style="position:absolute;left:0;right:0;top:282px;text-align:center;font:${E.dw} 40px/1 ${dd};${up}letter-spacing:${E.up?".2em":"0"};color:${ink};${press}">Menu</div>
    <div style="position:absolute;left:0;right:0;top:330px">${rule}</div>
    <div data-fit="20" style="position:absolute;left:40px;top:346px;width:520px;height:398px;overflow:hidden;text-align:center;font-size:26px;${press}">

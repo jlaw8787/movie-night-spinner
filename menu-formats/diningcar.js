@@ -23,10 +23,12 @@ const DRY=[[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco
 const dry=s=>DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s));
 function loadFonts(fams){const k="fmt-"+ID+"-fonts";if(document.getElementById(k))return;const l=document.createElement("link");l.id=k;l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?"+fams.map(f=>"family="+f).join("&")+"&display=swap";document.head.appendChild(l)}
 /* logo in its own colours: dark panel by default, switched to the light panel when the logo itself is mostly dark */
-const SAMPLE="try{var i=this,c=document.createElement('canvas');c.width=64;c.height=Math.max(8,Math.round(64*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,c.width,c.height);var d=x.getImageData(0,0,c.width,c.height).data,a=0,b=0;for(var k=0;k<d.length;k+=4){if(d[k+3]<128)continue;var L=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];if(L<95)a++;else if(L>165)b++}if(a>b*1.2){var p=i.parentNode;p.style.background=p.getAttribute('data-light')}}catch(e){}";
+const SAMPLE="try{var i=this,c=document.createElement('canvas');c.width=64;c.height=Math.max(8,Math.round(64*i.naturalHeight/i.naturalWidth));var x=c.getContext('2d');x.drawImage(i,0,0,c.width,c.height);var d=x.getImageData(0,0,c.width,c.height).data,p=i.parentNode,f=function(h){h=h.replace('#','');return [0,2,4].map(function(j){var v=parseInt(h.substr(j,2),16)/255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)})},Y=function(a){return .2126*a[0]+.7152*a[1]+.0722*a[2]},Ld=Y(f(p.getAttribute('data-dark'))),Ll=Y(f(p.getAttribute('data-light'))),cd=[],cl=[];for(var k=0;k<d.length;k+=4){if(d[k+3]<128)continue;var L=Y([d[k],d[k+1],d[k+2]].map(function(v){v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)}));cd.push((Math.max(L,Ld)+.05)/(Math.min(L,Ld)+.05));cl.push((Math.max(L,Ll)+.05)/(Math.min(L,Ll)+.05))}var m=function(a){a.sort(function(x,y){return x-y});return a[Math.floor(a.length*.15)]||1};if(cd.length&&m(cl)>m(cd)*1.08)p.style.background=p.getAttribute('data-light')}catch(e){}";
 function logoImg(ctx,maxW,maxH){const L=ctx.logo;if(!L||!L[0]||!L[1]||!L[2])return null;const a=L[1]/L[2];let h=Math.min(maxH,maxW/a);if(h<34)return null;return{src:ctx.img(L[0],"w500"),w:Math.round(h*a),h:Math.round(h)}}
 function photo(src,filter,pos,extra){return `<img src="${src}" crossorigin="anonymous" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos||"center 35%"};filter:${filter}">${extra||""}`}
 
+/* self-fit: the tier is picked from a generous estimate; once fonts load, any course block that would clip is eased down a few percent (never below 88 percent) */
+const FIT=`<img alt="" src="data:," style="display:none" onerror="var b=this.parentNode;this.remove();(document.fonts?document.fonts.ready:Promise.resolve()).then(function(){var k=[].slice.call(b.children).filter(function(c){return c.style.flex!=='1 1 auto'&&c.tagName!=='IMG'}),z=1;while(b.scrollHeight>b.clientHeight+1&&z>.89){z-=.02;k.forEach(function(c){c.style.zoom=z})}})">`;
 /* ---------- era and tone ---------- */
 const ERAS=["1930s-40s","1950s","1960s","1970s","1980s","1990s","2000s","modern"];
 const E=[
@@ -159,13 +161,19 @@ window.MENU_FORMATS[ID]=ctx=>{
   const CX=SW+26,CW=W-CX-26-(e.border==="none"?0:10);
   const items={};C.forEach(([k])=>items[k]=(ctx.menu[k]||[]).slice(0,4));
   const pr=prices(items,e,ei,egg);
-  const menuTop=118,lounge=winks.slice(0,2),fineH=lounge.length?120:64,menuH=H-menuTop-fineH-20;
-  const tiers=[{d:28,n:21,g:18,h:34,nl:2},{d:26,n:19,g:14,h:30,nl:2},{d:24,n:18,g:11,h:28,nl:2},{d:22,n:17,g:9,h:26,nl:1},{d:21,n:16,g:7,h:24,nl:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:5,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
+  const menuTop=118,lounge=winks.slice(0,2),fineTxt="Write your order on the check. Prices subject to change."+(fam?" All drinks alcohol free.":"")+" Images: TMDB.";
+  const fineH=(lounge.length?26+lounge.length*20:0)+8+wrapLines(fineTxt,15,CW,e.cw+.04)*19.5+(e.border==="none"?20:26),menuH=H-menuTop-fineH-18;
+  const tiers=[{d:30,n:22,g:20,h:38,nl:3},{d:28,n:21,g:18,h:34,nl:2},{d:26,n:19,g:14,h:30,nl:2},{d:24,n:18,g:11,h:28,nl:2},{d:22,n:17,g:9,h:26,nl:1},{d:21,n:16,g:7,h:24,nl:1},{d:20,n:15,g:6,h:22,nl:0},{d:18,n:14,g:5,h:20,nl:0},{d:16,n:14,g:3,h:18,nl:0}];
   let dmax=3;const priceW=d=>d*2.6+8;
   const heightOf=tr=>C.reduce((s,[k])=>s+tr.h*1.3+12+items[k].reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),e.cwd));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.32+(nl?3:0)+tr.g},0),0);
-  let tr=null;for(const x of tiers)if(heightOf(x)*1.12<=menuH){tr=x;break}
+  let tr=null;for(const x of tiers)if(heightOf(x)*.9<=menuH){tr=x;break}
   if(!tr){tr=tiers[tiers.length-1];dmax=2}
-  const spare=Math.max(0,menuH-heightOf(tr)*1.12),cgap=12+Math.min(34,spare/Math.max(1,C.length));
+  /* fill the column: when the bill of fare is short, a window photo takes the spare depth (flex, so it sizes to what is really left) */
+  const est=heightOf(tr),spare0=Math.max(0,menuH-est);
+  const winSrc=stills[2]?ctx.img(stills[2],"w1280"):stills[0]&&stills[1]?ctx.img(stills[0],"w1280"):"";
+  const winPos=stills[2]?"50% 40%":heroPos;
+  const usePhoto=winSrc&&spare0>230;
+  const spare=usePhoto?Math.min(spare0,60):spare0,cgap=12+Math.min(usePhoto?20:56,spare/Math.max(1,C.length));
   const head=l=>{
     if(e.bar==="ribbon")return `<div style="display:inline-block;background:${acc};color:${paper};font:${e.dw} ${tr.h}px/1.15 ${DF};padding:2px 14px 3px;margin-bottom:8px;${up?"text-transform:uppercase;letter-spacing:.04em;":""}">${l}</div>`;
     if(e.bar==="block")return `<div style="background:${band};color:${bandText};font:${e.dw} ${tr.h}px/1.1 ${DF};padding:3px 10px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em">${l}</div>`;
@@ -180,10 +188,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const backHead=`<div style="position:absolute;left:${CX}px;width:${CW}px;top:${e.border==="none"?30:34}px">
     ${kick(sign.length>26?"Served at your seat":sign,acc,14)}
     <div style="font:${e.dw} 44px/1.05 ${DF};color:${ink};margin-top:6px;${up?"text-transform:uppercase;letter-spacing:.03em;":""}">${fH}</div></div>`;
-  const menuBox=`<div style="position:absolute;left:${CX}px;width:${CW}px;top:${menuTop}px;height:${menuH}px;overflow:hidden">${menuHtml}</div>`;
+  const winPhoto=usePhoto?`<div style="flex:1 1 auto;min-height:0;position:relative;overflow:hidden;background:#222;box-shadow:0 0 0 2px ${acc};margin:4px 2px 2px">${photo(winSrc,pf,winPos,overlay())}<div style="position:absolute;left:0;right:0;bottom:0;padding:22px 12px 8px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));font:700 14px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:#fbf6ea">${esc(e.tt)}, car ${esc(num.slice(-2))}</div></div>`:"";
+  const menuBox=`<div data-est="${Math.round(est)}" data-tier="${tr.d}" style="position:absolute;left:${CX}px;width:${CW}px;top:${menuTop}px;height:${menuH}px;overflow:hidden;display:flex;flex-direction:column${usePhoto?"":";justify-content:space-between"}">${menuHtml.replace(new RegExp("margin-bottom:"+cgap+"px","g"),usePhoto?"margin-bottom:"+cgap+"px;flex:none":"flex:none")}${winPhoto}${FIT}</div>`;
   const fine2=`<div style="position:absolute;left:${CX}px;width:${CW}px;bottom:${e.border==="none"?20:26}px">
     ${lounge.length?`<div style="border-top:1px solid ${mix(ink,paper,.6)};padding-top:8px">${kick(t.lounge,acc,14)}${lounge.map(w=>`<div style="font:italic 400 15px/1.3 ${BF};color:${soft};margin-top:3px;${clamp(1)}">${esc(w)}.</div>`).join("")}</div>`:""}
-    <div style="font:400 15px/1.3 ${BF};color:${soft};margin-top:8px">Write your order on the check. Prices subject to change.${fam?" All drinks alcohol free.":""} Images: TMDB.</div></div>`;
+    <div style="font:400 15px/1.3 ${BF};color:${soft};margin-top:8px">${esc(fineTxt)}</div></div>`;
   const back=`<div style="position:absolute;inset:0;background:${paper};overflow:hidden">${tex()}${strip}${backHead}${menuBox}${fine2}${e.border==="none"?"":`<div style="position:absolute;left:${SW+10}px;right:10px;top:10px;bottom:10px;border:${e.border==="double"?`4px double ${acc}`:`2px solid ${acc}`};pointer-events:none;${e.border==="bands"||e.border==="stripes"?"display:none":""}"></div>`}${e.border==="bands"||e.border==="stripes"?`<div style="position:absolute;left:${SW}px;right:0;top:0;height:14px;background:${band}"></div><div style="position:absolute;left:${SW}px;right:0;bottom:0;height:10px;background:${acc}"></div>`:""}</div>`;
   return {w:W,h:H,faces:[front,back]};
 };
