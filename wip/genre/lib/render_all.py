@@ -7,6 +7,7 @@ from PIL import Image,ImageDraw,ImageFont
 from playwright.async_api import async_playwright
 R='/home/claude/polish';A=json.load(open(f'{R}/data/film-format.json'));only=set(sys.argv[1:])
 films=[k for k,v in A.items() if not only or v['format'] in only]
+if os.environ.get('FILMS'): W=set(json.load(open(os.environ['FILMS']))); films=[k for k in films if k in W]
 slug=lambda s:re.sub(r'[^a-z0-9]+','-',s.lower()).strip('-')
 async def worker(b,q):
   c=await b.new_context(viewport={'width':1500,'height':1200},device_scale_factor=1)
