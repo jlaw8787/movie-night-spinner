@@ -116,27 +116,27 @@ window.MENU_FORMATS["club"]=ctx=>{
   const PAD=e.border==="stripes"?48:40;
 
   /* ---------- front ---------- */
-  const PH=650;
   const P0=posterOf(ctx);
-  const LB=P0?logoBox(ctx,W-2*PAD-120,60):logoBox(ctx,W-2*PAD-40,ctx.logo&&ctx.logo[1]/ctx.logo[2]<2.2?170:120);
+  const PW=440,PHT=660,PTOP=92;
+  const PH=P0?PTOP+PHT+4:650;
+  const LB=P0?logoBox(ctx,W-2*PAD-120,44):logoBox(ctx,W-2*PAD-40,ctx.logo&&ctx.logo[1]/ctx.logo[2]<2.2?170:120);
   const bloom=e.bloom&&s0?`<img alt="" src="${ctx.img(s0,"w780")}" style="position:absolute;inset:0;width:${W}px;height:${PH}px;object-fit:cover;filter:blur(14px) brightness(1.1) ${filt};mix-blend-mode:screen;opacity:.55">`:"";
   const lamps=`<div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 30%,rgba(0,0,0,0) 30%,rgba(0,0,0,${T.vig}) 100%)"></div>`;
   const neonEdge=e.border==="neon"?`box-shadow:0 0 0 3px ${ACC2},0 0 22px ${ACC2}`:`box-shadow:0 10px 30px rgba(0,0,0,.6)`;
   const fade=`-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);mask-image:linear-gradient(180deg,#000 62%,transparent 100%);`;
-  const photoBox=P0?`<div style="position:absolute;left:0;top:0;width:${W}px;height:${PH}px;background:radial-gradient(ellipse 60% 55% at 50% 52%,rgba(255,255,255,.1),rgba(255,255,255,0) 100%)"></div>
-    <div style="position:absolute;left:${(W-348)/2}px;top:122px;width:348px;height:522px;box-sizing:border-box;border:${e.border==="neon"?3:2}px solid ${e.border==="neon"?ACC2:ACC};${e.border==="round"?"border-radius:10px;overflow:hidden;":""}background:${STOCK};${neonEdge}"><img alt="" crossorigin="anonymous" src="${ctx.img(P0,"w780")}" style="display:block;width:100%;height:100%;object-fit:contain"></div>`
+  const photoBox=P0?`<div style="position:absolute;left:${(W-PW)/2}px;top:${PTOP}px;width:${PW}px;height:${PHT}px;box-sizing:border-box;border:${e.border==="neon"?3:2}px solid ${e.border==="neon"?ACC2:ACC};${e.border==="round"?"border-radius:10px;overflow:hidden;":""}background:${STOCK};${neonEdge}"><img alt="" crossorigin="anonymous" src="${ctx.img(P0,"w780")}" style="display:block;width:100%;height:100%;object-fit:contain"></div>`
     :`<div style="position:absolute;left:0;top:0;width:${W}px;height:${PH}px;overflow:hidden;${fade}">${photo(ctx,s0,W,PH,filt,"50% 30%")}${bloom}${lamps}</div>`;
-  const logo=LB?`<div data-lp data-dark="1" data-alt="rgba(245,241,232,.94)" data-altsh="0 8px 24px rgba(0,0,0,.6)" style="position:absolute;left:50%;transform:translateX(-50%);top:${P0?34:PH-LB.h-70}px;padding:${P0?"8px 16px":"14px 20px"};background:rgba(0,0,0,.55);border-radius:${e.border==="round"||e.border==="neon"?16:2}px;${e.border==="deco"?`border:1px solid ${ACC};`:""}">${LB.html}</div>`
+  const logo=LB?`<div data-lp data-dark="1" data-alt="rgba(245,241,232,.94)" data-altsh="0 8px 24px rgba(0,0,0,.6)" style="position:absolute;left:50%;transform:translateX(-50%);top:${P0?24:PH-LB.h-70}px;padding:${P0?"6px 14px":"14px 20px"};background:rgba(0,0,0,.55);border-radius:${e.border==="round"||e.border==="neon"?16:2}px;${e.border==="deco"?`border:1px solid ${ACC};`:""}">${LB.html}</div>`
     :`<div data-fit style="position:absolute;left:${PAD}px;right:${PAD}px;top:${P0?30:PH-190}px;height:${P0?84:150}px;overflow:hidden;display:flex;align-items:${P0?"center":"flex-end"};justify-content:center;text-align:center"><div style="font-family:${DISP};font-weight:${dispW};${dispSt}color:#fff;line-height:1.02;${fs(f.title&&f.title.length>20?44:64,18)};text-shadow:0 4px 18px rgba(0,0,0,.8)">${esc(f.title)}</div></div>`;
   const vlen=venue.length;
-  const vSize=Math.max(30,Math.min(e.up?58:66,Math.floor((W-2*PAD)/(Math.max(8,vlen)*(e.up?.62:.5)))));
+  const vSize=P0?Math.max(30,Math.min(e.up?44:50,Math.floor((W-2*PAD)/(Math.max(8,vlen)*(e.up?.62:.5))))):Math.max(30,Math.min(e.up?58:66,Math.floor((W-2*PAD)/(Math.max(8,vlen)*(e.up?.62:.5)))));
   const neonTxt=e.border==="neon"?`text-shadow:0 0 6px ${ACC},0 0 18px ${ACC},0 0 34px ${ACC}aa;color:#fff;`:e.border==="chrome"?`background:linear-gradient(180deg,#ffffff,#9a9aa4 45%,#f6f6fa 55%,#8a8a94);-webkit-background-clip:text;background-clip:text;color:transparent;`:`color:${era==="1950s"?ACC:INK};`;
-  const head=`<div style="position:absolute;left:${PAD}px;right:${PAD}px;top:${PH+6}px;text-align:center">
+  const head=`<div style="position:absolute;left:${PAD}px;right:${PAD}px;top:${PH+(P0?0:6)}px;text-align:center">
       <div style="font-family:${BODY};font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:${ACC};font-size:16px;line-height:1.3">${esc(T.kick)}</div>
-      <div data-fit style="height:${Math.round(vSize*2.2)}px;overflow:hidden;display:flex;align-items:center;justify-content:center"><div style="font-family:${DISP};font-weight:${dispW};${dispSt}${neonTxt}line-height:1.04;${fs(vSize,24)}">${esc(venue)}</div></div>
+      <div data-fit style="height:${Math.round(vSize*(P0?1.3:2.2))}px;overflow:hidden;display:flex;align-items:center;justify-content:center"><div style="font-family:${DISP};font-weight:${dispW};${dispSt}${neonTxt}line-height:1.04;${fs(vSize,24)}">${esc(venue)}</div></div>
       <div style="font-family:${BODY};font-weight:600;color:${mix(INK,STOCK,.2)};font-size:18px;letter-spacing:.08em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(sign)}</div></div>`;
-  const noteTop=PH+40+Math.round(vSize*2.2)+40;
-  const cardH=176,cardTop=H-cardH-46;
+  const cardH=P0?136:176,cardTop=H-cardH-(P0?40:46);
+  const noteTop=P0?PH+22+Math.round(vSize*1.3)+26+10:PH+40+Math.round(vSize*2.2)+40;
   const noteBox=`<div data-fit data-q style="position:absolute;left:${PAD+6}px;right:${PAD+6}px;top:${noteTop}px;height:${cardTop-noteTop-18-Math.ceil(150*Math.abs(Math.sin(T.tilt*Math.PI/180)))-6}px;overflow:hidden;text-align:center;display:flex;flex-direction:column;justify-content:safe center">
       <div style="font-family:${BODY};font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:${ACC};${fs(15,14)};margin-bottom:6px">${esc(T.noteH)}</div>
       <div style="font-family:${BODY};${e.body==="Cormorant Garamond"?"font-style:italic;font-weight:500;":""}color:${INK};line-height:1.32;${fs(e.body==="Cormorant Garamond"?24:21,14)};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--ql,12);overflow:hidden;flex:none">“${esc(note.t)}”</div>
@@ -145,7 +145,7 @@ window.MENU_FORMATS["club"]=ctx=>{
   const card=`<div style="position:absolute;left:${(W-300)/2}px;top:${cardTop}px;width:300px;height:${cardH}px;border-radius:14px;background:${e.card};transform:rotate(${T.tilt}deg);box-shadow:0 14px 30px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.35);padding:14px 18px;box-sizing:border-box;color:${ci};display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
       <div style="position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,0) 35%,rgba(255,255,255,.22) 45%,rgba(255,255,255,0) 55%)"></div>
       <div style="position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:8px"><div style="font-family:${BODY};font-weight:700;font-size:14px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(venue)}</div></div>
-      <div style="position:relative;font-family:${DISP};font-weight:${dispW};${e.ital?"font-style:italic;":""}font-size:58px;line-height:.9;letter-spacing:.06em;${e.border==="neon"?`text-shadow:0 0 8px ${ACC2},0 0 20px ${ACC2};`:""}">VIP</div>
+      <div style="position:relative;font-family:${DISP};font-weight:${dispW};${e.ital?"font-style:italic;":""}font-size:${P0?44:58}px;line-height:.9;letter-spacing:.06em;${e.border==="neon"?`text-shadow:0 0 8px ${ACC2},0 0 20px ${ACC2};`:""}">VIP</div>
       <div style="position:relative;font-family:${BODY};font-size:14px;line-height:1.25">
         <div style="font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(prop?prop.title:"Members and guests")}</div>
         <div style="display:flex;justify-content:space-between;gap:8px;white-space:nowrap"><span style="overflow:hidden;text-overflow:ellipsis">${esc(prop&&prop.lines&&prop.lines[0]?prop.lines[0]:"Admit the bearer")}</span><span>No. ${esc(String(num).slice(0,9))}</span></div></div></div>`;
