@@ -293,7 +293,8 @@ root.MENU_FORMATS.newspaper=ctx=>{
   const edH=22+22,logoH=LG?LG.h+22:B.lines.length*Math.ceil(B.size*1.08);
   const tagZ=18,tagL=tag?wrap(sentence(tag),COL,s=>sw(s,tagZ,1)*1.06).length:0;
   let useTag=tagL>0&&tagL<=5,noteZ=16,cueZ=16;
-  const noteH=()=>{const nl=wrap(noteTxt,COL,s=>sw(s,noteZ,1)*1.06).length;return 12+3+18+nl*Math.ceil(noteZ*1.3)+38};
+  const byZ=Math.max(16,Math.min(22,Math.floor((COL-10)/Math.max(4,by.length*.8)))),byH=byZ+8+17+6;
+  const noteH=()=>{const nl=wrap(noteTxt,COL,s=>sw(s,noteZ,1)*1.06).length;return 12+3+18+nl*Math.ceil(noteZ*1.3)+byH};
   const cueH=cue?(2+30+5+18+wrap(cue,COL-22,s=>sw(s,cueZ)*1.06).length*Math.ceil(cueZ*1.28)+7+12):0;
   const total=()=>edH+8+logoH+(useTag?12+tagL*24:0)+14+noteH()+(cue?14+cueH:0)+14+slipH;
   if(total()>MAXB)useTag=false;
@@ -317,7 +318,7 @@ root.MENU_FORMATS.newspaper=ctx=>{
       <div style="margin-top:14px;border-top:3px solid ${C.head};padding-top:10px">
         <div style="${capsSm2};color:${C.red};margin-bottom:3px">${fl&&fl.note?`A WORD FROM ${esc(by.toUpperCase())}`:"A WORD FROM THE COUNTER"}</div>
         <div style="font-family:${FB};font-style:italic;font-size:${noteZ}px;line-height:${Math.ceil(noteZ*1.3)}px;color:${C.ink}">${esc(noteTxt)}</div>
-        <div style="display:flex;align-items:center;gap:10px;height:38px;white-space:nowrap;overflow:hidden"><span style="font-family:${FS};font-size:${Math.min(22,Math.floor(120/Math.max(4,by.length*.75)))}px;line-height:38px;color:#22305a">${esc(by)}</span><span style="font-family:${FB};font-size:14px;color:${C.soft};min-width:0;overflow:hidden">${fl?`at ${esc(venue)}`:"behind the counter"}</span></div></div>
+        <div style="display:flex;flex-direction:column;justify-content:center;height:${byH}px;overflow:hidden"><span style="font-family:${FS};font-size:${byZ}px;line-height:${byZ+8}px;color:#22305a;white-space:nowrap">${esc(by)}</span><span style="font-family:${FB};font-size:14px;line-height:17px;color:${C.soft};white-space:nowrap;overflow:hidden">${fl?`at ${esc(venue)}`:"behind the counter"}</span></div></div>
       ${cue?`<div style="margin-top:14px;border:2px solid ${C.ink};border-radius:${R}px;overflow:hidden;background:rgba(255,253,246,.55)">
         <div style="background:${C.red};color:#fff;font-family:${FD};font-weight:${HW};font-size:21px;line-height:30px;height:30px;text-align:center">STOP PRESS</div>
         <div style="padding:5px 10px 7px;font-family:${FB};color:${C.ink}"><div style="${capsSm};color:${C.red}">SHOWTIME CUE</div>

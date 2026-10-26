@@ -134,7 +134,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     :`<div style="position:absolute;inset:0;background:radial-gradient(circle,${toHex(mix(pa,[255,255,255],.3))},${toHex(mix(pa,[0,0,0],.4))});display:flex;align-items:center;justify-content:center"><div style="font:${E.it} ${E.dw} 54px/1.1 ${E.disp};color:#fff;text-align:center;padding:40px">${esc(sign)}</div></div>`;
   const frameW=eg==="new"?8:eg==="late"?14:16;
   const lg=ctx.logo,lr=lg&&lg[0]&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const LW=heroIsPoster?236:400;
+  const LW=heroIsPoster?200:400;
   const lh=lr?Math.min(120,Math.round(LW/lr)):0,lw=lr?Math.round(lh*lr):0;
   const tl=clean(f.title).length,tsz=tl<=14?60:tl<=26?46:tl<=40?36:30;
   const titleType=`<div style="font:${E.it} ${E.dw} ${tsz}px/1.02 ${E.disp};text-transform:uppercase;color:currentColor;max-width:${LW+40}px">${esc(f.title)}</div>`;
@@ -183,7 +183,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PH=774,PW=516,PF=eg==="new"?8:10,PX=14,PY=Math.round((H-PH-2*PF)/2);
   const posterFront=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PW+2*PF}px;height:${PH+2*PF}px;padding:${PF}px;box-sizing:border-box;background:${E.frame};border-radius:${eg==="new"?10:2}px;box-shadow:0 0 ${40*T.glow}px rgba(255,240,210,${.35*T.glow}),0 12px 30px rgba(0,0,0,.5)">
       <img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:${PW}px;height:${PH}px;object-fit:cover;border-radius:${eg==="new"?4:0}px"></div>`;
-  const MX=PX+PW+2*PF+22,MW=292,RX=MX+MW+20,RW=W-22-RX;
+  const MX=PX+PW+2*PF+22,MW=256,RX=MX+MW+16,RW=W-22-RX;
   const col=`<div style="position:absolute;left:${MX}px;top:${PY}px;width:${MW}px;height:${PH+2*PF}px;display:flex;flex-direction:column;justify-content:space-between;align-items:center">
      <div style="width:100%">${logoPanel(false)}</div>
      ${noteCard.replace("width:300px","width:"+(MW-4)+"px")}
