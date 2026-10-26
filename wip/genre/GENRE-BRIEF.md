@@ -23,3 +23,8 @@ Every genre template must also use, per film:
 - data/film-palette.json: {dark, accent} sampled from the poster, used for the accent rules, label bars and headline colour, keeping the genre's paper and layout. Check contrast; fall back to the genre palette if accent is too light or too close to paper.
 - wip/genre/flavour/out/*.json (merged later into data/film-flavour.json): venue, sign, note {text, by}, winks (3 to 5), prop {kind, title, lines}, number. The venue name and sign replace the generic genre venue name; the note is the character note with a script signature; winks go in fine print, captions and the prop; number goes into a price or form number.
 Result: same genre system, but each film reads as its own place.
+
+## Owner tweaks on the pilots (Oct 26, locked for all genres)
+- Bigger, bolder pictures: the hero still fills at least 40 percent of the front face; the second still at least 25 percent of its face. Fewer, larger photos beat many small boxes. Captions must not describe a specific scene unless that still was chosen for it.
+- More movie world: push the genre's venue look harder (materials, signage, real-photo textures) so it feels like a place, not a template; the film's logo, colours and flavour sit on top.
+- Logos in colour: show the TMDB title logo in its own colours (no black-ink recolouring). Put it on a panel that suits it (dark or light) so it reads.
