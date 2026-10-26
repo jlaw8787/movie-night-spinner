@@ -88,29 +88,24 @@ window.MENU_FORMATS[ID]=ctx=>{
   const kick=(s,c,size)=>`<div style="font:700 ${size||16}px/1.2 ${BF};letter-spacing:.2em;text-transform:uppercase;color:${c};${clamp(1)}">${esc(s)}</div>`;
   const overlay=()=>(e.dots?`<div style="position:absolute;inset:0;background:radial-gradient(rgba(0,0,0,.16) 1px,transparent 1.4px) 0 0/4px 4px;mix-blend-mode:multiply"></div>`:"")+(t.shine||ei>=6?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 38%)"></div>`:"");
 
-  /* left: truck side lettering over the truck photo */
-  const HX=660,BH=118;
-  const vSize=venue.length>26?34:venue.length>18?42:52;
-  const signBand=`<div style="position:absolute;left:0;top:0;width:${HX}px;height:${BH}px;background:${acc};display:flex;flex-direction:column;justify-content:center;padding:0 30px;box-sizing:border-box;border-bottom:6px solid ${mix(acc,"#000000",.35)}">
-    <div style="font:${e.dw} ${vSize}px/1.02 ${DF};color:${lum(acc)>.35?"#15171c":"#fffaf0"};${clamp(1)}">${esc(venue)}</div>
-    <div style="font:700 17px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:${lum(acc)>.35?"#2a2a2a":mix(acc,"#ffffff",.75)};margin-top:6px;${clamp(1)}">${esc(sign)}</div></div>`;
-  /* the poster is the hero, whole and uncropped, pasted on the truck side; no poster: first still in the same frame */
+  /* left: the poster is the hero, whole and uncropped, pasted on the truck side; no poster: first still in the same frame */
+  const HX=648,RW=W-HX,BH=96;
+  const vSize=venue.length>26?30:venue.length>18?36:44;
+  const signBand=`<div style="position:absolute;left:${HX}px;top:0;width:${RW}px;height:${BH}px;background:${acc};display:flex;flex-direction:column;justify-content:center;padding:0 30px;box-sizing:border-box;border-bottom:6px solid ${mix(acc,"#000000",.35)}">
+    <div style="font:${e.dw} ${vSize}px/1.05 ${DF};color:${lum(acc)>.35?"#15171c":"#fffaf0"};${clamp(1)}">${esc(venue)}</div>
+    <div style="font:700 15px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:${lum(acc)>.35?"#2a2a2a":mix(acc,"#ffffff",.75)};margin-top:4px;${clamp(1)}">${esc(sign)}</div></div>`;
   const posSrc=poster?ctx.img(poster,"w780"):"";
   const heroSrc=posSrc||(stills[0]?ctx.img(stills[0],"w1280"):"");
-  const lg=logoImg(ctx,300,92);
-  const tSize=title.length>40?20:title.length>24?24:title.length>12?30:38;
+  const lg=logoImg(ctx,322,76);
+  const tSize=title.length>40?16:title.length>24?20:title.length>12?26:32;
   const panelDark="rgba(12,12,14,.84)",panelLight="rgba(250,248,242,.92)";
-  const PWI=448,PHI=672,PB=6,PXL=Math.round((HX-PWI-2*PB)/2);
-  const hero=`<div style="position:absolute;left:0;top:${BH}px;width:${HX}px;height:${H-BH}px;overflow:hidden;background:${truck}">
+  const PWI=588,PHI=882,PB=6,PXL=Math.round((HX-PWI-2*PB)/2),PTOP=Math.round((H-PHI-2*PB)/2);
+  const hero=`<div style="position:absolute;left:0;top:0;width:${HX}px;height:${H}px;overflow:hidden;background:${truck}">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1100px auto;opacity:${(.2+t.wear).toFixed(2)}"></div>
-    <div style="position:absolute;left:${PXL}px;top:24px;width:${PWI}px;height:${PHI}px;border:${PB}px solid ${darkTruck?"#e9e5d8":"#fbf7ec"};background:#222;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.4)">${heroSrc?(posSrc?`<img src="${posSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||ei>=6?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,"center 40%",overlay())):""}</div>
-    <div data-dark="${panelDark}" data-light="${panelLight}" style="position:absolute;left:24px;bottom:22px;min-width:240px;max-width:360px;min-height:96px;padding:14px 20px;box-sizing:border-box;background:${panelDark};display:flex;align-items:center;justify-content:center;border-left:6px solid ${acc};box-shadow:0 4px 14px rgba(0,0,0,.4)">
-      ${lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`
-         :`<div style="font:${e.dw} ${tSize}px/1.08 ${DF};color:#fbf6ea;text-align:center;${clamp(3)}">${esc(title)}</div>`}</div>
-    <div style="position:absolute;right:24px;bottom:22px;background:rgba(12,12,14,.8);color:#fbf6ea;font:700 15px/1 ${BF};letter-spacing:.2em;padding:8px 12px">Now showing ${esc(year)}</div></div>`;
+    <div style="position:absolute;left:${PXL}px;top:${PTOP}px;width:${PWI}px;height:${PHI}px;border:${PB}px solid ${darkTruck?"#e9e5d8":"#fbf7ec"};background:#222;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.4)">${heroSrc?(posSrc?`<img src="${posSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||ei>=6?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,"center 40%",overlay())):""}</div></div>`;
 
   /* right: the board (signature) */
-  const RX=HX,RW=W-HX,boardH=676;
+  const RX=HX,boardH=560;
   const C=[["s",e.cols[0]],["m",e.cols[1]],["w",e.cols[2]],["d",e.cols[3]]].filter(([k])=>(ctx.menu[k]||[]).length);
   const items={};C.forEach(([k])=>items[k]=(ctx.menu[k]||[]).slice(0,4));
   const pr=prices(items,e,ei,egg);
@@ -138,29 +133,34 @@ window.MENU_FORMATS[ID]=ctx=>{
     :e.board==="chalk"?`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.08),rgba(255,255,255,0) 60%),radial-gradient(ellipse at 70% 80%,rgba(255,255,255,.06),rgba(255,255,255,0) 55%)"></div><div style="position:absolute;inset:0;background:url(${grain}) center/900px auto;opacity:.9;mix-blend-mode:screen;filter:invert(1)"></div>`
     :e.board==="enamel"?`<div style="position:absolute;inset:0;background:url(${grain}) center/1100px auto;opacity:${(.3+t.wear).toFixed(2)}"></div>`:"";
   const boardTitle=e.board==="chalk"?`font:700 46px/1 ${PF}`:e.board==="letter"?`font:700 40px/1 ${BF};text-transform:uppercase;letter-spacing:.14em`:`font:${e.dw} 46px/1 ${DF}`;
-  const board=`<div style="position:absolute;left:${RX}px;top:0;width:${RW}px;height:${boardH}px;box-sizing:border-box;border:${e.frame};background:${e.bbg};overflow:hidden;${e.board==="matte"?"border-radius:0 0 0 0;":""}box-shadow:inset 0 0 30px rgba(0,0,0,${e.board==="enamel"?.15:.5})">
+  const board=`<div style="position:absolute;left:${RX}px;top:${BH}px;width:${RW}px;height:${boardH}px;box-sizing:border-box;border:${e.frame};background:${e.bbg};overflow:hidden;${e.board==="matte"?"border-radius:0 0 0 0;":""}box-shadow:inset 0 0 30px rgba(0,0,0,${e.board==="enamel"?.15:.5})">
     ${boardTex}
     <div style="position:absolute;left:${pad}px;right:${pad}px;top:22px;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:${e.board==="enamel"?`3px solid ${e.btx}`:`2px solid ${mix(e.btx,e.bbg,.6)}`};padding-bottom:10px">
       <div style="${boardTitle};color:${e.btx}">${e.board_t}</div>${kick(t.win.length>34?"Order at the window":t.win,bacc,14)}</div>
     <div style="position:absolute;left:${pad}px;width:${CWall}px;top:${mTop}px;height:${menuH}px;display:flex;gap:${colGap}px;overflow:hidden"><div style="flex:0 0 ${CW}px">${colA}</div>${one?"":`<div style="flex:0 0 ${CW}px">${colB}</div>`}</div></div>`;
 
-  /* order window: note, now serving ticket */
-  const WY=boardH,WH=H-boardH;
-  const nLen=clean(note.text).length,nSize=nLen>130?17:nLen>90?18:19;
-  const card=`<div style="position:absolute;left:${RX+22}px;top:${WY+20}px;width:390px;height:${WH-40}px;box-sizing:border-box;padding:14px 18px 10px;background:#fbf7ec;transform:rotate(${t.tilt*.6}deg);box-shadow:0 4px 12px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
-    <div>${kick(t.win,acc,14)}<div style="font:italic 400 ${nSize}px/1.34 ${e.board==="enamel"?BF:"'Lora',serif"};color:#22201c;margin-top:6px;${clamp(4)}">"${esc(note.text)}"</div></div>
+  /* order window: note, logo panel, now serving ticket */
+  const WY=BH+boardH,WH=H-WY;
+  const nLen=clean(note.text).length,nSize=nLen>150?16:nLen>110?17:nLen>80?18:19;
+  const CWD=280,C2X=RX+20+CWD+16,C2W=RW-20-CWD-16-20,LH=96,TH=WH-40-LH-14;
+  const card=`<div style="position:absolute;left:${RX+20}px;top:${WY+20}px;width:${CWD}px;height:${WH-40}px;box-sizing:border-box;padding:14px 18px 10px;background:#fbf7ec;transform:rotate(${t.tilt*.6}deg);box-shadow:0 4px 12px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+    <div>${kick(t.win,acc,14).replace(clamp(1),clamp(2))}<div style="font:italic 400 ${nSize}px/1.34 ${e.board==="enamel"?BF:"'Lora',serif"};color:#22201c;margin-top:6px;${clamp(7)}">"${esc(note.text)}"</div></div>
     <div style="font:400 ${ei<2?36:32}px/1 ${SF};color:${acc};text-align:right">${esc(note.by)}</div></div>`;
-  const tick=`<div style="position:absolute;left:${RX+430}px;top:${WY+18}px;width:${RW-452}px;height:${WH-36}px;box-sizing:border-box;padding:12px 14px;background:${darkTruck?"#f3f0e6":"#ffffff"};border-top:8px solid ${acc};box-shadow:0 4px 12px rgba(0,0,0,.3);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
-    <div>${kick("Now serving",acc,14)}<div style="font:${e.dw} ${num.slice(-4).length>=4?40:num.slice(-4).length===3?46:54}px/1 ${DF};color:#15171c;margin-top:4px;white-space:nowrap">No. ${esc(num.slice(-4))}</div></div>
-    <div><div style="font:700 17px/1.15 ${BF};color:#15171c;text-transform:uppercase;letter-spacing:.06em;${clamp(1)}">${esc(prop.title)}</div>
-    ${(prop.lines||[]).slice(0,2).map(l=>`<div style="font:400 15px/1.25 ${BF};color:#44464d;${clamp(1)}">${esc(l)}</div>`).join("")}</div>
-    <div style="font:400 14px/1.25 ${BF};color:#5a5d66;border-top:1px dashed #9a9ca3;padding-top:5px;${clamp(2)}">${winks[0]?esc(winks[0])+". ":""}Prices subject to change.${fam?" No alcohol served.":""} Images: TMDB.</div></div>`;
+  const logoPanel=`<div data-dark="${panelDark}" data-light="${panelLight}" style="position:absolute;left:${C2X}px;top:${WY+20}px;width:${C2W}px;height:${LH}px;padding:10px 20px;box-sizing:border-box;background:${panelDark};display:flex;align-items:center;justify-content:center;border-left:6px solid ${acc};box-shadow:0 4px 14px rgba(0,0,0,.4)">
+      ${lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`
+         :`<div style="font:${e.dw} ${tSize}px/1.08 ${DF};color:#fbf6ea;text-align:center;${clamp(3)}">${esc(title)}</div>`}</div>`;
+  const tick=`<div style="position:absolute;left:${C2X}px;top:${WY+20+LH+14}px;width:${C2W}px;height:${TH}px;box-sizing:border-box;padding:10px 14px;background:${darkTruck?"#f3f0e6":"#ffffff"};border-top:8px solid ${acc};box-shadow:0 4px 12px rgba(0,0,0,.3);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
+    <div style="display:flex;gap:12px;align-items:flex-start;justify-content:space-between">
+    <div style="flex:0 0 auto">${kick("Now serving",acc,14)}<div style="font:${e.dw} ${num.slice(-4).length>=4?36:num.slice(-4).length===3?42:48}px/1 ${DF};color:#15171c;margin-top:4px;white-space:nowrap">No. ${esc(num.slice(-4))}</div></div>
+    <div style="flex:1;min-width:0;text-align:right"><div style="font:700 15px/1.15 ${BF};color:#15171c;text-transform:uppercase;letter-spacing:.06em;${clamp(1)}">${esc(prop.title)}</div>
+    ${(prop.lines||[]).slice(0,2).map(l=>`<div style="font:400 14px/1.25 ${BF};color:#44464d;${clamp(1)}">${esc(l)}</div>`).join("")}</div></div>
+    <div style="font:400 14px/1.25 ${BF};color:#5a5d66;border-top:1px dashed #9a9ca3;padding-top:4px;${clamp(2)}">${winks[0]?esc(winks[0])+". ":""}Prices subject to change.${fam?" No alcohol served.":""} Images: TMDB.</div></div>`;
   const windowArea=`<div style="position:absolute;left:${RX}px;top:${WY}px;width:${RW}px;height:${WH}px;background:${truck};overflow:hidden">
     <div style="position:absolute;inset:0;background:url(${grain}) center/1200px auto;opacity:${(.2+t.wear).toFixed(2)}"></div>
     <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,rgba(0,0,0,0) 1px 60px)"></div>
     <div style="position:absolute;left:0;right:0;top:0;height:10px;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,0))"></div></div>`;
   const vig=`<div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 60%,rgba(20,12,4,${t.vig*.7}) 100%)"></div>`;
-  const face=`<div style="position:absolute;inset:0;background:${truck};overflow:hidden">${hero}${signBand}${board}${windowArea}${card}${tick}${vig}</div>`;
+  const face=`<div style="position:absolute;inset:0;background:${truck};overflow:hidden">${hero}${signBand}${board}${windowArea}${card}${logoPanel}${tick}${vig}</div>`;
   return {w:W,h:H,faces:[face]};
 };
 })();
