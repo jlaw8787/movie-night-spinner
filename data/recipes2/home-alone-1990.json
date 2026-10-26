@@ -24,7 +24,7 @@
      "q": 1,
      "u": "tsp",
      "item": "dried oregano",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 500,
@@ -54,67 +54,6 @@
     },
     {
      "text": "Cut into small squares.",
-     "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Booby-trap paint can popcorn",
-   "course": "s",
-   "prep_min": 25,
-   "cook_min": 10,
-   "make_ahead": "Up to 2 days, airtight",
-   "ingredients": [
-    {
-     "q": 120,
-     "u": "g",
-     "item": "popcorn kernels",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 30,
-     "u": "g",
-     "item": "butter, melted",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "salt",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "white chocolate",
-     "aisle": "Pantry"
-    },
-    {
-     "q": null,
-     "u": "",
-     "item": "red food colouring",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Pop the kernels and split the popcorn into two bowls.",
-     "min": 10
-    },
-    {
-     "text": "Toss one bowl with the melted butter and salt.",
-     "min": 3
-    },
-    {
-     "text": "Melt the white chocolate, tint red and toss through the other bowl.",
-     "min": 5
-    },
-    {
-     "text": "Let the red popcorn set, about 15 minutes (included in cook time).",
-     "min": 15
-    },
-    {
-     "text": "Mix both together and serve in clean paint tins.",
      "min": 2
     }
    ]
@@ -193,74 +132,80 @@
    ]
   },
   {
-   "n": "Christmas cookies",
+   "n": "Kevin's sundae bar",
    "course": "w",
-   "prep_min": 30,
+   "prep_min": 20,
    "cook_min": 10,
-   "make_ahead": "Up to 4 days, airtight tin",
+   "make_ahead": "",
    "ingredients": [
     {
-     "q": 125,
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
      "u": "g",
-     "item": "butter",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
      "aisle": "Dairy"
     },
     {
      "q": 100,
      "u": "g",
-     "item": "caster sugar",
+     "item": "mini marshmallows",
      "aisle": "Pantry"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "egg",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 250,
+     "q": 80,
      "u": "g",
-     "item": "plain flour",
+     "item": "roasted peanuts",
      "aisle": "Pantry"
     },
     {
-     "q": 300,
-     "u": "g",
-     "item": "icing sugar",
+     "q": 4,
+     "u": "tbsp",
+     "item": "sprinkles",
      "aisle": "Pantry"
     },
     {
-     "q": null,
+     "q": 4,
      "u": "",
-     "item": "green food colouring",
-     "aisle": "Pantry"
-    },
-    {
-     "q": null,
-     "u": "",
-     "item": "silver cachous",
+     "item": "maraschino cherries",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Beat the butter with the sugar and egg, then mix in the flour.",
+     "text": "Take the vanilla and chocolate ice cream out of the freezer to soften for 10 minutes.",
      "min": 10
     },
     {
-     "text": "Roll out and cut into stars and trees.",
-     "min": 10
+     "text": "Melt the dark chocolate with 150ml of the thickened cream over low heat, stirring, for hot fudge.",
+     "min": 5
     },
     {
-     "text": "Bake at 180C and cool on a rack.",
-     "min": 8
+     "text": "Whip the rest of the cream to soft peaks.",
+     "min": 5
     },
     {
-     "text": "Mix the icing sugar with a little water, tint some green, ice the cookies and add silver cachous.",
-     "min": 7
+     "text": "Chop the roasted peanuts and put them, the mini marshmallows, sprinkles and maraschino cherries in small bowls.",
+     "min": 5
     },
     {
-     "text": "Let the icing set (included in cook time).",
+     "text": "Set everything out with big bowls and let everyone build their own sundae.",
      "min": 5
     }
    ]
@@ -317,6 +262,47 @@
     {
      "text": "Drizzle chocolate syrup inside tall glasses, pour in the shake and top with whipped cream and a cherry.",
      "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Fuller's cola",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 240,
+   "make_ahead": "Chill the cola overnight",
+   "ingredients": [
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "cola",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the cola in the fridge overnight, or at least 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Slice the lemon and fill four tall glasses with ice, dropping a lemon slice into each.",
+     "min": 3
+    },
+    {
+     "text": "Pour the cola and go easy on the refills.",
+     "min": 2
     }
    ]
   }

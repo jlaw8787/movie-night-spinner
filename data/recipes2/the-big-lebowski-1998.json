@@ -30,7 +30,7 @@
      "q": 1,
      "u": "tsp",
      "item": "ground cumin",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 1,
@@ -117,13 +117,13 @@
      "q": 0.5,
      "u": "tsp",
      "item": "smoked paprika",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 0.5,
      "u": "tsp",
      "item": "ground cumin",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 10,
@@ -166,6 +166,93 @@
     {
      "text": "Blitz the feta, yoghurt, lemon zest and remaining oil until smooth for dipping.",
      "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Half-and-half whipped ricotta honey dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 6,
+   "make_ahead": "Whip the ricotta up to 1 day ahead and keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "sourdough loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cracked black pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the ricotta, cream cheese and cream with a pinch of salt and the lemon zest until very smooth, about 2 minutes.",
+     "min": 4
+    },
+    {
+     "text": "Warm the honey with the chilli flakes in a small pan.",
+     "min": 2
+    },
+    {
+     "text": "Slice the sourdough loaf into fingers, brush with olive oil and grill or toast 2 minutes a side.",
+     "min": 6
+    },
+    {
+     "text": "Spread the ricotta in a shallow bowl, drizzle with the hot honey and finish with plenty of cracked black pepper. Serve with the sourdough.",
+     "min": 3
     }
    ]
   },
@@ -275,6 +362,97 @@
    ]
   },
   {
+   "n": "League night chilli dogs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Chilli up to 2 days ahead, reheat to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "beef franks",
+     "aisle": "Deli"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef mince with 1 diced onion in a large pan.",
+     "min": 8
+    },
+    {
+     "text": "Add the chilli powder, cumin, tomatoes and kidney beans and simmer 25 minutes until thick.",
+     "min": 25
+    },
+    {
+     "text": "Simmer the beef franks for 5 minutes, then sear on a hot griddle until blistered.",
+     "min": 9
+    },
+    {
+     "text": "Toast the hot dog buns.",
+     "min": 3
+    },
+    {
+     "text": "Fill each bun with a frank and a spoon of chilli, then top with the cheddar, the rest of the diced raw onion and mustard.",
+     "min": 8
+    }
+   ]
+  },
+  {
    "n": "Coffee liqueur ice cream cookie sandwiches",
    "course": "w",
    "prep_min": 40,
@@ -327,7 +505,7 @@
      "q": 60,
      "u": "ml",
      "item": "coffee liqueur",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 50,
@@ -388,13 +566,13 @@
      "q": 180,
      "u": "ml",
      "item": "vodka",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 80,
      "u": "ml",
      "item": "coffee liqueur",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 120,
@@ -405,8 +583,12 @@
    ],
    "steps": [
     {
-     "text": "Divide the ice among four rocks glasses. Add vodka and coffee liqueur to each, float the cream on top and stir lazily. One prepared drink per person.",
-     "min": 5
+     "text": "Divide the ice among four rocks glasses and add 45ml vodka and 20ml coffee liqueur to each.",
+     "min": 3
+    },
+    {
+     "text": "Top each with 30ml thickened cream and stir lazily.",
+     "min": 2
     }
    ]
   }

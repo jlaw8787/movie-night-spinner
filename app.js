@@ -716,15 +716,27 @@ const PL_CONT=/^(bag|can|tin|bottle|jar|packet|pack|bunch|clove|rasher|slice|spr
 function planPlural(item,q){if(!(q>1))return item;let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");if(par>0){rest=[head.slice(par)+(rest.length?","+rest.join(","):"")];head=head.slice(0,par);return planPlural(head,q)+rest[0]}const w=head.trim().split(" ");
   const pl=x=>/(s|ice|milk|water|juice|sugar|flour|rice|bread|butter|cream|cheese|fish|corn|meat|oil|salt|pepper|mince|beef|pork|lamb|chicken|bacon|ham|tea|coffee|soda)$/i.test(x)?x:/(ch|sh|x)$/i.test(x)?x+"es":/(tomato|potato|mango|avocado)$/i.test(x)?x+"es":/[^aeiou]y$/i.test(x)?x.slice(0,-1)+"ies":/f$/i.test(x)&&/loaf|leaf|half/i.test(x)?x.slice(0,-1)+"ves":x+"s";
   if(PL_CONT.test(w[0])){w[0]=pl(w[0]);if(w.length>1&&w[1]!=="of")w[0]+=" of"}else w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
+/* one shopping line per ingredient: the same item from two dishes is added up, and a mix of units shows as "100g + 2 tbsp" */
+const planSing=w=>/ies$/.test(w)?w.slice(0,-3)+"y":/(ch|sh|x|ss|o)es$/.test(w)?w.slice(0,-2):/[^s]s$/.test(w)?w.slice(0,-1):w;
+const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().split(" ").map(planSing).join(" ");
 function planShopping(f){
   const k=PLAN.guests/((f._r2&&f._r2.serves)||4),tally={},order=[];
   for(const d of planDishes(f))for(const i of d.ingredients||[]){
     const b=UNITB[i.u]||[i.u||"#",1],a=AISLES.includes(i.aisle)?i.aisle:"Pantry";
-    const key=a+"|"+b[0]+"|"+String(i.item).toLowerCase();
-    if(!tally[key]){tally[key]={a,u:b[0],item:i.item,q:i.q==null?null:0};order.push(key)}
-    if(i.q!=null&&tally[key].q!=null)tally[key].q+=i.q*b[1]*k;
+    const key=a+"|"+planKey(i.item);
+    if(!tally[key]){tally[key]={a,item:i.item,items:new Set(),parts:{},order:[],open:false};order.push(key)}
+    const t=tally[key];t.items.add(String(i.item));
+    if(i.q==null){t.open=true;continue}
+    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}t.parts[u]+=i.q*b[1]*k;
   }
-  return order.map(key=>{const t=tally[key];const txt=t.q==null?t.item:(t.u==="#"||t.u===""?planQty(t.q,"")+" "+planPlural(t.item,t.q):planQty(t.q,t.u)+" "+t.item);return txt+"@"+t.a});
+  return order.map(key=>{const t=tally[key];
+    /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name */
+    const item=t.items.size>1?String(t.item).split(/,| \(/)[0].trim():t.item;
+    if("tsp" in t.parts&&"tbsp" in t.parts){t.parts.tbsp+=t.parts.tsp/3;delete t.parts.tsp;t.order=t.order.filter(u=>u!=="tsp")}
+    if(!t.order.length)return item+"@"+t.a;
+    const count=""in t.parts?planQty(t.parts[""],"")+" "+planPlural(item,t.parts[""]):"";
+    const rest=t.order.filter(u=>u!=="").map(u=>planQty(t.parts[u],u)).join(" + ");
+    return (count?count+(rest?" + "+rest:""):rest+" "+item)+"@"+t.a});
 }
 const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days")+" ahead")(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr, start the day before":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
 function planHTML(f){

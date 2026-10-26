@@ -65,83 +65,65 @@
    ]
   },
   {
-   "n": "Copacabana prawn cocktail",
+   "n": "Bamboo Lounge salami and provolone",
    "course": "s",
    "prep_min": 15,
-   "cook_min": 5,
-   "make_ahead": "Sauce up to 1 day ahead; assemble just before serving",
+   "cook_min": 0,
+   "make_ahead": "",
    "ingredients": [
     {
-     "q": 500,
+     "q": 150,
      "u": "g",
-     "item": "peeled green prawns",
-     "aisle": "Seafood"
+     "item": "sliced Genoa salami",
+     "aisle": "Deli"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "lemon, half sliced, half in wedges",
-     "aisle": "Produce"
-    },
-    {
-     "q": 120,
+     "q": 100,
      "u": "g",
-     "item": "mayonnaise",
-     "aisle": "Pantry"
+     "item": "prosciutto",
+     "aisle": "Deli"
     },
     {
-     "q": 2,
-     "u": "tbsp",
-     "item": "tomato sauce",
-     "aisle": "Pantry"
+     "q": 200,
+     "u": "g",
+     "item": "sharp provolone",
+     "aisle": "Deli"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pepperoncini",
+     "aisle": "Deli"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "marinated mushrooms",
+     "aisle": "Deli"
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "Worcestershire sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": null,
      "u": "",
-     "item": "hot sauce, a few drops",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "brandy",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 0.5,
-     "u": "",
-     "item": "iceberg lettuce",
-     "aisle": "Produce"
-    },
-    {
-     "q": null,
-     "u": "",
-     "item": "paprika, to dust",
-     "aisle": "Spices"
+     "item": "loaf seeded Italian bread",
+     "aisle": "Bakery"
     }
    ],
    "steps": [
     {
-     "text": "Poach the prawns in salted water with a slice of lemon for 2 minutes, then chill in iced water.",
-     "min": 8
-    },
-    {
-     "text": "Mix the mayonnaise, tomato sauce, Worcestershire, hot sauce and brandy.",
-     "min": 3
-    },
-    {
-     "text": "Shred the lettuce into four coupes and add the prawns.",
-     "min": 4
-    },
-    {
-     "text": "Spoon over the sauce, dust with paprika and serve with lemon wedges.",
+     "text": "Cut the provolone into thick batons.",
      "min": 5
+    },
+    {
+     "text": "Arrange the salami, prosciutto and provolone on a board.",
+     "min": 5
+    },
+    {
+     "text": "Put the pepperoncini and marinated mushrooms in small bowls beside the board.",
+     "min": 2
+    },
+    {
+     "text": "Tear the Italian bread by hand and set it next to the board.",
+     "min": 3
     }
    ]
   },
@@ -251,128 +233,94 @@
    ]
   },
   {
-   "n": "Lemon ice",
-   "course": "w",
-   "prep_min": 15,
-   "cook_min": 195,
-   "make_ahead": "Up to 1 day ahead, keep frozen; scrape before serving",
+   "n": "Johnny Dio's pan steaks",
+   "course": "m",
+   "prep_min": 33,
+   "cook_min": 19,
+   "make_ahead": "",
    "ingredients": [
     {
-     "q": 200,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 500,
-     "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
+     "q": 4,
      "u": "",
-     "item": "lemons, zested",
-     "aisle": "Produce"
+     "item": "rump steaks, about 250g each",
+     "aisle": "Meat"
     },
     {
-     "q": 250,
-     "u": "ml",
-     "item": "lemon juice (about 6 lemons)",
-     "aisle": "Produce"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Simmer the sugar, water and zest for 5 minutes, then cool.",
-     "min": 15
-    },
-    {
-     "text": "Stir in the lemon juice and pour into a shallow tray.",
-     "min": 3
-    },
-    {
-     "text": "Freeze, scraping with a fork every 30 minutes for 3 hours until light and fluffy.",
-     "min": 180
-    },
-    {
-     "text": "Serve in paper cups.",
-     "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Bamboo Lounge Scotch and ginger highball",
-   "course": "d",
-   "prep_min": 8,
-   "cook_min": 10,
-   "make_ahead": "Syrup up to 1 week ahead, keep chilled",
-   "ingredients": [
-    {
-     "q": 60,
-     "u": "g",
-     "item": "honey",
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
      "aisle": "Pantry"
     },
     {
-     "q": 60,
-     "u": "ml",
-     "item": "water",
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
      "aisle": "Pantry"
     },
     {
      "q": 30,
      "u": "g",
-     "item": "ginger, sliced",
-     "aisle": "Produce"
+     "item": "butter",
+     "aisle": "Dairy"
     },
     {
-     "q": 180,
-     "u": "ml",
-     "item": "blended Scotch",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 40,
-     "u": "ml",
-     "item": "lemon juice",
-     "aisle": "Produce"
-    },
-    {
-     "q": 480,
-     "u": "ml",
-     "item": "soda water, chilled",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 1,
+     "q": 2,
      "u": "",
-     "item": "lemon",
+     "item": "garlic cloves, smashed",
      "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bag large ice cubes",
-     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Simmer the honey, water and ginger for 5 minutes, then cool and strain.",
+     "text": "Take the rump steaks out of the fridge 30 minutes early and season well with salt and pepper.",
+     "min": 30
+    },
+    {
+     "text": "Heat the olive oil in a heavy pan until smoking.",
+     "min": 3
+    },
+    {
+     "text": "Cook the steaks two at a time, 2 to 3 minutes each side for rare or 4 minutes for medium.",
      "min": 12
     },
     {
-     "text": "Fill four highball glasses with large ice cubes.",
-     "min": 1
-    },
-    {
-     "text": "Add Scotch, ginger syrup and lemon juice to each and stir for 10 seconds.",
+     "text": "In the last minute add the butter and smashed garlic and spoon them over the steaks.",
      "min": 2
     },
     {
-     "text": "Top with soda, stir once and finish with a curl of lemon peel.",
-     "min": 2
+     "text": "Rest the steaks for 5 minutes before serving.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Red wine, opened early",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 60,
+   "make_ahead": "Open the bottles an hour before dinner",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle Chianti red wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle Montepulciano red wine",
+     "aisle": "Bottle shop"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Open the bottles of Chianti and Montepulciano red wine an hour before dinner and leave them to breathe.",
+     "min": 60
+    },
+    {
+     "text": "Pour the wine into short tumblers at the table.",
+     "min": 5
     }
    ]
   }

@@ -152,7 +152,7 @@
      "q": 375,
      "u": "ml",
      "item": "stout",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 4,
@@ -262,7 +262,7 @@
   {
    "n": "Iceberg Lounge espresso martini",
    "course": "d",
-   "prep_min": 5,
+   "prep_min": 7,
    "cook_min": 15,
    "make_ahead": "",
    "ingredients": [
@@ -270,13 +270,13 @@
      "q": 160,
      "u": "ml",
      "item": "vodka",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 80,
      "u": "ml",
      "item": "coffee liqueur",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 160,
@@ -307,6 +307,10 @@
     {
      "text": "Brew the coffee and cool, and chill the martini glasses.",
      "min": 10
+    },
+    {
+     "text": "For each drink, measure 40ml vodka, 20ml coffee liqueur, 40ml strong coffee and 10ml sugar syrup into a shaker.",
+     "min": 2
     },
     {
      "text": "Shake each drink very hard with ice for 15 seconds.",

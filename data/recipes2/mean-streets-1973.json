@@ -298,7 +298,7 @@
      "q": 750,
      "u": "ml",
      "item": "light Italian red, such as Lambrusco secco or young Chianti",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     }
    ],
    "steps": [
@@ -312,130 +312,6 @@
     },
     {
      "text": "Serve in tumblers with a spoonful of peach in each. Eat the peaches last.",
-     "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Draft beer",
-   "course": "d",
-   "extra": true,
-   "prep_min": 2,
-   "cook_min": 0,
-   "make_ahead": "",
-   "ingredients": [
-    {
-     "q": 1.2,
-     "u": "l",
-     "item": "lager, cold",
-     "aisle": "Drinks"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Chill the beer and the glasses, then pour a cold glass for each guest.",
-     "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Rye & ginger",
-   "course": "d",
-   "extra": true,
-   "prep_min": 3,
-   "cook_min": 0,
-   "make_ahead": "",
-   "ingredients": [
-    {
-     "q": 240,
-     "u": "ml",
-     "item": "rye whiskey",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 600,
-     "u": "ml",
-     "item": "ginger ale",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lime",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bag ice",
-     "aisle": "Frozen"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Fill four tall glasses with ice.",
-     "min": 1
-    },
-    {
-     "text": "Add rye to each and top with ginger ale.",
-     "min": 1
-    },
-    {
-     "text": "Finish with a squeeze of lime.",
-     "min": 1
-    }
-   ]
-  },
-  {
-   "n": "Scotch, rocks",
-   "course": "d",
-   "extra": true,
-   "prep_min": 2,
-   "cook_min": 0,
-   "make_ahead": "",
-   "ingredients": [
-    {
-     "q": 240,
-     "u": "ml",
-     "item": "blended Scotch",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bag ice",
-     "aisle": "Frozen"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Fill four tumblers with ice.",
-     "min": 1
-    },
-    {
-     "text": "Pour a measure of Scotch over each.",
-     "min": 1
-    }
-   ]
-  },
-  {
-   "n": "Anisette",
-   "course": "d",
-   "extra": true,
-   "prep_min": 2,
-   "cook_min": 0,
-   "make_ahead": "",
-   "ingredients": [
-    {
-     "q": 120,
-     "u": "ml",
-     "item": "anisette liqueur",
-     "aisle": "Drinks"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Pour a small glass of anisette per guest.",
      "min": 2
     }
    ]

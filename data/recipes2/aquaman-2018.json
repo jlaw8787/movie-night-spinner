@@ -24,7 +24,7 @@
      "q": 300,
      "u": "ml",
      "item": "ice-cold lager",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 1,
@@ -272,7 +272,7 @@
   {
    "n": "Blue Hawaiian with rum and pineapple",
    "course": "d",
-   "prep_min": 10,
+   "prep_min": 12,
    "cook_min": 0,
    "make_ahead": "",
    "ingredients": [
@@ -280,13 +280,13 @@
      "q": 120,
      "u": "ml",
      "item": "white rum",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 80,
      "u": "ml",
      "item": "blue curacao",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 360,
@@ -320,6 +320,10 @@
     }
    ],
    "steps": [
+    {
+     "text": "For each drink, measure 30ml white rum, 20ml blue curacao, 90ml pineapple juice and 30ml coconut cream into a shaker.",
+     "min": 2
+    },
     {
      "text": "Shake each drink hard with ice until frothy.",
      "min": 8

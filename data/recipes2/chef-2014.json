@@ -55,71 +55,103 @@
    ]
   },
   {
-   "n": "Yuca fries",
+   "n": "New Orleans beignets with chicory café",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 20,
-   "make_ahead": "Mojo up to 2 days ahead",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Make the dough up to 1 day ahead and rise it in the fridge",
    "ingredients": [
     {
-     "q": 1,
-     "u": "kg",
-     "item": "cassava, peeled",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
-     "u": "",
-     "item": "garlic cloves, crushed",
-     "aisle": "Produce"
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "lime, juiced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "orange, juiced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
      "u": "tbsp",
-     "item": "olive oil",
+     "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 1.5,
-     "u": "l",
-     "item": "vegetable oil, for deep frying",
+     "q": 180,
+     "u": "ml",
+     "item": "full cream milk, warmed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, a pinch",
      "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "salt",
+     "u": "l",
+     "item": "vegetable oil, for frying",
      "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee with chicory",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk, for the café",
+     "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Peel the cassava and cut into chunks.",
+     "text": "Mix the yeast, caster sugar and warm milk and stand for 10 minutes until foamy.",
      "min": 10
     },
     {
-     "text": "Boil until tender, then drain and cool slightly.",
-     "min": 20
-    },
-    {
-     "text": "Cut into batons and dry well. Mix the garlic, lime, orange and oil for the mojo.",
+     "text": "Beat in the egg, melted butter, plain flour and a pinch of salt to a soft dough and knead for 3 minutes.",
      "min": 5
     },
     {
-     "text": "Fry at 185C in batches until crisp, drain and salt. Serve with the mojo.",
+     "text": "Cover and leave to rise for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Roll the dough 5mm thick and cut into 6cm squares. Heat the oil to 175C and fry the squares for 1 minute a side until puffed and golden.",
+     "min": 15
+    },
+    {
+     "text": "Brew the ground coffee with chicory with 500ml water, heat the milk and mix half and half into four cups.",
      "min": 5
+    },
+    {
+     "text": "Drain the beignets and bury them in the icing sugar. Serve with the chicory café.",
+     "min": 3
     }
    ]
   },
@@ -158,7 +190,7 @@
      "q": 1,
      "u": "tbsp",
      "item": "dried oregano",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 4,
@@ -217,6 +249,85 @@
     {
      "text": "Press and griddle in butter until crisp and the cheese melts.",
      "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Carl's late-night aglio e olio",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "garlic cloves, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thinly slice the garlic and chop the parsley. Bring a big pot of well-salted water to the boil.",
+     "min": 8
+    },
+    {
+     "text": "Cook the spaghetti until just shy of al dente and keep 1 cup of the pasta water before draining.",
+     "min": 10
+    },
+    {
+     "text": "While the pasta cooks, warm the olive oil with the garlic and chilli flakes over low heat until the garlic is pale gold.",
+     "min": 4
+    },
+    {
+     "text": "Toss the spaghetti through the garlic oil with a splash of pasta water until glossy.",
+     "min": 2
+    },
+    {
+     "text": "Finish with the parsley, a squeeze of lemon and the parmesan.",
+     "min": 1
     }
    ]
   },
@@ -286,61 +397,6 @@
     {
      "text": "Turn out and serve with vanilla ice cream.",
      "min": 5
-    }
-   ]
-  },
-  {
-   "n": "Food truck mojito",
-   "course": "d",
-   "prep_min": 10,
-   "cook_min": 0,
-   "make_ahead": "",
-   "ingredients": [
-    {
-     "q": 1,
-     "u": "",
-     "item": "bunch mint",
-     "aisle": "Produce"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "limes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 4,
-     "u": "tbsp",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 180,
-     "u": "ml",
-     "item": "white rum",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 500,
-     "u": "g",
-     "item": "crushed ice",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 500,
-     "u": "ml",
-     "item": "soda water",
-     "aisle": "Drinks"
-    }
-   ],
-   "steps": [
-    {
-     "text": "For each drink muddle 8 mint leaves with half a lime and some sugar.",
-     "min": 6
-    },
-    {
-     "text": "Add the rum and crushed ice, top with soda water and stir from the bottom.",
-     "min": 4
     }
    ]
   }

@@ -95,7 +95,7 @@
      "q": null,
      "u": "",
      "item": "salt and pepper, for the cornmeal",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 250,
@@ -148,6 +148,85 @@
    ]
   },
   {
+   "n": "Biscuits and sausage gravy",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 27,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "self-raising flour, extra for the gravy",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, frozen",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "black pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C. Grate the frozen butter into the 300g self-raising flour with a pinch of salt and toss to coat.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the buttermilk to make a soft dough, fold it over on itself three times, pat out 2cm thick and cut 8 biscuits.",
+     "min": 8
+    },
+    {
+     "text": "Bake the biscuits on a lined tray until risen and golden.",
+     "min": 15
+    },
+    {
+     "text": "Squeeze the sausage meat out of the skins and brown it in a frying pan, breaking it up as it cooks.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the extra flour for a minute, then add the milk a little at a time and simmer until thick, with plenty of black pepper. Split the biscuits and spoon the gravy over.",
+     "min": 8
+    }
+   ]
+  },
+  {
    "n": "Sac-O-Suds chicken fried steak",
    "course": "m",
    "prep_min": 25,
@@ -194,7 +273,7 @@
      "q": 1,
      "u": "tsp",
      "item": "black pepper",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 800,

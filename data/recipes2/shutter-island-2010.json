@@ -24,7 +24,7 @@
      "q": 80,
      "u": "g",
      "item": "parmesan, grated",
-     "aisle": "Meat"
+     "aisle": "Dairy"
     },
     {
      "q": 0.5,
@@ -148,7 +148,7 @@
      "q": 125,
      "u": "ml",
      "item": "white wine",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 150,
@@ -292,7 +292,7 @@
   {
    "n": "Dr Cawley's brandy Alexander",
    "course": "d",
-   "prep_min": 5,
+   "prep_min": 7,
    "cook_min": 0,
    "make_ahead": "",
    "ingredients": [
@@ -300,13 +300,13 @@
      "q": 160,
      "u": "ml",
      "item": "brandy",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 120,
      "u": "ml",
      "item": "creme de cacao",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 120,
@@ -330,6 +330,10 @@
    "steps": [
     {
      "text": "Chill four coupe glasses",
+     "min": 2
+    },
+    {
+     "text": "For each drink, measure 40ml brandy, 30ml creme de cacao and 30ml thickened cream into a shaker.",
      "min": 2
     },
     {

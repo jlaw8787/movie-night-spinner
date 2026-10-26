@@ -290,19 +290,19 @@
      "q": 240,
      "u": "ml",
      "item": "bourbon",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 120,
      "u": "ml",
      "item": "sweet vermouth",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 8,
      "u": "",
      "item": "dashes aromatic bitters",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 4,
@@ -325,200 +325,6 @@
     {
      "text": "Strain into 4 chilled coupes and drop a cherry in each.",
      "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Filet of sole",
-   "course": "m",
-   "prep_min": 20,
-   "cook_min": 30,
-   "make_ahead": "",
-   "extra": true,
-   "ingredients": [
-    {
-     "q": 800,
-     "u": "g",
-     "item": "sole fillets",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 80,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lemon, juiced, plus wedges",
-     "aisle": "Produce"
-    },
-    {
-     "q": 300,
-     "u": "g",
-     "item": "long grain rice",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "small onion, diced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 600,
-     "u": "ml",
-     "item": "chicken stock",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 400,
-     "u": "g",
-     "item": "green beans",
-     "aisle": "Produce"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "flaked almonds",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Sauté the onion in butter, add the rice and stock and simmer covered for the pilaf.",
-     "min": 20
-    },
-    {
-     "text": "Melt the rest of the butter with the lemon juice and brush over the sole.",
-     "min": 4
-    },
-    {
-     "text": "Grill or broil the sole until just cooked.",
-     "min": 6
-    },
-    {
-     "text": "Blanch the beans, toss with toasted almonds and butter.",
-     "min": 8
-    },
-    {
-     "text": "Serve with lemon wedges.",
-     "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Dry martini",
-   "course": "d",
-   "prep_min": 5,
-   "cook_min": 5,
-   "make_ahead": "",
-   "extra": true,
-   "ingredients": [
-    {
-     "q": 240,
-     "u": "ml",
-     "item": "gin or vodka",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 40,
-     "u": "ml",
-     "item": "dry vermouth",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "green olives or lemon twists",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 500,
-     "u": "g",
-     "item": "ice",
-     "aisle": "Frozen"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Freeze the glasses.",
-     "min": 5
-    },
-    {
-     "text": "Stir the spirit and vermouth over ice, strain and garnish.",
-     "min": 5
-    }
-   ]
-  },
-  {
-   "n": "Clam chowder",
-   "course": "m",
-   "prep_min": 10,
-   "cook_min": 30,
-   "make_ahead": "Up to 2 days, reheat gently",
-   "extra": true,
-   "ingredients": [
-    {
-     "q": 100,
-     "u": "g",
-     "item": "salt pork or bacon, diced",
-     "aisle": "Meat"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "onion, diced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 500,
-     "u": "g",
-     "item": "potatoes, diced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 600,
-     "u": "g",
-     "item": "shucked clams or 1.2 kg littlenecks",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "fish or clam stock",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "cream",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bag oyster crackers",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Render the salt pork, then soften the onion.",
-     "min": 10
-    },
-    {
-     "text": "Add the potatoes and stock and simmer until tender.",
-     "min": 15
-    },
-    {
-     "text": "Add the clams and cream and heat gently.",
-     "min": 10
-    },
-    {
-     "text": "Serve with oyster crackers.",
-     "min": 5
     }
    ]
   }

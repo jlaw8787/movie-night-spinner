@@ -190,7 +190,7 @@
      "q": 150,
      "u": "ml",
      "item": "red wine",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 250,
@@ -294,7 +294,7 @@
   {
    "n": "Cable's cold brew espresso martini",
    "course": "d",
-   "prep_min": 35,
+   "prep_min": 37,
    "cook_min": 0,
    "make_ahead": "",
    "ingredients": [
@@ -308,13 +308,13 @@
      "q": 160,
      "u": "ml",
      "item": "vodka",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 80,
      "u": "ml",
      "item": "coffee liqueur",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 40,
@@ -339,6 +339,10 @@
     {
      "text": "Chill 4 martini glasses in the freezer.",
      "min": 30
+    },
+    {
+     "text": "For each drink, measure 60ml cold brew coffee, 40ml vodka, 20ml coffee liqueur and 10ml sugar syrup into a shaker.",
+     "min": 2
     },
     {
      "text": "Shake each drink very hard with plenty of ice for 15 seconds so it foams, then strain into the glass.",

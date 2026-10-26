@@ -2,89 +2,6 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Potato knish",
-   "course": "s",
-   "prep_min": 30,
-   "cook_min": 55,
-   "make_ahead": "Up to 1 day, reheat at 180C",
-   "ingredients": [
-    {
-     "q": 400,
-     "u": "g",
-     "item": "potatoes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "brown onion, finely diced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 30,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 0.25,
-     "u": "tsp",
-     "item": "salt",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 0.25,
-     "u": "tsp",
-     "item": "white pepper",
-     "aisle": "Spices"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "sheets puff pastry",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg, beaten",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "hot English mustard",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Peel and chop the potatoes, boil in salted water until tender, then drain and mash.",
-     "min": 18
-    },
-    {
-     "text": "Slowly fry the onion in the butter over medium-low heat until golden.",
-     "min": 15
-    },
-    {
-     "text": "Mix into the mash with salt and white pepper, then cool.",
-     "min": 10
-    },
-    {
-     "text": "Cut each pastry sheet into four squares and divide the filling among them. Fold and seal into parcels.",
-     "min": 8
-    },
-    {
-     "text": "Brush with egg and bake at 200C until golden.",
-     "min": 25
-    },
-    {
-     "text": "Serve two small knish each with hot mustard.",
-     "min": 2
-    }
-   ]
-  },
-  {
    "n": "Roast grape and ricotta crostini",
    "course": "s",
    "prep_min": 20,
@@ -149,7 +66,7 @@
      "q": null,
      "u": "",
      "item": "cracked black pepper",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     }
    ],
    "steps": [
@@ -168,6 +85,87 @@
     {
      "text": "Spread on the toasts, top with grapes and finish with honey and pepper.",
      "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sally's chef salad",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Boil the eggs up to 2 days ahead and keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cos lettuces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sliced leg ham",
+     "aisle": "Deli"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sliced turkey",
+     "aisle": "Deli"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "swiss cheese, cut into strips",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "cucumber, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Hard-boil the eggs for 10 minutes, cool in cold water, peel and halve.",
+     "min": 15
+    },
+    {
+     "text": "Wash the cos lettuces, dry well and tear into a large platter.",
+     "min": 5
+    },
+    {
+     "text": "Arrange the leg ham, turkey, swiss cheese strips, halved eggs, tomatoes and cucumber in rows over the lettuce.",
+     "min": 8
+    },
+    {
+     "text": "Pour the olive oil and red wine vinegar into two little jugs and serve them on the side.",
+     "min": 2
     }
    ]
   },
@@ -258,43 +256,37 @@
    ]
   },
   {
-   "n": "Egg cream",
+   "n": "New Year's Eve champagne",
    "course": "d",
    "prep_min": 5,
-   "cook_min": 0,
-   "make_ahead": "",
+   "cook_min": 180,
+   "make_ahead": "Chill the bottle at least 3 hours ahead",
    "ingredients": [
     {
-     "q": 100,
-     "u": "ml",
-     "item": "chocolate syrup",
-     "aisle": "Drinks"
+     "q": 1,
+     "u": "",
+     "item": "bottle champagne or sparkling wine",
+     "aisle": "Bottle shop"
     },
     {
-     "q": 400,
-     "u": "ml",
-     "item": "very cold full cream milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 600,
-     "u": "ml",
-     "item": "chilled soda water",
-     "aisle": "Drinks"
+     "q": 1,
+     "u": "kg",
+     "item": "ice",
+     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Put syrup in each of four tall glasses and pour in the milk.",
+     "text": "Chill the bottle of champagne or sparkling wine in the fridge for at least 3 hours.",
+     "min": 180
+    },
+    {
+     "text": "Sit the bottle in an ice bucket with the ice and a little cold water while you wait for midnight.",
      "min": 2
     },
     {
-     "text": "Add soda water quickly and stir briskly to form a foamy head.",
-     "min": 2
-    },
-    {
-     "text": "Serve immediately.",
-     "min": 1
+     "text": "Open the champagne just before midnight and pour into four flutes.",
+     "min": 3
     }
    ]
   }

@@ -325,7 +325,7 @@ window.MENU_FORMATS.placemat=ctx=>{
 
   const html=`<div data-pm style="position:absolute;inset:0;overflow:hidden;background:${outer};font-family:${L.body};color:${L.ink}">
   ${tex(T.tex*.6)}
-  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" onload="window.__placematFit&&__placematFit(this)" style="position:absolute;width:1px;height:1px;opacity:0">
+  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window.__placematFit&&__placematFit(this)" style="position:absolute;width:1px;height:1px;opacity:0">
   <div style="position:absolute;left:${inset}px;top:${inset}px;width:${IW}px;height:${IH}px;background:${L.paper};border-radius:${L.radius}px;${frame}overflow:hidden">
     <div style="position:absolute;inset:0;background:url("${BLOTCH}") 0 0/900px;mix-blend-mode:multiply;opacity:${.25+T.tex*.5};pointer-events:none"></div>
     ${tex(T.tex)}
@@ -385,7 +385,7 @@ window.MENU_FORMATS.placemat=ctx=>{
   const PW=Math.round(IH*2/3),RX=PW+gut,sideW=272,sideL=IW-18-sideW,menuX=RX+26,menuW=sideL-18-menuX;
   const htmlP=`<div data-pm style="position:absolute;inset:0;overflow:hidden;background:${outer};font-family:${L.body};color:${L.ink}">
   ${tex(T.tex*.6)}
-  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" onload="window.__placematFit&&__placematFit(this)" style="position:absolute;width:1px;height:1px;opacity:0">
+  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window.__placematFit&&__placematFit(this)" style="position:absolute;width:1px;height:1px;opacity:0">
   <div style="position:absolute;left:${inset}px;top:${inset}px;width:${IW}px;height:${IH}px;background:${L.paper};border-radius:${L.radius}px;${frame}overflow:hidden">
     <div style="position:absolute;inset:0;background:url("${BLOTCH}") 0 0/900px;mix-blend-mode:multiply;opacity:${.25+T.tex*.5};pointer-events:none"></div>
     ${tex(T.tex)}

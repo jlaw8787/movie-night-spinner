@@ -176,7 +176,7 @@
      "q": 150,
      "u": "ml",
      "item": "marsala",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 150,
@@ -282,7 +282,7 @@
      "q": 360,
      "u": "ml",
      "item": "prosecco, chilled",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 120,
@@ -315,102 +315,6 @@
     {
      "text": "Slide a thin orange wheel into each glass and serve straight away.",
      "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Rosemary roast potatoes",
-   "course": "s",
-   "extra": true,
-   "prep_min": 15,
-   "cook_min": 41,
-   "make_ahead": "Parboil up to 4 hours ahead; roast to serve",
-   "ingredients": [
-    {
-     "q": 1,
-     "u": "kg",
-     "item": "potatoes, in chunks",
-     "aisle": "Produce"
-    },
-    {
-     "q": 80,
-     "u": "ml",
-     "item": "olive oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "garlic cloves, unpeeled and crushed",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
-     "u": "",
-     "item": "sprigs rosemary",
-     "aisle": "Produce"
-    },
-    {
-     "q": null,
-     "u": "",
-     "item": "sea salt, to finish",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Parboil the potatoes for 8 minutes, drain and shake to roughen the edges.",
-     "min": 12
-    },
-    {
-     "text": "Toss in olive oil with the garlic and rosemary.",
-     "min": 3
-    },
-    {
-     "text": "Roast at 220C, turning once, until crackling.",
-     "min": 40
-    },
-    {
-     "text": "Finish with sea salt.",
-     "min": 1
-    }
-   ]
-  },
-  {
-   "n": "Espresso and sambuca",
-   "course": "d",
-   "extra": true,
-   "prep_min": 3,
-   "cook_min": 5,
-   "make_ahead": "",
-   "ingredients": [
-    {
-     "q": 32,
-     "u": "g",
-     "item": "ground espresso coffee",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 60,
-     "u": "ml",
-     "item": "sambuca",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 12,
-     "u": "",
-     "item": "coffee beans",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Brew four short, strong espressos.",
-     "min": 5
-    },
-    {
-     "text": "Serve with sambuca in the glass and three coffee beans floated on top for luck.",
-     "min": 3
     }
    ]
   }

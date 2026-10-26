@@ -36,7 +36,7 @@
      "q": 80,
      "u": "ml",
      "item": "white wine",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 30,
@@ -174,7 +174,7 @@
      "q": 60,
      "u": "ml",
      "item": "sake",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 2,
@@ -294,19 +294,19 @@
      "q": 200,
      "u": "ml",
      "item": "blended Scotch",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 80,
      "u": "ml",
      "item": "sweet vermouth",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": null,
      "u": "",
      "item": "aromatic bitters, 8 dashes",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 4,
@@ -345,382 +345,6 @@
     {
      "text": "Strain over a large ice cube in each tumbler, twist orange peel over and drop it in, and add a cherry.",
      "min": 3
-    }
-   ]
-  },
-  {
-   "n": "Shrimp Tempura",
-   "course": "s",
-   "extra": true,
-   "prep_min": 25,
-   "cook_min": 10,
-   "make_ahead": "Fry just before serving",
-   "ingredients": [
-    {
-     "q": 400,
-     "u": "g",
-     "item": "peeled prawns, tails on",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "zucchini, in sticks",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "sweet potato, thinly sliced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "green beans",
-     "aisle": "Produce"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 30,
-     "u": "g",
-     "item": "cornflour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 250,
-     "u": "ml",
-     "item": "ice-cold soda water",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 500,
-     "u": "ml",
-     "item": "neutral oil, for frying",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "daikon radish, grated",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "soy sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "mirin",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Mix the grated radish with the soy and mirin for the dipping sauce.",
-     "min": 5
-    },
-    {
-     "text": "Make a light batter by stirring the flours with ice-cold soda water until just combined, lumps are fine.",
-     "min": 5
-    },
-    {
-     "text": "Dip the prawns and vegetables in the batter.",
-     "min": 10
-    },
-    {
-     "text": "Fry at 180C in small batches until pale and crisp, then drain.",
-     "min": 15
-    }
-   ]
-  },
-  {
-   "n": "Sashimi",
-   "course": "s",
-   "extra": true,
-   "prep_min": 20,
-   "cook_min": 0,
-   "make_ahead": "Slice just before serving; use same-day sashimi-grade fish",
-   "ingredients": [
-    {
-     "q": 200,
-     "u": "g",
-     "item": "sashimi-grade tuna",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "sashimi-grade yellowtail",
-     "aisle": "Seafood"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "daikon radish, shredded",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "soy sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "wasabi paste",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "pickled ginger",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Keep the fish very cold. Slice across the grain into thick slices with a sharp knife.",
-     "min": 12
-    },
-    {
-     "text": "Arrange on the shredded radish.",
-     "min": 4
-    },
-    {
-     "text": "Serve with soy, wasabi and pickled ginger.",
-     "min": 4
-    }
-   ]
-  },
-  {
-   "n": "Sukiyaki for Two",
-   "course": "m",
-   "extra": true,
-   "prep_min": 25,
-   "cook_min": 15,
-   "make_ahead": "Prep the platter up to 3 hours ahead, keep chilled",
-   "ingredients": [
-    {
-     "q": 600,
-     "u": "g",
-     "item": "thinly sliced beef",
-     "aisle": "Meat"
-    },
-    {
-     "q": 300,
-     "u": "g",
-     "item": "firm tofu, cubed",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "shirataki or udon noodles",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 300,
-     "u": "g",
-     "item": "Chinese cabbage",
-     "aisle": "Produce"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "shiitake mushrooms",
-     "aisle": "Produce"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "spring onions",
-     "aisle": "Produce"
-    },
-    {
-     "q": 120,
-     "u": "ml",
-     "item": "soy sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 120,
-     "u": "ml",
-     "item": "mirin",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 60,
-     "u": "ml",
-     "item": "sake",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 250,
-     "u": "ml",
-     "item": "water",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Arrange the beef, tofu, noodles, cabbage, mushrooms and spring onions on a platter.",
-     "min": 18
-    },
-    {
-     "text": "Simmer the soy, mirin, sake, sugar and water to make the broth.",
-     "min": 5
-    },
-    {
-     "text": "Cook in batches in the broth at the table until just done.",
-     "min": 15
-    },
-    {
-     "text": "Dip each piece in a beaten raw egg to eat.",
-     "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Green Tea Ice Cream",
-   "course": "w",
-   "extra": true,
-   "prep_min": 15,
-   "cook_min": 300,
-   "make_ahead": "Up to 1 week, keep frozen",
-   "ingredients": [
-    {
-     "q": 500,
-     "u": "ml",
-     "item": "milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "thickened cream",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 6,
-     "u": "",
-     "item": "egg yolks",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "matcha powder",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 8,
-     "u": "",
-     "item": "sesame wafers",
-     "aisle": "Bakery"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Warm the milk and cream. Whisk the yolks, sugar and matcha, pour in the milk and cook gently, stirring, until it coats a spoon.",
-     "min": 15
-    },
-    {
-     "text": "Chill the custard until cold, then churn in an ice cream machine.",
-     "min": 45
-    },
-    {
-     "text": "Freeze until firm.",
-     "min": 240
-    },
-    {
-     "text": "Serve with a sesame wafer.",
-     "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Hot Sake",
-   "course": "d",
-   "extra": true,
-   "prep_min": 3,
-   "cook_min": 5,
-   "make_ahead": "",
-   "ingredients": [
-    {
-     "q": 400,
-     "u": "ml",
-     "item": "sake",
-     "aisle": "Drinks"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Pour the sake into a carafe and stand it in a pot of hot water until warm, not boiling.",
-     "min": 5
-    },
-    {
-     "text": "Serve in small cups.",
-     "min": 2
-    }
-   ]
-  },
-  {
-   "n": "Plum Wine",
-   "course": "d",
-   "extra": true,
-   "prep_min": 2,
-   "cook_min": 0,
-   "make_ahead": "",
-   "ingredients": [
-    {
-     "q": 400,
-     "u": "ml",
-     "item": "plum wine, chilled",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bag ice",
-     "aisle": "Frozen"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Fill small glasses with ice.",
-     "min": 1
-    },
-    {
-     "text": "Pour over the cold plum wine.",
-     "min": 1
     }
    ]
   }

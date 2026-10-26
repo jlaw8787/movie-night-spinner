@@ -47,63 +47,6 @@
    ]
   },
   {
-   "n": "Clock tower cheese straws",
-   "course": "s",
-   "prep_min": 15,
-   "cook_min": 12,
-   "make_ahead": "Up to 1 day, keep in an airtight tin",
-   "ingredients": [
-    {
-     "q": 1,
-     "u": "",
-     "item": "sheet puff pastry",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 60,
-     "u": "g",
-     "item": "cheddar, grated",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 20,
-     "u": "g",
-     "item": "parmesan, grated",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 0.125,
-     "u": "tsp",
-     "item": "cayenne pepper",
-     "aisle": "Spices"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Beat the egg and brush half of it over the pastry sheet.",
-     "min": 5
-    },
-    {
-     "text": "Scatter over the cheddar, parmesan and cayenne, fold in half and press lightly.",
-     "min": 5
-    },
-    {
-     "text": "Cut into 8 tall strips, twist each one and place on a lined tray. Brush with the remaining egg.",
-     "min": 5
-    },
-    {
-     "text": "Bake at 220C conventional until puffed and golden.",
-     "min": 12
-    }
-   ]
-  },
-  {
    "n": "Lou's malt shop cheeseburger",
    "course": "m",
    "prep_min": 15,
@@ -132,7 +75,7 @@
      "q": 0.25,
      "u": "tsp",
      "item": "black pepper",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 80,
@@ -179,141 +122,209 @@
    ]
   },
   {
-   "n": "Enchantment Under the Sea cupcakes",
-   "course": "w",
-   "prep_min": 30,
-   "cook_min": 18,
-   "make_ahead": "Bake up to 1 day ahead, ice on the day",
+   "n": "Doc's breakfast machine fry-up",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
    "ingredients": [
     {
-     "q": 140,
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay the bacon in a cold frying pan and cook over medium heat for 8 to 10 minutes, turning, until crisp. Lift out onto a plate.",
+     "min": 10
+    },
+    {
+     "text": "Fry the eggs in the bacon fat, spooning the fat over the yolks until the whites are set.",
+     "min": 4
+    },
+    {
+     "text": "Meanwhile toast the white bread and spread with the butter.",
+     "min": 4
+    },
+    {
+     "text": "Plate the eggs with the bacon and buttered toast.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Uncle Joey's welcome home cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "Bake the day before, ice on the day",
+   "ingredients": [
+    {
+     "q": 350,
      "u": "g",
      "item": "butter, softened",
      "aisle": "Dairy"
     },
     {
-     "q": 80,
+     "q": 200,
      "u": "g",
      "item": "caster sugar",
      "aisle": "Pantry"
     },
     {
-     "q": 1,
+     "q": 4,
      "u": "",
-     "item": "egg",
+     "item": "eggs",
      "aisle": "Dairy"
     },
     {
-     "q": 1,
+     "q": 2,
      "u": "tsp",
      "item": "vanilla extract",
      "aisle": "Pantry"
     },
     {
-     "q": 100,
+     "q": 250,
      "u": "g",
      "item": "self-raising flour",
      "aisle": "Pantry"
     },
     {
-     "q": 45,
+     "q": 150,
      "u": "ml",
      "item": "milk",
      "aisle": "Dairy"
     },
     {
-     "q": 120,
+     "q": 300,
      "u": "g",
      "item": "icing sugar",
      "aisle": "Pantry"
     },
     {
-     "q": null,
+     "q": 1,
      "u": "",
-     "item": "blue food colouring",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 10,
-     "u": "g",
-     "item": "sugar pearls",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 8,
-     "u": "",
-     "item": "fish-shaped gummy sweets",
+     "item": "tube blue writing icing",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Beat about half the butter with the caster sugar until pale, then beat in the egg and vanilla.",
-     "min": 10
+     "text": "Heat the oven to 180C and line a 20 x 30cm tin. Beat 200g of the butter with the caster sugar until pale.",
+     "min": 8
     },
     {
-     "text": "Fold in the flour and most of the milk. Divide among 8 cupcake cases.",
-     "min": 5
+     "text": "Beat in the eggs one at a time with the vanilla, then fold in the self-raising flour and 125ml of the milk.",
+     "min": 7
     },
     {
-     "text": "Bake at 180C conventional until a skewer comes out clean, then cool completely.",
-     "min": 18
+     "text": "Spread into the tin and bake for 30 to 35 minutes until a skewer comes out clean. Cool completely.",
+     "min": 35
     },
     {
-     "text": "Beat the remaining butter with the icing sugar and a splash of milk until fluffy and tint blue.",
-     "min": 10
+     "text": "Beat the remaining 150g butter with the icing sugar and the last 2 tbsp milk until fluffy and spread over the top.",
+     "min": 7
     },
     {
-     "text": "Pipe onto the cakes and top with sugar pearls and gummy fish. Serve two small cupcakes each.",
-     "min": 5
+     "text": "Pipe WELCOME HOME JOEY across the cake with the blue writing icing.",
+     "min": 3
     }
    ]
   },
   {
-   "n": "Lou's Cafe two-straw chocolate malt",
+   "n": "Chocolate milk",
    "course": "d",
-   "prep_min": 10,
-   "cook_min": 0,
-   "make_ahead": "",
+   "prep_min": 5,
+   "cook_min": 60,
+   "make_ahead": "Make up to a day ahead and keep in the fridge",
    "ingredients": [
     {
-     "q": 12,
-     "u": "",
-     "item": "scoops vanilla ice cream",
-     "aisle": "Frozen"
+     "q": 4,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
     },
     {
-     "q": 800,
+     "q": 4,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 900,
      "u": "ml",
-     "item": "cold full cream milk",
+     "item": "full cream milk",
      "aisle": "Dairy"
     },
     {
-     "q": 8,
-     "u": "tbsp",
-     "item": "chocolate syrup",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 8,
-     "u": "tbsp",
-     "item": "malted milk powder, plus extra to sprinkle",
-     "aisle": "Pantry"
-    },
-    {
-     "q": null,
+     "q": 4,
      "u": "",
-     "item": "whipped cream, to top",
-     "aisle": "Dairy"
+     "item": "straws",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Blend the ice cream, milk, chocolate syrup and malted milk powder for 30 seconds, in two batches if needed, until thick but pourable.",
-     "min": 8
+     "text": "Whisk the cocoa and caster sugar with 100ml hot water until smooth.",
+     "min": 3
     },
     {
-     "text": "Pour into tall chilled glasses, top with whipped cream and a sprinkle of malted milk powder, and serve each with two straws.",
+     "text": "Stir in the cold full cream milk and chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Stir again and pour into four tall glasses with a straw each.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Coffee, no sugar",
+   "course": "d",
+   "prep_min": 2,
+   "cook_min": 6,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "medium-ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the ground coffee with the water in a filter coffee machine or pour-over.",
+     "min": 6
+    },
+    {
+     "text": "Pour the coffee black into four mugs. No sugar.",
      "min": 2
     }
    ]

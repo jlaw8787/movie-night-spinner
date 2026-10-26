@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Cheddar, salami and cracker board",
+   "n": "Riggs' trailer snacks",
    "course": "s",
    "prep_min": 10,
    "cook_min": 0,
@@ -12,13 +12,13 @@
      "q": 250,
      "u": "g",
      "item": "sharp cheddar",
-     "aisle": "Dairy"
+     "aisle": "Deli"
     },
     {
      "q": 150,
      "u": "g",
      "item": "sliced salami",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 1,
@@ -29,7 +29,7 @@
     {
      "q": 1,
      "u": "",
-     "item": "small jar pickled jalapenos",
+     "item": "jar pickled jalapeños",
      "aisle": "Pantry"
     }
    ],
@@ -39,7 +39,7 @@
      "min": 6
     },
     {
-     "text": "Lay everything out on a board with the crackers and a bowl of jalapenos.",
+     "text": "Lay them out on a chopping board with the saltine crackers and a small bowl of pickled jalapeños. Eat straight off the board.",
      "min": 4
     }
    ]
@@ -160,7 +160,7 @@
      "q": 250,
      "u": "ml",
      "item": "red wine",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 500,
@@ -328,7 +328,7 @@
      "q": 1,
      "u": "tsp",
      "item": "chilli powder",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 2,
@@ -370,7 +370,7 @@
      "q": 4,
      "u": "",
      "item": "bottles cold lager (375 ml)",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     }
    ],
    "steps": [

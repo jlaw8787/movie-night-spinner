@@ -222,7 +222,7 @@
   {
    "n": "Night-watch espresso martinis",
    "course": "d",
-   "prep_min": 15,
+   "prep_min": 17,
    "cook_min": 0,
    "make_ahead": "",
    "ingredients": [
@@ -236,13 +236,13 @@
      "q": 160,
      "u": "ml",
      "item": "vodka",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 80,
      "u": "ml",
      "item": "coffee liqueur",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 20,
@@ -267,6 +267,10 @@
     {
      "text": "Make the espresso and cool for 5 minutes.",
      "min": 8
+    },
+    {
+     "text": "For each drink, measure 1 shot espresso coffee, 40ml vodka, 20ml coffee liqueur and 5ml sugar syrup into a shaker.",
+     "min": 2
     },
     {
      "text": "Shake half the batch at a time with plenty of ice for 20 seconds until frothy.",
