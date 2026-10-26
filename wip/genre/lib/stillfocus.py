@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from posterdupe import picked, fetch, CACHE  # same pick rule, same image cache
 
 YUNET = os.environ.get("YUNET", "/home/claude/models/yunet.onnx")
-DARK_MEAN, DARK_P90 = 42, 105   # mean luma and 90th percentile (0..255)
+DARK_MEAN, DARK_P90 = 18, 75   # mean luma and 90th percentile (0..255); moody but readable frames sit well above this
 
 def faces(im, det):
     h, w = im.shape[:2]; s = 640 / max(h, w)
@@ -38,7 +38,7 @@ def focus(fs, w, h):
     cx = sum((x + fw / 2) * fw * fh for x, _, fw, fh in fs) / a
     top = min(y for _, y, _, _ in fs); bot = max(y + fh for _, y, _, fh in fs)
     cy = (top + bot) / 2
-    return [round(min(max(cx / w, 0), 1), 2), round(min(max(cy / h, 0), 1), 2)]
+    return [round(float(min(max(cx / w, 0), 1)), 2), round(float(min(max(cy / h, 0), 1)), 2)]
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--write", action="store_true"); ap.add_argument("--film", action="append")
