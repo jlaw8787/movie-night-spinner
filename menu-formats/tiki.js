@@ -73,7 +73,7 @@ function heroes(ctx){
   /* tmdb-posters.js declares a top level const, so window.TMDB_POSTERS is empty: read the binding directly */
   let pp=ctx.poster;if(!pp){try{pp=typeof TMDB_POSTERS!=="undefined"&&ctx.f&&TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]}catch(e){}}
   const post=pp?im(pp,"w780"):"";
-  return{list:st,poster:post,hero:st[0]||post,second:st[1]||st[0]||post,isPoster:!st.length};
+  return{list:st,poster:post,hero:post||st[0],heroIsPoster:!!post,second:st[1]||st[0]||post,isPoster:!st.length};
 }
 function logoUrl(ctx){const l=ctx.logo;if(!l||!l[0])return"";const im=ctx.img||((p,s)=>`https://image.tmdb.org/t/p/${s}${p}`);return im(l[0],"w500")}
 function flav(ctx,fb){
@@ -193,8 +193,8 @@ function wearLayer(P,tone,seed,folds){
 }
 function img(url,o){
   return`<div style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;overflow:hidden;${o.shape||""};background:#123;${o.frame||""}">
-    <div style="position:absolute;inset:0;background:url('${url}') ${o.pos||"center 35%"}/cover no-repeat;filter:${o.filter}"></div>
-    ${o.half?HALFTONE(o.half):""}${o.sheen?SHEEN(o.sheen):""}${o.extra||""}</div>`;
+    <img alt="" crossorigin="anonymous" src="${url}" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:${o.contain?"contain":"cover"};object-position:${o.pos||"center 35%"};${o.contain?"":`filter:${o.filter};`}">
+    ${o.contain?"":o.half?HALFTONE(o.half):""}${o.sheen?SHEEN(o.sheen):""}${o.extra||""}</div>`;
 }
 function items(list,k,era,ty,C,big){
   const ds=big?30:26,ns=big?21:20;
@@ -218,8 +218,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const lpDark=`position:absolute;left:50%;top:536px;transform:translateX(-50%) rotate(${TN.tilt*.5}deg);max-width:470px;padding:14px 24px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".8",2,[255,255,255],.07,seed)};border-radius:${E.g===2?"18px":"6px"};box-shadow:0 10px 24px rgba(0,0,0,.45),inset 0 0 0 2px ${rgba(C.accA,.6)}`;
   const lpLight=lpDark.replace(`background-color:${C.dark}`,`background-color:${P.bg}`);
   const drinks=cs.d.length?cs.d:[{n:"House lagoon cooler",note:"Pineapple, lime and crushed ice"}];
+  const waterF=hex(P.water);
+  const waterBgF=`background-color:${P.water};background-image:${noise(".012 .03",4,mix(waterF,WHITE,.5),.55,seed+2,700)},${noise(".09 .3",2,mix(waterF,WHITE,.7),.35,seed+3,400)};`;
   const front=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
-    ${img(ph.hero,{x:0,y:0,w:600,h:610,filter:filt,half:E.half,sheen:E.sheen,pos:ph.isPoster?"center 18%":"center 40%",
+    ${ph.heroIsPoster?`<div style="position:absolute;left:0;top:0;width:600px;height:610px;${waterBgF}overflow:hidden"></div>
+    <div style="position:absolute;left:131px;top:20px;width:338px;height:507px;box-sizing:border-box;border:7px solid ${toHex(mix(hex(P.bg),[230,205,150],.5))};box-shadow:0 0 0 5px ${rgba(mix(hex(P.water),WHITE,.35),.6)},0 10px 30px rgba(0,0,0,.5);background:${toHex(mix(hex(P.bg),[230,205,150],.5))}"><img crossorigin="anonymous" alt="" src="${ph.hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"></div>`:img(ph.hero,{x:0,y:0,w:600,h:610,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%",
       extra:`<div style="position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(180deg,transparent,${rgba(hex(P.water),.55)})"></div>`})}
     <div style="position:absolute;left:0;top:610px;width:600px;height:200px;${mat(P,seed)};box-shadow:inset 0 8px 14px rgba(0,0,0,.35),inset 0 -2px 0 ${rgba(BLACK,.25)}"></div>
     <div data-lpanel data-dark="${esc(lpDark)}" data-light="${esc(lpLight)}" style="${lpDark}">
@@ -238,7 +241,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${V.note}</div>
       <div data-fs="20" data-min="15" style="font:italic ${ty.bw} 20px ${ty.body};line-height:1.24;margin-top:3px">“${T(F.note.text)}” <span data-fs="${ty.sigS}" data-min="18" style="font:${ty.sigS}px ${ty.sig};color:${C.ink};font-style:normal;white-space:nowrap;margin-left:6px">${T(F.note.by)}</span></div>
     </div>
-    <div data-line data-fs="15" data-min="14" style="position:absolute;left:34px;top:1166px;width:532px;font:${ty.bw} 15px ${ty.body};white-space:nowrap;overflow:hidden;opacity:.8;text-align:center">${fam?"Every cooler is alcohol free. ":""}Unfold for the island map. Images: TMDB.</div>
+    <div data-line data-fs="15" data-min="14" style="position:absolute;left:34px;top:1166px;width:532px;font:${ty.bw} 15px ${ty.body};white-space:nowrap;overflow:hidden;opacity:.8;text-align:center">${fam?"Every cooler is alcohol free. ":""}Unfold for the island map. Poster and stills: TMDB.</div>
     ${wearLayer(P,tone,seed,true)}
   </div>`;
   /* back: island map of stills on the lagoon, then the kitchen */
@@ -254,11 +257,11 @@ window.MENU_FORMATS[ID]=ctx=>{
         <span data-fs="36" data-min="22" style="font:${ty.dw} 36px ${ty.disp};${up}white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.4)">${V.map}</span>
         <span data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;white-space:nowrap">Chart ${esc(F.number)}</span>
       </div>
-      ${img(main,{x:10,y:80,w:580,h:402,filter:filt,half:E.half,sheen:E.sheen,shape:"border-radius:46% 54% 42% 58% / 52% 44% 56% 48%",frame:shore,pos:"center 38%"})}
+      ${img(main,{contain:main===ph.poster,x:10,y:80,w:580,h:402,filter:filt,half:E.half,sheen:E.sheen,shape:"border-radius:46% 54% 42% 58% / 52% 44% 56% 48%",frame:shore,pos:"center 38%"})}
       ${tag(ISLE.m,60,440,-3)}
-      ${img(isleA,{x:26,y:494,w:210,h:126,filter:filt,half:E.half,shape:"border-radius:55% 45% 50% 50% / 48% 58% 42% 52%",frame:shore,pos:"center 35%"})}
+      ${img(isleA,{contain:isleA===ph.poster,x:26,y:494,w:210,h:126,filter:filt,half:E.half,shape:"border-radius:55% 45% 50% 50% / 48% 58% 42% 52%",frame:shore,pos:"center 35%"})}
       ${tag(ISLE.s,44,596,2)}
-      ${img(isleB,{x:364,y:492,w:210,h:128,filter:filt,half:E.half,shape:"border-radius:44% 56% 58% 42% / 55% 45% 55% 45%",frame:shore,pos:"center 35%"})}
+      ${img(isleB,{contain:isleB===ph.poster,x:364,y:492,w:210,h:128,filter:filt,half:E.half,shape:"border-radius:44% 56% 58% 42% / 55% 45% 55% 45%",frame:shore,pos:"center 35%"})}
       ${tag(ISLE.w,404,596,-2)}
       <div data-box style="position:absolute;left:246px;top:500px;width:112px;height:112px;overflow:hidden;box-sizing:border-box;padding:6px 6px;background:${P.bg};border:2px dashed ${C.ink};border-radius:8px;text-align:center;transform:rotate(${TN.tilt}deg)">
         <div data-fs="15" data-min="14" style="font:${ty.cw} 15px ${ty.caps};letter-spacing:.06em;text-transform:uppercase;color:${C.ink};line-height:1.1">${T(F.prop.title)}</div>
@@ -270,7 +273,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div>
     <div data-box style="position:absolute;left:34px;top:1098px;width:532px;height:84px;overflow:hidden;border-top:3px double ${C.ink};padding-top:6px;box-sizing:border-box">
       <div data-fs="17" data-min="14" style="font:${ty.bw} 17px ${ty.body};line-height:1.25"><b style="font-weight:${ty.cw};color:${C.ink};letter-spacing:.1em;text-transform:uppercase">Ring the gong:</b> ${T(ctx.f.P||"Serve the mains when the torches are lit.")}</div>
-      <div style="font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.82;margin-top:2px"><span data-fs="15" data-min="14">Images: TMDB.</span>${F.winks.slice(0,4).map(w=>` <span data-drop data-fs="15" data-min="14">Overheard at the bar: ${T(w)}.</span>`).join("")}</div>
+      <div style="font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.82;margin-top:2px"><span data-fs="15" data-min="14">Poster and stills: TMDB.</span>${F.winks.slice(0,4).map(w=>` <span data-drop data-fs="15" data-min="14">Overheard at the bar: ${T(w)}.</span>`).join("")}</div>
     </div>
     ${wearLayer(P,tone,seed+20,true)}
   </div>`;

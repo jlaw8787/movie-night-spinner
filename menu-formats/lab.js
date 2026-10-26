@@ -96,8 +96,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const venue=clean(fl&&fl.venue)||"Staff Mess Hall",sign=clean(fl&&fl.sign)||"Research station, all personnel";
   const num=String((fl&&fl.number)||yr2(f.year)||"07").replace(/[^0-9A-Za-z]/g,"").slice(0,6)||"07";
   const stills=(ctx.stills||[]).slice(),poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&f.id)?TMDB_POSTERS[f.id]:null)||null;
-  const heroSrc=stills[0]?ctx.img(stills[0],"w1280"):(poster?ctx.img(poster,"w780"):"");
-  const idSrc=stills[1]?ctx.img(stills[1],"w780"):(stills[0]?ctx.img(stills[0],"w780"):(poster?ctx.img(poster,"w342"):""));
+  const posterSrc=poster?ctx.img(poster,"w780"):"";
+  const heroSrc=posterSrc||(stills[0]?ctx.img(stills[0],"w1280"):"");
+  const idSrc=stills[1]?ctx.img(stills[1],"w780"):(stills[0]?ctx.img(stills[0],"w780"):"");
   const B=E.body,D=E.disp,wearA=T.wear;
   const pf=[E.photo,T.f].filter(Boolean).join(" ")||"none";
 
@@ -107,17 +108,18 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* hero: specimen plate */
   const nItems=["s","m","w","d"].reduce((a,k)=>a+Math.min(4,((ctx.menu||{})[k]||[]).length),0);
   const PY=150,PH=nItems>10?392:nItems>8?430:458,PW=W-2*M;
-  const heroImg=stills[0]
-    ?`<img src="${heroSrc}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`
-    :(poster?`<img src="${heroSrc}" alt="" style="position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(18px) brightness(.7)"><img src="${heroSrc}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
+  const ppw=Math.round(PH*2/3),ppx=PW-ppw-24;
+  const heroImg=posterSrc
+    ?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:-30px;top:-30px;width:${PW+60}px;height:${PH+60}px;object-fit:cover;filter:blur(18px) brightness(.5)"><img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:${ppx}px;top:0;width:${ppw}px;height:${PH}px;object-fit:contain">`
+    :(heroSrc?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
   const crop=(pos)=>`<div style="position:absolute;${pos};width:22px;height:22px"></div>`;
   const marks=["top:-10px;left:-10px;border-top:2px solid "+ink+";border-left:2px solid "+ink,"top:-10px;right:-10px;border-top:2px solid "+ink+";border-right:2px solid "+ink,"bottom:-10px;left:-10px;border-bottom:2px solid "+ink+";border-left:2px solid "+ink,"bottom:-10px;right:-10px;border-bottom:2px solid "+ink+";border-right:2px solid "+ink].map(p=>crop(p)).join("");
   const logo=logoPanel(ctx,{font:D,typeSize:46,typeInk:"#f4f1ea",lightInk:ink,maxW:300,maxH:112,dark:darkPanel,light:"#f6f3ea",
     wrap:`position:absolute;left:18px;bottom:18px;box-shadow:0 3px 14px rgba(0,0,0,.35);border-radius:${E.head==="line"?8:2}px`});
-  const plateTab=`<div style="position:absolute;left:0;top:0;background:${paper};color:${ink};font:600 15px/1 ${B};letter-spacing:.18em;padding:8px 12px 7px;text-transform:uppercase;max-width:${PW-340}px;white-space:nowrap;overflow:hidden">Plate A <span style="letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400">Field photograph, ${esc(f.year||"")}</span></div>`;
-  const stamp=`<div style="position:absolute;left:auto;right:206px;top:58px;transform:rotate(${T.tilt-4}deg);border:3px solid ${acc};color:${acc};font:${E.dw} 20px/1 ${D};letter-spacing:.12em;padding:6px 10px 5px;text-transform:uppercase;background:${paper};opacity:.93">${esc(T.stamp)}</div>`;
+  const plateTab=`<div style="position:absolute;left:0;top:0;background:${paper};color:${ink};font:600 15px/1 ${B};letter-spacing:.18em;padding:8px 12px 7px;text-transform:uppercase;max-width:${PW-340}px;white-space:nowrap;overflow:hidden">Plate A <span style="letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400">Now showing, ${esc(f.year||"")}</span></div>`;
+  const stamp=`<div style="position:absolute;${posterSrc?"left:18px;right:auto;top:52px":"left:auto;right:206px;top:58px"};transform:rotate(${T.tilt-4}deg);border:3px solid ${acc};color:${acc};font:${E.dw} 20px/1 ${D};letter-spacing:.12em;padding:6px 10px 5px;text-transform:uppercase;background:${paper};opacity:.93">${esc(T.stamp)}</div>`;
   const pr=(fl&&fl.prop&&(fl.prop.title||"").trim())?fl.prop:{title:"Mess Chit",lines:["One hot meal","Valid this shift"]};
-  const prop=`<div style="position:absolute;right:16px;bottom:16px;width:232px;transform:rotate(${(-T.tilt/2).toFixed(1)}deg);background:${paper};border:1.5px dashed ${ink};box-shadow:0 3px 10px rgba(0,0,0,.35);padding:9px 12px 8px">
+  const prop=`<div style="position:absolute;${posterSrc?"left:18px;top:112px":"right:16px;bottom:16px"};width:232px;transform:rotate(${(-T.tilt/2).toFixed(1)}deg);background:${paper};border:1.5px dashed ${ink};box-shadow:0 3px 10px rgba(0,0,0,.35);padding:9px 12px 8px">
     <div style="font:${E.dw} 18px/1.1 ${D};text-transform:uppercase;letter-spacing:.06em;color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(pr.title))}</div>
     ${(pr.lines||[]).slice(0,2).map(l=>`<div style="font:400 15px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(l))}</div>`).join("")}
     <div style="font:${E.dw} 16px/1.2 ${D};color:${acc};letter-spacing:.1em;margin-top:2px">No. ${esc(num)}</div></div>`;
@@ -129,7 +131,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const badge=`<div style="position:absolute;right:${M+4}px;top:16px;width:178px;height:236px;transform:rotate(${T.tilt}deg);background:linear-gradient(160deg,rgba(255,255,255,.55),rgba(255,255,255,0) 40%),#fbfbf7;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.32);border:1px solid rgba(0,0,0,.18);overflow:hidden;z-index:3">
     <div style="background:${acc};color:#fff;font:${E.dw} 18px/1 ${D};letter-spacing:.1em;text-transform:uppercase;padding:9px 12px 8px;display:flex;justify-content:space-between;white-space:nowrap"><span>Access</span><span>Lv ${esc(num.slice(-2))}</span></div>
     <div style="display:flex;gap:10px;padding:10px 10px 0">
-      <div style="width:76px;height:84px;flex:none;overflow:hidden;border:1px solid #888;background:#222">${idSrc?`<img src="${idSrc}" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:${pf}">`:""}</div>
+      <div style="width:76px;height:84px;flex:none;overflow:hidden;border:1px solid #888;background:#222">${idSrc?`<img src="${idSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:${pf}">`:posterSrc?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:contain">`:""}</div>
       <div style="font:600 14px/1.2 ${B};color:#222;text-transform:uppercase;letter-spacing:.06em;min-width:0">Badge<br>No. ${esc(num)}<br><span style="color:${acc}">All areas</span></div>
     </div>
     <div data-fith="22" data-min="14" style="margin:8px 10px 0;height:48px;display:flex;align-items:center;font-family:${D};font-weight:${E.dw};font-size:22px;line-height:1.05;color:#111;text-transform:uppercase;overflow:hidden;overflow-wrap:normal;word-break:normal"><div style="min-width:0;max-width:100%">${esc(by)}</div></div>

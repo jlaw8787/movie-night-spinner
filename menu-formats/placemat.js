@@ -252,12 +252,12 @@ window.MENU_FORMATS.placemat=ctx=>{
 
   /* logo panel */
   const lr=logo&&logo[0]&&logo[1]&&logo[2]?logo[1]/logo[2]:0;
-  let lh=lr?Math.min(140,Math.sqrt(40000/lr)):0,lw=lh*lr;if(lw>480){lw=480;lh=lw/lr}lw=Math.round(lw);lh=Math.round(lh);
+  let lh=lr?Math.min(140,Math.sqrt(40000/lr)):0,lw=lh*lr;const LMX=ctx.poster?380:480;if(lw>LMX){lw=LMX;lh=lw/lr}lw=Math.round(lw);lh=Math.round(lh);
   const tl=f.title.length,tsz=tl<=10?72:tl<=20?60:tl<=34?48:tl<=48?40:36;
   const dark=eg==="now"?"rgba(16,18,24,.74)":`${K.deep}e0`,light=eg==="e40"?"rgba(241,227,196,.95)":"rgba(255,251,242,.94)";
   const titleType=`font:${L.dispW} ${tsz}px/1.04 ${L.disp};color:#fff;${caps}letter-spacing:${L.track};text-shadow:3px 3px 0 ${L.red}`;
-  const lpanel=`<div data-fit="lpanel" data-lpanel data-sp="logo" data-dark="${dark}" data-light="${light}" data-lightink="${L.red}" style="position:absolute;left:22px;bottom:22px;max-width:540px;padding:16px 22px 14px;border-radius:${Math.min(L.radius,14)}px;background:${dark};box-shadow:0 6px 18px rgba(0,0,0,.35),inset 0 0 0 2px rgba(255,255,255,.16)${T.gold?",inset 0 0 0 5px rgba(201,162,74,.8)":""}">
-      ${lr?`<span data-lmax="480,140" data-larea="40000" style="display:block;width:${lw}px;height:${lh}px"><img crossorigin="anonymous" alt="${esc(f.title)}" src="${img(logo[0],"w500")}" onload="window.__PICK&&__PICK.logo(this)" onerror="this.parentNode.style.display='none';window.__placematLogo&&__placematLogo(this,false)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain"></span><div data-fallback style="display:none;${titleType}">${esc(f.title)}</div>`
+  const lpanel=`<div data-fit="lpanel" data-lpanel data-sp="logo" data-dark="${dark}" data-light="${light}" data-lightink="${L.red}" style="${ctx.poster?"position:relative;max-width:100%":"position:absolute;left:22px;bottom:22px;max-width:540px"};padding:16px 22px 14px;border-radius:${Math.min(L.radius,14)}px;background:${dark};box-shadow:0 6px 18px rgba(0,0,0,.35),inset 0 0 0 2px rgba(255,255,255,.16)${T.gold?",inset 0 0 0 5px rgba(201,162,74,.8)":""}">
+      ${lr?`<span data-lmax="${LMX},140" data-larea="40000" style="display:block;width:${lw}px;height:${lh}px"><img crossorigin="anonymous" alt="${esc(f.title)}" src="${img(logo[0],"w500")}" onload="window.__PICK&&__PICK.logo(this)" onerror="this.parentNode.style.display='none';window.__placematLogo&&__placematLogo(this,false)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain"></span><div data-fallback style="display:none;${titleType}">${esc(f.title)}</div>`
           :`<div data-fit="title" style="${titleType}">${esc(f.title)}</div>`}
       <div data-pk style="font:800 15px/1 ${L.body};letter-spacing:.24em;color:${L.hi};margin-top:10px;text-transform:uppercase">${esc(L.nowShowing)} &nbsp;/&nbsp; ${esc(f.year)}</div>
     </div>`;
@@ -321,6 +321,7 @@ window.MENU_FORMATS.placemat=ctx=>{
   const IW=W-2*inset,IH=H-2*inset;
   const heroW=Math.round(IW*.679),heroH=Math.round(IH*.647),sideX=heroW+gut;
   const secW=Math.round(heroW*.636);
+  const pW=Math.round(heroH*2/3),stillH=Math.round(heroH*.5);
 
   const html=`<div data-pm style="position:absolute;inset:0;overflow:hidden;background:${outer};font-family:${L.body};color:${L.ink}">
   ${tex(T.tex*.6)}
@@ -330,10 +331,17 @@ window.MENU_FORMATS.placemat=ctx=>{
     ${tex(T.tex)}
     <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${80+T.vig*160}px rgba(110,80,40,${T.vig*.6});pointer-events:none"></div>
 
-    <div data-safe='${JSON.stringify({pos:[[50,40],[50,22],[50,60],[30,40],[70,40]],items:[{q:"[data-sp=logo]",c:[["l",22,"b",22],["r",22,"b",22],["l",22,"t",22],["r",22,"t",22]]}]})}' style="position:absolute;left:0;top:0;width:${heroW}px;height:${heroH}px;overflow:hidden;background:${K.deep}">
+    ${ctx.poster?`<div style="position:absolute;left:0;top:0;width:${heroW}px;height:${heroH}px;overflow:hidden;background:${K.deep}">
+      <div style="position:absolute;left:0;top:0;width:${pW}px;height:${heroH}px;overflow:hidden;background:${K.deep}"><img crossorigin="anonymous" alt="${esc(f.title)} (${esc(f.year)}) poster" src="${img(ctx.poster,"w780")}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"><div style="position:absolute;inset:0;box-shadow:inset 0 0 ${30+T.vig*50}px rgba(0,0,0,${.1+T.vig*.3})"></div></div>
+      <div style="position:absolute;left:${pW}px;top:0;width:${gut}px;height:${heroH}px;background:${gc}"></div>
+      <div style="position:absolute;left:${pW+gut}px;top:0;right:0;height:${heroH}px;overflow:hidden;display:flex;flex-direction:column">
+        ${stills[0]?`<div style="position:relative;flex:none;height:${stillH}px;overflow:hidden;background:${K.deep}">${photo(stills[0],"50% 40%",false,stills.slice(5,8))}</div><div style="flex:none;height:${gut}px;background:${gc}"></div>`:""}
+        <div style="position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:18px;background:${K.deep}">${lpanel}</div>
+      </div></div>`
+    :`<div data-safe='${JSON.stringify({pos:[[50,40],[50,22],[50,60],[30,40],[70,40]],items:[{q:"[data-sp=logo]",c:[["l",22,"b",22],["r",22,"b",22],["l",22,"t",22],["r",22,"t",22]]}]})}' style="position:absolute;left:0;top:0;width:${heroW}px;height:${heroH}px;overflow:hidden;background:${K.deep}">
       ${photo(heroP,"50% 40%",heroIsPoster,stills.slice(5,8))}
       ${lpanel}
-    </div>
+    </div>`}
     <div style="position:absolute;left:0;top:${heroH}px;width:${heroW}px;height:${gut}px;background:${gc}"></div>
     <div style="position:absolute;left:${heroW}px;top:0;width:${gut}px;bottom:0;background:${gc}"></div>
 

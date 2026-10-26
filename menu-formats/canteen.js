@@ -89,8 +89,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fam=FAMILY.has(f.theme),fl=ctx.flavour||{},yr=f.year||"";
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
-  const heroSrc=stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):"";
-  const heroPoster=!stills[0]&&!!poster;
+  const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
+  const heroPoster=!!poster;
+  const sideSrc=poster&&stills[0]?ctx.img(stills[0],"w1280"):"";
   const venue=fl.venue||"The Canteen",sign=fl.sign||"Lunch served daily";
   const school=/school|academy|high|hall|primary|college|class|camp|university|campus/i.test(venue+" "+sign)||(!fl.venue&&FAMILY.has(f.theme));
   const accRaw=ctx.palette&&ctx.palette.accent;
@@ -136,19 +137,24 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* hero */
   const photo=()=>{
     if(!heroSrc)return `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:${tray}"><div style="font:${g.dw} 56px/1 ${g.disp};color:${cellInk};text-align:center;padding:0 40px">${esc(venue)}</div></div>`;
+    if(heroPoster)return `<img crossorigin="anonymous" alt="${esc((f.title||"")+" poster")}" src="${heroSrc}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"><div style="position:absolute;inset:0;box-shadow:inset 0 0 26px rgba(0,0,0,${.08+t.vig*.3})"></div>`;
     const tint=t.tint?`<div style="position:absolute;inset:0;background:${t.tint};mix-blend-mode:multiply"></div>`:"";
     const gloss=t.gloss?`<div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.18),rgba(255,255,255,0) 40%)"></div>`:"";
     const half=gi===1?`<div style="position:absolute;inset:0;background:radial-gradient(rgba(0,0,0,.2) 30%,transparent 32%) 0 0/4px 4px;mix-blend-mode:multiply;opacity:.55"></div>`:"";
     const inner=heroPoster?`<div style="position:absolute;inset:-40px;background:url('${heroSrc}') center/cover;filter:blur(22px) brightness(.6) saturate(.8)"></div><img src="${heroSrc}" style="position:absolute;left:50%;top:0;height:100%;transform:translateX(-50%);filter:${photoF};box-shadow:0 0 30px rgba(0,0,0,.5)">`
-      :`<img src="${heroSrc}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:${photoF}">`;
+      :`<img crossorigin="anonymous" src="${heroSrc}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:${photoF}">`;
     return inner+half+tint+gloss};
   const heroFrame=gi===0?`border:2px solid ${ink};box-shadow:0 0 0 5px ${paper},0 0 0 6px ${ink};`:gi===1?`border-radius:0 0 26px 0;`:gi===2?`border:1px solid ${mix(ink,paper,.5)};`:``;
-  const hero=`<div style="position:absolute;left:${gi===0?10:0}px;top:${gi===0?90:80}px;width:${gi===0?612:620}px;height:${gi===0?558:568}px;overflow:hidden;background:#000;box-sizing:border-box;${heroFrame}">${photo()}</div>`;
+  const hH=gi===0?558:568,hW=heroPoster?Math.round(hH*2/3):(gi===0?612:620),hL=gi===0?10:0,colX=hL+hW+18;
+  const hero=`<div style="position:absolute;left:${hL}px;top:${gi===0?90:80}px;width:${hW}px;height:${hH}px;overflow:hidden;background:#000;box-sizing:border-box;${heroFrame}">${photo()}</div>`;
+  const CX=heroPoster?colX:30,CW=heroPoster?612-colX:340;
+  const sideFrame=gi===0?`border:2px solid ${ink};box-shadow:0 0 0 4px ${paper},0 0 0 5px ${ink};`:gi===2?`border:1px solid ${mix(ink,paper,.5)};`:"";
+  const sidePic=sideSrc?`<div style="position:absolute;left:${CX}px;top:430px;width:${CW}px;height:206px;overflow:hidden;background:#000;box-sizing:border-box;${sideFrame}"><img crossorigin="anonymous" alt="" src="${sideSrc}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:${photoF}"></div>`:"";
 
   /* logo panel */
   const lp="#f6f3ec",dp=mix(ink,"#000000",.35);
   const titleType=`<div ${A}-text="40" ${A}-lo="18" style="width:100%;max-height:92px;overflow:hidden;text-align:center;font:${g.dw} 40px/1.04 ${g.disp};color:${lp}">${esc(f.title||venue)}</div>`;
-  const logoPanel=`<div ${A}-panel ${A}-light="${rgba(lp,.94)}" ${A}-dark="${rgba(dp,.86)}" style="position:absolute;left:30px;top:106px;width:340px;height:116px;box-sizing:border-box;padding:12px 16px;background:${rgba(dp,.86)};display:flex;align-items:center;justify-content:center;border-radius:${g.radius/2}px;box-shadow:0 6px 18px rgba(0,0,0,.35);${t.gilt?`outline:2px solid ${acc};outline-offset:-6px;`:""}">
+  const logoPanel=`<div ${A}-panel ${A}-light="${rgba(lp,.94)}" ${A}-dark="${rgba(dp,.86)}" style="position:absolute;left:${CX}px;top:${heroPoster?96:106}px;width:${CW}px;height:116px;box-sizing:border-box;padding:12px 16px;background:${rgba(dp,.86)};display:flex;align-items:center;justify-content:center;border-radius:${g.radius/2}px;box-shadow:0 6px 18px rgba(0,0,0,.35);${t.gilt?`outline:2px solid ${acc};outline-offset:-6px;`:""}">
     ${ctx.logo?`<img ${A}-logo crossorigin="anonymous" src="${ctx.img(ctx.logo[0],"w500")}" style="max-width:100%;max-height:88px;object-fit:contain"><div ${A}-fallback style="display:none;position:absolute;inset:10px 16px;align-items:center;justify-content:center;background:${dp}">${titleType}</div>`
       :`<div style="position:absolute;inset:0;padding:10px 16px;display:flex;align-items:center;justify-content:center;background:${dp};border-radius:inherit">${titleType}</div>`}</div>`;
 
@@ -156,7 +162,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const tkBg=gi===3?"#ffffff":mix(paper,"#fff6d8",.5);
   const tkAcc=pickAccent(acc,tkBg,4.5,g.acc);
   const cue=f.P||"";
-  const ticket=`<div style="position:absolute;left:400px;top:500px;width:206px;height:160px;box-sizing:border-box;padding:12px 14px;background-color:${tkBg};background-image:${noise(.8,.08,"#6a5a40",2)};border:2px dashed ${tkAcc};outline:6px solid ${tkBg};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${t.rot}deg);color:${ink}">
+  const ticket=`<div style="position:absolute;left:${heroPoster?CX+Math.round((CW-190)/2):400}px;top:${heroPoster?(sideSrc?248:300):500}px;width:${heroPoster?190:206}px;height:160px;box-sizing:border-box;padding:12px 14px;background-color:${tkBg};background-image:${noise(.8,.08,"#6a5a40",2)};border:2px dashed ${tkAcc};outline:6px solid ${tkBg};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${t.rot}deg);color:${ink}">
      <div ${A}-box ${A}-min=".85" style="width:100%;height:100%;overflow:hidden;--k:1;text-align:center">
        <div style="font:700 max(14px,calc(14px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${tkAcc}">${school?"Lunch ticket":"Meal voucher"}</div>
        <div style="font:${g.dw} max(22px,calc(34px*var(--k)))/1.05 ${g.disp};margin:2px 0 4px">No. ${esc(number)}</div>
@@ -201,7 +207,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]&&winks[4].length<=44&&(voice[0].length+winks[4].length+60+(fam?25:0)+String(number).length)<=102?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
 
   const face=`<div ${A}-face style="position:absolute;inset:0;background-color:${paper};background-image:${tex};overflow:hidden;font-family:${g.body}">
-    ${hero}${strip}${logoPanel}${ticket}${noteCard}${propCard}${head}${trayBox}${fine}${gilt}
+    ${hero}${sidePic}${strip}${logoPanel}${ticket}${noteCard}${propCard}${head}${trayBox}${fine}${gilt}
     <div style="position:absolute;inset:0;background:${vign};pointer-events:none"></div>${xerox}</div>`;
   return {w:W,h:H,faces:[face]};
 };

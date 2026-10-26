@@ -94,11 +94,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const space=f.theme==="scifi"||f.theme==="galaxy"||SPACE_RX.test([fl.venue,fl.sign,(fl.winks||[]).join(" "),fl.prop&&fl.prop.title,(fl.prop&&fl.prop.lines||[]).join(" ")].join(" "));
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
-  const heroSrc=stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):"";
-  const heroPoster=!stills[0]&&!!poster;
+  const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
+  const heroPoster=!!poster;
+  const sideSrc=poster&&stills[0]?ctx.img(stills[0],"w1280"):"";
   const s2i=stills.length>1?stills[Math.min(3,stills.length-1)]:null;
-  const s2Src=s2i?ctx.img(s2i,"w1280"):poster?ctx.img(poster,"w780"):heroSrc;
-  const s2Poster=!s2i&&!!poster;
+  const s2Src=s2i?ctx.img(s2i,"w1280"):stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):heroSrc;
+  const s2Poster=!s2i&&!stills[0]&&!!poster;
   const dark=hx(ctx.palette&&ctx.palette.dark)?ctx.palette.dark:null;
   const paper=space?(dark?mix(g.space,dark,.3):g.space):g.sea;
   const ink=space?g.inkD:g.inkL;
@@ -131,12 +132,12 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* deck plan photo panel: grid overlay, coordinates, corner ticks, callout */
   const panel=(src,isPoster,x,y,w,h,callout,pos)=>{
-    const tint=t.tint?`<div style="position:absolute;inset:0;background:${t.tint};mix-blend-mode:multiply"></div>`:"";
-    const gloss=t.gloss?`<div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,0) 40%)"></div>`:"";
+    const tint=!isPoster&&t.tint?`<div style="position:absolute;inset:0;background:${t.tint};mix-blend-mode:multiply"></div>`:"";
+    const gloss=!isPoster&&t.gloss?`<div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,0) 40%)"></div>`:"";
     const img=!src?`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:${mix(paper,acc,.25)}"><div style="font:${g.dw} 44px/1 ${g.disp};color:${ink};text-align:center;padding:0 30px;text-transform:uppercase">${esc(venue)}</div></div>`
-      :isPoster?`<div style="position:absolute;inset:-40px;background:url('${src}') center/cover;filter:blur(22px) brightness(.55)"></div><img src="${src}" style="position:absolute;left:50%;top:0;height:100%;transform:translateX(-50%);filter:${photoF}">`
-      :`<img src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos||"center 40%"};filter:${photoF}">`;
-    const ov=`<div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,${rgba("#ffffff",.13)} 0 1px,transparent 1px ${Math.round(h/4)}px),repeating-linear-gradient(90deg,${rgba("#ffffff",.13)} 0 1px,transparent 1px ${Math.round(w/5)}px)"></div>`;
+      :isPoster?`<div style="position:absolute;inset:0;background:${mix(paper,"#000000",.4)}"></div><img crossorigin="anonymous" alt="${esc((f.title||"")+" poster")}" src="${src}" style="position:absolute;left:50%;top:0;height:100%;width:auto;transform:translateX(-50%)">`
+      :`<img crossorigin="anonymous" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos||"center 40%"};filter:${photoF}">`;
+    const ov=isPoster?"":`<div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,${rgba("#ffffff",.13)} 0 1px,transparent 1px ${Math.round(h/4)}px),repeating-linear-gradient(90deg,${rgba("#ffffff",.13)} 0 1px,transparent 1px ${Math.round(w/5)}px)"></div>`;
     const cols="ABCDE".split("").map((c,i)=>`<div style="position:absolute;top:-22px;left:${Math.round(w/5*i+w/10)-6}px;font:600 14px/1 ${BODY};color:${sub}">${c}</div>`).join("");
     const rows=[1,2,3,4].map((r,i)=>`<div style="position:absolute;left:-18px;top:${Math.round(h/4*i+h/8)-7}px;font:600 14px/1 ${BODY};color:${sub}">${r}</div>`).join("");
     const ticks=[["left","top"],["right","top"],["left","bottom"],["right","bottom"]].map(([a,b])=>`<div style="position:absolute;${a}:-8px;${b}:-8px;width:22px;height:22px;border-${a}:2px solid ${acc};border-${b}:2px solid ${acc}"></div>`).join("");
@@ -162,7 +163,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* title block and logo */
   const lp="#f4f2ec",dp=mix(space?paper:"#1b232a","#000000",.3);
   const titleType=`<div ${A}-text="40" ${A}-lo="18" style="width:100%;max-height:84px;overflow:hidden;text-align:center;font:${g.dw} 40px/1.04 ${g.disp};letter-spacing:${g.track};color:${lp};text-transform:uppercase">${esc(f.title||venue)}</div>`;
-  const logoPanel=`<div ${A}-panel ${A}-light="${lp}" ${A}-dark="${dp}" style="position:absolute;left:${P+60}px;top:598px;width:${W-2*P-120}px;height:100px;box-sizing:border-box;padding:12px 18px;background:${dp};display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.4);border:1px solid ${acc};${t.gilt?`outline:2px solid ${acc};outline-offset:3px;`:""}">
+  const logoPanel=`<div ${A}-panel ${A}-light="${lp}" ${A}-dark="${dp}" style="position:absolute;left:${heroPoster?P+20+296:P+60}px;top:${heroPoster?(sideSrc?534:424):598}px;width:${heroPoster?W-2*P-20-296:W-2*P-120}px;height:100px;box-sizing:border-box;padding:12px 18px;background:${dp};display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.4);border:1px solid ${acc};${t.gilt?`outline:2px solid ${acc};outline-offset:3px;`:""}">
     ${ctx.logo?`<img ${A}-logo crossorigin="anonymous" src="${ctx.img(ctx.logo[0],"w500")}" style="max-width:100%;max-height:74px;object-fit:contain"><div ${A}-fallback style="display:none;position:absolute;inset:0;padding:8px 16px;align-items:center;justify-content:center;background:${dp}">${titleType}</div>`
       :`<div style="position:absolute;inset:0;padding:8px 16px;display:flex;align-items:center;justify-content:center;background:${dp}">${titleType}</div>`}</div>`;
   const cell=(lab,val,w,extra)=>`<div style="${w?`width:${w}px;flex:none;`:"flex:1;min-width:0;"}box-sizing:border-box;padding:6px 10px;border-left:1px solid ${rgba(ink,.5)};${extra||""}"><div style="font:600 14px/1.1 ${BODY};letter-spacing:.16em;text-transform:uppercase;color:${sub}">${esc(lab)}</div><div style="margin-top:3px;font:${g.dw} 19px/1.1 ${g.disp};color:${ink};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(val)}</div></div>`;
@@ -175,7 +176,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* front */
   const f0=`<div ${A}-face style="position:absolute;inset:0;${faceBg}overflow:hidden;font-family:${BODY}">
     ${frame}${gilt}${titleBlock}
-    ${panel(heroSrc,heroPoster,P+20,214,W-2*P-20,420,deck+", galley")}
+    ${heroPoster?`${panel(heroSrc,true,P+20,214,280,420,"")}${sideSrc?panel(sideSrc,false,P+20+296,214,W-2*P-20-296,304,deck+", galley"):""}`:`${panel(heroSrc,false,P+20,214,W-2*P-20,420,deck+", galley")}`}
+    ${heroPoster?`<div style="position:absolute;left:${P+20}px;top:648px;width:280px;font:600 15px/1.2 ${BODY};letter-spacing:.18em;text-transform:uppercase;color:${acc};white-space:nowrap">Now showing, ${esc(String(yr))}</div>`:""}
     ${logoPanel}
     <div ${A}-box style="position:absolute;left:${P+6}px;top:716px;width:${W-2*P-12}px;height:278px;overflow:hidden;--k:1;display:flex;flex-direction:column;justify-content:safe center">${course("s")}${course("m")}</div>
     <div style="position:absolute;left:${P+6}px;right:${P+6}px;top:1004px;padding-top:6px;border-top:1px solid ${rgba(ink,.5)};display:flex;justify-content:space-between;color:${sub};font:600 15px/1.2 ${BODY};letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;overflow:hidden"><span>${esc(voice[0])}</span><span>Turn over</span></div>

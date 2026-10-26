@@ -136,13 +136,23 @@ function loadFonts(spec){
 }
 const fam=f=>"family="+f.replace(/ /g,"+");
 
-/* stills: hero is the first still, else the poster; second is the next still, else the poster again */
+/* the film poster is the hero; stills only feed the secondary photo. No poster: first still in the hero slot. */
 function photos(ctx){
   /* the harness map is a top-level const, not on window: read the global binding when ctx.poster is empty */
   let pp=ctx.poster;try{if(!pp&&typeof TMDB_POSTERS!=="undefined")pp=TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]||null}catch(e){}
   const st=(ctx.stills||[]).filter(Boolean),po=pp?ctx.img(pp,"w780"):"";
-  return{hero:st[0]?ctx.img(st[0],"w1280"):po,heroPos:st[0]?"center 40%":"center 30%",
-    second:st[1]?ctx.img(st[1],"w1280"):(st[0]&&po?po:(po||"")),secondPos:st[1]?"center 45%":"center 22%",fromPoster:!st[0]};
+  const sec=st[1]||st[0]||"";
+  return{hero:po||(st[0]?ctx.img(st[0],"w1280"):""),heroPos:"center 40%",isPoster:!!po,
+    second:sec?ctx.img(sec,"w1280"):po,secondPos:"center 45%",secondPoster:!sec&&!!po};
+}
+/* the whole poster, uncropped, untinted: light paper wear on top only (a still in the hero slot keeps the era print process) */
+function posterHTML(src,isPoster,pos,era,t,cover){
+  if(!src)return"";
+  if(!isPoster||cover)return photoHTML(src,pos,era,t);
+  const P=PROCESS[era],T=TONES[t];
+  return`<img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">
+  ${(P.sheen||T.sheen)?`<div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.14) 50%,rgba(255,255,255,0) 60%)"></div>`:""}
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${Math.round(8+T.wear*14)}px rgba(0,0,0,${(.05+T.wear*.1).toFixed(2)})"></div>`;
 }
 
 /* runtime fit: runs after the faces are mounted and fonts are in. Shrinks in 1px steps, never under data-fs, then clamps notes */
@@ -275,7 +285,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     strip=`<div data-fbox style="position:absolute;left:30px;right:164px;top:26px;height:104px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(K.ink,K.soft,K.acc)}</div>
       ${seatTile(30,28,"transparent",K.ink,K.acc,`border:2px solid ${K.acc};box-shadow:inset 0 0 0 3px ${paper},inset 0 0 0 4px ${rgba(K.acc,.6)}`)}
       <div style="position:absolute;left:30px;right:30px;top:140px;border-top:4px double ${K.acc}"></div>`;
-    winTop=162;winH=496;winW=500;winRad=`250px 250px 10px 10px`;
+    winTop=162;winH=500;winRad="56px 56px 8px 8px";
     frame=`0 0 0 7px ${paper},0 0 0 8px ${K.acc},0 0 0 12px ${paper},0 0 0 13px ${rgba(K.acc,.6)},0 10px 24px 10px rgba(60,40,10,.18)`;
   }else if(G==="jet"){
     strip=`<div style="position:absolute;left:0;top:0;width:410px;height:128px;background:${liv};z-index:3;box-shadow:0 4px 14px rgba(0,0,0,.3)">
@@ -289,7 +299,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-fbox style="position:absolute;left:26px;right:168px;top:14px;bottom:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(onLiv,"rgba(255,250,240,.82)",K.light)}</div>
       <div style="position:absolute;right:22px;top:16px;width:128px;bottom:14px;border-left:1px solid rgba(255,250,240,.35)"></div>
     </div>${seatTile(27,8,"transparent",onLiv,K.light,"")}${stripes(120)}`;
-    winTop=158;winH=486;winW=476;winRad=era===3?"130px":"118px";
+    winTop=164;winH=490;winRad="52px";
     const bez=dark?"#3a3d44":"#e4e1d9";
     frame=`0 0 0 13px ${bez},0 0 0 14px rgba(0,0,0,.18),0 0 0 22px ${rgba(bez,.55)},0 8px 22px 16px rgba(0,0,0,.18)`;
   }else{
@@ -297,19 +307,27 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${seatTile(30,22,"transparent",K.acc,K.soft,`border:2px solid ${rgba(K.acc,.7)};border-radius:14px`)}
       <div style="position:absolute;left:${era===6?44:30}px;right:30px;top:126px;height:2px;background:${K.acc}"></div>
       ${era===6?`<div style="position:absolute;left:0;top:0;bottom:0;width:18px;background:linear-gradient(180deg,${K.acc},${K.light} 60%,${K.acc})"></div>`:""}`;
-    winTop=150;winH=528;winW=era===6?488:500;winRad=`${Math.round(winW*.42)}px / ${Math.round(winH*.36)}px`;
+    winTop=150;winH=510;winRad="44px";
     const bez=dark?"#3a3d44":"#edeae4";
     frame=`0 0 0 9px ${bez},0 0 0 10px rgba(0,0,0,.12),0 12px 28px 6px rgba(0,0,0,.16)`;
   }
-  const winL=G==="jet"?0:Math.round((W-winW)/2+(G==="mod"&&era===6?9:0));
-  const win=`<div style="position:absolute;left:${winL}px;top:${winTop}px;width:${winW}px;height:${winH}px;border-radius:${winRad};overflow:hidden;background:${K.deep};box-shadow:${frame}">
-      ${photoHTML(ph.hero,ph.heroPos,era,t)}
-      ${G==="jet"?`<div style="position:absolute;left:0;right:0;bottom:0;height:150px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.35))"></div>`:`<div style="position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 26px 6px rgba(0,0,0,${G==="prop"?.3:.45}),inset 0 0 0 3px rgba(255,255,255,.25)"></div>
-      <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 32%)"></div>`}</div>${winExtra}`;
-  const lpBottom=G==="jet"?H-winH+44:H-(winTop+winH)-18;
-  const lp=logoPanel(ctx,{maxW:330,maxH:92,center:true,dark:rgba(K.deep,.9),light:rgba(dark?"#f1efe9":"#fffdf8",.96),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f1efe9":"#fffdf8",.95),fbK:K.acc,
-    titleFont:`${L.dw} 40px ${D}`,titleCol:"#141414",under:`In-flight feature`,underFont:`700 14px/1.2 ${B};letter-spacing:.16em;text-transform:uppercase`,
-    style:`position:absolute;${G==="jet"?"left:30px":"left:50%;transform:translateX(-50%)"};bottom:${lpBottom}px;max-width:430px;padding:13px 20px 11px;text-align:center;border-radius:${era>=6?14:G==="prop"?0:4}px;box-shadow:0 6px 16px rgba(0,0,0,.4)${G==="prop"?`,inset 0 0 0 3px ${rgba(K.acc,.5)}`:""};z-index:4`});
+  /* the poster is the hero: whole, 2:3, on the cabin wall inside the window frame; the logo sits in the column beside it */
+  const PD=18,pH=G==="jet"?440:winH-2*PD,pW=Math.round(pH*2/3);
+  if(G!=="jet")winW=pW+2*PD;
+  const winL=G==="jet"?0:G==="wide"?48:(G==="mod"&&era===6?46:32);
+  const posL=G==="jet"?30:PD,posT=G==="jet"?150:PD;
+  const wall=G==="jet"?`linear-gradient(180deg,${liv},${K.deep})`:K.deep;
+  const posterBox=`<div style="position:absolute;left:${posL}px;top:${posT}px;width:${pW}px;height:${pH}px;overflow:hidden;background:#222;box-shadow:0 0 0 ${G==="jet"?4:2}px #fffaf0,0 6px 16px rgba(0,0,0,.45)">
+        ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>`;
+  const win=`<div style="position:absolute;left:${winL}px;top:${winTop}px;width:${winW}px;height:${winH}px;border-radius:${winRad};overflow:hidden;background:${wall};box-shadow:${frame}">
+      ${posterBox}</div>${winExtra}`;
+  const ring=G==="jet"?26:G==="wide"?40:G==="prop"?30:26;
+  const colX=G==="jet"?posL+pW+30:winL+winW+ring,colW=W-28-colX,onWall=G==="jet";
+  const lp=logoPanel(ctx,{maxW:colW-30,maxH:90,center:true,dark:rgba(K.deep,.92),light:rgba(dark?"#f1efe9":"#fffdf8",.96),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f1efe9":"#fffdf8",.95),fbK:K.acc,
+    titleFont:`${L.dw} 40px ${D}`,titleCol:"#141414",under:`${esc(ctx.f.year)}`,underFont:`700 14px/1.2 ${B};letter-spacing:.16em;text-transform:uppercase`,
+    style:`position:relative;box-sizing:border-box;padding:12px 12px 10px;text-align:center;border-radius:${era>=6?14:G==="prop"?0:4}px;box-shadow:0 6px 16px rgba(0,0,0,.4)${G==="prop"?`,inset 0 0 0 3px ${rgba(K.acc,.5)}`:""}`});
+  const col=`<div style="position:absolute;left:${colX}px;width:${colW}px;top:${G==="jet"?posT:winTop}px;height:${G==="jet"?pH:winH}px;display:flex;flex-direction:column;justify-content:center;gap:14px;z-index:4">
+      ${kick("Now showing",onWall?K.light:K.acc,"center")}${lp}</div>`;
   const note=`<div data-fbox style="position:absolute;left:28px;width:270px;top:700px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?24:30}px;overflow:hidden">
     ${kick("From the flight deck")}
     <div data-fs="14" style="font:italic 400 18px/1.3 ${B};color:${K.ink};margin-top:7px">"${esc(dry(F.note.text))}"</div>
@@ -321,7 +339,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="16" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(dry(it.n))}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
       ${it.note?`<div data-clamp data-fs="14" style="font:400 17px/1.25 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`).join("")}
     ${drinks.length?"":`<div data-fs="14" style="font:400 18px/1.3 ${B};color:${K.soft};margin-top:8px">Tea, coffee and juice served throughout the flight.</div>`}</div></div>`;
-  const front=face(strip+win+lp+note+trolley);
+  const front=face(strip+win+col+note+trolley);
 
   /* ---- back: meal header, framed still, the film's prop, the meal, fine print ---- */
   let top,sTop,sH,sFrame,sRad;
@@ -350,7 +368,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   }
   const sL=G==="jet"?0:era===6?44:28,sR=G==="jet"?0:28;
   const still=`<div style="position:absolute;left:${sL}px;right:${sR}px;top:${sTop}px;height:${sH}px;overflow:hidden;background:${K.deep};${sFrame};border-radius:${sRad}">
-      ${photoHTML(ph.second,ph.secondPos,era,t)}
+      ${ph.secondPoster?posterHTML(ph.second,true,"",era,t):photoHTML(ph.second,ph.secondPos,era,t)}
       <div style="position:absolute;left:12px;bottom:${G==="jet"?26:12}px;background:${rgba("#fffaf0",.92)};padding:6px 10px;font:700 14px/1.2 ${B};letter-spacing:.12em;text-transform:uppercase;color:#1c1712">Now showing</div></div>${G==="jet"?stripes(sTop+sH-12,true):""}`;
   const pr=F.prop,pk=pr.kind;
   const prop=`<div style="position:absolute;right:20px;top:${sTop+sH-66}px;width:206px;transform:rotate(${(-T.rot*.7+2).toFixed(1)}deg);${propPaper(pk,K.acc,"#fffcf4")}box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;z-index:2">

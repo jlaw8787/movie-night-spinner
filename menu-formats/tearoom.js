@@ -105,16 +105,20 @@ window.MENU_FORMATS[ID]=ctx=>{
   const venue=clean(fl&&fl.venue)||"The Tea Room",sign=clean(fl&&fl.sign)||"Fourth floor, take the lift";
   const num=String((fl&&fl.number)||yr2(f.year)||"07").replace(/[^0-9A-Za-z]/g,"").slice(0,6)||"07";
   const stills=(ctx.stills||[]).slice(),poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&f.id)?TMDB_POSTERS[f.id]:null)||null;
-  const s1=stills[0]?ctx.img(stills[0],"w1280"):(poster?ctx.img(poster,"w780"):"");
-  const s2=stills[1]?ctx.img(stills[1],"w1280"):(stills[0]?ctx.img(stills[0],"w1280"):(poster?ctx.img(poster,"w780"):""));
+  const posterSrc=poster?ctx.img(poster,"w780"):"";
+  const s1=posterSrc||(stills[0]?ctx.img(stills[0],"w1280"):"");
+  const s2=stills[1]?ctx.img(stills[1],"w1280"):(stills[0]?ctx.img(stills[0],"w1280"):posterSrc);
   const B=E.body,D=E.disp,w=T.wear,pf=[E.photo,T.f].filter(Boolean).join(" ")||"none";
   const nItems=["s","m","w","d"].reduce((a,k)=>a+Math.min(4,((ctx.menu||{})[k]||[]).length),0);
   const by=clean(fl&&fl.note&&fl.note.by)||"The Manageress";
   const up=E.up?"text-transform:uppercase;letter-spacing:.06em;":"";
   const bg=`background:radial-gradient(ellipse at 50% 40%,rgba(0,0,0,0) 60%,rgba(70,50,20,${(.08+.2*w).toFixed(2)}) 100%),url(${GRAIN}) center/520px,${paper};background-blend-mode:normal,multiply`;
+  const ppw=Math.round((470-30)*2/3);
   const photo=(src,fit)=>src?(fit==="poster"
-    ?`<img src="${src}" alt="" style="position:absolute;inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(18px) brightness(.7)"><img src="${src}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:${pf}">`
-    :`<img src="${src}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`):`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`;
+    ?`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;left:-30px;top:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(16px) brightness(.5)"><img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain">`
+    :fit==="posterL"
+    ?`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;left:-30px;top:-30px;width:calc(100% + 60px);height:calc(100% + 60px);object-fit:cover;filter:blur(16px) brightness(.5)"><img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;left:14px;top:0;width:${ppw}px;height:100%;object-fit:contain">`
+    :`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`):`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`;
   const fitImg=()=>`<img src="${PIX}" alt="" style="position:absolute;width:1px;height:1px;opacity:0" onload="window.__fmtFitTearoom&&window.__fmtFitTearoom(this)">`;
 
   /* ---------- front: store band, window display, logo, gift tag, note ---------- */
@@ -126,10 +130,10 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="margin-top:6px;font:italic 400 17px/1.2 ${B};opacity:.92">The Tea Room, top floor</div></div>`;
   const WX=24,WY=bandH+52,WW=672-2*WX,WH=470;
   const winLabel=`<div data-fitw="24" data-min="16" style="position:absolute;left:${WX}px;width:${WW-200}px;top:${bandH+14}px;text-align:center;white-space:nowrap;overflow:hidden;font-family:${D};font-weight:${E.dw};font-size:24px;line-height:1.1;color:${acc};${up}">${xmas?"Our Christmas windows":"In the windows this season"}</div>`;
-  const logo=logoPanel(ctx,{font:D,typeSize:42,typeInk:"#f7f1e4",lightInk:ink,maxW:330,maxH:104,dark:darkPanel,light:"#f7f1e4",
-    wrap:`position:absolute;left:50%;bottom:-46px;transform:translateX(-50%);box-shadow:0 4px 16px rgba(0,0,0,.35);border:2px solid ${E.gilt};border-radius:${E.radius}px;z-index:2`});
+  const logo=logoPanel(ctx,{font:D,typeSize:42,typeInk:"#f7f1e4",lightInk:ink,maxW:posterSrc?224:330,maxH:104,dark:darkPanel,light:"#f7f1e4",
+    wrap:posterSrc?`position:absolute;right:26px;bottom:26px;box-shadow:0 4px 16px rgba(0,0,0,.35);border:2px solid ${E.gilt};border-radius:${E.radius}px;z-index:2`:`position:absolute;left:50%;bottom:-46px;transform:translateX(-50%);box-shadow:0 4px 16px rgba(0,0,0,.35);border:2px solid ${E.gilt};border-radius:${E.radius}px;z-index:2`});
   const win=`<div style="position:absolute;left:${WX}px;top:${WY}px;width:${WW}px;height:${WH}px">
-    <div style="position:absolute;inset:0;${E.win};box-sizing:border-box;overflow:hidden;background:#111">${photo(s1,stills[0]?"still":"poster")}<div style="position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16) 0,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 70%,rgba(255,255,255,.08) 100%)"></div></div>
+    <div style="position:absolute;inset:0;${E.win};box-sizing:border-box;overflow:hidden;background:#111">${photo(s1,posterSrc?"posterL":"still")}<div style="position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16) 0,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 70%,rgba(255,255,255,.08) 100%)"></div></div>
     ${logo.html}</div>`;
   /* gift tag: a paper tag with a punched eyelet, type only */
   const tag=`<div style="position:absolute;right:14px;top:${WY-30}px;width:178px;transform:rotate(${T.tilt}deg);transform-origin:50% 0;z-index:3;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))">
@@ -142,7 +146,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-fitw="26" data-min="18" style="font-family:'Great Vibes',cursive;font-size:26px;line-height:1.15;white-space:nowrap;overflow:hidden">${esc(by)}</div>
       <div style="margin-top:4px;font:600 14px/1.2 ${B};letter-spacing:.14em">No. ${esc(num)}</div></div></div>`;
   const note=fl&&fl.note&&clean(fl.note.text);
-  const NY=WY+WH+64;
+  const NY=WY+WH+(posterSrc?34:64);
   const noteHtml=`<div data-fit="23" style="position:absolute;left:48px;right:48px;top:${NY}px;height:${1056-NY-92}px;overflow:hidden;text-align:center;font-size:23px;display:flex;flex-direction:column;justify-content:center">
     <div style="font:600 max(14px,.66em)/1.2 ${B};letter-spacing:.2em;text-transform:uppercase;color:${acc}">A note from ${esc(by)}</div>
     <div style="font-family:${B};font-style:italic;font-size:max(16px,1em);line-height:1.35;color:${ink};margin-top:.3em">"${esc(note||"Do come up for tea. Coats on the stand, parcels under the table, and the cake trolley comes round twice.")}"</div>
@@ -183,7 +187,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:600 14px/1.2 ${B};letter-spacing:.16em;color:${acc};margin-top:3px">COUNTER ${esc(num)}</div></div>`;
   const still2=`<div style="position:absolute;left:24px;right:24px;top:${SY}px;height:${SH}px">
     <div style="position:absolute;inset:0;${E.win};box-sizing:border-box;overflow:hidden;background:#111">${photo(s2,(stills[1]||stills[0])?"still":"poster")}</div>${prop}
-    <div style="position:absolute;right:12px;bottom:12px;background:${paper};color:${ink};font:italic 400 15px/1.2 ${B};padding:5px 10px">From the shop floor, ${esc(f.year||"")}</div></div>`;
+    <div style="position:absolute;right:12px;bottom:12px;background:${paper};color:${ink};font:italic 400 15px/1.2 ${B};padding:5px 10px">Now showing, ${esc(f.year||"")}</div></div>`;
   const backFoot=`<div style="position:absolute;left:30px;right:30px;bottom:24px;text-align:center;font:400 14px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">Prices include tea for one. Form TR-${esc(num)}. Images: TMDB</div>`;
   const back=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:8px;${E.frame};pointer-events:none"></div>

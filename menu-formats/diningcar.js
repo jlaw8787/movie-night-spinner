@@ -87,9 +87,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const stills=(ctx.stills||[]).filter(Boolean);
   /* harness note: TMDB_POSTERS is a top-level const, so window.TMDB_POSTERS is undefined and ctx.poster arrives null */
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
-  const heroSrc=stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):"";
+  /* the poster is the hero; stills only feed the secondary photos. No poster: first still in the poster slot. */
+  const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
+  const heroIsPoster=!!poster;
   const backSrc=stills[1]?ctx.img(stills[1],"w1280"):stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):"";
-  const heroPos=stills[0]?"center 40%":"center 22%",backPos=stills[1]||stills[0]?"50% 50%":"center 30%";
+  const backIsPoster=!stills[1]&&!stills[0]&&!!poster;
+  const heroPos=heroIsPoster?"center 22%":"center 40%",backPos="50% 50%";
   const pf=e.photo+" "+t.photo;
   const DF=e.disp,BF=e.body,SF=e.sig;
   const up=ei<6;  /* older cards set display in caps */
@@ -109,8 +112,18 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:${e.dw} ${vSize}px/1.05 ${DF};color:${bandText};margin-top:6px;${up?"text-transform:uppercase;letter-spacing:.03em;":""}${clamp(2)}">${esc(venue)}</div></div>`;
   const heroTop=inset+hdrH+(e.border==="stripes"?18:0);
   const tagline=clean(f.T||"");
-  const hero=`<div style="position:absolute;left:${inset}px;right:${inset}px;top:${heroTop}px;height:${heroH}px;overflow:hidden;background:#222">${heroSrc?photo(heroSrc,pf,heroPos,overlay()):""}
-    ${tagline?`<div style="position:absolute;left:0;right:0;bottom:0;padding:34px 20px 12px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.72));font:italic 400 19px/1.3 ${BF};color:#fbf6ea;${clamp(2)}">${esc(tagline)}</div>`:""}</div>`;
+  const PAD=14,ph=heroH-2*PAD,pw=Math.round(ph*2/3),colX=PAD*2+pw,colW=W-2*inset-colX-PAD-4;
+  const hero=`<div style="position:absolute;left:${inset}px;right:${inset}px;top:${heroTop}px;height:${heroH}px;overflow:hidden;background:${band}">
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,0) 60%)"></div>
+    <div style="position:absolute;left:${PAD}px;top:${PAD}px;width:${pw}px;height:${ph}px;overflow:hidden;background:#222;box-shadow:0 0 0 3px ${mix(paper,"#ffffff",.3)},0 0 0 4px ${acc},0 8px 18px rgba(0,0,0,.5)">
+    ${heroSrc?(heroIsPoster?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||e.process==="glossy"?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,heroPos,overlay())):""}</div>
+    <div style="position:absolute;left:${colX}px;width:${colW}px;top:${PAD}px;bottom:${PAD}px;display:flex;flex-direction:column;justify-content:center;color:${bandText}">
+      <div style="font:700 15px/1.2 ${BF};letter-spacing:.22em;text-transform:uppercase;color:${mix(acc,"#ffffff",.55)}">Now showing</div>
+      <div style="height:2px;background:${mix(acc,"#ffffff",.35)};margin:10px 0 12px"></div>
+      <div style="font:${e.dw} 44px/1 ${DF};color:#fbf6ea">${esc(year)}</div>
+      ${tagline?`<div style="font:italic 400 19px/1.3 ${BF};color:${bandText};margin-top:12px;${clamp(6)}">${esc(tagline)}</div>`:""}
+      <div style="height:2px;background:${mix(acc,"#ffffff",.35)};margin-top:14px"></div>
+      <div style="font:700 15px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:${mix(acc,"#ffffff",.55)};margin-top:10px">${esc(e.tt)}</div></div></div>`;
   const lg=logoImg(ctx,W-2*inset-80,logoH-28);
   const tSize=title.length>40?24:title.length>24?32:title.length>12?40:50;
   const panelDark=mix(band,"#000000",.25),panelLight=mix(paper,"#ffffff",.5);
@@ -154,7 +167,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:${e.dw} 21px/1.05 ${DF};color:${ink};margin:4px 0 6px;${up?"text-transform:uppercase;":""}${clamp(3)}">${esc(tk)}</div>
     ${(prop.lines||[]).slice(0,2).map(l=>`<div style="font:400 14px/1.25 ${BF};color:${ink};${clamp(2)}">${esc(l)}</div>`).join("")}
     <div style="display:flex;flex-wrap:wrap;gap:3px;margin-top:8px">${punch.map(n=>`<span style="flex:0 0 22px;height:22px;display:flex;align-items:center;justify-content:center;font:700 14px/1 ${BF};${n===pIdx?`background:${band};color:${bandText};border-radius:50%`:`color:${soft};border:1px solid ${mix(ink,paper,.6)}`}">${n}</span>`).join("")}</div></div>`;
-  const strip=`<div style="position:absolute;left:0;top:0;bottom:0;width:${SW}px;overflow:hidden;background:#222">${backSrc?photo(backSrc,pf,backPos,overlay()):""}
+  const strip=`<div style="position:absolute;left:0;top:0;bottom:0;width:${SW}px;overflow:hidden;background:#222">${backSrc?(backIsPoster?`<img src="${backSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">`:photo(backSrc,pf,backPos,overlay())):""}
     <div style="position:absolute;inset:0;box-shadow:inset 0 0 0 10px ${band},inset 0 0 0 12px ${acc}"></div>
     <div style="position:absolute;left:10px;right:10px;top:10px;padding:10px 10px 30px;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,0));font:italic 400 15px/1.3 ${BF};color:#fbf6ea">${esc(t.cap)}</div>
     ${ticket}</div>`;

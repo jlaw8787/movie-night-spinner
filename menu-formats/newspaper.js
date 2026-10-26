@@ -199,8 +199,11 @@ root.MENU_FORMATS.newspaper=ctx=>{
   const img=ctx.img||((p,s)=>p?"https://image.tmdb.org/t/p/"+(s||"w1280")+p:"");
   const st=(ctx.stills||[]).filter(Boolean);
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&f.id&&TMDB_POSTERS[f.id])||null;
-  const pic1=st[0]?img(st[0],"w1280"):poster?img(poster,"w780"):null;
-  const pic2=st[1]?img(st[1],"w1280"):poster?img(poster,"w780"):pic1;
+  /* front hero is the film's poster, whole (2:3). Stills are secondary: the right-hand photo beside it and page 2. */
+  const posterSrc=poster?img(poster,"w780"):null;
+  const pic1=posterSrc||(st[0]?img(st[0],"w1280"):null);
+  const sideSrc=st[0]?img(st[0],"w1280"):null;
+  const pic2=st[1]?img(st[1],"w1280"):st[0]?img(st[0],"w1280"):posterSrc;
   const isPoster=u=>u&&u.includes("/w780");
   const R=K==="modern"?8:0;
   const pick=k=>{const c=courses.find(c=>c.sec===k);return c?clean(c.items[0].n):""};
@@ -218,6 +221,11 @@ root.MENU_FORMATS.newspaper=ctx=>{
     ${src?`<img crossorigin="anonymous" src="${esc(src)}" alt="${esc(alt)}" style="width:100%;height:100%;object-fit:${isPoster(src)?"contain":"cover"};object-position:50% ${pos};display:block;filter:${E.photo} ${T.ph}">`:""}
     ${E.dot?`<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(20,16,10,.6) 22%,transparent 27%);background-size:${E.dot}px ${E.dot}px;mix-blend-mode:multiply;opacity:${E.dotA}"></div>`:""}
     <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${K==="modern"?0:40}px rgba(0,0,0,${.12+.12*wear})"></div></div>`;
+
+  /* the poster, whole, no filter, in the paper's own frame; w x h is 2:3 or it sits on the dark panel */
+  const posterFrame=(src,w,h,alt)=>`<div style="position:relative;width:${w}px;height:${h}px;${K==="modern"?"":`border:1px solid ${C.ink};`}border-radius:${R}px;box-sizing:border-box;overflow:hidden;background:${C.head}">
+    <img crossorigin="anonymous" src="${esc(src)}" alt="${esc(alt)}" style="position:absolute;left:50%;top:0;height:100%;width:auto;max-width:100%;transform:translateX(-50%);object-fit:contain;display:block">
+    <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${K==="modern"?0:18}px rgba(0,0,0,${.08+.1*wear})"></div></div>`;
 
   /* ---------- front page ---------- */
   const capsSm=`font-family:${FB};font-size:14px;line-height:18px;font-weight:700;letter-spacing:.16em`;
@@ -278,7 +286,8 @@ root.MENU_FORMATS.newspaper=ctx=>{
   if(BODY-capH-below>=456)break;
   const parts=noteTxt.match(/[^.!?]+[.!?]+/g)||[noteTxt];if(parts.length<2)break;noteTxt=parts.slice(0,-1).join("").trim();
   }
-  const P1=Math.max(456,Math.min(540,BODY-capH-below)); /* 760 x 456 or more: over 40 percent of the face */
+  const P1=Math.max(456,Math.min(540,BODY-capH-below)); /* 784 x 456 or more: over 40 percent of the face */
+
 
   /* prop: the film's own paper object, type only */
   const pr=fl&&fl.prop&&fl.prop.title?fl.prop:{kind:"slip",title:"Late Edition",lines:["Hot off the grill","Full menu inside"]};
@@ -290,6 +299,12 @@ root.MENU_FORMATS.newspaper=ctx=>{
     <div style="font-size:15px;line-height:19px;margin-top:5px">${plines.map(esc).join("<br>")}</div>
     <div style="font-family:${FD};font-weight:${HW};font-size:21px;line-height:28px;margin-top:3px">${fl&&fl.number?`No. ${esc(fl.number)}`:"5 CENTS"}</div></div>`;
 
+  const PW=Math.round(P1*2/3),SW=IW+24-PW-14;
+  const heroHTML=posterSrc?(sideSrc
+    ?`<div style="display:flex;gap:14px;align-items:flex-start">${posterFrame(posterSrc,PW,P1,`${f.title||""} (${year}) film poster`)}<div style="position:relative">${photo(sideSrc,SW,P1,`${f.title||""} (${year}) film still`,"38%")}${slip}</div></div>`
+    :`<div style="position:relative">${posterFrame(posterSrc,IW+24,P1,`${f.title||""} (${year}) film poster`)}${slip}</div>`)
+    :`<div style="position:relative">${photo(pic1,IW+24,P1,`${f.title||""} (${year}) film still`,"38%")}${slip}</div>`;
+
   const front=face("front",`
   <header style="height:${MAST}px;box-sizing:border-box">${mast}</header>
   <section style="height:${HEAD}px;box-sizing:border-box;padding-top:8px;text-align:center">
@@ -298,9 +313,9 @@ root.MENU_FORMATS.newspaper=ctx=>{
     ${tag?`<div style="margin:10px 20px 0;font-family:${FB};font-style:italic;font-size:${deckZ}px;line-height:28px;height:${deckL*28}px;overflow:hidden;color:${C.ink}">${esc(sentence(tag))}</div>`:""}
   </section>
   <main style="height:${BODY}px">
-    <div style="position:relative;margin:0 -12px">${photo(pic1,IW+24,P1,`${f.title||""} (${year}) film still`,"38%")}${slip}</div>
+    <div style="margin:0 -12px">${heroHTML}</div>
     <div style="display:flex;justify-content:space-between;gap:16px;height:${capH}px;align-items:center;font-family:${FB};font-size:16px;color:${C.ink};white-space:nowrap;overflow:hidden">
-      <span><b style="letter-spacing:.06em">TONIGHT'S FEATURE.</b> <i>${st[0]?"A still from tonight's picture":"Tonight's picture"}, ${esc(year)}.</i></span><span style="font-size:14px;letter-spacing:.12em;color:${C.soft}">STAFF PHOTO / TMDB</span></div>
+      <span><b style="letter-spacing:.06em">TONIGHT'S FEATURE.</b> <i>Now showing, ${esc(year)}.</i></span><span style="font-size:14px;letter-spacing:.12em;color:${C.soft}">STAFF PHOTO / TMDB</span></div>
     <div style="display:flex;border-top:3px solid ${C.head};padding-top:10px">
       ${ruled(LW,true,`<div style="${capsSm};color:${C.red};margin-bottom:2px">${fl&&fl.note?`A WORD FROM ${esc(by.toUpperCase())}`:"A WORD FROM THE COUNTER"}</div>
         <div style="font-family:${FB};font-style:italic;font-size:${noteZ}px;line-height:${Math.ceil(noteZ*1.3)}px;color:${C.ink}">${esc(noteTxt)}</div>

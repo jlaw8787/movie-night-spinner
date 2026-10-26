@@ -87,8 +87,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const winks=(fl&&fl.winks||[]).map(txt).filter(Boolean);
   const prop=fl&&fl.prop&&fl.prop.title?{title:clean(fl.prop.title),lines:(fl.prop.lines||[]).map(clean).slice(0,2)}:{title:"Good things arrive hot",lines:["Order again soon"]};
   const stills=(ctx.stills||[]).filter(Boolean);
-  const hero=stills[0]?IMG+"w1280"+stills[0]:(ctx.poster?IMG+"w780"+ctx.poster:"");
-  const second=stills[1]?IMG+"w1280"+stills[1]:(stills[0]?IMG+"w1280"+stills[0]:(ctx.poster?IMG+"w780"+ctx.poster:""));
+  const heroIsPoster=!!ctx.poster;
+  const hero=heroIsPoster?IMG+"w780"+ctx.poster:(stills[0]?IMG+"w1280"+stills[0]:"");
+  const second=stills[1]?IMG+"w1280"+stills[1]:(stills[0]?IMG+"w1280"+stills[0]:"");
   const grain=`${root}assets/era/_shared/paper-grain.webp`;
   const up=E.caps?"uppercase":"none";
 
@@ -118,8 +119,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const phone="555 0"+(num?num.padStart(3,"0").slice(-3):(yy||"00")+"1");
   const run=(winks.length?winks.slice(0,3):["Every street in town","Hot or it is free","Napkins in every bag"]).map(w=>esc(w.replace(/\.$/,"")));
   const lucky=[num||"8",yy||"16","23",String((+(num||7)*3)%90+4)].join("  ");
+  /* the whole poster, stuck on a printed bag panel in the format's own colours; the cover panel keeps the lower right free for the logo */
+  const bagA=toHex(mix(pd,[0,0,0],.5)),bagB=toHex(mix(mix(pa,pd,.5),[0,0,0],.4));
+  const posterWrap=`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:repeating-linear-gradient(45deg,${bagA} 0 26px,${bagB} 26px 52px)"></div>
+   <div style="position:absolute;left:508px;top:28px;width:328px;height:492px;transform:rotate(-1.2deg);background:#fbfaf6;padding:8px;box-sizing:border-box;box-shadow:0 8px 20px rgba(0,0,0,.5)"><img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:100%;height:100%;object-fit:contain"></div>
+   <div style="position:absolute;left:944px;top:262px;width:352px;transform:rotate(2deg);background:#fbfaf6;color:#222;padding:14px 18px;box-sizing:border-box;box-shadow:0 5px 14px rgba(0,0,0,.4);text-align:center;${eg==="new"?"border-radius:12px;":""}">
+     <div style="font:${E.dw} 34px/1.05 ${E.disp};text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">Now showing</div>
+     <div style="font:700 16px/1.2 ${E.body};letter-spacing:.18em;text-transform:uppercase;margin-top:6px">${esc(venue)}</div></div>`;
   const outside=`${stock}
-   <div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:#111">${photo(hero,stills[0]?"50% 40%":"50% 25%")}</div>
+   ${heroIsPoster?posterWrap:`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:#111">${photo(hero,"50% 40%")}</div>`}
    <div data-fit data-min="14" style="position:absolute;left:30px;top:30px;width:388px;height:24px;overflow:hidden;white-space:nowrap;font-size:18px"><div style="font:700 1em/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${SPOT}">${esc(T.run)}</div></div>
    <div data-fit data-min="34" style="position:absolute;left:30px;top:60px;width:388px;height:70px;overflow:hidden;white-space:nowrap;font-size:64px"><div style="font:${E.dw} 1em/1.05 ${E.disp};text-transform:uppercase;color:${INK};${press}">We deliver</div></div>
    <div style="position:absolute;left:30px;top:138px;width:388px;background:${BAR};color:${BARINK};padding:12px 16px;box-sizing:border-box;${eg==="new"?"border-radius:10px;":""}">
@@ -140,7 +148,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div data-fit data-min="26" style="height:104px;overflow:hidden;font-size:50px;display:flex;align-items:center;margin-top:4px"><div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:uppercase;color:${INK};${press}">${esc(venue)}</div></div>
      <div data-fit data-min="16" style="height:50px;overflow:hidden;font-size:20px;margin-top:4px"><div style="font:italic 500 1em/1.25 ${E.body};color:${SOFT}">${esc(sign)}</div></div></div>
    ${logoPanel}
-   <div style="position:absolute;left:478px;top:500px;width:380px;height:286px;background:#fbfaf6;color:#222;box-shadow:0 6px 16px rgba(0,0,0,.35);padding:16px 22px;box-sizing:border-box;display:flex;flex-direction:column">
+   <div style="position:absolute;left:478px;top:552px;width:380px;height:234px;background:#fbfaf6;color:#222;box-shadow:0 6px 16px rgba(0,0,0,.35);padding:16px 22px;box-sizing:border-box;display:flex;flex-direction:column">
      <div style="font:700 15px/1 ${E.body};letter-spacing:.22em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">A word from the kitchen</div>
      <div data-fit data-min="16" style="flex:1;min-height:0;overflow:hidden;font-size:21px;margin-top:8px"><div style="font:500 1em/1.32 ${E.body}">${esc(sent(note.t))}</div></div>
      <div style="font:600 36px/1 'Caveat',cursive;color:${readable(toHex(pa),"#fbfaf6",4.5)};text-align:right">${esc(note.by)}</div></div>
@@ -176,7 +184,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">One of every course, packed in one bag, ready by the opening credits.</div></div>`;
   /* panel fill: under each panel's dishes a still takes whatever depth is left (flex), so short menus never leave a bare lower panel; tiles too short to read are dropped after fitting */
   const extra=stills.length>2?stills.slice(2):stills.length?stills.slice(0):[];
-  const tileSrc=i=>extra.length?IMG+"w780"+extra[i%extra.length]:(ctx.poster?IMG+"w780"+ctx.poster:"");
+  const tileSrc=i=>extra.length?IMG+"w780"+extra[i%extra.length]:"";
   const tilePos=["50% 38%","50% 30%","50% 45%"];
   const tile=i=>tileSrc(i)?`<div data-tw-tile style="flex:1 1 0;min-height:0;position:relative;overflow:hidden;margin-top:.5em;background:#111;border:3px solid ${BAR};${eg==="new"?"border-radius:10px;":""}box-shadow:0 3px 10px rgba(0,0,0,.25)">${photo(tileSrc(i),extra.length>3||!extra.length?"50% 30%":tilePos[i])}</div>`:"";
   const pnl=(i,inner)=>`<div data-fit data-min="${heavy?14:18}" style="position:absolute;left:${i*448+26}px;top:250px;width:396px;height:${i===2?452:540}px;overflow:hidden;font-size:${heavy?20:28}px;display:flex;flex-direction:column"><div style="flex:none">${inner}</div>${tile(i)}</div>`;
@@ -191,7 +199,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    ${pnl(1,best.sp[1].map(course).join(""))}
    ${pnl(2,best.sp[2].map(course).join("")+setDinner)}
    <div data-fit data-min="14" style="position:absolute;left:922px;top:712px;width:396px;height:86px;overflow:hidden;font-size:16px;color:${SOFT}">
-     <div style="font:500 1em/1.3 ${E.body}">${cue?`Kitchen tip: ${esc(sent(cue))} `:""}${winks[3]?`Overheard: ${esc(sent(winks[3]))} `:""}Prices subject to change. Form TK ${esc(num||yy)}. Stills: TMDB.</div></div>
+     <div style="font:500 1em/1.3 ${E.body}">${cue?`Kitchen tip: ${esc(sent(cue))} `:""}${winks[3]?`Overheard: ${esc(sent(winks[3]))} `:""}Prices subject to change. Form TK ${esc(num||yy)}. Poster and stills: TMDB.</div></div>
    ${folds}`;
 
   window.__fmtFitLater();

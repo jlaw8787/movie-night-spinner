@@ -94,8 +94,8 @@ window.MENU_FORMATS.home=function(ctx){
   const num=M.num(fl.number,f.year),yy=String(f.year||"").slice(-2);
   const ink=E.ink,acc=M.accent(ctx.palette,E.card,E.acc,3.4),dark=M.darkOf(ctx.palette,"#15161a");
   const st=ctx.stills||[],pos=M.poster(ctx)?ctx.img(M.poster(ctx),"w780"):"";
-  const hero=st[0]?ctx.img(st[0],"w1280"):pos,second=st[1]?ctx.img(st[1],"w1280"):(pos||hero);
-  const heroPos=st[0]?"center 40%":"center 22%",secPos=st[1]?"center 40%":"center 62%";
+  const st0=st[0]?ctx.img(st[0],"w1280"):"",hero=pos||st0,heroIsPoster=!!pos,second=st[1]?ctx.img(st[1],"w1280"):(st0||pos),secIsPoster=!st[1]&&!st0&&!!pos;
+  const heroPos="center 40%",secPos="center 40%";
   const C=M.courses(ctx.menu,fam);
   const bd=E.b,dd=E.d,up=E.up?"text-transform:uppercase;":"";
   const grain=`background-image:${M.noise(T.wear)};`;
@@ -105,11 +105,11 @@ window.MENU_FORMATS.home=function(ctx){
    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 38% 30%,rgba(255,255,255,.22),transparent 55%),radial-gradient(ellipse at 50% 50%,transparent 55%,rgba(0,0,0,${T.vig}) 100%)"></div>
    <div style="position:absolute;inset:0;${grain}opacity:.8"></div>`;
   /* a photo print stuck on the door */
-  const print=(src,l,t,w,h,rot,op,cap)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;box-sizing:border-box;padding:${E.pr.pad};background:${E.pr.bg};border-radius:${E.pr.r};transform:rotate(${rot}deg);box-shadow:0 14px 28px rgba(0,0,0,.34),0 2px 5px rgba(0,0,0,.25)">
+  const print=(src,l,t,w,h,rot,op,cap,isP)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;box-sizing:border-box;padding:${E.pr.pad};background:${E.pr.bg};border-radius:${E.pr.r};transform:rotate(${rot}deg);box-shadow:0 14px 28px rgba(0,0,0,.34),0 2px 5px rgba(0,0,0,.25)">
      <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:${E.pr.ir};background:#222">
-      ${src?`<img src="${src}" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%),linear-gradient(160deg,rgba(255,255,255,${E.stamp?.16:.05}),transparent 40%)"></div>
-      ${E.stamp?`<div style="position:absolute;right:18px;bottom:12px;font:700 22px/1 ${bd};letter-spacing:3px;color:#ff8a1c;text-shadow:0 0 4px rgba(255,120,0,.7)">'${x(yy)} 10 26</div>`:""}
+      ${src&&isP?`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;inset:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;filter:blur(16px) brightness(.55)"><img src="${src}" crossorigin="anonymous" alt="" style="position:relative;display:block;width:100%;height:100%;object-fit:contain">`:src?`<img src="${src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
+      <div style="position:absolute;inset:0;background:${isP?`linear-gradient(160deg,rgba(255,255,255,.1),transparent 30%)`:`radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%),linear-gradient(160deg,rgba(255,255,255,${E.stamp?.16:.05}),transparent 40%)`}"></div>
+      ${E.stamp&&!isP?`<div style="position:absolute;right:18px;bottom:12px;font:700 22px/1 ${bd};letter-spacing:3px;color:#ff8a1c;text-shadow:0 0 4px rgba(255,120,0,.7)">'${x(yy)} 10 26</div>`:""}
      </div>
      ${cap&&E.cap?`<div style="position:absolute;left:0;right:0;bottom:2px;text-align:right;padding-right:26px;font:30px/1.1 ${SIG};color:#3a3326">${x(cap)}</div>`:""}
    </div>`;
@@ -119,9 +119,9 @@ window.MENU_FORMATS.home=function(ctx){
 
   /* logo in its own colours on a stuck-on card that suits it */
   const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const lw=lr?Math.min(400,108*lr):0,lh=lr?lw/lr:0;
-  const typeT=`<div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:400px;height:112px;overflow:hidden;font:${E.dw} 46px/1.02 ${dd};${up}color:#fff;font-size:46px">${x(f.title)}</div>`;
-  const logo=`<div data-lpanel data-dark="rgba(20,20,24,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:46px;top:500px;padding:14px 20px;border-radius:${E.pr.r};background:${lr?"rgba(20,20,24,.9)":dark};box-shadow:0 10px 22px rgba(0,0,0,.35);transform:rotate(${-T.rot*.8}deg);max-width:440px">
+  const lw=lr?Math.min(310,108*lr):0,lh=lr?lw/lr:0;
+  const typeT=`<div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:310px;height:112px;overflow:hidden;font:${E.dw} 46px/1.02 ${dd};${up}color:#fff;font-size:46px">${x(f.title)}</div>`;
+  const logo=`<div data-lpanel data-dark="rgba(20,20,24,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:458px;top:${st0&&heroIsPoster?150:300}px;padding:14px 20px;border-radius:${E.pr.r};background:${lr?"rgba(20,20,24,.9)":dark};box-shadow:0 10px 22px rgba(0,0,0,.35);transform:rotate(${-T.rot*.8}deg);max-width:340px">
      ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
      ${typeT}
    </div>`;
@@ -129,9 +129,12 @@ window.MENU_FORMATS.home=function(ctx){
   const kick=(t,c)=>`<div style="font:700 .9em/1.2 ${bd};letter-spacing:.2em;text-transform:uppercase;color:${c||acc}">${x(t)}</div>`;
   const lined=`background:${E.card};background-image:repeating-linear-gradient(to bottom,transparent 0 33px,rgba(70,110,180,.16) 33px 34px);`;
   /* front */
+  const padv=E.pr.pad.split(" ").map(v=>parseFloat(v)),pT=padv[0],pR=padv[1]==null?pT:padv[1],pB=padv[2]==null?pT:padv[2],pL=padv[3]==null?pR:padv[3];
+  const PW=Math.round((588-pT-pB)*2/3+pL+pR);
   const front=`${door}
-   ${print(hero,28,48,760,560,-T.rot*.5,heroPos,`Film night, ${f.year||""}`)}
-   ${mags("EAT",604,20,58)}
+   ${print(hero,28,36,PW,588,-T.rot*.5,heroPos,"Now showing",heroIsPoster)}
+   ${st0&&heroIsPoster?print(st0,452,336,320,262,T.rot*.9,"center 40%","",false):""}
+   ${mags("EAT",560,30,58)}
    ${logo}
    <div style="position:absolute;left:34px;top:656px;width:372px;height:368px;box-sizing:border-box;padding:46px 26px 20px;${lined}transform:rotate(${T.rot*1.1}deg);box-shadow:0 10px 22px rgba(0,0,0,.28),inset 0 0 ${30*T.wear}px rgba(120,90,40,${T.wear*.6})">
      <div style="position:absolute;left:0;right:0;top:0;height:30px;background:${acc}"></div>
@@ -166,7 +169,7 @@ window.MENU_FORMATS.home=function(ctx){
       <div style="font:15px/1.3 ${bd};color:${ink};opacity:.8;margin-top:6px">${foot}</div>
     </div>`;
   const back=`${door}
-   ${print(second,282,30,508,502,T.rot*.6,secPos,"")}
+   ${print(second,282,30,508,502,T.rot*.6,secPos,"",secIsPoster)}
    <div style="position:absolute;left:30px;top:52px;width:236px;height:440px;box-sizing:border-box;padding:40px 18px 16px;${lined}transform:rotate(${-T.rot}deg);box-shadow:0 10px 20px rgba(0,0,0,.26)">
      <div style="position:absolute;left:0;right:0;top:0;height:24px;background:${E.mag[1]}"></div>
      <div data-fit="15" style="height:380px;overflow:hidden;font-size:20px;color:${ink}">

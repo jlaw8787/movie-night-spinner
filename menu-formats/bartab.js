@@ -86,11 +86,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fam=FAMILY.has(f.theme),fl=ctx.flavour||{},yr=f.year||"";
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
-  const heroSrc=stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):"";
-  const heroPoster=!stills[0]&&!!poster;
+  const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
+  const heroPoster=!!poster;
   const s2i=stills.length>1?stills[Math.min(3,stills.length-1)]:null;
-  const s2Src=s2i?ctx.img(s2i,"w1280"):poster?ctx.img(poster,"w780"):heroSrc;
-  const s2Poster=!s2i&&!!poster;
+  const s2Src=s2i?ctx.img(s2i,"w1280"):stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):heroSrc;
+  const s2Poster=!s2i&&!stills[0]&&!!poster;
   const dark=hx(ctx.palette&&ctx.palette.dark)?ctx.palette.dark:null;
   const board=dark?mix(g.board,dark,.38):g.board;
   const ink=g.ink;
@@ -123,11 +123,12 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   const photo=(src,isPoster,h,pos)=>{
     if(!src)return `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:${mix(board,acc,.25)}"><div style="font:${g.dw} 40px/1.05 ${g.disp};color:${ink};text-align:center;padding:0 30px;text-transform:uppercase">${esc(venue)}</div></div>`;
+    if(isPoster)return `<div style="position:absolute;inset:0;background:${mix(board,"#000000",.42)}"></div><img crossorigin="anonymous" alt="${esc((f.title||"")+" poster")}" src="${src}" style="position:absolute;left:50%;top:${Math.round(h*.03)}px;height:${Math.round(h*.94)}px;width:auto;transform:translateX(-50%);box-shadow:0 0 0 2px ${rgba(acc,.85)},0 6px 18px rgba(0,0,0,.6)">`;
     const tint=t.tint?`<div style="position:absolute;inset:0;background:${t.tint};mix-blend-mode:multiply"></div>`:"";
     const gloss=t.gloss?`<div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,0) 38%)"></div>`:"";
     const half=g.key==="offset"?`<div style="position:absolute;inset:0;background:radial-gradient(rgba(0,0,0,.18) 30%,transparent 32%) 0 0/4px 4px;mix-blend-mode:multiply;opacity:.6"></div>`:"";
     const inner=isPoster?`<div style="position:absolute;inset:-30px;background:url('${src}') center/cover;filter:blur(20px) brightness(.5)"></div><img src="${src}" style="position:absolute;left:50%;top:0;height:100%;transform:translateX(-50%);filter:${photoF};box-shadow:0 0 30px rgba(0,0,0,.6)">`
-      :`<img src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos||"center 38%"};filter:${photoF}">`;
+      :`<img crossorigin="anonymous" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos||"center 38%"};filter:${photoF}">`;
     return inner+half+tint+gloss};
 
   const label=(txt)=>{

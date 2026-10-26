@@ -111,15 +111,27 @@ window.MENU_FORMATS.diner=ctx=>{
   const heroImg=s0?`<img alt="Still from ${ESC(f.title)} (${ESC(f.year)})" crossorigin="anonymous" src="${img(s0,"w1280")}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}">`
     :poster?`<img alt="" crossorigin="anonymous" src="${img(poster,"w342")}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(12px) brightness(.5)"><img alt="${ESC(f.title)} poster" crossorigin="anonymous" src="${img(poster,"w500")}" style="position:relative;height:100%;display:block;margin:0 auto;filter:${photo}">`
     :`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;${disp(64)};line-height:1.05;color:${K.paper};white-space:normal">${ESC(f.title)}</div>`;
-  const hero=`<div style="position:absolute;left:28px;top:208px;width:760px;padding:8px 8px 0;box-sizing:border-box;background:${night?K.paper:"#fff"};box-shadow:0 16px 36px rgba(0,0,0,${night?.65:.25})">
+  const heroOld=`<div style="position:absolute;left:28px;top:208px;width:760px;padding:8px 8px 0;box-sizing:border-box;background:${night?K.paper:"#fff"};box-shadow:0 16px 36px rgba(0,0,0,${night?.65:.25})">
       <div style="position:relative;outline:2px solid ${red};outline-offset:-2px;height:470px;overflow:hidden;background:#222">${heroImg}</div>
       <div style="font:italic 400 17px/1 ${SERIF};color:${K.ink};padding:9px 4px 10px;display:flex;justify-content:space-between"><span>${night?"Channel 13, the late show. The set behind the counter stays on all night.":"On the set above the counter tonight."}</span><span style="font:700 14px/17px ${SANS};letter-spacing:.14em;color:${K.mute};font-style:normal">${s0?"STILL":"POSTER"}: TMDB</span></div></div>`;
-  const P=fl&&fl.prop,prop=P?`<div style="position:absolute;left:14px;top:236px;width:214px;box-sizing:border-box;transform:rotate(${-3*tilt}deg);z-index:3;padding:10px 13px;box-shadow:0 8px 20px rgba(0,0,0,.45);${
+  /* hero: the poster, whole (2:3), in a polaroid mat. A still rides beside it as the secondary photo. No poster: the old still hero. */
+  const posterOn=!!poster,stillSrc=s0?img(s0,"w1280"):"";
+  const matBg=night?K.paper:"#fff",matSh=`0 16px 36px rgba(0,0,0,${night?.65:.25})`;
+  const hero=posterOn
+    ?`<div style="position:absolute;left:28px;top:208px;width:329px;padding:8px 8px 0;box-sizing:border-box;background:${matBg};box-shadow:${matSh};transform:rotate(${-1*tilt}deg)">
+      <div style="position:relative;outline:2px solid ${red};outline-offset:-2px;height:470px;overflow:hidden;background:#222"><img alt="${ESC(f.title)} (${ESC(f.year)}) poster" crossorigin="anonymous" src="${img(poster,"w780")}" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+      <div style="font:italic 400 17px/1 ${SERIF};color:${K.ink};padding:9px 4px 10px;display:flex;justify-content:space-between;align-items:baseline"><span>Now showing</span><span style="font:700 14px/17px ${SANS};letter-spacing:.14em;color:${K.mute};font-style:normal">POSTER: TMDB</span></div></div>`
+     +(stillSrc?`<div style="position:absolute;left:384px;top:232px;width:404px;padding:8px 8px 0;box-sizing:border-box;background:${matBg};box-shadow:${matSh};transform:rotate(${1.4*tilt}deg)">
+      <div style="position:relative;outline:2px solid ${red};outline-offset:-2px;height:272px;overflow:hidden;background:#222"><img alt="Still from ${ESC(f.title)} (${ESC(f.year)})" crossorigin="anonymous" src="${stillSrc}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}"></div>
+      <div style="font:italic 400 17px/1 ${SERIF};color:${K.ink};padding:9px 4px 10px;display:flex;justify-content:space-between;align-items:baseline"><span>${night?"The late show":"Tonight's picture"}</span><span style="font:700 14px/17px ${SANS};letter-spacing:.14em;color:${K.mute};font-style:normal">STILL: TMDB</span></div></div>`:"")
+    :heroOld;
+  const P=fl&&fl.prop,propAt=(L,T0,W0,R0)=>P?`<div style="position:absolute;left:${L}px;top:${T0}px;width:${W0}px;box-sizing:border-box;transform:rotate(${R0*tilt}deg);z-index:3;padding:10px 13px;box-shadow:0 8px 20px rgba(0,0,0,.45);${
       P.kind==="badge"?`background:${K.paper};border:2px solid ${red};outline:1px solid ${red};outline-offset:-7px;border-radius:10px;text-align:center`
       :P.kind==="receipt"?`background:#fbfaf6;border-top:1.5px dashed ${K.mute};border-bottom:1.5px dashed ${K.mute}`
       :`background:${night?K.paper:"#fffdf6"};border-left:6px solid ${red}`}">
       <div style="${disp(26)};color:${red}">${ESC(P.title)}</div>
       ${(P.lines||[]).slice(0,3).map(l=>`<div style="font:600 15px/1.3 ${SANS};color:${K.ink};margin-top:4px">${ESC(l)}</div>`).join("")}</div>`:"";
+  const prop=posterOn?propAt(stillSrc?404:384,stillSrc?596:300,stillSrc?300:360,-2):propAt(14,236,214,-3);
   const lg=ctx.logo&&ctx.logo[0]?ctx.logo:null,ts=titleSize(f.title,420,2,E.caps?80:68,36,E.cw);
   let logoHTML="";
   if(lg){const ar=(+lg[1]||4)/(+lg[2]||1),w=Math.min(318,96*ar),h=w/ar;

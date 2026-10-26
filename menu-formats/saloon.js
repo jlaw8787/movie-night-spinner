@@ -73,7 +73,7 @@ function heroes(ctx){
   /* tmdb-posters.js declares a top level const, so window.TMDB_POSTERS is empty: read the binding directly */
   let pp=ctx.poster;if(!pp){try{pp=typeof TMDB_POSTERS!=="undefined"&&ctx.f&&TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]}catch(e){}}
   const post=pp?im(pp,"w780"):"";
-  return{list:st,poster:post,hero:st[0]||post,second:st[1]||st[0]||post,isPoster:!st.length};
+  return{list:st,poster:post,hero:post||st[0],heroIsPoster:!!post,second:st[1]||st[0]||post,isPoster:!st.length};
 }
 function logoUrl(ctx){const l=ctx.logo;if(!l||!l[0])return"";const im=ctx.img||((p,s)=>`https://image.tmdb.org/t/p/${s}${p}`);return im(l[0],"w500")}
 function flav(ctx,fb){
@@ -229,8 +229,12 @@ window.MENU_FORMATS[ID]=ctx=>{
       <span style="font:${ty.cw} 20px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">Reward ${esc(reward)}</span>
     </div>
     <div style="flex:none;position:relative;margin:0 -16px;height:600px;box-sizing:border-box;border:6px solid ${P.ink};box-shadow:0 0 0 3px ${P.bg},0 0 0 5px ${C.ink};overflow:hidden;background:#1e140c">
-      <div style="position:absolute;inset:0;background:url('${ph.hero}') ${ph.isPoster?"center 20%":"center 35%"}/cover no-repeat;filter:${filt}"></div>
-      ${E.half?HALFTONE(E.half):""}${E.sheen?SHEEN(E.sheen):""}
+      ${ph.heroIsPoster?`<div style="position:absolute;inset:0;background-color:${toHex(mix(hex(P.bg),BLACK,.12))};background-image:radial-gradient(ellipse at 50% 45%,${toHex(mix(hex(P.bg),WHITE,.25))},rgba(0,0,0,0) 75%)"></div>
+      <div style="position:absolute;left:0;top:0;bottom:0;width:178px;display:flex;align-items:center;justify-content:center;text-align:center"><div data-fs="34" data-min="22" style="font:${ty.dw} 34px ${ty.disp};line-height:1.1;letter-spacing:.06em;text-transform:uppercase;color:${C.ink}">Now<br>showing</div></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:178px;display:flex;align-items:center;justify-content:center;text-align:center"><div style="font:${ty.dw} 40px ${ty.disp};line-height:1.1;letter-spacing:.06em;color:${C.ink}">${esc(year)}</div></div>
+      <div style="position:absolute;left:50%;top:50%;width:368px;height:552px;transform:translate(-50%,-50%);box-shadow:0 8px 20px rgba(30,15,0,.5);border:5px solid ${toHex(mix(hex(P.bg),WHITE,.55))};box-sizing:border-box;background:${toHex(mix(hex(P.bg),WHITE,.55))}"><img crossorigin="anonymous" alt="" src="${ph.hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"></div>
+      ${E.sheen?SHEEN(E.sheen):""}`:`<div style="position:absolute;inset:0;background:url('${ph.hero}') center 35%/cover no-repeat;filter:${filt}"></div>
+      ${E.half?HALFTONE(E.half):""}${E.sheen?SHEEN(E.sheen):""}`}
       <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${60+TN.wear*80}px rgba(30,15,0,${.25+TN.wear*.4})"></div>
     </div>
     <div style="flex:none;height:104px;margin:6px -16px 0;display:flex;gap:18px;align-items:center">
@@ -261,7 +265,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       </div>
     </div>
     <div data-box style="flex:none;height:22px;margin-top:4px;overflow:hidden;text-align:center;white-space:nowrap;font:${ty.bw} 15px ${ty.body};opacity:.85">
-      <span data-fs="15" data-min="14">${fam?"No liquor served. ":""}Images: TMDB. Bill no. ${esc(F.number)}.</span>${F.winks.slice(0,4).map(w=>` <span data-drop data-fs="15" data-min="14">Talk of the town: ${T(w)}.</span>`).join("")}
+      <span data-fs="15" data-min="14">${fam?"No liquor served. ":""}Poster and stills: TMDB. Bill no. ${esc(F.number)}.</span>${F.winks.slice(0,4).map(w=>` <span data-drop data-fs="15" data-min="14">Talk of the town: ${T(w)}.</span>`).join("")}
     </div>
     </div>
     ${wearLayer(P,tone,seed)}

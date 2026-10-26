@@ -90,9 +90,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const prop=fl&&fl.prop&&fl.prop.title?{title:clean(fl.prop.title),lines:(fl.prop.lines||[]).map(clean).slice(0,2)}:{title:"Guest of Honour",lines:["Seat at the long table","Kept by the house"]};
   const stills=(ctx.stills||[]).filter(Boolean);
   if(!ctx.poster&&typeof TMDB_POSTERS!=="undefined")ctx.poster=TMDB_POSTERS[f.id]||null;
-  const hero=stills[0]?IMG+"w1280"+stills[0]:(ctx.poster?IMG+"w780"+ctx.poster:"");
-  const second=stills[1]?IMG+"w1280"+stills[1]:(stills[0]?IMG+"w1280"+stills[0]:(ctx.poster?IMG+"w780"+ctx.poster:""));
-  const heroPos=stills[0]?"50% 38%":"50% 22%",secPos=stills[1]?"50% 45%":"50% 30%";
+  const posterSrc=ctx.poster?IMG+"w780"+ctx.poster:"";
+  const heroIsPoster=!!posterSrc;
+  const hero=posterSrc||(stills[0]?IMG+"w1280"+stills[0]:"");
+  const second=stills[1]?IMG+"w1280"+stills[1]:(stills[0]?IMG+"w1280"+stills[0]:posterSrc);
+  const secIsPoster=!stills.length&&!!posterSrc;
+  const heroPos="50% 38%",secPos=stills[1]?"50% 45%":"50% 30%";
 
   /* paper and print process */
   const grain=`${root}assets/era/_shared/paper-grain.webp`;
@@ -115,6 +118,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const half=E.print==="offset"?`<div style="position:absolute;inset:0;background:radial-gradient(rgba(0,0,0,.18) 30%,transparent 32%) 0 0/5px 5px;mix-blend-mode:multiply;opacity:.35"></div>`:"";
   const frame=E.border==="foil"?foil:E.border==="band"?BAND:E.border==="rule"?INK:GOLD;
   const photo=(src,pos)=>!src?`<div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,${toHex(mix(pd,[255,255,255],.18))},${toHex(mix(pd,[0,0,0],.4))});display:flex;align-items:center;justify-content:center;padding:40px;box-sizing:border-box"><div style="font:italic ${E.dw} 40px/1.15 ${E.disp};color:#f3e7c8;text-align:center">${esc(sign)}</div></div>`:`<img alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:${E.photo}${T.photo}">${half}<div style="position:absolute;inset:0;box-shadow:inset 0 0 50px rgba(0,0,0,.28)"></div>`;
+  /* the whole poster, never cropped: mounted on a panel of the house's own dark stock with a gilt keyline */
+  const stage=src=>`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,${toHex(mix(pd,[0,0,0],.3))},${toHex(mix(pd,[0,0,0],.72))});display:flex;align-items:center;justify-content:center"><img crossorigin="anonymous" alt="" src="${src}" style="display:block;height:calc(100% - 30px);width:auto;max-width:90%;object-fit:contain;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.55)"></div><div style="position:absolute;inset:0;box-shadow:inset 0 0 50px rgba(0,0,0,.28)"></div>`;
   const kick=(s,c)=>`<div style="font:600 18px/1.2 ${E.body};letter-spacing:.3em;text-transform:uppercase;color:${c||ACC};text-align:center">${esc(s)}</div>`;
   const dispCase=E.upper?"uppercase":"none";
 
@@ -134,7 +139,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div data-fit data-min="30" style="position:absolute;left:60px;right:60px;top:80px;height:76px;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:54px">
      <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
    <div style="position:absolute;left:50px;top:166px;width:716px;height:530px;padding:6px;box-sizing:border-box;background:${frame};border-radius:358px 358px 0 0/150px 150px 0 0;box-shadow:0 10px 26px rgba(0,0,0,.3)">
-     <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:352px 352px 0 0/146px 146px 0 0;background:#222">${photo(hero,heroPos)}</div></div>
+     <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:352px 352px 0 0/146px 146px 0 0;background:#222">${heroIsPoster?stage(hero):photo(hero,heroPos)}</div></div>
    ${logoPanel}
    <div data-fit data-min="16" style="position:absolute;left:70px;right:70px;top:772px;height:58px;overflow:hidden;font-size:22px;text-align:center;color:${SOFT}">
      <div style="font:italic 1em/1.3 ${E.body}">${esc(sign)}${f.T?`. ${esc(sent(f.T))}`:""}</div></div>
@@ -176,9 +181,9 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:64px;right:64px;top:626px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid ${GOLD};padding-top:8px">
      <span style="font:600 20px/1.2 ${E.body};color:${INK}">The whole feast, per cover</span><span style="font:700 26px/1 ${E.body};color:${ACC}">${esc(fee)}</span></div>
    <div data-fit data-min="14" style="position:absolute;left:64px;width:440px;top:668px;height:28px;overflow:hidden;font-size:16px;color:${SOFT}">
-     <div style="font:${E.bodyW} 1em/1.3 ${E.body}">${winks[3]?`At table: ${esc(winks[3].replace(/\.$/,""))}. `:""}Form BF ${esc(num||yy)}. Stills: TMDB.</div></div>
+     <div style="font:${E.bodyW} 1em/1.3 ${E.body}">${winks[3]?`At table: ${esc(winks[3].replace(/\.$/,""))}. `:""}Form BF ${esc(num||yy)}. Poster and stills: TMDB.</div></div>
    <div style="position:absolute;left:43px;top:698px;width:730px;height:296px;padding:5px;box-sizing:border-box;background:${frame};box-shadow:0 8px 20px rgba(0,0,0,.28)">
-     <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">${photo(second,secPos)}</div></div>
+     <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">${secIsPoster?stage(second):photo(second,secPos)}</div></div>
    <div style="position:absolute;left:48px;right:48px;top:1000px;font:italic 16px/1.2 ${E.body};color:${SOFT};text-align:center">${esc(venue)}, laid for tonight</div>
    <div style="position:absolute;right:54px;top:688px;width:236px;padding:12px 16px 12px;background:${T.dark?"#f4ecd8":toHex(mix(paper,[255,255,255],.55))};border:1px solid ${GOLD};box-shadow:0 6px 14px rgba(0,0,0,.3);transform:rotate(-2.5deg);text-align:center;color:#2a2018">
      <div style="font:600 14px/1.2 ${E.body};letter-spacing:.26em;text-transform:uppercase;color:${readable(toHex(pa),"#fbf6ea",4.5)}">Place card</div>
