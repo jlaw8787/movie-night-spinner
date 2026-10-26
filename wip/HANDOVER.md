@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit e73e6f50 (service worker version mns-0d837b49).
+Live as of commit 32f61d36 (service worker version mns-19d65fed).
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
@@ -26,8 +26,10 @@ Live as of commit e73e6f50 (service worker version mns-0d837b49).
 - wip/genre/lib/stillfocus.py: YuNet faces (model at /home/claude/models/yunet.onnx, from media.githubusercontent.com opencv_zoo) to data/still-focus.json; 9 near-black stills blocked (mean under 18).
 - Motel poster front: framed scene snapshot fills the empty card space (The Ring and the other 8 motel films).
 
-## Next job (owner said do it next)
-Face crops still not fixed on many menus (Die Hard 2, Black Sheep, Collateral, Barbie strip). Reason: app.js libPhotoPass step 4 only aims an img when computed object-fit is "cover", but many formats crop another way (Die Hard 2 airline: object-fit fill with 0px 0px, after __fmtLift.trim). Per format, find how the crop is made and aim it with L.focus. Then rerun qshots, before and after, ask before pushing.
+- Oct 27 (live in 32f61d36): app.js libAim sets object-position from L.focus straight after the faces are drawn, before photos load, so __fmtLift.trim takes the same aim. Very thin frames (under 40 percent of the still visible) get an unused faceless still. focus entries are [x, y, aspect].
+
+## Next job (not started, owner to confirm)
+Face crops left that aiming can't fix (the still itself is the problem): Hitch, House Party, Daddy's Home, Die Hard 2, Casino Royale, plus others in qreport rule 2. Option: hand-pick stills per film into data/still-block.json. stillfocus.py --tight finds big cut-off faces but about half its hits are good close-ups, so review its contact sheet before writing.
 
 ## Tools (run from the repo root; local server: python3 -m http.server 8795)
 - wip/genre/lib/sweep.py [style ...]: full check of library menus (spill, cut, small text, duplicate, dark and white photos, poster hero, hidden lines). About 25 min for all 759.
