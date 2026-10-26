@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit 373edd6c (service worker version mns-243fd97a).
+Live as of commit e73e6f50 (service worker version mns-0d837b49).
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
@@ -21,12 +21,13 @@ Live as of commit 373edd6c (service worker version mns-243fd97a).
 - Dish names and notes say what the food is (data/films.json, data/recipes, data/recipes2 kept in step).
 - Bad photos blocked in data/still-block.json (white promo cut-outs, near-black, flat).
 
+## Done Oct 26 (live in e73e6f50)
+- wip/genre/lib/posterdupe.py: ORB match of every picked still vs the poster; 1085 poster-art stills in 488 films added to data/still-block.json. Real scenes score 0 to 5 inliers, poster crops 20+.
+- wip/genre/lib/stillfocus.py: YuNet faces (model at /home/claude/models/yunet.onnx, from media.githubusercontent.com opencv_zoo) to data/still-focus.json; 9 near-black stills blocked (mean under 18).
+- Motel poster front: framed scene snapshot fills the empty card space (The Ring and the other 8 motel films).
+
 ## Next job (owner said do it next)
-About 60 menus still fail on a BACK-page photo:
-1. Crops of the poster artwork used as a "scene" photo (e.g. Jaws shark, Thor section map, Airplane window, Moana oval). Plan: at build time, compare each still with the poster (OpenCV ORB keypoint matching) and block stills that match.
-2. Odd crops (part of a face) and a few still-dark photos.
-3. The Ring (motel): big empty areas on the front.
-Then: rerun checks, send the owner before and after, ask before pushing.
+Face crops still not fixed on many menus (Die Hard 2, Black Sheep, Collateral, Barbie strip). Reason: app.js libPhotoPass step 4 only aims an img when computed object-fit is "cover", but many formats crop another way (Die Hard 2 airline: object-fit fill with 0px 0px, after __fmtLift.trim). Per format, find how the crop is made and aim it with L.focus. Then rerun qshots, before and after, ask before pushing.
 
 ## Tools (run from the repo root; local server: python3 -m http.server 8795)
 - wip/genre/lib/sweep.py [style ...]: full check of library menus (spill, cut, small text, duplicate, dark and white photos, poster hero, hidden lines). About 25 min for all 759.
