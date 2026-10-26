@@ -96,8 +96,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const venue=clean(fl&&fl.venue)||"The Wayfarer's Rest",sign=clean(fl&&fl.sign)||"Beds, board and a warm hearth";
   const num=String((fl&&fl.number)||yr2(f.year)||"07").replace(/[^0-9A-Za-z]/g,"").slice(0,6)||"07";
   const stills=(ctx.stills||[]).slice(),poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&f.id)?TMDB_POSTERS[f.id]:null)||null;
-  const heroSrc=stills[0]?ctx.img(stills[0],"w1280"):(poster?ctx.img(poster,"w780"):"");
-  const sealSrc=poster?ctx.img(poster,"w342"):(stills[1]?ctx.img(stills[1],"w780"):(stills[0]?ctx.img(stills[0],"w780"):""));
+  const posterSrc=poster?ctx.img(poster,"w780"):"";
+  const heroSrc=posterSrc||(stills[0]?ctx.img(stills[0],"w1280"):"");
+  const sealSrc=stills[1]?ctx.img(stills[1],"w780"):(stills[0]?ctx.img(stills[0],"w780"):"");
   const B=E.body,D=E.disp,w=T.wear,pf=[E.photo,T.f].filter(Boolean).join(" ")||"none";
   const nItems=["s","m","w","d"].reduce((a,k)=>a+Math.min(4,((ctx.menu||{})[k]||[]).length),0);
   const sealRed=(()=>{const c=hex(acc);return c&&c[0]>c[1]*1.4&&c[0]>c[2]*1.4?acc:"#8e1b12"})();
@@ -117,20 +118,21 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* map plate: the still, compass letters set in type at the edges */
   const PX=56,PY=160,PW=W-2*PX,PH=nItems>10?400:nItems>8?440:488;
-  const heroImg=stills[0]
-    ?`<img src="${heroSrc}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`
-    :(poster?`<img src="${heroSrc}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
+  const ppw=Math.round((PH-14)*2/3);
+  const heroImg=posterSrc
+    ?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:-30px;top:-30px;width:${PW+60}px;height:${PH+60}px;object-fit:cover;filter:blur(14px) brightness(.5)"><img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:24px;top:0;width:${ppw}px;height:100%;object-fit:contain">`
+    :(heroSrc?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
   const bear=(t,pos)=>`<div style="position:absolute;${pos};font:${E.dw} 20px/1 ${D};color:${acc};width:24px;text-align:center">${t}</div>`;
-  const logo=logoPanel(ctx,{font:D,typeSize:44,typeInk:"#f4ead2",lightInk:ink,maxW:300,maxH:108,dark:darkPanel,light:"#f3e8cc",
-    wrap:`position:absolute;left:16px;top:16px;box-shadow:0 3px 14px rgba(0,0,0,.4);border:1px solid rgba(255,240,200,.35)`});
+  const logo=logoPanel(ctx,{font:D,typeSize:44,typeInk:"#f4ead2",lightInk:ink,maxW:posterSrc?270:300,maxH:108,dark:darkPanel,light:"#f3e8cc",
+    wrap:`position:absolute;${posterSrc?"right:16px":"left:16px"};top:16px;box-shadow:0 3px 14px rgba(0,0,0,.4);border:1px solid rgba(255,240,200,.35)`});
   const pr=(fl&&fl.prop&&(fl.prop.title||"").trim())?fl.prop:{title:"Room Token",lines:["One bed, one supper","Leave boots at the door"]};
-  const prop=`<div style="position:absolute;left:18px;bottom:18px;width:236px;transform:rotate(${(T.tilt/2).toFixed(1)}deg);background:${paper};box-shadow:0 3px 12px rgba(0,0,0,.4);padding:10px 14px 9px;border:1px solid ${ink}">
+  const prop=`<div style="position:absolute;${posterSrc?"right:18px;top:166px":"left:18px;bottom:18px"};width:236px;transform:rotate(${(T.tilt/2).toFixed(1)}deg);background:${paper};box-shadow:0 3px 12px rgba(0,0,0,.4);padding:10px 14px 9px;border:1px solid ${ink}">
     <div style="font:${E.dw} 20px/1.1 ${D};color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(pr.title))}</div>
     ${(pr.lines||[]).slice(0,2).map(l=>`<div style="font:italic 400 16px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(l))}</div>`).join("")}
     <div style="font:400 15px/1.2 ${B};letter-spacing:.14em;text-transform:uppercase;color:${acc};margin-top:2px">Token ${esc(num)}</div></div>`;
   const by=clean(fl&&fl.note&&fl.note.by)||"The Innkeeper";
   /* the seal: a real photo (poster crop) pressed into a round medallion with a wax coloured rim; no drawn art */
-  const sealAlt=(stills[1]||stills[0])?ctx.img(stills[1]||stills[0],"w780"):"";
+  const sealAlt=stills[0]?ctx.img(stills[0],"w780"):"";
   const seal=!sealSrc?"":`<div data-seal="1" style="position:absolute;right:-40px;bottom:-10px;width:150px;height:150px;transform:rotate(${T.tilt}deg);z-index:3">
     <div style="position:absolute;inset:0;border-radius:50%;border:9px solid ${sealRed};box-shadow:0 4px 12px rgba(0,0,0,.45),inset 0 0 14px rgba(0,0,0,.55);overflow:hidden;background:${sealRed}">${sealSrc?`<img src="${sealSrc}" alt="" data-alt="${sealAlt}" onerror="var a=this.getAttribute('data-alt');if(a){this.removeAttribute('data-alt');this.src=a}else{this.closest('[data-seal]').style.display='none'}" style="width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:sepia(.35) saturate(1.1) contrast(1.05)">`:""}</div>
     <div style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);background:${sealRed};color:#f6e6c8;font:${E.dw} 15px/1 ${D};letter-spacing:.08em;padding:5px 10px 4px;white-space:nowrap">No. ${esc(num)}</div></div>`;

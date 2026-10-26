@@ -1610,6 +1610,9 @@ async function renderCanvas(src,forPrint){
       if(bg&&bg.includes("data:image/svg"))el.style.backgroundImage=bg.replace(svgRx,`url("${nz}")`);
       if(el.tagName==="IMG"&&/^data:image\/svg/.test(el.getAttribute("src")||""))el.style.visibility="hidden";
       if(el.tagName&&el.tagName.toLowerCase()==="svg")el.style.visibility="hidden";
+      /* html2canvas cannot do CSS masks: a masked gilt frame would print as a solid gold slab over the whole page, so draw it as a plain border instead */
+      {const mk=cs.webkitMaskImage||cs.maskImage;if(mk&&mk!=="none"&&!el.textContent.trim()&&!el.querySelector("img")){const pad=parseFloat(cs.paddingTop)||0,col=((cs.backgroundImage||"").match(/rgba?\([^)]*\)|#[0-9a-f]{3,6}/gi)||[])[1]||cs.backgroundColor;
+        el.style.webkitMask="none";el.style.mask="none";if(pad>0){el.style.background="none";el.style.border=`${pad}px solid ${col}`;el.style.padding="0";el.style.boxSizing="border-box"}else el.style.visibility="hidden"}}
       /* html2canvas cannot blend layers, so a grain set to overlay or multiply would paint flat over the paper and wash it out: leave those texture layers out of the export */
       if(cs.mixBlendMode&&cs.mixBlendMode!=="normal"&&!el.textContent.trim()&&!el.querySelector("img"))el.style.visibility="hidden";
     });

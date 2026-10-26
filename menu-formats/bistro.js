@@ -136,13 +136,23 @@ function loadFonts(spec){
 }
 const fam=f=>"family="+f.replace(/ /g,"+");
 
-/* stills: hero is the first still, else the poster; second is the next still, else the poster again */
+/* the film poster is the hero; stills only feed the secondary photo. No poster: first still in the hero slot. */
 function photos(ctx){
   /* the harness map is a top-level const, not on window: read the global binding when ctx.poster is empty */
   let pp=ctx.poster;try{if(!pp&&typeof TMDB_POSTERS!=="undefined")pp=TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]||null}catch(e){}
   const st=(ctx.stills||[]).filter(Boolean),po=pp?ctx.img(pp,"w780"):"";
-  return{hero:st[0]?ctx.img(st[0],"w1280"):po,heroPos:st[0]?"center 40%":"center 30%",
-    second:st[1]?ctx.img(st[1],"w1280"):(st[0]&&po?po:(po||"")),secondPos:st[1]?"center 45%":"center 22%",fromPoster:!st[0]};
+  const sec=st[1]||st[0]||"";
+  return{hero:po||(st[0]?ctx.img(st[0],"w1280"):""),heroPos:"center 40%",isPoster:!!po,
+    second:sec?ctx.img(sec,"w1280"):po,secondPos:"center 45%",secondPoster:!sec&&!!po};
+}
+/* the whole poster, uncropped, untinted: light paper wear on top only (a still in the hero slot keeps the era print process) */
+function posterHTML(src,isPoster,pos,era,t,cover){
+  if(!src)return"";
+  if(!isPoster||cover)return photoHTML(src,pos,era,t);
+  const P=PROCESS[era],T=TONES[t];
+  return`<img crossorigin="anonymous" alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">
+  ${(P.sheen||T.sheen)?`<div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.14) 50%,rgba(255,255,255,0) 60%)"></div>`:""}
+  <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${Math.round(8+T.wear*14)}px rgba(0,0,0,${(.05+T.wear*.1).toFixed(2)})"></div>`;
 }
 
 /* runtime fit: runs after the faces are mounted and fonts are in. Shrinks in 1px steps, never under data-fs, then clamps notes */
@@ -261,11 +271,15 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div data-fs="15" style="font:italic 400 19px/1.2 ${B};color:${K.soft};margin-top:6px">${esc(F.sign)}</div></div>`;
   const heroH=446,heroTop=170;
   const lightPanel=rgba(dark?"#f4ecdc":paper,.94),darkPanel=rgba(K.deep,.86);
-  const lp=logoPanel(ctx,{maxW:330,maxH:96,center:false,dark:darkPanel,light:lightPanel,darkk:K.light,lightk:K.acc,fbBg:rgba(paper,.93),fbK:K.acc,
-    titleFont:`${L.dw} 46px ${D}`,titleCol:K.ink,under:`Now showing &nbsp;/&nbsp; ${esc(ctx.f.year)}`,underFont:`700 15px/1 ${B};letter-spacing:.2em;text-transform:uppercase`,
-    style:`position:absolute;left:18px;bottom:18px;max-width:380px;padding:14px 18px 12px;border-radius:${era===3?14:3}px;box-shadow:0 6px 18px rgba(0,0,0,.35)`});
-  const hero=`<div style="position:absolute;left:30px;right:30px;top:${heroTop}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${K.acc};outline-offset:5px;border-radius:${era===3?16:0}px">
-    ${photoHTML(ph.hero,ph.heroPos,era,t)}${lp}</div>`;
+  const posW=Math.round(heroH*2/3),colW=612-posW-30;
+  const lp=logoPanel(ctx,{maxW:colW-40,maxH:110,center:true,dark:darkPanel,light:lightPanel,darkk:K.light,lightk:K.acc,fbBg:rgba(paper,.93),fbK:K.acc,
+    titleFont:`${L.dw} 46px ${D}`,titleCol:K.ink,under:`Now showing &nbsp;/&nbsp; ${esc(ctx.f.year)}`,underFont:`700 15px/1 ${B};letter-spacing:.16em;text-transform:uppercase`,
+    style:`position:relative;padding:16px 18px 13px;text-align:center;border-radius:${era===3?14:3}px;box-shadow:0 6px 18px rgba(0,0,0,.35)`});
+  const hero=`<div style="position:absolute;left:30px;right:30px;top:${heroTop}px;height:${heroH}px">
+    <div style="position:absolute;left:0;top:0;width:${posW}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${K.acc};outline-offset:5px;border-radius:${era===3?16:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">
+    ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>
+    <div style="position:absolute;left:${posW+30}px;right:0;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;gap:18px">
+      <div style="border-top:3px double ${K.acc}"></div>${lp}<div style="border-bottom:3px double ${K.acc}"></div></div></div>`;
 
   /* specials board: the sweets course chalked up on a dark slate panel (set type, no chalk font) */
   const sw=(menu.w||[]).slice(0,4);
@@ -299,7 +313,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-fs="15" style="${dispStyle}font-size:21px;line-height:1.05;color:#1c1712;margin:6px 0 5px">${esc(pr.title)}</div>
       ${pr.lines.map(l=>`<div data-fs="14" style="font:700 14px/1.3 ${B};color:#2a2420">${esc(dry(l))}</div>`).join("")}</div></div>`;
   const second=`<div style="position:absolute;left:0;right:0;top:0;height:${secH}px;overflow:hidden;background:${K.deep}">
-    ${photoHTML(ph.second,ph.secondPos,era,t)}
+    ${ph.secondPoster?posterHTML(ph.second,true,"",era,t):photoHTML(ph.second,ph.secondPos,era,t)}
     <div style="position:absolute;left:30px;bottom:16px;background:${rgba(dark?"#f4ecdc":paper,.92)};padding:6px 11px;font:700 14px/1.2 ${B};letter-spacing:.12em;text-transform:uppercase;color:${dark?"#1c1712":K.ink}">On screen tonight</div></div>
     <div style="position:absolute;left:0;right:0;top:${secH}px;height:6px;background:${K.acc}"></div>`;
   const labels=fm||t==="playful"?["To start","The plates","Sweet things","To drink"]:era<2?["Hors d'oeuvres","Plats du jour","Desserts","The cellar"]:["To start","The plates","Sweet things","From the bar"];

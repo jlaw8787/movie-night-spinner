@@ -84,7 +84,7 @@ window.MENU_FORMATS.precinct=function(ctx){
   const num=M.num(fl.number,f.year),yy=String(f.year||"").slice(-2);
   const ink=E.ink,paper=E.paper,acc=M.accent(ctx.palette,paper,E.acc,4),dark=M.darkOf(ctx.palette,"#16171b");
   const st=ctx.stills||[],pos=M.poster(ctx)?ctx.img(M.poster(ctx),"w780"):"";
-  const hero=st[0]?ctx.img(st[0],"w1280"):pos,second=st[1]?ctx.img(st[1],"w1280"):(pos||hero);
+  const st0=st[0]?ctx.img(st[0],"w1280"):"",hero=pos||st0,heroP=!!pos,second=st[1]?ctx.img(st[1],"w1280"):(st0||pos),secP=!st[1]&&!st0&&!!pos;
   const C=M.courses(ctx.menu,fam);
   const bd=E.b,dd=E.d;
   /* coin-op breakroom prices with the film's number hidden in the cents */
@@ -103,22 +103,24 @@ window.MENU_FORMATS.precinct=function(ctx){
   const kick=(t,c)=>`<div style="font:700 16px/1.2 ${bd};letter-spacing:.2em;text-transform:uppercase;color:${c||acc}">${x(t)}</div>`;
 
   /* logo in its own colours on a case label that suits it */
-  const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0,lw=lr?Math.min(420,96*lr):0,lh=lr?lw/lr:0;
-  const logo=`<div data-lpanel data-dark="rgba(16,16,20,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:64px;top:${lr?Math.round(640-lh-40):520}px;padding:14px 20px;background:${lr?"rgba(16,16,20,.9)":dark};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${-T.tilt*.5}deg)">
+  const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0,lw=lr?Math.min(330,96*lr):0,lh=lr?lw/lr:0;
+  const logo=`<div data-lpanel data-dark="rgba(16,16,20,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:${heroP?436:64}px;top:${heroP?(st0?120:300):(lr?Math.round(640-lh-40):520)}px;max-width:340px;box-sizing:border-box;padding:14px 20px;background:${lr?"rgba(16,16,20,.9)":dark};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${-T.tilt*.5}deg)">
      ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
-     <div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:440px;height:104px;overflow:hidden;font:${E.dw} 48px/1 ${dd};text-transform:uppercase;color:#fff;font-size:48px">${x(f.title)}</div>
+     <div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:${heroP?300:440}px;height:104px;overflow:hidden;font:${E.dw} 48px/1 ${dd};text-transform:uppercase;color:#fff;font-size:48px">${x(f.title)}</div>
    </div>`;
-  const evid=(src,l,t,w,h,rot,op,tag,pad)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;box-sizing:border-box;padding:${pad||E.pb};background:#fbfaf6;transform:rotate(${rot}deg);box-shadow:0 14px 30px rgba(0,0,0,.4),0 2px 4px rgba(0,0,0,.3)">
+  const evid=(src,l,t,w,h,rot,op,tag,pad,isP)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;box-sizing:border-box;padding:${pad||E.pb};background:#fbfaf6;transform:rotate(${rot}deg);box-shadow:0 14px 30px rgba(0,0,0,.4),0 2px 4px rgba(0,0,0,.3)">
      <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">
-      ${src?`<img src="${src}" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
-      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 58%,rgba(0,0,0,${(T.vig*.8).toFixed(2)}) 100%)"></div>
+      ${src&&isP?`<img src="${src}" crossorigin="anonymous" alt="" style="position:absolute;left:-20px;top:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;filter:blur(16px) brightness(.55)"><img src="${src}" crossorigin="anonymous" alt="" style="position:relative;display:block;width:100%;height:100%;object-fit:contain">`:src?`<img src="${src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
+      ${isP?"":`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 58%,rgba(0,0,0,${(T.vig*.8).toFixed(2)}) 100%)"></div>`}
      </div>
-     <div style="position:absolute;left:-10px;top:-14px;padding:6px 12px;background:#fffdf5;box-shadow:0 3px 8px rgba(0,0,0,.3);transform:rotate(-3deg);font:${E.dw} 22px/1 ${dd};letter-spacing:.08em;text-transform:uppercase;color:${ink}">${x(tag)}</div>
+     <div style="position:absolute;left:-10px;top:${isP?-36:-14}px;padding:6px 12px;background:#fffdf5;box-shadow:0 3px 8px rgba(0,0,0,.3);transform:rotate(-3deg);font:${E.dw} 22px/1 ${dd};letter-spacing:.08em;text-transform:uppercase;color:${ink}">${x(tag)}</div>
    </div>`;
 
   const field=(k,v)=>`<div style="display:flex;gap:.6em;align-items:baseline;border-bottom:1px solid rgba(0,0,0,.18);padding:.18em 0"><span style="flex:none;width:6.6em;font:700 .8em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc}">${x(k)}</span><span style="font:1em/1.25 ${bd};color:${ink}">${v}</span></div>`;
+  const pbv=E.pb.split(" ").map(v=>parseFloat(v)),pbT=pbv[0],pbR=pbv[1]==null?pbT:pbv[1],pbB=pbv[2]==null?pbT:pbv[2];
+  const PW=Math.round((532-pbT-pbB)*2/3+2*pbR);
   const front=`${folder(fl.number?`Case ${x(num)}-${x(yy)}`:`Case file ${x(f.year||"")}`,40)}
-   ${evid(hero,36,96,744,548,-T.tilt*.4,st[0]?"center 40%":"center 22%","Exhibit A")}
+   ${heroP?evid(hero,36,112,PW,532,-T.tilt*.4,"center","Now showing",null,true)+(st0?evid(st0,436,360,340,268,T.tilt*.8,"center 40%","Exhibit B"):""):evid(hero,36,96,744,548,-T.tilt*.4,"center 40%","Exhibit A")}
    ${logo}
    <div style="position:absolute;left:40px;top:672px;width:736px;height:166px;box-sizing:border-box;padding:12px 18px;background:#fffdf6;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${T.tilt*.2}deg)">
      <div data-fit="18" style="height:142px;overflow:hidden;font-size:20px">
@@ -147,7 +149,7 @@ window.MENU_FORMATS.precinct=function(ctx){
          <div style="font:700 18px/1.25 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc};margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:clip">${x(venue)}</div></div>
        <div style="text-align:right;font:16px/1.35 ${bd};color:${ink}">Form ${x(num)}-B<br>Breakroom, all shifts<br>Coins only</div>
      </div>
-     ${evid(second,26,128,712,340,-T.tilt*.3,st[1]?"center 40%":"center 55%","Surveillance","10px")}
+     ${evid(second,26,128,712,340,-T.tilt*.3,"center 40%","Surveillance","10px",secP)}
      <div style="position:absolute;left:26px;top:490px;width:712px;height:424px;display:flex;justify-content:space-between">
        ${C.length?col(C.slice(0,half))+col(C.slice(half)):`<div style="font:22px/1.4 ${bd};color:${ink}">Breakroom closed. Try the vending machine.</div>`}
      </div>

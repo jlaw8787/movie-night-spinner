@@ -109,7 +109,7 @@ function heroes(ctx){
   /* tmdb-posters.js declares a top level const, so window.TMDB_POSTERS is empty: read the binding directly */
   let pp=ctx.poster;if(!pp){try{pp=typeof TMDB_POSTERS!=="undefined"&&ctx.f&&TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]}catch(e){}}
   const post=pp?im(pp,"w780"):"";
-  return{list:st,poster:post,hero:st[0]||post,second:st[1]||st[0]||post,isPoster:!st.length};
+  return{list:st,poster:post,hero:post||st[0],heroIsPoster:!!post,second:st[1]||st[0]||post,isPoster:!st.length};
 }
 function logoUrl(ctx){const l=ctx.logo;if(!l||!l[0])return"";const im=ctx.img||((p,s)=>`https://image.tmdb.org/t/p/${s}${p}`);return im(l[0],"w500")}
 function flav(ctx,fb){
@@ -220,7 +220,7 @@ function border(tone,col){
 function stock(P,tone,seed){
   /* kraft that reads as kraft: dark and pale long fibres, coarse flecks, cloudy pulp, a lit middle and handled edges */
   const wear=TONE[tone].wear,sm=/glossy|grand/.test(tone)?.6:1,bg=hex(P.bg),dk=mix(bg,BLACK,.42),lt=mix(bg,WHITE,.42),bn=mix(P.fib,BLACK,.2);
-  return`background-color:${P.bg};background-image:radial-gradient(ellipse 75% 60% at 46% 36%,rgba(255,238,205,${(.2*sm).toFixed(2)}),rgba(255,238,205,0) 70%),${noise(".9 .014",3,dk,(.36*sm).toFixed(2),seed)},${noise(".7 .02",2,lt,(.2*sm).toFixed(2),seed+2)},${noise(".9 .05",2,P.spk,.2,seed+1)},${noise("1.4",1,bn,(.32*sm).toFixed(2),seed+4,220)},${noise(".009",4,dk,(.26+wear*.2).toFixed(2),seed+5,760)},${noise(".014",3,lt,.1,seed+6,640)};box-shadow:inset 0 0 ${60+wear*90}px rgba(40,22,6,${(.32+wear*.4).toFixed(2)}),inset 0 0 0 1px rgba(30,16,4,.35)`;
+  return`background-color:${P.bg};background-image:radial-gradient(ellipse at 50% 50%,rgba(40,22,6,0) 55%,rgba(40,22,6,${(.2+wear*.3).toFixed(2)}) 100%),radial-gradient(ellipse 75% 60% at 46% 36%,rgba(255,238,205,${(.2*sm).toFixed(2)}),rgba(255,238,205,0) 70%),${noise(".9 .014",3,dk,(.36*sm).toFixed(2),seed)},${noise(".7 .02",2,lt,(.2*sm).toFixed(2),seed+2)},${noise(".9 .05",2,P.spk,.2,seed+1)},${noise("1.4",1,bn,(.32*sm).toFixed(2),seed+4,220)},${noise(".009",4,dk,(.26+wear*.2).toFixed(2),seed+5,760)},${noise(".014",3,lt,.1,seed+6,640)}`;
 }
 function wearLayer(P,tone,seed){
   const w=TONE[tone].wear,lt=mix(hex(P.bg),WHITE,.25);
@@ -229,6 +229,11 @@ function wearLayer(P,tone,seed){
   return s;
 }
 function photo(url,o){
+  if(o.poster)return`<div style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;padding:${o.pad}px;box-sizing:border-box;background:${o.print};transform:rotate(${o.rot}deg);box-shadow:0 10px 20px rgba(20,10,0,.4),0 1px 0 rgba(0,0,0,.2)">
+  <div style="position:relative;width:100%;height:100%;overflow:hidden;background:${o.mat||o.print}">
+    <img alt="" crossorigin="anonymous" src="${url}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">
+    ${o.sheen?SHEEN(o.sheen):""}
+  </div></div>`;
   return`<div style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;padding:${o.pad}px;box-sizing:border-box;background:${o.print};transform:rotate(${o.rot}deg);box-shadow:0 10px 20px rgba(20,10,0,.4),0 1px 0 rgba(0,0,0,.2)">
   <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#2a2016">
     <img alt="" crossorigin="anonymous" onload="window.__fmtLift&&__fmtLift.trim(this)" onerror="window.__fmtLift&&__fmtLift.cors(this)" src="${url}" style="position:absolute;inset:0;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:${o.pos||"center 30%"};filter:${o.filter}">
@@ -280,8 +285,12 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-line data-fs="18" data-min="14" style="font:${ty.cw} 18px ${ty.caps};letter-spacing:.2em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.sign)}</div>
       <div data-fs="${vs}" data-min="24" style="margin-top:6px;font:${ty.dw} ${vs}px ${ty.disp};line-height:1.02;${ty.up?"text-transform:uppercase;":""}color:${P.ink};${mis}transform:rotate(${TN.tilt*.3}deg);transform-origin:left">${T(F.venue)}</div>
     </div>
-    ${photo(ph.hero,{x:18,y:150,w:636,h:492,pad:10,print:P.print,rot:TN.tilt*.5,filter:filt,half:E.half,sheen:E.sheen,pos:ph.isPoster?"center 22%":"center 35%"})}
-    ${logoPanel(ctx,34,560,400,ty,C,P,year)}
+    ${ph.heroIsPoster?`${photo(ph.hero,{poster:1,x:18,y:148,w:354,h:548,pad:10,print:P.print,rot:TN.tilt*.5,sheen:E.sheen})}
+    ${logoPanel(ctx,388,220,266,ty,C,P,year)}
+    <div style="position:absolute;left:392px;top:468px;width:250px;box-sizing:border-box;padding:12px 16px;background:${P.print};border-left:3px dashed ${C.ink};box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(-2deg);color:#2a2219">
+      <div style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.12em;text-transform:uppercase;color:${C.ink};line-height:1.15">Now showing</div>
+      <div style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:4px">${T(F.venue)}</div></div>`:`${photo(ph.hero,{x:18,y:150,w:636,h:492,pad:10,print:P.print,rot:TN.tilt*.5,filter:filt,half:E.half,sheen:E.sheen,pos:"center 35%"})}
+    ${logoPanel(ctx,34,560,400,ty,C,P,year)}`}
     <div data-box style="position:absolute;left:38px;top:708px;width:596px;height:118px;overflow:hidden;mix-blend-mode:multiply">
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${V.n}</div>
       <div data-fs="20" data-min="16" style="margin-top:4px;font:${ty.bw} 20px ${ty.body};line-height:1.25">“${T(F.note.text)}”</div>
@@ -301,7 +310,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-line data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.venue)}</div>
     </div>
     <div style="position:absolute;right:40px;top:36px;padding:6px 14px;border:3px solid ${C.ink};border-radius:4px;color:${C.ink};font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;text-align:center;transform:rotate(${stampRot}deg);opacity:.88;line-height:1.25">Card no.<br><span style="font:${ty.dw} 28px ${ty.disp};letter-spacing:.04em">${T(F.number)}</span></div>
-    ${photo(ph.second,{x:20,y:112,w:632,h:288,pad:8,print:P.print,rot:-TN.tilt*.4,filter:filt,half:E.half,sheen:E.sheen,pos:ph.isPoster?"center 30%":"center 40%",
+    ${photo(ph.second,{poster:ph.isPoster,mat:"#2a2016",x:20,y:112,w:632,h:288,pad:8,print:P.print,rot:-TN.tilt*.4,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%",
       extra:`<div style="position:absolute;left:12px;bottom:12px;padding:5px 12px;background:${P.print};color:#2a2219;font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase">Tonight's feature, ${esc(year)}</div>`})}
     <div data-box style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden;mix-blend-mode:multiply">${menuHTML(cs,era,ty,C,tone)}</div>
     <div data-box style="position:absolute;left:38px;top:808px;width:370px;height:86px;overflow:hidden;mix-blend-mode:multiply">
@@ -310,7 +319,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div>
     ${prop(F.prop,ty,C,P,428,804,210,92)}
     <div data-box style="position:absolute;left:38px;top:900px;width:596px;height:40px;overflow:hidden;font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.85">
-      <span data-fs="15" data-min="14">${fam?"Every drink is alcohol free. ":""}Images: TMDB. Form CM ${esc(F.number)}.</span>${rest.map(w=>` <span data-drop data-fs="15" data-min="14">Ask the cook about: ${T(w)}.</span>`).join("")}
+      <span data-fs="15" data-min="14">${fam?"Every drink is alcohol free. ":""}Poster and stills: TMDB. Form CM ${esc(F.number)}.</span>${rest.map(w=>` <span data-drop data-fs="15" data-min="14">Ask the cook about: ${T(w)}.</span>`).join("")}
     </div>
     ${wearLayer(P,tone,seed+20)}
   </div>`;

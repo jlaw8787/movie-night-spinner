@@ -90,9 +90,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const prop=fl&&fl.prop&&fl.prop.title?{title:clean(fl.prop.title),lines:(fl.prop.lines||[]).map(clean).slice(0,2)}:{title:"Guest of Honour",lines:["Seat at the long table","Kept by the house"]};
   const stills=(ctx.stills||[]).filter(Boolean);
   if(!ctx.poster&&typeof TMDB_POSTERS!=="undefined")ctx.poster=TMDB_POSTERS[f.id]||null;
-  const hero=stills[0]?IMG+"w1280"+stills[0]:(ctx.poster?IMG+"w780"+ctx.poster:"");
-  const second=stills[1]?IMG+"w1280"+stills[1]:(stills[0]?IMG+"w1280"+stills[0]:(ctx.poster?IMG+"w780"+ctx.poster:""));
-  const heroPos=stills[0]?"50% 38%":"50% 22%",secPos=stills[1]?"50% 45%":"50% 30%";
+  const posterSrc=ctx.poster?IMG+"w780"+ctx.poster:"";
+  const heroIsPoster=!!posterSrc;
+  const hero=posterSrc||(stills[0]?IMG+"w1280"+stills[0]:"");
+  const second=stills[1]?IMG+"w1280"+stills[1]:(stills[0]?IMG+"w1280"+stills[0]:posterSrc);
+  const secIsPoster=!stills.length&&!!posterSrc;
+  const heroPos="50% 38%",secPos=stills[1]?"50% 45%":"50% 30%";
 
   /* paper and print process */
   const grain=`${root}assets/era/_shared/paper-grain.webp`;
@@ -100,9 +103,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const laid=E.print==="letterpress"?`repeating-linear-gradient(0deg,rgba(0,0,0,.035) 0 1px,transparent 1px 5px),`:"";
   const sheen=E.print==="gloss"&&!T.dark?`<div style="position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.35) 46%,rgba(255,255,255,0) 60%);pointer-events:none"></div>`:"";
   const stock=()=>`<div style="position:absolute;inset:0;background:${laid}${P}"></div>
-    <div style="position:absolute;inset:0;background:url('${grain}') 0 0/520px,url(&quot;${NOISE}&quot;) 0 0/300px;opacity:${(T.dark?.22:.35)+wear*.3};mix-blend-mode:${T.dark?"overlay":"multiply"};pointer-events:none"></div>
-    ${wear>.3?`<div style="position:absolute;inset:0;background:url(&quot;${BLOTCH}&quot;) 0 0/900px;opacity:${wear*.7};mix-blend-mode:multiply;pointer-events:none"></div>`:""}
-    <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${90+wear*80}px rgba(${T.dark?"0,0,0":"90,60,20"},${.18+wear*.3});pointer-events:none"></div>${sheen}`;
+    <div style="position:absolute;inset:0;background:url('${grain}') 0 0/520px,url(&quot;${NOISE}&quot;) 0 0/300px;opacity:${T.dark?.1:.12+wear*.12};pointer-events:none"></div>
+    ${wear>.3?`<div style="position:absolute;inset:0;background:url(&quot;${BLOTCH}&quot;) 0 0/900px;opacity:${wear*.3};pointer-events:none"></div>`:""}
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(${T.dark?"0,0,0":"90,60,20"},0) 55%,rgba(${T.dark?"0,0,0":"90,60,20"},${(.18+wear*.3).toFixed(2)}) 100%);pointer-events:none"></div>${sheen}`;
   /* the border changes with the era: ruled letterpress, coloured band, gold foil, hairline */
   const foil=`linear-gradient(135deg,#7a5a1e,#e9cf86 22%,#a47b2e 40%,#f4e2a6 58%,#8c6a26 78%,#d9b66a)`;
   const border=()=>{
@@ -115,16 +118,18 @@ window.MENU_FORMATS[ID]=ctx=>{
   const half=E.print==="offset"?`<div style="position:absolute;inset:0;background:radial-gradient(rgba(0,0,0,.18) 30%,transparent 32%) 0 0/5px 5px;mix-blend-mode:multiply;opacity:.35"></div>`:"";
   const frame=E.border==="foil"?foil:E.border==="band"?BAND:E.border==="rule"?INK:GOLD;
   const photo=(src,pos)=>!src?`<div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,${toHex(mix(pd,[255,255,255],.18))},${toHex(mix(pd,[0,0,0],.4))});display:flex;align-items:center;justify-content:center;padding:40px;box-sizing:border-box"><div style="font:italic ${E.dw} 40px/1.15 ${E.disp};color:#f3e7c8;text-align:center">${esc(sign)}</div></div>`:`<img alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:${E.photo}${T.photo}">${half}<div style="position:absolute;inset:0;box-shadow:inset 0 0 50px rgba(0,0,0,.28)"></div>`;
+  /* the whole poster, never cropped: mounted on a panel of the house's own dark stock with a gilt keyline */
+  const stage=src=>`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,${toHex(mix(pd,[0,0,0],.3))},${toHex(mix(pd,[0,0,0],.72))});display:flex;align-items:center;justify-content:center"><img crossorigin="anonymous" alt="" src="${src}" style="display:block;height:calc(100% - 24px);width:auto;max-width:90%;object-fit:contain;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.55)"></div>`;
   const kick=(s,c)=>`<div style="font:600 18px/1.2 ${E.body};letter-spacing:.3em;text-transform:uppercase;color:${c||ACC};text-align:center">${esc(s)}</div>`;
   const dispCase=E.upper?"uppercase":"none";
 
   /* logo in its own colours on a panel that suits it, set type if missing */
   const lg=ctx.logo,lr=lg&&lg[0]&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const lh=lr?Math.min(118,Math.round(440/lr)):0,lw=lr?Math.round(lh*lr):0;
+  const lh=lr?Math.min(heroIsPoster?90:118,Math.round(440/lr)):0,lw=lr?Math.round(lh*lr):0;
   const tlen=clean(f.title).length,tsz=tlen<=14?60:tlen<=26?48:tlen<=40?38:32;
   const darkPanel=toHex(mix(pd,[0,0,0],.55)),lightPanel=T.dark?"#f4ecd8":toHex(mix(paper,[255,255,255],.6));
   const titleType=c=>`<div style="font:${E.dw} ${tsz}px/1.04 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${c};text-align:center;max-width:560px">${esc(f.title)}</div>`;
-  const logoPanel=`<div data-lpanel data-dark="${darkPanel}" data-light="${lightPanel}" data-darkink="#f3e7c8" data-lightink="${INK}" style="position:absolute;left:50%;top:612px;transform:translateX(-50%);max-width:600px;padding:18px 34px;background:${darkPanel};color:#f3e7c8;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.4);text-align:center">
+  const logoPanel=`<div data-lpanel data-dark="${darkPanel}" data-light="${lightPanel}" data-darkink="#f3e7c8" data-lightink="${INK}" style="position:absolute;left:50%;top:${heroIsPoster?652:612}px;transform:translateX(-50%);max-width:600px;padding:18px 34px;background:${darkPanel};color:#f3e7c8;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.4);text-align:center">
      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:532px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType("currentColor")}</div>`:titleType("currentColor")}
    </div>`;
 
@@ -133,10 +138,10 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:60px;right:60px;top:50px">${kick(T.kick)}</div>
    <div data-fit data-min="30" style="position:absolute;left:60px;right:60px;top:80px;height:76px;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:54px">
      <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
-   <div style="position:absolute;left:50px;top:166px;width:716px;height:530px;padding:6px;box-sizing:border-box;background:${frame};border-radius:358px 358px 0 0/150px 150px 0 0;box-shadow:0 10px 26px rgba(0,0,0,.3)">
-     <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:352px 352px 0 0/146px 146px 0 0;background:#222">${photo(hero,heroPos)}</div></div>
+   <div style="position:absolute;left:50px;top:166px;width:716px;height:${heroIsPoster?502:530}px;padding:6px;box-sizing:border-box;background:${frame};border-radius:358px 358px 0 0/150px 150px 0 0;box-shadow:0 10px 26px rgba(0,0,0,.3)">
+     <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:352px 352px 0 0/146px 146px 0 0;background:#222">${heroIsPoster?stage(hero):photo(hero,heroPos)}</div></div>
    ${logoPanel}
-   <div data-fit data-min="16" style="position:absolute;left:70px;right:70px;top:772px;height:58px;overflow:hidden;font-size:22px;text-align:center;color:${SOFT}">
+   <div data-fit data-min="16" style="position:absolute;left:70px;right:70px;top:${heroIsPoster?786:772}px;height:${heroIsPoster?48:58}px;overflow:hidden;font-size:22px;text-align:center;color:${SOFT}">
      <div style="font:italic 1em/1.3 ${E.body}">${esc(sign)}${f.T?`. ${esc(sent(f.T))}`:""}</div></div>
    <div style="position:absolute;left:96px;right:96px;top:838px;height:1px;background:${GOLD};opacity:.8"></div>
    <div data-fit data-min="15" style="position:absolute;left:66px;width:380px;top:852px;height:150px;overflow:hidden;font-size:20px;color:${INK}">
@@ -176,9 +181,9 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:64px;right:64px;top:626px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid ${GOLD};padding-top:8px">
      <span style="font:600 20px/1.2 ${E.body};color:${INK}">The whole feast, per cover</span><span style="font:700 26px/1 ${E.body};color:${ACC}">${esc(fee)}</span></div>
    <div data-fit data-min="14" style="position:absolute;left:64px;width:440px;top:668px;height:28px;overflow:hidden;font-size:16px;color:${SOFT}">
-     <div style="font:${E.bodyW} 1em/1.3 ${E.body}">${winks[3]?`At table: ${esc(winks[3].replace(/\.$/,""))}. `:""}Form BF ${esc(num||yy)}. Stills: TMDB.</div></div>
+     <div style="font:${E.bodyW} 1em/1.3 ${E.body}">${winks[3]?`At table: ${esc(winks[3].replace(/\.$/,""))}. `:""}Form BF ${esc(num||yy)}. Poster and stills: TMDB.</div></div>
    <div style="position:absolute;left:43px;top:698px;width:730px;height:296px;padding:5px;box-sizing:border-box;background:${frame};box-shadow:0 8px 20px rgba(0,0,0,.28)">
-     <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">${photo(second,secPos)}</div></div>
+     <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">${secIsPoster?stage(second):photo(second,secPos)}</div></div>
    <div style="position:absolute;left:48px;right:48px;top:1000px;font:italic 16px/1.2 ${E.body};color:${SOFT};text-align:center">${esc(venue)}, laid for tonight</div>
    <div style="position:absolute;right:54px;top:688px;width:236px;padding:12px 16px 12px;background:${T.dark?"#f4ecd8":toHex(mix(paper,[255,255,255],.55))};border:1px solid ${GOLD};box-shadow:0 6px 14px rgba(0,0,0,.3);transform:rotate(-2.5deg);text-align:center;color:#2a2018">
      <div style="font:600 14px/1.2 ${E.body};letter-spacing:.26em;text-transform:uppercase;color:${readable(toHex(pa),"#fbf6ea",4.5)}">Place card</div>

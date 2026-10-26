@@ -144,11 +144,49 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const OLD=era==="1930s-40s"||era==="1950s"||era==="1970s";
   const pDark=OLD?"rgba(44,30,18,.9)":"rgba(10,10,12,.78)",pLight=OLD?"rgba(246,238,216,.95)":"rgba(250,248,242,.94)";
   const pEdge=OLD?`,inset 0 0 0 3px ${e.paper},inset 0 0 0 4px ${mix(ACC,"#000000",.2)}`:"";
-  const lp=(x,y,anchor)=>LB?`<div data-lp data-dark="1" data-dl="${OLD?.016:.006}" data-ll="${OLD?.84:.92}" data-alt="${pLight}" data-altsh="0 6px 18px rgba(0,0,0,.4)${pEdge}" style="position:absolute;${anchor}:${x}px;top:${y}px;padding:12px 16px;background:${pDark};border-radius:${e.rad?12:4}px;box-shadow:0 6px 18px rgba(0,0,0,.4)${pEdge}">${LB.html}</div>`
-    :`<div style="position:absolute;${anchor}:${x}px;top:${y}px;max-width:330px;padding:10px 16px;background:${pDark};color:#fff;font-family:${DISP};font-weight:${e.dw||400};font-size:${f.title&&f.title.length>22?22:30}px;line-height:1.05;border-radius:4px">${esc(f.title)}</div>`;
+  const lp=(x,y,anchor,lb)=>(lb=lb||LB)?`<div data-lp data-dark="1" data-dl="${OLD?.016:.006}" data-ll="${OLD?.84:.92}" data-alt="${pLight}" data-altsh="0 6px 18px rgba(0,0,0,.4)${pEdge}" style="${anchor==="flow"?"position:relative;align-self:flex-start;flex:none;":`position:absolute;${anchor}:${x}px;top:${y}px;`}padding:12px 16px;background:${pDark};border-radius:${e.rad?12:4}px;box-shadow:0 6px 18px rgba(0,0,0,.4)${pEdge}">${lb.html}</div>`
+    :`<div style="${anchor==="flow"?"position:relative;align-self:flex-start;flex:none;":`position:absolute;${anchor}:${x}px;top:${y}px;`}max-width:330px;padding:10px 16px;background:${pDark};color:#fff;font-family:${DISP};font-weight:${e.dw||400};font-size:${f.title&&f.title.length>22?22:30}px;line-height:1.05;border-radius:4px">${esc(f.title)}</div>`;
   let front="";
+  const PO=posterOf(ctx),hasP=!!PO;
+  /* poster postcard: the whole 2:3 poster sits on the card stock beside the lettering; stills stay for the small photos only */
+  function posterFront(){
+    const below=e.cap==="strip"||e.cap==="minimal",multi=e.cap==="multi",SHb=e.cap==="strip"?96:92;
+    const ix=multi?0:B,iy=multi?0:B,iw=multi?556:W-2*B,ih=multi?H:below?H-B-SHb:H-2*B;
+    const pad=multi?14:22,ph=ih-2*pad,pw=Math.round(ph*2/3),px=multi?ix+Math.round((iw-pw)/2):ix+iw-pad-pw,py=iy+pad;
+    const posterEl=`<div style="position:absolute;left:${px}px;top:${py}px;width:${pw}px;height:${ph}px;background:${OLD?e.bcol:"#ffffff"};padding:6px;box-sizing:border-box;box-shadow:0 8px 20px rgba(40,30,10,.45);transform:rotate(${(T.tilt*.25).toFixed(1)}deg)"><img alt="" crossorigin="anonymous" src="${ctx.img(PO,"w780")}" style="display:block;width:100%;height:100%;object-fit:contain"></div>`;
+    const panel=`<div style="position:absolute;left:${ix}px;top:${iy}px;width:${iw}px;height:${ih}px;overflow:hidden;border-radius:${e.rad}px;box-sizing:border-box;border:1px solid ${mix(e.ink,e.paper,.75)};background:${e.paper}">${e.linen?`<div style="position:absolute;inset:0;background-image:${linen}"></div>`:""}</div>`;
+    if(multi){
+      const s2=ctx.stills&&ctx.stills[2]||s1,s3=ctx.stills&&ctx.stills[3]||s0,LBm=logoBox(ctx,200,64);
+      return `<div style="position:absolute;inset:0;background:${DARK}"></div>${panel}${posterEl}
+      <div style="position:absolute;left:562px;top:0;width:254px;height:${H/2-3}px;overflow:hidden">${photo(ctx,s2,254,H/2-3,filt)}</div>
+      <div style="position:absolute;left:562px;top:${H/2+3}px;width:254px;height:${H/2-3}px;overflow:hidden">${photo(ctx,s3,254,H/2-3,filt)}</div>
+      ${lp(574,14,"left",LBm)}
+      <div data-fit style="position:absolute;left:570px;bottom:14px;width:240px;height:150px;overflow:hidden;padding:10px 14px;box-sizing:border-box;background:linear-gradient(90deg,${ACC},${mix(ACC,"#3a1060",.45)});color:#fff;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-family:${BODY};font-weight:700;${fs(14,14)};letter-spacing:.16em;text-transform:uppercase">${esc(T.kick)}</div>
+        <div style="font-family:${DISP};${fs(28,16)};line-height:1.1;text-transform:uppercase">${esc(venue)}</div></div>`}
+    const zx=ix+24,zw=px-zx-26,zy=iy+22,zh=ih-44,lbh=LB?LB.h+24:60;
+    let mid="";
+    if(!below){
+      const box={band:`background:${mix(ACC,"#000000",.15)};color:#fff;padding:14px 20px;box-shadow:0 0 0 4px ${e.paper},0 0 0 6px ${mix(ACC,"#000000",.15)}`,
+        box:`background:${e.paper};color:${e.ink};padding:14px 20px;border:2px solid ${e.ink};box-shadow:8px 8px 0 ${ACC}`,
+        overlay:`background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.55));color:#fff;padding:14px 20px;border-left:8px solid ${ACC}`}[e.cap]||`padding:0 0 0 2px;color:${e.ink}`;
+      const plain=!({band:1,box:1,overlay:1})[e.cap];
+      mid=`<div data-fit style="flex:0 1 auto;max-height:${zh-lbh-70}px;width:100%;box-sizing:border-box;overflow:hidden;display:flex;flex-direction:column;justify-content:center;${box}">
+        <div style="font-family:${BODY};font-weight:700;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${plain?ACC:"inherit"}">${esc(T.kick)}</div>
+        <div style="font-family:${DISP};font-weight:${e.dw||400};${fs(e.cap==="big"?60:46,18)};line-height:1.06;margin:4px 0;color:${plain?ACC:"inherit"};${e.cap==="overlay"||e.cap==="big"?"text-transform:uppercase;":""}${e.cap==="big"?"text-shadow:3px 3px 0 rgba(42,26,12,.35);":""}">${esc(venue)}</div>
+        <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.12em;text-transform:uppercase">${esc(sign)}</div></div>`}
+    const foot=`<div style="font-family:${BODY};font-weight:700;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:${mix(e.ink,e.paper,.2)}">Now showing, ${esc(f.year)}</div>`;
+    const zone=`<div style="position:absolute;left:${zx}px;top:${zy}px;width:${zw}px;height:${zh}px;display:flex;flex-direction:column;justify-content:${below?"center":"space-between"};gap:${below?22:0}px;align-items:flex-start">${lp(0,0,"flow")}${mid}${foot}</div>`;
+    const cap=below?(e.cap==="strip"?`<div data-fit style="position:absolute;left:${B+10}px;right:${B+10}px;bottom:8px;height:${SHb-12}px;overflow:hidden;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-family:${DISP};font-weight:${e.dw||400};color:${ACC};${fs(era==="1950s"?46:36,18)};line-height:1.05;white-space:nowrap">${esc(venue)}</div>
+        <div style="font-family:${BODY};font-weight:600;color:${e.ink};${fs(17,14)};letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">${esc(sign)}</div></div>`
+      :`<div data-fit style="position:absolute;left:${B}px;bottom:0;height:${SHb}px;right:${B}px;overflow:hidden;padding:10px 20px;box-sizing:border-box;color:${e.ink};display:flex;flex-direction:column;justify-content:center">
+        <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${ACC}">${esc(T.kick)}</div>
+        <div style="font-family:${DISP};font-weight:${e.dw||400};${fs(44,18)};line-height:1.04;white-space:nowrap">${esc(venue)}</div></div>`):"";
+    return `<div style="position:absolute;inset:0;background:${e.bcol||DARK}"></div>${panel}${posterEl}${zone}${cap}`}
   const vshort=venue.replace(/^(the)\s+/i,"");
-  if(e.cap==="big"){
+  if(hasP){front=posterFront()}
+  else if(e.cap==="big"){
     /* big letter postcard: the venue's name cut from a second still */
     const words=vshort.split(/\s+/);let big=words.length>2?words.slice(0,2).join(" "):vshort;if(big.length>18)big=words[0];big=big.slice(0,18);
     const bs=Math.max(44,Math.min(104,Math.floor((PW-80)/(big.length*e.dr))));
@@ -202,7 +240,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
         <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${e.cap==="minimal"?ACC:"inherit"}">${esc(T.kick)}</div>
         <div style="font-family:${DISP};font-weight:${e.dw||400};${fs(e.cap==="minimal"?44:40,18)};line-height:1.04;white-space:nowrap;${e.cap==="overlay"?"text-transform:uppercase;":""}">${esc(venue)}</div></div>`;
   }
-  const front0=`<div style="position:absolute;inset:0;overflow:hidden">${front}${wearFront}${FIT}</div>`;
+  const front0=`<div style="position:absolute;inset:0;overflow:hidden">${front}${hasP?"":wearFront}${FIT}</div>`;
 
   /* ---------- back: menu, stamp, message, key tag ---------- */
   const n=C.reduce((a,c)=>a+c.items.length,0);

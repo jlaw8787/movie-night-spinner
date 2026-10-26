@@ -86,8 +86,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const winks=(fl&&fl.winks||[]).map(txt).filter(Boolean);
   const prop=fl&&fl.prop&&fl.prop.title?{kind:clean(fl.prop.kind||"ticket"),title:clean(fl.prop.title),lines:(fl.prop.lines||[]).map(clean).slice(0,2)}:{kind:"ticket",title:"Admit One",lines:["Good for tonight's feature","Keep this stub"]};
   const stills=(ctx.stills||[]).filter(Boolean);
-  const hero=stills[0]?IMG+"w1280"+stills[0]:(ctx.poster?IMG+"w780"+ctx.poster:"");
-  const heroPos=stills[0]?"50% 40%":"50% 20%";
+  const heroIsPoster=!!ctx.poster;
+  const hero=heroIsPoster?IMG+"w780"+ctx.poster:(stills[0]?IMG+"w1280"+stills[0]:"");
+  const heroPos="50% 40%";
   const grain=`${root}assets/era/_shared/paper-grain.webp`;
 
   /* ---------- the boards: one per course, priced, combo number in the header ---------- */
@@ -100,7 +101,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   let boardBg,boardInk,boardEdge,boardHead,headInk,priceInk,noteInk;
   if(E.board==="felt"){boardBg=`repeating-linear-gradient(180deg,#141414 0 7px,#0a0a0a 7px 9px)`;boardInk="#f5f2ea";boardEdge=`6px solid #2a2a2a;outline:2px solid #8f8f8f`;boardHead=toHex(mix(pa,[0,0,0],.25));headInk=readable("#f5f2ea",toHex(mix(pa,[0,0,0],.25)),4.5);priceInk="#f5f2ea";noteInk="#cfc9bb"}
   else if(E.board==="acrylic"){const bg=mix(lit,[255,248,225],.55);boardBg=`radial-gradient(ellipse at 50% 40%,${toHex(mix(bg,[255,255,255],.35))},${toHex(bg)})`;boardInk=readable("#3a2210",toHex(bg),7);boardEdge=`5px solid #3b2a18`;boardHead=toHex(mix(pa,[0,0,0],.45));headInk=readable("#fff1d6",toHex(mix(pa,[0,0,0],.45)),4.5);priceInk=readable(toHex(mix(pa,[0,0,0],.4)),toHex(bg),4.5);noteInk=readable("#5a3e24",toHex(bg),4.5)}
-  else if(E.board==="neon"){boardBg=`linear-gradient(180deg,#0b0b10,#050507)`;boardInk="#ffffff";boardEdge=`2px solid ${LIT};box-shadow:0 0 ${14*T.glow}px ${LIT},inset 0 0 ${12*T.glow}px ${LIT}55`;boardHead="transparent";headInk=LIT;priceInk=LIT;noteInk="#c9c9d6"}
+  else if(E.board==="neon"){boardBg=`linear-gradient(180deg,#0b0b10,#050507)`;boardInk="#ffffff";boardEdge=`2px solid ${LIT};box-shadow:0 0 ${14*T.glow}px ${LIT}`;boardHead="transparent";headInk=LIT;priceInk=LIT;noteInk="#c9c9d6"}
   else {boardBg=`linear-gradient(180deg,#141519,#0b0c0e)`;boardInk="#f4f5f7";boardEdge=`3px solid #2c2d32`;boardHead=toHex(mix(pa,[0,0,0],.15));headInk=readable("#ffffff",toHex(mix(pa,[0,0,0],.15)),4.5);priceInk=readable(LIT,"#121316",4.5);noteInk="#b9bcc4"}
   const up=E.board==="felt"?"uppercase":"none",trk=E.board==="felt"?".06em":"0";
   const clamp=n=>`display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:${n};overflow:hidden;`;
@@ -123,21 +124,26 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;inset:0;background:url('${grain}') 0 0/520px,url(&quot;${NOISE}&quot;) 0 0/300px;opacity:${.25+T.wear*.35};mix-blend-mode:overlay;pointer-events:none"></div>
     ${T.wear>.3?`<div style="position:absolute;inset:0;background:url(&quot;${BLOTCH}&quot;) 0 0/900px;opacity:${T.wear*.6};mix-blend-mode:multiply"></div>`:""}`;
   const half=eg==="mid"?`<div style="position:absolute;inset:0;background:radial-gradient(rgba(0,0,0,.2) 30%,transparent 32%) 0 0/4px 4px;opacity:.25;mix-blend-mode:multiply"></div>`:"";
-  const photo=hero?`<img alt="" src="${hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${heroPos};display:block;filter:${E.photo}${T.photo} brightness(${(1+.06*T.glow).toFixed(2)})">${half}
+  const posterBox=hero=>`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,${toHex(mix(lit,[255,244,214],.25))}55,rgba(0,0,0,0) 62%),linear-gradient(180deg,#1a1512,#0d0b0a);display:flex;align-items:center;padding:0 16px 0 14px;box-sizing:border-box;gap:22px">
+      <img crossorigin="anonymous" alt="" src="${hero}" style="flex:none;display:block;height:calc(100% - 28px);width:auto;border:3px solid #f1ead8;box-shadow:0 0 ${30*T.glow}px rgba(255,240,210,${.35*T.glow}),0 6px 16px rgba(0,0,0,.6)">
+      <div style="flex:1;min-width:0;display:flex;justify-content:center">@@LOGO@@</div></div>
+`;
+  const photo=heroIsPoster&&hero?posterBox(hero):hero?`<img alt="" src="${hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${heroPos};display:block;filter:${E.photo}${T.photo} brightness(${(1+.06*T.glow).toFixed(2)})">${half}
       <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(255,255,255,${.1*T.glow}),rgba(255,255,255,0) 60%);mix-blend-mode:screen"></div>
       <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${30+40*(1-T.glow)}px rgba(0,0,0,${.25+.3*(1-T.glow)})"></div>`
     :`<div style="position:absolute;inset:0;background:radial-gradient(circle,${toHex(mix(pa,[255,255,255],.3))},${toHex(mix(pa,[0,0,0],.4))});display:flex;align-items:center;justify-content:center"><div style="font:${E.it} ${E.dw} 54px/1.1 ${E.disp};color:#fff;text-align:center;padding:40px">${esc(sign)}</div></div>`;
   const frameW=eg==="new"?8:eg==="late"?14:16;
   const lg=ctx.logo,lr=lg&&lg[0]&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const lh=lr?Math.min(120,Math.round(400/lr)):0,lw=lr?Math.round(lh*lr):0;
+  const LW=heroIsPoster?330:400;
+  const lh=lr?Math.min(120,Math.round(LW/lr)):0,lw=lr?Math.round(lh*lr):0;
   const tl=clean(f.title).length,tsz=tl<=14?60:tl<=26?46:tl<=40?36:30;
-  const titleType=`<div style="font:${E.it} ${E.dw} ${tsz}px/1.02 ${E.disp};text-transform:uppercase;color:currentColor;max-width:440px">${esc(f.title)}</div>`;
-  const logoPanel=`<div data-lpanel data-dark="rgba(10,10,14,.8)" data-light="rgba(250,247,240,.9)" data-darkink="#fff" data-lightink="#151515" style="position:absolute;left:${frameW+22}px;bottom:${frameW+22}px;max-width:470px;padding:16px 22px 14px;background:rgba(10,10,14,.8);color:#fff;border-radius:${eg==="new"?10:4}px;box-shadow:0 6px 18px rgba(0,0,0,.45)">
-      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:426px;object-fit:contain"><div style="display:none">${titleType}</div>`:titleType}
+  const titleType=`<div style="font:${E.it} ${E.dw} ${tsz}px/1.02 ${E.disp};text-transform:uppercase;color:currentColor;max-width:${LW+40}px">${esc(f.title)}</div>`;
+  const logoPanel=(abs)=>`<div data-lpanel data-dark="rgba(10,10,14,.8)" data-light="rgba(250,247,240,.9)" data-darkink="#fff" data-lightink="#151515" style="${abs?`position:absolute;left:${frameW+22}px;bottom:${frameW+22}px;max-width:470px;`:"position:relative;max-width:100%;box-sizing:border-box;"}padding:16px 22px 14px;background:rgba(10,10,14,.8);color:#fff;border-radius:${eg==="new"?10:4}px;box-shadow:0 6px 18px rgba(0,0,0,.45)">
+      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:${LW+26}px;object-fit:contain"><div style="display:none">${titleType}</div>`:titleType}
       <div style="font:700 15px/1 ${E.body};letter-spacing:.26em;text-transform:uppercase;margin-top:10px;opacity:.9">Now showing &nbsp;·&nbsp; ${esc(f.year)}</div></div>`;
   const lightbox=`<div style="position:absolute;left:22px;top:22px;width:806px;height:574px;padding:${frameW}px;box-sizing:border-box;background:${E.frame};border-radius:${eg==="new"?12:eg==="late"?4:2}px;box-shadow:0 0 ${50*T.glow}px rgba(255,240,210,${.35*T.glow}),0 12px 30px rgba(0,0,0,.5)">
-      <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#111;border-radius:${eg==="new"?5:0}px">${photo}</div>
-      ${logoPanel}</div>`;
+      <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#111;border-radius:${eg==="new"?5:0}px">${heroIsPoster?photo.replace("@@LOGO@@",logoPanel(false)):photo}</div>
+      ${heroIsPoster?"":logoPanel(true)}</div>`;
 
   /* ---------- stubs and the manager's note ---------- */
   const perf=c=>`background:radial-gradient(circle at 0 50%,${c} 0 9px,transparent 10px),radial-gradient(circle at 100% 50%,${c} 0 9px,transparent 10px);`;
@@ -171,7 +177,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:850px;top:${heavy?722:684}px;width:472px;display:flex;justify-content:space-between;align-items:baseline;background:${E.board==="acrylic"?boardHead:"#0c0c0f"};border:${E.board==="neon"?`2px solid ${LIT}`:`2px solid ${E.board==="acrylic"?"#3b2a18":"#2c2d32"}`};box-sizing:border-box;padding:8px 14px">
      <span style="font:${E.it} ${E.dw} 22px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one of each board</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT}">${combo}</span></div>
    ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:850px;top:736px;width:472px;height:62px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
-     <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.join(". ")}. Prices subject to change. Stills: TMDB.</div></div>`}`;
+     <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.join(". ")}. Prices subject to change. Poster and stills: TMDB.</div></div>`}`;
 
   window.__fmtFitLater();
   return {w:W,h:H,faces:[face]};

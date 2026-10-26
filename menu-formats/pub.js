@@ -113,7 +113,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
   const img=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const stills=ctx.stills||[];
-  const hero=stills[0]?{src:img(stills[0],"w1280"),poster:false}:{src:img(poster,"w780"),poster:true};
+  const PM=!!poster; /* poster mode: the whole poster is the hero, the first still is only the fallback */
+  const hero=PM?{src:img(poster,"w780"),poster:true}:{src:img(stills[0],"w1280"),poster:false};
   const sec=Object.assign({},SEC,fam?{d:"Soft Drinks"}:{});
 
   const P=ctx.palette||{};
@@ -137,17 +138,22 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="${caps(17,E.fink,.22)};margin-top:10px;opacity:.9">${esc(fasciaKick)}</div></div>`;
   /* ===== verandah photo, 44 percent of the face ===== */
   const PY=FH,PHh=560;
-  const photoHtml=`<div style="position:absolute;left:0;top:${PY}px;width:${W}px;height:${PHh}px">${photo(hero.src,W,PHh,{filter:`${E.photo} ${T.photo}`,poster:hero.poster,pos:"50% 40%",vig:70})}
+  const timber=`repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0 3px,transparent 3px 132px),repeating-linear-gradient(180deg,rgba(255,255,255,.05) 0 2px,transparent 2px 11px),${grain(.14,false,.7,false)},radial-gradient(ellipse at 50% 50%,rgba(255,255,255,.07),rgba(0,0,0,.3) 100%),${mix(E.frame,"#ffffff",lum(rgb(E.frame))<.1?.1:0)}`;
+  const posterW=347,posterH=520;
+  const photoHtml=PM?`<div style="position:absolute;left:0;top:${PY}px;width:${W}px;height:${PHh}px;overflow:hidden;background:${timber}">
+      <div style="position:absolute;left:${(W-posterW)/2}px;top:${(PHh-posterH)/2}px;width:${posterW}px;height:${posterH}px;box-sizing:border-box;border:8px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.5);transform:rotate(${(T.tilt*.5).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain">
+        <div style="position:absolute;left:50%;top:-14px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8,transparent 45%),${WA};box-shadow:0 2px 3px rgba(0,0,0,.5)"></div></div></div>`
+    :`<div style="position:absolute;left:0;top:${PY}px;width:${W}px;height:${PHh}px">${photo(hero.src,W,PHh,{filter:`${E.photo} ${T.photo}`,poster:hero.poster,pos:"50% 40%",vig:70})}
       <div style="position:absolute;left:0;top:0;width:100%;height:46px;background:linear-gradient(180deg,rgba(0,0,0,.45),transparent)"></div></div>`;
   let logoHtml;const LG=ctx.logo;
   if(LG&&LG[0]&&LG[1]&&LG[2]){
-    const a=LG[1]/LG[2];let lw=Math.min(440,150*a),lh=lw/a;if(lh>150){lh=150;lw=lh*a}
+    const a=LG[1]/LG[2];let lw=Math.min(PM?262:440,150*a),lh=lw/a;if(lh>150){lh=150;lw=lh*a}
     logoHtml=`<div style="position:absolute;left:36px;top:${PY+PHh-lh-34-36}px;padding:17px 22px;background:${rgba(DARK,.82)};box-shadow:0 4px 16px rgba(0,0,0,.35)"><img src="${img(LG[0],"w500")}" alt="${esc(title)}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55))"></div>`;
   }else{
-    const tT=fitType(title,440,170,E.dcw,62,26,1.05,4);
-    logoHtml=`<div style="position:absolute;left:36px;top:${Math.round(PY+PHh-tT.n*tT.z*1.05-34-36)}px;width:440px;padding:17px 22px;background:${rgba(DARK,.82)};font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
+    const tT=fitType(title,PM?262:440,170,E.dcw,62,26,1.05,4);
+    logoHtml=`<div style="position:absolute;left:36px;top:${Math.round(PY+PHh-tT.n*tT.z*1.05-34-36)}px;width:${PM?306:440}px;box-sizing:border-box;padding:17px 22px;background:${rgba(DARK,.82)};font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
   }
-  const capTxt=sign&&sign.toLowerCase()!==venue.toLowerCase()?sign:`${venue}, from the verandah`;
+  const capTxt=PM?`Now showing, ${year}`:sign&&sign.toLowerCase()!==venue.toLowerCase()?sign:`${venue}, from the verandah`;
   const capHtml=`<div style="position:absolute;right:30px;top:${PY+PHh-62}px;max-width:${W-600}px;background:${rgba(DARK,.8)};padding:7px 14px;${caps(15,"#ffffff",.14)}">${esc(trunc(capTxt,46))}</div>`;
 
   /* ===== blackboard ===== */

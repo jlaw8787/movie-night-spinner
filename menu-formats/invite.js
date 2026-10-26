@@ -183,7 +183,7 @@ window.MENU_FORMATS.invite=function(ctx){
   const num=M.num(fl.number,f.year);
   const ink=E.ink,paper=E.paper,acc=M.accent(ctx.palette,paper,E.acc,3.6),dark=M.darkOf(ctx.palette,"#1a1714");
   const st=ctx.stills||[],pos=M.poster(ctx)?ctx.img(M.poster(ctx),"w780"):"";
-  const hero=st[0]?ctx.img(st[0],"w1280"):pos,second=st[1]?ctx.img(st[1],"w1280"):(pos||hero);
+  const hero=pos?"":(st[0]?ctx.img(st[0],"w1280"):""),second=st[1]?ctx.img(st[1],"w1280"):(st[0]?ctx.img(st[0],"w1280"):"");
   const C=M.courses(ctx.menu,fam);
   const bd=E.b,dd=E.d,up=E.up?"text-transform:uppercase;":"";
   /* print process: letterpress bite, embossed or debossed lift, offset flat, laser crisp */
@@ -206,6 +206,10 @@ window.MENU_FORMATS.invite=function(ctx){
      ${src?`<img src="${src}" alt="" crossorigin="anonymous" data-pick data-alts="${(o.alts||[]).join("|")}" data-last="${pos||""}" onload="window.__PICK&&__PICK.still(this)" onerror="window.__PICK&&__PICK.fail(this)" style="position:absolute;left:0;top:0;display:block;width:100%;height:100%;object-fit:cover;object-position:${op};filter:${E.photo==="none"?"":E.photo} ${T.photo}">`:""}
      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,${(T.vig*.7).toFixed(2)}) 100%)${E.press==="gloss"?",linear-gradient(150deg,rgba(255,255,255,.22),transparent 45%)":""}"></div>${o.extra||""}
    </div>`};
+  /* poster in a landscape slot: whole poster contained on a blurred, darkened copy of itself */
+  const posterBand=(l,t,w,h)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;overflow:hidden;background:#222;outline:1px solid ${acc};outline-offset:4px;border-radius:${E.border==="round"?"14px":E.border==="dots"?"8px":"0"}">
+     <img src="${pos}" alt="" crossorigin="anonymous" style="position:absolute;left:-24px;top:-24px;width:${w+48}px;height:${h+48}px;object-fit:cover;filter:blur(16px) brightness(.55)">
+     <img src="${pos}" alt="" crossorigin="anonymous" style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain"></div>`;
   const kick=(t,s)=>`<div style="font:700 ${s||".72em"}/1.25 ${bd};letter-spacing:.22em;text-transform:uppercase;color:${acc}">${x(t)}</div>`;
   const rule=`<div style="width:90px;height:2px;background:${acc};margin:.55em auto"></div>`;
 
@@ -217,8 +221,20 @@ window.MENU_FORMATS.invite=function(ctx){
      <div data-ltype data-fit="20" style="display:${lr?"none":"block"};width:440px;height:96px;overflow:hidden;text-align:center;font:${E.dw} 40px/1.08 ${dd};${up}color:#fff;font-size:40px">${x(f.title)}</div>
     </div>`;
 
+  /* poster front: whole 2:3 poster on the left, the title logo on its own panel beside it */
+  const PWID=277,PX=34,PY=34,PH=416,RW=532-PWID;
+  let plh=lr?Math.min(140,Math.sqrt(18000/lr)):0,plw=plh*lr;if(plw>RW-36){plw=RW-36;plh=plw/lr}plw=Math.round(plw);plh=Math.round(plh);
+  const posterFront=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:532px;height:${PH}px;overflow:hidden;background:#222;outline:1px solid ${acc};outline-offset:4px;border-radius:${E.border==="round"?"14px":E.border==="dots"?"8px":"0"}">
+     <img src="${pos}" alt="" crossorigin="anonymous" style="position:absolute;left:0;top:0;width:${PWID}px;height:${PH}px;object-fit:contain;background:#222">
+     <div style="position:absolute;inset:0 0 0 ${PWID}px;background:linear-gradient(150deg,rgba(255,255,255,${E.press==="gloss"?.2:0}),transparent 45%)"></div>
+     <div data-lpanel data-lightink="#2a2a2a" data-dark="rgba(18,16,20,1)" data-light="rgba(253,250,244,1)" data-type="${dark}" style="position:absolute;left:${PWID}px;top:0;width:${RW}px;height:${PH}px;box-sizing:border-box;padding:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:${lr?"rgba(18,16,20,1)":dark}">
+      ${lr?`<span data-lmax="${RW-36},140" data-larea="18000" style="display:block;width:${plw}px;height:${plh}px"><img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="this.parentNode.style.display='none';window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${plw}px;height:${plh}px;object-fit:contain"></span>`:""}
+      <div data-ltype data-fit="20" style="display:${lr?"none":"block"};width:${RW-36}px;height:150px;overflow:hidden;text-align:center;font:${E.dw} 40px/1.08 ${dd};${up}color:#fff;font-size:40px">${x(f.title)}</div>
+      <div data-pk style="font:700 15px/1.2 ${bd};letter-spacing:.22em;text-transform:uppercase;color:#fff;text-align:center">Now showing</div>
+     </div>
+   </div>`;
   const front=`${stock}${border}
-   ${photo(hero,34,34,532,416,st[0]?"50% 40%":"50% 22%",{alts:st.slice(5,8).map(s=>ctx.img(s,"w1280")),extra:logo,
+   ${pos?posterFront:photo(hero,34,34,532,416,st[0]?"50% 40%":"50% 22%",{alts:st.slice(5,8).map(s=>ctx.img(s,"w1280")),extra:logo,
      safe:JSON.stringify({pos:[[50,40],[50,22],[50,60],[30,40],[70,40]],items:[{q:"[data-sp=logo]",c:[["c",0,"b",18],["c",0,"t",18],["l",18,"b",18],["r",18,"b",18],["l",18,"t",18],["r",18,"t",18]]}]})})}
    <div data-fit="18" style="position:absolute;left:44px;top:472px;width:512px;height:236px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:21px;color:${ink};${press}">
      ${kick(T.k,".82em")}
@@ -235,7 +251,7 @@ window.MENU_FORMATS.invite=function(ctx){
   const course=c=>`<div style="margin-bottom:.5em">${kick(LABEL[c.k],".7em")}
      ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="margin-top:.2em"><div style="font:${E.dw} 1em/1.15 ${dd};${up}letter-spacing:${E.up?".03em":"0"};color:${ink}">${x(it.n)}</div>${it.note?`<div data-opt style="font:italic .78em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}</div>`;
   const back=`${stock}${border}
-   ${photo(second,24,24,552,246,st[1]?"50% 40%":"50% 60%",{alts:st.slice(2,5).map(s=>ctx.img(s,"w1280"))})}
+   ${second?photo(second,24,24,552,246,"50% 40%",{alts:st.slice(2,5).map(s=>ctx.img(s,"w1280"))}):pos?posterBand(24,24,552,246):""}
    <div style="position:absolute;left:0;right:0;top:282px;text-align:center;font:${E.dw} 40px/1 ${dd};${up}letter-spacing:${E.up?".2em":"0"};color:${ink};${press}">Menu</div>
    <div style="position:absolute;left:0;right:0;top:330px">${rule}</div>
    <div data-fit="20" style="position:absolute;left:40px;top:346px;width:520px;height:398px;overflow:hidden;text-align:center;font-size:26px;${press}">

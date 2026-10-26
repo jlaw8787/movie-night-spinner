@@ -94,17 +94,20 @@ window.MENU_FORMATS[ID]=ctx=>{
   const signBand=`<div style="position:absolute;left:0;top:0;width:${HX}px;height:${BH}px;background:${acc};display:flex;flex-direction:column;justify-content:center;padding:0 30px;box-sizing:border-box;border-bottom:6px solid ${mix(acc,"#000000",.35)}">
     <div style="font:${e.dw} ${vSize}px/1.02 ${DF};color:${lum(acc)>.35?"#15171c":"#fffaf0"};${clamp(1)}">${esc(venue)}</div>
     <div style="font:700 17px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:${lum(acc)>.35?"#2a2a2a":mix(acc,"#ffffff",.75)};margin-top:6px;${clamp(1)}">${esc(sign)}</div></div>`;
-  const heroSrc=stills[0]?ctx.img(stills[0],"w1280"):poster?ctx.img(poster,"w780"):"";
+  /* the poster is the hero, whole and uncropped, pasted on the truck side; no poster: first still in the same frame */
+  const posSrc=poster?ctx.img(poster,"w780"):"";
+  const heroSrc=posSrc||(stills[0]?ctx.img(stills[0],"w1280"):"");
   const lg=logoImg(ctx,300,92);
   const tSize=title.length>40?20:title.length>24?24:title.length>12?30:38;
   const panelDark="rgba(12,12,14,.84)",panelLight="rgba(250,248,242,.92)";
-  const tagline=clean(f.T||"");
-  const hero=`<div style="position:absolute;left:0;top:${BH}px;width:${HX}px;height:${H-BH}px;overflow:hidden;background:#222">${heroSrc?photo(heroSrc,pf,stills[0]?"center 40%":"center 25%",overlay()):""}
-    ${tagline?`<div style="position:absolute;left:0;right:0;top:0;padding:14px 26px 40px;background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,0));font:italic 400 21px/1.3 ${e.board==="enamel"?BF:"'Nunito Sans',sans-serif"};color:#fbf6ea;${clamp(2)}">${esc(tagline)}</div>`:""}
-    <div data-dark="${panelDark}" data-light="${panelLight}" style="position:absolute;left:24px;bottom:24px;min-width:240px;max-width:360px;min-height:96px;padding:14px 20px;box-sizing:border-box;background:${panelDark};display:flex;align-items:center;justify-content:center;border-left:6px solid ${acc};box-shadow:0 4px 14px rgba(0,0,0,.4)">
+  const PWI=448,PHI=672,PB=6,PXL=Math.round((HX-PWI-2*PB)/2);
+  const hero=`<div style="position:absolute;left:0;top:${BH}px;width:${HX}px;height:${H-BH}px;overflow:hidden;background:${truck}">
+    <div style="position:absolute;inset:0;background:url(${grain}) center/1100px auto;opacity:${(.2+t.wear).toFixed(2)}"></div>
+    <div style="position:absolute;left:${PXL}px;top:24px;width:${PWI}px;height:${PHI}px;border:${PB}px solid ${darkTruck?"#e9e5d8":"#fbf7ec"};background:#222;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.4)">${heroSrc?(posSrc?`<img src="${posSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||ei>=6?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,"center 40%",overlay())):""}</div>
+    <div data-dark="${panelDark}" data-light="${panelLight}" style="position:absolute;left:24px;bottom:22px;min-width:240px;max-width:360px;min-height:96px;padding:14px 20px;box-sizing:border-box;background:${panelDark};display:flex;align-items:center;justify-content:center;border-left:6px solid ${acc};box-shadow:0 4px 14px rgba(0,0,0,.4)">
       ${lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`
          :`<div style="font:${e.dw} ${tSize}px/1.08 ${DF};color:#fbf6ea;text-align:center;${clamp(3)}">${esc(title)}</div>`}</div>
-    <div style="position:absolute;right:20px;bottom:24px;background:rgba(12,12,14,.8);color:#fbf6ea;font:700 15px/1 ${BF};letter-spacing:.2em;padding:8px 12px">${esc(year)}</div></div>`;
+    <div style="position:absolute;right:24px;bottom:22px;background:rgba(12,12,14,.8);color:#fbf6ea;font:700 15px/1 ${BF};letter-spacing:.2em;padding:8px 12px">Now showing ${esc(year)}</div></div>`;
 
   /* right: the board (signature) */
   const RX=HX,RW=W-HX,boardH=676;

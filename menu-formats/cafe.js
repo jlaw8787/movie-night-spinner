@@ -164,13 +164,13 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const prop=fl&&fl.prop&&fl.prop.title?fl.prop:null;
   const num=numOf(fl,f);
   const C=courses(ctx,family);
-  const still=ctx.stills&&ctx.stills[0];
+  const still=ctx.stills&&ctx.stills[0],poster=posterOf(ctx),hasP=!!poster;
   const bodyF=`'${e.body}',${e.chalk?"cursive":"sans-serif"}`;
   const dispUp=e.up?"text-transform:uppercase;":"";
   const chalkTxt=e.chalk?`-webkit-mask-image:${CHALKSOFT};mask-image:${CHALKSOFT};`:"";
 
   /* venue lettering on the photo: size from length, two lines at most */
-  const vlen=venue.length,vw=W-2*FR-80;
+  const vlen=venue.length,vw=W-2*FR-80-(hasP?400:0);
   let vs=Math.min(e.up?78:86,Math.floor(vw/(Math.max(vlen,6)*e.dr)));let vlines=1;
   if(vs<52){vs=Math.min(64,Math.floor(2*vw/(vlen*e.dr)));vlines=2}vs=Math.max(40,vs);
 
@@ -178,19 +178,22 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const LB=logoBox(ctx,430,118);
   const darkPanel="rgba(12,12,14,.78)",lightPanel="rgba(250,247,240,.93)";
   const logoHtml=LB?`<div data-lp data-dark="1" data-alt="${lightPanel}" data-altsh="0 8px 24px rgba(0,0,0,.45)" style="position:absolute;left:${FR+26}px;top:${FR+PH-LB.h-62}px;padding:18px 22px;background:${darkPanel};box-shadow:0 8px 24px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.14);border-radius:${era==="1930s-40s"?0:era==="1970s"?18:6}px">${LB.html}</div>`
-    :`<div data-fit style="position:absolute;left:${FR+26}px;top:${FR+PH-190}px;width:560px;height:150px;overflow:hidden;padding:16px 22px;box-sizing:border-box;background:${darkPanel};display:flex;flex-direction:column;justify-content:center"><div style="font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:1.02;${fs(f.title&&f.title.length>24?40:56,18)}">${esc(f.title)}</div><div style="font-family:${bodyF};color:${mix(ACC,"#ffffff",.3)};letter-spacing:.2em;${fs(16,14)};margin-top:6px">NOW SHOWING ${esc(f.year)}</div></div>`;
+    :`<div data-fit style="position:absolute;left:${FR+26}px;top:${FR+PH-190}px;width:${hasP?500:560}px;height:150px;overflow:hidden;padding:16px 22px;box-sizing:border-box;background:${darkPanel};display:flex;flex-direction:column;justify-content:center"><div style="font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:1.02;${fs(f.title&&f.title.length>24?40:56,18)}">${esc(f.title)}</div><div style="font-family:${bodyF};color:${mix(ACC,"#ffffff",.3)};letter-spacing:.2em;${fs(16,14)};margin-top:6px">NOW SHOWING ${esc(f.year)}</div></div>`;
 
   /* photo with venue lettering and caption */
   const photoHtml=`<div style="position:absolute;left:${FR}px;top:${FR}px;width:${W-2*FR}px;height:${PH}px;overflow:hidden;background:#222">
-    ${photo(ctx,still,W-2*FR,PH,`${e.photoF==="none"?"":e.photoF} ${T.f}`,"50% 35%")}
+    ${hasP?`<div style="position:absolute;inset:0;background:${BOARD}"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 75% 50%,rgba(255,255,255,.1),rgba(0,0,0,.35) 90%)"></div>
+    <div style="position:absolute;right:46px;top:24px;width:360px;height:540px;transform:rotate(${(T.tilt*.5).toFixed(1)}deg);background:#f4efe3;padding:7px;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.65)"><img alt="" crossorigin="anonymous" src="${ctx.img(poster,"w780")}" style="display:block;width:346px;height:526px;object-fit:contain;background:#222"></div>`
+    :`${photo(ctx,still,W-2*FR,PH,`${e.photoF==="none"?"":e.photoF} ${T.f}`,"50% 35%")}
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(0,0,0,0) 45%,rgba(0,0,0,${T.vig}) 100%)"></div>
-    <div style="position:absolute;left:0;right:0;top:0;height:${vlines>1?300:250}px;background:linear-gradient(180deg,rgba(0,0,0,.82),rgba(0,0,0,.5) 55%,rgba(0,0,0,0))"></div>
-    <div style="position:absolute;left:40px;right:40px;top:30px">
+    <div style="position:absolute;left:0;right:0;top:0;height:${vlines>1?300:250}px;background:linear-gradient(180deg,rgba(0,0,0,.82),rgba(0,0,0,.5) 55%,rgba(0,0,0,0))"></div>`}
+    <div style="position:absolute;left:40px;right:${hasP?440:40}px;top:30px">
       <div style="font-family:${bodyF};font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:${mix(ACC,"#ffffff",.15)};font-size:18px;margin-bottom:8px">${esc(T.kick)}</div>
       <div data-fit style="height:${Math.ceil(vs*1.08*vlines)+6}px;overflow:hidden;font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:1.04;${fs(vs,30)};text-shadow:0 3px 14px rgba(0,0,0,.6);${era==="1950s"?"letter-spacing:.06em;":""}">${esc(venue)}</div>
-      <div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:#f2efe6;font-size:22px;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(sign)}</div>
+      <div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:#f2efe6;font-size:22px;margin-top:6px;${hasP?"":"white-space:nowrap;overflow:hidden;text-overflow:ellipsis"}">${esc(sign)}</div>
     </div>
-    <div style="position:absolute;right:20px;bottom:18px;max-width:430px;text-align:right;font-family:${bodyF};font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.55);padding:6px 12px">${esc(still?"Behind the counter":"Now showing")}, ${esc(f.year)}</div>
+    ${hasP?"":`    <div style="position:absolute;right:20px;bottom:18px;max-width:430px;text-align:right;font-family:${bodyF};font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.55);padding:6px 12px">${esc(hasP||!still?"Now showing":"Behind the counter")}, ${esc(f.year)}</div>`}
   </div>`;
 
   /* the board */
@@ -243,7 +246,10 @@ window.MENU_FORMATS["cafe"]=ctx=>{
     </div>
   </div>`;
 
-  const frame=`<div style="position:absolute;inset:0;background:${e.frame};box-shadow:${e.frameIn}"></div><div style="position:absolute;inset:0;background-image:${noise("#000000",.25,.6,200)};opacity:.6"></div>`;
+  /* frame rings drawn as borders, not inset shadows (the PDF export fills inset shadows solid) */
+  const rings=[...e.frameIn.matchAll(/inset 0 0 0 (\d+)px (#[0-9a-f]{3,8})/gi)].map(m=>[+m[1],m[2]]).sort((x,y)=>x[0]-y[0]);
+  const ringHtml=rings.map((r,i)=>{const p0=i?rings[i-1][0]:0;return `<div style="position:absolute;inset:${p0}px;border:${r[0]-p0}px solid ${r[1]};box-sizing:border-box"></div>`}).join("");
+  const frame=`<div style="position:absolute;inset:0;background:${e.frame}"></div>${ringHtml}<div style="position:absolute;inset:0;background-image:${noise("#000000",.25,.6,200)};opacity:.6"></div>`;
   const face=`<div style="position:absolute;inset:0;overflow:hidden;background:#1a1a1a">${frame}${photoHtml}<div style="position:absolute;left:${FR}px;right:${FR}px;top:${BT-3}px;height:6px;background:${ACC};z-index:2"></div>${board}${logoHtml}${FIT}</div>`;
   return{w:W,h:H,faces:[face]};
 };
