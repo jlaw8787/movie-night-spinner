@@ -20,7 +20,10 @@ async def worker(b,q,res):
     try:
       await pg.goto('http://localhost:8795/?film='+quote(film),timeout=30000)
       await pg.wait_for_function("(()=>{const c=document.querySelector('#preview .mcard');return c&&(c.classList.contains('fmt-lib')||c.classList.contains('L-lobby'))})()",timeout=25000)
-      await pg.wait_for_timeout(1500);r=await pg.evaluate(JS)
+      await pg.wait_for_timeout(1500)
+      try: await pg.wait_for_function("(()=>{const c=document.querySelector('#preview .mcard');return !c.classList.contains('fmt-lib')||c.dataset.unclip})()",timeout=15000)
+      except Exception: pass
+      r=await pg.evaluate(JS)
       if 'fmt-lib' not in r['cls'] or r['iss'] or errs: res.append((film,A[film]['format'],r['cls'][:40],r['iss'][:3],errs[:2]))
       el=await pg.query_selector('#preview');s=re.sub(r'[^a-z0-9]+','-',film.lower()).strip('-')
       await el.screenshot(path=f'{OUT}/{s}.jpg',type='jpeg',quality=50)

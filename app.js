@@ -712,10 +712,10 @@ function planQty(q,u){
   return String(q<1?fracText(q):Math.ceil(q-0.01));
 }
 const UNITB={g:["g",1],kg:["g",1000],ml:["ml",1],l:["ml",1000]};
-const PL_CONT=/^(bag|can|tin|bottle|jar|packet|pack|bunch|clove|rasher|slice|sprig|stick|sheet|block|head|stalk|punnet|loaf|fillet|piece|wedge|strip|scoop|shot|glass|cup|leaf)s?$/i;
-function planPlural(item,q){if(!(q>1))return item;const [head,...rest]=String(item).split(",");const w=head.trim().split(" ");
+const PL_CONT=/^(bag|can|tin|bottle|jar|packet|pack|bunch|clove|rasher|slice|sprig|stick|sheet|block|head|stalk|punnet|loaf|fillet|piece|wedge|strip|scoop|shot|glass|cup|leaf|tray|box|carton|tub|round|ball|sachet)s?$/i;
+function planPlural(item,q){if(!(q>1))return item;let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");if(par>0){rest=[head.slice(par)+(rest.length?","+rest.join(","):"")];head=head.slice(0,par);return planPlural(head,q)+rest[0]}const w=head.trim().split(" ");
   const pl=x=>/(s|ice|milk|water|juice|sugar|flour|rice|bread|butter|cream|cheese|fish|corn|meat|oil|salt|pepper|mince|beef|pork|lamb|chicken|bacon|ham|tea|coffee|soda)$/i.test(x)?x:/(ch|sh|x)$/i.test(x)?x+"es":/(tomato|potato|mango|avocado)$/i.test(x)?x+"es":/[^aeiou]y$/i.test(x)?x.slice(0,-1)+"ies":/f$/i.test(x)&&/loaf|leaf|half/i.test(x)?x.slice(0,-1)+"ves":x+"s";
-  if(PL_CONT.test(w[0]))w[0]=pl(w[0]);else w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
+  if(PL_CONT.test(w[0])){w[0]=pl(w[0]);if(w.length>1&&w[1]!=="of")w[0]+=" of"}else w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
 function planShopping(f){
   const k=PLAN.guests/((f._r2&&f._r2.serves)||4),tally={},order=[];
   for(const d of planDishes(f))for(const i of d.ingredients||[]){
@@ -760,6 +760,8 @@ function planWire(f){
 }
 /* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
 function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return t.slice(0,i).replace(/[,;:\s]+$/,"")+"."}
+/* after a format's own fitter: any clamped or ellipsis text that still hides words shrinks (to 14px at most) until it shows in full */
+function libUnclip(card){card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;let fs=parseFloat(cs.fontSize);const lh=parseFloat(cs.lineHeight);if(lh&&lh<fs*1.12)e.style.lineHeight="1.15";const lo=Math.max(14,Math.floor(fs*0.72));while(hid()&&fs>lo){fs-=1;e.style.fontSize=fs+"px"}})}
 function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:libTrim(it.note,100)}));return m}
 /* menu format library: one script per printed-menu format, fetched the first time a film needs it */
 const _libLoads={};
@@ -808,6 +810,7 @@ async function show(f,preferSig){
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
+      await new Promise(r=>setTimeout(r,180));libUnclip(card);
       phoneView(null);styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();
