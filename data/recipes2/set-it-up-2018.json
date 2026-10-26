@@ -188,7 +188,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Peppercorn portobello steak with roast potatoes",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Sauce up to 1 day, cook mushrooms fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "black peppercorns, cracked",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chunks, toss in 2 tbsp of the oil and roast at 220C until crisp.",
+       "min": 45
+      },
+      {
+       "text": "Sear the mushrooms in the rest of the oil, pressing down, until tender, and rest.",
+       "min": 10
+      },
+      {
+       "text": "Toast the cracked peppercorns in the pan, add the cream and simmer until thick.",
+       "min": 5
+      },
+      {
+       "text": "Steam the asparagus and toss with butter.",
+       "min": 5
+      },
+      {
+       "text": "Serve on white plates.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Office party cupcakes",

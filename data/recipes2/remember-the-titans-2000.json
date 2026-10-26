@@ -324,7 +324,128 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Strong side Virginia fried cauliflower",
+     "prep_min": 23,
+     "cook_min": 110,
+     "make_ahead": "Soak up to 1 day ahead, fry fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower (about 1.2 kg)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 230,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 90,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into large florets and combine with the buttermilk, hot sauce and half the salt. Soak in the fridge for at least 1 hour.",
+       "min": 65
+      },
+      {
+       "text": "Peel, chop and boil the potatoes until tender, then mash with 60 g of the butter and 200 ml of the milk.",
+       "min": 30
+      },
+      {
+       "text": "Mix 200 g of the flour with the paprika, garlic powder and the rest of the salt and toss the cauliflower through it.",
+       "min": 8
+      },
+      {
+       "text": "Fry in the vegetable oil at 175C in batches for 5 to 6 minutes until golden and tender.",
+       "min": 20
+      },
+      {
+       "text": "Melt the last of the butter, stir in the remaining flour, whisk in the rest of the milk and the pepper and simmer into a gravy.",
+       "min": 8
+      },
+      {
+       "text": "Warm the honey with the chilli flakes and drizzle over the cauliflower.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Alexandria peach cobbler",

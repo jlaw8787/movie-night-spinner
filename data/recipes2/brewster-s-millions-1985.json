@@ -194,7 +194,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Surf and turf (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 17,
+     "make_ahead": "Sauce best made just before serving",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "butter, clarified and kept warm",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, in 4 slabs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Reduce the vinegar with the tarragon to a few spoonfuls.",
+       "min": 6
+      },
+      {
+       "text": "Whisk with the yolks over low heat and drizzle in 200g of the warm clarified butter for the béarnaise.",
+       "min": 10
+      },
+      {
+       "text": "Brush the mushrooms with the oil, sear 4 minutes a side, then rest.",
+       "min": 12
+      },
+      {
+       "text": "Brush the haloumi with garlic butter made from the garlic and the remaining butter.",
+       "min": 5
+      },
+      {
+       "text": "Grill the haloumi until golden on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Plate the mushroom steak with the haloumi and sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rare stamp shortbread",

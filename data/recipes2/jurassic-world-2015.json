@@ -210,7 +210,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Isla Nublar haloumi tacos",
+     "prep_min": 30,
+     "cook_min": 15,
+     "make_ahead": "Salsa up to 2 hours ahead, haloumi fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "pineapple, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "red onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "small cabbage, shredded",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the pineapple and onion and mix with lime juice for the salsa. Mix the sour cream with lime for the crema.",
+       "min": 15
+      },
+      {
+       "text": "Dust the haloumi in the chilli and cumin and pan-fry in the oil until golden on both sides. Cut into strips.",
+       "min": 10
+      },
+      {
+       "text": "Warm the tortillas and shred the cabbage.",
+       "min": 5
+      },
+      {
+       "text": "Fill the tortillas with cabbage, haloumi, salsa and crema.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dino egg chocolate mousse",

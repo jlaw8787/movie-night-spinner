@@ -200,7 +200,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sally Tomato's Thursday cauliflower steak",
+     "prep_min": 20,
+     "cook_min": 43,
+     "make_ahead": "Sauce up to 1 day, fry chips fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "black peppercorns, cracked",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag mixed salad leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thin fries.",
+       "min": 10
+      },
+      {
+       "text": "Cut two thick steaks from the middle of each cauliflower, brush with the olive oil and season. Sear on both sides in an ovenproof pan, then roast at 200C for 20 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Fry the fries twice in the vegetable oil until crisp and salt them.",
+       "min": 18
+      },
+      {
+       "text": "Toast the cracked peppercorns in the pan, add the cream and simmer until thick.",
+       "min": 5
+      },
+      {
+       "text": "Serve the cauliflower steaks with the sauce, fries and salad leaves.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Custard blueberry Danish pastries",

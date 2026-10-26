@@ -214,7 +214,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kenai's portobello with blueberry sauce",
+     "prep_min": 15,
+     "cook_min": 64,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "blueberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sprig thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chunks and parboil for 8 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Toss the potatoes with 3 tbsp of the oil, the rosemary and salt and roast at 220C until crisp.",
+       "min": 45
+      },
+      {
+       "text": "Brush the mushrooms with the remaining oil, the garlic and salt, then sear in a very hot pan for 4 minutes a side. Keep warm.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, balsamic, blueberries, sugar and thyme to the pan and simmer until syrupy, then whisk in the butter.",
+       "min": 6
+      },
+      {
+       "text": "Slice the mushrooms thickly, spoon over the sauce and serve with the potatoes.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Honey berry crumble",

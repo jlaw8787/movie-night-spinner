@@ -204,7 +204,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tango's tailored king oyster steak",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "large king brown mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fine salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the cut side of the mushrooms in a criss-cross, pat dry and season with salt.",
+       "min": 8
+      },
+      {
+       "text": "Heat a heavy pan with oil until hot and sear the mushrooms hard, cut side down first, then turn, in batches.",
+       "min": 10
+      },
+      {
+       "text": "Lower the heat, add the butter, thyme and crushed garlic and baste for 2 to 3 minutes.",
+       "min": 3
+      },
+      {
+       "text": "Rest briefly, slice and spoon over the pan butter.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kiki's cupcakes",

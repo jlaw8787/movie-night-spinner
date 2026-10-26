@@ -210,7 +210,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mr Wilson's rosemary haloumi with mint sauce",
+     "prep_min": 15,
+     "cook_min": 23,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into 8 slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, peeled and chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mint sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the haloumi with the rosemary, garlic and oil.",
+       "min": 5
+      },
+      {
+       "text": "Boil the potatoes until soft, drain and mash with the butter.",
+       "min": 20
+      },
+      {
+       "text": "Grill the haloumi 2 minutes a side until charred. Cook the peas.",
+       "min": 8
+      },
+      {
+       "text": "Serve everything with a spoon of mint sauce, in peace, with no interruptions at all.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mrs Wilson's apple pie",

@@ -206,7 +206,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Nativity play glazed smoked tofu",
+     "prep_min": 20,
+     "cook_min": 42,
+     "make_ahead": "Glaze up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "smoked tofu, in 2 blocks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans, trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the tofu blocks in a diamond pattern. Simmer the brown sugar, Dijon, orange juice and soy sauce into a glaze and brush it over.",
+       "min": 12
+      },
+      {
+       "text": "Bake at 180C, basting often, until the glaze is sticky and deep golden.",
+       "min": 35
+      },
+      {
+       "text": "Meanwhile boil the potatoes until tender, adding the beans for the last few minutes. Drain, cool and toss with the mayonnaise.",
+       "min": 10
+      },
+      {
+       "text": "Rest the tofu for 5 minutes, then slice and serve with the potato salad.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Family games night trifle",

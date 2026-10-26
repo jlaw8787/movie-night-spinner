@@ -206,7 +206,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Campfire mushroom and vegetables",
+     "prep_min": 20,
+     "cook_min": 80,
+     "make_ahead": "Up to 2 days, reheat to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "field mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches in a camp oven or heavy pot.",
+       "min": 15
+      },
+      {
+       "text": "Add the onion, carrots, potatoes, stock, soy sauce, thyme and pepper.",
+       "min": 10
+      },
+      {
+       "text": "Cover and cook over coals or at 160C until the potatoes are tender.",
+       "min": 60
+      },
+      {
+       "text": "Stir through the butter beans and cook uncovered until the stew thickens.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wattleseed pavlova",

@@ -194,7 +194,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Judge Smails's hasselback pumpkin roast",
+     "prep_min": 25,
+     "cook_min": 68,
+     "make_ahead": "Garlic butter up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "butternut pumpkins, peeled, halved lengthways and seeded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the potatoes with the oil and half the salt and bake at 200C.",
+       "min": 10
+      },
+      {
+       "text": "Lay the pumpkin halves flat side down and cut thin slices most of the way through.",
+       "min": 15
+      },
+      {
+       "text": "Brush with the butter mixed with the garlic and the rest of the salt and roast with the potatoes, brushing twice, until tender and golden.",
+       "min": 60
+      },
+      {
+       "text": "Mix the horseradish into the sour cream.",
+       "min": 3
+      },
+      {
+       "text": "Carve thick and serve with the potatoes, sour cream and chives.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Country club sundae",

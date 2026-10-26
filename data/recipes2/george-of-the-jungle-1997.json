@@ -222,7 +222,118 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "San Francisco mushroom and butter bean cioppino with garlic toast",
+     "prep_min": 25,
+     "cook_min": 26,
+     "make_ahead": "Base up to 2 days, add the mushrooms and beans fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, 3 sliced and 1 halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "king oyster mushrooms, cut into thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "zucchini, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf sourdough, sliced",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the fennel, onion and sliced garlic in 3 tbsp of the oil with the chilli.",
+       "min": 10
+      },
+      {
+       "text": "Add the tomatoes, stock and torn nori and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Sear the mushroom rounds in the remaining oil in a hot pan until golden.",
+       "min": 6
+      },
+      {
+       "text": "Add the mushrooms, butter beans and zucchini to the pot and simmer for 5 minutes. Stir through the parsley.",
+       "min": 6
+      },
+      {
+       "text": "Toast the sourdough, rub with the cut garlic clove and serve alongside.",
+       "min": 9
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Watch-out-for-that-tree coconut pudding",

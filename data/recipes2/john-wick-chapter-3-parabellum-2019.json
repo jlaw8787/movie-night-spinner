@@ -230,7 +230,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Moroccan eggplant and chickpea tagine",
+     "prep_min": 25,
+     "cook_min": 45,
+     "make_ahead": "Up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants, in big chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "ras el hanout",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans chickpeas (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "medjool dates",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "preserved lemon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "couscous",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "flaked almonds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the eggplant in the oil in batches, then soften the chopped onions.",
+       "min": 20
+      },
+      {
+       "text": "Add the ras el hanout, stock, chickpeas, dates and sliced preserved lemon and return the eggplant.",
+       "min": 5
+      },
+      {
+       "text": "Cover and simmer gently until the eggplant is soft.",
+       "min": 30
+      },
+      {
+       "text": "Pour the boiling water over the couscous, cover for 5 minutes and fluff. Toast the almonds.",
+       "min": 10
+      },
+      {
+       "text": "Serve the tagine over the couscous with the almonds.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Orange blossom semolina cake",

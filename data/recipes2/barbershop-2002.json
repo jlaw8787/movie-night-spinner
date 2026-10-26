@@ -226,7 +226,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Calvin's barbershop cauliflower tips",
+     "prep_min": 25,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, in large florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the cauliflower with the paprika, brown sugar, crushed garlic, salt and 2 tbsp of the oil.",
+       "min": 10
+      },
+      {
+       "text": "Cut the potatoes into fries and toss in the remaining oil.",
+       "min": 10
+      },
+      {
+       "text": "Roast the cauliflower and fries at 220C on separate trays until the fries are crisp and the cauliflower is tender.",
+       "min": 30
+      },
+      {
+       "text": "Brush the cauliflower with the barbecue sauce and roast 10 minutes more until sticky.",
+       "min": 10
+      },
+      {
+       "text": "Pile the cauliflower over slices of white bread with the oven fries.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sweet potato pie",

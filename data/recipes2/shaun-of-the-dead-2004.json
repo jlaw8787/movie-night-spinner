@@ -287,6 +287,213 @@
        "min": 10
       }
      ]
+    },
+    "veg": {
+     "n": "Pub pie and chips (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 75,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "mixed mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "English ale",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the olive oil in batches, then soften the onions.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the flour first, then add the ale, stock and soy sauce and simmer for 25 minutes until thick.",
+       "min": 25
+      },
+      {
+       "text": "Cool slightly, tip into a pie dish and cover with the puff pastry.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until puffed and golden.",
+       "min": 25
+      },
+      {
+       "text": "Cut the potatoes into chips and fry them twice in the vegetable oil.",
+       "min": 25
+      },
+      {
+       "text": "Cook and crush the peas.",
+       "min": 10
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Pub pie and chips (vegetarian, alcohol free)",
+     "prep_min": 40,
+     "cook_min": 75,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "mixed mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the olive oil in batches, then soften the onions.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the flour first, then add the extra stock, malt vinegar, stock and soy sauce and simmer for 25 minutes until thick.",
+       "min": 25
+      },
+      {
+       "text": "Cool slightly, tip into a pie dish and cover with the puff pastry.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until puffed and golden.",
+       "min": 25
+      },
+      {
+       "text": "Cut the potatoes into chips and fry them twice in the vegetable oil.",
+       "min": 25
+      },
+      {
+       "text": "Cook and crush the peas.",
+       "min": 10
+      }
+     ]
     }
    }
   },

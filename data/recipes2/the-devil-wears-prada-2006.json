@@ -190,7 +190,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Miranda's cauliflower steak",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Creamed spinach up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers, cut into 4 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chunks and roast in half the oil at 220C until crisp.",
+       "min": 45
+      },
+      {
+       "text": "Sear the cauliflower steaks in the rest of the oil until browned, baste with butter and garlic, then finish in the oven.",
+       "min": 20
+      },
+      {
+       "text": "Wilt the spinach and simmer with the cream until thick.",
+       "min": 8
+      },
+      {
+       "text": "Serve the cauliflower steaks with the potatoes and creamed spinach.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cerulean blueberry tart",

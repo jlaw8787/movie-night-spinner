@@ -194,7 +194,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fezzik's giant mushroom and lentil pie",
+     "prep_min": 20,
+     "cook_min": 78,
+     "make_ahead": "Filling up to 2 days, bake fresh",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "field mushrooms, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onions. Brown the mushrooms in the oil in batches.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions and thyme and cook until soft, then stir in the flour and tomato paste.",
+       "min": 8
+      },
+      {
+       "text": "Add the soy sauce, stock and lentils and simmer until thick.",
+       "min": 30
+      },
+      {
+       "text": "Pour into a large pie dish and cool slightly.",
+       "min": 20
+      },
+      {
+       "text": "Cover with puff pastry, brush with beaten egg and bake at 200C.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cliffs of Insanity cake",

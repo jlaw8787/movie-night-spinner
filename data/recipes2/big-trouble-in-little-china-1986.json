@@ -360,7 +360,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wang Chi's dan dan noodles with crisp mushroom",
+     "prep_min": 10,
+     "cook_min": 23,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "preserved mustard greens (ya cai)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground Sichuan pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sesame paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "fresh wheat noodles",
+       "aisle": "Deli"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put a large pot of water on to boil. Slice the spring onions, rinse and chop the mustard greens, finely chop the mushrooms and crumble the tofu.",
+       "min": 8
+      },
+      {
+       "text": "Heat the vegetable oil in a wok and fry the mushrooms and tofu over high heat for 12 minutes until dry and browning. Add the mustard greens, Sichuan pepper and 1 tbsp of the soy sauce and fry 2 minutes more until crisp.",
+       "min": 14
+      },
+      {
+       "text": "Divide the sesame paste, chilli oil, black vinegar and remaining soy sauce between four bowls and stir each with 2 tbsp of the hot water.",
+       "min": 4
+      },
+      {
+       "text": "Cook the wheat noodles for 2 to 3 minutes, drain and pile on top of the sauce.",
+       "min": 4
+      },
+      {
+       "text": "Spoon over the crisp mushroom, scatter with spring onion and toss at the table.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pork-Chop Express ribs",
@@ -435,7 +534,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pork-Chop Express char siu mushroom ribs",
+     "prep_min": 20,
+     "cook_min": 280,
+     "make_ahead": "Marinate the night before",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "king oyster mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "five spice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cube red fermented bean curd",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the cut side of the king oyster mushrooms in a criss-cross. Mash the hoisin, honey, soy, five spice, bean curd, garlic and oil together and rub over the mushrooms, keeping a few spoonfuls back for glazing.",
+       "min": 15
+      },
+      {
+       "text": "Marinate in the fridge for at least 4 hours, overnight is better.",
+       "min": 240
+      },
+      {
+       "text": "Lay the mushrooms cut side up in a roasting tin, cover with foil and roast at 180C.",
+       "min": 25
+      },
+      {
+       "text": "Uncover, brush with the saved glaze and blast at 220C until sticky and charred at the edges.",
+       "min": 15
+      },
+      {
+       "text": "Rest for a few minutes before serving.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fortune cookies",

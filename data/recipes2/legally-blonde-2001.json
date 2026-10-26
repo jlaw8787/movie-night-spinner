@@ -168,7 +168,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Harvard dining hall pasta (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 17,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Swiss brown mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "sun-dried tomatoes, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "penne, cooked weight",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the penne and drain.",
+       "min": 12
+      },
+      {
+       "text": "Sear the mushrooms in the oil until golden.",
+       "min": 8
+      },
+      {
+       "text": "Add the garlic and sun-dried tomatoes, then the cream, and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Wilt in the spinach and toss through the penne with parmesan.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pink lemonade cupcakes",

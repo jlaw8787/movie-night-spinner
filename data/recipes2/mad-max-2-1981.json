@@ -206,7 +206,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Compound barbecue (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers, leaves trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "rosemary, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "flatbreads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tomatoes, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the cauliflowers with the oil, garlic, rosemary, smoked paprika and salt.",
+       "min": 8
+      },
+      {
+       "text": "Roast covered at 200C for 30 minutes, then uncover and roast until charred and tender.",
+       "min": 55
+      },
+      {
+       "text": "Chop the tomatoes and slice the red onion for the salad.",
+       "min": 8
+      },
+      {
+       "text": "Warm the flatbreads.",
+       "min": 4
+      },
+      {
+       "text": "Pull the cauliflowers into chunks and serve with the flatbreads, Greek yoghurt and tomato salad.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wasteland golden syrup dumplings",

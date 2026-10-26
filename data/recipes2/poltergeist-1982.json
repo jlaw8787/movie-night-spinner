@@ -184,7 +184,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Celeriac steak that stays put",
+     "prep_min": 20,
+     "cook_min": 90,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large celeriac, about 1kg",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the potatoes at 200C.",
+       "min": 70
+      },
+      {
+       "text": "Peel the celeriac, cut into 4 slices about 3cm thick and season with salt.",
+       "min": 6
+      },
+      {
+       "text": "Sear in the oil in a hot pan, then lower the heat, add the butter, crushed garlic and thyme, and baste, turning, until tender all the way through.",
+       "min": 25
+      },
+      {
+       "text": "Rest for 3 minutes.",
+       "min": 3
+      },
+      {
+       "text": "Wilt the spinach with the cream and serve alongside the steaks and potatoes.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ghost-white meringues",

@@ -256,7 +256,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vito's tenement baked ziti (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Assemble up to 1 day ahead, keep chilled; add 10 minutes to the bake",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "ziti or penne",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, torn",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms and eggplant in the oil with the fennel seeds, add the passata and simmer.",
+       "min": 30
+      },
+      {
+       "text": "Cook the pasta 3 minutes short of done and drain.",
+       "min": 10
+      },
+      {
+       "text": "Mix the ricotta with the vegetarian parmesan-style cheese, nutmeg and parsley.",
+       "min": 5
+      },
+      {
+       "text": "Layer pasta, sauce and ricotta in a baking dish and top with mozzarella.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until blistered.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hyman Roth's birthday cake",

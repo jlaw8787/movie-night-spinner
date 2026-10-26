@@ -293,7 +293,118 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Firehouse mushroom meatball sub",
+     "prep_min": 24,
+     "cook_min": 36,
+     "make_ahead": "Meatballs and sauce up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "grated parmesan",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices provolone",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the chopped mushrooms in the olive oil over high heat until dry and browned, then cool.",
+       "min": 12
+      },
+      {
+       "text": "Mash the lentils roughly, then mix with the mushrooms, ricotta, egg, parmesan, breadcrumbs, garlic, salt and pepper and roll into 16 meatballs.",
+       "min": 12
+      },
+      {
+       "text": "Bake the meatballs on a lined tray at 200C for 20 minutes until firm.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the passata with the oregano, add the meatballs and simmer gently for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Split the long rolls, pack in the meatballs and sauce, lay the provolone on top and grill for 2 to 3 minutes until melted.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chinese takeaway at the firehouse",
@@ -374,7 +485,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chinese takeaway at the firehouse (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Cook the rice a day ahead and chill",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "frozen vegetable dumplings",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the jasmine rice the day before, spread it on a tray and chill overnight.",
+       "min": 25
+      },
+      {
+       "text": "Dice the smoked tofu, slice the spring onions and beat the eggs.",
+       "min": 5
+      },
+      {
+       "text": "Heat a wok until smoking with half the oil and fry the tofu for 2 minutes. Push it aside, scramble the eggs, then add the rice and 2 tbsp soy sauce and toss for 4 minutes until hot. Stir through the spring onions.",
+       "min": 8
+      },
+      {
+       "text": "Fry the frozen vegetable dumplings in the rest of the oil in a frying pan for 2 minutes until the bases brown, add the water, cover and steam for 6 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Serve out of takeaway boxes with the rest of the soy sauce on the side.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Stay Puft s'mores",

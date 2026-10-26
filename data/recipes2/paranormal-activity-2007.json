@@ -166,7 +166,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Late night takeaway pizza (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 7,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based pepperoni",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stretch the dough into two thin bases.",
+       "min": 8
+      },
+      {
+       "text": "Spread with the tomatoes and top with the mozzarella, plant-based pepperoni and mushrooms.",
+       "min": 12
+      },
+      {
+       "text": "Bake on a hot steel at max heat for 7 minutes. Rewatch the tape.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "3am chocolate pots",

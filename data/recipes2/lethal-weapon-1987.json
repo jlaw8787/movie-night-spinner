@@ -323,6 +323,229 @@
        "min": 20
       }
      ]
+    },
+    "veg": {
+     "n": "Trish's stew, made properly (vegetarian)",
+     "prep_min": 35,
+     "cook_min": 55,
+     "make_ahead": "Better made the day before",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "Swiss brown mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 15
+      },
+      {
+       "text": "Soften the chopped onion, carrots and celery, then stir in the tomato paste.",
+       "min": 10
+      },
+      {
+       "text": "Add the wine, stock, lentils and thyme and return the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Cover and simmer gently, then season with salt and pepper.",
+       "min": 40
+      },
+      {
+       "text": "Boil the potatoes towards the end and mash with the butter. Serve the stew on top.",
+       "min": 20
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Trish's stew, made properly (vegetarian, alcohol free)",
+     "prep_min": 35,
+     "cook_min": 55,
+     "make_ahead": "Better made the day before",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "Swiss brown mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 15
+      },
+      {
+       "text": "Soften the chopped onion, carrots and celery, then stir in the tomato paste.",
+       "min": 10
+      },
+      {
+       "text": "Add the extra stock, balsamic vinegar, stock, lentils and thyme and return the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Cover and simmer gently, then season with salt and pepper.",
+       "min": 40
+      },
+      {
+       "text": "Boil the potatoes towards the end and mash with the butter. Serve the stew on top.",
+       "min": 20
+      }
+     ]
     }
    }
   },

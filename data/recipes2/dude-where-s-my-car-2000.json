@@ -300,7 +300,122 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "And then? Lemon cauliflower and fried rice",
+     "prep_min": 30,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, in small florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "head broccoli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the jasmine rice the day before and chill.",
+       "min": 7
+      },
+      {
+       "text": "Dip the cauliflower in 2 of the eggs, beaten, then toss in most of the cornflour.",
+       "min": 8
+      },
+      {
+       "text": "Shallow fry at 180C for 5 minutes until crisp and tender.",
+       "min": 12
+      },
+      {
+       "text": "Simmer the juice of the lemons, the caster sugar, the water and the rest of the cornflour until glossy, and pour over.",
+       "min": 15
+      },
+      {
+       "text": "Fry the cold rice in a hot wok with the last egg scrambled, the peas, the soy and the spring onions.",
+       "min": 11
+      },
+      {
+       "text": "Stir-fry the broccoli with the garlic for 3 minutes.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fridge full of chocolate pudding pots",

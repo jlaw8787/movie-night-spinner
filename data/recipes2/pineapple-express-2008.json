@@ -359,6 +359,237 @@
        "min": 8
       }
      ]
+    },
+    "veg": {
+     "n": "Red's pineapple teriyaki tofu",
+     "prep_min": 20,
+     "cook_min": 52,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "mirin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "cup",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sesame seeds, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "rice vinegar, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, mirin, brown sugar, grated ginger and crushed garlic for 5 minutes until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Pat the tofu dry, cut into 8 thick slabs and marinate in half the sauce for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Brush the tofu with the oil and cook on a hot barbecue plate for 4 minutes a side, brushing with more sauce.",
+       "min": 10
+      },
+      {
+       "text": "Grill the peeled pineapple slices 2 minutes a side.",
+       "min": 6
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 12
+      },
+      {
+       "text": "Serve the tofu with the pineapple, rice, sesame seeds, sliced spring onion and sliced chilli in rice vinegar.",
+       "min": 6
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Red's pineapple teriyaki tofu",
+     "prep_min": 20,
+     "cook_min": 52,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "rice vinegar, extra",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "cup",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sesame seeds, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "rice vinegar, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, apple juice, extra rice vinegar, brown sugar, grated ginger and crushed garlic for 5 minutes until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Pat the tofu dry, cut into 8 thick slabs and marinate in half the sauce for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Brush the tofu with the oil and cook on a hot barbecue plate for 4 minutes a side, brushing with more sauce.",
+       "min": 10
+      },
+      {
+       "text": "Grill the peeled pineapple slices 2 minutes a side.",
+       "min": 6
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 12
+      },
+      {
+       "text": "Serve the tofu with the pineapple, rice, sesame seeds, sliced spring onion and sliced chilli in rice vinegar.",
+       "min": 6
+      }
+     ]
     }
    }
   },

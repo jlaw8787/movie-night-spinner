@@ -323,6 +323,169 @@
        "min": 30
       }
      ]
+    },
+    "veg": {
+     "n": "Creamy mushroom, leek and butter bean casserole",
+     "prep_min": 25,
+     "cook_min": 45,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin butter beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 10
+      },
+      {
+       "text": "Soften the leeks in the same pan.",
+       "min": 8
+      },
+      {
+       "text": "Add the white wine, cream and butter beans and simmer until thick.",
+       "min": 15
+      },
+      {
+       "text": "Tip into a dish, cover with puff pastry and brush with egg.",
+       "min": 7
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 30
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Creamy mushroom, leek and butter bean casserole (alcohol free)",
+     "prep_min": 25,
+     "cook_min": 45,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin butter beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 10
+      },
+      {
+       "text": "Soften the leeks in the same pan.",
+       "min": 8
+      },
+      {
+       "text": "Add the vegetable stock, vinegar, cream and butter beans and simmer until thick.",
+       "min": 15
+      },
+      {
+       "text": "Tip into a dish, cover with puff pastry and brush with egg.",
+       "min": 7
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 30
+      }
+     ]
     }
    }
   },

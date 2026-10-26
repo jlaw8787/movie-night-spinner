@@ -186,7 +186,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wolf pack cumin roast pumpkin",
+     "prep_min": 18,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "butternut pumpkin, in thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet flatbread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the pumpkin with the cumin, 3 crushed garlic cloves, oil and salt and lay in a roasting tray.",
+       "min": 10
+      },
+      {
+       "text": "Roast covered at 200C for 20 minutes, then uncover, add the chickpeas and roast until the pumpkin is soft and charred at the edges.",
+       "min": 60
+      },
+      {
+       "text": "Crush the last garlic clove and stir it through the yoghurt.",
+       "min": 3
+      },
+      {
+       "text": "Pile the pumpkin and chickpeas on a board and serve with warm flatbread and garlic yoghurt.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Honeycomb crunch",

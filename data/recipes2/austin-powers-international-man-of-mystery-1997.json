@@ -343,6 +343,199 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Dr. Evil's one million dollar cauliflower steak Diane",
+     "prep_min": 20,
+     "cook_min": 34,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen shoestring fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers, cut into 4 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch watercress",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the fries at 220C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Season the cauliflower steaks, sear in a very hot oiled pan until browned, then finish in the oven with the fries.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter in the same pan and fry the mushrooms and shallot.",
+       "min": 4
+      },
+      {
+       "text": "Add the brandy and let it bubble off, then add the soy sauce, mustard and cream and simmer.",
+       "min": 3
+      },
+      {
+       "text": "Pour the sauce over the cauliflower and serve with the fries and watercress.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Dr. Evil's one million dollar cauliflower steak Diane",
+     "prep_min": 20,
+     "cook_min": 34,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen shoestring fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers, cut into 4 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "apple juice with 1 tsp cider vinegar",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch watercress",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the fries at 220C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Season the cauliflower steaks, sear in a very hot oiled pan until browned, then finish in the oven with the fries.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter in the same pan and fry the mushrooms and shallot.",
+       "min": 4
+      },
+      {
+       "text": "Add the apple juice mix and let it bubble, then add the soy sauce, mustard and cream and simmer.",
+       "min": 3
+      },
+      {
+       "text": "Pour the sauce over the cauliflower and serve with the fries and watercress.",
+       "min": 2
+      }
+     ]
     }
    }
   },

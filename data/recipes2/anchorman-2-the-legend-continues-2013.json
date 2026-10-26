@@ -200,7 +200,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "GNN late shift cauliflower steak",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the frozen chips following the packet.",
+       "min": 5
+      },
+      {
+       "text": "Cut two thick steaks from the middle of each cauliflower, season and sear in the oil in a very hot pan for 4 minutes a side, then baste with the butter and the crushed garlic cloves.",
+       "min": 21
+      },
+      {
+       "text": "Finish in the oven at 200C until tender.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the oven fries and the spinach wilted with the cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Linda's chocolate fondue",

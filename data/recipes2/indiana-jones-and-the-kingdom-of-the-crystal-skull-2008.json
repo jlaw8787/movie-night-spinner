@@ -208,7 +208,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Peruvian roast cauliflower with green sauce",
+     "prep_min": 25,
+     "cook_min": 70,
+     "make_ahead": "Marinate up to 1 day, roast fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "heads cauliflower, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "coriander leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jalapeno",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into fries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the cauliflower wedges in the garlic, cumin, paprika, olive oil, salt and most of the lime juice.",
+       "min": 15
+      },
+      {
+       "text": "Roast at 220C until charred and tender.",
+       "min": 35
+      },
+      {
+       "text": "Blitz the coriander, jalapeno, mayonnaise and the rest of the lime juice for the sauce.",
+       "min": 5
+      },
+      {
+       "text": "Fry the fries twice in the vegetable oil, first at a low heat then until crisp. Serve with the cauliflower.",
+       "min": 40
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Akator crystal skull jelly",

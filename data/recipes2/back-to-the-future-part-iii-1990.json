@@ -269,6 +269,217 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Doc's blacksmith shop mushroom stew",
+     "prep_min": 30,
+     "cook_min": 65,
+     "make_ahead": "Up to 2 days, keep chilled, flavour improves",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "portobello and Swiss brown mushrooms, cut into big chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "dark ale",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 160C. Season the mushrooms with salt and pepper and brown in batches in the oil in a heavy ovenproof pot.",
+       "min": 15
+      },
+      {
+       "text": "Soften the sliced onions and chopped carrots in the same pot, then stir in the tomato paste and flour.",
+       "min": 10
+      },
+      {
+       "text": "Return the mushrooms, add the lentils, ale, stock and soy sauce and bring to a simmer.",
+       "min": 5
+      },
+      {
+       "text": "Cover and braise in the oven until thick and rich.",
+       "min": 60
+      },
+      {
+       "text": "Serve with the crusty bread for mopping up.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Doc's blacksmith shop mushroom stew",
+     "prep_min": 30,
+     "cook_min": 65,
+     "make_ahead": "Up to 2 days, keep chilled, flavour improves",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "portobello and Swiss brown mushrooms, cut into big chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 160C. Season the mushrooms with salt and pepper and brown in batches in the oil in a heavy ovenproof pot.",
+       "min": 15
+      },
+      {
+       "text": "Soften the sliced onions and chopped carrots in the same pot, then stir in the tomato paste and flour.",
+       "min": 10
+      },
+      {
+       "text": "Return the mushrooms, add the lentils, all the stock, the malt vinegar and soy sauce and bring to a simmer.",
+       "min": 5
+      },
+      {
+       "text": "Cover and braise in the oven until thick and rich.",
+       "min": 60
+      },
+      {
+       "text": "Serve with the crusty bread for mopping up.",
+       "min": 5
+      }
+     ]
     }
    }
   },

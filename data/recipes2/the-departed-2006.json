@@ -351,6 +351,211 @@
        "min": 4
       }
      ]
+    },
+    "veg": {
+     "n": "Southie haloumi and chips",
+     "prep_min": 10,
+     "cook_min": 33,
+     "make_ahead": "Best eaten straight away",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plain flour, for batter",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "ice-cold lager",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "haloumi, cut into thick fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour, for dusting",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips, rinse and dry well. Whisk the batter flour, cornflour and cold lager together.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chips in oil at 140C until pale and soft, then drain.",
+       "min": 15
+      },
+      {
+       "text": "Cook the peas, then crush with the butter and chopped mint and keep warm.",
+       "min": 8
+      },
+      {
+       "text": "Dust the haloumi in flour, dip in batter and fry at 180C in batches until golden and crisp.",
+       "min": 6
+      },
+      {
+       "text": "Fry the chips again at 185C until crisp. Salt well and serve with the haloumi, peas and malt vinegar.",
+       "min": 4
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Southie haloumi and chips (alcohol free)",
+     "prep_min": 10,
+     "cook_min": 33,
+     "make_ahead": "Best eaten straight away",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plain flour, for batter",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "ice-cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "haloumi, cut into thick fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour, for dusting",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips, rinse and dry well. Whisk the batter flour, cornflour and cold soda water together.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chips in oil at 140C until pale and soft, then drain.",
+       "min": 15
+      },
+      {
+       "text": "Cook the peas, then crush with the butter and chopped mint and keep warm.",
+       "min": 8
+      },
+      {
+       "text": "Dust the haloumi in flour, dip in batter and fry at 180C in batches until golden and crisp.",
+       "min": 6
+      },
+      {
+       "text": "Fry the chips again at 185C until crisp. Salt well and serve with the haloumi, peas and malt vinegar.",
+       "min": 4
+      }
+     ]
     }
    }
   },

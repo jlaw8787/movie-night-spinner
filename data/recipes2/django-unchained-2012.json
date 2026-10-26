@@ -279,6 +279,161 @@
        "min": 3
       }
      ]
+    },
+    "veg": {
+     "n": "German sausages and kraut (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 45,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of sauerkraut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages, bratwurst style",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sauerkraut with the wine, apple and caraway.",
+       "min": 20
+      },
+      {
+       "text": "Brush the vegetarian sausages with the oil and grill, turning, until browned.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes until tender and toss in the butter.",
+       "min": 20
+      },
+      {
+       "text": "Serve together.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "German sausages and kraut (vegetarian, alcohol free)",
+     "prep_min": 10,
+     "cook_min": 45,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of sauerkraut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages, bratwurst style",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sauerkraut with the apple juice, cider vinegar, apple and caraway.",
+       "min": 20
+      },
+      {
+       "text": "Brush the vegetarian sausages with the oil and grill, turning, until browned.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes until tender and toss in the butter.",
+       "min": 20
+      },
+      {
+       "text": "Serve together.",
+       "min": 3
+      }
+     ]
     }
    }
   },

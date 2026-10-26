@@ -280,7 +280,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Easter Sunday roast cauliflower with mint sauce",
+     "prep_min": 30,
+     "cook_min": 79,
+     "make_ahead": "Mint sauce up to 1 day ahead, roast fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the cauliflowers, boil whole for 8 minutes and drain well.",
+       "min": 15
+      },
+      {
+       "text": "Cut small slits all over and push in slivers of garlic and rosemary sprigs. Rub with half the oil, melted butter and salt.",
+       "min": 10
+      },
+      {
+       "text": "Peel the potatoes and parboil them.",
+       "min": 15
+      },
+      {
+       "text": "Roast the cauliflowers and the potatoes in the rest of the oil at 200C until deep golden.",
+       "min": 60
+      },
+      {
+       "text": "For mint sauce, chop the mint with the sugar, add a splash of boiling water and the malt vinegar.",
+       "min": 5
+      },
+      {
+       "text": "Toss the peas in the rest of the butter and serve alongside.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hot cross bun bread and butter pudding",

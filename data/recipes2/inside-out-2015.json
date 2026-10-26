@@ -224,7 +224,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Family dinner lemon and rosemary haloumi traybake",
+     "prep_min": 15,
+     "cook_min": 39,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi, in thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "small potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Toss the potatoes in half the oil and salt on a large tray and roast for 20 minutes.",
+       "min": 22
+      },
+      {
+       "text": "Toss the chickpeas with the lemon zest, garlic, rosemary and the rest of the oil, add to the tray and roast 10 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Lay the haloumi over the top and roast 12 minutes until golden. Squeeze over the lemon juice.",
+       "min": 15
+      },
+      {
+       "text": "Boil the beans for 3 minutes and toss with butter.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Five feelings cupcakes",

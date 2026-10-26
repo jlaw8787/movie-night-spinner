@@ -216,7 +216,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roy O'Bannon's five-spice eggplant ribs",
+     "prep_min": 20,
+     "cook_min": 43,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "medium eggplants, cut lengthways into thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "five spice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the eggplant with the oil, five spice, brown sugar, crushed garlic and salt.",
+       "min": 10
+      },
+      {
+       "text": "Wrap in foil.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 180C until soft right through.",
+       "min": 35
+      },
+      {
+       "text": "Mix the hoisin with honey and unwrap the eggplant.",
+       "min": 5
+      },
+      {
+       "text": "Brush with the glaze and glaze under the grill.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Imperial almond jelly with lychees",

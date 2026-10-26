@@ -337,6 +337,211 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Veld celebration stew (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 110,
+     "make_ahead": "Stew up to 2 days ahead, fry the chips fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "field mushrooms, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "dark beer",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut in chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 12
+      },
+      {
+       "text": "Cook the onions slowly.",
+       "min": 20
+      },
+      {
+       "text": "Add the beer, stock, lentils, thyme, bay leaves, mustard and sugar and braise at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Fry the potatoes at 140C, then again at 180C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Serve the stew with the frites.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Veld celebration stew (vegetarian, alcohol-free)",
+     "prep_min": 30,
+     "cook_min": 110,
+     "make_ahead": "Stew up to 2 days ahead, fry the chips fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "field mushrooms, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 625,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut in chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 12
+      },
+      {
+       "text": "Cook the onions slowly.",
+       "min": 20
+      },
+      {
+       "text": "Add all the mushroom stock, the malt vinegar, lentils, thyme, bay leaves, mustard and sugar and braise at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Fry the potatoes at 140C, then again at 180C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Serve the stew with the frites.",
+       "min": 5
+      }
+     ]
     }
    }
   },

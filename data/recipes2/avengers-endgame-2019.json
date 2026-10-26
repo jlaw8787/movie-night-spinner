@@ -252,7 +252,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Morgan's cheeseburgers (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices of American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce, to serve",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "mustard, to serve",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "crinkle cut potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the plant-based mince into 8 balls.",
+       "min": 5
+      },
+      {
+       "text": "Fry the potatoes once at a low heat, then again until crisp.",
+       "min": 20
+      },
+      {
+       "text": "Smash the balls thin on a smoking oiled griddle, flip and top with cheese.",
+       "min": 8
+      },
+      {
+       "text": "Toast the buns.",
+       "min": 3
+      },
+      {
+       "text": "Stack two patties per bun with pickles, onion, sauce and mustard.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Love you 3000 cake",

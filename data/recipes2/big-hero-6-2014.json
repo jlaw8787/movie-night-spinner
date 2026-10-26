@@ -204,7 +204,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "San Fransokyo ramen with glazed tofu",
+     "prep_min": 14,
+     "cook_min": 30,
+     "make_ahead": "Tofu can be glazed a day ahead",
+     "ingredients": [
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "portions ramen noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "white miso",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "hot vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "nori sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry and fry in the oil until golden on both sides.",
+       "min": 12
+      },
+      {
+       "text": "Add the soy sauce and sugar and turn the tofu until sticky.",
+       "min": 4
+      },
+      {
+       "text": "Soft-boil the eggs.",
+       "min": 6
+      },
+      {
+       "text": "Whisk the miso into the hot stock for the broth and cook the noodles.",
+       "min": 8
+      },
+      {
+       "text": "Build bowls with noodles, broth, tofu, halved eggs, nori and spring onion.",
+       "min": 14
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Café cream puffs",

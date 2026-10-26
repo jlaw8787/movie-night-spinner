@@ -204,7 +204,122 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Aunt May's Thanksgiving roast cauliflower",
+     "prep_min": 30,
+     "cook_min": 82,
+     "make_ahead": "Gravy up to 2 days ahead, reheat gently",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large whole cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cooking salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "pumpkin, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 170,
+       "u": "g",
+       "item": "vegetarian stuffing mix",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Bring the water and salt to the boil, trim the cauliflower leaves and boil it whole for 6 minutes, then drain and dry.",
+       "min": 15
+      },
+      {
+       "text": "Toss the potatoes and pumpkin with the oil on a roasting tray.",
+       "min": 5
+      },
+      {
+       "text": "Mash 40g of the butter with the paprika and garlic and rub all over the cauliflower.",
+       "min": 5
+      },
+      {
+       "text": "Roast the cauliflower on the tray with the potato and pumpkin until deep golden and tender to a skewer.",
+       "min": 60
+      },
+      {
+       "text": "Rest the cauliflower, covered. Bake the stuffing mix as the packet says.",
+       "min": 15
+      },
+      {
+       "text": "Melt the remaining butter in a pan, stir in the flour, then whisk in the stock and soy sauce and simmer into a gravy. Cut the cauliflower into wedges and serve with everything.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "With-great-power pancakes",

@@ -258,7 +258,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Moco's mushroom asada",
+     "prep_min": 20,
+     "cook_min": 53,
+     "make_ahead": "Marinate up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can black beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix lime juice, a little orange juice, crushed garlic, cumin, oil and salt, then add the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Marinate the mushrooms for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Cook the rice until tender and fluffy, and warm the beans in a small pot.",
+       "min": 15
+      },
+      {
+       "text": "Sear the mushrooms over very high heat for 4 minutes a side, char the spring onions in the same pan.",
+       "min": 10
+      },
+      {
+       "text": "Slice the mushrooms thick.",
+       "min": 5
+      },
+      {
+       "text": "Serve with the rice, beans and spring onions.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cocadas, coconut condensed milk bites",

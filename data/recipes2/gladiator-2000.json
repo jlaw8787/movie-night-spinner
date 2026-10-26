@@ -192,7 +192,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Colosseum roast eggplant",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, slivered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta, crumbled",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the eggplants lengthways, score the flesh deeply and stud the cuts with garlic, rosemary and capers. Brush with the oil and season with salt.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C until soft and collapsing.",
+       "min": 40
+      },
+      {
+       "text": "Meanwhile simmer the chickpeas with the tomatoes, then stir through the spinach.",
+       "min": 15
+      },
+      {
+       "text": "Serve the eggplant on the chickpeas with the feta crumbled over.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Roman honey cakes",

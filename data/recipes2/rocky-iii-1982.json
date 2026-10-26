@@ -332,7 +332,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Clubber Lang rematch haloumi",
+     "prep_min": 20,
+     "cook_min": 66,
+     "make_ahead": "Marinate up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, sliced lengthwise",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "brown rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "heads broccoli",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the juice of one lemon, crushed garlic, oregano and olive oil and coat the haloumi and zucchini.",
+       "min": 8
+      },
+      {
+       "text": "Marinate for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Cook the brown rice.",
+       "min": 30
+      },
+      {
+       "text": "Grill the zucchini and haloumi over high heat until charred.",
+       "min": 10
+      },
+      {
+       "text": "Steam the broccoli florets.",
+       "min": 6
+      },
+      {
+       "text": "Serve with an extra squeeze of lemon.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Thunderlips charity tiramisu",

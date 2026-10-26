@@ -256,7 +256,118 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "El Jefe Cubano (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 95,
+     "make_ahead": "Mushrooms can be roasted 1 day ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "portobello mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the citrus juice, garlic, oregano, oil and salt.",
+       "min": 10
+      },
+      {
+       "text": "Leave to marinate for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Roast at 200C on a tray until browned and juicy.",
+       "min": 25
+      },
+      {
+       "text": "Layer the rolls with mushrooms, smoked tofu, Swiss, pickles and mustard.",
+       "min": 15
+      },
+      {
+       "text": "Press and griddle in butter until crisp and the cheese melts.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Carl's late-night aglio e olio",

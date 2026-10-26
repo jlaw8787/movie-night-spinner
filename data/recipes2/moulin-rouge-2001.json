@@ -279,6 +279,187 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Elephant supper portobello with cherry sauce",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cherries, pitted",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fresh thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, for the mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the mushrooms with salt and pepper and sear gill side up in the oil over medium-high heat.",
+       "min": 8
+      },
+      {
+       "text": "Turn, add the butter, baste and roast at 200C until tender.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the cherries with the wine and thyme until syrupy.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes and mash with the mash butter until silky.",
+       "min": 22
+      },
+      {
+       "text": "Slice the mushrooms and serve with the cherry sauce and mash.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Elephant supper portobello with cherry sauce",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cherries, pitted",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fresh thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, for the mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the mushrooms with salt and pepper and sear gill side up in the oil over medium-high heat.",
+       "min": 8
+      },
+      {
+       "text": "Turn, add the butter, baste and roast at 200C until tender.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the cherries with the grape juice, water, balsamic vinegar and thyme until syrupy.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes and mash with the mash butter until silky.",
+       "min": 22
+      },
+      {
+       "text": "Slice the mushrooms and serve with the cherry sauce and mash.",
+       "min": 5
+      }
+     ]
     }
    }
   },

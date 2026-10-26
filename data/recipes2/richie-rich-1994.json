@@ -186,7 +186,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Richie's home burger bar (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 40,
+     "make_ahead": "Sauce up to 2 days, cook fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "chopped pickles, for the sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into fries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the fries in oil and bake at 220C, turning once, until golden.",
+       "min": 35
+      },
+      {
+       "text": "Mix the mayonnaise with the chopped pickles for the special sauce. Roll the plant-based mince into 4 balls.",
+       "min": 8
+      },
+      {
+       "text": "Smash the balls flat on a very hot pan. Season, flip after 2 minutes and add the cheese.",
+       "min": 6
+      },
+      {
+       "text": "Build on toasted buns with onion, pickle slices and sauce. Serve with the fries.",
+       "min": 16
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gold vault sundae",

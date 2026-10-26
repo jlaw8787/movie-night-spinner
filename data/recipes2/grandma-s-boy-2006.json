@@ -274,7 +274,134 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grandma's glazed lentil loaf with mash",
+     "prep_min": 25,
+     "cook_min": 81,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and onion in the oil until dry.",
+       "min": 10
+      },
+      {
+       "text": "Soak the breadcrumbs in some of the milk. Mash half the lentils and mix with the rest, the mushroom mix, breadcrumbs, egg, soy sauce and salt.",
+       "min": 8
+      },
+      {
+       "text": "Press into a lined loaf tin. Mix the tomato sauce, sugar and vinegar and spread over the top.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 180C for 45 minutes, then rest.",
+       "min": 55
+      },
+      {
+       "text": "Boil the potatoes until tender, then mash with most of the butter and the rest of the milk.",
+       "min": 20
+      },
+      {
+       "text": "Cook the peas and toss with the remaining butter. Slice the loaf and serve with mash and peas.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Grandma's cinnamon tea cake",

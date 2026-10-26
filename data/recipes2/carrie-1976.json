@@ -299,6 +299,149 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Prom dinner haloumi with mushroom cream",
+     "prep_min": 20,
+     "cook_min": 28,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into 8 thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, drain and mash with some of the butter.",
+       "min": 25
+      },
+      {
+       "text": "Sear the haloumi in a little of the butter until golden on both sides, then keep warm.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in the pan, add the wine and cream and reduce to a sauce.",
+       "min": 10
+      },
+      {
+       "text": "Steam the beans and toss with butter.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Prom dinner haloumi with mushroom cream",
+     "prep_min": 20,
+     "cook_min": 28,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into 8 thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, drain and mash with some of the butter.",
+       "min": 25
+      },
+      {
+       "text": "Sear the haloumi in a little of the butter until golden on both sides, then keep warm.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in the pan, add the stock, vinegar and cream and reduce to a sauce.",
+       "min": 10
+      },
+      {
+       "text": "Steam the beans and toss with butter.",
+       "min": 5
+      }
+     ]
     }
    }
   },

@@ -210,7 +210,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vermont inn roast celeriac",
+     "prep_min": 30,
+     "cook_min": 93,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large celeriac, about 1.2kg",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "mixed dried herbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cranberry sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Scrub the celeriac, trim the root and rub with 20g of the butter, softened, and the herbs.",
+       "min": 8
+      },
+      {
+       "text": "Wrap loosely in foil and roast at 180C, then unwrap for the last 20 minutes until golden and tender to a skewer.",
+       "min": 90
+      },
+      {
+       "text": "Mix the breadcrumbs with the onion, chopped sage and the remaining butter, melted, and bake the stuffing alongside for the last 25 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Toss the potatoes in the oil and roast on another tray.",
+       "min": 5
+      },
+      {
+       "text": "Rest the celeriac for 10 minutes, cut into wedges and serve with the stuffing, cranberry sauce and potatoes.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Snowy coconut cake",

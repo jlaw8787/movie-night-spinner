@@ -256,7 +256,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Juicy roast cauliflower",
+     "prep_min": 15,
+     "cook_min": 78,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large whole cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "soft butter, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "vegetarian stuffing mix",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Boil the cauliflower for 8 minutes, drain and steam dry.",
+       "min": 12
+      },
+      {
+       "text": "Mash most of the butter with the thyme leaves and salt and push it in between the florets.",
+       "min": 8
+      },
+      {
+       "text": "Roast until deep golden and tender right through.",
+       "min": 45
+      },
+      {
+       "text": "Make the stuffing as the packet says.",
+       "min": 20
+      },
+      {
+       "text": "Melt the remaining butter, stir in the flour, whisk in the stock and simmer into gravy.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pecan pie",

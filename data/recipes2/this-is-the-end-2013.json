@@ -386,7 +386,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Big breakfast fry-up (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 34,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "frozen hash browns",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tomatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices thick white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the hash browns at 220C until crisp.",
+       "min": 20
+      },
+      {
+       "text": "Fry the vegetarian sausages in the oil over medium heat.",
+       "min": 12
+      },
+      {
+       "text": "Fry the haloumi in the same pan until golden on both sides.",
+       "min": 5
+      },
+      {
+       "text": "Fry the tomatoes cut-side down. Fry the mushrooms in some of the butter with the garlic.",
+       "min": 8
+      },
+      {
+       "text": "Fry the eggs in a little more of the butter.",
+       "min": 4
+      },
+      {
+       "text": "Toast the bread and butter it well. Load up plates and serve with tomato sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "The last chocolate caramel nougat bar",

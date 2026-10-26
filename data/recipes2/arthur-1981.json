@@ -196,7 +196,146 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hobson's alert-the-media nut roast",
+     "prep_min": 25,
+     "cook_min": 80,
+     "make_ahead": "Nut roast mix up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mixed nuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil, for the tins",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 180C. Fry the onion, garlic and mushrooms in the olive oil until dry.",
+       "min": 12
+      },
+      {
+       "text": "Mix with the nuts, lentils, breadcrumbs, cheddar, thyme, 1 tbsp of the soy sauce, 2 of the eggs, salt and pepper, and press into a lined loaf tin.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the remaining 3 eggs, 140g of the flour and the milk into a smooth batter and leave to rest.",
+       "min": 10
+      },
+      {
+       "text": "Bake the nut roast until firm and browned on top.",
+       "min": 45
+      },
+      {
+       "text": "Rest the roast under foil. Raise the oven to 220C, heat the oiled tins until smoking, pour in the batter and bake the puddings until risen and golden.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter, stir in the remaining flour, then whisk in the stock and remaining soy sauce and simmer until slightly thickened. Slice the roast and serve.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Crème brûlée",

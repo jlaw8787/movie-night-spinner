@@ -299,6 +299,143 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Risotto alla milanese (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 350,
+       "u": "g",
+       "item": "carnaroli rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "parmesan",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the diced onion in some of the butter.",
+       "min": 6
+      },
+      {
+       "text": "Add the rice and toast, then add the wine.",
+       "min": 4
+      },
+      {
+       "text": "Add the hot stock ladle by ladle, with the saffron steeped in, stirring.",
+       "min": 18
+      },
+      {
+       "text": "Finish with the rest of the butter and the parmesan.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Risotto alla milanese (vegetarian, alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 350,
+       "u": "g",
+       "item": "carnaroli rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.3,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "parmesan",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the diced onion in some of the butter.",
+       "min": 6
+      },
+      {
+       "text": "Add the rice and toast, then add the vinegar and a ladle of the stock.",
+       "min": 4
+      },
+      {
+       "text": "Add the hot stock ladle by ladle, with the saffron steeped in, stirring.",
+       "min": 18
+      },
+      {
+       "text": "Finish with the rest of the butter and the parmesan.",
+       "min": 2
+      }
+     ]
     }
    }
   },

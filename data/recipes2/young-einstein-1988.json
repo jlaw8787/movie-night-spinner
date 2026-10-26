@@ -417,6 +417,161 @@
        "min": 20
       }
      ]
+    },
+    "veg": {
+     "n": "Apple cider smoked tofu",
+     "prep_min": 15,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "smoked tofu, cut into 8 thick slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "apples, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sage leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "apple cider",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the tofu in the oil and set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the onion and apples with the sage.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the cider, return the tofu and simmer until the sauce reduces.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes and mash with butter.",
+       "min": 20
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Apple cider smoked tofu (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "smoked tofu, cut into 8 thick slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "apples, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sage leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the tofu in the oil and set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the onion and apples with the sage.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the apple juice and vinegar, return the tofu and simmer until the sauce reduces.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes and mash with butter.",
+       "min": 20
+      }
+     ]
     }
    }
   },

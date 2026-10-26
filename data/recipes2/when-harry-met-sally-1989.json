@@ -171,7 +171,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sally's chef salad (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Boil the eggs up to 2 days ahead and keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cos lettuces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "swiss cheese, cut into strips",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Hard-boil the eggs for 10 minutes, cool in cold water, peel and halve.",
+       "min": 15
+      },
+      {
+       "text": "Wash the cos lettuces, dry well and tear into a large platter.",
+       "min": 5
+      },
+      {
+       "text": "Cut the smoked tofu into thin strips and slice the avocado.",
+       "min": 5
+      },
+      {
+       "text": "Arrange the smoked tofu, swiss cheese strips, avocado, halved eggs, tomatoes and cucumber in rows over the lettuce.",
+       "min": 8
+      },
+      {
+       "text": "Pour the olive oil and red wine vinegar into two little jugs and serve them on the side.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pastrami on rye",
@@ -224,7 +311,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Beetroot pastrami on rye",
+     "prep_min": 15,
+     "cook_min": 64,
+     "make_ahead": "Roast and slice the beetroot up to 2 days ahead, sear to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beetroot (about 4 medium)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ground coriander",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices seeded rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "full sour dill pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wrap the beetroot in foil and roast at 200C until a knife slides in easily.",
+       "min": 55
+      },
+      {
+       "text": "Cool the beetroot a little, rub off the skins and slice as thin as you can.",
+       "min": 8
+      },
+      {
+       "text": "Mix the olive oil, cracked black pepper, ground coriander, smoked paprika, brown sugar and red wine vinegar, toss the beetroot through and sear in a hot pan until sticky at the edges.",
+       "min": 6
+      },
+      {
+       "text": "Spread the rye with mustard.",
+       "min": 3
+      },
+      {
+       "text": "Pile the beetroot high on four slices and close the sandwiches.",
+       "min": 4
+      },
+      {
+       "text": "Serve each with a pickle on the side.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Apple pie à la mode, her way",

@@ -244,7 +244,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Foil baked stuffed eggplant with potatoes",
+     "prep_min": 20,
+     "cook_min": 54,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "small eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "sprigs dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fetta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, for the potatoes",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.25,
+       "u": "cup",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut a deep slit along each eggplant and stuff with lemon slices, dill, butter and crumbled fetta, then season.",
+       "min": 10
+      },
+      {
+       "text": "Wrap in foil brushed with the olive oil.",
+       "min": 4
+      },
+      {
+       "text": "Cook on a hot barbecue or at 200C for 35 minutes until soft.",
+       "min": 35
+      },
+      {
+       "text": "Boil the potatoes until tender.",
+       "min": 20
+      },
+      {
+       "text": "Toss the potatoes in the butter and parsley.",
+       "min": 3
+      },
+      {
+       "text": "Serve the eggplant in its foil.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lemon curd sponge cake",

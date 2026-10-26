@@ -323,6 +323,229 @@
        "min": 10
       }
      ]
+    },
+    "veg": {
+     "n": "Big Chris's mushroom and ale pie and chips",
+     "prep_min": 40,
+     "cook_min": 75,
+     "make_ahead": "Filling up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "English ale",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, plus 2 tbsp for the mushrooms",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in 2 tbsp of the oil with the sliced onions and thyme.",
+       "min": 20
+      },
+      {
+       "text": "Add the ale, lentils and soy sauce and simmer for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Thicken with the flour, pour into a dish, cover with puff pastry and bake at 200C.",
+       "min": 30
+      },
+      {
+       "text": "Cut thick chips and fry twice in the rest of the oil until golden.",
+       "min": 25
+      },
+      {
+       "text": "Cook the peas and crush with the butter and mint.",
+       "min": 10
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Big Chris's mushroom pie and chips (alcohol free)",
+     "prep_min": 40,
+     "cook_min": 75,
+     "make_ahead": "Filling up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, plus 2 tbsp for the mushrooms",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in 2 tbsp of the oil with the sliced onions and thyme.",
+       "min": 20
+      },
+      {
+       "text": "Add the vegetable stock, malt vinegar, lentils and soy sauce and simmer for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Thicken with the flour, pour into a dish, cover with puff pastry and bake at 200C.",
+       "min": 30
+      },
+      {
+       "text": "Cut thick chips and fry twice in the rest of the oil until golden.",
+       "min": 25
+      },
+      {
+       "text": "Cook the peas and crush with the butter and mint.",
+       "min": 10
+      }
+     ]
     }
    }
   },

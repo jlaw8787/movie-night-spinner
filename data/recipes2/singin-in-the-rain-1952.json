@@ -178,7 +178,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom à la king",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Filling up to 1 day, reheat gently",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the pastry into squares, shape into cases and bake at 200C until puffed.",
+       "min": 15
+      },
+      {
+       "text": "Fry the mushrooms in the butter until golden, then add the capsicum.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the flour, then the cream, stock and butter beans, and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Spoon into the pastry cases.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pop-out party cake",

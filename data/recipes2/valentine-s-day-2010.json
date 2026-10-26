@@ -311,6 +311,181 @@
        "min": 8
       }
      ]
+    },
+    "veg": {
+     "n": "Valentine's portobello steaks with garlic butter",
+     "prep_min": 20,
+     "cook_min": 52,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until just tender, drain, smash flat on a tray, drizzle with half the oil and roast at 220C.",
+       "min": 45
+      },
+      {
+       "text": "Season the portobellos and sear in the rest of the oil, gill side up first, until browned on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Add most of the butter, the garlic and thyme and baste. Lift out the mushrooms.",
+       "min": 3
+      },
+      {
+       "text": "Add the wine and stock to the pan and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Saute the beans in the remaining butter. Serve with the mushrooms and potatoes.",
+       "min": 8
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Valentine's portobello steaks with garlic butter",
+     "prep_min": 20,
+     "cook_min": 52,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "extra mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until just tender, drain, smash flat on a tray, drizzle with half the oil and roast at 220C.",
+       "min": 45
+      },
+      {
+       "text": "Season the portobellos and sear in the rest of the oil, gill side up first, until browned on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Add most of the butter, the garlic and thyme and baste. Lift out the mushrooms.",
+       "min": 3
+      },
+      {
+       "text": "Add the stock, extra stock and vinegar to the pan and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Saute the beans in the remaining butter. Serve with the mushrooms and potatoes.",
+       "min": 8
+      }
+     ]
     }
    }
   },

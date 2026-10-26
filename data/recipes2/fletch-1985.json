@@ -286,7 +286,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom steak sandwich and a mushroom steak sandwich",
+     "prep_min": 20,
+     "cook_min": 19,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "Turkish rolls, halved",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "hot English mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slowly fry the onions in the butter and sugar until jammy.",
+       "min": 20
+      },
+      {
+       "text": "Season the mushrooms, brush with the oil and sear in a very hot pan, pressing down, until tender.",
+       "min": 8
+      },
+      {
+       "text": "Lay the cheese on the mushrooms and cover briefly to melt.",
+       "min": 1
+      },
+      {
+       "text": "Toast the rolls. Mix the mayonnaise with the mustard.",
+       "min": 3
+      },
+      {
+       "text": "Build each roll with mayo, rocket, tomato, mushrooms and onions, then cut in half so everyone has two.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Country club hot fudge sundaes",

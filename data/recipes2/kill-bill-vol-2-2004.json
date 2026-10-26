@@ -286,7 +286,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hacienda mushroom carnitas",
+     "prep_min": 15,
+     "cook_min": 55,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tomatillos",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the mushrooms into thick strips.",
+       "min": 10
+      },
+      {
+       "text": "Toss with half the oil, the juice of the orange, crushed garlic, bay leaves and salt and roast at 220C, turning, until the edges crisp.",
+       "min": 30
+      },
+      {
+       "text": "Char the tomatillos and chilli, then blitz with coriander.",
+       "min": 15
+      },
+      {
+       "text": "Crisp the mushrooms in batches in a hot pan with the rest of the oil.",
+       "min": 10
+      },
+      {
+       "text": "Warm the tortillas and serve with the mushrooms and salsa.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pai Mei's Chinese almond cookies",

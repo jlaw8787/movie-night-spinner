@@ -214,7 +214,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Brian's lunch (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "Soup up to 2 days, keep chilled and reheat",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "peanut butter",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "jam",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the tomatoes and roast with the onion, garlic and oil at 200C until softened and browned.",
+       "min": 35
+      },
+      {
+       "text": "Transfer to a pot with the stock and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Blitz smooth with the cream and season with salt and pepper. Pour into warmed thermoses.",
+       "min": 5
+      },
+      {
+       "text": "Make four peanut butter and jam sandwiches with the bread, cut off the crusts and serve with the soup.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Detention brownies",

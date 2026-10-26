@@ -210,7 +210,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dampier sausages, mushroom steaks and potato salad (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Potato salad up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chives, snipped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "thick vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf of white bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, cool and dress with mayonnaise and chives.",
+       "min": 25
+      },
+      {
+       "text": "Brush the sausages and mushrooms with oil and grill over medium coals, turning, until browned.",
+       "min": 20
+      },
+      {
+       "text": "Fry the onions on the hotplate until golden.",
+       "min": 15
+      },
+      {
+       "text": "Serve with a stack of white bread and the potato salad.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Red Dog lamingtons",

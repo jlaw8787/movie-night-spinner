@@ -224,7 +224,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pernil-style roast mushrooms",
+     "prep_min": 30,
+     "cook_min": 60,
+     "make_ahead": "Marinate up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "oyster and king oyster mushrooms, torn into large pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin pigeon peas",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "onion, finely diced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the garlic, oregano, salt, vinegar and oil, toss through the mushrooms and leave to marinate for 30 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Heat the oven to 230C and spread the mushrooms over two lined trays.",
+       "min": 5
+      },
+      {
+       "text": "Roast the mushrooms, turning once, until the edges are dark and crisp.",
+       "min": 25
+      },
+      {
+       "text": "Meanwhile cook the rice with the drained pigeon peas, stock and onion until tender, and serve with the mushrooms piled on top.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Paradise flan",

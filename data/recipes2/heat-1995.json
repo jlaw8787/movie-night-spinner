@@ -357,6 +357,225 @@
        "min": 3
       }
      ]
+    },
+    "veg": {
+     "n": "Hanna's mushroom and lentil ragù",
+     "prep_min": 20,
+     "cook_min": 120,
+     "make_ahead": "Better the next day",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "vegetarian parmesan-style cheese rind",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rigatoni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the diced onion, carrot and celery in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the mushrooms and brown hard.",
+       "min": 15
+      },
+      {
+       "text": "Pour in the wine and reduce, then add the tomatoes, lentils, cheese rind and water.",
+       "min": 10
+      },
+      {
+       "text": "Simmer gently for 1 and a half hours, topping up with water.",
+       "min": 90
+      },
+      {
+       "text": "Cook the rigatoni and toss through the ragù with a splash of pasta water.",
+       "min": 12
+      },
+      {
+       "text": "Grate the cheese over.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Hanna's mushroom and lentil ragù (alcohol free)",
+     "prep_min": 20,
+     "cook_min": 120,
+     "make_ahead": "Better the next day",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "vegetarian parmesan-style cheese rind",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rigatoni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the diced onion, carrot and celery in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the mushrooms and brown hard.",
+       "min": 15
+      },
+      {
+       "text": "Pour in the stock and vinegar and reduce, then add the tomatoes, lentils, cheese rind and water.",
+       "min": 10
+      },
+      {
+       "text": "Simmer gently for 1 and a half hours, topping up with water.",
+       "min": 90
+      },
+      {
+       "text": "Cook the rigatoni and toss through the ragù with a splash of pasta water.",
+       "min": 12
+      },
+      {
+       "text": "Grate the cheese over.",
+       "min": 3
+      }
+     ]
     }
    }
   },

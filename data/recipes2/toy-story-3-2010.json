@@ -198,7 +198,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Andy's spaghetti and lentil meatballs",
+     "prep_min": 30,
+     "cook_min": 38,
+     "make_ahead": "Meatballs up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the oil until dry, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Mash the lentils and mix with the mushrooms, egg, breadcrumbs, some of the cheese and the parsley. Roll into balls and chill.",
+       "min": 15
+      },
+      {
+       "text": "Brown the meatballs in the rest of the oil.",
+       "min": 10
+      },
+      {
+       "text": "Simmer the meatballs gently in the tomatoes for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Cook the spaghetti, toss with the sauce and more cheese, and save a plate for the toys.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Strawberry bear shortcakes",

@@ -204,7 +204,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Eggs Florentine with mushrooms",
+     "prep_min": 15,
+     "cook_min": 8,
+     "make_ahead": "Hollandaise is best fresh, keep warm up to 30 minutes",
+     "ingredients": [
+      {
+       "q": 11,
+       "u": "",
+       "item": "eggs (3 yolks for the sauce, 8 for poaching)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 170,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "English muffins",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "field mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt 150 g of the butter.",
+       "min": 3
+      },
+      {
+       "text": "Whisk the 3 yolks with lemon juice over a gentle simmer, then slowly pour in the melted butter until thick.",
+       "min": 7
+      },
+      {
+       "text": "Fry the mushrooms in the rest of the butter, then wilt the spinach in the same pan.",
+       "min": 5
+      },
+      {
+       "text": "Poach the eggs in barely simmering water and toast the muffins.",
+       "min": 4
+      },
+      {
+       "text": "Top the muffins with spinach, mushrooms and eggs, spoon over the hollandaise and finish with chives.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Abandoned wedding cake",

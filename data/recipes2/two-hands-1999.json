@@ -344,7 +344,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sichuan pepper mushrooms and egg fried rice",
+     "prep_min": 25,
+     "cook_min": 10,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "oyster mushrooms, torn into large pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rice flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground Sichuan pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "cold cooked jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs, scrambled",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the mushrooms and pat dry.",
+       "min": 6
+      },
+      {
+       "text": "Toss in rice flour, Sichuan pepper and salt.",
+       "min": 4
+      },
+      {
+       "text": "Fry at 190C for 2 minutes until crisp, then toss with chilli and half the spring onion.",
+       "min": 10
+      },
+      {
+       "text": "Scramble the eggs in the 2 tbsp of oil, then fry the rice with the eggs and the rest of the spring onion.",
+       "min": 10
+      },
+      {
+       "text": "Serve together.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pavlova",

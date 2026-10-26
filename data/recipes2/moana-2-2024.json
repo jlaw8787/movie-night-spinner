@@ -212,7 +212,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ocean voyage tofu in banana leaf",
+     "prep_min": 12,
+     "cook_min": 45,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cut into 4 slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "banana leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the tofu in some of the coconut milk with lime juice, chilli and soy.",
+       "min": 20
+      },
+      {
+       "text": "Soften the banana leaves over a flame or in hot water.",
+       "min": 3
+      },
+      {
+       "text": "Wrap each slab in a leaf with a spoon of the marinade.",
+       "min": 5
+      },
+      {
+       "text": "Grill the parcels.",
+       "min": 12
+      },
+      {
+       "text": "Cook the rice in the remaining coconut milk with the water and salt.",
+       "min": 15
+      },
+      {
+       "text": "Serve the tofu in its leaf.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Haupia coconut pudding with mango",

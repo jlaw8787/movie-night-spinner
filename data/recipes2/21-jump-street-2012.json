@@ -194,7 +194,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Prom night haloumi in mushroom cream",
+     "prep_min": 25,
+     "cook_min": 71,
+     "make_ahead": "Gratin can be made 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 450,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin, layer in a dish with part of the cream and the garlic, and bake at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Pan-fry the haloumi in the butter with thyme until golden on both sides, then lift out.",
+       "min": 6
+      },
+      {
+       "text": "Fry the mushrooms in the same pan and add the remaining cream to make a sauce. Return the haloumi to warm through.",
+       "min": 8
+      },
+      {
+       "text": "Steam the beans and serve everything together.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Graduation cupcakes",

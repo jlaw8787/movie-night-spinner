@@ -166,7 +166,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "New York street hot dogs (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 31,
+     "make_ahead": "Tomato onions up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large vegetarian frankfurts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sauerkraut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onions.",
+       "min": 5
+      },
+      {
+       "text": "Cook the onions in the butter over medium-low heat until soft.",
+       "min": 20
+      },
+      {
+       "text": "Add the tomatoes and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Heat the vegetarian frankfurts in barely simmering water for 3 minutes, drain and griddle until browned. Warm the sauerkraut and steam the buns.",
+       "min": 6
+      },
+      {
+       "text": "Assemble with mustard and the tomato onions.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Snowball fight cupcakes",

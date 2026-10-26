@@ -196,7 +196,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gede's seaweed farm tempeh nasi goreng",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "cooked jasmine rice, cold",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "tempeh, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "kecap manis",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the tempeh, crush the garlic, chop the chillies and slice the cucumber.",
+       "min": 10
+      },
+      {
+       "text": "Stir fry the tempeh in the oil with the garlic and chilli in a very hot wok until golden.",
+       "min": 6
+      },
+      {
+       "text": "Add the cold rice and kecap manis and toss until smoky.",
+       "min": 5
+      },
+      {
+       "text": "Fry the eggs and serve on top with the cucumber slices.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Black rice pudding",

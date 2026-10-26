@@ -184,7 +184,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Manhattan mushroom steak sandwich",
+     "prep_min": 15,
+     "cook_min": 32,
+     "make_ahead": "Onions up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "ciabatta rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onions.",
+       "min": 5
+      },
+      {
+       "text": "Cook the onions in the butter over low heat until jammy.",
+       "min": 30
+      },
+      {
+       "text": "Brush the mushrooms with the oil, season, sear hard on both sides until tender, then slice thickly.",
+       "min": 10
+      },
+      {
+       "text": "Split and toast the ciabatta, spread with horseradish cream and pile with mushrooms, onions and rocket.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rainbow cookies",

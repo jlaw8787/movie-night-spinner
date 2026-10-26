@@ -334,7 +334,118 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Petra's stuffed capsicums with yoghurt (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves (2 for the filling, 1 for the yoghurt)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large red capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and two of the garlic cloves in the oil, add the mushrooms and brown.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the lentils, rice, both paprikas, salt and a little water and cook briefly.",
+       "min": 5
+      },
+      {
+       "text": "Cut the tops off the capsicums, remove the seeds and fill.",
+       "min": 8
+      },
+      {
+       "text": "Stand in a dish, pour around the passata mixed with water and bake covered at 180C.",
+       "min": 50
+      },
+      {
+       "text": "Mix the yoghurt with the remaining crushed garlic. Serve with crusty bread.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Year-round Christmas shop gingerbread",

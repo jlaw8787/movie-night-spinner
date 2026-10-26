@@ -220,7 +220,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sunset Strip chipotle cauliflower tacos",
+     "prep_min": 20,
+     "cook_min": 57,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, in small florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chipotle in adobo",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the chipotle in adobo, crushed garlic, the juice of 2 limes, the cumin, oil and half the salt.",
+       "min": 5
+      },
+      {
+       "text": "Toss the cauliflower in the marinade and leave for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Slice the red onion thin and soak in the juice of 1 lime and a pinch of the salt for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Roast the cauliflower at 230C until charred at the edges.",
+       "min": 25
+      },
+      {
+       "text": "Mash the avocados with the last lime and the rest of the salt.",
+       "min": 5
+      },
+      {
+       "text": "Warm the tortillas and fill with avocado, cauliflower, onion and coriander.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Neon pink raspberry cheesecake cups",

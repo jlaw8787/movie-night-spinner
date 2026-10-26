@@ -240,7 +240,116 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Maharaja's paneer curry",
+     "prep_min": 25,
+     "cook_min": 90,
+     "make_ahead": "Curry keeps 3 days chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "paneer, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece ginger, 4cm, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "garam masala",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the paneer with half the yoghurt, the ginger, garlic and garam masala.",
+       "min": 10
+      },
+      {
+       "text": "Marinate in the fridge.",
+       "min": 30
+      },
+      {
+       "text": "Cook the onions slowly in oil until deep brown.",
+       "min": 25
+      },
+      {
+       "text": "Add the tomatoes, chickpeas and stock and simmer until thick.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the paneer with its marinade and the rest of the yoghurt and simmer gently.",
+       "min": 10
+      },
+      {
+       "text": "Cook the rice, season the curry with salt and serve.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chilled mango brains",

@@ -188,7 +188,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Asgardian feast whole roast celeriac with roast roots",
+     "prep_min": 20,
+     "cook_min": 140,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "medium celeriacs, scrubbed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "parsnips, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the celeriacs with half the oil, the salt and cracked pepper and wrap each in foil with half the butter and thyme.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C for 1 and a half hours.",
+       "min": 90
+      },
+      {
+       "text": "Toss the carrots, parsnips and potatoes in the rest of the oil, unwrap the celeriacs and roast everything together, basting with the buttery juices.",
+       "min": 50
+      },
+      {
+       "text": "Cut the celeriacs into wedges and serve on a big board with the roots and crusty bread.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Puente Antiguo churros with hot chocolate",

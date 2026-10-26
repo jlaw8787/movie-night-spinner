@@ -194,7 +194,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wedding vegetable kleftiko with feta",
+     "prep_min": 20,
+     "cook_min": 103,
+     "make_ahead": "Rest 10 minutes, open at the table",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, in thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, in strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "cloves of garlic, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "block feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "baking paper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the eggplant, zucchini, capsicum, potatoes and tomatoes with the garlic, oregano, lemon juice, oil and salt.",
+       "min": 15
+      },
+      {
+       "text": "Pile onto a large sheet of baking paper in a roasting dish, sit the feta on top and wrap tightly, then cover with foil.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 180C until the potatoes are very soft.",
+       "min": 90
+      },
+      {
+       "text": "Rest, then open at the table so the steam rises.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Loukoumades, Greek honey doughnuts",

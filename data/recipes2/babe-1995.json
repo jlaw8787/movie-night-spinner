@@ -204,7 +204,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Shepherd's pie (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 77,
+     "make_ahead": "Up to 1 day, assemble then bake",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "canned brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion and carrots and chop the mushrooms. Peel the potatoes and cut into chunks.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms hard in the oil in a large pan, then add the onion and carrot and cook a few minutes.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the lentils, tomato paste, soy sauce and stock and simmer until thick. Season with salt and pepper.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes until soft, drain and mash with the butter.",
+       "min": 20
+      },
+      {
+       "text": "Spoon the lentil mix into a baking dish, top with mash and fork the surface. Bake at 200C until golden.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Baa-ram-ewe apple crumble",

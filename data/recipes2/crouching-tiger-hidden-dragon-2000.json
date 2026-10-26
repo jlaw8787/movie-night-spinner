@@ -192,7 +192,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Yu Shu Lien's steamed silken tofu",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "blocks silken tofu (300 g each)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the ginger and spring onions, keeping some spring onion shredded for the top.",
+       "min": 6
+      },
+      {
+       "text": "Slide the tofu onto a heatproof plate on the sliced ginger and spring onion.",
+       "min": 4
+      },
+      {
+       "text": "Steam until hot through.",
+       "min": 10
+      },
+      {
+       "text": "Pile the shredded spring onion and coriander on top.",
+       "min": 3
+      },
+      {
+       "text": "Pour over soy, then smoking hot oil so it sizzles.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Green Destiny sesame balls",

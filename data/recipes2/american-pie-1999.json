@@ -208,7 +208,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Prom night eggplant parmesan and fries",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Crumb up to 4 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "napoli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "salad leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplants lengthways into 8 thick slices and crumb in flour, egg then panko. Soak the cut chips in cold water, then dry well.",
+       "min": 15
+      },
+      {
+       "text": "Fry the chips in the vegetable oil at a low heat until soft, drain, then fry again at a high heat until golden.",
+       "min": 15
+      },
+      {
+       "text": "Shallow fry the eggplant in some of the oil until golden outside and soft all the way through.",
+       "min": 10
+      },
+      {
+       "text": "Top each slice with napoli sauce, smoked tofu and mozzarella and grill until bubbling. Serve with the chips and salad leaves.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Warm apple pie",

@@ -176,7 +176,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Max Shreck's masquerade roast pumpkin",
+     "prep_min": 30,
+     "cook_min": 75,
+     "make_ahead": "Apple sauce up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "small butternut pumpkin, about 1.5kg",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "apples",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the pumpkin lengthways, scoop out the seeds and score the flesh in a deep criss-cross.",
+       "min": 10
+      },
+      {
+       "text": "Rub with half the oil, the salt and some chopped sage, then roast at 220C cut side up.",
+       "min": 20
+      },
+      {
+       "text": "Add the potatoes tossed in the rest of the oil and roast until the pumpkin is tender and the edges are crisp.",
+       "min": 50
+      },
+      {
+       "text": "Meanwhile cook the apples with a little sage and the sugar to a chunky sauce.",
+       "min": 20
+      },
+      {
+       "text": "Fry the rest of the sage leaves in the butter until crisp and pour over the pumpkin before carving.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Snow globe cupcakes",

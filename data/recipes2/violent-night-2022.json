@@ -349,6 +349,205 @@
        "min": 3
       }
      ]
+    },
+    "veg": {
+     "n": "Lightstone roast celeriac with horseradish",
+     "prep_min": 25,
+     "cook_min": 133,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "celeriacs (about 800 g each)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the celeriacs and rub with the garlic, pepper, 2 tbsp of the oil and the salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C wrapped in foil for 60 minutes, then unwrap and roast until golden and tender, then rest and slice.",
+       "min": 90
+      },
+      {
+       "text": "Parboil the potatoes, rough up, toss in the remaining oil and roast.",
+       "min": 50
+      },
+      {
+       "text": "Simmer the tray juices with the wine and stock until reduced by half.",
+       "min": 10
+      },
+      {
+       "text": "Mix the sour cream with the horseradish and a squeeze of lemon.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Lightstone roast celeriac with horseradish (alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 133,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "celeriacs (about 800 g each)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock, extra",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the celeriacs and rub with the garlic, pepper, 2 tbsp of the oil and the salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C wrapped in foil for 60 minutes, then unwrap and roast until golden and tender, then rest and slice.",
+       "min": 90
+      },
+      {
+       "text": "Parboil the potatoes, rough up, toss in the remaining oil and roast.",
+       "min": 50
+      },
+      {
+       "text": "Simmer the tray juices with all the stock and the vinegar until reduced by half.",
+       "min": 10
+      },
+      {
+       "text": "Mix the sour cream with the horseradish and a squeeze of lemon.",
+       "min": 3
+      }
+     ]
     }
    }
   },

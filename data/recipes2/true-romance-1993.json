@@ -206,7 +206,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hotel club sandwich and shoestring fries (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 32,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into shoestrings and fry once in the oil.",
+       "min": 15
+      },
+      {
+       "text": "Boil the eggs for 9 minutes, cool in cold water, peel and slice.",
+       "min": 12
+      },
+      {
+       "text": "Fry the smoked tofu in a little of the oil until crisp, then splash with the soy sauce. Toast the bread.",
+       "min": 12
+      },
+      {
+       "text": "Layer the tofu, egg, lettuce, sliced tomato and mayonnaise across three slices each and cut into triangles.",
+       "min": 15
+      },
+      {
+       "text": "Fry the fries a second time until crisp.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Diner cherry pie",

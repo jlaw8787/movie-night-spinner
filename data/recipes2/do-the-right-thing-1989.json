@@ -186,7 +186,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sal's Famous slice (vegetarian)",
+     "prep_min": 70,
+     "cook_min": 10,
+     "make_ahead": "Dough can be made a day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "grated low-moisture mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based pepperoni",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rest the dough at room temperature for an hour. Season the tomatoes with salt.",
+       "min": 60
+      },
+      {
+       "text": "Stretch the bases thin and spread with the sauce. Top with the mozzarella and plant-based pepperoni.",
+       "min": 10
+      },
+      {
+       "text": "Bake on a preheated tray at the oven's highest setting until bubbling and charred in spots. Sprinkle with oregano and cut big.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cherry shaved ice",

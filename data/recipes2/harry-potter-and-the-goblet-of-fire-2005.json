@@ -315,6 +315,243 @@
        "min": 10
       }
      ]
+    },
+    "veg": {
+     "n": "Yule Ball mushroom wellington",
+     "prep_min": 40,
+     "cook_min": 125,
+     "make_ahead": "Wellington can be rolled 1 day ahead, gravy and carrots 1 hour ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs, one beaten for glazing",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 165,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots, cut in batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the oil until all the liquid has gone, add the spinach to wilt, season and cool.",
+       "min": 25
+      },
+      {
+       "text": "Heat the oven to 220C. Spread the mushroom mix along the overlapped pastry sheets, roll into a log, seal, brush with the beaten egg and bake until deep golden.",
+       "min": 40
+      },
+      {
+       "text": "Roast the potatoes in 2 tbsp of the oil alongside.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the remaining 3 eggs, 150 g of the flour and the milk and bake Yorkshires in tins heated with the last of the oil at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Glaze the carrots with honey and roast.",
+       "min": 25
+      },
+      {
+       "text": "For the gravy, melt the butter with the remaining flour, add the red wine and reduce, then whisk in the stock and simmer.",
+       "min": 10
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Yule Ball mushroom wellington",
+     "prep_min": 40,
+     "cook_min": 125,
+     "make_ahead": "Wellington can be rolled 1 day ahead, gravy and carrots 1 hour ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs, one beaten for glazing",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 165,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots, cut in batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 450,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the oil until all the liquid has gone, add the spinach to wilt, season and cool.",
+       "min": 25
+      },
+      {
+       "text": "Heat the oven to 220C. Spread the mushroom mix along the overlapped pastry sheets, roll into a log, seal, brush with the beaten egg and bake until deep golden.",
+       "min": 40
+      },
+      {
+       "text": "Roast the potatoes in 2 tbsp of the oil alongside.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the remaining 3 eggs, 150 g of the flour and the milk and bake Yorkshires in tins heated with the last of the oil at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Glaze the carrots with honey and roast.",
+       "min": 25
+      },
+      {
+       "text": "For the gravy, melt the butter with the remaining flour, whisk in the stock and vinegar and simmer.",
+       "min": 10
+      }
+     ]
     }
    }
   },

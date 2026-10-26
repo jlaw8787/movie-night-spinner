@@ -242,7 +242,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Italian beef (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 45,
+     "make_ahead": "Jus up to 2 days ahead; roast the mushrooms to serve",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "portobello mushrooms, sliced 1cm thick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano, plus 1 tsp for the jus",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "black pepper, plus more for the jus",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "hot giardiniera",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the oil, salt, pepper and oregano and roast at 220C until browned and tender.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the stock with the soy sauce, garlic, oregano and plenty of pepper.",
+       "min": 20
+      },
+      {
+       "text": "Warm the mushrooms in the jus, pile into the rolls, dip the whole sandwich and top with giardiniera.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ricotta zeppole",

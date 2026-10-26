@@ -202,7 +202,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Armande's birthday feast (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 70,
+     "make_ahead": "Mushrooms can be confited up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large king oyster mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "salad leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the cut side of the mushrooms and rub with salt, thyme and crushed garlic.",
+       "min": 10
+      },
+      {
+       "text": "Lay snugly in a dish, cover with the oil and cook slowly at 140C until very tender.",
+       "min": 50
+      },
+      {
+       "text": "Meanwhile cut the potatoes, toss in some of the oil from the mushrooms and roast at 200C until golden.",
+       "min": 10
+      },
+      {
+       "text": "Crisp the mushrooms cut side down in a hot pan.",
+       "min": 8
+      },
+      {
+       "text": "Dress the salad leaves with the vinegar and a little of the oil and serve with the mushrooms and potatoes.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chocolate mousse",

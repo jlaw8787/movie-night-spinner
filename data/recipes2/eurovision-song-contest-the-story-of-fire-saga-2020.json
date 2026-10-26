@@ -307,6 +307,237 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Erick's roast celeriac with caramelised potatoes",
+     "prep_min": 25,
+     "cook_min": 135,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "celeriacs (about 800g each)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C.",
+       "min": 5
+      },
+      {
+       "text": "Peel the celeriacs, rub with the oil, salt, pepper, thyme and crushed garlic cloves, wrap in foil and roast for 90 minutes. Unwrap and roast 30 minutes more, basting with a little of the butter.",
+       "min": 120
+      },
+      {
+       "text": "Boil the baby potatoes until tender and peel.",
+       "min": 12
+      },
+      {
+       "text": "Melt the sugar in a pan until golden, add some of the butter and the potatoes and toss 5 minutes until glazed.",
+       "min": 10
+      },
+      {
+       "text": "Melt a knob of the butter in a saucepan, stir in the flour, then add the red wine, stock and soy sauce and simmer to a gravy.",
+       "min": 8
+      },
+      {
+       "text": "Cook the peas, toss with the last of the butter and serve with the celeriac carved into thick slices.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Erick's roast celeriac with caramelised potatoes",
+     "prep_min": 25,
+     "cook_min": 135,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "celeriacs (about 800g each)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C.",
+       "min": 5
+      },
+      {
+       "text": "Peel the celeriacs, rub with the oil, salt, pepper, thyme and crushed garlic cloves, wrap in foil and roast for 90 minutes. Unwrap and roast 30 minutes more, basting with a little of the butter.",
+       "min": 120
+      },
+      {
+       "text": "Boil the baby potatoes until tender and peel.",
+       "min": 12
+      },
+      {
+       "text": "Melt the sugar in a pan until golden, add some of the butter and the potatoes and toss 5 minutes until glazed.",
+       "min": 10
+      },
+      {
+       "text": "Melt a knob of the butter in a saucepan, stir in the flour, then add all the stock, the red wine vinegar and soy sauce and simmer to a gravy.",
+       "min": 8
+      },
+      {
+       "text": "Cook the peas, toss with the last of the butter and serve with the celeriac carved into thick slices.",
+       "min": 5
+      }
+     ]
     }
    }
   },

@@ -286,7 +286,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Don Diego's rancho portobello asada",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Marinate up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can black beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the lime and orange juice with the oil, crushed garlic and cumin and coat the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Marinate for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Cook the rice and warm the beans.",
+       "min": 15
+      },
+      {
+       "text": "Chop the tomatoes and onion for a fresh salsa.",
+       "min": 5
+      },
+      {
+       "text": "Grill the mushrooms over very high heat for 4 minutes a side.",
+       "min": 9
+      },
+      {
+       "text": "Slice thickly and serve with the rice, beans and salsa.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Churros with chocolate",

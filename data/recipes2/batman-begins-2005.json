@@ -232,7 +232,134 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wayne Manor mushroom wellington roast",
+     "prep_min": 30,
+     "cook_min": 125,
+     "make_ahead": "Filling up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour, for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Finely chop the mushrooms, onion and garlic and fry in 1 tbsp of the olive oil until all the liquid is gone. Stir in the spinach to wilt, season and cool.",
+       "min": 25
+      },
+      {
+       "text": "Lay the filling along two overlapping sheets of puff pastry, roll into a log, seal, brush with 1 beaten egg and bake at 200C for 40 minutes.",
+       "min": 45
+      },
+      {
+       "text": "Roast the potatoes in the rest of the olive oil.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the remaining 3 eggs, the 150g of flour and the milk and bake in hot tins with the vegetable oil at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Whisk the gravy flour into the mushroom pan, add the stock and soy sauce and simmer into gravy.",
+       "min": 10
+      },
+      {
+       "text": "Rest the wellington 10 minutes before slicing.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bruce's birthday cake",

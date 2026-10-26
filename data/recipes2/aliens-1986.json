@@ -230,7 +230,124 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sulaco mess hall lentil and mushroom loaf",
+     "prep_min": 35,
+     "cook_min": 55,
+     "make_ahead": "Loaf up to 1 day, keep chilled and reheat",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 260,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "walnuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 180C. Soak the breadcrumbs in 100ml of the milk. Fry the onion and mushrooms in the oil until dry.",
+       "min": 15
+      },
+      {
+       "text": "Mix with the lentils, walnuts, eggs, soy sauce, salt and pepper, and press into a loaf on a lined tray.",
+       "min": 10
+      },
+      {
+       "text": "Glaze with the tomato sauce and bake until firm.",
+       "min": 45
+      },
+      {
+       "text": "Meanwhile peel and chop the potatoes, boil until tender, then mash with the butter and the remaining warm milk.",
+       "min": 10
+      },
+      {
+       "text": "Rest the loaf for 10 minutes, slice and serve with the mash.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Facehugger panna cotta",

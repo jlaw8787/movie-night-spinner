@@ -210,7 +210,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ninety-year feast dill-cured carrots",
+     "prep_min": 25,
+     "cook_min": 1515,
+     "make_ahead": "Needs 24 hours marinating, keeps 4 days chilled",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "rock salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar, 30g for the cure and the rest for the sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf rye bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bury the whole carrots in the rock salt in a baking dish and bake at 190C until tender.",
+       "min": 80
+      },
+      {
+       "text": "Crack off the salt, peel the carrots and slice into long thin ribbons with a peeler.",
+       "min": 15
+      },
+      {
+       "text": "Toss the ribbons with 2 tbsp of the oil, 1 tbsp of the vinegar, 30g of the sugar, half the chopped dill and the white pepper. Cover and marinate in the fridge for 24 hours.",
+       "min": 1440
+      },
+      {
+       "text": "Mix the Dijon, remaining sugar, vinegar, oil and dill for the sauce. Serve with rye bread.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Strawberry midsummer cake",

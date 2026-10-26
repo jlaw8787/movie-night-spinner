@@ -234,7 +234,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jackie Moon's barbecue mushroom ribs",
+     "prep_min": 15,
+     "cook_min": 43,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag coleslaw mix",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the king oyster mushrooms lengthways and score the cut sides. Rub with the oil, salt, pepper and smoked paprika.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C until browned and tender.",
+       "min": 25
+      },
+      {
+       "text": "Brush with the barbecue sauce and grill until sticky.",
+       "min": 8
+      },
+      {
+       "text": "Boil the corn cobs and toss in the butter.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the buttered corn and the coleslaw mixed with mayonnaise.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Seventies orange creamsicle cake",

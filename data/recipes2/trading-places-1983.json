@@ -194,7 +194,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Billy Ray's club dinner, roast celeriac",
+     "prep_min": 20,
+     "cook_min": 120,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "medium celeriac",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the celeriac, rub with 1 tbsp of the oil, the salt and thyme, and sit in a roasting tin.",
+       "min": 15
+      },
+      {
+       "text": "Roast the celeriac at 180C for 50 minutes, basting with the tin juices.",
+       "min": 50
+      },
+      {
+       "text": "Toss the potatoes in the rest of the oil and roast on another shelf with the celeriac for 45 minutes more.",
+       "min": 45
+      },
+      {
+       "text": "Brush the celeriac with the butter, turn the oven to 230C and roast 10 minutes for a crust.",
+       "min": 10
+      },
+      {
+       "text": "Pour the tin juices into a small pan with the stock and soy sauce and simmer for jus.",
+       "min": 10
+      },
+      {
+       "text": "Carve the celeriac into thick slices and serve with horseradish cream, potatoes and jus.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Orange cake",

@@ -240,7 +240,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cooper Station mushroom and corn pie",
+     "prep_min": 25,
+     "cook_min": 33,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "leek, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "corn kernels",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in half the butter until golden and lift out.",
+       "min": 10
+      },
+      {
+       "text": "Soften the leek in the rest of the butter.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the flour, then the stock and cream.",
+       "min": 5
+      },
+      {
+       "text": "Add the mushrooms, corn and thyme.",
+       "min": 2
+      },
+      {
+       "text": "Tip into a dish and top with the pastry.",
+       "min": 3
+      },
+      {
+       "text": "Bake at 200C for 30 minutes.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Murph's bookshelf buttermilk pie",

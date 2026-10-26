@@ -214,7 +214,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dad's cauliflower chops and veg",
+     "prep_min": 15,
+     "cook_min": 53,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "fresh rosemary, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves of garlic, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Cut each cauliflower through the stem into 2 thick chops and rub with the rosemary, garlic, salt and oil.",
+       "min": 8
+      },
+      {
+       "text": "Sear the chops in a hot ovenproof pan for 3 minutes a side, then roast until tender.",
+       "min": 25
+      },
+      {
+       "text": "Boil the potatoes and mash with 50g of the butter.",
+       "min": 22
+      },
+      {
+       "text": "Cook the peas.",
+       "min": 5
+      },
+      {
+       "text": "Melt the remaining butter in the cauliflower pan, stir in the flour, then whisk in the stock and soy sauce and simmer into a gravy.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Vanilla slice",

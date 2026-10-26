@@ -208,7 +208,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Nana's pozole rojo with mushrooms",
+     "prep_min": 18,
+     "cook_min": 65,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "oyster mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dried guajillo chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned hominy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "radishes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the chillies in hot water. Halve the onion and peel the garlic.",
+       "min": 8
+      },
+      {
+       "text": "Simmer the stock with the onion and half the garlic.",
+       "min": 25
+      },
+      {
+       "text": "Fry the mushrooms in the oil until browned at the edges.",
+       "min": 10
+      },
+      {
+       "text": "Blend the chillies with the rest of the garlic, stir into the pot with the mushrooms and hominy and simmer.",
+       "min": 30
+      },
+      {
+       "text": "Shred the cabbage and slice the radishes.",
+       "min": 8
+      },
+      {
+       "text": "Serve topped with cabbage, radish, oregano and lime.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pan dulce sweet buns",

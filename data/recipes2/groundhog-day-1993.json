@@ -202,7 +202,120 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Phil's diner feast (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 15,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "ready-baked fruit pie",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the flour, baking powder, sugar, one egg and buttermilk into a batter and rest.",
+       "min": 15
+      },
+      {
+       "text": "Fry the mushrooms in the oil with the smoked paprika over medium heat until crisp at the edges and keep warm.",
+       "min": 10
+      },
+      {
+       "text": "Cook small pancakes in half the butter until bubbles set and both sides are golden.",
+       "min": 16
+      },
+      {
+       "text": "Fry four eggs in the mushroom pan until the whites are set.",
+       "min": 3
+      },
+      {
+       "text": "Toast the bread and butter with the remaining butter.",
+       "min": 4
+      },
+      {
+       "text": "Warm small slices of pie at 180C.",
+       "min": 10
+      },
+      {
+       "text": "Bring everything to the table at once, with maple syrup for the pancakes.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Angel food cake",

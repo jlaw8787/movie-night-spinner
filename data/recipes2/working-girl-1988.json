@@ -218,7 +218,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Power lunch mushroom steak salad",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 7,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cos lettuces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "blue cheese, crumbled",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the mushrooms with 1 tbsp of the oil and the garlic, sear hard in a hot pan for 4 minutes a side, then rest.",
+       "min": 12
+      },
+      {
+       "text": "Toss the cos with the tomatoes and onion.",
+       "min": 5
+      },
+      {
+       "text": "Whisk the vinegar, the rest of the oil and Dijon.",
+       "min": 3
+      },
+      {
+       "text": "Slice the mushrooms thick and arrange over the salad with dressing and blue cheese.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wedding cake slice",

@@ -198,7 +198,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Thirty-minute smoky mushroom pie",
+     "prep_min": 25,
+     "cook_min": 1614,
+     "make_ahead": "Dough needs 1 to 2 days in the fridge",
+     "ingredients": [
+      {
+       "q": 380,
+       "u": "g",
+       "item": "bread flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "g",
+       "item": "dried yeast",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 245,
+       "u": "ml",
+       "item": "cool water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "low-moisture mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "button mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the flour, yeast, salt and water, then knead for about 8 minutes. Divide into 2 balls.",
+       "min": 20
+      },
+      {
+       "text": "Cold-ferment the covered balls in the fridge for 24 hours (up to 48 is fine).",
+       "min": 1440
+      },
+      {
+       "text": "Bring the dough to room temperature for 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Heat a pizza steel in the oven at its maximum temperature, about 250 to 275C. Toss the mushrooms with the smoked paprika and oil.",
+       "min": 45
+      },
+      {
+       "text": "Stretch each ball thin, spread with half the tomatoes and top with half the mozzarella and mushrooms. Bake one at a time on the hot steel until the crust is cooked and crisp. Cut into wedges.",
+       "min": 14
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Aunt May's pancakes",

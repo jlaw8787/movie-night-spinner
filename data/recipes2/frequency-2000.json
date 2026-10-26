@@ -364,7 +364,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Queens pizza (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 1621,
+     "make_ahead": "Dough needs 1 to 2 days in the fridge",
+     "ingredients": [
+      {
+       "q": 380,
+       "u": "g",
+       "item": "bread flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "g",
+       "item": "dried yeast",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 245,
+       "u": "ml",
+       "item": "cool water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "low-moisture mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the flour, yeast, salt and water and knead. Divide into two balls.",
+       "min": 12
+      },
+      {
+       "text": "Refrigerate covered to cold-ferment for a day or two.",
+       "min": 1440
+      },
+      {
+       "text": "Bring to room temperature.",
+       "min": 120
+      },
+      {
+       "text": "Heat a pizza steel at the oven's maximum, about 250 to 275C.",
+       "min": 45
+      },
+      {
+       "text": "Slice the vegetarian sausages and pan-fry in the oil until browned, then crumble.",
+       "min": 5
+      },
+      {
+       "text": "Stretch the dough thin into two pizzas. Top with tomatoes, mozzarella and sausage.",
+       "min": 10
+      },
+      {
+       "text": "Bake each on the steel until crisp and cooked, then cut into wedges.",
+       "min": 14
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Julia's apple pie",

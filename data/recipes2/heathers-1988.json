@@ -317,6 +317,213 @@
        "min": 20
       }
      ]
+    },
+    "veg": {
+     "n": "Funeral reception lentil and mushroom lasagne",
+     "prep_min": 40,
+     "cook_min": 107,
+     "make_ahead": "Assemble a day ahead, bake fresh",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tins crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "lasagne sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms and onion in the oil.",
+       "min": 12
+      },
+      {
+       "text": "Add the lentils, tomatoes and red wine and simmer until thick.",
+       "min": 45
+      },
+      {
+       "text": "Make a bechamel with the butter, flour and milk.",
+       "min": 10
+      },
+      {
+       "text": "Layer the sauce, bechamel, lasagne sheets and mozzarella in a baking dish.",
+       "min": 15
+      },
+      {
+       "text": "Bake at 180C.",
+       "min": 45
+      },
+      {
+       "text": "Rest before cutting.",
+       "min": 20
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Funeral reception lentil and mushroom lasagne",
+     "prep_min": 40,
+     "cook_min": 107,
+     "make_ahead": "Assemble a day ahead, bake fresh",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tins crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 130,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "lasagne sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms and onion in the oil.",
+       "min": 12
+      },
+      {
+       "text": "Add the lentils, tomatoes, stock and balsamic vinegar and simmer until thick.",
+       "min": 45
+      },
+      {
+       "text": "Make a bechamel with the butter, flour and milk.",
+       "min": 10
+      },
+      {
+       "text": "Layer the sauce, bechamel, lasagne sheets and mozzarella in a baking dish.",
+       "min": 15
+      },
+      {
+       "text": "Bake at 180C.",
+       "min": 45
+      },
+      {
+       "text": "Rest before cutting.",
+       "min": 20
+      }
+     ]
     }
    }
   },

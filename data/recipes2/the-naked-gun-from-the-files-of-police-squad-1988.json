@@ -156,7 +156,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ballpark chilli dogs (vegetarian)",
+     "prep_min": 13,
+     "cook_min": 48,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "cans black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chopped tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian hot dogs",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onions.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms with one onion and the chilli powder in the oil until browned. Add the tomatoes and beans.",
+       "min": 10
+      },
+      {
+       "text": "Simmer, mashing some of the beans, until thick.",
+       "min": 30
+      },
+      {
+       "text": "Griddle the vegetarian hot dogs and steam the buns.",
+       "min": 8
+      },
+      {
+       "text": "Fill the buns, spoon over chilli and top with cheddar and the diced raw onion.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ninth inning malt and fudge ice cream cups",

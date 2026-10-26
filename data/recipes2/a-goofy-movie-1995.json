@@ -260,7 +260,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pete's RV barbecue sausages (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Onions up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "thick vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the vegetarian sausages with half the oil and grill over medium coals or a barbecue, turning often, until browned and hot through.",
+       "min": 12
+      },
+      {
+       "text": "Fry the onions in the rest of the oil until soft and sweet.",
+       "min": 10
+      },
+      {
+       "text": "Grill the corn and brush with butter.",
+       "min": 10
+      },
+      {
+       "text": "Serve the sausages in the rolls with the onions, mustard and tomato sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bigfoot campsite s'mores",

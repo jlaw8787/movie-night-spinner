@@ -268,7 +268,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mum's mushroom and white bean rice bake",
+     "prep_min": 15,
+     "cook_min": 52,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "hot vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in the olive oil and butter.",
+       "min": 12
+      },
+      {
+       "text": "Spread the rice in a baking dish and add the mushrooms and cannellini beans.",
+       "min": 3
+      },
+      {
+       "text": "Pour over the hot vegetable stock and cream with the thyme.",
+       "min": 2
+      },
+      {
+       "text": "Cover and bake at 180C for 40 minutes, then uncover for 10 minutes until golden on top.",
+       "min": 50
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "French crêpes",

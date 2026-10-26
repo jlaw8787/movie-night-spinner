@@ -216,7 +216,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smoked tofu, spinach and gruyere strata",
+     "prep_min": 27,
+     "cook_min": 175,
+     "make_ahead": "Assemble the night before, bake fresh",
+     "ingredients": [
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "thick slices day-old bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "gruyere",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of tomato relish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butter a 2L baking dish.",
+       "min": 5
+      },
+      {
+       "text": "Tear the bread and layer with the diced smoked tofu, spinach and grated gruyere.",
+       "min": 15
+      },
+      {
+       "text": "Whisk the eggs with milk, Dijon, salt and pepper and pour over. Press down and cover.",
+       "min": 7
+      },
+      {
+       "text": "Chill for at least 2 hours or overnight.",
+       "min": 120
+      },
+      {
+       "text": "Bake at 180C until puffed and golden.",
+       "min": 45
+      },
+      {
+       "text": "Rest before serving with tomato relish.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas morning cinnamon scrolls",

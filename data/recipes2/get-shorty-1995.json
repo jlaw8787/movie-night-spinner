@@ -289,6 +289,169 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Chili Palmer's portobello frites",
+     "prep_min": 30,
+     "cook_min": 18,
+     "make_ahead": "Make the sauce while the mushrooms rest; fry the chips twice",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thin frites and fry in the neutral oil at 140C for 5 minutes, then rest.",
+       "min": 20
+      },
+      {
+       "text": "Season the portobellos and sear hard in the olive oil for 4 minutes a side, pressing down, then rest.",
+       "min": 10
+      },
+      {
+       "text": "Sweat the shallots in the pan, add the wine and reduce by two thirds, then whisk in the butter.",
+       "min": 8
+      },
+      {
+       "text": "Fry the frites again at 185C until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Slice the mushrooms and spoon the sauce over.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Chili Palmer's portobello frites (alcohol-free)",
+     "prep_min": 30,
+     "cook_min": 18,
+     "make_ahead": "Make the sauce while the mushrooms rest; fry the chips twice",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thin frites and fry in the neutral oil at 140C for 5 minutes, then rest.",
+       "min": 20
+      },
+      {
+       "text": "Season the portobellos and sear hard in the olive oil for 4 minutes a side, pressing down, then rest.",
+       "min": 10
+      },
+      {
+       "text": "Sweat the shallots in the pan, add the stock and vinegar and reduce by two thirds, then whisk in the butter.",
+       "min": 8
+      },
+      {
+       "text": "Fry the frites again at 185C until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Slice the mushrooms and spoon the sauce over.",
+       "min": 2
+      }
+     ]
     }
    }
   },

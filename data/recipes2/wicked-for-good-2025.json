@@ -164,7 +164,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Engagement banquet roast pumpkin",
+     "prep_min": 20,
+     "cook_min": 65,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large butternut pumpkin",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "goat's cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the soft butter with chopped tarragon and lemon zest. Halve the pumpkin lengthways, scoop out the seeds, score the flesh and spread with the butter.",
+       "min": 11
+      },
+      {
+       "text": "Roast at 200C for 60 minutes with the potatoes in chunks around it, crumbling the goat's cheese over the pumpkin for the last 5 minutes.",
+       "min": 62
+      },
+      {
+       "text": "Steam the green beans and toss in the pan juices with a squeeze of the lemon.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Nessarose's jewelled shoe raspberry tarts",

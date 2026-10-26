@@ -208,7 +208,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Benedict's casino portobello with béarnaise",
+     "prep_min": 20,
+     "cook_min": 38,
+     "make_ahead": "Reduce the vinegar up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "frozen shoestring fries",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the fries at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Reduce the vinegar with tarragon and the chopped shallot to a spoonful.",
+       "min": 8
+      },
+      {
+       "text": "Whisk with the yolks over simmering water and drizzle in 170g of the butter, melted and warm.",
+       "min": 10
+      },
+      {
+       "text": "Wilt the spinach, squeeze and simmer in the cream.",
+       "min": 8
+      },
+      {
+       "text": "Brush the mushrooms with the oil and garlic, season and sear in a very hot pan with the rest of the butter, 4 minutes a side.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fountain show sundae",

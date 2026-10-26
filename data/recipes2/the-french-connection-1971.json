@@ -290,7 +290,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Charnier's portobello steak frites",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Sauce best made just before serving",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "butter, clarified and warm",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Reduce the vinegar with half the tarragon and the chopped shallot until almost dry. Cut and dry the chips.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chips in the vegetable oil at 140C, then drain.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the yolks with the strained reduction over low heat until thick, then drizzle in the warm butter and stir through the rest of the tarragon, chopped.",
+       "min": 8
+      },
+      {
+       "text": "Brush the mushrooms with the olive oil and garlic, season with salt and pepper and sear in a hot heavy pan, pressed under a weight, for 5 minutes a side until tender.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chips again until crisp and serve with the mushrooms and sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Crème caramel",

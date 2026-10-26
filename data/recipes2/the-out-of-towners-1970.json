@@ -208,7 +208,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hotel portobello breakfast",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "fine salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices sourdough",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grate the potatoes and squeeze dry in a tea towel. Season with some of the salt and shape into 4 hash browns.",
+       "min": 10
+      },
+      {
+       "text": "Fry the hash browns in some of the butter over medium heat, turning once.",
+       "min": 12
+      },
+      {
+       "text": "Fry the mushrooms in the oil with a knob of the butter, the garlic and the remaining salt until tender and browned.",
+       "min": 10
+      },
+      {
+       "text": "Fry the eggs in butter.",
+       "min": 3
+      },
+      {
+       "text": "Toast the sourdough and butter it. Serve two mushrooms, two eggs, a hash brown and a toast each.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Waldorf cheesecake",

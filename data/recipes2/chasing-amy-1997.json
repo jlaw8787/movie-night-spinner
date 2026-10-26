@@ -184,7 +184,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jersey Italian hot dogs (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pizza bread rounds",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the potatoes and slice the capsicums and onions.",
+       "min": 12
+      },
+      {
+       "text": "Fry the potatoes in oil until golden, then add the capsicums and onions and cook until soft.",
+       "min": 20
+      },
+      {
+       "text": "Fry the vegetarian sausages until blistered.",
+       "min": 6
+      },
+      {
+       "text": "Split the pizza bread rounds, fill with sausages and the potato and pepper mix and finish with mustard.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Diner rice pudding",

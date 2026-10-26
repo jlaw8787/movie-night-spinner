@@ -307,6 +307,173 @@
        "min": 1
       }
      ]
+    },
+    "veg": {
+     "n": "Charlie's mushroom marsala",
+     "prep_min": 8,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "seasoned plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "butter, for searing",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "marsala",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dust the portobello slices in the seasoned flour and sear in the butter and oil until golden, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Brown the button mushrooms in the same pan, add the marsala and stock and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Whisk in the cold butter, return the portobellos and warm through for a minute.",
+       "min": 3
+      },
+      {
+       "text": "Serve with crusty bread.",
+       "min": 1
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Charlie's mushroom marsala (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "seasoned plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "butter, for searing",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dust the portobello slices in the seasoned flour and sear in the butter and oil until golden, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Brown the button mushrooms in the same pan, add the grape juice, balsamic vinegar and stock and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Whisk in the cold butter, return the portobellos and warm through for a minute.",
+       "min": 3
+      },
+      {
+       "text": "Serve with crusty bread.",
+       "min": 1
+      }
+     ]
     }
    }
   },

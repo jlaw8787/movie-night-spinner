@@ -190,7 +190,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "New York pepperoni fold pizza (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour, for stretching",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based pepperoni, sliced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stretch the dough thin on a floured tray.",
+       "min": 8
+      },
+      {
+       "text": "Spread with pizza sauce and scatter with mozzarella, plant-based pepperoni and oregano.",
+       "min": 5
+      },
+      {
+       "text": "Bake on a very hot tray at 250C.",
+       "min": 10
+      },
+      {
+       "text": "Cut into big slices and fold each in half to eat.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Baxter Stockman's ooze cupcakes",

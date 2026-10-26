@@ -222,7 +222,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Far Far Away royal stuffed roast pumpkin",
+     "prep_min": 20,
+     "cook_min": 70,
+     "make_ahead": "Stuffing up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "butternut pumpkins, halved lengthways and seeded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "walnuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "feta, crumbled",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "apple sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Toss the potatoes in 2 tbsp of the oil and half the salt and roast for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Rub the pumpkin halves with 1 tbsp of the oil and the rest of the salt and roast cut side up next to the potatoes for 35 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Fry the onion and chopped sage in the remaining oil, then mix with the breadcrumbs, walnuts and feta.",
+       "min": 10
+      },
+      {
+       "text": "Pile the stuffing into the pumpkin hollows and roast 20 minutes more until golden and tender.",
+       "min": 20
+      },
+      {
+       "text": "Rest for 5 minutes, then carve and serve with the potatoes and apple sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Giant gingerbread man",

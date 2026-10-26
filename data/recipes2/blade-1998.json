@@ -180,7 +180,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Garlic-heavy cauliflower steak",
+     "prep_min": 15,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers, cut into 4 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "head garlic, cloves separated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter for mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches broccolini",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wrap half the garlic cloves, unpeeled, in foil and roast at 200C until soft.",
+       "min": 30
+      },
+      {
+       "text": "Boil the potatoes and mash with the butter for mash and the squeezed roasted garlic.",
+       "min": 30
+      },
+      {
+       "text": "Sear the cauliflower steaks in the oil until deep golden on both sides, add the butter and the rest of the garlic, crushed, baste well and finish in the oven for 10 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Steam the broccolini.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blood orange tart",

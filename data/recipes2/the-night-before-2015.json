@@ -268,7 +268,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sliders and mac and cheese party plate (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices cheddar, halved",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "macaroni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "tasty cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the macaroni until just tender and drain.",
+       "min": 10
+      },
+      {
+       "text": "Mix the macaroni with the tasty cheese and milk and spoon into greased muffin tins.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 190C until golden.",
+       "min": 15
+      },
+      {
+       "text": "Shape the plant-based mince into small patties and cook in the oil on both sides, topping with cheddar to melt.",
+       "min": 10
+      },
+      {
+       "text": "Serve in slider buns with pickles alongside the mac and cheese cups.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas gingerbread cake",

@@ -212,7 +212,124 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "All-American Burger (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 30,
+     "make_ahead": "Shape the patties up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned black beans, drained (2 tins)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sesame burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into fries and dry well",
+       "min": 10
+      },
+      {
+       "text": "Mash the black beans with the egg, breadcrumbs, paprika, cumin and half the salt, and shape into 4 patties",
+       "min": 10
+      },
+      {
+       "text": "Fry the fries in the oil once at a lower heat, then again at a higher heat until golden. Salt well",
+       "min": 20
+      },
+      {
+       "text": "Fry the patties in 2 tbsp of the oil until crisp on both sides and melt the cheddar on top",
+       "min": 10
+      },
+      {
+       "text": "Toast the buns and build with lettuce, tomato, onion and pickles",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Food court brown butter choc chip cookies",

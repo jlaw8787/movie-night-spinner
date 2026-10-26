@@ -244,7 +244,144 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Corned celeriac and cabbage",
+     "prep_min": 20,
+     "cook_min": 68,
+     "make_ahead": "Celeriac can be simmered 1 day ahead, keep chilled in its liquid",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "celeriacs (about 800g each)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar hot English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the onion, celeriacs, potatoes and carrots. Cut each celeriac into 4 thick slabs, cut the potatoes and carrots into chunks and quarter the cabbage.",
+       "min": 15
+      },
+      {
+       "text": "Fill a large pot with water and add the onion, bay leaves, peppercorns, cloves, brown sugar, malt vinegar and salt. Bring to a gentle simmer.",
+       "min": 5
+      },
+      {
+       "text": "Add the celeriac and simmer gently.",
+       "min": 20
+      },
+      {
+       "text": "Add the potatoes and carrots and keep simmering, adding the cabbage for the last 10 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Melt half the butter, stir in the flour, whisk in the milk and simmer until thick. Stir in the parsley.",
+       "min": 10
+      },
+      {
+       "text": "Lift out the celeriac and brown it in the rest of the butter in a hot pan.",
+       "min": 8
+      },
+      {
+       "text": "Serve the celeriac with the vegetables, parsley sauce and mustard.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Apple pie with cheddar",

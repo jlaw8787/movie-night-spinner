@@ -212,7 +212,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Johnny's country club spaghetti (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 52,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the onion and garlic.",
+       "min": 6
+      },
+      {
+       "text": "Brown the plant-based mince with the onion and garlic in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the passata and oregano and simmer.",
+       "min": 30
+      },
+      {
+       "text": "Cook the spaghetti, drain and toss with the sauce.",
+       "min": 12
+      },
+      {
+       "text": "Serve with grated vegetarian parmesan-style cheese and basil.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wax on wax off red bean mochi",

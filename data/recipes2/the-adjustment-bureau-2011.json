@@ -299,6 +299,177 @@
        "min": 8
       }
      ]
+    },
+    "veg": {
+     "n": "Manhattan cauliflower steak frites",
+     "prep_min": 40,
+     "cook_min": 38,
+     "make_ahead": "Shallot butter up to 3 days",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers, cut into 4 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil for searing",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the shallots with the wine until almost dry. Cool, then mix into the butter with the salt and chill.",
+       "min": 20
+      },
+      {
+       "text": "Cut the potatoes into frites, rinse and dry thoroughly.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the neutral oil at 140C, then drain and cool.",
+       "min": 20
+      },
+      {
+       "text": "Season the cauliflower steaks, sear hard in a hot pan with the searing oil, then roast at 220C until tender.",
+       "min": 20
+      },
+      {
+       "text": "Fry the frites again at 185C until crisp. Salt lightly.",
+       "min": 4
+      },
+      {
+       "text": "Top the cauliflower steaks with the shallot red wine butter. Serve with frites.",
+       "min": 4
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Manhattan cauliflower steak frites",
+     "prep_min": 40,
+     "cook_min": 38,
+     "make_ahead": "Shallot butter up to 3 days",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers, cut into 4 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil for searing",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the shallots with the water and vinegar until almost dry. Cool, then mix into the butter with the salt and chill.",
+       "min": 20
+      },
+      {
+       "text": "Cut the potatoes into frites, rinse and dry thoroughly.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the neutral oil at 140C, then drain and cool.",
+       "min": 20
+      },
+      {
+       "text": "Season the cauliflower steaks, sear hard in a hot pan with the searing oil, then roast at 220C until tender.",
+       "min": 20
+      },
+      {
+       "text": "Fry the frites again at 185C until crisp. Salt lightly.",
+       "min": 4
+      },
+      {
+       "text": "Top the cauliflower steaks with the shallot butter. Serve with frites.",
+       "min": 4
+      }
+     ]
     }
    }
   },

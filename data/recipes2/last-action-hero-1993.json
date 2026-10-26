@@ -202,7 +202,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Slater's LA cauliflower steaks",
+     "prep_min": 20,
+     "cook_min": 85,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "garlic butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "swiss brown mushrooms, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the potatoes at 200C.",
+       "min": 60
+      },
+      {
+       "text": "Cut each cauliflower through the stem into 2 thick steaks and season with the flaky salt.",
+       "min": 5
+      },
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the oil with the paprika until dark and crisp.",
+       "min": 10
+      },
+      {
+       "text": "Sear the cauliflower steaks in the remaining oil, then finish in the oven at 200C until tender.",
+       "min": 25
+      },
+      {
+       "text": "Top the steaks with the garlic butter and load the potatoes with sour cream and the crisp mushrooms.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Matinee ice cream sundae",

@@ -224,7 +224,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Siberian winter mushroom goulash",
+     "prep_min": 15,
+     "cook_min": 55,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms, in big chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in the oil in a heavy pot.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions and paprika and stir until soft and fragrant.",
+       "min": 10
+      },
+      {
+       "text": "Add the tomatoes and stock and return the mushrooms.",
+       "min": 3
+      },
+      {
+       "text": "Simmer gently, stirring now and then, until the sauce is thick.",
+       "min": 30
+      },
+      {
+       "text": "Cook the noodles and toss with the butter.",
+       "min": 10
+      },
+      {
+       "text": "Serve the goulash over the noodles with the sour cream.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Aunt May's walnut date loaf",

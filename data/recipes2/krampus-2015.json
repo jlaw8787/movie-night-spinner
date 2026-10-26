@@ -378,7 +378,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Christmas Eve lasagne (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "box lasagne sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in the oil until browned, add the lentils and passata and simmer.",
+       "min": 25
+      },
+      {
+       "text": "Make a white sauce from the butter, flour and milk.",
+       "min": 10
+      },
+      {
+       "text": "Layer the lentil sauce, lasagne sheets and white sauce in a baking dish and top with mozzarella.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 180C until golden and bubbling.",
+       "min": 40
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gingerbread men with icing grins",

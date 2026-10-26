@@ -196,7 +196,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Eduardo's black bean and sweet potato enchiladas",
+     "prep_min": 30,
+     "cook_min": 55,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "sweet potato, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the chillies in a dry pan, soak in hot water, then blend with the tomatoes.",
+       "min": 15
+      },
+      {
+       "text": "Toss the sweet potato with the oil and cumin and roast at 220C until soft.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the sweet potato and black beans in a third of the sauce, lightly crushing them.",
+       "min": 8
+      },
+      {
+       "text": "Roll the filling in the tortillas and place in a dish.",
+       "min": 12
+      },
+      {
+       "text": "Cover with the rest of the sauce and grated cheddar.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 190C.",
+       "min": 20
+      },
+      {
+       "text": "Serve with sour cream.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Purple minion jelly cups",

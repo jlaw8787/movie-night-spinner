@@ -313,6 +313,183 @@
        "min": 3
       }
      ]
+    },
+    "veg": {
+     "n": "Raider's portobello steak",
+     "prep_min": 10,
+     "cook_min": 24,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wipe the mushrooms, trim the stalks flush and season with the salt.",
+       "min": 5
+      },
+      {
+       "text": "Sear the mushrooms hard in a very hot oiled pan, gill side up first, then turn and cook until tender.",
+       "min": 10
+      },
+      {
+       "text": "Add the butter and rosemary and baste the mushrooms. Lift onto a warm plate.",
+       "min": 5
+      },
+      {
+       "text": "In the same pan, crush in the peppercorns, add the brandy and flame it carefully.",
+       "min": 3
+      },
+      {
+       "text": "Add the stock and cream and reduce until the sauce coats a spoon.",
+       "min": 8
+      },
+      {
+       "text": "Pour the sauce over the mushrooms.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Raider's portobello steak",
+     "prep_min": 10,
+     "cook_min": 24,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 185,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wipe the mushrooms, trim the stalks flush and season with the salt.",
+       "min": 5
+      },
+      {
+       "text": "Sear the mushrooms hard in a very hot oiled pan, gill side up first, then turn and cook until tender.",
+       "min": 10
+      },
+      {
+       "text": "Add the butter and rosemary and baste the mushrooms. Lift onto a warm plate.",
+       "min": 5
+      },
+      {
+       "text": "In the same pan, crush in the peppercorns, add the vinegar and let it bubble away for a few seconds.",
+       "min": 3
+      },
+      {
+       "text": "Add the stock and cream and reduce until the sauce coats a spoon.",
+       "min": 8
+      },
+      {
+       "text": "Pour the sauce over the mushrooms.",
+       "min": 3
+      }
+     ]
     }
    }
   },

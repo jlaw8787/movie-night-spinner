@@ -204,7 +204,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bucho's tacos al pastor with oyster mushrooms",
+     "prep_min": 25,
+     "cook_min": 280,
+     "make_ahead": "Marinate up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "achiote paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "fresh pineapple, plus extra to serve",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "oyster mushrooms, torn into strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "white onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the dried chillies in hot water, then blitz with achiote, pineapple and vinegar.",
+       "min": 10
+      },
+      {
+       "text": "Coat the mushrooms in the marinade.",
+       "min": 10
+      },
+      {
+       "text": "Marinate in the fridge for at least 4 hours.",
+       "min": 240
+      },
+      {
+       "text": "Spread on an oiled tray, drizzle with the oil and roast at 220C until caramelised at the edges.",
+       "min": 30
+      },
+      {
+       "text": "Crisp the mushrooms in batches in a hot pan.",
+       "min": 10
+      },
+      {
+       "text": "Serve in the tortillas with pineapple, white onion and coriander.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Carolina's bookshop tres leches",

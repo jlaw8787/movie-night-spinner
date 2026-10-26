@@ -224,7 +224,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Harold's tax audit mushroom and leek pot pie",
+     "prep_min": 25,
+     "cook_min": 46,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the mushrooms with the sliced leeks in the butter until golden.",
+       "min": 13
+      },
+      {
+       "text": "Stir in the flour, the vegetable stock, the cream and the cannellini beans and simmer 10 minutes.",
+       "min": 21
+      },
+      {
+       "text": "Spoon into a dish, top with puff pastry, brush with egg and bake at 200C for 25 minutes.",
+       "min": 37
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ana's warm skillet cookie with ice cream",

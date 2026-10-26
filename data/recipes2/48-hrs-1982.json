@@ -293,6 +293,225 @@
        "min": 3
       }
      ]
+    },
+    "veg": {
+     "n": "San Francisco cioppino (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chopped tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin cannellini beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sourdough loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the fennel and onion, crush the garlic, cut the king oyster mushrooms into thick coins and the zucchini into chunks.",
+       "min": 12
+      },
+      {
+       "text": "Sear the mushroom coins in 1 tbsp of the olive oil until golden on both sides, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the fennel, onion and garlic in the rest of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the tomatoes, white wine, vegetable stock and crumbled nori and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Add the zucchini and cannellini beans for 8 minutes, then return the mushrooms to warm through.",
+       "min": 10
+      },
+      {
+       "text": "Serve with sliced sourdough.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "San Francisco cioppino (vegetarian, alcohol free)",
+     "prep_min": 25,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chopped tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin cannellini beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sourdough loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the fennel and onion, crush the garlic, cut the king oyster mushrooms into thick coins and the zucchini into chunks.",
+       "min": 12
+      },
+      {
+       "text": "Sear the mushroom coins in 1 tbsp of the olive oil until golden on both sides, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the fennel, onion and garlic in the rest of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the tomatoes, vegetable stock, extra stock, white wine vinegar and crumbled nori and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Add the zucchini and cannellini beans for 8 minutes, then return the mushrooms to warm through.",
+       "min": 10
+      },
+      {
+       "text": "Serve with sliced sourdough.",
+       "min": 3
+      }
+     ]
     }
    }
   },

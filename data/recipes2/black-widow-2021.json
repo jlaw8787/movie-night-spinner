@@ -212,7 +212,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Melina's sausages with apples (not Alexei)",
+     "prep_min": 20,
+     "cook_min": 58,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green apples, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "small cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Sear the vegetarian sausages in the oil in an ovenproof pan until golden.",
+       "min": 8
+      },
+      {
+       "text": "Add the apples and onions to the pan and roast at 200C.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes and mash with most of the butter.",
+       "min": 25
+      },
+      {
+       "text": "Braise the cabbage in the rest of the butter and the water until soft.",
+       "min": 25
+      },
+      {
+       "text": "Serve it all on big plates.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ohio childhood cupcakes",

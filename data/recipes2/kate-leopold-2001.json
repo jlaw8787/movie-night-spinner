@@ -327,6 +327,207 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Leopold's rooftop dinner (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cold butter, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut two thick steaks from the centre of each cauliflower. Lay on a tray with the lemon slices, sliced fennel and dill, drizzle with the oil and season with salt.",
+       "min": 12
+      },
+      {
+       "text": "Roast at 220C for 25 minutes until golden and tender.",
+       "min": 25
+      },
+      {
+       "text": "While the cauliflower roasts, boil the new potatoes in salted water until tender, about 20 minutes, then drain.",
+       "min": 0
+      },
+      {
+       "text": "Reduce the shallot with the white wine and white wine vinegar until about 2 tbsp is left.",
+       "min": 8
+      },
+      {
+       "text": "Take off the heat and whisk in the cold butter cube by cube until thick and glossy.",
+       "min": 5
+      },
+      {
+       "text": "Serve the cauliflower and fennel with the potatoes and the sauce.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Leopold's rooftop dinner (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cold butter, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut two thick steaks from the centre of each cauliflower. Lay on a tray with the lemon slices, sliced fennel and dill, drizzle with the oil and season with salt.",
+       "min": 12
+      },
+      {
+       "text": "Roast at 220C for 25 minutes until golden and tender.",
+       "min": 25
+      },
+      {
+       "text": "While the cauliflower roasts, boil the new potatoes in salted water until tender, about 20 minutes, then drain.",
+       "min": 0
+      },
+      {
+       "text": "Reduce the shallot with the verjuice and white wine vinegar until about 2 tbsp is left.",
+       "min": 8
+      },
+      {
+       "text": "Take off the heat and whisk in the cold butter cube by cube until thick and glossy.",
+       "min": 5
+      },
+      {
+       "text": "Serve the cauliflower and fennel with the potatoes and the sauce.",
+       "min": 5
+      }
+     ]
     }
    }
   },

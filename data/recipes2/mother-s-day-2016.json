@@ -280,7 +280,114 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mother's Day smoked tofu and spinach frittata",
+     "prep_min": 16,
+     "cook_min": 33,
+     "make_ahead": "Up to 1 day, reheat gently or serve at room temperature",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of tomato relish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the potato, onion and smoked tofu and crumble the feta.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potato until tender, then drain.",
+       "min": 8
+      },
+      {
+       "text": "Fry the onion and tofu in oil in an ovenproof pan, add the potato and spinach and stir until wilted.",
+       "min": 5
+      },
+      {
+       "text": "Whisk the eggs with cream and salt, pour over and scatter with feta.",
+       "min": 3
+      },
+      {
+       "text": "Cook on low heat until the edges set.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 180C until set and golden.",
+       "min": 15
+      },
+      {
+       "text": "Serve with rocket dressed in lemon and relish.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Strawberry shortcake for Mum",

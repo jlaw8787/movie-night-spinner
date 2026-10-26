@@ -287,6 +287,175 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Alkali Lake mushroom stew",
+     "prep_min": 17,
+     "cook_min": 80,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "portobello mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onions and carrots.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms in batches in the oil.",
+       "min": 15
+      },
+      {
+       "text": "Soften the onions and carrots, return the mushrooms with the red wine, stock and lentils and simmer until thick.",
+       "min": 45
+      },
+      {
+       "text": "Boil the potatoes and mash with plenty of butter.",
+       "min": 25
+      },
+      {
+       "text": "Spoon the stew over the mash.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Alkali Lake mushroom stew (alcohol free)",
+     "prep_min": 17,
+     "cook_min": 80,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "portobello mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 850,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onions and carrots.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms in batches in the oil.",
+       "min": 15
+      },
+      {
+       "text": "Soften the onions and carrots, return the mushrooms with the stock, vinegar and lentils and simmer until thick.",
+       "min": 45
+      },
+      {
+       "text": "Boil the potatoes and mash with plenty of butter.",
+       "min": 25
+      },
+      {
+       "text": "Spoon the stew over the mash.",
+       "min": 2
+      }
+     ]
     }
    }
   },

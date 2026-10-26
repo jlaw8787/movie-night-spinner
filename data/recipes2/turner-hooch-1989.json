@@ -168,7 +168,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Turner's garlic butter cauliflower steak",
+     "prep_min": 20,
+     "cook_min": 64,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the potatoes, toss in most of the oil and roast at 220C.",
+       "min": 50
+      },
+      {
+       "text": "Mash the butter with crushed garlic.",
+       "min": 3
+      },
+      {
+       "text": "Cut two thick steaks from the middle of each cauliflower and sear hard in the rest of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Finish the cauliflower in the oven with the potatoes until tender.",
+       "min": 15
+      },
+      {
+       "text": "Steam the beans and top the cauliflower steaks with garlic butter.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Caramel shortbread sundaes",

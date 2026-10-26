@@ -300,7 +300,152 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Swap your boss double black bean cheeseburgers",
+     "prep_min": 25,
+     "cook_min": 37,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped dill pickles, plus slices to serve",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "400g cans black beans, drained and patted dry",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "milk buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the fries at 220C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the oil with the soy, half the paprika and the maple syrup until dark and crisp.",
+       "min": 10
+      },
+      {
+       "text": "Mix the mayonnaise, tomato sauce, mustard and chopped pickles into a sauce.",
+       "min": 3
+      },
+      {
+       "text": "Mash the beans with the breadcrumbs, egg, cumin, salt and the rest of the paprika and shape into 8 thin patties.",
+       "min": 8
+      },
+      {
+       "text": "Fry the patties in the remaining oil for 3 minutes a side, then top with cheese to melt.",
+       "min": 10
+      },
+      {
+       "text": "Stack two patties in each toasted bun with the smoky mushrooms, pickles, onion and sauce.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bad plan salted caramel brownies",

@@ -285,6 +285,149 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Wade and Vanessa's portobello steak frites",
+     "prep_min": 15,
+     "cook_min": 37,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips, toss in 2 tbsp of the oil and roast at 220C until crisp.",
+       "min": 30
+      },
+      {
+       "text": "Brush the portobello mushrooms with the rest of the oil and sear in a very hot pan, then add the butter and garlic and baste until tender.",
+       "min": 10
+      },
+      {
+       "text": "Lift out the mushrooms, add the red wine and mushroom stock to the pan and reduce until glossy.",
+       "min": 10
+      },
+      {
+       "text": "Slice the mushrooms thickly and serve with the chips and sauce by candlelight.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Wade and Vanessa's portobello steak frites (alcohol free)",
+     "prep_min": 15,
+     "cook_min": 37,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "extra mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips, toss in 2 tbsp of the oil and roast at 220C until crisp.",
+       "min": 30
+      },
+      {
+       "text": "Brush the portobello mushrooms with the rest of the oil and sear in a very hot pan, then add the butter and garlic and baste until tender.",
+       "min": 10
+      },
+      {
+       "text": "Lift out the mushrooms, add all the mushroom stock and the red wine vinegar to the pan and reduce until glossy.",
+       "min": 10
+      },
+      {
+       "text": "Slice the mushrooms thickly and serve with the chips and sauce by candlelight.",
+       "min": 2
+      }
+     ]
     }
    }
   },

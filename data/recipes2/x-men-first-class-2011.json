@@ -305,6 +305,177 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Hellfire Club pepper cauliflower steak",
+     "prep_min": 15,
+     "cook_min": 68,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "crushed peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Parboil the potatoes, then shake to rough up.",
+       "min": 17
+      },
+      {
+       "text": "Roast in 3 tbsp of hot oil at 220C until crisp.",
+       "min": 45
+      },
+      {
+       "text": "Cut 2 thick steaks from the centre of each cauliflower, brush with the rest of the oil, season and roast on a second tray for 25 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Sear the cauliflower steaks in a very hot pan, basting with butter, until charred.",
+       "min": 6
+      },
+      {
+       "text": "In the same pan add the peppercorns and brandy, then cream and stock, and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Spoon the sauce over the steaks.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Hellfire Club pepper cauliflower steak (alcohol free)",
+     "prep_min": 15,
+     "cook_min": 68,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "crushed peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Parboil the potatoes, then shake to rough up.",
+       "min": 17
+      },
+      {
+       "text": "Roast in 3 tbsp of hot oil at 220C until crisp.",
+       "min": 45
+      },
+      {
+       "text": "Cut 2 thick steaks from the centre of each cauliflower, brush with the rest of the oil, season and roast on a second tray for 25 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Sear the cauliflower steaks in a very hot pan, basting with butter, until charred.",
+       "min": 6
+      },
+      {
+       "text": "In the same pan add the peppercorns, apple juice and cider vinegar, then cream and stock, and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Spoon the sauce over the steaks.",
+       "min": 2
+      }
+     ]
     }
    }
   },

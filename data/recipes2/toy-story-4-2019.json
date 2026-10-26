@@ -202,7 +202,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Duke Caboom's poutine (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen thick-cut chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins young green jackfruit in brine (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "fresh mozzarella, torn",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Meanwhile shred the jackfruit and fry in a hot pan until browned, then toss with the barbecue sauce. Tear the mozzarella.",
+       "min": 3
+      },
+      {
+       "text": "Melt the butter, stir in the flour, then whisk in the stock and soy sauce and simmer until bubbling and thick.",
+       "min": 8
+      },
+      {
+       "text": "Pile the chips into bowls with the jackfruit, scatter over the mozzarella and pour the hot gravy over so the cheese goes melty.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fairground funnel cake",

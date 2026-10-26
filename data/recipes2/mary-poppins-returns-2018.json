@@ -196,7 +196,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Music hall bangers and mash (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 68,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "thick vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onions and peel the potatoes.",
+       "min": 6
+      },
+      {
+       "text": "Brown the sausages slowly in the oil in a pan.",
+       "min": 15
+      },
+      {
+       "text": "Cook the onions in the same pan until soft.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock and soy sauce and simmer until thick.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes until tender and mash with butter and milk.",
+       "min": 25
+      },
+      {
+       "text": "Cook the peas.",
+       "min": 4
+      },
+      {
+       "text": "Serve the sausages on the mash with peas and plenty of gravy.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Balloon lady jam tarts",

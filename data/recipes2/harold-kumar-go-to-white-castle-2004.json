@@ -234,7 +234,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cheetah ride steamed onion sliders (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the plant-based mince thin between sheets of baking paper and cut into 16 squares.",
+       "min": 7
+      },
+      {
+       "text": "Finely dice the onions and spread them in a hot oiled pan with a splash of water. Lay the patties on top, cover and steam for 3 to 4 minutes, in batches.",
+       "min": 18
+      },
+      {
+       "text": "Add the cheese and serve in the small soft buns with pickles.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Salted caramel malt shakes",

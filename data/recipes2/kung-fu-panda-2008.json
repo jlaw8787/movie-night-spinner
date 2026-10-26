@@ -305,7 +305,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Secret ingredient soup (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 70,
+     "make_ahead": "Stock up to 3 days ahead, or freeze",
+     "ingredients": [
+      {
+       "q": 30,
+       "u": "g",
+       "item": "dried shiitake mushrooms",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "white pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "fresh egg noodles",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch bok choy",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put the shiitake mushrooms, onion, carrots, ginger, garlic and spring onions in a large pot and cover with the water.",
+       "min": 10
+      },
+      {
+       "text": "Simmer gently for 1 hour, then strain. Keep the shiitake mushrooms, trim off the stalks and slice the caps.",
+       "min": 60
+      },
+      {
+       "text": "Season the stock with the soy sauce and white pepper. Cut the tofu into cubes and warm it in the stock for 5 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Cook the noodles and bok choy briefly, then pour the hot stock over them with the tofu and sliced shiitake. The secret is there isn't one.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Valley of Peace kung pao chicken",
@@ -422,7 +523,124 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Valley of Peace kung pao tofu",
+     "prep_min": 14,
+     "cook_min": 27,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "extra firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cornflour, extra for the sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Sichuan peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "roasted peanuts",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rinse the jasmine rice, then simmer covered in 450ml water on low for 15 minutes and rest off the heat.",
+       "min": 18
+      },
+      {
+       "text": "Pat the tofu dry, toss with 1 tbsp of the soy sauce and the 2 tbsp cornflour. Mix the remaining 3 tbsp soy, the black vinegar, sugar, extra cornflour and 60ml water for the sauce.",
+       "min": 8
+      },
+      {
+       "text": "Slice the garlic, grate the ginger and cut the spring onions into 3cm lengths.",
+       "min": 6
+      },
+      {
+       "text": "Heat the oil in a wok until very hot, stir-fry the dried chillies and Sichuan peppercorns for 20 seconds, then add the tofu and fry for 5 to 6 minutes until golden.",
+       "min": 6
+      },
+      {
+       "text": "Add the garlic, ginger and spring onion, then the sauce, and toss until glossy. Stir in the peanuts and serve with the rice.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Almond cookies",

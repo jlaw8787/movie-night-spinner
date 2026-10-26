@@ -198,7 +198,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Davy Jones's vegetable boil",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, 2 in the water and 2 crushed for the butter",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, in thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "vegetarian sausages, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes in salted water with the paprika, garlic, lemon and nori.",
+       "min": 15
+      },
+      {
+       "text": "Add the corn and cook for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Add the mushrooms, zucchini and sausages for 4 minutes.",
+       "min": 4
+      },
+      {
+       "text": "Drain, tip onto paper and pour over melted butter mixed with the crushed garlic.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kraken ink chocolate tart",

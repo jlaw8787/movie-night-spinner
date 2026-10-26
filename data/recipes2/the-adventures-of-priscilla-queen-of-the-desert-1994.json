@@ -200,7 +200,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pepperberry roast eggplant with sweet potato",
+     "prep_min": 15,
+     "cook_min": 41,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground pepperberry",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "sweet potato",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "plum sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the sweet potato into wedges, toss in half the oil and roast at 200C.",
+       "min": 10
+      },
+      {
+       "text": "Halve the eggplants lengthways, score the flesh deeply and rub with the pepperberry, crushed garlic, salt and remaining oil.",
+       "min": 5
+      },
+      {
+       "text": "Roast the eggplant cut side up alongside the wedges until soft and golden.",
+       "min": 35
+      },
+      {
+       "text": "Warm the plum sauce.",
+       "min": 3
+      },
+      {
+       "text": "Crumble the feta over the eggplant and serve with the wedges and plum sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kings Canyon summit pavlova",

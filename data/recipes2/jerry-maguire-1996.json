@@ -202,7 +202,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rod's king mushroom asada",
+     "prep_min": 15,
+     "cook_min": 70,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the mushrooms and marinate for 1 hour in the juice of the limes and orange, the crushed garlic cloves, oil and salt.",
+       "min": 64
+      },
+      {
+       "text": "Grill hot for 3 minutes a side and slice thin.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the warm flour tortillas and the salsa.",
+       "min": 11
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Had me at hello wedding cupcakes",

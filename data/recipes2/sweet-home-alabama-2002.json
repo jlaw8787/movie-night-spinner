@@ -224,7 +224,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Earl and Pearl's fried cauliflower",
+     "prep_min": 20,
+     "cook_min": 31,
+     "make_ahead": "Soak the night before, fry fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour, for the gravy",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the cauliflower in buttermilk in the fridge for at least 1 hour or overnight, which is not counted here.",
+       "min": 0
+      },
+      {
+       "text": "Dredge the cauliflower in flour seasoned with smoked paprika and salt.",
+       "min": 8
+      },
+      {
+       "text": "Boil the potatoes for the mash and mash with butter.",
+       "min": 22
+      },
+      {
+       "text": "Fry the cauliflower at 170C in batches until crisp and tender.",
+       "min": 15
+      },
+      {
+       "text": "Make a gravy by thickening the stock with flour in a saucepan.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lightning glass pecan pie",

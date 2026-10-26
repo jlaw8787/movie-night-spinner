@@ -228,7 +228,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hazelnut soup (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 38,
+     "make_ahead": "Up to 3 days, reheats well",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "hazelnuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chives, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the hazelnuts and rub off the skins.",
+       "min": 10
+      },
+      {
+       "text": "Soften the onion and celery in the butter.",
+       "min": 8
+      },
+      {
+       "text": "Add the potatoes, most of the hazelnuts and the stock.",
+       "min": 2
+      },
+      {
+       "text": "Simmer until the potato is soft.",
+       "min": 25
+      },
+      {
+       "text": "Blend smooth and stir in the cream.",
+       "min": 5
+      },
+      {
+       "text": "Top with the rest of the hazelnuts, crushed, and the chives.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Floating lantern cakes",

@@ -375,6 +375,161 @@
        "min": 8
       }
      ]
+    },
+    "veg": {
+     "n": "Shoes-on teriyaki eggplant",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "mirin",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sake",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants, halved lengthwise and scored",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "baby bok choy",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, mirin, sake and sugar for 5 minutes until syrupy.",
+       "min": 5
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 5
+      },
+      {
+       "text": "Brush the eggplant with the oil and cook cut side down in a hot pan for 6 minutes, then turn and cook until soft right through, brushing with glaze in the last few minutes.",
+       "min": 12
+      },
+      {
+       "text": "Slice, and blanch the bok choy to serve alongside.",
+       "min": 8
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Shoes-on teriyaki eggplant",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants, halved lengthwise and scored",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "baby bok choy",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, apple juice, water, rice vinegar and sugar for 5 minutes until syrupy.",
+       "min": 5
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 5
+      },
+      {
+       "text": "Brush the eggplant with the oil and cook cut side down in a hot pan for 6 minutes, then turn and cook until soft right through, brushing with glaze in the last few minutes.",
+       "min": 12
+      },
+      {
+       "text": "Slice, and blanch the bok choy to serve alongside.",
+       "min": 8
+      }
+     ]
     }
    }
   },

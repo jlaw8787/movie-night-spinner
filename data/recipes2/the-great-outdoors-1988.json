@@ -232,7 +232,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "The Old 96er cauliflower steak",
+     "prep_min": 20,
+     "cook_min": 78,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen onion rings",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "iceberg lettuce, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "ranch dressing",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut 2 thick steaks from the centre of each cauliflower and rub with 2 tbsp of the oil and salt. Toss the potatoes in the rest of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Roast the potatoes at 220C.",
+       "min": 40
+      },
+      {
+       "text": "Roast the cauliflower steaks at 220C for 20 minutes, then grill over high heat to char.",
+       "min": 28
+      },
+      {
+       "text": "Bake the onion rings.",
+       "min": 15
+      },
+      {
+       "text": "Melt the butter with the garlic. Drizzle the lettuce wedges with ranch.",
+       "min": 4
+      },
+      {
+       "text": "Pour the garlic butter over the cauliflower and serve.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bald-headed bear blueberry pie",

@@ -367,7 +367,122 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bowling alley mushroom and haloumi burgers",
+     "prep_min": 25,
+     "cook_min": 24,
+     "make_ahead": "Burger sauce up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms, stalks trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, cut into 4 slabs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "American-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 10,
+       "u": "g",
+       "item": "mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips, rinse and dry thoroughly.",
+       "min": 10
+      },
+      {
+       "text": "Blanch the chips in the neutral oil at 140C for 5 minutes and drain.",
+       "min": 5
+      },
+      {
+       "text": "Cool the chips for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Fry the chips again at 185C until crisp and season with the salt.",
+       "min": 3
+      },
+      {
+       "text": "Brush the mushrooms with the olive oil and cook on a hot griddle, pressing flat with a heavy pan, for 3 minutes a side. Griddle the haloumi slabs alongside for 2 minutes a side until golden, then melt the cheese over the mushrooms.",
+       "min": 8
+      },
+      {
+       "text": "Toast the buns, mix the mayonnaise, tomato sauce and mustard for the sauce, and fill each bun with a mushroom, a slab of haloumi, onion, pickles and sauce. Serve the chips alongside.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "League night chilli dogs",
@@ -460,7 +575,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "League night veggie chilli dogs",
+     "prep_min": 15,
+     "cook_min": 32,
+     "make_ahead": "Chilli up to 2 days ahead, reheat to serve",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian hot dog franks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the plant-based mince with 1 diced onion in the oil in a large pan.",
+       "min": 8
+      },
+      {
+       "text": "Add the chilli powder, cumin, tomatoes, kidney beans and water and simmer 20 minutes until thick.",
+       "min": 20
+      },
+      {
+       "text": "Heat the vegetarian franks in barely simmering water for 3 minutes, then sear on a hot griddle until blistered.",
+       "min": 8
+      },
+      {
+       "text": "Toast the hot dog buns.",
+       "min": 3
+      },
+      {
+       "text": "Fill each bun with a frank and a spoon of chilli, then top with the cheddar, the rest of the diced raw onion and mustard.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Coffee liqueur ice cream cookie sandwiches",

@@ -244,7 +244,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Quick's late-night fried cauliflower and waffles",
+     "prep_min": 40,
+     "cook_min": 75,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, in big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "buttermilk, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plain flour, divided",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the cauliflower florets in 300 ml of the buttermilk with a good pinch of salt.",
+       "min": 10
+      },
+      {
+       "text": "Leave to soak in the fridge for at least 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Whisk 250 g of the flour with the baking powder, eggs, remaining buttermilk and 60 g of the butter, melted, into a waffle batter.",
+       "min": 10
+      },
+      {
+       "text": "Season the remaining flour with salt and dredge the cauliflower in it, pressing it on well.",
+       "min": 8
+      },
+      {
+       "text": "Fry the cauliflower in the oil at 170C in batches until deep golden and tender, about 5 minutes a batch.",
+       "min": 12
+      },
+      {
+       "text": "Cook the waffles in a waffle iron.",
+       "min": 12
+      },
+      {
+       "text": "Serve with maple syrup and the remaining butter melted with the hot sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Club Sugar Ray lemon chess pie",

@@ -208,7 +208,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fat Moe's back room braised mushrooms",
+     "prep_min": 20,
+     "cook_min": 75,
+     "make_ahead": "Cook up to 2 days ahead and reheat in the gravy",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the mushrooms and sear hard in the oil on both sides.",
+       "min": 12
+      },
+      {
+       "text": "Spread the onions in a roasting dish and sit the mushrooms on top. Pour over the stock whisked with tomato paste, paprika and soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Cover and braise at 170C until the onions are jammy.",
+       "min": 60
+      },
+      {
+       "text": "Lift out the mushrooms and slice thickly.",
+       "min": 5
+      },
+      {
+       "text": "Boil the juices for 10 minutes to make gravy and pour over.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Patsy's charlotte russe",

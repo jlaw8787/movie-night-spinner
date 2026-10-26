@@ -200,7 +200,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Meat locker cauliflower steak",
+     "prep_min": 15,
+     "cook_min": 58,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut two 3cm thick steaks from the middle of each cauliflower and season with salt and the cracked pepper.",
+       "min": 8
+      },
+      {
+       "text": "Cut the potatoes into chunks, toss in 2 tbsp of the oil and salt and roast at 220C until crisp.",
+       "min": 40
+      },
+      {
+       "text": "Sear the cauliflower in the rest of the oil in a smoking cast iron pan for 4 minutes a side.",
+       "min": 10
+      },
+      {
+       "text": "Add the butter, garlic and thyme, baste, then finish in the oven for 10 minutes until tender.",
+       "min": 12
+      },
+      {
+       "text": "Serve the steaks with the potatoes and the pan butter.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pecan caramel turtle clusters",

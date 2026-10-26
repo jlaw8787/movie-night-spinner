@@ -210,7 +210,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hoser poutine with mushroom gravy",
+     "prep_min": 10,
+     "cook_min": 34,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "frozen thick-cut chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, very finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "fresh cheese curds or bocconcini",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C until crisp.",
+       "min": 30
+      },
+      {
+       "text": "Melt the butter and cook the mushrooms until browned, then stir in the flour and cook until nutty.",
+       "min": 6
+      },
+      {
+       "text": "Whisk in the stock, soy sauce and pepper and simmer until glossy.",
+       "min": 5
+      },
+      {
+       "text": "Tear the cheese into pieces. Pile the hot chips into bowls, scatter the cheese over and pour the very hot gravy on top.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Canadian maple butter tarts",

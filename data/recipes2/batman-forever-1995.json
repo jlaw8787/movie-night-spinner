@@ -188,7 +188,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gotham neon noodles (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles, cooked",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, cubed and patted dry",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the noodles and drain.",
+       "min": 5
+      },
+      {
+       "text": "Stir-fry the tofu in the oil in a hot wok until golden.",
+       "min": 10
+      },
+      {
+       "text": "Add the capsicum and cook briefly.",
+       "min": 2
+      },
+      {
+       "text": "Toss through the noodles with sweet chilli and soy sauce until sticky and pack into takeaway boxes.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Trapeze funnel cakes",

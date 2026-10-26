@@ -194,7 +194,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Campfire sausage and onion sandwiches (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "thick vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices of white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "tomato sauce, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the vegetarian sausages slowly over low coals or a barbecue, turning often, until browned all over.",
+       "min": 20
+      },
+      {
+       "text": "Fry the onions in the butter on the hotplate until soft and golden.",
+       "min": 15
+      },
+      {
+       "text": "Fold each sausage into bread with onions and sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Golden syrup dumplings",

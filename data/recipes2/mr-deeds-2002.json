@@ -220,7 +220,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mandrake Falls smoky capsicum mushroom pizza",
+     "prep_min": 20,
+     "cook_min": 17,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "chilli oil, to drizzle",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Divide the dough in two and stretch each into a round on oiled trays. Spread with pizza sauce.",
+       "min": 10
+      },
+      {
+       "text": "Fry the mushrooms with the garlic in a little of the oil.",
+       "min": 4
+      },
+      {
+       "text": "Fry the capsicums in the rest of the oil with the smoked paprika until soft.",
+       "min": 5
+      },
+      {
+       "text": "Top the bases with mozzarella, capsicum and mushrooms.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 240C until blistered.",
+       "min": 13
+      },
+      {
+       "text": "Scatter with oregano and drizzle with chilli oil.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "New York baked cheesecake with berries",

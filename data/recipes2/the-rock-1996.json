@@ -302,7 +302,114 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mason's Fairmont room service (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 34,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "clarified butter, warm",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chips once in the vegetable oil at a lower heat and drain.",
+       "min": 12
+      },
+      {
+       "text": "Reduce the vinegar with the tarragon until a couple of tablespoons remain.",
+       "min": 6
+      },
+      {
+       "text": "Whisk the reduction with the yolks over low heat and drizzle in the warm clarified butter.",
+       "min": 8
+      },
+      {
+       "text": "Sear the mushrooms in the olive oil, then baste with butter, thyme and garlic until tender.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chips again until crisp.",
+       "min": 13
+      },
+      {
+       "text": "Serve the mushrooms with the sauce and chips.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "San Francisco chocolate squares",

@@ -287,6 +287,161 @@
        "min": 3
       }
      ]
+    },
+    "veg": {
+     "n": "Carmine Sabatini's eggplant marsala",
+     "prep_min": 15,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "seasoned plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "marsala",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplants lengthwise into 1cm slices.",
+       "min": 5
+      },
+      {
+       "text": "Dust the eggplant in seasoned flour and fry in batches in the butter and oil for 3 to 4 minutes a side until golden and soft, then set aside.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms, add the marsala and stock and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Whisk in the cold butter, return the eggplant and warm through.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Carmine Sabatini's eggplant marsala",
+     "prep_min": 15,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "seasoned plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 130,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplants lengthwise into 1cm slices.",
+       "min": 5
+      },
+      {
+       "text": "Dust the eggplant in seasoned flour and fry in batches in the butter and oil for 3 to 4 minutes a side until golden and soft, then set aside.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms, add the grape juice, balsamic vinegar and stock and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Whisk in the cold butter, return the eggplant and warm through.",
+       "min": 3
+      }
+     ]
     }
    }
   },

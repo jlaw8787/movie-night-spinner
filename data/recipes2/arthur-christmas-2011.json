@@ -200,7 +200,122 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "North Pole Christmas mushroom and chestnut roll",
+     "prep_min": 30,
+     "cook_min": 78,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "sage leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cooked chestnuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "brussels sprouts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cranberry sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms, onion, sage and smoked paprika in half the oil until dry.",
+       "min": 12
+      },
+      {
+       "text": "Mix with the breadcrumbs, lentils, chopped chestnuts and most of the egg, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Lay the two pastry sheets slightly overlapping, spoon the filling along one edge, roll into a log and seal. Brush with the rest of the egg.",
+       "min": 8
+      },
+      {
+       "text": "Roast the potatoes in the rest of the oil at 200C, adding the log for the last 40 minutes.",
+       "min": 60
+      },
+      {
+       "text": "Rest the log and roast the brussels sprouts.",
+       "min": 15
+      },
+      {
+       "text": "Serve sliced with sprouts and cranberry sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas pudding with orange custard",

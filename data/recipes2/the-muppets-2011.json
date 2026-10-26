@@ -226,7 +226,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom frites with bearnaise",
+     "prep_min": 30,
+     "cook_min": 26,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tarragon, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thin fries.",
+       "min": 12
+      },
+      {
+       "text": "Fry twice in the vegetable oil until crisp.",
+       "min": 18
+      },
+      {
+       "text": "Sear the mushrooms in the olive oil until browned and tender, season with salt and pepper and keep warm.",
+       "min": 10
+      },
+      {
+       "text": "Reduce the vinegar with the tarragon.",
+       "min": 4
+      },
+      {
+       "text": "Whisk in the egg yolks over gentle heat.",
+       "min": 5
+      },
+      {
+       "text": "Slowly add the melted butter, whisking.",
+       "min": 5
+      },
+      {
+       "text": "Serve the mushrooms over the fries with the bearnaise.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Green peppermint biscuit slice",

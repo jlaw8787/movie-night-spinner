@@ -168,7 +168,118 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "The Cratchits' Christmas chestnut roast",
+     "prep_min": 30,
+     "cook_min": 75,
+     "make_ahead": "Shape the roast up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cooked chestnuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "walnuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "apples",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in 1 tbsp of the oil until dry, then cool and mix with the chestnuts, walnuts, lentils, breadcrumbs, eggs and half the salt.",
+       "min": 20
+      },
+      {
+       "text": "Press into a lined loaf tin and bake at 180C until firm and browned.",
+       "min": 50
+      },
+      {
+       "text": "Halve the potatoes, toss in the remaining oil and salt and roast at 200C alongside the roast for 45 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Shred the cabbage and slice the apples, then braise together with the vinegar and a splash of water for 45 minutes until soft.",
+       "min": 15
+      },
+      {
+       "text": "Rest the roast for 10 minutes, then turn out and slice.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas pudding",

@@ -198,7 +198,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Metkayina coconut tofu",
+     "prep_min": 15,
+     "cook_min": 41,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "stalks lemongrass",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cut into thick slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful mixed fresh herbs",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bruise the lemongrass, slice the chilli and pat the tofu dry.",
+       "min": 12
+      },
+      {
+       "text": "Fry the tofu in the oil until golden on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Simmer the lemongrass and chilli in the coconut milk with the soy sauce.",
+       "min": 10
+      },
+      {
+       "text": "Add the tofu and simmer gently.",
+       "min": 8
+      },
+      {
+       "text": "Steam the rice.",
+       "min": 15
+      },
+      {
+       "text": "Squeeze in lime juice and serve over the rice with fresh herbs.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lagoon coconut pudding",

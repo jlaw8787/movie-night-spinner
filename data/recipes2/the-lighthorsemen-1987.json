@@ -397,6 +397,267 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Light horse camp mushroom and stout stew",
+     "prep_min": 30,
+     "cook_min": 85,
+     "make_ahead": "Up to 2 days, keep chilled and reheat",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "field mushrooms, chunked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "stout",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onions and carrots. Brown the mushrooms in the oil in batches.",
+       "min": 25
+      },
+      {
+       "text": "Add the onions, carrots and garlic and cook, then stir in the flour and tomato paste.",
+       "min": 8
+      },
+      {
+       "text": "Add the stout, stock, lentils, thyme and bay leaves, cover and simmer gently until thick.",
+       "min": 50
+      },
+      {
+       "text": "Peel and chop the potatoes.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes until tender and mash with butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Spoon the stew over the mash.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Light horse camp mushroom stew",
+     "prep_min": 30,
+     "cook_min": 85,
+     "make_ahead": "Up to 2 days, keep chilled and reheat",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "field mushrooms, chunked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "extra mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onions and carrots. Brown the mushrooms in the oil in batches.",
+       "min": 25
+      },
+      {
+       "text": "Add the onions, carrots and garlic and cook, then stir in the flour and tomato paste.",
+       "min": 8
+      },
+      {
+       "text": "Add the stock, extra stock, vinegar, sugar, lentils, thyme and bay leaves, cover and simmer gently until thick.",
+       "min": 50
+      },
+      {
+       "text": "Peel and chop the potatoes.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes until tender and mash with butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Spoon the stew over the mash.",
+       "min": 2
+      }
+     ]
     }
    }
   },

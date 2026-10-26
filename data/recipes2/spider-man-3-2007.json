@@ -265,6 +265,199 @@
        "min": 20
       }
      ]
+    },
+    "veg": {
+     "n": "French restaurant mushroom au vin",
+     "prep_min": 20,
+     "cook_min": 65,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms (portobello and button), halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the chickpeas in a little of the oil with the smoked paprika until crisp, then set aside.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms in batches in the rest of the oil until golden, seasoning with salt.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the tomato paste, then pour in the wine and the stock.",
+       "min": 5
+      },
+      {
+       "text": "Simmer until rich and glossy, stirring the chickpeas back in for the last 5 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Boil and mash the potatoes with plenty of butter and serve under the mushrooms.",
+       "min": 20
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "French restaurant mushroom au vin",
+     "prep_min": 20,
+     "cook_min": 65,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms (portobello and button), halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the chickpeas in a little of the oil with the smoked paprika until crisp, then set aside.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms in batches in the rest of the oil until golden, seasoning with salt.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the tomato paste, then pour in all the stock, the grape juice and the red wine vinegar.",
+       "min": 5
+      },
+      {
+       "text": "Simmer until rich and glossy, stirring the chickpeas back in for the last 5 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Boil and mash the potatoes with plenty of butter and serve under the mushrooms.",
+       "min": 20
+      }
+     ]
     }
    }
   },

@@ -319,6 +319,201 @@
        "min": 1
       }
      ]
+    },
+    "veg": {
+     "n": "Flying noodle boat noodles (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 13,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "fresh shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, cut into matchsticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "fresh udon noodles",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mushroom oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Shaoxing wine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the tofu into batons and toss with some of the soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Slice the shiitake and prep the cabbage and carrot.",
+       "min": 7
+      },
+      {
+       "text": "Stir-fry the tofu in a smoking wok with the oil until golden, then add the shiitake.",
+       "min": 6
+      },
+      {
+       "text": "Add the cabbage and carrot and stir-fry briefly.",
+       "min": 2
+      },
+      {
+       "text": "Add the udon, mushroom oyster sauce, remaining soy sauce and wine and toss until glossy.",
+       "min": 4
+      },
+      {
+       "text": "Finish with spring onion.",
+       "min": 1
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Flying noodle boat noodles (vegetarian) (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 13,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "fresh shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, cut into matchsticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "fresh udon noodles",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mushroom oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the tofu into batons and toss with some of the soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Slice the shiitake and prep the cabbage and carrot.",
+       "min": 7
+      },
+      {
+       "text": "Stir-fry the tofu in a smoking wok with the oil until golden, then add the shiitake.",
+       "min": 6
+      },
+      {
+       "text": "Add the cabbage and carrot and stir-fry briefly.",
+       "min": 2
+      },
+      {
+       "text": "Add the udon, mushroom oyster sauce, remaining soy sauce, stock and rice vinegar and toss until glossy.",
+       "min": 4
+      },
+      {
+       "text": "Finish with spring onion.",
+       "min": 1
+      }
+     ]
     }
    }
   },

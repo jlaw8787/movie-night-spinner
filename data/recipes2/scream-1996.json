@@ -210,7 +210,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stu's party lasagne (vegetarian)",
+     "prep_min": 35,
+     "cook_min": 70,
+     "make_ahead": "Assemble a day ahead, bake on the day",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "lasagne sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil with the onion and garlic.",
+       "min": 12
+      },
+      {
+       "text": "Add the lentils and passata and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Mix the ricotta with the egg.",
+       "min": 3
+      },
+      {
+       "text": "Layer the sheets, ricotta mix and sauce in a dish, finishing with mozzarella.",
+       "min": 15
+      },
+      {
+       "text": "Bake at 180C.",
+       "min": 45
+      },
+      {
+       "text": "Rest before cutting.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ghost mask cookies",

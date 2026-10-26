@@ -275,6 +275,169 @@
        "min": 10
       }
      ]
+    },
+    "veg": {
+     "n": "Captain Stacy's red wine braised mushrooms",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "French-style green lentils, rinsed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the portobellos in the oil and lift out, then soften the onions in the same pot.",
+       "min": 15
+      },
+      {
+       "text": "Add the lentils, wine, stock and tomato paste.",
+       "min": 5
+      },
+      {
+       "text": "Braise covered at 160C for 25 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Halve the carrots, sit them and the portobellos on top of the lentils, cover and braise another 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Slice the portobellos thick and serve over the lentils and carrots.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Captain Stacy's braised mushrooms (alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "French-style green lentils, rinsed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the portobellos in the oil and lift out, then soften the onions in the same pot.",
+       "min": 15
+      },
+      {
+       "text": "Add the lentils, water, red wine vinegar, stock and tomato paste.",
+       "min": 5
+      },
+      {
+       "text": "Braise covered at 160C for 25 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Halve the carrots, sit them and the portobellos on top of the lentils, cover and braise another 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Slice the portobellos thick and serve over the lentils and carrots.",
+       "min": 5
+      }
+     ]
     }
    }
   },

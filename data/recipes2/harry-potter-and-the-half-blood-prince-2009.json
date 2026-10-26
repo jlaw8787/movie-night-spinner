@@ -234,7 +234,114 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stuffed butternut pumpkin roast",
+     "prep_min": 42,
+     "cook_min": 87,
+     "make_ahead": "Stuffing up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "butternut pumpkin, about 1.5kg",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sage, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sourdough bread, torn",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "brussels sprouts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, for the sprouts",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 180C. Halve the pumpkin lengthways, scoop out the seeds and a little flesh to make a hollow, and chop the scooped flesh.",
+       "min": 10
+      },
+      {
+       "text": "Fry the onion, sage and chopped pumpkin flesh in the butter until soft.",
+       "min": 8
+      },
+      {
+       "text": "Mix with the torn sourdough, egg and salt for a stuffing.",
+       "min": 5
+      },
+      {
+       "text": "Pack the stuffing into both halves, press the pumpkin back together and tie with kitchen string.",
+       "min": 8
+      },
+      {
+       "text": "Rub the pumpkin and potatoes with the oil and roast at 180C, potatoes around the pumpkin, until a skewer slides easily into the pumpkin.",
+       "min": 80
+      },
+      {
+       "text": "Rest the pumpkin for 10 minutes, then cut into thick slices.",
+       "min": 10
+      },
+      {
+       "text": "Cook the sprouts and toss with the sprout butter.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Slughorn's crystallised pineapple",

@@ -188,7 +188,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lobster tank garlic butter mushrooms",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Garlic butter up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into fries.",
+       "min": 20
+      },
+      {
+       "text": "Fry twice in the oil until crisp.",
+       "min": 20
+      },
+      {
+       "text": "Mix the butter with the garlic and parsley. Halve the mushrooms lengthways, score the cut sides and season with the salt.",
+       "min": 8
+      },
+      {
+       "text": "Grill the mushrooms cut side down, then turn, brush with the garlic parsley butter and grill until tender.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the fries and lemon wedges.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mrs Chen's mango pudding",

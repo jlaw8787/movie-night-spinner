@@ -224,7 +224,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Penderghast takeaway pad thai (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "flat rice noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tamarind paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bean sprouts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "roasted peanuts, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the noodles in warm water until pliable, then drain.",
+       "min": 10
+      },
+      {
+       "text": "Fry the tofu and garlic in the oil, push aside and scramble the eggs.",
+       "min": 6
+      },
+      {
+       "text": "Add the noodles, tamarind, soy sauce and brown sugar and toss until the noodles are tender.",
+       "min": 6
+      },
+      {
+       "text": "Finish with bean sprouts, peanuts and a squeeze of lime.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Red velvet whoopie pies",

@@ -192,7 +192,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stark miso eggplant rice bowl",
+     "prep_min": 10,
+     "cook_min": 28,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white miso",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "frozen edamame, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the cut side of the eggplants, brush with the oil and roast cut side up at 220C until soft. Cook the sushi rice at the same time.",
+       "min": 20
+      },
+      {
+       "text": "Mix the miso and honey, brush over the eggplants and grill until glazed and bubbling.",
+       "min": 8
+      },
+      {
+       "text": "Serve the eggplant over rice with edamame, avocado and pickled ginger.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Giant doughnut doughnuts",

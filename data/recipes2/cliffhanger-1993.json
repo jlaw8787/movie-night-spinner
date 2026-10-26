@@ -250,7 +250,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Campfire portobello steak",
+     "prep_min": 13,
+     "cook_min": 58,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wrap each potato with a knob of butter in foil.",
+       "min": 8
+      },
+      {
+       "text": "Bake in the coals.",
+       "min": 45
+      },
+      {
+       "text": "Rub the mushrooms with the oil, salt, pepper and chopped rosemary.",
+       "min": 5
+      },
+      {
+       "text": "Grill over hot coals for about 4 minutes a side.",
+       "min": 8
+      },
+      {
+       "text": "Split the potatoes and serve with the mushrooms.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Treasury cash apple strudel",

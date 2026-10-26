@@ -274,7 +274,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Nora's last honey glazed smoked tofu",
+     "prep_min": 25,
+     "cook_min": 47,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "smoked tofu, in 2 blocks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "pineapple, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the top of the smoked tofu blocks in a diamond pattern and stud with cloves.",
+       "min": 8
+      },
+      {
+       "text": "Simmer the honey, sugar, mustard and pineapple juice until syrupy.",
+       "min": 6
+      },
+      {
+       "text": "Roast the potatoes in the oil at 200C for 45 minutes. After 20 minutes, add the tofu in an oiled dish and brush with glaze every 5 minutes.",
+       "min": 45
+      },
+      {
+       "text": "Toss the pineapple, chilli, mint and lime juice for the salsa.",
+       "min": 8
+      },
+      {
+       "text": "Slice the tofu and serve with the potatoes and salsa.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Last-minute Christmas Eve trifle",

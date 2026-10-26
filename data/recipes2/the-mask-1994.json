@@ -226,7 +226,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Milo's cauliflower steak",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large heads cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips. Mash the butter with the garlic.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chips in the vegetable oil at 140C until soft and pale.",
+       "min": 12
+      },
+      {
+       "text": "Fry again at 185C until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Cut two thick steaks from the middle of each cauliflower, season and sear hard in the olive oil, then cover and cook until tender.",
+       "min": 15
+      },
+      {
+       "text": "Top each with a slice of garlic butter.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Coco Bongo bananas Foster",

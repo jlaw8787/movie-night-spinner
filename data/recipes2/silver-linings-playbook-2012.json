@@ -206,7 +206,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Philly mushroom cheesesteaks",
+     "prep_min": 20,
+     "cook_min": 13,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long bread rolls",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms thinly.",
+       "min": 8
+      },
+      {
+       "text": "Slice the onions and capsicum.",
+       "min": 5
+      },
+      {
+       "text": "Fry the onion and capsicum on a hot plate in 1 tbsp of the oil until soft.",
+       "min": 7
+      },
+      {
+       "text": "Add the mushrooms with the rest of the oil and sear fast until browned.",
+       "min": 8
+      },
+      {
+       "text": "Lay the provolone on top to melt and pile into the rolls.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Diner date raisin bran muffins",

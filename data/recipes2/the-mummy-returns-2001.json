@@ -222,7 +222,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Scorpion King spiced eggplant",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Rub up to 4 hours ahead, grill fresh",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "harissa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "couscous",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed, for the sauce",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the eggplants lengthways, score the flesh deeply and rub with the harissa, garlic, cumin and oil.",
+       "min": 10
+      },
+      {
+       "text": "Leave for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Grill cut side down over medium heat, then turn and cover until soft, 20 to 25 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Pour the boiling water over the couscous and chickpeas and cover for 5 minutes. Mix the sauce garlic into the yoghurt and serve the eggplant over the couscous with the sauce.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Golden pyramid baklava",

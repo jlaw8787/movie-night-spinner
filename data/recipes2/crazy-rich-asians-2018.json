@@ -250,7 +250,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Singapore chilli tofu",
+     "prep_min": 15,
+     "cook_min": 16,
+     "make_ahead": "Sauce up to 1 day, add tofu just before serving",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft buns",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the tofu into cubes and toss in the cornflour. Crush the garlic, grate the ginger and chop the chillies.",
+       "min": 10
+      },
+      {
+       "text": "Fry the tofu in half the oil until golden and set aside.",
+       "min": 8
+      },
+      {
+       "text": "Fry the garlic, ginger and chillies in the rest of the oil until fragrant.",
+       "min": 3
+      },
+      {
+       "text": "Add the tomato sauce, sugar and water and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Return the tofu, swirl in the beaten eggs and serve with soft buns to mop up the sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pandan chiffon cake",

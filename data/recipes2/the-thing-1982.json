@@ -188,7 +188,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Antarctic base chilli (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 80,
+     "make_ahead": "Better the next day, keeps 3 days",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "sweet potato, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin black beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chipotle in adobo",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "g",
+       "item": "cornbread mix",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the sweet potato in the oil.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onions and garlic.",
+       "min": 8
+      },
+      {
+       "text": "Add the chipotle, cumin, tomatoes, kidney beans, black beans, stock and sweet potato.",
+       "min": 5
+      },
+      {
+       "text": "Cover and braise at 160C for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Bake the cornbread as the packet says and serve alongside.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Petri dish jelly",

@@ -208,7 +208,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "RST Video smoked tofu, egg and cheese",
+     "prep_min": 10,
+     "cook_min": 7,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "smoked tofu, in 8 slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the smoked tofu slices in the oil until browned and crisp at the edges.",
+       "min": 8
+      },
+      {
+       "text": "Fry the eggs.",
+       "min": 4
+      },
+      {
+       "text": "Stack tofu, egg and cheese into the rolls, add tomato sauce, salt and pepper.",
+       "min": 3
+      },
+      {
+       "text": "Wrap in foil for a couple of minutes to melt.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Quick Stop coffee cake",

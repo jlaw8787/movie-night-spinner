@@ -176,7 +176,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Deep dish pizza with fennel mushroom crumble",
+     "prep_min": 25,
+     "cook_min": 68,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mozzarella, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "swiss brown mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin of crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves of garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Press the dough mixed with the butter into a deep greased tin.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the crushed tomatoes with the crushed garlic.",
+       "min": 15
+      },
+      {
+       "text": "Fry the mushrooms in the olive oil with the fennel seeds and chilli flakes over high heat until dry and well browned.",
+       "min": 10
+      },
+      {
+       "text": "Layer the mozzarella, then the mushroom crumble, then the tomato.",
+       "min": 8
+      },
+      {
+       "text": "Finish with the parmesan and bake at 220C.",
+       "min": 35
+      },
+      {
+       "text": "Rest before slicing.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Champagne jelly",

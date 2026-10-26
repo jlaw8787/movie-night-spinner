@@ -311,7 +311,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sac-O-Suds chicken fried cauliflower steak",
+     "prep_min": 25,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour, seasoned",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour, for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mashed potato",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut two thick steaks from the middle of each cauliflower and steam for 5 minutes, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Dredge in seasoned flour, dip in buttermilk, then flour again.",
+       "min": 10
+      },
+      {
+       "text": "Shallow-fry 4 minutes a side until crisp.",
+       "min": 10
+      },
+      {
+       "text": "Pour off most of the oil, stir the gravy flour into the pan, whisk in the milk and simmer thick with lots of black pepper.",
+       "min": 8
+      },
+      {
+       "text": "Serve over the mashed potato.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mona Lisa's blackberry cobbler",

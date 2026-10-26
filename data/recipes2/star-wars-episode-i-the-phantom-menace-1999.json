@@ -206,7 +206,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Shmi's harissa cauliflower and chickpeas",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "harissa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "flatbreads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the cauliflower with harissa, olive oil, lemon juice and salt.",
+       "min": 8
+      },
+      {
+       "text": "Spread the chickpeas and onions in a tray and sit the cauliflower on top.",
+       "min": 7
+      },
+      {
+       "text": "Roast at 200C for 35 minutes until charred and tender.",
+       "min": 35
+      },
+      {
+       "text": "Mix the cucumber into the yoghurt. Warm the flatbreads and serve everything together.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Duel of the Fates red and blue tart",

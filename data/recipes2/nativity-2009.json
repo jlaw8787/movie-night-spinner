@@ -248,7 +248,148 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Coventry Christmas nut roast dinner",
+     "prep_min": 35,
+     "cook_min": 53,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped (300g for the roast, 100g for the sprouts)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mixed nuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "vegetarian chipolatas",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, parboiled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "Brussels sprouts, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and 300g of the mushrooms in the butter until dry, then mix with the nuts, lentils, breadcrumbs, eggs, cheddar and thyme and press into a lined loaf tin.",
+       "min": 15
+      },
+      {
+       "text": "Roast the nut roast, and the parboiled potatoes in 2 tbsp of the oil, at 200C for 50 minutes.",
+       "min": 50
+      },
+      {
+       "text": "Toss the chipolatas with 1 tbsp of the maple syrup and the smoked paprika and add to the oven for the last 20 minutes.",
+       "min": 3
+      },
+      {
+       "text": "Fry the sprouts in the rest of the oil with the remaining 100g of mushrooms until browned and smoky, then toss with the rest of the maple syrup.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the flour into the potato tray juices, add the stock and soy sauce and simmer into gravy. Rest the nut roast 10 minutes, slice and serve.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mr Poppy's Christmas pudding sundaes",

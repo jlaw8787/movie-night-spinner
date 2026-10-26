@@ -331,6 +331,217 @@
        "min": 0
       }
      ]
+    },
+    "veg": {
+     "n": "Mushrooms and borlotti in Chianti",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin borlotti beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "polenta",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil, then set aside.",
+       "min": 10
+      },
+      {
+       "text": "Soften the sliced onion and garlic in the same pan.",
+       "min": 10
+      },
+      {
+       "text": "Add the wine, tomatoes, rosemary, beans and mushrooms, cover and braise at 160C.",
+       "min": 40
+      },
+      {
+       "text": "Cook the polenta in the salted water, stir in the butter.",
+       "min": 8
+      },
+      {
+       "text": "Serve the mushrooms and beans on top of the polenta.",
+       "min": 0
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Mushrooms and borlotti in Chianti (alcohol-free)",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin borlotti beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "polenta",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil, then set aside.",
+       "min": 10
+      },
+      {
+       "text": "Soften the sliced onion and garlic in the same pan.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, vinegar, tomatoes, rosemary, beans and mushrooms, cover and braise at 160C.",
+       "min": 40
+      },
+      {
+       "text": "Cook the polenta in the salted water, stir in the butter.",
+       "min": 8
+      },
+      {
+       "text": "Serve the mushrooms and beans on top of the polenta.",
+       "min": 0
+      }
+     ]
     }
    }
   },

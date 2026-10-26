@@ -398,7 +398,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Open house roast mushroom baguettes",
+     "prep_min": 15,
+     "cook_min": 49,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "baguettes",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "fried shallots",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the red onion thin and soak in the red wine vinegar with the sugar for 20 minutes.",
+       "min": 24
+      },
+      {
+       "text": "Brush the mushrooms with the oil and soy and roast at 220C for 20 minutes, then slice thickly.",
+       "min": 22
+      },
+      {
+       "text": "Mix the sour cream with the horseradish and salt.",
+       "min": 4
+      },
+      {
+       "text": "Split the baguettes lengthways, spread with the horseradish cream and layer with the mushrooms, a handful of rocket, the drained onion and the fried shallots.",
+       "min": 10
+      },
+      {
+       "text": "Press down and cut each into pieces.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Peter and Zooey's lemon wedding cupcakes",

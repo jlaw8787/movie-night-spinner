@@ -295,6 +295,173 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Paris portobello steak frites",
+     "prep_min": 15,
+     "cook_min": 37,
+     "make_ahead": "Cut the potatoes up to 4 hours ahead and keep in cold water",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes thin and fry in the vegetable oil at 140C, drain, then fry at 185C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Season the portobellos with salt and pepper and sear hard in the olive oil in cast iron, pressing down, until browned and tender.",
+       "min": 12
+      },
+      {
+       "text": "Crush the peppercorns in the pan, flame the brandy, add the cream and reduce until it coats a spoon.",
+       "min": 10
+      },
+      {
+       "text": "Finish with the butter and serve over the mushrooms with the frites.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Paris portobello steak frites (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 37,
+     "make_ahead": "Cut the potatoes up to 4 hours ahead and keep in cold water",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes thin and fry in the vegetable oil at 140C, drain, then fry at 185C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Season the portobellos with salt and pepper and sear hard in the olive oil in cast iron, pressing down, until browned and tender.",
+       "min": 12
+      },
+      {
+       "text": "Crush the peppercorns in the pan, add the stock and vinegar and bubble for a minute, add the cream and reduce until it coats a spoon.",
+       "min": 10
+      },
+      {
+       "text": "Finish with the butter and serve over the mushrooms with the frites.",
+       "min": 5
+      }
+     ]
     }
    }
   },

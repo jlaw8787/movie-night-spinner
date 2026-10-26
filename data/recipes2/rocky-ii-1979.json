@@ -198,7 +198,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Adrian's spaghetti and mushroom meatballs",
+     "prep_min": 30,
+     "cook_min": 39,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated, plus extra to serve",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "cans crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in half the oil until dry, then cool.",
+       "min": 12
+      },
+      {
+       "text": "Mix the mushrooms with the ricotta, breadcrumbs, cheese, chopped parsley and egg and chill for 10 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Roll into balls and brown gently in the remaining oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the tomatoes and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Cook the spaghetti.",
+       "min": 10
+      },
+      {
+       "text": "Serve the meatballs over the spaghetti with extra cheese.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cannoli",

@@ -309,6 +309,211 @@
        "min": 20
       }
      ]
+    },
+    "veg": {
+     "n": "Mushroom coq au vin",
+     "prep_min": 18,
+     "cook_min": 72,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "large mushrooms, portobello and swiss brown, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu, cut into thin batons",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "pickling onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the onions and potatoes and quarter the mushrooms.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms and smoked tofu in the oil in batches.",
+       "min": 15
+      },
+      {
+       "text": "Brown the onions, stir in the tomato paste and flour, then add the wine, stock, thyme and mushrooms and tofu.",
+       "min": 5
+      },
+      {
+       "text": "Simmer covered until the onions are tender and the sauce is glossy.",
+       "min": 35
+      },
+      {
+       "text": "Boil and mash the potatoes with the butter.",
+       "min": 20
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Mushroom coq au vin",
+     "prep_min": 18,
+     "cook_min": 72,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "large mushrooms, portobello and swiss brown, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu, cut into thin batons",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "pickling onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "vegetable stock, extra",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the onions and potatoes and quarter the mushrooms.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms and smoked tofu in the oil in batches.",
+       "min": 15
+      },
+      {
+       "text": "Brown the onions, stir in the tomato paste and flour, then add the extra stock, grape juice, balsamic vinegar, stock, thyme and mushrooms and tofu.",
+       "min": 5
+      },
+      {
+       "text": "Simmer covered until the onions are tender and the sauce is glossy.",
+       "min": 35
+      },
+      {
+       "text": "Boil and mash the potatoes with the butter.",
+       "min": 20
+      }
+     ]
     }
    }
   },

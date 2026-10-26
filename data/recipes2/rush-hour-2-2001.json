@@ -216,7 +216,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ricky Tan's Hong Kong five spice roast tofu",
+     "prep_min": 40,
+     "cook_min": 52,
+     "make_ahead": "Press up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Chinese five spice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "plum sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu between clean tea towels under a weight for 30 minutes, then cut into thick slabs.",
+       "min": 35
+      },
+      {
+       "text": "Rub with the five spice and salt and toss in the oil.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 220C for 25 minutes, turning once.",
+       "min": 25
+      },
+      {
+       "text": "Brush with the honey loosened with the hot water and roast for 10 minutes more.",
+       "min": 12
+      },
+      {
+       "text": "Cook the rice and serve with the tofu and plum sauce.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mango sago",

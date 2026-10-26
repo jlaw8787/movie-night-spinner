@@ -196,7 +196,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Prize marrow lentil stuffed zucchini",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Filling up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin of chopped tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 190C. Halve the zucchini and scoop out the middles, chopping the flesh.",
+       "min": 10
+      },
+      {
+       "text": "Fry the onion and mushrooms in the oil until browned, then add the zucchini flesh, lentils, tomatoes and thyme and cook until thick.",
+       "min": 20
+      },
+      {
+       "text": "Fill the zucchini shells and cover with the cheddar.",
+       "min": 5
+      },
+      {
+       "text": "Bake until tender and bubbling.",
+       "min": 35
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Carrot cake",

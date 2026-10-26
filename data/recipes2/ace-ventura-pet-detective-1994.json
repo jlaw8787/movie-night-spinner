@@ -246,7 +246,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cuban sandwich (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 160,
+     "make_ahead": "Marinate the mushrooms up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the orange and lime juice, crushed garlic, oregano and olive oil and toss through the portobello mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Marinate in the fridge for at least 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Roast the mushrooms at 200C for 25 minutes, then slice. Slice the smoked tofu thinly.",
+       "min": 30
+      },
+      {
+       "text": "Spread the rolls with mustard and layer with the mushrooms, smoked tofu, Swiss cheese and sliced pickles.",
+       "min": 10
+      },
+      {
+       "text": "Press in a pan with the butter until crisp on both sides.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Snowflake's key lime pie",

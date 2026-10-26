@@ -196,7 +196,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cable Junction clambake (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 19,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "vegetarian sausages, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes for 10 minutes in a big pot. Meanwhile halve the mushrooms lengthwise and cut the haloumi into thick slices.",
+       "min": 10
+      },
+      {
+       "text": "Add the corn, vegetarian sausages, butter and a splash of water.",
+       "min": 5
+      },
+      {
+       "text": "Add the mushrooms, cover and steam for 8 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Sear the haloumi in a dry pan until golden on both sides.",
+       "min": 4
+      },
+      {
+       "text": "Tip it all onto the table with the haloumi on top.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blueberry cobbler",

@@ -184,7 +184,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Randolph's chilli mushroom linguine",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "linguine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "extra virgin olive oil, plus a little extra",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "king oyster mushrooms, shredded with a fork",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red chilli, seeded and sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet, finely crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the linguine in well salted water.",
+       "min": 10
+      },
+      {
+       "text": "Toast the breadcrumbs in a little oil until golden. Set aside.",
+       "min": 4
+      },
+      {
+       "text": "Fry the mushrooms in half the oil until golden, then add the rest of the oil, the garlic and chilli for 2 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Add the nori, lemon zest and juice, butter and a ladle of pasta water and warm through.",
+       "min": 3
+      },
+      {
+       "text": "Toss with the drained pasta and parsley, then scatter with the crumbs.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Orca cookies and cream",

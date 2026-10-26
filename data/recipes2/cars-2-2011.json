@@ -212,7 +212,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Porto Corsa mushroom pasta",
+     "prep_min": 15,
+     "cook_min": 21,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "pinch of chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "cup",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms into thick coins, halve the tomatoes and chop the parsley.",
+       "min": 12
+      },
+      {
+       "text": "Boil the spaghetti until al dente.",
+       "min": 12
+      },
+      {
+       "text": "Sear the mushrooms in the olive oil until golden, then add the garlic and chilli.",
+       "min": 6
+      },
+      {
+       "text": "Add the tomatoes and stock and cook until the tomatoes soften.",
+       "min": 3
+      },
+      {
+       "text": "Toss through the spaghetti with the parsley.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pistachio ice cream",

@@ -198,7 +198,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Caribbean coconut tofu",
+     "prep_min": 10,
+     "cook_min": 38,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, cut into four thick slabs and salt. Crush the garlic, chop the chilli and dice the tomatoes.",
+       "min": 10
+      },
+      {
+       "text": "Sear the tofu in half the oil until golden on both sides and set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the garlic and chilli in the rest of the oil, add the tomatoes and coconut milk and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Return the tofu and simmer gently.",
+       "min": 8
+      },
+      {
+       "text": "Cook the jasmine rice.",
+       "min": 15
+      },
+      {
+       "text": "Squeeze in lime and serve over the rice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Steamed guava duff pudding",

@@ -202,7 +202,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sally's soup (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Soup up to 3 days, reheat to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "pumpkin, cut in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves of garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fresh thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "hot vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Roast the pumpkin, carrots, garlic and thyme in oil until soft.",
+       "min": 40
+      },
+      {
+       "text": "Blend with the hot vegetable stock until smooth.",
+       "min": 6
+      },
+      {
+       "text": "Pour into bowls.",
+       "min": 4
+      },
+      {
+       "text": "Pipe circles of sour cream on top and drag a skewer from the centre outwards to make a spiderweb.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Oogie Boogie chocolate mousse dirt cups",

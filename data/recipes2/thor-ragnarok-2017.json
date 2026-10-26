@@ -234,7 +234,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Contest of Champions roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 68,
+     "make_ahead": "Can rest, covered, for 30 minutes",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves of garlic, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "fresh rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zest and juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of mint, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the cauliflowers whole for 8 minutes and drain. Cut slits and push in the garlic and rosemary, then rub with the lemon, salt and half the oil.",
+       "min": 20
+      },
+      {
+       "text": "Roast at 200C with the potatoes in the rest of the oil until deep golden.",
+       "min": 60
+      },
+      {
+       "text": "Mix the yoghurt with the mint.",
+       "min": 3
+      },
+      {
+       "text": "Cut the cauliflowers into wedges to serve.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Korg's Kiwi afghan biscuits",

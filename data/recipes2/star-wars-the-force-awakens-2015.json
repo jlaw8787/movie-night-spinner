@@ -206,7 +206,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Maz Kanata's slow-roast cauliflower feast",
+     "prep_min": 15,
+     "cook_min": 90,
+     "make_ahead": "Rub the cauliflowers up to 1 day ahead, roast fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "flatbreads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed, for the yoghurt",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed vegetables for roasting (pumpkin, zucchini, red onion)",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the cauliflowers, keeping them whole, and rub with the garlic, rosemary, paprika, most of the oil and the salt.",
+       "min": 10
+      },
+      {
+       "text": "Roast covered at 200C until a knife goes in with little resistance.",
+       "min": 45
+      },
+      {
+       "text": "Uncover, add the vegetables and chickpeas tossed in the rest of the oil, and roast until the cauliflower is charred and the chickpeas are crisp.",
+       "min": 40
+      },
+      {
+       "text": "Stir the garlic into the yoghurt.",
+       "min": 5
+      },
+      {
+       "text": "Warm the flatbreads and pull the cauliflower apart at the table.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ahch-To island scones",

@@ -236,7 +236,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "KTX to Busan kimchi fried rice (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Cook the rice a day ahead",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "vegetarian kimchi, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "gochujang",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet nori, torn",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice and let it go cold.",
+       "min": 20
+      },
+      {
+       "text": "Fry the mushrooms in the oil with the smoked paprika until browned and crisp at the edges.",
+       "min": 8
+      },
+      {
+       "text": "Add the kimchi and a splash of its juice.",
+       "min": 4
+      },
+      {
+       "text": "Add the cold rice, gochujang and butter and press flat to crisp the bottom.",
+       "min": 8
+      },
+      {
+       "text": "Top each bowl with a fried egg and torn nori.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Su-an's birthday hotteok",

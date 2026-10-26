@@ -271,6 +271,173 @@
        "min": 12
       }
      ]
+    },
+    "veg": {
+     "n": "House of Blue Leaves tofu and mushroom yakitori",
+     "prep_min": 18,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "mirin",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sake",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "shiitake or button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, mirin, sake and sugar until syrupy for the tare.",
+       "min": 12
+      },
+      {
+       "text": "Pat the tofu dry and thread onto skewers with the mushrooms and spring onion pieces. Brush with the oil.",
+       "min": 18
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 18
+      },
+      {
+       "text": "Grill over high heat, turning and brushing with tare.",
+       "min": 10
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "House of Blue Leaves tofu and mushroom yakitori (alcohol-free)",
+     "prep_min": 18,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "shiitake or button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, apple juice, water, rice vinegar and sugar until syrupy for the tare.",
+       "min": 12
+      },
+      {
+       "text": "Pat the tofu dry and thread onto skewers with the mushrooms and spring onion pieces. Brush with the oil.",
+       "min": 18
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 18
+      },
+      {
+       "text": "Grill over high heat, turning and brushing with tare.",
+       "min": 10
+      }
+     ]
     }
    }
   },

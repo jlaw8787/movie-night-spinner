@@ -200,7 +200,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Spaghetti with lentil ragu",
+     "prep_min": 11,
+     "cook_min": 68,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the carrots and celery and finely chop the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms in the oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the carrot and celery and soften.",
+       "min": 6
+      },
+      {
+       "text": "Add the tomatoes and lentils and simmer.",
+       "min": 40
+      },
+      {
+       "text": "Boil the spaghetti until al dente.",
+       "min": 12
+      },
+      {
+       "text": "Toss with the sauce and plenty of vegetarian parmesan-style cheese.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Raccoon fight brownies",

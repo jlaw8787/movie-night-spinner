@@ -236,7 +236,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kansas barbecue tofu bites",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Up to 2 days, reheat covered",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu dry and cut into 3cm cubes.",
+       "min": 10
+      },
+      {
+       "text": "Toss with the cornflour, oil, smoked paprika and salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C until crisp.",
+       "min": 30
+      },
+      {
+       "text": "Toss with barbecue sauce and brown sugar.",
+       "min": 5
+      },
+      {
+       "text": "Return to the oven until sticky.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Walley World toffee apples",

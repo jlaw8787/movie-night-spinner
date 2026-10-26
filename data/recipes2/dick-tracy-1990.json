@@ -216,7 +216,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Big Boy's spaghetti with mushroom and ricotta meatballs",
+     "prep_min": 30,
+     "cook_min": 55,
+     "make_ahead": "Sauce and meatballs up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "San Marzano tomatoes (2 tins)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the mushrooms in 1 tbsp of the oil until dry and cool slightly.",
+       "min": 12
+      },
+      {
+       "text": "Soak the bread in the milk, squeeze and mix with the mushrooms, ricotta, egg and half the parmesan. Roll into balls and chill for 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Brown the meatballs gently in the remaining oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the tomatoes and basil and simmer gently.",
+       "min": 30
+      },
+      {
+       "text": "Cook the spaghetti.",
+       "min": 10
+      },
+      {
+       "text": "Toss with the sauce and serve with the rest of the parmesan.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lemon meringue pie",

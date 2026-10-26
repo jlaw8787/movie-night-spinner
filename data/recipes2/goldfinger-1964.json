@@ -297,6 +297,169 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Kentucky stud farm mushroom steak",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "bourbon",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "crushed black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roast the potatoes in oil at 220C.",
+       "min": 45
+      },
+      {
+       "text": "Sear the mushrooms hard in the butter, gill side up first, then turn and cook until tender. Set aside.",
+       "min": 12
+      },
+      {
+       "text": "Deglaze the pan with bourbon and crushed pepper.",
+       "min": 3
+      },
+      {
+       "text": "Add the stock and cream and reduce.",
+       "min": 10
+      },
+      {
+       "text": "Serve the mushrooms with potatoes and sauce.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Kentucky stud farm mushroom steak",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "crushed black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roast the potatoes in oil at 220C.",
+       "min": 45
+      },
+      {
+       "text": "Sear the mushrooms hard in the butter, gill side up first, then turn and cook until tender. Set aside.",
+       "min": 12
+      },
+      {
+       "text": "Deglaze the pan with the apple juice, cider vinegar and crushed pepper.",
+       "min": 3
+      },
+      {
+       "text": "Add the stock and cream and reduce.",
+       "min": 10
+      },
+      {
+       "text": "Serve the mushrooms with potatoes and sauce.",
+       "min": 5
+      }
+     ]
     }
    }
   },

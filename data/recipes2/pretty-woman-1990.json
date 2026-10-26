@@ -415,6 +415,217 @@
        "min": 6
       }
      ]
+    },
+    "veg": {
+     "n": "Business dinner portobello steak and red wine jus",
+     "prep_min": 15,
+     "cook_min": 114,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin, chop the shallots and trim the beans.",
+       "min": 15
+      },
+      {
+       "text": "Layer the potatoes with the cream, crushed garlic and salt, and bake at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Brush the portobello mushrooms with the oil, season, sear on both sides, then roast at 200C for 15 minutes.",
+       "min": 18
+      },
+      {
+       "text": "Soften the shallots in a little of the butter in the pan. Add the wine and reduce by half, then add the stock and soy sauce and reduce until glossy. Whisk in some more butter.",
+       "min": 15
+      },
+      {
+       "text": "Steam the beans and toss with the remaining butter.",
+       "min": 6
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Business dinner portobello steak and balsamic jus",
+     "prep_min": 15,
+     "cook_min": 114,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin, chop the shallots and trim the beans.",
+       "min": 15
+      },
+      {
+       "text": "Layer the potatoes with the cream, crushed garlic and salt, and bake at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Brush the portobello mushrooms with the oil, season, sear on both sides, then roast at 200C for 15 minutes.",
+       "min": 18
+      },
+      {
+       "text": "Soften the shallots in a little of the butter in the pan. Add the extra stock and balsamic vinegar and reduce by half, then add the stock and soy sauce and reduce until glossy. Whisk in some more butter.",
+       "min": 15
+      },
+      {
+       "text": "Steam the beans and toss with the remaining butter.",
+       "min": 6
+      }
+     ]
     }
    }
   },

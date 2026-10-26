@@ -202,7 +202,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Backyard barbecue jackfruit",
+     "prep_min": 20,
+     "cook_min": 55,
+     "make_ahead": "Cook up to 2 days ahead and reheat",
+     "ingredients": [
+      {
+       "q": 1.1,
+       "u": "kg",
+       "item": "young green jackfruit in brine (2 tins), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle barbecue sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the hard core from the jackfruit and pull the pieces apart with two forks.",
+       "min": 10
+      },
+      {
+       "text": "Toss with the onion, oil, salt, pepper and paprika.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C until browned at the edges.",
+       "min": 30
+      },
+      {
+       "text": "Stir through half the barbecue sauce and roast again until sticky.",
+       "min": 25
+      },
+      {
+       "text": "Serve piled on white bread with pickles and the rest of the barbecue sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Frat house sheet cake",

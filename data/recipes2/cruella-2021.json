@@ -210,7 +210,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "The Baroness's mushroom Wellington",
+     "prep_min": 45,
+     "cook_min": 114,
+     "make_ahead": "Wrap up to 1 day ahead, brush with egg and bake when needed",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large butternut pumpkin, neck only, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the pumpkin neck lengthways, rub with 1 tbsp of the oil and salt and roast at 200C until just tender. Cool, then brush with the Dijon.",
+       "min": 37
+      },
+      {
+       "text": "Cook the mushrooms and thyme leaves in the remaining oil until completely dry, stir in the soy and cool.",
+       "min": 25
+      },
+      {
+       "text": "Wilt the spinach and squeeze dry. Lay it on plastic wrap, spread with the mushrooms, sit the pumpkin halves together on top and roll up tightly. Chill the roll.",
+       "min": 42
+      },
+      {
+       "text": "Wrap in puff pastry and brush with egg wash.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until deep golden.",
+       "min": 35
+      },
+      {
+       "text": "Rest before slicing.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Black and white cake",

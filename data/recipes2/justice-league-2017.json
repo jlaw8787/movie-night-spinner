@@ -216,7 +216,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Themyscira lemon roast eggplant",
+     "prep_min": 25,
+     "cook_min": 47,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "small eggplants, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the eggplant flesh and rub with the juice of 2 lemons, crushed garlic, oregano, 4 tbsp of the oil and salt.",
+       "min": 12
+      },
+      {
+       "text": "Roast cut side up at 200C with the chickpeas scattered around until soft and golden.",
+       "min": 40
+      },
+      {
+       "text": "Rest for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Chop the tomatoes and cucumber and toss with feta, the rest of the oil and the last lemon.",
+       "min": 10
+      },
+      {
+       "text": "Serve the eggplant and chickpeas with the salad.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Speed force sundae",

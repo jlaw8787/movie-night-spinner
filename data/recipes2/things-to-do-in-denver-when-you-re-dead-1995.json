@@ -196,7 +196,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Patty melt (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Onions can be cooked 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onions in a little of the butter over low heat until soft and golden.",
+       "min": 25
+      },
+      {
+       "text": "Shape the plant-based mince into 4 thin oval patties, season, and sear in a hot pan until browned on both sides.",
+       "min": 5
+      },
+      {
+       "text": "Butter the bread on the outside. Build each sandwich with a patty, onions and two slices of Swiss cheese.",
+       "min": 5
+      },
+      {
+       "text": "Griddle the sandwiches in a pan over medium heat, turning once, until crisp and the cheese has melted.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mile-high sopapillas",

@@ -214,7 +214,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Metropolis gala mushroom Wellington",
+     "prep_min": 40,
+     "cook_min": 72,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the button mushrooms very fine and crush the garlic.",
+       "min": 10
+      },
+      {
+       "text": "Brush the portobello mushrooms with some of the olive oil, season with salt and pepper and roast at 200C for 15 minutes, then brush with the mustard and cool.",
+       "min": 25
+      },
+      {
+       "text": "Cook the chopped mushrooms with the garlic and thyme in the rest of the oil until dry.",
+       "min": 12
+      },
+      {
+       "text": "Wilt the spinach in the same pan and squeeze out the water.",
+       "min": 5
+      },
+      {
+       "text": "Lay the spinach on a pastry sheet, spread with the mushroom mix and stack the portobellos in a log on top. Wrap, seal with the second sheet and brush with egg.",
+       "min": 15
+      },
+      {
+       "text": "Bake at 210C until deep golden.",
+       "min": 35
+      },
+      {
+       "text": "Rest before slicing.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wayne gala chocolate soufflé",

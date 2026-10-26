@@ -190,7 +190,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Erebor gold roast pumpkin",
+     "prep_min": 10,
+     "cook_min": 68,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "butternut pumpkins, halved lengthways and seeded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "fennel seeds, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "green apples, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chickpeas, drained and patted dry",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the pumpkin flesh and rub with 2 tbsp of the oil, the salt and fennel seeds.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C cut side up.",
+       "min": 30
+      },
+      {
+       "text": "Brush with the honey, add the apple halves and the chickpeas tossed in the rest of the oil and roast 25 minutes more.",
+       "min": 25
+      },
+      {
+       "text": "Blast at 240C until the edges and chickpeas are golden and crisp.",
+       "min": 8
+      },
+      {
+       "text": "Rest, then serve with the yoghurt.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Smaug's golden honey cake",

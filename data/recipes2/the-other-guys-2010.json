@@ -270,7 +270,122 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lion versus tuna sesame tofu bowls",
+     "prep_min": 30,
+     "cook_min": 19,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, in 4 thick slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "wasabi paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "frozen edamame",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "continental cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the sushi rice and season with 3 tbsp of the rice vinegar and the sugar.",
+       "min": 15
+      },
+      {
+       "text": "Pat the tofu dry, brush with a little of the soy and press into the sesame seeds.",
+       "min": 7
+      },
+      {
+       "text": "Sear in the hot oil for 2 minutes a side until golden and slice.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the rest of the soy and rice vinegar with the sesame oil and wasabi.",
+       "min": 5
+      },
+      {
+       "text": "Boil the frozen edamame 3 minutes.",
+       "min": 7
+      },
+      {
+       "text": "Build bowls with rice, tofu, sliced avocado, cucumber, edamame and pickled ginger and spoon over the dressing.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bike messenger brownies",

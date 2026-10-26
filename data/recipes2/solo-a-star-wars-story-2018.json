@@ -232,7 +232,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vandor lodge roast cabbage",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Simmer a day ahead, roast fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "small savoy cabbage, cut into 4 thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "sauerkraut",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the cabbage wedges with the onion, bay leaves and caraway seeds in the stock until just tender.",
+       "min": 15
+      },
+      {
+       "text": "Lift out, pat very dry, brush with the oil and rub with salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 220C until the edges blister and char.",
+       "min": 30
+      },
+      {
+       "text": "Boil the potatoes and toss with butter and parsley. Warm the sauerkraut with a little of the cooking liquid.",
+       "min": 15
+      },
+      {
+       "text": "Serve with wholegrain mustard.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Coaxium popping candy chocolate bark",

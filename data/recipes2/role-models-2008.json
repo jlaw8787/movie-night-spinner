@@ -256,7 +256,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ronnie's double cheeseburgers and fries (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "frozen fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "paprika, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "cheese slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "tomato sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "mustard, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "white onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the frozen fries at 220C for 25 minutes and toss with salt and paprika.",
+       "min": 26
+      },
+      {
+       "text": "Roll the plant-based mince into 8 balls.",
+       "min": 7
+      },
+      {
+       "text": "Smash flat on a very hot plate, season and cook 2 minutes, flip, add cheese and cook 1 minute.",
+       "min": 9
+      },
+      {
+       "text": "Mix the mayo, the tomato sauce, the mustard and chopped pickles.",
+       "min": 7
+      },
+      {
+       "text": "Toast the buns, spread with sauce and stack the patties with diced onion and pickles.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kingdom of LAIRE honey spice cakes",

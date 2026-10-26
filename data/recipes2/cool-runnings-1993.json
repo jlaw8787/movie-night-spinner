@@ -230,7 +230,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Calgary '88 jerk cauliflower",
+     "prep_min": 12,
+     "cook_min": 170,
+     "make_ahead": "Marinate up to a day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "scotch bonnet chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "allspice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "heads cauliflower, cut into thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin kidney beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the chillies, allspice, thyme, spring onions, garlic, lime juice, oil and salt into a paste and coat the cauliflower.",
+       "min": 12
+      },
+      {
+       "text": "Marinate in the fridge for at least 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Grill slowly over coals, turning, until charred and tender.",
+       "min": 30
+      },
+      {
+       "text": "Cook the rice with the drained kidney beans and coconut milk.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jamaican coconut toto cake",

@@ -202,7 +202,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lime grilled haloumi with mango salsa",
+     "prep_min": 19,
+     "cook_min": 24,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "mangoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the haloumi with lime juice and crushed garlic.",
+       "min": 6
+      },
+      {
+       "text": "Dice the mango, chilli and red onion and mix with lime juice for salsa.",
+       "min": 10
+      },
+      {
+       "text": "Cook the rice in the coconut milk with a pinch of salt and a splash of water.",
+       "min": 18
+      },
+      {
+       "text": "Grill the haloumi until golden and charred on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Serve the haloumi on the rice with the salsa.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Heart of Atlantis pavlova",

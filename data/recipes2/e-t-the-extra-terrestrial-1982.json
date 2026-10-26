@@ -172,7 +172,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Family pizza night (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "black olives",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to its highest setting with a steel or tray inside.",
+       "min": 15
+      },
+      {
+       "text": "Stretch the dough into two thin bases.",
+       "min": 5
+      },
+      {
+       "text": "Spread with pizza sauce and top with the mozzarella, mushrooms, capsicum and olives.",
+       "min": 5
+      },
+      {
+       "text": "Bake until the crust is blistered and the cheese is bubbling.",
+       "min": 13
+      },
+      {
+       "text": "Cut into squares for the whole family.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Homemade peanut butter cups",

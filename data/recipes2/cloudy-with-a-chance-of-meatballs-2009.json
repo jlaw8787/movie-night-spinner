@@ -206,7 +206,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Giant lentil meatballs and spaghetti",
+     "prep_min": 25,
+     "cook_min": 50,
+     "make_ahead": "Sauce and meatballs up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the oil until dry and browned, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Soak the bread in a little water and squeeze it out. Mash the lentils roughly and mix with the bread, mushrooms, egg, half the cheese and the chopped parsley.",
+       "min": 10
+      },
+      {
+       "text": "Roll into big balls and brown all over in the remaining oil.",
+       "min": 15
+      },
+      {
+       "text": "Simmer gently in the tomatoes with basil, turning the meatballs carefully once.",
+       "min": 25
+      },
+      {
+       "text": "Cook the spaghetti.",
+       "min": 10
+      },
+      {
+       "text": "Pile over the pasta and top with the rest of the cheese.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ice cream snow day",

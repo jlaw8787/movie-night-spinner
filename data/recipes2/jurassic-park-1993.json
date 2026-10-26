@@ -216,7 +216,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Visitor centre lunch (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "Crumb the eggplant up to 4 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the eggplant flesh, brush with half the oil and roast cut side up at 220C for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Toss the potatoes in the rest of the oil and salt and put in the oven alongside.",
+       "min": 5
+      },
+      {
+       "text": "Brush the eggplant with Dijon, press on the parsley, breadcrumbs and parmesan and roast until golden.",
+       "min": 20
+      },
+      {
+       "text": "Boil the peas with the mint, drain and blitz with the butter. Plate the eggplant neatly with the potatoes and peas.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Spared no expense melting sundae",

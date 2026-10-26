@@ -200,7 +200,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Harlan's birthday roast celeriac",
+     "prep_min": 20,
+     "cook_min": 95,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large celeriac",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Scrub the celeriac and rub with the crushed garlic cloves, thyme, half the oil and salt. Wrap each in foil.",
+       "min": 15
+      },
+      {
+       "text": "Roast at 200C until a knife slides in easily.",
+       "min": 80
+      },
+      {
+       "text": "Roast the potatoes in chunks in the rest of the oil alongside.",
+       "min": 0
+      },
+      {
+       "text": "Unwrap, baste with the butter and roast until browned.",
+       "min": 15
+      },
+      {
+       "text": "Carve at the table with the horseradish cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Harlan's 85th birthday cake",

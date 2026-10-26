@@ -214,7 +214,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Farmhouse bean stew (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 843,
+     "make_ahead": "Soak beans overnight",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "dried borlotti beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves of garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu, diced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin of crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs of rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf of Italian bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the beans overnight and drain.",
+       "min": 720
+      },
+      {
+       "text": "Fry the smoked tofu in 1 tbsp of the oil until crisp and set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the onion and garlic in the remaining oil with the paprika.",
+       "min": 10
+      },
+      {
+       "text": "Add the beans, tomatoes, rosemary and stock to cover, and simmer until the beans are soft and the stew is thick.",
+       "min": 120
+      },
+      {
+       "text": "Stir the smoked tofu back in and serve with the bread.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sad Hill chocolate mousse cups",

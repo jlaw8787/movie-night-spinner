@@ -188,7 +188,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rare roast beetroot rolls",
+     "prep_min": 20,
+     "cook_min": 67,
+     "make_ahead": "Beetroot up to 2 days ahead, assemble fresh",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "medium beetroots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wrap the beetroots in foil with the oil, salt and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 200C until tender.",
+       "min": 60
+      },
+      {
+       "text": "Cool, rub off the skins and slice thin.",
+       "min": 15
+      },
+      {
+       "text": "Fill the rolls with beetroot, horseradish cream and a handful of rocket each.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Black forest gateau",

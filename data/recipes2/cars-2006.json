@@ -210,7 +210,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Flo's café mushroom and haloumi burgers",
+     "prep_min": 30,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, cut into 4 slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into crinkle chips.",
+       "min": 15
+      },
+      {
+       "text": "Fry the chips twice in the oil until crisp.",
+       "min": 18
+      },
+      {
+       "text": "Trim the mushroom stems, brush with 1 tbsp of the oil and season with salt.",
+       "min": 5
+      },
+      {
+       "text": "Grill the mushrooms until tender, melting cheddar on top at the end.",
+       "min": 10
+      },
+      {
+       "text": "Fry the haloumi and onion in a little oil until golden.",
+       "min": 10
+      },
+      {
+       "text": "Toast the buns.",
+       "min": 3
+      },
+      {
+       "text": "Stack it all in the buns and serve with the chips.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Piston Cup sundae",

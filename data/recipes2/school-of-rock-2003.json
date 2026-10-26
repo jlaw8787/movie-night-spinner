@@ -194,7 +194,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rock and roll pizza (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "Dough can be stretched 1 hour ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based pepperoni",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stretch the dough into two thin bases.",
+       "min": 10
+      },
+      {
+       "text": "Spread with crushed tomatoes and top with mozzarella and plant-based pepperoni.",
+       "min": 8
+      },
+      {
+       "text": "Bake on a hot steel at maximum heat.",
+       "min": 7
+      },
+      {
+       "text": "Warm the honey with chilli flakes and drizzle over.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Guitar-shaped cookies",

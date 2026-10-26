@@ -283,6 +283,255 @@
        "min": 10
       }
      ]
+    },
+    "veg": {
+     "n": "Jenny Lind opening night nut roast",
+     "prep_min": 25,
+     "cook_min": 120,
+     "make_ahead": "Shape the nut roast up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mixed nuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour, plus 1 tbsp for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in 1 tbsp of the oil until dry.",
+       "min": 10
+      },
+      {
+       "text": "Mix with the nuts, breadcrumbs, cheddar, 2 of the eggs, thyme, salt and pepper. Press into a lined loaf tin and bake at 200C until firm and browned.",
+       "min": 50
+      },
+      {
+       "text": "Roast the potatoes in 2 tbsp of the oil on another shelf.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the other 3 eggs, the flour and milk and bake in tins oiled with the last of the oil at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter, stir in 1 tbsp flour, add the red wine and reduce, then whisk in the stock and simmer for gravy.",
+       "min": 10
+      },
+      {
+       "text": "Rest the nut roast, slice and serve with the potatoes, Yorkshire puddings and gravy.",
+       "min": 10
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Jenny Lind opening night nut roast (alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 120,
+     "make_ahead": "Shape the nut roast up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mixed nuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour, plus 1 tbsp for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in 1 tbsp of the oil until dry.",
+       "min": 10
+      },
+      {
+       "text": "Mix with the nuts, breadcrumbs, cheddar, 2 of the eggs, thyme, salt and pepper. Press into a lined loaf tin and bake at 200C until firm and browned.",
+       "min": 50
+      },
+      {
+       "text": "Roast the potatoes in 2 tbsp of the oil on another shelf.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the other 3 eggs, the flour and milk and bake in tins oiled with the last of the oil at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter, stir in 1 tbsp flour, whisk in the stock and balsamic vinegar and simmer for gravy.",
+       "min": 10
+      },
+      {
+       "text": "Rest the nut roast, slice and serve with the potatoes, Yorkshire puddings and gravy.",
+       "min": 10
+      }
+     ]
     }
    }
   },

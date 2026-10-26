@@ -214,7 +214,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Balkan grilled haloumi and eggplant",
+     "prep_min": 20,
+     "cook_min": 62,
+     "make_ahead": "Marinate the eggplant up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "red capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crush 4 of the garlic cloves and mix with the chopped rosemary, lemon juice and zest and the oil. Cut the eggplants into thick rounds, toss with half the mix and leave for 30 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Roast the capsicums at 220C until blistered, then peel and slice.",
+       "min": 25
+      },
+      {
+       "text": "Grill the eggplant hot until charred outside and soft inside.",
+       "min": 12
+      },
+      {
+       "text": "Slice the haloumi thick, grill for 1 to 2 minutes a side and spoon over the rest of the garlic mix.",
+       "min": 5
+      },
+      {
+       "text": "Crush the last garlic clove into the yoghurt with a pinch of salt. Serve with the haloumi, eggplant and capsicums.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chocolate fondant",

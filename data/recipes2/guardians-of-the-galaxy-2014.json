@@ -232,7 +232,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ravager barbecue jackfruit with corn and slaw",
+     "prep_min": 15,
+     "cook_min": 50,
+     "make_ahead": "Jackfruit can be baked a day ahead, glaze to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins young green jackfruit in brine (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "coleslaw mix",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft rolls",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pull the jackfruit into shreds and toss with the oil, paprika and sugar.",
+       "min": 10
+      },
+      {
+       "text": "Spread on a lined tray and bake at 200C until browned at the edges.",
+       "min": 30
+      },
+      {
+       "text": "Stir through the barbecue sauce and glaze under the grill.",
+       "min": 10
+      },
+      {
+       "text": "Grill the corn until charred.",
+       "min": 10
+      },
+      {
+       "text": "Toss the slaw mix with mayonnaise and serve with the jackfruit in the rolls.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dance-off sundaes",

@@ -228,7 +228,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Study night spaghetti (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 65,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the plant-based mince into meatballs.",
+       "min": 15
+      },
+      {
+       "text": "Brown the meatballs in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the tomatoes and simmer.",
+       "min": 30
+      },
+      {
+       "text": "Split the baguette and spread with the butter mixed with the garlic.",
+       "min": 6
+      },
+      {
+       "text": "Bake the bread until crisp.",
+       "min": 10
+      },
+      {
+       "text": "Boil the spaghetti until al dente.",
+       "min": 12
+      },
+      {
+       "text": "Toss the sauce through the spaghetti with the cheese and serve with the bread.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sulley blue cupcakes",

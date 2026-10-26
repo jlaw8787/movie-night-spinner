@@ -206,7 +206,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dinner party king oyster mushrooms",
+     "prep_min": 30,
+     "cook_min": 12,
+     "make_ahead": "Butter up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "soft butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "salad leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the cut side of the mushrooms. Mash the butter with the garlic, lemon zest and parsley and brush over them.",
+       "min": 10
+      },
+      {
+       "text": "Cut the potatoes into shoestrings, rinse and dry well.",
+       "min": 10
+      },
+      {
+       "text": "Fry the potatoes in the oil in batches at 180C until crisp, drain and salt.",
+       "min": 10
+      },
+      {
+       "text": "Grill the mushrooms for about 4 minutes a side until golden and tender.",
+       "min": 8
+      },
+      {
+       "text": "Dress the salad leaves in lemon juice and serve with the mushrooms and fries.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Striped suit cake",

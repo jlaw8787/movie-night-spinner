@@ -208,7 +208,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "El Guapo's birthday jackfruit tacos",
+     "prep_min": 35,
+     "cook_min": 75,
+     "make_ahead": "Jackfruit can be cooked 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins young green jackfruit in brine (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "achiote paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar habanero salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pull the jackfruit into shreds and mix with the achiote paste, orange juice, crushed garlic and oil.",
+       "min": 15
+      },
+      {
+       "text": "Wrap tightly in foil and roast at 180C until tender.",
+       "min": 45
+      },
+      {
+       "text": "Slice the red onion thin and quick-pickle in lime juice with a pinch of salt.",
+       "min": 10
+      },
+      {
+       "text": "Unwrap, roast 20 minutes more until crisp at the edges, then warm the tortillas.",
+       "min": 25
+      },
+      {
+       "text": "Serve in tortillas with the pickled onion and habanero salsa.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Birthday churros",

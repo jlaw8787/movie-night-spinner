@@ -202,7 +202,138 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "English wedding nut roast",
+     "prep_min": 45,
+     "cook_min": 85,
+     "make_ahead": "Shape the nut roast up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mixed nuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 170,
+       "u": "g",
+       "item": "plain flour, 150g for the batter and 20g for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "eggs, 3 for the batter and 2 for the roast",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk 150 g of the flour, 3 eggs and the milk into a batter and rest it.",
+       "min": 15
+      },
+      {
+       "text": "Fry the onion and mushrooms in 1 tbsp of the oil until dry, then mix with the lentils, nuts, breadcrumbs, 2 eggs, cheddar, thyme and 1 tbsp of the soy sauce. Press into a lined loaf tin.",
+       "min": 20
+      },
+      {
+       "text": "Roast the nut roast at 200C for 45 minutes until firm and browned.",
+       "min": 45
+      },
+      {
+       "text": "Peel and chop the potatoes and roast them in 2 tbsp of the oil alongside.",
+       "min": 10
+      },
+      {
+       "text": "Rest the nut roast. Heat the rest of the oil in muffin tins.",
+       "min": 10
+      },
+      {
+       "text": "Pour in the batter and bake.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter, stir in the rest of the flour, whisk in the stock and the rest of the soy sauce and simmer for gravy.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Four weddings lemon curd cake",

@@ -194,7 +194,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smoky mushroom ribs, corn and potato salad",
+     "prep_min": 40,
+     "cook_min": 40,
+     "make_ahead": "Mushrooms baked up to 1 day ahead, glaze to serve",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the king oyster mushrooms lengthways, score the cut sides, rub with the brown sugar, paprika, garlic and 1 tbsp of the olive oil, then wrap tightly in foil.",
+       "min": 12
+      },
+      {
+       "text": "Bake at 200C for 25 minutes until tender.",
+       "min": 25
+      },
+      {
+       "text": "Boil the potatoes until tender, cool slightly, and toss with the Dijon, the rest of the oil and the vinegar.",
+       "min": 25
+      },
+      {
+       "text": "Unwrap the mushrooms, brush with barbecue sauce and glaze under a hot grill.",
+       "min": 8
+      },
+      {
+       "text": "Char the corn on a grill.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Flag cake",

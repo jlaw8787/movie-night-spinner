@@ -206,7 +206,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Osgood's yacht king oyster mushrooms",
+     "prep_min": 15,
+     "cook_min": 18,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the cut side of the mushrooms and brush with some of the butter mixed with crushed garlic.",
+       "min": 8
+      },
+      {
+       "text": "Boil the potatoes. Steam the green beans.",
+       "min": 15
+      },
+      {
+       "text": "Grill the mushrooms for about 4 minutes a side until golden, brushing with more garlic butter.",
+       "min": 8
+      },
+      {
+       "text": "Toss the potatoes and beans with the rest of the butter and serve with lemon wedges.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Big birthday cake",

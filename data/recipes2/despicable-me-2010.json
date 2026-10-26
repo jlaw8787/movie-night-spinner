@@ -266,7 +266,122 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gru's mushroom and ricotta meatballs in tomato sauce",
+     "prep_min": 30,
+     "cook_min": 47,
+     "make_ahead": "Sauce up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins of crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves of garlic, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of basil leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "parmesan, extra to serve",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in a little of the oil until dry, then cool.",
+       "min": 12
+      },
+      {
+       "text": "Mix the mushrooms with the ricotta, egg, breadcrumbs, parmesan, parsley and seasoning. Roll into balls and chill.",
+       "min": 15
+      },
+      {
+       "text": "Brown the balls gently in the rest of the oil in batches.",
+       "min": 10
+      },
+      {
+       "text": "Add the garlic, tomatoes and basil to the pan and simmer the meatballs gently.",
+       "min": 25
+      },
+      {
+       "text": "Cook the spaghetti in salted water while the sauce finishes.",
+       "min": 10
+      },
+      {
+       "text": "Toss the pasta with the sauce and serve with extra parmesan.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "It's so fluffy unicorn cake",

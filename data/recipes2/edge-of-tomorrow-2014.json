@@ -407,6 +407,197 @@
        "min": 1
       }
      ]
+    },
+    "veg": {
+     "n": "Angel of Verdun mushrooms, cider and cream",
+     "prep_min": 15,
+     "cook_min": 26,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eschalots, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "apple cider",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Brown in the butter in batches over high heat, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the eschalots in the pan.",
+       "min": 6
+      },
+      {
+       "text": "Pour in the cider and scrape up the browned bits.",
+       "min": 3
+      },
+      {
+       "text": "Return the mushrooms, add the beans and simmer until the cider reduces by half.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the cream and simmer until glossy.",
+       "min": 3
+      },
+      {
+       "text": "Scatter with parsley and serve with a warm baguette.",
+       "min": 1
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Angel of Verdun mushrooms, cider and cream (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 26,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eschalots, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Brown in the butter in batches over high heat, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the eschalots in the pan.",
+       "min": 6
+      },
+      {
+       "text": "Pour in the apple juice and vinegar and scrape up the browned bits.",
+       "min": 3
+      },
+      {
+       "text": "Return the mushrooms, add the beans and simmer until the liquid reduces by half.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the cream and simmer until glossy.",
+       "min": 3
+      },
+      {
+       "text": "Scatter with parsley and serve with a warm baguette.",
+       "min": 1
+      }
+     ]
     }
    }
   },

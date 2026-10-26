@@ -226,7 +226,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jersey City paneer and cauliflower biryani",
+     "prep_min": 20,
+     "cook_min": 121,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "paneer, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "cauliflower florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "garam masala",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the paneer and cauliflower with the yoghurt, garam masala and salt.",
+       "min": 10
+      },
+      {
+       "text": "Rest in the fridge for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Slice the onions and fry in the oil until crisp, and soak the saffron in warm milk.",
+       "min": 15
+      },
+      {
+       "text": "Par-cook the rice in boiling salted water.",
+       "min": 6
+      },
+      {
+       "text": "Layer the paneer mixture, rice and onions in an ovenproof pot, drizzle with the saffron milk and seal tightly.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 170C.",
+       "min": 45
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kamala's fan art cupcakes",

@@ -329,6 +329,181 @@
        "min": 3
       }
      ]
+    },
+    "veg": {
+     "n": "Sam's Tribeca loft pasta (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rigatoni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the rigatoni in salted water until just tender, then drain.",
+       "min": 12
+      },
+      {
+       "text": "Meanwhile, slice the sausages and brown them in the oil in a large pan.",
+       "min": 7
+      },
+      {
+       "text": "Add the sliced fennel and crushed garlic and cook until soft.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the wine and let it bubble down, then stir in the cream.",
+       "min": 3
+      },
+      {
+       "text": "Toss the rigatoni through the sauce with the grated vegetarian parmesan-style cheese.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Sam's Tribeca loft pasta (vegetarian, alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rigatoni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the rigatoni in salted water until just tender, then drain.",
+       "min": 12
+      },
+      {
+       "text": "Meanwhile, slice the sausages and brown them in the oil in a large pan.",
+       "min": 7
+      },
+      {
+       "text": "Add the sliced fennel and crushed garlic and cook until soft.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the stock and lemon juice and let it bubble down, then stir in the cream.",
+       "min": 3
+      },
+      {
+       "text": "Toss the rigatoni through the sauce with the grated vegetarian parmesan-style cheese.",
+       "min": 3
+      }
+     ]
     }
    }
   },

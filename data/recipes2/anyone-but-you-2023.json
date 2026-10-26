@@ -212,7 +212,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Harbour haloumi",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, sliced thick",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender and crush lightly.",
+       "min": 20
+      },
+      {
+       "text": "Pan fry the haloumi in the oil until golden and crisp on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Add butter, lemon juice and capers to the pan and spoon over the haloumi.",
+       "min": 2
+      },
+      {
+       "text": "Serve with the potatoes and lemon wedges.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Halle and Claudia's pavlova",

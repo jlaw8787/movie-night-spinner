@@ -202,7 +202,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sunday fried oyster mushrooms",
+     "prep_min": 30,
+     "cook_min": 70,
+     "make_ahead": "Soak up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pull the oyster mushrooms into large clusters and soak in the buttermilk and hot sauce in the fridge for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Season the flour with the paprika and salt and dredge the mushrooms twice, dipping back into the buttermilk in between.",
+       "min": 15
+      },
+      {
+       "text": "Fry in the oil in a cast iron pan at 175C in batches for 3 to 4 minutes until deep golden and crisp.",
+       "min": 20
+      },
+      {
+       "text": "Drain on a rack.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Peach cobbler",

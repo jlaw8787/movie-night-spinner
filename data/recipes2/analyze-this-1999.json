@@ -218,7 +218,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Paul Vitti's eggplant parm",
+     "prep_min": 30,
+     "cook_min": 18,
+     "make_ahead": "Crumb up to 3 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the eggplants lengthways 1 cm thick, salt and leave 10 minutes, then pat dry. Dust in the flour, dip in the egg and coat in the breadcrumbs.",
+       "min": 18
+      },
+      {
+       "text": "Shallow-fry in the oil for 2 to 3 minutes a side until golden.",
+       "min": 10
+      },
+      {
+       "text": "Warm about half the passata, top each cutlet with sauce, mozzarella and parmesan and grill until bubbling.",
+       "min": 8
+      },
+      {
+       "text": "Cook the spaghetti and toss in the rest of the passata, heated.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "You're good, you cannoli",

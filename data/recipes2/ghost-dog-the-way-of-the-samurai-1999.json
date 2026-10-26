@@ -245,6 +245,185 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Teriyaki tofu rice bowl",
+     "prep_min": 10,
+     "cook_min": 27,
+     "make_ahead": "Best eaten straight away",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "mirin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sake",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cut into thick slabs and patted dry",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice and keep warm.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the soy, mirin, sake and sugar until syrupy.",
+       "min": 5
+      },
+      {
+       "text": "Toss the tofu in the cornflour and fry in the vegetable oil until crisp and golden on both sides, then pour in the sauce and turn until glazed.",
+       "min": 12
+      },
+      {
+       "text": "Slice the tofu over the rice and top with pickled ginger and spring onion.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Teriyaki tofu rice bowl (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 27,
+     "make_ahead": "Best eaten straight away",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cut into thick slabs and patted dry",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice and keep warm.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the soy, apple juice, water, rice vinegar and sugar until syrupy.",
+       "min": 5
+      },
+      {
+       "text": "Toss the tofu in the cornflour and fry in the vegetable oil until crisp and golden on both sides, then pour in the sauce and turn until glazed.",
+       "min": 12
+      },
+      {
+       "text": "Slice the tofu over the rice and top with pickled ginger and spring onion.",
+       "min": 5
+      }
+     ]
     }
    }
   },

@@ -176,7 +176,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Brooklyn hot dogs (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian hot dog franks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "tsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sauerkraut, drained",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the franks with the oil and griddle over medium-high heat until blistered and piping hot.",
+       "min": 8
+      },
+      {
+       "text": "Steam the buns until warm.",
+       "min": 2
+      },
+      {
+       "text": "Fill each bun with a frank, mustard and sauerkraut, then wrap in food-safe paper.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Apple turnovers",

@@ -244,7 +244,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Joined-tables crisp tofu with caper butter",
+     "prep_min": 12,
+     "cook_min": 26,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cut into 4 slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, shaved",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, drain and crush with some of the oil and salt.",
+       "min": 17
+      },
+      {
+       "text": "Pat the tofu dry, dust with the cornflour, salt and pepper and fry in a hot oiled pan until crisp on both sides.",
+       "min": 10
+      },
+      {
+       "text": "Wipe the pan, melt the butter until it foams brown, then add the capers, most of the lemon juice and the parsley.",
+       "min": 4
+      },
+      {
+       "text": "Toss the rocket with the cheese, the last of the oil and lemon.",
+       "min": 3
+      },
+      {
+       "text": "Plate the tofu on the potatoes and spoon over the butter.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Penthouse fundraiser lemon tart",
