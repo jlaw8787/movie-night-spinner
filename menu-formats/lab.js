@@ -105,25 +105,18 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* paper: stock colour, shared grain, era ruling, tone-driven vignette */
   const bg=`background:${E.grid}radial-gradient(ellipse at 50% 45%,rgba(0,0,0,0) 55%,rgba(60,40,10,${(.10+.22*wearA).toFixed(2)}) 100%),url(${GRAIN}) center/600px,${paper};background-blend-mode:${E.grid?"normal,":""}normal,multiply`;
 
-  /* hero: specimen plate */
-  const nItems=["s","m","w","d"].reduce((a,k)=>a+Math.min(4,((ctx.menu||{})[k]||[]).length),0);
-  const PY=150,PH=nItems>10?392:nItems>8?430:458,PW=W-2*M;
-  const ppw=Math.round(PH*2/3),ppx=PW-ppw-24;
+  /* hero: specimen plate. The poster is the main picture: whole, 2:3, frame hugs it, nothing over it */
+  const PY=146,PW=456,PH=684,RX=M+PW+22,RW=W-M-RX;
   const heroImg=posterSrc
-    ?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:-30px;top:-30px;width:${PW+60}px;height:${PH+60}px;object-fit:cover;filter:blur(18px) brightness(.5)"><img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:${ppx}px;top:0;width:${ppw}px;height:${PH}px;object-fit:contain">`
+    ?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:0;top:0;width:${PW}px;height:${PH}px;object-fit:contain">`
     :(heroSrc?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
   const crop=(pos)=>`<div style="position:absolute;${pos};width:22px;height:22px"></div>`;
   const marks=["top:-10px;left:-10px;border-top:2px solid "+ink+";border-left:2px solid "+ink,"top:-10px;right:-10px;border-top:2px solid "+ink+";border-right:2px solid "+ink,"bottom:-10px;left:-10px;border-bottom:2px solid "+ink+";border-left:2px solid "+ink,"bottom:-10px;right:-10px;border-bottom:2px solid "+ink+";border-right:2px solid "+ink].map(p=>crop(p)).join("");
-  const logo=logoPanel(ctx,{font:D,typeSize:46,typeInk:"#f4f1ea",lightInk:ink,maxW:300,maxH:112,dark:darkPanel,light:"#f6f3ea",
-    wrap:`position:absolute;left:18px;bottom:18px;box-shadow:0 3px 14px rgba(0,0,0,.35);border-radius:${E.head==="line"?8:2}px`});
-  const plateTab=`<div style="position:absolute;left:0;top:0;background:${paper};color:${ink};font:600 15px/1 ${B};letter-spacing:.18em;padding:8px 12px 7px;text-transform:uppercase;max-width:${PW-340}px;white-space:nowrap;overflow:hidden">Plate A <span style="letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400">Now showing, ${esc(f.year||"")}</span></div>`;
-  const stamp=`<div style="position:absolute;${posterSrc?"left:18px;right:auto;top:52px":"left:auto;right:206px;top:58px"};transform:rotate(${T.tilt-4}deg);border:3px solid ${acc};color:${acc};font:${E.dw} 20px/1 ${D};letter-spacing:.12em;padding:6px 10px 5px;text-transform:uppercase;background:${paper};opacity:.93">${esc(T.stamp)}</div>`;
-  const pr=(fl&&fl.prop&&(fl.prop.title||"").trim())?fl.prop:{title:"Mess Chit",lines:["One hot meal","Valid this shift"]};
-  const prop=`<div style="position:absolute;${posterSrc?"left:18px;top:112px":"right:16px;bottom:16px"};width:232px;transform:rotate(${(-T.tilt/2).toFixed(1)}deg);background:${paper};border:1.5px dashed ${ink};box-shadow:0 3px 10px rgba(0,0,0,.35);padding:9px 12px 8px">
-    <div style="font:${E.dw} 18px/1.1 ${D};text-transform:uppercase;letter-spacing:.06em;color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(pr.title))}</div>
-    ${(pr.lines||[]).slice(0,2).map(l=>`<div style="font:400 15px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(l))}</div>`).join("")}
-    <div style="font:${E.dw} 16px/1.2 ${D};color:${acc};letter-spacing:.1em;margin-top:2px">No. ${esc(num)}</div></div>`;
-  const hero=`<div style="position:absolute;left:${M}px;top:${PY}px;width:${PW}px;height:${PH}px">${marks}<div style="position:absolute;inset:0;overflow:hidden;background:#111;outline:1px solid ${ink}">${heroImg}</div>${plateTab}${logo.html}${prop}${stamp}</div>`;
+  const logo=logoPanel(ctx,{font:D,typeSize:46,typeInk:"#f4f1ea",lightInk:ink,maxW:RW-36,maxH:84,dark:darkPanel,light:"#f6f3ea",
+    wrap:`position:relative;flex:none;align-self:flex-start;max-width:${RW}px;box-sizing:border-box;box-shadow:0 3px 14px rgba(0,0,0,.35);border-radius:${E.head==="line"?8:2}px`});
+  const plateTab=`<div style="flex:none;color:${ink};font:600 15px/1.2 ${B};letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden;margin-top:12px">Plate A <span style="letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400">Now showing, ${esc(f.year||"")}</span></div>`;
+  const stamp=`<div style="flex:none;align-self:flex-start;max-width:${RW-12}px;box-sizing:border-box;margin:12px 0 0 6px;transform:rotate(${T.tilt-4}deg);border:3px solid ${acc};color:${acc};font:${E.dw} 18px/1.1 ${D};letter-spacing:.1em;padding:6px 10px 5px;text-transform:uppercase;background:${paper};opacity:.93">${esc(T.stamp)}</div>`;
+  const hero=`<div style="position:absolute;left:${M}px;top:${PY}px;width:${PW}px;height:${PH}px">${marks}<div style="position:absolute;inset:0;overflow:hidden;background:#111;outline:1px solid ${ink}">${heroImg}</div></div>`;
   const cap="";
 
   /* badge: laminated access card, ID photo from a second still */
@@ -134,8 +127,8 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="width:76px;height:84px;flex:none;overflow:hidden;border:1px solid #888;background:#222">${idSrc?`<img src="${idSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:${pf}">`:posterSrc?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="width:100%;height:100%;object-fit:contain">`:""}</div>
       <div style="font:600 14px/1.2 ${B};color:#222;text-transform:uppercase;letter-spacing:.06em;min-width:0">Badge<br>No. ${esc(num)}<br><span style="color:${acc}">All areas</span></div>
     </div>
-    <div data-fith="22" data-min="14" style="margin:8px 10px 0;height:48px;display:flex;align-items:center;font-family:${D};font-weight:${E.dw};font-size:22px;line-height:1.05;color:#111;text-transform:uppercase;overflow:hidden;overflow-wrap:normal;word-break:normal"><div style="min-width:0;max-width:100%">${esc(by)}</div></div>
-    <div style="margin:6px 10px 0;border-top:1px solid #999;padding-top:5px;font:400 14px/1.15 ${B};color:#333;height:33px;overflow:hidden">${esc(venue)}</div>
+    <div data-fith="22" data-min="14" style="margin:4px 10px 0;height:44px;display:flex;align-items:center;font-family:${D};font-weight:${E.dw};font-size:22px;line-height:1.05;color:#111;text-transform:uppercase;overflow:hidden;overflow-wrap:normal;word-break:normal"><div style="min-width:0;max-width:100%">${esc(by)}</div></div>
+    <div style="margin:6px 10px 0;border-top:1px solid #999;padding-top:4px;font:400 14px/1.15 ${B};color:#333;height:34px;overflow:hidden">${esc(venue)}</div>
   </div>`;
 
   /* header */
@@ -157,11 +150,11 @@ window.MENU_FORMATS[ID]=ctx=>{
     return `<div style="${s};color:${acc};border-bottom:1px solid ${acc};padding-bottom:.15em;margin:0 0 .35em">${esc(t)}</div>`;
   };
   const cur=E.cur;
-  let flow="";
-  ["s","m","w","d"].forEach((k,ci)=>{
-    const items=(m[k]||[]).slice(0,4);if(!items.length)return;
-    flow+=`<div style="break-inside:avoid">${secHead(LAB[ci])}`+items.slice(0,1).map((it,ii)=>row(it,ci,ii)).join("")+`</div>`+items.slice(1).map((it,ii)=>row(it,ci,ii+1)).join("");
-    flow+=`<div style="height:.45em"></div>`;
+  const secs=["s","m","w","d"].map((k,ci)=>({ci,items:(m[k]||[]).slice(0,4)})).filter(x=>x.items.length);
+  const tot=secs.reduce((a,x)=>a+x.items.length,0);let seen=0,flowA="",flow="";
+  secs.forEach(x=>{
+    const h=`<div style="break-inside:avoid">${secHead(LAB[x.ci])}`+x.items.slice(0,1).map((it,ii)=>row(it,x.ci,ii)).join("")+`</div>`+x.items.slice(1).map((it,ii)=>row(it,x.ci,ii+1)).join("")+`<div style="height:.45em"></div>`;
+    if(seen<tot/2)flowA+=h;else flow+=h;seen+=x.items.length;
   });
   function row(it,ci,ii){
     const n=clean(it.n),p=price(f,fl,ci,ii,n,E.scale);
@@ -170,24 +163,15 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${it.note?`<div data-note="1" style="font:400 max(14px,.74em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.12em">${esc(sent(it.note))}</div>`:""}
     </div></div>`;
   }
-  const note=fl&&fl.note&&clean(fl.note.text);
-  if(note)flow+=`<div data-drop2="1" style="break-inside:avoid;margin:.3em 0 .6em;padding:.5em .6em;border-left:4px solid ${acc};background:rgba(255,255,255,.45)">
-      <div style="font:600 max(14px,.62em)/1.2 ${B};letter-spacing:.16em;text-transform:uppercase;color:${acc}">Memo from ${esc(by)}</div>
-      <div style="font:italic 400 max(15px,.8em)/1.3 ${B};color:${ink};margin-top:.2em">"${esc(note)}"</div>
-      <div style="font:600 max(22px,1.25em)/1 'Caveat',cursive;color:${ink};text-align:right;margin-top:.1em">${esc(by)}</div></div>`;
-  else flow+=`<div data-drop2="1" style="break-inside:avoid;margin:.3em 0 .6em;padding:.5em .6em;border-left:4px solid ${acc};background:rgba(255,255,255,.45)"><div style="font:italic 400 max(15px,.8em)/1.3 ${B};color:${ink}">"Sign in, wash up and take a tray. The kitchen closes when the last shift is fed."</div><div style="font:600 max(22px,1.25em)/1 'Caveat',cursive;color:${ink};text-align:right">The Cook</div></div>`;
-  if(f.P)flow+=`<div data-drop2="1" style="break-inside:avoid;margin:0 0 .6em;font-size:max(15px,.76em);line-height:1.3"><span style="font-family:${D};font-weight:${E.dw};letter-spacing:.12em;text-transform:uppercase;color:${acc}">Protocol </span><span style="font-family:${B};color:${ink}">${esc(sent(f.P))}</span></div>`;
-  const winks=((fl&&fl.winks)||[]).slice(0,5).map(clean).filter(Boolean);
-  if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;margin:0"><div style="font:600 max(14px,.6em)/1.2 ${B};letter-spacing:.16em;text-transform:uppercase;color:${acc}">Observations logged</div>${winks.map((w,i)=>`<div style="font:400 max(14px,.64em)/1.3 ${B};color:${ink}">${i+1}. ${esc(w)}</div>`).join("")}</div>`;
-
-  const MY=PY+PH+22,MH=H-MY-58;
+  const MY=PY+PH+20,MH=H-MY-58;
   const menu=`<div data-fit="27" style="position:absolute;left:${M}px;top:${MY}px;width:${W-2*M}px;height:${MH}px;overflow:hidden;column-count:2;column-gap:30px;column-fill:auto;font-size:27px">${flow}</div>`;
+  const side=`<div style="position:absolute;left:${RX}px;top:268px;width:${RW}px;height:${PY+PH-268}px;display:flex;flex-direction:column">${logo.html}${stamp}${plateTab}<div data-fit="24" style="flex:1;min-height:0;margin-top:12px;overflow:hidden;font-size:24px">${flowA}</div></div>`;
   const foot=`<div style="position:absolute;left:${M}px;right:${M}px;bottom:16px;border-top:1px solid ${ink};padding-top:7px;display:flex;justify-content:space-between;gap:16px;font:400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">
     <span style="overflow:hidden;text-overflow:clip">Form ${esc(ID.toUpperCase())}${esc(num)}, rev. ${esc(f.year||"")}. Return tray to the hatch. Rations subject to supply.</span><span>Sheet 1 of 1. Images: TMDB</span></div>`;
 
   const face=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:10px;${E.frame};pointer-events:none;opacity:.8"></div>
-    ${head}${hrule}${hero}${cap}${badge}${menu}${foot}
+    ${head}${hrule}${hero}${cap}${badge}${side}${menu}${foot}
     <img src="${PIX}" alt="" style="position:absolute;width:1px;height:1px;opacity:0" data-labfit="1" onload="if(!this.dataset.fitted){this.dataset.fitted=1;window.__fmtFitLab&&window.__fmtFitLab(this)}">
   </div>`;
   return {w:W,h:H,faces:[face]};

@@ -108,12 +108,12 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* logo on a panel that suits its colours, set type if missing */
   const lg=ctx.logo,lr=lg&&lg[0]&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const lh=lr?Math.min(lr<1.6?160:118,Math.round(340/lr)):0,lw=lr?Math.round(lh*lr):0;
-  const tl=clean(f.title).length,lw0=Math.max(...clean(f.title).split(/\s+/).map(w=>w.length)),tsz=Math.max(22,Math.min(tl<=14?54:tl<=26?42:tl<=40?32:28,Math.floor(356/(lw0*(eg==="new"?.8:.66)))));
+  const lh=lr?Math.min(lr<1.6?150:110,Math.round(268/lr)):0,lw=lr?Math.round(lh*lr):0;
+  const tl=clean(f.title).length,lw0=Math.max(...clean(f.title).split(/\s+/).map(w=>w.length)),tsz=Math.max(22,Math.min(tl<=14?54:tl<=26?42:tl<=40?32:28,Math.floor(268/(lw0*(eg==="new"?.8:.66)))));
   const titleType=`<div style="font:${E.dw} ${tsz}px/1.04 ${E.disp};text-transform:uppercase;color:currentColor">${esc(f.title)}</div>`;
-  const logoPanel=`<div data-lpanel data-dark="rgba(12,10,10,.82)" data-light="rgba(252,249,242,.92)" data-darkink="#fff" data-lightink="#151515" style="position:absolute;left:918px;right:26px;bottom:26px;padding:16px 20px 14px;background:rgba(12,10,10,.82);color:#fff;border-radius:${eg==="new"?14:3}px;box-shadow:0 6px 18px rgba(0,0,0,.4);text-align:center">
-      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:356px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType}</div>`:titleType}
-      <div style="font:700 15px/1 ${E.body};letter-spacing:.24em;text-transform:uppercase;margin-top:10px;opacity:.9">Movie night order &nbsp;·&nbsp; ${esc(f.year)}</div></div>`;
+  const logoPanel=`<div data-lpanel data-dark="rgba(12,10,10,.82)" data-light="rgba(252,249,242,.92)" data-darkink="#fff" data-lightink="#151515" style="position:relative;flex:none;padding:14px 20px 12px;background:rgba(12,10,10,.82);color:#fff;border-radius:${eg==="new"?14:3}px;box-shadow:0 6px 18px rgba(0,0,0,.4);text-align:center">
+      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:268px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType}</div>`:titleType}
+      <div style="font:700 15px/1 ${E.body};letter-spacing:.1em;white-space:nowrap;text-transform:uppercase;margin-top:10px;opacity:.9">Movie night order, ${esc(f.year)}</div></div>`;
 
   /* ---------- outside: delivery panel, wraparound photo, cover ---------- */
   const phone="555 0"+(num?num.padStart(3,"0").slice(-3):(yy||"00")+"1");
@@ -122,12 +122,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* the whole poster, stuck on a printed bag panel in the format's own colours; the cover panel keeps the lower right free for the logo */
   const bagA=toHex(mix(pd,[0,0,0],.5)),bagB=toHex(mix(mix(pa,pd,.5),[0,0,0],.4));
   const posterWrap=`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:repeating-linear-gradient(45deg,${bagA} 0 26px,${bagB} 26px 52px)"></div>
-   <div style="position:absolute;left:508px;top:28px;width:328px;height:492px;transform:rotate(-1.2deg);background:#fbfaf6;padding:8px;box-sizing:border-box;box-shadow:0 8px 20px rgba(0,0,0,.5)"><img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:100%;height:100%;object-fit:contain"></div>
-   <div style="position:absolute;left:944px;top:262px;width:352px;transform:rotate(2deg);background:#fbfaf6;color:#222;padding:14px 18px;box-sizing:border-box;box-shadow:0 5px 14px rgba(0,0,0,.4);text-align:center;${eg==="new"?"border-radius:12px;":""}">
-     <div style="font:${E.dw} 34px/1.05 ${E.disp};text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">Now showing</div>
-     <div style="font:700 16px/1.2 ${E.body};letter-spacing:.18em;text-transform:uppercase;margin-top:6px">${esc(venue)}</div></div>`;
+   ${folds}
+   <div style="position:absolute;left:466px;top:6px;width:540px;height:804px;background:#fbfaf6;padding:6px;box-sizing:border-box;box-shadow:0 8px 20px rgba(0,0,0,.5)"><img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:100%;height:100%;object-fit:contain"></div>`;
   const outside=`${stock}
-   ${heroIsPoster?posterWrap:`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:#111">${photo(hero,"50% 40%")}</div>`}
+   ${heroIsPoster?posterWrap:`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:#111">${photo(hero,"50% 40%")}</div>${folds}`}
    <div data-fit data-min="14" style="position:absolute;left:30px;top:30px;width:388px;height:24px;overflow:hidden;white-space:nowrap;font-size:18px"><div style="font:700 1em/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${SPOT}">${esc(T.run)}</div></div>
    <div data-fit data-min="34" style="position:absolute;left:30px;top:60px;width:388px;height:70px;overflow:hidden;white-space:nowrap;font-size:64px"><div style="font:${E.dw} 1em/1.05 ${E.disp};text-transform:uppercase;color:${INK};${press}">We deliver</div></div>
    <div style="position:absolute;left:30px;top:138px;width:388px;background:${BAR};color:${BARINK};padding:12px 16px;box-sizing:border-box;${eg==="new"?"border-radius:10px;":""}">
@@ -143,16 +141,19 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div data-fit data-min="16" style="flex:1;min-height:0;overflow:hidden;font-size:26px;display:flex;flex-direction:column;justify-content:center;text-align:center"><div style="font:italic 500 1em/1.2 ${E.body}">${esc(sent(prop.title))}</div>
        ${prop.lines.length?`<div style="font:500 .7em/1.3 ${E.body};font-size:max(15px,.7em);margin-top:.3em">${prop.lines.map(l=>esc(sent(l))).join(" ")}</div>`:""}</div>
      <div style="font:700 15px/1 ${E.body};letter-spacing:.14em;text-align:center">LUCKY NUMBERS &nbsp;${lucky}</div></div>
-   <div style="position:absolute;left:896px;top:0;width:448px;padding:26px 28px 22px;box-sizing:border-box;background:${dark?toHex(mix(paper,[0,0,0],.2)):P};${dark?"":`border-bottom:6px solid ${BAR};`}">
-     ${kick("Takeaway menu")}
-     <div data-fit data-min="26" style="height:104px;overflow:hidden;font-size:50px;display:flex;align-items:center;margin-top:4px"><div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:uppercase;color:${INK};${press}">${esc(venue)}</div></div>
-     <div data-fit data-min="16" style="height:50px;overflow:hidden;font-size:20px;margin-top:4px"><div style="font:italic 500 1em/1.25 ${E.body};color:${SOFT}">${esc(sign)}</div></div></div>
-   ${logoPanel}
-   <div style="position:absolute;left:478px;top:552px;width:380px;height:234px;background:#fbfaf6;color:#222;box-shadow:0 6px 16px rgba(0,0,0,.35);padding:16px 22px;box-sizing:border-box;display:flex;flex-direction:column">
-     <div style="font:700 15px/1 ${E.body};letter-spacing:.22em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">A word from the kitchen</div>
-     <div data-fit data-min="16" style="flex:1;min-height:0;overflow:hidden;font-size:21px;margin-top:8px"><div style="font:500 1em/1.32 ${E.body}">${esc(sent(note.t))}</div></div>
-     <div style="font:600 36px/1 'Caveat',cursive;color:${readable(toHex(pa),"#fbfaf6",4.5)};text-align:right">${esc(note.by)}</div></div>
-   ${folds}`;
+   <div style="position:absolute;left:1020px;top:14px;bottom:14px;width:308px;display:flex;flex-direction:column;gap:12px">
+     <div style="flex:none;padding:14px 18px 12px;box-sizing:border-box;background:${dark?toHex(mix(paper,[0,0,0],.2)):P};${dark?"":`border-bottom:6px solid ${BAR};`}box-shadow:0 5px 14px rgba(0,0,0,.35)">
+       ${kick("Takeaway menu")}
+       <div data-fit data-min="22" style="height:92px;overflow:hidden;font-size:46px;display:flex;align-items:center;margin-top:2px"><div style="max-width:100%;overflow-wrap:break-word;font:${E.dw} 1em/1.02 ${E.disp};text-transform:uppercase;color:${INK};${press}">${esc(venue)}</div></div>
+       <div data-fit data-min="16" style="height:50px;overflow:hidden;font-size:20px;margin-top:2px"><div style="font:italic 500 1em/1.25 ${E.body};color:${SOFT}">${esc(sign)}</div></div></div>
+     ${logoPanel}
+     <div style="flex:none;transform:rotate(1.5deg);background:#fbfaf6;color:#222;padding:8px 14px;box-sizing:border-box;box-shadow:0 5px 14px rgba(0,0,0,.4);text-align:center;${eg==="new"?"border-radius:12px;":""}">
+       <div style="font:${E.dw} 30px/1.05 ${E.disp};text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">Now showing</div></div>
+     <div style="flex:1 1 0;min-height:0;background:#fbfaf6;color:#222;box-shadow:0 6px 16px rgba(0,0,0,.35);padding:12px 18px 10px;box-sizing:border-box;display:flex;flex-direction:column">
+       <div style="font:700 15px/1 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${readable(toHex(pa),"#fbfaf6",4.5)}">A word from the kitchen</div>
+       <div data-fit data-min="14" style="flex:1;min-height:0;overflow:hidden;font-size:21px;margin-top:6px"><div style="font:500 1em/1.3 ${E.body}">${esc(sent(note.t))}</div></div>
+       <div style="font:600 32px/1 'Caveat',cursive;color:${readable(toHex(pa),"#fbfaf6",4.5)};text-align:right">${esc(note.by)}</div></div></div>
+   `;
 
   /* ---------- inside: photo band, three panels of numbered dishes ---------- */
   const LAB=fam?{s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"}:{s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"};

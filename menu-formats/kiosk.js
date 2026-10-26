@@ -221,7 +221,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const photoF=`${E.photo} ${T.photo}`;
 
   /* ===== surf report strip ===== */
-  const SH=84,PH=H-SH,PW=740;
+  const SH=84,PH=H-SH,PW=PM?593:740;
   const swell=(+num%5)+2,water=(+yy%7)+17,tideH=(+yy%12)||12;
   const cells=[[E.rep,""],["Swell",`${swell} ft`],["Wind",["offshore","light offshore","cross shore","onshore"][+num%4]],["Water",`${water} C`],["High tide",`${tideH}:${String(+yy%60).padStart(2,"0")}`]];
   const cw=c=>c[1]?Math.max(c[0].length*15*.78,c[1].length*20*(E.bcw+.06))+36:c[0].length*24*(E.dcw+.04)+36;
@@ -238,12 +238,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== beach photo ===== */
   let logoHtml,logoH;const LG=ctx.logo;
   if(LG&&LG[0]&&LG[1]&&LG[2]){
-    const a=LG[1]/LG[2];const LA=PM?15000:30000,LX=PM?204:400;let lh=Math.min(140,Math.sqrt(LA/a)),lw=lh*a;if(lw>LX){lw=LX;lh=lw/a}logoH=lh+32;
-    const tT=fitType(title,PM?204:360,170,E.dcw,52,24,1.05,3);
-    logoHtml=`<div data-lpanel data-dark="${rgba(DARK,.82)}" data-light="rgba(252,250,244,.94)" data-type="${rgba(DARK,.82)}" style="display:inline-block;padding:16px 20px;background:${rgba(DARK,.82)};border-radius:${Math.min(E.radius,12)}px;box-shadow:0 4px 16px rgba(0,0,0,.35)"><span data-lmax="${LX},140" data-larea="${LA}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px"><img src="${img(LG[0],"w500")}" crossorigin="anonymous" alt="${esc(title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="window.__PICK&&__PICK.logoFail(this)" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55))"></span><div data-ltype style="display:none;width:${PM?204:360}px;font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div></div>`;
+    const a=LG[1]/LG[2];const LA=PM?20000:30000,LX=PM?260:400;let lh=Math.min(140,Math.sqrt(LA/a)),lw=lh*a;if(lw>LX){lw=LX;lh=lw/a}logoH=lh+32;
+    const tT=fitType(title,PM?260:360,170,E.dcw,52,24,1.05,3);
+    logoHtml=`<div data-lpanel data-dark="${rgba(DARK,.82)}" data-light="rgba(252,250,244,.94)" data-type="${rgba(DARK,.82)}" style="display:inline-block;padding:16px 20px;background:${rgba(DARK,.82)};border-radius:${Math.min(E.radius,12)}px;box-shadow:0 4px 16px rgba(0,0,0,.35)"><span data-lmax="${LX},140" data-larea="${LA}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px"><img src="${img(LG[0],"w500")}" crossorigin="anonymous" alt="${esc(title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="window.__PICK&&__PICK.logoFail(this)" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55))"></span><div data-ltype style="display:none;width:${PM?260:360}px;font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div></div>`;
   }else{
-    const tT=fitType(title,PM?212:360,170,E.dcw,PM?44:58,24,1.05,4);logoH=tT.n*tT.z*1.05+32;
-    logoHtml=`<div style="width:${PM?252:360}px;box-sizing:border-box;padding:16px 20px;background:${rgba(DARK,.82)};border-radius:${Math.min(E.radius,12)}px;font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
+    const tT=fitType(title,PM?260:360,170,E.dcw,PM?44:58,24,1.05,4);logoH=tT.n*tT.z*1.05+32;
+    logoHtml=`<div style="width:${PM?300:360}px;box-sizing:border-box;padding:16px 20px;background:${rgba(DARK,.82)};border-radius:${Math.min(E.radius,12)}px;font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
   }
   /* pinned note card and a hire tag on the photo's lower edge */
   const nw=PM?252:360,nT=fitType(note.text,nw-44,PM?330:140,.5,PM?20:21,16,1.35,PM?12:6);
@@ -252,13 +252,21 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="${caps(15,fit(ACC,"#fbf6ea","#5b3a1a",3.4),.18)};margin-bottom:8px">${esc(T.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.35 ${body};color:#1d1a16">"${esc(note.text)}"</div>
       <div style="font:36px/1.2 ${sig};color:${fit(ACC,"#fbf6ea","#1d3a6a",3.4)};text-align:right;margin-top:4px">${esc(trunc(note.by,24))}</div></div>`;
+  /* poster mode: the note is a compact pinned card on the board, the hire tag is dropped */
+  const nwP=316,noteTxt=clip(note.text,150)||"Grab a bite, grab a towel and get down to the water.";
+  const nTp=fitType(noteTxt,nwP-44,100,.5,18,16,1.35,5);
+  const noteH=Math.round(14+22+nTp.n*nTp.z*1.35+42+14);
+  const notePM=`<div data-sp="note" style="flex:none;width:${nwP}px;height:${noteH}px;box-sizing:border-box;padding:14px 22px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(170deg,#fffdf6,#f3ecdb),#fffaf0;box-shadow:0 6px 18px rgba(0,0,0,.35);color:#1d1a16">
+      <div style="${caps(15,fit(ACC,"#fbf6ea","#5b3a1a",3.4),.18)};margin-bottom:6px">${esc(T.kick)}</div>
+      <div style="font:italic 500 ${nTp.z}px/1.35 ${body};color:#1d1a16">"${esc(noteTxt)}"</div>
+      <div style="font:32px/1.3 ${sig};color:${fit(ACC,"#fbf6ea","#1d3a6a",3.4)};text-align:right">${esc(trunc(note.by,24))}</div></div>`;
   const tw=250,th=150,pT=fitType(prop.title,tw-40,56,.6,26,17,1.05,2);
   const tagHtml=`<div data-sp="tag" style="position:absolute;left:${PM?30:nw+52}px;bottom:${PM?34:40}px;width:${tw}px;height:${th}px;transform:rotate(${(-T.tilt*.9+2).toFixed(2)}deg);background:linear-gradient(160deg,rgba(255,255,255,.4),transparent 60%),${mix("#fff4d8",ACC,.18)};border-radius:10px 10px 10px 10px;box-shadow:0 5px 14px rgba(0,0,0,.35);padding:14px 18px 12px 34px;box-sizing:border-box;color:#221c14;overflow:hidden">
       <div style="position:absolute;left:10px;top:${th/2-8}px;width:14px;height:14px;border-radius:50%;background:${rgba("#000",.55)};box-shadow:inset 0 1px 2px rgba(0,0,0,.6)"></div>
       <div style="${caps(15,"#4a3a28",.16)}">Tag No. ${esc(num)}</div>
       <div style="font:${E.dw}${pT.z}px/1.05 ${disp};color:#1b1712;margin:4px 0 4px">${esc(prop.title)}</div>
       ${prop.lines.map(l=>`<div style="font:500 16px/1.25 ${body};color:#3a2f22">${esc(trunc(l,30))}</div>`).join("")}</div>`;
-  const capHtml=`<div style="display:inline-block;margin-top:12px;max-width:${PM?252:PW-80}px;background:${rgba(DARK,.78)};padding:6px 12px;${caps(15,"#ffffff",.16)}">${PM?"Now showing, "+esc(year):esc(trunc(venue,34))+", out the front"}</div>`;
+  const capHtml=`<div style="display:inline-block;margin-top:12px;max-width:${PM?300:PW-80}px;background:${rgba(DARK,.78)};padding:6px 12px;${caps(15,"#ffffff",.16)}">${PM?"Now showing, "+esc(year):esc(trunc(venue,34))+", out the front"}</div>`;
 
   /* beach photo with everything that sits on it; the logo, note and tag go where they cover the least face, the crop slides to suit */
   const safe=JSON.stringify({pos:[[50,40],[30,40],[70,40],[10,40],[90,40],[50,22]],items:[
@@ -267,23 +275,25 @@ window.MENU_FORMATS[ID]=ctx=>{
     {q:"[data-sp=tag]",c:[["l",nw+52,"b",40],["r",nw+52,"b",40],["l",40,"b",nh+46],["r",40,"b",nh+46],["r",36,"t",40],["l",36,"t",40],["r",36,"c",0],["l",36,"c",0]]}]});
   const posterPanel=`${grain(.1,dkB,.8,false)},linear-gradient(180deg,rgba(255,255,255,.05),rgba(0,0,0,.2)),${mix(E.board,dkB?"#ffffff":"#000000",dkB?.06:.3)}`;
   const photoHtml=PM?`<div style="position:absolute;left:0;top:0;width:${PW}px;height:${PH}px;overflow:hidden;background:${posterPanel};box-shadow:inset -6px 0 14px rgba(0,0,0,.2)">
-    <div style="position:absolute;left:22px;top:30px;width:420px;height:630px;box-sizing:border-box;border:8px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.45);transform:rotate(${(T.tilt*.4).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain"></div>
-    <div style="position:absolute;left:466px;top:30px;width:252px">${logoHtml}<br>${capHtml}</div>${noteHtml}${tagHtml}</div>`
+    <div style="position:absolute;left:8px;top:8px;width:577px;height:860px;box-sizing:border-box;border:6px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.45);transform:rotate(${(T.tilt*.12).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain"></div></div>`
     :`<div data-safe='${safe}' style="position:absolute;left:0;top:0;width:${PW}px;height:${PH}px;overflow:hidden">${photo(hero.src,PW,PH,{filter:photoF,poster:hero.poster,pos:"50% 40%",vig:60,alts:stills.slice(5,8).map(s=>img(s,"w1280")),last:poster?img(poster,"w780"):""})}
     ${T.bleach?`<div style="position:absolute;inset:0;background:linear-gradient(200deg,rgba(255,250,235,${T.bleach*1.4}),transparent 60%)"></div>`:""}
     <div data-sp="logo" style="position:absolute;left:28px;top:28px;max-width:${PW-56}px">${logoHtml}<br>${capHtml}</div>${noteHtml}${tagHtml}</div>`;
 
   /* ===== the board ===== */
   const BX=PW,BW=W-PW,pad=34,IW=BW-pad*2;
-  const sT=fitType(sign,IW,128,E.dcw,64,30,1.0,2);
-  const hdr=`<div style="${caps(17,ACC,.2)}">${esc(E.kick)}, since ${esc(year)}</div>
+  const leftW=PM?IW-320:IW,sT=fitType(sign,leftW,128,E.dcw,PM?56:64,30,1.0,2);
+  const kickN=PM?lines(E.kick+", since "+year,17,leftW,.8):1;
+  const hdrL=`<div style="${caps(17,ACC,.2)}">${esc(E.kick)}, since ${esc(year)}</div>
      <div style="font:${E.dw}${sT.z}px/1.0 ${disp};color:${ink};margin-top:8px;${glow}">${esc(sign)}</div>`;
-  const hdrH=22+8+sT.n*sT.z*1.0+16;
+  const hdr=PM?`<div style="display:flex;align-items:flex-start;gap:20px"><div style="flex:1;min-width:0">${hdrL}</div><div style="flex:none">${logoHtml}<br>${capHtml}</div></div>`:hdrL;
+  const hdrH=PM?Math.max(kickN*21+8+sT.n*sT.z*1.0+16,logoH+54):22+8+sT.n*sT.z*1.0+16;
   const cue=sentence(C(f.P));
-  const cT=fitType(cue,IW-24,80,E.bcw,19,15,1.3,4);
+  const cueW=PM?IW-316-28:IW;
+  const cT=fitType(cue,cueW-24,PM?150:80,E.bcw,19,15,1.3,PM?8:4);
   const fine=`${T.close} Prices subject to change. Kiosk licence ${num}.`;
   const fT=fitType(fine,IW,44,.52,15,14,1.3,3);
-  const footH=(cue?16+18+6+cT.n*cT.z*1.3+14:0)+fT.n*fT.z*1.3+8;
+  const cueH=cue?16+18+6+cT.n*cT.z*1.3+14:0,footTail=fT.n*fT.z*1.3+8,footH=(PM?Math.max(cueH,noteH+12):cueH)+footTail;
   let MH=PH-pad-hdrH-14-footH-pad;
   /* menu courses, priced like a kiosk board */
   const m=ctx.menu||{};
@@ -312,7 +322,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   }
   /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
   let dropCue=false;
-  if(!FS){dropCue=!!cue;MH+=footH;
+  if(!FS){dropCue=!!cue;MH+=PM?footH-(noteH+12)-footTail:footH;
     for(const cap of [4,3,2]){courses=courses.map(c=>Object.assign({},c,{items:c.items.slice(0,cap)}));
       splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];colsArr=splits[0];
       for(const D of [17,16,15]){const FSx={D,N:15,S:D+1,G:3,nl:0};let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
@@ -330,7 +340,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         ${also.length?`<div style="margin-top:auto;margin-bottom:12px;border-top:2px solid ${ACC};padding-top:10px"><div style="${caps(15,ACC,.2)};margin-bottom:4px">Seen on the beach</div>${also.map(w=>`<div style="font:600 18px/1.3 ${body};color:${ink};margin-top:3px">${esc(sentence(trunc(w,60)))}</div>`).join("")}</div>`:""}
       </div>
       <div style="margin-top:auto">
-        ${cue&&!dropCue?`<div style="border-left:4px solid ${ACC};padding:2px 0 2px 16px;margin-bottom:14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}
+        ${PM?`<div style="display:flex;align-items:flex-end;gap:28px;margin-bottom:12px">${cue&&!dropCue?`<div style="width:${cueW}px;box-sizing:border-box;border-left:4px solid ${ACC};padding:2px 0 2px 16px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}${notePM}</div>`:cue&&!dropCue?`<div style="border-left:4px solid ${ACC};padding:2px 0 2px 16px;margin-bottom:14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}
         <div style="font:500 ${fT.z}px/1.3 ${body};color:${soft}">${esc(fine)}</div></div></div></div>`;
 
   const face=`<div style="position:absolute;inset:0;background:#111">${boardHtml}${photoHtml}${stripHtml}</div>`;

@@ -221,30 +221,36 @@ window.MENU_FORMATS.invite=function(ctx){
      <div data-ltype data-fit="20" style="display:${lr?"none":"block"};width:440px;height:96px;overflow:hidden;text-align:center;font:${E.dw} 40px/1.08 ${dd};${up}color:#fff;font-size:40px">${x(f.title)}</div>
     </div>`;
 
-  /* poster front: whole 2:3 poster on the left, the title logo on its own panel beside it */
-  const PWID=277,PX=34,PY=34,PH=416,RW=532-PWID;
-  let plh=lr?Math.min(140,Math.sqrt(18000/lr)):0,plw=plh*lr;if(plw>RW-36){plw=RW-36;plh=plw/lr}plw=Math.round(plw);plh=Math.round(plh);
-  const posterFront=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:532px;height:${PH}px;overflow:hidden;background:#222;outline:1px solid ${acc};outline-offset:4px;border-radius:${E.border==="round"?"14px":E.border==="dots"?"8px":"0"}">
-     <img src="${pos}" alt="" crossorigin="anonymous" style="position:absolute;left:0;top:0;width:${PWID}px;height:${PH}px;object-fit:contain;background:#222">
-     <div style="position:absolute;inset:0 0 0 ${PWID}px;background:linear-gradient(150deg,rgba(255,255,255,${E.press==="gloss"?.2:0}),transparent 45%)"></div>
-     <div data-lpanel data-lightink="#2a2a2a" data-dark="rgba(18,16,20,1)" data-light="rgba(253,250,244,1)" data-type="${dark}" style="position:absolute;left:${PWID}px;top:0;width:${RW}px;height:${PH}px;box-sizing:border-box;padding:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:${lr?"rgba(18,16,20,1)":dark}">
-      ${lr?`<span data-lmax="${RW-36},140" data-larea="18000" style="display:block;width:${plw}px;height:${plh}px"><img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="this.parentNode.style.display='none';window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${plw}px;height:${plh}px;object-fit:contain"></span>`:""}
-      <div data-ltype data-fit="20" style="display:${lr?"none":"block"};width:${RW-36}px;height:150px;overflow:hidden;text-align:center;font:${E.dw} 40px/1.08 ${dd};${up}color:#fff;font-size:40px">${x(f.title)}</div>
-      <div data-pk style="font:700 15px/1.2 ${bd};letter-spacing:.22em;text-transform:uppercase;color:#fff;text-align:center">Now showing</div>
+  /* poster front: big whole 2:3 poster on the left in a frame that hugs it, logo panel and kicker in the slim column beside it */
+  const PWID=372,PX=34,PY=34,PH=558,CX=PX+PWID+20,CW=566-CX;
+  let plh=lr?Math.min(100,Math.sqrt(7000/lr)):0,plw=plh*lr;if(plw>CW-20){plw=CW-20;plh=plw/lr}plw=Math.round(plw);plh=Math.round(plh);
+  const bdr=E.border==="round"?"14px":E.border==="dots"?"8px":"0";
+  const posterFront=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PWID}px;height:${PH}px;overflow:hidden;outline:1px solid ${acc};outline-offset:4px;border-radius:${bdr}">
+     <img src="${pos}" alt="" crossorigin="anonymous" style="position:absolute;left:0;top:0;width:${PWID}px;height:${PH}px;object-fit:contain;display:block">
+     <div style="position:absolute;inset:0;background:linear-gradient(150deg,rgba(255,255,255,${E.press==="gloss"?.2:0}),transparent 45%)"></div>
+    </div>
+    <div style="position:absolute;left:${CX}px;top:${PY}px;width:${CW}px;height:${PH}px;display:flex;flex-direction:column;gap:16px">
+     <div data-lpanel data-lightink="#2a2a2a" data-dark="rgba(18,16,20,1)" data-light="rgba(253,250,244,1)" data-type="${dark}" style="box-sizing:border-box;width:${CW}px;padding:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:${lr?"rgba(18,16,20,1)":dark};border-radius:${E.border==="round"?"14px":"2px"}">
+      ${lr?`<span data-lmax="${CW-20},100" data-larea="7000" style="display:block;width:${plw}px;height:${plh}px"><img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="this.parentNode.style.display='none';window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${plw}px;height:${plh}px;object-fit:contain"></span>`:""}
+      <div data-ltype data-fit="14" style="display:${lr?"none":"block"};width:${CW-20}px;height:96px;overflow:hidden;text-align:center;font:${E.dw} 28px/1.08 ${dd};${up}color:#fff;font-size:28px">${x(f.title)}</div>
      </div>
-   </div>`;
+     <div data-fit="14" style="flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:17px;color:${ink};${press}">
+      ${kick(T.k,".95em")}
+      <div style="margin-top:.7em;font:700 .9em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc}">Now showing</div>
+     </div>
+    </div>`;
   const front=`${stock}${border}
    ${pos?posterFront:photo(hero,34,34,532,416,st[0]?"50% 40%":"50% 22%",{alts:st.slice(5,8).map(s=>ctx.img(s,"w1280")),extra:logo,
      safe:JSON.stringify({pos:[[50,40],[50,22],[50,60],[30,40],[70,40]],items:[{q:"[data-sp=logo]",c:[["c",0,"b",18],["c",0,"t",18],["l",18,"b",18],["r",18,"b",18],["l",18,"t",18],["r",18,"t",18]]}]})})}
-   <div data-fit="18" style="position:absolute;left:44px;top:472px;width:512px;height:236px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:21px;color:${ink};${press}">
-     ${kick(T.k,".82em")}
+   <div data-fit="14" style="position:absolute;left:44px;top:${pos?606:472}px;width:512px;height:${pos?112:236}px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:${pos?19:21}px;color:${ink};${press}">
+     ${pos?"":kick(T.k,".82em")}
      <div style="margin-top:.35em;font:italic 1em/1.35 ${bd}">${x(T.lead)}</div>
      <div style="margin-top:.2em;font:${E.dw} 2.05em/1.05 ${dd};${up}letter-spacing:${E.ls};color:${ink}">${x(venue)}</div>
-     <div style="margin-top:.35em;font:700 .9em/1.3 ${bd};letter-spacing:.12em;text-transform:uppercase;color:${acc}">${x(sign)}</div>
+     <div style="margin-top:.35em;font:700 max(14px,.9em)/1.3 ${bd};letter-spacing:.12em;text-transform:uppercase;color:${acc}">${x(sign)}</div>
      ${f.T?`<div style="margin-top:.45em;font:italic 1em/1.35 ${bd}">${x(f.T)}</div>`:""}
    </div>
-   <div style="position:absolute;left:58px;right:58px;top:720px;height:150px;box-sizing:border-box;padding:12px 18px 6px;border-top:1px solid ${acc};border-bottom:1px solid ${acc};text-align:center;color:${ink}">
-     <div data-fit="14" style="height:78px;overflow:hidden;font:italic 19px/1.35 ${bd};font-size:19px">${x(nt.text)}</div>
+   <div style="position:absolute;left:58px;right:58px;top:${pos?728:720}px;height:${pos?144:150}px;box-sizing:border-box;padding:${pos?"8px 18px 4px":"12px 18px 6px"};border-top:1px solid ${acc};border-bottom:1px solid ${acc};text-align:center;color:${ink}">
+     <div data-fit="14" style="height:${pos?76:78}px;overflow:hidden;font:italic 19px/1.35 ${bd};font-size:19px">${x(nt.text)}</div>
      <div style="font:38px/1.1 ${SIG};color:${acc};white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
    </div>`;
 

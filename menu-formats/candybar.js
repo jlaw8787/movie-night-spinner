@@ -134,7 +134,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     :`<div style="position:absolute;inset:0;background:radial-gradient(circle,${toHex(mix(pa,[255,255,255],.3))},${toHex(mix(pa,[0,0,0],.4))});display:flex;align-items:center;justify-content:center"><div style="font:${E.it} ${E.dw} 54px/1.1 ${E.disp};color:#fff;text-align:center;padding:40px">${esc(sign)}</div></div>`;
   const frameW=eg==="new"?8:eg==="late"?14:16;
   const lg=ctx.logo,lr=lg&&lg[0]&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const LW=heroIsPoster?330:400;
+  const LW=heroIsPoster?200:400;
   const lh=lr?Math.min(120,Math.round(LW/lr)):0,lw=lr?Math.round(lh*lr):0;
   const tl=clean(f.title).length,tsz=tl<=14?60:tl<=26?46:tl<=40?36:30;
   const titleType=`<div style="font:${E.it} ${E.dw} ${tsz}px/1.02 ${E.disp};text-transform:uppercase;color:currentColor;max-width:${LW+40}px">${esc(f.title)}</div>`;
@@ -163,7 +163,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:400 26px/1 'Nothing You Could Do',cursive;color:${readable(toHex(pa),"#f7f3e8",4.5)};text-align:right;margin-top:2px">${esc(note.by)}</div></div>`;
 
   const comingList=(winks.length?winks.slice(0,3):[clean(f.T||"Tonight's feature, held over by popular demand")]).map(w=>esc(w.replace(/\.$/,"")));
-  const face=`${wallTex}${lightbox}
+  const faceOld=`${wallTex}${lightbox}
    <div style="position:absolute;left:22px;top:614px;width:808px;height:184px;display:flex;gap:14px;align-items:center">
      ${noteCard}
      ${stub(prop.kind==="ticket"||prop.kind==="stub"?"Admit one":"Keep this "+prop.kind,prop.title,prop.lines,236,-2,68,28)}
@@ -178,6 +178,27 @@ window.MENU_FORMATS[ID]=ctx=>{
      <span style="font:${E.it} ${E.dw} 22px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one of each board</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT}">${combo}</span></div>
    ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:850px;top:736px;width:472px;height:62px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
      <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.join(". ")}. Prices subject to change. Poster and stills: TMDB.</div></div>`}`;
+
+  /* poster front: the poster is the picture, framed tight on the left; logo, note and stubs in a middle column; boards on the right */
+  const PH=774,PW=516,PF=eg==="new"?8:10,PX=14,PY=Math.round((H-PH-2*PF)/2);
+  const posterFront=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PW+2*PF}px;height:${PH+2*PF}px;padding:${PF}px;box-sizing:border-box;background:${E.frame};border-radius:${eg==="new"?10:2}px;box-shadow:0 0 ${40*T.glow}px rgba(255,240,210,${.35*T.glow}),0 12px 30px rgba(0,0,0,.5)">
+      <img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:${PW}px;height:${PH}px;object-fit:cover;border-radius:${eg==="new"?4:0}px"></div>`;
+  const MX=PX+PW+2*PF+22,MW=256,RX=MX+MW+16,RW=W-22-RX;
+  const col=`<div style="position:absolute;left:${MX}px;top:${PY}px;width:${MW}px;height:${PH+2*PF}px;display:flex;flex-direction:column;justify-content:space-between;align-items:center">
+     <div style="width:100%">${logoPanel(false)}</div>
+     ${noteCard.replace("width:300px","width:"+(MW-4)+"px")}
+     ${stub(prop.kind==="ticket"||prop.kind==="stub"?"Admit one":"Keep this "+prop.kind,prop.title,prop.lines,236,-2,68,28)}
+     ${stub("Seat "+(num||yy||"7")+" · 7.15 pm","Tonight",[cue?"Cue: "+sent(cue):sign],230,2.2,34,26)}</div>`;
+  const right=`<div style="position:absolute;left:${RX}px;top:22px;width:${RW}px;height:122px;background:${E.board==="acrylic"?boardBg:"#0c0c0f"};border:${boardEdge};box-sizing:border-box;padding:10px 16px;display:flex;flex-direction:column;justify-content:center;${E.board==="screen"?"border-radius:6px;":""}">
+     <div style="font:700 15px/1.1 ${E.body};letter-spacing:.24em;text-transform:uppercase;color:${E.board==="acrylic"?priceInk:LIT}">${esc(T.kick)}</div>
+     <div data-fit data-min="22" style="font-size:44px;height:58px;overflow:hidden;margin-top:4px;display:flex;align-items:center"><div style="font:${E.it} ${E.dw} 1em/1.04 ${E.disp};text-transform:uppercase;color:${E.board==="acrylic"?boardInk:"#fff"};${E.board==="acrylic"?"":`text-shadow:0 0 ${10*T.glow}px ${LIT}`}">${esc(venue)}</div></div>
+     <div data-fit data-min="15" style="font-size:17px;height:22px;overflow:hidden;white-space:nowrap"><div style="font:500 1em/1.2 ${E.body};color:${E.board==="acrylic"?noteInk:"#d8d8de"}">${esc(sign)}</div></div></div>
+   <div data-fit data-min="${heavy?14:17}" style="position:absolute;left:${RX}px;top:156px;width:${RW}px;height:${heavy?560:520}px;overflow:hidden;font-size:${heavy?20:26}px">${boards}</div>
+   <div style="position:absolute;left:${RX}px;top:${heavy?722:684}px;width:${RW}px;display:flex;justify-content:space-between;align-items:baseline;background:${E.board==="acrylic"?boardHead:"#0c0c0f"};border:${E.board==="neon"?`2px solid ${LIT}`:`2px solid ${E.board==="acrylic"?"#3b2a18":"#2c2d32"}`};box-sizing:border-box;padding:8px 14px">
+     <span style="font:${E.it} ${E.dw} 20px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one of each</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT}">${combo}</span></div>
+   ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:${RX}px;top:736px;width:${RW}px;height:62px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
+     <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.join(". ")}. Prices subject to change. Poster and stills: TMDB.</div></div>`}`;
+  const face=heroIsPoster?`${wallTex}${posterFront}${col}${right}`:faceOld;
 
   window.__fmtFitLater();
   return {w:W,h:H,faces:[face]};

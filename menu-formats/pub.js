@@ -136,31 +136,28 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fascia=`<div style="position:absolute;left:0;top:0;width:${W}px;height:${FH}px;background:linear-gradient(180deg,rgba(255,255,255,.14),transparent 30%,rgba(0,0,0,.2)),repeating-linear-gradient(180deg,transparent 0 42px,rgba(0,0,0,.14) 42px 44px,rgba(255,255,255,.08) 44px 46px),${grain(.12+.15*T.wear,lum(rgb(E.fascia))<.2,.6,true)},${E.fascia};border-bottom:10px solid ${E.frame};box-shadow:0 6px 14px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 60px;box-sizing:border-box;text-align:center">
       <div style="font:${E.dw}${vT.z}px/1.0 ${disp};color:${E.fink};letter-spacing:${E.up?".03em":"0"};text-shadow:0 2px 0 ${rgba("#000",.18)}">${esc(up(venue))}</div>
       <div style="${caps(17,E.fink,.22)};margin-top:10px;opacity:.9">${esc(fasciaKick)}</div></div>`;
-  /* ===== verandah photo, 44 percent of the face ===== */
-  const PY=FH,PHh=560;
-  const timber=`repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0 3px,transparent 3px 132px),repeating-linear-gradient(180deg,rgba(255,255,255,.05) 0 2px,transparent 2px 11px),${grain(.14,false,.7,false)},radial-gradient(ellipse at 50% 50%,rgba(255,255,255,.07),rgba(0,0,0,.3) 100%),${mix(E.frame,"#ffffff",lum(rgb(E.frame))<.1?.1:0)}`;
-  const posterW=347,posterH=520;
-  const photoHtml=PM?`<div style="position:absolute;left:0;top:${PY}px;width:${W}px;height:${PHh}px;overflow:hidden;background:${timber}">
-      <div style="position:absolute;left:${(W-posterW)/2}px;top:${(PHh-posterH)/2}px;width:${posterW}px;height:${posterH}px;box-sizing:border-box;border:8px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.5);transform:rotate(${(T.tilt*.5).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain">
-        <div style="position:absolute;left:50%;top:-14px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8,transparent 45%),${WA};box-shadow:0 2px 3px rgba(0,0,0,.5)"></div></div></div>`
-    :`<div style="position:absolute;left:0;top:${PY}px;width:${W}px;height:${PHh}px">${photo(hero.src,W,PHh,{filter:`${E.photo} ${T.photo}`,poster:hero.poster,pos:"50% 40%",vig:70})}
-      <div style="position:absolute;left:0;top:0;width:100%;height:46px;background:linear-gradient(180deg,rgba(0,0,0,.45),transparent)"></div></div>`;
+  /* ===== the poster: the main picture, about 37 percent of the face, whole at 2:3, pinned straight to the wall ===== */
+  const PX=24,PY=FH+26,PIW=590,PIH=885,PB=8,PFW=PIW+2*PB,PFH=PIH+2*PB;
+  const photoHtml=PM?`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PFW}px;height:${PFH}px;box-sizing:border-box;border:${PB}px solid #fbf8f0;background:#fbf8f0;box-shadow:0 8px 22px rgba(0,0,0,.5);transform:rotate(${(T.tilt*.3).toFixed(2)}deg)"><img src="${hero.src}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain">
+        <div style="position:absolute;left:50%;top:-${PB+6}px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8,transparent 45%),${WA};box-shadow:0 2px 3px rgba(0,0,0,.5)"></div></div>`
+    :`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PFW}px;height:${PFH}px;box-shadow:0 8px 22px rgba(0,0,0,.5)">${photo(hero.src,PFW,PFH,{filter:`${E.photo} ${T.photo}`,poster:false,pos:"50% 40%",vig:70})}</div>`;
+  const ZY=PY+PFH+22; /* strip under the poster: tag, then the film logo */
   let logoHtml;const LG=ctx.logo;
   if(LG&&LG[0]&&LG[1]&&LG[2]){
-    const a=LG[1]/LG[2];let lw=Math.min(PM?262:440,150*a),lh=lw/a;if(lh>150){lh=150;lw=lh*a}
-    logoHtml=`<div style="position:absolute;left:36px;top:${PY+PHh-lh-34-36}px;padding:17px 22px;background:${rgba(DARK,.82)};box-shadow:0 4px 16px rgba(0,0,0,.35)"><img src="${img(LG[0],"w500")}" alt="${esc(title)}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55))"></div>`;
+    const a=LG[1]/LG[2];let lw=Math.min(PFW-44,104*a),lh=lw/a;if(lh>104){lh=104;lw=lh*a}
+    logoHtml=`<div style="position:absolute;left:${PX}px;top:${ZY+38}px;padding:17px 22px;background:${rgba(DARK,.82)};box-shadow:0 4px 16px rgba(0,0,0,.35)"><img src="${img(LG[0],"w500")}" alt="${esc(title)}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55))"></div>`;
   }else{
-    const tT=fitType(title,PM?262:440,170,E.dcw,62,26,1.05,4);
-    logoHtml=`<div style="position:absolute;left:36px;top:${Math.round(PY+PHh-tT.n*tT.z*1.05-34-36)}px;width:${PM?306:440}px;box-sizing:border-box;padding:17px 22px;background:${rgba(DARK,.82)};font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
+    const tT=fitType(title,PFW-44,104,E.dcw,56,26,1.05,2);
+    logoHtml=`<div style="position:absolute;left:${PX}px;top:${ZY+38}px;max-width:${PFW}px;box-sizing:border-box;padding:17px 22px;background:${rgba(DARK,.82)};font:${E.dw}${tT.z}px/1.05 ${disp};color:#ffffff">${esc(title)}</div>`;
   }
   const capTxt=PM?`Now showing, ${year}`:sign&&sign.toLowerCase()!==venue.toLowerCase()?sign:`${venue}, from the verandah`;
-  const capHtml=`<div style="position:absolute;right:30px;top:${PY+PHh-62}px;max-width:${W-600}px;background:${rgba(DARK,.8)};padding:7px 14px;${caps(15,"#ffffff",.14)}">${esc(trunc(capTxt,46))}</div>`;
+  const capHtml=`<div style="position:absolute;left:${PX}px;top:${ZY}px;max-width:${PFW}px;background:${rgba(DARK,.8)};padding:7px 14px;${caps(15,"#ffffff",.14)}">${esc(trunc(capTxt,46))}</div>`;
 
   /* ===== blackboard ===== */
-  const BY=PY+PHh+24,BX=26,BW=708,FR=18,BH=H-BY-66;
-  const IX=BX+FR+26,IW=BW-2*FR-52,IY=BY+FR+18,IH=BH-2*FR-34;
-  const head=`<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px"><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};text-align:right;${chalk}">${fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"}</div></div>`;
-  const headH=50;
+  const BX=PX+PFW+22,BW=W-24-BX,BY=PY,FR=18,BH=640,NB=H-74;
+  const IX=BX+FR+20,IW=BW-2*FR-40,IY=BY+FR+16,IH=BH-2*FR-32;
+  const head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"}</div></div>`;
+  const headH=76;
   const cue=sentence(C(f.P));
   const cT=fitType(cue,IW,72,E.bcw,19,15,1.3,3);
   const footH=cue?(20+6+cT.n*cT.z*1.3+6):0;
@@ -169,7 +166,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const numPrice=num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
   let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0&&numPrice)?numPrice:`${[9,22,8,5][["s","m","w","d"].indexOf(k)]+j*2}.${yy}`}))})).filter(c=>c.items.length);
   const total=courses.reduce((a,c)=>a+c.items.length,0);
-  const cols=total>4&&courses.length>1?2:1,GAP=24,colW=cols===2?(IW-GAP)/2:IW;
+  const cols=1,GAP=24,colW=cols===2?(IW-GAP)/2:IW;
   let splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];
   let colsArr=splits[0];
   const dcw=E.bcw+.05;
@@ -210,18 +207,18 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div>`;
 
   /* ===== right of the board: raffle ticket and pinned note ===== */
-  const RX=BX+BW+22,RW=W-RX-24;
+  const RX=BX,RW=BW;
   const rT=fitType(prop.title,RW-80,64,.6,30,18,1.05,2);
-  const raffle=`<div style="position:absolute;left:${RX}px;top:${BY+8}px;width:${RW}px;transform:rotate(${(T.tilt*.7).toFixed(2)}deg);background:linear-gradient(165deg,rgba(255,255,255,.35),transparent 55%),${mix("#f7e7c2",acc,.22)};box-shadow:0 5px 14px rgba(0,0,0,.3);display:flex;color:#211a12">
+  const raffle=`<div style="position:relative;flex:none;width:${RW}px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(165deg,rgba(255,255,255,.35),transparent 55%),${mix("#f7e7c2",acc,.22)};box-shadow:0 5px 14px rgba(0,0,0,.3);display:flex;color:#211a12">
       <div style="width:62px;border-right:2px dashed rgba(33,26,18,.45);display:flex;align-items:center;justify-content:center"><div style="transform:rotate(-90deg);white-space:nowrap;font:800 18px/1 ${body};letter-spacing:.1em">No. ${esc(num.padStart(4,"0"))}</div></div>
       <div style="flex:1;padding:14px 16px 14px;min-width:0">
         <div style="${caps(15,"#4a3a24",.16)}">${esc(fam?"Friday raffle":T.raffle)}</div>
         <div style="font:${E.dw}${rT.z}px/1.05 ${disp};color:#1b150e;margin:6px 0">${esc(up(prop.title))}</div>
         ${prop.lines.map(l=>`<div style="font:500 16px/1.3 ${body};color:#3a2f22">${esc(trunc(l,28))}</div>`).join("")}
-        <div style="font:800 16px/1.3 ${body};color:#3a2f22;margin-top:6px">Ticket ${esc(num.padStart(4,"0"))}</div></div></div>`;
-  const ny=BY+236,nh=BY+BH-ny;
-  const nT=fitType(note.text,RW-44,nh-150,E.bcw,21,16,1.36,9);
-  const noteHtml=`<div style="position:absolute;left:${RX}px;top:${ny}px;width:${RW}px;height:${nh}px;box-sizing:border-box;padding:20px 22px;transform:rotate(${(-T.tilt*.5).toFixed(2)}deg);background:linear-gradient(175deg,#fffdf5,#f1e9d6);box-shadow:0 6px 16px rgba(0,0,0,.3);color:#1d1913">
+        </div></div>`;
+  const nh=NB-(BY+BH+20)-150-20;
+  const nT=fitType(note.text,RW-44,nh-90,E.bcw,21,16,1.36,9);
+  const noteHtml=`<div style="position:relative;flex:1;margin-top:22px;width:${RW}px;box-sizing:border-box;padding:20px 22px;transform:rotate(${(-T.tilt*.5).toFixed(2)}deg);background:linear-gradient(175deg,#fffdf5,#f1e9d6);box-shadow:0 6px 16px rgba(0,0,0,.3);color:#1d1913">
       <div style="position:absolute;left:50%;top:-8px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8,transparent 45%),${WA};box-shadow:0 2px 3px rgba(0,0,0,.4)"></div>
       <div style="${caps(15,fit(WA,"#f8f2e3","#5a3a1a",3.4),.16)};margin-bottom:10px">${esc(T.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.36 ${body};color:#1d1913">"${esc(note.text)}"</div>
@@ -230,7 +227,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fT=fitType(fine,W-60,44,.5,16,14,1.3,2);
   const fineHtml=`<div style="position:absolute;left:30px;right:30px;bottom:18px;font:500 ${fT.z}px/1.3 ${body};color:${rgba("#1d1610",.82)};text-shadow:0 1px 0 rgba(255,255,255,.3)">${esc(fine)}</div>`;
 
-  const face=`<div style="position:absolute;inset:0;background:${wallBg(E,T)}">${photoHtml}${logoHtml}${capHtml}${fascia}${board}${raffle}${noteHtml}${fineHtml}</div>`;
+  const face=`<div style="position:absolute;inset:0;background:${wallBg(E,T)}">${photoHtml}${logoHtml}${capHtml}${fascia}${board}<div style="position:absolute;left:${RX}px;top:${BY+BH+20}px;width:${RW}px;height:${NB-(BY+BH+20)}px;display:flex;flex-direction:column">${raffle}${noteHtml}</div>${fineHtml}</div>`;
   return {w:W,h:H,faces:[face]};
 };
 })();

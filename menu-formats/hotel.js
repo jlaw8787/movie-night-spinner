@@ -230,22 +230,19 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ---- front: monogram crest (type and rules), venue, suite photo, logo, note, door hanger ---- */
   const words=F.venue.split(/\s+/).filter(w=>!/^(the|hotel|of|and|at|&)$/i.test(w));
   const mono=(words[0]||"H").charAt(0)+((words[1]||"").charAt(0)||"");
-  const crest=`<div style="position:absolute;left:50%;top:40px;width:116px;height:116px;margin-left:-58px;border-radius:50%;border:${era===2?4:3}px solid ${rule};box-shadow:inset 0 0 0 5px ${paper},inset 0 0 0 6px ${rule};display:flex;align-items:center;justify-content:center">
-    <span style="font-family:${D};font-weight:${L.dw};font-size:${mono.length>1?44:54}px;line-height:1;color:${rule};letter-spacing:.02em;${L.ital?"font-style:italic;":""}${inkSpread}">${esc(mono.toUpperCase())}</span></div>`;
-  const header=`<div data-fbox style="position:absolute;left:44px;right:44px;top:172px;height:150px;text-align:center;display:flex;flex-direction:column;justify-content:safe center;overflow:hidden">
+  const crest=`<div style="position:absolute;left:50%;top:28px;width:84px;height:84px;margin-left:-42px;border-radius:50%;border:${era===2?4:3}px solid ${rule};box-shadow:inset 0 0 0 5px ${paper},inset 0 0 0 6px ${rule};display:flex;align-items:center;justify-content:center">
+    <span style="font-family:${D};font-weight:${L.dw};font-size:${mono.length>1?32:40}px;line-height:1;color:${rule};letter-spacing:.02em;${L.ital?"font-style:italic;":""}${inkSpread}">${esc(mono.toUpperCase())}</span></div>`;
+  const header=`<div data-fbox style="position:absolute;left:44px;right:44px;top:120px;height:130px;text-align:center;display:flex;flex-direction:column;justify-content:safe center;overflow:hidden">
     ${kick(VOICE[t],K.acc,"center")}
     <div data-fline="2" data-fs="26" style="${dispStyle}font-size:${F.venue.length>24?42:50}px;line-height:1.04;color:${K.ink};margin-top:8px;${inkSpread}">${esc(F.venue)}</div>
     <div data-fs="15" style="font:italic 400 20px/1.2 ${B};color:${K.soft};margin-top:7px">${esc(F.sign)}</div></div>`;
-  const heroTop=352,heroH=588,posW=Math.round(heroH*2/3),colW=612-posW-28;
-  const lp=logoPanel(ctx,{maxW:colW-36,maxH:100,center:true,dark:rgba(K.deep,.86),light:rgba(dark?"#f4ecdc":paper,.94),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f4ecdc":paper,.93),fbK:K.acc,
-    titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:`In your suite<br>${esc(ctx.f.year)}`,underFont:`700 14px/1.3 ${B};letter-spacing:.14em;text-transform:uppercase`,
-    style:`position:relative;padding:16px 14px 13px;text-align:center;border-radius:${era===3?16:2}px;box-shadow:0 6px 18px rgba(0,0,0,.38)`});
-  const hero=`<div style="position:absolute;left:30px;right:30px;top:${heroTop}px;height:${heroH}px">
-    <div style="position:absolute;left:0;top:0;width:${posW}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${rule};outline-offset:6px;border-radius:${era===3?18:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">
-    ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>
-    <div style="position:absolute;left:${posW+28}px;right:0;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;gap:18px">
-      <div style="border-top:${era===2?3:1}px solid ${rule}"></div>${lp}<div style="border-bottom:${era===2?3:1}px solid ${rule}"></div></div></div>`;
-  const note=`<div data-fbox style="position:absolute;left:38px;width:350px;top:992px;height:318px;overflow:hidden;display:flex;flex-direction:column">
+  const heroTop=262,heroH=720,posW=480,colW=360;
+  const lp=logoPanel(ctx,{maxW:colW-36,maxH:74,center:true,dark:rgba(K.deep,.86),light:rgba(dark?"#f4ecdc":paper,.94),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f4ecdc":paper,.93),fbK:K.acc,
+    titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:`In your suite ${esc(ctx.f.year)}`,underFont:`700 14px/1.3 ${B};letter-spacing:.14em;text-transform:uppercase`,
+    style:`position:absolute;left:38px;top:1004px;width:${colW}px;box-sizing:border-box;padding:10px 14px 9px;text-align:center;border-radius:${era===3?16:2}px;box-shadow:0 6px 18px rgba(0,0,0,.38)`});
+  const hero=`<div style="position:absolute;left:96px;top:${heroTop}px;width:${posW}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${rule};outline-offset:6px;border-radius:${era===3?18:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">
+    ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>${lp}`;
+  const note=`<div data-fbox style="position:absolute;left:38px;width:360px;top:1130px;height:196px;overflow:hidden;display:flex;flex-direction:column">
     ${kick("From the front desk")}
     <div data-fs="15" style="font:italic 400 22px/1.34 ${B};color:${K.ink};margin-top:12px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="24" style="font:400 40px/1.1 ${S};color:${K.acc};margin-top:8px;transform:rotate(-2deg);transform-origin:left">${esc(F.note.by)}</div>
@@ -255,14 +252,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   const hg=mix(hex(K.acc),[0,0,0],dark?0:.08),hgc=contrast(hg,[255,255,255])>=4.5?"#fffaf0":"#161412";
   const box=`<span style="display:inline-block;width:15px;height:15px;border:2px solid ${hgc};margin-right:9px;vertical-align:-2px;flex:none"></span>`;
   const pick=[(menu.s||[])[0],(menu.m||[])[0],(menu.d||[])[0]].filter(Boolean);
-  const hanger=`<div style="position:absolute;left:414px;top:978px;width:226px;height:340px;transform:rotate(${(T.rot*.5).toFixed(1)}deg);filter:drop-shadow(0 5px 8px rgba(0,0,0,.35))">
+  const hanger=`<div style="position:absolute;left:414px;top:1008px;width:226px;height:312px;transform:rotate(${(T.rot*.5).toFixed(1)}deg);filter:drop-shadow(0 5px 8px rgba(0,0,0,.35))">
     <div style="position:absolute;inset:0;background:${toHex(hg)};border-radius:${era===3||era===6?22:6}px;-webkit-mask:radial-gradient(circle 33px at 50% 56px,transparent 97%,#000 100%);mask:radial-gradient(circle 33px at 50% 56px,transparent 97%,#000 100%);overflow:hidden">
       <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.28;mix-blend-mode:multiply"></div>
       <div style="position:absolute;left:50%;top:89px;width:1px;height:0"></div>
       <div data-fbox style="position:absolute;left:18px;right:16px;top:102px;bottom:14px;overflow:hidden;color:${hgc}">
         <div data-fs="14" style="font:700 14px/1.2 ${B};letter-spacing:.2em;text-transform:uppercase">Order by 2 am</div>
         <div data-fs="18" style="${dispStyle}font-size:26px;line-height:1.05;margin:6px 0 8px">Room ${esc(room)}</div>
-        ${pick.map(it=>`<div data-fs="14" style="display:flex;align-items:flex-start;font:700 15px/1.25 ${B};margin-bottom:6px">${box}<span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(dry(it.n))}</span></div>`).join("")}
+        ${pick.map(it=>`<div data-fs="14" style="display:flex;align-items:flex-start;font:700 15px/1.25 ${B};margin-bottom:6px">${box}<span style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(dry(it.n))}</span></div>`).join("")}
         <div data-fs="14" style="font:700 14px/1.3 ${B};margin-top:4px;letter-spacing:.06em">GUESTS &nbsp;${box}1 &nbsp;${box}2</div></div></div></div>`;
   const front=face(crest+header+hero+note+hanger);
 

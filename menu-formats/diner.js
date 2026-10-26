@@ -118,12 +118,9 @@ window.MENU_FORMATS.diner=ctx=>{
   const posterOn=!!poster,stillSrc=s0?img(s0,"w1280"):"";
   const matBg=night?K.paper:"#fff",matSh=`0 16px 36px rgba(0,0,0,${night?.65:.25})`;
   const hero=posterOn
-    ?`<div style="position:absolute;left:28px;top:208px;width:329px;padding:8px 8px 0;box-sizing:border-box;background:${matBg};box-shadow:${matSh};transform:rotate(${-1*tilt}deg)">
-      <div style="position:relative;outline:2px solid ${red};outline-offset:-2px;height:470px;overflow:hidden;background:#222"><img alt="${ESC(f.title)} (${ESC(f.year)}) poster" crossorigin="anonymous" src="${img(poster,"w780")}" style="width:100%;height:100%;object-fit:contain;display:block"></div>
-      <div style="font:italic 400 17px/1 ${SERIF};color:${K.ink};padding:9px 4px 10px;display:flex;justify-content:space-between;align-items:baseline"><span>Now showing</span><span style="font:700 14px/17px ${SANS};letter-spacing:.14em;color:${K.mute};font-style:normal">POSTER: TMDB</span></div></div>`
-     +(stillSrc?`<div style="position:absolute;left:384px;top:232px;width:404px;padding:8px 8px 0;box-sizing:border-box;background:${matBg};box-shadow:${matSh};transform:rotate(${1.4*tilt}deg)">
-      <div style="position:relative;outline:2px solid ${red};outline-offset:-2px;height:272px;overflow:hidden;background:#222"><img alt="Still from ${ESC(f.title)} (${ESC(f.year)})" crossorigin="anonymous" src="${stillSrc}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}"></div>
-      <div style="font:italic 400 17px/1 ${SERIF};color:${K.ink};padding:9px 4px 10px;display:flex;justify-content:space-between;align-items:baseline"><span>${night?"The late show":"Tonight's picture"}</span><span style="font:700 14px/17px ${SANS};letter-spacing:.14em;color:${K.mute};font-style:normal">STILL: TMDB</span></div></div>`:"")
+    ?`<div style="position:absolute;left:28px;top:204px;width:496px;padding:8px 8px 0;box-sizing:border-box;background:${matBg};box-shadow:${matSh};transform:rotate(${-.6*tilt}deg)">
+      <div style="position:relative;outline:2px solid ${red};outline-offset:-2px;height:720px;overflow:hidden;background:#222"><img alt="${ESC(f.title)} (${ESC(f.year)}) poster" crossorigin="anonymous" src="${img(poster,"w780")}" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+      <div style="font:italic 400 17px/1 ${SERIF};color:${K.ink};padding:8px 4px 8px;display:flex;justify-content:space-between;align-items:baseline"><span>Now showing</span><span style="font:700 14px/17px ${SANS};letter-spacing:.14em;color:${K.mute};font-style:normal">POSTER: TMDB</span></div></div>`
     :heroOld;
   const P=fl&&fl.prop,propAt=(L,T0,W0,R0)=>P?`<div style="position:absolute;left:${L}px;top:${T0}px;width:${W0}px;box-sizing:border-box;transform:rotate(${R0*tilt}deg);z-index:3;padding:10px 13px;box-shadow:0 8px 20px rgba(0,0,0,.45);${
       P.kind==="badge"?`background:${K.paper};border:2px solid ${red};outline:1px solid ${red};outline-offset:-7px;border-radius:10px;text-align:center`
@@ -131,19 +128,19 @@ window.MENU_FORMATS.diner=ctx=>{
       :`background:${night?K.paper:"#fffdf6"};border-left:6px solid ${red}`}">
       <div style="${disp(26)};color:${red}">${ESC(P.title)}</div>
       ${(P.lines||[]).slice(0,3).map(l=>`<div style="font:600 15px/1.3 ${SANS};color:${K.ink};margin-top:4px">${ESC(l)}</div>`).join("")}</div>`:"";
-  const prop=posterOn?propAt(stillSrc?404:384,stillSrc?596:300,stillSrc?300:360,-2):propAt(14,236,214,-3);
-  const lg=ctx.logo&&ctx.logo[0]?ctx.logo:null,ts=titleSize(f.title,420,2,E.caps?80:68,36,E.cw);
+  const prop=posterOn?propAt(552,868,236,-2):propAt(14,236,214,-3);
+  const lg=ctx.logo&&ctx.logo[0]?ctx.logo:null,ts=titleSize(f.title,230,3,E.caps?64:54,34,E.cw);
   let logoHTML="";
-  if(lg){const ar=(+lg[1]||4)/(+lg[2]||1),w=Math.min(318,96*ar),h=w/ar;
+  if(lg){const ar=(+lg[1]||4)/(+lg[2]||1),w=Math.min(posterOn?224:318,96*ar),h=w/ar;
     logoHTML=`<div data-h="plate" style="display:inline-block;padding:10px 16px;border-radius:3px;background:${night?"rgba(6,8,10,.62)":"transparent"}"><img data-h="logo" alt="${ESC(f.title)}" crossorigin="anonymous" src="${img(lg[0],"w500")}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"></div>`}
   const firstMain=menu.m&&menu.m[0];
   const noteTxt=night?V.noteTxt(W[3]&&W[3].length<=48?ESC(low(W[3])):""):firstMain?`${ESC(firstMain.n)}, ${special.m0||price("m",firstMain.n)}, with a cup of coffee and a slice from the pie case.`:"Ask at the counter for today's plate.";
-  const info=`<div data-h="info" style="position:absolute;left:44px;right:296px;top:738px;bottom:50px;display:flex;flex-direction:column;justify-content:center;gap:10px">
-      <div style="white-space:nowrap;font:700 17px/1 ${SANS};letter-spacing:.18em;color:${night?neon:red};text-transform:uppercase">${night?"Tonight on the late show":"Now showing above the counter"}</div>
-      <div style="display:flex;align-items:flex-end;gap:16px">${logoHTML}<div data-h="${lg?"alt":"title"}" data-max="${ts}" style="${lg?"display:none;":""}${disp(ts)};line-height:.95;color:${night?K.paper:K.ink}">${ESC(f.title)}</div><span style="${disp(40)};color:${night?neon:red};flex:none">${ESC(f.year)}</span></div>
+  const info=`<div data-h="info" style="position:absolute;left:${posterOn?552:44}px;right:${posterOn?26:296}px;top:${posterOn?208:738}px;bottom:${posterOn?(P?424:330):50}px;display:flex;flex-direction:column;justify-content:${posterOn?"flex-start":"center"};gap:10px;overflow:hidden">
+      <div style="white-space:${posterOn?"normal":"nowrap"};font:700 17px/1.15 ${SANS};letter-spacing:${posterOn?".1em":".18em"};color:${night?neon:red};text-transform:uppercase">${night?"Tonight on the late show":"Now showing above the counter"}</div>
+      <div style="display:flex;${posterOn?"flex-direction:column;align-items:flex-start;gap:8px":"align-items:flex-end;gap:16px"}">${logoHTML}<div data-h="${lg?"alt":"title"}" data-max="${ts}" style="${lg?"display:none;":""}${disp(ts)};line-height:.95;color:${night?K.paper:K.ink}">${ESC(f.title)}</div><span style="${disp(40)};color:${night?neon:red};flex:none">${ESC(f.year)}</span></div>
       <div style="font:italic 600 24px/1.25 ${SERIF};color:${night?"#fff":K.ink}">${ESC(f.T||"")}</div>
       <div data-h="fdesc" style="font:400 20px/1.36 ${SERIF};color:${night?K.bone:"#3a3d43"}">${ESC(f.D||"")}</div></div>`;
-  const notice=`<div style="position:absolute;top:748px;right:30px;width:240px;box-sizing:border-box;transform:rotate(${2.5*tilt}deg);background:${night?K.paper:"#fffdf6"};color:${K.ink};padding:13px 15px;box-shadow:0 8px 22px rgba(0,0,0,${night?.55:.25});border-top:6px solid ${red}">
+  const notice=`<div style="position:absolute;top:${posterOn?(P?640:730):748}px;right:${posterOn?26:30}px;width:${posterOn?240:240}px;box-sizing:border-box;transform:rotate(${2.5*tilt}deg);background:${night?K.paper:"#fffdf6"};color:${K.ink};padding:13px 15px;box-shadow:0 8px 22px rgba(0,0,0,${night?.55:.25});border-top:6px solid ${red}">
     <div style="${disp(ek==="classic"?28:30)};color:${red}">${night?V.note:DAY.note[T]||DAY.note.warm}</div>
     <div style="font:400 17px/1.32 ${SERIF};margin-top:6px">${noteTxt}</div>
     <div style="font:700 14px/1 ${SANS};letter-spacing:.18em;margin-top:9px;color:${K.mute}">THE MANAGEMENT</div></div>`;
@@ -279,6 +276,7 @@ function fit(faces,night){
   const t=fr.querySelector('[data-h="title"]');
   if(t){let s=+t.dataset.max;while((over()||t.scrollWidth>t.clientWidth+1)&&s>34){s-=2;t.style.fontSize=s+"px"}}
   const fd=fr.querySelector('[data-h="fdesc"]');let fs=20;while(over()&&fs>16){fs--;fd.style.fontSize=fs+"px"}
+  if(over()&&fd)fd.style.display="none";
   /* if the layout was measured before the web fonts arrived and now runs long, tighten spacing, then step type to the floor */
   faces.slice(1).forEach(fc=>{const m=fc.querySelector('[data-h="menu"]');if(!m||fits(m))return;
     for(const L of LEVELS){

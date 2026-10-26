@@ -252,14 +252,14 @@ window.MENU_FORMATS.placemat=ctx=>{
 
   /* logo panel */
   const lr=logo&&logo[0]&&logo[1]&&logo[2]?logo[1]/logo[2]:0;
-  let lh=lr?Math.min(140,Math.sqrt(40000/lr)):0,lw=lh*lr;const LMX=ctx.poster?380:480;if(lw>LMX){lw=LMX;lh=lw/lr}lw=Math.round(lw);lh=Math.round(lh);
+  let lh=lr?Math.min(140,Math.sqrt(40000/lr)):0,lw=lh*lr;const LMX=ctx.poster?236:480;if(lw>LMX){lw=LMX;lh=lw/lr}lw=Math.round(lw);lh=Math.round(lh);
   const tl=f.title.length,tsz=tl<=10?72:tl<=20?60:tl<=34?48:tl<=48?40:36;
   const dark=eg==="now"?"rgba(16,18,24,.74)":`${K.deep}e0`,light=eg==="e40"?"rgba(241,227,196,.95)":"rgba(255,251,242,.94)";
   const titleType=`font:${L.dispW} ${tsz}px/1.04 ${L.disp};color:#fff;${caps}letter-spacing:${L.track};text-shadow:3px 3px 0 ${L.red}`;
-  const lpanel=`<div data-fit="lpanel" data-lpanel data-sp="logo" data-dark="${dark}" data-light="${light}" data-lightink="${L.red}" style="${ctx.poster?"position:relative;max-width:100%":"position:absolute;left:22px;bottom:22px;max-width:540px"};padding:16px 22px 14px;border-radius:${Math.min(L.radius,14)}px;background:${dark};box-shadow:0 6px 18px rgba(0,0,0,.35),inset 0 0 0 2px rgba(255,255,255,.16)${T.gold?",inset 0 0 0 5px rgba(201,162,74,.8)":""}">
+  const lpanel=`<div data-fit="lpanel" data-lpanel data-sp="logo" data-dark="${dark}" data-light="${light}" data-lightink="${L.red}" style="${ctx.poster?"position:relative;max-width:100%":"position:absolute;left:22px;bottom:22px;max-width:540px"};padding:${ctx.poster?"14px 18px 12px":"16px 22px 14px"};border-radius:${Math.min(L.radius,14)}px;background:${dark};box-shadow:0 6px 18px rgba(0,0,0,.35),inset 0 0 0 2px rgba(255,255,255,.16)${T.gold?",inset 0 0 0 5px rgba(201,162,74,.8)":""}">
       ${lr?`<span data-lmax="${LMX},140" data-larea="40000" style="display:block;width:${lw}px;height:${lh}px"><img crossorigin="anonymous" alt="${esc(f.title)}" src="${img(logo[0],"w500")}" onload="window.__PICK&&__PICK.logo(this)" onerror="this.parentNode.style.display='none';window.__placematLogo&&__placematLogo(this,false)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain"></span><div data-fallback style="display:none;${titleType}">${esc(f.title)}</div>`
           :`<div data-fit="title" style="${titleType}">${esc(f.title)}</div>`}
-      <div data-pk style="font:800 15px/1 ${L.body};letter-spacing:.24em;color:${L.hi};margin-top:10px;text-transform:uppercase">${esc(L.nowShowing)} &nbsp;/&nbsp; ${esc(f.year)}</div>
+      <div data-pk style="font:800 15px/1 ${L.body};letter-spacing:${ctx.poster?".08em":".24em"};color:${L.hi};margin-top:10px;text-transform:uppercase;white-space:nowrap">${esc(L.nowShowing)} &nbsp;/&nbsp; ${esc(f.year)}</div>
     </div>`;
 
   /* menu */
@@ -295,7 +295,7 @@ window.MENU_FORMATS.placemat=ctx=>{
     receipt:`background:${pbg};border-radius:2px;`,
     card:`background:${pbg};border-radius:6px;border-bottom:8px solid ${K.lab};`
   }[pk]||`background:${pbg};border-radius:6px;border-bottom:8px solid ${K.lab};`;
-  const propHTML=`<div data-fit="prop" data-sp="prop" style="position:absolute;right:14px;top:14px;width:214px;max-height:200px;box-sizing:border-box;${propStyle}padding:13px 18px 12px;transform:rotate(${T.tilt}deg);box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden">
+  const propHTML=`<div data-fit="prop" data-sp="prop" style="${ctx.poster?"position:relative;align-self:center;flex:none;":"position:absolute;right:14px;top:14px;"}width:214px;max-height:200px;box-sizing:border-box;${propStyle}padding:13px 18px 12px;transform:rotate(${T.tilt}deg);box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden">
       ${tex(.35)}
       <div style="position:relative;font:800 14px/1 ${L.body};letter-spacing:.18em;color:${K.lab};text-transform:uppercase">${esc(pk==="badge"?"Official badge":pk==="ticket"||pk==="stub"?"Admit one":pk==="receipt"?"Receipt":"Keep this")}</div>
       <div data-fit="ptitle" style="position:relative;font:${L.dispW} 20px/1.05 ${L.disp};color:${L.ink};${caps}margin:6px 0 6px">${esc(p.title)}</div>
@@ -380,6 +380,47 @@ window.MENU_FORMATS.placemat=ctx=>{
     <div data-fit="finebox" style="position:absolute;left:${sideX+26}px;right:24px;bottom:14px;height:82px;display:flex;align-items:flex-end;overflow:hidden"><div data-fit="fine" style="font:600 14px/1.3 ${L.body};color:${L.soft}">${esc(fine)}</div></div>
   </div>
 </div>`;
-  return {w:W,h:H,faces:[html]};
+
+  /* poster layout: the poster is the main picture, full height of the face, hugged by its frame */
+  const PW=Math.round(IH*2/3),RX=PW+gut,sideW=272,sideL=IW-18-sideW,menuX=RX+26,menuW=sideL-18-menuX;
+  const htmlP=`<div data-pm style="position:absolute;inset:0;overflow:hidden;background:${outer};font-family:${L.body};color:${L.ink}">
+  ${tex(T.tex*.6)}
+  <img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" onload="window.__placematFit&&__placematFit(this)" style="position:absolute;width:1px;height:1px;opacity:0">
+  <div style="position:absolute;left:${inset}px;top:${inset}px;width:${IW}px;height:${IH}px;background:${L.paper};border-radius:${L.radius}px;${frame}overflow:hidden">
+    <div style="position:absolute;inset:0;background:url("${BLOTCH}") 0 0/900px;mix-blend-mode:multiply;opacity:${.25+T.tex*.5};pointer-events:none"></div>
+    ${tex(T.tex)}
+    <div style="position:absolute;left:0;top:0;width:${PW}px;height:${IH}px;overflow:hidden;background:${K.deep}"><img crossorigin="anonymous" alt="${esc(f.title)} (${esc(f.year)}) poster" src="${img(ctx.poster,"w780")}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"></div>
+    <div style="position:absolute;left:${PW}px;top:0;width:${gut}px;height:${IH}px;background:${gc}"></div>
+
+    <div data-fit="signbox" style="position:absolute;left:${RX}px;top:0;right:0;height:176px;background:${eg==="now"?K.lab:K.deep};overflow:hidden">
+      ${eg==="now"?"":`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 0%,${K.glow}55,rgba(255,255,255,0) 65%),linear-gradient(180deg,rgba(255,255,255,.08),rgba(0,0,0,.18))"></div>`}
+      ${tex(T.tex*.8)}
+      ${eg==="now"?"":`<div style="position:absolute;inset:12px;border:${eg==="e40"?`3px double ${L.hi}`:`2px solid ${L.hi}`};border-radius:${Math.min(L.radius,12)}px"></div>`}
+      ${T.gold?`<div style="position:absolute;inset:18px;border:1px solid rgba(201,162,74,.9);border-radius:8px"></div>`:""}
+      <div style="position:absolute;left:32px;right:28px;top:24px;bottom:22px;display:flex;flex-direction:column;justify-content:center">
+        <div style="font:800 15px/1 ${L.body};letter-spacing:.26em;color:${L.hi};text-transform:uppercase">${esc(kicker)}${L.kick&&!family?` &nbsp;/&nbsp; ${esc(L.kick+f.year)}`:""}</div>
+        <div data-fit="venue" style="font:${L.dispW} ${venue.length>20?32:40}px/1.04 ${L.disp};color:#fff;${caps}letter-spacing:${L.track};margin-top:7px;text-shadow:0 2px 0 rgba(0,0,0,.3)">${esc(venue)}</div>
+        <div style="font:700 17px/1.2 ${L.body};color:${L.hi};margin-top:6px">${esc(sign)}</div>
+      </div>
+    </div>
+    <div style="position:absolute;left:${RX}px;right:0;top:176px;height:${eg==="now"?0:5}px;background:${L.red}"></div>
+
+    <div style="position:absolute;left:${menuX}px;width:${menuW}px;top:198px;bottom:104px;display:flex;flex-direction:column">
+      ${tag?`<div data-fit="tag" style="font:${L.dispW} 24px/1.12 ${L.disp};color:${K.lab};margin:0 0 16px;flex:none">${esc(sentence(tag))}</div>`:""}
+      <div data-fit="menu" style="flex:1;min-height:0;overflow:hidden">${courses}</div>
+    </div>
+    <div data-fit="finebox" style="position:absolute;left:${menuX}px;width:${menuW}px;bottom:14px;height:82px;display:flex;align-items:flex-end;overflow:hidden"><div data-fit="fine" style="font:600 14px/1.3 ${L.body};color:${L.soft}">${esc(fine)}</div></div>
+
+    <div data-fit="side" style="position:absolute;left:${sideL}px;width:${sideW}px;top:${eg==="now"?196:206}px;bottom:18px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;overflow:hidden">
+      ${lpanel}
+      ${propHTML}
+      <div>${noteHTML}</div>
+      <div style="border-top:3px ${eg==="now"?"solid":"dashed"} ${L.red};padding-top:8px">
+        <div style="font:800 14px/1 ${L.body};letter-spacing:.22em;color:${L.red}">SHOWTIME CUE</div>
+        <div data-fit="cue" style="font:600 ${cue.length>80?16:17}px/1.28 ${L.body};color:${L.ink};margin-top:6px">${esc(sentence(cue||T.voice))}</div></div>
+    </div>
+  </div>
+</div>`;
+  return {w:W,h:H,faces:[ctx.poster?htmlP:html]};
 };
 })();

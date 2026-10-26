@@ -182,15 +182,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const W2=W;
 
   /* ---------- FRONT ---------- */
-  const HX=587;
+  const HX=553;
   /* the poster is the hero, whole and uncropped, on the scoreboard-green/black stand wall; stills only feed the section map */
   const posSrc=poster?ctx.img(poster,"w780"):"";
   const heroSrc=posSrc||(stills[0]?ctx.img(stills[0],"w1280"):"");
-  const PH=H-56,PW=Math.round(PH*2/3),PX=Math.round((HX-10-PW)/2);
-  const hero=`<div style="position:absolute;left:0;top:0;width:${HX}px;height:${H}px;overflow:hidden;background:${band}">
-    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.3),rgba(0,0,0,0) 70%)"></div>
-    <div style="position:absolute;left:${PX}px;top:28px;width:${PW}px;height:${PH}px;overflow:hidden;background:#222;box-shadow:0 0 0 3px ${paper},0 0 0 6px ${acc},0 10px 22px rgba(0,0,0,.5)">${heroSrc?(posSrc?`<img src="${posSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||ei>=6?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,"center 40%",overlay(),stills.slice(5,8).map(s=>ctx.img(s,"w1280")),"")):""}</div>
-    <div style="position:absolute;right:0;top:0;bottom:0;width:10px;background:${acc}"></div></div>`;
+  const PH=796,PW=Math.round(PH*2/3),PX=18;
+  const hero=`<div style="position:absolute;left:0;top:0;width:${HX}px;height:${H}px;overflow:hidden">
+    <div style="position:absolute;left:${PX}px;top:10px;width:${PW}px;height:${PH}px;overflow:hidden;background:#222;box-shadow:0 0 0 3px ${paper},0 0 0 6px ${acc},0 10px 22px rgba(0,0,0,.5)">${heroSrc?(posSrc?`<img src="${posSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||ei>=6?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,"center 40%",overlay(),stills.slice(5,8).map(s=>ctx.img(s,"w1280")),"")):""}</div></div>`;
   const RW=W-HX-60;
   const vSize=venue.length>28?30:venue.length>18?36:42;
   const LMW=RW-44,LMH=150,LA=41000;

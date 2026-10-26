@@ -103,7 +103,7 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* ---------- FRONT ---------- */
   const inset=(e.border==="double"||e.border==="keyline")?22:0;
-  const hdrH=92,heroH=462,logoH=104;
+  const hdrH=92,PAD=9,pw=396,ph=594,heroH=ph+2*PAD,logoH=76;
   const sSize=sign.length>30?18:sign.length>20?20:22;
   const vSize=venue.length>26?28:venue.length>18?34:40;
   const header=`<div style="position:absolute;left:${inset}px;right:${inset}px;top:${inset}px;height:${hdrH}px;background:${band};display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 22px;box-sizing:border-box">
@@ -112,18 +112,20 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="font:${e.dw} ${vSize}px/1.05 ${DF};color:${bandText};margin-top:6px;${up?"text-transform:uppercase;letter-spacing:.03em;":""}${clamp(2)}">${esc(venue)}</div></div>`;
   const heroTop=inset+hdrH+(e.border==="stripes"?18:0);
   const tagline=clean(f.T||"");
-  const PAD=14,ph=heroH-2*PAD,pw=Math.round(ph*2/3),colX=PAD*2+pw,colW=W-2*inset-colX-PAD-4;
-  const hero=`<div style="position:absolute;left:${inset}px;right:${inset}px;top:${heroTop}px;height:${heroH}px;overflow:hidden;background:${band}">
+  const heroW=pw+2*PAD,colX=inset+heroW+16,colW=W-inset-colX-(inset?18:14);
+  const hero=`<div style="position:absolute;left:${inset}px;width:${heroW}px;top:${heroTop}px;height:${heroH}px;overflow:hidden;background:${band}">
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(0,0,0,0) 60%)"></div>
     <div style="position:absolute;left:${PAD}px;top:${PAD}px;width:${pw}px;height:${ph}px;overflow:hidden;background:#222;box-shadow:0 0 0 3px ${mix(paper,"#ffffff",.3)},0 0 0 4px ${acc},0 8px 18px rgba(0,0,0,.5)">
-    ${heroSrc?(heroIsPoster?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||e.process==="glossy"?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,heroPos,overlay())):""}</div>
-    <div style="position:absolute;left:${colX}px;width:${colW}px;top:${PAD}px;bottom:${PAD}px;display:flex;flex-direction:column;justify-content:center;color:${bandText}">
-      <div style="font:700 15px/1.2 ${BF};letter-spacing:.22em;text-transform:uppercase;color:${mix(acc,"#ffffff",.55)}">Now showing</div>
-      <div style="height:2px;background:${mix(acc,"#ffffff",.35)};margin:10px 0 12px"></div>
-      <div style="font:${e.dw} 44px/1 ${DF};color:#fbf6ea">${esc(year)}</div>
-      ${tagline?`<div style="font:italic 400 19px/1.3 ${BF};color:${bandText};margin-top:12px;${clamp(6)}">${esc(tagline)}</div>`:""}
-      <div style="height:2px;background:${mix(acc,"#ffffff",.35)};margin-top:14px"></div>
-      <div style="font:700 15px/1.2 ${BF};letter-spacing:.18em;text-transform:uppercase;color:${mix(acc,"#ffffff",.55)};margin-top:10px">${esc(e.tt)}</div></div></div>`;
+    ${heroSrc?(heroIsPoster?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||e.process==="glossy"?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,heroPos,overlay())):""}</div></div>`;
+  const nLen0=clean(note.text).length,qSize=nLen0>130?15:16;
+  const side=`<div style="position:absolute;left:${colX}px;width:${colW}px;top:${heroTop}px;height:${heroH}px;display:flex;flex-direction:column;justify-content:center;overflow:hidden">
+      <div style="font:700 14px/1.2 ${BF};letter-spacing:.16em;text-transform:uppercase;color:${acc}">Now showing</div>
+      <div style="height:2px;background:${acc};margin:8px 0 8px"></div>
+      <div style="font:${e.dw} 40px/1 ${DF};color:${ink}">${esc(year)}</div>
+      <div style="font:italic 400 ${qSize}px/1.32 ${BF};color:${ink};margin-top:14px;${clamp(9)}">"${esc(note.text)}"</div>
+      <div style="font:400 ${ei<2?32:28}px/1 ${SF};color:${acc};text-align:right;margin-top:2px;${clamp(1)}">${esc(note.by)}</div>
+      <div style="height:2px;background:${acc};margin-top:10px"></div>
+      <div style="font:700 14px/1.2 ${BF};letter-spacing:.14em;text-transform:uppercase;color:${soft};margin-top:8px">${esc(e.tt)}</div></div>`;
   const lg=logoImg(ctx,W-2*inset-80,logoH-28);
   const tSize=title.length>40?24:title.length>24?32:title.length>12?40:50;
   const panelDark=mix(band,"#000000",.25),panelLight=mix(paper,"#ffffff",.5);
@@ -132,7 +134,7 @@ window.MENU_FORMATS[ID]=ctx=>{
        :`<div style="font:${e.dw} ${tSize}px/1.05 ${DF};color:#fbf6ea;text-align:center;padding:0 24px;${up?"text-transform:uppercase;":""}${clamp(3)}">${esc(title)}</div>`}
     <div style="position:absolute;right:${12}px;bottom:6px;font:700 14px/1 ${BF};letter-spacing:.2em;color:${mix(acc,"#ffffff",.6)}">${esc(year)}</div></div>`;
   /* the steward's note */
-  const noteTop=heroTop+heroH+logoH+4;
+  const noteTop=heroTop+heroH+logoH+4;/* note now sits beside the poster */
   const nLen=clean(note.text).length,nSize=nLen>130?17:nLen>90?18:19;
   const noteBox=`<div style="margin-bottom:4px">
     ${kick(t.hello,acc,14)}
@@ -153,9 +155,9 @@ window.MENU_FORMATS[ID]=ctx=>{
       <span style="font:${e.dw} 24px/1 ${DF};color:${ink};${up?"text-transform:uppercase;letter-spacing:.04em":""}">Dinner Timetable</span>
       <span style="font:700 15px/1 ${BF};letter-spacing:.16em;color:${acc}">TRAIN ${esc(num.slice(0,4))}</span></div>
     ${rows}
-    ${cue?`<div style="font:italic 400 16px/1.35 ${BF};color:${soft};margin-top:7px;${clamp(wrapLines(note.text,nSize,W-2*inset-60,e.cw)>=2?1:2)}">Arriving: ${esc(cue.replace(/^./,c=>c.toLowerCase()))}</div>`:""}</div>`;
+    ${cue?`<div style="font:italic 400 16px/1.35 ${BF};color:${soft};margin-top:7px;${clamp(1)}">Arriving: ${esc(cue.replace(/^./,c=>c.toLowerCase()))}</div>`:""}</div>`;
   const fine1=`<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;bottom:${inset+12}px;font:400 15px/1.2 ${BF};color:${soft};display:flex;justify-content:space-between;gap:10px"><span style="${clamp(1)}">${esc(title.length>34?title.slice(0,32).replace(/\W+\w*$/,"")+"..." :title)}, ${esc(year)}</span><span>Form DC-${esc(num.slice(-4))}</span></div>`;
-  const front=`<div style="position:absolute;inset:0;background:${paper};overflow:hidden">${tex()}${header}${hero}${logo}<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;top:${noteTop+10}px;bottom:${inset+40}px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between">${noteBox}${timetable}</div>${fine1}${frame()}</div>`;
+  const front=`<div style="position:absolute;inset:0;background:${paper};overflow:hidden">${tex()}${header}${hero}${side}${logo}<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;top:${noteTop+6}px;bottom:${inset+34}px;overflow:hidden;display:flex;flex-direction:column;justify-content:center">${timetable}</div>${fine1}${frame()}</div>`;
 
   /* ---------- BACK ---------- */
   const SW=176;

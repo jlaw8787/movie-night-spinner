@@ -150,9 +150,9 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const PO=posterOf(ctx),hasP=!!PO;
   /* poster postcard: the whole 2:3 poster sits on the card stock beside the lettering; stills stay for the small photos only */
   function posterFront(){
-    const below=e.cap==="strip"||e.cap==="minimal",multi=e.cap==="multi",SHb=e.cap==="strip"?96:92;
+    const below=false,multi=e.cap==="multi",SHb=e.cap==="strip"?96:92;
     const ix=multi?0:B,iy=multi?0:B,iw=multi?556:W-2*B,ih=multi?H:below?H-B-SHb:H-2*B;
-    const pad=multi?14:22,ph=ih-2*pad,pw=Math.round(ph*2/3),px=multi?ix+Math.round((iw-pw)/2):ix+iw-pad-pw,py=iy+pad;
+    const pad=14,ph=ih-2*pad,pw=Math.round(ph*2/3),px=multi?ix+Math.round((iw-pw)/2):ix+iw-pad-pw,py=iy+pad;
     const posterEl=`<div style="position:absolute;left:${px}px;top:${py}px;width:${pw}px;height:${ph}px;background:${OLD?e.bcol:"#ffffff"};padding:6px;box-sizing:border-box;box-shadow:0 8px 20px rgba(40,30,10,.45);transform:rotate(${(T.tilt*.25).toFixed(1)}deg)"><img alt="" crossorigin="anonymous" src="${ctx.img(PO,"w780")}" style="display:block;width:100%;height:100%;object-fit:contain"></div>`;
     const panel=`<div style="position:absolute;left:${ix}px;top:${iy}px;width:${iw}px;height:${ih}px;overflow:hidden;border-radius:${e.rad}px;box-sizing:border-box;border:1px solid ${mix(e.ink,e.paper,.75)};background:${e.paper}">${e.linen?`<div style="position:absolute;inset:0;background-image:${linen}"></div>`:""}</div>`;
     if(multi){

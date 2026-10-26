@@ -125,33 +125,37 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* logo in its own colours on a panel that suits it, set type if missing */
   const lg=ctx.logo,lr=lg&&lg[0]&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const lh=lr?Math.min(heroIsPoster?90:118,Math.round(440/lr)):0,lw=lr?Math.round(lh*lr):0;
-  const tlen=clean(f.title).length,tsz=tlen<=14?60:tlen<=26?48:tlen<=40?38:32;
+  const lh=lr?Math.min(110,Math.round(196/lr)):0,lw=lr?Math.round(lh*lr):0;
+  const tlen=clean(f.title).length,tsz=tlen<=10?42:tlen<=20?34:tlen<=32?28:24;
   const darkPanel=toHex(mix(pd,[0,0,0],.55)),lightPanel=T.dark?"#f4ecd8":toHex(mix(paper,[255,255,255],.6));
-  const titleType=c=>`<div style="font:${E.dw} ${tsz}px/1.04 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${c};text-align:center;max-width:560px">${esc(f.title)}</div>`;
-  const logoPanel=`<div data-lpanel data-dark="${darkPanel}" data-light="${lightPanel}" data-darkink="#f3e7c8" data-lightink="${INK}" style="position:absolute;left:50%;top:${heroIsPoster?652:612}px;transform:translateX(-50%);max-width:600px;padding:18px 34px;background:${darkPanel};color:#f3e7c8;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.4);text-align:center">
-     ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:532px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType("currentColor")}</div>`:titleType("currentColor")}
+  const titleType=c=>`<div style="font:${E.dw} ${tsz}px/1.05 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${c};text-align:center;max-width:196px;overflow-wrap:anywhere">${esc(f.title)}</div>`;
+  const logoPanel=`<div data-lpanel data-dark="${darkPanel}" data-light="${lightPanel}" data-darkink="#f3e7c8" data-lightink="${INK}" style="flex:none;width:220px;box-sizing:border-box;padding:14px 12px;background:${darkPanel};color:#f3e7c8;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.4);text-align:center">
+     ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:100%;object-fit:contain;margin:0 auto"><div style="display:none">${titleType("currentColor")}</div>`:titleType("currentColor")}
    </div>`;
 
   /* ---------- front ---------- */
+  const PW=462,PH=693;
+  const heroBox=heroIsPoster
+    ?`<img crossorigin="anonymous" alt="" src="${hero}" style="display:block;width:100%;height:100%;object-fit:contain">`
+    :`<div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">${photo(hero,heroPos)}</div>`;
   const front=`${stock()}${border()}
-   <div style="position:absolute;left:60px;right:60px;top:50px">${kick(T.kick)}</div>
-   <div data-fit data-min="30" style="position:absolute;left:60px;right:60px;top:80px;height:76px;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:54px">
+   <div style="position:absolute;left:60px;right:60px;top:46px">${kick(T.kick)}</div>
+   <div data-fit data-min="30" style="position:absolute;left:60px;right:60px;top:74px;height:56px;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:46px">
      <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
-   <div style="position:absolute;left:50px;top:166px;width:716px;height:${heroIsPoster?502:530}px;padding:6px;box-sizing:border-box;background:${frame};border-radius:358px 358px 0 0/150px 150px 0 0;box-shadow:0 10px 26px rgba(0,0,0,.3)">
-     <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:352px 352px 0 0/146px 146px 0 0;background:#222">${heroIsPoster?stage(hero):photo(hero,heroPos)}</div></div>
-   ${logoPanel}
-   <div data-fit data-min="16" style="position:absolute;left:70px;right:70px;top:${heroIsPoster?786:772}px;height:${heroIsPoster?48:58}px;overflow:hidden;font-size:22px;text-align:center;color:${SOFT}">
-     <div style="font:italic 1em/1.3 ${E.body}">${esc(sign)}${f.T?`. ${esc(sent(f.T))}`:""}</div></div>
-   <div style="position:absolute;left:96px;right:96px;top:838px;height:1px;background:${GOLD};opacity:.8"></div>
-   <div data-fit data-min="15" style="position:absolute;left:66px;width:380px;top:852px;height:150px;overflow:hidden;font-size:20px;color:${INK}">
+   <div style="position:absolute;left:50px;top:136px;width:${PW+12}px;height:${PH+12}px;padding:6px;box-sizing:border-box;background:${frame};box-shadow:0 10px 26px rgba(0,0,0,.3)">${heroBox}</div>
+   <div style="position:absolute;left:546px;top:136px;width:220px;height:${PH+12}px;display:flex;flex-direction:column;gap:16px">
+     ${logoPanel}
+     <div data-fit data-min="16" style="flex:none;height:170px;overflow:hidden;font-size:20px;text-align:center;color:${SOFT}">
+       <div style="font:italic 1em/1.3 ${E.body}">${esc(sign)}${f.T?`. ${esc(sent(f.T))}`:""}</div></div>
+     <div data-fit data-min="15" style="flex:1 1 0;min-height:0;overflow:hidden;font-size:19px;color:${INK};border-top:1px solid ${GOLD};padding-top:10px">
+       <div style="font:600 16px/1.2 ${E.body};letter-spacing:.2em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">${esc(fam&&/toast/i.test(T.toast)?"Order of cheers":T.toast)}</div>
+       ${toasts.map((t,i)=>`<div style="font:${E.bodyW} 1em/1.28 ${E.body};margin-bottom:.32em"><span style="color:${ACC};font-weight:700">${["I","II","III"][i]}.</span> ${esc(t)}</div>`).join("")}</div>
+   </div>
+   <div style="position:absolute;left:96px;right:96px;top:852px;height:1px;background:${GOLD};opacity:.8"></div>
+   <div data-fit data-min="15" style="position:absolute;left:66px;right:66px;top:866px;height:130px;overflow:hidden;font-size:21px;color:${INK}">
      <div style="font:600 16px/1.2 ${E.body};letter-spacing:.24em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">From the host</div>
      <div style="font:italic ${E.bodyW} 1em/1.34 ${E.body}">${esc(sent(note.t))}</div>
      <div style="font:400 1.6em/1.1 'Pinyon Script',cursive;color:${ACC};text-align:right;margin-top:.1em">${esc(note.by)}</div></div>
-   <div style="position:absolute;left:468px;top:856px;width:1px;height:140px;background:${GOLD};opacity:.7"></div>
-   <div data-fit data-min="15" style="position:absolute;left:490px;right:64px;top:852px;height:150px;overflow:hidden;font-size:19px;color:${INK}">
-     <div style="font:600 16px/1.2 ${E.body};letter-spacing:.24em;text-transform:uppercase;color:${ACC};margin-bottom:.4em">${esc(fam&&/toast/i.test(T.toast)?"Order of cheers":T.toast)}</div>
-     ${toasts.map((t,i)=>`<div style="font:${E.bodyW} 1em/1.28 ${E.body};margin-bottom:.32em"><span style="color:${ACC};font-weight:700">${["I","II","III"][i]}.</span> ${esc(t)}</div>`).join("")}</div>
    <div style="position:absolute;left:60px;right:60px;top:1006px;font:500 16px/1 ${E.body};letter-spacing:.18em;text-transform:uppercase;color:${SOFT};text-align:center">${esc(f.year)} &nbsp;·&nbsp; Covers laid for ${esc(num||yy||"12")}</div>`;
 
   /* ---------- back: courses in procession ---------- */
