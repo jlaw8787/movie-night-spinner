@@ -1,0 +1,250 @@
+/* Format: diner. An all-night diner menu, two faces 816x1056 (cover, laminated menu), plus continued faces when a
+   long menu would need type below the rule 4 minimums. Ported from the horror pilot (wip/genre/horror).
+   Era sets the type pairing, sign, border and print: classic (1930s-40s, 1950s, 1960s) chrome diner with a script
+   sign; retro (1970s, 1980s) neon gothic on a laminated card; modern (1990s, 2000s, modern) condensed sans, crisp card.
+   Tone sets day or night and the wear: eerie, tense, gritty are night (eerie adds rain on the glass and a dead neon
+   tube); warm, tender, playful, glossy, grand, scrappy are day (enamel sign, cream stock, warm photo).
+   Layout fitting runs after the faces are mounted (fonts and logo loaded): logo plate, title, menu type levels,
+   still growth, and flowing 2 item chunks onto continued faces. Inline styles only. No drawn art. */
+(function(){
+const SRC=(document.currentScript&&document.currentScript.src)||"";
+const BASE=SRC.replace(/[^/]*$/,"")+"assets/diner/";
+/* the fitter must wait for this stylesheet: fonts.load() resolves at once for a family whose @font-face is not known yet */
+let CSS_READY=Promise.resolve();
+if(!document.querySelector('link[data-fmt="diner"]')){const l=document.createElement("link");l.rel="stylesheet";l.dataset.fmt="diner";
+  CSS_READY=new Promise(r=>{l.onload=r;l.onerror=r;setTimeout(r,4000)});
+  l.href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Oleo+Script:wght@400;700&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@500;700&family=Libre+Franklin:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Homemade+Apple&display=swap";
+  document.head.appendChild(l)}
+const FONTS=['400 44px "League Gothic"','400 40px "Oleo Script"','700 40px "Oleo Script"','700 36px "Barlow Condensed"','600 18px "Barlow Condensed"','700 28px "Barlow"','500 18px "Barlow"',
+  '600 18px "Libre Franklin"','700 28px "Libre Franklin"','400 20px "Source Serif 4"','600 20px "Source Serif 4"','italic 400 20px "Source Serif 4"','italic 600 20px "Source Serif 4"','400 22px "Homemade Apple"'];
+
+const ESC=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const hash=s=>{let h=2166136261;for(const c of String(s))h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0};
+const low=w=>/^(The|A|An) /.test(w)?w.charAt(0).toLowerCase()+w.slice(1):w;
+const hex2=h=>{const m=/^#?([0-9a-f]{6})$/i.exec(h||"");if(!m)return null;const n=parseInt(m[1],16);return [n>>16&255,n>>8&255,n&255]};
+const lum=([r,g,b])=>{const f=v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)};return .2126*f(r)+.7152*f(g)+.0722*f(b)};
+const sat=([r,g,b])=>{const mx=Math.max(r,g,b)/255,mn=Math.min(r,g,b)/255,l=(mx+mn)/2;return mx===mn?0:(mx-mn)/(1-Math.abs(2*l-1))};
+const mix=([r,g,b],t)=>"#"+[r,g,b].map(v=>Math.round(v+(255-v)*t).toString(16).padStart(2,"0")).join("");
+const rgba=([r,g,b],a)=>`rgba(${r},${g},${b},${a})`;
+
+const SANS="'Libre Franklin','Helvetica Neue',Arial,sans-serif",SERIF="'Source Serif 4',Georgia,serif",HAND="'Homemade Apple',cursive";
+const ERA={
+  classic:{disp:"'Oleo Script',Georgia,serif",dw:700,cw:.5,caps:false,head:"'Oleo Script',Georgia,serif",hw:700,hs:40,dish:SANS,ls:".01em",fb:"#c8102e"},
+  retro:{disp:"'League Gothic',Impact,sans-serif",dw:400,cw:.41,caps:true,head:"'League Gothic',Impact,sans-serif",hw:400,hs:44,dish:SANS,ls:".05em",fb:"#c42f27"},
+  modern:{disp:"'Barlow Condensed','Arial Narrow',sans-serif",dw:700,cw:.46,caps:true,head:"'Barlow Condensed','Arial Narrow',sans-serif",hw:700,hs:36,dish:"'Barlow',"+SANS,ls:".03em",fb:"#1f5f8b"}};
+const eraOf=e=>/30s|40s|1950|1960/.test(e||"")?"classic":/1970|1980/.test(e||"")?"retro":"modern";
+const PHOTO={eerie:"saturate(.82) hue-rotate(-8deg) brightness(.97)",tense:"contrast(1.14) saturate(.9)",gritty:"contrast(1.2) saturate(.62)",
+  warm:"sepia(.12) saturate(1.1)",tender:"sepia(.1) saturate(.95) brightness(1.04)",playful:"saturate(1.25) contrast(1.05)",glossy:"saturate(1.15) contrast(1.08)",
+  grand:"contrast(1.06) saturate(1.05)",scrappy:"grayscale(.3) contrast(1.15)"};
+const ERAPHOTO={classic:e=>/30s|40s/.test(e)?"grayscale(1) sepia(.28) contrast(1.1) ":"sepia(.1) ",retro:()=>"",modern:()=>""};
+const VOICE={
+  eerie:{sub:"Coffee, pie and shelter from the storm.",note:"STORM NOTICE",noteTxt:w=>`Phone lines down since ten. Kitchen open till the lights go.${w?` Last seen out on the road: ${w}.`:" Bridge out past mile 13."}`,kick:"OPEN TILL THE STORM PASSES",fine:"Prices subject to change without notice, like everything after midnight.",foot:["Doors lock at 3:00 a.m.","Booth service till dawn"]},
+  tense:{sub:"Coffee's hot. Keep your back to the wall.",note:"LAST CALL",noteTxt:w=>`Kitchen closes at 3:00 a.m. Pay at the register before you go.${w?` Somebody asked about ${w}.`:""}`,kick:"OPEN ALL NIGHT",fine:"Prices subject to change. Settle up before you leave.",foot:["Open all night","Pay at the register"]},
+  gritty:{sub:"Coffee all night. Cash only.",note:"CASH ONLY",noteTxt:w=>`No checks, no tabs, no credit. The booth by the door is taken.${w?` Word around here: ${w}.`:""}`,kick:"OPEN ALL NIGHT",fine:"Prices subject to change. Cash only.",foot:["Open all night","Cash only"]}};
+const DAY={sub:{warm:"Hot coffee, homemade pie, booths by the window.",tender:"Pie made fresh every morning.",playful:"Pie so good it ought to be a crime.",glossy:"Shakes, burgers and the best pie on the strip.",grand:"Fine diner fare, served all day.",scrappy:"Cheap coffee, honest pie."},
+  note:{warm:"TODAY'S SPECIAL",tender:"PIE OF THE DAY",playful:"ASK ABOUT PIE",glossy:"TODAY'S SPECIAL",grand:"CHEF'S SPECIAL",scrappy:"TODAY'S SPECIAL"},
+  kick:"SERVED ALL DAY",fine:"Prices subject to change. Pie while it lasts.",foot:["Open 6 a.m. to midnight","Booth service"]};
+const NIGHT=t=>/eerie|tense|gritty/.test(t||"");
+const SECTIONS_N=[["s","Before Midnight","to start"],["m","The Night Shift","off the grill"],["w","The Pie Case","under glass"],["d","Behind the Counter","to drink"]];
+const SECTIONS_D=[["s","Starters","to begin"],["m","Blue Plates","hot and hearty"],["w","The Pie Case","baked today"],["d","The Fountain","to drink"]];
+
+function titleSize(t,width,maxLines,hi,lo,cw){
+  const words=String(t).toUpperCase().split(/\s+/);
+  for(let s=hi;s>=lo;s-=2){const per=Math.floor(width/(s*cw));let lines=1,cur=0;
+    for(const w of words){const L=w.length;if(L>per)lines+=Math.ceil(L/per)-1;if(cur&&cur+1+L>per){lines++;cur=L}else cur+=cur?1+L:L}
+    if(lines<=maxLines)return s}
+  return lo}
+const PRICE={s:[4,4],m:[9,6],w:[4,3],d:[2,3]};
+
+let SEQ=0;
+window.MENU_FORMATS=window.MENU_FORMATS||{};
+window.MENU_FORMATS.diner=ctx=>{
+  const {f,menu,poster,flavour:fl,era,tone}=ctx,img=ctx.img||((p,s="w1280")=>p?`https://image.tmdb.org/t/p/${s}${p}`:"");
+  const stills=(ctx.stills||[]).map(s=>Array.isArray(s)?s[0]:s).filter(Boolean);
+  const E=ERA[eraOf(era)],ek=eraOf(era),night=NIGHT(tone),T=tone||"warm";
+  const V=night?VOICE[T]||VOICE.eerie:null;
+  const token="d"+(++SEQ)+"-"+(hash(f.id||f.title)%9999);
+  /* colour: the poster accent if it holds up on paper and in the dark, else the era's diner colour */
+  const pa=hex2(ctx.palette&&ctx.palette.accent),ok=!!(pa&&lum(pa)>=.05&&lum(pa)<=.24&&sat(pa)>=.3);
+  const c=ok?pa:hex2(night&&ek!=="modern"?"#c42f27":E.fb),red="#"+c.map(v=>v.toString(16).padStart(2,"0")).join("");
+  let neon=mix(c,.3);for(let t=.3;lum(hex2(neon))<.2&&t<.8;t+=.1)neon=mix(c,t);
+  const glow=`0 0 2px ${mix(c,.85)},0 0 8px ${neon},0 0 22px ${rgba(c,.8)},0 0 46px ${rgba(c,.55)}`;
+  const K={night:"#0d1014",ink:"#161a20",paper:night?"#ebe6d8":ek==="modern"?"#fbfaf6":"#f4ead2",bone:"#d8d1bf",mute:"#5a5d63"};
+  const yy=String(f.year||"").slice(-2).padStart(2,"0"),num=String(fl&&fl.number||"").replace(/\D/g,"");
+  const price=(k,n)=>{const [a,r]=PRICE[k];return (a+hash(n)%r)+"."+yy};
+  const special={};if(num.length===2&&menu.d&&menu.d[0])special.d0=(2+hash(menu.d[0].n)%3)+"."+num;
+  if((num.length===3||num.length===4)&&menu.m&&menu.m[0])special.m0=(+num/100).toFixed(2);
+  const W=fl&&fl.winks||[],venue=(fl&&fl.venue)||(night?"Last Light Diner":"Blue Plate Diner"),signTxt=fl&&fl.sign?ESC(fl.sign):"Route 13 &nbsp;/&nbsp; Mile 66";
+  const photo=(ERAPHOTO[ek](era||"")+(PHOTO[T]||"")).trim();
+  const wear=T==="gritty"||T==="scrappy"?1:T==="eerie"?.85:night?.6:.35;
+  const tilt=T==="playful"||T==="scrappy"?1.8:1;
+  const grain=`<div style="position:absolute;inset:0;background:url('${BASE}paper-grain.png') center/cover;mix-blend-mode:multiply;opacity:${night?.55:.4};pointer-events:none"></div>`;
+  const root=(role,bg,inner,over)=>`<div data-diner="${token}" data-role="${role}" style="position:relative;width:816px;height:1056px;overflow:hidden;background:${bg};box-sizing:border-box">${inner}${grain}${over||""}</div>`;
+  const disp=s=>`font:${E.dw} ${s}px/1 ${E.disp};letter-spacing:${E.ls};${E.caps?"text-transform:uppercase;":""}`;
+
+  /* the sign: neon tubes on a raceway at night (one dead tube when eerie), an enamel plate by day */
+  function neonTxt(t,dead){let k=-1;
+    if(dead){const idx=[...t].map((ch,i)=>/[A-Za-z]/.test(ch)?i:-1).filter(i=>i>0);k=idx.length?idx[hash(t)%idx.length]:-1}
+    const lit=`color:#fff6f2;-webkit-text-stroke:1px ${neon};text-shadow:0 7px 7px rgba(0,0,0,.75),${glow}`,off=`color:#3a3536;-webkit-text-stroke:1px #5d5455;text-shadow:0 6px 6px rgba(0,0,0,.7)`;
+    return `<span style="${lit}">`+[...t].map((ch,i)=>i===k?`<span style="${off}">${ESC(ch)}</span>`:ESC(ch)).join("")+"</span>"}
+  const vText=E.caps?venue.toUpperCase():venue,vs=titleSize(vText,690,1,E.caps?96:84,44,E.cw);
+  const signBox=night
+    ?`<div style="position:absolute;left:34px;right:34px;top:54px;height:110px;border-radius:4px;background:linear-gradient(#1a1c21,#0c0d10);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 -2px 0 rgba(0,0,0,.6),0 10px 24px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;white-space:nowrap;${disp(vs)}">${neonTxt(vText,T==="eerie")}</div>`
+    :`<div style="position:absolute;left:34px;right:34px;top:54px;height:110px;border-radius:${ek==="classic"?"55px":"6px"};background:${red};box-shadow:inset 0 2px 0 rgba(255,255,255,.25),inset 0 -3px 0 rgba(0,0,0,.25),0 8px 18px rgba(0,0,0,.28);outline:2px solid ${K.paper};outline-offset:-9px;display:flex;align-items:center;justify-content:center;white-space:nowrap;${disp(vs)};color:${K.paper};text-shadow:0 2px 0 rgba(0,0,0,.28)">${ESC(vText)}</div>`;
+  const chrome=`linear-gradient(180deg,#f7f8fa 0%,#a9adb3 22%,#e9ebee 45%,#7d8288 70%,#d5d8dc 100%)`;
+  const ks=Math.max(14,Math.min(18,Math.floor(728/(((fl&&fl.sign||"Route 13 / Mile 66").length+17)*.92))));
+  const fg=night?K.bone:K.ink;
+
+  /* ---------- front ---------- */
+  const s0=stills[0],bgSrc=s0?img(s0,"w780"):poster?img(poster,"w342"):"";
+  const backdrop=night
+    ?`${bgSrc?`<img alt="" crossorigin="anonymous" src="${bgSrc}" style="position:absolute;left:-60px;top:-60px;width:936px;height:1176px;object-fit:cover;filter:blur(18px) brightness(.34) saturate(.6)">`:""}
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 40% at 18% 0%,rgba(190,210,235,.2),transparent 70%),radial-gradient(ellipse 120% 90% at 50% 45%,transparent 40%,rgba(5,7,10,.85) 100%)"></div>
+      ${T!=="tense"?`<div style="position:absolute;inset:0;background:url('${BASE}rain-glass.png') center/cover;opacity:${T==="eerie"?.9:.55}"></div>`:""}`
+    :`<div style="position:absolute;inset:0;background:radial-gradient(ellipse 120% 80% at 50% 40%,transparent 55%,rgba(90,70,40,.22) 100%)"></div>
+      ${ek==="classic"?`<div style="position:absolute;left:0;right:0;top:0;height:16px;background:${chrome}"></div><div style="position:absolute;left:0;right:0;bottom:0;height:16px;background:${chrome}"></div>`
+        :`<div style="position:absolute;left:0;right:0;top:0;height:12px;background:${red}"></div><div style="position:absolute;left:0;right:0;bottom:0;height:12px;background:${red}"></div>`}`;
+  const sign=`<div style="position:absolute;left:0;right:0;top:26px;text-align:center;white-space:nowrap;font:600 ${ks}px/1 ${SANS};letter-spacing:.26em;color:${fg};opacity:.85;text-transform:uppercase">${signTxt}${/open/i.test(fl&&fl.sign||"")?"":` &nbsp;/&nbsp; ${night?"Open all night":"Open every day"}`}</div>
+    ${signBox}
+    <div style="position:absolute;left:0;right:0;top:176px;text-align:center;font:italic 400 21px/1 ${SERIF};color:${fg}">${ESC(night?V.sub:DAY.sub[T]||DAY.sub.warm)} Est. ${ESC(f.year)}.</div>`;
+  const heroImg=s0?`<img alt="Still from ${ESC(f.title)} (${ESC(f.year)})" crossorigin="anonymous" src="${img(s0,"w1280")}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}">`
+    :poster?`<img alt="" crossorigin="anonymous" src="${img(poster,"w342")}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(12px) brightness(.5)"><img alt="${ESC(f.title)} poster" crossorigin="anonymous" src="${img(poster,"w500")}" style="position:relative;height:100%;display:block;margin:0 auto;filter:${photo}">`
+    :`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;${disp(64)};line-height:1.05;color:${K.paper};white-space:normal">${ESC(f.title)}</div>`;
+  const hero=`<div style="position:absolute;left:28px;top:208px;width:760px;padding:8px 8px 0;box-sizing:border-box;background:${night?K.paper:"#fff"};box-shadow:0 16px 36px rgba(0,0,0,${night?.65:.25})">
+      <div style="position:relative;outline:2px solid ${red};outline-offset:-2px;height:470px;overflow:hidden;background:#222">${heroImg}</div>
+      <div style="font:italic 400 17px/1 ${SERIF};color:${K.ink};padding:9px 4px 10px;display:flex;justify-content:space-between"><span>${night?"Channel 13, the late show. The set behind the counter stays on all night.":"On the set above the counter tonight."}</span><span style="font:700 14px/17px ${SANS};letter-spacing:.14em;color:${K.mute};font-style:normal">${s0?"STILL":"POSTER"}: TMDB</span></div></div>`;
+  const P=fl&&fl.prop,prop=P?`<div style="position:absolute;left:14px;top:236px;width:214px;box-sizing:border-box;transform:rotate(${-3*tilt}deg);z-index:3;padding:10px 13px;box-shadow:0 8px 20px rgba(0,0,0,.45);${
+      P.kind==="badge"?`background:${K.paper};border:2px solid ${red};outline:1px solid ${red};outline-offset:-7px;border-radius:10px;text-align:center`
+      :P.kind==="receipt"?`background:#fbfaf6;border-top:1.5px dashed ${K.mute};border-bottom:1.5px dashed ${K.mute}`
+      :`background:${night?K.paper:"#fffdf6"};border-left:6px solid ${red}`}">
+      <div style="${disp(26)};color:${red}">${ESC(P.title)}</div>
+      ${(P.lines||[]).slice(0,3).map(l=>`<div style="font:600 15px/1.3 ${SANS};color:${K.ink};margin-top:4px">${ESC(l)}</div>`).join("")}</div>`:"";
+  const lg=ctx.logo&&ctx.logo[0]?ctx.logo:null,ts=titleSize(f.title,420,2,E.caps?80:68,36,E.cw);
+  let logoHTML="";
+  if(lg){const ar=(+lg[1]||4)/(+lg[2]||1),w=Math.min(318,96*ar),h=w/ar;
+    logoHTML=`<div data-h="plate" style="display:inline-block;padding:10px 16px;border-radius:3px;background:${night?"rgba(6,8,10,.62)":"transparent"}"><img data-h="logo" alt="${ESC(f.title)}" crossorigin="anonymous" src="${img(lg[0],"w500")}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"></div>`}
+  const firstMain=menu.m&&menu.m[0];
+  const noteTxt=night?V.noteTxt(W[3]&&W[3].length<=48?ESC(low(W[3])):""):firstMain?`${ESC(firstMain.n)}, ${special.m0||price("m",firstMain.n)}, with a cup of coffee and a slice from the pie case.`:"Ask at the counter for today's plate.";
+  const info=`<div data-h="info" style="position:absolute;left:44px;right:296px;top:738px;bottom:50px;display:flex;flex-direction:column;justify-content:center;gap:10px">
+      <div style="white-space:nowrap;font:700 17px/1 ${SANS};letter-spacing:.18em;color:${night?neon:red};text-transform:uppercase">${night?"Tonight on the late show":"Now showing above the counter"}</div>
+      <div style="display:flex;align-items:flex-end;gap:16px">${logoHTML}<div data-h="${lg?"alt":"title"}" data-max="${ts}" style="${lg?"display:none;":""}${disp(ts)};line-height:.95;color:${night?K.paper:K.ink}">${ESC(f.title)}</div><span style="${disp(40)};color:${night?neon:red};flex:none">${ESC(f.year)}</span></div>
+      <div style="font:italic 600 24px/1.25 ${SERIF};color:${night?"#fff":K.ink}">${ESC(f.T||"")}</div>
+      <div data-h="fdesc" style="font:400 20px/1.36 ${SERIF};color:${night?K.bone:"#3a3d43"}">${ESC(f.D||"")}</div></div>`;
+  const notice=`<div style="position:absolute;top:748px;right:30px;width:240px;box-sizing:border-box;transform:rotate(${2.5*tilt}deg);background:${night?K.paper:"#fffdf6"};color:${K.ink};padding:13px 15px;box-shadow:0 8px 22px rgba(0,0,0,${night?.55:.25});border-top:6px solid ${red}">
+    <div style="${disp(ek==="classic"?28:30)};color:${red}">${night?V.note:DAY.note[T]||DAY.note.warm}</div>
+    <div style="font:400 17px/1.32 ${SERIF};margin-top:6px">${noteTxt}</div>
+    <div style="font:700 14px/1 ${SANS};letter-spacing:.18em;margin-top:9px;color:${K.mute}">THE MANAGEMENT</div></div>`;
+  const ft=night?V.foot:DAY.foot;
+  const foot=`<div style="position:absolute;left:44px;right:44px;bottom:22px;display:flex;justify-content:space-between;font:600 15px/1 ${SANS};letter-spacing:.14em;color:${fg};opacity:.75;text-transform:uppercase">
+    <span>${ft[0]}</span><span>${ft[1]}</span><span>Form No. ${num||"13-"+yy}</span></div>`;
+  const front=root("front",night?K.night:K.paper,backdrop+sign+hero+prop+info+notice+foot);
+
+  /* ---------- back: laminated menu (vinyl at night, chrome or accent edging by day) ---------- */
+  const SECTIONS=night?SECTIONS_N:SECTIONS_D;
+  const edge=night?`<div style="position:absolute;inset:0;border:12px solid #17191e;pointer-events:none"></div><div style="position:absolute;inset:6px;border:1.5px dashed rgba(235,230,216,.42);pointer-events:none"></div>`
+    :ek==="classic"?`<div style="position:absolute;inset:0;border:12px solid transparent;border-image:${chrome} 1;pointer-events:none"></div><div style="position:absolute;inset:16px;border:1.5px solid ${red};pointer-events:none"></div>`
+    :`<div style="position:absolute;inset:0;border:12px solid ${red};pointer-events:none"></div><div style="position:absolute;inset:6px;border:1.5px dashed rgba(255,255,255,.5);pointer-events:none"></div>`;
+  const lam=`<div style="position:absolute;inset:0;background:url('${BASE}laminate-wear.png') center/cover;opacity:${wear};pointer-events:none"></div>${edge}`;
+  const topStill=(src,h,kick,head,size,cap=true)=>`<div data-h="band" style="position:absolute;left:12px;right:12px;top:12px;height:${h}px;overflow:hidden;background:${K.night}">
+    ${src?`<img alt="" crossorigin="anonymous" src="${img(src,"w1280")}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}">`:poster?`<img alt="" crossorigin="anonymous" src="${img(poster,"w780")}" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block;filter:${photo}">`:""}
+    <div style="position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(transparent,rgba(8,10,13,.88))"></div>
+    <div style="position:absolute;left:32px;bottom:22px">
+      <div style="font:600 16px/1 ${SANS};letter-spacing:.3em;color:${K.bone};margin-bottom:10px">${kick}</div>
+      <div style="white-space:nowrap;${disp(size)}">${night?neonTxt(E.caps?head.toUpperCase():head,false):`<span style="color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.6)">${ESC(E.caps?head.toUpperCase():head)}</span>`}</div></div>
+    ${cap?`<div style="position:absolute;right:20px;bottom:18px;max-width:300px;text-align:right;font:italic 400 15px/1.3 ${SERIF};color:#e9e4d6;text-shadow:0 1px 3px rgba(0,0,0,.9)">The window booth at ${ESC(venue)}${night?", after midnight":""}.<br><span style="font:700 14px/1.6 ${SANS};letter-spacing:.14em;font-style:normal">${src?"STILL":"POSTER"}: TMDB</span></div>`
+      :(src||poster)?`<div style="position:absolute;right:20px;top:16px;font:700 14px/1 ${SANS};letter-spacing:.14em;color:#e9e4d6;text-shadow:0 1px 3px rgba(0,0,0,.9)">${src?"STILL":"POSTER"}: TMDB</div>`:""}</div>`;
+  const item=(k,it,i)=>`<div data-h="item" style="break-inside:avoid;padding-bottom:16px">
+      <div style="display:flex;align-items:baseline;gap:10px"><b data-h="dish" style="font:700 28px/1.12 ${E.dish};color:${K.ink};flex:1 1 auto;min-width:0">${ESC(it.n)}</b><span data-h="price" style="font:700 28px/1 ${E.dish};color:${red};flex:none">${special[k+i]||price(k,it.n)}</span></div>
+      ${it.note?`<div data-h="desc" style="font:400 21px/1.3 ${SERIF};color:#3a3d43;margin-top:4px">${ESC(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
+  const head=(name,sub)=>ek==="modern"
+    ?`<div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;justify-content:space-between;gap:10px;background:${red};padding:6px 10px 5px;margin:0 0 14px"><span data-h="sech" data-base="${E.hs}" style="white-space:nowrap;${disp(E.hs)};color:#fff">${name}</span><span style="white-space:nowrap;font:italic 400 17px/1 ${SERIF};color:#fff">${sub}</span></div>`
+    :`<div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;gap:12px;border-bottom:2px solid ${K.ink};box-shadow:0 3px 0 ${K.paper},0 4px 0 ${K.ink};margin:0 0 14px;padding-bottom:4px"><span data-h="sech" data-base="${E.hs}" style="white-space:nowrap;font:${E.hw} ${E.hs}px/1.05 ${E.head};letter-spacing:${E.ls};color:${ek==="classic"?red:K.ink};${E.caps?"text-transform:uppercase;":""}">${name}</span><span style="white-space:nowrap;font:italic 400 17px/1 ${SERIF};color:${red}">${sub}</span></div>`;
+  const sec=([k,name,sub],its,off)=>its.length?`<div data-h="secblock"><div style="break-inside:avoid">${head(name,sub)}${item(k,its[0],off)}</div>${its.slice(1).map((it,i)=>item(k,it,off+i+1)).join("")}<div data-h="gap" style="height:14px"></div></div>`:"";
+  const whole=SECTIONS.map(s=>sec(s,menu[s[0]]||[],0)).join("");
+  const chunkList=[];SECTIONS.forEach(([k,name,sub])=>{const its=menu[k]||[];for(let i=0;i<its.length;i+=2)chunkList.push({html:sec([k,name,i?"continued":sub],its.slice(i,i+2),i),its:its.slice(i,i+2)})});
+  const N=fl&&fl.note;
+  const props=`<div data-h="props" style="position:absolute;left:40px;right:40px;bottom:64px;height:150px;display:flex;gap:24px;align-items:stretch">
+    <div style="flex:1.15;background:#fff;padding:14px 18px;box-shadow:0 4px 12px rgba(0,0,0,.18);border-left:6px solid ${red};transform:rotate(${-.6*tilt}deg);display:flex;flex-direction:column;justify-content:center">
+      <div style="font:700 15px/1 ${SANS};letter-spacing:.24em;color:${red}">ORDER UP WHEN</div>
+      <div style="font:400 20px/1.3 ${SERIF};color:${K.ink};margin-top:7px">${ESC(f.P||"Order up when the opening credits roll.")}</div></div>
+    <div style="flex:1;padding:12px 16px;border:1.5px solid ${K.ink};outline:1px solid ${K.ink};outline-offset:3px;display:flex;flex-direction:column;justify-content:center;background:${night?"transparent":"rgba(255,255,255,.35)"}">
+      <div style="font:700 14px/1 ${SANS};letter-spacing:.2em;color:${red};margin-bottom:6px">LEFT ON THE COUNTER</div>
+      <div style="font:400 ${N&&N.text.length>95?16:18}px/1.3 ${SERIF};color:${K.ink}">${N?ESC(N.text):night?"Lock the door behind you, hon. Sit where you can see the road.":"Coffee's on the house if you finish the pie, hon."}</div>
+      <div style="font:400 20px/1.5 ${HAND};color:#23324f;margin-top:2px;white-space:nowrap">${N?ESC(N.by):"Dot, the counter"}</div></div></div>`;
+  const backFoot=`<div style="position:absolute;left:40px;right:40px;bottom:20px;font:400 15px/19px ${SANS};color:${K.mute}">
+    ${W[4]?`<div style="font-style:italic;font-family:${SERIF};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Overheard at the counter: ${ESC(low(W[4]))}.</div>`:""}
+    <div style="display:flex;justify-content:space-between"><span>${night?V.fine:DAY.fine}</span><span>Form No. ${num||"13-"+yy}</span></div></div>`;
+  const s1=stills[1]||stills[0];
+  const back=root("back",K.paper,topStill(s1,296,night?V.kick:DAY.kick,"The Menu",ek==="classic"?80:88)+
+    `<!--CONT--><template data-h="chunks">${chunkList.map(c=>c.html).join("")}</template><div data-h="menu" style="position:absolute;left:44px;right:44px;top:334px;bottom:230px;column-count:2;column-gap:40px;column-fill:balance;column-rule:1px solid rgba(22,26,32,.25)">${whole}</div>`+props+backFoot,lam);
+
+  /* continued faces, decided by a conservative estimate at the floor sizes; horrorFit-style fitter balances later */
+  /* a continued face, kept as a template in the back; horrorFit-style fitter adds as many as a long menu needs */
+  const sc=stills[2]||stills[1]||stills[0];
+  const contFace=root("cont",K.paper,topStill(sc,240,night?"STILL OPEN":"STILL SERVING","The Menu, continued",ek==="classic"?64:72,false)+
+      `<div data-h="menu" style="position:absolute;left:44px;right:44px;top:282px;bottom:64px;column-count:2;column-gap:40px;column-fill:balance;column-rule:1px solid rgba(22,26,32,.25)"></div>
+      <div style="position:absolute;left:40px;right:40px;bottom:26px;font:400 15px/1 ${SANS};color:${K.mute}">${ESC(venue)}. Turn over for the cover.</div>`,lam);
+  schedule(token,night);
+  return {w:816,h:1056,faces:[front,back.replace("<!--CONT-->",`<template data-h="contface">${contFace}</template>`)]};
+};
+
+/* ---------- fitting after mount ---------- */
+const LEVELS=[{dish:28,desc:21,k:1,pad:16,gap:14,mb:14},{dish:27,desc:20,k:.95,pad:12,gap:10,mb:10},{dish:26,desc:20,k:.9,pad:9,gap:6,mb:8}];
+function schedule(token,night){
+  let tries=0;
+  const tick=async()=>{
+    const faces=[...document.querySelectorAll(`[data-diner="${token}"]`)];
+    if(faces.length<2){if(++tries<250)setTimeout(tick,40);return}
+    await CSS_READY;
+    await Promise.all(FONTS.map(fn=>document.fonts.load(fn).catch(()=>0)));
+    const lg=faces[0].querySelector('[data-h="logo"]');
+    if(lg&&!lg.complete)await new Promise(r=>{lg.addEventListener("load",r,{once:true});lg.addEventListener("error",r,{once:true});setTimeout(r,1500)});
+    try{fit(faces,night)}catch(e){console.error("diner fit",e)}
+    faces[0].dataset.fitted="1";
+  };
+  setTimeout(tick,0);
+}
+function fit(faces,night){
+  const [fr,bk]=faces;
+  const fits=m=>m.scrollWidth<=m.clientWidth+1&&m.scrollHeight<=m.clientHeight+1;
+  const box=fr.querySelector('[data-h="info"]'),over=()=>box.scrollHeight>box.clientHeight+1;
+  const lg=fr.querySelector('[data-h="logo"]'),plate=fr.querySelector('[data-h="plate"]');
+  if(lg){
+    if(!(lg.complete&&lg.naturalWidth)){plate.style.display="none";const a=fr.querySelector('[data-h="alt"]');a.style.display="";a.dataset.h="title"}
+    else{try{const cv=document.createElement("canvas");cv.width=96;cv.height=Math.max(8,Math.round(96*lg.naturalHeight/lg.naturalWidth));
+      const cx=cv.getContext("2d");cx.drawImage(lg,0,0,cv.width,cv.height);const d=cx.getImageData(0,0,cv.width,cv.height).data;let s=0,n=0;
+      for(let i=0;i<d.length;i+=4)if(d[i+3]>128){s+=(.2126*d[i]+.7152*d[i+1]+.0722*d[i+2])/255;n++}
+      const L=n?s/n:.5;
+      /* the logo keeps its own colours; the plate behind it changes so it reads */
+      if(night&&L<.4){plate.style.background="#ece6d6";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.15)"}
+      if(!night&&L>.62){plate.style.background="#16191f";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.3)"}}catch(e){}
+      const ar=lg.naturalWidth/lg.naturalHeight;let h=lg.offsetHeight;
+      while(over()&&h>56){h-=8;lg.style.height=h+"px";lg.style.width=Math.min(318,Math.round(h*ar))+"px"}}}
+  const t=fr.querySelector('[data-h="title"]');
+  if(t){let s=+t.dataset.max;while((over()||t.scrollWidth>t.clientWidth+1)&&s>34){s-=2;t.style.fontSize=s+"px"}}
+  const fd=fr.querySelector('[data-h="fdesc"]');let fs=20;while(over()&&fs>16){fs--;fd.style.fontSize=fs+"px"}
+  /* menu */
+  const m=bk.querySelector('[data-h="menu"]');
+  const set=(sel,fn)=>document.querySelectorAll(`[data-diner="${fr.dataset.diner}"]:not([data-role="front"]) [data-h="${sel}"]`).forEach(fn);
+  const apply=L=>{set("dish",e=>e.style.fontSize=L.dish+"px");set("price",e=>e.style.fontSize=L.dish+"px");
+    set("desc",e=>e.style.fontSize=L.desc+"px");set("sech",e=>e.style.fontSize=Math.round(+e.dataset.base*L.k)+"px");
+    set("item",e=>e.style.paddingBottom=L.pad+"px");set("gap",e=>e.style.height=L.gap+"px");set("sec",e=>e.style.marginBottom=L.mb+"px")};
+  const band=bk.querySelector('[data-h="band"]');let L=LEVELS[0],grown=false;apply(L);
+  for(let h=470;h>296;h-=16){band.style.height=h+"px";m.style.top=(h+38)+"px";if(fits(m)){grown=true;break}}
+  if(!grown){band.style.height="296px";m.style.top="334px";for(L of LEVELS){apply(L);if(fits(m))break}}
+  if(!fits(m)){
+    /* at dish 26 / note 20 and still too long: never shrink further. 2 item chunks flow onto new continued faces,
+       each cloned from the template, inside a copy of the host's face wrapper when there is one */
+    m.innerHTML=bk.querySelector('[data-h="chunks"]').innerHTML;band.style.height="296px";m.style.top="334px";apply(L);
+    const tpl=bk.querySelector('[data-h="contface"]');let cur=bk,lastEl=bk.parentElement&&bk.parentElement!==document.body&&bk.parentElement.children.length===1?bk.parentElement:bk,n=2;
+    while(!fits(cur.querySelector('[data-h="menu"]'))){
+      const cm=cur.querySelector('[data-h="menu"]'),blocks=cm.querySelectorAll('[data-h="secblock"]');if(blocks.length<2)break;
+      let next=cur.__next;
+      if(!next){const holder=document.createElement("div");holder.innerHTML=tpl.innerHTML;next=holder.firstElementChild;
+        let el=next;if(lastEl!==bk){el=lastEl.cloneNode(false);if(el.dataset)el.dataset.face=String(n);el.appendChild(next)}
+        lastEl.after(el);lastEl=el;n++;cur.__next=next;apply(L)}
+      next.querySelector('[data-h="menu"]').prepend(blocks[blocks.length-1]);
+      if(fits(cm))cur=next}
+  }
+}
+})();

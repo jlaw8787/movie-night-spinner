@@ -78,3 +78,9 @@ anchorman: Rammetto One
 genre-kids: Fredoka
 genre-horror: League Gothic
 genre-hero: Oswald
+fmt-diner: Oleo Script, Barlow Condensed (night 70s/80s look keeps League Gothic from genre-horror)
+fmt-newspaper: Playfair Display (letterpress broadsheet), Oswald (offset tabloid), Inter Tight (free paper)
+fmt-placemat: Patua One (1930s to 1950s), Bagel Fat One (1960s, 1970s), Fredoka (1980s, 1990s, shared with genre-kids), Bricolage Grotesque (2000s, modern)
+fmt-prom: Chonburi (1930s-40s), Leckerli One (1950s), Chicle (1960s), Sonsie One (1970s), Russo One (1980s), Bowlby One (1990s), Permanent Marker (2000s), Unbounded (modern)
+fmt-kiosk: Rokkitt (1930s-40s), Paytone One (1950s), Fugaz One (1960s), Modak (1970s), Goldman (1980s), Dela Gothic One (1990s), Changa One (2000s), Space Grotesk (modern)
+fmt-pub: DM Serif Display (1930s-40s), Ranchers (1950s), Poller One (1960s), Sansita (1970s), Kanit (1980s), Saira Extra Condensed (1990s), Sofia Sans Extra Condensed (2000s), Schibsted Grotesk (modern)

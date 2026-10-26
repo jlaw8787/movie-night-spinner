@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diner Stress Test</title></head>
+<body style="margin:0;background:#8a857b;font-family:system-ui,sans-serif">
+<div id="preview" style="display:flex;flex-wrap:wrap;gap:30px;padding:30px"></div>
+<script src="../../../tmdb-posters.js"></script>
+<script>
+/* Stress case for wip/genre/formats/diner.js: 60 character title, 4 items per course with 120 character notes,
+   no logo, no flavour, no stills (poster only). ?era=..&tone=.. as in lib/harness.html */
+window.MENU_FORMATS={};
+const q=new URLSearchParams(location.search);
+const img=(p,s="w1280")=>p?`https://image.tmdb.org/t/p/${s}${p}`:"";
+const note="A long note of one hundred and twenty characters to test wrapping in the narrow menu column tonight, all right then.";
+const four=(k)=>[0,1,2,3].map(i=>({n:["Blue plate meatloaf with gravy and mash","Cherry pie","Patty melt on rye","Grilled cheese and tomato soup"][(i+k)%4],note}));
+const s=document.createElement("script");s.src="../formats/diner.js";
+s.onload=()=>{
+  const ctx={f:{id:"stress",title:"The Night the Lights Went Out on Route Thirteen, Part Two",year:"1986",T:"Nobody leaves before sunrise.",D:"A diner full of strangers waits out a storm that does not want to end.",P:"Order up when the power goes out the second time."},
+    menu:{s:four(0),m:four(1),w:four(2),d:four(3)},poster:(typeof TMDB_POSTERS!=="undefined"?TMDB_POSTERS:{})["Halloween (1978)"]||null,stills:[],logo:null,palette:null,flavour:null,
+    era:q.get("era")||"1980s",tone:q.get("tone")||"gritty",img};
+  const r=window.MENU_FORMATS.diner(ctx);
+  document.getElementById("preview").innerHTML=r.faces.map((h,i)=>`<div class="face" data-face="${i}" style="position:relative;width:${r.w}px;height:${r.h}px;overflow:hidden;flex:none">${h}</div>`).join("");
+  document.body.dataset.ready="1"};
+document.head.appendChild(s);
+</script></body></html>

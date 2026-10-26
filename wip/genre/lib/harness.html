@@ -27,7 +27,7 @@ async function ctxFor(id){
   const toItem=([n,note])=>({n,note});
   const menu=JSON.parse(JSON.stringify(e&&e.menu||d.recipe||{s:(f.S||[]).slice(0,2).map(toItem),m:(f.M||[]).map(toItem),w:(f.W||[]).map(toItem),d:(f.K||[]).map(toItem)}));
   const a=FMT[id]||{};
-  return {f,menu,poster:(window.TMDB_POSTERS||{})[id]||null,stills:(stills[id]||[]).filter(s=>s[1]>=1280).map(s=>s[0]).slice(0,8),
+  return {f,menu,poster:(window.TMDB_POSTERS||{})[id]||null,stills:(()=>{const a=(stills[id]||[]).filter(s=>s[1]>=1280),c=a.filter(s=>!s[3]);return (c.length>=2?c:a).map(s=>s[0]).slice(0,8)})(),
     logo:LOGOS[id]||null,palette:PAL[id]||null,flavour:FLAV[id]||null,era:q.get("era")||a.era||"modern",tone:q.get("tone")||a.tone||"warm",img};
 }
 (async()=>{

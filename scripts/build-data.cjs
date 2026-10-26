@@ -42,7 +42,7 @@ for (const f of films) {
   if (a && a.format) {
     o.lf = a.format;
     out.lib = { fmt: a.format, era: a.era, tone: a.tone, flavour: LIB.fl[id] || null, palette: LIB.pal[id] || null, logo: LIB.logo[id] || null,
-      stills: (LIB.st[id] || []).filter(x => x[1] >= 1280).map(x => x[0]).slice(0, 8) };
+      stills: (() => { const all = (LIB.st[id] || []).filter(x => x[1] >= 1280), clean = all.filter(x => !x[3]); return (clean.length >= 2 ? clean : all).map(x => x[0]).slice(0, 8); })() };
   }
   if (EDITIONS[id]) out.edition = EDITIONS[id];
   else {
