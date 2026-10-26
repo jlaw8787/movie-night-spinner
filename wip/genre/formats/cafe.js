@@ -3,8 +3,8 @@
    a paper loyalty card tucked into the frame. Era sets the board material (black glass, felt peg board,
    green slate, brown board, marker board, espresso slate, vinyl lettering, painted steel), the type pairing
    and the frame. Tone sets photo treatment, chalk dust and wear, card tilt and the copy voice.
-   Fonts (fmt-cafe): Playfair Display SC, Barlow Condensed, Cabin Sketch, Bagel Fat One, Permanent Marker,
-   Amatic SC, Josefin Sans, DM Serif Display. */
+   Fonts (fmt-cafe): Rufina, Pathway Gothic One, Cabin Sketch, Original Surfer, Rock Salt, Amatic SC,
+   Josefin Sans, Domine. */
 (function(){
 const W=1056,H=1344,FR=26,PH=600;
 
@@ -60,20 +60,20 @@ const TONE={
 
 /* ---------- era: board material, type, frame, course heads, prices ---------- */
 const ERA={
-  "1930s-40s":{disp:"Playfair Display SC",dw:900,body:"Lora",sig:"Pinyon Script",ratio:.56,dr:.7,up:true,chalk:false,
+  "1930s-40s":{disp:"Rufina",dw:700,body:"Lora",sig:"Pinyon Script",ratio:.56,dr:.7,up:true,chalk:false,
     board:"#141414",ink:"#f1e3bf",acc0:"#d4a94a",frame:"linear-gradient(135deg,#5a2a16,#3a170b 40%,#6b341b 60%,#2c1208)",frameIn:"inset 0 0 0 3px #b8893a,inset 0 0 0 7px #141414,inset 0 0 0 8px #b8893a",
     sheen:"linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,0) 40%)",card:"#efe4c8",cardInk:"#2a1d10",
     photoF:"grayscale(1) contrast(1.12) brightness(1.05)",head:"deco",cents:true,P:{s:[15,20,25,15],m:[45,55,65,50],w:[10,15,10,15],d:[5,10,5,10]}},
-  "1950s":{disp:"Barlow Condensed",dw:600,body:"Barlow Condensed",bw:500,sig:"Pinyon Script",ratio:.42,dr:.46,up:true,chalk:false,
+  "1950s":{disp:"Pathway Gothic One",body:"Pathway Gothic One",sig:"Pinyon Script",ratio:.42,dr:.46,up:true,chalk:false,
     board:"#1c1c1d",grooves:true,ink:"#f4f4ef",acc0:"#d8302a",frame:"linear-gradient(180deg,#e3e6ea,#9ea3aa 45%,#d7dade 55%,#7d828a)",frameIn:"inset 0 2px 4px rgba(0,0,0,.6)",
     card:"#fbf7ec",cardInk:"#1c1c1d",photoF:"saturate(1.15) sepia(.1) contrast(1.04)",head:"peg",cents:true,P:{s:[25,35,30,40],m:[85,95,75,90],w:[20,25,20,25],d:[10,15,10,15]}},
   "1960s":{disp:"Cabin Sketch",dw:700,body:"Patrick Hand",sig:"Caveat",ratio:.5,dr:.6,up:false,chalk:true,
     board:"#2c4636",ink:"#f2f4ea",acc0:"#f2d36b",frame:"repeating-linear-gradient(90deg,#9a6a35 0 4px,#8a5b2a 4px 9px,#a8773f 9px 15px)",frameIn:"inset 0 0 12px rgba(0,0,0,.55)",
     card:"#fffdf4",cardInk:"#233528",photoF:"saturate(1.3) contrast(1.05)",head:"chalkline",P:{s:[.45,.6,.5,.55],m:[1.25,1.5,1.35,1.4],w:[.35,.4,.3,.45],d:[.15,.2,.25,.2]}},
-  "1970s":{disp:"Bagel Fat One",body:"Kalam",bw:700,sig:"Caveat",ratio:.5,dr:.66,up:false,chalk:true,
+  "1970s":{disp:"Original Surfer",body:"Kalam",bw:700,sig:"Caveat",ratio:.5,dr:.66,up:false,chalk:true,
     board:"#33241b",ink:"#f7e7c6",acc0:"#f0a23a",frame:"repeating-linear-gradient(90deg,#4b2c17 0 6px,#5a3820 6px 10px,#3f2412 10px 18px)",frameIn:"inset 0 0 0 4px #c76b2a,inset 0 0 14px rgba(0,0,0,.6)",
     card:"#f3e2bb",cardInk:"#3a2414",photoF:"sepia(.22) saturate(.95) contrast(.94) brightness(1.06)",head:"pill",P:{s:[.95,1.25,1.1,1.35],m:[2.95,3.5,3.25,3.75],w:[.85,.95,.75,.9],d:[.35,.45,.5,.4]}},
-  "1980s":{disp:"Permanent Marker",body:"Kalam",bw:700,sig:"Caveat",ratio:.5,dr:.64,up:true,chalk:false,
+  "1980s":{disp:"Rock Salt",body:"Kalam",bw:700,sig:"Caveat",ratio:.5,dr:.64,up:true,chalk:false,
     board:"#101012",ink:"#ffffff",acc0:"#ff3fa4",acc2:"#29e6f0",frame:"linear-gradient(180deg,#3a3a40,#16161a)",frameIn:"inset 0 0 0 2px #55555e",
     card:"#ffffff",cardInk:"#101012",photoF:"contrast(1.12) saturate(1.22)",head:"marker",P:{s:[1.95,2.5,2.25,2.75],m:[4.95,5.5,5.25,5.95],w:[1.75,1.95,1.5,1.85],d:[.95,1.25,1.1,1.5]}},
   "1990s":{disp:"Amatic SC",dw:700,body:"Architects Daughter",sig:"Caveat",ratio:.52,dr:.42,up:false,chalk:true,
@@ -82,14 +82,14 @@ const ERA={
   "2000s":{disp:"Josefin Sans",dw:700,body:"Josefin Sans",bw:600,sig:"Caveat",ratio:.52,dr:.62,up:true,chalk:false,
     board:"#2a1f1a",ink:"#f6eadb",acc0:"#c98b4e",frame:"repeating-linear-gradient(90deg,#3a2618 0 5px,#2f1e13 5px 11px)",frameIn:"inset 0 0 0 2px #c98b4e",
     card:"#f6efe3",cardInk:"#2a1f1a",photoF:"saturate(1.05) contrast(1.08)",head:"bar",P:{s:[4.5,5.25,4.95,5.75],m:[9.95,11.5,10.5,12.25],w:[3.95,4.5,3.75,4.25],d:[2.95,3.75,3.25,4.15]}},
-  "modern":{disp:"DM Serif Display",body:"DM Sans",bw:"400;700",sig:"Caveat",ratio:.5,dr:.56,up:false,chalk:false,
+  "modern":{disp:"Domine",dw:700,body:"DM Sans",bw:"400;700",sig:"Caveat",ratio:.5,dr:.56,up:false,chalk:false,
     board:"#1f2326",ink:"#f4f3ef",acc0:"#d9a066",frame:"linear-gradient(180deg,#141618,#0b0c0d)",frameIn:"inset 0 0 0 1px #3a3f44",
     card:"#f4f1ea",cardInk:"#1f2326",photoF:"none",head:"hair",P:{s:[7,9,8,10],m:[18,22,19,24],w:[8,9,7,10],d:[5,6,4.5,7]}}};
 const ERAS=Object.keys(ERA);
 function eraOf(e){e=String(e||"").toLowerCase();if(ERA[e])return e;if(/30|40/.test(e))return"1930s-40s";if(/2000|00s/.test(e))return"2000s";const m=e.match(/(19)?([5-9])0/);if(m)return"19"+m[2]+"0s";return"modern"}
 function fam(e){const list=[e.disp+(e.dw?":wght@"+e.dw:""),e.body+(e.bw?":wght@"+e.bw:(e.body===e.disp?"":"")),e.sig];
   if(e.body==="Lora")list[1]="Lora:ital,wght@0,400;0,600;1,400";if(e.body==="Kalam")list[1]="Kalam:wght@400;700";if(e.body==="Josefin Sans")list[1]="Josefin Sans:wght@400;600;700";
-  if(e.disp===e.body)list.splice(1,1);if(e.disp==="Barlow Condensed")list[0]="Barlow Condensed:wght@500;600;700";if(e.disp==="DM Serif Display")list.push("DM Sans:wght@400;700");return[...new Set(list)]}
+  if(e.disp===e.body)list.splice(1,1);if(e.disp==="Domine")list.push("DM Sans:wght@400;700");return[...new Set(list)]}
 
 function money(era,k,i,f,fl){const e=ERA[era],v=e.P[k][i%4];
   const egg=k==="d"&&i===0, y=yy(f);
@@ -175,7 +175,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const stamped=Math.min(9,Math.max(3,(String(num).replace(/\D/g,"").split("").reduce((a,d)=>a+ +d,0)%7)+3));
   const stampWord=i=>{const w=(winks[i%Math.max(1,winks.length)]||"").replace(/^(the|a|an)\s+/i,"").split(/\s+/)[0]||"PAID";return w.slice(0,6).toUpperCase()};
   const cardInk=e.cardInk,cardAcc=readable(pal.accent,e.card,4.5,e.acc0==="#f2d36b"?"#7a5a10":e.acc0);
-  const boxes=Array.from({length:10},(_,i)=>`<div style="height:44px;border:1.5px solid ${cardInk}55;border-radius:${era==="1970s"||era==="1950s"?22:3}px;display:flex;align-items:center;justify-content:center;position:relative;font-family:'Barlow Condensed','${e.body}',sans-serif;font-size:15px;color:${cardInk}88">${i<stamped?`<span style="max-width:100%;overflow:hidden;white-space:nowrap;transform:rotate(${(i%3-1)*9-6}deg);color:${cardAcc};font-weight:700;letter-spacing:.04em;font-size:14px;border:2px solid ${cardAcc};padding:1px 3px;opacity:.85">${esc(stampWord(i))}</span>`:i===9?`<span style="font-weight:700;color:${cardInk}">FREE</span>`:String(i+1)}</div>`).join("");
+  const boxes=Array.from({length:10},(_,i)=>`<div style="height:44px;border:1.5px solid ${cardInk}55;border-radius:${era==="1970s"||era==="1950s"?22:3}px;display:flex;align-items:center;justify-content:center;position:relative;font-family:'${e.body}',sans-serif;font-size:15px;color:${cardInk}88">${i<stamped?`<span style="max-width:100%;overflow:hidden;white-space:nowrap;transform:rotate(${(i%3-1)*9-6}deg);color:${cardAcc};font-weight:700;letter-spacing:.04em;font-size:14px;border:2px solid ${cardAcc};padding:1px 3px;opacity:.85">${esc(stampWord(i))}</span>`:i===9?`<span style="font-weight:700;color:${cardInk}">FREE</span>`:String(i+1)}</div>`).join("");
   const card=`<div style="width:340px;flex:none;align-self:flex-start;transform:rotate(${T.tilt}deg);margin-top:4px;background:${e.card};background-image:${noise("#5a4a30",.16,.9,180)};box-shadow:0 10px 22px rgba(0,0,0,.5);padding:14px 16px 12px;box-sizing:border-box;color:${cardInk};border-radius:${era==="modern"||era==="2000s"?10:4}px">
       <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><div style="font-family:'${e.disp}',serif;font-weight:${e.dw||400};font-size:22px;line-height:1;${dispUp}white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:${cardAcc}">${esc(prop?prop.title:"Coffee Card")}</div><div style="font-family:${bodyF};font-size:14px;white-space:nowrap">No. ${esc(num)}</div></div>
       <div style="font-family:${bodyF};font-size:15px;line-height:1.25;margin:6px 0 8px">${esc(prop&&prop.lines&&prop.lines[0]?sent(prop.lines[0])+" ":"")}${esc(T.card)}</div>

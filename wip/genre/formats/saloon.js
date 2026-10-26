@@ -70,7 +70,9 @@ function price(k,i,era){
 function heroes(ctx){
   const im=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const st=(ctx.stills||[]).filter(Boolean).map(p=>im(p,"w1280"));
-  const post=ctx.poster?im(ctx.poster,"w780"):"";
+  /* tmdb-posters.js declares a top level const, so window.TMDB_POSTERS is empty: read the binding directly */
+  let pp=ctx.poster;if(!pp){try{pp=typeof TMDB_POSTERS!=="undefined"&&ctx.f&&TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]}catch(e){}}
+  const post=pp?im(pp,"w780"):"";
   return{list:st,poster:post,hero:st[0]||post,second:st[1]||st[0]||post,isPoster:!st.length};
 }
 function logoUrl(ctx){const l=ctx.logo;if(!l||!l[0])return"";const im=ctx.img||((p,s)=>`https://image.tmdb.org/t/p/${s}${p}`);return im(l[0],"w500")}
@@ -140,15 +142,15 @@ window.MENU_FORMATS=window.MENU_FORMATS||{};
 const propLines=p=>(p&&p.lines||[]).slice(0,3);
 /* ---- saloon: frontier saloon bill of fare, wood type poster, 1 face 816x1344 ---- */
 const W=816,H=1344;
-loadFonts("family=Ewert&family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+DW+Pica+SC&family=Smokum&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Diplomata+SC&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&family=Homemade+Apple&family=Mr+Dafoe&family=Caveat:wght@600;700",
-  ["Ewert","IM Fell DW Pica","IM Fell DW Pica SC","Smokum","Old Standard TT","Diplomata SC","Libre Baskerville","Zilla Slab","Homemade Apple","Mr Dafoe","Caveat"]);
+loadFonts("family=Ewert&family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+DW+Pica+SC&family=Smokum&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Diplomata+SC&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Podkova:wght@400;600;800&family=Homemade+Apple&family=Mr+Dafoe&family=Caveat:wght@600;700",
+  ["Ewert","IM Fell DW Pica","IM Fell DW Pica SC","Smokum","Old Standard TT","Diplomata SC","Libre Baskerville","Podkova","Homemade Apple","Mr Dafoe","Caveat"]);
 watch();
 /* era pairing: 1880s style wood type, 60s western revival, 80s/90s engraved card, modern slab */
 const TYPE=[
   {disp:"'Ewert',serif",dw:400,body:"'IM Fell DW Pica',serif",bw:400,caps:"'IM Fell DW Pica SC',serif",cw:400,dish:"'IM Fell DW Pica',serif",dishW:400,sig:"'Homemade Apple',cursive",sigS:22,dispLs:".02em"},
   {disp:"'Smokum',serif",dw:400,body:"'Old Standard TT',serif",bw:400,caps:"'Old Standard TT',serif",cw:700,dish:"'Old Standard TT',serif",dishW:700,sig:"'Mr Dafoe',cursive",sigS:34,dispLs:".03em"},
   {disp:"'Diplomata SC',serif",dw:400,body:"'Libre Baskerville',serif",bw:400,caps:"'Libre Baskerville',serif",cw:700,dish:"'Libre Baskerville',serif",dishW:700,sig:"'Mr Dafoe',cursive",sigS:34,dispLs:"0"},
-  {disp:"'Zilla Slab',serif",dw:700,body:"'Zilla Slab',serif",bw:400,caps:"'Zilla Slab',serif",cw:600,dish:"'Zilla Slab',serif",dishW:700,sig:"'Caveat',cursive",sigS:34,dispLs:".01em"}
+  {disp:"'Podkova',serif",dw:800,body:"'Podkova',serif",bw:400,caps:"'Podkova',serif",cw:600,dish:"'Podkova',serif",dishW:600,sig:"'Caveat',cursive",sigS:34,dispLs:".01em"}
 ];
 const PAPER=[
   {bg:"#e6d6b2",fox:[150,105,50],fib:[120,95,60],ink:"#21170e"},
@@ -209,7 +211,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const mis=E.mis?`text-shadow:3px 2px 0 ${rgba(C.accA,.45)};`:"";
   const vlen=String(F.venue).length,vs=vlen>36?54:vlen>24?64:vlen>14?78:92;
   const url=logoUrl(ctx),title=T(ctx.f.title||"");
-  const fb=title.length>40?34:title.length>22?44:58;
+  const fb=title.length>40?30:title.length>22?36:44;
   const reward=/^\d+$/.test(F.number)?`$${F.number}`:F.number;
   const lpDark=`position:relative;display:inline-block;max-width:470px;padding:14px 22px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".02 .5",3,[255,235,200],.16,seed,500)},${noise(".9",2,[255,255,255],.07,seed+1)};box-shadow:0 6px 14px rgba(0,0,0,.4)`;
   const lpLight=lpDark.replace(`background-color:${C.dark}`,`background-color:${toHex(mix(hex(P.bg),WHITE,.5))}`);
@@ -235,7 +237,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="flex:none;max-width:470px">
         <div data-lpanel data-dark="${esc(lpDark)}" data-light="${esc(lpLight)}" style="${lpDark}">
           ${url?`<img data-logo crossorigin="anonymous" src="${url}" alt="" style="display:block;max-width:426px;max-height:80px;object-fit:contain">`:""}
-          <div data-title-fb data-box style="${url?"display:none;":""}width:426px;max-height:80px;overflow:hidden;text-align:center"><div data-fs="${fb}" data-min="20" style="font:${ty.dw} ${fb}px ${ty.disp};line-height:1.02;text-transform:uppercase;color:${C.onDark}">${title}</div></div>
+          <div data-title-fb data-box style="${url?"display:none;":""}width:426px;max-height:96px;overflow:hidden;text-align:center"><div data-fs="${fb}" data-min="20" style="font:${ty.dw} ${fb}px ${ty.disp};line-height:1.02;text-transform:uppercase;color:${C.onDark}">${title}</div></div>
         </div>
       </div>
       <div data-box style="flex:1;height:104px;overflow:hidden">

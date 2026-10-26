@@ -4,7 +4,7 @@
 const clean=s=>String(s==null?"":s).replace(/\s*[‒–—―−]\s*/g,", ").replace(/\s+-+\s+/g,", ").replace(/\s{2,}/g," ").trim();
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sentence=s=>{s=clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?"]$/.test(s)?s:s+"."};
-const FAMILY=new Set(["kids","fairytale"]);
+const FAMILY=new Set(["kids","fairytale","wizard"]);
 const DRY=[[/\bred wine\b|\bwhite wine\b|\bwine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bmartini\b/gi,"mocktail"],[/\bcocktail(?! franks| onions?)\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|sake)\b/gi,"syrup"]];
 const dryer=fam=>s=>fam?DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s)):clean(s);
 
@@ -102,7 +102,9 @@ const fam=f=>"family="+f.replace(/ /g,"+");
 
 /* stills: hero is the first still, else the poster; second is the next still, else the poster again */
 function photos(ctx){
-  const st=(ctx.stills||[]).filter(Boolean),po=ctx.poster?ctx.img(ctx.poster,"w780"):"";
+  /* the harness map is a top-level const, not on window: read the global binding when ctx.poster is empty */
+  let pp=ctx.poster;try{if(!pp&&typeof TMDB_POSTERS!=="undefined")pp=TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]||null}catch(e){}
+  const st=(ctx.stills||[]).filter(Boolean),po=pp?ctx.img(pp,"w780"):"";
   return{hero:st[0]?ctx.img(st[0],"w1280"):po,heroPos:st[0]?"center 40%":"center 30%",
     second:st[1]?ctx.img(st[1],"w1280"):(st[0]&&po?po:(po||"")),secondPos:st[1]?"center 45%":"center 22%",fromPoster:!st[0]};
 }
@@ -123,6 +125,10 @@ const FX=window.__fmtBHA=window.__fmtBHA||{
       for(const n of [2,1])if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(n);e.style.overflow="hidden"});
       if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>e.style.display="none");
       if(FX.over(box))box.querySelectorAll("[data-drop]").forEach(e=>e.style.display="none");
+      /* last resort for extreme menus: everything down to the 14px floor */
+      for(let k=0;k<30&&FX.over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize);if(s>14){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}
+      /* still too much: drop trailing items, always keeping the first */
+      const its=[...box.querySelectorAll("[data-gap]")];for(let i=its.length-1;i>0&&FX.over(box);i--)its[i].style.display="none";
     });
   },
   fitAll(){document.querySelectorAll("[data-fmtface]").forEach(f=>FX.fit(f))},
@@ -179,7 +185,7 @@ const LOOK=[
   {disp:"Jost",dw:700,body:"Jost",paper:"#fbfaf6",ink:"#13213a",acc:"#d0582a",caps:true,ls:".16em"},
   {disp:"Lustria",dw:400,body:"Raleway",paper:"#e9dcc4",ink:"#3b2616",acc:"#9c5b1a",caps:false,ls:"0"},
   {disp:"Rosarivo",dw:400,body:"Karla",paper:"#f3eef0",ink:"#1d1a2b",acc:"#8a2142",caps:true,ls:".08em",ital:true},
-  {disp:"Castoro",dw:400,body:"Mulish",paper:"#f6f3ec",ink:"#212121",acc:"#2a4e7a",caps:false,ls:"0",ital:true},
+  {disp:"Cardo",dw:400,body:"Mulish",paper:"#f6f3ec",ink:"#212121",acc:"#2a4e7a",caps:false,ls:"0",ital:true},
   {disp:"Montserrat",dw:600,body:"Montserrat",paper:"#ffffff",ink:"#222222",acc:"#a77c26",caps:true,ls:".2em"},
   {disp:"Newsreader",dw:500,body:"Inter Tight",paper:"#f2efe9",ink:"#1b1b1b",acc:"#8a6a3c",caps:false,ls:"-.01em",ital:true}];
 const SIG="Pinyon Script";
@@ -222,7 +228,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div data-fs="15" style="font:italic 400 20px/1.2 ${B};color:${K.soft};margin-top:7px">${esc(F.sign)}</div></div>`;
   const heroTop=340,heroH=620;
   const lp=logoPanel(ctx,{maxW:360,maxH:110,center:true,dark:rgba(K.deep,.86),light:rgba(dark?"#f4ecdc":paper,.94),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f4ecdc":paper,.93),fbK:K.acc,
-    titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:`Now showing in your suite &nbsp;/&nbsp; ${esc(ctx.f.year)}`,underFont:`700 14px/1.2 ${B};letter-spacing:.18em;text-transform:uppercase`,
+    titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:`In your suite &nbsp;/&nbsp; ${esc(ctx.f.year)}`,underFont:`700 14px/1.2 ${B};letter-spacing:.18em;text-transform:uppercase`,
     style:`position:absolute;left:50%;transform:translateX(-50%);bottom:22px;max-width:520px;padding:16px 24px 13px;text-align:center;border-radius:${era===3?16:2}px;box-shadow:0 6px 18px rgba(0,0,0,.38)`});
   const hero=`<div style="position:absolute;left:30px;right:30px;top:${heroTop}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${rule};outline-offset:6px;border-radius:${era===3?18:0}px">
     ${photoHTML(ph.hero,ph.heroPos,era,t)}${lp}</div>`;
@@ -230,7 +236,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${kick("From the front desk")}
     <div data-fs="15" style="font:italic 400 22px/1.34 ${B};color:${K.ink};margin-top:12px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="24" style="font:400 40px/1.1 ${S};color:${K.acc};margin-top:8px;transform:rotate(-2deg);transform-origin:left">${esc(F.note.by)}</div>
-    <div data-drop data-fs="14" style="margin-top:auto;padding-top:12px;border-top:1px solid ${rgba(K.ink,.3)};font:700 16px/1.3 ${B};color:${K.soft};letter-spacing:.04em">Dial 0 for the kitchen. Open all night.</div></div>`;
+    ${ctx.f.P?`<div data-drop data-fs="14" style="margin-top:auto;padding-top:14px;font:400 18px/1.32 ${B};color:${K.ink}"><span style="font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:${K.acc};display:block;margin-bottom:4px">Ring down when</span>${esc(sentence(dry(ctx.f.P)))}</div>`:""}
+    <div data-drop data-fs="14" style="margin-top:${ctx.f.P?14:0}px;padding-top:12px;border-top:1px solid ${rgba(K.ink,.3)};font:700 16px/1.3 ${B};color:${K.soft};letter-spacing:.04em">Dial 0 for the kitchen. Open all night.</div></div>`;
   /* door hanger: a die-cut card with a hole, type only */
   const hg=mix(hex(K.acc),[0,0,0],dark?0:.08),hgc=contrast(hg,[255,255,255])>=4.5?"#fffaf0":"#161412";
   const box=`<span style="display:inline-block;width:15px;height:15px;border:2px solid ${hgc};margin-right:9px;vertical-align:-2px;flex:none"></span>`;
@@ -240,9 +247,9 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.28;mix-blend-mode:multiply"></div>
       <div style="position:absolute;left:50%;top:89px;width:1px;height:0"></div>
       <div data-fbox style="position:absolute;left:18px;right:16px;top:102px;bottom:14px;overflow:hidden;color:${hgc}">
-        <div data-fs="14" style="font:700 14px/1.2 ${B};letter-spacing:.2em;text-transform:uppercase">Hang outside by 2 am</div>
+        <div data-fs="14" style="font:700 14px/1.2 ${B};letter-spacing:.2em;text-transform:uppercase">Order by 2 am</div>
         <div data-fs="18" style="${dispStyle}font-size:26px;line-height:1.05;margin:6px 0 8px">Room ${esc(room)}</div>
-        ${pick.map(it=>`<div data-fs="14" style="display:flex;align-items:flex-start;font:700 15px/1.25 ${B};margin-bottom:6px">${box}<span>${esc(dry(it.n))}</span></div>`).join("")}
+        ${pick.map(it=>`<div data-fs="14" style="display:flex;align-items:flex-start;font:700 15px/1.25 ${B};margin-bottom:6px">${box}<span style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(dry(it.n))}</span></div>`).join("")}
         <div data-fs="14" style="font:700 14px/1.3 ${B};margin-top:4px;letter-spacing:.06em">GUESTS &nbsp;${box}1 &nbsp;${box}2</div></div></div></div>`;
   const front=face(crest+header+hero+note+hanger);
 

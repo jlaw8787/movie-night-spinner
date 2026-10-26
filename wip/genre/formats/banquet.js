@@ -45,11 +45,11 @@ const isFamily=f=>/^(kids|fairytale|xmas)$/.test(f.theme||"")||/^(G|PG)$/.test((
 const ERA={
   old:{disp:"'IM Fell DW Pica SC',serif",body:"'IM Fell DW Pica',serif",fonts:["IM+Fell+DW+Pica+SC","IM+Fell+DW+Pica:ital@0;1"],dw:400,upper:false,track:".04em",
        print:"letterpress",border:"rule",photo:"sepia(.18) contrast(1.06)",bodyW:400},
-  mid:{disp:"'DM Serif Display',serif",body:"'Lora',serif",fonts:["DM+Serif+Display:ital@0;1","Lora:ital,wght@0,400;0,600;1,400"],dw:400,upper:false,track:"0",
+  mid:{disp:"'Instrument Serif',serif",body:"'Lora',serif",fonts:["Instrument+Serif:ital@0;1","Lora:ital,wght@0,400;0,600;1,400"],dw:400,upper:false,track:"0",
        print:"offset",border:"band",photo:"saturate(1.12) contrast(1.04)",bodyW:400},
-  late:{disp:"'Playfair Display',serif",body:"'Libre Baskerville',serif",fonts:["Playfair+Display:ital,wght@0,700;0,900;1,700","Libre+Baskerville:ital,wght@0,400;0,700;1,400"],dw:900,upper:false,track:"0",
+  late:{disp:"'Libre Bodoni',serif",body:"'Libre Baskerville',serif",fonts:["Libre+Bodoni:ital,wght@0,700;1,700","Libre+Baskerville:ital,wght@0,400;0,700;1,400"],dw:700,upper:false,track:"0",
        print:"gloss",border:"foil",photo:"saturate(1.12) contrast(1.06)",bodyW:400},
-  new:{disp:"'Cinzel',serif",body:"'EB Garamond',serif",fonts:["Cinzel:wght@600;800","EB+Garamond:ital,wght@0,500;0,600;1,500"],dw:800,upper:true,track:".08em",
+  new:{disp:"'Castoro Titling',serif",body:"'EB Garamond',serif",fonts:["Castoro+Titling","EB+Garamond:ital,wght@0,500;0,600;1,500"],dw:400,upper:true,track:".08em",
        print:"laser",border:"hair",photo:"saturate(1.06) contrast(1.04)",bodyW:500}
 };
 /* stock: dark or light card per tone, wear level and photo mood */
@@ -64,7 +64,6 @@ const TONE={
   gritty:{dark:false,paper:()=>[226,212,180],ink:[43,33,24],wear:.85,photo:" contrast(1.12) saturate(.85)",kick:"Eat while the fires still burn",toast:"Talk of the hall"},
   scrappy:{dark:false,paper:()=>[236,230,214],ink:[34,34,34],wear:.7,photo:" contrast(1.2) saturate(.8)",kick:"All hands to the long table",toast:"Talk of the hall"}
 };
-const fams={old:"IM Fell DW Pica SC",mid:"DM Serif Display",late:"Playfair Display",new:"Cinzel"};
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
 window.MENU_FORMATS[ID]=ctx=>{

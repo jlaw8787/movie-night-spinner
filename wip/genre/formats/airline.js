@@ -4,7 +4,7 @@
 const clean=s=>String(s==null?"":s).replace(/\s*[‒–—―−]\s*/g,", ").replace(/\s+-+\s+/g,", ").replace(/\s{2,}/g," ").trim();
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sentence=s=>{s=clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?"]$/.test(s)?s:s+"."};
-const FAMILY=new Set(["kids","fairytale"]);
+const FAMILY=new Set(["kids","fairytale","wizard"]);
 const DRY=[[/\bred wine\b|\bwhite wine\b|\bwine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bmartini\b/gi,"mocktail"],[/\bcocktail(?! franks| onions?)\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|sake)\b/gi,"syrup"]];
 const dryer=fam=>s=>fam?DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s)):clean(s);
 
@@ -102,7 +102,9 @@ const fam=f=>"family="+f.replace(/ /g,"+");
 
 /* stills: hero is the first still, else the poster; second is the next still, else the poster again */
 function photos(ctx){
-  const st=(ctx.stills||[]).filter(Boolean),po=ctx.poster?ctx.img(ctx.poster,"w780"):"";
+  /* the harness map is a top-level const, not on window: read the global binding when ctx.poster is empty */
+  let pp=ctx.poster;try{if(!pp&&typeof TMDB_POSTERS!=="undefined")pp=TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]||null}catch(e){}
+  const st=(ctx.stills||[]).filter(Boolean),po=pp?ctx.img(pp,"w780"):"";
   return{hero:st[0]?ctx.img(st[0],"w1280"):po,heroPos:st[0]?"center 40%":"center 30%",
     second:st[1]?ctx.img(st[1],"w1280"):(st[0]&&po?po:(po||"")),secondPos:st[1]?"center 45%":"center 22%",fromPoster:!st[0]};
 }
@@ -123,6 +125,10 @@ const FX=window.__fmtBHA=window.__fmtBHA||{
       for(const n of [2,1])if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(n);e.style.overflow="hidden"});
       if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>e.style.display="none");
       if(FX.over(box))box.querySelectorAll("[data-drop]").forEach(e=>e.style.display="none");
+      /* last resort for extreme menus: everything down to the 14px floor */
+      for(let k=0;k<30&&FX.over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize);if(s>14){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}
+      /* still too much: drop trailing items, always keeping the first */
+      const its=[...box.querySelectorAll("[data-gap]")];for(let i=its.length-1;i>0&&FX.over(box);i--)its[i].style.display="none";
     });
   },
   fitAll(){document.querySelectorAll("[data-fmtface]").forEach(f=>FX.fit(f))},
@@ -175,13 +181,13 @@ function propPaper(kind,col,paper){
 const W=600,H=900,ID="airline";
 const LOOK=[
   {disp:"Antic Didone",dw:400,body:"Crimson Text",paper:"#f2ead8",ink:"#1c2333",acc:"#1f4e8c",caps:true,ls:".08em"},
-  {disp:"Fugaz One",dw:400,body:"Nunito Sans",paper:"#f7f1e1",ink:"#1b2a3a",acc:"#c8322b",caps:false,ls:"0",ital:false},
+  {disp:"Viga",dw:400,body:"Nunito Sans",paper:"#f7f1e1",ink:"#1b2a3a",acc:"#c8322b",caps:false,ls:"0",ital:false},
   {disp:"League Spartan",dw:800,body:"Work Sans",paper:"#ffffff",ink:"#10243e",acc:"#e0742a",caps:true,ls:".04em"},
   {disp:"Days One",dw:400,body:"Hind",paper:"#efe2c6",ink:"#3a2412",acc:"#c46a17",caps:false,ls:"0"},
-  {disp:"Exo 2",dw:800,body:"Barlow",paper:"#f1f3f6",ink:"#121a2c",acc:"#d0262e",caps:true,ls:".02em",ital:true},
-  {disp:"Saira Condensed",dw:700,body:"Source Sans 3",paper:"#f5f6f2",ink:"#1d2529",acc:"#1e6aa8",caps:true,ls:".03em"},
+  {disp:"Turret Road",dw:800,body:"Barlow",paper:"#f1f3f6",ink:"#121a2c",acc:"#d0262e",caps:true,ls:".02em",ital:true},
+  {disp:"Archivo Narrow",dw:700,body:"Source Sans 3",paper:"#f5f6f2",ink:"#1d2529",acc:"#1e6aa8",caps:true,ls:".03em"},
   {disp:"Comfortaa",dw:700,body:"Open Sans",paper:"#ffffff",ink:"#1f2a36",acc:"#0f8fbf",caps:false,ls:"0"},
-  {disp:"Manrope",dw:800,body:"Manrope",paper:"#f3f2ee",ink:"#161616",acc:"#c2412d",caps:false,ls:"-.02em"}];
+  {disp:"Onest",dw:800,body:"Onest",paper:"#f3f2ee",ink:"#161616",acc:"#c2412d",caps:false,ls:"-.02em"}];
 const SIG="Allura";
 const VOICE={grand:"First class service",glossy:"First class service",warm:"Welcome aboard",tender:"Welcome aboard",eerie:"Night flight",tense:"Please remain seated",gritty:"Please remain seated",playful:"Snacks at cruising altitude",scrappy:"Snacks at cruising altitude"};
 const NEUTRAL={venue:"Flight Kitchen",sign:"Economy and first class",by:"Your Captain",
@@ -226,32 +232,33 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div style="${dispStyle}font-size:${seat.length>3?50:58}px;line-height:1.05;color:${onLiv};font-style:normal;margin-top:4px">${seat}</div>
         <div style="font:700 14px/1 ${B};letter-spacing:.14em;color:rgba(255,250,240,.8);margin-top:2px">WINDOW</div></div>
     </div>${stripes(120)}`;
-  const winTop=146,winH=496,winW=470,winL=(W-winW)/2,rad=era>=6?150:era===3?130:118;
+  const winTop=158,winH=486,winW=476,winL=(W-winW)/2,rad=era>=6?150:era===3?130:118;
   const bez=dark?"#3a3d44":"#e4e1d9";
   const win=`<div style="position:absolute;left:${winL}px;top:${winTop}px;width:${winW}px;height:${winH}px;border-radius:${rad}px;overflow:hidden;background:${K.deep};box-shadow:0 0 0 13px ${bez},0 0 0 14px rgba(0,0,0,.18),0 0 0 22px ${rgba(bez,.55)},0 8px 22px 16px rgba(0,0,0,.18)">
       ${photoHTML(ph.hero,ph.heroPos,era,t)}
       <div style="position:absolute;inset:0;border-radius:${rad}px;box-shadow:inset 0 0 26px 6px rgba(0,0,0,.45),inset 0 0 0 3px rgba(255,255,255,.25)"></div>
       <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 32%)"></div></div>`;
   const lp=logoPanel(ctx,{maxW:330,maxH:92,center:true,dark:rgba(K.deep,.88),light:rgba(dark?"#f1efe9":"#fffdf8",.95),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f1efe9":"#fffdf8",.95),fbK:K.acc,
-    titleFont:`${L.dw} 40px ${D}`,titleCol:"#141414",under:`Tonight's in-flight feature`,underFont:`700 14px/1.2 ${B};letter-spacing:.16em;text-transform:uppercase`,
-    style:`position:absolute;left:50%;transform:translateX(-50%);top:${winTop+winH-96}px;max-width:430px;padding:13px 20px 11px;text-align:center;border-radius:${era>=6?14:4}px;box-shadow:0 6px 16px rgba(0,0,0,.4);z-index:2`});
-  const note=`<div data-fbox style="position:absolute;left:28px;width:270px;top:686px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?24:30}px;overflow:hidden">
+    titleFont:`${L.dw} 40px ${D}`,titleCol:"#141414",under:`In-flight feature`,underFont:`700 14px/1.2 ${B};letter-spacing:.16em;text-transform:uppercase`,
+    style:`position:absolute;left:50%;transform:translateX(-50%);bottom:${H-(winTop+winH)-18}px;max-width:430px;padding:13px 20px 11px;text-align:center;border-radius:${era>=6?14:4}px;box-shadow:0 6px 16px rgba(0,0,0,.4);z-index:2`});
+  const note=`<div data-fbox style="position:absolute;left:28px;width:270px;top:700px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?24:30}px;overflow:hidden">
     ${kick("From the flight deck")}
     <div data-fs="14" style="font:italic 400 18px/1.3 ${B};color:${K.ink};margin-top:7px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="20" style="font:400 32px/1.05 ${S};color:${K.acc};text-align:right;margin-top:2px">${esc(F.note.by)}</div></div>`;
-  const drinks=(menu.d||[]).slice(0,4);
-  const trolley=`<div style="position:absolute;left:314px;right:28px;top:680px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?22:28}px;border-left:1px solid ${rgba(K.ink,.3)};padding-left:16px">
+  const drinks=(menu.d||[]).slice(0,3);
+  const trolley=`<div style="position:absolute;left:314px;right:28px;top:694px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?22:28}px;border-left:1px solid ${rgba(K.ink,.3)};padding-left:16px">
     <div data-fbox style="position:absolute;left:16px;right:0;top:6px;bottom:0;overflow:hidden">
     ${kick(fm?"From the juice trolley":"From the trolley")}
-    ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="16" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink}">${esc(dry(it.n))}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
+    ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="16" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(dry(it.n))}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
       ${it.note?`<div data-clamp data-fs="14" style="font:400 17px/1.25 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`).join("")}
     ${drinks.length?"":`<div data-fs="14" style="font:400 18px/1.3 ${B};color:${K.soft};margin-top:8px">Tea, coffee and juice served throughout the flight.</div>`}</div></div>`;
   const front=face(strip+win+lp+note+trolley);
 
   /* ---- back: meal header, framed still, the film's prop, the meal, fine print ---- */
   const top=`<div style="position:absolute;left:0;right:0;top:0;height:62px;background:${liv}">
-      <div style="position:absolute;left:28px;top:0;bottom:0;display:flex;align-items:center;font:700 17px/1 ${B};letter-spacing:.22em;text-transform:uppercase;color:${onLiv}">${esc(VOICE[t])}</div>
-      <div style="position:absolute;right:28px;top:0;bottom:0;display:flex;align-items:center;font:700 17px/1 ${B};letter-spacing:.16em;color:${K.light}">FLIGHT ${esc(flight)} · SEAT ${seat}</div></div>${stripes(62)}`;
+      <div style="position:absolute;left:28px;right:28px;top:0;bottom:0;display:flex;align-items:center;gap:16px">
+        <div data-fline="1" data-fs="14" style="flex:1;min-width:0;font:700 16px/1.1 ${B};letter-spacing:.18em;text-transform:uppercase;color:${onLiv};white-space:nowrap">${esc(VOICE[t])}</div>
+        <div style="flex:none;font:700 16px/1 ${B};letter-spacing:.16em;color:${K.light}">SEAT ${seat}</div></div></div>${stripes(62)}`;
   const sTop=92,sH=254;
   const still=`<div style="position:absolute;left:28px;right:28px;top:${sTop}px;height:${sH}px;overflow:hidden;background:${K.deep};outline:1px solid ${K.acc};outline-offset:4px;border-radius:${era>=6?14:era===3?12:0}px">
       ${photoHTML(ph.second,ph.secondPos,era,t)}

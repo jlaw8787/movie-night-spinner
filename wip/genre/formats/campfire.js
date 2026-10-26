@@ -70,7 +70,9 @@ function price(k,i,era){
 function heroes(ctx){
   const im=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const st=(ctx.stills||[]).filter(Boolean).map(p=>im(p,"w1280"));
-  const post=ctx.poster?im(ctx.poster,"w780"):"";
+  /* tmdb-posters.js declares a top level const, so window.TMDB_POSTERS is empty: read the binding directly */
+  let pp=ctx.poster;if(!pp){try{pp=typeof TMDB_POSTERS!=="undefined"&&ctx.f&&TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]}catch(e){}}
+  const post=pp?im(pp,"w780"):"";
   return{list:st,poster:post,hero:st[0]||post,second:st[1]||st[0]||post,isPoster:!st.length};
 }
 function logoUrl(ctx){const l=ctx.logo;if(!l||!l[0])return"";const im=ctx.img||((p,s)=>`https://image.tmdb.org/t/p/${s}${p}`);return im(l[0],"w500")}
@@ -140,14 +142,14 @@ window.MENU_FORMATS=window.MENU_FORMATS||{};
 const propLines=p=>(p&&p.lines||[]).slice(0,3);
 /* ---- campfire: camp or scout mess card on kraft, 2 faces 672x960 ---- */
 const W=672,H=960;
-loadFonts("family=Stardos+Stencil:wght@400;700&family=Special+Elite&family=Coustard:wght@400;900&family=Cabin:wght@400;600;700&family=Cabin+Condensed:wght@500;600;700&family=Graduate&family=Saira+Stencil+One&family=Caveat:wght@600;700&family=Homemade+Apple",
-  ["Stardos Stencil","Special Elite","Coustard","Cabin","Cabin Condensed","Graduate","Saira Stencil One","Caveat","Homemade Apple"]);
+loadFonts("family=Allerta+Stencil&family=Special+Elite&family=Gorditas:wght@400;700&family=Cabin:wght@400;600;700&family=Cabin+Condensed:wght@500;600;700&family=Jockey+One&family=Saira+Stencil+One&family=Caveat:wght@600;700&family=Homemade+Apple",
+  ["Allerta Stencil","Special Elite","Gorditas","Cabin","Cabin Condensed","Jockey One","Saira Stencil One","Caveat","Homemade Apple"]);
 watch();
-/* type pairing by era: stencilled depot card, 70s camp brochure, varsity camp, modern stencil kit */
+/* type pairing by era: stencilled depot card, 70s camp brochure, athletic camp, modern stencil kit */
 const TYPE=[
-  {disp:"'Stardos Stencil',serif",dw:700,up:1,body:"'Special Elite',monospace",bw:400,dish:"'Special Elite',monospace",dishW:400,caps:"'Stardos Stencil',serif",cw:700,sig:"'Homemade Apple',cursive",sigS:24},
-  {disp:"'Coustard',serif",dw:900,up:0,body:"'Cabin',sans-serif",bw:400,dish:"'Coustard',serif",dishW:400,caps:"'Cabin',sans-serif",cw:700,sig:"'Caveat',cursive",sigS:34},
-  {disp:"'Graduate',serif",dw:400,up:1,body:"'Cabin',sans-serif",bw:400,dish:"'Cabin',sans-serif",dishW:700,caps:"'Graduate',serif",cw:400,sig:"'Caveat',cursive",sigS:34},
+  {disp:"'Allerta Stencil',sans-serif",dw:400,up:1,body:"'Special Elite',monospace",bw:400,dish:"'Special Elite',monospace",dishW:400,caps:"'Allerta Stencil',sans-serif",cw:400,sig:"'Homemade Apple',cursive",sigS:24},
+  {disp:"'Gorditas',serif",dw:700,up:0,body:"'Cabin',sans-serif",bw:400,dish:"'Cabin',sans-serif",dishW:700,caps:"'Cabin',sans-serif",cw:700,sig:"'Caveat',cursive",sigS:34},
+  {disp:"'Jockey One',sans-serif",dw:400,up:1,body:"'Cabin',sans-serif",bw:400,dish:"'Cabin',sans-serif",dishW:700,caps:"'Jockey One',sans-serif",cw:400,sig:"'Caveat',cursive",sigS:34},
   {disp:"'Saira Stencil One',sans-serif",dw:400,up:1,body:"'Cabin Condensed',sans-serif",bw:500,dish:"'Cabin Condensed',sans-serif",dishW:700,caps:"'Cabin Condensed',sans-serif",cw:700,sig:"'Caveat',cursive",sigS:34}
 ];
 /* kraft stock by era: dark depot kraft, orange camp kraft, manila card, grey recycled */

@@ -4,7 +4,7 @@
 const clean=s=>String(s==null?"":s).replace(/\s*[‒–—―−]\s*/g,", ").replace(/\s+-+\s+/g,", ").replace(/\s{2,}/g," ").trim();
 const esc=s=>clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sentence=s=>{s=clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?"]$/.test(s)?s:s+"."};
-const FAMILY=new Set(["kids","fairytale"]);
+const FAMILY=new Set(["kids","fairytale","wizard"]);
 const DRY=[[/\bred wine\b|\bwhite wine\b|\bwine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beer\b/gi,"root beer"],[/\bmartini\b/gi,"mocktail"],[/\bcocktail(?! franks| onions?)\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|sake)\b/gi,"syrup"]];
 const dryer=fam=>s=>fam?DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s)):clean(s);
 
@@ -102,7 +102,9 @@ const fam=f=>"family="+f.replace(/ /g,"+");
 
 /* stills: hero is the first still, else the poster; second is the next still, else the poster again */
 function photos(ctx){
-  const st=(ctx.stills||[]).filter(Boolean),po=ctx.poster?ctx.img(ctx.poster,"w780"):"";
+  /* the harness map is a top-level const, not on window: read the global binding when ctx.poster is empty */
+  let pp=ctx.poster;try{if(!pp&&typeof TMDB_POSTERS!=="undefined")pp=TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]||null}catch(e){}
+  const st=(ctx.stills||[]).filter(Boolean),po=pp?ctx.img(pp,"w780"):"";
   return{hero:st[0]?ctx.img(st[0],"w1280"):po,heroPos:st[0]?"center 40%":"center 30%",
     second:st[1]?ctx.img(st[1],"w1280"):(st[0]&&po?po:(po||"")),secondPos:st[1]?"center 45%":"center 22%",fromPoster:!st[0]};
 }
@@ -123,6 +125,10 @@ const FX=window.__fmtBHA=window.__fmtBHA||{
       for(const n of [2,1])if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(n);e.style.overflow="hidden"});
       if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>e.style.display="none");
       if(FX.over(box))box.querySelectorAll("[data-drop]").forEach(e=>e.style.display="none");
+      /* last resort for extreme menus: everything down to the 14px floor */
+      for(let k=0;k<30&&FX.over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize);if(s>14){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}
+      /* still too much: drop trailing items, always keeping the first */
+      const its=[...box.querySelectorAll("[data-gap]")];for(let i=its.length-1;i>0&&FX.over(box);i--)its[i].style.display="none";
     });
   },
   fitAll(){document.querySelectorAll("[data-fmtface]").forEach(f=>FX.fit(f))},
@@ -175,14 +181,14 @@ function propPaper(kind,col,paper){
 const W=672,H=960,ID="bistro";
 /* era: display face, text face, paper stock, ink, fallback accent */
 const LOOK=[
-  {disp:"Forum",dw:400,body:"Crimson Pro",paper:"#efe5cf",ink:"#231a12",acc:"#8c1c13",caps:true,ls:".08em"},
-  {disp:"Playfair Display",dw:900,body:"Lora",paper:"#f5ecd8",ink:"#2a1d16",acc:"#a3262a",caps:false,ls:"0",ital:true},
-  {disp:"DM Serif Display",dw:400,body:"Source Serif 4",paper:"#fbf7ee",ink:"#1d2430",acc:"#c0392b",caps:false,ls:"-.01em"},
-  {disp:"Young Serif",dw:400,body:"Libre Franklin",paper:"#ead8b4",ink:"#3a2412",acc:"#b5531c",caps:false,ls:"0"},
-  {disp:"Rufina",dw:700,body:"Karla",paper:"#f6ebe6",ink:"#2b1b24",acc:"#9b2d5a",caps:true,ls:".05em"},
-  {disp:"Spectral",dw:800,body:"Work Sans",paper:"#f7f4ec",ink:"#1f2421",acc:"#2f6b4f",caps:false,ls:"-.01em",ital:true},
-  {disp:"Josefin Sans",dw:700,body:"Lato",paper:"#ffffff",ink:"#202020",acc:"#c43b2f",caps:true,ls:".14em"},
-  {disp:"Instrument Serif",dw:400,body:"Inter",paper:"#f4f0e8",ink:"#1b1b1b",acc:"#b6452c",caps:false,ls:"-.01em",ital:true}];
+  {disp:"Arapey",dw:400,body:"Crimson Pro",paper:"#efe5cf",ink:"#231a12",acc:"#8c1c13",caps:true,ls:".08em"},
+  {disp:"Vidaloka",dw:400,body:"Lora",paper:"#f5ecd8",ink:"#2a1d16",acc:"#a3262a",caps:false,ls:"0",ital:true},
+  {disp:"Gelasio",dw:700,body:"Source Serif 4",paper:"#fbf7ee",ink:"#1d2430",acc:"#c0392b",caps:false,ls:"-.01em"},
+  {disp:"Trocchi",dw:400,body:"Libre Franklin",paper:"#ead8b4",ink:"#3a2412",acc:"#b5531c",caps:false,ls:"0"},
+  {disp:"Brygada 1918",dw:700,body:"Karla",paper:"#f6ebe6",ink:"#2b1b24",acc:"#9b2d5a",caps:true,ls:".05em"},
+  {disp:"Petrona",dw:800,body:"Work Sans",paper:"#f7f4ec",ink:"#1f2421",acc:"#2f6b4f",caps:false,ls:"-.01em",ital:true},
+  {disp:"Questrial",dw:400,body:"Lato",paper:"#ffffff",ink:"#202020",acc:"#c43b2f",caps:true,ls:".14em"},
+  {disp:"Literata",dw:600,body:"Inter",paper:"#f4f0e8",ink:"#1b1b1b",acc:"#b6452c",caps:false,ls:"-.01em",ital:true}];
 const SIG="Mrs Saint Delafield";
 const VOICE={warm:"A table for two",tender:"A table for two",grand:"Dîner pour deux",glossy:"Dîner pour deux",gritty:"Late service",tense:"Late service, quiet tables",eerie:"Open after dark",playful:"Two forks, one table",scrappy:"Two forks, one table"};
 const NEUTRAL={venue:"The Corner Bistro",sign:"Dinner for two, every evening",by:"The Chef",

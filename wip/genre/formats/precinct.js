@@ -4,7 +4,7 @@ if(window.__MNS)return;
 const M=window.__MNS={};
 const seen=new Set();
 M.font=q=>{if(!q||seen.has(q))return;seen.add(q);const l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family="+q+"&display=swap";document.head.appendChild(l)};
-M.clean=s=>String(s==null?"":s).replace(/\s*[‒–—―]\s*/g,", ").replace(/\s+-+\s+/g,", ").replace(/--+/g,", ").trim();
+M.clean=s=>String(s==null?"":s).replace(/\s*[\u2012\u2013\u2014\u2015]\s*/g,", ").replace(/\s+-+\s+/g,", ").replace(/--+/g,", ").trim();
 M.esc=s=>M.clean(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 M.sent=s=>{s=M.clean(s);if(!s)return"";s=s.charAt(0).toUpperCase()+s.slice(1);return /[.!?]$/.test(s)?s:s+"."};
 const DRY=[[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beers?\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|gin|sake|baijiu)\b/gi,"syrup"]];
@@ -20,6 +20,8 @@ M.accent=(pal,bg,fb,min)=>{min=min||3.2;const B=M.hex(bg);let c=pal&&M.hex(pal.a
   const s=Math.max(...c)-Math.min(...c);if(s<40)return fb;const down=M.lum(B)>.35;
   for(let i=0;i<14&&M.cr(c,B)<min;i++)c=c.map(v=>down?v*.86:v+(255-v)*.18);return M.cr(c,B)>=min?M.toHex(c):fb};
 M.darkOf=(pal,fb)=>{const c=pal&&M.hex(pal.dark);return c&&M.lum(c)<.08?M.toHex(c):fb};
+/* poster path: ctx first, else the page-level TMDB_POSTERS const (not on window) */
+M.poster=ctx=>ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&ctx.f&&TMDB_POSTERS[ctx.f.id])||null;
 M.num=(n,y)=>{const d=String(n||"").replace(/[^0-9]/g,"");return d||String(y||"").slice(-2)||"7"};
 M.noise=op=>"url('data:image/svg+xml,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .12 0 0 0 0 .1 0 0 0 0 .08 0 0 0 ${op} 0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>`)+"')";
 /* logo keeps its own colours: sample it, then give its panel the opposite stock */
@@ -81,7 +83,7 @@ window.MENU_FORMATS.precinct=function(ctx){
   const winks=(fl.winks&&fl.winks.length?fl.winks:["Coffee pot on all night","Fresh doughnuts by the sergeant's desk","Lights out at roll call"]).slice(0,5).map(w=>M.dry(w,fam));
   const num=M.num(fl.number,f.year),yy=String(f.year||"").slice(-2);
   const ink=E.ink,paper=E.paper,acc=M.accent(ctx.palette,paper,E.acc,4),dark=M.darkOf(ctx.palette,"#16171b");
-  const st=ctx.stills||[],pos=ctx.poster?ctx.img(ctx.poster,"w780"):"";
+  const st=ctx.stills||[],pos=M.poster(ctx)?ctx.img(M.poster(ctx),"w780"):"";
   const hero=st[0]?ctx.img(st[0],"w1280"):pos,second=st[1]?ctx.img(st[1],"w1280"):(pos||hero);
   const C=M.courses(ctx.menu,fam);
   const bd=E.b,dd=E.d;
@@ -97,7 +99,7 @@ window.MENU_FORMATS.precinct=function(ctx){
     <div style="position:absolute;left:0;right:0;top:56px;bottom:0;background-image:${grain};opacity:.9"></div>
     <div style="position:absolute;left:0;right:0;top:56px;bottom:0;box-shadow:inset 0 0 ${40+60*T.wear}px rgba(80,50,10,${(.25+T.wear*.5).toFixed(2)})"></div>
     <div style="position:absolute;left:0;right:0;top:56px;bottom:0;background:radial-gradient(ellipse at 50% 40%,transparent 60%,rgba(0,0,0,${(T.vig*.5).toFixed(2)}) 100%)"></div>`;
-  const stamp=(t,r,tp,rot,col,size)=>`<div style="position:absolute;right:${r}px;top:${tp}px;max-width:250px;white-space:normal;text-align:center;transform:rotate(${rot}deg);padding:6px 14px;border:4px double ${col};color:${col};font:${E.dw} ${size||30}px/1 ${dd};letter-spacing:.08em;text-transform:uppercase;opacity:.82;mix-blend-mode:multiply">${x(t)}</div>`;
+  const stamp=(t,r,tp,rot,col,size)=>`<div style="position:absolute;right:${r}px;top:${tp}px;max-width:224px;white-space:normal;text-align:center;transform:rotate(${rot}deg);padding:6px 14px;border:4px double ${col};color:${col};font:${E.dw} ${size||30}px/1 ${dd};letter-spacing:.08em;text-transform:uppercase;opacity:.82;mix-blend-mode:multiply">${x(t)}</div>`;
   const kick=(t,c)=>`<div style="font:700 16px/1.2 ${bd};letter-spacing:.2em;text-transform:uppercase;color:${c||acc}">${x(t)}</div>`;
 
   /* logo in its own colours on a case label that suits it */
@@ -118,9 +120,9 @@ window.MENU_FORMATS.precinct=function(ctx){
   const front=`${folder(fl.number?`Case ${x(num)}-${x(yy)}`:`Case file ${x(f.year||"")}`,40)}
    ${evid(hero,36,96,744,548,-T.tilt*.4,st[0]?"center 40%":"center 22%","Exhibit A")}
    ${logo}
-   <div style="position:absolute;left:40px;top:672px;width:736px;height:156px;box-sizing:border-box;padding:12px 18px;background:#fffdf6;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${T.tilt*.2}deg)">
-     <div data-fit="18" style="height:132px;overflow:hidden;font-size:20px">
-      ${field("Location",`<b>${x(venue)}</b>`)}${field("Posted",x(sign))}${field("Division",`${x(E.dept)}, ${x(f.year||"")}`)}${field("On file",x(winks.slice(0,3).join("; ")))}
+   <div style="position:absolute;left:40px;top:672px;width:736px;height:166px;box-sizing:border-box;padding:12px 18px;background:#fffdf6;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${T.tilt*.2}deg)">
+     <div data-fit="18" style="height:142px;overflow:hidden;font-size:20px">
+      ${field("Location",`<b>${x(venue)}</b>`)}${field("Posted",x(sign))}${field("Division",`${x(E.dept)}, ${x(f.year||"")}`)}${field("On file",x(winks[0]||"")+(winks[1]?`<span data-item>; ${x(winks[1])}</span>`:""))}
      </div>
    </div>
    <div style="position:absolute;left:44px;top:846px;width:500px;height:186px;box-sizing:border-box;padding:12px 18px;background:${T.memo==="Sticky note from"?"#fbe98a":"#fffef8"};box-shadow:0 6px 14px rgba(0,0,0,.3);transform:rotate(${-T.tilt*.7}deg)">
@@ -128,7 +130,7 @@ window.MENU_FORMATS.precinct=function(ctx){
      <div data-fit="14" style="height:92px;overflow:hidden;margin-top:6px;font:20px/1.32 ${bd};font-size:20px;color:${ink}">${x(nt.text)}</div>
      <div style="font:34px/1 ${SIG};color:#1d3a8a;text-align:right;white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
    </div>
-   ${stamp(T.stamp,34,872,-8+T.tilt,acc,T.stamp.length>14?24:30)}
+   ${stamp(T.stamp,28,872,-8+T.tilt,acc,T.stamp.length>14?22:30)}
    ${stamp(`Breakroom copy`,40,976,4-T.tilt,"#2b2b2b",18)}`;
 
   const shift=c=>`<div style="margin-bottom:.6em">

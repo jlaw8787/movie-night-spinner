@@ -4,7 +4,7 @@
    photo with script strip, Kodachrome band, faded 70s print, 80s multi-view, 90s boxed caption, 2000s
    gloss, modern minimal), the type pairing, the card stock and the key (paper tag, diamond fob, plastic
    tag, key card). Tone sets photo treatment, wear, postmark, tilt and copy voice.
-   Fonts (fmt-motel): Sigmar One, Yellowtail, Atomic Age, Calistoga, Krona One, Days One, Saira Condensed,
+   Fonts (fmt-motel): Sigmar One, Yellowtail, Atomic Age, Calistoga, Orbitron, Days One, Sarpanch,
    Instrument Serif. */
 (function(){
 const W=816,H=600;
@@ -66,11 +66,11 @@ const ERA={
     photoF:"saturate(1.32) contrast(1.06)",P:{s:[.45,.6,.5,.55],m:[1.25,1.5,1.35,1.4],w:[.35,.4,.3,.45],d:[.15,.2,.25,.2]},dr:.62},
   "1970s":{disp:"Calistoga",body:"Archivo",bw:"400;600;700",sig:"Caveat",paper:"#efe0bf",ink:"#3a2616",acc0:"#d0661f",border:18,bcol:"#f6ecd4",rad:22,cap:"strip",tag:"diamond",
     photoF:"sepia(.24) saturate(.92) contrast(.92) brightness(1.07)",P:{s:[.95,1.25,1.1,1.35],m:[2.95,3.5,3.25,3.75],w:[.85,.95,.75,.9],d:[.35,.45,.5,.4]},dr:.55},
-  "1980s":{disp:"Krona One",body:"Archivo",bw:"400;600;700",sig:"Caveat",paper:"#ffffff",ink:"#16161c",acc0:"#e6327a",border:0,rad:0,cap:"multi",tag:"rect",
+  "1980s":{disp:"Orbitron",dw:800,body:"Archivo",bw:"400;600;700",sig:"Caveat",paper:"#ffffff",ink:"#16161c",acc0:"#e6327a",border:0,rad:0,cap:"multi",tag:"rect",
     photoF:"contrast(1.12) saturate(1.25)",P:{s:[1.95,2.5,2.25,2.75],m:[4.95,5.5,5.25,5.95],w:[1.75,1.95,1.5,1.85],d:[.95,1.25,1.1,1.5]},dr:.78},
   "1990s":{disp:"Days One",body:"Archivo",bw:"400;600;700",sig:"Caveat",paper:"#f6f6f1",ink:"#1b2228",acc0:"#2a7bc0",border:0,rad:0,cap:"box",tag:"rect",
     photoF:"contrast(1.06) saturate(1.08)",P:{s:[3.25,3.95,3.5,4.25],m:[6.5,7.95,6.95,7.5],w:[2.95,3.5,2.75,3.25],d:[1.25,1.5,1.35,1.75]},dr:.68},
-  "2000s":{disp:"Saira Condensed",dw:800,body:"Saira",bw:"400;600;700",sig:"Caveat",paper:"#ffffff",ink:"#1a1d22",acc0:"#e0791f",border:0,rad:0,cap:"overlay",tag:"card",
+  "2000s":{disp:"Sarpanch",dw:800,body:"Saira",bw:"400;600;700",sig:"Caveat",paper:"#ffffff",ink:"#1a1d22",acc0:"#e0791f",border:0,rad:0,cap:"overlay",tag:"card",
     photoF:"saturate(1.08) contrast(1.08)",P:{s:[4.5,5.25,4.95,5.75],m:[8.95,10.5,9.5,11.25],w:[3.95,4.5,3.75,4.25],d:[1.95,2.5,2.25,2.75]},dr:.44},
   "modern":{disp:"Instrument Serif",body:"Inter",bw:"400;600;700",sig:"Caveat",paper:"#f4f1ea",ink:"#1d1f22",acc0:"#c4562e",border:14,bcol:"#f4f1ea",rad:0,cap:"minimal",tag:"card",
     photoF:"none",P:{s:[7,9,8,10],m:[16,19,17,21],w:[7,8,6.5,9],d:[4,5,4.5,6]},dr:.45}};
@@ -174,7 +174,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const stillStamp=s1||s0;
   const stamp=`<div style="position:absolute;right:20px;top:18px;width:132px;height:160px;padding:8px;box-sizing:border-box;background:radial-gradient(circle,transparent 3px,#fbf8f0 3.5px) -5px -5px/10px 10px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))"><div style="position:absolute;inset:5px;background:#fbf8f0"></div>
       <div style="position:relative;width:116px;height:116px;overflow:hidden">${photo(ctx,stillStamp,116,118,filt,"50% 30%")}</div>
-      <div style="display:flex;justify-content:space-between;align-items:baseline;font-family:${BODY};font-weight:800;color:${ACC};font-size:15px;margin-top:4px;white-space:nowrap;overflow:hidden"><span>${esc(e.P&&e.cents?yy(f)+"¢":"POST")}</span><span style="font-size:14px">${esc(String(f.year||""))}</span></div></div>`;
+      <div style="position:relative;display:flex;justify-content:space-between;align-items:baseline;font-family:${BODY};font-weight:800;color:${ACC};font-size:15px;margin-top:4px;white-space:nowrap;overflow:hidden"><span>${esc(e.P&&e.cents?yy(f)+"¢":"POST")}</span><span style="font-size:14px">${esc(String(f.year||""))}</span></div></div>`;
   const town=clean(sign.split(",").slice(-1)[0]).slice(0,26).toUpperCase();
   const postmark=`<div style="position:absolute;right:110px;top:110px;transform:rotate(-14deg);border:2.5px solid ${T.ink}aa;border-radius:6px;padding:3px 10px;font-family:${BODY};font-weight:700;font-size:14px;letter-spacing:.14em;color:${T.ink}bb;text-align:center;line-height:1.25;white-space:nowrap;opacity:${(.65+T.wear*.3).toFixed(2)}">${esc(town||"ROUTE "+room)}<br>${esc(String(f.year||""))}</div>`;
 

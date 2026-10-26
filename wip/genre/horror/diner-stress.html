@@ -13,7 +13,7 @@ const img=(p,s="w1280")=>p?`https://image.tmdb.org/t/p/${s}${p}`:"";
 const note="A long note of one hundred and twenty characters to test wrapping in the narrow menu column tonight, all right then.";
 const four=(k)=>[0,1,2,3].map(i=>({n:["Blue plate meatloaf with gravy and mash","Cherry pie","Patty melt on rye","Grilled cheese and tomato soup"][(i+k)%4],note}));
 const s=document.createElement("script");s.src="../formats/diner.js";
-s.onload=()=>{
+s.onload=async()=>{await (window.MENU_FORMATS.diner.ready||0);
   const ctx={f:{id:"stress",title:"The Night the Lights Went Out on Route Thirteen, Part Two",year:"1986",T:"Nobody leaves before sunrise.",D:"A diner full of strangers waits out a storm that does not want to end.",P:"Order up when the power goes out the second time."},
     menu:{s:four(0),m:four(1),w:four(2),d:four(3)},poster:(typeof TMDB_POSTERS!=="undefined"?TMDB_POSTERS:{})["Halloween (1978)"]||null,stills:[],logo:null,palette:null,flavour:null,
     era:q.get("era")||"1980s",tone:q.get("tone")||"gritty",img};

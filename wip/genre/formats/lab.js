@@ -7,12 +7,12 @@ const ID="lab",W=816,H=1056,M=28;
 const BASE=(window.MENU_FORMAT_BASE!=null)?window.MENU_FORMAT_BASE:(/\/wip\/genre\//.test(location.pathname)?"../../../":"");
 const GRAIN=BASE+"assets/era/_shared/paper-grain.webp";
 if(!document.getElementById("fmt-font-"+ID)){const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";
-  l.href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@600;700&family=Spectral:ital,wght@0,400;0,600;1,400&family=Saira+Condensed:wght@600;800&family=Saira:wght@400;600&family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&family=IBM+Plex+Sans:wght@400;600&family=Inter+Tight:wght@700;800&family=Inter:wght@400;600&family=Caveat:wght@600&display=swap";
+  l.href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@600;700&family=Spectral:ital,wght@0,400;0,600;1,400&family=Saira+Condensed:wght@600;800&family=Saira:wght@400;600&family=Fira+Sans+Extra+Condensed:wght@700;800&family=IBM+Plex+Sans:wght@400;600&family=Manrope:wght@700;800&family=Inter:wght@400;600&family=Caveat:wght@600&display=swap";
   document.head.appendChild(l)}
 
 /* ---------- shared bits ---------- */
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const clean=s=>String(s||"").replace(/\s*[–—]\s*/g,", ").replace(/\s+/g," ").trim();
+const clean=s=>String(s||"").replace(/\s*[\u2013\u2014]\s*/g,", ").replace(/\s+/g," ").trim();
 const sent=s=>{s=clean(s);if(!s)return "";s=s[0].toUpperCase()+s.slice(1);return /[.!?]$/.test(s)?s:s+"."};
 const hex=h=>{h=String(h||"").replace("#","");if(h.length===3)h=h.split("").map(c=>c+c).join("");return /^[0-9a-f]{6}$/i.test(h)?[0,2,4].map(i=>parseInt(h.slice(i,i+2),16)):null};
 const lum=c=>{const v=c.map(x=>{x/=255;return x<=.03928?x/12.92:Math.pow((x+.055)/1.055,2.4)});return .2126*v[0]+.7152*v[1]+.0722*v[2]};
@@ -58,7 +58,7 @@ if(!window.__fmtFitLab)window.__fmtFitLab=function(t){
       if(over())e.querySelectorAll("[data-note]").forEach(d=>d.style.display="none");
     });
   };
-  run();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(run);setTimeout(run,500);setTimeout(run,1600);
+  run();if(document.fonts){if(document.fonts.ready)document.fonts.ready.then(run);if(document.fonts.addEventListener)document.fonts.addEventListener("loadingdone",run)}setTimeout(run,500);setTimeout(run,1600);setTimeout(run,3200);
 };
 const PIX="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
@@ -68,9 +68,9 @@ const ERA={
      frame:"border:5px double #24283a",head:"double",process:"letterpress",photo:"grayscale(.25) sepia(.18)",grid:"",scale:(b,c)=>"0."+c,cur:"$"},
   S:{paper:"#e2ead6",ink:"#1e2a22",accent:"#b0551b",disp:"'Saira Condensed','Arial Narrow',sans-serif",dw:800,body:"'Saira',Arial,sans-serif",
      frame:"border:3px solid #1e2a22",head:"box",process:"offset",photo:"saturate(.9) sepia(.08)",grid:"repeating-linear-gradient(0deg,rgba(40,90,70,.10) 0 1px,transparent 1px 26px),",scale:(b,c)=>(b/2).toFixed(0)+"."+c,cur:"$"},
-  E:{paper:"#f0f0eb",ink:"#141414",accent:"#c0281c",disp:"'Barlow Condensed','Arial Narrow',sans-serif",dw:800,body:"'IBM Plex Sans',Arial,sans-serif",
+  E:{paper:"#f0f0eb",ink:"#141414",accent:"#c0281c",disp:"'Fira Sans Extra Condensed','Arial Narrow',sans-serif",dw:800,body:"'IBM Plex Sans',Arial,sans-serif",
      frame:"border:2px solid #141414",head:"bar",process:"photocopy",photo:"contrast(1.06)",grid:"",scale:(b,c)=>b+"."+c,cur:"$"},
-  M:{paper:"#fbfbf9",ink:"#16191d",accent:"#1f6fd1",disp:"'Inter Tight',Arial,sans-serif",dw:800,body:"'Inter',Arial,sans-serif",
+  M:{paper:"#fbfbf9",ink:"#16191d",accent:"#1f6fd1",disp:"'Manrope',Arial,sans-serif",dw:800,body:"'Inter',Arial,sans-serif",
      frame:"border:1px solid #c9ccd1",head:"line",process:"laser",photo:"",grid:"",scale:(b,c)=>(b+3)+"."+c,cur:"$"}
 };
 const TONE={

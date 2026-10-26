@@ -19,7 +19,7 @@ const slug=id=>id.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const j=async u=>{try{const r=await fetch(u);return r.ok?await r.json():{}}catch(e){return {}}};
 const img=(p,s="w1280")=>p?`https://image.tmdb.org/t/p/${s}${p}`:"";
 async function ctxFor(id){
-  const [films,stills,LOGOS,PAL,FLAV,FMT]=await Promise.all(["films","film-stills","film-logos","film-palette","film-flavour","film-format"].map(n=>j("../../../data/"+n+".json")));
+  const [films,stills,LOGOS,PAL,FLAV,FMT,BLOCK]=await Promise.all(["films","film-stills","film-logos","film-palette","film-flavour","film-format","logo-block"].map(n=>j("../../../data/"+n+".json")));
   const f=Object.assign({},(Array.isArray(films)?films:films.films).find(x=>`${x.title} (${x.year})`===id));f.id=id;
   const d=await j("../../../data/film/"+slug(id)+".json");
   Object.assign(f,{T:d.T,D:d.D,P:d.P,S:d.S,M:d.M,W:d.W,K:d.K});
@@ -27,8 +27,8 @@ async function ctxFor(id){
   const toItem=([n,note])=>({n,note});
   const menu=JSON.parse(JSON.stringify(e&&e.menu||d.recipe||{s:(f.S||[]).slice(0,2).map(toItem),m:(f.M||[]).map(toItem),w:(f.W||[]).map(toItem),d:(f.K||[]).map(toItem)}));
   const a=FMT[id]||{};
-  return {f,menu,poster:(window.TMDB_POSTERS||{})[id]||null,stills:(()=>{const a=(stills[id]||[]).filter(s=>s[1]>=1280),c=a.filter(s=>!s[3]);return (c.length>=2?c:a).map(s=>s[0]).slice(0,8)})(),
-    logo:LOGOS[id]||null,palette:PAL[id]||null,flavour:FLAV[id]||null,era:q.get("era")||a.era||"modern",tone:q.get("tone")||a.tone||"warm",img};
+  return {f,menu,poster:(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[id])||null,stills:(()=>{const a=(stills[id]||[]).filter(s=>s[1]>=1280),c=a.filter(s=>!s[3]);return (c.length>=2?c:a).map(s=>s[0]).slice(0,8)})(),
+    logo:BLOCK[id]?null:(LOGOS[id]||null),palette:PAL[id]||null,flavour:FLAV[id]||null,era:q.get("era")||a.era||"modern",tone:q.get("tone")||a.tone||"warm",img};
 }
 (async()=>{
   const id=q.get("film"),fmt=q.get("format");

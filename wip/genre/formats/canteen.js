@@ -6,7 +6,7 @@
    photo; tone sets wear, tint, contrast and copy voice. Inline styles only; the fitter below shrinks boxes after load. */
 (function(){
 const ID="canteen",A="data-"+ID;
-const FONT_URL="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Paytone+One&family=Kanit:ital,wght@0,700;0,800;1,800&family=Lexend:wght@600;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700&display=swap";
+const FONT_URL="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Asap+Condensed:wght@800&family=Bai+Jamjuree:ital,wght@0,700;1,700&family=Lexend:wght@600;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700&display=swap";
 function loadFonts(){if(document.getElementById("fmt-font-"+ID))return;const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";l.href=FONT_URL;document.head.appendChild(l)}
 
 /* colour helpers */
@@ -23,7 +23,7 @@ function pickAccent(c,bg,min,fb){const t=lum(bg)>.4?"#000000":"#ffffff";
 const rgba=(h,a)=>{const p=hx(h);return `rgba(${p[0]},${p[1]},${p[2]},${a})`};
 
 /* text helpers */
-const esc=s=>String(s==null?"":s).replace(/[–—]/g,", ").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const esc=s=>String(s==null?"":s).replace(/[\u2013\u2014]/g,", ").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 const DRY=[[/\bmichelada\b/gi,"chilli lime cooler"],[/\bmargaritas?\b/gi,"lime slushie"],[/\bmartinis?\b/gi,"mocktail"],[/\bcocktails?\b/gi,"mocktail"],[/\bchampagne\b/gi,"sparkling apple"],[/\bprosecco\b/gi,"sparkling grape"],[/\bwine\b/gi,"grape juice"],[/\blagers?\b/gi,"ginger beer"],[/\bbeers?\b/gi,"root beer"],[/\bale\b/gi,"ginger ale"],[/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|brandy|schnapps|liqueur|sake)\b/gi,"soda"],[/\bpunch\b/gi,"punch"]];
 const dry=(s,fam)=>fam?DRY.reduce((t,[r,v])=>t.replace(r,v),String(s||"")):String(s||"");
 const noise=(freq,alpha,col,oct)=>{const c=hx(col||"#ffffff");const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='${freq}' numOctaves='${oct||3}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${(c[0]/255).toFixed(3)} 0 0 0 0 ${(c[1]/255).toFixed(3)} 0 0 0 0 ${(c[2]/255).toFixed(3)} 0 0 0 ${alpha} 0'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`;
@@ -33,8 +33,8 @@ const noise=(freq,alpha,col,oct)=>{const c=hx(col||"#ffffff");const svg=`<svg xm
 const ERA_G={"1930s-40s":0,"1950s":0,"1960s":1,"1970s":1,"1980s":2,"1990s":2,"2000s":3,"modern":3};
 const G=[
  {key:"mimeo",disp:"'Zilla Slab',serif",dw:700,body:"'Atkinson Hyperlegible',sans-serif",paper:"#efe4c6",ink:"#2a2418",tray:"#a9cdb8",acc:"#8c2f23",photo:"grayscale(1) sepia(.35) contrast(1.05)",print:"Duplicated in the school office",radius:10},
- {key:"offset",disp:"'Paytone One',sans-serif",dw:400,body:"'Atkinson Hyperlegible',sans-serif",paper:"#f2dcae",ink:"#3a2614",tray:"#d27a2c",acc:"#7b4a12",photo:"sepia(.3) saturate(.85) contrast(.95) brightness(1.04)",print:"Offset printed for the canteen",radius:22},
- {key:"greenbar",disp:"'Kanit',sans-serif",dw:800,body:"'Atkinson Hyperlegible',sans-serif",paper:"#ecebe5",ink:"#1f2328",tray:"#8ea2b4",acc:"#1d5fa8",photo:"contrast(1.04) saturate(.92) brightness(1.02)",print:"Run off on the office printer",radius:14},
+ {key:"offset",disp:"'Asap Condensed',sans-serif",dw:800,body:"'Atkinson Hyperlegible',sans-serif",paper:"#f2dcae",ink:"#3a2614",tray:"#d27a2c",acc:"#7b4a12",photo:"sepia(.3) saturate(.85) contrast(.95) brightness(1.04)",print:"Offset printed for the canteen",radius:22},
+ {key:"greenbar",disp:"'Bai Jamjuree',sans-serif",dw:700,body:"'Atkinson Hyperlegible',sans-serif",paper:"#ecebe5",ink:"#1f2328",tray:"#8ea2b4",acc:"#1d5fa8",photo:"contrast(1.04) saturate(.92) brightness(1.02)",print:"Run off on the office printer",radius:14},
  {key:"laser",disp:"'Lexend',sans-serif",dw:800,body:"'Atkinson Hyperlegible',sans-serif",paper:"#f7f6f3",ink:"#16181b",tray:"#d5d9dc",acc:"#e0482f",photo:"contrast(1.08) saturate(1.08)",print:"Printed by facilities",radius:18}];
 const TONE={
  gritty:{wear:.8,photo:"contrast(1.2) saturate(.72)",vig:.45,rot:-2,tint:"rgba(120,90,50,.10)",voice:["No seconds. No exceptions.","Trays back to the window"]},

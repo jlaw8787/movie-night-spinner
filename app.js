@@ -736,7 +736,7 @@ async function show(f,preferSig){
     return;
   }
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
-    try{
+    try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f,menu,poster:lobbyPoster(f),stills:L.stills||[],logo:L.logo,palette:L.palette,flavour:L.flavour,era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);

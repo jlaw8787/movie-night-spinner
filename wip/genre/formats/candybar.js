@@ -49,7 +49,7 @@ const ERA={
        board:"acrylic",frame:"linear-gradient(135deg,#6b5a3a,#d9c89a 30%,#8a744a 55%,#e6d6aa 75%,#6b5a3a)",wall:[86,52,28],photo:"saturate(1.18) contrast(1.04)"},
   late:{disp:"'Exo 2',sans-serif",body:"'Exo 2',sans-serif",fonts:["Exo+2:ital,wght@0,500;0,700;1,800;1,900"],dw:800,it:"italic",
        board:"neon",frame:"linear-gradient(180deg,#3a3a40,#15151a)",wall:[14,12,20],photo:"saturate(1.2) contrast(1.08)"},
-  new:{disp:"'Barlow Condensed',sans-serif",body:"'Barlow',sans-serif",fonts:["Barlow+Condensed:wght@600;700;800","Barlow:wght@500;600;700"],dw:700,it:"normal",
+  new:{disp:"'Encode Sans Condensed',sans-serif",body:"'Barlow',sans-serif",fonts:["Encode+Sans+Condensed:wght@700;800","Barlow:wght@500;600;700"],dw:700,it:"normal",
        board:"screen",frame:"linear-gradient(180deg,#26272b,#0c0c0e)",wall:[26,27,31],photo:"saturate(1.1) contrast(1.04)"}
 };
 const TONE={

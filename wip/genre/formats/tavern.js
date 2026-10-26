@@ -13,7 +13,7 @@ if(!document.getElementById("fmt-font-"+ID)){const l=document.createElement("lin
 
 /* ---------- shared bits ---------- */
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const clean=s=>String(s||"").replace(/\s*[–—]\s*/g,", ").replace(/\s+/g," ").trim();
+const clean=s=>String(s||"").replace(/\s*[\u2013\u2014]\s*/g,", ").replace(/\s+/g," ").trim();
 const sent=s=>{s=clean(s);if(!s)return "";s=s[0].toUpperCase()+s.slice(1);return /[.!?]$/.test(s)?s:s+"."};
 const hex=h=>{h=String(h||"").replace("#","");if(h.length===3)h=h.split("").map(c=>c+c).join("");return /^[0-9a-f]{6}$/i.test(h)?[0,2,4].map(i=>parseInt(h.slice(i,i+2),16)):null};
 const lum=c=>{const v=c.map(x=>{x/=255;return x<=.03928?x/12.92:Math.pow((x+.055)/1.055,2.4)});return .2126*v[0]+.7152*v[1]+.0722*v[2]};
@@ -59,7 +59,7 @@ if(!window.__fmtFitTavern)window.__fmtFitTavern=function(t){
       if(over())e.querySelectorAll("[data-note]").forEach(d=>d.style.display="none");
     });
   };
-  run();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(run);setTimeout(run,500);setTimeout(run,1600);
+  run();if(document.fonts){if(document.fonts.ready)document.fonts.ready.then(run);if(document.fonts.addEventListener)document.fonts.addEventListener("loadingdone",run)}setTimeout(run,500);setTimeout(run,1600);setTimeout(run,3200);
 };
 const PIX="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 

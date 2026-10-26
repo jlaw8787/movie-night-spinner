@@ -32,12 +32,12 @@ const ERAS=["1930s-40s","1950s","1960s","1970s","1980s","1990s","2000s","modern"
 const E=[
  {disp:"'Graduate',serif",dw:400,body:"'Roboto Slab',serif",sig:"'Mrs Saint Delafield',cursive",paper:"#efe5c9",ink:"#1d3324",acc:"#9b2226",board:"manual",photo:"grayscale(1) contrast(1.12) brightness(1.04)",bar:"grid",cw:.56,cwd:.6,base:.25,secs:["Grandstand","Bleachers","Box Seats","Press Box"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
  {disp:"'Graduate',serif",dw:400,body:"'Roboto Slab',serif",sig:"'Allura',cursive",paper:"#f3ead3",ink:"#1f2a44",acc:"#b3261e",board:"manual",photo:"saturate(.72) sepia(.2) contrast(1.05)",bar:"grid",cw:.56,cwd:.6,base:.45,secs:["Grandstand","Bleachers","Box Seats","Press Box"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
- {disp:"'Changa One',sans-serif",dw:400,body:"'Roboto Condensed',sans-serif",sig:"'Allura',cursive",paper:"#f4efe2",ink:"#23324a",acc:"#d4572a",board:"bulb",photo:"saturate(1.12) sepia(.08) contrast(1.06)",bar:"pill",cw:.43,cwd:.46,base:.9,dots:1,secs:["Field Level","Mezzanine","Upper Deck","Bleachers"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
- {disp:"'Changa One',sans-serif",dw:400,body:"'Roboto Condensed',sans-serif",sig:"'Allura',cursive",paper:"#f2e0bd",ink:"#3b2412",acc:"#c1561a",board:"bulb",photo:"saturate(1.18) sepia(.22) contrast(1.04)",bar:"pill",cw:.43,cwd:.46,base:1.25,dots:1,secs:["Field Level","Mezzanine","Upper Deck","Bleachers"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
- {disp:"'Russo One',sans-serif",dw:400,body:"'Roboto Condensed',sans-serif",sig:"'Caveat',cursive",paper:"#f7f7f4",ink:"#121a2e",acc:"#d0202e",board:"led",photo:"saturate(1.06) contrast(1.05)",bar:"skew",cw:.43,cwd:.46,base:2.5,secs:["Lower Bowl","Club Level","Upper Deck","Courtside"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
- {disp:"'Russo One',sans-serif",dw:400,body:"'Roboto Condensed',sans-serif",sig:"'Caveat',cursive",paper:"#fbfbf9",ink:"#0f1d33",acc:"#0a6ab8",board:"led",photo:"saturate(1.08) contrast(1.05)",bar:"skew",cw:.43,cwd:.46,base:3.5,secs:["Lower Bowl","Club Level","Upper Deck","Courtside"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
- {disp:"'Chakra Petch',sans-serif",dw:700,body:"'Roboto Condensed',sans-serif",sig:"'Caveat',cursive",paper:"#16181d",ink:"#f2f2f2",acc:"#22a3e0",board:"video",photo:"saturate(1.08) contrast(1.06)",bar:"led",cw:.43,cwd:.46,base:6,secs:["Lower Bowl","Club Level","Upper Deck","Suites"],cols:["Snacks","Grill","Sweets","Drinks"]},
- {disp:"'Chakra Petch',sans-serif",dw:700,body:"'Roboto Condensed',sans-serif",sig:"'Caveat',cursive",paper:"#101318",ink:"#f5f5f5",acc:"#e8b100",board:"video",photo:"saturate(1.05) contrast(1.06)",bar:"led",cw:.43,cwd:.46,base:9,secs:["Lower Bowl","Club Level","Upper Deck","Suites"],cols:["Snacks","Grill","Sweets","Drinks"]}
+ {disp:"'Sigmar One',sans-serif",dw:400,body:"'Roboto Condensed',sans-serif",sig:"'Allura',cursive",paper:"#f4efe2",ink:"#23324a",acc:"#d4572a",board:"bulb",photo:"saturate(1.12) sepia(.08) contrast(1.06)",bar:"pill",cw:.41,cwd:.44,base:.9,dots:1,secs:["Field Level","Mezzanine","Upper Deck","Bleachers"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
+ {disp:"'Sigmar One',sans-serif",dw:400,body:"'Roboto Condensed',sans-serif",sig:"'Allura',cursive",paper:"#f2e0bd",ink:"#3b2412",acc:"#c1561a",board:"bulb",photo:"saturate(1.18) sepia(.22) contrast(1.04)",bar:"pill",cw:.41,cwd:.44,base:1.25,dots:1,secs:["Field Level","Mezzanine","Upper Deck","Bleachers"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
+ {disp:"'Orbitron',sans-serif",dw:800,body:"'Roboto Condensed',sans-serif",sig:"'Caveat',cursive",paper:"#f7f7f4",ink:"#121a2e",acc:"#d0202e",board:"led",photo:"saturate(1.06) contrast(1.05)",bar:"skew",cw:.41,cwd:.44,base:2.5,secs:["Lower Bowl","Club Level","Upper Deck","Courtside"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
+ {disp:"'Orbitron',sans-serif",dw:800,body:"'Roboto Condensed',sans-serif",sig:"'Caveat',cursive",paper:"#fbfbf9",ink:"#0f1d33",acc:"#0a6ab8",board:"led",photo:"saturate(1.08) contrast(1.05)",bar:"skew",cw:.41,cwd:.44,base:3.5,secs:["Lower Bowl","Club Level","Upper Deck","Courtside"],cols:["Snacks","Hot Stand","Sweets","Cold Drinks"]},
+ {disp:"'Rajdhani',sans-serif",dw:700,body:"'Roboto Condensed',sans-serif",sig:"'Caveat',cursive",paper:"#16181d",ink:"#f2f2f2",acc:"#22a3e0",board:"video",photo:"saturate(1.08) contrast(1.06)",bar:"led",cw:.41,cwd:.44,base:6,secs:["Lower Bowl","Club Level","Upper Deck","Suites"],cols:["Snacks","Grill","Sweets","Drinks"]},
+ {disp:"'Rajdhani',sans-serif",dw:700,body:"'Roboto Condensed',sans-serif",sig:"'Caveat',cursive",paper:"#101318",ink:"#f5f5f5",acc:"#e8b100",board:"video",photo:"saturate(1.05) contrast(1.06)",bar:"led",cw:.41,cwd:.44,base:9,secs:["Lower Bowl","Club Level","Upper Deck","Suites"],cols:["Snacks","Grill","Sweets","Drinks"]}
 ];
 const T={
  gritty:{wear:.55,vig:.38,photo:"contrast(1.1) saturate(.82)",paperTo:"#c9b48c",pt:.12,tilt:-1.5,hawk:"Cash at the stand. No refunds after the first whistle.",gate:"Cheap seats, loud crowd"},
@@ -50,7 +50,7 @@ const T={
  tense:{wear:.24,vig:.4,photo:"contrast(1.2) saturate(.78)",paperTo:"#b9b2a2",pt:.1,tilt:0,hawk:"Grab it now. Nobody leaves their seat in the last minute.",gate:"Sudden death"},
  scrappy:{wear:.6,vig:.28,photo:"grayscale(.35) contrast(1.28)",paperTo:"#d8d0bc",pt:.2,tilt:-3.5,hawk:"Cash only. Bring your own cushion.",gate:"Bleacher bums welcome"}
 };
-loadFonts(["Graduate","Changa+One","Russo+One","Chakra+Petch:wght@600;700","Roboto+Slab:wght@400;700","Roboto+Condensed:ital,wght@0,400;0,700;1,400","Mrs+Saint+Delafield","Allura","Caveat:wght@600"]);
+loadFonts(["Graduate","Sigmar+One","Orbitron:wght@700;800","Rajdhani:wght@600;700","Roboto+Slab:wght@400;700","Roboto+Condensed:ital,wght@0,400;0,700;1,400","Mrs+Saint+Delafield","Allura","Caveat:wght@600"]);
 
 function money(v,ei){if(v<1&&ei<2)return String(Math.round(v*100))+"c";return v.toFixed(2)}
 function prices(menu,e,ei,egg){
@@ -155,15 +155,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const pr=prices(items,e,ei,egg);
   const mTop=118,noteH=winks.length?186:150,menuH=H-mTop-noteH-26;
   const tiers=[{d:30,n:22,g:18,h:32,nl:2},{d:28,n:21,g:16,h:30,nl:2},{d:26,n:19,g:14,h:26,nl:2},{d:24,n:18,g:11,h:24,nl:2},{d:22,n:17,g:9,h:22,nl:1},{d:21,n:16,g:7,h:21,nl:1},{d:20,n:15,g:6,h:20,nl:0},{d:18,n:14,g:5,h:18,nl:0}];
-  const priceW=d=>d*2.4+8;
+  let dmax=3;const priceW=d=>d*2.4+8;
   let CW=(CWall-colGap)/2;
-  const cH=(tr,k)=>tr.h*1.3+14+items[k].reduce((a,it)=>{const dl=Math.min(3,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),e.cwd));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g},0);
+  const cH=(tr,k)=>tr.h*1.3+14+items[k].reduce((a,it)=>{const dl=Math.min(dmax,wrapLines(tx(it.n),tr.d,CW-priceW(tr.d),e.cwd));const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return a+dl*tr.d*1.15+nl*tr.n*1.3+(nl?3:0)+tr.g},0);
   /* best split of the courses into two columns, in order; one wide column when that fits bigger type */
   const split=tr=>{let best=null;for(let s=1;s<=C.length;s++){const a=C.slice(0,s).reduce((x,[k])=>x+cH(tr,k),0),b=C.slice(s).reduce((x,[k])=>x+cH(tr,k),0),m=Math.max(a,b);if(!best||m<best.m)best={s,m}}return best};
   let tr=tiers[tiers.length-1],sp=null,one=false;
   for(const x of tiers){CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1*1.04<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
     CW=(CWall-colGap)/2;const q=split(x);if(q.m*1.04<=menuH){tr=x;sp=q;break}}
-  if(!sp){CW=(CWall-colGap)/2;sp=split(tr)}
+  if(!sp){dmax=2;CW=(CWall-colGap)/2;sp=split(tr)}
   const cgap=14+Math.min(30,Math.max(0,menuH-sp.m*1.04)/3);
   const head=l=>{
     if(e.bar==="grid")return `<div style="border:2px solid ${ink};padding:4px 10px;font:${e.dw} ${tr.h}px/1.1 ${DF};color:${ink};margin-bottom:8px;text-transform:uppercase;display:flex;justify-content:space-between"><span>${l}</span><span style="color:${acc};font-size:max(14px,.7em)">No. ${esc(num.slice(-2))}</span></div>`;
@@ -172,7 +172,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     return `<div style="font:${e.dw} ${tr.h}px/1.1 ${DF};color:${acc};text-transform:uppercase;letter-spacing:.06em;border-bottom:2px solid ${acc};padding-bottom:4px;margin-bottom:8px;text-shadow:0 0 10px ${acc}">${l}</div>`;
   };
   const course=([k,l])=>`<div style="margin-bottom:${cgap}px">${head(l)}${items[k].map((it,i)=>{const nl=tr.nl?Math.min(tr.nl,wrapLines(tx(it.note),tr.n,CW,e.cw)):0;return `<div style="margin-bottom:${tr.g}px">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="flex:1;font:700 ${tr.d}px/1.15 ${BF};color:${ink};${clamp(3)}">${esc(tx(it.n))}</span><span style="font:${e.dw} ${tr.d}px/1.15 ${DF};color:${acc};white-space:nowrap">${pr[k][i]}</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="flex:1;font:700 ${tr.d}px/1.15 ${BF};color:${ink};${clamp(dmax)}">${esc(tx(it.n))}</span><span style="font:${e.dw} ${tr.d}px/1.15 ${DF};color:${acc};white-space:nowrap">${pr[k][i]}</span></div>
       ${nl?`<div style="font:400 ${tr.n}px/1.3 ${BF};color:${soft};margin-top:3px;${clamp(nl)}">${esc(cap(tx(it.note)))}</div>`:""}</div>`}).join("")}</div>`;
   const colA=C.slice(0,sp.s).map(course).join(""),colB=C.slice(sp.s).map(course).join("");
   const menuHead=`<div style="position:absolute;left:${CX}px;width:${CWall}px;top:26px">${kick(t.hawk,acc,15)}<div style="font:${e.dw} 44px/1.05 ${DF};color:${ink};margin-top:4px;text-transform:uppercase">Concessions</div></div>`;

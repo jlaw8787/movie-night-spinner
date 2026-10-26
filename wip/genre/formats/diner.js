@@ -13,6 +13,7 @@ const BASE=SRC.replace(/[^/]*$/,"")+"assets/diner/";
 let CSS_READY=Promise.resolve();
 if(!document.querySelector('link[data-fmt="diner"]')){const l=document.createElement("link");l.rel="stylesheet";l.dataset.fmt="diner";
   CSS_READY=new Promise(r=>{l.onload=r;l.onerror=r;setTimeout(r,4000)});
+  CSS_READY.then(()=>FONTS.forEach(fn=>document.fonts.load(fn).catch(()=>0)));
   l.href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Oleo+Script:wght@400;700&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@500;700&family=Libre+Franklin:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&family=Homemade+Apple&display=swap";
   document.head.appendChild(l)}
 const FONTS=['400 44px "League Gothic"','400 40px "Oleo Script"','700 40px "Oleo Script"','700 36px "Barlow Condensed"','600 18px "Barlow Condensed"','700 28px "Barlow"','500 18px "Barlow"',
@@ -139,31 +140,37 @@ window.MENU_FORMATS.diner=ctx=>{
     <span>${ft[0]}</span><span>${ft[1]}</span><span>Form No. ${num||"13-"+yy}</span></div>`;
   const front=root("front",night?K.night:K.paper,backdrop+sign+hero+prop+info+notice+foot);
 
-  /* ---------- back: laminated menu (vinyl at night, chrome or accent edging by day) ---------- */
+  /* ---------- back and last face: laminated menu (vinyl at night, chrome or accent edging by day) ----------
+     Laid out synchronously here: an offscreen copy is measured so the full faces array is returned at once.
+     Two faces if the menu fits the back; otherwise three, with as many items as fit on the back, the rest on the
+     last face, the order slip and the note moved there if the back needs the room, and the last face's still grown
+     to fill whatever is left. Never more than three faces, never type under dish 26 / note 20. */
   const SECTIONS=night?SECTIONS_N:SECTIONS_D;
   const edge=night?`<div style="position:absolute;inset:0;border:12px solid #17191e;pointer-events:none"></div><div style="position:absolute;inset:6px;border:1.5px dashed rgba(235,230,216,.42);pointer-events:none"></div>`
     :ek==="classic"?`<div style="position:absolute;inset:0;border:12px solid transparent;border-image:${chrome} 1;pointer-events:none"></div><div style="position:absolute;inset:16px;border:1.5px solid ${red};pointer-events:none"></div>`
     :`<div style="position:absolute;inset:0;border:12px solid ${red};pointer-events:none"></div><div style="position:absolute;inset:6px;border:1.5px dashed rgba(255,255,255,.5);pointer-events:none"></div>`;
   const lam=`<div style="position:absolute;inset:0;background:url('${BASE}laminate-wear.png') center/cover;opacity:${wear};pointer-events:none"></div>${edge}`;
-  const topStill=(src,h,kick,head,size,cap=true)=>`<div data-h="band" style="position:absolute;left:12px;right:12px;top:12px;height:${h}px;overflow:hidden;background:${K.night}">
+  const topStill=(src,h,kick,head,size,cap)=>`<div data-h="band" style="position:absolute;left:12px;right:12px;top:12px;height:${h}px;overflow:hidden;background:${K.night}">
     ${src?`<img alt="" crossorigin="anonymous" src="${img(src,"w1280")}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}">`:poster?`<img alt="" crossorigin="anonymous" src="${img(poster,"w780")}" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block;filter:${photo}">`:""}
-    <div style="position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(transparent,rgba(8,10,13,.88))"></div>
-    <div style="position:absolute;left:32px;bottom:22px">
-      <div style="font:600 16px/1 ${SANS};letter-spacing:.3em;color:${K.bone};margin-bottom:10px">${kick}</div>
-      <div style="white-space:nowrap;${disp(size)}">${night?neonTxt(E.caps?head.toUpperCase():head,false):`<span style="color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.6)">${ESC(E.caps?head.toUpperCase():head)}</span>`}</div></div>
-    ${cap?`<div style="position:absolute;right:20px;bottom:18px;max-width:300px;text-align:right;font:italic 400 15px/1.3 ${SERIF};color:#e9e4d6;text-shadow:0 1px 3px rgba(0,0,0,.9)">The window booth at ${ESC(venue)}${night?", after midnight":""}.<br><span style="font:700 14px/1.6 ${SANS};letter-spacing:.14em;font-style:normal">${src?"STILL":"POSTER"}: TMDB</span></div>`
+    <div style="position:absolute;left:0;right:0;bottom:0;height:${Math.min(170,Math.round(h*.6))}px;background:linear-gradient(transparent,rgba(8,10,13,.88))"></div>
+    <div style="position:absolute;left:32px;bottom:${h<160?14:22}px">
+      ${h<160?"":`<div style="font:600 16px/1 ${SANS};letter-spacing:.3em;color:${K.bone};margin-bottom:10px">${kick}</div>`}
+      <div style="white-space:nowrap;${disp(h<160?Math.min(size,54):size)}">${night?neonTxt(E.caps?head.toUpperCase():head,false):`<span style="color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.6)">${ESC(E.caps?head.toUpperCase():head)}</span>`}</div></div>
+    ${cap?`<div style="position:absolute;right:20px;bottom:18px;max-width:300px;text-align:right;font:italic 400 15px/1.3 ${SERIF};color:#e9e4d6;text-shadow:0 1px 3px rgba(0,0,0,.9)">${cap}<br><span style="font:700 14px/1.6 ${SANS};letter-spacing:.14em;font-style:normal">${src?"STILL":"POSTER"}: TMDB</span></div>`
       :(src||poster)?`<div style="position:absolute;right:20px;top:16px;font:700 14px/1 ${SANS};letter-spacing:.14em;color:#e9e4d6;text-shadow:0 1px 3px rgba(0,0,0,.9)">${src?"STILL":"POSTER"}: TMDB</div>`:""}</div>`;
-  const item=(k,it,i)=>`<div data-h="item" style="break-inside:avoid;padding-bottom:16px">
-      <div style="display:flex;align-items:baseline;gap:10px"><b data-h="dish" style="font:700 28px/1.12 ${E.dish};color:${K.ink};flex:1 1 auto;min-width:0">${ESC(it.n)}</b><span data-h="price" style="font:700 28px/1 ${E.dish};color:${red};flex:none">${special[k+i]||price(k,it.n)}</span></div>
-      ${it.note?`<div data-h="desc" style="font:400 21px/1.3 ${SERIF};color:#3a3d43;margin-top:4px">${ESC(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
-  const head=(name,sub)=>ek==="modern"
-    ?`<div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;justify-content:space-between;gap:10px;background:${red};padding:6px 10px 5px;margin:0 0 14px"><span data-h="sech" data-base="${E.hs}" style="white-space:nowrap;${disp(E.hs)};color:#fff">${name}</span><span style="white-space:nowrap;font:italic 400 17px/1 ${SERIF};color:#fff">${sub}</span></div>`
-    :`<div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;gap:12px;border-bottom:2px solid ${K.ink};box-shadow:0 3px 0 ${K.paper},0 4px 0 ${K.ink};margin:0 0 14px;padding-bottom:4px"><span data-h="sech" data-base="${E.hs}" style="white-space:nowrap;font:${E.hw} ${E.hs}px/1.05 ${E.head};letter-spacing:${E.ls};color:${ek==="classic"?red:K.ink};${E.caps?"text-transform:uppercase;":""}">${name}</span><span style="white-space:nowrap;font:italic 400 17px/1 ${SERIF};color:${red}">${sub}</span></div>`;
-  const sec=([k,name,sub],its,off)=>its.length?`<div data-h="secblock"><div style="break-inside:avoid">${head(name,sub)}${item(k,its[0],off)}</div>${its.slice(1).map((it,i)=>item(k,it,off+i+1)).join("")}<div data-h="gap" style="height:14px"></div></div>`:"";
-  const whole=SECTIONS.map(s=>sec(s,menu[s[0]]||[],0)).join("");
-  const chunkList=[];SECTIONS.forEach(([k,name,sub])=>{const its=menu[k]||[];for(let i=0;i<its.length;i+=2)chunkList.push({html:sec([k,name,i?"continued":sub],its.slice(i,i+2),i),its:its.slice(i,i+2)})});
+  const item=(k,it,i,L)=>`<div data-h="item" style="break-inside:avoid;padding-bottom:${L.pad}px">
+      <div style="display:flex;align-items:baseline;gap:10px"><b data-h="dish" style="font:700 ${L.dish}px/1.12 ${E.dish};color:${K.ink};flex:1 1 auto;min-width:0">${ESC(it.n)}</b><span data-h="price" style="font:700 ${L.dish}px/1 ${E.dish};color:${red};flex:none">${special[k+i]||price(k,it.n)}</span></div>
+      ${it.note?`<div data-h="desc" style="font:400 ${L.desc}px/${L.lh} ${SERIF};color:#3a3d43;margin-top:4px">${ESC(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
+  const head=(name,sub,L)=>{const hs=Math.round(E.hs*L.k);return ek==="modern"
+    ?`<div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;justify-content:space-between;gap:10px;background:${red};padding:6px 10px 5px;margin:0 0 ${L.mb}px"><span data-h="sech" data-base="${E.hs}" style="white-space:nowrap;min-width:0;overflow:hidden;${disp(hs)};color:#fff">${name}</span><span style="white-space:nowrap;min-width:0;overflow:hidden;flex:0 1 auto;font:italic 400 17px/1 ${SERIF};color:#fff">${sub}</span></div>`
+    :`<div data-h="sec" style="break-inside:avoid;display:flex;align-items:baseline;gap:12px;border-bottom:2px solid ${K.ink};box-shadow:0 3px 0 ${K.paper},0 4px 0 ${K.ink};margin:0 0 ${L.mb}px;padding-bottom:4px"><span data-h="sech" data-base="${E.hs}" style="white-space:nowrap;min-width:0;overflow:hidden;flex:0 0 auto;max-width:100%;font:${E.hw} ${hs}px/1.05 ${E.head};letter-spacing:${E.ls};color:${ek==="classic"?red:K.ink};${E.caps?"text-transform:uppercase;":""}">${name}</span><span style="white-space:nowrap;min-width:0;overflow:hidden;flex:0 1 auto;font:italic 400 17px/1 ${SERIF};color:${red}">${sub}</span></div>`};
+  /* every item in order, so a run [a,b) can be laid out on any face; a section split across faces repeats its head as "continued" */
+  const flat=[];SECTIONS.forEach(([k,name,sub],si)=>(menu[k]||[]).forEach((it,ii)=>flat.push({k,name,sub,si,ii,it})));
+  const run=(a,b,L)=>{let h="",i=a;while(i<b){const g=flat[i].si,grp=[];while(i<b&&flat[i].si===g)grp.push(flat[i++]);const x=grp[0];
+      h+=`<div data-h="secblock"><div style="break-inside:avoid">${head(x.name,x.ii?"continued":x.sub,L)}${item(x.k,x.it,x.ii,L)}</div>${grp.slice(1).map(y=>item(y.k,y.it,y.ii,L)).join("")}<div data-h="gap" style="height:${L.gap}px"></div></div>`}
+    return h};
   const N=fl&&fl.note;
-  const props=`<div data-h="props" style="position:absolute;left:40px;right:40px;bottom:64px;height:150px;display:flex;gap:24px;align-items:stretch">
+  const props=bottom=>`<div data-h="props" style="position:absolute;left:40px;right:40px;bottom:${bottom}px;height:150px;display:flex;gap:24px;align-items:stretch">
     <div style="flex:1.15;background:#fff;padding:14px 18px;box-shadow:0 4px 12px rgba(0,0,0,.18);border-left:6px solid ${red};transform:rotate(${-.6*tilt}deg);display:flex;flex-direction:column;justify-content:center">
       <div style="font:700 15px/1 ${SANS};letter-spacing:.24em;color:${red}">ORDER UP WHEN</div>
       <div style="font:400 20px/1.3 ${SERIF};color:${K.ink};margin-top:7px">${ESC(f.P||"Order up when the opening credits roll.")}</div></div>
@@ -174,22 +181,51 @@ window.MENU_FORMATS.diner=ctx=>{
   const backFoot=`<div style="position:absolute;left:40px;right:40px;bottom:20px;font:400 15px/19px ${SANS};color:${K.mute}">
     ${W[4]?`<div style="font-style:italic;font-family:${SERIF};white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Overheard at the counter: ${ESC(low(W[4]))}.</div>`:""}
     <div style="display:flex;justify-content:space-between"><span>${night?V.fine:DAY.fine}</span><span>Form No. ${num||"13-"+yy}</span></div></div>`;
-  const s1=stills[1]||stills[0];
-  const back=root("back",K.paper,topStill(s1,296,night?V.kick:DAY.kick,"The Menu",ek==="classic"?80:88)+
-    `<!--CONT--><template data-h="chunks">${chunkList.map(c=>c.html).join("")}</template><div data-h="menu" style="position:absolute;left:44px;right:44px;top:334px;bottom:230px;column-count:2;column-gap:40px;column-fill:balance;column-rule:1px solid rgba(22,26,32,.25)">${whole}</div>`+props+backFoot,lam);
+  const lastFoot=`<div style="position:absolute;left:40px;right:40px;bottom:26px;display:flex;justify-content:space-between;font:400 15px/1 ${SANS};color:${K.mute}"><span>${ESC(venue)}. Turn over for the cover.</span><span>Form No. ${num||"13-"+yy}</span></div>`;
+  const s1=stills[1]||stills[0],s2=stills[2]||stills[1]||stills[0];
+  const cap1=`The window booth at ${ESC(venue)}${night?", after midnight":""}.`;
+  const menuBox=(top,bottom,html)=>`<div data-h="menu" style="position:absolute;left:44px;right:44px;top:${top}px;bottom:${bottom}px;column-count:2;column-gap:40px;column-fill:balance;column-rule:1px solid rgba(22,26,32,.25)">${html}</div>`;
+  /* back: band height bh, props on the back or not */
+  const backHTML=(bh,withProps,html)=>root("back",K.paper,topStill(s1,bh,night?V.kick:DAY.kick,"The Menu",ek==="classic"?80:88,cap1)+menuBox(bh+38,withProps?230:64,html)+(withProps?props(64):"")+backFoot,lam);
+  const lastHTML=(bh,withProps,html)=>root("cont",K.paper,topStill(s2,bh,night?"STILL OPEN":"STILL SERVING","The Menu, continued",ek==="classic"?64:72,"")+menuBox(bh+38,withProps?226:60,html)+(withProps?props(62):"")+lastFoot,lam);
 
-  /* continued faces, decided by a conservative estimate at the floor sizes; horrorFit-style fitter balances later */
-  /* a continued face, kept as a template in the back; horrorFit-style fitter adds as many as a long menu needs */
-  const sc=stills[2]||stills[1]||stills[0];
-  const contFace=root("cont",K.paper,topStill(sc,240,night?"STILL OPEN":"STILL SERVING","The Menu, continued",ek==="classic"?64:72,false)+
-      `<div data-h="menu" style="position:absolute;left:44px;right:44px;top:282px;bottom:64px;column-count:2;column-gap:40px;column-fill:balance;column-rule:1px solid rgba(22,26,32,.25)"></div>
-      <div style="position:absolute;left:40px;right:40px;bottom:26px;font:400 15px/1 ${SANS};color:${K.mute}">${ESC(venue)}. Turn over for the cover.</div>`,lam);
+  /* offscreen measuring */
+  const host=document.createElement("div");host.style.cssText="position:absolute;left:-30000px;top:0;width:816px;visibility:hidden;pointer-events:none";document.body.appendChild(host);
+  /* an 8px safety margin: measure in a box 8px shorter than the real one (a column box overflows sideways, not down) */
+  const fitsHTML=h=>{host.innerHTML=h;const m=host.querySelector('[data-h="menu"]');m.style.bottom=(parseFloat(m.style.bottom)+8)+"px";return m.scrollWidth<=m.clientWidth+1&&m.scrollHeight<=m.clientHeight+1};
+  const n=flat.length;let faces;
+  try{
+    /* two faces: grow the back still as far as the menu allows, at the largest type that fits */
+    let two=null;
+    for(const L of LEVELS){const html=run(0,n,L);
+      for(let bh=470;bh>=296;bh-=16)if(fitsHTML(backHTML(bh,true,html))){two=backHTML(bh,true,html);break}
+      if(two)break}
+    if(two)faces=[front,two];
+    else{
+      /* three faces: most items on the back, the rest on the last face, whose still then grows to fill it */
+      const VARIANTS=[{bb:296,bp:true,lp:false,lb:240},{bb:296,bp:false,lp:true,lb:240},{bb:220,bp:false,lp:true,lb:150},{bb:150,bp:false,lp:true,lb:96}];
+      let pick=null;
+      outer:for(const L of LEVELS)for(const V of VARIANTS){
+        let k=n-1;while(k>0&&!fitsHTML(backHTML(V.bb,V.bp,run(0,k,L))))k--;
+        if(k<1)continue;
+        if(fitsHTML(lastHTML(V.lb,V.lp,run(k,n,L)))){pick={L,V,k};break outer}}
+      if(!pick){const L=LEVELS[LEVELS.length-1],V=VARIANTS[VARIANTS.length-1];let k=n-1;while(k>1&&!fitsHTML(backHTML(V.bb,V.bp,run(0,k,L))))k--;pick={L,V,k}}
+      const {L,V,k}=pick,rest=run(k,n,L);let lb=V.lb;
+      for(let h=620;h>V.lb;h-=16)if(fitsHTML(lastHTML(h,V.lp,rest))){lb=h;break}
+      faces=[front,backHTML(V.bb,V.bp,run(0,k,L)),lastHTML(lb,V.lp,rest)];
+    }
+  }finally{host.remove()}
   schedule(token,night);
-  return {w:816,h:1056,faces:[front,back.replace("<!--CONT-->",`<template data-h="contface">${contFace}</template>`)]};
+  return {w:816,h:1056,faces};
 };
 
-/* ---------- fitting after mount ---------- */
-const LEVELS=[{dish:28,desc:21,k:1,pad:16,gap:14,mb:14},{dish:27,desc:20,k:.95,pad:12,gap:10,mb:10},{dish:26,desc:20,k:.9,pad:9,gap:6,mb:8}];
+/* resolves once the diner fonts are loaded; callers that can wait should await it so the synchronous layout measures real fonts */
+window.MENU_FORMATS.diner.ready=CSS_READY.then(()=>Promise.all(FONTS.map(fn=>document.fonts.load(fn).catch(()=>0))));
+
+/* ---------- after mount: logo plate, front title fit, and a safety step down if real fonts differ ---------- */
+const LEVELS=[{dish:28,desc:21,k:1,pad:16,gap:14,mb:14,lh:1.3},{dish:27,desc:20,k:.95,pad:12,gap:10,mb:10,lh:1.3},{dish:26,desc:20,k:.9,pad:9,gap:6,mb:8,lh:1.28},
+  /* last resort for very long menus: same minimum sizes, tighter leading and spacing */
+  {dish:26,desc:20,k:.85,pad:5,gap:3,mb:5,lh:1.2}];
 function schedule(token,night){
   let tries=0;
   const tick=async()=>{
@@ -205,7 +241,7 @@ function schedule(token,night){
   setTimeout(tick,0);
 }
 function fit(faces,night){
-  const [fr,bk]=faces;
+  const fr=faces[0];
   const fits=m=>m.scrollWidth<=m.clientWidth+1&&m.scrollHeight<=m.clientHeight+1;
   const box=fr.querySelector('[data-h="info"]'),over=()=>box.scrollHeight>box.clientHeight+1;
   const lg=fr.querySelector('[data-h="logo"]'),plate=fr.querySelector('[data-h="plate"]');
@@ -223,28 +259,13 @@ function fit(faces,night){
   const t=fr.querySelector('[data-h="title"]');
   if(t){let s=+t.dataset.max;while((over()||t.scrollWidth>t.clientWidth+1)&&s>34){s-=2;t.style.fontSize=s+"px"}}
   const fd=fr.querySelector('[data-h="fdesc"]');let fs=20;while(over()&&fs>16){fs--;fd.style.fontSize=fs+"px"}
-  /* menu */
-  const m=bk.querySelector('[data-h="menu"]');
-  const set=(sel,fn)=>document.querySelectorAll(`[data-diner="${fr.dataset.diner}"]:not([data-role="front"]) [data-h="${sel}"]`).forEach(fn);
-  const apply=L=>{set("dish",e=>e.style.fontSize=L.dish+"px");set("price",e=>e.style.fontSize=L.dish+"px");
-    set("desc",e=>e.style.fontSize=L.desc+"px");set("sech",e=>e.style.fontSize=Math.round(+e.dataset.base*L.k)+"px");
-    set("item",e=>e.style.paddingBottom=L.pad+"px");set("gap",e=>e.style.height=L.gap+"px");set("sec",e=>e.style.marginBottom=L.mb+"px")};
-  const band=bk.querySelector('[data-h="band"]');let L=LEVELS[0],grown=false;apply(L);
-  for(let h=470;h>296;h-=16){band.style.height=h+"px";m.style.top=(h+38)+"px";if(fits(m)){grown=true;break}}
-  if(!grown){band.style.height="296px";m.style.top="334px";for(L of LEVELS){apply(L);if(fits(m))break}}
-  if(!fits(m)){
-    /* at dish 26 / note 20 and still too long: never shrink further. 2 item chunks flow onto new continued faces,
-       each cloned from the template, inside a copy of the host's face wrapper when there is one */
-    m.innerHTML=bk.querySelector('[data-h="chunks"]').innerHTML;band.style.height="296px";m.style.top="334px";apply(L);
-    const tpl=bk.querySelector('[data-h="contface"]');let cur=bk,lastEl=bk.parentElement&&bk.parentElement!==document.body&&bk.parentElement.children.length===1?bk.parentElement:bk,n=2;
-    while(!fits(cur.querySelector('[data-h="menu"]'))){
-      const cm=cur.querySelector('[data-h="menu"]'),blocks=cm.querySelectorAll('[data-h="secblock"]');if(blocks.length<2)break;
-      let next=cur.__next;
-      if(!next){const holder=document.createElement("div");holder.innerHTML=tpl.innerHTML;next=holder.firstElementChild;
-        let el=next;if(lastEl!==bk){el=lastEl.cloneNode(false);if(el.dataset)el.dataset.face=String(n);el.appendChild(next)}
-        lastEl.after(el);lastEl=el;n++;cur.__next=next;apply(L)}
-      next.querySelector('[data-h="menu"]').prepend(blocks[blocks.length-1]);
-      if(fits(cm))cur=next}
-  }
+  /* if the layout was measured before the web fonts arrived and now runs long, tighten spacing, then step type to the floor */
+  faces.slice(1).forEach(fc=>{const m=fc.querySelector('[data-h="menu"]');if(!m||fits(m))return;
+    for(const L of LEVELS){
+      fc.querySelectorAll('[data-h="dish"],[data-h="price"]').forEach(e=>e.style.fontSize=Math.min(parseFloat(e.style.fontSize),L.dish)+"px");
+      fc.querySelectorAll('[data-h="desc"]').forEach(e=>e.style.fontSize=Math.min(parseFloat(e.style.fontSize),L.desc)+"px");
+      fc.querySelectorAll('[data-h="item"]').forEach(e=>e.style.paddingBottom=Math.min(parseFloat(e.style.paddingBottom),L.pad)+"px");
+      fc.querySelectorAll('[data-h="gap"]').forEach(e=>e.style.height=Math.min(parseFloat(e.style.height),L.gap)+"px");
+      if(fits(m))break}});
 }
 })();

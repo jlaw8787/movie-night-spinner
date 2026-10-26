@@ -25,7 +25,7 @@ function pickAccent(c,bg,min,fb){const t=lum(bg)>.4?"#000000":"#ffffff";
 const rgba=(h,a)=>{const p=hx(h);return `rgba(${p[0]},${p[1]},${p[2]},${a})`};
 
 /* text helpers */
-const esc=s=>String(s==null?"":s).replace(/[–—]/g,", ").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const esc=s=>String(s==null?"":s).replace(/[\u2013\u2014]/g,", ").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 const DRY=[[/\bmichelada\b/gi,"chilli lime cooler"],[/\bmargaritas?\b/gi,"lime slushie"],[/\bmartinis?\b/gi,"mocktail"],[/\bcocktails?\b/gi,"mocktail"],[/\bchampagne\b/gi,"sparkling apple"],[/\bprosecco\b/gi,"sparkling grape"],[/\bwine\b/gi,"grape juice"],[/\blagers?\b/gi,"ginger beer"],[/\bbeers?\b/gi,"root beer"],[/\bale\b/gi,"ginger ale"],[/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|brandy|schnapps|liqueur|sake)\b/gi,"soda"],[/\bpunch\b/gi,"punch"]];
 const dry=(s,fam)=>fam?DRY.reduce((t,[r,v])=>t.replace(r,v),String(s||"")):String(s||"");
 const noise=(freq,alpha,col,oct)=>{const c=hx(col||"#ffffff");const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='${freq}' numOctaves='${oct||3}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${(c[0]/255).toFixed(3)} 0 0 0 0 ${(c[1]/255).toFixed(3)} 0 0 0 0 ${(c[2]/255).toFixed(3)} 0 0 0 ${alpha} 0'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`;
@@ -63,15 +63,17 @@ const money=(p,era,space)=>space?p+" cr":p<1&&ERA_G[era]<2?Math.round(p*100)+"c"
 
 /* fitter: shrinks [data-galley-box] (via --k), then clamps and drops notes; [data-galley-text] shrinks one line block */
 function over(e){return e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1}
+function overH(e){return e.scrollHeight>e.clientHeight+1}
 function fitBox(b){b.style.setProperty("--k","1");const notes=[...b.querySelectorAll(`[${A}-note]`)],drops=[...b.querySelectorAll(`[${A}-drop]`)];
-  const names=[...b.querySelectorAll(`[${A}-name]`)];names.forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});notes.forEach(n=>{n.style.display="-webkit-box";n.style.webkitLineClamp="2"});drops.forEach(d=>d.style.display="");
+  const names=[...b.querySelectorAll(`[${A}-name]`)];names.forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});const rows=[...b.querySelectorAll(`[${A}-rows]`)];rows.forEach(r=>{r.style.display="";r.style.gridTemplateColumns="";r.style.columnGap=""});notes.forEach(n=>{n.style.display="-webkit-box";n.style.webkitLineClamp="2"});drops.forEach(d=>d.style.display="");
   const min=+b.getAttribute(A+"-min")||.68;let k=1;
-  while(over(b)&&k>min){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}
-  if(over(b)){notes.forEach(n=>n.style.webkitLineClamp="1")}
-  for(let i=drops.length-1;i>=0&&over(b);i--)drops[i].style.display="none";
-  if(over(b)){notes.forEach(n=>n.style.display="none")}
-  if(over(b)){names.forEach(n=>{n.style.display="-webkit-box";n.style.webkitBoxOrient="vertical";n.style.webkitLineClamp="1";n.style.overflow="hidden"})}
-  while(over(b)&&k>.5){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}}
+  while(overH(b)&&k>min){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}
+  if(overH(b)){notes.forEach(n=>n.style.webkitLineClamp="1")}
+  for(let i=drops.length-1;i>=0&&overH(b);i--)drops[i].style.display="none";
+  if(overH(b)){notes.forEach(n=>n.style.display="none")}
+  if(overH(b)){names.forEach(n=>{n.style.display="-webkit-box";n.style.webkitBoxOrient="vertical";n.style.webkitLineClamp="1";n.style.overflow="hidden"})}
+  if(overH(b)){rows.forEach(r=>{if(r.children.length>1){r.style.display="grid";r.style.gridTemplateColumns="1fr 1fr";r.style.columnGap="18px"}})}
+  while(overH(b)&&k>.5){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}}
 function fitText(e){let s=+e.getAttribute(A+"-text");const lo=+e.getAttribute(A+"-lo")||16;e.style.fontSize=s+"px";while(over(e)&&s>lo){s-=1;e.style.fontSize=s+"px"}}
 function logoInit(img){if(img.dataset.seen)return;img.dataset.seen="1";const panel=img.closest(`[${A}-panel]`),fb=panel&&panel.querySelector(`[${A}-fallback]`);
   const fail=()=>{img.style.display="none";if(fb){fb.style.display="flex";fitText(fb.firstElementChild)}};
@@ -155,7 +157,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         <span ${A}-name style="flex:1;font:700 max(16px,calc(26px*var(--k)))/1.12 ${BODY};color:${ink}">${esc(it.n)}</span>
         <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${acc};white-space:nowrap">${money(it.p,era,space)}</span></div>
       ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:400 max(14px,calc(20px*var(--k)))/1.26 ${BODY};color:${sub}">${esc(it.note)}</div>`:""}</div></div>`;
-  let ci=0;const course=k=>I[k].length?`<div style="margin:0 0 calc(12px*var(--k))">${label(k,ci++)}${I[k].map(row).join("")}</div>`:"";
+  let ci=0;const course=k=>I[k].length?`<div style="margin:0 0 calc(12px*var(--k))">${label(k,ci++)}<div ${A}-rows>${I[k].map(row).join("")}</div></div>`:"";
 
   /* title block and logo */
   const lp="#f4f2ec",dp=mix(space?paper:"#1b232a","#000000",.3);

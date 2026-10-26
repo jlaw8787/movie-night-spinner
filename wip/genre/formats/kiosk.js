@@ -10,6 +10,8 @@ const W=1344,H=960,ID="kiosk";
 if(!document.getElementById("fmt-kiosk-fonts")){
   const l=document.createElement("link");l.id="fmt-kiosk-fonts";l.rel="stylesheet";
   l.href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@800&family=Paytone+One&family=Fugaz+One&family=Modak&family=Goldman:wght@700&family=Dela+Gothic+One&family=Changa+One&family=Space+Grotesk:wght@700&family=Libre+Franklin:ital,wght@0,500;0,800;1,500&family=Karla:ital,wght@0,500;0,800;1,500&family=Josefin+Sans:ital,wght@0,500;0,700;1,500&family=Cabin:ital,wght@0,500;0,700;1,500&family=Barlow:ital,wght@0,500;0,800;1,500&family=Archivo:ital,wght@0,500;0,800;1,500&family=Work+Sans:ital,wght@0,500;0,800;1,500&family=Nothing+You+Could+Do&display=swap";
+  /* warm every face as soon as the sheet lands, so menu fitting measures with real metrics */
+  l.onload=()=>{try{["Rokkitt", "Paytone One", "Fugaz One", "Modak", "Goldman", "Dela Gothic One", "Changa One", "Space Grotesk", "Libre Franklin", "Karla", "Josefin Sans", "Cabin", "Barlow", "Archivo", "Work Sans", "Nothing You Could Do"].forEach(f=>{document.fonts.load(`800 20px "${f}"`);document.fonts.load(`500 20px "${f}"`);document.fonts.load(`italic 500 20px "${f}"`)})}catch(e){}};
   document.head.appendChild(l);
 }
 /* ---------- text safety ---------- */
@@ -20,6 +22,10 @@ const FAMILY=new Set(["kids","fairytale","xmas","wizard"]);
 const DRY=[[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beers?\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|schnapps)\b/gi,"syrup"]];
 const dry=s=>DRY.reduce((a,[r,t])=>a.replace(r,t),s);
 const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");return (i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"")};
+/* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
+const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/[,;:.]/)[0].trim();return p.length<=n&&p.length>=12?p:""};
+/* real layout height of a block at a given width, measured off screen; null when there is no document */
+const domH=(html,w)=>{try{const b=document.body;if(!b)return null;const d=document.createElement("div");d.style.cssText=`position:absolute;left:-12000px;top:0;width:${w}px;visibility:hidden;display:flow-root`;d.innerHTML=html;b.appendChild(d);const h=d.getBoundingClientRect().height;b.removeChild(d);return h}catch(e){return null}};
 
 /* ---------- colour ---------- */
 const rgb=h=>{h=String(h||"").replace("#","");if(h.length===3)h=h.split("").map(c=>c+c).join("");return /^[0-9a-f]{6}$/i.test(h)?[0,2,4].map(i=>parseInt(h.slice(i,i+2),16)):null};
@@ -125,7 +131,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== surf report strip ===== */
   const SH=84,PH=H-SH,PW=740;
   const swell=(+num%5)+2,water=(+yy%7)+17,tideH=(+yy%12)||12;
-  const cells=[[E.rep,""],["Swell",`${swell} ft`],["Wind",["offshore","light offshore","cross shore","onshore"][+num%4]],["Water",`${water} C`],["High tide",`${tideH}:${yy}`]];
+  const cells=[[E.rep,""],["Swell",`${swell} ft`],["Wind",["offshore","light offshore","cross shore","onshore"][+num%4]],["Water",`${water} C`],["High tide",`${tideH}:${String(+yy%60).padStart(2,"0")}`]];
   const cw=c=>c[1]?Math.max(c[0].length*15*.78,c[1].length*20*(E.bcw+.06))+36:c[0].length*24*(E.dcw+.04)+36;
   const room=W-48-cells.reduce((a,c)=>a+cw(c),0)-4;
   const tail=[["Conditions",T.cond]];if(winks[0]&&room>=560)tail.push(["Spotted",trunc(winks[0],44)]);
@@ -174,41 +180,53 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fine=`${T.close} Prices subject to change. Kiosk licence ${num}.`;
   const fT=fitType(fine,IW,44,.52,15,14,1.3,3);
   const footH=(cue?16+18+6+cT.n*cT.z*1.3+14:0)+fT.n*fT.z*1.3+8;
-  const MH=PH-pad-hdrH-14-footH-pad;
+  let MH=PH-pad-hdrH-14-footH-pad;
   /* menu courses, priced like a kiosk board */
   const m=ctx.menu||{};
   const numPrice=num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
-  const courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0&&numPrice)?numPrice:`${[5,12,4,3][["s","m","w","d"].indexOf(k)]+j*2}.${yy}`}))})).filter(c=>c.items.length);
+  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0&&numPrice)?numPrice:`${[5,12,4,3][["s","m","w","d"].indexOf(k)]+j*2}.${yy}`}))})).filter(c=>c.items.length);
   const total=courses.reduce((a,c)=>a+c.items.length,0);
   const cols=total>8&&courses.length>1?2:1,GAP=26;
   const colW=cols===2?(IW-GAP)/2:IW;
-  const colsArr=cols===2?(()=>{let best=null;for(let i=1;i<courses.length;i++){const a=courses.slice(0,i),b=courses.slice(i);const d=Math.abs(a.reduce((x,c)=>x+c.items.length,0)-b.reduce((x,c)=>x+c.items.length,0));if(!best||d<best.d)best={d,a,b}}return [best.a,best.b]})():[courses];
+  let splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];
+  let colsArr=splits[0];
   const dcw=E.bcw+.05;
-  const measure=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+8+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.6,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
-  let FS=null;
-  outer:for(let s=1.07;s>=.55;s-=.05){
-    const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(20,Math.round(30*s)),G:Math.max(4,Math.round(16*s))};
-    for(const nl of [2,1,0]){const FSx=Object.assign({},base,{nl});const t=Math.max(...colsArr.map(cs=>measure(cs,FSx)));if(t<=MH){FS=Object.assign(FSx,{t});break outer}if(s>.75)break}
-  }
-  FS=FS||{D:17,N:15,S:20,G:4,nl:0,t:MH};
   const secStyle={wood:`border-bottom:3px solid ${ACC}`,varnish:`border-bottom:2px solid ${rgba(ink,.6)}`,faded:`background:${rgba(ACC,.92)};color:${E.board};padding:2px 12px;border-radius:30px;display:inline-block`,laminate:`color:${ACC};${glow}`,corflute:`background:${ink};color:${E.board};padding:2px 10px;display:inline-block`,vinyl:`background:${ACC};color:#fff;padding:2px 12px;border-radius:8px;display:inline-block`,ply:`border-bottom:2px solid ${ink}`}[E.plank];
   const secC={faded:fit(E.board,ACC,"#ffffff",3),corflute:E.board,vinyl:"#ffffff"}[E.plank]||ink;
-  const colHtml=cs=>cs.map((c,i)=>`<div style="margin-top:${i?FS.G+6:0}px">
+  const colHtml=(cs,FS)=>cs.map((c,i)=>`<div style="margin-top:${i?FS.G+6:0}px">
       <div style="margin-bottom:8px"><span style="font:${E.dw}${FS.S}px/1.15 ${disp};${secStyle};color:${secC}">${esc(SEC[c.k])}</span></div>
       ${c.items.map(it=>`<div style="margin-bottom:${FS.G}px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
         <span style="font:800 ${FS.D}px/1.12 ${body};color:${ink}">${esc(it.n)}</span><span style="font:${E.dw}${Math.round(FS.D*1.08)}px/1 ${disp};color:${ACC};white-space:nowrap;${glow}">${esc(it.p)}</span></div>
-        ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${soft};margin-top:2px">${esc(sentence(trunc(it.note,Math.floor(FS.nl*colW/(FS.N*E.bcw)*.88))))}</div>`:""}</div>`).join("")}</div>`).join("");
+        ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${soft};margin-top:2px">${esc(sentence(clip(it.note,Math.floor(FS.nl*colW/(FS.N*E.bcw)*.95))))}</div>`:""}</div>`).join("")}</div>`).join("");
+  const est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+8+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.6,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
+  const measure=(cs,FS)=>{const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
+  let FS=null;
+  outer:for(let s=1.07;s>=.55;s-=.05){
+    const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(20,Math.round(30*s)),G:Math.max(4,Math.round(16*s))};
+    for(const nl of [2,1,0]){if(nl===0&&s>.72)continue;const FSx=Object.assign({},base,{nl});
+      let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
+  }
+  /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
+  let dropCue=false;
+  if(!FS){dropCue=!!cue;MH+=footH;
+    for(const cap of [4,3,2]){courses=courses.map(c=>Object.assign({},c,{items:c.items.slice(0,cap)}));
+      splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];colsArr=splits[0];
+      for(const D of [17,16,15]){const FSx={D,N:15,S:D+1,G:3,nl:0};let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
+        if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break}}
+      if(FS)break}
+    FS=FS||{D:15,N:15,S:16,G:3,nl:0,t:MH}}
+
   const spare=MH-FS.t,aw=winks.slice(1,4);
   const also=spare>150&&aw.length?aw.slice(0,Math.max(1,Math.min(aw.length,Math.floor((spare-64)/32)))):[];
   const boardHtml=`<div style="position:absolute;left:${BX}px;top:0;width:${BW}px;height:${PH}px;background:${boardBg(E,T)};box-shadow:inset 8px 0 18px rgba(0,0,0,.25);border-radius:0">
     <div style="position:absolute;left:${pad}px;top:${pad}px;width:${IW}px;height:${PH-pad*2}px;display:flex;flex-direction:column">
       <div>${hdr}</div>
       <div style="margin-top:14px;height:${Math.floor(MH)}px;display:flex;flex-direction:column">
-        <div style="display:flex;gap:${GAP}px">${colsArr.map(cs=>`<div style="width:${colW}px">${colHtml(cs)}</div>`).join("")}</div>
+        <div style="display:flex;gap:${GAP}px">${colsArr.map(cs=>`<div style="width:${colW}px">${colHtml(cs,FS)}</div>`).join("")}</div>
         ${also.length?`<div style="margin-top:auto;margin-bottom:12px;border-top:2px solid ${ACC};padding-top:10px"><div style="${caps(15,ACC,.2)};margin-bottom:4px">Seen on the beach</div>${also.map(w=>`<div style="font:600 18px/1.3 ${body};color:${ink};margin-top:3px">${esc(sentence(trunc(w,60)))}</div>`).join("")}</div>`:""}
       </div>
       <div style="margin-top:auto">
-        ${cue?`<div style="border-left:4px solid ${ACC};padding:2px 0 2px 16px;margin-bottom:14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}
+        ${cue&&!dropCue?`<div style="border-left:4px solid ${ACC};padding:2px 0 2px 16px;margin-bottom:14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}
         <div style="font:500 ${fT.z}px/1.3 ${body};color:${soft}">${esc(fine)}</div></div></div></div>`;
 
   const face=`<div style="position:absolute;inset:0;background:#111">${photoHtml}${logoHtml}${capHtml}${boardHtml}${noteHtml}${tagHtml}${stripHtml}</div>`;

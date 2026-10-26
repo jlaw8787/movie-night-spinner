@@ -6,7 +6,7 @@
    Inline styles only. A small fitter (below) shrinks text boxes after fonts and images load. */
 (function(){
 const ID="bartab",A="data-"+ID;
-const FONT_URL="https://fonts.googleapis.com/css2?family=Chonburi&family=Coustard:wght@400;900&family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Unbounded:wght@600;800&family=Barlow:ital,wght@0,500;0,600;0,700;1,500&family=Caveat+Brush&display=swap";
+const FONT_URL="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Coustard:wght@400;900&family=Cabin+Condensed:wght@600;700&family=Krona+One&family=Barlow:ital,wght@0,500;0,600;0,700;1,500&family=Caveat+Brush&display=swap";
 function loadFonts(){if(document.getElementById("fmt-font-"+ID))return;const l=document.createElement("link");l.id="fmt-font-"+ID;l.rel="stylesheet";l.href=FONT_URL;document.head.appendChild(l)}
 
 /* colour helpers */
@@ -23,7 +23,7 @@ function pickAccent(c,bg,min,fb){const t=lum(bg)>.4?"#000000":"#ffffff";
 const rgba=(h,a)=>{const p=hx(h);return `rgba(${p[0]},${p[1]},${p[2]},${a})`};
 
 /* text helpers */
-const esc=s=>String(s==null?"":s).replace(/[–—]/g,", ").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const esc=s=>String(s==null?"":s).replace(/[\u2013\u2014]/g,", ").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 const DRY=[[/\bmichelada\b/gi,"chilli lime cooler"],[/\bmargaritas?\b/gi,"lime slushie"],[/\bmartinis?\b/gi,"mocktail"],[/\bcocktails?\b/gi,"mocktail"],[/\bchampagne\b/gi,"sparkling apple"],[/\bprosecco\b/gi,"sparkling grape"],[/\bwine\b/gi,"grape juice"],[/\blagers?\b/gi,"ginger beer"],[/\bbeers?\b/gi,"root beer"],[/\bale\b/gi,"ginger ale"],[/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|brandy|schnapps|liqueur|sake)\b/gi,"soda"],[/\bpunch\b/gi,"punch"]];
 const dry=(s,fam)=>fam?DRY.reduce((t,[r,v])=>t.replace(r,v),String(s||"")):String(s||"");
 const noise=(freq,alpha,col,oct)=>{const c=hx(col||"#ffffff");const svg=`<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='${freq}' numOctaves='${oct||3}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${(c[0]/255).toFixed(3)} 0 0 0 0 ${(c[1]/255).toFixed(3)} 0 0 0 0 ${(c[2]/255).toFixed(3)} 0 0 0 ${alpha} 0'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`;
@@ -32,10 +32,10 @@ const noise=(freq,alpha,col,oct)=>{const c=hx(col||"#ffffff");const svg=`<svg xm
 /* eras and tones */
 const ERA_G={"1930s-40s":0,"1950s":0,"1960s":1,"1970s":1,"1980s":2,"1990s":2,"2000s":3,"modern":3};
 const G=[
- {key:"letterpress",disp:"'Chonburi',serif",dw:400,ds:"normal",dtrack:".02em",body:"'Barlow',sans-serif",board:"#191510",ink:"#efe3c8",acc:"#c9a24a",photo:"grayscale(1) sepia(.4) contrast(1.08)",print:"Letterpress on black cover stock"},
+ {key:"letterpress",disp:"'Abhaya Libre',serif",dw:800,ds:"normal",dtrack:".02em",body:"'Barlow',sans-serif",board:"#191510",ink:"#efe3c8",acc:"#c9a24a",photo:"grayscale(1) sepia(.4) contrast(1.08)",print:"Letterpress on black cover stock"},
  {key:"offset",disp:"'Coustard',serif",dw:900,ds:"normal",dtrack:"0",body:"'Barlow',sans-serif",board:"#2b1711",ink:"#f7e2bf",acc:"#e2832f",photo:"sepia(.32) saturate(.85) contrast(.95) brightness(1.04)",print:"Offset on board"},
- {key:"chalk",disp:"'Barlow Condensed',sans-serif",dw:800,ds:"italic",dtrack:".01em",body:"'Barlow',sans-serif",board:"#1c2420",ink:"#f1f0e8",acc:"#f2c94c",photo:"contrast(1.05) saturate(.95)",print:"Chalked fresh daily"},
- {key:"laser",disp:"'Unbounded',sans-serif",dw:800,ds:"normal",dtrack:"-.01em",body:"'Barlow',sans-serif",board:"#0e0e10",ink:"#f5f4f1",acc:"#ff5a3c",photo:"contrast(1.1) saturate(1.06)",print:"Laser printed in house"}];
+ {key:"chalk",disp:"'Cabin Condensed',sans-serif",dw:700,ds:"italic",dtrack:".01em",body:"'Barlow',sans-serif",board:"#1c2420",ink:"#f1f0e8",acc:"#f2c94c",photo:"contrast(1.05) saturate(.95)",print:"Chalked fresh daily"},
+ {key:"laser",disp:"'Krona One',sans-serif",dw:400,ds:"normal",dtrack:"-.01em",body:"'Barlow',sans-serif",board:"#0e0e10",ink:"#f5f4f1",acc:"#ff5a3c",photo:"contrast(1.1) saturate(1.06)",print:"Laser printed in house"}];
 const TONE={
  gritty:{wear:.85,photo:"contrast(1.2) saturate(.72)",vig:.75,rot:-1.5,tint:"rgba(120,90,50,.10)",voice:["Cash or tab. No exceptions.","Settle up before you leave"]},
  glossy:{wear:0,photo:"saturate(1.15) contrast(1.06)",vig:.25,rot:0,gloss:1,voice:["Members and their guests","Your tab, kept by the house"]},

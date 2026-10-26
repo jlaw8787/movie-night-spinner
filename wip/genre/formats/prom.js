@@ -10,6 +10,8 @@ const W=600,H=900,ID="prom";
 if(!document.getElementById("fmt-prom-fonts")){
   const l=document.createElement("link");l.id="fmt-prom-fonts";l.rel="stylesheet";
   l.href="https://fonts.googleapis.com/css2?family=Chonburi&family=Leckerli+One&family=Chicle&family=Sonsie+One&family=Russo+One&family=Bowlby+One&family=Permanent+Marker&family=Unbounded:wght@800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Karla:ital,wght@0,500;0,800;1,500&family=Josefin+Sans:ital,wght@0,500;0,700;1,500&family=Cabin:ital,wght@0,500;0,700;1,500&family=Montserrat:ital,wght@0,500;0,800;1,500&family=Archivo:ital,wght@0,500;0,800;1,500&family=Archivo+Narrow:ital,wght@0,500;0,700;1,500&family=Manrope:wght@500;800&family=Pinyon+Script&family=Caveat:wght@700&display=swap";
+  /* warm every face as soon as the sheet lands, so menu fitting measures with real metrics */
+  l.onload=()=>{try{["Chonburi", "Leckerli One", "Chicle", "Sonsie One", "Russo One", "Bowlby One", "Permanent Marker", "Unbounded", "Libre Baskerville", "Karla", "Josefin Sans", "Cabin", "Montserrat", "Archivo", "Archivo Narrow", "Manrope", "Pinyon Script", "Caveat"].forEach(f=>{document.fonts.load(`800 20px "${f}"`);document.fonts.load(`500 20px "${f}"`);document.fonts.load(`italic 500 20px "${f}"`)})}catch(e){}};
   document.head.appendChild(l);
 }
 
@@ -21,6 +23,10 @@ const FAMILY=new Set(["kids","fairytale","xmas","wizard"]);
 const DRY=[[/\b(red |white )?wine\b/gi,"grape juice"],[/\bchampagne\b|\bprosecco\b/gi,"sparkling apple"],[/\b(?<!root |ginger )beers?\b/gi,"root beer"],[/\bcocktails?\b/gi,"mocktail"],[/\b(rum|vodka|whisky|whiskey|bourbon|tequila|brandy|liqueur|schnapps)\b/gi,"syrup"]];
 const dry=s=>DRY.reduce((a,[r,t])=>a.replace(r,t),s);
 const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");return (i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"")};
+/* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
+const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/[,;:.]/)[0].trim();return p.length<=n&&p.length>=12?p:""};
+/* real layout height of a block at a given width, measured off screen; null when there is no document */
+const domH=(html,w)=>{try{const b=document.body;if(!b)return null;const d=document.createElement("div");d.style.cssText=`position:absolute;left:-12000px;top:0;width:${w}px;visibility:hidden;display:flow-root`;d.innerHTML=html;b.appendChild(d);const h=d.getBoundingClientRect().height;b.removeChild(d);return h}catch(e){return null}};
 
 /* ---------- colour ---------- */
 const rgb=h=>{h=String(h||"").replace("#","");if(h.length===3)h=h.split("").map(c=>c+c).join("");return /^[0-9a-f]{6}$/i.test(h)?[0,2,4].map(i=>parseInt(h.slice(i,i+2),16)):null};
@@ -100,7 +106,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const sign=C(fl.sign)||venue;
   const note={text:C(fl.note&&fl.note.text)||sentence(f.T)||"Thanks for coming. Eat up, then everyone on the dance floor.",by:C(fl.note&&fl.note.by)||"The Dance Committee"};
   const winks=(fl.winks||[]).map(C).filter(Boolean);
-  const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:"Admit One",lines:["Doors open at seven",T.ticket]};
+  const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:"Dance Ticket",lines:["Doors open at seven","Supper served at nine"]};
   const num=String(fl.number||"").replace(/\D/g,"")||year;
   const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
   const img=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
@@ -208,35 +214,39 @@ window.MENU_FORMATS[ID]=ctx=>{
   const backFine=`${fineW.map(s=>trunc(s,46)).join(". ")}${fineW.length?". ":""}Prices subject to change. Form PD ${num}${num===year?"":". "+year}.`;
   const fT=fitType(backFine,RW,64,.52,15,14,1.3,4);
   const footH=(cue?20+8+cT.n*cT.z*1.3+14:0)+fT.n*fT.z*1.3;
-  const MH=H-24-headH-18-footH-24;
-  /* fit the menu into the space left */
+  let MH=H-24-headH-18-footH-24;
+  const barStyle={letterpress:`border-top:2px solid ${ink};border-bottom:1px solid ${ink};padding:3px 0`,offset:`background:${band};color:${bandText};padding:4px 10px;border-radius:${Math.min(E.radius,12)}px`,glossy:`border-left:4px solid ${ACC};padding-left:10px;color:${ACC}`,laser:`background:${band};color:${bandText};padding:3px 10px`,photocopy:`border-bottom:3px solid ${ink};padding-bottom:2px`,clean:`border-bottom:2px solid ${ACC};padding-bottom:4px`}[E.proc];
+  const secCol={letterpress:ink,offset:bandText,glossy:ACC,laser:bandText,photocopy:ink,clean:ink}[E.proc];
+  const menuFor=FS=>courses.map((c,i)=>`<div style="margin-top:${i?FS.G+4:0}px">
+      <div style="font:${E.disp==="Unbounded"?"800 ":""}${FS.S}px/1.25 ${disp};color:${secCol};${barStyle};margin-bottom:8px">${esc(SEC[c.k])}</div>
+      ${c.items.map(it=>{const maxC=FS.nl?Math.floor(FS.nl*RW/(FS.N*E.bcw)*.95):0;return `<div style="margin-bottom:${FS.G}px">
+        <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline"><span style="font:800 ${FS.D}px/1.12 ${body};color:${ink}">${esc(it.n)}</span><span style="font:800 ${FS.D}px/1.12 ${body};color:${ACC};white-space:nowrap">${esc(it.p)}</span></div>
+        ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${soft};margin-top:2px">${esc(sentence(clip(it.note,maxC)))}</div>`:""}</div>`}).join("")}</div>`).join("");
+  /* fit the menu into the space left: measured in the page where possible, estimated otherwise */
   const dcw=E.bcw+.04;
+  const est=(FS)=>{let t=0;courses.forEach((c,i)=>{t+=FS.S*1.3+8+(i?FS.G+4:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,RW-FS.D*2.9,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,RW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
+  const measure=FS=>{const h=domH(menuFor(FS),RW);return h==null?est(FS):h*1.04};
   let FS=null;
   outer:for(let s=1.07;s>=.55;s-=.05){
-    const D=Math.max(17,Math.round(28*s)),N=Math.max(15,Math.round(21*s)),S=Math.max(18,Math.round(26*s)),G=Math.max(4,Math.round(14*s));
-    for(const nl of [2,1,0]){
-      let t=0;courses.forEach((c,i)=>{t+=S*1.3+8+(i?G+4:0);c.items.forEach(it=>{t+=lines(it.n,D,RW-D*2.9,dcw)*D*1.12;if(nl&&it.note)t+=Math.min(nl,lines(it.note,N,RW,E.bcw))*N*1.3+2;t+=G})});
-      if(t<=MH){FS={D,N,S,G,nl,t};break outer}
-      if(s>.75)break;
-    }
+    const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(18,Math.round(26*s)),G:Math.max(4,Math.round(14*s))};
+    for(const nl of [2,1,0]){if(nl===0&&s>.72)continue;const FSx=Object.assign({},base,{nl});const t=measure(FSx);if(t<=MH){FS=Object.assign(FSx,{t});break outer}}
   }
-  FS=FS||{D:17,N:15,S:18,G:4,nl:0,t:MH};
+  /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
+  let dropCue=false;
+  if(!FS){dropCue=!!cue;MH+=cue?20+8+cT.n*cT.z*1.3+14:0;
+    for(const cap of [4,3,2]){courses.forEach(c=>c.items=c.items.slice(0,cap));
+      for(const D of [17,16,15]){const FSx={D,N:15,S:D+1,G:3,nl:0};const t=measure(FSx);if(t<=MH){FS=Object.assign(FSx,{t});break}}
+      if(FS)break}
+    FS=FS||{D:15,N:15,S:16,G:3,nl:0,t:MH}}
   /* spare room under a short menu becomes an Also Tonight list of winks */
   const spare=MH-FS.t,aw=winks.slice(1,4);
   const also=spare>150&&aw.length?aw.slice(0,Math.max(1,Math.min(aw.length,Math.floor((spare-60)/34)))):[];
-  const barStyle={letterpress:`border-top:2px solid ${ink};border-bottom:1px solid ${ink};padding:3px 0`,offset:`background:${band};color:${bandText};padding:4px 10px;border-radius:${Math.min(E.radius,12)}px`,glossy:`border-left:4px solid ${ACC};padding-left:10px;color:${ACC}`,laser:`background:${band};color:${bandText};padding:3px 10px`,photocopy:`border-bottom:3px solid ${ink};padding-bottom:2px`,clean:`border-bottom:2px solid ${ACC};padding-bottom:4px`}[E.proc];
-  const secCol={letterpress:ink,offset:bandText,glossy:ACC,laser:bandText,photocopy:ink,clean:ink}[E.proc];
-  const menuHtml=courses.map((c,i)=>`<div style="margin-top:${i?FS.G+4:0}px">
-      <div style="font:${E.disp==="Unbounded"?"800 ":""}${FS.S}px/1.25 ${disp};color:${secCol};${barStyle};margin-bottom:8px">${esc(SEC[c.k])}</div>
-      ${c.items.map(it=>{const maxC=FS.nl?Math.floor(FS.nl*RW/(FS.N*E.bcw)*.9):0;return `<div style="margin-bottom:${FS.G}px">
-        <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline"><span style="font:800 ${FS.D}px/1.12 ${body};color:${ink}">${esc(it.n)}</span><span style="font:800 ${FS.D}px/1.12 ${body};color:${ACC};white-space:nowrap">${esc(it.p)}</span></div>
-        ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${soft};margin-top:2px">${esc(sentence(trunc(it.note,maxC)))}</div>`:""}</div>`}).join("")}</div>`).join("");
   const right=`<div style="position:absolute;left:${RX}px;top:24px;width:${RW}px;height:${H-48}px;display:flex;flex-direction:column">
       <div>${head}</div>
-      <div style="margin-top:18px;height:${Math.floor(MH)}px;display:flex;flex-direction:column"><div>${menuHtml}</div>
+      <div style="margin-top:18px;height:${Math.floor(MH)}px;display:flex;flex-direction:column"><div>${menuFor(FS)}</div>
         ${also.length?`<div style="margin-top:auto;margin-bottom:14px;border:2px solid ${ACC};border-radius:${Math.min(E.radius,10)}px;padding:12px 14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Also tonight</div>${also.map(w=>`<div style="font:600 17px/1.3 ${body};color:${ink};margin-top:4px">${esc(sentence(trunc(w,60)))}</div>`).join("")}</div>`:""}</div>
       <div style="margin-top:auto">
-        ${cue?`<div style="border-top:1px solid ${rgba(ink,.35)};padding-top:10px;margin-bottom:14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}
+        ${cue&&!dropCue?`<div style="border-top:1px solid ${rgba(ink,.35)};padding-top:10px;margin-bottom:14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}
         <div style="font:500 ${fT.z}px/1.3 ${body};color:${soft}">${esc(backFine)}</div></div></div>`;
   const back=`<div style="position:absolute;inset:0;background:${bg};${fp}">${strip}${right}</div>`;
   return {w:W,h:H,faces:[front,back]};

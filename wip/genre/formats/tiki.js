@@ -70,7 +70,9 @@ function price(k,i,era){
 function heroes(ctx){
   const im=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const st=(ctx.stills||[]).filter(Boolean).map(p=>im(p,"w1280"));
-  const post=ctx.poster?im(ctx.poster,"w780"):"";
+  /* tmdb-posters.js declares a top level const, so window.TMDB_POSTERS is empty: read the binding directly */
+  let pp=ctx.poster;if(!pp){try{pp=typeof TMDB_POSTERS!=="undefined"&&ctx.f&&TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]}catch(e){}}
+  const post=pp?im(pp,"w780"):"";
   return{list:st,poster:post,hero:st[0]||post,second:st[1]||st[0]||post,isPoster:!st.length};
 }
 function logoUrl(ctx){const l=ctx.logo;if(!l||!l[0])return"";const im=ctx.img||((p,s)=>`https://image.tmdb.org/t/p/${s}${p}`);return im(l[0],"w500")}
@@ -140,15 +142,15 @@ window.MENU_FORMATS=window.MENU_FORMATS||{};
 const propLines=p=>(p&&p.lines||[]).slice(0,3);
 /* ---- tiki: tiki bar fold-out, 2 faces 600x1200 ---- */
 const W=600,H=1200;
-loadFonts("family=Fontdiner+Swanky&family=Josefin+Sans:wght@400;600;700&family=Original+Surfer&family=Karla:ital,wght@0,400;0,700;1,400&family=Paytone+One&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700&family=Yellowtail",
-  ["Fontdiner Swanky","Josefin Sans","Original Surfer","Karla","Paytone One","Nunito Sans","DM Serif Display","DM Sans","Caveat","Yellowtail"]);
+loadFonts("family=Fontdiner+Swanky&family=Josefin+Sans:wght@400;600;700&family=Original+Surfer&family=Karla:ital,wght@0,400;0,700;1,400&family=Lemon&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400&family=Alice&family=DM+Sans:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600;700&family=Yellowtail",
+  ["Fontdiner Swanky","Josefin Sans","Original Surfer","Karla","Lemon","Nunito Sans","Alice","DM Sans","Caveat","Yellowtail"]);
 watch();
 /* era pairing: 50s supper club tiki, 60s/70s surf, 80s/90s resort gloss, modern island hotel */
 const TYPE=[
   {disp:"'Fontdiner Swanky',serif",dw:400,up:0,body:"'Josefin Sans',sans-serif",bw:400,caps:"'Josefin Sans',sans-serif",cw:700,dish:"'Josefin Sans',sans-serif",dishW:700,sig:"'Yellowtail',cursive",sigS:32},
   {disp:"'Original Surfer',sans-serif",dw:400,up:0,body:"'Karla',sans-serif",bw:400,caps:"'Karla',sans-serif",cw:700,dish:"'Karla',sans-serif",dishW:700,sig:"'Yellowtail',cursive",sigS:32},
-  {disp:"'Paytone One',sans-serif",dw:400,up:1,body:"'Nunito Sans',sans-serif",bw:400,caps:"'Nunito Sans',sans-serif",cw:800,dish:"'Nunito Sans',sans-serif",dishW:800,sig:"'Caveat',cursive",sigS:34},
-  {disp:"'DM Serif Display',serif",dw:400,up:0,body:"'DM Sans',sans-serif",bw:400,caps:"'DM Sans',sans-serif",cw:700,dish:"'DM Sans',sans-serif",dishW:700,sig:"'Caveat',cursive",sigS:34}
+  {disp:"'Lemon',serif",dw:400,up:1,body:"'Nunito Sans',sans-serif",bw:400,caps:"'Nunito Sans',sans-serif",cw:800,dish:"'Nunito Sans',sans-serif",dishW:800,sig:"'Caveat',cursive",sigS:34},
+  {disp:"'Alice',serif",dw:400,up:0,body:"'DM Sans',sans-serif",bw:400,caps:"'DM Sans',sans-serif",cw:700,dish:"'DM Sans',sans-serif",dishW:700,sig:"'Caveat',cursive",sigS:34}
 ];
 /* card stock and lagoon water by era */
 const PAPER=[
