@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Jacob's creature pastries",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 27,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pastry into little animal shapes with cutters or a knife.",
+     "min": 12
+    },
+    {
+     "text": "Brush with beaten egg and sprinkle generously with cinnamon sugar.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 12
+    },
+    {
+     "text": "Cool on a rack and arrange like a bakery window.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Blind Pig speakeasy bites",
+   "course": "s",
+   "prep_min": 22,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs until hard.",
+     "min": 10
+    },
+    {
+     "text": "Cool and peel.",
+     "min": 8
+    },
+    {
+     "text": "Halve the eggs and mash the yolks with mayonnaise and Dijon until smooth.",
+     "min": 6
+    },
+    {
+     "text": "Pipe back into the whites and dust with smoked paprika.",
+     "min": 6
+    },
+    {
+     "text": "Set out on the bar beside a bowl of green olives.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Polish pierogi",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 37,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender, then mash and mix with the cheddar.",
+     "min": 20
+    },
+    {
+     "text": "Slice the onions.",
+     "min": 3
+    },
+    {
+     "text": "Fill the wrappers and pinch closed.",
+     "min": 30
+    },
+    {
+     "text": "Boil the pierogi in batches until they float.",
+     "min": 12
+    },
+    {
+     "text": "Fry in butter with the onion until golden on both sides.",
+     "min": 10
+    },
+    {
+     "text": "Serve with sour cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Queenie's apple strudel",
+   "course": "w",
+   "prep_min": 34,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "green apples, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sultanas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "sheets filo pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the apples and toss with sultanas, cinnamon, sugar and breadcrumbs.",
+     "min": 12
+    },
+    {
+     "text": "Layer buttered filo sheets on a tray.",
+     "min": 10
+    },
+    {
+     "text": "Spread the filling along one edge and roll up.",
+     "min": 8
+    },
+    {
+     "text": "Brush with butter.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 35
+    },
+    {
+     "text": "Cool slightly.",
+     "min": 10
+    },
+    {
+     "text": "Dust with icing sugar.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Speakeasy lemonade",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 16,
+   "make_ahead": "Syrup up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "gin, for the grown-ups",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water.",
+     "min": 3
+    },
+    {
+     "text": "Cool the syrup.",
+     "min": 15
+    },
+    {
+     "text": "Squeeze the lemons into a jug and add the syrup.",
+     "min": 8
+    },
+    {
+     "text": "Add plenty of ice and top with soda water.",
+     "min": 4
+    },
+    {
+     "text": "Pour into teacups and add a splash of gin to the grown-ups' cups.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

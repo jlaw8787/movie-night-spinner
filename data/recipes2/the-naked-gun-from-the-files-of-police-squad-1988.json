@@ -1,0 +1,298 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ballpark peanuts",
+   "course": "s",
+   "prep_min": 3,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "peanuts in the shell",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the peanuts on a tray and roast at 180C.",
+     "min": 20
+    },
+    {
+     "text": "Toss with salt while still hot and divide between paper bags. Leave a bowl for the shells.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Umpire's hot dogs",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "sweet relish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the franks, then griddle until blistered.",
+     "min": 8
+    },
+    {
+     "text": "Steam the buns over the pot.",
+     "min": 1
+    },
+    {
+     "text": "Load each with a frank, mustard and relish and wrap in paper.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Ballpark chilli dogs",
+   "course": "m",
+   "prep_min": 13,
+   "cook_min": 61,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin chopped tomatoes (400g)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onions.",
+     "min": 8
+    },
+    {
+     "text": "Brown the mince with one onion and the chilli powder. Add the tomatoes.",
+     "min": 8
+    },
+    {
+     "text": "Simmer.",
+     "min": 45
+    },
+    {
+     "text": "Griddle the franks and steam the buns.",
+     "min": 8
+    },
+    {
+     "text": "Fill the buns, spoon over chilli and top with cheddar and the diced raw onion.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ninth inning malt and fudge ice cream cups",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 86,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "chocolate honeycomb, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "salted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "paper cups",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the ice cream.",
+     "min": 10
+    },
+    {
+     "text": "Heat the cream until steaming and stir in the chocolate and golden syrup until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Cool the fudge.",
+     "min": 20
+    },
+    {
+     "text": "Ripple half the fudge through the ice cream with the honeycomb.",
+     "min": 8
+    },
+    {
+     "text": "Refreeze.",
+     "min": 60
+    },
+    {
+     "text": "Scoop into cups, warm the rest of the fudge, spoon over and scatter with peanuts.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Seventh inning spiked frozen lemonade",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cups ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool.",
+     "min": 15
+    },
+    {
+     "text": "Blend the syrup with the lemon juice, vodka, cold water and ice until slushy.",
+     "min": 2
+    },
+    {
+     "text": "Pour into cups, garnish with lemon wheels and serve with straws.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

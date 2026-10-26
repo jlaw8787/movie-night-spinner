@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "22's first lollipop",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 32,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "glucose syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "food colouring, a drop",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "lollipop sticks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the sugar, glucose syrup and water to 150C without stirring.",
+     "min": 15
+    },
+    {
+     "text": "Take off the heat and stir in a drop of colouring.",
+     "min": 1
+    },
+    {
+     "text": "Pour small rounds onto baking paper and press a stick into each.",
+     "min": 6
+    },
+    {
+     "text": "Leave to harden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Barber shop bagel bites",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 6,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "mini bagels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, thinly sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split and toast the bagels.",
+     "min": 6
+    },
+    {
+     "text": "Spread with cream cheese.",
+     "min": 6
+    },
+    {
+     "text": "Top each with a fold of smoked salmon, a few capers and thin slices of red onion.",
+     "min": 10
+    },
+    {
+     "text": "Lay them out on a tray.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "New York pizza slice",
+   "course": "m",
+   "prep_min": 23,
+   "cook_min": 31,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven and a tray to 250C.",
+     "min": 15
+    },
+    {
+     "text": "Stretch the dough as thin as you can into 2 big rounds.",
+     "min": 15
+    },
+    {
+     "text": "Spread with sauce and mozzarella.",
+     "min": 5
+    },
+    {
+     "text": "Bake on the very hot tray until blistered, one pizza at a time.",
+     "min": 16
+    },
+    {
+     "text": "Dust with oregano and parmesan, cut into big slices and fold to eat.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Maple seed cookies",
+   "course": "w",
+   "prep_min": 18,
+   "cook_min": 27,
+   "make_ahead": "Up to 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "pecans, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cream the butter, brown sugar and maple syrup, then beat in the egg.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the flour and pecans.",
+     "min": 5
+    },
+    {
+     "text": "Roll into balls, flatten slightly and lay on lined trays.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 12
+    },
+    {
+     "text": "Cool on the tray.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "New York chocolate egg cream",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 33,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "very cold full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cocoa, sugar and water over low heat until smooth, then stir in the vanilla.",
+     "min": 3
+    },
+    {
+     "text": "Chill the syrup.",
+     "min": 30
+    },
+    {
+     "text": "Spoon syrup into tall glasses and add the milk.",
+     "min": 4
+    },
+    {
+     "text": "Pour in the soda water quickly while stirring hard with a long spoon until a thick foam rises. Serve straight away.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

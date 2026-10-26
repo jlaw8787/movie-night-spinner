@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Fried egg canapés",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "small brioche loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "quail eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut 12 small rounds from the brioche and toast them.",
+     "min": 8
+    },
+    {
+     "text": "Fry the bacon until crisp and break into pieces.",
+     "min": 7
+    },
+    {
+     "text": "Fry the quail eggs in butter.",
+     "min": 4
+    },
+    {
+     "text": "Put an egg and a bit of bacon on each round and sprinkle with chives.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Dead Meat's last chips",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 22,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "neutral oil, for the aioli",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thick chips.",
+     "min": 10
+    },
+    {
+     "text": "Fry in 140C oil, then rest.",
+     "min": 16
+    },
+    {
+     "text": "Whisk the yolk, crushed garlic and lemon juice, then drip in the oil until thick.",
+     "min": 8
+    },
+    {
+     "text": "Fry again at 185C until crisp.",
+     "min": 6
+    },
+    {
+     "text": "Salt the chips and serve with the aioli.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Airbase barbecue",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rib eye steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shred the cabbage and carrots and toss with the mayonnaise, vinegar, sugar and salt.",
+     "min": 10
+    },
+    {
+     "text": "Grill the steaks and corn over high heat.",
+     "min": 15
+    },
+    {
+     "text": "Rest the steaks and serve with corn and slaw.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Custard tarts",
+   "course": "w",
+   "prep_min": 17,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "nutmeg, to grate",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Line a 12-hole muffin tray with rounds of pastry.",
+     "min": 10
+    },
+    {
+     "text": "Blind-bake the cases.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the eggs, milk, cream and sugar.",
+     "min": 4
+    },
+    {
+     "text": "Fill the cases and grate nutmeg on top.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 150C until just set.",
+     "min": 20
+    },
+    {
+     "text": "Cool before serving.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Officers' club Moscow mule",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "copper or steel mugs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "spicy ginger beer, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "mint sprigs",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the mugs in the freezer, then fill with ice.",
+     "min": 15
+    },
+    {
+     "text": "Add vodka and lime juice to each mug.",
+     "min": 2
+    },
+    {
+     "text": "Top with ginger beer and stir once from the bottom.",
+     "min": 1
+    },
+    {
+     "text": "Garnish with a lime wheel and a slapped mint sprig.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

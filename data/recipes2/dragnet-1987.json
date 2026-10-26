@@ -1,0 +1,424 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "PAGAN parmesan stuffed mushrooms",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "",
+     "item": "button mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Pull the stalks from the mushrooms and chop finely.",
+     "min": 12
+    },
+    {
+     "text": "Mix the stalks with the cream cheese, garlic, parmesan and parsley.",
+     "min": 5
+    },
+    {
+     "text": "Fill each mushroom cap.",
+     "min": 8
+    },
+    {
+     "text": "Mix the breadcrumbs with the butter and press on top.",
+     "min": 4
+    },
+    {
+     "text": "Bake until bubbling and golden.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Friday's by-the-book glazed doughnut holes",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 105,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "milk, for icing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the milk with the butter and sugar, add the yeast and egg, then mix into the flour and salt.",
+     "min": 10
+    },
+    {
+     "text": "Knead.",
+     "min": 5
+    },
+    {
+     "text": "Prove until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Roll into small balls.",
+     "min": 15
+    },
+    {
+     "text": "Prove again.",
+     "min": 20
+    },
+    {
+     "text": "Fry at 175C in batches, turning, until golden.",
+     "min": 15
+    },
+    {
+     "text": "Whisk the icing sugar, milk and vanilla, dip the warm doughnuts and set on a rack.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Streebek's LA carnitas tacos",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 165,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pork into chunks and rub with cumin, oregano and salt.",
+     "min": 12
+    },
+    {
+     "text": "Braise at 160C with the orange, garlic and water.",
+     "min": 150
+    },
+    {
+     "text": "Shred the pork.",
+     "min": 10
+    },
+    {
+     "text": "Crisp in a hot pan with oil.",
+     "min": 10
+    },
+    {
+     "text": "Serve in tortillas with diced onion, coriander and lime.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "By-the-book vanilla slice",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 255,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the pastry pricked and weighted at 200C.",
+     "min": 15
+    },
+    {
+     "text": "Whisk the milk, yolks, sugar, cornflour and vanilla over medium heat until very thick.",
+     "min": 15
+    },
+    {
+     "text": "Spread the custard between the pastry sheets in a lined tin.",
+     "min": 10
+    },
+    {
+     "text": "Chill.",
+     "min": 240
+    },
+    {
+     "text": "Ice with icing sugar mixed with a little water.",
+     "min": 5
+    },
+    {
+     "text": "Cut into squares.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Just the facts cold brew tonic",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 720,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "coarsely ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "tonic water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the coffee into the cold water in a jug, cover and refrigerate overnight.",
+     "min": 3
+    },
+    {
+     "text": "Leave to steep.",
+     "min": 720
+    },
+    {
+     "text": "Strain through a paper filter.",
+     "min": 7
+    },
+    {
+     "text": "Fill glasses with ice, pour in tonic, then slowly pour cold brew over the top so it layers.",
+     "min": 3
+    },
+    {
+     "text": "Squeeze orange peel over each glass and drop it in.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

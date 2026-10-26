@@ -1,0 +1,294 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Church canapés",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "black pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the rye and cut into small squares.",
+     "min": 8
+    },
+    {
+     "text": "Top each with a fold of smoked salmon, a small spoon of creme fraiche, a dill sprig and pepper.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Peach slices",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "ripe peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch flaky salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the peaches into wedges and arrange on a plate.",
+     "min": 6
+    },
+    {
+     "text": "Warm the honey with lime juice and drizzle over.",
+     "min": 3
+    },
+    {
+     "text": "Scatter with torn mint and a pinch of flaky salt.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Castor's lavish dinner",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lobster tails",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "salad leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the lobster tails lengthways.",
+     "min": 6
+    },
+    {
+     "text": "Melt the butter with crushed garlic and chopped parsley and brush over the flesh.",
+     "min": 4
+    },
+    {
+     "text": "Grill flesh side up until just white.",
+     "min": 8
+    },
+    {
+     "text": "Whisk lemon juice and olive oil into a vinaigrette, toss the leaves and serve alongside.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Peach cobbler",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C. Toss the sliced peaches with the sugar, lemon juice and cinnamon in a baking dish.",
+     "min": 12
+    },
+    {
+     "text": "Rub the butter into the flour and stir in the buttermilk.",
+     "min": 8
+    },
+    {
+     "text": "Drop spoonfuls over the fruit and bake.",
+     "min": 35
+    }
+   ]
+  },
+  {
+   "n": "Peach Bellini",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "prosecco, chilled",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the peaches with the sugar and lemon juice until smooth and strain.",
+     "min": 7
+    },
+    {
+     "text": "Put purée in each flute.",
+     "min": 1
+    },
+    {
+     "text": "Top slowly with prosecco and stir once.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

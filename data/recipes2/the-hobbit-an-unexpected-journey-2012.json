@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bag End pantry raid board",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "aged cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "pork pies",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pickled onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cheddar into wedges and slice the pork pies.",
+     "min": 6
+    },
+    {
+     "text": "Cut the apples into wedges and tear the bread.",
+     "min": 4
+    },
+    {
+     "text": "Pile everything onto a big board so guests can raid it at once.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Rivendell greens",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mixed salad leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet pea shoots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mint leaves, torn",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pepitas",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the pepitas in a dry pan.",
+     "min": 4
+    },
+    {
+     "text": "Slice the cucumber and tear the mint.",
+     "min": 6
+    },
+    {
+     "text": "Toss the leaves, pea shoots, cucumber and mint, then dress with lemon juice and olive oil.",
+     "min": 4
+    },
+    {
+     "text": "Scatter with pepitas and pile lightly onto a pale platter.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Hobbit second breakfast",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "thick pork sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the sausages until browned.",
+     "min": 15
+    },
+    {
+     "text": "Add the bacon, mushrooms and tomatoes to the pan.",
+     "min": 10
+    },
+    {
+     "text": "Fry the eggs in the fat at the end.",
+     "min": 4
+    },
+    {
+     "text": "Toast the bread and butter it.",
+     "min": 5
+    },
+    {
+     "text": "Plate it all up.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bilbo's seed cake",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 82,
+   "make_ahead": "Up to 3 days, keep covered",
+   "ingredients": [
+    {
+     "q": 175,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 225,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "caraway seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until pale, then beat in the eggs.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the flour, caraway seeds and milk.",
+     "min": 4
+    },
+    {
+     "text": "Pour into a lined loaf tin.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 170C.",
+     "min": 50
+    },
+    {
+     "text": "Cool the cake.",
+     "min": 30
+    },
+    {
+     "text": "Slice to serve with a cup of tea.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Dwarvish spiced ale punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "brown ale",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel strips of zest from the orange.",
+     "min": 3
+    },
+    {
+     "text": "Simmer the apple juice with the honey, 2 cinnamon sticks, cloves and zest.",
+     "min": 10
+    },
+    {
+     "text": "Turn the heat to low and add the ale, warming through without boiling.",
+     "min": 3
+    },
+    {
+     "text": "Ladle into mugs and add a cinnamon stick to each. For non-drinkers, swap the ale for ginger beer and serve over ice.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

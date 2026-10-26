@@ -1,0 +1,406 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chicago hot dogs",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 7,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "small all-beef franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "small poppy seed hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "sweet relish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tomato",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pickle spears",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "sport peppers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "celery salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onion and slice the tomato.",
+     "min": 5
+    },
+    {
+     "text": "Heat the franks in simmering water until piping hot.",
+     "min": 5
+    },
+    {
+     "text": "Warm the buns in a steamer.",
+     "min": 1
+    },
+    {
+     "text": "Fill the buns and finish with celery salt.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Key West conch fritters",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 16,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "peeled prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "celery stick",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Finely chop the prawns, capsicum, onion and celery.",
+     "min": 12
+    },
+    {
+     "text": "Mix the flour, baking powder, egg and milk to a thick batter, then fold in the prawns and vegetables.",
+     "min": 5
+    },
+    {
+     "text": "Heat the oil to 180C.",
+     "min": 5
+    },
+    {
+     "text": "Fry spoonfuls until golden, in batches.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise with lime juice and serve.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Chicago Italian beef",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 71,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef topside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "hot giardiniera",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef.",
+     "min": 3
+    },
+    {
+     "text": "Roast at 200C until 52C at the centre.",
+     "min": 40
+    },
+    {
+     "text": "Rest the beef.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the stock with crushed garlic and oregano into a jus.",
+     "min": 10
+    },
+    {
+     "text": "Shave the beef very thin.",
+     "min": 8
+    },
+    {
+     "text": "Warm the beef gently in the jus.",
+     "min": 1
+    },
+    {
+     "text": "Pile into the rolls, dip briefly in the jus and top with giardiniera.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Key lime pie",
+   "course": "w",
+   "prep_min": 21,
+   "cook_min": 285,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sweetened condensed milk (1 tin)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits, mix with the butter and press into a 20cm pie dish.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the condensed milk, yolks and lime juice, then pour into the crust.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 160C until just set.",
+     "min": 15
+    },
+    {
+     "text": "Cool.",
+     "min": 30
+    },
+    {
+     "text": "Chill.",
+     "min": 240
+    },
+    {
+     "text": "Softly whip the cream and spoon over the pie.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Key West rum punch",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "golden rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "ml",
+     "item": "grenadine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "nutmeg, to grate",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four glasses with ice.",
+     "min": 2
+    },
+    {
+     "text": "Add rum, pineapple juice, orange juice, lime juice and grenadine to each.",
+     "min": 3
+    },
+    {
+     "text": "Stir and finish with a light grating of nutmeg.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

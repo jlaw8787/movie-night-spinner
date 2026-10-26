@@ -1,0 +1,340 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Portorosso gelato cups",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "lemon sorbet",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "amaretti biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Scoop the ice cream and sorbet side by side into small cups.",
+     "min": 5
+    },
+    {
+     "text": "Crush the amaretti over the top.",
+     "min": 3
+    },
+    {
+     "text": "Finish with a little lemon zest.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Harbour zucchini fritters",
+   "course": "s",
+   "prep_min": 19,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "zucchini",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the zucchini and squeeze dry.",
+     "min": 12
+    },
+    {
+     "text": "Mix with the ricotta, egg, parmesan and flour.",
+     "min": 4
+    },
+    {
+     "text": "Fry spoonfuls in olive oil until golden on both sides, in batches.",
+     "min": 12
+    },
+    {
+     "text": "Serve with lemon wedges.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Trenette al pesto",
+   "course": "m",
+   "prep_min": 19,
+   "cook_min": 14,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "linguine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pine nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "potatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "green beans, trimmed",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the basil, pine nuts, garlic, parmesan and olive oil into pesto.",
+     "min": 8
+    },
+    {
+     "text": "Slice the potatoes and trim the beans.",
+     "min": 8
+    },
+    {
+     "text": "Boil the potatoes in salted water, then add the linguine and beans to the same pot.",
+     "min": 14
+    },
+    {
+     "text": "Drain and toss with the pesto.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Lemon ricotta cake",
+   "course": "w",
+   "prep_min": 16,
+   "cook_min": 75,
+   "make_ahead": "Up to 2 days, keep covered",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the ricotta, sugar, eggs and lemon zest until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the flour.",
+     "min": 3
+    },
+    {
+     "text": "Pour into a lined tin.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 170C until set.",
+     "min": 45
+    },
+    {
+     "text": "Cool the cake.",
+     "min": 30
+    },
+    {
+     "text": "Dust with icing sugar.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Portorosso lemon and basil soda",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 46,
+   "make_ahead": "Syrup up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 700,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar and water until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Add the basil, take off the heat and steep, then strain.",
+     "min": 15
+    },
+    {
+     "text": "Chill the syrup.",
+     "min": 30
+    },
+    {
+     "text": "Mix the syrup with the lemon juice.",
+     "min": 6
+    },
+    {
+     "text": "Fill glasses with ice, divide the lemon mix between them and top with soda water. Twist a strip of peel over each glass and add a small basil sprig.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}
