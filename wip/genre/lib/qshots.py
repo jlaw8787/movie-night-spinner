@@ -2,7 +2,7 @@
 import asyncio,os,json,re
 from urllib.parse import quote
 from playwright.async_api import async_playwright
-R='/home/claude/polish';OUT=f'{R}/wip/genre/proofs/_q'
+R=os.getcwd();OUT=os.environ.get('QOUT',f'{R}/wip/genre/proofs/_q')
 A=json.load(open(f'{R}/data/film-format.json'));films=sorted(A)
 slug=lambda s:re.sub(r'[^a-z0-9]+','-',s.lower()).strip('-')
 async def worker(b,q):

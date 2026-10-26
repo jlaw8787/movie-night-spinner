@@ -792,6 +792,9 @@ function libPhotoPass(card,L,poster){
     const nx=spare.find(x=>!used.has(x));
     if(nx){used.add(nx);i.removeAttribute("srcset");i.src=TMDB_IMG+"w780"+nx}
     else{let e=i;while(e.parentElement&&area(e.parentElement)<FA*0.4&&e.parentElement.querySelectorAll("img").length===1)e=e.parentElement;e.style.visibility="hidden"}});
+  /* 4. aim cropped scene photos at the faces in them, so a tight frame shows a face, not half of one */
+  const foc=L.focus||{};imgs.forEach(i=>{if(i===main||i.style.visibility==="hidden")return;const f=foc[path(i)];if(!f)return;
+    const cs=getComputedStyle(i);if(cs.objectFit!=="cover")return;i.style.objectPosition=Math.round(f[0]*100)+"% "+Math.round(f[1]*100)+"%"});
 }
 /* after a format's own fitter: any clamped or ellipsis text that still hides words shrinks (to 14px at most) until it shows in full */
 function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;
