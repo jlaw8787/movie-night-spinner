@@ -764,6 +764,35 @@ function planWire(f){
 }
 /* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
 function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return t.slice(0,i).replace(/[,;:\s]+$/,"")+"."}
+/* one photo rule for every library menu (owner, Oct 26): the poster is shown whole, never blurred into a smear, never under the title logo,
+   and no photo appears twice. Runs after the format renders, so all 30 styles follow the same rule. */
+function libPhotoPass(card,L,poster){
+  const faces=[...card.querySelectorAll(".fx-face")];if(!faces.length)return;
+  const fa=faces[0].getBoundingClientRect(),FA=fa.width*fa.height||1;
+  const path=i=>((i.getAttribute("src")||"").match(/\/t\/p\/[^/]+(\/[^?#]+)/)||[])[1]||"";
+  const imgs=[...card.querySelectorAll(".fx-face img")];
+  const logoP=L.logo&&L.logo[0]||"";
+  const area=e=>{const r=e.getBoundingClientRect();return r.width*r.height};
+  const blurred=i=>/blur\(/.test(getComputedStyle(i).filter||"");
+  const dark=(L.palette&&L.palette.dark)||"#14110f";
+  /* 1. poster: hide blurred copies (fill their frame with the poster's own dark tone), show the main one whole */
+  const pimgs=imgs.filter(i=>poster&&path(i)===poster);
+  pimgs.filter(blurred).forEach(i=>{i.style.visibility="hidden";if(i.parentElement)i.parentElement.style.background=dark});
+  const sharp=pimgs.filter(i=>!blurred(i)).sort((a,b)=>area(b)-area(a));
+  const main=sharp[0];if(main){main.style.objectFit="contain";main.style.objectPosition="center"}
+  /* 2. title logo laid over the poster: take the logo card off, the poster already carries the title */
+  if(main&&logoP){const mr=main.getBoundingClientRect();
+    imgs.filter(i=>path(i)===logoP).forEach(l=>{const r=l.getBoundingClientRect(),ix=Math.max(0,Math.min(r.right,mr.right)-Math.max(r.left,mr.left)),iy=Math.max(0,Math.min(r.bottom,mr.bottom)-Math.max(r.top,mr.top));
+      if(ix*iy>r.width*r.height*0.25){let e=l;while(e.parentElement&&!e.parentElement.contains(main)&&area(e.parentElement)<FA*0.3)e=e.parentElement;e.style.visibility="hidden"}})}
+  /* 3. no photo twice, and the poster never doubles as a scene photo: swap in an unused still, or leave that frame out */
+  const used=new Set(),spare=(L.stills||[]).filter(x=>x!==poster);
+  const shown=imgs.filter(i=>i.style.visibility!=="hidden"&&path(i)&&path(i)!==logoP&&i!==main&&!blurred(i));
+  if(main)used.add(poster);
+  shown.forEach(i=>{const k=path(i);if(!used.has(k)){used.add(k);return}
+    const nx=spare.find(x=>!used.has(x));
+    if(nx){used.add(nx);i.removeAttribute("srcset");i.src=TMDB_IMG+"w780"+nx}
+    else{let e=i;while(e.parentElement&&area(e.parentElement)<FA*0.4&&e.parentElement.querySelectorAll("img").length===1)e=e.parentElement;e.style.visibility="hidden"}});
+}
 /* after a format's own fitter: any clamped or ellipsis text that still hides words shrinks (to 14px at most) until it shows in full */
 function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;
   let fs=parseFloat(cs.fontSize),lh=parseFloat(cs.lineHeight)||fs*1.2;
@@ -827,7 +856,7 @@ async function show(f,preferSig){
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
-      await new Promise(r=>setTimeout(r,180));libUnclip(card);setTimeout(()=>{if(id===renderId)libUnclip(card)},1400);setTimeout(()=>{if(id===renderId)libUnclip(card,1)},3200);
+      await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);setTimeout(()=>{if(id===renderId)libUnclip(card)},1400);setTimeout(()=>{if(id===renderId)libUnclip(card,1)},3200);
       phoneView(null);styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();
