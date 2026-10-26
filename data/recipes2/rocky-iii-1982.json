@@ -1,0 +1,390 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Italian Stallion tomato bruschetta",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 2,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "ciabatta loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "ripe tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "extra virgin olive oil, plus extra for brushing",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, shaved",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "sea salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the ciabatta into 12 pieces and brush with olive oil.",
+     "min": 4
+    },
+    {
+     "text": "Grill until charred and rub each piece with the cut garlic.",
+     "min": 6
+    },
+    {
+     "text": "Dice the tomatoes and mix with torn basil, olive oil, balsamic and salt.",
+     "min": 5
+    },
+    {
+     "text": "Rest the tomato mix.",
+     "min": 10
+    },
+    {
+     "text": "Pile on the bread just before serving and top with shaved parmesan.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Venice beach fish tacos",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "flathead fillets, cut in strips",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 330,
+     "u": "ml",
+     "item": "cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "small cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "fresh salsa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour with cold lager to a light batter.",
+     "min": 5
+    },
+    {
+     "text": "Mix the sour cream with lime juice for a crema.",
+     "min": 3
+    },
+    {
+     "text": "Dip the fish strips and fry at 180C in batches until crisp.",
+     "min": 12
+    },
+    {
+     "text": "Warm the tortillas.",
+     "min": 5
+    },
+    {
+     "text": "Fill with cabbage, fish, crema and salsa.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Clubber Lang rematch chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 101,
+   "make_ahead": "Marinate up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "brown rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "heads broccoli",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix lemon juice, crushed garlic, oregano and olive oil and coat the chicken.",
+     "min": 8
+    },
+    {
+     "text": "Marinate for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Cook the brown rice.",
+     "min": 30
+    },
+    {
+     "text": "Grill the chicken over high heat until charred and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Steam the broccoli florets.",
+     "min": 6
+    },
+    {
+     "text": "Serve with an extra squeeze of lemon.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Thunderlips charity tiramisu",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 717,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mascarpone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "savoiardi biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "strong coffee, cooled",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks with the sugar until pale.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the mascarpone and whipped cream.",
+     "min": 5
+    },
+    {
+     "text": "Dip the savoiardi briefly in coffee and layer with the cream in a dish.",
+     "min": 8
+    },
+    {
+     "text": "Repeat and finish with cream.",
+     "min": 3
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 720
+    },
+    {
+     "text": "Dust with cocoa.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Beach training lemonade",
+   "course": "d",
+   "prep_min": 14,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in hot water and cool.",
+     "min": 4
+    },
+    {
+     "text": "Squeeze the lemons into a big jug.",
+     "min": 5
+    },
+    {
+     "text": "Add the syrup and cold water.",
+     "min": 2
+    },
+    {
+     "text": "Bruise the mint and drop it in with plenty of ice.",
+     "min": 2
+    },
+    {
+     "text": "Stir well and pour into tall glasses.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

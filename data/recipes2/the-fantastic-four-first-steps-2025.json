@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sixties devilled eggs and cheese hedgehog",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple, cubed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "grapefruit, halved",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs, cool, peel and halve.",
+     "min": 10
+    },
+    {
+     "text": "Mash the yolks with mayonnaise, pipe back into the whites and dust with paprika.",
+     "min": 5
+    },
+    {
+     "text": "Thread cheddar and pineapple onto toothpicks and stick them into the grapefruit, cut side down.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Silver Surfer foil potatoes",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rosemary sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Divide the potatoes among squares of foil and add butter, garlic, rosemary and salt to each.",
+     "min": 10
+    },
+    {
+     "text": "Wrap tightly into parcels and roast at 200C.",
+     "min": 40
+    },
+    {
+     "text": "Open at the table and add a spoon of sour cream.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Retro roast chicken with glazed carrots",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 80,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter for mash",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chicken with butter, lemon and thyme.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 200C until golden and cooked through.",
+     "min": 75
+    },
+    {
+     "text": "Glaze the carrots in butter and a little sugar.",
+     "min": 10
+    },
+    {
+     "text": "Boil and mash the potatoes with butter and cook the peas.",
+     "min": 15
+    },
+    {
+     "text": "Serve everything on one big platter like a sixties advertisement.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Galactus-sized jelly mould",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 740,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "packets strawberry jelly crystals",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make up the jelly with a little less water than the packet says.",
+     "min": 15
+    },
+    {
+     "text": "Pour a layer into a ring mould with sliced strawberries and grapes.",
+     "min": 10
+    },
+    {
+     "text": "Chill until set, then fill with the rest.",
+     "min": 120
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 600
+    },
+    {
+     "text": "Turn out and serve with whipped cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Space race orange cream shake",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "orange slices",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the orange juice, ice cream, milk and vanilla until thick and creamy.",
+     "min": 2
+    },
+    {
+     "text": "Pour into tall glasses and top with whipped cream and an orange slice.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

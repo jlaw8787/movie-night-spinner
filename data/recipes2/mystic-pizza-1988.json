@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Portuguese kale soup",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch kale",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked sausage",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the potatoes and onion in the stock until soft, then mash smooth.",
+     "min": 25
+    },
+    {
+     "text": "Shred the kale finely and slice the sausage.",
+     "min": 10
+    },
+    {
+     "text": "Add both and simmer.",
+     "min": 5
+    },
+    {
+     "text": "Drizzle with olive oil.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Pizza parlour garlic knots",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the dough into ropes and tie each in a knot.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 220C until golden.",
+     "min": 12
+    },
+    {
+     "text": "Toss straight away in melted garlic butter with parsley and parmesan.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Leona's secret sauce pizza",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Sauce up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "linguica",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the tomatoes with crushed garlic, oregano, honey and chilli.",
+     "min": 20
+    },
+    {
+     "text": "Stretch the dough thin and spread with sauce.",
+     "min": 10
+    },
+    {
+     "text": "Top with mozzarella, sliced linguica and capsicum.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a hot steel at maximum heat.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Portuguese custard tarts",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 10,
+   "make_ahead": "Best the day they are baked",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the pastry into a tight log, slice into 12 and press into a muffin tin.",
+     "min": 15
+    },
+    {
+     "text": "Whisk the yolks, cream, sugar and lemon zest.",
+     "min": 8
+    },
+    {
+     "text": "Fill the cases and bake at 250C until blistered.",
+     "min": 12
+    },
+    {
+     "text": "Cool slightly and dust with cinnamon.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Jojo's wedding day sangria",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Make up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red apple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "Portuguese red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the orange, lemon and apple into a big jug.",
+     "min": 8
+    },
+    {
+     "text": "Add the wine, brandy, sugar and cinnamon stick and stir until the sugar dissolves.",
+     "min": 5
+    },
+    {
+     "text": "Chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Fill four glasses with ice, pour in the sangria with some fruit and top with a splash of lemonade.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

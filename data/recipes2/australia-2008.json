@@ -1,0 +1,354 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Drover's damper",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "extra butter, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Rub the butter into the flour until crumbly.",
+     "min": 5
+    },
+    {
+     "text": "Mix in the milk with a knife until it just comes together.",
+     "min": 3
+    },
+    {
+     "text": "Shape into a round, score a cross on top and bake until hollow when tapped.",
+     "min": 30
+    },
+    {
+     "text": "Serve with butter and golden syrup.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Faraway Downs corned beef sandwiches",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 180,
+   "make_ahead": "Beef cooked a day ahead, sandwiches made fresh",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "corned silverside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices of white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mustard pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the silverside with the onion and peppercorns.",
+     "min": 180
+    },
+    {
+     "text": "Cool the beef in its liquid.",
+     "min": 30
+    },
+    {
+     "text": "Slice thinly.",
+     "min": 8
+    },
+    {
+     "text": "Butter the bread and pile on the beef with mustard and mustard pickles.",
+     "min": 12
+    },
+    {
+     "text": "Cut into triangles.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Campfire beef and vegetables",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 180,
+   "make_ahead": "Up to 2 days, reheat to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in a camp oven or heavy pot.",
+     "min": 15
+    },
+    {
+     "text": "Add the onion, carrots, potatoes, stock, thyme and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Cover and cook over coals or at 160C until the beef falls apart.",
+     "min": 180
+    }
+   ]
+  },
+  {
+   "n": "Wattleseed pavlova",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 130,
+   "make_ahead": "Base up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground wattleseed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit, pulp",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 120C. Whisk the egg whites to stiff peaks, then add the sugar a spoon at a time until glossy.",
+     "min": 20
+    },
+    {
+     "text": "Fold in the cornflour and wattleseed and shape on baking paper.",
+     "min": 10
+    },
+    {
+     "text": "Bake for 90 minutes.",
+     "min": 90
+    },
+    {
+     "text": "Cool in the oven.",
+     "min": 30
+    },
+    {
+     "text": "Top with cream, mango and passionfruit.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Drover's rum and ginger beer billy punch",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Tea can be chilled a day ahead",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "strong black tea",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cold ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "mint leaves, to serve",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut into wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea and chill.",
+     "min": 60
+    },
+    {
+     "text": "Mix the tea with the rum, lime juice and sugar, stirring to dissolve.",
+     "min": 5
+    },
+    {
+     "text": "Add plenty of ice and top with ginger beer.",
+     "min": 3
+    },
+    {
+     "text": "Ladle into mugs with a lime wedge and mint. Leave out the rum for a booze free pot.",
+     "min": 7
+    }
+   ]
+  }
+ ]
+}

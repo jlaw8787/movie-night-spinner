@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Swallow Falls sardine toast",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins sardines",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch radishes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the sourdough.",
+     "min": 5
+    },
+    {
+     "text": "Mash the drained sardines with the butter, lemon juice and chopped parsley.",
+     "min": 5
+    },
+    {
+     "text": "Spread on the toast and top with thinly sliced radish and black pepper.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cheeseburger rain sliders",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into 12 small balls.",
+     "min": 5
+    },
+    {
+     "text": "Smash on a hot griddle and cook briefly, then melt a slice of cheese on each.",
+     "min": 10
+    },
+    {
+     "text": "Mix the mayonnaise into a burger sauce and slice the pickles and onion.",
+     "min": 5
+    },
+    {
+     "text": "Fill the buns and stack them high on a platter.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Giant meatballs and spaghetti",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 65,
+   "make_ahead": "Sauce and meatballs up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the bread in a little water and squeeze it out. Mix with the minces, half the parmesan and parsley.",
+     "min": 10
+    },
+    {
+     "text": "Roll into big balls and brown all over.",
+     "min": 15
+    },
+    {
+     "text": "Simmer in the tomatoes with basil.",
+     "min": 45
+    },
+    {
+     "text": "Cook the spaghetti.",
+     "min": 10
+    },
+    {
+     "text": "Pile over the pasta and top with the rest of the parmesan.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ice cream snow day",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Fudge up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "strawberry ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar sprinkles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet wafer biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate gently with the cream for hot fudge.",
+     "min": 5
+    },
+    {
+     "text": "Scoop the ice creams into a big mountain on a platter.",
+     "min": 8
+    },
+    {
+     "text": "Cover with sprinkles, stick in wafers and pour over the hot fudge.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Rainbow lemonade",
+   "course": "d",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the raspberries with a third of the sugar and strain.",
+     "min": 5
+    },
+    {
+     "text": "Mix the orange juice with a third of the sugar.",
+     "min": 3
+    },
+    {
+     "text": "Mix the lime juice with the rest of the sugar until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Spoon a layer of each into four tall glasses and top slowly with lemonade so the colours run together.",
+     "min": 7
+    }
+   ]
+  }
+ ]
+}

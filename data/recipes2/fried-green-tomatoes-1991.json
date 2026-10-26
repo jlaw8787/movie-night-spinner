@@ -1,0 +1,748 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Fried green tomatoes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Remoulade up to 2 days ahead, fry just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "green tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal, seasoned",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the tomatoes thick, salt them and leave for 10 minutes (included in cook time).",
+     "min": 5
+    },
+    {
+     "text": "Mix the mayonnaise with chopped capers and lemon juice for the remoulade.",
+     "min": 10
+    },
+    {
+     "text": "Cook the bacon in a large pan until crisp and the fat has run, and set the bacon aside.",
+     "min": 8
+    },
+    {
+     "text": "Dip the tomatoes in buttermilk then seasoned cornmeal and fry in the bacon fat until golden, turning once.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Honeycomb and biscuits",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Best eaten warm on the day",
+   "ingredients": [
+    {
+     "q": 140,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honeycomb",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub most of the butter into the flour and baking powder.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the buttermilk, pat out and fold three times, then cut into rounds.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until risen and golden.",
+     "min": 12
+    },
+    {
+     "text": "Serve warm with the remaining butter, honey and a chunk of honeycomb.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Whistle Stop barbecue",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 330,
+   "make_ahead": "Cook the pork up to 2 days ahead, reheat in its juices",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the pork with the paprika, brown sugar, garlic and salt.",
+     "min": 10
+    },
+    {
+     "text": "Roast covered at 150C for 5 hours until falling apart (included in cook time).",
+     "min": 300
+    },
+    {
+     "text": "Simmer the tomato sauce with the vinegar until slightly thick, and pull the pork.",
+     "min": 10
+    },
+    {
+     "text": "Dress the pork with the sauce. Toss the cabbage with mayonnaise for slaw and serve with white bread. The secret's in the sauce.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Pecan pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 100,
+   "make_ahead": "Up to 2 days, keep cool",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pecans, toasted",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a pie tin with the pastry and chill.",
+     "min": 10
+    },
+    {
+     "text": "Blind-bake with baking weights until pale gold, then remove the weights.",
+     "min": 15
+    },
+    {
+     "text": "Whisk the eggs, syrup, sugar and melted butter and stir in the pecans.",
+     "min": 10
+    },
+    {
+     "text": "Pour into the case and bake at 170C until just set.",
+     "min": 50
+    },
+    {
+     "text": "Cool before slicing.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Whistle Stop peach sweet tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 135,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "just-boiled water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "peaches, 2 sliced and 1 for serving",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea bags in the boiling water with two sliced peaches for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Remove the bags and stir in the sugar while hot.",
+     "min": 3
+    },
+    {
+     "text": "Cool completely with the peaches in, then chill (included in cook time) and strain.",
+     "min": 120
+    },
+    {
+     "text": "Pour over ice in tall glasses with lemon, fresh peach slices and mint.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Biscuits and Honey",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Best eaten warm on the day",
+   "ingredients": [
+    {
+     "q": 140,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honeycomb",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub most of the butter into the flour and baking powder.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the buttermilk, pat out and fold three times, then cut into rounds.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until risen and golden.",
+     "min": 12
+    },
+    {
+     "text": "Serve warm with the remaining butter, honey and a chunk of honeycomb.",
+     "min": 3
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Big George’s Barbecue Plate",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 330,
+   "make_ahead": "Cook the pork up to 2 days ahead, reheat in its juices",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the pork with the paprika, brown sugar, garlic and salt.",
+     "min": 10
+    },
+    {
+     "text": "Roast covered at 150C for 5 hours until falling apart (included in cook time).",
+     "min": 300
+    },
+    {
+     "text": "Simmer the tomato sauce with the vinegar until slightly thick, and pull the pork.",
+     "min": 10
+    },
+    {
+     "text": "Dress the pork with the sauce. Toss the cabbage with mayonnaise for slaw and serve with white bread. The secret's in the sauce.",
+     "min": 10
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Peach Sweet Tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 135,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "just-boiled water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "peaches, 2 sliced and 1 for serving",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea bags in the boiling water with two sliced peaches for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Remove the bags and stir in the sugar while hot.",
+     "min": 3
+    },
+    {
+     "text": "Cool completely with the peaches in, then chill (included in cook time) and strain.",
+     "min": 120
+    },
+    {
+     "text": "Pour over ice in tall glasses with lemon, fresh peach slices and mint.",
+     "min": 7
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Breakfast Plate",
+   "course": "m",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Gravy up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "quick grits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "biscuits, baked or bought",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "breakfast sausage",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the grits in salted water and stir in a little butter until thick.",
+     "min": 15
+    },
+    {
+     "text": "Brown the sausage in a pan, crumbling it, then sprinkle over the flour.",
+     "min": 12
+    },
+    {
+     "text": "Add the milk and simmer, stirring, until thick for sausage gravy and season with pepper.",
+     "min": 8
+    },
+    {
+     "text": "Fry the eggs any style and warm the biscuits.",
+     "min": 5
+    },
+    {
+     "text": "Plate the eggs, grits, biscuit and gravy.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Butter Beans",
+   "course": "m",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 80,
+   "make_ahead": "Up to 2 days, flavour improves",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "dried butter beans, soaked overnight",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salt pork or bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising cornmeal mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the salt pork with the onion in a heavy pot.",
+     "min": 10
+    },
+    {
+     "text": "Add the drained beans and stock and simmer until creamy and tender.",
+     "min": 60
+    },
+    {
+     "text": "Mix the cornmeal mix with the egg and buttermilk for cornbread batter.",
+     "min": 5
+    },
+    {
+     "text": "Bake in a hot, greased skillet at 200C until golden, and serve a wedge with the beans.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Coffee",
+   "course": "d",
+   "extra": true,
+   "prep_min": 3,
+   "cook_min": 7,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "hot water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a pot of hot coffee and keep it hot for refills.",
+     "min": 10
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,354 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "North Pole elf cookies",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 40,
+   "make_ahead": "Up to 3 days, keep in an airtight container",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pack food colouring (red and green)",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with some of the icing sugar, add the egg yolk and flour and mix to a dough.",
+     "min": 8
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Roll out and cut stars and trees.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 170C and cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Mix the remaining icing sugar with water, tint red and green and ice the cookies.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Faculty party cranberry cheese ball",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Up to 2 days, keep wrapped and chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "dried cranberries, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the cream cheese with the cheddar, cranberries, chives and garlic powder.",
+     "min": 5
+    },
+    {
+     "text": "Shape into a ball, wrap in cling film and chill until firm.",
+     "min": 60
+    },
+    {
+     "text": "Toast the walnuts in a dry pan, chop finely and mix with the parsley.",
+     "min": 7
+    },
+    {
+     "text": "Roll the ball in the walnut mix until coated and serve with crackers.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Mrs. Claus roast chicken",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 75,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, cut into chunks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chicken with the butter, thyme and salt.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 200C.",
+     "min": 25
+    },
+    {
+     "text": "Add the potatoes and carrots to the tray and keep roasting.",
+     "min": 50
+    },
+    {
+     "text": "Rest the chicken before carving.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Toy Santa candy cane brownies",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "Up to 3 days, keep in an airtight container",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "peppermint extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "candy canes, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the dark chocolate with the butter. Whisk in the sugar, eggs, peppermint extract and a pinch of salt, then fold in the flour and cocoa.",
+     "min": 10
+    },
+    {
+     "text": "Spread into a lined 20cm square tin and bake at 170C until just set.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely.",
+     "min": 15
+    },
+    {
+     "text": "Melt the white chocolate, spread over the top and scatter with crushed candy canes.",
+     "min": 5
+    },
+    {
+     "text": "Chill, then cut into squares.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Elf-made peppermint hot cocoa",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 7,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "milk chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "peppermint extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "candy canes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk with the sugar until steaming but not boiling.",
+     "min": 6
+    },
+    {
+     "text": "Whisk in the chocolates and cocoa until smooth and frothy, then stir in the peppermint extract.",
+     "min": 3
+    },
+    {
+     "text": "Pour into mugs, top with whipped cream and hang a candy cane on each mug to stir.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Schultz's saloon pretzels",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 75,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rock salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "grainy mustard, to serve",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast and water and prove until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Shape into 8 pretzels.",
+     "min": 10
+    },
+    {
+     "text": "Dip in simmering water with the bicarb.",
+     "min": 5
+    },
+    {
+     "text": "Sprinkle with rock salt and bake at 220C.",
+     "min": 12
+    },
+    {
+     "text": "Serve with mustard and butter.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Bounty hunter's jerky",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 840,
+   "make_ahead": "Marinate overnight, keeps 2 weeks",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef topside, partly frozen",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the partly frozen beef very thin.",
+     "min": 15
+    },
+    {
+     "text": "Mix the soy, Worcestershire, pepper and paprika and add the beef.",
+     "min": 10
+    },
+    {
+     "text": "Marinate overnight in the fridge.",
+     "min": 600
+    },
+    {
+     "text": "Lay on racks and dry at 70C.",
+     "min": 240
+    }
+   ]
+  },
+  {
+   "n": "German sausages and kraut",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 45,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of sauerkraut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caraway seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bratwurst",
+     "aisle": "Meat"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sauerkraut with the wine, apple and caraway.",
+     "min": 20
+    },
+    {
+     "text": "Grill the bratwurst slowly until browned.",
+     "min": 25
+    },
+    {
+     "text": "Boil the potatoes until tender and toss in butter.",
+     "min": 20
+    },
+    {
+     "text": "Serve together.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Candyland white cake",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 58,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 170,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened, for the icing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and line two 20cm tins.",
+     "min": 5
+    },
+    {
+     "text": "Beat the butter and sugar, add the egg whites and vanilla.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the flour, baking powder and milk.",
+     "min": 7
+    },
+    {
+     "text": "Bake.",
+     "min": 28
+    },
+    {
+     "text": "Cool, then beat the icing butter and icing sugar.",
+     "min": 15
+    },
+    {
+     "text": "Fill and cover the cake.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Dr Schultz's lemon wheat beer",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Syrup up to 1 week, chilled",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, peeled zest",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles German wheat beer, 500ml each",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemon wheels",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the honey, water and lemon zest, then cool and strain.",
+     "min": 8
+    },
+    {
+     "text": "Add a spoon of syrup and a squeeze of lemon to each of 4 chilled tall mugs.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the beer slowly, tilting the mug, then straighten to build a thick head.",
+     "min": 3
+    },
+    {
+     "text": "Hang a lemon wheel on each rim.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

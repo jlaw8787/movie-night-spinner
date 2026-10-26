@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "House party cob loaf",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "cob loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet French onion soup mix",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Hollow out the cob loaf, keeping the lid.",
+     "min": 5
+    },
+    {
+     "text": "Mix the cream cheese, sour cream, bacon, cheddar and soup mix.",
+     "min": 5
+    },
+    {
+     "text": "Fill the loaf and wrap in foil.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 40
+    },
+    {
+     "text": "Tear the hollowed bread into chunks for dipping.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Blues bar wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 760,
+   "make_ahead": "Dry the wings the day before",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Leave the wings uncovered in the fridge overnight to dry.",
+     "min": 720
+    },
+    {
+     "text": "Bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Melt the butter with the hot sauce and toss the wings through.",
+     "min": 4
+    },
+    {
+     "text": "Mash the blue cheese into the sour cream for the dip.",
+     "min": 4
+    },
+    {
+     "text": "Serve with celery sticks.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Shermer house party pizza",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stretch the dough thin on a floured tray.",
+     "min": 8
+    },
+    {
+     "text": "Spread with sauce and scatter with mozzarella, pepperoni and mushrooms.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a hot steel or tray at the highest oven heat.",
+     "min": 9
+    },
+    {
+     "text": "Slice and leave in a box on the bench.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Big brother Chet's party sheet cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 27,
+   "make_ahead": "Up to 2 days airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cocoa, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat part of the butter with the sugar, then add the eggs.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the flour, some cocoa and the milk.",
+     "min": 5
+    },
+    {
+     "text": "Bake in a lined tray at 175C and cool.",
+     "min": 30
+    },
+    {
+     "text": "Beat the remaining butter with icing sugar and remaining cocoa for the fudge frosting.",
+     "min": 8
+    },
+    {
+     "text": "Spread on the cake and cover with sprinkles.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Blues bar bourbon lemon smash",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "mint leaves, plus sprigs to garnish",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in hot water and cool.",
+     "min": 3
+    },
+    {
+     "text": "For each drink, muddle lemon wedges with mint leaves and syrup in a shaker.",
+     "min": 8
+    },
+    {
+     "text": "Add bourbon and ice and shake hard for 10 seconds.",
+     "min": 4
+    },
+    {
+     "text": "Pour into a short glass and top with crushed ice.",
+     "min": 2
+    },
+    {
+     "text": "Garnish with a mint sprig.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

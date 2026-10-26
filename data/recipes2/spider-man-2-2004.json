@@ -1,0 +1,406 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Joe's Pizza garlic knots",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 42,
+   "make_ahead": "Best eaten warm, same day",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the dough into 8 strips and tie into knots.",
+     "min": 8
+    },
+    {
+     "text": "Cover on a lined tray and prove until puffy.",
+     "min": 30
+    },
+    {
+     "text": "Bake at 230C until golden.",
+     "min": 12
+    },
+    {
+     "text": "Melt the butter with the garlic over low heat, then toss the hot knots in the garlic butter and parsley.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Potato knishes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 43,
+   "make_ahead": "Up to 1 day, reheat in the oven",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and boil the potatoes until tender, then drain.",
+     "min": 20
+    },
+    {
+     "text": "Fry the onion in the butter until soft. Mash the potatoes with the onion, salt and pepper.",
+     "min": 8
+    },
+    {
+     "text": "Cut each pastry sheet into 4 squares, put a mound of potato on each, fold up and pinch closed.",
+     "min": 10
+    },
+    {
+     "text": "Brush with beaten egg and bake at 200C until golden. Serve hot with yellow mustard.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Thirty-minute pepperoni pie",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 1620,
+   "make_ahead": "Dough needs 1 to 2 days in the fridge",
+   "ingredients": [
+    {
+     "q": 380,
+     "u": "g",
+     "item": "bread flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 245,
+     "u": "ml",
+     "item": "cool water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "low-moisture mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "thinly sliced cupping pepperoni",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, salt and water, then knead for about 8 minutes. Divide into 2 balls.",
+     "min": 20
+    },
+    {
+     "text": "Cold-ferment the covered balls in the fridge for 24 hours (up to 48 is fine).",
+     "min": 1440
+    },
+    {
+     "text": "Bring the dough to room temperature for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Heat a pizza steel in the oven at its maximum temperature, about 250 to 275C.",
+     "min": 45
+    },
+    {
+     "text": "Stretch each ball thin, spread with half the tomatoes and top with half the mozzarella and pepperoni. Bake one at a time on the hot steel until the crust is cooked and crisp. Cut into wedges.",
+     "min": 14
+    }
+   ]
+  },
+  {
+   "n": "Aunt May's pancakes",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Separate the eggs. Mix the flour, baking powder, sugar and salt.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the yolks with the buttermilk and fold into the flour. Whip the whites to soft peaks and fold through gently.",
+     "min": 5
+    },
+    {
+     "text": "Cook eight small pancakes in batches in a little butter over medium heat, until bubbles set, then flip and cook briefly.",
+     "min": 15
+    },
+    {
+     "text": "Stack two per person and serve with maple syrup.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Iced coffee",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 735,
+   "make_ahead": "Cold brew keeps 3 days in the fridge",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "coarsely ground coffee beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the coffee and cold water together in a jar and cover.",
+     "min": 5
+    },
+    {
+     "text": "Steep in the fridge for 12 hours (up to 18).",
+     "min": 720
+    },
+    {
+     "text": "Strain through a coffee filter.",
+     "min": 10
+    },
+    {
+     "text": "Divide the ice between four glasses, add cold brew and milk to each, then top with ice cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cheese pie",
+   "course": "m",
+   "extra": true,
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "Dough can be made a day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "grated low-moisture mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rest the dough at room temperature so it relaxes. Season the tomatoes with salt.",
+     "min": 60
+    },
+    {
+     "text": "Stretch the dough thin, spread with the sauce and scatter over the mozzarella.",
+     "min": 10
+    },
+    {
+     "text": "Bake on a preheated tray at the oven's highest setting until bubbling and golden. Cut into 8 big slices and fold to eat.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Soda, can",
+   "course": "d",
+   "extra": true,
+   "prep_min": 1,
+   "cook_min": 0,
+   "make_ahead": "Keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "cans soda",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the cans in the fridge or on ice and serve cold.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

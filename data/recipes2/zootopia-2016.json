@@ -1,0 +1,372 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bunnyburrow carrot fries",
+   "course": "s",
+   "prep_min": 19,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the carrots into fries.",
+     "min": 12
+    },
+    {
+     "text": "Toss with the oil, paprika and salt.",
+     "min": 3
+    },
+    {
+     "text": "Roast at 220C until caramelised at the edges.",
+     "min": 25
+    },
+    {
+     "text": "Stir the garlic into the yoghurt for a dip.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Clawhauser's doughnut holes",
+   "course": "s",
+   "prep_min": 38,
+   "cook_min": 75,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, for rolling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, eggs, butter and warm milk into a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Knead until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Cover and prove.",
+     "min": 60
+    },
+    {
+     "text": "Roll into small balls.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 175C in batches until golden.",
+     "min": 15
+    },
+    {
+     "text": "Roll in cinnamon sugar while warm.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sahara Square tagine",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 112,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "preserved lemon, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "couscous",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onion, grate the ginger and chop the preserved lemon.",
+     "min": 8
+    },
+    {
+     "text": "Brown the chicken in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Soften the onion with the ginger and saffron.",
+     "min": 6
+    },
+    {
+     "text": "Add the water, preserved lemon and olives, cover and simmer until tender.",
+     "min": 90
+    },
+    {
+     "text": "Cover the couscous with the boiling water until fluffy, then fork through.",
+     "min": 10
+    },
+    {
+     "text": "Serve the tagine over the couscous.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Nick's pawpsicles",
+   "course": "w",
+   "prep_min": 14,
+   "cook_min": 480,
+   "make_ahead": "Up to 1 week, keep frozen",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "watermelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the strawberries and watermelon.",
+     "min": 8
+    },
+    {
+     "text": "Blend with the lime juice and sugar until smooth.",
+     "min": 2
+    },
+    {
+     "text": "Pour into ice block moulds and push in sticks.",
+     "min": 4
+    },
+    {
+     "text": "Freeze overnight.",
+     "min": 480
+    }
+   ]
+  },
+  {
+   "n": "Rainforest district cooler",
+   "course": "d",
+   "prep_min": 16,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "kiwifruit, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the kiwifruit and chop the cucumber.",
+     "min": 8
+    },
+    {
+     "text": "Blend the kiwifruit, cucumber, mint, lime juice and sugar.",
+     "min": 2
+    },
+    {
+     "text": "Strain into a jug.",
+     "min": 3
+    },
+    {
+     "text": "Pour over ice and top with soda water.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

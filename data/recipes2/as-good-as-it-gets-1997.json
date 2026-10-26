@@ -1,0 +1,312 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Verdell's bacon",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "rashers thick cut bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay the bacon on a rack over a tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Cut into pieces and serve warm with a small bowl of maple syrup for dipping.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Café breakfast bites",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon until crisp and chop.",
+     "min": 8
+    },
+    {
+     "text": "Scramble the eggs softly in butter.",
+     "min": 5
+    },
+    {
+     "text": "Toast the bread, cut into small squares and top each with egg, bacon and snipped chives.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Baltimore crab cakes",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day uncooked, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag mixed salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab with the mayonnaise, Dijon, sliced spring onion and breadcrumbs. Shape into 8 cakes.",
+     "min": 15
+    },
+    {
+     "text": "Chill for at least 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Pan fry until golden on both sides.",
+     "min": 10
+    },
+    {
+     "text": "Serve with lemon and a green salad.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Café banana cream pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 195,
+   "make_ahead": "Make the day before or in the morning",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain sweet biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 110,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits with the melted butter and press into a pie dish.",
+     "min": 10
+    },
+    {
+     "text": "Cook the milk, yolks, sugar and cornflour until thick, add the vanilla and cool.",
+     "min": 20
+    },
+    {
+     "text": "Layer sliced bananas in the crust and spread over the custard.",
+     "min": 5
+    },
+    {
+     "text": "Top with whipped cream.",
+     "min": 5
+    },
+    {
+     "text": "Chill for the setting time.",
+     "min": 180
+    }
+   ]
+  },
+  {
+   "n": "Café coffee milkshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Coffee up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "strong coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee and chill it for at least an hour.",
+     "min": 60
+    },
+    {
+     "text": "Blend the coffee with the ice cream, milk and sugar until thick and smooth.",
+     "min": 4
+    },
+    {
+     "text": "Pour into 4 tall chilled glasses. Whip the cream to soft peaks, spoon on top and dust with cocoa.",
+     "min": 6
+    }
+   ]
+  }
+ ]
+}

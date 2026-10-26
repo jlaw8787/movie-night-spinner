@@ -1,0 +1,302 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Luke's spear-fished bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Marinate up to 2 hours, grill fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "salmon fillet, skin off",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "chopped dill, plus extra for the dip",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the salmon into chunks and marinate in the lemon juice, dill and oil for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Thread onto skewers and grill for 2 minutes a side.",
+     "min": 6
+    },
+    {
+     "text": "Stir more dill and lemon through the yoghurt for a dip.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Crait red salt chips",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes paper thin on a mandoline and rinse well. Dry thoroughly.",
+     "min": 20
+    },
+    {
+     "text": "Fry at 170C in batches until crisp and golden.",
+     "min": 20
+    },
+    {
+     "text": "Toss straight away with salt and smoked paprika so the red shows through like the salt flats.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Resistance ration bowls",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Chicken can marinate up to 1 day",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red capsicums",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tahini",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in lemon juice, oregano and oil while the oven heats.",
+     "min": 10
+    },
+    {
+     "text": "Roast the capsicums at 220C until soft and blistered, then peel and slice into strips.",
+     "min": 25
+    },
+    {
+     "text": "Cook the rice. Grill the chicken until cooked through, then slice.",
+     "min": 20
+    },
+    {
+     "text": "Build bowls of rice with the chicken, capsicum, cucumber and feta and drizzle with tahini.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Green milk panna cotta",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 330,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pistachios, plus extra crushed to serve",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "gelatine sheets, soaked",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the pistachios with the milk until fine, then strain.",
+     "min": 10
+    },
+    {
+     "text": "Warm the pistachio milk with the cream and sugar. Stir in the soaked gelatine until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Pour into glasses and set overnight.",
+     "min": 320
+    },
+    {
+     "text": "Top with crushed pistachios and a drizzle of honey.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Throne room red punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pomegranate juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pomegranate, seeds only",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill tall glasses with ice and a spoon of pomegranate seeds.",
+     "min": 5
+    },
+    {
+     "text": "Pour in equal parts cranberry and pomegranate juice to halfway, then top with soda water.",
+     "min": 3
+    },
+    {
+     "text": "Stir once so it swirls deep red.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

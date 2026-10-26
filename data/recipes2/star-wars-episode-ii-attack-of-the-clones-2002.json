@@ -1,0 +1,288 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Naboo floating fruit",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "pears",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "rockmelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "honeydew melon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pears and melons into cubes and spear on toothpicks.",
+     "min": 12
+    },
+    {
+     "text": "Drizzle with honey and lime and arrange on a long platter so they look like they're hovering.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Geonosis arena wings",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 50,
+   "make_ahead": "Wings fresh, sauce can be made ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the wings at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Melt the chilli sauce, honey and butter and toss the wings through.",
+     "min": 5
+    },
+    {
+     "text": "Scatter with sesame seeds and spring onion.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dex's Diner plate",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Onions up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into crinkle chips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onions slowly until golden.",
+     "min": 25
+    },
+    {
+     "text": "Shape the mince into 4 thin patties and sear. Layer on rye with the onions and Swiss.",
+     "min": 10
+    },
+    {
+     "text": "Butter the outside of the bread and grill until melted.",
+     "min": 8
+    },
+    {
+     "text": "Fry the chips on a low heat until soft, then again on a high heat until golden. Serve with pickles.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Clone trooper white chocolate mousse",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 245,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream, warmed, to melt the chocolate",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream, plus extra to top, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg white",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "dark chocolate, shaved into thin squares",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the white chocolate into the warmed cream and cool.",
+     "min": 10
+    },
+    {
+     "text": "Whip the cream. Whisk the egg white and fold both through the chocolate mixture.",
+     "min": 15
+    },
+    {
+     "text": "Spoon into 4 glasses and set for 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Top with whipped cream and a thin square of dark chocolate.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dex's diner coffee",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk, hot",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "raw sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee with the water in a drip machine so it comes out strong.",
+     "min": 10
+    },
+    {
+     "text": "Pour into thick diner mugs and serve with hot milk and raw sugar on the side.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

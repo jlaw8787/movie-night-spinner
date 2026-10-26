@@ -1,0 +1,376 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tick-Tock crocodile toasts",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 11,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mint leaves, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette and brush with oil.",
+     "min": 3
+    },
+    {
+     "text": "Toast the slices under the grill or in a hot oven until golden.",
+     "min": 8
+    },
+    {
+     "text": "Cook the peas in boiling water until tender, then drain.",
+     "min": 3
+    },
+    {
+     "text": "Smash the peas with the mint, crumbled feta and a squeeze of lemon.",
+     "min": 5
+    },
+    {
+     "text": "Spread thickly on the toasts and run a fork along the top for crocodile ridges.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mermaid lagoon prawns",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring a pot of salted water to the boil with the lemon slices.",
+     "min": 8
+    },
+    {
+     "text": "Poach the prawns until pink.",
+     "min": 2
+    },
+    {
+     "text": "Plunge into iced water to stop the cooking.",
+     "min": 5
+    },
+    {
+     "text": "Peel the prawns, leaving the tails on.",
+     "min": 10
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce, a squeeze of lemon and the hot sauce.",
+     "min": 3
+    },
+    {
+     "text": "Serve the prawns on ice with the sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Captain Hook's beef and allspice stew",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 205,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "molasses or brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the beef in the flour. Slice the onions and chop the carrots.",
+     "min": 15
+    },
+    {
+     "text": "Brown the beef in batches in a heavy pot.",
+     "min": 15
+    },
+    {
+     "text": "Soften the onions and carrots.",
+     "min": 8
+    },
+    {
+     "text": "Return the beef and add the allspice, molasses, tomato paste and stock.",
+     "min": 2
+    },
+    {
+     "text": "Cover and simmer gently until thick and tender.",
+     "min": 180
+    },
+    {
+     "text": "Season well and serve in big bowls with crusty bread.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Tinker Bell fairy bread",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices soft white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "hundreds and thousands",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "edible glitter, a tiny pinch",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread right to the edges.",
+     "min": 5
+    },
+    {
+     "text": "Press each buttered side into a plate of hundreds and thousands until well covered.",
+     "min": 5
+    },
+    {
+     "text": "Cut into triangles.",
+     "min": 3
+    },
+    {
+     "text": "Dust with a tiny pinch of edible glitter and pile on a plate.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Nana's bedtime malted vanilla milk",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "nutmeg, to grate",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "plain biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk in a saucepan until steaming but not boiling.",
+     "min": 8
+    },
+    {
+     "text": "Off the heat, whisk in the malted milk powder, honey and vanilla until frothy.",
+     "min": 2
+    },
+    {
+     "text": "Whip the cream to soft peaks.",
+     "min": 4
+    },
+    {
+     "text": "Pour into mugs, spoon a little cream on each and grate over nutmeg. Serve with a plain biscuit.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,388 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "8 Mile coney dog bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "cocktail franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "mini bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "brown onion, extra, finely diced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion, cumin and paprika",
+     "min": 8
+    },
+    {
+     "text": "Add the water and simmer",
+     "min": 20
+    },
+    {
+     "text": "Simmer the franks",
+     "min": 5
+    },
+    {
+     "text": "Tuck the franks into split mini rolls, spoon over chilli, add mustard and diced onion",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Above-ground pool chips and dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 75,
+   "make_ahead": "Dip keeps 2 days chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ridged potato chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onions in the butter over low heat until jammy",
+     "min": 40
+    },
+    {
+     "text": "Cool and chop",
+     "min": 10
+    },
+    {
+     "text": "Fold into the sour cream and cream cheese with salt, pepper and chives",
+     "min": 5
+    },
+    {
+     "text": "Chill the dip",
+     "min": 20
+    },
+    {
+     "text": "Serve with a big bag of ridged potato chips",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Late-night Greek diner gyros",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 135,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "pork shoulder steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "cucumber, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed, extra",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the garlic, oregano, lemon juice and oil and marinate the pork",
+     "min": 120
+    },
+    {
+     "text": "Griddle the pork, turning once, and slice thin",
+     "min": 10
+    },
+    {
+     "text": "Mix the yoghurt with the cucumber and garlic for tzatziki",
+     "min": 8
+    },
+    {
+     "text": "Warm the pitas and wrap the pork with tzatziki, tomato and red onion",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Ice cream sandwiches",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 85,
+   "make_ahead": "Up to 3 days frozen",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mini choc chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar with the egg, then mix in the flour and cocoa",
+     "min": 10
+    },
+    {
+     "text": "Scoop eight cookies onto lined trays",
+     "min": 5
+    },
+    {
+     "text": "Bake at 175C",
+     "min": 9
+    },
+    {
+     "text": "Cool completely",
+     "min": 15
+    },
+    {
+     "text": "Sandwich with thick slices of ice cream and roll the edges in choc chips",
+     "min": 10
+    },
+    {
+     "text": "Freeze",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Hairdryer plan poolside lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool",
+     "min": 15
+    },
+    {
+     "text": "Juice five lemons and mix with the syrup and cold water in a big jug",
+     "min": 5
+    },
+    {
+     "text": "Add sliced lemon and plenty of ice, pour into four glasses",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

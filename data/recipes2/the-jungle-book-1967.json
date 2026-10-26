@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Baloo's banana bites",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, keep frozen",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "peanuts, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the bananas into thick rounds.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate gently.",
+     "min": 4
+    },
+    {
+     "text": "Mix the crushed peanuts with the coconut.",
+     "min": 4
+    },
+    {
+     "text": "Dip each banana round halfway into the chocolate, then roll in the nut mix. Lay on a lined tray.",
+     "min": 10
+    },
+    {
+     "text": "Freeze until firm.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "King Louie's fruit platter",
+   "course": "s",
+   "prep_min": 26,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "banana leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "papaya",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can lychees, 400g, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "chilli powder, a pinch",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay the banana leaves on a platter.",
+     "min": 3
+    },
+    {
+     "text": "Cut the mango, pineapple and papaya into wedges.",
+     "min": 15
+    },
+    {
+     "text": "Pile the fruit and lychees on the leaves.",
+     "min": 5
+    },
+    {
+     "text": "Squeeze over lime juice and sprinkle with salt mixed with a pinch of chilli.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Man village chicken curry",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can crushed tomatoes (400g)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "naan breads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the chicken and grate the ginger and garlic.",
+     "min": 10
+    },
+    {
+     "text": "Soften the ginger and garlic in the oil.",
+     "min": 4
+    },
+    {
+     "text": "Add the garam masala and fry for a minute.",
+     "min": 1
+    },
+    {
+     "text": "Add the chicken, tomatoes and coconut milk and simmer until the chicken is cooked through.",
+     "min": 30
+    },
+    {
+     "text": "Cook the basmati rice according to the packet.",
+     "min": 15
+    },
+    {
+     "text": "Warm the naan and serve with the curry and rice.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coconut mango pudding",
+   "course": "w",
+   "prep_min": 17,
+   "cook_min": 247,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "gelatine sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine sheets in cold water until soft.",
+     "min": 5
+    },
+    {
+     "text": "Warm the coconut milk with the sugar until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Squeeze the gelatine and stir it into the warm milk until melted.",
+     "min": 2
+    },
+    {
+     "text": "Pour into glasses and chill until set (about 4 hours).",
+     "min": 240
+    },
+    {
+     "text": "Toast the shredded coconut in a dry pan.",
+     "min": 4
+    },
+    {
+     "text": "Dice the mango and top the puddings with mango and toasted coconut.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Colonel Hathi's dawn patrol mango lassi",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground cardamom",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the mangoes and cut the flesh from the stones.",
+     "min": 6
+    },
+    {
+     "text": "Blend the mango with the yoghurt, milk, sugar and cardamom until smooth.",
+     "min": 2
+    },
+    {
+     "text": "Pour over ice in tall glasses.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

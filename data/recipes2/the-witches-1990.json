@@ -1,0 +1,374 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hotel tea sandwiches",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cress",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs, cool, peel and mash with mayo and cress",
+     "min": 15
+    },
+    {
+     "text": "Make cucumber and cream cheese, egg, and smoked salmon and dill sandwiches",
+     "min": 10
+    },
+    {
+     "text": "Cut off the crusts and cut into fingers",
+     "min": 4
+    },
+    {
+     "text": "Lay on a tiered stand",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Hotel Excelsior crab sandwiches",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices soft white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab with the mayonnaise, lemon zest, a squeeze of juice, chives and pepper",
+     "min": 6
+    },
+    {
+     "text": "Butter the bread",
+     "min": 4
+    },
+    {
+     "text": "Spread the crab over half the slices and lay thin cucumber on top",
+     "min": 5
+    },
+    {
+     "text": "Close with the remaining bread, press gently, trim off the crusts and cut each into three fingers",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Formula 86 watercress soup",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches watercress",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Sweat the leeks and potatoes in the butter",
+     "min": 10
+    },
+    {
+     "text": "Add the stock and simmer",
+     "min": 20
+    },
+    {
+     "text": "Stir in the watercress for a minute",
+     "min": 1
+    },
+    {
+     "text": "Blitz until bright green",
+     "min": 3
+    },
+    {
+     "text": "Finish with the cream",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Bruno's chocolate cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 100,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 350,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt most of the chocolate with the butter",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs with the sugar and fold in the chocolate, flour and cocoa",
+     "min": 12
+    },
+    {
+     "text": "Bake at 170C",
+     "min": 40
+    },
+    {
+     "text": "Cool the cake",
+     "min": 45
+    },
+    {
+     "text": "Melt the remaining chocolate with the cream and pour over. Serve thin slices",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Seaside hotel peach iced tea",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 135,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "English breakfast tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water, then remove and stir in the honey",
+     "min": 7
+    },
+    {
+     "text": "Cool",
+     "min": 15
+    },
+    {
+     "text": "Blend the peaches with the cold water and strain into the tea",
+     "min": 6
+    },
+    {
+     "text": "Chill",
+     "min": 120
+    },
+    {
+     "text": "Pour over ice with lemon slices and mint",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

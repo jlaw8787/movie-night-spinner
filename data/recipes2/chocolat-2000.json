@@ -1,0 +1,806 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chilli hot chocolate shots",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Infused milk up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, split",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch flaky salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk with the chilli and cinnamon until steaming.",
+     "min": 3
+    },
+    {
+     "text": "Steep off the heat for 5 minutes, then strain.",
+     "min": 5
+    },
+    {
+     "text": "Reheat and whisk in the chocolate and salt until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Pour into tiny cups.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Chocolaterie truffles",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 200,
+   "make_ahead": "Up to 5 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "hazelnuts, toasted and chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream until steaming and pour over the chocolate and butter.",
+     "min": 5
+    },
+    {
+     "text": "Stir smooth.",
+     "min": 5
+    },
+    {
+     "text": "Chill for 3 hours until firm (included in cook time).",
+     "min": 180
+    },
+    {
+     "text": "Scoop and roll into balls, then coat in cocoa, in chopped hazelnuts, or in sugar mixed with chilli flakes.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Armande's birthday feast",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 1000,
+   "make_ahead": "Salt the duck the day before, confit up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "duck legs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the duck legs with salt, thyme and garlic.",
+     "min": 15
+    },
+    {
+     "text": "Cure in the fridge overnight (included in cook time).",
+     "min": 720
+    },
+    {
+     "text": "Rinse and dry the legs and arrange in a snug dish.",
+     "min": 10
+    },
+    {
+     "text": "Cook slowly in their own fat at 140C for 2.5 hours until very tender.",
+     "min": 150
+    },
+    {
+     "text": "Cut the potatoes, toss in some of the fat and roast at 200C until golden.",
+     "min": 40
+    },
+    {
+     "text": "Crisp the legs skin side down in a hot pan and serve with potatoes and a green salad.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Chocolate mousse",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 245,
+   "make_ahead": "Up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs, separated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "flaky salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the butter and cool slightly.",
+     "min": 8
+    },
+    {
+     "text": "Whisk in the yolks.",
+     "min": 5
+    },
+    {
+     "text": "Whip the whites with the sugar to soft peaks and fold in.",
+     "min": 7
+    },
+    {
+     "text": "Spoon into small cups.",
+     "min": 5
+    },
+    {
+     "text": "Chill for 4 hours (included in cook time), then finish with flaky salt mixed with chilli flakes.",
+     "min": 240
+    }
+   ]
+  },
+  {
+   "n": "Easter festival vin chaud",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Warm on the day",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "light southern French red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice one orange and cut the other into four slices for serving.",
+     "min": 5
+    },
+    {
+     "text": "Warm the wine with the sliced orange, spices and honey over low heat without letting it boil.",
+     "min": 15
+    },
+    {
+     "text": "Strain into small heatproof glasses and add a fresh orange slice to each.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Easter vin chaud",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Warm on the day",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "light southern French red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice one orange and cut the other into four slices for serving.",
+     "min": 5
+    },
+    {
+     "text": "Warm the wine with the sliced orange, spices and honey over low heat without letting it boil.",
+     "min": 15
+    },
+    {
+     "text": "Strain into small heatproof glasses and add a fresh orange slice to each.",
+     "min": 5
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Chili hot chocolate",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Infused milk up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, split",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch flaky salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk with the chilli and cinnamon until steaming.",
+     "min": 3
+    },
+    {
+     "text": "Steep off the heat for 5 minutes, then strain.",
+     "min": 5
+    },
+    {
+     "text": "Reheat and whisk in the chocolate and salt until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Pour into tiny cups.",
+     "min": 3
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Duck confit",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 1000,
+   "make_ahead": "Salt the duck the day before, confit up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "duck legs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the duck legs with salt, thyme and garlic.",
+     "min": 15
+    },
+    {
+     "text": "Cure in the fridge overnight (included in cook time).",
+     "min": 720
+    },
+    {
+     "text": "Rinse and dry the legs and arrange in a snug dish.",
+     "min": 10
+    },
+    {
+     "text": "Cook slowly in their own fat at 140C for 2.5 hours until very tender.",
+     "min": 150
+    },
+    {
+     "text": "Cut the potatoes, toss in some of the fat and roast at 200C until golden.",
+     "min": 40
+    },
+    {
+     "text": "Crisp the legs skin side down in a hot pan and serve with potatoes and a green salad.",
+     "min": 15
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Truffles, six",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 200,
+   "make_ahead": "Up to 5 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "hazelnuts, toasted and chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream until steaming and pour over the chocolate and butter.",
+     "min": 5
+    },
+    {
+     "text": "Stir smooth.",
+     "min": 5
+    },
+    {
+     "text": "Chill for 3 hours until firm (included in cook time).",
+     "min": 180
+    },
+    {
+     "text": "Scoop and roll into balls, then coat in cocoa, in chopped hazelnuts, or in sugar mixed with chilli flakes.",
+     "min": 20
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Mendiants",
+   "course": "s",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Up to 5 days, cool dry place",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "hazelnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "raisins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "dried figs, quartered",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate gently over a bowl of hot water and let it cool a little.",
+     "min": 8
+    },
+    {
+     "text": "Spoon small discs onto lined trays.",
+     "min": 7
+    },
+    {
+     "text": "Press an almond, hazelnut, raisin and fig piece onto each disc.",
+     "min": 5
+    },
+    {
+     "text": "Set in a cool place or the fridge (included in cook time).",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Candied orange peel",
+   "course": "s",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 100,
+   "make_ahead": "Up to 2 weeks, airtight jar",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the peel into strips and blanch twice in boiling water, discarding the water each time.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the peel in the sugar and water until translucent and syrupy.",
+     "min": 40
+    },
+    {
+     "text": "Drain and dry on a rack for 40 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Melt the chocolate, dip half of each strip, and set.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "A little cocoa",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cocoa and sugar into the milk in a pan and heat gently until warm and smooth, mild and sweet for small ones.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "The Easter box",
+   "course": "s",
+   "extra": true,
+   "prep_min": 60,
+   "cook_min": 120,
+   "make_ahead": "Up to 5 days, keep cool",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "hazelnuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "raisins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red ribbon",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream and pour over half the chocolate, stir smooth and chill 90 minutes for ganache.",
+     "min": 10
+    },
+    {
+     "text": "Chill until firm (included in cook time).",
+     "min": 90
+    },
+    {
+     "text": "Roll 12 truffles and coat in cocoa or hazelnuts.",
+     "min": 20
+    },
+    {
+     "text": "Melt the remaining chocolate and make 12 mendiant discs topped with almonds and raisins.",
+     "min": 20
+    },
+    {
+     "text": "Set, then pack the two dozen assorted pieces in a box tied with red ribbon.",
+     "min": 20
+    }
+   ]
+  }
+ ]
+}

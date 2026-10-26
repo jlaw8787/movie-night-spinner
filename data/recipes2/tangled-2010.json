@@ -1,0 +1,362 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Snuggly Duckling pub bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "sage, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork with the onion, sage and salt.",
+     "min": 8
+    },
+    {
+     "text": "Halve the pastry sheets and lay the filling along each piece, then roll up and seal.",
+     "min": 10
+    },
+    {
+     "text": "Brush with beaten egg and cut into pieces.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until golden and cooked through.",
+     "min": 25
+    },
+    {
+     "text": "Serve hot with English mustard.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Maximus's cinnamon apple crisps",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 135,
+   "make_ahead": "Crisps up to 1 day in an airtight tin",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "red apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caramel sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the apples paper thin on a mandoline.",
+     "min": 12
+    },
+    {
+     "text": "Lay in a single layer on lined trays and dust with the cinnamon sugar.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 100C, turning once halfway, until dry and curling.",
+     "min": 120
+    },
+    {
+     "text": "Cool on the trays so they crisp.",
+     "min": 15
+    },
+    {
+     "text": "Swirl the caramel and salt through the yoghurt for dipping.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Hazelnut soup",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 38,
+   "make_ahead": "Up to 3 days, reheats well",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "hazelnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the hazelnuts and rub off the skins.",
+     "min": 10
+    },
+    {
+     "text": "Soften the onion and celery in the butter.",
+     "min": 8
+    },
+    {
+     "text": "Add the potatoes, most of the hazelnuts and the stock.",
+     "min": 2
+    },
+    {
+     "text": "Simmer until the potato is soft.",
+     "min": 25
+    },
+    {
+     "text": "Blend smooth and stir in the cream.",
+     "min": 5
+    },
+    {
+     "text": "Top with crushed hazelnuts and chives.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Floating lantern cakes",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "Up to 2 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "almond meal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil 2 whole oranges until very soft.",
+     "min": 60
+    },
+    {
+     "text": "Cool, then blend smooth.",
+     "min": 33
+    },
+    {
+     "text": "Whisk the eggs with the sugar and baking powder.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the orange puree and almond meal.",
+     "min": 4
+    },
+    {
+     "text": "Spoon into muffin tins and bake at 170C until set.",
+     "min": 25
+    },
+    {
+     "text": "Simmer the juice of the remaining orange with the honey for the syrup and glaze the cakes.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Corona lavender cooler",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 25,
+   "make_ahead": "Syrup up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dried culinary lavender",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar, water and lavender for a few minutes.",
+     "min": 5
+    },
+    {
+     "text": "Cool and strain.",
+     "min": 20
+    },
+    {
+     "text": "Fill glasses with ice, add syrup and lemon juice to each.",
+     "min": 5
+    },
+    {
+     "text": "Top with soda water.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

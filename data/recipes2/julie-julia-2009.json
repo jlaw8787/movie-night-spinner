@@ -1,0 +1,646 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Julie's bruschetta",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Tomatoes up to 2 hours ahead, assemble just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "ciabatta, sliced",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "ripe tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch basil, torn",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the tomatoes, salt them and leave 10 minutes (included in cook time).",
+     "min": 5
+    },
+    {
+     "text": "Toast the ciabatta slices and rub with the cut garlic.",
+     "min": 5
+    },
+    {
+     "text": "Mix the tomatoes with basil and oil and pile on just before serving.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Gougères",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Bake up to 1 day ahead and reheat, or freeze piped",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water with the butter, beat in the flour and cook for a minute.",
+     "min": 8
+    },
+    {
+     "text": "Cool slightly, beat in the eggs one at a time, then the gruyere and nutmeg.",
+     "min": 7
+    },
+    {
+     "text": "Pipe small rounds onto lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until puffed and golden. Bon appetit.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "365-day project boeuf bourguignon",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 210,
+   "make_ahead": "Better made 1 day ahead, reheat gently",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon lardons",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "thyme sprigs and 2 bay leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "pearl onions, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dry the beef and brown it in batches with the lardons.",
+     "min": 15
+    },
+    {
+     "text": "Soften the carrots, onion and garlic in the same pot.",
+     "min": 10
+    },
+    {
+     "text": "Return the meat, add the wine, stock and herbs and bring to a simmer.",
+     "min": 10
+    },
+    {
+     "text": "Braise covered at 160C for 3 hours until the beef is tender.",
+     "min": 180
+    },
+    {
+     "text": "Glaze the pearl onions and mushrooms in the butter and stir through at the end.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Reine de Saba",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "Up to 2 days, keep cool",
+   "ingredients": [
+    {
+     "q": 185,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs, separated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "almond meal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt most of the chocolate with most of the butter and cool a little.",
+     "min": 8
+    },
+    {
+     "text": "Beat the yolks with the sugar, add the chocolate, then fold in the almond meal and flour.",
+     "min": 10
+    },
+    {
+     "text": "Whip the whites and fold in.",
+     "min": 7
+    },
+    {
+     "text": "Bake in a lined tin at 180C, then cool.",
+     "min": 25
+    },
+    {
+     "text": "Melt the remaining chocolate with the remaining butter and glaze the cake.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Burgundy kir with crème de cassis",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 120,
+   "make_ahead": "Chill the wine up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "dry white Burgundy or chardonnay",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "creme de cassis",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "blackberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the bottle for 2 hours (included in cook time).",
+     "min": 120
+    },
+    {
+     "text": "Pour the cassis into wine glasses, top slowly with the cold wine so it blends from the bottom, and drop a blackberry in each. Serve before the bourguignon.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Kir",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 120,
+   "make_ahead": "Chill the wine up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "dry white Burgundy or chardonnay",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "creme de cassis",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "blackberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the bottle for 2 hours (included in cook time).",
+     "min": 120
+    },
+    {
+     "text": "Pour the cassis into wine glasses, top slowly with the cold wine so it blends from the bottom, and drop a blackberry in each. Serve before the bourguignon.",
+     "min": 5
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Boeuf bourguignon",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 210,
+   "make_ahead": "Better made 1 day ahead, reheat gently",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon lardons",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "thyme sprigs and 2 bay leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "pearl onions, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dry the beef and brown it in batches with the lardons.",
+     "min": 15
+    },
+    {
+     "text": "Soften the carrots, onion and garlic in the same pot.",
+     "min": 10
+    },
+    {
+     "text": "Return the meat, add the wine, stock and herbs and bring to a simmer.",
+     "min": 10
+    },
+    {
+     "text": "Braise covered at 160C for 3 hours until the beef is tender.",
+     "min": 180
+    },
+    {
+     "text": "Glaze the pearl onions and mushrooms in the butter and stir through at the end.",
+     "min": 15
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Lobster, melted butter",
+   "course": "m",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Boil on the day",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "live lobsters, about 600g each",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the lobsters in the freezer 20 minutes to make them sleepy before cooking.",
+     "min": 5
+    },
+    {
+     "text": "Boil in a large pot of well salted water, about 12 minutes, until bright red.",
+     "min": 15
+    },
+    {
+     "text": "Melt the butter with a squeeze of lemon and parsley for drawn butter. Split the lobsters and serve with butter and lemon wedges.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Pâté de canard en croûte",
+   "course": "m",
+   "extra": true,
+   "prep_min": 90,
+   "cook_min": 150,
+   "make_ahead": "Make 1 day ahead, serve cold",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole duck, about 2kg",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "veal mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "shortcrust pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bone the duck by hand, keeping the skin whole as a flat sheet.",
+     "min": 60
+    },
+    {
+     "text": "Mix the pork, veal, brandy, one egg, garlic and thyme for the stuffing and season well.",
+     "min": 15
+    },
+    {
+     "text": "Fill the duck, roll up and wrap in two thirds of the pastry in a loaf tin. Seal with the remaining pastry and brush with the other egg.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 180C until the centre reaches 75C.",
+     "min": 70
+    },
+    {
+     "text": "Cool completely, then chill (included in cook time).",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Sole meunière",
+   "course": "m",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Cook just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole sole or flounder, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the fish dry, season and dust with flour.",
+     "min": 5
+    },
+    {
+     "text": "Brown in the butter in a large pan, about 4 minutes each side.",
+     "min": 8
+    },
+    {
+     "text": "Add a squeeze of lemon and the parsley to the browned butter and spoon over the fish.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,312 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Portobello Road market bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf crusty bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato chutney",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the bread and fill with sliced brie, ham and chutney.",
+     "min": 8
+    },
+    {
+     "text": "Cut into small pieces and pin with toothpicks.",
+     "min": 5
+    },
+    {
+     "text": "Serve on a board with a bowl of green olives.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Spike's sandwich",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pickle relish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread on the outside. Slice the cheddar and tomatoes.",
+     "min": 6
+    },
+    {
+     "text": "Fill with cheddar, tomato and relish.",
+     "min": 3
+    },
+    {
+     "text": "Toast in a pan over medium heat, pressing down, until golden and melting.",
+     "min": 10
+    },
+    {
+     "text": "Cut into quarters.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Honey's birthday dinner",
+   "course": "m",
+   "prep_min": 14,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the potatoes, slice the mushrooms and chop the tarragon.",
+     "min": 12
+    },
+    {
+     "text": "Brown the chicken in oil.",
+     "min": 12
+    },
+    {
+     "text": "Add the mushrooms and cook until golden.",
+     "min": 8
+    },
+    {
+     "text": "Pour in the wine and simmer.",
+     "min": 20
+    },
+    {
+     "text": "Stir in the cream and tarragon.",
+     "min": 2
+    },
+    {
+     "text": "Boil and mash the potatoes with butter and steam the beans.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "The last brownie",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 25,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and line a tin. Melt the chocolate and butter.",
+     "min": 10
+    },
+    {
+     "text": "Whisk in the sugar and eggs, then fold in the flour and cocoa.",
+     "min": 5
+    },
+    {
+     "text": "Bake.",
+     "min": 25
+    },
+    {
+     "text": "Cool and cut into squares.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Spilled orange juice mimosas",
+   "course": "d",
+   "prep_min": 13,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the oranges and strain the juice.",
+     "min": 8
+    },
+    {
+     "text": "Chill the juice and the sparkling wine.",
+     "min": 60
+    },
+    {
+     "text": "Pour orange juice into each of four flutes, then slowly top with sparkling wine.",
+     "min": 3
+    },
+    {
+     "text": "Twist a strip of orange peel over each and hang on the rim. For non-drinkers, top with sparkling water.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

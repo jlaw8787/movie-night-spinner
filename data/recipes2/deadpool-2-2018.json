@@ -1,0 +1,354 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chimichanga bites",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 195,
+   "make_ahead": "Beef up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "chipotle chillies in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the beef in a pot with the chipotle and water.",
+     "min": 5
+    },
+    {
+     "text": "Braise gently until it shreds easily, then shred.",
+     "min": 180
+    },
+    {
+     "text": "Roll small amounts of beef and cheddar in the tortillas, folding in the sides.",
+     "min": 15
+    },
+    {
+     "text": "Fry seam side down until crisp all over.",
+     "min": 8
+    },
+    {
+     "text": "Serve with sour cream and tomato salsa.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Dopinder's taxi samosas",
+   "course": "s",
+   "prep_min": 22,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, uncooked and chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "spring roll pastry sheets",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tamarind paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil and crush the potatoes with the peas and garam masala, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Cut the pastry into strips, spoon filling at one end and fold into triangles.",
+     "min": 15
+    },
+    {
+     "text": "Fry until golden and crisp.",
+     "min": 5
+    },
+    {
+     "text": "Mix the tamarind with sugar and water to serve alongside.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Wade and Vanessa's steak frites",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips, toss in oil and roast until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Sear the steaks in a very hot pan, add butter and baste for a minute, then rest.",
+     "min": 8
+    },
+    {
+     "text": "Add the red wine and stock to the pan and reduce until glossy.",
+     "min": 10
+    },
+    {
+     "text": "Slice the steak and serve by candlelight.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Red suit raspberry cheesecake",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 550,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sweet biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar for the sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits with the butter and press into a lined tin.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese and sugar, then beat in the eggs and pour over the base.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 160C, then turn off the oven and cool inside.",
+     "min": 50
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 480
+    },
+    {
+     "text": "Simmer the raspberries with sugar, push through a sieve and spoon over the top.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cable's cold brew espresso martini",
+   "course": "d",
+   "prep_min": 35,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "cold brew coffee",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "coffee liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "coffee beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill 4 martini glasses in the freezer.",
+     "min": 30
+    },
+    {
+     "text": "Shake each drink very hard with plenty of ice for 15 seconds so it foams, then strain into the glass.",
+     "min": 5
+    },
+    {
+     "text": "Float three coffee beans on top of each. Make it in batches of one or two.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

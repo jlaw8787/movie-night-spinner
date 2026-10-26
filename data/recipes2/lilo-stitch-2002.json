@@ -1,0 +1,278 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pudge's peanut butter and banana toasties",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "crunchy peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bananas, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter one side of every slice of bread.",
+     "min": 3
+    },
+    {
+     "text": "Turn over and spread half with peanut butter, top with banana and honey, then close with the other slices, butter side out.",
+     "min": 7
+    },
+    {
+     "text": "Cook in a pan over medium-low heat for 3 minutes a side until golden.",
+     "min": 6
+    },
+    {
+     "text": "Cut into fish shapes with a cutter, or into triangles.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Kauai poke",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 hour ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sashimi tuna, diced",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet rice crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the tuna with soy, sesame oil, spring onion and chilli.",
+     "min": 8
+    },
+    {
+     "text": "Spoon onto rice crackers and serve straight away.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Loco moco",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shape the mince into patties and sear in a hot pan. Cook through.",
+     "min": 15
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 20
+    },
+    {
+     "text": "In the same pan, soften the onion in butter, stir in the flour and then the stock until thick.",
+     "min": 10
+    },
+    {
+     "text": "Fry the eggs. Serve patties on rice with gravy and a fried egg.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Experiment 626 pineapple soft serve",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Needs frozen pineapple, serve straight away",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen pineapple",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the pineapple with the coconut cream, lime juice and sugar until thick and smooth.",
+     "min": 7
+    },
+    {
+     "text": "Pipe into cups and serve straight away before it melts.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Blue Hawaiian mocktail",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "blue raspberry cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pineapple wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the pineapple juice, coconut cream, cordial and ice until slushy.",
+     "min": 5
+    },
+    {
+     "text": "Pour into four tall glasses with a pineapple wedge. Ohana means family.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

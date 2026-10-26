@@ -1,0 +1,374 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Plenty-of-wontons soup",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green prawns, chopped",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger, plus slices for the broth",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "wonton wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches bok choy, halved",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork and prawns with grated ginger and some soy.",
+     "min": 10
+    },
+    {
+     "text": "Fill the wrappers and fold.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the stock with ginger slices and soy.",
+     "min": 8
+    },
+    {
+     "text": "Add the wontons and cook.",
+     "min": 4
+    },
+    {
+     "text": "Add the bok choy for the last minute and load up the bowls.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Ectoplasm lime dip",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "edamame, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag prawn crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the avocado, edamame, lime juice, garlic, coriander and salt until smooth and very green.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into a bowl.",
+     "min": 3
+    },
+    {
+     "text": "Cut the cucumber into sticks.",
+     "min": 5
+    },
+    {
+     "text": "Serve with prawn crackers and cucumber for dipping.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Takeaway from downstairs",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pork scotch fillet",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple, in pieces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "cooked cold long grain rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pork into chunks, coat in cornflour.",
+     "min": 8
+    },
+    {
+     "text": "Fry in batches until crisp.",
+     "min": 12
+    },
+    {
+     "text": "Simmer rice vinegar, sugar and tomato sauce, add pineapple and sliced capsicum.",
+     "min": 8
+    },
+    {
+     "text": "Make egg fried rice from the cold rice.",
+     "min": 8
+    },
+    {
+     "text": "Toss the pork through the sauce and serve with the rice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Fortune cookies",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites with the sugar, then mix in the flour, melted butter and vanilla.",
+     "min": 10
+    },
+    {
+     "text": "Spread thin rounds on a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C in batches of a few at a time.",
+     "min": 12
+    },
+    {
+     "text": "Working fast while hot, lay a paper fortune on each, fold in half and bend over a cup edge.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Ectoplasm kiwi lime slime soda",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "kiwifruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in hot water and cool.",
+     "min": 3
+    },
+    {
+     "text": "Peel the kiwifruit and blitz with lime juice, mint leaves and the syrup until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into four tall glasses over crushed ice.",
+     "min": 3
+    },
+    {
+     "text": "Top each slowly with cold soda water so it foams up.",
+     "min": 3
+    },
+    {
+     "text": "Stir once and add a lime wheel.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

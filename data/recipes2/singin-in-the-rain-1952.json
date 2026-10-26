@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Monumental Pictures devils on horseback",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day uncooked, bake fresh",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "pitted prunes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "toothpicks, to secure",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Push an almond into each prune.",
+     "min": 8
+    },
+    {
+     "text": "Wrap each in a third of a bacon rasher and secure with a toothpick.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 200C until the bacon is crisp.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Rainy day cheese toasties",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "tomato soup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread on the outside and fill 4 slices with the cheddar.",
+     "min": 5
+    },
+    {
+     "text": "Toast in a pan over medium heat until golden and melted.",
+     "min": 12
+    },
+    {
+     "text": "Heat the tomato soup and pour into mugs.",
+     "min": 8
+    },
+    {
+     "text": "Cut the toasties into soldiers and serve for dunking.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Chicken à la king",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Filling up to 1 day, reheat gently",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken breast, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "button mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pastry into squares, shape into cases and bake at 200C until puffed.",
+     "min": 15
+    },
+    {
+     "text": "Fry the chicken in the butter, then add the mushrooms and capsicum.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the flour, then the cream and stock, and simmer until thick.",
+     "min": 8
+    },
+    {
+     "text": "Spoon into the pastry cases.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Pop-out party cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 65,
+   "make_ahead": "Bake up to 1 day ahead, ice on the day",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened, for the icing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pink food colouring, a drop",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour and milk. Divide between two 20cm tins.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 175C.",
+     "min": 30
+    },
+    {
+     "text": "Cool completely.",
+     "min": 30
+    },
+    {
+     "text": "Beat the icing butter with the icing sugar and a drop of pink colouring.",
+     "min": 10
+    },
+    {
+     "text": "Stack and cover the layers, then shower with sprinkles.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Sparkling lemonade in coupes",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "Syrup up to 3 days, chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "sparkling water, chilled",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar with the water and the zest of 2 lemons until dissolved.",
+     "min": 6
+    },
+    {
+     "text": "Cool, then add the lemon juice.",
+     "min": 9
+    },
+    {
+     "text": "Pour into 4 coupe glasses, top with chilled sparkling water and a lemon twist.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

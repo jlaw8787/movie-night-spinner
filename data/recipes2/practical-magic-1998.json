@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Garden herb cheese",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "goat's cheese log",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "rosemary, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch dried lavender",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the herbs finely",
+     "min": 6
+    },
+    {
+     "text": "Roll the cheese log in the herbs, lavender and lemon zest",
+     "min": 5
+    },
+    {
+     "text": "Drizzle with honey and serve with crackers",
+     "min": 3
+    },
+    {
+     "text": "Keep a sprig of rosemary on the board for luck",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Lavender shortbread",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Up to 5 days in a tin",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried lavender",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with most of the sugar",
+     "min": 8
+    },
+    {
+     "text": "Mix in the flour and the lavender rubbed between your fingers",
+     "min": 8
+    },
+    {
+     "text": "Press into a tray and prick",
+     "min": 4
+    },
+    {
+     "text": "Bake at 160C",
+     "min": 25
+    },
+    {
+     "text": "Dust with sugar and cut while warm",
+     "min": 5
+    },
+    {
+     "text": "Cool in the tray",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Aunts' roast chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 95,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rosemary sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stuff the chicken with half a lemon, garlic and rosemary",
+     "min": 8
+    },
+    {
+     "text": "Cut the potatoes and carrots and put them in the tray",
+     "min": 10
+    },
+    {
+     "text": "Roast at 200C",
+     "min": 75
+    },
+    {
+     "text": "Rest the chicken",
+     "min": 10
+    },
+    {
+     "text": "Make a quick gravy from the juices with flour and lemon",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Chocolate cake for breakfast",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 90,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with most of the butter",
+     "min": 8
+    },
+    {
+     "text": "Whisk in the eggs, sugar and buttermilk",
+     "min": 5
+    },
+    {
+     "text": "Fold in the flour and bicarb",
+     "min": 5
+    },
+    {
+     "text": "Bake at 170C",
+     "min": 35
+    },
+    {
+     "text": "Cool",
+     "min": 30
+    },
+    {
+     "text": "Beat the icing sugar with the cocoa and remaining butter and frost",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Midnight margaritas",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "tequila",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the limes and rim four glasses with flaky salt",
+     "min": 3
+    },
+    {
+     "text": "Shake each drink hard with ice",
+     "min": 3
+    },
+    {
+     "text": "Strain into the glasses. Best after midnight in the kitchen",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

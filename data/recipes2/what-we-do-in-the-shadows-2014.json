@@ -1,0 +1,302 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Nick's hot chips",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thick chips, soak and dry.",
+     "min": 25
+    },
+    {
+     "text": "Fry at 150C, rest, then fry at 190C until crunchy. Salt well.",
+     "min": 25
+    },
+    {
+     "text": "Mix the mayonnaise with crushed garlic and a squeeze of lemon for aioli.",
+     "min": 5
+    },
+    {
+     "text": "Serve the aioli on the side.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Blood orange and beetroot crostini",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Beetroot up to 2 days ahead, assemble fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "beetroot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "blood oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wrap the beetroot in foil and roast at 200C.",
+     "min": 50
+    },
+    {
+     "text": "Cool, peel and dice.",
+     "min": 15
+    },
+    {
+     "text": "Slice the baguette into rounds and toast.",
+     "min": 8
+    },
+    {
+     "text": "Spread with goat's cheese, top with beetroot and blood orange segments and drizzle with honey.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Rare roast beef rolls",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Beef up to 1 day ahead, assemble fresh",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef sirloin",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef and sear on all sides in a hot pan.",
+     "min": 8
+    },
+    {
+     "text": "Roast at 200C for rare.",
+     "min": 18
+    },
+    {
+     "text": "Rest the beef, then slice thin.",
+     "min": 15
+    },
+    {
+     "text": "Fill the rolls with beef, horseradish cream and a handful of rocket each.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Black forest gateau",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 70,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 680,
+     "u": "g",
+     "item": "morello cherries, in syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs and sugar until thick, then fold in the flour and cocoa.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a 20cm tin at 180C.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely.",
+     "min": 35
+    },
+    {
+     "text": "Split the cake in two and soak with the cherry syrup.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream, fill with cherries and cream, cover in cream and grate dark chocolate on top.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Blood orange spritz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 7,
+     "u": "",
+     "item": "blood oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze 6 of the blood oranges.",
+     "min": 6
+    },
+    {
+     "text": "Fill 4 wine glasses with ice and pour the juice into each.",
+     "min": 2
+    },
+    {
+     "text": "Top with soda water and finish with a slice of blood orange on the rim.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

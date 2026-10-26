@@ -1,0 +1,322 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Iceberg Lounge salmon rye and spiced olives",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peel only",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the rye into small squares, spread with creme fraiche and top each with a fold of smoked salmon.",
+     "min": 8
+    },
+    {
+     "text": "Warm the olives in a pan with strips of orange peel and chilli flakes.",
+     "min": 3
+    },
+    {
+     "text": "Serve both on a dark board.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Riddler's question mark pretzels",
+   "course": "s",
+   "prep_min": 72,
+   "cook_min": 15,
+   "make_ahead": "Best fresh, up to 1 day",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "rock salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar and warm water into a dough.",
+     "min": 10
+    },
+    {
+     "text": "Rest until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Roll into ropes and shape into question marks.",
+     "min": 5
+    },
+    {
+     "text": "Dip in boiling water with bicarb soda, sprinkle with rock salt and bake at 220C.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Rainy Gotham beef stew",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 195,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "stout",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches.",
+     "min": 15
+    },
+    {
+     "text": "Add the onions and soften, then pour in the stout and enough water to cover.",
+     "min": 5
+    },
+    {
+     "text": "Add the thyme, cover and simmer gently until tender.",
+     "min": 160
+    },
+    {
+     "text": "Boil the potatoes, mash with plenty of butter and serve the stew on top.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Flood night chocolate pots",
+   "course": "w",
+   "prep_min": 18,
+   "cook_min": 245,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cream, whipped, to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honeycomb, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream until steaming and pour over the chocolate.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the yolks with the sugar and stir through until glossy.",
+     "min": 5
+    },
+    {
+     "text": "Pour into small glasses.",
+     "min": 5
+    },
+    {
+     "text": "Chill for 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Top with whipped cream and crushed honeycomb just before serving.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Iceberg Lounge espresso martini",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "coffee liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "strong coffee (4 espresso shots)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "coffee beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee and cool, and chill the martini glasses.",
+     "min": 10
+    },
+    {
+     "text": "Shake each drink very hard with ice for 15 seconds.",
+     "min": 10
+    },
+    {
+     "text": "Strain into a glass and float three coffee beans on top.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

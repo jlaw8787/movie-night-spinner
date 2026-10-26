@@ -1,0 +1,372 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pickled herring on rye",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pickled herring",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices dark rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the herring and cut into bite pieces.",
+     "min": 5
+    },
+    {
+     "text": "Mix with the sour cream, chopped dill and thinly sliced red onion.",
+     "min": 6
+    },
+    {
+     "text": "Butter the rye, cut into squares and spoon the herring on top.",
+     "min": 9
+    }
+   ]
+  },
+  {
+   "n": "Rostavili's Georgian cheese bread",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 16,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 230C. Roll the dough into ovals.",
+     "min": 15
+    },
+    {
+     "text": "Fill with mozzarella mixed with crumbled feta and fold the edges up into boat shapes.",
+     "min": 10
+    },
+    {
+     "text": "Bake until golden.",
+     "min": 12
+    },
+    {
+     "text": "Crack an egg into each and bake a little longer.",
+     "min": 4
+    },
+    {
+     "text": "Add a knob of butter and stir at the table.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Ridzik's Chicago beef stroganoff",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "eye fillet, cut into strips",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "egg noodles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onion and mushrooms.",
+     "min": 10
+    },
+    {
+     "text": "Sear the beef strips fast in batches and set aside.",
+     "min": 8
+    },
+    {
+     "text": "Brown the mushrooms and onion, add the paprika, Dijon and stock and reduce.",
+     "min": 10
+    },
+    {
+     "text": "Boil the noodles and drain.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the sour cream off the heat and return the beef. Serve over the noodles.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Medovik honey cake",
+   "course": "w",
+   "prep_min": 73,
+   "cook_min": 510,
+   "make_ahead": "Rests overnight, up to 3 days chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "sweetened condensed milk (1 tin)",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the honey, butter and sugar, then whisk in the eggs and bicarb, then the flour to a dough.",
+     "min": 15
+    },
+    {
+     "text": "Roll the dough into thin discs.",
+     "min": 25
+    },
+    {
+     "text": "Bake each disc, keeping the offcuts for crumbs, in a 180C oven.",
+     "min": 30
+    },
+    {
+     "text": "Beat the sour cream with the condensed milk.",
+     "min": 8
+    },
+    {
+     "text": "Layer the discs with the cream.",
+     "min": 15
+    },
+    {
+     "text": "Crush the offcuts and coat the cake in the crumbs.",
+     "min": 10
+    },
+    {
+     "text": "Rest the cake overnight in the fridge.",
+     "min": 480
+    }
+   ]
+  },
+  {
+   "n": "Danko's cranberry mors and vodka cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 100,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen cranberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "frozen cranberries, for garnish",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the cranberries with the water and honey, crushing the berries.",
+     "min": 12
+    },
+    {
+     "text": "Strain, add the juice of one lemon and chill the mors.",
+     "min": 93
+    },
+    {
+     "text": "Fill tall glasses with ice. Add vodka and mors to each, top with soda water and stir.",
+     "min": 3
+    },
+    {
+     "text": "Garnish with a few frozen cranberries and a lemon slice.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

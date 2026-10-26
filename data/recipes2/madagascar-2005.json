@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Penguins' sushi rolls",
+   "course": "s",
+   "prep_min": 45,
+   "cook_min": 25,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sushi rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "nori sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sashimi salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pickled ginger",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice and season with vinegar and sugar. Cool.",
+     "min": 25
+    },
+    {
+     "text": "Spread over the nori, fill with salmon and avocado and roll tight with a mat.",
+     "min": 25
+    },
+    {
+     "text": "Slice with a wet knife.",
+     "min": 10
+    },
+    {
+     "text": "Serve with soy and pickled ginger. Smile and wave, boys.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Marty's birthday zebra brownies",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Keeps 4 days",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the butter, whisk in most of the sugar and two eggs and fold in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese with the rest of the sugar and the last egg.",
+     "min": 5
+    },
+    {
+     "text": "Spread the brownie in a tin and swirl the cheesecake through in stripes.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 170C for 30 minutes.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Alex's steak",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 520,
+   "make_ahead": "Steaks dry-brine overnight",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rib eye steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into shoestrings",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the steaks and leave uncovered in the fridge overnight.",
+     "min": 480
+    },
+    {
+     "text": "Mash the butter with the garlic and parsley.",
+     "min": 5
+    },
+    {
+     "text": "Fry the shoestring potatoes until golden and crisp.",
+     "min": 20
+    },
+    {
+     "text": "Sear the steaks in a smoking cast iron pan, flipping every minute, and pull at 54C.",
+     "min": 8
+    },
+    {
+     "text": "Rest for 8 minutes and top with the garlic butter.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "King Julien's caramel grilled pineapple",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "pineapple, cut into long wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tub coconut ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "coconut flakes, toasted",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the pineapple on a hot pan for 3 minutes a side until charred.",
+     "min": 8
+    },
+    {
+     "text": "Melt the butter with the sugar, bubble for 2 minutes, then stir in the lime juice and salt.",
+     "min": 4
+    },
+    {
+     "text": "Toss the pineapple in the caramel.",
+     "min": 3
+    },
+    {
+     "text": "Serve warm with scoops of coconut ice cream and toasted coconut flakes.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "King Julien's mango passionfruit punch",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "mango nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit, pulp",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced, plus wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chilled lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "In a large jug stir the nectar, pineapple juice, passionfruit pulp and lime juice.",
+     "min": 5
+    },
+    {
+     "text": "Add diced mango and plenty of crushed ice.",
+     "min": 5
+    },
+    {
+     "text": "Top with lemonade just before serving and pour into tall glasses with a lime wedge.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

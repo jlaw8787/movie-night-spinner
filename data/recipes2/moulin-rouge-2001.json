@@ -1,0 +1,332 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Moulin Rouge oysters",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 20,
+   "make_ahead": "Mignonette up to 1 day, shuck oysters just before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "shallots, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "oysters, freshly shucked",
+     "aisle": "Seafood"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the shallots, vinegar and pepper for the mignonette and rest.",
+     "min": 20
+    },
+    {
+     "text": "Shuck the oysters.",
+     "min": 20
+    },
+    {
+     "text": "Lay the oysters on crushed ice with lemon wedges and the mignonette alongside.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Montmartre gougères",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line a tray. Boil the water and butter, beat in the flour and stir over heat for a minute.",
+     "min": 6
+    },
+    {
+     "text": "Cool slightly, then beat in the eggs, gruyere and nutmeg.",
+     "min": 8
+    },
+    {
+     "text": "Pipe small rounds onto the tray.",
+     "min": 6
+    },
+    {
+     "text": "Bake until puffed and golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "The elephant supper",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "duck breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cherries, pitted",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fresh thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the duck skin and render skin side down over medium heat.",
+     "min": 8
+    },
+    {
+     "text": "Roast at 200C, then rest.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the cherries with the wine and thyme until syrupy.",
+     "min": 20
+    },
+    {
+     "text": "Boil the potatoes and mash with the butter until silky.",
+     "min": 22
+    },
+    {
+     "text": "Slice the duck and serve with the cherry sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Red windmill raspberry tart",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets of sweet shortcrust pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Line a tart tin and blind bake.",
+     "min": 25
+    },
+    {
+     "text": "Cook the milk, yolks, sugar and cornflour until thick.",
+     "min": 10
+    },
+    {
+     "text": "Chill the custard and the case.",
+     "min": 25
+    },
+    {
+     "text": "Fill the case with custard.",
+     "min": 5
+    },
+    {
+     "text": "Cover with raspberries edge to edge and brush with warm jam.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Green fairy",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "absinthe, for the grown ups",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sugar cubes, for the grown ups",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "For the grown ups, drip cold water over a sugar cube into the absinthe until cloudy.",
+     "min": 4
+    },
+    {
+     "text": "For everyone else, blitz the apples with mint and strain.",
+     "min": 4
+    },
+    {
+     "text": "Top with soda water and pour into small glasses.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,322 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hattori Hanzo's sushi",
+   "course": "s",
+   "prep_min": 29,
+   "cook_min": 35,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sushi rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sashimi salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sashimi tuna",
+     "aisle": "Seafood"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "wasabi, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pickled ginger, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the sushi rice, season with the vinegar, sugar and salt and cool.",
+     "min": 35
+    },
+    {
+     "text": "Shape the rice into small fingers.",
+     "min": 15
+    },
+    {
+     "text": "Slice the salmon and tuna, top the rice with a dab of wasabi and a slice of fish.",
+     "min": 12
+    },
+    {
+     "text": "Serve on a board with pickled ginger.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Yellow tracksuit corn",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white miso",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "shichimi togarashi",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch spring onions",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the corn until charred all over.",
+     "min": 15
+    },
+    {
+     "text": "Mix the butter with the miso and brush over.",
+     "min": 4
+    },
+    {
+     "text": "Sprinkle with shichimi togarashi and sliced spring onion.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "House of Blue Leaves yakitori",
+   "course": "m",
+   "prep_min": 18,
+   "cook_min": 42,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "mirin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sake",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the soy, mirin, sake and sugar until syrupy for the tare.",
+     "min": 12
+    },
+    {
+     "text": "Dice the chicken and thread onto skewers, some with spring onion pieces.",
+     "min": 18
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 18
+    },
+    {
+     "text": "Grill over high heat, brushing with tare.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Matcha ice cream",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 610,
+   "make_ahead": "Up to 1 week in the freezer",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "matcha powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the matcha into the warm milk and cream.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the yolks with the sugar, pour over and cook to 82C.",
+     "min": 10
+    },
+    {
+     "text": "Strain and chill overnight.",
+     "min": 480
+    },
+    {
+     "text": "Churn, or freeze and stir every 30 minutes.",
+     "min": 120
+    }
+   ]
+  },
+  {
+   "n": "Hanzo's yuzu sake sour",
+   "course": "d",
+   "prep_min": 18,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "junmai sake",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "yuzu juice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, to shake",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the honey with warm water for honey syrup.",
+     "min": 3
+    },
+    {
+     "text": "Shake the sake, yuzu juice, syrup and egg white hard without ice, one drink at a time.",
+     "min": 8
+    },
+    {
+     "text": "Add ice and shake again.",
+     "min": 4
+    },
+    {
+     "text": "Strain into chilled coupes and finish with a twist of lemon peel.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

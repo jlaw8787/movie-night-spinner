@@ -1,0 +1,394 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bondi fish and chips",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut in thick chips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "ice cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "flathead fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour, for dusting",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tartare sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the chips at 140C until soft and drain.",
+     "min": 12
+    },
+    {
+     "text": "Whisk the flour with the cold lager to a thin batter.",
+     "min": 5
+    },
+    {
+     "text": "Dip the fish in flour, then batter, and fry at 180C.",
+     "min": 8
+    },
+    {
+     "text": "Fry the chips again until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Wrap it all in paper with lemon and tartare.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Kings Cross pie floaters",
+   "course": "s",
+   "prep_min": 45,
+   "cook_min": 190,
+   "make_ahead": "Filling up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets of shortcrust pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets of puff pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "tomato sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Braise the beef in the stock until tender.",
+     "min": 150
+    },
+    {
+     "text": "Thicken with the flour and cool.",
+     "min": 20
+    },
+    {
+     "text": "Line pie tins with shortcrust, fill and top with puff lids.",
+     "min": 25
+    },
+    {
+     "text": "Brush with egg and bake at 200C.",
+     "min": 30
+    },
+    {
+     "text": "Cook the peas and mash roughly with the butter.",
+     "min": 10
+    },
+    {
+     "text": "Spoon peas into bowls, sit a pie on top and finish with tomato sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sydney Chinatown night",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "squid tubes",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rice flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground Sichuan pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "cold cooked jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs, scrambled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the squid and cut into pieces.",
+     "min": 8
+    },
+    {
+     "text": "Toss in rice flour, Sichuan pepper and salt.",
+     "min": 4
+    },
+    {
+     "text": "Fry at 190C for a minute, then toss with chilli and spring onion.",
+     "min": 8
+    },
+    {
+     "text": "Scramble the eggs, fry the rice with the eggs and spring onion.",
+     "min": 10
+    },
+    {
+     "text": "Serve together.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Pavlova",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 130,
+   "make_ahead": "Base up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit, pulp",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 120C. Whisk the egg whites to stiff peaks, then add the sugar a spoon at a time until glossy.",
+     "min": 20
+    },
+    {
+     "text": "Fold in the cornflour and vinegar and shape into a round.",
+     "min": 10
+    },
+    {
+     "text": "Bake for 90 minutes.",
+     "min": 90
+    },
+    {
+     "text": "Cool in the oven.",
+     "min": 30
+    },
+    {
+     "text": "Top with whipped cream and passionfruit.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Ten-grand Bondi passionfruit shandy",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit, pulp",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "passionfruit, halved, for floating",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the passionfruit pulp, lime juice and sugar until dissolved.",
+     "min": 4
+    },
+    {
+     "text": "Add the soda water.",
+     "min": 1
+    },
+    {
+     "text": "Pour lager into 4 chilled schooner glasses.",
+     "min": 3
+    },
+    {
+     "text": "Top with the passionfruit soda and float half a passionfruit on top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

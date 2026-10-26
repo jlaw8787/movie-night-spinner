@@ -1,0 +1,336 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sherwood ploughman's picnic board",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "small pork pies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "aged cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pickled onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread a cloth on the floor or table.",
+     "min": 2
+    },
+    {
+     "text": "Cut the cheddar into wedges and slice the apples.",
+     "min": 8
+    },
+    {
+     "text": "Tear the bread.",
+     "min": 3
+    },
+    {
+     "text": "Lay everything out with the pork pies and pickled onions for everyone to help themselves.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Archery tournament skewers",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 72,
+   "make_ahead": "Marinate up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red capsicums",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the chicken and capsicums into chunks.",
+     "min": 12
+    },
+    {
+     "text": "Mix the honey, mustard and garlic and toss through the chicken and capsicum.",
+     "min": 3
+    },
+    {
+     "text": "Marinate in the fridge.",
+     "min": 60
+    },
+    {
+     "text": "Thread onto long skewers.",
+     "min": 8
+    },
+    {
+     "text": "Grill until charred and cooked through.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Outlaws' camp stew",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 133,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "lamb neck pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the carrots and leeks.",
+     "min": 10
+    },
+    {
+     "text": "Brown the lamb in batches in a heavy pot.",
+     "min": 12
+    },
+    {
+     "text": "Add the barley, carrots, leeks, rosemary and water.",
+     "min": 3
+    },
+    {
+     "text": "Simmer until the lamb falls from the bone.",
+     "min": 120
+    },
+    {
+     "text": "Season and serve in deep bowls with crusty bread.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Golden coin honey cakes",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 23,
+   "make_ahead": "Up to 1 day in an airtight tin",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey, for brushing",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "gold chocolate coins",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and honey until pale, then beat in the eggs.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the flour.",
+     "min": 3
+    },
+    {
+     "text": "Spoon into patty pans.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 175C until risen and golden.",
+     "min": 15
+    },
+    {
+     "text": "Cool slightly.",
+     "min": 10
+    },
+    {
+     "text": "Brush with warm honey and press a chocolate coin on top of each.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Merry Men hot spiced apple punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel strips of zest from one orange, juice it and slice the other.",
+     "min": 4
+    },
+    {
+     "text": "Warm the apple juice, 2 cinnamon sticks, cloves, zest, orange juice and honey over low heat without boiling.",
+     "min": 15
+    },
+    {
+     "text": "Strain and ladle into mugs, each with an orange slice and a cinnamon stick.",
+     "min": 4
+    },
+    {
+     "text": "For a chilled version, cool the punch and top with sparkling apple juice.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

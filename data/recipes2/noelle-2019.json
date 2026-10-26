@@ -1,0 +1,402 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Phoenix street corn chicken tacos",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chipotle sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the onion in the juice of two limes with a pinch of salt and sugar.",
+     "min": 10
+    },
+    {
+     "text": "Toss the chicken with the chipotle sauce, cumin and oil, grill on both sides and slice.",
+     "min": 12
+    },
+    {
+     "text": "Char the corn and cut off the kernels.",
+     "min": 8
+    },
+    {
+     "text": "Mix the sour cream with lime juice. Warm the tortillas.",
+     "min": 3
+    },
+    {
+     "text": "Fill with chicken, corn, feta, crema, onion and coriander.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Noelle's double candy cane bark",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 37,
+   "make_ahead": "Up to 1 week, keep in an airtight container",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "peppermint extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "candy canes, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tray with baking paper. Melt the dark chocolate and spread into a rectangle.",
+     "min": 8
+    },
+    {
+     "text": "Chill the dark layer.",
+     "min": 10
+    },
+    {
+     "text": "Melt the white chocolate with the peppermint extract, spread over the dark layer and drag a skewer through to swirl.",
+     "min": 7
+    },
+    {
+     "text": "Scatter with crushed candy cane and sea salt.",
+     "min": 2
+    },
+    {
+     "text": "Chill until set, then snap into shards.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Kringle family maple roast chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 90,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chicken with the butter, salt and thyme leaves.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 200C, brushing with the maple syrup mixed with Dijon for the last part.",
+     "min": 75
+    },
+    {
+     "text": "Toss the potatoes in oil and roast alongside, adding the carrots tossed in honey part way through.",
+     "min": 10
+    },
+    {
+     "text": "Rest the chicken.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the flour into the pan juices with the stock for gravy.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Elf Polly's iced sugar cookies",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 40,
+   "make_ahead": "Up to 3 days, keep in an airtight container",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pack food colouring (red and green)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar edible glitter",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with some of the icing sugar, add the egg yolk and vanilla, then mix in the flour.",
+     "min": 8
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Roll out and cut stars, trees and reindeer.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 170C, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Mix the remaining icing sugar with water, divide into three bowls and tint red and green, leaving one white. Ice the cookies and dust with edible glitter.",
+     "min": 19
+    }
+   ]
+  },
+  {
+   "n": "Snowcone blue raspberry slushie",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "blue raspberry cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the frozen raspberries, lemon juice, cordial and ice until slushy.",
+     "min": 3
+    },
+    {
+     "text": "Add the lemonade and pulse twice to mix.",
+     "min": 1
+    },
+    {
+     "text": "Pour into cups, top with whipped cream and a few raspberries.",
+     "min": 3
+    },
+    {
+     "text": "Serve with spoons and straws.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

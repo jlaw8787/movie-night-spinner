@@ -1,0 +1,298 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mountain cabin snack plate",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "hot-smoked trout",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sharp cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled onions",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Flake the trout onto a wooden board.",
+     "min": 3
+    },
+    {
+     "text": "Add the crackers, cheddar, apple and pickled onions the way a mountain lodge would set it out.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Seven-day pickles",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10090,
+   "make_ahead": "Needs 7 days in the fridge, keeps 1 month",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "small cucumbers, sliced thin",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pack the cucumbers into a jar with the dill, garlic and peppercorns.",
+     "min": 10
+    },
+    {
+     "text": "Boil the vinegar, water, sugar and salt, then pour over the cucumbers.",
+     "min": 5
+    },
+    {
+     "text": "Refrigerate for seven days before eating.",
+     "min": 10080
+    }
+   ]
+  },
+  {
+   "n": "Ferry crossing salmon",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "white miso",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "wild rice blend",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches broccolini",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the miso, honey and soy and brush over the salmon.",
+     "min": 5
+    },
+    {
+     "text": "Cook the rice until tender.",
+     "min": 30
+    },
+    {
+     "text": "Roast the salmon at 220C for 8 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Char the broccolini in a hot pan and serve.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Well-deep chocolate pots",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 210,
+   "make_ahead": "Up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "ml",
+     "item": "thickened cream, 300ml for the pots and the rest for piping",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the milk and most of the cream, pour over the chocolate and stir smooth.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the yolks with the sugar and combine with the chocolate cream.",
+     "min": 7
+    },
+    {
+     "text": "Pour into deep cups and bake in a water bath at 150C for 30 minutes.",
+     "min": 35
+    },
+    {
+     "text": "Chill until set.",
+     "min": 180
+    },
+    {
+     "text": "Pipe a ring of whipped cream on top.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Shelter Mountain hot toddy",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put honey, a splash of lemon juice and whisky in each of four mugs.",
+     "min": 3
+    },
+    {
+     "text": "Top with boiling water, stir and add a cinnamon stick.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

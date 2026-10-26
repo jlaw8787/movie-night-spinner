@@ -1,0 +1,392 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Slimy yet satisfying grubs",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 16,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "rice vermicelli",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lettuce leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oil to 190C.",
+     "min": 8
+    },
+    {
+     "text": "Drop in small handfuls of dry vermicelli so they puff up instantly.",
+     "min": 8
+    },
+    {
+     "text": "Drain and toss with chilli flakes, sea salt and a squeeze of lime.",
+     "min": 3
+    },
+    {
+     "text": "Pile onto a leaf and serve.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Rafiki's fruit platter",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "rockmelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "papaya",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the rockmelon, papaya and mangoes into wedges.",
+     "min": 15
+    },
+    {
+     "text": "Arrange on a platter with halved passionfruit.",
+     "min": 5
+    },
+    {
+     "text": "Squeeze over lime juice and sprinkle with chilli salt.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Jungle hideaway chicken",
+   "course": "m",
+   "prep_min": 12,
+   "cook_min": 148,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the chillies, lemon juice, garlic, paprika, oil and salt into a peri peri sauce.",
+     "min": 8
+    },
+    {
+     "text": "Marinate the chicken in the sauce.",
+     "min": 120
+    },
+    {
+     "text": "Grill until charred and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Cook the rice with the turmeric.",
+     "min": 15
+    },
+    {
+     "text": "Serve together.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Circle of life malva pudding",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, for the sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the eggs with the sugar and jam.",
+     "min": 6
+    },
+    {
+     "text": "Fold in the flour, melted butter and milk.",
+     "min": 4
+    },
+    {
+     "text": "Pour into a baking dish and bake at 180C.",
+     "min": 40
+    },
+    {
+     "text": "Heat the cream, butter and sugar until melted.",
+     "min": 5
+    },
+    {
+     "text": "Pour the hot sauce over the pudding and let it soak in.",
+     "min": 5
+    },
+    {
+     "text": "Warm the custard and serve alongside.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Watering hole peach rooibos iced tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 128,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rooibos tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags and orange peel in the just-boiled water.",
+     "min": 8
+    },
+    {
+     "text": "Remove the bags and peel and stir in the honey.",
+     "min": 2
+    },
+    {
+     "text": "Chill the tea.",
+     "min": 120
+    },
+    {
+     "text": "Slice the peaches.",
+     "min": 4
+    },
+    {
+     "text": "Fill tall glasses with ice and peaches, pour in the tea and top with sparkling water and a mint sprig.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

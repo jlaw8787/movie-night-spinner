@@ -1,0 +1,324 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Carter's Hong Kong egg tarts",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 33,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 70,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool.",
+     "min": 15
+    },
+    {
+     "text": "Whisk in the eggs and both milks, then strain.",
+     "min": 5
+    },
+    {
+     "text": "Cut rounds from the pastry and press into a greased patty tin.",
+     "min": 10
+    },
+    {
+     "text": "Fill the cases three quarters full.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 200C until the custard is just set with a slight wobble.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Red Dragon casino prawns",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 11,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "shell-on green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch white pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "potato starch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dry the prawns well, season with salt and white pepper and toss in the potato starch.",
+     "min": 10
+    },
+    {
+     "text": "Fry in 190C oil in batches until crisp.",
+     "min": 8
+    },
+    {
+     "text": "In a wok, fry the sliced garlic, chilli and spring onions in a little oil, then add the prawns and toss well.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ricky Tan's Hong Kong roast goose",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 600,
+   "make_ahead": "Dry overnight in the fridge",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "whole duck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Chinese five spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "plum sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cups jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the cavity with five spice and salt, then leave uncovered in the fridge overnight to dry the skin.",
+     "min": 485
+    },
+    {
+     "text": "Brush with honey loosened with hot water.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 180C, brushing again twice.",
+     "min": 90
+    },
+    {
+     "text": "Rest the duck, cook the rice and chop through the bone.",
+     "min": 15
+    },
+    {
+     "text": "Serve with plum sauce and rice.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mango sago",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 75,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sago pearls",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pomelo",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the sago in plenty of water until clear.",
+     "min": 15
+    },
+    {
+     "text": "Rinse under cold water and chill.",
+     "min": 60
+    },
+    {
+     "text": "Blend the flesh of two mangoes with the coconut milk and evaporated milk.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the sago and divide into bowls.",
+     "min": 3
+    },
+    {
+     "text": "Top with diced mango from the third mango and pomelo segments.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Hong Kong milk tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "loose black tea",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the tea in the water.",
+     "min": 5
+    },
+    {
+     "text": "Strain twice through a fine cloth or sieve.",
+     "min": 3
+    },
+    {
+     "text": "Add the evaporated milk and sugar and stir. Serve hot or over ice.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

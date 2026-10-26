@@ -1,0 +1,338 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Diner leftovers steak bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 1,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "rump steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the steak.",
+     "min": 2
+    },
+    {
+     "text": "Sear hard in a very hot pan.",
+     "min": 6
+    },
+    {
+     "text": "Rest, then cut into bite-sized pieces.",
+     "min": 5
+    },
+    {
+     "text": "Toss in melted butter with crushed garlic and sea salt.",
+     "min": 2
+    },
+    {
+     "text": "Serve on toothpicks with a small bowl of horseradish.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Ozarks cornbread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cornmeal, flour, baking powder, egg, buttermilk and melted butter until just combined.",
+     "min": 5
+    },
+    {
+     "text": "Pour into a hot greased cast iron pan and bake at 220C.",
+     "min": 20
+    },
+    {
+     "text": "Beat softened butter with honey.",
+     "min": 3
+    },
+    {
+     "text": "Serve with warm wedges.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Diner steak and eggs",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 13,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rump steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the potatoes and squeeze dry.",
+     "min": 8
+    },
+    {
+     "text": "Fry as hash brown cakes in butter until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Season the steaks with cracked pepper and sear to medium-rare.",
+     "min": 8
+    },
+    {
+     "text": "Rest the steaks.",
+     "min": 5
+    },
+    {
+     "text": "Fry the eggs and toast the bread.",
+     "min": 5
+    },
+    {
+     "text": "Serve each steak with two eggs, hash browns and buttered toast.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Lemon meringue pie",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 59,
+   "make_ahead": "Best the day it is made",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "caster sugar, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blind bake the pastry case until golden.",
+     "min": 15
+    },
+    {
+     "text": "Whisk the lemon juice and zest, most of the sugar, cornflour, yolks and butter over heat until thick.",
+     "min": 8
+    },
+    {
+     "text": "Pour into the case.",
+     "min": 2
+    },
+    {
+     "text": "Whisk the whites with the remaining sugar to stiff glossy peaks and pile on top.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 6
+    },
+    {
+     "text": "Cool before slicing.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Diner coffee float with vanilla ice cream",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 62,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "strong drip coffee (from 60 g ground coffee)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee strong and stir in the brown sugar while hot.",
+     "min": 8
+    },
+    {
+     "text": "Cool, then chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Put two scoops of ice cream in each of four tall glasses.",
+     "min": 4
+    },
+    {
+     "text": "Pour the cold coffee slowly over the ice cream so it foams.",
+     "min": 2
+    },
+    {
+     "text": "Top with whipped cream and a dusting of cocoa.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

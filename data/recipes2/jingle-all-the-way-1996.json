@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Put-that-cookie-down gingerbread men",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "Up to 5 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line trays. Melt the butter, sugar and golden syrup.",
+     "min": 5
+    },
+    {
+     "text": "Stir into the flour, bicarb and ginger with the egg.",
+     "min": 5
+    },
+    {
+     "text": "Chill, roll 5mm thick and cut 20 men.",
+     "min": 35
+    },
+    {
+     "text": "Bake until just firm.",
+     "min": 9
+    },
+    {
+     "text": "Cool and pipe buttons with icing sugar mixed with lemon juice.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Parade float popcorn",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate, melted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "red and green sprinkles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of flaky salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels and spread on a lined tray.",
+     "min": 10
+    },
+    {
+     "text": "Melt the white chocolate.",
+     "min": 5
+    },
+    {
+     "text": "Drizzle over the popcorn and toss.",
+     "min": 3
+    },
+    {
+     "text": "Scatter with sprinkles and salt before it sets.",
+     "min": 3
+    },
+    {
+     "text": "Break into clusters.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Ted's next-door Minnesota hotdish",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen tater tots",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion and mushrooms.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the cream and simmer until thick.",
+     "min": 10
+    },
+    {
+     "text": "Tip into a dish and cover with tater tots and cheddar.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until crisp.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Peppermint bark",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate, melted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop peppermint extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "candy canes, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tray with baking paper and spread the dark chocolate thin.",
+     "min": 6
+    },
+    {
+     "text": "Set.",
+     "min": 20
+    },
+    {
+     "text": "Melt the white chocolate with the peppermint extract and spread over.",
+     "min": 8
+    },
+    {
+     "text": "Scatter with crushed candy canes and set again.",
+     "min": 30
+    },
+    {
+     "text": "Break into shards.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Booster's spiced eggnog",
+   "course": "d",
+   "prep_min": 20,
+   "cook_min": 250,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "whipped cream, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks and sugar until pale.",
+     "min": 5
+    },
+    {
+     "text": "Heat the milk and cream with the cinnamon and nutmeg until steaming.",
+     "min": 8
+    },
+    {
+     "text": "Whisk into the yolks, return to the pan and stir over low heat to 75C until it coats the spoon.",
+     "min": 7
+    },
+    {
+     "text": "Strain and stir in the maple syrup and vanilla.",
+     "min": 3
+    },
+    {
+     "text": "Chill.",
+     "min": 240
+    },
+    {
+     "text": "Serve topped with whipped cream and more nutmeg.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

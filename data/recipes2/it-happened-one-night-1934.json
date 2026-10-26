@@ -1,0 +1,312 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Roadside raw carrots",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Dip up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag baby carrots (about 400 g)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the carrots and stand them upright in a glass.",
+     "min": 5
+    },
+    {
+     "text": "Mix the sour cream with snipped chives, chopped dill and a squeeze of lemon.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Overnight bus sandwiches",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day, keep chilled and wrapped",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "leg ham, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread and fill with ham, cheddar and a stripe of mustard.",
+     "min": 12
+    },
+    {
+     "text": "Cut in halves and wrap each in wax paper.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Auto camp breakfast",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the eggs with salt and scramble slowly in butter until soft.",
+     "min": 8
+    },
+    {
+     "text": "Toast and butter the bread.",
+     "min": 4
+    },
+    {
+     "text": "Serve on tin plates with chives scattered over the eggs.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Dunking doughnuts",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 115,
+   "make_ahead": "Best fresh on the day, dough can rise in the fridge overnight",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, eggs, butter and warm milk into a soft dough and knead.",
+     "min": 15
+    },
+    {
+     "text": "Prove the dough until doubled, which is the first resting time.",
+     "min": 60
+    },
+    {
+     "text": "Roll out and cut into rings.",
+     "min": 10
+    },
+    {
+     "text": "Prove again until puffy.",
+     "min": 30
+    },
+    {
+     "text": "Fry at 175C until golden and roll in cinnamon sugar.",
+     "min": 15
+    },
+    {
+     "text": "Cool slightly and dunk properly.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cinnamon mocha for dunking",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "strong coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate, chopped, plus extra to grate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the strong coffee.",
+     "min": 5
+    },
+    {
+     "text": "Heat the milk with the chocolate, sugar and cinnamon, whisking until melted and steaming.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the coffee. Whip the cream to soft peaks.",
+     "min": 5
+    },
+    {
+     "text": "Pour into thick mugs, spoon over the cream and grate a little more chocolate on top.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

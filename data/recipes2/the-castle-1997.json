@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bonnie Doon cheese and kabana",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "kabana",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "tasty cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "pickled onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet round butter crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the kabana on the diagonal",
+     "min": 7
+    },
+    {
+     "text": "Cut the cheese into cubes",
+     "min": 6
+    },
+    {
+     "text": "Thread onto toothpicks with pickled onions",
+     "min": 5
+    },
+    {
+     "text": "Lay out on a plastic platter with crackers. It is the vibe",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Pool room prawns",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "cooked king prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns, leaving the tails on",
+     "min": 15
+    },
+    {
+     "text": "Pile on crushed ice",
+     "min": 3
+    },
+    {
+     "text": "Mix the mayo, tomato sauce, Worcestershire and a squeeze of lemon",
+     "min": 4
+    },
+    {
+     "text": "Serve with lemon wedges, and put the platter in the pool room after",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Sal's rissoles",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with one grated onion, the carrot, egg, breadcrumbs and Worcestershire",
+     "min": 10
+    },
+    {
+     "text": "Shape into eight rissoles",
+     "min": 8
+    },
+    {
+     "text": "Fry until browned",
+     "min": 10
+    },
+    {
+     "text": "Make gravy with the other sliced onion, flour and stock",
+     "min": 10
+    },
+    {
+     "text": "Simmer the rissoles in the gravy",
+     "min": 20
+    },
+    {
+     "text": "Boil and mash the potatoes with butter, and cook the peas",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Sal's sponge cake",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 45,
+   "make_ahead": "Fill on the day",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the sugar for 10 minutes until pale and thick",
+     "min": 12
+    },
+    {
+     "text": "Sift over the cornflour, flour and baking powder and fold gently",
+     "min": 6
+    },
+    {
+     "text": "Bake in two tins at 180C",
+     "min": 20
+    },
+    {
+     "text": "Cool",
+     "min": 20
+    },
+    {
+     "text": "Fill with jam and whipped cream",
+     "min": 7
+    },
+    {
+     "text": "Dust with icing sugar",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bonnie Doon lager and lime shandy",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "Australian lager (4 stubbies of 375 ml)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "lemonade, cold",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four pot glasses in the freezer",
+     "min": 15
+    },
+    {
+     "text": "Squeeze lime juice into each",
+     "min": 2
+    },
+    {
+     "text": "Pour in cold lager, tilting the glass, then top with cold lemonade",
+     "min": 2
+    },
+    {
+     "text": "Stir once gently and add a lime wedge. Make lemon, lime and lemonade ones for the kids and the driver",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,340 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Smiley face potato rounds",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, boiled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch fine salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender and mash with the cheddar, flour, butter and salt.",
+     "min": 20
+    },
+    {
+     "text": "Roll out 1cm thick and cut rounds.",
+     "min": 10
+    },
+    {
+     "text": "Press in two eyes and a wide smile with a straw and spoon.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 220C for 15 minutes until crisp.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Rose's late-shift popcorn chicken",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 65,
+   "make_ahead": "Chicken can soak up to 8 hours",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in buttermilk for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Season the flour with paprika, garlic powder and salt and toss the chicken through it.",
+     "min": 5
+    },
+    {
+     "text": "Fry at 180C for 4 minutes, in batches.",
+     "min": 10
+    },
+    {
+     "text": "Mix the honey and Dijon and serve with the chicken.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Trevor's engagement dinner salmon",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, boiled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender and crush with some of the butter.",
+     "min": 20
+    },
+    {
+     "text": "Roast the salmon skin side down at 220C for 8 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Melt some butter with the lemon juice and dill and spoon over.",
+     "min": 5
+    },
+    {
+     "text": "Steam the beans.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Smiling cookies",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 10,
+   "make_ahead": "Un-iced cookies keep 4 days",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "red food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop yellow food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the sugar and one egg, then mix in the flour.",
+     "min": 8
+    },
+    {
+     "text": "Roll out, cut rounds and bake at 180C for 8 minutes. Cool.",
+     "min": 18
+    },
+    {
+     "text": "Ice pale yellow with icing sugar mixed with water and a drop of yellow colouring.",
+     "min": 8
+    },
+    {
+     "text": "Pipe a wide red smile on each. A little unsettling.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Mustache's chamomile whisky toddy",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bags chamomile tea",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "just-boiled water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the water for 5 minutes, then remove.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the honey and the juice of one lemon.",
+     "min": 2
+    },
+    {
+     "text": "Add whisky to each mug and pour over the tea. Finish with a cinnamon stick and a lemon wheel studded with cloves. Leave out the whisky for a plain version.",
+     "min": 8
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,324 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Peanut butter AND jelly toasties",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "Best eaten warm",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices thick white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "smooth peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread peanut butter on four slices and jam on the other four, then press together.",
+     "min": 5
+    },
+    {
+     "text": "Butter the outsides of the sandwiches.",
+     "min": 3
+    },
+    {
+     "text": "Cook in a frying pan over medium heat, pressing down, until golden and the filling is warm, turning once.",
+     "min": 6
+    },
+    {
+     "text": "Dust with icing sugar, cut into triangles and serve warm.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Ham AND burger sliders",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Shape the patties up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shape the mince into 12 small patties and season well.",
+     "min": 10
+    },
+    {
+     "text": "Cook on a hot pan for about 2 minutes a side.",
+     "min": 4
+    },
+    {
+     "text": "Brown folded ham slices in the pan, top each patty with ham and half a cheese slice, and cover for a minute to melt.",
+     "min": 3
+    },
+    {
+     "text": "Put in the slider buns with pickles.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Porch day barbecue plate",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "Marinate up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "chicken drumsticks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potato salad",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the drumsticks with salt, pepper and smoked paprika.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 200C until starting to colour.",
+     "min": 30
+    },
+    {
+     "text": "Brush with barbecue sauce and grill or roast, basting twice, until sticky.",
+     "min": 15
+    },
+    {
+     "text": "Boil the corn for 6 minutes and roll in the butter.",
+     "min": 6
+    },
+    {
+     "text": "Serve the chicken with the corn and potato salad.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Big Worm's ice cream truck cones",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Make up to 1 week ahead, keep frozen",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "ice cream cones",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cornflakes, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the coconut oil and let it cool to room temperature.",
+     "min": 8
+    },
+    {
+     "text": "Scoop the ice cream into the cones.",
+     "min": 10
+    },
+    {
+     "text": "Freeze the filled cones for 20 minutes (included in cook time).",
+     "min": 20
+    },
+    {
+     "text": "Dip each top in the chocolate and roll straight away in the crushed cornflakes mixed with sprinkles.",
+     "min": 7
+    },
+    {
+     "text": "Freeze until serving.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Red drink, with sugar this time",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cherry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the strawberries with the sugar and lemon juice, then strain into a big jug.",
+     "min": 5
+    },
+    {
+     "text": "Add the cherry juice and cold water and stir until the sugar is gone.",
+     "min": 3
+    },
+    {
+     "text": "Pour over plenty of ice in big plastic cups.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

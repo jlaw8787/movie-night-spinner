@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Singapore bathhouse dumplings",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 8,
+   "make_ahead": "Fill and pleat up to 1 day ahead, steam fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green prawns, chopped",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce, plus extra for dipping",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork, prawns, soy and salt.",
+     "min": 8
+    },
+    {
+     "text": "Fill the wrappers and pleat closed.",
+     "min": 32
+    },
+    {
+     "text": "Steam in a lined bamboo basket.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Jack's honey and smoked salt peanuts",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter with the honey and toss through the peanuts with the smoked salt.",
+     "min": 5
+    },
+    {
+     "text": "Spread on a lined tray and roast at 180C for 10 minutes, stirring once.",
+     "min": 10
+    },
+    {
+     "text": "Cool until crunchy, then break into clusters.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Singapore chilli crab",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "blue swimmer crabs, cleaned and cut into pieces",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the garlic, ginger and chilli in the oil. Add the tomato sauce, sweet chilli, soy and water.",
+     "min": 8
+    },
+    {
+     "text": "Add the crab, cover and cook until the shells turn red.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the beaten eggs until just set. Serve with crusty bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Green flash pandan pudding",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 190,
+   "make_ahead": "Make a day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "pandan paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "shredded coconut, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, diced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the coconut milk, sugar, pandan paste and cornflour over low heat until thick and glossy.",
+     "min": 10
+    },
+    {
+     "text": "Pour into glasses and chill for 3 hours.",
+     "min": 180
+    },
+    {
+     "text": "Top with toasted coconut and diced mango.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sao Feng's Singapore sling",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "cherry liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 360,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "grenadine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dashes bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pineapple wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the gin, cherry liqueur, pineapple juice, lime juice, grenadine and bitters hard with ice, in batches, until frothy.",
+     "min": 6
+    },
+    {
+     "text": "Strain into tall glasses filled with ice and top with a splash of soda water.",
+     "min": 2
+    },
+    {
+     "text": "Garnish with a pineapple wedge and a cherry.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

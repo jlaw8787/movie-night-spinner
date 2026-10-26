@@ -1,0 +1,340 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Paid-for salami and ricotta crostini",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil, plus extra to finish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pickled onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and cracked black pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette into 16 thin rounds and brush with olive oil.",
+     "min": 5
+    },
+    {
+     "text": "Toast at 200C until golden.",
+     "min": 6
+    },
+    {
+     "text": "Whip the ricotta with lemon zest, salt and a drizzle of olive oil until smooth.",
+     "min": 6
+    },
+    {
+     "text": "Spread on the toasts and top each with a folded slice of salami.",
+     "min": 4
+    },
+    {
+     "text": "Finish with a sliver of pickled onion, cracked pepper and parsley leaves.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Depression bread and dripping",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 11,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "beef dripping",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cracked black pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the dripping in a heavy pan.",
+     "min": 2
+    },
+    {
+     "text": "Fry the bread slowly until golden and crisp on both sides.",
+     "min": 12
+    },
+    {
+     "text": "Drain and sprinkle with flaky salt and cracked pepper.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mae's stretch-it stew",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 187,
+   "make_ahead": "Better the next day, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef shin, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices white bread, to serve",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches.",
+     "min": 10
+    },
+    {
+     "text": "Chop the onions, carrots and potatoes.",
+     "min": 10
+    },
+    {
+     "text": "Add the vegetables, barley, stock and thyme.",
+     "min": 5
+    },
+    {
+     "text": "Simmer until thick.",
+     "min": 180
+    },
+    {
+     "text": "Serve with bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bread pudding",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 53,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices day-old white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sultanas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Tear the bread into a buttered dish and scatter with sultanas.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the eggs, milk, sugar and cinnamon and pour over.",
+     "min": 3
+    },
+    {
+     "text": "Soak for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 170C.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Warm honey and nutmeg milk",
+   "course": "d",
+   "prep_min": 13,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "whole nutmeg, to grate",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the milk into a saucepan with honey, cinnamon and vanilla.",
+     "min": 1
+    },
+    {
+     "text": "Warm gently, stirring, until steaming but not boiling.",
+     "min": 8
+    },
+    {
+     "text": "Remove the cinnamon stick.",
+     "min": 1
+    },
+    {
+     "text": "Whisk hard until frothy.",
+     "min": 1
+    },
+    {
+     "text": "Pour into four mugs and grate fresh nutmeg over each.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

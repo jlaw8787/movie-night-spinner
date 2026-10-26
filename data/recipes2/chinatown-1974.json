@@ -1,0 +1,374 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Orange grove salad",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 hour ahead, dress at the last minute",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "black olives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch flaky salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the oranges into rounds.",
+     "min": 6
+    },
+    {
+     "text": "Shave the fennel and red onion paper thin.",
+     "min": 6
+    },
+    {
+     "text": "Arrange on a platter with the olives and torn mint, then dress with oil and flaky salt.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Forget it, Jake spring rolls",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Fill a day ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cups shredded cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce, for the filling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "spring roll wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the mince until browned, then add the cabbage and carrot and cook until soft, seasoning with soy. Cool.",
+     "min": 15
+    },
+    {
+     "text": "Roll tablespoons of filling into the wrappers and seal with water.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 180C in batches until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Serve with sweet chilli sauce and soy.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Whole grilled fish, head on",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "whole snapper (about 800 g each)",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the snapper three times on each side.",
+     "min": 5
+    },
+    {
+     "text": "Stuff with lemon slices, parsley and sliced garlic, then rub with oil and salt.",
+     "min": 10
+    },
+    {
+     "text": "Grill or bake at 220C until the flesh flakes at the thickest part.",
+     "min": 20
+    },
+    {
+     "text": "Serve whole, heads on.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Albacore Club orange chiffon cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 110,
+   "make_ahead": "Up to 1 day, keep covered",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "eggs, separated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar, for the whites",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "orange juice, for the glaze",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks with the oil, orange juice, zest, sugar and flour.",
+     "min": 12
+    },
+    {
+     "text": "Whisk the whites stiff with the sugar and fold in.",
+     "min": 13
+    },
+    {
+     "text": "Bake in an ungreased tube tin at 165C.",
+     "min": 50
+    },
+    {
+     "text": "Cool upside down in the tin.",
+     "min": 60
+    },
+    {
+     "text": "Glaze with the icing sugar mixed with orange juice.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Orange grove bourbon smash",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Make per glass",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, for the wheels",
+     "aisle": "Produce"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brown sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lemon juice (about 2 lemons)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the oranges into small wedges.",
+     "min": 5
+    },
+    {
+     "text": "For each drink, muddle 3 orange wedges, mint leaves and brown sugar syrup in a shaker.",
+     "min": 4
+    },
+    {
+     "text": "Add bourbon, lemon juice and ice and shake hard.",
+     "min": 3
+    },
+    {
+     "text": "Strain over crushed ice in a rocks glass and garnish with an orange wheel and a mint sprig. For non-drinkers, swap the bourbon for fresh orange juice topped with soda.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

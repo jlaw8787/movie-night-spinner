@@ -1,0 +1,402 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Spice-dusted flatbreads",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 2,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "hazelnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "labneh",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the hazelnuts and sesame seeds.",
+     "min": 6
+    },
+    {
+     "text": "Pound with cumin, cinnamon and salt to make dukkah.",
+     "min": 4
+    },
+    {
+     "text": "Brush the flatbreads with oil.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 220C until blistered.",
+     "min": 8
+    },
+    {
+     "text": "Sprinkle with the dukkah and serve with labneh.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Arrakeen date platter",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "medjool dates",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "soft goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dried apricots",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dried figs",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the dates and fill with goat's cheese and a walnut.",
+     "min": 5
+    },
+    {
+     "text": "Drizzle with honey and orange zest.",
+     "min": 3
+    },
+    {
+     "text": "Arrange on a board with the dried apricots and figs.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Desert lamb tagine",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 184,
+   "make_ahead": "Better the next day, keep chilled",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "lamb shoulder, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "ras el hanout",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dried apricots",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can chickpeas, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "couscous",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the lamb in batches.",
+     "min": 10
+    },
+    {
+     "text": "Soften the onions with ras el hanout and saffron.",
+     "min": 8
+    },
+    {
+     "text": "Add the water, apricots and chickpeas.",
+     "min": 3
+    },
+    {
+     "text": "Cook covered until the lamb is tender.",
+     "min": 180
+    },
+    {
+     "text": "Prepare the couscous and serve under the tagine with herbs.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Sandworm cinnamon scrolls",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 77,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 110,
+     "u": "g",
+     "item": "butter, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cardamom",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, warm milk and some butter into a dough.",
+     "min": 15
+    },
+    {
+     "text": "Prove for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Roll out and spread with butter, brown sugar and cinnamon.",
+     "min": 8
+    },
+    {
+     "text": "Roll up and cut thick spirals.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 190C.",
+     "min": 22
+    },
+    {
+     "text": "Glaze with icing sugar and cardamom mixed with a little water.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Every drop counts orange blossom cooler",
+   "course": "d",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cardamom pods, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "oranges, plus 1 for slices",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "orange blossom water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chilled still water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the honey with water and cardamom, then strain.",
+     "min": 3
+    },
+    {
+     "text": "Cool the syrup and squeeze the oranges and lemon.",
+     "min": 10
+    },
+    {
+     "text": "Stir the juice, syrup and orange blossom water together in a jug.",
+     "min": 2
+    },
+    {
+     "text": "Add chilled water.",
+     "min": 2
+    },
+    {
+     "text": "Fill four glasses with ice, pour carefully and top each with mint and an orange slice.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

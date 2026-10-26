@@ -1,0 +1,398 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Woo-hoo heckler masala fries",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chaat masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C. Cut the potatoes into thin chips and soak, then drain and dry well.",
+     "min": 30
+    },
+    {
+     "text": "Toss with the oil and roast on lined trays, turning once, until crisp.",
+     "min": 35
+    },
+    {
+     "text": "Toss hot with chaat masala, chilli, salt and lime juice. Scatter with chopped coriander and diced red onion.",
+     "min": 5
+    },
+    {
+     "text": "Blend the yoghurt with the mint and a pinch of salt for dipping.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Just dropped by samosas",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 35,
+   "make_ahead": "Fill up to 1 day ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet spring roll pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender and crush roughly.",
+     "min": 20
+    },
+    {
+     "text": "Fry the chopped onion, then stir through the potato, peas and garam masala. Cool.",
+     "min": 15
+    },
+    {
+     "text": "Cut the pastry into strips, fill and fold into triangles.",
+     "min": 20
+    },
+    {
+     "text": "Fry at 180C in batches until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Blitz the mint and coriander with the water, lemon juice and salt for the chutney.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Kumail's mum's chicken biryani",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 175,
+   "make_ahead": "Marinate and assemble a day ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the chicken with the yoghurt, garam masala and salt, then marinate in the fridge.",
+     "min": 125
+    },
+    {
+     "text": "Slice the onions and fry in the oil until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Par-cook the basmati for a few minutes and drain.",
+     "min": 10
+    },
+    {
+     "text": "Layer the chicken, rice and onions in a heavy pot and drizzle with saffron soaked in the warm milk.",
+     "min": 10
+    },
+    {
+     "text": "Seal the pot and bake at 170C.",
+     "min": 45
+    }
+   ]
+  },
+  {
+   "n": "Kheer",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 45,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground cardamom",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pistachios, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the rice in the milk over low heat, stirring often, until thick and creamy.",
+     "min": 45
+    },
+    {
+     "text": "Stir in the sugar and cardamom.",
+     "min": 2
+    },
+    {
+     "text": "Serve warm or chilled with pistachios scattered on top.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Uber shift chai",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 7,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cardamom pods, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "raw sugar, or to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water with the ginger, cardamom and cinnamon.",
+     "min": 4
+    },
+    {
+     "text": "Add the tea bags and simmer.",
+     "min": 2
+    },
+    {
+     "text": "Pour in the milk and sugar, simmer, then strain into cups.",
+     "min": 6
+    }
+   ]
+  }
+ ]
+}

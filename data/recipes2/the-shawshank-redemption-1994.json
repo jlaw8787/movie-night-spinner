@@ -1,0 +1,326 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mess hall cornbread",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Best the day it's baked",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat a greased 25cm pan in the oven at 210C.",
+     "min": 10
+    },
+    {
+     "text": "Mix the cornmeal, flour, baking powder and salt with the buttermilk, eggs and melted butter.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the hot pan and bake.",
+     "min": 20
+    },
+    {
+     "text": "Cut into squares and serve with butter.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Zihuatanejo guacamole",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jalapeno",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the avocados roughly with lime juice and salt.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the finely diced red onion, jalapeno and chopped coriander.",
+     "min": 8
+    },
+    {
+     "text": "Serve straight away with warm corn chips.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Brooks was here beef stew",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 130,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the onions, potatoes and carrots.",
+     "min": 12
+    },
+    {
+     "text": "Brown the beef in batches.",
+     "min": 15
+    },
+    {
+     "text": "Soften the onions, return the beef with the flour, stock, potatoes and carrots.",
+     "min": 8
+    },
+    {
+     "text": "Cover and simmer until tender.",
+     "min": 120
+    },
+    {
+     "text": "Ladle into bowls with thick white bread.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Rock hammer rocky road",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 120,
+   "make_ahead": "Up to 5 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "roasted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate gently.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the marshmallows, peanuts and broken biscuits.",
+     "min": 5
+    },
+    {
+     "text": "Spread into a lined 20cm tin.",
+     "min": 2
+    },
+    {
+     "text": "Chill until set, which is the setting time.",
+     "min": 120
+    },
+    {
+     "text": "Cut into rough rocks.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Rooftop ginger beer shandy",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles lager (375 ml each), cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger (3cm)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put 4 glasses in the freezer to chill.",
+     "min": 30
+    },
+    {
+     "text": "Slice the ginger into thin coins and cut the limes into wedges.",
+     "min": 6
+    },
+    {
+     "text": "Pour lager into each glass, top with ginger beer, squeeze in a lime wedge and add 2 ginger coins. For anyone not drinking, use all ginger beer with extra lime.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

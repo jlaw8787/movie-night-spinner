@@ -1,0 +1,292 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Green goo dip",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Dip up to 1 day, crisps fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen peas, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sugar snap peas",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pita into wedges, brush with oil and bake at 200C until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Blitz the avocado, peas, lime juice, mint and feta until smooth and very green.",
+     "min": 5
+    },
+    {
+     "text": "Serve the goo with the crisps and sugar snap peas.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Medfield basketball cheese puffs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, reheat to crisp",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water and butter to the boil, beat in the flour until smooth, then cool slightly.",
+     "min": 10
+    },
+    {
+     "text": "Beat in the eggs one at a time, then stir in the cheddar and paprika.",
+     "min": 10
+    },
+    {
+     "text": "Pipe small balls onto trays and bake at 200C until puffed and hollow.",
+     "min": 20
+    },
+    {
+     "text": "Cool for a few minutes before serving.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Missed wedding dinner",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans, trimmed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chicken with lemon juice, thyme, oil and salt.",
+     "min": 8
+    },
+    {
+     "text": "Roast the potatoes at 200C for 20 minutes, then add the chicken and roast for another 20 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Steam the beans and toss everything with butter.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Flubber jelly",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 485,
+   "make_ahead": "Make the night before, turn out on the day",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "packets lime jelly crystals",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "kiwifruit, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make up the jelly with a little less water than the packet says so it holds its shape.",
+     "min": 10
+    },
+    {
+     "text": "Pour into a ring mould and chill overnight.",
+     "min": 480
+    },
+    {
+     "text": "Dip the mould briefly in hot water and turn out wobbling onto a plate.",
+     "min": 2
+    },
+    {
+     "text": "Fill the centre with cream and sliced kiwifruit.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Weebo's lime spider",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "lime cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour a splash of lime cordial into tall glasses and top with lemonade.",
+     "min": 3
+    },
+    {
+     "text": "Gently add a scoop of ice cream so it floats and foams up green. Serve straight away with a long spoon and a straw.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

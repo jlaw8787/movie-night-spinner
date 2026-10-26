@@ -1,0 +1,302 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mooby's onion rings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "large onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onions into thick rings and soak in the buttermilk.",
+     "min": 20
+    },
+    {
+     "text": "Dredge in flour mixed with paprika and salt.",
+     "min": 8
+    },
+    {
+     "text": "Fry at 180C in batches until crunchy.",
+     "min": 12
+    },
+    {
+     "text": "Serve with tomato sauce stirred with a pinch more smoked paprika.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Grill-line jalapeño poppers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Fill up to 1 day, bake fresh",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "jalapenos",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the jalapenos lengthways and scrape out the seeds.",
+     "min": 10
+    },
+    {
+     "text": "Mix the cream cheese with the cheddar and fill each half.",
+     "min": 5
+    },
+    {
+     "text": "Wrap each in half a rasher of bacon.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until the bacon is crisp.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Mooby's double cheeseburger",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sesame burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into 8 balls. Mix the mayonnaise with tomato sauce.",
+     "min": 8
+    },
+    {
+     "text": "Smash each flat on a smoking griddle, season and cook, then flip and add cheese.",
+     "min": 8
+    },
+    {
+     "text": "Stack 2 per toasted bun with pickles, diced onion and sauce.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Farewell party sheet cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "Bake up to 1 day ahead, ice on the day",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, softened, for the buttercream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour and milk.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a lined tin at 175C.",
+     "min": 35
+    },
+    {
+     "text": "Cool completely.",
+     "min": 25
+    },
+    {
+     "text": "Beat the butter with the icing sugar for buttercream, spread over and pipe a goodbye message across the top.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mooby's chocolate shake",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Blend fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the ice cream, milk and chocolate syrup until thick and smooth.",
+     "min": 3
+    },
+    {
+     "text": "Pour into 4 tall paper cups and serve with straws.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

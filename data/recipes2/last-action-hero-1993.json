@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Magic ticket popcorn",
+   "course": "s",
+   "prep_min": 4,
+   "cook_min": 13,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popping corn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "flaky salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the butter until golden and nutty.",
+     "min": 6
+    },
+    {
+     "text": "Heat the coconut oil with three kernels, add the rest when they pop, cover and shake until the popping slows.",
+     "min": 8
+    },
+    {
+     "text": "Toss with the brown butter and salt and fill striped paper bags.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Times Square knishes",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 55,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "large potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender.",
+     "min": 25
+    },
+    {
+     "text": "Fry the chopped onion in butter until soft, then mash with the potatoes, salt and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Cut the pastry into pieces, put a mound of potato on each, fold up and pinch closed.",
+     "min": 15
+    },
+    {
+     "text": "Brush with beaten egg and bake at 200C.",
+     "min": 25
+    },
+    {
+     "text": "Serve hot with mustard.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Slater's LA rib eye",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 570,
+   "make_ahead": "Dry-brine overnight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "thick rib eye steaks (about 600g each)",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "flaky salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "garlic butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the rib eyes and leave uncovered in the fridge overnight.",
+     "min": 5
+    },
+    {
+     "text": "Dry-brine overnight.",
+     "min": 480
+    },
+    {
+     "text": "Bake the potatoes at 200C.",
+     "min": 60
+    },
+    {
+     "text": "Crisp the bacon.",
+     "min": 10
+    },
+    {
+     "text": "Sear the steaks, finish at 200C to 54C inside and rest.",
+     "min": 25
+    },
+    {
+     "text": "Top with garlic butter, slice to share and load the potatoes with sour cream and bacon.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Matinee ice cream sundae",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "salted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cherries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the cream and golden syrup into a hot fudge.",
+     "min": 8
+    },
+    {
+     "text": "Whip the cream.",
+     "min": 4
+    },
+    {
+     "text": "Scoop ice cream into bowls and pour over the fudge.",
+     "min": 4
+    },
+    {
+     "text": "Top with whipped cream, peanuts and a cherry.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Danny's Pandora choc malt thickshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "chocolate malt balls",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, ice cream, cocoa and malted milk powder until thick.",
+     "min": 3
+    },
+    {
+     "text": "Whip the cream and crush the malt balls.",
+     "min": 4
+    },
+    {
+     "text": "Pour into tall glasses and top with cream and malt balls. Serve with wide straws and long spoons.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

@@ -4,8 +4,8 @@
   {
    "n": "Chicken of the Cave wings",
    "course": "s",
-   "prep_min": 5,
-   "cook_min": 22,
+   "prep_min": 10,
+   "cook_min": 25,
    "make_ahead": "",
    "ingredients": [
     {
@@ -60,23 +60,23 @@
    "steps": [
     {
      "text": "Toss the chicken wings in the flour seasoned with paprika, garlic powder and salt.",
-     "min": 2
+     "min": 6
     },
     {
      "text": "Fry at 175C for 10 minutes until golden and cooked through.",
-     "min": 10
+     "min": 14
     },
     {
      "text": "Simmer the honey, the sriracha and the soy until glossy and toss the wings through.",
-     "min": 12
+     "min": 16
     }
    ]
   },
   {
    "n": "Doby's lighthouse fish bites",
    "course": "s",
-   "prep_min": 5,
-   "cook_min": 3,
+   "prep_min": 15,
+   "cook_min": 6,
    "make_ahead": "",
    "ingredients": [
     {
@@ -125,23 +125,23 @@
    "steps": [
     {
      "text": "Cut the white fish into bite-size pieces.",
-     "min": 3
+     "min": 5
     },
     {
      "text": "Roll in the flour, the beaten eggs, then the panko and fry at 180C for 3 minutes until golden.",
-     "min": 3
+     "min": 11
     },
     {
      "text": "Serve with lemon wedges and the tartare sauce.",
-     "min": 2
+     "min": 5
     }
    ]
   },
   {
    "n": "GNN late shift steak",
    "course": "m",
-   "prep_min": 8,
-   "cook_min": 5,
+   "prep_min": 10,
+   "cook_min": 30,
    "make_ahead": "",
    "ingredients": [
     {
@@ -184,23 +184,23 @@
    "steps": [
     {
      "text": "Season the sirloin steaks and sear in a very hot pan for 3 minutes a side, then baste with the butter and the crushed garlic cloves.",
-     "min": 6
+     "min": 21
     },
     {
      "text": "Rest 5 minutes.",
-     "min": 5
+     "min": 14
     },
     {
      "text": "Serve with the oven fries and the spinach wilted with the cream.",
-     "min": 2
+     "min": 5
     }
    ]
   },
   {
    "n": "Linda's chocolate fondue",
    "course": "w",
-   "prep_min": 7,
-   "cook_min": 0,
+   "prep_min": 10,
+   "cook_min": 5,
    "make_ahead": "",
    "ingredients": [
     {
@@ -237,19 +237,19 @@
    "steps": [
     {
      "text": "Melt the dark chocolate with the cream and a pinch of salt over low heat, stirring until smooth.",
-     "min": 3
+     "min": 5
     },
     {
      "text": "Pour into a warm bowl and serve with the strawberries, the marshmallows and a cut-up sponge cake for dipping.",
-     "min": 4
+     "min": 10
     }
    ]
   },
   {
    "n": "Ron's Scotch Rob Roy",
    "course": "d",
-   "prep_min": 13,
-   "cook_min": 60,
+   "prep_min": 5,
+   "cook_min": 20,
    "make_ahead": "Up to 1 week, keep frozen",
    "ingredients": [
     {
@@ -292,11 +292,11 @@
    "steps": [
     {
      "text": "Chill the coupes in the freezer.",
-     "min": 60
+     "min": 19
     },
     {
-     "text": "For each drink, fill a mixing glass with ice and add the blended Scotch, the sweet vermouth and the dashes of aromatic bitters.",
-     "min": 5
+     "text": "For each drink, fill a mixing glass with ice and add the blended Scotch, the sweet vermouth and a few dashes of aromatic bitters.",
+     "min": 1
     },
     {
      "text": "Stir for 30 seconds until very cold.",
@@ -304,11 +304,11 @@
     },
     {
      "text": "Strain into the chilled coupe and drop in a brandied or maraschino cherry.",
-     "min": 3
+     "min": 1
     },
     {
      "text": "Twist a strip of orange peel over the top and discard it.",
-     "min": 3
+     "min": 1
     }
    ]
   }

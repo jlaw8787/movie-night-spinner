@@ -1,0 +1,352 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lunch box crackers and cheese",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet crackers (about 150g)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cheddar into small cubes.",
+     "min": 5
+    },
+    {
+     "text": "Slice the apples and toss in lemon juice so they do not brown.",
+     "min": 5
+    },
+    {
+     "text": "Pack each lunch box with cheese, crackers, apple and tomatoes.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Ferret-free fruit cups",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours, keep cold",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the mango and pineapple, halve the strawberries and grapes.",
+     "min": 15
+    },
+    {
+     "text": "Toss together with the orange juice.",
+     "min": 2
+    },
+    {
+     "text": "Spoon into cups, top with mint and keep cold until serving.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Astoria school lunch fish fingers",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "firm white fish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "tartare sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips, toss in oil and roast at 220C.",
+     "min": 38
+    },
+    {
+     "text": "Cut the fish into fingers and crumb in flour, beaten egg and panko.",
+     "min": 15
+    },
+    {
+     "text": "Shallow-fry the fish in batches.",
+     "min": 10
+    },
+    {
+     "text": "Cook the peas.",
+     "min": 5
+    },
+    {
+     "text": "Serve with tartare sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Who's-your-daddy cupcakes",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 38,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, softened, for icing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "food colouring, primary colours",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line a 12-hole tin. Beat the butter and sugar, add the eggs, then fold in the flour and milk.",
+     "min": 12
+    },
+    {
+     "text": "Bake the cupcakes.",
+     "min": 18
+    },
+    {
+     "text": "Cool on a rack.",
+     "min": 20
+    },
+    {
+     "text": "Beat the butter with the icing sugar and tint in primary colours.",
+     "min": 8
+    },
+    {
+     "text": "Swirl on the icing and add sprinkles.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Snack time chocolate malt milkshake",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chocolate sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whip the cream.",
+     "min": 3
+    },
+    {
+     "text": "Blend the milk, ice cream, cocoa, malted milk powder and sugar until thick and frothy.",
+     "min": 2
+    },
+    {
+     "text": "Pour into glasses, top with whipped cream and sprinkles, and serve with straws.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

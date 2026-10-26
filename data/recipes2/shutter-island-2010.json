@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lighthouse cheese straws",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush the pastry with egg",
+     "min": 3
+    },
+    {
+     "text": "Cover one sheet with parmesan, paprika and cayenne, lay the other on top and press",
+     "min": 5
+    },
+    {
+     "text": "Cut into strips and twist",
+     "min": 7
+    },
+    {
+     "text": "Bake at 200C",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Ashecliffe baked beans on toast",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 290,
+   "make_ahead": "Soak the beans the night before. Cooked beans keep 3 days chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "dried navy beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "speck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "molasses",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the beans overnight (not counted in the time)",
+     "min": 5
+    },
+    {
+     "text": "Simmer the beans",
+     "min": 30
+    },
+    {
+     "text": "Bake at 150C with the speck, onion, molasses, mustard powder and enough water to cover",
+     "min": 240
+    },
+    {
+     "text": "Toast the sourdough and butter it",
+     "min": 8
+    },
+    {
+     "text": "Spoon the beans over the toast",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Chuck and Teddy's storm chowder",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the clams open in the wine, then strain the liquid",
+     "min": 10
+    },
+    {
+     "text": "Render the bacon, then add the onion, celery and potato",
+     "min": 10
+    },
+    {
+     "text": "Add the clam liquid and milk and simmer",
+     "min": 15
+    },
+    {
+     "text": "Stir in the cream, clams and thyme",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Law of 4 Boston cream pie",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 55,
+   "make_ahead": "Assemble on the day",
+   "ingredients": [
+    {
+     "q": 7,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk four eggs with the sugar until thick and fold in the flour",
+     "min": 12
+    },
+    {
+     "text": "Bake in two tins at 175C",
+     "min": 20
+    },
+    {
+     "text": "Cook the milk, yolks, a little sugar and cornflour until thick, then cool",
+     "min": 25
+    },
+    {
+     "text": "Cool the sponges",
+     "min": 30
+    },
+    {
+     "text": "Fill the sponges with the custard",
+     "min": 8
+    },
+    {
+     "text": "Melt the chocolate with the cream and pour over",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dr Cawley's brandy Alexander",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "creme de cacao",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "nutmeg, freshly grated",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four coupe glasses",
+     "min": 2
+    },
+    {
+     "text": "Shake each drink with ice for 15 seconds",
+     "min": 2
+    },
+    {
+     "text": "Strain into the coupes and grate nutmeg over the top. Serve a strong coffee alongside for anyone who would rather not",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

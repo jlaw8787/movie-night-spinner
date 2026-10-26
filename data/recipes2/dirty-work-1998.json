@@ -1,0 +1,338 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Dr Farthing's gambling debt wings",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch celery, cut into sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with the baking powder and salt.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 220C, turning once.",
+     "min": 45
+    },
+    {
+     "text": "Melt the butter with the hot sauce and toss the wings through it.",
+     "min": 3
+    },
+    {
+     "text": "Mash the blue cheese into the sour cream with a squeeze of lemon. Serve the wings hot with the dip and celery.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Mitch's job-a-week pretzel bites",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "hot English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the dough into small pieces.",
+     "min": 8
+    },
+    {
+     "text": "Simmer the water with the bicarb, drop in the pieces briefly in batches and drain.",
+     "min": 8
+    },
+    {
+     "text": "Lay on a lined tray, brush with egg and sprinkle with sea salt.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 220C until deep brown.",
+     "min": 12
+    },
+    {
+     "text": "Stir the mustards and honey together for dipping and serve the bites warm.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Pops's diner patty melt",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slowly fry the onions in some of the butter.",
+     "min": 20
+    },
+    {
+     "text": "Shape the mince into four thin oval patties and cook on both sides.",
+     "min": 8
+    },
+    {
+     "text": "Layer each patty on buttered rye with Swiss cheese and onions.",
+     "min": 4
+    },
+    {
+     "text": "Fry the sandwiches until golden and melted.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Travis Cole payback sundaes",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "salted roasted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat some of the cream with the sugar and butter until it bubbles. Off the heat, stir in the chocolate and a pinch of salt until glossy.",
+     "min": 5
+    },
+    {
+     "text": "Roughly chop the peanuts. Whip the remaining cream.",
+     "min": 4
+    },
+    {
+     "text": "Scoop ice cream into sundae glasses and pour over the warm fudge.",
+     "min": 3
+    },
+    {
+     "text": "Top with whipped cream and peanuts and finish each with a cherry.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pops's rye and ginger highball",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "rye whiskey",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold ginger ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill tall glasses with ice and pour the rye into each.",
+     "min": 2
+    },
+    {
+     "text": "Add a squeeze of lime and a couple of dashes of bitters.",
+     "min": 1
+    },
+    {
+     "text": "Top with ginger ale, stir once gently and garnish with a lime wedge.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,332 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tony's strawberry peace offering",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Berries up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "punnets strawberries, hulled and halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the strawberries with the sugar and a squeeze of lemon.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream with the icing sugar to soft peaks.",
+     "min": 7
+    },
+    {
+     "text": "Serve the cream in a bowl beside the berries for dipping.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Vanko's Russian pelmeni",
+   "course": "s",
+   "prep_min": 50,
+   "cook_min": 10,
+   "make_ahead": "Fill up to 1 day ahead, boil fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the beef and pork minces with salt and pepper.",
+     "min": 8
+    },
+    {
+     "text": "Fill the wrappers and pinch into little round parcels.",
+     "min": 40
+    },
+    {
+     "text": "Boil until they float, then a minute more.",
+     "min": 10
+    },
+    {
+     "text": "Toss in melted butter and dill and serve with plenty of sour cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Stark Industries power bowl",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "white miso",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sushi rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen edamame, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pickled ginger",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the miso and honey and brush over the salmon.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 200C until glazed. Cook the sushi rice at the same time.",
+     "min": 15
+    },
+    {
+     "text": "Serve the salmon over rice with edamame, avocado and pickled ginger.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Giant doughnut doughnuts",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 60,
+   "make_ahead": "Best the day they are made",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "milk, for the glaze",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, butter, eggs and warm milk into a soft dough and knead briefly. Prove for an hour.",
+     "min": 35
+    },
+    {
+     "text": "Roll out, cut into rings and prove again.",
+     "min": 35
+    },
+    {
+     "text": "Fry at 175C until golden, in batches.",
+     "min": 15
+    },
+    {
+     "text": "Dip in a glaze of icing sugar and milk and add sprinkles to some.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Arc reactor blue lagoon",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "blue curacao",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "fresh lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chilled lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lime wheels",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tall glasses with crushed ice.",
+     "min": 3
+    },
+    {
+     "text": "Into each pour the vodka, blue curacao and lime juice, then top with chilled lemonade and stir gently.",
+     "min": 5
+    },
+    {
+     "text": "Garnish with a lime wheel. For a booze-free version, swap the vodka and curacao for blue cordial and extra lime.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

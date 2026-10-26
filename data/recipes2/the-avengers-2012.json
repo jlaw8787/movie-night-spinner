@@ -1,0 +1,400 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Post-battle hummus with spiced lamb",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 13,
+   "make_ahead": "Hummus up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chickpeas (2 tins), drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "ice water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "pine nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the chickpeas with the tahini, garlic, lemon juice, salt and ice water until very smooth.",
+     "min": 5
+    },
+    {
+     "text": "Fry the lamb in a little oil until crisp, adding the cumin, cinnamon and paprika.",
+     "min": 10
+    },
+    {
+     "text": "Toast the pine nuts and warm the flatbreads.",
+     "min": 4
+    },
+    {
+     "text": "Swirl the hummus onto a plate and spoon the hot lamb over.",
+     "min": 3
+    },
+    {
+     "text": "Add pine nuts, chilli oil and parsley.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Asgardian honey roasted nuts",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Up to 5 days, airtight",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "mixed nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C. Toss the nuts with the honey, butter and thyme.",
+     "min": 5
+    },
+    {
+     "text": "Roast on a lined tray, stirring once.",
+     "min": 12
+    },
+    {
+     "text": "Sprinkle with flaky salt while warm and stir as they cool so they don't stick together.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Shawarma",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 760,
+   "make_ahead": "Marinate overnight",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground coriander",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "garlic sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "pickled turnips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the chicken with the yoghurt, garlic, spices and lemon juice. Marinate overnight in the fridge.",
+     "min": 720
+    },
+    {
+     "text": "Grill the chicken until cooked through and charred.",
+     "min": 20
+    },
+    {
+     "text": "Rest and slice.",
+     "min": 8
+    },
+    {
+     "text": "Warm the flatbreads and fill with chicken, garlic sauce, pickled turnips, tomato and parsley.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Captain America shield cookies",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 20,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "red food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "blue food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter, sugar and egg, then mix in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Cut 12 rounds and bake at 180C. Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Mix the icing sugar with water to a thick icing and tint some red and some blue.",
+     "min": 8
+    },
+    {
+     "text": "Ice the rings, add a blue centre and a white star.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Asgardian mead",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Alcohol is optional, for the grown-ups",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "chilled mead, optional for the grown-ups",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir a spoon of honey and a squeeze of lemon into each of four glasses until dissolved.",
+     "min": 4
+    },
+    {
+     "text": "Fill with ice and top with ginger beer.",
+     "min": 2
+    },
+    {
+     "text": "For the grown-ups, pour chilled mead instead. Raise the glasses high.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

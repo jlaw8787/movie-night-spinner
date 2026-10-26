@@ -1,0 +1,288 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Roman street supplì",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 40,
+   "make_ahead": "Make the risotto the day before, fry just before serving",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "arborio rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chicken stock, hot",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, cut into cubes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "napoli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice into a risotto with the hot stock and parmesan. Spread out and chill, ideally overnight.",
+     "min": 30
+    },
+    {
+     "text": "Roll into ovals around a cube of mozzarella.",
+     "min": 20
+    },
+    {
+     "text": "Coat in beaten egg and panko.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 180C until golden.",
+     "min": 10
+    },
+    {
+     "text": "Warm the napoli sauce and serve alongside.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Vespa ride bruschetta",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Topping up to 2 hours, assemble fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "ciabatta",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "ripe tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the ciabatta, brush with oil and toast until golden.",
+     "min": 8
+    },
+    {
+     "text": "Rub each slice with a cut garlic clove.",
+     "min": 3
+    },
+    {
+     "text": "Chop the tomatoes with torn basil, oil and salt and pile on top.",
+     "min": 9
+    }
+   ]
+  },
+  {
+   "n": "Cacio e pepe",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cracked black pepper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pecorino, finely grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the spaghetti and keep a cup of the pasta water.",
+     "min": 12
+    },
+    {
+     "text": "Toast the pepper in butter.",
+     "min": 3
+    },
+    {
+     "text": "Add the pasta and a splash of the water, then toss in the pecorino off the heat until creamy.",
+     "min": 8
+    },
+    {
+     "text": "Serve straight away.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Spanish Steps gelato",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Serve at once",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "lemon sorbet",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "amaretti biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "waffle cones",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Scoop the vanilla ice cream and lemon sorbet into waffle cones or small glasses.",
+     "min": 6
+    },
+    {
+     "text": "Crush the amaretti biscuits and scatter over the top.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Roman café shakerato",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Make just before serving",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "espresso, about 4 double shots",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill 4 martini glasses.",
+     "min": 3
+    },
+    {
+     "text": "Pull the espresso.",
+     "min": 5
+    },
+    {
+     "text": "Working in two batches, shake half the espresso and syrup hard with ice until thick and foamy, then strain into two glasses. Repeat.",
+     "min": 5
+    },
+    {
+     "text": "Twist a strip of lemon peel over each glass and serve immediately.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

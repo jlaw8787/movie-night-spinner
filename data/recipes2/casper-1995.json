@@ -1,0 +1,298 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ghost meringues",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 120,
+   "make_ahead": "Up to 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cream of tartar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "mini choc chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites with the cream of tartar, then add the sugar a spoon at a time until stiff and glossy.",
+     "min": 15
+    },
+    {
+     "text": "Pipe tall teardrop ghosts and press in choc chips for eyes.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 100C.",
+     "min": 90
+    },
+    {
+     "text": "Cool in the oven with the door closed.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Friendship, Maine lobster rolls",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Filling up to 3 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "cooked lobster meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "celery stick",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the lobster and fold with the mayonnaise, lemon juice, finely diced celery and chives.",
+     "min": 12
+    },
+    {
+     "text": "Butter the split buns and toast in a pan.",
+     "min": 5
+    },
+    {
+     "text": "Pile the filling in.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Fatso's feast",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 43,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cob loaves",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak and scrub the clams. Dice the bacon, onion, celery and potatoes.",
+     "min": 20
+    },
+    {
+     "text": "Steam the clams open in a covered pot and strain the liquid.",
+     "min": 8
+    },
+    {
+     "text": "Render the bacon, add the onion and celery and cook until soft.",
+     "min": 10
+    },
+    {
+     "text": "Add the potatoes, clam liquid and milk and simmer.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the cream and clams. Hollow out and toast the cob loaves and ladle the chowder in.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Maine blueberry pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 230,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the blueberries with the sugar, lemon zest and cornflour.",
+     "min": 8
+    },
+    {
+     "text": "Line a pie dish with two pastry sheets, fill, and weave a lattice from the other two.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 190C.",
+     "min": 50
+    },
+    {
+     "text": "Cool before slicing.",
+     "min": 180
+    },
+    {
+     "text": "Serve with vanilla ice cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Whipstaff cream soda floats",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "cream soda",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put two scoops of ice cream in each of four tall glasses.",
+     "min": 3
+    },
+    {
+     "text": "Pour cold cream soda over slowly so it foams up the sides. Serve with long spoons and straws.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

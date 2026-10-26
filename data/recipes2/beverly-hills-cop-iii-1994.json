@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wonder World popcorn",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popping corn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in the oil in a covered pot.",
+     "min": 6
+    },
+    {
+     "text": "Boil the sugar, butter and golden syrup, then stir in the bicarb.",
+     "min": 6
+    },
+    {
+     "text": "Pour over the popcorn and toss.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 120C, stirring every 15 minutes.",
+     "min": 45
+    },
+    {
+     "text": "Cool and break up.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Spider Rider midway corn dogs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "wooden sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cornmeal, flour, sugar, baking powder, egg and buttermilk into a batter.",
+     "min": 8
+    },
+    {
+     "text": "Pat the franks dry and push onto sticks.",
+     "min": 5
+    },
+    {
+     "text": "Heat the oil to 180C.",
+     "min": 5
+    },
+    {
+     "text": "Dip the franks in batter and fry in batches until deep gold.",
+     "min": 16
+    },
+    {
+     "text": "Serve with mustard.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Uncle Dave's theme park turkey legs",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 600,
+   "make_ahead": "Brine overnight",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "turkey drumsticks",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the salt and sugar in the water with some of the paprika.",
+     "min": 5
+    },
+    {
+     "text": "Brine the drumsticks in the fridge overnight.",
+     "min": 480
+    },
+    {
+     "text": "Pat dry and rub with the rest of the paprika.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 150C until the meat pulls easily from the bone.",
+     "min": 120
+    }
+   ]
+  },
+  {
+   "n": "Fairy floss and toffee apples",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "wooden sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "red food colouring, a few drops",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag fairy floss",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Push a stick into each apple. Line a tray with baking paper.",
+     "min": 3
+    },
+    {
+     "text": "Boil the sugar, water and vinegar to 150C.",
+     "min": 15
+    },
+    {
+     "text": "Add a few drops of red colouring.",
+     "min": 1
+    },
+    {
+     "text": "Dip and twirl each apple, then set on the baking paper.",
+     "min": 10
+    },
+    {
+     "text": "Leave to set. Serve with a bag of fairy floss.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Wonder World blue raspberry slushie",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "blue raspberry cordial",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cups ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the cordial, lemonade, lime juice and ice in short bursts until fine and slushy.",
+     "min": 3
+    },
+    {
+     "text": "Drop frozen raspberries into tall glasses.",
+     "min": 2
+    },
+    {
+     "text": "Pour the slushie over and serve with straws straight away.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

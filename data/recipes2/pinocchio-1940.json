@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Geppetto's salami and provolone toasts",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 6,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salami, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "pickled capsicum strips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette thinly and brush with olive oil.",
+     "min": 8
+    },
+    {
+     "text": "Toast at 200C until crisp.",
+     "min": 6
+    },
+    {
+     "text": "Top each with salami, a small slice of provolone and a strip of pickled capsicum, in rows on a board.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cleo's goldfish crackers",
+   "course": "s",
+   "prep_min": 21,
+   "cook_min": 42,
+   "make_ahead": "Up to 3 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cold water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, then mix in the cheddar and paprika.",
+     "min": 10
+    },
+    {
+     "text": "Add cold water to bring it together.",
+     "min": 3
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Roll thin and cut into fish shapes.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 180C until crisp.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Geppetto's spaghetti and meatballs",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Meatballs and sauce up to 2 days",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated, plus extra to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cans crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "basil leaves, torn",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with parmesan, parsley, salt and egg and roll into balls.",
+     "min": 12
+    },
+    {
+     "text": "Brown the meatballs well.",
+     "min": 8
+    },
+    {
+     "text": "Add the tomatoes, garlic and basil and simmer.",
+     "min": 40
+    },
+    {
+     "text": "Cook the spaghetti.",
+     "min": 10
+    },
+    {
+     "text": "Serve with extra parmesan on top.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Blue Fairy blueberry tart",
+   "course": "w",
+   "prep_min": 68,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "thick vanilla custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blind bake a pastry case until golden and cool completely.",
+     "min": 15
+    },
+    {
+     "text": "Fill with custard and pile the blueberries on top.",
+     "min": 5
+    },
+    {
+     "text": "Warm the jam with water, brush over the berries and dust with icing sugar.",
+     "min": 3
+    },
+    {
+     "text": "Chill until set.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Jiminy's sparkling mint lime crush",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle the mint with the honey and lime juice in a jug until bruised and fragrant.",
+     "min": 8
+    },
+    {
+     "text": "Add the apple juice and stir.",
+     "min": 2
+    },
+    {
+     "text": "Fill small glasses with crushed ice, pour in the mix to halfway and top with sparkling water.",
+     "min": 0
+    },
+    {
+     "text": "Garnish with a lime wheel and a mint sprig.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

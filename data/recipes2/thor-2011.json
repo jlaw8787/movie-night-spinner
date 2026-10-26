@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "New Mexico diner hash browns",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "snipped chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the potatoes and onion, then squeeze out as much liquid as you can. Season well and shape into small flat cakes.",
+     "min": 25
+    },
+    {
+     "text": "Fry in butter over medium heat until deep golden and crisp, in batches.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Asgard golden honey wings",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 50,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with salt and roast at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Melt the butter with the honey, garlic and thyme.",
+     "min": 5
+    },
+    {
+     "text": "Toss the hot wings through the glaze until shiny and golden and serve on a big platter.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Asgardian feast beef ribs with roast roots",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 300,
+   "make_ahead": "Up to 1 day, reheats well",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef short ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "parsnips, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf crusty bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the ribs with salt and cracked pepper.",
+     "min": 10
+    },
+    {
+     "text": "Roast covered at 140C for 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Add the carrots, parsnips and potatoes to the tray to roast in the juices for the last hour.",
+     "min": 60
+    },
+    {
+     "text": "Serve on a big board with crusty bread.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Puente Antiguo churros with hot chocolate",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, for rolling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water with the butter, sugar and a pinch of salt, then beat in the flour until it forms a ball.",
+     "min": 8
+    },
+    {
+     "text": "Cool for 5 minutes and beat in the egg. Pipe long lengths through a star nozzle into oil at 180C.",
+     "min": 17
+    },
+    {
+     "text": "Fry until golden, then roll in the cinnamon sugar.",
+     "min": 3
+    },
+    {
+     "text": "Heat the cream and pour over the chocolate, stirring smooth, for dipping.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Another! iced coffee float",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 65,
+   "make_ahead": "Coffee up to 1 day ahead, build fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "strong coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate, grated",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee, stir in the brown sugar and chill for at least 1 hour.",
+     "min": 65
+    },
+    {
+     "text": "Put the ice cream into four tall glasses, then pour over the coffee and cold milk.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream to soft peaks, spoon on top and grate over dark chocolate. Serve with a straw and a long spoon.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

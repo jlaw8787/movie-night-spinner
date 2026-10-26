@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Garden party canapés",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "blinis",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Top the blinis with creme fraiche, smoked salmon, dill and lemon zest",
+     "min": 10
+    },
+    {
+     "text": "Cut the cucumber into thick rounds",
+     "min": 4
+    },
+    {
+     "text": "Whip the goat's cheese with chives and pipe onto the rounds",
+     "min": 8
+    },
+    {
+     "text": "Lay both neatly on silver trays",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Rose's rainbow cereal bars, milk apart",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 65,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "coloured fruit cereal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk, cold",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter in a large pan and cook until it smells nutty",
+     "min": 5
+    },
+    {
+     "text": "Add the marshmallows and salt and stir until melted",
+     "min": 5
+    },
+    {
+     "text": "Off the heat, fold in the cereal quickly",
+     "min": 3
+    },
+    {
+     "text": "Press into a lined 20cm square tin with a buttered spatula",
+     "min": 3
+    },
+    {
+     "text": "Cool, then cut into 16 bars",
+     "min": 60
+    },
+    {
+     "text": "Serve with tall glasses of cold milk, kept separate",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Lawn party lamb",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 765,
+   "make_ahead": "Marinate overnight",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "butterflied lamb leg",
+     "aisle": "Meat"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "rosemary sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the lamb overnight with garlic, rosemary, lemon and oil",
+     "min": 720
+    },
+    {
+     "text": "Grill over high heat until 55C inside",
+     "min": 25
+    },
+    {
+     "text": "Rest",
+     "min": 15
+    },
+    {
+     "text": "Chop the parsley, capers, garlic and lemon with oil for salsa verde",
+     "min": 10
+    },
+    {
+     "text": "Slice the lamb and spoon over the salsa",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Teacup panna cotta",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 250,
+   "make_ahead": "Make a day ahead",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "gelatine leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mixed berries",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine leaves",
+     "min": 5
+    },
+    {
+     "text": "Warm the cream with most of the sugar and the split vanilla bean, then stir in the squeezed gelatine",
+     "min": 8
+    },
+    {
+     "text": "Pour into four teacups and set",
+     "min": 240
+    },
+    {
+     "text": "Simmer the berries with a spoon of sugar and spoon on top",
+     "min": 7
+    },
+    {
+     "text": "Serve with silver spoons",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Missy's spiced Earl Grey milk tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cardamom pods, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "Earl Grey tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water with the cinnamon and cardamom and simmer",
+     "min": 5
+    },
+    {
+     "text": "Take off the heat, add the tea bags and steep, then remove",
+     "min": 4
+    },
+    {
+     "text": "Stir in the honey",
+     "min": 1
+    },
+    {
+     "text": "Heat the milk until steaming and whisk until frothy",
+     "min": 4
+    },
+    {
+     "text": "Pour the tea into teacups, top with milk and serve with a silver teaspoon",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

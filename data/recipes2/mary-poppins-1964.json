@@ -1,0 +1,434 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Uncle Albert's tea party sandwiches",
+   "course": "s",
+   "prep_min": 32,
+   "cook_min": 15,
+   "make_ahead": "Up to 3 hours, keep covered and chilled",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet mustard cress",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs until hard, then cool.",
+     "min": 15
+    },
+    {
+     "text": "Mash the eggs with salt and mayonnaise.",
+     "min": 4
+    },
+    {
+     "text": "Spread bread with cream cheese and layer with cucumber.",
+     "min": 12
+    },
+    {
+     "text": "Fill more with the egg and mustard cress, and the rest with ham and a little mustard.",
+     "min": 8
+    },
+    {
+     "text": "Cut off the crusts, slice into fingers and stack on a tiered plate.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Mrs Brill's Cornish pasties",
+   "course": "s",
+   "prep_min": 43,
+   "cook_min": 59,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chuck steak, finely diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "swede, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets shortcrust pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "brown sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the steak, potato, swede and onion.",
+     "min": 20
+    },
+    {
+     "text": "Mix with the salt and plenty of pepper.",
+     "min": 3
+    },
+    {
+     "text": "Cut rounds about 20cm wide from the pastry.",
+     "min": 5
+    },
+    {
+     "text": "Pile the filling onto one half of each, dot with butter, fold over and crimp the edge.",
+     "min": 15
+    },
+    {
+     "text": "Brush with beaten egg and cut a small slit.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 200C.",
+     "min": 15
+    },
+    {
+     "text": "Reduce to 170C and bake until golden and the filling is cooked.",
+     "min": 40
+    },
+    {
+     "text": "Serve with brown sauce.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Cherry Tree Lane roast",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef topside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour, for gravy",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef and rub with oil.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the flour, eggs and milk into a batter and rest.",
+     "min": 5
+    },
+    {
+     "text": "Peel and chop the potatoes.",
+     "min": 12
+    },
+    {
+     "text": "Roast the beef at 200C to medium.",
+     "min": 55
+    },
+    {
+     "text": "Rest the beef under foil.",
+     "min": 15
+    },
+    {
+     "text": "Meanwhile roast the potatoes in oil alongside the beef.",
+     "min": 0
+    },
+    {
+     "text": "Pour the batter into hot oiled muffin tins and bake until puffed.",
+     "min": 0
+    },
+    {
+     "text": "Cook the peas.",
+     "min": 3
+    },
+    {
+     "text": "Make gravy from the pan juices, flour and stock.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Chalk drawing raspberry ice",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 255,
+   "make_ahead": "Up to 3 days, keep frozen",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen raspberries, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "ice cream wafers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water.",
+     "min": 4
+    },
+    {
+     "text": "Cool the syrup.",
+     "min": 15
+    },
+    {
+     "text": "Blend the raspberries with the syrup and lemon juice, then strain out the seeds.",
+     "min": 8
+    },
+    {
+     "text": "Freeze in a tray, scraping with a fork every hour.",
+     "min": 240
+    },
+    {
+     "text": "Serve in glass dishes with wafers.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Admiral Boom's ginger cannon fizz",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 27,
+   "make_ahead": "Syrup up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece ginger (6cm), sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "crystallised ginger, cut in strips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer most of the sugar with the water and ginger.",
+     "min": 10
+    },
+    {
+     "text": "Cool and strain the syrup.",
+     "min": 20
+    },
+    {
+     "text": "Rub the rims of the glasses with lemon and dip in the remaining sugar.",
+     "min": 5
+    },
+    {
+     "text": "Fill with ice and add syrup and a little lemon juice to each.",
+     "min": 5
+    },
+    {
+     "text": "Top with soda water, stir and garnish with crystallised ginger.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

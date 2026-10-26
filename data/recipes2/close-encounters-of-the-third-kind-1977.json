@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "UFO meringues",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 100,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "lemon curd",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites and sugar over simmering water until hot, then beat to stiff peaks.",
+     "min": 12
+    },
+    {
+     "text": "Pipe into flat saucer shapes with a small dome in the middle.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 100C, then cool in the oven.",
+     "min": 90
+    },
+    {
+     "text": "Spread a dot of lemon curd underneath.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Five-note crackers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Assemble just before serving so the crackers stay crisp",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "",
+     "item": "seeded crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "chicken liver pate",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cheddar, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "figs, halved",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay the crackers out in rows of five.",
+     "min": 3
+    },
+    {
+     "text": "Top each row with a different note: cream cheese, pate, cheddar, smoked salmon with dill, and fig.",
+     "min": 15
+    },
+    {
+     "text": "Serve straight away.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mashed potato mountain",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "floury potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and boil the potatoes until soft.",
+     "min": 25
+    },
+    {
+     "text": "Cook the onions slowly in some of the butter until golden.",
+     "min": 20
+    },
+    {
+     "text": "Stir in the flour, add the stock and simmer for gravy.",
+     "min": 10
+    },
+    {
+     "text": "Rice the potatoes and beat with the hot milk and the rest of the butter.",
+     "min": 8
+    },
+    {
+     "text": "Pile into a tall mountain and pour the gravy over.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Devils Tower cake",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 80,
+   "make_ahead": "Cake up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and prepare three small tins. Beat half the butter with the sugar until pale, then beat in the eggs.",
+     "min": 12
+    },
+    {
+     "text": "Fold in the flour, some of the cocoa and the milk, divide between the tins and bake.",
+     "min": 30
+    },
+    {
+     "text": "Cool completely.",
+     "min": 25
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and remaining cocoa for buttercream.",
+     "min": 8
+    },
+    {
+     "text": "Stack the layers tall, cover in buttercream and drag ridges with a fork.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Neary kitchen strawberry lemonade",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 700,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Hull the strawberries, keeping a few to slice. Blitz most of them with the sugar syrup and strain into a jug.",
+     "min": 7
+    },
+    {
+     "text": "Stir in the lemon juice and the water.",
+     "min": 3
+    },
+    {
+     "text": "Add plenty of ice, sliced strawberries and lemon wheels.",
+     "min": 3
+    },
+    {
+     "text": "Pour into glasses and top with mint.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

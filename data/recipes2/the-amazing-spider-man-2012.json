@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Aunt May's egg bites",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "leg ham, diced",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the milk, cheddar, spring onion and ham.",
+     "min": 5
+    },
+    {
+     "text": "Pour into a greased 12-hole muffin tin.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C until puffed and set.",
+     "min": 15
+    },
+    {
+     "text": "Serve warm.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Midtown Science pepperoni pizza rolls",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day uncooked, chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pepperoni, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "passata",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the pastry with pizza sauce, leaving a 1cm border, and scatter with pepperoni, mozzarella and oregano.",
+     "min": 8
+    },
+    {
+     "text": "Roll each sheet up tightly.",
+     "min": 2
+    },
+    {
+     "text": "Chill, then cut into 2cm slices.",
+     "min": 15
+    },
+    {
+     "text": "Lay cut side up on lined trays, brush with egg and bake at 200C until golden.",
+     "min": 18
+    },
+    {
+     "text": "Warm the passata and serve for dipping.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Captain Stacy's red wine brisket",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 215,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef brisket",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the brisket and soften the onions.",
+     "min": 15
+    },
+    {
+     "text": "Add the wine, stock and tomato paste.",
+     "min": 10
+    },
+    {
+     "text": "Braise covered at 160C.",
+     "min": 170
+    },
+    {
+     "text": "Add the carrots and roast for the last 40 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Slice the meat across the grain.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Gwen's black and white cookies",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 37,
+   "make_ahead": "Up to 2 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs, milk and vanilla, then the flour.",
+     "min": 10
+    },
+    {
+     "text": "Spoon 12 rounds onto trays and bake at 180C.",
+     "min": 12
+    },
+    {
+     "text": "Cool the cookies.",
+     "min": 10
+    },
+    {
+     "text": "Ice half of each with white icing and half with icing mixed with cocoa.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Gwen's dark hot chocolate with marshmallow",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "large marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk until steaming but not boiling.",
+     "min": 5
+    },
+    {
+     "text": "Off the heat, whisk in the chocolate, cocoa, sugar, vanilla and salt until smooth and frothy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into mugs, top with marshmallows and toast with a blowtorch or under a hot grill.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,490 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Publishing party salmon cucumber bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "telegraph cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped dill, plus sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cucumbers into 1.5cm rounds and pat dry.",
+     "min": 6
+    },
+    {
+     "text": "Beat the cream cheese with the chopped dill and lemon zest.",
+     "min": 4
+    },
+    {
+     "text": "Pipe or spoon onto each round.",
+     "min": 6
+    },
+    {
+     "text": "Top with salmon, capers, a dill sprig and pepper.",
+     "min": 9
+    }
+   ]
+  },
+  {
+   "n": "Upper West Side bagels",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "mini bagels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the bagels and toast under a medium grill until golden.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream cheese with the spring onions and pepper.",
+     "min": 4
+    },
+    {
+     "text": "Spread over the eight halves and serve two halves per person.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Fox Books cafe sandwiches",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sliced cooked turkey",
+     "aisle": "Meat"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the sourdough with cranberry sauce.",
+     "min": 2
+    },
+    {
+     "text": "Divide the turkey and brie among four slices and close.",
+     "min": 3
+    },
+    {
+     "text": "Butter the outsides.",
+     "min": 2
+    },
+    {
+     "text": "Press in a hot sandwich pan or frying pan weighted with a second pan, turning once, until golden and the brie melts.",
+     "min": 8
+    },
+    {
+     "text": "Cut each sandwich in half.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Cafe cheesecake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 1580,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "g",
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 140,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 15,
+     "u": "g",
+     "item": "caster sugar for the berries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits, mix with the butter and press into a lined tin.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese with the sugar, sour cream, eggs and vanilla.",
+     "min": 10
+    },
+    {
+     "text": "Pour over the base and bake at 150C until the centre gently wobbles.",
+     "min": 60
+    },
+    {
+     "text": "Cool, then chill overnight.",
+     "min": 1470
+    },
+    {
+     "text": "Toss the strawberries with sugar and leave to macerate.",
+     "min": 20
+    },
+    {
+     "text": "Cut four slices and serve with the strawberries and juices.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Tall decaf cappuccino",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 72,
+     "u": "g",
+     "item": "decaf coffee beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grind the beans and brew four double espressos into warmed tall cups.",
+     "min": 5
+    },
+    {
+     "text": "Steam the milk in batches, with enough air for a deep foam cap.",
+     "min": 5
+    },
+    {
+     "text": "Divide the milk among the cups and spoon the foam on top.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Caffè latte",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 72,
+     "u": "g",
+     "item": "coffee beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grind the beans and brew four double espressos into cups.",
+     "min": 5
+    },
+    {
+     "text": "Steam the milk with only a little air, for a thin layer of foam.",
+     "min": 5
+    },
+    {
+     "text": "Pour the milk into the espresso.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coffee of the day",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 70,
+     "u": "g",
+     "item": "ground coffee, house roast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a fresh pot.",
+     "min": 10
+    },
+    {
+     "text": "Serve with free refills.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Hot cocoa",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk gently.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate into the milk, whisking until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Pour into mugs and top with whipped cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Chocolate chip cookie",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Up to 3 days, airtight",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "choc chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugars until pale, then beat in the egg.",
+     "min": 8
+    },
+    {
+     "text": "Mix in the flour, bicarb and choc chips.",
+     "min": 8
+    },
+    {
+     "text": "Roll into 12 big balls on lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C until golden at the edges but soft in the middle.",
+     "min": 12
+    },
+    {
+     "text": "Cool on the tray.",
+     "min": 7
+    }
+   ]
+  }
+ ]
+}

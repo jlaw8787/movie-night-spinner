@@ -1,0 +1,304 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Oak Bar cheese gougères",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Best fresh, or freeze and reheat",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water with the butter, then beat in the flour until it leaves the pan.",
+     "min": 8
+    },
+    {
+     "text": "Cool, then beat in the eggs and the gruyere.",
+     "min": 10
+    },
+    {
+     "text": "Pipe 20 small puffs onto lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until hollow and golden.",
+     "min": 22
+    }
+   ]
+  },
+  {
+   "n": "Dining car relish tray",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep on ice",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch radishes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mixed olives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the celery and carrots into sticks and trim the radishes.",
+     "min": 8
+    },
+    {
+     "text": "Arrange on crushed ice with the olives and pickle spears.",
+     "min": 5
+    },
+    {
+     "text": "Add a small dish of cream cheese for spreading.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Dining car brook trout",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole trout, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, for frying",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, for the sauce",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "flaked almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dust the trout in flour and season.",
+     "min": 5
+    },
+    {
+     "text": "Fry two at a time in butter until crisp on both sides.",
+     "min": 8
+    },
+    {
+     "text": "Brown the sauce butter with the almonds, add lemon juice and chopped parsley.",
+     "min": 5
+    },
+    {
+     "text": "Spoon over the fish.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Baked Alaska",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 124,
+   "make_ahead": "Make the ice cream dome a day ahead, bake at the last minute",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sponge cake round (20cm)",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "firm vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay the sponge round on a tray and dome the ice cream on top.",
+     "min": 10
+    },
+    {
+     "text": "Freeze until very firm.",
+     "min": 120
+    },
+    {
+     "text": "Whisk the egg whites with the sugar to stiff, glossy peaks.",
+     "min": 10
+    },
+    {
+     "text": "Cover the ice cream completely in meringue.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 230C until browned. Serve straight away.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Gibson",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Mix fresh",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "dry vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the gin and vermouth over ice, one drink at a time.",
+     "min": 3
+    },
+    {
+     "text": "Strain into a chilled glass with a cocktail onion.",
+     "min": 1
+    },
+    {
+     "text": "For anyone off the gin, pour sparkling water over ice with onions.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

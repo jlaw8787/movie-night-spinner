@@ -1,0 +1,396 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Frat house party wings",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, snipped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with salt.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Warm the barbecue sauce with the honey.",
+     "min": 5
+    },
+    {
+     "text": "Toss the wings through the sauce.",
+     "min": 4
+    },
+    {
+     "text": "Mix the sour cream with the mayonnaise and chives for a ranch dip and serve alongside.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Scare Games cheese fries",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 31,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "pickled jalapenos",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the chips at 220C until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Melt the butter, stir in the flour, whisk in the milk until thick and stir in the cheddar.",
+     "min": 10
+    },
+    {
+     "text": "Slice the spring onions.",
+     "min": 3
+    },
+    {
+     "text": "Pour the sauce over the chips and top with spring onion and jalapenos.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Study night spaghetti",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 71,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cans crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into meatballs.",
+     "min": 15
+    },
+    {
+     "text": "Brown the meatballs.",
+     "min": 10
+    },
+    {
+     "text": "Add the tomatoes and simmer.",
+     "min": 40
+    },
+    {
+     "text": "Split the baguette and spread with garlic butter.",
+     "min": 6
+    },
+    {
+     "text": "Bake the bread until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Boil the spaghetti until al dente.",
+     "min": 12
+    },
+    {
+     "text": "Toss the sauce through the spaghetti with parmesan and serve with the bread.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Sulley blue cupcakes",
+   "course": "w",
+   "prep_min": 32,
+   "cook_min": 38,
+   "make_ahead": "Up to 1 day, keep covered",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter for buttercream, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "blue food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "purple sprinkles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "cupcake cases",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the cake butter and sugar until pale, then beat in the eggs.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the flour and milk.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into cupcake cases.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 175C.",
+     "min": 18
+    },
+    {
+     "text": "Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Beat the buttercream butter, icing sugar and blue colouring.",
+     "min": 8
+    },
+    {
+     "text": "Pipe with a grass tip for shaggy fur and add purple sprinkles.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mike's green apple cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "green food colouring, a few drops",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the apple juice and soda water into a jug with the lime juice and mint.",
+     "min": 4
+    },
+    {
+     "text": "Stir in a few drops of green colouring.",
+     "min": 1
+    },
+    {
+     "text": "Slice the apple into thin rounds.",
+     "min": 3
+    },
+    {
+     "text": "Pour over ice with a round of green apple floating on top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

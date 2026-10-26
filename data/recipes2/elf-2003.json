@@ -1,0 +1,492 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Maple syrup popcorn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 40,
+   "make_ahead": "Up to 2 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "popping corn",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the corn in the oil in a covered pot.",
+     "min": 5
+    },
+    {
+     "text": "Boil the maple syrup with the butter to 120C.",
+     "min": 5
+    },
+    {
+     "text": "Pour over the popcorn, toss quickly and spread on a lined tray to set. Break into clusters.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Candy cane pretzel rods",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, keep cool",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "pretzel rods",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "crushed candy canes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the white chocolate in a bowl over barely simmering water.",
+     "min": 5
+    },
+    {
+     "text": "Dip each pretzel rod two-thirds into the chocolate and roll immediately in the crushed candy canes.",
+     "min": 5
+    },
+    {
+     "text": "Set on baking paper until firm.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "New York street hot dogs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Tomato onions up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sauerkraut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onions.",
+     "min": 5
+    },
+    {
+     "text": "Cook the onions in the butter over medium-low heat until soft.",
+     "min": 20
+    },
+    {
+     "text": "Add the tomatoes and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Simmer the franks in water, drain and griddle until browned. Warm the sauerkraut and steam the buns.",
+     "min": 5
+    },
+    {
+     "text": "Assemble with mustard and the tomato onions.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Snowball fight cupcakes",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Beat some of the butter with the sugar, add the egg and vanilla, then fold in the flour and milk.",
+     "min": 10
+    },
+    {
+     "text": "Divide between 4 large cupcake cases and bake.",
+     "min": 18
+    },
+    {
+     "text": "Cool completely.",
+     "min": 12
+    },
+    {
+     "text": "Beat the cream cheese with the remaining butter and icing sugar. Dome over the cakes and roll in the coconut.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "World's best maple mocha",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "milk chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "strong brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag mini marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "candy canes, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whip the cream.",
+     "min": 3
+    },
+    {
+     "text": "Heat the milk with the chocolate and most of the maple syrup, whisking until smooth and steaming.",
+     "min": 7
+    },
+    {
+     "text": "Stir in the coffee, or leave it out for the kids.",
+     "min": 3
+    },
+    {
+     "text": "Pour into 4 mugs and top with cream, marshmallows, a drizzle of maple syrup and crushed candy cane.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "North Pole Spaghetti",
+   "course": "m",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "chocolate sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "mini marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "assorted candy",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the spaghetti until tender and drain.",
+     "min": 12
+    },
+    {
+     "text": "Toss with the butter and maple syrup.",
+     "min": 3
+    },
+    {
+     "text": "Divide into bowls and top with chocolate sauce, marshmallows and candy.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Short Stack",
+   "course": "w",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, baking powder and sugar. Add the egg, buttermilk and some melted butter and mix until just combined.",
+     "min": 5
+    },
+    {
+     "text": "Cook 12 small pancakes in a buttered pan, 3 per person, until bubbles set, flip and cook briefly.",
+     "min": 12
+    },
+    {
+     "text": "Whip the remaining butter until fluffy and serve with a jug of warm syrup.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Kids' Hot Cocoa",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "candy canes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the milk, whisk in the cocoa and sugar until smooth. Whip the cream.",
+     "min": 4
+    },
+    {
+     "text": "Pour into 4 mugs, top with whipped cream and add a candy cane stirrer.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

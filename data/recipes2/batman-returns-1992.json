@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Smoked salmon on rye",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices dark rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the rye.",
+     "min": 3
+    },
+    {
+     "text": "Top with creme fraiche, smoked salmon, a few capers and dill sprigs.",
+     "min": 7
+    },
+    {
+     "text": "Cut into fingers with a sharp knife and serve cold on a dark plate.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Gotham Plaza roasted chestnuts",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chestnuts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut a cross into each chestnut and soak in water.",
+     "min": 20
+    },
+    {
+     "text": "Roast at 220C until the shells curl back.",
+     "min": 20
+    },
+    {
+     "text": "Wrap in a tea towel to steam.",
+     "min": 5
+    },
+    {
+     "text": "Peel while warm and sprinkle with flaky salt.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Max Shreck's masquerade roast",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 1560,
+   "make_ahead": "Dry the pork the night before",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork loin, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sea salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the pork and leave uncovered in the fridge overnight.",
+     "min": 1440
+    },
+    {
+     "text": "Salt well and roast at 240C to start the crackling.",
+     "min": 30
+    },
+    {
+     "text": "Drop to 180C and roast until 63C inside, adding the potatoes tossed in oil alongside.",
+     "min": 60
+    },
+    {
+     "text": "Meanwhile cook the apples with sage and a little sugar to a chunky sauce.",
+     "min": 20
+    },
+    {
+     "text": "Rest the pork before carving.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Snow globe cupcakes",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 275,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "sugar Christmas trees",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line a 12-hole tin. Beat half the butter with the sugar, then the eggs.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the flour and milk, divide between the cases and bake.",
+     "min": 18
+    },
+    {
+     "text": "Cool completely.",
+     "min": 12
+    },
+    {
+     "text": "Beat the rest of the butter with the icing sugar and ice the cupcakes.",
+     "min": 8
+    },
+    {
+     "text": "Add a sugar tree and shredded coconut snow to each.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Milk punch",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 360,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the brandy, milk, sugar syrup and vanilla hard with ice, a drink at a time.",
+     "min": 4
+    },
+    {
+     "text": "Strain into chilled coupes and grate nutmeg over the top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

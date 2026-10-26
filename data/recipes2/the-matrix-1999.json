@@ -1,0 +1,332 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cypher's steak bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "rump steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the rump into cubes and season well.",
+     "min": 8
+    },
+    {
+     "text": "Mix the sour cream with the cracked pepper for the dip.",
+     "min": 2
+    },
+    {
+     "text": "Sear the steak hard in a smoking pan in batches.",
+     "min": 8
+    },
+    {
+     "text": "Toss with the butter and garlic. Serve on toothpicks with the dip.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Green code crackers",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 8,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lavash breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Blitz the parsley and dill with the salt until green.",
+     "min": 5
+    },
+    {
+     "text": "Brush the lavash with oil, sprinkle with the herb salt and cut into long thin strips.",
+     "min": 10
+    },
+    {
+     "text": "Bake until crisp.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Cypher's steak",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 1450,
+   "make_ahead": "Dry-brine the day before",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the steaks and leave uncovered in the fridge overnight.",
+     "min": 1440
+    },
+    {
+     "text": "Sear hard in a hot pan.",
+     "min": 6
+    },
+    {
+     "text": "Baste with part of the butter and thyme for a minute, then rest the steaks.",
+     "min": 8
+    },
+    {
+     "text": "Add the wine and stock to the pan and reduce by half, then whisk in the rest of the butter.",
+     "min": 8
+    },
+    {
+     "text": "Slice the steak and pour over the sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "The Oracle's cookies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 750,
+   "make_ahead": "Dough up to 2 days chilled, baked cookies up to 3 days",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "choc chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter and cool.",
+     "min": 12
+    },
+    {
+     "text": "Beat with the sugar and egg, then mix in the flour, bicarb and choc chips.",
+     "min": 8
+    },
+    {
+     "text": "Rest the dough overnight in the fridge.",
+     "min": 720
+    },
+    {
+     "text": "Roll into 16 balls and bake at 180C until golden.",
+     "min": 12
+    },
+    {
+     "text": "Sprinkle with flaky salt.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Red pill or blue pill gin fizz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Two red and two blue, choose carefully",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "raspberry syrup",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "blue curacao",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 15,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "For the red drinks, shake half the gin with half the lemon juice, the raspberry syrup and cranberry juice with ice and strain into two ice-filled glasses.",
+     "min": 4
+    },
+    {
+     "text": "For the blue drinks, shake the rest of the gin and lemon juice with the blue curacao and sugar syrup and strain into two ice-filled glasses.",
+     "min": 4
+    },
+    {
+     "text": "Top all four with soda water and add a lemon wheel.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

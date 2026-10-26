@@ -1,0 +1,336 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cair Paravel apples",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "red apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the apples and fan them on a board.",
+     "min": 8
+    },
+    {
+     "text": "Warm the peanut butter with honey until loose.",
+     "min": 3
+    },
+    {
+     "text": "Spoon into a bowl in the middle and dust the apples with cinnamon.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Trumpkin's dwarf bread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Same day, best warm",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Rub the butter into the flour and salt.",
+     "min": 8
+    },
+    {
+     "text": "Mix in the milk with a knife until it just comes together.",
+     "min": 3
+    },
+    {
+     "text": "Shape into a round and score the top.",
+     "min": 3
+    },
+    {
+     "text": "Bake.",
+     "min": 30
+    },
+    {
+     "text": "Tear warm and serve with butter.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Aslan's How camp stew",
+   "course": "m",
+   "prep_min": 12,
+   "cook_min": 132,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "lamb shoulder, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf crusty bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the carrots and leeks.",
+     "min": 10
+    },
+    {
+     "text": "Brown the lamb in oil.",
+     "min": 12
+    },
+    {
+     "text": "Add the barley, vegetables, rosemary and water and simmer until the lamb is tender.",
+     "min": 120
+    },
+    {
+     "text": "Serve in deep bowls with crusty bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Narnian apple crumble",
+   "course": "w",
+   "prep_min": 19,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "butter, for the topping",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the apples.",
+     "min": 10
+    },
+    {
+     "text": "Cook the apples with butter and cinnamon, then spoon into a dish.",
+     "min": 5
+    },
+    {
+     "text": "Rub the topping butter into the oats, flour and sugar and scatter over.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 35
+    },
+    {
+     "text": "Warm the custard and serve over the crumble.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Station platform malted hot chocolate",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can whipped cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch malted milk powder, to finish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the chocolate.",
+     "min": 3
+    },
+    {
+     "text": "Heat the milk until steaming.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the chocolate, malted milk powder and sugar until smooth and frothy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into mugs and top with cream and a pinch of malt.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

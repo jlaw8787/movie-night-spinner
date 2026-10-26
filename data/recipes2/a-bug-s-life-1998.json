@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Harvest offering seed crackers",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 85,
+   "make_ahead": "Up to 1 week in an airtight tin",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "sunflower seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "pepitas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "linseeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "chia seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the seeds with the salt and water.",
+     "min": 4
+    },
+    {
+     "text": "Rest the mixture.",
+     "min": 15
+    },
+    {
+     "text": "Spread thin on lined trays.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 160C until crunchy.",
+     "min": 60
+    },
+    {
+     "text": "Cool and break into shards.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Ant Island berry bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "toothpicks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the feta into small cubes.",
+     "min": 4
+    },
+    {
+     "text": "Thread berries, feta and a mint leaf onto toothpicks.",
+     "min": 12
+    },
+    {
+     "text": "Lay them out on a long platter in neat marching lines.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Colony corn chowder",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 33,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "corn kernels (2 cans)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, snipped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the bacon, onion and potatoes.",
+     "min": 10
+    },
+    {
+     "text": "Fry the bacon until crisp.",
+     "min": 6
+    },
+    {
+     "text": "Soften the onion.",
+     "min": 5
+    },
+    {
+     "text": "Add the potatoes, corn, thyme and water and simmer.",
+     "min": 20
+    },
+    {
+     "text": "Stir in the cream and blitz a little for body.",
+     "min": 5
+    },
+    {
+     "text": "Serve topped with chives.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Heimlich's butterfly cookies",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "Up to 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "food colouring, a few drops",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until creamy.",
+     "min": 5
+    },
+    {
+     "text": "Mix in the flour to a soft dough.",
+     "min": 3
+    },
+    {
+     "text": "Roll out and cut into butterfly shapes.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 160C until pale golden.",
+     "min": 15
+    },
+    {
+     "text": "Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Mix the icing sugar, water and colouring and ice in bright colours.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Dewdrop cooler",
+   "course": "d",
+   "prep_min": 11,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the cucumber, mint, lime juice and sugar.",
+     "min": 5
+    },
+    {
+     "text": "Strain into a jug.",
+     "min": 3
+    },
+    {
+     "text": "Pour over ice and top with soda water.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

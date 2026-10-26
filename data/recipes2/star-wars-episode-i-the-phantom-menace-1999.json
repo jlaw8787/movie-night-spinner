@@ -1,0 +1,308 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mos Espa market pallies",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 hour ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "pears",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "nectarines",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pistachios, toasted and roughly chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the pears and nectarines thinly and fan out on a big board.",
+     "min": 10
+    },
+    {
+     "text": "Drizzle with honey, then scatter with feta and pistachios. Serve straight away.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Podrace grandstand skewers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Marinate up to 1 day, grill fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "lamb leg, cubed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the lamb in the yoghurt, cumin, garlic and salt for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Thread onto skewers and grill hot and fast, turning.",
+     "min": 6
+    },
+    {
+     "text": "Whisk the tahini with lemon juice and water until smooth and drizzle over to serve.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Shmi's Tatooine dinner",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "harissa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chickpeas, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chicken with harissa, lemon juice and salt.",
+     "min": 8
+    },
+    {
+     "text": "Spread the chickpeas and onions in a tray and sit the chicken on top.",
+     "min": 7
+    },
+    {
+     "text": "Roast at 200C for 40 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Mix the cucumber into the yoghurt. Warm the flatbreads and serve everything together.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Duel of the Fates red and blue tart",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "thick vanilla custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tart tin with the pastry and blind bake at 180C until golden. Cool.",
+     "min": 35
+    },
+    {
+     "text": "Fill with the custard. Cover one half with raspberries and the other half with blueberries, meeting in a clean line.",
+     "min": 15
+    },
+    {
+     "text": "Brush with warm apricot jam to glaze and chill.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Tatooine blue milk",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "blue food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, coconut milk, honey and ice until frothy.",
+     "min": 3
+    },
+    {
+     "text": "Add a few drops of blue colouring and blend until evenly pale blue. Serve icy cold.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,332 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Dancing mushroom bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "button mushrooms, stalks removed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the butter with garlic, breadcrumbs, parmesan and parsley.",
+     "min": 10
+    },
+    {
+     "text": "Press a spoonful into each mushroom cap.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 200C until golden and bubbling.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Pastoral grape platter",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "red grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "fresh figs, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wash the grapes and pile them on a big platter.",
+     "min": 10
+    },
+    {
+     "text": "Add the brie at room temperature and halve the figs around it.",
+     "min": 5
+    },
+    {
+     "text": "Set a little pot of honey in the middle for drizzling.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Pastoral Olympus moussaka",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 95,
+   "make_ahead": "Up to 1 day, reheats well",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggplants",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "diced tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the eggplants 1cm thick, brush with oil and grill or fry until golden.",
+     "min": 10
+    },
+    {
+     "text": "Brown the lamb with the onion and cinnamon, add the tomatoes and simmer.",
+     "min": 25
+    },
+    {
+     "text": "Melt the butter, stir in the flour, whisk in the milk until thick and beat in the egg off the heat.",
+     "min": 15
+    },
+    {
+     "text": "Layer eggplant and lamb in a dish and pour over the bechamel.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C until golden.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Fairy dust meringues",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 75,
+   "make_ahead": "Up to 3 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 170,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "edible glitter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to stiff peaks.",
+     "min": 10
+    },
+    {
+     "text": "Add the sugar a spoon at a time until thick and glossy.",
+     "min": 5
+    },
+    {
+     "text": "Pipe small kisses onto lined trays.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 100C, then cool in the oven.",
+     "min": 60
+    },
+    {
+     "text": "Dust with edible glitter and serve with raspberries.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Bacchus grape and rosemary spritz",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 123,
+   "make_ahead": "Frozen grapes up to 1 week; syrup up to 3 days",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "red grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "rosemary sprigs, plus extra to garnish",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "purple grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the grapes on a tray.",
+     "min": 120
+    },
+    {
+     "text": "Simmer the sugar, water and rosemary, then cool.",
+     "min": 3
+    },
+    {
+     "text": "Mix the grape juice, rosemary syrup and lemon juice in a jug.",
+     "min": 5
+    },
+    {
+     "text": "Pour into goblets over the frozen grapes, top with sparkling water and garnish with rosemary.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

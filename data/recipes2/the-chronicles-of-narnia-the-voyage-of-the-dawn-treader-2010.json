@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Dawn Treader cheddar oat biscuits",
+   "course": "s",
+   "prep_min": 28,
+   "cook_min": 30,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "vintage cheddar, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar tomato chutney",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Rub the butter into the flour, oats and salt, then stir in grated cheddar and milk to form a dough.",
+     "min": 12
+    },
+    {
+     "text": "Roll 5mm thick, cut into squares and prick with a fork.",
+     "min": 8
+    },
+    {
+     "text": "Bake until golden.",
+     "min": 15
+    },
+    {
+     "text": "Cool.",
+     "min": 15
+    },
+    {
+     "text": "Top each with a slice of cheddar, a spoon of chutney and a slice of pickle.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Lone Islands market olives",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "kalamata olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf crusty bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel strips of lemon zest and slice the garlic.",
+     "min": 4
+    },
+    {
+     "text": "Warm the olives gently in oil with the zest, garlic and chilli.",
+     "min": 5
+    },
+    {
+     "text": "Tip into a bowl and serve warm with torn bread.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Sea voyage fish",
+   "course": "m",
+   "prep_min": 4,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "snapper fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender and crush lightly.",
+     "min": 20
+    },
+    {
+     "text": "Pan-fry the fish skin side down until crisp, then flip for a minute.",
+     "min": 8
+    },
+    {
+     "text": "Add butter, lemon juice and capers to the pan.",
+     "min": 2
+    },
+    {
+     "text": "Spoon over the fish and serve with the potatoes.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Sea of lilies pavlova",
+   "course": "w",
+   "prep_min": 26,
+   "cook_min": 90,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "white peaches",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to stiff peaks, then add the sugar a spoon at a time until glossy.",
+     "min": 12
+    },
+    {
+     "text": "Shape into a round on a lined tray.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 120C, then cool in the oven.",
+     "min": 90
+    },
+    {
+     "text": "Whip the cream and slice the peaches thinly.",
+     "min": 8
+    },
+    {
+     "text": "Top the pavlova with cream and peach slices.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Sweet water elderflower lemonade",
+   "course": "d",
+   "prep_min": 11,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 700,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 330,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons. Peel the cucumber into long ribbons.",
+     "min": 6
+    },
+    {
+     "text": "Mix the lemon juice, cordial and water in a jug and tear in the mint.",
+     "min": 2
+    },
+    {
+     "text": "Fill four glasses with ice and cucumber ribbons.",
+     "min": 2
+    },
+    {
+     "text": "Pour in the lemonade and top with a splash of soda water.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

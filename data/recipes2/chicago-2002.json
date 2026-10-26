@@ -1,0 +1,290 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Onyx Club devils on horseback",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "pitted prunes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "rashers streaky bacon, halved",
+     "aisle": "Meat"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "toothpicks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Stuff each prune with a small piece of blue cheese.",
+     "min": 8
+    },
+    {
+     "text": "Wrap each in half a rasher of bacon and secure with a toothpick.",
+     "min": 12
+    },
+    {
+     "text": "Bake until the bacon is crisp.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Jail cell cheese straws",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet of puff pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line a tray. Brush the pastry with egg and cover with parmesan and paprika.",
+     "min": 5
+    },
+    {
+     "text": "Cut into thin strips like cell bars.",
+     "min": 4
+    },
+    {
+     "text": "Twist each a few times and lay on the tray.",
+     "min": 6
+    },
+    {
+     "text": "Bake until puffed and golden.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Deep dish pizza",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mozzarella, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Italian sausage, crumbled",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin of crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves of garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Press the dough mixed with butter into a deep greased tin.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the tomatoes with the garlic.",
+     "min": 15
+    },
+    {
+     "text": "Layer the mozzarella, then sausage, then tomato.",
+     "min": 10
+    },
+    {
+     "text": "Finish with parmesan and bake at 220C.",
+     "min": 35
+    },
+    {
+     "text": "Rest before slicing.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Champagne jelly",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 250,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "gelatine leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet of raspberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine in cold water.",
+     "min": 5
+    },
+    {
+     "text": "Warm the water with the sugar, squeeze the gelatine and stir in to dissolve.",
+     "min": 8
+    },
+    {
+     "text": "Cool slightly, then gently stir in the sparkling wine.",
+     "min": 5
+    },
+    {
+     "text": "Pour into coupes over raspberries.",
+     "min": 2
+    },
+    {
+     "text": "Chill.",
+     "min": 240
+    }
+   ]
+  },
+  {
+   "n": "Bathtub gin fizz",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Syrup up to 1 week, chilled",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make the syrup ahead by dissolving equal parts sugar and hot water, then cool.",
+     "min": 3
+    },
+    {
+     "text": "Shake the gin, lemon juice and syrup hard with ice.",
+     "min": 3
+    },
+    {
+     "text": "Strain into tall glasses over fresh ice and top with soda water.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

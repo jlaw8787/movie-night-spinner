@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Iona's Trax counter pink candied almonds",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Up to 5 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "whole almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "freeze-dried raspberry powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salted pretzels",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the sugar and water until dissolved, then add the almonds.",
+     "min": 3
+    },
+    {
+     "text": "Stir over medium heat until the sugar crystallises and coats them, then keep stirring until some melts glossy again.",
+     "min": 10
+    },
+    {
+     "text": "Off the heat, toss with the raspberry powder and salt.",
+     "min": 2
+    },
+    {
+     "text": "Spread on baking paper to cool.",
+     "min": 8
+    },
+    {
+     "text": "Mix with the pretzels.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Duckie's dance-off popcorn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "freeze-dried raspberries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in the oil in a covered pot, shaking regularly.",
+     "min": 4
+    },
+    {
+     "text": "Melt the white chocolate gently.",
+     "min": 3
+    },
+    {
+     "text": "Crush the raspberries to a powder and stir into the chocolate to tint it pink.",
+     "min": 3
+    },
+    {
+     "text": "Toss through the popcorn and spread on a lined tray.",
+     "min": 2
+    },
+    {
+     "text": "Leave to set.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Andie's dad's pot roast",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 190,
+   "make_ahead": "Up to 2 days, keep chilled and reheat",
+   "ingredients": [
+    {
+     "q": 900,
+     "u": "g",
+     "item": "beef chuck roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, peeled and chunked",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C. Season the beef and brown all sides in a heavy casserole.",
+     "min": 12
+    },
+    {
+     "text": "Add the onions, carrots, garlic and stock, then cover and braise.",
+     "min": 120
+    },
+    {
+     "text": "Add the potatoes, cover and cook until the beef and potatoes are tender.",
+     "min": 60
+    },
+    {
+     "text": "Rest the beef, slice or pull apart and serve with the vegetables and stock.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Two-dress prom cake",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 40,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "strawberries, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 140,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop pink food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line two 12cm round tins. Cook the strawberries over low heat until reduced to a thick puree and cool.",
+     "min": 12
+    },
+    {
+     "text": "Beat part of the butter with the caster sugar until pale, beat in the eggs and fold in the flour.",
+     "min": 8
+    },
+    {
+     "text": "Divide the batter. Stir vanilla into one half and the strawberry puree into the other.",
+     "min": 4
+    },
+    {
+     "text": "Bake side by side until a skewer comes out clean, then cool.",
+     "min": 25
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and milk, and tint half pink.",
+     "min": 6
+    },
+    {
+     "text": "Cut both cakes in half and join one vanilla and one strawberry half with buttercream. Cover half pink and half white and pipe a seam. Cut into four portions.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Prom punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cranberry juice, pineapple juice and lemonade in a big glass bowl.",
+     "min": 3
+    },
+    {
+     "text": "Add the orange slices and raspberries so they float on top.",
+     "min": 3
+    },
+    {
+     "text": "Ladle into glasses over ice.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

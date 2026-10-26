@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Malta pastizzi",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Dice the onion and cut the pastry into squares.",
+     "min": 8
+    },
+    {
+     "text": "Mix the ricotta with the egg.",
+     "min": 3
+    },
+    {
+     "text": "Cook the peas with the onion and curry powder in oil.",
+     "min": 8
+    },
+    {
+     "text": "Fill the squares with one or the other, fold into parcels.",
+     "min": 12
+    },
+    {
+     "text": "Bake until flaky.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Locust swarm corn",
+   "course": "s",
+   "prep_min": 9,
+   "cook_min": 14,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the corn.",
+     "min": 6
+    },
+    {
+     "text": "Zest and juice the limes and mix with the soft butter and chilli.",
+     "min": 4
+    },
+    {
+     "text": "Brush the corn with the butter.",
+     "min": 2
+    },
+    {
+     "text": "Char on a hot grill, turning, until blistered all over.",
+     "min": 8
+    },
+    {
+     "text": "Cut into thick rounds and pile high.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Dolomites sanctuary polenta",
+   "course": "m",
+   "prep_min": 12,
+   "cook_min": 75,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "polenta",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the sausages from their skins and slice the mushrooms.",
+     "min": 8
+    },
+    {
+     "text": "Brown the sausage meat in oil, add the mushrooms and tomatoes and simmer.",
+     "min": 60
+    },
+    {
+     "text": "Cook the polenta in the boiling water, stirring, until thick.",
+     "min": 15
+    },
+    {
+     "text": "Beat in the butter and parmesan.",
+     "min": 3
+    },
+    {
+     "text": "Spoon the ragu over the polenta.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Amber fossil honeycomb",
+   "course": "w",
+   "prep_min": 7,
+   "cook_min": 57,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tin with baking paper.",
+     "min": 3
+    },
+    {
+     "text": "Boil the sugar, golden syrup and honey to 150C.",
+     "min": 12
+    },
+    {
+     "text": "Off the heat, whisk in the bicarb soda so it foams, and pour into the tin.",
+     "min": 2
+    },
+    {
+     "text": "Leave to set.",
+     "min": 45
+    },
+    {
+     "text": "Break into amber shards.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Malta almond ruġġata",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 540,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "blanched almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "flaked almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the almonds in water overnight and drain.",
+     "min": 3
+    },
+    {
+     "text": "Soak.",
+     "min": 480
+    },
+    {
+     "text": "Blend with the cold water and strain through a clean cloth, squeezing well.",
+     "min": 6
+    },
+    {
+     "text": "Stir in the sugar, vanilla and cloves, then chill.",
+     "min": 60
+    },
+    {
+     "text": "Toast the flaked almonds in a dry pan.",
+     "min": 4
+    },
+    {
+     "text": "Pour over ice in four glasses and scatter with the almonds.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

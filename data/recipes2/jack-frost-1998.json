@@ -1,0 +1,418 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Snow day toastie fingers with tomato soup",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins crushed tomatoes (400g each)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the onion in the oil until soft.",
+     "min": 5
+    },
+    {
+     "text": "Add the tomatoes, stock and sugar and simmer, then blitz smooth and stir in the cream.",
+     "min": 18
+    },
+    {
+     "text": "Spread the bread with mustard and make sandwiches with ham and cheddar. Butter the outsides.",
+     "min": 5
+    },
+    {
+     "text": "Fry until golden on both sides.",
+     "min": 6
+    },
+    {
+     "text": "Cut into fingers and serve with cups of soup.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Rinkside pretzel bun hot dogs",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "pretzel buns or soft rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slowly fry the onions in the butter until golden.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the frankfurts in water, then grill briefly for colour.",
+     "min": 7
+    },
+    {
+     "text": "Warm the buns in the oven.",
+     "min": 4
+    },
+    {
+     "text": "Split the buns, add a frankfurt to each and top with onions, mustard, pickles and cheddar.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Frost family roast beef and Yorkshires",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 88,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef topside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig rosemary, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "potatoes, parboiled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 110,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the beef with the mustard, rosemary and salt. Parboil the potatoes and toss in oil.",
+     "min": 15
+    },
+    {
+     "text": "Roast the beef at 200C for medium rare, with the potatoes and honey-tossed carrots on another tray.",
+     "min": 60
+    },
+    {
+     "text": "Rest the beef and turn the oven to 220C. Whisk the eggs, flour and milk into a batter.",
+     "min": 15
+    },
+    {
+     "text": "Heat a little oil in each hole of a muffin tin, pour in the batter and bake without opening the oven.",
+     "min": 20
+    },
+    {
+     "text": "Make gravy from the juices with a spoon of the flour and the stock.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Snowman coconut cupcakes",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 20,
+   "make_ahead": "Up to 2 days, keep covered",
+   "ingredients": [
+    {
+     "q": 275,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chocolate chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small orange lollies",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat some of the butter with the sugar, add the eggs, then fold in the flour and milk.",
+     "min": 8
+    },
+    {
+     "text": "Divide into cupcake cases and bake at 180C.",
+     "min": 18
+    },
+    {
+     "text": "Cool completely.",
+     "min": 15
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and vanilla until fluffy and white.",
+     "min": 5
+    },
+    {
+     "text": "Dome onto each cupcake and roll in coconut. Press in chocolate chips for eyes and a lolly for a nose.",
+     "min": 14
+    }
+   ]
+  },
+  {
+   "n": "Harmonica night white hot chocolate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 7,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk with the cinnamon until steaming.",
+     "min": 7
+    },
+    {
+     "text": "Remove the cinnamon and whisk in the white chocolate and vanilla until smooth and frothy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into mugs, top with whipped cream and sprinkle with coconut like fresh snow.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

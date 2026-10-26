@@ -1,0 +1,336 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Triple feature popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in the coconut oil.",
+     "min": 8
+    },
+    {
+     "text": "Toss half with melted butter and fine salt.",
+     "min": 3
+    },
+    {
+     "text": "Toss the rest with butter melted with soy and sugar.",
+     "min": 4
+    },
+    {
+     "text": "Serve in big paper buckets for the triple feature.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Comic shop cheese puffs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Best fresh from the oven",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water and butter, beat in the flour and cook a minute.",
+     "min": 5
+    },
+    {
+     "text": "Cool slightly, beat in the eggs, cheddar and cayenne.",
+     "min": 12
+    },
+    {
+     "text": "Pipe small rounds.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C until puffed and hollow.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Hollywood hotel room service",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "roast chicken, shredded",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into shoestrings and fry once.",
+     "min": 15
+    },
+    {
+     "text": "Grill the bacon and toast the bread.",
+     "min": 15
+    },
+    {
+     "text": "Layer chicken, bacon, lettuce, tomato and mayonnaise across three slices each and cut into triangles.",
+     "min": 15
+    },
+    {
+     "text": "Fry the fries a second time until crisp.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Diner cherry pie",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 290,
+   "make_ahead": "Bake the day before",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "frozen sour cherries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop almond extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the cherries with the sugar, lemon juice, almond extract and cornflour.",
+     "min": 5
+    },
+    {
+     "text": "Line a pie dish with two sheets of pastry and fill.",
+     "min": 10
+    },
+    {
+     "text": "Weave a lattice from the other two sheets.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 190C.",
+     "min": 50
+    },
+    {
+     "text": "Cool.",
+     "min": 240
+    },
+    {
+     "text": "Serve with ice cream.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Cancún beach margarita",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "tequila",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the limes and rim four glasses with salt.",
+     "min": 5
+    },
+    {
+     "text": "Shake the tequila, orange liqueur and lime juice hard with ice, one drink at a time.",
+     "min": 4
+    },
+    {
+     "text": "Strain into the glasses.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

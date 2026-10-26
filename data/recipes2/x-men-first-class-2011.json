@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Oxford pub ploughman's",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "aged cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of pickled onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato chutney",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay out the cheddar, ham, pickled onions, chutney and apple on a board.",
+     "min": 10
+    },
+    {
+     "text": "Add thick slices of crusty bread and a dish of butter.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Cuban missile crisis croquetas",
+   "course": "s",
+   "prep_min": 123,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day uncrumbed, chilled",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "leg ham, chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, stir in the flour and whisk in the milk until very thick.",
+     "min": 10
+    },
+    {
+     "text": "Add the ham and spread out to cool.",
+     "min": 5
+    },
+    {
+     "text": "Chill overnight or at least a few hours until firm.",
+     "min": 120
+    },
+    {
+     "text": "Shape into logs and crumb in egg and panko.",
+     "min": 10
+    },
+    {
+     "text": "Fry until golden.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Hellfire Club pepper steak",
+   "course": "m",
+   "prep_min": 6,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "rib eye steaks, about 500g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "crushed peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Parboil the potatoes, then shake to rough up.",
+     "min": 8
+    },
+    {
+     "text": "Roast in hot oil at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Season the steaks and sear in a very hot pan, basting with butter for the last minute.",
+     "min": 8
+    },
+    {
+     "text": "Rest the steaks.",
+     "min": 5
+    },
+    {
+     "text": "In the same pan add the peppercorns and brandy, then cream and stock, and simmer until thick.",
+     "min": 8
+    },
+    {
+     "text": "Slice and spoon the sauce over.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Chess game chocolate squares",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 130,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the dark chocolate with half the condensed milk and half the butter and set in a lined tray.",
+     "min": 10
+    },
+    {
+     "text": "Repeat with the white chocolate and the rest in another tray.",
+     "min": 10
+    },
+    {
+     "text": "Set in the fridge.",
+     "min": 120
+    },
+    {
+     "text": "Cut into squares and arrange like a chess board.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sixties gin martini with olives",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 26,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "dry vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the martini glasses in the freezer.",
+     "min": 30
+    },
+    {
+     "text": "Fill a jug with ice, add gin and vermouth and stir steadily until very cold.",
+     "min": 1
+    },
+    {
+     "text": "Strain into the frozen glasses and add a toothpick with two olives to each.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

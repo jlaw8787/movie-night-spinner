@@ -1,0 +1,498 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Rooftop mixed nuts",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 week in an airtight jar",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mixed nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pumpkin seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the nuts and pumpkin seeds with the soy, honey and sesame seeds. Spread on a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 170C, stirring once.",
+     "min": 12
+    },
+    {
+     "text": "Cool on the tray so they crisp.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Edamame",
+   "course": "s",
+   "prep_min": 2,
+   "cook_min": 6,
+   "make_ahead": "Best eaten warm",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen edamame in pods",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the edamame in salted water and drain well.",
+     "min": 6
+    },
+    {
+     "text": "Toss with the sea salt and sesame oil and serve warm, with another bowl for the empty pods.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Teriyaki rice bowl",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "mirin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sake",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "short grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pickled ginger",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice and keep warm.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the soy, mirin, sake and sugar until syrupy.",
+     "min": 5
+    },
+    {
+     "text": "Sear the chicken skin side down, flip and cook through, then pour in the sauce and turn until glazed.",
+     "min": 13
+    },
+    {
+     "text": "Slice the chicken over the rice and top with pickled ginger and spring onion.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coconut ice cream",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 245,
+   "make_ahead": "Up to 1 week, keep frozen",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the coconut in a dry pan until golden.",
+     "min": 5
+    },
+    {
+     "text": "Blend the coconut cream, cream and sugar until the sugar dissolves, then stir in most of the coconut.",
+     "min": 10
+    },
+    {
+     "text": "Churn, or freeze in a tub, stirring every hour.",
+     "min": 240
+    },
+    {
+     "text": "Scoop and finish with the rest of the coconut.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Rooftop iced matcha honey lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Lemonade up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "matcha powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "water, warm and cold",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons. Stir the honey into some warm water, then add the lemon juice and cold water.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the matcha with hot water (about 80C) until frothy.",
+     "min": 3
+    },
+    {
+     "text": "Fill 4 glasses with ice, pour in the lemonade, float the matcha on top and add a lemon wheel and mint. Stir at the table.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Flavors of the Day",
+   "course": "w",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 240,
+   "make_ahead": "Make up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "strawberries, blended",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pistachios, ground",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk, cream and vanilla and whisk into the yolks and sugar. Cook gently until it coats a spoon, then cool.",
+     "min": 10
+    },
+    {
+     "text": "Chill the custard. Keep one third plain for vanilla and stir the strawberries, cocoa and pistachios into the other thirds for fraise, chocolat and pistache.",
+     "min": 30
+    },
+    {
+     "text": "Churn, or freeze in a tub stirring every hour. Scoop into cups.",
+     "min": 200
+    }
+   ]
+  },
+  {
+   "n": "Fresko",
+   "course": "w",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cherry syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "grenadine",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shave or crush the ice into paper cups and pour over cherry or grenadine syrup, using both for a mix.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Tablèt Pistach",
+   "course": "w",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 week in an airtight tin",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "roasted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated fresh ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the peanuts on a lined tray in a low oven.",
+     "min": 5
+    },
+    {
+     "text": "Boil the sugar, water and ginger to a golden caramel, stirring only at the start.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the warm peanuts and pour onto baking paper, spreading thin.",
+     "min": 5
+    },
+    {
+     "text": "Cool completely, then break into pieces.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Green Tea Lemonade",
+   "course": "d",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Lemonade up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bags Japanese green tea",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea strongly in hot water and chill.",
+     "min": 5
+    },
+    {
+     "text": "Juice the lemons, stir in the honey and cold water, and fill 4 glasses with ice and mint.",
+     "min": 5
+    },
+    {
+     "text": "Pour in the lemonade and float the whisked tea on top.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

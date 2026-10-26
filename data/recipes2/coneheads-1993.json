@@ -1,0 +1,276 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mass quantities of chips",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes thin on a mandoline, rinse and dry well.",
+     "min": 13
+    },
+    {
+     "text": "Fry at 170C in batches until golden and crisp.",
+     "min": 20
+    },
+    {
+     "text": "Salt well while hot and pile into a big bowl.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Six-pack of rings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the onions into thick rings and soak in the buttermilk.",
+     "min": 30
+    },
+    {
+     "text": "Whisk the flour with the cold lager into a batter.",
+     "min": 3
+    },
+    {
+     "text": "Dip the rings in the batter and fry at 185C in batches until puffed and golden.",
+     "min": 10
+    },
+    {
+     "text": "Salt and serve hot.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mass quantity burgers",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into 12 balls and slice the onion.",
+     "min": 12
+    },
+    {
+     "text": "Smash thin on a hot griddle in batches, salt, and flip after 90 seconds, adding cheese.",
+     "min": 15
+    },
+    {
+     "text": "Toast the buns.",
+     "min": 3
+    },
+    {
+     "text": "Stack two patties per bun with pickles and onion and pile onto a platter.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Cone-shaped ice cream",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, keep frozen",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream, softened",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "waffle cones",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the coconut oil and cool slightly.",
+     "min": 6
+    },
+    {
+     "text": "Pipe or scoop the softened ice cream high into the cones.",
+     "min": 10
+    },
+    {
+     "text": "Freeze until firm.",
+     "min": 20
+    },
+    {
+     "text": "Dip the tops in the chocolate so it sets into a shell.",
+     "min": 9
+    }
+   ]
+  },
+  {
+   "n": "Mass quantities lager shandy jug",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "lager (4 bottles of 375ml)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the lager and lemonade until very cold.",
+     "min": 5
+    },
+    {
+     "text": "Fill a large jug with ice and add the lemon and lime wedges, squeezing as they go in.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the lager and lemonade together, slowly. Stir once and pour into big glasses.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

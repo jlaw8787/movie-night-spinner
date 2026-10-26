@@ -1,0 +1,364 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Rick's Café olives and almonds",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, serve warm",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "preserved lemon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the preserved lemon rind.",
+     "min": 3
+    },
+    {
+     "text": "Warm the olives in the oil with the lemon rind, cumin and chilli.",
+     "min": 5
+    },
+    {
+     "text": "Toss the almonds with oil and salt and roast at 180C.",
+     "min": 8
+    },
+    {
+     "text": "Serve both warm in small bowls.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Letters of transit briouats",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day uncooked, bake fresh",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "sheets filo pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the mince with the onion, cinnamon, cumin and salt until browned, then stir in the coriander. Cool.",
+     "min": 20
+    },
+    {
+     "text": "Cut the filo into long strips and brush with melted butter.",
+     "min": 8
+    },
+    {
+     "text": "Add a spoonful of filling to each strip and fold into triangles.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 190C until crisp.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Usual suspects chicken tagine",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "preserved lemon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "couscous",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Soften the sliced onions with the ginger and saffron.",
+     "min": 8
+    },
+    {
+     "text": "Return the chicken with the water, chopped preserved lemon rind and olives and simmer.",
+     "min": 40
+    },
+    {
+     "text": "Pour the couscous into the boiling stock, cover for a few minutes and fluff.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Orange blossom almond cake",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Up to 2 days, keep covered",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "almond meal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar, for the syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "orange blossom water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the eggs and sugar until pale, then fold in the almond meal, orange zest and baking powder.",
+     "min": 12
+    },
+    {
+     "text": "Bake in a 20cm tin at 170C.",
+     "min": 40
+    },
+    {
+     "text": "Simmer the orange juice with the sugar and orange blossom water.",
+     "min": 6
+    },
+    {
+     "text": "Pour over the warm cake and serve with Greek yoghurt.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Here's looking at you mint tea",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "green tea",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rinse the green tea in a teapot with a splash of boiling water and tip it out.",
+     "min": 2
+    },
+    {
+     "text": "Add the mint, sugar and boiling water and brew.",
+     "min": 4
+    },
+    {
+     "text": "Pour from a height into small glasses so it froths.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

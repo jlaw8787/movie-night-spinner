@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pigsty Alley pork buns",
+   "course": "s",
+   "prep_min": 33,
+   "cook_min": 92,
+   "make_ahead": "Fill and steam on the day",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 220,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "char siu pork",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oyster sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "hoisin sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar, for the filling",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar and warm water into a dough and knead.",
+     "min": 12
+    },
+    {
+     "text": "Prove the dough.",
+     "min": 60
+    },
+    {
+     "text": "Chop the pork and mix with the oyster sauce, hoisin and sugar.",
+     "min": 6
+    },
+    {
+     "text": "Divide the dough into 12 rounds, fill and pleat shut.",
+     "min": 15
+    },
+    {
+     "text": "Prove again.",
+     "min": 20
+    },
+    {
+     "text": "Steam.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "The baker's doughnuts",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 496,
+   "make_ahead": "Dough the day before",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "soy milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, baking powder, salt and water and knead briefly.",
+     "min": 8
+    },
+    {
+     "text": "Rest overnight in the fridge.",
+     "min": 480
+    },
+    {
+     "text": "Cut strips, press two together and stretch.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 190C in batches until puffed and golden.",
+     "min": 12
+    },
+    {
+     "text": "Warm the soy milk and serve alongside.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Axe Gang salt and pepper pork",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 43,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pork belly",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "potato starch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Sichuan pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pork into strips and toss in the potato starch. Slice the garlic, chillies and spring onions.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 180C in batches until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 18
+    },
+    {
+     "text": "Grind the Sichuan pepper with the salt. Wok-toss the pork with the garlic, chillies, spring onion and salted pepper.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mango sago",
+   "course": "w",
+   "prep_min": 14,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sago",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the sago until clear, then rinse and chill.",
+     "min": 15
+    },
+    {
+     "text": "Chill.",
+     "min": 30
+    },
+    {
+     "text": "Mix the sago with the coconut milk and sugar.",
+     "min": 3
+    },
+    {
+     "text": "Blitz one mango and dice the other.",
+     "min": 8
+    },
+    {
+     "text": "Spoon the sago into glasses and top with mango purée and cubes.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Chrysanthemum tea",
+   "course": "d",
+   "prep_min": 3,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 15,
+     "u": "g",
+     "item": "dried chrysanthemum",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "rock sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, if serving cold",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the chrysanthemum flowers in hot water with the rock sugar.",
+     "min": 5
+    },
+    {
+     "text": "Strain and serve warm in cups, or chill and pour over ice.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

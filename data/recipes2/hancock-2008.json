@@ -1,0 +1,306 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Beach whale prawns",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the prawns with garlic, chilli, lime zest and melted butter.",
+     "min": 8
+    },
+    {
+     "text": "Grill for a couple of minutes a side until charred.",
+     "min": 4
+    },
+    {
+     "text": "Pile high on a platter with lime wedges and pour over any butter left in the pan.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "All Heart bruschetta",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "ripe tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "basil leaves, torn",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette and toast the slices.",
+     "min": 5
+    },
+    {
+     "text": "Mix the tomatoes with one crushed garlic clove, basil, olive oil and salt.",
+     "min": 5
+    },
+    {
+     "text": "Rub the toasts with the cut garlic clove and pile the tomato on just before serving.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "PR makeover steak",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 38,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cracked peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mixed salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thick chips.",
+     "min": 10
+    },
+    {
+     "text": "Fry twice until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Grill the steaks to medium-rare and rest.",
+     "min": 8
+    },
+    {
+     "text": "In the pan, toast the peppercorns, add the cream and simmer until thick.",
+     "min": 5
+    },
+    {
+     "text": "Serve with the chips and a green salad.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Good job brownies",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 35,
+   "make_ahead": "Up to 2 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the butter.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the sugar and eggs, then fold in the flour.",
+     "min": 5
+    },
+    {
+     "text": "Bake in a lined tin at 170C.",
+     "min": 25
+    },
+    {
+     "text": "Cool slightly, cut into squares and serve warm with ice cream. Good job.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Hancock's whisky sour",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "dashes bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake each drink without ice for 10 seconds.",
+     "min": 5
+    },
+    {
+     "text": "Add ice and shake again, then strain into a short glass over fresh ice.",
+     "min": 5
+    },
+    {
+     "text": "Shake drops of bitters onto the foam. For the sober version, make iced tea with lemon and honey.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

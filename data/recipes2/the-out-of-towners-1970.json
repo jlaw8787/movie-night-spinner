@@ -335,76 +335,6 @@
    ]
   },
   {
-   "n": "Rib Eye Steak and Eggs",
-   "course": "m",
-   "prep_min": 30,
-   "cook_min": 30,
-   "make_ahead": "",
-   "extra": true,
-   "ingredients": [
-    {
-     "q": 600,
-     "u": "g",
-     "item": "potatoes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 0.5,
-     "u": "tsp",
-     "item": "fine salt",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 80,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 800,
-     "u": "g",
-     "item": "rib eye steak, in four pieces",
-     "aisle": "Meat"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "vegetable oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 8,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "slices bread",
-     "aisle": "Bakery"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Grate the potatoes, squeeze dry and shape into hash browns.",
-     "min": 10
-    },
-    {
-     "text": "Fry the hash browns in butter until crisp.",
-     "min": 12
-    },
-    {
-     "text": "Sear the steaks to order and rest.",
-     "min": 12
-    },
-    {
-     "text": "Fry the eggs. Toast and butter the bread.",
-     "min": 8
-    }
-   ]
-  },
-  {
    "n": "The Continental",
    "course": "m",
    "prep_min": 5,
@@ -545,8 +475,8 @@
   {
    "n": "Eggs Benedict",
    "course": "m",
-   "prep_min": 25,
-   "cook_min": 20,
+   "prep_min": 15,
+   "cook_min": 15,
    "make_ahead": "",
    "extra": true,
    "ingredients": [
@@ -609,10 +539,6 @@
     {
      "text": "Stack muffin, bacon and egg, then spoon over the hollandaise.",
      "min": 3
-    },
-    {
-     "text": "Keep the hollandaise warm, not hot.",
-     "min": 4
     }
    ]
   },
@@ -747,76 +673,6 @@
     {
      "text": "Cut into quarters and pin with picks.",
      "min": 8
-    }
-   ]
-  },
-  {
-   "n": "Cocktail Franks",
-   "course": "s",
-   "prep_min": 5,
-   "cook_min": 12,
-   "make_ahead": "Up to 1 day, reheat gently",
-   "extra": true,
-   "ingredients": [
-    {
-     "q": 500,
-     "u": "g",
-     "item": "cocktail franks",
-     "aisle": "Meat"
-    },
-    {
-     "q": 20,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 3,
-     "u": "tbsp",
-     "item": "honey",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "Dijon mustard",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "brown sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "Worcestershire sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "jar pearl onions",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Simmer the franks, then drain.",
-     "min": 4
-    },
-    {
-     "text": "Melt the butter with honey, mustard, sugar and Worcestershire.",
-     "min": 2
-    },
-    {
-     "text": "Toss the franks in the glaze until sticky.",
-     "min": 5
-    },
-    {
-     "text": "Serve on picks with pearl onions.",
-     "min": 1
     }
    ]
   },

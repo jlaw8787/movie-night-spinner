@@ -1,0 +1,338 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hab-grown potato skins",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 68,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "large potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cooked bacon, chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the potatoes at 200C.",
+     "min": 60
+    },
+    {
+     "text": "Halve, scoop and brush with melted butter.",
+     "min": 8
+    },
+    {
+     "text": "Fill with cheddar and bacon.",
+     "min": 6
+    },
+    {
+     "text": "Bake again until crisp.",
+     "min": 12
+    },
+    {
+     "text": "Top with sour cream and chives.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Red planet hummus",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can chickpeas, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the capsicum until black, then peel and seed.",
+     "min": 15
+    },
+    {
+     "text": "Blitz with chickpeas, tahini, garlic, lemon juice and paprika until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Swirl with olive oil.",
+     "min": 2
+    },
+    {
+     "text": "Serve with warm flatbread.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Sol 100 potato and leek soup",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 32,
+   "make_ahead": "Up to 3 days chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the leeks and onion in butter.",
+     "min": 8
+    },
+    {
+     "text": "Add the potatoes and stock.",
+     "min": 5
+    },
+    {
+     "text": "Simmer until tender.",
+     "min": 25
+    },
+    {
+     "text": "Fry the bacon until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Blend with the cream until silky.",
+     "min": 4
+    },
+    {
+     "text": "Top with bacon and chives and serve with crusty bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Rich Purnell manoeuvre sundae",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honeycomb, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with some of the cream.",
+     "min": 5
+    },
+    {
+     "text": "Whip the remaining cream.",
+     "min": 4
+    },
+    {
+     "text": "Scoop ice cream into tall glasses and pour over the fudge.",
+     "min": 3
+    },
+    {
+     "text": "Pipe whipped cream into a tall rocket shape and scatter crushed honeycomb at the base for flames.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Lewis's disco condensed milk iced coffee",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 29,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "strong coffee (from 60 g ground coffee)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "tbsp",
+     "item": "sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the strong coffee.",
+     "min": 5
+    },
+    {
+     "text": "Put condensed milk into each of four heatproof glasses and pour in hot coffee, stirring until it dissolves.",
+     "min": 2
+    },
+    {
+     "text": "Cool, then chill for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Add plenty of ice, top with a splash of cold milk and stir once.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

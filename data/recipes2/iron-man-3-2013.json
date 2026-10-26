@@ -1,0 +1,314 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tennessee snowfall popcorn",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "popping corn",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "sea salt flakes, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the corn and toss with the melted butter. Spread on a lined tray.",
+     "min": 8
+    },
+    {
+     "text": "Melt the white chocolate and drizzle all over, then sprinkle with sea salt flakes.",
+     "min": 7
+    },
+    {
+     "text": "Leave to set for 30 minutes and break into clusters like snow.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Malibu mansion prawns",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Marinate up to 2 hours, grill fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, one zested and one juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butterfly the prawns and toss with the garlic, chilli, lemon zest and oil.",
+     "min": 18
+    },
+    {
+     "text": "Grill over high heat for 2 minutes a side until charred.",
+     "min": 5
+    },
+    {
+     "text": "Pile onto a platter and serve with mayonnaise mixed with lemon juice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tennessee hot chicken",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 265,
+   "make_ahead": "Marinate overnight, fry fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour, seasoned",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in the buttermilk in the fridge, at least 4 hours or overnight.",
+     "min": 240
+    },
+    {
+     "text": "Dredge in seasoned flour and fry at 165C until crisp and cooked through.",
+     "min": 20
+    },
+    {
+     "text": "Whisk a few spoonfuls of the hot oil with the cayenne, brown sugar and paprika and brush over the chicken.",
+     "min": 5
+    },
+    {
+     "text": "Serve on white bread with pickles.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Giant bunny cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "Bake a day ahead, decorate on the day",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs and fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Bake in two round tins at 175C. Cool.",
+     "min": 30
+    },
+    {
+     "text": "Cut one round into ears and a bow tie and assemble into a bunny.",
+     "min": 15
+    },
+    {
+     "text": "Mix the icing sugar with a little water, cover the bunny and press on coconut. Add marshmallows.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Rose Hill malted milkshakes",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "chocolate malt balls",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the ice cream, milk and malt powder until thick and smooth, in batches.",
+     "min": 4
+    },
+    {
+     "text": "Pour into four chilled tall glasses. Whip the cream to soft peaks and spoon on top.",
+     "min": 4
+    },
+    {
+     "text": "Crush the malt balls and scatter over. Serve straight away with wide straws and long spoons.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

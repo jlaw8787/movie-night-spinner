@@ -1,0 +1,300 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Kashyyyk forest mushrooms",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mixed mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, shaved",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the mushrooms in the butter over high heat until golden. Add the garlic and thyme and cook another minute.",
+     "min": 10
+    },
+    {
+     "text": "Toast the sourdough, pile the mushrooms on top and finish with parmesan and a crack of pepper.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Utapau sinkhole bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Filling up to 1 day, bake fresh",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "vol-au-vent cases",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "leek, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "chicken breast, finely diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped tarragon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the leek in the butter, add the chicken and cook through.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the cream and tarragon and simmer until thick.",
+     "min": 8
+    },
+    {
+     "text": "Spoon into the cases and bake at 200C for 10 minutes until golden and hot.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Coruscant opera house roast duck",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 125,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "whole duck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "five spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Prick the duck all over and rub with salt and five spice. Set on a rack in a tray.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 180C for 1 hour 30 minutes.",
+     "min": 90
+    },
+    {
+     "text": "Meanwhile simmer the orange juice, honey, soy and star anise until syrupy.",
+     "min": 10
+    },
+    {
+     "text": "Brush the glaze over the duck and roast another 15 minutes. Steam the rice.",
+     "min": 15
+    },
+    {
+     "text": "Rest the duck for 10 minutes, carve and serve over rice with the rest of the glaze.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mustafar lava cakes",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Batter up to 1 day ahead in moulds, bake fresh",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs, plus 3 yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and butter. Whisk the eggs, yolks and sugar until thick, then fold in the chocolate and flour.",
+     "min": 15
+    },
+    {
+     "text": "Pour into greased moulds and bake at 200C for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Blend the raspberries and strain into a coulis. Turn out the cakes and pour the coulis over.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Twin sunset cocktail",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "grenadine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tall glasses with ice. Pour in equal parts of the orange and pineapple juice, leaving room at the top.",
+     "min": 3
+    },
+    {
+     "text": "Slowly pour a splash of grenadine down the side so it sinks and glows red and orange like a double sunset.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

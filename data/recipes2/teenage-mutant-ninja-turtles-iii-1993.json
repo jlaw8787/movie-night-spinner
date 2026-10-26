@@ -1,0 +1,316 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lord Norinaga's samurai rice balls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sushi rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "salmon fillet",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "nori sheets, cut into strips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "pickled ginger",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice and season lightly.",
+     "min": 20
+    },
+    {
+     "text": "Salt and grill the salmon, then flake.",
+     "min": 10
+    },
+    {
+     "text": "With wet hands, shape rice into triangles around a little salmon.",
+     "min": 15
+    },
+    {
+     "text": "Wrap the base in nori, sprinkle with sesame and serve with pickled ginger.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Time sceptre teriyaki skewers",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mirin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets, in pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the soy, mirin and sugar until syrupy.",
+     "min": 8
+    },
+    {
+     "text": "Thread the chicken onto skewers.",
+     "min": 7
+    },
+    {
+     "text": "Grill, brushing with the glaze, until sticky and charred.",
+     "min": 12
+    },
+    {
+     "text": "Scatter with spring onion and serve hot.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Back home mushroom and capsicum pizza",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour, for stretching",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stretch the dough thin on a floured tray.",
+     "min": 8
+    },
+    {
+     "text": "Spread with pizza sauce and scatter with mozzarella, mushrooms and capsicum.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 250C until bubbling and crisp.",
+     "min": 10
+    },
+    {
+     "text": "Cut into slices and celebrate being back home.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mochi ice cream",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 145,
+   "make_ahead": "Up to 1 week, keep frozen",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "glutinous rice flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream, scooped small and frozen",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "mango sorbet, scooped small and frozen",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the rice flour, sugar and water and microwave in bursts, stirring, until thick and stretchy.",
+     "min": 10
+    },
+    {
+     "text": "Roll out on cornflour and cut into rounds.",
+     "min": 10
+    },
+    {
+     "text": "Wrap each around a small frozen scoop of ice cream or sorbet.",
+     "min": 10
+    },
+    {
+     "text": "Freeze until firm.",
+     "min": 120
+    }
+   ]
+  },
+  {
+   "n": "Iced honey barley tea with lemon",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 180,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "barley tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemon slices",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the cold water in the fridge, then remove the bags.",
+     "min": 180
+    },
+    {
+     "text": "Warm the honey with the hot water until runny and stir into the tea with lemon juice.",
+     "min": 2
+    },
+    {
+     "text": "Pour into glasses of ice and add a lemon slice to each.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

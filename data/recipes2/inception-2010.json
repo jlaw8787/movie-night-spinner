@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Paris café croissants",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "gruyere",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pastry into long triangles.",
+     "min": 6
+    },
+    {
+     "text": "Lay a stick of chocolate, or ham and gruyere, at the wide end and roll up towards the point.",
+     "min": 6
+    },
+    {
+     "text": "Curve into crescents and brush with beaten egg.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Spinning top meatballs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves garlic, divided",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with crushed garlic, cumin, parsley and salt.",
+     "min": 8
+    },
+    {
+     "text": "Roll into small balls.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C.",
+     "min": 15
+    },
+    {
+     "text": "Mix the yoghurt with crushed garlic.",
+     "min": 3
+    },
+    {
+     "text": "Spear each meatball upright on a toothpick and serve with the yoghurt.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Saito's Tokyo bento",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mirin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cups sushi rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "pickled ginger",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the soy, mirin and sugar until syrupy.",
+     "min": 8
+    },
+    {
+     "text": "Cook the sushi rice.",
+     "min": 20
+    },
+    {
+     "text": "Grill the salmon, brushing with the glaze until sticky.",
+     "min": 10
+    },
+    {
+     "text": "Soft boil the eggs, peel and halve.",
+     "min": 7
+    },
+    {
+     "text": "Slice the cucumber thinly and dress in rice vinegar.",
+     "min": 3
+    },
+    {
+     "text": "Pack boxes with rice, salmon, pickled ginger, cucumber and egg.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dream within a dream layer cake",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 247,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "cold espresso",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the sugar until thick and fold in the flour.",
+     "min": 12
+    },
+    {
+     "text": "Bake 3 thin sponges at 175C and cool.",
+     "min": 15
+    },
+    {
+     "text": "Make a chocolate mousse with melted chocolate and whipped cream.",
+     "min": 10
+    },
+    {
+     "text": "Make a coffee cream with whipped cream and cold espresso.",
+     "min": 5
+    },
+    {
+     "text": "Layer the sponges with mousse and coffee cream.",
+     "min": 8
+    },
+    {
+     "text": "Chill for 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Slice to show every level.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Long-haul espresso martini",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "strong espresso, cooled slightly",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "coffee liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "coffee beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the espresso and let it cool slightly.",
+     "min": 8
+    },
+    {
+     "text": "Shake the espresso, vodka and coffee liqueur very hard with ice until frothy, in batches.",
+     "min": 4
+    },
+    {
+     "text": "Strain into chilled glasses.",
+     "min": 2
+    },
+    {
+     "text": "Float three coffee beans on the foam of each.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

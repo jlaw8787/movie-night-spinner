@@ -1,0 +1,306 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Fried bread with golden syrup",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 80,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 325,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, salt and warm water into a soft dough and knead briefly.",
+     "min": 15
+    },
+    {
+     "text": "Prove the dough until doubled, which is the resting time.",
+     "min": 60
+    },
+    {
+     "text": "Roll out 2cm thick and cut into 12 squares.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 175C, a few at a time, until puffed and golden on both sides.",
+     "min": 20
+    },
+    {
+     "text": "Serve warm with butter and golden syrup.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Rocky's special powers corn fritters",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Best fresh, reheat in a hot oven",
+   "ingredients": [
+    {
+     "q": 420,
+     "u": "g",
+     "item": "creamed corn",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "corn kernels",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the creamed corn, kernels, flour, eggs and sliced spring onion.",
+     "min": 8
+    },
+    {
+     "text": "Fry heaped tablespoons in oil until golden on both sides, in batches.",
+     "min": 15
+    },
+    {
+     "text": "Drain and serve hot with sweet chilli sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Shogun's homecoming hāngī-style pork",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 245,
+   "make_ahead": "Up to 2 days, reheat covered",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "kumara",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "butternut pumpkin",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "foil, to wrap",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the pork well. Cut the kumara, pumpkin and potatoes into chunks.",
+     "min": 15
+    },
+    {
+     "text": "Line a deep roasting tin with cabbage leaves and add the pork and vegetables. Cover with more cabbage and wrap tightly in foil.",
+     "min": 15
+    },
+    {
+     "text": "Roast at 160C until the pork falls apart.",
+     "min": 240
+    },
+    {
+     "text": "Rest and shred the pork, then serve with the vegetables.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Hokey pokey ice cream",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 70,
+   "make_ahead": "Up to 1 week, frozen",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream, slightly softened",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the sugar and golden syrup until bubbling and golden.",
+     "min": 4
+    },
+    {
+     "text": "Take off the heat, whisk in the bicarb and pour onto baking paper to set.",
+     "min": 6
+    },
+    {
+     "text": "Smash into small pieces and fold through the softened ice cream.",
+     "min": 10
+    },
+    {
+     "text": "Refreeze until firm.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Crazy Horses dairy lime milkshake",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Blend fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "full cream milk, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "lime cordial",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, ice cream and lime cordial until frothy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into 4 tall glasses and serve straight away with straws.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

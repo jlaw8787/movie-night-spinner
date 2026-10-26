@@ -1,0 +1,308 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tucson Sonoran hot dog bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "cocktail franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon, halved",
+     "aisle": "Meat"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "mini bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can pinto beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "jalapeno salsa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the tomato and onion and warm the pinto beans.",
+     "min": 8
+    },
+    {
+     "text": "Wrap the franks in bacon.",
+     "min": 6
+    },
+    {
+     "text": "Griddle until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Tuck into the rolls with beans, tomato, onion, mustard and salsa.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Party potato skins",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 58,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "medium potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the potatoes at 200C.",
+     "min": 50
+    },
+    {
+     "text": "Halve, scoop out most of the flesh and brush the skins with melted butter.",
+     "min": 8
+    },
+    {
+     "text": "Fry the bacon and fill the skins with bacon and cheddar.",
+     "min": 8
+    },
+    {
+     "text": "Bake again until the cheese melts.",
+     "min": 10
+    },
+    {
+     "text": "Top with sour cream and chives.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tucson red chilli enchiladas",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 16,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "shredded cooked chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "red enchilada sauce, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cheddar, grated, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the chicken in some of the sauce.",
+     "min": 7
+    },
+    {
+     "text": "Fill the warmed tortillas with the chicken and cheddar, roll and lay in a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Pour over the remaining sauce and top with cheddar.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 190C.",
+     "min": 20
+    },
+    {
+     "text": "Scatter with coriander.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Thousand-dollar date night sundae",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "peanuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate into some of the cream for hot fudge.",
+     "min": 5
+    },
+    {
+     "text": "Whip the remaining cream.",
+     "min": 4
+    },
+    {
+     "text": "Scoop ice cream into four tall glasses and pour over the fudge.",
+     "min": 3
+    },
+    {
+     "text": "Pipe whipped cream high and top with chopped peanuts and a cherry.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Red wine spill punch",
+   "course": "d",
+   "prep_min": 4,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the cranberry juice and lemonade into a big jug with ice and sliced orange.",
+     "min": 3
+    },
+    {
+     "text": "Stir gently and pour carefully into glasses.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

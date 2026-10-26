@@ -1,0 +1,442 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chinatown dumplings",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 9,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "frozen pork and chive dumplings",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the black vinegar, soy sauce and chilli oil for dipping.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oil in a non-stick pan over medium-high heat and pan-fry the dumplings until the bottoms crisp.",
+     "min": 3
+    },
+    {
+     "text": "Add the water, cover immediately and steam until cooked through (or the packet time), then remove the lid and let the water evaporate.",
+     "min": 9
+    },
+    {
+     "text": "Serve with the dipping sauce.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Plaza Hotel prawn cocktail",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 8,
+   "make_ahead": "Prawns and sauce up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "Worcestershire sauce, a dash",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the prawns in simmering salted water.",
+     "min": 2
+    },
+    {
+     "text": "Plunge into iced water, peel and chill.",
+     "min": 5
+    },
+    {
+     "text": "Mix the tomato sauce, horseradish, juice of half the lemon and a dash of Worcestershire.",
+     "min": 5
+    },
+    {
+     "text": "Fill 4 glasses with shredded iceberg, hang the prawns over the rims and spoon the sauce in the middle.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Frank's Plaza steak dinner",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "rib eye steak, in four pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thin frites, rinse and dry thoroughly.",
+     "min": 10
+    },
+    {
+     "text": "Fry the frites in oil at 140C, then drain and cool.",
+     "min": 5
+    },
+    {
+     "text": "Fry again at 185C until crisp. Season with salt.",
+     "min": 3
+    },
+    {
+     "text": "Pat the steaks dry and season. Sear in a heavy pan on both sides, then rest.",
+     "min": 6
+    },
+    {
+     "text": "Add the pepper to the pan, then carefully add the brandy away from the flame. Add the stock and reduce.",
+     "min": 6
+    },
+    {
+     "text": "Add the cream and simmer. Serve the steaks with the sauce and frites.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "New York cheesecake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 780,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a 16cm springform tin and wrap the outside in two layers of foil. Crush the biscuits, mix with melted butter and press into the base.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese with the sugar, then beat in the sour cream, eggs and lemon zest. Pour into the tin.",
+     "min": 10
+    },
+    {
+     "text": "Set the tin in a roasting pan with hot water halfway up its sides. Bake at 150C until the edges are set and the centre gently wobbles.",
+     "min": 70
+    },
+    {
+     "text": "Turn off the oven, leave the door ajar and cool inside.",
+     "min": 60
+    },
+    {
+     "text": "Refrigerate overnight, then cut into generous slices.",
+     "min": 630
+    }
+   ]
+  },
+  {
+   "n": "Plaza suite champagne cocktails",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "cognac",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle brut champagne, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put a sugar cube in each flute and shake bitters onto each. Add cognac, top slowly with chilled champagne and twist a strip of lemon peel over each glass.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Creamed spinach",
+   "course": "s",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, reheat gently",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "frozen spinach, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Thaw the spinach and squeeze it very dry. Crush the garlic.",
+     "min": 5
+    },
+    {
+     "text": "Melt the butter, stir in the flour, whisk in the milk and simmer until thick.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the spinach, garlic and nutmeg, season and cook until hot and creamy.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Coffee",
+   "course": "d",
+   "extra": true,
+   "prep_min": 3,
+   "cook_min": 8,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "cognac, optional",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a pot of coffee, regular or decaf.",
+     "min": 8
+    },
+    {
+     "text": "Pour into cups and serve with milk and a little cognac on the side.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

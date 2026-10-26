@@ -1,0 +1,338 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Rhode Island clam cakes",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin chopped clams",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tartare sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the clams, keeping the juice.",
+     "min": 3
+    },
+    {
+     "text": "Mix the flour, baking powder, egg and some of the clam juice, then fold in the clams.",
+     "min": 7
+    },
+    {
+     "text": "Spoon into oil at 180C and fry until puffed and golden.",
+     "min": 10
+    },
+    {
+     "text": "Serve with lemon and tartare sauce.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Hide and clap johnnycakes",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch fine salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, plus extra to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the boiling water over the cornmeal and salt and stir. Loosen with the milk.",
+     "min": 5
+    },
+    {
+     "text": "Cook spoonfuls in butter on a griddle until crisp at the edges.",
+     "min": 15
+    },
+    {
+     "text": "Serve with butter and maple syrup.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Warrens' New England fish bake",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "cod fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "crackers, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, boiled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay the cod in a dish. Mix the crackers with melted butter, lemon zest and parsley and press on top.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 200C for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Boil the potatoes until tender and cook the peas. Toss both with butter.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Harrisville farmhouse apple crisp",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "apples, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pouring cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the apples with cinnamon, sugar and lemon juice in a dish.",
+     "min": 8
+    },
+    {
+     "text": "Rub the butter into the flour, oats and brown sugar and scatter over.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 180C for 40 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Serve with pouring cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Rhode Island coffee cabinet",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Syrup up to 1 week ahead",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "strong brewed coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate, to grate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the coffee with the sugar for 10 minutes until syrupy, then cool completely.",
+     "min": 15
+    },
+    {
+     "text": "Blend some of the syrup with the cold milk and ice cream until thick and smooth.",
+     "min": 5
+    },
+    {
+     "text": "Pour into chilled glasses, top with whipped cream and grate chocolate over each.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

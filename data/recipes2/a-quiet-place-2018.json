@@ -1,0 +1,378 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lettuce leaf chicken and rice cups",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chicken breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "fish sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "butter lettuces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "roasted peanuts, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the chicken in simmering salted water, rest, then shred",
+     "min": 25
+    },
+    {
+     "text": "Cook the rice",
+     "min": 15
+    },
+    {
+     "text": "Mix the lime juice, fish sauce, sugar and chilli for the dressing",
+     "min": 5
+    },
+    {
+     "text": "Separate the lettuce into cups",
+     "min": 3
+    },
+    {
+     "text": "Fill each with rice, chicken, cucumber, mint and coriander, spoon over the dressing and finish with peanuts",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Silent soft pretzels",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft pretzels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "rock salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush the pretzels with butter and sprinkle with salt",
+     "min": 3
+    },
+    {
+     "text": "Warm at 200C",
+     "min": 5
+    },
+    {
+     "text": "Heat the evaporated milk and stir in the cheddar until smooth",
+     "min": 7
+    },
+    {
+     "text": "Serve warm, and dip quietly",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Lee's river trout",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "whole trout",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "new potatoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stuff the trout with lemon slices, dill and garlic",
+     "min": 8
+    },
+    {
+     "text": "Dot with some of the butter and wrap each in foil",
+     "min": 6
+    },
+    {
+     "text": "Bake at 200C and open at the table",
+     "min": 18
+    },
+    {
+     "text": "Boil the potatoes until tender",
+     "min": 18
+    },
+    {
+     "text": "Toss with the remaining butter",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Soft vanilla custard",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 140,
+   "make_ahead": "Make a day ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "pears, peeled and halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, for syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water, for syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the pears in sugar syrup until tender",
+     "min": 15
+    },
+    {
+     "text": "Whisk the yolks, sugar and cornflour",
+     "min": 5
+    },
+    {
+     "text": "Heat the milk and cream and pour over the yolk mix, then stir over low heat until thick",
+     "min": 10
+    },
+    {
+     "text": "Add the vanilla",
+     "min": 1
+    },
+    {
+     "text": "Pour into cups and chill",
+     "min": 120
+    },
+    {
+     "text": "Top with the sliced pears",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Waterfall cucumber and mint spritz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "sparkling water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shave the cucumber into ribbons with a peeler",
+     "min": 4
+    },
+    {
+     "text": "Lightly crush the mint with the lime juice and cordial in a jug",
+     "min": 3
+    },
+    {
+     "text": "Add the cucumber, then pour in the sparkling water slowly",
+     "min": 2
+    },
+    {
+     "text": "Fill glasses with crushed ice rather than cubes so they stay quiet, pour over and top with a mint sprig",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

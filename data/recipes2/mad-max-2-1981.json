@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wasteland tin dinner",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 340,
+     "u": "g",
+     "item": "corned beef",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the potatoes and boil, then drain",
+     "min": 10
+    },
+    {
+     "text": "Fry the onion in butter",
+     "min": 5
+    },
+    {
+     "text": "Add the potato and corned beef, break it up, press flat and fry without stirring until crusty, then turn and repeat",
+     "min": 15
+    },
+    {
+     "text": "Fry the eggs",
+     "min": 5
+    },
+    {
+     "text": "Serve the hash in clean empty tins with an egg on top",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Feral Kid's boomerang biscuits",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "Keeps 4 days in a tin",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the icing sugar and mix in the flour to a dough",
+     "min": 10
+    },
+    {
+     "text": "Roll 5mm thick and cut into boomerang shapes",
+     "min": 12
+    },
+    {
+     "text": "Bake at 160C",
+     "min": 15
+    },
+    {
+     "text": "Cool",
+     "min": 15
+    },
+    {
+     "text": "Melt the chocolate and dip the tips",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Compound barbecue",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 310,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "lamb shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rosemary, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tomatoes, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the lamb with garlic, rosemary, paprika and salt",
+     "min": 8
+    },
+    {
+     "text": "Roast covered at 150C until it pulls apart",
+     "min": 300
+    },
+    {
+     "text": "Chop the tomatoes and onion for the salad",
+     "min": 8
+    },
+    {
+     "text": "Warm the flatbreads",
+     "min": 4
+    },
+    {
+     "text": "Serve with yoghurt",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Wasteland golden syrup dumplings",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub half the butter into the flour and mix in the milk to a soft dough",
+     "min": 8
+    },
+    {
+     "text": "Roll into 12 balls",
+     "min": 5
+    },
+    {
+     "text": "Bring the water, golden syrup, sugar and remaining butter to a simmer in a wide pan",
+     "min": 7
+    },
+    {
+     "text": "Drop in the dumplings, cover and cook without lifting the lid",
+     "min": 20
+    },
+    {
+     "text": "Serve with cream",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Guzzoline dark and stormy",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger beer, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill tall glasses with ice",
+     "min": 1
+    },
+    {
+     "text": "Squeeze lime juice into each and add the ginger beer",
+     "min": 2
+    },
+    {
+     "text": "Pour the rum slowly over the back of a spoon so it floats dark on top",
+     "min": 1
+    },
+    {
+     "text": "Add a lime wedge and serve unstirred. Skip the rum for a plain ginger beer and lime",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

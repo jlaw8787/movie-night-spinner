@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hoth snow cones",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Syrup up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop blue food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice, shaved or crushed",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the raspberries with the sugar and water, then strain.",
+     "min": 10
+    },
+    {
+     "text": "Cool the syrup and add a drop of blue colouring.",
+     "min": 8
+    },
+    {
+     "text": "Pack ice into four cups and pour the syrup over.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Dagobah swamp dip",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Assemble up to 1 day ahead, bake to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 280,
+     "u": "g",
+     "item": "marinated artichokes, chopped (1 jar)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wilt the spinach, squeeze dry and chop.",
+     "min": 8
+    },
+    {
+     "text": "Mix with the artichokes, cream cheese, sour cream and parmesan.",
+     "min": 7
+    },
+    {
+     "text": "Spread in a dish and top with mozzarella.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 190C until bubbling and golden. Serve with corn chips.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Yoda's rootleaf stew",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 40,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "parsnips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "swede",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "celeriac",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bay leaf",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "miso paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut all the vegetables into chunks.",
+     "min": 15
+    },
+    {
+     "text": "Soften the onion in the oil.",
+     "min": 5
+    },
+    {
+     "text": "Add the vegetables, stock, thyme and bay leaf and simmer until tender.",
+     "min": 35
+    },
+    {
+     "text": "Stir in the miso, scatter with parsley and serve with bread.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Carbonite ice cream",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 780,
+   "make_ahead": "Make the day before, keep frozen",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream, softened",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a loaf tin with baking paper and press in the softened ice cream.",
+     "min": 8
+    },
+    {
+     "text": "Freeze hard overnight.",
+     "min": 720
+    },
+    {
+     "text": "Melt the chocolate with the coconut oil and cool slightly.",
+     "min": 6
+    },
+    {
+     "text": "Turn out the slab, pour the chocolate over and let it set.",
+     "min": 10
+    },
+    {
+     "text": "Slice thick.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Cloud City peach fizz",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "peach nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "peach",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add peach nectar and orange juice to each.",
+     "min": 2
+    },
+    {
+     "text": "Top with sparkling water and garnish with a peach slice on the rim.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

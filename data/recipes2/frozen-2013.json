@@ -1,0 +1,374 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Coronation party chocolates",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 180,
+   "make_ahead": "Keeps 5 days chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 135,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make the dark ganache by pouring hot cream over the dark chocolate. Make the white ganache the same way with the white chocolate.",
+     "min": 15
+    },
+    {
+     "text": "Chill both for 3 hours.",
+     "min": 180
+    },
+    {
+     "text": "Roll the dark ones in cocoa and the white ones in icing sugar like snow.",
+     "min": 15
+    },
+    {
+     "text": "Pile on a silver plate.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Kristoff's carrot sticks",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches baby carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the carrots with honey, thyme and melted butter.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 200C for 25 minutes until caramelised.",
+     "min": 25
+    },
+    {
+     "text": "Whip the feta with the yoghurt for the dip. Share one with the reindeer.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Arendelle meatballs",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs, soaked in milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "lingonberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with the breadcrumbs, onion and allspice and roll into balls.",
+     "min": 15
+    },
+    {
+     "text": "Brown the meatballs in butter.",
+     "min": 10
+    },
+    {
+     "text": "Simmer in the stock and cream.",
+     "min": 25
+    },
+    {
+     "text": "Boil the potatoes, mash with some butter and serve with lingonberry jam.",
+     "min": 50
+    }
+   ]
+  },
+  {
+   "n": "Eternal winter school bread",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 100,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cardamom",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thick custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, cardamom, sugar, milk, egg and butter into a dough and knead.",
+     "min": 10
+    },
+    {
+     "text": "Prove for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Shape into buns and press a hollow in each. Fill with thick custard.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 200C for 12 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Cool, then spread icing on top and dip in coconut.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Oaken's cardamom hot chocolate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cardamom pods, lightly crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mini marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the milk with the cardamom and cinnamon until steaming.",
+     "min": 5
+    },
+    {
+     "text": "Turn off the heat and steep for 10 minutes. Strain.",
+     "min": 10
+    },
+    {
+     "text": "Return to the heat and whisk in the chocolate, sugar and salt until smooth and frothy.",
+     "min": 5
+    },
+    {
+     "text": "Pour into mugs and top with whipped cream, marshmallows and grated chocolate.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Babylon flatbreads",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "za'atar",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "hummus",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pomegranate, seeds only",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush the flatbreads with olive oil and sprinkle generously with za'atar.",
+     "min": 3
+    },
+    {
+     "text": "Grill over high heat until blistered and charred in spots.",
+     "min": 5
+    },
+    {
+     "text": "Spoon hummus into a bowl, make a well, scatter with pomegranate seeds and drizzle with oil.",
+     "min": 2
+    },
+    {
+     "text": "Tear the bread and dip.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "London museum tea sandwiches",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Up to 4 hours, covered with damp paper towel",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf of white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet mustard cress",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Hard boil the eggs, cool, peel and mash with mayonnaise.",
+     "min": 10
+    },
+    {
+     "text": "Spread bread with cream cheese and layer with cucumber.",
+     "min": 10
+    },
+    {
+     "text": "Spread more bread with egg mayonnaise and cress.",
+     "min": 5
+    },
+    {
+     "text": "Close the sandwiches, cut off the crusts and slice into neat fingers.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Tenochtitlan feast",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 75,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "dried chillies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the chillies and soak in hot water.",
+     "min": 10
+    },
+    {
+     "text": "Blend with the almonds, garlic, cinnamon and stock.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the sauce and melt in the chocolate.",
+     "min": 15
+    },
+    {
+     "text": "Add the chicken and simmer until tender.",
+     "min": 40
+    },
+    {
+     "text": "Cook the rice, warm the tortillas and serve with the chicken.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Babylon date and sesame halva",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 735,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "medjool dates, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pistachios",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a small loaf tin with baking paper and put the tahini in a bowl with the salt and vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Heat the honey to 120C on a thermometer.",
+     "min": 8
+    },
+    {
+     "text": "Quickly pour onto the tahini and stir until it thickens and pulls away.",
+     "min": 2
+    },
+    {
+     "text": "Fold in the dates and pistachios and press into the tin.",
+     "min": 5
+    },
+    {
+     "text": "Chill overnight before cutting.",
+     "min": 720
+    }
+   ]
+  },
+  {
+   "n": "Babylon date and honey sharbat",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pitted dates",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "orange blossom water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground cardamom",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the dates in hot water.",
+     "min": 15
+    },
+    {
+     "text": "Blend with the honey, lemon juice, orange blossom water and cardamom until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Strain through a fine sieve and chill.",
+     "min": 5
+    },
+    {
+     "text": "Divide between glasses of ice, top with soda water and stir, and garnish with mint and a lemon slice.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

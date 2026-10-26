@@ -1,0 +1,340 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Santa Cruz boardwalk corn dogs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cornmeal, flour, sugar, baking powder, egg and buttermilk into a thick batter.",
+     "min": 8
+    },
+    {
+     "text": "Pat the franks dry and push onto sticks.",
+     "min": 7
+    },
+    {
+     "text": "Dip in batter and fry at 180C for 4 minutes until golden, in batches.",
+     "min": 25
+    },
+    {
+     "text": "Serve with mustard.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Mirror image cheese stacks",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "fig jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Build stacks of cracker, cheddar, apple slice and a dot of fig jam.",
+     "min": 12
+    },
+    {
+     "text": "Put two identical stacks on each side of every plate, mirrored exactly.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Beach house barbecue",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft rolls",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the chicken and corn over coals.",
+     "min": 25
+    },
+    {
+     "text": "Brush the chicken with barbecue sauce in the last minutes.",
+     "min": 5
+    },
+    {
+     "text": "Mix the cabbage with the mayo for slaw.",
+     "min": 8
+    },
+    {
+     "text": "Serve with soft rolls.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Rabbit-free carrot cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "Keeps 4 days",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "carrots, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the carrot, walnuts, oil, sugar, eggs, cinnamon and nutmeg. Fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a lined tin at 170C for 50 minutes. Cool.",
+     "min": 60
+    },
+    {
+     "text": "Beat the cream cheese with the icing sugar and lemon zest and frost the cake.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Holding hands punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "grenadine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the juices into a big bowl with ice.",
+     "min": 3
+    },
+    {
+     "text": "Add the grenadine and top with lemonade.",
+     "min": 2
+    },
+    {
+     "text": "Float orange slices on top and hold hands while you drink it.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mrs Mills' Jersey wonders",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 90,
+   "make_ahead": "Dough rests 1 hour, fry fresh",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, add some of the sugar and the eggs and knead into a dough.",
+     "min": 10
+    },
+    {
+     "text": "Rest the dough for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Roll out, cut into strips, slit and twist through.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 175C until golden, in batches.",
+     "min": 10
+    },
+    {
+     "text": "Dust with sugar and nutmeg.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Jersey crab on toast",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fold the crab with the mayo, lemon juice, chives and cayenne.",
+     "min": 5
+    },
+    {
+     "text": "Toast the bread, butter it and cut into fingers.",
+     "min": 5
+    },
+    {
+     "text": "Pile the crab on top.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mr Tuttle's garden potatoes and fish",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "new potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "white fish fillets, such as flathead",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes with the mint until tender and toss in salted butter.",
+     "min": 20
+    },
+    {
+     "text": "Pan-fry the fish until golden.",
+     "min": 8
+    },
+    {
+     "text": "Brown some butter, add the capers and lemon juice, and spoon over the fish.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Curtains-drawn Jersey cream rice pudding",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 125,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "short grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean, split",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the rice, milk, cream, sugar and vanilla bean in a baking dish.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 150C for 2 hours, stirring twice.",
+     "min": 120
+    },
+    {
+     "text": "Grate nutmeg on top. Serve warm, curtains drawn.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Island apple cider toddy from the teapot",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "dry apple cider",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zest peeled and juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the cider into a saucepan with the honey, lemon zest, cinnamon and cloves.",
+     "min": 3
+    },
+    {
+     "text": "Warm gently for 10 minutes without boiling.",
+     "min": 10
+    },
+    {
+     "text": "Take off the heat and stir in the brandy and half the lemon juice.",
+     "min": 3
+    },
+    {
+     "text": "Warm a teapot with hot water, tip it out, strain the cider into the pot and pour into teacups at the table.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

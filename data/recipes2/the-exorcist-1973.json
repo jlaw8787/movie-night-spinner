@@ -1,0 +1,366 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Georgetown crab cakes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Shape up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut into wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fold the crab with the mayo, egg, mustard and breadcrumbs.",
+     "min": 8
+    },
+    {
+     "text": "Shape into cakes and chill for 30 minutes.",
+     "min": 32
+    },
+    {
+     "text": "Pan-fry in butter until golden and serve with lemon.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Iraq dig flatbread and dips",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Dips up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "eggplant",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin chickpeas, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled turnips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sumac",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Char the eggplant whole over a flame until collapsed, then scoop out the flesh.",
+     "min": 15
+    },
+    {
+     "text": "Mash the eggplant with half the tahini, garlic and lemon juice.",
+     "min": 5
+    },
+    {
+     "text": "Blitz the chickpeas with the remaining tahini for hummus.",
+     "min": 5
+    },
+    {
+     "text": "Warm the flatbreads and serve with pickled turnips, dusted with sumac.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Pea and ham soup",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 125,
+   "make_ahead": "Keeps 3 days chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "split peas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "smoked ham hock",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty Italian loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the peas, hock, onion, carrots, celery and water in a large pot.",
+     "min": 10
+    },
+    {
+     "text": "Simmer for 2 hours, stirring now and then.",
+     "min": 120
+    },
+    {
+     "text": "Pick the ham off the bone and stir it back in. Season.",
+     "min": 5
+    },
+    {
+     "text": "Serve with crusty bread. Eat it, don't throw it.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Devil's food cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "Keeps 3 days",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "hot strong coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cocoa into the hot coffee and cool a little.",
+     "min": 5
+    },
+    {
+     "text": "Beat the butter, sugar and eggs, then add the cocoa mix, buttermilk, flour and bicarb.",
+     "min": 10
+    },
+    {
+     "text": "Divide between two tins and bake at 175C for 30 minutes. Cool.",
+     "min": 30
+    },
+    {
+     "text": "Melt the chocolate with the cream and spread over the cake.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Holy water gin and elderflower fizz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "chilled soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig mint, per glass",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thin lemon wheels",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the gin, cordial and lemon juice hard with ice for 15 seconds.",
+     "min": 4
+    },
+    {
+     "text": "Strain into tall glasses over fresh ice and top with soda water.",
+     "min": 3
+    },
+    {
+     "text": "Add a mint sprig and a lemon wheel. For non-drinkers, swap the gin for chilled cucumber juice.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

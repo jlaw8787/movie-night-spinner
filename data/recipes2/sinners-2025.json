@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Clarksdale '32 juke joint hush puppies",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cornmeal, flour, baking powder, sugar, onion, egg and buttermilk and rest",
+     "min": 10
+    },
+    {
+     "text": "Heat the oil to 175C",
+     "min": 7
+    },
+    {
+     "text": "Spoon into the oil and fry until golden",
+     "min": 10
+    },
+    {
+     "text": "Melt the butter with the hot sauce to dip",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Garlic toast",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic head",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread, thick",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the garlic head in foil at 180C",
+     "min": 40
+    },
+    {
+     "text": "Squeeze the garlic into the butter with parsley and salt and mash",
+     "min": 5
+    },
+    {
+     "text": "Spread on the bread",
+     "min": 5
+    },
+    {
+     "text": "Toast at 200C until crisp at the edges",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Delta Slim's smothered pork chops",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "pork chops, thick",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour, for the roux",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season, flour and brown the chops",
+     "min": 12
+    },
+    {
+     "text": "Make a dark roux with the butter and flour",
+     "min": 6
+    },
+    {
+     "text": "Add the onions, then the stock and thyme",
+     "min": 7
+    },
+    {
+     "text": "Simmer the chops in the gravy",
+     "min": 40
+    },
+    {
+     "text": "Cook the rice and serve the chops over it",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Sweet potato pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 125,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "sweet potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the sweet potatoes until soft",
+     "min": 45
+    },
+    {
+     "text": "Peel and mash with butter, sugar, eggs, evaporated milk, nutmeg and vanilla",
+     "min": 10
+    },
+    {
+     "text": "Line a pie dish and blind-bake the case",
+     "min": 20
+    },
+    {
+     "text": "Pour in the filling and bake at 170C",
+     "min": 50
+    }
+   ]
+  },
+  {
+   "n": "Smoke and Stack's Irish stout",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "440 ml cans stout",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Tilt each glass and pour the stout three-quarters full",
+     "min": 2
+    },
+    {
+     "text": "Let it settle for a minute, then top up slowly for a tight head. Allow 2 cans per person",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,352 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Beer-battered Tassie chips",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chicken salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thick chips and parboil, then drain and steam dry",
+     "min": 20
+    },
+    {
+     "text": "Whisk the flour with the cold lager and salt",
+     "min": 5
+    },
+    {
+     "text": "Dip the chips in the batter",
+     "min": 5
+    },
+    {
+     "text": "Fry in batches at 180C until golden",
+     "min": 20
+    },
+    {
+     "text": "Drain and toss with chicken salt",
+     "min": 2
+    },
+    {
+     "text": "Mix the mayonnaise with garlic and lemon juice for dipping",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Rock and roll scallop pies",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 55,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "scallops",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion in butter",
+     "min": 8
+    },
+    {
+     "text": "Add the curry powder and cream and simmer until thick",
+     "min": 10
+    },
+    {
+     "text": "Stir in the scallops off the heat and cool",
+     "min": 15
+    },
+    {
+     "text": "Line patty tins with shortcrust and fill",
+     "min": 12
+    },
+    {
+     "text": "Top with puff",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Apple cider pork",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "pork chops",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sage leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "apple cider",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chops in oil and set aside",
+     "min": 10
+    },
+    {
+     "text": "Soften the onion and apples with sage",
+     "min": 8
+    },
+    {
+     "text": "Pour in the cider, return the chops and simmer until the sauce reduces",
+     "min": 20
+    },
+    {
+     "text": "Boil the potatoes and mash with butter",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Apple pie",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 110,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "Granny Smith apples, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the apples with the sugar and cinnamon",
+     "min": 15
+    },
+    {
+     "text": "Line a pie dish with two pastry sheets and fill",
+     "min": 8
+    },
+    {
+     "text": "Cover with two more sheets and crimp",
+     "min": 8
+    },
+    {
+     "text": "Bake at 190C",
+     "min": 50
+    },
+    {
+     "text": "Cool slightly, then serve warm with cream",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "E=mc2 lager and cider snakebite",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple cider, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "lager, cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "blackcurrant cordial",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four pint glasses in the freezer",
+     "min": 15
+    },
+    {
+     "text": "Add cordial to each glass",
+     "min": 1
+    },
+    {
+     "text": "Pour in the cider down the side, then top slowly with lager so it layers and foams",
+     "min": 3
+    },
+    {
+     "text": "Serve straight away",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

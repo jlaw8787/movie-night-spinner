@@ -1,0 +1,342 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Jack-Jack's cookie num nums",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 15,
+   "make_ahead": "Up to 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 225,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and brown sugar until creamy, then beat in the egg and vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Mix in the flour and chocolate chips.",
+     "min": 4
+    },
+    {
+     "text": "Roll into balls onto lined trays.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 180C until soft in the middle.",
+     "min": 10
+    },
+    {
+     "text": "Cool on the tray.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Screenslaver spiral pinwheels",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "basil pesto",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the pastry with pesto and sprinkle with parmesan.",
+     "min": 6
+    },
+    {
+     "text": "Roll up tightly and slice into rounds.",
+     "min": 8
+    },
+    {
+     "text": "Lay on a tray and brush with beaten egg.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Bob's homework night dinner",
+   "course": "m",
+   "prep_min": 11,
+   "cook_min": 86,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cans crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the carrots and celery.",
+     "min": 8
+    },
+    {
+     "text": "Brown the mince.",
+     "min": 8
+    },
+    {
+     "text": "Add the carrot and celery and soften.",
+     "min": 6
+    },
+    {
+     "text": "Add the tomatoes and simmer.",
+     "min": 60
+    },
+    {
+     "text": "Boil the spaghetti until al dente.",
+     "min": 12
+    },
+    {
+     "text": "Toss with the sauce and plenty of parmesan.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Raccoon fight brownies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Up to 3 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the butter.",
+     "min": 6
+    },
+    {
+     "text": "Whisk in the sugar and eggs.",
+     "min": 6
+    },
+    {
+     "text": "Fold in the flour.",
+     "min": 3
+    },
+    {
+     "text": "Pour into a lined tin.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 170C.",
+     "min": 25
+    },
+    {
+     "text": "Cool in the tin.",
+     "min": 15
+    },
+    {
+     "text": "Cut into squares and serve each with a glass of cold milk.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Elastigirl's raspberry lemonade",
+   "course": "d",
+   "prep_min": 11,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer some of the raspberries with the sugar and water.",
+     "min": 5
+    },
+    {
+     "text": "Strain to make a syrup.",
+     "min": 3
+    },
+    {
+     "text": "Cool the syrup.",
+     "min": 15
+    },
+    {
+     "text": "Juice the lemons.",
+     "min": 5
+    },
+    {
+     "text": "Mix the syrup, lemon juice and cold water in a jug, add ice and the rest of the raspberries, and stir well.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

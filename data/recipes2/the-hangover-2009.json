@@ -1,0 +1,322 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wolfpack buffet prawns",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Sauce up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the prawns in salted water for 2 minutes, plunge into iced water and peel, leaving the tails on.",
+     "min": 15
+    },
+    {
+     "text": "Mix the tomato sauce with horseradish and lemon juice.",
+     "min": 5
+    },
+    {
+     "text": "Chill the prawns.",
+     "min": 20
+    },
+    {
+     "text": "Pile the prawns on a bag of crushed ice with the sauce and lemon wedges.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Morning after hash browns",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the potatoes, squeeze out as much liquid as you can and season well.",
+     "min": 12
+    },
+    {
+     "text": "Press into 8 thin cakes.",
+     "min": 8
+    },
+    {
+     "text": "Fry in butter and oil until deep golden each side.",
+     "min": 10
+    },
+    {
+     "text": "Fry the eggs and top each cake with one and chives.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Baby Carlos breakfast burrito",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "chorizo",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice and fry the potatoes until crisp, then add the diced chorizo.",
+     "min": 15
+    },
+    {
+     "text": "Make a fresh salsa of diced tomatoes and onion.",
+     "min": 5
+    },
+    {
+     "text": "Softly scramble the eggs.",
+     "min": 5
+    },
+    {
+     "text": "Fill the tortillas with the eggs, potato, chorizo, cheddar and salsa.",
+     "min": 10
+    },
+    {
+     "text": "Roll and toast in a dry pan.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Wedding cake for Doug",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 105,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "lemon curd",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat part of the butter with the sugar, add the eggs, then fold in the flour and lemon zest.",
+     "min": 15
+    },
+    {
+     "text": "Bake in two tins at 170C.",
+     "min": 25
+    },
+    {
+     "text": "Cool.",
+     "min": 25
+    },
+    {
+     "text": "Fill with lemon curd and cover with the remaining butter beaten with the icing sugar.",
+     "min": 25
+    },
+    {
+     "text": "Chill before slicing.",
+     "min": 55
+    }
+   ]
+  },
+  {
+   "n": "Rooftop herbal liqueur ginger fizz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "herbal liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the herbal liqueur in the freezer.",
+     "min": 60
+    },
+    {
+     "text": "Fill four tall glasses with ice.",
+     "min": 3
+    },
+    {
+     "text": "Add liqueur and lime juice to each, then top with cold ginger beer.",
+     "min": 5
+    },
+    {
+     "text": "Stir once, add an orange slice and toast on the roof.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

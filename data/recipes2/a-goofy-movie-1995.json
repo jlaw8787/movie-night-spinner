@@ -1,0 +1,802 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Perfect Cast fish fingers",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Crumb up to 4 hours ahead, fry just before serving",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "white fish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "dill pickles, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut into wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the fish into fingers and crumb them in flour, egg, then panko.",
+     "min": 10
+    },
+    {
+     "text": "Stir the mayonnaise with the pickles and capers for the tartare.",
+     "min": 5
+    },
+    {
+     "text": "Fry in batches at 180C for about 3 minutes until golden, then drain.",
+     "min": 8
+    },
+    {
+     "text": "Serve with the tartare and lemon wedges.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Powerline concert nachos",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Mince and salsa up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mild taco spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Brown the mince with the onion.",
+     "min": 8
+    },
+    {
+     "text": "Add the taco spice, black beans and water and simmer.",
+     "min": 5
+    },
+    {
+     "text": "Spread the corn chips on a large tray, spoon over the mince and cover with cheddar, then bake until melted.",
+     "min": 8
+    },
+    {
+     "text": "Mash the avocados with lime and salt, dice the tomatoes with coriander, and top the nachos with guacamole, salsa and sour cream.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Pete's RV barbecue sausages",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Onions up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "thick beef sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the sausages over hot coals or a barbecue, turning, until charred and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Fry the onions in the oil until soft and sweet.",
+     "min": 10
+    },
+    {
+     "text": "Grill the corn and brush with butter.",
+     "min": 10
+    },
+    {
+     "text": "Serve the sausages in rolls with the onions, mustard and tomato sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Bigfoot campsite s'mores",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "large marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 32,
+     "u": "",
+     "item": "plain biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the marshmallows on skewers over a gas flame or under a hot grill until golden.",
+     "min": 4
+    },
+    {
+     "text": "Squash each between two biscuits with a square of milk chocolate and leave 30 seconds so the chocolate starts to melt.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Concert night cherry slushie",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Serve straight away",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cherry cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the cordial, ice, water and lime juice until smooth and slushy.",
+     "min": 5
+    },
+    {
+     "text": "Pour into tall cups and serve with straws before it melts.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Powerline Nachos",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Mince and salsa up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mild taco spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Brown the mince with the onion.",
+     "min": 8
+    },
+    {
+     "text": "Add the taco spice, black beans and water and simmer.",
+     "min": 5
+    },
+    {
+     "text": "Spread the corn chips on a large tray, spoon over the mince and cover with cheddar, then bake until melted.",
+     "min": 8
+    },
+    {
+     "text": "Mash the avocados with lime and salt, dice the tomatoes with coriander, and top the nachos with guacamole, salsa and sour cream.",
+     "min": 4
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "The RV Park Plate",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Onions up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "thick beef sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the sausages over hot coals or a barbecue, turning, until charred and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Fry the onions in the oil until soft and sweet.",
+     "min": 10
+    },
+    {
+     "text": "Grill the corn and brush with butter.",
+     "min": 10
+    },
+    {
+     "text": "Serve the sausages in rolls with the onions, mustard and tomato sauce.",
+     "min": 3
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Bigfoot S’mores",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "large marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 32,
+     "u": "",
+     "item": "plain biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the marshmallows on skewers over a gas flame or under a hot grill until golden.",
+     "min": 4
+    },
+    {
+     "text": "Squash each between two biscuits with a square of milk chocolate and leave 30 seconds so the chocolate starts to melt.",
+     "min": 1
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Cherry Slush",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Serve straight away",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cherry cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the cordial, ice, water and lime juice until smooth and slushy.",
+     "min": 5
+    },
+    {
+     "text": "Pour into tall cups and serve with straws before it melts.",
+     "min": 5
+    }
+   ],
+   "extra": true
+  },
+  {
+   "n": "Hand-Dipped Corn Dog",
+   "course": "s",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Fry just before serving",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "beef frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "wooden skewers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "yellow mustard, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Skewer the frankfurts and pat dry.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the cornmeal, flour, sugar, baking powder, egg and milk into a thick batter in a tall glass.",
+     "min": 8
+    },
+    {
+     "text": "Heat the oil to 180C, dip the franks in the batter and fry, turning, until golden. Drain and serve with mustard.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Possum Pie",
+   "course": "w",
+   "extra": true,
+   "prep_min": 30,
+   "cook_min": 270,
+   "make_ahead": "Make up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain biscuits, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "pecans, finely chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet chocolate pudding mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the biscuits, pecans and butter and press into a pie dish. Chill 30 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese with the icing sugar and spread over the base.",
+     "min": 5
+    },
+    {
+     "text": "Make the chocolate pudding with the milk by the packet and cool briefly, then spread over the cream cheese.",
+     "min": 10
+    },
+    {
+     "text": "Chill for 4 hours until set (included in cook time), then top with whipped cream.",
+     "min": 240
+    }
+   ]
+  },
+  {
+   "n": "Fresh Lemonade",
+   "course": "d",
+   "extra": true,
+   "prep_min": 8,
+   "cook_min": 2,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the lemons and stir the juice with the sugar and a little warm water until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Add the cold water, shake over ice, and serve.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

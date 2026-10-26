@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Amsterdam bitterballen",
+   "course": "s",
+   "prep_min": 50,
+   "cook_min": 970,
+   "make_ahead": "Fill the day before, chill overnight",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Braise the beef with the onion and thyme until it falls apart, then shred.",
+     "min": 180
+    },
+    {
+     "text": "Cook the butter with the flour, add the stock and the beef.",
+     "min": 15
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 720
+    },
+    {
+     "text": "Roll into balls and crumb in egg and panko.",
+     "min": 30
+    },
+    {
+     "text": "Fry at 180C.",
+     "min": 15
+    },
+    {
+     "text": "Serve with grainy mustard.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Lake Como antipasto",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "bresaola",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "burrata",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "figs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet breadsticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay the bresaola on a board with the burrata, halved figs, breadsticks and olives.",
+     "min": 10
+    },
+    {
+     "text": "Drizzle with good olive oil and a squeeze of lemon.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Risotto alla milanese",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "carnaroli rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the diced onion in some of the butter.",
+     "min": 6
+    },
+    {
+     "text": "Add the rice and toast, then add the wine.",
+     "min": 4
+    },
+    {
+     "text": "Add the hot stock ladle by ladle, with the saffron steeped in, stirring.",
+     "min": 18
+    },
+    {
+     "text": "Finish with the rest of the butter and the parmesan.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Lake Como espresso tiramisu",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 480,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mascarpone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "sponge finger biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "strong brewed espresso coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee and cool.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the yolks with the sugar until pale, fold in the mascarpone and whipped cream.",
+     "min": 12
+    },
+    {
+     "text": "Dip the sponge fingers and layer with the cream in a dish.",
+     "min": 10
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 480
+    },
+    {
+     "text": "Dust with cocoa.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Orange spritz",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "orange aperitivo",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "prosecco",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four big wine glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add the aperitivo, prosecco and a splash of soda water.",
+     "min": 3
+    },
+    {
+     "text": "Add an orange slice.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

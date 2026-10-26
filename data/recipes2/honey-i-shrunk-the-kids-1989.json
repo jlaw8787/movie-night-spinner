@@ -1,0 +1,270 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Giant cereal loop",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "puffed rice cereal",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter with the marshmallows over low heat.",
+     "min": 6
+    },
+    {
+     "text": "Stir through the puffed rice until coated.",
+     "min": 3
+    },
+    {
+     "text": "Press firmly into a greased ring mould.",
+     "min": 6
+    },
+    {
+     "text": "Set, then turn out and cut into wedges at the table.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Giant cream cookie",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "large dark chocolate cookies (about 20cm across)",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter, icing sugar and vanilla until fluffy.",
+     "min": 8
+    },
+    {
+     "text": "Spread thickly over one cookie and sandwich with the other, pressing gently.",
+     "min": 5
+    },
+    {
+     "text": "Chill, then cut into wedges.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Giant pancakes",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, baking powder, sugar, buttermilk and eggs into a batter.",
+     "min": 5
+    },
+    {
+     "text": "Pour into a large buttered pan over low heat, cover and cook.",
+     "min": 8
+    },
+    {
+     "text": "Flip with a plate and cook the other side. Repeat for the remaining batter.",
+     "min": 15
+    },
+    {
+     "text": "Cut into wedges with butter and maple syrup.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Backyard s'mores",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "large marshmallows",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 32,
+     "u": "",
+     "item": "plain biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the marshmallows on skewers over a gas flame or under the grill until golden.",
+     "min": 8
+    },
+    {
+     "text": "Squash each between two biscuits with a square of chocolate.",
+     "min": 4
+    },
+    {
+     "text": "Leave briefly so the chocolate melts.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Sprinkler watermelon pink lemonade",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "seedless watermelon chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the watermelon until smooth and strain into a jug.",
+     "min": 7
+    },
+    {
+     "text": "Stir in the juice of the lemons and the sugar syrup.",
+     "min": 3
+    },
+    {
+     "text": "Fill four tall glasses with ice, pour the mix two thirds of the way and top with soda water.",
+     "min": 3
+    },
+    {
+     "text": "Garnish with lemon wheels and mint.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

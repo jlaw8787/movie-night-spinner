@@ -1,0 +1,328 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Crabby snacks",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Mix up to 1 day, grill fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab with the cream cheese, mayonnaise, lemon zest and sliced spring onion.",
+     "min": 8
+    },
+    {
+     "text": "Slice the baguette and spread the mix on each slice.",
+     "min": 7
+    },
+    {
+     "text": "Grill until golden at the edges. Serve hot.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Homemades",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, reheat in the oven",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "toothpicks, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with the parmesan, breadcrumbs and egg. Roll into small balls.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 200C until cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Warm the tomato sauce with brown sugar until sticky and toss the meatballs through.",
+     "min": 5
+    },
+    {
+     "text": "Serve on toothpicks.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Philly cheesesteaks",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "rib eye steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "provolone, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long bread rolls",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the steak until firm, which is the resting time, then shave thin.",
+     "min": 30
+    },
+    {
+     "text": "Slice the onions and capsicum.",
+     "min": 5
+    },
+    {
+     "text": "Fry the onion and capsicum on a hot plate until soft.",
+     "min": 7
+    },
+    {
+     "text": "Add the beef and sear fast.",
+     "min": 3
+    },
+    {
+     "text": "Lay the provolone on top to melt and pile into the rolls.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Diner date raisin bran muffins",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "wheat bran",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "raisins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the bran in the buttermilk.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the sugar, egg, oil and raisins, then fold in the flour.",
+     "min": 7
+    },
+    {
+     "text": "Spoon into a lined muffin tin and bake at 190C.",
+     "min": 20
+    },
+    {
+     "text": "Cool slightly and serve warm with butter.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Eagles green apple shandy",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "cans lager (375 ml each), cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cloudy apple juice, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put 4 pint glasses in the freezer for the chilling time.",
+     "min": 30
+    },
+    {
+     "text": "Juice the limes and slice the apple very thin.",
+     "min": 5
+    },
+    {
+     "text": "Pour lager into each glass, top with apple juice and a squeeze of lime, then float apple slices. For non-drinkers, use ginger beer in place of the lager.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

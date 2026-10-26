@@ -1,0 +1,296 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Grocer's radishes with butter",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep cool",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch radishes, leaves on",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "baby carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wash the radishes and pile them on a board with the baby carrots.",
+     "min": 7
+    },
+    {
+     "text": "Set out the soft butter and a pile of sea salt flakes.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Montmartre café tartines",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Assemble just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "fig jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette and toast until golden.",
+     "min": 8
+    },
+    {
+     "text": "Top half with brie and fig jam.",
+     "min": 6
+    },
+    {
+     "text": "Spread the rest with Dijon and top with folded ham.",
+     "min": 6
+    },
+    {
+     "text": "Lay out on a wooden board.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Paris bistro chicken",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk, for the mash",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and chop the potatoes.",
+     "min": 5
+    },
+    {
+     "text": "Brown the chicken in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Add the mushrooms and cook until golden.",
+     "min": 7
+    },
+    {
+     "text": "Pour in the wine and simmer.",
+     "min": 30
+    },
+    {
+     "text": "Boil the potatoes, mash with butter and milk.",
+     "min": 20
+    },
+    {
+     "text": "Stir the cream into the chicken and serve over the mash.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Amélie's crème brûlée",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 218,
+   "make_ahead": "Up to 2 days, torch just before serving",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar, for the top",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the cream with the split vanilla bean.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the yolks with sugar, pour in the cream and strain into ramekins.",
+     "min": 10
+    },
+    {
+     "text": "Bake in a water bath at 150C until just set.",
+     "min": 35
+    },
+    {
+     "text": "Chill the custards until firm.",
+     "min": 180
+    },
+    {
+     "text": "Sprinkle with sugar and torch. Crack the top with a spoon.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Montmartre kir royale",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 120,
+   "make_ahead": "Make just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle dry sparkling wine (750 ml), chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "creme de cassis",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "raspberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the flutes and the sparkling wine for at least 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Pour the cassis into each flute.",
+     "min": 2
+    },
+    {
+     "text": "Tilt the glass and top slowly with the sparkling wine. Drop a raspberry into each and serve.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

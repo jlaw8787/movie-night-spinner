@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Torchy's bar peanuts",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "peanuts in the shell",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the peanuts on a tray and roast at 180C.",
+     "min": 20
+    },
+    {
+     "text": "Toss straight away with salt and cayenne. Tip into a bucket and put out a bowl for the shells.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "San Francisco sourdough",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic head",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "soft salted butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sourdough round",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wrap the garlic head in foil and roast at 180C.",
+     "min": 40
+    },
+    {
+     "text": "Squeeze the soft garlic into the butter and whip.",
+     "min": 5
+    },
+    {
+     "text": "Warm the sourdough at 200C.",
+     "min": 10
+    },
+    {
+     "text": "Tear into chunks and serve with the butter.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "San Francisco cioppino",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin chopped tomatoes (400g)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "fish stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cooked crab",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "clams and mussels, scrubbed",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "raw prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "firm white fish fillet",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sourdough loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the fennel and onion and crush the garlic.",
+     "min": 10
+    },
+    {
+     "text": "Soften in oil.",
+     "min": 8
+    },
+    {
+     "text": "Add the tomatoes, wine and stock and simmer.",
+     "min": 20
+    },
+    {
+     "text": "Add the crab, then the clams and mussels, then the prawns and fish, cooking until the shells open.",
+     "min": 12
+    },
+    {
+     "text": "Serve with sliced sourdough.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Jailhouse chocolate cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "hot coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cocoa, for icing",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "hot water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and line a tin. Whisk the flour, sugar, cocoa and bicarb.",
+     "min": 5
+    },
+    {
+     "text": "Add the oil, buttermilk, eggs and hot coffee and whisk to a smooth batter.",
+     "min": 7
+    },
+    {
+     "text": "Bake.",
+     "min": 35
+    },
+    {
+     "text": "Cool the cake completely.",
+     "min": 40
+    },
+    {
+     "text": "Beat the icing sugar, cocoa, butter and hot water until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Ice the cake.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Torchy's bourbon boilermaker",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "long neck lagers",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the lagers until icy.",
+     "min": 30
+    },
+    {
+     "text": "Pour bourbon into shot glasses and add a dash of bitters to each.",
+     "min": 3
+    },
+    {
+     "text": "Twist a small strip of orange peel over each and serve with a cold beer.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

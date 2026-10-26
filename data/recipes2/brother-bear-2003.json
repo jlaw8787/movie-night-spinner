@@ -1,0 +1,366 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Salmon run bites",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet rye crispbread",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pick the dill into sprigs.",
+     "min": 3
+    },
+    {
+     "text": "Spread the crispbreads with cream cheese.",
+     "min": 4
+    },
+    {
+     "text": "Top with folds of salmon and a sprig of dill.",
+     "min": 4
+    },
+    {
+     "text": "Squeeze over a little lemon and lay on a wooden board.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Rutt and Tuke's maple nuts",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 32,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the nuts with maple syrup and salt.",
+     "min": 4
+    },
+    {
+     "text": "Spread on a lined tray and roast at 170C.",
+     "min": 12
+    },
+    {
+     "text": "Cool until set.",
+     "min": 20
+    },
+    {
+     "text": "Break into clusters.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Kenai's venison with blueberry sauce",
+   "course": "m",
+   "prep_min": 18,
+   "cook_min": 68,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "venison steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chunks. Bring the steaks to room temperature, then oil and season.",
+     "min": 15
+    },
+    {
+     "text": "Parboil the potatoes.",
+     "min": 8
+    },
+    {
+     "text": "Toss with oil, rosemary and salt and roast at 220C.",
+     "min": 45
+    },
+    {
+     "text": "Sear the venison in a very hot pan for rare, then rest.",
+     "min": 10
+    },
+    {
+     "text": "Add the stock, balsamic, blueberries, sugar and thyme to the pan and simmer until syrupy, then whisk in the butter.",
+     "min": 5
+    },
+    {
+     "text": "Slice the venison and spoon over the sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Honey berry crumble",
+   "course": "w",
+   "prep_min": 13,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day, keep chilled (bake fresh)",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mixed berries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the berries with honey and spread in a dish.",
+     "min": 4
+    },
+    {
+     "text": "Rub the butter into the oats, flour and sugar.",
+     "min": 6
+    },
+    {
+     "text": "Scatter over the fruit.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 180C until bubbling.",
+     "min": 35
+    },
+    {
+     "text": "Serve with cream.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Spirit lights blueberry lemonade",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 23,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 330,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer most of the blueberries with the sugar and the water, then strain and cool.",
+     "min": 8
+    },
+    {
+     "text": "Cool.",
+     "min": 15
+    },
+    {
+     "text": "Juice the lemons and mix with two spoons of syrup and the cold water.",
+     "min": 5
+    },
+    {
+     "text": "Fill four glasses with ice, mint and the remaining berries.",
+     "min": 2
+    },
+    {
+     "text": "Pour in the lemonade, spoon the rest of the syrup over and finish with soda water.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

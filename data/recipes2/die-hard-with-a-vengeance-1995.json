@@ -1,0 +1,540 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Zeus's salted peanut caramel slab",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 160,
+   "make_ahead": "Up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "roasted salted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "flaky sea salt, to finish",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a 20cm square tin. Heat the sugar, butter, cream and golden syrup, stirring, then boil to 118C.",
+     "min": 7
+    },
+    {
+     "text": "Stir in the peanuts and pour into the tin.",
+     "min": 2
+    },
+    {
+     "text": "Cool.",
+     "min": 30
+    },
+    {
+     "text": "Spread with melted chocolate and sprinkle with flaky salt.",
+     "min": 6
+    },
+    {
+     "text": "Chill, then cut into squares.",
+     "min": 120
+    }
+   ]
+  },
+  {
+   "n": "Harlem chicken and waffles",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 140,
+   "make_ahead": "Chicken soaks up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "boneless chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "waffle mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk and salt.",
+     "min": 5
+    },
+    {
+     "text": "Soak in the fridge.",
+     "min": 120
+    },
+    {
+     "text": "Dredge in the flour mixed with paprika and make the waffle batter.",
+     "min": 10
+    },
+    {
+     "text": "Fry the chicken in oil at 175C in batches until at least 74C inside.",
+     "min": 12
+    },
+    {
+     "text": "Cook the waffles in a waffle iron. Warm the honey with the hot sauce and drizzle over the chicken on the waffles.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Bacon egg and cheese on a roll",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 12,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "kaiser rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Fry the eggs in the same pan, breaking the yolks, and lay a slice of cheese on each to melt.",
+     "min": 4
+    },
+    {
+     "text": "Split, butter and toast the rolls. Fill with bacon and egg, season and add tomato sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Crumb cake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Up to 2 days, keep covered",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 205,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the plain flour, brown sugar, cinnamon and cold butter into big crumbs.",
+     "min": 8
+    },
+    {
+     "text": "Beat more butter with the caster sugar, add the eggs and fold in the self-raising flour and milk.",
+     "min": 10
+    },
+    {
+     "text": "Spread in a lined 20cm tin and cover with the crumble.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 180C. Dust with icing sugar.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Water jug lemonade",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3.4,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool.",
+     "min": 5
+    },
+    {
+     "text": "Juice about 10 lemons.",
+     "min": 10
+    },
+    {
+     "text": "Chill the syrup, add the lemon juice and top up with cold water to exactly 4 litres. Serve over ice.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Beef Patty",
+   "course": "s",
+   "extra": true,
+   "prep_min": 30,
+   "cook_min": 55,
+   "make_ahead": "Up to 2 days, reheat in the oven",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef chuck mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour with the turmeric, then mix with half the egg and the water to a dough.",
+     "min": 10
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Cook the onion and curry powder in oil, add the mince and cook until browned, then cool.",
+     "min": 10
+    },
+    {
+     "text": "Roll out the dough, cut rounds, fill, fold and crimp into half moons.",
+     "min": 10
+    },
+    {
+     "text": "Brush with the remaining egg and bake at 190C until golden.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Raymond's Grilled Cheese",
+   "course": "m",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 240,
+     "u": "g",
+     "item": "sliced American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pickle spears",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread on the outside and fill with cheese.",
+     "min": 3
+    },
+    {
+     "text": "Griddle until golden on both sides and the cheese is melted.",
+     "min": 8
+    },
+    {
+     "text": "Serve with a pickle spear each.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Dexter's Hot Dog",
+   "course": "m",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Best eaten straight away",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "all-beef franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "potato chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer or griddle the franks until hot all the way through.",
+     "min": 8
+    },
+    {
+     "text": "Toast the buns, fill with the franks and mustard and serve with chips.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

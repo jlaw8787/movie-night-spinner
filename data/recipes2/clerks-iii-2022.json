@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Quick Stop nacho cheese dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 2,
+   "make_ahead": "Best fresh, rewarm gently",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the cheddar with the cornflour.",
+     "min": 2
+    },
+    {
+     "text": "Heat the evaporated milk until steaming, then stir in the cheese a handful at a time over low heat until smooth.",
+     "min": 10
+    },
+    {
+     "text": "Season with a pinch of chilli and keep warm. Serve with corn chips for dunking.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Jersey crumb cake squares",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, cold, for the crumb",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour, for the crumb",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened, for the cake",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour, for the cake",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the cold butter into the crumb flour, brown sugar and cinnamon.",
+     "min": 8
+    },
+    {
+     "text": "Beat the soft butter with the sugar, eggs, flour and milk and spread in a lined tin.",
+     "min": 12
+    },
+    {
+     "text": "Cover with the crumb and bake at 175C.",
+     "min": 40
+    },
+    {
+     "text": "Cool and dust with icing sugar.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "RST Video pork roll, egg and cheese",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 7,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork roll, in 8 slices",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Nick the edges of the pork roll slices and fry until curled and browned.",
+     "min": 8
+    },
+    {
+     "text": "Fry the eggs.",
+     "min": 4
+    },
+    {
+     "text": "Stack pork roll, egg and cheese into the rolls, add tomato sauce, salt and pepper.",
+     "min": 3
+    },
+    {
+     "text": "Wrap in foil for a couple of minutes to melt.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Quick Stop coffee cake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 65,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs and sour cream, then fold in the flour.",
+     "min": 12
+    },
+    {
+     "text": "Mix the walnuts with the brown sugar and cinnamon.",
+     "min": 3
+    },
+    {
+     "text": "Layer half the batter, the walnut mix, then the rest in a greased ring tin.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 175C.",
+     "min": 45
+    },
+    {
+     "text": "Cool before turning out.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Not even supposed to be here cold brew",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 725,
+   "make_ahead": "Start the night before",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "coarsely ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the coffee into the water and leave in the fridge overnight, which is the resting time.",
+     "min": 720
+    },
+    {
+     "text": "Strain through a sieve lined with a paper towel.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the cream with a little of the milk, the brown sugar and cinnamon until thick but pourable.",
+     "min": 5
+    },
+    {
+     "text": "Fill 4 glasses with ice, pour in cold brew and a splash of milk, then spoon the cinnamon foam on top.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

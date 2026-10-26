@@ -44,3 +44,6 @@ Write data/recipes2/<slug>.json for every film in your pack:
 
 ## Process
 Work film by film. You may write a small Python helper in /tmp/claude-0/-home-claude/6d06a22c-2024-50a8-a2d1-a12880d59711/scratchpad/recipes-<pack> to validate, but the recipes are your own work. Validate: JSON loads, every dish has ingredients and steps, units are from the list, no dashes. No web searches needed; never send personal details in any request. Do not edit any other file or touch git. Report in under 80 words: films done, dishes written, era extras added.
+
+## Times check (added during the run)
+prep_min is the real hands-on time for 4 serves: washing, peeling, chopping, mixing, shaping, assembling, plating. Judge it per dish like a cook would; never use a default floor or a formula. A cubed and marinated lamb skewer is about 20 min hands-on, a mixed drink 2 to 5 min, a layered cake 40 min. cook_min covers the oven, stove, chilling, resting and marinating time. If you used a script to restructure the data, go back over every dish and set the times by judgement.

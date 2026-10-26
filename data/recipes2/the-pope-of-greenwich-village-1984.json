@@ -1,0 +1,460 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bed Bug Eddie's clams oreganata",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Top up to 3 hours ahead, keep chilled; grill to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the clams with a splash of water in a covered pan until they open, about 4 minutes. Discard any that stay closed.",
+     "min": 6
+    },
+    {
+     "text": "Remove the top shells.",
+     "min": 3
+    },
+    {
+     "text": "Mix the breadcrumbs, garlic, oregano, parmesan and olive oil and top each clam.",
+     "min": 3
+    },
+    {
+     "text": "Grill for 3 minutes until golden.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Waiter's antipasto",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "rockmelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "prosciutto",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "bocconcini",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cracked black pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the rockmelon into 12 skinless wedges and drape with prosciutto.",
+     "min": 8
+    },
+    {
+     "text": "Blitz the basil with olive oil and salt.",
+     "min": 3
+    },
+    {
+     "text": "Drain the bocconcini, dress with the basil oil and pepper, and serve beside the melon.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Veal marsala",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "veal escalopes",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "seasoned plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "butter, for searing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "button mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "marsala",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cold butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf crusty bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dust the veal in the seasoned flour and sear in butter and oil for 1 minute a side, then set aside.",
+     "min": 7
+    },
+    {
+     "text": "Brown the mushrooms in the same pan, add the marsala and stock and reduce by half.",
+     "min": 8
+    },
+    {
+     "text": "Whisk in the cold butter, return the veal and warm through for a minute.",
+     "min": 3
+    },
+    {
+     "text": "Serve with crusty bread.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Zabaglione",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 3,
+   "make_ahead": "Serve straight away",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "marsala",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, halved",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks, sugar and marsala in a heatproof bowl over simmering water for 6 to 8 minutes until thick, pale and tripled in volume.",
+     "min": 8
+    },
+    {
+     "text": "Halve the strawberries into four glasses.",
+     "min": 3
+    },
+    {
+     "text": "Spoon the warm zabaglione over and serve straight away.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Charlie's Americano on Paulie's tab",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "bitter red aperitivo",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "sweet vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 320,
+     "u": "ml",
+     "item": "soda water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tumblers with ice.",
+     "min": 1
+    },
+    {
+     "text": "Pour aperitivo and vermouth into each glass and stir for 10 seconds.",
+     "min": 1
+    },
+    {
+     "text": "Top with soda, stir once and tuck a half-moon of orange into each glass.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Linguine vongole",
+   "course": "m",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 37,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "littleneck clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "linguine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the clams in salted water for 30 minutes, then rinse.",
+     "min": 32
+    },
+    {
+     "text": "Gently fry the garlic in some of the oil, add the clams and wine, cover and steam until they open.",
+     "min": 8
+    },
+    {
+     "text": "Cook the linguine, finish it in the clam juices and toss with parsley and more olive oil.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Cannoli",
+   "course": "w",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 125,
+   "make_ahead": "Filling up to 1 day ahead; fill shells just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "fresh ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "icing sugar, plus extra for dusting",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "cannoli shells",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the ricotta in a sieve for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Beat with icing sugar and orange zest, then fold in the chocolate.",
+     "min": 8
+    },
+    {
+     "text": "Pipe into the shells just before serving and dust with icing sugar.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Espresso",
+   "course": "d",
+   "extra": true,
+   "prep_min": 3,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 32,
+     "u": "g",
+     "item": "ground espresso coffee",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew four short, strong espressos.",
+     "min": 5
+    },
+    {
+     "text": "Serve in small cups.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

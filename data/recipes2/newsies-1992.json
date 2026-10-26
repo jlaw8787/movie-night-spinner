@@ -1,0 +1,278 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hot pretzels",
+   "course": "s",
+   "prep_min": 31,
+   "cook_min": 72,
+   "make_ahead": "Best the same day",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "bread flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water, for the bath",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "coarse salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, fine salt and warm water into a dough.",
+     "min": 5
+    },
+    {
+     "text": "Knead until smooth and elastic.",
+     "min": 8
+    },
+    {
+     "text": "Cover and rise until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Shape into small pretzels.",
+     "min": 10
+    },
+    {
+     "text": "Simmer the water with the bicarb and bathe each pretzel briefly, then drain onto a lined tray and sprinkle with coarse salt.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 220C conventional until deep golden.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Street corn on the cob",
+   "course": "s",
+   "prep_min": 3,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "small corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the corn in water.",
+     "min": 5
+    },
+    {
+     "text": "Drain, then char on a hot grill, turning often.",
+     "min": 7
+    },
+    {
+     "text": "Roll in the softened butter and sprinkle with sea salt.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Brooklyn hot dogs",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "tsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sauerkraut, drained",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Griddle the franks over medium-high heat until blistered and piping hot.",
+     "min": 8
+    },
+    {
+     "text": "Steam the buns until warm.",
+     "min": 2
+    },
+    {
+     "text": "Fill each bun with a frank, mustard and sauerkraut, then wrap in food-safe paper.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Apple turnovers",
+   "course": "w",
+   "prep_min": 22,
+   "cook_min": 47,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel, core and dice the apples.",
+     "min": 10
+    },
+    {
+     "text": "Cook with the butter, sugar and cinnamon until tender and fairly dry.",
+     "min": 10
+    },
+    {
+     "text": "Cool the filling.",
+     "min": 15
+    },
+    {
+     "text": "Cut each pastry sheet into four squares, fill, fold diagonally and seal the edges.",
+     "min": 12
+    },
+    {
+     "text": "Brush with beaten egg and bake at 200C until golden.",
+     "min": 22
+    }
+   ]
+  },
+  {
+   "n": "Sarsaparilla ice cream spiders",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "sarsaparilla, chilled",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put a scoop of ice cream in each tall glass.",
+     "min": 2
+    },
+    {
+     "text": "Slowly pour the sarsaparilla over, letting the foam rise and settle before topping up.",
+     "min": 2
+    },
+    {
+     "text": "Add a second small scoop and serve with long spoons and straws.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

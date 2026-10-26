@@ -1,0 +1,350 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Polar Express turkey and cranberry rolls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Assemble up to 1 day ahead, warm to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft dinner rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "tbsp",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "roast turkey, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brie, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "paper tickets, hole punched",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Split the rolls and spread the bases with cranberry sauce.",
+     "min": 5
+    },
+    {
+     "text": "Layer with turkey, brie and spinach and close.",
+     "min": 8
+    },
+    {
+     "text": "Wrap each in foil and warm until the cheese softens.",
+     "min": 10
+    },
+    {
+     "text": "Unwrap and rewrap in baking paper with a paper ticket tucked in.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Golden ticket shortbread",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "gold sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C and line trays. Beat the butter and icing sugar, then mix in the flour to a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Roll out and cut into ticket rectangles.",
+     "min": 8
+    },
+    {
+     "text": "Punch a hole in each with a straw.",
+     "min": 4
+    },
+    {
+     "text": "Bake until pale golden.",
+     "min": 15
+    },
+    {
+     "text": "Sprinkle with caster sugar and gold sprinkles while warm.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "North Pole chicken pot pie",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet of puff pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the oil.",
+     "min": 8
+    },
+    {
+     "text": "Add the onion, carrots and celery and soften.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the flour, cream, thyme and peas and simmer until thick.",
+     "min": 12
+    },
+    {
+     "text": "Pour into a pie dish, top with pastry and egg wash.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Sleigh bell sugar cookies",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 20,
+   "make_ahead": "Up to 4 days, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "silver cachous",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop red food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Beat the butter and sugar, then mix in the flour.",
+     "min": 8
+    },
+    {
+     "text": "Chill, roll and cut into bell shapes.",
+     "min": 20
+    },
+    {
+     "text": "Bake and cool.",
+     "min": 18
+    },
+    {
+     "text": "Ice white with icing sugar and water.",
+     "min": 6
+    },
+    {
+     "text": "Press in cachous and pipe a red ribbon with tinted icing.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "The hot chocolate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "milk chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk and cream until steaming.",
+     "min": 7
+    },
+    {
+     "text": "Whisk in the chocolate until thick and smooth.",
+     "min": 3
+    },
+    {
+     "text": "Pour from a height into mugs so it froths.",
+     "min": 1
+    },
+    {
+     "text": "Top each with whipped cream.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

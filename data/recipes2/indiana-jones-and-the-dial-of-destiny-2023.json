@@ -1,0 +1,308 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tangier market bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Mix up to 1 day ahead, grill fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "harissa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the lamb with the onion, cumin, parsley and salt.",
+     "min": 8
+    },
+    {
+     "text": "Shape around skewers.",
+     "min": 12
+    },
+    {
+     "text": "Grill over high heat until charred and cooked through.",
+     "min": 10
+    },
+    {
+     "text": "Stir the harissa through the yoghurt and serve as a dip.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Aegean dive grilled octopus",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 65,
+   "make_ahead": "Marinate up to 3 hours, grill fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "baby octopus, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, one juiced and one in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the octopus in the oil, lemon juice and oregano for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Grill on a very hot plate for 2 to 3 minutes until charred and just tender.",
+     "min": 5
+    },
+    {
+     "text": "Pile onto a plate, scatter with capers and serve with lemon wedges.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Moroccan chicken tagine",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "saffron threads, a good pinch",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "preserved lemon, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "couscous",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Soften the onion with the ginger and saffron. Add the water, preserved lemon and olives.",
+     "min": 10
+    },
+    {
+     "text": "Cover and simmer until tender.",
+     "min": 45
+    },
+    {
+     "text": "Steep the couscous in hot water, fluff with a fork and serve under the tagine.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Syracuse almond granita with brioche",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 210,
+   "make_ahead": "Granita up to 2 days frozen, warm brioche to serve",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "ground almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "almond extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "brioche buns",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the almonds, water and sugar, stand for 30 minutes and strain well through a cloth, squeezing hard.",
+     "min": 40
+    },
+    {
+     "text": "Stir in the almond extract, pour into a shallow tray and freeze, scraping with a fork every 40 minutes until fluffy ice crystals form.",
+     "min": 180
+    },
+    {
+     "text": "Warm the brioche at 160C for 5 minutes. Spoon the granita into glasses and serve with the brioche.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mint tea in Tangier",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "green tea leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "big bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caster sugar, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "just-boiled water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the green tea, mint and sugar in a teapot and pour over the hot water.",
+     "min": 2
+    },
+    {
+     "text": "Steep for 4 minutes.",
+     "min": 4
+    },
+    {
+     "text": "Pour from a height into small glasses so it froths, then pour back and pour again.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

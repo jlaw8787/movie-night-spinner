@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Berlin currywurst",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bratwurst",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips and fry until golden.",
+     "min": 20
+    },
+    {
+     "text": "Grill the bratwurst slowly until browned, then slice.",
+     "min": 20
+    },
+    {
+     "text": "Soften the onion, add the tomato paste, curry powder, sugar, vinegar and water and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Pour over the sausage and dust with curry powder. Serve with the chips.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Paris café gougères",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Best fresh from the oven",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "gruyere",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water and butter, beat in the flour and stir over heat for a minute.",
+     "min": 5
+    },
+    {
+     "text": "Cool slightly, beat in the eggs one at a time, then the grated gruyere and nutmeg.",
+     "min": 12
+    },
+    {
+     "text": "Pipe small rounds.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Paris steak frites",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 750,
+   "make_ahead": "Salt the steaks the night before",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dry-brine the steaks overnight.",
+     "min": 720
+    },
+    {
+     "text": "Cut the potatoes thin and fry at 140C, drain, then fry at 185C until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Sear the steaks hard in cast iron, pull at 54C and rest.",
+     "min": 15
+    },
+    {
+     "text": "Crush the peppercorns in the pan, flame the brandy, add the cream and reduce until it coats a spoon.",
+     "min": 10
+    },
+    {
+     "text": "Finish with the butter and serve.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Paris croissant pudding",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 55,
+   "make_ahead": "Best fresh from the oven",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "stale croissants",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Tear the croissants into a buttered dish and scatter with chopped chocolate.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs, cream, milk and sugar and pour over.",
+     "min": 7
+    },
+    {
+     "text": "Rest so the croissants soak it up.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 170C until puffed and just set.",
+     "min": 35
+    }
+   ]
+  },
+  {
+   "n": "Sacré-Cœur steps cognac sidecar",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cognac",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four coupes. Rub the rims with lemon and dip in sugar.",
+     "min": 5
+    },
+    {
+     "text": "Shake the cognac, orange liqueur and fresh lemon juice hard with ice for 15 seconds, one drink at a time.",
+     "min": 4
+    },
+    {
+     "text": "Strain into the coupes and twist orange peel over the top.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

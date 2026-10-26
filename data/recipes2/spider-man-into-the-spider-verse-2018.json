@@ -1,0 +1,360 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Spider-Ham's ham and pineapple pinwheels",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 18,
+   "make_ahead": "Roll up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham, chopped",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "drained crushed pineapple",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay the pastry flat and spread each sheet with tomato paste.",
+     "min": 4
+    },
+    {
+     "text": "Scatter with the ham, pineapple and mozzarella.",
+     "min": 4
+    },
+    {
+     "text": "Roll up tightly and slice into 2cm pinwheels.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 18
+    }
+   ]
+  },
+  {
+   "n": "Chopped cheese rolls",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hero rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Prep the lettuce and tomatoes.",
+     "min": 7
+    },
+    {
+     "text": "Fry the mince and onion on a hot griddle, chopping it up with two spatulas, and season well.",
+     "min": 10
+    },
+    {
+     "text": "Lay the cheese over, let it melt and chop it through.",
+     "min": 3
+    },
+    {
+     "text": "Pile into the rolls with lettuce, tomato, ketchup and mayo.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Peter B. Parker's burger",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "large onion, thickly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onion into rings and soak in the milk.",
+     "min": 10
+    },
+    {
+     "text": "Dredge in flour and fry into rings.",
+     "min": 8
+    },
+    {
+     "text": "Grill the bacon until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Smash eight patties from the mince on a hot griddle and top with cheese.",
+     "min": 8
+    },
+    {
+     "text": "Stack two per toasted bun with bacon, onion rings and barbecue sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Bodega cookies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 750,
+   "make_ahead": "Dough up to 2 days chilled, baked cookies up to 3 days",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "choc chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter and cool.",
+     "min": 12
+    },
+    {
+     "text": "Beat with the sugar and egg, then mix in the flour, bicarb and choc chips.",
+     "min": 8
+    },
+    {
+     "text": "Rest the dough overnight in the fridge.",
+     "min": 720
+    },
+    {
+     "text": "Scoop 10 big balls and bake at 180C so the middles stay soft.",
+     "min": 11
+    },
+    {
+     "text": "Add flaky salt.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Coconut milk coquito",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 120,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of ground nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the coconut milk, condensed milk, evaporated milk, vanilla, half the cinnamon and the nutmeg until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Chill.",
+     "min": 120
+    },
+    {
+     "text": "Serve in small glasses with a dusting of cinnamon.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

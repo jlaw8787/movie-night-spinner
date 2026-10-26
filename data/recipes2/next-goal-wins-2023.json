@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "31 to 0 taro chips",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "taro",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the taro and slice paper thin on a mandoline.",
+     "min": 15
+    },
+    {
+     "text": "Fry in batches at 175C until crisp and pale golden.",
+     "min": 15
+    },
+    {
+     "text": "Drain and toss with salt mixed with lime zest and chilli flakes.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Oka",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Make just before serving",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "very fresh white fish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the fish into 1cm cubes and cover with lime juice.",
+     "min": 8
+    },
+    {
+     "text": "Chill until the fish turns white.",
+     "min": 30
+    },
+    {
+     "text": "Dice the cucumber, tomatoes and onion.",
+     "min": 7
+    },
+    {
+     "text": "Drain most of the juice, then stir in the coconut cream and vegetables. Season and serve cold.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Tavita's team sapasui",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "glass noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger (about a thumb)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the glass noodles in hot water and drain.",
+     "min": 10
+    },
+    {
+     "text": "Slice the chicken, carrots and onion. Crush the garlic and chop the ginger.",
+     "min": 8
+    },
+    {
+     "text": "Fry the chicken with the garlic and ginger until browned, then add the carrots and onion.",
+     "min": 10
+    },
+    {
+     "text": "Add the noodles, soy sauce and water and toss until the noodles soak it all up.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Panipopo",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 93,
+   "make_ahead": "Best the day it's baked",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, for the sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, butter and warm water into a dough.",
+     "min": 12
+    },
+    {
+     "text": "Prove the dough, which is the resting time.",
+     "min": 60
+    },
+    {
+     "text": "Shape 12 buns into a baking dish.",
+     "min": 8
+    },
+    {
+     "text": "Mix the coconut cream with sugar and pour over.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 180C until golden and sticky.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Jaiyah's Koko Samoa",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Make fresh, serve hot or over ice",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, if serving cold",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate into the hot water.",
+     "min": 4
+    },
+    {
+     "text": "Whisk in the milk and sugar and heat until steaming.",
+     "min": 6
+    },
+    {
+     "text": "Serve hot in mugs, or cool and pour over ice.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

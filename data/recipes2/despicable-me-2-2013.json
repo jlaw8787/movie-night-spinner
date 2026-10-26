@@ -1,0 +1,304 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Gru's jelly tarts",
+   "course": "s",
+   "prep_min": 17,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed berries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the berries with sugar and a squeeze of lemon until jammy, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Cut the pastry into rounds and press into a patty tin.",
+     "min": 12
+    },
+    {
+     "text": "Fill with the jam.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 190C until the pastry is golden.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Salsa and Salsa nachos",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bags corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can black beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar jalapenos",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar tomato salsa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the beans, grate the cheese and slice the jalapenos. Smash the avocado.",
+     "min": 10
+    },
+    {
+     "text": "Layer the chips on a tray with beans, cheese and jalapenos.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until melted.",
+     "min": 8
+    },
+    {
+     "text": "Top with salsa, avocado and sour cream.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Eduardo's chicken enchiladas",
+   "course": "m",
+   "prep_min": 32,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dried chillies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the chillies in a dry pan, soak in hot water, then blend with the tomatoes.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the chicken in the sauce, then shred it.",
+     "min": 30
+    },
+    {
+     "text": "Roll the chicken in tortillas and place in a dish.",
+     "min": 12
+    },
+    {
+     "text": "Cover with more sauce and grated cheddar.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 190C.",
+     "min": 20
+    },
+    {
+     "text": "Serve with sour cream.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Purple minion jelly cups",
+   "course": "w",
+   "prep_min": 16,
+   "cook_min": 180,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "packets grape jelly crystals",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make up the jelly as the packet says and pour into clear cups.",
+     "min": 8
+    },
+    {
+     "text": "Chill until set.",
+     "min": 180
+    },
+    {
+     "text": "Whip the cream and swirl on top.",
+     "min": 4
+    },
+    {
+     "text": "Add two banana slices to each like goggles.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Minion banana caramel smoothie",
+   "course": "d",
+   "prep_min": 12,
+   "cook_min": 120,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vanilla yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "medjool dates",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caramel sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel, slice and freeze the bananas.",
+     "min": 5
+    },
+    {
+     "text": "Freeze.",
+     "min": 120
+    },
+    {
+     "text": "Blend the bananas with milk, yoghurt, pitted dates and cinnamon until thick.",
+     "min": 4
+    },
+    {
+     "text": "Drizzle caramel inside four glasses, pour in the smoothie and top with a banana slice.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

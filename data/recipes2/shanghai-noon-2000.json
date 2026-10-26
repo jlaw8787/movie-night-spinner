@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Imperial court dumplings",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 2,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green prawns, chopped",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Chinkiang vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork, prawns, ginger and spring onion.",
+     "min": 12
+    },
+    {
+     "text": "Fill the wrappers and pleat.",
+     "min": 20
+    },
+    {
+     "text": "Steam until cooked through.",
+     "min": 8
+    },
+    {
+     "text": "Serve with soy and black vinegar.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Chon Wang cornbread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter, divided",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat a buttered cast iron pan in a 220C oven.",
+     "min": 5
+    },
+    {
+     "text": "Mix the cornmeal, flour, baking powder, buttermilk, egg and melted butter briefly.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the hot pan and bake.",
+     "min": 20
+    },
+    {
+     "text": "Beat the remaining butter with honey and serve alongside.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Roy O'Bannon's five-spice ribs",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 158,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "five spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "hoisin sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the ribs with five spice, brown sugar, crushed garlic and salt.",
+     "min": 10
+    },
+    {
+     "text": "Wrap in foil.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 150C until tender.",
+     "min": 150
+    },
+    {
+     "text": "Mix the hoisin with honey and unwrap the ribs.",
+     "min": 5
+    },
+    {
+     "text": "Brush with the glaze and glaze under the grill.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Imperial almond jelly with lychees",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 180,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "powdered gelatine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "almond extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 565,
+     "u": "g",
+     "item": "tin lychees",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine in the water.",
+     "min": 3
+    },
+    {
+     "text": "Heat the milk with the sugar, stir in the gelatine until dissolved and add the almond extract.",
+     "min": 6
+    },
+    {
+     "text": "Set in a shallow dish for 3 hours.",
+     "min": 180
+    },
+    {
+     "text": "Cut into diamonds.",
+     "min": 4
+    },
+    {
+     "text": "Serve over the lychees with their syrup.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Rye and jasmine tea highball",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "jasmine tea",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "rye whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the jasmine tea in water just off the boil, then strain.",
+     "min": 4
+    },
+    {
+     "text": "Chill the tea.",
+     "min": 30
+    },
+    {
+     "text": "Stir the honey into a little hot water to loosen it.",
+     "min": 2
+    },
+    {
+     "text": "Fill four highball glasses with ice and add rye, cold jasmine tea, honey syrup and lemon juice to each.",
+     "min": 3
+    },
+    {
+     "text": "Stir, top with soda water and add a strip of lemon peel.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Invisible ink lemon chicken bites",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 85,
+   "make_ahead": "Marinate up to 1 day, grill fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs, cut into chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, one for the marinade and one for the sauce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in lemon juice, garlic, oregano and oil for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Grill until charred and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Mix the mayonnaise with lemon zest and juice. Spear the chicken on toothpicks and serve with the sauce.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Silence Dogood soft pretzels",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 75,
+   "make_ahead": "Best the day they are made",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "rock salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, salt and warm water to a dough and knead briefly. Rest for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Shape into figure eights.",
+     "min": 20
+    },
+    {
+     "text": "Dip in boiling water with the bicarb soda and sprinkle with rock salt.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 220C for 12 minutes. Brush with butter and serve with mustard.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "2:22 Independence Hall cheesesteaks",
+   "course": "m",
+   "prep_min": 45,
+   "cook_min": 15,
+   "make_ahead": "Freeze the steak, cook fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "rib eye steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "provolone, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long bread rolls",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the steak for 30 minutes, then shave it paper thin.",
+     "min": 35
+    },
+    {
+     "text": "Fry the onions in the oil until soft.",
+     "min": 8
+    },
+    {
+     "text": "Add the beef and sear fast on high heat.",
+     "min": 4
+    },
+    {
+     "text": "Lay the provolone over the top to melt and pile into split rolls.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Philly lemon water ice",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 255,
+   "make_ahead": "Make a day ahead, scrape and serve fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, zested, from the 8 lemons in total",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water and sugar until dissolved, then cool. Stir in the lemon juice and zest.",
+     "min": 15
+    },
+    {
+     "text": "Pour into a shallow metal tray and freeze for 4 hours, scraping and stirring with a fork every 45 minutes so it stays smooth and fine.",
+     "min": 240
+    },
+    {
+     "text": "Blitz briefly in a food processor just before serving, scoop into cups and top with raspberries.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Invisible ink lemon, ginger and mint fizz",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Syrup up to 3 days, mix fresh",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger (about 5cm), sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "mint leaves, plus sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "chilled soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar, water and ginger for 5 minutes, then cool and strain.",
+     "min": 20
+    },
+    {
+     "text": "Muddle the mint with the lemon juice and ginger syrup in a jug.",
+     "min": 5
+    },
+    {
+     "text": "Fill four glasses with crushed ice, pour in the lemon mix and top with soda water.",
+     "min": 3
+    },
+    {
+     "text": "Garnish with lemon wheels and mint sprigs.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}
