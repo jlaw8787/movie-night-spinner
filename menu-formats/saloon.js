@@ -211,42 +211,46 @@ window.MENU_FORMATS[ID]=ctx=>{
   const mis=E.mis?`text-shadow:3px 2px 0 ${rgba(C.accA,.45)};`:"";
   const vlen=String(F.venue).length,vs=vlen>36?54:vlen>24?64:vlen>14?78:92;
   const url=logoUrl(ctx),title=T(ctx.f.title||"");
-  const fb=title.length>40?30:title.length>22?36:44;
+  const fb=title.length>40?20:title.length>22?24:30;
   const reward=/^\d+$/.test(F.number)?`$${F.number}`:F.number;
-  const lpDark=`position:relative;display:inline-block;max-width:470px;padding:14px 22px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".02 .5",3,[255,235,200],.16,seed,500)},${noise(".9",2,[255,255,255],.07,seed+1)};box-shadow:0 6px 14px rgba(0,0,0,.4)`;
+  const lpDark=`position:relative;display:block;width:100%;max-width:182px;padding:10px 12px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".02 .5",3,[255,235,200],.16,seed,500)},${noise(".9",2,[255,255,255],.07,seed+1)};box-shadow:0 6px 14px rgba(0,0,0,.4)`;
   const lpLight=lpDark.replace(`background-color:${C.dark}`,`background-color:${toHex(mix(hex(P.bg),WHITE,.5))}`);
   const face=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
     ${border(tone,C,P)}
     <div style="position:absolute;left:44px;right:44px;top:40px;bottom:38px;display:flex;flex-direction:column">
-    <div data-box style="flex:none;max-height:196px;overflow:hidden;text-align:center">
+    <div data-box style="flex:none;max-height:150px;overflow:hidden;text-align:center">
       <div data-line data-fs="20" data-min="14" style="font:${ty.cw} 20px ${ty.caps};letter-spacing:.24em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.sign)}</div>
-      <div data-fs="${vs}" data-min="30" style="margin-top:6px;font:${ty.dw} ${vs}px ${ty.disp};line-height:.98;letter-spacing:${ty.dispLs};text-transform:uppercase;color:${P.ink};${mis}">${T(F.venue)}</div>
-      <div style="margin-top:8px">${rule(C.ink,150)}</div>
-      <div data-line data-fs="30" data-min="18" style="margin-top:4px;font:${ty.dw} 30px ${ty.disp};letter-spacing:.12em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">Bill of Fare</div>
+      <div data-fs="${Math.min(vs,70)}" data-min="30" style="margin-top:4px;font:${ty.dw} ${Math.min(vs,70)}px ${ty.disp};line-height:.98;letter-spacing:${ty.dispLs};text-transform:uppercase;color:${P.ink};${mis}">${T(F.venue)}</div>
+      <div style="margin-top:6px">${rule(C.ink,150)}</div>
     </div>
-    <div style="flex:none;height:42px;margin:4px -16px 0;display:flex;align-items:center;justify-content:center;gap:16px">
-      <span data-line data-fs="26" data-min="16" style="max-width:520px;font:${ty.dw} 26px ${ty.disp};letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;overflow:hidden">${V.w}</span>
-      <span style="font:${ty.cw} 20px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">Reward ${esc(reward)}</span>
-    </div>
-    <div style="flex:none;position:relative;margin:0 -16px;height:600px;box-sizing:border-box;border:6px solid ${P.ink};box-shadow:0 0 0 3px ${P.bg},0 0 0 5px ${C.ink};overflow:hidden;background:#1e140c">
-      ${ph.heroIsPoster?`<div style="position:absolute;inset:0;background-color:${toHex(mix(hex(P.bg),BLACK,.12))};background-image:radial-gradient(ellipse at 50% 45%,${toHex(mix(hex(P.bg),WHITE,.25))},rgba(0,0,0,0) 75%)"></div>
-      <div style="position:absolute;left:0;top:0;bottom:0;width:178px;display:flex;align-items:center;justify-content:center;text-align:center"><div style="font:${ty.dw} 16px ${ty.disp};line-height:1.25;letter-spacing:0;text-transform:uppercase;color:${C.ink}">Now<br>showing</div></div>
-      <div style="position:absolute;right:0;top:0;bottom:0;width:178px;display:flex;align-items:center;justify-content:center;text-align:center"><div style="font:${ty.dw} 30px ${ty.disp};line-height:1.1;letter-spacing:.02em;color:${C.ink}">${esc(year)}</div></div>
-      <div style="position:absolute;left:50%;top:50%;width:368px;height:552px;transform:translate(-50%,-50%);box-shadow:0 8px 20px rgba(30,15,0,.5);border:5px solid ${toHex(mix(hex(P.bg),WHITE,.55))};box-sizing:border-box;background:${toHex(mix(hex(P.bg),WHITE,.55))}"><img crossorigin="anonymous" alt="" src="${ph.hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"></div>
-      ${E.sheen?SHEEN(E.sheen):""}`:`<div style="position:absolute;inset:0;background:url('${ph.hero}') center 35%/cover no-repeat;filter:${filt}"></div>
-      ${E.half?HALFTONE(E.half):""}${E.sheen?SHEEN(E.sheen):""}
-      <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${60+TN.wear*80}px rgba(30,15,0,${.25+TN.wear*.4})"></div>`}
-    </div>
-    <div style="flex:none;height:104px;margin:6px -16px 0;display:flex;gap:18px;align-items:center">
-      <div style="flex:none;max-width:470px">
-        <div data-lpanel data-dark="${esc(lpDark)}" data-light="${esc(lpLight)}" style="${lpDark}">
-          ${url?`<img data-logo crossorigin="anonymous" src="${url}" alt="" style="display:block;max-width:426px;max-height:80px;object-fit:contain">`:""}
-          <div data-title-fb data-box style="${url?"display:none;":""}width:426px;max-height:96px;overflow:hidden;text-align:center"><div data-fs="${fb}" data-min="20" style="font:${ty.dw} ${fb}px ${ty.disp};line-height:1.02;text-transform:uppercase;color:${C.onDark}">${title}</div></div>
-        </div>
+    <div style="flex:none;margin-top:12px;display:flex;gap:16px;height:792px">
+      <div style="flex:none;position:relative;width:520px;height:780px;border:6px solid ${P.ink};box-shadow:0 0 0 3px ${P.bg},0 0 0 5px ${C.ink};overflow:hidden;background:#1e140c">
+        ${ph.heroIsPoster?`<img crossorigin="anonymous" alt="" src="${ph.hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">`:`<div style="position:absolute;inset:0;background:url('${ph.hero}') center 35%/cover no-repeat;filter:${filt}"></div>
+        ${E.half?HALFTONE(E.half):""}${E.sheen?SHEEN(E.sheen):""}
+        <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${60+TN.wear*80}px rgba(30,15,0,${.25+TN.wear*.4})"></div>`}
       </div>
-      <div data-box style="flex:1;height:104px;overflow:hidden">
-        <div data-fs="18" data-min="14" style="font:${ty.cw} 18px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink}">${V.c}, ${esc(year)}</div>
-        <div data-fs="19" data-min="14" style="font:italic ${ty.bw} 19px ${ty.body};line-height:1.22;margin-top:3px">${T(ctx.f.P||"Supper is served at sundown.")}</div>
+      <div data-box style="flex:1;min-width:0;height:792px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center">
+        <div>
+          <div data-fs="24" data-min="16" style="font:${ty.dw} 24px ${ty.disp};line-height:1.08;letter-spacing:.04em;text-transform:uppercase">${V.w}</div>
+          <div style="margin-top:6px;font:${ty.cw} 18px ${ty.caps};letter-spacing:.12em;text-transform:uppercase;color:${C.ink}">Reward ${esc(reward)}</div>
+        </div>
+        <div data-lpanel data-dark="${esc(lpDark)}" data-light="${esc(lpLight)}" style="${lpDark}">
+          ${url?`<img data-logo crossorigin="anonymous" src="${url}" alt="" style="display:block;max-width:150px;max-height:96px;object-fit:contain">`:""}
+          <div data-title-fb data-box style="${url?"display:none;":""}width:150px;max-height:120px;overflow:hidden;text-align:center"><div data-fs="${fb}" data-min="16" style="font:${ty.dw} ${fb}px ${ty.disp};line-height:1.02;text-transform:uppercase;color:${C.onDark};overflow-wrap:anywhere">${title}</div></div>
+        </div>
+        <div>
+          <div style="font:${ty.dw} 16px ${ty.disp};line-height:1.25;text-transform:uppercase;color:${C.ink}">Now showing</div>
+          <div style="font:${ty.dw} 30px ${ty.disp};line-height:1.1;color:${C.ink}">${esc(year)}</div>
+        </div>
+        <div data-box style="width:100%;height:250px;overflow:hidden">
+          <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.12em;text-transform:uppercase;color:${C.ink}">${V.c}, ${esc(year)}</div>
+          <div data-fs="17" data-min="14" style="font:italic ${ty.bw} 17px ${ty.body};line-height:1.22;margin-top:3px">${T(ctx.f.P||"Supper is served at sundown.")}</div>
+          <div data-fs="17" data-min="14" style="margin-top:10px;font:italic ${ty.bw} 17px ${ty.body};line-height:1.22">\u201c${T(F.note.text)}\u201d <span data-fs="${ty.sigS-8}" data-min="16" style="font:${ty.sigS-8}px ${ty.sig};color:${C.ink};font-style:normal">${T(F.note.by)}</span></div>
+        </div>
+        <div data-box style="width:100%;height:96px;overflow:hidden;box-sizing:border-box;padding:5px 8px;background:${toHex(mix(hex(P.bg),WHITE,.55))};border:2px solid ${C.ink};outline:1px solid ${C.ink};outline-offset:-6px;transform:rotate(${TN.tilt*.8}deg);text-align:center">
+          <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.1em;text-transform:uppercase;color:${C.ink};line-height:1.15">${T(F.prop.title)}</div>
+          ${propLines(F.prop).map(l=>`<div data-drop data-fs="16" data-min="14" style="font:${ty.bw} 16px ${ty.body};line-height:1.2">${T(l)}</div>`).join("")}
+        </div>
       </div>
     </div>
     <div style="flex:none;margin-top:6px">${rule(C.ink,300)}</div>
@@ -254,15 +258,6 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-box style="flex:1;overflow:hidden">${menuCol(["s","m"],cs,era,ty,C,fam)}</div>
       <div style="width:0;border-left:1px solid ${C.ink};opacity:.6"></div>
       <div data-box style="flex:1;overflow:hidden">${menuCol(["w","d"],cs,era,ty,C,fam)}</div>
-    </div>
-    <div style="flex:none;height:80px;margin-top:6px;display:flex;gap:18px;align-items:center">
-      <div data-box style="flex:1;height:80px;overflow:hidden">
-        <div data-fs="18" data-min="14" style="font:italic ${ty.bw} 18px ${ty.body};line-height:1.22">\u201c${T(F.note.text)}\u201d <span data-fs="${ty.sigS-4}" data-min="16" style="font:${ty.sigS-4}px ${ty.sig};color:${C.ink};white-space:nowrap;font-style:normal">${T(F.note.by)}</span></div>
-      </div>
-      <div data-box style="width:220px;height:74px;overflow:hidden;box-sizing:border-box;padding:5px 12px;background:${toHex(mix(hex(P.bg),WHITE,.55))};border:2px solid ${C.ink};outline:1px solid ${C.ink};outline-offset:-6px;transform:rotate(${TN.tilt*.8}deg);text-align:center">
-        <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.12em;text-transform:uppercase;color:${C.ink};line-height:1.15">${T(F.prop.title)}</div>
-        ${propLines(F.prop).map(l=>`<div data-drop data-fs="16" data-min="14" style="font:${ty.bw} 16px ${ty.body};line-height:1.2">${T(l)}</div>`).join("")}
-      </div>
     </div>
     <div data-box style="flex:none;height:22px;margin-top:4px;overflow:hidden;text-align:center;white-space:nowrap;font:${ty.bw} 15px ${ty.body};opacity:.85">
       <span data-fs="15" data-min="14">${fam?"No liquor served. ":""}Poster and stills: TMDB. Bill no. ${esc(F.number)}.</span>${F.winks.slice(0,4).map(w=>` <span data-drop data-fs="15" data-min="14">Talk of the town: ${T(w)}.</span>`).join("")}

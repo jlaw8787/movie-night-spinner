@@ -285,55 +285,56 @@ window.MENU_FORMATS[ID]=ctx=>{
     strip=`<div data-fbox style="position:absolute;left:30px;right:164px;top:26px;height:104px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(K.ink,K.soft,K.acc)}</div>
       ${seatTile(30,28,"transparent",K.ink,K.acc,`border:2px solid ${K.acc};box-shadow:inset 0 0 0 3px ${paper},inset 0 0 0 4px ${rgba(K.acc,.6)}`)}
       <div style="position:absolute;left:30px;right:30px;top:140px;border-top:4px double ${K.acc}"></div>`;
-    winTop=162;winH=500;winRad="56px 56px 8px 8px";
-    frame=`0 0 0 7px ${paper},0 0 0 8px ${K.acc},0 0 0 12px ${paper},0 0 0 13px ${rgba(K.acc,.6)},0 10px 24px 10px rgba(60,40,10,.18)`;
+    winTop=158;winH=560;winRad="32px 32px 6px 6px";
+    frame=`0 0 0 5px ${paper},0 0 0 6px ${K.acc},0 0 0 9px ${paper},0 0 0 10px ${rgba(K.acc,.6)},0 8px 18px 8px rgba(60,40,10,.18)`;
   }else if(G==="jet"){
     strip=`<div style="position:absolute;left:0;top:0;width:410px;height:128px;background:${liv};z-index:3;box-shadow:0 4px 14px rgba(0,0,0,.3)">
         <div data-fbox style="position:absolute;left:26px;right:18px;top:12px;bottom:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(onLiv,"rgba(255,250,240,.82)",K.light)}</div></div>
       ${seatTile(22,18,"#fffaf0",K.ink,K.acc,"box-shadow:0 6px 16px rgba(0,0,0,.35)")}`;
-    winTop=0;winH=612;winW=W;winRad="0";frame="none";
-    winExtra=stripes(600,true);
+    winTop=0;winH=706;winW=W;winRad="0";frame="none";
+    winExtra=stripes(660,true);
   }else if(G==="wide"){
     strip=`<div style="position:absolute;left:0;right:0;top:0;height:120px;background:${era===4?`linear-gradient(180deg,${toHex(mix(hex(liv),[255,255,255],.12))},${liv} 45%,${toHex(mix(hex(liv),[0,0,0],.3))})`:liv};overflow:hidden">
       <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.2;mix-blend-mode:screen"></div>
       <div data-fbox style="position:absolute;left:26px;right:168px;top:14px;bottom:10px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(onLiv,"rgba(255,250,240,.82)",K.light)}</div>
       <div style="position:absolute;right:22px;top:16px;width:128px;bottom:14px;border-left:1px solid rgba(255,250,240,.35)"></div>
     </div>${seatTile(27,8,"transparent",onLiv,K.light,"")}${stripes(120)}`;
-    winTop=164;winH=490;winRad="52px";
+    {const n=era===3?3:era===4||era===2?2:1;winTop=[147,154,163][n-1]}winH=560;winRad="32px";
     const bez=dark?"#3a3d44":"#e4e1d9";
-    frame=`0 0 0 13px ${bez},0 0 0 14px rgba(0,0,0,.18),0 0 0 22px ${rgba(bez,.55)},0 8px 22px 16px rgba(0,0,0,.18)`;
+    frame=`0 0 0 8px ${bez},0 0 0 9px rgba(0,0,0,.18),0 0 0 14px ${rgba(bez,.55)},0 6px 16px 8px rgba(0,0,0,.18)`;
   }else{
     strip=`<div data-fbox style="position:absolute;left:${era===6?44:30}px;right:166px;top:22px;height:92px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${heading(K.ink,K.soft,K.acc)}</div>
       ${seatTile(30,22,"transparent",K.acc,K.soft,`border:2px solid ${rgba(K.acc,.7)};border-radius:14px`)}
       <div style="position:absolute;left:${era===6?44:30}px;right:30px;top:126px;height:2px;background:${K.acc}"></div>
       ${era===6?`<div style="position:absolute;left:0;top:0;bottom:0;width:18px;background:linear-gradient(180deg,${K.acc},${K.light} 60%,${K.acc})"></div>`:""}`;
-    winTop=150;winH=510;winRad="44px";
+    winTop=146;winH=572;winRad="32px";
     const bez=dark?"#3a3d44":"#edeae4";
-    frame=`0 0 0 9px ${bez},0 0 0 10px rgba(0,0,0,.12),0 12px 28px 6px rgba(0,0,0,.16)`;
+    frame=`0 0 0 9px ${bez},0 0 0 10px rgba(0,0,0,.12),0 10px 22px 4px rgba(0,0,0,.16)`;
   }
   /* the poster is the hero: whole, 2:3, on the cabin wall inside the window frame; the logo sits in the column beside it */
-  const PD=18,pH=G==="jet"?440:winH-2*PD,pW=Math.round(pH*2/3);
+  const PD=10,pH=G==="jet"?552:winH-2*PD,pW=Math.round(pH*2/3);
   if(G!=="jet")winW=pW+2*PD;
-  const winL=G==="jet"?0:G==="wide"?48:(G==="mod"&&era===6?46:32);
-  const posL=G==="jet"?30:PD,posT=G==="jet"?150:PD;
+  const winL=G==="jet"?0:G==="wide"?30:(G==="mod"&&era===6?36:30);
+  const posL=G==="jet"?24:PD,posT=G==="jet"?140:PD;
   const wall=G==="jet"?`linear-gradient(180deg,${liv},${K.deep})`:K.deep;
-  const posterBox=`<div style="position:absolute;left:${posL}px;top:${posT}px;width:${pW}px;height:${pH}px;overflow:hidden;background:#222;box-shadow:0 0 0 ${G==="jet"?4:2}px #fffaf0,0 6px 16px rgba(0,0,0,.45)">
-        ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>`;
+  const posterBox=`<div style="position:absolute;left:${posL}px;top:${posT}px;width:${pW}px;height:${pH}px;overflow:hidden;background:#222;z-index:2;box-shadow:0 0 0 ${G==="jet"?4:2}px #fffaf0,0 6px 16px rgba(0,0,0,.45)">
+        ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t,false)}</div>`;
   const win=`<div style="position:absolute;left:${winL}px;top:${winTop}px;width:${winW}px;height:${winH}px;border-radius:${winRad};overflow:hidden;background:${wall};box-shadow:${frame}">
-      ${posterBox}</div>${winExtra}`;
-  const ring=G==="jet"?26:G==="wide"?40:G==="prop"?30:26;
-  const colX=G==="jet"?posL+pW+30:winL+winW+ring,colW=W-28-colX,onWall=G==="jet";
-  const lp=logoPanel(ctx,{maxW:colW-30,maxH:90,center:true,dark:rgba(K.deep,.92),light:rgba(dark?"#f1efe9":"#fffdf8",.96),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f1efe9":"#fffdf8",.95),fbK:K.acc,
+      ${winExtra}${posterBox}</div>`;
+  const ring=G==="jet"?0:G==="wide"?14:10;
+  const colX=G==="jet"?posL+pW+26:winL+winW+ring+14,colW=W-24-colX,onWall=G==="jet";
+  const bz=G==="jet"?730:winTop+winH+ring+10;
+  const lp=logoPanel(ctx,{maxW:colW-24,maxH:90,center:true,dark:rgba(K.deep,.92),light:rgba(dark?"#f1efe9":"#fffdf8",.96),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f1efe9":"#fffdf8",.95),fbK:K.acc,
     titleFont:`${L.dw} 40px ${D}`,titleCol:"#141414",under:`${esc(ctx.f.year)}`,underFont:`700 14px/1.2 ${B};letter-spacing:.16em;text-transform:uppercase`,
     style:`position:relative;box-sizing:border-box;padding:12px 12px 10px;text-align:center;border-radius:${era>=6?14:G==="prop"?0:4}px;box-shadow:0 6px 16px rgba(0,0,0,.4)${G==="prop"?`,inset 0 0 0 3px ${rgba(K.acc,.5)}`:""}`});
   const col=`<div style="position:absolute;left:${colX}px;width:${colW}px;top:${G==="jet"?posT:winTop}px;height:${G==="jet"?pH:winH}px;display:flex;flex-direction:column;justify-content:center;gap:14px;z-index:4">
       ${kick("Now showing",onWall?K.light:K.acc,"center")}${lp}</div>`;
-  const note=`<div data-fbox style="position:absolute;left:28px;width:270px;top:700px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?24:30}px;overflow:hidden">
+  const note=`<div data-fbox style="position:absolute;left:28px;width:270px;top:${bz}px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?24:30}px;overflow:hidden">
     ${kick("From the flight deck")}
     <div data-fs="14" style="font:italic 400 18px/1.3 ${B};color:${K.ink};margin-top:7px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="20" style="font:400 32px/1.05 ${S};color:${K.acc};text-align:right;margin-top:2px">${esc(F.note.by)}</div></div>`;
   const drinks=(menu.d||[]).slice(0,3);
-  const trolley=`<div style="position:absolute;left:314px;right:28px;top:694px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?22:28}px;border-left:1px solid ${rgba(K.ink,.3)};padding-left:16px">
+  const trolley=`<div style="position:absolute;left:314px;right:28px;top:${bz-6}px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?22:28}px;border-left:1px solid ${rgba(K.ink,.3)};padding-left:16px">
     <div data-fbox style="position:absolute;left:16px;right:0;top:6px;bottom:0;overflow:hidden">
     ${kick(fm?"From the juice trolley":"From the trolley")}
     ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="16" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(dry(it.n))}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
