@@ -676,7 +676,7 @@ const card=document.createElement("div");card.className="mcard";preview.appendCh
 const prep=document.createElement("div");prep.className="mcard";prep.hidden=true;preview.appendChild(prep);
 function scalePreview(){const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform=`scale(${kp})`;preview.style.height=(tab==="prep"?1123*kp:ch*kc)+"px"}
 let tab="menu";
-function setTab(t){tab=t;if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current)fitPrep(prep);scalePreview();applyPhone()}
+function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current)fitPrep(prep);scalePreview();applyPhone()}
 $("tabMenu").addEventListener("click",()=>setTab("menu"));
 $("tabPrep").addEventListener("click",()=>setTab("prep"));
 window.addEventListener("resize",()=>{scalePreview();applyPhone()});
@@ -726,7 +726,7 @@ function planShopping(f){
   }
   return order.map(key=>{const t=tally[key];const txt=t.q==null?t.item:(t.u==="#"||t.u===""?planQty(t.q,"")+" "+planPlural(t.item,t.q):planQty(t.q,t.u)+" "+t.item);return txt+"@"+t.a});
 }
-const planMin=m=>m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
+const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days")+" ahead")(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr, start the day before":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
 function planHTML(f){
   const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks"};
   return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">-</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
@@ -752,8 +752,8 @@ function prepHTML2(f,menu){
 }
 function planWire(f){
   const box=$("planner");if(!box)return;
-  if(!f||!f._r2||!f._r2.dishes||!f._r2.dishes.length){box.hidden=true;box.innerHTML="";return}
-  planLoad(f);box.hidden=false;box.innerHTML=planHTML(f);
+  if(!f||!f._r2||!f._r2.dishes||!f._r2.dishes.length){box.hidden=true;box.dataset.has="";box.innerHTML="";return}
+  planLoad(f);box.dataset.has="1";box.hidden=tab!=="prep";box.innerHTML=planHTML(f);
   const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
   box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(24,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo()};
   box.onchange=e=>{const n=e.target.dataset.dish;if(n==null)return;if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1;redo()};
@@ -1607,7 +1607,9 @@ async function renderCanvas(src,forPrint){
       if(el.tagName==="IMG"&&/^data:image\/svg/.test(el.getAttribute("src")||""))el.style.visibility="hidden";
       if(el.tagName&&el.tagName.toLowerCase()==="svg")el.style.visibility="hidden";
     });
-    return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true});
+    /* only copy the export stage into html2canvas's working page: the video shop alone holds hundreds of posters, and waiting on them made a PDF take a minute */
+    const keep=el=>el===document.head||document.head.contains(el)||el.tagName==="STYLE"||el.tagName==="LINK"||el.contains(stage)||stage.contains(el);
+    return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true,ignoreElements:el=>!keep(el)});
   }finally{stage.remove()}
 }
 const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
