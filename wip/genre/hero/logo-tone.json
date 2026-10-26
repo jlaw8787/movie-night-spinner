@@ -1,350 +1,698 @@
 {
 "Ant-Man (2015)": {
-"tone": "dark",
-"y": 52
+"bad": {
+"dark": 0.3,
+"light": 0.02,
+"mid": 0.81
+},
+"panel": "light"
 },
 "Ant-Man and the Wasp (2018)": {
-"tone": "mid",
-"y": 103
+"bad": {
+"dark": 0.11,
+"light": 0.22,
+"mid": 0.78
+},
+"panel": "dark"
 },
 "Ant-Man and the Wasp: Quantumania (2023)": {
-"tone": "light",
-"y": 210
+"bad": {
+"dark": 0.04,
+"light": 0.78,
+"mid": 0.22
+},
+"panel": "dark"
 },
 "Aquaman (2018)": {
-"tone": "light",
-"y": 243
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.01
+},
+"panel": "dark"
 },
 "Avengers: Age of Ultron (2015)": {
-"tone": "dark",
-"y": 84
+"bad": {
+"dark": 0.29,
+"light": 0.05,
+"mid": 0.76
+},
+"panel": "light"
 },
 "Avengers: Endgame (2019)": {
-"tone": "dark",
-"y": 84
+"bad": {
+"dark": 0.42,
+"light": 0.03,
+"mid": 0.64
+},
+"panel": "light"
 },
 "Avengers: Infinity War (2018)": {
-"tone": "mid",
-"y": 117
+"bad": {
+"dark": 0.17,
+"light": 0.15,
+"mid": 0.79
+},
+"panel": "light"
 },
 "Batman & Robin (1997)": {
-"tone": "light",
-"y": 251
+"bad": {
+"dark": 0.0,
+"light": 0.98,
+"mid": 0.02
+},
+"panel": "dark"
 },
 "Batman (1989)": {
-"tone": "dark",
-"y": 50
+"bad": {
+"dark": 0.7,
+"light": 0.14,
+"mid": 0.21
+},
+"panel": "light"
 },
 "Batman Begins (2005)": {
-"tone": "dark",
-"y": 59
+"bad": {
+"dark": 0.69,
+"light": 0.14,
+"mid": 0.19
+},
+"panel": "light"
 },
 "Batman Forever (1995)": {
-"tone": "light",
-"y": 201
+"bad": {
+"dark": 0.11,
+"light": 0.74,
+"mid": 0.18
+},
+"panel": "dark"
 },
 "Batman v Superman: Dawn of Justice (2016)": {
-"tone": "dark",
-"y": 55
+"bad": {
+"dark": 0.77,
+"light": 0.04,
+"mid": 0.23
+},
+"panel": "light"
 },
 "Big Hero 6 (2014)": {
-"tone": "light",
-"y": 185
+"bad": {
+"dark": 0.0,
+"light": 0.64,
+"mid": 0.38
+},
+"panel": "dark"
 },
 "Black Panther (2018)": {
-"tone": "dark",
-"y": 80
+"bad": {
+"dark": 0.54,
+"light": 0.07,
+"mid": 0.5
+},
+"panel": "light"
 },
 "Black Panther: Wakanda Forever (2022)": {
-"tone": "light",
-"y": 178
+"bad": {
+"dark": 0.04,
+"light": 0.63,
+"mid": 0.43
+},
+"panel": "dark"
 },
 "Black Widow (2021)": {
-"tone": "light",
-"y": 216
+"bad": {
+"dark": 0.0,
+"light": 0.94,
+"mid": 0.09
+},
+"panel": "dark"
 },
 "Blade (1998)": {
-"tone": "dark",
-"y": 85
+"bad": {
+"dark": 0.28,
+"light": 0.08,
+"mid": 0.76
+},
+"panel": "light"
 },
 "Blue Beetle (2023)": {
-"tone": "light",
-"y": 153
+"bad": {
+"dark": 0.1,
+"light": 0.48,
+"mid": 0.52
+},
+"panel": "dark"
 },
 "Captain America: Brave New World (2025)": {
-"tone": "light",
-"y": 152
+"bad": {
+"dark": 0.09,
+"light": 0.53,
+"mid": 0.41
+},
+"panel": "dark"
 },
 "Captain America: Civil War (2016)": {
-"tone": "light",
-"y": 219
+"bad": {
+"dark": 0.07,
+"light": 0.83,
+"mid": 0.12
+},
+"panel": "dark"
 },
 "Captain America: The First Avenger (2011)": {
-"tone": "light",
-"y": 191
+"bad": {
+"dark": 0.05,
+"light": 0.73,
+"mid": 0.29
+},
+"panel": "dark"
 },
 "Captain America: The Winter Soldier (2014)": {
-"tone": "light",
-"y": 166
+"bad": {
+"dark": 0.2,
+"light": 0.55,
+"mid": 0.3
+},
+"panel": "dark"
 },
 "Captain Marvel (2019)": {
-"tone": "dark",
-"y": 80
+"bad": {
+"dark": 0.36,
+"light": 0.05,
+"mid": 0.75
+},
+"panel": "light"
 },
 "Deadpool & Wolverine (2024)": {
-"tone": "mid",
-"y": 99
+"bad": {
+"dark": 0.46,
+"light": 0.27,
+"mid": 0.4
+},
+"panel": "light"
 },
 "Deadpool (2016)": {
-"tone": "dark",
-"y": 47
+"bad": {
+"dark": 0.79,
+"light": 0.0,
+"mid": 0.4
+},
+"panel": "light"
 },
 "Deadpool 2 (2018)": {
-"tone": "dark",
-"y": 43
+"bad": {
+"dark": 0.69,
+"light": 0.0,
+"mid": 0.43
+},
+"panel": "light"
 },
 "Dick Tracy (1990)": {
-"tone": "mid",
-"y": 128
+"bad": {
+"dark": 0.02,
+"light": 0.4,
+"mid": 0.6
+},
+"panel": "dark"
 },
 "Doctor Strange (2016)": {
-"tone": "mid",
-"y": 132
+"bad": {
+"dark": 0.25,
+"light": 0.37,
+"mid": 0.49
+},
+"panel": "dark"
 },
 "Doctor Strange in the Multiverse of Madness (2022)": {
-"tone": "mid",
-"y": 95
+"bad": {
+"dark": 0.0,
+"light": 0.22,
+"mid": 0.78
+},
+"panel": "dark"
 },
 "Eternals (2021)": {
-"tone": "light",
-"y": 166
+"bad": {
+"dark": 0.0,
+"light": 0.46,
+"mid": 0.67
+},
+"panel": "dark"
 },
 "Fantastic Four (2005)": {
-"tone": "mid",
-"y": 146
+"bad": {
+"dark": 0.24,
+"light": 0.48,
+"mid": 0.4
+},
+"panel": "dark"
 },
 "Guardians of the Galaxy (2014)": {
-"tone": "mid",
-"y": 132
+"bad": {
+"dark": 0.06,
+"light": 0.1,
+"mid": 0.92
+},
+"panel": "dark"
 },
 "Guardians of the Galaxy Vol. 2 (2017)": {
-"tone": "mid",
-"y": 118
+"bad": {
+"dark": 0.14,
+"light": 0.19,
+"mid": 0.74
+},
+"panel": "dark"
 },
 "Guardians of the Galaxy Vol. 3 (2023)": {
-"tone": "light",
-"y": 255
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "Hancock (2008)": {
-"tone": "light",
-"y": 152
+"bad": {
+"dark": 0.32,
+"light": 0.53,
+"mid": 0.21
+},
+"panel": "mid"
 },
 "Hellboy (2004)": {
-"tone": "dark",
-"y": 86
+"bad": {
+"dark": 0.02,
+"light": 0.05,
+"mid": 0.97
+},
+"panel": "dark"
 },
 "Iron Man (2008)": {
-"tone": "mid",
-"y": 128
+"bad": {
+"dark": 0.23,
+"light": 0.28,
+"mid": 0.61
+},
+"panel": "dark"
 },
 "Iron Man 2 (2010)": {
-"tone": "dark",
-"y": 59
+"bad": {
+"dark": 0.69,
+"light": 0.1,
+"mid": 0.25
+},
+"panel": "light"
 },
 "Iron Man 3 (2013)": {
-"tone": "light",
-"y": 255
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "Joker (2019)": {
-"tone": "light",
-"y": 255
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "Justice League (2017)": {
-"tone": "light",
-"y": 236
+"bad": {
+"dark": 0.02,
+"light": 0.92,
+"mid": 0.08
+},
+"panel": "dark"
 },
 "Kick-Ass (2010)": {
-"tone": "light",
-"y": 195
+"bad": {
+"dark": 0.0,
+"light": 0.93,
+"mid": 0.12
+},
+"panel": "dark"
 },
 "Logan (2017)": {
-"tone": "light",
-"y": 249
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "Man of Steel (2013)": {
-"tone": "dark",
-"y": 61
+"bad": {
+"dark": 0.68,
+"light": 0.06,
+"mid": 0.33
+},
+"panel": "light"
 },
 "Megamind (2010)": {
-"tone": "mid",
-"y": 136
+"bad": {
+"dark": 0.25,
+"light": 0.34,
+"mid": 0.49
+},
+"panel": "dark"
 },
 "Shang-Chi and the Legend of the Ten Rings (2021)": {
-"tone": "dark",
-"y": 60
+"bad": {
+"dark": 0.58,
+"light": 0.02,
+"mid": 0.72
+},
+"panel": "light"
 },
 "Shazam! (2019)": {
-"tone": "dark",
-"y": 81
+"bad": {
+"dark": 0.32,
+"light": 0.1,
+"mid": 0.65
+},
+"panel": "light"
 },
 "Spider-Man (2002)": {
-"tone": "mid",
-"y": 145
+"bad": {
+"dark": 0.28,
+"light": 0.49,
+"mid": 0.27
+},
+"panel": "mid"
 },
 "Spider-Man 2 (2004)": {
-"tone": "light",
-"y": 193
+"bad": {
+"dark": 0.04,
+"light": 0.71,
+"mid": 0.37
+},
+"panel": "dark"
 },
 "Spider-Man 3 (2007)": {
-"tone": "light",
-"y": 253
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "Spider-Man: Far From Home (2019)": {
-"tone": "mid",
-"y": 105
+"bad": {
+"dark": 0.3,
+"light": 0.22,
+"mid": 0.52
+},
+"panel": "light"
 },
 "Spider-Man: Homecoming (2017)": {
-"tone": "mid",
-"y": 104
+"bad": {
+"dark": 0.4,
+"light": 0.29,
+"mid": 0.37
+},
+"panel": "light"
 },
 "Spider-Man: Into the Spider-Verse (2018)": {
-"tone": "dark",
-"y": 48
+"bad": {
+"dark": 0.49,
+"light": 0.0,
+"mid": 0.64
+},
+"panel": "light"
 },
 "Spider-Man: No Way Home (2021)": {
-"tone": "light",
-"y": 151
+"bad": {
+"dark": 0.22,
+"light": 0.49,
+"mid": 0.36
+},
+"panel": "dark"
 },
 "Superman (1978)": {
-"tone": "light",
-"y": 165
+"bad": {
+"dark": 0.08,
+"light": 0.48,
+"mid": 0.51
+},
+"panel": "dark"
 },
 "Superman (2025)": {
-"tone": "light",
-"y": 255
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "The Amazing Spider-Man (2012)": {
-"tone": "light",
-"y": 186
+"bad": {
+"dark": 0.12,
+"light": 0.69,
+"mid": 0.24
+},
+"panel": "dark"
 },
 "The Avengers (2012)": {
-"tone": "light",
-"y": 215
+"bad": {
+"dark": 0.03,
+"light": 0.86,
+"mid": 0.14
+},
+"panel": "dark"
 },
 "The Batman (2022)": {
-"tone": "dark",
-"y": 63
+"bad": {
+"dark": 0.29,
+"light": 0.0,
+"mid": 0.76
+},
+"panel": "light"
 },
 "The Crow (1994)": {
-"tone": "light",
-"y": 255
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "The Dark Knight (2008)": {
-"tone": "mid",
-"y": 110
+"bad": {
+"dark": 0.37,
+"light": 0.28,
+"mid": 0.44
+},
+"panel": "light"
 },
 "The Dark Knight Rises (2012)": {
-"tone": "light",
-"y": 203
+"bad": {
+"dark": 0.09,
+"light": 0.74,
+"mid": 0.21
+},
+"panel": "dark"
 },
 "The Fantastic Four: First Steps (2025)": {
-"tone": "light",
-"y": 254
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "The Flash (2023)": {
-"tone": "dark",
-"y": 62
+"bad": {
+"dark": 0.54,
+"light": 0.04,
+"mid": 0.46
+},
+"panel": "light"
 },
 "The Incredible Hulk (2008)": {
-"tone": "mid",
-"y": 125
+"bad": {
+"dark": 0.38,
+"light": 0.42,
+"mid": 0.27
+},
+"panel": "mid"
 },
 "The Incredibles (2004)": {
-"tone": "light",
-"y": 255
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "The Marvels (2023)": {
-"tone": "light",
-"y": 187
+"bad": {
+"dark": 0.12,
+"light": 0.69,
+"mid": 0.26
+},
+"panel": "dark"
 },
 "The Mask (1994)": {
-"tone": "mid",
-"y": 125
+"bad": {
+"dark": 0.2,
+"light": 0.15,
+"mid": 0.74
+},
+"panel": "light"
 },
 "The Rocketeer (1991)": {
-"tone": "light",
-"y": 170
+"bad": {
+"dark": 0.0,
+"light": 0.37,
+"mid": 0.68
+},
+"panel": "dark"
 },
 "The Suicide Squad (2021)": {
-"tone": "light",
-"y": 255
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "The Wolverine (2013)": {
-"tone": "light",
-"y": 255
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "Thor (2011)": {
-"tone": "dark",
-"y": 72
+"bad": {
+"dark": 0.22,
+"light": 0.0,
+"mid": 0.86
+},
+"panel": "light"
 },
 "Thor: Love and Thunder (2022)": {
-"tone": "mid",
-"y": 107
+"bad": {
+"dark": 0.44,
+"light": 0.28,
+"mid": 0.37
+},
+"panel": "light"
 },
 "Thor: Ragnarok (2017)": {
-"tone": "light",
-"y": 255
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "Thor: The Dark World (2013)": {
-"tone": "dark",
-"y": 75
+"bad": {
+"dark": 0.61,
+"light": 0.06,
+"mid": 0.41
+},
+"panel": "light"
 },
 "Thunderbolts* (2025)": {
-"tone": "light",
-"y": 176
+"bad": {
+"dark": 0.0,
+"light": 0.53,
+"mid": 0.54
+},
+"panel": "dark"
 },
 "Unbreakable (2000)": {
-"tone": "light",
-"y": 213
+"bad": {
+"dark": 0.01,
+"light": 0.86,
+"mid": 0.18
+},
+"panel": "dark"
 },
 "Venom (2018)": {
-"tone": "dark",
-"y": 87
+"bad": {
+"dark": 0.51,
+"light": 0.14,
+"mid": 0.42
+},
+"panel": "light"
 },
 "Venom: Let There Be Carnage (2021)": {
-"tone": "mid",
-"y": 135
+"bad": {
+"dark": 0.25,
+"light": 0.39,
+"mid": 0.46
+},
+"panel": "dark"
 },
 "Watchmen (2009)": {
-"tone": "light",
-"y": 221
+"bad": {
+"dark": 0.0,
+"light": 1.0,
+"mid": 0.0
+},
+"panel": "dark"
 },
 "Wonder Woman (2017)": {
-"tone": "light",
-"y": 209
+"bad": {
+"dark": 0.0,
+"light": 0.99,
+"mid": 0.12
+},
+"panel": "dark"
 },
 "Wonder Woman 1984 (2020)": {
-"tone": "light",
-"y": 170
+"bad": {
+"dark": 0.0,
+"light": 0.51,
+"mid": 0.57
+},
+"panel": "dark"
 },
 "X-Men (2000)": {
-"tone": "mid",
-"y": 144
+"bad": {
+"dark": 0.21,
+"light": 0.45,
+"mid": 0.49
+},
+"panel": "dark"
 },
 "X-Men Origins: Wolverine (2009)": {
-"tone": "mid",
-"y": 128
+"bad": {
+"dark": 0.24,
+"light": 0.3,
+"mid": 0.54
+},
+"panel": "dark"
 },
 "X-Men: Days of Future Past (2014)": {
-"tone": "light",
-"y": 166
+"bad": {
+"dark": 0.07,
+"light": 0.53,
+"mid": 0.51
+},
+"panel": "dark"
 },
 "X-Men: First Class (2011)": {
-"tone": "light",
-"y": 168
+"bad": {
+"dark": 0.07,
+"light": 0.46,
+"mid": 0.58
+},
+"panel": "dark"
 },
 "X2 (2003)": {
-"tone": "light",
-"y": 198
+"bad": {
+"dark": 0.06,
+"light": 0.79,
+"mid": 0.21
+},
+"panel": "dark"
 }
 }

@@ -85,7 +85,7 @@ function front(f,poster,stills,x){
   const hero=`<div style="position:absolute;left:28px;top:208px;width:760px;padding:8px 8px 0;box-sizing:border-box;background:${C.paper};box-shadow:0 16px 36px rgba(0,0,0,.65)">
       <div style="position:relative;outline:2px solid ${K.red};outline-offset:-2px;height:470px;overflow:hidden;background:#222">${heroImg}</div>
       <div style="font:italic 400 17px/1 ${SERIF};color:${C.ink};padding:9px 4px 10px;display:flex;justify-content:space-between"><span>Channel 13, the late show. The set behind the counter stays on all night.</span><span style="font:700 14px/17px ${SANS};letter-spacing:.14em;color:${C.mute};font-style:normal">${still?"STILL":"POSTER"}: TMDB</span></div></div>`;
-  const P=fl&&fl.prop,prop=P?`<div style="position:absolute;left:14px;top:192px;width:214px;box-sizing:border-box;transform:rotate(-3deg);z-index:3;padding:10px 13px;box-shadow:0 8px 20px rgba(0,0,0,.55);${
+  const P=fl&&fl.prop,prop=P?`<div style="position:absolute;left:14px;top:236px;width:214px;box-sizing:border-box;transform:rotate(-3deg);z-index:3;padding:10px 13px;box-shadow:0 8px 20px rgba(0,0,0,.55);${
       P.kind==="badge"?`background:${C.paper};border:2px solid ${K.red};outline:1px solid ${K.red};outline-offset:-7px;border-radius:10px;text-align:center`
       :P.kind==="receipt"?`background:#fbfaf6;border-top:1.5px dashed ${C.mute};border-bottom:1.5px dashed ${C.mute}`
       :`background:${C.paper};border-left:6px solid ${K.red}`}">
@@ -94,7 +94,7 @@ function front(f,poster,stills,x){
   /* the film's own logo in its own colours, on a dark plate or a light enamel plate (horrorFit picks); set type if no logo */
   const lg=x.logo&&x.logo[0]?x.logo:null,ts=titleSize(f.title,420,2,80,40);
   let logoHTML="";
-  if(lg){const ar=(+lg[1]||4)/(+lg[2]||1),w=Math.min(400,96*ar),h=w/ar;
+  if(lg){const ar=(+lg[1]||4)/(+lg[2]||1),w=Math.min(318,96*ar),h=w/ar;
     logoHTML=`<div data-h="plate" style="display:inline-block;padding:10px 16px;border-radius:3px;background:rgba(6,8,10,.62);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)"><img data-h="logo" alt="${title}" crossorigin="anonymous" src="${IMG}w500${lg[0]}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"></div>`}
   const info=`<div data-h="info" style="position:absolute;left:44px;right:296px;top:738px;bottom:50px;display:flex;flex-direction:column;justify-content:center;gap:10px">
       <div style="white-space:nowrap;font:700 17px/1 ${SANS};letter-spacing:.18em;color:${K.neon};text-transform:uppercase">Tonight on the late show</div>
@@ -112,9 +112,9 @@ function front(f,poster,stills,x){
 
 /* the back: a laminated menu in a stitched vinyl sleeve, a full-width still across the top (over 25 percent of the face) */
 function topStill(src,h,venue,kick,head,size){
-  return `<div style="position:absolute;left:12px;right:12px;top:12px;height:${h}px;overflow:hidden;background:${C.night}">
+  return `<div data-h="band" style="position:absolute;left:12px;right:12px;top:12px;height:${h}px;overflow:hidden;background:${C.night}">
     ${src?`<img alt="" crossorigin="anonymous" src="${IMG}w1280${src}" style="width:100%;height:100%;object-fit:cover;display:block">`:""}
-    <div style="position:absolute;left:0;right:0;bottom:0;height:${Math.round(h*.55)}px;background:linear-gradient(transparent,rgba(8,10,13,.88))"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(transparent,rgba(8,10,13,.88))"></div>
     <div style="position:absolute;left:32px;bottom:22px">
       <div style="font:600 16px/1 ${SANS};letter-spacing:.3em;color:${C.bone};margin-bottom:10px">${kick}</div>
       <div style="font:400 ${size}px/1 ${DISP};letter-spacing:.04em">${neon(head,size,false)}</div></div>
@@ -184,7 +184,7 @@ function horrorFit(rootEl){
         for(let i=0;i<d.length;i+=4)if(d[i+3]>128){sum+=(.2126*d[i]+.7152*d[i+1]+.0722*d[i+2])/255;n++}
         if(n&&sum/n<.4){plate.style.background="#ece6d6";plate.style.boxShadow="0 6px 16px rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.15)"}}catch(e){}
         const ar=lg.naturalWidth/lg.naturalHeight;let h=lg.offsetHeight;
-        while(over()&&h>56){h-=8;lg.style.height=h+"px";lg.style.width=Math.min(400,Math.round(h*ar))+"px"}}}
+        while(over()&&h>56){h-=8;lg.style.height=h+"px";lg.style.width=Math.min(318,Math.round(h*ar))+"px"}}}
     const t=fr.querySelector('[data-h="title"]');
     if(t){let s=+t.dataset.max;while((over()||t.scrollWidth>t.clientWidth+1)&&s>34){s-=2;t.style.fontSize=s+"px"}}
     const fd=fr.querySelector('[data-h="fdesc"]');let fs=20;while(over()&&fs>17){fs--;fd.style.fontSize=fs+"px"}
@@ -195,7 +195,10 @@ function horrorFit(rootEl){
       set("desc",e=>e.style.fontSize=L.desc+"px");set("sech",e=>e.style.fontSize=L.sech+"px");
       set("item",e=>e.style.paddingBottom=L.pad+"px");set("gap",e=>e.style.height=L.gap+"px");
       set("sec",e=>e.style.marginBottom=L.mb+"px")};
-    let L;for(L of LEVELS){apply(L);if(fits(m))break}
+    /* short menus: grow the top still (296 up to 470 tall) as far as the menu allows at full size */
+    const band=bk.querySelector('[data-h="band"]');let L=LEVELS[0],grown=false;apply(L);
+    for(let h=470;h>296;h-=16){band.style.height=h+"px";m.style.top=(h+38)+"px";if(fits(m)){grown=true;break}}
+    if(!grown){band.style.height="296px";m.style.top="334px";for(L of LEVELS){apply(L);if(fits(m))break}}
     /* still too long at dish 26 / note 20: never shrink further. Split sections into 2 item chunks
        (header repeated as "continued") and flow the last chunks onto as many continued faces as needed */
     if(!fits(m)){

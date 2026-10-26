@@ -21,6 +21,9 @@ vm.runInContext(rd('movie-menus.js') + ';this.E=MOVIE_MENU_EDITIONS', ctx);
 const EDITIONS = ctx.E;
 
 const C = ['S', 'M', 'W', 'K'];
+/* menu format library: per-film format, era, tone and identity (logo, poster colours, stills, flavour) */
+const rj = n => { try { return JSON.parse(rd(n)); } catch (e) { return {}; } };
+const LIB = { fmt: rj('data/film-format.json'), fl: rj('data/film-flavour.json'), pal: rj('data/film-palette.json'), logo: rj('data/film-logos.json'), st: rj('data/film-stills.json') };
 const lite = [], names = {}, notes = {};
 fs.mkdirSync(path.join(root, 'data/film'), { recursive: true });
 const keep = new Set();
@@ -35,6 +38,12 @@ for (const f of films) {
   notes[id] = C.map(k => (f[k] || []).map(d => d[1] || ''));
   const out = { T: f.T, D: f.D, P: f.P };
   for (const k of C) out[k] = f[k] || [];
+  const a = LIB.fmt[id];
+  if (a && a.format) {
+    o.lf = a.format;
+    out.lib = { fmt: a.format, era: a.era, tone: a.tone, flavour: LIB.fl[id] || null, palette: LIB.pal[id] || null, logo: LIB.logo[id] || null,
+      stills: (LIB.st[id] || []).filter(x => x[1] >= 1280).map(x => x[0]).slice(0, 8) };
+  }
   if (EDITIONS[id]) out.edition = EDITIONS[id];
   else {
     const rp = path.join(root, 'data/recipes', s + '.json');

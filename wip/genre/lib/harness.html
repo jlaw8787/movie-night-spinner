@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Format Harness</title>
+<style>body{margin:0;background:#8a857b;font-family:system-ui,sans-serif}.face{box-shadow:0 2px 12px rgba(0,0,0,.35)}</style>
+<script src="../../../tmdb-posters.js"></script>
+</head><body>
+<div id="preview" style="display:flex;flex-wrap:wrap;gap:30px;padding:30px"></div>
+<script>
+/* Shared harness for every format in the library.
+   Serve the repo root on :8795 and open /wip/genre/lib/harness.html?format=<id>&film=<Title (Year)>[&era=..&tone=..]
+   Each format file wip/genre/formats/<id>.js must register:
+     window.MENU_FORMATS["<id>"] = ctx => ({w, h, faces:[html, ...]})
+   ctx = {f, menu:{s,m,w,d:[{n,note}]}, poster, stills:[path...], logo:[path,w,h]|null, palette:{dark,accent}|null,
+          flavour:{venue,sign,note:{text,by},winks,prop:{kind,title,lines},number}|null, era, tone, img:(path,size)=>url}
+   Faces: inline styles only, no <style> blocks or head CSS classes, each face exactly w x h with overflow hidden. */
+window.MENU_FORMATS={};
+const q=new URLSearchParams(location.search);
+const slug=id=>id.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const j=async u=>{try{const r=await fetch(u);return r.ok?await r.json():{}}catch(e){return {}}};
+const img=(p,s="w1280")=>p?`https://image.tmdb.org/t/p/${s}${p}`:"";
+async function ctxFor(id){
+  const [films,stills,LOGOS,PAL,FLAV,FMT]=await Promise.all(["films","film-stills","film-logos","film-palette","film-flavour","film-format"].map(n=>j("../../../data/"+n+".json")));
+  const f=Object.assign({},(Array.isArray(films)?films:films.films).find(x=>`${x.title} (${x.year})`===id));f.id=id;
+  const d=await j("../../../data/film/"+slug(id)+".json");
+  Object.assign(f,{T:d.T,D:d.D,P:d.P,S:d.S,M:d.M,W:d.W,K:d.K});
+  const e=d.edition;if(e){f.T=e.tagline||f.T;f.P=e.cue||f.P}
+  const toItem=([n,note])=>({n,note});
+  const menu=JSON.parse(JSON.stringify(e&&e.menu||d.recipe||{s:(f.S||[]).slice(0,2).map(toItem),m:(f.M||[]).map(toItem),w:(f.W||[]).map(toItem),d:(f.K||[]).map(toItem)}));
+  const a=FMT[id]||{};
+  return {f,menu,poster:(window.TMDB_POSTERS||{})[id]||null,stills:(stills[id]||[]).filter(s=>s[1]>=1280).map(s=>s[0]).slice(0,8),
+    logo:LOGOS[id]||null,palette:PAL[id]||null,flavour:FLAV[id]||null,era:q.get("era")||a.era||"modern",tone:q.get("tone")||a.tone||"warm",img};
+}
+(async()=>{
+  const id=q.get("film"),fmt=q.get("format");
+  const s=document.createElement("script");s.src="../formats/"+fmt+".js";
+  s.onload=async()=>{const ctx=await ctxFor(id);const r=window.MENU_FORMATS[fmt](ctx);
+    document.getElementById("preview").innerHTML=r.faces.map((h,i)=>`<div class="face" data-face="${i}" style="position:relative;width:${r.w}px;height:${r.h}px;overflow:hidden;flex:none">${h}</div>`).join("");
+    document.body.dataset.ready="1"};
+  document.head.appendChild(s);
+})();
+</script></body></html>

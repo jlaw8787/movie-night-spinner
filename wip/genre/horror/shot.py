@@ -19,6 +19,7 @@ CHECK = r"""(()=>{const out=[];document.querySelectorAll('#preview .fx-face').fo
  const m=f.querySelector('[data-h="menu"]');if(m&&(m.scrollWidth>m.clientWidth+1||m.scrollHeight>m.clientHeight+1))out.push('face 2: menu columns overflow');
  const t=f.querySelector('[data-h="title"]');if(t){const b=t.closest('[data-h="info"]')||t.parentElement;if(b.scrollHeight>b.clientHeight+1)out.push('face 1: title box overflow')}});
  const sizes=[...document.querySelectorAll('#preview .fx-face *')].filter(e=>[...e.childNodes].some(n=>n.nodeType===3&&n.textContent.trim())&&e.offsetParent).map(e=>parseFloat(getComputedStyle(e).fontSize));
+ const inf=document.querySelector('#preview [data-h="info"]');if(inf){const r=inf.getBoundingClientRect();inf.querySelectorAll('*').forEach(e=>{const q=e.getBoundingClientRect();if(q.width&&q.right>r.right+2)out.push('face 1: info runs past its column: '+e.textContent.trim().slice(0,20))})}
  out.push('min font '+Math.min(...sizes)+'px');return out})()"""
 async def main():
     async with async_playwright() as p:

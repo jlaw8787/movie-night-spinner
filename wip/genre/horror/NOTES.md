@@ -38,8 +38,16 @@ genreCard(f, menu, poster, stills, {logo, palette, flavour}) takes the extras fr
 - Prop: a type-only slip, badge or receipt over the hero's top-left corner.
 - Number: goes in "Form No." on both faces. 2 digits become the cents of the first drink, 3 or 4 digits the price of the first main (Halloween 19.63).
 
+## Owner tweaks (Oct 26, locked)
+- Pictures: the front still's picture area is 744x470, 40.6 percent of the face. The back still runs full width across the top at 792x296 (27 percent), grows up to 470 tall when the menu leaves room, and carries the neon "THE MENU". The small band card and back filler photos are gone. Continued faces get one 240 tall still.
+- Venue world: rain on the window glass over the blurred view of the film (rain-glass.png). The venue sign is neon tubes on a dark raceway with a bright core, coloured halo and the tube's shadow, and one dead tube per sign. The back is a laminated menu in a stitched vinyl sleeve with hairline scratches, rubbed edges and a sheen (laminate-wear.png). Both textures are painted by paint.py as light and wear only, with no pictures or icons, in the same class as the house paper grain.
+- Logos: shown in their own colours on a plate. horrorFit reads the logo's luminance and uses a light enamel plate for dark logos (Night of the Living Dead) or a dark glass plate for light ones (Werewolf, Halloween). Set type appears only if the logo is missing or fails to load. Logos are capped at 318 wide so the year clears the storm notice.
+- Captions never name a scene. The front reads "Channel 13, the late show", the back "The window booth at {venue}, after midnight". Winks only appear where no picture sits: the storm notice and the "Overheard at the counter" fine print.
+- shot.py now also flags anything in the front text column that runs past its column (this caught the Halloween year).
+
 ## Known weak spots
 - Still picking is blind, so a still can be dark or off-tone. Night of the Living Dead's band still is a murky close-up.
 - The stress card's continued faces have no stills, because its synthetic id has no stills.
-- Winks are matched to stills blind, so a caption can describe a different moment from its picture (Silence: "Clarice Starling at Quantico" sits under Lecter).
 - Some poster accents are muted (Halloween brown), so their neon glows weakly.
+- On short menus the column split can leave about 200px empty under the shorter column (Silence). The still can't grow into it because the longer column already needs the height.
+- The sign kicker repeats the venue when flavour.sign equals flavour.venue (Werewolf).

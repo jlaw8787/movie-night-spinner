@@ -7,6 +7,14 @@
 - Page 2: folio header, a second still across the top ("ON THE BEAT"), then the menu as sections A to D in three balanced columns. Prices are lunch counter prices, and the first main carries the film year as its cents (Batman 7.89).
 - Page 3 only appears if the menu can't fit page 2 (stress test only). It gets a third still and "Continued" lines.
 
+## Owner tweaks (round 3)
+- Pictures: the front still is 760 wide (12px into each margin) and at least 456 tall, about 40 to 41 percent of the face. The page 2 still runs the full text width and at least 368 tall, 31 to 34 percent. One still per face.
+- Newsprint: newsprint.jpg (in this folder, built from the shared paper-grain.png plus fibre noise) sits under a vignette and the fold. The template reads it from `GENRE_HERO_ASSETS` (default "wip/genre/hero/"; the harness sets "").
+- Heavier masthead: a 6px rule, a bigger blackletter venue nameplate, and the dateline reversed out of a solid bar in the film's dark colour.
+- Press photo: slight contrast, a 3px halftone screen on top, an inner shade, and "STAFF PHOTO / TMDB".
+- Logos in their own colours on a panel: logo-tone.json (in this folder, all 87 hero films) records which panel (dark, light or mid) leaves the fewest logo pixels under 2.2:1 contrast. Measured once from the TMDB w300 logos; the app needs this file too.
+- Captions no longer name a scene: "A still from tonight's picture, <year>" on the front, "Another frame from <title>" on page 2. All winks moved to the "Also in this edition" line.
+
 ## Per-film lift (round 2)
 `genreCard(f, menu, poster, stills, x)`, where x = {logo, palette, flavour} is the film's entry from data/film-logos.json, film-palette.json and film-flavour.json. Every part falls back on its own.
 - Logo: the TMDB title logo (original size), printed as black ink (CSS brightness(0)) as the banner. Falls back to Oswald type when it's missing or would print under 58px tall (very wide logos, such as Spider-Man 2's at 1502x70).

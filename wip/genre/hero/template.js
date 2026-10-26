@@ -178,9 +178,10 @@ function genreCard(f,menu,poster,stills,x){
   /* the film's own title logo in its own colours, on a panel that suits it: dark panel for light logos, white panel for dark ones */
   let LG=null;
   if(logo&&logo[0]&&logo[1]&&logo[2]){const a=logo[1]/logo[2];let h=Math.min(a<4?104:86,(IW-48)/a);if(h>=44&&a>=1.1)LG={src:IMG+"original"+logo[0],h:Math.round(h),w:Math.round(h*a)}}
-  const tone=x.logoTone&&typeof x.logoTone.y==="number"?x.logoTone.y:200;
-  const darkPanel=tone>=120;
-  const panelBg=darkPanel?(hex(pal.dark)&&lum(hex(pal.dark))<.04?pal.dark:"#151412"):"#fbf9f3";
+  /* x.logoTone.panel comes from logo-tone.json: the panel (dark, light or mid) on which the fewest logo pixels lose contrast */
+  const panel=x.logoTone&&x.logoTone.panel||"dark";
+  const darkPanel=panel!=="light";
+  const panelBg=panel==="mid"?"#7d776c":darkPanel?(hex(pal.dark)&&lum(hex(pal.dark))<.04?pal.dark:"#151412"):"#fbf9f3";
   const B=banner(f.title||"",96);
   const tag=clean(f.T);
   const deckZ=22,deckL=tag?Math.min(2,wrap(sentence(tag),IW-40,s=>sw(s,deckZ,1)).length):0;
@@ -197,14 +198,14 @@ function genreCard(f,menu,poster,stills,x){
   const LW=2*CW+G,cue=sentence(f.P);
   /* below the fold: try roomy type first, then tighter, so the photo keeps its 40 percent */
   let noteZ=18,cueZ=18,below=0;
-  for(const z of [18,17,16]){
+  for(const z of [18,17,16,15]){
     noteZ=z;cueZ=z;
     const noteH=20+wrap(noteTxt,LW,s=>sw(s,z,1)*1.04).length*Math.ceil(z*1.3)+44;
     const cueH=cue?4+30+8+18+wrap(cue,CW-22,s=>sw(s,z)*1.04).length*Math.ceil(z*1.28)+6:0;
-    below=Math.max(noteH,cueH)+14;
-    if(BODY-capH-below>=470)break;
+    below=Math.max(noteH,cueH)+22;
+    if(BODY-capH-below>=456)break;
   }
-  const P1=Math.max(440,Math.min(540,BODY-capH-below));
+  const P1=Math.max(456,Math.min(540,BODY-capH-below)); /* the front still runs 12px into each margin: 760 x 456 or more is over 40 percent of the face */
 
   /* prop: the film's own paper object (ticket, slip, card), type only, tucked over the corner of the photo */
   const pr=fl&&fl.prop&&fl.prop.title?fl.prop:{kind:"slip",title:"Late Edition",lines:["Hot off the grill","Full menu inside"]};
@@ -223,7 +224,7 @@ function genreCard(f,menu,poster,stills,x){
     <div style="border-top:6px solid ${C.head};margin-top:5px"></div>
     <div style="height:72px;display:flex;align-items:center;justify-content:center;font-family:${FM};font-size:${Math.max(30,Math.min(70,Math.floor(700/(venue.length*.53))))}px;line-height:1;color:${C.head};white-space:nowrap;overflow:hidden">${esc(venue)}</div>
     <div style="background:${C.head};color:#f6f1e4;height:30px;display:flex;justify-content:space-between;align-items:center;padding:0 12px;font-family:${FB};font-size:15px;font-weight:700;letter-spacing:.14em;white-space:nowrap;overflow:hidden">
-      <span>VOL. ${esc(year.slice(-2))}, No. ${esc(num)}</span><span style="overflow:hidden;max-width:420px">${esc(sign.length>34?sign.slice(0,34).replace(/[ ,]+\S*$/,""):sign)}</span><span>FIVE CENTS</span></div>
+      <span>VOL. ${esc(year.slice(-2))}, No. ${esc(num)}</span><span style="overflow:hidden;max-width:430px;${sign.length>30?"font-size:14px;letter-spacing:.06em":""}">${esc(sign.length>42?sign.slice(0,42).replace(/[ ,]+\S*$/,""):sign)}</span><span>FIVE CENTS</span></div>
     <div style="border-top:1px solid ${C.head};margin-top:3px"></div>
   </header>
   <section style="height:${HEAD}px;box-sizing:border-box;padding-top:8px;text-align:center">
@@ -233,7 +234,7 @@ function genreCard(f,menu,poster,stills,x){
     ${tag?`<div style="margin:10px 20px 0;font-family:${FB};font-style:italic;font-size:${deckZ}px;line-height:28px;height:${deckL*28}px;overflow:hidden;color:${C.ink}">${esc(sentence(tag))}</div>`:""}
   </section>
   <main style="height:${BODY}px">
-    <div style="position:relative">${photo(pic1,IW,P1,`${f.title} (${year}) film still`,"38%")}${slip}</div>
+    <div style="position:relative;margin:0 -12px">${photo(pic1,IW+24,P1,`${f.title} (${year}) film still`,"38%")}${slip}</div>
     <div style="display:flex;justify-content:space-between;gap:16px;height:${capH}px;align-items:center;font-family:${FB};font-size:${capZ}px;color:${C.ink};white-space:nowrap;overflow:hidden">
       <span><b style="letter-spacing:.06em">TONIGHT'S FEATURE.</b> <i>A still from tonight's picture, ${esc(year)}.</i></span><span style="font-size:14px;letter-spacing:.12em;color:${C.soft}">STAFF PHOTO / TMDB</span></div>
     <div style="display:flex;border-top:3px solid ${C.head};padding-top:10px">
