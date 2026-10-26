@@ -30,3 +30,11 @@ template.js now also takes opts.logo (data/film-logos.json), opts.palette (data/
 - No flavour (Ratatouille, A Goofy Movie): Pip's Family Kitchen, the synopsis caption and a Clean Plate Club card. Logo and palette still apply.
 - Extreme menus: after the 1-line note clamp, notes are dropped altogether, so dish names and prices always fit.
 - Still open: Who Framed Roger Rabbit's drink note (Eddie's desk drawer bottle) needs a rewrite in the data. Its flavour venue "Ink and Paint Club" is a nightclub, which is also worth a look for a kids' placemat.
+
+## Owner tweaks round (Oct 26, locked)
+- Pictures: the hero still bleeds to the top left at 880x590 (40.2% of the 1344x960 face). The second still bleeds to the bottom left at 560x317 (about 13.5%, minus the prop tucked on its corner). It is four times the old size, but it is NOT 25% of the face: a single-face placemat cannot hold 40% plus 25% of photos and still fit the menu. Hitting 25% would need a two-face format.
+- Removed: the word search, the round year sticker and the photo-print frames. The logo panel now carries the year.
+- Movie world: the right column is the venue's own sign board (flavour venue and sign on the film's deep colour, with a lit gradient, texture and a keyline), then the menu in one column with ruled course heads.
+- Logo: always in its own colours, on a panel over the hero. genreFit() samples the logo's brightness and gives a dark logo a light panel.
+- Captions: none of them name a scene. The second still's label is "On the big screen tonight". Winks go to the prop and the fine print ("Table talk").
+- The second still sometimes comes back as promo key art rather than a frame from the film (A Goofy Movie). This could be filtered later by aspect ratio or a manual pick.

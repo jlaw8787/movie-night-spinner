@@ -3,6 +3,7 @@
 <title>Hero Genre Harness</title>
 <style>body{margin:0;background:#8a857b;font-family:system-ui,sans-serif}</style>
 <script src="../../../tmdb-posters.js"></script>
+<script>window.GENRE_HERO_ASSETS="";</script>
 <script src="template.js"></script>
 </head><body>
 <div id="preview" style="display:flex;flex-wrap:wrap;gap:30px;padding:30px"></div>
@@ -19,6 +20,7 @@ const q=new URLSearchParams(location.search);
   const stills=await (await fetch("../../../data/film-stills.json")).json();
   const j=async u=>{try{const r=await fetch(u);return r.ok?await r.json():{}}catch(e){return {}}};
   const [LOGOS,PAL,FLAV]=await Promise.all(["film-logos","film-palette","film-flavour"].map(n=>j("../../../data/"+n+".json")));
+  const TONE=await j("logo-tone.json");
   const R="../../../data/film/";
   async function load(id){
     const f=Object.assign({},films.find(x=>`${x.title} (${x.year})`===id));f.id=id;
@@ -33,7 +35,7 @@ const q=new URLSearchParams(location.search);
       let k=0;["s","m","w","d"].forEach(c=>{while(menu[c].length<4)menu[c].push(pool[k++%pool.length])});
       ["s","m","w","d"].forEach(c=>menu[c].forEach(it=>{if((it.note||"").length<60)it.note=(it.note+", made the long way, the way the counter has always done it, no shortcuts and no substitutions").slice(0,120).replace(/[ ,]+\S*$/,"")}));
     }
-    return {f,menu,poster:(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[id])||null,st:stills[id],x:{logo:LOGOS[id],palette:PAL[id],flavour:FLAV[id]}};
+    return {f,menu,poster:(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[id])||null,st:stills[id],x:{logo:LOGOS[id],palette:PAL[id],flavour:FLAV[id],logoTone:TONE[id]}};
   }
   let list=SAMPLES.slice();
   if(q.has("i"))list=[SAMPLES[+q.get("i")]];
