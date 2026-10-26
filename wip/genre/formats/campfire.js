@@ -60,7 +60,7 @@ function inks(pal,paper,fallback){
 }
 function rng(seed){let h=2166136261;for(const ch of String(seed))h=Math.imul(h^ch.charCodeAt(0),16777619);return()=>{h=Math.imul(h^h>>>15,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
 /* procedural paper and ink texture (filters, never pictures of things) */
-const noise=(freq,oct,rgb,a,seed=1,size=320)=>`url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='${freq}' numOctaves='${oct}' seed='${seed}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${(rgb[0]/255).toFixed(3)}  0 0 0 0 ${(rgb[1]/255).toFixed(3)}  0 0 0 0 ${(rgb[2]/255).toFixed(3)}  0 0 0 ${a} 0'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`)}")`;
+const noise=(freq,oct,rgb,a,seed=1,size=320)=>`url(&quot;data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='${freq}' numOctaves='${oct}' seed='${seed}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${(rgb[0]/255).toFixed(3)}  0 0 0 0 ${(rgb[1]/255).toFixed(3)}  0 0 0 0 ${(rgb[2]/255).toFixed(3)}  ${(a*2.6).toFixed(2)} 0 0 0 ${(-a*1.15).toFixed(2)}'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`)}&quot;)`;
 const HALFTONE=(o,step=4)=>`<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,${o}) 32%,transparent 36%);background-size:${step}px ${step}px;mix-blend-mode:multiply;pointer-events:none"></div>`;
 const SHEEN=o=>`<div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,${o}) 0%,rgba(255,255,255,0) 38%,rgba(255,255,255,0) 70%,rgba(255,255,255,${o*.5}) 100%);pointer-events:none"></div>`;
 /* era: type pairing group, print process, photo handling, price level */
@@ -159,7 +159,7 @@ function logoPass(root){
       try{const cv=document.createElement("canvas");cv.width=120;cv.height=Math.max(8,Math.round(120*lg.naturalHeight/lg.naturalWidth));
         const cx=cv.getContext("2d");cx.drawImage(lg,0,0,cv.width,cv.height);const d=cx.getImageData(0,0,cv.width,cv.height).data;
         let s=0,n=0;for(let i=0;i<d.length;i+=4)if(d[i+3]>128){s+=.2126*d[i]+.7152*d[i+1]+.0722*d[i+2];n++}
-        if(panel&&n){const want=(window.__fmtLift&&__fmtLift.logo(lg,.012,.82))||(s/n<118?"light":"dark");if(panel.dataset[want])panel.setAttribute("style",panel.dataset[want]);
+        if(panel&&n){const want=(window.__fmtLift&&__fmtLift.logo(lg,.012,.82))||(s/n<118?"light":"dark");if(panel.dataset[want])panel.setAttribute("style",panel.dataset[want].replace(/&quot;/g,'"'));
           panel.querySelectorAll("[data-pink]").forEach(e=>{e.style.color=want==="light"?e.dataset.pinkL:e.dataset.pinkD})}
       }catch(e){}
     };
@@ -220,11 +220,11 @@ function border(tone,col){
 function stock(P,tone,seed){
   /* kraft that reads as kraft: dark and pale long fibres, coarse flecks, cloudy pulp, a lit middle and handled edges */
   const wear=TONE[tone].wear,sm=/glossy|grand/.test(tone)?.6:1,bg=hex(P.bg),dk=mix(bg,BLACK,.42),lt=mix(bg,WHITE,.42),bn=mix(P.fib,BLACK,.2);
-  return`background-color:${P.bg};background-image:radial-gradient(ellipse 75% 60% at 46% 36%,rgba(255,238,205,${(.2*sm).toFixed(2)}),rgba(255,238,205,0) 70%),${noise(".95 .016",3,dk,(1.25*sm).toFixed(2),seed)},${noise(".75 .02",2,lt,(.95*sm).toFixed(2),seed+2)},${noise(".9 .05",2,P.spk,.8,seed+1)},${noise("1.3",1,bn,(.5*sm).toFixed(2),seed+4,220)},${noise(".009",4,dk,(.7+wear*.5).toFixed(2),seed+5,760)},${noise(".014",3,lt,.5,seed+6,640)};box-shadow:inset 0 0 ${60+wear*90}px rgba(40,22,6,${(.32+wear*.4).toFixed(2)}),inset 0 0 0 1px rgba(30,16,4,.35)`;
+  return`background-color:${P.bg};background-image:radial-gradient(ellipse 75% 60% at 46% 36%,rgba(255,238,205,${(.2*sm).toFixed(2)}),rgba(255,238,205,0) 70%),${noise(".9 .014",3,dk,(.36*sm).toFixed(2),seed)},${noise(".7 .02",2,lt,(.2*sm).toFixed(2),seed+2)},${noise(".9 .05",2,P.spk,.2,seed+1)},${noise("1.4",1,bn,(.32*sm).toFixed(2),seed+4,220)},${noise(".009",4,dk,(.26+wear*.2).toFixed(2),seed+5,760)},${noise(".014",3,lt,.1,seed+6,640)};box-shadow:inset 0 0 ${60+wear*90}px rgba(40,22,6,${(.32+wear*.4).toFixed(2)}),inset 0 0 0 1px rgba(30,16,4,.35)`;
 }
 function wearLayer(P,tone,seed){
   const w=TONE[tone].wear,lt=mix(hex(P.bg),WHITE,.25);
-  let s=`<div style="position:absolute;inset:0;pointer-events:none;background-image:${noise(".045 .07",3,lt,1,seed+9,600)},${noise(".95",1,lt,.9,seed+11)};opacity:${(w*.42).toFixed(2)}"></div>`;
+  let s=`<div style="position:absolute;inset:0;pointer-events:none;background-image:${noise(".045 .07",3,lt,.4,seed+9,600)},${noise(".95",1,lt,.3,seed+11)};opacity:${(w*.3).toFixed(2)}"></div>`;
   if(w>.7)s+=`<div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(94deg,transparent 49.4%,rgba(255,255,255,.16) 49.7%,rgba(0,0,0,.14) 50.1%,transparent 50.5%)"></div>`;
   return s;
 }
