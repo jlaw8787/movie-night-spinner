@@ -775,9 +775,9 @@ function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelector
   const lo=Math.max(14,Math.floor(fs*0.72));while(hid()&&fs>lo){fs-=1;e.style.fontSize=fs+"px";if(e.style.lineHeight)e.style.lineHeight=Math.round(lh*fs/parseFloat(cs.fontSize))+"px"}
   /* one-line labels a few pixels over: close the word gaps, then let it wrap to a second line */
   if(hid()&&cs.whiteSpace==="nowrap"){let ws=0;while(hid()&&ws>-3){ws-=0.5;e.style.wordSpacing=ws+"px"}if(hid()){e.style.whiteSpace="normal";e.style.textOverflow="clip"}}
-  /* last resort for plain fine print: drop whole sentences, then whole clauses; if it still cannot fit, hide the line rather than show a broken phrase */
+  /* last resort for plain fine print: drop whole sentences; if it still cannot fit, hide the line rather than show half a description */
   if(hid()&&e.children.length===0&&(+cs.webkitLineClamp>=2||(+cs.webkitLineClamp===1&&fs<=20))){let t=e.textContent.trim();const sent=t.match(/[^.!?]+[.!?]+/g);while(hid()&&sent&&sent.length>1){sent.pop();e.textContent=sent.join("").trim()}
-    const cl=e.textContent.trim().split(/,\s*/);while(hid()&&cl.length>1){cl.pop();e.textContent=cl.join(", ").replace(/[.!?]+$/,"")+"."}if(hid())e.style.visibility="hidden";}
+    if(hid())e.style.visibility="hidden";}
  })}
 function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:libTrim(it.note,100)}));return m}
 /* menu format library: one script per printed-menu format, fetched the first time a film needs it */
