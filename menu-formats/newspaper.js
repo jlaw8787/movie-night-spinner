@@ -256,74 +256,73 @@ root.MENU_FORMATS.newspaper=ctx=>{
         <span>Issue ${esc(num)}</span><span>${esc(clean(fl&&fl.sign)||"City newsstand and lunch counter")}</span><span>${esc(T.ed.charAt(0)+T.ed.slice(1).toLowerCase())}</span></div>`;
   }
 
-  /* headline: the film's logo in its own colours on a panel, or set type */
-  let LG=null;
-  if(logo&&logo[0]&&logo[1]&&logo[2]){const a=logo[1]/logo[2];let h=Math.min(a<4?100:84,(IW-48)/a);if(h>=44&&a>=1.1)LG={src:img(logo[0],"original"),h:Math.round(h),w:Math.round(h*a)}}
-  const B=bannerN(f.title||"",K==="classic"?84:96);
-  const tag=clean(f.T);
-  const deckZ=22,deckL=tag?Math.min(2,wrap(sentence(tag),IW-40,s=>sw(s,deckZ,1)*1.04).length):0;
-  const HEAD=8+22+8+(LG?LG.h+22:B.lines.length*Math.ceil(B.size*1.1))+(deckL?10+deckL*28:0)+10;
-  const FOOT=36,BODY=H-PY*2-MAST-HEAD-FOOT,capH=30;
+  /* ---------- front layout: poster whole on the left (about 40 percent of the face), everything else in a narrow right column ---------- */
+  const FOOT=36,MAXB=H-PY*2-MAST-FOOT,capH=30;
+  const P1=Math.min(736,MAXB-capH-6),PW=Math.round(P1*2/3),COL=IW-PW-16;
   const panelDark=hex(pal.dark)&&lum(hex(pal.dark))<.04?pal.dark:"#151412";
   const panelBorder=K==="classic"?`border:3px double ${C.ink};`:K==="modern"?"border:2px solid transparent;":`border:2px solid transparent;`;
-  const headline=LG?`<h1 data-dark="${panelDark}" data-light="#fbf9f3" data-mid="#7d776c" data-rule="${C.head}" style="margin:8px 0 0;height:${LG.h+22}px;box-sizing:border-box;padding:9px 0;background:${panelDark};${panelBorder}border-radius:${R+2}px;font-size:0;line-height:0;text-align:center"><img crossorigin="anonymous" onload="window.__npLogo&&window.__npLogo(this)" src="${esc(LG.src)}" alt="${esc(f.title)}" style="height:${LG.h}px;width:${LG.w}px;object-fit:contain"></h1>`
-    :`<h1 style="margin:8px 0 0;font-weight:${HW};font-family:${FD};font-size:${B.size}px;line-height:1.08;letter-spacing:${K==="modern"?"-.02em":"0"};color:${C.head};white-space:nowrap">${B.lines.map(esc).join("<br>")}</h1>`;
-
+  let LG=null;
+  if(logo&&logo[0]&&logo[1]&&logo[2]){const a=logo[1]/logo[2];const iw=COL-16;let h=Math.min(a<4?100:84,iw/a);if(h>=34&&a>=1.1)LG={src:img(logo[0],"original"),h:Math.round(h),w:Math.round(h*a)}}
+  /* set-type title for the narrow column: biggest size whose wrapped lines all fit */
+  const setTitle=()=>{const t=clean(f.title||"").toUpperCase(),ws=t.split(" ");
+    for(let z=(K==="classic"?44:48);z>=24;z-=2){const lines=[];let cur="";
+      for(const w of ws){const x=cur?cur+" "+w:w;if(cur&&gw(x,z)>COL-4){lines.push(cur);cur=w}else cur=x}
+      lines.push(cur);if(lines.length<=4&&lines.every(l=>gw(l,z)<=COL-4))return {lines,size:z}}
+    return {lines:ws,size:24}};
+  const B=setTitle();
+  const tag=clean(f.T);
   const by=clean(fl&&fl.note&&fl.note.by)||"Sal";
   const main=pick(1),drink=pick(3),snack=pick(0);
   let noteTxt=fl&&fl.note&&fl.note.text?sentence(fl.note.text):["Big night on the corner, folks.",main?`On the grill: ${main}.`:snack?`Up first: ${snack}.`:"",drink?`${drink}, first one on the house.`:""].filter(Boolean).join(" ");
-  const LW=2*CW+G,cue=sentence(f.P);
-  let noteZ=18,cueZ=18,below=0;
-  /* tight front (very long title): the note loses trailing sentences before the photo drops under 40 percent */
-  for(let guard=0;guard<4;guard++){
-  for(const z of [18,17,16,15]){
-    noteZ=z;cueZ=z;
-    const noteH=20+wrap(noteTxt,LW,s=>sw(s,z,1)*1.06).length*Math.ceil(z*1.3)+44;
-    const cueH=cue?4+30+8+18+wrap(cue,CW-22,s=>sw(s,z)*1.06).length*Math.ceil(z*1.28)+6:0;
-    below=Math.max(noteH,cueH)+22;
-    if(BODY-capH-below>=456)break;
-  }
-  if(BODY-capH-below>=456)break;
-  const parts=noteTxt.match(/[^.!?]+[.!?]+/g)||[noteTxt];if(parts.length<2)break;noteTxt=parts.slice(0,-1).join("").trim();
-  }
-  const P1=Math.max(456,Math.min(540,BODY-capH-below)); /* 784 x 456 or more: over 40 percent of the face */
-
+  const cue=sentence(f.P);
 
   /* prop: the film's own paper object, type only */
   const pr=fl&&fl.prop&&fl.prop.title?fl.prop:{kind:"slip",title:"Late Edition",lines:["Hot off the grill","Full menu inside"]};
   const ptitle=clean(pr.title).toUpperCase(),plines=(pr.lines||[]).map(clean).filter(Boolean).slice(0,3);
   const tz=Math.max(16,Math.min(24,Math.floor(170/gw(ptitle,1))));
   const edge=pr.kind==="ticket"?`border:1px solid ${C.ink};border-left:3px dashed ${C.ink};border-right:3px dashed ${C.ink}`:pr.kind==="card"?`border:2px solid ${C.ink}`:`border:1px solid ${C.ink}`;
-  const slip=`<div style="position:absolute;right:16px;bottom:18px;transform:rotate(${pr.kind==="card"?-T.rot:T.rot}deg);width:206px;background:${K==="modern"?"#ffffff":"#fbf7ec"};${edge};border-radius:${K==="modern"?6:0}px;box-shadow:0 4px 10px rgba(30,22,10,.35);padding:8px 12px 9px;box-sizing:border-box;text-align:center;font-family:${FB};color:${C.ink}">
-    <div style="border-top:2px solid ${C.red};border-bottom:2px solid ${C.red};padding:3px 0;font-family:${FD};font-weight:${HW};font-size:${tz}px;line-height:${tz+5}px;color:${C.red};${gw(ptitle,tz)>176?"white-space:normal":"white-space:nowrap"};overflow:hidden">${esc(ptitle)}</div>
+  const SLW=Math.min(206,COL-14);
+  const slipL=wrap(ptitle,SLW-24,s=>gw(s,tz)).length;
+  const slipH=14+slipL*(tz+5)+10+plines.length*19+31+14;
+  const slip=`<div style="position:relative;align-self:center;transform:rotate(${pr.kind==="card"?-T.rot:T.rot}deg);width:${SLW}px;flex:none;background:${K==="modern"?"#ffffff":"#fbf7ec"};${edge};border-radius:${K==="modern"?6:0}px;box-shadow:0 4px 10px rgba(30,22,10,.35);padding:8px 12px 9px;box-sizing:border-box;text-align:center;font-family:${FB};color:${C.ink}">
+    <div style="border-top:2px solid ${C.red};border-bottom:2px solid ${C.red};padding:3px 0;font-family:${FD};font-weight:${HW};font-size:${tz}px;line-height:${tz+5}px;color:${C.red};white-space:normal;overflow:hidden">${esc(ptitle)}</div>
     <div style="font-size:15px;line-height:19px;margin-top:5px">${plines.map(esc).join("<br>")}</div>
     <div style="font-family:${FD};font-weight:${HW};font-size:21px;line-height:28px;margin-top:3px">${fl&&fl.number?`No. ${esc(fl.number)}`:"5 CENTS"}</div></div>`;
 
-  const PW=Math.round(P1*2/3),SW=IW+24-PW-14;
-  const heroHTML=posterSrc?(sideSrc
-    ?`<div style="display:flex;gap:14px;align-items:flex-start">${posterFrame(posterSrc,PW,P1,`${f.title||""} (${year}) film poster`)}<div style="position:relative">${photo(sideSrc,SW,P1,`${f.title||""} (${year}) film still`,"38%")}${slip}</div></div>`
-    :`<div style="position:relative">${posterFrame(posterSrc,IW+24,P1,`${f.title||""} (${year}) film poster`)}${slip}</div>`)
-    :`<div style="position:relative">${photo(pic1,IW+24,P1,`${f.title||""} (${year}) film still`,"38%")}${slip}</div>`;
+  /* height budget for the right column; if it runs over, drop the deck, then trim the note */
+  const edH=22+22,logoH=LG?LG.h+22:B.lines.length*Math.ceil(B.size*1.08);
+  const tagZ=18,tagL=tag?wrap(sentence(tag),COL,s=>sw(s,tagZ,1)*1.06).length:0;
+  let useTag=tagL>0&&tagL<=5,noteZ=16,cueZ=16;
+  const noteH=()=>{const nl=wrap(noteTxt,COL,s=>sw(s,noteZ,1)*1.06).length;return 12+3+18+nl*Math.ceil(noteZ*1.3)+38};
+  const cueH=cue?(2+30+5+18+wrap(cue,COL-22,s=>sw(s,cueZ)*1.06).length*Math.ceil(cueZ*1.28)+7+12):0;
+  const total=()=>edH+8+logoH+(useTag?12+tagL*24:0)+14+noteH()+(cue?14+cueH:0)+14+slipH;
+  if(total()>MAXB)useTag=false;
+  for(let g=0;g<5&&total()>MAXB;g++){const parts=noteTxt.match(/[^.!?]+[.!?]+/g)||[noteTxt];if(parts.length<2)break;noteTxt=parts.slice(0,-1).join("").trim()}
+
+  const capsSm2=`font-family:${FB};font-size:15px;line-height:18px;font-weight:700;letter-spacing:.12em`;
+  const headline=LG?`<h1 data-dark="${panelDark}" data-light="#fbf9f3" data-mid="#7d776c" data-rule="${C.head}" style="margin:8px 0 0;height:${LG.h+22}px;box-sizing:border-box;padding:9px 0;background:${panelDark};${panelBorder}border-radius:${R+2}px;font-size:0;line-height:0;text-align:center"><img crossorigin="anonymous" onload="window.__npLogo&&window.__npLogo(this)" src="${esc(LG.src)}" alt="${esc(f.title)}" style="height:${LG.h}px;width:${LG.w}px;max-width:100%;object-fit:contain"></h1>`
+    :`<h1 style="margin:8px 0 0;font-weight:${HW};font-family:${FD};font-size:${B.size}px;line-height:1.08;letter-spacing:${K==="modern"?"-.02em":"0"};color:${C.head};white-space:nowrap">${B.lines.map(esc).join("<br>")}</h1>`;
+
+  const heroHTML=posterSrc?posterFrame(posterSrc,PW,P1,`${f.title||""} (${year}) film poster`):photo(pic1,PW,P1,`${f.title||""} (${year}) film still`,"38%");
 
   const front=face("front",`
   <header style="height:${MAST}px;box-sizing:border-box">${mast}</header>
-  <section style="height:${HEAD}px;box-sizing:border-box;padding-top:8px;text-align:center">
-    <div style="display:flex;justify-content:space-between;font-family:${FB};font-size:17px;font-weight:700;letter-spacing:.18em;color:${C.red};height:22px;line-height:22px;white-space:nowrap;overflow:hidden"><span>${esc(T.ed)}</span><span>TONIGHT'S FEATURE, ${esc(year)}</span></div>
-    ${headline}
-    ${tag?`<div style="margin:10px 20px 0;font-family:${FB};font-style:italic;font-size:${deckZ}px;line-height:28px;height:${deckL*28}px;overflow:hidden;color:${C.ink}">${esc(sentence(tag))}</div>`:""}
-  </section>
-  <main style="height:${BODY}px">
-    <div style="margin:0 -12px">${heroHTML}</div>
-    <div style="display:flex;justify-content:space-between;gap:16px;height:${capH}px;align-items:center;font-family:${FB};font-size:16px;color:${C.ink};white-space:nowrap;overflow:hidden">
-      <span><b style="letter-spacing:.06em">TONIGHT'S FEATURE.</b> <i>Now showing, ${esc(year)}.</i></span><span style="font-size:14px;letter-spacing:.12em;color:${C.soft}">STAFF PHOTO / TMDB</span></div>
-    <div style="display:flex;border-top:3px solid ${C.head};padding-top:10px">
-      ${ruled(LW,true,`<div style="${capsSm};color:${C.red};margin-bottom:2px">${fl&&fl.note?`A WORD FROM ${esc(by.toUpperCase())}`:"A WORD FROM THE COUNTER"}</div>
+  <main style="height:${MAXB}px;display:flex;gap:16px;align-items:flex-start">
+    <div style="width:${PW}px;flex:none">${heroHTML}
+      <div style="display:flex;flex-direction:column;justify-content:center;height:${capH}px;margin-top:4px;font-family:${FB};font-size:15px;line-height:18px;color:${C.ink};white-space:nowrap;overflow:hidden"><span><b style="letter-spacing:.06em">TONIGHT'S FEATURE.</b> <i>Now showing, ${esc(year)}.</i></span></div></div>
+    <div style="width:${COL}px;flex:none;height:${MAXB}px;display:flex;flex-direction:column;overflow:hidden">
+      <div style="${capsSm2};color:${C.red};height:${edH}px;white-space:nowrap;overflow:hidden">${esc(T.ed)}<br>TONIGHT'S FEATURE</div>
+      <div style="text-align:center">${headline}</div>
+      ${useTag?`<div style="margin-top:12px;font-family:${FB};font-style:italic;font-size:${tagZ}px;line-height:24px;color:${C.ink};text-align:center">${esc(sentence(tag))}</div>`:""}
+      <div style="margin-top:14px;border-top:3px solid ${C.head};padding-top:10px">
+        <div style="${capsSm2};color:${C.red};margin-bottom:3px">${fl&&fl.note?`A WORD FROM ${esc(by.toUpperCase())}`:"A WORD FROM THE COUNTER"}</div>
         <div style="font-family:${FB};font-style:italic;font-size:${noteZ}px;line-height:${Math.ceil(noteZ*1.3)}px;color:${C.ink}">${esc(noteTxt)}</div>
-        <div style="display:flex;align-items:center;gap:12px;height:42px;white-space:nowrap;overflow:hidden"><span style="font-family:${FS};font-size:${Math.min(24,Math.floor(330/Math.max(4,by.length*.75)))}px;line-height:42px;color:#22305a">${esc(by)}</span><span style="font-family:${FB};font-size:15px;color:${C.soft}">${fl?`at ${esc(venue)}`:"Sal, behind the counter"}</span></div>`)}
-      ${ruled(CW,false,cue?`<div style="border:2px solid ${C.ink};border-radius:${R}px;overflow:hidden;background:rgba(255,253,246,.55)">
+        <div style="display:flex;align-items:center;gap:10px;height:38px;white-space:nowrap;overflow:hidden"><span style="font-family:${FS};font-size:${Math.min(22,Math.floor(120/Math.max(4,by.length*.75)))}px;line-height:38px;color:#22305a">${esc(by)}</span><span style="font-family:${FB};font-size:14px;color:${C.soft};min-width:0;overflow:hidden">${fl?`at ${esc(venue)}`:"behind the counter"}</span></div></div>
+      ${cue?`<div style="margin-top:14px;border:2px solid ${C.ink};border-radius:${R}px;overflow:hidden;background:rgba(255,253,246,.55)">
         <div style="background:${C.red};color:#fff;font-family:${FD};font-weight:${HW};font-size:21px;line-height:30px;height:30px;text-align:center">STOP PRESS</div>
         <div style="padding:5px 10px 7px;font-family:${FB};color:${C.ink}"><div style="${capsSm};color:${C.red}">SHOWTIME CUE</div>
-        <div style="font-size:${cueZ}px;line-height:${Math.ceil(cueZ*1.28)}px">${esc(cue)}</div></div></div>`:"")}
+        <div style="font-size:${cueZ}px;line-height:${Math.ceil(cueZ*1.28)}px">${esc(cue)}</div></div></div>`:""}
+      <div style="margin-top:auto;padding-top:14px;display:flex;flex-direction:column">${slip}</div>
     </div>
   </main>
   <footer style="position:absolute;left:${PX}px;right:${PX}px;bottom:${PY}px">${fine("Read it. Eat it. Fold it.")}</footer>`);
