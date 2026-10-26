@@ -7,7 +7,7 @@ import asyncio, json, os, re, sys
 from urllib.parse import quote
 from playwright.async_api import async_playwright
 OUT = sys.argv[1]
-FILMS = sys.argv[2:] or [f"{f['title']} ({f['year']})" for f in json.load(open("data/films.json"))]
+FILMS = (json.load(open(sys.argv[2][1:])) if len(sys.argv) > 2 and sys.argv[2].startswith("@") else sys.argv[2:]) or [f"{f['title']} ({f['year']})" for f in json.load(open("data/films.json"))]
 NUM = re.compile(r"(\d+(?:\.\d+)?)(?:\s*(\d)/(\d))?|(\d)/(\d)")
 
 PROBE = """async()=>{

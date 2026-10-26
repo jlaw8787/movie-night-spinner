@@ -33,8 +33,12 @@ Live as of commit 0264f779 (service worker version mns-19d65fed).
 
 - Oct 27 (live in 0264f779): data/still-pick.json pins 8 hand-chosen stills (in order) for Casino Royale, Kung Fu Hustle, Mulan, The Little Mermaid (1989), Thor: Ragnarok. build-data.cjs uses it before the auto pick. Use it for any film where the auto pick keeps landing on promo art. Put a wide scene first when the format's first frame is a thin header band.
 
+- Oct 27 (on wip/menu-polish, not live yet): functional pass on all 850. wip/genre/lib/funcsweep.py OUT.json [@list.json] loads every film, checks menu, Prep tab, planner, shopping list, times, methods, guests 4 to 8 scaling, untick/retick, tick-off list. funcreport.py summarises. recipecheck.py checks data/recipes2 (its menu-match lines compare to films.json, not the printed menu; trust funcsweep for that).
+  Fixed: planner dishes now equal the printed menu on every film (dropped 357 off-menu dishes, wrote 58 recipes for 29 films from their printed how/shop); app.js planShopping merges the same item across dishes and units ("100g + 2 tbsp"); family films alcohol-free; placemat fit trigger gif was invalid so __placematFit never ran (fixed); 10 cocktails got a measured "for each drink" step; aisles: alcohol to Bottle shop, cured meats to Deli, cheese/meat out of the wrong aisles; Crazy Rich Asians "Singapore chilli crab" renamed chilli prawns (it is prawns).
+  Result: 850 of 850 pass, 0 menu/prep mismatches.
+
 ## Next job
-Back-page photo work is finished. Ask the owner for the next item on the list.
+Push the functional fixes once the owner approves, then ask for the next item.
 
 ## Tools (run from the repo root; local server: python3 -m http.server 8795)
 - wip/genre/lib/sweep.py [style ...]: full check of library menus (spill, cut, small text, duplicate, dark and white photos, poster hero, hidden lines). About 25 min for all 759.
