@@ -251,7 +251,7 @@ function finishModal(o){
   const state=modalState.get(o);if(!state)return;
   const wasTop=modalStack[modalStack.length-1]===o;
   modalState.delete(o);const i=modalStack.indexOf(o);if(i!==-1)modalStack.splice(i,1);
-  o.remove();if(state.onClose)state.onClose();
+  if(!o.hasAttribute("data-keep"))o.remove();if(state.onClose)state.onClose();
   if(!wasTop)return;
   const parent=modalStack[modalStack.length-1];
   const target=state.trigger;
@@ -263,6 +263,8 @@ function mountModal(o,initial,trigger,onClose){
   modalState.set(o,{trigger,onClose});modalStack.push(o);
   /* Neutralise native dialog sizing; existing overlay classes keep their padding and visual treatment. */
   Object.assign(o.style,{margin:"0",border:"0",maxWidth:"none",maxHeight:"none",width:"100%",height:"100%",boxSizing:"border-box",color:"inherit"});
+  if(o._mm){document.body.appendChild(o);if(!o.open)o.showModal();const f=o.querySelector(initial);if(f)f.focus({preventScroll:true});return}
+  o._mm=1;
   o.addEventListener("cancel",e=>{e.preventDefault();dismissModal(o)});
   o.addEventListener("close",()=>finishModal(o));
   o.tabIndex=-1;
@@ -705,7 +707,8 @@ $("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
 let renderId=0;
 /* ---------- plan the night: tick dishes, set guests, scaled shopping and real times (data/recipes2) ---------- */
 const PLAN={guests:4,off:{},on:{}};
-function planLoad(f){PLAN.guests=4;PLAN.off={};PLAN.on={};try{const s=JSON.parse(localStorage.getItem("mns-plan-"+f.id)||"null");if(s){PLAN.guests=Math.min(24,Math.max(1,+s.g||4));PLAN.off=s.off||{};PLAN.on=s.on||{}}}catch(e){}}
+let USUAL=(()=>{try{const g=+localStorage.getItem("mns-guests");return g>=1&&g<=24?g:4}catch(e){return 4}})();
+function planLoad(f){PLAN.guests=USUAL;PLAN.off={};PLAN.on={};try{const s=JSON.parse(localStorage.getItem("mns-plan-"+f.id)||"null");if(s){PLAN.guests=Math.min(24,Math.max(1,+s.g||USUAL));PLAN.off=s.off||{};PLAN.on=s.on||{}}}catch(e){}}
 function planSave(f){try{localStorage.setItem("mns-plan-"+f.id,JSON.stringify({g:PLAN.guests,off:PLAN.off,on:PLAN.on}))}catch(e){}}
 /* diet: vegetarian and no alcohol, kept for every film. A dish that doesn't fit swaps to its written alternative
    (data/recipes2 dish.alt.veg, .af, .veg_af); one with no alternative is left off unless the cook ticks it back */
@@ -796,7 +799,7 @@ function planWire(f){
   const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;{const n=box.querySelector(".pl-sum");if(n)n.textContent=planCount(f._r2)}prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
   box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(24,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo()};
   const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
-  box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();return}
+  box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();return}
     const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
     if(x&&x.blocked){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
 }
@@ -880,7 +883,7 @@ function libLoad(k){
 async function show(f,preferSig){
   const id=++renderId;
   current=f;
-  updateWatchButton();
+  updateWatchButton();try{updateFav()}catch(e){}
   await Promise.all([ensureExact(f),fmtLoad(f)]);
   if(id!==renderId)return;
   let menu=makeMenu(f,preferSig);if(lazy)menu=lazyMenu(menu);menu.counter=counterShop(f.id);
@@ -960,7 +963,7 @@ function renderHist(){
   items.forEach(f=>{const b=document.createElement("button");b.className="ticket";b.type="button";b.innerHTML=`<small>Admit one</small>${ESC(f.title)}`;b.addEventListener("click",()=>replay(f));box.appendChild(b)});
 }
 function addHistory(f){
-  hist=[f.id,...hist.filter(x=>x!==f.id)].slice(0,8);
+  hist=[f.id,...hist.filter(x=>x!==f.id)].slice(0,8);try{$("histClear").hidden=false}catch(e){}
   try{localStorage.setItem("mns-hist",JSON.stringify(hist))}catch(e){}
   renderHist();queueSync();
 }
@@ -1271,6 +1274,7 @@ function setKidsUI(){try{renderMotw()}catch(e){};const b=$("kidsBtn");b.setAttri
 function setKids(v){
   kidsMode=v;try{localStorage.setItem("mns-kids",v?"1":"0")}catch(e){}
   setKidsUI();
+  try{setSync()}catch(e){}
   /* the planner and prep sheet follow kids mode straight away (alcohol-free versions) */
   try{if(current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu);const h=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=h}}catch(e){}
   if(!spinning)setList();
@@ -1335,7 +1339,7 @@ async function syncCall(body){
 }
 function syncPayload(){
   const {pin,...m}=member;
-  return {v:1,member:m,watched:[...watched],skip:skipWatched,hist,week,counter,kids:kidsMode};
+  return {v:1,member:m,watched:[...watched],skip:skipWatched,hist,week,counter,kids:kidsMode,fav:typeof FAV!=="undefined"?FAV:[]};
 }
 function applyRemote(d){
   if(!d||!d.member)return;
@@ -1348,6 +1352,7 @@ function applyRemote(d){
   if(!member.name&&mine.name)member.name=mine.name;
   (d.watched||[]).forEach(id=>{if(FILMS.some(f=>f.id===id))watched.add(id)});
   hist=[...new Set([...(d.hist||[]),...hist])].slice(0,8);
+  if(Array.isArray(d.fav)&&typeof FAV!=="undefined"&&FAV){FAV=[...new Set([...FAV,...d.fav])].filter(id=>FILMS.some(f=>f.id===id)).slice(0,30);try{localStorage.setItem("mns-fav",JSON.stringify(FAV));renderFav()}catch(e){}}
   if(Object.prototype.hasOwnProperty.call(d,"week")){
     if(d.week===null)week=null;
     else{
@@ -1862,4 +1867,54 @@ else{theatre.classList.add("closed");$("tease").textContent=initialFilmId?"That 
   /* nobody's picked yet: dress the stage behind the curtain once the page has settled */
   addEventListener("load",()=>(window.requestIdleCallback||setTimeout)(()=>{if(!current)show(initialFilm,true).then(()=>{$("whereWheel").innerHTML="";badLink()})},{timeout:2500}))}
 addEventListener("load",()=>setTimeout(ensureDishes,3000));
+/* ================= ease of use: quick find, saved menus, settings, clear and reset ================= */
+/* open any film straight from its title, the way a stub does */
+function openFilm(f){if(!f)return;addHistory(f);replay(f);try{window.scrollTo({top:0,behavior:reduce?"auto":"smooth"})}catch(e){}}
+{const inp=$("findFilm"),box=$("findList");let hits=[],at=-1;
+  inp.addEventListener("focus",()=>{if(innerWidth<760)setTimeout(()=>{const t=inp.getBoundingClientRect().top;if(t>innerHeight*0.3)scrollBy({top:t-70,behavior:reduce?"auto":"smooth"})},250)});
+ const norm=s=>s.toLocaleLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim();
+ const close=()=>{box.hidden=true;box.innerHTML="";hits=[];at=-1;inp.setAttribute("aria-expanded","false")};
+ const draw=()=>{box.innerHTML=hits.length?hits.map((f,i)=>`<button type="button" role="option" data-i="${i}" aria-selected="${i===at}"><span>${ESC(f.title)}</span><small>${ESC(f.year)}</small></button>`).join(""):'<p class="none">No film by that name. Try fewer letters.</p>';box.hidden=false;inp.setAttribute("aria-expanded","true")};
+ inp.addEventListener("input",()=>{const q=norm(inp.value);if(q.length<2){close();return}
+   const words=q.split(" ");const scored=[];
+   for(const f of FILMS){const t=norm(f.title+" "+f.year);if(!words.every(w=>t.includes(w)))continue;scored.push([t.startsWith(q)?0:(" "+t).includes(" "+q)?1:2,f])}
+   scored.sort((a,b)=>a[0]-b[0]||a[1].title.localeCompare(b[1].title));hits=scored.slice(0,7).map(x=>x[1]);at=hits.length?0:-1;draw()});
+ inp.addEventListener("keydown",e=>{if(box.hidden)return;
+   if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();if(!hits.length)return;at=(at+(e.key==="ArrowDown"?1:-1)+hits.length)%hits.length;draw()}
+   else if(e.key==="Enter"){e.preventDefault();if(hits[at]){const f=hits[at];inp.value="";close();inp.blur();openFilm(f)}}
+   else if(e.key==="Escape"){close()}});
+ box.addEventListener("click",e=>{const b=e.target.closest("[data-i]");if(!b)return;const f=hits[+b.dataset.i];inp.value="";close();openFilm(f)});
+ document.addEventListener("click",e=>{if(!e.target.closest(".field.find"))close()});}
+
+/* saved menus: a heart on the menu, a shelf on the front, and the menu kept for offline */
+var FAV=[];try{FAV=JSON.parse(localStorage.getItem("mns-fav")||"[]").filter(id=>FILMS.some(f=>f.id===id))}catch(e){FAV=[]}
+const favSave=()=>{try{localStorage.setItem("mns-fav",JSON.stringify(FAV))}catch(e){}try{queueSync()}catch(e){}};
+function renderFav(){const shelf=$("savedShelf"),box=$("savedChips");const items=FAV.map(id=>FILMS.find(f=>f.id===id)).filter(Boolean);shelf.hidden=!items.length;box.innerHTML="";
+  items.forEach(f=>{const b=document.createElement("button");b.className="ticket saved";b.type="button";b.innerHTML=`<small>Saved</small>${ESC(f.title)}`;b.addEventListener("click",()=>openFilm(f));box.appendChild(b)});updateFav()}
+function updateFav(){const b=$("favBtn");if(!b)return;const on=!!(current&&FAV.includes(current.id));b.setAttribute("aria-pressed",on);b.textContent=on?"Saved":"Save this menu"}
+$("favBtn").addEventListener("click",()=>{if(!current)return;const id=current.id;
+  if(FAV.includes(id)){FAV=FAV.filter(x=>x!==id);$("status").textContent="Taken off your saved menus."}
+  else{FAV=[id,...FAV].slice(0,30);$("status").textContent="Saved. It's on the front page, and kept on this device for offline.";try{fetch(filmFile(current)).catch(()=>{})}catch(e){}}
+  favSave();renderFav()});
+
+/* settings drawer */
+function setSync(){$("setGuests").textContent=USUAL;$("setVeg").checked=DIET.veg;$("setAf").checked=DIET.af||kidsMode;$("setAf").disabled=kidsMode;
+  $("histClear").hidden=!hist.length}
+function refreshPlan(){try{if(current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu);const h=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=h}}catch(e){}}
+$("setBtn").addEventListener("click",()=>{setSync();const o=$("settings");mountModal(o,"#setClose",$("setBtn"));if(!o.open)o.showModal()});
+$("setClose").addEventListener("click",()=>dismissModal($("settings")));
+$("settings").addEventListener("click",e=>{if(e.target===$("settings"))dismissModal($("settings"))});
+$("settings").querySelectorAll("[data-sg]").forEach(b=>b.addEventListener("click",()=>{USUAL=Math.min(24,Math.max(1,USUAL+(b.dataset.sg==="+"?1:-1)));try{localStorage.setItem("mns-guests",USUAL)}catch(e){}setSync();$("setMsg").textContent=`New prep sheets start at ${USUAL} guest${USUAL===1?"":"s"}.`}));
+$("setVeg").addEventListener("change",e=>{DIET.veg=e.target.checked;dietSave();refreshPlan()});
+$("setAf").addEventListener("change",e=>{DIET.af=e.target.checked;dietSave();refreshPlan()});
+function clearStubs(){hist=[];try{localStorage.setItem("mns-hist","[]")}catch(e){}renderHist();setSync();try{queueSync()}catch(e){}}
+$("histClear").addEventListener("click",()=>{clearStubs();$("status").textContent="Ticket stubs cleared."});
+$("setClearStubs").addEventListener("click",()=>{clearStubs();$("setMsg").textContent="Ticket stubs cleared."});
+$("setClearSaved").addEventListener("click",()=>{FAV=[];favSave();renderFav();$("setMsg").textContent="Saved menus cleared."});
+{let armed=0;$("setReset").addEventListener("click",()=>{const b=$("setReset");
+  if(!armed){armed=setTimeout(()=>{armed=0;b.classList.remove("arm");b.textContent="Reset everything"},5000);b.classList.add("arm");b.textContent="Tap again to reset";$("setMsg").textContent="This clears everything saved on this device. Tap again to confirm.";return}
+  clearTimeout(armed);try{Object.keys(localStorage).filter(k=>k.startsWith("mns-")&&k!=="mns-welcome").forEach(k=>localStorage.removeItem(k))}catch(e){}
+  location.replace(location.pathname)})}
+renderFav();setSync();
+
 

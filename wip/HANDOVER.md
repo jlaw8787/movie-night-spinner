@@ -39,7 +39,12 @@ Live as of commit 9ad982db (service worker version mns-a4374126).
 
 ## Next job
 Audit small fixes (live in 9ad982db): offline spins only land on saved menus (SAVED set from caches, spinPool), unknown film link shows a message in #status, welcome card says 1 to 24 guests, Shuffle the menu button removed, floating spin bar hides while .actions is on screen. Service worker only registers on https, so test offline by registering sw.js by hand on localhost.
-Later, owner's call: vegetarian and alcohol-free filters, rough cost per head.
+
+- Oct 27 (on wip, NOT live yet, waiting on owner approval): diet and ease pass.
+  Diet: data/recipes2 dishes carry veg/af flags and alt.af (527), alt.veg (825), alt.veg_af (106), built by wip/diet/merge.py from wip/diet/out (briefs AF-BRIEF.md, VEG-BRIEF.md; checker wip/genre/lib/dietclass.py). app.js DIET (mns-diet), dietDish swaps in the version; drinks become a mocktail. Kids mode always alcohol-free (was letting 64 PG films plan alcohol).
+  Ease: quick find on the front (#findFilm, arrows, Enter, Esc), Saved menus shelf (FAV, mns-fav, max 30, also fetched for offline, synced), usual guests (USUAL, mns-guests), Clear link on ticket stubs, one Settings drawer (#settings, data-keep so closing does not delete it) holding kids mode, sound, streaming service, guests, vegetarian, no alcohol, clear stubs, clear saved, reset everything (two taps; keeps mns-welcome).
+  Checks: wip/genre/lib/frontcheck.py OUTDIR [base_url], 68 steps phone and desktop, 0 faults.
+Later, owner's call: rough cost per head. At the next overhaul the owner wants the Video shop renamed to a store.
 
 ## Tools (run from the repo root; local server: python3 -m http.server 8795)
 - wip/genre/lib/sweep.py [style ...]: full check of library menus (spill, cut, small text, duplicate, dark and white photos, poster hero, hidden lines). About 25 min for all 759.

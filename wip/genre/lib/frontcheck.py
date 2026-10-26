@@ -107,13 +107,21 @@ async def scenario(b, name, ctxopts):
         return f"theme {v} gave {t}" if t else False
     await S("theme picker then spin", theme)
     async def kids():
-        await pg.click("#kidsBtn"); await pg.wait_for_timeout(300)
+        await pg.click("#setBtn"); await pg.wait_for_timeout(300); await pg.click("#kidsBtn"); await pg.wait_for_timeout(300)
         await close_dialogs(pg); await pg.click("#spin"); await pg.wait_for_function("!spinning", timeout=20000); await menu_ready(pg)
         t = await pg.evaluate("current.theme"); bs = await pg.evaluate("planDishes(current).some(d=>dietBooze(d))")
-        await pg.click("#kidsBtn")
+        await pg.click("#setBtn"); await pg.wait_for_timeout(300); await pg.click("#kidsBtn"); await close_dialogs(pg)
         return f"kids spin gave theme {t}" if not bs else False
     await S("Kids mode spin is family and alcohol-free", kids)
-    await S("sound toggle", lambda: pg.click("#sound"))
+    async def snd():
+        await pg.click("#setBtn"); await pg.wait_for_timeout(300); await pg.click("#sound"); await pg.click("#sound"); await pg.click("#setClose"); await pg.wait_for_timeout(300)
+        return await pg.evaluate("!!document.getElementById('settings')&&!document.getElementById('settings').open")
+    await S("sound toggle in settings, drawer closes and stays reusable", snd)
+    async def find():
+        await pg.fill("#findFilm", "jaws"); await pg.wait_for_timeout(300); await pg.keyboard.press("Enter")
+        await pg.wait_for_function("current&&current.title==='Jaws'", timeout=8000); await menu_ready(pg)
+        return await pg.evaluate("current.title")
+    await S("quick find opens a film", find)
     async def lazy():
         await pg.click("#lazyBtn"); await pg.wait_for_timeout(500); a = await pg.evaluate("document.getElementById('lazyBtn').textContent")
         await pg.click("#lazyBtn"); return a
