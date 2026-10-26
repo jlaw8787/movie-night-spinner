@@ -276,29 +276,29 @@ window.MENU_FORMATS[ID]=ctx=>{
   const seed=[...String(ctx.f.title||"x")].reduce((a,c)=>a+c.charCodeAt(0),0)%97;
   const filt=`${E.photo} ${TN.photo}`;
   const mis=E.mis?`text-shadow:3px 2px 0 ${rgba(C.accA,.4)};`:"";
-  const vlen=String(F.venue).length,vs=vlen>34?34:vlen>22?40:46;
+  const vlen=String(F.venue).length,hp=ph.heroIsPoster,vs=hp?(vlen>34?28:vlen>22?32:38):(vlen>34?34:vlen>22?40:46);
   const badges=F.winks.slice(0,3),rest=F.winks.slice(3);
   const sigCol=C.ink;
   const front=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
     ${border(tone,C.ink)}
-    <div data-box style="position:absolute;left:38px;top:34px;width:596px;height:112px;overflow:hidden;mix-blend-mode:multiply">
+    <div data-box style="position:absolute;left:38px;top:${hp?26:34}px;width:596px;height:${hp?76:112}px;overflow:hidden;mix-blend-mode:multiply">
       <div data-line data-fs="18" data-min="14" style="font:${ty.cw} 18px ${ty.caps};letter-spacing:.2em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.sign)}</div>
       <div data-fs="${vs}" data-min="24" style="margin-top:6px;font:${ty.dw} ${vs}px ${ty.disp};line-height:1.02;${ty.up?"text-transform:uppercase;":""}color:${P.ink};${mis}transform:rotate(${TN.tilt*.3}deg);transform-origin:left">${T(F.venue)}</div>
     </div>
-    ${ph.heroIsPoster?`${photo(ph.hero,{poster:1,x:18,y:148,w:354,h:548,pad:10,print:P.print,rot:TN.tilt*.5,sheen:E.sheen})}
-    ${logoPanel(ctx,388,220,266,ty,C,P,year)}
-    <div style="position:absolute;left:392px;top:468px;width:250px;box-sizing:border-box;padding:12px 16px;background:${P.print};border-left:3px dashed ${C.ink};box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(-2deg);color:#2a2219">
+    ${ph.heroIsPoster?`${photo(ph.hero,{poster:1,x:14,y:104,w:440,h:650,pad:10,print:P.print,rot:TN.tilt*.5,sheen:E.sheen})}
+    ${logoPanel(ctx,466,130,196,ty,C,P,year)}
+    <div style="position:absolute;left:470px;top:420px;width:186px;box-sizing:border-box;padding:12px 14px;background:${P.print};border-left:3px dashed ${C.ink};box-shadow:0 4px 10px rgba(0,0,0,.3);transform:rotate(-2deg);color:#2a2219">
       <div style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.12em;text-transform:uppercase;color:${C.ink};line-height:1.15">Now showing</div>
       <div style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:4px">${T(F.venue)}</div></div>`:`${photo(ph.hero,{x:18,y:150,w:636,h:492,pad:10,print:P.print,rot:TN.tilt*.5,filter:filt,half:E.half,sheen:E.sheen,pos:"center 35%"})}
     ${logoPanel(ctx,34,560,400,ty,C,P,year)}`}
-    <div data-box style="position:absolute;left:38px;top:708px;width:596px;height:118px;overflow:hidden;mix-blend-mode:multiply">
+    <div data-box style="position:absolute;left:38px;top:${hp?766:708}px;width:596px;height:${hp?84:118}px;overflow:hidden;mix-blend-mode:multiply">
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${V.n}</div>
       <div data-fs="20" data-min="16" style="margin-top:4px;font:${ty.bw} 20px ${ty.body};line-height:1.25">“${T(F.note.text)}”</div>
       <div data-fs="${ty.sigS}" data-min="18" style="text-align:right;font:700 ${ty.sigS}px ${ty.sig};color:${sigCol};line-height:1.15;margin-top:2px;transform:rotate(-2deg)">${T(F.note.by)}</div>
     </div>
-    <div style="position:absolute;left:38px;top:832px;width:596px;height:96px">
+    <div style="position:absolute;left:38px;top:${hp?856:832}px;width:596px;height:${hp?84:96}px">
       <div data-line data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden;width:596px">${V.b}</div>
-      <div style="display:flex;gap:12px;margin-top:6px">${badges.map((b,i)=>`<div data-box style="flex:1;height:68px;overflow:hidden;box-sizing:border-box;padding:6px 10px;border-radius:12px;background-color:${i%2?C.dark:C.deep};background-image:${noise(".7",3,[255,255,255],.12,seed+i)};outline:2px dashed ${rgba(mix(C.accA,WHITE,.6),.85)};outline-offset:-6px;display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(${(i-1)*1.2*(TN.tilt?1:0)}deg)"><div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};line-height:1.12;color:#fbf3e2;letter-spacing:.04em">${T(b)}</div></div>`).join("")}</div>
+      <div style="display:flex;gap:12px;margin-top:6px">${badges.map((b,i)=>`<div data-box style="flex:1;height:${hp?58:68}px;overflow:hidden;box-sizing:border-box;padding:6px 10px;border-radius:12px;background-color:${i%2?C.dark:C.deep};background-image:${noise(".7",3,[255,255,255],.12,seed+i)};outline:2px dashed ${rgba(mix(C.accA,WHITE,.6),.85)};outline-offset:-6px;display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(${(i-1)*1.2*(TN.tilt?1:0)}deg)"><div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};line-height:1.12;color:#fbf3e2;letter-spacing:.04em">${T(b)}</div></div>`).join("")}</div>
     </div>
     ${wearLayer(P,tone,seed)}
   </div>`;
