@@ -78,7 +78,7 @@ function logoInit(img){if(img.dataset.seen)return;img.dataset.seen="1";const pan
   if(img.complete)(img.naturalWidth?ok():fail());else{img.addEventListener("load",ok);img.addEventListener("error",fail)}}
 let pend=0;function fitAll(){pend=0;document.querySelectorAll(`[${A}-face]`).forEach(f=>{f.querySelectorAll(`img[${A}-logo]`).forEach(logoInit);f.querySelectorAll(`[${A}-text]`).forEach(fitText);f.querySelectorAll(`[${A}-box]`).forEach(fitBox)})}
 function soon(){if(!pend){pend=1;requestAnimationFrame(()=>setTimeout(fitAll,30))}}
-if(!window["__fit_"+ID]){window["__fit_"+ID]=1;new MutationObserver(m=>{if(m.some(r=>[...r.addedNodes].some(n=>n.nodeType===1&&(n.matches(`[${A}-face]`)||n.querySelector&&n.querySelector(`[${A}-face]`)))))soon()}).observe(document.documentElement,{childList:true,subtree:true});
+if(!window["__fit_"+ID]){window["__fit_"+ID]=1;new MutationObserver(m=>{if(m.some(r=>[...r.addedNodes].some(n=>n.nodeType===1&&(n.matches(`[${A}-face]`)||n.querySelector&&n.querySelector(`[${A}-face]`))))){fitAll();soon()}}).observe(document.documentElement,{childList:true,subtree:true});
   if(document.fonts){document.fonts.addEventListener&&document.fonts.addEventListener("loadingdone",soon);document.fonts.ready.then(soon)}[400,1200,2200].forEach(t=>setTimeout(soon,t))}
 
 /* the format */
@@ -205,4 +205,10 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;inset:0;background:${vign};pointer-events:none"></div>${xerox}</div>`;
   return {w:W,h:H,faces:[face]};
 };
+/* fonts ready: the app awaits .ready before it renders, so the fitter measures with the real faces and text never spills at a late font swap */
+function fontSpecs(url){const o=[];String(url||"").replace(/family=([^&:]+)(?::([a-z,]+)@([^&]+))?/g,(m,fam,ax,vals)=>{fam=decodeURIComponent(fam.replace(/\+/g," "));
+  if(!ax){o.push(`400 20px "${fam}"`);return m}const a=ax.split(",");vals.split(";").forEach(v=>{const p=v.split(","),g=n=>a.indexOf(n)<0?null:p[a.indexOf(n)];o.push(`${g("ital")==="1"?"italic ":""}${g("wght")||400} 20px "${fam}"`)});return m});return o}
+function fontsReady(links){return Promise.all(links.filter(Boolean).map(l=>new Promise(r=>{if(l.sheet)return r();l.addEventListener("load",r);l.addEventListener("error",r);setTimeout(r,3500)})
+  .then(()=>Promise.all(fontSpecs(l.getAttribute("href")).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
+loadFonts();window.MENU_FORMATS[ID].ready=fontsReady([document.getElementById("fmt-font-"+ID)]);
 })();

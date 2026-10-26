@@ -186,8 +186,16 @@ window.MENU_FORMATS[ID]=ctx=>{
   const face=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:10px;${E.frame};pointer-events:none;opacity:.8"></div>
     ${head}${hrule}${hero}${cap}${badge}${menu}${foot}
-    <img src="${PIX}" alt="" style="position:absolute;width:1px;height:1px;opacity:0" onload="window.__fmtFitLab&&window.__fmtFitLab(this)">
+    <img src="${PIX}" alt="" style="position:absolute;width:1px;height:1px;opacity:0" data-labfit="1" onload="if(!this.dataset.fitted){this.dataset.fitted=1;window.__fmtFitLab&&window.__fmtFitLab(this)}">
   </div>`;
   return {w:W,h:H,faces:[face]};
 };
+/* fonts ready: the app awaits .ready before it renders, so the fitter measures with the real faces and text never spills at a late font swap */
+function fontSpecs(url){const o=[];String(url||"").replace(/family=([^&:]+)(?::([a-z,]+)@([^&]+))?/g,(m,fam,ax,vals)=>{fam=decodeURIComponent(fam.replace(/\+/g," "));
+  if(!ax){o.push(`400 20px "${fam}"`);return m}const a=ax.split(",");vals.split(";").forEach(v=>{const p=v.split(","),g=n=>a.indexOf(n)<0?null:p[a.indexOf(n)];o.push(`${g("ital")==="1"?"italic ":""}${g("wght")||400} 20px "${fam}"`)});return m});return o}
+function fontsReady(links){return Promise.all(links.filter(Boolean).map(l=>new Promise(r=>{if(l.sheet)return r();l.addEventListener("load",r);l.addEventListener("error",r);setTimeout(r,3500)})
+  .then(()=>Promise.all(fontSpecs(l.getAttribute("href")).map(s=>document.fonts.load(s).catch(()=>0)))))).then(()=>document.fonts.ready).catch(()=>0)}
+window.MENU_FORMATS[ID].ready=fontsReady([document.getElementById("fmt-font-"+ID)]);
+/* fit in the same turn the face lands, not only when the pixel loads */
+if(!window.__fitLabSync){window.__fitLabSync=1;new MutationObserver(m=>m.forEach(r=>[...r.addedNodes].forEach(n=>{if(n.nodeType!==1||!n.querySelectorAll)return;[...(n.matches("img[data-labfit]")?[n]:[]),...n.querySelectorAll("img[data-labfit]")].forEach(i=>{if(!i.dataset.fitted){i.dataset.fitted="1";window.__fmtFitLab(i)}})}))).observe(document.documentElement,{childList:true,subtree:true})}
 })();
