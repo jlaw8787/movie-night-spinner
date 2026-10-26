@@ -183,7 +183,7 @@ function border(tone,C,P){
 }
 function stock(P,tone,seed){
   const wear=TONE[tone].wear;
-  return`background-color:${P.bg};background-image:${noise(".02",4,P.fox,.3+wear*.45,seed,800)},${noise(".8 .05",2,P.fib,.35,seed+2)},${noise(".6",2,P.fox,.18+wear*.2,seed+4)};box-shadow:inset 0 0 ${40+wear*110}px rgba(90,55,15,${.22+wear*.45})`;
+  return`background-color:${P.bg};background-image:radial-gradient(ellipse at 50% 50%,rgba(90,55,15,0) 50%,rgba(90,55,15,${(.15+wear*.35).toFixed(2)}) 100%),${noise(".02",4,P.fox,.3+wear*.45,seed,800)},${noise(".8 .05",2,P.fib,.35,seed+2)},${noise(".6",2,P.fox,.18+wear*.2,seed+4)}`;
 }
 function wearLayer(P,tone,seed){
   const w=TONE[tone].wear,lt=mix(hex(P.bg),WHITE,.15);
@@ -230,12 +230,12 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div>
     <div style="flex:none;position:relative;margin:0 -16px;height:600px;box-sizing:border-box;border:6px solid ${P.ink};box-shadow:0 0 0 3px ${P.bg},0 0 0 5px ${C.ink};overflow:hidden;background:#1e140c">
       ${ph.heroIsPoster?`<div style="position:absolute;inset:0;background-color:${toHex(mix(hex(P.bg),BLACK,.12))};background-image:radial-gradient(ellipse at 50% 45%,${toHex(mix(hex(P.bg),WHITE,.25))},rgba(0,0,0,0) 75%)"></div>
-      <div style="position:absolute;left:0;top:0;bottom:0;width:178px;display:flex;align-items:center;justify-content:center;text-align:center"><div data-fs="34" data-min="22" style="font:${ty.dw} 34px ${ty.disp};line-height:1.1;letter-spacing:.06em;text-transform:uppercase;color:${C.ink}">Now<br>showing</div></div>
-      <div style="position:absolute;right:0;top:0;bottom:0;width:178px;display:flex;align-items:center;justify-content:center;text-align:center"><div style="font:${ty.dw} 40px ${ty.disp};line-height:1.1;letter-spacing:.06em;color:${C.ink}">${esc(year)}</div></div>
+      <div style="position:absolute;left:0;top:0;bottom:0;width:178px;display:flex;align-items:center;justify-content:center;text-align:center"><div style="font:${ty.dw} 16px ${ty.disp};line-height:1.25;letter-spacing:0;text-transform:uppercase;color:${C.ink}">Now<br>showing</div></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:178px;display:flex;align-items:center;justify-content:center;text-align:center"><div style="font:${ty.dw} 30px ${ty.disp};line-height:1.1;letter-spacing:.02em;color:${C.ink}">${esc(year)}</div></div>
       <div style="position:absolute;left:50%;top:50%;width:368px;height:552px;transform:translate(-50%,-50%);box-shadow:0 8px 20px rgba(30,15,0,.5);border:5px solid ${toHex(mix(hex(P.bg),WHITE,.55))};box-sizing:border-box;background:${toHex(mix(hex(P.bg),WHITE,.55))}"><img crossorigin="anonymous" alt="" src="${ph.hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"></div>
       ${E.sheen?SHEEN(E.sheen):""}`:`<div style="position:absolute;inset:0;background:url('${ph.hero}') center 35%/cover no-repeat;filter:${filt}"></div>
-      ${E.half?HALFTONE(E.half):""}${E.sheen?SHEEN(E.sheen):""}`}
-      <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${60+TN.wear*80}px rgba(30,15,0,${.25+TN.wear*.4})"></div>
+      ${E.half?HALFTONE(E.half):""}${E.sheen?SHEEN(E.sheen):""}
+      <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${60+TN.wear*80}px rgba(30,15,0,${.25+TN.wear*.4})"></div>`}
     </div>
     <div style="flex:none;height:104px;margin:6px -16px 0;display:flex;gap:18px;align-items:center">
       <div style="flex:none;max-width:470px">

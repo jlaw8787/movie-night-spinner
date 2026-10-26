@@ -190,7 +190,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const hero=`<div style="position:absolute;left:0;top:0;width:${HX}px;height:${H}px;overflow:hidden;background:${band}">
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.3),rgba(0,0,0,0) 70%)"></div>
     <div style="position:absolute;left:${PX}px;top:28px;width:${PW}px;height:${PH}px;overflow:hidden;background:#222;box-shadow:0 0 0 3px ${paper},0 0 0 6px ${acc},0 10px 22px rgba(0,0,0,.5)">${heroSrc?(posSrc?`<img src="${posSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">${t.shine||ei>=6?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>`:""}`:photo(heroSrc,pf,"center 40%",overlay(),stills.slice(5,8).map(s=>ctx.img(s,"w1280")),"")):""}</div>
-    <div style="position:absolute;left:0;top:0;bottom:0;width:${HX}px;box-shadow:inset -10px 0 0 ${acc}"></div></div>`;
+    <div style="position:absolute;right:0;top:0;bottom:0;width:10px;background:${acc}"></div></div>`;
   const RW=W-HX-60;
   const vSize=venue.length>28?30:venue.length>18?36:42;
   const LMW=RW-44,LMH=150,LA=41000;

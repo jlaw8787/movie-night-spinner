@@ -103,9 +103,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const laid=E.print==="letterpress"?`repeating-linear-gradient(0deg,rgba(0,0,0,.035) 0 1px,transparent 1px 5px),`:"";
   const sheen=E.print==="gloss"&&!T.dark?`<div style="position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.35) 46%,rgba(255,255,255,0) 60%);pointer-events:none"></div>`:"";
   const stock=()=>`<div style="position:absolute;inset:0;background:${laid}${P}"></div>
-    <div style="position:absolute;inset:0;background:url('${grain}') 0 0/520px,url(&quot;${NOISE}&quot;) 0 0/300px;opacity:${(T.dark?.22:.35)+wear*.3};mix-blend-mode:${T.dark?"overlay":"multiply"};pointer-events:none"></div>
-    ${wear>.3?`<div style="position:absolute;inset:0;background:url(&quot;${BLOTCH}&quot;) 0 0/900px;opacity:${wear*.7};mix-blend-mode:multiply;pointer-events:none"></div>`:""}
-    <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${90+wear*80}px rgba(${T.dark?"0,0,0":"90,60,20"},${.18+wear*.3});pointer-events:none"></div>${sheen}`;
+    <div style="position:absolute;inset:0;background:url('${grain}') 0 0/520px,url(&quot;${NOISE}&quot;) 0 0/300px;opacity:${T.dark?.1:.12+wear*.12};pointer-events:none"></div>
+    ${wear>.3?`<div style="position:absolute;inset:0;background:url(&quot;${BLOTCH}&quot;) 0 0/900px;opacity:${wear*.3};pointer-events:none"></div>`:""}
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(${T.dark?"0,0,0":"90,60,20"},0) 55%,rgba(${T.dark?"0,0,0":"90,60,20"},${(.18+wear*.3).toFixed(2)}) 100%);pointer-events:none"></div>${sheen}`;
   /* the border changes with the era: ruled letterpress, coloured band, gold foil, hairline */
   const foil=`linear-gradient(135deg,#7a5a1e,#e9cf86 22%,#a47b2e 40%,#f4e2a6 58%,#8c6a26 78%,#d9b66a)`;
   const border=()=>{
@@ -119,17 +119,17 @@ window.MENU_FORMATS[ID]=ctx=>{
   const frame=E.border==="foil"?foil:E.border==="band"?BAND:E.border==="rule"?INK:GOLD;
   const photo=(src,pos)=>!src?`<div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,${toHex(mix(pd,[255,255,255],.18))},${toHex(mix(pd,[0,0,0],.4))});display:flex;align-items:center;justify-content:center;padding:40px;box-sizing:border-box"><div style="font:italic ${E.dw} 40px/1.15 ${E.disp};color:#f3e7c8;text-align:center">${esc(sign)}</div></div>`:`<img alt="" src="${src}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${pos};display:block;filter:${E.photo}${T.photo}">${half}<div style="position:absolute;inset:0;box-shadow:inset 0 0 50px rgba(0,0,0,.28)"></div>`;
   /* the whole poster, never cropped: mounted on a panel of the house's own dark stock with a gilt keyline */
-  const stage=src=>`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,${toHex(mix(pd,[0,0,0],.3))},${toHex(mix(pd,[0,0,0],.72))});display:flex;align-items:center;justify-content:center"><img crossorigin="anonymous" alt="" src="${src}" style="display:block;height:calc(100% - 30px);width:auto;max-width:90%;object-fit:contain;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.55)"></div><div style="position:absolute;inset:0;box-shadow:inset 0 0 50px rgba(0,0,0,.28)"></div>`;
+  const stage=src=>`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,${toHex(mix(pd,[0,0,0],.3))},${toHex(mix(pd,[0,0,0],.72))});display:flex;align-items:center;justify-content:center"><img crossorigin="anonymous" alt="" src="${src}" style="display:block;height:calc(100% - 24px);width:auto;max-width:90%;object-fit:contain;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.55)"></div>`;
   const kick=(s,c)=>`<div style="font:600 18px/1.2 ${E.body};letter-spacing:.3em;text-transform:uppercase;color:${c||ACC};text-align:center">${esc(s)}</div>`;
   const dispCase=E.upper?"uppercase":"none";
 
   /* logo in its own colours on a panel that suits it, set type if missing */
   const lg=ctx.logo,lr=lg&&lg[0]&&lg[1]&&lg[2]?lg[1]/lg[2]:0;
-  const lh=lr?Math.min(118,Math.round(440/lr)):0,lw=lr?Math.round(lh*lr):0;
+  const lh=lr?Math.min(heroIsPoster?90:118,Math.round(440/lr)):0,lw=lr?Math.round(lh*lr):0;
   const tlen=clean(f.title).length,tsz=tlen<=14?60:tlen<=26?48:tlen<=40?38:32;
   const darkPanel=toHex(mix(pd,[0,0,0],.55)),lightPanel=T.dark?"#f4ecd8":toHex(mix(paper,[255,255,255],.6));
   const titleType=c=>`<div style="font:${E.dw} ${tsz}px/1.04 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${c};text-align:center;max-width:560px">${esc(f.title)}</div>`;
-  const logoPanel=`<div data-lpanel data-dark="${darkPanel}" data-light="${lightPanel}" data-darkink="#f3e7c8" data-lightink="${INK}" style="position:absolute;left:50%;top:612px;transform:translateX(-50%);max-width:600px;padding:18px 34px;background:${darkPanel};color:#f3e7c8;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.4);text-align:center">
+  const logoPanel=`<div data-lpanel data-dark="${darkPanel}" data-light="${lightPanel}" data-darkink="#f3e7c8" data-lightink="${INK}" style="position:absolute;left:50%;top:${heroIsPoster?652:612}px;transform:translateX(-50%);max-width:600px;padding:18px 34px;background:${darkPanel};color:#f3e7c8;border:3px solid ${GOLD};box-shadow:0 8px 22px rgba(0,0,0,.4);text-align:center">
      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:532px;object-fit:contain;margin:0 auto"><div style="display:none">${titleType("currentColor")}</div>`:titleType("currentColor")}
    </div>`;
 
@@ -138,10 +138,10 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:60px;right:60px;top:50px">${kick(T.kick)}</div>
    <div data-fit data-min="30" style="position:absolute;left:60px;right:60px;top:80px;height:76px;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:54px">
      <div style="font:${E.dw} 1em/1.02 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">${esc(venue)}</div></div>
-   <div style="position:absolute;left:50px;top:166px;width:716px;height:530px;padding:6px;box-sizing:border-box;background:${frame};border-radius:358px 358px 0 0/150px 150px 0 0;box-shadow:0 10px 26px rgba(0,0,0,.3)">
+   <div style="position:absolute;left:50px;top:166px;width:716px;height:${heroIsPoster?502:530}px;padding:6px;box-sizing:border-box;background:${frame};border-radius:358px 358px 0 0/150px 150px 0 0;box-shadow:0 10px 26px rgba(0,0,0,.3)">
      <div style="position:relative;width:100%;height:100%;overflow:hidden;border-radius:352px 352px 0 0/146px 146px 0 0;background:#222">${heroIsPoster?stage(hero):photo(hero,heroPos)}</div></div>
    ${logoPanel}
-   <div data-fit data-min="16" style="position:absolute;left:70px;right:70px;top:772px;height:58px;overflow:hidden;font-size:22px;text-align:center;color:${SOFT}">
+   <div data-fit data-min="16" style="position:absolute;left:70px;right:70px;top:${heroIsPoster?786:772}px;height:${heroIsPoster?48:58}px;overflow:hidden;font-size:22px;text-align:center;color:${SOFT}">
      <div style="font:italic 1em/1.3 ${E.body}">${esc(sign)}${f.T?`. ${esc(sent(f.T))}`:""}</div></div>
    <div style="position:absolute;left:96px;right:96px;top:838px;height:1px;background:${GOLD};opacity:.8"></div>
    <div data-fit data-min="15" style="position:absolute;left:66px;width:380px;top:852px;height:150px;overflow:hidden;font-size:20px;color:${INK}">

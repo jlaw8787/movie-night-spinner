@@ -182,7 +182,7 @@ function mat(P,seed){/* woven pandanus mat: crossed slats with fibre noise */
 }
 function stock(P,tone,seed){
   const wear=TONE[tone].wear;
-  return`background-color:${P.bg};background-image:${noise(".7",2,P.fib,.22+wear*.2,seed)},${noise(".015",4,P.fib,.18+wear*.35,seed+4,700)};box-shadow:inset 0 0 ${30+wear*90}px rgba(80,50,10,${.18+wear*.4})`;
+  return`background-color:${P.bg};background-image:radial-gradient(ellipse at 50% 50%,rgba(80,50,10,0) 50%,rgba(80,50,10,${(.14+wear*.3).toFixed(2)}) 100%),${noise(".7",2,P.fib,.22+wear*.2,seed)},${noise(".015",4,P.fib,.18+wear*.35,seed+4,700)}`;
 }
 function wearLayer(P,tone,seed,folds){
   const w=TONE[tone].wear,lt=mix(hex(P.bg),WHITE,.2);
@@ -215,7 +215,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const url=logoUrl(ctx),title=T(ctx.f.title||"");
   const fbS=title.length>40?26:title.length>22?34:44;
   const vlen=String(F.venue).length,vs=vlen>30?36:vlen>18?42:50;
-  const lpDark=`position:absolute;left:50%;top:536px;transform:translateX(-50%) rotate(${TN.tilt*.5}deg);max-width:470px;padding:14px 24px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".8",2,[255,255,255],.07,seed)};border-radius:${E.g===2?"18px":"6px"};box-shadow:0 10px 24px rgba(0,0,0,.45),inset 0 0 0 2px ${rgba(C.accA,.6)}`;
+  const lpDark=`position:absolute;left:50%;top:536px;transform:translateX(-50%) rotate(${TN.tilt*.5}deg);max-width:470px;padding:14px 24px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".8",2,[255,255,255],.07,seed)};border-radius:${E.g===2?"18px":"6px"};box-shadow:0 10px 24px rgba(0,0,0,.45)`;
   const lpLight=lpDark.replace(`background-color:${C.dark}`,`background-color:${P.bg}`);
   const drinks=cs.d.length?cs.d:[{n:"House lagoon cooler",note:"Pineapple, lime and crushed ice"}];
   const waterF=hex(P.water);

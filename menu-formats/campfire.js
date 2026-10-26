@@ -220,7 +220,7 @@ function border(tone,col){
 function stock(P,tone,seed){
   /* kraft that reads as kraft: dark and pale long fibres, coarse flecks, cloudy pulp, a lit middle and handled edges */
   const wear=TONE[tone].wear,sm=/glossy|grand/.test(tone)?.6:1,bg=hex(P.bg),dk=mix(bg,BLACK,.42),lt=mix(bg,WHITE,.42),bn=mix(P.fib,BLACK,.2);
-  return`background-color:${P.bg};background-image:radial-gradient(ellipse 75% 60% at 46% 36%,rgba(255,238,205,${(.2*sm).toFixed(2)}),rgba(255,238,205,0) 70%),${noise(".9 .014",3,dk,(.36*sm).toFixed(2),seed)},${noise(".7 .02",2,lt,(.2*sm).toFixed(2),seed+2)},${noise(".9 .05",2,P.spk,.2,seed+1)},${noise("1.4",1,bn,(.32*sm).toFixed(2),seed+4,220)},${noise(".009",4,dk,(.26+wear*.2).toFixed(2),seed+5,760)},${noise(".014",3,lt,.1,seed+6,640)};box-shadow:inset 0 0 ${60+wear*90}px rgba(40,22,6,${(.32+wear*.4).toFixed(2)}),inset 0 0 0 1px rgba(30,16,4,.35)`;
+  return`background-color:${P.bg};background-image:radial-gradient(ellipse at 50% 50%,rgba(40,22,6,0) 55%,rgba(40,22,6,${(.2+wear*.3).toFixed(2)}) 100%),radial-gradient(ellipse 75% 60% at 46% 36%,rgba(255,238,205,${(.2*sm).toFixed(2)}),rgba(255,238,205,0) 70%),${noise(".9 .014",3,dk,(.36*sm).toFixed(2),seed)},${noise(".7 .02",2,lt,(.2*sm).toFixed(2),seed+2)},${noise(".9 .05",2,P.spk,.2,seed+1)},${noise("1.4",1,bn,(.32*sm).toFixed(2),seed+4,220)},${noise(".009",4,dk,(.26+wear*.2).toFixed(2),seed+5,760)},${noise(".014",3,lt,.1,seed+6,640)}`;
 }
 function wearLayer(P,tone,seed){
   const w=TONE[tone].wear,lt=mix(hex(P.bg),WHITE,.25);

@@ -101,7 +101,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   let boardBg,boardInk,boardEdge,boardHead,headInk,priceInk,noteInk;
   if(E.board==="felt"){boardBg=`repeating-linear-gradient(180deg,#141414 0 7px,#0a0a0a 7px 9px)`;boardInk="#f5f2ea";boardEdge=`6px solid #2a2a2a;outline:2px solid #8f8f8f`;boardHead=toHex(mix(pa,[0,0,0],.25));headInk=readable("#f5f2ea",toHex(mix(pa,[0,0,0],.25)),4.5);priceInk="#f5f2ea";noteInk="#cfc9bb"}
   else if(E.board==="acrylic"){const bg=mix(lit,[255,248,225],.55);boardBg=`radial-gradient(ellipse at 50% 40%,${toHex(mix(bg,[255,255,255],.35))},${toHex(bg)})`;boardInk=readable("#3a2210",toHex(bg),7);boardEdge=`5px solid #3b2a18`;boardHead=toHex(mix(pa,[0,0,0],.45));headInk=readable("#fff1d6",toHex(mix(pa,[0,0,0],.45)),4.5);priceInk=readable(toHex(mix(pa,[0,0,0],.4)),toHex(bg),4.5);noteInk=readable("#5a3e24",toHex(bg),4.5)}
-  else if(E.board==="neon"){boardBg=`linear-gradient(180deg,#0b0b10,#050507)`;boardInk="#ffffff";boardEdge=`2px solid ${LIT};box-shadow:0 0 ${14*T.glow}px ${LIT},inset 0 0 ${12*T.glow}px ${LIT}55`;boardHead="transparent";headInk=LIT;priceInk=LIT;noteInk="#c9c9d6"}
+  else if(E.board==="neon"){boardBg=`linear-gradient(180deg,#0b0b10,#050507)`;boardInk="#ffffff";boardEdge=`2px solid ${LIT};box-shadow:0 0 ${14*T.glow}px ${LIT}`;boardHead="transparent";headInk=LIT;priceInk=LIT;noteInk="#c9c9d6"}
   else {boardBg=`linear-gradient(180deg,#141519,#0b0c0e)`;boardInk="#f4f5f7";boardEdge=`3px solid #2c2d32`;boardHead=toHex(mix(pa,[0,0,0],.15));headInk=readable("#ffffff",toHex(mix(pa,[0,0,0],.15)),4.5);priceInk=readable(LIT,"#121316",4.5);noteInk="#b9bcc4"}
   const up=E.board==="felt"?"uppercase":"none",trk=E.board==="felt"?".06em":"0";
   const clamp=n=>`display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:${n};overflow:hidden;`;
@@ -127,7 +127,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const posterBox=hero=>`<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,${toHex(mix(lit,[255,244,214],.25))}55,rgba(0,0,0,0) 62%),linear-gradient(180deg,#1a1512,#0d0b0a);display:flex;align-items:center;padding:0 16px 0 14px;box-sizing:border-box;gap:22px">
       <img crossorigin="anonymous" alt="" src="${hero}" style="flex:none;display:block;height:calc(100% - 28px);width:auto;border:3px solid #f1ead8;box-shadow:0 0 ${30*T.glow}px rgba(255,240,210,${.35*T.glow}),0 6px 16px rgba(0,0,0,.6)">
       <div style="flex:1;min-width:0;display:flex;justify-content:center">@@LOGO@@</div></div>
-      <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${30+40*(1-T.glow)}px rgba(0,0,0,${.25+.3*(1-T.glow)});pointer-events:none"></div>`;
+`;
   const photo=heroIsPoster&&hero?posterBox(hero):hero?`<img alt="" src="${hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${heroPos};display:block;filter:${E.photo}${T.photo} brightness(${(1+.06*T.glow).toFixed(2)})">${half}
       <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(255,255,255,${.1*T.glow}),rgba(255,255,255,0) 60%);mix-blend-mode:screen"></div>
       <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${30+40*(1-T.glow)}px rgba(0,0,0,${.25+.3*(1-T.glow)})"></div>`

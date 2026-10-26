@@ -154,7 +154,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
     const ix=multi?0:B,iy=multi?0:B,iw=multi?556:W-2*B,ih=multi?H:below?H-B-SHb:H-2*B;
     const pad=multi?14:22,ph=ih-2*pad,pw=Math.round(ph*2/3),px=multi?ix+Math.round((iw-pw)/2):ix+iw-pad-pw,py=iy+pad;
     const posterEl=`<div style="position:absolute;left:${px}px;top:${py}px;width:${pw}px;height:${ph}px;background:${OLD?e.bcol:"#ffffff"};padding:6px;box-sizing:border-box;box-shadow:0 8px 20px rgba(40,30,10,.45);transform:rotate(${(T.tilt*.25).toFixed(1)}deg)"><img alt="" crossorigin="anonymous" src="${ctx.img(PO,"w780")}" style="display:block;width:100%;height:100%;object-fit:contain"></div>`;
-    const panel=`<div style="position:absolute;left:${ix}px;top:${iy}px;width:${iw}px;height:${ih}px;overflow:hidden;border-radius:${e.rad}px;background:${e.paper};box-shadow:inset 0 0 0 1px ${mix(e.ink,e.paper,.75)}"><div style="position:absolute;inset:0;background-image:${noise("#6b5a3a",.1,.85,200)}${e.linen?","+linen:""}"></div></div>`;
+    const panel=`<div style="position:absolute;left:${ix}px;top:${iy}px;width:${iw}px;height:${ih}px;overflow:hidden;border-radius:${e.rad}px;box-sizing:border-box;border:1px solid ${mix(e.ink,e.paper,.75)};background:${e.paper}">${e.linen?`<div style="position:absolute;inset:0;background-image:${linen}"></div>`:""}</div>`;
     if(multi){
       const s2=ctx.stills&&ctx.stills[2]||s1,s3=ctx.stills&&ctx.stills[3]||s0,LBm=logoBox(ctx,200,64);
       return `<div style="position:absolute;inset:0;background:${DARK}"></div>${panel}${posterEl}
@@ -176,7 +176,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
         <div style="font-family:${DISP};font-weight:${e.dw||400};${fs(e.cap==="big"?60:46,18)};line-height:1.06;margin:4px 0;color:${plain?ACC:"inherit"};${e.cap==="overlay"||e.cap==="big"?"text-transform:uppercase;":""}${e.cap==="big"?"text-shadow:3px 3px 0 rgba(42,26,12,.35);":""}">${esc(venue)}</div>
         <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.12em;text-transform:uppercase">${esc(sign)}</div></div>`}
     const foot=`<div style="font-family:${BODY};font-weight:700;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:${mix(e.ink,e.paper,.2)}">Now showing, ${esc(f.year)}</div>`;
-    const zone=`<div style="position:absolute;left:${zx}px;top:${zy}px;width:${zw}px;height:${zh}px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">${lp(0,0,"flow")}${mid}${below?"":foot}</div>`;
+    const zone=`<div style="position:absolute;left:${zx}px;top:${zy}px;width:${zw}px;height:${zh}px;display:flex;flex-direction:column;justify-content:${below?"center":"space-between"};gap:${below?22:0}px;align-items:flex-start">${lp(0,0,"flow")}${mid}${foot}</div>`;
     const cap=below?(e.cap==="strip"?`<div data-fit style="position:absolute;left:${B+10}px;right:${B+10}px;bottom:8px;height:${SHb-12}px;overflow:hidden;display:flex;flex-direction:column;justify-content:center">
         <div style="font-family:${DISP};font-weight:${e.dw||400};color:${ACC};${fs(era==="1950s"?46:36,18)};line-height:1.05;white-space:nowrap">${esc(venue)}</div>
         <div style="font-family:${BODY};font-weight:600;color:${e.ink};${fs(17,14)};letter-spacing:.14em;text-transform:uppercase;white-space:nowrap">${esc(sign)}</div></div>`
@@ -240,7 +240,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
         <div style="font-family:${BODY};font-weight:600;${fs(16,14)};letter-spacing:.2em;text-transform:uppercase;color:${e.cap==="minimal"?ACC:"inherit"}">${esc(T.kick)}</div>
         <div style="font-family:${DISP};font-weight:${e.dw||400};${fs(e.cap==="minimal"?44:40,18)};line-height:1.04;white-space:nowrap;${e.cap==="overlay"?"text-transform:uppercase;":""}">${esc(venue)}</div></div>`;
   }
-  const front0=`<div style="position:absolute;inset:0;overflow:hidden">${front}${wearFront}${FIT}</div>`;
+  const front0=`<div style="position:absolute;inset:0;overflow:hidden">${front}${hasP?"":wearFront}${FIT}</div>`;
 
   /* ---------- back: menu, stamp, message, key tag ---------- */
   const n=C.reduce((a,c)=>a+c.items.length,0);
