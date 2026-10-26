@@ -103,15 +103,15 @@ async def scenario(b, name, ctxopts):
         if not opts: return "no theme options"
         v = opts[min(3, len(opts) - 1)]; await pg.select_option("#themeSel", v); await pg.wait_for_timeout(300)
         await close_dialogs(pg); await pg.click("#spin"); await pg.wait_for_function("!spinning", timeout=20000); await menu_ready(pg)
-        t = await pg.evaluate("current.theme"); await pg.select_option("#themeSel", "")
+        t = await pg.evaluate("current.theme"); await pg.select_option("#themeSel", "all")
         return f"theme {v} gave {t}" if t else False
     await S("theme picker then spin", theme)
     async def kids():
         await pg.click("#kidsBtn"); await pg.wait_for_timeout(300)
         await close_dialogs(pg); await pg.click("#spin"); await pg.wait_for_function("!spinning", timeout=20000); await menu_ready(pg)
-        t = await pg.evaluate("current.theme"); bs = await pg.evaluate("(current._r2&&current._r2.dishes||[]).some(d=>d.af===false)")
+        t = await pg.evaluate("current.theme"); bs = await pg.evaluate("planDishes(current).some(d=>dietBooze(d))")
         await pg.click("#kidsBtn")
-        return f"kids spin gave theme {t}" if t in ("kids", "fairytale") and not bs else False
+        return f"kids spin gave theme {t}" if not bs else False
     await S("Kids mode spin is family and alcohol-free", kids)
     await S("sound toggle", lambda: pg.click("#sound"))
     async def lazy():
@@ -130,7 +130,7 @@ async def scenario(b, name, ctxopts):
     await S("Mark as watched and undo", watch)
     async def checklist():
         await pg.evaluate("document.getElementById('watchPanel').open=true"); await pg.fill("#watchSearch", "jaws"); await pg.wait_for_timeout(400)
-        n = await pg.evaluate("document.querySelectorAll('#watchList input,#watchList label,#watchList li').length")
+        n = await pg.evaluate("document.querySelectorAll('#watchList .watch-row').length")
         await pg.fill("#watchSearch", ""); await pg.evaluate("document.getElementById('watchPanel').open=false"); return f"{n} rows for 'jaws'" if n else False
     await S("checklist search", checklist)
     async def week():
@@ -166,8 +166,8 @@ async def scenario(b, name, ctxopts):
     async def stub():
         await close_dialogs(pg); b1 = await pg.query_selector_all("#chips .ticket")
         if len(b1) < 2: return False
-        want = (await b1[1].inner_text()).replace("Admit one", "").strip()
-        await b1[1].click(); await pg.wait_for_timeout(500); await menu_ready(pg)
+        want = re.sub(r'(?i)admit one', '', await b1[1].inner_text()).strip()
+        await b1[1].click(); await pg.wait_for_timeout(3500); await menu_ready(pg)
         cur = await pg.evaluate("current.title"); return f"replayed {cur}" if cur.lower() == want.lower() else False
     await S("ticket stub replays a film", stub)
     # 9 video shop

@@ -711,12 +711,14 @@ function planSave(f){try{localStorage.setItem("mns-plan-"+f.id,JSON.stringify({g
    (data/recipes2 dish.alt.veg, .af, .veg_af); one with no alternative is left off unless the cook ticks it back */
 const DIET=(()=>{try{const d=JSON.parse(localStorage.getItem("mns-diet")||"{}");return {veg:!!d.veg,af:!!d.af}}catch(e){return {veg:false,af:false}}})();
 function dietSave(){try{localStorage.setItem("mns-diet",JSON.stringify(DIET))}catch(e){}}
+/* kids mode always plans the alcohol-free versions */
+const dietAF=()=>DIET.af||(typeof kidsMode!=="undefined"&&kidsMode);
 const dietBooze=x=>x.af===false||(x.ingredients||[]).some(i=>i.aisle==="Bottle shop");
 const dietMeat=x=>x.veg===false;
 function dietDish(d){
   const alt=d.alt||{};let x=d,tag="";
-  if(DIET.veg&&dietMeat(d)){if(DIET.af&&alt.veg_af){return Object.assign({},d,alt.veg_af,{orig:d.n,tag:"veg",af:true})}if(alt.veg){x=Object.assign({},d,alt.veg,{orig:d.n,af:alt.veg.af});tag="veg"}else return Object.assign({},d,{orig:d.n,blocked:"meat"})}
-  if(DIET.af&&dietBooze(x)){if(!tag&&alt.af){x=Object.assign({},d,alt.af,{orig:d.n,af:true});tag="af"}else return Object.assign({},x,{orig:d.n,blocked:"alcohol",tag})}
+  if(DIET.veg&&dietMeat(d)){if(dietAF()&&alt.veg_af){return Object.assign({},d,alt.veg_af,{orig:d.n,tag:"veg",af:true})}if(alt.veg){x=Object.assign({},d,alt.veg,{orig:d.n,af:alt.veg.af});tag="veg"}else return Object.assign({},d,{orig:d.n,blocked:"meat"})}
+  if(dietAF()&&dietBooze(x)){if(!tag&&alt.af){x=Object.assign({},d,alt.af,{orig:d.n,af:true});tag="af"}else return Object.assign({},x,{orig:d.n,blocked:"alcohol",tag})}
   return tag?Object.assign({},x,{tag}):x;
 }
 const planAll=f=>((f._r2&&f._r2.dishes)||[]).map(dietDish);
@@ -763,9 +765,9 @@ function planHTML(f){
   const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks"},all=planAll(f);
   const TAG={veg:"vegetarian version",af:"alcohol-free version"},BLK={meat:"has meat or fish",alcohol:"has alcohol"};
   return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">-</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
-  <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${DIET.af?" checked":""}><span>No alcohol</span></label></div>
+  <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${dietAF()?" checked":""}${kidsMode?" disabled":""}><span>No alcohol${kidsMode?" (kids mode)":""}</span></label></div>
   <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
-  <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||DIET.af?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
+  <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
   ${["s","m","w","d"].map(c=>{const ds=all.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${planMin((d.prep_min||0)+(d.cook_min||0))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
 }
 function planCount(r){const on=r.dishes.map(dietDish).filter(planOn).length;return `${on} of ${r.dishes.length} dishes picked`}
@@ -782,7 +784,7 @@ function prepHTML2(f,menu){
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
     <div class="pp-title">${ESC(f.title)}</div>
-    <p class="pp-serves">Serves ${PLAN.guests}${DIET.veg||DIET.af?` &nbsp;/&nbsp; ${[DIET.veg&&"vegetarian",DIET.af&&"alcohol-free"].filter(Boolean).join(", ")}`:""} &nbsp;/&nbsp; ${ds.length} dish${ds.length===1?"":"es"} &nbsp;/&nbsp; hands-on ${planMin(hands)}, longest dish ${planMin(longest)}</p>
+    <p class="pp-serves">Serves ${PLAN.guests}${DIET.veg||dietAF()?` &nbsp;/&nbsp; ${[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", ")}`:""} &nbsp;/&nbsp; ${ds.length} dish${ds.length===1?"":"es"} &nbsp;/&nbsp; hands-on ${planMin(hands)}, longest dish ${planMin(longest)}</p>
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition&&edition.cue||f.P)}</span></div>
   </div>`;
@@ -1269,6 +1271,8 @@ function setKidsUI(){try{renderMotw()}catch(e){};const b=$("kidsBtn");b.setAttri
 function setKids(v){
   kidsMode=v;try{localStorage.setItem("mns-kids",v?"1":"0")}catch(e){}
   setKidsUI();
+  /* the planner and prep sheet follow kids mode straight away (alcohol-free versions) */
+  try{if(current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu);const h=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=h}}catch(e){}
   if(!spinning)setList();
   if(!$("viewShop").hidden)renderShop();
   if(!$("viewCrave").hidden)renderCrave();
