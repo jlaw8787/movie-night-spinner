@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit 32f61d36 (service worker version mns-19d65fed).
+Live as of commit 08041450 (service worker version mns-19d65fed).
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
@@ -28,8 +28,11 @@ Live as of commit 32f61d36 (service worker version mns-19d65fed).
 
 - Oct 27 (live in 32f61d36): app.js libAim sets object-position from L.focus straight after the faces are drawn, before photos load, so __fmtLift.trim takes the same aim. Very thin frames (under 40 percent of the still visible) get an unused faceless still. focus entries are [x, y, aspect].
 
-## Next job (not started, owner to confirm)
-Face crops left that aiming can't fix (the still itself is the problem): Hitch, House Party, Daddy's Home, Die Hard 2, Casino Royale, plus others in qreport rule 2. Option: hand-pick stills per film into data/still-block.json. stillfocus.py --tight finds big cut-off faces but about half its hits are good close-ups, so review its contact sheet before writing.
+- Oct 27 (live in 08041450): hand-pick pass over the 224 menus in qreport rule 2. 135 stills blocked in 96 films (promo key art, poster variants ORB missed, cut faces, dark). Tool: wip/genre/lib/framegrab.py OUTDIR list.json grabs each visible scene frame as cropped on the page, numbered, plus a paths json, for contact-sheet review.
+- Left as is: format title bars over the header photo ("THE MENU" on diner/cafe styles) are the layout, not the photo. Hot Tub and Planes Trains titles come from the motel logo panel.
+
+## Next job (owner to pick)
+Photo pass is done. Still stuck on mostly promo stills: Casino Royale, Kung Fu Hustle, Mulan, The Little Mermaid (1989), Thor: Ragnarok. Option: fewer frames for those films, or a different crop. Otherwise move on to the owner's next list item.
 
 ## Tools (run from the repo root; local server: python3 -m http.server 8795)
 - wip/genre/lib/sweep.py [style ...]: full check of library menus (spill, cut, small text, duplicate, dark and white photos, poster hero, hidden lines). About 25 min for all 759.
