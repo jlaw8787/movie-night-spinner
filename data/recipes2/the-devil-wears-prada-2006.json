@@ -50,7 +50,9 @@
      "text": "Cut into fingers and serve.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Paris fashion week canapés",
@@ -115,7 +117,9 @@
      "text": "Arrange both in neat rows on a platter.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Miranda's steak",
@@ -184,7 +188,9 @@
      "text": "Slice the steak and serve with the potatoes and creamed spinach.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Cerulean blueberry tart",
@@ -251,7 +257,9 @@
      "text": "Dust the edge with icing sugar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Miranda's espresso martini",
@@ -314,7 +322,67 @@
      "text": "Strain into a chilled coupe and float 3 coffee beans on the crema.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Miranda's espresso martini (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 8,
+     "make_ahead": "Mix and shake fresh",
+     "ingredients": [
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "espresso, cooled (6 shots)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "coffee beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill 4 coupe glasses in the freezer.",
+       "min": 5
+      },
+      {
+       "text": "Pull the espresso and let it cool.",
+       "min": 5
+      },
+      {
+       "text": "Shake the espresso, syrup and vanilla hard over ice so it foams, one drink at a time.",
+       "min": 5
+      },
+      {
+       "text": "Strain into a chilled coupe and float 3 coffee beans on the crema.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

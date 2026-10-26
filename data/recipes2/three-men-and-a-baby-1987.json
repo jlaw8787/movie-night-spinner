@@ -84,7 +84,9 @@
      "text": "Serve with sweet chilli sauce.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bagel chips and schmear",
@@ -141,7 +143,9 @@
      "text": "Serve the chips around the schmear.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Peter's loft steak sandwich",
@@ -210,7 +214,9 @@
      "text": "Toast the sourdough, spread with mayo, pile on steak and onions, top with Swiss and grill until melted.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Baby Mary's bedtime vanilla custard",
@@ -267,7 +273,9 @@
      "text": "Serve warm, or chill with plastic pressed on the surface.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Night-feed bourbon milk punch",
@@ -326,7 +334,79 @@
      "text": "Grate nutmeg over the top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Night-feed bourbon milk punch (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "cold full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "whole nutmeg, to grate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+       "min": 12
+      },
+      {
+       "text": "Shake 160ml of the cold tea with the milk, syrup and vanilla with ice until frothy.",
+       "min": 2
+      },
+      {
+       "text": "Strain into 4 ice-filled glasses.",
+       "min": 2
+      },
+      {
+       "text": "Grate nutmeg over the top.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -58,7 +58,9 @@
      "text": "Tip into paper bags labelled like evidence.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "The Further fog dip",
@@ -117,7 +119,9 @@
      "text": "Warm the flatbreads and serve with the dip.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lambert family lasagne",
@@ -202,7 +206,101 @@
      "text": "Rest for 20 minutes before cutting.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lambert family lasagne",
+     "prep_min": 40,
+     "cook_min": 170,
+     "make_ahead": "Assemble up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "beef mince",
+       "aisle": "Meat"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "pork mince",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "lasagne sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mince, add the tomatoes, stock and balsamic vinegar and simmer for 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Make a bechamel with the butter, flour and milk.",
+       "min": 15
+      },
+      {
+       "text": "Layer the meat sauce, pasta sheets and bechamel in a dish, finishing with mozzarella.",
+       "min": 25
+      },
+      {
+       "text": "Bake at 180C for 45 minutes.",
+       "min": 45
+      },
+      {
+       "text": "Rest for 20 minutes before cutting.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Red-faced cherry pie",
@@ -269,7 +367,9 @@
      "text": "Cool, then serve with ice cream.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Further blackberry fizz",
@@ -318,7 +418,9 @@
      "text": "Fill glasses with ice, pour in the blackberry syrup and top with soda water.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

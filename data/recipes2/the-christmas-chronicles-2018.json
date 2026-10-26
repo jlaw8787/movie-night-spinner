@@ -86,7 +86,9 @@
      "text": "Bake at 180C, sprinkle with sea salt and cool on the tray.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chicago Italian beef sliders",
@@ -161,7 +163,9 @@
      "text": "Pile in the beef and top with pickled vegetables. Serve with little cups of jus for dunking.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pierce family bacon-wrapped meatloaf",
@@ -270,7 +274,9 @@
      "text": "Make gravy from the tray juices with the flour and stock.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sleigh ride iced reindeer cookies",
@@ -343,7 +349,9 @@
      "text": "Mix the remaining icing sugar with water. Ice the cookies white, tint a little red for noses and finish with gold sprinkles.",
      "min": 19
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sleigh ride salted caramel hot chocolate",
@@ -396,7 +404,9 @@
      "text": "Add marshmallows and brown quickly with a kitchen torch or under the grill.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   }
  ]
 }

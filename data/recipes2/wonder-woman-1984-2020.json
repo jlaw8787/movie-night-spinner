@@ -66,7 +66,9 @@
      "text": "Grill until bubbling and serve both with sour cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Marinated olives and feta",
@@ -131,7 +133,9 @@
      "text": "Serve in a shallow bowl with warm pita torn into pieces.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fourth of July sticky pork ribs",
@@ -204,7 +208,9 @@
      "text": "Grill the corn and serve it all picnic style.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "1984 food court cinnamon rolls",
@@ -271,7 +277,9 @@
      "text": "Ice with cream cheese beaten with icing sugar.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wishing stone champagne cocktail",
@@ -314,7 +322,59 @@
      "text": "Pour sparkling wine for the grown-ups or sparkling grape juice for everyone else. Be careful what you wish for.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Wishing stone champagne cocktail (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "sparkling grape juice",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drop a sugar cube into each flute with a little grated orange zest and a drop of vanilla extract.",
+       "min": 2
+      },
+      {
+       "text": "Pour alcohol-free sparkling wine for the grown-ups or sparkling grape juice for the kids. Be careful what you wish for.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

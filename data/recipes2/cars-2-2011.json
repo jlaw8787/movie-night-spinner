@@ -56,7 +56,9 @@
      "text": "Pile into small bowls.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ham and gruyere crêpes",
@@ -127,7 +129,9 @@
      "text": "Cut into triangles and serve hot.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Porto Corsa prawn pasta",
@@ -206,7 +210,9 @@
      "text": "Toss through the spaghetti with the parsley.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pistachio ice cream",
@@ -247,7 +253,9 @@
      "text": "Scatter with pistachios and drizzle with honey.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Porto Corsa blood orange soda",
@@ -326,7 +334,9 @@
      "text": "Finish with a mint sprig and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

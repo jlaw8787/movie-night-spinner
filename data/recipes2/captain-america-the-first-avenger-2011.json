@@ -52,7 +52,9 @@
      "text": "Tuck into the buns with mustard and sauerkraut and wrap in wax paper.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "London pub ploughman's",
@@ -107,7 +109,9 @@
      "text": "Lay the cheese, ham, onions and chutney on a board with the bread and butter.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Army mess hall stew",
@@ -176,7 +180,9 @@
      "text": "Ladle into bowls and serve with crusty bread.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Shield cherry and blueberry pie",
@@ -239,7 +245,9 @@
      "text": "Rest the pie, then serve warm with ice cream.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Brooklyn vanilla malted milkshake",
@@ -280,7 +288,9 @@
      "text": "Pour into the glasses and serve straight away.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

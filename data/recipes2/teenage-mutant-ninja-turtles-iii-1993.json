@@ -62,7 +62,9 @@
      "text": "Wrap the base in nori, sprinkle with sesame and serve with pickled ginger.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Time sceptre teriyaki skewers",
@@ -119,7 +121,67 @@
      "text": "Scatter with spring onion and serve hot.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Time sceptre teriyaki skewers",
+     "prep_min": 12,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "chicken thigh fillets, in pieces",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, honey and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Thread the chicken onto skewers.",
+       "min": 7
+      },
+      {
+       "text": "Grill, brushing with the glaze, until sticky and charred.",
+       "min": 12
+      },
+      {
+       "text": "Scatter with spring onion and serve hot.",
+       "min": 0
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Back home mushroom and capsicum pizza",
@@ -182,7 +244,9 @@
      "text": "Cut into slices and celebrate being back home.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mochi ice cream",
@@ -245,7 +309,9 @@
      "text": "Freeze until firm.",
      "min": 120
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Iced honey barley tea with lemon",
@@ -310,7 +376,9 @@
      "text": "Pour into glasses of ice and add a lemon slice to each.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

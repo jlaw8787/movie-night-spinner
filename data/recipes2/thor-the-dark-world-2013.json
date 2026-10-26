@@ -74,7 +74,9 @@
      "text": "Fry at 170C for 6 minutes, then halve and serve with mustard.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Greenwich tube stop chips",
@@ -125,7 +127,9 @@
      "text": "Tip into paper, shake over malt vinegar and plenty of sea salt.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "London pie and mash",
@@ -212,7 +216,103 @@
      "text": "Boil and mash the potatoes with butter and milk. Cook the peas and serve everything together.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "London pie and mash",
+     "prep_min": 30,
+     "cook_min": 200,
+     "make_ahead": "Filling a day ahead, top and bake fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the beef in the oil with the onions, then stir in the flour.",
+       "min": 15
+      },
+      {
+       "text": "Add the stock, Worcestershire and water to cover and simmer until tender.",
+       "min": 180
+      },
+      {
+       "text": "Pour into a dish and top with puff pastry. Bake at 200C for 25 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Boil and mash the potatoes with butter and milk. Cook the peas and serve everything together.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Dark Elves blackberry tart",
@@ -269,7 +369,9 @@
      "text": "Chill, then dust the edge with icing sugar.",
      "min": 35
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Aether blood orange and cranberry spritz",
@@ -340,7 +442,91 @@
      "text": "Garnish with a blood orange wheel and a rosemary sprig. Leave out the vodka for a booze-free version.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Aether blood orange and cranberry spritz (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "blood orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "blood orange, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "rosemary sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the sugar into the hot water with one rosemary sprig and steep, then lift out the sprig.",
+       "min": 10
+      },
+      {
+       "text": "Shake the rosemary syrup, juices and lime juice hard with ice, in batches.",
+       "min": 5
+      },
+      {
+       "text": "Strain into wine glasses full of ice and top with soda water.",
+       "min": 3
+      },
+      {
+       "text": "Garnish with a blood orange wheel and a rosemary sprig.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

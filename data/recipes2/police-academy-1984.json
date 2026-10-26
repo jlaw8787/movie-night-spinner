@@ -80,7 +80,9 @@
      "text": "Serve warm with butter.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blue Oyster bar oysters",
@@ -139,7 +141,9 @@
      "text": "Spoon a little mignonette over each and serve with lemon wedges.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mess hall meatloaf",
@@ -236,7 +240,9 @@
      "text": "Rest the meatloaf, mash the potatoes with butter and milk and serve thick slices.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Graduation cake",
@@ -319,7 +325,9 @@
      "text": "Pipe a badge and the word Graduates in blue.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blue Oyster blue lagoon",
@@ -384,7 +392,85 @@
      "text": "Top with lemonade, stir once and garnish with a lemon wheel and a cherry.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Blue Oyster blue lagoon (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "drops blue food colouring",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "cold lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the sugar syrup with the zest of the orange for 5 minutes, strain, cool and stir in the blue food colouring.",
+       "min": 12
+      },
+      {
+       "text": "Fill tall glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Shake the blue syrup and lemon juice with ice and strain into the glasses.",
+       "min": 3
+      },
+      {
+       "text": "Top with lemonade, stir once and garnish with a lemon wheel and a cherry.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

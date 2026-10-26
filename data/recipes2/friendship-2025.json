@@ -74,7 +74,9 @@
      "text": "Arrange on a platter, drizzle with the hot honey and a squeeze of lemon, and scatter with torn mint and toasted sesame seeds.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "From-scratch French onion dip and chips",
@@ -153,7 +155,9 @@
      "text": "Serve with the thick-cut salted potato chips.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dinner party rump with chimichurri",
@@ -238,7 +242,9 @@
      "text": "Serve with the potatoes and a dressed green salad.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mini pavlovas with berries",
@@ -317,7 +323,9 @@
      "text": "Top with the whipped cream, the berries, the pulp of the passionfruit and a drizzle of lemon curd.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Grapefruit pale ale radler",
@@ -378,7 +386,67 @@
      "text": "For non-drinkers, use ginger beer in place of the ale.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Grapefruit pale ale radler (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 28,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "375ml cans alcohol-free pale ale",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pink grapefruit",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the pint glasses in the freezer for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Mix the juice of the pink grapefruit with the sugar syrup and the cold soda water.",
+       "min": 1
+      },
+      {
+       "text": "Pour the cold alcohol-free pale ale into each glass, then top with the grapefruit soda.",
+       "min": 1
+      },
+      {
+       "text": "Add a squeeze of lime and a grapefruit wedge.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

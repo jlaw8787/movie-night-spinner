@@ -70,7 +70,9 @@
      "text": "Top each with sour cream, a curl of smoked salmon and dill.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Log cabin pickles",
@@ -145,7 +147,9 @@
      "text": "Serve with buttered rye bread.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "\"I must break you\" beef pelmeni",
@@ -230,7 +234,9 @@
      "text": "Toss in the butter and dill and serve with sour cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Siberian snowball walnut tea cakes",
@@ -287,7 +293,9 @@
      "text": "Roll in icing sugar while warm, cool, then roll again.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Drago's Siberian cranberry vodka mule",
@@ -356,7 +364,79 @@
      "text": "Drop in frozen cranberries and a rosemary sprig.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Drago's Siberian cranberry vodka mule (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 480,
+     "make_ahead": "Freeze the cranberry ice cubes overnight",
+     "ingredients": [
+      {
+       "q": 430,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag frozen cranberries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Freeze 180ml of the cranberry juice in an ice cube tray overnight.",
+       "min": 480
+      },
+      {
+       "text": "Fill four mugs with crushed ice and the cranberry cubes, then add the rest of the cranberry juice, lime juice and a little grated ginger to each.",
+       "min": 5
+      },
+      {
+       "text": "Top with cold ginger beer and stir once.",
+       "min": 2
+      },
+      {
+       "text": "Drop in frozen cranberries and a rosemary sprig.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

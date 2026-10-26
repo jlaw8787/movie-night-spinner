@@ -1,0 +1,6176 @@
+{
+ "bugsy-1991": {
+  "Brown Derby Cobb salad cups": {
+   "n": "Brown Derby Cobb salad cups",
+   "prep_min": 25,
+   "cook_min": 18,
+   "make_ahead": "Components up to 1 day ahead; fill just before serving",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chicken breast (2)",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "little gem lettuce leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "blue cheese, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the chicken for 12 minutes, cool and dice.",
+     "min": 15
+    },
+    {
+     "text": "Fry the bacon until crisp and crumble. Boil the eggs for 9 minutes and chop.",
+     "min": 12
+    },
+    {
+     "text": "Dice the avocado and tomatoes.",
+     "min": 6
+    },
+    {
+     "text": "Whisk the olive oil, red wine vinegar and Dijon mustard with a pinch of salt for the vinaigrette.",
+     "min": 3
+    },
+    {
+     "text": "Fill the lettuce leaves with everything, scatter over the blue cheese and spoon over the vinaigrette.",
+     "min": 7
+    }
+   ]
+  },
+  "Flamingo steak Diane": {
+   "n": "Flamingo steak Diane",
+   "prep_min": 15,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "scotch fillet steaks (4)",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "shallots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 210,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Flatten the steaks and sear hot for 2 minutes a side, then rest.",
+     "min": 8
+    },
+    {
+     "text": "In the same pan soften the shallots and garlic in the butter, then add a splash of the stock and the balsamic vinegar and let it bubble hard.",
+     "min": 4
+    },
+    {
+     "text": "Stir in the mustard, Worcestershire, remaining stock and cream and reduce.",
+     "min": 5
+    },
+    {
+     "text": "Return the steaks to coat in the sauce.",
+     "min": 2
+    }
+   ]
+  },
+  "Virginia Hill's gin rickey": {
+   "n": "Virginia Hill's gin rickey (alcohol-free)",
+   "prep_min": 3,
+   "cook_min": 1,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "non-alcoholic gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four highball glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add the non-alcoholic gin and the juice of half a lime to each and drop in the squeezed shell.",
+     "min": 2
+    },
+    {
+     "text": "Top with soda water.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "mickey-blue-eyes-1999": {
+  "Frank Vitale's linguine with clams": {
+   "n": "Frank Vitale's linguine with clams",
+   "prep_min": 15,
+   "cook_min": 37,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "verjuice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "linguine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the clams in salted water for 30 minutes to purge, then rinse.",
+     "min": 32
+    },
+    {
+     "text": "Gently fry the garlic and chilli in some of the olive oil, add the clams, verjuice and water, cover and steam for 4 minutes until open.",
+     "min": 8
+    },
+    {
+     "text": "Cook the linguine 1 minute short, finish it in the pan juices and toss with parsley and more olive oil.",
+     "min": 12
+    }
+   ]
+  },
+  "Fuhgeddaboudit tiramisu": {
+   "n": "Fuhgeddaboudit tiramisu",
+   "prep_min": 30,
+   "cook_min": 480,
+   "make_ahead": "Make 1 day ahead, keep chilled; best overnight",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mascarpone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "strong espresso, cooled",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "savoiardi biscuits",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks and sugar until pale, then fold in the mascarpone.",
+     "min": 10
+    },
+    {
+     "text": "Whip the egg whites stiff and fold into the cream.",
+     "min": 8
+    },
+    {
+     "text": "Mix the espresso with the vanilla extract, dip the biscuits quickly and layer with the cream in a dish.",
+     "min": 12
+    },
+    {
+     "text": "Dust with cocoa and chill overnight.",
+     "min": 480
+    }
+   ]
+  },
+  "Auction house gin and elderflower collins": {
+   "n": "Auction house gin and elderflower collins (alcohol-free)",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "non-alcoholic gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel 8 long ribbons from the cucumber and curl two into each of four tall glasses, then fill with ice.",
+     "min": 4
+    },
+    {
+     "text": "Shake the non-alcoholic gin, cordial and lemon juice with ice for 10 seconds.",
+     "min": 2
+    },
+    {
+     "text": "Strain over the glasses, top with soda and add a sprig of mint.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "22-jump-street-2014": {
+  "Captain Dickson's fish tacos": {
+   "n": "Captain Dickson's fish tacos",
+   "prep_min": 35,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "ice-cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "flathead fillets, cut into strips",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chipotle sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the onion in the juice of two limes with a pinch of salt.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the flour, baking powder and ice-cold soda water to a batter.",
+     "min": 3
+    },
+    {
+     "text": "Dip the fish in batter and fry in the oil at 180C until golden, working in batches.",
+     "min": 12
+    },
+    {
+     "text": "Toss the cabbage with lime juice and salt. Mix the sour cream with the chipotle sauce.",
+     "min": 5
+    },
+    {
+     "text": "Warm the tortillas and fill with slaw, fish, crema, onion and coriander.",
+     "min": 5
+    }
+   ]
+  },
+  "Spring break frozen mango margarita": {
+   "n": "Spring break frozen mango margarita (alcohol-free)",
+   "prep_min": 11,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen mango",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub a lime wedge around the rims of the glasses and dip in sea salt flakes.",
+     "min": 3
+    },
+    {
+     "text": "Finely zest one orange, then juice both oranges and four of the limes.",
+     "min": 3
+    },
+    {
+     "text": "Blend the mango, orange juice and zest, lime juice, sugar syrup and ice until thick and smooth.",
+     "min": 3
+    },
+    {
+     "text": "Pour into the glasses and garnish with wheels cut from the last lime.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "batman-1989": {
+  "Manor roast beef and Yorkshire pudding": {
+   "n": "Manor roast beef and Yorkshire pudding",
+   "prep_min": 30,
+   "cook_min": 1610,
+   "make_ahead": "Salt the beef the night before",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "beef rib, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the beef and leave uncovered in the fridge overnight.",
+     "min": 1440
+    },
+    {
+     "text": "Roast at 120C until 52C inside, then rest.",
+     "min": 120
+    },
+    {
+     "text": "Peel and chop the potatoes and roast them in some of the oil.",
+     "min": 45
+    },
+    {
+     "text": "Whisk the eggs, flour and milk and bake in hot oiled tins at 220C until puffed.",
+     "min": 20
+    },
+    {
+     "text": "Blast the beef at 260C for 10 minutes. Reduce the stock with the balsamic vinegar in the roasting pan for a jus.",
+     "min": 15
+    }
+   ]
+  },
+  "Alfred's Earl Grey gin sour": {
+   "n": "Alfred's Earl Grey gin sour (alcohol-free)",
+   "prep_min": 8,
+   "cook_min": 62,
+   "make_ahead": "Gin infuses ahead",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "non-alcoholic gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Earl Grey tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the non-alcoholic gin for an hour, then remove.",
+     "min": 60
+    },
+    {
+     "text": "Dissolve the honey in the hot water. Juice the lemons.",
+     "min": 4
+    },
+    {
+     "text": "Shake the tea-infused gin, lemon juice, honey syrup and egg whites hard without ice, then add ice and shake again.",
+     "min": 4
+    },
+    {
+     "text": "Strain into chilled coupes and twist lemon peel over each.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "boomerang-1992": {
+  "Date night steak": {
+   "n": "Date night steak",
+   "prep_min": 30,
+   "cook_min": 74,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eye fillet steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches asparagus",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes thinly.",
+     "min": 15
+    },
+    {
+     "text": "Layer with cream in a dish, season with salt and pepper and bake at 180C until tender.",
+     "min": 60
+    },
+    {
+     "text": "Season the steaks and sear hard in butter.",
+     "min": 6
+    },
+    {
+     "text": "Roast at 200C until the centre reaches 54C, then rest.",
+     "min": 10
+    },
+    {
+     "text": "Deglaze the pan with the stock and vinegar and reduce until glossy.",
+     "min": 8
+    },
+    {
+     "text": "Char the asparagus and serve with the steak and sauce.",
+     "min": 5
+    }
+   ]
+  },
+  "Strangé's French 75": {
+   "n": "Strangé's French 75 (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "non-alcoholic gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 360,
+     "u": "ml",
+     "item": "cold alcohol-free sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in a little warm water for a quick sugar syrup and cool, and juice the lemons.",
+     "min": 4
+    },
+    {
+     "text": "Shake the non-alcoholic gin, lemon juice and sugar syrup with ice and strain into four flutes.",
+     "min": 3
+    },
+    {
+     "text": "Top each with cold alcohol-free sparkling wine and add a lemon twist.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "django-unchained-2012": {
+  "German sausages and kraut": {
+   "n": "German sausages and kraut",
+   "prep_min": 10,
+   "cook_min": 58,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of sauerkraut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caraway seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bratwurst",
+     "aisle": "Meat"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sauerkraut with the apple juice, vinegar, grated apple and caraway.",
+     "min": 20
+    },
+    {
+     "text": "Grill the bratwurst slowly until browned.",
+     "min": 25
+    },
+    {
+     "text": "Boil the potatoes until tender and toss in butter.",
+     "min": 20
+    },
+    {
+     "text": "Serve together.",
+     "min": 3
+    }
+   ]
+  },
+  "Dr Schultz's lemon wheat beer": {
+   "n": "Dr Schultz's lemon wheat beer (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Syrup up to 1 week, chilled",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, peeled zest",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles alcohol-free wheat beer, 500ml each",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemon wheels",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the honey, water and lemon zest, then cool and strain.",
+     "min": 8
+    },
+    {
+     "text": "Add a spoon of syrup and a squeeze of lemon to each of 4 chilled tall mugs.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the alcohol-free wheat beer slowly, tilting the mug, then straighten to build a thick head.",
+     "min": 3
+    },
+    {
+     "text": "Hang a lemon wheel on each rim.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "ghost-1990": {
+  "Sam's Tribeca loft pasta": {
+   "n": "Sam's Tribeca loft pasta",
+   "prep_min": 15,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "rigatoni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the rigatoni in salted water until just tender, then drain.",
+     "min": 12
+    },
+    {
+     "text": "Meanwhile, remove the sausage skins, crumble the meat and brown it in a large pan.",
+     "min": 7
+    },
+    {
+     "text": "Add the sliced fennel and crushed garlic and cook until soft.",
+     "min": 8
+    },
+    {
+     "text": "Pour in the stock and lemon juice and let it bubble down, then stir in the cream.",
+     "min": 3
+    },
+    {
+     "text": "Toss the rigatoni through the sauce with the grated parmesan.",
+     "min": 3
+    }
+   ]
+  },
+  "Molly's studio mulled pinot noir": {
+   "n": "Molly's studio mulled pinot noir (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 17,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "red grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, then remove.",
+     "min": 5
+    },
+    {
+     "text": "Pour the grape juice and tea into a saucepan with the orange peel, the juice of half the orange, cinnamon, star anise, cloves and honey.",
+     "min": 3
+    },
+    {
+     "text": "Warm over low heat without boiling.",
+     "min": 12
+    },
+    {
+     "text": "Strain into mugs and add a thin slice from the rest of the orange to each.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "hot-tub-time-machine-2010": {
+  "Kodiak Valley gruyère fondue": {
+   "n": "Kodiak Valley gruyère fondue",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "verjuice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "gruyère",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "emmental",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "nutmeg, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar cornichons",
+     "aisle": "Deli"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the baby potatoes in salted water until tender.",
+     "min": 15
+    },
+    {
+     "text": "Rub a heavy pot with a halved garlic clove.",
+     "min": 2
+    },
+    {
+     "text": "Heat the stock and verjuice until just simmering.",
+     "min": 3
+    },
+    {
+     "text": "Toss the grated gruyère and the grated emmental with the cornflour and add a handful at a time, stirring in a figure eight until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the lemon juice and nutmeg.",
+     "min": 2
+    },
+    {
+     "text": "Keep warm over a burner and serve with the cubed baguette, the potatoes and cornichons.",
+     "min": 3
+    }
+   ]
+  },
+  "Chernobly citrus ginger fizz": {
+   "n": "Chernobly citrus ginger fizz",
+   "prep_min": 8,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, as needed",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sliced ginger with the sugar and the water for 10 minutes, cool and strain.",
+     "min": 11
+    },
+    {
+     "text": "Juice the lemon and one lime, and cut the other lime into wheels.",
+     "min": 2
+    },
+    {
+     "text": "Fill the tall glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add the ginger syrup, the lemon juice and the lime juice to each.",
+     "min": 2
+    },
+    {
+     "text": "Top with the soda water, stir and add a lime wheel and mint sprig.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "julie-julia-2009": {
+  "365-day project boeuf bourguignon": {
+   "n": "365-day project boeuf bourguignon",
+   "prep_min": 40,
+   "cook_min": 190,
+   "make_ahead": "Better made 1 day ahead, reheat gently",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon lardons",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "red grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "thyme sprigs and 2 bay leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "pearl onions, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dry the beef and brown it in batches with the lardons.",
+     "min": 15
+    },
+    {
+     "text": "Soften the carrots, onion and garlic in the same pot.",
+     "min": 10
+    },
+    {
+     "text": "Return the meat, add the stock, grape juice, vinegar, thyme and bay leaves and bring to a simmer.",
+     "min": 10
+    },
+    {
+     "text": "Braise covered at 160C for 3 hours until the beef is tender.",
+     "min": 180
+    },
+    {
+     "text": "Glaze the pearl onions and mushrooms in the butter and stir through at the end.",
+     "min": 15
+    }
+   ]
+  },
+  "Burgundy kir with crème de cassis": {
+   "n": "Burgundy kir with crème de cassis (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 120,
+   "make_ahead": "Chill the juice up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 550,
+     "u": "ml",
+     "item": "white grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "verjuice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "blackcurrant cordial",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "blackberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the white grape juice with the verjuice in a bottle or jug and chill for 2 hours (included in cook time).",
+     "min": 120
+    },
+    {
+     "text": "Pour the blackcurrant cordial into wine glasses, top slowly with the cold grape mix so it blends from the bottom, and drop a blackberry in each. Serve before the bourguignon.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "last-christmas-2019": {
+  "Santa's shop mince pies with orange cream": {
+   "n": "Santa's shop mince pies with orange cream",
+   "prep_min": 35,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar fruit mince (400g)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested and juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut rounds from two pastry sheets and press into a greased patty pan tin.",
+     "min": 8
+    },
+    {
+     "text": "Fill each with fruit mince. Cut stars from the third sheet and lay on top.",
+     "min": 10
+    },
+    {
+     "text": "Brush with egg and bake at 190C until golden.",
+     "min": 18
+    },
+    {
+     "text": "Whip the cream with some of the icing sugar, the orange zest and a tablespoon of the orange juice.",
+     "min": 5
+    },
+    {
+     "text": "Dust the warm pies with icing sugar and serve with the orange cream.",
+     "min": 2
+    }
+   ]
+  },
+  "Covent Garden mulled wine": {
+   "n": "Covent Garden mulled wine (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "red grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, then remove.",
+     "min": 5
+    },
+    {
+     "text": "Pour the grape juice, apple juice and tea into a saucepan with the orange juice, sugar, cinnamon, cloves, star anise and one sliced orange.",
+     "min": 3
+    },
+    {
+     "text": "Warm gently, keeping it under a simmer.",
+     "min": 15
+    },
+    {
+     "text": "Ladle into heatproof glasses with a wheel cut from the second orange.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "miracle-on-34th-street-1947": {
+  "Fred Gailey's New York pot roast": {
+   "n": "Fred Gailey's New York pot roast",
+   "prep_min": 25,
+   "cook_min": 185,
+   "make_ahead": "Up to 2 days, reheat to serve",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef chuck, in one piece",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, halved",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Sear the beef all over in the oil.",
+     "min": 12
+    },
+    {
+     "text": "Add the onion, carrots, celery, stock, balsamic vinegar and enough water to come halfway.",
+     "min": 8
+    },
+    {
+     "text": "Cover and braise at 160C.",
+     "min": 120
+    },
+    {
+     "text": "Add the potatoes for the last hour.",
+     "min": 60
+    },
+    {
+     "text": "Slice and serve with the juices.",
+     "min": 10
+    }
+   ]
+  },
+  "Christmas pudding": {
+   "n": "Christmas pudding",
+   "prep_min": 30,
+   "cook_min": 250,
+   "make_ahead": "Pudding can be steamed up to 1 week ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mixed dried fruit",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mixed spice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the fruit in the orange juice overnight.",
+     "min": 10
+    },
+    {
+     "text": "Mix with the butter, sugar, eggs, breadcrumbs, flour and mixed spice.",
+     "min": 15
+    },
+    {
+     "text": "Pack into a greased basin and cover.",
+     "min": 5
+    },
+    {
+     "text": "Steam.",
+     "min": 240
+    },
+    {
+     "text": "Warm the golden syrup and pour over the pudding at the table.",
+     "min": 5
+    },
+    {
+     "text": "Serve with custard.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "pineapple-express-2008": {
+  "Angie's family pineapple upside-down cake": {
+   "n": "Angie's family pineapple upside-down cake",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 185,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C.",
+     "min": 6
+    },
+    {
+     "text": "Melt some of the butter with the brown sugar, pineapple juice and vanilla in a 23cm tin and lay the fresh pineapple rings on top.",
+     "min": 6
+    },
+    {
+     "text": "Beat the rest of the butter with the caster sugar, add the eggs, then the self-raising flour and the milk.",
+     "min": 6
+    },
+    {
+     "text": "Spread over the fruit and bake 45 minutes.",
+     "min": 51
+    },
+    {
+     "text": "Rest 5 minutes and turn out.",
+     "min": 5
+    },
+    {
+     "text": "Serve warm with the chilled coconut cream.",
+     "min": 6
+    }
+   ]
+  },
+  "Pineapple mint rum crush": {
+   "n": "Pineapple mint rum crush (alcohol-free)",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": null,
+     "u": "",
+     "item": "half pineapple, as needed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brown sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "chilli powder, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "crushed ice, as needed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the salt with a little chilli powder and rim the glasses.",
+     "min": 2
+    },
+    {
+     "text": "For each drink, muddle the pineapple chunks, a few mint leaves, the brown sugar syrup and the lime juice in a shaker.",
+     "min": 2
+    },
+    {
+     "text": "Add the pineapple juice and a drop of vanilla extract, shake with ice and pour over crushed ice.",
+     "min": 2
+    },
+    {
+     "text": "Top each glass with soda water.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "shutter-island-2010": {
+  "Chuck and Teddy's storm chowder": {
+   "n": "Chuck and Teddy's storm chowder",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "fish stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the clams open in the fish stock, then strain the liquid.",
+     "min": 10
+    },
+    {
+     "text": "Render the bacon, then add the onion, celery and potato.",
+     "min": 10
+    },
+    {
+     "text": "Add the clam liquid and milk and simmer.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the cream, clams and thyme.",
+     "min": 5
+    }
+   ]
+  },
+  "Dr Cawley's brandy Alexander": {
+   "n": "Dr Cawley's brandy Alexander (alcohol-free)",
+   "prep_min": 7,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "nutmeg, freshly grated",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 10
+    },
+    {
+     "text": "Chill four coupe glasses.",
+     "min": 2
+    },
+    {
+     "text": "For each drink, measure 30ml cold tea, 15ml chocolate syrup, 40ml thickened cream and a drop of vanilla extract into a shaker.",
+     "min": 2
+    },
+    {
+     "text": "Shake each drink with ice for 15 seconds.",
+     "min": 2
+    },
+    {
+     "text": "Strain into the coupes and grate nutmeg over the top.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "the-babadook-2014": {
+  "Amelia's slow-cooked stew": {
+   "n": "Amelia's slow-cooked stew",
+   "prep_min": 30,
+   "cook_min": 190,
+   "make_ahead": "Better the next day, keeps 3 days",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lamb shanks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "rosemary sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the shanks in the oil.",
+     "min": 12
+    },
+    {
+     "text": "Soften the onion and carrots.",
+     "min": 8
+    },
+    {
+     "text": "Add the stock, vinegar, tomatoes and rosemary, return the shanks, cover and braise at 160C.",
+     "min": 180
+    },
+    {
+     "text": "Boil the potatoes until tender and mash with butter.",
+     "min": 20
+    }
+   ]
+  },
+  "Dook dook dook honey brandy nightcap": {
+   "n": "Dook dook dook honey brandy nightcap (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "nutmeg, freshly grated",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the milk with the honey, cinnamon, vanilla and orange peel until steaming without boiling.",
+     "min": 5
+    },
+    {
+     "text": "Infuse, then remove the cinnamon and peel.",
+     "min": 5
+    },
+    {
+     "text": "Whisk until frothy and pour into four mugs.",
+     "min": 2
+    },
+    {
+     "text": "Finish with nutmeg.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "the-fighter-2010": {
+  "Beer-battered onion rings with malt aioli": {
+   "n": "Beer-battered onion rings with malt aioli",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "large brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold alcohol-free beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "malt vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the onions into 1cm rings and separate.",
+     "min": 5
+    },
+    {
+     "text": "Whisk flour, baking powder and salt with the cold alcohol-free beer until just smooth.",
+     "min": 5
+    },
+    {
+     "text": "Dust the rings in flour, dip in batter and fry in the oil in batches at 180C until golden, salting straight away.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise with malt vinegar and crushed garlic for the dip.",
+     "min": 3
+    }
+   ]
+  },
+  "Charlene's bar black and tan": {
+   "n": "Charlene's bar black and tan (alcohol-free)",
+   "prep_min": 20,
+   "cook_min": 1,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "cans alcohol-free pale ale (375 ml)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "alcohol-free stout",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four pint glasses in the freezer for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Pour the pale ale into each glass, tilting it so the head stays small.",
+     "min": 2
+    },
+    {
+     "text": "Hold a spoon upside down just above the pale ale and pour the stout slowly over the back of it so it floats in a dark layer.",
+     "min": 3
+    },
+    {
+     "text": "Serve straight away before the layers mix.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "the-lord-of-the-rings-the-fellowship-of-the-ring-2001": {
+  "Prancing Pony pie": {
+   "n": "Prancing Pony pie",
+   "prep_min": 30,
+   "cook_min": 195,
+   "make_ahead": "Up to 2 days, reheat to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet of puff pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches in the oil, then soften the onions with the thyme.",
+     "min": 15
+    },
+    {
+     "text": "Add the stock and Worcestershire sauce and braise until the beef is tender.",
+     "min": 150
+    },
+    {
+     "text": "Thicken with the flour, pour into a pie dish, top with pastry and brush with egg.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 200C until puffed and golden.",
+     "min": 25
+    },
+    {
+     "text": "Boil and mash the potatoes with the butter and cook the peas.",
+     "min": 20
+    }
+   ]
+  },
+  "Prancing Pony hot buttered ale": {
+   "n": "Prancing Pony hot buttered ale (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 9,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of nutmeg",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, then remove.",
+     "min": 4
+    },
+    {
+     "text": "Warm the apple juice and tea with the honey, cinnamon, cloves and nutmeg until steaming, never boiling.",
+     "min": 6
+    },
+    {
+     "text": "Whisk the yolks, whisk in a ladle of the hot mix, then whisk back into the pan with the butter and stir until slightly thickened.",
+     "min": 3
+    },
+    {
+     "text": "Pour into tankards.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "the-rock-1996": {
+  "Fisherman's Wharf prawns": {
+   "n": "Fisherman's Wharf prawns",
+   "prep_min": 10,
+   "cook_min": 6,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "verjuice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the garlic and chilli.",
+     "min": 8
+    },
+    {
+     "text": "Heat the oil and fry the garlic and chilli briefly.",
+     "min": 3
+    },
+    {
+     "text": "Toss the prawns over high heat.",
+     "min": 2
+    },
+    {
+     "text": "Add the butter, verjuice and parsley. Serve with the baguette for the juices.",
+     "min": 3
+    }
+   ]
+  },
+  "Mason's single malt Rob Roy": {
+   "n": "Mason's single malt Rob Roy (alcohol-free)",
+   "prep_min": 6,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "coupe glasses",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "smoked black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "red grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 5 minutes, remove and cool completely. Chill the coupes meanwhile.",
+     "min": 15
+    },
+    {
+     "text": "Stir 200ml of the smoked tea with the grape juice, balsamic vinegar and vanilla over ice until icy.",
+     "min": 2
+    },
+    {
+     "text": "Strain into the coupes, drop in a cherry and twist orange peel over each.",
+     "min": 4
+    }
+   ]
+  }
+ },
+ "trading-places-1983": {
+  "Frozen orange juice shots": {
+   "n": "Frozen orange juice shots",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the juice and ice until slushy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into shot glasses and serve straight away.",
+     "min": 2
+    }
+   ]
+  },
+  "Mimosa": {
+   "n": "Mimosa (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "oranges, about 300ml juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chilled alcohol-free sparkling wine",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the oranges and chill the juice well.",
+     "min": 15
+    },
+    {
+     "text": "Fill four flutes halfway with juice and gently top with the alcohol-free sparkling wine, pouring slowly.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "wedding-crashers-2005": {
+  "Tarragon cream chicken with potato gratin": {
+   "n": "Tarragon cream chicken with potato gratin",
+   "prep_min": 30,
+   "cook_min": 85,
+   "make_ahead": "Gratin can be made 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 450,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes thin, layer with part of the cream and the garlic and bake at 160C.",
+     "min": 75
+    },
+    {
+     "text": "Pan-roast the chicken breasts until cooked through.",
+     "min": 20
+    },
+    {
+     "text": "Add the stock, lemon juice, Dijon and tarragon to the pan, then the remaining cream, and simmer.",
+     "min": 10
+    },
+    {
+     "text": "Steam the beans.",
+     "min": 7
+    },
+    {
+     "text": "Serve together.",
+     "min": 3
+    }
+   ]
+  },
+  "Reception French 75": {
+   "n": "Reception French 75 (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 180,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "alcohol-free sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "non-alcoholic gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the alcohol-free sparkling wine for three hours.",
+     "min": 180
+    },
+    {
+     "text": "Shake the non-alcoholic gin, lemon juice and sugar syrup with ice, one drink at a time.",
+     "min": 5
+    },
+    {
+     "text": "Strain into flutes and top slowly with the sparkling wine.",
+     "min": 3
+    },
+    {
+     "text": "Add a long twist of lemon peel and raise them high while someone gives a speech.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "a-bronx-tale-1993": {
+  "Espresso with anisette": {
+   "n": "Espresso with anisette (alcohol-free)",
+   "prep_min": 8,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 36,
+     "u": "g",
+     "item": "espresso beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the star anise, sugar and water for 5 minutes for an anise syrup, then strain and cool.",
+     "min": 8
+    },
+    {
+     "text": "Brew four short espressos into warmed demitasse cups.",
+     "min": 5
+    },
+    {
+     "text": "Cut four small curls of lemon peel, avoiding the white pith.",
+     "min": 3
+    },
+    {
+     "text": "Serve the anise syrup beside each cup for pouring in, with a lemon curl.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "an-american-werewolf-in-london-1981": {
+  "Keep off the moors mulled ale": {
+   "n": "Keep off the moors mulled ale (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 11,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "l",
+     "item": "alcohol-free ale (4 bottles of 500 ml)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "nutmeg, freshly grated",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the ale into a saucepan with the sugar, cinnamon, cloves, orange peel and nutmeg.",
+     "min": 3
+    },
+    {
+     "text": "Heat gently, keeping it well under a simmer.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the apple juice and vanilla.",
+     "min": 1
+    },
+    {
+     "text": "Strain into heatproof mugs and serve steaming.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "another-48-hrs-1990": {
+  "Jack Cates' rye and ginger highball": {
+   "n": "Jack Cates' rye and ginger highball (alcohol-free)",
+   "prep_min": 6,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger ale, cold",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Fill highball glasses with ice and pour in the cold tea.",
+     "min": 2
+    },
+    {
+     "text": "Add a squeeze of lemon and a drop of vanilla extract to each.",
+     "min": 2
+    },
+    {
+     "text": "Top with ginger ale, stir once and add a strip of lemon peel.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "avengers-age-of-ultron-2015": {
+  "Asgardian honey mead punch": {
+   "n": "Asgardian honey mead punch (alcohol-free)",
+   "prep_min": 7,
+   "cook_min": 17,
+   "make_ahead": "Syrup up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "chamomile tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "white grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the chamomile tea bags in the boiling water for 5 minutes, remove and cool.",
+     "min": 10
+    },
+    {
+     "text": "Warm the honey with the water, cinnamon and cloves until the honey melts.",
+     "min": 5
+    },
+    {
+     "text": "Cool and strain the syrup.",
+     "min": 5
+    },
+    {
+     "text": "In a jug, mix the grape juice, chamomile tea, honey syrup and lemon juice.",
+     "min": 2
+    },
+    {
+     "text": "Add plenty of ice, top with ginger beer and pour into glasses with orange slices.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "batman-returns-1992": {
+  "Milk punch": {
+   "n": "Milk punch (alcohol-free)",
+   "prep_min": 6,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 360,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole nutmeg",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Shake the cold tea, milk, sugar syrup and vanilla hard with ice, a drink at a time.",
+     "min": 4
+    },
+    {
+     "text": "Strain into chilled coupes and grate nutmeg over the top.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "beverly-hills-cop-ii-1987": {
+  "Rosewood's tequila sunrise": {
+   "n": "Rosewood's tequila sunrise (alcohol-free)",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 720,
+     "u": "ml",
+     "item": "fresh orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "grenadine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill tall glasses with ice. Add orange juice and a squeeze of lime to each and stir.",
+     "min": 3
+    },
+    {
+     "text": "Slowly pour grenadine down the inside of each glass so it sinks. Do not stir again.",
+     "min": 2
+    },
+    {
+     "text": "Garnish with an orange wheel and a cherry.",
+     "min": 3
+    }
+   ]
+  }
+ },
+ "breakfast-at-tiffany-s-1961": {
+  "Holly's champagne cocktails": {
+   "n": "Holly's champagne cocktails (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle alcohol-free sparkling wine (750 ml)",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "white grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the coupes and the bottle.",
+     "min": 4
+    },
+    {
+     "text": "Drop a sugar cube into each glass, grate a little orange zest over it and add a drop of vanilla extract. Add the grape juice.",
+     "min": 3
+    },
+    {
+     "text": "Tilt the glass and pour the sparkling slowly down the side so it does not foam over.",
+     "min": 2
+    },
+    {
+     "text": "Peel long strips of lemon zest, twist over the drinks to spray the oil and drop them in.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "captain-marvel-2019": {
+  "1995 fuzzy navel slushies": {
+   "n": "1995 fuzzy navel slushies (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peach slices",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "peach nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "orange wheels",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the peaches, orange juice, peach nectar, lime juice and ice until thick and slushy.",
+     "min": 5
+    },
+    {
+     "text": "Pour into chilled glasses and top each with a cherry and an orange wheel.",
+     "min": 0
+    }
+   ]
+  }
+ },
+ "cliffhanger-1993": {
+  "Gabe Walker's hot buttered rum": {
+   "n": "Gabe Walker's hot buttered rum (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground nutmeg",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cloves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "molasses",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the sugar, cinnamon, nutmeg, cloves, molasses and vanilla.",
+     "min": 8
+    },
+    {
+     "text": "Steep the tea bags in the boiling water for 3 minutes, then remove.",
+     "min": 4
+    },
+    {
+     "text": "Put a heaped tablespoon of the spiced butter in each mug.",
+     "min": 1
+    },
+    {
+     "text": "Top with the hot tea and stir until melted.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "deadpool-wolverine-2024": {
+  "Logan's whisky and ginger highball": {
+   "n": "Logan's whisky and ginger highball (alcohol-free)",
+   "prep_min": 4,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Put big ice cubes into tall glasses.",
+     "min": 1
+    },
+    {
+     "text": "Pour in the cold tea, a little lime juice and a drop of vanilla extract.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with cold ginger ale, stir once and garnish with a lime wedge.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "do-the-right-thing-1989": {
+  "Heatwave lager and lemonade shandy": {
+   "n": "Heatwave lager and lemonade shandy (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Lemonade up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles alcohol-free lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons and stir the juice with the sugar and cold water until dissolved. Keep a few lemon wheels for the glasses.",
+     "min": 5
+    },
+    {
+     "text": "Chill 4 tall glasses in the freezer.",
+     "min": 20
+    },
+    {
+     "text": "Half-fill each glass with ice-cold alcohol-free lager, top with lemonade, then add ice and a lemon wheel. Serve straight away.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "el-mariachi-1992": {
+  "Mixed-up guitar case michelada beer": {
+   "n": "Mixed-up guitar case michelada beer (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 1,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles alcohol-free lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "tomato juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the salt and chilli powder on a plate.",
+     "min": 3
+    },
+    {
+     "text": "Run a lime wedge around four tall glasses and dip the rims in the chilli salt.",
+     "min": 3
+    },
+    {
+     "text": "Fill the glasses with ice.",
+     "min": 2
+    },
+    {
+     "text": "Add lime juice, tomato juice, hot sauce and Worcestershire sauce to each glass.",
+     "min": 2
+    },
+    {
+     "text": "Top with cold alcohol-free lager, stir once and garnish with a lime wedge.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "father-of-the-bride-1991": {
+  "Franck's reception chicken with tarragon": {
+   "n": "Franck's reception chicken with tarragon",
+   "prep_min": 15,
+   "cook_min": 69,
+   "make_ahead": "Sauce up to 1 day ahead, sear the chicken fresh",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "skin-on chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the potatoes and dice the shallot.",
+     "min": 10
+    },
+    {
+     "text": "Roast the potatoes in the oil at 220C.",
+     "min": 35
+    },
+    {
+     "text": "Season the chicken breasts and sear skin-side down in a hot pan.",
+     "min": 8
+    },
+    {
+     "text": "Flip and roast at 200C, then rest the chicken.",
+     "min": 17
+    },
+    {
+     "text": "Fry the shallot in the pan, add the stock and lemon juice and reduce, then add the cream, Dijon and tarragon and simmer.",
+     "min": 6
+    },
+    {
+     "text": "Cook the beans and toss in butter.",
+     "min": 6
+    },
+    {
+     "text": "Serve with the potatoes.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "friendship-2025": {
+  "Grapefruit pale ale radler": {
+   "n": "Grapefruit pale ale radler (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 28,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "375ml cans alcohol-free pale ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pink grapefruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the pint glasses in the freezer for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Mix the juice of the pink grapefruit with the sugar syrup and the cold soda water.",
+     "min": 1
+    },
+    {
+     "text": "Pour the cold alcohol-free pale ale into each glass, then top with the grapefruit soda.",
+     "min": 1
+    },
+    {
+     "text": "Add a squeeze of lime and a grapefruit wedge.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "goodfellas-1990": {
+  "Red wine, opened early": {
+   "n": "Red wine, opened early (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 65,
+   "make_ahead": "Mix and chill an hour before dinner",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "red grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 5 minutes for a strong tea, then remove and cool.",
+     "min": 10
+    },
+    {
+     "text": "Mix the grape juice, tea and balsamic vinegar in a carafe an hour before dinner and chill.",
+     "min": 60
+    },
+    {
+     "text": "Pour into short tumblers at the table.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "harlem-nights-1989": {
+  "Club champagne cocktail": {
+   "n": "Club champagne cocktail (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "alcohol-free sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drop a sugar cube into each of four flutes with a drop of vanilla extract and a little grated orange zest.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with chilled alcohol-free sparkling wine.",
+     "min": 2
+    },
+    {
+     "text": "Twist a strip of lemon peel over each.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "horrible-bosses-2011": {
+  "Glengoolie Blue whisky sour": {
+   "n": "Glengoolie Blue whisky sour (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 13,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "smoked black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites (from 4 eggs)",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Stir the honey into the hot water and cool to make a syrup.",
+     "min": 3
+    },
+    {
+     "text": "Shake 240ml of the smoked tea, the lemon juice, honey syrup and egg white in a jar without ice. Repeat for each drink.",
+     "min": 5
+    },
+    {
+     "text": "Add ice and shake hard again, then strain into short glasses over a large ice cube.",
+     "min": 2
+    },
+    {
+     "text": "Twist a strip of orange peel over the top and drop it in.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "independence-day-1996": {
+  "Fourth of July bourbon lemonade": {
+   "n": "Fourth of July bourbon lemonade (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Squeeze four of the lemons, keeping one for wheels, and stir into the syrup and cold water.",
+     "min": 4
+    },
+    {
+     "text": "Lightly crush the strawberries and blueberries in the bottom of four jars.",
+     "min": 3
+    },
+    {
+     "text": "Fill with ice, add the cold tea and vanilla and top with the lemonade.",
+     "min": 2
+    },
+    {
+     "text": "Stir and garnish with a lemon wheel and mint.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "jaws-1975": {
+  "Quint's chilli lime lager michelada": {
+   "n": "Quint's chilli lime lager michelada (alcohol-free)",
+   "prep_min": 11,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "x 375ml cans alcohol-free lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "dashes hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dashes Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "tomato juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, to serve",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the chilli flakes with the salt on a plate.",
+     "min": 2
+    },
+    {
+     "text": "Rub the rims of four pint glasses with lime and dip in the salt. Fill with ice.",
+     "min": 4
+    },
+    {
+     "text": "Add lime juice, hot sauce, Worcestershire sauce and tomato juice to each glass.",
+     "min": 3
+    },
+    {
+     "text": "Top each with cold alcohol-free lager, stir once and crush the can.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "kingsman-the-secret-service-2014": {
+  "Gin martini": {
+   "n": "Gin martini (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 280,
+     "u": "ml",
+     "item": "non-alcoholic gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, peel in strips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the non-alcoholic gin over ice for 10 seconds per drink and strain into frozen glasses.",
+     "min": 4
+    },
+    {
+     "text": "Twist a strip of lemon peel over each glass.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "lethal-weapon-3-1992": {
+  "Eight days to go whiskey sour": {
+   "n": "Eight days to go whiskey sour (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Shake 240ml of the tea with the lemon juice, syrup, vanilla and egg whites hard without ice to foam.",
+     "min": 2
+    },
+    {
+     "text": "Add a big handful of ice and shake again.",
+     "min": 2
+    },
+    {
+     "text": "Strain into tumblers over fresh ice.",
+     "min": 2
+    },
+    {
+     "text": "Dust a little cinnamon over the foam and add a cherry.",
+     "min": 4
+    }
+   ]
+  }
+ },
+ "mamma-mia-2008": {
+  "Pepper's Villa Donna ouzo": {
+   "n": "Pepper's Villa Donna ouzo (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 11,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs of mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the star anise, sugar and water for 5 minutes for an anise syrup, then strain and cool.",
+     "min": 12
+    },
+    {
+     "text": "Fill 4 glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Pour a spoonful of anise syrup into each.",
+     "min": 1
+    },
+    {
+     "text": "Top with lemonade and a mint sprig.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "midsommar-2019": {
+  "Elderflower and strawberry gin punch": {
+   "n": "Elderflower and strawberry gin punch (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, hulled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "non-alcoholic gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chilled sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet edible flowers",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the strawberries with the sugar in a jug and leave for 15 minutes.",
+     "min": 18
+    },
+    {
+     "text": "Add the non-alcoholic gin, cordial and lemon juice and stir.",
+     "min": 2
+    },
+    {
+     "text": "Fill the jug with ice and top with sparkling water. Pour into glasses with a few edible flowers on top.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "national-lampoon-s-christmas-vacation-1989": {
+  "Eggnog in moose mugs": {
+   "n": "Eggnog in moose mugs",
+   "prep_min": 7,
+   "cook_min": 490,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fresh nutmeg, to grate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Separate the eggs and whisk the yolks with the sugar.",
+     "min": 5
+    },
+    {
+     "text": "Heat the milk and cream, pour over the yolks and stir over low heat to 75C.",
+     "min": 10
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 480
+    },
+    {
+     "text": "Stir in the vanilla and grate fresh nutmeg on top.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "old-school-2003": {
+  "Mitch's house bourbon lemonade punch": {
+   "n": "Mitch's house bourbon lemonade punch (alcohol-free)",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "peach nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "cold alcohol-free lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Stir the cold tea, lemon juice, syrup, peach nectar and vanilla in a big bowl.",
+     "min": 8
+    },
+    {
+     "text": "Just before serving, add plenty of ice and top with the alcohol-free lager.",
+     "min": 4
+    },
+    {
+     "text": "Float lemon wheels and mint on top and ladle into red plastic cups.",
+     "min": 3
+    }
+   ]
+  }
+ },
+ "pet-sematary-1989": {
+  "Jud's porch lager and apple cider shandy": {
+   "n": "Jud's porch lager and apple cider shandy (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles alcohol-free lager, 200ml needed per glass",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "sparkling apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put four pint glasses in the freezer for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Pour cold alcohol-free lager into each, then top slowly with chilled sparkling apple juice.",
+     "min": 3
+    },
+    {
+     "text": "Add a squeeze of lemon and a thin slice of green apple and serve straight away.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "police-academy-1984": {
+  "Blue Oyster blue lagoon": {
+   "n": "Blue Oyster blue lagoon (alcohol-free)",
+   "prep_min": 8,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "drops blue food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the sugar syrup with the zest of the orange for 5 minutes, strain, cool and stir in the blue food colouring.",
+     "min": 12
+    },
+    {
+     "text": "Fill tall glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Shake the blue syrup and lemon juice with ice and strain into the glasses.",
+     "min": 3
+    },
+    {
+     "text": "Top with lemonade, stir once and garnish with a lemon wheel and a cherry.",
+     "min": 4
+    }
+   ]
+  }
+ },
+ "pulp-fiction-1994": {
+  "Douglas Sirk steak": {
+   "n": "Douglas Sirk steak",
+   "prep_min": 70,
+   "cook_min": 35,
+   "make_ahead": "Season the steaks an hour ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "frozen skin-on fries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "black peppercorns, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the sirloin steaks with salt an hour ahead and leave them out of the fridge.",
+     "min": 60
+    },
+    {
+     "text": "Bake the frozen skin-on fries at 220C for 25 minutes until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Heat the oil in a pan until smoking and sear the steaks for 2 minutes a side until 48C inside, then rest them for 5 minutes.",
+     "min": 10
+    },
+    {
+     "text": "In the same pan cook the shallot and crushed peppercorns for 1 minute, add the beef stock and let it bubble, then add the cream and simmer for 2 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Cut the iceberg lettuce into wedges and spoon over the blue cheese mashed with the sour cream. Serve with the steaks, fries and peppercorn sauce.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "road-house-1989": {
+  "Double Deuce bourbon and ginger": {
+   "n": "Double Deuce bourbon and ginger (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Fill four tall glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Pour the cold tea into each and squeeze in a lime wedge.",
+     "min": 2
+    },
+    {
+     "text": "Add a drop of vanilla extract to each glass.",
+     "min": 1
+    },
+    {
+     "text": "Top with ginger beer, stir gently once and garnish with a fresh lime wedge.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "rudy-1993": {
+  "Notre Dame tailgate beer brats": {
+   "n": "Notre Dame tailgate beer brats",
+   "prep_min": 8,
+   "cook_min": 32,
+   "make_ahead": "Up to 1 day, reheat gently",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "bratwurst",
+     "aisle": "Meat"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "alcohol-free beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of wholegrain mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onions.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the bratwurst in the alcohol-free beer with the onions and butter.",
+     "min": 15
+    },
+    {
+     "text": "Lift out the brats and grill, turning, until charred.",
+     "min": 6
+    },
+    {
+     "text": "Keep boiling the onions until the liquid reduces and they turn sticky.",
+     "min": 8
+    },
+    {
+     "text": "Toast the rolls.",
+     "min": 3
+    },
+    {
+     "text": "Fill with a brat and a pile of beer onions and finish with wholegrain mustard.",
+     "min": 3
+    }
+   ]
+  }
+ },
+ "semi-pro-2008": {
+  "Coffee Black's espresso martini": {
+   "n": "Coffee Black's espresso martini (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": null,
+     "u": "",
+     "item": "espresso coffee beans, enough for 4 double shots",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "cold brew coffee",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "brown sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, as needed",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the coupes.",
+     "min": 20
+    },
+    {
+     "text": "Pull four double shots of espresso from the beans and cool for 5 minutes.",
+     "min": 6
+    },
+    {
+     "text": "For each drink, shake the espresso, cold brew, brown sugar syrup and vanilla hard with lots of ice for 15 seconds until foamy.",
+     "min": 3
+    },
+    {
+     "text": "Strain into the glass and twist a strip of orange peel over the top.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "sixteen-candles-1984": {
+  "Wedding buffet chicken": {
+   "n": "Wedding buffet chicken",
+   "prep_min": 15,
+   "cook_min": 55,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Add the mushrooms, thyme, lemon juice and 200ml of the stock and braise.",
+     "min": 35
+    },
+    {
+     "text": "Cook the rice with the butter and remaining stock for a pilaf.",
+     "min": 20
+    },
+    {
+     "text": "Stir the cream into the chicken and serve with the pilaf.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "spider-man-far-from-home-2019": {
+  "Water elemental seafood spaghetti": {
+   "n": "Water elemental seafood spaghetti",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "fish stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mussels, scrubbed",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "clams, purged",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cooked spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the spaghetti.",
+     "min": 15
+    },
+    {
+     "text": "Soften the garlic and chilli in the olive oil.",
+     "min": 8
+    },
+    {
+     "text": "Add the fish stock, lemon juice, prawns, mussels and clams, cover and cook until the shells open, discarding any that stay shut.",
+     "min": 10
+    },
+    {
+     "text": "Toss through the spaghetti and parsley.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "strictly-ballroom-1992": {
+  "Paso doble sangria": {
+   "n": "Paso doble sangria (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 130,
+   "make_ahead": "Up to 1 day, add the soda just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "red grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, to serve",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 10
+    },
+    {
+     "text": "Slice the orange, lemon and apple and mix in a jug with the grape juice, tea and orange juice.",
+     "min": 8
+    },
+    {
+     "text": "Chill for 2 hours so the flavours come together.",
+     "min": 120
+    },
+    {
+     "text": "Top with the soda water and pour over ice.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "the-amazing-spider-man-2012": {
+  "Captain Stacy's red wine brisket": {
+   "n": "Captain Stacy's red wine brisket",
+   "prep_min": 30,
+   "cook_min": 215,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef brisket",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "red grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the brisket and soften the onions.",
+     "min": 15
+    },
+    {
+     "text": "Add the grape juice, vinegar, stock and tomato paste.",
+     "min": 10
+    },
+    {
+     "text": "Braise covered at 160C.",
+     "min": 170
+    },
+    {
+     "text": "Add the carrots and roast for the last 40 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Slice the meat across the grain.",
+     "min": 10
+    }
+   ]
+  }
+ },
+ "the-dish-2000": {
+  "Parkes pub lemon lime shandy": {
+   "n": "Parkes pub lemon lime shandy (alcohol-free)",
+   "prep_min": 13,
+   "cook_min": 15,
+   "make_ahead": "Syrup up to 1 day",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "x 375ml alcohol-free lager",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons and limes and mix with the sugar syrup.",
+     "min": 8
+    },
+    {
+     "text": "Chill four pot glasses in the freezer.",
+     "min": 15
+    },
+    {
+     "text": "Pour a measure of the citrus syrup into each glass, add soda water, then top slowly with cold alcohol-free lager. Stir once and add a lemon wedge.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "the-good-the-bad-and-the-ugly-1966": {
+  "Blondie's rye old fashioned": {
+   "n": "Blondie's rye old fashioned (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "smoked black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "demerara sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peel only",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 5 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Stir the sugar with the hot water until dissolved, then cool.",
+     "min": 5
+    },
+    {
+     "text": "Stir 240ml of the smoked tea with the syrup, vanilla and a little grated orange zest over ice.",
+     "min": 3
+    },
+    {
+     "text": "Strain over a large ice cube in a heavy glass.",
+     "min": 1
+    },
+    {
+     "text": "Twist orange peel over the top and drop it in.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "the-italian-job-1969": {
+  "Bonet chocolate amaretti pudding": {
+   "n": "Bonet chocolate amaretti pudding",
+   "prep_min": 25,
+   "cook_min": 285,
+   "make_ahead": "Make the day before",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "amaretti biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "strong espresso, cooled",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook part of the sugar to a dark caramel and pour into a loaf tin.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the eggs, remaining sugar, milk, cocoa, crushed amaretti and espresso.",
+     "min": 15
+    },
+    {
+     "text": "Pour over and bake in a water bath at 160C.",
+     "min": 45
+    },
+    {
+     "text": "Chill and turn out.",
+     "min": 240
+    }
+   ]
+  }
+ },
+ "the-others-2001": {
+  "Island apple cider toddy from the teapot": {
+   "n": "Island apple cider toddy from the teapot (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 11,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zest peeled and juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the apple juice and water into a saucepan with the honey, lemon zest, cinnamon and cloves.",
+     "min": 3
+    },
+    {
+     "text": "Warm gently for 10 minutes without boiling.",
+     "min": 10
+    },
+    {
+     "text": "Take off the heat, steep the tea bags for 3 minutes, then remove and stir in half the lemon juice.",
+     "min": 4
+    },
+    {
+     "text": "Warm a teapot with hot water, tip it out, strain the toddy into the pot and pour into teacups at the table.",
+     "min": 4
+    }
+   ]
+  }
+ },
+ "the-shawshank-redemption-1994": {
+  "Rooftop ginger beer shandy": {
+   "n": "Rooftop ginger beer shandy (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles alcohol-free lager (375 ml each), cold",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger (3cm)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put 4 glasses in the freezer to chill.",
+     "min": 30
+    },
+    {
+     "text": "Slice the ginger into thin coins and cut the limes into wedges.",
+     "min": 6
+    },
+    {
+     "text": "Pour alcohol-free lager into each glass, top with ginger beer, squeeze in a lime wedge and add 2 ginger coins.",
+     "min": 4
+    }
+   ]
+  }
+ },
+ "the-thing-1982": {
+  "MacReady's Rob Roy": {
+   "n": "MacReady's Rob Roy (alcohol-free)",
+   "prep_min": 7,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "smoked black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "red grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 5 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Chill four coupe or rocks glasses.",
+     "min": 2
+    },
+    {
+     "text": "Stir 240ml of the smoked tea with the grape juice, balsamic vinegar and vanilla with plenty of ice in a jug.",
+     "min": 3
+    },
+    {
+     "text": "Strain into the glasses and drop in a cherry. Serve over one big ice block for anyone who likes it on the rocks.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "three-men-and-a-baby-1987": {
+  "Night-feed bourbon milk punch": {
+   "n": "Night-feed bourbon milk punch (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "whole nutmeg, to grate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Shake 160ml of the cold tea with the milk, syrup and vanilla with ice until frothy.",
+     "min": 2
+    },
+    {
+     "text": "Strain into 4 ice-filled glasses.",
+     "min": 2
+    },
+    {
+     "text": "Grate nutmeg over the top.",
+     "min": 1
+    }
+   ]
+  }
+ },
+ "total-recall-1990": {
+  "Mars red blood orange martini": {
+   "n": "Mars red blood orange martini (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "If blood oranges are out of season, use orange juice and a splash of grenadine",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "blood oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "white grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four coupes. Squeeze four blood oranges for juice, grate a little zest from one, and juice the lime.",
+     "min": 6
+    },
+    {
+     "text": "Shake the blood orange juice and zest, grape juice, sugar syrup and a little lime juice with ice.",
+     "min": 2
+    },
+    {
+     "text": "Strain into the coupes and garnish with a thin wheel cut from the last blood orange.",
+     "min": 2
+    }
+   ]
+  }
+ },
+ "unbreakable-2000": {
+  "Green poncho honey ginger tea": {
+   "n": "Green poncho honey ginger tea",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "5cm piece ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "green tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the ginger in the water, then take off the heat and let it cool for a couple of minutes.",
+     "min": 5
+    },
+    {
+     "text": "Add the tea bags and steep, then remove.",
+     "min": 3
+    },
+    {
+     "text": "Stir in the honey and juice of one lemon.",
+     "min": 2
+    },
+    {
+     "text": "Pour into mugs with a slice of the other lemon in each.",
+     "min": 5
+    }
+   ]
+  }
+ },
+ "wonder-woman-1984-2020": {
+  "Wishing stone champagne cocktail": {
+   "n": "Wishing stone champagne cocktail (alcohol-free)",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "alcohol-free sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling grape juice",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drop a sugar cube into each flute with a little grated orange zest and a drop of vanilla extract.",
+     "min": 2
+    },
+    {
+     "text": "Pour alcohol-free sparkling wine for the grown-ups or sparkling grape juice for the kids. Be careful what you wish for.",
+     "min": 3
+    }
+   ]
+  }
+ },
+ "young-guns-1988": {
+  "Lincoln saloon rye old fashioned": {
+   "n": "Lincoln saloon rye old fashioned (alcohol-free)",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "smoked black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "demerara sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 5 minutes, remove and cool.",
+     "min": 12
+    },
+    {
+     "text": "Stir the sugar into the hot water to make a syrup and cool.",
+     "min": 3
+    },
+    {
+     "text": "For each drink, stir 60ml of the smoked tea, syrup, a drop of vanilla and a little grated orange zest with ice until very cold.",
+     "min": 4
+    },
+    {
+     "text": "Strain over a large ice cube in a short glass.",
+     "min": 2
+    },
+    {
+     "text": "Squeeze a wide strip of orange peel over the top and drop it in.",
+     "min": 1
+    }
+   ]
+  }
+ }
+}

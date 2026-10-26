@@ -56,7 +56,9 @@
      "text": "Bake at 200C until puffed and golden.",
      "min": 18
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chopped cheese rolls",
@@ -137,7 +139,9 @@
      "text": "Pile into the rolls with lettuce, tomato, ketchup and mayo.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Peter B. Parker's burger",
@@ -222,7 +226,9 @@
      "text": "Stack two per toasted bun with bacon, onion rings and barbecue sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bodega cookies",
@@ -295,7 +301,9 @@
      "text": "Add flaky salt.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Coconut milk coquito",
@@ -354,7 +362,9 @@
      "text": "Serve in small glasses with a dusting of cinnamon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

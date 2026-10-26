@@ -52,7 +52,9 @@
      "text": "Pour over the corn chips and scatter with jalapenos.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Skee-ball chilli lime caramel popcorn",
@@ -137,7 +139,9 @@
      "text": "Cool and break up.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chimichangas",
@@ -234,7 +238,9 @@
      "text": "Serve with sour cream, guacamole and salsa.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Unicorn cupcakes",
@@ -319,7 +325,9 @@
      "text": "Pipe rainbow stripes and add a fondant horn to each.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sister Margaret's margarita",
@@ -372,7 +380,69 @@
      "text": "Strain into the glasses.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Sister Margaret's margarita (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "fresh lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "fresh orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "salt, for the rim",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the rims of four glasses.",
+       "min": 3
+      },
+      {
+       "text": "Shake the lime juice, orange juice and agave syrup hard with ice.",
+       "min": 4
+      },
+      {
+       "text": "Strain into the glasses and top each with a splash of soda water.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

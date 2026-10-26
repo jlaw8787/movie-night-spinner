@@ -74,7 +74,9 @@
      "text": "Drain and salt.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tostones",
@@ -137,7 +139,9 @@
      "text": "Mix the garlic, lime juice and olive oil and spoon over.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pernil",
@@ -218,7 +222,9 @@
      "text": "Cook the rice with the drained pigeon peas, stock and onion until tender, and serve alongside the sliced pork.",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Paradise flan",
@@ -275,7 +281,9 @@
      "text": "Chill overnight, run a knife around the edge and turn out onto a plate.",
      "min": 600
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "El Paraiso dark rum pineapple punch",
@@ -358,7 +366,103 @@
      "text": "Pour over ice into four tall glasses, grate nutmeg on top and garnish with a lime wheel.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "El Paraiso dark rum pineapple punch (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "Syrup up to 1 week ahead",
+     "ingredients": [
+      {
+       "q": 50,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "nutmeg, to grate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, in wheels",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sugar, water and cinnamon for 3 minutes, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out and chill.",
+       "min": 10
+      },
+      {
+       "text": "In a jug, stir 180ml of the tea, the pineapple juice, lime juice, 40ml of the syrup and the vanilla.",
+       "min": 2
+      },
+      {
+       "text": "Pour over ice into four tall glasses, grate nutmeg on top and garnish with a lime wheel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

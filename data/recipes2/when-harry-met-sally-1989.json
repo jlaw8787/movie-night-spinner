@@ -86,7 +86,9 @@
      "text": "Spread on the toasts, top with grapes and finish with honey and pepper.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sally's chef salad",
@@ -167,7 +169,9 @@
      "text": "Pour the olive oil and red wine vinegar into two little jugs and serve them on the side.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pastrami on rye",
@@ -218,7 +222,9 @@
      "text": "Serve each with a pickle on the side.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Apple pie à la mode, her way",
@@ -253,7 +259,9 @@
      "text": "Serve with the strawberry ice cream in a separate small bowl beside each slice.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "New Year's Eve champagne",
@@ -288,7 +296,45 @@
      "text": "Open the champagne just before midnight and pour into four flutes.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "New Year's Eve champagne (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 180,
+     "make_ahead": "Chill the bottle at least 3 hours ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the bottle of alcohol-free sparkling wine in the fridge for at least 3 hours.",
+       "min": 180
+      },
+      {
+       "text": "Sit the bottle in an ice bucket with the ice and a little cold water while you wait for midnight.",
+       "min": 2
+      },
+      {
+       "text": "Open the bottle just before midnight and pour into four flutes.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

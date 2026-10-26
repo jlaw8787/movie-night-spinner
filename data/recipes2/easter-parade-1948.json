@@ -100,7 +100,9 @@
      "text": "Toss with the dressing and croutons and top with the eggs and more parmesan.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Opening night gruyère gougères",
@@ -171,7 +173,9 @@
      "text": "Bake at 200C until puffed and golden.",
      "min": 22
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Easter Sunday roast lamb with mint sauce",
@@ -274,7 +278,9 @@
      "text": "Toss the peas in butter and serve alongside.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hot cross bun bread and butter pudding",
@@ -363,7 +369,9 @@
      "text": "Brush over the top and serve warm with cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Easter bonnet pink fizz punch",
@@ -434,7 +442,81 @@
      "text": "Garnish each glass with a strawberry on the rim.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Easter bonnet pink fizz punch",
+     "prep_min": 22,
+     "cook_min": 30,
+     "make_ahead": "Base up to 4 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "pink grapefruit juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "strawberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag of ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the strawberries.",
+       "min": 10
+      },
+      {
+       "text": "In a punch bowl, mix the cranberry juice, grapefruit juice and strawberries.",
+       "min": 5
+      },
+      {
+       "text": "Chill for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Add plenty of ice.",
+       "min": 2
+      },
+      {
+       "text": "Top the grown-ups' glasses with alcohol-free sparkling wine and the kids' with lemonade.",
+       "min": 3
+      },
+      {
+       "text": "Garnish each glass with a strawberry on the rim.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

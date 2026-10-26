@@ -52,7 +52,9 @@
      "text": "Cool on the tray so they crisp.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Edamame",
@@ -89,7 +91,9 @@
      "text": "Toss with the sea salt and sesame oil and serve warm, with another bowl for the empty pods.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Teriyaki rice bowl",
@@ -164,7 +168,85 @@
      "text": "Slice the chicken over the rice and top with pickled ginger and spring onion.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Teriyaki rice bowl",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Best eaten straight away",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "chicken thighs, skin on",
+       "aisle": "Meat"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice and keep warm.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the soy, rice vinegar, water and sugar until syrupy.",
+       "min": 5
+      },
+      {
+       "text": "Sear the chicken skin side down, flip and cook through, then pour in the sauce and turn until glazed.",
+       "min": 13
+      },
+      {
+       "text": "Slice the chicken over the rice and top with pickled ginger and spring onion.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Coconut ice cream",
@@ -215,7 +297,9 @@
      "text": "Scoop and finish with the rest of the coconut.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rooftop iced matcha honey lemonade",
@@ -274,7 +358,9 @@
      "text": "Fill 4 glasses with ice, pour in the lemonade, float the matcha on top and add a lemon wheel and mint. Stir at the table.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

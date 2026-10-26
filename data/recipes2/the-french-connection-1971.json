@@ -72,7 +72,83 @@
      "text": "Serve with cornichons and warm baguette.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Frog One's bistro pâté",
+     "prep_min": 20,
+     "cook_min": 240,
+     "make_ahead": "Up to 3 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "chicken livers, trimmed",
+       "aisle": "Meat"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cornichons",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the shallot in a little butter, then sear the livers until just pink.",
+       "min": 12
+      },
+      {
+       "text": "Add the apple juice and let it bubble away.",
+       "min": 2
+      },
+      {
+       "text": "Blitz the livers, shallot and thyme with soft butter until smooth, then pack into a dish.",
+       "min": 6
+      },
+      {
+       "text": "Pour melted butter over the top and chill until set.",
+       "min": 240
+      },
+      {
+       "text": "Serve with cornichons and warm baguette.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Stakeout coffee and doughnuts",
@@ -125,7 +201,9 @@
      "text": "Brew the coffee and pour into paper cups.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Charnier's steak frites",
@@ -210,7 +288,9 @@
      "text": "Fry the chips again until crisp and serve with the steaks and sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Crème caramel",
@@ -261,7 +341,9 @@
      "text": "Chill overnight, then run a knife around the edge and turn out.",
      "min": 520
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Marseille mauresque",
@@ -300,7 +382,69 @@
      "text": "Put pastis and orgeat in each of 4 tall glasses, add ice, then pour in chilled water slowly and watch it cloud. Stir once and serve a jug of cold water on the side.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Marseille mauresque (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 30,
+     "make_ahead": "Anise tea up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orgeat syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "ice cubes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "chilled water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pour the boiling water over the star anise and fennel seeds, steep for 10 minutes and strain.",
+       "min": 10
+      },
+      {
+       "text": "Chill the anise tea until cold.",
+       "min": 20
+      },
+      {
+       "text": "Put anise tea and orgeat in each of 4 tall glasses, add ice, then pour in chilled water slowly so the orgeat clouds it. Stir once and serve a jug of cold water on the side.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

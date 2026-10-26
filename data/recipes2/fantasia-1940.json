@@ -58,7 +58,9 @@
      "text": "Bake at 200C until golden and bubbling.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pastoral grape platter",
@@ -111,7 +113,9 @@
      "text": "Set a little pot of honey in the middle for drizzling.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lamb moussaka",
@@ -202,7 +206,9 @@
      "text": "Bake at 180C until golden.",
      "min": 40
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Meringue kisses",
@@ -257,7 +263,9 @@
      "text": "Dust with edible glitter and serve with raspberries.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bacchus grape and rosemary spritz",
@@ -326,7 +334,9 @@
      "text": "Pour into goblets over the frozen grapes, top with sparkling water and garnish with rosemary.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

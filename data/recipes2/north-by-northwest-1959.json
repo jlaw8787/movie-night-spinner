@@ -56,7 +56,9 @@
      "text": "Bake at 200C until hollow and golden.",
      "min": 22
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dining car relish tray",
@@ -121,7 +123,9 @@
      "text": "Add a small dish of cream cheese for spreading.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dining car brook trout",
@@ -196,7 +200,9 @@
      "text": "Spoon over the fish.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Baked Alaska",
@@ -251,7 +257,9 @@
      "text": "Bake at 230C until browned. Serve straight away.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gin Gibson with cocktail onion",
@@ -298,7 +306,53 @@
      "text": "For anyone off the gin, pour sparkling water over ice with onions.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Gin Gibson with cocktail onion (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Mix fresh",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the non-alcoholic gin and verjuice over ice, one drink at a time.",
+       "min": 3
+      },
+      {
+       "text": "Strain into a chilled glass with a cocktail onion.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

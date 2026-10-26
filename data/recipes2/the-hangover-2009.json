@@ -56,7 +56,9 @@
      "text": "Pile the prawns on a bag of crushed ice with the sauce and lemon wedges.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Morning after hash browns",
@@ -113,7 +115,9 @@
      "text": "Fry the eggs and top each cake with one and chives.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Baby Carlos breakfast burrito",
@@ -186,7 +190,9 @@
      "text": "Roll and toast in a dry pan.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wedding cake for Doug",
@@ -259,7 +265,9 @@
      "text": "Chill before slicing.",
      "min": 55
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rooftop herbal liqueur ginger fizz",
@@ -316,7 +324,101 @@
      "text": "Stir once, add an orange slice and toast on the roof.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rooftop herbal liqueur ginger fizz (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 55,
+     "make_ahead": "Herbal tea up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag, star anise, cinnamon and cloves in the boiling water with the honey for 10 minutes, then strain.",
+       "min": 10
+      },
+      {
+       "text": "Put the herbal tea in the freezer until icy cold.",
+       "min": 45
+      },
+      {
+       "text": "Fill four tall glasses with ice.",
+       "min": 3
+      },
+      {
+       "text": "Add the herbal tea and lime juice to each, then top with cold ginger beer.",
+       "min": 5
+      },
+      {
+       "text": "Stir once, add an orange slice and toast on the roof.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -58,7 +58,9 @@
      "text": "Serve both on a dark board.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Riddler's question mark pretzels",
@@ -127,7 +129,9 @@
      "text": "Dip in boiling water with bicarb soda, sprinkle with rock salt and bake at 220C.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rainy Gotham beef stew",
@@ -190,7 +194,79 @@
      "text": "Boil the potatoes, mash with plenty of butter and serve the stew on top.",
      "min": 30
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rainy Gotham beef stew",
+     "prep_min": 15,
+     "cook_min": 195,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "instant coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the beef in batches.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions and soften, then pour in the stock, stir in the coffee and add enough water to cover.",
+       "min": 5
+      },
+      {
+       "text": "Add the thyme, cover and simmer gently until tender.",
+       "min": 160
+      },
+      {
+       "text": "Boil the potatoes, mash with plenty of butter and serve the stew on top.",
+       "min": 30
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Flood night chocolate pots",
@@ -257,7 +333,9 @@
      "text": "Top with whipped cream and crushed honeycomb just before serving.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Iceberg Lounge espresso martini",
@@ -320,7 +398,67 @@
      "text": "Strain into a glass and float three coffee beans on top.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Iceberg Lounge espresso martini (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "strong coffee (6 espresso shots)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "coffee beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the coffee and cool, and chill the martini glasses.",
+       "min": 10
+      },
+      {
+       "text": "For each drink, measure 60ml strong coffee, 15ml sugar syrup and a few drops of vanilla into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake each drink very hard with ice for 15 seconds to build a thick foam.",
+       "min": 10
+      },
+      {
+       "text": "Strain into a glass and float three coffee beans on top.",
+       "min": 0
+      }
+     ]
+    }
+   }
   }
  ]
 }

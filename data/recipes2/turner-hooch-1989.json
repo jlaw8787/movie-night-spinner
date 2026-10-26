@@ -44,7 +44,9 @@
      "text": "Cool on the tray until crisp and serve with salsa.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dog bone crackers",
@@ -95,7 +97,9 @@
      "text": "Cool on a rack.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Steak, and the bone for Hooch",
@@ -162,7 +166,9 @@
      "text": "Steam the beans, top the steaks with garlic butter and save a bone for the dog.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Caramel shortbread sundaes",
@@ -225,7 +231,9 @@
      "text": "Scoop ice cream into cups and top with whipped cream, crushed shortbread and a drizzle of caramel.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Turner's tidy blood orange mimosa",
@@ -270,7 +278,55 @@
      "text": "Garnish with a thin twist of orange peel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Turner's tidy blood orange mimosa (alcohol-free)",
+     "prep_min": 13,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "blood oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, cold",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Squeeze the oranges and strain the juice into a jug.",
+       "min": 8
+      },
+      {
+       "text": "Chill the juice.",
+       "min": 30
+      },
+      {
+       "text": "Pour juice into chilled flutes, tilting the glass, then top slowly with alcohol-free sparkling wine.",
+       "min": 3
+      },
+      {
+       "text": "Garnish with a thin twist of orange peel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

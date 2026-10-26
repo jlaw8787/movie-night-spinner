@@ -68,7 +68,9 @@
      "text": "Bake at 200C for 18 minutes. Pull the lever.",
      "min": 18
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pacha's village quinoa salad",
@@ -145,7 +147,9 @@
      "text": "Dress with lime juice, olive oil and cumin.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mudka's Meat Hut cheeseburger and chips",
@@ -214,7 +218,9 @@
      "text": "Serve on toasted buns with pickles. Special for two, or four.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Birthday cake for Pacha's kids",
@@ -283,7 +289,9 @@
      "text": "Frost the cake and add candles.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chicha morada",
@@ -358,7 +366,9 @@
      "text": "Serve with lime juice and diced apple.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

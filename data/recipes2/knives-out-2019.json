@@ -70,7 +70,9 @@
      "text": "Roll in the sugar mixed with the cinnamon while hot.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gruyère gougères",
@@ -137,7 +139,9 @@
      "text": "Serve warm.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Harlan's birthday roast beef",
@@ -194,7 +198,9 @@
      "text": "Carve at the table with the horseradish cream.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Harlan's 85th birthday cake",
@@ -265,7 +271,9 @@
      "text": "Melt the dark chocolate with the butter, beat in the icing sugar, then stack and frost the layers and add candles.",
      "min": 17
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Maple bourbon coffee with whipped cream",
@@ -330,7 +338,67 @@
      "text": "Make sure everyone gets the right mug.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Maple bourbon coffee with whipped cream (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 2,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": null,
+       "u": "",
+       "item": "ground coffee, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "nutmeg, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the strong coffee.",
+       "min": 2
+      },
+      {
+       "text": "Whip the cream with a little of the maple syrup to soft peaks.",
+       "min": 2
+      },
+      {
+       "text": "Into each of the big mugs pour the rest of the maple syrup and a few drops of vanilla, then the hot coffee and stir.",
+       "min": 2
+      },
+      {
+       "text": "Spoon the cream on top so it floats and grate over a little nutmeg.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

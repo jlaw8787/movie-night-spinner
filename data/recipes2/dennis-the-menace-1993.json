@@ -64,7 +64,9 @@
      "text": "Cool on the tray for 5 minutes.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Night-blooming flower canapés",
@@ -129,7 +131,9 @@
      "text": "Mash the eggs with salt and spread on the bread. Cut off the crusts and slice into fingers.",
      "min": 18
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mr Wilson's lamb chops with mint sauce",
@@ -204,7 +208,9 @@
      "text": "Serve everything with a spoon of mint sauce, in peace, with no interruptions at all.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mrs Wilson's apple pie",
@@ -263,7 +269,9 @@
      "text": "Bake at 190C for 45 minutes. Serve warm with ice cream.",
      "min": 50
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Backyard lemonade",
@@ -322,7 +330,9 @@
      "text": "Pour into tall glasses over ice and drop a halved strawberry into each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -64,7 +64,9 @@
      "text": "Serve with potato chips.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rumaki bacon wrapped water chestnuts",
@@ -117,7 +119,9 @@
      "text": "Bake at 200C until sticky.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bernie's beach house clambake",
@@ -186,7 +190,85 @@
      "text": "Tip it all onto the table.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bernie's beach house clambake",
+     "prep_min": 12,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "clams",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lobster tails",
+       "aisle": "Seafood"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the corn, crush the garlic and scrub the clams.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes in a big pot.",
+       "min": 10
+      },
+      {
+       "text": "Add the corn, stock, the juice of the lemon, garlic and butter, then the clams and lobster tails. Cover and steam.",
+       "min": 8
+      },
+      {
+       "text": "Tip it all onto the table.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Pineapple upside-down cake",
@@ -255,7 +337,9 @@
      "text": "Rest briefly, then flip out.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Larry and Richard's mai tai",
@@ -320,7 +404,91 @@
      "text": "Strain over crushed ice and top with a mint sprig.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Larry and Richard's mai tai (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orgeat syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "crushed ice, to serve",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out, stir in the sugar and vanilla and chill.",
+       "min": 15
+      },
+      {
+       "text": "Juice the limes.",
+       "min": 4
+      },
+      {
+       "text": "Shake the spiced tea, orange juice, orgeat and lime juice with ice, in batches.",
+       "min": 4
+      },
+      {
+       "text": "Strain over crushed ice and top with a mint sprig.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

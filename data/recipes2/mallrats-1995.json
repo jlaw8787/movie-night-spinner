@@ -78,7 +78,9 @@
      "text": "Brush with butter and roll in cinnamon sugar. Serve with the sweetened cream cheese.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Comic store popcorn",
@@ -121,7 +123,9 @@
      "text": "Sprinkle with parmesan and garlic powder, tossing until every piece is coated. Pour into paper bags.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Eden Prairie food court teriyaki chicken",
@@ -186,7 +190,75 @@
      "text": "Stir-fry the broccoli quickly. Slice the chicken over the rice and spoon over the extra sauce.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Eden Prairie food court teriyaki chicken",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Glaze up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "chicken thighs",
+       "aisle": "Meat"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "heads broccoli, cut into florets",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy sauce, honey, sugar and ginger until syrupy.",
+       "min": 10
+      },
+      {
+       "text": "Steam the rice. Grill the chicken, brushing with the glaze, until sticky and charred.",
+       "min": 20
+      },
+      {
+       "text": "Stir-fry the broccoli quickly. Slice the chicken over the rice and spoon over the extra sauce.",
+       "min": 15
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Sailboat poster cookies",
@@ -239,7 +311,9 @@
      "text": "Cool for 5 minutes and serve warm.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Truth or Date lemonade",
@@ -292,7 +366,9 @@
      "text": "Pour into big cups packed with ice and add a straw to each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

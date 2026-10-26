@@ -56,7 +56,9 @@
      "text": "Fry in a cast iron pan until crisp and eat warm with butter.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fort Smith boarding house biscuits",
@@ -125,7 +127,9 @@
      "text": "Serve with butter and golden syrup.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Campfire stew",
@@ -190,7 +194,9 @@
      "text": "Put the lid on and cook over low coals or at 160C until thick.",
      "min": 180
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mattie's hard-bargain molasses cookies",
@@ -275,7 +281,9 @@
      "text": "Bake until cracked on top.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rooster's bourbon hot toddy",
@@ -334,7 +342,73 @@
      "text": "Drop in a cinnamon stick and a lemon wheel studded with cloves. For Mattie use hot apple juice in place of the bourbon and water.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rooster's bourbon hot toddy (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "just boiled water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the just boiled water for 4 minutes and lift out.",
+       "min": 4
+      },
+      {
+       "text": "Put honey and lemon juice in each of 4 mugs.",
+       "min": 2
+      },
+      {
+       "text": "Top with the hot smoky tea and stir.",
+       "min": 1
+      },
+      {
+       "text": "Drop in a cinnamon stick and a lemon wheel studded with cloves.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

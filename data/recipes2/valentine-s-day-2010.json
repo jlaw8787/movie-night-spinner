@@ -60,7 +60,9 @@
      "text": "Chill until set.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Reed's flower shop goat's cheese toasts",
@@ -135,7 +137,9 @@
      "text": "Spread the toasts with the cheese, drizzle with hot honey and scatter with thyme leaves and edible flowers.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Valentine's sirloin with garlic butter",
@@ -220,7 +224,95 @@
      "text": "Saute the beans in the remaining butter. Serve with the steaks and potatoes.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Valentine's sirloin with garlic butter",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sirloin steaks",
+       "aisle": "Meat"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until just tender, drain, smash flat on a tray, drizzle with oil and roast at 220C.",
+       "min": 45
+      },
+      {
+       "text": "Season the steaks and sear in a hot pan on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Add most of the butter, the garlic and thyme and baste briefly. Rest the steaks.",
+       "min": 3
+      },
+      {
+       "text": "Add the stock and balsamic to the pan and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Saute the beans in the remaining butter. Serve with the steaks and potatoes.",
+       "min": 8
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Valentine's red velvet cupcakes",
@@ -327,7 +419,9 @@
      "text": "Crumble one cupcake over the rest to finish.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kara's anti-Valentine's pink fizz",
@@ -380,7 +474,57 @@
      "text": "Rub a small rosemary sprig between your hands and add one to each glass.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Kara's anti-Valentine's pink fizz",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "pink grapefruit juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 480,
+       "u": "ml",
+       "item": "chilled alcohol-free sparkling rosé",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "small sprigs rosemary",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drop raspberries into each flute and add a splash of grapefruit juice.",
+       "min": 2
+      },
+      {
+       "text": "Slowly top with the chilled alcohol-free sparkling rosé.",
+       "min": 2
+      },
+      {
+       "text": "Rub a small rosemary sprig between your hands and add one to each glass.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

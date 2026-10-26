@@ -64,7 +64,9 @@
      "text": "Pour into 8 small glasses.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Stella's sandwiches",
@@ -111,7 +113,9 @@
      "text": "Cut each into quarters and stack on a plate.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lisa's lobster dinner",
@@ -184,7 +188,9 @@
      "text": "Toss the potatoes in butter and serve with the beans.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Plaster cast lemon icebox pie",
@@ -241,7 +247,9 @@
      "text": "Top with whipped cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Heatwave iced coffee with ice cream",
@@ -306,7 +314,9 @@
      "text": "Add a scoop of ice cream, spoon on whipped cream and dust with cocoa. Serve with a long spoon and a straw.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

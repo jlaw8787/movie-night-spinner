@@ -68,7 +68,9 @@
      "text": "Stack in threes with butter and maple syrup.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Warehouse hash browns",
@@ -121,7 +123,9 @@
      "text": "Fry in butter and oil until deep golden on both sides.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Nice Guy Eddie's steak sandwich",
@@ -190,7 +194,9 @@
      "text": "Slice the steak and pile into rolls with onions and provolone.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Diner lemon meringue pie",
@@ -263,7 +269,9 @@
      "text": "Bake until golden.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tip jar maple cream cold brew",
@@ -320,7 +328,9 @@
      "text": "Fill four mugs with ice, pour in the cold brew and spoon the maple cream on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

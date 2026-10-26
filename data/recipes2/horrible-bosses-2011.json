@@ -114,7 +114,9 @@
      "text": "Top with guacamole, sour cream, salsa and jalapenos.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Break room cinnamon jam doughnuts",
@@ -203,7 +205,9 @@
      "text": "Poke a hole in each and pipe in the jam.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Swap your boss double bacon cheeseburgers",
@@ -294,7 +298,9 @@
      "text": "Stack two patties in each toasted bun with bacon, pickles, onion and sauce.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bad plan salted caramel brownies",
@@ -375,7 +381,9 @@
      "text": "Cool, then serve warm with ice cream.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Glengoolie Blue whisky sour",
@@ -438,7 +446,89 @@
      "text": "Twist a strip of orange peel over the top and drop it in.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Glengoolie Blue whisky sour (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 13,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "egg whites (from 4 eggs)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+       "min": 12
+      },
+      {
+       "text": "Stir the honey into the hot water and cool to make a syrup.",
+       "min": 3
+      },
+      {
+       "text": "Shake 240ml of the smoked tea, the lemon juice, honey syrup and egg white in a jar without ice. Repeat for each drink.",
+       "min": 5
+      },
+      {
+       "text": "Add ice and shake hard again, then strain into short glasses over a large ice cube.",
+       "min": 2
+      },
+      {
+       "text": "Twist a strip of orange peel over the top and drop it in.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -80,7 +80,9 @@
      "text": "Fill the buns and finish with celery salt.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Key West conch fritters",
@@ -177,7 +179,9 @@
      "text": "Mix the mayonnaise with lime juice and serve.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chicago Italian beef",
@@ -264,7 +268,9 @@
      "text": "Pile into the rolls, dip briefly in the jus and top with giardiniera.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Key lime pie",
@@ -335,7 +341,9 @@
      "text": "Softly whip the cream and spoon over the pie.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Key West rum punch",
@@ -400,7 +408,81 @@
      "text": "Stir and finish with a light grating of nutmeg.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Key West rum punch (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "ml",
+       "item": "grenadine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "nutmeg, to grate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill four glasses with ice.",
+       "min": 2
+      },
+      {
+       "text": "Add coconut water, pineapple juice, orange juice, lime juice, grenadine and a drop of vanilla to each.",
+       "min": 3
+      },
+      {
+       "text": "Stir and finish with a light grating of nutmeg.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

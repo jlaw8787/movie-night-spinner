@@ -58,7 +58,9 @@
      "text": "Mix the tomatoes with basil and oil and pile on just before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gougères",
@@ -121,7 +123,9 @@
      "text": "Bake at 200C until puffed and golden. Bon appetit.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "365-day project boeuf bourguignon",
@@ -218,7 +222,113 @@
      "text": "Glaze the pearl onions and mushrooms in the butter and stir through at the end.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "365-day project boeuf bourguignon",
+     "prep_min": 40,
+     "cook_min": 190,
+     "make_ahead": "Better made 1 day ahead, reheat gently",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bacon lardons",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "thyme sprigs and 2 bay leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "pearl onions, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dry the beef and brown it in batches with the lardons.",
+       "min": 15
+      },
+      {
+       "text": "Soften the carrots, onion and garlic in the same pot.",
+       "min": 10
+      },
+      {
+       "text": "Return the meat, add the stock, grape juice, vinegar, thyme and bay leaves and bring to a simmer.",
+       "min": 10
+      },
+      {
+       "text": "Braise covered at 160C for 3 hours until the beef is tender.",
+       "min": 180
+      },
+      {
+       "text": "Glaze the pearl onions and mushrooms in the butter and stir through at the end.",
+       "min": 15
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Reine de Saba",
@@ -285,7 +395,9 @@
      "text": "Melt the remaining chocolate with the remaining butter and glaze the cake.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Burgundy kir with crème de cassis",
@@ -322,7 +434,53 @@
      "text": "Pour the cassis into wine glasses, top slowly with the cold wine so it blends from the bottom, and drop a blackberry in each. Serve before the bourguignon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Burgundy kir with crème de cassis (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 120,
+     "make_ahead": "Chill the juice up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 550,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "blackcurrant cordial",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "blackberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the white grape juice with the verjuice in a bottle or jug and chill for 2 hours (included in cook time).",
+       "min": 120
+      },
+      {
+       "text": "Pour the blackcurrant cordial into wine glasses, top slowly with the cold grape mix so it blends from the bottom, and drop a blackberry in each. Serve before the bourguignon.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

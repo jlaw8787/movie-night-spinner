@@ -60,7 +60,9 @@
      "text": "Cool on the tray.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Christmas Eve cheese straws",
@@ -107,7 +109,9 @@
      "text": "Bake at 200C until crisp.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Honeymoon spit-roast chicken",
@@ -170,7 +174,9 @@
      "text": "Rest, then carve.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Gower's chocolate sundae",
@@ -223,7 +229,9 @@
      "text": "Whip the cream, top each sundae and add a cherry. No coconut.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Eggnog",
@@ -290,7 +298,9 @@
      "text": "Serve with grated nutmeg.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

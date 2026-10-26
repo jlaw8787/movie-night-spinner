@@ -72,7 +72,9 @@
      "text": "Cool and break up.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gotham deli pickles",
@@ -147,7 +149,9 @@
      "text": "Serve in the jar with rye crispbread alongside.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Diner meatloaf",
@@ -238,7 +242,9 @@
      "text": "Serve thick slices with mash and peas.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Arthur's candy apples",
@@ -305,7 +311,9 @@
      "text": "Stand on baking paper to set.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bourbon Manhattan",
@@ -364,7 +372,85 @@
      "text": "Strain into the glasses, drop in a cherry and twist a strip of orange peel over the top.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bourbon Manhattan (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "maraschino cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes and lift out.",
+       "min": 5
+      },
+      {
+       "text": "Chill the tea, and the coupe glasses, in the freezer.",
+       "min": 20
+      },
+      {
+       "text": "Fill a jug with ice and add 240ml of the tea, the grape juice, balsamic and vanilla, then stir steadily until very cold.",
+       "min": 3
+      },
+      {
+       "text": "Strain into the glasses, drop in a cherry and twist a strip of orange peel over the top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

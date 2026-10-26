@@ -66,7 +66,9 @@
      "text": "Toss the corn chips with the zest of the lime and a little salt and serve with the salsa.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Saul's cheesy garlic pull-apart bread",
@@ -139,7 +141,9 @@
      "text": "Wrap in foil and bake 15 minutes, then unwrap and bake 10 minutes until golden and melted.",
      "min": 28
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red's pineapple teriyaki chicken",
@@ -246,7 +250,117 @@
      "text": "Slice the chicken and serve with pineapple, sesame, spring onion and sliced chilli in vinegar.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Red's pineapple teriyaki chicken",
+     "prep_min": 20,
+     "cook_min": 55,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "chicken thigh fillets",
+       "aisle": "Meat"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "cup",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sesame seeds, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "rice vinegar, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, the honey, the brown sugar, the grated ginger and the garlic clove for 5 minutes until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Marinate the chicken thighs in half the sauce for 30 minutes.",
+       "min": 28
+      },
+      {
+       "text": "Grill on a hot barbecue for 5 to 6 minutes a side, brushing with more sauce.",
+       "min": 14
+      },
+      {
+       "text": "Grill the pineapple slices 2 minutes a side.",
+       "min": 7
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 11
+      },
+      {
+       "text": "Slice the chicken and serve with pineapple, sesame, spring onion and sliced chilli in vinegar.",
+       "min": 8
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Angie's family pineapple upside-down cake",
@@ -335,7 +449,105 @@
      "text": "Serve warm with the chilled coconut cream.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Angie's family pineapple upside-down cake",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 185,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "coconut cream",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 180C.",
+       "min": 6
+      },
+      {
+       "text": "Melt some of the butter with the brown sugar, pineapple juice and vanilla in a 23cm tin and lay the fresh pineapple rings on top.",
+       "min": 6
+      },
+      {
+       "text": "Beat the rest of the butter with the caster sugar, add the eggs, then the self-raising flour and the milk.",
+       "min": 6
+      },
+      {
+       "text": "Spread over the fruit and bake 45 minutes.",
+       "min": 51
+      },
+      {
+       "text": "Rest 5 minutes and turn out.",
+       "min": 5
+      },
+      {
+       "text": "Serve warm with the chilled coconut cream.",
+       "min": 6
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Pineapple mint rum crush",
@@ -416,7 +628,97 @@
      "text": "For non-drinkers, skip the rum and top with soda.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Pineapple mint rum crush (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": null,
+       "u": "",
+       "item": "half pineapple, as needed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "brown sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "chilli powder, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "crushed ice, as needed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt with a little chilli powder and rim the glasses.",
+       "min": 2
+      },
+      {
+       "text": "For each drink, muddle the pineapple chunks, a few mint leaves, the brown sugar syrup and the lime juice in a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Add the pineapple juice and a drop of vanilla extract, shake with ice and pour over crushed ice.",
+       "min": 2
+      },
+      {
+       "text": "Top each glass with soda water.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -88,7 +88,9 @@
      "text": "Fry in 180C oil until golden and hot throughout. Drain.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fried sweet plantains",
@@ -129,7 +131,9 @@
      "text": "Drain and finish with sea salt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mike and Marcus swap Cuban sandwich",
@@ -248,7 +252,9 @@
      "text": "Butter the outsides and press in a hot sandwich press until crisp and the filling is piping hot.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Key lime pie",
@@ -325,7 +331,9 @@
      "text": "Softly whip the cream and spread over the pie.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mike Lowrey's ocean view mojito",
@@ -384,7 +392,69 @@
      "text": "Top with soda water, stir gently and garnish with a mint sprig.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mike Lowrey's ocean view mojito (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Gently muddle the mint leaves with the syrup and lime juice in a jug, without shredding the mint.",
+       "min": 3
+      },
+      {
+       "text": "Add the apple juice and divide between glasses filled with crushed ice.",
+       "min": 2
+      },
+      {
+       "text": "Top with soda water, stir gently and garnish with a mint sprig.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

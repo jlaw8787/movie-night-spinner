@@ -62,7 +62,9 @@
      "text": "Whip the cream and serve the scones with jam and cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cheese and yeast spread scrolls",
@@ -115,7 +117,9 @@
      "text": "Roll up, slice into 12 and bake at 200C until golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mayor's roast lamb cutlets and mint sauce",
@@ -194,7 +198,9 @@
      "text": "Mix chopped mint with the vinegar, sugar and hot water for the mint sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Full moon pavlova",
@@ -257,7 +263,9 @@
      "text": "Whip the cream and top the pavlova with cream and passionfruit.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Parkes pub lemon lime shandy",
@@ -314,7 +322,63 @@
      "text": "Make extra with just soda for the drivers.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Parkes pub lemon lime shandy (alcohol-free)",
+     "prep_min": 13,
+     "cook_min": 15,
+     "make_ahead": "Syrup up to 1 day",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "x 375ml alcohol-free lager",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Juice the lemons and limes and mix with the sugar syrup.",
+       "min": 8
+      },
+      {
+       "text": "Chill four pot glasses in the freezer.",
+       "min": 15
+      },
+      {
+       "text": "Pour a measure of the citrus syrup into each glass, add soda water, then top slowly with cold alcohol-free lager. Stir once and add a lemon wedge.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

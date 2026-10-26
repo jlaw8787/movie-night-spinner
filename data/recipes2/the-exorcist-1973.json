@@ -64,7 +64,9 @@
      "text": "Pan-fry in butter until golden and serve with lemon.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Baba ganoush and hummus with flatbread",
@@ -139,7 +141,9 @@
      "text": "Warm the flatbreads and serve with pickled turnips, dusted with sumac.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pea and ham soup",
@@ -208,7 +212,9 @@
      "text": "Serve with crusty bread. Eat it, don't throw it.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Devil's food cake",
@@ -295,7 +301,9 @@
      "text": "Melt the chocolate with the cream and spread over the cake.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Holy water gin and elderflower fizz",
@@ -360,7 +368,75 @@
      "text": "Add a mint sprig and a lemon wheel. For non-drinkers, swap the gin for chilled cucumber juice.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Holy water gin and elderflower fizz (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "elderflower cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "chilled soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sprig mint, per glass",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thin lemon wheels",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shake the non-alcoholic gin, cordial and lemon juice hard with ice for 15 seconds.",
+       "min": 4
+      },
+      {
+       "text": "Strain into tall glasses over fresh ice and top with soda water.",
+       "min": 3
+      },
+      {
+       "text": "Add a mint sprig and a lemon wheel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

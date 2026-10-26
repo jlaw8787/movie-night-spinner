@@ -94,7 +94,9 @@
      "text": "Fill the buns with brisket and slaw.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "New York bagel bites",
@@ -153,7 +155,9 @@
      "text": "Top with smoked salmon, capers, thin red onion and dill.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chuckwagon chilli",
@@ -226,7 +230,9 @@
      "text": "Bake the cornbread in a skillet and serve with the chilli.",
      "min": 30
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Norman's campfire s'mores",
@@ -263,7 +269,9 @@
      "text": "Sandwich each with a square of milk chocolate between 2 biscuits and press so it melts.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chuckwagon coffee with cinnamon cream",
@@ -336,7 +344,9 @@
      "text": "Top each with a spoon of the cream.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -74,7 +74,9 @@
      "text": "Serve the fritters warm with the dip.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Spot's foraged berries",
@@ -133,7 +135,9 @@
      "text": "Spoon the cream into small bowls and top with the berries.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rancher's beef ribs",
@@ -218,7 +222,9 @@
      "text": "Shred the cabbage and grate the carrot, then mix with the mayonnaise and vinegar for a crunchy coleslaw.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Harvest cornbread",
@@ -297,7 +303,9 @@
      "text": "Serve wedges with the honey butter.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Farm stand watermelon and mint cooler",
@@ -366,7 +374,9 @@
      "text": "Fill the jug with ice and top with sparkling water. Pour into glasses with a watermelon wedge and mint sprig each.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

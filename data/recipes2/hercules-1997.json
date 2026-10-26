@@ -68,7 +68,9 @@
      "text": "Bake at 190C for 25 minutes.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hydra heads haloumi",
@@ -121,7 +123,9 @@
      "text": "Cook more as fast as it disappears.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Phil's training island souvlaki",
@@ -212,7 +216,9 @@
      "text": "Serve in warm pita with tomato and red onion.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ambrosia loukoumades (honey puffs)",
@@ -287,7 +293,9 @@
      "text": "Toss in warm honey with cinnamon and scatter over the walnuts.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Olympus golden peach and honey fizz",
@@ -364,7 +372,9 @@
      "text": "Fill glasses with ice and peach slices, pour in the nectar to two thirds and top with sparkling water. Add a mint sprig.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

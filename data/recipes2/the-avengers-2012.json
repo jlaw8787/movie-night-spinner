@@ -114,7 +114,9 @@
      "text": "Add pine nuts, chilli oil and parsley.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Asgardian honey roasted nuts",
@@ -167,7 +169,9 @@
      "text": "Sprinkle with flaky salt while warm and stir as they cool so they don't stick together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shawarma",
@@ -272,7 +276,9 @@
      "text": "Warm the flatbreads and fill with chicken, garlic sauce, pickled turnips, tomato and parsley.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Captain America shield cookies",
@@ -341,7 +347,9 @@
      "text": "Ice the rings, add a blue centre and a white star.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Asgardian honey ginger beer or mead",
@@ -394,7 +402,63 @@
      "text": "For the grown-ups, pour chilled mead instead. Raise the glasses high.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Asgardian honey ginger beer or mead (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices fresh ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir a spoon of honey, a squeeze of lemon and a slice of ginger into each of four glasses until the honey dissolves.",
+       "min": 4
+      },
+      {
+       "text": "Fill with ice and top with ginger beer.",
+       "min": 2
+      },
+      {
+       "text": "Stir once and raise the glasses high.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

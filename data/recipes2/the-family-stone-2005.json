@@ -56,7 +56,9 @@
      "text": "Mix the cranberry sauce with wholegrain mustard for dipping and serve hot on toothpicks.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dinner table garlic herb pull-apart",
@@ -117,7 +119,9 @@
      "text": "Open the foil and bake until crisp and golden.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ham, spinach and gruyère strata",
@@ -210,7 +214,9 @@
      "text": "Rest before serving with tomato relish.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Christmas morning cinnamon scrolls",
@@ -291,7 +297,9 @@
      "text": "Beat the cream cheese, butter, icing sugar and vanilla and spread over the warm scrolls.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Stone house eggnog latte",
@@ -380,7 +388,89 @@
      "text": "Add brandy to each mug if wanted.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Stone house eggnog latte",
+     "prep_min": 9,
+     "cook_min": 18,
+     "make_ahead": "Eggnog base up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "brewed coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole nutmeg",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the milk with cream, sugar, cinnamon stick and vanilla until steaming.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the egg yolks in a bowl and pour in the hot milk while whisking.",
+       "min": 5
+      },
+      {
+       "text": "Return to the pan and stir over low heat until slightly thick.",
+       "min": 3
+      },
+      {
+       "text": "Brew strong coffee and divide between mugs.",
+       "min": 5
+      },
+      {
+       "text": "Froth the eggnog milk, pour over and grate nutmeg on top.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

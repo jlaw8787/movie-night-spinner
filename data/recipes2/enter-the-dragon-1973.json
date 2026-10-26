@@ -68,7 +68,9 @@
      "text": "Serve with chilli oil.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Han's island tournament spring rolls",
@@ -151,7 +153,9 @@
      "text": "Fry at 180C until golden.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mirror room char siu with fried rice",
@@ -240,7 +244,99 @@
      "text": "Slice the pork over the rice.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mirror room char siu with fried rice",
+     "prep_min": 30,
+     "cook_min": 756,
+     "make_ahead": "Marinate a day ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "pork neck",
+       "aisle": "Meat"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "five spice",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "cooked jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the hoisin, soy, honey, five spice and Shaoxing and coat the pork.",
+       "min": 10
+      },
+      {
+       "text": "Marinate overnight.",
+       "min": 720
+      },
+      {
+       "text": "Roast at 200C, glazing twice.",
+       "min": 35
+      },
+      {
+       "text": "Rest the pork.",
+       "min": 10
+      },
+      {
+       "text": "Fry the rice with the eggs and spring onion.",
+       "min": 8
+      },
+      {
+       "text": "Slice the pork over the rice.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Mango pancakes",
@@ -307,7 +403,9 @@
      "text": "Fold into parcels and chill for an hour.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Iced chrysanthemum and goji honey tea",
@@ -380,7 +478,9 @@
      "text": "Pour over ice in four glasses, drop in a few goji berries and add a squeeze of lemon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

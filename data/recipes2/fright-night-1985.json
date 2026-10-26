@@ -52,7 +52,9 @@
      "text": "Bake at 200C, opening the foil for the last 3 minutes to crisp",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jerry's apples",
@@ -105,7 +107,9 @@
      "text": "Fan the apples around the dip. Do not invite anyone in without checking first",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Forty-clove garlic chicken",
@@ -168,7 +172,79 @@
      "text": "Squeeze the soft garlic onto slices of crusty bread and eat with the chicken",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Forty-clove garlic chicken",
+     "prep_min": 20,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "chicken thighs",
+       "aisle": "Meat"
+      },
+      {
+       "q": 40,
+       "u": "",
+       "item": "garlic cloves, unpeeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Italian loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the chicken skin side down in oil",
+       "min": 10
+      },
+      {
+       "text": "Add the garlic, thyme, stock and verjuice",
+       "min": 5
+      },
+      {
+       "text": "Cover and bake at 180C",
+       "min": 60
+      },
+      {
+       "text": "Squeeze the soft garlic onto slices of crusty bread and eat with the chicken",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Blood orange posset",
@@ -217,7 +293,9 @@
      "text": "Top with thin slices of blood orange to serve",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Holy water lemon, lime and bitters",
@@ -274,7 +352,89 @@
      "text": "Top with cold lemonade, stir once and drop in a lime wedge. For the bottle look, mix it all in a jug and pour into small glass bottles before serving over ice",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Holy water lemon, lime and bitters (alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 11,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pomegranate syrup (grenadine)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "lemonade, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag and cloves in the boiling water for 3 minutes, discard them and cool the spiced tea.",
+       "min": 11
+      },
+      {
+       "text": "Squeeze the limes and lemon, keeping a few lime wedges.",
+       "min": 4
+      },
+      {
+       "text": "Fill glasses with crushed ice.",
+       "min": 2
+      },
+      {
+       "text": "Add lime juice, lemon juice, a splash of the spiced tea and the pomegranate syrup to each.",
+       "min": 2
+      },
+      {
+       "text": "Top with cold lemonade, stir once and drop in a lime wedge. For the bottle look, mix it all in a jug and pour into small glass bottles before serving over ice.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

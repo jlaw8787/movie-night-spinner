@@ -58,7 +58,9 @@
      "text": "Break the cheddar into shards and push everything onto toothpicks so nobody gets greasy fingers on the cards.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Vesper's train dinner salad",
@@ -129,7 +131,9 @@
      "text": "Whisk the mustard, vinegar and oil into a dressing. Toss the lettuce, fennel, orange and nuts together with the dressing at the last second.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Balkan grilled lamb",
@@ -208,7 +212,9 @@
      "text": "Crush the last garlic clove into the yoghurt with a pinch of salt. Serve with the lamb and capsicums.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chocolate fondant",
@@ -277,7 +283,9 @@
      "text": "Turn out straight away so the centres run.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "The Vesper gin and vodka martini",
@@ -326,7 +334,53 @@
      "text": "Strain into deep chilled coupes and add a long strip of lemon peel to each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "The Vesper gin and vodka martini (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 280,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, peel in long strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shake the non-alcoholic gin and verjuice hard with ice until very cold, in batches if needed.",
+       "min": 3
+      },
+      {
+       "text": "Strain into deep chilled coupes and add a long strip of lemon peel to each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

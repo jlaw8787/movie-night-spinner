@@ -54,7 +54,9 @@
      "text": "Set on baking paper in the fridge",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Diner chicken wings",
@@ -121,7 +123,9 @@
      "text": "Serve with celery sticks",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Cincinnati chilli spaghetti",
@@ -224,7 +228,9 @@
      "text": "Ladle the chilli over the spaghetti and pile the cheddar on top",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Diner cherry lattice pie",
@@ -301,7 +307,9 @@
      "text": "Cool and serve with ice cream",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Holy schnike lemon shandy",
@@ -352,7 +360,61 @@
      "text": "Stir once and add a lemon wheel. Use extra soda water and lemon for anyone driving",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Holy schnike lemon shandy (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1.32,
+       "u": "l",
+       "item": "alcohol-free lager, cold",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Juice three of the lemons, cut the last into wheels and mix the juice with the syrup, then chill.",
+       "min": 5
+      },
+      {
+       "text": "Chill four pint glasses in the freezer.",
+       "min": 15
+      },
+      {
+       "text": "Pour some lemon mix into each glass, add soda water, then top slowly with cold alcohol-free lager.",
+       "min": 3
+      },
+      {
+       "text": "Stir once and add a lemon wheel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

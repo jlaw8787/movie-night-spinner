@@ -72,7 +72,9 @@
      "text": "Bake until flaky.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Locust swarm corn",
@@ -127,7 +129,9 @@
      "text": "Cut into thick rounds and pile high.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sausage and mushroom ragu polenta",
@@ -206,7 +210,9 @@
      "text": "Spoon the ragu over the polenta.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Golden honeycomb toffee",
@@ -261,7 +267,9 @@
      "text": "Break into amber shards.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sweet almond milk",
@@ -338,7 +346,9 @@
      "text": "Pour over ice in four glasses and scatter with the almonds.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

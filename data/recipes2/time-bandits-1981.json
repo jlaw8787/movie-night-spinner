@@ -84,7 +84,9 @@
      "text": "Arrange everything on a big platter with the olives.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ploughman's board with apple chutney",
@@ -169,7 +171,9 @@
      "text": "Arrange on a board with the sliced ham, pickled onions and chutney.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Winston the ogre's beef and barley stew",
@@ -292,7 +296,9 @@
      "text": "Serve with the horseradish butter and a crusty loaf.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Napoleon's little custard tarts",
@@ -369,7 +375,9 @@
      "text": "Cool, then dust with cinnamon.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Titanic iceberg ginger fizz",
@@ -440,7 +448,9 @@
      "text": "Garnish with mint and a lemon wheel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

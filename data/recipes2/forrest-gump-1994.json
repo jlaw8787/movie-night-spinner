@@ -56,7 +56,9 @@
      "text": "Pack them in a box and mix them up.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bubba's barbecue prawns",
@@ -115,7 +117,9 @@
      "text": "Grill, turning once, and squeeze lemon over.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bubba's prawn gumbo",
@@ -206,7 +210,9 @@
      "text": "Add the prawns to the gumbo for the last few minutes and serve over the rice.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Peach cobbler",
@@ -275,7 +281,9 @@
      "text": "Serve with vanilla ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "White House cherry vanilla soda",
@@ -344,7 +352,9 @@
      "text": "Top with cold soda water, stir, and finish with a cherry.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

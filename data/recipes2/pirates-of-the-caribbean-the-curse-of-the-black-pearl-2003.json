@@ -62,7 +62,9 @@
      "text": "Serve the apples with the warm dip and cheddar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gold-dusted fried plantain coins",
@@ -117,7 +119,9 @@
      "text": "Salt, and brush a few with gold lustre.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Caribbean jerk chicken",
@@ -208,7 +212,9 @@
      "text": "Serve the chicken on the rice.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Port Royal pineapple tarts",
@@ -259,7 +265,9 @@
      "text": "Bake until the pastry is golden.",
      "min": 18
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pirate's rum punch",
@@ -320,7 +328,93 @@
      "text": "Pour over ice and grate nutmeg on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Pirate's rum punch (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch of nutmeg, freshly grated",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, lift out, stir in the molasses and vanilla and cool.",
+       "min": 12
+      },
+      {
+       "text": "Mix the lime juice, syrup, spiced tea, pineapple juice and orange juice in a jug.",
+       "min": 3
+      },
+      {
+       "text": "Pour over ice and grate nutmeg on top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

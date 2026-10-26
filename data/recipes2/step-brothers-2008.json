@@ -80,7 +80,9 @@
      "text": "Serve on silver trays.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bunk bed parmesan garlic butter popcorn",
@@ -139,7 +141,9 @@
      "text": "Toss the popcorn with the garlic butter, finely grated parmesan, pepper, salt and chopped parsley. Split between two big bowls.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Robert's lemon caper roast snapper",
@@ -242,7 +246,9 @@
      "text": "Serve the fish with the potatoes and salad.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ice cream sundae bar",
@@ -307,7 +313,9 @@
      "text": "Put the ice cream tubs on ice and set out the fudge, whipped cream, sprinkles and cherries so everyone builds their own.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Catalina Wine Mixer strawberry rosé spritz",
@@ -370,7 +378,73 @@
      "text": "Stir gently and add a lemon wheel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Catalina Wine Mixer strawberry rosé spritz (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "strawberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "elderflower cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 480,
+       "u": "ml",
+       "item": "alcohol-free rosé",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the strawberries and divide between four large wine glasses.",
+       "min": 3
+      },
+      {
+       "text": "Add elderflower cordial and a squeeze of lemon to each and press lightly.",
+       "min": 2
+      },
+      {
+       "text": "Fill with ice, pour in the cold alcohol-free rosé and top with soda water.",
+       "min": 3
+      },
+      {
+       "text": "Stir gently and add a lemon wheel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

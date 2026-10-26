@@ -68,7 +68,9 @@
      "text": "Pour the buttermilk into small glasses and serve together.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Columbia Inn cheese puffs",
@@ -119,7 +121,9 @@
      "text": "Bake at 200C until puffed and golden.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Vermont inn roast turkey",
@@ -204,7 +208,9 @@
      "text": "Rest the turkey and serve with stuffing, cranberry sauce and potatoes.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Snowy coconut cake",
@@ -283,7 +289,9 @@
      "text": "Roll the sides in the rest of the coconut.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Eggnog by the fire",
@@ -356,7 +364,83 @@
      "text": "Serve with grated nutmeg and brandy on the side.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Eggnog by the fire",
+     "prep_min": 15,
+     "cook_min": 123,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs (yolks only)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole nutmeg",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the yolks with the sugar.",
+       "min": 3
+      },
+      {
+       "text": "Heat the milk, cream, cinnamon stick and vanilla until steaming, whisk into the yolks and return to the pan.",
+       "min": 7
+      },
+      {
+       "text": "Stir over low heat until it coats a spoon.",
+       "min": 5
+      },
+      {
+       "text": "Chill.",
+       "min": 120
+      },
+      {
+       "text": "Serve with grated nutmeg.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

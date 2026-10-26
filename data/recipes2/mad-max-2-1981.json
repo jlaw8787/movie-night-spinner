@@ -60,7 +60,9 @@
      "text": "Serve the hash in clean empty tins with an egg on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Feral Kid's boomerang biscuits",
@@ -115,7 +117,9 @@
      "text": "Melt the chocolate and dip the tips",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Compound barbecue",
@@ -200,7 +204,9 @@
      "text": "Pull the lamb apart and serve with the flatbreads, Greek yoghurt and tomato salad.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wasteland golden syrup dumplings",
@@ -273,7 +279,9 @@
      "text": "Serve with cream",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Guzzoline dark and stormy",
@@ -324,7 +332,83 @@
      "text": "Add a lime wedge and serve unstirred. Skip the rum for a plain ginger beer and lime",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Guzzoline dark and stormy (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 18,
+     "make_ahead": "Tea up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, discard them, stir in the molasses and vanilla and chill.",
+       "min": 19
+      },
+      {
+       "text": "Fill tall glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Squeeze lime juice into each and add the ginger beer.",
+       "min": 2
+      },
+      {
+       "text": "Pour the dark tea slowly over the back of a spoon so it floats dark on top.",
+       "min": 1
+      },
+      {
+       "text": "Add a lime wedge and serve unstirred.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

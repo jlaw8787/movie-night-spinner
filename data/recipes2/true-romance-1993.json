@@ -62,7 +62,9 @@
      "text": "Serve in big paper buckets for the triple feature.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Comic shop cheese puffs",
@@ -125,7 +127,9 @@
      "text": "Bake at 200C until puffed and hollow.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hotel club sandwich and shoestring fries",
@@ -200,7 +204,9 @@
      "text": "Fry the fries a second time until crisp.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Diner cherry pie",
@@ -277,7 +283,9 @@
      "text": "Serve with ice cream.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cancún beach margarita",
@@ -330,7 +338,79 @@
      "text": "Strain into the glasses.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Cancún beach margarita (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 13,
+     "make_ahead": "Tea up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "green tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "box sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the green tea in the boiling water for 3 minutes, discard the bags and chill.",
+       "min": 13
+      },
+      {
+       "text": "Juice the limes and orange and rim four glasses with salt.",
+       "min": 5
+      },
+      {
+       "text": "Shake 40ml green tea, the orange juice, agave and lime juice hard with ice, one drink at a time.",
+       "min": 4
+      },
+      {
+       "text": "Strain into the glasses.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

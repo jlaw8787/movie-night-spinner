@@ -68,7 +68,9 @@
      "text": "Bake at 230C until deep golden.",
      "min": 24
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Eggs in the hole",
@@ -121,7 +123,9 @@
      "text": "Fry until the white sets, flipping the bread once. Season.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chicken scaloppine",
@@ -202,7 +206,91 @@
      "text": "Return the chicken to coat.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chicken scaloppine",
+     "prep_min": 15,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "chicken breast (2 large)",
+       "aisle": "Meat"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the chicken in half horizontally and pound thin.",
+       "min": 8
+      },
+      {
+       "text": "Dust in flour and sear in the oil and butter for 2 minutes a side, then set aside.",
+       "min": 6
+      },
+      {
+       "text": "Add the stock, lemon juice and capers, reduce by half and swirl in the cold butter and parsley.",
+       "min": 5
+      },
+      {
+       "text": "Return the chicken to coat.",
+       "min": 1
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Cannoli",
@@ -255,7 +343,9 @@
      "text": "Pipe into the shells just before serving and dust with icing sugar.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Brooklyn amaretto sours",
@@ -308,7 +398,75 @@
      "text": "Strain over fresh ice in four short glasses and add a cherry to each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Brooklyn amaretto sours (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "orgeat syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "almond extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "chilled water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "egg whites",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shake the orgeat, almond extract, water, lemon juice and egg white hard without ice, in rounds for two drinks at a time.",
+       "min": 4
+      },
+      {
+       "text": "Shake again with ice.",
+       "min": 2
+      },
+      {
+       "text": "Strain over fresh ice in four short glasses and add a cherry to each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

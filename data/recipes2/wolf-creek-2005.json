@@ -78,7 +78,9 @@
      "text": "Bake at 200C and serve with tomato sauce.",
      "min": 30
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Campfire damper",
@@ -135,7 +137,9 @@
      "text": "Serve with butter and golden syrup.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Campfire sausage and onion sandwiches",
@@ -188,7 +192,9 @@
      "text": "Fold each sausage into bread with onions and sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Golden syrup dumplings",
@@ -263,7 +269,9 @@
      "text": "Serve with cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Stopped-watches billy tea with lemon myrtle",
@@ -320,7 +328,9 @@
      "text": "Pour into mugs and stir in a spoon of condensed milk to taste.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

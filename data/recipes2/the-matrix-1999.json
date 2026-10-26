@@ -62,7 +62,9 @@
      "text": "Toss with the butter and garlic. Serve on toothpicks with the dip.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Green code crackers",
@@ -115,7 +117,9 @@
      "text": "Bake until crisp.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cypher's steak",
@@ -182,7 +186,77 @@
      "text": "Slice the steak and pour over the sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Cypher's steak",
+     "prep_min": 10,
+     "cook_min": 1450,
+     "make_ahead": "Dry-brine the day before",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "sirloin steaks",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the steaks and leave uncovered in the fridge overnight.",
+       "min": 1440
+      },
+      {
+       "text": "Sear hard in a hot pan.",
+       "min": 6
+      },
+      {
+       "text": "Baste with part of the butter and thyme for a minute, then rest the steaks.",
+       "min": 8
+      },
+      {
+       "text": "Add the stock and vinegar to the pan and reduce by half, then whisk in the rest of the butter.",
+       "min": 8
+      },
+      {
+       "text": "Slice the steak and pour over the sauce.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "The Oracle's cookies",
@@ -255,7 +329,9 @@
      "text": "Sprinkle with flaky salt.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red pill or blue pill gin fizz",
@@ -326,7 +402,81 @@
      "text": "Top all four with soda water and add a lemon wheel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Red pill or blue pill gin fizz (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Two red and two blue, choose carefully",
+     "ingredients": [
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "raspberry syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "non-alcoholic blue curacao syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 15,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "For the red drinks, shake half the non-alcoholic gin with half the lemon juice, the raspberry syrup and cranberry juice with ice and strain into two ice-filled glasses.",
+       "min": 4
+      },
+      {
+       "text": "For the blue drinks, shake the rest of the gin and lemon juice with the blue curacao syrup and sugar syrup and strain into two ice-filled glasses.",
+       "min": 4
+      },
+      {
+       "text": "Top all four with soda water and add a lemon wheel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

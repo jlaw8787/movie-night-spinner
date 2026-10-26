@@ -64,7 +64,9 @@
      "text": "Shred the lettuce into four glasses, pile on the prawns and spoon over the sauce. Hang a lemon wedge on each rim.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chicken tarragon vol-au-vents",
@@ -137,7 +139,9 @@
      "text": "Fill the cases and warm through in the oven.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sweet and sour pork with rice",
@@ -234,7 +238,9 @@
      "text": "Toss the pork through the sauce and serve with the rice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wedding cake",
@@ -323,7 +329,9 @@
      "text": "Decorate with fresh flowers and serve in fingers.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hibiscus Island piña colada",
@@ -394,7 +402,87 @@
      "text": "Pour into four tall glasses and garnish with a pineapple wedge, a cherry and a paper umbrella. Swap the rum for extra pineapple juice to make it alcohol-free.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Hibiscus Island piña colada (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 2,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "coconut cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "paper umbrellas",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the pineapple into wedges for garnish.",
+       "min": 5
+      },
+      {
+       "text": "Blend the pineapple juice, coconut cream, lime juice, syrup, vanilla and ice until thick and smooth.",
+       "min": 2
+      },
+      {
+       "text": "Pour into four tall glasses and garnish with a pineapple wedge, a cherry and a paper umbrella.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

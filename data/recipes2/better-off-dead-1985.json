@@ -54,7 +54,9 @@
      "text": "Toss with fine salt and pile into paper cones with tomato sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ski lodge cheese fondue",
@@ -123,7 +125,85 @@
      "text": "Keep warm over low heat and dip in the baguette and apple.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Ski lodge cheese fondue",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "clove garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "gruyere, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Swiss cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette, cubed",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "apples, cubed",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cube the baguette and apple and toss the cheese with cornflour.",
+       "min": 6
+      },
+      {
+       "text": "Rub a pot with the cut garlic clove.",
+       "min": 2
+      },
+      {
+       "text": "Warm the apple juice and lemon juice, then stir in the cheese gradually until smooth.",
+       "min": 4
+      },
+      {
+       "text": "Keep warm over low heat and dip in the baguette and apple.",
+       "min": 15
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Mum's chicken and mushroom rice bake",
@@ -186,7 +266,9 @@
      "text": "Cover and bake at 180C until golden on top.",
      "min": 50
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "French crêpes",
@@ -261,7 +343,9 @@
      "text": "Fold with a squeeze of lemon and sugar, or with sliced banana and melted chocolate.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Citron pressé, French fresh lemonade",
@@ -308,7 +392,9 @@
      "text": "Put the lemon juice, syrup and a jug of iced water on the table so everyone mixes their own glass.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

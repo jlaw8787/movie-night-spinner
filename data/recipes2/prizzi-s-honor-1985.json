@@ -70,7 +70,9 @@
      "text": "Serve on a platter with the salami, olives and artichokes.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fried zucchini",
@@ -133,7 +135,9 @@
      "text": "Drain, season with salt and serve with lemon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Don Corrado's baked ziti",
@@ -234,7 +238,9 @@
      "text": "Bake at 200C for 25 minutes until blistered and rest for 10 minutes.",
      "min": 35
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wedding almond cookies",
@@ -295,7 +301,9 @@
      "text": "Cool on the trays for 10 minutes, then move to a rack.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Prizzi wedding white peach Bellini",
@@ -342,7 +350,57 @@
      "text": "Spoon some purée into each chilled flute and top slowly with prosecco poured down the side. Stir once and serve straight away.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Prizzi wedding white peach Bellini (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Purée up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "ripe white peaches",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 480,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel and stone the peaches, blend with the lemon juice and sugar until smooth.",
+       "min": 6
+      },
+      {
+       "text": "Chill the purée for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Spoon some purée into each chilled flute and top slowly with the alcohol-free sparkling wine poured down the side. Stir once and serve straight away.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

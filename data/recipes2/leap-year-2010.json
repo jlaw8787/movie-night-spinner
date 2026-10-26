@@ -56,7 +56,9 @@
      "text": "Serve warm with butter.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Irish smoked salmon",
@@ -115,7 +117,9 @@
      "text": "Squeeze over a little lemon and cut into triangles.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Irish lamb stew",
@@ -184,7 +188,9 @@
      "text": "Serve in deep bowls.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Claddagh ring apple crumble",
@@ -259,7 +265,9 @@
      "text": "Warm the custard and serve alongside.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "February 29th Irish coffee",
@@ -306,7 +314,57 @@
      "text": "Lightly whip the cream until just thick and pour it gently over the back of a spoon so it floats on top.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "February 29th Irish coffee (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 5,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "hot strong coffee (4 cups)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the coffee. Stir the sugar into each cup until dissolved.",
+       "min": 5
+      },
+      {
+       "text": "Add a few drops of vanilla to each cup.",
+       "min": 1
+      },
+      {
+       "text": "Lightly whip the cream until just thick and pour it gently over the back of a spoon so it floats on top.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

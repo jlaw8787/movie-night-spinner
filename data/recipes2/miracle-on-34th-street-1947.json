@@ -60,7 +60,9 @@
      "text": "Toss the chestnuts in the butter with maple syrup and salt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mailbag cheese and celery",
@@ -123,7 +125,9 @@
      "text": "Serve on a platter beside crackers topped with cheddar.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fred Gailey's New York pot roast",
@@ -196,7 +200,89 @@
      "text": "Slice and serve with the juices.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fred Gailey's New York pot roast",
+     "prep_min": 25,
+     "cook_min": 185,
+     "make_ahead": "Up to 2 days, reheat to serve",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "beef chuck, in one piece",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, halved",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Sear the beef all over in the oil.",
+       "min": 12
+      },
+      {
+       "text": "Add the onion, carrots, celery, stock, balsamic vinegar and enough water to come halfway.",
+       "min": 8
+      },
+      {
+       "text": "Cover and braise at 160C.",
+       "min": 120
+      },
+      {
+       "text": "Add the potatoes for the last hour.",
+       "min": 60
+      },
+      {
+       "text": "Slice and serve with the juices.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Christmas pudding",
@@ -291,7 +377,105 @@
      "text": "Serve with custard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Christmas pudding",
+     "prep_min": 30,
+     "cook_min": 250,
+     "make_ahead": "Pudding can be steamed up to 1 week ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed dried fruit",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "mixed spice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "golden syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "custard",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the fruit in the orange juice overnight.",
+       "min": 10
+      },
+      {
+       "text": "Mix with the butter, sugar, eggs, breadcrumbs, flour and mixed spice.",
+       "min": 15
+      },
+      {
+       "text": "Pack into a greased basin and cover.",
+       "min": 5
+      },
+      {
+       "text": "Steam.",
+       "min": 240
+      },
+      {
+       "text": "Warm the golden syrup and pour over the pudding at the table.",
+       "min": 5
+      },
+      {
+       "text": "Serve with custard.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Kris Kringle's maple mulled cider",
@@ -360,7 +544,9 @@
      "text": "Add a cinnamon stick and an orange slice studded with cloves to each.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

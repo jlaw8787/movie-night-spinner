@@ -58,7 +58,9 @@
      "text": "Lay the oysters on crushed ice with lemon wedges and serve with the mignonette.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "King of the world ham sandwiches",
@@ -111,7 +113,9 @@
      "text": "Toss the drained potatoes with butter and salt. Serve together below deck.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Molly Brown's first class filet mignon",
@@ -186,7 +190,91 @@
      "text": "Steam the beans and serve everything together.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Molly Brown's first class filet mignon",
+     "prep_min": 45,
+     "cook_min": 75,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eye fillet steaks",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Layer the potatoes with melted butter in a pan, season and bake at 200C for 50 minutes for pommes Anna.",
+       "min": 60
+      },
+      {
+       "text": "Tie the steaks, sear in butter and roast to 54C.",
+       "min": 20
+      },
+      {
+       "text": "Reduce the shallots, grape juice, balsamic and stock to a sauce in the steak pan.",
+       "min": 20
+      },
+      {
+       "text": "Steam the beans and serve everything together.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Waldorf pudding",
@@ -255,7 +343,9 @@
      "text": "Bake at 160C for 40 minutes.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Black velvet, stout and sparkling wine",
@@ -286,7 +376,41 @@
      "text": "Top each slowly with sparkling wine poured over the back of a spoon so it sits on top. Serve straight away.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Black velvet, stout and sparkling wine (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Chill drinks 2 hours ahead",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cans alcohol-free stout, 440ml, chilled",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Half fill four tall glasses with the alcohol-free stout, poured slowly so it settles.",
+       "min": 5
+      },
+      {
+       "text": "Top each slowly with the alcohol-free sparkling wine poured over the back of a spoon so it sits on top. Serve straight away.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

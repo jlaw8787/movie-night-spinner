@@ -80,7 +80,9 @@
      "text": "Spread each half with the cream cheese, fold on smoked salmon, top with drained pickled onion and dill and grind over pepper.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Peacock pakoras",
@@ -157,7 +159,9 @@
      "text": "Fry spoonfuls at 180C for 4 minutes and serve with the yoghurt mixed with mint.",
      "min": 14
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lion versus tuna sesame tuna bowls",
@@ -264,7 +268,9 @@
      "text": "Build bowls with rice, tuna, sliced avocado, cucumber, edamame and pickled ginger and spoon over the dressing.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bike messenger brownies",
@@ -323,7 +329,9 @@
      "text": "Bake in a lined 20cm tin at 170C for 28 minutes and cool before cutting.",
      "min": 61
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gator's whiskey sour",
@@ -396,7 +404,85 @@
      "text": "For non-drinkers, swap the bourbon for cold black tea.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Gator's whiskey sour (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "maraschino cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, as needed",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, lift out and cool the tea.",
+       "min": 12
+      },
+      {
+       "text": "For each drink, put 50ml of the cold tea, a drop of vanilla, the lemon juice, the sugar syrup and a little egg white in a shaker.",
+       "min": 1
+      },
+      {
+       "text": "Shake without ice for 10 seconds to build the foam, then add ice and shake hard for 10 seconds more.",
+       "min": 2
+      },
+      {
+       "text": "Strain over fresh ice in a rocks glass and add a cherry.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

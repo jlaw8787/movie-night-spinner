@@ -50,7 +50,9 @@
      "text": "Lay out on a plastic platter with crackers. It is the vibe",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pool room prawns",
@@ -113,7 +115,9 @@
      "text": "Serve with lemon wedges, and put the platter in the pool room after",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sal's rissoles",
@@ -214,7 +218,9 @@
      "text": "Boil and mash the potatoes with butter, and cook the peas",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sal's sponge cake",
@@ -297,7 +303,9 @@
      "text": "Dust with icing sugar",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bonnie Doon lager and lime shandy",
@@ -342,7 +350,55 @@
      "text": "Stir once gently and add a lime wedge. Make lemon, lime and lemonade ones for the kids and the driver",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bonnie Doon lager and lime shandy (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "alcohol-free lager (4 stubbies of 375 ml)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "lemonade, cold",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four pot glasses in the freezer",
+       "min": 15
+      },
+      {
+       "text": "Squeeze lime juice into each",
+       "min": 2
+      },
+      {
+       "text": "Pour in cold alcohol-free lager, tilting the glass, then top with cold lemonade",
+       "min": 2
+      },
+      {
+       "text": "Stir once gently and add a lime wedge",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -52,7 +52,9 @@
      "text": "Bake at 220C until crisp and bubbling.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Desert bar jalapeño poppers",
@@ -103,7 +105,9 @@
      "text": "Bake at 200C until the bacon is crisp.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tala and Abe's wedding fish tacos",
@@ -190,7 +194,9 @@
      "text": "Warm the tortillas and fill with cabbage, fish, crema and pickled onion.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wedding cake again",
@@ -269,7 +275,9 @@
      "text": "Ice white with icing sugar mixed with milk.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Roy's crossbow michelada",
@@ -344,7 +352,85 @@
      "text": "Top slowly with cold lager, stir gently and add a lime wedge. Use soda water instead of beer for anyone not drinking.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Roy's crossbow michelada (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, 16 dashes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles Mexican style alcohol-free lager (330 ml each)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt with the chilli powder on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Rub the rims of 4 tall glasses with lime and dip into the salt. Fill with ice.",
+       "min": 3
+      },
+      {
+       "text": "Into each glass add lime juice, tomato juice, hot sauce and Worcestershire.",
+       "min": 3
+      },
+      {
+       "text": "Top slowly with the cold alcohol-free lager, stir gently and add a lime wedge.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

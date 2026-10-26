@@ -80,7 +80,9 @@
      "text": "Blitz the roasted tomatoes with the chilli and garlic for achar.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Alfred's why-do-we-fall tea sandwiches",
@@ -137,7 +139,9 @@
      "text": "Lay on a silver tray.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wayne Manor Sunday roast",
@@ -226,7 +230,9 @@
      "text": "Make gravy with the stock and pan juices.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bruce's birthday cake",
@@ -305,7 +311,9 @@
      "text": "Layer and cover the cake and add a single candle.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Applied Sciences elderflower gin collins",
@@ -370,7 +378,75 @@
      "text": "Top with soda water, stir once and add a mint sprig. For non drinkers use chilled cucumber water instead of gin.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Applied Sciences elderflower gin collins (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "elderflower cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs of mint",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill 4 tall glasses with ice and 2 thin cucumber ribbons each.",
+       "min": 4
+      },
+      {
+       "text": "Shake the non-alcoholic gin, cordial and lemon juice with ice and strain evenly into the glasses.",
+       "min": 3
+      },
+      {
+       "text": "Top with soda water, stir once and add a mint sprig.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

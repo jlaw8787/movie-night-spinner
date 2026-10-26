@@ -58,7 +58,9 @@
      "text": "Pipe back into the whites and finish with paprika and chives.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Brie, pear and honey baguette toasts",
@@ -111,7 +113,9 @@
      "text": "Top with sliced brie and a thin slice of pear, return briefly to warm, and drizzle with honey.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gaston's tavern roast chicken",
@@ -174,7 +178,9 @@
      "text": "Make gravy with the pan juices, thyme and stock. Tear the chicken apart at the table.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Enchanted rose panna cotta",
@@ -237,7 +243,9 @@
      "text": "Crush the raspberries with the remaining sugar and spoon on top with a rose petal.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "LeFou's apple slush",
@@ -294,7 +302,9 @@
      "text": "Spoon the slush into glasses and top with the cream. Brew a pot of English breakfast tea for the grown-ups.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   }
  ]
 }

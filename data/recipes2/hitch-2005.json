@@ -68,7 +68,9 @@
      "text": "Spoon on just before serving.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Albert's meatball sliders",
@@ -149,7 +151,9 @@
      "text": "Put each in a slider bun with provolone and basil and grill until the cheese melts.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chicken piccata",
@@ -228,7 +232,89 @@
      "text": "Whisk in the butter. Toss the pasta through and serve the chicken on top.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chicken piccata",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large chicken breasts",
+       "aisle": "Meat"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "angel hair pasta",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pound the chicken thin, cut in half, then flour.",
+       "min": 8
+      },
+      {
+       "text": "Boil the pasta until tender and drain.",
+       "min": 8
+      },
+      {
+       "text": "Sear the chicken in oil until golden and cooked through.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, lemon juice and capers and reduce.",
+       "min": 5
+      },
+      {
+       "text": "Whisk in the butter. Toss the pasta through and serve the chicken on top.",
+       "min": 4
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Sara's chocolate-dipped strawberries",
@@ -287,7 +373,9 @@
      "text": "Chill until set.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Date doctor French 75",
@@ -350,7 +438,73 @@
      "text": "Twist a strip of lemon peel over each glass and drop it in.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Date doctor French 75 (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the flutes.",
+       "min": 10
+      },
+      {
+       "text": "Shake the non-alcoholic gin, lemon juice and syrup hard with ice.",
+       "min": 3
+      },
+      {
+       "text": "Strain into the flutes and top with the alcohol-free sparkling wine, pouring slowly.",
+       "min": 3
+      },
+      {
+       "text": "Twist a strip of lemon peel over each glass and drop it in.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

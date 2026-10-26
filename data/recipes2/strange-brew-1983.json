@@ -68,7 +68,9 @@
      "text": "Mix the mustard with the maple syrup. Split and toast the buns, spread with maple mustard and fill with bacon and onions.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Doughnut shop honey glazed crullers",
@@ -135,7 +137,9 @@
      "text": "Whisk the icing sugar, honey and water and dip the warm crullers.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hoser poutine with beef gravy",
@@ -204,7 +208,9 @@
      "text": "Tear the cheese into pieces. Pile the hot chips into bowls, scatter the cheese over and pour the very hot gravy on top.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Canadian maple butter tarts",
@@ -283,7 +289,9 @@
      "text": "Cool in the tin.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Elsinore maple lager shandy",
@@ -330,7 +338,57 @@
      "text": "Top with lemonade, pouring slowly down the side to keep the head. Add a lemon wedge.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Elsinore maple lager shandy (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold alcohol-free lager (330ml each)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "cold lemonade",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the maple syrup with the juice of two lemons in a jug. Chill the beer glasses.",
+       "min": 4
+      },
+      {
+       "text": "Pour a spoonful of the maple lemon mix into each glass and half fill with cold alcohol-free lager.",
+       "min": 3
+      },
+      {
+       "text": "Top with lemonade, pouring slowly down the side to keep the head. Add a lemon wedge.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

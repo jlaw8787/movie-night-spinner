@@ -66,7 +66,9 @@
      "text": "Toss the wings through until glossy.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Deviled eggs",
@@ -129,7 +131,9 @@
      "text": "Keep chilled until the show starts.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Baked macaroni and cheese",
@@ -192,7 +196,9 @@
      "text": "Top with more cheese and bake at 180C until golden.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jimmy Potter's lemon pound cake",
@@ -275,7 +281,9 @@
      "text": "Whip the cream and serve with slices.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Backstage cherry limeade",
@@ -328,7 +336,9 @@
      "text": "Top with lemonade and add a cherry.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

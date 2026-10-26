@@ -56,7 +56,9 @@
      "text": "Serve with sliced cheddar and apple chutney.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Thistle-topped smoked salmon",
@@ -115,7 +117,9 @@
      "text": "Cut into neat squares.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Scotch broth and lamb",
@@ -206,7 +210,9 @@
      "text": "Serve with crusty bread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Scottish shortbread",
@@ -257,7 +263,9 @@
      "text": "Cut while warm and sprinkle with caster sugar.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Freedom heather honey whisky toddy",
@@ -322,7 +330,79 @@
      "text": "Top with just-boiled water and stir until the honey dissolves. Add a studded lemon wheel and a cinnamon stick to each.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Freedom heather honey whisky toddy (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 3,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemon wheels",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoky black tea bags (lapsang souchong)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "heather honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "just-boiled water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stud the lemon wheels with the cloves.",
+       "min": 5
+      },
+      {
+       "text": "Steep the tea bags in the just-boiled water for 3 minutes, then lift out.",
+       "min": 4
+      },
+      {
+       "text": "Into four heatproof glasses put the honey and lemon juice.",
+       "min": 2
+      },
+      {
+       "text": "Top with the hot tea and stir until the honey dissolves. Add a studded lemon wheel and a cinnamon stick to each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

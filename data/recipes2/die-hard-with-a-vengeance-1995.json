@@ -72,7 +72,9 @@
      "text": "Chill, then cut into squares.",
      "min": 120
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Harlem chicken and waffles",
@@ -157,7 +159,9 @@
      "text": "Cook the waffles in a waffle iron. Warm the honey with the hot sauce and drizzle over the chicken on the waffles.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bacon egg and cheese on a roll",
@@ -222,7 +226,9 @@
      "text": "Split, butter and toast the rolls. Fill with bacon and egg, season and add tomato sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Crumb cake",
@@ -303,7 +309,9 @@
      "text": "Bake at 180C. Dust with icing sugar.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Water jug lemonade",
@@ -356,7 +364,9 @@
      "text": "Chill the syrup, add the lemon juice and top up with cold water to exactly 4 litres. Serve over ice.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

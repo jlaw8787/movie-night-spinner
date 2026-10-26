@@ -74,7 +74,9 @@
      "text": "Serve hot with the corn chips for scooping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dana's fridge devilled eggs",
@@ -137,7 +139,9 @@
      "text": "Pipe back into the whites and scatter the chives on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Toasted marshmallow skewers",
@@ -188,7 +192,9 @@
      "text": "Dip in the melted chocolate, then in the crushed biscuits, and eat while warm.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Firehouse meatball sub",
@@ -285,7 +291,9 @@
      "text": "Grill for 2 to 3 minutes until the cheese has melted.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chinese takeaway at the firehouse",
@@ -364,7 +372,9 @@
      "text": "Serve out of takeaway boxes with the rest of the soy sauce on the side.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Stay Puft s'mores",
@@ -405,7 +415,9 @@
      "text": "Press the remaining biscuits on top and eat straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ectoplasm slushie",
@@ -458,7 +470,9 @@
      "text": "Pour into 4 glasses and add a slice of lime to each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

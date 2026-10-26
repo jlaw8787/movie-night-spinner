@@ -44,7 +44,9 @@
      "text": "Roll paper into cones and fill them up.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Big top caramel popcorn",
@@ -113,7 +115,9 @@
      "text": "Bake at 120C, stirring every 15 minutes.",
      "min": 45
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jenny Lind opening night roast",
@@ -192,7 +196,95 @@
      "text": "Reduce the red wine with the pan juices for gravy.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jenny Lind opening night roast",
+     "prep_min": 20,
+     "cook_min": 135,
+     "make_ahead": "Rest 20 minutes before carving",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "beef sirloin",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Season the beef and roast until 52C inside.",
+       "min": 60
+      },
+      {
+       "text": "Rest the beef under foil.",
+       "min": 20
+      },
+      {
+       "text": "Roast the potatoes in oil.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the eggs, flour and milk and bake in hot oiled tins at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Reduce the stock and balsamic with the pan juices for gravy.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Ringmaster's red velvet cake",
@@ -283,7 +375,9 @@
      "text": "Layer and cover the cake and add gold sprinkles.",
      "min": 11
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Barnum's champagne cocktails",
@@ -340,7 +434,83 @@
      "text": "Twist lemon peel over and drop it in. Use sparkling apple juice and a dash of bitters for the younger crowd.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Barnum's champagne cocktails (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, peel only",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag in the boiling water for 5 minutes, lift out and cool.",
+       "min": 5
+      },
+      {
+       "text": "Put a sugar cube in each of 4 coupes and soak with a teaspoon of the strong tea and a drop of vanilla.",
+       "min": 3
+      },
+      {
+       "text": "Add 15ml apple juice to each.",
+       "min": 2
+      },
+      {
+       "text": "Slowly top with the cold alcohol-free sparkling wine.",
+       "min": 2
+      },
+      {
+       "text": "Twist lemon peel over and drop it in.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

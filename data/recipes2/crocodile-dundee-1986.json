@@ -74,7 +74,9 @@
      "text": "Melt the butter with the lemon myrtle and brush over. Serve with lemon wedges.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wally's Walkabout Creek party pies",
@@ -149,7 +151,9 @@
      "text": "Bake at 200C until golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "That's-a-knife barbecued barra",
@@ -208,7 +212,9 @@
      "text": "Melt the butter with the garlic and lemon myrtle, spoon over the fish and serve with the lemons cut into wedges.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lamingtons",
@@ -271,7 +277,9 @@
      "text": "Set on a rack.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Walkabout Creek rum and ginger beer",
@@ -328,7 +336,89 @@
      "text": "Add a lime wedge and stir at the table.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Walkabout Creek rum and ginger beer (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lime wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bag in the boiling water for 5 minutes, remove it, stir in the molasses and vanilla and chill.",
+       "min": 15
+      },
+      {
+       "text": "Fill tall glasses with ice and add lime juice to each.",
+       "min": 3
+      },
+      {
+       "text": "Add the ginger beer to each glass.",
+       "min": 2
+      },
+      {
+       "text": "Slowly pour the dark tea over the back of a spoon so it floats on top.",
+       "min": 2
+      },
+      {
+       "text": "Add a lime wedge and stir at the table.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

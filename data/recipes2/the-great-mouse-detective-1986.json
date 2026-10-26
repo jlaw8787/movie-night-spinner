@@ -50,7 +50,9 @@
      "text": "Grill until bubbling and golden.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Scotch eggs",
@@ -131,7 +133,9 @@
      "text": "Halve and serve with mustard.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Baker Street shepherd's pie",
@@ -198,7 +202,9 @@
      "text": "Bake at 200C until golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Victoria sponge",
@@ -271,7 +277,9 @@
      "text": "Dust the top with icing sugar.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Baker Street Earl Grey lemonade",
@@ -344,7 +352,9 @@
      "text": "Serve with shortbread fingers.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

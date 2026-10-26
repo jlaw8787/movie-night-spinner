@@ -74,7 +74,9 @@
      "text": "Spoon into the baked cups, top with cheddar and return to the oven to melt.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Miracle Mets pretzels with beer mustard",
@@ -175,7 +177,111 @@
      "text": "Mix the mustard, lager and honey for the dip.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Miracle Mets pretzels with beer mustard",
+     "prep_min": 30,
+     "cook_min": 70,
+     "make_ahead": "Best the same day",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 7,
+       "u": "g",
+       "item": "dried yeast",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "warm water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "water for boiling",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "bicarb soda",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "coarse salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the flour, yeast, sugar, salt and warm water and knead.",
+       "min": 10
+      },
+      {
+       "text": "Rise in a covered bowl until doubled.",
+       "min": 60
+      },
+      {
+       "text": "Shape into 8 pretzels.",
+       "min": 10
+      },
+      {
+       "text": "Boil each briefly in the water with the bicarb, then drain and sprinkle with coarse salt.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 220C until deep brown.",
+       "min": 13
+      },
+      {
+       "text": "Mix the mustard, apple juice and honey for the dip.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Queens pizza",
@@ -256,7 +362,9 @@
      "text": "Bake each on the steel until crisp and cooked, then cut into wedges.",
      "min": 14
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Julia's apple pie",
@@ -323,7 +431,9 @@
      "text": "Rest before cutting into four portions.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Firehouse lemon shandy",
@@ -392,7 +502,79 @@
      "text": "Add a sprig of mint and a lemon wheel.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Firehouse lemon shandy (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Lemon mix up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "cold water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "cold alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into wheels",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the lemon juice, sugar and water until the sugar dissolves.",
+       "min": 3
+      },
+      {
+       "text": "Chill 4 glasses in the freezer.",
+       "min": 20
+      },
+      {
+       "text": "Pour alcohol-free lager into each glass and top with lemonade. Add a splash of the lemon mix.",
+       "min": 4
+      },
+      {
+       "text": "Add a sprig of mint and a lemon wheel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

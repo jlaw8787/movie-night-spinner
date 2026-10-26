@@ -68,7 +68,9 @@
      "text": "Shred half the lettuce into four glasses, pile in the prawns and spoon the sauce over.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Model town cheese bites",
@@ -121,7 +123,9 @@
      "text": "Thread the tomatoes and cornichons onto toothpicks as trees and stand them between the houses, like Adam's model town.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dinner party lobster",
@@ -200,7 +204,9 @@
      "text": "Dress the salad leaves in lemon juice and serve with the lobster and fries.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Striped suit cake",
@@ -289,7 +295,9 @@
      "text": "Melt the white chocolate with the cream and pour over the cake. Pipe stripes with the melted dark chocolate.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Banana daiquiri",
@@ -348,7 +356,75 @@
      "text": "Blend the rum, lime juice, syrup, bananas and ice until smooth and pour into chilled glasses.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Banana daiquiri (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Syrup up to 1 week ahead",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes, juiced to give 80ml",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "ripe bananas",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water.",
+       "min": 5
+      },
+      {
+       "text": "Cool the syrup for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Blend the coconut water, lime juice, syrup, bananas, vanilla and ice until smooth and pour into chilled glasses.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

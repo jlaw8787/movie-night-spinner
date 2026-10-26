@@ -56,7 +56,9 @@
      "text": "Pour into tiny cups.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chocolaterie truffles",
@@ -125,7 +127,9 @@
      "text": "Scoop and roll into balls, then coat in cocoa, in chopped hazelnuts, or in sugar mixed with chilli flakes.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Armande's birthday feast",
@@ -196,7 +200,9 @@
      "text": "Crisp the legs skin side down in a hot pan and serve with potatoes and a green salad.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chocolate mousse",
@@ -263,7 +269,9 @@
      "text": "Chill for 4 hours (included in cook time), then finish with flaky salt mixed with chilli flakes.",
      "min": 240
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Easter festival vin chaud",
@@ -322,7 +330,75 @@
      "text": "Strain into small heatproof glasses and add a fresh orange slice to each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Easter festival vin chaud (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Warm on the day",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice one orange and cut the other into four slices for serving.",
+       "min": 5
+      },
+      {
+       "text": "Warm the grape juice with the sliced orange, tea bag, spices and honey over low heat without letting it boil, lifting out the tea bag after 5 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Strain into small heatproof glasses and add a fresh orange slice to each.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

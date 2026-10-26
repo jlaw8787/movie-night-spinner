@@ -50,7 +50,9 @@
      "text": "Cool on a rack and arrange like a bakery window.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Smoked paprika devilled eggs",
@@ -111,7 +113,9 @@
      "text": "Set out on the bar beside a bowl of green olives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Polish pierogi",
@@ -188,7 +192,9 @@
      "text": "Serve with sour cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Queenie's apple strudel",
@@ -275,7 +281,9 @@
      "text": "Dust with icing sugar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Speakeasy lemonade",
@@ -342,7 +350,77 @@
      "text": "Pour into teacups and add a splash of gin to the grown-ups' cups.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Speakeasy lemonade",
+     "prep_min": 15,
+     "cook_min": 16,
+     "make_ahead": "Syrup up to 1 week, keep chilled",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "non-alcoholic gin, for the grown-ups",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water.",
+       "min": 3
+      },
+      {
+       "text": "Cool the syrup.",
+       "min": 15
+      },
+      {
+       "text": "Squeeze the lemons into a jug and add the syrup.",
+       "min": 8
+      },
+      {
+       "text": "Add plenty of ice and top with soda water.",
+       "min": 4
+      },
+      {
+       "text": "Pour into teacups and add a splash of non-alcoholic gin to the grown-ups' cups.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

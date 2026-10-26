@@ -70,7 +70,9 @@
      "text": "Spoon into a bowl, dust with paprika and serve with crackers and celery sticks.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lighten up, Francis cocktail franks",
@@ -139,7 +141,9 @@
      "text": "Serve on toothpicks with a pot of wholegrain mustard.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sgt Hulka's mess hall meatloaf",
@@ -248,7 +252,9 @@
      "text": "Cook the peas and serve everything together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Graduation day chocolate fudge cake",
@@ -345,7 +351,9 @@
      "text": "Sandwich and cover the cakes with the icing and serve with whipped cream.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "EM-50 Urban Assault Irish coffee",
@@ -396,7 +404,61 @@
      "text": "Pour the cream slowly over the back of a spoon so it floats on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "EM-50 Urban Assault Irish coffee (alcohol-free)",
+     "prep_min": 9,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 900,
+       "u": "ml",
+       "item": "strong brewed coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm heatproof glasses with hot water, then tip it out.",
+       "min": 2
+      },
+      {
+       "text": "Stir the sugar and a few drops of vanilla into each glass, then fill with hot coffee to near the top.",
+       "min": 3
+      },
+      {
+       "text": "Lightly whip the cream until it just thickens but still pours.",
+       "min": 2
+      },
+      {
+       "text": "Pour the cream slowly over the back of a spoon so it floats on top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

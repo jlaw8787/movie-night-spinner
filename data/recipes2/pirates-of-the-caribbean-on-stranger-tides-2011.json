@@ -62,7 +62,9 @@
      "text": "Mix the mayonnaise, tomato sauce and hot sauce and serve the prawns on crushed ice.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Spanish expedition olives",
@@ -131,7 +133,9 @@
      "text": "Serve with thin wedges of manchego.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Queen Anne's Revenge paella",
@@ -224,7 +228,9 @@
      "text": "Add the prawns and mussels and cover until the mussels open.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Custard cream puffs",
@@ -297,7 +303,9 @@
      "text": "Fill each puff and dust with icing sugar.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fountain of Youth rum punch",
@@ -372,7 +380,91 @@
      "text": "Grate nutmeg over the top and add a pineapple wedge.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fountain of Youth rum punch (alcohol-free)",
+     "prep_min": 9,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 550,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "pineapple",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Juice the limes and cut the pineapple into wedges.",
+       "min": 4
+      },
+      {
+       "text": "Mix the coconut water, pineapple juice, lime juice, syrup and vanilla in a jug, then add the soda water.",
+       "min": 2
+      },
+      {
+       "text": "Fill four glasses with crushed ice and pour in the punch.",
+       "min": 2
+      },
+      {
+       "text": "Grate nutmeg over the top and add a pineapple wedge.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

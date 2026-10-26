@@ -72,7 +72,9 @@
      "text": "Serve with tartare and lemon wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chum bucket dip",
@@ -137,7 +139,9 @@
      "text": "Spoon into a small bucket and serve with crackers.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lobster rolls",
@@ -218,7 +222,9 @@
      "text": "Butter and toast the split buns and fill.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bigger boat sundae",
@@ -275,7 +281,9 @@
      "text": "Scoop both ice creams into bowls, pour over the fudge and top with cream, peanuts and a fin.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Quint's chilli lime lager michelada",
@@ -350,7 +358,85 @@
      "text": "Top each with cold lager, stir once and crush the can.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Quint's chilli lime lager michelada (alcohol-free)",
+     "prep_min": 11,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "x 375ml cans alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dashes Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, to serve",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the chilli flakes with the salt on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Rub the rims of four pint glasses with lime and dip in the salt. Fill with ice.",
+       "min": 4
+      },
+      {
+       "text": "Add lime juice, hot sauce, Worcestershire sauce and tomato juice to each glass.",
+       "min": 3
+      },
+      {
+       "text": "Top each with cold alcohol-free lager, stir once and crush the can.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

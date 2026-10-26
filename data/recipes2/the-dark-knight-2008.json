@@ -78,7 +78,9 @@
      "text": "Serve on black trays.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hoisin pork belly bites",
@@ -147,7 +149,9 @@
      "text": "Serve the pork on toothpicks with the cucumber.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Joined-tables salmon with caper butter",
@@ -238,7 +242,9 @@
      "text": "Plate the salmon on the potatoes and spoon over the butter.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Penthouse fundraiser lemon tart",
@@ -311,7 +317,9 @@
      "text": "Dust with icing sugar to serve.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Alfred's smoky Scotch and ginger sour",
@@ -386,7 +394,95 @@
      "text": "Float the smoky whisky on top and garnish with candied ginger.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Alfred's smoky Scotch and ginger sour (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "Syrup up to 1 week, chilled",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece of fresh ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "strong black tea, cooled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoky black tea leaves, such as lapsang souchong",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pieces candied ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the honey, water and ginger, then cool and strain.",
+       "min": 8
+      },
+      {
+       "text": "Steep the smoky tea leaves in the boiling water for 4 minutes, strain and cool.",
+       "min": 10
+      },
+      {
+       "text": "For each drink shake the black tea, lemon juice and syrup hard over ice.",
+       "min": 4
+      },
+      {
+       "text": "Strain over a large ice cube in a tumbler.",
+       "min": 2
+      },
+      {
+       "text": "Float a teaspoon of the smoky tea on top and garnish with candied ginger.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -68,7 +68,9 @@
      "text": "Bake at 220C, brush with butter and serve with mustard.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Limited Edition purple potato chips",
@@ -123,7 +125,9 @@
      "text": "Cool so they crisp fully.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Weight room rump with garlic butter",
@@ -206,7 +210,9 @@
      "text": "Top each steak with a slice of garlic butter.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mr Glass lemon and berry jelly",
@@ -269,7 +275,9 @@
      "text": "Chill until clear and set.",
      "min": 240
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Green poncho honey ginger tea",
@@ -332,7 +340,67 @@
      "text": "Pour into mugs with a lemon slice each and add whisky to any mug where it is wanted.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Green poncho honey ginger tea",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "5cm piece ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "green tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the ginger in the water, then take off the heat and let it cool for a couple of minutes.",
+       "min": 5
+      },
+      {
+       "text": "Add the tea bags and steep, then remove.",
+       "min": 3
+      },
+      {
+       "text": "Stir in the honey and juice of one lemon.",
+       "min": 2
+      },
+      {
+       "text": "Pour into mugs with a slice of the other lemon in each.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

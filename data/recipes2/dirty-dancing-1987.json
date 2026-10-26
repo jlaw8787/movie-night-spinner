@@ -52,7 +52,9 @@
      "text": "Keep ice cold until serving",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Staff cabin onion dip and pretzels",
@@ -137,7 +139,9 @@
      "text": "Serve with pretzels and potato chips",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kellerman's resort brisket",
@@ -206,7 +210,9 @@
      "text": "Rest, slice across the grain and spoon over the juices",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Watermelon sorbet",
@@ -257,7 +263,9 @@
      "text": "Scoop into cups",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kellerman's pineapple and ginger punch",
@@ -340,7 +348,9 @@
      "text": "Just before serving add the ginger ale, ice, orange slices, pineapple and torn mint",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

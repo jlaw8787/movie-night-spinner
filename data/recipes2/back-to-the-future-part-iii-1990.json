@@ -46,7 +46,9 @@
      "text": "Melt the butter, roll each cob in it and sprinkle with flaky salt and smoked paprika.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Clara's apple slices",
@@ -99,7 +101,9 @@
      "text": "Fan the apples around a bowl of the yoghurt for dipping.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Doc's blacksmith shop stew",
@@ -178,7 +182,95 @@
      "text": "Serve with the crusty bread for mopping up.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Doc's blacksmith shop stew",
+     "prep_min": 30,
+     "cook_min": 190,
+     "make_ahead": "Up to 2 days, keep chilled, flavour improves",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 150C. Season the beef and brown in batches in a heavy ovenproof pot.",
+       "min": 20
+      },
+      {
+       "text": "Soften the sliced onions and chopped carrots in the same pot.",
+       "min": 10
+      },
+      {
+       "text": "Return the beef, add the stock, molasses and malt vinegar and bring to a simmer.",
+       "min": 5
+      },
+      {
+       "text": "Cover and braise in the oven until the beef falls apart.",
+       "min": 180
+      },
+      {
+       "text": "Serve with the crusty bread for mopping up.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Clara's festival apple pie",
@@ -257,7 +349,9 @@
      "text": "Bake until deep golden and the juices bubble. Rest before slicing.",
      "min": 50
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wake-up juice",
@@ -316,7 +410,9 @@
      "text": "Top each with very cold ginger beer.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

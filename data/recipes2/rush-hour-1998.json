@@ -94,7 +94,9 @@
      "text": "Serve with sweet chilli sauce.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Carter's hot wings",
@@ -175,7 +177,9 @@
      "text": "Melt the butter with the hot sauce and toss through the wings.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Foo Chow noodles",
@@ -260,7 +264,9 @@
      "text": "Add the bean sprouts, sliced spring onions and soy sauces. Return the beef and toss over high heat until piping hot.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fortune cookies",
@@ -333,7 +339,9 @@
      "text": "Remind everyone to remove the paper before eating.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Consulate lychee and jasmine martini",
@@ -402,7 +410,73 @@
      "text": "Strain into chilled coupes and drop a lychee into each.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Consulate lychee and jasmine martini (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "jasmine tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin lychees (565g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "lychee syrup (from the tin)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the hot water and cool.",
+       "min": 18
+      },
+      {
+       "text": "Drain the lychees, keeping the syrup.",
+       "min": 2
+      },
+      {
+       "text": "Shake the tea, lychee syrup and lime juice with ice.",
+       "min": 2
+      },
+      {
+       "text": "Strain into chilled coupes and drop a lychee into each.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -64,7 +64,9 @@
      "text": "Dice the tomatoes, mix with torn basil and pile on the toasts.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Toaster fairy toast soldiers",
@@ -105,7 +107,9 @@
      "text": "Put each egg in a cup, take the top off and dip away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Claire's soup kitchen stew",
@@ -174,7 +178,9 @@
      "text": "Serve with crusty bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Christmas pudding",
@@ -261,7 +267,97 @@
      "text": "Warm the extra brandy, light it and pour over at the table. Serve with warm custard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Christmas pudding",
+     "prep_min": 25,
+     "cook_min": 720,
+     "make_ahead": "Up to 2 weeks, keep wrapped and reheat by steaming",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed dried fruit",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "mixed spice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, zested",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "custard",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the dried fruit in the orange juice overnight.",
+       "min": 480
+      },
+      {
+       "text": "Beat the butter and sugar, beat in the eggs, then mix in the breadcrumbs, flour, spice and the soaked fruit.",
+       "min": 20
+      },
+      {
+       "text": "Pack into a greased pudding basin, cover and steam.",
+       "min": 240
+      },
+      {
+       "text": "Turn out onto a plate, scatter with the orange zest and serve with warm custard.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Eggnog",
@@ -324,7 +420,79 @@
      "text": "Stir in the brandy and grate fresh nutmeg on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Eggnog (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 130,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "fresh nutmeg, to grate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Separate the eggs and whisk the yolks with the sugar. Keep the whites for another use.",
+       "min": 5
+      },
+      {
+       "text": "Heat the milk and cream, pour over the yolks and stir over low heat to 75C.",
+       "min": 10
+      },
+      {
+       "text": "Chill well.",
+       "min": 120
+      },
+      {
+       "text": "Stir in the vanilla and cinnamon and grate fresh nutmeg on top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -48,7 +48,9 @@
      "text": "Toss in the hot sauce melted with the butter and serve with the ranch.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bel Air salmon roe blinis",
@@ -117,7 +119,9 @@
      "text": "Finish with a tiny dill sprig and a squeeze of lemon and arrange on a platter.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Darnell's family barbecue chicken",
@@ -188,7 +192,9 @@
      "text": "Serve with the sautéed silverbeet.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "San Quentin chocolate pudding cups",
@@ -269,7 +275,9 @@
      "text": "Top with whipped cream, crushed chocolate biscuits with a pinch of flaky salt and chocolate curls.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "King's cucumber jalapeño margarita",
@@ -348,7 +356,85 @@
      "text": "For non-drinkers, top the cucumber, lime and agave with soda instead.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "King's cucumber jalapeño margarita (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "continental cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jalapeño",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt flakes, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, as needed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz most of the continental cucumber with the water and strain.",
+       "min": 2
+      },
+      {
+       "text": "Rim the glasses with lime and salt.",
+       "min": 2
+      },
+      {
+       "text": "For each drink, muddle slices of jalapeño in a shaker, add the cucumber juice, lime juice and agave, shake with ice, strain over fresh ice and top with a splash of soda water.",
+       "min": 3
+      },
+      {
+       "text": "Garnish with a ribbon cut from the last of the cucumber.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

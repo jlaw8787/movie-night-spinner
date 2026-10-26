@@ -62,7 +62,9 @@
      "text": "Dust with icing sugar.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "No-name Cat party canapés",
@@ -121,7 +123,9 @@
      "text": "Beat the cream cheese with chopped chives and fill short celery sticks.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sally Tomato's Thursday steak",
@@ -194,7 +198,9 @@
      "text": "Serve with the fries and a green salad.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Custard blueberry Danish pastries",
@@ -251,7 +257,9 @@
      "text": "Brush with warm apricot jam.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Holly's champagne cocktails",
@@ -308,7 +316,73 @@
      "text": "Peel long strips of lemon zest, twist over the drinks to spray the oil and drop them in.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Holly's champagne cocktails (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle alcohol-free sparkling wine (750 ml)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the coupes and the bottle.",
+       "min": 4
+      },
+      {
+       "text": "Drop a sugar cube into each glass, grate a little orange zest over it and add a drop of vanilla extract. Add the grape juice.",
+       "min": 3
+      },
+      {
+       "text": "Tilt the glass and pour the sparkling slowly down the side so it does not foam over.",
+       "min": 2
+      },
+      {
+       "text": "Peel long strips of lemon zest, twist over the drinks to spray the oil and drop them in.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

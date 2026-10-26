@@ -46,7 +46,9 @@
      "text": "Pile everything onto a wooden board with the pickled onions.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Honey cinnamon roasted nuts",
@@ -103,7 +105,9 @@
      "text": "Break into clusters.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "London tournament pie",
@@ -202,7 +206,115 @@
      "text": "Cook.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "London tournament pie",
+     "prep_min": 20,
+     "cook_min": 240,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onions and brown the beef in oil.",
+       "min": 5
+      },
+      {
+       "text": "Brown.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions, stock, Worcestershire and water to cover and simmer.",
+       "min": 180
+      },
+      {
+       "text": "Thicken with the flour, spoon into a pie dish and top with pastry brushed with egg.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C.",
+       "min": 25
+      },
+      {
+       "text": "Boil and mash the potatoes with butter, and cook the peas.",
+       "min": 5
+      },
+      {
+       "text": "Cook.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Raspberry jam roly-poly",
@@ -263,7 +375,9 @@
      "text": "Slice the roly-poly and pour over hot custard.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Merlin's spiced milk tea and sugar cubes",
@@ -332,7 +446,9 @@
      "text": "Strain into four cups and serve with sugar cubes.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -84,7 +84,9 @@
      "text": "Mix the sour cream with chives, garlic powder and lemon juice for a dip.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Farm loft pickles",
@@ -159,7 +161,9 @@
      "text": "Serve with sliced cheddar.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Missouri barbecue ribs",
@@ -232,7 +236,9 @@
      "text": "Unwrap, brush on the glaze and glaze under the grill.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Missouri gooey butter cake",
@@ -299,7 +305,9 @@
      "text": "Dust with icing sugar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Double Deuce bourbon and ginger",
@@ -356,7 +364,77 @@
      "text": "Top with ginger beer, stir gently once and garnish with a fresh lime wedge.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Double Deuce bourbon and ginger (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+       "min": 12
+      },
+      {
+       "text": "Fill four tall glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Pour the cold tea into each and squeeze in a lime wedge.",
+       "min": 2
+      },
+      {
+       "text": "Add a drop of vanilla extract to each glass.",
+       "min": 1
+      },
+      {
+       "text": "Top with ginger beer, stir gently once and garnish with a fresh lime wedge.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

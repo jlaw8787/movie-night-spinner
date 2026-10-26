@@ -50,7 +50,9 @@
      "text": "Fry again at 185C until crisp and golden. Salt hard and put the vinegar on the table.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Saltines, cheddar and pickles",
@@ -93,7 +95,9 @@
      "text": "Cut the cheddar into thick slabs and the pickles into spears. Lay out with the crackers and a small dish of mustard for smearing.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "3am open roast beef sandwich",
@@ -162,7 +166,9 @@
      "text": "Toast the bread, lay on plates, pile on the beef and pour over more gravy. Serve with the mash and peas.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Peach brandy bread pudding",
@@ -241,7 +247,89 @@
      "text": "Bake at 170C until set and golden. Serve warm.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Peach brandy bread pudding",
+     "prep_min": 20,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices thick white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins sliced peaches, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the peaches in the orange juice and brown sugar.",
+       "min": 5
+      },
+      {
+       "text": "Butter the bread and layer with the peaches in a baking dish.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the eggs with the milk and vanilla and pour over.",
+       "min": 5
+      },
+      {
+       "text": "Rest so the bread soaks up the custard.",
+       "min": 20
+      },
+      {
+       "text": "Bake at 170C until set and golden. Serve warm.",
+       "min": 40
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Cabbie's peach brandy coffee",
@@ -294,7 +382,69 @@
      "text": "Put brown sugar and peach brandy into 4 diner mugs, pour in hot coffee and stir. Spoon a little cream on top and serve straight away.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Cabbie's peach brandy coffee (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 3,
+     "make_ahead": "Best made fresh",
+     "ingredients": [
+      {
+       "q": 50,
+       "u": "g",
+       "item": "ground coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "peach nectar",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the coffee strong.",
+       "min": 5
+      },
+      {
+       "text": "Lightly whip the cream until just thick.",
+       "min": 3
+      },
+      {
+       "text": "Put brown sugar, peach nectar and a drop of vanilla into 4 diner mugs, pour in hot coffee and stir. Spoon a little cream on top and serve straight away.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

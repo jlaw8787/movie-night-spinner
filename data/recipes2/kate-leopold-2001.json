@@ -58,7 +58,9 @@
      "text": "Spread the toasts with goat's cheese, top with pear and drizzle with honey and thyme.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Butter tasting",
@@ -131,7 +133,9 @@
      "text": "Halve the radishes and serve with the flaky salt for dipping, alongside the three butters and bread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Leopold's rooftop dinner",
@@ -226,7 +230,105 @@
      "text": "Serve the fish with the potatoes and the sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Leopold's rooftop dinner",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "whole snapper",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cold butter, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the snapper on both sides, season with salt and stuff with the lemon slices, sliced fennel and dill.",
+       "min": 12
+      },
+      {
+       "text": "Roast the fish at 220C for 25 minutes.",
+       "min": 25
+      },
+      {
+       "text": "While the fish roasts, boil the new potatoes in salted water until tender, about 20 minutes, then drain.",
+       "min": 0
+      },
+      {
+       "text": "Reduce the shallot with the verjuice and vinegar until about 2 tbsp is left.",
+       "min": 8
+      },
+      {
+       "text": "Take off the heat and whisk in the cold butter cube by cube until thick and glossy.",
+       "min": 5
+      },
+      {
+       "text": "Serve the fish with the potatoes and the sauce.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Chocolate mousse",
@@ -291,7 +393,9 @@
      "text": "Spoon into glasses and chill until set. This chilling counts toward the cooking time.",
      "min": 240
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Leopold's claret cup",
@@ -362,7 +466,91 @@
      "text": "Add ice and top with soda water.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Leopold's claret cup (alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 day, keep chilled before adding ice",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out and cool.",
+       "min": 5
+      },
+      {
+       "text": "Mix the grape juice, tea, orange juice and sugar in a jug with the sliced orange and cucumber.",
+       "min": 5
+      },
+      {
+       "text": "Chill.",
+       "min": 60
+      },
+      {
+       "text": "Add ice and top with soda water.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

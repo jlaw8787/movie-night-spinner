@@ -58,7 +58,9 @@
      "text": "Leave out so the cheese softens before serving",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Abby Normal brain dip",
@@ -127,7 +129,9 @@
      "text": "Swirl into a bowl and serve with crackers",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Transylvanian goulash",
@@ -222,7 +226,9 @@
      "text": "Serve over the noodles with sour cream",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Top hat cupcakes",
@@ -305,7 +311,9 @@
      "text": "Pipe a tall swirl on each and sit a disc under each as a hat brim",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Frau Blücher's brandy milk punch",
@@ -368,7 +376,67 @@
      "text": "Pour into mugs, add brandy to each and grate over a little nutmeg. Leave out the brandy for the warm milk crowd",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Frau Blücher's brandy milk punch (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "nutmeg, freshly grated",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the milk with the honey, cinnamon and vanilla until steaming without boiling",
+       "min": 5
+      },
+      {
+       "text": "Rest and remove the cinnamon",
+       "min": 5
+      },
+      {
+       "text": "Whisk hard until frothy",
+       "min": 3
+      },
+      {
+       "text": "Pour into mugs and grate over a little nutmeg",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -46,7 +46,9 @@
      "text": "Serve straight away on a tray.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Brown Derby Cobb salad cups",
@@ -121,7 +123,101 @@
      "text": "Fill the lettuce leaves with everything, scatter over the blue cheese and spoon over the vinaigrette.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Brown Derby Cobb salad cups",
+     "prep_min": 25,
+     "cook_min": 18,
+     "make_ahead": "Components up to 1 day ahead; fill just before serving",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "chicken breast (2)",
+       "aisle": "Meat"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "rashers bacon",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "little gem lettuce leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "blue cheese, crumbled",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Poach the chicken for 12 minutes, cool and dice.",
+       "min": 15
+      },
+      {
+       "text": "Fry the bacon until crisp and crumble. Boil the eggs for 9 minutes and chop.",
+       "min": 12
+      },
+      {
+       "text": "Dice the avocado and tomatoes.",
+       "min": 6
+      },
+      {
+       "text": "Whisk the olive oil, red wine vinegar and Dijon mustard with a pinch of salt for the vinaigrette.",
+       "min": 3
+      },
+      {
+       "text": "Fill the lettuce leaves with everything, scatter over the blue cheese and spoon over the vinaigrette.",
+       "min": 7
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Flamingo steak Diane",
@@ -202,7 +298,91 @@
      "text": "Return the steaks to coat in the sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Flamingo steak Diane",
+     "prep_min": 15,
+     "cook_min": 4,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "scotch fillet steaks (4)",
+       "aisle": "Meat"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 210,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Flatten the steaks and sear hot for 2 minutes a side, then rest.",
+       "min": 8
+      },
+      {
+       "text": "In the same pan soften the shallots and garlic in the butter, then add a splash of the stock and the balsamic vinegar and let it bubble hard.",
+       "min": 4
+      },
+      {
+       "text": "Stir in the mustard, Worcestershire, remaining stock and cream and reduce.",
+       "min": 5
+      },
+      {
+       "text": "Return the steaks to coat in the sauce.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Pink flamingo pavlova",
@@ -265,7 +445,9 @@
      "text": "Whip the cream and fold through the raspberries. Pile on top just before serving.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Virginia Hill's gin rickey",
@@ -312,7 +494,57 @@
      "text": "Top with soda water.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Virginia Hill's gin rickey (alcohol-free)",
+     "prep_min": 3,
+     "cook_min": 1,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill four highball glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Add the non-alcoholic gin and the juice of half a lime to each and drop in the squeezed shell.",
+       "min": 2
+      },
+      {
+       "text": "Top with soda water.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

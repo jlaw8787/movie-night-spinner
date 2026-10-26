@@ -68,7 +68,9 @@
      "text": "Pile the lobster on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Alvy's potato knishes",
@@ -135,7 +137,9 @@
      "text": "Brush with egg and bake at 200C.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pastrami on white with mayo",
@@ -204,7 +208,9 @@
      "text": "Put rye and mustard on the side for anyone who wants it.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "New York cheesecake",
@@ -277,7 +283,9 @@
      "text": "Chill overnight.",
      "min": 1370
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Alvy's LA cucumber mint cooler",
@@ -340,7 +348,9 @@
      "text": "Add a mint sprig.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -46,7 +46,9 @@
      "text": "Cut into strips with scissors.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hank's camouflage fruit platter",
@@ -105,7 +107,9 @@
      "text": "Serve with the yoghurt in a bowl for dipping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "California chicken bowls",
@@ -194,7 +198,9 @@
      "text": "Build bowls of rice with chicken, sliced avocado, corn, black beans and a spoon of salsa.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dory blue jelly",
@@ -249,7 +255,9 @@
      "text": "Top with cream and tuck a slice of orange on each for a little orange fish.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Blue lemonade ice cream float",
@@ -290,7 +298,9 @@
      "text": "Serve straight away with a long spoon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

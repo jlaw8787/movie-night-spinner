@@ -74,7 +74,9 @@
      "text": "Spoon the yolk mix back into the whites, dust with paprika and top with bacon and chives.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sixties cheese and pineapple hedgehog",
@@ -143,7 +145,9 @@
      "text": "Push them all over the rockmelon until covered in spikes.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dr. Evil's one million dollar steak Diane",
@@ -240,7 +244,107 @@
      "text": "Pour the sauce over the steaks and serve with the fries and watercress.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Dr. Evil's one million dollar steak Diane",
+     "prep_min": 20,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen shoestring fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sirloin steaks",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch watercress",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the fries at 220C until crisp.",
+       "min": 20
+      },
+      {
+       "text": "Bat out the steaks to about 1cm thick, season and sear in a very hot oiled pan, then rest on a plate.",
+       "min": 8
+      },
+      {
+       "text": "In the same pan melt the butter and fry the mushrooms and shallot.",
+       "min": 3
+      },
+      {
+       "text": "Add the beef stock and let it bubble down, then add the Worcestershire, mustard and cream and simmer.",
+       "min": 3
+      },
+      {
+       "text": "Pour the sauce over the steaks and serve with the fries and watercress.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Union Jack berry trifle",
@@ -319,7 +423,89 @@
      "text": "Lay strawberries in a cross and diagonals, then fill the gaps with blueberries to make a Union Jack.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Union Jack berry trifle",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jam rollette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "thick vanilla custard",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "icing sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "strawberries, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "blueberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the jam rollette and line a large glass bowl. Drizzle with the orange juice.",
+       "min": 5
+      },
+      {
+       "text": "Scatter over the raspberries and pour over the custard.",
+       "min": 3
+      },
+      {
+       "text": "Chill until the custard firms up.",
+       "min": 60
+      },
+      {
+       "text": "Whip the cream with the icing sugar to soft peaks and spread over the top.",
+       "min": 5
+      },
+      {
+       "text": "Lay strawberries in a cross and diagonals, then fill the gaps with blueberries to make a Union Jack.",
+       "min": 12
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Groovy baby gin martini",
@@ -372,7 +558,63 @@
      "text": "Strain into the glasses. Twist a strip of lemon zest over each, or add an olive on a pick.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Groovy baby gin martini (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar green olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the martini glasses in the freezer.",
+       "min": 20
+      },
+      {
+       "text": "Fill a jug with ice, add the non-alcoholic gin, verjuice and a teaspoon of brine from the olive jar and stir steadily until very cold.",
+       "min": 1
+      },
+      {
+       "text": "Strain into the glasses. Twist a strip of lemon zest over each, or add an olive on a pick.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

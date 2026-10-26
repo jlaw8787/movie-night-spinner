@@ -52,7 +52,9 @@
      "text": "Pile high on a platter with lime wedges and pour over any butter left in the pan.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "All Heart bruschetta",
@@ -111,7 +113,9 @@
      "text": "Rub the toasts with the cut garlic clove and pile the tomato on just before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "PR makeover steak",
@@ -178,7 +182,9 @@
      "text": "Serve with the chips and a green salad.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Good job brownies",
@@ -241,7 +247,9 @@
      "text": "Cool slightly, cut into squares and serve warm with ice cream. Good job.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hancock's whisky sour",
@@ -304,7 +312,89 @@
      "text": "Shake drops of bitters onto the foam. For the sober version, make iced tea with lemon and honey.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Hancock's whisky sour (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 19,
+     "make_ahead": "Tea up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 220,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "egg whites",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, discard them, stir in the vanilla and chill.",
+       "min": 19
+      },
+      {
+       "text": "For each drink, measure 50ml cold tea, the juice of 1 lemon, 15ml sugar syrup and half an egg white into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake each drink without ice for 10 seconds.",
+       "min": 1
+      },
+      {
+       "text": "Add ice and shake again, then strain into a short glass over fresh ice.",
+       "min": 4
+      },
+      {
+       "text": "Dust the foam with a little cinnamon.",
+       "min": 0
+      }
+     ]
+    }
+   }
   }
  ]
 }

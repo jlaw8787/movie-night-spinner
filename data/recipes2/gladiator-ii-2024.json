@@ -60,7 +60,9 @@
      "text": "Tip onto a plate and sprinkle with flaky salt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Macrinus's baked feta with figs and honey",
@@ -149,7 +151,9 @@
      "text": "Drizzle with the honey and serve with torn crusty bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Emperors' honey roast chicken",
@@ -208,7 +212,9 @@
      "text": "Rest 10 minutes and carve.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Roman honey cheesecake",
@@ -255,7 +261,9 @@
      "text": "Cool and drizzle with more honey.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Emperors' spiced honey wine",
@@ -322,7 +330,75 @@
      "text": "For non-drinkers, make it the same way with red grape juice and less honey.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Emperors' spiced honey wine (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "strong black tea",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "black peppercorns, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "bay leaves, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pour the grape juice and tea into a saucepan with the honey, the cinnamon stick, the black peppercorns, the bay leaves and strips of orange peel.",
+       "min": 2
+      },
+      {
+       "text": "Warm gently over low heat for 10 minutes, stirring until the honey dissolves. Do not let it boil.",
+       "min": 11
+      },
+      {
+       "text": "Strain into heavy cups.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

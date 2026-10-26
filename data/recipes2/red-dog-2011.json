@@ -66,7 +66,9 @@
      "text": "Serve hot with tomato sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dampier barbecued squid",
@@ -135,7 +137,9 @@
      "text": "Finish with lime juice and coriander.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dampier sausages, steak and potato salad",
@@ -204,7 +208,9 @@
      "text": "Serve with a stack of white bread and the potato salad.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Red Dog lamingtons",
@@ -277,7 +283,9 @@
      "text": "Chill until firm.",
      "min": 120
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Red Dog ruby grapefruit radler",
@@ -334,7 +342,67 @@
      "text": "Top with the grapefruit soda and add a wedge. Serve the soda on its own for the drivers.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Red Dog ruby grapefruit radler (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Grapefruit soda up to 1 day, chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "ruby grapefruits, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "cold alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "grapefruit, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Juice the grapefruit and stir with the sugar until dissolved.",
+       "min": 5
+      },
+      {
+       "text": "Mix with the soda water and chill well.",
+       "min": 20
+      },
+      {
+       "text": "Half fill 4 tall glasses with the alcohol-free lager.",
+       "min": 2
+      },
+      {
+       "text": "Top with the grapefruit soda and add a wedge.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -88,7 +88,9 @@
      "text": "Dust with icing sugar and serve with jam.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Atlanta pimento cheese with crackers",
@@ -169,7 +171,9 @@
      "text": "Spoon into a bowl, dust with paprika and serve with crackers, celery sticks and cornichons.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mother's Day ham and spinach frittata",
@@ -274,7 +278,9 @@
      "text": "Serve with rocket dressed in lemon and relish.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Strawberry shortcake for Mum",
@@ -367,7 +373,9 @@
      "text": "Split the shortcakes and fill with cream and strawberries.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mum's blood orange mimosa",
@@ -418,7 +426,51 @@
      "text": "For the kids, mix the leftover juice with soda water.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mum's blood orange mimosa (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Juice up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "blood oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "orange blossom water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Juice the oranges and strain.",
+       "min": 10
+      },
+      {
+       "text": "Pour juice and a few drops of orange blossom water into each flute.",
+       "min": 3
+      },
+      {
+       "text": "Slowly top with the sparkling wine and garnish with an orange wheel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

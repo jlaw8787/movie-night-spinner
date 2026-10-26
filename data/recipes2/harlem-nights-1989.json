@@ -62,7 +62,9 @@
      "text": "Finish with smoked paprika and chives and lay them on silver trays.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Harlem hush puppies",
@@ -139,7 +141,9 @@
      "text": "Beat the soft butter with honey to serve.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Quick's late-night chicken and waffles",
@@ -238,7 +242,9 @@
      "text": "Serve with maple syrup and butter melted with hot sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Club Sugar Ray lemon chess pie",
@@ -307,7 +313,9 @@
      "text": "Cool completely.",
      "min": 90
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Club champagne cocktail",
@@ -354,7 +362,63 @@
      "text": "Twist a strip of lemon peel over each.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Club champagne cocktail (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drop a sugar cube into each of four flutes with a drop of vanilla extract and a little grated orange zest.",
+       "min": 2
+      },
+      {
+       "text": "Top slowly with chilled alcohol-free sparkling wine.",
+       "min": 2
+      },
+      {
+       "text": "Twist a strip of lemon peel over each.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -52,7 +52,9 @@
      "text": "Put in the slider buns with pickles and sauce.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fake plant shop crudités",
@@ -119,7 +121,9 @@
      "text": "Blitz the sour cream with parsley, chives and a squeeze of lemon for the dip.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sunset Strip chipotle chicken tacos",
@@ -214,7 +218,9 @@
      "text": "Warm the small tortillas and fill with avocado, chicken, onion and coriander.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Neon pink raspberry cheesecake cups",
@@ -301,7 +307,9 @@
      "text": "Finish with raspberries and grated white chocolate.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Club cosmopolitan",
@@ -348,7 +356,57 @@
      "text": "Make it just before the film starts and keep the jug cold.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Club cosmopolitan (alcohol-free)",
+     "prep_min": 4,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shake the cranberry juice, orange juice and lime juice hard with ice for each glass.",
+       "min": 2
+      },
+      {
+       "text": "Strain into chilled glasses.",
+       "min": 1
+      },
+      {
+       "text": "Make it just before the film starts and keep the jug cold.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -64,7 +64,9 @@
      "text": "Top each square with smoked salmon, a small dot of creme fraiche, a dill sprig and cracked pepper.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Caviar blini",
@@ -111,7 +113,9 @@
      "text": "Serve straight away on a silver tray if you have one.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hobson's alert-the-media roast beef",
@@ -190,7 +194,9 @@
      "text": "Make gravy by simmering the stock with the pan juices until slightly thickened. Carve and serve.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Crème brûlée",
@@ -251,7 +257,9 @@
      "text": "Sprinkle with sugar and torch to amber.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Arthur's Kir royale",
@@ -292,7 +300,51 @@
      "text": "Drop a raspberry into each glass and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Arthur's Kir royale (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "blackcurrant cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 480,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "raspberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the flutes in the freezer.",
+       "min": 10
+      },
+      {
+       "text": "Pour the cordial into each glass, tilt and top slowly with the alcohol-free sparkling wine so it does not foam over.",
+       "min": 3
+      },
+      {
+       "text": "Drop a raspberry into each glass and serve straight away.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -100,7 +100,9 @@
      "text": "Fill with the meatloaf, cheddar, pickles and tomato relish and cut in half.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Notre Dame tailgate beer brats",
@@ -171,7 +173,81 @@
      "text": "Fill with a brat and a pile of beer onions and finish with wholegrain mustard.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Notre Dame tailgate beer brats",
+     "prep_min": 8,
+     "cook_min": 32,
+     "make_ahead": "Up to 1 day, reheat gently",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "bratwurst",
+       "aisle": "Meat"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of wholegrain mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onions.",
+       "min": 5
+      },
+      {
+       "text": "Simmer the bratwurst in the alcohol-free beer with the onions and butter.",
+       "min": 15
+      },
+      {
+       "text": "Lift out the brats and grill, turning, until charred.",
+       "min": 6
+      },
+      {
+       "text": "Keep boiling the onions until the liquid reduces and they turn sticky.",
+       "min": 8
+      },
+      {
+       "text": "Toast the rolls.",
+       "min": 3
+      },
+      {
+       "text": "Fill with a brat and a pile of beer onions and finish with wholegrain mustard.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Ruettiger family Sunday pot roast",
@@ -304,7 +380,9 @@
      "text": "Mix the sour cream with horseradish cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "South Bend apple crumble",
@@ -399,7 +477,9 @@
      "text": "Warm the custard and serve alongside.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Golden Dome hot spiced cider",
@@ -458,7 +538,9 @@
      "text": "Strain into mugs and add a cinnamon stick and orange slice to each.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

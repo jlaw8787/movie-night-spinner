@@ -90,7 +90,111 @@
      "text": "Keep warm over a burner and serve with the cubed baguette, the boiled baby potatoes and cornichons.",
      "min": 18
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Kodiak Valley gruyère fondue",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "gruyère",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "emmental",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "nutmeg, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cornichons",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the baby potatoes in salted water until tender.",
+       "min": 15
+      },
+      {
+       "text": "Rub a heavy pot with a halved garlic clove.",
+       "min": 2
+      },
+      {
+       "text": "Heat the stock and verjuice until just simmering.",
+       "min": 3
+      },
+      {
+       "text": "Toss the grated gruyère and the grated emmental with the cornflour and add a handful at a time, stirring in a figure eight until smooth.",
+       "min": 5
+      },
+      {
+       "text": "Stir in the lemon juice and nutmeg.",
+       "min": 2
+      },
+      {
+       "text": "Keep warm over a burner and serve with the cubed baguette, the potatoes and cornichons.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Eighties pepperoni pizza rolls",
@@ -167,7 +271,9 @@
      "text": "Warm the marinara for dipping.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ski lodge chilli con carne",
@@ -282,7 +388,9 @@
      "text": "Serve with sour cream, grated cheddar, pickled jalapeños and crusty bread.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Snowcapped fudge brownies",
@@ -369,7 +477,9 @@
      "text": "Serve with vanilla ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chernobly citrus ginger fizz",
@@ -444,7 +554,89 @@
      "text": "Top with the soda water, stir and add a lime wheel and mint sprig.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chernobly citrus ginger fizz",
+     "prep_min": 8,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, as needed",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sliced ginger with the sugar and the water for 10 minutes, cool and strain.",
+       "min": 11
+      },
+      {
+       "text": "Juice the lemon and one lime, and cut the other lime into wheels.",
+       "min": 2
+      },
+      {
+       "text": "Fill the tall glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Add the ginger syrup, the lemon juice and the lime juice to each.",
+       "min": 2
+      },
+      {
+       "text": "Top with the soda water, stir and add a lime wheel and mint sprig.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

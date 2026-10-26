@@ -62,7 +62,9 @@
      "text": "Drain and serve with ranch dressing.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Juicy Lucy sliders",
@@ -109,7 +111,9 @@
      "text": "Serve in the slider buns with pickles.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Minnesota hotdish",
@@ -174,7 +178,9 @@
      "text": "Bake at 200C for 35 minutes until golden.",
      "min": 35
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hans' frozen pond brownies",
@@ -233,7 +239,9 @@
      "text": "Melt the white chocolate, spread it smooth over the top like ice, set, then cut into squares.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "District 5 rinkside hot chocolate",
@@ -274,7 +282,9 @@
      "text": "Pour into big mugs and pile marshmallows on top. Ducks fly together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   }
  ]
 }

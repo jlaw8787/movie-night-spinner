@@ -70,7 +70,9 @@
      "text": "Keep warm over a candle and dip the vegetables and bread.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Blow the bloody doors off cheese toasts",
@@ -127,7 +129,9 @@
      "text": "Grill until golden and bubbling.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pork with creamy tuna sauce",
@@ -190,7 +194,9 @@
      "text": "Slice the pork thin and cover with the sauce and more capers.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bonet chocolate amaretti pudding",
@@ -253,7 +259,73 @@
      "text": "Chill and turn out.",
      "min": 240
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bonet chocolate amaretti pudding",
+     "prep_min": 25,
+     "cook_min": 285,
+     "make_ahead": "Make the day before",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cocoa powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "amaretti biscuits",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "strong espresso, cooled",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook part of the sugar to a dark caramel and pour into a loaf tin.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the eggs, remaining sugar, milk, cocoa, crushed amaretti and espresso.",
+       "min": 15
+      },
+      {
+       "text": "Pour over and bake in a water bath at 160C.",
+       "min": 45
+      },
+      {
+       "text": "Chill and turn out.",
+       "min": 240
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Hang on lads hot chocolate and espresso",
@@ -310,7 +382,9 @@
      "text": "Gently pour an espresso over the back of a spoon on top, then float the cream. Serve without stirring.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

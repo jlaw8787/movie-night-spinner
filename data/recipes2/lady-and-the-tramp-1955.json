@@ -52,7 +52,9 @@
      "text": "Bake at 200C until crisp at the edges, then cut into thick slices and serve in the alley behind the restaurant.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Antipasto for two",
@@ -111,7 +113,9 @@
      "text": "Tear the bread and set it beside the board. Serve by candlelight.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Spaghetti and meatballs",
@@ -192,7 +196,9 @@
      "text": "Cook the spaghetti until al dente and pile on one big plate with the sauce. Leave the last meatball for your date.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bella notte cannoli",
@@ -255,7 +261,9 @@
      "text": "Spoon into a piping bag, fill the shells just before serving, and dip each end in pistachios.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bella Notte blood orange soda",
@@ -330,7 +338,9 @@
      "text": "Fill glasses with ice, pour in the juice to halfway, top with soda water and garnish with an orange slice and a rosemary sprig.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

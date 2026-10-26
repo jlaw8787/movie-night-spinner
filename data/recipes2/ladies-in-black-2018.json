@@ -48,7 +48,9 @@
      "text": "Add the dill pickles cut into spears, the cream cheese in a bowl and a sliced dark rye loaf, the way Magda would set out a New Year's Eve spread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Goodes tearoom egg sandwiches",
@@ -95,7 +97,9 @@
      "text": "Trim the crusts and cut into fingers.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rudi's chicken paprikash",
@@ -166,7 +170,9 @@
      "text": "Stir the sour cream through off the heat and serve over the buttered egg noodles.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Model Gowns poppy seed cake",
@@ -237,7 +243,9 @@
      "text": "Ice with the icing sugar mixed with lemon juice.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Magda's New Year's Eve champagne punch",
@@ -314,7 +322,83 @@
      "text": "For non-drinkers, use peach nectar and sparkling apple juice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Magda's New Year's Eve champagne punch (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "peach nectar",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "ripe peaches",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag block ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "In a large punch bowl, mix the vanilla, peach nectar, orange juice and the sliced peaches.",
+       "min": 2
+      },
+      {
+       "text": "Chill 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Just before serving add a big block of ice and pour in the chilled alcohol-free sparkling wine and the soda water.",
+       "min": 2
+      },
+      {
+       "text": "Stir once gently.",
+       "min": 2
+      },
+      {
+       "text": "Ladle into coupes with a slice of peach in each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

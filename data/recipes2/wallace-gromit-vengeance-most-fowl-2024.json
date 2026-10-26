@@ -70,7 +70,9 @@
      "text": "Cut into triangles.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Breakfast machine French toast fingers",
@@ -153,7 +155,9 @@
      "text": "Serve warm with the strawberry jam.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bangers and mash",
@@ -222,7 +226,9 @@
      "text": "Serve the sausages on mash with gravy.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Jam roly-poly with custard",
@@ -281,7 +287,9 @@
      "text": "Serve in slices with the custard made from custard powder and milk.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gromit's malted hot chocolate",
@@ -348,7 +356,9 @@
      "text": "Pour into big mugs, spoon the cream on top and grate over a little more chocolate.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

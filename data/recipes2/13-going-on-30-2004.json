@@ -70,7 +70,9 @@
      "text": "Wrap each in cellophane.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wishing dust sugar cookies",
@@ -153,7 +155,9 @@
      "text": "Mix the icing sugar with water and a drop of colouring, ice the cookies pale pink and dust with edible glitter.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Poise magazine desk noodles",
@@ -226,7 +230,9 @@
      "text": "Pack into takeaway boxes.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pink sprinkle thirteenth birthday cake",
@@ -339,7 +345,9 @@
      "text": "Sandwich the layers with jam, ice all over and press sprinkles around the sides. Top with candles.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Piña colada, with or without rum",
@@ -382,7 +390,53 @@
      "text": "Pour into glasses for the kids. Add rum to the glasses for the grown-ups.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Piña colada (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Blend fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "coconut cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the pineapple juice, coconut cream, lime juice and a big handful of ice until thick and smooth.",
+       "min": 5
+      },
+      {
+       "text": "Pour into glasses and serve straight away.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

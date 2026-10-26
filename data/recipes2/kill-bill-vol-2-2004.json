@@ -62,7 +62,73 @@
      "text": "Serve the rice in small bowls with furikake, a pickled plum and a halved egg.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Pai Mei's rice bowl",
+     "prep_min": 9,
+     "cook_min": 29,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "furikake",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pickled plums",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wash the rice until the water runs clear.",
+       "min": 5
+      },
+      {
+       "text": "Cook with the water and rice vinegar.",
+       "min": 20
+      },
+      {
+       "text": "Boil the eggs for a soft yolk, cool and peel.",
+       "min": 9
+      },
+      {
+       "text": "Serve the rice in small bowls with furikake, a pickled plum and a halved egg.",
+       "min": 4
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Jalapeño cheese dip with chips, jerky",
@@ -125,7 +191,9 @@
      "text": "Pour into plastic bowls with corn chips and jerky on the side.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hacienda carnitas",
@@ -216,7 +284,9 @@
      "text": "Warm the tortillas and serve with the pork and salsa.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pai Mei's Chinese almond cookies",
@@ -287,7 +357,9 @@
      "text": "Brush with beaten egg and bake at 175C.",
      "min": 14
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hacienda grapefruit paloma",
@@ -366,7 +438,99 @@
      "text": "Top with soda water, stir and add a grapefruit wedge.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Hacienda grapefruit paloma (alcohol-free)",
+     "prep_min": 17,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "green tea bag",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "pink grapefruits",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, to serve",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the green tea in the boiling water for 3 minutes, lift out and chill. It adds a dry, grassy edge.",
+       "min": 15
+      },
+      {
+       "text": "Mix the salt with the chilli powder on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Rub the rims of four tall glasses with lime, dip in the salt and fill with ice.",
+       "min": 4
+      },
+      {
+       "text": "Juice the grapefruits and limes, keeping one grapefruit wedge per glass.",
+       "min": 6
+      },
+      {
+       "text": "Pour the green tea, grapefruit juice, lime juice and agave syrup into each glass.",
+       "min": 3
+      },
+      {
+       "text": "Top with soda water, stir and add a grapefruit wedge.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

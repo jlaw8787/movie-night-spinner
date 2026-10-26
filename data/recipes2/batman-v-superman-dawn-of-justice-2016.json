@@ -62,7 +62,9 @@
      "text": "Arrange both on silver trays.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Smoked trout crispbreads",
@@ -119,7 +121,9 @@
      "text": "Serve cold on a slate.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Metropolis gala beef Wellington",
@@ -208,7 +212,9 @@
      "text": "Rest before slicing.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wayne gala chocolate soufflé",
@@ -269,7 +275,9 @@
      "text": "Serve straight away with cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "LexCorp gala pear and ginger fizz",
@@ -342,7 +350,83 @@
      "text": "Thread candied ginger onto picks and rest across each glass.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "LexCorp gala pear and ginger fizz",
+     "prep_min": 11,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fresh ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "pear nectar",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "candied ginger",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the ginger and simmer with the sugar and water, then strain and cool.",
+       "min": 10
+      },
+      {
+       "text": "Chill four flutes. Juice the lemon.",
+       "min": 3
+      },
+      {
+       "text": "Pour pear nectar, ginger syrup and lemon juice into each flute.",
+       "min": 4
+      },
+      {
+       "text": "Top with alcohol-free sparkling wine and stir once gently.",
+       "min": 2
+      },
+      {
+       "text": "Thread candied ginger onto picks and rest across each glass.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

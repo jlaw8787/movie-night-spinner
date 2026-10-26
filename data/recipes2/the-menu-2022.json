@@ -52,7 +52,9 @@
      "text": "Because you're not on that island, warm the sourdough and serve it with them.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Raw scallop with finger lime",
@@ -105,7 +107,9 @@
      "text": "Dress with lime juice, finger lime pearls, a few drops of oil and sea salt.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "The cheeseburger",
@@ -178,7 +182,9 @@
      "text": "Fry the chips again at 185C until crisp. Wrap one to take home.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Campfire s'mores tart",
@@ -245,7 +251,9 @@
      "text": "Spread on top and torch until blistered.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hawthorn smoked rosemary negroni",
@@ -304,7 +312,69 @@
      "text": "Light the tip of a rosemary sprig until it smokes, blow it out and lay it across the glass with a twist of orange peel.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Hawthorn smoked rosemary negroni (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic bitter red aperitivo",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large ice cubes",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the non-alcoholic gin, aperitivo and grape juice with ice for 20 seconds, in batches.",
+       "min": 5
+      },
+      {
+       "text": "Strain over a large ice cube in each tumbler.",
+       "min": 2
+      },
+      {
+       "text": "Light the tip of a rosemary sprig until it smokes, blow it out and lay it across the glass with a twist of orange peel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

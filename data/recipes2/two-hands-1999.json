@@ -78,7 +78,89 @@
      "text": "Wrap it all in paper with lemon and tartare.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bondi fish and chips",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut in thick chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "ice cold alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "flathead fillets",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour, for dusting",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tartare sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the chips in the oil at 140C until soft and drain.",
+       "min": 12
+      },
+      {
+       "text": "Whisk the flour with the cold alcohol-free beer to a thin batter.",
+       "min": 5
+      },
+      {
+       "text": "Dip the fish in the dusting flour, then batter, and fry at 180C.",
+       "min": 8
+      },
+      {
+       "text": "Fry the chips again until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Wrap it all in paper with lemon and tartare.",
+       "min": 7
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Kings Cross pie floaters",
@@ -167,7 +249,9 @@
      "text": "Spoon peas into bowls, sit a pie on top and finish with tomato sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sichuan pepper squid and egg fried rice",
@@ -258,7 +342,9 @@
      "text": "Serve together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pavlova",
@@ -325,7 +411,9 @@
      "text": "Top with whipped cream and passionfruit.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ten-grand Bondi passionfruit shandy",
@@ -388,7 +476,73 @@
      "text": "Top with the passionfruit soda and float half a passionfruit on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Ten-grand Bondi passionfruit shandy (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "passionfruit, pulp",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "cold alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "passionfruit, halved, for floating",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the passionfruit pulp, lime juice and sugar until dissolved.",
+       "min": 4
+      },
+      {
+       "text": "Add the soda water.",
+       "min": 1
+      },
+      {
+       "text": "Pour the alcohol-free beer into 4 chilled schooner glasses.",
+       "min": 3
+      },
+      {
+       "text": "Top with the passionfruit soda and float half a passionfruit on top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

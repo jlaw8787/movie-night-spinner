@@ -46,7 +46,9 @@
      "text": "Lay on a plate, drizzle with honey, scatter with thyme and squeeze over a little lemon.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rosie's cookbook spanakopita",
@@ -119,7 +121,9 @@
      "text": "Bake until golden.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wedding lamb kleftiko",
@@ -188,7 +192,9 @@
      "text": "Rest, then open at the table so the steam rises.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Loukoumades, Greek honey doughnuts",
@@ -261,7 +267,9 @@
      "text": "Scatter with walnuts.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pepper's Villa Donna ouzo",
@@ -308,7 +316,73 @@
      "text": "Top with lemonade and a mint sprig. Make the kids' glasses with lemonade and mint only.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Pepper's Villa Donna ouzo (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 11,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "cold lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs of mint",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the star anise, sugar and water for 5 minutes for an anise syrup, then strain and cool.",
+       "min": 12
+      },
+      {
+       "text": "Fill 4 glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Pour a spoonful of anise syrup into each.",
+       "min": 1
+      },
+      {
+       "text": "Top with lemonade and a mint sprig.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

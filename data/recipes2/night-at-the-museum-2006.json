@@ -56,7 +56,9 @@
      "text": "Simmer the crushed tomatoes to dip.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gum gum watermelon, feta and mint skewers",
@@ -125,7 +127,9 @@
      "text": "Just before serving, squeeze over lime juice, drizzle with honey and add flaky salt and chilli flakes.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Manhattan hot dog cart",
@@ -198,7 +202,9 @@
      "text": "Fill the buns with franks, mustard, sauerkraut and onions.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dexter's banana bread",
@@ -261,7 +267,9 @@
      "text": "Cool, slice thick, toast and spread with the remaining butter.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Night guard thermos hot chocolate",
@@ -320,7 +328,9 @@
      "text": "Pour into a warmed thermos to keep hot, then serve in mugs topped with marshmallows.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   }
  ]
 }

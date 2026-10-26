@@ -72,7 +72,9 @@
      "text": "Serve with the chips.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gold coin potato rounds",
@@ -129,7 +131,9 @@
      "text": "Pile the coins beside the aioli.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Farmhouse bean stew",
@@ -208,7 +212,9 @@
      "text": "Shred the ham back in and serve with bread.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sad Hill chocolate mousse cups",
@@ -273,7 +279,9 @@
      "text": "Top with crushed biscuits.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blondie's rye old fashioned",
@@ -336,7 +344,83 @@
      "text": "Twist orange peel over the top and drop it in.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Blondie's rye old fashioned (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "demerara sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, peel only",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, remove and cool.",
+       "min": 12
+      },
+      {
+       "text": "Stir the sugar with the hot water until dissolved, then cool.",
+       "min": 5
+      },
+      {
+       "text": "Stir 240ml of the smoked tea with the syrup, vanilla and a little grated orange zest over ice.",
+       "min": 3
+      },
+      {
+       "text": "Strain over a large ice cube in a heavy glass.",
+       "min": 1
+      },
+      {
+       "text": "Twist orange peel over the top and drop it in.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

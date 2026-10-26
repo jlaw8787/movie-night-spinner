@@ -76,7 +76,9 @@
      "text": "Cool on the trays to crisp up.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Beersheba camp damper with honey butter",
@@ -141,7 +143,9 @@
      "text": "Serve the damper warm with the honey butter.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Light horse camp beef and stout stew",
@@ -268,7 +272,133 @@
      "text": "Spoon the stew over the mash.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Light horse camp beef and stout stew",
+     "prep_min": 30,
+     "cook_min": 190,
+     "make_ahead": "Up to 2 days, keep chilled and reheat",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "chuck steak",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 850,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "instant coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the chuck, onions and carrots and toss the beef in flour.",
+       "min": 15
+      },
+      {
+       "text": "Brown the beef in batches in oil.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions, carrots and garlic and cook.",
+       "min": 5
+      },
+      {
+       "text": "Add the tomato paste, stock, coffee, thyme and bay leaves.",
+       "min": 3
+      },
+      {
+       "text": "Cover and simmer gently until the beef is tender.",
+       "min": 150
+      },
+      {
+       "text": "Peel and chop the potatoes, boil until tender and mash with butter and milk.",
+       "min": 30
+      },
+      {
+       "text": "Spoon the stew over the mash.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Camp golden syrup dumplings",
@@ -347,7 +477,9 @@
      "text": "Serve in bowls with the sauce and thick cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Trooper's condensed milk billy tea",
@@ -386,7 +518,9 @@
      "text": "Spoon condensed milk into each enamel mug, pour over the hot tea and stir until creamy.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

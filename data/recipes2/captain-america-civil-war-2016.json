@@ -74,7 +74,9 @@
      "text": "Serve with sliced onion and tomato, sprinkled with more spice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Berlin airport currywurst",
@@ -141,7 +143,9 @@
      "text": "Pour over the sausage, dust with curry powder and serve with the fries.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Siberian winter goulash",
@@ -218,7 +222,9 @@
      "text": "Serve the goulash over the noodles with sour cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Aunt May's walnut date loaf",
@@ -293,7 +299,9 @@
      "text": "Slice and serve buttered.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Team Cap and Team Iron Man fizz",
@@ -378,7 +386,9 @@
      "text": "Line them up and let everyone choose.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

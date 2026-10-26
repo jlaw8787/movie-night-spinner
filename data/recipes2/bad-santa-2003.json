@@ -78,7 +78,9 @@
      "text": "Cut into triangles and dust with icing sugar.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Advent calendar chocolates",
@@ -133,7 +135,9 @@
      "text": "Line them up in a numbered tray.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Diner roast turkey with stuffing and gravy",
@@ -222,7 +226,9 @@
      "text": "Serve with cranberry sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Christmas fruit cake slices",
@@ -301,7 +307,89 @@
      "text": "Cool and slice thin.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Christmas fruit cake slices",
+     "prep_min": 30,
+     "cook_min": 150,
+     "make_ahead": "Up to 2 weeks, wrapped",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "mixed dried fruit",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "mixed spice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of almonds, chopped",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the fruit in the orange juice overnight.",
+       "min": 10
+      },
+      {
+       "text": "Cream the butter and sugar and beat in the eggs.",
+       "min": 10
+      },
+      {
+       "text": "Fold in the fruit, flour, spice and almonds.",
+       "min": 10
+      },
+      {
+       "text": "Bake in a lined tin at 150C.",
+       "min": 150
+      },
+      {
+       "text": "Cool and slice thin.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Willie's bourbon and ginger highball",
@@ -364,7 +452,95 @@
      "text": "Add a lime wedge and a cinnamon stick. Skip the bourbon for the non drinkers.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Willie's bourbon and ginger highball (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 19,
+     "make_ahead": "Tea up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "cold spicy ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lime wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 4 minutes, stir in the brown sugar and vanilla, then cool in the fridge.",
+       "min": 20
+      },
+      {
+       "text": "Fill 4 tall glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Add the cold tea and lime juice to each.",
+       "min": 2
+      },
+      {
+       "text": "Top with ginger beer and stir once.",
+       "min": 1
+      },
+      {
+       "text": "Add a lime wedge and a cinnamon stick.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -70,7 +70,9 @@
      "text": "Serve with the corn chips.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Billy's plantain chips",
@@ -117,7 +119,9 @@
      "text": "Mix the flaky salt with the lime zest and toss through the hot chips.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chopper pad steak",
@@ -192,7 +196,9 @@
      "text": "Rest the steaks, then spoon over the chimichurri.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mud cake",
@@ -261,7 +267,9 @@
      "text": "Heat the cream, melt in the remaining chocolate, pour over the cake and drag with a fork.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Val Verde jungle rum punch",
@@ -338,7 +346,103 @@
      "text": "Strain into tumblers packed with crushed ice, grate nutmeg on top and garnish with a pineapple wedge.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Val Verde jungle rum punch (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "passionfruit",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes (60ml juice)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "ml",
+       "item": "grenadine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, for shaking",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out, add the vanilla and chill.",
+       "min": 15
+      },
+      {
+       "text": "Juice the limes and scoop out the passionfruit pulp. Cut pineapple wedges for garnish.",
+       "min": 5
+      },
+      {
+       "text": "Shake the cold tea, pineapple juice, passionfruit, lime juice and grenadine with ice for 15 seconds.",
+       "min": 2
+      },
+      {
+       "text": "Strain into tumblers packed with crushed ice, grate nutmeg on top and garnish with a pineapple wedge.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

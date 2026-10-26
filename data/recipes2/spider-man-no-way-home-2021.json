@@ -80,7 +80,9 @@
      "text": "Serve the soup in mugs with the cheese fingers.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ned's lola's pork lumpia",
@@ -167,7 +169,9 @@
      "text": "Serve with sweet chilli sauce and vinegar mixed with a little garlic.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Happy's apartment spaghetti",
@@ -248,7 +252,9 @@
      "text": "Split the baguette, spread with the butter mixed with the remaining garlic, and bake at 200C.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Coffee shop custard doughnuts",
@@ -327,7 +333,9 @@
      "text": "Pipe in the custard and roll in the remaining sugar.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "MJ's coffee shop iced vanilla latte",
@@ -402,7 +410,9 @@
      "text": "Froth the milk and cream until thick and spoon on top.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

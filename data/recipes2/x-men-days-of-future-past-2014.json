@@ -90,7 +90,9 @@
      "text": "Cut into fingers and serve with the soup.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Gruyere cheese puffs (gougères)",
@@ -153,7 +155,9 @@
      "text": "Bake at 200C until puffed and golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Xavier mansion beef bourguignon",
@@ -220,7 +224,89 @@
      "text": "Boil and mash the potatoes with plenty of butter and serve under the beef.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Xavier mansion beef bourguignon",
+     "prep_min": 15,
+     "cook_min": 195,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bacon, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the beef and bacon.",
+       "min": 15
+      },
+      {
+       "text": "Add the mushrooms and cook until golden.",
+       "min": 10
+      },
+      {
+       "text": "Pour in the stock, grape juice and balsamic.",
+       "min": 5
+      },
+      {
+       "text": "Simmer gently until tender and glossy.",
+       "min": 160
+      },
+      {
+       "text": "Boil and mash the potatoes with plenty of butter and serve under the beef.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Fondue au chocolat",
@@ -273,7 +359,9 @@
      "text": "Set out strawberries, marshmallows and cake for dipping on forks.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mystique blue margarita",
@@ -336,7 +424,83 @@
      "text": "Garnish with a lime wheel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mystique blue margarita (alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "green tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "blue curacao syrup, alcohol-free",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the green tea in the boiling water for 3 minutes, lift out and chill.",
+       "min": 15
+      },
+      {
+       "text": "Rub the rims of the glasses with lime and dip in salt.",
+       "min": 3
+      },
+      {
+       "text": "For each drink, measure 45ml green tea, 15ml blue curacao syrup, the juice of 1 lime and 5ml sugar syrup into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake each drink hard with ice for 10 seconds, then strain over fresh ice.",
+       "min": 5
+      },
+      {
+       "text": "Garnish with a lime wheel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

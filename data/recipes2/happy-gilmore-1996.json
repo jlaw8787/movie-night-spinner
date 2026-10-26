@@ -52,7 +52,9 @@
      "text": "Toast and crush the pecans, roll the balls in them and spear each with a toothpick.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Grandma's biscuits",
@@ -115,7 +117,9 @@
      "text": "Serve warm with butter and honey.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Grandma's meatloaf",
@@ -202,7 +206,9 @@
      "text": "Peel and boil the potatoes and mash. Cook the peas.",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Happy place lemon bars",
@@ -275,7 +281,9 @@
      "text": "Cool, dust with the remaining icing sugar and cut into bars.",
      "min": 45
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Happy place lemon shandy pitchers",
@@ -326,7 +334,61 @@
      "text": "Add lemon wheels and pour into chilled glasses.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Happy place lemon shandy pitchers (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "l",
+       "item": "alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill two big jugs in the freezer.",
+       "min": 20
+      },
+      {
+       "text": "Stir the juice of three lemons with the sugar syrup and soda water.",
+       "min": 5
+      },
+      {
+       "text": "Pour half the alcohol-free lager into each jug down the side, then top each with half the lemon soda.",
+       "min": 3
+      },
+      {
+       "text": "Add lemon wheels and pour into chilled glasses.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

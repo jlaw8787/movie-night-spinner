@@ -58,7 +58,9 @@
      "text": "Finish each with a sprig of dill and a few thin slices of red onion. Serve on a board.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Goat's cheese bites",
@@ -111,7 +113,9 @@
      "text": "Set each on a water cracker with a small spoon of fig jam underneath. Arrange in rows.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Stout-braised short ribs with mash",
@@ -184,7 +188,95 @@
      "text": "Serve the ribs on top of the mash.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Stout-braised short ribs with mash",
+     "prep_min": 25,
+     "cook_min": 285,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "kg",
+       "item": "beef short ribs",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 75,
+       "u": "ml",
+       "item": "strong black coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the ribs all over in the oil.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions, thyme, stock, coffee and molasses, then water to come halfway.",
+       "min": 5
+      },
+      {
+       "text": "Cover and braise at 160C for 4 hours until falling apart.",
+       "min": 240
+      },
+      {
+       "text": "Boil and mash the potatoes with plenty of butter.",
+       "min": 25
+      },
+      {
+       "text": "Serve the ribs on top of the mash.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Omnipotence City honey baklava",
@@ -263,7 +355,9 @@
      "text": "Cool completely before serving. Leave for a few hours.",
      "min": 240
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Korg's spiced pineapple rum punch",
@@ -334,7 +428,93 @@
      "text": "Drop in pineapple wedges and mint sprigs. For a kids' jug, leave out the rum and add more ginger beer.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Korg's spiced pineapple rum punch (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Chill ahead, add ginger beer fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "passionfruit, pulp only",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "ground allspice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small pineapple, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "mint sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "In a big jug, stir the pineapple juice, passionfruit pulp, lime juice, vanilla, allspice and brown sugar until the sugar dissolves. Chill until ready.",
+       "min": 6
+      },
+      {
+       "text": "Just before serving, add plenty of ice and the ginger beer and stir gently.",
+       "min": 2
+      },
+      {
+       "text": "Drop in pineapple wedges and mint sprigs.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

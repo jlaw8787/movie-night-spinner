@@ -44,7 +44,9 @@
      "text": "Cool and pile them high with fig jam.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ghost shark tempura prawns",
@@ -113,7 +115,9 @@
      "text": "Stir lime juice into the sweet chilli sauce for dipping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Caribbean coconut fish",
@@ -192,7 +196,9 @@
      "text": "Squeeze in lime and serve over the rice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Steamed guava duff pudding",
@@ -271,7 +277,95 @@
      "text": "Slice and serve with the sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Steamed guava duff pudding",
+     "prep_min": 24,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "guava paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter, softened, for the sauce",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "icing sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the butter into the flour, add the sugar and milk to make a soft dough.",
+       "min": 10
+      },
+      {
+       "text": "Roll out, spread with guava paste and roll up.",
+       "min": 8
+      },
+      {
+       "text": "Wrap in buttered foil and steam.",
+       "min": 60
+      },
+      {
+       "text": "Beat the softened butter, icing sugar, orange juice and vanilla together for the sauce.",
+       "min": 4
+      },
+      {
+       "text": "Slice and serve with the sauce.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Jack's rum, ginger and lime highball",
@@ -328,7 +422,95 @@
      "text": "Add a slice of ginger and a stirrer.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jack's rum, ginger and lime highball (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "spicy ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices fresh ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags and cinnamon in the boiling water for 5 minutes, lift them out, stir in the sugar and vanilla and chill.",
+       "min": 15
+      },
+      {
+       "text": "Fill four tall glasses with ice.",
+       "min": 2
+      },
+      {
+       "text": "Squeeze a quarter of a lime into each and drop in the wedge.",
+       "min": 3
+      },
+      {
+       "text": "Pour in the ginger beer, then float the spiced tea over the top.",
+       "min": 2
+      },
+      {
+       "text": "Add a slice of ginger and a stirrer.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

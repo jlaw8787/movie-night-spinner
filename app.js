@@ -704,10 +704,24 @@ $("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
 
 let renderId=0;
 /* ---------- plan the night: tick dishes, set guests, scaled shopping and real times (data/recipes2) ---------- */
-const PLAN={guests:4,off:{}};
-function planLoad(f){PLAN.guests=4;PLAN.off={};try{const s=JSON.parse(localStorage.getItem("mns-plan-"+f.id)||"null");if(s){PLAN.guests=Math.min(24,Math.max(1,+s.g||4));PLAN.off=s.off||{}}}catch(e){}}
-function planSave(f){try{localStorage.setItem("mns-plan-"+f.id,JSON.stringify({g:PLAN.guests,off:PLAN.off}))}catch(e){}}
-const planDishes=f=>((f._r2&&f._r2.dishes)||[]).filter(d=>!PLAN.off[d.n]);
+const PLAN={guests:4,off:{},on:{}};
+function planLoad(f){PLAN.guests=4;PLAN.off={};PLAN.on={};try{const s=JSON.parse(localStorage.getItem("mns-plan-"+f.id)||"null");if(s){PLAN.guests=Math.min(24,Math.max(1,+s.g||4));PLAN.off=s.off||{};PLAN.on=s.on||{}}}catch(e){}}
+function planSave(f){try{localStorage.setItem("mns-plan-"+f.id,JSON.stringify({g:PLAN.guests,off:PLAN.off,on:PLAN.on}))}catch(e){}}
+/* diet: vegetarian and no alcohol, kept for every film. A dish that doesn't fit swaps to its written alternative
+   (data/recipes2 dish.alt.veg, .af, .veg_af); one with no alternative is left off unless the cook ticks it back */
+const DIET=(()=>{try{const d=JSON.parse(localStorage.getItem("mns-diet")||"{}");return {veg:!!d.veg,af:!!d.af}}catch(e){return {veg:false,af:false}}})();
+function dietSave(){try{localStorage.setItem("mns-diet",JSON.stringify(DIET))}catch(e){}}
+const dietBooze=x=>x.af===false||(x.ingredients||[]).some(i=>i.aisle==="Bottle shop");
+const dietMeat=x=>x.veg===false;
+function dietDish(d){
+  const alt=d.alt||{};let x=d,tag="";
+  if(DIET.veg&&dietMeat(d)){if(DIET.af&&alt.veg_af){return Object.assign({},d,alt.veg_af,{orig:d.n,tag:"veg",af:true})}if(alt.veg){x=Object.assign({},d,alt.veg,{orig:d.n,af:alt.veg.af});tag="veg"}else return Object.assign({},d,{orig:d.n,blocked:"meat"})}
+  if(DIET.af&&dietBooze(x)){if(!tag&&alt.af){x=Object.assign({},d,alt.af,{orig:d.n,af:true});tag="af"}else return Object.assign({},x,{orig:d.n,blocked:"alcohol",tag})}
+  return tag?Object.assign({},x,{tag}):x;
+}
+const planAll=f=>((f._r2&&f._r2.dishes)||[]).map(dietDish);
+const planOn=x=>x.blocked?!!PLAN.on[x.orig]:!PLAN.off[x.orig||x.n];
+const planDishes=f=>planAll(f).filter(planOn);
 const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
 function fracText(q){const w=Math.floor(q),r=q-w;let best=FRAC[0];for(const x of FRAC)if(Math.abs(x[0]-r)<Math.abs(best[0]-r))best=x;const W=best[0]===1?w+1:w;return (W?String(W):"")+(best[1]?(W?" ":"")+best[1]:"")||"1/4"}
 function planQty(q,u){
@@ -746,13 +760,15 @@ function planShopping(f){
 }
 const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days")+" ahead")(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr, start the day before":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
 function planHTML(f){
-  const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks"};
+  const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks"},all=planAll(f);
+  const TAG={veg:"vegetarian version",af:"alcohol-free version"},BLK={meat:"has meat or fish",alcohol:"has alcohol"};
   return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">-</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
+  <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${DIET.af?" checked":""}><span>No alcohol</span></label></div>
   <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
-  <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.</p>
-  ${["s","m","w","d"].map(c=>{const ds=r.dishes.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.n)}"${PLAN.off[d.n]?"":" checked"}><span>${ESC(d.n)}</span><small>${planMin((d.prep_min||0)+(d.cook_min||0))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
+  <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||DIET.af?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
+  ${["s","m","w","d"].map(c=>{const ds=all.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${planMin((d.prep_min||0)+(d.cook_min||0))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
 }
-function planCount(r){const on=r.dishes.filter(d=>!PLAN.off[d.n]).length;return `${on} of ${r.dishes.length} dishes picked`}
+function planCount(r){const on=r.dishes.map(dietDish).filter(planOn).length;return `${on} of ${r.dishes.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
 function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
@@ -766,7 +782,7 @@ function prepHTML2(f,menu){
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
     <div class="pp-title">${ESC(f.title)}</div>
-    <p class="pp-serves">Serves ${PLAN.guests} &nbsp;/&nbsp; ${ds.length} dish${ds.length===1?"":"es"} &nbsp;/&nbsp; hands-on ${planMin(hands)}, longest dish ${planMin(longest)}</p>
+    <p class="pp-serves">Serves ${PLAN.guests}${DIET.veg||DIET.af?` &nbsp;/&nbsp; ${[DIET.veg&&"vegetarian",DIET.af&&"alcohol-free"].filter(Boolean).join(", ")}`:""} &nbsp;/&nbsp; ${ds.length} dish${ds.length===1?"":"es"} &nbsp;/&nbsp; hands-on ${planMin(hands)}, longest dish ${planMin(longest)}</p>
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition&&edition.cue||f.P)}</span></div>
   </div>`;
@@ -777,8 +793,10 @@ function planWire(f){
   planLoad(f);box.dataset.has="1";box.hidden=tab!=="prep";box.innerHTML=planHTML(f);
   const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;{const n=box.querySelector(".pl-sum");if(n)n.textContent=planCount(f._r2)}prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
   box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(24,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo()};
-  {const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})}
-  box.onchange=e=>{const n=e.target.dataset.dish;if(n==null)return;if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1;redo()};
+  const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
+  box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();return}
+    const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
+    if(x&&x.blocked){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
 }
 /* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
 function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return t.slice(0,i).replace(/[,;:\s]+$/,"")+"."}

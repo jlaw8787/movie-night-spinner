@@ -74,7 +74,91 @@
      "text": "Serve in the pan with crusty bread for the juices.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Miami garlic prawns",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "green prawns",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butterfly the prawns.",
+       "min": 10
+      },
+      {
+       "text": "Heat the olive oil until very hot, add the prawns with garlic and chilli and cook.",
+       "min": 2
+      },
+      {
+       "text": "Add the stock and lemon juice, bubble for a minute, then swirl in the butter and parsley.",
+       "min": 2
+      },
+      {
+       "text": "Serve in the pan with crusty bread for the juices.",
+       "min": 1
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Fried mozzarella",
@@ -149,7 +233,9 @@
      "text": "Warm the passata with salt and oregano for dipping.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shoes-on teriyaki steak",
@@ -218,7 +304,79 @@
      "text": "Rest for 5 minutes, slice, and blanch the bok choy to serve alongside.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Shoes-on teriyaki steak",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "sirloin steaks, 4 pieces",
+       "aisle": "Meat"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "baby bok choy",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, apple juice, rice vinegar and sugar for 5 minutes until syrupy.",
+       "min": 5
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 5
+      },
+      {
+       "text": "Sear the steaks in a smoking pan for 3 minutes a side, brushing with glaze in the last minute.",
+       "min": 7
+      },
+      {
+       "text": "Rest for 5 minutes, slice, and blanch the bok choy to serve alongside.",
+       "min": 8
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Ricotta cheesecake",
@@ -281,7 +439,9 @@
      "text": "Turn off the oven and cool inside with the door ajar. Dust with icing sugar to serve.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Social club Rob Roy",
@@ -346,7 +506,97 @@
      "text": "Strain over a large ice cube in each tumbler, twist orange peel over and drop it in, and add a cherry.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Social club Rob Roy (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "Tea up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "lapsang souchong tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "ml",
+       "item": "demerara sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large ice cubes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags and cloves in the boiling water for 5 minutes, then lift them out.",
+       "min": 5
+      },
+      {
+       "text": "Chill the smoky tea in the fridge and put four heavy tumblers in the freezer for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Stir 200ml of the tea with the grape juice, balsamic and demerara syrup over ice in a jug for 30 seconds.",
+       "min": 2
+      },
+      {
+       "text": "Strain over a large ice cube in each tumbler, twist orange peel over and drop it in, and add a cherry.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

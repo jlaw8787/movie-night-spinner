@@ -80,7 +80,9 @@
      "text": "Serve both on toasted baguette slices.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Moth-wing parmesan crisps",
@@ -119,7 +121,9 @@
      "text": "Cool on the tray so they crisp.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lamb shanks in Chianti",
@@ -216,7 +220,119 @@
      "text": "Serve the shanks on top of the polenta.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lamb shanks in Chianti",
+     "prep_min": 25,
+     "cook_min": 155,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "lamb shanks",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "polenta",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the shanks in the oil.",
+       "min": 15
+      },
+      {
+       "text": "Soften the sliced onion and garlic.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, grape juice, vinegar, tomatoes and rosemary, cover and braise at 160C.",
+       "min": 150
+      },
+      {
+       "text": "Cook the polenta in salted water, stir in the butter.",
+       "min": 5
+      },
+      {
+       "text": "Serve the shanks on top of the polenta.",
+       "min": 0
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Chianti poached pears",
@@ -285,7 +401,85 @@
      "text": "Serve the pears with mascarpone and syrup.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chianti poached pears",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "pears",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "strips orange peel",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mascarpone",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the pears, keeping the stalks.",
+       "min": 10
+      },
+      {
+       "text": "Simmer the grape juice and lemon juice with the water, sugar, cinnamon and orange peel, add the pears and poach, turning.",
+       "min": 25
+      },
+      {
+       "text": "Reduce the syrup.",
+       "min": 5
+      },
+      {
+       "text": "Serve the pears with mascarpone and syrup.",
+       "min": 0
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Chianti and blood orange sangria",
@@ -360,7 +554,107 @@
      "text": "Pour over ice in wine glasses, spooning some fruit into each. For non-drinkers, make it with sour cherry juice and blood orange juice topped with soda.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chianti and blood orange sangria (alcohol-free)",
+     "prep_min": 20,
+     "cook_min": 120,
+     "make_ahead": "Make a jug ahead, chill",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "blood orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and cool. This gives a dry, grippy finish.",
+       "min": 10
+      },
+      {
+       "text": "Stir the grape juice with the tea, blood orange juice, vanilla and honey until the honey dissolves.",
+       "min": 3
+      },
+      {
+       "text": "Add the sliced orange, diced apple and cinnamon stick.",
+       "min": 5
+      },
+      {
+       "text": "Chill for at least 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Pour over ice in wine glasses, spooning some fruit into each, and top with a splash of soda water.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -56,7 +56,9 @@
      "text": "Bake at 200C until golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Turtle shell guacamole",
@@ -121,7 +123,9 @@
      "text": "Spoon the guacamole in so it looks like a turtle shell and serve with corn chips and the torn bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "New York pepperoni fold pizza",
@@ -184,7 +188,9 @@
      "text": "Cut into big slices and fold each in half to eat.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Baxter Stockman's ooze cupcakes",
@@ -259,7 +265,9 @@
      "text": "Spoon on top so it drips down the sides like ooze.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kiwi lime slushie",
@@ -318,7 +326,9 @@
      "text": "Pour into glasses and top each with a kiwi slice and a mint sprig.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

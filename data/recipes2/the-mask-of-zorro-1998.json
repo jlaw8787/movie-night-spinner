@@ -66,7 +66,83 @@
      "text": "Serve everything on small plates.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chorizo, Manchego and quince tapas",
+     "prep_min": 20,
+     "cook_min": 2,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "chorizo",
+       "aisle": "Meat"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Manchego",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small tub quince paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the chorizo and fry until crisp.",
+       "min": 6
+      },
+      {
+       "text": "Add the grape juice and balsamic and cook until sticky.",
+       "min": 4
+      },
+      {
+       "text": "Cut the Manchego into triangles and top each with a sliver of quince paste.",
+       "min": 5
+      },
+      {
+       "text": "Warm the olives with strips of orange peel.",
+       "min": 5
+      },
+      {
+       "text": "Serve everything on small plates.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Z-slash quesadillas",
@@ -117,7 +193,9 @@
      "text": "Score a sharp Z into the top with a knife and cut into wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Don Diego's rancho carne asada",
@@ -206,7 +284,9 @@
      "text": "Rest, then slice thinly against the grain.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Churros with chocolate",
@@ -291,7 +371,9 @@
      "text": "Melt the chocolate into hot milk until thick and serve in small cups for dipping.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Elena's flamenco sangria",
@@ -360,7 +442,89 @@
      "text": "Top with cold soda water just before pouring into glasses over ice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Elena's flamenco sangria (alcohol-free)",
+     "prep_min": 17,
+     "cook_min": 122,
+     "make_ahead": "Up to 1 day chilled, add soda just before serving",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "strong black tea, cooled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea strong and let it cool.",
+       "min": 10
+      },
+      {
+       "text": "Slice the oranges and apple into a large jug.",
+       "min": 5
+      },
+      {
+       "text": "Pour in the grape juice, cold tea, orange juice and cinnamon stick.",
+       "min": 2
+      },
+      {
+       "text": "Chill for 2 hours so the fruit soaks it up.",
+       "min": 120
+      },
+      {
+       "text": "Top with cold soda water just before pouring into glasses over ice.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -78,7 +78,9 @@
      "text": "Cut thick slices, halve into bites and toast in a pan with butter on both sides.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Detroit coney sliders",
@@ -163,7 +165,9 @@
      "text": "Fill the buns with franks, chilli, mustard and the raw onion.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Beverly Palm room service",
@@ -262,7 +266,9 @@
      "text": "Serve with the fries alongside.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Banana split",
@@ -349,7 +355,9 @@
      "text": "Add the pineapple, strawberry sauce, hot fudge and whipped cream, then finish with nuts and a cherry. Serve immediately.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Axel's Beverly Palm piña colada",
@@ -414,7 +422,69 @@
      "text": "Garnish with a pineapple wedge and a cherry.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Axel's Beverly Palm piña colada (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 480,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "coconut cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pineapple wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the pineapple juice, coconut cream, lime juice and ice until thick and smooth.",
+       "min": 3
+      },
+      {
+       "text": "Pour into tall glasses.",
+       "min": 2
+      },
+      {
+       "text": "Garnish with a pineapple wedge and a cherry.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

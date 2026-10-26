@@ -58,7 +58,9 @@
      "text": "Fill the cucumber cups with the cheese and lay everything on trays.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Spanish potato tortilla",
@@ -115,7 +117,9 @@
      "text": "Cook in a pan over low heat until nearly set, flip with a plate and cook the other side. Cut into squares.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rico's backyard paella",
@@ -206,7 +210,9 @@
      "text": "Push the prawns into the rice for the last 5 minutes, then rest briefly before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Churros and chocolate",
@@ -287,7 +293,9 @@
      "text": "Melt the chocolate into the hot milk for dipping.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Paso doble sangria",
@@ -358,7 +366,91 @@
      "text": "Top with the soda water and pour over ice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Paso doble sangria (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 130,
+     "make_ahead": "Up to 1 day, add the soda just before serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, to serve",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+       "min": 10
+      },
+      {
+       "text": "Slice the orange, lemon and apple and mix in a jug with the grape juice, tea and orange juice.",
+       "min": 8
+      },
+      {
+       "text": "Chill for 2 hours so the flavours come together.",
+       "min": 120
+      },
+      {
+       "text": "Top with the soda water and pour over ice.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

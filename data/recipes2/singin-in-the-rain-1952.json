@@ -46,7 +46,9 @@
      "text": "Bake at 200C until the bacon is crisp.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rainy day cheese toasties",
@@ -97,7 +99,9 @@
      "text": "Cut the toasties into soldiers and serve for dunking.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chicken à la king",
@@ -172,7 +176,9 @@
      "text": "Spoon into the pastry cases.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pop-out party cake",
@@ -257,7 +263,9 @@
      "text": "Stack and cover the layers, then shower with sprinkles.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sparkling lemonade in coupes",
@@ -304,7 +312,9 @@
      "text": "Pour into 4 coupe glasses, top with chilled sparkling water and a lemon twist.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

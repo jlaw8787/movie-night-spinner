@@ -62,7 +62,9 @@
      "text": "Ease out with a knife and serve warm.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sandman sand cookies",
@@ -113,7 +115,9 @@
      "text": "Slice into rounds and bake at 170C until golden and sandy.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "French restaurant coq au vin",
@@ -180,7 +184,89 @@
      "text": "Boil and mash the potatoes with plenty of butter and serve under the chicken.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "French restaurant coq au vin",
+     "prep_min": 20,
+     "cook_min": 120,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "chicken thigh fillets",
+       "aisle": "Meat"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bacon, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the chicken and bacon.",
+       "min": 15
+      },
+      {
+       "text": "Add the mushrooms and cook until golden.",
+       "min": 10
+      },
+      {
+       "text": "Pour in the stock, grape juice and balsamic and enough water to cover.",
+       "min": 5
+      },
+      {
+       "text": "Simmer until rich and glossy.",
+       "min": 90
+      },
+      {
+       "text": "Boil and mash the potatoes with plenty of butter and serve under the chicken.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Proposal crème brûlée",
@@ -241,7 +327,9 @@
      "text": "Sprinkle with sugar and torch until amber and crackly.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Broadway opening night raspberry fizz",
@@ -294,7 +382,63 @@
      "text": "Slowly top with chilled prosecco and drop in two raspberries.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Broadway opening night raspberry fizz",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Puree up to 1 day, top just before serving",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "sparkling white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "raspberries, whole, to finish",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the raspberries with the sugar and lemon juice, then push through a sieve.",
+       "min": 5
+      },
+      {
+       "text": "Spoon a little puree into each chilled flute.",
+       "min": 4
+      },
+      {
+       "text": "Slowly top with chilled sparkling white grape juice and drop in two raspberries.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

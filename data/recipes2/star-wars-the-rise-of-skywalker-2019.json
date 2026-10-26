@@ -76,7 +76,9 @@
      "text": "Brush the flatbreads with oil, dust with sumac and turmeric and grill until blistered. Serve with the dips and hummus.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kijimi snowy city dumplings",
@@ -145,7 +147,9 @@
      "text": "Serve a few in each bowl with hot stock, more spring onion and a drizzle of chilli oil.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kef Bir ocean seafood stew",
@@ -232,7 +236,97 @@
      "text": "Toast the bread, rub with a cut garlic clove and serve alongside.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Kef Bir ocean seafood stew",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "tsp",
+       "item": "saffron threads, a good pinch",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "white fish fillets, in chunks",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green prawns",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mussels, cleaned",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices bread, for garlic toast",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the fennel and garlic in the oil. Add the saffron, tomatoes and fish stock.",
+       "min": 10
+      },
+      {
+       "text": "Simmer to a rich broth.",
+       "min": 20
+      },
+      {
+       "text": "Add the fish, prawns and mussels, cover and cook until the mussels open.",
+       "min": 6
+      },
+      {
+       "text": "Toast the bread, rub with a cut garlic clove and serve alongside.",
+       "min": 4
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Twin suns pavlova",
@@ -285,7 +379,9 @@
      "text": "Top with whipped cream, mango and two round pools of passionfruit pulp.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lars homestead blue coconut milk",
@@ -334,7 +430,9 @@
      "text": "Add a few drops of blue colouring and blend until evenly pale blue. Serve cold.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

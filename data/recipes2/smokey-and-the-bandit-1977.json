@@ -50,7 +50,9 @@
      "text": "Drain and serve warm in paper cups.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sheriff Justice's pickled okra",
@@ -125,7 +127,9 @@
      "text": "Serve cold with the cheddar cut into chunks.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Truck stop chicken fried steak",
@@ -220,7 +224,9 @@
      "text": "Serve the steaks over the mash with the gravy.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Georgia peach cobbler",
@@ -295,7 +301,9 @@
      "text": "Serve warm with scoops of ice cream.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bandit's bourbon peach sweet tea",
@@ -370,7 +378,85 @@
      "text": "Top with tea and finish with a squeeze of lemon, a peach slice and a sprig of mint.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bandit's bourbon peach sweet tea (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 190,
+     "make_ahead": "Tea base up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 5,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "peaches",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water with the sliced peaches and sugar for 6 minutes, then remove the bags and stir in the vanilla.",
+       "min": 10
+      },
+      {
+       "text": "Chill the tea with the peaches in it until very cold.",
+       "min": 180
+      },
+      {
+       "text": "Fill four tall glasses with ice.",
+       "min": 5
+      },
+      {
+       "text": "Top with tea and finish with a squeeze of lemon, a peach slice and a sprig of mint.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

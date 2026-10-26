@@ -76,7 +76,9 @@
      "text": "Lay both out with the kalamata olives, cherry tomatoes and the warm pita breads.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Disruptors' hot sauce wings",
@@ -153,7 +155,9 @@
      "text": "Serve with celery and the blue cheese stirred into the sour cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Puzzle box lamb souvlaki",
@@ -230,7 +234,9 @@
      "text": "Serve in the warm pitas with the Greek yoghurt mixed with grated cucumber, plus tomato and onion.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Duke's pineapple upside-down cake",
@@ -321,7 +327,9 @@
      "text": "Rest 5 minutes, turn out and serve warm with whipped cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Alpha poolside spiked kombucha",
@@ -368,7 +376,63 @@
      "text": "Stir once and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Alpha poolside kombucha (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "ginger kombucha",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill the tall glasses with ice, mint leaves and a squeeze of lime.",
+       "min": 2
+      },
+      {
+       "text": "Pour the cold ginger kombucha into each and top with a splash of ginger beer for extra bite.",
+       "min": 2
+      },
+      {
+       "text": "Stir once and serve straight away.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -84,7 +84,9 @@
      "text": "Cut into fingers and serve with cornichons.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Budapest garlic lángos with sour cream",
@@ -163,7 +165,9 @@
      "text": "Spread with sour cream, scatter with cheese, paprika and dill.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rome cacio e pepe with toasted pepper",
@@ -214,7 +218,9 @@
      "text": "Move the pasta into the pepper pan with a splash more water and toss. Off the heat, toss in the cheese paste until glossy. Serve with extra pecorino.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "CIA basement fudge sheet cake",
@@ -317,7 +323,9 @@
      "text": "Spread the icing over the cake and scatter with hazelnuts.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rayna Boyanov's high roller spritz",
@@ -376,7 +384,69 @@
      "text": "Slide a thick wedge of blood orange into each glass and serve with a bowl of olives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rayna Boyanov's high roller spritz (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic bitter orange aperitif",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "blood oranges (or regular oranges)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar green olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill large wine glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Pour the aperitif into each, then add the alcohol-free sparkling wine and soda water. Stir gently once.",
+       "min": 2
+      },
+      {
+       "text": "Slide a thick wedge of blood orange into each glass and serve with a bowl of olives.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

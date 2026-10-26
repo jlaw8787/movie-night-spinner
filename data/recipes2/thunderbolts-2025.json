@@ -46,7 +46,9 @@
      "text": "Portion into small paper bags.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red Guardian's pickles",
@@ -131,7 +133,9 @@
      "text": "Serve with rye bread and butter.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Beef and mushroom stroganoff",
@@ -210,7 +214,9 @@
      "text": "Cook the noodles, toss in butter and serve the stroganoff over the top.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bob's Void black sesame cookies",
@@ -271,7 +277,9 @@
      "text": "Cool, melt the chocolate and dip half of each cookie.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red Guardian cherry tea punch",
@@ -346,7 +354,79 @@
      "text": "Fill four glasses with ice, pour in the tea, top with soda water and garnish with a lemon slice and cherries.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Red Guardian cherry tea punch",
+     "prep_min": 7,
+     "cook_min": 65,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "cherry jam",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "frozen cherries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags for 5 minutes, remove them and stir in the jam.",
+       "min": 5
+      },
+      {
+       "text": "Chill well, then strain out any fruit.",
+       "min": 60
+      },
+      {
+       "text": "Mix with the juice of half the lemon.",
+       "min": 3
+      },
+      {
+       "text": "Fill four glasses with ice, pour in the tea, top with soda water and garnish with a lemon slice and cherries.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

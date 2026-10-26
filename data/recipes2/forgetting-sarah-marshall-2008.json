@@ -52,7 +52,9 @@
      "text": "Spoon onto rice crackers just before serving so they stay crisp.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Do less grilled pineapple",
@@ -97,7 +99,9 @@
      "text": "Serve warm with extra lime.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Luau kalua pork",
@@ -170,7 +174,9 @@
      "text": "Shred the pork and serve over rice with the cabbage salad.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dracula puppet mango lime sorbet",
@@ -221,7 +227,9 @@
      "text": "Scoop into glasses.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dark rum mai tai",
@@ -280,7 +288,91 @@
      "text": "Strain over crushed ice and top with mint. Make a rum-free version for anyone not drinking.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Dark rum mai tai (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Mix per glass",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "lime juice (about 3 limes)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup (from caster sugar and water)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "almond syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out, add the vanilla and cool.",
+       "min": 10
+      },
+      {
+       "text": "Make the sugar syrup by dissolving equal parts caster sugar and hot water, then cool.",
+       "min": 4
+      },
+      {
+       "text": "Shake 45ml of the tea with the juices, sugar syrup and almond syrup over ice, one drink at a time.",
+       "min": 4
+      },
+      {
+       "text": "Strain over crushed ice and top with mint.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

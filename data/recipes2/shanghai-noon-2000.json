@@ -68,7 +68,9 @@
      "text": "Serve with soy and black vinegar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chon Wang cornbread",
@@ -137,7 +139,9 @@
      "text": "Beat the remaining butter with honey and serve alongside.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Roy O'Bannon's five-spice ribs",
@@ -210,7 +214,9 @@
      "text": "Brush with the glaze and glaze under the grill.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Imperial almond jelly with lychees",
@@ -277,7 +283,9 @@
      "text": "Serve over the lychees with their syrup.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rye and jasmine tea highball",
@@ -350,7 +358,83 @@
      "text": "Stir, top with soda water and add a strip of lemon peel.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rye and jasmine tea highball (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tsp",
+       "item": "jasmine tea",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "smoked black tea bag",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 550,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the jasmine tea and smoked tea bag in water just off the boil, then strain. The smoky tea stands in for the rye.",
+       "min": 4
+      },
+      {
+       "text": "Chill the tea.",
+       "min": 30
+      },
+      {
+       "text": "Stir the honey into a little hot water to loosen it.",
+       "min": 2
+      },
+      {
+       "text": "Fill four highball glasses with ice and add cold tea, honey syrup and lemon juice to each.",
+       "min": 3
+      },
+      {
+       "text": "Stir, top with soda water and add a strip of lemon peel.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

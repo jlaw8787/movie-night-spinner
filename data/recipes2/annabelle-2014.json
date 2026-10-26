@@ -62,7 +62,9 @@
      "text": "Pour over the popcorn and toss with the bacon and a good pinch of salt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "1969 cocktail party bites",
@@ -139,7 +141,9 @@
      "text": "Fill the celery boats with cream cheese and sliced olives.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chicken and rice mushroom casserole",
@@ -208,7 +212,9 @@
      "text": "Bake at 180C for 50 minutes.",
      "min": 50
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "John's gift-box doll cupcakes",
@@ -277,7 +283,9 @@
      "text": "Pipe white buttercream onto each cupcake and add a tiny pink sugar rose.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "1969 grasshopper shakes",
@@ -320,7 +328,53 @@
      "text": "Pour into glasses. For the grown-ups, blend in the crème de menthe and crème de cacao.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "1969 grasshopper shakes",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Grown-up version adds liqueur",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "mint choc chip ice cream",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "cold milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chocolate syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs mint",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the ice cream with the milk and chocolate syrup until thick.",
+       "min": 5
+      },
+      {
+       "text": "Pour into glasses and top each with a mint sprig.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

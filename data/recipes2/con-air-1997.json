@@ -40,7 +40,9 @@
      "text": "Cool for a few minutes and divide into small paper bags.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Vegas strip prawns",
@@ -109,7 +111,9 @@
      "text": "Serve on shredded iceberg in martini glasses with lemon wedges.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Vegas buffet steak",
@@ -182,7 +186,9 @@
      "text": "Split the potatoes and load with sour cream and chives.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bunny cake",
@@ -253,7 +259,9 @@
      "text": "Put it in a box with a bow.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cyrus the Virus bourbon smash",
@@ -316,7 +324,89 @@
      "text": "Slap a big sprig of mint between your hands and set on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Cyrus the Virus bourbon smash (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out, stir in the vanilla and chill.",
+       "min": 15
+      },
+      {
+       "text": "Muddle the lemon wedges with the mint leaves and syrup in a shaker.",
+       "min": 3
+      },
+      {
+       "text": "Add 200ml of the tea and ice and shake.",
+       "min": 1
+      },
+      {
+       "text": "Strain into tumblers packed with crushed ice.",
+       "min": 2
+      },
+      {
+       "text": "Slap a big sprig of mint between your hands and set on top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

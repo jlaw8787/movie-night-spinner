@@ -84,7 +84,9 @@
      "text": "Serve with warm maple syrup for dipping",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Party cocktail franks",
@@ -133,7 +135,9 @@
      "text": "Pile into a warm bowl with toothpicks for picking",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Frank's dinner party meatloaf",
@@ -222,7 +226,9 @@
      "text": "Rest before slicing",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rocky's birthday cake",
@@ -305,7 +311,9 @@
      "text": "Brush with edible gold and add candles",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red lips cranberry cosmopolitan",
@@ -372,7 +380,71 @@
      "text": "Hold a strip of orange peel over each glass, warm it with a match and squeeze so the oil flashes, then drop it in",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Red lips cranberry cosmopolitan (alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four coupes.",
+       "min": 5
+      },
+      {
+       "text": "Cut 4 strips of peel from the orange, then juice it.",
+       "min": 2
+      },
+      {
+       "text": "For each drink, measure 50ml cranberry juice, 20ml white grape juice, 15ml orange juice and the juice of half a lime into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake each drink with ice for 15 seconds and strain into the coupes.",
+       "min": 5
+      },
+      {
+       "text": "Hold a strip of orange peel over each glass, warm it with a match and squeeze so the oil flashes, then drop it in.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

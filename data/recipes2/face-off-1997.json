@@ -54,7 +54,9 @@
      "text": "Top each with a fold of smoked salmon, a small spoon of creme fraiche, a dill sprig and pepper.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Peach slices",
@@ -107,7 +109,9 @@
      "text": "Scatter with torn mint and a pinch of flaky salt.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Castor's lavish dinner",
@@ -176,7 +180,9 @@
      "text": "Whisk the juice of the lemons with the olive oil into a vinaigrette, toss the salad leaves and serve alongside.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Peach cobbler",
@@ -241,7 +247,9 @@
      "text": "Drop spoonfuls over the fruit and bake.",
      "min": 35
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Peach Bellini",
@@ -288,7 +296,57 @@
      "text": "Top slowly with prosecco and stir once.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Peach Bellini (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "ripe peaches",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the peaches with the sugar and lemon juice until smooth and strain.",
+       "min": 7
+      },
+      {
+       "text": "Put purée in each flute.",
+       "min": 1
+      },
+      {
+       "text": "Top slowly with the sparkling wine and stir once.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -50,7 +50,9 @@
      "text": "Bake at 190C until the pastry is golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Salsa and Salsa nachos",
@@ -119,7 +121,9 @@
      "text": "Top with salsa, avocado and sour cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Eduardo's chicken enchiladas",
@@ -190,7 +194,9 @@
      "text": "Serve with sour cream.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Purple minion jelly cups",
@@ -235,7 +241,9 @@
      "text": "Add two banana slices to each like goggles.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Minion banana caramel smoothie",
@@ -298,7 +306,9 @@
      "text": "Drizzle caramel inside four glasses, pour in the smoothie and top with a banana slice.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

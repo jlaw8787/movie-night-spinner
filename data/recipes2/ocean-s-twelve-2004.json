@@ -94,7 +94,9 @@
      "text": "Serve with grainy mustard.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lake Como antipasto",
@@ -155,7 +157,9 @@
      "text": "Drizzle with good olive oil and a squeeze of lemon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Risotto alla milanese",
@@ -224,7 +228,79 @@
      "text": "Finish with the rest of the butter and the parmesan.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Risotto alla milanese",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 350,
+       "u": "g",
+       "item": "carnaroli rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "parmesan",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the diced onion in some of the butter.",
+       "min": 6
+      },
+      {
+       "text": "Add the rice and toast, then add the verjuice.",
+       "min": 4
+      },
+      {
+       "text": "Add the hot stock ladle by ladle, with the saffron steeped in, stirring.",
+       "min": 18
+      },
+      {
+       "text": "Finish with the rest of the butter and the parmesan.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Lake Como espresso tiramisu",
@@ -297,7 +373,9 @@
      "text": "Dust with cocoa.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Orange spritz",
@@ -350,7 +428,63 @@
      "text": "Add an orange slice.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Orange spritz (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic orange aperitif",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill four big wine glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Add the orange aperitif, sparkling wine and a splash of soda water.",
+       "min": 3
+      },
+      {
+       "text": "Add an orange slice.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

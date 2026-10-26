@@ -78,7 +78,9 @@
      "text": "Serve both with sweet chilli.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Green cheese puffs",
@@ -153,7 +155,9 @@
      "text": "Pipe onto trays and bake at 200C.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Milo's steak",
@@ -220,7 +224,9 @@
      "text": "Top each with a slice of garlic butter. Save the trimmings for the dog.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Coco Bongo bananas Foster",
@@ -289,7 +295,85 @@
      "text": "When the flames die down, spoon over bowls of ice cream and scatter with pecans.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Coco Bongo bananas Foster",
+     "prep_min": 5,
+     "cook_min": 7,
+     "make_ahead": "Make to serve, the sauce is best hot",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bananas",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vanilla ice cream",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "pecans, toasted",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the butter, sugar and cinnamon in a wide pan until bubbling.",
+       "min": 4
+      },
+      {
+       "text": "Halve the bananas lengthways and cook, spooning the sauce over.",
+       "min": 2
+      },
+      {
+       "text": "Pour in the orange juice and vanilla and let it bubble into a glossy sauce.",
+       "min": 2
+      },
+      {
+       "text": "Spoon over bowls of ice cream and scatter with pecans.",
+       "min": 4
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Coco Bongo cocktail",
@@ -348,7 +432,69 @@
      "text": "Top with lemonade, stir and add an umbrella.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Coco Bongo cocktail (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "melon syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail umbrellas",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill four tall glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Add melon syrup, a splash of soda water and a squeeze of lime to each.",
+       "min": 2
+      },
+      {
+       "text": "Top with lemonade, stir and add an umbrella.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

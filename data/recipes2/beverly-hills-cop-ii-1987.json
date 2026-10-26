@@ -94,7 +94,9 @@
      "text": "Arrange the vegetables on ice around the bowl of dip.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pierogi",
@@ -155,7 +157,9 @@
      "text": "Serve with sour cream and chopped dill.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Grilled rib eye with chimichurri and corn",
@@ -252,7 +256,9 @@
      "text": "Rest the steaks briefly and serve with chimichurri.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Banana split",
@@ -327,7 +333,9 @@
      "text": "Top with whipped cream, nuts and a cherry.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rosewood's tequila sunrise",
@@ -386,7 +394,69 @@
      "text": "Garnish with an orange wheel and a cherry.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rosewood's tequila sunrise (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 720,
+       "u": "ml",
+       "item": "fresh orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "grenadine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill tall glasses with ice. Add orange juice and a squeeze of lime to each and stir.",
+       "min": 3
+      },
+      {
+       "text": "Slowly pour grenadine down the inside of each glass so it sinks. Do not stir again.",
+       "min": 2
+      },
+      {
+       "text": "Garnish with an orange wheel and a cherry.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

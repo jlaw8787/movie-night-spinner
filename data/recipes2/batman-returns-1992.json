@@ -58,7 +58,9 @@
      "text": "Cut into fingers with a sharp knife and serve cold on a dark plate.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Gotham Plaza roasted chestnuts",
@@ -97,7 +99,9 @@
      "text": "Peel while warm and sprinkle with flaky salt.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Max Shreck's masquerade roast",
@@ -170,7 +174,9 @@
      "text": "Rest the pork before carving.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Snow globe cupcakes",
@@ -249,7 +255,9 @@
      "text": "Add a sugar tree and shredded coconut snow to each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Milk punch",
@@ -304,7 +312,75 @@
      "text": "Strain into chilled coupes and grate nutmeg over the top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Milk punch (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+       "min": 12
+      },
+      {
+       "text": "Shake the cold tea, milk, sugar syrup and vanilla hard with ice, a drink at a time.",
+       "min": 4
+      },
+      {
+       "text": "Strain into chilled coupes and grate nutmeg over the top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

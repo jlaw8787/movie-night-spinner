@@ -76,7 +76,9 @@
      "text": "Fill each with a frankfurt, the onions, a squeeze of mustard, a spoon of relish and grated cheddar.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "MacKenzie in-laws smoked salmon blinis",
@@ -145,7 +147,9 @@
      "text": "Finish with a dill sprig and cracked pepper and serve with lemon wedges.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Franck's reception chicken with tarragon",
@@ -256,7 +260,115 @@
      "text": "Serve with the potatoes.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Franck's reception chicken with tarragon",
+     "prep_min": 15,
+     "cook_min": 69,
+     "make_ahead": "Sauce up to 1 day ahead, sear the chicken fresh",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "skin-on chicken breasts",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the potatoes and dice the shallot.",
+       "min": 10
+      },
+      {
+       "text": "Roast the potatoes in the oil at 220C.",
+       "min": 35
+      },
+      {
+       "text": "Season the chicken breasts and sear skin-side down in a hot pan.",
+       "min": 8
+      },
+      {
+       "text": "Flip and roast at 200C, then rest the chicken.",
+       "min": 17
+      },
+      {
+       "text": "Fry the shallot in the pan, add the stock and lemon juice and reduce, then add the cream, Dijon and tarragon and simmer.",
+       "min": 6
+      },
+      {
+       "text": "Cook the beans and toss in butter.",
+       "min": 6
+      },
+      {
+       "text": "Serve with the potatoes.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Annie's lemon wedding cake",
@@ -355,7 +467,9 @@
      "text": "Decorate with edible flowers.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Late-night basketball malted milkshake",
@@ -418,7 +532,9 @@
      "text": "Pour in the shake and top with whipped cream and a sprinkle of malt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

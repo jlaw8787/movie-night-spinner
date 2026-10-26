@@ -68,7 +68,9 @@
      "text": "Serve beside frozen vodka.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "St Petersburg beef pirozhki",
@@ -145,7 +147,9 @@
      "text": "Brush with melted butter.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Beef stroganoff",
@@ -234,7 +238,99 @@
      "text": "Stir in the sour cream off the heat and return the beef.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Beef stroganoff",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "beef fillet strips",
+       "aisle": "Meat"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the beef, mushrooms and onion.",
+       "min": 10
+      },
+      {
+       "text": "Sear the beef fast and set aside.",
+       "min": 8
+      },
+      {
+       "text": "Cook the mushrooms and onion in most of the butter, add the paprika and Worcestershire and scrape up the pan.",
+       "min": 12
+      },
+      {
+       "text": "Add the stock and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Cook the noodles and toss them with the rest of the butter.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the sour cream off the heat and return the beef.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Syrniki cottage cheese pancakes, berry jam",
@@ -313,7 +409,9 @@
      "text": "Serve with sour cream and the jam.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Vodka martini",
@@ -356,7 +454,69 @@
      "text": "Strain into chilled martini glasses and twist lemon peel over the top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Vodka martini (alcohol-free)",
+     "prep_min": 9,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "chilled water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four martini glasses. Blitz the cucumber with the water and strain through a fine sieve.",
+       "min": 4
+      },
+      {
+       "text": "Shake the cucumber water, verjuice and salt hard with ice, one drink at a time.",
+       "min": 4
+      },
+      {
+       "text": "Strain into the chilled glasses and twist lemon peel over the top.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

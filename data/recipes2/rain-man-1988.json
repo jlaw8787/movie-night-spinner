@@ -46,7 +46,9 @@
      "text": "Lay out in two neat rows of exactly ten",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Vegas buffet prawns",
@@ -99,7 +101,9 @@
      "text": "Pile the prawns on crushed ice with the sauce and lemon wedges",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pancakes, syrup first",
@@ -168,7 +172,9 @@
      "text": "Stack high",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fresh strawberry jelly with vanilla cream",
@@ -247,7 +253,9 @@
      "text": "Whip the cream with vanilla paste and icing sugar, spoon on and crumble over the shortbread",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Maple syrup bourbon smash",
@@ -310,7 +318,83 @@
      "text": "Garnish with a mint sprig and an apple slice",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Maple syrup bourbon smash (alcohol-free)",
+     "prep_min": 14,
+     "cook_min": 15,
+     "make_ahead": "Tea up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 32,
+       "u": "",
+       "item": "mint leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green apple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and chill.",
+       "min": 15
+      },
+      {
+       "text": "Juice the lemons and slice the apple thinly.",
+       "min": 5
+      },
+      {
+       "text": "Press the mint gently with the syrup and lemon juice in a shaker, one drink at a time.",
+       "min": 3
+      },
+      {
+       "text": "Add 50ml of the tea and ice, shake hard, and strain into rocks glasses packed with crushed ice.",
+       "min": 4
+      },
+      {
+       "text": "Garnish with a mint sprig and an apple slice.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

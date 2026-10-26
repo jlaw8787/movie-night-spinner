@@ -52,7 +52,9 @@
      "text": "Cook on a griddle for 5 minutes a side until golden and crisp.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pandebono cheese bread",
@@ -105,7 +107,9 @@
      "text": "Bake at 200C for 15 minutes until puffed and golden. Eat warm.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shredded beef, rice, beans and plantains",
@@ -190,7 +194,9 @@
      "text": "Serve it all on one plate.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Colombian cheese buñuelos",
@@ -253,7 +259,9 @@
      "text": "Drain and serve warm.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Colombian hot chocolate",
@@ -300,7 +308,9 @@
      "text": "Fish it out with a spoon.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

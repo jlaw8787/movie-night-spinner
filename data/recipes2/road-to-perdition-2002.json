@@ -90,7 +90,9 @@
      "text": "Fry over medium heat until golden on both sides. Cut into fingers and serve with the pickles.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wake table soda bread",
@@ -149,7 +151,9 @@
      "text": "Reduce the oven to 200C and bake until golden and hollow when tapped. Serve warm with the butter and cheddar.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Corned beef and cabbage",
@@ -238,7 +242,9 @@
      "text": "Slice the beef thick and serve with the vegetables, butter and mustard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Apple pie with cheddar",
@@ -295,7 +301,9 @@
      "text": "Lay the cheddar on top for the last stretch of baking so it melts.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rooney wake Irish coffee",
@@ -346,7 +354,61 @@
      "text": "Float the cream on top over the back of a spoon. Do not stir.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rooney wake Irish coffee (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 5,
+     "make_ahead": "Whip the cream up to 2 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "strong brewed coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whip the cream to soft ribbons so it just holds its shape. Brew the coffee.",
+       "min": 4
+      },
+      {
+       "text": "Warm 4 heatproof glasses with hot water and tip it out.",
+       "min": 3
+      },
+      {
+       "text": "Add brown sugar, a few drops of vanilla and coffee to each glass and stir until dissolved.",
+       "min": 3
+      },
+      {
+       "text": "Float the cream on top over the back of a spoon. Do not stir.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

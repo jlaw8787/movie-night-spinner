@@ -62,7 +62,9 @@
      "text": "Cut into wedges.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sunnyside ham and cheese pinwheels",
@@ -123,7 +125,9 @@
      "text": "Bake for 15 minutes until puffed and golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Andy's spaghetti and meatballs",
@@ -192,7 +196,9 @@
      "text": "Cook the spaghetti, toss with the sauce and more parmesan, and save a plate for the toys.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Strawberry bear shortcakes",
@@ -255,7 +261,9 @@
      "text": "Split the shortcakes and fill with whipped cream and the berries.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sunnyside strawberry malt shakes",
@@ -314,7 +322,9 @@
      "text": "Pour into glasses and top with whipped cream and half a strawberry each.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

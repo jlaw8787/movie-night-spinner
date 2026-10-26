@@ -44,7 +44,9 @@
      "text": "Serve warm.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Frozen orange juice shots",
@@ -81,7 +83,41 @@
      "text": "Pour into shot glasses and serve straight away. Leave out the vodka for anyone not drinking.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Frozen orange juice shots",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the juice and ice until slushy.",
+       "min": 3
+      },
+      {
+       "text": "Pour into shot glasses and serve straight away.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Billy Ray's club dinner",
@@ -156,7 +192,9 @@
      "text": "Carve and serve with horseradish cream, potatoes and jus.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Orange cake",
@@ -225,7 +263,9 @@
      "text": "Boil the concentrate with the remaining sugar and brush over the warm cake.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mimosa",
@@ -256,7 +296,41 @@
      "text": "Fill four flutes halfway with juice and gently top with sparkling wine, pouring slowly.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mimosa (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "oranges, about 300ml juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "chilled alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Squeeze the oranges and chill the juice well.",
+       "min": 15
+      },
+      {
+       "text": "Fill four flutes halfway with juice and gently top with the alcohol-free sparkling wine, pouring slowly.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

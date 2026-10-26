@@ -62,7 +62,9 @@
      "text": "Serve warm, torn, with butter and golden syrup.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wild pork sausage rolls",
@@ -125,7 +127,9 @@
      "text": "Rest briefly before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bella's roast pork",
@@ -194,7 +198,9 @@
      "text": "Make gravy with the flour, water and pan juices.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bella's birthday cake",
@@ -285,7 +291,9 @@
      "text": "Add candles and sing badly.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ricky Baker haiku hot cocoa",
@@ -326,7 +334,9 @@
      "text": "Pour into 4 tin mugs and drink around the fire.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

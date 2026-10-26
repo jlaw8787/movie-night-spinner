@@ -80,7 +80,9 @@
      "text": "Fill with the beef, lettuce, cheddar and a spoon of salsa.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chilli cheese fries",
@@ -153,7 +155,9 @@
      "text": "Spoon the chilli over, top with cheddar and grill to melt.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dee-Luxe hot dogs with the works",
@@ -234,7 +238,9 @@
      "text": "Fill the buns with franks and top with chilli, mustard, raw onion and relish.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Daddy Rich fruit ice blocks",
@@ -285,7 +291,9 @@
      "text": "Freeze solid.",
      "min": 360
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lunch truck watermelon agua fresca",
@@ -342,7 +350,9 @@
      "text": "Pour over ice with lime wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

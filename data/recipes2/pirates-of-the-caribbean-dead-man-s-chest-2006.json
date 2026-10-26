@@ -64,7 +64,9 @@
      "text": "Pile into a cup, tip onto a board like a throw of dice, and drizzle with chilli honey, lemon and thyme.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pelegosto island skewers",
@@ -117,7 +119,9 @@
      "text": "Grill over hot coals, brushing with the glaze, until sticky and charred on all sides.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Davy Jones's seafood boil",
@@ -192,7 +196,9 @@
      "text": "Drain, tip onto paper and pour over melted butter mixed with the crushed garlic.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kraken ink chocolate tart",
@@ -249,7 +255,9 @@
      "text": "Sprinkle with sea salt flakes before slicing.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tia Dalma's hibiscus ginger sorrel",
@@ -320,7 +328,81 @@
      "text": "Serve over ice, with a splash of dark rum for the grown-ups.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Tia Dalma's hibiscus ginger sorrel",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Make a day ahead",
+     "ingredients": [
+      {
+       "q": 30,
+       "u": "g",
+       "item": "dried hibiscus flowers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, peeled into strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the hibiscus, ginger, cloves and orange peel in the boiling water for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Strain, stir in the sugar and chill.",
+       "min": 8
+      },
+      {
+       "text": "Serve over ice with a squeeze of lime in each glass.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

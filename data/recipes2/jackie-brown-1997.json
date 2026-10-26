@@ -84,7 +84,95 @@
      "text": "Serve in warm tortillas with cabbage, crema and lime wedges.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Hermosa Beach fish tacos",
+     "prep_min": 25,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "flathead fillets",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "chipotle in adobo",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour and cold alcohol-free lager into a batter.",
+       "min": 5
+      },
+      {
+       "text": "Mix the sour cream with chipotle and lime juice to make crema.",
+       "min": 5
+      },
+      {
+       "text": "Shred the cabbage and cut the fish into strips.",
+       "min": 5
+      },
+      {
+       "text": "Dip the fish in batter and fry at 180C for 3 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Serve in warm tortillas with cabbage, crema and lime wedges.",
+       "min": 8
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Cabo flight lime chili peanuts",
@@ -131,7 +219,9 @@
      "text": "Cool and fold into four little foil packets.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Max Cherry's steak dinner",
@@ -194,7 +284,9 @@
      "text": "Spoon the dressing over the wedges and load the potatoes with sour cream and chives.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Max Cherry's walnut banana bread",
@@ -273,7 +365,9 @@
      "text": "Toast thick slices and spread with the maple butter.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ordell's blood orange screwdriver",
@@ -346,7 +440,89 @@
      "text": "Top with the mixed juice, stir and add a blood orange wheel.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Ordell's blood orange screwdriver (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Syrup up to 1 week ahead",
+     "ingredients": [
+      {
+       "q": 50,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece fresh ginger, 3cm",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "blood oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "soda water, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sugar, water and sliced ginger for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Cool.",
+       "min": 15
+      },
+      {
+       "text": "Squeeze the oranges and the lime.",
+       "min": 8
+      },
+      {
+       "text": "Fill tall glasses with ice and add ginger syrup and a squeeze of lime to each.",
+       "min": 4
+      },
+      {
+       "text": "Top with the mixed orange juice and a splash of soda water, stir and add a blood orange wheel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

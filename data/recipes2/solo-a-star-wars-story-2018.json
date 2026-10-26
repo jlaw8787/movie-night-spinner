@@ -60,7 +60,9 @@
      "text": "Roast at 180C until fragrant. Serve warm in one bowl beside a second bowl of mixed olives.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Corellia street dumplings",
@@ -135,7 +137,9 @@
      "text": "Serve with chilli oil and black vinegar.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Vandor lodge roast pork knuckle",
@@ -226,7 +230,9 @@
      "text": "Serve with wholegrain mustard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Coaxium popping candy chocolate bark",
@@ -273,7 +279,9 @@
      "text": "Set in the fridge for 30 minutes, then snap into jagged shards.",
      "min": 37
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lando's cape cocktail",
@@ -332,7 +340,79 @@
      "text": "Twist a strip of orange peel over the top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lando's cape cocktail (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 19,
+     "make_ahead": "Syrup and tea up to 1 week and 1 day, build fresh",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "warm water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 260,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, discard them, stir in the vanilla and chill.",
+       "min": 19
+      },
+      {
+       "text": "Stir the honey into the warm water to make a syrup.",
+       "min": 2
+      },
+      {
+       "text": "For each drink, stir 60ml cold tea, the syrup and a squeezed strip of orange zest with ice, then strain over one big ice cube.",
+       "min": 2
+      },
+      {
+       "text": "Twist a fresh strip of orange peel over the top.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

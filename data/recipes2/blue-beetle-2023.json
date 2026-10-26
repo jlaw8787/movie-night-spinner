@@ -56,7 +56,9 @@
      "text": "Serve hot with lime wedges.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Crispy pork belly chicharrones",
@@ -111,7 +113,9 @@
      "text": "Cut into bites and serve with lime wedges and hot sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Nana's pozole rojo",
@@ -202,7 +206,9 @@
      "text": "Serve topped with cabbage, radish, oregano and lime.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pan dulce sweet buns",
@@ -297,7 +303,9 @@
      "text": "Bake at 180C.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cinnamon rice horchata",
@@ -370,7 +378,9 @@
      "text": "Pour over ice and top with ground cinnamon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

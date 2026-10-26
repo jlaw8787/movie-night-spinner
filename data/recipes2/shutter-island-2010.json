@@ -56,7 +56,9 @@
      "text": "Bake at 200C",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ashecliffe baked beans on toast",
@@ -129,7 +131,9 @@
      "text": "Spoon the beans over the toast",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chuck and Teddy's storm chowder",
@@ -210,7 +214,91 @@
      "text": "Stir in the cream, clams and thyme",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chuck and Teddy's storm chowder",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "clams",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bacon, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steam the clams open in the fish stock, then strain the liquid.",
+       "min": 10
+      },
+      {
+       "text": "Render the bacon, then add the onion, celery and potato.",
+       "min": 10
+      },
+      {
+       "text": "Add the clam liquid and milk and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the cream, clams and thyme.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Law of 4 Boston cream pie",
@@ -287,7 +375,9 @@
      "text": "Melt the chocolate with the cream and pour over",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dr Cawley's brandy Alexander",
@@ -344,7 +434,83 @@
      "text": "Strain into the coupes and grate nutmeg over the top. Serve a strong coffee alongside for anyone who would rather not",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Dr Cawley's brandy Alexander (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "chocolate syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 160,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "nutmeg, freshly grated",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+       "min": 10
+      },
+      {
+       "text": "Chill four coupe glasses.",
+       "min": 2
+      },
+      {
+       "text": "For each drink, measure 30ml cold tea, 15ml chocolate syrup, 40ml thickened cream and a drop of vanilla extract into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake each drink with ice for 15 seconds.",
+       "min": 2
+      },
+      {
+       "text": "Strain into the coupes and grate nutmeg over the top.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -64,7 +64,9 @@
      "text": "Divide the cooked rice noodles into bowls, ladle over the laksa and top with bean sprouts.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Darwin mango and prawn rice paper rolls",
@@ -177,7 +179,9 @@
      "text": "Mix the fish sauce, the lime juice, the sugar, the water, the chopped chilli and the garlic clove.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tiwi Islands barbecued barramundi",
@@ -236,7 +240,9 @@
      "text": "Toss the shredded green mango with mint, the sliced chilli, the juice of the limes and the fish sauce and pile on top.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lauren and Ned's mango pavlova",
@@ -301,7 +307,9 @@
      "text": "Top with the whipped cream, the sliced mangoes and the passionfruit.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Top End frozen mango daiquiri",
@@ -374,7 +382,79 @@
      "text": "Leave out the rum and add the coconut water for non-drinkers.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Top End frozen mango daiquiri (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 120,
+     "make_ahead": "Up to 1 week, keep frozen",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "ripe mangoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 160,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "chilli flakes, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, as needed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Freeze the flesh of the ripe mangoes in chunks for at least 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Mix the salt with a little chilli flakes, wet the rims of the glasses with lime and dip.",
+       "min": 3
+      },
+      {
+       "text": "Blend the frozen mango with the coconut water, the lime juice, the sugar syrup and the ice until thick and slushy.",
+       "min": 3
+      },
+      {
+       "text": "Pour into the glasses and add a lime wheel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

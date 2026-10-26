@@ -74,7 +74,9 @@
      "text": "Serve with sour cream and apple sauce.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Beef and dill pirozhki",
@@ -163,7 +165,9 @@
      "text": "Bake at 200C until golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mama's beetroot and cabbage borscht",
@@ -244,7 +248,9 @@
      "text": "Serve with a big spoon of sour cream and rye bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Shostka honey cake",
@@ -323,7 +329,9 @@
      "text": "Cool in the tin.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Papa's fiddle-night Russian tea",
@@ -366,7 +374,9 @@
      "text": "Add a lemon slice to each and serve with jam for stirring in.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

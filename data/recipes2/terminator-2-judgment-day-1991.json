@@ -72,7 +72,9 @@
      "text": "Brush with the remaining beaten egg. Bake at 200C until golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Enrique's bean and cheese quesadillas",
@@ -131,7 +133,9 @@
      "text": "Cut into wedges and serve with the salsa and sour cream.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Desert camp tacos",
@@ -212,7 +216,9 @@
      "text": "Warm the tortillas and serve with the steak, salsa, onion and coriander.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Enrique's camp churros",
@@ -299,7 +305,9 @@
      "text": "Heat the cream and stir in the chocolate until smooth for dipping.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Liquid nitrogen frozen margarita",
@@ -358,7 +366,79 @@
      "text": "Pour into the glasses and garnish with lime wheels. Serve immediately.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Liquid nitrogen frozen margarita (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "green tea bag",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt flakes, for the rims",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the green tea in the boiling water for 3 minutes, lift out and chill in the freezer.",
+       "min": 15
+      },
+      {
+       "text": "Rub the glass rims with lime and dip in salt.",
+       "min": 3
+      },
+      {
+       "text": "Blend the cold tea, the juice of the remaining limes, orange juice, sugar syrup and ice until smooth and slushy.",
+       "min": 4
+      },
+      {
+       "text": "Pour into the glasses and garnish with lime wheels. Serve immediately.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

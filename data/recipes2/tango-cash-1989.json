@@ -56,7 +56,9 @@
      "text": "Cut into fingers to share.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "LA street tacos",
@@ -135,7 +137,9 @@
      "text": "Fill the tortillas with steak, onion, coriander and salsa verde, with lime wedges on the side.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tango's tailored rib eye",
@@ -198,7 +202,9 @@
      "text": "Rest the steaks, slice and spoon over the pan butter.",
      "min": 11
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kiki's cupcakes",
@@ -295,7 +301,9 @@
      "text": "Pipe onto the cupcakes and cover with sprinkles.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tango's sharp-dressed Manhattan",
@@ -360,7 +368,81 @@
      "text": "Strain into the coupes and drop a cherry into each. Twist orange peel over the top.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Tango's sharp-dressed Manhattan (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "coupe glasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoky black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 5 minutes, remove them and chill the tea. Chill the coupes in the freezer at the same time.",
+       "min": 15
+      },
+      {
+       "text": "Stir 200ml of the tea, the grape juice, the vanilla and a strip of orange zest over ice in a jug until very cold.",
+       "min": 2
+      },
+      {
+       "text": "Strain into the coupes and drop a cherry into each. Twist orange peel over the top.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

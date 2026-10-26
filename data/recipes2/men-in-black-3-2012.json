@@ -52,7 +52,9 @@
      "text": "Tuck into buns with mustard and sauerkraut and wrap in wax paper.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chinese restaurant dumplings",
@@ -121,7 +123,9 @@
      "text": "Serve hot with soy sauce and chilli oil.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Agency meatloaf",
@@ -216,7 +220,9 @@
      "text": "Serve thick slices with mash and peas.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Diner apple pie",
@@ -287,7 +293,9 @@
      "text": "Serve warm with ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Black suit espresso martini",
@@ -354,7 +362,67 @@
      "text": "Strain into the glasses and float three coffee beans on the foam. Repeat.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Black suit espresso martini (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 320,
+       "u": "ml",
+       "item": "strong cold brew coffee",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "coffee beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four martini glasses in the freezer.",
+       "min": 15
+      },
+      {
+       "text": "Stir the vanilla into the sugar syrup.",
+       "min": 1
+      },
+      {
+       "text": "Shake two drinks at a time with cold brew, vanilla syrup and plenty of ice, very hard for 30 seconds to build the foam.",
+       "min": 4
+      },
+      {
+       "text": "Strain into the glasses and float three coffee beans on the foam. Repeat.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -50,7 +50,9 @@
      "text": "Bake at 180C",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Baked beetroot rose petal chips",
@@ -95,7 +97,9 @@
      "text": "Sprinkle with flaky salt",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gomez's candlelit roast",
@@ -162,7 +166,9 @@
      "text": "Carve at the candlelit table with horseradish",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Black forest cake",
@@ -245,7 +251,93 @@
      "text": "Shave dark chocolate on top",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Black forest cake",
+     "prep_min": 45,
+     "cook_min": 45,
+     "make_ahead": "Assemble on the day",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "cocoa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar morello cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the eggs with the sugar until thick, then fold in the flour and cocoa",
+       "min": 15
+      },
+      {
+       "text": "Bake at 175C",
+       "min": 25
+      },
+      {
+       "text": "Cool and split the cake",
+       "min": 25
+      },
+      {
+       "text": "Brush with cherry syrup mixed with the vanilla",
+       "min": 5
+      },
+      {
+       "text": "Whip the cream and layer with the cherries",
+       "min": 15
+      },
+      {
+       "text": "Shave dark chocolate on top",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Wednesday's blackberry lemonade",
@@ -312,7 +404,9 @@
      "text": "Serve over ice with a few whole blackberries, a lemon slice and a mint sprig",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

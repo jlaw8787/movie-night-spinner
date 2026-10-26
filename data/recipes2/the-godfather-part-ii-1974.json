@@ -102,7 +102,9 @@
      "text": "Fry at 175C in batches until deep gold and hot through, then drain.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Havana Cuban sliders",
@@ -171,7 +173,9 @@
      "text": "Press in a heavy pan over medium heat with a second pan on top, about 3 minutes a side, until the cheese melts.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Vito's tenement baked ziti",
@@ -250,7 +254,9 @@
      "text": "Bake at 200C until blistered.",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hyman Roth's birthday cake",
@@ -325,7 +331,9 @@
      "text": "Beat the icing butter with icing sugar and colouring. Spread thinly, then again, and pipe happy birthday across.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fredo's Havana daiquiri",
@@ -378,7 +386,79 @@
      "text": "For each drink, shake rum, lime juice and syrup hard with plenty of ice, then double strain into a coupe.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fredo's Havana daiquiri (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 12,
+     "make_ahead": "Syrup up to 1 week ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 40,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes, juiced (about 100 ml)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water and cool to make syrup.",
+       "min": 5
+      },
+      {
+       "text": "Steep the green tea in the boiling water for 3 minutes, discard the bags and chill.",
+       "min": 10
+      },
+      {
+       "text": "Chill four coupes.",
+       "min": 1
+      },
+      {
+       "text": "For each drink, shake 40ml green tea, 20ml grape juice, lime juice and syrup hard with plenty of ice, then double strain into a coupe.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

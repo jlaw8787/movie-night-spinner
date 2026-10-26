@@ -64,7 +64,9 @@
      "text": "Steam in a lined bamboo basket.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Jack's honey and smoked salt peanuts",
@@ -111,7 +113,9 @@
      "text": "Cool until crunchy, then break into clusters.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Singapore chilli crab",
@@ -200,7 +204,9 @@
      "text": "Stir in the beaten eggs until just set. Serve with crusty bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Green flash pandan pudding",
@@ -259,7 +265,9 @@
      "text": "Top with toasted coconut and diced mango.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sao Feng's Singapore sling",
@@ -342,7 +350,93 @@
      "text": "Garnish with a pineapple wedge and a cherry.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Sao Feng's Singapore sling (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "tart cherry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "grenadine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, zest only",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pineapple wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "maraschino cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shake the non-alcoholic gin, cherry juice, pineapple juice, lime juice, grenadine and a strip of orange zest hard with ice, in batches, until frothy.",
+       "min": 6
+      },
+      {
+       "text": "Strain into tall glasses filled with ice and top with a splash of soda water.",
+       "min": 2
+      },
+      {
+       "text": "Garnish with a pineapple wedge and a cherry.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

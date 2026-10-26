@@ -64,7 +64,9 @@
      "text": "Steam in batches for 8 minutes. Top each with a dot of roe.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Highland oatcakes and smoked salmon",
@@ -133,7 +135,9 @@
      "text": "Top with crème fraîche, smoked salmon, dill and a squeeze of lemon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Skyfall lodge venison",
@@ -230,7 +234,107 @@
      "text": "Slice the venison and serve with the mash, potatoes and sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Skyfall lodge venison",
+     "prep_min": 20,
+     "cook_min": 80,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "venison backstrap",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "juniper berries, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "redcurrant jelly",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 210,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "swede, peeled and chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roast the potatoes with the oil at 200C until golden and crisp.",
+       "min": 50
+      },
+      {
+       "text": "Boil the swede until soft, drain and mash with the butter.",
+       "min": 20
+      },
+      {
+       "text": "Rub the venison with juniper, thyme, salt and pepper. Sear in a hot pan until browned all over, then rest.",
+       "min": 15
+      },
+      {
+       "text": "Add the stock, redcurrant jelly and balsamic to the pan and reduce to a glossy sauce.",
+       "min": 10
+      },
+      {
+       "text": "Slice the venison and serve with the mash, potatoes and sauce.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Cranachan",
@@ -287,7 +391,67 @@
      "text": "Layer cream, raspberries and oats in four glasses, finishing with oats on top.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Cranachan",
+     "prep_min": 20,
+     "cook_min": 5,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "rolled oats",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the oats in a dry pan until nutty, then cool.",
+       "min": 5
+      },
+      {
+       "text": "Whip the cream with the honey and vanilla to soft peaks.",
+       "min": 7
+      },
+      {
+       "text": "Lightly crush the raspberries.",
+       "min": 3
+      },
+      {
+       "text": "Layer cream, raspberries and oats in four glasses, finishing with oats on top.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Silva's island Scotch penicillin",
@@ -358,7 +522,91 @@
      "text": "Float the peated whisky on top and garnish with candied ginger.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Silva's island Scotch penicillin (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Syrup up to 1 week ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece ginger, 4cm, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lapsang souchong tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large ice cubes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pieces candied ginger",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the honey, water and sliced ginger for 5 minutes, then cool and strain.",
+       "min": 10
+      },
+      {
+       "text": "While the syrup cools, steep the tea bags in the boiling water for 5 minutes, lift them out and chill the tea.",
+       "min": 5
+      },
+      {
+       "text": "Shake 200ml of the smoky tea with the lemon juice and honey ginger syrup over ice, in batches, and strain over a large ice cube in each tumbler.",
+       "min": 7
+      },
+      {
+       "text": "Float the last of the tea on top over the back of a spoon and garnish with candied ginger.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

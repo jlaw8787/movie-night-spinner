@@ -66,7 +66,9 @@
      "text": "Arrange both on trays.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Smoked salmon oatcakes",
@@ -119,7 +121,9 @@
      "text": "Squeeze over a little lemon and lay on a slate.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "English wedding roast beef",
@@ -196,7 +200,9 @@
      "text": "Make gravy from the pan juices and stock.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Four weddings lemon curd cake",
@@ -281,7 +287,9 @@
      "text": "Ice white with icing sugar and water and decorate with flowers.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gareth's waistcoat elderflower fizz",
@@ -338,7 +346,57 @@
      "text": "For drivers, use sparkling water and a little extra cordial.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Gareth's waistcoat elderflower fizz",
+     "prep_min": 12,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "elderflower cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the cucumber into long ribbons and curl one into each of four glasses.",
+       "min": 6
+      },
+      {
+       "text": "Add cordial and a squeeze of lemon to each.",
+       "min": 3
+      },
+      {
+       "text": "Top slowly with cold alcohol-free sparkling wine.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -44,7 +44,9 @@
      "text": "Bake until puffed and golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Plum jam doughnuts (pączki)",
@@ -127,7 +129,9 @@
      "text": "Pipe jam into each and dust with icing sugar.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Coq au vin",
@@ -212,7 +216,101 @@
      "text": "Boil and mash the potatoes with butter.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Coq au vin",
+     "prep_min": 18,
+     "cook_min": 80,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "chicken pieces",
+       "aisle": "Meat"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bacon lardons",
+       "aisle": "Meat"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "pickling onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the onions and potatoes and slice the mushrooms.",
+       "min": 15
+      },
+      {
+       "text": "Brown the chicken and lardons.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions and mushrooms, then the grape juice, balsamic, stock and thyme.",
+       "min": 3
+      },
+      {
+       "text": "Simmer covered.",
+       "min": 45
+      },
+      {
+       "text": "Boil and mash the potatoes with butter.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Apple strudel",
@@ -285,7 +383,9 @@
      "text": "Dust with icing sugar.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Paris café au lait with vanilla Chantilly",
@@ -352,7 +452,9 @@
      "text": "Top with vanilla cream and a pinch of cocoa.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

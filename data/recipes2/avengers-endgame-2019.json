@@ -92,7 +92,9 @@
      "text": "Toss the apple in lemon and pack in a basket with the strawberries.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Compound kitchen tacos",
@@ -161,7 +163,9 @@
      "text": "Fill the shells and lay them out.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Morgan's cheeseburgers",
@@ -246,7 +250,9 @@
      "text": "Stack two patties per bun with pickles, onion, sauce and mustard.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Love you 3000 cake",
@@ -331,7 +337,9 @@
      "text": "Layer and cover the cake and pipe 3000 on top in red.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lake house juice pop slushies",
@@ -390,7 +398,63 @@
      "text": "Pour into tall cups with a straw. Stir vodka into any adult cups if you like.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lake house juice pop slushies",
+     "prep_min": 15,
+     "cook_min": 480,
+     "make_ahead": "Freeze the cubes the night before",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "mango, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "passionfruit, pulp",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cold apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Freeze the orange juice in ice cube trays overnight.",
+       "min": 480
+      },
+      {
+       "text": "Blend the juice cubes with the mango, passionfruit, apple juice and honey until slushy.",
+       "min": 5
+      },
+      {
+       "text": "Pour into tall cups with a straw.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

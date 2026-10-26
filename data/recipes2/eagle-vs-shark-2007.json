@@ -40,7 +40,9 @@
      "text": "Drain, pile into a bowl with toothpicks and serve with tomato sauce for dipping.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kiwi onion dip with chippies",
@@ -87,7 +89,9 @@
      "text": "Serve in a bowl surrounded by chips for dipping.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Meaty Boy cheeseburgers",
@@ -158,7 +162,9 @@
      "text": "Toast the buns and build with lettuce, tomato, beetroot, the patty and tomato sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Afghan biscuits",
@@ -243,7 +249,9 @@
      "text": "Mix the icing sugar with cocoa and water, ice each biscuit and top with a walnut half.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fight Man rematch lemon, lime and bitters",
@@ -302,7 +310,91 @@
      "text": "Garnish with lemon and lime wedges.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fight Man rematch lemon, lime and bitters (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 8,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "lime cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pomegranate syrup (grenadine)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag and cloves in the boiling water for 3 minutes, discard them and cool the spiced tea.",
+       "min": 8
+      },
+      {
+       "text": "Fill 4 glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Add lime cordial, a splash of spiced tea and the pomegranate syrup to each, top with lemonade and stir until it turns pink.",
+       "min": 3
+      },
+      {
+       "text": "Garnish with lemon and lime wedges.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

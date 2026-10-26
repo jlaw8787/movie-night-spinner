@@ -50,7 +50,9 @@
      "text": "Break up and dust with flaky salt mixed with chilli powder and lime zest.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mariachi guacamole",
@@ -115,7 +117,9 @@
      "text": "Serve with warm corn chips.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bucho's tacos al pastor",
@@ -198,7 +202,9 @@
      "text": "Serve in the tortillas with pineapple, white onion and coriander.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Carolina's bookshop tres leches",
@@ -281,7 +287,9 @@
      "text": "Whip the cream, spread over the top and dust with cinnamon.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blood orange mezcal margarita",
@@ -354,7 +362,93 @@
      "text": "Strain over fresh ice and garnish each glass with an orange wheel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Blood orange mezcal margarita (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "lapsang souchong tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "blood oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out and chill the smoky tea.",
+       "min": 15
+      },
+      {
+       "text": "Mix the salt and chilli powder on a saucer.",
+       "min": 3
+      },
+      {
+       "text": "Wet the rims of four glasses with lime and dip them in the salt.",
+       "min": 3
+      },
+      {
+       "text": "Juice the blood oranges and limes, keeping back a few orange wheels.",
+       "min": 3
+      },
+      {
+       "text": "Shake 120ml of the tea, the juices and agave hard over ice for 15 seconds, in two batches if needed.",
+       "min": 4
+      },
+      {
+       "text": "Strain over fresh ice and garnish each glass with an orange wheel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

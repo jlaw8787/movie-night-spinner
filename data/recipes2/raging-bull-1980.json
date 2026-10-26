@@ -74,7 +74,9 @@
      "text": "Pipe or spoon back into the whites. Top with pancetta, paprika and chives.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Copacabana prawns",
@@ -127,7 +129,9 @@
      "text": "Serve the prawns on ice with the sauce and wedges from the other lemon.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Jake's steak",
@@ -184,7 +188,9 @@
      "text": "Slice off the bone to share.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ricotta cake",
@@ -247,7 +253,9 @@
      "text": "Cool in the oven with the door ajar, then dust with icing sugar.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jake's Miami club rum punch",
@@ -318,7 +326,87 @@
      "text": "Finish each with an orange slice and a cherry on a pick.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jake's Miami club rum punch (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 30,
+     "make_ahead": "Up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "grenadine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "ginger beer, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cups crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the juices, grenadine and vanilla in a jug and refrigerate for 30 minutes.",
+       "min": 32
+      },
+      {
+       "text": "Fill four tall glasses with crushed ice, pour the punch over and top with the ginger beer.",
+       "min": 2
+      },
+      {
+       "text": "Finish each with an orange slice and a cherry on a pick.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

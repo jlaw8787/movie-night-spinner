@@ -56,7 +56,9 @@
      "text": "Cut into small squares.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kevin's mac and cheese",
@@ -129,7 +131,9 @@
      "text": "Bake at 200C until golden and bubbling.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kevin's sundae bar",
@@ -208,7 +212,9 @@
      "text": "Set everything out with big bowls and let everyone build their own sundae.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kevin's chocolate malted milkshake",
@@ -263,7 +269,9 @@
      "text": "Drizzle chocolate syrup inside tall glasses, pour in the shake and top with whipped cream and a cherry.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fuller's cola",
@@ -304,7 +312,9 @@
      "text": "Pour the cola and go easy on the refills.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

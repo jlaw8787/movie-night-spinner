@@ -58,7 +58,9 @@
      "text": "Lay the oysters on crushed ice with lemon wedges and the mignonette alongside.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Montmartre gougères",
@@ -121,7 +123,9 @@
      "text": "Bake until puffed and golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Elephant supper duck with cherry sauce",
@@ -194,7 +198,89 @@
      "text": "Slice the duck and serve with the cherry sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Elephant supper duck with cherry sauce",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "duck breasts",
+       "aisle": "Meat"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cherries, pitted",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fresh thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the duck skin and render skin side down over medium heat.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 200C, then rest.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the cherries with the grape juice, balsamic vinegar and thyme until syrupy.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes and mash with the butter until silky.",
+       "min": 22
+      },
+      {
+       "text": "Slice the duck and serve with the cherry sauce.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Red windmill raspberry tart",
@@ -267,7 +353,9 @@
      "text": "Cover with raspberries edge to edge and brush with warm jam.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Green fairy absinthe or green apple mint",
@@ -326,7 +414,85 @@
      "text": "Top with soda water and pour into small glasses.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Green fairy absinthe or green apple mint (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "green apples",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the star anise, caster sugar and water for 3 minutes, then cool for an aniseed syrup.",
+       "min": 10
+      },
+      {
+       "text": "Blitz the apples with the mint and strain.",
+       "min": 4
+      },
+      {
+       "text": "Put a splash of aniseed syrup in each small glass with ice, rest a sugar cube on a spoon over the glass and slowly drip apple juice over it until it dissolves.",
+       "min": 3
+      },
+      {
+       "text": "Top with soda water.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

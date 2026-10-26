@@ -62,7 +62,9 @@
      "text": "Toss the popcorn with the brown butter, parmesan and rosemary salt and serve in big tubs.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Goose's fish bites",
@@ -125,7 +127,9 @@
      "text": "Serve with tartare sauce. Keep them away from the cat.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Maria's Louisiana gumbo",
@@ -212,7 +216,9 @@
      "text": "Cook the rice and serve the gumbo over it.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Photon blast pie",
@@ -275,7 +281,9 @@
      "text": "Bake at 200C until the meringue is golden.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "1995 fuzzy navel slushies",
@@ -336,7 +344,71 @@
      "text": "Pour into chilled glasses and top each with a cherry and an orange wheel.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "1995 fuzzy navel slushies (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peach slices",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 160,
+       "u": "ml",
+       "item": "peach nectar",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "maraschino cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "orange wheels",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the peaches, orange juice, peach nectar, lime juice and ice until thick and slushy.",
+       "min": 5
+      },
+      {
+       "text": "Pour into chilled glasses and top each with a cherry and an orange wheel.",
+       "min": 0
+      }
+     ]
+    }
+   }
   }
  ]
 }

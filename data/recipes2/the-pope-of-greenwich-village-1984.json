@@ -68,7 +68,9 @@
      "text": "Grill for 3 minutes until golden.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Waiter's antipasto",
@@ -133,7 +135,9 @@
      "text": "Drain the bocconcini, dress with the basil oil and pepper, and serve beside the melon.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Veal marsala",
@@ -214,7 +218,97 @@
      "text": "Serve with crusty bread.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Veal marsala",
+     "prep_min": 15,
+     "cook_min": 4,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "veal escalopes",
+       "aisle": "Meat"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "seasoned plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "butter, for searing",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dust the veal in the seasoned flour and sear in butter and oil for 1 minute a side, then set aside.",
+       "min": 7
+      },
+      {
+       "text": "Brown the mushrooms in the same pan, add the grape juice, balsamic vinegar and stock and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Whisk in the cold butter, return the veal and warm through for a minute.",
+       "min": 3
+      },
+      {
+       "text": "Serve with crusty bread.",
+       "min": 1
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Zabaglione",
@@ -261,7 +355,63 @@
      "text": "Spoon the warm zabaglione over and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Zabaglione",
+     "prep_min": 10,
+     "cook_min": 3,
+     "make_ahead": "Serve straight away",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "strawberries, halved",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the yolks, sugar, grape juice and vanilla in a heatproof bowl over simmering water for 6 to 8 minutes until thick, pale and tripled in volume.",
+       "min": 8
+      },
+      {
+       "text": "Halve the strawberries into four glasses.",
+       "min": 3
+      },
+      {
+       "text": "Spoon the warm zabaglione over and serve straight away.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Charlie's Americano on Paulie's tab",
@@ -314,7 +464,69 @@
      "text": "Top with soda, stir once and tuck a half-moon of orange into each glass.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Charlie's Americano on Paulie's tab (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 160,
+       "u": "ml",
+       "item": "non-alcoholic bitter red aperitivo",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "strong black tea, cooled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 320,
+       "u": "ml",
+       "item": "soda water, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill four tumblers with ice.",
+       "min": 1
+      },
+      {
+       "text": "Pour the aperitivo, grape juice and tea into each glass and stir for 10 seconds.",
+       "min": 1
+      },
+      {
+       "text": "Top with soda, stir once and tuck a half-moon of orange into each glass.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -52,7 +52,9 @@
      "text": "Pile the grapes on a big platter with the olives and feta drizzled with oil, and the pita. Eat lying down like a Roman.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dexter Lake Club wings",
@@ -109,7 +111,9 @@
      "text": "Warm the barbecue sauce with the honey and toss the wings through.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Delta house sloppy joes",
@@ -184,7 +188,9 @@
      "text": "Toast the buns and pile the mince on.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Food fight cupcakes",
@@ -253,7 +259,9 @@
      "text": "Beat the remaining butter with the icing sugar, tint bright colours and swirl on.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Toga party punch",
@@ -312,7 +320,75 @@
      "text": "Add the vodka to the adults' bowl only.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Toga party punch",
+     "prep_min": 9,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, to serve",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the orange and lime.",
+       "min": 3
+      },
+      {
+       "text": "Pour the juices into a big bowl with ice and the sliced fruit.",
+       "min": 4
+      },
+      {
+       "text": "Top with lemonade and ginger beer for a bit of bite.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

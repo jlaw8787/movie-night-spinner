@@ -52,7 +52,9 @@
      "text": "Tip out and toss with the butter and salt",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Party chips and salsa",
@@ -121,7 +123,9 @@
      "text": "Serve with the corn chips",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Stu's party lasagne",
@@ -204,7 +208,9 @@
      "text": "Rest before cutting",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ghost mask cookies",
@@ -275,7 +281,9 @@
      "text": "Pipe the face in black icing",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Woodsboro house party punch",
@@ -344,7 +352,73 @@
      "text": "Ladle into party cups. Swap the vodka for extra lemonade for anyone driving",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Woodsboro house party punch",
+     "prep_min": 10,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "lemonade, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the juices and lime juice together in a big punch bowl",
+       "min": 5
+      },
+      {
+       "text": "Chill",
+       "min": 60
+      },
+      {
+       "text": "Just before serving add the lemonade, ice and orange slices",
+       "min": 3
+      },
+      {
+       "text": "Ladle into party cups",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

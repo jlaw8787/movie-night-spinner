@@ -56,7 +56,9 @@
      "text": "Pass around on a tray straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Argyle's limo snacks",
@@ -125,7 +127,9 @@
      "text": "Cool so they crisp, then serve warm in a glass bowl.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Christmas party roast beef rolls",
@@ -210,7 +214,9 @@
      "text": "Split the rolls, spread with horseradish cream and fill with beef, rocket and pickled onions.",
      "min": 18
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Snack cakes for Al",
@@ -283,7 +289,9 @@
      "text": "Split the fingers and pipe the cream inside.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Argyle's limo bar old fashioned",
@@ -352,7 +360,89 @@
      "text": "Squeeze orange peel over each, rub the rim and drop it in.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Argyle's limo bar old fashioned (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "Tea up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "demerara sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, for peel strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large ice cubes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice for stirring",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and chill.",
+       "min": 15
+      },
+      {
+       "text": "Dissolve the sugar in the hot water for a demerara syrup.",
+       "min": 3
+      },
+      {
+       "text": "Stir 240ml of the tea, the syrup, vanilla and a strip of orange zest with ice in a jug until very cold.",
+       "min": 2
+      },
+      {
+       "text": "Strain into 4 heavy tumblers over one large ice cube each.",
+       "min": 2
+      },
+      {
+       "text": "Squeeze orange peel over each, rub the rim and drop it in.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -70,7 +70,9 @@
      "text": "Cut into triangles.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shenanigans loaded cheese fries",
@@ -155,7 +157,9 @@
      "text": "Serve with the sour cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Farva's double bacon cheeseburgers",
@@ -240,7 +244,9 @@
      "text": "Toast the burger buns, spread with sauce and stack the patties, bacon, pickles and diced onion in.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Syrup-chug maple bacon pancakes",
@@ -313,7 +319,9 @@
      "text": "Stack the pancakes per plate with bacon and a spoon of butter, and pour over warm maple syrup.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Homemade spiced cola",
@@ -408,7 +416,9 @@
      "text": "Mix the syrup with the soda water in a 1 litre jug full of ice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

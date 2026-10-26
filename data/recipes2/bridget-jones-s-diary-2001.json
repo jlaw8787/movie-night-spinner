@@ -62,7 +62,9 @@
      "text": "Fill with the onions and a piece of goat's cheese and bake until the cheese softens.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Capers on toast",
@@ -115,7 +117,9 @@
      "text": "Scatter with capers and a little lemon zest, then serve.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bridget's not-blue leek soup",
@@ -210,7 +214,9 @@
      "text": "Serve the soup with a swirl of cream, the chive oil, crispy leeks and buttered crusty bread.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Orange marmalade pudding",
@@ -273,7 +279,9 @@
      "text": "Turn out and serve with hot custard.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bridget's chardonnay and peach sangria",
@@ -342,7 +350,85 @@
      "text": "Fill 4 wine glasses with ice and fruit, pour in the sangria and top with a splash of soda water.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bridget's chardonnay and peach sangria (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 day, keep chilled without the soda",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "ripe peaches",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "white grape juice, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "peach nectar",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the peaches and orange into a big jug.",
+       "min": 5
+      },
+      {
+       "text": "Add the grape juice, verjuice, peach nectar and honey and stir.",
+       "min": 5
+      },
+      {
+       "text": "Chill for at least 1 hour, which is the resting time.",
+       "min": 60
+      },
+      {
+       "text": "Fill 4 wine glasses with ice and fruit, pour in the sangria and top with a splash of soda water.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

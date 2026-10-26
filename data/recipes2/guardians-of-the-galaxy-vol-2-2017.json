@@ -46,7 +46,9 @@
      "text": "Pile into little pots to serve.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sovereign golden saffron arancini",
@@ -121,7 +123,9 @@
      "text": "Fry at 180C in batches until golden all over.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Yondu's Ravager stew",
@@ -188,7 +192,89 @@
      "text": "Serve in big bowls with crusty bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Yondu's Ravager stew",
+     "prep_min": 15,
+     "cook_min": 185,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 75,
+       "u": "ml",
+       "item": "strong black coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf of crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the beef in batches in a heavy pot.",
+       "min": 10
+      },
+      {
+       "text": "Add the onions, carrots and paprika and stir for a few minutes.",
+       "min": 15
+      },
+      {
+       "text": "Pour in the stock, coffee, molasses and enough water to cover.",
+       "min": 3
+      },
+      {
+       "text": "Simmer gently until thick and tender.",
+       "min": 170
+      },
+      {
+       "text": "Serve in big bowls with crusty bread.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Ravager fireworks popping candy sundaes",
@@ -235,7 +321,9 @@
      "text": "Scatter popping candy on top at the table so it crackles.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ego's garden pear and passionfruit cooler",
@@ -304,7 +392,9 @@
      "text": "Garnish with mint sprigs and a pear slice.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

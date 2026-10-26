@@ -46,7 +46,9 @@
      "text": "Toss with salt and green chilli powder while hot.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fireworks popcorn",
@@ -97,7 +99,9 @@
      "text": "Let set, then break into clusters.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Smoky pork ribs, corn and potato salad",
@@ -188,7 +192,9 @@
      "text": "Char the corn on a grill.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Flag cake",
@@ -241,7 +247,9 @@
      "text": "Halve the strawberries and lay rows across for the stripes.",
      "min": 13
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fourth of July bourbon lemonade",
@@ -316,7 +324,101 @@
      "text": "Stir and garnish with a lemon wheel and mint.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fourth of July bourbon lemonade (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 5,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "cold water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "strawberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "blueberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+       "min": 12
+      },
+      {
+       "text": "Squeeze four of the lemons, keeping one for wheels, and stir into the syrup and cold water.",
+       "min": 4
+      },
+      {
+       "text": "Lightly crush the strawberries and blueberries in the bottom of four jars.",
+       "min": 3
+      },
+      {
+       "text": "Fill with ice, add the cold tea and vanilla and top with the lemonade.",
+       "min": 2
+      },
+      {
+       "text": "Stir and garnish with a lemon wheel and mint.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

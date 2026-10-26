@@ -80,7 +80,9 @@
      "text": "Serve with mustard and tomato sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Forky's spork salad cups",
@@ -145,7 +147,9 @@
      "text": "Spoon into little cups and stick a spork in each one.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Duke Caboom's poutine",
@@ -196,7 +200,9 @@
      "text": "Pile the chips into bowls with the chicken, scatter over the mozzarella and pour the hot gravy over so the cheese goes melty.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fairground funnel cake",
@@ -269,7 +275,9 @@
      "text": "Slice the strawberries and serve with the warm cake.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Carnival frozen strawberry lemonade",
@@ -342,7 +350,9 @@
      "text": "Pour into big cups with a strawberry on each rim and serve with straws.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

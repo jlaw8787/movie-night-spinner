@@ -62,7 +62,9 @@
      "text": "Top with sour cream and salsa and serve straight from the tray",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hot buttered toast",
@@ -97,7 +99,9 @@
      "text": "Cut into soldiers and pile on a warm plate",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Antarctic base chilli",
@@ -182,7 +186,9 @@
      "text": "Bake the cornbread as the packet says and serve alongside",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Petri dish jelly",
@@ -243,7 +249,9 @@
      "text": "Top with the remaining fresh raspberries",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "MacReady's Rob Roy",
@@ -296,7 +304,79 @@
      "text": "Strain into the glasses and drop in a cherry. Serve over one big ice block for anyone who likes it on the rocks",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "MacReady's Rob Roy (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, remove and cool.",
+       "min": 12
+      },
+      {
+       "text": "Chill four coupe or rocks glasses.",
+       "min": 2
+      },
+      {
+       "text": "Stir 240ml of the smoked tea with the grape juice, balsamic vinegar and vanilla with plenty of ice in a jug.",
+       "min": 3
+      },
+      {
+       "text": "Strain into the glasses and drop in a cherry. Serve over one big ice block for anyone who likes it on the rocks.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -56,7 +56,9 @@
      "text": "Serve warm.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Midtown Science pepperoni pizza rolls",
@@ -129,7 +131,9 @@
      "text": "Warm the passata and serve for dipping.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Captain Stacy's red wine brisket",
@@ -196,7 +200,83 @@
      "text": "Slice the meat across the grain.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Captain Stacy's red wine brisket",
+     "prep_min": 30,
+     "cook_min": 215,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "beef brisket",
+       "aisle": "Meat"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the brisket and soften the onions.",
+       "min": 15
+      },
+      {
+       "text": "Add the grape juice, vinegar, stock and tomato paste.",
+       "min": 10
+      },
+      {
+       "text": "Braise covered at 160C.",
+       "min": 170
+      },
+      {
+       "text": "Add the carrots and roast for the last 40 minutes.",
+       "min": 40
+      },
+      {
+       "text": "Slice the meat across the grain.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Gwen's black and white cookies",
@@ -277,7 +357,9 @@
      "text": "Ice half of each with white icing and half with icing mixed with cocoa.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gwen's dark hot chocolate with marshmallow",
@@ -342,7 +424,9 @@
      "text": "Pour into mugs, top with marshmallows and toast with a blowtorch or under a hot grill.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   }
  ]
 }

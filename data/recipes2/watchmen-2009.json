@@ -68,7 +68,9 @@
      "text": "Put one cold tin of baked beans and a spoon on the side for authenticity.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gunga Diner onion bhajis",
@@ -173,7 +175,9 @@
      "text": "Mix the yoghurt with chopped mint and serve with the tamarind chutney.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gunga Diner curry",
@@ -264,7 +268,9 @@
      "text": "Stir the cream into the curry and serve with rice and warm naan.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Smiley face cookies",
@@ -343,7 +349,9 @@
      "text": "Ice the cookies, pipe two eyes and a smile in black and add a drop of jam.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Archie's midnight coffee old fashioned",
@@ -418,7 +426,91 @@
      "text": "Twist orange peel over each and float three coffee beans.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Archie's midnight coffee old fashioned (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoky black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "coarsely ground coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "coffee beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large ice cubes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, for stirring",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags and ground coffee in the boiling water for 5 minutes, strain through a paper filter and cool.",
+       "min": 30
+      },
+      {
+       "text": "Stir 240ml of the coffee tea with the maple syrup, vanilla and a strip of orange zest over ice in a jug until very cold.",
+       "min": 1
+      },
+      {
+       "text": "Strain into four tumblers over one large cube each.",
+       "min": 2
+      },
+      {
+       "text": "Twist orange peel over each and float three coffee beans.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -56,7 +56,9 @@
      "text": "Bake at 190C until puffed and set.",
      "min": 18
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Giant-size choc chip skillet cookie",
@@ -117,7 +119,9 @@
      "text": "Cut into wedges.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Luis's truth serum tacos",
@@ -196,7 +200,9 @@
      "text": "Fill warm tortillas with chicken, salsa and sour cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Quantum realm layered jelly cups",
@@ -239,7 +245,9 @@
      "text": "Top with whipped cream just before serving.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "House arrest root beer floats",
@@ -290,7 +298,9 @@
      "text": "Add whipped cream and a cherry and serve with a straw and long spoon.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

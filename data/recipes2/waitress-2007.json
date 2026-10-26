@@ -62,7 +62,9 @@
      "text": "Bake until just set.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Diner biscuits and gravy",
@@ -135,7 +137,9 @@
      "text": "Split the biscuits and pour over the gravy.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chicken pot pie",
@@ -232,7 +236,9 @@
      "text": "Bake at 200C.",
      "min": 30
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "I Hate My Husband pie",
@@ -299,7 +305,9 @@
      "text": "Drizzle with more caramel and scatter flaky salt on top.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pie diner caramel coffee shake",
@@ -362,7 +370,9 @@
      "text": "Pour into tall glasses, top with whipped cream, a drizzle of caramel and crumbled shortbread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

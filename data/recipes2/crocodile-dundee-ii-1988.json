@@ -62,7 +62,9 @@
      "text": "Serve warm with butter and golden syrup.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wally's Walkabout Creek snags",
@@ -115,7 +117,9 @@
      "text": "Wrap each sausage in a slice of bread with onions and a squeeze of tomato sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dynamite-caught campfire barra",
@@ -172,7 +176,9 @@
      "text": "Rest briefly before opening the parcel.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pavlova",
@@ -249,7 +255,9 @@
      "text": "Top with whipped cream, passionfruit and sliced mango.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Top End lemon myrtle gin and tonic",
@@ -308,7 +316,69 @@
      "text": "Top with tonic and add a lime wheel.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Top End lemon myrtle gin and tonic (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground lemon myrtle",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "tonic water",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the sugar and lemon myrtle on a plate. Run a lime around each glass rim and dip.",
+       "min": 4
+      },
+      {
+       "text": "Fill the glasses with ice, add non-alcoholic gin and lime juice.",
+       "min": 3
+      },
+      {
+       "text": "Top with tonic and add a lime wheel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

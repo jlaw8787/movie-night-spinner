@@ -52,7 +52,9 @@
      "text": "Serve the cream in a bowl beside the berries for dipping.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Vanko's Russian pelmeni",
@@ -121,7 +123,9 @@
      "text": "Toss in melted butter and dill and serve with plenty of sour cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Stark miso salmon rice bowl",
@@ -186,7 +190,9 @@
      "text": "Serve the salmon over rice with edamame, avocado and pickled ginger.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Giant doughnut doughnuts",
@@ -267,7 +273,9 @@
      "text": "Dip in a glaze of icing sugar and milk and add sprinkles to some.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Arc reactor blue lagoon",
@@ -326,7 +334,69 @@
      "text": "Garnish with a lime wheel. For a booze-free version, swap the vodka and curacao for blue cordial and extra lime.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Arc reactor blue lagoon (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "blue cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "fresh lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "strips orange zest",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "chilled lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lime wheels",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill four tall glasses with crushed ice.",
+       "min": 3
+      },
+      {
+       "text": "Into each pour the blue cordial and lime juice, then top with chilled lemonade and stir gently.",
+       "min": 5
+      },
+      {
+       "text": "Squeeze the orange zest over the glasses for aroma, then garnish each with a lime wheel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

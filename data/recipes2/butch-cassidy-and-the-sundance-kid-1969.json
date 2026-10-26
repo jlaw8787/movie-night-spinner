@@ -68,7 +68,9 @@
      "text": "Press closed, wrap tightly in baking paper and tie with string.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Candy-dipped pretzel dynamite sticks",
@@ -113,7 +115,9 @@
      "text": "Set on baking paper.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hole-in-the-Wall chilli",
@@ -210,7 +214,9 @@
      "text": "Serve the chilli with cornbread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Raindrops lemon cake",
@@ -295,7 +301,9 @@
      "text": "Mix the icing sugar with lemon juice and spread on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hole-in-the-Wall bourbon sour",
@@ -364,7 +372,95 @@
      "text": "Shake bitters onto the foam and add a cherry.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Hole-in-the-Wall bourbon sour (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 19,
+     "make_ahead": "Tea up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 220,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "egg whites",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, discard them, stir in the vanilla and chill.",
+       "min": 19
+      },
+      {
+       "text": "Dry shake the cold tea, lemon juice, syrup and egg whites.",
+       "min": 3
+      },
+      {
+       "text": "Add ice and shake hard.",
+       "min": 3
+      },
+      {
+       "text": "Strain into glasses over ice.",
+       "min": 2
+      },
+      {
+       "text": "Dust the foam with a little cinnamon and add a cherry.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

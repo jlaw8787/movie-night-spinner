@@ -40,7 +40,9 @@
      "text": "Salt well while hot and pile into a big bowl.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lager battered onion rings",
@@ -103,7 +105,73 @@
      "text": "Salt and serve hot.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lager battered onion rings",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the onions into thick rings and soak in the buttermilk.",
+       "min": 30
+      },
+      {
+       "text": "Whisk the flour with the cold alcohol-free lager into a batter.",
+       "min": 3
+      },
+      {
+       "text": "Dip the rings in the batter and fry at 185C in batches until puffed and golden.",
+       "min": 10
+      },
+      {
+       "text": "Salt and serve hot.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Mass quantity burgers",
@@ -166,7 +234,9 @@
      "text": "Stack two patties per bun with pickles and onion and pile onto a platter.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Cone-shaped ice cream",
@@ -217,7 +287,9 @@
      "text": "Dip the tops in the chocolate so it sets into a shell.",
      "min": 9
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mass quantities lager shandy jug",
@@ -270,7 +342,63 @@
      "text": "Pour in the lager and lemonade together, slowly. Stir once and pour into big glasses.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mass quantities lager shandy jug (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "alcohol-free lager (4 bottles of 375ml)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1.25,
+       "u": "l",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the alcohol-free lager and lemonade until very cold.",
+       "min": 5
+      },
+      {
+       "text": "Fill a large jug with ice and add the lemon and lime wedges, squeezing as they go in.",
+       "min": 3
+      },
+      {
+       "text": "Pour in the alcohol-free lager and lemonade together, slowly. Stir once and pour into big glasses.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

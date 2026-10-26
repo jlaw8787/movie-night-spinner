@@ -78,7 +78,9 @@
      "text": "Mix the mayonnaise and barbecue sauce to dip.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Swamp dip",
@@ -153,7 +155,9 @@
      "text": "Serve with corn chips.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Swamp stew",
@@ -240,7 +244,9 @@
      "text": "Stir in the peas and spinach for the last 5 minutes so it turns green. Serve with crusty bread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Donkey's waffles",
@@ -315,7 +321,9 @@
      "text": "Whip the cream, slice the strawberries and serve with maple syrup.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Swamp juice",
@@ -374,7 +382,9 @@
      "text": "Pour into four glasses and serve straight away with a mint sprig.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

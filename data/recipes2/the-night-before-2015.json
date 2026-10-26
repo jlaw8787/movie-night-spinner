@@ -74,7 +74,9 @@
      "text": "Finish with cracked pepper and serve on a board with lemon wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Nutcracka hunt hot honey buffalo wings",
@@ -189,7 +191,9 @@
      "text": "Serve with carrot and celery sticks.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sliders and mac and cheese party plate",
@@ -262,7 +266,9 @@
      "text": "Serve in slider buns with pickles alongside the mac and cheese cups.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Christmas gingerbread cake",
@@ -347,7 +353,9 @@
      "text": "Mix the icing sugar with lemon juice and spread over.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Christmas Eve mulled wine",
@@ -418,7 +426,81 @@
      "text": "Ladle into mugs with an orange slice each. For anyone not drinking, warm sparkling apple juice with the same spices.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Christmas Eve mulled wine (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 11,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "strong black tea",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pour the grape juice and tea into a saucepan with the orange juice, honey, spices and orange slices.",
+       "min": 3
+      },
+      {
+       "text": "Heat gently, keeping it below a simmer.",
+       "min": 15
+      },
+      {
+       "text": "Ladle into mugs with an orange slice each.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

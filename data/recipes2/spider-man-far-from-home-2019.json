@@ -74,7 +74,9 @@
      "text": "Top a third with prosciutto and fig, and the rest with artichoke and parsley.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Netherlands tulip field fries",
@@ -125,7 +127,9 @@
      "text": "Toss with sea salt and serve in paper cones with mayonnaise on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Water elemental seafood spaghetti",
@@ -206,7 +210,97 @@
      "text": "Toss through the spaghetti and parsley.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Water elemental seafood spaghetti",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 5,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green prawns",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mussels, scrubbed",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "clams, purged",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "cooked spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the spaghetti.",
+       "min": 15
+      },
+      {
+       "text": "Soften the garlic and chilli in the olive oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the fish stock, lemon juice, prawns, mussels and clams, cover and cook until the shells open, discarding any that stay shut.",
+       "min": 10
+      },
+      {
+       "text": "Toss through the spaghetti and parsley.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "E.D.I.T.H. tiramisu",
@@ -275,7 +369,9 @@
      "text": "Dust with cocoa to serve.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ned and Betty's peach bellini mocktail",
@@ -322,7 +418,9 @@
      "text": "Slowly top with chilled sparkling apple juice and stir gently.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

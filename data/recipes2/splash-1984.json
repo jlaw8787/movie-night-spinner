@@ -58,7 +58,9 @@
      "text": "Lay the oysters on crushed ice with lemon wedges and the mignonette in a small bowl with a spoon.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fish and chip cones",
@@ -137,7 +139,89 @@
      "text": "Serve in paper cones with tartare and lemon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fish and chip cones",
+     "prep_min": 30,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "cold alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "flathead fillets, cut in strips",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "tartare sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, cornflour and alcohol-free lager to a batter.",
+       "min": 5
+      },
+      {
+       "text": "Cut the potatoes into chips, rinse and dry them.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chips twice, first at a lower heat, then hot to crisp.",
+       "min": 18
+      },
+      {
+       "text": "Dip the fish strips in batter and fry at 180C until golden.",
+       "min": 12
+      },
+      {
+       "text": "Serve in paper cones with tartare and lemon.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Whole lobster",
@@ -192,7 +276,9 @@
      "text": "Serve with drawn butter and lemon.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ocean blue jelly cups",
@@ -259,7 +345,9 @@
      "text": "Chill until firm, then top with gummy fish.",
      "min": 120
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Blue lagoon",
@@ -312,7 +400,63 @@
      "text": "Top with lemonade, stir gently and garnish with a lemon wheel.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Blue lagoon (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "alcohol-free blue curaçao syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into wheels",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill four tall glasses with ice.",
+       "min": 2
+      },
+      {
+       "text": "Add the blue syrup and lemon juice to each.",
+       "min": 3
+      },
+      {
+       "text": "Top with lemonade, stir gently and garnish with a lemon wheel.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

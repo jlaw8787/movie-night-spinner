@@ -68,7 +68,9 @@
      "text": "Serve with lemon wedges.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Diner hash browns",
@@ -131,7 +133,9 @@
      "text": "Serve hot with sour cream and chives.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Eggs Benedict",
@@ -198,7 +202,9 @@
      "text": "Spoon over the hollandaise and finish with chives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Abandoned wedding cake",
@@ -277,7 +283,9 @@
      "text": "Ice white with icing sugar mixed with milk.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hale diner orange creamsicle shake",
@@ -324,7 +332,9 @@
      "text": "Pour into 4 tall glasses with an orange slice on the rim and a straw.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

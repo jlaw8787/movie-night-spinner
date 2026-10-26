@@ -60,7 +60,9 @@
      "text": "Serve on toothpicks with a small bowl of horseradish.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ozarks cornbread",
@@ -129,7 +131,9 @@
      "text": "Serve with warm wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Diner steak and eggs",
@@ -200,7 +204,9 @@
      "text": "Serve each steak with two eggs, hash browns and buttered toast.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lemon meringue pie",
@@ -271,7 +277,9 @@
      "text": "Cool before slicing.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Diner coffee float with vanilla ice cream",
@@ -332,7 +340,9 @@
      "text": "Top with whipped cream and a dusting of cocoa.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

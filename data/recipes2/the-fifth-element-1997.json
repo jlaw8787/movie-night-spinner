@@ -62,7 +62,9 @@
      "text": "Fry one more minute to re-crisp the bottoms and serve with the dip.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fhloston Paradise prawns",
@@ -135,7 +137,9 @@
      "text": "Serve on ice with the sweet chilli sauce and wedges of the other lime.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Flying noodle boat noodles",
@@ -224,7 +228,99 @@
      "text": "Finish with spring onion.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Flying noodle boat noodles",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "pork shoulder",
+       "aisle": "Meat"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, cut into matchsticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "fresh udon noodles",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the pork thin and toss with some of the soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Prep the cabbage and carrot.",
+       "min": 7
+      },
+      {
+       "text": "Stir-fry the pork in a smoking wok with the oil.",
+       "min": 3
+      },
+      {
+       "text": "Add the cabbage and carrot and stir-fry briefly.",
+       "min": 2
+      },
+      {
+       "text": "Add the udon, oyster sauce, remaining soy sauce and wine and toss until glossy.",
+       "min": 4
+      },
+      {
+       "text": "Finish with spring onion.",
+       "min": 1
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Diva Plavalaguna blue jelly",
@@ -291,7 +387,9 @@
      "text": "At the table, squeeze lemon over the top and watch it turn purple.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Multipass dirty martini",
@@ -344,7 +442,63 @@
      "text": "Strain into the frozen glasses and garnish each with three olives on a pick.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Multipass dirty martini (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 20,
+     "make_ahead": "Glasses frozen first",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "green olive brine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "green olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put four martini glasses in the freezer.",
+       "min": 20
+      },
+      {
+       "text": "Stir the non-alcoholic gin, verjuice and brine over ice in a jug until very cold.",
+       "min": 3
+      },
+      {
+       "text": "Strain into the frozen glasses and garnish each with three olives on a pick.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

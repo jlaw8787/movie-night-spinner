@@ -40,7 +40,9 @@
      "text": "Add the warm doughnuts and shake gently until coated",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ned Ryerson's eggs",
@@ -97,7 +99,9 @@
      "text": "Pipe back into the white halves and refrigerate until serving",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Phil's diner feast",
@@ -196,7 +200,9 @@
      "text": "Bring everything to the table at once, with maple syrup for the pancakes",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Angel food cake",
@@ -277,7 +283,9 @@
      "text": "Slice and serve with berries and softly whipped cream",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rita's sweet vermouth on the rocks",
@@ -324,7 +332,79 @@
      "text": "Peel long strips of orange zest, twist over the glass, rub round the rim and drop in. Stir twice",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rita's sweet vermouth on the rocks (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large ice blocks",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag and cloves in the boiling water for 5 minutes, lift them out and chill.",
+       "min": 20
+      },
+      {
+       "text": "Mix 100ml of the tea with the grape juice and balsamic.",
+       "min": 1
+      },
+      {
+       "text": "Put a large ice block in each rocks glass and pour over the mix.",
+       "min": 2
+      },
+      {
+       "text": "Peel long strips of orange zest, twist over the glass, rub round the rim and drop in. Stir twice.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

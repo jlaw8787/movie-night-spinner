@@ -76,7 +76,9 @@
      "text": "Finish with bacon, the sour cream and chives.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pixel chocolate cookies",
@@ -135,7 +137,9 @@
      "text": "Cut into neat squares while warm.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chicken jockey drumsticks",
@@ -178,7 +182,9 @@
      "text": "Roast at 200C for 45 minutes, turning and basting twice, until sticky and charred at the edges.",
      "min": 48
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pumpkin pie",
@@ -241,7 +247,9 @@
      "text": "Cool and serve with the whipped cream.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Milk bucket chocolate malt shake",
@@ -302,7 +310,9 @@
      "text": "Serve with straws.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

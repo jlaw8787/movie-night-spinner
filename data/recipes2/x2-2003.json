@@ -80,7 +80,9 @@
      "text": "Stir in the cream, season well and ladle into small cups with oyster crackers.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Iceman frozen grapes",
@@ -121,7 +123,9 @@
      "text": "Serve from the freezer in a cold bowl with mint leaves.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Alkali Lake beef stew",
@@ -198,7 +202,93 @@
      "text": "Spoon the stew over the mash.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Alkali Lake beef stew",
+     "prep_min": 17,
+     "cook_min": 215,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onions and carrots.",
+       "min": 10
+      },
+      {
+       "text": "Brown the beef in batches in oil.",
+       "min": 15
+      },
+      {
+       "text": "Soften the vegetables, return the beef with the stock, balsamic and water to cover and simmer.",
+       "min": 180
+      },
+      {
+       "text": "Boil the potatoes and mash with plenty of butter.",
+       "min": 5
+      },
+      {
+       "text": "Cook the potatoes.",
+       "min": 20
+      },
+      {
+       "text": "Spoon the stew over the mash.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Iceman ice cream sandwiches",
@@ -269,7 +359,9 @@
      "text": "Freeze until firm.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Iceman frozen apple and mint spritz",
@@ -330,7 +422,9 @@
      "text": "Pour in the remaining apple juice, top with soda water and stir gently.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

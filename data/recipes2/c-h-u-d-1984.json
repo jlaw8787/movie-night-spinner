@@ -82,7 +82,9 @@
      "text": "Top with the remaining cheddar and bake at 200C.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Manhole cover mini pizzas",
@@ -133,7 +135,9 @@
      "text": "Bake at 230C until bubbling.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "The Reverend's soup kitchen stew",
@@ -218,7 +222,9 @@
      "text": "Serve with Italian bread.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Greenwich Village cider doughnuts",
@@ -297,7 +303,9 @@
      "text": "Toss in caster sugar and cinnamon.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Glowing green cordial",
@@ -334,7 +342,9 @@
      "text": "Top with tonic water and switch off the lights so it glows under a black light.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

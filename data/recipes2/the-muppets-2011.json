@@ -74,7 +74,9 @@
      "text": "Serve on toothpicks with lingonberry jam.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Smalltown diner fries",
@@ -129,7 +131,9 @@
      "text": "Toss with sea salt and pile into paper cones with tomato sauce on the side.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Steak frites with bearnaise",
@@ -220,7 +224,9 @@
      "text": "Serve the steak over the fries.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Green peppermint biscuit slice",
@@ -305,7 +311,9 @@
      "text": "Cut into squares.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rainbow punch",
@@ -362,7 +370,9 @@
      "text": "Top with lemonade.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

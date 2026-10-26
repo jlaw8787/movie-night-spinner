@@ -70,7 +70,9 @@
      "text": "Warm the marinara and serve alongside.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Burger Shire sliders",
@@ -135,7 +137,9 @@
      "text": "Put into the buns with pickles and tomato sauce.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Questing chicken drumsticks",
@@ -204,7 +208,9 @@
      "text": "Serve on one big tray.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dad's day sundae",
@@ -261,7 +267,9 @@
      "text": "Pour over the fudge and top with whipped cream and sprinkles.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Quest potion punch",
@@ -312,7 +320,9 @@
      "text": "Stir until it turns purple like a potion.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -38,7 +38,9 @@
      "text": "Cool, then break into pieces. Stay on the road",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Scotch eggs",
@@ -105,7 +107,9 @@
      "text": "Halve and serve with English mustard",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Shepherd's pie",
@@ -180,7 +184,9 @@
      "text": "Top the lamb with mash and bake at 200C until golden",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Piccadilly jam roly-poly",
@@ -247,7 +253,9 @@
      "text": "Heat the custard and serve alongside",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Keep off the moors mulled ale",
@@ -316,7 +324,85 @@
      "text": "Strain into heatproof mugs and serve steaming",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Keep off the moors mulled ale (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 11,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "l",
+       "item": "alcohol-free ale (4 bottles of 500 ml)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "strips orange peel",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "nutmeg, freshly grated",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pour the ale into a saucepan with the sugar, cinnamon, cloves, orange peel and nutmeg.",
+       "min": 3
+      },
+      {
+       "text": "Heat gently, keeping it well under a simmer.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the apple juice and vanilla.",
+       "min": 1
+      },
+      {
+       "text": "Strain into heatproof mugs and serve steaming.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

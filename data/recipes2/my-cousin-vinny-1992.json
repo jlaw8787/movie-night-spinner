@@ -58,7 +58,9 @@
      "text": "Finish with the butter and cheddar.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fried green tomatoes",
@@ -145,7 +147,9 @@
      "text": "Mix the mayonnaise, mustard, capers and hot sauce for the remoulade.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Biscuits and sausage gravy",
@@ -224,7 +228,9 @@
      "text": "Stir in the extra flour for a minute, then add the milk a little at a time and simmer until thick, with plenty of black pepper. Split the biscuits and spoon the gravy over.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sac-O-Suds chicken fried steak",
@@ -303,7 +309,9 @@
      "text": "Serve over the mashed potato.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mona Lisa's blackberry cobbler",
@@ -378,7 +386,9 @@
      "text": "Serve with cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wazoo peach sweet tea",
@@ -453,7 +463,9 @@
      "text": "Serve over ice with fresh peach slices and mint.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

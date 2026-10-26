@@ -58,7 +58,9 @@
      "text": "Cool so they crisp, then pour into paper cones.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bureau men's rooftop crostini",
@@ -121,7 +123,9 @@
      "text": "Spread the cheese on the toast, drizzle with honey and finish with thyme and pepper.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Manhattan steak frites",
@@ -204,7 +208,99 @@
      "text": "Rest the steaks, then slice and top with the shallot red wine butter. Serve with frites.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Manhattan steak frites",
+     "prep_min": 17,
+     "cook_min": 50,
+     "make_ahead": "Shallot butter up to 3 days",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "sirloin steak, in four pieces",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil for searing",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the shallots with the grape juice and vinegar until almost dry. Cool, then mix into the butter with the salt and chill.",
+       "min": 20
+      },
+      {
+       "text": "Cut the potatoes into frites, rinse and dry thoroughly.",
+       "min": 10
+      },
+      {
+       "text": "Fry in oil at 140C, then drain and cool.",
+       "min": 20
+      },
+      {
+       "text": "Fry again at 185C until crisp. Salt lightly.",
+       "min": 3
+      },
+      {
+       "text": "Season the steaks and sear hard in a hot pan with the oil to your preferred doneness.",
+       "min": 6
+      },
+      {
+       "text": "Rest the steaks, then slice and top with the shallot butter. Serve with frites.",
+       "min": 8
+      }
+     ]
+    }
+   }
   },
   {
    "n": "The Chairman's chocolate fondant",
@@ -271,7 +367,9 @@
      "text": "Rest briefly, loosen the edges and turn onto plates. Serve immediately.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Election night French 75",
@@ -340,7 +438,79 @@
      "text": "Finish with a long strip of lemon peel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Election night French 75 (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 40,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "cold alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, for peel strips",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water and cool.",
+       "min": 4
+      },
+      {
+       "text": "Shake the non-alcoholic gin, lemon juice and cooled syrup with ice.",
+       "min": 2
+      },
+      {
+       "text": "Strain evenly into 4 chilled flutes and top each with sparkling wine, pouring slowly.",
+       "min": 2
+      },
+      {
+       "text": "Finish with a long strip of lemon peel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

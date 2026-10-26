@@ -68,7 +68,9 @@
      "text": "Blitz the charred mix rough with salt and serve with the chips.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Plaza elote with chipotle mayo",
@@ -141,7 +143,9 @@
      "text": "Serve with lime wedges.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Puerco pibil, banana leaf pork",
@@ -236,7 +240,9 @@
      "text": "Shred the pork and serve with the pickled onion and warm tortillas.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mexican chocolate flan",
@@ -307,7 +313,9 @@
      "text": "Chill, then run a knife around the edge and turn out.",
      "min": 240
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tequila with sangrita chaser",
@@ -360,7 +368,75 @@
      "text": "Serve each with a sangrita chaser alongside.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Tequila with sangrita chaser (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 2,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "green tea, brewed and chilled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli powder",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the orange juice, juice of one lime, tomato juice and chilli powder for the sangrita.",
+       "min": 4
+      },
+      {
+       "text": "Stir the green tea with the agave syrup, the salt and a squeeze of lime and pour into four glasses.",
+       "min": 2
+      },
+      {
+       "text": "Serve each with a sangrita chaser alongside.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

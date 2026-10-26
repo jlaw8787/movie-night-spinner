@@ -70,7 +70,9 @@
      "text": "Cool so they stay crisp.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red scrunchie raspberry crostini",
@@ -133,7 +135,9 @@
      "text": "Top the ricotta with raspberries and drizzle with honey.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Funeral reception lasagne",
@@ -222,7 +226,99 @@
      "text": "Rest before cutting.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Funeral reception lasagne",
+     "prep_min": 40,
+     "cook_min": 180,
+     "make_ahead": "Assemble a day ahead, bake fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "beef mince",
+       "aisle": "Meat"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "pork mince",
+       "aisle": "Meat"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tins crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "lasagne sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mince.",
+       "min": 10
+      },
+      {
+       "text": "Simmer with tomatoes and beef stock.",
+       "min": 120
+      },
+      {
+       "text": "Make a bechamel with butter, flour and milk.",
+       "min": 10
+      },
+      {
+       "text": "Layer the meat sauce, bechamel, lasagne sheets and mozzarella.",
+       "min": 15
+      },
+      {
+       "text": "Bake at 180C.",
+       "min": 45
+      },
+      {
+       "text": "Rest before cutting.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Pep rally red velvet cupcakes",
@@ -307,7 +403,9 @@
      "text": "Pipe on the cupcakes and add a red sugar dot.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cherry slushie",
@@ -344,7 +442,9 @@
      "text": "Pour into tall cups with a straw and a spoon.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

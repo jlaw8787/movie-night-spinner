@@ -56,7 +56,9 @@
      "text": "Serve with butter and golden syrup.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Faraway Downs corned beef sandwiches",
@@ -129,7 +131,9 @@
      "text": "Cut into triangles.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Campfire beef and vegetables",
@@ -200,7 +204,9 @@
      "text": "Cover and cook over coals or at 160C until the beef falls apart.",
      "min": 180
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wattleseed pavlova",
@@ -273,7 +279,9 @@
      "text": "Top with cream, mango and passionfruit.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Drover's rum and ginger beer billy punch",
@@ -348,7 +356,91 @@
      "text": "Ladle into mugs with a lime wedge and mint. Leave out the rum for a booze free pot.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Drover's rum and ginger beer billy punch (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Tea can be chilled a day ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "strong black tea",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "cold ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "mint leaves, to serve",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea and chill.",
+       "min": 60
+      },
+      {
+       "text": "Mix the tea with the molasses, vanilla, lime juice and sugar, stirring to dissolve.",
+       "min": 5
+      },
+      {
+       "text": "Add plenty of ice and top with ginger beer.",
+       "min": 3
+      },
+      {
+       "text": "Ladle into mugs with a lime wedge and mint.",
+       "min": 7
+      }
+     ]
+    }
+   }
   }
  ]
 }

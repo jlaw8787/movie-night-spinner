@@ -36,7 +36,9 @@
      "text": "Toss straight away with salt and cayenne. Tip into a bucket and put out a bowl for the shells.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "San Francisco sourdough",
@@ -81,7 +83,9 @@
      "text": "Tear into chunks and serve with the butter.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "San Francisco cioppino",
@@ -184,7 +188,113 @@
      "text": "Serve with sliced sourdough.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "San Francisco cioppino",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chopped tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 650,
+       "u": "ml",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cooked crab",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "clams and mussels, scrubbed",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "raw prawns",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm white fish fillet",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sourdough loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the fennel and onion and crush the garlic.",
+       "min": 10
+      },
+      {
+       "text": "Soften in oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the tomatoes, verjuice and stock and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Add the crab, then the clams and mussels, then the prawns and fish, cooking until the shells open.",
+       "min": 12
+      },
+      {
+       "text": "Serve with sliced sourdough.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Jailhouse chocolate cake",
@@ -291,7 +401,9 @@
      "text": "Ice the cake.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Torchy's bourbon boilermaker",
@@ -338,7 +450,73 @@
      "text": "Twist a small strip of orange peel over each and serve with a cold beer.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Torchy's bourbon boilermaker (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out and stir in the maple syrup and vanilla.",
+       "min": 5
+      },
+      {
+       "text": "Chill the lagers and the tea until icy.",
+       "min": 30
+      },
+      {
+       "text": "Pour the tea into shot glasses.",
+       "min": 3
+      },
+      {
+       "text": "Twist a small strip of orange peel over each and serve with a cold alcohol-free lager.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -74,7 +74,9 @@
      "text": "Arrange everything on a big platter with the olives and figs.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "London 1918 pasties",
@@ -143,7 +145,9 @@
      "text": "Serve with English mustard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Veld celebration stew",
@@ -228,7 +232,113 @@
      "text": "Serve the stew with the frites.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Veld celebration stew",
+     "prep_min": 30,
+     "cook_min": 210,
+     "make_ahead": "Stew up to 2 days ahead, fry the chips fresh",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 75,
+       "u": "ml",
+       "item": "strong black coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut in chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the beef in batches.",
+       "min": 15
+      },
+      {
+       "text": "Cook the onions slowly.",
+       "min": 20
+      },
+      {
+       "text": "Add the stock, coffee, molasses, malt vinegar, thyme, bay leaves and mustard and braise at 160C.",
+       "min": 180
+      },
+      {
+       "text": "Fry the potatoes at 140C, then again at 180C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Serve the stew with the frites.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Diana's raspberry ripple ice cream cones",
@@ -311,7 +421,9 @@
      "text": "Scoop into cones.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Veld Belgian ale with orange and honey",
@@ -374,7 +486,73 @@
      "text": "Twist orange peel over the top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Veld Belgian ale with orange and honey (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 5,
+     "make_ahead": "Syrup up to 3 days, chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, peeled zest and 1 strip for garnish",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch of crushed coriander seed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free wheat beer, 330ml each",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the orange zest with the honey, water and coriander seed, then cool and strain.",
+       "min": 8
+      },
+      {
+       "text": "Put a spoon of syrup and a squeeze of lemon in each of 4 chilled glasses.",
+       "min": 3
+      },
+      {
+       "text": "Pour the alcohol-free wheat beer slowly so it builds a head.",
+       "min": 2
+      },
+      {
+       "text": "Twist orange peel over the top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

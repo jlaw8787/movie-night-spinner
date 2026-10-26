@@ -58,7 +58,9 @@
      "text": "Spoon a little dressing over each and serve with lemon wedges.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Karaoke bar wings",
@@ -117,7 +119,9 @@
      "text": "Toss the wings through the glaze and scatter with sesame seeds.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Food critic's steak",
@@ -190,7 +194,9 @@
      "text": "Serve the steak with the fries, sauce and a green salad.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Crème brûlée and jelly",
@@ -257,7 +263,9 @@
      "text": "Sprinkle with sugar, torch and serve with the jelly.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Raspberry sparkler",
@@ -304,7 +312,57 @@
      "text": "Slowly top with cold sparkling wine and drop a whole raspberry in each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Raspberry sparkler",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Purée up to 1 day, top with sparkling wine just before serving",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, cold",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crush most of the raspberries with the sugar and lemon juice and push through a sieve.",
+       "min": 6
+      },
+      {
+       "text": "Spoon a spoonful of purée into each of 4 flutes.",
+       "min": 2
+      },
+      {
+       "text": "Slowly top with the cold alcohol-free sparkling wine and drop a whole raspberry in each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

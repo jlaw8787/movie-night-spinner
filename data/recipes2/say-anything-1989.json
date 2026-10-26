@@ -84,7 +84,9 @@
      "text": "Serve hot with tomato relish.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Seattle smoked salmon bites",
@@ -147,7 +149,9 @@
      "text": "Finish each with a squeeze of lemon.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dijon crusted salmon, crushed potatoes",
@@ -228,7 +232,9 @@
      "text": "Steam the green beans and toss with butter.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kickboxer's summer berry crumble",
@@ -297,7 +303,9 @@
      "text": "Serve with vanilla ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Boombox Seattle mocha with whipped cream",
@@ -358,7 +366,9 @@
      "text": "Top with whipped cream and shave a little chocolate over the top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

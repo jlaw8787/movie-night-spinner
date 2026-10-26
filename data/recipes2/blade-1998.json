@@ -52,7 +52,9 @@
      "text": "Split the baguette, spread thickly and bake at 200C until crisp.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blood rave beetroot dip",
@@ -111,7 +113,9 @@
      "text": "Cut the pita into wedges and bake crisp.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Garlic-heavy steak",
@@ -174,7 +178,9 @@
      "text": "Rest the steaks and steam the broccolini.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Blood orange tart",
@@ -243,7 +249,9 @@
      "text": "Simmer blood orange slices in a sugar syrup and arrange on top.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blood rave pomegranate sangria",
@@ -324,7 +332,91 @@
      "text": "Add plenty of ice and top with soda water just before serving.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Blood rave pomegranate sangria (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 120,
+     "make_ahead": "Up to 1 day, add ice at serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "strong black tea, cooled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "pomegranate juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "blood oranges, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "pomegranate, seeds only",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the grape juice, cold tea, pomegranate juice, sugar and cinnamon in a big jug.",
+       "min": 8
+      },
+      {
+       "text": "Add the oranges and pomegranate seeds.",
+       "min": 2
+      },
+      {
+       "text": "Chill for at least two hours.",
+       "min": 120
+      },
+      {
+       "text": "Add plenty of ice and top with soda water just before serving.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

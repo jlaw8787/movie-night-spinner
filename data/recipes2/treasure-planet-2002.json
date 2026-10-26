@@ -50,7 +50,9 @@
      "text": "Bake until golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Purp fruit platter",
@@ -103,7 +105,9 @@
      "text": "Drizzle with honey and squeeze over lime juice.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Silver's galley stew",
@@ -176,7 +180,89 @@
      "text": "Serve in bowls with crusty bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Silver's galley stew",
+     "prep_min": 17,
+     "cook_min": 195,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "instant coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the onions, carrots and potatoes.",
+       "min": 15
+      },
+      {
+       "text": "Brown the beef in oil.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions, carrots, stock, coffee and water to cover and simmer.",
+       "min": 120
+      },
+      {
+       "text": "Add the potatoes and simmer until thick.",
+       "min": 60
+      },
+      {
+       "text": "Serve in bowls with crusty bread.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Treasure chest brownies",
@@ -243,7 +329,9 @@
      "text": "Cut into rectangles and pile chocolate coins on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Etherium blueberry lime fizz",
@@ -310,7 +398,9 @@
      "text": "Spoon the syrup slowly over the top so it sinks in layers.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

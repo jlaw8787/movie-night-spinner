@@ -62,7 +62,9 @@
      "text": "Serve over shredded iceberg in martini glasses with lemon wedges.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "High roller chips",
@@ -113,7 +115,9 @@
      "text": "Serve in a silver bowl.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Benedict's casino rib eye with béarnaise",
@@ -202,7 +206,9 @@
      "text": "Sear the steaks, pull at 54C and rest.",
      "min": 14
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fountain show sundae",
@@ -253,7 +259,9 @@
      "text": "Pipe whipped cream high and scatter gold sprinkles so they catch the light.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Casino martini",
@@ -296,7 +304,53 @@
      "text": "Strain into chilled martini glasses and add a green olive on a pick.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Casino martini (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar green olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the non-alcoholic gin and verjuice over plenty of ice until very cold, one drink at a time.",
+       "min": 4
+      },
+      {
+       "text": "Strain into chilled martini glasses and add a green olive on a pick.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

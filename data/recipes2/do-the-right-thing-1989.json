@@ -56,7 +56,9 @@
      "text": "Melt the butter with the garlic and chopped parsley, toss the hot knots through and shower with parmesan.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chilli-lime watermelon and feta skewers",
@@ -121,7 +123,9 @@
      "text": "Mix the salt, chilli flakes and lime zest, squeeze the lime juice over the skewers and sprinkle with the chilli salt. Serve straight from the fridge.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sal's Famous slice",
@@ -180,7 +184,9 @@
      "text": "Bake on a preheated tray at the oven's highest setting until bubbling and charred in spots. Sprinkle with oregano and cut big.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Cherry shaved ice",
@@ -237,7 +243,9 @@
      "text": "Shave or crush the ice into four cups and pour the syrup over just before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Heatwave lager and lemonade shandy",
@@ -290,7 +298,63 @@
      "text": "Half-fill each glass with ice-cold lager, top with lemonade, then add ice and a lemon wheel. Serve straight away.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Heatwave lager and lemonade shandy (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Lemonade up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "cold water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Juice the lemons and stir the juice with the sugar and cold water until dissolved. Keep a few lemon wheels for the glasses.",
+       "min": 5
+      },
+      {
+       "text": "Chill 4 tall glasses in the freezer.",
+       "min": 20
+      },
+      {
+       "text": "Half-fill each glass with ice-cold alcohol-free lager, top with lemonade, then add ice and a lemon wheel. Serve straight away.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

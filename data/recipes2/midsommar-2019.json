@@ -58,7 +58,9 @@
      "text": "Add a bowl of sour cream with chives and thinly sliced red onion.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hårga flower crown crudités",
@@ -123,7 +125,9 @@
      "text": "Mix the sour cream with dill and salt for the dip in the middle.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ninety-year feast dill gravlax",
@@ -204,7 +208,9 @@
      "text": "Mix the Dijon, remaining sugar, vinegar, oil and dill for the sauce. Serve with rye bread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Strawberry midsummer cake",
@@ -283,7 +289,9 @@
      "text": "Top with whole berries.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Elderflower and strawberry gin punch",
@@ -354,7 +362,81 @@
      "text": "Fill the jug with ice and top with sparkling water. Pour into glasses with a few edible flowers on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Elderflower and strawberry gin punch (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "strawberries, hulled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "elderflower cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "chilled sparkling water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "punnet edible flowers",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crush the strawberries with the sugar in a jug and leave for 15 minutes.",
+       "min": 18
+      },
+      {
+       "text": "Add the non-alcoholic gin, cordial and lemon juice and stir.",
+       "min": 2
+      },
+      {
+       "text": "Fill the jug with ice and top with sparkling water. Pour into glasses with a few edible flowers on top.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

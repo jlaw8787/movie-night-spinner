@@ -74,7 +74,9 @@
      "text": "Serve in the buns with the chilli, mustard and the raw chopped onion.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Brooklyn smoked salmon bagel bites",
@@ -155,7 +157,9 @@
      "text": "Finish with pepper and a little more dill.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Thai basil chicken over rice",
@@ -234,7 +238,9 @@
      "text": "Serve the chicken over rice with a fried egg on top.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Shield pie",
@@ -303,7 +309,9 @@
      "text": "Serve warm with vanilla ice cream.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Smithsonian cherry lime phosphate",
@@ -378,7 +386,85 @@
      "text": "Top with soda water, stir once and garnish with a cherry and a lime wedge.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Smithsonian cherry lime phosphate",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "Syrup up to 1 week, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen pitted cherries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "vanilla extract, a few drops",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lime wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the cherries with the sugar and water, then mash well.",
+       "min": 10
+      },
+      {
+       "text": "Strain and cool the syrup completely.",
+       "min": 10
+      },
+      {
+       "text": "Fill tall glasses with crushed ice and add the cherry syrup, lime juice and a drop of vanilla to each.",
+       "min": 1
+      },
+      {
+       "text": "Top with soda water, stir once and garnish with a cherry and a lime wedge.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

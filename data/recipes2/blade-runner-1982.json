@@ -84,7 +84,9 @@
      "text": "Mix soy, rice vinegar and chilli oil for dipping.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Origami crackers",
@@ -131,7 +133,9 @@
      "text": "Drain and toss with flaky salt and shichimi togarashi.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rain-soaked ramen",
@@ -222,7 +226,107 @@
      "text": "Top with pork, halved egg, nori and spring onion.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rain-soaked ramen",
+     "prep_min": 25,
+     "cook_min": 140,
+     "make_ahead": "Pork and eggs up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "pork belly",
+       "aisle": "Meat"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 625,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "ramen noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet nori",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Braise the pork belly in the soy, apple juice, sugar, rice vinegar and water, covered, on a low simmer.",
+       "min": 120
+      },
+      {
+       "text": "Soft-boil the eggs, peel and marinate in some of the braising liquid.",
+       "min": 15
+      },
+      {
+       "text": "Slice the pork. Heat the stock and season with a little soy.",
+       "min": 10
+      },
+      {
+       "text": "Cook the noodles and divide between bowls.",
+       "min": 5
+      },
+      {
+       "text": "Top with pork, halved egg, nori and spring onion.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Origami cookies",
@@ -279,7 +383,9 @@
      "text": "Fold or twist into shapes while still hot and soft.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Deckard's Japanese whisky highball",
@@ -326,7 +432,83 @@
      "text": "Top slowly with very cold soda water down the spoon. Squeeze a strip of lemon peel over each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Deckard's Japanese whisky highball (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 20,
+     "make_ahead": "Tea up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bags ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and stir in the honey and vanilla.",
+       "min": 5
+      },
+      {
+       "text": "Chill the tea in the freezer until very cold.",
+       "min": 15
+      },
+      {
+       "text": "Pack four tall glasses with ice, stir to chill, then pour off any water.",
+       "min": 2
+      },
+      {
+       "text": "Add 60ml of the cold tea to each and stir.",
+       "min": 1
+      },
+      {
+       "text": "Top slowly with very cold soda water down the spoon. Squeeze a strip of lemon peel over each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -80,7 +80,9 @@
      "text": "Fry at 180C in batches until golden and serve with lime.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tostones",
@@ -143,7 +145,9 @@
      "text": "Mix the garlic, lime juice and olive oil, spoon over and finish with flaky salt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ropa vieja",
@@ -242,7 +246,9 @@
      "text": "Cook the rice and warm the black beans, and serve alongside.",
      "min": 18
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "The World Is Yours guava pastelitos",
@@ -299,7 +305,9 @@
      "text": "Bake at 200C until puffed.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Babylon Club mojito",
@@ -364,7 +372,75 @@
      "text": "Add rum, fill with crushed ice, top with soda and stir.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Babylon Club mojito (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 2,
+     "make_ahead": "Syrup up to 1 week ahead",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 32,
+       "u": "",
+       "item": "mint leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "lime juice (about 4 limes)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water and cool to make syrup.",
+       "min": 5
+      },
+      {
+       "text": "In each tall glass, gently muddle mint with some syrup and lime juice.",
+       "min": 4
+      },
+      {
+       "text": "Add the white grape juice, fill with crushed ice, top with soda and stir.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }
