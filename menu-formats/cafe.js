@@ -170,34 +170,41 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const chalkTxt=e.chalk?`-webkit-mask-image:${CHALKSOFT};mask-image:${CHALKSOFT};`:"";
 
   /* venue lettering on the photo: size from length, two lines at most */
-  const vlen=venue.length,vw=W-2*FR-80-(hasP?400:0);
+  const vlen=venue.length,CW=352,PHP=906,PW=580,PT=870,vw=hasP?CW:W-2*FR-80;
   let vs=Math.min(e.up?78:86,Math.floor(vw/(Math.max(vlen,6)*e.dr)));let vlines=1;
-  if(vs<52){vs=Math.min(64,Math.floor(2*vw/(vlen*e.dr)));vlines=2}vs=Math.max(40,vs);
+  if(hasP){for(let L=2;vs<52&&L<=3;L++){vlines=L;vs=Math.min(64,Math.floor(.9*L*vw/(vlen*e.dr)))}vs=Math.max(30,vs)}
+  else{if(vs<52){vs=Math.min(64,Math.floor(2*vw/(vlen*e.dr)));vlines=2}vs=Math.max(40,vs)}
 
   /* logo on its own panel at the foot of the photo; fallback is set type */
   const LB=logoBox(ctx,430,118);
   const darkPanel="rgba(12,12,14,.78)",lightPanel="rgba(250,247,240,.93)";
-  const logoHtml=LB?`<div data-lp data-dark="1" data-alt="${lightPanel}" data-altsh="0 8px 24px rgba(0,0,0,.45)" style="position:absolute;left:${FR+26}px;top:${FR+PH-LB.h-62}px;padding:18px 22px;background:${darkPanel};box-shadow:0 8px 24px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.14);border-radius:${era==="1930s-40s"?0:era==="1970s"?18:6}px">${LB.html}</div>`
+  const LB2=hasP?logoBox(ctx,300,104):null;
+  const logoHtml=hasP?(LB2?`<div data-lp data-dark="1" data-alt="${lightPanel}" data-altsh="0 8px 24px rgba(0,0,0,.45)" style="flex:none;align-self:flex-start;padding:16px 20px;background:${darkPanel};box-shadow:0 8px 24px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.14);border-radius:${era==="1930s-40s"?0:era==="1970s"?18:6}px">${LB2.html}</div>`
+    :`<div data-fit style="flex:none;width:${CW}px;height:130px;overflow:hidden;padding:14px 20px;box-sizing:border-box;background:${darkPanel};display:flex;flex-direction:column;justify-content:center"><div style="font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:1.02;${fs(f.title&&f.title.length>24?34:46,18)}">${esc(f.title)}</div><div style="font-family:${bodyF};color:${mix(ACC,"#ffffff",.3)};letter-spacing:.2em;${fs(16,14)};margin-top:6px">NOW SHOWING ${esc(f.year)}</div></div>`)
+    :LB?`<div data-lp data-dark="1" data-alt="${lightPanel}" data-altsh="0 8px 24px rgba(0,0,0,.45)" style="position:absolute;left:${FR+26}px;top:${FR+PH-LB.h-62}px;padding:18px 22px;background:${darkPanel};box-shadow:0 8px 24px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.14);border-radius:${era==="1930s-40s"?0:era==="1970s"?18:6}px">${LB.html}</div>`
     :`<div data-fit style="position:absolute;left:${FR+26}px;top:${FR+PH-190}px;width:${hasP?500:560}px;height:150px;overflow:hidden;padding:16px 22px;box-sizing:border-box;background:${darkPanel};display:flex;flex-direction:column;justify-content:center"><div style="font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:1.02;${fs(f.title&&f.title.length>24?40:56,18)}">${esc(f.title)}</div><div style="font-family:${bodyF};color:${mix(ACC,"#ffffff",.3)};letter-spacing:.2em;${fs(16,14)};margin-top:6px">NOW SHOWING ${esc(f.year)}</div></div>`;
 
   /* photo with venue lettering and caption */
-  const photoHtml=`<div style="position:absolute;left:${FR}px;top:${FR}px;width:${W-2*FR}px;height:${PH}px;overflow:hidden;background:#222">
+  const PHH=hasP?PHP:PH;
+  const photoFn=()=>`<div style="position:absolute;left:${FR}px;top:${FR}px;width:${W-2*FR}px;height:${PHH}px;overflow:hidden;background:#222">
     ${hasP?`<div style="position:absolute;inset:0;background:${BOARD}"></div>
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 75% 50%,rgba(255,255,255,.1),rgba(0,0,0,.35) 90%)"></div>
-    <div style="position:absolute;right:46px;top:24px;width:360px;height:540px;transform:rotate(${(T.tilt*.5).toFixed(1)}deg);background:#f4efe3;padding:7px;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.65)"><img alt="" crossorigin="anonymous" src="${ctx.img(poster,"w780")}" style="display:block;width:346px;height:526px;object-fit:contain;background:#222"></div>`
+    <div style="position:absolute;left:12px;top:12px;width:${PW+12}px;height:${PT+12}px;background:#f4efe3;padding:6px;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.65)"><img alt="" crossorigin="anonymous" src="${ctx.img(poster,"w780")}" style="display:block;width:${PW}px;height:${PT}px;object-fit:contain;background:#f4efe3"></div>`
     :`${photo(ctx,still,W-2*FR,PH,`${e.photoF==="none"?"":e.photoF} ${T.f}`,"50% 35%")}
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(0,0,0,0) 45%,rgba(0,0,0,${T.vig}) 100%)"></div>
     <div style="position:absolute;left:0;right:0;top:0;height:${vlines>1?300:250}px;background:linear-gradient(180deg,rgba(0,0,0,.82),rgba(0,0,0,.5) 55%,rgba(0,0,0,0))"></div>`}
-    <div style="position:absolute;left:40px;right:${hasP?440:40}px;top:30px">
+    ${hasP?`<div style="position:absolute;left:${12+PW+12+24}px;top:22px;width:${CW}px;height:${PHP-34}px;display:flex;flex-direction:column;gap:12px">`:""}
+    <div style="${hasP?"flex:none":"position:absolute;left:40px;right:40px;top:30px"}">
       <div style="font-family:${bodyF};font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:${mix(ACC,"#ffffff",.15)};font-size:18px;margin-bottom:8px">${esc(T.kick)}</div>
       <div data-fit style="height:${Math.ceil(vs*1.08*vlines)+6}px;overflow:hidden;font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:1.04;${fs(vs,30)};text-shadow:0 3px 14px rgba(0,0,0,.6);${era==="1950s"?"letter-spacing:.06em;":""}">${esc(venue)}</div>
       <div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:#f2efe6;font-size:22px;margin-top:6px;${hasP?"":"white-space:nowrap;overflow:hidden;text-overflow:ellipsis"}">${esc(sign)}</div>
     </div>
+    ${hasP?`${logoHtml}${noteHtml}${card}</div>`:""}
     ${hasP?"":`    <div style="position:absolute;right:20px;bottom:18px;max-width:430px;text-align:right;font-family:${bodyF};font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.55);padding:6px 12px">${esc(hasP||!still?"Now showing":"Behind the counter")}, ${esc(f.year)}</div>`}
   </div>`;
 
   /* the board */
-  const BT=FR+PH, BH=H-FR-BT;
+  const BT=FR+PHH, BH=H-FR-BT;
   const cols=[[],[]];
   {const wt=c=>c.items.reduce((a,it)=>a+1.1+Math.ceil(it.n.length/28)+Math.ceil(it.note.length/40),1.4);let a=0,b=0;
    const ordered=C.slice();ordered.forEach((c,i)=>{const w=wt(c);if(i===0||(a<=b&&!(i===ordered.length-1&&cols[1].length===0))){cols[0].push(c);a+=w}else{cols[1].push(c);b+=w}});
@@ -215,7 +222,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const stampWord=i=>{const w=(winks[i%Math.max(1,winks.length)]||"").replace(/^(the|a|an)\s+/i,"").split(/\s+/)[0]||"PAID";return w.slice(0,6).toUpperCase()};
   const cardInk=e.cardInk,cardAcc=readable(pal.accent,e.card,4.5,e.acc0==="#f2d36b"?"#7a5a10":e.acc0);
   const boxes=Array.from({length:10},(_,i)=>`<div style="height:44px;border:1.5px solid ${cardInk}55;border-radius:${era==="1970s"||era==="1950s"?22:3}px;display:flex;align-items:center;justify-content:center;position:relative;font-family:'${e.body}',sans-serif;font-size:15px;color:${cardInk}88">${i<stamped?`<span style="max-width:100%;overflow:hidden;white-space:nowrap;transform:rotate(${(i%3-1)*9-6}deg);color:${cardAcc};font-weight:700;letter-spacing:.04em;font-size:14px;border:2px solid ${cardAcc};padding:1px 3px;opacity:.85">${esc(stampWord(i))}</span>`:i===9?`<span style="font-weight:700;color:${cardInk}">FREE</span>`:String(i+1)}</div>`).join("");
-  const card=`<div style="width:340px;flex:none;align-self:flex-start;transform:rotate(${T.tilt}deg);margin-top:4px;background:${e.card};background-image:${noise("#5a4a30",.16,.9,180)};box-shadow:0 10px 22px rgba(0,0,0,.5);padding:14px 16px 12px;box-sizing:border-box;color:${cardInk};border-radius:${era==="modern"||era==="2000s"?10:4}px">
+  const card=`<div style="width:340px;flex:none;align-self:flex-start;transform:rotate(${T.tilt}deg);margin-top:${hasP?0:4}px;${hasP?"margin-left:6px;":""}background:${e.card};background-image:${noise("#5a4a30",.16,.9,180)};box-shadow:0 10px 22px rgba(0,0,0,.5);padding:14px 16px 12px;box-sizing:border-box;color:${cardInk};border-radius:${era==="modern"||era==="2000s"?10:4}px">
       <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><div style="font-family:'${e.disp}',serif;font-weight:${e.dw||400};font-size:22px;line-height:1;${dispUp}white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:${cardAcc}">${esc(prop?prop.title:"Coffee Card")}</div><div style="font-family:${bodyF};font-size:14px;white-space:nowrap">No. ${esc(num)}</div></div>
       <div style="font-family:${bodyF};font-size:15px;line-height:1.25;margin:6px 0 8px">${esc(prop&&prop.lines&&prop.lines[0]?sent(prop.lines[0])+" ":"")}${esc(T.card)}</div>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px">${boxes}</div>
@@ -236,12 +243,12 @@ window.MENU_FORMATS["cafe"]=ctx=>{
     ${e.chalk?`<div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 30% at 30% 35%,rgba(255,255,255,${(.05+T.wear*.05).toFixed(2)}),transparent 70%),radial-gradient(ellipse 50% 25% at 75% 70%,rgba(255,255,255,${(.04+T.wear*.05).toFixed(2)}),transparent 70%)"></div>`:""}
     ${e.sheen?`<div style="position:absolute;inset:0;background:${e.sheen}"></div>`:""}
     <div style="position:absolute;left:34px;right:34px;top:22px;bottom:16px;display:flex;flex-direction:column">
-      ${f.T&&n<=10?`<div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${ACC};font-size:24px;line-height:1.2;text-align:center;margin-bottom:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;${chalkTxt}">${esc(sent(f.T))}</div>`:""}
+      ${!hasP&&f.T&&n<=10?`<div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${ACC};font-size:24px;line-height:1.2;text-align:center;margin-bottom:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;${chalkTxt}">${esc(sent(f.T))}</div>`:""}
       <div data-fit style="flex:1;min-height:0;overflow:hidden;display:flex;gap:40px">
         <div style="flex:1;min-width:0">${colHtml(cols[0])}</div>
         ${cols[1].length?`<div style="width:2px;background:${INK};opacity:.18"></div><div style="flex:1;min-width:0">${colHtml(cols[1])}</div>`:""}
       </div>
-      <div style="display:flex;gap:30px;height:${n>8?196:226}px;flex:none;margin-top:8px;padding-top:14px;border-top:1px solid ${INK}33">${noteHtml}${card}</div>
+      ${hasP?"":`<div style="display:flex;gap:30px;height:${n>8?196:226}px;flex:none;margin-top:8px;padding-top:14px;border-top:1px solid ${INK}33">${noteHtml}${card}</div>`}
       <div style="font-family:${bodyF};font-size:16px;color:${mix(INK,BOARD,.35)};margin-top:8px;line-height:1.25;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(fine)}</div>
     </div>
   </div>`;
@@ -250,7 +257,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const rings=[...e.frameIn.matchAll(/inset 0 0 0 (\d+)px (#[0-9a-f]{3,8})/gi)].map(m=>[+m[1],m[2]]).sort((x,y)=>x[0]-y[0]);
   const ringHtml=rings.map((r,i)=>{const p0=i?rings[i-1][0]:0;return `<div style="position:absolute;inset:${p0}px;border:${r[0]-p0}px solid ${r[1]};box-sizing:border-box"></div>`}).join("");
   const frame=`<div style="position:absolute;inset:0;background:${e.frame}"></div>${ringHtml}<div style="position:absolute;inset:0;background-image:${noise("#000000",.25,.6,200)};opacity:.6"></div>`;
-  const face=`<div style="position:absolute;inset:0;overflow:hidden;background:#1a1a1a">${frame}${photoHtml}<div style="position:absolute;left:${FR}px;right:${FR}px;top:${BT-3}px;height:6px;background:${ACC};z-index:2"></div>${board}${logoHtml}${FIT}</div>`;
+  const face=`<div style="position:absolute;inset:0;overflow:hidden;background:#1a1a1a">${frame}${photoFn()}<div style="position:absolute;left:${FR}px;right:${FR}px;top:${BT-3}px;height:6px;background:${ACC};z-index:2"></div>${board}${logoHtml}${FIT}</div>`;
   return{w:W,h:H,faces:[face]};
 };
 })();

@@ -222,10 +222,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fp=E.proc==="glossy"?`text-shadow:0 0 14px ${rgba(ACC,.55)}`:E.proc==="letterpress"?`text-shadow:0 0 .7px ${rgba(ink,.6)}`:"";
 
   /* ===== FRONT ===== */
-  const BH=172,SY=BH,SH=440;
+  const PMq=!!(ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id]));
+  const BH=PMq?112:172,SY=BH,SH=PMq?580:440;
   /* gym banner: shape follows the era */
   const kick=`${E.kick}, CLASS OF ${year}`;
-  const sT=fitType(sign,W-96,92,E.dcw,56,24,1.04,2);
+  const sT=fitType(sign,W-96,PMq?58:92,E.dcw,PMq?40:56,24,1.04,2);
   let banner;
   const signHtml=`<div style="${caps(18,E.proc==="letterpress"||E.proc==="offset"?mix(bandText,band,.15):ACC==band?bandText:bandText,.22)};text-align:center">${esc(kick)}</div>
      <div style="font:${E.disp==="Unbounded"?"800 ":""}${sT.z}px/1.04 ${disp};color:${bandText};text-align:center;margin-top:8px;${E.proc==="glossy"?`text-shadow:0 0 18px ${rgba(ACC,.7)},0 0 2px #fff`:""}">${esc(sign)}</div>`;
@@ -241,17 +242,17 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* logo in its own colours plus the now showing line, one panel inside the photo, parked on the side with the least face */
   let logoHtml;const LG=ctx.logo;
   const panelBg=rgba(DARK,.86);
-  const nowLine=`<div data-pk style="${caps(15,"#ffffff",.16)};margin-top:10px;white-space:nowrap">Now showing, ${esc(year)}</div>`;
+  const nowLine=`<div data-pk style="${caps(15,"#ffffff",.16)};margin-top:10px;${PM?"":"white-space:nowrap"}">Now showing, ${esc(year)}</div>`;
   const pr=Math.min(E.radius,10);
   if(LG&&LG[0]&&LG[1]&&LG[2]){
-    const a=LG[1]/LG[2];const LA=PM?13000:21000,LX=PM?196:320;let lh=Math.min(120,Math.sqrt(LA/a)),lw=lh*a;if(lw>LX){lw=LX;lh=lw/a}
-    const tT=fitType(title,PM?196:300,124,E.dcw,40,20,1.06,3);
-    logoHtml=`<div data-sp="logo" data-lpanel data-dark="${panelBg}" data-light="rgba(251,249,243,.95)" data-lightink="#2a2420" data-type="${panelBg}" style="${PM?"position:relative;":"position:absolute;left:16px;bottom:16px;"}max-width:${PM?"100%":W-120+"px"};box-sizing:border-box;padding:14px 18px 12px;background:${panelBg};border-radius:${pr}px;box-shadow:0 4px 14px rgba(0,0,0,.35)">
-      <span data-lmax="${PM?"196,120":"320,120"}" data-larea="${LA}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px"><img src="${img(LG[0],"w500")}" crossorigin="anonymous" alt="${esc(title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="window.__PICK&&__PICK.logoFail(this)" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.45))"></span>
-      <div data-ltype style="display:none;width:${PM?196:300}px;font:${E.disp==="Unbounded"?"800 ":""}${tT.z}px/1.06 ${disp};color:#ffffff">${esc(title)}</div>${nowLine}</div>`;
+    const a=LG[1]/LG[2];const LA=PM?9000:21000,LX=PM?136:320;let lh=Math.min(120,Math.sqrt(LA/a)),lw=lh*a;if(lw>LX){lw=LX;lh=lw/a}
+    const tT=fitType(title,PM?136:300,124,E.dcw,40,20,1.06,3);
+    logoHtml=`<div data-sp="logo" data-lpanel data-dark="${panelBg}" data-light="rgba(251,249,243,.95)" data-lightink="#2a2420" data-type="${panelBg}" style="${PM?"position:relative;":"position:absolute;left:16px;bottom:16px;"}max-width:${PM?"100%":W-120+"px"};box-sizing:border-box;padding:${PM?"12px 12px 10px":"14px 18px 12px"};background:${panelBg};border-radius:${pr}px;box-shadow:0 4px 14px rgba(0,0,0,.35)">
+      <span data-lmax="${PM?"136,120":"320,120"}" data-larea="${LA}" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px"><img src="${img(LG[0],"w500")}" crossorigin="anonymous" alt="${esc(title)}" onload="window.__PICK&&__PICK.logo(this)" onerror="window.__PICK&&__PICK.logoFail(this)" style="display:block;width:${Math.round(lw)}px;height:${Math.round(lh)}px;object-fit:contain;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.45))"></span>
+      <div data-ltype style="display:none;width:${PM?136:300}px;font:${E.disp==="Unbounded"?"800 ":""}${tT.z}px/1.06 ${disp};color:#ffffff">${esc(title)}</div>${nowLine}</div>`;
   }else{
-    const tT=fitType(title,PM?196:300,124,E.dcw,46,20,1.06,4);
-    logoHtml=`<div data-sp="logo" style="${PM?"position:relative;":"position:absolute;left:16px;bottom:16px;"}width:${PM?232:300}px;box-sizing:border-box;padding:14px 18px 12px;background:${panelBg};border-radius:${pr}px;box-shadow:0 4px 14px rgba(0,0,0,.35)"><div style="font:${E.disp==="Unbounded"?"800 ":""}${tT.z}px/1.06 ${disp};color:#ffffff">${esc(title)}</div>${nowLine}</div>`;
+    const tT=fitType(title,PM?136:300,124,E.dcw,PM?30:46,20,1.06,5);
+    logoHtml=`<div data-sp="logo" style="${PM?"position:relative;":"position:absolute;left:16px;bottom:16px;"}width:${PM?162:300}px;box-sizing:border-box;padding:${PM?"12px 12px 10px":"14px 18px 12px"};background:${panelBg};border-radius:${pr}px;box-shadow:0 4px 14px rgba(0,0,0,.35)"><div style="font:${E.disp==="Unbounded"?"800 ":""}${tT.z}px/1.06 ${disp};color:#ffffff">${esc(title)}</div>${nowLine}</div>`;
   }
   /* hero still with era frame */
   const fr={deckle:`border:12px solid #f7f0dc;box-shadow:0 2px 8px rgba(0,0,0,.3)`,round:`border:9px solid #fffaf2;box-shadow:0 3px 10px rgba(0,0,0,.25)`,white:`border:8px solid #ffffff;box-shadow:0 2px 6px rgba(0,0,0,.2)`,neon:`border:3px solid ${ACC};box-shadow:0 0 18px ${rgba(ACC,.6)}`,thin:`border:2px solid ${ink}`,copy:`border:3px solid #111`,none:``}[E.frame];
@@ -259,15 +260,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   const hw=W-inset*2,hh=SH-(inset?12:0);
   const bw={deckle:12,round:9,white:8,neon:3,thin:2,copy:3,none:0}[E.frame];
   /* poster hero: the whole 2:3 poster hangs on the era's banner colour, logo panel beside it, never over it */
-  const posterHero=(w,h)=>{const ph=h-28,pw=Math.round(ph*2/3),pad=14;
-    return `<div style="position:relative;width:${w}px;height:${h}px;overflow:hidden;border-radius:${Math.max(0,E.radius-bw)}px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(0,0,0,.25)),${mix(band,"#000000",.4)}">
-      <div style="position:absolute;left:${pad+8}px;top:${pad}px;width:${pw}px;height:${ph}px;box-sizing:border-box;border:${E.frame==="neon"?3:5}px solid ${E.frame==="neon"?ACC:"#fbf8f0"};background:#fbf8f0;box-shadow:0 6px 16px rgba(0,0,0,.5);transform:rotate(${(T.tilt*.4).toFixed(2)}deg)"><img src="${img(poster,"w780")}" crossorigin="anonymous" alt="" style="display:block;width:100%;height:100%;object-fit:contain"></div>
-      <div style="position:absolute;left:${pad+8+pw+18}px;right:16px;top:14px;bottom:14px;display:flex;align-items:center;justify-content:center">${logoHtml}</div></div>`};
-  const heroHtml=`<div style="position:absolute;left:${inset}px;top:${SY+(inset?4:0)}px;width:${hw}px;height:${hh}px;box-sizing:border-box;${fr};border-radius:${E.radius}px;overflow:hidden;${inset&&T.tilt&&E.proc!=="clean"?`transform:rotate(${(T.tilt*.25).toFixed(2)}deg)`:""}">
-      ${PM?posterHero(hw-bw*2,hh-bw*2):photo(hero.src,hw-bw*2,hh-bw*2,{filter:photoF,poster:hero.poster,halftone:E.proc==="offset",radius:Math.max(0,E.radius-bw),pos:"50% 35%",alts:stills.slice(5,8).map(s=>img(s,"w1280")),last:poster?img(poster,"w780"):"",extra:logoHtml,
+  const pH=558,pW=Math.round(pH*2/3),pB=E.frame==="neon"?3:6,pX=18,pY=SY+8;
+  const posterHero=`<div style="position:absolute;left:${pX}px;top:${pY}px;width:${pW+pB*2}px;height:${pH+pB*2}px;box-sizing:border-box;padding:${pB}px;border:0;background:${E.frame==="neon"?ACC:"#fbf8f0"};box-shadow:0 6px 16px rgba(0,0,0,.45);transform:rotate(${(T.tilt*.3).toFixed(2)}deg)"><img src="${img(poster,"w780")}" crossorigin="anonymous" alt="" style="display:block;width:${pW}px;height:${pH}px;object-fit:contain"></div>
+    <div style="position:absolute;left:${pX+pW+pB*2+16}px;right:16px;top:${pY}px;height:${pH+pB*2}px;display:flex;align-items:center;justify-content:center">${logoHtml}</div>`;
+  const heroHtml=PM?posterHero:`<div style="position:absolute;left:${inset}px;top:${SY+(inset?4:0)}px;width:${hw}px;height:${hh}px;box-sizing:border-box;${fr};border-radius:${E.radius}px;overflow:hidden;${inset&&T.tilt&&E.proc!=="clean"?`transform:rotate(${(T.tilt*.25).toFixed(2)}deg)`:""}">
+      ${photo(hero.src,hw-bw*2,hh-bw*2,{filter:photoF,poster:hero.poster,halftone:E.proc==="offset",radius:Math.max(0,E.radius-bw),pos:"50% 35%",alts:stills.slice(5,8).map(s=>img(s,"w1280")),last:poster?img(poster,"w780"):"",extra:logoHtml,
         safe:JSON.stringify({pos:[[50,35],[50,20],[32,35],[68,35],[50,55]],items:[{q:"[data-sp=logo]",c:[["l",16,"b",16],["r",16,"b",16],["l",16,"t",16],["r",16,"t",16]]}]})})}</div>`;
   /* ticket prop: admit one with a perforated stub */
-  const ty=SY+SH+22,tw=262,th=196;
+  const ty=PMq?SY+8+570+14:SY+SH+22,tw=262,th=PMq?146:196;
   const pT=fitType(prop.title,tw-86,60,E.dcw,30,18,1.05,2);
   const ticket=`<div style="position:absolute;left:22px;top:${ty}px;width:${tw}px;height:${th}px;transform:rotate(${(T.tilt*.8).toFixed(2)}deg);background:linear-gradient(160deg,rgba(255,255,255,.35),transparent 50%),${dkPaper?"#f3ecd9":mix(E.paper,ACC,.12)};border:2px solid ${ACC};box-shadow:0 3px 9px rgba(0,0,0,.22);display:flex;color:#231d18">
       <div style="flex:1;padding:14px 14px 10px 16px;display:flex;flex-direction:column;gap:5px;overflow:hidden">

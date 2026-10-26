@@ -154,7 +154,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const capHtml=`<div style="position:absolute;left:${PX}px;top:${ZY}px;max-width:${PFW}px;background:${rgba(DARK,.8)};padding:7px 14px;${caps(15,"#ffffff",.14)}">${esc(trunc(capTxt,46))}</div>`;
 
   /* ===== blackboard ===== */
-  const BX=PX+PFW+22,BW=W-24-BX,BY=PY,FR=18,BH=700,NB=H-74;
+  const BX=PX+PFW+22,BW=W-24-BX,BY=PY,FR=18,BH=640,NB=H-74;
   const IX=BX+FR+20,IW=BW-2*FR-40,IY=BY+FR+16,IH=BH-2*FR-32;
   const head=`<div><div style="font:${E.dw}44px/1 ${disp};color:${CHALK};${chalk}">${esc(up("Specials"))}</div><div style="${caps(15,CA,.16)};margin-top:6px;${chalk}">${fam?"Counter meals 12 to 2 and 5 to 8":"Counter meals 12 to 2 and 6 to 8"}</div></div>`;
   const headH=76;
@@ -209,16 +209,16 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== right of the board: raffle ticket and pinned note ===== */
   const RX=BX,RW=BW;
   const rT=fitType(prop.title,RW-80,64,.6,30,18,1.05,2);
-  const raffle=`<div style="position:absolute;left:${RX}px;top:${BY+BH+20}px;width:${RW}px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(165deg,rgba(255,255,255,.35),transparent 55%),${mix("#f7e7c2",acc,.22)};box-shadow:0 5px 14px rgba(0,0,0,.3);display:flex;color:#211a12">
+  const raffle=`<div style="position:relative;flex:none;width:${RW}px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(165deg,rgba(255,255,255,.35),transparent 55%),${mix("#f7e7c2",acc,.22)};box-shadow:0 5px 14px rgba(0,0,0,.3);display:flex;color:#211a12">
       <div style="width:62px;border-right:2px dashed rgba(33,26,18,.45);display:flex;align-items:center;justify-content:center"><div style="transform:rotate(-90deg);white-space:nowrap;font:800 18px/1 ${body};letter-spacing:.1em">No. ${esc(num.padStart(4,"0"))}</div></div>
       <div style="flex:1;padding:14px 16px 14px;min-width:0">
         <div style="${caps(15,"#4a3a24",.16)}">${esc(fam?"Friday raffle":T.raffle)}</div>
         <div style="font:${E.dw}${rT.z}px/1.05 ${disp};color:#1b150e;margin:6px 0">${esc(up(prop.title))}</div>
         ${prop.lines.map(l=>`<div style="font:500 16px/1.3 ${body};color:#3a2f22">${esc(trunc(l,28))}</div>`).join("")}
         </div></div>`;
-  const ny=BY+BH+20+150,nh=NB-ny;
+  const nh=NB-(BY+BH+20)-150-20;
   const nT=fitType(note.text,RW-44,nh-90,E.bcw,21,16,1.36,9);
-  const noteHtml=`<div style="position:absolute;left:${RX}px;top:${ny}px;width:${RW}px;height:${nh}px;box-sizing:border-box;padding:20px 22px;transform:rotate(${(-T.tilt*.5).toFixed(2)}deg);background:linear-gradient(175deg,#fffdf5,#f1e9d6);box-shadow:0 6px 16px rgba(0,0,0,.3);color:#1d1913">
+  const noteHtml=`<div style="position:relative;flex:1;margin-top:22px;width:${RW}px;box-sizing:border-box;padding:20px 22px;transform:rotate(${(-T.tilt*.5).toFixed(2)}deg);background:linear-gradient(175deg,#fffdf5,#f1e9d6);box-shadow:0 6px 16px rgba(0,0,0,.3);color:#1d1913">
       <div style="position:absolute;left:50%;top:-8px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8,transparent 45%),${WA};box-shadow:0 2px 3px rgba(0,0,0,.4)"></div>
       <div style="${caps(15,fit(WA,"#f8f2e3","#5a3a1a",3.4),.16)};margin-bottom:10px">${esc(T.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.36 ${body};color:#1d1913">"${esc(note.text)}"</div>
@@ -227,7 +227,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fT=fitType(fine,W-60,44,.5,16,14,1.3,2);
   const fineHtml=`<div style="position:absolute;left:30px;right:30px;bottom:18px;font:500 ${fT.z}px/1.3 ${body};color:${rgba("#1d1610",.82)};text-shadow:0 1px 0 rgba(255,255,255,.3)">${esc(fine)}</div>`;
 
-  const face=`<div style="position:absolute;inset:0;background:${wallBg(E,T)}">${photoHtml}${logoHtml}${capHtml}${fascia}${board}${raffle}${noteHtml}${fineHtml}</div>`;
+  const face=`<div style="position:absolute;inset:0;background:${wallBg(E,T)}">${photoHtml}${logoHtml}${capHtml}${fascia}${board}<div style="position:absolute;left:${RX}px;top:${BY+BH+20}px;width:${RW}px;height:${NB-(BY+BH+20)}px;display:flex;flex-direction:column">${raffle}${noteHtml}</div>${fineHtml}</div>`;
   return {w:W,h:H,faces:[face]};
 };
 })();

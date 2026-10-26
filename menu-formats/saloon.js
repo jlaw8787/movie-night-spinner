@@ -218,12 +218,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const face=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
     ${border(tone,C,P)}
     <div style="position:absolute;left:44px;right:44px;top:40px;bottom:38px;display:flex;flex-direction:column">
-    <div data-box style="flex:none;max-height:150px;overflow:hidden;text-align:center">
+    <div data-box style="flex:none;max-height:170px;overflow:hidden;text-align:center">
       <div data-line data-fs="20" data-min="14" style="font:${ty.cw} 20px ${ty.caps};letter-spacing:.24em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.sign)}</div>
       <div data-fs="${Math.min(vs,70)}" data-min="30" style="margin-top:4px;font:${ty.dw} ${Math.min(vs,70)}px ${ty.disp};line-height:.98;letter-spacing:${ty.dispLs};text-transform:uppercase;color:${P.ink};${mis}">${T(F.venue)}</div>
       <div style="margin-top:6px">${rule(C.ink,150)}</div>
+      <div data-line data-fs="24" data-min="18" style="margin-top:2px;font:${ty.dw} 24px ${ty.disp};letter-spacing:.12em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">Bill of Fare</div>
     </div>
-    <div style="flex:none;margin-top:12px;display:flex;gap:16px;height:792px">
+    <div style="flex:none;margin-top:10px;display:flex;gap:16px;height:792px">
       <div style="flex:none;position:relative;width:520px;height:780px;border:6px solid ${P.ink};box-shadow:0 0 0 3px ${P.bg},0 0 0 5px ${C.ink};overflow:hidden;background:#1e140c">
         ${ph.heroIsPoster?`<img crossorigin="anonymous" alt="" src="${ph.hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">`:`<div style="position:absolute;inset:0;background:url('${ph.hero}') center 35%/cover no-repeat;filter:${filt}"></div>
         ${E.half?HALFTONE(E.half):""}${E.sheen?SHEEN(E.sheen):""}
