@@ -183,14 +183,20 @@ function indexAt(r){const p=((-r)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);return Math
 const pointer=$("pointer");
 function setPointer(){pointer.style.transform=`rotate(${-kick*26}deg)`}
 
+/* offline, a spin only lands on films whose menus are already saved on this device */
+const SAVED=new Set();
+async function savedScan(){try{if(!("caches" in window))return;SAVED.clear();for(const k of await caches.keys()){const c=await caches.open(k);for(const r of await c.keys()){const m=new URL(r.url).pathname.match(/data\/film\/[^/]+\.json$/);if(m)SAVED.add(m[0])}}}catch(e){}}
+addEventListener("offline",savedScan);if(navigator.onLine===false)savedScan();
+function spinPool(){if(navigator.onLine!==false)return list;const ok=list.filter(f=>SAVED.has(filmFile(f)));return ok}
 function spin(){
   if(spinning||!list.length)return;
+  if(navigator.onLine===false&&!spinPool().length){const st=$("status");if(st)st.textContent="You're offline and no menus are saved on this device yet. Open a few films while you're online and they'll be here next time.";savedScan();return}
   spinning=true;sel.disabled=true;$("skipWatched").disabled=true;updateWatchButton();renderWatchList();$("spin").disabled=true;winner=-1;document.body.classList.add("spinning");document.body.classList.remove("winner");
   if(soundOn&&ac()&&audio.state==="suspended")audio.resume();
   /* refresh the wedges on the far side so every spin shows new titles, and plant the winner there */
   const far=[];for(let i=0;i<N;i++){const ang=((rot+(i+.5)*A)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);if(ang>Math.PI*.6&&ang<Math.PI*1.4)far.push(i)}
-  const pool=shuffle(list);far.forEach((i,k)=>{wedges[i]=pool[k%pool.length]});
-  const w=pick(far),f=list.length>far.length?pick(list):wedges[w];wedges[w]=f;
+  const L=spinPool(),pool=shuffle(list);far.forEach((i,k)=>{wedges[i]=pool[k%pool.length]});
+  const w=pick(far),f=L.length?pick(L):wedges[w];wedges[w]=f;
   closeCurtains();sfx.whirrStart();
   const target=-(w+0.5+(Math.random()-0.5)*0.55)*A;
   const turns=reduce?1:5+Math.floor(Math.random()*3);
@@ -863,7 +869,7 @@ async function show(f,preferSig){
   {const amb=$("ambient"),pp=lobbyPoster(f);amb.classList.remove("on");if(pp)setTimeout(()=>{if(id!==renderId)return;amb.style.backgroundImage=`url("${TMDB_IMG}w342${pp}")`;amb.classList.add("on")},reduce?0:400)}
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
-  $("reroll").hidden=!!exactMenu(f);{const sp=fmtSpec(f);$("foldPdf").hidden=!(sp&&fmtCanFold(sp))}
+  {const sp=fmtSpec(f);$("foldPdf").hidden=!(sp&&fmtCanFold(sp))}
   $("status").textContent="";
   planLoad(f);planWire(f);
   await ensureFonts(STY[f.theme]);
@@ -871,7 +877,7 @@ async function show(f,preferSig){
   const spec=fmtSpec(f);
   if(spec){
     await fmtFontsReady(spec);if(id!==renderId)return;
-    menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;$("reroll").hidden=true;
+    menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;
     styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=fmtHTML(f,spec,menu);{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
@@ -1502,7 +1508,7 @@ function showWelcome(){
   const o=document.createElement("dialog");o.className="welcome";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","How it works");
   o.innerHTML=`<div class="welcome-in"><h2>Movie night, sorted</h2><p class="lead">Pick a film and dinner comes with it.</p><ol>
   <li><span><b>Pick a film</b>Spin the wheel, browse the video shop, or start from what you're craving.</span></li>
-  <li><span><b>Get the menu</b>Every film has its own menu built from the movie, with recipes and a shopping list for four.</span></li>
+  <li><span><b>Get the menu</b>Every film has its own menu built from the movie, with recipes and a shopping list that scales from 1 to 24 guests.</span></li>
   <li><span><b>Cook, then press play</b>Lock it in for the week, tick off the shopping, and check where it's streaming.</span></li>
   </ol><button class="btn primary" type="button">Let's go</button></div>`;
   const close=()=>dismissModal(o);
@@ -1513,9 +1519,11 @@ function showWelcome(){
 
 {const g=document.getElementById("bulbGlow");if(g){let h="";for(let i=0;i<32;i++)h+=`<i style="--a:${i*11.25}deg;--d:${-(i%8)*0.2}s"></i>`;g.innerHTML=h}}
 /* phones: a Spin button pinned to the bottom until the wheel is on screen */
-{const bar=$("spinbar"),hub=$("spin");let hubSeen=false;
- const upd=()=>{bar.hidden=hubSeen||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
- if("IntersectionObserver" in window)new IntersectionObserver(es=>{hubSeen=es[0].isIntersecting;upd()},{threshold:.4}).observe(hub);
+{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false;
+ /* the floating Spin button steps aside while the wheel or the menu buttons are on screen, so it never sits over them */
+ const upd=()=>{bar.hidden=hubSeen||actsSeen||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
+ if("IntersectionObserver" in window){new IntersectionObserver(es=>{hubSeen=es[0].isIntersecting;upd()},{threshold:.4}).observe(hub);
+   if(acts)new IntersectionObserver(es=>{actsSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(acts)}
  window.addEventListener("scroll",upd,{passive:true});
  $("spinbarBtn").addEventListener("click",()=>{$("spin").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{if(!spinning)$("spin").click()},reduce?50:650)});
  window.__spinbarUpd=upd;}
@@ -1767,7 +1775,6 @@ async function exportMenu(kind){
 
 $("spin").addEventListener("click",spin);
 sel.addEventListener("change",setList);
-$("reroll").addEventListener("click",()=>{if(current)show(current,false)});
 $("pdf").addEventListener("click",()=>exportMenu("pdf"));
 $("png").addEventListener("click",()=>exportMenu("png"));
 /* trifolds: a two-sided PDF that prints and folds into a real takeaway menu */
@@ -1828,8 +1835,9 @@ const initialFilmId=new URLSearchParams(window.location.search).get("film");
 const startId=initialFilmId||(week&&week.id)||hist[0];
 const initialFilm=FILMS.find(f=>f.id===startId)||FILMS.find(f=>f.id==="Ghostbusters (1984)")||FILMS[0];
 if(FILMS.some(f=>f.id===startId)){$("now").textContent=initialFilm.title;show(initialFilm,true)}
-else{theatre.classList.add("closed");$("tease").textContent="Spin the wheel to raise the curtain";
+else{theatre.classList.add("closed");$("tease").textContent=initialFilmId?"That film isn't on the shelf. Spin the wheel instead":"Spin the wheel to raise the curtain";
+  const badLink=()=>{if(!initialFilmId)return;const st=$("status");if(st)st.textContent=`Couldn't find "${initialFilmId}" in the video shop. The link may be cut short or the film isn't in the catalogue. Spin the wheel or search the video shop.`};badLink();
   /* nobody's picked yet: dress the stage behind the curtain once the page has settled */
-  addEventListener("load",()=>(window.requestIdleCallback||setTimeout)(()=>{if(!current)show(initialFilm,true).then(()=>{$("whereWheel").innerHTML=""})},{timeout:2500}))}
+  addEventListener("load",()=>(window.requestIdleCallback||setTimeout)(()=>{if(!current)show(initialFilm,true).then(()=>{$("whereWheel").innerHTML="";badLink()})},{timeout:2500}))}
 addEventListener("load",()=>setTimeout(ensureDishes,3000));
 

@@ -38,7 +38,8 @@ Live as of commit cbd5ba2c (service worker version mns-ad6da8fd).
   Result: 850 of 850 pass, 0 menu/prep mismatches.
 
 ## Next job
-Functional pass is live. Ask the owner for the next item.
+Audit small fixes on wip (not live until approved): offline spins only land on saved menus (SAVED set from caches, spinPool), unknown film link shows a message in #status, welcome card says 1 to 24 guests, Shuffle the menu button removed, floating spin bar hides while .actions is on screen. Service worker only registers on https, so test offline by registering sw.js by hand on localhost.
+Later, owner's call: vegetarian and alcohol-free filters, rough cost per head.
 
 ## Tools (run from the repo root; local server: python3 -m http.server 8795)
 - wip/genre/lib/sweep.py [style ...]: full check of library menus (spill, cut, small text, duplicate, dark and white photos, poster hero, hidden lines). About 25 min for all 759.
