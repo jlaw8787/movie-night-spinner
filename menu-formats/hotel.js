@@ -236,13 +236,13 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${kick(VOICE[t],K.acc,"center")}
     <div data-fline="2" data-fs="26" style="${dispStyle}font-size:${F.venue.length>24?42:50}px;line-height:1.04;color:${K.ink};margin-top:8px;${inkSpread}">${esc(F.venue)}</div>
     <div data-fs="15" style="font:italic 400 20px/1.2 ${B};color:${K.soft};margin-top:7px">${esc(F.sign)}</div></div>`;
-  const heroTop=262,heroH=720,posW=480,colW=382;
+  const heroTop=262,heroH=720,posW=480,colW=360;
   const lp=logoPanel(ctx,{maxW:colW-36,maxH:74,center:true,dark:rgba(K.deep,.86),light:rgba(dark?"#f4ecdc":paper,.94),darkk:K.light,lightk:K.acc,fbBg:rgba(dark?"#f4ecdc":paper,.93),fbK:K.acc,
     titleFont:`${L.dw} 46px ${D}`,titleCol:"#1c1712",under:`In your suite ${esc(ctx.f.year)}`,underFont:`700 14px/1.3 ${B};letter-spacing:.14em;text-transform:uppercase`,
     style:`position:absolute;left:38px;top:1004px;width:${colW}px;box-sizing:border-box;padding:10px 14px 9px;text-align:center;border-radius:${era===3?16:2}px;box-shadow:0 6px 18px rgba(0,0,0,.38)`});
   const hero=`<div style="position:absolute;left:96px;top:${heroTop}px;width:${posW}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${rule};outline-offset:6px;border-radius:${era===3?18:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">
     ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>${lp}`;
-  const note=`<div data-fbox style="position:absolute;left:38px;width:382px;top:1130px;height:196px;overflow:hidden;display:flex;flex-direction:column">
+  const note=`<div data-fbox style="position:absolute;left:38px;width:360px;top:1130px;height:196px;overflow:hidden;display:flex;flex-direction:column">
     ${kick("From the front desk")}
     <div data-fs="15" style="font:italic 400 22px/1.34 ${B};color:${K.ink};margin-top:12px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="24" style="font:400 40px/1.1 ${S};color:${K.acc};margin-top:8px;transform:rotate(-2deg);transform-origin:left">${esc(F.note.by)}</div>
@@ -252,7 +252,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const hg=mix(hex(K.acc),[0,0,0],dark?0:.08),hgc=contrast(hg,[255,255,255])>=4.5?"#fffaf0":"#161412";
   const box=`<span style="display:inline-block;width:15px;height:15px;border:2px solid ${hgc};margin-right:9px;vertical-align:-2px;flex:none"></span>`;
   const pick=[(menu.s||[])[0],(menu.m||[])[0],(menu.d||[])[0]].filter(Boolean);
-  const hanger=`<div style="position:absolute;left:440px;top:1008px;width:200px;height:312px;transform:rotate(${(T.rot*.5).toFixed(1)}deg);filter:drop-shadow(0 5px 8px rgba(0,0,0,.35))">
+  const hanger=`<div style="position:absolute;left:414px;top:1008px;width:226px;height:312px;transform:rotate(${(T.rot*.5).toFixed(1)}deg);filter:drop-shadow(0 5px 8px rgba(0,0,0,.35))">
     <div style="position:absolute;inset:0;background:${toHex(hg)};border-radius:${era===3||era===6?22:6}px;-webkit-mask:radial-gradient(circle 33px at 50% 56px,transparent 97%,#000 100%);mask:radial-gradient(circle 33px at 50% 56px,transparent 97%,#000 100%);overflow:hidden">
       <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.28;mix-blend-mode:multiply"></div>
       <div style="position:absolute;left:50%;top:89px;width:1px;height:0"></div>

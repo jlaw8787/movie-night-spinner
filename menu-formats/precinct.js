@@ -102,11 +102,15 @@ window.MENU_FORMATS.precinct=function(ctx){
   const stamp=(t,r,tp,rot,col,size)=>`<div style="position:absolute;right:${r}px;top:${tp}px;max-width:224px;white-space:normal;text-align:center;transform:rotate(${rot}deg);padding:6px 14px;border:4px double ${col};color:${col};font:${E.dw} ${size||30}px/1 ${dd};letter-spacing:.08em;text-transform:uppercase;opacity:.82;mix-blend-mode:multiply">${x(t)}</div>`;
   const kick=(t,c)=>`<div style="font:700 16px/1.2 ${bd};letter-spacing:.2em;text-transform:uppercase;color:${c||acc}">${x(t)}</div>`;
 
+  /* poster frame hugs a 2:3 poster; right column holds logo and memo */
+  const pv=E.pb.split(" ").map(v=>parseFloat(v)),pT=pv[0],pR=pv[1]==null?pT:pv[1],pB=pv[2]==null?pT:pv[2];
+  const IH=690,FH=IH+pT+pB,FW=Math.round(IH*2/3+2*pR),FT=108,RX=36+FW+22,RW=780-RX,FB=FT+FH;
   /* logo in its own colours on a case label that suits it */
-  const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0,lw=lr?Math.min(330,96*lr):0,lh=lr?lw/lr:0;
-  const logo=`<div data-lpanel data-dark="rgba(16,16,20,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:${heroP?436:64}px;top:${heroP?(st0?120:300):(lr?Math.round(640-lh-40):520)}px;max-width:340px;box-sizing:border-box;padding:14px 20px;background:${lr?"rgba(16,16,20,.9)":dark};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${-T.tilt*.5}deg)">
+  const lg=ctx.logo,lr=lg&&lg[1]&&lg[2]?lg[1]/lg[2]:0,lw=lr?(heroP?Math.min(RW-40,96*lr):Math.min(330,96*lr)):0,lh=lr?lw/lr:0;
+  const lpH=heroP?(lr?Math.round(lh+28):104+28):0;
+  const logo=`<div data-lpanel data-dark="rgba(16,16,20,.9)" data-light="rgba(252,250,244,.94)" data-type="${dark}" style="position:absolute;left:${heroP?RX:64}px;top:${heroP?FT+4:(lr?Math.round(640-lh-40):520)}px;max-width:${heroP?RW:340}px;box-sizing:border-box;padding:14px 20px;background:${lr?"rgba(16,16,20,.9)":dark};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${-T.tilt*.5}deg)">
      ${lr?`<img src="${ctx.img(lg[0],"w500")}" crossorigin="anonymous" alt="${x(f.title)}" onload="window.__MNS&&__MNS.logoTone(this)" onerror="window.__MNS&&__MNS.logoFail(this)" style="display:block;width:${lw}px;height:${lh}px;object-fit:contain">`:""}
-     <div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:${heroP?300:440}px;height:104px;overflow:hidden;font:${E.dw} 48px/1 ${dd};text-transform:uppercase;color:#fff;font-size:48px">${x(f.title)}</div>
+     <div data-ltype data-fit="22" style="display:${lr?"none":"block"};width:${heroP?RW-40:440}px;height:104px;overflow:hidden;font:${E.dw} 48px/1 ${dd};text-transform:uppercase;color:#fff;font-size:48px">${x(f.title)}</div>
    </div>`;
   const evid=(src,l,t,w,h,rot,op,tag,pad,isP)=>`<div style="position:absolute;left:${l}px;top:${t}px;width:${w}px;height:${h}px;box-sizing:border-box;padding:${pad||E.pb};background:#fbfaf6;transform:rotate(${rot}deg);box-shadow:0 14px 30px rgba(0,0,0,.4),0 2px 4px rgba(0,0,0,.3)">
      <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">
@@ -119,12 +123,13 @@ window.MENU_FORMATS.precinct=function(ctx){
   const field=(k,v)=>`<div style="display:flex;gap:.6em;align-items:baseline;border-bottom:1px solid rgba(0,0,0,.18);padding:.18em 0"><span style="flex:none;width:6.6em;font:700 .8em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc}">${x(k)}</span><span style="font:1em/1.25 ${bd};color:${ink}">${v}</span></div>`;
   const pbv=E.pb.split(" ").map(v=>parseFloat(v)),pbT=pbv[0],pbR=pbv[1]==null?pbT:pbv[1],pbB=pbv[2]==null?pbT:pbv[2];
   const PW=Math.round((532-pbT-pbB)*2/3+2*pbR);
+  const fields=`${field("Location",`<b>${x(venue)}</b>`)}${field("Posted",x(sign))}${field("Division",`${x(E.dept)}, ${x(f.year||"")}`)}${field("On file",x(winks[0]||"")+(winks[1]?`<span data-item>; ${x(winks[1])}</span>`:""))}`;
   const front=`${folder(fl.number?`Case ${x(num)}-${x(yy)}`:`Case file ${x(f.year||"")}`,40)}
-   ${heroP?evid(hero,36,112,PW,532,-T.tilt*.4,"center","Now showing",null,true)+(st0?evid(st0,436,360,340,268,T.tilt*.8,"center 40%","Exhibit B"):""):evid(hero,36,96,744,548,-T.tilt*.4,"center 40%","Exhibit A")}
+   ${heroP?evid(hero,36,FT,FW,FH,-T.tilt*.4,"center","Now showing",null,true):evid(hero,36,96,744,548,-T.tilt*.4,"center 40%","Exhibit A")}
    ${logo}
-   <div style="position:absolute;left:40px;top:672px;width:736px;height:166px;box-sizing:border-box;padding:12px 18px;background:#fffdf6;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${T.tilt*.2}deg)">
+   ${heroP?"":`<div style="position:absolute;left:40px;top:672px;width:736px;height:166px;box-sizing:border-box;padding:12px 18px;background:#fffdf6;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${T.tilt*.2}deg)">
      <div data-fit="18" style="height:142px;overflow:hidden;font-size:20px">
-      ${field("Location",`<b>${x(venue)}</b>`)}${field("Posted",x(sign))}${field("Division",`${x(E.dept)}, ${x(f.year||"")}`)}${field("On file",x(winks[0]||"")+(winks[1]?`<span data-item>; ${x(winks[1])}</span>`:""))}
+      ${fields}
      </div>
    </div>
    <div style="position:absolute;left:44px;top:846px;width:500px;height:186px;box-sizing:border-box;padding:12px 18px;background:${T.memo==="Sticky note from"?"#fbe98a":"#fffef8"};box-shadow:0 6px 14px rgba(0,0,0,.3);transform:rotate(${-T.tilt*.7}deg)">
@@ -133,7 +138,19 @@ window.MENU_FORMATS.precinct=function(ctx){
      <div style="font:34px/1 ${SIG};color:#1d3a8a;text-align:right;white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
    </div>
    ${stamp(T.stamp,28,872,-8+T.tilt,acc,T.stamp.length>14?22:30)}
-   ${stamp(`Breakroom copy`,40,976,4-T.tilt,"#2b2b2b",18)}`;
+   ${stamp(`Breakroom copy`,40,976,4-T.tilt,"#2b2b2b",18)}`}
+   ${heroP?(()=>{const mT=FT+4+lpH+22,mH=FB-mT,sT=FB+18,sH=Math.min(166,1040-sT);return `<div style="position:absolute;left:${RX}px;top:${mT}px;width:${RW}px;height:${mH}px;box-sizing:border-box;padding:12px 16px;display:flex;flex-direction:column;background:${T.memo==="Sticky note from"?"#fbe98a":"#fffef8"};box-shadow:0 6px 14px rgba(0,0,0,.3);transform:rotate(${-T.tilt*.5}deg)">
+     <div style="flex:none">${kick(`${T.memo} ${nt.by}`)}</div>
+     <div data-fit="14" style="flex:1 1 0;min-height:0;overflow:hidden;margin:8px 0;font:20px/1.32 ${bd};font-size:20px;color:${ink}">${x(nt.text)}</div>
+     <div style="flex:none;font:30px/1 ${SIG};color:#1d3a8a;text-align:right;white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
+   </div>
+   <div style="position:absolute;left:40px;top:${sT}px;width:480px;height:${sH}px;box-sizing:border-box;padding:12px 18px;background:#fffdf6;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${T.tilt*.2}deg)">
+     <div data-fit="18" style="height:${sH-24}px;overflow:hidden;font-size:20px">
+      ${fields}
+     </div>
+   </div>
+   ${stamp(T.stamp,28,sT+6,-8+T.tilt,acc,T.stamp.length>14?22:30)}
+   ${stamp(`Breakroom copy`,40,sT+sH-52,4-T.tilt,"#2b2b2b",18)}`})():""}`;
 
   const shift=c=>`<div style="margin-bottom:.6em">
      <div style="display:flex;justify-content:space-between;align-items:baseline;background:${dark};color:#fbf7ee;padding:.18em .45em;margin-bottom:.3em"><span style="font:${E.dw} 1.15em/1.1 ${dd};text-transform:uppercase;letter-spacing:.04em">${SHIFT[c.k][0]}</span><span style="flex:none;margin-left:.5em;font:.72em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase">${SHIFT[c.k][1]}</span></div>
