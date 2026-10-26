@@ -1,0 +1,238 @@
+{
+ "An American Werewolf in London (1981)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster-style art, werewolf cropped at edge",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "logo tiny, thin lettering on large black panel",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Bad Santa (2003)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "woman licking man's face in lingerie, suggestive for a bar-tab menu",
+    "fix": "block-second"
+   },
+   {
+    "type": "safety",
+    "detail": "sexualised frame, swap for tamer still",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Beerfest (2006)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Blade (1998)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "very dark red, face barely visible",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Deadpool (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "El Mariachi (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "guitar case only, no face, not a character frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "very dark silhouette, faces lost",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Fargo (1996)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "dead body and blood on snow",
+    "fix": "block-hero"
+   },
+   {
+    "type": "safety",
+    "detail": "gore image on hero",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Fight Club (1999)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Grandma's Boy (2006)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "nearly black, subject invisible",
+    "fix": "block-second"
+   },
+   {
+    "type": "logo",
+    "detail": "logo squashed and small",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Guardians of the Galaxy Vol. 3 (2023)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "grey logo small and low contrast on dark panel",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Horrible Bosses (2011)": {
+  "status": "ok",
+  "issues": []
+ },
+ "I Love You, Man (2009)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Leap Year (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Major League (1989)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "plain text fallback logo, small",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Onward (2020)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with text style",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Pineapple Express (2008)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Pirates of the Caribbean: Dead Men Tell No Tales (2017)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Raiders of the Lost Ark (1981)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "sketch illustration, not a frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Road House (1989)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Snatch (2000)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Star Wars (1977)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "original painted poster art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "poster collage",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Star Wars: The Force Awakens (2015)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster collage key art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "logo bar with large empty panel, small mark",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Sweet Home Alabama (2002)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, tiny figure on white, large dead area",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Crow (1994)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Fighter (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Top Gun (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Top Gun: Maverick (2022)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Two Hands (1999)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "logo small on big black panel but readable",
+    "fix": "block-logo"
+   }
+  ]
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "Alice in Wonderland (1951)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Batman Returns (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "second still is a duotone poster cut-out on white, not a film frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Bridesmaids (2011)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Cinderella (1950)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Crouching Tiger, Hidden Dragon (2000)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero looks like the poster artwork, sepia key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Frozen (2013)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Ghost (1990)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "safety",
+    "detail": "hero and second still are a near-nude shirtless kissing embrace, wrong for a family tea room menu",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "second still repeats the same embrace",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Ladies in Black (2018)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Mary Poppins (1964)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Miracle on 34th Street (1947)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Miracle on 34th Street (1994)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Noelle (2019)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Paddington (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Peter Rabbit (2018)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Rush Hour (1998)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Snow White and the Seven Dwarfs (1937)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Tangled (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Princess Diaries (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Up (2009)": {
+  "status": "ok",
+  "issues": []
+ }
+}

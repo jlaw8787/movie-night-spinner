@@ -1,0 +1,131 @@
+{
+ "Airplane! (1980)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "very dark cockpit frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "red logo low contrast on dark art",
+    "fix": "block-logo"
+   },
+   {
+    "type": "second-still",
+    "detail": "illustrated plane poster art, clip-art feel (rule 25)",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Captain America: Civil War (2016)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Con Air (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Die Hard 2 (1990)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Four Christmases (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "dark torso crop, no faces",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Hot Shots! (1991)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Jackie Brown (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster crop",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "illustrated poster art",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Love Actually (2003)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster collage with ribbon",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Meet the Robinsons (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo poster art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "promo poster art",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "The Fifth Element (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "painted poster art, baked text",
+    "fix": "block-hero"
+   },
+   {
+    "type": "safety",
+    "detail": "near-nude figure in bandages on hero",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Wall-E (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo key art composite",
+    "fix": "block-hero"
+   }
+  ]
+ }
+}

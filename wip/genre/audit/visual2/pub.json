@@ -1,0 +1,48 @@
+{
+ "Crocodile Dundee (1986)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster painting, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Eurovision Song Contest: The Story of Fire Saga (2020)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Hot Fuzz (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "dark red on dark, unreadable",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Red Dog (2011)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Shaun of the Dead (2004)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Strange Brew (1983)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Top End Wedding (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, posed on gradient",
+    "fix": "block-hero"
+   }
+  ]
+ }
+}

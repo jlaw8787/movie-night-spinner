@@ -1,0 +1,148 @@
+{
+ "13 Going on 30 (2004)": {
+  "status": "ok",
+  "issues": []
+ },
+ "American Pie (1999)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with bare chest crop",
+    "fix": "block-hero"
+   },
+   {
+    "type": "safety",
+    "detail": "shirtless poster crop and near-nude photo booth frame, wrong for a school prom menu",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "photo booth frame of boy and women in underwear",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Animal House (1978)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "bra cartoon drawing in photo booth, not a film frame",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Barbie (2023)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Boy (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Carrie (1976)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "photo booth frames very dark and bloody, murky",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Footloose (1984)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero is a mosaic tile effect promo art, dancer unrecognisable",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "blue blurry frame in photo booth",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "House Party (1990)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Legally Blonde (2001)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "dark pink logo on dark tile, hard to read",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Monsters University (2013)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster art with title",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "blue title on blue, unreadable",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Nativity! (2009)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Neighbors (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Old School (2003)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Strictly Ballroom (1992)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Superbad (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with title",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Wayne's World (1992)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Weird Science (1985)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "extreme close crop, boy with underwear on head, face cropped awkwardly",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "photo booth is AI styled glam art of woman in lingerie, not film frames",
+    "fix": "block-second"
+   },
+   {
+    "type": "safety",
+    "detail": "sexualised photo booth art, wrong for a teen prom menu",
+    "fix": "block-second"
+   }
+  ]
+ }
+}

@@ -1,0 +1,247 @@
+{
+ "A Bug's Life (1998)": {
+  "status": "ok",
+  "issues": []
+ },
+ "About Time (2013)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Aquaman (2018)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Avatar: The Way of Water (2022)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Finding Dory (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Finding Nemo (2003)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Forgetting Sarah Marshall (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo art of a bed with shirtless cast, suggestive; poster-style",
+    "fix": "block-hero"
+   },
+   {
+    "type": "safety",
+    "detail": "bare chests in bed, not great for a beach kiosk menu",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "Resort Room Key tag text clipped at bottom",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Free Willy (1993)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Happy Feet (2006)": {
+  "status": "ok",
+  "issues": []
+ },
+ "It Follows (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Jaws 2 (1978)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "skier's face cut off at the panel edge",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Jurassic World Rebirth (2025)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Kicking & Screaming (2005)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Knocked Up (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "man's face cut through at right edge, pregnancy chart dominates",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Let the Right One In (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "blurry, upscaled, child face cropped through one eye with blood on mouth",
+    "fix": "block-hero"
+   },
+   {
+    "type": "safety",
+    "detail": "child vampire with blood trail, wrong for a beach kiosk",
+    "fix": "block-hero"
+   },
+   {
+    "type": "fit",
+    "detail": "cheerful beach kiosk menu on a bleak child horror",
+    "fix": "format:candybar era:1980s tone:eerie"
+   }
+  ]
+ },
+ "Lethal Weapon 2 (1989)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "Witness Protection tag text clipped at bottom",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Lilo & Stitch (2002)": {
+  "status": "ok",
+  "issues": []
+ },
+ "National Lampoon's Vacation (1983)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Palm Springs (2020)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "hero shows empty lounge chairs, no faces; about 50 percent dead area",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Point Break (1991)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Say Anything... (1989)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Storm Boy (1976)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Terminator 2: Judgment Day (1991)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Incredible Hulk (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame, CGI render",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "title logo muddy, glow over studio mark, hard to read",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "The Karate Kid (1984)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "All Valley Finals tag text clipped at bottom",
+    "fix": "layout"
+   }
+  ]
+ },
+ "The Lion King (1994)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "logo dark red on dark navy, low contrast",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "The Lion King (2019)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Lost Boys (1987)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Nightmare Before Christmas (1993)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Sandlot (1993)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Thor: Love and Thunder (2022)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Turner & Hooch (1989)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Wayne's World 2 (1993)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Young Einstein (1988)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "tinted poster crop, soft",
+    "fix": "block-hero"
+   }
+  ]
+ }
+}

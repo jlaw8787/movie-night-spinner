@@ -1,0 +1,90 @@
+{
+ "Barbarian (2022)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "dark, grainy crop of a headless figure's legs; no face",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Black Widow (2021)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, head cropped off",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "postmark stamp overprints the 7.00 price",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Holiday Inn (1942)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "postmark stamp crowds the first price",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Hot Tub Time Machine (2010)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "postmark stamp overprints the 1.95 price",
+    "fix": "layout"
+   }
+  ]
+ },
+ "It Happened One Night (1934)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "postmark stamp overprints the 15c price",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Paranormal Activity (2007)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Planes, Trains and Automobiles (1987)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Psycho (1960)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Ring (2002)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "almost entirely black, nothing readable",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "faint scratchy 'the ring' text unreadable on black",
+    "fix": "block-logo"
+   }
+  ]
+ }
+}

@@ -1,0 +1,220 @@
+{
+ "An American Tail (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Anyone But You (2023)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "safety",
+    "detail": "hero is promo art, shirtless and bikini clinch; too suggestive for a family dinner invite",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Avengers: Age of Ultron (2015)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame (team composite)",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Big Fish (2003)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Breakfast at Tiffany's (1961)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Coco (2017)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Doctor Strange in the Multiverse of Madness (2022)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Four Weddings and a Funeral (1994)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "blue script logo thin over bright image, hard to read",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Friendship (2025)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "looks like poster art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Harry Potter and the Goblet of Fire (2005)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame; second still reuses same group art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Harry Potter and the Half-Blood Prince (2009)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "title logo dark grey on dark teal, low contrast",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Kill Bill: Vol. 2 (2004)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo composite, soft",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Midsommar (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame with title removed",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "face cropped through the eyes at top edge",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "My Best Friend's Wedding (1997)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Sixteen Candles (1984)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Star Wars: The Rise of Skywalker (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Step Brothers (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Taken (2008)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame with city backdrop",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Farewell (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Lost City (2022)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo art style composite",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Muppet Christmas Carol (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Night Before (2015)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame, festive sweater promo",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Wedding Singer (1998)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame style close-up",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "This Is the End (2013)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Wedding Crashers (2005)": {
+  "status": "ok",
+  "issues": []
+ }
+}

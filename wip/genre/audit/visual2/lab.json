@@ -1,0 +1,226 @@
+{
+ "Ant-Man (2015)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Austin Powers: International Man of Mystery (1997)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo art on flag backdrop, not a frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Despicable Me (2010)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Face/Off (1997)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Fantastic Beasts and Where to Find Them (2016)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "grey logo low contrast on hazy photo",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Flubber (1997)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Furiosa: A Mad Max Saga (2024)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Ghostbusters (2016)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with title text",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Harry Potter and the Deathly Hallows: Part 2 (2011)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Hellboy (2004)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art composite",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Hereditary (2018)": {
+  "status": "ok",
+  "issues": []
+ },
+ "I Am Legend (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Independence Day (1996)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster style art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Inside Out (2015)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Jurassic World Dominion (2022)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with title text",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Mad Max 2 (1981)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "red logo on red panel, low contrast, tiny",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Men in Black II (2002)": {
+  "status": "ok",
+  "issues": []
+ },
+ "National Treasure (2004)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Oppenheimer (2023)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Saw (2004)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art on white, not a film frame; severed-foot imagery",
+    "fix": "block-hero"
+   },
+   {
+    "type": "safety",
+    "detail": "gory saw and foot imagery on a food menu",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Spy (2015)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Amazing Spider-Man (2012)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with title text baked in",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Breakfast Club (1985)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Dish (2000)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art, sheep on TV, not a frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Fly (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Martian (2015)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Thing (1982)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Thunderbolts* (2025)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "posed promo/poster art, flat orange backdrop",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Total Recall (1990)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Watchmen (2009)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "smiley badge is poster art with title logo in frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Young Frankenstein (1974)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster collage art",
+    "fix": "block-hero"
+   }
+  ]
+ }
+}

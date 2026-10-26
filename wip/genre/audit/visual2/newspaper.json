@@ -1,0 +1,98 @@
+{
+ "Anchorman 2: The Legend Continues (2013)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "posed cast promo shot, poster-like",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Captain America: The Winter Soldier (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Chinatown (1974)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Clerks (1994)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "layout",
+    "detail": "Stop Press text runs into the footer line",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Fletch (1985)": {
+  "status": "ok",
+  "issues": []
+ },
+ "It's a Wonderful Life (1946)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "washed out, half the frame blown to white",
+    "fix": "block-second"
+   },
+   {
+    "type": "logo",
+    "detail": "tiny tilted red logo in a large empty white banner",
+    "fix": "block-logo"
+   },
+   {
+    "type": "layout",
+    "detail": "Stop Press box overflows and collides with footer; 7.46 price touches next column",
+    "fix": "layout"
+   }
+  ]
+ },
+ "Newsies (1992)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Spider-Man 3 (2007)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Superman (1978)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "title logo doubled and garbled, unreadable",
+    "fix": "block-logo"
+   },
+   {
+    "type": "hero-still",
+    "detail": "heavily processed promo composite with speed streaks",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Superman (2025)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "blurry smeared art, hero tiny; not a clear film frame",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "poster key art cast composite",
+    "fix": "block-second"
+   }
+  ]
+ }
+}

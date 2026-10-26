@@ -1,0 +1,102 @@
+{
+ "21 Jump Street (2012)": {
+  "status": "ok",
+  "issues": []
+ },
+ "48 Hrs. (1982)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "painted poster art with raised middle finger",
+    "fix": "block-second"
+   },
+   {
+    "type": "safety",
+    "detail": "rude gesture",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Ant-Man and the Wasp (2018)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "poster collage",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Bad Boys (1995)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Beverly Hills Cop II (1987)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster art with sign",
+    "fix": "block-hero"
+   },
+   {
+    "type": "second-still",
+    "detail": "same poster art repeated",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Dirty Work (1998)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "cutout on white, left half empty over 40 percent",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Mad Max (1979)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "illustrated poster art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Reservoir Dogs (1992)": {
+  "status": "ok",
+  "issues": []
+ },
+ "RoboCop (1987)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Naked Gun: From the Files of Police Squad! (1988)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "illustrated poster art, rocket gag",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Other Guys (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Silence of the Lambs (1991)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art with moth",
+    "fix": "block-hero"
+   }
+  ]
+ }
+}

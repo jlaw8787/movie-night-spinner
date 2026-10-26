@@ -1,0 +1,149 @@
+{
+ "Alien (1979)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Aliens (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Captain Marvel (2019)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster art, cropped under logo",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Eternals (2021)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "logo dim and thin, hard to read on dark panel",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Galaxy Quest (1999)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Gravity (2013)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "mostly black frame, subject barely visible",
+    "fix": "block-second"
+   }
+  ]
+ },
+ "Guardians of the Galaxy (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Jaws (1975)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster illustration, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Lethal Weapon 4 (1998)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Moana 2 (2024)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Pirates of the Caribbean: On Stranger Tides (2011)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Pirates of the Caribbean: The Curse of the Black Pearl (2003)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "logo",
+    "detail": "grey logo low contrast",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Red One (2024)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Solo: A Star Wars Story (2018)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Spaceballs (1987)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Marvels (2023)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Matrix (1999)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Under Siege (1992)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "second-still",
+    "detail": "face cropped through the eyes on dark",
+    "fix": "block-second"
+   }
+  ]
+ }
+}

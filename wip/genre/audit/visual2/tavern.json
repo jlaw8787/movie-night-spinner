@@ -1,0 +1,180 @@
+{
+ "A Christmas Carol (2009)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "too dark, only a glowing profile",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Brave (2012)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Doctor Strange (2016)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Fantasia (1940)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Gladiator (2000)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Gladiator II (2024)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "logo",
+    "detail": "logo faint, low contrast on busy still",
+    "fix": "block-logo"
+   }
+  ]
+ },
+ "Harry Potter and the Prisoner of Azkaban (2004)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Hocus Pocus (1993)": {
+  "status": "ok",
+  "issues": []
+ },
+ "How to Train Your Dragon (2010)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Indiana Jones and the Last Crusade (1989)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Labyrinth (1986)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster collage art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Maleficent (2014)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Muppet Treasure Island (1996)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Pinocchio (1940)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "cutout on white, looks like clip art",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "large empty white area",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Pirates of the Caribbean: Dead Man's Chest (2006)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Rise of the Guardians (2012)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Spider-Man: No Way Home (2021)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "poster key art montage",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Teenage Mutant Ninja Turtles III (1993)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "toy figures on red backdrop, not a film frame",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Conjuring (2013)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Great Mouse Detective (1986)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Hunchback of Notre Dame (1996)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Lord of the Rings: The Fellowship of the Ring (2001)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Princess Bride (1987)": {
+  "status": "ok",
+  "issues": []
+ },
+ "The Sword in the Stone (1963)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo style art",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "The Witch (2015)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "title art only, Cyrillic lettering, face cropped at the eyes",
+    "fix": "block-hero"
+   },
+   {
+    "type": "layout",
+    "detail": "hero dead area, mostly empty dark panel",
+    "fix": "block-hero"
+   }
+  ]
+ },
+ "Time Bandits (1981)": {
+  "status": "ok",
+  "issues": []
+ },
+ "Treasure Planet (2002)": {
+  "status": "issue",
+  "issues": [
+   {
+    "type": "hero-still",
+    "detail": "promo key art",
+    "fix": "block-hero"
+   }
+  ]
+ }
+}
