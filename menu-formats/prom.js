@@ -267,7 +267,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${photo(hero.src,hw-bw*2,hh-bw*2,{filter:photoF,poster:hero.poster,halftone:E.proc==="offset",radius:Math.max(0,E.radius-bw),pos:"50% 35%",alts:stills.slice(5,8).map(s=>img(s,"w1280")),last:poster?img(poster,"w780"):"",extra:logoHtml,
         safe:JSON.stringify({pos:[[50,35],[50,20],[32,35],[68,35],[50,55]],items:[{q:"[data-sp=logo]",c:[["l",16,"b",16],["r",16,"b",16],["l",16,"t",16],["r",16,"t",16]]}]})})}</div>`;
   /* ticket prop: admit one with a perforated stub */
-  const ty=PMq?SY+8+570+14:SY+SH+22,tw=262,th=PMq?146:196;
+  const ty=PMq?SY+8+570+14:SY+SH+22,tw=PMq?282:262,th=PMq?172:196;
   const pT=fitType(prop.title,tw-86,60,E.dcw,30,18,1.05,2);
   const ticket=`<div style="position:absolute;left:22px;top:${ty}px;width:${tw}px;height:${th}px;transform:rotate(${(T.tilt*.8).toFixed(2)}deg);background:linear-gradient(160deg,rgba(255,255,255,.35),transparent 50%),${dkPaper?"#f3ecd9":mix(E.paper,ACC,.12)};border:2px solid ${ACC};box-shadow:0 3px 9px rgba(0,0,0,.22);display:flex;color:#231d18">
       <div style="flex:1;padding:14px 14px 10px 16px;display:flex;flex-direction:column;gap:5px;overflow:hidden">
@@ -278,7 +278,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="width:58px;border-left:2px dashed ${rgba("#231d18",.45)};display:flex;align-items:center;justify-content:center">
         <div style="transform:rotate(-90deg);white-space:nowrap;font:800 17px/1 ${body};letter-spacing:.12em;color:#231d18">No. ${esc(num.padStart(4,"0"))}</div></div></div>`;
   /* note with script signature */
-  const nx=306,nw=W-nx-22;
+  const nx=PMq?324:306,nw=W-nx-22;
   const nT=fitType(note.text,nw-8,150,E.bcw,21,16,1.36,6);
   const noteHtml=`<div style="position:absolute;left:${nx}px;top:${ty-4}px;width:${nw}px;color:${ink}">
       <div style="${caps(15,ACC,.2)};margin-bottom:8px">${esc(T.kick)}</div>
@@ -287,7 +287,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* fine print with winks */
   let fine=`${T.close} ${winks.length?"Tonight: "+winks.slice(0,1).map(s=>trunc(s,50)).join("")+".":""}`;
   const frontFine=`<div style="position:absolute;left:24px;right:24px;bottom:16px;font:500 15px/1.3 ${body};color:${soft}">${esc(trunc(fine,96))}</div>`;
-  const front=`<div style="position:absolute;inset:0;background:${bg};${fp}">${banner}${heroHtml}${ticket}${noteHtml}${frontFine}</div>`;
+  const front=`<div style="position:absolute;inset:0;background:${bg};${fp}">${banner}${heroHtml}${ticket}${noteHtml}${PMq?"":frontFine}</div>`;
 
   /* ===== BACK ===== */
   const SX=18,SW=176,STY=18,STH=H-36;
