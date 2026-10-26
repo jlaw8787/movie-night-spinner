@@ -34,7 +34,7 @@ function price(f,fl,ci,ii,name,scale){
 /* logo on a panel that suits it: dark by default; the onload check flips it to the light panel when the logo itself is dark */
 function logoPanel(ctx,o){
   const L=ctx.logo,t=clean(ctx.f.title);
-  const ts=t.length<=12?o.typeSize:t.length<=24?Math.round(o.typeSize*.78):Math.round(o.typeSize*.6);
+  const ts=t.length<=12?o.typeSize:t.length<=24?Math.round(o.typeSize*.78):Math.max(14,Math.round(o.typeSize*.6));
   const fb=`<div style="font-family:${o.font};font-weight:800;font-size:${ts}px;line-height:1.05;color:${o.typeInk};text-transform:uppercase;max-width:${o.maxW}px;overflow-wrap:break-word">${esc(t)}</div>`;
   if(!L||!L[0]||!L[1]||!L[2])return {html:`<div style="${o.wrap};background:${o.light};padding:${o.pad||"14px 18px"}">${fb.replace(o.typeInk,o.lightInk)}</div>`};
   const a=L[1]/L[2];let w=o.maxW,h=w/a;if(h>o.maxH){h=o.maxH;w=h*a}

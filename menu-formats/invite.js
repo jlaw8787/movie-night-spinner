@@ -246,7 +246,7 @@ window.MENU_FORMATS.invite=function(ctx){
      ${pos?"":kick(T.k,".82em")}
      <div style="margin-top:.35em;font:italic 1em/1.35 ${bd}">${x(T.lead)}</div>
      <div style="margin-top:.2em;font:${E.dw} 2.05em/1.05 ${dd};${up}letter-spacing:${E.ls};color:${ink}">${x(venue)}</div>
-     <div style="margin-top:.35em;font:700 .9em/1.3 ${bd};letter-spacing:.12em;text-transform:uppercase;color:${acc}">${x(sign)}</div>
+     <div style="margin-top:.35em;font:700 max(14px,.9em)/1.3 ${bd};letter-spacing:.12em;text-transform:uppercase;color:${acc}">${x(sign)}</div>
      ${f.T?`<div style="margin-top:.45em;font:italic 1em/1.35 ${bd}">${x(f.T)}</div>`:""}
    </div>
    <div style="position:absolute;left:58px;right:58px;top:${pos?728:720}px;height:${pos?144:150}px;box-sizing:border-box;padding:${pos?"8px 18px 4px":"12px 18px 6px"};border-top:1px solid ${acc};border-bottom:1px solid ${acc};text-align:center;color:${ink}">

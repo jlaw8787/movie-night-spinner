@@ -284,7 +284,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const noteHtml=`<div style="position:absolute;left:${nx}px;top:${ty-4}px;width:${nw}px;color:${ink}">
       <div style="${caps(15,ACC,.2)};margin-bottom:8px">${esc(T.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.36 ${body};color:${ink}">"${esc(note.text)}"</div>
-      <div style="font:${E.sig==="Caveat"?"700 ":""}${E.sig==="Caveat"?36:38}px/1.1 ${sig};color:${ACC};margin-top:6px;text-align:right">${esc(trunc(note.by,24))}</div></div>`;
+      <div style="font:${E.sig==="Caveat"?"700 ":""}${E.sig==="Caveat"?30:32}px/1 ${sig};color:${ACC};margin-top:2px;text-align:right">${esc(trunc(note.by,24))}</div></div>`;
   /* fine print with winks */
   let fine=`${T.close} ${winks.length?"Tonight: "+winks.slice(0,1).map(s=>trunc(s,50)).join("")+".":""}`;
   const frontFine=`<div style="position:absolute;left:24px;right:24px;bottom:16px;font:500 15px/1.3 ${body};color:${soft}">${esc(trunc(fine,96))}</div>`;
