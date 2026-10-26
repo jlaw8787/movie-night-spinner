@@ -109,39 +109,34 @@ window.MENU_FORMATS[ID]=ctx=>{
   const bg=`background:${burn},${mott},url(${GRAIN}) center/520px,${paper};background-blend-mode:normal,normal,normal,normal,multiply`;
 
   /* header: venue, sign, ornament rule */
-  const venueSize=venue.length<=16?62:venue.length<=24?52:44;
-  const head=`<div style="position:absolute;left:60px;right:60px;top:30px;text-align:center">
+  const venueSize=venue.length<=16?54:venue.length<=24?48:42;
+  const head=`<div style="position:absolute;left:60px;right:60px;top:26px;text-align:center">
     <div data-fitw="${venueSize}" data-min="28" style="font-family:${D};font-weight:${E.dw};font-size:${venueSize}px;line-height:1.05;color:${ink};white-space:nowrap;overflow:hidden;${E.up?"text-transform:uppercase;letter-spacing:.06em":""}">${esc(venue)}</div>
     <div style="margin-top:6px;font:italic 400 20px/1.2 ${B};color:${acc};white-space:nowrap;overflow:hidden">${esc(sign)}</div>
-    <div style="margin-top:4px;display:flex;align-items:center;gap:12px;color:${acc}"><div style="flex:1;border-top:1px solid ${ink};opacity:.6"></div><div style="font:400 20px/1 ${B}">${E.orn}</div><div data-fitw="17" data-min="15" style="flex:none;max-width:560px;font:400 17px/1 ${B};letter-spacing:.14em;text-transform:uppercase;color:${ink};white-space:nowrap;overflow:hidden">${esc(T.kick)}</div><div style="font:400 20px/1 ${B}">${E.orn}</div><div style="flex:1;border-top:1px solid ${ink};opacity:.6"></div></div>
+    <div style="margin-top:6px;display:flex;align-items:center;gap:12px;color:${acc}"><div style="flex:1;border-top:1px solid ${ink};opacity:.6"></div><div style="font:400 20px/1 ${B}">${E.orn}</div><div style="flex:1;border-top:1px solid ${ink};opacity:.6"></div></div>
   </div>`;
 
   /* map plate: the still, compass letters set in type at the edges */
-  const PX=56,PY=160,PW=W-2*PX,PH=nItems>10?400:nItems>8?440:488;
-  const ppw=Math.round((PH-14)*2/3);
+  const bb=band(ctx.era||"modern"),bw={P:8,S:6,E:2,M:7}[bb];
+  const PX=52,PY=152,ph=684,pw=456,PW=pw+2*bw,PH=ph+2*bw;
   const heroImg=posterSrc
-    ?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:-30px;top:-30px;width:${PW+60}px;height:${PH+60}px;object-fit:cover;filter:blur(14px) brightness(.5)"><img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:24px;top:0;width:${ppw}px;height:100%;object-fit:contain">`
+    ?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:0;top:0;width:${pw}px;height:${ph}px;object-fit:contain">`
     :(heroSrc?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
   const bear=(t,pos)=>`<div style="position:absolute;${pos};font:${E.dw} 20px/1 ${D};color:${acc};width:24px;text-align:center">${t}</div>`;
-  const logo=logoPanel(ctx,{font:D,typeSize:44,typeInk:"#f4ead2",lightInk:ink,maxW:posterSrc?270:300,maxH:108,dark:darkPanel,light:"#f3e8cc",
-    wrap:`position:absolute;${posterSrc?"right:16px":"left:16px"};top:16px;box-shadow:0 3px 14px rgba(0,0,0,.4);border:1px solid rgba(255,240,200,.35)`});
-  const pr=(fl&&fl.prop&&(fl.prop.title||"").trim())?fl.prop:{title:"Room Token",lines:["One bed, one supper","Leave boots at the door"]};
-  const prop=`<div style="position:absolute;${posterSrc?"right:18px;top:166px":"left:18px;bottom:18px"};width:236px;transform:rotate(${(T.tilt/2).toFixed(1)}deg);background:${paper};box-shadow:0 3px 12px rgba(0,0,0,.4);padding:10px 14px 9px;border:1px solid ${ink}">
-    <div style="font:${E.dw} 20px/1.1 ${D};color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(pr.title))}</div>
-    ${(pr.lines||[]).slice(0,2).map(l=>`<div style="font:italic 400 16px/1.3 ${B};color:${ink};white-space:nowrap;overflow:hidden">${esc(clean(l))}</div>`).join("")}
-    <div style="font:400 15px/1.2 ${B};letter-spacing:.14em;text-transform:uppercase;color:${acc};margin-top:2px">Token ${esc(num)}</div></div>`;
+  /* logo sits in the foot band, never over the poster */
+  const logo=logoPanel(ctx,{font:D,typeSize:36,typeInk:"#f4ead2",lightInk:ink,maxW:210,maxH:84,dark:darkPanel,light:"#f3e8cc",
+    wrap:`position:absolute;left:44px;top:892px;box-shadow:0 3px 14px rgba(0,0,0,.4);border:1px solid rgba(255,240,200,.35)`});
   const by=clean(fl&&fl.note&&fl.note.by)||"The Innkeeper";
   /* the seal: a real photo (poster crop) pressed into a round medallion with a wax coloured rim; no drawn art */
   const sealAlt=stills[0]?ctx.img(stills[0],"w780"):"";
-  const seal=!sealSrc?"":`<div data-seal="1" style="position:absolute;right:-40px;bottom:-10px;width:150px;height:150px;transform:rotate(${T.tilt}deg);z-index:3">
-    <div style="position:absolute;inset:0;border-radius:50%;border:9px solid ${sealRed};box-shadow:0 4px 12px rgba(0,0,0,.45),inset 0 0 14px rgba(0,0,0,.55);overflow:hidden;background:${sealRed}">${sealSrc?`<img src="${sealSrc}" alt="" data-alt="${sealAlt}" onerror="var a=this.getAttribute('data-alt');if(a){this.removeAttribute('data-alt');this.src=a}else{this.closest('[data-seal]').style.display='none'}" style="width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:sepia(.35) saturate(1.1) contrast(1.05)">`:""}</div>
-    <div style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);background:${sealRed};color:#f6e6c8;font:${E.dw} 15px/1 ${D};letter-spacing:.08em;padding:5px 10px 4px;white-space:nowrap">No. ${esc(num)}</div></div>`;
+  const seal=!sealSrc?"":`<div data-seal="1" style="position:absolute;right:52px;top:884px;width:104px;height:104px;transform:rotate(${T.tilt}deg);z-index:3">
+    <div style="position:absolute;inset:0;border-radius:50%;border:7px solid ${sealRed};box-shadow:0 4px 12px rgba(0,0,0,.45),inset 0 0 14px rgba(0,0,0,.55);overflow:hidden;background:${sealRed}">${sealSrc?`<img src="${sealSrc}" alt="" data-alt="${sealAlt}" onerror="var a=this.getAttribute('data-alt');if(a){this.removeAttribute('data-alt');this.src=a}else{this.closest('[data-seal]').style.display='none'}" style="width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:sepia(.35) saturate(1.1) contrast(1.05)">`:""}</div>
+    <div style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);background:${sealRed};color:#f6e6c8;font:${E.dw} 15px/1 ${D};letter-spacing:.04em;padding:4px 8px 3px;white-space:nowrap">No. ${esc(num)}</div></div>`;
   const plate=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PW}px;height:${PH}px">
-    ${bear("S","left:50%;bottom:-24px;margin-left:-12px")}${bear("W","left:-34px;top:50%;margin-top:-10px")}${bear("E","right:-34px;top:38%")}
-    <div style="position:absolute;inset:0;${E.plate};box-sizing:border-box"><div style="position:relative;width:100%;height:100%;overflow:hidden;background:#1a120a">${heroImg}<div style="position:absolute;inset:0;box-shadow:inset 0 0 ${Math.round(30+50*w)}px rgba(40,20,0,${(.35+.3*w).toFixed(2)})"></div></div></div>
-    <div style="position:absolute;left:50%;top:-13px;transform:translateX(-50%);z-index:2;background:${paper};border:1px solid ${ink};padding:3px 9px 2px;font:${E.dw} 20px/1 ${D};color:${acc}">N</div>
-    ${logo.html}${prop}${seal}</div>`;
-  const cap=`<div data-fitw="16" data-min="14" style="position:absolute;left:${PX}px;top:${PY+PH+6}px;width:${PW/2-30}px;font-family:${B};font-style:italic;font-size:16px;line-height:1.2;color:${ink};white-space:nowrap;overflow:hidden">The road to ${esc(venue)}, as the traveller finds it.</div>`;
+    ${bear("S","left:50%;bottom:-26px;margin-left:-12px")}${bear("W","left:-30px;top:50%;margin-top:-10px")}${bear("E","right:-30px;top:50%;margin-top:-10px")}
+    <div style="position:absolute;inset:0;${E.plate};box-sizing:border-box;padding:${bb==="P"?5:bb==="M"?6:0}px"><div style="position:relative;width:${pw}px;height:${ph}px;overflow:hidden;background:#1a120a">${heroImg}</div></div>
+    <div style="position:absolute;left:50%;top:-31px;transform:translateX(-50%);z-index:2;background:${paper};border:1px solid ${ink};padding:3px 9px 2px;font:${E.dw} 20px/1 ${D};color:${acc}">N</div>
+    </div>${logo.html}${seal}`;
 
   /* bill of fare: two columns with a rule between, dotted leaders to coin prices */
   const m=ctx.menu||{};
@@ -155,21 +150,21 @@ window.MENU_FORMATS[ID]=ctx=>{
   ["s","m","w","d"].forEach((k,ci)=>{const items=(m[k]||[]).slice(0,4);if(!items.length)return;
     flow+=`<div style="break-inside:avoid">${secHead(LAB[ci])}${row(items[0],ci,0)}</div>`+items.slice(1).map((it,ii)=>row(it,ci,ii+1)).join("")+`<div style="height:.35em"></div>`});
   const note=fl&&fl.note&&clean(fl.note.text);
-  flow+=`<div data-drop2="1" style="break-inside:avoid;margin:.2em 0 .5em;text-align:center;padding:.4em .5em;border-top:1px solid ${ink};border-bottom:1px solid ${ink}">
-    <div style="font:400 max(14px,.6em)/1.2 ${B};letter-spacing:.18em;text-transform:uppercase;color:${acc}">A word from ${esc(by)}</div>
-    <div style="font:italic 400 max(15px,.8em)/1.3 ${B};color:${ink};margin-top:.15em">"${esc(note||"Wipe your boots, warm your hands and sit where you like. The kettle is always on and the hearth never goes out.")}"</div>
-    <div style="font:400 max(26px,1.45em)/1.05 'Pinyon Script',cursive;color:${ink};margin-top:.1em">${esc(by)}</div></div>`;
-  if(f.P)flow+=`<div data-drop2="1" style="break-inside:avoid;margin:0 0 .5em;text-align:center;font-size:max(15px,.76em);line-height:1.3;color:${ink}"><span style="font-family:${D};font-weight:${E.dw};color:${acc}">When the bell rings: </span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
+  const wordBox=`<div data-fit="22" style="position:absolute;left:310px;top:888px;width:340px;height:108px;overflow:hidden;text-align:center;font-size:22px;border-top:1px solid ${ink};border-bottom:1px solid ${ink};padding:.2em 0;box-sizing:border-box">
+    <div style="font:400 max(14px,.64em)/1.2 ${B};letter-spacing:.18em;text-transform:uppercase;color:${acc}">A word from ${esc(by)}</div>
+    <div data-note="1" style="font:italic 400 max(15px,.8em)/1.25 ${B};color:${ink};margin-top:.1em">"${esc(note||"Wipe your boots, warm your hands and sit where you like. The kettle is always on and the hearth never goes out.")}"</div>
+    <div data-drop="1" style="font:400 max(26px,1.3em)/1.05 'Pinyon Script',cursive;color:${ink}">${esc(by)}</div></div>`;
+  if(f.P)flow+=`<div data-drop2="1" style="margin:0 0 .5em;text-align:center;font-size:max(15px,.76em);line-height:1.3;color:${ink}"><span style="font-family:${D};font-weight:${E.dw};color:${acc}">When the bell rings: </span><span style="font-style:italic">${esc(sent(f.P))}</span></div>`;
   const winks=((fl&&fl.winks)||[]).slice(0,5).map(clean).filter(Boolean);
   if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;text-align:center;font-size:max(14px,.64em);line-height:1.3;color:${ink}"><span style="letter-spacing:.16em;text-transform:uppercase;color:${acc}">Heard by the fire </span>${winks.map(esc).join(` ${E.orn} `)}</div>`;
 
-  const MY=PY+PH+34,MH=H-MY-56;
-  const menu=`<div data-fit="26" style="position:absolute;left:44px;top:${MY}px;width:${W-88}px;height:${MH}px;overflow:hidden;column-count:2;column-gap:44px;column-rule:1px solid rgba(60,40,20,.35);column-fill:auto;font-size:26px">${flow}</div>`;
+  const MX=PX+PW+40,MY=PY,MH=PH+8;
+  const menu=`<div data-fit="26" style="position:absolute;left:${MX}px;top:${MY}px;width:${W-MX-36}px;height:${MH}px;overflow:hidden;font-size:26px">${flow}</div>`;
   const foot=`<div style="position:absolute;left:44px;right:44px;bottom:20px;text-align:center;font:italic 400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">Rooms above, stabling round the back. Coin of the realm only. Bill No. ${esc(num)}, ${esc(f.year||"")}. Images: TMDB</div>`;
 
   const face=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:14px;${E.frame};pointer-events:none;opacity:.75"></div>
-    ${head}${plate}${cap}${menu}${foot}
+    ${head}${plate}${menu}${wordBox}${foot}
     <img src="${PIX}" alt="" style="position:absolute;width:1px;height:1px;opacity:0" onload="window.__fmtFitTavern&&window.__fmtFitTavern(this)">
   </div>`;
   return {w:W,h:H,faces:[face]};
